@@ -1,0 +1,116 @@
+
+
+.grid-header {
+    @apply w-full left-0 p-4 text-2xl font-bold tracking-tight transition-colors border-b scroll-m-20 first:mt-0;
+}
+
+.grid-container {
+    @apply grid w-full p-4 !overflow-auto h-full gap-5;
+}
+
+.grid-container.item {
+    grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(55x, 1fr));
+}
+
+.grid-container.champ {
+    grid-template-columns: repeat(auto-fit, minmax(74px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(74px, 1fr));
+
+    .grid-item {
+        @apply h-[74x] w-auto z-0;
+
+        .grid-image-container {
+            width: auto;
+            height: 74px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .image-wrapper {
+                @apply h-[70px] w-[70px] overflow-hidden rounded;
+
+                .grid-image {
+
+                    @apply !h-[80px] !w-[80px] object-cover overflow-hidden !aspect-square rounded;
+                }
+              }
+        }
+    }
+
+
+}
+
+.grid-item {
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    @apply w-full relative overflow-hidden;
+}
+
+
+.grid-image-container {
+    @apply relative overflow-hidden !rounded shadow-md shadow-foreground/40 z-40 p-0 m-0;
+}
+
+.grid-item.item,
+.grid-image-container.item {
+    @apply h-[55px] w-[55px];
+}
+
+.grid-image-container::before {
+    @apply opacity-0 absolute rounded mr-1 p-0;
+}
+
+ .grid-image-container:hover::before {
+    content: "";
+    /* override the gradient here */
+    background-image: conic-gradient(
+      #000 20deg,
+      transparent 120deg
+    );
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+    opacity: 0.9;
+    @apply blur-sm;
+  }
+
+
+.grid-image {
+    object-position: bottom 5px right -5px;
+    @apply z-50 aspect-square rounded;
+}
+
+
+
+.grid-tip {
+    transition: all 0.3s ease;
+    transform: translateY(200%);
+    background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(255,255,255,0) 90%);
+    @apply flex z-10 absolute w-full h-auto  cursor-pointer pointer-events-none !rounded opacity-0 bottom-0 left-0;
+
+    p {
+        @apply text-background hyphens-auto align-bottom font-semibold tracking-wider text-xs p-1 uppercase;
+   }
+}
+
+.grid-image-container:hover .grid-tip {
+    transform: none;
+    @apply opacity-100 ;
+}
+
+
+
+@keyframes rotate {
+    0%{
+      transform: rotate(0deg);
+      z-index:-1;
+    }
+    100%{
+      transform: rotate(-360deg);
+      z-index:-1;
+    }
+  }

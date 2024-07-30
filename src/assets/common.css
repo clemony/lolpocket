@@ -1,0 +1,44 @@
+    * {
+    scrollbar-width: 4px;
+    }
+
+    *::-webkit-scrollbar {
+    width: 0px;
+    }
+
+    html, body,
+    body:before,
+    body:after { 
+    @apply m-0 p-0 overflow-hidden w-screen h-screen bg-transparent ;
+    }
+
+    body {
+    box-shadow: inset 0px 0px 4px 1px rgba(25, 25, 25, 0.3);
+    outline: 2px solid #272727bc;
+    @apply tracking-[0.01em];
+    }
+
+    /*#app::before {
+    content:'';
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 10px;
+
+    box-shadow: inset 0px 0px 4px 1px rgba(25, 25, 25, 0.3);
+    @apply absolute top-[36px] left-[1px] w-[calc(100%-2px)] h-[calc(100%-36px)] border-background border-opacity-95 border-l-[4px] border-r-[4px] border-b-[5px] border-t-0 border-solid z-10 pointer-events-none ;
+    }*/
+
+    #app::after {
+    content:'';
+    border-style: solid;
+    border-radius: 9px;
+    box-shadow:inset 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+    @apply absolute top-[0px] left-0 h-full w-full border-background/40 border-solid border-[1px] border-t-0 z-10 pointer-events-none /*rounded-tl-[6px] rounded-tr-[6px]*/;
+    }
+
+
+
+    #app {
+    @apply top-0 left-0 m-0 fixed overflow-auto w-screen h-screen bg-background z-0;
+    }
+
