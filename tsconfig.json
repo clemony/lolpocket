@@ -38,11 +38,11 @@
       "@main/*": [
         "src/pages/main/*"
       ],
-      "@resizable/*": [
-        "src/components/ui/resizable/*"
-      ],
       "@loader/*": [
         "src/components/loader/*"
+      ],
+      "@context-menu/*": [
+        "src/components/ui/context-menu/*"
       ]
     },
     "target": "esnext",

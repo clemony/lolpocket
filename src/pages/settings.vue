@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref, watch } from "vue";
 import { SunMedium, Moon } from "lucide-vue-next";
 
 const mode = ref("light"); // Set initial mode to light

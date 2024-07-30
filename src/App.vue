@@ -2,7 +2,7 @@
 import { Icon } from "@iconify/vue";
 import { useRouter, useRoute, onBeforeRouteUpdate } from 'vue-router';
 import { DefineComponent, ref, computed, onMounted, watch } from 'vue';
-import Home from '@/pages/builds.vue';
+import Home from '@/pages/home.vue';
 import Items from '@/pages/items.vue';
 import Champions from '@/pages/champions.vue';
 import Runes from '@/pages/runes.vue';
@@ -79,7 +79,7 @@ const onExpand = () => {
 
 // Define links
 const links: LinkProp[] = [
-  { title: 'Dashboard', label: '', icon: 'fluent-mdl2:home', variant: 'ghost', component: '/home' },
+  { title: 'Home', label: '', icon: 'fluent-mdl2:home', variant: 'ghost', component: '/home' },
   { title: 'Builds', label: '', icon: 'fluent-mdl2:assessment-group', variant: 'ghost', component: '/builds' },
   { title: 'Favorites', label: '', icon: 'fluent-mdl2:heart', variant: 'ghost', component: null },
   { title: 'In Progress', label: '', icon: 'fluent-mdl2:progress-ring-dots', variant: 'ghost', component: null },

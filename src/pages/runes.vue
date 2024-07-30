@@ -180,7 +180,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, computed, watch } from "vue";
 import { useDataStore } from "@/stores/dataStore";
 import { ExternalLink } from "lucide-vue-next";
 

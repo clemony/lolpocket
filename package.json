@@ -51,8 +51,9 @@
     "@vue/compiler-sfc": "^3.4.33",
     "@vue/test-utils": "^2.4.6",
     "autoprefixer": "^10.4.19",
-    "eslint": "^9.6.0",
+    "eslint": "^9.8.0",
     "eslint-plugin-cypress": "^3.3.0",
+    "eslint-plugin-readable-tailwind": "^1.5.3",
     "eslint-plugin-vue": "^9.27.0",
     "globals": "^15.8.0",
     "jsdom": "^24.1.0",
@@ -72,6 +73,7 @@
     "vite-plugin-mkcert": "^1.17.5",
     "vite-plugin-tauri": "^3.3.0",
     "vite-plugin-vue-devtools": "^7.3.1",
-    "vitest": "^1.6.0"
+    "vitest": "^1.6.0",
+    "vue-eslint-parser": "^9.4.3"
   }
 }

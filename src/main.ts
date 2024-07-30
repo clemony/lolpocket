@@ -8,7 +8,6 @@ import { getCurrent, appWindow} from '../node_modules/@tauri-apps/api/window.js'
 import { createRouter, createWebHistory } from 'vue-router';
 import { routes } from 'vue-router/auto-routes';
 import VueResizeText from 'vue3-resize-text';
-import TreeSelect from 'vue3-treeselect';
 
 
 const router = createRouter({
@@ -62,7 +61,7 @@ export type {
 }
 
 
-app.use(VueResizeText)
+app.use(VueResizeText);
 app.use(createPinia());
 app.use(router);
 

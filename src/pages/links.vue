@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { ref, Ref, defineProps } from 'vue';
 import { Icon } from '@iconify/vue';
 import { cn } from '@/lib/utils';
 import { buttonVariants } from '@ui/button';
@@ -38,9 +37,9 @@ const toggleCollapsible = (index: number) => {
 </script>
 
 
-
 <template>
-  <div :data-collapsed="props.isCollapsed" class="group flex flex-col gap-4 py-2 data-[collapsed=true]:py-2">
+  <div :data-collapsed="props.isCollapsed"
+    class="group flex flex-col gap-4 py-2 data-[collapsed=true]:py-2 cursor-pointer">
     <nav class="grid gap-1 px-1 group-[[data-collapsed=true]]:justify-center group-[[data-collapsed=true]]:px-2">
       <template v-for="(link, index) in props.links" :key="index">
         <div class="flex items-center">

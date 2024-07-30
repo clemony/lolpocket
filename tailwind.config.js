@@ -22,6 +22,11 @@ module.exports = {
       }
     },
     extend: {
+
+      'borderStyle': {
+        ridge: "ridge",
+        groove: "groove"
+      },
       keyframes: {
         'collapsible-down': {
           from: { height: 0 },
@@ -84,10 +89,11 @@ module.exports = {
         },
       },
       borderRadius: {
-      	xl: "calc(var(--radius) + 4px)",
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+      	xl: "1rem",
+        lg: "0.7rem",
+        md: "0.5rem",
+        DEFAULT: "0.3rem",
+        sm: "0.2rem",
       },
       keyframes: {
         "accordion-down": {

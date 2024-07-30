@@ -28,13 +28,13 @@ const champions = dataStore.champions;
 
       </div>
 
-      <div class="grid-container champ">
+      <div class="grid-container c-grid">
         <div class="grid-item champ" v-for="champion in champions">
 
           <div class="grid-image-container champ">
-            <div class="image-wrapper">
+            <div class="image-wrapper champ">
               <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
-                class="grid-image champ" />
+                class="grid-image" />
 
               <span class="grid-tip">
                 <p v-resize-text="{ ratio: 1, minFontSize: '10px', maxFontSize: '16px', delay: 200 }">{{ champion.name
