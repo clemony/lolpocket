@@ -19,7 +19,7 @@ import { listenNowAlbums, madeForYouAlbums } from '../data/albums';
                                     League News
                                 </h2>
                                 <p class="text-sm text-muted-foreground">
-                                    Always on top of the happening things.
+                                    Stay on top of the happening things.
                                 </p>
                             </div>
                             <Separator class="my-4" />

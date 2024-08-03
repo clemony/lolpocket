@@ -230,6 +230,7 @@
     "watchAtMost": true,
     "watchOnce": true,
     "watchWithFilter": true,
-    "whenever": true
+    "whenever": true,
+    "NodeService": true
   }
 }

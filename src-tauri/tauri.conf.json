@@ -38,8 +38,8 @@
     "windows": [
       {
         "title": "lolpocket",
-        "width": 1100,
-        "height": 800,
+        "width": 1400,
+        "height": 900,
         "resizable": true,
         "decorations": false,
         "transparent": true

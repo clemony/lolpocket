@@ -16,16 +16,17 @@ export default defineConfig({
     vue(),
     tauri(),
     Components({
-      dirs: ["src/components", "src/components/ui"], // Ensure paths are correct
+      dirs: ["src/components", "src/components/ui", "src/components/modules", "src/pages"], // Ensure paths are correct
       extensions: ["vue"],
       deep: true,
-      dts: "src/components.d.ts",
+      dts: "src/lib/components.d.ts",
       resolvers: [
-        IconsResolver(),
+        IconsResolver()
       ],
     }),
     AutoImport({
       imports: [VueRouterAutoImports, "vue"],
+      dirs: ["src/service/"],
       eslintrc: {
         enabled: true,
         filepath: "./.eslintrc-auto-import.json",

@@ -11,7 +11,8 @@ export interface LinkProp {
   label: string;
   icon: string;
   variant: LinkVariant;
-  component: '/builds' | '/champ/ChampionInfo' | '/champions' | '/items' | '/home' | '/runes' | '/settings' | null;
+  component: '/builds' | '/tree' | '/champions' | '/items' | '/home' | '/runes' | '/settings' | null;
+  expandable: 'true' | 'false' | null;
 }
 
 const props = defineProps<{ links: LinkProp[]; isCollapsed: boolean }>();
@@ -34,43 +35,49 @@ const navigate = (component: string | null) => {
 const toggleCollapsible = (index: number) => {
   collapsibleStates.value[index] = !collapsibleStates.value[index];
 };
+const isOpen = ref(false);
 </script>
 
-
 <template>
-  <div :data-collapsed="props.isCollapsed"
-    class="group flex flex-col gap-4 py-2 data-[collapsed=true]:py-2 cursor-pointer">
+
+
+
+
+  <div :data-collapsed="props.isCollapsed" class="group flex flex-col gap-4 py-2 data-[collapsed=true]:py-2">
     <nav class="grid gap-1 px-1 group-[[data-collapsed=true]]:justify-center group-[[data-collapsed=true]]:px-2">
       <template v-for="(link, index) in props.links" :key="index">
-        <div class="flex items-center">
-          <!-- Collapsible Component -->
-          <Collapsible v-model:open="collapsibleStates[index]">
-            <!-- Collapsible Trigger -->
-            <CollapsibleTrigger @click="toggleCollapsible(index)">
-              <Button variant="ghost" size="sm" class="p-0 w-9">
-                <Icon v-if="collapsibleStates[index]" icon="fluent-mdl2:calculator-subtract" class="w-4 h-4" />
-                <Icon v-else icon="fluent-mdl2:calculator-addition" class="w-4 h-4" />
-                <span class="sr-only">Toggle</span>
-              </Button>
-            </CollapsibleTrigger>
+        <Tooltip v-if="props.isCollapsed" :delay-duration="0">
+          <TooltipTrigger as-child class="cursor-pointer">
+            <a @click="navigate(link.component)" :class="cn(
+              buttonVariants({ variant: route.path === (link.component || '') ? 'default' : link.variant, size: 'icon' }),
+              'h-9 w-9',
+              link.variant === 'default'
+              && 'dark:bg-muted dark:text-muted-foreground dark:hover:bg-muted dark:hover:text-white'
+            )">
+              <Icon :icon="link.icon" class="size-4" />
+              <span class="sr-only">{{ link.title }}</span>
+            </a>
+          </TooltipTrigger>
+          <TooltipContent side="right" class="flex items-center gap-4">
+            {{ link.title }}
+            <span v-if="link.label" class="ml-auto text-muted-foreground">
+              {{ link.label }}
+            </span>
+          </TooltipContent>
+        </Tooltip>
 
-            <!-- Collapsible Content -->
-            <CollapsibleContent class="space-y-2">
-              <div class="px-4 py-3 font-mono text-sm border rounded-md">
-                @radix-ui/colors
-              </div>
-              <div class="px-4 py-3 font-mono text-sm border rounded-md">
-                @stitches/react
-              </div>
-            </CollapsibleContent>
-          </Collapsible>
 
-          <!-- Navigation Link -->
-          <a @click="navigate(link.component)" :class="cn(
+
+        <div v-else class="expand-links">
+          <div>
+            <Icon v-if="link.expandable === 'true'" icon="fluent:add-square-24-filled" class="size-5" />
+            <span v-if="link.expandable === 'false'" class="pl-5"></span>
+          </div>
+          <a @click="navigate(link.component)" class="cursor-pointer" :class="cn(
             buttonVariants({ variant: route.path === (link.component || '') ? 'default' : link.variant, size: 'sm' }),
             link.variant === 'default'
             && 'dark:bg-muted dark:text-white dark:hover:bg-muted dark:hover:text-white',
-            'justify-start ml-2'
+            'justify-start'
           )">
             <Icon :icon="link.icon" class="mr-4 size-4" />
             {{ link.title }}
@@ -82,7 +89,14 @@ const toggleCollapsible = (index: number) => {
             </span>
           </a>
         </div>
+
       </template>
     </nav>
   </div>
 </template>
+
+<style>
+.expand-links {
+  @apply flex items-center;
+}
+</style>

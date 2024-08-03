@@ -1,77 +1,61 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@assets/*": [
-        "src/assets/*"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@lib/*": [
-        "src/lib/*"
-      ],
-      "@logs/*": [
-        "src/logs/*"
-      ],
-      "@script/*": [
-        "src/script/*"
-      ],
-      "@stores/*": [
-        "src/stores/*"
-      ],
-      "@/*": [
-        "src/*"
-      ],
-      "@data/*": [
-        "src/data/*"
-      ],
-      "@ui/*": [
-        "src/components/ui/*"
-      ],
-      "@pages/*": [
-        "src/pages/*"
-      ],
-      "@champ/*": [
-        "src/pages/champ/*"
-      ],
-      "@main/*": [
-        "src/pages/main/*"
-      ],
-      "@loader/*": [
-        "src/components/loader/*"
-      ],
-      "@context-menu/*": [
-        "src/components/ui/context-menu/*"
-      ]
-    },
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "Bundler",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "jsx": "preserve",
-    "importHelpers": true,
-    "lib": [
-      "dom",
-      "esnext"
-    ],
-    "types": [
-      "vite/client",
-      "unplugin-vue-router/client"
-    ]
-  },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "./typed-router.d.ts",
-    "src/lib/router-config.d.ts",
-    "src/lib/index.d.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "compilerOptions": {
+        "baseUrl": ".",
+        "module": "esnext",
+        "target": "esnext",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "jsx": "preserve",
+        "paths": {
+            "@assets/*": [
+                "src/assets/*"
+            ],
+            "@components/*": [
+                "src/components/*"
+            ],
+            "@data/*": [
+                "src/data/*"
+            ],
+            "@lib/*": [
+                "src/lib/*"
+            ],
+            "@logs/*": [
+                "src/logs/*"
+            ],
+            "@pages/*": [
+                "src/pages/*"
+            ],
+            "@script/*": [
+                "src/script/*"
+            ],
+            "@service/*": [
+                "src/service/*"
+            ],
+            "@stores/*": [
+                "src/stores/*"
+            ],
+            "@loader/*": [
+                "src/components/loader/*"
+            ],
+            "@ui/*": [
+                "src/components/ui/*"
+            ],
+            "@modules/*": [
+                "src/pages/modules/*"
+            ],
+            "@/*": [
+                "src/*"
+            ],
+            "@tree/*": [
+                "src/assets/presets/tree/*"
+            ],
+            "@toast/*": [
+                "src/components/ui/toast/*"
+            ],
+            "@presets/*": [
+                "src/assets/presets/*"
+            ]
+        }
+    }
 }

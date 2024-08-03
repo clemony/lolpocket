@@ -3,12 +3,14 @@ import { createPinia } from "pinia";
 import "@/assets/index.css";
 import "@/assets/common.css";
 import "@/assets/grid.css";
-import App from "./App.vue"; 
+import App from "@/pages/App.vue"; 
 import { getCurrent, appWindow} from '../node_modules/@tauri-apps/api/window.js';
 import { createRouter, createWebHistory } from 'vue-router';
 import { routes } from 'vue-router/auto-routes';
 import VueResizeText from 'vue3-resize-text';
-
+import PrimeVue from "primevue/config";
+import Aura from '@/assets/presets';
+import Tree from "primevue/tree";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -38,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
+app.component("Tree", Tree);
 const components = import.meta.glob("@/components/ui/*.vue", { eager: true });
 
 Object.entries(components).forEach(([path, definition]) => {
@@ -60,10 +62,14 @@ export type {
   WindowOptions
 }
 
-
 app.use(VueResizeText);
 app.use(createPinia());
 app.use(router);
+app.use(PrimeVue, {
+  unstyled: true,
+  pt: Aura
+});
+
 
 // Mount the app to the element with id "app" in your HTML
 app.mount("#app");

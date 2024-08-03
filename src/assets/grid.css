@@ -15,8 +15,8 @@
 }
 
 .grid-container.c-grid {
-    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(70px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
 
     .grid-item {
         @apply size-full z-0;
@@ -32,7 +32,7 @@
 
                 .grid-image {
 
-                    @apply !h-[80px] !w-[80px] object-cover overflow-hidden !aspect-square rounded-lg;
+                    @apply !h-[90px] !w-[90px] object-cover overflow-hidden rounded-lg;
                 }
               }
         }
@@ -42,17 +42,17 @@
 }
 
 .champ {
-    @apply !h-[70px] !w-[70px] ;
+    @apply !h-[80px] !w-[80px] ;
 }
 
 .grid-item {
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
-    @apply w-full relative overflow-hidden;
+    @apply w-full relative overflow-hidden rounded-lg shadow-sm shadow-foreground/40;
 }
 
 
 .grid-image-container {
-    @apply relative overflow-hidden !rounded-lg shadow-md shadow-foreground/40 z-40 p-0 m-0;
+    @apply relative  z-40 p-0 m-0;
 }
 
 .grid-item.item,
@@ -64,18 +64,10 @@
 
 .grid-image {/* 
     object-position: bottom 5px right -4px; */
-    @apply aspect-square  rounded-lg  !overflow-auto relative -top-1.5;
+    @apply aspect-square  rounded-lg  !overflow-auto relative -top-1.5 z-0;
 }
 
 
-.grid-image-container.champ:hover {
-    border-style:groove;
-    @apply bg-foreground/80 border-[3px] border-foreground/80 rounded-lg;
-
-    .grid-image {
-        @apply rounded-lg;
-    }
-}
 
 
 
@@ -85,37 +77,37 @@
     transition: all 0.3s ease;
     transform: translateY(200%);
     /*background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(255,255,255,0) 90%);*/
-    @apply flex z-10 absolute w-full h-full cursor-pointer pointer-events-none  opacity-0 bottom-0 left-0;
-
-    p {
-        @apply text-background hyphens-auto bottom-0 absolute text-pretty align-bottom font-semibold tracking-wider text-xs p-1 uppercase;
-   }
+    @apply flex z-20 absolute w-full h-auto cursor-pointer pointer-events-none text-wrap opacity-0 bottom-0 max-w-[80px] left-0 text-background hyphens-auto  font-semibold   tracking-wider !text-[10px] p-1 uppercase text-end align-text-bottom justify-start;
 }
 
-.grid-tip::after {
+.grid-image-container::after {
     content: '';
+    width: inherit;
+    height: inherit;
     transition: all 0.3s ease;
-    background: radial-gradient(circle, rgba(255,255,255,0) 40%, rgba(0,0,0,0.8) 100%); 
-    @apply opacity-0 pointer-events-none;
-}
-
-.grid-image-container:hover .grid-tip {
-    transform: none;
-    @apply opacity-100 ;
-}
-
-.grid-image-container:hover .grid-tip::after {
-    @apply opacity-100;
+    box-shadow: inset 0px -6px 15px 10px rgba(0,0,0,0.75);
+    /*background: radial-gradient(circle, rgba(255,255,255,0) 40%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0.8) 90%, rgba(0,0,0,0.9) 99%, rgba(0,0,0,1) 100%); */
+    @apply opacity-0 pointer-events-none absolute -top-1 -left-1 z-10;
 }
 
 
-@keyframes rotate {
-    0%{
-      transform: rotate(0deg);
-      z-index:-1;
+
+.grid-item:hover {
+    .grid-image-container {
+    /*border-style:groove;*/
+    @apply border-[3px] border-foreground/80 rounded-lg;
+
+    .grid-image {
+        @apply rounded-lg;
     }
-    100%{
-      transform: rotate(-360deg);
-      z-index:-1;
+
+    .grid-tip {
+        transform: none;
+        @apply opacity-100 ;
     }
   }
+
+  .grid-image-container::after {
+    @apply opacity-100;
+}
+}

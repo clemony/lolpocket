@@ -44,7 +44,7 @@ export const useDataStore = defineStore("dataStore", () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("/patchData/14.14.1.json");
+      const response = await fetch("/patchData/14.15.1.json");
       if (!response.ok) {
         throw new Error(`Network response was not ok: ${response.statusText}`);
       }

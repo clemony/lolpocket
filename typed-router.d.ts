@@ -19,14 +19,16 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     '/AlbumArtwork': RouteRecordInfo<'/AlbumArtwork', '/AlbumArtwork', Record<never, never>, Record<never, never>>,
+    '/App': RouteRecordInfo<'/App', '/App', Record<never, never>, Record<never, never>>,
     '/builds': RouteRecordInfo<'/builds', '/builds', Record<never, never>, Record<never, never>>,
-    '/champ/ChampionInfo': RouteRecordInfo<'/champ/ChampionInfo', '/champ/ChampionInfo', Record<never, never>, Record<never, never>>,
-    '/champ/ItemInfo': RouteRecordInfo<'/champ/ItemInfo', '/champ/ItemInfo', Record<never, never>, Record<never, never>>,
     '/champions': RouteRecordInfo<'/champions', '/champions', Record<never, never>, Record<never, never>>,
     '/home': RouteRecordInfo<'/home', '/home', Record<never, never>, Record<never, never>>,
     '/items': RouteRecordInfo<'/items', '/items', Record<never, never>, Record<never, never>>,
     '/links': RouteRecordInfo<'/links', '/links', Record<never, never>, Record<never, never>>,
+    '/modules/ChampionInfo': RouteRecordInfo<'/modules/ChampionInfo', '/modules/ChampionInfo', Record<never, never>, Record<never, never>>,
+    '/modules/ItemInfo': RouteRecordInfo<'/modules/ItemInfo', '/modules/ItemInfo', Record<never, never>, Record<never, never>>,
     '/runes': RouteRecordInfo<'/runes', '/runes', Record<never, never>, Record<never, never>>,
     '/settings': RouteRecordInfo<'/settings', '/settings', Record<never, never>, Record<never, never>>,
+    '/tree': RouteRecordInfo<'/tree', '/tree', Record<never, never>, Record<never, never>>,
   }
 }

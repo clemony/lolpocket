@@ -1,4 +1,5 @@
 const animate = require("tailwindcss-animate")
+const primeui = require('tailwindcss-primeui')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -7,10 +8,11 @@ module.exports = {
   prefix: "",
   
   content: [
-    './pages/**/*.{ts,tsx,vue}',
-    './components/**/*.{ts,tsx,vue}',
-    './app/**/*.{ts,tsx,vue}',
-    './src/**/*.{ts,tsx,vue}',
+    './pages/**/*.{ts,tsx,vue,js,jsx}',
+    './components/**/*.{ts,tsx,vue,js,jsx}',
+    './app/**/*.{ts,tsx,vue,js,jsx}',
+    './src/**/*.{ts,tsx,vue,js,jsx}',
+    './src/assets/presets/',
 	],
   
   theme: {
@@ -22,26 +24,12 @@ module.exports = {
       }
     },
     extend: {
-
-      'borderStyle': {
-        ridge: "ridge",
-        groove: "groove"
-      },
-      keyframes: {
-        'collapsible-down': {
-          from: { height: 0 },
-          to: { height: 'var(--radix-collapsible-content-height)' },
-        },
-        'collapsible-up': {
-          from: { height: 'var(--radix-collapsible-content-height)' },
-          to: { height: 0 },
-        },
-      },
       fontFamily: {
         sans: ['Inter Variable', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
       },
       fontSize: {
+        xs: "0.8rem",
         base: "0.93rem"
       },
       fontWeight: {
@@ -111,7 +99,7 @@ module.exports = {
         "collapsible-up": {
           from: { height: 'var(--radix-collapsible-content-height)' },
           to: { height: 0 },
-        },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -121,5 +109,5 @@ module.exports = {
       },
     },
   },
-  plugins: [animate],
+  plugins: [animate, primeui],
 }

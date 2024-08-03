@@ -15,7 +15,7 @@ export default [
     },
   },
   {
-    ignores: ["./zzz-notes/*"],
+    ignores: ["../notes/*"],
   },
   {
     plugins: {

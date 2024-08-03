@@ -36,11 +36,9 @@ const champions = dataStore.champions;
               <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
                 class="grid-image" />
 
-              <span class="grid-tip">
-                <p v-resize-text="{ ratio: 1, minFontSize: '10px', maxFontSize: '16px', delay: 200 }">{{ champion.name
-                  }}
-                </p>
-              </span>
+              <div class="grid-tip">
+                {{ champion.name }}
+              </div>
             </div>
           </div>
 
