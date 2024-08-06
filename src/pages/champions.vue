@@ -18,11 +18,9 @@ const champions = dataStore.champions;
 <template>
   <KeepAlive>
     <div id="main" class="flex-1">
-      <!-- Search and Filter UI components -->
       <div class="grid-header">
-        <h2>
-          Champions</h2>
-
+        <h2>Champions</h2>
+        <Separator />
 
 
 

@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { SunMedium, Moon } from "lucide-vue-next";
 
-const mode = ref("light"); // Set initial mode to light
+const mode = ref("lofi"); // Set initial mode to light
 const toggleTheme = () => {
   mode.value = mode.value === "light" ? "dark" : "light";
   document.documentElement.classList.toggle("dark", mode.value === "dark");
@@ -41,28 +40,46 @@ watch(
               </CardHeader>
               <CardContent>
                 <div class="relative inline-flex items-center">
-                  <!-- Hidden checkbox for toggle state -->
-                  <input type="checkbox" id="theme-toggle" class="sr-only" @click.stop @change="toggleTheme"
-                    :checked="mode === 'dark'" />
-                  <!-- Label with toggle slider -->
-                  <label for="theme-toggle" class="flex items-center cursor-pointer" @click.stop>
-                    <!-- Slider container -->
-                    <span
-                      class="relative flex items-center h-8 p-1 transition-colors bg-gray-200 rounded-full w-14 dark:bg-gray-600">
-                      <!-- Moon icon -->
-                      <Moon
-                        class="absolute w-2 h-2 text-yellow-500 transition-transform transform -translate-y-1/2 left-1 top-1/2"
-                        v-if="mode === 'dark'" />
-                      <!-- Sun icon -->
-                      <SunMedium
-                        class="absolute w-2 h-2 text-blue-500 transition-transform transform -translate-y-1/2 right-1 top-1/2"
-                        v-if="mode === 'light'" />
-                      <!-- Round toggle center -->
-                      <span class="absolute w-6 h-6 transition-transform bg-white rounded-full shadow-md dark:bg-black"
-                        :class="mode === 'dark' ? 'translate-x-full' : 'translate-x-0'"
-                        style="left: 100%; transform: translateX(-100%)"></span>
-                    </span>
-                  </label>
+                  <div class="dropdown mb-72">
+                    <div tabindex="0" role="button" class="m-1 btn">
+
+                      Theme
+                      <svg width="12px" height="12px" class="inline-block w-2 h-2 fill-current opacity-60"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+                        <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+                      </svg>
+                    </div>
+                    <ul tabindex="0" class="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl">
+                      <li>
+                        <input type="radio" name="theme-dropdown"
+                          class="justify-start theme-controller btn btn-sm btn-block btn-ghost" aria-label="Default"
+                          value="default" />
+                      </li>
+                      <li>
+                        <input type="radio" name="theme-dropdown"
+                          class="justify-start theme-controller btn btn-sm btn-block btn-ghost" aria-label="Retro"
+                          value="retro" />
+                      </li>
+                      <li>
+                        <input type="radio" name="theme-dropdown"
+                          class="justify-start theme-controller btn btn-sm btn-block btn-ghost" aria-label="Cyberpunk"
+                          value="cyberpunk" />
+                      </li>
+                      <li>
+                        <input type="radio" name="theme-dropdown"
+                          class="justify-start theme-controller btn btn-sm btn-block btn-ghost" aria-label="Valentine"
+                          value="valentine" />
+                      </li>
+                      <li>
+                        <input type="radio" name="theme-dropdown"
+                          class="justify-start theme-controller btn btn-sm btn-block btn-ghost" aria-label="Aqua"
+                          value="aqua" />
+                      </li>
+                    </ul>
+                  </div>
+
+
+
                 </div>
               </CardContent>
               <CardFooter class="px-6 py-4 border-t">

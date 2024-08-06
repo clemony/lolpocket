@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
+import { Icon } from '@iconify/vue';
 </script>
 
 <template>
@@ -11,7 +11,7 @@ import { Icon } from '@iconify/vue'
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger>
-                <Button variant="ghost" size="sm" class="gap-1 h-7">
+                <Button variant="ghost" size="small" class="gap-1 h-7">
                   <Icon icon="lucide:plus" class="w-4 h-4" />
                 </Button>
               </TooltipTrigger>
@@ -26,7 +26,7 @@ import { Icon } from '@iconify/vue'
         <div class="b-filter">
           <DropdownMenu>
             <DropdownMenuTrigger as-child>
-              <Button variant="outline" size="sm" class="h-8 gap-1 border-neutral-500">
+              <Button variant="outline" size="small" class="h-8 gap-1 border-neutral-500">
                 <Icon icon="fluent:filter-20-regular" class="b-icon" />
               </Button>
             </DropdownMenuTrigger>
@@ -105,7 +105,7 @@ import { Icon } from '@iconify/vue'
                 <TableCell>
                   <DropdownMenu>
                     <DropdownMenuTrigger as-child>
-                      <Button aria-haspopup="true" size="icon" variant="ghost">
+                      <Button aria-haspopup="true" size="small" variant="ghost">
                         <Icon icon="lucide:more-horizontal" class="w-4 h-4" />
                         <span class="sr-only">Toggle menu</span>
                       </Button>
@@ -143,7 +143,7 @@ import { Icon } from '@iconify/vue'
                 <TableCell>
                   <DropdownMenu>
                     <DropdownMenuTrigger as-child>
-                      <Button aria-haspopup="true" size="icon" variant="ghost">
+                      <Button aria-haspopup="true" size="small" variant="ghost">
                         <Icon icon="lucide:more-horizontal" class="w-4 h-4" />
                         <span class="sr-only">Toggle menu</span>
                       </Button>
@@ -181,7 +181,7 @@ import { Icon } from '@iconify/vue'
                 <TableCell>
                   <DropdownMenu>
                     <DropdownMenuTrigger as-child>
-                      <Button aria-haspopup="true" size="icon" variant="ghost">
+                      <Button aria-haspopup="true" size="small" variant="ghost">
                         <Icon icon="lucide:more-horizontal" class="w-4 h-4" />
                         <span class="sr-only">Toggle menu</span>
                       </Button>
@@ -219,7 +219,7 @@ import { Icon } from '@iconify/vue'
                 <TableCell>
                   <DropdownMenu>
                     <DropdownMenuTrigger as-child>
-                      <Button aria-haspopup="true" size="icon" variant="ghost">
+                      <Button aria-haspopup="true" size="small" variant="ghost">
                         <Icon icon="lucide:more-horizontal" class="w-4 h-4" />
                         <span class="sr-only">Toggle menu</span>
                       </Button>
@@ -257,7 +257,7 @@ import { Icon } from '@iconify/vue'
                 <TableCell>
                   <DropdownMenu>
                     <DropdownMenuTrigger as-child>
-                      <Button aria-haspopup="true" size="icon" variant="ghost">
+                      <Button aria-haspopup="true" size="small" variant="ghost">
                         <Icon icon="lucide:more-horizontal" class="w-4 h-4" />
                         <span class="sr-only">Toggle menu</span>
                       </Button>
@@ -295,7 +295,7 @@ import { Icon } from '@iconify/vue'
                 <TableCell>
                   <DropdownMenu>
                     <DropdownMenuTrigger as-child>
-                      <Button aria-haspopup="true" size="icon" variant="ghost">
+                      <Button aria-haspopup="true" size="small" variant="ghost">
                         <Icon icon="lucide:more-horizontal" class="w-4 h-4" />
                         <span class="sr-only">Toggle menu</span>
                       </Button>

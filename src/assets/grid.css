@@ -1,11 +1,16 @@
 
 
 .grid-header {
-    @apply w-full left-0 p-4 text-2xl font-bold tracking-tight border-b first:mt-0;
+    @apply w-full left-0 p-4 text-2xl font-bold tracking-tight;
+
+        h2 {
+            @apply my-3;
+        }
 }
 
+
 .grid-container {
-    @apply grid w-full p-4 !overflow-auto h-full gap-5;
+    @apply grid w-full p-4 !overflow-y-auto h-full gap-5;
 }
 
 .grid-container.item {

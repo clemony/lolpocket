@@ -55,6 +55,9 @@
             ],
             "@presets/*": [
                 "src/assets/presets/*"
+            ],
+            "@page-build/*": [
+                "src/page-build/*"
             ]
         }
     }

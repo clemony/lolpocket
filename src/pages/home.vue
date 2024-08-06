@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import AlbumArtwork from './AlbumArtwork.vue';
 
-import { listenNowAlbums, madeForYouAlbums } from '../data/albums';
+import { madeForYouAlbums } from '../data/albums';
 </script>
 
 <template>
 
     <div class="hidden w-screen h-screen md:block">
-        <Menu />
+
         <div class="border-t">
             <div class="bg-background">
                 <div class="grid lg:grid-cols-5">

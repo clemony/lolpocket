@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import { Icon } from "@iconify/vue";
-import { useRouter, useRoute, onBeforeRouteUpdate } from 'vue-router';
-import { DefineComponent, ref, computed, onMounted, watch } from 'vue';
-import Home from '@/pages/home.vue';
-import Items from '@/pages/items.vue';
-import Champions from '@/pages/champions.vue';
-import Runes from '@/pages/runes.vue';
-import Settings from '@/pages/settings.vue';
-import Builds from '@/pages/builds.vue';
-import Tree from "@/pages/tree.vue";
-import { useDataStore } from '@/stores/dataStore';
-import Nav from '@/pages/links.vue';
-import { LinkProp } from '@/pages/links.vue';
-import { cn } from '@/lib/utils';
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
 } from '@/components/ui/resizable';
+import {
+  useToast
+} from '@/components/ui/toast/use-toast';
+import { cn } from '@/lib/utils';
+import Builds from '@/page-build/builds-template.vue';
+import Champions from '@/pages/champions.vue';
+import Home from '@/pages/home.vue';
+import Items from '@/pages/items.vue';
+import Runes from '@/pages/runes.vue';
+import Settings from '@/pages/settings.vue';
+import { useDataStore } from '@/stores/dataStore';
+import { Icon } from '@iconify/vue';
+import { computed, DefineComponent, onMounted, ref } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 
 
 // Access the router instance to programmatically navigate
@@ -42,7 +42,7 @@ interface LayoutProps {
 
 const props = withDefaults(defineProps<LayoutProps>(), {
   defaultCollapsed: false,
-  defaultLayout: () => [15, 85, 0],
+  defaultLayout: () => [18, 82, 0],
 });
 
 
@@ -56,7 +56,7 @@ const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/items': Items,
   '/runes': Runes,
   '/settings': Settings, // Adjust if necessary
-  '/tree': Tree,
+  '/tree': null,
 };
 
 
@@ -79,29 +79,35 @@ const onExpand = () => {
   isCollapsed.value = false;
 };
 
-// Define links
-const links: LinkProp[] = [
-  { title: 'Home', label: '', icon: 'fluent-mdl2:home', variant: 'ghost', component: '/home', expandable: 'false' },
-  { title: 'Builds', label: '', icon: 'fluent-mdl2:assessment-group', variant: 'ghost', component: '/builds', expandable: 'true' },
-  { title: 'Favorites', label: '', icon: 'fluent-mdl2:heart', variant: 'ghost', component: null, expandable: 'true' },
-  { title: 'Archive', label: '', icon: 'fluent-mdl2:archive', variant: 'ghost', component: '/tree', expandable: 'false' },
-  { title: 'Trash', label: '', icon: 'ep:delete', variant: 'ghost', component: null, expandable: 'false' },
-];
 
-const links2: LinkProp[] = [
-  { title: 'Champions', label: '', icon: 'lucide:user-2', variant: 'ghost', component: '/champions', expandable: null },
-  { title: 'Items', label: '', icon: 'pepicons-pencil:sword-shield', variant: 'ghost', component: '/items', expandable: null },
-  { title: 'Runes', label: '', icon: '@/img/runes/RunesIcon.webp', variant: 'ghost', component: '/runes', expandable: null },
-];
 
-const links3: LinkProp[] = [
-  { title: 'Account', label: '', icon: 'fluent-mdl2:accounts', variant: 'ghost', component: null, expandable: null },
-  { title: 'Settings', label: '', icon: 'fluent:settings-48-regular', variant: 'ghost', component: '/settings', expandable: null },
-];
+const {
+  toast
+} = useToast();
+
+const nodes = ref<any[]>([]);
+const selectedKey = ref<string[]>([]);
+
+const onNodeSelect = (node) => {
+  toast({
+    title: 'success!',
+    description: 'node selected: ' + node.label,
+  });
+  navigateTo(node.data);
+};
+
+const onIconClick = (node) => {
+  toast({
+    title: 'success!',
+    description: 'node icon clicked1!!: ' + node.label,
+  });
+};
+
 
 
 onMounted(() => {
   useDataStore().fetchData();
+  NodeService.getTreeNodes().then((data: null) => (nodes.value = data));
 });
 </script>
 
@@ -110,7 +116,11 @@ onMounted(() => {
     <DropdownMenu>
       <DropdownMenuTrigger class="justify-self-start">
         <Button variant="ghost" class="title">
-          lolpocket
+          <Avatar class="size-5">
+            <AvatarImage src="https://github.com/radix-vue.png" alt="@radix-vue" />
+            <AvatarFallback>LP</AvatarFallback>
+          </Avatar>
+          <span>lolpocket</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent class="ml-2 -mt-1 font-normal">
@@ -131,7 +141,7 @@ onMounted(() => {
       <form class="s-form">
         <div class="relative ">
           <Icon icon="fluent:search-28-regular" class="s-icon" />
-          <Input placeholder="search champions..." class="in-search" />
+          <Input placeholder="" class="in-search" />
         </div>
       </form>
     </div>
@@ -158,27 +168,67 @@ onMounted(() => {
           :class="cn(isCollapsed && 'min-w-[50px] transition-all duration-300 ease-in-out')" @expand="onExpand"
           @collapse="onCollapse">
 
-          <ResizablePanelGroup direction="vertical">
-            <ResizablePanel :min-size="10">
-              <Nav :is-collapsed="isCollapsed" :links="links" />
-            </ResizablePanel>
-            <ResizableHandle />
-            <ResizablePanel class="panel-box" :min-size="10">
-              <div class="data">
-                <div class="pt-3 pl-1 text-xs font-semibold border-none">BROWSE</div>
-                <Nav :is-collapsed="isCollapsed" :links="links2" />
-              </div>
-              <div class="utils">
-                <Separator />
-                <Nav :is-collapsed="isCollapsed" :links="links3" />
-              </div>
-            </ResizablePanel>
-          </ResizablePanelGroup>
+
+          <h2 class="font-bold prose-headings">@user's pocket</h2>
+
+          <div class="panel-nav">
+            <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
+              @nodeSelect="onNodeSelect" id="tree1">
+
+              <template #nodetoggleicon>
+                <Icon icon="basil:caret-up-outline" width="1.5rem" height="1.5rem" />
+              </template>
+              <template #default="slotProps">
+                {{ slotProps.node.label }}
+
+              </template>
+              <template #addon="slotProps">
+                <span>{{ slotProps.node.label }}</span>
+                <Button variant="null" class="add-build" title="create new build">
+                  <Icon icon='fluent:add-square-24-regular' class="add-reg" />
+                  <Icon icon='fluent:add-square-24-filled' class="add-fill" />
+                </Button>
+              </template>
+              <template #build="slotProps" :pt="{
+                nodeicon: {
+                  onClick: onIconClick,
+                }
+              }">
+
+                <input :label='slotProps.node.label' :placeholder="slotProps.node.label"
+                  class="w-full h-5 mr-2 overflow-scroll" />
+              </template>
+            </Tree>
+
+          </div>
+
+
+          <div class="data panel-nav">
+            <h4 class="pt-3 pl-3 text-xs font-semibold border-none">BROWSE</h4>
+            <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
+              @nodeSelect="onNodeSelect" id="tree2">
+              <template #browse="slotProps">
+                {{ slotProps.node.label }}
+              </template>
+            </Tree>
+          </div>
+
+          <div class="panel-nav utils">
+            <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
+              @nodeSelect="onNodeSelect" id="tree3">
+              <template #settings="slotProps">
+                {{ slotProps.node.label }}
+              </template>
+            </Tree>
+          </div>
         </ResizablePanel>
       </TooltipProvider>
 
-      
-      <ResizableHandle id="resize-handle-1" />
+
+      <Toaster />
+
+
+      <ResizableHandle with-handle id="resize-handle-1" class="mr-2 bg-transparent" />
       <ResizablePanel id="resize-panel-2" :default-size="props.defaultLayout[1]" :min-size="30">
 
 
@@ -200,114 +250,4 @@ onMounted(() => {
 
 
 
-<style>
-/*.titlebar::after {
-  content: '';
-  mask-image: linear-gradient(to top, #000, #000),
-    radial-gradient(circle 15px at center, #000 80%, transparent 81%);
-  mask-repeat: no-repeat;
-  mask-composite: subtract;
-  outline: 2px solid red;
-  @apply absolute z-50 top-20 left-20 size-[30px];
-
-}*/
-
-.titlebar {
-  top: 0;
-  left: 0;
-  @apply h-[36px] w-full backdrop-blur-md bg-background/60 grid grid-cols-3 fixed z-20 p-[0px] items-center shadow-md shadow-foreground/10 border-b-[1px] border-foreground/10;
-
-  .title {
-    @apply justify-between text-lg tracking-wide font-semibold border-none shadow-none justify-self-start p-1 pt-2 ml-4 h-6 hover:bg-accent;
-  }
-
-
-  .s-box {
-    @apply w-full justify-self-center;
-
-    .s-form {
-
-      @apply text-center justify-items-center rounded-lg;
-
-      .s-icon {
-        @apply absolute left-2 top-[4px] size-4;
-      }
-
-      .in-search {
-        border-radius: 10px;
-        @apply text-sm pl-8 font-medium w-full text-center h-[28px] shadow-inner bg-background/60 border-foreground/15 shadow-foreground/10 !outline-0 !outline-transparent !outline-none;
-
-
-
-      }
-
-      .in-search:focus {
-        @apply ring-foreground/20;
-      }
-    }
-  }
-
-  .button-wrapper {
-    @apply justify-self-end justify-items-end justify-end grid grid-cols-3 gap-2 pr-2;
-
-    .titlebar-button {
-      @apply inline-flex place-items-center p-1 hover:bg-accent;
-
-      .b-window {
-        @apply text-accent-foreground cursor-pointer h-4 w-4;
-      }
-    }
-  }
-}
-
-#content {
-  top: 0;
-  left: 0;
-  @apply w-screen h-screen absolute z-auto px-[7px];
-}
-
-#resize-panel-1,
-#resize-panel-2,
-#resize-panel-3 {
-  overflow: auto !important;
-  @apply py-3 scroll-auto pt-[36px];
-}
-
-#resize-panel-1 {
-  @apply pt-[42px] backdrop-blur-md bg-background/60;
-}
-
-.panel-box {
-  @apply grid grid-cols-1 h-full justify-items-end justify-end min-h-60;
-
-  .data {
-    @apply justify-self-stretch;
-  }
-
-  .utils {
-    @apply self-end h-20 w-full;
-  }
-}
-
-.icon {
-  @apply text-inherit size-4 transition-colors;
-}
-
-
-.slide-fade-enter-active {
-  transition: all 0.3s ease;
-}
-
-.slide-fade-leave-active {
-  transition: all 0.3s ease;
-}
-
-.slide-fade-enter-from {
-  transform: translateX(50%);
-}
-
-
-.slide-fade-leave-to {
-  transform: translateX(-100%);
-}
-</style>
+<style></style>

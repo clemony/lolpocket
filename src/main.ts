@@ -1,16 +1,17 @@
-import { createApp } from "vue";
-import { createPinia } from "pinia";
-import "@/assets/index.css";
 import "@/assets/common.css";
 import "@/assets/grid.css";
-import App from "@/pages/App.vue"; 
-import { getCurrent, appWindow} from '../node_modules/@tauri-apps/api/window.js';
+import "@/assets/icons.css";
+import "@/assets/index.css";
+import Aura from '@/assets/presets';
+import App from "@/pages/App.vue";
+import { createPinia } from "pinia";
+import PrimeVue from "primevue/config";
+import Tree from "primevue/tree";
+import { createApp } from "vue";
 import { createRouter, createWebHistory } from 'vue-router';
 import { routes } from 'vue-router/auto-routes';
 import VueResizeText from 'vue3-resize-text';
-import PrimeVue from "primevue/config";
-import Aura from '@/assets/presets';
-import Tree from "primevue/tree";
+import { getCurrent } from '../node_modules/@tauri-apps/api/window.js';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -60,7 +61,7 @@ interface WindowOptions {
 export type {
   TitleBarStyle,
   WindowOptions
-}
+};
 
 app.use(VueResizeText);
 app.use(createPinia());

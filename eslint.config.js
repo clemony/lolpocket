@@ -1,7 +1,7 @@
-import globals from "globals";
 import pluginJs from "@eslint/js";
-import pluginVue from "eslint-plugin-vue";
 import eslintPluginReadableTailwind from "eslint-plugin-readable-tailwind";
+import pluginVue from "eslint-plugin-vue";
+import globals from "globals";
 
 export default [
   { files: ["**/*.{js,mjs,cjs,vue}"] },
@@ -15,7 +15,7 @@ export default [
     },
   },
   {
-    ignores: ["../notes/*"],
+    ignores: ["../notes/*", "/notes/*", "./notes/*"],
   },
   {
     plugins: {
