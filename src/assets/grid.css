@@ -46,8 +46,7 @@
 }
 
 .grid-item {
-  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
-  @apply w-full relative shadow-sm shadow-base-content/5;
+  @apply w-full relative ;
 }
 
 .grid-image-container {
