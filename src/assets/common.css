@@ -5,3 +5,7 @@
 .titlebar-button::before {
   @apply text-xs;
 }
+
+[aria-label="　 ♡ 　"]::after {
+  @apply scale-y-90;
+}
