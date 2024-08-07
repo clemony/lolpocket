@@ -46,7 +46,7 @@ const champions = dataStore.champions;
 
 
 
-          <input type="radio" name="champ-tabs" role="tab" class="tab w-1/5 font-semibold" aria-label="Loved"
+          <input type="radio" name="champ-tabs" role="tab" class="tab w-1/5 font-semibold" aria-label="♡ Loved"
             checked="true" />
 
           <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
