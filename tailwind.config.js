@@ -1,23 +1,18 @@
 const animate = require("tailwindcss-animate");
 const primeui = require("tailwindcss-primeui");
+const scrollbarhide = require("tailwind-scrollbar-hide");
 const typography = require("@tailwindcss/typography");
 const colors = require("tailwindcss/colors");
 const daisyui = require("daisyui");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  plugins: [animate, primeui, typography, daisyui],
+  plugins: [animate, primeui, scrollbarhide, typography, daisyui],
 
   darkMode: ["class"],
   safelist: ["dark"],
   prefix: "",
-  content: [
-    "./pages/**/*.{ts,tsx,vue,js,jsx}",
-    "./components/**/*.{ts,tsx,vue,js,jsx}",
-    "./app/**/*.{ts,tsx,vue,js,jsx}",
-    "./src/**/*.{ts,tsx,vue,js,jsx}",
-    "./src/assets/presets/",
-  ],
+  content: ["./pages/**/*.{ts,tsx,vue,js,jsx}", "./components/**/*.{ts,tsx,vue,js,jsx}", "./app/**/*.{ts,tsx,vue,js,jsx}", "./src/**/*.{ts,tsx,vue,js,jsx}", "./src/assets/presets/"],
 
   theme: {
     container: {
