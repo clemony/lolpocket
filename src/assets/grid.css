@@ -46,7 +46,7 @@
 }
 
 .grid-item {
-  /*filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));*/
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
   @apply w-full relative ring-[1px] ring-base-content/60/*shadow-inner shadow-base-content*/;
 }
 
