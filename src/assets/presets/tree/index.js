@@ -1,133 +1,140 @@
 export default {
-    root: {
-        class: [
-            'text-xs',
-            // Space
-            'm-0 p-1.5',
+  root: {
+    class: [
+      "text-xs",
+      // Space
+      "m-0 p-1.5",
 
-            // Shape,
-            'border-none ',
+      // Shape,
+      "border-none ",
 
-            // Color
-            'text-base-content',
-        ]
-    },
-    wrapper: {
-        class: ['overflow-auto m-0']
-    },
-    container: {
-        class: [
-            // Spacing
-            'm-0 p-0',
+      // Color
+      "text-base-content",
+    ],
+  },
+  wrapper: {
+    class: ["overflow-auto m-0"],
+  },
+  container: {
+    class: [
+      // Spacing
+      "m-0 p-0",
 
-            // Misc
-            'list-none overflow-auto'
-        ]
-    },
-    node: {
-        class: ['focus:outline-none align-middle items-center relative my-2 w-full bg-base-100 code']
-    },
-    nodeContent: ({ context, props }) => ({
-        class: [
-            
-            // Flex and Alignment
-            'inline-flex items-center rounded-btn align-middle relative h-8 pl-2 w-full z-10',
+      // Misc
+      "list-none overflow-auto",
+    ],
+  },
+  node: {
+    class: [
+      "focus:outline-none align-middle items-center relative my-2 w-full bg-base-100 code",
+    ],
+  },
+  nodeContent: ({ context, props }) => ({
+    class: [
+      // Flex and Alignment
+      "inline-flex items-center rounded-btn align-middle relative h-8 pl-2 w-full z-10",
 
+      // Spacing
 
-            // Spacing
+      // Colors
+      context.selected
+        ? "bg-base-300 text-base-content"
+        : "bg-base-100 text-base-content hover:bg-base-200 hover:text-base-content",
 
-            // Colors
-            context.selected ? 'bg-base-300 text-base-content' : 'bg-base-100 text-base-content hover:bg-base-200 hover:text-base-content',
+      // States
+      {
+        "hover:bg-base-200 hover:text-base-content":
+          (props.selectionMode == "single" ||
+            props.selectionMode == "multiple") &&
+          !context.selected,
+      },
 
-            // States
-            { 'hover:bg-base-200 hover:text-base-content': (props.selectionMode == 'single' || props.selectionMode == 'multiple') && !context.selected },
+      // Transition
+      "transition-shadow duration-200",
 
-            // Transition
-            'transition-shadow duration-200',
+      {
+        "cursor-pointer select-none":
+          props.selectionMode == "single" || props.selectionMode == "multiple",
+      },
+    ],
+  }),
+  nodeToggleButton: ({ context }) => ({
+    class: [
+      // Flex and Alignment
+      "inline-flex place-items-center h-full w-6 order-4 justify-self-end",
 
-            { 'cursor-pointer select-none': props.selectionMode == 'single' || props.selectionMode == 'multiple' },
+      // Shape
+      "border-0 outline-none outline-offset-0 ring-0",
 
-  
-        ]
-    }),
-    nodeToggleButton: ({ context }) => ({
-        class: [
-            // Flex and Alignment
-            'inline-flex place-items-center h-full w-6 order-4 justify-self-end',
+      // Size
 
-            // Shape
-            'border-0 outline-none outline-offset-0 ring-0',
+      // Colors
+      "bg-transparent",
+      {
+        "text-base-content": !context.selected,
+        "text-info": context.selected,
 
-            // Size
+        invisible: context.leaf,
+        hidden: context.leaf,
+      },
 
-            // Colors
-            'bg-transparent',
-            {
-                'text-base-content': !context.selected,
-                'text-info': context.selected,
+      // States
+      "hover:text-base-content",
+      "focus:outline-none focus:outline-offset-0 focus:ring-0",
 
-                
-                invisible: context.leaf,
-                'hidden': context.leaf,
-            },
+      // Transition
+      "transition duration-200",
 
-            // States
-            'hover:text-base-content',
-            'focus:outline-none focus:outline-offset-0 focus:ring-0',
+      // Misc
+      "cursor-pointer select-none",
+    ],
+  }),
 
-            // Transition
-            'transition duration-200',
+  nodeToggleIcon: ({ context }) => ({
+    class: [
+      "ph--caret-up",
+      {
+        "rotate-180 rotate-180-ccw": context.expanded,
+        "rotate-0 rotate-180-ccw reverse": !context.expanded,
+      },
 
-            // Misc
-            'cursor-pointer select-none'
-        ],
-    }),
+      "rotate-0",
+    ],
+  }),
 
-    nodeToggleIcon: ({ context }) => ({
-        
-        class: [
-            'ph--caret-up',
-            {
-                'rotate-180 rotate-180-ccw': context.expanded,
-                'rotate-0 rotate-180-ccw reverse': !context.expanded,
-            },
+  nodeIcon: ({ context }) => ({
+    class: [
+      // Space
+      "size-5 overflow-hidden order-1 mr-4 text-accent-content/70",
 
-            'rotate-0'
-        ]
-    }),
+      // Color
+      {
+        "text-foreground": !context.selected,
+        "text-background": context.selected,
+        "pl-0": context.leaf,
+      },
+    ],
+  }),
+  nodeLabel: ({ context }) => ({
+    class: [
+      "order-2 align-middle content-center items-center relative flex flex-grow h-8",
 
-    nodeIcon: ({ context }) => ({
-        class: [
-            // Space
-            'size-5 overflow-hidden order-1 mr-3 text-accent-content/70',
-
-            // Color
-            {
-                'text-foreground': !context.selected,
-                'text-background': context.selected,
-                'pl-0': context.leaf,
-            }
-        ]
-    }),
-    nodeLabel: ({ context }) => ({
-        class: [
-
-            'order-2 align-middle content-center items-center relative flex flex-grow h-8',
-
-            {  
-                'text-foreground': !context.selected,
-                'text-background': context.selected
-            }
-        ]
-    }),
-    nodeChildren: {
-        class: [
-            'list-none menu-dropdown z-10',
-   //last:mb-3
-        ]
-    },
-    loadingIcon: {
-        class: ['text-surface-500 dark:text-surface-0/70', 'absolute top-[50%] right-[50%] -mt-2 -mr-2 animate-spin']
-    }
-
+      {
+        "text-foreground": !context.selected,
+        "text-background": context.selected,
+      },
+    ],
+  }),
+  nodeChildren: {
+    class: [
+      "list-none z-10",
+      //last:mb-3
+    ],
+  },
+  loadingIcon: {
+    class: [
+      "text-surface-500 dark:text-surface-0/70",
+      "absolute top-[50%] right-[50%] -mt-2 -mr-2 animate-spin",
+    ],
+  },
 };

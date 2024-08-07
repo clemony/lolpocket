@@ -28,6 +28,7 @@
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
     "dotenv": "^16.4.5",
+    "gsap": "^3.12.5",
     "js-beautify": "^1.15.1",
     "lru-cache": "^11.0.0",
     "lucide-vue-next": "^0.407.0",

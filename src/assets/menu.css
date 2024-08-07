@@ -1,3 +1,43 @@
+#content {
+  top: 0;
+  left: 0;
+  @apply w-screen h-screen absolute z-auto px-[0px] pt-2;
+}
+
+#resize-panel-1,
+#resize-panel-2,
+#resize-panel-3 {
+  overflow: auto !important;
+  @apply py-3 scroll-auto pt-[36px];
+}
+
+#resize-panel-1 {
+  @apply mt-[0px] /*backdrop-blur-md bg-background/60*/;
+}
+
+#resize-handle-1 div {
+  @apply border-none bg-transparent;
+
+  svg {
+    @apply size-fit;
+  }
+}
+
+/*.panel-nav {
+  @apply bg-base-100 my-3 mx-4 h-auto rounded-box shadow-sm border-[1px] border-base-300/80 shadow-base-content/5;
+}*/
+.panel-box {
+  @apply grid grid-cols-1 h-full justify-items-end justify-end min-h-60;
+
+  .data {
+    @apply justify-self-stretch;
+  }
+
+  .utils {
+    @apply self-end h-11 w-full;
+  }
+}
+
 [data-pc-section="nodechildren"] [data-pc-section="nodecontent"] {
   @apply pl-5;
 }
@@ -25,19 +65,20 @@
     @apply inline-flex;
   }
 }
-
+/*
 [aria-expanded="true"] [data-pc-section="nodechildren"] {
   @apply animate-in slide-in-from-top fade-in duration-300 z-0;
 }
 
 [aria-expanded="false"] [data-pc-section="nodechildren"] {
   @apply animate-out slide-out-to-top fade-out duration-700 z-0;
-}
+}*/
 
 #tree1 [aria-label="Champions"][aria-level="1"],
 #tree1 [aria-label="Items"][aria-level="1"],
 #tree1 [aria-label="Runes"][aria-level="1"],
-#tree1 [aria-label="Settings"] {
+#tree1 [aria-label="Settings"],
+#tree1 [aria-label="Account"] {
   @apply hidden;
 }
 
@@ -45,7 +86,8 @@
 #tree2 [aria-label="Builds"],
 #tree2 [aria-label="Favorites"],
 #tree2 [aria-label="Settings"],
-#tree2 [aria-label="Calculator"] {
+#tree2 [aria-label="Calculator"],
+#tree2 [aria-label="Account"] {
   @apply hidden;
 }
 

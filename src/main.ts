@@ -1,6 +1,7 @@
 import "@/assets/imports.css";
 import Aura from '@/assets/presets';
 import App from "@/pages/App.vue";
+import { gsap } from "gsap";
 import { createPinia } from "pinia";
 import PrimeVue from "primevue/config";
 import Tree from "primevue/tree";
@@ -8,6 +9,13 @@ import { createApp } from "vue";
 import { createRouter, createWebHistory } from 'vue-router';
 import { routes } from 'vue-router/auto-routes';
 import { getCurrent } from '../node_modules/@tauri-apps/api/window.js';
+    
+import { Draggable } from "gsap/Draggable";
+import { Flip } from "gsap/Flip";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+
+gsap.registerPlugin(Flip,ScrollToPlugin,Draggable);
 
 const router = createRouter({
   history: createWebHistory(),

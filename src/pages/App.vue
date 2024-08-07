@@ -111,6 +111,8 @@ onMounted(() => {
 });
 
 
+
+
 </script>
 
 <template>
@@ -138,26 +140,30 @@ onMounted(() => {
       </DropdownMenuContent>
     </DropdownMenu>
 
+    <!-- Search box -->
 
-
-    <div class="s-box">
+    <div class="s-box dropdown">
       <form class="s-form">
         <div class="relative ">
           <Icon icon="fluent:search-28-regular" class="s-icon" />
-          <Input placeholder="" class="in-search" />
+          <Input tabindex="0" role="button" placeholder="" class="in-search z-20" />
+          <div tabindex="0"
+            class="dropdown-content menu m-0 p-0 bg-base-100 w-[560px] rounded-md place-content-center z-[1] top-0 px-0 pt-0 shadow -ml-[45px]">
+            <Input tabindex="0" role="button" placeholder="" class="in-search z-20" />
+          </div>
         </div>
       </form>
     </div>
 
     <div class="button-wrapper">
-      <div class="titlebar-button" id="titlebar-minimize">
-        <Icon icon="jam:chevron-circle-down-f" class="b-window" />
+      <div class="titlebar-button relative tooltip tooltip-bottom" data-tip="minimize" id="titlebar-minimize">
+        <Icon icon="ph:line-vertical-bold" class="b-window rotate-90" />
       </div>
-      <div class="titlebar-button" id="titlebar-maximize">
-        <Icon icon="jam:plus-circle-f" class="b-window" />
+      <div class="titlebar-button tooltip tooltip-bottom text-xxs" data-tip="maximize" id="titlebar-maximize">
+        <Icon icon="ph:arrows-out-simple-bold" class="b-window" />
       </div>
-      <div class="titlebar-button" id="titlebar-close">
-        <Icon icon="jam:close-circle-f" class="b-window" />
+      <div class="titlebar-button tooltip tooltip-bottom text-xxs" data-tip="exit" id="titlebar-close">
+        <Icon icon="ph:x-bold" class="b-window" />
       </div>
     </div>
   </div>
@@ -172,18 +178,20 @@ onMounted(() => {
           :class="cn(isCollapsed && 'min-w-[50px] transition-all duration-300 ease-in-out')" @expand="onExpand"
           @collapse="onCollapse">
 
-          <div id="menu" class="m-4 rounded-box bg-base-100 
-            shadow-base-content/10 shadow-lg">
+          <div id="menu" class="m-4 rounded-lg bg-base-100 border-[1px] border-base-300
+            shadow-base-content/10 shadow-lg transition-all ease">
 
             <div class="panel-nav">
+
               <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
                 @nodeSelect="onNodeSelect" id="tree1">
 
 
-                <template #nodetogglebutton @click(add>
+                <template #nodetogglebutton>
                 </template>
                 <template #default="slotProps">
                   {{ slotProps.node.label }}
+
                 </template>
 
                 <template #addon="slotProps">
@@ -200,11 +208,13 @@ onMounted(() => {
                 </template>
               </Tree>
 
+
+
             </div>
 
 
             <div class="data panel-nav">
-              <h4 class="pt-3 pl-3 text-xs font-semibold border-none">BROWSE</h4>
+              <h4 class="pt-3 pl-3 text-sm font-semibold border-none">BROWSE</h4>
               <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
                 @nodeSelect="onNodeSelect" id="tree2">
                 <template #browse="slotProps">
@@ -220,7 +230,10 @@ onMounted(() => {
                   {{ slotProps.node.label }}
                 </template>
               </Tree>
+
+
             </div>
+
 
 
 

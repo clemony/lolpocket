@@ -17,14 +17,13 @@ const champions = dataStore.champions;
 
 <template>
   <KeepAlive>
-    <div id="main" class="flex-1">
-      <div class="grid-header">
-        <div role="tablist" class="tabs tabs-lg tabs-lifted w-full">
-          <a role="tab" name="champions" class="tab tab-active">
-            <h2 class="px-5">Champions</h2>
-          </a>
+    <div id="" class="main flex-1">
+      <div class="">
+        <div role="tablist" class="tabs tabs-lg tabs-lifted w-full mr-4 ">
+          <input type="radio" name="champ-tabs" role="tab" class="tab w-1/5 font-semibold" aria-label="Champions"
+            checked="true" />
 
-          <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-r-box rounded-bl-box p-4 w-full">
+          <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
             <div class="grid-container c-grid">
               <div class="grid-item champ" v-for="champion in champions">
 
@@ -43,6 +42,35 @@ const champions = dataStore.champions;
 
 
           </div>
+
+
+          <label role="tab" class="tab">
+            <input type="radio" name="champ-tabs" checked="false" aria-label="loved" />
+            <span>
+              <Icon icon="ph:heart-straight" />
+            </span>
+          </label>
+
+          <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+            <div class="grid-container c-grid">
+              <div class="grid-item champ" v-for="champion in champions">
+
+                <div class="grid-image-container champ">
+                  <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
+                    class="grid-image" />
+
+                  <div class="grid-tip">
+                    {{ champion.name }}
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+
+          </div>
+
         </div>
       </div>
 

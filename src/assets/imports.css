@@ -1,4 +1,6 @@
+@import "@fontsource-variable/inter";
 @import "index.css";
+@import "./setup.css";
 @import "./common.css";
 @import "./grid.css";
 @import "./icons.css";
