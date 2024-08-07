@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useDataStore } from '@/stores/dataStore';
+import { Icon } from "@iconify/vue";
 import { ref } from 'vue';
 
 const dataStore = useDataStore();
@@ -16,12 +17,12 @@ const selectedTab = ref("champion");
         <!-- Add the `value` prop to Tabs and bind it to selectedTab -->
         <Tabs v-model:value="selectedTab" role="tabslist" class="">
           <TabsList>
-            <TabsTrigger>
-              <!-- Use value binding to set the current tab value -->
-              <div role="tab" class="tab" value="champion">Champions</div>
+            <!-- Provide value to each TabsTrigger to link with TabsContent -->
+            <TabsTrigger :value="'champion'">
+              <div role="tab" class="tab">Champions</div>
             </TabsTrigger>
-            <TabsTrigger>
-              <div role="tab" class="tab" value="loved">
+            <TabsTrigger :value="'loved'">
+              <div role="tab" class="tab">
                 <Icon icon="ph:heart-straight" />
               </div>
             </TabsTrigger>
