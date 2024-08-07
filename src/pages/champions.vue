@@ -19,29 +19,34 @@ const champions = dataStore.champions;
   <KeepAlive>
     <div id="main" class="flex-1">
       <div class="grid-header">
-        <h2>Champions</h2>
-        <Separator />
+        <div role="tablist" class="tabs tabs-lg tabs-lifted w-full">
+          <a role="tab" name="champions" class="tab tab-active">
+            <h2 class="px-5">Champions</h2>
+          </a>
 
+          <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-r-box rounded-bl-box p-4 w-full">
+            <div class="grid-container c-grid">
+              <div class="grid-item champ" v-for="champion in champions">
 
+                <div class="grid-image-container champ">
+                  <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
+                    class="grid-image" />
 
-      </div>
+                  <div class="grid-tip">
+                    {{ champion.name }}
+                  </div>
 
-      <div class="grid-container c-grid">
-        <div class="grid-item champ" v-for="champion in champions">
+                </div>
 
-          <div class="grid-image-container champ">
-            <div class="image-wrapper champ">
-              <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
-                class="grid-image" />
-
-              <div class="grid-tip">
-                {{ champion.name }}
               </div>
             </div>
-          </div>
 
+
+          </div>
         </div>
       </div>
+
+
 
     </div>
   </KeepAlive>

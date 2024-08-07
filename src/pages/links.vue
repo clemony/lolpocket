@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import { Icon } from '@iconify/vue';
 import { cn } from '@/lib/utils';
-import { buttonVariants } from '@ui/button';
-import { useRouter, useRoute } from 'vue-router';
+import { Icon } from '@iconify/vue';
+import { useRoute, useRouter } from 'vue-router';
 
 export type LinkVariant = 'default' | 'ghost' | 'link' | 'destructive' | 'outline' | 'secondary' | null;
 
@@ -49,7 +48,6 @@ const isOpen = ref(false);
         <Tooltip v-if="props.isCollapsed" :delay-duration="0">
           <TooltipTrigger as-child class="cursor-pointer">
             <a @click="navigate(link.component)" :class="cn(
-              buttonVariants({ variant: route.path === (link.component || '') ? 'default' : link.variant, size: 'icon' }),
               'h-9 w-9',
               link.variant === 'default'
               && 'dark:bg-muted dark:text-muted-foreground dark:hover:bg-muted dark:hover:text-white'
@@ -74,7 +72,6 @@ const isOpen = ref(false);
             <span v-if="link.expandable === 'false'" class="pl-5"></span>
           </div>
           <a @click="navigate(link.component)" class="cursor-pointer" :class="cn(
-            buttonVariants({ variant: route.path === (link.component || '') ? 'default' : link.variant, size: 'sm' }),
             link.variant === 'default'
             && 'dark:bg-muted dark:text-white dark:hover:bg-muted dark:hover:text-white',
             'justify-start'

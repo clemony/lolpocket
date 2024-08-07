@@ -47,17 +47,104 @@
             "@/*": [
                 "src/*"
             ],
-            "@tree/*": [
-                "src/assets/presets/tree/*"
-            ],
-            "@toast/*": [
-                "src/components/ui/toast/*"
-            ],
             "@presets/*": [
                 "src/assets/presets/*"
             ],
             "@page-build/*": [
                 "src/page-build/*"
+            ],
+            "@avatar/*": [
+                "src/components/ui/avatar/*"
+            ],
+            "@badge/*": [
+                "src/components/ui/badge/*"
+            ],
+            "@breadcrumb/*": [
+                "src/components/cn/breadcrumb/*"
+            ],
+            "@button/*": [
+                "src/components/cn/button/*"
+            ],
+            "@card/*": [
+                "src/components/cn/card/*"
+            ],
+            "@checkbox/*": [
+                "src/components/cn/checkbox/*"
+            ],
+            "@collapsible/*": [
+                "src/components/cn/collapsible/*"
+            ],
+            "@command/*": [
+                "src/components/cn/command/*"
+            ],
+            "@dialog/*": [
+                "src/components/cn/dialog/*"
+            ],
+            "@hover-card/*": [
+                "src/components/cn/hover-card/*"
+            ],
+            "@input/*": [
+                "src/components/cn/input/*"
+            ],
+            "@label/*": [
+                "src/components/cn/label/*"
+            ],
+            "@navigation-menu-ts/*": [
+                "src/components/cn/navigation-menu-ts/*"
+            ],
+            "@pagination/*": [
+                "src/components/cn/pagination/*"
+            ],
+            "@popover/*": [
+                "src/components/cn/popover/*"
+            ],
+            "@progress/*": [
+                "src/components/cn/progress/*"
+            ],
+            "@radio-group/*": [
+                "src/components/cn/radio-group/*"
+            ],
+            "@scroll-area/*": [
+                "src/components/cn/scroll-area/*"
+            ],
+            "@separator/*": [
+                "src/components/cn/separator/*"
+            ],
+            "@sheet/*": [
+                "src/components/cn/sheet/*"
+            ],
+            "@table/*": [
+                "src/components/cn/table/*"
+            ],
+            "@tabs/*": [
+                "src/components/cn/tabs/*"
+            ],
+            "@textarea/*": [
+                "src/components/cn/textarea/*"
+            ],
+            "@toast/*": [
+                "src/components/cn/toast/*"
+            ],
+            "@toggle/*": [
+                "src/components/cn/toggle/*"
+            ],
+            "@toggle-group/*": [
+                "src/components/cn/toggle-group/*"
+            ],
+            "@tooltip/*": [
+                "src/components/cn/tooltip/*"
+            ],
+            "@resizable/*": [
+                "src/components/cn/resizable/*"
+            ],
+            "@dropdown-menu/*": [
+                "src/components/cn/dropdown-menu/*"
+            ],
+            "@context-menu/*": [
+                "src/components/cn/context-menu/*"
+            ],
+            "@cn/*": [
+                "src/components/cn/*"
             ]
         }
     }

@@ -1,16 +1,14 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-import { type BadgeVariants, badgeVariants } from '.'
 import { cn } from '@/lib/utils'
 
 const props = defineProps<{
-  variant?: BadgeVariants['variant']
   class?: HTMLAttributes['class']
 }>()
 </script>
 
 <template>
-  <div :class="cn(badgeVariants({ variant }), props.class)">
+  <span :class="cn('ml-auto text-xs tracking-widest opacity-60', props.class)">
     <slot />
-  </div>
+  </span>
 </template>

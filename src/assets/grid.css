@@ -1,3 +1,8 @@
+.grid-item,
+.grid-image-container,
+.grid-image {
+    @apply rounded-md;
+}
 
 
 .grid-header {
@@ -16,7 +21,6 @@
 .grid-container.item {
     grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(55x, 1fr));
-    @apply  rounded-lg;
 }
 
 .grid-container.c-grid {
@@ -30,16 +34,13 @@
             justify-content: center;
             align-items: center;
 
-            @apply size-full flex overflow-hidden relative rounded-lg;
-
-            .image-wrapper {
-                @apply size-full overflow-hidden rounded-lg;
+            @apply size-full flex overflow-hidden relative;
 
                 .grid-image {
 
-                    @apply !h-[90px] !w-[90px] object-cover overflow-hidden rounded-lg;
+                    @apply !h-[94px] !w-[94px] object-cover overflow-hidden;
                 }
-              }
+              
         }
     }
 
@@ -52,7 +53,7 @@
 
 .grid-item {
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
-    @apply w-full relative overflow-hidden rounded-lg shadow-sm shadow-foreground/40;
+    @apply w-full relative overflow-hidden shadow-sm shadow-base-content/5;
 }
 
 
@@ -69,7 +70,7 @@
 
 .grid-image {/* 
     object-position: bottom 5px right -4px; */
-    @apply aspect-square  rounded-lg  !overflow-auto relative -top-1.5 z-0;
+    @apply aspect-square !overflow-auto relative z-0;
 }
 
 
@@ -82,7 +83,7 @@
     transition: all 0.3s ease;
     transform: translateY(200%);
     /*background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(255,255,255,0) 90%);*/
-    @apply flex z-20 absolute w-full h-auto cursor-pointer pointer-events-none text-wrap opacity-0 bottom-0 max-w-[80px] left-0 text-background hyphens-auto  font-semibold   tracking-wider !text-[10px] p-1 uppercase text-end align-text-bottom justify-start;
+    @apply flex z-20 absolute w-full h-auto cursor-pointer pointer-events-none text-wrap opacity-0 bottom-0 max-w-[80px] left-0 text-white hyphens-auto  font-semibold   tracking-wider !text-[10px] p-1 uppercase text-end align-text-bottom justify-start;
 }
 
 .grid-image-container::after {
@@ -90,9 +91,9 @@
     width: inherit;
     height: inherit;
     transition: all 0.3s ease;
-    box-shadow: inset 0px -6px 15px 10px rgba(0,0,0,0.75);
+    box-shadow: inset 0px -6px 15px 10px rgba(0,0,0,0.65);
     /*background: radial-gradient(circle, rgba(255,255,255,0) 40%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0.8) 90%, rgba(0,0,0,0.9) 99%, rgba(0,0,0,1) 100%); */
-    @apply opacity-0 pointer-events-none absolute -top-1 -left-1 z-10;
+    @apply opacity-0 pointer-events-none absolute z-10;
 }
 
 
@@ -100,11 +101,7 @@
 .grid-item:hover {
     .grid-image-container {
     /*border-style:groove;*/
-    @apply border-[3px] border-foreground/80 rounded-lg;
-
-    .grid-image {
-        @apply rounded-lg;
-    }
+    @apply border-[2px] border-secondary;
 
     .grid-tip {
         transform: none;

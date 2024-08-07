@@ -3,10 +3,10 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from '@/components/ui/resizable';
+} from '@/components/cn/resizable';
 import {
   useToast
-} from '@/components/ui/toast/use-toast';
+} from '@/components/cn/toast/use-toast';
 import { cn } from '@/lib/utils';
 import Builds from '@/page-build/builds-template.vue';
 import Champions from '@/pages/champions.vue';
@@ -42,7 +42,7 @@ interface LayoutProps {
 
 const props = withDefaults(defineProps<LayoutProps>(), {
   defaultCollapsed: false,
-  defaultLayout: () => [18, 82, 0],
+  defaultLayout: () => [20, 80, 0],
 });
 
 
@@ -109,6 +109,8 @@ onMounted(() => {
   useDataStore().fetchData();
   NodeService.getTreeNodes().then((data: null) => (nodes.value = data));
 });
+
+
 </script>
 
 <template>
@@ -116,10 +118,11 @@ onMounted(() => {
     <DropdownMenu>
       <DropdownMenuTrigger class="justify-self-start">
         <Button variant="ghost" class="title">
-          <Avatar class="size-5">
-            <AvatarImage src="https://github.com/radix-vue.png" alt="@radix-vue" />
-            <AvatarFallback>LP</AvatarFallback>
-          </Avatar>
+          <div class="avatar">
+            <div class="object-contain rounded-full size-5">
+              <img src="/img/ui/lp.svg" class="object-contain" />
+            </div>
+          </div>
           <span>lolpocket</span>
         </Button>
       </DropdownMenuTrigger>
@@ -148,13 +151,13 @@ onMounted(() => {
 
     <div class="button-wrapper">
       <div class="titlebar-button" id="titlebar-minimize">
-        <Icon icon="fluent:arrow-minimize-16-regular" class="b-window" />
+        <Icon icon="jam:chevron-circle-down-f" class="b-window" />
       </div>
       <div class="titlebar-button" id="titlebar-maximize">
-        <Icon icon="fluent:maximize-24-regular" class="b-window" />
+        <Icon icon="jam:plus-circle-f" class="b-window" />
       </div>
       <div class="titlebar-button" id="titlebar-close">
-        <Icon icon="fluent:dismiss-32-regular" class="b-window" />
+        <Icon icon="jam:close-circle-f" class="b-window" />
       </div>
     </div>
   </div>
@@ -163,63 +166,64 @@ onMounted(() => {
   <div id="content">
     <ResizablePanelGroup id="resize-panel-group-1" direction="horizontal" class="items-stretch h-full">
       <TooltipProvider>
+
         <ResizablePanel id="resize-panel-1" :default-size="props.defaultLayout[0]"
           :collapsed-size="props.navCollapsedSize" collapsible :min-size="15" :max-size="20"
           :class="cn(isCollapsed && 'min-w-[50px] transition-all duration-300 ease-in-out')" @expand="onExpand"
           @collapse="onCollapse">
 
+          <div id="menu" class="m-4 rounded-box bg-base-100 
+            shadow-base-content/10 shadow-lg">
 
-          <h2 class="font-bold prose-headings">@user's pocket</h2>
-
-          <div class="panel-nav">
-            <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
-              @nodeSelect="onNodeSelect" id="tree1">
-
-              <template #nodetoggleicon>
-                <Icon icon="basil:caret-up-outline" width="1.5rem" height="1.5rem" />
-              </template>
-              <template #default="slotProps">
-                {{ slotProps.node.label }}
-
-              </template>
-              <template #addon="slotProps">
-                <span>{{ slotProps.node.label }}</span>
-                <Button variant="null" class="add-build" title="create new build">
-                  <Icon icon='fluent:add-square-24-regular' class="add-reg" />
-                  <Icon icon='fluent:add-square-24-filled' class="add-fill" />
-                </Button>
-              </template>
-              <template #build="slotProps" :pt="{
-                nodeicon: {
-                  onClick: onIconClick,
-                }
-              }">
-
-                <input :label='slotProps.node.label' :placeholder="slotProps.node.label"
-                  class="w-full h-5 mr-2 overflow-scroll" />
-              </template>
-            </Tree>
-
-          </div>
+            <div class="panel-nav">
+              <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
+                @nodeSelect="onNodeSelect" id="tree1">
 
 
-          <div class="data panel-nav">
-            <h4 class="pt-3 pl-3 text-xs font-semibold border-none">BROWSE</h4>
-            <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
-              @nodeSelect="onNodeSelect" id="tree2">
-              <template #browse="slotProps">
-                {{ slotProps.node.label }}
-              </template>
-            </Tree>
-          </div>
+                <template #nodetogglebutton @click(add>
+                </template>
+                <template #default="slotProps">
+                  {{ slotProps.node.label }}
+                </template>
 
-          <div class="panel-nav utils">
-            <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
-              @nodeSelect="onNodeSelect" id="tree3">
-              <template #settings="slotProps">
-                {{ slotProps.node.label }}
-              </template>
-            </Tree>
+                <template #addon="slotProps">
+                  <div>{{ slotProps.node.label }}</div>
+
+                  <Button variant="null" class="add-build cursor-pointer" @click="onIconClick" title="create new build">
+                    <Icon icon='ph:plus' class="add-fill" />
+                  </Button>
+                </template>
+                <template #build="slotProps">
+
+                  <input :label='slotProps.node.label' :placeholder="slotProps.node.label"
+                    class="w-full h-5 mr-2 overflow-scroll" />
+                </template>
+              </Tree>
+
+            </div>
+
+
+            <div class="data panel-nav">
+              <h4 class="pt-3 pl-3 text-xs font-semibold border-none">BROWSE</h4>
+              <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
+                @nodeSelect="onNodeSelect" id="tree2">
+                <template #browse="slotProps">
+                  {{ slotProps.node.label }}
+                </template>
+              </Tree>
+            </div>
+
+            <div class="panel-nav">
+              <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
+                @nodeSelect="onNodeSelect" id="tree3">
+                <template #settings="slotProps">
+                  {{ slotProps.node.label }}
+                </template>
+              </Tree>
+            </div>
+
+
+
           </div>
         </ResizablePanel>
       </TooltipProvider>

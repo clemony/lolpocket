@@ -3,18 +3,17 @@ export default {
         class: [
             'text-xs',
             // Space
-            'm-0 p-0',
+            'm-0 p-1.5',
 
             // Shape,
             'border-none ',
 
             // Color
-            'text-foreground',
-            '[&_[data-pc-name=pcfilter]]:w-full'
+            'text-base-content',
         ]
     },
     wrapper: {
-        class: ['overflow-auto m-1 mt-2']
+        class: ['overflow-auto m-0']
     },
     container: {
         class: [
@@ -26,22 +25,22 @@ export default {
         ]
     },
     node: {
-        class: ['focus:outline-none']
+        class: ['focus:outline-none align-middle items-center relative my-2 w-full bg-base-100 code']
     },
     nodeContent: ({ context, props }) => ({
         class: [
+            
             // Flex and Alignment
-            'inline-flex items-center rounded',
+            'inline-flex items-center rounded-btn align-middle relative h-8 pl-2 w-full z-10',
 
 
             // Spacing
-            'mr-1.5 ml-0.5',
 
             // Colors
-            context.selected ? 'bg-foreground text-background' : 'bg-transparent text-foreground hover:bg-muted',
+            context.selected ? 'bg-base-300 text-base-content' : 'bg-base-100 text-base-content hover:bg-base-200 hover:text-base-content',
 
             // States
-            { 'hover:bg-muted': (props.selectionMode == 'single' || props.selectionMode == 'multiple') && !context.selected },
+            { 'hover:bg-base-200 hover:text-base-content': (props.selectionMode == 'single' || props.selectionMode == 'multiple') && !context.selected },
 
             // Transition
             'transition-shadow duration-200',
@@ -54,18 +53,18 @@ export default {
     nodeToggleButton: ({ context }) => ({
         class: [
             // Flex and Alignment
-            'inline-flex items-center size-8 order-3  mr-2.5',
+            'inline-flex place-items-center h-full w-6 order-4 justify-self-end',
 
             // Shape
-            'border-0',
+            'border-0 outline-none outline-offset-0 ring-0',
 
             // Size
 
             // Colors
             'bg-transparent',
             {
-                'text-foreground': !context.selected,
-                'text-background': context.selected,
+                'text-base-content': !context.selected,
+                'text-info': context.selected,
 
                 
                 invisible: context.leaf,
@@ -73,7 +72,7 @@ export default {
             },
 
             // States
-            'hover:bg-surface-200/20 dark:hover:bg-surface-500/20',
+            'hover:text-base-content',
             'focus:outline-none focus:outline-offset-0 focus:ring-0',
 
             // Transition
@@ -87,14 +86,20 @@ export default {
     nodeToggleIcon: ({ context }) => ({
         
         class: [
-            'rotato'
+            'ph--caret-up',
+            {
+                'rotate-180 rotate-180-ccw': context.expanded,
+                'rotate-0 rotate-180-ccw reverse': !context.expanded,
+            },
+
+            'rotate-0'
         ]
     }),
 
     nodeIcon: ({ context }) => ({
         class: [
             // Space
-            'mr-3 size-5 overflow-hidden order-1',
+            'size-5 overflow-hidden order-1 mr-3 text-accent-content/70',
 
             // Color
             {
@@ -107,7 +112,7 @@ export default {
     nodeLabel: ({ context }) => ({
         class: [
 
-            'order-1',
+            'order-2 align-middle content-center items-center relative flex flex-grow h-8',
 
             {  
                 'text-foreground': !context.selected,
@@ -116,15 +121,13 @@ export default {
         ]
     }),
     nodeChildren: {
-        class: ['list-none',    //last:mb-3
+        class: [
+            'list-none menu-dropdown z-10',
+   //last:mb-3
         ]
     },
     loadingIcon: {
         class: ['text-surface-500 dark:text-surface-0/70', 'absolute top-[50%] right-[50%] -mt-2 -mr-2 animate-spin']
     }
-    // pcFilterContainer: {
-    //     root: {
-    //         class: '[&>[data-pc-name=inputtext]]:w-full'
-    //     }
-    // }
+
 };

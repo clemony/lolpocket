@@ -1,0 +1,30 @@
+.rotate-180-ccw {
+  -webkit-animation: rotate-180-ccw 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    forwards;
+  animation: rotate-180-ccw 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.reverse {
+  animation-direction: reverse;
+}
+
+@-webkit-keyframes rotate-180-ccw {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+}
+@keyframes rotate-180-ccw {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+}

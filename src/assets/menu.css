@@ -1,0 +1,60 @@
+[data-pc-section="nodechildren"] [data-pc-section="nodecontent"] {
+  @apply pl-5;
+}
+
+[aria-label="Builds"] [data-pc-section="nodechildren"] {
+  ul [data-pc-section="nodechildren"] {
+    @apply pl-3;
+  }
+}
+.add-build {
+  @apply order-3 flex absolute right-0 -top-1;
+  .add-fill {
+    @apply inline-flex h-[17px] w-[17px];
+  }
+  .add-reg {
+    @apply hidden h-[17px] w-[17px];
+  }
+}
+
+.add-build:hover {
+  .add-fill {
+    @apply hidden;
+  }
+  .add-reg {
+    @apply inline-flex;
+  }
+}
+
+[aria-expanded="true"] [data-pc-section="nodechildren"] {
+  @apply animate-in slide-in-from-top fade-in duration-300 z-0;
+}
+
+[aria-expanded="false"] [data-pc-section="nodechildren"] {
+  @apply animate-out slide-out-to-top fade-out duration-700 z-0;
+}
+
+#tree1 [aria-label="Champions"][aria-level="1"],
+#tree1 [aria-label="Items"][aria-level="1"],
+#tree1 [aria-label="Runes"][aria-level="1"],
+#tree1 [aria-label="Settings"] {
+  @apply hidden;
+}
+
+#tree2 [aria-label="Home"],
+#tree2 [aria-label="Builds"],
+#tree2 [aria-label="Favorites"],
+#tree2 [aria-label="Settings"],
+#tree2 [aria-label="Calculator"] {
+  @apply hidden;
+}
+
+#tree3 [aria-label="Home"],
+#tree3 [aria-label="Builds"],
+#tree3 [aria-label="Favorites"],
+#tree3 [aria-label="Champions"][aria-level="1"],
+#tree3 [aria-label="Items"][aria-level="1"],
+#tree3 [aria-label="Runes"][aria-level="1"],
+#tree3 [aria-label="Calculator"] {
+  @apply hidden;
+}

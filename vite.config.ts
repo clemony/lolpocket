@@ -1,12 +1,12 @@
-import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import tauri from "vite-plugin-tauri";
 import AutoImport from "unplugin-auto-import/vite";
-import Components from "unplugin-vue-components/vite";
-import { ViteAliases } from "vite-aliases";
 import IconsResolver from 'unplugin-icons/resolver';
-import VueRouter from 'unplugin-vue-router/vite';
+import Components from "unplugin-vue-components/vite";
 import { VueRouterAutoImports } from 'unplugin-vue-router';
+import VueRouter from 'unplugin-vue-router/vite';
+import { defineConfig } from "vite";
+import { ViteAliases } from "vite-aliases";
+import tauri from "vite-plugin-tauri";
 
 export default defineConfig({
   plugins: [
@@ -16,7 +16,7 @@ export default defineConfig({
     vue(),
     tauri(),
     Components({
-      dirs: ["src/components", "src/components/ui", "src/components/modules", "src/pages"], // Ensure paths are correct
+      dirs: ["src/components", "src/components/modules", "src/pages"], // Ensure paths are correct
       extensions: ["vue"],
       deep: true,
       dts: "src/lib/components.d.ts",

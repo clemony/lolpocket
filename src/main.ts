@@ -1,7 +1,4 @@
-import "@/assets/common.css";
-import "@/assets/grid.css";
-import "@/assets/icons.css";
-import "@/assets/index.css";
+import "@/assets/imports.css";
 import Aura from '@/assets/presets';
 import App from "@/pages/App.vue";
 import { createPinia } from "pinia";
@@ -10,7 +7,6 @@ import Tree from "primevue/tree";
 import { createApp } from "vue";
 import { createRouter, createWebHistory } from 'vue-router';
 import { routes } from 'vue-router/auto-routes';
-import VueResizeText from 'vue3-resize-text';
 import { getCurrent } from '../node_modules/@tauri-apps/api/window.js';
 
 const router = createRouter({
@@ -63,7 +59,6 @@ export type {
   WindowOptions
 };
 
-app.use(VueResizeText);
 app.use(createPinia());
 app.use(router);
 app.use(PrimeVue, {

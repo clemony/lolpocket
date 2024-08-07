@@ -10,7 +10,7 @@ export const NodeService = {
             {
                 key: 'home',
                 label: 'Home',
-                icon: 'carbon--home ',
+                icon: 'ph--house-simple',
                 data: "/home",
                 selectable: 'true',
                 
@@ -18,7 +18,7 @@ export const NodeService = {
             {
                 key: 'Builds',
                 label: 'Builds',
-                icon: 'material-symbols-light--crossword-outline-rounded',
+                icon: 'ph--hammer',
                 data: "/builds",
                 selectable: 'true',
                 type: 'addon',
@@ -34,21 +34,21 @@ export const NodeService = {
                             key: '1', 
                             label: 'Champions', 
                             hide: 'yes',
-                            icon: 'material-symbols-light--person-celebrate', 
+                            icon: 'ph--crown-simple', 
                             data: 'build-champions',
                             selectable: 'true',  
                         },
                         { 
                             key: '2', 
                             label: 'Items', 
-                            icon: 'ph--shield-plus-light', 
+                            icon: 'ph--sword', 
                             data: 'build-items',
                             selectable: 'true',
                         },
                         { 
                             key: '3', 
                             label: 'Runes', 
-                            icon: 'runes--icon ', 
+                            icon: 'ph--hexagon', 
                             data: 'build-runes',
                             selectable: 'true',
 
@@ -61,20 +61,20 @@ export const NodeService = {
             {
                 key: 'Favorites',
                 label: 'Favorites',
-                icon: 'fluent-mdl2--heart',
+                icon: 'ph--heart-straight',
                 selectable: 'true',
                 children: [
                     { 
                         key: 'f-champions', 
                         label: 'Champions', 
-                        icon: 'material-symbols-light--person-celebrate', 
+                        icon: 'ph--crown-simple', 
                         data: 'f-champions', 
                         selectable: 'true',
                     },
                     { 
                         key: 'f-items', 
                         label: 'Items', 
-                        icon: 'ph--shield-plus-light', 
+                        icon: 'ph--axe-fill', 
                         data: 'build-items',
                         selectable: 'true',
 
@@ -84,13 +84,13 @@ export const NodeService = {
             {
                 key: 'calculator',
                 label: 'Calculator',
-                icon: 'circum--calculator-2',
+                icon: 'ph--calculator-fill',
                 selectable: 'true',
             },
             {
                 key: 'Champions',
                 label: 'Champions',
-                icon: 'material-symbols-light--person-celebrate',
+                icon: 'ph--crown-simple',
                 data: "/champions",
                 selectable: 'true',
                 type: 'browse',
@@ -99,7 +99,7 @@ export const NodeService = {
             {
                 key: 'Items',
                 label: 'Items',
-                icon: 'ph--shield-plus-light',
+                icon: 'ph--sword',
                 data: "/items",
                 selectable: 'true',
                 type: 'browse',
@@ -109,7 +109,7 @@ export const NodeService = {
                 key: 'Runes',
                 label: 'Runes',
                 data: "/runes",
-                icon: 'runes--icon',
+                icon: 'ph--hexagon',
                 selectable: 'true',
                 type: 'browse',
                
@@ -117,7 +117,7 @@ export const NodeService = {
             {
                 key: 'Settings',
                 label: 'Settings',
-                icon: 'fluent--settings-20-regular',
+                icon: 'ph--gear-six',
                 data: "/settings",
                 selectable: 'true',
                 type: 'settings',
