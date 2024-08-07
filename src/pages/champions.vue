@@ -46,29 +46,28 @@ const champions = dataStore.champions;
 
 
 
-          <Tabs lifted name="Loved" role="tab" class="tab gap-2">
-            <Icon icon="ph:heart-straight" /> Mentions
-            </Tab>
+          <input type="radio" name="champ-tabs" role="tab" class="tab w-1/5 font-semibold" aria-label="Loved"
+            checked="true" />
 
-            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-              <div class="grid-container c-grid">
-                <div class="grid-item champ" v-for="champion in champions">
+          <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+            <div class="grid-container c-grid">
+              <div class="grid-item champ" v-for="champion in champions">
 
-                  <div class="grid-image-container champ">
-                    <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
-                      class="grid-image" />
+                <div class="grid-image-container champ">
+                  <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
+                    class="grid-image" />
 
-                    <div class="grid-tip">
-                      {{ champion.name }}
-                    </div>
-
+                  <div class="grid-tip">
+                    {{ champion.name }}
                   </div>
 
                 </div>
+
               </div>
-
-
             </div>
+
+
+          </div>
 
         </div>
       </div>
