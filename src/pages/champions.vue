@@ -129,7 +129,7 @@ function handleChampionClick(champion: Champion) {
 
               <input type="radio" name="ability-tabs" role="tab" class="tab-bg tab"
                 :style="{ backgroundImage: `url(${selectedChampion.pImg})` }" aria-label="P" checked="true" />
-              <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6 
+              <div role="tabpanel" class="tab-content tab-sidebar-content 
                 ">
                 Tab content 1
               </div>
@@ -142,19 +142,19 @@ function handleChampionClick(champion: Champion) {
 
               <input type="radio" name="ability-tabs" role="tab" class="tab-bg tab"
                 :style="{ backgroundImage: `url(${selectedChampion.wImg})` }" aria-label="W" />
-              <div role="tabpanel" class="tab-content tab-sidebar-conten">
+              <div role="tabpanel" class="tab-content tab-sidebar-content">
                 Tab content 3
               </div>
 
               <input type="radio" name="ability-tabs" role="tab" class="tab-bg tab"
                 :style="{ backgroundImage: `url(${selectedChampion.eImg})` }" aria-label="E" />
-              <div role="tabpanel" class="tab-content tab-sidebar-conten">
+              <div role="tabpanel" class="tab-content tab-sidebar-content">
                 Tab content 3
               </div>
 
               <input type="radio" name="ability-tabs" role="tab" class="tab tab-bg"
                 :style="{ backgroundImage: `url(${selectedChampion.rImg})` }" aria-label="R" />
-              <div role="tabpanel" class="tab-content tab-sidebar-conten">
+              <div role="tabpanel" class="tab-content tab-sidebar-content">
                 Tab content 3
               </div>
             </div>
