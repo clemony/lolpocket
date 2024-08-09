@@ -10,7 +10,7 @@
   @apply grid grid-cols-5 tabs tabs-lifted mt-5 w-full;
 }
 
-.sidebar-tabs:has(input.tab:checked:last-child) {
+.sidebar-tabs:has(div:last-child.tab-active) {
   @apply bg-red-400 text-red-400;
 }
 .tab-bg {
