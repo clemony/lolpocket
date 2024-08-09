@@ -4,11 +4,11 @@
 
 .tab-bg {
   background-size: 45px;
-  @apply font-semibold !text-transparent  overflow-hidden  relative bg-center bg-origin-content bg-no-repeat h-[55px] shadow-inner shadow-neutral;
+  @apply font-semibold !text-transparent  overflow-hidden  relative bg-center bg-origin-content bg-no-repeat h-[55px];
 }
 
 .sidebar-tabs > input.tab:checked:after {
-  @apply ring-offset-base-100 ring-8 ring-base-100 ring-offset-8;
+  @apply ring-offset-base-100 ring-8 ring-base-100 ring-offset-8 shadow-inner shadow-neutral;
 }
 
 .tab-bg:after {
@@ -16,7 +16,7 @@
 }
 
 .tab-sidebar-content {
-  @apply bg-base-100 border-base-300 rounded-box p-6 w-full border border-neutral/10;
+  @apply bg-base-100 shadow-inner shadow-neutral rounded-box p-6 w-full;
 }
 
 .tab-sidebar-content:last-child {
