@@ -44,5 +44,5 @@
 }
 
 [data-tag="Fighter"] {
-  @apply bg-secondary/80 text-secondary-content;
+  @apply bg-accent/60 text-accent-content;
 }
