@@ -1,5 +1,5 @@
 :root {
-  @apply !font-sans;
+  font-family: "Inter Variable", serif;
   --primary: oklch(var(--p));
   --rounded-box: 1rem !important;
   --rounded-btn: 0.5rem !important;
