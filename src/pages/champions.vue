@@ -89,7 +89,14 @@ function handleChampionClick(champion: Champion) {
           <!-- Sidebar content here -->
           <div v-if="selectedChampion" class="prose">
             <h1 class="tracking-tight break-space">{{ selectedChampion.name }}</h1>
-            <img :src="selectedChampion.img" :alt="selectedChampion.name" />
+
+            <div class="avatar">
+              <div class="w-24 rounded-xl">
+                <img :src="selectedChampion.img" :alt="selectedChampion.name" />
+              </div>
+            </div>
+
+
             <p>Title: {{ selectedChampion.title }}</p>
             <p>Tags: {{ selectedChampion.tags.join(', ') }}</p>
             <a :href="selectedChampion.wiki" target="_blank">More Info</a>
