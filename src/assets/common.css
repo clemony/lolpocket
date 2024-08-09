@@ -7,16 +7,15 @@
 }
 
 .tab {
-  @apply font-semibold !text-sm pl-5 pt-2;
+  @apply font-semibold !text-sm pl-5 pt-2 w1/5;
 }
 
 .tab-bg {
   background-size: 40px;
   @apply bg-center bg-origin-content bg-no-repeat shadow-inner shadow-red-700;
-
-  .tab-bg:after {
-    @apply border-orange-800 border;
-  }
+}
+.tab-bg:after {
+  @apply border-orange-800 border size-[32px] rounded-full;
 }
 
 .tab-sidebar-content {
