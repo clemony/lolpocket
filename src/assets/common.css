@@ -7,7 +7,7 @@
 }
 
 .tab {
-  @apply font-semibold !text-sm pl-5 pt-2 overflow-hidden w-20 relative;
+  @apply font-semibold !text-sm pl-5 pt-2 overflow-hidden  relative;
 }
 
 .tabs > input.tab:checked:first-child:after {
@@ -19,7 +19,7 @@
   @apply bg-center bg-origin-content bg-no-repeat;
 }
 .tab-bg:after {
-  @apply ring-offset-base-300 ring-8 ring-offset-8 w-[40px] h-[40px] rounded-full absolute;
+  @apply ring-offset-base-300 ring-8 ring-offset-8  ring-base-300 w-[40px] h-[40px] rounded-full absolute px-3 mx-4;
 }
 
 .tab-sidebar-content {
