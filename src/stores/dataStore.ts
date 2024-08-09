@@ -44,9 +44,6 @@ export const useDataStore = defineStore("dataStore", () => {
 
   function setSelectedChampion(champion: Champion) {
     selectedChampion.value = champion;
-    console.log(champion);
-    console.log(selectedChampion.value);
-    console.log(selectedChampion);
   }
   const items = ref<Item[]>([]);
 
