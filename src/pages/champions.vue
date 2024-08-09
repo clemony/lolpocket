@@ -147,13 +147,13 @@ function handleChampionClick(champion: Champion) {
                 Tab content 3
               </div>
 
-              <input type="radio" name="ability-tabs" role="tab" class="tab-bg tab"
+              <input type="radio" name="ability-tabs" role="tab" class="tab-bg tab after:border after:border-info"
                 :style="{ backgroundImage: `url(${selectedChampion.eImg})` }" aria-label="E" />
               <div role="tabpanel" class="tab-content tab-sidebar-content">
                 Tab content 3
               </div>
 
-              <input type="radio" name="ability-tabs" role="tab" class="tab tab-bg"
+              <input type="radio" name="ability-tabs" role="tab" class="tab tab-bg after:border after:border-success"
                 :style="{ backgroundImage: `url(${selectedChampion.rImg})` }" aria-label="R" />
               <div role="tabpanel" class="tab-content tab-sidebar-content">
                 Tab content 5
