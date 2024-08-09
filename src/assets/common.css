@@ -15,7 +15,7 @@
   @apply bg-center bg-origin-content bg-no-repeat;
 }
 .tab-bg:after {
-  @apply border-base-300 border-4 w-[40px] h-[40px] rounded-full absolute;
+  @apply ring-base-100 ring-4 w-[40px] h-[40px] rounded-full absolute;
 }
 
 .tab-sidebar-content {
