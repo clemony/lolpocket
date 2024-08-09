@@ -125,7 +125,7 @@ function handleChampionClick(champion: Champion) {
               </div>
             </div>
 
-            <div role="tablist" class="tabs tabs-lifted mt-5 w-full">
+            <div role="tablist" class="tabs tabs-lifted m-0 p-0 mt-5 w-full">
 
               <input type="radio" name="ability-tabs" role="tab" class="tab-bg tab"
                 :style="{ backgroundImage: `url(${selectedChampion.pImg})` }" aria-label="P" checked="true" />
