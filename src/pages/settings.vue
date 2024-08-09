@@ -109,7 +109,7 @@ function updateTheme(theme: string) {
                       <div class="font-semibold">{{ theme }}</div>
                       <div class="flex flex-wrap gap-1">
                         <!-- Example color blocks -->
-                        <div class="bg-primary flex aspect-square w-5 items-center justify-center rounded">
+                        <div class="bg-[var(--primary)] flex aspect-square w-5 items-center justify-center rounded">
                           <div class="text-primary-content text-sm font-semibold">A</div>
                         </div>
                         <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded">
