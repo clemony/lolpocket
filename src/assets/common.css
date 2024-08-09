@@ -11,6 +11,6 @@
 }
 
 .tab-bg {
-  background-size: 90%;
+  background-size: 40px;
   @apply bg-center bg-origin-content bg-no-repeat;
 }
