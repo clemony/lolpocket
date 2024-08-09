@@ -12,7 +12,11 @@
 
 .tab-bg {
   background-size: 40px;
-  @apply bg-center bg-origin-content bg-no-repeat shadow-inner shadow-red-700 after:bg-orange-800;
+  @apply bg-center bg-origin-content bg-no-repeat shadow-inner shadow-red-700;
+
+  .tab-bg:after {
+    @apply border-orange-800 border;
+  }
 }
 
 .tab-sidebar-content {
