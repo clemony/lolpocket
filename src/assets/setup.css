@@ -1,6 +1,5 @@
 :root {
   font-family: "Inter Variable", sans-serif;
-  --serif: "DM Serif Text", serif;
   --primary: oklch(var(--p));
   --rounded-box: 1rem !important;
   --rounded-btn: 0.5rem !important;
@@ -11,6 +10,10 @@
   --border-btn: 1px !important;
   --tab-border: 1px !important;
   --tab-radius: 0.5rem !important;
+}
+
+.serif {
+  font-family: "DM Serif Text", serif;
 }
 
 html,
