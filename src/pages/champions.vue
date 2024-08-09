@@ -109,7 +109,7 @@ function handleChampionClick(champion: Champion) {
               </div>
 
               <div class="col-start-1">
-                <a :href="selectedChampion.wiki" target="_blank">More Info</a>
+                <a :href="selectedChampion.wiki" target="_blank" class="text-xs decoration-none">More Info</a>
               </div>
               <div
                 class="col-start-2 text-xs justify-content-end text-center justify-self-end relative right-3 flex gap-2">
