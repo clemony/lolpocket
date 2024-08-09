@@ -90,8 +90,8 @@ function handleChampionClick(champion: Champion) {
           <!-- Sidebar content here -->
           <div v-if="selectedChampion" class="">
 
-            <div class="rounded-box bg-base-100 shadow-lg prose grid grid-cols-1 auto-rows-max py-3 px-1">
-              <div class="grid grid-cols-3 p-1 gap-3">
+            <div class="rounded-box bg-base-100 shadow-lg prose grid grid-cols-2 auto-rows-max py-3 px-1">
+              <div class="col-span-2 grid grid-cols-3 p-1 gap-3">
                 <div class=" avatar col-start-1 p-2 !aspect-square">
                   <div class="ring-[var(--primary)]  rounded-full ring-[2px] grid place-content-center object-cover">
 
