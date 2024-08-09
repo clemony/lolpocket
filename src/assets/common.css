@@ -6,18 +6,15 @@
   @apply text-xs;
 }
 
-.tab {
-  @apply font-semibold !text-sm pl-5 pt-2 overflow-hidden  relative;
+.tab-bg {
+  background-size: 40px;
+  @apply font-semibold !text-transparent pl-5 pt-2 overflow-hidden  relative bg-center bg-origin-content bg-no-repeat;
 }
 
 .tabs > input.tab:checked:first-child:after {
   @apply ring-offset-base-100 ring-8 ring-base-100 ring-offset-8;
 }
 
-.tab-bg {
-  background-size: 40px;
-  @apply bg-center bg-origin-content bg-no-repeat;
-}
 .tab-bg:after {
   @apply ring-offset-base-300 ring-8 ring-offset-8  ring-base-300 w-[40px] h-[40px] rounded-full absolute px-3 mx-4;
 }
