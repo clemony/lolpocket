@@ -19,7 +19,7 @@ const champions = dataStore.champions;
   <KeepAlive>
     <div class="drawer drawer-end">
       <input id="my-drawer" type="checkbox" class="drawer-toggle hidden" />
-      <div class="drawer-content">
+      <div class="drawer-content z-10">
 
         <!-- Champ Tab -->
 
@@ -77,9 +77,9 @@ const champions = dataStore.champions;
 
       </div>
 
-      <div class="drawer-side">
-        <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay z-10"></label>
-        <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4 z-20">
+      <div class="drawer-side z-20">
+        <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+        <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
           <!-- Sidebar content here -->
           <li><a>Sidebar Item 1</a></li>
           <li><a>Sidebar Item 2</a></li>
