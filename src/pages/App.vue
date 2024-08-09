@@ -214,7 +214,7 @@ onMounted(() => {
 
 
             <div class="data panel-nav">
-              <h4 class="pt-3 pl-3 text-xs border-none">Browse</h4>
+              <h4 class="pt-3 pl-3 text-xs border-none uppercase">Browse</h4>
               <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
                 @nodeSelect="onNodeSelect" id="tree2">
                 <template #browse="slotProps">
