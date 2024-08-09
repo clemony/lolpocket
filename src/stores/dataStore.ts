@@ -28,12 +28,13 @@ interface Champion {
   img: string;
   wiki: string;
   title: string;
-  tags: string[];
-  type: string; // Assuming tags is an array of strings
+  tags: string[]; // `tags` should be an array of strings
+  type: string;
 }
 
 interface DataObject {
   type: string;
+  tags?: string | string[]; // `tags` can be either a string or an array of strings
   [key: string]: any;
 }
 
@@ -68,6 +69,10 @@ export const useDataStore = defineStore("dataStore", () => {
         if (object.type === "rune") {
           runes.value.push(object as Rune);
         } else if (object.type === "champion") {
+          // Convert `tags` to an array of strings
+          if (typeof object.tags === 'string') {
+            object.tags = object.tags.split(',').map(tag => tag.trim());
+          }
           champions.value.push(object as Champion);
         } else if (object.type === "item") {
           items.value.push(object as Item);

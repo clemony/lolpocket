@@ -12,6 +12,7 @@ interface Champion {
 }
 
 const champions = dataStore.champions;
+const selectedChampion = computed(() => dataStore.selectedChampion);
 
 // Function to handle the drawer button click and set the selected champion
 function handleChampionClick(champion: Champion) {
