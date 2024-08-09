@@ -109,8 +109,8 @@ function handleChampionClick(champion: Champion) {
               </div>
 
               <div class="col-start-1">
-                <a :href="selectedChampion.wiki" target="_blank" class="text-xs no underline">More Info
-                  <Icon icon="ph:link" />
+                <a :href="selectedChampion.wiki" target="_blank" class="text-xs no-underline break-keep">More Info
+                  <Icon icon="ph:arrow-square-out" />
                 </a>
               </div>
               <div
