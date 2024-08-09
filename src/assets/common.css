@@ -20,7 +20,7 @@
 }
 
 .tab-bg:after {
-  @apply ring-offset-base-200 ring-8 ring-offset-8  ring-base-200 w-[40px] h-[40px] rounded-full absolute;
+  @apply ring-offset-base-200 ring-8 ring-offset-8  ring-base-200 w-[40px] h-[40px] rounded-full absolute border border-neutral;
 }
 
 .tab-sidebar-content {
