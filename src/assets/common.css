@@ -1,7 +1,3 @@
-.drawer-side {
-  @apply bg-opacity-60 backdrop-blur-sm;
-}
-
 .sidebar-tabs {
   @apply grid grid-cols-5 tabs tabs-lifted mt-5 w-full;
 }
