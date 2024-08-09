@@ -88,8 +88,8 @@ function handleChampionClick(champion: Champion) {
         <div class="menu bg-base-200 text-base-content min-h-full w-80 px-4 pt-10 shadow-inner shadow-neutral/20">
           <!-- Sidebar content here -->
           <div v-if="selectedChampion" class="prose">
-            <h2 class="tracking-tight break-space">{{ selectedChampion.name }}</h2>
-            <p>#{{ selectedChampion.title }}</p>
+            <h1 class="tracking-tight break-space prose-3xl mb-0 pb-0">{{ selectedChampion.name }}</h1>
+            <h4 class="pt-0 mt-0 italic font-light">{{ selectedChampion.title }}</h4>
             <div class="avatar">
               <div class="ring-[var(--primary)] ring-offset-base-100 w-[96px] rounded-full ring ring-offset-2">
 
