@@ -9,6 +9,9 @@
 .sidebar-tabs {
   @apply grid grid-cols-5 tabs tabs-lifted mt-5 w-[300px];
 }
+
+.sidebar-tabs:has {
+}
 .tab-bg {
   background-size: 40px;
   @apply font-semibold !text-transparent pl-5 pt-2 overflow-hidden  relative bg-center bg-origin-content bg-no-repeat;
