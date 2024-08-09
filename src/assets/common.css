@@ -11,7 +11,7 @@
   @apply font-semibold !text-transparent pl-5 pt-2 overflow-hidden  relative bg-center bg-origin-content bg-no-repeat;
 }
 
-.tabs > input.tab:checked:first-child:after {
+.tabs > input.tab:checked:after {
   @apply ring-offset-base-100 ring-8 ring-base-100 ring-offset-8;
 }
 
