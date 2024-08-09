@@ -7,7 +7,7 @@
 }
 
 .sidebar-tabs {
-  @apply grid grid-cols-5 tabs tabs-lifted mt-5 w-[290px];
+  @apply grid grid-cols-5 tabs tabs-lifted mt-5 w-full;
 }
 
 .sidebar-tabs:has(input.tab:checked:last-child) {
@@ -27,5 +27,5 @@
 }
 
 .tab-sidebar-content {
-  @apply bg-base-100 border-base-300 rounded-box p-6 w-[300px];
+  @apply bg-base-100 border-base-300 rounded-box p-6 w-full;
 }
