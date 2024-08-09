@@ -85,7 +85,7 @@ function handleChampionClick(champion: Champion) {
 
       <div class="drawer-side z-20">
         <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-        <div class="menu bg-base-200 text-base-content min-h-full w-80 px-4 pt-10">
+        <div class="menu bg-base-200 text-base-content min-h-full w-80 px-4 pt-10 shadow-inner shadow-neutral/20">
           <!-- Sidebar content here -->
           <div v-if="selectedChampion" class="prose">
             <h1 class="">{{ selectedChampion.name }}</h1>
