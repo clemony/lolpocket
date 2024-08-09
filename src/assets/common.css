@@ -34,3 +34,7 @@
 [data-tag="Marksman"] {
   @apply bg-warning text-warning-content;
 }
+
+[data-tag="Assassin"] {
+  @apply bg-error text-error-content;
+}
