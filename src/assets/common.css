@@ -9,3 +9,7 @@
 .tab {
   @apply font-semibold !text-sm pl-5 pt-2;
 }
+
+.tab-bg {
+  @apply bg-center;
+}
