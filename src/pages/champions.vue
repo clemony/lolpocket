@@ -109,9 +109,9 @@ function handleChampionClick(champion: Champion) {
 
 
 
-              <div class="text-xs w-1/2 justify-content-end text-center justify-self-end relative right-3 grid gap-2">
-                <code v-for="(tag, index) in selectedChampion.tags" :key="index"
-                  class="text-xs w-auto text-center bg-gray-200 rounded gap-2 px-2 py-1">
+              <div
+                class="text-xs w-1/2 justify-content-end text-center justify-self-end relative right-3 grid gap-2 auto-cols-max">
+                <code v-for="(tag, index) in selectedChampion.tags" :key="index" class="text-xs w-auto text-center">
                   {{ tag }}
                 </code>
               </div>
