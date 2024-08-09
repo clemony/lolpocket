@@ -10,9 +10,6 @@
   @apply grid grid-cols-5 tabs tabs-lifted mt-5 w-full;
 }
 
-.sidebar-tabs:has(div:last-child.tab-active) {
-  @apply bg-red-400 text-red-400;
-}
 .tab-bg {
   background-size: 40px;
   @apply font-semibold !text-transparent pl-5 pt-2 overflow-hidden  relative bg-center bg-origin-content bg-no-repeat;
@@ -28,4 +25,8 @@
 
 .tab-sidebar-content {
   @apply bg-base-100 border-base-300 rounded-box p-6 w-full;
+}
+
+.tab-sidebar-content:last-child {
+  @apply border-tr rounded-none;
 }
