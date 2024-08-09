@@ -88,8 +88,8 @@ function handleChampionClick(champion: Champion) {
         <div class="menu bg-base-200 text-base-content min-h-full w-80 px-4 pt-10 shadow-inner shadow-neutral/20">
           <!-- Sidebar content here -->
           <div v-if="selectedChampion" class="prose">
-            <h1 class="tracking-tight break-space">{{ selectedChampion.name }}</h1>
-
+            <h2 class="tracking-tight break-space">{{ selectedChampion.name }}</h2>
+            <p>#{{ selectedChampion.title }}</p>
             <div class="avatar">
               <div class="ring-[var(--primary)] ring-offset-base-100 w-[96px] rounded-full ring ring-offset-2">
 
@@ -98,7 +98,7 @@ function handleChampionClick(champion: Champion) {
             </div>
 
 
-            <p>Title: {{ selectedChampion.title }}</p>
+
             <p>Tags: {{ selectedChampion.tags.join(', ') }}</p>
             <a :href="selectedChampion.wiki" target="_blank">More Info</a>
           </div>
