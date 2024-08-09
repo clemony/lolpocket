@@ -35,6 +35,11 @@ interface Champion {
   wImg: string;
   eImg: string;
   rImg: string;
+  passive: string;
+  q: string;
+  w: string;
+  e: string;
+  r: string;
 }
 
 interface DataObject {
