@@ -38,3 +38,7 @@
 [data-tag="Assassin"] {
   @apply bg-error text-error-content;
 }
+
+[data-tag="Tank"] {
+  @apply bg-success text-success-content;
+}
