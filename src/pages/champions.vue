@@ -87,12 +87,12 @@ function handleChampionClick(champion: Champion) {
         <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
         <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
           <!-- Sidebar content here -->
-          <div v-if="dataStore.selectedChampion">
-            <h1>{{ dataStore.selectedChampion.name }}</h1>
-            <img :src="dataStore.selectedChampion.img" :alt="dataStore.selectedChampion.name" />
-            <p>Title: {{ dataStore.selectedChampion.title }}</p>
-            <p>Tags: {{ dataStore.selectedChampion.tags.join(', ') }}</p>
-            <a :href="dataStore.selectedChampion.wiki" target="_blank">More Info</a>
+          <div v-if="selectedChampion">
+            <h1>{{ selectedChampion.name }}</h1>
+            <img :src="selectedChampion.img" :alt="selectedChampion.name" />
+            <p>Title: {{ selectedChampion.title }}</p>
+            <p>Tags: {{ selectedChampion.tags.join(', ') }}</p>
+            <a :href="selectedChampion.wiki" target="_blank">More Info</a>
           </div>
           <div v-else>
             <p>Select a champion to view details.</p>
