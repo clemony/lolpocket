@@ -13,6 +13,11 @@ interface Champion {
 
 const champions = dataStore.champions;
 
+// Function to handle the drawer button click and set the selected champion
+function handleChampionClick(champion: Champion) {
+  dataStore.setSelectedChampion(champion);
+}
+
 </script>
 
 <template>
@@ -32,7 +37,7 @@ const champions = dataStore.champions;
               <div class="grid-container">
 
                 <div class="grid-item champ" v-for="champion in champions">
-                  <label for="my-drawer" class="drawer-button cursor-pointer">
+                  <label for="my-drawer" class="drawer-button cursor-pointer" @click="handleChampionClick(champion)">
                     <div class="grid-image-container champ">
                       <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
                         class="grid-image" />
@@ -79,11 +84,19 @@ const champions = dataStore.champions;
 
       <div class="drawer-side z-20">
         <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-        <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+        <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
           <!-- Sidebar content here -->
-          <li><a>Sidebar Item 1</a></li>
-          <li><a>Sidebar Item 2</a></li>
-        </ul>
+          <div v-if="dataStore.selectedChampion">
+            <h1>{{ dataStore.selectedChampion.name }}</h1>
+            <img :src="dataStore.selectedChampion.img" :alt="dataStore.selectedChampion.name" />
+            <p>Title: {{ dataStore.selectedChampion.title }}</p>
+            <p>Tags: {{ dataStore.selectedChampion.tags.join(', ') }}</p>
+            <a :href="dataStore.selectedChampion.wiki" target="_blank">More Info</a>
+          </div>
+          <div v-else>
+            <p>Select a champion to view details.</p>
+          </div>
+        </div>
       </div>
     </div>
   </KeepAlive>

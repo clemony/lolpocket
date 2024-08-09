@@ -40,6 +40,11 @@ interface DataObject {
 export const useDataStore = defineStore("dataStore", () => {
   const runes = ref<Rune[]>([]);
   const champions = ref<Champion[]>([]);
+  const selectedChampion = ref<Champion | null>(null);
+
+  function setSelectedChampion(champion: Champion) {
+    selectedChampion.value = champion;
+  }
   const items = ref<Item[]>([]);
 
   const fetchData = async () => {
@@ -73,5 +78,5 @@ export const useDataStore = defineStore("dataStore", () => {
     }
   };
 
-  return { runes, champions, items, fetchData };
+  return { runes, champions, items, fetchData, selectedChampion, setSelectedChampion };
 });
