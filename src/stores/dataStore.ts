@@ -30,6 +30,11 @@ interface Champion {
   title: string;
   tags: string[]; // `tags` should be an array of strings
   type: string;
+  pImg: string;
+  qImg: string;
+  wImg: string;
+  eImg: string;
+  rImg: string;
 }
 
 interface DataObject {

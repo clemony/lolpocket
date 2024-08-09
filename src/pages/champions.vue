@@ -10,6 +10,11 @@ interface Champion {
   title: string;
   tags: string[];
   type: string;
+  pImg: string;
+  qImg: string;
+  wImg: string;
+  eImg: string;
+  rImg: string;
 }
 
 const champions = dataStore.champions;
