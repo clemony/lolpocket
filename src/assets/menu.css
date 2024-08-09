@@ -23,21 +23,6 @@
   }
 }
 
-/*.panel-nav {
-  @apply bg-base-100 my-3 mx-4 h-auto rounded-box shadow-sm border-[1px] border-base-300/80 shadow-base-content/5;
-}*/
-.panel-box {
-  @apply grid grid-cols-1 h-full justify-items-end justify-end min-h-60;
-
-  .data {
-    @apply justify-self-stretch;
-  }
-
-  .utils {
-    @apply self-end h-11 w-full;
-  }
-}
-
 [data-pc-section="nodechildren"] [data-pc-section="nodecontent"] {
   @apply pl-5;
 }

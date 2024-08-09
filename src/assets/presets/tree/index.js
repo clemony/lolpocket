@@ -25,36 +25,28 @@ export default {
     ],
   },
   node: {
-    class: [
-      "focus:outline-none align-middle items-center relative my-2 w-full bg-base-100 code",
-    ],
+    class: ["focus:outline-none align-middle items-center relative my-2 w-full bg-base-100 code"],
   },
   nodeContent: ({ context, props }) => ({
     class: [
       // Flex and Alignment
-      "inline-flex items-center rounded-btn align-middle relative h-8 pl-2 w-full z-10",
+      "inline-flex items-center rounded-btn align-middle relative h-8 pl-2 w-full",
 
       // Spacing
 
       // Colors
-      context.selected
-        ? "bg-base-300 text-base-content"
-        : "bg-base-100 text-base-content hover:bg-base-200 hover:text-base-content",
+      context.selected ? "bg-base-300 text-base-content" : "bg-base-100 text-base-content hover:bg-base-200 hover:text-base-content",
 
       // States
       {
-        "hover:bg-base-200 hover:text-base-content":
-          (props.selectionMode == "single" ||
-            props.selectionMode == "multiple") &&
-          !context.selected,
+        "hover:bg-base-200 hover:text-base-content": (props.selectionMode == "single" || props.selectionMode == "multiple") && !context.selected,
       },
 
       // Transition
       "transition-shadow duration-200",
 
       {
-        "cursor-pointer select-none":
-          props.selectionMode == "single" || props.selectionMode == "multiple",
+        "cursor-pointer select-none": props.selectionMode == "single" || props.selectionMode == "multiple",
       },
     ],
   }),
@@ -105,12 +97,12 @@ export default {
   nodeIcon: ({ context }) => ({
     class: [
       // Space
-      "size-5 overflow-hidden order-1 mr-4 text-accent-content/70",
+      "size-5 overflow-hidden order-1 mr-4",
 
       // Color
       {
-        "text-foreground": !context.selected,
-        "text-background": context.selected,
+        "text-base-content": !context.selected,
+        "text-base-content": context.selected,
         "pl-0": context.leaf,
       },
     ],
@@ -132,9 +124,6 @@ export default {
     ],
   },
   loadingIcon: {
-    class: [
-      "text-surface-500 dark:text-surface-0/70",
-      "absolute top-[50%] right-[50%] -mt-2 -mr-2 animate-spin",
-    ],
+    class: ["text-surface-500 dark:text-surface-0/70", "absolute top-[50%] right-[50%] -mt-2 -mr-2 animate-spin"],
   },
 };

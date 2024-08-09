@@ -1,6 +1,15 @@
 :root {
   @apply !font-sans;
   --primary: oklch(var(--p));
+  --rounded-box: 1rem !important;
+  --rounded-btn: 0.5rem !important;
+  --rounded-badge: 1.9rem !important;
+  --animation-btn: 0.25s !important;
+  --animation-input: 0.2s !important;
+  --btn-focus-scale: 0.95 !important;
+  --border-btn: 1px !important;
+  --tab-border: 1px !important;
+  --tab-radius: 0.5rem !important;
 }
 
 html,
@@ -94,20 +103,4 @@ box-shadow: inset 0px 0px 4px 1px rgba(25, 25, 25, 0.3);
       }
     }
   }
-}
-
-.slide-fade-enter-active {
-  transition: all 0.3s ease;
-}
-
-.slide-fade-leave-active {
-  transition: all 0.3s ease;
-}
-
-.slide-fade-enter-from {
-  transform: translateX(50%);
-}
-
-.slide-fade-leave-to {
-  transform: translateX(-100%);
 }

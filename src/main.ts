@@ -2,7 +2,8 @@ import "@/assets/imports.css";
 import Aura from '@/assets/presets';
 import App from "@/pages/App.vue";
 import { gsap } from "gsap";
-import { createPinia } from "pinia";
+import { createPinia } from 'pinia';
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import PrimeVue from "primevue/config";
 import Tree from "primevue/tree";
 import { createApp } from "vue";
@@ -67,7 +68,9 @@ export type {
   WindowOptions
 };
 
-app.use(createPinia());
+const pinia = createPinia()
+pinia.use(piniaPluginPersistedstate)
+app.use(pinia);
 app.use(router);
 app.use(PrimeVue, {
   unstyled: true,

@@ -90,7 +90,7 @@ declare module 'vue' {
     ItemInfo: typeof import('./../pages/modules/ItemInfo.vue')['default']
     Items: typeof import('./../pages/items.vue')['default']
     Label: typeof import('./../components/cn/label/Label.vue')['default']
-    Links: typeof import('./../pages/links.vue')['default']
+    Links: typeof import('../../../notes/links.vue')['default']
     Menu: typeof import('./../components/ui/menu.vue')['default']
     NavigationMenu: typeof import('./../components/cn/navigation-menu-ts/NavigationMenu.vue')['default']
     NavigationMenuContent: typeof import('./../components/cn/navigation-menu-ts/NavigationMenuContent.vue')['default']

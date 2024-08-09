@@ -178,8 +178,8 @@ onMounted(() => {
           :class="cn(isCollapsed && 'min-w-[50px] transition-all duration-300 ease-in-out')" @expand="onExpand"
           @collapse="onCollapse">
 
-          <div id="menu" class="m-4 rounded-lg bg-base-100 border-[1px] border-base-300
-            shadow-base-content/10 shadow-lg transition-all ease">
+          <div id="menu" class="m-4 rounded-lg bg-base-100 border-[1px] border-neutral/10
+            shadow-neutral/10 shadow-lg transition-all ease">
 
             <div class="panel-nav">
 
