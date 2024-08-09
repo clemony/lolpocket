@@ -90,7 +90,7 @@ function handleChampionClick(champion: Champion) {
           <div v-if="selectedChampion" class="prose">
             <h1 class="tracking-tight break-space prose-3xl serif mb-0 pb-0">{{ selectedChampion.name }}</h1>
             <p class="prose-sm uppercase pt-0 mt-0 font-light">{{ selectedChampion.title }}</p>
-            <div class="avatar">
+            <div class="avatar justify-self-center">
               <div class="ring-[var(--primary)] ring-offset-base-100 w-[96px] rounded-full ring ring-offset-2">
 
                 <img class="m-0 p-0" :src="selectedChampion.img" :alt="selectedChampion.name" />
