@@ -12,7 +12,7 @@
 
 .tab-bg {
   background-size: 40px;
-  @apply font-semibold !text-transparent pl-5 pt-2 overflow-hidden  relative bg-center bg-origin-content bg-no-repeat;
+  @apply font-semibold !text-transparent  overflow-hidden  relative bg-center bg-origin-content bg-no-repeat h-[55px];
 }
 
 .tabs > input.tab:checked:after {
