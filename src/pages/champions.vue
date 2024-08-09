@@ -88,7 +88,7 @@ function handleChampionClick(champion: Champion) {
         <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
           <!-- Sidebar content here -->
           <div v-if="selectedChampion">
-            <h1>{{ selectedChampion.name }}</h1>
+            <h1 class="prose-">{{ selectedChampion.name }}</h1>
             <img :src="selectedChampion.img" :alt="selectedChampion.name" />
             <p>Title: {{ selectedChampion.title }}</p>
             <p>Tags: {{ selectedChampion.tags.join(', ') }}</p>
