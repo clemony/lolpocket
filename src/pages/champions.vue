@@ -127,7 +127,7 @@ function handleChampionClick(champion: Champion) {
               </div>
             </div>
 
-            <div role="tablist" class="sidebar-tabs border border-neutral/10">
+            <div role="tablist" class="sidebar-tabs ">
 
               <input type="radio" name="ability-tabs" role="tab"
                 class="tab-bg tab after:border after:border-[var(--primary)]"
