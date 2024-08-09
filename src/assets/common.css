@@ -22,3 +22,7 @@
 .tab-sidebar-content:last-child {
   @apply rounded-tr-none;
 }
+
+[data-tag="Support"] {
+  @apply bg-secondary;
+}
