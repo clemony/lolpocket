@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useDataStore } from '@/stores/dataStore';
+import { Icon } from "@iconify/vue";
 const dataStore = useDataStore();
 
 interface Champion {
@@ -85,23 +86,55 @@ function handleChampionClick(champion: Champion) {
 
       <div class="drawer-side z-20">
         <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-        <div class="menu bg-base-200 text-base-content min-h-full w-80 px-4 pt-10 shadow-inner shadow-neutral/20">
+        <div class="menu bg-base-200 text-base-content min-h-full w-80 px-4 pt-8 shadow-inner shadow-neutral/20">
           <!-- Sidebar content here -->
-          <div v-if="selectedChampion" class="prose flex flex-col">
-            <h1 class="tracking-tight break-space prose-3xl serif mb-0 pb-0">{{ selectedChampion.name }}</h1>
-            <p class="prose-sm uppercase pt-0 mt-0 font-light">{{ selectedChampion.title }}</p>
-            <div class="avatar flex place-content-center">
-              <div
-                class="ring-[var(--primary)] ring-offset-base-100 w-[96px] rounded-full ring ring-offset-2 justify-self-center">
+          <div v-if="selectedChampion" class="">
 
-                <img class="m-0 p-0" :src="selectedChampion.img" :alt="selectedChampion.name" />
+            <div class="rounded-box bg-base-100 shadow-lg prose grid grid-cols-1 auto-rows-max py-3 px-1">
+              <div class="grid grid-cols-3 p-1 gap-3">
+                <div class=" avatar col-start-1 p-2 !aspect-square">
+                  <div class="ring-[var(--primary)]  rounded-full ring-[2px] grid place-content-center object-cover">
+
+                    <img class="m-0 p-0 scale-110" :src="selectedChampion.img" :alt="selectedChampion.name" />
+                  </div>
+                </div>
+                <div class="col-span-2">
+                  <h1 class="tracking-tight break-space prose-3xl serif mb-0 pb-0">{{ selectedChampion.name }}</h1>
+                  <p class="prose-sm uppercase pt-0 mt-0 pb-1">
+                    <Icon icon="ph:at" class="inline" />
+                    {{ selectedChampion.title }}
+                  </p>
+                </div>
+              </div>
+
+
+
+              <div class="text-xs w-1/2 justify-content-end text-center justify-self-end relative right-3 grid gap-2">
+                <code v-for="(tag, index) in selectedChampion.tags" :key="index"
+                  class="text-xs w-auto text-center bg-gray-200 rounded gap-2 px-2 py-1">
+                  {{ tag }}
+                </code>
+              </div>
+              <a :href="selectedChampion.wiki" target="_blank">More Info</a>
+            </div>
+
+            <div role="tablist" class="tabs tabs-lifted">
+              <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 1" />
+              <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                Tab content 1
+              </div>
+
+              <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 2" />
+              <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                Tab content 2
+              </div>
+
+              <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 3" />
+              <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                Tab content 3
               </div>
             </div>
 
-
-
-            <p>Tags: {{ selectedChampion.tags.join(', ') }}</p>
-            <a :href="selectedChampion.wiki" target="_blank">More Info</a>
           </div>
           <div v-else>
             <p>Select a champion to view details.</p>
