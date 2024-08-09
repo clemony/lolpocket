@@ -118,11 +118,7 @@ function handleChampionClick(champion: Champion) {
                 </div>
               </div>
 
-              <div class="col-start-1">
-                <a :href="selectedChampion.wiki" target="_blank" class="text-xs no-underline text-nowrap flex">wiki
-                  <Icon icon="ph:arrow-square-out" />
-                </a>
-              </div>
+
               <div
                 class="col-start-2 text-xs justify-content-end text-center justify-self-end relative right-3 flex gap-2">
                 <code v-for="(tag, index) in selectedChampion.tags" :key="index"
@@ -165,6 +161,12 @@ function handleChampionClick(champion: Champion) {
               </div>
             </div>
 
+
+            <!--               <div class="col-start-1">
+                <a :href="selectedChampion.wiki" target="_blank" class="text-xs no-underline text-nowrap flex">wiki
+                  <Icon icon="ph:arrow-square-out" />
+                </a>
+              </div>-->
           </div>
           <div v-else>
             <p>Select a champion to view details.</p>
