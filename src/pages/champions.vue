@@ -87,8 +87,8 @@ function handleChampionClick(champion: Champion) {
         <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
         <div class="menu bg-base-200 text-base-content min-h-full w-80 px-4 pt-10 shadow-inner shadow-neutral/20">
           <!-- Sidebar content here -->
-          <div v-if="selectedChampion" class="prose">
-            <h1 class="tracking-tight break-space prose-3xl serif mb-0 pb-0">{{ selectedChampion.name }}</h1>
+          <div v-if="selectedChampion" class="prose flex">
+            <h1 class="block tracking-tight break-space prose-3xl serif mb-0 pb-0">{{ selectedChampion.name }}</h1>
             <p class="prose-sm uppercase pt-0 mt-0 font-light">{{ selectedChampion.title }}</p>
             <div class="avatar justify-self-center">
               <div class="ring-[var(--primary)] ring-offset-base-100 w-[96px] rounded-full ring ring-offset-2">
