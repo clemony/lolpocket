@@ -7,7 +7,7 @@
 }
 
 .tab {
-  @apply font-semibold !text-sm pl-5 pt-2 w-1/5;
+  @apply font-semibold !text-sm  p-0 m-0  pt-2 w-1/5;
 }
 
 .tab-bg {
