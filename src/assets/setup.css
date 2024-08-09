@@ -109,3 +109,11 @@ box-shadow: inset 0px 0px 4px 1px rgba(25, 25, 25, 0.3);
     }
   }
 }
+
+.main {
+  @apply max-h-dvh h-screen pt-4 pl-2 pr-4;
+}
+
+.titlebar-button::before {
+  @apply text-xs;
+}

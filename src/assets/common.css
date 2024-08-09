@@ -1,9 +1,4 @@
-.main {
-  @apply max-h-dvh h-screen pt-4 pl-2 pr-4;
-}
-
-.titlebar-button::before {
-  @apply text-xs;
+.drawer-side {
 }
 
 .sidebar-tabs {
