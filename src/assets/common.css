@@ -28,5 +28,5 @@
 }
 
 .tab-sidebar-content:last-child {
-  @apply border-tr-base-300 rounded-none;
+  @apply rounded-tr-none;
 }
