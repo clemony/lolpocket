@@ -121,17 +121,18 @@ function handleChampionClick(champion: Champion) {
             </div>
 
             <div role="tablist" class="tabs tabs-lifted mt-5">
-              <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 1" checked="true" />
-              <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+              <input type="radio" name="ability-tabs" role="tab" class="tab" aria-label="Tab 1" checked="true" />
+              <div role="tabpanel"
+                class="tab-content bg-base-100 border-base-300 rounded-box p-6 before:background-image">
                 Tab content 1
               </div>
 
-              <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 2" />
+              <input type="radio" name="ability-tabs" role="tab" class="tab" aria-label="Tab 2" />
               <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
                 Tab content 2
               </div>
 
-              <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 3" />
+              <input type="radio" name="ability-tabs" role="tab" class="tab" aria-label="Tab 3" />
               <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
                 Tab content 3
               </div>
