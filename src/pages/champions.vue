@@ -91,9 +91,9 @@ function handleChampionClick(champion: Champion) {
             <h1 class="tracking-tight break-space">{{ selectedChampion.name }}</h1>
 
             <div class="avatar">
-              <div class="ring-[var(--primary)] ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+              <div class="ring-[var(--primary)] ring-offset-base-100 w-[96px] rounded-full ring ring-offset-2">
 
-                <img :src="selectedChampion.img" :alt="selectedChampion.name" />
+                <img class="m-0 p-0" :src="selectedChampion.img" :alt="selectedChampion.name" />
               </div>
             </div>
 
