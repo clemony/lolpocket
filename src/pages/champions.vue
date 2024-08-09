@@ -104,7 +104,7 @@ function handleChampionClick(champion: Champion) {
               class="rounded-box border border-neutral/5 bg-base-100 shadow-lg prose grid grid-cols-2 auto-rows-max py-3 px-1">
               <div class="col-span-2 grid grid-cols-3 p-1 auto-cols-max gap-1">
                 <div class=" avatar h-16 justify-content-center col-start-1 ml-1 !aspect-square">
-                  <div class="ring-[var(--primary)]  rounded-full ring-[2px] grid justify-content-center object-cover">
+                  <div class="ring-neutral  rounded-full ring-[1px] grid justify-content-center object-cover">
 
                     <img class="m-0 p-0 scale-110" :src="selectedChampion.img" :alt="selectedChampion.name" />
                   </div>
