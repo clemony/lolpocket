@@ -10,8 +10,10 @@
   @apply font-semibold !text-sm pl-5 pt-2 w-1/5 overflow-hidden relative;
 }
 
-.tab-bg:after {
-  @apply border-orange-800 border;
+.tabs > input.tab:checked {
+  .tab-bg:after {
+    @apply ring-offset-base-100;
+  }
 }
 
 .tab-bg {
