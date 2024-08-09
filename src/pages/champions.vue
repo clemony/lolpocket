@@ -127,7 +127,8 @@ function handleChampionClick(champion: Champion) {
 
             <div role="tablist" class="sidebar-tabs">
 
-              <input type="radio" name="ability-tabs" role="tab" class="tab-bg tab"
+              <input type="radio" name="ability-tabs" role="tab"
+                class="tab-bg tab after:border after:border-[var(--primary)]"
                 :style="{ backgroundImage: `url(${selectedChampion.pImg})` }" aria-label="P" checked="true" />
               <div role="tabpanel" class="tab-content tab-sidebar-content 
                 ">
@@ -140,8 +141,7 @@ function handleChampionClick(champion: Champion) {
                 Tab content 2
               </div>
 
-              <input type="radio" name="ability-tabs" role="tab"
-                class="tab-bg tab after:border after:border-[var(--primary)]"
+              <input type="radio" name="ability-tabs" role="tab" class="tab-bg tab after:border after:border-accent"
                 :style="{ backgroundImage: `url(${selectedChampion.wImg})` }" aria-label="W" />
               <div role="tabpanel" class="tab-content tab-sidebar-content">
                 Tab content 3
