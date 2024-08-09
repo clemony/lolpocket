@@ -29,13 +29,6 @@ module.exports = {
         colors: {
           colors: colors.primary,
         },
-        boxShadow: {
-          "shadow-elevation-low": "0px 0px 0px hsl(var(--shadow-color) / 0.22), 0px 0px 0px -0.8px hsl(var(--shadow-color) / 0.28), 0px 0.1px 0.1px -1.7px hsl(var(--shadow-color) / 0.35)",
-          "shadow-elevation-medium":
-            "0px 0px 0px hsl(var(--shadow-color) / 0.23), 0px 0.1px 0.1px -0.6px hsl(var(--shadow-color) / 0.28), -0.1px 0.2px 0.3px -1.1px hsl(var(--shadow-color) / 0.33), -0.2px 0.5px 0.7px -1.7px hsl(var(--shadow-color) / 0.39)",
-          "shadow-elevation-high":
-            "0px 0px 0px hsl(var(--shadow-color) / 0.21), -0.1px 0.2px 0.3px -0.2px hsl(var(--shadow-color) / 0.24), -0.2px 0.3px 0.4px -0.5px hsl(var(--shadow-color) / 0.26), -0.2px 0.5px 0.7px -0.7px hsl(var(--shadow-color) / 0.29), -0.4px 0.8px 1.1px -1px hsl(var(--shadow-color) / 0.31), -0.6px 1.2px 1.7px -1.2px hsl(var(--shadow-color) / 0.34),-0.8px 1.7px 2.3px -1.5px hsl(var(--shadow-color) / 0.36), -1.2px 2.5px 3.5px -1.7px hsl(var(--shadow-color) / 0.39)",
-        },
       },
       fontFamily: {
         sans: ["Inter Variable", "sans-serif"],
