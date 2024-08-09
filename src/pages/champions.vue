@@ -127,7 +127,7 @@ function handleChampionClick(champion: Champion) {
 
             <div role="tablist" class="tabs tabs-lifted mt-5">
               <input type="radio" name="ability-tabs" role="tab" class="tab"
-                style="background-image: url('selectedChampion.pImg');" aria-label="p" checked="true" />
+                :style="{ backgroundImage: `url(${selectedChampion.pImg})` }" aria-label="P" checked="true" />
               <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6 
                 ">
                 Tab content 1
