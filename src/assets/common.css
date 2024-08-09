@@ -4,7 +4,7 @@
 
 .tab-bg {
   background-size: 45px;
-  @apply font-semibold !text-transparent  overflow-hidden  relative bg-center bg-origin-content bg-no-repeat h-[55px] border border-neutral/10;
+  @apply font-semibold !text-transparent  overflow-hidden  relative bg-center bg-origin-content bg-no-repeat h-[55px] shadow-inner shadow-neutral;
 }
 
 .sidebar-tabs > input.tab:checked:after {
