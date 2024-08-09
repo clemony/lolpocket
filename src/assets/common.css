@@ -7,11 +7,11 @@
 }
 
 .tab {
-  @apply font-semibold !text-sm pl-5 pt-2 w-1/5 overflow-hidden relative;
+  @apply font-semibold !text-sm pl-5 pt-2 overflow-hidden w-20 relative;
 }
 
 .tabs > input.tab:checked:first-child:after {
-  @apply ring-offset-base-100 ring-10 ring-offset-8;
+  @apply ring-offset-base-100 ring-8 ring-base-100 ring-offset-8;
 }
 
 .tab-bg {
