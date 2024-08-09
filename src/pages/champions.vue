@@ -113,7 +113,6 @@ function handleChampionClick(champion: Champion) {
                 <code v-for="(tag, index) in selectedChampion.tags" :key="index"
                   class="text-xs w-auto flex flex-nowrap text-center">#{{ tag }}</code>
               </div>
-              <a :href="selectedChampion.wiki" target="_blank">More Info</a>
             </div>
 
             <div role="tablist" class="tabs tabs-lifted">
