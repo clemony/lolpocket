@@ -52,7 +52,7 @@ function updateTheme(theme: string) {
 <template>
   <div id="main" class="flex-1">
     <div class="grid-header">
-      <h2 class="playfair">Settings</h2>
+      <h2 class="dmdisplay">Settings</h2>
     </div>
     <!-- THEME TAB -->
 
