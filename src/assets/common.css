@@ -42,3 +42,7 @@
 [data-tag="Tank"] {
   @apply bg-success/70 text-success-content;
 }
+
+[data-tag="Fighter"] {
+  @apply bg-secondary/80 text-secondary-content;
+}
