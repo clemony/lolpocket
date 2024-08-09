@@ -3,7 +3,7 @@
 }
 
 .tab-bg {
-  background-size: 40px;
+  background-size: 45px;
   @apply font-semibold !text-transparent  overflow-hidden  relative bg-center bg-origin-content bg-no-repeat h-[55px];
 }
 
@@ -12,7 +12,7 @@
 }
 
 .tab-bg:after {
-  @apply ring-offset-base-200 ring-8 ring-offset-8  ring-base-200 w-[40px] h-[40px] rounded-full absolute;
+  @apply ring-offset-base-200 ring-8 ring-offset-8  ring-base-200 w-[45px] h-[45px] rounded-full absolute;
 }
 
 .tab-sidebar-content {
