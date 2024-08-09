@@ -10,7 +10,8 @@
   @apply grid grid-cols-5 tabs tabs-lifted mt-5 w-[300px];
 }
 
-.sidebar-tabs:has {
+.sidebar-tabs:has(input.tab:checked:last-child) {
+  @apply bg-red-400;
 }
 .tab-bg {
   background-size: 40px;
