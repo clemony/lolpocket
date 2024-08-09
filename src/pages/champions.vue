@@ -143,7 +143,7 @@ function handleChampionClick(champion: Champion) {
               <input type="radio" name="ability-tabs" role="tab" class="tab-bg tab after:border after:border-secondary"
                 :style="{ backgroundImage: `url(${selectedChampion.qImg})` }" aria-label="Q" />
               <div role="tabpanel" class="tab-content tab-sidebar-content">
-                Tab content 2
+                {{ selectedChampion.q }}
               </div>
 
               <input type="radio" name="ability-tabs" role="tab" class="tab-bg tab after:border after:border-accent"
