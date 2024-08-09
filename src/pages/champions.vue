@@ -120,8 +120,8 @@ function handleChampionClick(champion: Champion) {
               </div>
             </div>
 
-            <div role="tablist" class="tabs tabs-lifted">
-              <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 1" />
+            <div role="tablist" class="tabs tabs-lifted mt-5">
+              <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 1" checked="true" />
               <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
                 Tab content 1
               </div>
