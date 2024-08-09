@@ -26,3 +26,7 @@
 [data-tag="Support"] {
   @apply bg-secondary text-secondary-content;
 }
+
+[data-tag="Mage"] {
+  @apply bg-[var(--primary)] text-primary-content;
+}
