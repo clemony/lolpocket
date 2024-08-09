@@ -29,9 +29,6 @@ module.exports = {
         colors: {
           colors: colors.primary,
         },
-        borderWidth: {
-          1: "1px",
-        },
       },
       fontFamily: {
         sans: ["Inter Variable", "sans-serif"],
