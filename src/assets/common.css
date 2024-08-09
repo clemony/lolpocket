@@ -32,11 +32,11 @@
 }
 
 [data-tag="Marksman"] {
-  @apply bg-warning/40 text-warning-content;
+  @apply bg-warning/60 text-warning-content;
 }
 
 [data-tag="Assassin"] {
-  @apply bg-error/40 text-error-content;
+  @apply bg-error/80 text-error-content;
 }
 
 [data-tag="Tank"] {
