@@ -11,6 +11,36 @@
 
 /* SIDEBAR -----------------------------------------------------------------------*/
 
+.sidebar-tabs {
+  @apply grid grid-cols-5
+    tabs tabs-lifted tabs-lg
+    mt-5 w-full;
+}
+
+.tab-bg {
+  background-size: 45px;
+  @apply !text-transparent
+  h-[53px] overflow-hidden relative rounded-full z-0
+  bg-origin-content bg-no-repeat bg-center bg-clip-border bg-transparent;
+}
+
+.sidebar-tabs > input.tab:checked:after {
+  @apply ring-offset-base-100 ring-8 ring-base-100 ring-offset-8;
+}
+
+.sidebar-tabs > input.tab:checked {
+  /*box-shadow: 2px -5px 5px 0px oklch(var(--n) / 8%);*/
+  @apply z-20 /*border-x-[1px] border-t-[1px] border-base-300*/;
+}
+
+.tab-bg:after {
+  @apply ring-offset-base-200 ring-8 ring-offset-8  ring-base-200 w-[45px] h-[45px] rounded-full absolute z-0;
+}
+
+.tab-sidebar-content:last-child {
+  @apply rounded-tr-none;
+}
+
 [data-tag="Support"] {
   @apply bg-info/50 text-info-content;
 }
