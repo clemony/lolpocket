@@ -1,3 +1,7 @@
+.tab {
+  @apply border-none outline-none ring-0 shadow-none;
+}
+
 .layout.tabs {
   @apply tabs-lg tabs-lifted w-full mr-4;
 }
