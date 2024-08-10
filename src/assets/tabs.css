@@ -4,6 +4,9 @@
 .layout > .tab-content {
 }
 
+/* 
+  @apply bg-base-100  rounded-box p-6 shadow-lg shadow-neutral/10;*/
+
 [aria-label="　 ♡ 　"]::after {
   @apply scale-y-90;
 }
