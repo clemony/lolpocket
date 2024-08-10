@@ -110,8 +110,8 @@ function handleChampionClick(champion: Champion) {
                   </div>
                 </div>
                 <div class="col-start-2 col-span-2">
-                  <h1 class="serif  text-[1.7rem] mb-0 pb-1">{{ selectedChampion.name }}</h1>
-                  <p class="text-xs flex tracking-wide align-middle uppercase pt-0 mt-0 pb-1">
+                  <h1 class="serif font-normal text-[1.7rem] mb-0 pb-1">{{ selectedChampion.name }}</h1>
+                  <p class="text-xs flex tracking-wide align-items-center uppercase pt-0 mt-0 pb-1">
                     <Icon icon="ph:at-bold" class="inline" />
                     {{ selectedChampion.title }}
                   </p>
