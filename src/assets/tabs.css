@@ -1,4 +1,4 @@
-.tabs {
+.layout-tabs {
   @apply tabs-lg tabs-lifted w-full mr-4;
 }
 .tab-content {
