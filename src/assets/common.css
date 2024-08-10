@@ -8,11 +8,12 @@
 }
 
 .sidebar-tabs > input.tab:checked:after {
-  @apply ring-offset-base-100 ring-8 ring-base-100 ring-offset-8 z-10;
+  @apply ring-offset-base-100 ring-8 ring-base-100 ring-offset-8;
 }
 
 .sidebar-tabs > input.tab:checked {
-  box-shadow: 5px -5px 5px 0px #89778c;
+  box-shadow: 5px -5px 5px 0px;
+  @apply z-20 shadow-neutral;
 }
 
 .tab-bg:after {
