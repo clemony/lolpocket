@@ -1,7 +1,7 @@
-.layout-tabs {
+.layout.tabs {
   @apply tabs-lg tabs-lifted w-full mr-4;
 }
-.tab-content {
+.layout .tab-content {
   @apply bg-base-100 border-neutral/10 rounded-box p-6 shadow-lg shadow-neutral/10;
 }
 
