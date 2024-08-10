@@ -15,6 +15,10 @@ export const useUserSettings = defineStore('userSettings', () => {
 
   return { dataTheme }
 }, {
-  persist: true,
-});
-
+  persist: {
+    storage: localStorage,
+    afterRestore: (ctx) => {
+      console.log(`just restored '${ctx.store.$id}'`)
+    }
+  },
+})
