@@ -1,12 +1,8 @@
-.tab {
-  @apply border-none outline-none ring-0 shadow-none;
-}
-
 .layout.tabs {
   @apply tabs-lg tabs-lifted w-full mr-4;
 }
 .layout > .tab-content {
-  @apply bg-base-100 border-neutral/15 rounded-box p-6 shadow-lg shadow-neutral/10;
+  @apply bg-base-100  rounded-box p-6 shadow-lg shadow-neutral/10;
 }
 
 [aria-label="　 ♡ 　"]::after {
@@ -42,7 +38,7 @@
 }
 
 .tab-sidebar-content {
-  @apply bg-base-100 border-base-300 rounded-box p-6 w-full;
+  @apply bg-base-100 rounded-box p-6 w-full;
 }
 
 .tab-sidebar-content:last-child {
