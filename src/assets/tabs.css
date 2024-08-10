@@ -19,12 +19,9 @@
 
 .tab-bg {
   background-size: 45px;
-
-  @apply !text-transparent;
-
-  @apply h-[58px] overflow-hidden relative rounded-full z-0;
-
-  @apply bg-origin-content bg-no-repeat bg-center bg-clip-border bg-transparent;
+  @apply !text-transparent
+  h-[58px] overflow-hidden relative rounded-full z-0
+  bg-origin-content bg-no-repeat bg-center bg-clip-border bg-transparent;
 }
 
 .sidebar-tabs > input.tab:checked:after {
