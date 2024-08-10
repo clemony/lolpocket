@@ -33,7 +33,7 @@
 }
 
 [data-tag="Mage"] {
-  @apply bg-[var(--primary)] text-primary-content;
+  @apply bg-[oklch(var(--p))] text-primary-content;
 }
 
 [data-tag="Marksman"] {
