@@ -70,7 +70,3 @@
     @apply opacity-100;
   }
 }
-
-.break-space {
-  word-spacing: 100vw;
-}
