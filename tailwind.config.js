@@ -33,7 +33,7 @@ module.exports = {
       fontFamily: {
         sans: ["Inter Variable", "sans-serif"],
         serif: ["DM Serif Text", "serif"],
-        mono: ["Geist Mono", "mono"],
+        mono: ["Geist Mono", "monospace"],
       },
       fontSize: {
         xs: "0.6rem",

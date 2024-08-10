@@ -17,6 +17,10 @@
   letter-spacing: normal;
 }
 
+.mono {
+  font-family: "Geist Mono", monospace;
+}
+
 html,
 body,
 body:before,
