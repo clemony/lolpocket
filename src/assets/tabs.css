@@ -1,3 +1,14 @@
+.tabs {
+  @apply tabs-lg tabs-lifted w-full mr-4;
+}
+.tab-content {
+  @apply bg-base-100 border-neutral/10 rounded-box p-6 shadow-lg shadow-neutral/10;
+}
+
+[aria-label="　 ♡ 　"]::after {
+  @apply scale-y-90;
+}
+
 .sidebar-tabs {
   @apply grid grid-cols-5 tabs tabs-lifted mt-5 w-full;
 }
