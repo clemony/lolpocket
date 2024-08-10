@@ -9,7 +9,7 @@
   @apply scale-y-90;
 }
 
-/* SIDEBAR */
+/* SIDEBAR -----------------------------------------------------------------------*/
 
 .sidebar-tabs {
   @apply grid grid-cols-5 tabs tabs-lifted mt-5 w-full;
