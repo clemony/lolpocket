@@ -15,8 +15,6 @@ export const useUserSettings = defineStore('userSettings', () => {
 
   return { dataTheme }
 }, {
-  persist: {
-    storage: localStorage,
-  }
+  persist: true,
 });
 
