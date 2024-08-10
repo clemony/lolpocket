@@ -2,10 +2,8 @@
   @apply tabs-lg tabs-lifted mx-4;
 }
 .layout > .tab-content {
+  @apply shadow-lg shadow-neutral/10 p-6  bg-base-100 border-base-300 rounded-box;
 }
-
-/* 
-  @apply bg-base-100  rounded-box p-6 shadow-lg shadow-neutral/10;*/
 
 [aria-label="　 ♡ 　"]::after {
   @apply scale-y-90;

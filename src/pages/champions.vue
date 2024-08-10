@@ -45,8 +45,7 @@ function handleChampionClick(champion: Champion) {
             <input type="radio" name="champ-tabs" role="tab" class="tab font-semibold" aria-label="Champions"
               checked="true" />
 
-            <div role="tabpanel"
-              class="tab-content grid shadow-lg shadow-neutral/10 p-6  bg-base-100 border-base-300 rounded-box">
+            <div role="tabpanel" class="tab-content ">
               <div class="grid-container">
 
                 <div class="grid-item champ" v-for="champion in champions">
