@@ -12,8 +12,8 @@
 }
 
 .sidebar-tabs > input.tab:checked {
-  box-shadow: 2px -5px 5px 0px oklch(var(--n) / 8%);
-  @apply z-20 border-x-[1px] border-t-[1px] border-base-300;
+  /*box-shadow: 2px -5px 5px 0px oklch(var(--n) / 8%);*/
+  @apply z-20 /*border-x-[1px] border-t-[1px] border-base-300*/;
 }
 
 .tab-bg:after {
