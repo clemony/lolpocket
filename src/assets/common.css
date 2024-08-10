@@ -12,7 +12,7 @@
 }
 
 .sidebar-tabs > input.tab:checked {
-  box-shadow: 2px -4px 10px 0px #89778c;
+  box-shadow: 2px -5px 5px 0px #89778c;
   @apply z-20;
 }
 
