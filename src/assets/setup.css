@@ -8,7 +8,8 @@
   --animation-input: 0.2s !important;
   --btn-focus-scale: 0.95 !important;
   --border-btn: 1px !important;
-  /* --tab-border: 1px !important;*/
+  --tab-border: 1px !important;
+  --tab-border-color: oklch(var(--n), 10%);
   --tab-radius: 0.5rem !important;
 }
 
