@@ -20,7 +20,7 @@
 .tab-bg {
   background-size: 45px;
   @apply !text-transparent
-  h-[53px] overflow-hidden relative rounded-full z-0
+  h-[53px] overflow-hidden relative z-0
   bg-origin-content bg-no-repeat bg-center bg-clip-border bg-transparent;
 }
 
