@@ -16,6 +16,7 @@ import Runes from '@/pages/runes.vue';
 import Settings from '@/pages/settings.vue';
 import { useDataStore } from '@/stores/dataStore';
 import { Icon } from '@iconify/vue';
+import { useUserSettings } from '@stores/userSettings';
 import { computed, DefineComponent, onMounted, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
@@ -31,6 +32,7 @@ const navigateTo = (route: string) => {
 // Access the current route
 const route = useRoute();
 
+const settings = useUserSettings();
 
 
 // Define your props and type
