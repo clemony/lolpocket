@@ -1,5 +1,5 @@
 .layout.tabs {
-  @apply tabs-lg tabs-lifted w-full mr-4;
+  @apply tabs-lg tabs-lifted mx-4;
 }
 .layout > .tab-content {
   @apply bg-base-100  rounded-box p-6 shadow-lg shadow-neutral/10;
