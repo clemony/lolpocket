@@ -2,7 +2,6 @@
   @apply tabs-lg tabs-lifted mx-4;
 }
 .layout > .tab-content {
-  @apply bg-base-100  rounded-box p-6 shadow-lg shadow-neutral/10;
 }
 
 [aria-label="　 ♡ 　"]::after {
