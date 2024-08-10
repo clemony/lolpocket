@@ -8,7 +8,7 @@
 }
 
 .sidebar-tabs > input.tab:checked:after {
-  @apply ring-offset-base-100 ring-8 ring-base-100 ring-offset-8;
+  @apply ring-offset-base-100 ring-8 ring-base-100 ring-offset-8 z-10;
 }
 
 .sidebar-tabs > input.tab:checked {
@@ -16,7 +16,7 @@
 }
 
 .tab-bg:after {
-  @apply /*ring-offset-base-200 ring-8 ring-offset-8  ring-base-200 */w-[45px] h-[45px] rounded-full absolute;
+  @apply ring-offset-base-200 ring-8 ring-offset-8  ring-base-200 w-[45px] h-[45px] rounded-full absolute z-0;
 }
 
 .tab-sidebar-content {
