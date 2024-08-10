@@ -1,5 +1,5 @@
 :root {
-  font-family: "Inter Variable", sans-serif;
+  font-family: "Geist Sans", sans-serif;
   --primary: oklch(var(--p));
   --rounded-box: 1rem !important;
   --rounded-btn: 0.5rem !important;
@@ -31,7 +31,6 @@ body:after {
 body {
   box-shadow: inset 0px 0px 4px 1px rgba(25, 25, 25, 0.2);
   outline: 2px solid oklch(var(--p));
-  @apply tracking-[0.03em];
 }
 
 /*#app::before {
