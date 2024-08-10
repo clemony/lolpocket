@@ -8,10 +8,10 @@ import { madeForYouAlbums } from '../data/albums';
 
     <div class="hidden w-screen h-screen md:block">
 
-        <div class="border-t">
+        <div class="">
             <div class="bg-background">
                 <div class="grid lg:grid-cols-5">
-                    <div class="col-span-3 lg:col-span-4 lg:border-l">
+                    <div class="col-span-3 lg:col-span-4">
                         <div class="h-full px-4 py-6 lg:px-8">
 
                             <div class="mt-6 space-y-1">
