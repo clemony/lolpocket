@@ -17,6 +17,7 @@ export const useUserSettings = defineStore('userSettings', () => {
 }, {
   persist: {
     storage: localStorage,
+    key: 'userSettings',
     afterRestore: (ctx) => {
       console.log(`just restored '${ctx.store.$id}'`)
     }
