@@ -4,7 +4,7 @@
 
 .tab-bg {
   background-size: 45px;
-  @apply font-semibold !text-transparent  overflow-hidden  relative bg-center bg-origin-content bg-no-repeat h-[58px] bg-clip-border bg-transparent rounded-full border z-0 border-x-[1px] border-t-[1px] border-neutral;
+  @apply font-semibold !text-transparent  overflow-hidden  relative bg-center bg-origin-content bg-no-repeat h-[58px] bg-clip-border bg-transparent rounded-full border z-0;
 }
 
 .sidebar-tabs > input.tab:checked:after {
@@ -13,7 +13,7 @@
 
 .sidebar-tabs > input.tab:checked {
   box-shadow: 2px -5px 5px 0px oklch(var(--n) / 8%);
-  @apply z-20;
+  @apply z-20 border-x-[1px] border-t-[1px] border-base-300;
 }
 
 .tab-bg:after {
