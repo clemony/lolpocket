@@ -13,10 +13,10 @@ export const useUserSettings = defineStore('userSettings', () => {
     document.documentElement.setAttribute('data-theme', newValue);
   });
 
-  return { dataTheme };
-}, 
-{
+  return { dataTheme }
+}, {
   persist: {
     storage: localStorage
   }
 });
+
