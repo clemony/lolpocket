@@ -1,7 +1,7 @@
 export default {
   root: {
     class: [
-      "text-xs",
+      "text-xs tracking-wider",
       // Space
       "m-0 p-1.5",
 
