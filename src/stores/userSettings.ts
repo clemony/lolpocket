@@ -14,7 +14,6 @@ export const useUserSettings = defineStore('userSettings', () => {
   });
 
   const setSettings = (Settings) => {
-    storedTheme = dataTheme
     localStorage.setItem('dataTheme', JSON.stringify(dataTheme))
   }
 
