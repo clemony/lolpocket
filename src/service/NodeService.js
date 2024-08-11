@@ -117,7 +117,7 @@ export const NodeService = {
       },
       {
         key: "Divider",
-        label: "",
+        label: "Utilities",
         icon: "pepicons-pop--line-x",
         data: "",
         selectable: "false",
