@@ -23,7 +23,7 @@ export const NodeService = {
         children: [
           {
             key: "b1",
-            label: "enter a build name",
+            label: "enter a build name ahhfhidididididiiddiid",
             icon: "mage--star",
             selectable: "true",
             type: "build",
@@ -84,6 +84,14 @@ export const NodeService = {
         selectable: "true",
       },
       {
+        key: "Browse",
+        label: "Browse",
+        icon: "pepicons-pop--line-x",
+        data: "",
+        selectable: "false",
+        type: "divider",
+      },
+      {
         key: "Champions",
         label: "Champions",
         icon: "ph--crown-simple",
@@ -106,6 +114,14 @@ export const NodeService = {
         icon: "ph--hexagon",
         selectable: "true",
         type: "browse",
+      },
+      {
+        key: "Divider",
+        label: "",
+        icon: "pepicons-pop--line-x",
+        data: "",
+        selectable: "false",
+        type: "divider",
       },
       {
         key: "Account",

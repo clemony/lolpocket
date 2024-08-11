@@ -20,7 +20,7 @@ interface Item {
   stats: string;
   passive: string;
   active: string;
-  type: string; // Assuming 'type' is a property in your JSON data
+  type: string;
 }
 
 interface Champion {
@@ -28,7 +28,7 @@ interface Champion {
   img: string;
   wiki: string;
   title: string;
-  tags: string[]; // `tags` should be an array of strings
+  tags: string[];
   type: string;
   pImg: string;
   qImg: string;
@@ -36,10 +36,20 @@ interface Champion {
   eImg: string;
   rImg: string;
   passive: string;
-  q: string;
-  w: string;
-  e: string;
-  r: string;
+  q: string; 
+  w: string; 
+  e: string; 
+  r: string; 
+  passiveName?: string;
+  passiveContext?: string;
+  qName?: string;
+  qContext?: string; 
+  wName?: string; 
+  wContext?: string; 
+  eName?: string; 
+  eContext?: string; 
+  rName?: string; 
+  rContext?: string; 
 }
 
 interface DataObject {
@@ -52,11 +62,38 @@ export const useDataStore = defineStore("dataStore", () => {
   const runes = ref<Rune[]>([]);
   const champions = ref<Champion[]>([]);
   const selectedChampion = ref<Champion | null>(null);
+  const items = ref<Item[]>([]);
 
   function setSelectedChampion(champion: Champion) {
     selectedChampion.value = champion;
   }
-  const items = ref<Item[]>([]);
+
+  function parseAbilityString(abilityString: string): { name: string, context: string } {
+    // Ensure the input is a string
+    if (typeof abilityString !== 'string') {
+      return { name: '', context: '' };
+    }
+  
+    // Split by new lines
+    const lines = abilityString.split('\n').filter(line => line.trim() !== '');
+    
+    // Check if there's at least one line
+    if (lines.length > 0) {
+      const name = lines[0].trim();
+      const context = lines.slice(1).join('\n').trim();
+      return { name, context };
+    }
+    
+    return { name: '', context: '' };
+  }
+
+  function isString(value: any): value is string {
+    return typeof value === 'string';
+  }
+  
+  function isArrayOfStrings(value: any): value is string[] {
+    return Array.isArray(value) && value.every(item => typeof item === 'string');
+  }
 
   const fetchData = async () => {
     try {
@@ -64,26 +101,57 @@ export const useDataStore = defineStore("dataStore", () => {
       if (!response.ok) {
         throw new Error(`Network response was not ok: ${response.statusText}`);
       }
-
+  
       // Check content type
       const contentType = response.headers.get("content-type");
       if (!contentType || !contentType.includes("application/json")) {
         throw new TypeError("Received non-JSON response");
       }
-
+  
       // Parse JSON
       const json: DataObject[] = await response.json();
-
+  
       // Initialize data arrays based on type
       json.forEach((object: DataObject) => {
         if (object.type === "rune") {
           runes.value.push(object as Rune);
         } else if (object.type === "champion") {
-          // Convert `tags` to an array of strings
-          if (typeof object.tags === 'string') {
-            object.tags = object.tags.split(',').map(tag => tag.trim());
+          const champion = object as Champion;
+  
+          // Ensure champion has ability properties
+          if (typeof champion.passive === 'string') {
+            const passiveParsed = parseAbilityString(champion.passive);
+            champion.passiveName = passiveParsed.name;
+            champion.passiveContext = passiveParsed.context;
           }
-          champions.value.push(object as Champion);
+          if (typeof champion.q === 'string') {
+            const qParsed = parseAbilityString(champion.q);
+            champion.qName = qParsed.name;
+            champion.qContext = qParsed.context;
+          }
+          if (typeof champion.w === 'string') {
+            const wParsed = parseAbilityString(champion.w);
+            champion.wName = wParsed.name;
+            champion.wContext = wParsed.context;
+          }
+          if (typeof champion.e === 'string') {
+            const eParsed = parseAbilityString(champion.e);
+            champion.eName = eParsed.name;
+            champion.eContext = eParsed.context;
+          }
+          if (typeof champion.r === 'string') {
+            const rParsed = parseAbilityString(champion.r);
+            champion.rName = rParsed.name;
+            champion.rContext = rParsed.context;
+          }
+  
+          if (isString(champion.tags)) {
+            champion.tags = champion.tags.split(',').map(tag => tag.trim());
+          } else if (!isArrayOfStrings(champion.tags)) {
+            champion.tags = []; // Default to an empty array if `tags` is not a string or array of strings
+          }
+  
+          champions.value.push(champion);
         } else if (object.type === "item") {
           items.value.push(object as Item);
         }

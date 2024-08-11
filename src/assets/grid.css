@@ -47,7 +47,7 @@
 }
 
 .grid-item:hover {
-  @apply ring-[2px] ring-secondary/80;
+  @apply ring-[2px] ring-secondary;
   .grid-image-container {
     .grid-tip {
       transform: none;

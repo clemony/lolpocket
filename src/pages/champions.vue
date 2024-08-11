@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useDataStore } from '@/stores/dataStore';
-import { Icon } from "@iconify/vue";
+import { Icon } from "@iconify/vue"
+  ;
 const dataStore = useDataStore();
 
 interface Champion {
@@ -20,6 +21,16 @@ interface Champion {
   w: string;
   e: string;
   r: string;
+  passiveName?: string;
+  passiveContext?: string;
+  qName?: string;
+  qContext?: string;
+  wName?: string;
+  wContext?: string;
+  eName?: string;
+  eContext?: string;
+  rName?: string;
+  rContext?: string;
 }
 
 const champions = dataStore.champions;
@@ -69,7 +80,7 @@ function handleChampionClick(champion: Champion) {
             <!-- Fave Tab -->
 
             <input type="radio" name="champ-tabs" role="tab" class="tab tab-2 w-64 font-normal text-2xl"
-              aria-label="　 ♡ 　" />
+              aria-label="Favorites" />
 
             <div role="tabpanel" class=" tab-content bg-base-100 border-base-300 rounded-box p-6">
               <div class="grid-container c-grid">
@@ -101,22 +112,56 @@ function handleChampionClick(champion: Champion) {
           <div v-if="selectedChampion" class="">
 
             <div
-              class="rounded-box border border-neutral/5 bg-base-100 shadow-lg prose grid grid-cols-2 auto-rows-max py-3 px-1">
+              class="rounded-box border border-neutral/10 bg-base-100 shadow-lg prose grid grid-cols-2 auto-rows-max py-3 px-1">
               <div class="col-span-2 grid grid-cols-3 p-1 auto-cols-max gap-1">
-                <div class=" avatar h-16 justify-content-center col-start-1 ml-1 !aspect-square">
-                  <div class="ring-neutral  rounded-full ring-[1px] grid justify-content-center object-cover">
+                <div
+                  class="align-self-start avatar h-16 justify-content-center col-start-1 -mt-1.5 ml-1.5 !aspect-square  relative">
+                  <div
+                    class="ring-base-content  rounded-full  grid justify-content-center object-contain z-0 my-auto h-16 w-16">
 
-                    <img class="m-0 p-0 scale-110" :src="selectedChampion.img" :alt="selectedChampion.name" />
+                    <!--<img class="m-0 p-0 scale-125" :src="selectedChampion.img" :alt="selectedChampion.name" />-->
+
+                    <svg role="none" class="w-full h-full z-10">
+                      <mask id="circle">
+                        <circle fill="white" cx="60" cy="60" r="100"></circle>
+                        <circle fill="black" cx="86%" cy="86%" r="13"></circle>
+                      </mask>
+                      <g mask="url(#circle)">
+                        <image x="-6px" y="-6px" height="115%" width="115%" class="max-w-[115%] "
+                          :href="selectedChampion.img">
+                        </image>
+                        <circle fill="none" cx="60" cy="60" r="100" stroke="rgba(0,0,0,0.1)" stroke-width="2">
+                        </circle>
+                      </g>
+                    </svg>
+
+                    <div
+                      class="absolute grid place items-centertooltip tooltip-open tooltip-bottom rounded-full glow size-20 opacity-70"
+                      data-tip="view on Wiki">
+                      <a :href="selectedChampion.wiki" target="_blank"
+                        class="badge flex  bg-base-content text-base-100 size-[22px] border-none object-cover overflow-hidden p-[3px] aspect-square z-10">
+
+                        <Icon icon="ph:link-simple" class="" />
+
+                      </a>
+                     
+                    </div>
                   </div>
+
+
                 </div>
                 <div class="col-start-2 col-span-2">
-                  <h1 class="serif font-normal text-[1.7rem] mb-0 pb-1">{{ selectedChampion.name }}</h1>
-                  <p class="text-xs flex tracking-wide align-items-center uppercase pt-0 mt-0">
-                    <Icon icon="ph:at-bold" class="inline" />
-                    {{ selectedChampion.title }}
+                  <h1 class=" font-semibold serif text-[1.4rem] mb-0 pb-1">{{ selectedChampion.name }}</h1>
+                  <p
+                    class="text-xs flex text-pretty tracking-wide place-items-center uppercase pt-0 mt-0 pl-[11px] -indent-[11px] pb-0 mb-2">
+                    @{{ selectedChampion.title }}
                   </p>
                 </div>
               </div>
+
+
+
+
 
 
               <div
@@ -127,47 +172,73 @@ function handleChampionClick(champion: Champion) {
               </div>
             </div>
 
-            <div role="tablist" class="sidebar-tabs ">
 
-              <input type="radio" name="ability-tabs" role="tab"
-                class="tab-bg tab after:border after:border-[var(--primary)]"
-                :style="{ backgroundImage: `url(${selectedChampion.pImg})` }" aria-label="P" checked="true" />
-              <div role="tabpanel" class="tab-content tab-sidebar-content 
-                ">
-                Tab content 1
+            <div
+              class="ability-wrapper join join-vertical w-full bg-base-100 rounded-box mt-5 shadow-lg shadow-neutral/20">
+
+              <div class="collapse collapse-arrow join-item ">
+                <input type="checkbox" name="ability-accordion" />
+                <div class="collapse-title">
+                  <img :src="selectedChampion.pImg" :alt="selectedChampion.passiveName" />
+                  <div>{{ selectedChampion.passiveName }}</div>
+                  <kbd class="kbd">P</kbd>
+                </div>
+                <div class="collapse-content">
+                  <p>{{ selectedChampion.passiveContext }}</p>
+                </div>
               </div>
 
-              <input type="radio" name="ability-tabs" role="tab" class="tab-bg tab after:border after:border-secondary"
-                :style="{ backgroundImage: `url(${selectedChampion.qImg})` }" aria-label="Q" />
-              <div role="tabpanel" class="tab-content tab-sidebar-content">
-                {{ selectedChampion.q }}
+              <div class="collapse collapse-arrow join-item ">
+                <input type="checkbox" name="ability-accordion" />
+                <div class="collapse-title">
+                  <img :src="selectedChampion.qImg" :alt="selectedChampion.qName" />
+                  <div>{{ selectedChampion.qName }}</div>
+                  <kbd class="kbd">Q</kbd>
+                </div>
+                <div class="collapse-content">
+                  <p>{{ selectedChampion.qContext }}</p>
+                </div>
               </div>
 
-              <input type="radio" name="ability-tabs" role="tab" class="tab-bg tab after:border after:border-accent"
-                :style="{ backgroundImage: `url(${selectedChampion.wImg})` }" aria-label="W" />
-              <div role="tabpanel" class="tab-content tab-sidebar-content">
-                Tab content 3
+              <div class="collapse collapse-arrow join-item ">
+                <input type="checkbox" name="ability-accordion" />
+                <div class="collapse-title">
+                  <img :src="selectedChampion.wImg" :alt="selectedChampion.wName" />
+                  <div>{{ selectedChampion.wName }}</div>
+                  <kbd class="kbd">W</kbd>
+                </div>
+                <div class="collapse-content">
+                  <p>{{ selectedChampion.wContext }}</p>
+                </div>
               </div>
-
-              <input type="radio" name="ability-tabs" role="tab" class="tab-bg tab after:border after:border-info"
-                :style="{ backgroundImage: `url(${selectedChampion.eImg})` }" aria-label="E" />
-              <div role="tabpanel" class="tab-content tab-sidebar-content">
-                Tab content 3
+              <div class="collapse collapse-arrow join-item">
+                <input type="checkbox" name="ability-accordion" />
+                <div class="collapse-title">
+                  <img :src="selectedChampion.eImg" :alt="selectedChampion.eName" />
+                  <div>{{ selectedChampion.eName }}</div>
+                  <kbd class="kbd">E</kbd>
+                </div>
+                <div class="collapse-content">
+                  <p>{{ selectedChampion.eContext }}</p>
+                </div>
               </div>
-
-              <input type="radio" name="ability-tabs" role="tab" class="tab tab-bg after:border after:border-success"
-                :style="{ backgroundImage: `url(${selectedChampion.rImg})` }" aria-label="R" />
-              <div role="tabpanel" class="tab-content tab-sidebar-content">
-                Tab content 5
+              <div class="collapse collapse-arrow join-item ">
+                <input type="checkbox" name="ability-accordion" :alt="selectedChampion.rName" />
+                <div class="collapse-title">
+                  <img :src="selectedChampion.rImg" />
+                  <div>{{ selectedChampion.rName }}</div>
+                  <kbd class="kbd">R</kbd>
+                </div>
+                <div class="collapse-content">
+                  <p>{{ selectedChampion.rContext }}</p>
+                </div>
               </div>
             </div>
 
 
-            <!--               <div class="col-start-1">
-                <a :href="selectedChampion.wiki" target="_blank" class="text-xs no-underline text-nowrap flex">wiki
-                  <Icon icon="ph:arrow-square-out" />
-                </a>
-              </div>-->
+
+
+
           </div>
           <div v-else>
             <p>Select a champion to view details.</p>
@@ -190,5 +261,11 @@ function handleChampionClick(champion: Champion) {
 
 .champ {
   @apply !h-[80px] !w-[80px];
+}
+
+
+.linker:hover+div {
+  opacity: 1;
+  display: flex;
 }
 </style>

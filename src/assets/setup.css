@@ -1,6 +1,7 @@
 :root {
   font-family: "Geist Sans", sans-serif;
-  --primary: oklch(var(--p));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   --rounded-box: 1rem !important;
   --rounded-btn: 0.5rem !important;
   --rounded-badge: 1.9rem !important;
@@ -13,12 +14,15 @@
 }
 
 .serif {
-  font-family: "DM Serif Text", serif;
-  letter-spacing: normal;
+  font-family: "Roboto Serif Variable", serif;
 }
 
 .mono {
   font-family: "Geist Mono", monospace;
+}
+
+.sans {
+  font-family: "Geist Sans", sans-serif;
 }
 
 html,
@@ -51,9 +55,6 @@ box-shadow: inset 0px 0px 4px 1px rgba(25, 25, 25, 0.3);
   @apply absolute top-[0px] left-0 h-full w-full border-secondary-content/20 border-solid border-[1px] border-t-0 z-30 pointer-events-none;
 }
 
-#app {
-  @apply top-0 left-0 m-0 fixed overflow-auto w-screen h-screen bg-base-200 z-0;
-}
 
 /*.titlebar::after {
   content: '';
@@ -66,57 +67,10 @@ box-shadow: inset 0px 0px 4px 1px rgba(25, 25, 25, 0.3);
 
 }*/
 
-.titlebar {
-  top: 0;
-  left: 0;
-  @apply h-[36px] w-full backdrop-blur-md bg-base-100/60 grid grid-cols-3 fixed z-20 p-[0px] items-center shadow-lg shadow-base-content/5 border-b-[1px] border-base-300/80;
 
-  .title {
-    @apply p-0 text-base tracking-wide font-semibold border-none shadow-none h-6 hover:bg-accent absolute left-[10px] top-[6px] z-40 bg-transparent;
 
-    span:nth-child(2) {
-      @apply pl-[9px] bg-transparent;
-    }
-  }
 
-  .s-box {
-    @apply w-full justify-self-center z-0;
 
-    .s-form {
-      @apply text-center justify-items-center rounded-lg z-0;
 
-      .s-icon {
-        @apply absolute right-3 top-[5.5px] size-4 z-20 text-base-content/50;
-      }
 
-      .in-search {
-        border-radius: 10px;
-        @apply text-xs font-medium w-[470px] text-center h-[28px] shadow-inner bg-base-200/60 border-base-content/15 shadow-base-content/10 !outline-0 !outline-transparent !outline-none;
-      }
 
-      .in-search:focus {
-        @apply ring-base-300;
-      }
-    }
-  }
-
-  .button-wrapper {
-    @apply justify-self-end justify-items-end justify-end grid grid-cols-3 gap-0.5 pr-2;
-
-    .titlebar-button {
-      @apply inline-flex place-items-center p-1 hover:bg-base-200 rounded-btn;
-
-      .b-window {
-        @apply place-content-center rounded-full text-base-content/50 cursor-pointer h-[16px] w-[16px];
-      }
-    }
-  }
-}
-
-.main {
-  @apply max-h-dvh h-screen pt-4 pl-2 pr-4;
-}
-
-.titlebar-button::before {
-  @apply text-xs;
-}

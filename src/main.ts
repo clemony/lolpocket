@@ -1,5 +1,5 @@
 import "@/assets/imports.css";
-import Aura from '@/assets/presets';
+import Aura from '@assets/tree/index.js';
 import App from "@/pages/App.vue";
 import { gsap } from "gsap";
 import { createPinia } from 'pinia';
