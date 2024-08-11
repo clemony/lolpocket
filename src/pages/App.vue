@@ -108,8 +108,8 @@ onMounted(() => {
     <div
       class="title col-start-1 justify-self-start flex items-center p-0 text-base tracking-wide font-semibold border-none shadow-none h-6 absolute left-[10px] top-[6px] z-40 bg-transparent">
 
-      <button class="">
-        <Icon icon="tabler:layout-sidebar-right-collapse-filled" />
+      <button class="text-base-content/60">
+        <Icon icon="tabler:layout-sidebar-right-collapse-filled" class="size-5 ml-2 mr-3" />
       </button>
 
       <span>lolpocket</span>
