@@ -110,6 +110,7 @@ onMounted(() => {
 
       <button class="text-base-content">
         <Icon icon="octicon:sidebar-expand-24" class="size-5 ml-2 mr-3" />
+        <Icon icon="octicon:sidebar-collapse-24" class="size-5 ml-2 mr-3 hidden" />
       </button>
 
       <span>lolpocket</span>
