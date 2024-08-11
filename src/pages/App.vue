@@ -108,14 +108,10 @@ onMounted(() => {
     <div
       class="title col-start-1 justify-self-start flex items-center p-0 text-base tracking-wide font-semibold border-none shadow-none h-6 absolute left-[10px] top-[6px] z-40 bg-transparent">
 
-      <button class="btn">
+      <button class="">
         <Icon icon="tabler:layout-sidebar-right-collapse-filled" />
       </button>
-      <div class="avatar">
-        <div class="object-contain rounded-full size-5">
-          <img src="/img/ui/lp.svg" class="object-contain" />
-        </div>
-      </div>
+
       <span>lolpocket</span>
     </div>
 
