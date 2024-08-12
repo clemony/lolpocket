@@ -49,7 +49,7 @@ function updateTheme(theme: string) {
 
         <div class="grid grid-cols-2 grid-flow-row">
           <div tabindex="0" role="button"
-            class="dropdown border-[1px] border-base-300/50 hover:border-base-300 rounded-btn   ">
+            class="dropdown border-[1px] border-base-300/50 hover:border-base-300 rounded-btn  m-0 p-0 ">
             <div class="join join-horizontal items-center bg-base-200 ">
               <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content"
                 :data-set-theme="dataTheme">
@@ -78,7 +78,7 @@ function updateTheme(theme: string) {
                   </div>
                 </div>
               </div>
-              <Icon icon="ph:caret-down" class="join-item mx-1 pl-1" />
+              <Icon icon="ph:caret-down" class="join-item pl-1" />
             </div>
             <ul tabindex="0"
               class="grid dropdown-content place-content-center  menu bg-base-100 rounded-md z-[1] w-[160px] px-2 shadow h-64 overflow-y-scroll overflow-x-hidden">
