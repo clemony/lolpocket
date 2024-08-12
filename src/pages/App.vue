@@ -91,6 +91,7 @@ function toggleMenu() {
     if (menu.value) {
       // Capture the initial state of the menu
       const state = Flip.getState(menu.value);
+
       let m = gsap.utils.selector("menu");
       let nav = m(".nav");
       let node = m(".node");
@@ -100,6 +101,10 @@ function toggleMenu() {
       let nodechildren = m(".nodechildren");
       let nodetogglebutton = m(".nodetogglebutton");
       let rootchildren = m(".rootchildren");
+
+      // first create (or get the existing) batch by id
+      let batch = Flip.batch("id");
+
 
       // Create a new GSAP timeline for the combined animation
       const tl = gsap.timeline();
