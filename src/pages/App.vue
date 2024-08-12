@@ -63,10 +63,10 @@ const menu = ref(null);
 
 function resetContent() {
   var tl = gsap.timeline();
-  tl.to(".label", { opacity: 0, visibility: "hidden", display: "none", duration: 1, stagger: 0.1 });
-  tl.to("#menu", { width: "80px", duration: 2 }, "<+=50%");
-  tl.to(".cmp", { margin: 0, padding: 0, justifyItems: "center", justifyContent: "center", duration: 2 }, "<");
-  tl.to(".nodeicon", { width: "1.25rem", height: "1.25rem", color: "oklch(var(--bc), 60%)", duration: 2 }, "<");
+  tl.to(".label", { opacity: 0, visibility: "hidden", display: "none", duration: 0.25, stagger: 0.05 });
+  tl.to("#menu", { width: "80px", duration: 1.5 }, "<+=25%");
+  tl.to(".cmp", { margin: 0, padding: 0, justifyItems: "center", justifyContent: "center", duration: 1.5 }, "<");
+  tl.to(".nodeicon", { width: "1.25rem", height: "1.25rem", color: "oklch(var(--bc), 60%)", duration: 1.5 }, "<");
 }
 
 /*function toggleMenu() {
