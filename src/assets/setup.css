@@ -16,16 +16,16 @@
 
 
 .font-serif {
-  font-family: "Roboto Serif Variable", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif !important;
+  font-family: "Roboto Serif Variable", !important;
 }
 
 
 .font-mono {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", ui-monospace, monospace  !important;
 }
 
 .font-sans {
-  font-family: "Geist Sans", sans-serif;
+  font-family: "Geist Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
 html,
