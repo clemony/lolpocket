@@ -78,7 +78,7 @@ function updateTheme(theme: string) {
                   </div>
                 </div>
               </div>
-              <div class="join-item">
+              <div class="join-item bg-base-200 w-5">
                 <Icon icon="ph:caret-down" class="" />
               </div>
             </div>
