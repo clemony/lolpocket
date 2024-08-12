@@ -110,7 +110,7 @@ export default {
         "pl-0": context.leaf,
       },
 
-      "cmp",
+      "cmp icon",
     ],
   }),
   nodeLabel: ({ context }) => ({
