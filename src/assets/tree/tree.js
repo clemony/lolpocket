@@ -10,6 +10,8 @@ export default {
 
       // Color
       "text-base-content",
+
+      "cmp",
     ],
   },
   wrapper: {
@@ -25,7 +27,7 @@ export default {
     ],
   },
   node: {
-    class: ["focus:outline-none align-middle items-center relative my-2 w-full bg-base-100 code"],
+    class: ["focus:outline-none align-middle items-center relative my-2 w-full bg-base-100 code", "cmp"],
   },
   nodeContent: ({ context, props }) => ({
     class: [
@@ -48,6 +50,8 @@ export default {
       {
         "cursor-pointer select-none": props.selectionMode == "single" || props.selectionMode == "multiple",
       },
+
+      "cmp",
     ],
   }),
   nodeToggleButton: ({ context }) => ({
@@ -105,6 +109,8 @@ export default {
         "text-base-content": context.selected,
         "pl-0": context.leaf,
       },
+
+      "cmp",
     ],
   }),
   nodeLabel: ({ context }) => ({
@@ -119,7 +125,7 @@ export default {
   }),
   nodeChildren: {
     class: [
-      "list-none z-10 border-l border-l-base-200 ml-4 *:border-none *:ml-1",
+      "nodechildren list-none z-10 border-l border-l-base-200 ml-4 *:border-none *:ml-1",
       //last:mb-3
     ],
   },
