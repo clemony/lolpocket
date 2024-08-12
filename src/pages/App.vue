@@ -196,6 +196,15 @@ onMounted(async () => {
             </Button>
           </template>
 
+          <template #divider="slotProps" :pt="{
+            nodeIcon: {
+              class: [
+                'hidden'
+              ]
+            }
+          }">
+            {{ slotProps.node.label }}
+          </template>
 
         </Tree>
 
