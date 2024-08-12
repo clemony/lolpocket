@@ -16,7 +16,7 @@ import { Flip } from "gsap/Flip";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 
-gsap.registerPlugin(Flip,ScrollToPlugin,Draggable);
+
 
 const router = createRouter({
   history: createWebHistory(),
@@ -67,10 +67,12 @@ export type {
   TitleBarStyle,
   WindowOptions
 };
+gsap.registerPlugin(Flip,ScrollToPlugin,Draggable);
 
 const pinia = createPinia()
 pinia.use(piniaPluginPersistedstate)
 app.use(pinia);
+app.use(gsap);
 app.use(router);
 app.use(PrimeVue, {
   unstyled: true,
