@@ -60,7 +60,7 @@ const currentComponent = computed(() => {
 
 
 const menu = ref(null);
-const resetContent = changeContent();
+/*const resetContent = changeContent();
 
 function changeContent() {
   var tl = gsap.timeline();
@@ -83,7 +83,7 @@ function changeContent() {
   tl.to(".node", { margin: "0.7rem 0", justifyContent: "center", justifyItems: "center", display: "flex", duration: 1 }, "<");
 
   return tl;
-};
+};*/
 
 function toggleMenu() {
   // Use nextTick to ensure DOM elements are rendered
@@ -156,14 +156,7 @@ function toggleMenu() {
         },
         once: true, // removes the action from its batch when animate() is called
       });
-      // Create a new GSAP timeline for the combined animation
-      const tl = gsap.timeline();
 
-
-      // Optionally handle completion or start additional actions here
-      tl.eventCallback("onComplete", () => {
-        console.log("Both animations completed.");
-      });
     }
   });
 }
