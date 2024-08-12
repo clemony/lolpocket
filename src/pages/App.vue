@@ -187,7 +187,7 @@ onMounted(async () => {
           </template>
 
           <template #addon="slotProps">
-            <div>{{ slotProps.node.label }}</div>
+            <div ref="label">{{ slotProps.node.label }}</div>
 
             <Button variant="null" class="add-build cursor-pointer" @click="onIconClick" title="create new build">
               <Icon icon='ph:plus' class="add-fill" />
