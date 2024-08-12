@@ -48,8 +48,8 @@ function updateTheme(theme: string) {
 
 
         <div class="grid grid-cols-2 grid-flow-row">
-          <div tabindex="0" role="button" class="dropdown  rounded-btn  m-0 p-0 ">
-            <div class="join join-horizontal items-center bg-base-200 ">
+          <div tabindex="0" role="button" class="dropdown  rounded  m-0 p-0 ">
+            <div class="join join-horizontal items-center bg-base-200 border border-base-300">
               <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content"
                 :data-set-theme="dataTheme">
                 <div class="bg-base-100 text-base-content w-full cursor-pointer font-sans" :data-theme="dataTheme">
