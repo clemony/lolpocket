@@ -86,7 +86,7 @@ function resetContent() {
     justifyItems: "center",
     display: "flex",
     flexDirection: "column"
-  });
+  }, "<");
 
 };
 
