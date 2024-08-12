@@ -145,7 +145,7 @@ onMounted(async () => {
     <div class="w-full col-start-2 justify-self-center z-0 dropdown">
       <form class="text-center justify-items-center rounded-lg z-0">
         <div class="relative ">
-          <Icon icon="fluent:search-28-regular" class="absolute right-3 top-[5.5px] size-4 z-20 text-base-content/50" />
+          <Icon icon="ph:magnifying-glass" class="absolute right-3 top-[5.5px] size-4 z-20 text-base-content/50" />
           <Input tabindex="0" role="button" placeholder=""
             class="text-xs font-medium w-[470px] text-center h-[28px] shadow-inner bg-base-200/60 border-base-300 shadow-base-300 !outline-0 !outline-transparent rounded-[10px] !outline-none z-20 focus:ring-base-300" />
           <div tabindex="0"
