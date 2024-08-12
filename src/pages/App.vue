@@ -64,7 +64,7 @@ const menu = ref(null);
 function resetContent() {
   var tl = gsap.timeline();
   tl.to(".label", { opacity: 0, visibility: "hidden", display: "none", duration: 1, stagger: 0.1 });
-  tl.addLabel("label");
+  tl.addLabel("label", 0);
   tl.to("#menu", { width: "80px", duration: 2 }, "label<+=50%");
   tl.to(".cmp", { margin: 0, padding: 0, justifyItems: "center", justifyContent: "center", duration: 2 }, "label<+=50%");
   tl.to(".nodeicon", { width: "1.25rem", height: "1.25rem", color: "oklch(var(--bc), 60%)", duration: 2 }, "label<+=50%");
