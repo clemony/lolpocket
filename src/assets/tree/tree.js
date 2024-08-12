@@ -11,7 +11,7 @@ export default {
       // Color
       "text-base-content",
 
-      "cmp",
+      "cmp node",
     ],
   },
   wrapper: {

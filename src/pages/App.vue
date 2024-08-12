@@ -67,7 +67,7 @@ function toggleMenu() {
     const labels = gsap.to(".label", { opacity: 0, visibility: "hidden", display: "none", duration: 1, stagger: 0.1 });
     const width = gsap.to("#menu", { width: "80px", duration: 2 });
     const reset = gsap.to(".cmp", { margin: 0, padding: 0, justifyItems: "center", justifyContent: "center", duration: 2 });
-    const icons = gsap.to(".nodeicon", { width: "1.25rem", height: "1.25rem", color: "oklch(var(--bc))", duration: 2 });
+    const icons = gsap.to(".nodeicon", { width: "1.25rem", height: "1.25rem", color: "oklch(var(--bc), 60%)", duration: 2 });
 
     // Toggle the class on the element
     //menu.value.classList.toggle("minimize");
