@@ -69,7 +69,7 @@ function resetContent() {
   tl.to(".nodeicon", { width: "1.25rem", height: "1.25rem", color: "oklch(var(--bc), 60%)", duration: 2 }, "label<+=50%");
 }
 
-function toggleMenu() {
+/*function toggleMenu() {
   if (menu.value) {
     const state = Flip.getState(menu.value);
     const labels = gsap.to(".label", { opacity: 0, visibility: "hidden", display: "none", duration: 1, stagger: 0.1 });
@@ -91,7 +91,7 @@ function toggleMenu() {
 
 
   }
-};
+};*/
 
 
 const nodes = ref<any[]>([]);
