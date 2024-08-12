@@ -20,7 +20,7 @@ import { useUserSettings } from '@stores/userSettings';
 import { computed, DefineComponent, onMounted, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { Flip } from 'gsap/Flip';
-import { selector } from 'gsap/all';
+import { gsap } from 'gsap/all';
 
 
 // Access the router instance to programmatically navigate
