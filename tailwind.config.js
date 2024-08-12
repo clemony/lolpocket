@@ -1,3 +1,4 @@
+/* PrettierIgnore */
 const animate = require("tailwindcss-animate");
 const scrollbarhide = require("tailwind-scrollbar-hide");
 const typography = require("@tailwindcss/typography");
