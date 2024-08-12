@@ -87,7 +87,7 @@ export const NodeService = {
         key: "Browse",
         label: "Browse",
         icon: "pepicons-pop--line-x",
-        data: "",
+        data: "d",
         selectable: "false",
         type: "divider",
       },
