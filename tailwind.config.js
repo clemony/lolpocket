@@ -20,11 +20,10 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
-      // prettier-ignore
       fontFamily: {
-        'sans': ['"Geist Sans"', "sans-serif"],
-        'serif': ['"Roboto Serif"', "serif"],
-        'mono': ['"Geist Mono"', "monospace"],
+        sans: ['"Geist Sans"', "sans-serif"],
+        serif: ['"Roboto Serif"', "serif"],
+        mono: ['"Geist Mono"', "monospace"],
       },
       fontSize: {
         xs: "0.6rem",
