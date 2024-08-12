@@ -11,7 +11,7 @@ export default {
       // Color
       "text-base-content",
 
-      " node",
+      "cmp ",
     ],
   },
   wrapper: {
@@ -27,7 +27,7 @@ export default {
     ],
   },
   node: {
-    class: ["focus:outline-none align-middle items-center relative my-2 w-full bg-base-100 code", "cmp"],
+    class: ["focus:outline-none align-middle items-center relative my-2 w-full bg-base-100 code", "node"],
   },
   nodeContent: ({ context, props }) => ({
     class: [
