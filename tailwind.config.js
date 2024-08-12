@@ -14,6 +14,11 @@ module.exports = {
   content: ["./pages/**/*.{ts,tsx,vue,js,jsx}", "./components/**/*.{ts,tsx,vue,js,jsx}", "./app/**/*.{ts,tsx,vue,js,jsx}", "./src/**/*.{ts,tsx,vue,js,jsx}", "./src/assets/presets/"],
 
   theme: {
+    extend: {
+      fontSize: {
+        xxs: "0.56rem",
+      },
+    },
     container: {
       center: true,
       padding: "2rem",
