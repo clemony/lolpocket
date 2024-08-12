@@ -39,8 +39,6 @@ const themes = [
   "valentine",
   "synthwave",
   "retro",
-  "cyberpunk",
-  "lemonade",
 ];
 
 function updateTheme(theme: string) {
