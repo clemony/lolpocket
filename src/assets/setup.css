@@ -16,7 +16,7 @@
 
 
 .font-serif {
-  font-family: "Roboto Serif Variable" !important;
+  font-family: "Roboto Serif Variable", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif !important;
 }
 
 
