@@ -64,7 +64,7 @@ export default {
       "bg-transparent",
       {
         "text-base-content": !context.selected,
-        "text-info": context.selected,
+        "text-base-content": context.selected,
 
         invisible: context.leaf,
         hidden: context.leaf,
