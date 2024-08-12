@@ -57,17 +57,17 @@ const currentComponent = computed(() => {
   return componentMap[currentPath] || null;
 });
 
-const label = ref(null);
+const labels = ref(null);
 const menu = ref(null);
 
 function toggleMenu() {
   if (menu.value) {
     // Get the state of the element before the change
-    const state = Flip.getState(menu.value);
+    const state = Flip.getState(labels.value);
 
     // Toggle the class on the element
     //menu.value.classList.toggle("minimize");
-    console.log(label.value);
+    console.log(labels.value);
     console.log(state);
 
     // Apply the Flip transition
@@ -78,7 +78,7 @@ function toggleMenu() {
       // you can use any other tweening properties here too, like onComplete, onUpdate, delay, etc.
     })
 
-      .to(label, { opacity: 0, duration: 1, stagger: 0.1 });
+      .to(".label", { opacity: 0, duration: 1, stagger: 0.1 });
   }
 };
 
