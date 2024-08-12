@@ -125,7 +125,7 @@ export default {
   }),
   nodeChildren: {
     class: [
-      "nodechildren list-none z-10 border-l border-l-base-200 ml-4 *:border-none *:ml-1",
+      "label list-none z-10 border-l border-l-base-200 ml-4 *:border-none *:ml-1",
       //last:mb-3
     ],
   },
