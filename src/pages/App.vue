@@ -57,12 +57,13 @@ const currentComponent = computed(() => {
   return componentMap[currentPath] || null;
 });
 
-
+const menu = ref("menu");
 const menuToggle = ref("Collapse");
 
 function toggleMenu() {
   const state = Flip.getState("menu");
-  this.$ref.menu.classList.toggle(".minimize");
+  this.$refs["menu"].$el.classList.value.toggle(".minimize");
+
 
   console.log(state);
 
