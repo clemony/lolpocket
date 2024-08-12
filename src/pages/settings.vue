@@ -33,9 +33,7 @@ const themes = [
   "coffee",
   "dim",
   "sunset",
-  "valentine",
   "synthwave",
-  "retro",
 ];
 
 function updateTheme(theme: string) {
