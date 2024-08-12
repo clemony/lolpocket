@@ -90,6 +90,13 @@ module.exports = {
           "base-300": "oklch(86% 0 0)",
           "base-content": "oklch(27.8078% 0.029596 256.847952)",
         },
+        nord2: {
+          ...require("daisyui/src/theming/themes")["dim"],
+          "base-100": "oklch(100% 0 0)",
+          "base-200": "oklch(93% 0 0)",
+          "base-300": "oklch(86% 0 0)",
+          "base-content": "oklch(27.8078% 0.029596 256.847952)",
+        },
       },
       "light",
       "dark",
