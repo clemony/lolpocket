@@ -68,7 +68,8 @@ function resetContent() {
       this.targets().forEach(elem => elem.classList.add("hidden"))
     }
   });
-  tl.to("#menu", { width: "80px", borderRadius: "30px", duration: 1 }, "<");
+  tl.to("#menu", { width: "80px", duration: 1 }, "<");
+  tl.to(".nav", { borderRadius: "20px", duration: 1 }, "<");
   tl.to(".nodeicon", {
     margin: 0,
     width: "1.35rem",
