@@ -287,7 +287,7 @@ onMounted(async () => {
 }*/
 
 
-.minimize {
+.minimize-no {
   @apply grid-cols-[80px_auto];
 
 
