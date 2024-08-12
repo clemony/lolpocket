@@ -80,8 +80,7 @@ function toggleMenu() {
       // you can use any other tweening properties here too, like onComplete, onUpdate, delay, etc.
     })
 
-    var tl = gsap.timeline({ repeat: 0 });
-    tl.to(label, { opacity: 0, duration: 1 });
+      .to(label, { opacity: 0, duration: 1 });
   }
 };
 
