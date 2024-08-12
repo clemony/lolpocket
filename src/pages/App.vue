@@ -78,7 +78,7 @@ function resetContent() {
     duration: 1.5
   },
     "<");
-  tl.to(".node", { margin: "0.6rem 0", justifyContent: "center", justifyItems: "center", display: "flex" }, "<");
+  tl.to(".node", { margin: "0.6rem 0", justifyContent: "center", justifyItems: "center", display: "flex", flexDirection: "column" }, "<");
 
 };
 
