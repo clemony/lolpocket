@@ -144,7 +144,7 @@ function handleChampionClick(champion: Champion) {
                         <Icon icon="ph:link-simple" class="" />
 
                       </a>
-                     
+
                     </div>
                   </div>
 
@@ -267,5 +267,33 @@ function handleChampionClick(champion: Champion) {
 .linker:hover+div {
   opacity: 1;
   display: flex;
+}
+
+[name="ability-accordion"] {
+  +div {
+    @apply text-sm flex gap-3 items-center;
+
+    img {
+      @apply rounded-full border border-neutral/40 size-9 -ml-1;
+    }
+
+    div {
+      @apply flex-grow text-nowrap truncate;
+    }
+
+    kbd {
+      @apply kbd-sm text-xs mono size-6;
+    }
+  }
+
+  .collapse-title:has(input[type="radio"]:checked) {}
+}
+
+.ability-wrapper>div {
+  @apply border-neutral/15 border;
+
+  p {
+    @apply prose text-xs serif;
+  }
 }
 </style>
