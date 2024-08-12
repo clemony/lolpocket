@@ -117,15 +117,11 @@ module.exports = {
       "wifi",
       "nordark",
       "nord",
-      "emerald",
       "corporate",
-      "garden",
       "pastel",
-      "dracula",
       "cmyk",
       "autumn",
       "acid",
-      "sunset",
     ],
     darkTheme: "dark", // name of one of the included themes for dark mode
     base: true, // applies background color and foreground color for root element by default
