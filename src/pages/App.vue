@@ -74,11 +74,11 @@ function resetContent() {
     width: "1.25rem",
     height: "1.25rem",
     alignSelf: "center",
-    color: "oklch(var(--bc), 60%)",
+    color: "oklch(var(--pc))",
     duration: 1
   },
     "<");
-  tl.to(".node", { margin: "0.6rem 0", justifyContent: "center", justifyItems: "center", display: "flex", duration: 1 }, "<");
+  tl.to(".node", { margin: "0.7rem 0", justifyContent: "center", justifyItems: "center", display: "flex", duration: 1 }, "<");
 
   tl.to(".nodecontent", { paddingLeft: "0px", }, "<");
   tl.to(".nodecontent", {
