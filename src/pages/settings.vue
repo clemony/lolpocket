@@ -83,7 +83,7 @@ function updateTheme(theme: string) {
               </div>
             </div>
             <ul tabindex="0"
-              class="grid dropdown-content place-content-center  menu bg-base-100 rounded-md z-[1] w-[160px] px-1 top-10 shadow h-64 overflow-y-scroll overflow-x-hidden">
+              class="grid dropdown-content place-content-center  menu bg-base-100 rounded-md z-[1] w-[160px] px-1 top-16 shadow h-64 overflow-y-scroll overflow-x-hidden">
               <li v-for="theme in themes" :value="theme" class="my-1 first:pt-3 !text-xs" @click="updateTheme(theme)">
                 <label class=" p-0 m-0 border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline
             outline-2 outline-offset-2 outline-transparent" data-act-class="!outline-base-content"
