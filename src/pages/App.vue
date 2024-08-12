@@ -80,16 +80,6 @@ function resetContent() {
   },
     "<");
   tl.to(".node", { margin: "0.7rem 0", justifyContent: "center", justifyItems: "center", display: "flex", duration: 1 }, "<");
-
-  /*tl.to(".nodecontent", { paddingLeft: "0px", }, "<");
-  tl.to(".nodecontent", {
-    justifyContent: "center",
-    justifyItems: "center",
-    display: "flex",
-    width: "auto",
-    flexDirection: "column"
-  }, "<");*/
-
 };
 
 /*function toggleMenu() {
@@ -320,48 +310,7 @@ onMounted(async () => {
 }*/
 
 
-.minimize-no {
+.minimize {
   @apply grid-cols-[80px_auto];
-
-
-  #menu {
-    @apply justify-items-center;
-
-    .nav * {
-      @apply m-0 p-0 justify-center;
-    }
-
-    .nav {
-      @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px] justify-items-center;
-
-      .divider {
-        @apply mx-4;
-      }
-
-      [data-pc-section="nodechildren"],
-      [data-pc-section="nodetogglebutton"],
-      [data-pc-section="nodelabel"],
-      .add-build,
-      h4 {
-        @apply hidden opacity-0;
-      }
-
-      [data-pc-section="rootchildren"] {
-        @apply flex flex-col place-content-center content-center items-center;
-      }
-
-      [data-pc-section="nodecontent"] {
-        @apply w-1/2;
-      }
-
-      [data-pc-section="nodeicon"] {
-        @apply m-0 p-0 size-5 text-base-content/60;
-      }
-
-      [data-pc-section="node"] {
-        @apply mx-0 my-2 flex first:mt-3 last:mb-4 items-center;
-      }
-    }
-  }
 }
 </style>
