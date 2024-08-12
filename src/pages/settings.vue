@@ -153,8 +153,4 @@ function updateTheme(theme: string) {
 </template>
 
 
-<style scoped>
-.theme-grid {
-  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
-}
-</style>
+<style scoped></style>
