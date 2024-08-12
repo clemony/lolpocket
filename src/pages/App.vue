@@ -85,6 +85,7 @@ function resetContent() {
     justifyContent: "center",
     justifyItems: "center",
     display: "flex",
+    width: "auto",
     flexDirection: "column"
   }, "<");
 
