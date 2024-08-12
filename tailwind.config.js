@@ -83,11 +83,13 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        pastel: require("daisyui/src/theming/themes")["pastel"],
-        "base-100": "100% 0 0",
-        "base-200": "93% 0 0",
-        "base-300": "86% 0 0",
-        "base-content": "27.8078% 0.029596 256.847952",
+        light: {
+          ...require("daisyui/src/theming/themes")["light"],
+          "base-100": "100% 0 0",
+          "base-200": "93% 0 0",
+          "base-300": "86% 0 0",
+          "base-content": "27.8078% 0.029596 256.847952",
+        },
       },
       "light",
       "dark",
@@ -107,7 +109,7 @@ module.exports = {
       "dim",
       "nord",
       "sunset",
-    ], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
+    ],
     darkTheme: "dark", // name of one of the included themes for dark mode
     base: true, // applies background color and foreground color for root element by default
     styled: true, // include daisyUI colors and design decisions for all components
