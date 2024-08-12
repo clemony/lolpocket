@@ -14,9 +14,9 @@
 
 }
 
-/*
+
 .font-serif {
-  font-family: "Roboto Serif Variable", serif;
+  font-family: "Roboto Serif Variable" !important;
 }
 
 
@@ -26,7 +26,7 @@
 
 .font-sans {
   font-family: "Geist Sans", sans-serif;
-}*/
+}
 
 html,
 body,
