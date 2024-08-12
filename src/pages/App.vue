@@ -71,9 +71,10 @@ function resetContent() {
   tl.to("#menu", { width: "80px", duration: 1 }, "<");
   tl.to(".nodeicon", {
     margin: 0,
-    width: "1.25rem",
-    height: "1.25rem",
+    width: "1.35rem",
+    height: "1.35rem",
     alignSelf: "center",
+    paddingLeft: "2px",
     color: "oklch(from var(--bc) / calc(alpha - 0.6))",
     duration: 1
   },
