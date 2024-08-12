@@ -11,7 +11,7 @@ export default {
       // Color
       "text-base-content",
 
-      "cmp ",
+      " ",
     ],
   },
   wrapper: {
@@ -27,7 +27,7 @@ export default {
     ],
   },
   node: {
-    class: ["focus:outline-none align-middle items-center relative my-2 w-full bg-base-100 code", "node minimize"],
+    class: ["focus:outline-none align-middle items-center relative my-2 w-full bg-base-100 code", "node"],
   },
   nodeContent: ({ context, props }) => ({
     class: [
@@ -51,7 +51,7 @@ export default {
         "cursor-pointer select-none": props.selectionMode == "single" || props.selectionMode == "multiple",
       },
 
-      "nodecontent  minimize",
+      " nodecontent",
     ],
   }),
   nodeToggleButton: ({ context }) => ({
@@ -82,7 +82,7 @@ export default {
       "transition duration-200",
 
       // Misc
-      "cursor-pointer select-none  minimize",
+      "cursor-pointer select-none",
     ],
   }),
 
@@ -110,12 +110,12 @@ export default {
         "pl-0": context.leaf,
       },
 
-      "cmp nodeicon  minimize",
+      " nodeicon",
     ],
   }),
   nodeLabel: ({ context }) => ({
     class: [
-      "label order-2 align-middle content-center items-center relative flex flex-grow h-8  minimize",
+      "label order-2 align-middle content-center items-center relative flex flex-grow h-8",
 
       {
         "text-foreground": !context.selected,
@@ -125,12 +125,12 @@ export default {
   }),
   nodeChildren: {
     class: [
-      "label list-none z-10 border-l border-l-base-200 ml-4 *:border-none *:ml-1  minimize",
+      "label list-none z-10 border-l border-l-base-200 ml-4 *:border-none *:ml-1",
       //last:mb-3
     ],
   },
   rootChildren: {
-    class: ["rootchildren  minimize"],
+    class: ["rootchildren"],
   },
 
   loadingIcon: {
