@@ -81,6 +81,7 @@ function toggleMenu() {
   // Use nextTick to ensure DOM elements are rendered
   nextTick(() => {
     if (menu.value) {
+
       // Capture the initial state of the menu
       const state = Flip.getState(menu.value);
 
@@ -114,7 +115,7 @@ function toggleMenu() {
 
 
       // Toggle the class on all elements
-      allElements.forEach(el => el.classList.toggle("minimize"));
+      //allElements.forEach(el => el.classList.toggle("minimize"));
 
       // Apply the Flip transition
       gsap.timeline()
