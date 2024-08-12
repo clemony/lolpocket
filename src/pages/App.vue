@@ -74,7 +74,7 @@ function resetContent() {
     width: "1.25rem",
     height: "1.25rem",
     alignSelf: "center",
-    color: "oklch(from var(--bc) l c h / calc(alpha-0.6))",
+    color: "oklch(from var(--bc) / calc(alpha - 0.6))",
     duration: 1
   },
     "<");
