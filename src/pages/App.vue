@@ -219,7 +219,8 @@ onMounted(async () => {
   </div>
 
   <!-- Side Nav -->
-  <div ref="menu" id="menu" :class="{ collapsed: false }" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
+  <div ref="menu" id="menu" :class="{ collapsed: false }"
+    class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 minimize">
 
     <div class="col-start-1">
 
@@ -345,9 +346,7 @@ onMounted(async () => {
 [data-pc-section="rootchildren"],
 [data-pc-section="nodecontent"],
 [data-pc-section="nodeicon"],
-[data-pc-section="node"] {
-  @apply minimize;
-}
+[data-pc-section="node"] {}
 
 
 #menu.minimize {
