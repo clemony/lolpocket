@@ -69,7 +69,15 @@ function resetContent() {
     }
   });
   tl.to("#menu", { width: "80px", duration: 1.5 }, "<");
-  tl.to(".nodeicon", { width: "1.25rem", height: "1.25rem", color: "oklch(var(--bc), 60%)", duration: 1.5 }, "<");
+  tl.to(".nodeicon", {
+    margin: 0,
+    width: "1.25rem",
+    height: "1.25rem",
+    alignSelf: "center",
+    color: "oklch(var(--bc), 60%)",
+    duration: 1.5
+  },
+    "<");
   tl.to(".node", { margin: "0.6rem 0", justifyContent: "center", justifyItems: "center", display: "flex" }, "<");
 
 };
