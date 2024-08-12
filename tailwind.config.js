@@ -22,7 +22,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['"Geist Sans"', "sans-serif"],
-        serif: ['"Roboto Serif"', "serif"],
+        serif: ['"Roboto Serif Variable"', "serif"],
         mono: ['"Geist Mono"', "monospace"],
       },
       fontSize: {
