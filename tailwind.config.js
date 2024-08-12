@@ -90,7 +90,7 @@ module.exports = {
           "base-300": "oklch(86% 0 0)",
           "base-content": "oklch(27.8078% 0.029596 256.847952)",
         },
-        nord2: {
+        nordark: {
           ...require("daisyui/src/theming/themes")["nord"],
           "base-100": "oklch(30.8577% 0.023243 264.149498)",
           "base-200": "oklch(28.0368% 0.01983 264.182074)",
@@ -115,7 +115,7 @@ module.exports = {
       "autumn",
       "business",
       "acid",
-      "nord2",
+      "nordark",
       "nord",
       "sunset",
     ],
