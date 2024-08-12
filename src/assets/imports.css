@@ -1,8 +1,3 @@
-@import "@fontsource-variable/inter";
-@import "@fontsource-variable/roboto-serif/full.css";
-@import "@fontsource/dm-serif-text";
-@import "@fontsource/geist-mono";
-@import "@fontsource/geist-sans";
 @import "index.css";
 @import "./setup.css";
 @import "./tabs.css";
@@ -10,3 +5,10 @@
 @import "./icons.css";
 @import "./accordion.css";
 @import "./animations.css";
+
+@layer base {
+    @import "@fontsource-variable/inter";
+    @import "@fontsource-variable/roboto-serif/full.css";
+    @import "@fontsource/geist-mono";
+    @import "@fontsource/geist-sans";
+  }
