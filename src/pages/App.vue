@@ -119,12 +119,7 @@ function toggleMenu() {
         .to(states, {
           duration: 1,
           ease: "power1.inOut",
-          onStart() {
-            allElements.forEach(el => el.classList.add("minimize"));
-          },
-          onComplete() {
-            allElements.forEach(el => el.classList.remove("minimize"));
-          }
+          absolute: true,
         })
         .add(() => {
           states.forEach((state, index) => {
@@ -132,7 +127,6 @@ function toggleMenu() {
               absolute: true,
               duration: 1,
               ease: "power1.inOut",
-              stagger: 0.1
             });
           });
         });
