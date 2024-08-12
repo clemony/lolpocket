@@ -129,17 +129,19 @@ onMounted(async () => {
       class="title col-start-1 justify-self-start flex items-center p-0 text-base tracking-wide font-semibold border-none shadow-none h-6 absolute left-[10px] top-[6px] z-40 bg-transparent">
 
       <label
-        class="btn btn-circle swap swap-rotate text-base-content tooltip tooltip-bottom before:text-xs before:font-normal before:left-[75%] [--tooltip-offset:25px] [--tooltip-tail-offset:19px]"
+        class="place-content-center swap swap-flip w-10 text-base-content tooltip tooltip-bottom before:text-xs before:font-normal before:left-[75%] [--tooltip-offset:25px] [--tooltip-tail-offset:19px]"
         data-tip="Collapse" @click="toggleMenu()">
         <!-- this hidden checkbox controls the state -->
         <input type="checkbox" />
 
         <!-- expanded icon -->
 
-        <Icon icon="octicon:sidebar-expand-24" class="size-5 ml-2 mr-3 swap-off" />
+        <Icon icon="octicon:sidebar-expand-24"
+          class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-off fill-current" />
 
         <!-- collapsed icon -->
-        <Icon icon="octicon:sidebar-collapse-24" class="size-5 ml-2 mr-3 hidden swap-on" />
+        <Icon icon="octicon:sidebar-collapse-24"
+          class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-on fill-current" />
       </label>
 
 
