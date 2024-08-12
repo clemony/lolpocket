@@ -248,8 +248,10 @@ onMounted(async () => {
 
 [aria-label="Browse"],
 [aria-label="Utilities"] {
+  @apply hover:bg-transparent;
+
   [data-pc-section="nodeicon"] {
-    @apply hidden hover:bg-transparent;
+    @apply hidden;
   }
 
 }
