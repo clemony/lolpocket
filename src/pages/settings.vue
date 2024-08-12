@@ -25,7 +25,7 @@ const themes = [
   "halloween",
   "dracula",
   "business",
-  "dim",
+  "nord2",
   "sunset",
 ];
 

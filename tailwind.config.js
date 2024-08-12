@@ -78,7 +78,7 @@ module.exports = {
       },
     },
   },
-
+  // prettier-ignore
   // daisyUI config (optional - here are the default values)
   daisyui: {
     themes: [
@@ -96,6 +96,8 @@ module.exports = {
           "base-200": "oklch(93.2996% 0.010389 261.788485)",
           "base-300": "oklch(89.9258% 0.016374 262.749256)",
           "base-content": "oklch(32.4374% 0.022945 264.182036)",
+          "neutral-content": "oklch(89.9258% 0.016374 262.749256)",
+          "neutral": "oklch(45.229% 0.035214 264.1312)",
         },
       },
       "light",
@@ -113,7 +115,7 @@ module.exports = {
       "autumn",
       "business",
       "acid",
-      "dim",
+      "nord2",
       "nord",
       "sunset",
     ],
