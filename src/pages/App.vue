@@ -114,7 +114,7 @@ function toggleMenu() {
 
 
       // Toggle the class on all elements
-      //allElements.forEach(el => el.classList.toggle("minimize"));
+      allElements.forEach(el => el.classList.toggle("minimize"));
 
       // Apply the Flip transition
       gsap.timeline()
