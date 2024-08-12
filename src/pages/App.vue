@@ -89,9 +89,9 @@ function toggleMenu() {
   // Use nextTick to ensure DOM elements are rendered
   nextTick(() => {
     if (menu.value) {
-      let m = gsap.utils.selector("menu");
       // Capture the initial state of the menu
       const state = Flip.getState(menu.value);
+      let nav = gsap.utils.selector("menu");
 
       // Create a new GSAP timeline for the combined animation
       const tl = gsap.timeline();
