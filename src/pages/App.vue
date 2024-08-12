@@ -111,12 +111,14 @@ function toggleMenu() {
       // Use Flip.getState for all elements individually
       const states = allElements.map(el => Flip.getState(el));
 
+
+
       // Toggle the class on all elements
-      allElements.forEach(el => el.classList.toggle("minimize"));
+      //allElements.forEach(el => el.classList.toggle("minimize"));
 
       // Apply the Flip transition
       gsap.timeline()
-        .to(states, {
+        .to(state, {
           duration: 1,
           ease: "power1.inOut",
           absolute: true,
