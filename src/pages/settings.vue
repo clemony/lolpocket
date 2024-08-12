@@ -22,7 +22,6 @@ const themes = [
   "garden",
   "acid",
   "pastel",
-  "halloween",
   "dracula",
   "business",
   "sunset",

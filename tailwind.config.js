@@ -105,7 +105,6 @@ module.exports = {
       "cupcake",
       "emerald",
       "corporate",
-      "halloween",
       "garden",
       "lofi",
       "pastel",
