@@ -60,7 +60,9 @@ const currentComponent = computed(() => {
 
 const menu = ref(null);
 
-function resetContent() {
+const resetContent = changeContent();
+
+function changeContent() {
   var tl = gsap.timeline();
   tl.to(".label", {
     opacity: 0, duration: 0.25, onComplete: function () {
@@ -85,14 +87,11 @@ function resetContent() {
 
 function toggleMenu() {
   if (menu.value) {
-    var resetContent = resetContent();
     const state = Flip.getState(menu.value);
 
-
+    console.log(state);
     // Toggle the class on the element
     menu.value.classList.toggle("minimize");
-    console.log(state);
-
     // Apply the Flip transition
     Flip.from(state, {
       absolute: true, // uses position: absolute during the flip to work around flexbox challenges
