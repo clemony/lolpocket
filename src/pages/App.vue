@@ -61,6 +61,10 @@ const labels = ref(null);
 
 const menu = ref(null);
 
+function resetContent() {
+
+}
+
 function toggleMenu() {
   if (menu.value) {
     const state = Flip.getState(menu.value);
