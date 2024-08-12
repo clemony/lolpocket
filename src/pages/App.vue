@@ -63,10 +63,10 @@ const menu = ref(null);
 
 function resetContent() {
   var tl = gsap.timeline();
-  tl.to(".label", { opacity: 0, visibility: "hidden", display: "none", duration: 1, stagger: 0.1 });
-  tl.to("#menu", { width: "80px", duration: 2 }, "<+=50%");
-  tl.to(".cmp", { margin: 0, padding: 0, justifyItems: "center", justifyContent: "center", duration: 2 });
-  tl.to(".nodeicon", { width: "1.25rem", height: "1.25rem", color: "oklch(var(--bc), 60%)", duration: 2 });
+  tl.to(".label", { opacity: 0, visibility: "hidden", display: "none", duration: 1, stagger: 0.1 }).addLabel("label");
+  tl.to("#menu", { width: "80px", duration: 2 }, "label<+=50%");
+  tl.to(".cmp", { margin: 0, padding: 0, justifyItems: "center", justifyContent: "center", duration: 2 }, "label<+=50%");
+  tl.to(".nodeicon", { width: "1.25rem", height: "1.25rem", color: "oklch(var(--bc), 60%)", duration: 2 }, "label<+=50%");
 }
 
 function toggleMenu() {
@@ -127,7 +127,7 @@ onMounted(async () => {
 
       <label
         class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-bottom before:text-xs before:font-normal before:left-[75%] [--tooltip-offset:30px] [--tooltip-tail-offset:24px]"
-        data-tip="Collapse" @click="toggleMenu()">
+        data-tip="Collapse" @click="resetContent()">
         <!-- this hidden checkbox controls the state -->
         <input type="checkbox" />
 
