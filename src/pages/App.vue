@@ -113,10 +113,10 @@ function toggleMenu() {
       const states = allElements.map(el => Flip.getState(el));
 
       // Toggle the class on all elements
-      //allElements.forEach(el => el.classList.toggle("minimize"));
-      const labelState = gsap.from("nodelabel", function () {
+      allElements.forEach(el => el.classList.toggle("minimize"));
+      /*const labelState = gsap.from("nodelabel", function () {
         this.targets().forEach(elem => elem.classList.add("minimize"))
-      });
+      });*/
 
 
       // Apply the Flip transition
