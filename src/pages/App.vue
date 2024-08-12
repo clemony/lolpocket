@@ -89,7 +89,7 @@ function toggleMenu() {
 
 
     // Toggle the class on the element
-    //menu.value.classList.toggle("minimize");
+    menu.value.classList.toggle("minimize");
     console.log(state);
 
     // Apply the Flip transition
@@ -99,7 +99,7 @@ function toggleMenu() {
       ease: "power1.inOut"
       // you can use any other tweening properties here too, like onComplete, onUpdate, delay, etc.
     })
-      .to
+      .add(resetContent(), "<");
 
 
   }
