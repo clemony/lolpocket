@@ -103,9 +103,59 @@ function toggleMenu() {
       let rootchildren = m(".rootchildren");
 
       // first create (or get the existing) batch by id
-      let batch = Flip.batch("id");
+      let batch = Flip.batch("menu, nav, node, nodecontent, nodelabel, nodeicon, nodechildren, nodetogglebutton, rootchildren");
+
+      // add an action to the batch
+      let action = batch.add({
 
 
+        getState(self) {
+          Flip.getState("menu");
+          Flip.getState("nav");
+          Flip.getState("node");
+          Flip.getState("nodecontent");
+          Flip.getState("nodelabel");
+          Flip.getState("nodeicon");
+          Flip.getState("nodetogglebutton");
+          Flip.getState("nodechildren");
+          Flip.getState("rootchildren");
+
+          return Flip.getState("menu, nav, node, nodecontent, nodelabel, nodeicon, nodechildren, nodetogglebutton, rootchildren");
+        },
+        // make state changes here...
+        setState(self) {
+          // Use self.targets to access elements
+          self.targets.forEach(target => {
+            target.classList.toggle("minimize");
+          });
+
+          // Return the targets
+          return self.targets;
+        },
+        animate(self) {
+          // create as many Flip animations in here as you'd like...
+          Flip.from(self.state, {
+            duration: 1,
+            absolute: true,
+            ease: "power1.inOut"
+          });
+        },
+        onEnter(elements) {
+          // only called when elements are entering (ones that weren't present in the initial state/layout).
+          // in order for this to work, you must return an Array of targets from .setState()
+        },
+        onLeave(elements) {
+          // only called when elements are leaving (ones that are no longer present compared to the initial state/layout).
+          // in order for this to work, you must return an Array of targets from .setState()
+        },
+        onStart(self) {
+          // animation started
+        },
+        onComplete(self) {
+          // animation finished
+        },
+        once: true, // removes the action from its batch when animate() is called
+      });
       // Create a new GSAP timeline for the combined animation
       const tl = gsap.timeline();
 
