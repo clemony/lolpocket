@@ -83,7 +83,11 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        pastel: require,
+        pastel: require("daisyui/src/theming/themes")["pastel"],
+        "base-100": "100% 0 0",
+        "base-200": "93% 0 0",
+        "base-300": "86% 0 0",
+        "base-content": "27.8078% 0.029596 256.847952",
       },
       "light",
       "dark",
