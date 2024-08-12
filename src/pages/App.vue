@@ -246,10 +246,8 @@ onMounted(async () => {
   }
 }
 
-
-
-
-.add-build {
+[aria-label="Browse"],
+[aria-label=] .add-build {
   @apply order-3 flex absolute right-0 -top-1;
 
   .add-fill {
