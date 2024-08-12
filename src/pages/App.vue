@@ -69,7 +69,7 @@ function changeContent() {
       this.targets().forEach(elem => elem.classList.add("hidden"))
     }
   });
-  tl.to("#menu", { width: "80px", duration: 1 }, "<");
+  tl.to("#menu", { gridTemplateColumns: "80px auto", duration: 1 }, "<");
   tl.to(".nav", { borderRadius: "20px", paddingLeft: "3px", duration: 1 }, "<");
   tl.to(".nodeicon", {
     margin: 0,
