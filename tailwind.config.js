@@ -22,9 +22,9 @@ module.exports = {
       },
       // prettier-ignore
       fontFamily: {
-        'sans': ["Geist Sans", "sans-serif"],
-        'serif': ["Roboto Serif", "serif"],
-        'mono': ["Geist Mono", "monospace"],
+        'sans': ['"Geist Sans"', "sans-serif"],
+        'serif': ['"Roboto Serif"', "serif"],
+        'mono': ['"Geist Mono"', "monospace"],
       },
       fontSize: {
         xs: "0.6rem",
