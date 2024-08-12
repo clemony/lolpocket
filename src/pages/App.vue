@@ -249,7 +249,7 @@ onMounted(async () => {
 [aria-label="Browse"],
 [aria-label="Utilities"] {
   [data-pc-section="nodecontent"] {
-    @apply hover:bg-transparent pointer-events-none text-base-content/50 font-mono;
+    @apply hover:bg-transparent uppercase pointer-events-none text-base-content/40;
   }
 
   [data-pc-section="nodeicon"] {
