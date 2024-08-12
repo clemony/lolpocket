@@ -93,6 +93,7 @@ function toggleMenu() {
       const state = Flip.getState(menu.value);
 
       let m = gsap.utils.selector("menu");
+      let main = menu.value
       let nav = m(".nav");
       let node = m(".node");
       let nodecontent = m(".nodecontent");
@@ -103,7 +104,7 @@ function toggleMenu() {
       let rootchildren = m(".rootchildren");
 
       // first create (or get the existing) batch by id
-      let batch = Flip.batch("menu, nav, node, nodecontent, nodelabel, nodeicon, nodechildren, nodetogglebutton, rootchildren");
+      let batch = Flip.batch("main, nav, node, nodecontent, nodelabel, nodeicon, nodechildren, nodetogglebutton, rootchildren");
 
       // add an action to the batch
       let action = batch.add({
@@ -120,7 +121,7 @@ function toggleMenu() {
           Flip.getState("nodechildren");
           Flip.getState("rootchildren");
 
-          return Flip.getState("menu, nav, node, nodecontent, nodelabel, nodeicon, nodechildren, nodetogglebutton, rootchildren");
+          return Flip.getState("main, nav, node, nodecontent, nodelabel, nodeicon, nodechildren, nodetogglebutton, rootchildren");
         },
         // make state changes here...
         setState(self) {
