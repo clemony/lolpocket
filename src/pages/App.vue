@@ -66,6 +66,7 @@ function toggleMenu() {
     const state = Flip.getState(menu.value);
     const labels = gsap.to(".label", { opacity: 0, duration: 1, stagger: 0.1 });
     const width = gsap.to("#menu", { width: "80px", duration: 2 });
+    const reset = gsap.to(".cmp", { margin: 0, padding: 0, justifyItems: "center", justifyContent: "center", duration: 2 })
 
     // Toggle the class on the element
     //menu.value.classList.toggle("minimize");
@@ -168,10 +169,10 @@ onMounted(async () => {
   <!-- Side Nav -->
   <div ref="menu" :class="{ collapsed: false }" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
 
-    <div id="menu" class="col-start-1 ">
+    <div id="menu" class="col-start-1 cmp">
 
       <div class="ml-5 mt-14 rounded-lg bg-base-100 border border-base-300
-            shadow-base-300 shadow-lg nav">
+            shadow-base-300 shadow-lg nav cmp">
 
         <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
           @nodeSelect="onNodeSelect" id="tree1">
