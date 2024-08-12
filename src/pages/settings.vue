@@ -92,7 +92,7 @@ function updateTheme(theme: string) {
                   </div>
                 </div>
               </div>
-              <Icon icon="ph:caret-down" width="1rem" height="1rem" class="join-item mx-1 pl-1" />
+              <Icon icon="ph:caret-down" class="join-item mx-1 pl-1" />
             </div>
             <ul tabindex="0"
               class="grid dropdown-content place-content-center  menu bg-base-100 rounded-md z-[1] w-[160px] px-2 shadow h-64 overflow-y-scroll overflow-x-hidden">
