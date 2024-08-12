@@ -58,12 +58,15 @@ const currentComponent = computed(() => {
 });
 
 const labels = ref(null);
+
 const menu = ref(null);
 
 function toggleMenu() {
   if (menu.value) {
-    // Get the state of the element before the change
-    const state = Flip.getState(labels.value);
+    const state = Flip.getState(menu.value);
+    const labelState = Flip.getState(labels.value);
+
+    gsap.to(".label", { opacity: 0, duration: 1, stagger: 0.1 });
 
     // Toggle the class on the element
     //menu.value.classList.toggle("minimize");
@@ -78,7 +81,7 @@ function toggleMenu() {
       // you can use any other tweening properties here too, like onComplete, onUpdate, delay, etc.
     })
 
-      .to(".label", { opacity: 0, duration: 1, stagger: 0.1 });
+
   }
 };
 
