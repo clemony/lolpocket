@@ -135,10 +135,10 @@ function handleChampionClick(champion: Champion) {
                     </svg>
 
                     <div
-                      class="absolute grid place-items-center tooltip tooltip-bottom rounded-full  size-7 -bottom-[5px] -right-[5px] hover:glow"
+                      class="absolute grid place-items-center tooltip tooltip-bottom rounded-full  size-7 -bottom-[5px] -right-[5px] hover:glow cursor-pointer"
                       data-tip="view on Wiki">
                       <a :href="selectedChampion.wiki" target="_blank"
-                        class="badge flex  bg-base-content text-base-100 size-[22px] border-none object-cover overflow-hidden p-[3px] aspect-square z-10">
+                        class="badge flex  bg-base-content text-base-100 size-[22px] border-none object-cover overflow-hidden p-[3px] aspect-square z-10 pointer-events-none">
 
                         <Icon icon="ph:link-simple" class="" />
 
