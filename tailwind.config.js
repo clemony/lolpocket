@@ -21,9 +21,9 @@ module.exports = {
         "2xl": "1400px",
       },
       fontFamily: {
-        sans: ['"Geist Sans"', "sans-serif"],
-        serif: ['"Roboto Serif Variable"', "serif"],
-        mono: ['"Geist Mono"', "monospace"],
+        "font-sans": ["Geist\\ Sans", "sans-serif"],
+        "font-serif": ["Roboto\\ Serif\\ Variable", "serif"],
+        "font-mono": ["Geist\\ Mono", "monospace"],
       },
       fontSize: {
         xs: "0.6rem",
