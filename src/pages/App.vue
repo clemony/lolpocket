@@ -1,13 +1,4 @@
 <script setup lang="ts">
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from '@/components/cn/resizable';
-import {
-  useToast
-} from '@/components/cn/toast/use-toast';
-import { cn } from '@/lib/utils';
 import Builds from '@/page-build/builds-template.vue';
 import Champions from '@/pages/champions.vue';
 import Home from '@/pages/home.vue';
@@ -59,7 +50,7 @@ const currentComponent = computed(() => {
 });
 
 
-const menu = ref(null);
+
 /*const resetContent = changeContent();
 
 function changeContent() {
@@ -84,6 +75,7 @@ function changeContent() {
 
   return tl;
 };*/
+const menu = ref<HTMLDivElement | null>(null);
 
 function toggleMenu() {
   // Use nextTick to ensure DOM elements are rendered
@@ -92,75 +84,61 @@ function toggleMenu() {
       // Capture the initial state of the menu
       const state = Flip.getState(menu.value);
 
-      let m = gsap.utils.selector("menu");
-      let nav = m(".nav");
-      let node = m(".node");
-      let nodecontent = m(".nodecontent");
-      let nodelabel = m(".nodelabel");
-      let nodeicon = m(".nodeicon");
-      let nodechildren = m(".nodechildren");
-      let nodetogglebutton = m(".nodetogglebutton");
-      let rootchildren = m(".rootchildren");
+      // Use gsap.utils.selector with a proper context
+      const selector = gsap.utils.selector(menu.value);
+      const nav = selector(".nav");
+      const node = selector(".node");
+      const nodecontent = selector(".nodecontent");
+      const nodelabel = selector(".nodelabel");
+      const nodeicon = selector(".nodeicon");
+      const nodechildren = selector(".nodechildren");
+      const nodetogglebutton = selector(".nodetogglebutton");
+      const rootchildren = selector(".rootchildren");
 
-      // first create (or get the existing) batch by id
-      let batch = Flip.batch("menu, nav, node, nodecontent, nodelabel, nodeicon, nodechildren, nodetogglebutton, rootchildren");
+      // Create an array of all elements
+      const allElements = [
+        menu.value,
+        ...nav,
+        ...node,
+        ...nodecontent,
+        ...nodelabel,
+        ...nodeicon,
+        ...nodechildren,
+        ...nodetogglebutton,
+        ...rootchildren
+      ];
 
-      // add an action to the batch
-      let action = batch.add({
+      // Use Flip.getState for all elements individually
+      const states = allElements.map(el => Flip.getState(el));
 
+      // Toggle the class on all elements
+      allElements.forEach(el => el.classList.toggle("minimize"));
 
-        getState(self) {
-          Flip.getState("menu");
-          Flip.getState("nav");
-          Flip.getState("node");
-          Flip.getState("nodecontent");
-          Flip.getState("nodelabel");
-          Flip.getState("nodeicon");
-          Flip.getState("nodetogglebutton");
-          Flip.getState("nodechildren");
-          Flip.getState("rootchildren");
-
-          return Flip.getState("menu, nav, node, nodecontent, nodelabel, nodeicon, nodechildren, nodetogglebutton, rootchildren");
-        },
-        // make state changes here...
-        setState(self) {
-          // Use self.targets to access elements
-          self.targets.forEach(target => {
-            target.classList.toggle("minimize");
+      // Apply the Flip transition
+      gsap.timeline()
+        .to(states, {
+          duration: 1,
+          ease: "power1.inOut",
+          onStart() {
+            allElements.forEach(el => el.classList.add("minimize"));
+          },
+          onComplete() {
+            allElements.forEach(el => el.classList.remove("minimize"));
+          }
+        })
+        .add(() => {
+          states.forEach((state, index) => {
+            Flip.from(state, {
+              absolute: true,
+              duration: 1,
+              ease: "power1.inOut",
+              stagger: 0.1
+            });
           });
-
-          // Return the targets
-          return self.targets;
-        },
-        animate(self) {
-          // create as many Flip animations in here as you'd like...
-          Flip.from(self.state, {
-            duration: 1,
-            absolute: true,
-            ease: "power1.inOut"
-          });
-        },
-        onEnter(elements) {
-          // only called when elements are entering (ones that weren't present in the initial state/layout).
-          // in order for this to work, you must return an Array of targets from .setState()
-        },
-        onLeave(elements) {
-          // only called when elements are leaving (ones that are no longer present compared to the initial state/layout).
-          // in order for this to work, you must return an Array of targets from .setState()
-        },
-        onStart(self) {
-          // animation started
-        },
-        onComplete(self) {
-          // animation finished
-        },
-        once: true, // removes the action from its batch when animate() is called
-      });
-
+        });
     }
   });
 }
-
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
 
