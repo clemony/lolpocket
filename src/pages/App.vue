@@ -70,8 +70,11 @@ function resetContent() {
   });
   tl.to("#menu", { width: "80px", duration: 1.5 }, "<");
   tl.to(".nodeicon", { width: "1.25rem", height: "1.25rem", color: "oklch(var(--bc), 60%)", duration: 1.5 }, "<");
-  tl.to(".cmp", { margin: 0, padding: 0, justifyItems: "center", justifyContent: "center", duration: 0.3 }, ">+=20%");
-}
+  tl.to(".cmp", { margin: 0, padding: 0, justifyItems: "center", justifyContent: "center", duration: 0.3 }, ">+=20%")
+  tl.to(".node", function () {
+    this.targets().forEach(elem => elem.classList.add("my-2 first:mt-3 last:mb-4"))
+  });
+};
 
 /*function toggleMenu() {
   if (menu.value) {
