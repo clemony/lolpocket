@@ -58,8 +58,7 @@ const currentComponent = computed(() => {
 });
 
 const label = ref(null);
-const menu = ref(null); // Initialize ref to null
-const menuToggle = ref("Collapse");
+const menu = ref(null);
 
 function toggleMenu() {
   if (menu.value) {
