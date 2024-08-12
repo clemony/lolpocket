@@ -62,8 +62,10 @@ const menuToggle = ref("Collapse");
 const menu = document.getElementById("#menu-wrapper");
 
 function toggleMenu() {
-  const state = Flip.getState("#menu-wrapper");
+  const state = Flip.getState("menu");
   menu.classList.toggle(".minimize");
+
+  console.log(state);
 
   Flip.from(state, {
     absolute: true, // uses position: absolute during the flip to work around flexbox challenges
