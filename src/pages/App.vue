@@ -60,7 +60,6 @@ const currentComponent = computed(() => {
 
 
 const menu = ref(null);
-const nav = ref(null);
 const resetContent = changeContent();
 
 function changeContent() {
@@ -90,58 +89,29 @@ function toggleMenu() {
   // Use nextTick to ensure DOM elements are rendered
   nextTick(() => {
     if (menu.value) {
-      let action = batch.add({
-        // Add an action to the batch
-        let action = batch.add({
-          getState(self) {
-            // Capture the initial state of the elements
-            return Flip.getState([
-              "#menu",
-              ".nav",
-              ".node",
-              ".nodeicon",
-              ".nodelabel",
-              ".nodechildren",
-              ".rootchildren",
-              ".nodecontent"
-            ]);
-          },
-          setState(self) {
-            // Toggle class and return elements to update state
-            menu.value.classList.toggle("minimize");
-            return [
-              "#menu",
-              ".nav",
-              ".node",
-              ".nodeicon",
-              ".nodelabel",
-              ".nodechildren",
-              ".rootchildren",
-              ".nodecontent"
-            ];
-          },
-          animate(self) {
-            // Apply Flip animation
-            Flip.from(self.state, {
-              duration: 1,
-              ease: "power1.inOut"
-            });
-          },
-          onEnter(elements) {
-            // Handle new elements entering
-          },
-          onLeave(elements) {
-            // Handle elements leaving
-          },
-          onStart(self) {
-            // Animation started
-          },
-          onComplete(self) {
-            // Animation completed
-          },
-          once: true
+      // Capture the initial state of the menu
+      const state = Flip.getState(menu.value);
+
+      // Create a new GSAP timeline for the combined animation
+      const tl = gsap.timeline();
+
+      // Add Flip animation to the timeline
+      tl.add(() => {
+        Flip.from(state, {
+          absolute: true,
+          duration: 1,
+          ease: "power1.inOut"
         });
-      }
+      }, 0);
+
+      // Add resetContent to the same timeline
+      tl.add(resetContent, 0);
+
+      // Optionally handle completion or start additional actions here
+      tl.eventCallback("onComplete", () => {
+        console.log("Both animations completed.");
+      });
+    }
   });
 }
 
@@ -160,8 +130,7 @@ onMounted(async () => {
 
   useDataStore().fetchData();
   NodeService.getTreeNodes().then((data: null) => (nodes.value = data));
-  console.log(menu.value); // Access static ref
-  console.log(nav.value);  // Access static ref
+  console.log(menu.value);
 
 
 });
@@ -355,7 +324,7 @@ onMounted(async () => {
 #menu.minimize {
   @apply grid-cols-[80px_auto] justify-items-center;
 
-  .nav.minimize * {
+  /*.nav.minimize * {
     @apply m-0 p-0 justify-center;
   }
 
@@ -386,6 +355,6 @@ onMounted(async () => {
     [data-pc-section="node"].minimize {
       @apply mx-0 my-2 flex first:mt-3 last:mb-4 items-center;
     }
-  }
+  }*/
 }
 </style>
