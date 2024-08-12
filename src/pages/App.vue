@@ -64,13 +64,10 @@ const menu = ref(null);
 function toggleMenu() {
   if (menu.value) {
     const state = Flip.getState(menu.value);
-    const labelState = Flip.getState(labels.value);
-
-    gsap.to(".label", { opacity: 0, duration: 1, stagger: 0.1 });
+    const labels = gsap.to(".label", { opacity: 0, duration: 1, stagger: 0.1 });
 
     // Toggle the class on the element
     //menu.value.classList.toggle("minimize");
-    console.log(labels.value);
     console.log(state);
 
     // Apply the Flip transition
