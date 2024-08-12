@@ -10,20 +10,19 @@ const { dataTheme } = storeToRefs(settings);
 
 const themes = [
   "lofi",
+  "wifi",
   "light",
   "dark",
   "nord",
   "nordark",
   "autumn",
   "cmyk",
-  "cupcake",
   "emerald",
   "corporate",
   "garden",
   "acid",
   "pastel",
   "dracula",
-  "business",
   "sunset",
 ];
 
