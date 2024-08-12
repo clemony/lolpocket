@@ -179,7 +179,7 @@ onMounted(async () => {
 
           <template #nodetogglebutton>
           </template>
-          <template #default="slotProps">
+          <template #default="slotProps" ref="label">
             {{ slotProps.node.label }}
 
           </template>
