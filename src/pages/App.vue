@@ -23,6 +23,7 @@ import { Flip } from 'gsap/Flip';
 import { gsap } from 'gsap';
 
 
+
 // Access the router instance to programmatically navigate
 const router = useRouter();
 
@@ -59,7 +60,7 @@ const currentComponent = computed(() => {
 
 
 const menu = ref(null);
-
+const nav = ref(null);
 const resetContent = changeContent();
 
 function changeContent() {
@@ -86,25 +87,63 @@ function changeContent() {
 };
 
 function toggleMenu() {
-  if (menu.value) {
-    const state = Flip.getState(menu.value);
-
-    console.log(state);
-    // Toggle the class on the element
-    menu.value.classList.toggle("minimize");
-    // Apply the Flip transition
-    Flip.from(state, {
-      absolute: true, // uses position: absolute during the flip to work around flexbox challenges
-      duration: 1,
-      ease: "power1.inOut"
-      // you can use any other tweening properties here too, like onComplete, onUpdate, delay, etc.
-    })
-      .add(resetContent, "<");
-
-
-  }
-};
-
+  // Use nextTick to ensure DOM elements are rendered
+  nextTick(() => {
+    if (menu.value) {
+      let action = batch.add({
+        // Add an action to the batch
+        let action = batch.add({
+          getState(self) {
+            // Capture the initial state of the elements
+            return Flip.getState([
+              "#menu",
+              ".nav",
+              ".node",
+              ".nodeicon",
+              ".nodelabel",
+              ".nodechildren",
+              ".rootchildren",
+              ".nodecontent"
+            ]);
+          },
+          setState(self) {
+            // Toggle class and return elements to update state
+            menu.value.classList.toggle("minimize");
+            return [
+              "#menu",
+              ".nav",
+              ".node",
+              ".nodeicon",
+              ".nodelabel",
+              ".nodechildren",
+              ".rootchildren",
+              ".nodecontent"
+            ];
+          },
+          animate(self) {
+            // Apply Flip animation
+            Flip.from(self.state, {
+              duration: 1,
+              ease: "power1.inOut"
+            });
+          },
+          onEnter(elements) {
+            // Handle new elements entering
+          },
+          onLeave(elements) {
+            // Handle elements leaving
+          },
+          onStart(self) {
+            // Animation started
+          },
+          onComplete(self) {
+            // Animation completed
+          },
+          once: true
+        });
+      }
+  });
+}
 
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
@@ -121,6 +160,8 @@ onMounted(async () => {
 
   useDataStore().fetchData();
   NodeService.getTreeNodes().then((data: null) => (nodes.value = data));
+  console.log(menu.value); // Access static ref
+  console.log(nav.value);  // Access static ref
 
 
 });
@@ -188,11 +229,11 @@ onMounted(async () => {
   </div>
 
   <!-- Side Nav -->
-  <div ref="menu" :class="{ collapsed: false }" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
+  <div ref="menu" id="menu" :class="{ collapsed: false }" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
 
-    <div id="menu" class="col-start-1">
+    <div class="col-start-1">
 
-      <div class="ml-5 mt-14 rounded-lg bg-base-100 border border-base-300
+      <div ref="nav" class="ml-5 mt-14 rounded-lg bg-base-100 border border-base-300
             shadow-base-300 shadow-lg nav">
 
         <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
@@ -309,7 +350,42 @@ onMounted(async () => {
 }*/
 
 
-.minimize {
-  @apply grid-cols-[80px_auto];
+
+
+#menu.minimize {
+  @apply grid-cols-[80px_auto] justify-items-center;
+
+  .nav.minimize * {
+    @apply m-0 p-0 justify-center;
+  }
+
+  .nav.minimize {
+    @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px] justify-items-center;
+
+
+    [data-pc-section="nodechildren"].minimize,
+    [data-pc-section="nodetogglebutton"].minimize,
+    [data-pc-section="nodelabel"].minimize,
+    .add-build.minimize,
+    h4.minimize {
+      @apply hidden opacity-0;
+    }
+
+    [data-pc-section="rootchildren"].minimize {
+      @apply flex flex-col place-content-center content-center items-center;
+    }
+
+    [data-pc-section="nodecontent"].minimize {
+      @apply w-1/2;
+    }
+
+    [data-pc-section="nodeicon"].minimize {
+      @apply m-0 p-0 size-5 text-base-content/60;
+    }
+
+    [data-pc-section="node"].minimize {
+      @apply mx-0 my-2 flex first:mt-3 last:mb-4 items-center;
+    }
+  }
 }
 </style>
