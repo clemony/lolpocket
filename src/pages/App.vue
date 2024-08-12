@@ -136,7 +136,7 @@ onMounted(async () => {
 
         <!-- expanded icon -->
 
-        <Icon icon="octicon:sidebar-expand-24"
+        <Icon icon="tabler:layout-sidebar-right-expand-filled"
           class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-off fill-current" />
 
         <!-- collapsed icon -->
