@@ -75,8 +75,7 @@ function resetContent() {
     width: "1.35rem",
     height: "1.35rem",
     alignSelf: "center",
-    marginLeft: "15px",
-    color: "oklch(from var(--bc) / calc(alpha - 0.6))",
+    opacity: "0.8",
     duration: 1
   },
     "<");
