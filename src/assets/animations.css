@@ -46,7 +46,7 @@
 
 .glow {
   border-radius: 100%;
-  background: linear-gradient(45deg, oklch(var(--p)), oklch(var(--s)), oklch(var(--a)), oklch(var(--in)), oklch(var(--su)));
+  background: linear-gradient(45deg, oklch(var(--p)), oklch(var(--s)), oklch(var(--a)), oklch(var(--b1)), oklch(var(--b3)));
   background-size: 1000% 1000%;
   animation: GradientBackground 5s ease infinite;
   /*mask-image: radial-gradient(circle at 0% 1%, rgba(0, 0, 0, 0) 50px, #fff 51px);
