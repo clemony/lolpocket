@@ -101,8 +101,8 @@ module.exports = {
         },
         wifi: {
           ...require("daisyui/src/theming/themes")["business"],
-          "base-100": "oklch(30.8577% 0.023243 264.149498)",
-          "base-200": "oklch(28.0368% 0.01983 264.182074)",
+          "primary": "oklch(30.8577% 0.023243 264.149498)",
+          "primary-content": "oklch(86.736% 0 0)",
           "base-300": "oklch(26.3469% 0.018403 262.177739)",
           "base-content": "oklch(82.9011% 0.031335 222.959324)",
           "neutral-content": "oklch(82.9011% 0.031335 222.959324)",
