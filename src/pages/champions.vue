@@ -116,8 +116,7 @@ function handleChampionClick(champion: Champion) {
               <div class="col-span-2 grid grid-cols-3 p-1 auto-cols-max gap-1">
                 <div
                   class="align-self-start avatar h-16 justify-content-center col-start-1 -mt-1.5 ml-1.5 !aspect-square  relative">
-                  <div
-                    class="ring-base-content  rounded-full  grid justify-content-center object-contain z-0 my-auto h-16 w-16">
+                  <div class="rounded-full  grid justify-content-center object-contain z-0 my-auto h-16 w-16">
 
                     <!--<img class="m-0 p-0 scale-125" :src="selectedChampion.img" :alt="selectedChampion.name" />-->
 
@@ -136,7 +135,7 @@ function handleChampionClick(champion: Champion) {
                     </svg>
 
                     <div
-                      class="absolute grid place items-centertooltip tooltip-open tooltip-bottom rounded-full glow size-20 opacity-70"
+                      class="absolute grid place-items-center tooltip tooltip-bottom rounded-full glow size-7 bottom-0 right-0 bg-opacity-0"
                       data-tip="view on Wiki">
                       <a :href="selectedChampion.wiki" target="_blank"
                         class="badge flex  bg-base-content text-base-100 size-[22px] border-none object-cover overflow-hidden p-[3px] aspect-square z-10">
@@ -158,10 +157,6 @@ function handleChampionClick(champion: Champion) {
                   </p>
                 </div>
               </div>
-
-
-
-
 
 
               <div
