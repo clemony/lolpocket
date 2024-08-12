@@ -196,8 +196,7 @@ onMounted(async () => {
             </Button>
           </template>
 
-          <template #divider :selectable="false">
-          </template>
+
         </Tree>
 
 
