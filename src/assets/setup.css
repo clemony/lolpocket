@@ -16,12 +16,12 @@
 
 
 .font-serif {
-  font-family: "Roboto Serif Variable", !important;
+  font-family: "Roboto Serif Variable", ui-serif, 'Times New Roman', Times, serif !important;
 }
 
 
 .font-mono {
-  font-family: "Geist Mono", ui-monospace, monospace  !important;
+  font-family: "Geist Mono", ui-monospace, 'Courier New', Courier, monospace !important;
 }
 
 .font-sans {
