@@ -247,7 +247,14 @@ onMounted(async () => {
 }
 
 [aria-label="Browse"],
-[aria-label=] .add-build {
+[aria-label="Utilities"] {
+  [data-pc-section="nodeicon"] {
+    @apply hidden hover:bg-transparent;
+  }
+
+}
+
+.add-build {
   @apply order-3 flex absolute right-0 -top-1;
 
   .add-fill {
