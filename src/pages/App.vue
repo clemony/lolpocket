@@ -57,7 +57,6 @@ const currentComponent = computed(() => {
   return componentMap[currentPath] || null;
 });
 
-const labels = ref(null);
 
 const menu = ref(null);
 
@@ -96,10 +95,11 @@ function toggleMenu() {
     // Apply the Flip transition
     Flip.from(state, {
       absolute: true, // uses position: absolute during the flip to work around flexbox challenges
-      duration: 10,
+      duration: 1,
       ease: "power1.inOut"
       // you can use any other tweening properties here too, like onComplete, onUpdate, delay, etc.
     })
+      .to
 
 
   }
@@ -139,7 +139,7 @@ onMounted(async () => {
 
       <label
         class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-bottom before:text-xs before:font-normal before:left-[75%] [--tooltip-offset:30px] [--tooltip-tail-offset:24px]"
-        data-tip="Collapse" @click="resetContent()">
+        data-tip="Collapse" @click="toggleMenu()">
         <!-- this hidden checkbox controls the state -->
         <input type="checkbox" />
 
