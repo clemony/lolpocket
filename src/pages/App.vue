@@ -62,7 +62,7 @@ const menuToggle = ref("Collapse");
 
 function toggleMenu() {
   const state = Flip.getState("menu");
-  this.$refs["menu"].$el.classList.value.toggle(".minimize");
+  this.$ref["menu"].$el.classList.value.toggle(".minimize");
 
 
   console.log(state);
