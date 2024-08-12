@@ -59,11 +59,10 @@ const currentComponent = computed(() => {
 
 
 const menuToggle = ref("Collapse");
-const menu = document.getElementById("#menu-wrapper");
 
 function toggleMenu() {
   const state = Flip.getState("menu");
-  menu.classList.toggle(".minimize");
+  this.$ref.menu.classList.toggle(".minimize");
 
   console.log(state);
 
@@ -158,7 +157,7 @@ onMounted(() => {
   </div>
 
   <!-- Side Nav -->
-  <div id="menu-wrapper" :class="{ collapsed: false }" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
+  <div ref="menu" :class="{ collapsed: false }" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
 
     <div id="menu" class="col-start-1 ">
 
