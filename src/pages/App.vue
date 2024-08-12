@@ -336,7 +336,18 @@ onMounted(async () => {
   @apply animate-out slide-out-to-top fade-out duration-700 z-0;
 }*/
 
-
+#menu,
+.nav,
+[data-pc-section="nodechildren"],
+[data-pc-section="nodetogglebutton"],
+[data-pc-section="nodelabel"],
+.add-build,
+[data-pc-section="rootchildren"],
+[data-pc-section="nodecontent"],
+[data-pc-section="nodeicon"],
+[data-pc-section="node"] {
+  @apply minimize;
+}
 
 
 #menu.minimize {
