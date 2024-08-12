@@ -79,7 +79,7 @@ function resetContent() {
   },
     "<");
   tl.to(".node", { margin: "0.6rem 0", justifyContent: "center", justifyItems: "center", display: "flex", duration: 1 }, "<");
-  tl.to(".nodecontent", { margin: 0, padding: 0, justifyContent: "center", justifyItems: "center", display: "flex", flexDirection: "column", duration: 1 }, ">+=75%");
+  tl.to(".nodecontent", { justifyContent: "center", justifyItems: "center", display: "flex", flexDirection: "column", duration: 1 }, ">+=75%");
 
 };
 
