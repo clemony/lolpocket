@@ -11,7 +11,7 @@
     }
 
     kbd {
-      @apply kbd-sm text-xs mono size-6;
+      @apply kbd-sm text-xs font-mono size-6;
     }
   }
   .collapse-title:has(input[type="radio"]:checked) {
@@ -22,6 +22,6 @@
   @apply border-neutral/15 border;
 
   p {
-    @apply prose text-xs serif;
+    @apply prose text-xs font-serif;
   }
 }
