@@ -14,16 +14,16 @@
 
 }
 
-.serif {
+.font-serif {
   font-family: "Roboto Serif Variable", serif;
 }
 
 
-.mono {
+.font-mono {
   font-family: "Geist Mono", monospace;
 }
 
-.sans {
+.font-sans {
   font-family: "Geist Sans", sans-serif;
 }
 
