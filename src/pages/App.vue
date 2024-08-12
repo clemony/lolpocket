@@ -73,8 +73,9 @@ function toggleMenu() {
 
     // Apply the Flip transition
     Flip.from(state, {
-      absolute: true, // uses position: absolute during the flip to work around flexbox challenges
-      duration: 10,
+     .to("#id", { x: 100, duration: 1 });
+      tl.to("#id", { y: 50, duration: 1 });
+      tl.to("#id", { opacity: 0, duration: 1 });
       stagger: 0.1,
       ease: "power1.inOut"
       // you can use any other tweening properties here too, like onComplete, onUpdate, delay, etc.
