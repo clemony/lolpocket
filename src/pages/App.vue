@@ -83,27 +83,14 @@ function toggleMenu() {
 };
 
 
-const {
-  toast
-} = useToast();
-
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
 
 const onNodeSelect = (node) => {
-  toast({
-    title: 'success!',
-    description: 'node selected: ' + node.label,
-  });
+
   navigateTo(node.data);
 };
 
-const onIconClick = (node) => {
-  toast({
-    title: 'success!',
-    description: 'node icon clicked1!!: ' + node.label,
-  });
-};
 
 
 
@@ -200,8 +187,7 @@ onMounted(async () => {
           <template #addon="slotProps">
             <div ref="label">{{ slotProps.node.label }}</div>
 
-            <Button ref="label" variant="null" class="add-build cursor-pointer" @click="onIconClick"
-              title="create new build">
+            <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
               <Icon icon='ph:plus' class="add-fill" />
             </Button>
           </template>
