@@ -199,10 +199,7 @@ onMounted(async () => {
           <template #divider="slotProps" :pt="{
             nodeIcon: {
               class: [
-                'hidden'
-              ]
-            }
-          }">
+                " hidden" ] } }">
             {{ slotProps.node.label }}
           </template>
 
