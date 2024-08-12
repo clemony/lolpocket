@@ -216,13 +216,12 @@ onMounted(async () => {
   </div>
 
   <!-- Side Nav -->
-  <div ref="menu" id="menu" :class="{ collapsed: false }"
-    class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 minimize">
+  <div ref="menu" id="menu" :class="{ collapsed: false }" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
 
     <div class="col-start-1">
 
       <div ref="nav" class="ml-5 mt-14 rounded-lg bg-base-100 border border-base-300
-            shadow-base-300 shadow-lg nav minimize">
+            shadow-base-300 shadow-lg nav">
 
         <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
           @nodeSelect="onNodeSelect" id="tree1">
