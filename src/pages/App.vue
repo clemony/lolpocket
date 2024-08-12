@@ -159,17 +159,6 @@ function toggleMenu() {
       // Create a new GSAP timeline for the combined animation
       const tl = gsap.timeline();
 
-      // Add Flip animation to the timeline
-      tl.add(() => {
-        Flip.from(state, {
-          absolute: true,
-          duration: 1,
-          ease: "power1.inOut"
-        });
-      }, 0);
-
-      // Add resetContent to the same timeline
-      tl.add(resetContent, 0);
 
       // Optionally handle completion or start additional actions here
       tl.eventCallback("onComplete", () => {
@@ -388,7 +377,7 @@ onMounted(async () => {
 #menu.minimize {
   @apply grid-cols-[80px_auto] justify-items-center;
 
-  /*.nav.minimize * {
+  .nav.minimize * {
     @apply m-0 p-0 justify-center;
   }
 
@@ -419,6 +408,6 @@ onMounted(async () => {
     [data-pc-section="node"].minimize {
       @apply mx-0 my-2 flex first:mt-3 last:mb-4 items-center;
     }
-  }*/
+  }
 }
 </style>
