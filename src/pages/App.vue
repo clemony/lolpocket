@@ -74,7 +74,7 @@ function toggleMenu() {
     // Apply the Flip transition
     Flip.from(state, {
       absolute: true, // uses position: absolute during the flip to work around flexbox challenges
-      duration: 0.5,
+      duration: 5,
       stagger: 0.1,
       ease: "power1.inOut"
       // you can use any other tweening properties here too, like onComplete, onUpdate, delay, etc.
@@ -195,7 +195,7 @@ onMounted(async () => {
             </Button>
           </template>
 
-          <template #divider :selectable="false" pt:[nodeicon]:[display]="none">
+          <template #divider :selectable="false">
           </template>
         </Tree>
 
