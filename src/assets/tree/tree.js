@@ -57,7 +57,7 @@ export default {
   nodeToggleButton: ({ context }) => ({
     class: [
       // Flex and Alignment
-      "inline-flex place-items-center h-full w-6 order-4 justify-self-end",
+      "label inline-flex place-items-center h-full w-6 order-4 justify-self-end",
 
       // Shape
       "border-0 outline-none outline-offset-0 ring-0",
