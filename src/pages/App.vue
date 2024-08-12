@@ -91,7 +91,15 @@ function toggleMenu() {
     if (menu.value) {
       // Capture the initial state of the menu
       const state = Flip.getState(menu.value);
-      let nav = gsap.utils.selector("menu");
+      let m = gsap.utils.selector("menu");
+      let nav = m(".nav");
+      let node = m(".node");
+      let nodecontent = m(".nodecontent");
+      let nodelabel = m(".nodelabel");
+      let nodeicon = m(".nodeicon");
+      let nodechildren = m(".nodechildren");
+      let nodetogglebutton = m(".nodetogglebutton");
+      let rootchildren = m(".rootchildren");
 
       // Create a new GSAP timeline for the combined animation
       const tl = gsap.timeline();
