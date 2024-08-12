@@ -378,7 +378,7 @@ h4.minimize {
 }
 
 [data-pc-section="nodeicon"].minimize {
-  @apply m-0 p-0 size-5 text-base-content/60;
+  @apply m-0 p-0 w-[2.7rem] h-[2.7rem] text-base-content/60;
 }
 
 [data-pc-section="node"].minimize {
