@@ -109,7 +109,6 @@ module.exports = {
       "garden",
       "lofi",
       "pastel",
-      "fantasy",
       "dracula",
       "cmyk",
       "autumn",

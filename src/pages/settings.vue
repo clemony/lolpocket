@@ -11,7 +11,9 @@ const { dataTheme } = storeToRefs(settings);
 const themes = [
   "lofi",
   "light",
+  "dark",
   "nord",
+  "nordark",
   "autumn",
   "cmyk",
   "cupcake",
@@ -20,12 +22,9 @@ const themes = [
   "garden",
   "acid",
   "pastel",
-  "fantasy",
-  "dark",
   "halloween",
   "dracula",
   "business",
-  "nord2",
   "sunset",
 ];
 
