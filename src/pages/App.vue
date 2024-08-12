@@ -69,7 +69,7 @@ function resetContent() {
     }
   });
   tl.to("#menu", { width: "80px", duration: 1 }, "<");
-  tl.to(".nav", { borderRadius: "20px", duration: 1 }, "<");
+  tl.to(".nav", { borderRadius: "20px", paddingLeft: "3px", duration: 1 }, "<");
   tl.to(".nodeicon", {
     margin: 0,
     width: "1.35rem",
