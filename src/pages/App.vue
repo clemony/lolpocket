@@ -57,6 +57,7 @@ const currentComponent = computed(() => {
   return componentMap[currentPath] || null;
 });
 
+const label = ref(null);
 const menu = ref(null); // Initialize ref to null
 const menuToggle = ref("Collapse");
 
