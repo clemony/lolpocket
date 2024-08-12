@@ -129,6 +129,10 @@ export default {
       //last:mb-3
     ],
   },
+  rootChildren: {
+    class: ["rootchildren"],
+  },
+
   loadingIcon: {
     class: ["text-surface-500 dark:text-surface-0/70", "absolute top-[50%] right-[50%] -mt-2 -mr-2 animate-spin"],
   },
