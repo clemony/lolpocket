@@ -57,24 +57,29 @@ const currentComponent = computed(() => {
   return componentMap[currentPath] || null;
 });
 
-const menu = ref("menu");
+const menu = ref(null); // Initialize ref to null
 const menuToggle = ref("Collapse");
 
 function toggleMenu() {
-  const state = Flip.getState("menu");
-  this.$ref["menu"].$el.classList.value.toggle(".minimize");
+  if (menu.value) {
+    // Get the state of the element before the change
+    const state = Flip.getState(menu.value);
 
+    // Toggle the class on the element
+    menu.value.classList.toggle("minimize");
 
-  console.log(state);
+    console.log(state);
 
-  Flip.from(state, {
-    absolute: true, // uses position: absolute during the flip to work around flexbox challenges
-    duration: 0.5,
-    stagger: 0.1,
-    ease: "power1.inOut"
-    // you can use any other tweening properties here too, like onComplete, onUpdate, delay, etc. 
-  });
-}
+    // Apply the Flip transition
+    Flip.from(state, {
+      absolute: true, // uses position: absolute during the flip to work around flexbox challenges
+      duration: 0.5,
+      stagger: 0.1,
+      ease: "power1.inOut"
+      // you can use any other tweening properties here too, like onComplete, onUpdate, delay, etc.
+    });
+  }
+};
 
 
 const {
@@ -101,9 +106,12 @@ const onIconClick = (node) => {
 
 
 
-onMounted(() => {
+onMounted(async () => {
+
   useDataStore().fetchData();
   NodeService.getTreeNodes().then((data: null) => (nodes.value = data));
+
+
 });
 
 
