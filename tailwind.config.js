@@ -1,4 +1,3 @@
-/* PrettierIgnore */
 const animate = require("tailwindcss-animate");
 const scrollbarhide = require("tailwind-scrollbar-hide");
 const typography = require("@tailwindcss/typography");
@@ -21,10 +20,11 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
+      // prettier-ignore
       fontFamily: {
-        sans: ["Geist Sans", "sans-serif"],
-        serif: ["Roboto Serif", "serif"],
-        mono: ["Geist Mono", "monospace"],
+        'sans': ["Geist Sans", "sans-serif"],
+        'serif': ["Roboto Serif", "serif"],
+        'mono': ["Geist Mono", "monospace"],
       },
       fontSize: {
         xs: "0.6rem",
