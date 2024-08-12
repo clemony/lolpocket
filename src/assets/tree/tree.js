@@ -27,7 +27,7 @@ export default {
     ],
   },
   node: {
-    class: ["focus:outline-none align-middle items-center relative my-2 w-full bg-base-100 code", "node"],
+    class: ["focus:outline-none align-middle items-center relative my-2 w-full bg-base-100 code", "node minimize"],
   },
   nodeContent: ({ context, props }) => ({
     class: [
@@ -51,7 +51,7 @@ export default {
         "cursor-pointer select-none": props.selectionMode == "single" || props.selectionMode == "multiple",
       },
 
-      "cmp nodecontent",
+      "nodecontent  minimize",
     ],
   }),
   nodeToggleButton: ({ context }) => ({
@@ -82,7 +82,7 @@ export default {
       "transition duration-200",
 
       // Misc
-      "cursor-pointer select-none",
+      "cursor-pointer select-none  minimize",
     ],
   }),
 
@@ -110,12 +110,12 @@ export default {
         "pl-0": context.leaf,
       },
 
-      "cmp nodeicon",
+      "cmp nodeicon  minimize",
     ],
   }),
   nodeLabel: ({ context }) => ({
     class: [
-      "label order-2 align-middle content-center items-center relative flex flex-grow h-8",
+      "label order-2 align-middle content-center items-center relative flex flex-grow h-8 ",
 
       {
         "text-foreground": !context.selected,
