@@ -80,14 +80,14 @@ function resetContent() {
     "<");
   tl.to(".node", { margin: "0.7rem 0", justifyContent: "center", justifyItems: "center", display: "flex", duration: 1 }, "<");
 
-  tl.to(".nodecontent", { paddingLeft: "0px", }, "<");
+  /*tl.to(".nodecontent", { paddingLeft: "0px", }, "<");
   tl.to(".nodecontent", {
     justifyContent: "center",
     justifyItems: "center",
     display: "flex",
     width: "auto",
     flexDirection: "column"
-  }, "<");
+  }, "<");*/
 
 };
 
