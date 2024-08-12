@@ -85,6 +85,7 @@ function resetContent() {
 
 function toggleMenu() {
   if (menu.value) {
+    var resetContent = resetContent();
     const state = Flip.getState(menu.value);
 
 
@@ -99,7 +100,7 @@ function toggleMenu() {
       ease: "power1.inOut"
       // you can use any other tweening properties here too, like onComplete, onUpdate, delay, etc.
     })
-      .add(resetContent(), "<");
+      .add(resetContent, "<");
 
 
   }
