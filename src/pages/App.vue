@@ -65,6 +65,7 @@ function toggleMenu() {
   if (menu.value) {
     const state = Flip.getState(menu.value);
     const labels = gsap.to(".label", { opacity: 0, duration: 1, stagger: 0.1 });
+    const width = gsap.to("#menu"{ width: "80px" }
 
     // Toggle the class on the element
     //menu.value.classList.toggle("minimize");
