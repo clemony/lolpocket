@@ -25,7 +25,6 @@ const themes = [
   "pastel",
   "fantasy",
   "dark",
-  "luxury",
   "halloween",
   "dracula",
   "autumn",
