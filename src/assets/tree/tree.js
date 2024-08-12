@@ -115,7 +115,7 @@ export default {
   }),
   nodeLabel: ({ context }) => ({
     class: [
-      "label order-2 align-middle content-center items-center relative flex flex-grow h-8 ",
+      "label order-2 align-middle content-center items-center relative flex flex-grow h-8  minimize",
 
       {
         "text-foreground": !context.selected,
@@ -125,12 +125,12 @@ export default {
   }),
   nodeChildren: {
     class: [
-      "label list-none z-10 border-l border-l-base-200 ml-4 *:border-none *:ml-1",
+      "label list-none z-10 border-l border-l-base-200 ml-4 *:border-none *:ml-1  minimize",
       //last:mb-3
     ],
   },
   rootChildren: {
-    class: ["rootchildren"],
+    class: ["rootchildren  minimize"],
   },
 
   loadingIcon: {
