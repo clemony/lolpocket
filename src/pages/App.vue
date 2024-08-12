@@ -169,10 +169,10 @@ onMounted(async () => {
   <!-- Side Nav -->
   <div ref="menu" :class="{ collapsed: false }" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
 
-    <div id="menu" class="col-start-1 cmp">
+    <div id="menu" class="col-start-1">
 
       <div class="ml-5 mt-14 rounded-lg bg-base-100 border border-base-300
-            shadow-base-300 shadow-lg nav cmp">
+            shadow-base-300 shadow-lg nav">
 
         <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
           @nodeSelect="onNodeSelect" id="tree1">
