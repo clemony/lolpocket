@@ -16,14 +16,8 @@ const themes = [
   "nord",
   "nordark",
   "autumn",
-  "cmyk",
-  "emerald",
   "corporate",
-  "garden",
-  "acid",
   "pastel",
-  "dracula",
-  "sunset",
 ];
 
 function updateTheme(theme: string) {
