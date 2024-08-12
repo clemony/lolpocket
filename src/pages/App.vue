@@ -68,7 +68,7 @@ function toggleMenu() {
 
     // Toggle the class on the element
     menu.value.classList.toggle("minimize");
-
+    console.log(label.value);
     console.log(state);
 
     // Apply the Flip transition
