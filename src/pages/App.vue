@@ -58,7 +58,7 @@ const currentComponent = computed(() => {
 });
 
 
-const menuToggle = defineModel("data-tip");
+const menuToggle = ref("Collapse");
 const menu = document.getElementById("#menu-wrapper");
 
 function toggleMenu() {
@@ -108,7 +108,7 @@ onMounted(() => {
     <div
       class="title col-start-1 justify-self-start flex items-center p-0 text-base tracking-wide font-semibold border-none shadow-none h-6 absolute left-[10px] top-[6px] z-40 bg-transparent">
 
-      <button v-model="menuToggle" class="text-base-content tooltip tooltip-bottom" :data-tip="Collapse">
+      <button class="text-base-content tooltip tooltip-bottom" data-tip="Collapse">
         <Icon icon="octicon:sidebar-expand-24" class="size-5 ml-2 mr-3" />
         <Icon icon="octicon:sidebar-collapse-24" class="size-5 ml-2 mr-3 hidden" />
       </button>
