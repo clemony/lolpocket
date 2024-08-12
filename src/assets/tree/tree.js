@@ -51,7 +51,7 @@ export default {
         "cursor-pointer select-none": props.selectionMode == "single" || props.selectionMode == "multiple",
       },
 
-      "cmp",
+      "cmp nodecontent",
     ],
   }),
   nodeToggleButton: ({ context }) => ({
