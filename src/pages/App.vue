@@ -64,7 +64,7 @@ const menu = ref(null);
 function resetContent() {
   var tl = gsap.timeline();
   tl.to(".label", {
-    opacity: 0, duration: 0.25, stagger: 0.05, onComplete: function () {
+    opacity: 0, duration: 0.25, onComplete: function () {
       this.targets().forEach(elem => elem.classList.add("hidden"))
     }
   });
