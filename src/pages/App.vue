@@ -232,7 +232,7 @@ onMounted(async () => {
   </div>
 </template>
 
-<style scoped>
+<style>
 [data-pc-section="nodechildren"] [data-pc-section="nodecontent"] {
   @apply pl-1 w-[calc(100%-0.25rem)];
 
@@ -251,6 +251,7 @@ onMounted(async () => {
 
 [aria-label="Browse"],
 [aria-label="Utilities"] {
+
   [data-pc-section="nodecontent"] {
     @apply hover:bg-transparent text-xxs uppercase pointer-events-none text-base-content/40;
   }
