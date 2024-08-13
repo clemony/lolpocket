@@ -30,12 +30,12 @@ const route = useRoute();
 const settings = useUserSettings();
 
 
-type ValidPaths = '/builds' | '/home' | '/champions' | '/items' | '/runes' | '/settings' | '/tree';
+type ValidPaths = '/builds' | '/' | '/champions' | '/items' | '/runes' | '/settings' | '/tree';
 
 
 const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/builds': Builds,
-  '/home': Home, // Adjust this if the component is incorrect
+  '/': Home, // Adjust this if the component is incorrect
   '/champions': Champions,
   '/items': Items,
   '/runes': Runes,
