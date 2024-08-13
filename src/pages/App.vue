@@ -189,8 +189,10 @@ onMounted(async () => {
         <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
           @nodeSelect="onNodeSelect" id="tree1">
 
+
           <template #nodetogglebutton>
           </template>
+
           <template #default="slotProps">
             <div ref="label">
               {{ slotProps.node.label }}
