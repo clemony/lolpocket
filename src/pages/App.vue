@@ -55,65 +55,65 @@ const currentComponent = computed(() => {
 const menu = ref<HTMLDivElement | null>(null);
 
 function toggleMenu() {
+  nextTick(() => {
+    if (menu.value) {
 
-  if (menu.value) {
+      // Capture the initial state of the menu
+      //  const state = Flip.getState(menu.value);
 
-    // Capture the initial state of the menu
-    //  const state = Flip.getState(menu.value);
+      var menu = menu.value;
+      // Use gsap.utils.selector with a proper context
+      const selector = gsap.utils.selector(menu.value);
+      const nav = selector(".nav");
+      const node = selector(".node");
+      const nodecontent = selector(".nodecontent");
+      const nodelabel = selector(".nodelabel");
+      const nodeicon = selector(".nodeicon");
+      const nodechildren = selector(".nodechildren");
+      const nodetogglebutton = selector(".nodetogglebutton");
+      const rootchildren = selector(".rootchildren");
 
-    var menu = menu.value;
-    // Use gsap.utils.selector with a proper context
-    const selector = gsap.utils.selector(menu.value);
-    const nav = selector(".nav");
-    const node = selector(".node");
-    const nodecontent = selector(".nodecontent");
-    const nodelabel = selector(".nodelabel");
-    const nodeicon = selector(".nodeicon");
-    const nodechildren = selector(".nodechildren");
-    const nodetogglebutton = selector(".nodetogglebutton");
-    const rootchildren = selector(".rootchildren");
+      // Create an array of all elements
+      const allElements = [
+        ...menu,
+        ...nav,
+        ...node,
+        ...nodecontent,
+        ...nodelabel,
+        ...nodeicon,
+        ...nodechildren,
+        ...nodetogglebutton,
+        ...rootchildren
+      ];
 
-    // Create an array of all elements
-    const allElements = [
-      ...menu,
-      ...nav,
-      ...node,
-      ...nodecontent,
-      ...nodelabel,
-      ...nodeicon,
-      ...nodechildren,
-      ...nodetogglebutton,
-      ...rootchildren
-    ];
+      const hideThese = [
+        ...nodechildren,
+        ...nodetogglebutton,
+        ...nodelabel
+      ];
 
-    const hideThese = [
-      ...nodechildren,
-      ...nodetogglebutton,
-      ...nodelabel
-    ];
-    /*
-        var tl = gsap.timeline();
-    
-        tl.from(nodelabel, {
-          opacity: 0, duration: 0.25, onComplete: function () {
-            this.targets().forEach(elem => elem.classList.add("hidden"))
-          }
-        });
-        tl.from(menu, { gridTemplateColumns: "80px auto", duration: 1 }, "<");
-         tl.to(nav, { borderRadius: "20px", paddingLeft: "3px", duration: 1 }, "<");
-         tl.to(nodeicon, {
-           margin: 0,
-           width: "1.35rem",
-           height: "1.35rem",
-           alignSelf: "center",
-           opacity: "0.8",
-           duration: 1
-         },
-           "<");
-         tl.to(node, { margin: "0.7rem 0", justifyContent: "center", justifyItems: "center", display: "flex", duration: 1 }, "<");*/
+      var tl = gsap.timeline();
 
-  }
+      tl.from(nodelabel, {
+        opacity: 0, duration: 0.25, onComplete: function () {
+          this.targets().forEach(elem => elem.classList.add("hidden"))
+        }
+      });
+      tl.from(menu, { gridTemplateColumns: "80px auto", duration: 1 }, "<");
+      tl.to(nav, { borderRadius: "20px", paddingLeft: "3px", duration: 1 }, "<");
+      tl.to(nodeicon, {
+        margin: 0,
+        width: "1.35rem",
+        height: "1.35rem",
+        alignSelf: "center",
+        opacity: "0.8",
+        duration: 1
+      },
+        "<");
+      tl.to(node, { margin: "0.7rem 0", justifyContent: "center", justifyItems: "center", display: "flex", duration: 1 }, "<");
 
+    }
+  })
 };
 
 
