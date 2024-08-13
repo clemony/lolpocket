@@ -5,32 +5,15 @@ import Home from '@/pages/home.vue';
 import Items from '@/pages/items.vue';
 import Runes from '@/pages/runes.vue';
 import Settings from '@/pages/settings.vue';
-import { T } from 'primevue/tree';
-import {
-  useDataStore
-} from '@/stores/dataStore';
-import {
-  Icon
-} from '@iconify/vue';
-import {
-  useUserSettings
-} from '@stores/userSettings';
-import {
-  computed,
-  DefineComponent,
-  onMounted,
-  ref
-} from 'vue';
-import {
-  useRoute,
-  useRouter
-} from 'vue-router';
-import {
-  Flip
-} from 'gsap/Flip';
-import {
-  gsap
-} from 'gsap';
+import { useDataStore } from '@/stores/dataStore';
+import { Icon } from '@iconify/vue';
+import { useUserSettings } from '@stores/userSettings';
+import { computed, DefineComponent, onMounted, ref } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import { Flip } from 'gsap/Flip';
+import { gsap } from 'gsap';
+
+
 
 // Access the router instance to programmatically navigate
 const router = useRouter();
