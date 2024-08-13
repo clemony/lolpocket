@@ -42,6 +42,7 @@ const navigateTo = (route: string) => {
 // Access the current route
 const route = useRoute();
 
+const settings = useUserSettings();
 
 type ValidPaths = '/builds' | '/home' | '/champions' | '/items' | '/runes' | '/settings' | '/tree';
 
@@ -129,8 +130,6 @@ function toggleMenu() {
 onMounted(async () => {
 
   useDataStore().fetchData();
-  NodeService.getTreeNodes().then((data: null) => (nodes.value = data));
-  console.log(menu.value);
 
 });
 </script>
