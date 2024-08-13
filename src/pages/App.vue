@@ -55,17 +55,18 @@ const currentComponent = computed(() => {
 const menuRef = ref<HTMLDivElement | null>(null);
 // Capture the initial state of the menu
 //  const state = Flip.getState(menu.value);
-
-var menu = menu.value;
-const selector = gsap.utils.selector(menu.value);
-const nav = selector(".nav");
-const node = selector(".node");
-const nodecontent = selector(".nodecontent");
-const nodelabel = selector(".nodelabel");
-const nodeicon = selector(".nodeicon");
-const nodechildren = selector(".nodechildren");
-const nodetogglebutton = selector(".nodetogglebutton");
-const rootchildren = selector(".rootchildren");
+console.log(menuRef);
+var menu = menuRef.value;
+console.log(menu);
+const m = gsap.utils.selector(menuRef);
+const nav = m(".nav");
+const node = m(".node");
+const nodecontent = m(".nodecontent");
+const nodelabel = m(".nodelabel");
+const nodeicon = m(".nodeicon");
+const nodechildren = m(".nodechildren");
+const nodetogglebutton = m(".nodetogglebutton");
+const rootchildren = m(".rootchildren");
 const hideThese = [
   ...nodechildren,
   ...nodetogglebutton,
@@ -111,7 +112,8 @@ onMounted(async () => {
   useDataStore().fetchData();
   NodeService.getTreeNodes().then((data: null) => (nodes.value = data));
   nextTick(() => {
-    console.log(menu.value);
+    console.log(menuRef);
+    let m = gsap.utils.selector(menuRef);
   })
 
 });
@@ -120,8 +122,6 @@ onMounted(async () => {
 </script>
 
 <template>
-  //header-lg
-
 
   <div data-tauri-drag-region
     class="titlebar top-0 left-0 h-[36px] w-full backdrop-blur-md bg-base-100/60 grid grid-cols-3 fixed z-20 p-[0px] items-center shadow-lg shadow-base-300 border-b-[1px] border-base-300/80">
@@ -178,7 +178,8 @@ onMounted(async () => {
 
 
 
-  <div ref="menu" id="menu" :class="{ collapsed: false }" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
+  <div ref="menuRef" id="menu" :class="{ collapsed: false }"
+    class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
 
     <div class="col-start-1">
 
