@@ -5,6 +5,7 @@ import Home from '@/pages/home.vue';
 import Items from '@/pages/items.vue';
 import Runes from '@/pages/runes.vue';
 import Settings from '@/pages/settings.vue';
+import { T } from 'primevue/tree';
 import {
   useDataStore
 } from '@/stores/dataStore';
@@ -130,6 +131,7 @@ function toggleMenu() {
 onMounted(async () => {
 
   useDataStore().fetchData();
+  NodeService.getTreeNodes().then((data: null) => (nodes.value = data));
 
 });
 </script>
