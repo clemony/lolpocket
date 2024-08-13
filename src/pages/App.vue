@@ -58,7 +58,7 @@ const menuRef = ref<HTMLDivElement | null>(null);
 console.log(menuRef);
 var menu = menuRef.value;
 console.log(menu);
-const m = gsap.utils.selector(menuRef);
+const m = gsap.utils.selector(menu);
 const nav = m(".nav");
 const node = m(".node");
 const nodecontent = m(".nodecontent");
