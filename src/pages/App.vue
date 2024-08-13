@@ -229,19 +229,23 @@ onMounted(async () => {
 </template>
 
 <style>
-[data-pc-section="nodechildren"] [data-pc-section="nodecontent"] {
-  @apply pl-1 w-[calc(100%-0.25rem)] h-8;
+[data-pc-section="nodechildren"] {
+  @apply h-8;
 
-  [data-pc-section="nodeicon"] {
-    @apply mr-3;
-  }
+  [data-pc-section="nodecontent"] {
+    @apply pl-1 w-[calc(100%-0.25rem)] h-8;
 
-  [data-pc-section="nodetogglebutton"] {
-    @apply absolute right-1 top-0;
-  }
+    [data-pc-section="nodeicon"] {
+      @apply mr-3;
+    }
 
-  [data-pc-section="nodelabel"] {
-    @apply truncate h-8;
+    [data-pc-section="nodetogglebutton"] {
+      @apply absolute right-1 top-0;
+    }
+
+    [data-pc-section="nodelabel"] {
+      @apply truncate h-8;
+    }
   }
 }
 
