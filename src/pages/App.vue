@@ -112,8 +112,10 @@ function toggleMenu() {
       },
         "<");
       tl.to(".node", { margin: "0.7rem 0", justifyContent: "center", justifyItems: "center", display: "flex", duration: 1 }, "<");
+
     }
-  })
+  }
+  )
 };
 
 
