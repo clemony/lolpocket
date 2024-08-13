@@ -1,19 +1,35 @@
-<script setup lang="ts">
+<script lang="ts">
 import Builds from '@/page-build/builds-template.vue';
 import Champions from '@/pages/champions.vue';
 import Home from '@/pages/home.vue';
 import Items from '@/pages/items.vue';
 import Runes from '@/pages/runes.vue';
 import Settings from '@/pages/settings.vue';
-import { useDataStore } from '@/stores/dataStore';
-import { Icon } from '@iconify/vue';
-import { useUserSettings } from '@stores/userSettings';
-import { computed, DefineComponent, onMounted, ref } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
-import { Flip } from 'gsap/Flip';
-import { gsap } from 'gsap';
-
-
+import {
+  useDataStore
+} from '@/stores/dataStore';
+import {
+  Icon
+} from '@iconify/vue';
+import {
+  useUserSettings
+} from '@stores/userSettings';
+import {
+  computed,
+  DefineComponent,
+  onMounted,
+  ref
+} from 'vue';
+import {
+  useRoute,
+  useRouter
+} from 'vue-router';
+import {
+  Flip
+} from 'gsap/Flip';
+import {
+  gsap
+} from 'gsap';
 
 // Access the router instance to programmatically navigate
 const router = useRouter();
@@ -28,9 +44,7 @@ const route = useRoute();
 
 const settings = useUserSettings();
 
-
 type ValidPaths = '/builds' | '/home' | '/champions' | '/items' | '/runes' | '/settings' | '/tree';
-
 
 const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/builds': Builds,
@@ -42,39 +56,12 @@ const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/tree': null,
 };
 
-
 // Computed property for current view
 const currentComponent = computed(() => {
   const currentPath = route.path as ValidPaths; // Adjust the type to match ValidPaths
   return componentMap[currentPath] || null;
 });
 
-
-
-/*const resetContent = changeContent();
-
-function changeContent() {
-  var tl = gsap.timeline();
-  tl.to(".label", {
-    opacity: 0, duration: 0.25, onComplete: function () {
-      this.targets().forEach(elem => elem.classList.add("hidden"))
-    }
-  });
-  tl.to("#menu", { gridTemplateColumns: "80px auto", duration: 1 }, "<");
-  tl.to(".nav", { borderRadius: "20px", paddingLeft: "3px", duration: 1 }, "<");
-  tl.to(".nodeicon", {
-    margin: 0,
-    width: "1.35rem",
-    height: "1.35rem",
-    alignSelf: "center",
-    opacity: "0.8",
-    duration: 1
-  },
-    "<");
-  tl.to(".node", { margin: "0.7rem 0", justifyContent: "center", justifyItems: "center", display: "flex", duration: 1 }, "<");
-
-  return tl;
-};*/
 const menu = ref<HTMLDivElement | null>(null);
 
 function toggleMenu() {
@@ -113,31 +100,23 @@ function toggleMenu() {
       const states = allElements.map(el => Flip.getState(el));
 
       // Toggle the class on all elements
-      allElements.forEach(el => el.classList.toggle("minimize"));
-      /*const labelState = gsap.from("nodelabel", function () {
-        this.targets().forEach(elem => elem.classList.add("minimize"))
-      });*/
+      //allElements.forEach(el => el.classList.toggle("minimize"));
 
+      nodelabel.forEach(el => el.classList.toggle("minimize"));
 
-      // Apply the Flip transition
-      gsap.timeline()
-        .to(state, {
-          duration: 1,
-          ease: "power1.inOut",
-          absolute: true,
-        })
-        .add(() => {
-          states.forEach((state, index) => {
-            Flip.from(state, {
-              absolute: true,
-              duration: 1,
-              ease: "power1.inOut",
-            });
-          });
-        });
+      Flip.from(state, {
+        absolute: true, // uses position: absolute during the flip to work around flexbox challenges
+        duration: 0.5,
+        stagger: 0.1,
+        ease: "power1.inOut"
+        // you can use any other tweening properties here too, like onComplete, onUpdate, delay, etc. 
+      });
+
     }
-  });
-}
+  })
+};
+
+
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
 
@@ -146,8 +125,7 @@ const onNodeSelect = (node) => {
   navigateTo(node.data);
 };
 
-
-// on mounted
+/* ------------------------------ // ON MOUNTED ----------------------------- */
 
 onMounted(async () => {
 
@@ -155,12 +133,7 @@ onMounted(async () => {
   NodeService.getTreeNodes().then((data: null) => (nodes.value = data));
   console.log(menu.value);
 
-
 });
-
-
-
-
 </script>
 
 <template>
@@ -186,11 +159,8 @@ onMounted(async () => {
           class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-on fill-current" />
       </label>
 
-
       <span>lolpocket</span>
     </div>
-
-
 
     <!-- Search box -->
 
@@ -221,7 +191,8 @@ onMounted(async () => {
   </div>
 
   /* -------------------------------------------------------------------------- */
-  /* <!-- SIDE NAV --> */
+  /*
+  <!-- SIDE NAV --> */
   /* -------------------------------------------------------------------------- */
 
   <div ref="menu" id="menu" :class="{ collapsed: false }" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
@@ -233,7 +204,6 @@ onMounted(async () => {
 
         <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
           @nodeSelect="onNodeSelect" id="tree1">
-
 
           <template #nodetogglebutton>
           </template>
@@ -253,17 +223,11 @@ onMounted(async () => {
 
         </Tree>
 
-
-
-
       </div>
-
 
       <Toaster />
 
     </div>
-
-
 
     <div class="w-full h-screen m-0 p-0  pt-14 pr-4 col-start-2 overflow-scroll">
       <!-- Display the current component once loading is complete -->
@@ -273,13 +237,7 @@ onMounted(async () => {
     </div>
 
   </div>
-
 </template>
-
-
-
-
-
 
 <style>
 [data-pc-section="nodechildren"] [data-pc-section="nodecontent"] {
@@ -340,8 +298,6 @@ onMounted(async () => {
 [aria-expanded="false"] [data-pc-section="nodechildren"] {
   @apply animate-out slide-out-to-top fade-out duration-700 z-0;
 }*/
-
-
 
 #menu.minimize {
   @apply grid-cols-[80px_auto] justify-items-center;
