@@ -1,35 +1,19 @@
-<script lang="ts">
+<script setup lang="ts">
 import Builds from '@/page-build/builds-template.vue';
 import Champions from '@/pages/champions.vue';
 import Home from '@/pages/home.vue';
 import Items from '@/pages/items.vue';
 import Runes from '@/pages/runes.vue';
 import Settings from '@/pages/settings.vue';
-import {
-  useDataStore
-} from '@/stores/dataStore';
-import {
-  Icon
-} from '@iconify/vue';
-import {
-  useUserSettings
-} from '@stores/userSettings';
-import {
-  computed,
-  DefineComponent,
-  onMounted,
-  ref
-} from 'vue';
-import {
-  useRoute,
-  useRouter
-} from 'vue-router';
-import {
-  Flip
-} from 'gsap/Flip';
-import {
-  gsap
-} from 'gsap';
+import { useDataStore } from '@/stores/dataStore';
+import { Icon } from '@iconify/vue';
+import { useUserSettings } from '@stores/userSettings';
+import { computed, DefineComponent, onMounted, ref } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import { Flip } from 'gsap/Flip';
+import { gsap } from 'gsap';
+
+
 
 // Access the router instance to programmatically navigate
 const router = useRouter();
@@ -44,7 +28,9 @@ const route = useRoute();
 
 const settings = useUserSettings();
 
+
 type ValidPaths = '/builds' | '/home' | '/champions' | '/items' | '/runes' | '/settings' | '/tree';
+
 
 const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/builds': Builds,
@@ -55,6 +41,7 @@ const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/settings': Settings, // Adjust if necessary
   '/tree': null,
 };
+
 
 // Computed property for current view
 const currentComponent = computed(() => {
