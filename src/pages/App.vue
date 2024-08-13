@@ -14,6 +14,7 @@ import { Flip } from 'gsap/Flip';
 import { gsap } from 'gsap';
 
 
+/* ------------------------------- NAVIGATION ------------------------------- */
 
 // Access the router instance to programmatically navigate
 const router = useRouter();
@@ -42,12 +43,14 @@ const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/tree': null,
 };
 
-
 // Computed property for current view
 const currentComponent = computed(() => {
   const currentPath = route.path as ValidPaths; // Adjust the type to match ValidPaths
   return componentMap[currentPath] || null;
 });
+
+
+/* ---------------------------- SIDEBAR ANIMATION --------------------------- */
 
 const menu = ref<HTMLDivElement | null>(null);
 
