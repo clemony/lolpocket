@@ -96,6 +96,11 @@ function toggleMenu() {
 
 };
 
+const minimized = ref(false)
+
+function warnDisabled() {
+  maximized.value = true;
+}
 
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
@@ -177,52 +182,50 @@ onMounted(async () => {
   </div>
 
 
-  <transition class="">
-    <div ref="menuRef" id="menu" :class="{ collapsed: false }"
-      class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
 
-      <div class="col-start-1">
+  <div id="menu" v-if="minimized" :class="minimized" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
 
-        <div ref="nav" class="ml-5 mt-14 rounded-lg bg-base-100 border border-base-300
+    <div class="col-start-1">
+
+      <div ref="nav" class="ml-5 mt-14 rounded-lg bg-base-100 border border-base-300
             shadow-base-300 shadow-lg nav">
 
-          <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
-            @nodeSelect="onNodeSelect" id="tree1">
+        <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
+          @nodeSelect="onNodeSelect" id="tree1">
 
 
-            <template #nodetogglebutton>
-            </template>
+          <template #nodetogglebutton>
+          </template>
 
-            <template #default="slotProps">
+          <template #default="slotProps">
 
-              {{ slotProps.node.label }}
-            </template>
+            {{ slotProps.node.label }}
+          </template>
 
-            <template #addon="slotProps">
-              <div ref="label">{{ slotProps.node.label }}</div>
+          <template #addon="slotProps">
+            <div ref="label">{{ slotProps.node.label }}</div>
 
-              <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
-                <Icon icon='ph:plus' class="add-fill" />
-              </Button>
-            </template>
+            <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
+              <Icon icon='ph:plus' class="add-fill" />
+            </Button>
+          </template>
 
-          </Tree>
-
-        </div>
-
-        <Toaster />
+        </Tree>
 
       </div>
 
-      <div class="w-full h-screen m-0 p-0  pt-14 pr-4 col-start-2 overflow-scroll">
-        <!-- Display the current component once loading is complete -->
-        <!--<Transition name="slide-fade" mode="out-in">-->
-        <component :is="currentComponent" />
-        <!--</Transition>-->
-      </div>
+      <Toaster />
 
     </div>
-  </transition>
+
+    <div class="w-full h-screen m-0 p-0  pt-14 pr-4 col-start-2 overflow-scroll">
+      <!-- Display the current component once loading is complete -->
+      <!--<Transition name="slide-fade" mode="out-in">-->
+      <component :is="currentComponent" />
+      <!--</Transition>-->
+    </div>
+
+  </div>
 </template>
 
 <style>
