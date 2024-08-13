@@ -194,9 +194,9 @@ onMounted(async () => {
           </template>
 
           <template #default="slotProps">
-            <div ref="label">
+            <transition class="label">
               {{ slotProps.node.label }}
-            </div>
+            </transition>
           </template>
 
           <template #addon="slotProps">
