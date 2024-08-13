@@ -88,7 +88,7 @@ function toggleMenu() {
       var menuState = menu.value;
 
       // Toggle the class on all elements
-      allElements.forEach(el => el.classList.add("minimize"));
+      // allElements.forEach(el => el.classList.add("minimize"));
 
       /* var tl = gsap.timeline();
        tl.to(nodelabel,  );
@@ -97,7 +97,6 @@ function toggleMenu() {
       Flip.from(state, {
         absolute: true, // uses position: absolute during the flip to work around flexbox challenges
         nested: true,
-        simple: true,
         duration: 1,
         ease: "power1.inOut"
       });
