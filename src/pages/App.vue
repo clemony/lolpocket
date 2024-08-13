@@ -76,7 +76,7 @@ function toggleMenu() {
 
       // Create an array of all elements
       const allElements = [
-        menu,
+        ...menu,
         ...nav,
         ...node,
         ...nodecontent,
@@ -87,12 +87,18 @@ function toggleMenu() {
         ...rootchildren
       ];
 
+      const hideThese = [
+        ...nodechildren,
+        ...nodetogglebutton,
+        ...nodelabel
+      ];
 
       // Toggle the class on all elements
       allElements.forEach(el => el.classList.add("minimize"));
 
       var tl = gsap.timeline();
-      tl.from(nodelabel, { opacity: 0 });
+      tl.from(hideThese, { opacity: 0 }, "<");
+      tl.from(menu, {});
 
 
     }
