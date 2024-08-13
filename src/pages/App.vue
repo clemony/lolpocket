@@ -51,7 +51,7 @@ const currentComponent = computed(() => {
 
 
 /* ---------------------------- SIDEBAR ANIMATION --------------------------- */
-
+/*
 const menuRef = ref<HTMLDivElement | null>(null);
 // Capture the initial state of the menu
 //  const state = Flip.getState(menu.value);
@@ -94,12 +94,12 @@ function toggleMenu() {
     "<");
   tl.to(node, { margin: "0.7rem 0", justifyContent: "center", justifyItems: "center", display: "flex", duration: 1 }, "<");
 
-};
+};*/
 
-const minimized = ref(false)
+const minimized = ref(false);
 
-function warnDisabled() {
-  maximized.value = true;
+function minimize() {
+  minimized.value = true;
 }
 
 const nodes = ref<any[]>([]);
@@ -116,10 +116,10 @@ onMounted(async () => {
 
   useDataStore().fetchData();
   NodeService.getTreeNodes().then((data: null) => (nodes.value = data));
-  nextTick(() => {
-    console.log(menuRef);
-    let m = gsap.utils.selector(menuRef);
-  })
+  /* nextTick(() => {
+     console.log(menuRef);
+     let m = gsap.utils.selector(menuRef);
+   })*/
 
 });
 
@@ -136,7 +136,7 @@ onMounted(async () => {
 
       <label
         class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-bottom before:text-xs before:font-normal before:left-[75%] [--tooltip-offset:30px] [--tooltip-tail-offset:24px]"
-        data-tip="Collapse" @click="toggleMenu()">
+        data-tip="Collapse" @click="minimize">
         <!-- this hidden checkbox controls the state -->
         <input type="checkbox" />
 
@@ -183,7 +183,7 @@ onMounted(async () => {
 
 
 
-  <div id="menu" v-if="minimized" :class="minimized" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
+  <div id="menu" v-if="minimized" :class="minimize" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
 
     <div class="col-start-1">
 
