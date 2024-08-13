@@ -62,6 +62,17 @@ const currentComponent = computed(() => {
   return componentMap[currentPath] || null;
 });
 
+
+const nodes = ref<any[]>([]);
+const selectedKey = ref<string[]>([]);
+
+const onNodeSelect = (node) => {
+
+  navigateTo(node.data);
+};
+
+animation
+
 const menu = ref<HTMLDivElement | null>(null);
 
 function toggleMenu() {
@@ -114,15 +125,6 @@ function toggleMenu() {
 
     }
   })
-};
-
-
-const nodes = ref<any[]>([]);
-const selectedKey = ref<string[]>([]);
-
-const onNodeSelect = (node) => {
-
-  navigateTo(node.data);
 };
 
 /* ------------------------------ // ON MOUNTED ----------------------------- */
