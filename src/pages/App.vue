@@ -129,6 +129,10 @@ onMounted(async () => {
 
 <template>
 
+  /* -------------------------------------------------------------------------- */
+  /* TITLEBAR START */
+  /* -------------------------------------------------------------------------- */
+
   <div data-tauri-drag-region
     class="titlebar top-0 left-0 h-[36px] w-full backdrop-blur-md bg-base-100/60 grid grid-cols-3 fixed z-20 p-[0px] items-center shadow-lg shadow-base-300 border-b-[1px] border-base-300/80">
 
@@ -182,10 +186,7 @@ onMounted(async () => {
     </div>
   </div>
 
-  /* -------------------------------------------------------------------------- */
-  /*
-  <!-- SIDE NAV --> */
-  /* -------------------------------------------------------------------------- */
+
 
   <div ref="menu" id="menu" :class="{ collapsed: false }" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
 
