@@ -59,7 +59,7 @@ function toggleMenu() {
   if (menu.value) {
 
     // Capture the initial state of the menu
-    const state = Flip.getState(menu.value);
+    //  const state = Flip.getState(menu.value);
 
     var menu = menu.value;
     // Use gsap.utils.selector with a proper context
