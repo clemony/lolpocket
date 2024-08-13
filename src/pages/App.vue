@@ -85,12 +85,14 @@ function toggleMenu() {
 
       // Use Flip.getState for all elements individually
       const states = allElements.map(el => Flip.getState(el));
+      var menuState = menu.value;
 
       // Toggle the class on all elements
-      //allElements.forEach(el => el.classList.toggle("minimize"));
-      var menuState = menu.value;
-      const labelState = nodelabel.forEach(el => el.classList.add("minimize"));
-      const stateMenu = menuState.classList.add("minimize");
+      allElements.forEach(el => el.classList.add("minimize"));
+
+      /* var tl = gsap.timeline();
+       tl.to(nodelabel,  );
+       const stateMenu = menuState.classList.add("minimize");*/
 
       Flip.from(state, {
         absolute: true, // uses position: absolute during the flip to work around flexbox challenges
