@@ -87,23 +87,14 @@ function toggleMenu() {
         ...rootchildren
       ];
 
-      // Use Flip.getState for all elements individually
-      const states = allElements.map(el => Flip.getState(el));
-
 
       // Toggle the class on all elements
       allElements.forEach(el => el.classList.add("minimize"));
 
-      /* var tl = gsap.timeline();
-       tl.to(nodelabel,  );
-       const stateMenu = menuState.classList.add("minimize");*/
+      var tl = gsap.timeline();
+      tl.from(nodelabel, { opacity: 0 });
 
-      Flip.from(state, {
-        absolute: true, // uses position: absolute during the flip to work around flexbox challenges
-        nested: true,
-        duration: 1,
-        ease: "power1.inOut"
-      });
+
     }
   })
 };
