@@ -100,6 +100,7 @@ declare module 'vue' {
     NavigationMenuList: typeof import('./../components/cn/navigation-menu-ts/NavigationMenuList.vue')['default']
     NavigationMenuTrigger: typeof import('./../components/cn/navigation-menu-ts/NavigationMenuTrigger.vue')['default']
     NavigationMenuViewport: typeof import('./../components/cn/navigation-menu-ts/NavigationMenuViewport.vue')['default']
+    Omg: typeof import('./../pages/omg.vue')['default']
     PaginationEllipsis: typeof import('./../components/cn/pagination/PaginationEllipsis.vue')['default']
     PaginationFirst: typeof import('./../components/cn/pagination/PaginationFirst.vue')['default']
     PaginationLast: typeof import('./../components/cn/pagination/PaginationLast.vue')['default']
