@@ -88,15 +88,17 @@ function toggleMenu() {
 
       // Toggle the class on all elements
       //allElements.forEach(el => el.classList.toggle("minimize"));
-
-      nodelabel.forEach(el => el.classList.toggle("minimize"));
+      var menuState = menu.value;
+      const labelState = nodelabel.forEach(el => el.classList.add("minimize"));
+      const stateMenu = menuState.classList.add("minimize");
 
       Flip.from(state, {
         absolute: true, // uses position: absolute during the flip to work around flexbox challenges
+        nested: true,
+        simple: true,
         duration: 1,
         ease: "power1.inOut"
       });
-
     }
   })
 };
