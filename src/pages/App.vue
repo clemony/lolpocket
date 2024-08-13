@@ -181,7 +181,7 @@ onMounted(async () => {
     </div>
   </div>
 
-
+  <!-- v-if="minimized" :class="minimize" -->
 
   <div id="menu" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
 
@@ -229,7 +229,7 @@ onMounted(async () => {
 </template>
 
 <style>
-/*[data-pc-section="nodechildren"] [data-pc-section="nodecontent"] {
+[data-pc-section="nodechildren"] [data-pc-section="nodecontent"] {
   @apply pl-1 w-[calc(100%-0.25rem)];
 
   [data-pc-section="nodeicon"] {
@@ -241,9 +241,9 @@ onMounted(async () => {
   }
 
   [data-pc-section="nodelabel"] {
-    @apply truncate w-2;
+    @apply truncate;
   }
-}*/
+}
 
 [aria-label="Browse"],
 [aria-label="Utilities"] {
