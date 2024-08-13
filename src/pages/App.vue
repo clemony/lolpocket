@@ -64,57 +64,6 @@ const currentComponent = computed(() => {
 
 const menu = ref<HTMLDivElement | null>(null);
 
-function toggleMenu() {
-  // Use nextTick to ensure DOM elements are rendered
-  nextTick(() => {
-    if (menu.value) {
-
-      // Capture the initial state of the menu
-      const state = Flip.getState(menu.value);
-
-      // Use gsap.utils.selector with a proper context
-      const selector = gsap.utils.selector(menu.value);
-      const nav = selector(".nav");
-      const node = selector(".node");
-      const nodecontent = selector(".nodecontent");
-      const nodelabel = selector(".nodelabel");
-      const nodeicon = selector(".nodeicon");
-      const nodechildren = selector(".nodechildren");
-      const nodetogglebutton = selector(".nodetogglebutton");
-      const rootchildren = selector(".rootchildren");
-
-      // Create an array of all elements
-      const allElements = [
-        menu.value,
-        ...nav,
-        ...node,
-        ...nodecontent,
-        ...nodelabel,
-        ...nodeicon,
-        ...nodechildren,
-        ...nodetogglebutton,
-        ...rootchildren
-      ];
-
-      // Use Flip.getState for all elements individually
-      const states = allElements.map(el => Flip.getState(el));
-
-      // Toggle the class on all elements
-      //allElements.forEach(el => el.classList.toggle("minimize"));
-
-      nodelabel.forEach(el => el.classList.toggle("minimize"));
-
-      Flip.from(state, {
-        absolute: true, // uses position: absolute during the flip to work around flexbox challenges
-        duration: 0.5,
-        stagger: 0.1,
-        ease: "power1.inOut"
-        // you can use any other tweening properties here too, like onComplete, onUpdate, delay, etc. 
-      });
-
-    }
-  })
-};
 
 
 const nodes = ref<any[]>([]);
