@@ -230,7 +230,7 @@ onMounted(async () => {
 
 <style>
 [data-pc-section="nodechildren"] [data-pc-section="nodecontent"] {
-  @apply pl-1 w-[calc(100%-0.25rem)];
+  @apply pl-1 w-[calc(100%-0.25rem)] h-8;
 
   [data-pc-section="nodeicon"] {
     @apply mr-3;
@@ -241,7 +241,7 @@ onMounted(async () => {
   }
 
   [data-pc-section="nodelabel"] {
-    @apply truncate;
+    @apply truncate h-8;
   }
 }
 
