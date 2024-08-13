@@ -62,6 +62,7 @@ function toggleMenu() {
       // Capture the initial state of the menu
       const state = Flip.getState(menu.value);
 
+      var menuState = menu.value;
       // Use gsap.utils.selector with a proper context
       const selector = gsap.utils.selector(menu.value);
       const nav = selector(".nav");
@@ -88,7 +89,7 @@ function toggleMenu() {
 
       // Use Flip.getState for all elements individually
       const states = allElements.map(el => Flip.getState(el));
-      var menuState = menu.value;
+
 
       // Toggle the class on all elements
       // allElements.forEach(el => el.classList.add("minimize"));
