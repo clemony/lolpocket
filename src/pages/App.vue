@@ -229,7 +229,7 @@ onMounted(async () => {
 </template>
 
 <style>
-[data-pc-section="nodechildren"] [data-pc-section="nodecontent"] {
+/*[data-pc-section="nodechildren"] [data-pc-section="nodecontent"] {
   @apply pl-1 w-[calc(100%-0.25rem)];
 
   [data-pc-section="nodeicon"] {
@@ -243,7 +243,7 @@ onMounted(async () => {
   [data-pc-section="nodelabel"] {
     @apply truncate w-2;
   }
-}
+}*/
 
 [aria-label="Browse"],
 [aria-label="Utilities"] {
