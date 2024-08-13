@@ -183,7 +183,7 @@ onMounted(async () => {
 
 
 
-  <div id="menu" v-if="minimized" :class="minimize" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
+  <div id="menu" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
 
     <div class="col-start-1">
 
