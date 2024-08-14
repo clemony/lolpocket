@@ -91,7 +91,7 @@ function toggleMenu() {
   ];
   var tl = gsap.timeline();
   const state = Flip.getState(nodeicon);
-  tl.Flip.from(state, {
+  Flip.from(state, {
     duration: 1,
     ease: "power1.inOut",
     absolute: true,
