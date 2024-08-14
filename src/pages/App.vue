@@ -72,28 +72,7 @@ let rootchildren: HTMLElement[] = [];
 // Store the animation timeline
 const tl = ref<GSAPTimeline | null>(null);
 
-// Function to initialize element references
-function initializeElements() {
-  if (menuRef.value) {
-    const m = gsap.utils.selector(menuRef.value);
-    menu = menuRef.value;
-    nav = m(".nav");
-    node = m(".node");
-    nodecontent = m(".nodecontent");
-    nodelabel = m(".nodelabel");
-    nodeicon = m(".nodeicon");
-    nodechildren = m(".nodechildren");
-    nodetogglebutton = m(".nodetogglebutton");
-    nodetoggleicon = m(".nodetoggleicon");
-    rootchildren = m(".rootchildren");
-    hideThese = [
-      ...nodechildren,
-      ...nodetoggleicon,
-      ...nodetogglebutton,
-      ...nodelabel
-    ];
-  }
-}
+
 
 // Function to create the animation timeline
 function createMenuAnimation() {
