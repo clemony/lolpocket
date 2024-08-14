@@ -170,12 +170,15 @@ const onNodeSelect = (node: any) => {
 onMounted(async () => {
   const dataStore = useDataStore();
   await dataStore.fetchData();
+  console.log(menuRef);
+  await menuRef;
   NodeService.getTreeNodes().then((data: any) => {
     nodes.value = data;
   });
 
-  console.log(menuRef);
+
   nextTick(() => {
+
     initializeElements();
   })
 });
