@@ -174,8 +174,8 @@ onMounted(async () => {
     nodes.value = data;
   });
 
+  console.log(menuRef);
   nextTick(() => {
-    console.log(menuRef);
     initializeElements();
   })
 });
