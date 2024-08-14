@@ -5,7 +5,7 @@ import {
   type ContextMenuSubTriggerProps,
   useForwardProps,
 } from 'radix-vue'
-import { ChevronRightIcon } from '@radix-icons/vue'
+
 import { cn } from '@/lib/utils'
 
 const props = defineProps<ContextMenuSubTriggerProps & { class?: HTMLAttributes['class'], inset?: boolean }>()
