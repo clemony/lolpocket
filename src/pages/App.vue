@@ -92,7 +92,7 @@ function toggleMenu() {
       this.targets().forEach(elem => elem.classList.add("hidden"))
     }
   });
-  tl.from(menu, { gridTemplateColumns: "80px auto", duration: 4 }, ">");
+  tl.from(menu, { gridTemplateColumns: "80px auto", duration: 2 }, "<");
   tl.from(nav, { borderRadius: "20px", duration: 1 }, "<");
   tl.from(rootchildren, {
     display: "flex",
@@ -105,8 +105,8 @@ function toggleMenu() {
   tl.from(nodeicon, {
     margin: 0,
     padding: 0,
-    width: "1.5rem",
-    height: "1.5rem",
+    width: "1.2rem",
+    height: "1.2rem",
     alignSelf: "center",
     opacity: "0.8",
     duration: 1
