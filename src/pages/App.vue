@@ -80,44 +80,44 @@ function toggleMenu() {
     ...nodelabel
   ];
 
-  /*const state = Flip.getState(nodeicon);
+  const state = Flip.getState(nodeicon);
   Flip.from(state, {
     duration: 1,
     ease: "power1.inOut",
     absolute: true,
-  });*/
+  });
   var tl = gsap.timeline();
-  tl.from(hideThese, {
+  tl.to(hideThese, {
     opacity: 0, x: -100, duration: 0.25, onComplete: function () {
       this.targets().forEach(elem => elem.classList.add("hidden"))
     }
   });
-  tl.to(menu, { gridTemplateColumns: "70px auto", duration: 2 }, "<");
-  tl.from(nav, { borderRadius: "20px", duration: 1 }, "<");
-  tl.from(rootchildren, {
+  tl.to(menu, { gridTemplateColumns: "80px auto", duration: 0.5 }, "<");
+  tl.to(nav, { borderRadius: "15px", duration: 0.5 }, "<");
+  tl.to(rootchildren, {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     justifyItems: "center",
-    duration: 1,
+    duration: 0.5,
   }, "<");
-  tl.from(nodecontent, { width: "50%", duration: 1 }, "<");
-  tl.from(nodeicon, {
+  tl.to(nodecontent, { width: "50%", duration: 0.5 }, "<");
+  tl.to(nodeicon, {
     margin: 0,
     padding: 0,
-    width: "1.2rem",
-    height: "1.2rem",
+    width: "1.5rem",
+    height: "1.5rem",
     alignSelf: "center",
     opacity: "0.8",
-    duration: 1
+    duration: 0.5
   },
     "<");
-  tl.from(node, {
+  tl.to(node, {
     margin: "0.7rem 0",
     justifyContent: "center",
     justifyItems: "center",
     display: "flex",
-    duration: 1
+    duration: 0.5
   },
     "<");
   return tl;
