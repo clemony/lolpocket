@@ -7,7 +7,7 @@ import {
   DialogPortal,
   useForwardPropsEmits,
 } from "radix-vue";
-import { Cross2Icon } from "@radix-icons/vue";
+;
 import { sheetVariants } from ".";
 import { cn } from "@/lib/utils";
 

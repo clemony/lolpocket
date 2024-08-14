@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from "vue";
 import { PaginationPrev } from "radix-vue";
-import { ChevronLeftIcon } from "@radix-icons/vue";
+;
 import { Button } from "../button";
 import { cn } from "@/lib/utils";
 

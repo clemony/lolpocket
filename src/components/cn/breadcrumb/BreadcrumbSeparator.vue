@@ -1,5 +1,5 @@
 <script setup>
-import { ChevronRightIcon } from "@radix-icons/vue";
+;
 import { cn } from "@/lib/utils";
 
 const props = defineProps({

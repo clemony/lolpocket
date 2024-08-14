@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from "vue";
 import { PaginationEllipsis } from "radix-vue";
-import { DotsHorizontalIcon } from "@radix-icons/vue";
+;
 import { cn } from "@/lib/utils";
 
 const props = defineProps({

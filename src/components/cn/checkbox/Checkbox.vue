@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from "vue";
 import { CheckboxIndicator, CheckboxRoot, useForwardPropsEmits } from "radix-vue";
-import { CheckIcon } from "@radix-icons/vue";
+;
 import { cn } from "@/lib/utils";
 
 const props = defineProps({

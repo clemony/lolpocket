@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from "vue";
 import { PaginationLast } from "radix-vue";
-import { DoubleArrowRightIcon } from "@radix-icons/vue";
+;
 import { Button } from "../button";
 import { cn } from "@/lib/utils";
 
