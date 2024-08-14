@@ -120,6 +120,17 @@ function initializeElements() {
   }
 }
 
+// Function to store initial state of elements
+function storeInitialStates() {
+  hideThese.forEach(elem => {
+    // Store initial styles in a data attribute or in a variable
+    const style = getComputedStyle(elem);
+    elem.dataset.initialOpacity = style.opacity;
+    elem.dataset.initialDisplay = style.display;
+    elem.dataset.initialTransform = style.transform;
+  });
+}
+
 // Function to create the animation timeline
 function createMenuAnimation() {
   const timeline = gsap.timeline({ paused: true });
@@ -227,6 +238,7 @@ onMounted(async () => {
   });
   await nextTick();
   initializeElements();
+  storeInitialStates();
   tl.value = createMenuAnimation();
 });
 
