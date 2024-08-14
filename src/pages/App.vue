@@ -12,6 +12,7 @@ import { computed, DefineComponent, onMounted, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { Flip } from 'gsap/Flip';
 import { gsap } from 'gsap';
+import { T } from 'unplugin-vue-router/types-BXFGBApc';
 
 
 /* ------------------------------- NAVIGATION ------------------------------- */
@@ -53,22 +54,10 @@ const currentComponent = computed(() => {
 /* ---------------------------- SIDEBAR ANIMATION --------------------------- */
 
 
-const tooltipText = ref('Collapse');
-const tl = [];
-function handleMenuClick() {
-  // Update the tooltip text dynamically
-  tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
-  if (tooltipText.value == 'Collapse') {
-    tooltipText.value = 'Expand';
-    toggleMenu();
-  };
-  /*if (tooltipText.value == 'Expand') {
-    tooltipText.value = 'Collapse';
-    tl.reverse
-  };*/
-}
-
 const menuRef = ref<HTMLDivElement | null>(null);
+const tooltipText = ref('Collapse');
+const tl = menuChange();  // Initialize the timeline here
+
 
 function menuChange() {
   let menu = menuRef.value;
@@ -89,7 +78,7 @@ function menuChange() {
     ...nodetogglebutton,
     ...nodelabel
   ];
-  var tl = gsap.timeline();
+  var tl = gsap.timeline({ paused: true }); // Set the timeline to be paused initially
 
   tl.to(hideThese, {
     opacity: 0, x: -100, duration: 0.25, onComplete: function () {
@@ -134,7 +123,11 @@ function menuChange() {
     "<");
   return tl;
 };
+
+
 function toggleMenu() {
+  tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
+
   let menu = menuRef.value;
   console.log(menu);
   const m = gsap.utils.selector(menuRef.value);
@@ -145,14 +138,14 @@ function toggleMenu() {
     ease: "power1.inOut",
     absolute: true,
   });
-  reverse.tl
-};
 
-const minimized = ref(false);
-
-function minimize() {
-  minimized.value = true;
+  if (tooltipText.value == 'Collapse') {
+    tl.play();
+  } else {
+    tl.reverse();
+  }
 }
+
 
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
@@ -188,7 +181,7 @@ onMounted(async () => {
 
       <label
         class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-bottom before:text-xs before:font-normal before:left-[75%] [--tooltip-offset:30px] [--tooltip-tail-offset:24px]"
-        :data-tip="tooltipText" @click="toggleMenu">
+        :data-tip="tooltipText" @click="toggleMenu()">
         <!-- this hidden checkbox controls the state -->
         <input type="checkbox" />
 
