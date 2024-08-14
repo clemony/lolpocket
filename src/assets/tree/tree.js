@@ -94,7 +94,7 @@ export default {
         "rotate-0 rotate-180-ccw reverse": !context.expanded,
       },
 
-      "rotate-0",
+      "rotate-0 nodetoggleicon",
     ],
   }),
 
@@ -125,7 +125,7 @@ export default {
   }),
   nodeChildren: {
     class: [
-      "label list-none z-10 border-l border-l-base-200 ml-4 *:border-none *:ml-1",
+      "nodechildren list-none z-10 border-l border-l-base-200 ml-4 *:border-none *:ml-1",
       //last:mb-3
     ],
   },
