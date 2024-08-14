@@ -10,10 +10,8 @@ import { createApp } from "vue";
 import { createRouter, createWebHistory } from 'vue-router';
 import { routes } from 'vue-router/auto-routes';
 import { getCurrent } from '../node_modules/@tauri-apps/api/window.js';
-    
-import { Draggable } from "gsap/Draggable";
+
 import { Flip } from "gsap/Flip";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 
 
@@ -67,7 +65,7 @@ export type {
   TitleBarStyle,
   WindowOptions
 };
-gsap.registerPlugin(Flip,ScrollToPlugin,Draggable);
+gsap.registerPlugin(Flip);
 
 const pinia = createPinia()
 pinia.use(piniaPluginPersistedstate)
