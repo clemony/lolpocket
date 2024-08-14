@@ -169,7 +169,7 @@ function createMenuAnimation() {
   timeline.eventCallback("onReverseComplete", () => {
     hideThese.forEach(elem => {
       elem.classList.remove("hidden");
-      gsap.to(elem, { opacity: 1 }); // Reset styles
+      gsap.to(elem, { opacity: 1, duration: 5, ease: "power4.in" }); // Reset styles
       tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
     });
   });
