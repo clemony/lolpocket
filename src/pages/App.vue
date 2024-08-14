@@ -92,7 +92,7 @@ function toggleMenu() {
       this.targets().forEach(elem => elem.classList.add("hidden"))
     }
   });
-  tl.from(menu, { gridTemplateColumns: "80px auto", duration: 2 }, "<");
+  tl.from(menu, { gridTemplateColumns: "80px auto", duration: 4 }, "");
   tl.to(nav, { borderRadius: "20px", duration: 1 }, "<");
   tl.to(rootchildren, {
     display: "flex",
