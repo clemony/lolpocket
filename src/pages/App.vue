@@ -72,7 +72,11 @@ function toggleMenu() {
   const nodechildren = m(".nodechildren");
   const nodetogglebutton = m(".nodetogglebutton");
   const rootchildren = m(".rootchildren");
-
+  const hideThese = [
+    ...nodechildren,
+    ...nodetogglebutton,
+    ...nodelabel
+  ];
 
   tl.from(nodelabel, {
     opacity: 0, duration: 0.25, onComplete: function () {

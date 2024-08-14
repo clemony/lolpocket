@@ -82,7 +82,7 @@ export default {
       "transition duration-200",
 
       // Misc
-      "cursor-pointer select-none",
+      "cursor-pointer select-none nodetogglebutton",
     ],
   }),
 
@@ -94,7 +94,7 @@ export default {
         "rotate-0 rotate-180-ccw reverse": !context.expanded,
       },
 
-      "rotate-0 nodetoggleicon",
+      "rotate-0 ",
     ],
   }),
 
