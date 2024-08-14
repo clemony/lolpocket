@@ -1,5 +1,9 @@
 {
     "compilerOptions": {
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "noImplicitAny": false,
         "baseUrl": ".",
         "module": "esnext",
         "target": "esnext",

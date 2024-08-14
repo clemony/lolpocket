@@ -32,7 +32,7 @@ const settings = useUserSettings();
 
 
 
-type ValidPaths = '/builds' | '/' | '/champions' | '/items' | '/runes' | '/settings' | '/tree';
+type ValidPaths = '/builds' | '/' | '/champions' | '/items' | '/runes' | '/settings';
 
 const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/builds': Builds,
@@ -40,8 +40,7 @@ const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/champions': Champions,
   '/items': Items,
   '/runes': Runes,
-  '/settings': Settings,
-  '/tree': null,
+  '/settings': Settings
 };
 
 // Computed property for current view
@@ -120,16 +119,7 @@ function initializeElements() {
   }
 }
 
-// Function to store initial state of elements
-function storeInitialStates() {
-  hideThese.forEach(elem => {
-    // Store initial styles in a data attribute or in a variable
-    const style = getComputedStyle(elem);
-    elem.dataset.initialOpacity = style.opacity;
-    elem.dataset.initialDisplay = style.display;
-    elem.dataset.initialTransform = style.transform;
-  });
-}
+
 
 // Function to create the animation timeline
 function createMenuAnimation() {
@@ -238,7 +228,6 @@ onMounted(async () => {
   });
   await nextTick();
   initializeElements();
-  storeInitialStates();
   tl.value = createMenuAnimation();
 });
 
