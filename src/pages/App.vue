@@ -56,27 +56,22 @@ const menuRef = ref<HTMLDivElement | null>(null);
 // Capture the initial state of the menu
 //  const state = Flip.getState(menu.value);
 
-console.log(menuRef);
-var menu = menuRef.value;
-console.log(menu);
-const m = gsap.utils.selector(menuRef.value);
-const nav = m(".nav");
-const node = m(".node");
-const nodecontent = m(".nodecontent");
-const nodelabel = m(".nodelabel");
-const nodeicon = m(".nodeicon");
-const nodechildren = m(".nodechildren");
-const nodetogglebutton = m(".nodetogglebutton");
-const rootchildren = m(".rootchildren");
-const hideThese = [
-  ...nodechildren,
-  ...nodetogglebutton,
-  ...nodelabel
-];
 
 function toggleMenu() {
 
   var tl = gsap.timeline();
+  console.log(menuRef);
+  var menu = menuRef.value;
+  console.log(menu);
+  const m = gsap.utils.selector(menuRef.value);
+  const nav = m(".nav");
+  const node = m(".node");
+  const nodecontent = m(".nodecontent");
+  const nodelabel = m(".nodelabel");
+  const nodeicon = m(".nodeicon");
+  const nodechildren = m(".nodechildren");
+  const nodetogglebutton = m(".nodetogglebutton");
+  const rootchildren = m(".rootchildren");
 
 
   tl.from(nodelabel, {
