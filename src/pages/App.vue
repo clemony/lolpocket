@@ -104,7 +104,7 @@ function toggleMenu() {
   tl.to(nodecontent, {
     width: "75%",
     display: "flex",
-    padding: 1,
+    paddingLeft: 7,
     alignContent: "center",
     alignItems: "center",
     duration: 0.5
@@ -116,7 +116,7 @@ function toggleMenu() {
     height: "100%",
     alignSelf: "center",
     opacity: "0.8",
-    duration: 0.5
+    duration: 0.5,
   },
     "<");
   tl.to(node, {
