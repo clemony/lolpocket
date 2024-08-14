@@ -58,8 +58,6 @@ const menuRef = ref<HTMLDivElement | null>(null);
 
 
 function toggleMenu() {
-
-
   console.log(menuRef);
   var menu = menuRef.value;
   console.log(menu);
