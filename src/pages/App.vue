@@ -52,11 +52,15 @@ const currentComponent = computed(() => {
 
 /* ---------------------------- SIDEBAR ANIMATION --------------------------- */
 
+
+const tooltipText = ref('Collapse');
+
+function handleMenuClick() {
+  // Update the tooltip text dynamically
+  tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
+}
+
 const menuRef = ref<HTMLDivElement | null>(null);
-// Capture the initial state of the menu
-//  const state = Flip.getState(menu.value);
-
-
 function toggleMenu() {
   console.log(menuRef);
   var menu = menuRef.value;
@@ -170,7 +174,7 @@ onMounted(async () => {
 
       <label
         class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-bottom before:text-xs before:font-normal before:left-[75%] [--tooltip-offset:30px] [--tooltip-tail-offset:24px]"
-        data-tip="Collapse" @click="toggleMenu">
+        :data-tip="tooltipText" @click="handleMenuClick">
         <!-- this hidden checkbox controls the state -->
         <input type="checkbox" />
 
