@@ -55,13 +55,13 @@ const currentComponent = computed(() => {
 
 
 const menuRef = ref<HTMLDivElement | null>(null);
-const menu = [];
-const hideThese = [];
-const nav = [];
-const rootchildren = [];
-const nodecontent = [];
-const nodeicon = [];
-const node = [];
+var menu = null;
+var hideThese = null;
+const nav = null;
+const rootchildren = null;
+const nodecontent = null;
+const nodeicon = null;
+const node = null;
 
 function initializeMenu() {
   let menu = menuRef.value;
