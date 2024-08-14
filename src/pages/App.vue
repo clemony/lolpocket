@@ -32,11 +32,11 @@ const settings = useUserSettings();
 
 
 
-type ValidPaths = '/builds' | '/home' | '/champions' | '/items' | '/runes' | '/settings';
+type ValidPaths = '/builds' | '/' | '/champions' | '/items' | '/runes' | '/settings';
 
 const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/builds': Builds,
-  '/home': Home,
+  '/': Home,
   '/champions': Champions,
   '/items': Items,
   '/runes': Runes,
@@ -55,7 +55,7 @@ const menuRef = ref<HTMLDivElement | null>(null);
 const tooltipText = ref('Collapse');
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
-/*
+
 let hideThese: HTMLElement[] = [];
 let menu: HTMLElement | null = null;
 let nav: HTMLElement[] = [];
@@ -222,7 +222,6 @@ function toggleMenu() {
   }
 }
 
-*/
 // Method for node selection in the tree
 const onNodeSelect = (node: any) => {
   navigateTo(node.data);
@@ -233,14 +232,15 @@ const onNodeSelect = (node: any) => {
 onMounted(async () => {
   const dataStore = useDataStore();
   await dataStore.fetchData();
-  /* console.log(menuRef);
-   await menuRef;
-   await NodeService.getTreeNodes().then((data: any) => {
-     nodes.value = data;
-   });
-   await nextTick();
-   initializeElements();
-   tl.value = createMenuAnimation();*/
+  await NodeService.getTreeNodes().then((data: any) => {
+    nodes.value = data;
+  });
+  console.log(menuRef);
+  /*await menuRef;
+
+  await nextTick();
+  initializeElements();
+  tl.value = createMenuAnimation();*/
 });
 
 </script>
@@ -252,21 +252,21 @@ onMounted(async () => {
 
     <div
       class="title col-start-1 justify-self-start flex items-center p-0 text-base tracking-wide font-semibold border-none shadow-none h-6 absolute left-[10px] top-[6px] z-40 bg-transparent">
-      <!--  @click="toggleMenu() -->
+
       <label
         class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-bottom before:text-xs before:font-normal before:left-[75%] [--tooltip-offset:30px] [--tooltip-tail-offset:24px]"
-        :data-tip="tooltipText"">
+        :data-tip="tooltipText" @click="toggleMenu()">
         <!-- this hidden checkbox controls the state -->
-        <input type=" checkbox" />
+        <input type="checkbox" />
 
-      <!-- expanded icon -->
+        <!-- expanded icon -->
 
-      <Icon icon="tabler:layout-sidebar-right-expand-filled"
-        class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-off fill-current" />
+        <Icon icon="tabler:layout-sidebar-right-expand-filled"
+          class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-off fill-current" />
 
-      <!-- collapsed icon -->
-      <Icon icon="tabler:layout-sidebar-left-expand-filled"
-        class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-on fill-current" />
+        <!-- collapsed icon -->
+        <Icon icon="tabler:layout-sidebar-left-expand-filled"
+          class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-on fill-current" />
       </label>
 
       <span>lolpocket</span>
