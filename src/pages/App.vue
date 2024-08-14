@@ -69,35 +69,34 @@ function handleMenuClick() {
 }
 
 const menuRef = ref<HTMLDivElement | null>(null);
-console.log(menuRef);
-var menu = menuRef.value;
-console.log(menu);
-const m = gsap.utils.selector(menuRef.value);
-const nav = m(".nav");
-const node = m(".node");
-const nodecontent = m(".nodecontent");
-const nodelabel = m(".nodelabel");
-const nodeicon = m(".nodeicon");
-const nodechildren = m(".nodechildren");
-const nodetogglebutton = m(".nodetogglebutton");
-const nodetoggleicon = m(".nodetoggleicon");
-const rootchildren = m(".rootchildren");
-const hideThese = [
-  ...nodechildren,
-  ...nodetoggleicon,
-  ...nodetogglebutton,
-  ...nodelabel
-];
 function toggleMenu() {
-
-
+  console.log(menuRef);
+  var menu = menuRef.value;
+  console.log(menu);
+  const m = gsap.utils.selector(menuRef.value);
+  const nav = m(".nav");
+  const node = m(".node");
+  const nodecontent = m(".nodecontent");
+  const nodelabel = m(".nodelabel");
+  const nodeicon = m(".nodeicon");
+  const nodechildren = m(".nodechildren");
+  const nodetogglebutton = m(".nodetogglebutton");
+  const nodetoggleicon = m(".nodetoggleicon");
+  const rootchildren = m(".rootchildren");
+  const hideThese = [
+    ...nodechildren,
+    ...nodetoggleicon,
+    ...nodetogglebutton,
+    ...nodelabel
+  ];
+  var tl = gsap.timeline();
   const state = Flip.getState(nodeicon);
-  Flip.from(state, {
+  tl.Flip.from(state, {
     duration: 1,
     ease: "power1.inOut",
     absolute: true,
   });
-  var tl = gsap.timeline();
+
   tl.to(hideThese, {
     opacity: 0, x: -100, duration: 0.25, onComplete: function () {
       this.targets().forEach(elem => elem.classList.add("hidden"))
@@ -183,7 +182,7 @@ onMounted(async () => {
 
       <label
         class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-bottom before:text-xs before:font-normal before:left-[75%] [--tooltip-offset:30px] [--tooltip-tail-offset:24px]"
-        :data-tip="tooltipText" @click="handleMenuClick">
+        :data-tip="tooltipText" @click="toggleMenu">
         <!-- this hidden checkbox controls the state -->
         <input type="checkbox" />
 
