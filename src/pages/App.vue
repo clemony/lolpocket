@@ -126,10 +126,11 @@ function createMenuAnimation() {
   const timeline = gsap.timeline({ paused: true });
 
   timeline.to(hideThese, {
-    opacity: 0, duration: 0.25, onComplete: function () {
-      this.targets().forEach(elem => elem.classList.add("invisible, text-transparent"));
-    }
-  });
+    opacity: 0,
+    visibility: 0,
+    duration: 0.25
+  }
+  );
   timeline.to(menu, { gridTemplateColumns: "75px auto", duration: 0.5 }, "<");
   timeline.to(nav, { borderRadius: "15px", duration: 0.5 }, "<");
   timeline.to(rootchildren, {
