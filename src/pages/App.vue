@@ -88,7 +88,7 @@ function toggleMenu() {
   });
   var tl = gsap.timeline();
   tl.from(hideThese, {
-    opacity: 0, duration: 0.25, onComplete: function () {
+    opacity: 0, visibility: "hidden", duration: 1, onComplete: function () {
       this.targets().forEach(elem => elem.classList.add("hidden"))
     }
   });
