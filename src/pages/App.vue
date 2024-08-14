@@ -185,7 +185,16 @@ function toggleMenu() {
   const m = gsap.utils.selector(menuRef.value);
   const nodeicon = m(".nodeicon");
   const state = Flip.getState(nodeicon);
+  const state1 = Flip.getState(nodelabel);
+  const states = '';
   Flip.from(state, {
+    duration: 1,
+    nested: true,
+    ease: "power1.inOut",
+    absolute: true,
+  });
+
+  Flip.from(state1, {
     duration: 1,
     nested: true,
     ease: "power1.inOut",
