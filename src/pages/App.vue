@@ -31,54 +31,70 @@ const route = useRoute();
 const settings = useUserSettings();
 
 
-type ValidPaths = '/builds' | '/' | '/champions' | '/items' | '/runes' | '/settings' | '/tree';
 
+type ValidPaths = '/builds' | '/' | '/champions' | '/items' | '/runes' | '/settings' | '/tree';
 
 const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/builds': Builds,
-  '/': Home, // Adjust this if the component is incorrect
+  '/': Home,
   '/champions': Champions,
   '/items': Items,
   '/runes': Runes,
-  '/settings': Settings, // Adjust if necessary
+  '/settings': Settings,
   '/tree': null,
 };
 
 // Computed property for current view
 const currentComponent = computed(() => {
-  const currentPath = route.path as ValidPaths; // Adjust the type to match ValidPaths
+  const currentPath = route.path as ValidPaths;
   return componentMap[currentPath] || null;
 });
 
-
 /* ---------------------------- SIDEBAR ANIMATION --------------------------- */
-
 
 const menuRef = ref<HTMLDivElement | null>(null);
 const tooltipText = ref('Collapse');
-const tl = menuChange();  // Initialize the timeline here
+const nodes = ref<any[]>([]);
+const selectedKey = ref<string[]>([]);
 
+let hideThese: HTMLElement[] = [];
+let menu: HTMLElement | null = null;
+let nav: HTMLElement[] = [];
+let node: HTMLElement[] = [];
+let nodecontent: HTMLElement[] = [];
+let nodelabel: HTMLElement[] = [];
+let nodeicon: HTMLElement[] = [];
+let nodechildren: HTMLElement[] = [];
+let nodetogglebutton: HTMLElement[] = [];
+let nodetoggleicon: HTMLElement[] = [];
+let rootchildren: HTMLElement[] = [];
 
+// Function to initialize element references
+function initializeElements() {
+  if (menuRef.value) {
+    const m = gsap.utils.selector(menuRef.value);
+    menu = menuRef.value;
+    nav = m(".nav");
+    node = m(".node");
+    nodecontent = m(".nodecontent");
+    nodelabel = m(".nodelabel");
+    nodeicon = m(".nodeicon");
+    nodechildren = m(".nodechildren");
+    nodetogglebutton = m(".nodetogglebutton");
+    nodetoggleicon = m(".nodetoggleicon");
+    rootchildren = m(".rootchildren");
+    hideThese = [
+      ...nodechildren,
+      ...nodetoggleicon,
+      ...nodetogglebutton,
+      ...nodelabel
+    ];
+  }
+}
+
+// Function to create the animation timeline
 function menuChange() {
-  let menu = menuRef.value;
-  console.log(menu);
-  const m = gsap.utils.selector(menuRef.value);
-  const nav = m(".nav");
-  const node = m(".node");
-  const nodecontent = m(".nodecontent");
-  const nodelabel = m(".nodelabel");
-  const nodeicon = m(".nodeicon");
-  const nodechildren = m(".nodechildren");
-  const nodetogglebutton = m(".nodetogglebutton");
-  const nodetoggleicon = m(".nodetoggleicon");
-  const rootchildren = m(".rootchildren");
-  const hideThese = [
-    ...nodechildren,
-    ...nodetoggleicon,
-    ...nodetogglebutton,
-    ...nodelabel
-  ];
-  var tl = gsap.timeline({ paused: true }); // Set the timeline to be paused initially
+  const tl = gsap.timeline({ paused: true });
 
   tl.to(hideThese, {
     opacity: 0, x: -100, duration: 0.25, onComplete: function () {
@@ -110,8 +126,7 @@ function menuChange() {
     alignSelf: "center",
     opacity: "0.8",
     duration: 0.5,
-  },
-    "<");
+  }, "<");
   tl.to(node, {
     margin: "0.7rem 0",
     padding: 0,
@@ -119,17 +134,16 @@ function menuChange() {
     justifyItems: "center",
     display: "flex",
     duration: 0.5
-  },
-    "<");
+  }, "<");
   return tl;
-};
+}
 
+const tl = menuChange();
 
+// Method to toggle the sidebar menu
 function toggleMenu() {
   tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
 
-  let menu = menuRef.value;
-  console.log(menu);
   const m = gsap.utils.selector(menuRef.value);
   const nodeicon = m(".nodeicon");
   const state = Flip.getState(nodeicon);
@@ -146,29 +160,25 @@ function toggleMenu() {
   }
 }
 
-
-const nodes = ref<any[]>([]);
-const selectedKey = ref<string[]>([]);
-
-const onNodeSelect = (node) => {
-
+// Method for node selection in the tree
+const onNodeSelect = (node: any) => {
   navigateTo(node.data);
-
 };
 
-/* ------------------------------ // ON MOUNTED ----------------------------- */
+/* ------------------------------ ON MOUNTED ----------------------------- */
 
 onMounted(async () => {
+  const dataStore = useDataStore();
+  await dataStore.fetchData();
+  NodeService.getTreeNodes().then((data: any) => {
+    nodes.value = data;
+  });
 
-  useDataStore().fetchData();
-  NodeService.getTreeNodes().then((data: null) => (nodes.value = data));
   nextTick(() => {
     console.log(menuRef);
+    initializeElements();
   })
-
 });
-
-
 </script>
 
 <template>
