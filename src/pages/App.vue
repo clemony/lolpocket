@@ -229,16 +229,16 @@ const onNodeSelect = (node: any) => {
 
 /* ------------------------------ ON MOUNTED ----------------------------- */
 
-onMounted(
+onMounted(async () => {
   const dataStore = useDataStore();
-await dataStore.fetchData();
-await NodeService.getTreeNodes().then((data: any) => {
-  nodes.value = data;
+  await dataStore.fetchData();
+  await NodeService.getTreeNodes().then((data: any) => {
+    nodes.value = data;
+  });
+  console.log(menuRef);
+  initializeElements();
+  tl.value = createMenuAnimation();
 });
-console.log(menuRef);
-initializeElements();
-tl.value = createMenuAnimation();
-);
 
 </script>
 
