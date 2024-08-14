@@ -78,7 +78,7 @@ function toggleMenu() {
     ...nodelabel
   ];
 
-  tl.from(hideThese, {
+  tl.from(nodelabel, {
     opacity: 0, duration: 0.25, onComplete: function () {
       this.targets().forEach(elem => elem.classList.add("hidden"))
     }
