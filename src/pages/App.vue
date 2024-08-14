@@ -95,7 +95,6 @@ function initializeElements() {
 // Function to create the animation timeline
 function menuChange() {
   const tl = gsap.timeline({ paused: true });
-  tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
 
   const state = Flip.getState(nodeicon);
   Flip.from(state, {
@@ -144,12 +143,6 @@ function menuChange() {
     duration: 0.5
   }, "<");
 
-  if (tooltipText.value == 'Collapse') {
-    tl.play();
-  } else {
-    tl.reverse();
-  }
-
   return tl;
 }
 
@@ -157,7 +150,12 @@ const tl = menuChange();
 
 // Method to toggle the sidebar menu
 function toggleMenu() {
-
+  tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
+  if (tooltipText.value == 'Collapse') {
+    tl.play();
+  } else {
+    tl.reverse();
+  }
 }
 
 // Method for node selection in the tree
