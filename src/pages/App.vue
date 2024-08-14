@@ -163,14 +163,20 @@ function createMenuAnimation() {
     display: "flex",
     duration: 0.5
   }, "<");
+  // Return the timeline with onComplete callback to update tooltip text
+  timeline.eventCallback("onComplete", () => {
+    if (tooltipText.value === 'Collapse') {
+      tooltipText.value = 'Expand';
+    } else {
+      tooltipText.value = 'Collapse';
+    }
+  });
 
   return timeline;
 }
 
 // Method to toggle the sidebar menu
 function toggleMenu() {
-  tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
-
   const m = gsap.utils.selector(menuRef.value);
   const nodeicon = m(".nodeicon");
   const state = Flip.getState(nodeicon);
