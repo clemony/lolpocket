@@ -96,8 +96,6 @@ function toggleMenu() {
   tl.to(nodecontent, { width: "50%", duration: 1 }, "<");
   tl.to(nodeicon, {
     margin: 0,
-    width: "1.35rem",
-    height: "1.35rem",
     alignSelf: "center",
     opacity: "0.8",
     duration: 1
