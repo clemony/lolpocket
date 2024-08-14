@@ -9,10 +9,6 @@ declare module 'vue' {
   export interface GlobalComponents {
     AlbumArtwork: typeof import('./../pages/AlbumArtwork.vue')['default']
     App: typeof import('./../pages/App.vue')['default']
-    Avatar: typeof import('./../components/ui/avatar/Avatar.vue')['default']
-    AvatarFallback: typeof import('./../components/ui/avatar/AvatarFallback.vue')['default']
-    AvatarImage: typeof import('./../components/ui/avatar/AvatarImage.vue')['default']
-    Badge: typeof import('./../components/ui/badge/Badge.vue')['default']
     Breadcrumb: typeof import('./../components/cn/breadcrumb/Breadcrumb.vue')['default']
     BreadcrumbEllipsis: typeof import('./../components/cn/breadcrumb/BreadcrumbEllipsis.vue')['default']
     BreadcrumbItem: typeof import('./../components/cn/breadcrumb/BreadcrumbItem.vue')['default']
@@ -90,8 +86,6 @@ declare module 'vue' {
     ItemInfo: typeof import('./../pages/modules/ItemInfo.vue')['default']
     Items: typeof import('./../pages/items.vue')['default']
     Label: typeof import('./../components/cn/label/Label.vue')['default']
-    Links: typeof import('../../../notes/links.vue')['default']
-    Menu: typeof import('./../components/ui/menu.vue')['default']
     NavigationMenu: typeof import('./../components/cn/navigation-menu-ts/NavigationMenu.vue')['default']
     NavigationMenuContent: typeof import('./../components/cn/navigation-menu-ts/NavigationMenuContent.vue')['default']
     NavigationMenuIndicator: typeof import('./../components/cn/navigation-menu-ts/NavigationMenuIndicator.vue')['default']
@@ -159,6 +153,5 @@ declare module 'vue' {
     TooltipContent: typeof import('./../components/cn/tooltip/TooltipContent.vue')['default']
     TooltipProvider: typeof import('./../components/cn/tooltip/TooltipProvider.vue')['default']
     TooltipTrigger: typeof import('./../components/cn/tooltip/TooltipTrigger.vue')['default']
-    Tree: typeof import('./../pages/tree.vue')['default']
   }
 }
