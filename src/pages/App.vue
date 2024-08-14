@@ -125,7 +125,7 @@ function createMenuAnimation() {
   const timeline = gsap.timeline({ paused: true });
 
   timeline.to(hideThese, {
-    opacity: 0, x: -100, duration: 0.25, onComplete: function () {
+    opacity: 0, duration: 0.25, onComplete: function () {
       this.targets().forEach(elem => elem.classList.add("hidden"));
     }
   });
@@ -168,7 +168,7 @@ function createMenuAnimation() {
   timeline.eventCallback("onReverseComplete", () => {
     hideThese.forEach(elem => {
       elem.classList.remove("hidden");
-      gsap.to(elem, { opacity: 1, x: 0 }); // Reset styles
+      gsap.to(elem, { opacity: 1 }); // Reset styles
       tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
     });
   });
