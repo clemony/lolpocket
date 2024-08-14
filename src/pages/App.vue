@@ -54,7 +54,7 @@ const currentComponent = computed(() => {
 
 
 const tooltipText = ref('Collapse');
-
+const tl = [];
 function handleMenuClick() {
   // Update the tooltip text dynamically
   tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
@@ -134,7 +134,7 @@ function toggleMenu() {
     duration: 0.5
   },
     "<");
-  return toggleMenu;
+  return tl;
 
 };
 
