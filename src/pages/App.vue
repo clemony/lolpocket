@@ -32,11 +32,11 @@ const settings = useUserSettings();
 
 
 
-type ValidPaths = '/builds' | '/' | '/champions' | '/items' | '/runes' | '/settings';
+type ValidPaths = '/builds' | '/home' | '/champions' | '/items' | '/runes' | '/settings';
 
 const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/builds': Builds,
-  '/': Home,
+  '/home': Home,
   '/champions': Champions,
   '/items': Items,
   '/runes': Runes,
@@ -252,7 +252,7 @@ onMounted(async () => {
 
     <div
       class="title col-start-1 justify-self-start flex items-center p-0 text-base tracking-wide font-semibold border-none shadow-none h-6 absolute left-[10px] top-[6px] z-40 bg-transparent">
-
+      <!--  @click="toggleMenu() -->
       <label
         class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-bottom before:text-xs before:font-normal before:left-[75%] [--tooltip-offset:30px] [--tooltip-tail-offset:24px]"
         :data-tip="tooltipText"">
