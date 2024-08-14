@@ -187,7 +187,7 @@ function toggleMenu() {
   const m = gsap.utils.selector(menuRef.value);
   const nodeicon = m(".nodeicon");
   const state = Flip.getState(nodeicon);
-  const state1 = Flip.getState(nodelabel);
+  const state1 = Flip.getState(hideThese);
   const states = '';
   Flip.from(state, {
     duration: 1,
