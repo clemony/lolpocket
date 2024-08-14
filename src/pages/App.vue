@@ -163,13 +163,18 @@ function createMenuAnimation() {
     display: "flex",
     duration: 0.5
   }, "<");
-  // Return the timeline with onComplete callback to update tooltip text
+
+  // Reset visibility when reversing
+  timeline.eventCallback("onReverseComplete", () => {
+    hideThese.forEach(elem => {
+      elem.classList.remove("hidden");
+      gsap.set(elem, { opacity: 1, x: 0 }); // Reset styles
+    });
+  });
+
+  // Update tooltip text after animation completes
   timeline.eventCallback("onComplete", () => {
-    if (tooltipText.value === 'Collapse') {
-      tooltipText.value = 'Expand';
-    } else {
-      tooltipText.value = 'Collapse';
-    }
+    tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
   });
 
   return timeline;
