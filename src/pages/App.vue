@@ -55,42 +55,29 @@ const currentComponent = computed(() => {
 
 
 const menuRef = ref<HTMLDivElement | null>(null);
-var menu = null;
-var hideThese = null;
-const nav = null;
-const rootchildren = null;
-const nodecontent = null;
-const nodeicon = null;
-const node = null;
-
-function initializeMenu() {
-  let menu = menuRef.value;
-  console.log(menu);
-  let m = gsap.utils.selector(menuRef.value);
-  let nav = m(".nav");
-  let node = m(".node");
-  let nodecontent = m(".nodecontent");
-  let nodelabel = m(".nodelabel");
-  let nodeicon = m(".nodeicon");
-  let nodechildren = m(".nodechildren");
-  let nodetogglebutton = m(".nodetogglebutton");
-  let nodetoggleicon = m(".nodetoggleicon");
-  let rootchildren = m(".rootchildren");
-  let hideThese = [
-    ...nodechildren,
-    ...nodetoggleicon,
-    ...nodetogglebutton,
-    ...nodelabel
-  ];
-  return { menu, nav, node, nodecontent, nodelabel, nodeicon, hideThese, rootchildren }
-}
-
 const tooltipText = ref('Collapse');
 const tl = menuChange();  // Initialize the timeline here
 
 
 function menuChange() {
-
+  let menu = menuRef.value;
+  console.log(menu);
+  const m = gsap.utils.selector(menuRef.value);
+  const nav = m(".nav");
+  const node = m(".node");
+  const nodecontent = m(".nodecontent");
+  const nodelabel = m(".nodelabel");
+  const nodeicon = m(".nodeicon");
+  const nodechildren = m(".nodechildren");
+  const nodetogglebutton = m(".nodetogglebutton");
+  const nodetoggleicon = m(".nodetoggleicon");
+  const rootchildren = m(".rootchildren");
+  const hideThese = [
+    ...nodechildren,
+    ...nodetoggleicon,
+    ...nodetogglebutton,
+    ...nodelabel
+  ];
   var tl = gsap.timeline({ paused: true }); // Set the timeline to be paused initially
 
   tl.to(hideThese, {
