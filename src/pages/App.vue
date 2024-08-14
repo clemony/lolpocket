@@ -104,7 +104,9 @@ function toggleMenu() {
   tl.to(nodecontent, {
     width: "75%",
     display: "flex",
+    padding: 0,
     alignContent: "center",
+    alignItems: "center",
     duration: 0.5
   }, "<");
   tl.to(nodeicon, {
