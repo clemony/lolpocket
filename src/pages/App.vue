@@ -86,7 +86,7 @@ function toggleMenu() {
     }
   });
   tl.from(menu, { gridTemplateColumns: "80px auto", duration: 1 }, "<");
-  tl.to(nav, { borderRadius: "20px", paddingLeft: "3px", duration: 1 }, "<");
+  tl.to(nav, { borderRadius: "20px", duration: 1 }, "<");
   tl.to(rootchildren, {
     display: "flex",
     flexDirection: "column",
