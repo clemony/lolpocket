@@ -51,7 +51,7 @@ const currentComponent = computed(() => {
 
 
 /* ---------------------------- SIDEBAR ANIMATION --------------------------- */
-/*
+
 const menuRef = ref<HTMLDivElement | null>(null);
 // Capture the initial state of the menu
 //  const state = Flip.getState(menu.value);
@@ -93,8 +93,8 @@ function toggleMenu() {
   },
     "<");
   tl.to(node, { margin: "0.7rem 0", justifyContent: "center", justifyItems: "center", display: "flex", duration: 1 }, "<");
-
-};*/
+  return tl;
+};
 
 const minimized = ref(false);
 
@@ -136,7 +136,7 @@ onMounted(async () => {
 
       <label
         class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-bottom before:text-xs before:font-normal before:left-[75%] [--tooltip-offset:30px] [--tooltip-tail-offset:24px]"
-        data-tip="Collapse" @click="minimize">
+        data-tip="Collapse" @click="toggleMenu">
         <!-- this hidden checkbox controls the state -->
         <input type="checkbox" />
 
