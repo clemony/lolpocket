@@ -62,29 +62,34 @@ function handleMenuClick() {
     tooltipText.value = 'Expand';
     toggleMenu();
   };
+  /*if (tooltipText.value == 'Expand') {
+    tooltipText.value = 'Collapse';
+    tl.reverse
+  };*/
 }
 
 const menuRef = ref<HTMLDivElement | null>(null);
+console.log(menuRef);
+var menu = menuRef.value;
+console.log(menu);
+const m = gsap.utils.selector(menuRef.value);
+const nav = m(".nav");
+const node = m(".node");
+const nodecontent = m(".nodecontent");
+const nodelabel = m(".nodelabel");
+const nodeicon = m(".nodeicon");
+const nodechildren = m(".nodechildren");
+const nodetogglebutton = m(".nodetogglebutton");
+const nodetoggleicon = m(".nodetoggleicon");
+const rootchildren = m(".rootchildren");
+const hideThese = [
+  ...nodechildren,
+  ...nodetoggleicon,
+  ...nodetogglebutton,
+  ...nodelabel
+];
 function toggleMenu() {
-  console.log(menuRef);
-  var menu = menuRef.value;
-  console.log(menu);
-  const m = gsap.utils.selector(menuRef.value);
-  const nav = m(".nav");
-  const node = m(".node");
-  const nodecontent = m(".nodecontent");
-  const nodelabel = m(".nodelabel");
-  const nodeicon = m(".nodeicon");
-  const nodechildren = m(".nodechildren");
-  const nodetogglebutton = m(".nodetogglebutton");
-  const nodetoggleicon = m(".nodetoggleicon");
-  const rootchildren = m(".rootchildren");
-  const hideThese = [
-    ...nodechildren,
-    ...nodetoggleicon,
-    ...nodetogglebutton,
-    ...nodelabel
-  ];
+
 
   const state = Flip.getState(nodeicon);
   Flip.from(state, {
