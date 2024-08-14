@@ -57,11 +57,6 @@ const tooltipText = ref('Collapse');
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
 
-
-
-// Function to initialize element references
-
-
 let hideThese: HTMLElement[] = [];
 let menu: HTMLElement | null = null;
 let nav: HTMLElement[] = [];
@@ -74,26 +69,51 @@ let nodetogglebutton: HTMLElement[] = [];
 let nodetoggleicon: HTMLElement[] = [];
 let rootchildren: HTMLElement[] = [];
 
+// Store the animation timeline
+const tl = ref<GSAPTimeline | null>(null);
+
+// Function to initialize element references
+function initializeElements() {
+  if (menuRef.value) {
+    const m = gsap.utils.selector(menuRef.value);
+    menu = menuRef.value;
+    nav = m(".nav");
+    node = m(".node");
+    nodecontent = m(".nodecontent");
+    nodelabel = m(".nodelabel");
+    nodeicon = m(".nodeicon");
+    nodechildren = m(".nodechildren");
+    nodetogglebutton = m(".nodetogglebutton");
+    nodetoggleicon = m(".nodetoggleicon");
+    rootchildren = m(".rootchildren");
+    hideThese = [
+      ...nodechildren,
+      ...nodetoggleicon,
+      ...nodetogglebutton,
+      ...nodelabel
+    ];
+  }
+}
 
 // Function to create the animation timeline
-function menuChange() {
-  const tl = gsap.timeline({ paused: true });
+function createMenuAnimation() {
+  const timeline = gsap.timeline({ paused: true });
 
-  tl.to(hideThese, {
+  timeline.to(hideThese, {
     opacity: 0, x: -100, duration: 0.25, onComplete: function () {
-      this.targets().forEach(elem => elem.classList.add("hidden"))
+      this.targets().forEach(elem => elem.classList.add("hidden"));
     }
   });
-  tl.to(menu, { gridTemplateColumns: "75px auto", duration: 0.5 }, "<");
-  tl.to(nav, { borderRadius: "15px", duration: 0.5 }, "<");
-  tl.to(rootchildren, {
+  timeline.to(menu, { gridTemplateColumns: "75px auto", duration: 0.5 }, "<");
+  timeline.to(nav, { borderRadius: "15px", duration: 0.5 }, "<");
+  timeline.to(rootchildren, {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     justifyItems: "center",
     duration: 0.5,
   }, "<");
-  tl.to(nodecontent, {
+  timeline.to(nodecontent, {
     width: "75%",
     display: "flex",
     paddingLeft: 7,
@@ -101,7 +121,7 @@ function menuChange() {
     alignItems: "center",
     duration: 0.5
   }, "<");
-  tl.to(nodeicon, {
+  timeline.to(nodeicon, {
     margin: 0,
     padding: 0,
     width: "100%",
@@ -110,7 +130,7 @@ function menuChange() {
     opacity: "0.8",
     duration: 0.5,
   }, "<");
-  tl.to(node, {
+  timeline.to(node, {
     margin: "0.7rem 0",
     padding: 0,
     justifyContent: "center",
@@ -118,10 +138,9 @@ function menuChange() {
     display: "flex",
     duration: 0.5
   }, "<");
-  return tl;
-}
 
-const tl = menuChange();
+  return timeline;
+}
 
 // Method to toggle the sidebar menu
 function toggleMenu() {
@@ -137,11 +156,12 @@ function toggleMenu() {
   });
 
   if (tooltipText.value == 'Collapse') {
-    tl.play();
+    tl.value?.play();
   } else {
-    tl.reverse();
+    tl.value?.reverse();
   }
 }
+
 
 // Method for node selection in the tree
 const onNodeSelect = (node: any) => {
@@ -158,45 +178,11 @@ onMounted(async () => {
   NodeService.getTreeNodes().then((data: any) => {
     nodes.value = data;
   });
-
-
-  nextTick(() => {
-    function initializeElements() {
-      if (menuRef.value) {
-        const m = gsap.utils.selector(menuRef.value);
-        menu = menuRef.value;
-        nav = m(".nav");
-        node = m(".node");
-        nodecontent = m(".nodecontent");
-        nodelabel = m(".nodelabel");
-        nodeicon = m(".nodeicon");
-        nodechildren = m(".nodechildren");
-        nodetogglebutton = m(".nodetogglebutton");
-        nodetoggleicon = m(".nodetoggleicon");
-        rootchildren = m(".rootchildren");
-        hideThese = [
-          ...nodechildren,
-          ...nodetoggleicon,
-          ...nodetogglebutton,
-          ...nodelabel
-        ];
-
-        return [
-          menu,
-          ...nav,
-          ...node,
-          ...nodecontent,
-          ...nodelabel,
-          ...nodeicon,
-          ...nodechildren,
-          ...nodetogglebutton,
-          ...rootchildren,
-          ...hideThese
-        ];
-      }
-    };
-  })
+  await nextTick();
+  initializeElements();
+  tl.value = createMenuAnimation();
 });
+
 </script>
 
 <template>
