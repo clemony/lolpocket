@@ -88,11 +88,11 @@ function toggleMenu() {
   });*/
   var tl = gsap.timeline();
   tl.from(hideThese, {
-    opacity: 0, x: -100, duration: 1, onComplete: function () {
+    opacity: 0, x: -100, duration: 0.25, onComplete: function () {
       this.targets().forEach(elem => elem.classList.add("hidden"))
     }
   });
-  tl.from(menu, { gridTemplateColumns: "80px auto", duration: 4 }, "");
+  tl.from(menu, { gridTemplateColumns: "80px auto", duration: 4 }, ">");
   tl.from(nav, { borderRadius: "20px", duration: 1 }, "<");
   tl.from(rootchildren, {
     display: "flex",
@@ -105,8 +105,8 @@ function toggleMenu() {
   tl.from(nodeicon, {
     margin: 0,
     padding: 0,
-    width: "2rem",
-    height: "2rem",
+    width: "1.5rem",
+    height: "1.5rem",
     alignSelf: "center",
     opacity: "0.8",
     duration: 1
