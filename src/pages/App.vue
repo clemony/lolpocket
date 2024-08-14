@@ -12,7 +12,7 @@ import { computed, DefineComponent, onMounted, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { Flip } from 'gsap/Flip';
 import { gsap } from 'gsap';
-import { T } from 'unplugin-vue-router/types-BXFGBApc';
+import { VueRouterAutoImports } from 'unplugin-vue-router/index';
 
 
 /* ------------------------------- NAVIGATION ------------------------------- */
@@ -119,18 +119,29 @@ function initializeElements() {
   }
 }
 
+function hide() {
+  hideThese.forEach(elem => {
+    gsap.to(elem, { opacity: 0, visibility: "hidden", ease: "power1.out", duration: 0.25 });// Reset styles
+    tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
+
+  })
+  return hide();
+};
+
 
 
 // Function to create the animation timeline
 function createMenuAnimation() {
-  const timeline = gsap.timeline({ paused: true });
 
-  timeline.to(hideThese, {
-    opacity: 0,
-    visibility: 0,
-    duration: 0.25
-  }
-  );
+
+
+  const timeline = gsap.timeline({
+    paused: true,
+    onStart: hide(),
+  });
+
+
+
   timeline.to(menu, { gridTemplateColumns: "75px auto", duration: 0.5 }, "<");
   timeline.to(nav, { borderRadius: "15px", duration: 0.5 }, "<");
   timeline.to(rootchildren, {
