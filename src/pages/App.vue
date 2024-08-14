@@ -183,8 +183,11 @@ function toggleMenu() {
 
   if (tooltipText.value == 'Collapse') {
     tl.value?.play();
+
+    tooltipText.value = 'Expand';
   } else {
     tl.value?.reverse();
+    tooltipText.value = 'Collapse';
   }
 }
 
