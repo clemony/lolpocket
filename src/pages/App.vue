@@ -88,7 +88,9 @@ function toggleMenu() {
   });
   var tl = gsap.timeline();
   tl.from(hideThese, {
-    opacity: 0, duration: 0.25
+    opacity: 0, duration: 0.25, onComplete: function () {
+      this.targets().forEach(elem => elem.classList.add("hidden"))
+    }
   });
   tl.from(menu, { gridTemplateColumns: "80px auto", duration: 4 }, "");
   tl.to(nav, { borderRadius: "20px", duration: 1 }, "<");
