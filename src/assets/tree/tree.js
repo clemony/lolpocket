@@ -115,7 +115,7 @@ export default {
   }),
   nodeLabel: ({ context }) => ({
     class: [
-      "label order-2 align-middle content-center items-center relative flex flex-grow h-8",
+      "nodelabel order-2 align-middle content-center items-center relative flex flex-grow h-8",
 
       {
         "text-foreground": !context.selected,
