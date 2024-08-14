@@ -180,6 +180,8 @@ onMounted(async () => {
           ...nodetogglebutton,
           ...nodelabel
         ];
+
+        return {}
       }
     };
   })
