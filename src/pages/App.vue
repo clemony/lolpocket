@@ -58,6 +58,10 @@ const tooltipText = ref('Collapse');
 function handleMenuClick() {
   // Update the tooltip text dynamically
   tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
+  if (tooltipText.value == 'Collapse') {
+    tooltipText.value = 'Expand';
+    toggleMenu();
+  };
 }
 
 const menuRef = ref<HTMLDivElement | null>(null);
@@ -130,7 +134,7 @@ function toggleMenu() {
     duration: 0.5
   },
     "<");
-  return tl;
+  return toggleMenu;
 
 };
 
