@@ -94,7 +94,7 @@ export default {
         "rotate-0 rotate-180-ccw reverse": !context.expanded,
       },
 
-      "rotate-0 ",
+      "rotate-0 nodetoggleicon",
     ],
   }),
 

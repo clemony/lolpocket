@@ -71,14 +71,16 @@ function toggleMenu() {
   const nodeicon = m(".nodeicon");
   const nodechildren = m(".nodechildren");
   const nodetogglebutton = m(".nodetogglebutton");
+  const nodetoggleicon = m(".nodetoggleicon");
   const rootchildren = m(".rootchildren");
   const hideThese = [
     ...nodechildren,
+    ...nodetoggleicon,
     ...nodetogglebutton,
     ...nodelabel
   ];
 
-  tl.from(nodelabel, {
+  tl.from(hideThese, {
     opacity: 0, duration: 0.25, onComplete: function () {
       this.targets().forEach(elem => elem.classList.add("hidden"))
     }
