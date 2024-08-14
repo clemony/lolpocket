@@ -57,17 +57,7 @@ const tooltipText = ref('Collapse');
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
 
-let hideThese: HTMLElement[] = [];
-let menu: HTMLElement | null = null;
-let nav: HTMLElement[] = [];
-let node: HTMLElement[] = [];
-let nodecontent: HTMLElement[] = [];
-let nodelabel: HTMLElement[] = [];
-let nodeicon: HTMLElement[] = [];
-let nodechildren: HTMLElement[] = [];
-let nodetogglebutton: HTMLElement[] = [];
-let nodetoggleicon: HTMLElement[] = [];
-let rootchildren: HTMLElement[] = [];
+
 
 // Function to initialize element references
 function initializeElements() {
@@ -90,7 +80,20 @@ function initializeElements() {
       ...nodelabel
     ];
   }
-}
+};
+
+let hideThese: HTMLElement[] = [];
+let menu: HTMLElement | null = null;
+let nav: HTMLElement[] = [];
+let node: HTMLElement[] = [];
+let nodecontent: HTMLElement[] = [];
+let nodelabel: HTMLElement[] = [];
+let nodeicon: HTMLElement[] = [];
+let nodechildren: HTMLElement[] = [];
+let nodetogglebutton: HTMLElement[] = [];
+let nodetoggleicon: HTMLElement[] = [];
+let rootchildren: HTMLElement[] = [];
+
 
 // Function to create the animation timeline
 function menuChange() {
