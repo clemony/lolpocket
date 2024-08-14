@@ -53,7 +53,7 @@ const currentComponent = computed(() => {
 /* ---------------------------- SIDEBAR ANIMATION --------------------------- */
 
 const menuRef = ref<HTMLDivElement | null>(null);
-const tooltipText = ref('Collapse');
+
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
 
@@ -147,7 +147,7 @@ function menuChange() {
 }
 
 const tl = menuChange();
-
+const tooltipText = ref('Collapse');
 // Method to toggle the sidebar menu
 function toggleMenu() {
   tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
