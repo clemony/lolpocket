@@ -80,12 +80,12 @@ function toggleMenu() {
     ...nodelabel
   ];
 
-  const state = Flip.getState(nodeicon);
+  /*const state = Flip.getState(nodeicon);
   Flip.from(state, {
     duration: 1,
     ease: "power1.inOut",
     absolute: true,
-  });
+  });*/
   var tl = gsap.timeline();
   tl.from(hideThese, {
     opacity: 0, x: -100, duration: 1, onComplete: function () {
@@ -93,26 +93,26 @@ function toggleMenu() {
     }
   });
   tl.from(menu, { gridTemplateColumns: "80px auto", duration: 4 }, "");
-  tl.to(nav, { borderRadius: "20px", duration: 1 }, "<");
-  tl.to(rootchildren, {
+  tl.from(nav, { borderRadius: "20px", duration: 1 }, "<");
+  tl.from(rootchildren, {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     justifyItems: "center",
     duration: 1,
   }, "<");
-  tl.to(nodecontent, { width: "50%", duration: 1 }, "<");
-  tl.to(nodeicon, {
+  tl.from(nodecontent, { width: "50%", duration: 1 }, "<");
+  tl.from(nodeicon, {
     margin: 0,
     padding: 0,
-    width: "2.5rem",
-    height: "2.5rem",
+    width: "2rem",
+    height: "2rem",
     alignSelf: "center",
     opacity: "0.8",
     duration: 1
   },
     "<");
-  tl.to(node, {
+  tl.from(node, {
     margin: "0.7rem 0",
     justifyContent: "center",
     justifyItems: "center",
