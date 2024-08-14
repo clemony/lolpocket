@@ -53,7 +53,7 @@ const currentComponent = computed(() => {
 /* ---------------------------- SIDEBAR ANIMATION --------------------------- */
 
 const menuRef = ref<HTMLDivElement | null>(null);
-
+const tooltipText = ref('Collapse');
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
 
@@ -96,13 +96,6 @@ function initializeElements() {
 function menuChange() {
   const tl = gsap.timeline({ paused: true });
 
-  const state = Flip.getState(nodeicon);
-  Flip.from(state, {
-    duration: 1,
-    ease: "power1.inOut",
-    absolute: true,
-  });
-
   tl.to(hideThese, {
     opacity: 0, x: -100, duration: 0.25, onComplete: function () {
       this.targets().forEach(elem => elem.classList.add("hidden"))
@@ -142,15 +135,24 @@ function menuChange() {
     display: "flex",
     duration: 0.5
   }, "<");
-
   return tl;
 }
 
 const tl = menuChange();
-const tooltipText = ref('Collapse');
+
 // Method to toggle the sidebar menu
 function toggleMenu() {
   tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
+
+  const m = gsap.utils.selector(menuRef.value);
+  const nodeicon = m(".nodeicon");
+  const state = Flip.getState(nodeicon);
+  Flip.from(state, {
+    duration: 1,
+    ease: "power1.inOut",
+    absolute: true,
+  });
+
   if (tooltipText.value == 'Collapse') {
     tl.play();
   } else {
