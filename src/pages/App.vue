@@ -80,7 +80,7 @@ function toggleMenu() {
     ...nodelabel
   ];
 
-  const state = Flip.getState(nodelabel);
+  const state = Flip.getState(nodeicon);
   Flip.from(state, {
     duration: 1,
     ease: "power1.inOut",
