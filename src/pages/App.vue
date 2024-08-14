@@ -92,6 +92,31 @@ function initializeElements() {
       ...nodetogglebutton,
       ...nodelabel
     ];
+
+    console.log("menu:", menu);
+    console.log("nav:", nav);
+    console.log("node:", node);
+    console.log("nodecontent:", nodecontent);
+    console.log("nodelabel:", nodelabel);
+    console.log("nodeicon:", nodeicon);
+    console.log("nodechildren:", nodechildren);
+    console.log("nodetogglebutton:", nodetogglebutton);
+    console.log("nodetoggleicon:", nodetoggleicon);
+    console.log("rootchildren:", rootchildren);
+    console.log("hideThese:", hideThese);
+
+    return [
+      menu,
+      ...nav,
+      ...node,
+      ...nodecontent,
+      ...nodelabel,
+      ...nodeicon,
+      ...nodechildren,
+      ...nodetogglebutton,
+      ...rootchildren,
+      ...hideThese
+    ];
   }
 }
 
