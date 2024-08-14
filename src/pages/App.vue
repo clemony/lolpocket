@@ -101,12 +101,17 @@ function toggleMenu() {
     justifyItems: "center",
     duration: 0.5,
   }, "<");
-  tl.to(nodecontent, { width: "50%", duration: 0.5 }, "<");
+  tl.to(nodecontent, {
+    width: "75%",
+    display: "flex",
+    alignContent: "center",
+    duration: 0.5
+  }, "<");
   tl.to(nodeicon, {
     margin: 0,
     padding: 0,
-    width: "1.5rem",
-    height: "1.5rem",
+    width: "1.7rem",
+    height: "1.7rem",
     alignSelf: "center",
     opacity: "0.8",
     duration: 0.5
