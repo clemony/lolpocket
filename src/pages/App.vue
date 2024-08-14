@@ -145,6 +145,7 @@ function toggleMenu() {
     ease: "power1.inOut",
     absolute: true,
   });
+  reverse.tl
 };
 
 const minimized = ref(false);
