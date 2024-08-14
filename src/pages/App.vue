@@ -55,7 +55,7 @@ const menuRef = ref<HTMLDivElement | null>(null);
 const tooltipText = ref('Collapse');
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
-
+/*
 let hideThese: HTMLElement[] = [];
 let menu: HTMLElement | null = null;
 let nav: HTMLElement[] = [];
@@ -222,7 +222,7 @@ function toggleMenu() {
   }
 }
 
-
+*/
 // Method for node selection in the tree
 const onNodeSelect = (node: any) => {
   navigateTo(node.data);
@@ -233,14 +233,14 @@ const onNodeSelect = (node: any) => {
 onMounted(async () => {
   const dataStore = useDataStore();
   await dataStore.fetchData();
-  console.log(menuRef);
-  await menuRef;
-  await NodeService.getTreeNodes().then((data: any) => {
-    nodes.value = data;
-  });
-  await nextTick();
-  initializeElements();
-  tl.value = createMenuAnimation();
+  /* console.log(menuRef);
+   await menuRef;
+   await NodeService.getTreeNodes().then((data: any) => {
+     nodes.value = data;
+   });
+   await nextTick();
+   initializeElements();
+   tl.value = createMenuAnimation();*/
 });
 
 </script>
@@ -255,18 +255,18 @@ onMounted(async () => {
 
       <label
         class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-bottom before:text-xs before:font-normal before:left-[75%] [--tooltip-offset:30px] [--tooltip-tail-offset:24px]"
-        :data-tip="tooltipText" @click="toggleMenu()">
+        :data-tip="tooltipText"">
         <!-- this hidden checkbox controls the state -->
-        <input type="checkbox" />
+        <input type=" checkbox" />
 
-        <!-- expanded icon -->
+      <!-- expanded icon -->
 
-        <Icon icon="tabler:layout-sidebar-right-expand-filled"
-          class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-off fill-current" />
+      <Icon icon="tabler:layout-sidebar-right-expand-filled"
+        class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-off fill-current" />
 
-        <!-- collapsed icon -->
-        <Icon icon="tabler:layout-sidebar-left-expand-filled"
-          class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-on fill-current" />
+      <!-- collapsed icon -->
+      <Icon icon="tabler:layout-sidebar-left-expand-filled"
+        class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-on fill-current" />
       </label>
 
       <span>lolpocket</span>
