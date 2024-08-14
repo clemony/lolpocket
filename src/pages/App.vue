@@ -128,6 +128,7 @@ function createMenuAnimation() {
   timeline.to(hideThese, {
     opacity: 0, duration: 0.25, onComplete: function () {
       this.targets().forEach(elem => elem.classList.add("invisible"));
+      this.targets().forEach(elem => elem.classList.add("absolute"));
     }
   });
   timeline.to(menu, { gridTemplateColumns: "75px auto", duration: 0.5 }, "<");
