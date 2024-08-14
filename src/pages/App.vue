@@ -58,6 +58,21 @@ const menuRef = ref<HTMLDivElement | null>(null);
 
 
 function toggleMenu() {
+
+};
+
+const minimized = ref(false);
+
+function minimize() {
+  minimized.value = true;
+}
+
+const nodes = ref<any[]>([]);
+const selectedKey = ref<string[]>([]);
+
+const onNodeSelect = (node) => {
+
+  navigateTo(node.data);
   var tl = gsap.timeline();
 
   console.log(menuRef);
@@ -65,7 +80,7 @@ function toggleMenu() {
   console.log(menu);
   const m = gsap.utils.selector(menuRef.value);
   const nav = m(".nav");
-  const node = m(".node");
+  const nodeS = m(".node");
   const nodecontent = m(".nodecontent");
   const nodelabel = m(".nodelabel");
   const nodeicon = m(".nodeicon");
@@ -94,22 +109,8 @@ function toggleMenu() {
     duration: 1
   },
     "<");
-  tl.to(node, { margin: "0.7rem 0", justifyContent: "center", justifyItems: "center", display: "flex", duration: 1 }, "<");
+  tl.to(nodeS, { margin: "0.7rem 0", justifyContent: "center", justifyItems: "center", display: "flex", duration: 1 }, "<");
   return tl;
-};
-
-const minimized = ref(false);
-
-function minimize() {
-  minimized.value = true;
-}
-
-const nodes = ref<any[]>([]);
-const selectedKey = ref<string[]>([]);
-
-const onNodeSelect = (node) => {
-
-  navigateTo(node.data);
 };
 
 /* ------------------------------ // ON MOUNTED ----------------------------- */
