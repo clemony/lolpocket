@@ -81,4 +81,4 @@ app.use(PrimeVue, {
 
 
 // Mount the app to the element with id "app" in your HTML
-app.mount("#app");
+app.mount("app");
