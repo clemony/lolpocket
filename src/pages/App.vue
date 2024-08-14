@@ -168,7 +168,8 @@ function createMenuAnimation() {
   // Reset visibility when reversing
   timeline.eventCallback("onReverseComplete", () => {
     hideThese.forEach(elem => {
-      gsap.to(elem, { opacity: 1, display: "block", duration: 5, ease: "power4.in" }); // Reset styles
+      gsap.set(elem, { visibility: "visible" });
+      gsap.to(elem, { opacity: 1, duration: 2, ease: "power4.in" });// Reset styles
       tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
     });
   });
