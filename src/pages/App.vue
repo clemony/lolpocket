@@ -31,37 +31,35 @@ const route = useRoute();
 const settings = useUserSettings();
 
 
-type ValidPaths = '/builds' | '/' | '/champions' | '/items' | '/runes' | '/settings' | '/tree';
 
+type ValidPaths = '/builds' | '/' | '/champions' | '/items' | '/runes' | '/settings' | '/tree';
 
 const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/builds': Builds,
-  '/': Home, // Adjust this if the component is incorrect
+  '/': Home,
   '/champions': Champions,
   '/items': Items,
   '/runes': Runes,
-  '/settings': Settings, // Adjust if necessary
+  '/settings': Settings,
   '/tree': null,
 };
 
 // Computed property for current view
 const currentComponent = computed(() => {
-  const currentPath = route.path as ValidPaths; // Adjust the type to match ValidPaths
+  const currentPath = route.path as ValidPaths;
   return componentMap[currentPath] || null;
 });
 
-
 /* ---------------------------- SIDEBAR ANIMATION --------------------------- */
-
 
 const menuRef = ref<HTMLDivElement | null>(null);
 const tooltipText = ref('Collapse');
-const tl = menuChange();  // Initialize the timeline here
+const nodes = ref<any[]>([]);
+const selectedKey = ref<string[]>([]);
 
-
+// Function to create the animation timeline
 function menuChange() {
   let menu = menuRef.value;
-  console.log(menu);
   const m = gsap.utils.selector(menuRef.value);
   const nav = m(".nav");
   const node = m(".node");
@@ -78,7 +76,8 @@ function menuChange() {
     ...nodetogglebutton,
     ...nodelabel
   ];
-  var tl = gsap.timeline({ paused: true }); // Set the timeline to be paused initially
+
+  const tl = gsap.timeline({ paused: true });
 
   tl.to(hideThese, {
     opacity: 0, x: -100, duration: 0.25, onComplete: function () {
@@ -110,8 +109,7 @@ function menuChange() {
     alignSelf: "center",
     opacity: "0.8",
     duration: 0.5,
-  },
-    "<");
+  }, "<");
   tl.to(node, {
     margin: "0.7rem 0",
     padding: 0,
@@ -119,17 +117,16 @@ function menuChange() {
     justifyItems: "center",
     display: "flex",
     duration: 0.5
-  },
-    "<");
+  }, "<");
   return tl;
-};
+}
 
+const tl = menuChange();
 
+// Method to toggle the sidebar menu
 function toggleMenu() {
   tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
 
-  let menu = menuRef.value;
-  console.log(menu);
   const m = gsap.utils.selector(menuRef.value);
   const nodeicon = m(".nodeicon");
   const state = Flip.getState(nodeicon);
@@ -146,29 +143,24 @@ function toggleMenu() {
   }
 }
 
-
-const nodes = ref<any[]>([]);
-const selectedKey = ref<string[]>([]);
-
-const onNodeSelect = (node) => {
-
+// Method for node selection in the tree
+const onNodeSelect = (node: any) => {
   navigateTo(node.data);
-
 };
 
-/* ------------------------------ // ON MOUNTED ----------------------------- */
+/* ------------------------------ ON MOUNTED ----------------------------- */
 
 onMounted(async () => {
+  const dataStore = useDataStore();
+  await dataStore.fetchData();
+  NodeService.getTreeNodes().then((data: any) => {
+    nodes.value = data;
+  });
 
-  useDataStore().fetchData();
-  NodeService.getTreeNodes().then((data: null) => (nodes.value = data));
   nextTick(() => {
     console.log(menuRef);
-  })
-
+  });
 });
-
-
 </script>
 
 <template>
