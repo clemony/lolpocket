@@ -69,9 +69,9 @@ function handleMenuClick() {
 }
 
 const menuRef = ref<HTMLDivElement | null>(null);
-function toggleMenu() {
-  console.log(menuRef);
-  var menu = menuRef.value;
+
+function menuChange() {
+  let menu = menuRef.value;
   console.log(menu);
   const m = gsap.utils.selector(menuRef.value);
   const nav = m(".nav");
@@ -90,12 +90,6 @@ function toggleMenu() {
     ...nodelabel
   ];
   var tl = gsap.timeline();
-  const state = Flip.getState(nodeicon);
-  Flip.from(state, {
-    duration: 1,
-    ease: "power1.inOut",
-    absolute: true,
-  });
 
   tl.to(hideThese, {
     opacity: 0, x: -100, duration: 0.25, onComplete: function () {
@@ -139,7 +133,18 @@ function toggleMenu() {
   },
     "<");
   return tl;
-
+};
+function toggleMenu() {
+  let menu = menuRef.value;
+  console.log(menu);
+  const m = gsap.utils.selector(menuRef.value);
+  const nodeicon = m(".nodeicon");
+  const state = Flip.getState(nodeicon);
+  Flip.from(state, {
+    duration: 1,
+    ease: "power1.inOut",
+    absolute: true,
+  });
 };
 
 const minimized = ref(false);
