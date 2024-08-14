@@ -169,7 +169,7 @@ function createMenuAnimation() {
     hideThese.forEach(elem => {
       elem.classList.remove("hidden");
       gsap.set(elem, { opacity: 1, x: 0 }); // Reset styles
-    });
+    }, "<");
   });
 
   // Update tooltip text after animation completes
