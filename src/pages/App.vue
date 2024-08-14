@@ -181,7 +181,18 @@ onMounted(async () => {
           ...nodelabel
         ];
 
-        return {}
+        return [
+          menu,
+          ...nav,
+          ...node,
+          ...nodecontent,
+          ...nodelabel,
+          ...nodeicon,
+          ...nodechildren,
+          ...nodetogglebutton,
+          ...rootchildren,
+          ...hideThese
+        ];
       }
     };
   })
