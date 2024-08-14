@@ -59,7 +59,7 @@ const menuRef = ref<HTMLDivElement | null>(null);
 
 function toggleMenu() {
 
-  var tl = gsap.timeline();
+
   console.log(menuRef);
   var menu = menuRef.value;
   console.log(menu);
@@ -79,13 +79,13 @@ function toggleMenu() {
     ...nodetogglebutton,
     ...nodelabel
   ];
-
+  var tl = gsap.timeline();
   tl.from(hideThese, {
-    opacity: 0, duration: 0.25, onComplete: function () {
+    opacity: 0, duration: 1, onComplete: function () {
       this.targets().forEach(elem => elem.classList.add("hidden"))
     }
   });
-  tl.from(menu, { gridTemplateColumns: "80px auto", duration: 1 }, "<");
+  tl.from(menu, { gridTemplateColumns: "80px auto", duration: 1 }, ">");
   tl.to(nav, { borderRadius: "20px", duration: 1 }, "<");
   tl.to(rootchildren, {
     display: "flex",
@@ -93,7 +93,7 @@ function toggleMenu() {
     justifyContent: "center",
     justifyItems: "center",
     duration: 1,
-  }, "<");
+  }, ">");
   tl.to(nodecontent, { width: "50%", duration: 1 }, "<");
   tl.to(nodeicon, {
     margin: 0,
