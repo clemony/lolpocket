@@ -236,11 +236,8 @@ onMounted(async () => {
     nodes.value = data;
   });
   console.log(menuRef);
-  /*await menuRef;
-
-  await nextTick();
   initializeElements();
-  tl.value = createMenuAnimation();*/
+  tl.value = createMenuAnimation();
 });
 
 </script>
