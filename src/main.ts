@@ -65,12 +65,12 @@ export type {
   TitleBarStyle,
   WindowOptions
 };
-gsap.registerPlugin(Flip);
+//gsap.registerPlugin(Flip);
 
 const pinia = createPinia()
 pinia.use(piniaPluginPersistedstate)
 app.use(pinia);
-app.use(gsap);
+//app.use(gsap);
 app.use(router);
 app.use(PrimeVue, {
   unstyled: true,
