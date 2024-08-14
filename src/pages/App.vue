@@ -79,13 +79,20 @@ function toggleMenu() {
     ...nodetogglebutton,
     ...nodelabel
   ];
+
+  const state = Flip.getState(nodelabel);
+  Flip.from(state, {
+    duration: 1,
+    ease: "power1.inOut",
+    absolute: true,
+  });
   var tl = gsap.timeline();
   tl.from(hideThese, {
     opacity: 0, duration: 1, onComplete: function () {
       this.targets().forEach(elem => elem.classList.add("hidden"))
     }
   });
-  tl.from(menu, { gridTemplateColumns: "80px auto", duration: 1 }, "<");
+  tl.from(menu, { gridTemplateColumns: "80px auto", duration: 2 }, "<");
   tl.to(nav, { borderRadius: "20px", duration: 1 }, "<");
   tl.to(rootchildren, {
     display: "flex",
