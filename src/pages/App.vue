@@ -189,7 +189,7 @@ onMounted(async () => {
 
       <label
         class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-bottom before:text-xs before:font-normal before:left-[75%] [--tooltip-offset:30px] [--tooltip-tail-offset:24px]"
-        :data-tip="tooltipText" @click="menuChange()">
+        :data-tip="tooltipText" @click="toggleMenu()">
         <!-- this hidden checkbox controls the state -->
         <input type="checkbox" />
 
