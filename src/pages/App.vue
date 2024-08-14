@@ -151,6 +151,7 @@ function toggleMenu() {
   const state = Flip.getState(nodeicon);
   Flip.from(state, {
     duration: 1,
+    nested: true,
     ease: "power1.inOut",
     absolute: true,
   });
