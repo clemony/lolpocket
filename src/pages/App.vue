@@ -60,27 +60,7 @@ const selectedKey = ref<string[]>([]);
 
 
 // Function to initialize element references
-function initializeElements() {
-  if (menuRef.value) {
-    const m = gsap.utils.selector(menuRef.value);
-    menu = menuRef.value;
-    nav = m(".nav");
-    node = m(".node");
-    nodecontent = m(".nodecontent");
-    nodelabel = m(".nodelabel");
-    nodeicon = m(".nodeicon");
-    nodechildren = m(".nodechildren");
-    nodetogglebutton = m(".nodetogglebutton");
-    nodetoggleicon = m(".nodetoggleicon");
-    rootchildren = m(".rootchildren");
-    hideThese = [
-      ...nodechildren,
-      ...nodetoggleicon,
-      ...nodetogglebutton,
-      ...nodelabel
-    ];
-  }
-};
+
 
 let hideThese: HTMLElement[] = [];
 let menu: HTMLElement | null = null;
@@ -181,8 +161,27 @@ onMounted(async () => {
 
 
   nextTick(() => {
-
-    initializeElements();
+    function initializeElements() {
+      if (menuRef.value) {
+        const m = gsap.utils.selector(menuRef.value);
+        menu = menuRef.value;
+        nav = m(".nav");
+        node = m(".node");
+        nodecontent = m(".nodecontent");
+        nodelabel = m(".nodelabel");
+        nodeicon = m(".nodeicon");
+        nodechildren = m(".nodechildren");
+        nodetogglebutton = m(".nodetogglebutton");
+        nodetoggleicon = m(".nodetoggleicon");
+        rootchildren = m(".rootchildren");
+        hideThese = [
+          ...nodechildren,
+          ...nodetoggleicon,
+          ...nodetogglebutton,
+          ...nodelabel
+        ];
+      }
+    };
   })
 });
 </script>
