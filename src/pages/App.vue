@@ -91,7 +91,7 @@ onMounted(async () => {
     console.log(menu);
     const m = gsap.utils.selector(menuRef.value);
     const nav = m(".nav");
-    const nodeS = m(".node");
+    const node = m(".node");
     const nodecontent = m(".nodecontent");
     const nodelabel = m(".nodelabel");
     const nodeicon = m(".nodeicon");
@@ -120,7 +120,7 @@ onMounted(async () => {
       duration: 1
     },
       "<");
-    tl.to(nodeS, { margin: "0.7rem 0", justifyContent: "center", justifyItems: "center", display: "flex", duration: 1 }, "<");
+    tl.to(node, { margin: "0.7rem 0", justifyContent: "center", justifyItems: "center", display: "flex", duration: 1 }, "<");
     return tl;
   })
 
