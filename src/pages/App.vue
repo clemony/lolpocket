@@ -91,11 +91,15 @@ function toggleMenu() {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    justifyItems: "center",
     duration: 1,
   }, "<");
   tl.to(nodecontent, { width: "50%", duration: 1 }, "<");
   tl.to(nodeicon, {
     margin: 0,
+    padding: 0,
+    width: "2.5rem",
+    height: "2.5rem",
     alignSelf: "center",
     opacity: "0.8",
     duration: 1
