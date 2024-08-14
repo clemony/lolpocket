@@ -105,7 +105,14 @@ function toggleMenu() {
     duration: 1
   },
     "<");
-  tl.to(node, { margin: "0.7rem 0", justifyContent: "center", justifyItems: "center", display: "flex", duration: 1 }, "<");
+  tl.to(node, {
+    margin: "0.7rem 0",
+    justifyContent: "center",
+    justifyItems: "center",
+    display: "flex",
+    duration: 1
+  },
+    "<");
   return tl;
 
 };
