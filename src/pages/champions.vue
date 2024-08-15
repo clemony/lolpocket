@@ -16,7 +16,9 @@ if (quotes.length === 0) {
 }*/
 
 let quotes = Quotes;
-const randomQuote: any = getRandomQuote();
+const randomQuote: any = {
+  value: getRandomQuote()
+}
 function getRandomQuote() {
   console.log(quotes[(Math.floor(Math.random() * quotes.length))]);
 };
@@ -72,7 +74,7 @@ function handleChampionClick(champion: Champion) {
 
         <div id="" class="main flex-1">
           <div role="tablist" class="tabs layout">
-            <div></div>
+            <div v-for="quote in randomQuote">{{ quote.value }}</div>
             <input type="radio" name="champ-tabs" role="tab" class="tab after:w-36 font-semibold" aria-label="Champions"
               checked="true" />
 
