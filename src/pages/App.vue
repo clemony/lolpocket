@@ -281,8 +281,9 @@ onMounted(async () => {
       <Icon icon="ph:line-vertical-bold" class="rotate-90" id="titlebar-minimize" data-tip="minimize" />
 
       <Icon icon="ph:arrows-out-simple-bold" id="titlebar-maximize" data-tip="maximize" />
-
-      <Icon icon="ph:x-bold" id="titlebar-close" alt="close" data-tip="close" class="titlebar-button" />
+      <div id="titlebar-close" alt="close" data-tip="close">
+        <Icon icon="ph:x-bold" class="titlebar-button" />
+      </div>
     </div>
   </div>
 
