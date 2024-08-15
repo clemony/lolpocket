@@ -12,5 +12,8 @@ const quotes = [
     "I envy silence, for I must be loud!",
     "I fought a house once. I\'m pretty sure I won.",
     "Only two jokers in the deck and I get dealt you.",
-    "Beauty fades. That is why it is beautiful."
+    "Beauty fades. That is why it is beautiful.",
+    "When I look to the mountain's peak, in my mind, I have already fallen. And so, I climb.",
+    "Just leave everything to me. As usual.",
+    "I'm used to this level of disappointment." 
 ]
