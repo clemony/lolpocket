@@ -14,6 +14,11 @@ import { Icon } from "@iconify/vue";
                 <Input tabindex="0" role="button" placeholder=""
                     class="text-xs font-medium w-[470px] text-center h-[28px] shadow-inner bg-base-200/60 border-base-content/15 shadow-base-content/10 rounded-[10px] !outline-0 !outline-transparent !outline-none z-20 focus:ring-base-300" />
 
+                <div role="tablist" class="tabs tabs-lifted">
+                    <a role="tab" class="tab">Tab 1</a>
+                    <a role="tab" class="tab tab-active">Tab 2</a>
+                    <a role="tab" class="tab">Tab 3</a>
+                </div>
             </div>
         </div>
     </form>
