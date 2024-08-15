@@ -10,7 +10,6 @@ import { createApp } from "vue";
 import { createRouter, createWebHistory } from 'vue-router';
 import { routes } from 'vue-router/auto-routes';
 import { getCurrent } from '../node_modules/@tauri-apps/api/window.js';
-import { Icon } from "@iconify/vue";
 
 import { Flip } from "gsap/Flip";
 
