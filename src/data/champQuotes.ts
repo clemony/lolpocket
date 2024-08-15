@@ -1,4 +1,4 @@
-const quotes = [
+export const Quotes = [
     "\"Braum! What are you doing over there?! Are you drunk?\" -Ashe",
     "\"So, Braum. No shirt, huh? And I don't have pants. Yay, Freljord.\" -Ashe",
     "\"A Crownguard and a mage? Wouldn't want to be her.\" -Sona",
@@ -24,5 +24,3 @@ const quotes = [
     "\"Put it on my tab, the names \'Pantheon\',with a P...\" -Aurelion Sol",
     "\"You even die ugly\" -Qiyana"
 ]
-
-export Default {}
