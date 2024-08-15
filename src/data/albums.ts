@@ -42,12 +42,12 @@ export interface Album {
       name: 'PBE Update',
       artist: 'Guy on Reddit',
       cover:
-        'https://images.unsplash.com/photo-1468817814611-b7edf94b5d60?w=300&dpr=2&q=80',
+        '/img/art/magic.webp',
     },
     {
       name: 'Champ Flavor Tier List',
       artist: 'Clem',
       cover:
-        '/img/art/chase.jpg',
+        '/img/art/chase.webp',
     },
   ]
