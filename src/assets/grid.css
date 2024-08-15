@@ -43,7 +43,7 @@
 .grid-tip {
   transition: all 0.3s ease;
   transform: translateY(200%);
-  @apply flex z-20 absolute w-full h-auto cursor-pointer pointer-events-none text-wrap opacity-0 bottom-0 max-w-[80px] left-0 text-white hyphens-auto  font-semibold   tracking-wider !text-[10px] p-1 uppercase text-end align-text-bottom justify-start;
+  @apply flex z-20 absolute w-full h-auto cursor-pointer pointer-events-none text-wrap opacity-0 bottom-0  left-0 text-white hyphens-auto  font-semibold   tracking-wider !text-[10px] p-1 uppercase text-end align-text-bottom justify-start;
 }
 
 .grid-item:hover {

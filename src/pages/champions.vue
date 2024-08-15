@@ -236,6 +236,10 @@ function handleChampionClick(champion: Champion) {
   @apply !h-[80px] !w-[80px];
 }
 
+.grid-tip {
+  @apply max-w-[80px];
+}
+
 
 .linker:hover+div {
   opacity: 1;

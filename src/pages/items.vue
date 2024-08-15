@@ -59,4 +59,8 @@ const items = dataStore.items;
   @apply h-[70px] w-[70px];
 
 }
+
+.grid-tip {
+  @apply max-w-[70px];
+}
 </style>
