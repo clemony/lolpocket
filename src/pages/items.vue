@@ -59,8 +59,7 @@ const items = dataStore.items;
   grid-template-rows: repeat(auto-fit, minmax(60x, 1fr));
 }
 
-.grid-item.item,
-.grid-image-container.item {
+.item {
   @apply h-[60px] w-[80px];
 }
 </style>
