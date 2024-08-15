@@ -26,7 +26,7 @@ import { Icon } from "@iconify/vue";
                             </label>
                         </div>
                     </a>
-                    <div role="tabpanel" class=" bg-base-100 border-base-300 rounded-box p-6">
+                    <div role="tabpanel" class="border-base-300 rounded-box p-6">
                         Tab content 2
                     </div>
                     <a role="tab" class="tab">
@@ -37,7 +37,7 @@ import { Icon } from "@iconify/vue";
                             </label>
                         </div>
                     </a>
-                    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                    <div role="tabpanel" class="tab-content border-base-300 rounded-box p-6">
                         Tab content 2
                     </div>
                     <a role="tab" class="tab">
@@ -48,7 +48,7 @@ import { Icon } from "@iconify/vue";
                             </label>
                         </div>
                     </a>
-                    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                    <div role="tabpanel" class="tab-content  border-base-300 rounded-box p-6">
                         Tab content 2
                     </div>
                     <a role="tab" class="tab">
@@ -59,7 +59,7 @@ import { Icon } from "@iconify/vue";
                             </label>
                         </div>
                     </a>
-                    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                    <div role="tabpanel" class="tab-content border-base-300 rounded-box p-6">
                         Tab content 2
                     </div>
                 </div>
