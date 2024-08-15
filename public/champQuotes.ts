@@ -20,5 +20,6 @@ const quotes = [
     "You can sit on a throne, that doesn't make you a ruler. It only means you have an arse.",
     "THE DAYLIGHT, IT BURNS",
     "The only drinking problem I have is when I spill it",
-    "Time flies like an arrow, fruit flies like banana "
+    "Time flies like an arrow, fruit flies like banana ",
+    "Put it on my tab, the names \'Pantheon\',with a P...\" -Aurelion Sol"
 ]
