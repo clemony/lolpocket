@@ -24,7 +24,7 @@ import { Icon } from "@iconify/vue";
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Builds</span>
-                                <input type="radio" name="radio-10" class="radio checked:bg-red-500" c />
+                                <input type="radio" name="radio-10" class="radio " />
                             </label>
                         </div>
                     </a>
@@ -32,7 +32,7 @@ import { Icon } from "@iconify/vue";
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Champions</span>
-                                <input type="radio" name="radio-10" class="radio checked:bg-red-500" />
+                                <input type="radio" name="radio-10" class="radio radio-primary" />
                             </label>
                         </div>
                     </a>
@@ -40,7 +40,7 @@ import { Icon } from "@iconify/vue";
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Items</span>
-                                <input type="radio" name="radio-10" class="radio checked:bg-red-500" />
+                                <input type="radio" name="radio-10" class="radio radio-secondary" />
                             </label>
                         </div>
                     </a>
@@ -48,7 +48,7 @@ import { Icon } from "@iconify/vue";
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Runes</span>
-                                <input type="radio" name="search-category" class="radio checked:bg-red-500" />
+                                <input type="radio" name="search-category" class="radio radio-accent" />
                             </label>
                         </div>
                     </a>
