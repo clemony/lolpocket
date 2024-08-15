@@ -88,7 +88,9 @@ import { Icon } from "@iconify/vue";
                         Tab content 1
                     </div>
 
-                    <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 2" checked />
+                    <label role="tab" class="tab">
+                        <input type="radio" name="my_tabs_2" aria-label="Tab 2" checked />
+                    </label>
                     <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
                         Tab content 2
                     </div>
