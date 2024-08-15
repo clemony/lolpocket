@@ -39,8 +39,8 @@ export interface Album {
         'https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/24eb05be171a372ed26b0b6034bf875b3bd09d98-2560x1440.png?auto=format&fit=fill&q=80&w=960',
     },
     {
-      name: 'PBE Update',
-      artist: 'Guy on Reddit',
+      name: 'PBE Changes',
+      artist: ' /u/FrankTheBoxMonster on Reddit',
       cover:
         '/img/art/magic.webp',
     },
