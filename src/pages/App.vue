@@ -277,12 +277,13 @@ onMounted(async () => {
 
     <div
       class="justify-self-end grid grid-cols-3 gap-2 mr-3 tooltip tooltip-bottom *:place-items-center  *:hover:bg-base-200 *:rounded-btn *:size-4">
-      <div>
-        <Icon icon="ph:line-vertical-bold" class="rotate-90" id="titlebar-minimize" data-tip="minimize" />
+
+      <div id="titlebar-minimize" data-tip="minimize" alt="minimize">
+        <Icon icon="ph:line-vertical-bold" class="rotate-90" />
       </div>
 
-      <div>
-        <Icon icon="ph:arrows-out-simple-bold" id="titlebar-maximize" data-tip="maximize" />
+      <div id="titlebar-maximize" data-tip="maximize" alt="maximize">
+        <Icon icon="ph:arrows-out-simple-bold" />
       </div>
 
       <div id="titlebar-close" alt="close" data-tip="close">
