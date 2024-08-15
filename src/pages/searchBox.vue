@@ -22,83 +22,39 @@ import { Icon } from "@iconify/vue";
                 </div>
 
                 <div role="tablist" class="tabs tabs-lifted">
-                    <label role="tab" class="tab">
+                    <a role="tab" class="tab *:text-xs">
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Builds</span>
                                 <input type="radio" name="search-category" class="radio " />
                             </label>
                         </div>
-
-                        <input type="radio" name="my_tabs_2" role="tab" class="tab hidden" aria-label="Tab 1" />
-                    </label>
-                    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-                        Tab content 1
-                    </div>
-
-                    <label role="tab" class="tab">
-
+                    </a>
+                    <a role="tab" class="tab">
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Champions</span>
                                 <input type="radio" name="search-category" class="radio radio-primary" />
                             </label>
                         </div>
-
-                        <input type="radio" name="my_tabs_2" role="tab" class="tab hidden" aria-label="Tab 1" />
-                    </label>
-                    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-                        Tab content 1
-                    </div>
-
-
-                    <label role="tab" class="tab">
+                    </a>
+                    <a role="tab" class="tab">
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Items</span>
                                 <input type="radio" name="search-category" class="radio radio-secondary" />
                             </label>
                         </div>
-                        <input type="radio" name="my_tabs_2" role="tab" class="tab hidden" aria-label="Tab 1" />
-                    </label>
-                    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-                        Tab content 1
-                    </div>
-
-                    <input type="radio" name="my_tabs_2" class=" hidden" aria-label="Tab 4" />
-                    <label name="my_tabs_2" role="tab" class="tab">
+                    </a>
+                    <a role="tab" class="tab">
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Runes</span>
                                 <input type="radio" name="search-category" class="radio radio-accent" />
                             </label>
                         </div>
-                    </label>
+                    </a>
 
-                    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-                        Tab content 1
-                    </div>
-
-
-                </div>
-
-                <div role="tablist" class="tabs tabs-lifted">
-                    <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 1" />
-                    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-                        Tab content 1
-                    </div>
-
-                    <label role="tab" class="tab">
-                        <input type="radio" name="my_tabs_2" aria-label="Tab 2" checked />
-                    </label>
-                    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-                        Tab content 2
-                    </div>
-
-                    <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 3" />
-                    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-                        Tab content 3
-                    </div>
                 </div>
             </div>
         </div>
