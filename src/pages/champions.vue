@@ -5,15 +5,16 @@ import { Quotes } from "@/data/champQuotes.ts";
 
 const dataStore = useDataStore();
 const quotes = Quotes;
-
+var randomQuote = [];
 if (quotes.length === 0) {
   console.log(undefined);
 } else {
   const ind: number =
     Math.floor(Math.random() * quotes.length);
-  const randomQuote: number = quotes[ind];
+  let randomQuote: number = quotes[ind];
   console.log(`Random Quote = ${randomQuote}`);
 }
+console.log(randomQuote);
 
 
 interface Champion {
@@ -65,7 +66,7 @@ function handleChampionClick(champion: Champion) {
 
         <div id="" class="main flex-1">
           <div role="tablist" class="tabs layout">
-            <div>${randomQuote}</div>
+            <div>'${randomQuote}'</div>
             <input type="radio" name="champ-tabs" role="tab" class="tab after:w-36 font-semibold" aria-label="Champions"
               checked="true" />
 
