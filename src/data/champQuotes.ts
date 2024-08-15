@@ -24,3 +24,5 @@ const quotes = [
     "\"Put it on my tab, the names \'Pantheon\',with a P...\" -Aurelion Sol",
     "\"You even die ugly\" -Qiyana"
 ]
+
+export Default {}

@@ -1,8 +1,20 @@
 <script setup lang="ts">
 import { useDataStore } from '@/stores/dataStore';
-import { Icon } from "@iconify/vue"
-  ;
+import { Icon } from "@iconify/vue";
+import { Quotes } from "@/data/champQuotes.ts";
+
 const dataStore = useDataStore();
+const quotes = Quotes();
+
+if (quotes.length === 0) {
+  console.log(undefined);
+} else {
+  const ind: number =
+    Math.floor(Math.random() * quotes.length);
+  const result: number = quotes[ind];
+  console.log(`Random Quote = ${result}`);
+}
+
 
 interface Champion {
   name: string;
