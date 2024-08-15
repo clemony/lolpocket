@@ -26,39 +26,33 @@ import { Icon } from "@iconify/vue";
                     </div>
                 </button>
 
-                <a role="tab" class="tab">
+                <button class="btn btn-primary">
                     <div class="form-control">
                         <label class="label cursor-pointer">
                             <span class="label-text">Champions</span>
                             <input type="radio" name="search-category" class="radio radio-primary" />
                         </label>
                     </div>
-                </a>
-                <div role="tabpanel" class="tab-content border-base-300 rounded-box p-6">
-                    Tab content 2
-                </div>
-                <a role="tab" class="tab">
+                </button>
+                <button class="btn btn-secondary">
                     <div class="form-control">
                         <label class="label cursor-pointer">
                             <span class="label-text">Items</span>
                             <input type="radio" name="search-category" class="radio radio-secondary" />
                         </label>
                     </div>
-                </a>
-                <div role="tabpanel" class="tab-content  border-base-300 rounded-box p-6">
-                    Tab content 2
-                </div>
-                <a role="tab" class="tab">
+                </button>
+                <button class="btn btn-accent">
                     <div class="form-control">
                         <label class="label cursor-pointer">
                             <span class="label-text">Runes</span>
                             <input type="radio" name="search-category" class="radio radio-accent" />
                         </label>
                     </div>
-                </a>
-                <div role="tabpanel" class="tab-content border-base-300 rounded-box p-6">
-                    Tab content 2
-                </div>
+                </button>
+
+
+
             </div>
         </div>
     </form>
