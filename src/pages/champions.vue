@@ -68,7 +68,7 @@ function handleChampionClick(champion: Champion) {
 
           <div class="font-mono italic text-sm text-end px-4">{{ getQuote }}</div>
 
-          <div role="tablist" class="tabs layout p-0 m-0">
+          <div role="tablist" class="tabs layout m-0">
 
             <input type="radio" name="champ-tabs" role="tab" class="tab after:w-36 font-semibold" aria-label="Champions"
               checked="true" />
