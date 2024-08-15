@@ -21,22 +21,33 @@ const items = dataStore.items;
 
 <template>
   <KeepAlive>
-    <div id="main" class="flex-1">
-      <div class="grid-header">
-        <h2>Items</h2>
-      </div>
 
-      <div class="grid-container item">
-        <div class="grid-item" v-for="item in items">
 
-          <div class="grid-image-container item">
-            <img v-if="item.type === 'item'" :src="item.img" :alt="item.name + ' Image'" class="grid-image" />
-            <span v-resize-text class="grid-tip">{{ item.name }}</span>
+
+    <div id="" class="main flex-1">
+      <div role="tablist" class="tabs layout">
+        <input type="radio" name="champ-tabs" role="tab" class="tab font-semibold" aria-label="Items" checked="true" />
+
+        <div role="tabpanel" class="tab-content ">
+          <div class="grid-container">
+
+
+            <div class="grid-container item">
+              <div class="grid-item" v-for="item in items">
+
+                <div class="grid-image-container item">
+                  <img v-if="item.type === 'item'" :src="item.img" :alt="item.name + ' Image'" class="grid-image" />
+                  <span v-resize-text class="grid-tip">{{ item.name }}</span>
+                </div>
+
+
+              </div>
+
+
+            </div>
           </div>
-
         </div>
       </div>
-
     </div>
   </KeepAlive>
 </template>
