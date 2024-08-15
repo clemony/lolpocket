@@ -18,7 +18,7 @@ import { Icon } from "@iconify/vue";
 
                 <div class="grid grid-cols-[1fr_2.5fr]">
                     <div class="grid grid-cols-1 *:btn-ghost">
-                        <button class="btn  gap-2 join-item *:grid-cols-subgrid">
+                        <button class="btn  gap-2 join-item *:grid *:grid-cols-[3fr 1fr]">
                             <div class="form-control">
                                 <label class="label cursor-pointer">
                                     <span class="label-text">Builds</span>
