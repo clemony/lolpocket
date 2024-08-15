@@ -31,6 +31,8 @@ const route = useRoute();
 const settings = useUserSettings();
 
 
+initializeElements();
+// tl.value = createMenuAnimation();
 
 type ValidPaths = '/builds' | '/' | '/champions' | '/items' | '/runes' | '/settings';
 
@@ -236,8 +238,6 @@ onMounted(async () => {
     nodes.value = data;
   });
   console.log(menuRef);
-  initializeElements();
-  tl.value = createMenuAnimation();
 });
 
 </script>
