@@ -18,7 +18,7 @@ import { Icon } from "@iconify/vue";
                     <a role="tab" class="tab *:text-xs">
                         <div class="form-control">
                             <label class="label cursor-pointer">
-                                <span class="label-text">Remember me</span>
+                                <span class="label-text">Builds</span>
                                 <input type="checkbox" checked="false" class="checkbox " />
                             </label>
                         </div>
@@ -26,7 +26,7 @@ import { Icon } from "@iconify/vue";
                     <a role="tab" class="tab tab-active">
                         <div class="form-control">
                             <label class="label cursor-pointer">
-                                <span class="label-text">Remember me</span>
+                                <span class="label-text">Champions</span>
                                 <input type="checkbox" checked="false" class="checkbox checkbox-primary " />
                             </label>
                         </div>
@@ -34,8 +34,16 @@ import { Icon } from "@iconify/vue";
                     <a role="tab" class="tab">
                         <div class="form-control">
                             <label class="label cursor-pointer">
-                                <span class="label-text">Remember me</span>
+                                <span class="label-text">Items</span>
                                 <input type="checkbox" checked="false" class="checkbox checkbox-secondary" />
+                            </label>
+                        </div>
+                    </a>
+                    <a role="tab" class="tab">
+                        <div class="form-control">
+                            <label class="label cursor-pointer">
+                                <span class="label-text">Runes</span>
+                                <input type="checkbox" checked="false" class="checkbox checkbox-accent" />
                             </label>
                         </div>
                     </a>
