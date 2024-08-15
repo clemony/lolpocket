@@ -12,7 +12,7 @@ const randomQuote = computed(() => {
 });
 console.log(randomQuote.value);
 
-
+const getQuote = ref(randomQuote.value);
 
 
 interface Champion {
