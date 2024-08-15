@@ -12,6 +12,11 @@ const randomQuote = computed(() => {
 });
 console.log(randomQuote.value);
 
+interface randomQuote {
+  value: string;
+};
+
+
 interface Champion {
   name: string;
   img: string;
