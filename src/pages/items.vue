@@ -35,7 +35,7 @@ const items = dataStore.items;
             <div class="grid-item item" v-for="item in items">
 
               <div class="grid-image-container item">
-                <img v-if="item.type === 'item'" :src="item.img" :alt="item.name + ' Image'" class="grid-image" />
+                <img v-if="item.type === 'item'" :src="item.img" :alt="item.name + ' Image'" class="grid-image item" />
                 <span v-resize-text class="grid-tip">{{ item.name }}</span>
               </div>
 
