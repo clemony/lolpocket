@@ -7,5 +7,7 @@ const quotes = [
     "Stay positive.",
     "Kat and Garen sitting in a tree~ And you better just be holding hands or I'm telling!",
     "I'm sure your wife forgives you for getting her soul taken by a remorseless creature of darkness!",
-    
+    "Ok.",
+    "The darker the night, the brighter the stars",
+    "I envy silence, for I must be loud!",
 ]
