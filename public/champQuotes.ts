@@ -10,4 +10,7 @@ const quotes = [
     "Ok.",
     "The darker the night, the brighter the stars",
     "I envy silence, for I must be loud!",
+    "I fought a house once. I\'m pretty sure I won.",
+    "Only two jokers in the deck and I get dealt you.",
+    "Beauty fades. That is why it is beautiful."
 ]
