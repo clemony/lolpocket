@@ -16,6 +16,7 @@ declare module 'vue' {
     BreadcrumbList: typeof import('./../components/cn/breadcrumb/BreadcrumbList.vue')['default']
     BreadcrumbPage: typeof import('./../components/cn/breadcrumb/BreadcrumbPage.vue')['default']
     BreadcrumbSeparator: typeof import('./../components/cn/breadcrumb/BreadcrumbSeparator.vue')['default']
+    Browse: typeof import('./../pages/browse.vue')['default']
     Builds: typeof import('./../pages/builds.vue')['default']
     Button: typeof import('./../components/cn/button/Button.vue')['default']
     Card: typeof import('./../components/cn/card/Card.vue')['default']
