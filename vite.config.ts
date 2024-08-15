@@ -23,7 +23,7 @@ export default defineConfig({
       dts: "src/lib/components.d.ts",
       resolvers: [
         IconsResolver({
-          prefix: false,
+          prefix: "i",
         })
       ],
     }),

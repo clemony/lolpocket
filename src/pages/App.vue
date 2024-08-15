@@ -258,11 +258,11 @@ onMounted(async () => {
 
         <!-- expanded icon -->
 
-        <Icon icon="tabler:layout-sidebar-right-expand-filled"
+        <tabler-layout-sidebar-right-expand-filled"
           class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-off fill-current" />
 
         <!-- collapsed icon -->
-        <Icon icon="tabler:layout-sidebar-left-expand-filled"
+        <tabler-layout-sidebar-left-expand-filled"
           class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-on fill-current" />
       </label>
 
@@ -280,11 +280,11 @@ onMounted(async () => {
     <div
       class="justify-self-end grid grid-cols-3 gap-2 mr-3 tooltip tooltip-bottom *:place-items-center  *:hover:bg-base-200 *:rounded-btn *:size-4">
 
-      <Icon icon="ph:line-vertical-bold" class="rotate-90" id="titlebar-minimize" data-tip="minimize" />
+      <ph-line-vertical-bold" class="rotate-90" id="titlebar-minimize" data-tip="minimize" />
 
-      <ph:arrows-out-simple-bold id="titlebar-maximize" data-tip="maximize" />
+      <ph-arrows-out-simple-bold id="titlebar-maximize" data-tip="maximize" />
 
-      <Icon icon="ph:x-bold" id="titlebar-exit" data-tip="close" />
+      <ph-x-bold" id="titlebar-exit" data-tip="close" />
     </div>
   </div>
 
@@ -313,7 +313,7 @@ onMounted(async () => {
             <div ref="label">{{ slotProps.node.label }}</div>
 
             <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
-              <Icon icon='ph:plus' class="add-fill" />
+              <ph-plus' class="add-fill" />
             </Button>
           </template>
 
