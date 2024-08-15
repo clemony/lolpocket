@@ -1,18 +1,16 @@
 <script setup lang="ts">
-import Builds from '@/page-build/builds-template.vue';
+/*import Builds from '@/page-build/builds-template.vue';
 import Champions from '@/pages/champions.vue';
 import Home from '@/pages/home.vue';
 import Items from '@/pages/items.vue';
 import Runes from '@/pages/runes.vue';
-import Settings from '@/pages/settings.vue';
+import Settings from '@/pages/settings.vue';*/
 import { useDataStore } from '@/stores/dataStore';
-import { Icon } from '@iconify/vue';
 import { useUserSettings } from '@stores/userSettings';
 import { computed, DefineComponent, onMounted, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { Flip } from 'gsap/Flip';
 import { gsap } from 'gsap';
-import { VueRouterAutoImports } from 'unplugin-vue-router/index';
 
 
 /* ------------------------------- NAVIGATION ------------------------------- */
@@ -35,7 +33,7 @@ const settings = useUserSettings();
 // tl.value = createMenuAnimation();
 
 type ValidPaths = '/builds' | '/' | '/champions' | '/items' | '/runes' | '/settings';
-
+/*
 const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/builds': Builds,
   '/': Home,
@@ -44,12 +42,13 @@ const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/runes': Runes,
   '/settings': Settings
 };
-
-// Computed property for current view
+*/
+// Computed property for current view 
+/*
 const currentComponent = computed(() => {
   const currentPath = route.path as ValidPaths;
   return componentMap[currentPath] || null;
-});
+});*/
 
 /* ---------------------------- SIDEBAR ANIMATION --------------------------- */
 
