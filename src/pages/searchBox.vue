@@ -73,8 +73,9 @@ import { Icon } from "@iconify/vue";
                                 <input type="radio" name="search-category" class="radio radio-accent" />
                             </label>
                         </div>
-                        <input type="radio" name="my_tabs_2" class=" hidden" aria-label="Tab 4" />
+
                     </label>
+                    <input type="radio" name="my_tabs_2" class=" hidden" aria-label="Tab 4" />
                     <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
                         Tab content 1
                     </div>
