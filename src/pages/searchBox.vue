@@ -7,8 +7,10 @@ import { Icon } from "@iconify/vue";
     <form class="text-center justify-items-center rounded-lg z-0">
 
         <div class="relative ">
-            <Icon icon="teenyicons:filter-outline" />
-            <Icon icon="ph:magnifying-glass" class="absolute right-3 top-[5.5px] size-4 z-20 text-base-content/50" />
+            <div class="absolute right-3 top-[5.5px] flex gap-2.5 *:size-4 z-20 text-base-content/50">
+                <Icon icon="teenyicons:filter-outline" />
+                <Icon icon="ph:magnifying-glass" />
+            </div>
             <Input tabindex="0" role="button" placeholder=""
                 class="text-xs font-medium w-[470px] text-center h-[28px] shadow-inner bg-base-200/60 border-base-300 shadow-base-300 !outline-0 !outline-transparent rounded-[10px] !outline-none z-20 focus:ring-base-300" />
             <div tabindex="0"
