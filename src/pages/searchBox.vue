@@ -66,7 +66,7 @@ import { Icon } from "@iconify/vue";
                     </div>
 
 
-                    <label role="tab" class="tab">
+                    <label for="my_tabs_2" role="tab" class="tab">
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Runes</span>
