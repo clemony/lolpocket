@@ -228,15 +228,15 @@ function handleChampionClick(champion: Champion) {
                   <p>{{ selectedChampion.rContext }}</p>
                 </div>
               </div>
+
+
+
+
             </div>
-
-
-
-
 
           </div>
           <div v-else>
-            <p>Select a champion to view details.</p>
+            <p>Select something.</p>
           </div>
         </div>
       </div>
