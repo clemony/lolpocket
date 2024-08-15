@@ -12,6 +12,7 @@ import { computed, DefineComponent, onMounted, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { Flip } from 'gsap/Flip';
 import { gsap } from 'gsap';
+import Browse from "@/pages/browse.vue";
 
 
 /* ------------------------------- NAVIGATION ------------------------------- */
@@ -39,7 +40,7 @@ const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/builds': Builds,
   '/': Home,
   '/champions': Champions,
-  '/browse': Items,
+  '/browse': Browse,
   '/runes': Runes,
   '/settings': Settings
 };
