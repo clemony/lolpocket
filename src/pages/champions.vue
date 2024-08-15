@@ -77,28 +77,6 @@ function handleChampionClick(champion: Champion) {
             </div>
 
 
-            <!-- Fave Tab -->
-
-            <input type="radio" name="champ-tabs" role="tab" class="tab tab-2 w-64 font-normal text-2xl"
-              aria-label="Favorites" />
-
-            <div role="tabpanel" class=" tab-content bg-base-100 border-base-300 rounded-box p-6">
-              <div class="grid-container c-grid">
-                <!--<div class="grid-item champ" v-for="champion in faveChampions">
-
-                  <div class="grid-image-container champ">
-                    <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
-                      class="grid-image" />
-
-                    <div class="grid-tip">
-                      {{ champion.name }}
-                    </div>
-                  </div>
-                </div>-->
-              </div>
-
-
-            </div>
           </div>
         </div>
 
