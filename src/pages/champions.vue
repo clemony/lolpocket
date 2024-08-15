@@ -16,11 +16,10 @@ if (quotes.length === 0) {
 }*/
 
 let quotes = Quotes;
-const randomQuote: any = [];
+const randomQuote: any = getRandomQuote();
 function getRandomQuote() {
   console.log(quotes[(Math.floor(Math.random() * quotes.length))]);
 };
-console.log(randomQuote);
 
 
 
