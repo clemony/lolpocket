@@ -63,11 +63,12 @@ function handleChampionClick(champion: Champion) {
         <!-- Champ Tab -->
 
         <div id="" class="main flex-1">
+
+
+
+          <div class="font-mono italic text-sm relative right-0">{{ getQuote }}</div>
+
           <div role="tablist" class="tabs layout">
-
-
-            <div :randomQuote>{{ randomQuote.value }}</div>
-
 
             <input type="radio" name="champ-tabs" role="tab" class="tab after:w-36 font-semibold" aria-label="Champions"
               checked="true" />
