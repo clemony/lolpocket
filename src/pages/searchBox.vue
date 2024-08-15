@@ -17,8 +17,8 @@ import { Icon } from "@iconify/vue";
                     class="text-xs font-medium max-w-[470px] text-center h-[28px] shadow-inner bg-base-200/60 border-base-content/15 shadow-base-content/10 rounded-[10px] !outline-0 !outline-transparent !outline-none z-20 focus:ring-base-300" />
 
                 <div class="grid grid-cols-[1fr_2.5fr]">
-                    <div class="join join-vertical *:btn-outline">
-                        <button class="btn  join-item">
+                    <div class="grid grid-cols-1 *:btn-ghost">
+                        <button class="btn  gap-2 join-item *:grid-cols-subgrid">
                             <div class="form-control">
                                 <label class="label cursor-pointer">
                                     <span class="label-text">Builds</span>
@@ -27,7 +27,7 @@ import { Icon } from "@iconify/vue";
                             </div>
                         </button>
 
-                        <button class="btn join-item">
+                        <button class="btn ">
                             <div class="form-control">
                                 <label class="label cursor-pointer">
                                     <span class="label-text">Champions</span>
@@ -35,7 +35,7 @@ import { Icon } from "@iconify/vue";
                                 </label>
                             </div>
                         </button>
-                        <button class="btn join-item">
+                        <button class="btn">
                             <div class="form-control">
                                 <label class="label cursor-pointer">
                                     <span class="label-text">Items</span>
@@ -43,7 +43,7 @@ import { Icon } from "@iconify/vue";
                                 </label>
                             </div>
                         </button>
-                        <button class="btn join-item">
+                        <button class="btn">
                             <div class="form-control">
                                 <label class="label cursor-pointer">
                                     <span class="label-text">Runes</span>
