@@ -74,7 +74,8 @@ import { Icon } from "@iconify/vue";
 }
 
 .tab,
-.tab-active {
+.tab-active,
+.tabs-lifted {
     @apply bg-transparent;
 }
 
