@@ -31,7 +31,7 @@ const route = useRoute();
 const settings = useUserSettings();
 
 
-initializeElements();
+
 // tl.value = createMenuAnimation();
 
 type ValidPaths = '/builds' | '/' | '/champions' | '/items' | '/runes' | '/settings';
@@ -135,7 +135,7 @@ function hide() {
 // Function to create the animation timeline
 function createMenuAnimation() {
 
-
+  initializeElements();
 
   const timeline = gsap.timeline({
     paused: true,
