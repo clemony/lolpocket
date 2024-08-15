@@ -26,12 +26,6 @@ import { Icon } from "@iconify/vue";
                     </div>
                 </button>
 
-                <a role="tab" class="tab tab-active">
-
-                </a>
-                <div role="tabpanel" class="border-base-300 rounded-box p-6">
-                    Tab content 2
-                </div>
                 <a role="tab" class="tab">
                     <div class="form-control">
                         <label class="label cursor-pointer">
