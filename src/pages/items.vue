@@ -22,7 +22,7 @@ const items = dataStore.items;
 <template>
   <div id="" class="main flex-1">
     <div role="tablist" class="tabs layout">
-      <input type="radio" name="champ-tabs" role="tab" class="tab after:w-32 font-semibold" aria-label="Items"
+      <input type="radio" name="champ-tabs" role="tab" class="tab after:w-36 font-semibold" aria-label="Items"
         checked="true" />
 
       <div role="tabpanel" class="tab-content ">
