@@ -11,8 +11,8 @@ if (quotes.length === 0) {
 } else {
   const ind: number =
     Math.floor(Math.random() * quotes.length);
-  const result: number = quotes[ind];
-  console.log(`Random Quote = ${result}`);
+  const randomQuote: number = quotes[ind];
+  console.log(`Random Quote = ${randomQuote}`);
 }
 
 
@@ -65,6 +65,7 @@ function handleChampionClick(champion: Champion) {
 
         <div id="" class="main flex-1">
           <div role="tablist" class="tabs layout">
+            <div>${randomQuote}</div>
             <input type="radio" name="champ-tabs" role="tab" class="tab after:w-36 font-semibold" aria-label="Champions"
               checked="true" />
 
