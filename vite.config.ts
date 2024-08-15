@@ -36,7 +36,7 @@ export default defineConfig({
         'vue',
         {
           '@iconify/vue': [
-            'Icon',
+            '{ Icon }',
           ]
         }
       ],

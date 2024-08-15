@@ -232,6 +232,7 @@
     "watchWithFilter": true,
     "whenever": true,
     "NodeService": true,
-    "Icon": true
+    "Icon": true,
+    "{ Icon }": true
   }
 }
