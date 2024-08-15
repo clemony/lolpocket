@@ -113,7 +113,7 @@ declare module 'vue' {
     Runes: typeof import('./../pages/runes.vue')['default']
     ScrollArea: typeof import('./../components/cn/scroll-area/ScrollArea.vue')['default']
     ScrollBar: typeof import('./../components/cn/scroll-area/ScrollBar.vue')['default']
-    SearchBox: typeof import('./../pages/modules/searchBox.vue')['default']
+    SearchBox: typeof import('./../pages/searchBox.vue')['default']
     Separator: typeof import('./../components/cn/separator/Separator.vue')['default']
     Settings: typeof import('./../pages/settings.vue')['default']
     Sheet: typeof import('./../components/cn/sheet/Sheet.vue')['default']
