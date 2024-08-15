@@ -12,9 +12,7 @@ const randomQuote = computed(() => {
 });
 console.log(randomQuote.value);
 
-interface randomQuote {
-  value: string;
-};
+
 
 
 interface Champion {
@@ -68,7 +66,7 @@ function handleChampionClick(champion: Champion) {
           <div role="tablist" class="tabs layout">
 
 
-            <div ref="randomQuote">{{ randomQuote.value }}</div>
+            <div :randomQuote>{{ randomQuote.value }}</div>
 
 
             <input type="radio" name="champ-tabs" role="tab" class="tab after:w-36 font-semibold" aria-label="Champions"
