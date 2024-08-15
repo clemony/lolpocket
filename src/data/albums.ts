@@ -36,7 +36,7 @@ export interface Album {
       name: 'Patch 14.15',
       artist: 'Riot Games',
       cover:
-        'https://images.unsplash.com/photo-1611348586804-61bf6c080437?w=300&dpr=2&q=80',
+        'https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/24eb05be171a372ed26b0b6034bf875b3bd09d98-2560x1440.png?auto=format&fit=fill&q=80&w=960',
     },
     {
       name: 'PBE Update',
