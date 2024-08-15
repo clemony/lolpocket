@@ -7,6 +7,7 @@ import VueRouter from 'unplugin-vue-router/vite';
 import { defineConfig } from "vite";
 import { ViteAliases } from "vite-aliases";
 import tauri from "vite-plugin-tauri";
+import Icons from 'unplugin-icons/vite'
 
 export default defineConfig({
   plugins: [
@@ -41,6 +42,7 @@ export default defineConfig({
       logPath: "src/logs",
       createGlobalAlias: true,
     }),
+    Icons({ /* options */ }),
   ],
 
   clearScreen: false,
