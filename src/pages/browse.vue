@@ -8,10 +8,17 @@
 
                 <div id="" class="main flex-1">
                     <div role="tablist" class="tabs layout">
-                        <input type="radio" name="champ-tabs" role="tab" class="tab font-semibold"
-                            aria-label="Champions" checked="true" />
+                        <input type="radio" name="browse-tabs" role="tab" class="tab font-semibold"
+                            aria-label="Champions" checked />
 
                         <div role="tabpanel" class="tab-content ">
+                        </div>
+
+                        <input type="radio" name="browse-tabs" role="tab" class="tab font-semibold"
+                            aria-label="Items" />
+
+                        <div role="tabpanel" class="tab-content ">
+                            <Items />
                         </div>
 
 

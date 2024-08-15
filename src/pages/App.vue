@@ -33,13 +33,13 @@ const settings = useUserSettings();
 
 // tl.value = createMenuAnimation();
 
-type ValidPaths = '/builds' | '/' | '/champions' | '/items' | '/runes' | '/settings';
+type ValidPaths = '/builds' | '/' | '/champions' | '/browse' | '/runes' | '/settings';
 
 const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/builds': Builds,
   '/': Home,
   '/champions': Champions,
-  '/items': Items,
+  '/browse': Items,
   '/runes': Runes,
   '/settings': Settings
 };
