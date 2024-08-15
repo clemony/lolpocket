@@ -18,7 +18,7 @@ import { Icon } from "@iconify/vue";
 
                 <div class="grid grid-cols-[1fr_2.5fr]">
                     <div class="join join-vertical *:btn-outline">
-                        <button class="btn btn-neutral join-item">
+                        <button class="btn  join-item">
                             <div class="form-control">
                                 <label class="label cursor-pointer">
                                     <span class="label-text">Builds</span>
@@ -27,7 +27,7 @@ import { Icon } from "@iconify/vue";
                             </div>
                         </button>
 
-                        <button class="btn btn-primary join-item">
+                        <button class="btn join-item">
                             <div class="form-control">
                                 <label class="label cursor-pointer">
                                     <span class="label-text">Champions</span>
@@ -35,7 +35,7 @@ import { Icon } from "@iconify/vue";
                                 </label>
                             </div>
                         </button>
-                        <button class="btn btn-secondary btn-outline join-item">
+                        <button class="btn join-item">
                             <div class="form-control">
                                 <label class="label cursor-pointer">
                                     <span class="label-text">Items</span>
@@ -43,7 +43,7 @@ import { Icon } from "@iconify/vue";
                                 </label>
                             </div>
                         </button>
-                        <button class="btn btn-accent join-item">
+                        <button class="btn join-item">
                             <div class="form-control">
                                 <label class="label cursor-pointer">
                                     <span class="label-text">Runes</span>
