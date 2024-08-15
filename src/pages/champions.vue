@@ -4,7 +4,7 @@ import { Icon } from "@iconify/vue";
 import { Quotes } from "@/data/champQuotes.ts";
 
 const dataStore = useDataStore();
-const quotes = Quotes();
+const quotes = Quotes;
 
 if (quotes.length === 0) {
   console.log(undefined);
