@@ -48,6 +48,6 @@ export interface Album {
       name: 'Champ Flavor Tier List',
       artist: 'Clem',
       cover:
-        'https://i.pinimg.com/originals/71/82/06/718206691499170d6aae919d1beef051.png',
+        '/img/art/chase.jpg',
     },
   ]
