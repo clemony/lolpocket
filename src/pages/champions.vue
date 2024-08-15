@@ -18,9 +18,8 @@ if (quotes.length === 0) {
 let quotes = Quotes;
 
 function getRandomQuote() {
-  console.log(quotes[(Math.floor(Math.random() * quotes.length))]
-  );
-}
+  quotes[(Math.floor(Math.random() * quotes.length))]
+};
 const randomQuote = getRandomQuote()
 
 
