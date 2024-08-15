@@ -313,7 +313,7 @@ onMounted(async () => {
             <div ref="label">{{ slotProps.node.label }}</div>
 
             <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
-              <ph-plus' class="add-fill" />
+              <i-ph-plus class="add-fill" />
             </Button>
           </template>
 
