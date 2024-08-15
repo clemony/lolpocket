@@ -15,7 +15,7 @@ import { Icon } from "@iconify/vue";
                     class="text-xs font-medium max-w-[470px] text-center h-[28px] shadow-inner bg-base-200/60 border-base-content/15 shadow-base-content/10 rounded-[10px] !outline-0 !outline-transparent !outline-none z-20 focus:ring-base-300" />
 
                 <div class="grid grid-cols-3">
-                    <h4 class="font-semibold italic">Search Categories</h4>
+                    <h4 class="font-semibold font-md italic">Search Categories</h4>
 
                 </div>
 
