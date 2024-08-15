@@ -62,13 +62,13 @@ function handleChampionClick(champion: Champion) {
 
         <!-- Champ Tab -->
 
-        <div id="" class="main flex-1">
+        <div id="" class="">
 
 
 
           <div class="font-mono italic text-sm text-end px-4">{{ getQuote }}</div>
 
-          <div role="tablist" class="tabs layout">
+          <div role="tablist" class="tabs layout p-0 m-0">
 
             <input type="radio" name="champ-tabs" role="tab" class="tab after:w-36 font-semibold" aria-label="Champions"
               checked="true" />
