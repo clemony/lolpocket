@@ -18,7 +18,7 @@ if (quotes.length === 0) {
 let quotes = Quotes;
 const randomQuote: any = {
   value: getRandomQuote()
-}
+};
 function getRandomQuote() {
   console.log(quotes[(Math.floor(Math.random() * quotes.length))]);
 };
