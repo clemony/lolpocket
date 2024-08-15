@@ -5,7 +5,7 @@ import { Quotes } from "@/data/champQuotes.ts";
 
 const dataStore = useDataStore();
 const quotes = Quotes;
-var randomQuote = [];
+
 if (quotes.length === 0) {
   console.log(undefined);
 } else {
@@ -14,7 +14,6 @@ if (quotes.length === 0) {
   let randomQuote: number = quotes[ind];
   console.log(`Random Quote = ${randomQuote}`);
 }
-console.log(randomQuote);
 
 
 interface Champion {
