@@ -25,7 +25,11 @@ export default defineConfig({
       ],
     }),
     AutoImport({
-      imports: [VueRouterAutoImports, "vue"],
+      imports: [VueRouterAutoImports, "vue",
+        {
+          "@iconify/vue":
+        }
+      ],
       dirs: ["src/service/"],
       eslintrc: {
         enabled: true,
