@@ -282,7 +282,7 @@ onMounted(async () => {
 
       <Icon icon="ph:arrows-out-simple-bold" id="titlebar-maximize" data-tip="maximize" />
 
-      <Icon icon="ph:x-bold" id="titlebar-close" data-tip="close" />
+      <Icon icon="ph:x-bold" id="titlebar-close" alt="close" data-tip="close" class="titlebar-button" />
     </div>
   </div>
 
