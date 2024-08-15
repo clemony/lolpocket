@@ -4,26 +4,13 @@ import { Icon } from "@iconify/vue";
 import { Quotes } from "@/data/champQuotes.ts";
 
 const dataStore = useDataStore();
-/*
-if (quotes.length === 0) {
-  console.log(undefined);
-} else {
-  const ind: number =
-    Math.floor(Math.random() * quotes.length);
-  let getRandomQuote: number = quotes[ind];
-  console.log(`Random Quote = ${getRandomQuote}`);
-  randomQuote.push(getRandomQuote.value);
-}*/
 
 let quotes = Quotes;
-const randomQuote: any = {
-  value: getRandomQuote()
-};
-function getRandomQuote() {
-  console.log(quotes[(Math.floor(Math.random() * quotes.length))]);
-};
 
-
+const randomQuote = computed(() => {
+  return quotes[(Math.floor(Math.random() * quotes.length))];
+});
+console.log(randomQuote.value);
 
 interface Champion {
   name: string;
@@ -74,7 +61,11 @@ function handleChampionClick(champion: Champion) {
 
         <div id="" class="main flex-1">
           <div role="tablist" class="tabs layout">
-            <div v-for="randomQuote in randomQuote">{{ randomQuote.value }}</div>
+
+
+            <div>{{ randomQuote.value }}</div>
+
+
             <input type="radio" name="champ-tabs" role="tab" class="tab after:w-36 font-semibold" aria-label="Champions"
               checked="true" />
 
