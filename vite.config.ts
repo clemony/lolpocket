@@ -42,7 +42,9 @@ export default defineConfig({
       logPath: "src/logs",
       createGlobalAlias: true,
     }),
-    Icons({ /* options */ }),
+    Icons({ 
+      autoInstall: true,
+     }),
   ],
 
   clearScreen: false,
