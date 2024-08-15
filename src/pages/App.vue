@@ -122,10 +122,9 @@ function initializeElements() {
 
 function hide() {
   hideThese.forEach(elem => {
-    gsap.to(elem, { opacity: 0, visibility: "hidden", ease: "power1.out", duration: 0.25 });// Reset styles
-    tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
-
+    gsap.to(elem, { opacity: 0, visibility: "hidden", ease: "power1.out", duration: 0.25 });
   })
+  tooltipText.value = tooltipText.value === 'Collapse' ? 'Expand' : 'Collapse';
   return hide();
 };
 
@@ -140,9 +139,9 @@ function createMenuAnimation() {
     paused: true,
     onStart: hide(),
   });
-
-
-
+  hideThese.forEach(elem => {
+    gsap.to(elem, { opacity: 0, visibility: "hidden", ease: "power1.out", duration: 0.25 });
+  });
   timeline.to(menu, { gridTemplateColumns: "75px auto", duration: 0.5 }, "<");
   timeline.to(nav, { borderRadius: "15px", duration: 0.5 }, "<");
   timeline.to(rootchildren, {
