@@ -227,6 +227,13 @@ const onNodeSelect = (node: any) => {
   navigateTo(node.data);
 };
 
+function toggleMenus() {
+  const menu = menuRef.value;
+  if (tooltipText.value == "Collapse" && menu) {
+    menu.classList.add("minimize");
+  }
+};
+
 /* ------------------------------ ON MOUNTED ----------------------------- */
 
 onMounted(async () => {
@@ -254,7 +261,7 @@ onMounted(async () => {
 
       <label
         class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-bottom before:text-xs before:font-normal before:left-[75%] [--tooltip-offset:30px] [--tooltip-tail-offset:24px]"
-        :data-tip="tooltipText" @click="toggleMenu()">
+        :data-tip="tooltipText" @click="toggleMenus()">
         <!-- this hidden checkbox controls the state -->
         <input type="checkbox" />
 
