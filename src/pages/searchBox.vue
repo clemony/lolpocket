@@ -28,7 +28,7 @@ import { Icon } from "@iconify/vue";
                             </label>
                         </div>
                     </a>
-                    <a role="tab" class="tab tab-active">
+                    <a role="tab" class="tab">
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Champions</span>
