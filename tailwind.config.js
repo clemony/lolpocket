@@ -22,9 +22,7 @@ module.exports = {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      screens: {},
       fontFamily: {
         "font-sans": ["Geist\\ Sans", "sans-serif"],
         "font-serif": ["Roboto\\ Serif\\ Variable", "serif"],
