@@ -25,6 +25,12 @@ export default defineConfig({
       ],
     }),
     AutoImport({
+      include: [
+        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+        /\.vue$/,
+        /\.vue\?vue/, // .vue
+        /\.md$/, // .md
+      ],
       imports: [
         VueRouterAutoImports, 
         'vue',
