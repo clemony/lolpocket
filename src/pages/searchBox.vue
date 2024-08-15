@@ -24,7 +24,7 @@ import { Icon } from "@iconify/vue";
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Builds</span>
-                                <input type="checkbox" class="checkbox " />
+                                <input type="radio" class="checkbox " />
                             </label>
                         </div>
                     </a>
