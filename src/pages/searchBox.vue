@@ -17,7 +17,7 @@ import { Icon } from "@iconify/vue";
                     class="text-xs font-medium max-w-[470px] text-center h-[28px] shadow-inner bg-base-200/60 border-base-content/15 shadow-base-content/10 rounded-[10px] !outline-0 !outline-transparent !outline-none z-20 focus:ring-base-300" />
 
                 <div class="grid grid-cols-[1fr_2.5fr]">
-                    <div class="grid grid-cols-1 gap-2  *:btn-ghost">
+                    <div class="grid grid-cols-1 gap-2 my-4">
                         <button class="">
                             <div class="form-control">
                                 <label class="label cursor-pointer">
