@@ -55,11 +55,11 @@ const items = dataStore.items;
 
 <style scoped>
 .grid-container {
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(60px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(70px, 1fr));
 }
 
 .item {
-  @apply h-[60px] w-[60px];
+  @apply h-[70px] w-[70px];
 }
 </style>
