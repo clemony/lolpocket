@@ -18,7 +18,7 @@ import { Icon } from "@iconify/vue";
 
                 <div class="grid grid-cols-[1fr_2.5fr]">
                     <div class="grid grid-cols-1 *:btn-ghost">
-                        <button class="btn  gap-2 join-item *:grid *:grid-cols-[3fr 1fr]">
+                        <button class="btn  gap-2 join-item">
                             <div class="form-control">
                                 <label class="label cursor-pointer">
                                     <span class="label-text">Builds</span>
@@ -27,7 +27,7 @@ import { Icon } from "@iconify/vue";
                             </div>
                         </button>
 
-                        <button class="btn ">
+                        <button class="btn">
                             <div class="form-control">
                                 <label class="label cursor-pointer">
                                     <span class="label-text">Champions</span>
@@ -77,5 +77,13 @@ import { Icon } from "@iconify/vue";
 
 .tab-panel {
     @apply bg-transparent;
+}
+
+.label {
+    @apply grid grid-cols-[3fr_1fr];
+
+    span {
+        @apply flex justify-start;
+    }
 }
 </style>
