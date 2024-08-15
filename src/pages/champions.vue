@@ -63,7 +63,7 @@ function handleChampionClick(champion: Champion) {
           <div role="tablist" class="tabs layout">
 
 
-            <div>{{ randomQuote.value }}</div>
+            <div :randomQuote>{{ randomQuote.value }}</div>
 
 
             <input type="radio" name="champ-tabs" role="tab" class="tab after:w-36 font-semibold" aria-label="Champions"
