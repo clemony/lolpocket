@@ -22,7 +22,9 @@ export default defineConfig({
       deep: true,
       dts: "src/lib/components.d.ts",
       resolvers: [
-        IconsResolver()
+        IconsResolver({
+          prefix: false,
+        })
       ],
     }),
     AutoImport({
