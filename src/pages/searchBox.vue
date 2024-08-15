@@ -7,7 +7,7 @@ import { Icon } from "@iconify/vue";
     <form class="text-center justify-items-center rounded-lg z-0">
 
         <div class="relative ">
-            <Icon icon="tabler:layout-sidebar-left-expand-filled"
+            <Icon icon="tabler:layout-sidebar-left-expand-filled" color="black"
                 class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-on fill-current" />
             <Icon icon="ph:magnifying-glass" class="absolute right-3 top-[5.5px] size-4 z-20 text-base-content/50" />
             <Input tabindex="0" role="button" placeholder=""
