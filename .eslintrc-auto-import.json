@@ -231,6 +231,7 @@
     "watchOnce": true,
     "watchWithFilter": true,
     "whenever": true,
-    "NodeService": true
+    "NodeService": true,
+    "Icon": true
   }
 }
