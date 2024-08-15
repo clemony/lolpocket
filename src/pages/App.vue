@@ -1,16 +1,18 @@
 <script setup lang="ts">
-/*import Builds from '@/page-build/builds-template.vue';
+import Builds from '@/page-build/builds-template.vue';
 import Champions from '@/pages/champions.vue';
 import Home from '@/pages/home.vue';
 import Items from '@/pages/items.vue';
 import Runes from '@/pages/runes.vue';
-import Settings from '@/pages/settings.vue';*/
+import Settings from '@/pages/settings.vue';
 import { useDataStore } from '@/stores/dataStore';
+import { Icon } from '@iconify/vue';
 import { useUserSettings } from '@stores/userSettings';
 import { computed, DefineComponent, onMounted, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { Flip } from 'gsap/Flip';
 import { gsap } from 'gsap';
+import { VueRouterAutoImports } from 'unplugin-vue-router/index';
 
 
 /* ------------------------------- NAVIGATION ------------------------------- */
@@ -33,7 +35,7 @@ const settings = useUserSettings();
 // tl.value = createMenuAnimation();
 
 type ValidPaths = '/builds' | '/' | '/champions' | '/items' | '/runes' | '/settings';
-/*
+
 const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/builds': Builds,
   '/': Home,
@@ -42,13 +44,12 @@ const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/runes': Runes,
   '/settings': Settings
 };
-*/
-// Computed property for current view 
-/*
+
+// Computed property for current view
 const currentComponent = computed(() => {
   const currentPath = route.path as ValidPaths;
   return componentMap[currentPath] || null;
-});*/
+});
 
 /* ---------------------------- SIDEBAR ANIMATION --------------------------- */
 
@@ -257,11 +258,11 @@ onMounted(async () => {
 
         <!-- expanded icon -->
 
-        <i-tabler-layout-sidebar-right-expand-filled"
+        <Icon icon="tabler:layout-sidebar-right-expand-filled"
           class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-off fill-current" />
 
         <!-- collapsed icon -->
-        <i-tabler-layout-sidebar-left-expand-filled"
+        <Icon icon="tabler:layout-sidebar-left-expand-filled"
           class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-on fill-current" />
       </label>
 
@@ -272,18 +273,18 @@ onMounted(async () => {
 
     <div class="w-full col-start-2 justify-self-center z-0 dropdown">
 
-      <SearchBox />
+      <Search />
 
     </div>
 
     <div
       class="justify-self-end grid grid-cols-3 gap-2 mr-3 tooltip tooltip-bottom *:place-items-center  *:hover:bg-base-200 *:rounded-btn *:size-4">
 
-      <i-ph-line-vertical-bold" class="rotate-90" id="titlebar-minimize" data-tip="minimize" />
+      <Icon icon="ph:line-vertical-bold" class="rotate-90" id="titlebar-minimize" data-tip="minimize" />
 
-      <i-ph-arrows-out-simple-bold id="titlebar-maximize" data-tip="maximize" />
+      <Icon icon="ph:arrows-out-simple-bold" id="titlebar-maximize" data-tip="maximize" />
 
-      <i-ph-x-bold" id="titlebar-exit" data-tip="close" />
+      <Icon icon="ph:x-bold" id="titlebar-exit" data-tip="close" />
     </div>
   </div>
 
@@ -312,7 +313,7 @@ onMounted(async () => {
             <div ref="label">{{ slotProps.node.label }}</div>
 
             <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
-              <i-ph-plus class="add-fill" />
+              <Icon icon='ph:plus' class="add-fill" />
             </Button>
           </template>
 
