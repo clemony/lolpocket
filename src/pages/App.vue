@@ -275,6 +275,7 @@ onMounted(async () => {
 
     </div>
 
+    toolbar buttons
     <div
       class="justify-self-end grid grid-cols-3 gap-2 mr-3 tooltip tooltip-bottom *:place-items-center  *:hover:bg-base-200 *:rounded-btn *:size-4">
 
@@ -292,7 +293,7 @@ onMounted(async () => {
     </div>
   </div>
 
-  <!-- v-if="minimized" :class="minimize" -->
+
 
   <div ref="menuRef" id="menu" class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 ">
 
