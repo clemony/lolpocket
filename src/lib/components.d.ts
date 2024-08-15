@@ -101,6 +101,7 @@ declare module 'vue' {
     PaginationLast: typeof import('./../components/cn/pagination/PaginationLast.vue')['default']
     PaginationNext: typeof import('./../components/cn/pagination/PaginationNext.vue')['default']
     PaginationPrev: typeof import('./../components/cn/pagination/PaginationPrev.vue')['default']
+    'Ph:arrowsOutSimpleBold': typeof import('~icons/ph/arrows-out-simple-bold')['default']
     Popover: typeof import('./../components/cn/popover/Popover.vue')['default']
     PopoverContent: typeof import('./../components/cn/popover/PopoverContent.vue')['default']
     PopoverTrigger: typeof import('./../components/cn/popover/PopoverTrigger.vue')['default']
