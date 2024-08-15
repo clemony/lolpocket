@@ -65,17 +65,16 @@ import { Icon } from "@iconify/vue";
                         Tab content 1
                     </div>
 
-
-                    <label for="my_tabs_2" role="tab" class="tab">
+                    <input type="radio" name="my_tabs_2" class=" hidden" aria-label="Tab 4" />
+                    <label name="my_tabs_2" role="tab" class="tab">
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Runes</span>
                                 <input type="radio" name="search-category" class="radio radio-accent" />
                             </label>
                         </div>
-
                     </label>
-                    <input type="radio" name="my_tabs_2" class=" hidden" aria-label="Tab 4" />
+
                     <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
                         Tab content 1
                     </div>
