@@ -19,7 +19,7 @@ import { Icon } from "@iconify/vue";
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Remember me</span>
-                                <input type="checkbox" checked="false" class="checkbox" />
+                                <input type="checkbox" checked="false" class="checkbox " />
                             </label>
                         </div>
                     </a>
@@ -27,7 +27,7 @@ import { Icon } from "@iconify/vue";
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Remember me</span>
-                                <input type="checkbox" checked="false" class="checkbox checkbox-primary" />
+                                <input type="checkbox" checked="false" class="checkbox checkbox-primary " />
                             </label>
                         </div>
                     </a>
@@ -44,3 +44,17 @@ import { Icon } from "@iconify/vue";
         </div>
     </form>
 </template>
+
+<style scoped>
+.tabs {
+    @apply mt-3;
+}
+
+.tab {
+    @apply w-24;
+}
+
+.checkbox {
+    @apply checkbox-sm ml-2;
+}
+</style>
