@@ -24,7 +24,7 @@ import { Icon } from "@iconify/vue";
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Builds</span>
-                                <input type="radio" name="radio-10" class="radio " />
+                                <input type="radio" name="search-category" class="radio " />
                             </label>
                         </div>
                     </a>
@@ -32,7 +32,7 @@ import { Icon } from "@iconify/vue";
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Champions</span>
-                                <input type="radio" name="radio-10" class="radio radio-primary" />
+                                <input type="radio" name="search-category" class="radio radio-primary" />
                             </label>
                         </div>
                     </a>
@@ -40,7 +40,7 @@ import { Icon } from "@iconify/vue";
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Items</span>
-                                <input type="radio" name="radio-10" class="radio radio-secondary" />
+                                <input type="radio" name="search-category" class="radio radio-secondary" />
                             </label>
                         </div>
                     </a>
@@ -65,7 +65,7 @@ import { Icon } from "@iconify/vue";
 
 .tab {}
 
-.checkbox {
-    @apply checkbox-xs ml-2;
+.radio {
+    @apply radio-xs ml-2;
 }
 </style>
