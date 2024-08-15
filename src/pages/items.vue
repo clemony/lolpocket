@@ -57,5 +57,6 @@ const items = dataStore.items;
 
 .item {
   @apply h-[70px] w-[70px];
+
 }
 </style>
