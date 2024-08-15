@@ -22,7 +22,7 @@ import { Icon } from "@iconify/vue";
                 </div>
 
                 <div role="tablist" class="tabs tabs-lifted">
-                    <a role="tab" class="tab *:text-xs">
+                    <a role="tab" class="tab tab-active">
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Builds</span>
@@ -30,7 +30,7 @@ import { Icon } from "@iconify/vue";
                             </label>
                         </div>
                     </a>
-                    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                    <div role="tabpanel" class=" bg-base-100 border-base-300 rounded-box p-6">
                         Tab content 2
                     </div>
                     <a role="tab" class="tab">
