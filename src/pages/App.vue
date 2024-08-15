@@ -12,7 +12,6 @@ import { computed, DefineComponent, onMounted, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { Flip } from 'gsap/Flip';
 import { gsap } from 'gsap';
-import { VueRouterAutoImports } from 'unplugin-vue-router/index';
 
 
 /* ------------------------------- NAVIGATION ------------------------------- */
