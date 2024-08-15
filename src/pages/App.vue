@@ -215,6 +215,7 @@ function toggleMenu() {
     absolute: true,
   });
 
+
   if (tooltipText.value == 'Collapse') {
     tl.value?.play();
   } else {
