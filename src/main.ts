@@ -11,7 +11,6 @@ import { createRouter, createWebHistory } from 'vue-router';
 import { routes } from 'vue-router/auto-routes';
 import { getCurrent } from '../node_modules/@tauri-apps/api/window.js';
 
-import { Icon } from '@iconify/vue';
 import { Flip } from "gsap/Flip";
 
 
@@ -72,7 +71,6 @@ pinia.use(piniaPluginPersistedstate)
 app.use(pinia);
 app.use(gsap);
 app.use(router);
-app.use (Icon)
 app.use(PrimeVue, {
   unstyled: true,
   pt: Aura
