@@ -54,7 +54,7 @@ const items = dataStore.items;
 
 
 <style scoped>
-.grid-container.item {
+.grid-container {
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(60x, 1fr));
 }
