@@ -68,7 +68,7 @@ function handleChampionClick(champion: Champion) {
           <div role="tablist" class="tabs layout">
 
 
-            <div :style="randomQuote" v-for="quote in randomQuote">{{ randomQuote.value }}</div>
+            <div ref="randomQuote">{{ randomQuote.value }}</div>
 
 
             <input type="radio" name="champ-tabs" role="tab" class="tab after:w-36 font-semibold" aria-label="Champions"
