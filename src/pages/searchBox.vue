@@ -30,6 +30,11 @@ import { Icon } from "@iconify/vue";
                             </label>
                         </div>
                     </a>
+                    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                        Tab content 1
+                    </div>
+
+
                     <a role="tab" class="tab">
                         <div class="form-control">
                             <label class="label cursor-pointer">
@@ -38,6 +43,11 @@ import { Icon } from "@iconify/vue";
                             </label>
                         </div>
                     </a>
+                    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                        Tab content 1
+                    </div>
+
+
                     <a role="tab" class="tab">
                         <div class="form-control">
                             <label class="label cursor-pointer">
@@ -46,6 +56,11 @@ import { Icon } from "@iconify/vue";
                             </label>
                         </div>
                     </a>
+                    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                        Tab content 1
+                    </div>
+
+
                     <a role="tab" class="tab">
                         <div class="form-control">
                             <label class="label cursor-pointer">
@@ -54,6 +69,11 @@ import { Icon } from "@iconify/vue";
                             </label>
                         </div>
                     </a>
+                    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                        Tab content 1
+                    </div>
+
+
                 </div>
             </div>
         </div>
