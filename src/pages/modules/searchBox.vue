@@ -1,3 +1,7 @@
+<script lang="ts">
+
+</script>
+
 <template>
     <form class="text-center justify-items-center rounded-lg z-0">
         <div class="relative ">
