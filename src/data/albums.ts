@@ -40,13 +40,13 @@ export interface Album {
     },
     {
       name: 'PBE Update',
-      artist: 'Nina Netcode',
+      artist: 'Guy on Reddit',
       cover:
         'https://images.unsplash.com/photo-1468817814611-b7edf94b5d60?w=300&dpr=2&q=80',
     },
     {
-      name: 'Thing',
-      artist: 'Lena Logic',
+      name: 'Best Champs to Eat',
+      artist: 'Clem',
       cover:
         'https://images.unsplash.com/photo-1528143358888-6d3c7f67bd5d?w=300&dpr=2&q=80',
     },
