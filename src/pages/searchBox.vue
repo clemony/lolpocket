@@ -19,7 +19,7 @@ import { Icon } from "@iconify/vue";
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Builds</span>
-                                <input type="checkbox" checked="false" class="checkbox " />
+                                <input type="checkbox" class="checkbox " />
                             </label>
                         </div>
                     </a>
@@ -27,7 +27,7 @@ import { Icon } from "@iconify/vue";
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Champions</span>
-                                <input type="checkbox" checked="false" class="checkbox checkbox-primary " />
+                                <input type="checkbox" class="checkbox checkbox-primary " />
                             </label>
                         </div>
                     </a>
@@ -35,7 +35,7 @@ import { Icon } from "@iconify/vue";
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Items</span>
-                                <input type="checkbox" checked="false" class="checkbox checkbox-secondary" />
+                                <input type="checkbox" class="checkbox checkbox-secondary" />
                             </label>
                         </div>
                     </a>
@@ -43,7 +43,7 @@ import { Icon } from "@iconify/vue";
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text">Runes</span>
-                                <input type="checkbox" checked="false" class="checkbox checkbox-accent" />
+                                <input type="checkbox" class="checkbox checkbox-accent" />
                             </label>
                         </div>
                     </a>
@@ -61,6 +61,6 @@ import { Icon } from "@iconify/vue";
 .tab {}
 
 .checkbox {
-    @apply checkbox-sm ml-2;
+    @apply checkbox-xs ml-2;
 }
 </style>
