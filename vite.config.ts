@@ -16,7 +16,7 @@ export default defineConfig({
     vue(),
     tauri(),
     Components({
-      dirs: ["src/components", "src/components/modules", "src/pages"], // Ensure paths are correct
+      dirs: ["src/components", "src/pages/modules", "src/pages"], // Ensure paths are correct
       extensions: ["vue"],
       deep: true,
       dts: "src/lib/components.d.ts",
