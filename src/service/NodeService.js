@@ -103,7 +103,7 @@ export const NodeService = {
         key: "Items",
         label: "Items",
         icon: "ph--sword",
-        data: "/items",
+        data: "/browse",
         selectable: "true",
         type: "browse",
       },
