@@ -22,14 +22,17 @@ import { Icon } from "@iconify/vue";
                 </div>
 
                 <div role="tablist" class="tabs tabs-lifted">
-                    <a role="tab" class="tab *:text-xs">
-                        <div class="form-control">
-                            <label class="label cursor-pointer">
-                                <span class="label-text">Builds</span>
-                                <input type="radio" name="search-category" class="radio " />
-                            </label>
-                        </div>
-                    </a>
+                    <label>
+                        <a role="tab" class="tab *:text-xs">
+                            <div class="form-control">
+                                <label class="label cursor-pointer">
+                                    <span class="label-text">Builds</span>
+                                    <input type="radio" name="search-category" class="radio " />
+                                </label>
+                            </div>
+                        </a>
+                        <input type="radio" name="my_tabs_2" role="tab" class="tab hidden" aria-label="Tab 1" />
+                    </label>
                     <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
                         Tab content 1
                     </div>
