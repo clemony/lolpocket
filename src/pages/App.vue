@@ -12,7 +12,6 @@ import { computed, DefineComponent, onMounted, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { Flip } from 'gsap/Flip';
 import { gsap } from 'gsap';
-import Browse from "@/pages/browse.vue";
 
 
 /* ------------------------------- NAVIGATION ------------------------------- */
@@ -34,13 +33,13 @@ const settings = useUserSettings();
 
 // tl.value = createMenuAnimation();
 
-type ValidPaths = '/builds' | '/' | '/champions' | '/browse' | '/runes' | '/settings';
+type ValidPaths = '/builds' | '/' | '/champions' | '/items' | '/runes' | '/settings';
 
 const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/builds': Builds,
   '/': Home,
   '/champions': Champions,
-  '/browse': Browse,
+  '/items': Items,
   '/runes': Runes,
   '/settings': Settings
 };
