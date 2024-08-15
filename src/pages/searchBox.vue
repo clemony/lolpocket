@@ -35,7 +35,7 @@ import { Icon } from "@iconify/vue";
                                 </label>
                             </div>
                         </button>
-                        <button class="btn btn-secondary join-item">
+                        <button class="btn btn-secondary btn-outline join-item">
                             <div class="form-control">
                                 <label class="label cursor-pointer">
                                     <span class="label-text">Items</span>
