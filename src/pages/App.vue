@@ -258,11 +258,11 @@ onMounted(async () => {
 
         <!-- expanded icon -->
 
-        <tabler-layout-sidebar-right-expand-filled"
+        <i-tabler-layout-sidebar-right-expand-filled"
           class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-off fill-current" />
 
         <!-- collapsed icon -->
-        <tabler-layout-sidebar-left-expand-filled"
+        <i-tabler-layout-sidebar-left-expand-filled"
           class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-on fill-current" />
       </label>
 
@@ -280,11 +280,11 @@ onMounted(async () => {
     <div
       class="justify-self-end grid grid-cols-3 gap-2 mr-3 tooltip tooltip-bottom *:place-items-center  *:hover:bg-base-200 *:rounded-btn *:size-4">
 
-      <ph-line-vertical-bold" class="rotate-90" id="titlebar-minimize" data-tip="minimize" />
+      <i-ph-line-vertical-bold" class="rotate-90" id="titlebar-minimize" data-tip="minimize" />
 
-      <ph-arrows-out-simple-bold id="titlebar-maximize" data-tip="maximize" />
+      <i-ph-arrows-out-simple-bold id="titlebar-maximize" data-tip="maximize" />
 
-      <ph-x-bold" id="titlebar-exit" data-tip="close" />
+      <i-ph-x-bold" id="titlebar-exit" data-tip="close" />
     </div>
   </div>
 

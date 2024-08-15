@@ -83,6 +83,7 @@ declare module 'vue' {
     HoverCardTrigger: typeof import('./../components/cn/hover-card/HoverCardTrigger.vue')['default']
     Hypnotic: typeof import('./../components/loader/hypnotic.vue')['default']
     Input: typeof import('./../components/cn/input/Input.vue')['default']
+    IPhArrowsOutSimpleBold: typeof import('~icons/ph/arrows-out-simple-bold')['default']
     ItemInfo: typeof import('./../pages/modules/ItemInfo.vue')['default']
     Items: typeof import('./../pages/items.vue')['default']
     Label: typeof import('./../components/cn/label/Label.vue')['default']
