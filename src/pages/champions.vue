@@ -66,7 +66,7 @@ function handleChampionClick(champion: Champion) {
 
 
 
-          <div class="font-mono italic text-sm text-end px-4">{{ getQuote }}</div>
+          <div class="font-mono italic text-sm text-end px-4 absolute">{{ getQuote }}</div>
 
           <div role="tablist" class="tabs layout !mr-0">
 
