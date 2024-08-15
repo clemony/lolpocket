@@ -231,8 +231,8 @@ const onNodeSelect = (node: any) => {
 
 onMounted(async () => {
   const dataStore = useDataStore();
-  await dataStore.fetchData();
-  await NodeService.getTreeNodes().then((data: any) => {
+  dataStore.fetchData();
+  NodeService.getTreeNodes().then((data: any) => {
     nodes.value = data;
   });
   console.log(menuRef);
