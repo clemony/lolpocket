@@ -16,42 +16,44 @@ import { Icon } from "@iconify/vue";
                 <Input tabindex="0" role="button" placeholder=""
                     class="text-xs font-medium max-w-[470px] text-center h-[28px] shadow-inner bg-base-200/60 border-base-content/15 shadow-base-content/10 rounded-[10px] !outline-0 !outline-transparent !outline-none z-20 focus:ring-base-300" />
 
+                <div class="grid grid-cols-2">
+                    <div>
+                        <button class="btn btn-active btn-neutral">
+                            <div class="form-control">
+                                <label class="label cursor-pointer">
+                                    <span class="label-text">Builds</span>
+                                    <input type="radio" name="search-category" class="radio " />
+                                </label>
+                            </div>
+                        </button>
 
-                <button class="btn btn-active btn-neutral">
-                    <div class="form-control">
-                        <label class="label cursor-pointer">
-                            <span class="label-text">Builds</span>
-                            <input type="radio" name="search-category" class="radio " />
-                        </label>
-                    </div>
-                </button>
+                        <button class="btn btn-primary">
+                            <div class="form-control">
+                                <label class="label cursor-pointer">
+                                    <span class="label-text">Champions</span>
+                                    <input type="radio" name="search-category" class="radio radio-primary" />
+                                </label>
+                            </div>
+                        </button>
+                        <button class="btn btn-secondary">
+                            <div class="form-control">
+                                <label class="label cursor-pointer">
+                                    <span class="label-text">Items</span>
+                                    <input type="radio" name="search-category" class="radio radio-secondary" />
+                                </label>
+                            </div>
+                        </button>
+                        <button class="btn btn-accent">
+                            <div class="form-control">
+                                <label class="label cursor-pointer">
+                                    <span class="label-text">Runes</span>
+                                    <input type="radio" name="search-category" class="radio radio-accent" />
+                                </label>
+                            </div>
+                        </button>
 
-                <button class="btn btn-primary">
-                    <div class="form-control">
-                        <label class="label cursor-pointer">
-                            <span class="label-text">Champions</span>
-                            <input type="radio" name="search-category" class="radio radio-primary" />
-                        </label>
                     </div>
-                </button>
-                <button class="btn btn-secondary">
-                    <div class="form-control">
-                        <label class="label cursor-pointer">
-                            <span class="label-text">Items</span>
-                            <input type="radio" name="search-category" class="radio radio-secondary" />
-                        </label>
-                    </div>
-                </button>
-                <button class="btn btn-accent">
-                    <div class="form-control">
-                        <label class="label cursor-pointer">
-                            <span class="label-text">Runes</span>
-                            <input type="radio" name="search-category" class="radio radio-accent" />
-                        </label>
-                    </div>
-                </button>
-
-
+                </div>
 
             </div>
         </div>
@@ -59,8 +61,8 @@ import { Icon } from "@iconify/vue";
 </template>
 
 <style scoped>
-.tabs {
-    @apply mt-3;
+.btn {
+    @apply btn-sm;
 }
 
 .tab,
