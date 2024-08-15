@@ -273,7 +273,7 @@ onMounted(async () => {
 
     <div class="w-full col-start-2 justify-self-center z-0 dropdown">
 
-      <Search />
+      <SearchBox />
 
     </div>
 
