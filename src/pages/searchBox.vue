@@ -12,14 +12,10 @@ import { Icon } from "@iconify/vue";
             <Input tabindex="0" role="button" placeholder=""
                 class="text-xs font-medium w-[470px] text-center h-[28px] shadow-inner bg-base-200/60 border-base-300 shadow-base-300 !outline-0 !outline-transparent rounded-[10px] !outline-none z-20 focus:ring-base-300" />
             <div tabindex="0"
-                class="dropdown-content menu m-0 p-0 bg-base-100 w-[530px] rounded-md place-content-center z-[1] -top-1 px-0 pt-1 shadow -ml-[25px]">
+                class="dropdown-content menu m-0 p-0 bg-base-100 w-[500px] rounded-box place-content-center z-[1] -top-1 px-0 pt-2 shadow-lg -ml-[20px]">
                 <Input tabindex="0" role="button" placeholder=""
                     class="text-xs font-medium max-w-[470px] text-center h-[28px] shadow-inner bg-base-200/60 border-base-content/15 shadow-base-content/10 rounded-[10px] !outline-0 !outline-transparent !outline-none z-20 focus:ring-base-300" />
 
-                <div class="grid grid-cols-3">
-                    <h4 class="font-semibold font-md italic">Search Categories</h4>
-
-                </div>
 
                 <div role="tablist" class="tabs tabs-lifted">
                     <a role="tab" class="tab tab-active">
