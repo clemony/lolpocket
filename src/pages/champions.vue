@@ -4,16 +4,24 @@ import { Icon } from "@iconify/vue";
 import { Quotes } from "@/data/champQuotes.ts";
 
 const dataStore = useDataStore();
-const quotes = Quotes;
-
+/*
 if (quotes.length === 0) {
   console.log(undefined);
 } else {
   const ind: number =
     Math.floor(Math.random() * quotes.length);
-  let randomQuote: number = quotes[ind];
-  console.log(`Random Quote = ${randomQuote}`);
+  let getRandomQuote: number = quotes[ind];
+  console.log(`Random Quote = ${getRandomQuote}`);
+  randomQuote.push(getRandomQuote.value);
+}*/
+
+let quotes = Quotes;
+
+function getRandomQuote() {
+  console.log(quotes[(Math.floor(Math.random() * quotes.length))]
+  );
 }
+const randomQuote = getRandomQuote()
 
 
 interface Champion {
