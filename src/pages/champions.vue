@@ -16,11 +16,14 @@ if (quotes.length === 0) {
 }*/
 
 let quotes = Quotes;
-
+const randomQuote = [];
 function getRandomQuote() {
-  quotes[(Math.floor(Math.random() * quotes.length))]
+  let randomQuote = quotes[(Math.floor(Math.random() * quotes.length))]
+  return randomQuote;
 };
-const randomQuote = getRandomQuote()
+getRandomQuote();
+console.log(randomQuote);
+
 
 
 interface Champion {
