@@ -27,7 +27,7 @@ export default {
     ],
   },
   node: {
-    class: ["focus:outline-none align-middle items-center relative my-1 w-full bg-base-100 code", "node"],
+    class: ["focus:outline-none align-middle items-center relative my-1 w-full bg-base-100"],
   },
   nodeContent: ({ context, props }) => ({
     class: [
@@ -45,7 +45,7 @@ export default {
       },
 
       // Transition
-      "transition-shadow duration-200",
+      "duration-200",
 
       {
         "cursor-pointer select-none": props.selectionMode == "single" || props.selectionMode == "multiple",
