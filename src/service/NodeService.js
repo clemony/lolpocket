@@ -1,15 +1,17 @@
 export const NodeService = {
   name: "NavTree",
+  expandedKeys: {
+    default: "Builds",
+  },
   selectionMode: "single",
   getTreeNodesData() {
     return [
       {
-        key: "1",
+        key: "home",
         label: "Home",
         icon: "ph--house-simple",
         data: "/",
-        selectable: true,
-        "data-p-selected": true,
+        selectable: "true",
       },
       {
         key: "Builds",
@@ -84,7 +86,7 @@ export const NodeService = {
       {
         key: "Browse",
         label: "Browse",
-        icon: "pepicons-pencil--line-x",
+        icon: "pepicons-pop--line-x",
         data: "d",
         selectable: "false",
         type: "divider",
@@ -116,7 +118,7 @@ export const NodeService = {
       {
         key: "Divider",
         label: "Utilities",
-        icon: "pepicons-pencil--line-x",
+        icon: "pepicons-pop--line-x",
         data: "",
         selectable: "false",
         type: "divider",
