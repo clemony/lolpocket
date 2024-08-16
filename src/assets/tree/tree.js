@@ -32,7 +32,7 @@ export default {
   nodeContent: ({ context, props }) => ({
     class: [
       // Flex and Alignment
-      "inline-flex items-center align-middle relative h-8 pl-2 w-full",
+      "inline-flex items-center align-middle relative h-8 px-3 w-full",
 
       // Spacing
 
