@@ -289,10 +289,13 @@ onMounted(async () => {
 }
 
 [data-pc-section="nodechildren"],
-[data-pc-section="nodetogglebutton"],
-[data-pc-section="nodelabel"],
-.add-build {
+[data-pc-section="nodelabel"] {
   @apply transition-all duration-700;
+}
+
+[data-pc-section="nodetogglebutton"],
+.add-build {
+  @apply transition-all duration-100;
 }
 
 [data-pc-section="nodeicon"] {
@@ -308,15 +311,9 @@ onMounted(async () => {
 .minimize [data-pc-section="nodetogglebutton"],
 .minimize [data-pc-section="nodelabel"],
 .minimize .add-build {
-  @apply w-0;
+  @apply w-0 invisible;
 }
 
-.minimize [data-pc-section="nodechildren"],
-.minimize [data-pc-section="nodetogglebutton"],
-.minimize [data-pc-section="nodelabel"],
-.minimize .add-build {
-  @apply hidden transition-all delay-1000;
-}
 
 .minimize [data-pc-section="nodeicon"] {
   @apply m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60 transition-all duration-700;
