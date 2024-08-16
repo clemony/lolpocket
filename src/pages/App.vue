@@ -166,7 +166,7 @@ onMounted(async () => {
             shadow-base-300 shadow-lg nav">
 
         <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
-          @nodeSelect="onNodeSelect" id="tree" TreeContext="">
+          @nodeSelect="onNodeSelect" id="tree" TreeContext="index: 1, selected: true">
 
 
           <template #nodetogglebutton>
