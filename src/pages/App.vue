@@ -418,7 +418,7 @@ onMounted(async () => {
 }*/
 
 #menu.minimize {
-  @apply grid-cols-[80px_auto] transition-all duration-700 delay-700;
+  @apply grid-cols-[80px_auto] transition-all duration-700 delay-200;
 
 
   .nav * {
@@ -459,6 +459,6 @@ onMounted(async () => {
 .minimize [data-pc-section="nodetogglebutton"],
 .minimize [data-pc-section="nodelabel"],
 .minimize .add-build {
-  @apply hidden transition-all delay-700;
+  @apply hidden transition-all delay-1000;
 }
 </style>
