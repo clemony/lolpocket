@@ -44,7 +44,7 @@ const currentComponent = computed(() => {
 });
 
 const nodes = ref<any[]>([]);
-const selectedKey = "home";
+const selectedKey = ref<string[]>([]);
 
 // Method for node selection in the tree
 const onNodeSelect = (node: any) => {
