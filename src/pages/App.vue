@@ -172,7 +172,7 @@ onMounted(async () => {
           <template #nodetogglebutton>
           </template>
 
-          <template #default="slotProps">
+          <template #default="slotProps" scope: { node: Home, selected: true, }>
 
             {{ slotProps.node.label }}
           </template>
