@@ -143,4 +143,7 @@ export const NodeService = {
   getTreeNodes() {
     return Promise.resolve(this.getTreeNodesData());
   },
+  getSelectedKey() {
+    return this.selectedKey;
+  },
 };
