@@ -83,11 +83,12 @@ onMounted(async () => {
 
 </script>
 
-<template>
 
-  <!--   /* -------------------------------------------------------------------------- */
-  /*                                CONTENT START                               */
-  /* -------------------------------------------------------------------------- */ -->
+<!--   /* -------------------------------------------------------------------------- */
+       /*                                CONTENT START                               */
+       /* -------------------------------------------------------------------------- */ -->
+
+<template>
 
   <div data-tauri-drag-region
     class="titlebar top-0 left-0 h-[36px] w-full backdrop-blur-md bg-base-100/60 grid grid-cols-3 fixed z-20 p-[0px] items-center shadow-lg shadow-base-300 border-b-[1px] border-base-300/80">
@@ -98,6 +99,7 @@ onMounted(async () => {
       <label
         class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-bottom before:text-xs before:font-normal before:left-[75%] [--tooltip-offset:30px] [--tooltip-tail-offset:24px]"
         :data-tip="tooltipText" @click="toggleMenus()">
+
         <!-- this hidden checkbox controls the state -->
         <input type="checkbox" ref="checkboxRef" />
 
