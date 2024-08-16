@@ -1,7 +1,6 @@
 import "@/assets/imports.css";
 import Menu from '@assets/tree/index.js';
 import App from "@/pages/App.vue";
-import { gsap } from "gsap";
 import { createPinia } from 'pinia';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import PrimeVue from "primevue/config";
@@ -10,10 +9,6 @@ import { createApp } from "vue";
 import { createRouter, createWebHistory } from 'vue-router';
 import { routes } from 'vue-router/auto-routes';
 import { getCurrent } from '../node_modules/@tauri-apps/api/window.js';
-
-import { Flip } from "gsap/Flip";
-
-
 
 const router = createRouter({
   history: createWebHistory(),
@@ -64,12 +59,9 @@ export type {
   TitleBarStyle,
   WindowOptions
 };
-gsap.registerPlugin(Flip);
-
 const pinia = createPinia()
 pinia.use(piniaPluginPersistedstate)
 app.use(pinia);
-app.use(gsap);
 app.use(router);
 app.use(PrimeVue, {
   unstyled: true,
