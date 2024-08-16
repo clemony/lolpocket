@@ -22,7 +22,7 @@
       justify-content: center;
       align-items: center;
       box-shadow:
-        3px 3px 4px 0 rgba(0, 0, 0, 0.25),
+        2px 2px 2px 0 rgba(0, 0, 0, 0.25),
         -2px -2px 3px 0 rgba(255, 255, 255, 0.3);
 
       @apply size-full flex overflow-hidden relative  z-40 p-0 m-0;
