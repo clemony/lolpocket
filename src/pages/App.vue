@@ -419,37 +419,38 @@ onMounted(async () => {
 
 #menu.minimize {
   @apply grid-cols-[80px_auto] justify-items-center;
-}
 
-.nav.minimize * {
-  @apply m-0 p-0 justify-center;
-}
 
-.nav.minimize {
-  @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px] justify-items-center;
-}
+  .nav.minimize * {
+    @apply m-0 p-0 justify-center;
+  }
 
-[data-pc-section="nodechildren"].minimize,
-[data-pc-section="nodetogglebutton"].minimize,
-[data-pc-section="nodelabel"].minimize,
-.add-build.minimize,
-h4.minimize {
-  @apply hidden opacity-0;
-}
+  .nav.minimize {
+    @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px] justify-items-center;
+  }
 
-[data-pc-section="rootchildren"].minimize {
-  @apply flex flex-col place-content-center content-center items-center;
-}
+  [data-pc-section="nodechildren"].minimize,
+  [data-pc-section="nodetogglebutton"].minimize,
+  [data-pc-section="nodelabel"].minimize,
+  .add-build.minimize,
+  h4.minimize {
+    @apply hidden opacity-0;
+  }
 
-[data-pc-section="nodecontent"].minimize {
-  @apply w-1/2;
-}
+  [data-pc-section="rootchildren"].minimize {
+    @apply flex flex-col place-content-center content-center items-center;
+  }
 
-[data-pc-section="nodeicon"].minimize {
-  @apply m-0 p-0 w-[2.7rem] h-[2.7rem] text-base-content/60;
-}
+  [data-pc-section="nodecontent"].minimize {
+    @apply w-1/2;
+  }
 
-[data-pc-section="node"].minimize {
-  @apply mx-0 my-2 flex first:mt-3 last:mb-4 items-center;
+  [data-pc-section="nodeicon"].minimize {
+    @apply m-0 p-0 w-[2.7rem] h-[2.7rem] text-base-content/60;
+  }
+
+  [data-pc-section="node"].minimize {
+    @apply mx-0 my-2 flex first:mt-3 last:mb-4 items-center;
+  }
 }
 </style>
