@@ -62,7 +62,7 @@ const items = dataStore.items;
 }
 
 .grid-image {
-  @apply contrast-75;
+  @apply contrast-[105%] brightness-[90%] saturate-[95%];
 }
 
 .grid-tip {
