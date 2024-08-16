@@ -272,18 +272,6 @@ onMounted(async () => {
   .nav {
     @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px];
   }
-
-
-
-
-
-  [data-pc-section="nodecontent"] {
-    @apply w-1/2;
-  }
-
-
-
-
 }
 
 [data-pc-section="nodechildren"],
@@ -317,6 +305,6 @@ onMounted(async () => {
 
 
 .minimize [data-pc-section="nodeicon"] {
-  @apply m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60 transition-all duration-700;
+  @apply m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60;
 }
 </style>
