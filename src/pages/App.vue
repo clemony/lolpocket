@@ -439,9 +439,7 @@ onMounted(async () => {
     @apply w-1/2;
   }
 
-  [data-pc-section="nodeicon"] {
-    @apply m-0 p-0 w-[2.7rem] h-[2.7rem] text-base-content/60;
-  }
+
 
   [data-pc-section="node"] {
     @apply mx-0 my-2 flex first:mt-3 last:mb-4 items-center;
@@ -460,5 +458,9 @@ onMounted(async () => {
 .minimize [data-pc-section="nodelabel"],
 .minimize .add-build {
   @apply hidden transition-all delay-1000;
+}
+
+.minimize [data-pc-section="nodeicon"] {
+  @apply m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60 absolute left-0 top-0;
 }
 </style>
