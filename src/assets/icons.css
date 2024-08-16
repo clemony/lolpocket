@@ -124,7 +124,6 @@
   mask-size: 100% 100%;
 }
 
-
 .ph--person {
   display: inline-block;
   width: 1rem;
@@ -240,7 +239,6 @@
   mask-size: 100% 100%;
 }
 
-
 .ph--crown-simple-fill {
   display: inline-block;
   width: 1rem;
@@ -311,11 +309,11 @@
   mask-size: 100% 100%;
 }
 
-.pepicons-pop--line-x {
+.pepicons-pencil--line-x {
   display: inline-block;
   width: 1rem;
   height: 1rem;
-  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M1 10a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1' clip-rule='evenodd'/%3E%3C/svg%3E");
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M.5 10a.5.5 0 0 1 .5-.5h18a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5' clip-rule='evenodd'/%3E%3C/svg%3E");
   background-color: currentColor;
   -webkit-mask-image: var(--svg);
   mask-image: var(--svg);

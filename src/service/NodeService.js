@@ -86,7 +86,7 @@ export const NodeService = {
       {
         key: "Browse",
         label: "Browse",
-        icon: "pepicons-pop--line-x",
+        icon: "pepicons-pencil--line-x",
         data: "d",
         selectable: "false",
         type: "divider",
@@ -118,7 +118,7 @@ export const NodeService = {
       {
         key: "Divider",
         label: "Utilities",
-        icon: "pepicons-pop--line-x",
+        icon: "pepicons-pencil--line-x",
         data: "",
         selectable: "false",
         type: "divider",
