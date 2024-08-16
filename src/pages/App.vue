@@ -434,23 +434,23 @@ onMounted(async () => {
   [data-pc-section="nodelabel"],
   .add-build,
   h4 {
-    @apply hidden opacity-0;
+    @apply hidden opacity-0 transition-all duration-1000;
   }
 
   [data-pc-section="rootchildren"] {
-    @apply flex flex-col place-content-center content-center items-center;
+    @apply flex flex-col place-content-center content-center items-center transition-all duration-1000;
   }
 
   [data-pc-section="nodecontent"] {
-    @apply w-1/2;
+    @apply w-1/2 transition-all duration-1000;
   }
 
   [data-pc-section="nodeicon"] {
-    @apply m-0 p-0 w-[2.7rem] h-[2.7rem] text-base-content/60;
+    @apply m-0 p-0 w-[2.7rem] h-[2.7rem] text-base-content/60 transition-all duration-1000;
   }
 
   [data-pc-section="node"] {
-    @apply mx-0 my-2 flex first:mt-3 last:mb-4 items-center;
+    @apply mx-0 my-2 flex first:mt-3 last:mb-4 items-center transition-all duration-1000;
   }
 }
 </style>
