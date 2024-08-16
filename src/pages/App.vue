@@ -229,8 +229,14 @@ const onNodeSelect = (node: any) => {
 
 function toggleMenus() {
   const menu = menuRef.value;
-  if (tooltipText.value == "Collapse" && menu) {
-    menu.classList.add("minimize");
+  if (menu) {
+    if (tooltipText.value == "Collapse") {
+      menu.classList.add("minimize");
+      tooltipText.value = "Expand";
+    } else {
+      menu.classList.remove("minimize");
+      tooltipText.value = "Collapse";
+    }
   }
 };
 
