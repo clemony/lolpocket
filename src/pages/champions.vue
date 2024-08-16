@@ -55,22 +55,41 @@ function handleChampionClick(champion: Champion) {
 </script>
 
 <template>
-  <div class="drawer drawer-end !w-full">
+  <div class="drawer drawer-end ">
     <input id="my-drawer" type="checkbox" class="drawer-toggle hidden" />
-    <div class="drawer-content z-10 !w-full">
+    <div class="drawer-content z-10">
 
       <!-- Champ Tab -->
 
       <div id="" class="!w-full">
 
-        <div role="tablist" class="tabs layout !mr-2 !w-full border-b-transparent">
+        <div role="tablist" class="tabs layout !mx-0 !w-full border-b-transparent">
 
           <a role="tab" class="tab tab-active w-44 font-semibold">Champions</a>
 
+          <div role="tabpanel" class="tab-content !w-full">
+            <div class="grid-container !w-full">
 
+              <div class="grid-item champ" v-for="champion in champions">
+                <label for="my-drawer" class="drawer-button cursor-pointer" @click="handleChampionClick(champion)">
+                  <div class="grid-image-container champ">
+                    <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
+                      class="grid-image" />
+
+                    <div class="grid-tip">
+                      {{ champion.name }}
+                    </div>
+
+                  </div>
+
+                </label>
+              </div>
+            </div>
+          </div>
+          <!--
           <a role="tab"
             class="tab w-full font-mono italic !text-xs text-end text-base-content font-normal cursor-pointer pointer-events-none border-b-transparent">
-            {{ getQuote }} </a>
+            {{ getQuote }} </a> -->
 
         </div>
       </div>
