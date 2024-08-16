@@ -9,7 +9,7 @@ const query = ref('');
 
         <div class="relative max-w-[470px]">
             <div
-                class="text-xs font-medium w-full text-center h-[28px] shadow-inner bg-base-200/60 border-base-300 text-base-content/60 italic shadow-base-300 !outline-0 !outline-transparent rounded-[10px] !outline-none z-20 focus:text-base-content focus:ring-base-300 focus:not-italic">
+                class="text-xs font-medium w-full text-center h-[28px] shadow-inner bg-base-200/60 border-base-300 text-base-content/60 italic shadow-base-300 !outline-0 !outline-transparent rounded-[10px] !outline-none z-20 focus:text-base-content focus:ring-base-300 *:focus:not-italic">
                 <div class="absolute right-3 top-[5.5px] flex gap-2.5 *:size-4 z-20 text-base-content/50">
                     <Icon icon="teenyicons:filter-outline" />
                     <Icon icon="ph:magnifying-glass" />
