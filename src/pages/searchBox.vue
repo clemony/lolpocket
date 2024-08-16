@@ -8,13 +8,14 @@ const query = ref('');
     <form class="text-center justify-items-center rounded-lg z-0">
 
         <div class="relative max-w-[470px]">
-            <div class="absolute right-3 top-[5.5px] flex gap-2.5 *:size-4 z-20 text-base-content/50">
-                <Icon icon="teenyicons:filter-outline" />
-                <Icon icon="ph:magnifying-glass" />
+            <div
+                class="text-xs font-medium w-full text-center h-[28px] shadow-inner bg-base-200/60 border-base-300 text-base-content/60 italic shadow-base-300 !outline-0 !outline-transparent rounded-[10px] !outline-none z-20 focus:text-base-content focus:ring-base-300 focus:not-italic">
+                <div class="absolute right-3 top-[5.5px] flex gap-2.5 *:size-4 z-20 text-base-content/50">
+                    <Icon icon="teenyicons:filter-outline" />
+                    <Icon icon="ph:magnifying-glass" />
+                </div>
+                <Input tabindex="0" role="" v-model="query" placeholder="" class="" @keydown.enter.prevent />
             </div>
-            <Input tabindex="0" role="" v-model="query" placeholder=""
-                class="text-xs font-medium w-full text-center h-[28px] shadow-inner bg-base-200/60 border-base-300 text-base-content/60 italic shadow-base-300 !outline-0 !outline-transparent rounded-[10px] !outline-none z-20 focus:text-base-content focus:ring-base-300 focus:not-italic"
-                @keydown.enter.prevent />
             <div tabindex=" 0"
                 class="dropdown-content menu  bg-base-100 w-full rounded-bl-[10px] rounded-br-[10px] place-content-center z-[0] top-[26px] pt-[3px] shadow-lg border border-base-300 backdrop-blur-md bg-opacity-80">
 
