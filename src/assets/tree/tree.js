@@ -101,7 +101,7 @@ export default {
   nodeIcon: ({ context }) => ({
     class: [
       // Space
-      "size-5 overflow-hidden order-1 mr-4",
+      "size-5 overflow-hidden order-1 absolute",
 
       // Color
       {
@@ -115,7 +115,7 @@ export default {
   }),
   nodeLabel: ({ context }) => ({
     class: [
-      "nodelabel order-2 align-middle content-center items-center relative flex flex-grow h-8",
+      "nodelabel order-2 align-middle content-center items-center relative flex flex-grow h-8 ml-7",
 
       {
         "text-foreground": !context.selected,

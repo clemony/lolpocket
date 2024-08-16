@@ -420,19 +420,14 @@ onMounted(async () => {
 #menu.minimize {
   @apply grid-cols-[80px_auto] transition-all duration-700 delay-200;
 
-
-  .nav * {
-    @apply m-0 p-0 justify-center;
-  }
-
   .nav {
-    @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px] justify-items-center;
+    @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px];
   }
 
 
 
   [data-pc-section="rootchildren"] {
-    @apply flex flex-col place-content-center content-center items-center;
+    @apply flex flex-col;
   }
 
   [data-pc-section="nodecontent"] {
@@ -461,6 +456,6 @@ onMounted(async () => {
 }
 
 .minimize [data-pc-section="nodeicon"] {
-  @apply m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60 absolute left-0 top-0;
+  @apply m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60;
 }
 </style>
