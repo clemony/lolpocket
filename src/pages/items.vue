@@ -61,6 +61,10 @@ const items = dataStore.items;
 
 }
 
+.grid-image {
+  @apply contrast-75;
+}
+
 .grid-tip {
   @apply max-w-[70px];
 }
