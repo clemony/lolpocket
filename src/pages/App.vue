@@ -46,8 +46,6 @@ const currentComponent = computed(() => {
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
 
-
-
 // Method for node selection in the tree
 const onNodeSelect = (node: any) => {
   navigateTo(node.data);
@@ -80,7 +78,6 @@ onMounted(async () => {
   NodeService.getTreeNodes().then((data: any) => {
     nodes.value = data;
   });
-  const selectedKey = NodeService.getSelectedKey();
   console.log(menuRef);
 });
 
