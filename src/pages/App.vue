@@ -297,6 +297,10 @@ onMounted(async () => {
   @apply transition-all duration-700;
 }
 
+[data-pc-section="nodeicon"] {
+  @apply transition-all duration-700;
+}
+
 .minimize [data-pc-section="nodechildren"],
 .minimize [data-pc-section="nodetogglebutton"],
 .minimize [data-pc-section="nodelabel"],
