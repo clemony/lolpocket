@@ -47,6 +47,13 @@ interface Champion {
 const champions = dataStore.champions;
 const selectedChampion = computed(() => dataStore.selectedChampion);
 
+const query = ref('')
+
+const computedList = computed(() => {
+  return champions.filter((champion) => champion.name.toLowerCase().includes(query.value) || champion.type.toLowerCase().includes(query.value) ||
+    champion.title.toLowerCase().includes(query.value))
+})
+
 // Function to handle the drawer button click and set the selected champion
 function handleChampionClick(champion: Champion) {
   dataStore.setSelectedChampion(champion);
