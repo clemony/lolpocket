@@ -294,7 +294,14 @@ onMounted(async () => {
 .minimize [data-pc-section="nodetogglebutton"],
 .minimize [data-pc-section="nodelabel"],
 .minimize .add-build {
-  @apply opacity-0 invisible transition-all duration-700;
+  @apply transition-all duration-700;
+}
+
+.minimize [data-pc-section="nodechildren"],
+.minimize [data-pc-section="nodetogglebutton"],
+.minimize [data-pc-section="nodelabel"],
+.minimize .add-build {
+  @apply opacity-0 invisible;
 }
 
 .minimize [data-pc-section="nodechildren"],
