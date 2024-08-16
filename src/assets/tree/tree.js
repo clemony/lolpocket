@@ -50,8 +50,6 @@ export default {
       {
         "cursor-pointer select-none": props.selectionMode == "single" || props.selectionMode == "multiple",
       },
-
-      " nodecontent",
     ],
   }),
   nodeToggleButton: ({ context }) => ({
