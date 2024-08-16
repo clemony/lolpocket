@@ -290,10 +290,10 @@ onMounted(async () => {
   }
 }
 
-.minimize [data-pc-section="nodechildren"],
-.minimize [data-pc-section="nodetogglebutton"],
-.minimize [data-pc-section="nodelabel"],
-.minimize .add-build {
+[data-pc-section="nodechildren"],
+[data-pc-section="nodetogglebutton"],
+[data-pc-section="nodelabel"],
+.add-build {
   @apply transition-all duration-700;
 }
 
