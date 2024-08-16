@@ -13,7 +13,7 @@
 }
 
 .grid-container {
-  @apply grid w-full p-4 !overflow-y-auto h-full transition-all duration-500 grid-flow-row auto-cols-max;
+  @apply grid w-full p-4 !overflow-y-auto h-full transition-all duration-500 grid-flow-row;
 
   .grid-item {
     @apply size-full z-0 w-full relative ring-[1px] ring-base-300 ring-offset-1 ring-offset-base-content/30 shadow-sm;

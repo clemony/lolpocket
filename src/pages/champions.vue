@@ -233,10 +233,17 @@ function handleChampionClick(champion: Champion) {
 </template>
 
 <style scoped>
-.grid-image {
-  @apply !h-[94px] !w-[94px];
-}
+.grid-container {
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
 
+
+  @apply gap-6;
+
+  .grid-image {
+    @apply !h-[94px] !w-[94px];
+  }
+}
 
 .champ {
   @apply !h-[80px] !w-[80px];
