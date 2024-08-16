@@ -30,6 +30,11 @@
       .grid-image {
         @apply aspect-square relative z-0  object-cover;
       }
+      .grid-image:after {
+        content: "";
+        background: linear-gradient(-45deg, rgba(0, 0, 0, 0.22), rgba(255, 255, 255, 0.25));
+        @apply border-2 border-red-800;
+      }
     }
 
     .grid-image-container::after {
