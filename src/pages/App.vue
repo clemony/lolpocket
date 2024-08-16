@@ -418,7 +418,7 @@ onMounted(async () => {
 }*/
 
 #menu.minimize {
-  @apply grid-cols-[80px_auto];
+  @apply grid-cols-[80px_auto] transition-all duration-700 delay-700;
 
 
   .nav * {
@@ -453,5 +453,9 @@ onMounted(async () => {
 .minimize [data-pc-section="nodelabel"],
 .minimize .add-build {
   @apply opacity-0 invisible transition-all duration-700;
+}
+
+.minimize [data-pc-section="nodelabel"] {
+  @apply w-0 transition-all duration-700 delay-700;
 }
 </style>
