@@ -148,7 +148,7 @@ onMounted(async () => {
         /* -------------------------------------------------------------------------- */ -->
 
   <div ref="menuRef" id="menu"
-    class="w-screen grid grid-cols-[300px_auto] gap-4 m-0 p-0 transition-all duration-700 delay-200">
+    class="w-screen grid grid-cols-[300px_auto] gap-3 m-0 p-0 transition-all duration-700 delay-200">
 
     <div class="col-start-1">
 
@@ -264,7 +264,7 @@ onMounted(async () => {
 }*/
 
 #menu.minimize {
-  @apply grid-cols-[80px_auto];
+  @apply grid-cols-[80px_auto] gap-1.5;
 
   .nav {
     @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px];
