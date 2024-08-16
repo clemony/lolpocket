@@ -89,7 +89,7 @@ function handleChampionClick(champion: Champion) {
               </div>
             </div>
             <input type="radio" name="champ-tabs" role="tab"
-              class="tab font-semibold w-full after:w-full after:font-mono after:italic after:text-xs after:text-end after:text-base-content after:font-normal after:cursor-pointer pointer-events-none border-b-transparent"
+              class="tab font-semibold w-full after:w-full after:font-mono after:italic after:text-xs after:text-end after:text-base-content after:font-normal after:cursor-pointer pointer-events-none border-b-transparent flex justify-self-end flex-grow"
               :aria-label="getQuote" disabled />
 
           </div>
