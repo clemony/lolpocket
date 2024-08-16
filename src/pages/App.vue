@@ -236,12 +236,10 @@ function toggleMenus() {
 
   if (menu) {
     if (tooltipText.value == "Collapse") {
-      console.log("in collapse");
       menu.classList.add("minimize");
       tooltipText.value = "Expand";
     }
     else {
-      console.log("in expand");
       tooltipText.value = "Collapse";
       menu.classList.remove("minimize");
       return tooltipText;
