@@ -56,20 +56,20 @@ function handleChampionClick(champion: Champion) {
 
 <template>
   <KeepAlive>
-    <div class="drawer drawer-end w-full">
+    <div class="drawer drawer-end !w-full">
       <input id="my-drawer" type="checkbox" class="drawer-toggle hidden" />
-      <div class="drawer-content z-10 w-full">
+      <div class="drawer-content z-10 !w-full">
 
         <!-- Champ Tab -->
 
-        <div id="" class="w-full">
+        <div id="" class="!w-full">
 
           <div role="tablist" class="tabs layout !mr-2 !w-full border-b-transparent">
 
             <a role="tab" class="tab tab-active w-44 font-semibold">Champions</a>
 
-            <div role="tabpanel" class="tab-content ">
-              <div class="grid-container">
+            <div role="tabpanel" class="tab-content !w-full">
+              <div class="grid-container !w-full">
 
                 <div class="grid-item champ" v-for="champion in champions">
                   <label for="my-drawer" class="drawer-button cursor-pointer" @click="handleChampionClick(champion)">
