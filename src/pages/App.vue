@@ -452,6 +452,6 @@ onMounted(async () => {
 .minimize [data-pc-section="nodetogglebutton"],
 .minimize [data-pc-section="nodelabel"],
 .minimize .add-build {
-  @apply opacity-0 transition-opacity duration-1000;
+  @apply opacity-0 transition-opacity duration-700;
 }
 </style>
