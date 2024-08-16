@@ -227,18 +227,18 @@ const onNodeSelect = (node: any) => {
 };
 
 const menuRef = ref<HTMLDivElement | null>(null);
+const checkboxRef = ref<HTMLInputElement | null>(null);
 let tooltipText = ref('Collapse');
 
 function toggleMenus() {
   const menu = menuRef.value;
-  console.log(tooltipText);
+  const checkbox = checkboxRef.value;
 
-  if (menu) {
-    if (tooltipText.value == "Collapse") {
+  if (menu && checkbox) {
+    if (checkbox.checked) {
       menu.classList.add("minimize");
       tooltipText.value = "Expand";
-    }
-    else if (tooltipText.value == "Expand") {
+    } else {
       menu.classList.remove("minimize");
       tooltipText.value = "Collapse";
     }
@@ -274,7 +274,7 @@ onMounted(async () => {
         class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-bottom before:text-xs before:font-normal before:left-[75%] [--tooltip-offset:30px] [--tooltip-tail-offset:24px]"
         :data-tip="tooltipText" @click="toggleMenus()">
         <!-- this hidden checkbox controls the state -->
-        <input type="checkbox" />
+        <input type="checkbox" ref="checkboxRef" />
 
         <!-- expanded icon -->
 
