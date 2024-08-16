@@ -1,8 +1,5 @@
 export const NodeService = {
   name: "NavTree",
-  expandedKeys: {
-    default: "Builds",
-  },
   selectionMode: "single",
   getTreeNodesData() {
     return [
