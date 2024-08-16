@@ -3,7 +3,7 @@ export default {
     class: [
       "text-xs tracking-wider",
       // Space
-      "m-0 p-0",
+      "m-0 p-1.5",
 
       // Shape,
       "border-none ",
@@ -27,7 +27,7 @@ export default {
     ],
   },
   node: {
-    class: ["focus:outline-none align-middle items-center relative my-1 w-full bg-base-100"],
+    class: ["focus:outline-none align-middle items-center rounded-md relative my-1 w-full bg-base-100"],
   },
   nodeContent: ({ context, props }) => ({
     class: [
