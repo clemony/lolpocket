@@ -8,11 +8,10 @@ import Settings from '@/pages/settings.vue';
 import { useDataStore } from '@/stores/dataStore';
 import { Icon } from '@iconify/vue';
 import { useUserSettings } from '@stores/userSettings';
-import { computed, DefineComponent, onMounted, ref } from 'vue';
+import { DefineComponent } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { Flip } from 'gsap/Flip';
-import { gsap } from 'gsap';
 
+const settings = useUserSettings();
 
 /* ------------------------------- NAVIGATION ------------------------------- */
 
@@ -26,12 +25,6 @@ const navigateTo = (route: string) => {
 
 // Access the current route
 const route = useRoute();
-
-const settings = useUserSettings();
-
-
-
-// tl.value = createMenuAnimation();
 
 type ValidPaths = '/builds' | '/' | '/champions' | '/items' | '/runes' | '/settings';
 
