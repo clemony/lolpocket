@@ -455,7 +455,10 @@ onMounted(async () => {
   @apply opacity-0 invisible transition-all duration-700;
 }
 
-.minimize [data-pc-section="nodelabel"] {
-  @apply w-0 transition-all duration-700 delay-700;
+.minimize [data-pc-section="nodechildren"],
+.minimize [data-pc-section="nodetogglebutton"],
+.minimize [data-pc-section="nodelabel"],
+.minimize .add-build {
+  @apply hidden transition-all delay-700;
 }
 </style>
