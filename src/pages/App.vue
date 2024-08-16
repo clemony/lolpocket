@@ -223,16 +223,14 @@ onMounted(async () => {
 }
 
 
-[aria-label="Browse"] [data-pc-section="nodecontent"] {
-  @apply hover:bg-transparent text-xxs uppercase pointer-events-none text-base-content/40;
-}
-
-
+[aria-label="Browse"] [data-pc-section="nodecontent"],
 [aria-label="Utilities"] [data-pc-section="nodecontent"] {
   @apply hover:bg-transparent text-xxs uppercase pointer-events-none text-base-content/40;
 }
 
-[data-pc-section="nodeicon"] {
+
+[aria-label="Browse"] [data-pc-section="nodeicon"],
+[aria-label="Utilities"] [data-pc-section="nodeicon"] {
   @apply invisible opacity-0 w-0 absolute transition-all duration-700;
 }
 
