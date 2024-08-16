@@ -89,7 +89,7 @@ function handleChampionClick(champion: Champion) {
               </div>
             </div>
             <input type="radio" name="champ-tabs" role="tab"
-              class="tab font-semibold after:w-full after:font-mono after:italic after:text-xs after:text-end after:text-base-content after:font-normal after:cursor-pointer"
+              class="tab font-semibold after:w-full after:font-mono after:italic after:text-xs after:text-end after:text-base-content after:font-normal after:cursor-pointer pointer-events-none"
               :aria-label="getQuote" disabled />
 
           </div>
@@ -241,6 +241,8 @@ function handleChampionClick(champion: Champion) {
 .grid-container {
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
+
+  @apply gap-5;
 
   .grid-image {
     @apply !h-[94px] !w-[94px];
