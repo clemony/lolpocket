@@ -166,7 +166,7 @@ onMounted(async () => {
             shadow-base-300 shadow-lg nav">
 
         <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
-          @nodeSelect="onNodeSelect" id="tree">
+          @nodeSelect="onNodeSelect" id="tree" TreeContext="">
 
 
           <template #nodetogglebutton>
@@ -175,9 +175,6 @@ onMounted(async () => {
           <template #default="slotProps">
 
             {{ slotProps.node.label }}
-          </template>
-
-          <template selected="true">
           </template>
 
           <template #addon="slotProps">
