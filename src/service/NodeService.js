@@ -1,6 +1,7 @@
 export const NodeService = {
   name: "NavTree",
   selectionMode: "single",
+  selectedKey: "home",
   getTreeNodesData() {
     return [
       {
