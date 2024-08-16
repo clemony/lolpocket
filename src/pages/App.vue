@@ -43,13 +43,8 @@ const currentComponent = computed(() => {
   return componentMap[currentPath] || null;
 });
 
-/* ---------------------------- SIDEBAR ANIMATION --------------------------- */
-
-
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
-
-
 
 // Method for node selection in the tree
 const onNodeSelect = (node: any) => {
