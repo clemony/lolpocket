@@ -222,18 +222,20 @@ onMounted(async () => {
   }
 }
 
-[aria-label="Browse"],
-[aria-label="Utilities"] {
 
-  [data-pc-section="nodecontent"] {
-    @apply hover:bg-transparent text-xxs uppercase pointer-events-none text-base-content/40;
-  }
-
-  [data-pc-section="nodeicon"] {
-    @apply invisible opacity-0 w-0 absolute transition-all duration-700;
-  }
-
+[aria-label="Browse"] [data-pc-section="nodecontent"] {
+  @apply hover:bg-transparent text-xxs uppercase pointer-events-none text-base-content/40;
 }
+
+
+[aria-label="Utilities"] [data-pc-section="nodecontent"] {
+  @apply hover:bg-transparent text-xxs uppercase pointer-events-none text-base-content/40;
+}
+
+[data-pc-section="nodeicon"] {
+  @apply invisible opacity-0 w-0 absolute transition-all duration-700;
+}
+
 
 .add-build {
   @apply order-3 flex absolute right-0 -top-1;
