@@ -268,7 +268,7 @@ onMounted(async () => {
 }
 
 .minimize .nav {
-  @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px] overflow-x-hidden;
+  @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px];
 }
 
 [data-pc-section="nodechildren"],
@@ -286,7 +286,7 @@ onMounted(async () => {
 }
 
 [data-pc-section="rootchildren"] {
-  @apply transition-all duration-700 flex flex-col gap-0;
+  @apply transition-all duration-700 flex flex-col gap-0 overflow-x-hidden;
 }
 
 .minimize [data-pc-section="rootchildren"] {
