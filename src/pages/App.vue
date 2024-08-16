@@ -230,7 +230,7 @@ onMounted(async () => {
   }
 
   [data-pc-section="nodeicon"] {
-    @apply hidden;
+    @apply invisible opacity-0 w-0;
   }
 
 }
@@ -306,5 +306,14 @@ onMounted(async () => {
 
 .minimize [data-pc-section="nodeicon"] {
   @apply m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60;
+}
+
+.minimize [aria-label="Browse"],
+.minimize [aria-label="Utilities"] {
+
+  [data-pc-section="nodeicon"] {
+    @apply visible m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60;
+  }
+
 }
 </style>
