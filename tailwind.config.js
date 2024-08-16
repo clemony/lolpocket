@@ -59,8 +59,8 @@ module.exports = {
       {
         light: {
           ...require("daisyui/src/theming/themes")["light"],
-          "primary-content": "oklch(86.736% 0 0)",
-          "primary": "oklch(33.6799% 0 0)",
+          "primary": "oklch(69.6516% 0.059108 248.687186)",
+          "primary-content": "oklch(13.9303% 0.011822 248.687186",
           "accent-content": "oklch(86.736% 0 0)",
           "accent": "oklch(33.6799% 0 0)",
           "neutral-content": "oklch(86.736% 0 0)",
