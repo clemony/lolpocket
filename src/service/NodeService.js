@@ -9,6 +9,7 @@ export const NodeService = {
         icon: "ph--house-simple",
         data: "/",
         selectable: "true",
+        type: "home",
       },
       {
         key: "Builds",
