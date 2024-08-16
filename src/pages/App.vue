@@ -283,9 +283,7 @@ onMounted(async () => {
 
 
 
-  [data-pc-section="node"] {
-    @apply mx-0 my-2 flex first:mt-3 last:mb-4 items-center;
-  }
+
 }
 
 [data-pc-section="nodechildren"],
