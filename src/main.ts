@@ -1,5 +1,5 @@
 import "@/assets/imports.css";
-import Aura from '@assets/tree/index.js';
+import Menu from '@assets/tree/index.js';
 import App from "@/pages/App.vue";
 import { gsap } from "gsap";
 import { createPinia } from 'pinia';
@@ -73,7 +73,7 @@ app.use(gsap);
 app.use(router);
 app.use(PrimeVue, {
   unstyled: true,
-  pt: Aura
+  pt: Menu
 });
 
 
