@@ -229,12 +229,15 @@ const onNodeSelect = (node: any) => {
 
 function toggleMenus() {
   const menu = menuRef.value;
+  console.log("in function");
   if (menu) {
     if (tooltipText.value == "Collapse") {
+      console.log("in collapse");
       menu.classList.add("minimize");
       tooltipText.value = "Expand";
     }
     else if (tooltipText.value == "Expand") {
+      console.log("in expand");
       menu.classList.remove("minimize");
       tooltipText.value = "Collapse";
     }
