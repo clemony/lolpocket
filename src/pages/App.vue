@@ -234,6 +234,11 @@ onMounted(async () => {
   @apply invisible opacity-0 w-0 absolute transition-all duration-700;
 }
 
+[aria-label="Browse"] [data-pc-section="nodelabel"],
+[aria-label="Utilities"] [data-pc-section="nodelabel"] {
+  @apply -ml-1;
+}
+
 
 .add-build {
   @apply order-3 flex absolute right-0 -top-1;
