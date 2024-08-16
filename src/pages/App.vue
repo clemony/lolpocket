@@ -275,9 +275,7 @@ onMounted(async () => {
 
 
 
-  [data-pc-section="rootchildren"] {
-    @apply flex flex-col;
-  }
+
 
   [data-pc-section="nodecontent"] {
     @apply w-1/2;
@@ -299,6 +297,14 @@ onMounted(async () => {
 
 [data-pc-section="nodeicon"] {
   @apply transition-all duration-700;
+}
+
+[data-pc-section="rootchildren"] {
+  @apply transition-all duration-700;
+}
+
+.minimize [data-pc-section="rootchildren"] {
+  @apply flex flex-col;
 }
 
 .minimize [data-pc-section="nodechildren"],
