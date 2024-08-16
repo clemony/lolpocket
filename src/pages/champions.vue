@@ -50,8 +50,9 @@ const selectedChampion = computed(() => dataStore.selectedChampion);
 const query = ref('')
 
 const searchList = computed(() => {
-  return champions.filter((champion) => champion.name.toLowerCase().includes(query.value) || champion.type.toLowerCase().includes(query.value) ||
-    champion.title.toLowerCase().includes(query.value.toLowerCase()))
+  return champions.filter((champion) => champion.name.toLowerCase().includes(query.value) /*|| champion.type.toLowerCase().includes(query.value) ||
+    champion.title.toLowerCase().includes(query.value.toLowerCase())*/
+  )
 })
 
 // Function to handle the drawer button click and set the selected champion
