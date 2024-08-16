@@ -231,20 +231,20 @@ let tooltipText = ref('Collapse');
 
 function toggleMenus() {
   const menu = menuRef.value;
-  let tooltip = tooltipText.value;
 
   console.log("in function");
 
   if (menu) {
-    if (tooltip == "Collapse") {
+    if (tooltipText.value == "Collapse") {
       console.log("in collapse");
       menu.classList.add("minimize");
-      tooltip = "Expand";
+      tooltipText.value = "Expand";
+      return tooltipText;
     }
-    else if (tooltip == "Expand") {
+    else if (tooltipText.value == "Expand") {
       console.log("in expand");
-      menu.classList.remove("minimize");
-      tooltip = "Collapse";
+      tooltipText.value = "Collapse";
+      return tooltipText;
     }
   }
 };
