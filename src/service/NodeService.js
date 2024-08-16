@@ -8,8 +8,8 @@ export const NodeService = {
         label: "Home",
         icon: "ph--house-simple",
         data: "/",
-        selectable: "true",
-        type: "home",
+        selectable: true,
+        "aria-selected": true,
       },
       {
         key: "Builds",
