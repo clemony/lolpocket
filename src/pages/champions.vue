@@ -78,21 +78,23 @@ function handleChampionClick(champion: Champion) {
           <div role="tabpanel" class="tab-content !w-full">
             <div class="grid-container !w-full">
 
-              <div class="grid-item champ" v-for="(champion, index) in searchList" :key="champion.name"
-                :data-index="index">
-                <label for="my-drawer" class="drawer-button cursor-pointer" @click="handleChampionClick(champion)">
-                  <div class="grid-image-container champ">
-                    <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
-                      class="grid-image" />
+              <TransitionGroup>
+                <div class="grid-item champ" v-for="(champion, index) in searchList" :key="champion.name"
+                  :data-index="index">
+                  <label for="my-drawer" class="drawer-button cursor-pointer" @click="handleChampionClick(champion)">
+                    <div class="grid-image-container champ">
+                      <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
+                        class="grid-image" />
 
-                    <div class="grid-tip">
-                      {{ champion.name }}
+                      <div class="grid-tip">
+                        {{ champion.name }}
+                      </div>
+
                     </div>
 
-                  </div>
-
-                </label>
-              </div>
+                  </label>
+                </div>
+              </TransitionGroup>
             </div>
           </div>
           <!--
