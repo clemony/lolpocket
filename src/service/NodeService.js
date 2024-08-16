@@ -4,7 +4,7 @@ export const NodeService = {
   getTreeNodesData() {
     return [
       {
-        key: "home",
+        key: "1",
         label: "Home",
         icon: "ph--house-simple",
         data: "/",
