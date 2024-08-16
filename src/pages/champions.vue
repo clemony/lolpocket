@@ -56,9 +56,9 @@ function handleChampionClick(champion: Champion) {
 
 <template>
   <KeepAlive>
-    <div class="drawer drawer-end">
+    <div class="drawer drawer-end w-full">
       <input id="my-drawer" type="checkbox" class="drawer-toggle hidden" />
-      <div class="drawer-content z-10">
+      <div class="drawer-content z-10 w-full">
 
         <!-- Champ Tab -->
 
