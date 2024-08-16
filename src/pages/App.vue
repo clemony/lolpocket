@@ -265,10 +265,10 @@ onMounted(async () => {
 
 #menu.minimize {
   @apply grid-cols-[80px_auto] gap-1.5;
+}
 
-  .nav {
-    @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px];
-  }
+.minimize .nav {
+  @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px] overflow-x-hidden;
 }
 
 [data-pc-section="nodechildren"],
