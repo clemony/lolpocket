@@ -49,7 +49,7 @@ const selectedChampion = computed(() => dataStore.selectedChampion);
 
 const query = ref('')
 
-const computedList = computed(() => {
+const searchList = computed(() => {
   return champions.filter((champion) => champion.name.toLowerCase().includes(query.value) || champion.type.toLowerCase().includes(query.value) ||
     champion.title.toLowerCase().includes(query.value))
 })
@@ -77,7 +77,7 @@ function handleChampionClick(champion: Champion) {
           <div role="tabpanel" class="tab-content !w-full">
             <div class="grid-container !w-full">
 
-              <div class="grid-item champ" v-for="champion in champions">
+              <div class="grid-item champ" v-for="champion in searchList">
                 <label for="my-drawer" class="drawer-button cursor-pointer" @click="handleChampionClick(champion)">
                   <div class="grid-image-container champ">
                     <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
