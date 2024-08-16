@@ -417,8 +417,8 @@ onMounted(async () => {
   @apply animate-out slide-out-to-top fade-out duration-700 z-0;
 }*/
 
-#menu.minimizey {
-  @apply grid-cols-[80px_auto] justify-items-center;
+#menu.minimize {
+  @apply grid-cols-[80px_auto];
 
 
   .nav * {
