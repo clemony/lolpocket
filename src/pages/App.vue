@@ -238,7 +238,6 @@ function toggleMenus() {
     }
     else if (tooltipText.value == "Expand") {
       console.log("in expand");
-      menu.classList.remove("minimize");
       tooltipText.value = "Collapse";
     }
   }
