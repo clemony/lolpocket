@@ -230,7 +230,7 @@ onMounted(async () => {
   }
 
   [data-pc-section="nodeicon"] {
-    @apply invisible opacity-0 w-0;
+    @apply invisible opacity-0 w-0 absolute transition-all duration-700;
   }
 
 }
