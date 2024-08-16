@@ -57,12 +57,14 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        pastel: {
-          ...require("daisyui/src/theming/themes")["pastel"],
-          "base-100": "oklch(100% 0 0)",
-          "base-200": "oklch(93% 0 0)",
-          "base-300": "oklch(86% 0 0)",
-          "base-content": "oklch(27.8078% 0.029596 256.847952)",
+        light: {
+          ...require("daisyui/src/theming/themes")["light"],
+          "primary-content": "oklch(86.736% 0 0)",
+          "primary": "oklch(33.6799% 0 0)",
+          "accent-content": "oklch(86.736% 0 0)",
+          "accent": "oklch(33.6799% 0 0)",
+          "neutral-content": "oklch(86.736% 0 0)",
+          "neutral": "oklch(33.6799% 0 0)",
         },
         nordark: {
           ...require("daisyui/src/theming/themes")["nord"],
