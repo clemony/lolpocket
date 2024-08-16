@@ -308,7 +308,7 @@ onMounted(async () => {
 .minimize [data-pc-section="nodetogglebutton"],
 .minimize [data-pc-section="nodelabel"],
 .minimize .add-build {
-  @apply opacity-0 invisible;
+  @apply w-0;
 }
 
 .minimize [data-pc-section="nodechildren"],
