@@ -80,6 +80,7 @@ onMounted(async () => {
   NodeService.getTreeNodes().then((data: any) => {
     nodes.value = data;
   });
+  const selectedKey = NodeService.getSelectedKey();
   console.log(menuRef);
 });
 
