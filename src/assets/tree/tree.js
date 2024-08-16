@@ -3,7 +3,7 @@ export default {
     class: [
       "text-xs tracking-wider",
       // Space
-      "m-0 p-1.5",
+      "m-0 p-0",
 
       // Shape,
       "border-none ",
