@@ -64,7 +64,7 @@ function handleChampionClick(champion: Champion) {
 
         <div id="" class="">
 
-          <div role="tablist" class="tabs layout !mr-0 w-full border-b-transparent">
+          <div role="tablist" class="tabs layout !mr-2 w-full border-b-transparent">
 
             <a role="tab" class="tab tab-active w-44 font-semibold">Champions</a>
 
