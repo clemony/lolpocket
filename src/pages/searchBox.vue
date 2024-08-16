@@ -12,7 +12,7 @@ import { Icon } from "@iconify/vue";
                 <Icon icon="ph:magnifying-glass" />
             </div>
             <Input tabindex="0" role="button" placeholder=""
-                class="text-xs font-medium w-[470px] text-center h-[28px] shadow-inner bg-base-200/60 border-base-300 shadow-base-300 !outline-0 !outline-transparent rounded-[10px] !outline-none z-20 focus:ring-base-300" />
+                class="text-xs font-medium max-w-[470px] text-center h-[28px] shadow-inner bg-base-200/60 border-base-300 shadow-base-300 !outline-0 !outline-transparent rounded-[10px] !outline-none z-20 focus:ring-base-300" />
             <div tabindex="0"
                 class="dropdown-content menu m-0 p-0 bg-base-100 w-[500px] rounded-bl-[10px] rounded-br-[10px] place-content-center z-[1] top-[-4px] px-0 pt-[3px] shadow-lg -ml-[15px] border border-base-300 backdrop-blur-md bg-opacity-80">
                 <Input tabindex="0" role="button" placeholder=""
