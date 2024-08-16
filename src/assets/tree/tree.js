@@ -37,7 +37,7 @@ export default {
       // Spacing
 
       // Colors
-      context.selected ? "bg-primary/50 text-primary-content" : "bg-base-100 text-base-content hover:bg-base-300 hover:text-base-content",
+      context.selected ? "bg-base-200 shadow-sm text-base-content" : "bg-base-100 text-base-content hover:bg-base-300 hover:text-base-content",
 
       // States
       {
