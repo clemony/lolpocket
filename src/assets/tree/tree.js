@@ -27,12 +27,12 @@ export default {
     ],
   },
   node: {
-    class: ["focus:outline-none align-middle items-center rounded-md relative my-1 w-full bg-base-100"],
+    class: ["focus:outline-none align-middle items-center relative my-1 w-full bg-base-100"],
   },
   nodeContent: ({ context, props }) => ({
     class: [
       // Flex and Alignment
-      "inline-flex items-center align-middle relative h-8 px-3 w-full",
+      "inline-flex items-center align-middle relative h-8 pr-1 pl-3 w-full rounded-btn",
 
       // Spacing
 
