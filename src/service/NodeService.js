@@ -1,7 +1,6 @@
 export const NodeService = {
   name: "NavTree",
   selectionMode: "single",
-  selectedKey: "home",
   getTreeNodesData() {
     return [
       {
@@ -10,6 +9,7 @@ export const NodeService = {
         icon: "ph--house-simple",
         data: "/",
         selectable: true,
+        "data-p-selected": true,
       },
       {
         key: "Builds",
@@ -142,8 +142,5 @@ export const NodeService = {
 
   getTreeNodes() {
     return Promise.resolve(this.getTreeNodesData());
-  },
-  getSelectedKey() {
-    return this.selectedKey;
   },
 };
