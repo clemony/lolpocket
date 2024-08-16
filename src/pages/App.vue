@@ -52,8 +52,7 @@ const currentComponent = computed(() => {
 
 /* ---------------------------- SIDEBAR ANIMATION --------------------------- */
 
-const menuRef = ref<HTMLDivElement | null>(null);
-const tooltipText = ref('Collapse');
+
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
 
@@ -227,18 +226,25 @@ const onNodeSelect = (node: any) => {
   navigateTo(node.data);
 };
 
+const menuRef = ref<HTMLDivElement | null>(null);
+let tooltipText = ref('Collapse');
+
 function toggleMenus() {
   const menu = menuRef.value;
+  let tooltip = tooltipText.value;
+
   console.log("in function");
+
   if (menu) {
-    if (tooltipText.value == "Collapse") {
+    if (tooltip == "Collapse") {
       console.log("in collapse");
       menu.classList.add("minimize");
-      tooltipText.value = "Expand";
+      tooltip = "Expand";
     }
-    else if (tooltipText.value == "Expand") {
+    else if (tooltip == "Expand") {
       console.log("in expand");
-      tooltipText.value = "Collapse";
+      menu.classList.remove("minimize");
+      tooltip = "Collapse";
     }
   }
 };
