@@ -231,22 +231,18 @@ let tooltipText = ref('Collapse');
 
 function toggleMenus() {
   const menu = menuRef.value;
-
   console.log(tooltipText);
 
   if (menu) {
     if (tooltipText.value == "Collapse") {
       menu.classList.add("minimize");
       tooltipText.value = "Expand";
-      return;
     }
-    else {
-      tooltipText.value = "Collapse";
+    else if (tooltipText.value = "Expand") {
       menu.classList.remove("minimize");
-      return;
+      tooltipText.value = "Collapse";
     }
   }
-  return;
 };
 
 /* ------------------------------ ON MOUNTED ----------------------------- */
