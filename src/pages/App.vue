@@ -456,6 +456,6 @@ onMounted(async () => {
 }
 
 .minimize [data-pc-section="nodeicon"] {
-  @apply m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60;
+  @apply m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60 transition-all duration-700;
 }
 </style>
