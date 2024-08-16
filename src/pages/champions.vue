@@ -238,11 +238,9 @@ function handleChampionClick(champion: Champion) {
 
 <style scoped>
 .grid-container {
-  grid-template-columns: repeat(auto-fit, 80px);
-  grid-template-rows: repeat(auto-fit, 80p);
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
 
-  box-sizing: content-box;
-  width: 100%;
 
   @apply gap-6;
 
