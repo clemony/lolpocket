@@ -66,8 +66,7 @@ function handleChampionClick(champion: Champion) {
 
           <div role="tablist" class="tabs layout !mr-0 w-full border-b-transparent">
 
-            <input type="radio" name="champ-tabs" role="tab" class="tab after:w-36 font-semibold" aria-label="Champions"
-              checked="true" />
+            <a role="tab" class="tab tab-active w-44 font-semibold">Champions</a>
 
             <div role="tabpanel" class="tab-content ">
               <div class="grid-container">
