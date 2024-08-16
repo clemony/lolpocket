@@ -37,11 +37,11 @@ export default {
       // Spacing
 
       // Colors
-      context.selected ? "bg-base-200 shadow-sm text-base-content" : "bg-base-100 text-base-content hover:bg-base-300 hover:text-base-content",
+      context.selected ? "bg-base-200 shadow-sm text-base-content" : "bg-base-100 text-base-content hover:bg-base-300 hover:text-base-content hover:shadow-sm",
 
       // States
       {
-        "hover:bg-base-300 hover:text-base-content": (props.selectionMode == "single" || props.selectionMode == "multiple") && !context.selected,
+        "hover:bg-base-300 hover:text-base-content hover:shadow-sm": (props.selectionMode == "single" || props.selectionMode == "multiple") && !context.selected,
       },
 
       // Transition
