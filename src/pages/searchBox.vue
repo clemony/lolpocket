@@ -13,7 +13,7 @@ const query = ref('');
                 <Icon icon="ph:magnifying-glass" />
             </div>
             <Input tabindex="0" role="button" v-model="query" placeholder=""
-                class="text-xs font-medium w-full text-center h-[28px] shadow-inner bg-base-200/60 border-base-300 text-base-content/60 italic shadow-base-300 !outline-0 !outline-transparent rounded-[10px] !outline-none z-20 focus:text-base-content focus:ring-base-300"
+                class="text-xs font-medium w-full text-center h-[28px] shadow-inner bg-base-200/60 border-base-300 text-base-content/60 italic shadow-base-300 !outline-0 !outline-transparent rounded-[10px] !outline-none z-20 focus:text-base-content focus:ring-base-300 focus:not-italic"
                 @keydown.enter.prevent />
             <div tabindex=" 0"
                 class="dropdown-content menu  bg-base-100 w-full rounded-bl-[10px] rounded-br-[10px] place-content-center z-[0] top-[26px] pt-[3px] shadow-lg border border-base-300 backdrop-blur-md bg-opacity-80">
