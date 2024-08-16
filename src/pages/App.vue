@@ -232,7 +232,7 @@ let tooltipText = ref('Collapse');
 function toggleMenus() {
   const menu = menuRef.value;
 
-  console.log("in function");
+  console.log(tooltipText);
 
   if (menu) {
     if (tooltipText.value == "Collapse") {
@@ -243,6 +243,7 @@ function toggleMenus() {
     else {
       console.log("in expand");
       tooltipText.value = "Collapse";
+      menu.classList.remove("minimize");
       return tooltipText;
     }
   }
