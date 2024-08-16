@@ -299,14 +299,14 @@ onMounted(async () => {
   @apply transition-all duration-700;
 }
 
-/*[data-pc-section="rootchildren"] {
+[data-pc-section="rootchildren"] {
   @apply transition-all duration-700;
 }
 
 .minimize [data-pc-section="rootchildren"] {
-  @apply flex flex-col;
+  @apply my-2 gap-6;
 }
-*/
+
 .minimize [data-pc-section="nodechildren"],
 .minimize [data-pc-section="nodetogglebutton"],
 .minimize [data-pc-section="nodelabel"],
@@ -322,6 +322,6 @@ onMounted(async () => {
 }
 
 .minimize [data-pc-section="nodeicon"] {
-  @apply m-0 p-0 w-[1.4rem] h-[1.4rem] py-6 text-base-content/60 transition-all duration-700;
+  @apply m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60 transition-all duration-700;
 }
 </style>
