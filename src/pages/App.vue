@@ -238,13 +238,15 @@ function toggleMenus() {
     if (tooltipText.value == "Collapse") {
       menu.classList.add("minimize");
       tooltipText.value = "Expand";
+      return;
     }
     else {
       tooltipText.value = "Collapse";
       menu.classList.remove("minimize");
-      return tooltipText;
+      return;
     }
   }
+  return;
 };
 
 /* ------------------------------ ON MOUNTED ----------------------------- */
