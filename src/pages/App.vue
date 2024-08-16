@@ -417,40 +417,41 @@ onMounted(async () => {
   @apply animate-out slide-out-to-top fade-out duration-700 z-0;
 }*/
 
-#menu.minimize {
-  @apply grid-cols-[80px_auto] justify-items-center transition-all duration-1000;
+#menu.minimizey {
+  @apply grid-cols-[80px_auto] justify-items-center;
 
 
   .nav * {
-    @apply m-0 p-0 justify-center transition-all duration-1000;
+    @apply m-0 p-0 justify-center;
   }
 
   .nav {
-    @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px] justify-items-center transition-all duration-1000;
+    @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px] justify-items-center;
   }
 
-  [data-pc-section="nodechildren"],
-  [data-pc-section="nodetogglebutton"],
-  [data-pc-section="nodelabel"],
-  .add-build,
-  h4 {
-    @apply hidden opacity-0 transition-all duration-1000;
-  }
+
 
   [data-pc-section="rootchildren"] {
-    @apply flex flex-col place-content-center content-center items-center transition-all duration-1000;
+    @apply flex flex-col place-content-center content-center items-center;
   }
 
   [data-pc-section="nodecontent"] {
-    @apply w-1/2 transition-all duration-1000;
+    @apply w-1/2;
   }
 
   [data-pc-section="nodeicon"] {
-    @apply m-0 p-0 w-[2.7rem] h-[2.7rem] text-base-content/60 transition-all duration-1000;
+    @apply m-0 p-0 w-[2.7rem] h-[2.7rem] text-base-content/60;
   }
 
   [data-pc-section="node"] {
-    @apply mx-0 my-2 flex first:mt-3 last:mb-4 items-center transition-all duration-1000;
+    @apply mx-0 my-2 flex first:mt-3 last:mb-4 items-center;
   }
+}
+
+.minimize [data-pc-section="nodechildren"],
+.minimize [data-pc-section="nodetogglebutton"],
+.minimize [data-pc-section="nodelabel"],
+.minimize .add-build {
+  @apply opacity-0 transition-opacity duration-1000;
 }
 </style>
