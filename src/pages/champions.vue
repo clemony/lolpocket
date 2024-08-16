@@ -64,7 +64,7 @@ function handleChampionClick(champion: Champion) {
 
         <div id="" class="">
 
-          <div role="tablist" class="tabs layout !mr-0">
+          <div role="tablist" class="tabs layout !mr-0 w-full">
 
             <input type="radio" name="champ-tabs" role="tab" class="tab after:w-36 font-semibold" aria-label="Champions"
               checked="true" />
