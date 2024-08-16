@@ -61,10 +61,6 @@ const items = dataStore.items;
 
 }
 
-.grid-image {
-  @apply saturate-[90%];
-}
-
 .grid-tip {
   @apply max-w-[70px];
 }
