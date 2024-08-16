@@ -238,7 +238,7 @@ function toggleMenus() {
       menu.classList.add("minimize");
       tooltipText.value = "Expand";
     }
-    else if (tooltipText.value = "Expand") {
+    else if (tooltipText.value == "Expand") {
       menu.classList.remove("minimize");
       tooltipText.value = "Collapse";
     }
