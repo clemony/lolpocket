@@ -242,7 +242,7 @@ function handleChampionClick(champion: Champion) {
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
 
-  @apply gap-5;
+  @apply gap-6;
 
   .grid-image {
     @apply !h-[94px] !w-[94px];
