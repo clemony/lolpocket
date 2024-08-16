@@ -300,12 +300,9 @@ onMounted(async () => {
 }
 
 [data-pc-section="rootchildren"] {
-  @apply transition-all duration-700;
+  @apply transition-all duration-700 flex flex-col gap-0;
 }
 
-.minimize [data-pc-section="rootchildren"] {
-  @apply my-2 gap-6;
-}
 
 .minimize [data-pc-section="nodechildren"],
 .minimize [data-pc-section="nodetogglebutton"],
