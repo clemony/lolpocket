@@ -422,11 +422,11 @@ onMounted(async () => {
 
 
   .nav * {
-    @apply m-0 p-0 justify-center;
+    @apply m-0 p-0 justify-center transition-all duration-1000;
   }
 
   .nav {
-    @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px] justify-items-center;
+    @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px] justify-items-center transition-all duration-1000;
   }
 
   [data-pc-section="nodechildren"],
