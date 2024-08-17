@@ -15,7 +15,7 @@ export default {
     ],
   },
   wrapper: {
-    class: ["overflow-auto m-0"],
+    class: ["overflow-auto my-1"],
   },
   container: {
     class: [
