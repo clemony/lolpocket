@@ -62,7 +62,7 @@ const hasSource2 = ref('false');
 
 <style>
 .news-after::after {
-    background: linear-gradient(to right, oklch(var(--b2)) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, oklch(var(--b2)) 100%);
+    background: linear-gradient(to right, oklch(var(--b2)) 0%, rgba(0, 0, 0, 0) 8%, rgba(0, 0, 0, 0) 80%, oklch(var(--b2)) 100%);
 
     @apply content-[''] z-50 fixed top-28 right-0 w-[calc(100%-300px)] h-56 pointer-events-none;
 }
