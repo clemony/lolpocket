@@ -27,7 +27,7 @@ const hasSource2 = ref('false');
                 the happening things.
             </p>
         </div>
-        <div class="flex h-64 gap-5 ">
+        <div class="flex h-64 gap-5 pointer-events-none">
 
 
         </div>
