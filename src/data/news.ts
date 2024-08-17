@@ -34,7 +34,7 @@ export interface article {
     {
       title: 'Champ Flavor Tier List',
       source: 'Clem',
-      icon: 'solar:cat-bold',
+      icon: 'fluent-emoji-high-contrast:kissing-cat',
       image:
         '/img/art/chase.webp',
     },
