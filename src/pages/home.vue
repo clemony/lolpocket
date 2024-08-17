@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { NewsArticles } from '@data/news';
 
-interface Article {
+interface article {
     title: string
     source: string
     image: string
@@ -27,9 +27,9 @@ interface Article {
                                 </p>
                             </div>
 
-                            <div v-for="Article in NewsArticles" class="card bg-base-100 w-60 text-sm shadow-xl">
+                            <div v-for="article in NewsArticles" class="card bg-base-100 w-60 text-sm shadow-xl">
                                 <figure>
-                                    <img :src="Article.image" :alt="Article.title" />
+                                    <img :src="article.image" :alt="article.title + ' image'" />
                                 </figure>
                                 <div class="card-body">
                                     <h2 class="card-title">
