@@ -160,46 +160,44 @@ onMounted(async () => {
   <div ref="menuRef" id="menu"
     class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-6  m-0 p-0 transition-all duration-700 delay-200">
 
-    <div class="col-start-1  z-10 border border-r-red-600 p-4 ">
+    <News v-if="isHome" class="pl-[286px] !overflow-x-scroll" />
 
-      <News v-if="isHome" class="pl-[286px] !overflow-x-scroll" />
+    <div ref="nav"
+      class=" mt-10 col-start-1  z-10 ounded-box bg-base-100/65 shadow-lg backdrop-blur-md nav z-1 max-h-full">
 
-      <div ref="nav" class=" mt-10 rounded-box bg-base-100/65 shadow-lg backdrop-blur-md nav z-1 max-h-full">
-
-        <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
-          @nodeSelect="onNodeSelect" id="tree">
-
-
-          <template #nodetogglebutton>
-          </template>
-
-          <template #default="slotProps">
-
-            {{ slotProps.node.label }}
-          </template>
-
-          <template #addon="slotProps">
-            <div ref="label">{{ slotProps.node.label }}</div>
-
-            <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
-              <Icon icon='ph:plus' class="add-fill" />
-            </Button>
-          </template>
-
-        </Tree>
+      <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
+        @nodeSelect="onNodeSelect" id="tree">
 
 
+        <template #nodetogglebutton>
+        </template>
 
-      </div>
-    </div>>
+        <template #default="slotProps">
 
-    <div class="w-full h-screen m-0 p-0 z-0 pt-14 col-start-2 overflow-scroll">
+          {{ slotProps.node.label }}
+        </template>
 
-      <component :is="currentComponent" />
+        <template #addon="slotProps">
+          <div ref="label">{{ slotProps.node.label }}</div>
+
+          <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
+            <Icon icon='ph:plus' class="add-fill" />
+          </Button>
+        </template>
+
+      </Tree>
 
 
-    </div>>
-  </div>
+
+    </div>
+  </div>>
+
+  <div class="w-full h-screen m-0 p-0 z-0 pt-14 col-start-2 overflow-scroll">
+
+    <component :is="currentComponent" />
+
+
+  </div>>
 </template>
 
 <style>
