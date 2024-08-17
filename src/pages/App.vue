@@ -184,7 +184,7 @@ onMounted(async () => {
 
     </div>
 
-    <div class="w-full h-screen m-0 p-0  pt-14 col-start-2 overflow-scroll">
+    <div class="w-full h-screen m-0 p-0 relative pt-14 col-start-2 overflow-scroll">
       <!-- Display the current component once loading is complete -->
       <!--<Transition name="slide-fade" mode="out-in">-->
       <component :is="currentComponent" />
