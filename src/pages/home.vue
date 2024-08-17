@@ -22,9 +22,9 @@ interface article {
             </p>
         </div>
 
-        <div class="flex overflow-x-scroll h-64 gap-5">
+        <div class="flex overflow-x-scroll  gap-5">
 
-            <div v-for="article in NewsArticles" class="card bg-base-100 w-60 text-sm shadow-xl">
+            <div v-for="article in NewsArticles" class="card bg-base-100 w-60 h-64 text-sm shadow-xl">
                 <figure>
                     <img :src="article.image" :alt="article.title + ' image'" />
                 </figure>
