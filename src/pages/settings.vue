@@ -126,8 +126,10 @@ function updateTheme(theme: string) {
           <p class="inline-flex gap-1 items-baseline"> Much
             <Icon icon="typcn:heart-outline" class="size-3" />from Clem's human.
           </p>
-          <Icon icon="ph:github-logo" />&nbsp;
-          <Icon icon="ph:at" />&nbsp;<span>clemony</span>
+          <p class="inline-flex gap-1 items-center mt-2">
+            <Icon icon="ph:github-logo" />
+            <Icon icon="ph:at" /><span>clemony</span>
+          </p>
         </div>
         <div class="text-base-content/85 flex space-x-2 *:size-6">
           <Icon icon="fontisto:vuejs" />
