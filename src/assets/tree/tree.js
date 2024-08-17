@@ -113,7 +113,7 @@ export default {
   }),
   nodeLabel: ({ context }) => ({
     class: [
-      "nodelabel order-2 align-middle content-center items-center relative flex flex-grow h-8 ml-7",
+      "order-2 align-middle content-center items-center relative flex flex-grow h-8 ml-7 truncate line-clamp-1",
 
       {
         "text-foreground": !context.selected,
@@ -123,7 +123,7 @@ export default {
   }),
   nodeChildren: {
     class: [
-      "nodechildren list-none z-10 border-l border-l-base-200 ml-4 *:border-none *:ml-1",
+      "list-none z-10 border-l border-l-base-200 ml-4 *:border-none *:ml-1 ",
       //last:mb-3
     ],
   },
