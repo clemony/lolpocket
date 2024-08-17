@@ -92,17 +92,10 @@ const hasSource2 = ref('false');
                                 <span class="badge badge-ghost badge-sm">Desktop Support Technician</span>
                             </td>
                             <td>Purple</td>
-                            <th>
-                                <button class="btn btn-ghost btn-xs">details</button>
-                            </th>
                         </tr>
                         <!-- row 2 -->
                         <tr>
-                            <th>
-                                <label>
-                                    <input type="checkbox" class="checkbox" />
-                                </label>
-                            </th>
+
                             <td>
                                 <div class="flex items-center gap-3">
                                     <div class="avatar">
@@ -123,17 +116,11 @@ const hasSource2 = ref('false');
                                 <span class="badge badge-ghost badge-sm">Tax Accountant</span>
                             </td>
                             <td>Red</td>
-                            <th>
-                                <button class="btn btn-ghost btn-xs">details</button>
-                            </th>
+
                         </tr>
                         <!-- row 3 -->
                         <tr>
-                            <th>
-                                <label>
-                                    <input type="checkbox" class="checkbox" />
-                                </label>
-                            </th>
+
                             <td>
                                 <div class="flex items-center gap-3">
                                     <div class="avatar">
@@ -154,17 +141,11 @@ const hasSource2 = ref('false');
                                 <span class="badge badge-ghost badge-sm">Office Assistant I</span>
                             </td>
                             <td>Crimson</td>
-                            <th>
-                                <button class="btn btn-ghost btn-xs">details</button>
-                            </th>
+
                         </tr>
                         <!-- row 4 -->
                         <tr>
-                            <th>
-                                <label>
-                                    <input type="checkbox" class="checkbox" />
-                                </label>
-                            </th>
+
                             <td>
                                 <div class="flex items-center gap-3">
                                     <div class="avatar">
@@ -185,9 +166,7 @@ const hasSource2 = ref('false');
                                 <span class="badge badge-ghost badge-sm">Community Outreach Specialist</span>
                             </td>
                             <td>Indigo</td>
-                            <th>
-                                <button class="btn btn-ghost btn-xs">details</button>
-                            </th>
+
                         </tr>
                     </tbody>
                 </table>
