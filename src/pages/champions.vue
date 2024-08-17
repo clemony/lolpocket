@@ -105,7 +105,7 @@ function handleChampionClick(champion: Champion) {
     </div>
   </div>
 
-  <div class="drawer-side z-50 right-0 bottom-0">
+  <div class="drawer-side z-50 right-0 bottom-0 absolute">
     <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
     <div class="menu  bg-base-200 text-base-content min-h-full w-80 px-4 pt-8 shadow-inner shadow-neutral/20">
       <!-- Sidebar content here -->
