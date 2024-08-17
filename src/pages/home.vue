@@ -41,9 +41,9 @@ const hasSource2 = ref('false');
                         <Icon :icon="article.icon" class="w-4 h-4 text-base-content/70" />
                         {{ article.source }}
 
-                        <span v-if="article && article.source2">on
+                        <span v-if="article && article.source2" class="inline">on
                             <Icon v-if="article && article.icon2" :icon="article.icon2"
-                                class="w-4 h-4 text-base-content/70" /> {{ article.source2 }}
+                                class="w-4 h-4 text-base-content/70 inline" /> {{ article.source2 }}
                         </span>
                     </p>
                 </div>
