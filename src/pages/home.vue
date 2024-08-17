@@ -14,10 +14,10 @@ interface article {
 
 
         <div class="gap-2 flex items-end">
-            <h2 class="text-2xl font-semibold tracking-tight">
+            <h2 class="text-xl font-semibold tracking-tight">
                 League News
             </h2>
-            <p class="text-sm text-muted-foreground italic">
+            <p class="text-sm text-muted-foreground italic pb-[5px]">
                 the happening things.
             </p>
         </div>
