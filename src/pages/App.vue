@@ -48,6 +48,8 @@ console.log(currentComponent.value);
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
 
+const isHome = computed(() => currentComponent.value === Home);
+
 // Method for node selection in the tree
 const onNodeSelect = (node: any) => {
   navigateTo(node.data);
@@ -189,7 +191,7 @@ onMounted(async () => {
 
     </div>
 
-    <News v-if="currentComponent.name == 'home'" />
+    <News v-if="isHome" />
 
     <div class="w-full h-screen m-0 p-0 relative pt-14 col-start-2 overflow-scroll">
       <component :is="currentComponent" />
