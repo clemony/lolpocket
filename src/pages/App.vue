@@ -127,18 +127,20 @@ onMounted(async () => {
     <!-- /* ----------------------------- TOOLBAR BUTTONS ---------------------------- */ -->
 
     <div
-      class="justify-self-end grid grid-cols-3 gap-2 mr-3 *:place-items-center  *: *:rounded-md *:size-6 *:tooltip *:tooltip-bottom text-base-content/60">
+      class="justify-self-end grid grid-cols-3 gap-2 mr-3 *:place-items-center  *: *:rounded-md *:size-6 text-base-content/60">
 
-      <div id="titlebar-minimize" data-tip="minimize" alt="minimize" class="p-1 hover:bg-base-300">
+      <div id="titlebar-minimize" data-tip="minimize" alt="minimize"
+        class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20">
         <Icon icon="ph:line-vertical-bold" class="rotate-90" />
       </div>
 
-      <div id="titlebar-maximize" data-tip="maximize" alt="maximize" class="p-1 hover:bg-base-300">
+      <div id="titlebar-maximize" data-tip="maximize" alt="maximize"
+        class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20">
         <Icon icon="ph:arrows-out-simple-bold" />
       </div>
 
       <div id="titlebar-close" alt="close" data-tip="close"
-        class="p-1 hover:bg-base-300 hover:shadow-inner hover:shadow-base-content/20">
+        class="p-1 hover:bg-base-300 hover:shadow-inner hover:shadow-base-content/20 hover:text-base-content">
         <Icon icon="ph:x-bold" class="titlebar-button" />
       </div>
     </div>
