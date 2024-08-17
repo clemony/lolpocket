@@ -63,7 +63,7 @@ function handleChampionClick(champion: Champion) {
 </script>
 
 <template>
-  <div class="drawer drawer-end z-1">
+  <div class="drawer drawer-end">
     <input id="my-drawer" type="checkbox" class="drawer-toggle hidden" />
     <div class="drawer-content z-10">
 
