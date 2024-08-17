@@ -1,6 +1,7 @@
 <script setup lang="ts">
-
 import { NewsArticles } from '@data/news';
+
+interface Article { }
 </script>
 
 <template>
