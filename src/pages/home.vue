@@ -37,7 +37,7 @@ const hasSource2 = ref('false');
                 <div class="card-body">
                     <h2 class="card-title text-lg truncate line-clamp-1 mb-0">{{ article.title }}</h2>
 
-                    <p class="text-xs italic mt-0 *:inline">
+                    <p class="text-xs italic mt-0 *:inline justify-start">
                         <Icon :icon="article.icon" class="w-4 h-4 text-base-content/70" />
                         {{ article.source }}
 
