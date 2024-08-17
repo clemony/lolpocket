@@ -123,14 +123,14 @@ function updateTheme(theme: string) {
       <div role="tabpanel" class="tab-content text-base-content">
 
 
-        <div class="card bg-base-200 rounded-box grid h-20 place-items-center">
+        <div class="card rounded-box grid h-20 place-items-center">
           <div class="text-sm grid  items-center justify-items-center">
-            <p class="">Thanks for trying the app! </p>
-            <p class="inline-flex gap-1 items-end">
-              <Icon icon="typcn:heart-outline" class="size-3 mb-[4px]" />
+            <p class="">thanks for trying the app </p>
+            <p class="inline-flex gap-1 items-center">
+              <Icon icon="typcn:heart-outline" class="size-3" />
               from
               <Icon icon="teenyicons:arrow-right-outline" class="size-3" />
-              Clem's human.
+              clem's human
             </p>
             <p class="inline-flex gap-1 items-center mt-2">
               <Icon icon="ph:github-logo" />
@@ -139,7 +139,7 @@ function updateTheme(theme: string) {
           </div>
         </div>
         <div class="divider text-xs">MADE WITH</div>
-        <div class="card bg-base-200 rounded-box grid h-20 place-items-center">
+        <div class="card rounded-box grid h-20 place-items-center">
           <div class="text-base-content/85 flex space-x-2 *:size-6">
             <Icon icon="fontisto:vuejs" />
 
