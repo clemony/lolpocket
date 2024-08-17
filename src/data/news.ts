@@ -1,6 +1,7 @@
 export interface article {
     title: string
     source: string
+    source2?: string
     image: string
   }
 
@@ -15,6 +16,7 @@ export interface article {
     {
       title: 'PBE Changes',
       source: ' /u/FrankTheBoxMonster',
+      source2: 'Reddit',
       image:
         '/img/art/magic.webp',
     },
