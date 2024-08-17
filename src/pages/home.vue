@@ -13,7 +13,7 @@ interface article {
     <div class="w-full p-4">
 
 
-        <div class="gap-2 flex align-content">
+        <div class="gap-2 flex items-end">
             <h2 class="text-2xl font-semibold tracking-tight">
                 League News
             </h2>
