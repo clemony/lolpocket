@@ -10,10 +10,10 @@ interface article {
 
 <template>
 
-    <div class="w-full">
+    <div class="w-full p-4">
 
 
-        <div class="mt-6 space-y-1">
+        <div class="space-y-1">
             <h2 class="text-2xl font-semibold tracking-tight">
                 League News
             </h2>
