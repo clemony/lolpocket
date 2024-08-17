@@ -13,12 +13,12 @@ interface article {
     <div class="w-full p-4">
 
 
-        <div class="space-y-1">
+        <div class="gap-2 flex align-content">
             <h2 class="text-2xl font-semibold tracking-tight">
                 League News
             </h2>
-            <p class="text-sm text-muted-foreground">
-                Stay on top of the happening things.
+            <p class="text-sm text-muted-foreground italic">
+                the happening things.
             </p>
         </div>
 
