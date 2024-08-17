@@ -74,7 +74,7 @@ function handleChampionClick(champion: Champion) {
         <a role="tab" class="tab tab-active w-44 font-semibold">Champions</a>
 
         <div role="tabpanel" class="tab-content !w-full">
-          <div class="grid-container !w-full">
+          <div class="grid-container !w-full mx-0 p-0">
 
             <TransitionGroup>
               <div class="grid-item champ" v-for="(champion, index) in searchList" :key="champion.name"
