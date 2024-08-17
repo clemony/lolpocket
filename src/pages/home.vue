@@ -301,11 +301,12 @@ const hasSource2 = ref('false');
 </template>
 
 <style>
+/*
 .news-after::after {
     /*background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, oklch(var(--b2)) 100%);*/
 
-    /*background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 89%, oklch(var(--b2)/0.85) 98%, oklch(var(--b2)) 100%);*/
+/*background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 89%, oklch(var(--b2)/0.85) 98%, oklch(var(--b2)) 100%);
 
     @apply content-[''] z-50 fixed top-28 right-0 w-[0] h-56 pointer-events-none;
-}
+}*/
 </style>
