@@ -63,46 +63,39 @@ function handleChampionClick(champion: Champion) {
 </script>
 
 <template>
-  <div class="drawer drawer-end">
-    <input id="my-drawer" type="checkbox" class="drawer-toggle hidden" />
-    <div class="drawer-content z-10">
 
-      <!-- Champ Tab -->
 
-      <div role="tablist" class="tabs layout !mx-0 !w-full border-b-transparent">
+  <!-- Champ Tab -->
 
-        <a role="tab" class="tab tab-active w-44 font-semibold">Champions</a>
+  <div role="tablist" class="tabs layout !mx-0 !w-full border-b-transparent">
 
-        <div role="tabpanel" class="tab-content !w-full">
-          <div class="grid-container !w-full mx-0 p-0">
+    <a role="tab" class="tab tab-active w-44 font-semibold">Champions</a>
 
-            <TransitionGroup>
-              <div class="grid-item champ" v-for="(champion, index) in searchList" :key="champion.name"
-                :data-index="index">
-                <label for="my-drawer" class="drawer-button cursor-pointer" @click="handleChampionClick(champion)">
-                  <div class="grid-image-container champ">
-                    <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
-                      class="grid-image" />
+    <div role="tabpanel" class="tab-content !w-full">
+      <div class="grid-container !w-full mx-0 p-0">
 
-                    <div class="grid-tip">
-                      {{ champion.name }}
-                    </div>
+        <TransitionGroup>
+          <div class="grid-item champ" v-for="(champion, index) in searchList" :key="champion.name" :data-index="index">
+            <label for="my-drawer" class="drawer-button cursor-pointer" @click="handleChampionClick(champion)">
+              <div class="grid-image-container champ">
+                <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
+                  class="grid-image" />
 
-                  </div>
+                <div class="grid-tip">
+                  {{ champion.name }}
+                </div>
 
-                </label>
               </div>
-            </TransitionGroup>
+
+            </label>
           </div>
-        </div>
-        <!--
+        </TransitionGroup>
+      </div>
+    </div>
+    <!--
           <a role="tab"
             class="tab w-full font-mono italic !text-xs text-end text-base-content font-normal cursor-pointer pointer-events-none border-b-transparent">
             {{ getQuote }} </a> -->
-
-      </div>
-    </div>
-
 
   </div>
 

@@ -155,9 +155,13 @@ onMounted(async () => {
         /* -------------------------------------------------------------------------- */ -->
 
 
-  <Splitter layout="horizontal">
+
+  <Splitter layout="horizontal" class="drawer drawer-end">
+    <input id="my-drawer" type="checkbox" class="drawer-toggle hidden" />
+
+
     <div ref="menuRef" id="menu"
-      class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-6  m-0 p-0 transition-all duration-700 delay-200 z-0">
+      class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-6  m-0 p-0 transition-all duration-700 delay-200 drawer-content z-10">
 
       <SplitterPanel :size="21" class="col-start-1  z-10 border border-r-red-600 p-4 max-w-[300px]">
 
