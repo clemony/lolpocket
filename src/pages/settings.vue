@@ -123,7 +123,7 @@ function updateTheme(theme: string) {
       <div role="tabpanel" class="tab-content text-base-content">
 
 
-        <div class="card bg-base-300 rounded-box grid h-20 place-items-center">
+        <div class="card bg-base-200 rounded-box grid h-20 place-items-center">
           <div class="text-sm grid align-middle items-center">
             <p class="">Thanks for trying the app! </p>
             <p class="inline-flex gap-1 items-baseline"> Much
@@ -135,8 +135,8 @@ function updateTheme(theme: string) {
             </p>
           </div>
         </div>
-        <div class="divider">MADE WITH</div>
-        <div class="card bg-base-300 rounded-box grid h-20 place-items-center">
+        <div class="divider text-xs">MADE WITH</div>
+        <div class="card bg-base-200 rounded-box grid h-20 place-items-center">
           <div class="text-base-content/85 flex space-x-2 *:size-6">
             <Icon icon="fontisto:vuejs" />
 
