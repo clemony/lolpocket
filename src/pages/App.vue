@@ -156,7 +156,7 @@ onMounted(async () => {
     <div class="col-start-1">
 
       <div ref="nav" class="ml-5 mt-14 rounded-lg bg-base-100 border border-base-300
-            shadow-base-300 shadow-lg nav">
+            shadow-base-300 shadow-lg backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 nav">
 
         <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
           @nodeSelect="onNodeSelect" id="tree">
@@ -181,8 +181,6 @@ onMounted(async () => {
         </Tree>
 
       </div>
-
-      <Toaster />
 
     </div>
 
@@ -274,7 +272,7 @@ onMounted(async () => {
 }
 
 .minimize .nav {
-  @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px];
+  @apply rounded-[15px];
 }
 
 
