@@ -85,13 +85,13 @@ onMounted(async () => {
 
 
 <!--   /* -------------------------------------------------------------------------- */
-       /*                                CONTENT START     border-b-[1px] border-base-300/80     shadow-lg shadow-base-300                     */
+       /*                                CONTENT START                          */
        /* -------------------------------------------------------------------------- */ -->
 
 <template>
 
   <div data-tauri-drag-region
-    class="titlebar top-0 left-0 h-[36px] w-full backdrop-blur-md bg-base-100/60 grid grid-cols-3 fixed z-20 p-[0px] items-center box-decoration-slice ">
+    class="titlebar top-0 left-0 h-[36px] w-full backdrop-blur-md bg-base-100/60 grid grid-cols-3 fixed z-20 p-[0px] items-center box-decoration-slice border-b-[1px] border-base-300/80 shadow-lg shadow-base-300">
 
     <div
       class="title col-start-1 justify-self-start flex items-center p-0 text-base tracking-wide font-semibold border-none shadow-none h-6 absolute left-[10px] top-[6px] z-40 bg-transparent">
@@ -150,12 +150,13 @@ onMounted(async () => {
          /*                                 MENU START                                 */
         /* -------------------------------------------------------------------------- */ -->
 
-  <div ref="menuRef" id="menu" class="w-screen grid  gap-0 m-0 p-0 transition-all duration-700 delay-200 ">
+  <div ref="menuRef" id="menu"
+    class="w-screen grid grid-cols-[300px_calc(100%-300px)] gap-10 m-0 p-0 transition-all duration-700 delay-200 ">
 
     <div class="col-start-1">
 
       <div ref="nav"
-        class="ml-5 mt-14 rounded-lg bg-base-100/60 bg-opacity-20 border border-base-300 shadow-base-300 shadow-lg backdrop-blur-md nav absolute">
+        class="ml-5 mt-14 rounded-lg bg-base-100/60 bg-opacity-20 border border-base-300 shadow-base-300 shadow-lg backdrop-blur-md nav absolute w-[300px]">
 
         <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
           @nodeSelect="onNodeSelect" id="tree">
