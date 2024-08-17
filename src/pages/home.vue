@@ -3,7 +3,9 @@ import { NewsArticles } from '@data/news';
 interface article {
     title: string
     source: string
+    icon?: string
     source2?: string
+    icon2?: string
     image: string
 }
 
@@ -33,7 +35,10 @@ const hasSource2 = ref('false');
                 </figure>
                 <div class="card-body">
                     <h2 class="card-title text-lg truncate line-clamp-1 mb-0">{{ article.title }}</h2>
-                    <p class="text-xs italic mt-0">{{ article.source }}
+                    <p class="text-xs italic mt-0">
+                        <Icon v-if="article && article.icon" :icon="article.icon" />
+                        {{ article.source }}
+                        <Icon v-if="article && article.icon2" :icon="article.icon2" />
                         <span v-if="article && article.source2">on {{ article.source2 }}</span>
                     </p>
                 </div>
