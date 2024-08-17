@@ -57,7 +57,8 @@ const hasSource2 = ref('false');
 
         <div class="grid grid-cols-2 gap-6 pr-12 w-full">
 
-            <div class="overflow-x-hidden overflow-y-scroll scrollbar-hide max-h-full card bg-base-100 shadow-lg">
+            <div
+                class="overflow-x-hidden overflow-y-scroll scrollbar-hide max-h-full card bg-base-100/60 backdrop-brightness-105 backdrop-blur-md shadow-lg">
                 <table class="table table-pin-rows">
                     <!-- head -->
                     <thead>
