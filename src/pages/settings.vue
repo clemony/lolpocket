@@ -123,8 +123,8 @@ function updateTheme(theme: string) {
       <div role="tabpanel" class="tab-content text-base-content">
 
 
-        <div class="card rounded-box grid h-20 place-items-center">
-          <div class="text-sm grid  items-center justify-items-center">
+        <div class="card rounded-box grid h-20 place-items-end *:font-mono">
+          <div class="text-xs grid  items-center justify-items-end">
             <p class="">thanks for trying the app </p>
             <p class="inline-flex gap-1 items-center">
               <Icon icon="typcn:heart-outline" class="size-3" />
