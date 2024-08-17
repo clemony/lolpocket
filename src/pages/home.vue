@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { NewsArticles } from '@data/news';
+import { Icon } from '@iconify/vue';
 interface article {
     title: string
     source: string
@@ -24,8 +25,10 @@ const hasSource2 = ref('false');
             </h2>
             <p class="text-sm text-muted-foreground italic pb-[5px]">
                 the happening things.
+                <Icon icon="simple-icons:riotgames" />
             </p>
         </div>
+        <Icon icon="simple-icons:riotgames" />
 
         <div class="flex overflow-x-scroll h-72 content-center gap-5">
 
