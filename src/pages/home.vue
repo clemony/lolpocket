@@ -31,7 +31,7 @@ const hasSource2 = ref('false');
         <div class="flex overflow-x-scroll h-64 content-center gap-5 news-after scrollbar-hide left-0">
 
             <div v-for="article in NewsArticles"
-                class="card !bg-base-100/20 backdrop-brightness-105 backdrop-blur-m  h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 z-0 *:z-0">
+                class="card !bg-base-100/60  backdrop-blur-m  h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 z-0 *:z-0">
                 <figure>
                     <img :src="article.image" :alt="article.title + ' image'" />
                 </figure>
@@ -58,7 +58,7 @@ const hasSource2 = ref('false');
         <div class="grid grid-cols-2 gap-6 pr-12 w-full">
 
             <div
-                class="overflow-x-hidden overflow-y-scroll scrollbar-hide max-h-full card bg-base-100/60 backdrop-brightness-105 backdrop-blur-md shadow-lg">
+                class="overflow-x-hidden overflow-y-scroll scrollbar-hide max-h-full card bg-base-100/60  backdrop-blur-md shadow-lg">
                 <table class="table table-pin-rows">
                     <!-- head -->
                     <thead>
