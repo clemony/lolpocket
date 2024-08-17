@@ -30,12 +30,12 @@ const hasSource2 = ref('false');
 
         <div class="flex overflow-x-scroll h-72 content-center gap-5">
 
-            <div v-for="article in NewsArticles" class="card bg-base-100 w-60 h-64 text-sm shadow-lg">
+            <div v-for="article in NewsArticles" class="card bg-base-100 w-54 h-56 text-sm shadow-lg">
                 <figure>
                     <img :src="article.image" :alt="article.title + ' image'" />
                 </figure>
                 <div class="card-body">
-                    <h2 class="card-title text-lg  mb-0">{{ article.title }}</h2>
+                    <h2 class="card-title text-base  mb-0">{{ article.title }}</h2>
 
                     <div class="text-xs italic mt-0 grid gap-1 *:content-start *:justify-start">
                         <div class="flex gap-1">
