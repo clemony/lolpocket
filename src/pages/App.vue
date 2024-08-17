@@ -151,7 +151,7 @@ onMounted(async () => {
         /* -------------------------------------------------------------------------- */ -->
 
   <div ref="menuRef" id="menu"
-    class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-6  m-0 p-0 transition-all duration-700 delay-200 z-1">
+    class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-6  m-0 p-0 transition-all duration-700 delay-200 !z-10 !*:z-10">
 
     <div class="col-start-1">
 
