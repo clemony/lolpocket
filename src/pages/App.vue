@@ -4,7 +4,7 @@ import Champions from '@/pages/champions.vue';
 import Home from '@/pages/home.vue';
 import Items from '@/pages/items.vue';
 import Runes from '@/pages/runes.vue';
-import News from '@data/news.vue';
+import News from '@pages/modules/news.vue';
 import Settings from '@/pages/settings.vue';
 import { useDataStore } from '@/stores/dataStore';
 import { Icon } from '@iconify/vue';
