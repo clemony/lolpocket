@@ -124,7 +124,8 @@ function updateTheme(theme: string) {
 
 
         <div class="card rounded-box grid h-20 place-items-end *:font-mono ">
-          <div class="text-xs grid  items-center justify-items-end pt-0 mt-0">
+
+          <div class="text-xs grid  items-center justify-items-end ">
             <p class="">thanks for trying the app </p>
             <p class="inline-flex gap-1 items-center">
               <Icon icon="typcn:heart-outline" class="size-3" />
@@ -137,8 +138,11 @@ function updateTheme(theme: string) {
               <Icon icon="ph:at" /><span>clemony</span>
             </p>
           </div>
+
         </div>
+
         <div class="divider text-xs">MADE WITH</div>
+
         <div
           class="card rounded-box grid h-20 grid-cols-6 gap-3 grid-flow-row place-items-center *:text-base-content/85  *:size-6">
           <Icon icon="fontisto:vuejs" />
@@ -150,7 +154,6 @@ function updateTheme(theme: string) {
           <Icon icon="simple-icons:nodedotjs" />
           <Icon icon="simple-icons:tailwindcss" />
           <img class="grayscale contrast-200 brightness-50" src="/img/ui/daisyui.svg" />
-
         </div>
       </div>
 
