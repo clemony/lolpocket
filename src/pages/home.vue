@@ -16,7 +16,7 @@ const hasSource2 = ref('false');
 
 <template>
 
-    <div class="w-full p-4 grid gap-y-3">
+    <div class="w-full py-4 pl-4 grid gap-y-3">
 
 
         <div class="gap-2 flex items-end">
