@@ -140,7 +140,7 @@ function updateTheme(theme: string) {
         </div>
         <div class="divider text-xs">MADE WITH</div>
         <div
-          class="card rounded-box grid h-20 auto-cols-max-content place-items-center *:text-base-content/85  *:size-6">
+          class="card rounded-box grid h-20 auto-cols-auto gap-2 grid-flow-row place-items-center *:text-base-content/85  *:size-6">
           <Icon icon="fontisto:vuejs" />
 
           <Icon icon="tabler:brand-vite" />
