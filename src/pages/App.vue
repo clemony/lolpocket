@@ -282,7 +282,8 @@ onMounted(async () => {
   @apply transition-all duration-100;
 }
 
-[data-pc-section="nodeicon"] {
+[data-pc-section="nodeicon"],
+[data-pc-section="node"] {
   @apply transition-all duration-700;
 }
 
@@ -294,11 +295,15 @@ onMounted(async () => {
   @apply gap-2;
 }
 
+.minimize [data-pc-section="node"] ul {
+  @apply h-0 opacity-0 invisible;
+}
+
 .minimize [data-pc-section="nodechildren"],
 .minimize [data-pc-section="nodetogglebutton"],
 .minimize [data-pc-section="nodelabel"],
 .minimize .add-build {
-  @apply w-0 invisible;
+  @apply w-0 opacity-0 invisible;
 }
 
 
