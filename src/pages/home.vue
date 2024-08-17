@@ -62,6 +62,6 @@ const hasSource2 = ref('false');
 
 <style>
 .news-after::after {
-    @apply border-2 border-red-600 content-[''] z-50 absolute top-0 left-0 w-full h-56 bg-gradient-to-r from-transparent to-bg-base-100;
+    @apply border-2 border-red-600 content-[''] z-50 absolute top-0 left-0 w-full h-56 bg-gradient-to-r from-transparent bg-base-100;
 }
 </style>
