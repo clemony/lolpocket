@@ -155,7 +155,9 @@ onMounted(async () => {
 
     <div class="col-start-1">
 
-      <div class="h-full w-full"></div>
+      <div
+        class="h-full w-full bg-base-100/60 bg-opacity-20 border border-base-300 shadow-base-300 shadow-lg backdrop-blur-md">
+      </div>
       <!--
       <div ref="nav"
         class="ml-5 mt-14 rounded-lg bg-base-100/60 bg-opacity-20 border border-base-300 shadow-base-300 shadow-lg backdrop-blur-md nav">
