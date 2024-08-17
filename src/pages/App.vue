@@ -255,8 +255,8 @@ onMounted(async () => {
   }
 }
 
-[data-pc-section="nodechildren"] div button span:nth-child(2) {
-  @apply !w-[100px];
+[data-pc-section="nodechildren"] [data-pc-section="nodecontent"] [data-pc-section="nodelabel"] {
+  @apply !w-[100px] truncate line-clamp-1;
 }
 
 [aria-expanded="true"] [data-pc-section="nodechildren"] {
