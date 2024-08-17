@@ -122,7 +122,7 @@ function updateTheme(theme: string) {
       <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="About" />
       <div role="tabpanel" class="tab-content text-base-content">
         <div class="text-sm flex align-middle items-center">
-          <p class="w-full inline-flex">Thanks for trying the app! Much
+          <p class="w-42 inline-flex">Thanks for trying the app! Much
             <Icon icon="ph:heart-straight-light" />
             from Clem's human.
           </p>
