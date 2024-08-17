@@ -155,15 +155,15 @@ onMounted(async () => {
         /* -------------------------------------------------------------------------- */ -->
 
 
-  <Splitter layout="horizontal">
+  <Splitter layout="horizontal" class="">
     <div ref="menuRef" id="menu"
       class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-6  m-0 p-0 transition-all duration-700 delay-200 z-0">
 
-      <SplitterPanel class="col-start-1 z-10 border border-red-600">
+      <SplitterPanel class="col-start-1 z-10 border border-r-red-600 p-4">
 
         <News v-if="isHome" class="pl-[286px] !overflow-x-scroll" />
 
-        <div ref="nav" class="ml-5 mt-14 rounded-box bg-base-100/65 shadow-lg backdrop-blur-md nav z-1 max-h-full">
+        <div ref="nav" class=" mt-14 rounded-box bg-base-100/65 shadow-lg backdrop-blur-md nav z-1 max-h-full">
 
           <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
             @nodeSelect="onNodeSelect" id="tree">
