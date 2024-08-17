@@ -147,7 +147,7 @@ onMounted(async () => {
   </div>
 
   <!--   /* -------------------------------------------------------------------------- */
-         /*                                 MENU START                                 */
+         /*                                 MENU START     absolute   w-[300px]                         */
         /* -------------------------------------------------------------------------- */ -->
 
   <div ref="menuRef" id="menu"
@@ -156,7 +156,7 @@ onMounted(async () => {
     <div class="col-start-1">
 
       <div ref="nav"
-        class="ml-5 mt-14 rounded-lg bg-base-100/60 bg-opacity-20 border border-base-300 shadow-base-300 shadow-lg backdrop-blur-md nav absolute w-[300px]">
+        class="ml-5 mt-14 rounded-lg bg-base-100/60 bg-opacity-20 border border-base-300 shadow-base-300 shadow-lg backdrop-blur-md nav  ">
 
         <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
           @nodeSelect="onNodeSelect" id="tree">
