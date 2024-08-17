@@ -255,14 +255,14 @@ onMounted(async () => {
   }
 }
 
-/*
+
 [aria-expanded="true"] [data-pc-section="nodechildren"] {
   @apply animate-in slide-in-from-top fade-in duration-300 z-0;
 }
 
 [aria-expanded="false"] [data-pc-section="nodechildren"] {
   @apply animate-out slide-out-to-top fade-out duration-700 z-0;
-}*/
+}
 
 #menu.minimize {
   @apply grid-cols-[80px_auto] gap-1.5;
