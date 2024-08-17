@@ -10,7 +10,7 @@ interface article {
 
 <template>
 
-    <div class="w-full p-4">
+    <div class="w-full p-4 grid gap-y-3">
 
 
         <div class="gap-2 flex items-end">
