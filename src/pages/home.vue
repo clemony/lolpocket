@@ -35,7 +35,7 @@ const hasSource2 = ref('false');
                 </figure>
                 <div class="card-body">
                     <h2 class="card-title text-lg truncate line-clamp-1 mb-0">{{ article.title }}</h2>
-                    <Icon v-if="article && article.icon" :icon="article.icon" class="size-4 text-base-content" />
+                    <Icon v-if="article && article.icon" :icon="article.icon" class="w-4 h-4 text-base-content" />
                     <p class="text-xs italic mt-0">
                         {{ article.source }}
                     </p>
