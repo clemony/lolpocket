@@ -155,12 +155,13 @@ onMounted(async () => {
         /* -------------------------------------------------------------------------- */ -->
 
 
-  <Splitter layout="horizontal" class="border border-red-600">
+  <Splitter layout="horizontal">
     <div ref="menuRef" id="menu"
       class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-6  m-0 p-0 transition-all duration-700 delay-200 z-0">
 
-      <News v-if="isHome" class="pl-[286px] !overflow-x-scroll" />
-      <SplitterPanel class="col-start-1 z-10">
+      <SplitterPanel class="col-start-1 z-10 border border-red-600">
+
+        <News v-if="isHome" class="pl-[286px] !overflow-x-scroll" />
         <div>
 
           <div ref="nav" class="ml-5 mt-14 rounded-box bg-base-100/65 shadow-lg backdrop-blur-md nav z-1 max-h-full">
