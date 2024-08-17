@@ -1,4 +1,6 @@
 <script setup lang="ts">
+
+import { Icon } from '@iconify/vue';
 interface article {
   title: string
   source: string
