@@ -38,4 +38,11 @@ export interface article {
       image:
         '/img/art/chase.webp',
     },
+    {
+      title: 'Champ Flavor Tier List',
+      source: 'Clem',
+      icon: 'solar:cat-bold',
+      image:
+        '/img/art/chase.webp',
+    },
   ]
