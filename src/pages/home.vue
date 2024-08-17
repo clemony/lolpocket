@@ -76,11 +76,7 @@ const hasSource2 = ref('false');
                     <tbody>
                         <!-- row 1 -->
                         <tr>
-                            <th>
-                                <label>
-                                    <input type="checkbox" class="checkbox" />
-                                </label>
-                            </th>
+
                             <td>
                                 <div class="flex items-center gap-3">
                                     <div class="avatar">
@@ -199,16 +195,6 @@ const hasSource2 = ref('false');
                             </th>
                         </tr>
                     </tbody>
-                    <!-- foot -->
-                    <tfoot>
-                        <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
-                            <th></th>
-                        </tr>
-                    </tfoot>
                 </table>
             </div>
 
