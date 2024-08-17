@@ -30,7 +30,7 @@ interface article {
                 </figure>
                 <div class="card-body">
                     <h2 class="card-title text-lg truncate line-clamp-1">{{ article.title }}</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <p class="text-xs italic">from: {{ article.source }}</p>
                     <div class="card-actions justify-end">
                         <button class="btn btn-sm btn-primary">Buy Now</button>
                     </div>
