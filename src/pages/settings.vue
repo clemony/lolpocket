@@ -127,7 +127,10 @@ function updateTheme(theme: string) {
           <div class="text-sm grid  items-center justify-items-center">
             <p class="">Thanks for trying the app! </p>
             <p class="inline-flex gap-1 items-end">
-              <Icon icon="typcn:heart-outline" class="size-3 mb-[4px]" />from Clem's human.
+              <Icon icon="typcn:heart-outline" class="size-3 mb-[4px]" />
+              from
+              <Icon icon="teenyicons:arrow-right-outline" class="size-3" />
+              Clem's human.
             </p>
             <p class="inline-flex gap-1 items-center mt-2">
               <Icon icon="ph:github-logo" />
