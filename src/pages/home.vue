@@ -35,11 +35,12 @@ const hasSource2 = ref('false');
                     <img :src="article.image" :alt="article.title + ' image'" />
                 </figure>
                 <div class="card-body">
-                    <h2 class="card-title text-lg truncate line-clamp-1 mb-0">{{ article.title }}</h2>
+                    <h2 class="card-title text-lg  mb-0">{{ article.title }}</h2>
 
-                    <div class="text-xs italic mt-0 grid gap-1 *:content-start">
+                    <div class="text-xs italic mt-0 grid gap-1 *:content-start *:justify-start">
                         <div class="flex gap-1">
-                            <Icon :icon="article.icon" class="w-4 h-4 text-base-content/70" />
+                            <Icon v-if="article && article.icon" :icon="article.icon"
+                                class="w-4 h-4 text-base-content/70" />
                             {{ article.source }}
                         </div>
                         <div v-if="article && article.source2" class="flex gap-1">on
