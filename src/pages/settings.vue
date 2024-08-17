@@ -141,7 +141,7 @@ function updateTheme(theme: string) {
 
         </div>
 
-        <div class="divider text-xs">MADE WITH</div>
+        <div class="divider divider-start text-xs">MADE WITH</div>
 
         <div
           class="card rounded-box grid h-20 grid-cols-6 gap-3 grid-flow-row place-items-center *:text-base-content/85  *:size-6">
