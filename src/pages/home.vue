@@ -44,7 +44,7 @@ const hasSource2 = ref('false');
                                 class="w-4 h-4 text-base-content/70" />
                             {{ article.source }}
                         </div>
-                        <div v-if="article && article.source2" class="text-xxs flex gap-1">on
+                        <div v-if="article && article.source2" class="text-xxs font-sans flex gap-1">on
                             <Icon v-if="article && article.icon2" :icon="article.icon2"
                                 class="w-4 h-4 text-base-content/70 " />
                             {{ article.source2 }}
