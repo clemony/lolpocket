@@ -29,7 +29,7 @@ const hasSource2 = ref('false');
         </div>
 
         <div
-            class="flex overflow-x-scroll h-64 content-center gap-5 after:bg-gradient-to-r after:from-transparent after:to-bg-base-100 after:border-2 after:border-red-600 after:content-[''] after:z-20 after:absolute after:top-0 after:left-0">
+            class="flex overflow-x-scroll h-64 content-center relative gap-5 after:bg-gradient-to-r after:from-transparent after:to-bg-base-100 after:border-2 after:border-red-600 after:content-[''] after:z-20 after:absolute after:top-0 after:left-0 after:w-full after:h-56">
 
             <div v-for="article in NewsArticles"
                 class="card bg-base-100  h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 z-0 *:z-0">
