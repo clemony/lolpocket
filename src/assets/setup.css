@@ -13,18 +13,29 @@
   --tab-radius: 0.5rem !important;
 }
 
-
-.font-serif {
-  font-family: "Roboto Serif Variable", ui-serif, 'Times New Roman', Times, serif !important;
+tooltip {
+  @apply ![--tooltip-offset:30px] ![--tooltip-tail-offset:24px];
 }
 
+.font-serif {
+  font-family: "Roboto Serif Variable", ui-serif, "Times New Roman", Times, serif !important;
+}
 
 .font-mono {
-  font-family: "Geist Mono", ui-monospace, 'Courier New', Courier, monospace !important;
+  font-family: "Geist Mono", ui-monospace, "Courier New", Courier, monospace !important;
 }
 
 .font-sans {
-  font-family: "Geist Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  font-family:
+    "Geist Sans",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif !important;
 }
 
 html,
@@ -57,7 +68,6 @@ box-shadow: inset 0px 0px 4px 1px rgba(25, 25, 25, 0.3);
   @apply absolute top-[0px] left-0 h-full w-full border-secondary-content/20 border-solid border-[1px] border-t-0 z-30 pointer-events-none;
 }
 
-
 /*.titlebar::after {
   content: '';
   mask-image: linear-gradient(to top, #000, #000),
@@ -68,11 +78,3 @@ box-shadow: inset 0px 0px 4px 1px rgba(25, 25, 25, 0.3);
   @apply absolute z-50 top-20 left-20 size-[30px];
 
 }*/
-
-
-
-
-
-
-
-
