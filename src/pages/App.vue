@@ -255,14 +255,8 @@ onMounted(async () => {
   }
 }
 
-#tree>div>ul>li:nth-child(2)>ul>li>div>span {
 
-  @apply !w-[90px] truncate line-clamp-1;
-}
 
-[data-pc-section="nodechildren"] [data-pc-section="nodecontent"] [data-pc-section="nodelabel"] {
-  @apply !w-[100px] truncate line-clamp-1;
-}
 
 [aria-expanded="true"] [data-pc-section="nodechildren"] {
   @apply animate-in slide-in-from-top fade-in duration-300 z-0;
@@ -270,6 +264,10 @@ onMounted(async () => {
 
 [aria-expanded="false"] [data-pc-section="nodechildren"] {
   @apply animate-out slide-out-to-top fade-out duration-700 z-0;
+}
+
+[data-pc-section="nodechildren"] [data-pc-section="nodecontent"] [data-pc-section="nodelabel"] {
+  @apply !w-[50px] truncate line-clamp-1;
 }
 
 #menu.minimize {
