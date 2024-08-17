@@ -155,7 +155,7 @@ onMounted(async () => {
 
     <div class="col-start-1">
 
-      <div ref="nav" class="ml-5 mt-14 rounded-box bg-base-100/80 shadow-lg backdrop-blur-md nav  ">
+      <div ref="nav" class="ml-5 mt-14 rounded-box bg-base-100/90 shadow-lg backdrop-blur-md nav  ">
 
         <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
           @nodeSelect="onNodeSelect" id="tree">
