@@ -4,6 +4,7 @@ import Champions from '@/pages/champions.vue';
 import Home from '@/pages/home.vue';
 import Items from '@/pages/items.vue';
 import Runes from '@/pages/runes.vue';
+import News from '@data/news.vue';
 import Settings from '@/pages/settings.vue';
 import { useDataStore } from '@/stores/dataStore';
 import { Icon } from '@iconify/vue';
@@ -150,6 +151,7 @@ onMounted(async () => {
          /*                                 MENU START        absolute  z-30 w-[300px]                      */
         /* -------------------------------------------------------------------------- */ -->
 
+  <News v-if="" />
   <div ref="menuRef" id="menu"
     class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-6  m-0 p-0 transition-all duration-700 delay-200 !z-10 !*:z-10">
 
