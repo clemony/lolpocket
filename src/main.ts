@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 app.component("Tree", Tree);
+/*
 const components = import.meta.glob("@/components/ui/*.vue", { eager: true });
 
 Object.entries(components).forEach(([path, definition]) => {
@@ -46,7 +47,7 @@ Object.entries(components).forEach(([path, definition]) => {
   
   const component = (definition as { default: any }).default;
   app.component(componentName, component);
-});
+});*/
 
 
 type TitleBarStyle = 'visible' | 'transparent' | 'overlay'
