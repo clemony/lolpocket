@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { NewsArticles } from '@data/news';
-
 interface article {
     title: string
     source: string
-    source2: string
+    source2?: string
     image: string
 }
 
 const hasSource2 = ref('false');
+
 </script>
 
 <template>
@@ -34,7 +34,7 @@ const hasSource2 = ref('false');
                 <div class="card-body">
                     <h2 class="card-title text-lg truncate line-clamp-1 mb-0">{{ article.title }}</h2>
                     <p class="text-xs italic mt-0">{{ article.source }}
-                        <span :hasSource2='false'>on {{ article.source2 }}</span>
+                        <span>on {{ article.source2 }}</span>
                     </p>
                     <div class="card-actions justify-end">
                         <button class="btn btn-sm btn-primary">Buy Now</button>
