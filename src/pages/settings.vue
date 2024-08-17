@@ -135,7 +135,7 @@ function updateTheme(theme: string) {
             </p>
             <p class="inline-flex gap-1 items-center mt-2">
               <Icon icon="ph:github-logo" />
-              <Icon icon="ph:at" /><span>clemony</span>
+              <Icon icon="ph:at" /><a href="https://github.com/clemony/lolpocket">clemony</a>
             </p>
           </div>
 
