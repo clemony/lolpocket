@@ -2,7 +2,7 @@
 import { NewsArticles } from '@data/news';
 
 interface Article {
-    name: string
+    title: string
     source: string
     image: string
 }
@@ -29,8 +29,7 @@ interface Article {
 
                             <div v-for="Article in NewsArticles" class="card bg-base-100 w-60 text-sm shadow-xl">
                                 <figure>
-                                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                        alt="Shoes" />
+                                    <img :src="Article.image" :alt="Article.title" />
                                 </figure>
                                 <div class="card-body">
                                     <h2 class="card-title">
