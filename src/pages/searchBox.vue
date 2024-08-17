@@ -7,15 +7,15 @@ const query = ref('');
 <template>
     <form class="text-center justify-items-center rounded-lg z-0">
 
-        <div class="relative max-w-[470px]">
+        <div class="relative max-w-[470px] border-0 outline-0 ring-0">
             <div
-                class=" w-full  shadow-inner bg-base-200/60 border-base-content/30 ring-base-content/30 ring-offset-base-content/30 focus:ring-base-content/25 text-base-content/60  rounded-[10px]  z-20 focus:*:text-base-content focus:*:not-italic">
+                class=" w-full h-[28px] shadow-inner bg-base-200/60 b  focus:ring-offset-base-content/30 focus:ring-base-content/25 text-base-content/60  rounded-[10px]  z-20 focus:*:text-base-content focus:*:not-italic">
                 <div class="absolute right-3 top-[5.5px] flex gap-2.5 *:size-4 z-20 text-base-content/50">
                     <Icon icon="teenyicons:filter-outline" />
                     <Icon icon="ph:nut" />
                 </div>
                 <Input tabindex="0" role="" v-model="query" placeholder=""
-                    class="italic h-[28px] text-xs !outline-0 !outline-transparent !outline-none rounded-[10px] ring-0 "
+                    class="italic h-full w-full text-xs !outline-0 !outline-transparent !outline-none rounded-[10px] ring-0 "
                     @keydown.enter.prevent />
             </div>
             <!--<div tabindex=" 60"
