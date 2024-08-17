@@ -162,41 +162,40 @@ onMounted(async () => {
       <SplitterPanel class="col-start-1 z-10 border border-red-600">
 
         <News v-if="isHome" class="pl-[286px] !overflow-x-scroll" />
-        <div>
 
-          <div ref="nav" class="ml-5 mt-14 rounded-box bg-base-100/65 shadow-lg backdrop-blur-md nav z-1 max-h-full">
+        <div ref="nav" class="ml-5 mt-14 rounded-box bg-base-100/65 shadow-lg backdrop-blur-md nav z-1 max-h-full">
 
-            <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
-              @nodeSelect="onNodeSelect" id="tree">
+          <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
+            @nodeSelect="onNodeSelect" id="tree">
 
 
-              <template #nodetogglebutton>
-              </template>
+            <template #nodetogglebutton>
+            </template>
 
-              <template #default="slotProps">
+            <template #default="slotProps">
 
-                {{ slotProps.node.label }}
-              </template>
+              {{ slotProps.node.label }}
+            </template>
 
-              <template #addon="slotProps">
-                <div ref="label">{{ slotProps.node.label }}</div>
+            <template #addon="slotProps">
+              <div ref="label">{{ slotProps.node.label }}</div>
 
-                <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
-                  <Icon icon='ph:plus' class="add-fill" />
-                </Button>
-              </template>
+              <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
+                <Icon icon='ph:plus' class="add-fill" />
+              </Button>
+            </template>
 
-            </Tree>
+          </Tree>
 
-          </div>
+
 
         </div>
       </SplitterPanel>
 
       <SplitterPanel class="w-full h-screen m-0 p-0 z-0 pt-14 col-start-2 overflow-scroll pointer-events-none">
-        <div>
-          <component :is="currentComponent" />
-        </div>
+
+        <component :is="currentComponent" />
+
 
       </SplitterPanel>
     </div>
