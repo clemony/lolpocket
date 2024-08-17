@@ -1,5 +1,5 @@
 <script setup lang="ts">
-export interface article {
+interface article {
   title: string
   source: string
   icon?: string
@@ -8,7 +8,7 @@ export interface article {
 }
 
 
-export const NewsArticles: article[] = [
+const NewsArticles: article[] = [
   {
     title: 'Patch 14.15',
     source: 'Riot Games',

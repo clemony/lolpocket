@@ -151,7 +151,7 @@ onMounted(async () => {
          /*                                 MENU START        absolute  z-30 w-[300px]                      */
         /* -------------------------------------------------------------------------- */ -->
 
-  <News v-if="" />
+  <News v-if="currentComponent.value == 'home'" />
   <div ref="menuRef" id="menu"
     class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-6  m-0 p-0 transition-all duration-700 delay-200 !z-10 !*:z-10">
 
