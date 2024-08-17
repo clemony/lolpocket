@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Album } from '../data/news'
+import type { Album } from '../data/news.vue'
 import { playlists } from '../data/playlists'
 import { Icon } from '@iconify/vue';
 import { cn } from '@/lib/utils';
