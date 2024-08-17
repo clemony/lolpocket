@@ -121,10 +121,10 @@ function updateTheme(theme: string) {
 
       <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="About" />
       <div role="tabpanel" class="tab-content text-base-content">
-        <div class="text-sm flex align-middle items-center">
-          <p class="w-42 inline-flex">Thanks for trying the app! Much
-            <Icon icon="ph:heart-straight-light" />
-            from Clem's human.
+        <div class="text-sm grid align-middle items-center">
+          <p class="">Thanks for trying the app! </p>
+          <p class="inline-flex gap-1"> Much
+            <Icon icon="ph:heart-straight-light" />from Clem's human.
           </p>
           <Icon icon="ph:github-logo" />&nbsp;
           <Icon icon="ph:at" />&nbsp;<span>clemony</span>
