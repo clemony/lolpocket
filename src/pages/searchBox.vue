@@ -15,7 +15,7 @@ const query = ref('');
                     <Icon icon="ph:nut" />
                 </div>
                 <Input tabindex="0" role="" v-model="query" placeholder=""
-                    class="italic h-full w-full text-xs !outline-0 !outline-transparent !outline-none rounded-[10px] ring-0 focus:outline-0 focus:ring-1 border-0 focus:border-0 focus:not-italic focus:ring-base-content/10 focus:text-base-content"
+                    class="italic h-full w-full text-xs !outline-0 !outline-transparent !outline-none rounded-[10px] ring-0 focus:outline-0 focus:ring-1 border-0 focus:border-0 focus:not-italic focus:ring-base-content/10 focus:text-base-content align-text-bottom text-bottom "
                     @keydown.enter.prevent />
             </div>
             <!--<div tabindex=" 60"
