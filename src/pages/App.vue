@@ -255,6 +255,11 @@ onMounted(async () => {
   }
 }
 
+#tree>div>ul>li:nth-child(2)>ul>li>div>span {
+
+  @apply !w-[100px] truncate line-clamp-1;
+}
+
 [data-pc-section="nodechildren"] [data-pc-section="nodecontent"] [data-pc-section="nodelabel"] {
   @apply !w-[100px] truncate line-clamp-1;
 }
