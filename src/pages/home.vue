@@ -36,11 +36,15 @@ const hasSource2 = ref('false');
                 </figure>
                 <div class="card-body">
                     <h2 class="card-title text-lg truncate line-clamp-1 mb-0">{{ article.title }}</h2>
-                    <Icon icon="simple-icons:riotgames" color="black" class="w-4 h-4 text-base-content z-30" />
-                    <p class="text-xs italic mt-0">
+
+                    <p class="text-xs italic mt-0 *:inline">
+                        <Icon :icon="article.icon" class="w-4 h-4 text-base-content/70" />
                         {{ article.source }}
-                        <Icon v-if="article && article.icon2" :icon="article.icon2" />
-                        <span v-if="article && article.source2">on {{ article.source2 }}</span>
+
+                        <span v-if="article && article.source2">on
+                            <Icon v-if="article && article.icon2" :icon="article.icon2"
+                                class="w-4 h-4 text-base-content/70" /> {{ article.source2 }}
+                        </span>
                     </p>
                 </div>
             </div>
