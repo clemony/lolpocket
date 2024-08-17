@@ -127,9 +127,9 @@ onMounted(async () => {
     <!-- /* ----------------------------- TOOLBAR BUTTONS ---------------------------- */ -->
 
     <div
-      class="justify-self-end grid grid-cols-3 gap-2 mr-3 tooltip tooltip-bottom *:place-items-center  *:hover:bg-base-200 *:rounded-sm *:size-4">
+      class="justify-self-end grid grid-cols-3 gap-2 mr-3 *:place-items-center  *:hover:bg-base-300 *:rounded-md *:size-4 *:tooltip *:tooltip-bottom ">
 
-      <div id="titlebar-minimize" data-tip="minimize" alt="minimize" class="p-1">
+      <div id="titlebar-minimize" data-tip="minimize" alt="minimize" class="p-1 ">
         <Icon icon="ph:line-vertical-bold" class="rotate-90" />
       </div>
 
