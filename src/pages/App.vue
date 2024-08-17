@@ -156,7 +156,7 @@ onMounted(async () => {
   <div ref="menuRef" id="menu"
     class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-6  m-0 p-0 transition-all duration-700 delay-200 !z-10 !*:z-10">
 
-    <News v-if="currentComponent.path == '/home'" />
+
 
     <div class="col-start-1">
 
@@ -188,6 +188,8 @@ onMounted(async () => {
       </div>
 
     </div>
+
+    <News v-if="currentComponent.name == 'home'" />
 
     <div class="w-full h-screen m-0 p-0 relative pt-14 col-start-2 overflow-scroll">
       <!-- Display the current component once loading is complete -->
