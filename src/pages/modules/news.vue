@@ -45,6 +45,13 @@ const NewsArticles: article[] = [
     image:
       '/img/art/chase.webp',
   },
+  {
+    title: 'Champ Flavor Tier List',
+    source: 'Clem',
+    icon: 'fluent-emoji-high-contrast:kissing-cat',
+    image:
+      '/img/art/chase.webp',
+  },
 ]
 
 </script>
