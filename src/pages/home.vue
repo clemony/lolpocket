@@ -22,7 +22,7 @@ interface article {
             </p>
         </div>
 
-        <div class="flex overflow-x-scroll  gap-5">
+        <div class="flex overflow-x-scroll h-72 content-center gap-5">
 
             <div v-for="article in NewsArticles" class="card bg-base-100 w-60 h-64 text-sm shadow-xl">
                 <figure>
