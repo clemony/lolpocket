@@ -272,16 +272,14 @@ onMounted(async () => {
   @apply backdrop-blur-md backdrop-brightness-200 backdrop-opacity-80 rounded-[15px];
 }
 
-[data-pc-section="nodechildren"],
-[data-pc-section="nodelabel"] {
-  @apply transition-all duration-700;
-}
 
 [data-pc-section="nodetogglebutton"],
 .add-build {
   @apply transition-all duration-100;
 }
 
+[data-pc-section="nodechildren"],
+[data-pc-section="nodelabel"],
 [data-pc-section="nodeicon"],
 [data-pc-section="node"] {
   @apply transition-all duration-700;
