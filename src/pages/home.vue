@@ -57,7 +57,7 @@ const hasSource2 = ref('false');
 
         <div class="grid grid-cols-2">
 
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto card bg-base-100 shadow-lg">
                 <table class="table">
                     <!-- head -->
                     <thead>
