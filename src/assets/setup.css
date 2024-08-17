@@ -14,7 +14,8 @@
 }
 
 tooltip {
-  @apply ![--tooltip-offset:50px] ![--tooltip-tail-offset:24px];
+  --tooltip-offset: 50px !important;
+  --tooltip-tail-offset: 24px !important;
 }
 
 .font-serif {
