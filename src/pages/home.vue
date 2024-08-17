@@ -27,21 +27,25 @@ interface article {
                                 </p>
                             </div>
 
-                            <div v-for="article in NewsArticles" class="card bg-base-100 w-60 text-sm shadow-xl">
-                                <figure>
-                                    <img :src="article.image" :alt="article.title + ' image'" />
-                                </figure>
-                                <div class="card-body">
-                                    <h2 class="card-title">
-                                        Shoes!
-                                        <div class="badge badge-secondary">NEW</div>
-                                    </h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div class="card-actions justify-end">
-                                        <div class="badge badge-outline">Fashion</div>
-                                        <div class="badge badge-outline">Products</div>
+                            <div class="flex">
+
+                                <div v-for="article in NewsArticles" class="card bg-base-100 w-60 text-sm shadow-xl">
+                                    <figure>
+                                        <img :src="article.image" :alt="article.title + ' image'" />
+                                    </figure>
+                                    <div class="card-body">
+                                        <h2 class="card-title">
+                                            Shoes!
+                                            <div class="badge badge-secondary">NEW</div>
+                                        </h2>
+                                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                                        <div class="card-actions justify-end">
+                                            <div class="badge badge-outline">Fashion</div>
+                                            <div class="badge badge-outline">Products</div>
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
 
                         </div>
