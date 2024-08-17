@@ -20,7 +20,7 @@ export interface article {
       title: 'PBE Changes',
       source: ' /u/FrankTheBoxMonster',
       source2: 'Reddit',
-      icon2: 'ic:baseline-reddit',
+      icon2: 'akar-icons:reddit-fill',
       image:
         '/img/art/magic.webp',
     },
