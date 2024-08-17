@@ -28,7 +28,7 @@ const hasSource2 = ref('false');
             </p>
         </div>
 
-        <div class="grid grid-cols-4 overflow-x-scroll h-64 content-center gap-5">
+        <div class="grid grid-cols-[2fr_repeat(1fr)] overflow-x-scroll h-64 content-center gap-5">
 
             <div v-for="article in NewsArticles" class="card bg-base-100 w-54 h-56 text-sm shadow-lg">
                 <figure>
