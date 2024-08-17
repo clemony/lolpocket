@@ -27,7 +27,7 @@ export default {
     ],
   },
   node: {
-    class: ["focus:outline-none align-middle items-center relative my-1 w-full "],
+    class: ["focus:outline-none align-middle items-center relative my-1.5 w-full "],
   },
   nodeContent: ({ context, props }) => ({
     class: [
