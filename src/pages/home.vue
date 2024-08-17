@@ -36,9 +36,6 @@ const hasSource2 = ref('false');
                     <p class="text-xs italic mt-0">{{ article.source }}
                         <span v-if="article && article.source2">on {{ article.source2 }}</span>
                     </p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-xs btn-primary text-xs">Buy Now</button>
-                    </div>
                 </div>
             </div>
 
