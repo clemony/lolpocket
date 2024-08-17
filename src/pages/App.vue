@@ -256,7 +256,7 @@ onMounted(async () => {
 }
 
 [data-pc-section="nodechildren"] [data-pc-section="nodelabel"] {
-  @apply w-[calc(100%-55px)];
+  @apply w-[calc(100%-10rem)];
 }
 
 [aria-expanded="true"] [data-pc-section="nodechildren"] {
