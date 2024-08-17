@@ -9,6 +9,9 @@ import { createApp } from "vue";
 import { createRouter, createWebHistory } from 'vue-router';
 import { routes } from 'vue-router/auto-routes';
 import { getCurrent } from '../node_modules/@tauri-apps/api/window.js';
+import Splitter from 'primevue/splitter';
+import SplitterPanel from 'primevue/splitterpanel';
+
 
 const router = createRouter({
   history: createWebHistory(),
@@ -39,6 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 app.component("Tree", Tree);
+app.component("Splitter", Splitter);
+app.component("SplitterPanel", SplitterPanel);
 /*
 const components = import.meta.glob("@/components/ui/*.vue", { eager: true });
 
