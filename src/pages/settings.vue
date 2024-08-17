@@ -124,7 +124,7 @@ function updateTheme(theme: string) {
         <div class="text-sm grid align-middle items-center">
           <p class="">Thanks for trying the app! </p>
           <p class="inline-flex gap-1 items-baseline"> Much
-            <Icon icon="ph:heart-light" class="size-3" />from Clem's human.
+            <Icon icon="typcn:heart-outline" class="size-3" />from Clem's human.
           </p>
           <Icon icon="ph:github-logo" />&nbsp;
           <Icon icon="ph:at" />&nbsp;<span>clemony</span>
