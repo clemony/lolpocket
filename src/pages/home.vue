@@ -55,7 +55,7 @@ const hasSource2 = ref('false');
 
         </div>
 
-        <div class="grid grid-cols-2">
+        <div class="grid grid-cols-2 gap-6 mr-4 w-full">
 
             <div class="overflow-x-auto card bg-base-100 shadow-lg">
                 <table class="table">
@@ -171,6 +171,125 @@ const hasSource2 = ref('false');
                     </tbody>
                 </table>
             </div>
+
+
+
+            <div class="overflow-x-auto card bg-base-100 shadow-lg">
+                <table class="table">
+                    <!-- head -->
+                    <thead>
+                        <tr>
+                            <th>Champion</th>
+                            <th>Role</th>
+                            <th>Winrate</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- row 1 -->
+                        <tr>
+
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div class="avatar">
+                                        <div class="rounded-lg h-12 w-12">
+                                            <img src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                                                alt="Avatar Tailwind CSS Component" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold">Hart Hagerty</div>
+                                        <div class="text-sm opacity-50">United States</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                Zemlak, Daniel and Leannon
+                                <br />
+                                <span class="badge badge-ghost badge-sm">Desktop Support Technician</span>
+                            </td>
+                            <td>Purple</td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div class="avatar">
+                                        <div class="rounded-lg h-12 w-12">
+                                            <img src="https://img.daisyui.com/images/profile/demo/3@94.webp"
+                                                alt="Avatar Tailwind CSS Component" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold">Brice Swyre</div>
+                                        <div class="text-sm opacity-50">China</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                Carroll Group
+                                <br />
+                                <span class="badge badge-ghost badge-sm">Tax Accountant</span>
+                            </td>
+                            <td>Red</td>
+
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div class="avatar">
+                                        <div class="rounded-lg h-12 w-12">
+                                            <img src="https://img.daisyui.com/images/profile/demo/4@94.webp"
+                                                alt="Avatar Tailwind CSS Component" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold">Marjy Ferencz</div>
+                                        <div class="text-sm opacity-50">Russia</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                Rowe-Schoen
+                                <br />
+                                <span class="badge badge-ghost badge-sm">Office Assistant I</span>
+                            </td>
+                            <td>Crimson</td>
+
+                        </tr>
+                        <!-- row 4 -->
+                        <tr>
+
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div class="avatar">
+                                        <div class="rounded-lg h-12 w-12">
+                                            <img src="https://img.daisyui.com/images/profile/demo/5@94.webp"
+                                                alt="Avatar Tailwind CSS Component" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold">Yancy Tear</div>
+                                        <div class="text-sm opacity-50">Brazil</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                Wyman-Ledner
+                                <br />
+                                <span class="badge badge-ghost badge-sm">Community Outreach Specialist</span>
+                            </td>
+                            <td>Indigo</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
 
         </div>
 
