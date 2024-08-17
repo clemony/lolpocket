@@ -150,13 +150,12 @@ onMounted(async () => {
          /*                                 MENU START                                 */
         /* -------------------------------------------------------------------------- */ -->
 
-  <div ref="menuRef" id="menu"
-    class="w-screen grid grid-cols-[300px_calc(100%-300px)] gap-0 m-0 p-0 transition-all duration-700 delay-200">
+  <div ref="menuRef" id="menu" class="w-screen grid  gap-0 m-0 p-0 transition-all duration-700 delay-200 ">
 
     <div class="col-start-1">
 
       <div ref="nav"
-        class="ml-5 mt-14 rounded-lg bg-base-100/60 bg-opacity-20 border border-base-300 shadow-base-300 shadow-lg backdrop-blur-md nav">
+        class="ml-5 mt-14 rounded-lg bg-base-100/60 bg-opacity-20 border border-base-300 shadow-base-300 shadow-lg backdrop-blur-md nav absolute">
 
         <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
           @nodeSelect="onNodeSelect" id="tree">
