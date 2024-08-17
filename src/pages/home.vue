@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import AlbumArtwork from './AlbumArtwork.vue';
 
-import { madeForYouAlbums } from '../data/albums';
+import { NewsArticles } from '@data/news';
 </script>
 
 <template>
@@ -22,15 +21,23 @@ import { madeForYouAlbums } from '../data/albums';
                                     Stay on top of the happening things.
                                 </p>
                             </div>
-                            <Separator class="my-4" />
-                            <div class="relative">
-                                <ScrollArea>
-                                    <div class="flex pb-4 space-x-4">
-                                        <AlbumArtwork v-for="album in madeForYouAlbums" :key="album.name" :album="album"
-                                            class="w-[150px]" aspect-ratio="square" :width="150" :height="150" />
+
+                            <div v-for="Articles in NewsArticles" class="card bg-base-100 w-96 shadow-xl">
+                                <figure>
+                                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                        alt="Shoes" />
+                                </figure>
+                                <div class="card-body">
+                                    <h2 class="card-title">
+                                        Shoes!
+                                        <div class="badge badge-secondary">NEW</div>
+                                    </h2>
+                                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                                    <div class="card-actions justify-end">
+                                        <div class="badge badge-outline">Fashion</div>
+                                        <div class="badge badge-outline">Products</div>
                                     </div>
-                                    <ScrollBar orientation="horizontal" />
-                                </ScrollArea>
+                                </div>
                             </div>
 
                         </div>
