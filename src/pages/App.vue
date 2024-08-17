@@ -158,172 +158,173 @@ onMounted(async () => {
 
 
   <div ref="menuRef" id="menu"
-    class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-6  m-0 p-0 transition-all duration-700 delay-200">
+    class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-6  m-0 p-0 transition-all duration-700 delay-200 z-0">
 
-    <News v-if="isHome" class="pl-[286px] !overflow-x-scroll" />
+    <SplitterPanel :size="30" class="col-start-1 z-10 border border-r-red-600 p-4 max-w-[350px]">
 
-    <div ref="nav"
-      class=" mt-10 col-start-1  z-10 ounded-box bg-base-100/65 shadow-lg backdrop-blur-md nav z-1 max-h-full">
+      <News v-if="isHome" class="pl-[286px] !overflow-x-scroll" />
 
-      <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
-        @nodeSelect="onNodeSelect" id="tree">
+      <div ref="nav" class=" mt-10 rounded-box bg-base-100/65 shadow-lg backdrop-blur-md nav z-1 max-h-full">
 
-
-        <template #nodetogglebutton>
-        </template>
-
-        <template #default="slotProps">
-
-          {{ slotProps.node.label }}
-        </template>
-
-        <template #addon="slotProps">
-          <div ref="label">{{ slotProps.node.label }}</div>
-
-          <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
-            <Icon icon='ph:plus' class="add-fill" />
-          </Button>
-        </template>
-
-      </Tree>
+        <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
+          @nodeSelect="onNodeSelect" id="tree">
 
 
+          <template #nodetogglebutton>
+          </template>
 
-    </div>
+          <template #default="slotProps">
 
-    <div class="w-full h-screen m-0 p-0 z-0 pt-14 col-start-2 overflow-scroll">
+            {{ slotProps.node.label }}
+          </template>
 
-      <component :is="currentComponent" />
+          <template #addon="slotProps">
+            <div ref="label">{{ slotProps.node.label }}</div>
+
+            <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
+              <Icon icon='ph:plus' class="add-fill" />
+            </Button>
+          </template>
+
+        </Tree>
 
 
-    </div>
+
+      </div>
+
+      <SplitterPanel class="w-full h-screen m-0 p-0 z-0 pt-14 col-start-2 overflow-scroll pointer-events-none">
+
+        <component :is="currentComponent" />
+
+
+  </div>
 
   </div>
 </template>
 
-<style>
-[data-pc-section="nodechildren"] {
-  @apply h-8 truncate;
+  <style>
+  [data-pc-section="nodechildren"] {
+    @apply h-8 truncate;
 
-  [data-pc-section="nodecontent"] {
-    @apply pl-1 w-[calc(100%-0.25rem)] h-8;
+    [data-pc-section="nodecontent"] {
+      @apply pl-1 w-[calc(100%-0.25rem)] h-8;
 
-    [data-pc-section="nodeicon"] {
-      @apply mr-3;
+      [data-pc-section="nodeicon"] {
+        @apply mr-3;
+      }
+
+      [data-pc-section="nodetogglebutton"] {
+        @apply absolute right-1 top-0;
+      }
+
+      [data-pc-section="nodelabel"] {
+        @apply truncate h-8;
+      }
+    }
+  }
+
+
+  [aria-label="Browse"] [data-pc-section="nodecontent"],
+  [aria-label="Utilities"] [data-pc-section="nodecontent"] {
+    @apply hover:bg-transparent text-xxs uppercase pointer-events-none text-base-content/40;
+  }
+
+
+  [aria-label="Browse"] [data-pc-section="nodeicon"],
+  [aria-label="Utilities"] [data-pc-section="nodeicon"] {
+    @apply invisible opacity-0 w-0 absolute transition-all duration-700;
+  }
+
+  [aria-label="Browse"] [data-pc-section="nodelabel"],
+  [aria-label="Utilities"] [data-pc-section="nodelabel"] {
+    @apply -ml-1;
+  }
+
+
+  .add-build {
+    @apply order-3 flex absolute right-0 -top-1;
+
+    .add-fill {
+      @apply inline-flex h-[17px] w-[17px];
     }
 
-    [data-pc-section="nodetogglebutton"] {
-      @apply absolute right-1 top-0;
-    }
-
-    [data-pc-section="nodelabel"] {
-      @apply truncate h-8;
+    .add-reg {
+      @apply hidden h-[17px] w-[17px];
     }
   }
-}
 
+  .add-build:hover {
+    .add-fill {
+      @apply hidden;
+    }
 
-[aria-label="Browse"] [data-pc-section="nodecontent"],
-[aria-label="Utilities"] [data-pc-section="nodecontent"] {
-  @apply hover:bg-transparent text-xxs uppercase pointer-events-none text-base-content/40;
-}
-
-
-[aria-label="Browse"] [data-pc-section="nodeicon"],
-[aria-label="Utilities"] [data-pc-section="nodeicon"] {
-  @apply invisible opacity-0 w-0 absolute transition-all duration-700;
-}
-
-[aria-label="Browse"] [data-pc-section="nodelabel"],
-[aria-label="Utilities"] [data-pc-section="nodelabel"] {
-  @apply -ml-1;
-}
-
-
-.add-build {
-  @apply order-3 flex absolute right-0 -top-1;
-
-  .add-fill {
-    @apply inline-flex h-[17px] w-[17px];
+    .add-reg {
+      @apply inline-flex;
+    }
   }
 
-  .add-reg {
-    @apply hidden h-[17px] w-[17px];
-  }
-}
 
-.add-build:hover {
-  .add-fill {
-    @apply hidden;
+
+
+  [aria-expanded="true"] [data-pc-section="nodechildren"] {
+    @apply animate-in slide-in-from-top fade-in duration-300 z-0;
   }
 
-  .add-reg {
-    @apply inline-flex;
+  [aria-expanded="false"] [data-pc-section="nodechildren"] {
+    @apply animate-out slide-out-to-top fade-out duration-700 z-0;
   }
-}
 
+  [data-pc-section="nodechildren"] [data-pc-section="nodecontent"] [data-pc-section="nodelabel"] {
+    @apply !w-[50px] truncate line-clamp-1 overflow-hidden;
+  }
 
+  #menu.minimize {
+    @apply grid-cols-[80px_auto] gap-1.5;
+  }
 
-
-[aria-expanded="true"] [data-pc-section="nodechildren"] {
-  @apply animate-in slide-in-from-top fade-in duration-300 z-0;
-}
-
-[aria-expanded="false"] [data-pc-section="nodechildren"] {
-  @apply animate-out slide-out-to-top fade-out duration-700 z-0;
-}
-
-[data-pc-section="nodechildren"] [data-pc-section="nodecontent"] [data-pc-section="nodelabel"] {
-  @apply !w-[50px] truncate line-clamp-1 overflow-hidden;
-}
-
-#menu.minimize {
-  @apply grid-cols-[80px_auto] gap-1.5;
-}
-
-/*.minimize .nav {
+  /*.minimize .nav {
   @apply rounded-[15px];
 }*/
 
 
-[data-pc-section="nodetogglebutton"],
-.add-build {
-  @apply transition-all duration-100;
-}
+  [data-pc-section="nodetogglebutton"],
+  .add-build {
+    @apply transition-all duration-100;
+  }
 
-[data-pc-section="nodechildren"],
-[data-pc-section="nodelabel"],
-[data-pc-section="nodeicon"],
-[data-pc-section="node"] {
-  @apply transition-all duration-700;
-}
+  [data-pc-section="nodechildren"],
+  [data-pc-section="nodelabel"],
+  [data-pc-section="nodeicon"],
+  [data-pc-section="node"] {
+    @apply transition-all duration-700;
+  }
 
-[data-pc-section="rootchildren"] {
-  @apply transition-all duration-700 flex flex-col gap-0 overflow-x-hidden;
-}
+  [data-pc-section="rootchildren"] {
+    @apply transition-all duration-700 flex flex-col gap-0 overflow-x-hidden;
+  }
 
-.minimize [data-pc-section="rootchildren"] {
-  @apply gap-2;
-}
+  .minimize [data-pc-section="rootchildren"] {
+    @apply gap-2;
+  }
 
-.minimize [data-pc-section="node"] ul {
-  @apply h-0 opacity-0 invisible;
-}
+  .minimize [data-pc-section="node"] ul {
+    @apply h-0 opacity-0 invisible;
+  }
 
-.minimize [data-pc-section="nodechildren"],
-.minimize [data-pc-section="nodetogglebutton"],
-.minimize [data-pc-section="nodelabel"],
-.minimize .add-build {
-  @apply w-0 opacity-0 invisible;
-}
+  .minimize [data-pc-section="nodechildren"],
+  .minimize [data-pc-section="nodetogglebutton"],
+  .minimize [data-pc-section="nodelabel"],
+  .minimize .add-build {
+    @apply w-0 opacity-0 invisible;
+  }
 
 
-.minimize [data-pc-section="nodeicon"] {
-  @apply m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60;
-}
+  .minimize [data-pc-section="nodeicon"] {
+    @apply m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60;
+  }
 
-.minimize [aria-label="Browse"] [data-pc-section="nodeicon"],
-.minimize [aria-label="Utilities"] [data-pc-section="nodeicon"] {
-  @apply opacity-20 visible m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60;
-}
+  .minimize [aria-label="Browse"] [data-pc-section="nodeicon"],
+  .minimize [aria-label="Utilities"] [data-pc-section="nodeicon"] {
+    @apply opacity-20 visible m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60;
+  }
 </style>
