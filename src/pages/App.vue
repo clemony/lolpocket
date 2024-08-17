@@ -156,8 +156,7 @@ onMounted(async () => {
 
 
 
-  <Splitter layout="horizontal" class="drawer drawer-end">
-    <input id="my-drawer" type="checkbox" class="drawer-toggle hidden" />
+  <Splitter layout="horizontal">
 
 
     <div ref="menuRef" id="menu"
