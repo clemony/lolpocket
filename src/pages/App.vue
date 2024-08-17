@@ -267,7 +267,7 @@ onMounted(async () => {
 }
 
 [data-pc-section="nodechildren"] [data-pc-section="nodecontent"] [data-pc-section="nodelabel"] {
-  @apply !w-[50px] truncate line-clamp-1;
+  @apply !w-[50px] truncate line-clamp-1 overflow-hidden;
 }
 
 #menu.minimize {
