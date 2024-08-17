@@ -123,7 +123,7 @@ export default {
   }),
   nodeChildren: {
     class: [
-      "list-none z-10 border-l border-l-base-200 ml-4 *:border-none *:ml-1 w-[calc(100%-25px)]",
+      "list-none z-10 border-l border-l-base-200 ml-4 *:border-none *:ml-1",
       //last:mb-3
     ],
   },

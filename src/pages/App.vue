@@ -255,6 +255,9 @@ onMounted(async () => {
   }
 }
 
+[data-pc-section="nodechildren"] [data-pc-section="nodelabel"] {
+  @apply w-[calc(100%-55px)];
+}
 
 [aria-expanded="true"] [data-pc-section="nodechildren"] {
   @apply animate-in slide-in-from-top fade-in duration-300 z-0;
