@@ -137,7 +137,8 @@ onMounted(async () => {
         <Icon icon="ph:arrows-out-simple-bold" />
       </div>
 
-      <div id="titlebar-close" alt="close" data-tip="close" class="p-1 hover:bg-base-300 hover:shadow-inner">
+      <div id="titlebar-close" alt="close" data-tip="close"
+        class="p-1 hover:bg-base-300 hover:shadow-inner hover:shadow-base-content/20">
         <Icon icon="ph:x-bold" class="titlebar-button" />
       </div>
     </div>
