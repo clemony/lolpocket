@@ -23,7 +23,7 @@ const hasSource2 = ref('false');
             <h2 class="text-xl font-semibold tracking-tight">
                 League News
             </h2>
-            <p class="text-sm text-muted-foreground italic pb-[5px]">
+            <p class="text-sm text-muted-foreground italic pb-[4px]">
                 the happening things.
             </p>
         </div>
