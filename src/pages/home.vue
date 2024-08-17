@@ -28,7 +28,7 @@ const hasSource2 = ref('false');
             </p>
         </div>
 
-        <div class="flex overflow-x-scroll h-64 content-center gap-5 news-after scrollbar-hide  px-3 left-0">
+        <div class="flex overflow-x-scroll h-64 content-center gap-5 news-after scrollbar-hide left-0">
 
             <div v-for="article in NewsArticles"
                 class="card bg-base-100/60 backdrop-brightness-105 backdrop-blur-m  h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 z-0 *:z-0">
