@@ -155,7 +155,7 @@ onMounted(async () => {
         /* -------------------------------------------------------------------------- */ -->
 
 
-  <Splitter layout="horizontal" class="pointer-events-none">
+  <Splitter layout="horizontal">
     <div ref="menuRef" id="menu"
       class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-6  m-0 p-0 transition-all duration-700 delay-200 z-0">
 
@@ -192,8 +192,7 @@ onMounted(async () => {
         </div>
       </SplitterPanel>
 
-      <SplitterPanel :size="79"
-        class="w-full h-screen m-0 p-0 z-0 pt-14 col-start-2 overflow-scroll pointer-events-none">
+      <SplitterPanel :size="79" class="w-full h-screen m-0 p-0 z-0 pt-14 col-start-2 overflow-scroll">
 
         <component :is="currentComponent" />
 
