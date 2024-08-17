@@ -13,7 +13,7 @@
   --tab-radius: 0.5rem !important;
 }
 
-tooltip {
+.tooltip {
   --tooltip-offset: 50px !important;
   --tooltip-tail-offset: 24px !important;
 }
