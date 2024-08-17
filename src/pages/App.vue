@@ -44,6 +44,7 @@ const currentComponent = computed(() => {
   return componentMap[currentPath] || null;
 });
 
+console.log(currentComponent.value);
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
 
