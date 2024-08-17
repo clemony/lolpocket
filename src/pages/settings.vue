@@ -120,10 +120,10 @@ function updateTheme(theme: string) {
       </div>
 
       <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="About" />
-      <div role="tabpanel" class="tab-content text-base-content ">
+      <div role="tabpanel" class="tab-content text-base-content !pt-0">
 
 
-        <div class="card rounded-box grid h-20 place-items-end *:font-mono pt-0 mt-0">
+        <div class="card rounded-box grid h-20 place-items-end *:font-mono ">
           <div class="text-xs grid  items-center justify-items-end pt-0 mt-0">
             <p class="">thanks for trying the app </p>
             <p class="inline-flex gap-1 items-center">
