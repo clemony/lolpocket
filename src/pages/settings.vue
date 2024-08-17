@@ -133,7 +133,8 @@ function updateTheme(theme: string) {
               <Icon icon="teenyicons:arrow-right-outline" class="size-3" />
               clem's human
             </p>
-            <a href="https://github.com/clemony/lolpocket" class="inline-flex gap-1 underline items-center mt-2">
+            <a href="https://github.com/clemony/lolpocket"
+              class="inline-flex gap-1 hover:font-bold hover:italic transition-all duration-300 underline items-center mt-2">
               <Icon icon="ph:github-logo" />
               <Icon icon="ph:at" />
               clemony
