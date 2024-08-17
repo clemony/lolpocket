@@ -62,14 +62,9 @@ const hasSource2 = ref('false');
                     <!-- head -->
                     <thead>
                         <tr>
-                            <th>
-                                <label>
-                                    <input type="checkbox" class="checkbox" />
-                                </label>
-                            </th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Champion</th>
+                            <th>Role</th>
+                            <th>Winrate</th>
                             <th></th>
                         </tr>
                     </thead>
