@@ -274,9 +274,9 @@ onMounted(async () => {
   @apply grid-cols-[80px_auto] gap-1.5;
 }
 
-.minimize .nav {
+/*.minimize .nav {
   @apply rounded-[15px];
-}
+}*/
 
 
 [data-pc-section="nodetogglebutton"],
