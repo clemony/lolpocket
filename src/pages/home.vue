@@ -6,7 +6,6 @@ interface article {
     source: string
     icon?: string
     source2?: string
-    icon2?: string
     image: string
 }
 

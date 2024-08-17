@@ -3,7 +3,6 @@ export interface article {
     source: string
     icon?: string
     source2?: string
-    icon2?: string
     image: string
   }
 
@@ -20,7 +19,7 @@ export interface article {
       title: 'PBE Changes',
       source: ' /u/FrankTheBoxMonster',
       source2: 'Reddit',
-      icon2: 'fa:reddit',
+      icon: 'fa:reddit',
       image:
         '/img/art/magic.webp',
     },
