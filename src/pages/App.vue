@@ -255,7 +255,7 @@ onMounted(async () => {
   }
 }
 
-[data-pc-section="nodechildren"] div button [data-pc-section="nodelabel"] {
+[data-pc-section="nodechildren"] [data-pc-section="nodelabel"] {
   @apply !w-[100px];
 }
 
