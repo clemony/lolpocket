@@ -28,8 +28,7 @@ const hasSource2 = ref('false');
             </p>
         </div>
 
-        <div
-            class="flex overflow-x-scroll h-64 content-center relative gap-5  after:border-2 after:border-red-600 after:content-[''] after:z-50 after:absolute after:top-0 after:left-0 after:w-full after:h-56 after:bg-gradient-to-r after:from-transparent after:to-bg-base-100">
+        <div class="flex overflow-x-scroll h-64 content-center relative gap-5 news-after">
 
             <div v-for="article in NewsArticles"
                 class="card bg-base-100  h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 z-0 *:z-0">
@@ -60,3 +59,9 @@ const hasSource2 = ref('false');
 
 
 </template>
+
+<style>
+.news-after::after {
+    @apply border-2 border-red-600 content-[''] z-50 absolute top-0 left-0 w-full h-56 bg-gradient-to-r from-transparent to-bg-base-100;
+}
+</style>
