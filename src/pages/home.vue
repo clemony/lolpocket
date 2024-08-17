@@ -42,7 +42,7 @@ const hasSource2 = ref('false');
 
     </div>
 
-    <div class="w-full py-4 grid gap-y-3 relative m-0">
+    <div class="w-full py-4 grid gap-y-3 relative m-0 overflow-hidden">
 
 
         <div class="gap-2 flex items-end">
@@ -53,6 +53,7 @@ const hasSource2 = ref('false');
                 the happening things.
             </p>
         </div>
+        <div class="flex h-64 gap-5 "></div>
 
 
 
