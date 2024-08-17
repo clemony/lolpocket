@@ -29,8 +29,8 @@ interface article {
                     <img :src="article.image" :alt="article.title + ' image'" />
                 </figure>
                 <div class="card-body">
-                    <h2 class="card-title">
-                        Shoes!
+                    <h2 class="card-title text-lg">
+                        {{ article.title }}
                         <div class="badge badge-secondary">NEW</div>
                     </h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
