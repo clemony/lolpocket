@@ -131,17 +131,21 @@ function updateTheme(theme: string) {
             <Icon icon="ph:at" /><span>clemony</span>
           </p>
         </div>
-        <div class="text-base-content/85 flex space-x-2 *:size-6">
-          <Icon icon="fontisto:vuejs" />
 
-          <Icon icon="tabler:brand-vite" />
-          <Icon icon="devicon-plain:tauri" />
-          <Icon icon="file-icons:typescript" />
-          <Icon icon="codicon:vscode-insiders" />
-          <Icon icon="simple-icons:nodedotjs" />
-          <Icon icon="simple-icons:tailwindcss" />
-          <img class="grayscale contrast-200 brightness-50" src="/img/ui/daisyui.svg" />
+        <div class="card bg-base-300 rounded-box grid h-20 place-items-center">content</div>
+        <div class="divider">MADE WITH</div>
+        <div class="card bg-base-300 rounded-box grid h-20 place-items-center">
+          <div class="text-base-content/85 flex space-x-2 *:size-6">
+            <Icon icon="fontisto:vuejs" />
 
+            <Icon icon="tabler:brand-vite" />
+            <Icon icon="devicon-plain:tauri" />
+            <Icon icon="file-icons:typescript" />
+            <Icon icon="codicon:vscode-insiders" />
+            <Icon icon="simple-icons:nodedotjs" />
+            <Icon icon="simple-icons:tailwindcss" />
+            <img class="grayscale contrast-200 brightness-50" src="/img/ui/daisyui.svg" />
+          </div>
         </div>
       </div>
 
