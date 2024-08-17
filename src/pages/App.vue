@@ -190,14 +190,15 @@ onMounted(async () => {
 
 
     </div>
-  </div>>
 
-  <div class="w-full h-screen m-0 p-0 z-0 pt-14 col-start-2 overflow-scroll">
+    <div class="w-full h-screen m-0 p-0 z-0 pt-14 col-start-2 overflow-scroll">
 
-    <component :is="currentComponent" />
+      <component :is="currentComponent" />
 
 
-  </div>>
+    </div>
+
+  </div>
 </template>
 
 <style>
