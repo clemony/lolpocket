@@ -38,7 +38,7 @@ const hasSource2 = ref('false');
                 <div class="card-body">
                     <h2 class="card-title text-base text-balanced mb-0">{{ article.title }}</h2>
 
-                    <div class="text-xs italic mt-0 grid gap-1 *:text-pretty font-mono *:content-start *:justify-start">
+                    <div class="text-xs italic mt-0 grid gap-1 *:text-pretty *:content-start *:justify-start">
                         <div class="flex gap-1 ">
                             <Icon v-if="article && article.icon" :icon="article.icon"
                                 class="w-4 h-4 text-base-content/70" />
