@@ -75,7 +75,7 @@ function handleChampionClick(champion: Champion) {
       <div class="grid-container !w-full mx-0 p-0">
 
         <TransitionGroup>
-          <div class="grid-item champ" v-for="(champion, index) in searchList" :key="champion.name" :data-index="index">
+          <div class="grid-item champ" v-for="(champion, index) in champions" :key="champion.name" :data-index="index">
             <label for="my-drawer" class="drawer-button cursor-pointer" @click="handleChampionClick(champion)">
               <div class="grid-image-container champ">
                 <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
