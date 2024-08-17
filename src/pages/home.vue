@@ -16,7 +16,7 @@ const hasSource2 = ref('false');
 
 <template>
 
-    <div class="w-screen py-4 grid gap-y-3 relative m-0">
+    <div class="w-full py-4 grid gap-y-3 relative m-0">
 
 
         <div class="gap-2 flex items-end">
@@ -28,7 +28,7 @@ const hasSource2 = ref('false');
             </p>
         </div>
 
-        <div class="flex overflow-x-scroll h-64  content-center relative gap-5 news-after scrollbar-hide px-3">
+        <div class="flex overflow-x-scroll h-64 content-center gap-5 news-after scrollbar-hide absolute px-3 -ml-50">
 
             <div v-for="article in NewsArticles"
                 class="card bg-base-100  h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 z-0 *:z-0">
