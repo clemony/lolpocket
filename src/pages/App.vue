@@ -158,7 +158,7 @@ onMounted(async () => {
   <div ref="menuRef" id="menu"
     class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-6  m-0 p-0 transition-all duration-700 delay-200 z-0">
 
-    <News v-if="isHome" class="pl-[300px] !overflow-x-scroll" />
+    <News v-if="isHome" class="pl-[286px] !overflow-x-scroll" />
 
 
     <div class="col-start-1 z-10">
