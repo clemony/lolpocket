@@ -25,10 +25,8 @@ const hasSource2 = ref('false');
             </h2>
             <p class="text-sm text-muted-foreground italic pb-[5px]">
                 the happening things.
-                <Icon icon="simple-icons:riotgames" />
             </p>
         </div>
-        <Icon icon="simple-icons:riotgames" />
 
         <div class="flex overflow-x-scroll h-72 content-center gap-5">
 
@@ -41,9 +39,7 @@ const hasSource2 = ref('false');
                     <Icon icon="simple-icons:riotgames" color="black" class="w-4 h-4 text-base-content z-30" />
                     <p class="text-xs italic mt-0">
                         {{ article.source }}
-                    </p>
-                    <Icon v-if="article && article.icon2" :icon="article.icon2" />
-                    <p>
+                        <Icon v-if="article && article.icon2" :icon="article.icon2" />
                         <span v-if="article && article.source2">on {{ article.source2 }}</span>
                     </p>
                 </div>
