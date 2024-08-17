@@ -91,7 +91,7 @@ onMounted(async () => {
 <template>
 
   <div data-tauri-drag-region
-    class="titlebar top-0 left-0 h-[36px] w-full backdrop-blur-md bg-base-100/60 grid grid-cols-3 fixed z-20 p-[0px] items-center  ">
+    class="titlebar top-0 left-0 h-[36px] w-full backdrop-blur-md bg-base-100/60 grid grid-cols-3 fixed z-20 p-[0px] items-center box-decoration-slice ">
 
     <div
       class="title col-start-1 justify-self-start flex items-center p-0 text-base tracking-wide font-semibold border-none shadow-none h-6 absolute left-[10px] top-[6px] z-40 bg-transparent">
@@ -156,7 +156,7 @@ onMounted(async () => {
     <div class="col-start-1">
 
       <div
-        class="h-full w-full bg-base-100/60 bg-opacity-20 border border-base-300 shadow-base-300 shadow-lg backdrop-blur-md">
+        class="h-full w-full bg-base-100/60 bg-opacity-20 border border-base-300 shadow-base-300 shadow-lg backdrop-blur-md box-decoration-clone">
       </div>
       <!--
       <div ref="nav"
