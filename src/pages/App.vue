@@ -155,6 +155,8 @@ onMounted(async () => {
 
     <div class="col-start-1">
 
+      <div class="h-full w-full"></div>
+      <!--
       <div ref="nav"
         class="ml-5 mt-14 rounded-lg bg-base-100/60 bg-opacity-20 border border-base-300 shadow-base-300 shadow-lg backdrop-blur-md nav">
 
@@ -165,12 +167,12 @@ onMounted(async () => {
           <template #nodetogglebutton>
           </template>
 
-          <template #default="slotProps">
+<template #default="slotProps">
 
             {{ slotProps.node.label }}
           </template>
 
-          <template #addon="slotProps">
+<template #addon="slotProps">
             <div ref="label">{{ slotProps.node.label }}</div>
 
             <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
@@ -178,9 +180,9 @@ onMounted(async () => {
             </Button>
           </template>
 
-        </Tree>
+</Tree>
 
-      </div>
+</div>-->
 
     </div>
 
