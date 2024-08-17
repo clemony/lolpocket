@@ -155,7 +155,7 @@ onMounted(async () => {
         /* -------------------------------------------------------------------------- */ -->
 
 
-  <Splitter layout="horizontal">
+  <Splitter layout="horizontal" class="border border-red-600">
     <div ref="menuRef" id="menu"
       class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-6  m-0 p-0 transition-all duration-700 delay-200 z-0">
 
