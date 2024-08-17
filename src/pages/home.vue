@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { NewsArticles } from '@data/news';
 
-interface Article { }
+interface Article {
+    name: string
+    source: string
+    image: string
+}
 </script>
 
 <template>
@@ -23,7 +27,7 @@ interface Article { }
                                 </p>
                             </div>
 
-                            <div v-for="Articles in NewsArticles" class="card bg-base-100 w-60 text-sm shadow-xl">
+                            <div v-for="Article in NewsArticles" class="card bg-base-100 w-60 text-sm shadow-xl">
                                 <figure>
                                     <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
                                         alt="Shoes" />
