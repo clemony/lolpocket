@@ -27,7 +27,7 @@ export default {
     ],
   },
   node: {
-    class: ["focus:outline-none align-middle items-center relative my-1 w-full bg-base-100"],
+    class: ["focus:outline-none align-middle items-center relative my-1 w-full "],
   },
   nodeContent: ({ context, props }) => ({
     class: [
@@ -37,7 +37,7 @@ export default {
       // Spacing
 
       // Colors
-      context.selected ? "bg-base-300 shadow-sm text-base-content" : "bg-base-100 text-base-content hover:bg-base-200 hover:text-base-content hover:shadow-sm",
+      context.selected ? "bg-base-300 shadow-sm text-base-content" : " text-base-content hover:bg-base-200 hover:text-base-content hover:shadow-sm",
 
       // States
       {
