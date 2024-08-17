@@ -40,15 +40,15 @@ const hasSource2 = ref('false');
 
                     <div class="text-xs italic mt-0 grid gap-1 *:text-pretty *:content-start *:justify-start">
                         <div class="flex gap-1 ">
-                            <Icon v-if="article && article.icon" :icon="article.icon"
-                                class="w-4 h-4 text-base-content/70" />
                             {{ article.source }}
                         </div>
-                        <div v-if="article && article.source2" class="text-xxs font-sans flex gap-1 ">on
-                            <Icon v-if="article && article.icon2" :icon="article.icon2"
-                                class="w-4 h-4 text-base-content/70 " />
-                            {{ article.source2 }}
+                        <div v-if="article && article.source2" class="text-xxs font-sans flex gap-1 ">
+                            on {{ article.source2 }}
                         </div>
+                    </div>
+
+                    <div class="absolute bottom-5 right-5">
+                        <Icon v-if="article && article.icon" :icon="article.icon" class="size-5 text-base-content/70" />
                     </div>
                 </div>
             </div>
