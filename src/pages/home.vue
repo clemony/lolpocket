@@ -16,33 +16,6 @@ const hasSource2 = ref('false');
 
 <template>
 
-    <div class="flex overflow-x-scroll h-64 content-center gap-5 news-after scrollbar-hide absolute px-3 -left-50">
-
-        <div v-for="article in NewsArticles"
-            class="card bg-base-100  h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 z-0 *:z-0">
-            <figure>
-                <img :src="article.image" :alt="article.title + ' image'" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title text-base text-balanced mb-0">{{ article.title }}</h2>
-
-                <div class="text-xs italic mt-0 grid gap-1 *:text-pretty *:content-start *:justify-start">
-                    <div class="flex gap-1 ">
-                        <Icon v-if="article && article.icon" :icon="article.icon"
-                            class="w-4 h-4 text-base-content/70" />
-                        {{ article.source }}
-                    </div>
-                    <div v-if="article && article.source2" class="text-xxs font-sans flex gap-1 ">on
-                        <Icon v-if="article && article.icon2" :icon="article.icon2"
-                            class="w-4 h-4 text-base-content/70 " />
-                        {{ article.source2 }}
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
     <div class="w-full py-4 grid gap-y-3 relative m-0">
 
 
@@ -55,7 +28,32 @@ const hasSource2 = ref('false');
             </p>
         </div>
 
+        <div class="flex overflow-x-scroll h-64 content-center gap-5 news-after scrollbar-hide  px-3 left-0">
 
+            <div v-for="article in NewsArticles"
+                class="card bg-base-100  h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 z-0 *:z-0">
+                <figure>
+                    <img :src="article.image" :alt="article.title + ' image'" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title text-base text-balanced mb-0">{{ article.title }}</h2>
+
+                    <div class="text-xs italic mt-0 grid gap-1 *:text-pretty *:content-start *:justify-start">
+                        <div class="flex gap-1 ">
+                            <Icon v-if="article && article.icon" :icon="article.icon"
+                                class="w-4 h-4 text-base-content/70" />
+                            {{ article.source }}
+                        </div>
+                        <div v-if="article && article.source2" class="text-xxs font-sans flex gap-1 ">on
+                            <Icon v-if="article && article.icon2" :icon="article.icon2"
+                                class="w-4 h-4 text-base-content/70 " />
+                            {{ article.source2 }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
     </div>
 
