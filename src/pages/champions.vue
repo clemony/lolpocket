@@ -96,10 +96,10 @@ function handleChampionClick(champion: Champion) {
             </TransitionGroup>
           </div>
         </div>
-
+        <!--
         <a role="tab"
           class="tab font-mono italic !text-xs text-end text-base-content font-normal cursor-pointer pointer-events-none border-b-transparent">
-          {{ getQuote }} </a>
+          {{ getQuote }} </a>-->
 
       </div>
     </div>
