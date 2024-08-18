@@ -32,7 +32,7 @@ interface Champion {
   w: string;
   e: string;
   r: string;
-  passiveName?: string;
+  passiveName: string;
   passiveContext?: string;
   qName?: string;
   qContext?: string;
