@@ -22,6 +22,6 @@
   @apply border-neutral/15 border;
 
   p {
-    @apply prose text-xs whitespace-pre-line;
+    @apply prose text-xs whitespace-pre-line normal-case;
   }
 }
