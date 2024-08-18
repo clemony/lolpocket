@@ -75,7 +75,7 @@ const NewsArticles: article[] = [
 
         <div class="text-xs italic mt-0 grid gap-1 *:text-pretty *:content-start *:justify-start">
           <div class="flex gap-1 hover:underline align-top hover:opacity-100">
-            {{ article.source }}
+            <a :href="article.link">{{ article.source }}</a>
             <Icon icon="cil:external-link" class="size-2.5 mt-0.5 opacity-0 " />
           </div>
           <div v-if="article && article.source2" class="text-xxs font-sans flex gap-1 ">
