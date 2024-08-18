@@ -78,7 +78,8 @@ const NewsArticles: article[] = [
           </div>
         </div>
 
-        <button class="absolute btn bottom-5 right-5 btn-sm rounded-full bg-transparent">
+        <button
+          class="absolute btn bottom-5 right-5 btn-sm rounded-full bg-transparent outline-none border-none shadow-none">
           <Icon v-if="article && article.icon" :icon="article.icon" class="size-5 text-base-content/70" />
         </button>
       </div>
