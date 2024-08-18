@@ -81,18 +81,19 @@ const NewsArticles: article[] = [
             on {{ article.source2 }}
           </div>
         </div>
+        <div class="absolute bottom-5 right-5">
+          <div
+            class=" absolute btn  btn-sm rounded-full bg-transparent outline-none border-none shadow-none hover:opacity-0 hover:invisible transition-all duration-700">
+            <Icon v-if="article && article.icon" :icon="article.icon" class="size-5 text-base-content/70" />
+          </div>
 
-        <div
-          class="absolute btn bottom-5 right-5 btn-sm rounded-full bg-transparent outline-none border-none shadow-none hover:opacity-0 hover:invisible transition-all duration-700">
-          <Icon v-if="article && article.icon" :icon="article.icon" class="size-5 text-base-content/70" />
+          <button
+            class="btn rounded-full btn-sm font-normal gap-1 text-xs w-0 opacity-0 hover:opacity-100 hover:w-auto transition-all duration-700 *:transition-all *:duration-700">
+            <span>Read on {{ article.linkTitle }}</span>
+            <Icon icon="cil:external-link" />
+          </button>
+
         </div>
-
-        <button
-          class="absolute btn bottom-5 right-5 rounded-full btn-sm font-normal gap-1 text-xs w-0 opacity-0 hover:opacity-100 hover:w-auto transition-all duration-700 *:transition-all *:duration-700">
-          <span>Read on {{ article.linkTitle }}</span>
-          <Icon icon="cil:external-link" />
-        </button>
-
       </div>
     </div>
 
