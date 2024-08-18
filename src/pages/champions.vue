@@ -60,6 +60,12 @@ function handleChampionClick(champion: Champion) {
   dataStore.setSelectedChampion(champion);
 }
 
+/*function formatText(){
+  let text = text;
+text.replace('Innate: ', '');
+text.replace ('Active)
+}*/
+
 </script>
 
 <template>
