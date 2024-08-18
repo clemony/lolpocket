@@ -101,8 +101,8 @@ function handleChampionClick(champion: Champion) {
       </div>
     </div>
     <div class="drawer-side">
-      <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay absolute w-screen"></label>
-      <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+      <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
+      <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4 mt-[35px]">
         <div v-if="selectedChampion" class="">
 
           <div
@@ -233,8 +233,18 @@ function handleChampionClick(champion: Champion) {
       </div>
     </div>
   </div>
+  <!--
+  <div class="drawer drawer-end">
+    <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content">
 
+    </div>
+  </div>
 
+  <div class="drawer-side z-50 right-0 bottom-0 absolute">
+    <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
+    <div class="menu  bg-base-200 text-base-content min-h-full w-80 px-4 pt-8 shadow-inner shadow-neutral/20">
+  >-->
 </template>
 
 <style scoped>
