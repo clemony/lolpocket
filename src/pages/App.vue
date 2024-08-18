@@ -151,69 +151,58 @@ onMounted(async () => {
   </div>
 
   <!--   /* -------------------------------------------------------------------------- */
-         /*                                 MENU START                                */
+         /*                                 MENU START                            */
         /* -------------------------------------------------------------------------- */ -->
 
-  <div class="drawer drawer-end">
-    <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-    <div class="drawer-content">
 
 
-      <div ref="menuRef" id="menu"
-        class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-6  m-0 p-0 transition-all duration-700 delay-200 z-0">
+
+  <div ref="menuRef" id="menu"
+    class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-6  m-0 p-0 transition-all duration-700 delay-200 z-0">
 
 
-        <div class="col-start-1 z-10">
+    <div class="col-start-1 z-10">
 
 
-          <!--
+      <!--
       <News v-if="isHome" class="pl-[286px] !overflow-x-scroll" />-->
 
-          <div ref="nav" class="ml-5 mt-14 rounded-box bg-base-100/65 shadow-lg backdrop-blur-md nav z-1 max-h-full">
+      <div ref="nav" class="ml-5 mt-14 rounded-box bg-base-100/65 shadow-lg backdrop-blur-md nav z-1 max-h-full">
 
-            <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
-              @nodeSelect="onNodeSelect" id="tree">
-
-
-              <template #nodetogglebutton>
-              </template>
-
-              <template #default="slotProps">
-
-                {{ slotProps.node.label }}
-              </template>
-
-              <template #addon="slotProps">
-                <div ref="label">{{ slotProps.node.label }}</div>
-
-                <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
-                  <Icon icon='ph:plus' class="add-fill" />
-                </Button>
-              </template>
-
-            </Tree>
+        <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
+          @nodeSelect="onNodeSelect" id="tree">
 
 
-          </div>
-        </div>
+          <template #nodetogglebutton>
+          </template>
 
-        <div class="w-full h-screen m-0 p-0 z-0 pt-14 col-start-2 overflow-scroll">
+          <template #default="slotProps">
 
+            {{ slotProps.node.label }}
+          </template>
 
-          <component :is="currentComponent" />
+          <template #addon="slotProps">
+            <div ref="label">{{ slotProps.node.label }}</div>
 
+            <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
+              <Icon icon='ph:plus' class="add-fill" />
+            </Button>
+          </template>
 
-        </div>
+        </Tree>
 
-      </div>
-
-    </div>
-    <div class="drawer-side w-screen">
-      <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay absolute top-0 left-0"></label>
-      <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4 pt-[55px]">
 
       </div>
     </div>
+
+    <div class="w-full h-screen m-0 p-0 z-0 pt-14 col-start-2 overflow-scroll">
+
+
+      <component :is="currentComponent" />
+
+
+    </div>
+
   </div>
 </template>
 
