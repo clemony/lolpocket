@@ -7,6 +7,8 @@ interface article {
   icon?: string
   source2?: string
   image: string
+  link?: string
+  linkTitle?: string
 }
 
 
@@ -25,6 +27,8 @@ const NewsArticles: article[] = [
     icon: 'fa:reddit',
     image:
       '/img/art/magic.webp',
+    link: 'https://www.reddit.com/r/leagueoflegends/wiki/pbechanges/',
+    linkTitle: 'Reddit.com',
   },
   {
     title: 'Champ Flavor Tier List',
