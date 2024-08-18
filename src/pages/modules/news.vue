@@ -22,8 +22,8 @@ const NewsArticles: article[] = [
   },
   {
     title: 'PBE Changes',
-    source: ' /u/FrankTheBoxMonster',
-    source2: 'Reddit',
+    source2: ' /u/FrankTheBoxMonster',
+    source: 'Reddit',
     icon: 'fa:reddit',
     image:
       '/img/art/magic.webp',
@@ -76,10 +76,10 @@ const NewsArticles: article[] = [
         <div class="text-xs italic mt-0 grid gap-1 *:text-pretty *:content-start *:justify-start">
           <div class="flex gap-1 underline">
             {{ article.source }}
-            <Icon icon="cil:external-link" class="size-3" />
+            <Icon icon="cil:external-link" class="size-2.5" />
           </div>
           <div v-if="article && article.source2" class="text-xxs font-sans flex gap-1 ">
-            on {{ article.source2 }}
+            by {{ article.source2 }}
           </div>
         </div>
         <div class="absolute bottom-5 right-5 ">
