@@ -11,6 +11,10 @@
   --border-btn: 1px !important;
   --tab-border: 1px !important;
   --tab-radius: 0.5rem !important;
+
+  overscroll-behavior: contain;
+
+  @apply scroll-smooth;
 }
 
 .tooltip {
