@@ -78,7 +78,7 @@ const NewsArticles: article[] = [
           </div>
         </div>
 
-        <div class="absolute bottom-5 right-5">
+        <div class="absolute badge bottom-5 right-5 size-7 p-0 ghost">
           <Icon v-if="article && article.icon" :icon="article.icon" class="size-5 text-base-content/70" />
         </div>
       </div>
