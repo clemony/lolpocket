@@ -10,8 +10,7 @@ const query = ref('');
         <div class="relative max-w-[470px] border-0 outline-0 ring-0">
             <div class=" w-full h-[28px] shadow-inner shadow-base-content/15 bg-base-200/50 border border-base-content/10 
                  focus:ring-offset-base-content/30 text-base-content/60  rounded-[10px]  z-20 ">
-                <div class="absolute right-3 top-[5px] flex gap-2.5 z-20 text-base-content/50">
-                    <Icon icon="teenyicons:filter-outline" class="size-3.5 mt-[2px]" />
+                <div class="absolute right-3 top-[5px] flex gap-2.5 z-20 text-base-content/30">
                     <Icon icon="mingcute:settings-2-line" class="size-5" />
                 </div>
                 <Input tabindex="0" role="" v-model="query" placeholder=""
