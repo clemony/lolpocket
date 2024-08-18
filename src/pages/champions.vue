@@ -15,6 +15,13 @@ console.log(randomQuote.value);
 const getQuote = ref(randomQuote.value);
 
 
+interface Ability {
+  key: string;
+  name: string;
+  context: string;
+  img: string;
+}
+
 interface Champion {
   name: string;
   img: string;
@@ -22,28 +29,14 @@ interface Champion {
   title: string;
   tags: string[];
   type: string;
-  pImg: string;
-  qImg: string;
-  wImg: string;
-  eImg: string;
-  rImg: string;
-  passive: string;
-  q: string;
-  w: string;
-  e: string;
-  r: string;
-  passiveName: string;
-  passiveContext?: string;
-  qName?: string;
-  qContext?: string;
-  wName?: string;
-  wContext?: string;
-  eName?: string;
-  eContext?: string;
-  rName?: string;
-  rContext?: string;
+  abilities: {
+    passive: Ability;
+    q: Ability;
+    w: Ability;
+    e: Ability;
+    r: Ability;
+  };
 }
-
 
 
 const champions = dataStore.champions;
@@ -179,34 +172,35 @@ text.replace ('Active)
           <div
             class="ability-wrapper join join-vertical w-full bg-base-100 rounded-box mt-5 shadow-lg shadow-neutral/20">
 
-            <div class="collapse collapse-arrow join-item ">
-              <input type="checkbox" name="ability-accordion" />
+            <div v-for="(ability, key) in selectedChampion.abilities" :key="key"
+              class="collapse collapse-arrow join-item">
+              <input type="checkbox" :name="'ability-accordion-' + key" />
               <div class="collapse-title">
-                <img :src="selectedChampion.pImg" :alt="selectedChampion.passiveName" />
-                <div>{{ selectedChampion.passiveName }}</div>
-                <kbd class="kbd">P</kbd>
+                <img :src="ability.img" :alt="ability.name" />
+                <div>{{ ability.name }}</div>
+                <kbd class="kbd">{{ key.toUpperCase() }}</kbd>
               </div>
               <div class="collapse-content">
-                <p>{{ selectedChampion.passiveContext }}</p>
+                <p>{{ ability.context }}</p>
               </div>
             </div>
-
+            <!--
             <div class="collapse collapse-arrow join-item ">
               <input type="checkbox" name="ability-accordion" />
               <div class="collapse-title">
-                <img :src="selectedChampion.qImg" :alt="selectedChampion.qName" />
-                <div>{{ selectedChampion.qName }}</div>
+                <img :src="selectedChampion.q.img" :alt="selectedChampion.q.name" />
+                <div>{{ selectedChampion.q.name }}</div>
                 <kbd class="kbd">Q</kbd>
               </div>
               <div class="collapse-content">
-                <p>{{ selectedChampion.qContext }}</p>
+                <p>{{ selectedChampion.q.context }}</p>
               </div>
             </div>
 
             <div class="collapse collapse-arrow join-item ">
               <input type="checkbox" name="ability-accordion" />
               <div class="collapse-title">
-                <img :src="selectedChampion.wImg" :alt="selectedChampion.wName" />
+                <img :src="selectedChampion.w.img" :alt="selectedChampion.wName" />
                 <div>{{ selectedChampion.wName }}</div>
                 <kbd class="kbd">W</kbd>
               </div>
@@ -237,7 +231,7 @@ text.replace ('Active)
               </div>
             </div>
 
-
+          -->
 
 
           </div>
