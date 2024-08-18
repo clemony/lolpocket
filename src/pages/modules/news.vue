@@ -75,7 +75,7 @@ const NewsArticles: article[] = [
 
         <div class="text-xs italic mt-0 grid gap-1 *:text-pretty *:content-start *:justify-start">
           <div class="flex gap-1 hover:underline align-top hover:opacity-100">
-            <a :href="article.link">{{ article.source }}</a>
+            <a target="my_modal_5" :href="article.link">{{ article.source }}</a>
             <Icon icon="cil:external-link" class="size-2.5 mt-0.5 opacity-0 " />
           </div>
           <div v-if="article && article.source2" class="text-xxs font-sans flex gap-1 ">
@@ -86,7 +86,20 @@ const NewsArticles: article[] = [
           <Icon v-if="article && article.icon" :icon="article.icon" class="size-5 text-base-content/70" />
         </div>
 
-
+        <!-- Open the modal using ID.showModal() method -->
+        <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box">
+            <h3 class="text-lg font-bold">Hello!</h3>
+            <p class="py-4">Press ESC key or click the button below to close</p>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
 
       </div>
     </div>
