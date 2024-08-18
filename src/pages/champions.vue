@@ -102,7 +102,7 @@ function handleChampionClick(champion: Champion) {
     </div>
     <div class="drawer-side">
       <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
-      <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4 mt-[35px]">
+      <div class="menu bg-base-200 text-base-content min-h-[calc(100%-35px)] w-80 p-4 mt-[35px]">
         <div v-if="selectedChampion" class="">
 
           <div
