@@ -100,9 +100,9 @@ function handleChampionClick(champion: Champion) {
 
       </div>
     </div>
-    <div class="drawer-side  z-20">
+    <div class="drawer-side  z-30">
       <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay "></label>
-      <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4 pt-[55px]">
+      <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4 pt-[30px]">
         <div v-if="selectedChampion" class="">
 
           <div
