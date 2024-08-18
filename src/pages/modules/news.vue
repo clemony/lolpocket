@@ -87,7 +87,7 @@ const NewsArticles: article[] = [
           <div class="hover:opacity-0">
             <Icon v-if="article && article.icon" :icon="article.icon" class="size-5 text-base-content/70" />
           </div>
-          <div class="font-normal gap-1 text-xs w-0 opacity-0">
+          <div class="font-normal gap-1 text-xs w-0 opacity-0 absolute">
             <span>Read on {{ article.linkTitle }}</span>
             <Icon icon="cil:external-link" />
           </div>
