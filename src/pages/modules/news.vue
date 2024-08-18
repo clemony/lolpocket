@@ -65,7 +65,7 @@ const NewsArticles: article[] = [
   <div
     class="flex w-full pr-11 ml-5 absolute overflow-x-scroll h-64 content-center gap-5 top-32 scrollbar-hide left-0 !z-1 news-after">
 
-    <div v-for="article in NewsArticles"
+    <div v-for="article in NewsArticles" <embed :src="article.link" type="video/mp4" width="600" height="400">
       class="card !bg-base-100/60 h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 !z-0 !*:z-0">
       <figure>
         <img :src="article.image" :alt="article.title + ' image'" />
