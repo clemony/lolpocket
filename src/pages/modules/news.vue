@@ -83,6 +83,10 @@ const NewsArticles: article[] = [
           <div>
             <Icon v-if="article && article.icon" :icon="article.icon" class="size-5 text-base-content/70" />
           </div>
+          <div class="inline-flex font-normal text-xs">
+            Read on {{ article.source }}.com
+            <Icon icon="cil:external-link" />
+          </div>
         </button>
       </div>
     </div>
