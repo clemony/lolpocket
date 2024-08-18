@@ -183,7 +183,7 @@ text.replace ('Active)
                 <kbd class="kbd">P</kbd>
               </div>
               <div class="collapse-content">
-                <p>{{ selectedChampion.passiveContext }}</p>
+                <p class="prose">{{ selectedChampion.passiveContext }}</p>
               </div>
             </div>
 
