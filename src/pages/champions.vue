@@ -195,7 +195,7 @@ text.replace ('Active)
                 <kbd class="kbd">Q</kbd>
               </div>
               <div class="collapse-content">
-                <p>{{ selectedChampion.qContext }}</p>
+                <p class="prose">{{ selectedChampion.qContext }}</p>
               </div>
             </div>
 
