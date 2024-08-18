@@ -12,7 +12,7 @@ const query = ref('');
                  focus:ring-offset-base-content/30 text-base-content/60  rounded-[10px]  z-20 ">
                 <div class="absolute right-3 top-[5px] flex gap-2.5 z-20 text-base-content/50">
                     <Icon icon="teenyicons:filter-outline" class="size-3.5 mt-[2px]" />
-                    <Icon icon="ph:gear-light" class="size-5" />
+                    <Icon icon="mingcute:settings-2-line" class="size-5" />
                 </div>
                 <Input tabindex="0" role="" v-model="query" placeholder=""
                     class="italic h-full w-full text-xs !outline-0 !outline-transparent !outline-none rounded-[10px] ring-0 focus:outline-0 focus:ring-1 border-0 focus:border-0 focus:not-italic focus:ring-base-content/10 focus:text-base-content pt-[7px] "
