@@ -22,6 +22,6 @@
   @apply border-neutral/15 border;
 
   p {
-    @apply prose text-xs font-serif;
+    @apply prose text-xs;
   }
 }
