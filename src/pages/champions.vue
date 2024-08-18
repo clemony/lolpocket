@@ -98,7 +98,7 @@ function handleChampionClick(champion: Champion) {
         </div>
 
         <a role="tab"
-          class="tab w-full font-mono italic !text-xs text-end text-base-content font-normal cursor-pointer pointer-events-none border-b-transparent">
+          class="tab font-mono italic !text-xs text-end text-base-content font-normal cursor-pointer pointer-events-none border-b-transparent">
           {{ getQuote }} </a>
 
       </div>
