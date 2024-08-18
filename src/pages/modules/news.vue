@@ -74,7 +74,7 @@ const NewsArticles: article[] = [
         <h2 class="card-title text-base text-balanced mb-0">{{ article.title }}</h2>
 
         <div class="text-xs italic mt-0 grid gap-1 *:text-pretty *:content-start *:justify-start">
-          <div class="flex gap-1 underline">
+          <div class="flex gap-1 hover:underline align-top">
             {{ article.source }}
             <Icon icon="cil:external-link" class="size-2.5" />
           </div>
