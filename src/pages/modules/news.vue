@@ -74,29 +74,25 @@ const NewsArticles: article[] = [
         <h2 class="card-title text-base text-balanced mb-0">{{ article.title }}</h2>
 
         <div class="text-xs italic mt-0 grid gap-1 *:text-pretty *:content-start *:justify-start">
-          <div class="flex gap-1 ">
+          <div class="flex gap-1 underline">
             {{ article.source }}
+            <Icon icon="cil:external-link" class="size-3" />
           </div>
           <div v-if="article && article.source2" class="text-xxs font-sans flex gap-1 ">
             on {{ article.source2 }}
           </div>
         </div>
-        <div class="absolute bottom-5 right-5 *:transition-all *:duration-700">
-          <div class="bg-transparent outline-none border-none shadow-none hover:opacity-0 hover:invisible">
-            <Icon v-if="article && article.icon" :icon="article.icon" class="size-5 text-base-content/70" />
-          </div>
-
-          <button
-            class="btn btn-sm font-normal gap-1 w-0 text-xs opacity-0 hover:w-auto hover:opacity-100 rounded-full flex">
-            Read on {{ article.linkTitle }}
-            <Icon icon="cil:external-link" />
-          </button>
-
+        <div class="absolute bottom-5 right-5 ">
+          <Icon v-if="article && article.icon" :icon="article.icon" class="size-5 text-base-content/70" />
         </div>
+
+
+
       </div>
     </div>
-
   </div>
+
+
 </template>
 
 <style>
