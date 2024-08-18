@@ -44,8 +44,12 @@ interface Champion {
   rContext?: string;
 }
 
+
+
 const champions = dataStore.champions;
 const selectedChampion = computed(() => dataStore.selectedChampion);
+
+console.log(selectedChampion);
 
 const query = ref('')
 
