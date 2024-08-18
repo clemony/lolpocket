@@ -68,7 +68,7 @@ const NewsArticles: article[] = [
     <div v-for="article in NewsArticles"
       class="card !bg-base-100/60 h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 !z-0 !*:z-0">
 
-      <embed :src="article.link" type="video/mp4" width="600" height="400">
+      <embed :src="article.link" type="text/html" width="600" height="400">
       <figure>
         <img :src="article.image" :alt="article.title + ' image'" />
       </figure>
