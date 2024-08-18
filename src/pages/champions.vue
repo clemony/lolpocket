@@ -68,8 +68,8 @@ function handleChampionClick(champion: Champion) {
   <!-- Champ Tab -->
   <div class="drawer drawer-end">
     <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-
     <div class="drawer-content">
+
       <div role="tablist" class="tabs layout !mx-0 !w-full border-b-transparent">
 
         <a role="tab" class="tab tab-active w-44 font-semibold">Champions</a>
