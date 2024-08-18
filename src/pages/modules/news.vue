@@ -88,7 +88,7 @@ const NewsArticles: article[] = [
         </div>
 
         <button
-          class="absolute btn bottom-5 right-5 rounded-full btn-sm font-normal gap-1 text-xs w-0 opacity-0 hover:opacity-100 hover:w-auto transition-all duration-700">
+          class="absolute btn bottom-5 right-5 rounded-full btn-sm font-normal gap-1 text-xs w-0 opacity-0 hover:opacity-100 hover:w-auto transition-all duration-700 *:transition-all *:duration-700">
           <span>Read on {{ article.linkTitle }}</span>
           <Icon icon="cil:external-link" />
         </button>
