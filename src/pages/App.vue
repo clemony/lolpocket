@@ -27,11 +27,11 @@ const navigateTo = (route: string) => {
 // Access the current route
 const route = useRoute();
 
-type ValidPaths = '/builds' | '/' | '/champions' | '/items' | '/runes' | '/settings';
+type ValidPaths = '/builds' | '/home' | '/champions' | '/items' | '/runes' | '/settings';
 
 const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
   '/builds': Builds,
-  '/': Home,
+  '/home': Home,
   '/champions': Champions,
   '/items': Items,
   '/runes': Runes,

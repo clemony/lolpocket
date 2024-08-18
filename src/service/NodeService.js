@@ -10,7 +10,7 @@ export const NodeService = {
         key: "home",
         label: "Home",
         icon: "ph--house-simple",
-        data: "/",
+        data: "/home",
         selectable: "true",
       },
       {
