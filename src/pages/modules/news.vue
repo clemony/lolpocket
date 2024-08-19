@@ -32,28 +32,32 @@ const NewsArticles: article[] = [
   },
   {
     title: 'Champ Flavor Tier List',
-    source: 'Clem',
+    source: 'Lolpockets Team',
+    source2: 'Clem',
     icon: 'fluent-emoji-high-contrast:kissing-cat',
     image:
       '/img/art/chase.webp',
   },
   {
     title: 'Champ Flavor Tier List',
-    source: 'Clem',
+    source: 'Lolpockets Team',
+    source2: 'Clem',
     icon: 'fluent-emoji-high-contrast:kissing-cat',
     image:
       '/img/art/chase.webp',
   },
   {
     title: 'Champ Flavor Tier List',
-    source: 'Clem',
+    source: 'Lolpockets Team',
+    source2: 'Clem',
     icon: 'fluent-emoji-high-contrast:kissing-cat',
     image:
       '/img/art/chase.webp',
   },
   {
     title: 'Champ Flavor Tier List',
-    source: 'Clem',
+    source: 'Lolpockets Team',
+    source2: 'Clem',
     icon: 'fluent-emoji-high-contrast:kissing-cat',
     image:
       '/img/art/chase.webp',
@@ -66,7 +70,7 @@ const NewsArticles: article[] = [
     class="flex w-full pr-11 ml-5 absolute overflow-x-scroll h-64 content-center gap-5 top-32 scrollbar-hide left-0 !z-1 news-after">
 
     <a v-for="article in NewsArticles"
-      class="card !bg-base-100/60 h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 !z-0 !*:z-0 group overflow-hidden"
+      class="card !bg-base-100/60 h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 !z-0 !*:z-0 group overflow-hidden hover:scale-105"
       target="_blank" :href="article.link" :title="article.link">
 
       <figure class="relative">
