@@ -167,7 +167,7 @@ onMounted(async () => {
 
 
 
-      <News v-if="isHome" class="pl-[286px] !overflow-x-scroll transition-all duration-700" />
+      <News v-if="isHome" class="!overflow-x-scroll transition-all duration-700" />
 
       <div ref="nav" class="ml-5 mt-14 rounded-box bg-base-100/65 shadow-lg backdrop-blur-md nav max-h-full">
 
