@@ -128,11 +128,8 @@ module.exports = {
         },
 
       },
-      "dark",
       "lofi",
       "wifi",
-      "nordark",
-      "nord",
       "corporate",
       "autumn",
     ],
