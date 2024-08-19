@@ -109,7 +109,7 @@ function handleChampionClick(champion: Champion) {
     <div class="drawer-side overscroll-none  z-30">
       <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay "></label>
       <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4 pt-[30px]">
-        <div v-if="selectedChampion" class="relative">
+        <div v-if="selectedChampion" class="">
 
           <div
             class="rounded-box border border-neutral/10 bg-base-100/60 backdrop-blur-md shadow-lg prose grid grid-cols-2 auto-rows-max py-3 px-1 !fixed top-0 left-0 z-10">
