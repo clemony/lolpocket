@@ -72,7 +72,7 @@ function updateTheme(theme: string) {
         <div role="tablist" class="tabs tabs-lg !place-items-center w-full my-4 mx-1 px-0 *:px-0 ">
 
           <template v-for="scheme in schema">
-            <label :for="scheme.name" role="tab" class="tab m-1">
+            <label :for="scheme.name" class="m-1">
               <div
                 class="w-[110px] p-0 m-0  join-item overflow-hidden rounded-btn !text-xs border border-base-300 shadow-md "
                 data-act-class="!outline-base-content" :data-set-theme="scheme.key">
@@ -80,8 +80,8 @@ function updateTheme(theme: string) {
                   <div class="grid grid-cols-5 grid-rows-3">
                     <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
                     <div class="bg-base-300 col-start-1 row-start-3"></div>
-                    <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2">
-
+                    <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex  gap-1 p-2">
+                      <input type="radio" :id="scheme.name" name="ui-scheme" class="" />
                       <div class="font-semibold ">{{ scheme.name }}</div>
                     </div>
                   </div>
@@ -90,10 +90,7 @@ function updateTheme(theme: string) {
 
             </label>
 
-            <input type="radio" :id="scheme.name" name="theme-tabs" role="tab" class="tab" />
-            <div role="tabpanel" class="tab-content !shadow-none !border-none">
-              Tab content 1 {{ scheme.name }}
-            </div>
+
           </template>
 
         </div>
