@@ -192,7 +192,7 @@ function handleChampionClick(champion: Champion) {
                       <td class="">
                         {{ key }}
                       </td>
-                      <td class="">
+                      <td class="text-right">
                         {{ value }}
                       </td>
                     </tr>
