@@ -32,7 +32,8 @@
 
 .font-serif {
   font-family: "Playfair Display Variable";
-  font-weight: 900; /*
+  font-weight: 900;
+  font-style: italic; /*
   font-family: "Roboto Serif Variable", ui-serif, "Times New Roman", Times, serif !important;*/
 }
 
