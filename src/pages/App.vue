@@ -169,7 +169,7 @@ onMounted(async () => {
 
       <News v-if="isHome" class="!overflow-x-scroll " />
 
-      <div ref="nav" class="overscroll-none bg-base-100/65 shadow-lg backdrop-blur-md nav max-h-full w-full mt-[36px] ">
+      <div ref="nav" class="overscroll-none bg-base-100/65 shadow-lg backdrop-blur-md nav h-full w-full mt-[36px] ">
 
         <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
           @nodeSelect="onNodeSelect" id="tree">
