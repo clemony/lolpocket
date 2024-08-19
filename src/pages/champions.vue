@@ -189,10 +189,10 @@ function handleChampionClick(champion: Champion) {
                 <table>
                   <tbody class="bg-white divide-y divide-gray-200 text-xs">
                     <tr v-for="(value, key) in ability.data" :key="key">
-                      <td class="whitespace-nowrap">
+                      <td class="">
                         {{ key }}
                       </td>
-                      <td class="whitespace-nowrap">
+                      <td class="">
                         {{ value }}
                       </td>
                     </tr>
