@@ -114,7 +114,7 @@ export const useDataStore = defineStore("dataStore", () => {
         }
       });
       
-      const context = contextLines.join('\n').trim().replace('Innate:', '').replace('Active:', '').replace('Innate -', '').replace('Active -', '').trim();
+      const context = contextLines.join('\n').trim().replace('Innate:', '').replace('Active:', '').replace('Innate -', '').replace('Active -', '').replace('Passive:', '').trim();
   
       return { name, context, data };
     }
