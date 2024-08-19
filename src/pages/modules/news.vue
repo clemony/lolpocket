@@ -68,7 +68,14 @@ const NewsArticles: article[] = [
     <div v-for="article in NewsArticles"
       class="card !bg-base-100/60 h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 !z-0 !*:z-0 group overflow-hidden">
 
-      <figure>
+      <figure class="relative">
+
+        <div
+          class=" group-hover:opacity-100 absolute transition-all duration-500 opacity-0 bg-neutral/60 w-full h-full  top-0 left-0 backdrop-blur-md text-neutral-content rounded-lg overflow-hidden grid grid-cols-1 place-items-center place-content-center  text-semibold">
+          <p>Read more on</p>
+          <p> {{ article.linkTitle }}</p>
+        </div>
+
         <img :src="article.image" :alt="article.title + ' image'" />
       </figure>
       <a target="_blank" :href="article.link" :title="article.link">
