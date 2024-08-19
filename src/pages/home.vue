@@ -157,8 +157,8 @@ const hasSource2 = ref('false');
             </div>
 
 
-            <div class="col-start-2 grid grid-cols-1 gap-3">
-                <h2 class="text-xl font-medium h-10 tracking-tight">
+            <div class="col-start-2 grid grid-cols-1 gap-3 pl-1">
+                <h2 class="text-lg font-semibold  h-8 tracking-tight">
                     Champion Winrates
                 </h2>
 
