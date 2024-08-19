@@ -69,10 +69,10 @@ function updateTheme(theme: string) {
         </div>
 
 
-        <div role="tablist" class="tabs tabs-lg tabs-bordered my-4 mx-1 px-0 *:px-0 ">
+        <div role="tablist" class="tabs tabs-lg place-items-center tabs-bordered my-4 mx-1 px-0 *:px-0 ">
 
           <template v-for="scheme in schema">
-            <label :for="scheme.name" role="tab" class="tab m-1">
+            <label :for="scheme.name" role="tab" class="tab m-1 shadow-md">
               <div class="w-[110px] p-0 m-0  join-item overflow-hidden rounded-btn !text-xs "
                 data-act-class="!outline-base-content" :data-set-theme="scheme.key">
                 <div class="bg-base-100 text-base-content w-full cursor-pointer" :data-theme="scheme.key">
