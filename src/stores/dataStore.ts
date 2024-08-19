@@ -71,9 +71,9 @@ export const useDataStore = defineStore("dataStore", () => {
     
     if (lines.length > 0) {
       const name = lines[0].trim();
-      let context = lines.slice(1).join('\n').trim();
-      context.replace('Active:','');
-      context.replace('Innate:','');
+      let text = lines.slice(1).join('\n').trim();
+      text.replace('Active:','');
+      var context = text.replace('Innate:','');
       return { name, context };
     }
   
