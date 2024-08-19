@@ -288,6 +288,10 @@ onMounted(async () => {
   @apply grid-cols-[80px_auto] gap-6;
 }
 
+.minimize News {
+  @apply pl-[100px];
+}
+
 /*.minimize .nav {
   @apply rounded-[15px];
 }*/
