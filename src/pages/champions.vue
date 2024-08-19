@@ -173,7 +173,7 @@ text.replace ('Active)
             class="ability-wrapper join join-vertical w-full bg-base-100 rounded-box mt-5 shadow-lg shadow-neutral/20">
             <div v-for="(ability, key) in selectedChampion.abilities" :key="key"
               class="collapse collapse-arrow join-item">
-              <input type="checkbox" :name="'ability-accordion-' + key" />
+              <input type="radio" name="ability-accordion" />
               <div class="collapse-title">
                 <img :src="ability.img" :alt="ability.name" />
                 <div>{{ ability.name }}</div>
