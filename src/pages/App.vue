@@ -291,7 +291,7 @@ onMounted(async () => {
 }
 
 .minimize .news-after {
-  @apply pl-[85px];
+  @apply pl-[83px];
 }
 
 /*.minimize .nav {
