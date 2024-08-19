@@ -73,8 +73,9 @@ const NewsArticles: article[] = [
       </figure>
       <a target="_blank" :href="article.link" :title="article.link">
         <div class="card-body">
-          <h2 class="card-title text-base text-balanced mb-0">{{ article.title }}</h2>
           <div>
+            <h2 class="card-title text-base text-balanced mb-0">{{ article.title }}</h2>
+
             <div class="text-xs italic mt-0 grid gap-1 *:text-pretty *:content-start *:justify-start">
               <div class="flex gap-1  align-top">
                 {{ article.source }}
@@ -87,6 +88,9 @@ const NewsArticles: article[] = [
             <div class="absolute bottom-5 right-5 ">
               <Icon v-if="article && article.icon" :icon="article.icon" class="size-5 text-base-content/70" />
             </div>
+          </div>
+          <div
+            class="absolute translate-x-full transition-all duration-700 opacity-0 bg-primary-content/30 backdrop-blur-sm text-primary-content hover:translate-x-0 hover:opacity-100">
           </div>
 
 
