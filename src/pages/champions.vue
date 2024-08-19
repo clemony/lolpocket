@@ -185,7 +185,7 @@ function handleChampionClick(champion: Champion) {
                 <kbd class="kbd">{{ ability.key.toUpperCase() }}</kbd>
               </div>
               <div class="collapse-content">
-                <p class="test">{{ ability.context }}</p>
+                <p>{{ ability.context }}</p>
               </div>
             </div>
           </div>
