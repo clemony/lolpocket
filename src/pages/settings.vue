@@ -61,10 +61,15 @@ function updateTheme(theme: string) {
           <input type="radio" id="light" name="theme-tabs" class="hidden" checked />
 
 
-          <div role="tabpanel" class="">
+          <div role="tabpanel" class="tab-content">
             Tab content 1
           </div>
-          <a role="tab" class="tab">Tab 2</a>
+          <label for="dark" role="tab" class="tab">hiee </label>
+          <input type="radio" id="dark" name="theme-tabs" class="hidden" checked />
+          <div role="tabpanel" class="tab-content">
+            Tab content 22
+          </div>
+
           <a role="tab" class="tab">Tab 3</a>
         </div>
 
