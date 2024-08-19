@@ -39,7 +39,7 @@ interface Champion {
   };
 }
 
-const ability = ref<Ability>;
+
 
 const keysToDisplay = ['COST', 'COOLDOWN', 'STATIC COOLDOWN'];
 
