@@ -37,6 +37,13 @@ function updateTheme(theme: string) {
       <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Settings" checked="true" />
       <div role="tabpanel" class="tab-content ">
 
+        <div class="mockup-browser bg-base-300 border text-xs">
+          <div class="mockup-browser-toolbar">
+            <div class="input">https://lolpockets.</div>
+          </div>
+          <div class="bg-base-200 flex justify-center px-4 py-16">Hello!</div>
+        </div>
+
 
         <div class="grid grid-cols-2 grid-flow-row">
           <div tabindex="0" role="button" class="dropdown  rounded  m-0 p-0 ">
