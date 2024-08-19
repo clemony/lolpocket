@@ -54,12 +54,18 @@ module.exports = {
       {
         light: {
           ...require("daisyui/src/theming/themes")["light"],
-          "primary": "oklch(69.6516% 0.059108 248.687186)",
-          "primary-content": "oklch(13.9303% 0.011822 248.687186",
-          "accent-content": "oklch(86.736% 0 0)",
+          "base-100": "oklch(100% 0 0)",
+          "base-200": "oklch(93% 0 0)",
+          "base-300": "oklch(86% 0 0)",
+          "base-content": "oklch(22.3899% 0.031305 278.07229)",
+          "neutral": "oklch(22.3899% 0.031305 278.07229)",
+          "neutral-content": "oklch(95.8796% 0.008588 247.915135)",
+          "primary": "oklch(79.62% 0.109 21.85)",
+          "primary-content": "oklch(86.736% 0 0)",
+          "secondary": "oklch(33.6799% 0 0)",
+          "secondary-content": "oklch(86.736% 0 0)",
           "accent": "oklch(33.6799% 0 0)",
-          "neutral-content": "oklch(86.736% 0 0)",
-          "neutral": "oklch(33.6799% 0 0)",
+          "accent-content": "oklch(86.736% 0 0)",
         },
         nordark: {
           ...require("daisyui/src/theming/themes")["nord"],
