@@ -112,13 +112,13 @@ function handleChampionClick(champion: Champion) {
         <div v-if="selectedChampion" class="">
 
           <div
-            class="rounded-box border border-neutral/10 bg-base-100 shadow-lg prose grid grid-cols-2 auto-rows-max py-3 px-1">
+            class="rounded-box border border-neutral/10 bg-base-100 shadow-lg prose grid grid-cols-2 auto-rows-max py-3 px-1 fixed">
             <div class="col-span-2 grid grid-cols-3 p-1 auto-cols-max gap-1">
               <div
                 class="align-self-start avatar h-16 justify-content-center col-start-1 -mt-1.5 ml-1.5 !aspect-square  relative">
                 <div class="rounded-full  grid justify-content-center object-contain z-0 my-auto h-16 w-16">
 
-                  <!--<img class="m-0 p-0 scale-125" :src="selectedChampion.img" :alt="selectedChampion.name" />-->
+
 
                   <svg role="none" class="w-full h-full z-10">
                     <mask id="circle">
