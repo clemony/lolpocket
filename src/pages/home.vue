@@ -161,10 +161,9 @@ const hasSource2 = ref('false');
 
 
             <div class="col-start-2 pl-1">
-                <h2 class="text-xl w-full pr-3 justify-end h-8 text-right ">
-                    Champion <span class=" font-semibold font-serif italic">winrates</span>
+                <h2 class="text-xl w-full pr-4 justify-end h-8  font-serif text-right ">
+                    Champion <span class=" font-sans"> winrates</span>
                 </h2>
-
                 <div class="grid grid-cols-1 gap-4 mt-4">
                     <div class="overflow-x-auto  card bg-base-100/60 backdrop-brightness-105 backdrop-blur-m shadow-lg">
 
