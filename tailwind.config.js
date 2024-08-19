@@ -84,7 +84,7 @@ module.exports = {
   "warning": "oklch(86.95% 0.081 62.79)",
   "error": "oklch(79.62% 0.109 21.85)",
         },
-        nord: {
+        'nord light': {
           ...require("daisyui/src/theming/themes")["nord"],
           "base-100": "oklch(100% 0 0)",
           "base-200": "oklch(93% 0 0)",
@@ -102,7 +102,7 @@ module.exports = {
           "neutral": "oklch( 24.7311% 0.020483 264.094728)",
           "neutral-content": "oklch( 82.9011% 0.031335 222.959324)",
         },
-        nord: {
+        'nord dark': {
           ...require("daisyui/src/theming/themes")["nord"],
           "base-100": "oklch( 24.3535% 0 0)",
           "base-200": "oklch( 22.6487% 0 0)",
