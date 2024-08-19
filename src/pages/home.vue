@@ -35,12 +35,12 @@ const hasSource2 = ref('false');
 
 
         <div class="grid grid-cols-2 gap-6 pr-12 w-full pt-2">
-            <div class="col-start-1 grid grid-cols-1 gap-3">
-                <h2 class="text-lg font-normal tracking-tight h-10">
+            <div class="col-start-1 ">
+                <h2 class="text-lg font-semibold  h-8 tracking-tight">
                     Recent Builds
                 </h2>
 
-                <div class="grid grid-cols-1 gap-4">
+                <div class="grid grid-cols-1 mt-2 gap-4">
                     <div
                         class="overflow-x-hidden overflow-y-scroll scrollbar-hide  card bg-base-100/60  backdrop-blur-md shadow-lg">
                         <table class="table table-pin-rows">
