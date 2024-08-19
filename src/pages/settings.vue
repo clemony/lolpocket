@@ -57,7 +57,20 @@ function updateTheme(theme: string) {
 
         <div role="tablist" class="tabs tabs-bordered my-4">
 
-          <label for="light" role="tab" class="tab">hi </label>
+          <label for="light" role="tab" class="tab">
+            <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content">
+              <div class="bg-base-100 text-base-content w-full cursor-pointer">
+                <div class="grid grid-cols-5 grid-rows-3">
+                  <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
+                  <div class="bg-base-300 col-start-1 row-start-3"></div>
+                  <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2">
+                    <div class="font-semibold">{{ dataTheme }}</div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </label>
           <input type="radio" id="light" name="theme-tabs" class="hidden" checked />
 
 
