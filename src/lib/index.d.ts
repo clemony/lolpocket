@@ -1,5 +1,5 @@
 
-declare module '@/assets/theme.js';
+
 declare module 'vue3-resize-text';
 declare module '@iconify/vue';
 declare module '@/pages/tree.vue';

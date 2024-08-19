@@ -3,6 +3,7 @@ const scrollbarhide = require("tailwind-scrollbar-hide");
 const typography = require("@tailwindcss/typography");
 const colors = require("tailwindcss/colors");
 const daisyui = require("daisyui");
+const ui = import("@/assets/theme.js");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -53,7 +54,6 @@ module.exports = {
     themes: [
       {
         light: {
-          ...require("@/assets/theme.js")["dark"],
           "base-100": "oklch(100% 0 0)",
           "base-200": "oklch(93% 0 0)",
           "base-300": "oklch(86% 0 0)",
