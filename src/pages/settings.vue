@@ -73,7 +73,7 @@ function updateTheme(theme: string) {
 
           </label>
 
-          <input type="radio" id="light" name="theme-tabs" class="" checked />
+          <input type="radio" id="light" name="theme-tabs" role="tab" class="tab" checked />
 
 
 
@@ -96,12 +96,12 @@ function updateTheme(theme: string) {
             </div>
           </label>
 
-          <input type="radio" id="dark" name="theme-tabs" class="hidden" />
+          <input type="radio" id="dark" name="theme-tabs" role="tab" class="tab" />
           <div role="tabpanel" class="tab-content">
             Tab content 22
           </div>
 
-          <label for="dim" role="tab" class="tab">
+          <label for="dim">
             <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content"
               data-set-theme="nord">
               <div class="bg-base-100 text-base-content w-full cursor-pointer" data-theme="nord">
@@ -116,7 +116,7 @@ function updateTheme(theme: string) {
             </div>
           </label>
 
-          <input type="radio" id="dim" name="theme-tabs" class="hidden" />
+          <input type="radio" id="dim" role="tab" class="tab" name="theme-tabs" />
           <div role="tabpanel" class="tab-content">
             Tab content 22
           </div>
