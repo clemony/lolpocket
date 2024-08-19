@@ -103,7 +103,7 @@ onMounted(async () => {
       class="title col-start-1 justify-self-start flex items-center p-0 text-base tracking-wide font-semibold border-none shadow-none h-6 absolute left-[10px] top-[6px] z-40 bg-transparent">
 
       <label
-        class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-bottom before:text-xs before:font-normal before:left-[75%] "
+        class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-right before:text-xs before:font-normal before:left-[75%] "
         :data-tip="tooltipText" @click="toggleMenus()">
 
         <!-- this hidden checkbox controls the state -->
