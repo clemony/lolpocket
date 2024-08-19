@@ -77,7 +77,7 @@ function updateTheme(theme: string) {
                     <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
                     <div class="bg-base-300 col-start-1 row-start-3"></div>
                     <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2">
-                      <div class="font-semibold !shadow-none !border-none">{{ scheme.name }}t</div>
+                      <div class="font-semibold !shadow-none !border-none">{{ scheme.name }}</div>
                     </div>
                   </div>
                 </div>
@@ -91,45 +91,6 @@ function updateTheme(theme: string) {
             </div>
           </template>
 
-          <label for="dark" class="rounded-lg">
-            <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content"
-              data-set-theme="dark">
-              <div class="bg-base-100 text-base-content w-full cursor-pointer" data-theme="dark">
-                <div class="grid grid-cols-5 grid-rows-3">
-                  <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
-                  <div class="bg-base-300 col-start-1 row-start-3"></div>
-                  <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2">
-                    <div class="font-semibold">Dark</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </label>
-
-          <input type="radio" id="dark" name="theme-tabs" role="tab" class="tab" />
-          <div role="tabpanel" class="tab-content !shadow-none !border-none">
-            Tab content 22
-          </div>
-
-          <label for="dim">
-            <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content"
-              data-set-theme="nord">
-              <div class="bg-base-100 text-base-content w-full cursor-pointer" data-theme="nord">
-                <div class="grid grid-cols-5 grid-rows-3">
-                  <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
-                  <div class="bg-base-300 col-start-1 row-start-3"></div>
-                  <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2">
-                    <div class="font-semibold">Dim</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </label>
-
-          <input type="radio" id="dim" role="tab" class="tab" name="theme-tabs" />
-          <div role="tabpanel" class="tab-content !shadow-none !border-none">
-            Tab content 22
-          </div>
         </div>
 
         <div class="grid grid-cols-2 grid-flow-row">
