@@ -37,9 +37,9 @@ function updateTheme(theme: string) {
       <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Settings" checked="true" />
       <div role="tabpanel" class="tab-content ">
 
-        <div class="mockup-browser bg-base-300 border text-xs">
+        <div class="mockup-browser bg-base-300 border ">
           <div class="mockup-browser-toolbar">
-            <div class="input">https://lolpockets.</div>
+            <div class="input text-xs">https://github.com/clemony/lolpocket</div>
           </div>
           <div class="bg-base-200 flex justify-center px-4 py-16">Hello!</div>
         </div>
