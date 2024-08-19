@@ -74,14 +74,12 @@ function updateTheme(theme: string) {
           </label>
 
           <input type="radio" id="light" name="theme-tabs" role="tab" class="tab" checked />
-
-
-
-
           <div role="tabpanel" class="tab-content">
             Tab content 1
           </div>
-          <label for="dark" role="tab" class="tab">
+
+
+          <label for="dark" class="rounded-lg">
             <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content"
               data-set-theme="dark">
               <div class="bg-base-100 text-base-content w-full cursor-pointer" data-theme="dark">
