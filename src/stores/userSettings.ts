@@ -32,6 +32,8 @@ const ui = {
   },
 };
 
+const accent = {}
+
 
 export const useUserSettings = defineStore('userSettings', () => {
   const dataTheme = ref(getInitialTheme());
