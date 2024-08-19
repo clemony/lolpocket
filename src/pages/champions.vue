@@ -188,7 +188,7 @@ function handleChampionClick(champion: Champion) {
               <div class="collapse-content">
 
 
-                <div class="bg-base-200 rounded-lg p-1 mb-3">
+                <div class="bg-base-200 rounded-lg p-1 mb-3 shadow-sm">
                   <div v-for="(value, key) in ability.data" :key="key"
                     class="px-2 p-1  text-xs grid grid-cols-2 grid-flow-row">
                     <div class="capitalize text-xxs">
