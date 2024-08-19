@@ -49,14 +49,20 @@ function updateTheme(theme: string) {
             <div class="input !bg-base-100 text-xs text content-center h-8 before:w-3 before:-mt-0.5 after:-mt-0.5 ">
               https://github.com/clemony/lolpocket
             </div>
+
           </div>
           <div class="bg-base-200 flex justify-center px-4 py-16">Hello!</div>
         </div>
 
 
         <div role="tablist" class="tabs tabs-bordered">
-          <label for="light" role="tab" class="tab">Tab 1</label>
-          <a role="tab" class="tab tab-active">Tab 2</a>
+
+          <label for="light" role="tab" class="tab">Tab 1 </label>
+
+          <div role="tabpanel" class="">
+            Tab content 1
+          </div>
+          <a role="tab" class="tab">Tab 2</a>
           <a role="tab" class="tab">Tab 3</a>
         </div>
 
