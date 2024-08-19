@@ -82,7 +82,7 @@ function updateTheme(theme: string) {
                     <div class="bg-base-300 col-start-1 row-start-3"></div>
                     <div
                       class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex  gap-3 place-content-center items-center">
-                      <input type="radio" :id="scheme.name" name="ui-scheme" class="text-base-content" />
+                      <input type="radio" :id="scheme.name" name="ui-scheme" class="foreground-base-content" />
                       <div class="font-semibold ">{{ scheme.name }}</div>
                     </div>
                   </div>
