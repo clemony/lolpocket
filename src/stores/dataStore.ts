@@ -79,13 +79,13 @@ export const useDataStore = defineStore("dataStore", () => {
       
       // Extract and remove specific lines from context
       const dataPrefixes = [
-        "COOLDOWN:", 
-        "TARGET RANGE:", 
         "COST:", 
+        "COOLDOWN:", 
+        "STATIC COOLDOWN:",
+        "TARGET RANGE:", 
         "CAST TIME:", 
         "RECHARGE:", 
         "EFFECT RADIUS:",
-        "STATIC COOLDOWN:",
         "RANGE:",
         "WIDTH:",
         "SPEED:",
