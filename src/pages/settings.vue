@@ -68,7 +68,7 @@ function updateTheme(theme: string) {
           <div class="bg-base-200 flex justify-center px-4 py-16">Hello!</div>
         </div>
 
-        <h1 class="prose font-semibold text-lg mt-4">UI Theme</h1>
+        <h1 class="prose-xl font-semibold mt-6">Interface</h1>
 
         <div class="grid place-items-stretch w-full grid-cols-3 mt-4">
 
