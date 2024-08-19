@@ -285,7 +285,7 @@ onMounted(async () => {
 }
 
 #menu.minimize {
-  @apply grid-cols-[80px_auto] gap-1.5;
+  @apply grid-cols-[80px_auto] gap-6;
 }
 
 /*.minimize .nav {
