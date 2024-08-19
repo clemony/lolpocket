@@ -184,55 +184,6 @@ text.replace ('Active)
                 <p>{{ ability.context }}</p>
               </div>
             </div>
-            <!--
-            <div class="collapse collapse-arrow join-item ">
-              <input type="checkbox" name="ability-accordion" />
-              <div class="collapse-title">
-                <img :src="selectedChampion.q.img" :alt="selectedChampion.q.name" />
-                <div>{{ selectedChampion.q.name }}</div>
-                <kbd class="kbd">Q</kbd>
-              </div>
-              <div class="collapse-content">
-                <p>{{ selectedChampion.q.context }}</p>
-              </div>
-            </div>
-
-            <div class="collapse collapse-arrow join-item ">
-              <input type="checkbox" name="ability-accordion" />
-              <div class="collapse-title">
-                <img :src="selectedChampion.w.img" :alt="selectedChampion.wName" />
-                <div>{{ selectedChampion.wName }}</div>
-                <kbd class="kbd">W</kbd>
-              </div>
-              <div class="collapse-content">
-                <p>{{ selectedChampion.wContext }}</p>
-              </div>
-            </div>
-            <div class="collapse collapse-arrow join-item">
-              <input type="checkbox" name="ability-accordion" />
-              <div class="collapse-title">
-                <img :src="selectedChampion.eImg" :alt="selectedChampion.eName" />
-                <div>{{ selectedChampion.eName }}</div>
-                <kbd class="kbd">E</kbd>
-              </div>
-              <div class="collapse-content">
-                <p>{{ selectedChampion.eContext }}</p>
-              </div>
-            </div>
-            <div class="collapse collapse-arrow join-item ">
-              <input type="checkbox" name="ability-accordion" :alt="selectedChampion.rName" />
-              <div class="collapse-title">
-                <img :src="selectedChampion.rImg" />
-                <div>{{ selectedChampion.rName }}</div>
-                <kbd class="kbd">R</kbd>
-              </div>
-              <div class="collapse-content">
-                <p>{{ selectedChampion.rContext }}</p>
-              </div>
-            </div>
-
-          -->
-
 
           </div>
 
@@ -241,18 +192,7 @@ text.replace ('Active)
       </div>
     </div>
   </div>
-  <!--
-  <div class="drawer drawer-end">
-    <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-    <div class="drawer-content">
 
-    </div>
-  </div>
-
-  <div class="drawer-side z-50 right-0 bottom-0 absolute">
-    <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
-    <div class="menu  bg-base-200 text-base-content min-h-full w-80 px-4 pt-8 shadow-inner shadow-neutral/20">
-  >-->
 </template>
 
 <style scoped>
