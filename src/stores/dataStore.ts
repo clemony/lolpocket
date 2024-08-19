@@ -28,6 +28,7 @@ interface Ability {
   name: string;
   context: string;
   img: string;
+  data: Record<string, string>;
 }
 
 interface Champion {
@@ -62,22 +63,59 @@ export const useDataStore = defineStore("dataStore", () => {
     selectedChampion.value = champion;
   }
 
-  function parseAbilityString(abilityString: string): { name: string, context: string } {
+  function parseAbilityString(abilityString: string): { name: string; context: string; data: Record<string, string> } {
     if (typeof abilityString !== 'string') {
-      return { name: '', context: '' };
-    }
-    
-    const lines = abilityString.split('\n').filter(line => line.trim() !== '');
-    
-    if (lines.length > 0) {
-      const name = lines[0].trim();
-      console.log(lines);
-      let text = lines.slice(1).join('\n').trim();
-      var context = text.replace('Innate:','').replace('Active:','');
-      return { name, context };
+      return { name: '', context: '', data: {} };
     }
   
-    return { name: '', context: '' };
+    const lines = abilityString.split('\n').filter(line => line.trim() !== '');
+  
+    if (lines.length > 0) {
+      const name = lines[0].trim();
+      let text = lines.slice(1).join('\n').trim();
+      
+      // Initialize categories
+      const data: Record<string, string> = {};
+      
+      // Extract and remove specific lines from context
+      const dataPrefixes = [
+        "COOLDOWN:", 
+        "TARGET RANGE:", 
+        "COST:", 
+        "CAST TIME:", 
+        "RECHARGE:", 
+        "EFFECT RADIUS:",
+        "STATIC COOLDOWN:",
+        "RANGE:",
+        "WIDTH:",
+        "SPEED:",
+      ];
+  
+      // Separate lines into categories and context
+      const contextLines: string[] = [];
+      
+      lines.slice(1).forEach(line => {
+        const trimmedLine = line.trim();
+        let categorized = false;
+        
+        dataPrefixes.forEach(prefix => {
+          if (trimmedLine.startsWith(prefix)) {
+            data[prefix] = trimmedLine.substring(prefix.length).trim();
+            categorized = true;
+          }
+        });
+  
+        if (!categorized) {
+          contextLines.push(trimmedLine);
+        }
+      });
+      
+      const context = contextLines.join('\n').trim().replace('Innate:', '').replace('Active:', '');
+  
+      return { name, context, data };
+    }
+  
+    return { name: '', context: '', data: {} };
   }
   
   function transformChampionData(data: any): Champion {

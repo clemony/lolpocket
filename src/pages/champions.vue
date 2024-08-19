@@ -23,6 +23,7 @@ interface Ability {
   name: string;
   context: string;
   img: string;
+  data: Record<string, string>;
 }
 
 interface Champion {
