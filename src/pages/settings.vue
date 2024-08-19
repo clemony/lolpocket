@@ -54,6 +54,12 @@ function updateTheme(theme: string) {
         </div>
 
 
+        <div role="tablist" class="tabs tabs-bordered">
+          <a role="tab" class="tab">Tab 1</a>
+          <a role="tab" class="tab tab-active">Tab 2</a>
+          <a role="tab" class="tab">Tab 3</a>
+        </div>
+
         <div class="grid grid-cols-2 grid-flow-row">
           <div tabindex="0" role="button" class="dropdown  rounded  m-0 p-0 ">
             <div class="join join-horizontal items-center bg-base-200 border border-base-300">
