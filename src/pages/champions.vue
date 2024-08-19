@@ -190,7 +190,7 @@ function handleChampionClick(champion: Champion) {
 
                 <div class="bg-base-200 rounded-lg p-1 mb-3">
                   <div v-for="(value, key) in ability.data" :key="key"
-                    class="p-1  text-xs grid grid-cols-2 grid-flow-row">
+                    class="px-2 p-1  text-xs grid grid-cols-2 grid-flow-row">
                     <div class="capitalize text-xxs">
                       {{ key }}
                     </div>
