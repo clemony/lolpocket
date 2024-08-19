@@ -164,7 +164,7 @@ function handleChampionClick(champion: Champion) {
 
               </div>
               <div class="col-start-2 col-span-2">
-                <h1 class="font-serif text-[1.4rem] mb-0 pb-1 test">{{ selectedChampion.name }}
+                <h1 class="font-serif font-extrabold text-[1.4rem] mb-0 pb-1 test">{{ selectedChampion.name }}
                 </h1>
                 <p
                   class="text-xs flex text-pretty tracking-wide place-items-center uppercase pt-0 mt-0 pl-[11px] -indent-[11px] pb-0 mb-2">
