@@ -2,9 +2,6 @@
 import { useDataStore } from '@/stores/dataStore';
 import { Icon } from "@iconify/vue";
 import { Quotes } from "@/data/champQuotes.ts";
-import { getCheckedState } from 'radix-vue/dist/Menu/utils';
-import RadioButton from 'primevue/radiobutton';
-import { Radio } from 'lucide-vue-next';
 
 const dataStore = useDataStore();
 
@@ -41,6 +38,16 @@ interface Champion {
     r: Ability;
   };
 }
+
+const ability = ref<Ability>;
+
+const keysToDisplay = ['COST', 'COOLDOWN', 'STATIC COOLDOWN'];
+
+const filteredData = (data: Record<string, string>) => {
+  return Object.fromEntries(
+    Object.entries(data).filter(([key]) => keysToDisplay.includes(key))
+  );
+};
 
 
 const champions = dataStore.champions;
@@ -185,19 +192,21 @@ function handleChampionClick(champion: Champion) {
                 <div class="font-medium">{{ ability.name }}</div>
                 <kbd class="kbd">{{ ability.key.toUpperCase() }}</kbd>
               </div>
+
               <div class="collapse-content">
-
-
                 <div class="bg-base-200 rounded-lg p-1 mb-3 shadow-sm">
-                  <div v-for="(value, key) in ability.data" :key="key"
-                    class="px-2 p-1  text-xs grid grid-cols-2 grid-flow-row">
+                  <!-- Filter and display specific keys from ability data -->
+                  <div v-for="(value, key) in filteredData(ability.data)" :key="key"
+                    class="px-2 p-1 text-xs grid grid-cols-2 grid-flow-row">
                     <div class="capitalize text-xxs">
                       {{ key }}
                     </div>
-                    <div class="text-right ">
+                    <div class="text-right">
                       {{ value }}
                     </div>
                   </div>
+
+                  <p class="prose text-xs whitespace-pre-line text-balance p-1">{{ ability.context }}</p>
                 </div>
 
                 <p class="prose text-xs whitespace-pre-line text-balance p-1">{{ ability.context }}</p>
