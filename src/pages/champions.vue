@@ -50,7 +50,14 @@ console.log(selectedChampion);
 const checked = ref('checked');
 console.log(checked);
 
-
+const toggleAbilityAccordion = (key: string) => {
+  const radioButtons = document.getElementsByName("abilityAccordion") as NodeListOf<HTMLInputElement>;
+  radioButtons.forEach((radio) => {
+    if (radio.value === key && radio.checked) {
+      radio.checked = false;
+    }
+  });
+};
 
 const query = ref('')
 
@@ -65,11 +72,6 @@ function handleChampionClick(champion: Champion) {
   dataStore.setSelectedChampion(champion);
 }
 
-/*function formatText(){
-  let text = text;
-text.replace('Innate: ', '');
-text.replace ('Active)
-}*/
 
 </script>
 
@@ -181,7 +183,8 @@ text.replace ('Active)
             class="ability-wrapper join join-vertical w-full bg-base-100 rounded-box mt-5 shadow-lg shadow-neutral/20">
             <div v-for="(ability, key) in selectedChampion.abilities" :key="key"
               class="collapse collapse-arrow join-item">
-              <input ref="abilityCheck" type="radio" name="abilityAccordion" v-model="checked" :value="key" />
+              <input ref="abilityCheck" type="radio" name="abilityAccordion" v-model="checked" :value="key"
+                @click="toggleAbilityAccordion()" />
               <div class="collapse-title">
                 <img :src="ability.img" :alt="ability.name" />
                 <div>{{ ability.name }}</div>
