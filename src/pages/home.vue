@@ -165,7 +165,7 @@ const hasSource2 = ref('false');
                     Champion Winrates
                 </h2>
 
-                <div class="grid grid-cols-1 gap-4 mt-2">
+                <div class="grid grid-cols-1 gap-4 mt-4">
                     <div class="overflow-x-auto  card bg-base-100/60 backdrop-brightness-105 backdrop-blur-m shadow-lg">
 
                         <table class="table">
