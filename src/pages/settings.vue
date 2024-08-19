@@ -75,13 +75,13 @@ function updateTheme(theme: string) {
             <label :for="scheme.name" class="m-1 rounded-lg overflow-hidden">
               <div class="w-full h-full" data-act-class="!outline-base-content" :data-set-theme="scheme.key">
                 <div
-                  class="w-full h-full rounded-btn !text-xs border border-base-300 shadow-md bg-base-100 text-base-content cursor-pointer"
+                  class="w-full h-full !text-xs border border-base-300 shadow-md bg-base-100 text-base-content cursor-pointe overflow-hiddenr"
                   :data-theme="scheme.key">
                   <div class="grid grid-cols-5 grid-rows-3 w-full h-10 rounded-btn">
                     <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
                     <div class="bg-base-300 col-start-1 row-start-3"></div>
                     <div
-                      class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex  gap-3 place-content-center items-center px-2.5">
+                      class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex  gap-3 place-content-center items-center px-3">
 
                       <div class="font-semibold flex-grow">{{ scheme.name }}</div>
                       <input type="radio" :id="scheme.name" name="ui-scheme"
