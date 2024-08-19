@@ -50,13 +50,10 @@ console.log(selectedChampion);
 const checked = ref('checked');
 console.log(checked);
 
+const selectedAbility = ref<string | null>(null);
+
 const toggleAbilityAccordion = (key: string) => {
-  const radioButtons = document.getElementsByName("abilityAccordion") as NodeListOf<HTMLInputElement>;
-  radioButtons.forEach((radio) => {
-    if (radio.value === key && radio.checked) {
-      radio.checked = false;
-    }
-  });
+  selectedAbility.value = selectedAbility.value === key ? null : key;
 };
 
 const query = ref('')
