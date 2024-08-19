@@ -59,8 +59,8 @@ function updateTheme(theme: string) {
 
           <label for="light" role="tab" class="tab">
             <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content"
-              :data-set-theme="dataTheme">
-              <div class="bg-base-100 text-base-content w-full cursor-pointer">
+              data-set-theme="light">
+              <div class="bg-base-100 text-base-content w-full cursor-pointer" data-theme="light">
                 <div class="grid grid-cols-5 grid-rows-3">
                   <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
                   <div class="bg-base-300 col-start-1 row-start-3"></div>
@@ -79,8 +79,8 @@ function updateTheme(theme: string) {
           </div>
           <label for="dark" role="tab" class="tab">
             <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content"
-              :data-set-theme="dataTheme">
-              <div class="bg-base-100 text-base-content w-full cursor-pointer">
+              data-set-theme="dark">
+              <div class="bg-base-100 text-base-content w-full cursor-pointer" data-theme="dark">
                 <div class="grid grid-cols-5 grid-rows-3">
                   <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
                   <div class="bg-base-300 col-start-1 row-start-3"></div>
