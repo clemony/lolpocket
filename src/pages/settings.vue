@@ -38,8 +38,8 @@ function updateTheme(theme: string) {
       <div role="tabpanel" class="tab-content ">
 
         <div class="mockup-browser bg-base-300 border ">
-          <div class="mockup-browser-toolbar">
-            <div class="input text-xs text content-center h-8 before:w-3 before:-mt-0.5 after:-mt-0.5">
+          <div class="mockup-browser-toolbar ">
+            <div class="input !bg-base-100 text-xs text content-center h-8 before:w-3 before:-mt-0.5 after:-mt-0.5 ">
               https://github.com/clemony/lolpocket
             </div>
           </div>
