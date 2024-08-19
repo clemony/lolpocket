@@ -197,7 +197,7 @@ function handleChampionClick(champion: Champion) {
                 <div class=" rounded-lg p-1 mb-3 ">
                   <!-- Filter and display specific keys from ability data -->
                   <div v-for="(value, key) in filteredData(ability.data)" :key="key"
-                    class="px-2 p-1 text-xs grid grid-cols-[1fr_2fr] grid-flow-row bg-base-200">
+                    class="px-2 p-1 text-xs grid grid-cols-[1fr_2fr] grid-flow-row bg-base-200 rounded-btn my-2">
                     <div class="capitalize text-xxs">
                       {{ key }}
                     </div>
