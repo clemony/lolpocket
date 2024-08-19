@@ -10,15 +10,9 @@ const { dataTheme } = storeToRefs(settings);
 
 const lightThemes = [
   "lofi",
-  "wifi",
+
   "light",
-  "dark",
-  "nord",
   "nordLight",
-  "nordDark",
-  "autumn",
-  "corporate",
-  "pastel",
 ];
 
 const darkThemes = [
@@ -28,16 +22,9 @@ const darkThemes = [
 ];
 
 const dimThemes = [
-  "lofi",
-  "wifi",
-  "light",
-  "dark",
+
   "nord",
-  "nordLight",
-  "nordDark",
-  "autumn",
-  "corporate",
-  "pastel",
+
 ];
 
 function updateTheme(theme: string) {
