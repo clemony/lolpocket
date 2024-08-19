@@ -180,10 +180,9 @@ function handleChampionClick(champion: Champion) {
 
           <div
             class="ability-wrapper join join-vertical w-full bg-base-100 rounded-box mt-5 shadow-lg shadow-neutral/20">
-            <div v-for="(ability, key) in selectedChampion.abilities" :key="key" class=" collapse-arrow join-item"
-              @click="toggleAbilityAccordion(key)">
-              <input type="checkbox" :id="'checkbox-' + ability.key" :checked="selectedAbility === ability.key"
-                @change="toggleAbilityAccordion(ability.key)" />
+            <div v-for="(ability, key) in selectedChampion.abilities" :key="key"
+              class="collapse collapse-arrow join-item">
+              <input type="checkbox" :id="'checkbox-' + ability.key" @change="toggleAbilityAccordion(ability.key)" />
               <div class="collapse-title">
                 <img :src="ability.img" :alt="ability.name" />
                 <div>{{ ability.name }}</div>
