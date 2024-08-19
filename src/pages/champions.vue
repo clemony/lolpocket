@@ -187,12 +187,12 @@ function handleChampionClick(champion: Champion) {
               </div>
               <div class="collapse-content">
                 <table>
-                  <tbody class="bg-white divide-y divide-gray-200">
+                  <tbody class="bg-white divide-y divide-gray-200 text-xs">
                     <tr v-for="(value, key) in ability.data" :key="key">
-                      <td class="px-6 py-4 whitespace-nowrap">
+                      <td class="whitespace-nowrap">
                         {{ key }}
                       </td>
-                      <td class="px-6 py-4 whitespace-nowrap">
+                      <td class="whitespace-nowrap">
                         {{ value }}
                       </td>
                     </tr>
