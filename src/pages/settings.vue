@@ -55,7 +55,7 @@ function updateTheme(theme: string) {
         </div>
 
 
-        <div role="tablist" class="tabs tabs-bordered">
+        <div role="tablist" class="tabs tabs-bordered my-4">
 
           <label for="light" role="tab" class="tab">hi </label>
           <input type="radio" id="light" name="theme-tabs" class="hidden" checked />
