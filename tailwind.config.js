@@ -111,6 +111,13 @@ module.exports = {
           "neutral": "oklch( 27.441% 0.01325 253.041249)",
           "neutral-content": "oklch( 85.4882% 0.00265 253.041249)",
         },
+        lofi: {
+          ...require("daisyui/src/theming/themes")["lofi"],
+          "base-100": "oklch(100% 0 0)",
+          "base-200": "oklch(93% 0 0)",
+          "base-300": "oklch(86% 0 0)",
+          "base-content": "oklch(22.3899% 0.031305 278.07229)",
+        },
         wifi: {
           ...require("daisyui/src/theming/themes")["business"],
           "base-100": "oklch( 24.3535% 0 0)",
@@ -128,9 +135,6 @@ module.exports = {
         },
 
       },
-      "lofi",
-      "wifi",
-      "corporate",
       "autumn",
     ],
     darkTheme: "dark", // name of one of the included themes for dark mode
