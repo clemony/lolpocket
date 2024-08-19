@@ -288,7 +288,7 @@ onMounted(async () => {
 }
 
 #menu.minimize {
-  @apply grid-cols-[80px_auto];
+  @apply grid-cols-[60px_auto];
 }
 
 .minimize .news-after {
