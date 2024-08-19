@@ -194,7 +194,7 @@ function handleChampionClick(champion: Champion) {
                     <div class="capitalize text-xxs">
                       {{ key }}
                     </div>
-                    <div class="text-right">
+                    <div class="text-right prose text-xs whitespace-pre-line text-balance">
                       {{ value }}
                     </div>
                   </div>
@@ -261,8 +261,5 @@ function handleChampionClick(champion: Champion) {
 .ability-wrapper>div {
   @apply border-neutral/15 border;
 
-  p {
-    @apply prose text-xs whitespace-pre-line text-balance;
-  }
 }
 </style>
