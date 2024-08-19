@@ -120,6 +120,6 @@ const NewsArticles: article[] = [
 
   /*background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 89%, oklch(var(--b2)/0.85) 98%, oklch(var(--b2)) 100%);*/
 
-  @apply content-[''] z-50 fixed top-36 right-0 w-full h-56 opacity-80 pointer-events-none;
+  @apply content-[''] z-50 fixed top-[] right-0 w-full h-56 opacity-80 pointer-events-none;
 }
 </style>
