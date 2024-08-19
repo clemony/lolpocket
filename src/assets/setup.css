@@ -22,9 +22,7 @@
 }
 
 .font-serif {
-  font-family: "Playfair Display Variable";
-  font-weight: 900; /*
-  font-family: "Roboto Serif Variable", ui-serif, "Times New Roman", Times, serif !important;*/
+  font-family: "Playfair Display Variable", ui-serif, "Times New Roman", Times, serif !important;
 }
 
 .font-mono {

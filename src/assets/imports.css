@@ -6,8 +6,7 @@
 @import "./animations.css";
 
 @layer base {
-  @import "@fontsource-variable/inter";
-  @import "@fontsource-variable/roboto-serif/full.css";
+  @import "@fontsource-variable/playfair-display/wght-italic.css";
   @import "@fontsource/geist-mono";
   @import "@fontsource/geist-sans";
 }
