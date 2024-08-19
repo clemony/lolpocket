@@ -201,7 +201,7 @@ function handleChampionClick(champion: Champion) {
                     <div class="capitalize text-xxs">
                       {{ key }}
                     </div>
-                    <div class="text-right">
+                    <div class="text-right text-nowrap">
                       {{ value }}
                     </div>
                   </div>
