@@ -58,7 +58,8 @@ function updateTheme(theme: string) {
         <div role="tablist" class="tabs tabs-bordered my-4">
 
           <label for="light" role="tab" class="tab">
-            <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content">
+            <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content"
+              :data-set-theme="dataTheme">
               <div class="bg-base-100 text-base-content w-full cursor-pointer">
                 <div class="grid grid-cols-5 grid-rows-3">
                   <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
@@ -77,7 +78,8 @@ function updateTheme(theme: string) {
             Tab content 1
           </div>
           <label for="dark" role="tab" class="tab">
-            <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content">
+            <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content"
+              :data-set-theme="dataTheme">
               <div class="bg-base-100 text-base-content w-full cursor-pointer">
                 <div class="grid grid-cols-5 grid-rows-3">
                   <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
@@ -95,8 +97,9 @@ function updateTheme(theme: string) {
           </div>
 
           <label for="dim" role="tab" class="tab">
-            <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content">
-              <div class="bg-base-100 text-base-content w-full cursor-pointer">
+            <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content"
+              data-set-theme="nord">
+              <div class="bg-base-100 text-base-content w-full cursor-pointer" data-theme="nord">
                 <div class="grid grid-cols-5 grid-rows-3">
                   <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
                   <div class="bg-base-300 col-start-1 row-start-3"></div>
