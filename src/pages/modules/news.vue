@@ -67,7 +67,7 @@ const NewsArticles: article[] = [
 </script>
 <template>
   <div
-    class="flex w-full pr-11 ml-5 absolute overflow-x-scroll h-60 content-center items-center gap-5 top-28 scrollbar-hide left-0 !z-1 news-after">
+    class="flex w-full pr-11 ml-5 absolute overflow-x-scroll h-64 content-center items-center gap-5 top-28 scrollbar-hide left-0 !z-1 news-after">
 
     <a v-for="article in NewsArticles"
       class="card !bg-base-100/60 h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 !z-0 !*:z-0 group overflow-hidden hover:scale-[1.03] transition-transform duration-700"
@@ -115,12 +115,11 @@ const NewsArticles: article[] = [
 </template>
 
 <style>
-/*
 .news-after::after {
-    /*background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, oklch(var(--b2)) 100%);*/
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, oklch(var(--b2)) 100%);
 
-/*background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 89%, oklch(var(--b2)/0.85) 98%, oklch(var(--b2)) 100%);
+  /*background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 89%, oklch(var(--b2)/0.85) 98%, oklch(var(--b2)) 100%);*/
 
-    @apply content-[''] z-50 fixed top-28 right-0 w-[0] h-56 pointer-events-none;
-}*/
+  @apply content-[''] z-50 fixed top-28 right-0 w-[0] h-56 pointer-events-none;
+}
 </style>
