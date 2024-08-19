@@ -38,8 +38,9 @@ function updateTheme(theme: string) {
       <div role="tabpanel" class="tab-content ">
 
         <div class="mockup-browser bg-base-300 border ">
-          <div class="mockup-browser-toolbar h-8">
-            <div class="input text-xs h-8">https://github.com/clemony/lolpocket</div>
+          <div class="mockup-browser-toolbar h-6.5">
+            <div class="input text-xs h-8 before:w-3 before:-mt-1 after:-mt-1">https://github.com/clemony/lolpocket
+            </div>
           </div>
           <div class="bg-base-200 flex justify-center px-4 py-16">Hello!</div>
         </div>
