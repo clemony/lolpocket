@@ -66,16 +66,15 @@ module.exports = {
   "success": "oklch(87.28% 0.051 133.44)",
   "warning": "oklch(86.95% 0.081 62.79)",
   "error": "oklch(79.62% 0.109 21.85)",
-        
         },
         nordark: {
           ...require("daisyui/src/theming/themes")["nord"],
-          "base-100": "oklch(30.8577% 0.023243 264.149498)",
-          "base-200": "oklch(28.0368% 0.01983 264.182074)",
-          "base-300": "oklch(26.3469% 0.018403 262.177739)",
-          "base-content": "oklch(82.9011% 0.031335 222.959324)",
-          "neutral-content": "oklch(82.9011% 0.031335 222.959324)",
-          "neutral": "oklch(24.7311% 0.020483 264.094728)",
+          "base-100": "oklch( 30.8577% 0.023243 264.149498)",
+          "base-200": "oklch( 28.0368% 0.01983 264.182074)",
+          "base-300": "oklch( 26.3469% 0.018403 262.177739)",
+          "base-content": "oklch( 82.9011% 0.031335 222.959324)",
+          "neutral": "oklch( 24.7311% 0.020483 264.094728)",
+          "neutral-content": "oklch( 82.9011% 0.031335 222.959324)",
         },
         wifi: {
           ...require("daisyui/src/theming/themes")["business"],
@@ -92,9 +91,7 @@ module.exports = {
           "accent-content": "oklch(86.736% 0 0)",
           "accent": "oklch(33.6799% 0 0)",
         },
-        rainbow: {
 
-        },
       },
 
       "light",
