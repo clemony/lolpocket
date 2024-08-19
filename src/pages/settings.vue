@@ -8,17 +8,27 @@ const settings = useUserSettings();
 const { dataTheme } = storeToRefs(settings);
 
 
+const schema = [{
+  light: [
+    "lofi",
+    "light",
+    "nordLight",
+  ],
+  dark: [
+    "wifi",
+    "dark",
+    "nordDark",
+  ],
+  dim: [
+    "nord",
+  ]
+}]
 const lightThemes = [
-  "lofi",
 
-  "light",
-  "nordLight",
 ];
 
 const darkThemes = [
-  "wifi",
-  "dark",
-  "nordDark",
+
 ];
 
 const dimThemes = [
