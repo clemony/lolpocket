@@ -67,28 +67,30 @@ const NewsArticles: article[] = [
 
     <div v-for="article in NewsArticles"
       class="card !bg-base-100/60 h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 !z-0 !*:z-0 group overflow-hidden">
-
-      <figure class="relative">
-
-        <div
-          class=" group-hover:opacity-100 absolute transition-all duration-500 opacity-0 bg-neutral/60 w-full h-full  top-0 left-0 backdrop-blur-md text-neutral-content rounded-lg overflow-hidden grid grid-cols-1 place-items-center place-content-center  text-semibold">
-          <p>Read more on</p>
-          <p> {{ article.linkTitle }}</p>
-        </div>
-
-        <img :src="article.image" :alt="article.title + ' image'" />
-      </figure>
       <a target="_blank" :href="article.link" :title="article.link">
+        <figure class="relative">
+
+          <div
+            class=" group-hover:opacity-100 absolute transition-all duration-500 opacity-0 bg-neutral/60 top-0 left-0 backdrop-blur-md text-neutral-content rounded-lg overflow-hidden grid grid-cols-1 place-items-center place-content-center font-semibold">
+            <p class="">Read more on</p>
+            <p class="flex gap-2 "> {{ article.linkTitle }}
+              <Icon icon="cil:external-link" class="size-3 " />
+            </p>
+          </div>
+
+          <img :src="article.image" :alt="article.title + ' image'" />
+        </figure>
+
         <div class="card-body ">
           <div>
             <h2 class="card-title text-base text-balanced mb-0">{{ article.title }}</h2>
 
-            <div class="text-xs italic mt-0 grid gap-1 *:text-pretty *:content-start *:justify-start relative">
+            <div class="text-xs mt-0 grid gap-1 *:text-pretty *:content-start *:justify-start relative">
               <div class="flex gap-1  align-top">
                 {{ article.source }}
-                <Icon icon="cil:external-link" class="size-2.5 mt-0.5 " />
+
               </div>
-              <div v-if="article && article.source2" class="text-xxs font-sans flex gap-1 ">
+              <div v-if="article && article.source2" class="text-xxs italic font-sans flex gap-1 ">
                 by {{ article.source2 }}
               </div>
             </div>
