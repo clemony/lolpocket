@@ -97,6 +97,9 @@ function updateTheme(theme: string) {
 
           </template>
 
+
+          <h1 class="prose-xl font-semibold mt-6">Accents</h1>
+
         </div>
 
         <div class="grid grid-cols-2 grid-flow-row">
