@@ -70,8 +70,11 @@ function updateTheme(theme: string) {
                 </div>
               </div>
             </div>
-            <input type="radio" id="light" name="theme-tabs" class="hidden" checked />
+
           </label>
+
+          <input type="radio" id="light" name="theme-tabs" class="" checked />
+
 
 
 
