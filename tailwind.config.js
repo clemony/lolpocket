@@ -62,11 +62,14 @@ module.exports = {
           "neutral-content": "oklch(95.8796% 0.008588 247.915135)",
           "primary": "oklch(79.62% 0.109 21.85)",
           "primary-content": "oklch(86.736% 0 0)",
-          "secondary": "oklch(33.6799% 0 0)",
+          "secondary": "oklch(82.91% 0.09 37.7)",
           "secondary-content": "oklch(86.736% 0 0)",
           "accent": "oklch(33.6799% 0 0)",
           "accent-content": "oklch(86.736% 0 0)",
-          oklch(79.62% 0.109 21.85)
+"info": "#E9E5AF",
+"success": "#C8DDBB",
+"warning": "oklch(79.62% 0.109 21.85)",
+"error": "#fba09d",
         },
         nordark: {
           ...require("daisyui/src/theming/themes")["nord"],
