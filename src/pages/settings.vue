@@ -85,7 +85,7 @@ function updateTheme(theme: string) {
 
                       <div class="font-semibold ">{{ scheme.name }}</div>
                       <input type="radio" :id="scheme.name" name="ui-scheme"
-                        class="radio radio-black bg-white size-5" />
+                        class="radio radio-[black] bg-white radio-sm shadow-inner" />
                     </div>
                   </div>
                 </div>
