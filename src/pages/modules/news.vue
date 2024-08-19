@@ -67,30 +67,30 @@ const NewsArticles: article[] = [
 
     <div v-for="article in NewsArticles"
       class="card !bg-base-100/60 h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 !z-0 !*:z-0">
+      <a target="_blank" :href="article.link">
+        <figure>
+          <img :src="article.image" :alt="article.title + ' image'" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title text-base text-balanced mb-0">{{ article.title }}</h2>
 
-      <embed :src="article.link" type="text/html" width="600" height="400">
-      <figure>
-        <img :src="article.image" :alt="article.title + ' image'" />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title text-base text-balanced mb-0">{{ article.title }}</h2>
-
-        <div class="text-xs italic mt-0 grid gap-1 *:text-pretty *:content-start *:justify-start">
-          <div class="flex gap-1 hover:underline align-top hover:opacity-100">
-            <a target="" :href="article.link">{{ article.source }}</a>
-            <Icon icon="cil:external-link" class="size-2.5 mt-0.5 opacity-0 " />
+          <div class="text-xs italic mt-0 grid gap-1 *:text-pretty *:content-start *:justify-start">
+            <div class="flex gap-1 hover:underline align-top hover:opacity-100">
+              {{ article.source }}
+              <Icon icon="cil:external-link" class="size-2.5 mt-0.5 opacity-0 " />
+            </div>
+            <div v-if="article && article.source2" class="text-xxs font-sans flex gap-1 ">
+              by {{ article.source2 }}
+            </div>
           </div>
-          <div v-if="article && article.source2" class="text-xxs font-sans flex gap-1 ">
-            by {{ article.source2 }}
+          <div class="absolute bottom-5 right-5 ">
+            <Icon v-if="article && article.icon" :icon="article.icon" class="size-5 text-base-content/70" />
           </div>
+
+
+
         </div>
-        <div class="absolute bottom-5 right-5 ">
-          <Icon v-if="article && article.icon" :icon="article.icon" class="size-5 text-base-content/70" />
-        </div>
-
-
-
-      </div>
+      </a>
     </div>
   </div>
 
