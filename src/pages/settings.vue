@@ -23,19 +23,7 @@ const schema = [{
     "nord",
   ]
 }]
-const lightThemes = [
 
-];
-
-const darkThemes = [
-
-];
-
-const dimThemes = [
-
-  "nord",
-
-];
 
 function updateTheme(theme: string) {
   settings.dataTheme = theme;
