@@ -161,7 +161,7 @@ const hasSource2 = ref('false');
 
 
             <div class="col-start-2 pl-1">
-                <h2 class="text-lg font-semibold w-full pr-3 justify-end h-8 text-right ">
+                <h2 class="text-xl font-semibold font-serif italic w-full pr-3 justify-end h-8 text-right ">
                     Champion Winrates
                 </h2>
 
