@@ -69,7 +69,7 @@ function updateTheme(theme: string) {
         </div>
 
 
-        <div role="tablist" class="tabs tabs-bordered my-4 mx-1 px-0 *:px-0 ">
+        <div role="tablist" class="tabs tabs-lg tabs-bordered my-4 mx-1 px-0 *:px-0 ">
 
           <template v-for="scheme in schema">
             <label :for="scheme.name" role="tab" class="tab m-1">
