@@ -72,7 +72,7 @@ function updateTheme(theme: string) {
         <div class="grid place-items-stretch w-full grid-cols-3 mt-4">
 
           <template v-for="scheme in schema">
-            <label :for="scheme.name" class="m-1 has:checked:ring-2 has:checked:ring-neutral-content rounded-lg">
+            <label :for="scheme.name" class="m-1 has-[:checked]:ring-2 has-[:checked]:ring-neutral-content rounded-lg">
               <div class="w-full h-full" data-act-class="!outline-base-content" :data-set-theme="scheme.key">
                 <div
                   class="w-full h-full !text-xs ring-base-300 ring-1 shadow-md bg-base-100 text-base-content cursor-pointer rounded-lg overflow-hidden "
