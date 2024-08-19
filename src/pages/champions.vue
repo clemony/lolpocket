@@ -2,6 +2,9 @@
 import { useDataStore } from '@/stores/dataStore';
 import { Icon } from "@iconify/vue";
 import { Quotes } from "@/data/champQuotes.ts";
+import { getCheckedState } from 'radix-vue/dist/Menu/utils';
+import RadioButton from 'primevue/radiobutton';
+import { Radio } from 'lucide-vue-next';
 
 const dataStore = useDataStore();
 
@@ -43,6 +46,16 @@ const champions = dataStore.champions;
 const selectedChampion = computed(() => dataStore.selectedChampion);
 
 console.log(selectedChampion);
+
+const abilityCheck = ref('');
+
+function abilityClick() {
+  if (abilityCheck) {
+    if (RadioButton.checked == true) {
+      RadioButton.uncheck;
+    }
+  }
+};
 
 const query = ref('')
 
@@ -172,8 +185,8 @@ text.replace ('Active)
           <div
             class="ability-wrapper join join-vertical w-full bg-base-100 rounded-box mt-5 shadow-lg shadow-neutral/20">
             <div v-for="(ability, key) in selectedChampion.abilities" :key="key"
-              class="collapse collapse-arrow join-item">
-              <input type="radio" name="ability-accordion" />
+              class="collapse collapse-arrow join-item" @click="abilityClick">
+              <input ref="abilityCheck" type="radio" name="abilityAccordion" />
               <div class="collapse-title">
                 <img :src="ability.img" :alt="ability.name" />
                 <div>{{ ability.name }}</div>
