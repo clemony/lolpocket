@@ -69,7 +69,7 @@ function updateTheme(theme: string) {
         </div>
 
 
-        <div class="grid place-items-center w-full grid-cols-3">
+        <div class="grid place-items-stretch w-full grid-cols-3">
 
           <template v-for="scheme in schema">
             <label :for="scheme.name" class="m-1">
@@ -77,7 +77,7 @@ function updateTheme(theme: string) {
                 <div
                   class="w-full h-full rounded-btn !text-xs border border-base-300 shadow-md bg-base-100 text-base-content cursor-pointer"
                   :data-theme="scheme.key">
-                  <div class="grid grid-cols-5 grid-rows-3 w-full h-full">
+                  <div class="grid grid-cols-5 grid-rows-3 w-full h-12">
                     <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
                     <div class="bg-base-300 col-start-1 row-start-3"></div>
                     <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex  gap-1">
