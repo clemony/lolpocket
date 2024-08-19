@@ -47,10 +47,10 @@ const selectedChampion = computed(() => dataStore.selectedChampion);
 
 console.log(selectedChampion);
 
-const abilityChecks = ref(['check'])
+const checkedAbilities = ref<string[]>([]);
 
-function uncheckAbilities() {
-  abilityChecks.checked == false;
+const uncheckAbilities = () => {
+  checkedAbilities.value = [];
 };
 
 
@@ -113,7 +113,7 @@ function handleChampionClick(champion: Champion) {
 
 
     <div class="drawer-side overscroll-none  z-30">
-      <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay" @change="uncheckAbilities()"></label>
+      <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay" @click="uncheckAbilities()"></label>
       <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4 pt-[30px]">
         <div v-if="selectedChampion" class="">
 
@@ -178,7 +178,7 @@ function handleChampionClick(champion: Champion) {
             class="ability-wrapper join join-vertical w-full bg-base-100 rounded-box mt-5 shadow-lg shadow-neutral/20">
             <div v-for="(ability, key) in selectedChampion.abilities" :key="key"
               class="collapse collapse-arrow join-item">
-              <input type="checkbox" :id="'check' + ability.key" name="abilityBoxes" />
+              <input type="checkbox" :id="'check' + ability.key" />
               <div class="collapse-title">
                 <img :src="ability.img" :alt="ability.name" />
                 <div>{{ ability.name }}</div>
