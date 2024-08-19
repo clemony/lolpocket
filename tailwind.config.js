@@ -59,13 +59,7 @@ module.exports = {
           "base-content": "oklch(22.3899% 0.031305 278.07229)",
           "neutral": "oklch(22.3899% 0.031305 278.07229)",
           "neutral-content": "oklch(95.8796% 0.008588 247.915135)",
-          "primary": "oklch(88.03% 0.046 187.85)",
-          "secondary": "oklch(82.91% 0.09 37.7)",
-          "accent": "oklch(91.18% 0.089 87.56)",
-"info": "oklch(91.19% 0.07 104.16)",
-"success": "oklch(87.28% 0.051 133.44)",
-"warning": "oklch(86.95% 0.081 62.79)",
-"error": "oklch(79.62% 0.109 21.85)",
+        
         },
         nordark: {
           ...require("daisyui/src/theming/themes")["nord"],
@@ -87,7 +81,17 @@ module.exports = {
           "neutral-content": "oklch(86.736% 0 0)",
           "neutral": "oklch(33.6799% 0 0)",
         },
+        rainbow: {
+          "primary": "oklch(88.03% 0.046 187.85)",
+          "secondary": "oklch(82.91% 0.09 37.7)",
+          "accent": "oklch(91.18% 0.089 87.56)",
+  "info": "oklch(91.19% 0.07 104.16)",
+  "success": "oklch(87.28% 0.051 133.44)",
+  "warning": "oklch(86.95% 0.081 62.79)",
+  "error": "oklch(79.62% 0.109 21.85)",
+        },
       },
+
       "light",
       "dark",
       "lofi",
