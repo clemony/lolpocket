@@ -72,7 +72,7 @@ const NewsArticles: article[] = [
         <img :src="article.image" :alt="article.title + ' image'" />
       </figure>
       <a target="_blank" :href="article.link" :title="article.link"
-        class="hover:last:translate-x-0 hover:last:opacity-100">
+        class="hover:group-hover:translate-x-0 hover:group-hover:opacity-100">
         <div class="card-body">
           <div>
             <h2 class="card-title text-base text-balanced mb-0">{{ article.title }}</h2>
@@ -91,7 +91,7 @@ const NewsArticles: article[] = [
             </div>
           </div>
           <div
-            class="absolute translate-x-full transition-all duration-700 opacity-0 bg-primary-content/30 backdrop-blur-sm text-primary-content">
+            class="group-hover absolute translate-x-full transition-all duration-700 opacity-0 bg-primary-content/30 backdrop-blur-sm text-primary-content">
           </div>
 
 
