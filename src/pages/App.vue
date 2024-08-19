@@ -167,7 +167,7 @@ onMounted(async () => {
 
 
 
-      <News v-if="isHome" class="!overflow-x-scroll transition-all duration-700" />
+      <News v-if="isHome" class="!overflow-x-scroll " />
 
       <div ref="nav" class="ml-5 mt-14 rounded-box bg-base-100/65 shadow-lg backdrop-blur-md nav max-h-full">
 
@@ -290,8 +290,8 @@ onMounted(async () => {
   @apply grid-cols-[80px_auto] gap-6;
 }
 
-News.minimize {
-  @apply pl-[100px];
+.minimize .news-after {
+  @apply pl-[85px];
 }
 
 /*.minimize .nav {
