@@ -36,11 +36,11 @@ const hasSource2 = ref('false');
 
         <div class="grid grid-cols-2 gap-6 pr-12 w-full pt-2">
             <div class="col-start-1 ">
-                <h2 class="text-lg font-semibold w-full pr-2 justify-end h-8 text-right tracking-tight">
-                    Recent Builds
+                <h2 class="text-xl w-full pr-3 justify-end h-8 text-right ">
+                    Recent <span class=" font-semibold font-serif italic">builds</span>
                 </h2>
 
-                <div class="grid grid-cols-1 mt-2 gap-4">
+                <div class="grid grid-cols-1 mt-4 gap-4">
                     <div
                         class="overflow-x-hidden overflow-y-scroll scrollbar-hide  card bg-base-100/60  backdrop-blur-md shadow-lg">
                         <table class="table table-pin-rows">
@@ -161,8 +161,8 @@ const hasSource2 = ref('false');
 
 
             <div class="col-start-2 pl-1">
-                <h2 class="text-xl font-semibold font-serif italic w-full pr-3 justify-end h-8 text-right ">
-                    Champion Winrates
+                <h2 class="text-xl w-full pr-3 justify-end h-8 text-right ">
+                    Champion <span class=" font-semibold font-serif italic">winrates</span>
                 </h2>
 
                 <div class="grid grid-cols-1 gap-4 mt-4">
