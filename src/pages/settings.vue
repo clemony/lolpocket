@@ -174,15 +174,15 @@ function updateTheme(theme: string) {
                 <label class=" p-0 m-0 border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline
             outline-2 outline-offset-2 outline-transparent" data-act-class="!outline-base-content"
                   :data-set-theme="theme">
-                  <div class="bg-base-100 text-base-content w-full cursor-pointer font-sans" :data-theme="theme">
+                  <div class="bg-base-100 text-base-content w-full cursor-pointer font-sans" :data-theme="theme"
                     <div class="grid grid-cols-5 grid-rows-3">
                       <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
                       <div class="bg-base-300 col-start-1 row-start-3"></div>
                       <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2">
                         <div class="font-semibold">{{ theme }}</div>
-                        <div class="flex flex-wrap gap-1">-->
+                        <div class="flex flex-wrap gap-1">
             <!-- Example color blocks -->
-            <div class="bg-primary flex aspect-square w-5 items-center justify-center rounded">
+            <!-- <div class="bg-primary flex aspect-square w-5 items-center justify-center rounded">
               <div class="text-primary-content text-sm font-semibold">A</div>
             </div>
             <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded">
@@ -201,61 +201,61 @@ function updateTheme(theme: string) {
     <input type="radio" name="theme-dropdown" class="theme-controller hidden" :aria-label="theme" :value="theme" />
     </label>
     </li>
-    </ul>
-  </div>
-  </div>
+    </ul>>-->
+          </div>
+        </div>
 
-
-  </div>
-
-
-  <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Account" />
-  <div role="tabpanel" class="tab-content ">
-    Tab content 2
-  </div>
-
-  <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="About" />
-  <div role="tabpanel" class="tab-content text-base-content !pt-0">
-
-
-    <div class="card rounded-box grid h-20 place-items-end *:font-mono ">
-
-      <div class="text-xs grid  items-center justify-items-end ">
-        <p class="">thanks for trying the app </p>
-        <p class="inline-flex gap-1 items-center">
-          <Icon icon="typcn:heart-outline" class="size-3" />
-          from
-          <Icon icon="teenyicons:arrow-right-outline" class="size-3" />
-          clem's human
-        </p>
-        <a href="https://github.com/clemony/lolpocket"
-          class="inline-flex gap-1 hover:font-bold hover:italic transition-all duration-300 underline items-center mt-2">
-          <Icon icon="ph:github-logo" />
-          <Icon icon="ph:at" />
-          clemony
-        </a>
 
       </div>
 
+
+      <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Account" />
+      <div role="tabpanel" class="tab-content ">
+        Tab content 2
+      </div>
+
+      <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="About" />
+      <div role="tabpanel" class="tab-content text-base-content !pt-0">
+
+
+        <div class="card rounded-box grid h-20 place-items-end *:font-mono ">
+
+          <div class="text-xs grid  items-center justify-items-end ">
+            <p class="">thanks for trying the app </p>
+            <p class="inline-flex gap-1 items-center">
+              <Icon icon="typcn:heart-outline" class="size-3" />
+              from
+              <Icon icon="teenyicons:arrow-right-outline" class="size-3" />
+              clem's human
+            </p>
+            <a href="https://github.com/clemony/lolpocket"
+              class="inline-flex gap-1 hover:font-bold hover:italic transition-all duration-300 underline items-center mt-2">
+              <Icon icon="ph:github-logo" />
+              <Icon icon="ph:at" />
+              clemony
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="divider divider-start text-xs">MADE WITH</div>
+
+        <div
+          class="card rounded-box grid h-20 grid-cols-6 gap-3 grid-flow-row place-items-center *:text-base-content/85  *:size-6">
+          <Icon icon="fontisto:vuejs" />
+
+          <Icon icon="tabler:brand-vite" />
+          <Icon icon="devicon-plain:tauri" />
+          <Icon icon="file-icons:typescript" />
+          <Icon icon="codicon:vscode-insiders" />
+          <Icon icon="simple-icons:nodedotjs" />
+          <Icon icon="simple-icons:tailwindcss" />
+          <img class="grayscale contrast-200 brightness-50" src="/img/ui/daisyui.svg" />
+        </div>
+      </div>
+
     </div>
-
-    <div class="divider divider-start text-xs">MADE WITH</div>
-
-    <div
-      class="card rounded-box grid h-20 grid-cols-6 gap-3 grid-flow-row place-items-center *:text-base-content/85  *:size-6">
-      <Icon icon="fontisto:vuejs" />
-
-      <Icon icon="tabler:brand-vite" />
-      <Icon icon="devicon-plain:tauri" />
-      <Icon icon="file-icons:typescript" />
-      <Icon icon="codicon:vscode-insiders" />
-      <Icon icon="simple-icons:nodedotjs" />
-      <Icon icon="simple-icons:tailwindcss" />
-      <img class="grayscale contrast-200 brightness-50" src="/img/ui/daisyui.svg" />
-    </div>
-  </div>
-
-  </div>
   </div>
 
 </template>
