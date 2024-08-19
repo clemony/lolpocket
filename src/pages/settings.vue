@@ -73,9 +73,10 @@ function updateTheme(theme: string) {
 
           <template v-for="scheme in schema">
             <label :for="scheme.name" class="m-1">
-              <div class=" p-2 w-full h-full rounded-btn !text-xs border border-base-300 shadow-md "
-                data-act-class="!outline-base-content" :data-set-theme="scheme.key">
-                <div class="bg-base-100 text-base-content w-full cursor-pointer" :data-theme="scheme.key">
+              <div class="" data-act-class="!outline-base-content" :data-set-theme="scheme.key">
+                <div
+                  class=" p-2 w-full h-full rounded-btn !text-xs border border-base-300 shadow-md bg-base-100 text-base-content cursor-pointer"
+                  :data-theme="scheme.key">
                   <div class="grid grid-cols-5 grid-rows-3">
                     <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
                     <div class="bg-base-300 col-start-1 row-start-3"></div>
