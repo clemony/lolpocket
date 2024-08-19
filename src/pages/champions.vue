@@ -55,8 +55,6 @@ const toggleAbilityAccordion = (key: string) => {
   radioButtons.forEach((radio) => {
     if (radio.value === key && radio.checked) {
       radio.checked = false;
-    } else if (radio.value === key) {
-      radio.checked = true;
     }
   });
 };
