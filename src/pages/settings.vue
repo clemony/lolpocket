@@ -25,7 +25,7 @@ const schema = [{
 }]
 
 interface schema {
-  name: string[]
+  name: string<string[]>
 }
 
 
