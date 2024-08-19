@@ -10,6 +10,7 @@ const { dataTheme } = storeToRefs(settings);
 
 const schema = [
   {
+    key: "light",
     name: 'light',
     themes: [
       "lofi",
@@ -18,6 +19,7 @@ const schema = [
     ]
   },
   {
+    key: "dark",
     name: 'dark',
     themes: [
       "wifi",
@@ -26,6 +28,7 @@ const schema = [
     ]
   },
   {
+    key: "nord",
     name: 'dim',
     themes: [
       "nord",
