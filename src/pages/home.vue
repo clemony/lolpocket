@@ -35,11 +35,11 @@ const hasSource2 = ref('false');
 
 
         <div class="grid grid-cols-2 gap-6 pr-12 w-full">
-            <h2 class="text-xl font-semibold tracking-tight">
+            <h2 class="text-xl font-semibold tracking-tight h-10">
                 Recent Builds
             </h2>
             <div
-                class="overflow-x-hidden overflow-y-scroll scrollbar-hide max-h-full card bg-base-100/60  backdrop-blur-md shadow-lg">
+                class="overflow-x-hidden overflow-y-scroll scrollbar-hide  card bg-base-100/60  backdrop-blur-md shadow-lg">
                 <table class="table table-pin-rows">
                     <!-- head -->
                     <thead>
