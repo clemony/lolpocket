@@ -1,8 +1,11 @@
-import type { CustomTheme, Theme } from "@/assets/theme.js"
+import type plugin from "tailwindcss/plugin"
 
-declare const themes: Record<`${Theme}`, CustomTheme[string]>
+declare const daisyui: ReturnType<typeof plugin>
 
-export = themes
+export default daisyui
+
+type CustomTheme = Record<string, Record<string, string>>
+
 declare module '@/assets/theme.js';
 declare module 'vue3-resize-text';
 declare module '@iconify/vue';
