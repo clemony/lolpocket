@@ -72,8 +72,8 @@ function updateTheme(theme: string) {
         <div role="tablist" class="tabs tabs-lg place-items-center tabs-lifted my-4 mx-1 px-0 *:px-0 ">
 
           <template v-for="scheme in schema">
-            <label :for="scheme.name" role="tab" class="tab m-1 ">
-              <div class="p-0 m-0  join-item overflow-hidden rounded-btn  !text-xs "
+            <label :for="scheme.name" role="tab" class="tab m-1 relative">
+              <div class="p-0 m-0  absolute join-item overflow-hidden rounded-btn  !text-xs "
                 data-act-class="!outline-base-content" :data-set-theme="scheme.key">
                 <div class="bg-base-100 text-base-content w-full cursor-pointer" :data-theme="scheme.key">
                   <div class="grid grid-cols-5 grid-rows-3">
