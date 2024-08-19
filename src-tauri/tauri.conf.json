@@ -20,6 +20,12 @@
         "hide": true,
         "close": true,
         "startDragging": true
+      },
+      "shell": {
+        "all": false, 
+        "execute": false, 
+        "sidecar": false, 
+        "open": true
       }
     },
     "bundle": {
