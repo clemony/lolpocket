@@ -66,12 +66,12 @@ const NewsArticles: article[] = [
     class="flex w-full pr-11 ml-5 absolute overflow-x-scroll h-64 content-center gap-5 top-32 scrollbar-hide left-0 !z-1 news-after">
 
     <div v-for="article in NewsArticles"
-      class="card !bg-base-100/60 h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 !z-0 !*:z-0 group">
+      class="card !bg-base-100/60 h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 !z-0 !*:z-0 group overflow-hidden">
 
       <figure>
         <img :src="article.image" :alt="article.title + ' image'" />
       </figure>
-      <a target="_blank" :href="article.link" :title="article.link" class="overflow-hidden">
+      <a target="_blank" :href="article.link" :title="article.link">
         <div class="card-body ">
           <div>
             <h2 class="card-title text-base text-balanced mb-0">{{ article.title }}</h2>
@@ -90,7 +90,7 @@ const NewsArticles: article[] = [
             </div>
           </div>
           <div
-            class="group-hover:translate-y-0 group-hover:opacity-100 absolute translate-y-full transition-all duration-700 opacity-0 bg-base-content/80 w-full h-full  top-0 left-0 backdrop-blur-md text-base-100 rounded-lg">
+            class="group-hover:translate-y-0 group-hover:opacity-100 absolute translate-y-full transition-all duration-700 opacity-0 bg-neutral/80 w-full h-full  top-0 left-0 backdrop-blur-md text-neutral-content rounded-lg overflow-hidden">
             {{ article.linkTitle }}
           </div>
 
