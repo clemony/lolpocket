@@ -93,15 +93,12 @@ module.exports = {
         },
 
       },
-
-      "light",
       "dark",
       "lofi",
       "wifi",
       "nordark",
       "nord",
       "corporate",
-      "pastel",
       "autumn",
     ],
     darkTheme: "dark", // name of one of the included themes for dark mode
