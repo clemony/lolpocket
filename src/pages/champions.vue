@@ -112,7 +112,7 @@ function handleChampionClick(champion: Champion) {
         <div v-if="selectedChampion" class="relative">
 
           <div
-            class="rounded-box border border-neutral/10 bg-base-100/60 backdrop-blur-md shadow-lg prose grid grid-cols-2 auto-rows-max py-3 px-1 fixed z-10">
+            class="rounded-box border border-neutral/10 bg-base-100/60 backdrop-blur-md shadow-lg prose grid grid-cols-2 auto-rows-max py-3 px-1 fixed top-0 left-0 z-10">
             <div class="col-span-2 grid grid-cols-3 p-1 auto-cols-max gap-1">
               <div
                 class="align-self-start avatar h-16 justify-content-center col-start-1 -mt-1.5 ml-1.5 !aspect-square  relative">
