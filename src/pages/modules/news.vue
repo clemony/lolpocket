@@ -90,7 +90,7 @@ const NewsArticles: article[] = [
             </div>
           </div>
           <div
-            class="group-hover:translate-y-0 group-hover:opacity-100 absolute translate-y-full transition-all duration-700 opacity-0 bg-neutral/80 w-full h-full  top-0 left-0 backdrop-blur-md text-neutral-content rounded-lg overflow-hidden grid grid-cols-1 place-items-center place-content-center *:block">
+            class=" group-hover:opacity-100 absolute transition-all duration-500 opacity-0 bg-neutral/60 w-full h-full  top-0 left-0 backdrop-blur-md text-neutral-content rounded-lg overflow-hidden grid grid-cols-1 place-items-center place-content-center  text-semibold">
             <p>Read more on</p>
             <p> {{ article.linkTitle }}</p>
           </div>
