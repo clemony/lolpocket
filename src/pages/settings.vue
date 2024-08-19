@@ -80,7 +80,7 @@ function updateTheme(theme: string) {
                     <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
                     <div class="bg-base-300 col-start-1 row-start-3"></div>
                     <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2">
-                      <div class="font-semibold !shadow-none !border-none">{{ scheme.name }}</div>
+                      <div class="font-semibold ">{{ scheme.name }}</div>
                     </div>
                   </div>
                 </div>
@@ -88,9 +88,9 @@ function updateTheme(theme: string) {
 
             </label>
 
-            <input type="radio" id="light" name="theme-tabs" role="tab" class="tab" checked />
-            <div role="tabpanel" class="tab-content">
-              Tab content 1
+            <input type="radio" :id="scheme.name" name="theme-tabs" role="tab" class="tab" checked />
+            <div role="tabpanel" class="tab-content !shadow-none !border-none">
+              Tab content 1 {{ scheme.name }}
             </div>
           </template>
 
