@@ -71,13 +71,13 @@ function updateTheme(theme: string) {
           <template v-for="scheme in schema">
             <label :for="scheme.name" role="tab" class="tab">
               <div class="w-[90px] p-0 m-0  join-item overflow-hidden rounded-btn !text-xs "
-                data-act-class="!outline-base-content" data-set-theme="light">
-                <div class="bg-base-100 text-base-content w-full cursor-pointer" data-theme="light">
+                data-act-class="!outline-base-content" :data-set-theme="scheme.name">
+                <div class="bg-base-100 text-base-content w-full cursor-pointer" :data-theme="scheme.name">
                   <div class="grid grid-cols-5 grid-rows-3">
                     <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
                     <div class="bg-base-300 col-start-1 row-start-3"></div>
                     <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2">
-                      <div class="font-semibold !shadow-none !border-none">Light</div>
+                      <div class="font-semibold !shadow-none !border-none">{{ scheme.name }}t</div>
                     </div>
                   </div>
                 </div>
