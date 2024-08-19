@@ -181,7 +181,7 @@ function handleChampionClick(champion: Champion) {
               <input type="checkbox" :id="'checkbox-' + key" v-model="checkedAbilities" :value="key" />
               <div class="collapse-title">
                 <img :src="ability.img" :alt="ability.name" />
-                <div class="[font-weight:500;]">{{ ability.name }}</div>
+                <div class="font-medium">{{ ability.name }}</div>
                 <kbd class="kbd">{{ ability.key.toUpperCase() }}</kbd>
               </div>
               <div class="collapse-content">
