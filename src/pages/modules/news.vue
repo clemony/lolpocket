@@ -74,20 +74,20 @@ const NewsArticles: article[] = [
       <a target="_blank" :href="article.link" :title="article.link">
         <div class="card-body">
           <h2 class="card-title text-base text-balanced mb-0">{{ article.title }}</h2>
-
-          <div class="text-xs italic mt-0 grid gap-1 *:text-pretty *:content-start *:justify-start">
-            <div class="flex gap-1  align-top">
-              {{ article.source }}
-              <Icon icon="cil:external-link" class="size-2.5 mt-0.5 " />
+          <div>
+            <div class="text-xs italic mt-0 grid gap-1 *:text-pretty *:content-start *:justify-start">
+              <div class="flex gap-1  align-top">
+                {{ article.source }}
+                <Icon icon="cil:external-link" class="size-2.5 mt-0.5 " />
+              </div>
+              <div v-if="article && article.source2" class="text-xxs font-sans flex gap-1 ">
+                by {{ article.source2 }}
+              </div>
             </div>
-            <div v-if="article && article.source2" class="text-xxs font-sans flex gap-1 ">
-              by {{ article.source2 }}
+            <div class="absolute bottom-5 right-5 ">
+              <Icon v-if="article && article.icon" :icon="article.icon" class="size-5 text-base-content/70" />
             </div>
           </div>
-          <div class="absolute bottom-5 right-5 ">
-            <Icon v-if="article && article.icon" :icon="article.icon" class="size-5 text-base-content/70" />
-          </div>
-
 
 
         </div>
