@@ -288,16 +288,13 @@ onMounted(async () => {
 }
 
 #menu.minimize {
-  @apply grid-cols-[80px_auto] gap-6;
+  @apply grid-cols-[80px_auto];
 }
 
 .minimize .news-after {
   @apply pl-[83px];
 }
 
-/*.minimize .nav {
-  @apply rounded-[15px];
-}*/
 
 
 [data-pc-section="nodetogglebutton"],
