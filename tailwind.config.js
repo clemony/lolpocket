@@ -33,11 +33,6 @@ module.exports = {
         sm: "0.7rem",
         base: "0.8rem",
       },
-      fontWeight: {
-        light: "250",
-        normal: "350",
-        medium: "450",
-      },
       animation: {
         "collapsible-down": "collapsible-down 0.2s ease-in-out",
         "collapsible-up": "collapsible-up 0.2s ease-in-out",
