@@ -55,7 +55,7 @@ function updateTheme(theme: string) {
         </div>
 
 
-        <div role="tablist" class="tabs tabs-bordered my-4">
+        <div role="tablist" class="tabs tabs-bordered my-4 mx-1 px-0">
 
           <label for="light" role="tab" class="tab">
             <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content"
