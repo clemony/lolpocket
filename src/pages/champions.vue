@@ -205,11 +205,10 @@ function handleChampionClick(champion: Champion) {
                       {{ value }}
                     </div>
                   </div>
-
-                  <p class="prose text-xs whitespace-pre-line text-balance p-1">{{ ability.context }}</p>
                 </div>
 
                 <p class="prose text-xs whitespace-pre-line text-balance p-1">{{ ability.context }}</p>
+
               </div>
             </div>
           </div>
