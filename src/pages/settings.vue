@@ -94,7 +94,23 @@ function updateTheme(theme: string) {
             Tab content 22
           </div>
 
-          <a role="tab" class="tab">Tab 3</a>
+          <label for="dim" role="tab" class="tab">
+            <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content">
+              <div class="bg-base-100 text-base-content w-full cursor-pointer">
+                <div class="grid grid-cols-5 grid-rows-3">
+                  <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
+                  <div class="bg-base-300 col-start-1 row-start-3"></div>
+                  <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2">
+                    <div class="font-semibold">Dim</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </label>
+          <input type="radio" id="dim" name="theme-tabs" class="hidden" checked />
+          <div role="tabpanel" class="tab-content">
+            Tab content 22
+          </div>
         </div>
 
         <div class="grid grid-cols-2 grid-flow-row">
@@ -133,7 +149,7 @@ function updateTheme(theme: string) {
             </div>
             <ul tabindex="0"
               class="grid dropdown-content place-content-center  menu bg-base-100 rounded-md z-[1] w-[160px] px-1 border border-base-300 shadow-md h-64 overflow-y-scroll overflow-x-hidden">
-              <li v-for="theme in ':lightThemes'" :value="theme" class="my-1 first:pt-2 !text-xs"
+              <li v-for="theme in lightThemes" :value="theme" class="my-1 first:pt-2 !text-xs"
                 @click="updateTheme(theme)">
                 <label class=" p-0 m-0 border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline
             outline-2 outline-offset-2 outline-transparent" data-act-class="!outline-base-content"
