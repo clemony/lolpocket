@@ -186,6 +186,14 @@ function handleChampionClick(champion: Champion) {
                 <kbd class="kbd">{{ ability.key.toUpperCase() }}</kbd>
               </div>
               <div class="collapse-content">
+                <table v-for="(value, key) in ability.data" :key="key">
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    {{ key }}
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    {{ value }}
+                  </td>
+                </table>
                 <p>{{ ability.context }}</p>
               </div>
             </div>
