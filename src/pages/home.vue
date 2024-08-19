@@ -20,10 +20,10 @@ const hasSource2 = ref('false');
 
 
         <div class="gap-2 flex items-end">
-            <h2 class="text-xl font-semibold tracking-tight">
+            <h2 class="text-2xl font-semibold font-serif tracking-tight">
                 League News
             </h2>
-            <p class="text-sm text-muted-foreground italic pb-[4px]">
+            <p class="text-sm text-muted-foreground italic pb-[3px]">
                 the happening things.
             </p>
         </div>
@@ -35,8 +35,8 @@ const hasSource2 = ref('false');
 
 
         <div class="grid grid-cols-2 gap-6 pr-12 w-full pt-2">
-            <div class="col-start-1 grid grid-cols-1 gap-4">
-                <h2 class="text-xl font-semibold tracking-tight h-10">
+            <div class="col-start-1 grid grid-cols-1 gap-3">
+                <h2 class="text-xl font-semibold font-serif tracking-tight h-10">
                     Recent Builds
                 </h2>
                 <div
@@ -157,8 +157,8 @@ const hasSource2 = ref('false');
             </div>
 
 
-            <div class="col-start-2 grid grid-cols-1 gap-4">
-                <h2 class="text-xl font-semibold tracking-tight h-10">
+            <div class="col-start-2 grid grid-cols-1 gap-3">
+                <h2 class="text-lg font-semibold tracking-tight h-10">
                     Champion Winrates
                 </h2>
 
