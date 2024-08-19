@@ -67,17 +67,18 @@ const NewsArticles: article[] = [
 
     <div v-for="article in NewsArticles"
       class="card !bg-base-100/60 h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 !z-0 !*:z-0">
+
+      <figure>
+        <img :src="article.image" :alt="article.title + ' image'" />
+      </figure>
       <a target="_blank" :href="article.link">
-        <figure>
-          <img :src="article.image" :alt="article.title + ' image'" />
-        </figure>
         <div class="card-body">
           <h2 class="card-title text-base text-balanced mb-0">{{ article.title }}</h2>
 
           <div class="text-xs italic mt-0 grid gap-1 *:text-pretty *:content-start *:justify-start">
-            <div class="flex gap-1 hover:underline align-top hover:opacity-100">
+            <div class="flex gap-1  align-top">
               {{ article.source }}
-              <Icon icon="cil:external-link" class="size-2.5 mt-0.5 opacity-0 " />
+              <Icon icon="cil:external-link" class="size-2.5 mt-0.5 " />
             </div>
             <div v-if="article && article.source2" class="text-xxs font-sans flex gap-1 ">
               by {{ article.source2 }}
