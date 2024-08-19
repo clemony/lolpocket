@@ -47,14 +47,11 @@ const selectedChampion = computed(() => dataStore.selectedChampion);
 
 console.log(selectedChampion);
 
-const abilityCheck = ref('');
+const checked = ref('checked');
+console.log(checked);
 
 function abilityClick() {
-  if (abilityCheck) {
-    if (RadioButton.checked == true) {
-      RadioButton.uncheck;
-    }
-  }
+  RadioButton.uncheck;
 };
 
 const query = ref('')
@@ -186,7 +183,7 @@ text.replace ('Active)
             class="ability-wrapper join join-vertical w-full bg-base-100 rounded-box mt-5 shadow-lg shadow-neutral/20">
             <div v-for="(ability, key) in selectedChampion.abilities" :key="key"
               class="collapse collapse-arrow join-item" @click="abilityClick">
-              <input ref="abilityCheck" type="radio" name="abilityAccordion" />
+              <input ref="abilityCheck" type="radio" name="abilityAccordion" v-model="checked" />
               <div class="collapse-title">
                 <img :src="ability.img" :alt="ability.name" />
                 <div>{{ ability.name }}</div>
