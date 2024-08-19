@@ -81,9 +81,9 @@ function updateTheme(theme: string) {
                     <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
                     <div class="bg-base-300 col-start-1 row-start-3"></div>
                     <div
-                      class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex  gap-3 place-content-center items-center">
+                      class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex  gap-3 place-content-center items-center px-2.5">
 
-                      <div class="font-semibold ">{{ scheme.name }}</div>
+                      <div class="font-semibold flex-grow">{{ scheme.name }}</div>
                       <input type="radio" :id="scheme.name" name="ui-scheme"
                         class="radio radio-[black] bg-white radio-sm shadow-inner" />
                     </div>
