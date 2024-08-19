@@ -53,7 +53,7 @@ module.exports = {
     themes: [
       {
         light: {
-          ...require("daisyui/src/theming/themes")["light"],
+          ...require("@/assets/themes")["dark"],
           "base-100": "oklch(100% 0 0)",
           "base-200": "oklch(93% 0 0)",
           "base-300": "oklch(86% 0 0)",
