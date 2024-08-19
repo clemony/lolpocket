@@ -188,11 +188,11 @@ function handleChampionClick(champion: Champion) {
               <div class="collapse-content">
                 <table>
                   <tbody class="bg-white divide-y divide-gray-200 text-xs">
-                    <tr v-for="(value, key) in ability.data" :key="key" class="lowercase">
-                      <td class="normal-case">
+                    <tr v-for="(value, key) in ability.data" :key="key" class="">
+                      <td class="capitalize text-xxs">
                         {{ key }}
                       </td>
-                      <td class="normal-case text-right">
+                      <td class="text-right">
                         {{ value }}
                       </td>
                     </tr>
