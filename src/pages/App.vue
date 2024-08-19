@@ -160,7 +160,7 @@ onMounted(async () => {
 
 
   <div ref="menuRef" id="menu"
-    class="w-screen grid grid-cols-[280px_calc(100%-280px)] gap-7  m-0 p-0 transition-all duration-700 delay-200 z-0">
+    class="w-screen grid grid-cols-[280px_calc(100%-280px)]   m-0 p-0 mt-[26px] transition-all duration-700 delay-200 z-0">
 
 
     <div class="col-start-1 z-10">
@@ -169,7 +169,7 @@ onMounted(async () => {
 
       <News v-if="isHome" class="!overflow-x-scroll " />
 
-      <div ref="nav" class="rounded-box bg-base-100/65 shadow-lg backdrop-blur-md nav max-h-full">
+      <div ref="nav" class="rounded-box bg-base-100/65 shadow-lg backdrop-blur-md nav max-h-full w-full">
 
         <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
           @nodeSelect="onNodeSelect" id="tree">
