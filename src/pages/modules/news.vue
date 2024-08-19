@@ -71,7 +71,7 @@ const NewsArticles: article[] = [
       <figure>
         <img :src="article.image" :alt="article.title + ' image'" />
       </figure>
-      <a target="_blank" :href="article.link" :title="article.link">
+      <button target="_blank" :href="article.link" :title="article.link">
         <div class="card-body">
           <h2 class="card-title text-base text-balanced mb-0">{{ article.title }}</h2>
 
@@ -91,7 +91,7 @@ const NewsArticles: article[] = [
 
 
         </div>
-      </a>
+      </button>
     </div>
   </div>
 
