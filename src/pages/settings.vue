@@ -8,24 +8,33 @@ const settings = useUserSettings();
 const { dataTheme } = storeToRefs(settings);
 
 
-const schema = [{
-  light: [
-    "lofi",
-    "light",
-    "nordLight",
-  ],
-  dark: [
-    "wifi",
-    "dark",
-    "nordDark",
-  ],
-  dim: [
-    "nord",
-  ]
-}]
+const schema = [
+  {
+    name: 'light',
+    themes: [
+      "lofi",
+      "light",
+      "nordLight",
+    ]
+  },
+  {
+    name: 'dark',
+    themes: [
+      "wifi",
+      "dark",
+      "nordDark",
+    ]
+  },
+  {
+    name: 'dim',
+    themes: [
+      "nord",
+    ]
+  }]
 
 interface schema {
-  name: string<string[]>
+  name: string;
+  themes: string[];
 }
 
 
