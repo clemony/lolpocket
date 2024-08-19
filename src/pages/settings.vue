@@ -75,7 +75,7 @@ function updateTheme(theme: string) {
             <label :for="scheme.name" class="m-1 rounded-lg">
               <div class="w-full h-full" data-act-class="!outline-base-content" :data-set-theme="scheme.key">
                 <div
-                  class="w-full h-full !text-xs ring-base-300 ring-1 shadow-md bg-base-100 text-base-content cursor-pointer rounded-lg overflow-hidden"
+                  class="w-full h-full !text-xs ring-base-300 ring-1 shadow-md bg-base-100 text-base-content cursor-pointer rounded-lg overflow-hidden active:ring-2 active:ring-neutral-content"
                   :data-theme="scheme.key">
                   <div class="grid grid-cols-5 grid-rows-3 w-full h-10 rounded-btn">
                     <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
