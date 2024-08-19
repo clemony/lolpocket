@@ -186,7 +186,8 @@ function handleChampionClick(champion: Champion) {
                 <kbd class="kbd">{{ ability.key.toUpperCase() }}</kbd>
               </div>
               <div class="collapse-content">
-                <table class="mb-3">
+
+                <table class="mb-3 w-full">
                   <tbody class="bg-white divide-y divide-gray-200 text-xs">
                     <tr v-for="(value, key) in ability.data" :key="key" class="">
                       <td class="capitalize text-xxs">
@@ -198,6 +199,7 @@ function handleChampionClick(champion: Champion) {
                     </tr>
                   </tbody>
                 </table>
+
                 <p>{{ ability.context }}</p>
               </div>
             </div>
