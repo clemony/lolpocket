@@ -166,9 +166,10 @@ function updateTheme(theme: string) {
                 <Icon icon="ph:caret-down" class="" />
               </div>
             </div>
-            <ul tabindex="0"
+
+            <!--  <ul tabindex="0"
               class="grid dropdown-content place-content-center  menu bg-base-100 rounded-md z-[1] w-[160px] px-1 border border-base-300 shadow-md h-64 overflow-y-scroll overflow-x-hidden">
-              <li v-for="theme in lightThemes" :value="theme" class="my-1 first:pt-2 !text-xs"
+            <li v-for="scheme in schema" :value="theme" class="my-1 first:pt-2 !text-xs"
                 @click="updateTheme(theme)">
                 <label class=" p-0 m-0 border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline
             outline-2 outline-offset-2 outline-transparent" data-act-class="!outline-base-content"
@@ -179,83 +180,82 @@ function updateTheme(theme: string) {
                       <div class="bg-base-300 col-start-1 row-start-3"></div>
                       <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2">
                         <div class="font-semibold">{{ theme }}</div>
-                        <div class="flex flex-wrap gap-1">
-                          <!-- Example color blocks -->
-                          <div class="bg-primary flex aspect-square w-5 items-center justify-center rounded">
-                            <div class="text-primary-content text-sm font-semibold">A</div>
-                          </div>
-                          <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded">
-                            <div class="text-secondary-content text-sm font-semibold">A</div>
-                          </div>
-                          <div class="bg-accent flex aspect-square items-center justify-center rounded w-5">
-                            <div class="text-accent-content text-sm font-semibold">A</div>
-                          </div>
-                          <div class="bg-neutral flex aspect-square items-center justify-center rounded w-5">
-                            <div class="text-neutral-content text-sm font-semibold">A</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <input type="radio" name="theme-dropdown" class="theme-controller hidden" :aria-label="theme"
-                    :value="theme" />
-                </label>
-              </li>
-            </ul>
+                        <div class="flex flex-wrap gap-1">-->
+            <!-- Example color blocks -->
+            <div class="bg-primary flex aspect-square w-5 items-center justify-center rounded">
+              <div class="text-primary-content text-sm font-semibold">A</div>
+            </div>
+            <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded">
+              <div class="text-secondary-content text-sm font-semibold">A</div>
+            </div>
+            <div class="bg-accent flex aspect-square items-center justify-center rounded w-5">
+              <div class="text-accent-content text-sm font-semibold">A</div>
+            </div>
+            <div class="bg-neutral flex aspect-square items-center justify-center rounded w-5">
+              <div class="text-neutral-content text-sm font-semibold">A</div>
+            </div>
           </div>
         </div>
-
-
       </div>
+    </div>
+    <input type="radio" name="theme-dropdown" class="theme-controller hidden" :aria-label="theme" :value="theme" />
+    </label>
+    </li>
+    </ul>
+  </div>
+  </div>
 
 
-      <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Account" />
-      <div role="tabpanel" class="tab-content ">
-        Tab content 2
-      </div>
-
-      <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="About" />
-      <div role="tabpanel" class="tab-content text-base-content !pt-0">
+  </div>
 
 
-        <div class="card rounded-box grid h-20 place-items-end *:font-mono ">
+  <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Account" />
+  <div role="tabpanel" class="tab-content ">
+    Tab content 2
+  </div>
 
-          <div class="text-xs grid  items-center justify-items-end ">
-            <p class="">thanks for trying the app </p>
-            <p class="inline-flex gap-1 items-center">
-              <Icon icon="typcn:heart-outline" class="size-3" />
-              from
-              <Icon icon="teenyicons:arrow-right-outline" class="size-3" />
-              clem's human
-            </p>
-            <a href="https://github.com/clemony/lolpocket"
-              class="inline-flex gap-1 hover:font-bold hover:italic transition-all duration-300 underline items-center mt-2">
-              <Icon icon="ph:github-logo" />
-              <Icon icon="ph:at" />
-              clemony
-            </a>
+  <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="About" />
+  <div role="tabpanel" class="tab-content text-base-content !pt-0">
 
-          </div>
 
-        </div>
+    <div class="card rounded-box grid h-20 place-items-end *:font-mono ">
 
-        <div class="divider divider-start text-xs">MADE WITH</div>
+      <div class="text-xs grid  items-center justify-items-end ">
+        <p class="">thanks for trying the app </p>
+        <p class="inline-flex gap-1 items-center">
+          <Icon icon="typcn:heart-outline" class="size-3" />
+          from
+          <Icon icon="teenyicons:arrow-right-outline" class="size-3" />
+          clem's human
+        </p>
+        <a href="https://github.com/clemony/lolpocket"
+          class="inline-flex gap-1 hover:font-bold hover:italic transition-all duration-300 underline items-center mt-2">
+          <Icon icon="ph:github-logo" />
+          <Icon icon="ph:at" />
+          clemony
+        </a>
 
-        <div
-          class="card rounded-box grid h-20 grid-cols-6 gap-3 grid-flow-row place-items-center *:text-base-content/85  *:size-6">
-          <Icon icon="fontisto:vuejs" />
-
-          <Icon icon="tabler:brand-vite" />
-          <Icon icon="devicon-plain:tauri" />
-          <Icon icon="file-icons:typescript" />
-          <Icon icon="codicon:vscode-insiders" />
-          <Icon icon="simple-icons:nodedotjs" />
-          <Icon icon="simple-icons:tailwindcss" />
-          <img class="grayscale contrast-200 brightness-50" src="/img/ui/daisyui.svg" />
-        </div>
       </div>
 
     </div>
+
+    <div class="divider divider-start text-xs">MADE WITH</div>
+
+    <div
+      class="card rounded-box grid h-20 grid-cols-6 gap-3 grid-flow-row place-items-center *:text-base-content/85  *:size-6">
+      <Icon icon="fontisto:vuejs" />
+
+      <Icon icon="tabler:brand-vite" />
+      <Icon icon="devicon-plain:tauri" />
+      <Icon icon="file-icons:typescript" />
+      <Icon icon="codicon:vscode-insiders" />
+      <Icon icon="simple-icons:nodedotjs" />
+      <Icon icon="simple-icons:tailwindcss" />
+      <img class="grayscale contrast-200 brightness-50" src="/img/ui/daisyui.svg" />
+    </div>
+  </div>
+
+  </div>
   </div>
 
 </template>
