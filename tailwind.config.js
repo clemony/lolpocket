@@ -53,6 +53,7 @@ module.exports = {
     themes: [
       {
         light: {
+          ...require("daisyui/src/theming/themes")["light"],
           "base-100": "oklch(100% 0 0)",
           "base-200": "oklch(93% 0 0)",
           "base-300": "oklch(86% 0 0)",
@@ -67,7 +68,32 @@ module.exports = {
   "warning": "oklch(86.95% 0.081 62.79)",
   "error": "oklch(79.62% 0.109 21.85)",
         },
-        nordark: {
+        dark: {
+          ...require("daisyui/src/theming/themes")["dark"],
+          "base-100": "oklch( 24.3535% 0 0)",
+          "base-200": "oklch( 22.6487% 0 0)",
+          "base-300": "oklch( 20.944% 0 0)",
+          "base-content": "oklch( 84.8707% 0 0)",
+          "neutral": "oklch( 27.441% 0.01325 253.041249)",
+          "neutral-content": "oklch( 85.4882% 0.00265 253.041249)",
+          "primary": "oklch(88.03% 0.046 187.85)",
+          "secondary": "oklch(82.91% 0.09 37.7)",
+          "accent": "oklch(91.18% 0.089 87.56)",
+  "info": "oklch(91.19% 0.07 104.16)",
+  "success": "oklch(87.28% 0.051 133.44)",
+  "warning": "oklch(86.95% 0.081 62.79)",
+  "error": "oklch(79.62% 0.109 21.85)",
+        },
+        nord: {
+          ...require("daisyui/src/theming/themes")["nord"],
+          "base-100": "oklch(100% 0 0)",
+          "base-200": "oklch(93% 0 0)",
+          "base-300": "oklch(86% 0 0)",
+          "base-content": "oklch(22.3899% 0.031305 278.07229)",
+          "neutral": "oklch(22.3899% 0.031305 278.07229)",
+          "neutral-content": "oklch(95.8796% 0.008588 247.915135)",
+        },
+        nord: {
           ...require("daisyui/src/theming/themes")["nord"],
           "base-100": "oklch( 30.8577% 0.023243 264.149498)",
           "base-200": "oklch( 28.0368% 0.01983 264.182074)",
@@ -75,6 +101,15 @@ module.exports = {
           "base-content": "oklch( 82.9011% 0.031335 222.959324)",
           "neutral": "oklch( 24.7311% 0.020483 264.094728)",
           "neutral-content": "oklch( 82.9011% 0.031335 222.959324)",
+        },
+        nord: {
+          ...require("daisyui/src/theming/themes")["nord"],
+          "base-100": "oklch( 24.3535% 0 0)",
+          "base-200": "oklch( 22.6487% 0 0)",
+          "base-300": "oklch( 20.944% 0 0)",
+          "base-content": "oklch( 84.8707% 0 0)",
+          "neutral": "oklch( 27.441% 0.01325 253.041249)",
+          "neutral-content": "oklch( 85.4882% 0.00265 253.041249)",
         },
         wifi: {
           ...require("daisyui/src/theming/themes")["business"],
