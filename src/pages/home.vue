@@ -36,8 +36,8 @@ const hasSource2 = ref('false');
 
         <div class="grid grid-cols-2 gap-6 pr-12 w-full pt-2">
             <div class="col-start-1 ">
-                <h2 class="text-xl w-full pr-4 justify-end h-8  font-serif italic text-right ">
-                    Recent <span class=" font-semibold font-sans not-italic ml-1"> builds</span>
+                <h2 class="text-xl w-full pr-5 justify-end h-8  font-serif text-right ">
+                    Recent <span class=" font-sans"> builds</span>
                 </h2>
 
                 <div class="grid grid-cols-1 mt-4 gap-4">
@@ -161,7 +161,7 @@ const hasSource2 = ref('false');
 
 
             <div class="col-start-2 pl-1">
-                <h2 class="text-xl w-full pr-4 justify-end h-8  font-serif text-right ">
+                <h2 class="text-xl w-full pr-5 justify-end h-8  font-serif text-right ">
                     Champion <span class=" font-sans"> winrates</span>
                 </h2>
                 <div class="grid grid-cols-1 gap-4 mt-4">
