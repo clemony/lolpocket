@@ -66,6 +66,7 @@ module.exports = {
           "secondary-content": "oklch(86.736% 0 0)",
           "accent": "oklch(33.6799% 0 0)",
           "accent-content": "oklch(86.736% 0 0)",
+          oklch(79.62% 0.109 21.85)
         },
         nordark: {
           ...require("daisyui/src/theming/themes")["nord"],
