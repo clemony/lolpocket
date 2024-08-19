@@ -292,7 +292,7 @@ onMounted(async () => {
 }
 
 .minimize .news-after {
-  @apply pl-[83px];
+  @apply pl-[73px];
 }
 
 
