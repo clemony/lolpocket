@@ -188,7 +188,7 @@ text.replace ('Active)
             class="ability-wrapper join join-vertical w-full bg-base-100 rounded-box mt-5 shadow-lg shadow-neutral/20">
             <div v-for="(ability, key) in selectedChampion.abilities" :key="key"
               class="collapse collapse-arrow join-item">
-              class="collapse collapse-arrow join-item">
+
 
               <input ref="abilityChecks" type="radio" name="abilityAccordion" :value="key"
                 @click="toggleAbilityAccordion(key)" />
