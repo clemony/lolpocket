@@ -36,8 +36,8 @@ const hasSource2 = ref('false');
 
         <div class="grid grid-cols-2 gap-6 pr-12 w-full pt-2">
             <div class="col-start-1 ">
-                <h2 class="text-xl w-full pr-5 justify-end h-8  font-serif text-right ">
-                    Recent <span class=" font-sans"> builds</span>
+                <h2 class="text-xl w-full pr-5 justify-end h-8 text-right ">
+                    Recent builds
                 </h2>
 
                 <div class="grid grid-cols-1 mt-4 gap-4">
