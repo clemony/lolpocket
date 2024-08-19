@@ -41,7 +41,7 @@ interface Champion {
 
 
 
-const keysToDisplay = ['COST', 'COOLDOWN', 'STATIC COOLDOWN'];
+const keysToDisplay = ['COST:', 'COOLDOWN:', 'STATIC COOLDOWN:'];
 
 const filteredData = (data: Record<string, string>) => {
   return Object.fromEntries(
