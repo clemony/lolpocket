@@ -91,7 +91,8 @@ export const useDataStore = defineStore("dataStore", () => {
         "SPEED:",
         "TARGET IMMUNITY:",
         "ANGLE:",
-        "COLLISION RADIUS:"
+        "COLLISION RADIUS:",
+        "TETHER RADIUS:",
       ];
   
       // Separate lines into categories and context
@@ -113,7 +114,7 @@ export const useDataStore = defineStore("dataStore", () => {
         }
       });
       
-      const context = contextLines.join('\n').trim().replace('Innate:', '').replace('Active:', '');
+      const context = contextLines.join('\n').trim().replace('Innate:', '').replace('Active:', '').replace('Innate -', '').replace('Active -', '').trim();
   
       return { name, context, data };
     }
