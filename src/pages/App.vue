@@ -66,8 +66,10 @@ function toggleMenus() {
   if (menu && checkbox) {
     if (checkbox.checked) {
       menu.classList.add("minimize");
+      News.classList.add("minimize");
       tooltipText.value = "Expand";
     } else {
+      menu.classList.remove("minimize");
       menu.classList.remove("minimize");
       tooltipText.value = "Collapse";
     }
@@ -288,7 +290,7 @@ onMounted(async () => {
   @apply grid-cols-[80px_auto] gap-6;
 }
 
-.minimize News {
+News.minimize {
   @apply pl-[100px];
 }
 
