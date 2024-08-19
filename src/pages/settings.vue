@@ -55,7 +55,7 @@ function updateTheme(theme: string) {
 
 
         <div role="tablist" class="tabs tabs-bordered">
-          <a role="tab" class="tab">Tab 1</a>
+          <label for="light" role="tab" class="tab">Tab 1</label>
           <a role="tab" class="tab tab-active">Tab 2</a>
           <a role="tab" class="tab">Tab 3</a>
         </div>
