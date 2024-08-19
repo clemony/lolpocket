@@ -82,17 +82,17 @@ export const useDataStore = defineStore("dataStore", () => {
         "COST:", 
         "COOLDOWN:", 
         "STATIC COOLDOWN:",
-        "TARGET RANGE:", 
-        "CAST TIME:", 
         "RECHARGE:", 
-        "EFFECT RADIUS:",
         "RANGE:",
         "WIDTH:",
         "SPEED:",
+        "CAST TIME:", 
+        "TARGET RANGE:", 
+        "EFFECT RADIUS:",
+        "TETHER RADIUS:",
+        "COLLISION RADIUS:",
         "TARGET IMMUNITY:",
         "ANGLE:",
-        "COLLISION RADIUS:",
-        "TETHER RADIUS:",
       ];
   
       // Separate lines into categories and context
