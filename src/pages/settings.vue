@@ -73,14 +73,14 @@ function updateTheme(theme: string) {
 
           <template v-for="scheme in schema">
             <label :for="scheme.name" class="m-1">
-              <div class="" data-act-class="!outline-base-content" :data-set-theme="scheme.key">
+              <div class="w-full h-full" data-act-class="!outline-base-content" :data-set-theme="scheme.key">
                 <div
-                  class=" p-2 w-full h-full rounded-btn !text-xs border border-base-300 shadow-md bg-base-100 text-base-content cursor-pointer"
+                  class="w-full h-full rounded-btn !text-xs border border-base-300 shadow-md bg-base-100 text-base-content cursor-pointer"
                   :data-theme="scheme.key">
                   <div class="grid grid-cols-5 grid-rows-3">
                     <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
                     <div class="bg-base-300 col-start-1 row-start-3"></div>
-                    <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex  gap-1 p-2">
+                    <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex  gap-1">
                       <input type="radio" :id="scheme.name" name="ui-scheme" class="" />
                       <div class="font-semibold ">{{ scheme.name }}</div>
                     </div>
