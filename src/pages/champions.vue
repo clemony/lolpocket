@@ -48,16 +48,6 @@ const selectedChampion = computed(() => dataStore.selectedChampion);
 console.log(selectedChampion);
 
 
-
-const selectedAbility = ref<string | null>(null);
-
-const toggleAbilityAccordion = (abilityKey: string) => {
-  if (selectedAbility.value === abilityKey) {
-    selectedAbility.value = null; // Unselect if already selected
-  } else {
-    selectedAbility.value = abilityKey; // Select the new ability
-  }
-};
 const query = ref('')
 
 const searchList = computed(() => {
@@ -182,7 +172,7 @@ function handleChampionClick(champion: Champion) {
             class="ability-wrapper join join-vertical w-full bg-base-100 rounded-box mt-5 shadow-lg shadow-neutral/20">
             <div v-for="(ability, key) in selectedChampion.abilities" :key="key"
               class="collapse collapse-arrow join-item">
-              <input type="checkbox" :id="'checkbox-' + ability.key" @change="toggleAbilityAccordion(ability.key)" />
+              <input type="checkbox" :id="'checkbox-' + ability.key" name="abilityBoxes" />
               <div class="collapse-title">
                 <img :src="ability.img" :alt="ability.name" />
                 <div>{{ ability.name }}</div>
