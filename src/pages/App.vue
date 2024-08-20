@@ -161,7 +161,7 @@ onMounted(async () => {
   <Splitter :gutter="0" class="h-screen">
 
     <SplitterPanel :size="17" :minSize="10" class="h-screen ">
-      <div class="h-screen m-0 p-0 transition-all duration-700 delay-200 z-0 shadow-lg">
+      <div class="h-screen m-0 p-0 transition-all duration-700 delay-200 z-0">
 
         <News v-if="isHome" class="!overflow-x-scroll " />
 
