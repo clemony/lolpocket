@@ -157,52 +157,54 @@ onMounted(async () => {
         /* -------------------------------------------------------------------------- */ -->
 
 
-  <Splitter>
+  <Splitter class="h-screen">
 
-    <SplitterPanel :size="17" :minSize="10" class=" m-0 p-0 transition-all duration-700 delay-200 z-0 shadow-lg">
+    <SplitterPanel :size="17" :minSize="10" class="h-screen">
+      <div class="h-screen m-0 p-0 transition-all duration-700 delay-200 z-0 shadow-lg">
 
-      <News v-if="isHome" class="!overflow-x-scroll " />
+        <News v-if="isHome" class="!overflow-x-scroll " />
 
-      <div ref="menuRef" id="menu"
-        class="overscroll-none bg-base-100/50 backdrop-blur-md nav h-full w-full  bg-blend-screen backdrop-brightness-125 z-10 ">
+        <div ref="menuRef" id="menu"
+          class="overscroll-none bg-base-100/50 backdrop-blur-md nav h-full w-full  bg-blend-screen backdrop-brightness-125 z-10 ">
 
-        <div class="h-[36px] w-full bg-base-200"></div>
-
-
-        <div>
-
-          <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
-            @nodeSelect="onNodeSelect" id="tree">
+          <div class="h-[36px] w-full bg-base-200"></div>
 
 
-            <template #nodetogglebutton>
-            </template>
+          <div>
 
-            <template #default="slotProps">
-
-              {{ slotProps.node.label }}
-            </template>
-
-            <template #addon="slotProps">
-              <div ref="label">{{ slotProps.node.label }}</div>
-
-              <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
-                <Icon icon='ph:plus' class="add-fill" />
-              </Button>
-            </template>
-
-          </Tree>
+            <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
+              @nodeSelect="onNodeSelect" id="tree">
 
 
+              <template #nodetogglebutton>
+              </template>
+
+              <template #default="slotProps">
+
+                {{ slotProps.node.label }}
+              </template>
+
+              <template #addon="slotProps">
+                <div ref="label">{{ slotProps.node.label }}</div>
+
+                <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
+                  <Icon icon='ph:plus' class="add-fill" />
+                </Button>
+              </template>
+
+            </Tree>
+
+
+          </div>
         </div>
       </div>
     </SplitterPanel>
-    <SplitterPanel :size="82" class="w-full h-screen m-0 p-0 pt-14 overflow-scroll bg-base-200">
+    <SplitterPanel :size="84">
+      <div class="w-full h-screen m-0 p-0 pt-14 overflow-scroll bg-base-200">
 
+        <component :is="currentComponent" />
 
-      <component :is="currentComponent" />
-
-
+      </div>
     </SplitterPanel>
   </Splitter>
 </template>
