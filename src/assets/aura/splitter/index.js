@@ -43,7 +43,7 @@ export default {
   }),
   gutterhandler: ({ props }) => ({
     class: [
-      "z-20",
+      "z-20 w-[10px]",
       // Colors
       "bg-surface-100",
       "dark:bg-surface-700",
