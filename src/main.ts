@@ -12,6 +12,8 @@ import { getCurrent } from '../node_modules/@tauri-apps/api/window.js';
 import Splitter from 'primevue/splitter';
 import SplitterPanel from 'primevue/splitterpanel';
 
+import VueSplitter from 'vue-splitter-pane'
+
 
 
 
@@ -22,7 +24,7 @@ const router = createRouter({
 })
 
 const app = createApp(App);
-
+app.component('VueSplitter', VueSplitter);
 // Get the current webview window
 const currentWindow = getCurrent();
 
