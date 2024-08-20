@@ -199,9 +199,9 @@ onMounted(async () => {
     </SplitterPanel>
     <SplitterPanel class="w-full h-screen m-0 p-0 pt-14 overflow-scroll bg-base-200">
 
-      <div>
-        <component :is="currentComponent" />
-      </div>
+
+      <component :is="currentComponent" />
+
 
     </SplitterPanel>
   </Splitter>
