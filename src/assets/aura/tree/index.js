@@ -1,116 +1,137 @@
 export default {
-    root: {
-        class: [
-            // Space
-            'p-4',
+  root: {
+    class: [
+      "text-xs tracking-wider",
+      // Space
+      "m-0 p-1.5",
 
-            // Shape
-            'rounded-md',
-            'border-none',
+      // Shape,
+      "border-none ",
 
-            // Color
-            'bg-surface-0 dark:bg-surface-900',
-            'text-surface-700 dark:text-white/80',
-            '[&_[data-pc-name=pcfilter]]:w-full'
-        ]
-    },
-    wrapper: {
-        class: ['overflow-auto']
-    },
-    container: {
-        class: [
-            // Spacing
-            'm-0 p-0',
+      // Color
+      "text-base-content",
 
-            // Misc
-            'list-none overflow-auto'
-        ]
-    },
-    node: {
-        class: ['p-0 my-[2px] mx-0 first:mt-0', 'rounded-md', 'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400 focus:z-10']
-    },
-    nodeContent: ({ context, props }) => ({
-        class: [
-            // Flex and Alignment
-            'flex items-center',
+      " ",
+    ],
+  },
+  wrapper: {
+    class: ["overflow-auto my-1"],
+  },
+  container: {
+    class: [
+      // Spacing
+      "m-0 p-0",
 
-            // Shape
-            'rounded-md',
+      // Misc
+      "list-none overflow-auto",
+    ],
+  },
+  node: {
+    class: ["focus:outline-none align-middle items-center relative my-1.5 w-full "],
+  },
+  nodeContent: ({ context, props }) => ({
+    class: [
+      // Flex and Alignment
+      "inline-flex items-center align-middle relative h-8 pr-1 pl-3 w-full rounded-btn",
 
-            // Spacing
-            'py-1 px-2 gap-2',
+      // Spacing
 
-            // Colors
-            context.selected ? 'bg-highlight text-primary-600 dark:text-white' : 'bg-transparent text-surface-600 dark:text-white/70',
+      // Colors
+      context.selected ? "bg-neutral/50 shadow-sm text-base-100" : " text-base-content hover:bg-base-200 hover:text-base-content hover:shadow-sm",
 
-            // States
-            { 'hover:bg-surface-50 dark:hover:bg-[rgba(255,255,255,0.03)]': (props.selectionMode == 'single' || props.selectionMode == 'multiple') && !context.selected },
+      // States
+      {
+        "hover:bg-base-200 hover:text-base-content hover:shadow-sm": (props.selectionMode == "single" || props.selectionMode == "multiple") && !context.selected,
+      },
 
-            // Transition
-            'transition-shadow duration-200',
+      // Transition
+      "duration-200",
 
-            { 'cursor-pointer select-none': props.selectionMode == 'single' || props.selectionMode == 'multiple' }
-        ]
-    }),
-    nodeToggleButton: ({ context }) => ({
-        class: [
-            // Flex and Alignment
-            'inline-flex items-center justify-center',
+      {
+        "cursor-pointer select-none": props.selectionMode == "single" || props.selectionMode == "multiple",
+      },
+    ],
+  }),
+  nodeToggleButton: ({ context }) => ({
+    class: [
+      // Flex and Alignment
+      "label inline-flex place-items-center h-full w-6 order-4 justify-self-end",
 
-            // Shape
-            'border-0 rounded-full',
+      // Shape
+      "border-0 outline-none outline-offset-0 ring-0",
 
-            // Size
-            'w-7 h-7',
+      // Size
 
-            // Colors
-            'bg-transparent',
-            {
-                'text-surface-600 dark:text-white/70': !context.selected,
-                'text-primary-600 dark:text-white': context.selected,
-                invisible: context.leaf
-            },
+      // Colors
+      "bg-transparent",
+      {
+        "text-base-content": !context.selected,
+        "text-base-content": context.selected,
 
-            // States
-            'hover:bg-surface-200/20 dark:hover:bg-surface-500/20',
-            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400',
+        invisible: context.leaf,
+        hidden: context.leaf,
+      },
 
-            // Transition
-            'transition duration-200',
+      // States
+      "hover:text-base-content",
+      "focus:outline-none focus:outline-offset-0 focus:ring-0",
 
-            // Misc
-            'cursor-pointer select-none'
-        ]
-    }),
-    nodeIcon: ({ context }) => ({
-        class: [
-            // Space
-            'mr-2',
+      // Transition
+      "transition duration-200",
 
-            // Color
-            {
-                'text-surface-600 dark:text-white/70': !context.selected,
-                'text-primary-600 dark:text-white': context.selected
-            }
-        ]
-    }),
-    nodeLabel: ({ context }) => ({
-        class: [
-            {
-                'text-surface-600 dark:text-white/70': !context.selected,
-                'text-primary-600 dark:text-white': context.selected
-            }
-        ]
-    }),
-    nodeChildren: {
-        class: ['m-0 list-none p-0 pl-4 [&:not(ul)]:pl-0 [&:not(ul)]:my-[2px]']
-    },
-    loadingIcon: {
-        class: ['text-surface-500 dark:text-surface-0/70', 'absolute top-[50%] right-[50%] -mt-2 -mr-2 animate-spin']
-    }
-    // pcFilterContainer: {
-    //     root: {
-    //         class: '[&>[data-pc-name=inputtext]]:w-full'
-    //     }
-    // }
+      // Misc
+      "cursor-pointer select-none nodetogglebutton",
+    ],
+  }),
+
+  nodeToggleIcon: ({ context }) => ({
+    class: [
+      "ph--caret-up",
+      {
+        "rotate-180 rotate-180-ccw": context.expanded,
+        "rotate-0 rotate-180-ccw reverse": !context.expanded,
+      },
+
+      "rotate-0 nodetoggleicon",
+    ],
+  }),
+
+  nodeIcon: ({ context }) => ({
+    class: [
+      // Space
+      "size-5 overflow-hidden order-1 absolute",
+
+      // Color
+      {
+        "text-base-content": !context.selected,
+        "text-base-content": context.selected,
+        "pl-0": context.leaf,
+      },
+
+      " nodeicon",
+    ],
+  }),
+  nodeLabel: ({ context }) => ({
+    class: [
+      "order-2 align-middle content-center items-center relative flex flex-grow h-8 ml-7 truncate line-clamp-1",
+
+      {
+        "text-foreground": !context.selected,
+        "text-background": context.selected,
+      },
+    ],
+  }),
+  nodeChildren: {
+    class: [
+      "list-none z-10 border-l border-l-base-200 ml-4 *:border-none *:ml-1",
+      //last:mb-3
+    ],
+  },
+  rootChildren: {
+    class: ["rootchildren"],
+  },
+
+  loadingIcon: {
+    class: ["text-surface-500 dark:text-surface-0/70", "absolute top-[50%] right-[50%] -mt-2 -mr-2 animate-spin"],
+  },
 };

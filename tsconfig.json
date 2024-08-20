@@ -39,9 +39,6 @@
             "@stores/*": [
                 "src/stores/*"
             ],
-            "@loader/*": [
-                "src/components/loader/*"
-            ],
             "@ui/*": [
                 "src/components/ui/*"
             ],
@@ -50,9 +47,6 @@
             ],
             "@/*": [
                 "src/*"
-            ],
-            "@presets/*": [
-                "src/assets/presets/*"
             ],
             "@page-build/*": [
                 "src/page-build/*"
