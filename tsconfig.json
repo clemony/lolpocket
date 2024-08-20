@@ -61,10 +61,316 @@
                 "src/components/cn/*"
             ],
             "@tree/*": [
-                "src/assets/tree/*"
+                "src/assets/aura/tree/*"
             ],
             "@resizable/*": [
                 "src/components/ui/resizable/*"
+            ],
+            "@aura/*": [
+                "src/assets/aura/*"
+            ],
+            "@accordion/*": [
+                "src/assets/aura/accordion/*"
+            ],
+            "@accordioncontent/*": [
+                "src/assets/aura/accordioncontent/*"
+            ],
+            "@accordionheader/*": [
+                "src/assets/aura/accordionheader/*"
+            ],
+            "@accordionpanel/*": [
+                "src/assets/aura/accordionpanel/*"
+            ],
+            "@autocomplete/*": [
+                "src/assets/aura/autocomplete/*"
+            ],
+            "@avatar/*": [
+                "src/assets/aura/avatar/*"
+            ],
+            "@avatargroup/*": [
+                "src/assets/aura/avatargroup/*"
+            ],
+            "@badge/*": [
+                "src/assets/aura/badge/*"
+            ],
+            "@badgedirective/*": [
+                "src/assets/aura/badgedirective/*"
+            ],
+            "@blockui/*": [
+                "src/assets/aura/blockui/*"
+            ],
+            "@breadcrumb/*": [
+                "src/assets/aura/breadcrumb/*"
+            ],
+            "@button/*": [
+                "src/assets/aura/button/*"
+            ],
+            "@buttongroup/*": [
+                "src/assets/aura/buttongroup/*"
+            ],
+            "@card/*": [
+                "src/assets/aura/card/*"
+            ],
+            "@carousel/*": [
+                "src/assets/aura/carousel/*"
+            ],
+            "@cascadeselect/*": [
+                "src/assets/aura/cascadeselect/*"
+            ],
+            "@checkbox/*": [
+                "src/assets/aura/checkbox/*"
+            ],
+            "@chip/*": [
+                "src/assets/aura/chip/*"
+            ],
+            "@colorpicker/*": [
+                "src/assets/aura/colorpicker/*"
+            ],
+            "@confirmdialog/*": [
+                "src/assets/aura/confirmdialog/*"
+            ],
+            "@confirmpopup/*": [
+                "src/assets/aura/confirmpopup/*"
+            ],
+            "@contextmenu/*": [
+                "src/assets/aura/contextmenu/*"
+            ],
+            "@datatable/*": [
+                "src/assets/aura/datatable/*"
+            ],
+            "@dataview/*": [
+                "src/assets/aura/dataview/*"
+            ],
+            "@datepicker/*": [
+                "src/assets/aura/datepicker/*"
+            ],
+            "@deferred/*": [
+                "src/assets/aura/deferred/*"
+            ],
+            "@dialog/*": [
+                "src/assets/aura/dialog/*"
+            ],
+            "@divider/*": [
+                "src/assets/aura/divider/*"
+            ],
+            "@dock/*": [
+                "src/assets/aura/dock/*"
+            ],
+            "@drawer/*": [
+                "src/assets/aura/drawer/*"
+            ],
+            "@fieldset/*": [
+                "src/assets/aura/fieldset/*"
+            ],
+            "@fileupload/*": [
+                "src/assets/aura/fileupload/*"
+            ],
+            "@floatlabel/*": [
+                "src/assets/aura/floatlabel/*"
+            ],
+            "@galleria/*": [
+                "src/assets/aura/galleria/*"
+            ],
+            "@iconfield/*": [
+                "src/assets/aura/iconfield/*"
+            ],
+            "@image/*": [
+                "src/assets/aura/image/*"
+            ],
+            "@inplace/*": [
+                "src/assets/aura/inplace/*"
+            ],
+            "@inputgroup/*": [
+                "src/assets/aura/inputgroup/*"
+            ],
+            "@inputgroupaddon/*": [
+                "src/assets/aura/inputgroupaddon/*"
+            ],
+            "@inputmask/*": [
+                "src/assets/aura/inputmask/*"
+            ],
+            "@inputnumber/*": [
+                "src/assets/aura/inputnumber/*"
+            ],
+            "@inputotp/*": [
+                "src/assets/aura/inputotp/*"
+            ],
+            "@inputswitch/*": [
+                "src/assets/aura/inputswitch/*"
+            ],
+            "@inputtext/*": [
+                "src/assets/aura/inputtext/*"
+            ],
+            "@knob/*": [
+                "src/assets/aura/knob/*"
+            ],
+            "@listbox/*": [
+                "src/assets/aura/listbox/*"
+            ],
+            "@megamenu/*": [
+                "src/assets/aura/megamenu/*"
+            ],
+            "@menu/*": [
+                "src/assets/aura/menu/*"
+            ],
+            "@menubar/*": [
+                "src/assets/aura/menubar/*"
+            ],
+            "@message/*": [
+                "src/assets/aura/message/*"
+            ],
+            "@metergroup/*": [
+                "src/assets/aura/metergroup/*"
+            ],
+            "@multiselect/*": [
+                "src/assets/aura/multiselect/*"
+            ],
+            "@orderlist/*": [
+                "src/assets/aura/orderlist/*"
+            ],
+            "@organizationchart/*": [
+                "src/assets/aura/organizationchart/*"
+            ],
+            "@overlaybadge/*": [
+                "src/assets/aura/overlaybadge/*"
+            ],
+            "@paginator/*": [
+                "src/assets/aura/paginator/*"
+            ],
+            "@panel/*": [
+                "src/assets/aura/panel/*"
+            ],
+            "@panelmenu/*": [
+                "src/assets/aura/panelmenu/*"
+            ],
+            "@password/*": [
+                "src/assets/aura/password/*"
+            ],
+            "@picklist/*": [
+                "src/assets/aura/picklist/*"
+            ],
+            "@popover/*": [
+                "src/assets/aura/popover/*"
+            ],
+            "@progressbar/*": [
+                "src/assets/aura/progressbar/*"
+            ],
+            "@progressspinner/*": [
+                "src/assets/aura/progressspinner/*"
+            ],
+            "@radiobutton/*": [
+                "src/assets/aura/radiobutton/*"
+            ],
+            "@rating/*": [
+                "src/assets/aura/rating/*"
+            ],
+            "@ripple/*": [
+                "src/assets/aura/ripple/*"
+            ],
+            "@scrollpanel/*": [
+                "src/assets/aura/scrollpanel/*"
+            ],
+            "@scrolltop/*": [
+                "src/assets/aura/scrolltop/*"
+            ],
+            "@select/*": [
+                "src/assets/aura/select/*"
+            ],
+            "@selectbutton/*": [
+                "src/assets/aura/selectbutton/*"
+            ],
+            "@skeleton/*": [
+                "src/assets/aura/skeleton/*"
+            ],
+            "@slider/*": [
+                "src/assets/aura/slider/*"
+            ],
+            "@speeddial/*": [
+                "src/assets/aura/speeddial/*"
+            ],
+            "@splitbutton/*": [
+                "src/assets/aura/splitbutton/*"
+            ],
+            "@splitter/*": [
+                "src/assets/aura/splitter/*"
+            ],
+            "@splitterpanel/*": [
+                "src/assets/aura/splitterpanel/*"
+            ],
+            "@step/*": [
+                "src/assets/aura/step/*"
+            ],
+            "@stepitem/*": [
+                "src/assets/aura/stepitem/*"
+            ],
+            "@steplist/*": [
+                "src/assets/aura/steplist/*"
+            ],
+            "@steppanels/*": [
+                "src/assets/aura/steppanels/*"
+            ],
+            "@stepper/*": [
+                "src/assets/aura/stepper/*"
+            ],
+            "@steps/*": [
+                "src/assets/aura/steps/*"
+            ],
+            "@tab/*": [
+                "src/assets/aura/tab/*"
+            ],
+            "@tablist/*": [
+                "src/assets/aura/tablist/*"
+            ],
+            "@tabmenu/*": [
+                "src/assets/aura/tabmenu/*"
+            ],
+            "@tabpanel/*": [
+                "src/assets/aura/tabpanel/*"
+            ],
+            "@tabpanels/*": [
+                "src/assets/aura/tabpanels/*"
+            ],
+            "@tabs/*": [
+                "src/assets/aura/tabs/*"
+            ],
+            "@tabview/*": [
+                "src/assets/aura/tabview/*"
+            ],
+            "@tag/*": [
+                "src/assets/aura/tag/*"
+            ],
+            "@terminal/*": [
+                "src/assets/aura/terminal/*"
+            ],
+            "@textarea/*": [
+                "src/assets/aura/textarea/*"
+            ],
+            "@tieredmenu/*": [
+                "src/assets/aura/tieredmenu/*"
+            ],
+            "@timeline/*": [
+                "src/assets/aura/timeline/*"
+            ],
+            "@toast/*": [
+                "src/assets/aura/toast/*"
+            ],
+            "@togglebutton/*": [
+                "src/assets/aura/togglebutton/*"
+            ],
+            "@toggleswitch/*": [
+                "src/assets/aura/toggleswitch/*"
+            ],
+            "@toolbar/*": [
+                "src/assets/aura/toolbar/*"
+            ],
+            "@tooltip/*": [
+                "src/assets/aura/tooltip/*"
+            ],
+            "@treeselect/*": [
+                "src/assets/aura/treeselect/*"
+            ],
+            "@treetable/*": [
+                "src/assets/aura/treetable/*"
             ]
         }
     }
