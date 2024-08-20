@@ -212,7 +212,7 @@ onMounted(async () => {
         </div>
 
 
-        <div class="w-full h-screen m-0 p-0 pt-14 pl-6 overflow-scroll bg-base-200 ">
+        <div class="w-full h-screen m-0 p-0 -mt-[36px] pt-14 pl-6 overflow-scroll bg-base-200 ">
 
           <component :is="currentComponent" />
 
