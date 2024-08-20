@@ -1,5 +1,4 @@
 import "@/assets/imports.css";
-import Menu from '@assets/tree/index.js';
 import App from "@/pages/App.vue";
 import Aura from "@assets/aura";
 import { createPinia } from 'pinia';
