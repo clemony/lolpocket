@@ -49,7 +49,10 @@ body:after {
   @apply m-0 p-0 overflow-hidden w-screen h-screen;
 }
 
+#app,
+html,
 body {
+  @apply border-none outline-none ring-0;
 }
 
 /*#app::before {
@@ -62,11 +65,12 @@ box-shadow: inset 0px 0px 4px 1px rgba(25, 25, 25, 0.3);
 @apply absolute top-[36px] left-[1px] w-[calc(100%-2px)] h-[calc(100%-36px)] border-background border-opacity-95 border-l-[4px] border-r-[4px] border-b-[5px] border-t-0 border-solid z-10 pointer-events-none ;
 }*/
 
+/*
 #app::after {
   content: "";
   border-radius: 9px;
   @apply absolute top-[0px] left-0 h-full w-full z-30 pointer-events-none;
-}
+}*/
 
 /*.titlebar::after {
   content: '';
