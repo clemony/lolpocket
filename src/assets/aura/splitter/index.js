@@ -6,6 +6,7 @@ export default {
       "dark:bg-surface-900",
       "text-surface-700",
       "dark:text-surface-0/80",
+      "shadow-none",
 
       // Shape
       "rounded-md",
