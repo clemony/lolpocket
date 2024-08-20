@@ -24,7 +24,7 @@ export default {
       "flex",
       "items-center",
       "justify-center",
-      "shrink-0 pb-0 mb-0",
+      "shrink-0 pb-0 mb-0 w-[1px]",
 
       // Colors
       "bg-base-300/70 bg-blend-lighten backdrop-brightness-125 backdrop-blur-md box-decoration-clone",
