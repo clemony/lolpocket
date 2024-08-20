@@ -1,6 +1,7 @@
 import "@/assets/imports.css";
 import Menu from '@assets/tree/index.js';
 import App from "@/pages/App.vue";
+import Aura from "@assets/aura";
 import { createPinia } from 'pinia';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import PrimeVue from "primevue/config";
@@ -73,7 +74,7 @@ app.use(pinia);
 app.use(router);
 app.use(PrimeVue, {
   unstyled: true,
-  pt: Menu
+  pt: Aura
 });
 
 
