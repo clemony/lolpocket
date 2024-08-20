@@ -19,6 +19,7 @@
 
 .glass {
   --glass-reflex-opacity: 0;
+  --glass-reflex-degree: 0;
 }
 
 .tooltip {
