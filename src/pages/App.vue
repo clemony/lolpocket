@@ -106,7 +106,7 @@ onMounted(async () => {
         /* -------------------------------------------------------------------------- */ -->
 
 
-  <Splitter class="h-screen">
+  <Splitter class="h-screen border-none">
 
     <SplitterPanel :size="17" :minSize="10" class="h-screen  relative">
       <div class="h-screen m-0 p-0 transition-all duration-700 delay-200 z-0">
