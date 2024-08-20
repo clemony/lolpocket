@@ -158,9 +158,9 @@ onMounted(async () => {
         /* -------------------------------------------------------------------------- */ -->
 
 
-  <vue-splitter split="vertical">
-    <template slot="left">
+  <Splitter :gutter="0" class="h-screen">
 
+    <SplitterPanel :size="17" :minSize="10" class="h-screen">
       <div class="h-screen m-0 p-0 transition-all duration-700 delay-200 z-0 shadow-lg">
 
         <News v-if="isHome" class="!overflow-x-scroll " />
@@ -199,16 +199,15 @@ onMounted(async () => {
           </div>
         </div>
       </div>
-    </template>
-    <template slot="right">
-
+    </SplitterPanel>
+    <SplitterPanel :gutter="0" :size="84" class="!w-full bg-base-200 !m-0 !p-0">
       <div class="w-full h-screen m-0 p-0 pt-14 overflow-scroll bg-base-200">
 
         <component :is="currentComponent" />
 
       </div>
-    </template>
-  </vue-splitter>
+    </SplitterPanel>
+  </Splitter>
 </template>
 
 <style>
