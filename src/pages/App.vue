@@ -183,7 +183,7 @@ onMounted(async () => {
         <div data-tauri-drag-region
           class="titlebar h-[36px] sticky z-20 p-[0px] items-center shadow-lg grid  grid-cols-2 backdrop-blur-md bg-base-100/60  ">
 
-          <div class="w-full col-start-1 justify-self-center z-0 dropdown">
+          <div class="w-full flex col-start-1 place-content-center z-0 dropdown">
 
             <SearchBox />
 

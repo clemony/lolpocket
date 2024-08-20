@@ -74,7 +74,7 @@ app.use(pinia);
 app.use(router);
 app.use(PrimeVue, {
   unstyled: true,
-  pt: Aura
+  pt: Aura,
 });
 
 
