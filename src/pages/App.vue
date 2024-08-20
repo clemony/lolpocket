@@ -162,14 +162,16 @@ onMounted(async () => {
     <SplitterPanel ref="menuRef" id="menu" class=" m-0 p-0 transition-all duration-700 delay-200 z-0">
 
       <News v-if="isHome" class="!overflow-x-scroll " />
-      <div class="z-10 shadow-lg">
-
-
-
-
+      <div ref="nav"
+        class="overscroll-none bg-base-100/50 shadow-lg backdrop-blur-md nav h-full w-full  bg-blend-screen backdrop-brightness-125 z-10 ">
         <div class="h-[36px] w-full bg-base-200"></div>
-        <div ref="nav"
-          class="overscroll-none bg-base-100/50 shadow-lg backdrop-blur-md nav h-full w-full  bg-blend-screen backdrop-brightness-125">
+
+
+
+
+
+
+        <div>
 
           <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
             @nodeSelect="onNodeSelect" id="tree">
