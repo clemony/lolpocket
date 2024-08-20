@@ -97,62 +97,9 @@ onMounted(async () => {
 
 <template>
 
-  <div data-tauri-drag-region
-    class="titlebar top-0 left-0 h-[36px] w-full grid grid-cols-2 fixed z-20 p-[0px] items-center  ">
 
-    <div
-      class="title col-start-1 justify-self-start flex items-center p-0 text-base tracking-wide font-semibold border-none shadow-none h-6 absolute left-[10px] top-[6px] z-40 bg-transparent">
 
-      <label
-        class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-right before:text-xs before:font-normal before:left-[75%] "
-        :data-tip="tooltipText" @click="toggleMenus()">
 
-        <!-- this hidden checkbox controls the state -->
-        <input type="checkbox" ref="checkboxRef" />
-
-        <!-- expanded icon -->
-
-        <Icon icon="tabler:layout-sidebar-right-expand-filled"
-          class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-off fill-current" />
-
-        <!-- collapsed icon -->
-        <Icon icon="tabler:layout-sidebar-left-expand-filled"
-          class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-on fill-current" />
-      </label>
-
-      <span>lolpocket</span>
-    </div>
-
-    <!-- Search box -->
-    <div class="shadow-lg w-full col-start-2 grid  grid-cols-2 backdrop-blur-md bg-base-100/60 ">
-      <div class="w-full col-start-1 justify-self-center z-0 dropdown">
-
-        <SearchBox />
-
-      </div>
-
-      <!-- /* ----------------------------- TOOLBAR BUTTONS ---------------------------- */ -->
-
-      <div
-        class="justify-self-end grid grid-cols-3 gap-2 mr-3 *:place-items-center  *: *:rounded-md *:size-6 text-base-content/60">
-
-        <div id="titlebar-minimize" data-tip="minimize" alt="minimize"
-          class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20">
-          <Icon icon="ph:line-vertical" class="rotate-90" />
-        </div>
-
-        <div id="titlebar-maximize" data-tip="maximize" alt="maximize"
-          class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20">
-          <Icon icon="ph:arrows-out-simple" />
-        </div>
-
-        <div id="titlebar-close" alt="close" data-tip="close"
-          class="p-1 hover:bg-base-300 hover:shadow-inner hover:shadow-base-content/20 hover:text-base-content">
-          <Icon icon="ph:x" class="titlebar-button" />
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!--   /* -------------------------------------------------------------------------- */
          /*                                 MENU START                            */
@@ -169,7 +116,36 @@ onMounted(async () => {
         <div ref="menuRef" id="menu"
           class="overscroll-none bg-base-100/50 backdrop-blur-md nav h-full w-full  bg-blend-lighten backdrop-brightness-150 z-10 box-decoration-slice">
 
-          <div class="h-[36px] w-full "></div>
+          <div class="h-[36px] w-full ">
+            <div data-tauri-drag-region class="titlebar top-0 left-0 h-[36px] w-full fixed z-20 p-[0px] items-center  ">
+
+              <div
+                class="justify-self-start flex items-center p-0 text-base tracking-wide font-semibold border-none shadow-none h-6 absolute left-[10px] top-[6px] z-40 bg-transparent">
+
+                <label
+                  class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-right before:text-xs before:font-normal before:left-[75%] "
+                  :data-tip="tooltipText" @click="toggleMenus()">
+
+                  <!-- this hidden checkbox controls the state -->
+                  <input type="checkbox" ref="checkboxRef" />
+
+                  <!-- expanded icon -->
+
+                  <Icon icon="tabler:layout-sidebar-right-expand-filled"
+                    class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-off fill-current" />
+
+                  <!-- collapsed icon -->
+                  <Icon icon="tabler:layout-sidebar-left-expand-filled"
+                    class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-on fill-current" />
+                </label>
+
+                <span>lolpocket</span>
+              </div>
+            </div>
+
+          </div>
+
+
 
 
           <div>
@@ -202,6 +178,39 @@ onMounted(async () => {
       </div>
     </SplitterPanel>
     <SplitterPanel :gutter="0" :size="84">
+      <!-- Search box -->
+
+      <div data-tauri-drag-region class="titlebar top-0 left-0 h-[36px] w-full fixed z-20 p-[0px] items-center  ">
+        <div class="shadow-lg w-full col-start-2 grid  grid-cols-2 backdrop-blur-md bg-base-100/60 ">
+          <div class="w-full col-start-1 justify-self-center z-0 dropdown">
+
+            <SearchBox />
+
+          </div>
+
+          <!-- /* ----------------------------- TOOLBAR BUTTONS ---------------------------- */ -->
+
+          <div
+            class="justify-self-end grid grid-cols-3 gap-2 mr-3 *:place-items-center  *: *:rounded-md *:size-6 text-base-content/60">
+
+            <div id="titlebar-minimize" data-tip="minimize" alt="minimize"
+              class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20">
+              <Icon icon="ph:line-vertical" class="rotate-90" />
+            </div>
+
+            <div id="titlebar-maximize" data-tip="maximize" alt="maximize"
+              class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20">
+              <Icon icon="ph:arrows-out-simple" />
+            </div>
+
+            <div id="titlebar-close" alt="close" data-tip="close"
+              class="p-1 hover:bg-base-300 hover:shadow-inner hover:shadow-base-content/20 hover:text-base-content">
+              <Icon icon="ph:x" class="titlebar-button" />
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="w-full h-screen m-0 p-0 pt-14 pl-6 overflow-scroll bg-base-200 ">
 
         <component :is="currentComponent" />
