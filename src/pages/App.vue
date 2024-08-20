@@ -106,7 +106,7 @@ onMounted(async () => {
         /* -------------------------------------------------------------------------- */ -->
 
 
-  <Splitter :gutter="0" class="h-screen">
+  <Splitter class="h-screen">
 
     <SplitterPanel :size="17" :minSize="10" class="h-screen  relative">
       <div class="h-screen m-0 p-0 transition-all duration-700 delay-200 z-0">
@@ -177,7 +177,7 @@ onMounted(async () => {
         </div>
       </div>
     </SplitterPanel>
-    <SplitterPanel :gutter="0" :size="84">
+    <SplitterPanel :size="84">
       <!-- Search box -->
       <div class="relative">
         <div data-tauri-drag-region
