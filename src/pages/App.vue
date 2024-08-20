@@ -157,9 +157,8 @@ onMounted(async () => {
         /* -------------------------------------------------------------------------- */ -->
 
 
-  <Splitter>
-    <div ref="menuRef" id="menu"
-      class="w-screen grid grid-cols-[280px_calc(100%-280px)]   m-0 p-0 transition-all duration-700 delay-200 z-0">
+  <Splitter class="w-screen">
+    <div ref="menuRef" id="menu" class=" m-0 p-0 transition-all duration-700 delay-200 z-0">
 
       <SplitterPanel>
 
