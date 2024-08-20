@@ -108,7 +108,7 @@ onMounted(async () => {
 
   <Splitter :gutter="0" class="h-screen">
 
-    <SplitterPanel :size="17" :minSize="10" class="h-screen ">
+    <SplitterPanel :size="17" :minSize="10" class="h-screen  relative">
       <div class="h-screen m-0 p-0 transition-all duration-700 delay-200 z-0">
 
         <News v-if="isHome" class="!overflow-x-scroll " />
@@ -177,10 +177,10 @@ onMounted(async () => {
         </div>
       </div>
     </SplitterPanel>
-    <SplitterPanel :gutter="0" :size="84">
+    <SplitterPanel :gutter="0" :size="84" class=" relative">
       <!-- Search box -->
 
-      <div data-tauri-drag-region class="titlebar top-0 left-0 h-[36px] w-full fixed z-20 p-[0px] items-center  ">
+      <div data-tauri-drag-region class="titlebar  h-[36px] w-full fixed z-20 p-[0px] items-center  ">
         <div class="shadow-lg w-full col-start-2 grid  grid-cols-2 backdrop-blur-md bg-base-100/60 ">
           <div class="w-full col-start-1 justify-self-center z-0 dropdown">
 
