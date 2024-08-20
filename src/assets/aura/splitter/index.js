@@ -28,7 +28,7 @@ export default {
 
       // Colors
       "bg-base-300/70 bg-blend-lighten backdrop-brightness-125 backdrop-blur-md box-decoration-clone",
-      "dark:bg-surface-700",
+      "dark:bg-surface-700  shadow-inner",
 
       // Transitions
       "transition-all",
