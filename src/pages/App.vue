@@ -98,7 +98,7 @@ onMounted(async () => {
 <template>
 
   <div data-tauri-drag-region
-    class="titlebar top-0 left-0 h-[36px] w-full backdrop-blur-md bg-base-100/60 grid grid-cols-3 fixed z-20 p-[0px] items-center  shadow-lg">
+    class="titlebar top-0 left-0 h-[36px] w-full backdrop-blur-md bg-base-100/60 grid grid-cols-3 fixed z-20 p-[0px] items-center  ">
 
     <div
       class="title col-start-1 justify-self-start flex items-center p-0 text-base tracking-wide font-semibold border-none shadow-none h-6 absolute left-[10px] top-[6px] z-40 bg-transparent">
@@ -124,31 +124,32 @@ onMounted(async () => {
     </div>
 
     <!-- Search box -->
+    <div class="shadow-lg col-start-2 ">
+      <div class="w-full justify-self-center z-0 dropdown">
 
-    <div class="w-full col-start-2 justify-self-center z-0 dropdown">
+        <SearchBox />
 
-      <SearchBox />
-
-    </div>
-
-    <!-- /* ----------------------------- TOOLBAR BUTTONS ---------------------------- */ -->
-
-    <div
-      class="justify-self-end grid grid-cols-3 gap-2 mr-3 *:place-items-center  *: *:rounded-md *:size-6 text-base-content/60">
-
-      <div id="titlebar-minimize" data-tip="minimize" alt="minimize"
-        class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20">
-        <Icon icon="ph:line-vertical" class="rotate-90" />
       </div>
 
-      <div id="titlebar-maximize" data-tip="maximize" alt="maximize"
-        class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20">
-        <Icon icon="ph:arrows-out-simple" />
-      </div>
+      <!-- /* ----------------------------- TOOLBAR BUTTONS ---------------------------- */ -->
 
-      <div id="titlebar-close" alt="close" data-tip="close"
-        class="p-1 hover:bg-base-300 hover:shadow-inner hover:shadow-base-content/20 hover:text-base-content">
-        <Icon icon="ph:x" class="titlebar-button" />
+      <div
+        class="justify-self-end grid grid-cols-3 gap-2 mr-3 *:place-items-center  *: *:rounded-md *:size-6 text-base-content/60">
+
+        <div id="titlebar-minimize" data-tip="minimize" alt="minimize"
+          class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20">
+          <Icon icon="ph:line-vertical" class="rotate-90" />
+        </div>
+
+        <div id="titlebar-maximize" data-tip="maximize" alt="maximize"
+          class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20">
+          <Icon icon="ph:arrows-out-simple" />
+        </div>
+
+        <div id="titlebar-close" alt="close" data-tip="close"
+          class="p-1 hover:bg-base-300 hover:shadow-inner hover:shadow-base-content/20 hover:text-base-content">
+          <Icon icon="ph:x" class="titlebar-button" />
+        </div>
       </div>
     </div>
   </div>
