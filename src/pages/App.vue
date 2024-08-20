@@ -177,45 +177,46 @@ onMounted(async () => {
         </div>
       </div>
     </SplitterPanel>
-    <SplitterPanel :gutter="0" :size="84" class="relative">
+    <SplitterPanel :gutter="0" :size="84">
       <!-- Search box -->
+      <div class="relative">
+        <div data-tauri-drag-region
+          class="titlebar h-[36px] fixed z-20 p-[0px] left-0 right-0 items-center shadow-lg grid  grid-cols-2 backdrop-blur-md bg-base-100/60  ">
 
-      <div data-tauri-drag-region
-        class="titlebar h-[36px] fixed z-20 p-[0px] items-center shadow-lg grid  grid-cols-2 backdrop-blur-md bg-base-100/60  ">
+          <div class="w-full col-start-1 justify-self-center z-0 dropdown">
 
-        <div class="w-full col-start-1 justify-self-center z-0 dropdown">
+            <SearchBox />
 
-          <SearchBox />
+          </div>
 
+          <!-- /* ----------------------------- TOOLBAR BUTTONS ---------------------------- */ -->
+
+          <div
+            class="justify-self-end col-start-2 grid grid-cols-3 gap-2 mr-3 *:place-items-center  *: *:rounded-md *:size-6 text-base-content/60">
+
+            <div id="titlebar-minimize" data-tip="minimize" alt="minimize"
+              class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20">
+              <Icon icon="ph:line-vertical" class="rotate-90" />
+            </div>
+
+            <div id="titlebar-maximize" data-tip="maximize" alt="maximize"
+              class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20">
+              <Icon icon="ph:arrows-out-simple" />
+            </div>
+
+            <div id="titlebar-close" alt="close" data-tip="close"
+              class="p-1 hover:bg-base-300 hover:shadow-inner hover:shadow-base-content/20 hover:text-base-content">
+              <Icon icon="ph:x" class="titlebar-button" />
+            </div>
+          </div>
         </div>
 
-        <!-- /* ----------------------------- TOOLBAR BUTTONS ---------------------------- */ -->
 
-        <div
-          class="justify-self-end col-start-2 grid grid-cols-3 gap-2 mr-3 *:place-items-center  *: *:rounded-md *:size-6 text-base-content/60">
+        <div class="w-full h-screen m-0 p-0 pt-14 pl-6 overflow-scroll bg-base-200 ">
 
-          <div id="titlebar-minimize" data-tip="minimize" alt="minimize"
-            class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20">
-            <Icon icon="ph:line-vertical" class="rotate-90" />
-          </div>
+          <component :is="currentComponent" />
 
-          <div id="titlebar-maximize" data-tip="maximize" alt="maximize"
-            class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20">
-            <Icon icon="ph:arrows-out-simple" />
-          </div>
-
-          <div id="titlebar-close" alt="close" data-tip="close"
-            class="p-1 hover:bg-base-300 hover:shadow-inner hover:shadow-base-content/20 hover:text-base-content">
-            <Icon icon="ph:x" class="titlebar-button" />
-          </div>
         </div>
-      </div>
-
-
-      <div class="w-full h-screen m-0 p-0 pt-14 pl-6 overflow-scroll bg-base-200 ">
-
-        <component :is="currentComponent" />
-
       </div>
     </SplitterPanel>
   </Splitter>
