@@ -17,6 +17,10 @@
   @apply scroll-smooth bg-transparent;
 }
 
+.glass {
+  --glass-reflex-opacity: 0;
+}
+
 .tooltip {
   @apply ![--tooltip-offset:30px] ![--tooltip-tail-offset:24px];
 }
