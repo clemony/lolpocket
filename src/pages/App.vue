@@ -169,7 +169,7 @@ onMounted(async () => {
         <div ref="menuRef" id="menu"
           class="overscroll-none bg-base-100/50 backdrop-blur-md nav h-full w-full  bg-blend-lighten backdrop-brightness-150 z-10 box-decoration-slice">
 
-          <div class="h-[36px] w-full bg-base-200"></div>
+          <div class="h-[36px] w-full "></div>
 
 
           <div>
