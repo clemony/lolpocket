@@ -124,8 +124,8 @@ onMounted(async () => {
     </div>
 
     <!-- Search box -->
-    <div class="shadow-lg col-start-2 backdrop-blur-md bg-base-100/60 ">
-      <div class="w-full justify-self-center z-0 dropdown">
+    <div class="shadow-lg w-full col-start-2 grid  grid-cols-2 backdrop-blur-md bg-base-100/60 ">
+      <div class="w-full col-start-1 justify-self-center z-0 dropdown">
 
         <SearchBox />
 
