@@ -11,6 +11,7 @@ import { Icon } from '@iconify/vue';
 import { useUserSettings } from '@stores/userSettings';
 import { DefineComponent } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import VueSplitter from "vue-splitter-pane";
 
 const settings = useUserSettings();
 
