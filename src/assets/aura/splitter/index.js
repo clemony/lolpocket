@@ -27,7 +27,7 @@ export default {
       "shrink-0",
 
       // Colors
-      "bg-base-100/50 glass",
+      "bg-base-100/50 glass box-decoration-clone border-none outline-none ",
       "dark:bg-surface-700",
 
       // Transitions
