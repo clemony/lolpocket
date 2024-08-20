@@ -159,7 +159,7 @@ onMounted(async () => {
 
   <Splitter>
 
-    <SplitterPanel :size="15" :minSize="10" class=" m-0 p-0 transition-all duration-700 delay-200 z-0 shadow-lg">
+    <SplitterPanel :size="17" :minSize="10" class=" m-0 p-0 transition-all duration-700 delay-200 z-0 shadow-lg">
 
       <News v-if="isHome" class="!overflow-x-scroll " />
 
@@ -197,7 +197,7 @@ onMounted(async () => {
         </div>
       </div>
     </SplitterPanel>
-    <SplitterPanel :size="85" class="w-full h-screen m-0 p-0 pt-14 overflow-scroll bg-base-200">
+    <SplitterPanel :size="82" class="w-full h-screen m-0 p-0 pt-14 overflow-scroll bg-base-200">
 
 
       <component :is="currentComponent" />
