@@ -177,7 +177,7 @@ onMounted(async () => {
         </div>
       </div>
     </SplitterPanel>
-    <SplitterPanel :gutter="0" :size="84" class=" relative">
+    <SplitterPanel :gutter="0" :size="84" class="relative">
       <!-- Search box -->
 
       <div data-tauri-drag-region
