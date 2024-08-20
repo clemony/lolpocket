@@ -114,7 +114,7 @@ onMounted(async () => {
         <News v-if="isHome" class="!overflow-x-scroll " />
 
         <div ref="menuRef" id="menu"
-          class="nav h-full w-full z-10 overscroll-none bg-base-100/50 backdrop-blur-md bg-blend-lighten backdrop-brightness-150 box-decoration-slice">
+          class="h-full w-full z-10 overscroll-none bg-base-100/50 backdrop-blur-md bg-blend-lighten backdrop-brightness-150 box-decoration-slice">
 
           <div class="h-[36px] w-full ">
             <div data-tauri-drag-region class="titlebar top-0 left-0 h-[36px] w-full fixed z-20 p-[0px] items-center  ">
