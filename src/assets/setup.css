@@ -50,8 +50,6 @@ body:after {
 }
 
 body {
-  box-shadow: inset 0px 0px 4px 1px rgba(25, 25, 25, 0.2);
-  outline: 2px solid oklch(var(--p));
 }
 
 /*#app::before {
@@ -66,10 +64,8 @@ box-shadow: inset 0px 0px 4px 1px rgba(25, 25, 25, 0.3);
 
 #app::after {
   content: "";
-  border-style: solid;
   border-radius: 9px;
-  box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
-  @apply absolute top-[0px] left-0 h-full w-full border-secondary-content/20 border-solid border-[1px] border-t-0 z-30 pointer-events-none;
+  @apply absolute top-[0px] left-0 h-full w-full z-30 pointer-events-none;
 }
 
 /*.titlebar::after {
