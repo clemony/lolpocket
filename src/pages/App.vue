@@ -157,7 +157,7 @@ onMounted(async () => {
         /* -------------------------------------------------------------------------- */ -->
 
 
-  <Splitter class="w-screen h-screen">
+  <Splitter>
 
     <SplitterPanel ref="menuRef" id="menu" class=" m-0 p-0 transition-all duration-700 delay-200 z-0 shadow-lg">
 
