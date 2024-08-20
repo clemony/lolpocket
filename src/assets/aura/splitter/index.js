@@ -27,7 +27,7 @@ export default {
       "shrink-0",
 
       // Colors
-      "bg-surface-100",
+      "bg-base-300/60",
       "dark:bg-surface-700",
 
       // Transitions
