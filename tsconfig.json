@@ -62,6 +62,9 @@
             ],
             "@tree/*": [
                 "src/assets/tree/*"
+            ],
+            "@resizable/*": [
+                "src/components/ui/resizable/*"
             ]
         }
     }
