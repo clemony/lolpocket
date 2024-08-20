@@ -27,7 +27,7 @@ export default {
       "shrink-0 pb-0 mb-0",
 
       // Colors
-      "bg-base-300/70 bg-blend-screen backdrop-brightness-125 backdrop-blur-md box-decoration-clone",
+      "bg-base-300/70 bg-blend-lighten backdrop-brightness-125 backdrop-blur-md box-decoration-clone",
       "dark:bg-surface-700",
 
       // Transitions
