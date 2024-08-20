@@ -202,7 +202,7 @@ onMounted(async () => {
     </SplitterPanel>
     <SplitterPanel :gutter="0" :size="84"
       class="!w-full bg-base-200 justify-end justify-items-end justify-self-end !mr-0 !m-0 !p-0">
-      <div class="w-full h-screen m-0 p-0 pt-14 overflow-scroll bg-base-200 flex-grow-1" style="flex-grow:1;">
+      <div class="w-full h-screen m-0 p-0 pt-14 overflow-scroll bg-base-200 flex-grow-1">
 
         <component :is="currentComponent" />
 
