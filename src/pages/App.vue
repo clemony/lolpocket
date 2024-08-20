@@ -223,6 +223,10 @@ onMounted(async () => {
 </template>
 
 <style>
+.titlebar {
+  width: inherit;
+}
+
 [data-pc-section="nodechildren"] {
   @apply h-8 truncate;
 
