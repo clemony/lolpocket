@@ -5,7 +5,7 @@ const query = ref('');
 </script>
 
 <template>
-    <form class="text-center justify-items-center rounded-lg z-0">
+    <form class="w-full pl-6 rounded-lg z-0">
 
         <div class="relative max-w-[470px] border-0 outline-0 ring-0">
             <div class=" w-full h-[28px] shadow-inner shadow-base-content/15 bg-base-200/50 border border-base-content/10 
