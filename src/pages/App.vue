@@ -98,7 +98,7 @@ onMounted(async () => {
 <template>
 
   <div data-tauri-drag-region
-    class="titlebar top-0 left-0 h-[36px] w-full backdrop-blur-md bg-base-100/60 grid grid-cols-3 fixed z-20 p-[0px] items-center  ">
+    class="titlebar top-0 left-0 h-[36px] w-full grid grid-cols-3 fixed z-20 p-[0px] items-center  ">
 
     <div
       class="title col-start-1 justify-self-start flex items-center p-0 text-base tracking-wide font-semibold border-none shadow-none h-6 absolute left-[10px] top-[6px] z-40 bg-transparent">
@@ -124,7 +124,7 @@ onMounted(async () => {
     </div>
 
     <!-- Search box -->
-    <div class="shadow-lg col-start-2 ">
+    <div class="shadow-lg col-start-2 backdrop-blur-md bg-base-100/60 ">
       <div class="w-full justify-self-center z-0 dropdown">
 
         <SearchBox />
