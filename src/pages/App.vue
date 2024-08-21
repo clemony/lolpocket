@@ -136,7 +136,7 @@ onMounted(async () => {
         /* -------------------------------------------------------------------------- */ -->
 
 
-  <Splitter class="h-screen hihi z-20 overflow-hidden w-screen bg-blend-lighten bg-base-100/75 glass"
+  <Splitter class="h-screen hihi z-20 overflow-hidden w-screen bg-blend-lighten bg-base-100/70 glass"
     @resize.SplitterResizeEvent="test" :gutter-size="2">
 
     <SplitterPanel :size="firstPanelSize" :minSize="0" :class="{ 'minimize': isMinimized }"

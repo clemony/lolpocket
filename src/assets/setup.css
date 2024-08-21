@@ -21,7 +21,7 @@
   --glass-reflex-opacity: 0;
   --glass-reflex-degree: 0;
   --glass-blur: 5px;
-  --glass-opacity: 0.4;
+  --glass-opacity: 0.3;
 }
 
 [data-theme="nord"] .glass,
