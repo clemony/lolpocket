@@ -151,7 +151,8 @@ onMounted(async () => {
 
 
           <div class=" ml-2 font-bold text-lg tracking-wider flex gap-2 items-center">
-            <div class="font-light font-mono border-[1px] border-base-content size-6 select-none">
+            <div
+              class="font-normal text-right content-end pr-[1px] text-[10px] font-mono border-[1px] border-base-content h-[22px] w-[23px] select-none rounded-sm">
               LP
             </div>
             lolpocket
