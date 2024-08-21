@@ -25,7 +25,7 @@
 }
 
 [data-theme="light"] .set-bg {
-  @apply bg-blend-lighten backdrop-brightness-150 bg-base-100/60 glass;
+  @apply bg-blend-lighten backdrop-brightness-200 bg-base-100/60 glass;
 }
 
 [data-theme="nord"] .glass,
