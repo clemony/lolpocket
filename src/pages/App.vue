@@ -153,8 +153,11 @@ onMounted(async () => {
           <div class=" text-right ml-2 select-none font-bold text-lg tracking-wider flex gap-2 items-center">
             <div class="flex place-items-center  ">
 
-              <Icon icon="ci:house-02" class="" />
-              <!--<span class="text-base-100 mt-[2px] bg-clip -ml-[2px] font-bold font-mono text-sm leading-tight">LP</span>-->
+
+
+
+              <!-- <Icon icon="ci:house-02" class="" />
+              <span class="text-base-100 mt-[2px] bg-clip -ml-[2px] font-bold font-mono text-sm leading-tight">LP</span>-->
             </div>
             lolpocket
           </div>
