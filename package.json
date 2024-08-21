@@ -23,6 +23,7 @@
     "@fontsource/geist-sans": "^5.0.3",
     "@grapoza/vue-tree": "^5.2.2",
     "@iconify/vue": "^4.1.2",
+    "@tailwindcss/container-queries": "^0.1.1",
     "@vue/runtime-core": "^3.4.31",
     "@vueuse/core": "^10.11.0",
     "class-variance-authority": "^0.7.0",

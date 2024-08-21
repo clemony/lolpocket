@@ -3,10 +3,11 @@ const scrollbarhide = require("tailwind-scrollbar-hide");
 const typography = require("@tailwindcss/typography");
 const colors = require("tailwindcss/colors");
 const daisyui = require("daisyui");
+const containerQueries = require("@tailwindcss/container-queries");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  plugins: [animate, scrollbarhide, typography, daisyui],
+  plugins: [animate, scrollbarhide, containerQueries, typography, daisyui],
 
   darkMode: ["class"],
   safelist: ["dark"],
@@ -17,6 +18,7 @@ module.exports = {
     extend: {
       fontSize: {
         xxs: "0.599rem",
+        smx: "0.69rem",
       },
     },
     container: {
@@ -60,6 +62,9 @@ module.exports = {
           "base-content": "oklch(22.3899% 0.031305 278.07229)",
           "neutral": "oklch(22.3899% 0.031305 278.07229)",
           "neutral-content": "oklch(95.8796% 0.008588 247.915135)",
+
+        },
+        rainbow: {
           "primary": "oklch(88.03% 0.046 187.85)",
           "secondary": "oklch(82.91% 0.09 37.7)",
           "accent": "oklch(91.18% 0.089 87.56)",

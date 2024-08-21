@@ -4,16 +4,16 @@ import Champions from '@/pages/champions.vue';
 import Home from '@/pages/home.vue';
 import Items from '@/pages/items.vue';
 import Runes from '@/pages/runes.vue';
-import News from '@pages/modules/news.vue';
 import Settings from '@/pages/settings.vue';
 import { useDataStore } from '@/stores/dataStore';
 import { Icon } from '@iconify/vue';
 import { useUserSettings } from '@stores/userSettings';
 import { DefineComponent } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import VueSplitter from "vue-splitter-pane";
 
 const settings = useUserSettings();
+
+
 
 /* ------------------------------- NAVIGATION ------------------------------- */
 
@@ -67,15 +67,40 @@ function toggleMenus() {
   if (menu && checkbox) {
     if (checkbox.checked) {
       menu.classList.add("minimize");
-      News.classList.add("minimize");
       tooltipText.value = "Expand";
     } else {
-      menu.classList.remove("minimize");
       menu.classList.remove("minimize");
       tooltipText.value = "Collapse";
     }
   }
 };
+
+
+// State to track if the panel should have the 'minimize' class
+const isMinimized = ref(false);
+
+// Track the size of the first panel
+const firstPanelSize = ref(17);  // Initialize with default size
+
+// Callback function for the splitter resize event
+function test(event: any) {
+  const firstSize = event.sizes[0]; // Get the size of the first panel
+
+  if (firstSize < 12) {
+    isMinimized.value = true;   // Add 'minimize' class
+    firstPanelSize.value = 3;   // Set size to 5
+  } else {
+    isMinimized.value = false;  // Remove 'minimize' class
+    firstPanelSize.value = firstSize; // Maintain the dynamic size from the splitter
+  }
+}
+
+const showDropdowns = ref([false, true, true]); // Track visibility for each dropdown (index-based)
+
+// Toggle visibility for the dropdown at a specific index
+function toggleShow(index: number) {
+  showDropdowns.value[index] = !showDropdowns.value[index];
+}
 
 /* ------------------------------ ON MOUNTED ----------------------------- */
 
@@ -106,84 +131,129 @@ onMounted(async () => {
         /* -------------------------------------------------------------------------- */ -->
 
 
-  <Splitter class="h-screen border-none">
+  <Splitter class="h-screen hihi z-20 overflow-hidden w-screen bg-blend-lighten bg-base-100/75 glass"
+    @resize.SplitterResizeEvent="test" :gutter-size="2">
 
-    <SplitterPanel :size="17" :minSize="10" class="h-screen  relative">
-      <div class="h-screen m-0 p-0 transition-all duration-700 delay-200 z-0">
+    <SplitterPanel :size="firstPanelSize" :minSize="0" :class="{ 'minimize': isMinimized }"
+      class="max-w-80 h-screen relative bg-transparent">
 
-        <News v-if="isHome" class="!overflow-x-scroll " />
 
-        <div ref="menuRef" id="menu"
-          class="h-full w-full z-10 overscroll-none bg-base-100/50 glass box-decoration-slice shadow-none">
 
-          <div class="h-[36px] w-full ">
-            <div data-tauri-drag-region class="titlebar top-0 left-0 h-[36px] w-full fixed z-20 p-[0px] items-center  ">
+      <div ref="menuRef" class=" h-full w-full z-10  ">
 
-              <div
-                class="justify-self-start flex items-center p-0 text-base tracking-wide font-semibold border-none shadow-none h-6 absolute left-[10px] top-[6px] z-40 bg-transparent">
 
-                <label
-                  class="place-content-center swap swap-flip w-10 text-base-content/80 tooltip tooltip-right before:text-xs before:font-normal before:left-[75%] "
-                  :data-tip="tooltipText" @click="toggleMenus()">
+        <div data-tauri-drag-region class="titlebar top-0 left-0 h-[36px] w-full sticky z-20  items-center p-3">
 
-                  <!-- this hidden checkbox controls the state -->
-                  <input type="checkbox" ref="checkboxRef" />
 
-                  <!-- expanded icon -->
 
-                  <Icon icon="tabler:layout-sidebar-right-expand-filled"
-                    class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-off fill-current" />
-
-                  <!-- collapsed icon -->
-                  <Icon icon="tabler:layout-sidebar-left-expand-filled"
-                    class="absolute top-[2px] left-0 size-5 ml-2 mr-3 swap-on fill-current" />
-                </label>
-
-                <span>lolpocket</span>
-              </div>
+          <div class=" ml-2 font-bold text-lg tracking-wider flex gap-2 items-center">
+            <div class="font-light font-mono border-[1px] border-base-content size-6 select-none">
+              LP
             </div>
-
+            lolpocket
           </div>
 
 
 
-
-          <div>
-
-            <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
-              @nodeSelect="onNodeSelect" id="tree">
+        </div>
 
 
-              <template #nodetogglebutton>
-              </template>
-
-              <template #default="slotProps">
-
-                {{ slotProps.node.label }}
-              </template>
-
-              <template #addon="slotProps">
-                <div ref="label">{{ slotProps.node.label }}</div>
-
-                <Button ref="label" variant="null" class="add-build cursor-pointer" title="create new build">
-                  <Icon icon='ph:plus' class="add-fill" />
-                </Button>
-              </template>
-
-            </Tree>
 
 
-          </div>
+        <div id="menu" class="!overflow-scroll mt-1 h-[calc(100%-36px)]">
+
+          <ul
+            class="menu ml-1 [&_svg]:size-4 tracking-wider space-y-3 text-xs [&_a]:flex [&_a]:gap-3 [&_a]:-ml-1 [&_ul]:before:opacity-20 [&_ul]:ml-5">
+            <li>
+              <a @click="navigateTo('/home')">
+                <Icon icon="ph:house" />
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <span :class="{ 'menu-dropdown-show': showDropdowns[0] }" @click="toggleShow(0)"
+                class="menu-dropdown-toggle">
+                <a>
+                  <Icon icon="ph:cube" />
+                  <span>Builds</span>
+                </a>
+              </span>
+              <ul :class="{ 'menu-dropdown-show': showDropdowns[0] }" class="menu-dropdown">
+                <li><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+              </ul>
+            </li>
+            <li><a>
+                <Icon icon="ph:calculator" />
+                <span>Calculator</span>
+              </a></li>
+            <li>
+              <span :class="{ 'menu-dropdown-show': showDropdowns[1] }" @click="toggleShow(1)"
+                class="menu-dropdown-toggle">
+                <a>
+                  <Icon icon="ph:heart-straight" />
+                  <span>Favorites</span>
+                </a>
+              </span>
+              <ul :class="{ 'menu-dropdown-show': showDropdowns[1] }" class="menu-dropdown">
+                <li><a>Champions</a></li>
+                <li><a>Items</a></li>
+              </ul>
+            </li>
+            <li>
+              <span :class="{ 'menu-dropdown-show': showDropdowns[2] }" @click="toggleShow(2)"
+                class="menu-dropdown-toggle">
+                <a>
+                  <Icon icon="solar:glasses-linear" />
+                  <span>Browse</span>
+                </a>
+              </span>
+              <ul :class="{ 'menu-dropdown-show': showDropdowns[2] }" class="menu-dropdown">
+                <li><a @click="navigateTo('/champions')">
+                    <Icon icon="ph:crown-simple" />Champions
+                  </a></li>
+                <li><a @click="navigateTo('/items')">
+                    <Icon icon="vaadin:sword" />Items
+                  </a></li>
+                <li><a>
+                    <Icon icon="ph:hexagon" />Runes
+                  </a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="">
+                <Icon icon="ph:at" />
+                <span>Account</span>
+              </a>
+            </li>
+            <li>
+              <a @click="navigateTo('/settings')">
+                <Icon icon="ph:gear-six" />
+                <span>Settings</span>
+              </a>
+            </li>
+
+          </ul>
+
+
+
         </div>
       </div>
-    </SplitterPanel>
-    <SplitterPanel :size="84">
-      <!-- Search box -->
-      <div class="relative">
-        <div data-tauri-drag-region
-          class="titlebar h-[36px] sticky z-20 p-[0px] items-center shadow-lg grid  grid-cols-2 backdrop-blur-md bg-base-100/60  ">
 
-          <div class="w-full flex col-start-1 place-content-center z-0 dropdown">
+    </SplitterPanel>
+
+    <SplitterPanel :size="84" class="z-0">
+      <!-- Search box -->
+      <div data-tauri-drag-region class="relative">
+        <div data-tauri-drag-region
+          class="titlebar h-[36px] sticky z-20 p-[0px]  items-center shadow-sm grid bg-base-200/75 glass grid-cols-[1fr_2fr_1fr]  overflow-hidden ">
+
+
+
+
+
+
+          <div data-tauri-drag-region class="w-full flex col-start-2 place-content-center z-0 dropdown">
 
             <SearchBox />
 
@@ -192,7 +262,7 @@ onMounted(async () => {
           <!-- /* ----------------------------- TOOLBAR BUTTONS ---------------------------- */ -->
 
           <div
-            class="justify-self-end col-start-2 grid grid-cols-3 gap-2 mr-3 *:place-items-center  *: *:rounded-md *:size-6 text-base-content/60">
+            class="justify-self-end col-start-3 grid grid-cols-3 gap-2 mr-3 *:place-items-center  *: *:rounded-md *:size-6 text-base-content/60">
 
             <div id="titlebar-minimize" data-tip="minimize" alt="minimize"
               class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20">
@@ -211,8 +281,7 @@ onMounted(async () => {
           </div>
         </div>
 
-
-        <div class="w-full h-screen m-0 p-0 -mt-[36px] pt-14 pl-6 overflow-scroll bg-base-200 ">
+        <div class="w-full h-screen m-0 p-0 pt-14 pl-6 -mt-[36px] overflow-scroll bg-base-200 ">
 
           <component :is="currentComponent" />
 
@@ -225,43 +294,6 @@ onMounted(async () => {
 <style>
 .titlebar {
   width: inherit;
-}
-
-[data-pc-section="nodechildren"] {
-  @apply h-8 truncate;
-
-  [data-pc-section="nodecontent"] {
-    @apply pl-1 w-[calc(100%-0.25rem)] h-8;
-
-    [data-pc-section="nodeicon"] {
-      @apply mr-3;
-    }
-
-    [data-pc-section="nodetogglebutton"] {
-      @apply absolute right-1 top-0;
-    }
-
-    [data-pc-section="nodelabel"] {
-      @apply truncate h-8;
-    }
-  }
-}
-
-
-[aria-label="Browse"] [data-pc-section="nodecontent"],
-[aria-label="Utilities"] [data-pc-section="nodecontent"] {
-  @apply hover:bg-transparent text-xxs uppercase pointer-events-none text-base-content/40;
-}
-
-
-[aria-label="Browse"] [data-pc-section="nodeicon"],
-[aria-label="Utilities"] [data-pc-section="nodeicon"] {
-  @apply invisible opacity-0 w-0 absolute transition-all duration-700;
-}
-
-[aria-label="Browse"] [data-pc-section="nodelabel"],
-[aria-label="Utilities"] [data-pc-section="nodelabel"] {
-  @apply -ml-1;
 }
 
 
@@ -287,30 +319,36 @@ onMounted(async () => {
   }
 }
 
+.menu-dropdown {
+  @apply block opacity-0 h-0 transition-all -translate-x-full duration-300 ease-in;
 
-
-
-[aria-expanded="true"] [data-pc-section="nodechildren"] {
-  @apply animate-in slide-in-from-top fade-in duration-300 z-0;
-}
-
-[aria-expanded="false"] [data-pc-section="nodechildren"] {
-  @apply animate-out slide-out-to-top fade-out duration-700 z-0;
-}
-
-[data-pc-section="nodechildren"] [data-pc-section="nodecontent"] [data-pc-section="nodelabel"] {
-  @apply !w-[50px] truncate line-clamp-1 overflow-hidden;
-}
-
-#menu.minimize {
-  @apply grid-cols-[60px_auto];
-}
-
-.minimize .news-after {
-  @apply pl-[73px];
+  &.menu-dropdown-show {
+    @apply block opacity-100 h-full transition-all translate-x-0 duration-300 ease-in;
+  }
 }
 
 
+
+.minimize .menu {
+  @apply transition-all duration-700;
+
+  li {
+
+    a {
+
+      span {
+        @apply opacity-0;
+      }
+    }
+
+    ul {}
+  }
+}
+
+
+/*
+
+@apply w-0 h-0 opacity-0 invisible;
 
 [data-pc-section="nodetogglebutton"],
 .add-build {
@@ -340,7 +378,6 @@ onMounted(async () => {
 .minimize [data-pc-section="nodetogglebutton"],
 .minimize [data-pc-section="nodelabel"],
 .minimize .add-build {
-  @apply w-0 opacity-0 invisible;
 }
 
 
@@ -351,5 +388,5 @@ onMounted(async () => {
 .minimize [aria-label="Browse"] [data-pc-section="nodeicon"],
 .minimize [aria-label="Utilities"] [data-pc-section="nodeicon"] {
   @apply opacity-20 visible m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60;
-}
+}*/
 </style>

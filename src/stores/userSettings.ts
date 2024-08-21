@@ -5,7 +5,7 @@ function getInitialTheme(): string {
   return document.documentElement.getAttribute('data-theme') || 'lofi';
 }
 
-const ui = {
+export const ui = {
   light: {
     "base-100": "oklch( 100% 0 0)",
     "base-200": "oklch( 93% 0 0)",

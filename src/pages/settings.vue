@@ -3,10 +3,36 @@ import { Icon } from '@iconify/vue';
 import { useUserSettings } from '@stores/userSettings';
 import { storeToRefs } from 'pinia';
 
-
 const settings = useUserSettings();
 const { dataTheme } = storeToRefs(settings);
 
+
+interface palettes {
+  name: string,
+  colors: {
+    primary: colors,
+    secondary: colors,
+    accent: colors,
+    info: colors,
+    success: colors,
+    warning: colors,
+    error: colors,
+  }
+}
+
+interface colors {
+  primary: string,
+  secondary: string,
+  accent: string,
+  info: string,
+  success: string,
+  warning: string,
+  error: string,
+}
+
+const themes = [
+  "light", "rainbow", "dark", "nord"
+];
 
 const schema = [
   {
@@ -68,7 +94,7 @@ function updateTheme(theme: string) {
           <div class="bg-base-200 flex justify-center px-4 py-16">Hello!</div>
         </div>
 
-        <h1 class="prose-xl font-semibold mt-6">Interface</h1>
+        <h1 class="prose-lg font-semibold mt-6">Interface</h1>
 
         <div class="grid place-items-stretch w-full grid-cols-3 mt-4">
 
@@ -98,85 +124,122 @@ function updateTheme(theme: string) {
           </template>
 
 
-          <h1 class="prose-xl font-semibold mt-6">Accents</h1>
 
-        </div>
+          <h1 class="prose-lg font-semibold mt-6">Accents</h1>
+          <div class="grid grid-cols-2">
+            <div class="col-start-1 flex gap-4">
+              <input type="radio" name="radio-1" class="radio" />
 
-        <div class="grid grid-cols-2 grid-flow-row">
-          <div tabindex="0" role="button" class="dropdown  rounded  m-0 p-0 ">
-            <div class="join join-horizontal items-center bg-base-200 border border-base-300">
-              <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs " data-act-class="!outline-base-content"
-                :data-set-theme="dataTheme">
-                <div class="bg-base-100 text-base-content w-full cursor-pointer font-sans" :data-theme="dataTheme">
-                  <div class="grid grid-cols-5 grid-rows-3">
-                    <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
-                    <div class="bg-base-300 col-start-1 row-start-3"></div>
-                    <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2">
-                      <div class="font-semibold">{{ dataTheme }}</div>
-                      <div class="flex flex-wrap gap-1">
-                        <!-- Example color blocks -->
-                        <div class="bg-primary flex aspect-square w-5 items-center justify-center rounded">
-                          <div class="text-primary-content text-sm font-semibold">A</div>
-                        </div>
-                        <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded">
-                          <div class="text-secondary-content text-sm font-semibold">A</div>
-                        </div>
-                        <div class="bg-accent flex aspect-square items-center justify-center rounded w-5">
-                          <div class="text-accent-content text-sm font-semibold">A</div>
-                        </div>
-                        <div class="bg-neutral flex aspect-square items-center justify-center rounded w-5">
-                          <div class="text-neutral-content text-sm font-semibold">A</div>
+            </div>
+            <div class="col-start-2">
+
+
+
+
+
+            </div>
+
+            <div class="grid grid-cols-2 grid-flow-row">
+              <div tabindex="0" role="button" class="dropdown  rounded  m-0 p-0 ">
+                <div class="join join-horizontal items-center bg-base-200 border border-base-300">
+                  <div class="w-[137px] p-0 m-0  join-item overflow-hidden !text-xs "
+                    data-act-class="!outline-base-content" :data-set-theme="dataTheme">
+                    <div class="bg-base-100 text-base-content w-full cursor-pointer font-sans" :data-theme="dataTheme">
+                      <div class="grid grid-cols-5 grid-rows-3">
+                        <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
+                        <div class="bg-base-300 col-start-1 row-start-3"></div>
+                        <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2">
+                          <div class="font-semibold">{{ dataTheme }}</div>
+                          <div class="flex flex-wrap gap-1">
+                            <!-- Example color blocks -->
+                            <div class="bg-primary flex aspect-square w-5 items-center justify-center rounded">
+                              <div class="text-primary-content text-sm font-semibold">A</div>
+                            </div>
+                            <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded">
+                              <div class="text-secondary-content text-sm font-semibold">A</div>
+                            </div>
+                            <div class="bg-accent flex aspect-square items-center justify-center rounded w-5">
+                              <div class="text-accent-content text-sm font-semibold">A</div>
+                            </div>
+                            <div class="bg-neutral flex aspect-square items-center justify-center rounded w-5">
+                              <div class="text-neutral-content text-sm font-semibold">A</div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <div class="join-item bg-base-200 w-5 flex place-content-center">
+                    <Icon icon="ph:caret-down" class="" />
+                  </div>
                 </div>
-              </div>
-              <div class="join-item bg-base-200 w-5 flex place-content-center">
-                <Icon icon="ph:caret-down" class="" />
-              </div>
-            </div>
 
-            <!--  <ul tabindex="0"
-              class="grid dropdown-content place-content-center  menu bg-base-100 rounded-md z-[1] w-[160px] px-1 border border-base-300 shadow-md h-64 overflow-y-scroll overflow-x-hidden">
-            <li v-for="scheme in schema" :value="theme" class="my-1 first:pt-2 !text-xs"
-                @click="updateTheme(theme)">
-                <label class=" p-0 m-0 border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline
-            outline-2 outline-offset-2 outline-transparent" data-act-class="!outline-base-content"
-                  :data-set-theme="theme">
-                  <div class="bg-base-100 text-base-content w-full cursor-pointer font-sans" :data-theme="theme"
-                    <div class="grid grid-cols-5 grid-rows-3">
-                      <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
-                      <div class="bg-base-300 col-start-1 row-start-3"></div>
-                      <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2">
-                        <div class="font-semibold">{{ theme }}</div>
-                        <div class="flex flex-wrap gap-1">
-            <!-- Example color blocks -->
-            <!-- <div class="bg-primary flex aspect-square w-5 items-center justify-center rounded">
-              <div class="text-primary-content text-sm font-semibold">A</div>
-            </div>
-            <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded">
-              <div class="text-secondary-content text-sm font-semibold">A</div>
-            </div>
-            <div class="bg-accent flex aspect-square items-center justify-center rounded w-5">
-              <div class="text-accent-content text-sm font-semibold">A</div>
-            </div>
-            <div class="bg-neutral flex aspect-square items-center justify-center rounded w-5">
-              <div class="text-neutral-content text-sm font-semibold">A</div>
+                <ul tabindex="0"
+                  class="grid dropdown-content place-content-center  menu bg-base-100 rounded-md z-[1] w-[160px] px-1 border border-base-300 shadow-md h-64 overflow-y-scroll overflow-x-hidden">
+                  <li v-for="theme in themes" :value="theme" class="my-1 first:pt-2 !text-xs"
+                    @click="updateTheme(theme)">
+                    <label class=" p-0 m-0 border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline
+                outline-2 outline-offset-2 outline-transparent" data-act-class="!outline-base-content"
+                      :data-set-theme="theme">
+                      <div class="bg-base-100 text-base-content w-full cursor-pointer font-sans" :data-theme="theme">
+                        <div class="grid grid-cols-5 grid-rows-3">
+                          <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
+                          <div class="bg-base-300 col-start-1 row-start-3"></div>
+                          <div
+                            class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2">
+                            <div class="font-semibold">{{ theme }}</div>
+                            <div class="flex flex-wrap gap-1">
+
+                              <div class="bg-primary flex aspect-square w-5 items-center justify-center rounded">
+                                <div class="text-primary-content text-sm font-semibold">A</div>
+                              </div>
+                              <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded">
+                                <div class="text-secondary-content text-sm font-semibold">A</div>
+                              </div>
+                              <div class="bg-accent flex aspect-square items-center justify-center rounded w-5">
+                                <div class="text-accent-content text-sm font-semibold">A</div>
+                              </div>
+                              <div class="bg-neutral flex aspect-square items-center justify-center rounded w-5">
+                                <div class="text-neutral-content text-sm font-semibold">A</div>
+
+
+
+
+
+
+                              </div>
+
+                            </div>
+                          </div>
+
+
+
+
+                        </div>
+                      </div>
+                      <input type="radio" name="theme-dropdown" class="theme-controller hidden" :aria-label="theme"
+                        :value="theme" />
+                    </label>
+                  </li>
+                </ul>
+
+
+
+
+
+              </div>
+
+
+
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <input type="radio" name="theme-dropdown" class="theme-controller hidden" :aria-label="theme" :value="theme" />
-    </label>
-    </li>
-    </ul>>-->
-          </div>
-        </div>
 
 
+
+
+        </div>
       </div>
+
 
 
       <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Account" />
@@ -224,8 +287,8 @@ function updateTheme(theme: string) {
           <img class="grayscale contrast-200 brightness-50" src="/img/ui/daisyui.svg" />
         </div>
       </div>
-
     </div>
+
   </div>
 
 </template>

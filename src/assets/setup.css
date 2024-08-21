@@ -17,9 +17,19 @@
   @apply scroll-smooth bg-transparent;
 }
 
-.glass {
+[data-theme="light"] .glass {
   --glass-reflex-opacity: 0;
   --glass-reflex-degree: 0;
+  --glass-blur: 5px;
+  --glass-opacity: 0.4;
+}
+
+[data-theme="nord"] .glass,
+[data-theme="dark"] .glass {
+  --glass-reflex-opacity: 0;
+  --glass-reflex-degree: 0;
+  --glass-blur: 10px;
+  --glass-opacity: 0.1;
 }
 
 .tooltip {
@@ -54,10 +64,9 @@ body:after {
   @apply m-0 p-0 overflow-hidden w-screen h-screen;
 }
 
-#app,
 html,
 body {
-  @apply border-none outline-none ring-0;
+  @apply border-none outline-none ring-0 bg-transparent;
 }
 
 /*#app::before {

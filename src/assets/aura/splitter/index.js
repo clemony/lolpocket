@@ -6,7 +6,7 @@ export default {
       "dark:bg-surface-900",
       "text-surface-700",
       "dark:text-surface-0/80",
-      "shadow-none",
+      "shadow-none, z-50",
 
       // Shape
       "rounded-md",
@@ -28,8 +28,8 @@ export default {
       "shrink-0",
 
       // Colors
-      "bg-base-100/50 glass box-decoration-clone border-none outline-none shadow-none",
-      "dark:bg-surface-700",
+      "transparent",
+      "",
 
       // Transitions
       "transition-all",
@@ -53,7 +53,7 @@ export default {
       "rounded-md",
 
       //States
-      "focus:outline-none focus:outline-offset-0 focus-visible:ring-1 focus-visible:ring-primary-400 dark:focus-visible:ring-primary-300",
+      "focus:outline-none focus:outline-offset-0 focus-visible:ring-0 focus-visible:ring-primary-400 dark:focus-visible:ring-primary-300",
 
       // Transitions
       "transition-all",

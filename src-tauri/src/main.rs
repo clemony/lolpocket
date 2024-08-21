@@ -26,12 +26,12 @@ fn main() {
                     let ns_window: *mut Object = ns_window as *mut Object;
                 unsafe {
                     // Apply vibrancy
-                        apply_vibrancy(&window, NSVisualEffectMaterial::HudWindow, None, Some(10.0))
+                        apply_vibrancy(&window, NSVisualEffectMaterial::HudWindow, None, Some(0.0))
                         .expect("Unsupported platform! 'apply_vibrancy' is only supported on macOS");
 
                         // Custom rounded corners
                         let _: () = msg_send![ns_window, setTitlebarAppearsTransparent: false];
-                        let _: () = msg_send![ns_window, setHasShadow: false];
+                        let _: () = msg_send![ns_window, setHasShadow: true];
                         let _: () = msg_send![ns_window, setOpaque: false];
                     
                         // Access the content view of the window
@@ -40,7 +40,7 @@ fn main() {
                         // Set the corner radius
                         let _: () = msg_send![content_view, setWantsLayer: true];
                     let layer: *mut Object = msg_send![content_view, layer];
-                        let _: () = msg_send![layer, setCornerRadius: 10.0]; // Adjust the radius as needed
+                        let _: () = msg_send![layer, setCornerRadius: 12.0]; // Adjust the radius as needed
                     }
                 }
             }

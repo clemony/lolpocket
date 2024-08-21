@@ -1,4 +1,4 @@
-module.exports = {
+export const ui = {
   light: {
     "base-100": "oklch( 100% 0 0)",
     "base-200": "oklch( 93% 0 0)",
@@ -22,5 +22,39 @@ module.exports = {
     "base-content": "oklch( 82.9011% 0.031335 222.959324)",
     neutral: "oklch( 24.7311% 0.020483 264.094728)",
     "neutral-content": "oklch( 82.9011% 0.031335 222.959324)",
+  },
+};
+
+export interface palettes { 
+  name: string, 
+  colors: {
+    primary: colors,
+    secondary: colors,
+    accent:colors,
+    info: colors,
+    success: colors,
+    warning: colors,
+    error: colors,
+  }
+}
+
+export interface colors {
+  primary: string,
+  secondary: string,
+  accent:string,
+  info: string,
+  success: string,
+  warning: string,
+  error: string,
+}
+export const colors = {
+  aesthetic: {
+    primary: "oklch(88.03% 0.046 187.85)",
+    secondary: "oklch(82.91% 0.09 37.7)",
+    accent: "oklch(91.18% 0.089 87.56)",
+    info: "oklch(91.19% 0.07 104.16)",
+    success: "oklch(87.28% 0.051 133.44)",
+    warning: "oklch(86.95% 0.081 62.79)",
+    error: "oklch(79.62% 0.109 21.85)",
   },
 };
