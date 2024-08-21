@@ -45,6 +45,11 @@ const currentComponent = computed(() => {
   return componentMap[currentPath] || null;
 });
 
+// Automatically navigate to '/home' if the current route is not valid
+if (!componentMap[route.path as ValidPaths]) {
+  navigateTo('/home');
+}
+
 console.log(currentComponent.value);
 const nodes = ref<any[]>([]);
 const selectedKey = ref<string[]>([]);
