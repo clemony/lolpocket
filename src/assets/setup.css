@@ -24,6 +24,10 @@
   --glass-opacity: 0.3;
 }
 
+[data-theme="light"] .set-bg {
+  @apply bg-blend-lighten backdrop-brightness-150 bg-base-100/60 glass;
+}
+
 [data-theme="nord"] .glass,
 [data-theme="dark"] .glass {
   --glass-reflex-opacity: 0;
