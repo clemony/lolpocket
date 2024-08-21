@@ -152,7 +152,7 @@ onMounted(async () => {
 
           <div class=" ml-2 font-bold pb-1 text-lg tracking-wider flex gap-2 items-center">
             <div
-              class="text-right border-[1.5px] border-base-content h-[22px] w-[23px] select-none rounded-t-sm rounded-b-sm">
+              class="text-right border-[1.5px] place-items-center border-base-content h-[22px] w-[23px] select-none rounded-t-sm rounded-b-sm">
               <span class="pr-[1px] font-semibold font-mono text-[11px] h-1/2">LP</span>
             </div>
             lolpocket
