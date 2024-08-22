@@ -28,12 +28,17 @@
   @apply bg-blend-lighten backdrop-brightness-200 bg-base-100/60 glass;
 }
 
+[data-theme="nord"] .set-bg,
+[data-theme="dark"] .set-bg {
+  @apply bg-blend-darken bg-base-100/80 glass;
+}
+
 [data-theme="nord"] .glass,
 [data-theme="dark"] .glass {
   --glass-reflex-opacity: 0;
   --glass-reflex-degree: 0;
   --glass-blur: 10px;
-  --glass-opacity: 0.1;
+  --glass-opacity: 0.3;
 }
 
 .tooltip {
