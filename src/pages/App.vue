@@ -387,8 +387,16 @@ onMounted(async () => {
 
     }
 
-    ul {
+    #browse ul {
       @apply w-3 h-auto;
+
+      li {
+        @apply -ml-[28px];
+      }
+
+      &::before {
+        @apply ml-[3px];
+      }
     }
   }
 }
