@@ -393,7 +393,7 @@ onMounted(async () => {
       }
     }
 
-    #browse ul {
+    #browse ul:not(.collapse) {
       @apply h-auto;
 
       li {
