@@ -383,8 +383,14 @@ onMounted(async () => {
           @apply opacity-0 w-0 hidden;
         }
       }
+    }
 
+    li span {
+      @apply size-[30px] rounded-full bg-base-content/90 text-base-100/80;
 
+      svg {
+        @apply size-5;
+      }
     }
 
     #browse ul {
