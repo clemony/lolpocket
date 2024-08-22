@@ -351,6 +351,12 @@ onMounted(async () => {
   .menu {
     @apply w-[60px] transition-all duration-700 justify-center;
 
+    #builds,
+    #faves {
+      ul {
+        @apply h-0;
+      }
+    }
 
     #builds,
     #faves,
