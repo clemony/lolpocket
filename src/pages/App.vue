@@ -211,10 +211,10 @@ onMounted(async () => {
               </span>
               <ul :class="{ 'menu-dropdown-show': showDropdowns[2] }" class="menu-dropdown">
                 <li><a @click="navigateTo('/champions')">
-                    <Icon icon="ph:crown-simple" />Champions
+                    <Icon icon="ph:crown-simple" /><span>Champions</span>
                   </a></li>
                 <li><a @click="navigateTo('/items')">
-                    <Icon icon="vaadin:sword" />Items
+                    <Icon icon="vaadin:sword" /><span></span>Items
                   </a></li>
                 <li><a>
                     <Icon icon="ph:hexagon" />Runes
@@ -342,7 +342,7 @@ onMounted(async () => {
       }
     }
 
-    ul {
+    ul li span {
       @apply opacity-0 h-0;
     }
   }
