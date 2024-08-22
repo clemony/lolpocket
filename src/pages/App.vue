@@ -398,11 +398,11 @@ onMounted(async () => {
       @apply h-auto;
 
       li {
-        @apply -ml-[30px];
+        @apply -ml-[28px];
       }
 
       &::before {
-        @apply -ml-[3px] bg-base-content/90;
+        @apply -ml-[1px] bg-base-content/90;
       }
     }
 
