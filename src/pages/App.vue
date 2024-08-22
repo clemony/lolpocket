@@ -97,7 +97,7 @@ function test(event: any) {
     firstPanelSize.value = 3;   // Set size to 5
     !showDropdowns.value[0];
     !showDropdowns.value[1];
-    showDropdowns.value[3];
+    showDropdowns.value[2];
   } else {
     isMinimized.value = false;  // Remove 'minimize' class
     firstPanelSize.value = firstSize; // Maintain the dynamic size from the splitter
@@ -351,12 +351,6 @@ onMounted(async () => {
   .menu {
     @apply w-[60px] transition-all duration-700 justify-center;
 
-    #builds,
-    #faves {
-      ul {
-        @apply opacity-0 h-0 w-0;
-      }
-    }
 
     #builds,
     #faves,
