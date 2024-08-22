@@ -383,10 +383,7 @@ onMounted(async () => {
         }
       }
 
-      ul {
-        @apply p-0;
 
-      }
     }
 
     ul {
