@@ -381,7 +381,7 @@ onMounted(async () => {
     }
 
     ul {
-      @apply w-3;
+      @apply w-3 h-auto;
     }
   }
 }
