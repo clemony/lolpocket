@@ -386,7 +386,7 @@ onMounted(async () => {
     }
 
     li span {
-      @apply size-[30px] rounded-full bg-base-content/80 text-base-100/80;
+      @apply ml-1 size-[30px] rounded-full bg-base-content/80 text-base-100/80;
 
       a svg {
         @apply size-5;
