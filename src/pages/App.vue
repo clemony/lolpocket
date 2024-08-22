@@ -364,10 +364,10 @@ onMounted(async () => {
     li,
     li span {
 
-      @apply size-[45px] m-0 p-0;
+      @apply size-[45px] m-0 p-0 flex;
 
       a {
-        @apply size-full p-0 m-0 justify-center;
+        @apply size-full p-0 m-0 justify-center place-items-center;
 
         svg {
           @apply size-6;
