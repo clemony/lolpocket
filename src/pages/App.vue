@@ -350,10 +350,10 @@ onMounted(async () => {
 
     li {
 
-      @apply w-[60px];
+      @apply w-[60px] m-0 p-0;
 
       a {
-        @apply size-8 p-1;
+        @apply size-8 p-1 m-0;
 
         svg {
           @apply w-full h-full;
