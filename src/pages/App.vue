@@ -402,7 +402,7 @@ onMounted(async () => {
       }
 
       &::before {
-        @apply -ml-[1px] -mt-3 mb-2 opacity-40;
+        @apply -ml-[1px] -mt-3 mb-1.5 opacity-40;
       }
     }
 
