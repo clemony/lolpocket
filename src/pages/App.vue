@@ -349,9 +349,11 @@ onMounted(async () => {
   .menu {
     @apply w-[60px] transition-all duration-700 justify-center;
 
-    #builds ul,
-    #faves ul {
-      @apply opacity-0 h-0 w-0;
+    #builds,
+    #faves {
+      ul {
+        @apply opacity-0 h-0 w-0;
+      }
 
       &::after {
         @apply opacity-0 h-0 w-0 hidden;
@@ -360,10 +362,10 @@ onMounted(async () => {
 
     li {
 
-      @apply w-[60px] m-0 p-0;
+      @apply size-[55px] m-0 p-0;
 
       a {
-        @apply w-[55px] p-2 m-0;
+        @apply size-[55px] p-2 m-0;
 
         svg {
           @apply size-6;
