@@ -392,6 +392,7 @@ onMounted(async () => {
       }
     }
 
+    #faves ul:not(.collapse),
     #browse ul:not(.collapse) {
       @apply h-auto;
 
