@@ -5,13 +5,11 @@ import Components from "unplugin-vue-components/vite";
 import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from "vite";
 import { ViteAliases } from "vite-aliases";
-import tauri from "vite-plugin-tauri";
 
 export default defineConfig({
   plugins: [
     VueRouter(),
     vue(),
-    tauri(),
     Components({
       dirs: ["src/components", "src/pages/modules", "src/pages"], // Ensure paths are correct
       extensions: ["vue"],
