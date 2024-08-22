@@ -351,7 +351,11 @@ onMounted(async () => {
 
     #builds ul,
     #faves ul {
-      @apply opacity-0 h-0 w-0
+      @apply opacity-0 h-0 w-0;
+
+      &::after {
+        @apply opacity-0 h-0 w-0 hidden;
+      }
     }
 
     li {
