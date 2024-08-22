@@ -338,13 +338,16 @@ onMounted(async () => {
     a {
 
       span {
-        @apply opacity-0;
+        @apply opacity-0 w-0;
       }
     }
 
-    ul {}
+    ul {
+      @apply opacity-0 h-0;
+    }
   }
 }
+
 
 
 /*
