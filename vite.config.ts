@@ -60,7 +60,7 @@ export default defineConfig({
   clearScreen: false,
 
   server: {
-    port: 8080,
+    port: 9999,
     open: false,
   },
 
