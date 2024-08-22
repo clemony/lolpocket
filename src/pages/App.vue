@@ -353,7 +353,7 @@ onMounted(async () => {
       @apply w-[60px] m-0 p-0;
 
       a {
-        @apply w-[55px] p-1 m-0;
+        @apply w-[55px] p-2 m-0;
 
         svg {
           @apply size-6;
