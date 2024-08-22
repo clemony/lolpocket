@@ -150,11 +150,12 @@ onMounted(async () => {
 
 
 
-          <div data-tauri-drag-region class=" text-right ml-2 select-none font-bold text-base flex gap-2 items-center">
-            <div class="flex place-items-center  ">
+          <div id="logo" data-tauri-drag-region
+            class=" text-right ml-2 select-none font-bold text-base flex gap-2 items-center">
+            <div class="flex place-items-center rounded-full ">
               <Icon icon="ci:house-02" class="" />
             </div>
-            lolpocket
+            <span>lolpocket</span>
           </div>
         </div>
 
@@ -334,24 +335,37 @@ onMounted(async () => {
 
 
 
-.minimize .menu {
-  @apply transition-all duration-700;
+.minimize {
+  #logo {
+    @apply p-0;
 
-  li {
+    span {
+      @apply w-0 opacity-0;
+    }
 
-    a {
+    div {
+      @apply bg-base-content text-base-100 size-5;
+    }
+  }
 
-      span {
+  .menu {
+    @apply transition-all duration-700;
+
+    li {
+
+      a {
+
+        span {
+          @apply opacity-0 w-0;
+        }
+      }
+
+      ul li span {
         @apply opacity-0 w-0;
       }
     }
-
-    ul li span {
-      @apply opacity-0 w-0;
-    }
   }
 }
-
 
 
 /*
