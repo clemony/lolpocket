@@ -357,13 +357,17 @@ onMounted(async () => {
         }
       }
 
-      ul li span {
-        @apply opacity-0 w-0;
+      ul {
+        @apply p-0;
+
+        li span {
+          @apply opacity-0 w-0;
+        }
       }
     }
 
     ul {
-      @apply w-3 m-0;
+      @apply w-3;
     }
   }
 }
