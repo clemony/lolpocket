@@ -367,7 +367,7 @@ onMounted(async () => {
       @apply size-[45px] m-0 p-0;
 
       a {
-        @apply size-full p-0 m-0;
+        @apply size-full p-0 m-0 justify-center;
 
         svg {
           @apply size-6;
