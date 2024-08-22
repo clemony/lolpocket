@@ -361,6 +361,10 @@ onMounted(async () => {
         @apply opacity-0 w-0;
       }
     }
+
+    ul {
+      @apply w-3 m-0;
+    }
   }
 }
 
