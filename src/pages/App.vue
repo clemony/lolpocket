@@ -362,7 +362,7 @@ onMounted(async () => {
 
         li {
           a {
-            @apply w-3;
+            @apply size-5 p-0 m-0;
 
             span {
               @apply opacity-0 w-0;
