@@ -173,7 +173,7 @@ onMounted(async () => {
                 <span>Home</span>
               </a>
             </li>
-            <li>
+            <li id="builds">
               <span :class="{ 'menu-dropdown-show': showDropdowns[0] }" @click="toggleShow(0)"
                 class="menu-dropdown-toggle">
                 <a>
@@ -181,7 +181,7 @@ onMounted(async () => {
                   <span>Builds</span>
                 </a>
               </span>
-              <ul :class="{ 'menu-dropdown-show': showDropdowns[0] }" class="menu-dropdown hide-this">
+              <ul :class="{ 'menu-dropdown-show': showDropdowns[0] }" class="menu-dropdown">
                 <li><a><span>Submenu 1</span></a></li>
                 <li><a><span>Submenu 2</span></a></li>
               </ul>
@@ -190,7 +190,7 @@ onMounted(async () => {
                 <Icon icon="ph:calculator" />
                 <span>Calculator</span>
               </a></li>
-            <li>
+            <li id="faves">
               <span :class="{ 'menu-dropdown-show': showDropdowns[1] }" @click="toggleShow(1)"
                 class="menu-dropdown-toggle">
                 <a>
@@ -198,7 +198,7 @@ onMounted(async () => {
                   <span>Favorites</span>
                 </a>
               </span>
-              <ul :class="{ 'menu-dropdown-show': showDropdowns[1] }" class="menu-dropdown hide-this">
+              <ul :class="{ 'menu-dropdown-show': showDropdowns[1] }" class="menu-dropdown">
                 <li><a @click="navigateTo('/champions')">
                     <Icon icon="ph:crown-simple" /><span>Champions</span>
                   </a></li>
@@ -207,7 +207,7 @@ onMounted(async () => {
                   </a></li>
               </ul>
             </li>
-            <li>
+            <li id="browse">
               <span :class="{ 'menu-dropdown-show': showDropdowns[2] }" @click="toggleShow(2)"
                 class="menu-dropdown-toggle ">
                 <a>
@@ -215,7 +215,7 @@ onMounted(async () => {
                   <span>Browse</span>
                 </a>
               </span>
-              <ul id="browse" :class="{ 'menu-dropdown-show': showDropdowns[2] }" class="menu-dropdown">
+              <ul :class="{ 'menu-dropdown-show': showDropdowns[2] }" class="menu-dropdown">
                 <li><a @click="navigateTo('/champions')">
                     <Icon icon="ph:crown-simple" /><span>Champions</span>
                   </a></li>
