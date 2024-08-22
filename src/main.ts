@@ -4,7 +4,6 @@ import Aura from "@/assets/primevue/";
 import { createPinia } from 'pinia';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import PrimeVue from "primevue/config";
-import Tree from "primevue/tree";
 import { createApp } from "vue";
 import { createRouter, createWebHistory } from 'vue-router';
 import { routes } from 'vue-router/auto-routes';
@@ -41,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-app.component("Tree", Tree);
 app.component("Splitter", Splitter);
 app.component("SplitterPanel", SplitterPanel);
 /*
