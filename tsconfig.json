@@ -56,6 +56,12 @@
             ],
             "@aura/*": [
                 "src/assets/aura/*"
+            ],
+            "@primevue/*": [
+                "src/assets/primevue/*"
+            ],
+            "@splitterpanel/*": [
+                "src/assets/primevue/splitterpanel/*"
             ]
         }
     }
