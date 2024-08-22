@@ -346,14 +346,14 @@ onMounted(async () => {
   }
 
   .menu {
-    @apply transition-all duration-700;
+    @apply transition-all duration-700 justify-center;
 
     li {
 
       @apply w-[60px] m-0 p-0;
 
       a {
-        @apply size-8 p-1 m-0;
+        @apply w-[55px] p-1 m-0;
 
         svg {
           @apply w-full h-full;
