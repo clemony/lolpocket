@@ -388,7 +388,7 @@ onMounted(async () => {
     }
 
     #browse ul {
-      @apply w-3 h-auto;
+      @apply h-auto;
 
       li {
         @apply -ml-[28px];
