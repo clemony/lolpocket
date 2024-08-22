@@ -361,12 +361,13 @@ onMounted(async () => {
     }
 
 
-    li {
+    li,
+    li span {
 
-      @apply size-[30px] m-0 p-0;
+      @apply size-[45px] m-0 p-0;
 
       a {
-        @apply p-2 m-0;
+        @apply size-full p-0 m-0;
 
         svg {
           @apply size-6;
