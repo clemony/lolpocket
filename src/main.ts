@@ -1,6 +1,6 @@
 import "@/assets/imports.css";
 import App from "@/pages/App.vue";
-import Aura from "@assets/aura";
+import Aura from "@/assets/primevue/";
 import { createPinia } from 'pinia';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import PrimeVue from "primevue/config";
