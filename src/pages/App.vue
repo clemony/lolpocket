@@ -119,20 +119,10 @@ onMounted(async () => {
 });
 
 </script>
-
-
-<!--   /* -------------------------------------------------------------------------- */
-       /*                                CONTENT START                          */
-       /* -------------------------------------------------------------------------- */ -->
-
 <template>
 
-
-
-
-
   <!--   /* -------------------------------------------------------------------------- */
-         /*                                 MENU START                            */
+         /*                                 PANEL ONE START                            */
         /* -------------------------------------------------------------------------- */ -->
 
 
@@ -250,8 +240,13 @@ onMounted(async () => {
 
     </SplitterPanel>
 
+
+    <!--   /* -------------------------------------------------------------------------- */
+       /*                                PANEL 2 START                          */
+       /* -------------------------------------------------------------------------- */ -->
+
+
     <SplitterPanel :size="84" class="z-0">
-      <!-- Search box -->
       <div data-tauri-drag-region class="relative">
         <div data-tauri-drag-region
           class="titlebar h-[36px] sticky z-20 p-[0px]  items-center shadow-sm grid bg-base-200/75 glass grid-cols-[1fr_2fr_1fr]  overflow-hidden ">
@@ -259,7 +254,7 @@ onMounted(async () => {
 
 
 
-
+          <!-- /* ----------------------------- SEARCH BOX HERE HI ---------------------------- */ -->
 
           <div data-tauri-drag-region class="w-full flex col-start-2 place-content-center z-0 dropdown">
 
@@ -289,6 +284,12 @@ onMounted(async () => {
           </div>
         </div>
 
+
+        <!--   /* -------------------------------------------------------------------------- */
+       /*                                CONTENT START                          */
+       /* -------------------------------------------------------------------------- */ -->
+
+
         <div class="w-full h-screen m-0 p-0 pt-14 pl-6 -mt-[36px] overflow-scroll bg-base-200 ">
 
           <component :is="currentComponent" />
@@ -298,6 +299,12 @@ onMounted(async () => {
     </SplitterPanel>
   </Splitter>
 </template>
+
+
+<!--   /* -------------------------------------------------------------------------- */
+       /*                                CSS CSS CSS  START                          */
+       /* -------------------------------------------------------------------------- */ -->
+
 
 <style>
 .titlebar {
@@ -350,6 +357,19 @@ onMounted(async () => {
   .menu {
     @apply w-[60px] transition-all duration-700 justify-center;
 
+    a,
+    li span {
+      @apply flex size-[38px] rounded-full p-0 m-0 justify-center place-items-center;
+
+      svg {
+        @apply size-6;
+      }
+
+      span {
+        @apply opacity-0 w-0 hidden;
+      }
+    }
+
     #builds,
     #faves {
       ul {
@@ -365,43 +385,25 @@ onMounted(async () => {
       }
     }
 
+    #browse {
+      span {
+        @apply ml-1 bg-base-content/80 text-base-100/80 size-[30px];
 
-    li,
-    li span {
-
-      @apply m-0 p-0 flex;
-
-      a {
-        @apply size-[38px] p-0 m-0 rounded-full justify-center place-items-center;
-
-        svg {
-          @apply size-6;
-        }
-
-        span {
-          @apply opacity-0 w-0 hidden;
+        a svg {
+          @apply size-5;
         }
       }
-    }
 
-    #browse span {
-      @apply ml-1 size-[30px] rounded-full bg-base-content/80 text-base-100/80;
+      & ul:not(.collapse) {
+        @apply h-auto;
 
-      a svg {
-        @apply size-5;
-      }
-    }
+        li {
+          @apply -ml-[28px];
+        }
 
-
-    #browse ul:not(.collapse) {
-      @apply h-auto;
-
-      li {
-        @apply -ml-[28px];
-      }
-
-      &::before {
-        @apply -ml-[1px] -mt-3 mb-1.5 opacity-40;
+        &::before {
+          @apply -ml-[1px] -mt-3 mb-1.5 opacity-40;
+        }
       }
     }
 
@@ -409,6 +411,7 @@ onMounted(async () => {
       @apply my-1 py-1;
     }
   }
+
 
 }
 
