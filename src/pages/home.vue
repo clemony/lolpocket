@@ -22,7 +22,7 @@ const hasSource2 = ref('false');
     <div class="w-full py-4 pl-6 grid gap-y-3  m-0 !z-0">
 
 
-        <div class="gap-2 flex items-end">
+        <div class="gap-2  flex items-end">
             <h2 class="text-2xl font-semibold font-serif tracking-tight">
                 League News
             </h2>
@@ -31,7 +31,7 @@ const hasSource2 = ref('false');
             </p>
         </div>
         <div
-            class="flex w-full  overflow-x-scroll h-64 content-center items-center gap-5 scrollbar-hide left-0 !z-1 -ml-12 transition-all duration-700 delay-200 news-after">
+            class="flex w-full  overflow-x-scroll h-64 content-center items-center gap-5 scrollbar-hide left-0 !z-1 -ml-12 pl-8 transition-all duration-700 delay-200 news-after">
 
             <a v-for="article in NewsArticles"
                 class="card !bg-base-100/60 h-56 text-sm shadow-lg first:w-64px first:min-w-96 min-w-56 !z-0 !*:z-0 group overflow-hidden hover:scale-[1.03] transition-transform duration-700"
