@@ -89,7 +89,7 @@ const isMinimized = ref(false);
 const firstPanelSize = ref(17);  // Initialize with default size
 
 // Callback function for the splitter resize event
-function test(event: any) {
+function trackResize(event: any) {
   const firstSize = event.sizes[0]; // Get the size of the first panel
 
   if (firstSize < 12) {
@@ -138,7 +138,8 @@ onMounted(async () => {
         /* -------------------------------------------------------------------------- */ -->
 
 
-  <Splitter class="h-screen set-bg z-20 overflow-hidden w-screen " @resize.SplitterResizeEvent="test" :gutter-size="2">
+  <Splitter class="h-screen set-bg z-20 overflow-hidden w-screen " @resize.SplitterResizeEvent="trackResize"
+    :gutter-size="2">
 
     <SplitterPanel :size="firstPanelSize" :minSize="0" :class="{ 'minimize': isMinimized }"
       class="max-w-80 h-screen relative bg-transparent">
