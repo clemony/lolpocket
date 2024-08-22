@@ -80,6 +80,7 @@ function toggleMenus() {
   }
 };
 
+const showDropdowns = ref([false, true, true]); // Track visibility for each dropdown (index-based)
 
 // State to track if the panel should have the 'minimize' class
 const isMinimized = ref(false);
@@ -94,13 +95,14 @@ function test(event: any) {
   if (firstSize < 12) {
     isMinimized.value = true;   // Add 'minimize' class
     firstPanelSize.value = 3;   // Set size to 5
+    !showDropdowns.value[0];
+    !showDropdowns.value[1];
+    showDropdowns.value[3];
   } else {
     isMinimized.value = false;  // Remove 'minimize' class
     firstPanelSize.value = firstSize; // Maintain the dynamic size from the splitter
   }
 }
-
-const showDropdowns = ref([false, true, true]); // Track visibility for each dropdown (index-based)
 
 // Toggle visibility for the dropdown at a specific index
 function toggleShow(index: number) {
