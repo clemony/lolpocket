@@ -181,7 +181,7 @@ onMounted(async () => {
                   <span>Builds</span>
                 </a>
               </span>
-              <ul :class="{ 'menu-dropdown-show': showDropdowns[0] }" class="menu-dropdown">
+              <ul :class="{ 'menu-dropdown-show': showDropdowns[0] }" class="menu-dropdown hide-this">
                 <li><a><span>Submenu 1</span></a></li>
                 <li><a><span>Submenu 2</span></a></li>
               </ul>
@@ -209,13 +209,13 @@ onMounted(async () => {
             </li>
             <li>
               <span :class="{ 'menu-dropdown-show': showDropdowns[2] }" @click="toggleShow(2)"
-                class="menu-dropdown-toggle">
+                class="menu-dropdown-toggle hide-this">
                 <a>
                   <Icon icon="solar:glasses-linear" />
                   <span>Browse</span>
                 </a>
               </span>
-              <ul :class="{ 'menu-dropdown-show': showDropdowns[2] }" class="menu-dropdown">
+              <ul id="browse" :class="{ 'menu-dropdown-show': showDropdowns[2] }" class="menu-dropdown">
                 <li><a @click="navigateTo('/champions')">
                     <Icon icon="ph:crown-simple" /><span>Champions</span>
                   </a></li>
