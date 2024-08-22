@@ -96,6 +96,7 @@ function test(event: any) {
     console.log(showDropdowns);
     isMinimized.value = true;   // Add 'minimize' class
     firstPanelSize.value = 3;   // Set size to 5
+    showDropdowns[0].value = false;
     showDropdowns[1].value = false;
   } else {
     isMinimized.value = false;  // Remove 'minimize' class
@@ -392,7 +393,6 @@ onMounted(async () => {
       }
     }
 
-    #faves ul:not(.collapse),
     #browse ul:not(.collapse) {
       @apply h-auto;
 
