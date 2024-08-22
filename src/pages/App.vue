@@ -385,13 +385,14 @@ onMounted(async () => {
       }
     }
 
-    li span {
+    #browse span {
       @apply ml-1 size-[30px] rounded-full bg-base-content/80 text-base-100/80;
 
       a svg {
         @apply size-5;
       }
     }
+
 
     #browse ul:not(.collapse) {
       @apply h-auto;
