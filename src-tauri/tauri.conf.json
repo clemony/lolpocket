@@ -1,26 +1,46 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/schema.json",
-  "bundle": {
-    "active": true,
-    "targets": [
-      "deb",
-      "msi",
-      "nsis",
-      "dmg"
-    ],
-    "icon": [
-      "./icons/32x32.png",
-      "./icons/64x64.png",
-      "./icons/128x128@2x.png",
-      "./icons/128x128@2x.png"
-    ],
-    "resources": []
+  "package": {
+    "productName": "lolpocket",
+    "version": "0.1.0"
   },
-  "productName": "lolpocket",
-  "version": "0.1.0",
-  "identifier": "com.example.app",
-  "plugins": {},
-  "app": {
+  "tauri": {
+    "allowlist": {
+      "window": {
+        "setResizable": true,
+        "setMaximizable": true,
+        "setMinimizable": true,
+        "setClosable": true,
+        "setTitle": true,
+        "maximize": true,
+        "unmaximize": true,
+        "minimize": true,
+        "unminimize": true,
+        "show": true,
+        "hide": true,
+        "close": true,
+        "startDragging": true
+      },
+      "shell": {
+        "all": false, 
+        "execute": false, 
+        "sidecar": false, 
+        "open": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "targets": ["deb", "msi", "nsis", "dmg"],
+      "icon": [
+        "./icons/32x32.png",
+        "./icons/64x64.png",
+        "./icons/128x128@2x.png",
+        "./icons/128x128@2x.png"
+      ],
+      "identifier": "com.example.app",
+      "resources": []
+    },
+    "macOSPrivateApi": true,  
     "windows": [
       {
         "title": "lolpocket",
@@ -30,7 +50,7 @@
         "decorations": false,
         "transparent": true
       }
-    ],
-    "macOSPrivateApi": true
+    ]
+  
   }
 }
