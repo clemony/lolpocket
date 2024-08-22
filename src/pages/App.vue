@@ -337,9 +337,6 @@ onMounted(async () => {
 
 
 .minimize {
-  .hide-this {
-    @apply opacity-0 h-0 w-0
-  }
 
   #logo {
     @apply p-0;
@@ -352,7 +349,10 @@ onMounted(async () => {
   .menu {
     @apply w-[60px] transition-all duration-700 justify-center;
 
-
+    #builds ul,
+    #faves ul {
+      @apply opacity-0 h-0 w-0
+    }
 
     li {
 
