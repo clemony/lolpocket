@@ -61,7 +61,7 @@
                 "src/assets/primevue/*"
             ],
             "@splitterpanel/*": [
-                "src/assets/primevue/splitterpanel/*"
+                "src/assets/aura/splitterpanel/*"
             ]
         }
     }
