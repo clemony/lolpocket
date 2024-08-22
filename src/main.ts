@@ -48,15 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 app.component("Splitter", Splitter);
 app.component("SplitterPanel", SplitterPanel);
-/*
-const components = import.meta.glob("@/components/ui/*.vue", { eager: true });
-
-Object.entries(components).forEach(([path, definition]) => {
-  const componentName = path.split("/").pop()?.replace(/\.\w+$/, "") ?? "UnknownComponent";
-  
-  const component = (definition as { default: any }).default;
-  app.component(componentName, component);
-});*/
 
 
 type TitleBarStyle = 'visible' | 'transparent' | 'overlay'
