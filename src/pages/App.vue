@@ -386,17 +386,6 @@ onMounted(async () => {
       ul {
         @apply p-0;
 
-        li {
-          a {
-
-
-            Icon {}
-
-            span {
-              @apply opacity-0 w-0;
-            }
-          }
-        }
       }
     }
 
