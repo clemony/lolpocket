@@ -96,8 +96,7 @@ function test(event: any) {
     console.log(showDropdowns);
     isMinimized.value = true;   // Add 'minimize' class
     firstPanelSize.value = 3;   // Set size to 5
-    showDropdowns.value = [false, false, true];
-    console.log(showDropdowns);
+    showDropdowns[1].value = false;
   } else {
     isMinimized.value = false;  // Remove 'minimize' class
     firstPanelSize.value = firstSize; // Maintain the dynamic size from the splitter
