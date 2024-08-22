@@ -180,8 +180,8 @@ onMounted(async () => {
                 </a>
               </span>
               <ul :class="{ 'menu-dropdown-show': showDropdowns[0] }" class="menu-dropdown">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
+                <li><a><span>Submenu 1</span></a></li>
+                <li><a><span>Submenu 2</span></a></li>
               </ul>
             </li>
             <li><a>
@@ -197,8 +197,12 @@ onMounted(async () => {
                 </a>
               </span>
               <ul :class="{ 'menu-dropdown-show': showDropdowns[1] }" class="menu-dropdown">
-                <li><a>Champions</a></li>
-                <li><a>Items</a></li>
+                <li><a @click="navigateTo('/champions')">
+                    <Icon icon="ph:crown-simple" /><span>Champions</span>
+                  </a></li>
+                <li><a @click="navigateTo('/items')">
+                    <Icon icon="vaadin:sword" /><span>Items</span>
+                  </a></li>
               </ul>
             </li>
             <li>
@@ -214,10 +218,10 @@ onMounted(async () => {
                     <Icon icon="ph:crown-simple" /><span>Champions</span>
                   </a></li>
                 <li><a @click="navigateTo('/items')">
-                    <Icon icon="vaadin:sword" /><span></span>Items
+                    <Icon icon="vaadin:sword" /><span>Items</span>
                   </a></li>
                 <li><a>
-                    <Icon icon="ph:hexagon" />Runes
+                    <Icon icon="ph:hexagon" /><span>Runes</span>
                   </a></li>
               </ul>
             </li>
@@ -343,7 +347,7 @@ onMounted(async () => {
     }
 
     ul li span {
-      @apply opacity-0 h-0;
+      @apply opacity-0 w-0;
     }
   }
 }
