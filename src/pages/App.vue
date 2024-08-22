@@ -373,7 +373,7 @@ onMounted(async () => {
       @apply m-0 p-0 flex;
 
       a {
-        @apply size-[45px] p-0 m-0 justify-center place-items-center;
+        @apply size-[38px] p-0 m-0 rounded-full justify-center place-items-center;
 
         svg {
           @apply size-6;
@@ -397,11 +397,11 @@ onMounted(async () => {
       @apply h-auto;
 
       li {
-        @apply -ml-[28px];
+        @apply -ml-[30px];
       }
 
       &::before {
-        @apply ml-[3px] bg-opacity-90;
+        @apply -ml-[3px] bg-base-content/90;
       }
     }
   }
