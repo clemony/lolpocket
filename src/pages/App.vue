@@ -351,6 +351,11 @@ onMounted(async () => {
     li {
 
       a {
+        @apply size-8;
+
+        svg {
+          @apply w-full h-full;
+        }
 
         span {
           @apply opacity-0 w-0;
@@ -362,11 +367,9 @@ onMounted(async () => {
 
         li {
           a {
-            @apply size-8 p-0 m-0;
 
-            Icon {
-              @apply w-full h-full;
-            }
+
+            Icon {}
 
             span {
               @apply opacity-0 w-0;
