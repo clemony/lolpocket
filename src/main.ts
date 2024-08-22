@@ -6,16 +6,21 @@ import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import PrimeVue from "primevue/config";
 import { createApp } from "vue";
 import { createRouter, createWebHistory } from 'vue-router';
-import { routes } from 'vue-router/auto-routes';
+import { useRouter, useRoute } from 'vue-router'
 import { getCurrent } from '../node_modules/@tauri-apps/api/window.js';
 import Splitter from 'primevue/splitter';
 import SplitterPanel from 'primevue/splitterpanel';
 
 
+
+const router = useRouter()
+router.push('')
+
+/*
 const router = createRouter({
   history: createWebHistory(),
   routes,
-})
+})*/
 
 const app = createApp(App);
 

@@ -2,17 +2,14 @@ import vue from "@vitejs/plugin-vue";
 import AutoImport from "unplugin-auto-import/vite";
 import IconsResolver from 'unplugin-icons/resolver';
 import Components from "unplugin-vue-components/vite";
-import { VueRouterAutoImports } from 'unplugin-vue-router';
-import VueRouter from 'unplugin-vue-router/vite';
+import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from "vite";
 import { ViteAliases } from "vite-aliases";
 import tauri from "vite-plugin-tauri";
 
 export default defineConfig({
   plugins: [
-    VueRouter({
-      /* options */
-    }),
+    VueRouter(),
     vue(),
     tauri(),
     Components({
@@ -32,7 +29,6 @@ export default defineConfig({
         /\.md$/, // .md
       ],
       imports: [
-        VueRouterAutoImports, 
         'vue',
         {
           '@iconify/vue': [
@@ -40,7 +36,6 @@ export default defineConfig({
           ]
         }
       ],
-      dirs: ["src/service/"],
       eslintrc: {
         enabled: true,
         filepath: "./.eslintrc-auto-import.json",
