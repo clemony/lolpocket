@@ -354,11 +354,16 @@ onMounted(async () => {
       ul {
         @apply opacity-0 h-0 w-0;
       }
+    }
 
+    #builds,
+    #faves,
+    #browse {
       & span::after {
         @apply opacity-0 h-0 w-0 hidden;
       }
     }
+
 
     li {
 
