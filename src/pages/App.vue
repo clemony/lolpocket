@@ -152,8 +152,9 @@ onMounted(async () => {
 
           <div id="logo" data-tauri-drag-region
             class=" text-right ml-2 select-none font-bold text-base flex gap-2 items-center">
-            <div class="flex place-items-center rounded-full ">
-              <Icon icon="ci:house-02" class="" />
+            <div
+              class="flex place-items-center justify-center rounded-full bg-base-content text-base-100 size-5 pt-[1px]">
+              <Icon icon="ci:house-02" class="p-0.5 rotate-180 " />
             </div>
             <span>lolpocket</span>
           </div>
@@ -341,10 +342,6 @@ onMounted(async () => {
 
     span {
       @apply w-0 opacity-0;
-    }
-
-    div {
-      @apply bg-base-content text-base-100 size-5;
     }
   }
 
