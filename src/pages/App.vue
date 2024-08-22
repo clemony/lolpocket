@@ -360,8 +360,14 @@ onMounted(async () => {
       ul {
         @apply p-0;
 
-        li span {
-          @apply opacity-0 w-0;
+        li {
+          a {
+            @apply w-3;
+
+            span {
+              @apply opacity-0 w-0;
+            }
+          }
         }
       }
     }
