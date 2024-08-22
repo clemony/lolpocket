@@ -13,8 +13,6 @@ import SplitterPanel from 'primevue/splitterpanel';
 
 
 
-const router = useRouter()
-router.push('')
 
 /*
 const router = createRouter({
@@ -23,6 +21,9 @@ const router = createRouter({
 })*/
 
 const app = createApp(App);
+
+const router = useRouter()
+router.push('')
 
 // Get the current webview window
 const currentWindow = getCurrent();
