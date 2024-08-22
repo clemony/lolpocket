@@ -354,7 +354,7 @@ onMounted(async () => {
     #builds,
     #faves {
       ul {
-        @apply h-0;
+        @apply hidden;
       }
     }
 
