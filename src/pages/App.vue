@@ -355,7 +355,7 @@ onMounted(async () => {
         @apply opacity-0 h-0 w-0;
       }
 
-      &::after {
+      & span::after {
         @apply opacity-0 h-0 w-0 hidden;
       }
     }
