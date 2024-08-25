@@ -1,76 +1,56 @@
-import "@/assets/imports.css";
-import App from "@/pages/App.vue";
-import Aura from "@/assets/aura";
-import { createPinia } from 'pinia';
-import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
-import PrimeVue from "primevue/config";
+import App from "../src/pages/App.vue";
+import { createPinia } from "pinia";
+import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
 import { createApp } from "vue";
-import { createRouter, createWebHistory } from 'vue-router';
-import { useRouter, useRoute } from 'vue-router'
-import { getCurrent } from '../node_modules/@tauri-apps/api/window.js';
-import Splitter from 'primevue/splitter';
-import SplitterPanel from 'primevue/splitterpanel';
+import { createRouter, createWebHistory } from "vue-router";
+import { getCurrent } from "../node_modules/@tauri-apps/api/window.js";
+import { routes } from "vue-router/auto-routes";
 
+const getRoutes = routes;
 
-
-
-/*
+// Create the router instance using generated routes
 const router = createRouter({
   history: createWebHistory(),
-  routes,
-})*/
+  routes, // Use the resolved routes
+});
+
 
 const app = createApp(App);
-
-const router = useRouter()
-router.push('')
 
 // Get the current webview window
 const currentWindow = getCurrent();
 
-document.addEventListener('DOMContentLoaded', () => {
-  const minimizeButton = document.getElementById('titlebar-minimize');
+document.addEventListener("DOMContentLoaded", () => {
+  const minimizeButton = document.getElementById("titlebar-minimize");
   if (minimizeButton && currentWindow) {
-    minimizeButton.addEventListener('click', () => currentWindow.minimize());
+    minimizeButton.addEventListener("click", () => currentWindow.minimize());
   }
 
-  const maximizeButton = document.getElementById('titlebar-maximize');
+  const maximizeButton = document.getElementById("titlebar-maximize");
   if (maximizeButton && currentWindow) {
-    maximizeButton.addEventListener('click', () => currentWindow.toggleMaximize());
+    maximizeButton.addEventListener("click", () =>
+      currentWindow.toggleMaximize(),
+    );
   }
 
-  const closeButton = document.getElementById('titlebar-close');
+  const closeButton = document.getElementById("titlebar-close");
   if (closeButton && currentWindow) {
-    closeButton.addEventListener('click', () => currentWindow.close());
+    closeButton.addEventListener("click", () => currentWindow.close());
   }
 });
 
-
-app.component("Splitter", Splitter);
-app.component("SplitterPanel", SplitterPanel);
-
-
-type TitleBarStyle = 'visible' | 'transparent' | 'overlay'
+type TitleBarStyle = "visible" | "transparent" | "overlay";
 
 interface WindowOptions {
-  titleBarStyle?: TitleBarStyle
+  titleBarStyle?: TitleBarStyle;
 }
 
-export type {
-  TitleBarStyle,
-  WindowOptions
-};
-const pinia = createPinia()
-pinia.use(piniaPluginPersistedstate)
-
+export type { TitleBarStyle, WindowOptions };
+const pinia = createPinia();
+pinia.use(piniaPluginPersistedstate);
 
 app.use(pinia);
 app.use(router);
-app.use(PrimeVue, {
-  unstyled: true,
-  pt: Aura,
-});
-
 
 // Mount the app to the element with id "app" in your HTML
 app.mount("#app");

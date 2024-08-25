@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDataStore } from "@/stores/dataStore";
+import { useDataStore } from "@stores/dataStore";
 
 const dataStore = useDataStore();
 
@@ -15,39 +15,18 @@ interface Item {
 }
 
 const items = dataStore.items;
-
-
 </script>
 
 <template>
-  <div id="" class="">
-    <div role="tablist" class="tabs layout !mr-0">
-      <input type="radio" name="champ-tabs" role="tab" class="tab after:w-36 font-semibold" aria-label="Items"
-        checked="true" />
-
-      <div role="tabpanel" class="tab-content ">
-
-
-        <div class="grid-container">
-          <div class="grid-item item" v-for="item in items">
-
-            <div class="grid-image-container item">
-              <img v-if="item.type === 'item'" :src="item.img" :alt="item.name + ' Image'" class="grid-image item" />
-              <span v-resize-text class="grid-tip">{{ item.name }}</span>
-            </div>
-
-
-          </div>
-
-
-
-        </div>
+  <div class="grid-container">
+    <div class="grid-item item" v-for="item in items">
+      <div class="grid-image-container item">
+        <img v-if="item.type === 'item'" :src="item.img" :alt="item.name + ' Image'" class="grid-image item" />
+        <span class="grid-tip">{{ item.name }}</span>
       </div>
     </div>
   </div>
 </template>
-
-
 
 <style scoped>
 .grid-container {
@@ -58,7 +37,6 @@ const items = dataStore.items;
 
 .item {
   @apply h-[70px] w-[70px];
-
 }
 
 .grid-tip {

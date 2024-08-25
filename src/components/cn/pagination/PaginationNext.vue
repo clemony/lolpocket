@@ -1,7 +1,6 @@
 <script setup>
 import { computed } from "vue";
 import { PaginationNext } from "radix-vue";
-;
 import { Button } from "../button";
 import { cn } from "@/lib/utils";
 

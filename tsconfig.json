@@ -1,4 +1,10 @@
 {
+    "include": [
+        // other files...
+        "./typed-router.d.ts",
+        "./components.d.ts",
+        "./auto-imports.d.ts",
+    ],
     "compilerOptions": {
         "strict": true,
         "esModuleInterop": true,

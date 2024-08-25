@@ -6,7 +6,7 @@ const props = defineProps({
   defaultOpen: { type: Boolean, required: false },
   modal: { type: Boolean, required: false },
 });
-const emits = defineEmits(['update:open']); // Declare all events the component emits
+const emits = defineEmits(["update:open"]); // Declare all events the component emits
 
 const forwarded = useForwardPropsEmits(props, emits);
 </script>

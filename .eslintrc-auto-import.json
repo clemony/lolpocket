@@ -61,7 +61,7 @@
     "useAttrs": true,
     "useCssModule": true,
     "useCssVars": true,
-    "useLink": false,
+    "useLink": true,
     "useRoute": true,
     "useRouter": true,
     "useSlots": true,
@@ -233,6 +233,7 @@
     "whenever": true,
     "NodeService": true,
     "Icon": true,
-    "{ Icon }": true
+    "{ Icon }": true,
+    "RouteLocationRaw": true
   }
 }

@@ -25,27 +25,27 @@ export const ui = {
   },
 };
 
-export interface palettes { 
-  name: string, 
+export interface palettes {
+  name: string;
   colors: {
-    primary: colors,
-    secondary: colors,
-    accent:colors,
-    info: colors,
-    success: colors,
-    warning: colors,
-    error: colors,
-  }
+    primary: colors;
+    secondary: colors;
+    accent: colors;
+    info: colors;
+    success: colors;
+    warning: colors;
+    error: colors;
+  };
 }
 
 export interface colors {
-  primary: string,
-  secondary: string,
-  accent:string,
-  info: string,
-  success: string,
-  warning: string,
-  error: string,
+  primary: string;
+  secondary: string;
+  accent: string;
+  info: string;
+  success: string;
+  warning: string;
+  error: string;
 }
 export const colors = {
   aesthetic: {

@@ -1,357 +1,244 @@
 <script setup lang="ts">
-import Builds from '@/page-build/builds-template.vue';
-import Champions from '@/pages/champions.vue';
-import Home from '@/pages/home.vue';
-import Items from '@/pages/items.vue';
-import Runes from '@/pages/runes.vue';
-import Settings from '@/pages/settings.vue';
-import { useDataStore } from '@/stores/dataStore';
-import { Icon } from '@iconify/vue';
-import { useUserSettings } from '@stores/userSettings';
-import { DefineComponent } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
-
+import { ref, computed, onMounted, DefineComponent } from "vue";
+import "@assets/imports.css";
+import { storeToRefs, _StoreWithState } from "pinia";
+import { useDataStore } from "@stores/dataStore";
+import { Icon } from "@iconify/vue";
+import { useUserSettings } from "@stores/userSettings";
+import { Splitpanes, Pane } from "splitpanes";
+import { useSessionNav } from "@stores/sessionStore";
+import Titlebar from "./components/titlebar.vue";
 const settings = useUserSettings();
-
-
+const sn = useSessionNav();
 
 /* ------------------------------- NAVIGATION ------------------------------- */
 
-// Access the router instance to programmatically navigate
-const router = useRouter();
-
-// Function to navigate to a specific route
-const navigateTo = (route: string) => {
-  router.push(route);
-};
-
-// Access the current route
-const route = useRoute();
-
-type ValidPaths = '/builds' | '/home' | '/champions' | '/items' | '/runes' | '/settings';
-
-const componentMap: Record<ValidPaths, DefineComponent<any, any, any>> = {
-  '/builds': Builds,
-  '/home': Home,
-  '/champions': Champions,
-  '/items': Items,
-  '/runes': Runes,
-  '/settings': Settings
-};
-
-// Computed property for current view
-const currentComponent = computed(() => {
-  const currentPath = route.path as ValidPaths;
-  return componentMap[currentPath] || null;
-});
-
-// Automatically navigate to '/home' if the current route is not valid
-if (!componentMap[route.path as ValidPaths]) {
-  navigateTo('/home');
-}
-
-console.log(currentComponent.value);
-const nodes = ref<any[]>([]);
-const selectedKey = ref<string[]>([]);
-
-const isHome = computed(() => currentComponent.value === Home);
-
-// Method for node selection in the tree
-const onNodeSelect = (node: any) => {
-  navigateTo(node.data);
-};
-
-const menuRef = ref<HTMLDivElement | null>(null);
-const checkboxRef = ref<HTMLInputElement | null>(null);
-let tooltipText = ref('Collapse');
-
-function toggleMenus() {
-  const menu = menuRef.value;
-  const checkbox = checkboxRef.value;
-
-  if (menu && checkbox) {
-    if (checkbox.checked) {
-      menu.classList.add("minimize");
-      tooltipText.value = "Expand";
-    } else {
-      menu.classList.remove("minimize");
-      tooltipText.value = "Collapse";
-    }
-  }
-};
-
 const showDropdowns = ref([false, true, true]); // Track visibility for each dropdown (index-based)
-
-// State to track if the panel should have the 'minimize' class
 const isMinimized = ref(false);
+const paneSize = ref(19);
+const secondPaneMin = ref(100);
+const secondPane = ref(100);
 
-// Track the size of the first panel
-const firstPanelSize = ref(17);  // Initialize with default size
 
-// Callback function for the splitter resize event
-function trackResize(event: any) {
-  const firstSize = event.sizes[0]; // Get the size of the first panel
+function log(resize, event: any) {
+  var firstSize = event[0].size;
 
-  if (firstSize < 12) {
-    console.log(showDropdowns);
-    isMinimized.value = true;   // Add 'minimize' class
-    firstPanelSize.value = 3;   // Set size to 5
+  if (firstSize < 13) {
+    isMinimized.value = true;
+    paneSize.value = 3;
+    sn.$patch({ isMinimized, paneSize })
   } else {
-    isMinimized.value = false;  // Remove 'minimize' class
-    firstPanelSize.value = firstSize; // Maintain the dynamic size from the splitter
+    isMinimized.value = false;
+    paneSize.value = 19;
+    sn.$patch({ isMinimized, paneSize })
   }
 }
+
+
+
 
 // Toggle visibility for the dropdown at a specific index
 function toggleShow(index: number) {
   showDropdowns.value[index] = !showDropdowns.value[index];
 }
-
 /* ------------------------------ ON MOUNTED ----------------------------- */
 
 onMounted(async () => {
   const dataStore = useDataStore();
   dataStore.fetchData();
-  NodeService.getTreeNodes().then((data: any) => {
-    nodes.value = data;
-  });
-  console.log(menuRef);
-});
 
+  sn.navigateTo("/home");
+});
 </script>
 <template>
-
+  <Titlebar />
   <!--   /* -------------------------------------------------------------------------- */
          /*                                 PANEL ONE START                            */
         /* -------------------------------------------------------------------------- */ -->
 
-
-  <Splitter class="h-screen set-bg z-20 overflow-hidden w-screen " @resize.SplitterResizeEvent="trackResize"
-    :gutter-size="2">
-
-    <SplitterPanel :size="firstPanelSize" :minSize="0" :class="{ 'minimize': isMinimized }"
-      class="max-w-80 h-screen relative bg-transparent">
-
-
-
-      <div ref="menuRef" class=" h-full w-full z-10  ">
-
-
-        <div data-tauri-drag-region class="titlebar top-0 left-0 h-[36px] w-full sticky z-20  items-center p-3">
-
-
-
-          <div id="logo" data-tauri-drag-region
-            class=" text-right ml-2 select-none font-bold text-base flex gap-2 items-center">
-            <div
-              class="flex place-items-center justify-center rounded-full bg-base-content text-base-100 size-5 pt-[1px]">
-              <Icon icon="ci:house-02" class="p-0.5 rotate-180 " />
-            </div>
-            <span>lolpocket</span>
-          </div>
-        </div>
-
-
-
-
-        <div id="menu" class="!overflow-scroll mt-1 h-[calc(100%-36px)]">
-
-          <ul
-            class="menu ml-1 [&_svg]:size-4 tracking-wider space-y-3 text-xs [&_a]:flex [&_a]:gap-3 [&_a]:-ml-1 [&_ul]:before:opacity-20 [&_ul]:ml-5">
-            <li>
-              <a @click="navigateTo('/home')">
-                <Icon icon="ph:house" />
-                <span>Home</span>
+  <Splitpanes ref="splitter" class="default-theme overscroll-none overflow-hidden" @resize="log('resize', $event)">
+    <Pane :size="paneSize" :min-size="3" :max-size="21" :class="{ minimize: isMinimized }"
+      class="max-w-[300px] min-w-[60px] w-[250px] relative transition-width overflow-hidden overscroll-none duration-500 z-20">
+      <div id="menu" class="!overflow-y-scroll mt-2">
+        <ul
+          class="menu ml-1 [&_svg]:size-4 tracking-wider space-y-3 text-xs [&_a]:flex [&_a]:gap-3 [&_a]:-ml-1 [&_ul]:before:opacity-20 [&_ul]:ml-5">
+          <li>
+            <a @click="sn.navigateTo('/home')" class="tooltip tooltip-right" title="hello">
+              <Icon icon="ph:house" />
+              <span>Home</span>
+            </a>
+          </li>
+          <li id="builds">
+            <span :class="{ 'menu-dropdown-show': showDropdowns[0] }" @click="toggleShow(0)"
+              class="menu-dropdown-toggle">
+              <a>
+                <Icon icon="ph:cube" />
+                <span>Builds</span>
               </a>
-            </li>
-            <li id="builds">
-              <span :class="{ 'menu-dropdown-show': showDropdowns[0] }" @click="toggleShow(0)"
-                class="menu-dropdown-toggle">
-                <a>
-                  <Icon icon="ph:cube" />
-                  <span>Builds</span>
-                </a>
-              </span>
-              <ul :class="{ 'menu-dropdown-show': showDropdowns[0] }" class="menu-dropdown">
-                <li><a><span>Submenu 1</span></a></li>
-                <li><a><span>Submenu 2</span></a></li>
-              </ul>
-            </li>
-            <li><a>
-                <Icon icon="ph:calculator" />
-                <span>Calculator</span>
-              </a></li>
-            <li id="faves">
-              <span :class="{ 'menu-dropdown-show': showDropdowns[1] }" @click="toggleShow(1)"
-                class="menu-dropdown-toggle">
-                <a>
-                  <Icon icon="ph:heart-straight" />
-                  <span>Favorites</span>
-                </a>
-              </span>
-              <ul :class="{ 'menu-dropdown-show': showDropdowns[1] }" class="menu-dropdown">
-                <li><a @click="navigateTo('/champions')">
-                    <Icon icon="ph:crown-simple" /><span>Champions</span>
-                  </a></li>
-                <li><a @click="navigateTo('/items')">
-                    <Icon icon="vaadin:sword" /><span>Items</span>
-                  </a></li>
-              </ul>
-            </li>
-            <li id="browse">
-              <span :class="{ 'menu-dropdown-show': showDropdowns[2] }" @click="toggleShow(2)"
-                class="menu-dropdown-toggle ">
-                <a>
-                  <Icon icon="solar:glasses-linear" />
-                  <span>Browse</span>
-                </a>
-              </span>
-              <ul :class="{ 'menu-dropdown-show': showDropdowns[2] }" class="menu-dropdown">
-                <li><a @click="navigateTo('/champions')">
-                    <Icon icon="ph:crown-simple" /><span>Champions</span>
-                  </a></li>
-                <li><a @click="navigateTo('/items')">
-                    <Icon icon="vaadin:sword" /><span>Items</span>
-                  </a></li>
-                <li><a>
-                    <Icon icon="ph:hexagon" /><span>Runes</span>
-                  </a></li>
-              </ul>
-            </li>
-            <li>
-              <a class="">
-                <Icon icon="ph:at" />
-                <span>Account</span>
+            </span>
+            <ul :class="{ 'menu-dropdown-show': showDropdowns[0] }" class="menu-dropdown">
+              <li>
+                <a><span>Submenu 1</span></a>
+              </li>
+              <li>
+                <a><span>Submenu 2</span></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a @click="sn.navigateTo('/hi')">
+              <Icon icon="ph:calculator" />
+              <span>Calculator</span>
+            </a>
+          </li>
+          <li id="faves">
+            <span :class="{ 'menu-dropdown-show': showDropdowns[1] }" @click="toggleShow(1)"
+              class="menu-dropdown-toggle">
+              <a>
+                <Icon icon="ph:heart-straight" />
+                <span>Favorites</span>
               </a>
-            </li>
-            <li>
-              <a @click="navigateTo('/settings')">
-                <Icon icon="ph:gear-six" />
-                <span>Settings</span>
+            </span>
+            <ul :class="{ 'menu-dropdown-show': showDropdowns[1] }" class="menu-dropdown">
+              <li>
+                <a @click="sn.navigateTo('/champions')">
+                  <Icon icon="ph:crown-simple" /><span>Champions</span>
+                </a>
+              </li>
+              <li>
+                <a @click="sn.navigateTo('/items')">
+                  <Icon icon="vaadin:sword" /><span>Items</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li id="browse">
+            <span :class="{ 'menu-dropdown-show': showDropdowns[2] }" @click="toggleShow(2)"
+              class="menu-dropdown-toggle">
+              <a>
+                <Icon icon="solar:glasses-linear" />
+                <span>Browse</span>
               </a>
-            </li>
-
-          </ul>
-
-
-
-        </div>
+            </span>
+            <ul :class="{ 'menu-dropdown-show': showDropdowns[2] }" class="menu-dropdown">
+              <li>
+                <a @click="sn.navigateTo('/champions')">
+                  <Icon icon="ph:crown-simple" /><span>Champions</span>
+                </a>
+              </li>
+              <li>
+                <a @click="sn.navigateTo('/items')">
+                  <Icon icon="vaadin:sword" /><span>Items</span>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <Icon icon="ph:hexagon" /><span>Runes</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="">
+              <Icon icon="ph:at" />
+              <span>Account</span>
+            </a>
+          </li>
+          <li>
+            <a @click="sn.navigateTo('/settings')">
+              <Icon icon="ph:gear-six" />
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
       </div>
-
-    </SplitterPanel>
-
+    </Pane>
 
     <!--   /* -------------------------------------------------------------------------- */
        /*                                PANEL 2 START                          */
        /* -------------------------------------------------------------------------- */ -->
 
-
-    <SplitterPanel :size="84" class="z-0">
-      <div data-tauri-drag-region class="relative">
-        <div data-tauri-drag-region
-          class="titlebar h-[36px] sticky z-20 p-[0px]  items-center shadow-sm grid bg-base-200/75 glass grid-cols-[1fr_2fr_1fr]  overflow-hidden ">
-
-
-
-
-          <!-- /* ----------------------------- SEARCH BOX HERE HI ---------------------------- */ -->
-
-          <div data-tauri-drag-region class="w-full flex col-start-2 place-content-center z-0 dropdown">
-
-            <SearchBox />
-
+    <Pane :min-size="secondPaneMin" :size="secondPane" class="overscroll-none overflow-hidden relative">
+      <div role="tablist" class="tabs tabs-lifted tabs-sm flex z-10 ">
+        <template v-for="tab in sn.openTabs" :key="tab.id">
+          <a role="tab"
+            class="group tab m-0 max-w-44 before:visible before:-left-2 after:visible capitalize text-xs z-10"
+            :alt="tab.tab.name" :class="['tab', { 'tab-active': sn.isActiveTab(tab.tab.link) }]"
+            @click.prevent="sn.navigateTo(tab.tab.link)">
+            <Icon :icon="sn.getIconForTab(tab.tab.link)" class="size-3.5 mr-2" />{{ tab.tab.name }}
+            <button
+              class="opacity-0 flex content-base justify-items-end group-hover:opacity-70 transition-opacity duration-300"
+              @click="delete sn.openTabs[tab.tab.name]">
+              <Icon icon="material-symbols:close" class="size-3.5 ml-2 -mr-1" />
+            </button>
+          </a>
+          <div role="tabpanel"
+            class="tab-content overflow-hidden  bg-base-100 absolute rounded-[10px] inset-0 m-0 mt-[23px]  rounded-tl-none border-base-300 border h-auto">
+            <component :is="sn.getComponentForTab(tab.tab.link)" />
           </div>
 
-          <!-- /* ----------------------------- TOOLBAR BUTTONS ---------------------------- */ -->
-
-          <div
-            class="justify-self-end col-start-3 grid grid-cols-3 gap-2 mr-3 *:place-items-center  *: *:rounded-md *:size-6 text-base-content/60">
-
-            <div id="titlebar-minimize" data-tip="minimize" alt="minimize"
-              class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20">
-              <Icon icon="ph:line-vertical" class="rotate-90" />
-            </div>
-
-            <div id="titlebar-maximize" data-tip="maximize" alt="maximize"
-              class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20">
-              <Icon icon="ph:arrows-out-simple" />
-            </div>
-
-            <div id="titlebar-close" alt="close" data-tip="close"
-              class="p-1 hover:bg-base-300 hover:shadow-inner hover:shadow-base-content/20 hover:text-base-content">
-              <Icon icon="ph:x" class="titlebar-button" />
-            </div>
-          </div>
-        </div>
-
-
-        <!--   /* -------------------------------------------------------------------------- */
-       /*                                CONTENT START                          */
-       /* -------------------------------------------------------------------------- */ -->
-
-
-        <div class="w-full h-screen m-0 p-0 pt-14 pl-6 -mt-[36px] overflow-scroll bg-base-200 ">
-
-          <component :is="currentComponent" />
-
-        </div>
+        </template>
+        <a role="tab" class="hidden">hi</a>
       </div>
-    </SplitterPanel>
-  </Splitter>
+    </Pane>
+  </Splitpanes>
 </template>
-
 
 <!--   /* -------------------------------------------------------------------------- */
        /*                                CSS CSS CSS  START                          */
        /* -------------------------------------------------------------------------- */ -->
 
-
 <style>
-.titlebar {
-  width: inherit;
+.tabs::after,
+.tabs::before {
+  box-sizing: content-box !important;
 }
 
-
-.add-build {
-  @apply order-3 flex absolute right-0 -top-1;
-
-  .add-fill {
-    @apply inline-flex h-[17px] w-[17px];
-  }
-
-  .add-reg {
-    @apply hidden h-[17px] w-[17px];
-  }
+.tabs {
+  align-content: stretch;
 }
 
-.add-build:hover {
-  .add-fill {
-    @apply hidden;
-  }
-
-  .add-reg {
-    @apply inline-flex;
-  }
+#main-tabs::before {
+  @apply bg-base-100 content-[''] absolute h-full w-1/2 -z-[1] right-0 top-[76px];
 }
 
+/* beautify ignore:start */
 .menu-dropdown {
-  @apply block opacity-0 h-0 transition-all -translate-x-full duration-300 ease-in;
+  @apply block h-0 invisible transition-height;
+
+  li {
+    @apply opacity-0 h-0 transition-[opacity_200,_height_300] ease-in;
+  }
 
   &.menu-dropdown-show {
-    @apply block opacity-100 h-full transition-all translate-x-0 duration-300 ease-in;
+    @apply h-full visible;
+
+    li {
+      @apply opacity-100 h-8;
+    }
   }
 }
+/* beautify ignore:end */
 
-
+a::before,
+a::after {
+  @apply invisible;
+}
 
 .minimize {
+  @apply !max-w-[60px] w-[60px] transition-all duration-500;
 
   #logo {
-    @apply p-0;
+    @apply ml-[9px] p-0 scale-[1.4] mt-1 w-[35px] opacity-80;
 
     span {
-      @apply w-0 opacity-0;
+      @apply w-0 opacity-0 hidden;
     }
+  }
+
+  a::before,
+  a::after {
+    @apply visible z-50 absolute;
   }
 
   .menu {
@@ -359,10 +246,10 @@ onMounted(async () => {
 
     a,
     li span {
-      @apply flex size-[38px] rounded-full p-0 m-0 justify-center place-items-center;
+      @apply flex size-[35px] rounded-full p-0 m-0 justify-center place-items-center;
 
       svg {
-        @apply size-6;
+        @apply size-5;
       }
 
       span {
@@ -386,77 +273,49 @@ onMounted(async () => {
     }
 
     #browse {
+      @apply -ml-1.5 place-content-center rounded-full transition-all duration-300;
+
       span {
-        @apply ml-1 bg-base-content/80 text-base-100/80 size-[30px];
-
-        a svg {
-          @apply size-5;
-        }
+        @apply size-[30px];
       }
 
-      & ul:not(.collapse) {
-        @apply h-auto;
+      ul {
+        @apply h-0 ml-0 w-[30px] flex flex-col place-items-center bg-base-content/15 rounded-full;
+      }
 
-        li {
-          @apply -ml-[28px];
+      a svg {
+        @apply size-4;
+      }
+
+      &:has(.menu-dropdown-show) {
+        span {
+          @apply bg-base-content/80 text-base-100/80;
         }
 
-        &::before {
-          @apply -ml-[1px] -mt-3 mb-1.5 opacity-40;
+        ul {
+          @apply h-full my-2 px-0 py-1;
+
+          &::before {
+            @apply invisible opacity-0;
+          }
         }
       }
-    }
-
-    li {
-      @apply my-1 py-1;
     }
   }
 
-
+  li {
+    @apply my-1 py-1;
+  }
 }
-
 
 /*
-
-@apply w-0 h-0 opacity-0 invisible;
-
-[data-pc-section="nodetogglebutton"],
-.add-build {
-  @apply transition-all duration-100;
-}
-
-[data-pc-section="nodechildren"],
-[data-pc-section="nodelabel"],
-[data-pc-section="nodeicon"],
-[data-pc-section="node"] {
-  @apply transition-all duration-700;
-}
-
-[data-pc-section="rootchildren"] {
-  @apply transition-all duration-700 flex flex-col gap-0 overflow-x-hidden;
-}
-
-.minimize [data-pc-section="rootchildren"] {
-  @apply gap-2;
-}
-
-.minimize [data-pc-section="node"] ul {
-  @apply h-0 opacity-0 invisible;
-}
-
-.minimize [data-pc-section="nodechildren"],
-.minimize [data-pc-section="nodetogglebutton"],
-.minimize [data-pc-section="nodelabel"],
-.minimize .add-build {
-}
-
-
-.minimize [data-pc-section="nodeicon"] {
-  @apply m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60;
-}
-
-.minimize [aria-label="Browse"] [data-pc-section="nodeicon"],
-.minimize [aria-label="Utilities"] [data-pc-section="nodeicon"] {
-  @apply opacity-20 visible m-0 p-0 w-[1.4rem] h-[1.4rem] text-base-content/60;
-}*/
+ mask-composite: exclude;
+        inset: 0;
+        -webkit-mask:
+          url('') 0/100% 100%,
+          linear-gradient(#fff, #fff);
+        -webkit-mask-composite: destination-out;
+        mask:
+          url('') 0/100% 100%, linear-gradient(#fff, #fff);
+*/
 </style>

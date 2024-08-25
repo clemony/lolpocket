@@ -1,7 +1,6 @@
 <script setup>
 import { computed } from "vue";
 import { PaginationEllipsis } from "radix-vue";
-;
 import { cn } from "@/lib/utils";
 
 const props = defineProps({
@@ -18,7 +17,10 @@ const delegatedProps = computed(() => {
 </script>
 
 <template>
-  <PaginationEllipsis v-bind="delegatedProps" :class="cn('w-9 h-9 flex items-center justify-center', props.class)">
+  <PaginationEllipsis
+    v-bind="delegatedProps"
+    :class="cn('w-9 h-9 flex items-center justify-center', props.class)"
+  >
     <slot>
       <DotsHorizontalIcon />
     </slot>

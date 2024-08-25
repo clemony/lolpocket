@@ -1,24 +1,40 @@
 const animate = require("tailwindcss-animate");
 const scrollbarhide = require("tailwind-scrollbar-hide");
-const typography = require("@tailwindcss/typography");
-const colors = require("tailwindcss/colors");
+/*const typography = require("@tailwindcss/typography");
+const colors = require("tailwindcss/colors");*/
+const path = require("path");
 const daisyui = require("daisyui");
-const containerQueries = require("@tailwindcss/container-queries");
+//const containerQueries = require("@tailwindcss/container-queries");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  plugins: [animate, scrollbarhide, containerQueries, typography, daisyui],
+  plugins: [animate, scrollbarhide, daisyui],
 
   darkMode: ["class"],
   safelist: ["dark"],
   prefix: "",
-  content: ["./pages/**/*.{ts,tsx,vue,js,jsx}", "./components/**/*.{ts,tsx,vue,js,jsx}", "./app/**/*.{ts,tsx,vue,js,jsx}", "./src/**/*.{ts,tsx,vue,js,jsx}", "./src/assets/presets/"],
+  content: [
+    "./pages/**/*.{ts,tsx,vue,js,jsx}",
+    "./components/**/*.{ts,tsx,vue,js,jsx}",
+    "./app/**/*.{ts,tsx,vue,js,jsx}",
+    "./src/**/*.{ts,tsx,vue,js,jsx}",
+    "./src/assets/presets/",
+    path.join(__dirname, "./pages/**/*.{js,ts,jsx,tsx}"),
+    path.join(__dirname, "./components/**/*.{js,ts,jsx,tsx}"),
+  ],
 
   theme: {
     extend: {
       fontSize: {
         xxs: "0.599rem",
         smx: "0.69rem",
+      },
+      transitionProperty: {
+        height: "height",
+        width: "width",
+      },
+      height: {
+        stretch: "stretch",
       },
     },
     container: {
@@ -103,7 +119,7 @@ module.exports = {
           "base-100": "oklch( 30.8577% 0.023243 264.149498)",
           "base-200": "oklch( 28.0368% 0.01983 264.182074)",
           "base-300": "oklch( 26.3469% 0.018403 262.177739)",
-          "base-content": "oklch( 82.9011% 0.031335 222.959324)",
+          "base-content": "oklch( 84.8707% 0 0)",
           "neutral": "oklch( 24.7311% 0.020483 264.094728)",
           "neutral-content": "oklch( 82.9011% 0.031335 222.959324)",
         },

@@ -1,29 +1,18 @@
 .grid-item,
 .grid-image-container,
 .grid-image {
-  @apply rounded-lg transition-all duration-500;
-}
-
-.grid-header {
-  @apply w-full left-0 p-4 text-2xl font-bold tracking-tight;
-
-  h2 {
-    @apply my-3;
-  }
+  @apply rounded-sm transition-all duration-500;
 }
 
 .grid-container {
-  @apply grid w-full p-4 !overflow-y-auto h-full transition-all duration-500 grid-flow-row;
+  @apply grid w-full p-4 !overflow-y-auto h-full transition-all duration-500 grid-flow-row auto-cols-max;
 
   .grid-item {
-    @apply size-full z-0 w-full relative ring-[1px] ring-base-300 ring-offset-1 ring-offset-base-content/30 shadow-sm;
+    @apply size-full z-0 w-full relative;
 
     .grid-image-container {
       justify-content: center;
       align-items: center;
-      box-shadow:
-        2px 2px 2px 0 rgba(0, 0, 0, 0.25),
-        -2px -2px 3px 0 rgba(255, 255, 255, 0.3);
 
       @apply size-full flex overflow-hidden relative  z-40 p-0 m-0;
 

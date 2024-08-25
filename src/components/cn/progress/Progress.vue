@@ -20,8 +20,15 @@ const delegatedProps = computed(() => {
 </script>
 
 <template>
-  <div v-bind="delegatedProps"
-    :class="cn('relative h-2 w-full overflow-hidden rounded-full bg-primary/20', props.class)">
+  <div
+    v-bind="delegatedProps"
+    :class="
+      cn(
+        'relative h-2 w-full overflow-hidden rounded-full bg-primary/20',
+        props.class,
+      )
+    "
+  >
     <slot />
   </div>
 </template>

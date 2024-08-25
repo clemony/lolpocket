@@ -40,10 +40,10 @@ interface Champion {
   type: string;
   abilities: {
     passive: Ability;
-    q: Ability; 
-    w: Ability; 
-    e: Ability; 
-    r: Ability; 
+    q: Ability;
+    w: Ability;
+    e: Ability;
+    r: Ability;
   };
 }
 
@@ -63,72 +63,89 @@ export const useDataStore = defineStore("dataStore", () => {
     selectedChampion.value = champion;
   }
 
-  function parseAbilityString(abilityString: string): { name: string; context: string; data: Record<string, string> } {
-    if (typeof abilityString !== 'string') {
-      return { name: '', context: '', data: {} };
+  function parseAbilityString(abilityString: string): {
+    name: string;
+    context: string;
+    data: Record<string, string>;
+  } {
+    if (typeof abilityString !== "string") {
+      return { name: "", context: "", data: {} };
     }
-  
-    const lines = abilityString.split('\n').filter(line => line.trim() !== '');
-  
+
+    const lines = abilityString
+      .split("\n")
+      .filter((line) => line.trim() !== "");
+
     if (lines.length > 0) {
       const name = lines[0].trim();
-      let text = lines.slice(1).join('\n').trim();
-      
+      let text = lines.slice(1).join("\n").trim();
+
       // Initialize categories
       const data: Record<string, string> = {};
-      
+
       // Extract and remove specific lines from context
       const dataPrefixes = [
-        "COST:", 
-        "COOLDOWN:", 
+        "COST:",
+        "COOLDOWN:",
         "STATIC COOLDOWN:",
-        "RECHARGE:", 
+        "RECHARGE:",
         "RANGE:",
         "WIDTH:",
         "SPEED:",
-        "CAST TIME:", 
-        "TARGET RANGE:", 
+        "CAST TIME:",
+        "TARGET RANGE:",
         "EFFECT RADIUS:",
         "TETHER RADIUS:",
         "COLLISION RADIUS:",
         "TARGET IMMUNITY:",
         "ANGLE:",
       ];
-  
+
       // Separate lines into categories and context
       const contextLines: string[] = [];
-      
-      lines.slice(1).forEach(line => {
+
+      lines.slice(1).forEach((line) => {
         const trimmedLine = line.trim();
         let categorized = false;
-        
-        dataPrefixes.forEach(prefix => {
+
+        dataPrefixes.forEach((prefix) => {
           if (trimmedLine.startsWith(prefix)) {
             data[prefix] = trimmedLine.substring(prefix.length).trim();
             categorized = true;
           }
         });
-  
+
         if (!categorized) {
           contextLines.push(trimmedLine);
         }
       });
-      
-      const context = contextLines.join('\n').trim().replace('Innate:', '').replace('Active:', '').replace('Innate -', '').replace('Active -', '').replace('Passive:', '').trim();
-  
+
+      const context = contextLines
+        .join("\n")
+        .trim()
+        .replace("Innate:", "")
+        .replace("Active:", "")
+        .replace("Innate -", "")
+        .replace("Active -", "")
+        .replace("Passive:", "")
+        .trim();
+
       return { name, context, data };
     }
-  
-    return { name: '', context: '', data: {} };
+
+    return { name: "", context: "", data: {} };
   }
-  
+
   function transformChampionData(data: any): Champion {
     return {
       name: data.name,
       img: data.img,
       wiki: data.wiki,
       title: data.title,
-      tags: typeof data.tags === 'string' ? data.tags.split(',').map(tag => tag.trim()) : data.tags || [],
+      tags:
+        typeof data.tags === "string"
+          ? data.tags.split(",").map((tag) => tag.trim())
+          : data.tags || [],
       type: data.type,
       abilities: {
         passive: {
@@ -155,8 +172,8 @@ export const useDataStore = defineStore("dataStore", () => {
           key: "R",
           ...parseAbilityString(data.r),
           img: data.rImg,
-        }
-      }
+        },
+      },
     };
   }
 
@@ -166,14 +183,14 @@ export const useDataStore = defineStore("dataStore", () => {
       if (!response.ok) {
         throw new Error(`Network response was not ok: ${response.statusText}`);
       }
-  
+
       const contentType = response.headers.get("content-type");
       if (!contentType || !contentType.includes("application/json")) {
         throw new TypeError("Received non-JSON response");
       }
-  
+
       const json: DataObject[] = await response.json();
-  
+
       json.forEach((object: DataObject) => {
         if (object.type === "rune") {
           runes.value.push(object as Rune);
@@ -189,6 +206,13 @@ export const useDataStore = defineStore("dataStore", () => {
       console.error("Failed to fetch data:", error);
     }
   };
-  
-  return { runes, champions, items, fetchData, selectedChampion, setSelectedChampion };
+
+  return {
+    runes,
+    champions,
+    items,
+    fetchData,
+    selectedChampion,
+    setSelectedChampion,
+  };
 });

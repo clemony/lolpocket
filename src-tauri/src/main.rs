@@ -2,8 +2,8 @@
 
 use tauri::{CustomMenuItem, Menu, MenuItem, Submenu, Manager};
 use window_vibrancy::{apply_vibrancy, NSVisualEffectMaterial};
-use objc::{ sel_impl, msg_send, sel};
-use objc::runtime::Object;
+use objc2::{ msg_send};
+use objc2::runtime::Object;
 
 fn main() {
     let quit = CustomMenuItem::new("quit".to_string(), "Quit");

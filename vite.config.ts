@@ -6,18 +6,25 @@ import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from "vite";
 import { ViteAliases } from "vite-aliases";
 
+
 export default defineConfig({
   plugins: [
-    VueRouter(),
+    VueRouter({
+       // what files should be considered as a pages
+  extensions: ['.vue'],
+  dts: './typed-router.d.ts',
+
+ } ),
     vue(),
     Components({
       dirs: ["src/components", "src/pages/modules", "src/pages"], // Ensure paths are correct
       extensions: ["vue"],
       deep: true,
-      dts: "src/lib/components.d.ts",
+      dts: "./components.d.ts",
       resolvers: [
-        IconsResolver()
+        IconsResolver(),
       ],
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
     }),
     AutoImport({
       include: [
@@ -28,17 +35,19 @@ export default defineConfig({
       ],
       imports: [
         'vue',
+        'vue-router',
         {
-          '@iconify/vue': [
-            '{ Icon }',
-          ]
-        }
+          from: 'vue-router',
+          imports: ['RouteLocationRaw'],
+          type: true,
+        },
       ],
       eslintrc: {
         enabled: true,
         filepath: "./.eslintrc-auto-import.json",
       },
-      dts: "src/lib/auto-imports.d.ts", // Generates `auto-imports.d.ts` file
+      
+      dts: "./auto-imports.d.ts", // Generates `auto-imports.d.ts` file
     }),
     ViteAliases({
       prefix: "@",
@@ -48,16 +57,14 @@ export default defineConfig({
       logPath: "src/logs",
       createGlobalAlias: true,
     }),
+    
   ],
-
   clearScreen: false,
 
   server: {
-    port: 9999,
+    port: 8080,
     open: false,
   },
-
-  envPrefix: ["VITE_", "TAURI_PLATFORM", "TAURI_ARCH", "TAURI_FAMILY", "TAURI_PLATFORM_VERSION", "TAURI_PLATFORM_TYPE", "TAURI_DEBUG"],
 
   build: {
     rollupOptions: {
@@ -66,8 +73,5 @@ export default defineConfig({
         // Add additional entry points if needed
       },
     },
-    target: process.env.TAURI_PLATFORM === "windows" ? "chrome105" : "safari13",
-    minify: !process.env.TAURI_DEBUG ? "esbuild" : false,
-    sourcemap: !!process.env.TAURI_DEBUG,
   },
 });

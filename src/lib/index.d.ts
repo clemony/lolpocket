@@ -1,6 +1,19 @@
-
-declare module '@iconify/vue';
-declare module '@/pages/tree.vue';
-declare module '@/service/NodeService';
-declare module '@/pages/App.vue';
-declare module '@/data/champQuotes.ts';
+declare module "@stores/sessionStore";
+declare module "@iconify/vue";
+declare module "@service/NodeService";
+declare module "@pages/App.vue";
+declare module "@data/champQuotes.ts";
+declare module "@pages/hi.vue";
+declare module "@page-build/builds-template.vue";
+declare module "@pages/home.vue";
+declare module "@pages/about.vue";
+declare module "@pages/items.vue";
+declare module "@pages/runes.vue";
+declare module "@pages/settings.vue";
+declare module "@stores/dataStore";
+declare module "@stores/userSettings";
+declare module "@stores/news";
+declare module "@aura";
+declare module "@pages/components/titlebar";
+declare module "@script/routing.ts";
+declare module "@pages/champions/champions.vue";
