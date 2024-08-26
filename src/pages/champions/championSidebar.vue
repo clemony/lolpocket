@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useDataStore } from '@stores/dataStore';
+import { Icon } from '@iconify/vue';
 
 const dataStore = useDataStore();
 
@@ -128,3 +129,27 @@ const uncheckAbilities = () => {
         </div>
     </div>
 </template>
+
+<style scoped>
+.collapse-title {
+    @apply text-sm flex gap-3 items-center;
+
+    img {
+        @apply rounded-full border border-neutral/40 size-9 -ml-1;
+    }
+
+    div {
+        @apply flex-grow text-nowrap truncate;
+    }
+
+    kbd {
+        @apply kbd-sm text-xs font-mono size-6;
+    }
+}
+
+.collapse-title:has(input[type="radio"]:checked) {}
+
+.ability-wrapper>div {
+    @apply border-neutral/15 border;
+}
+</style>

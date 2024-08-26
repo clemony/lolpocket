@@ -2,7 +2,7 @@
   font-family: "Geist Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --rounded-box: 1rem !important;
+  --rounded-box: 0.7rem !important;
   --rounded-btn: 0.5rem !important;
   --rounded-badge: 1.9rem !important;
   --animation-btn: 0.25s !important;
@@ -18,12 +18,11 @@
 }
 
 :root[data-theme="light"] {
-  --dark-shadow: oklch(var(--bc) / 15%);
+  --dark-shadow: oklch(var(--bc) / 5%);
 }
 
-:root[data-theme="nord"] html,
-:root[data-theme="dark"] html body {
-  @apply m-0 p-0 overflow-hidden;
+:root[data-theme="dim"],
+:root[data-theme="dark"] {
 }
 
 html,
@@ -34,7 +33,9 @@ body {
 #app {
   @apply absolute top-0 left-0 backdrop-brightness-200 w-screen h-screen;
 }
-
+.shadow-frame {
+  box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
+}
 .glass {
   --glass-reflex-opacity: 0;
   --glass-reflex-degree: 0;
@@ -43,6 +44,7 @@ body {
 
 .tab {
   border-bottom-color: transparent !important;
+  padding-bottom: 0 !important;
 }
 
 [data-theme="light"] .glass {
@@ -51,15 +53,15 @@ body {
 }
 
 [data-theme="light"] #app {
-  @apply bg-blend-lighten backdrop-brightness-[170%] bg-base-100/80 glass backdrop-contrast-[80%];
+  @apply bg-blend-lighten backdrop-brightness-[190%] bg-base-100/80 glass backdrop-contrast-[80%];
 }
 
-[data-theme="nord"] #app,
+[data-theme="dim"] #app,
 [data-theme="dark"] #app {
-  @apply bg-blend-darken bg-base-100/80 glass;
+  @apply bg-blend-normal bg-base-100/70 glass;
 }
 
-[data-theme="nord"] .glass,
+[data-theme="dim"] .glass,
 [data-theme="dark"] .glass {
   --glass-blur: 10px;
   --glass-opacity: 0.3;
@@ -67,6 +69,9 @@ body {
 
 .tooltip {
   @apply ![--tooltip-offset:30px] ![--tooltip-tail-offset:24px];
+  &::before {
+    @apply !text-xs;
+  }
 }
 
 .font-serif {
@@ -80,9 +85,9 @@ body {
 .font-sans {
   font-family:
     "Geist Sans",
+    BlinkMacSystemFont,
     system-ui,
     -apple-system,
-    BlinkMacSystemFont,
     "Segoe UI",
     Roboto,
     "Open Sans",

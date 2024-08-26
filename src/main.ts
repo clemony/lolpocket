@@ -1,10 +1,11 @@
-import App from "../src/pages/App.vue";
+import App from "@pages/App.vue";
 import { createPinia } from "pinia";
 import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
 import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import { getCurrent } from "../node_modules/@tauri-apps/api/window.js";
 import { routes } from "vue-router/auto-routes";
+import VueShortkey from "vue3-shortkey";
 
 const getRoutes = routes;
 
@@ -48,7 +49,7 @@ interface WindowOptions {
 export type { TitleBarStyle, WindowOptions };
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
-
+app.use(VueShortkey);
 app.use(pinia);
 app.use(router);
 

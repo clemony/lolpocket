@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import { useSessionNav } from "@stores/sessionStore";
-
 import { Icon } from "@iconify/vue";
+import { ref, computed, onMounted } from "vue";
+import { VueShortkey } from "vue3-shortkey";
+const query = ref("");
+
 
 const sn = useSessionNav();
 const isMinimized = ref(false);
@@ -14,10 +16,11 @@ function toggleMinimize() {
         isMinimized.value = false;
     }
 }
+
 </script>
 <template>
     <div data-tauri-drag-region
-        class="titlebar top-0 left-0 h-[36px] max-h-[36px] w-full grid grid-cols-3 place-items-center">
+        class="titlebar top-0 left-0 h-[36px] max-h-[36px] w-full grid grid-cols-[1fr_7fr_1fr] place-items-center">
         <div
             class="flex col-start-1 justify-self-start self-base mt-2 ml-5 select-none font-bold text-base gap-3 content-center items-center">
             <button @click="toggleMinimize">
@@ -31,9 +34,34 @@ function toggleMinimize() {
 
         <!-- /* ----------------------------- SEARCH BOX HERE HI ---------------------------- */ -->
 
-        <div data-tauri-drag-region class="w-full flex col-start-2 place-content-center z-0 dropdown">
-            <SearchBox />
+        <div data-tauri-drag-region
+            class=" col-start-2  dropdown text-center  flex justify-end w-full pl-6 rounded-lg z-0">
+
+            <div
+                class="relative max-w-[470px] h-[27px] shadow-inner shadow-[var(--dark-shadow)] bg-base-100/80 border border-base-content/10 focus:ring-offset-base-content/30 text-base-content/60 rounded-[10px] z-20 justify-self-end items-end">
+
+                <input tabindex="0" role="" v-model="query" placeholder=""
+                    class="peer italic h-full text-xs !outline-0 !outline-transparent !outline-none rounded-[10px] ring-0 focus:outline-0 focus:ring-1 border-0 focus:border-0 focus:not-italic focus:ring-base-content/10 focus:text-base-content transition-all duration-500 w-32 pl-2 focus:w-72 bg-transparent placeholder:font-mono placeholder:not-italic placeholder:text-lg placeholder:align-center focus:bg-base-100/50"
+                    @keydown.enter.prevent v-shortkey.focus="['meta' || 'ctrl', 's']" />
+
+
+                <div
+                    class="peer-focus:opacity-0 absolute pointer-events-none -top-[1px] right-[48px] items-center opacity-70 *:!rounded-md *:bg-transparent transition-opacity duration-500">
+
+                    <kbd class="kbd kbd-xs ">⌘</kbd>
+                    +
+                    <kbd class="kbd kbd-xs ">S</kbd>
+
+                </div>
+                <Icon icon="ph:magnifying-glass"
+                    class="size-5 absolute right-3 top-[1px] flex gap-2.5 z-20 text-base-content/30" />
+
+            </div>
+
+
+
         </div>
+
 
         <!-- /* ----------------------------- TOOLBAR BUTTONS ---------------------------- */ -->
         <!-- beautify ignore:start -->
@@ -69,3 +97,31 @@ function toggleMinimize() {
     </div>
   </div>
 </template>
+<style scoped>
+.btn {
+    @apply btn-sm bg-opacity-80;
+}
+
+
+.tab,
+.tab-active,
+.tabs-lifted {
+    @apply bg-transparent;
+}
+
+.radio {
+    @apply radio-xs ml-2;
+}
+
+.tab-panel {
+    @apply bg-transparent;
+}
+
+.label {
+    @apply grid grid-cols-[3fr_1fr];
+
+    span {
+        @apply flex justify-start;
+    }
+}
+</style>

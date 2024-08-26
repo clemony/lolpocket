@@ -11,6 +11,7 @@ declare module 'vue' {
     App: typeof import('./src/pages/App.vue')['default']
     Browse: typeof import('./src/pages/browse.vue')['default']
     Builds: typeof import('./src/pages/builds.vue')['default']
+    BuildsTemplate: typeof import('./src/pages/builds/builds-template.vue')['default']
     Button: typeof import('./src/components/cn/button/Button.vue')['default']
     Card: typeof import('./src/components/cn/card/Card.vue')['default']
     CardContent: typeof import('./src/components/cn/card/CardContent.vue')['default']

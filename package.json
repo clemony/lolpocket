@@ -25,6 +25,7 @@
     "@tailwindcss/container-queries": "^0.1.1",
     "@vue/runtime-core": "^3.4.31",
     "@vueuse/core": "^10.11.0",
+    "animejs": "^3.2.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
@@ -44,7 +45,8 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.5.4",
     "vite-plugin-require": "^1.2.14",
-    "vue": "^3.4.29"
+    "vue": "^3.4.29",
+    "vue3-shortkey": "^4.0.0"
   },
   "devDependencies": {
     "@csstools/postcss-is-pseudo-class": "^5.0.0",

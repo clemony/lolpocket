@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useDataStore } from "@stores/dataStore";
 import { Icon } from "@iconify/vue";
-import { Quotes } from "@data/champQuotes.ts";
+import { Quotes } from "@stores/champQuotes.ts";
 import { ref, computed, onMounted } from "vue";
 import { useUserSettings } from "../../stores/userSettings";
 const dataStore = useDataStore();
@@ -83,32 +83,22 @@ function handleChampionClick(champion: Champion) {
 
 <template>
   <!-- Champ Tab -->
-  <div class="drawer drawer-end">
-    <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-    <div class="drawer-content">
-      <div class="grid-container w-full scroll-none mx-0 p-0">
-        <div class="grid-item champ" v-for="(champion, index) in champions" :key="champion.name" :data-index="index">
-          <label for="my-drawer-4" class="drawer-button cursor-pointer" @click="handleChampionClick(champion)">
-            <div class="grid-image-container champ">
-              <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
-                class="grid-image" />
 
-              <div class="grid-tip">
-                {{ champion.name }}
-              </div>
-            </div>
-          </label>
+  <div class="grid-container w-full scroll-none mx-0 p-0">
+    <div class="grid-item champ" v-for="(champion, index) in champions" :key="champion.name" :data-index="index">
+      <label for="my-drawer-4" class="drawer-button cursor-pointer" @click="handleChampionClick(champion)">
+        <div class="grid-image-container champ">
+          <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
+            class="grid-image" />
+
+          <div class="grid-tip">
+            {{ champion.name }}
+          </div>
         </div>
-      </div>
+      </label>
     </div>
   </div>
 
-  <div class="drawer-side overscroll-none z-30">
-    <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay" @click="uncheckAbilities()"></label>
-    <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4 pt-[30px]">
-
-    </div>
-  </div>
 </template>
 
 <style scoped>
@@ -134,27 +124,5 @@ function handleChampionClick(champion: Champion) {
 .linker:hover+div {
   opacity: 1;
   display: flex;
-}
-
-.collapse-title {
-  @apply text-sm flex gap-3 items-center;
-
-  img {
-    @apply rounded-full border border-neutral/40 size-9 -ml-1;
-  }
-
-  div {
-    @apply flex-grow text-nowrap truncate;
-  }
-
-  kbd {
-    @apply kbd-sm text-xs font-mono size-6;
-  }
-}
-
-.collapse-title:has(input[type="radio"]:checked) {}
-
-.ability-wrapper>div {
-  @apply border-neutral/15 border;
 }
 </style>

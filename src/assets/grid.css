@@ -1,7 +1,7 @@
 .grid-item,
 .grid-image-container,
 .grid-image {
-  @apply rounded-sm transition-all duration-500;
+  @apply rounded-md transition-all duration-500;
 }
 
 .grid-container {

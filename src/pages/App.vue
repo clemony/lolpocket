@@ -7,30 +7,76 @@ import { Icon } from "@iconify/vue";
 import { useUserSettings } from "@stores/userSettings";
 import { Splitpanes, Pane } from "splitpanes";
 import { useSessionNav } from "@stores/sessionStore";
-import Titlebar from "./components/titlebar.vue";
+import Titlebar from "@components/titlebar.vue";
 const settings = useUserSettings();
 const sn = useSessionNav();
+import anime from 'animejs/lib/anime.es.js';
+import { reverse } from "dns";
 
 /* ------------------------------- NAVIGATION ------------------------------- */
 
 const showDropdowns = ref([false, true, true]); // Track visibility for each dropdown (index-based)
 const isMinimized = ref(false);
 const paneSize = ref(19);
-const secondPaneMin = ref(100);
+const secondPaneMin = ref(81);
 const secondPane = ref(100);
-
 
 function log(resize, event: any) {
   var firstSize = event[0].size;
+  console.log(event[0].size);
+  if (firstSize < 14) {
+    anime({
+      targets: ".menu li ul",
+      opacity: 0.5,
+    });
+  }
+  if (firstSize < 11) {
+    var a11 = anime.timeline({
+      targets: '.menu li ul li a',
+      opacity: 0,
+      duration: 300,
+    });
+    a11.add({
+      targets: '.menu li ul li',
+      height: 0,
+      duration: 200,
+      delay: anime.stagger(50, { direction: 'reverse' }),
+    }, '-=50');
+  }
+  if (firstSize < 8) {
+    anime({
+      targets: '.menu a span',
+      opacity: 0,
+    });
+  }
 
-  if (firstSize < 13) {
-    isMinimized.value = true;
-    paneSize.value = 3;
-    sn.$patch({ isMinimized, paneSize })
-  } else {
-    isMinimized.value = false;
-    paneSize.value = 19;
-    sn.$patch({ isMinimized, paneSize })
+
+
+  if (firstSize > 8) {
+    anime({
+      targets: '.menu a span',
+      opacity: 1,
+    });
+  }
+  if (firstSize > 11) {
+    var a11 = anime.timeline({
+      targets: '.menu li ul li a',
+      opacity: 1,
+      duration: 300,
+    });
+    a11.add({
+      targets: '.menu li ul li, ul',
+      height: [],
+      duration: 200,
+      delay: anime.stagger(50, { direction: 'normal' }),
+    }, '-=50');
+
+  }
+  if (firstSize > 14) {
+    anime({
+      targets: ".menu li ul",
+      opacity: 1,
+    });
   }
 }
 
@@ -51,17 +97,22 @@ onMounted(async () => {
 });
 </script>
 <template>
+
   <Titlebar />
   <!--   /* -------------------------------------------------------------------------- */
          /*                                 PANEL ONE START                            */
         /* -------------------------------------------------------------------------- */ -->
 
-  <Splitpanes ref="splitter" class="default-theme overscroll-none overflow-hidden" @resize="log('resize', $event)">
+  <Splitpanes ref="splitter" class="drawer-end drawer  default-theme overscroll-none overflow-hidden place-content-end"
+    @resize="log('resize', $event)">
+
+
+
     <Pane :size="paneSize" :min-size="3" :max-size="21" :class="{ minimize: isMinimized }"
       class="max-w-[300px] min-w-[60px] w-[250px] relative transition-width overflow-hidden overscroll-none duration-500 z-20">
-      <div id="menu" class="!overflow-y-scroll mt-2">
+      <div id="menu" class="!overflow-y-scroll  mx-0.5 ">
         <ul
-          class="menu ml-1 [&_svg]:size-4 tracking-wider space-y-3 text-xs [&_a]:flex [&_a]:gap-3 [&_a]:-ml-1 [&_ul]:before:opacity-20 [&_ul]:ml-5">
+          class="menu  [&_svg]:size-4 *:tracking-wide space-y-3 text-xs [&_a]:flex [&_a]:gap-3 [&_a]:-ml-1 [&_ul]:before:opacity-20 [&_ul]:ml-5">
           <li>
             <a @click="sn.navigateTo('/home')" class="tooltip tooltip-right" title="hello">
               <Icon icon="ph:house" />
@@ -158,30 +209,49 @@ onMounted(async () => {
        /*                                PANEL 2 START                          */
        /* -------------------------------------------------------------------------- */ -->
 
-    <Pane :min-size="secondPaneMin" :size="secondPane" class="overscroll-none overflow-hidden relative">
-      <div role="tablist" class="tabs tabs-lifted tabs-sm flex z-10 ">
+    <Pane :min-size="secondPaneMin" :size="secondPane"
+      class=" drawer-content overscroll-none overflow-hidden relative max-h-[calc(100%-36px)] justify-end left-0 bottom-0">
+
+
+
+
+      <div role="tablist" class="tabs tabs-lifted flex z-10 ">
         <template v-for="tab in sn.openTabs" :key="tab.id">
           <a role="tab"
-            class="group tab m-0 max-w-44 before:visible before:-left-2 after:visible capitalize text-xs z-10"
+            class="group flex justify-start tab m-0 w-36 before:visible before:-left-[8px]  after:visible capitalize text-xs z-[5]"
             :alt="tab.tab.name" :class="['tab', { 'tab-active': sn.isActiveTab(tab.tab.link) }]"
             @click.prevent="sn.navigateTo(tab.tab.link)">
-            <Icon :icon="sn.getIconForTab(tab.tab.link)" class="size-3.5 mr-2" />{{ tab.tab.name }}
+            <Icon :icon="sn.getIconForTab(tab.tab.link)" class="size-3.5 mr-2 ml-1" />{{ tab.tab.name }}
+
             <button
-              class="opacity-0 flex content-base justify-items-end group-hover:opacity-70 transition-opacity duration-300"
+              class="opacity-0 flex flex-grow content-center justify-end group-hover:opacity-70 transition-opacity duration-300"
               @click="delete sn.openTabs[tab.tab.name]">
               <Icon icon="material-symbols:close" class="size-3.5 ml-2 -mr-1" />
             </button>
+
           </a>
           <div role="tabpanel"
-            class="tab-content overflow-hidden  bg-base-100 absolute rounded-[10px] inset-0 m-0 mt-[23px]  rounded-tl-none border-base-300 border h-auto">
+            class="tab-content overflow-hidden  bg-base-100/70 absolute inset-0 m-0 mt-[31px]   border-base-300 border h-auto !p-0 !rounded-bl-none !rounded-tr-none">
             <component :is="sn.getComponentForTab(tab.tab.link)" />
           </div>
 
         </template>
         <a role="tab" class="hidden">hi</a>
       </div>
+
     </Pane>
   </Splitpanes>
+  <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-side overscroll-none z-30">
+    <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
+    <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4 pt-[30px]">
+      <template v-for="tab in sn.openTabs" :key="tab.id">
+        <component :is="sn.getSidebarForTab(tab.tab.link)" />
+      </template>
+    </div>
+  </div>
+  <div class="pointer-events-none w-screen h-screen fixed top-0 left-0 z-[999] shadow-frame rounded-[12px]">
+  </div>
 </template>
 
 <!--   /* -------------------------------------------------------------------------- */
@@ -189,19 +259,6 @@ onMounted(async () => {
        /* -------------------------------------------------------------------------- */ -->
 
 <style>
-.tabs::after,
-.tabs::before {
-  box-sizing: content-box !important;
-}
-
-.tabs {
-  align-content: stretch;
-}
-
-#main-tabs::before {
-  @apply bg-base-100 content-[''] absolute h-full w-1/2 -z-[1] right-0 top-[76px];
-}
-
 /* beautify ignore:start */
 .menu-dropdown {
   @apply block h-0 invisible transition-height;

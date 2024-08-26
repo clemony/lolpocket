@@ -1,8 +1,8 @@
 import { ref, DefineComponent, watch } from "vue";
 import { defineStore } from "pinia";
 import { RouterView, useRoute, useRouter } from "vue-router";
-import Builds from "@page-build/builds-template.vue";
 import Champions from "@pages/champions/champions.vue";
+import championSidebar from "@pages/champions/championSidebar.vue";
 import Home from "@pages/home.vue";
 import Items from "@pages/items.vue";
 import Hi from "@pages/hi.vue";
@@ -36,16 +36,16 @@ export const useSessionNav = defineStore("sessionNav", () => {
 
   const routeComponentMap: Record<
     string,
-    { component: DefineComponent; icon: string }
+    { component: DefineComponent; icon: string; sidebar?: string }
   > = {
-    "/builds": { component: Builds, icon: "ph:cube" },
     "/home": { component: Home, icon: "ph:house" },
-    "/champions": { component: Champions, icon: "ph:crown-simple" },
+    "/champions": { component: Champions, icon: "ph:crown-simple", sidebar: championSidebar },
     "/items": { component: Items, icon: "vaadin:sword" },
     "/runes": { component: Runes, icon: "ph:hexagon" },
     "/settings": { component: Settings, icon: "ph:gear-six" },
     "/about": { component: About, icon: "ph:gear-" },
     "/hi": { component: Hi, icon: "ph:gear-" },
+    "/championSidebar": { component: championSidebar, icon: "ph"},
   };
 
   var activeTab = ref("");
@@ -82,6 +82,13 @@ export const useSessionNav = defineStore("sessionNav", () => {
     );
   };
 
+    // Function to get the component for the tab
+    const getSidebarForTab = (path) => {
+    return (
+      routeComponentMap[path]?.sidebar
+    );
+  };
+
   // Function to get the icon for the tab
   const getIconForTab = (path) => {
     return routeComponentMap[path]?.icon || "ph:house"; // Default icon
@@ -90,6 +97,7 @@ export const useSessionNav = defineStore("sessionNav", () => {
   return {
     navigateTo,
     routeComponentMap,
+    getSidebarForTab,
     isActiveTab,
     openTabs,
     getComponentForTab,

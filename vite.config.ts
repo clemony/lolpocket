@@ -17,7 +17,7 @@ export default defineConfig({
  } ),
     vue(),
     Components({
-      dirs: ["src/components", "src/pages/modules", "src/pages"], // Ensure paths are correct
+      dirs: ["src/stores", "src/pages/modules", "src/pages"], // Ensure paths are correct
       extensions: ["vue"],
       deep: true,
       dts: "./components.d.ts",
@@ -42,10 +42,20 @@ export default defineConfig({
           type: true,
         },
       ],
+      dirs: [
+         '@lib/',
+         '@stores/'
+        // './composables' // only root modules
+        // './composables/**', // all nested modules
+        // ...
+      ],
       eslintrc: {
         enabled: true,
         filepath: "./.eslintrc-auto-import.json",
       },
+
+      vueTemplate: true,
+      viteOptimizeDeps: true,
       
       dts: "./auto-imports.d.ts", // Generates `auto-imports.d.ts` file
     }),
