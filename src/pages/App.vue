@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, DefineComponent } from "vue";
-import "@assets/imports.css";
+import "@assets/css/imports.css";
 import { storeToRefs, _StoreWithState } from "pinia";
 import { useDataStore } from "@stores/dataStore";
 import { Icon } from "@iconify/vue";
@@ -11,9 +11,12 @@ import Titlebar from "@components/titlebar.vue";
 const settings = useUserSettings();
 const sn = useSessionNav();
 import anime from 'animejs/lib/anime.es.js';
-import { reverse } from "dns";
+import { RouterView, useRoute, useRouter } from "vue-router";
 
 /* ------------------------------- NAVIGATION ------------------------------- */
+// Access the router instance
+const router = useRouter();
+const route = useRoute();
 
 const showDropdowns = ref([false, true, true]); // Track visibility for each dropdown (index-based)
 const isMinimized = ref(false);
@@ -80,7 +83,34 @@ function log(resize, event: any) {
   }
 }
 
+// Track the active tab
+const activeTab = ref("");
 
+// Method to remove a tab by id and set the next tab as active
+function removeTab(id) {
+  const tabIndex = sn.openTabs.findIndex((tab) => tab.id === id);
+
+  // Remove the tab by filtering it out
+  sn.openTabs = sn.openTabs.filter((tab) => tab.id !== id);
+
+  // Set the next active tab
+  if (sn.openTabs.length > 0) {
+    if (tabIndex === sn.openTabs.length) {
+      // If the last tab was removed, set the previous tab as active
+      activeTab.value = sn.openTabs[sn.openTabs.length - 1].tab.link;
+    } else {
+      // Otherwise, set the next tab as active
+      activeTab.value = sn.openTabs[tabIndex] ? sn.openTabs[tabIndex].tab.link : sn.openTabs[sn.openTabs.length - 1].tab.link;
+    }
+
+    // Optionally, navigate to the newly active tab
+    sn.navigateTo(activeTab.value);
+  } else {
+    // If no tabs are left, reset the active tab
+    activeTab.value = "";
+    sn.navigateTo("/home");
+  }
+}
 
 
 // Toggle visibility for the dropdown at a specific index
@@ -103,7 +133,7 @@ onMounted(async () => {
          /*                                 PANEL ONE START                            */
         /* -------------------------------------------------------------------------- */ -->
 
-  <Splitpanes ref="splitter" class="drawer-end drawer  default-theme overscroll-none overflow-hidden place-content-end"
+  <Splitpanes ref="splitter" class="drawer-end drawer  default-theme overscroll-none overflow-hidden place-content-end "
     @resize="log('resize', $event)">
 
 
@@ -112,7 +142,7 @@ onMounted(async () => {
       class="max-w-[300px] min-w-[60px] w-[250px] relative transition-width overflow-hidden overscroll-none duration-500 z-20">
       <div id="menu" class="!overflow-y-scroll  mx-0.5 ">
         <ul
-          class="menu  [&_svg]:size-4 *:tracking-wide space-y-3 text-xs [&_a]:flex [&_a]:gap-3 [&_a]:-ml-1 [&_ul]:before:opacity-20 [&_ul]:ml-5">
+          class="menu  [&_svg]:size-4 *:tracking-wide space-y-3 text-xs [&_a]:flex [&_a]:gap-3 [&_a]:-ml-1 [&_a]:font-medium [&_ul]:before:opacity-20 [&_ul]:ml-5">
           <li>
             <a @click="sn.navigateTo('/home')" class="tooltip tooltip-right" title="hello">
               <Icon icon="ph:house" />
@@ -129,7 +159,7 @@ onMounted(async () => {
             </span>
             <ul :class="{ 'menu-dropdown-show': showDropdowns[0] }" class="menu-dropdown">
               <li>
-                <a><span>Submenu 1</span></a>
+                <a @click="router.push('/champions')"><span>Submenu 1</span></a>
               </li>
               <li>
                 <a><span>Submenu 2</span></a>
@@ -218,25 +248,27 @@ onMounted(async () => {
       <div role="tablist" class="tabs tabs-lifted flex z-10 ">
         <template v-for="tab in sn.openTabs" :key="tab.id">
           <a role="tab"
-            class="group flex justify-start tab m-0 w-36 before:visible before:-left-[8px]  after:visible capitalize text-xs z-[5]"
+            class="group flex justify-start tab m-0 w-36 before:visible before:-left-[8px]  after:visible capitalize text-xs z-[5]  tracking-wider font-medium"
             :alt="tab.tab.name" :class="['tab', { 'tab-active': sn.isActiveTab(tab.tab.link) }]"
             @click.prevent="sn.navigateTo(tab.tab.link)">
-            <Icon :icon="sn.getIconForTab(tab.tab.link)" class="size-3.5 mr-2 ml-1" />{{ tab.tab.name }}
+            <Icon :icon="sn.getIconForTab(tab.tab.link)" class="size-3.5 mr-2 ml-1 " />
+            <span class="mt-[2px]">{{ tab.tab.name }}</span>
 
             <button
-              class="opacity-0 flex flex-grow content-center justify-end group-hover:opacity-70 transition-opacity duration-300"
-              @click="delete sn.openTabs[tab.tab.name]">
+              class="opacity-0 flex flex-grow content-center justify-end group-hover:opacity-70 transition-opacity duration-300 "
+              @click.stop="removeTab(tab.id)"> <!-- Stop event propagation to prevent tab click -->
               <Icon icon="material-symbols:close" class="size-3.5 ml-2 -mr-1" />
             </button>
 
           </a>
-          <div role="tabpanel"
-            class="tab-content overflow-hidden  bg-base-100/70 absolute inset-0 m-0 mt-[31px]   border-base-300 border h-auto !p-0 !rounded-bl-none !rounded-tr-none">
+          <div role="tabpanel" class="tab-content overflow-hidden  bg-base-100/70 absolute inset-0 m-0 mt-[31px]   border-base-300 border h-auto !p-0 !rounded-bl-none !rounded-tr-none
+           !shadow-[inset_-12px_-8px_40px_#46464620] ">
             <component :is="sn.getComponentForTab(tab.tab.link)" />
           </div>
 
         </template>
-        <a role="tab" class="hidden">hi</a>
+        <a role="tab" class="hidden">egg</a>
+
       </div>
 
     </Pane>

@@ -3,6 +3,7 @@ import AutoImport from "unplugin-auto-import/vite";
 import IconsResolver from 'unplugin-icons/resolver';
 import Components from "unplugin-vue-components/vite";
 import VueRouter from 'unplugin-vue-router/vite'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
 import { defineConfig } from "vite";
 import { ViteAliases } from "vite-aliases";
 
@@ -17,7 +18,7 @@ export default defineConfig({
  } ),
     vue(),
     Components({
-      dirs: ["src/stores", "src/pages/modules", "src/pages"], // Ensure paths are correct
+      dirs: ["src/pages/modules", "src/pages"], // Ensure paths are correct
       extensions: ["vue"],
       deep: true,
       dts: "./components.d.ts",
@@ -35,18 +36,12 @@ export default defineConfig({
       ],
       imports: [
         'vue',
-        'vue-router',
-        {
-          from: 'vue-router',
-          imports: ['RouteLocationRaw'],
-          type: true,
-        },
+        VueRouterAutoImports, 
+
       ],
       dirs: [
-         '@lib/',
-         '@stores/'
-        // './composables' // only root modules
-        // './composables/**', // all nested modules
+        '@stores/', 
+        '@lib/', 
         // ...
       ],
       eslintrc: {

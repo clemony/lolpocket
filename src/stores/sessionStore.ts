@@ -7,8 +7,8 @@ import Home from "@pages/home.vue";
 import Items from "@pages/items.vue";
 import Hi from "@pages/hi.vue";
 import About from "@pages/about.vue";
-import Runes from "@pages/runes.vue";
 import Settings from "@pages/settings.vue";
+import empty from "@pages/empty.vue";
 
 export const useSessionNav = defineStore("sessionNav", () => {
 
@@ -34,18 +34,22 @@ export const useSessionNav = defineStore("sessionNav", () => {
 
   var openTabs = ref<OpenTab[]>([]);
 
+  if (openTabs.value.length>0){
+
+  };
+
   const routeComponentMap: Record<
     string,
-    { component: DefineComponent; icon: string; sidebar?: string }
+    { component: string; icon: string; sidebar?: string }
   > = {
     "/home": { component: Home, icon: "ph:house" },
     "/champions": { component: Champions, icon: "ph:crown-simple", sidebar: championSidebar },
     "/items": { component: Items, icon: "vaadin:sword" },
-    "/runes": { component: Runes, icon: "ph:hexagon" },
     "/settings": { component: Settings, icon: "ph:gear-six" },
     "/about": { component: About, icon: "ph:gear-" },
     "/hi": { component: Hi, icon: "ph:gear-" },
     "/championSidebar": { component: championSidebar, icon: "ph"},
+    "/empty": {component: empty, icon:"arcticons:cats-are-liquid"}
   };
 
   var activeTab = ref("");
@@ -68,9 +72,10 @@ export const useSessionNav = defineStore("sessionNav", () => {
     }
     activeTab.value = link;
     router.push(link);
+
   };
 
-  // Function to check if tab is active
+  // Function to check if tab is activz
   const isActiveTab = (link) => {
     return activeTab.value === link;
   };

@@ -1,76 +1,78 @@
 const animate = require("tailwindcss-animate");
 const scrollbarhide = require("tailwind-scrollbar-hide");
-/*const typography = require("@tailwindcss/typography");
-const colors = require("tailwindcss/colors");*/
+const typography = require("@tailwindcss/typography");
+/*const colors = require("tailwindcss/colors");*/
 const path = require("path");
 const daisyui = require("daisyui");
+//const pocketui = require("pocketui");
 //const containerQueries = require("@tailwindcss/container-queries");
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  plugins: [animate, scrollbarhide, daisyui],
+(
+  module.exports = {
+    plugins: [animate, scrollbarhide, typography, daisyui],
 
-  darkMode: ["class"],
-  safelist: ["dark"],
-  prefix: "",
-  content: [
-    "./pages/**/*.{ts,tsx,vue,js,jsx}",
-    "./components/**/*.{ts,tsx,vue,js,jsx}",
-    "./app/**/*.{ts,tsx,vue,js,jsx}",
-    "./src/**/*.{ts,tsx,vue,js,jsx}",
-    "./src/assets/presets/",
-    path.join(__dirname, "./pages/**/*.{js,ts,jsx,tsx}"),
-    path.join(__dirname, "./components/**/*.{js,ts,jsx,tsx}"),
-  ],
+    darkMode: ["class"],
+    safelist: ["dark"],
+    prefix: "",
+    content: [
+      "./pages/**/*.{ts,tsx,vue,js,jsx}",
+      "./components/**/*.{ts,tsx,vue,js,jsx}",
+      "./app/**/*.{ts,tsx,vue,js,jsx}",
+      "./src/**/*.{ts,tsx,vue,js,jsx}",
+      "./src/assets/presets/",
+      path.join(__dirname, "./pages/**/*.{js,ts,jsx,tsx}"),
+      path.join(__dirname, "./components/**/*.{js,ts,jsx,tsx}"),
+    ],
 
-  theme: {
-    extend: {
-      fontSize: {
-        xxs: "0.599rem",
-        smx: "0.69rem",
+    theme: {
+      extend: {
+        fontSize: {
+          xxs: "0.599rem",
+          mini: "0.66rem",
+        },
+        transitionProperty: {
+          height: "height",
+          width: "width",
+        },
+        height: {
+          stretch: "stretch",
+        },
       },
-      transitionProperty: {
-        height: "height",
-        width: "width",
-      },
-      height: {
-        stretch: "stretch",
+      container: {
+        center: true,
+        padding: "2rem",
+        screens: {},
+        fontFamily: {
+          "font-sans": ["Geist\\ Sans", "sans-serif"],
+          "font-serif": ["Roboto\\ Serif\\ Variable", "serif"],
+          "font-mono": ["Geist\\ Mono", "monospace"],
+        },
+        fontSize: {
+          xs: "0.6rem",
+          sm: "0.7rem",
+          base: "0.8rem",
+        },
+        animation: {
+          "collapsible-down": "collapsible-down 0.2s ease-in-out",
+          "collapsible-up": "collapsible-up 0.2s ease-in-out",
+        },
+
+        borderRadius: {
+          xl: "1rem",
+          lg: "0.7rem",
+          md: "0.5rem",
+          DEFAULT: "0.3rem",
+          sm: "0.2rem",
+        },
       },
     },
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {},
-      fontFamily: {
-        "font-sans": ["Geist\\ Sans", "sans-serif"],
-        "font-serif": ["Roboto\\ Serif\\ Variable", "serif"],
-        "font-mono": ["Geist\\ Mono", "monospace"],
-      },
-      fontSize: {
-        xs: "0.6rem",
-        sm: "0.7rem",
-        base: "0.8rem",
-      },
-      animation: {
-        "collapsible-down": "collapsible-down 0.2s ease-in-out",
-        "collapsible-up": "collapsible-up 0.2s ease-in-out",
-      },
-
-      borderRadius: {
-        xl: "1rem",
-        lg: "0.7rem",
-        md: "0.5rem",
-        DEFAULT: "0.3rem",
-        sm: "0.2rem",
-      },
-    },
-  },
-  // prettier-ignore
-  // daisyUI config (optional - here are the default values)
-  daisyui: {
+    // prettier-ignore
+    // daisyUI config (optional - here are the default values)
+    daisyui: {
     themes: [
       {
-        light: {
+        lightminimalist: {
           ...require("daisyui/src/theming/themes")["light"],
           "base-100": "oklch(100% 0 0)",
           "base-200": "oklch(93% 0 0)",
@@ -84,26 +86,150 @@ module.exports = {
           "accent-content": "oklch(100% 0 0)",
           "neutral": "#000000",
           "neutral-content": "oklch(100% 0 0)",
+          "info": "#B48EAD",
+          "success": "#A3BE8C",
+          "warning": "#EBCB8B",
+          "error": "#BF616A",
+          "error-content": "#81A1C1",
+        },
+        lightaesthetic: {
+          ...require("daisyui/src/theming/themes")["light"],
+          "base-100": "oklch(100% 0 0)",
+          "base-200": "oklch(93% 0 0)",
+          "base-300": "oklch(86% 0 0)",
+          "base-content": "oklch(22.3899% 0.031305 278.07229)",
+         
+          "primary-content":  "oklch(22.3899% 0.031305 278.07229)",
+   
+          "secondary-content":  "oklch(22.3899% 0.031305 278.07229)",
+   
+          "accent-content":  "oklch(22.3899% 0.031305 278.07229)",
+          "neutral": "#4C566A",
+          "neutral-content": "#D8DEE9",
+          "primary": "#B6E2DD",
+          "secondary":"#FBB39D",
+          "accent":"#FBC99D",
+          "info":"#CCB9D6",
+          "success":"#C8DDBB",
+          "warning":"#FBDF9D",
+          "error":"#FBA09D",
+          "error-content": "#B6E2DD",
+        },
+        lightnord: {
+          ...require("daisyui/src/theming/themes")["light"],
+          "base-100": "oklch(100% 0 0)",
+          "base-200": "oklch(93% 0 0)",
+          "base-300": "oklch(86% 0 0)",
+          "base-content": "oklch(22.3899% 0.031305 278.07229)",
+         
+          "primary-content":  "oklch(22.3899% 0.031305 278.07229)",
+   
+          "secondary-content":  "oklch(22.3899% 0.031305 278.07229)",
+   
+          "accent-content":  "oklch(22.3899% 0.031305 278.07229)",
+          "neutral": "#4C566A",
+          "neutral-content": "#D8DEE9",
+          "primary": "#5E81AC",
+          "secondary": "#81A1C1",
+          "accent": "#88C0D0",
+          "info": "#B48EAD",
+          "success": "#A3BE8C",
+          "warning": "#EBCB8B",
+          "error": "#BF616A",
+          "error-content": "#81A1C1",
         },
 
-        dark: {
+        lightlatte: {
+          ...require("daisyui/src/theming/themes")["light"],
+          "base-100": "oklch(100% 0 0)",
+          "base-200": "oklch(93% 0 0)",
+          "base-300": "oklch(86% 0 0)",
+          "base-content": "oklch(22.3899% 0.031305 278.07229)",
+         
+          "primary-content":  "oklch(22.3899% 0.031305 278.07229)",
+   
+          "secondary-content":  "oklch(22.3899% 0.031305 278.07229)",
+   
+          "accent-content":  "oklch(22.3899% 0.031305 278.07229)",
+          "neutral": "#252525",
+          "neutral-content": "#D8DEE9",
+"primary": "C6B3A4",        
+"secondary": "B7A190",       
+"accent": "988270",
+
+          "info": "#82707D",
+          "success": "#A5A58D",
+          "warning": "#EBCB8B",
+          "error": "#966666",
+          
+"error-content": "#6B7384",
+        },
+
+        darkminimalist: {
           ...require("daisyui/src/theming/themes")["dark"],
           "base-100": "oklch( 24.3535% 0 0)",
           "base-200": "oklch( 22.6487% 0 0)",
           "base-300": "oklch( 20.944% 0 0)",
           "base-content": "oklch( 84.8707% 0 0)",
-          "neutral": "oklch( 27.441% 0.01325 253.041249)",
+          "neutral": "oklch( 84.8707% 0 0)",
           "neutral-content": "oklch( 85.4882% 0.00265 253.041249)",
-          "primary": "oklch(88.03% 0.046 187.85)",
-          "secondary": "oklch(82.91% 0.09 37.7)",
-          "accent": "oklch(91.18% 0.089 87.56)",
-  "info": "oklch(91.19% 0.07 104.16)",
-  "success": "oklch(87.28% 0.051 133.44)",
-  "warning": "oklch(86.95% 0.081 62.79)",
-  "error": "oklch(79.62% 0.109 21.85)",
+          "primary": "oklch( 84.8707% 0 0)",
+          "secondary": "oklch( 84.8707% 0 0)",
+          "accent": "oklch( 84.8707% 0 0)",
+          "info": "#B48EAD",
+          "success": "#A3BE8C",
+          "warning": "#EBCB8B",
+          "error": "#BF616A",
         },
 
-        dim: {
+
+        darkaesthetic: {
+          ...require("daisyui/src/theming/themes")["dark"],
+          "base-100": "oklch( 24.3535% 0 0)",
+          "base-200": "oklch( 22.6487% 0 0)",
+          "base-300": "oklch( 20.944% 0 0)",
+          "base-content": "oklch( 84.8707% 0 0)",
+          "neutral": "oklch( 84.8707% 0 0)",
+          "neutral-content": "oklch( 85.4882% 0.00265 253.041249)",
+          "primary-content":  "oklch(22.3899% 0.031305 278.07229)",
+   
+          "secondary-content":  "oklch(22.3899% 0.031305 278.07229)",
+   
+          "accent-content":  "oklch(22.3899% 0.031305 278.07229)",
+          "neutral": "#000000",
+          "neutral-content": "oklch(100% 0 0)",
+          "primary": "#B6E2DD",
+          "secondary":"#FBB39D",
+          "accent":"#FBC99D",
+          "info":"#E9E5AF",
+          "success":"#C8DDBB",
+          "warning":"#FBDF9D",
+          "error":"#FBA09D",
+        },
+        darknord: {
+          ...require("daisyui/src/theming/themes")["dark"],
+          "base-100": "oklch( 24.3535% 0 0)",
+          "base-200": "oklch( 22.6487% 0 0)",
+          "base-300": "oklch( 20.944% 0 0)",
+          "base-content": "oklch( 84.8707% 0 0)",
+          "primary-content":  "oklch(22.3899% 0.031305 278.07229)",
+   
+          "secondary-content":  "oklch(22.3899% 0.031305 278.07229)",
+   
+          "accent-content":  "oklch(22.3899% 0.031305 278.07229)",
+          "neutral": "#4C566A",
+          "neutral-content": "#D8DEE9",
+          "primary": "#5E81AC",
+          "secondary": "#81A1C1",
+          "accent": "#88C0D0",
+          "info": "#B48EAD",
+          "success": "#A3BE8C",
+          "warning": "#EBCB8B",
+          "error": "#BF616A",
+          "error-content": "#81A1C1",
+        },
+
+        dimminimalist: {
           ...require("daisyui/src/theming/themes")["nord"],
           "neutral": "#1c212b",
           "neutral-content": "#B2CCD6",
@@ -111,13 +237,75 @@ module.exports = {
           "base-200": "#242933",
           "base-300": "#20252E",
           "base-content": "oklch( 84.8707% 0 0)",
-          "info": "#28ebff",
-          "success": "#62efbd",
-          "warning": "#efd057",
-          "error": "#ffae9b",
+          "primary": "#1c212b",
+          "secondary": "#1c212b",
+          "accent": "#1c212b",
         },
 
+        dimaesthetic: {
+          ...require("daisyui/src/theming/themes")["nord"],
+          "neutral": "#1c212b",
+          "neutral-content": "#B2CCD6",
+          "base-100": "#2A303C",
+          "base-200": "#242933",
+          "base-300": "#20252E",
+          "base-content": "oklch( 84.8707% 0 0)",
+          "primary": "#B6E2DD",
+          "secondary":"#FBB39D",
+          "accent":"#FBC99D",
+          "info":"#E9E5AF",
+          "success":"#C8DDBB",
+          "warning":"#FBDF9D",
+          "error":"#FBA09D",
+        },
 
+        dimnord: {
+          ...require("daisyui/src/theming/themes")["nord"],
+          "neutral": "#1c212b",
+          "neutral-content": "#B2CCD6",
+          "base-100": "#2A303C",
+          "base-200": "#242933",
+          "base-300": "#20252E",
+          "base-content": "oklch( 84.8707% 0 0)",
+          "primary": "#5E81AC",
+          "secondary": "#81A1C1",
+          "accent": "#88C0D0",
+          "info": "#B48EAD",
+          "success": "#A3BE8C",
+          "warning": "#EBCB8B",
+          "error": "#BF616A",
+          "error-content": "#81A1C1",
+        },
+        neutralminimalist: {     
+          ...require("daisyui/src/theming/themes")["cupcake"],  
+"base-100": "#F0EFEB",
+"base-300": "#C6C5BF",       
+"base-200": "#D7D6D2",
+"primary": "#0D0D0D",
+"primary-content": "oklch(100% 0 0)",
+"secondary": "#1A1919",
+"secondary-content": "oklch(100% 0 0)",
+"accent": "#262626",
+"accent-content": "oklch(100% 0 0)",
+"neutral": "#000000",
+"neutral-content": "oklch(100% 0 0)",
+"info": "#B48EAD",
+"success": "#A3BE8C",
+"warning": "#EBCB8B",
+"error": "#BF616A",
+"error-content": "#81A1C1",
+        },
+        neutrallatte: {     
+          ...require("daisyui/src/theming/themes")["cupcake"],  
+"base-100": "#F0EFEB",
+"base-300": "#C6C5BF",       
+"base-200": "#D7D6D2",
+"primary": "C6B3A4",        
+"secondary": "B7A190",       
+"accent": "988270",
+"success": "#A5A58D",
+"error-content": "#81A1C1",
+        },
 
       }
     ],
@@ -129,4 +317,5 @@ module.exports = {
     logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
     themeRoot: ":root", // The element that receives theme color CSS variables
   },
-};
+  }
+);

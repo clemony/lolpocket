@@ -84,21 +84,37 @@ function handleChampionClick(champion: Champion) {
 <template>
   <!-- Champ Tab -->
 
-  <div class="grid-container w-full scroll-none mx-0 p-0">
-    <div class="grid-item champ" v-for="(champion, index) in champions" :key="champion.name" :data-index="index">
-      <label for="my-drawer-4" class="drawer-button cursor-pointer" @click="handleChampionClick(champion)">
-        <div class="grid-image-container champ">
-          <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
-            class="grid-image" />
+  <div class="px-6 h-full w-full grid grid-cols-1 *:scrollbar-hide ">
+    <div class="w-full py-6 px-2 flex items-end">
+      <h2 class="text-2xl font-bold p-1.5 grow">Champions</h2>
 
-          <div class="grid-tip">
-            {{ champion.name }}
+      <select class="select select-bordered select-xs max-w-xs align-self-end justify-self-end shadow-inner">
+        <option disabled selected>Class</option>
+        <option>Marksman</option>
+        <option>Mage</option>
+        <option>Tank</option>
+        <option>Support</option>
+        <option>Fighter</option>
+        <option>Assassin</option>
+      </select>
+    </div>
+
+
+    <div class="grid-container w-full scroll-none p-0 rounded-box  border border-base-300 mx-0 shadow-warm">
+      <div class="grid-item champ" v-for="(champion, index) in champions" :key="champion.name" :data-index="index">
+        <label for="my-drawer-4" class="drawer-button cursor-pointer" @click="handleChampionClick(champion)">
+          <div class="grid-image-container champ">
+            <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
+              class="grid-image" />
+
+            <div class="grid-tip">
+              {{ champion.name }}
+            </div>
           </div>
-        </div>
-      </label>
+        </label>
+      </div>
     </div>
   </div>
-
 </template>
 
 <style scoped>
@@ -106,7 +122,7 @@ function handleChampionClick(champion: Champion) {
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
 
-  @apply gap-[1%];
+  @apply gap-[1.5%];
 
   .grid-image {
     @apply !h-[94px] !w-[94px];

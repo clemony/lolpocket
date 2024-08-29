@@ -7,6 +7,7 @@ export interface article {
   link?: string;
   linkTitle?: string;
   color?: string;
+  date?: string;
 }
 
 export const NewsArticles: article[] = [
@@ -17,6 +18,8 @@ export const NewsArticles: article[] = [
     image:
       "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/24eb05be171a372ed26b0b6034bf875b3bd09d98-2560x1440.png?auto=format&fit=fill&q=80&w=960",
     color: "text-red-700",
+    date: 'August 26,  2024',
+    linkTitle: 'riotgames.com'
   },
   {
     title: "PBE Changes",
@@ -27,31 +30,33 @@ export const NewsArticles: article[] = [
     link: "https://www.reddit.com/r/leagueoflegends/wiki/pbechanges/",
     linkTitle: "Reddit.com",
     color: "text-orange-600",
+    date: 'August 26,  2024',
   },
   {
     title: "Champion Flavor Tier List",
-    source: "Lolpockets Team",
+    source: "lolpockets Team",
+    source2: "Clem",
+    icon: "fluent-emoji-high-contrast:kissing-cat",
+    image: "/img/art/chase.webp",
+    date: 'August 26,  2024',
+  },
+  {
+    title: "Champion Flavor Tier List",
+    source: "lolpockets Team",
     source2: "Clem",
     icon: "fluent-emoji-high-contrast:kissing-cat",
     image: "/img/art/chase.webp",
   },
   {
     title: "Champion Flavor Tier List",
-    source: "Lolpockets Team",
+    source: "lolpockets Team",
     source2: "Clem",
     icon: "fluent-emoji-high-contrast:kissing-cat",
     image: "/img/art/chase.webp",
   },
   {
     title: "Champion Flavor Tier List",
-    source: "Lolpockets Team",
-    source2: "Clem",
-    icon: "fluent-emoji-high-contrast:kissing-cat",
-    image: "/img/art/chase.webp",
-  },
-  {
-    title: "Champion Flavor Tier List",
-    source: "Lolpockets Team",
+    source: "lolpockets Team",
     source2: "Clem",
     icon: "fluent-emoji-high-contrast:kissing-cat",
     image: "/img/art/chase.webp",

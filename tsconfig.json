@@ -13,9 +13,12 @@
         "baseUrl": ".",
         "module": "esnext",
         "target": "esnext",
-        "moduleResolution": "node",
+        "moduleResolution": "Bundler",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
+        "types": [
+            "unplugin-vue-router/client"
+        ],
         "jsx": "preserve",
         "paths": {
             "@assets/*": [

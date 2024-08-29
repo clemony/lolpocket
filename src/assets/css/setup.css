@@ -17,12 +17,36 @@
   @apply scroll-smooth bg-transparent p-0 m-0;
 }
 
-:root[data-theme="light"] {
+[data-mode="light"],
+[data-mode="neutral"] {
   --dark-shadow: oklch(var(--bc) / 5%);
+
+  .glass {
+    --glass-blur: 2px;
+    --glass-opacity: 0;
+  }
+
+  #app {
+    @apply bg-blend-lighten backdrop-brightness-[190%] bg-base-100/80 glass backdrop-contrast-[80%];
+  }
+
+  .menu-icons {
+    @apply brightness-75 saturate-150;
+  }
 }
 
-:root[data-theme="dim"],
-:root[data-theme="dark"] {
+[data-mode="dark"],
+[data-mode="dim"] {
+  --dark-shadow: rgba(0, 0, 0, 0.25);
+
+  .glass {
+    --glass-blur: 10px;
+    --glass-opacity: 0.3;
+  }
+
+  #app {
+    @apply bg-blend-normal bg-base-100/70 glass;
+  }
 }
 
 html,
@@ -33,9 +57,14 @@ body {
 #app {
   @apply absolute top-0 left-0 backdrop-brightness-200 w-screen h-screen;
 }
-.shadow-frame {
-  box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
+.shadow-warm {
+  @apply shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px];
 }
+
+.shadow-cham {
+  @apply shadow-[inset_-12px_-8px_40px_#46464620];
+}
+
 .glass {
   --glass-reflex-opacity: 0;
   --glass-reflex-degree: 0;
@@ -47,24 +76,8 @@ body {
   padding-bottom: 0 !important;
 }
 
-[data-theme="light"] .glass {
-  --glass-blur: 2px;
-  --glass-opacity: 0;
-}
-
-[data-theme="light"] #app {
-  @apply bg-blend-lighten backdrop-brightness-[190%] bg-base-100/80 glass backdrop-contrast-[80%];
-}
-
-[data-theme="dim"] #app,
-[data-theme="dark"] #app {
-  @apply bg-blend-normal bg-base-100/70 glass;
-}
-
-[data-theme="dim"] .glass,
-[data-theme="dark"] .glass {
-  --glass-blur: 10px;
-  --glass-opacity: 0.3;
+.tab-active {
+  @apply !shadow-[inset_0px_0px_25px_#46464615];
 }
 
 .tooltip {

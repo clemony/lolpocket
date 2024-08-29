@@ -8,7 +8,7 @@
   @apply grid w-full p-4 !overflow-y-auto h-full transition-all duration-500 grid-flow-row auto-cols-max;
 
   .grid-item {
-    @apply size-full z-0 w-full relative;
+    @apply size-full z-0 w-full relative shadow-warm ring-1 ring-offset-1 ring-offset-base-200 ring-base-300 hover:ring-offset-primary/60;
 
     .grid-image-container {
       justify-content: center;

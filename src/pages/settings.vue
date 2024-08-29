@@ -2,113 +2,118 @@
 import { Icon } from "@iconify/vue";
 import { useUserSettings } from "@stores/userSettings";
 import { storeToRefs } from "pinia";
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
+const myStore = storeToRefs(useUserSettings());
 
+
+// Access user settings from the store
 const settings = useUserSettings();
-const { dataTheme, dataTabSize } = storeToRefs(settings);
 
-interface palettes {
-  name: string;
-  colors: {
-    primary: colors;
-    secondary: colors;
-    accent: colors;
-    info: colors;
-    success: colors;
-    warning: colors;
-    error: colors;
-  };
-}
+// Use ref to track the selected framework
+const frameworkChoice = ref("light");
+const themeChoice = ref("minimalist");
 
-interface colors {
-  primary: string;
-  secondary: string;
-  accent: string;
-  info: string;
-  success: string;
-  warning: string;
-  error: string;
-}
 
-const themes = ["light", "rainbow", "dark", "nord"];
 
-const schema = [
+// Framework options
+const frameworks = [
   {
     key: "light",
     name: "light",
-    themes: ["lofi", "light", "nordLight"],
+    mode: "light",
   },
   {
     key: "dark",
     name: "dark",
-    themes: ["wifi", "dark", "nordDark"],
+    mode: "dark",
+  },
+  {
+    key: "neutral",
+    name: "neutral",
+    mode: "neutral",
   },
   {
     key: "dim",
     name: "dim",
-    themes: ["nord"],
+    mode: "dim",
   },
+
 ];
 
-interface schema {
-  name: string;
-  themes: string[];
-}
-
-const uiScheme = ref(0);
-function handleUIScheme() {
-  const currentTheme = uiScheme.value;
-  settings.dataTheme = currentTheme;
-}
-
-const tabSizes: Record<number, { size: string; displayName: string }> = {
-  1: { size: "tabs-xs", displayName: "tiny" },
-  2: { size: "tabs-sm", displayName: "small" },
-  3: { size: "tabs-normal", displayName: "normal" },
-  4: { size: "tabs-lg", displayName: "large" },
-};
-
-// Current selected tab size and display name
-const tabSize = ref(tabSizes[1].size);
-const tabDisplayName = ref(tabSizes[1].displayName);
-// Create a ref for the range value
-const tabSizeValue = ref(1);
-
-// Function to handle tab size change
-const handleTabChange = (value: number) => {
-  if (tabSizes[value]) {
-    tabSize.value = tabSizes[value].size; // Update the size
-    tabDisplayName.value = tabSizes[value].displayName; // Update the display name
-    settings.dataTabSize = tabSizes[tabSize.value];
-    return settings.dataTabSize;
+const themes = [
+  {
+    key: "minimalist",
+    name: "minimalist",
+  },
+  {
+    key: "aesthetic",
+    name: "aesthetic",
+  },
+  {
+    key: "nord",
+    name: "nord"
+  },
+  {
+    key: "latte",
+    name: "latte"
   }
-};
+];
 
-function updateTheme(theme: string) {
-  settings.dataTheme = theme;
+
+function handleThemeChoice() {
+  const currenttheme = themes.find(f => f.key === themeChoice.value);
+  const mode = settings.dataMode;
+  // Update the theme and mode in the store
+  if (currenttheme) {
+    settings.dataTheme = mode + currenttheme.key;
+    settings.dataAccent = currenttheme.key;
+    console.log();
+  }
 }
+
+function handleFrameworkChoice() {
+  const currentFramework = frameworks.find(f => f.key === frameworkChoice.value);
+
+  // Update the theme and mode in the store
+  if (currentFramework) {
+    const theme = settings.dataAccent;
+    settings.dataTheme = currentFramework.mode + theme;
+    settings.dataMode = currentFramework.mode;
+    console.log("currentframework:", currentFramework.mode);
+    console.log("settings.dataMode:", settings.dataMode);
+    console.log(" settings.dataTheme:", settings.dataTheme);
+  }
+}
+
+
+
+
+// Initialize frameworkChoice when store data is ready
+onMounted(() => {
+  frameworkChoice.value = settings.dataMode || "light"; // Set from store or default to "light"
+  themeChoice.value = settings.dataAccent || "minimalist"; // Set from store or default to "light"
+});
 </script>
 
 <template>
-  <div class="grid grid-cols-3 w-full p-6">
+  <div class="grid grid-cols-[1fr_3fr] w-full gap-6 p-6 pl-10">
     <div class="grid grid-cols-1">
-      <h1 class="prose-lg font-semibold">Interface</h1>
+      <h1 class="prose-lg font-semibold divider divider-start">Interface</h1>
 
-      <form v-for="scheme in schema" class="flex gap-2 my-2 items-center" @change="handleUIScheme()">
-        <input type="radio" v-model="uiScheme" :value="scheme.name" :id="scheme.name" name="ui-scheme"
-          class="radio  radio-xs shadow-inner" />
-
-        <label :for="scheme.name" class="m-1 w-32 rounded-lg">
+      <form v-for="framework in frameworks" :key="framework.key" class="flex gap-2 my-2 items-center">
+        <input type="radio" v-model="frameworkChoice" :value="framework.key" :id="framework.name" name="ui-framework"
+          class="radio radio-xs shadow-inner" @change="handleFrameworkChoice" />
+        <label :for="framework.name" class="m-1 w-24 rounded-lg">
           <div class="w-full h-full" data-act-class="!outline-base-content">
             <div
-              class="w-full h-full !text-xs ring-base-300 ring-1 shadow-md bg-base-100 text-base-content cursor-pointer rounded-lg overflow-hidden has-[:checked]:ring-2 has-[:checked]:ring-neutral-content"
-              :data-theme="scheme.key">
+              class="w-full h-full !text-xs ring-base-300 ring-1 shadow-warm bg-base-100 text-base-content cursor-pointer rounded-lg overflow-hidden has-[:checked]:ring-2 has-[:checked]:ring-neutral-content"
+              :data-theme="framework.key + 'minimalist'">
               <div class="grid grid-cols-5 grid-rows-3 w-full h-10 rounded-btn">
                 <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
                 <div class="bg-base-300 col-start-1 row-start-3"></div>
                 <div
                   class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex gap-3 place-content-center items-center px-3">
-                  <div class="font-semibold flex-grow">{{ scheme.name }}</div>
+                  <div class="font-semibold flex-grow">{{ framework.name }}</div>
                 </div>
               </div>
             </div>
@@ -117,45 +122,59 @@ function updateTheme(theme: string) {
       </form>
     </div>
 
-
-    <div class="mockup-browser bg-base-300 border shadow-lg">
-      <div class="mockup-browser-toolbar">
-        <div class="input !bg-base-100 text-xs text content-center h-8 before:w-3 before:-mt-0.5 after:-mt-0.5">
+    <div
+      class="mockup-browser align-self-start max-w-96 col-start-2 m-6 bg-base-300 border border-neutral/5 shadow-warm">
+      <div class="mockup-browser-toolbar -ml-1.5">
+        <div class="input !bg-base-100 text-xs text content-center  before:w-3 before:-mt-0.5 after:-mt-0.5 !ml-2">
           https://github.com/clemony/lolpocket
         </div>
       </div>
-      <div class="bg-base-200 flex justify-center px-4 py-16">Hello!</div>
+      <div class="bg-base-200 flex justify-center px-4 py-20">Hello!</div>
     </div>
 
 
     <h1 class="prose-lg font-semibold mt-6 col-start-1">Accents</h1>
 
 
-    <div class="grid grid-cols-[1fr_3fr] col-start-1">
-      hihi
+    <div class=" col-start-1 grid grid-cols-1 gap-y-4">
+      <form v-for="theme in themes" class="items-center  " @change="handleThemeChoice()">
+        <div class="grid grid-cols-[1fr_2fr_4fr]  content-center  justify-start col-start-1 ">
+
+          <input type="radio" v-model="themeChoice" :value="theme.key" :id="theme.name" name="ui-theme"
+            class="radio col-start-1 radio-xs shadow-inner self-center justify-self-start" />
+
+
+          <div class="col-start-2 content-center text-xs font-semibold">
+            <label :for="theme.name"> {{ theme.name }} </label>
+          </div>
+
+
+          <div :data-theme="settings.dataMode + theme.key"
+            class="ml-6 grid grid-cols-4 gap-1 col-start-3 *:size-6 *:rounded-md *:shadow-warm  *:ring-offset-1 *:ring-base-300/80 bg-transparent">
+            <div class=" bg-primary ring-offset-primary/60"></div>
+            <div class="bg-secondary ring-offset-secondary/60"></div>
+            <div class="bg-accent ring-offset-accent/60"></div>
+            <div class="bg-neutral ring-offset-neutral/60"></div>
+            <!-- <div class="bg-info"></div>
+            <div class="bg-success"></div>
+            <div class="bg-warning"></div>
+            <div class="bg-error"></div>
+            <div class="bg-error-content"></div>-->
+          </div>
+        </div>
+      </form>
     </div>
 
-    <div class="grid grid-cols-7 gap-2 col-start-2">
-    </div>
+
+
   </div>
 
 
 
 
 
-  <h1 class="prose-lg font-semibold mt-10">Tabs</h1>
-  <div class="grid grid-cols-2 mt-6 gap-6 items-center">
-    <div class="grid grid-cols-1 gap-2 place-items-center px-6">
-      {{ tabDisplayName }}
-      <input v-model="tabSizeValue" type="range" min="1" max="4" @input="handleTabChange(tabSizeValue)"
-        class="range range-xs" />
-    </div>
-    <div :class="tabSize" role="tablist" class="tabs tabs-lifted">
-      <a role="tab" class="tab">omg</a>
-      <a role="tab" class="tab tab-active">so</a>
-      <a role="tab" class="tab">{{ tabDisplayName }}</a>
-    </div>
-  </div>
+
+
 </template>
 
 <style scoped></style>

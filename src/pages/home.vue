@@ -12,6 +12,7 @@ export interface article {
     link?: string;
     linkTitle?: string;
     color?: string;
+    date?: string;
 }
 const hasSource2 = ref("false");
 
@@ -19,17 +20,25 @@ function handleLinks() { }
 </script>
 
 <template>
-    <div class="w-full py-4  grid gap-y-3 m-0 mt-2 !z-0">
+    <div class="w-full py-4  grid gap-y-3 m-0 mt-2 !z-0 ">
         <div class="gap-2 flex items-end w-full px-6">
-            <div class="grow flex items-baseline gap-2 ">
-                <h2 class="text-xl font-extrabold tracking-tight">News & Updates</h2>
-                <p class="text-sm text-muted-foreground italic pb-1">
-                    the happening things.
-                </p>
+            <div class="grow flex gap-4 items-center">
+                <h2 class="text-xl font-bold tracking-tight ">
+                    News & Updates</h2>
+
+                <div class="badge badge-primary font-mono text-mini ">1 new!
+                </div>
+
             </div>
 
-            <div class="justify-self-end self-start tooltip tooltip-bottom tooltip-accent" data-tip="current patch">
-                <div class="badge badge-accent font-mono text-[0.66rem]">14.16.1</div>
+            <div class="flex gap-4 justify-self-end self-start ">
+                <div class="tooltip tooltip-bottom tooltip-accent" data-tip="10/20/1923">
+                    <div class="badge badge-secondary font-mono text-mini select-none ">21 days
+                        ago</div>
+                </div>
+                <div class="tooltip tooltip-bottom tooltip-accent" data-tip="current patch">
+                    <div class="badge badge-accent font-mono text-mini select-none ">14.16.1</div>
+                </div>
             </div>
 
         </div>
@@ -37,62 +46,73 @@ function handleLinks() { }
         <div
             class="flex w-full overflow-x-scroll h-64 content-center items-center gap-5 scrollbar-hide !z-1 -transition-all duration-700 delay-200 news-after pl-6 ">
             <div v-for="article in NewsArticles"
-                class="card  h-56 text-sm shadow-md min-w-96 !z-0 !*:z-0 group overflow-hidden hover:scale-[1.03] transition-transform duration-700 group"
-                @click.prevent="handleLinks" :title="article.link">
+                class="card  h-56 text-sm shadow-warm min-w-96 !z-0 !*:z-0 group hover:scale-[1.02] p-0 m-0 transition-transform duration-700  group bg-cover relative border border-base-100"
+                @click.prevent="handleLinks" :title="article.link"
+                :style="{ backgroundImage: 'url(' + article.image + ')' }">
 
-
-
-                <img :src="article.image" :alt="article.title + ' image'"
-                    class="w-full h-full object-cover object-center absolute z-0" />
 
                 <div
-                    class="group-hover:opacity-100 absolute transition-all duration-500 opacity-0 bg-neutral/60 w-full h-full top-0 left-0 backdrop-blur-md text-neutral-content rounded-lg overflow-hidden grid grid-cols-1 content-start justify-items-center  italic  pt-6 text-xs">
+                    class="group-hover:opacity-100 absolute transition-all duration-500 opacity-0 bg-neutral/40 w-full h-full top-0 left-0 glass   grid grid-cols-1 content-start justify-items-center  italic pt-6 rounded-box text-xs shadow-inner ">
 
                 </div>
 
                 <div
-                    class="group-hover:h-3/5 transition-height duration-500 card-body absolute !bg-base-100/90 h-2/5 glass bottom-0 left-0 w-full z-0">
-                    <div class="overflow-hidden z-10">
+                    class="card-body group-hover:h-1/2 transition-all duration-500 pt-5 pb-0 absolute !bg-base-100/90 h-2/5 glass inset-x-0 bottom-0 m-0 z-1   rounded-b-box object-bottom">
+                    <div class="overflow-hidden z-10 col-start-1">
+                        <p v-if="article && article.date" class="text-xxs font-mono flex gap-1">
+                            {{ article.date }}
+                        </p>
                         <h2 class="card-title text-base text-balanced mb-0">
                             {{ article.title }}
                         </h2>
 
                         <div
-                            class="align-bottom flex text-xs mt-0  gap-2 *:text-pretty *:content-start *:justify-start relative">
-                            <div class="flex gap-1 align-top">
+                            class="opacity-0 group-hover:opacity-100 transition-all duration-500 align-bottom flex text-xs mt-0  gap-2 *:text-pretty *:content-start *:justify-start relativ w-full">
+                            <div class="flex gap-2 mt-1 items-baseline grow">
                                 {{ article.source }}
+
+                                <span v-if="article && article.source2" class="text-xxs italic flex gap-1">
+                                    by {{ article.source2 }}
+                                </span>
                             </div>
-                            <span v-if="article && article.source2" class="text-xxs italic font-sans flex gap-1">
-                                by {{ article.source2 }}
-                            </span>
-                        </div>
-                        <div class="absolute bottom-5 right-5">
-                            <Icon v-if="article && article.icon" :icon="article.icon" :class="article.color"
-                                class="size-5 opacity-50" />
+
+                            <div class="grid grid-cols-1 mr-3  pr-3  self-end">
+                                <p class="flex gap-1 italic items-baseline"> {{ article.linkTitle }}
+                                    <Icon icon="cil:external-link" class="size-2.5" />
+                                </p>
+                            </div>
+
                         </div>
 
-                        <p class="flex justify-center gap-1 items-baseline text-balance w-2/3">Read more on
-                            {{ article.linkTitle }}
-                            <Icon icon="cil:external-link" class="size-2.5" />
-                        </p>
                     </div>
+
+
+
+
+                    <div class="absolute bottom-5 right-5">
+                        <Icon v-if="article && article.icon" :icon="article.icon" :class="article.color"
+                            class="size-5 opacity-50" />
+                    </div>
+
+
                 </div>
             </div>
         </div>
 
         <div class="grid grid-cols-2 gap-6 pr-12 w-full pt-2 mx-6">
             <div class="col-start-1">
-                <h2 class="text-xl w-full pl-1 justify-end font-extrabold tracking-tight h-8">
+                <h2 class="text-xl w-full pl-1 justify-end font-bold tracking-tight h-8 ">
                     Recent builds
+
                 </h2>
 
                 <div class="grid grid-cols-1 mt-4 gap-4">
                     <div
-                        class="overflow-x-hidden overflow-y-scroll scrollbar-hide card bg-base-100/60 backdrop-blur-md shadow-md">
+                        class="overflow-x-hidden overflow-y-scroll scrollbar-hide card bg-base-100/60 backdrop-blur-md shadow-warm">
                         <table class="table table-pin-rows 0">
                             <!-- head -->
                             <thead>
-                                <tr class="bg-base-200/60">
+                                <tr class="bg-base-200/50 shadow-cham">
                                     <th>Champion</th>
                                     <th>Role</th>
                                     <th>Winrate</th>
@@ -199,11 +219,11 @@ function handleLinks() { }
             </div>
 
             <div class="col-start-2 pl-1">
-                <h2 class="text-xl w-full pr-5 justify-end font-extrabold tracking-tight h-8">
+                <h2 class="text-xl w-full pr-5 justify-end font-bold tracking-tight h-8">
                     Champion Winrates
                 </h2>
                 <div class="grid grid-cols-1 gap-4 mt-4">
-                    <div class="overflow-x-auto card bg-base-100/60 backdrop-brightness-105 backdrop-blur-m shadow-lg">
+                    <div class="overflow-x-auto card bg-base-100/60 backdrop-brightness-105 glass shadow-warm">
                         <table class="table">
                             <!-- head -->
                             <thead>
