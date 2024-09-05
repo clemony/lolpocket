@@ -1,7 +1,12 @@
+<route lang="json">{
+    "name": "championSidebar",
+    "alias": "/champions/championSidebar",
+    "meta": {}
+}</route>
+
 <script setup lang="ts">
 import { ref, computed } from 'vue';
-import { useDataStore } from '@stores/dataStore';
-import { Icon } from '@iconify/vue';
+import { useDataStore } from '../../stores/dataStore';
 
 const dataStore = useDataStore();
 

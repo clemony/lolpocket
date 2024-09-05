@@ -1,9 +1,9 @@
-const animate = require("tailwindcss-animate");
-const scrollbarhide = require("tailwind-scrollbar-hide");
-const typography = require("@tailwindcss/typography");
+const animate = require('tailwindcss-animate');
+const scrollbarhide = require('tailwind-scrollbar-hide');
+const typography = require('@tailwindcss/typography');
 /*const colors = require("tailwindcss/colors");*/
-const path = require("path");
-const daisyui = require("daisyui");
+const path = require('path');
+const daisyui = require('daisyui');
 //const pocketui = require("pocketui");
 //const containerQueries = require("@tailwindcss/container-queries");
 
@@ -12,58 +12,61 @@ const daisyui = require("daisyui");
   module.exports = {
     plugins: [animate, scrollbarhide, typography, daisyui],
 
-    darkMode: ["class"],
-    safelist: ["dark"],
-    prefix: "",
+    darkMode: ['class'],
+    safelist: ['dark'],
+    prefix: '',
     content: [
-      "./pages/**/*.{ts,tsx,vue,js,jsx}",
-      "./components/**/*.{ts,tsx,vue,js,jsx}",
-      "./app/**/*.{ts,tsx,vue,js,jsx}",
-      "./src/**/*.{ts,tsx,vue,js,jsx}",
-      "./src/assets/presets/",
-      path.join(__dirname, "./pages/**/*.{js,ts,jsx,tsx}"),
-      path.join(__dirname, "./components/**/*.{js,ts,jsx,tsx}"),
+      './pages/**/*.{ts,tsx,vue,js,jsx}',
+      './components/**/*.{ts,tsx,vue,js,jsx}',
+      './app/**/*.{ts,tsx,vue,js,jsx}',
+      './src/**/*.{ts,tsx,vue,js,jsx}',
+      './src/assets/presets/',
+      path.join(__dirname, './pages/**/*.{js,ts,jsx,tsx}'),
+      path.join(__dirname, './components/**/*.{js,ts,jsx,tsx}'),
     ],
 
     theme: {
       extend: {
         fontSize: {
-          xxs: "0.599rem",
-          mini: "0.66rem",
+          xxs: '0.599rem',
+          mini: '0.66rem',
         },
         transitionProperty: {
-          height: "height",
-          width: "width",
+          height: 'height',
+          width: 'width',
         },
         height: {
-          stretch: "stretch",
+          stretch: 'stretch',
+        },
+        boxShadow: {
+          lil: '2px 2px 4px 1px rgba(0, 0, 0, 0, 0.3)',
         },
       },
       container: {
         center: true,
-        padding: "2rem",
+        padding: '2rem',
         screens: {},
         fontFamily: {
-          "font-sans": ["Geist\\ Sans", "sans-serif"],
-          "font-serif": ["Roboto\\ Serif\\ Variable", "serif"],
-          "font-mono": ["Geist\\ Mono", "monospace"],
+          'font-sans': ['Geist\\ Sans', 'sans-serif'],
+          'font-serif': ['Roboto\\ Serif\\ Variable', 'serif'],
+          'font-mono': ['Geist\\ Mono', 'monospace'],
         },
         fontSize: {
-          xs: "0.6rem",
-          sm: "0.7rem",
-          base: "0.8rem",
+          xs: '0.6rem',
+          sm: '0.7rem',
+          base: '0.8rem',
         },
         animation: {
-          "collapsible-down": "collapsible-down 0.2s ease-in-out",
-          "collapsible-up": "collapsible-up 0.2s ease-in-out",
+          'collapsible-down': 'collapsible-down 0.2s ease-in-out',
+          'collapsible-up': 'collapsible-up 0.2s ease-in-out',
         },
 
         borderRadius: {
-          xl: "1rem",
-          lg: "0.7rem",
-          md: "0.5rem",
-          DEFAULT: "0.3rem",
-          sm: "0.2rem",
+          xl: '1rem',
+          lg: '0.7rem',
+          md: '0.5rem',
+          DEFAULT: '0.3rem',
+          sm: '0.2rem',
         },
       },
     },

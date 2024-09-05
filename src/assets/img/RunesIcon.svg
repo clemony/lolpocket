@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+	<title>RunesIcon</title>
+	<defs>
+		<image  width="23" height="29" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAdAQMAAAB7f2WFAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAAAAAApWe5zwAAAAJ0Uk5TAP9bkSK1AAAAaklEQVR4nGNkUHjACMYJCyD4gQIYM+53YGSur2NkbqhlZNfyZ+TL8mCUSXjCaLGti7HCv5TxB784o91JUUb++lWMzCeXMDL8eMHIYNjPyMBcy8jA/pORgf8jI4PcI0YGmScQLPECggU+AADOTx506OpnygAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="4" y="2"/>
+</svg>

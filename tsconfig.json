@@ -4,12 +4,15 @@
         "./typed-router.d.ts",
         "./components.d.ts",
         "./auto-imports.d.ts",
+        "index.d.ts",
+        "./src/logs/vite-aliases.json"
     ],
     "compilerOptions": {
         "strict": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
         "noImplicitAny": false,
+        "isolatedModules": true,
         "baseUrl": ".",
         "module": "esnext",
         "target": "esnext",
@@ -31,7 +34,7 @@
                 "src/data/*"
             ],
             "@lib/*": [
-                "src/lib/*"
+                "src/utils/*"
             ],
             "@logs/*": [
                 "src/logs/*"

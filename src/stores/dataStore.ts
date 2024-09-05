@@ -21,6 +21,7 @@ interface Item {
   passive: string;
   active: string;
   type: string;
+  tier: string;
 }
 
 interface Ability {
@@ -63,6 +64,20 @@ export const useDataStore = defineStore("dataStore", () => {
     selectedChampion.value = champion;
   }
 
+  function getRunes() {
+    return runes.value;
+  }
+
+  // Use a computed property to extract unique paths from the runes array
+  const uniqueTiers = computed(() => {
+    const tier = items.value.map((item) => item.tier.replace(" item", "").replace("Potions and ", "").replace(/s$/, "").trim());
+    return Array.from(new Set(tier)); // Create an array with only unique paths
+  });
+
+  function getItems() {
+    return items.value;
+  }
+
   function parseAbilityString(abilityString: string): {
     name: string;
     context: string;
@@ -72,9 +87,7 @@ export const useDataStore = defineStore("dataStore", () => {
       return { name: "", context: "", data: {} };
     }
 
-    const lines = abilityString
-      .split("\n")
-      .filter((line) => line.trim() !== "");
+    const lines = abilityString.split("\n").filter((line) => line.trim() !== "");
 
     if (lines.length > 0) {
       const name = lines[0].trim();
@@ -120,15 +133,7 @@ export const useDataStore = defineStore("dataStore", () => {
         }
       });
 
-      const context = contextLines
-        .join("\n")
-        .trim()
-        .replace("Innate:", "")
-        .replace("Active:", "")
-        .replace("Innate -", "")
-        .replace("Active -", "")
-        .replace("Passive:", "")
-        .trim();
+      const context = contextLines.join("\n").trim().replace("Innate:", "").replace("Active:", "").replace("Innate -", "").replace("Active -", "").replace("Passive:", "").trim();
 
       return { name, context, data };
     }
@@ -142,10 +147,7 @@ export const useDataStore = defineStore("dataStore", () => {
       img: data.img,
       wiki: data.wiki,
       title: data.title,
-      tags:
-        typeof data.tags === "string"
-          ? data.tags.split(",").map((tag) => tag.trim())
-          : data.tags || [],
+      tags: typeof data.tags === "string" ? data.tags.split(",").map((tag) => tag.trim()) : data.tags || [],
       type: data.type,
       abilities: {
         passive: {
@@ -214,5 +216,8 @@ export const useDataStore = defineStore("dataStore", () => {
     fetchData,
     selectedChampion,
     setSelectedChampion,
+    getRunes,
+    getItems,
+    uniqueTiers,
   };
 });

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "@assets/css/index.css";
 @import "@assets/css/setup.css";
 @import "@assets/css/tabs.css";
@@ -16,4 +17,26 @@
   @import "@fontsource/geist-sans/300.css";
   @import "@fontsource/geist-sans/400.css";
   @import "@fontsource/geist-sans/500.css";
+=======
+@import '@assets/css/index.css';
+@import '@assets/css/setup.css';
+@import '@assets/css/grid.css';
+/* @import '@assets/css/icons.css'; */
+@import '@assets/css/animations.css';
+@import '@assets/css/splitpanes.css';
+/* @import '@assets/css/themes.css'; */
+@import 'vue-simple-context-menu/dist/vue-simple-context-menu.css';
+
+@layer base {
+  @import '@fontsource/dm-serif-display';
+  @import '@fontsource-variable/dm-sans';
+  @import '@fontsource/geist-mono';
+  @import '@fontsource/geist-sans';
+  @import '@fontsource/geist-sans/100.css';
+  @import '@fontsource/geist-sans/200.css';
+  @import '@fontsource/geist-sans/300.css';
+  @import '@fontsource/geist-sans/400.css';
+  @import '@fontsource/geist-sans/500.css';
+  @import '@fontsource/dm-mono';
+>>>>>>> 0d8a5d3 (fix?)
 }

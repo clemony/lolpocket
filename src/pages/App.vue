@@ -1,23 +1,34 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, DefineComponent } from "vue";
+import { ref, computed, onMounted, DefineComponent, markRaw, shallowRef } from "vue";
 import "@assets/css/imports.css";
 import { storeToRefs, _StoreWithState } from "pinia";
-import { useDataStore } from "@stores/dataStore";
-import { Icon } from "@iconify/vue";
-import { useUserSettings } from "@stores/userSettings";
-import { Splitpanes, Pane } from "splitpanes";
-import { useSessionNav } from "@stores/sessionStore";
-import Titlebar from "@components/titlebar.vue";
-const settings = useUserSettings();
-const sn = useSessionNav();
-import anime from 'animejs/lib/anime.es.js';
-import { RouterView, useRoute, useRouter } from "vue-router";
+import { useUserSettings } from "../stores/userSettings";
+import { useSessionStore } from "../stores/sessionStore";
 
+//import anime from 'animejs/lib/anime.es.js';
+import { RouterView, useRoute, useRouter } from "vue-router";
+import ChampionGrid from '../pages/champions/championGrid.vue';
+import championSidebar from "./champions/championSidebar.vue";
+
+// Ref to hold the current sidebar component
+const sidebarComponent = shallowRef();
+
+// Function to handle the sidebar opening and set the component dynamically
+const openSidebar = (componentName: string) => {
+  if (componentName === 'ChampionGrid') {
+    sidebarComponent.value = ChampionGrid; // Set the component dynamically
+  }
+  else if (componentName === 'championSidebar') {
+    sidebarComponent.value = championSidebar; // Set the component dynamically
+  }
+};
 /* ------------------------------- NAVIGATION ------------------------------- */
+const settings = useUserSettings();
+const sn = useSessionStore();
+
 // Access the router instance
 const router = useRouter();
 const route = useRoute();
-
 const showDropdowns = ref([false, true, true]); // Track visibility for each dropdown (index-based)
 const isMinimized = ref(false);
 const paneSize = ref(19);
@@ -25,62 +36,7 @@ const secondPaneMin = ref(81);
 const secondPane = ref(100);
 
 function log(resize, event: any) {
-  var firstSize = event[0].size;
-  console.log(event[0].size);
-  if (firstSize < 14) {
-    anime({
-      targets: ".menu li ul",
-      opacity: 0.5,
-    });
-  }
-  if (firstSize < 11) {
-    var a11 = anime.timeline({
-      targets: '.menu li ul li a',
-      opacity: 0,
-      duration: 300,
-    });
-    a11.add({
-      targets: '.menu li ul li',
-      height: 0,
-      duration: 200,
-      delay: anime.stagger(50, { direction: 'reverse' }),
-    }, '-=50');
-  }
-  if (firstSize < 8) {
-    anime({
-      targets: '.menu a span',
-      opacity: 0,
-    });
-  }
 
-
-
-  if (firstSize > 8) {
-    anime({
-      targets: '.menu a span',
-      opacity: 1,
-    });
-  }
-  if (firstSize > 11) {
-    var a11 = anime.timeline({
-      targets: '.menu li ul li a',
-      opacity: 1,
-      duration: 300,
-    });
-    a11.add({
-      targets: '.menu li ul li, ul',
-      height: [],
-      duration: 200,
-      delay: anime.stagger(50, { direction: 'normal' }),
-    }, '-=50');
-
-  }
-  if (firstSize > 14) {
-    anime({
-      targets: ".menu li ul",
-      opacity: 1,
-    });
-  }
 }
 
 // Track the active tab
@@ -112,6 +68,15 @@ function removeTab(id) {
   }
 }
 
+const sidebar = sn.sidebar;
+
+function toggleMinimize() {
+  if (isMinimized.value == false) {
+    isMinimized.value = true;
+  } else {
+    isMinimized.value = false;
+  }
+}
 
 // Toggle visibility for the dropdown at a specific index
 function toggleShow(index: number) {
@@ -119,12 +84,6 @@ function toggleShow(index: number) {
 }
 /* ------------------------------ ON MOUNTED ----------------------------- */
 
-onMounted(async () => {
-  const dataStore = useDataStore();
-  dataStore.fetchData();
-
-  sn.navigateTo("/home");
-});
 </script>
 <template>
 
@@ -133,19 +92,33 @@ onMounted(async () => {
          /*                                 PANEL ONE START                            */
         /* -------------------------------------------------------------------------- */ -->
 
-  <Splitpanes ref="splitter" class="drawer-end drawer  default-theme overscroll-none overflow-hidden place-content-end "
+  <Splitpanes ref="splitter"
+    class="mt-3 drawer-content !w-[inherit]  default-theme overscroll-none overflow-hidden place-content-end "
     @resize="log('resize', $event)">
 
 
 
     <Pane :size="paneSize" :min-size="3" :max-size="21" :class="{ minimize: isMinimized }"
-      class="max-w-[300px] min-w-[60px] w-[250px] relative transition-width overflow-hidden overscroll-none duration-500 z-20">
+      class="max-w-[300px] min-w-[60px] w-[250px] relative transition-width overflow-hidden overscroll-none duration-500 z-20 mt-0">
       <div id="menu" class="!overflow-y-scroll  mx-0.5 ">
+
+        <div data-tauri-drag-region
+          class="flex col-start-1 justify-self-start self-base mt-0 ml-4 select-none  gap-3 content-center items-center">
+          <button @click="toggleMinimize" class="rounded-full size-5 [&_svg]:stroke-white">
+            <Icon icon="ci:house-02"
+              class="p-0.5 rotate-180  pt-[1px] rounded-full text-base-100 bg-base-content size-5" />
+          </button>
+          <h1 class="font-semibold text-base">lolpocket
+
+          </h1>
+        </div>
+
+
         <ul
-          class="menu  [&_svg]:size-4 *:tracking-wide space-y-3 text-xs [&_a]:flex [&_a]:gap-3 [&_a]:-ml-1 [&_a]:font-medium [&_ul]:before:opacity-20 [&_ul]:ml-5">
+          class="menu border-none  [&_svg]:size-4  space-y-3 text-xs [&_a]:flex [&_a]:gap-3 [&_a]:-ml-1 [&_a]:font-medium [&_ul]:before:opacity-20 [&_ul]:ml-5">
           <li>
             <a @click="sn.navigateTo('/home')" class="tooltip tooltip-right" title="hello">
-              <Icon icon="ph:house" />
+              <Icon icon="teenyicons:home-outline" />
               <span>Home</span>
             </a>
           </li>
@@ -153,13 +126,13 @@ onMounted(async () => {
             <span :class="{ 'menu-dropdown-show': showDropdowns[0] }" @click="toggleShow(0)"
               class="menu-dropdown-toggle">
               <a>
-                <Icon icon="ph:cube" />
+                <Icon icon="teenyicons:folders-outline" />
                 <span>Builds</span>
               </a>
             </span>
             <ul :class="{ 'menu-dropdown-show': showDropdowns[0] }" class="menu-dropdown">
               <li>
-                <a @click="router.push('/champions')"><span>Submenu 1</span></a>
+                <a @click="sn.navigateTo('/build')"><span>Submenu 1</span></a>
               </li>
               <li>
                 <a><span>Submenu 2</span></a>
@@ -168,7 +141,7 @@ onMounted(async () => {
           </li>
           <li>
             <a @click="sn.navigateTo('/hi')">
-              <Icon icon="ph:calculator" />
+              <Icon icon="teenyicons:calculator-outline" />
               <span>Calculator</span>
             </a>
           </li>
@@ -176,19 +149,19 @@ onMounted(async () => {
             <span :class="{ 'menu-dropdown-show': showDropdowns[1] }" @click="toggleShow(1)"
               class="menu-dropdown-toggle">
               <a>
-                <Icon icon="ph:heart-straight" />
+                <Icon icon="teenyicons:heart-outline" />
                 <span>Favorites</span>
               </a>
             </span>
             <ul :class="{ 'menu-dropdown-show': showDropdowns[1] }" class="menu-dropdown">
               <li>
-                <a @click="sn.navigateTo('/champions')">
-                  <Icon icon="ph:crown-simple" /><span>Champions</span>
+                <a @click="sn.navigateTo('Champions')">
+                  <Icon icon="teenyicons:ghost-outline" /><span>Champions</span>
                 </a>
               </li>
               <li>
                 <a @click="sn.navigateTo('/items')">
-                  <Icon icon="vaadin:sword" /><span>Items</span>
+                  <Icon icon="teenyicons:wand-outline" /><span>Items</span>
                 </a>
               </li>
             </ul>
@@ -197,38 +170,44 @@ onMounted(async () => {
             <span :class="{ 'menu-dropdown-show': showDropdowns[2] }" @click="toggleShow(2)"
               class="menu-dropdown-toggle">
               <a>
-                <Icon icon="solar:glasses-linear" />
-                <span>Browse</span>
+                <Icon icon="teenyicons:sd-card-outline" />
+                <span>Database</span>
               </a>
             </span>
             <ul :class="{ 'menu-dropdown-show': showDropdowns[2] }" class="menu-dropdown">
               <li>
-                <a @click="sn.navigateTo('/champions')">
-                  <Icon icon="ph:crown-simple" /><span>Champions</span>
+                <a @click="sn.navigateTo('/champions/champions')">
+                  <Icon icon="teenyicons:ghost-outline" /><span>Champions</span>
                 </a>
               </li>
               <li>
                 <a @click="sn.navigateTo('/items')">
-                  <Icon icon="vaadin:sword" /><span>Items</span>
+                  <Icon icon="teenyicons:wand-outline" /><span>Items</span>
                 </a>
               </li>
               <li>
-                <a>
-                  <Icon icon="ph:hexagon" /><span>Runes</span>
+                <a @click="sn.navigateTo('/runes/runes')">
+                  <Icon icon="teenyicons:hexagon-outline" /><span>Runes</span>
                 </a>
               </li>
             </ul>
           </li>
           <li>
             <a class="">
-              <Icon icon="ph:at" />
+              <Icon icon="teenyicons:at-outline" />
               <span>Account</span>
             </a>
           </li>
           <li>
             <a @click="sn.navigateTo('/settings')">
-              <Icon icon="ph:gear-six" />
+              <Icon icon="teenyicons:cog-outline" />
               <span>Settings</span>
+            </a>
+          </li>
+          <li>
+            <a @click="sn.navigateTo('/about')">
+              <Icon icon="teenyicons:info-outline" />
+              <span>About</span>
             </a>
           </li>
         </ul>
@@ -240,32 +219,32 @@ onMounted(async () => {
        /* -------------------------------------------------------------------------- */ -->
 
     <Pane :min-size="secondPaneMin" :size="secondPane"
-      class=" drawer-content overscroll-none overflow-hidden relative max-h-[calc(100%-36px)] justify-end left-0 bottom-0">
+      class="  overscroll-none overflow-hidden relative justify-end left-0 bottom-0 ">
 
 
 
 
-      <div role="tablist" class="tabs tabs-lifted flex z-10 ">
+      <div data-tauri-drag-region role="tablist" class="tabs tabs-lifted flex z-10 pointer-events-auto">
         <template v-for="tab in sn.openTabs" :key="tab.id">
           <a role="tab"
-            class="group flex justify-start tab m-0 w-36 before:visible before:-left-[8px]  after:visible capitalize text-xs z-[5]  tracking-wider font-medium"
+            class="group flex justify-start tab m-0 w-36 before:visible before:-left-[8px]  after:visible capitalize text-xs z-[5]  pointer-events-auto font-medium"
             :alt="tab.tab.name" :class="['tab', { 'tab-active': sn.isActiveTab(tab.tab.link) }]"
             @click.prevent="sn.navigateTo(tab.tab.link)">
-            <Icon :icon="sn.getIconForTab(tab.tab.link)" class="size-3.5 mr-2 ml-1 " />
-            <span class="mt-[2px]">{{ tab.tab.name }}</span>
+            <Icon :icon="tab.icon || 'default-icon'" class="size-3.5 mr-2 ml-1" />
+            <span class="mt-[2px] grow justify-start flex">{{ tab.title }}</span>
 
             <button
-              class="opacity-0 flex flex-grow content-center justify-end group-hover:opacity-70 transition-opacity duration-300 "
+              class="opacity-0 flex content-center justify-end group-hover:opacity-70 transition-opacity duration-300 size-4"
               @click.stop="removeTab(tab.id)"> <!-- Stop event propagation to prevent tab click -->
               <Icon icon="material-symbols:close" class="size-3.5 ml-2 -mr-1" />
             </button>
 
           </a>
-          <div role="tabpanel" class="tab-content overflow-hidden  bg-base-100/70 absolute inset-0 m-0 mt-[31px]   border-base-300 border h-auto !p-0 !rounded-bl-none !rounded-tr-none
+          <div role="tabpanel" class="tab-content overflow-hidden  !bg-base-100/90 absolute inset-0 m-0 mt-[31px]   border-base-300 border h-auto !p-0 !rounded-bl-none !rounded-tr-none
            !shadow-[inset_-12px_-8px_40px_#46464620] ">
-            <component :is="sn.getComponentForTab(tab.tab.link)" />
-          </div>
 
+            <RouterView @open-sidebar="openSidebar" />
+          </div>
         </template>
         <a role="tab" class="hidden">egg</a>
 
@@ -274,16 +253,21 @@ onMounted(async () => {
     </Pane>
   </Splitpanes>
   <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-  <div class="drawer-side overscroll-none z-30">
-    <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
-    <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4 pt-[30px]">
-      <template v-for="tab in sn.openTabs" :key="tab.id">
-        <component :is="sn.getSidebarForTab(tab.tab.link)" />
-      </template>
+  <div class="drawer-side overscroll-none z-30 max-h-screen h-screen">
+
+    <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay w-full h-full"></label>
+
+    <div class="menu bg-base-200 text-base-content h-screen w-2/5 p-4 pt-[30px]">
+
+      <component :is="sidebarComponent" />
+
     </div>
+
+
   </div>
   <div class="pointer-events-none w-screen h-screen fixed top-0 left-0 z-[999] shadow-frame rounded-[12px]">
   </div>
+
 </template>
 
 <!--   /* -------------------------------------------------------------------------- */

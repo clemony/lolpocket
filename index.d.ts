@@ -1,0 +1,11 @@
+declare module "./src/stores/sessionStore";
+declare module "./src/pages/App.vue";
+declare module "@stores/champQuotes.ts";
+declare module "@pages/champions/championGrid.vue";
+declare module "@stores/dataStore";
+declare module "@stores/userSettings";
+declare module "@stores/news";
+declare module "@scripts/animations";
+declare module "@components/titlebar.vue";
+declare module "@assets/theme.ts";
+declare module "@stores/buildStore";

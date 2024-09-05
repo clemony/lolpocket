@@ -234,6 +234,18 @@
     "NodeService": true,
     "Icon": true,
     "{ Icon }": true,
+<<<<<<< HEAD
     "RouteLocationRaw": true
+=======
+    "RouteLocationRaw": true,
+    "NewsArticles": true,
+    "Quotes": true,
+    "sheetStore": true,
+    "useBStore": true,
+    "useDataStore": true,
+    "useResetStore": true,
+    "useSessionStore": true,
+    "useUserSettings": true
+>>>>>>> 0d8a5d3 (fix?)
   }
 }

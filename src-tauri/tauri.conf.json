@@ -75,7 +75,9 @@
         "height": 900,
         "resizable": true,
         "decorations": false,
-        "transparent": true
+        "transparent": true,
+
+        "fileDropEnabled": false
       }
     ]
   }

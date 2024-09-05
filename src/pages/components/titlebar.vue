@@ -1,4 +1,5 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 import { useSessionNav } from "@stores/sessionStore";
 import { Icon } from "@iconify/vue";
 import { ref, computed, onMounted } from "vue";
@@ -7,6 +8,15 @@ const query = ref("");
 
 
 const sn = useSessionNav();
+=======
+import { useSessionStore } from "@stores/sessionStore";
+import { Icon } from "@iconify/vue";
+import { ref, computed, onMounted } from "vue";
+
+
+
+const sn = useSessionStore();
+>>>>>>> 0d8a5d3 (fix?)
 const isMinimized = ref(false);
 
 function toggleMinimize() {
@@ -20,6 +30,7 @@ function toggleMinimize() {
 </script>
 <template>
   <div data-tauri-drag-region
+<<<<<<< HEAD
     class="titlebar top-0 left-0 h-[36px] max-h-[36px] w-full grid grid-cols-[1fr_7fr_1fr] place-items-center">
     <div class="flex col-start-1 justify-self-start self-base mt-2 ml-5 select-none  gap-3 content-center items-center">
       <button @click="toggleMinimize">
@@ -59,6 +70,11 @@ function toggleMinimize() {
 
 
     </div>
+=======
+    class="titlebar absolute top-0 right-0 h-[36px] max-h-[36px] flex place-items-center z-30">
+
+
+>>>>>>> 0d8a5d3 (fix?)
 
 
     <!-- /* ----------------------------- TOOLBAR BUTTONS ---------------------------- */ -->

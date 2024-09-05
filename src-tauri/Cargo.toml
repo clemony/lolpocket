@@ -17,7 +17,11 @@ tauri-build = { version = "1.5.3", features = [] }
 [dependencies]
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
+<<<<<<< HEAD
 tauri = { version = "1.7.0", features = [ "window-set-title", "macos-private-api", "window-set-maximizable", "window-set-closable", "window-close", "window-minimize", "window-maximize", "window-hide", "window-unminimize", "window-unmaximize", "window-start-dragging", "window-set-minimizable", "window-show", "window-set-resizable"] }
+=======
+tauri = { version = "1.7.0", features = [ "window-start-dragging", "window-set-title", "macos-private-api", "window-set-maximizable", "window-set-closable", "window-close", "window-minimize", "window-maximize", "window-hide", "window-unminimize", "window-unmaximize", "window-set-minimizable", "window-show", "window-set-resizable"] }
+>>>>>>> 0d8a5d3 (fix?)
 window-vibrancy = "=0.4.0"
 obj-c = "0.0.0"
 objc2 = "0.5.2"

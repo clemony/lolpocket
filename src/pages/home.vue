@@ -1,7 +1,18 @@
+<route lang="json">{
+    "name": "home",
+    "meta": {
+        "title": "Home",
+        "icon": "teenyicons:home-outline"
+    }
+}</route>
+
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
-import { NewsArticles } from "@stores/news";
+import { NewsArticles } from "../stores/news";
 import { ref } from "vue";
+import { useSessionStore } from "../stores/sessionStore";
+
+const sn = useSessionStore();
 
 export interface article {
     title: string;
@@ -23,8 +34,8 @@ function handleLinks() { }
     <div class="w-full py-4  grid gap-y-3 m-0 mt-2 !z-0 ">
         <div class="gap-2 flex items-end w-full px-6">
             <div class="grow flex gap-4 items-center">
-                <h2 class="text-xl font-bold tracking-tight ">
-                    News & Updates</h2>
+                <h1 class="text-xl font-bold tracking-tight ">
+                    News & Updates</h1>
 
                 <div class="badge badge-primary font-mono text-mini ">1 new!
                 </div>
@@ -45,14 +56,14 @@ function handleLinks() { }
 
         <div
             class="flex w-full overflow-x-scroll h-64 content-center items-center gap-5 scrollbar-hide !z-1 -transition-all duration-700 delay-200 news-after pl-6 ">
-            <div v-for="article in NewsArticles"
+            <a v-for="article in NewsArticles"
                 class="card  h-56 text-sm shadow-warm min-w-96 !z-0 !*:z-0 group hover:scale-[1.02] p-0 m-0 transition-transform duration-700  group bg-cover relative border border-base-100"
-                @click.prevent="handleLinks" :title="article.link"
-                :style="{ backgroundImage: 'url(' + article.image + ')' }">
+                :title="article.link" :style="{ backgroundImage: 'url(' + article.image + ')' }" :href="article.link"
+                target="_blank">
 
 
                 <div
-                    class="group-hover:opacity-100 absolute transition-all duration-500 opacity-0 bg-neutral/40 w-full h-full top-0 left-0 glass   grid grid-cols-1 content-start justify-items-center  italic pt-6 rounded-box text-xs shadow-inner ">
+                    class="group-hover:opacity-100 absolute transition-all duration-500 opacity-0 bg-neutral/40 w-full h-full top-0 left-0 backdrop-blur-sm   grid grid-cols-1 content-start justify-items-center  italic pt-6 rounded-box text-xs shadow-inner ">
 
                 </div>
 
@@ -96,7 +107,7 @@ function handleLinks() { }
 
 
                 </div>
-            </div>
+            </a>
         </div>
 
         <div class="grid grid-cols-2 gap-6 pr-12 w-full pt-2 mx-6">
