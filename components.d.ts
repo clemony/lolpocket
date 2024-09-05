@@ -32,7 +32,7 @@ declare module 'vue' {
     Runes: typeof import('./src/pages/runes/runes.vue')['default']
     SearchBox: typeof import('./src/pages/searchBox.vue')['default']
     Settings: typeof import('./src/pages/settings.vue')['default']
-    Template: typeof import('./src/pages/basket/template.vue')['default']
+    Template: typeof import('./src/pages/eggs/template.vue')['default']
     Titlebar: typeof import('./src/pages/components/titlebar.vue')['default']
   }
 }

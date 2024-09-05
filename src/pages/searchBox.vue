@@ -1,17 +1,11 @@
 <script setup lang="ts">
-<<<<<<< HEAD
-
-=======
 import { ref } from 'vue';
 import { VueShortkey } from "vue3-shortkey";
 const query = ref("");
->>>>>>> 0d8a5d3 (fix?)
 </script>
 
 <template>
 
-<<<<<<< HEAD
-=======
 
     <!-- /* ----------------------------- SEARCH BOX HERE HI ---------------------------- */ -->
 
@@ -41,7 +35,6 @@ const query = ref("");
 
     </div>
 
->>>>>>> 0d8a5d3 (fix?)
     <!--<div tabindex=" 60"
                 class="dropdown-content menu  bg-base-100 w-full rounded-bl-[10px] rounded-br-[10px] place-content-center z-[0] top-[26px] pt-[3px] shadow-lg border border-base-300 backdrop-blur-md bg-opacity-80">
 

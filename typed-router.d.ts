@@ -35,7 +35,7 @@ declare module 'vue-router/auto-routes' {
     '/items': RouteRecordInfo<'/items', '/items', Record<never, never>, Record<never, never>>,
     '/items/itemGrid': RouteRecordInfo<'/items/itemGrid', '/items/itemGrid', Record<never, never>, Record<never, never>>,
     'items': RouteRecordInfo<'items', '/items/items', Record<never, never>, Record<never, never>>,
-    '/runes/runes': RouteRecordInfo<'/runes/runes', '/runes/runes', Record<never, never>, Record<never, never>>,
+    'Runes': RouteRecordInfo<'Runes', '/runes/runes', Record<never, never>, Record<never, never>>,
     '/searchBox': RouteRecordInfo<'/searchBox', '/searchBox', Record<never, never>, Record<never, never>>,
     'Settings': RouteRecordInfo<'Settings', '/settings', Record<never, never>, Record<never, never>>,
   }

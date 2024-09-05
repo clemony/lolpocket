@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
-import { useDataStore } from "@stores/dataStore";
+import { useDataStore } from "../../stores/dataStore";
 
 const ds = useDataStore();
 

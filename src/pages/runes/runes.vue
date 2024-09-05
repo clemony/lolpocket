@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<script setup lang="ts">
-</script>
-
-<template>
-=======
 <route lang="json">{
     "name": "Runes",
     "alias": "/runes/runes",
@@ -14,7 +8,7 @@
 }</route>
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
-import { useDataStore } from "@stores/dataStore";
+import { useDataStore } from "../../stores/dataStore";
 const ds = useDataStore();
 
 const runes = ref<Rune[]>([]);
@@ -81,7 +75,6 @@ onMounted(() => {
     </div>
 
 
->>>>>>> 0d8a5d3 (fix?)
 </template>
 
 <style scoped></style>

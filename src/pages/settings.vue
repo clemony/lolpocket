@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
-import { useUserSettings } from "@stores/userSettings";
+import { useUserSettings } from "../stores/userSettings";
 import { storeToRefs } from "pinia";
 import { ref, computed, onMounted } from "vue";
 const myStore = storeToRefs(useUserSettings());
@@ -112,11 +112,8 @@ onMounted(() => {
       <form v-for="framework in frameworks" :key="framework.key" class="flex gap-2 my-2 items-center">
         <input type="radio" v-model="frameworkChoice" :value="framework.key" :id="framework.name" name="ui-framework"
           class="radio radio-xs shadow-inner" @change="handleFrameworkChoice" />
-<<<<<<< HEAD
         <label :for="framework.name" class="m-1 w-24 rounded-lg">
-=======
-        <label :for="framework.name" class="m-1 w-28 rounded-lg">
->>>>>>> 0d8a5d3 (fix?)
+
           <div class="w-full h-full" data-act-class="!outline-base-content">
             <div
               class="w-full h-full !text-xs ring-base-300 ring-1 shadow-warm bg-base-100 text-base-content cursor-pointer rounded-lg overflow-hidden has-[:checked]:ring-2 has-[:checked]:ring-neutral-content"
@@ -129,53 +126,6 @@ onMounted(() => {
                   <div class="font-semibold flex-grow">{{ framework.name }}</div>
                 </div>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </label>
-      </form>
-    </div>
-
-    <div
-      class="mockup-browser align-self-start max-w-96 col-start-2 m-6 bg-base-300 border border-neutral/5 shadow-warm">
-      <div class="mockup-browser-toolbar -ml-1.5">
-        <div class="input !bg-base-100 text-xs text content-center  before:w-3 before:-mt-0.5 after:-mt-0.5 !ml-2">
-          https://github.com/clemony/lolpocket
-        </div>
-      </div>
-      <div class="bg-base-200 flex justify-center px-4 py-20">Hello!</div>
-    </div>
-
-
-    <h1 class="prose-lg font-semibold mt-6 col-start-1">Accents</h1>
-
-
-    <div class=" col-start-1 grid grid-cols-1 gap-y-4">
-      <form v-for="theme in themes" class="items-center  " @change="handleThemeChoice()">
-        <div class="grid grid-cols-[1fr_2fr_4fr]  content-center  justify-start col-start-1 ">
-
-          <input type="radio" v-model="themeChoice" :value="theme.key" :id="theme.name" name="ui-theme"
-            class="radio col-start-1 radio-xs shadow-inner self-center justify-self-start" />
-
-
-          <div class="col-start-2 content-center text-xs font-semibold">
-            <label :for="theme.name"> {{ theme.name }} </label>
-          </div>
-
-
-          <div :data-theme="settings.dataMode + theme.key"
-            class="ml-6 grid grid-cols-4 gap-1 col-start-3 *:size-6 *:rounded-md *:shadow-warm  *:ring-offset-1 *:ring-base-300/80 bg-transparent">
-            <div class=" bg-primary ring-offset-primary/60"></div>
-            <div class="bg-secondary ring-offset-secondary/60"></div>
-            <div class="bg-accent ring-offset-accent/60"></div>
-            <div class="bg-neutral ring-offset-neutral/60"></div>
-            <!-- <div class="bg-info"></div>
-            <div class="bg-success"></div>
-            <div class="bg-warning"></div>
-            <div class="bg-error"></div>
-            <div class="bg-error-content"></div>-->
-          </div>
-=======
             </div>
           </div>
         </label>
@@ -224,7 +174,6 @@ onMounted(() => {
               </div>
             </div>
           </label>
->>>>>>> 0d8a5d3 (fix?)
         </div>
       </form>
     </div>
