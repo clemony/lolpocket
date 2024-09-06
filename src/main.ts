@@ -13,7 +13,7 @@ import { useDataStore } from './stores/dataStore';
 import { useUserSettings } from './stores/userSettings';
 import { useSessionStore } from './stores/sessionStore';
 import VueSimpleContextMenu from 'vue-simple-context-menu';
-import Vue3Toastify, { updateGlobalOptions, toast, type ToastContainerOptions, type CSSTransitionProps } from 'vue3-toastify';
+import Vue3Toastify, { toast, type ToastContainerOptions, type CSSTransitionProps } from 'vue3-toastify';
 
 const getRoutes = routes;
 
