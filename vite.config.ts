@@ -39,7 +39,13 @@ export default defineConfig({
         /\.vue\?vue/, // .vue
         /\.md$/, // .md
       ],
-      imports: ['vue', VueRouterAutoImports],
+      imports: [
+        'vue',
+        VueRouterAutoImports,
+        {
+          'vue3-toastify': ['toast', 'ToastContainerOptions'],
+        },
+      ],
       dirs: [
         '@iconify/vue',
         './src/utils',
@@ -59,7 +65,7 @@ export default defineConfig({
     ViteAliases({
       prefix: '@',
       deep: true,
-      depth: 3,
+      depth: 2,
       createLog: true,
       logPath: 'src/logs',
       createGlobalAlias: true,

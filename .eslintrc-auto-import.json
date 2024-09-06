@@ -242,6 +242,10 @@
     "useDataStore": true,
     "useResetStore": true,
     "useSessionStore": true,
-    "useUserSettings": true
+    "useUserSettings": true,
+    "toast": true,
+    "ToastOptions": true,
+    "options": true,
+    "ToastContainerOptions": true
   }
 }

@@ -37,7 +37,7 @@
   --dark-shadow: oklch(var(--bc) / 5%);
 
   #app {
-    @apply bg-blend-lighten backdrop-brightness-[190%] bg-base-100/60  backdrop-blur-md backdrop-contrast-[80%];
+    @apply bg-blend-lighten backdrop-brightness-[250%] bg-base-100/60  backdrop-blur-md backdrop-contrast-[60%];
   }
 
   .menu-icons {

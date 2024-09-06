@@ -10,6 +10,8 @@ declare global {
   const NewsArticles: typeof import('./src/stores/news')['NewsArticles']
   const Quotes: typeof import('./src/stores/champQuotes')['Quotes']
   const S: typeof import('@stores/dataStore.ts')['S']
+  const ToastContainerOptions: typeof import('vue3-toastify')['ToastContainerOptions']
+  const ToastOptions: typeof import('vue3-toastify')['ToastOptions']
   const a: typeof import('@stores/dataStore.ts')['a']
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
   const cn: typeof import('./src/utils/utils')['cn']
@@ -55,6 +57,7 @@ declare global {
   const onServerPrefetch: typeof import('vue')['onServerPrefetch']
   const onUnmounted: typeof import('vue')['onUnmounted']
   const onUpdated: typeof import('vue')['onUpdated']
+  const options: typeof import('vue3-toastify')['options']
   const provide: typeof import('vue')['provide']
   const r: typeof import('@stores/dataStore.ts')['r']
   const reactive: typeof import('vue')['reactive']
@@ -74,6 +77,7 @@ declare global {
   const toRef: typeof import('vue')['toRef']
   const toRefs: typeof import('vue')['toRefs']
   const toValue: typeof import('vue')['toValue']
+  const toast: typeof import('vue3-toastify')['toast']
   const triggerRef: typeof import('vue')['triggerRef']
   const u: typeof import('@stores/dataStore.ts')['u']
   const unref: typeof import('vue')['unref']
@@ -108,6 +112,7 @@ declare module 'vue' {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly NewsArticles: UnwrapRef<typeof import('./src/stores/news')['NewsArticles']>
     readonly Quotes: UnwrapRef<typeof import('./src/stores/champQuotes')['Quotes']>
+    readonly ToastContainerOptions: UnwrapRef<typeof import('vue3-toastify')['ToastContainerOptions']>
     readonly cn: UnwrapRef<typeof import('./src/utils/utils')['cn']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly createApp: UnwrapRef<typeof import('vue')['createApp']>
@@ -153,6 +158,7 @@ declare module 'vue' {
     readonly toRef: UnwrapRef<typeof import('vue')['toRef']>
     readonly toRefs: UnwrapRef<typeof import('vue')['toRefs']>
     readonly toValue: UnwrapRef<typeof import('vue')['toValue']>
+    readonly toast: UnwrapRef<typeof import('vue3-toastify')['toast']>
     readonly triggerRef: UnwrapRef<typeof import('vue')['triggerRef']>
     readonly unref: UnwrapRef<typeof import('vue')['unref']>
     readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>

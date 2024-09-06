@@ -84,6 +84,14 @@ function toggleShow(index: number) {
 }
 /* ------------------------------ ON MOUNTED ----------------------------- */
 
+
+onMounted(() => {
+  const sn = useSessionStore();
+  if (!sn.activeTab) {
+    sn.navigateTo('/home');
+  }
+});
+
 </script>
 <template>
 
@@ -115,7 +123,7 @@ function toggleShow(index: number) {
 
 
         <ul
-          class="menu border-none  [&_svg]:size-4  space-y-3 text-xs [&_a]:flex [&_a]:gap-3 [&_a]:-ml-1 [&_a]:font-medium [&_ul]:before:opacity-20 [&_ul]:ml-5">
+          class="menu border-none mt-2 [&_svg]:size-4  space-y-3 text-xs [&_a]:flex [&_a]:gap-3 [&_a]:-ml-1 [&_a]:font-medium [&_ul]:before:opacity-20 [&_ul]:ml-5">
           <li>
             <a @click="sn.navigateTo('/home')" class="tooltip tooltip-right" title="hello">
               <Icon icon="teenyicons:home-outline" />

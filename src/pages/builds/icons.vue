@@ -60,7 +60,8 @@ const buildIcon = defineModel({
 <template>
 
   <div class="dropdown dropdown-right !bg-transparent">
-    <div tabindex="0" role="button" class="btn btn-sm btn-ghost w-8 px-1.5 pb-1.5 pt-1 h-7 mx-1">
+    <div tabindex="0" role="button"
+      class="btn rounded-btn btn-sm btn-outline border-none px-1.5 pb-1.5 pt-1 size-12 mx-1">
       <Icon :icon="buildIcon" class="size-5 " />
     </div>
     <div tabindex="0"

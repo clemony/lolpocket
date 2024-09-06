@@ -13,6 +13,7 @@ import { useDataStore } from './stores/dataStore';
 import { useUserSettings } from './stores/userSettings';
 import { useSessionStore } from './stores/sessionStore';
 import VueSimpleContextMenu from 'vue-simple-context-menu';
+import Vue3Toastify, { updateGlobalOptions, toast, type ToastContainerOptions, type CSSTransitionProps } from 'vue3-toastify';
 
 const getRoutes = routes;
 
@@ -63,6 +64,12 @@ interface WindowOptions {
   titleBarStyle?: TitleBarStyle;
 }
 
+const customAnimation = {
+  enter: 'fade-in-bottom',
+  exit: 'fade-out-bottom',
+  // appendPosition: true, // default to false
+} as CSSTransitionProps;
+
 app.component('Splitpanes', Splitpanes);
 app.component('Pane', Pane);
 app.component('Icon', Icon);
@@ -74,6 +81,14 @@ pinia.use(piniaPluginPersistedstate);
 app.use(VueShortkey);
 app.use(pinia);
 app.use(router);
+
+app.use(Vue3Toastify, {
+  autoClose: 4000,
+  hideProgressBar: true,
+  transition: customAnimation,
+  position: toast.POSITION.BOTTOM_RIGHT,
+  toastClassName: 'backdrop-blur-md !bg-neutral/80 !text-neutral-content !rounded-box shadow-warm text-sm',
+} as ToastContainerOptions);
 
 const ds = useDataStore();
 const us = useUserSettings();

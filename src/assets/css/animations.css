@@ -15,8 +15,7 @@
 }
 
 .rotate-180-ccw {
-  -webkit-animation: rotate-180-ccw 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    forwards;
+  -webkit-animation: rotate-180-ccw 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   animation: rotate-180-ccw 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
@@ -47,13 +46,7 @@
 
 .glow {
   border-radius: 100%;
-  background: linear-gradient(
-    45deg,
-    oklch(var(--p)),
-    oklch(var(--s)),
-    oklch(var(--a)),
-    oklch(var(--b1))
-  );
+  background: linear-gradient(45deg, oklch(var(--p)), oklch(var(--s)), oklch(var(--a)), oklch(var(--b1)));
   background-size: 1000% 1000%;
   animation: GradientBackground 5s ease infinite;
   /*mask-image: radial-gradient(circle at 0% 1%, rgba(0, 0, 0, 0) 50px, #fff 51px);
@@ -104,4 +97,76 @@
   100% {
     opacity: 0;
   }
+}
+
+/*
+ * ----------------------------------------
+ * animation fade-in-bottom
+ * ----------------------------------------
+ */
+
+.fade-in-bottom {
+  -webkit-animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*
+ * ----------------------------------------
+ * animation fade-out-bottom
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes fade-out-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+@keyframes fade-out-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
+.fade-out-bottom {
+  -webkit-animation: fade-out-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: fade-out-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }

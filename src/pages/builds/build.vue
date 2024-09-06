@@ -49,22 +49,22 @@ interface Item {
     tier: string;
 }
 
-function omg() {
-    bs.setItems = [''];
+function deleteItemsInSet() {
+    this.buildSets.items = [''];
 }
 
-function onInsert(event) {
-    if (!bs.setItems) {
-        console.error('Items array is undefined');
+function onInsert(set, event) {
+    if (!set.items.items) {
+        console.error('Items array is undefined for set:', set);
     } else {
-        bs.setItems.push(event.data);
-        console.log('Inserted item at index: ', event.index, 'data: ', event.data);
+        set.items.items.splice(event.index, 0, event.data); // Insert at the specified index
+        console.log('Inserted item at index:', event.index, 'data:', event.data);
     }
 }
 
-function onReorder(event) {
+function onReorder(set, event) {
     // Apply reorder operation using Vue's reactivity system
-    //event.apply(bs.setItems);
+    set.$event.apply(set.items);
 }
 
 /* function remove(item) {
@@ -102,18 +102,26 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="w-full   py-4 flex items-center content-center ">
-        <div class="pb-0  ml-6 w-1/2 flex gap-2">
+    <div class="w-full   py-4 grid grid-cols-2 items-center content-center ">
+        <div class="pb-0  ml-6 mr-5 flex gap-2">
 
             <Icons />
 
-            <div class="has-[:focus]:border-b-base-300 border-b-transparent border-b">
+            <div class="has-[:focus]:border-b-base-300 grow border-b-transparent border-b">
                 <input type="text" placeholder="Build Name" spellcheck='false'
-                    class="input input-ghost focus:bg-transparent font-light text-xl pl-0 mr-4 border-none rounded-none focus:border-none  placeholder:italic " />
+                    class="input input-ghost focus:bg-transparent font-bold tracking-tight text-xl pl-0 mr-4 border-none rounded-none focus:border-none  placeholder:italic placeholder:font-light" />
             </div>
 
 
-            <button class="btn btn-sm btn-square p-0" alt="Create export for League Client"
+            <div class="join *:text-xs">
+                <input class="join-item btn btn-sm" type="radio" name="options" aria-label="Items" />
+                <input class="join-item btn btn-sm" type="radio" name="options" aria-label="Runes" />
+
+            </div>
+
+
+
+            <button class="btn btn-sm btn-square p-0 " alt="Create export for League Client"
                 title="Create export for League Client" onclick="my_modal_2.showModal()">
                 <Icon icon="teenyicons:upload-outline" class="" />
             </button>
@@ -127,12 +135,11 @@ onMounted(() => {
                 </form>
             </dialog>
 
-            <button @click="omg">clear</button>
 
 
         </div>
 
-        <div class=" w-1/2 px-4 p flex justify-end">
+        <div class="px-4 p flex justify-end">
             <div class="dropdown dropdown-end">
                 <label role="button" for="my-drawer-4"
                     class=" drawer-button cursor-pointer hover:bg-transparent avatar-group -space-x-6 rtl:space-x-reverse w-fit "
@@ -161,6 +168,9 @@ onMounted(() => {
         </div>
     </div>
 
+    <button class="absolute right-0 h-[calc(100%-130px)] p-1">
+        <icon icon='teenyicons:right-outline' />
+    </button>
 
     <!--     /* -------------------------------------------------------------------------- */
          /*                                 SPLIT START                                */
@@ -175,7 +185,8 @@ onMounted(() => {
                 <h2 class=" font-semibold text-base grow justify-start">Sets</h2>
 
                 <button
-                    class="items-center btn  btn-xs btn-outline border-none rounded-md  h-full  relative font-normal">
+                    class="items-center btn  btn-xs btn-outline border-none rounded-md  h-full  relative font-normal"
+                    @click="bs.newSet">
 
 
                     <Icon icon="teenyicons:add-solid" class="self-center size-3 -mt-[2px]" />
@@ -184,19 +195,60 @@ onMounted(() => {
                 </button>
             </div>
             <div class="pt-11 ">
-                <div v-for="set in bs.buildSets" class="">
-                    <label :key="set.key"
-                        class="input input-xs !outline-none px-3 !ring-0 !border-0 flex items-center gap-2 bg-transparent">
-                        <input type="text" class="p-0 select-all text-sm font-mono grow " placeholder="Set 1"
-                            :value="set.name" />
+                <div v-for="set in bs.buildSets" class="group">
+                    <div :key="set.key"
+                        class="input input-xs !outline-none !ring-0 !border-0 flex items-center gap-4 bg-transparent mb-5 p-0 ">
 
-                    </label>
-                    <div class="border-b border-base-300 mt-2 mb-4" />
+                        <div class="flex grow relative h-fit group">
+                            <input type="text"
+                                class="p-0 py-2 mt-2 mb-1 select-all border-b border-transparent focus:border-base-200 text-[0.72rem]] font-mono grow peer transition-colors duration-300"
+                                :placeholder="'Set ' + set.key" :value="set.name" />
+
+                            <button
+                                class="btn  btn-square
+                         btn-xs border-0 peer-hover:opacity-100 opacity-0 bg-transparent shadow-none hover:bg-transparent absolute bottom-[15px] right-3 text-base-content/50 transition-opacity duration-300  peer-focus:opacity-0 peer-focus:z-0 z-10"
+                                alt="Edit Name" title="Edit Name">
+                                <icon icon='ic:baseline-edit' class="size-3.5 " />
+
+                            </button>
+
+
+                            <button
+                                class="btn  btn-square
+                     btn-xs border-0  bg-transparent shadow-none hover:bg-transparent absolute bottom-[15px] right-3 transition-opacity duration-300  peer-focus:opacity-100 text-base-content/60 hover:text-base-content/90 opacity-0 peer-focus:z-10 z-0"
+                                alt="Clear Text" title="Clear Text">
+
+                                <icon icon='teenyicons:x-circle-solid' class="   size-3" />
+                            </button>
+
+                        </div>
+
+
+
+                        <div class="grid grid-cols-2 *:aspect-square">
+                            <button
+                                class="size-5 hover:bg-base-200 rounded-btn text-base-content/80 transition-opacity duration-300 peer-focus:opacity-0 grid place-content-center"
+                                alt="Clear Items" title="Clear Items">
+                                <icon icon='teenyicons:clockwise-outline' class="size-[0.8rem] pb-[2px]" />
+                            </button>
+
+                            <button
+                                class=" size-5 hover:bg-base-200 rounded-btn
+             text-base-content/80 transition-opacity duration-300 peer-focus:opacity-0 ml-1.5 disabled:bg-transparent  relative grid place-content-center disabled:opacity-40"
+                                alt="Delete Set" title="Delete Set" @click="bs.deleteSet(set.key)"
+                                :disabled="set.key == 1">
+                                <icon icon='ph:trash-light' class="size-3.5 object-center" />
+                            </button>
+                        </div>
+
+                    </div>
 
 
 
 
-                    <drop-list row direction="row" :items="set.items" @insert="onInsert" @reorder="onReorder"
+
+                    <drop-list row direction="row" :items="set.items.items" @insert="onInsert(set, $event)"
+                        @reorder="onReorder(set, $event)"
                         class="w-full flex flex-wrap gap-4 place-items-start place-content-start " mode="cut">
 
 
@@ -252,7 +304,7 @@ onMounted(() => {
 
                     </drop-list>
 
-                    <div class="border-b border-base-300 mt-4 mb-4" />
+                    <div class="border-b border-base-300 mt-7 mb-4" />
                 </div>
             </div>
         </Pane>
@@ -270,6 +322,25 @@ onMounted(() => {
                 class=" border-b-base-300 border-b backdrop-blur-md absolute z-1 top-0 left-0 bg-base-100/90  items-center flex w-full justify-end gap-4 !h-fit flex-wrap px-2 py-1 z-10">
 
                 <h2 class=" font-semibold text-base grow mx-2 justify-start">Items</h2>
+
+
+                <div class="relative has-[input:not(:placeholder-shown)]:hide-stuff">
+                    <input tabindex="0" role="" placeholder=" "
+                        class="peer bg-base-100/80 h-[24px] min-w-5 w-8 focus:w-28 italic text-xs !outline-0 !outline-transparent !outline-none rounded-btn ring-0 focus:outline-0 focus:ring-0   focus:text-base-content transition-all duration-500  pl-2 placeholder:font-mono focus:not-italic placeholder:text-xs placeholder:align-center focus:bg-base-100/50 focus:border border-base-300 focus:ring-offset-base-content/40 z-20  top-0 left-0 max-w-28 has[&_input]:focus:ring-1 has[&_input]:focus:ring-offest-1 focus:shadow-inner relative peer"
+                        @keydown.enter.prevent v-shortkey.focus="['meta' || 'ctrl', 'i']" />
+
+
+                    <span
+                        class="absolute block text-base-content/60  z-20 bg-base-100 size-3 rounded-full right-4 top-[5px] pointer-events-none peer-[:not(:placeholder-shown)]:hidden">
+                        <Icon icon="teenyicons:search-outline" />
+                    </span>
+                    <button
+                        class="absolute hidden btn  btn-ghost btn-outline border-none text-base-content/60 z-20 bg-base-100  p-0 px-1 min-h-[22px] h-[22px] w-6 rounded-r-btn rounded-l-none right-[9px] top-[2px] peer-[:not(:placeholder-shown)]:block">
+                        <Icon icon="teenyicons:backspace-outline" />
+                    </button>
+                </div>
+
+
 
                 <div class="dropdown">
                     <div tabindex="0" role="button"
@@ -475,21 +546,7 @@ onMounted(() => {
 
 
 
-                <div class="relative has-[input:not(:placeholder-shown)]:hide-stuff">
-                    <input tabindex="0" role="" placeholder=" "
-                        class="peer bg-base-100/80 h-[24px] min-w-16 italic text-xs !outline-0 !outline-transparent !outline-none rounded-btn ring-0 focus:outline-0 focus:ring-0   focus:text-base-content transition-all duration-500  pl-2 placeholder:font-mono focus:not-italic placeholder:text-xs placeholder:align-center focus:bg-base-100/50 border border-base-300 focus:ring-offset-base-content/40 z-20  top-0 left-0 max-w-28 has[&_input]:focus:ring-1 has[&_input]:focus:ring-offest-1 shadow-inner mr-2 relative peer"
-                        @keydown.enter.prevent v-shortkey.focus="['meta' || 'ctrl', 'i']" />
 
-
-                    <span
-                        class="absolute block text-base-content/60  z-20 bg-base-100 size-3 rounded-full right-5 top-[5px] peer-[:not(:placeholder-shown)]:hidden">
-                        <Icon icon="teenyicons:search-outline" />
-                    </span>
-                    <button
-                        class="absolute hidden btn  btn-ghost btn-outline border-none text-base-content/60 z-20 bg-base-100  p-0 px-1 min-h-[22px] h-[22px] w-6 rounded-r-btn rounded-l-none right-[9px] top-[2px] peer-[:not(:placeholder-shown)]:block">
-                        <Icon icon="teenyicons:backspace-outline" />
-                    </button>
-                </div>
 
 
             </div>

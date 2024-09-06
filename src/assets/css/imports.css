@@ -5,6 +5,7 @@
 @import '@assets/css/animations.css';
 @import '@assets/css/splitpanes.css';
 /* @import '@assets/css/themes.css'; */
+@import 'vue3-toastify/dist/index.css';
 @import 'vue-simple-context-menu/dist/vue-simple-context-menu.css';
 
 @layer base {
