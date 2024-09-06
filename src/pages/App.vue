@@ -2,13 +2,13 @@
 import { ref, computed, onMounted, DefineComponent, markRaw, shallowRef } from "vue";
 import "@assets/css/imports.css";
 import { storeToRefs, _StoreWithState } from "pinia";
-import { useUserSettings } from "../stores/userSettings";
-import { useSessionStore } from "../stores/sessionStore";
+import { useUserSettings } from "@stores/userSettings";
+import { useSessionStore } from "@stores/sessionStore";
 
 //import anime from 'animejs/lib/anime.es.js';
 import { RouterView, useRoute, useRouter } from "vue-router";
-import ChampionGrid from '../pages/champions/championGrid.vue';
-import championSidebar from "./champions/championSidebar.vue";
+import ChampionGrid from '@pages/champions/championGrid.vue';
+import championSidebar from "@champions/championSidebar.vue";
 
 // Ref to hold the current sidebar component
 const sidebarComponent = shallowRef();

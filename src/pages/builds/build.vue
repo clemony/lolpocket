@@ -49,23 +49,11 @@ interface Item {
     tier: string;
 }
 
-function deleteItemsInSet() {
-    this.buildSets.items = [''];
-}
 
-function onInsert(set, event) {
-    if (!set.items.items) {
-        console.error('Items array is undefined for set:', set);
-    } else {
-        set.items.items.splice(event.index, 0, event.data); // Insert at the specified index
-        console.log('Inserted item at index:', event.index, 'data:', event.data);
-    }
-}
 
-function onReorder(set, event) {
-    // Apply reorder operation using Vue's reactivity system
-    set.$event.apply(set.items);
-}
+
+
+
 
 /* function remove(item) {
     let index = this.items.indexOf(item);
@@ -109,7 +97,7 @@ onMounted(() => {
 
             <div class="has-[:focus]:border-b-base-300 grow border-b-transparent border-b">
                 <input type="text" placeholder="Build Name" spellcheck='false'
-                    class="input input-ghost focus:bg-transparent font-bold tracking-tight text-xl pl-0 mr-4 border-none rounded-none focus:border-none  placeholder:italic placeholder:font-light" />
+                    class="input input-ghost focus:bg-transparent font-bold tracking-tight text-lg pl-0 mr-4 border-none rounded-none focus:border-none   placeholder:font-light " />
             </div>
 
 
@@ -142,19 +130,30 @@ onMounted(() => {
         <div class="px-4 p flex justify-end">
             <div class="dropdown dropdown-end">
                 <label role="button" for="my-drawer-4"
-                    class=" drawer-button cursor-pointer hover:bg-transparent avatar-group -space-x-6 rtl:space-x-reverse w-fit "
+                    class=" drawer-button cursor-pointer hover:bg-transparent avatar-group -space-x-6 rtl:space-x-reverse w-fit mr-2 relative"
                     @click="openChampionGrid">
-                    <div v-for="champion in bs.buildChampions"
-                        class="avatar hover:border-base-300 hover:drop-shadow-sm">
-                        <div class="w-12">
+                    <div v-for="champion in bs.buildChampions" class="avatar hover:drop-shadow-sm  z-0">
+                        <div class="w-12 ">
                             <img :src="champion" class="scale-110" />
+
                         </div>
+                        <icon icon='teenyicons:x-circle-solid' class="absolute size-3 top-0 left-4 z-10" />
                     </div>
 
-                    <div class="avatar placeholder">
-                        <div class="bg-neutral text-neutral-content w-12">
+                    <div :class="{ 'hidden': bs.buildChampions.length > 0 }"
+                        class="self-center mr-6  text-sm font-light">
+                        select champions
+                    </div>
+                    <div class="avatar placeholder size-14  flex items-center place-content-center"
+                        :class="{ 'border-transparent': bs.buildChampions.length == 0 }">
+                        <div class="bg-neutral text-neutral-content w-12 rounded-full  transition-all duration-500 "
+                            :class="{ 'emtpy': bs.buildChampions.length == 0, }">
 
-                            <Icon icon="teenyicons:add-solid" />
+                            <Icon icon="teenyicons:add-small-solid" class="size-5 opacity-0 hidden"
+                                :class="{ 'show': bs.buildChampions.length == 0 }" />
+
+                            <icon icon='ic:baseline-edit' class="size-3.5 opacity-0 hidden"
+                                :class="{ 'show': bs.buildChampions.length > 0 }" />
                         </div>
                     </div>
                 </label>
@@ -201,12 +200,12 @@ onMounted(() => {
 
                         <div class="flex grow relative h-fit group">
                             <input type="text"
-                                class="p-0 py-2 mt-2 mb-1 select-all border-b border-transparent focus:border-base-200 text-[0.72rem]] font-mono grow peer transition-colors duration-300"
+                                class="p-0 py-2 mt-2 mb-1 select-all border-b border-transparent focus:border-base-200 text-[0.72rem]] grow peer transition-colors duration-300 font-mono"
                                 :placeholder="'Set ' + set.key" :value="set.name" />
 
                             <button
                                 class="btn  btn-square
-                         btn-xs border-0 peer-hover:opacity-100 opacity-0 bg-transparent shadow-none hover:bg-transparent absolute bottom-[15px] right-3 text-base-content/50 transition-opacity duration-300  peer-focus:opacity-0 peer-focus:z-0 z-10"
+                         btn-xs border-0 peer-hover:opacity-100 opacity-0 bg-transparent shadow-none hover:bg-transparent absolute bottom-[12px] right-3 text-base-content/50 transition-opacity duration-300  peer-focus:opacity-0 peer-focus:z-0 z-10"
                                 alt="Edit Name" title="Edit Name">
                                 <icon icon='ic:baseline-edit' class="size-3.5 " />
 
@@ -215,7 +214,7 @@ onMounted(() => {
 
                             <button
                                 class="btn  btn-square
-                     btn-xs border-0  bg-transparent shadow-none hover:bg-transparent absolute bottom-[15px] right-3 transition-opacity duration-300  peer-focus:opacity-100 text-base-content/60 hover:text-base-content/90 opacity-0 peer-focus:z-10 z-0"
+                     btn-xs border-0  bg-transparent shadow-none hover:bg-transparent absolute bottom-[12px] right-3 transition-opacity duration-300  peer-focus:opacity-100 text-base-content/60 hover:text-base-content/90 opacity-0 peer-focus:z-10 z-0"
                                 alt="Clear Text" title="Clear Text">
 
                                 <icon icon='teenyicons:x-circle-solid' class="   size-3" />
@@ -228,7 +227,7 @@ onMounted(() => {
                         <div class="grid grid-cols-2 *:aspect-square">
                             <button
                                 class="size-5 hover:bg-base-200 rounded-btn text-base-content/80 transition-opacity duration-300 peer-focus:opacity-0 grid place-content-center"
-                                alt="Clear Items" title="Clear Items">
+                                alt="Clear Items" title="Clear Items" @click="bs.resetItems(set.key, $event)">
                                 <icon icon='teenyicons:clockwise-outline' class="size-[0.8rem] pb-[2px]" />
                             </button>
 
@@ -247,8 +246,8 @@ onMounted(() => {
 
 
 
-                    <drop-list row direction="row" :items="set.items.items" @insert="onInsert(set, $event)"
-                        @reorder="onReorder(set, $event)"
+                    <drop-list row direction="row" :items="set.items.items" @insert="bs.onInsert(set, $event)"
+                        @reorder="bs.onReorder(set, $event)"
                         class="w-full flex flex-wrap gap-4 place-items-start place-content-start " mode="cut">
 
 
@@ -563,6 +562,15 @@ onMounted(() => {
 <style>
 .slot {
     @apply size-[60px] aspect-square rounded-md ring-1 ring-offset-[2px] ring-base-300/90 ring-offset-base-100;
+}
+
+.show {
+    @apply opacity-100 block;
+}
+
+/* Beautify ignore-start */
+.empty {
+    @apply !size-6 hover: !size-10;
 }
 
 #buildSplit {

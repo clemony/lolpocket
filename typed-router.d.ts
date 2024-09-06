@@ -27,8 +27,8 @@ declare module 'vue-router/auto-routes' {
     'championGrid': RouteRecordInfo<'championGrid', '/champions/championGrid', Record<never, never>, Record<never, never>>,
     'Champions': RouteRecordInfo<'Champions', '/champions/champions', Record<never, never>, Record<never, never>>,
     'championSidebar': RouteRecordInfo<'championSidebar', '/champions/championSidebar', Record<never, never>, Record<never, never>>,
+    '/components/searchBox': RouteRecordInfo<'/components/searchBox', '/components/searchBox', Record<never, never>, Record<never, never>>,
     '/components/titlebar': RouteRecordInfo<'/components/titlebar', '/components/titlebar', Record<never, never>, Record<never, never>>,
-    '/eggs/template': RouteRecordInfo<'/eggs/template', '/eggs/template', Record<never, never>, Record<never, never>>,
     '/empty': RouteRecordInfo<'/empty', '/empty', Record<never, never>, Record<never, never>>,
     '/hi': RouteRecordInfo<'/hi', '/hi', Record<never, never>, Record<never, never>>,
     'home': RouteRecordInfo<'home', '/home', Record<never, never>, Record<never, never>>,
@@ -36,7 +36,7 @@ declare module 'vue-router/auto-routes' {
     '/items/itemGrid': RouteRecordInfo<'/items/itemGrid', '/items/itemGrid', Record<never, never>, Record<never, never>>,
     'items': RouteRecordInfo<'items', '/items/items', Record<never, never>, Record<never, never>>,
     'Runes': RouteRecordInfo<'Runes', '/runes/runes', Record<never, never>, Record<never, never>>,
-    '/searchBox': RouteRecordInfo<'/searchBox', '/searchBox', Record<never, never>, Record<never, never>>,
     'Settings': RouteRecordInfo<'Settings', '/settings', Record<never, never>, Record<never, never>>,
+    '/template': RouteRecordInfo<'/template', '/template', Record<never, never>, Record<never, never>>,
   }
 }

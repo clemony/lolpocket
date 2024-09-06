@@ -47,9 +47,6 @@ export default defineConfig({
         },
       ],
       dirs: [
-        '@iconify/vue',
-        './src/utils',
-        './src/stores',
         // ...
       ],
       eslintrc: {
@@ -59,6 +56,7 @@ export default defineConfig({
 
       vueTemplate: true,
       viteOptimizeDeps: true,
+      injectAtEnd: true,
 
       dts: './auto-imports.d.ts', // Generates `auto-imports.d.ts` file
     }),

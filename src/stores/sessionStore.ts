@@ -1,10 +1,10 @@
-import { ref, watch } from "vue";
-import { defineStore } from "pinia";
-import { useRoute, useRouter } from "vue-router";
-import {} from "pinia-plugin-persistedstate";
+import { ref, watch } from 'vue';
+import { defineStore } from 'pinia';
+import { useRoute, useRouter } from 'vue-router';
+import {} from 'pinia-plugin-persistedstate';
 
 export const useSessionStore = defineStore(
-  "sessionStore",
+  'sessionStore',
   () => {
     let isMinimized = ref(false);
     watch(isMinimized, (value) => {
@@ -26,7 +26,7 @@ export const useSessionStore = defineStore(
 
     var openTabs = ref<OpenTab[]>([]);
 
-    var activeTab = ref("");
+    var activeTab = ref('');
 
     // Access the router instance
     const router = useRouter();
@@ -46,7 +46,7 @@ export const useSessionStore = defineStore(
           // Ensure the route is valid
           openTabs.value.push({
             id: newId,
-            tab: { name: link.split("/")[1] || "home", link },
+            tab: { name: link.split('/')[1] || 'home', link },
             title: matchedRoute.meta.title,
             icon: matchedRoute.meta.icon,
           });
@@ -69,7 +69,7 @@ export const useSessionStore = defineStore(
       const match = link.match(regex); // Apply regex to the link
 
       // Check if there's a match and return the captured group or default to 'Unknown'
-      return match && match[1] ? match[1] : "Unknown";
+      return match && match[1] ? match[1] : 'Unknown';
     }
 
     var sidebar = [];
@@ -91,10 +91,7 @@ export const useSessionStore = defineStore(
   {
     persist: {
       storage: sessionStorage,
-      key: "session",
-      afterRestore: (ctx) => {
-        console.log(`Just restored '${ctx.store.$id}'`);
-      },
+      key: 'session',
     },
   }
 );

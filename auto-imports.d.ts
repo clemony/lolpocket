@@ -110,10 +110,7 @@ declare module 'vue' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
-    readonly NewsArticles: UnwrapRef<typeof import('./src/stores/news')['NewsArticles']>
-    readonly Quotes: UnwrapRef<typeof import('./src/stores/champQuotes')['Quotes']>
     readonly ToastContainerOptions: UnwrapRef<typeof import('vue3-toastify')['ToastContainerOptions']>
-    readonly cn: UnwrapRef<typeof import('./src/utils/utils')['cn']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly createApp: UnwrapRef<typeof import('vue')['createApp']>
     readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
@@ -153,7 +150,6 @@ declare module 'vue' {
     readonly shallowReactive: UnwrapRef<typeof import('vue')['shallowReactive']>
     readonly shallowReadonly: UnwrapRef<typeof import('vue')['shallowReadonly']>
     readonly shallowRef: UnwrapRef<typeof import('vue')['shallowRef']>
-    readonly sheetStore: UnwrapRef<typeof import('./src/stores/sheetStore')['sheetStore']>
     readonly toRaw: UnwrapRef<typeof import('vue')['toRaw']>
     readonly toRef: UnwrapRef<typeof import('vue')['toRef']>
     readonly toRefs: UnwrapRef<typeof import('vue')['toRefs']>
@@ -162,16 +158,11 @@ declare module 'vue' {
     readonly triggerRef: UnwrapRef<typeof import('vue')['triggerRef']>
     readonly unref: UnwrapRef<typeof import('vue')['unref']>
     readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>
-    readonly useBStore: UnwrapRef<typeof import('./src/stores/buildStore')['useBStore']>
     readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
     readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
-    readonly useDataStore: UnwrapRef<typeof import('./src/stores/dataStore')['useDataStore']>
-    readonly useResetStore: UnwrapRef<typeof import('./src/utils/useResetStore')['useResetStore']>
     readonly useRoute: UnwrapRef<typeof import('vue-router')['useRoute']>
     readonly useRouter: UnwrapRef<typeof import('vue-router')['useRouter']>
-    readonly useSessionStore: UnwrapRef<typeof import('./src/stores/sessionStore')['useSessionStore']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
-    readonly useUserSettings: UnwrapRef<typeof import('./src/stores/userSettings')['useUserSettings']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>
     readonly watchPostEffect: UnwrapRef<typeof import('vue')['watchPostEffect']>

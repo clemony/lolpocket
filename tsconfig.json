@@ -28,13 +28,10 @@
                 "src/assets/*"
             ],
             "@components/*": [
-                "src/components/*"
-            ],
-            "@data/*": [
-                "src/data/*"
+                "src/pages/components/*"
             ],
             "@lib/*": [
-                "src/utils/*"
+                "src/lib/*"
             ],
             "@logs/*": [
                 "src/logs/*"
@@ -51,29 +48,95 @@
             "@stores/*": [
                 "src/stores/*"
             ],
-            "@ui/*": [
-                "src/components/ui/*"
-            ],
-            "@modules/*": [
-                "src/pages/modules/*"
-            ],
             "@/*": [
                 "src/*"
             ],
-            "@page-build/*": [
-                "src/page-build/*"
+            "@basket/*": [
+                "src/basket/*"
             ],
-            "@cn/*": [
-                "src/components/cn/*"
+            "@utils/*": [
+                "src/utils/*"
             ],
-            "@aura/*": [
-                "src/assets/aura/*"
+            "@css/*": [
+                "src/assets/css/*"
             ],
-            "@primevue/*": [
-                "src/assets/primevue/*"
+            "@img/*": [
+                "src/assets/img/*"
             ],
-            "@splitterpanel/*": [
-                "src/assets/aura/splitterpanel/*"
+            "@theming/*": [
+                "src/assets/theming/*"
+            ],
+            "@builds/*": [
+                "src/pages/builds/*"
+            ],
+            "@champions/*": [
+                "src/pages/champions/*"
+            ],
+            "@eggs/*": [
+                "src/pages/eggs/*"
+            ],
+            "@items/*": [
+                "src/pages/items/*"
+            ],
+            "@runes/*": [
+                "src/pages/runes/*"
+            ],
+            "-assets/*": [
+                "src/assets/*"
+            ],
+            "-basket/*": [
+                "src/basket/*"
+            ],
+            "-lib/*": [
+                "src/lib/*"
+            ],
+            "-logs/*": [
+                "src/logs/*"
+            ],
+            "-pages/*": [
+                "src/pages/*"
+            ],
+            "-script/*": [
+                "src/script/*"
+            ],
+            "-service/*": [
+                "src/service/*"
+            ],
+            "-stores/*": [
+                "src/stores/*"
+            ],
+            "-utils/*": [
+                "src/utils/*"
+            ],
+            "-css/*": [
+                "src/assets/css/*"
+            ],
+            "-img/*": [
+                "src/assets/img/*"
+            ],
+            "-theming/*": [
+                "src/assets/theming/*"
+            ],
+            "-builds/*": [
+                "src/pages/builds/*"
+            ],
+            "-champions/*": [
+                "src/pages/champions/*"
+            ],
+            "-components/*": [
+                "src/pages/components/*"
+            ],
+            "-eggs/*": [
+                "src/pages/eggs/*"
+            ],
+            "-items/*": [
+                "src/pages/items/*"
+            ],
+            "-runes/*": [
+                "src/pages/runes/*"
+            ],
+            "-/*": [
+                "src/*"
             ]
         }
     }

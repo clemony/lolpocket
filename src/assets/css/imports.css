@@ -9,7 +9,7 @@
 @import 'vue-simple-context-menu/dist/vue-simple-context-menu.css';
 
 @layer base {
-  @import '@fontsource/dm-serif-display';
+  @import '@fontsource-variable/bitter';
   @import '@fontsource-variable/dm-sans';
   @import '@fontsource/geist-mono';
   @import '@fontsource/geist-sans';

@@ -1,20 +1,23 @@
-import pluginJs from "@eslint/js";
-import pluginVue from "eslint-plugin-vue";
-import globals from "globals";
+import pluginJs from '@eslint/js';
+import pluginVue from 'eslint-plugin-vue';
+import globals from 'globals';
 
 export default [
-  { files: ["**/*.{js,mjs,cjs,vue}"] },
+  { files: ['**/*.{js,mjs,cjs,vue}'] },
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
-  ...pluginVue.configs["flat/essential"],
+  ...pluginVue.configs['flat/essential'],
   {
     rules: {
-      "no-unused-vars": "0",
-      "no-undef": "error",
+      'no-unused-vars': '0',
+      'no-undef': '0',
     },
   },
   {
-    ignores: ["../notes/*", "/notes/*", "./notes/*"],
+    extends: ['./.eslintrc-auto-import.json'],
+  },
+  {
+    ignores: ['../notes/*', '/notes/*', './notes/*'],
   },
   {
     plugins: {},
