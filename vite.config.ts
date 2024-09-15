@@ -18,6 +18,14 @@ export default defineConfig({
       dts: './typed-router.d.ts',
     }),
     vue(),
+    ViteAliases({
+      prefix: '@',
+      deep: true,
+      depth: 2,
+      createLog: true,
+      logPath: 'src/logs',
+      createGlobalAlias: true,
+    }),
     Components({
       dirs: ['src/pages/champions', 'src/pages', 'splitpanes', '@iconify/vue'], // Ensure paths are correct
       extensions: ['vue'],
@@ -45,6 +53,9 @@ export default defineConfig({
         {
           'vue3-toastify': ['toast', 'ToastContainerOptions'],
         },
+
+        'pinia',
+        { './stores/dataStore': ['useDataStore', 'ds'] },
       ],
       dirs: [
         // ...
@@ -60,17 +71,10 @@ export default defineConfig({
 
       dts: './auto-imports.d.ts', // Generates `auto-imports.d.ts` file
     }),
-    ViteAliases({
-      prefix: '@',
-      deep: true,
-      depth: 2,
-      createLog: true,
-      logPath: 'src/logs',
-      createGlobalAlias: true,
-    }),
+
     Icons({
       customCollections: {
-        'ui-icons': FileSystemIconLoader('./src/assets/img', (svg) => svg.replace(/^<svg /, '<svg fill="currentColor" stroke="currentColor" ')),
+        'ui-icons': FileSystemIconLoader('./src/assets/img/icons', (svg) => svg.replace(/^<svg /, '<svg fill="currentColor" stroke="currentColor" ')),
       },
     }),
   ],

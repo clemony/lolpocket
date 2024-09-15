@@ -1,22 +1,15 @@
 @import '@assets/css/index.css';
 @import '@assets/css/setup.css';
 @import '@assets/css/grid.css';
-/* @import '@assets/css/icons.css'; */
+@import '@assets/css/fonts.css';
 @import '@assets/css/animations.css';
 @import '@assets/css/splitpanes.css';
 /* @import '@assets/css/themes.css'; */
 @import 'vue3-toastify/dist/index.css';
-@import 'vue-simple-context-menu/dist/vue-simple-context-menu.css';
+@import '@assets/css/contextmenu.css';
 
 @layer base {
-  @import '@fontsource-variable/bitter';
   @import '@fontsource-variable/dm-sans';
   @import '@fontsource/geist-mono';
-  @import '@fontsource/geist-sans';
-  @import '@fontsource/geist-sans/100.css';
-  @import '@fontsource/geist-sans/200.css';
-  @import '@fontsource/geist-sans/300.css';
-  @import '@fontsource/geist-sans/400.css';
-  @import '@fontsource/geist-sans/500.css';
   @import '@fontsource/dm-mono';
 }

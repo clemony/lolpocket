@@ -40,6 +40,10 @@ const daisyui = require('daisyui');
         },
         boxShadow: {
           lil: '2px 2px 4px 1px rgba(0, 0, 0, 0, 0.3)',
+          warm: 'rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px]',
+        },
+        dropShadow: {
+          xs: '0px 0px 2px #00000020',
         },
       },
       container: {
@@ -66,7 +70,7 @@ const daisyui = require('daisyui');
           lg: '0.7rem',
           md: '0.5rem',
           DEFAULT: '0.3rem',
-          sm: '0.2rem',
+          sm: '0.25rem',
         },
       },
     },
@@ -94,6 +98,7 @@ const daisyui = require('daisyui');
           "warning": "#EBCB8B",
           "error": "#BF616A",
           "error-content": "#81A1C1",
+          "info-content": "oklch(22.3899% 0.031305 278.07229)",
         },
         lightaesthetic: {
           ...require("daisyui/src/theming/themes")["light"],
@@ -117,6 +122,7 @@ const daisyui = require('daisyui');
           "warning":"#FBDF9D",
           "error":"#FBA09D",
           "error-content": "#B6E2DD",
+          "info-content": "oklch(22.3899% 0.031305 278.07229)",
         },
         lightnord: {
           ...require("daisyui/src/theming/themes")["light"],
@@ -140,6 +146,7 @@ const daisyui = require('daisyui');
           "warning": "#EBCB8B",
           "error": "#BF616A",
           "error-content": "#81A1C1",
+          "info-content": "oklch(22.3899% 0.031305 278.07229)",
         },
 
         lightlatte: {

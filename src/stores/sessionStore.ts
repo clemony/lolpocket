@@ -6,10 +6,7 @@ import {} from 'pinia-plugin-persistedstate';
 export const useSessionStore = defineStore(
   'sessionStore',
   () => {
-    let isMinimized = ref(false);
-    watch(isMinimized, (value) => {
-      console.log(`Tab size changed to: ${value}`);
-    });
+    const minimized = ref(false);
 
     interface Tab {
       name: string;
@@ -86,6 +83,7 @@ export const useSessionStore = defineStore(
       activeTab,
       getSidebarforTab,
       sidebar,
+      minimized,
     };
   },
   {

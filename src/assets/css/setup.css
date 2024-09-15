@@ -32,6 +32,14 @@
   @apply focus:outline-0;
 }
 
+.frost {
+  @apply backdrop-blur-md bg-base-100/90;
+}
+
+.toggle {
+  --tglbg: oklch(var(--b1) / 95%);
+}
+
 [data-mode='light'],
 [data-mode='neutral'] {
   --dark-shadow: oklch(var(--bc) / 5%);
@@ -85,10 +93,16 @@ body {
   @apply shadow-[2px_2px_4px_1px_#00000030];
 }
 
+.shadow-rune {
+  @apply shadow-[1px_3px_2px_1px_#00000034];
+}
+
 .shadow-contrast {
   @apply shadow-[inset_1px_1px_2px_2px_#00000010,inset_-1px_-1px_2px_2px_#FFFFFF20];
 }
-
+.drop-shadow-xs {
+  filter: drop-shadow(0px 0px 1px #000000);
+}
 .checkbox-blue.checkbox {
   --chkbg: #81a1c1;
   --chkfg: oklch(var(--bc));
@@ -122,27 +136,6 @@ body {
   @apply border-b-base-300 border-b backdrop-blur-md absolute z-[1] top-0 left-0 bg-base-100/90  items-center flex w-full  justify-end gap-4 !h-fit flex-wrap shadow-[0px_5px_1px_rgba(0,_0,_0,_0.03),_0_5px_20px_rgba(0,_0,_0,_0.03)] py-1 px-4 rounded-t-box;
 }
 
-.font-serif {
-  font-family: 'Bitter Variable', ui-serif, 'Times New Roman', Times, serif !important;
-}
-
-.font-mono {
-  font-family: 'Geist Mono', ui-monospace, 'Courier New', Courier, monospace !important;
-}
-
-.font-sans {
-  font-family:
-    'Geist Sans',
-    BlinkMacSystemFont,
-    system-ui,
-    -apple-system,
-    'Segoe UI',
-    Roboto,
-    'Open Sans',
-    'Helvetica Neue',
-    sans-serif !important;
-}
-
 /* -----------------------------------------------------------------------
         ♡ COLORS
 -----------------------------------------------------------------------*/
@@ -152,19 +145,19 @@ body {
 }
 
 [data-tag='Support'] {
-  @apply bg-info/50 text-info-content;
+  @apply bg-cyan-700/40 text-info-content;
 }
 
 [data-tag='Mage'] {
-  @apply bg-[oklch(var(--p))] text-primary-content;
+  @apply bg-info text-primary-content;
 }
 
 [data-tag='Marksman'] {
-  @apply bg-warning/60 text-warning-content;
+  @apply bg-warning/70 text-warning-content;
 }
 
 [data-tag='Assassin'] {
-  @apply bg-error/90 text-error-content;
+  @apply bg-error/80 text-base-content;
 }
 
 [data-tag='Tank'] {
@@ -172,21 +165,21 @@ body {
 }
 
 [data-tag='Fighter'] {
-  @apply bg-accent/60 text-accent-content;
+  @apply bg-orange-600/60 text-base-content;
 }
 
-.bg-resolve {
-  @apply bg-success;
+.resolveColor {
+  --path-color: success;
 }
 .bg-precision {
-  @apply bg-warning;
+  --path-color: warning;
 }
 .bg-domination {
-  @apply bg-error;
+  --path-color: error;
 }
 .bg-sorcery {
-  @apply bg-info;
+  @apply bg-info/60;
 }
-.bg-inspiration {
-  @apply bg-error-content;
+.inspirationColor {
+  --path-color: cyan-700;
 }

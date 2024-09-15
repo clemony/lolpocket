@@ -12,51 +12,38 @@ import { Icon } from "@iconify/vue";
 
 <template>
   <div class="p-8">
-    <div class="card text-xs rounded-box grid grid-cols-2 h-20 leading-loose *:font-mono">
-      <code
-        class="col-start-1 grid grid-cols-1 [&_p]:[&_button]: bg-neutral text-neutral-content rounded-box max-w-96 p-6 shadow-warm">
-      <p>const CatTax: cat&#60;image: popUp&#62; = {</p>
-      <p>
-        &nbsp; 'Clem': { image:
+    <div class="mockup-code font-normal text-xs w-2/5 min-w-[200px0] leading-loose  *:whitespace-nowrap">
+      <pre data-prefix="$"><code class="h-20 ">const CatTax: cat&#60;image: popUp&#62; = {</code></pre>
+      <pre data-prefix=">" class="flex"><code class="flex">&nbsp; 'Clem':&nbsp;{ image:
+          <button
+            class="hover:underline hover:bg-base-content/15"
+            onclick="catModal.showModal()" >&nbsp;1</button>,
+
+          <button class="hover:underline hover:bg-base-content/15"
+            onclick="catModal.showModal()">&nbsp;2</button >,
+          <button class="hover:underline hover:bg-base-content/15"
+            onclick="catModal.showModal()"
+          >&nbsp;3&nbsp;</button>
+          },
+      </code></pre>
+
+      <pre data-prefix=">" class="flex"><code class="flex">&nbsp; 'Nell':&nbsp;{ image:
         <button
           class="hover:underline hover:bg-base-content/15"
+          onclick="catModal.showModal()" >&nbsp;1</button>,
+
+        <button class="hover:underline hover:bg-base-content/15"
+          onclick="catModal.showModal()">&nbsp;2</button >,
+        <button class="hover:underline hover:bg-base-content/15"
           onclick="catModal.showModal()"
-        >
-          1</button
-        >,
-        <button
-          class="hover:underline hover:bg-base-content/15"
-          onclick="catModal.showModal()"
-        >
-          2</button
-        >,
-        <button
-          class="hover:underline hover:bg-base-content/15"
-          onclick="catModal.showModal()"
-        >
-          3
-        </button>
+        >&nbsp;3&nbsp;</button>
         },
-      </p>
-      <p>
-        &nbsp; 'Nell': { image:
-        <button
-          class="hover:underline hover:bg-base-content/15"
-          onclick="catModal.showModal()"
-        >
-          1</button
-        >,
-        <button
-          class="hover:underline hover:bg-base-content/15"
-          onclick="catModal.showModal()"
-        >
-          2
-        </button>
-        }
-      </p>
-      <p>};<span class="animate-[blink-1_1s_infinite_both] text-lg">|</span></p>
-    </code>
+    </code></pre>
+
+      <pre data-prefix=" " class="flex"><code class="flex">&nbsp; };<span class="animate-[blink-1_1s_infinite_both] text-lg">|</span>
+  </code></pre>
     </div>
+
 
     <div class="absolute bottom-0 left-0 p-8 w-full">
       <div class="divider divider-start mt-12 text-xs">MADE WITH</div>

@@ -4,8 +4,7 @@
         "./typed-router.d.ts",
         "./components.d.ts",
         "./auto-imports.d.ts",
-        "index.d.ts",
-        "./src/logs/vite-aliases.json"
+        "index.d.ts"
     ],
     "compilerOptions": {
         "strict": true,
@@ -81,62 +80,11 @@
             "@runes/*": [
                 "src/pages/runes/*"
             ],
-            "-assets/*": [
-                "src/assets/*"
+            "@icons/*": [
+                "src/assets/img/icons/*"
             ],
-            "-basket/*": [
-                "src/basket/*"
-            ],
-            "-lib/*": [
-                "src/lib/*"
-            ],
-            "-logs/*": [
-                "src/logs/*"
-            ],
-            "-pages/*": [
-                "src/pages/*"
-            ],
-            "-script/*": [
-                "src/script/*"
-            ],
-            "-service/*": [
-                "src/service/*"
-            ],
-            "-stores/*": [
-                "src/stores/*"
-            ],
-            "-utils/*": [
-                "src/utils/*"
-            ],
-            "-css/*": [
-                "src/assets/css/*"
-            ],
-            "-img/*": [
-                "src/assets/img/*"
-            ],
-            "-theming/*": [
-                "src/assets/theming/*"
-            ],
-            "-builds/*": [
-                "src/pages/builds/*"
-            ],
-            "-champions/*": [
-                "src/pages/champions/*"
-            ],
-            "-components/*": [
-                "src/pages/components/*"
-            ],
-            "-eggs/*": [
-                "src/pages/eggs/*"
-            ],
-            "-items/*": [
-                "src/pages/items/*"
-            ],
-            "-runes/*": [
-                "src/pages/runes/*"
-            ],
-            "-/*": [
-                "src/*"
+            "@data/*": [
+                "src/data/*"
             ]
         }
     }

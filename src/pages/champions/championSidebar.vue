@@ -15,6 +15,7 @@ const champions = dataStore.champions;
 const selectedChampion = computed(() => dataStore.selectedChampion);
 
 
+
 interface Ability {
     key: string;
     name: string;
@@ -56,9 +57,9 @@ const uncheckAbilities = () => {
 };
 </script>
 <template>
-    <div v-if="selectedChampion" class="">
+    <div v-if="selectedChampion" class=" pt-32">
         <div
-            class="rounded-box border border-neutral/10 bg-base-100/60 backdrop-blur-md shadow-lg prose grid grid-cols-2 auto-rows-max py-3 px-1">
+            class="absolute w-full top-0 left-0 rounded-box border border-base-300 bg-base-100/85 backdrop-blur-md shadow-warm prose grid grid-cols-2 auto-rows-max py-3 px-1 z-10">
             <div class="col-span-2 grid grid-cols-3 p-1 auto-cols-max gap-1">
                 <div
                     class="align-self-start avatar h-16 justify-content-center col-start-1 -mt-1.5 ml-1.5 !aspect-square relative">
@@ -104,10 +105,11 @@ const uncheckAbilities = () => {
             </div>
         </div>
 
-        <div class="ability-wrapper join join-vertical w-full bg-base-100 rounded-box mt-5 shadow-lg shadow-neutral/20">
+        <div
+            class="ability-wrapper join overflow-y-scroll join-vertical w-full max-h-full bg-base-100/80 rounded-box backdrop-blur-md shadow-warm z-0">
             <div v-for="(ability, key) in selectedChampion.abilities" :key="key"
                 class="collapse collapse-arrow join-item">
-                <input type="checkbox" :id="'checkbox-' + key" v-model="checkedAbilities" :value="key" />
+                <input type="radio" :id="'radio-' + key" v-model="checkedAbilities" :value="key" />
                 <div class="collapse-title">
                     <img :src="ability.img" :alt="ability.name" />
                     <div class="font-medium">{{ ability.name }}</div>
@@ -126,7 +128,7 @@ const uncheckAbilities = () => {
                         </div>
                     </div>
 
-                    <p class="prose text-xs whitespace-pre-line text-balance p-1">
+                    <p class="prose text-xs whitespace-pre-line overflow-y-scroll text-balance p-1">
                         {{ ability.context }}
                     </p>
                 </div>

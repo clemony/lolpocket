@@ -27,10 +27,6 @@ interface Item {
 
 const items = ref<Item[]>([]);
 
-
-
-console.log(ds.uniqueTiers);
-
 // Populate runes array from data store on component mount
 onMounted(() => {
   items.value = ds.getItems(); // Ensure `getRunes` returns the array of runes from the store

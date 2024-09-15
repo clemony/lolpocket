@@ -13,13 +13,9 @@ const ds = useDataStore();
 
 const runes = ref<Rune[]>([]);
 
-// Use a computed property to extract unique paths from the runes array
-const uniquePaths = computed(() => {
-    const paths = runes.value.map(rune => rune.path);
-    return Array.from(new Set(paths)); // Create an array with only unique paths
-});
 
-console.log(uniquePaths);
+
+
 interface Rune {
     name: string;
     wiki: string;
@@ -30,15 +26,7 @@ interface Rune {
     path: string;
 }
 
-const pathselect = defineModel({
-    default: 'precision',
-});
 
-const activePath = ref(pathselect.value);
-function handlePath() {
-
-    console.log(activePath);
-};
 // Populate runes array from data store on component mount
 onMounted(() => {
     runes.value = ds.getRunes(); // Ensure `getRunes` returns the array of runes from the store
@@ -49,27 +37,27 @@ onMounted(() => {
 
 <template>
     <div class="px-6 py-8">
-        <div class="border border-base-300 shadow-warm w-fit rounded-btn h-96">
-            <div class="join  [&_img]:h-6  rounded-b-none ">
+        <div class="border border-base-300 shadow-warm w-fit rounded-btn h-96 bg-gradient-to-b to-transparent"
+            :class="'from-' + pathselect">
+
+            <div class="flex  [&_img]:h-6 bg-opacity-50 transition-colors duration-500">
 
                 <label v-for="(path, index) in uniquePaths" :key="index"
-                    class="group join-item btn  flex grow  [&_img]:drop-shadow-sm relative overflow-hidden px-5">
+                    class=" bg-base-200/50   shadow-[inset_0px_1px_0px_1px_#00000007] flex grow relative overflow-hidden py-1 items-center  has-[:checked]:border-b-transparent has-[:checked]:bg-transparent border-b-2 border-b-base-300 bg-clip-padding transition-all duration-500">
 
                     <input class="hidden peer" type="radio" v-model="pathselect" name="path-select" :aria-label="path"
                         :value="path" @change="handlePath()" />
 
-                    <img :src="'/img/runes/' + path + '.webp'" />
-                    <div
-                        class="capitalize opacity-0 w-0  peer-checked:w-32 peer-checked:opacity-100 transition-all duration-500 !font-medium text-base mt-1.5">
-                        {{ path }}</div>
-
-
-
-                    <div class="w-[105%]  absolute bottom-0 -left-1 h-1.5 p-0 m-0 " :class="'peer-checked:bg-' + path">
+                    <div class="size-8 aspect-square mx-2 flex justify-center items-center">
+                        <img :src="'/img/runes/' + path + '.webp'" class="" />
                     </div>
+                    <div
+                        class="capitalize opacity-0 w-0 peer-checked:w-32 peer-checked:opacity-100 transition-all duration-500 font-bold   mt-1.5 ">
+                        {{ path }}</div>
 
                 </label>
             </div>
+            <div class='w-full h-0.5 -mt-0.5 gradient'></div>
 
         </div>
     </div>

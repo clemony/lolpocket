@@ -16,18 +16,6 @@ import { useDataStore } from "../../stores/dataStore";
 
 const ds = useDataStore();
 
-// Define emit for communicating with the parent component
-const emit = defineEmits(['open-sidebar']);
-
-// Function to handle opening the sidebar and passing the component name
-const openChampionSidebar = () => {
-};
-// Function to handle champion selection
-const handleChampionClick = (champion: Champion) => {
-  ds.setSelectedChampion(champion);
-  console.log('i got clicked');
-  emit('open-sidebar', 'championSidebar');
-};
 
 interface Ability {
   key: string;
@@ -141,36 +129,68 @@ onMounted(async () => {
 
     </div>
 
+    <Splitpanes id="buildSplit" class="default-theme px-6 pb-4 w-full max-h-[calc(100%-100px)] h-[calc(100%-100px)]">
+      <Pane size="70" min-size="60" max-size="72"
+        class="rounded-box !bg-base-100/90 border border-base-300 shadow-warm relative h-full px-4">
 
-    <div
-      class="h-full max-h-[calc(100%-115px)] w-full  rounded-box  border border-base-300 mx-0 shadow-cham backdrop-blur-md bg-base-100/90 relative">
+        <div
+          class=" border-b-base-300 border-b backdrop-blur-md absolute z-10 top-0 left-0 bg-base-100/90  items-center flex w-full  justify-end gap-4 !h-fit flex-wrap  py-1 px-4">
 
-      <div class="menubar">
+          <h2 class=" font-semibold text-base grow justify-start">
+            Primary
+          </h2>
+          <select class="select select-bordered select-xs max-w-xs align-self-end justify-self-end shadow-inner">
+            <option disabled selected>Class</option>
+            <option>Marksman</option>
+            <option>Mage</option>
+            <option>Tank</option>
+            <option>Support</option>
+            <option>Fighter</option>
+            <option>Assassin</option>
+          </select>
 
-        <select class="select select-bordered select-xs max-w-xs align-self-end justify-self-end shadow-inner">
-          <option disabled selected>Class</option>
-          <option>Marksman</option>
-          <option>Mage</option>
-          <option>Tank</option>
-          <option>Support</option>
-          <option>Fighter</option>
-          <option>Assassin</option>
-        </select>
-      </div>
-      <div class="overflow-y-scroll max-h-full scroll-none flex flex-wrap gap-4 h-full p-2 pt-11 w-full ">
-        <div v-for="(champion, index) in champions" :key="champion.name" :data-index="index" class="">
-          <button
-            class="item-wrapper__item min-w-[60px] rounded-md basis-14 max-w-[70px] grow aspect-square flex place-items-center  overflow-hidden bg-cover ring-1 ring-offset-1 ring-base-300 ring-offset-base-100 hover:ring-offset-primary drop-shadow-sm has-[:checked]:ring-offset-2 has-[:checked]:ring-offset-secondary pointer-events-auto"
-            @click="handleChampionClick(champion)" @contextmenu.prevent.stop="handleContextMenu($event, champion)">
-            <div class="grid-image-container champ">
-              <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
-                class="scale-[115%] aspect-square" />
-              <div class="grid-tip">{{ champion.name }}</div>
-            </div>
-          </button>
         </div>
-      </div>
-    </div>
+
+        <div class="overflow-y-scroll max-h-full scroll-none flex flex-wrap gap-4 h-full p-2 pt-11 w-full ">
+          <div v-for="(champion, index) in champions" :key="champion.name" :data-index="index" class="">
+            <button
+              class="item-wrapper__item min-w-[60px] rounded-md basis-14 max-w-[70px] grow aspect-square flex place-items-center  overflow-hidden bg-cover ring-1 ring-offset-1 ring-base-300 ring-offset-base-100 hover:ring-offset-primary drop-shadow-sm has-[:checked]:ring-offset-2 has-[:checked]:ring-offset-secondary pointer-events-auto"
+              @click="ds.setSelectedChampion(champion)" @contextmenu.prevent.stop="handleContextMenu($event, champion)">
+              <div class="grid-image-container champ">
+                <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
+                  class="scale-[115%] aspect-square" />
+                <div class="grid-tip">{{ champion.name }}</div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+
+
+
+      </Pane>
+
+
+      <!--     /* -------------------------------------------------------------------------- */
+       /*                                 PANE TWOOOOOOOO                            */
+       /* -------------------------------------------------------------------------- */ -->
+
+
+      <Pane size="30" max-size="40" min-size="28" class="max-h-full min-w-[105px]  relative  ">
+
+
+
+
+        <div class=" max-h-full overflow-y-scroll scrollbar-hide rounded-box">
+          <ChampionSidebar />
+        </div>
+      </Pane>
+
+    </Splitpanes>
+
+
+
+
 
   </div>
 
