@@ -5,14 +5,13 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import { getCurrent } from '../node_modules/@tauri-apps/api/window.js';
 import { routes } from 'vue-router/auto-routes';
-import VueShortkey from 'vue3-shortkey';
 import { Splitpanes, Pane } from 'splitpanes';
 import { Icon } from '@iconify/vue';
 import { useDataStore } from './stores/dataStore';
-import { useUserSettings } from './stores/userSettings';
-import { useSessionStore } from './stores/sessionStore';
-import ContextMenu from '@imengyu/vue3-context-menu';
+import { useUserStore } from './stores/userStore.js';
 import Vue3Toastify, { toast, type ToastContainerOptions, type CSSTransitionProps } from 'vue3-toastify';
+import FloatingVue from 'floating-vue';
+import { FloatingVueOptions } from './utils/floatingVueConfig.js';
 
 const getRoutes = routes;
 
@@ -63,10 +62,76 @@ app.component('Icon', Icon);
 export type { TitleBarStyle, WindowOptions };
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
-app.use(VueShortkey);
 app.use(pinia);
 app.use(router);
-app.use(ContextMenu);
+app.use(FloatingVue, {
+  disabled: false,
+  distance: 5,
+  skidding: 0,
+  container: 'body',
+  boundary: undefined,
+  instantMove: false,
+  disposeTimeout: 5000,
+  popperTriggers: [''],
+  strategy: 'absolute',
+  preventOverflow: true,
+  flip: true,
+  shift: true,
+  // Overflow padding (px)
+  overflowPadding: 15,
+  // Arrow padding (px)
+  arrowPadding: 20,
+  // Compute arrow overflow (useful to hide it)
+  arrowOverflow: true,
+  /**
+   * By default, compute autohide on 'click'.
+   */
+  themes: {
+    detail: {
+      $resetCss: false,
+      triggers: ['click', 'focus'],
+      autoHide: true,
+      eagerMount: false,
+      flip: true,
+      instantMove: true,
+      placement: 'bottom',
+    },
+    minitt: {
+      $extend: 'tooltip',
+      triggers: ['hover'],
+      eagerMount: false,
+      delay: {
+        show: 600,
+        hide: 200,
+      },
+      autoHide: true,
+      placement: 'bottom',
+    },
+
+    btn: {
+      $extend: 'tooltip',
+      triggers: ['click'],
+      eagerMount: false,
+      delay: {
+        show: 600,
+        hide: 200,
+      },
+      autoHide: true,
+    },
+    overlay: {
+      $extend: 'dropdown',
+      triggers: ['click'],
+      autoHide: true,
+      placement: 'bottom-start',
+    },
+    menuDark: {
+      $extend: 'menu',
+      eagerMount: false,
+      placement: 'right-start',
+      instantMove: true,
+    },
+  },
+});
 app.use(Vue3Toastify, {
   autoClose: 4000,
   hideProgressBar: true,
@@ -76,7 +141,7 @@ app.use(Vue3Toastify, {
 } as ToastContainerOptions);
 
 const ds = useDataStore();
-const us = useUserSettings();
+const us = useUserStore();
 ds.fetchData();
 // Mount the app to the element with id "app" in your HTML
 app.mount('#app');

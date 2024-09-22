@@ -1,0 +1,30 @@
+/* c */
+.v-popper__inner {
+  @apply text-xs;
+}
+
+.v-popper--theme-detail .v-popper__inner {
+  @apply !bg-base-100/90 backdrop-blur-md text-base-content p-2 border border-base-300 !rounded-box shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px];
+}
+
+.v-popper--theme-menuDark,
+.v-popper--theme-overlay {
+  .v-popper__inner {
+    @apply !bg-neutral/70 backdrop-blur-lg *:text-neutral-content/80 !border-neutral-600
+  !rounded-[12px] shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px];
+  }
+  .v-popper__arrow-outer {
+    @apply !border-neutral/60;
+  }
+  .v-popper__arrow-inner {
+    @apply !border-neutral/20;
+  }
+}
+.v-popper--theme-detail .v-popper__arrow-outer {
+  @apply border-base-300;
+}
+
+.v-popper--theme-detail .v-popper__arrow-inner {
+  visibility: visible;
+  @apply border-base-100/90;
+}

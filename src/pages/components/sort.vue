@@ -1,139 +1,157 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-  import { useBStore } from '../../stores/buildStore';
-  const bs = useBStore();
+import { computed, watch, ref } from 'vue';
+import { useItemStore } from '../../stores/itemStore';
+const is = useItemStore();
 
-  const sortNameText = computed(() => {
-    let text = '';
-    if (bs.sortName == 'az'){
-      text = 'From A';
-    } else {
-      text = 'From Z';
-    }
-    return text;
-  })
+const sortNameText = computed(() => {
+  let text = '';
+  if (is.sortName == 'az') {
+    text = 'From A';
+  } else if (is.sortName == 'za') {
+    text = 'From Z';
+  } else {
+    text = "Name"
+  }
+  return text;
+})
 
-  const sortPriceText = computed(() => {
-    let text = '';
-    if (bs.sortPrice == 'ascending'){
-      text = 'From Low';
-    } else {
-      text = 'From High';
-    }
-    return text;
-  })
+const sortPriceText = computed(() => {
+  let text = '';
+  if (is.sortPrice == 'ascending') {
+    text = 'From Low';
+  } else if (is.sortPrice == 'descending') {
+    text = 'From High';
+  } else {
+    text = 'Price';
+  }
+  return text;
+})
+
+var previousPriceValue = '';
+var previousNameValue = '';
+
+const verifyName = (value: string) => {
+  // If the current value is the same as the previous value, clear it
+  if (previousNameValue === value) {
+    is.sortName = ''; // Clear the selection
+  }
+  previousNameValue = value;
+};
+
+// Function to verify value and clear if the active radio is clicked again
+const verifyValue = (value: string) => {
+  // If the current value is the same as the previous value, clear it
+  if (previousPriceValue === value) {
+    is.sortPrice = ''; // Clear the selection
+  }
+  previousPriceValue = value;
+};
 
 </script>
 <template>
-  <div class="join mx-1">
- 
-    <label for="sortPrice" :class="{'active': bs.sortPriceActive == 'on'}"
-      class="btn dropdown dropdown-hover dropdown-bottom join-item btn-xs z-10 pointer-events-auto flex content-center">
-     
 
-    <div tabindex="0"
-      role="button" class="">
-      <input
-      type="checkbox"
-      v-model="bs.sortPriceActive"
-      true-value="on"
-      false-value="off"
-      id="sortPrice"
-      class="peer hidden " @change="console.log(bs.sortPriceActive)"/>
+  <VDropdown theme="menuDark" placement="bottom-end" class="relative w-10 border-none join-item btn btn-xs btn-outline "
+    :class="{ 'active': is.sortName || is.sortPrice }" @click="{ is.sortName = ''; is.sortPrice = '' }">
 
-      
-        
-      <icon
-        icon="teenyicons:sort-up-outline"
-        alt="price from low to high"
-        :class="{'!block': bs.sortPriceActive == 'off'}" class="hidden" />
-      <icon
-        icon="teenyicons:sort-down-outline"
-        :class="{'!block': bs.sortPriceActive == 'on'}" class="hidden"
-        alt="price from high to low" />
+    <button class="">
+
+      <icon icon="system-uicons:sort" class="size-4.5" />
+    </button>
 
 
+    <template #popper>
+
+
+      <!--     <div v-if="is.sortName != '' || is.sortPrice != ''" class="z-10 flex items-center gap-3 justify-self-start btn-xs">
       <div
-        tabindex="0"
-        class="dropdown-content z-[1] w-48 -left-1 ">
-        <div class=' menu menu-glass bg-base-100 rounded-t-none rounded-b-box mt-[6px] shadow  p-3 text-base-content font-normal text-xs'>
-    <label class='flex gap-6 items-center'>
-            <span class="text-base-content font-semibold col-start-1">PRICE </span> 
-
-          
-          
-       
-            
-            <!-- <span class="col-start-2"> {{ bs.sortPriceActive }} </span> -->
-             <div class="flex gap-2 font-semibold">
-            <input type="checkbox" v-model="bs.sortPrice" true-value="descending" false-value="ascending" class="toggle toggle-xs rounded rotate-180" checked />
-            <span class="">{{sortPriceText}}</span>
-             </div>
-            </label>
-
-
+        class="filter-on rounded-full size-2 after:size-2 after:absolute after:top-0 after:-right-[0px] after:bg-success bg-success relative mb-2 top-[3px] right-[0px] after:rounded-full after:animate-ping">
       </div>
+
+      <Icon icon="iconoir:bin-full" class="self-center  size-[1rem] p-0" @click="is.sortName = ''; is.sortPrice = ''"
+        alt="Remove Sort" title="Remove Sort" />
     </div>
-</div>
-
-</label>
+ -->
 
 
-    <label for="sortName" :class="{'active': bs.sortNameActive == 'on'}"
-      class="btn dropdown dropdown-hover dropdown-bottom join-item btn-xs z-10 pointer-events-auto flex content-center">
-     
-
-    <div tabindex="0"
-      role="button" class="">
-      <input
-      type="checkbox"
-      v-model="bs.sortNameActive"
-      true-value="on"
-      false-value="off"
-      id="sortName"
-      class="peer hidden " @change="console.log(bs.sortNameActive)"/>
-
-      
-        
-      <icon
-        icon="teenyicons:sort-alphabetically-outline"
-        alt="Current sort a-z"
-        :class="{'!block': bs.sortName == 'az'}" class="hidden" />
-      <icon
-        icon="teenyicons:sort-reverse-alphabetically-outline"
-        :class="{'!block': bs.sortName == 'za'}" class="hidden"
-        alt="Current sort z-a" />
 
 
-      <div
-        tabindex="0"
-        class="dropdown-content z-[1] w-44 -left-8 ">
-        <div class=' menu menu-glass bg-base-100 rounded-t-none rounded-b-box mt-[6px] shadow  p-3 text-base-content font-normal text-xs'>
-    <label class='flex gap-6 items-center'>
-            <span class=" font-semibold col-start-1">NAME </span> 
-
-          
-          
-       
-            
-            <!-- <span class="col-start-2"> {{ bs.sortNameActive }} </span> -->
-             <div class="flex gap-2 font-semibold">
-            <input type="checkbox" v-model="bs.sortName" true-value="az" false-value="za" class="toggle toggle-xs rounded rotate-180" checked />
-            <span class="">{{sortNameText}}</span>
-             </div>
-            </label>
 
 
+
+
+      <!-------------------------------⟢ Name ⟣-------------------------------->
+
+      <div class="w-full px-2 font-semibold text-neutral-content/60">
+        <div class=" pt-3 pb-1 px-1 border-b border-[groove] border-neutral-600 ">
+          Sort
+        </div>
       </div>
-    </div>
-</div>
 
-</label>
-  </div>
+      <div class=" p-3  relative pt-0 grid grid-cols-[2rem_1.3rem_auto] gap-y-1 gap-x-1 items-center ">
+
+
+
+        <span class="w-full col-span-3 py-1.5  text-mini   text-neutral-content/70 tracking-wide italic">Name
+        </span>
+        <label class="badge-btn-dark">
+          <input type="radio" v-model="is.sortName" value="az" id="sortName" class="hidden peer"
+            @click="verifyName('az')" />
+          A
+
+        </label>
+        <div class="relative  opacity-80 *:top-0 *:left-0 size-3.5 *:size-3.5 *:absolute">
+          <icon icon="teenyicons:arrow-left-outline" :class="{ 'opacity-0': is.sortName == 'az' }" class="mr-0.5" />
+          <icon icon="teenyicons:arrow-left-outline" :class="{ 'opacity-0': is.sortName == 'za' }"
+            class="ml-0.5 rotate-180" />
+        </div>
+        <label class="badge-btn-dark justify-self-end">
+          <input type="radio" v-model="is.sortName" value="za" id="sortName" class="hidden peer"
+            @click="verifyName('za')" />
+          Z
+
+        </label>
+
+        <!-------------------------------⟢ Price ⟣-------------------------------->
+
+
+        <span class="w-full col-span-3 py-1.5  text-mini   text-neutral-content/70 tracking-wide italic">Price
+        </span>
+
+
+        <label class="badge-btn-dark" role="button">
+          <input type="radio" v-model="is.sortPrice" value="ascending" id="sortPrice" class="hidden peer"
+            @click="verifyValue('ascending')" />
+          $
+
+        </label>
+
+        <div class="relative opacity-80 *:top-0 *:left-0 size-3.5 *:size-3.5 *:absolute">
+          <icon icon="teenyicons:arrow-left-outline" :class="{ 'opacity-0': is.sortPrice == 'ascending' }"
+            class="mr-0.5" />
+          <icon icon="teenyicons:arrow-left-outline" :class="{ 'opacity-0': is.sortPrice == 'descending' }"
+            class="ml-0.5 rotate-180" />
+        </div>
+
+        <label role="button" class="!px-1.5  badge-btn-dark justify-self-end">
+          <input type="radio" v-model="is.sortPrice" value="descending" id="sortPrice" class="hidden peer"
+            @click="verifyValue('descending')" />
+          $$
+        </label>
+      </div>
+
+
+    </template>
+  </VDropdown>
+
 </template>
 
 <style scoped>
 label.active {
-  @apply bg-neutral text-neutral-content  border-neutral/70 hover:bg-neutral/80;
+  @apply bg-neutral text-neutral-content border-neutral/70 hover:bg-neutral/80;
+}
+
+.active,
+.v-popper--shown {
+  @apply bg-neutral text-neutral-content;
 }
 </style>

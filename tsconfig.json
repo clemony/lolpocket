@@ -4,7 +4,7 @@
         "./typed-router.d.ts",
         "./components.d.ts",
         "./auto-imports.d.ts",
-        "index.d.ts"
+        "declarations.d.ts"
     ],
     "compilerOptions": {
         "strict": true,
@@ -50,9 +50,6 @@
             "@/*": [
                 "src/*"
             ],
-            "@basket/*": [
-                "src/basket/*"
-            ],
             "@utils/*": [
                 "src/utils/*"
             ],
@@ -71,17 +68,11 @@
             "@champions/*": [
                 "src/pages/champions/*"
             ],
-            "@eggs/*": [
-                "src/pages/eggs/*"
-            ],
             "@items/*": [
                 "src/pages/items/*"
             ],
             "@runes/*": [
                 "src/pages/runes/*"
-            ],
-            "@icons/*": [
-                "src/assets/img/icons/*"
             ],
             "@data/*": [
                 "src/data/*"

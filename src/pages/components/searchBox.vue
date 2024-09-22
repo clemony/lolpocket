@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { VueShortkey } from "vue3-shortkey";
 const query = ref("");
 </script>
 
@@ -16,7 +15,7 @@ const query = ref("");
 
             <input tabindex="0" role="" v-model="query" placeholder=""
                 class="peer italic h-full text-xs !outline-0 !outline-transparent !outline-none rounded-[10px] ring-0 focus:outline-0 focus:ring-1 border-0 focus:border-0 focus:not-italic focus:ring-base-content/10 focus:text-base-content transition-all duration-500 w-24 pl-2 focus:w-72 bg-transparent placeholder:font-mono placeholder:not-italic placeholder:text-lg placeholder:align-center focus:bg-base-100/50"
-                @keydown.enter.prevent v-shortkey.focus="['meta' || 'ctrl', 's']" />
+                @keydown.enter.prevent />
 
 
             <div

@@ -20,6 +20,8 @@
     "@eslint/object-schema": "^2.1.4",
     "@fontsource-variable/bitter": "^5.0.21",
     "@fontsource-variable/playfair-display": "^5.0.26",
+    "@fontsource/dm-serif-display": "^5.1.0",
+    "@fontsource/dm-serif-text": "^5.1.0",
     "@fontsource/geist-mono": "^5.0.3",
     "@fontsource/geist-sans": "^5.0.3",
     "@fontsource/quattrocento": "^5.0.23",
@@ -35,6 +37,7 @@
     "date-fns": "^3.6.0",
     "dotenv": "^16.4.5",
     "fast-glob": "^3.3.2",
+    "floating-vue": "^5.2.2",
     "glob": "^11.0.0",
     "globby": "^14.0.2",
     "js-beautify": "^1.15.1",
@@ -96,6 +99,7 @@
     "vite-plugin-vue-devtools": "^7.3.1",
     "vitest": "^2.0.5",
     "vue-eslint-parser": "^9.4.3",
-    "vue-router": "^4.4.3"
+    "vue-router": "^4.4.3",
+    "vue-tsc": "^2.1.6"
   }
 }

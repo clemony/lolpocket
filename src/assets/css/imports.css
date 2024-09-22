@@ -4,12 +4,14 @@
 @import '@assets/css/fonts.css';
 @import '@assets/css/animations.css';
 @import '@assets/css/splitpanes.css';
+@import '@assets/css/gradients.css';
+@import '@assets/css/shadows.css';
+@import '@assets/css/popover.css';
+@import '@assets/css/drag.css';
 /* @import '@assets/css/themes.css'; */
 @import 'vue3-toastify/dist/index.css';
-@import '@assets/css/contextmenu.css';
+@import 'floating-vue/dist/style.css';
 
 @layer base {
-  @import '@fontsource-variable/dm-sans';
   @import '@fontsource/geist-mono';
-  @import '@fontsource/dm-mono';
 }

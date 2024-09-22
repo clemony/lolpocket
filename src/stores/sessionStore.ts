@@ -29,6 +29,8 @@ export const useSessionStore = defineStore(
     const router = useRouter();
     const route = useRoute();
 
+    const currentRoute = router.currentRoute.value;
+
     // Function to check if tab is activz
     const isActiveTab = (link) => {
       return activeTab.value === link;
@@ -37,6 +39,7 @@ export const useSessionStore = defineStore(
     const navigateTo = (link) => {
       const existingTab = openTabs.value.find((tab) => tab.tab.link === link);
       const matchedRoute = router.resolve(link);
+
       if (!existingTab) {
         const newId = openTabs.value.length + 1;
         if (matchedRoute.name) {
@@ -84,6 +87,7 @@ export const useSessionStore = defineStore(
       getSidebarforTab,
       sidebar,
       minimized,
+      currentRoute,
     };
   },
   {

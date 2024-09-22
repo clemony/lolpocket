@@ -10,10 +10,10 @@
 <script setup lang="ts">
 import { useDataStore } from "../../stores/dataStore";
 import { ref, computed, onMounted } from "vue";
-import { useBStore } from "../../stores/buildStore";
+import { useItemStore } from "../../stores/itemStore";
 
 const ds = useDataStore();
-const bts = useBStore();
+const bts = useItemStore();
 
 interface Ability {
     key: string;

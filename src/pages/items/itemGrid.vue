@@ -1,196 +1,139 @@
 <script setup lang="ts">
-import { ref, toRaw, TransitionGroup, computed } from 'vue';
-import { useBStore } from './../../stores/buildStore';
+import { TransitionGroup, computed, reactive } from 'vue';
+import { useItemStore } from './../../stores/itemStore';
 import { VueDraggable } from 'vue-draggable-plus'
 import { useDataStore } from '../../stores/dataStore';
-import { MenuOptions } from '@imengyu/vue3-context-menu';
-
+import { useUserStore } from '../../stores/userStore';
+import { imageIn, imageOut } from '../../script/animations';
 const ds = useDataStore();
-const bs = useBStore();
+const is = useItemStore();
+const us = useUserStore();
 
-interface Item {
-  name: string;
-  img: string;
-  buy: number;
-  sell: number;
-  stats: string;
-  passive: string;
-  active: string;
-  type: string;
-  tier: string;
-}
 
-const show = ref(false);
-const options = ref<MenuOptions>({
-  customClass: 'item-menu',
-  zIndex: 3,
-  minWidth: 180,
-  maxWidth: 180,
-  x: 500,
-  y: 200,
+
+
+/* -------------------------------- FILTER ------------------------------- */
+
+
+
+const filteredItems = computed(() => {
+  let filtered = reactive([...is.items]);
+
+  // Apply search filter if any
+  if (is.searchFilter) {
+    const searchTerm = is.searchFilter.toLowerCase();
+    filtered = filtered.filter((item: any) => Object(item).some((value: string) => typeof value === 'string' && value.toLowerCase().includes(searchTerm)));
+  }
+
+  // Apply tier filters if any
+  if (is.tierFilters.length) {
+    filtered = filtered.filter((item: { tier: string; }) => is.tierFilters.some((filter) => item.tier?.toLowerCase().includes(filter.toLowerCase())));
+  }
+
+  // Apply stat filters if any
+  if (is.statFilters.length) {
+    filtered = filtered.filter(
+      (item: { stats: string; }) =>
+        item.stats && // Ensure stats is defined
+        is.statFilters.some((filter) => item.stats.toLowerCase().includes(filter.toLowerCase()))
+    );
+  }
+
+  // Return the filtered array
+  return filtered;
 });
 
-const selectedItem = ref<any>(null);
-
-function onMenuClick(index: number) {
-  alert('You clicked menu item ' + index);
-}
-function onContextMenu(e: MouseEvent, item: any) {
-  e.preventDefault();
-  show.value = true;
-  selectedItem.value = item;
-  options.value.x = e.x;
-  options.value.y = e.y;
-}
+/* ---------------------------------- SORT ------------------------------- */
 
 
 
-function addToSet(item, set) {
+const sfi = computed(() => {
+  let sorted = reactive([...filteredItems.value]);
 
-  const matchedSet = toRaw(bs.buildSets).find((sRaw) => {
-    const s = toRaw(sRaw);
-    return s.key === set;
-  });
-
-  if (matchedSet) {
-    if (!Array.isArray(matchedSet.items.items)) {
-    } else if (!matchedSet) {
-    } else {
-      matchedSet.items.items.push(toRaw(item));
+  if (is.sortName) {
+    if (is.sortName === 'az') {
+      sorted = sorted.sort((a: { name: string; }, b: { name: any; }) => {
+        if (a.name && b.name) {
+          return a.name.localeCompare(b.name);
+        }
+        return 0;
+      });
+    } else if (is.sortName === 'za') {
+      sorted = sorted.sort((a: { name: any; }, b: { name: string; }) => {
+        if (a.name && b.name) {
+          return b.name.localeCompare(a.name);
+        }
+        return 0;
+      });
     }
   }
+
+  if (is.sortPrice) {
+    if (is.sortPrice === 'ascending') {
+      sorted = sorted.sort((a: { buy: number; }, b: { buy: number; }) => a.buy - b.buy);
+    } else if (is.sortPrice === 'descending') {
+      sorted = sorted.sort((a: { buy: number; }, b: { buy: number; }) => b.buy - a.buy);
+    }
+  }
+
+  return sorted;
+});
+
+function onUpdate() {
+  console.log('update')
 }
-
-
-
+function onAdd() {
+  console.log('add')
+}
+function remove() {
+  console.log('remove')
+}
 
 </script>
 
 <template>
 
 
-  <VueDraggable ref="el" :group="{ name: 'items', pull: 'clone', put: false, revertClone: true }"
-    v-model="bs.sortedFilteredItems"
-    class="flex flex-wrap transition-all duration-500 gap-4 w-full p-4 pt-12 !overflow-y-auto overflow-x-hidden max-h-full"
-    UseDraggableReturn>
-    <TransitionGroup name="fade">
-      <div v-for="item in bs.sortedFilteredItems" :key="item.id" dragClass="dragging"
-        class=" item-drag shadow-lil flex grow !aspect-square basis-14 rounded-md object-cover ring-1 ring-offset-[2px] ring-base-300 ring-offset-base-200 hover:ring-primary/80 max-w-[60px] max-h-[60px] relative has-[input:checked]:!ring-offset-primary has-[:checked]:ring-2"
-        :ref="item.name">
 
-        <div class="dropdown dropdown-hover">
+  <VueDraggable ref="el" :group="{ name: 'items', pull: 'clone', put: false, revertClone: true }" :sort="false"
+    v-model="sfi" ghostClass="ghosty" :delay="0" :animation="300" :force-fallback="true" :fallbackTolerance="0"
+    fallbackClass="drag-clone" :fallbackOnBody="true" @remove="remove" class="drag-draggable item">
 
-          <button tabindex="0" :key="item.id" id="item.name" class="w-full h-full cursor-move"
-            @contextmenu.prevent="onContextMenu($event, item)" @click="console.log(item.stats)">
-            <img :key="item.id" :src="item.img" :alt="item.name + ' Image'"
-              class="size-full rounded-md pointer-events-none" />
-          </button>
+    <TransitionGroup @enter="imageIn" @leave="imageOut">
+      <VDropdown v-for="item in sfi" :triggers="['click']" :overflow-padding="20" :shift="true" theme="detail"
+        :key="item.id + 'dropdown'" :distance="6" @click.right.prevent="" :ref="item.name"
+        class="relative max-w-[64px] max-h-[64px]">
 
-          <!-- <div tabindex="0"
-            class="dropdown-content top-0 menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-warm delay-700 grid gap-2 menu-glass border-base-300 border relative float-start">
+        <!-------------------------------⟢ Tooltip ⟣-------------------------------->
 
-            <div class="grid grid-cols-[1fr_2fr]  gap-2">
-              <div class="col-start-1">
-                <img :key="item.id" :src="item.img" :alt="item.name + ' Image'"
-                  class="rounded-md pointer-events-none border border-base-300 shadow-warm" />
-              </div>
-              <div class="h-full grid grid-cols-1">
-                <h3 class="font-bold tracking-tight text-sm leading-4">{{ item.name }}</h3>
-                <p class="justify-end text-xs self-end flex items-center gap-1 mr-2">
-        
-                  <img src="@assets/img/icons/Gold.png" class="h-3"/>
-                  {{ item.buy }}
-                </p>
+        <label class="drag-label">
+          <div class="drag-wrapper">
+            <input type="radio" :value="item" v-model="is.selectedItem" class="hidden peer" />
+            <img :key="item.id" :src="item.img" :alt="item.name + ' Image'" class="drag-img" />
+          </div>
 
-
-              </div>
-            </div>
-            <div class="divider-thin !my-1"></div>
-            <div class="text-xs whitespace-pre-line grid self-start grid-cols-1 gap-2 " @click="console.log(item.active, item.passive, item.passive.length) ">
-              <p v-if="item.stats" >
-              {{ item.stats }}
-              </p>
-
-              <p v-if="item.active.length > 2" >
-                {{item.active}}
-              </p>
-
-              <p v-if="item.passive.length > 2" class="">
-              {{item.passive}}
-              </p>
-            </div>
-          </div> -->
-        </div>
-      </div>
-
+        </label>
+        <template #popper :key="item.name + 'Pop'">
+          <ItemPop :item="item" :variant="'add'" />
+        </template>
+      </VDropdown>
     </TransitionGroup>
+
   </VueDraggable>
 
-  <context-menu v-model:show="show" :options="options" key="menu">
-    <template #itemRightArrowRender>
-      <icon icon="teenyicons:right-outline" class="absolute right-1.5" />
-    </template>
-
-    <context-menu-item class="mb-0.5" :label="selectedItem.name" @click="onMenuClick(0)" disabled>
-      <template #icon>
-        <img :src="selectedItem.img" class="rounded-md" />
-      </template>
-
-      <template #label>
-        <span class="font-bold truncate text-base-content font-sans text-sm tracking-tight ml-2">
-          {{ selectedItem.name }}
-        </span>
-      </template>
-    </context-menu-item>
-
-
-    <!--     <context-menu-item class="cursor-default relative !h-24" label="">
-
-      <span class="absolute whitespace-pre flex flex-wrap text-wrap top-0 left-0 !h-fit text-right"> {{
-        selectedItem.stats
-        }}
-      </span>
-    </context-menu-item> -->
-
-    <context-menu-sperator /><!--use this to add sperator-->
-
-    <context-menu-group class="cursor-default" label="Add to Set...">
-      <context-menu-item v-for="set in bs.buildSets">
-        <template #label>
-          <span @click="addToSet(selectedItem, set.key)">{{ set.name }}</span>
-        </template>
-      </context-menu-item>
-    </context-menu-group>
-
-    <context-menu-item class="cursor-pointer" label="" @click="onMenuClick(0)">
-      <template #icon>
-        <icon icon="teenyicons:heart-outline" />
-      </template>
-      <template #label>Add to Favorites</template>
-    </context-menu-item>
-
-    <context-menu-sperator /><!--use this to add sperator-->
-
-    <context-menu-item class="cursor-pointer flex !w-full" label="" @click="onMenuClick(0)">
-      <span class="grow pl-5">Open in Sidebar</span>
-      <icon icon="teenyicons:send-right-solid" />
-    </context-menu-item>
-    <context-menu-item class="flex !w-full">
-      <img src="@assets/img/icons/league-filled.svg" class="size-[18px] -ml-[2px] mr-1 opacity-80" />
-      <a :href="selectedItem.wiki" target="_blank" class="grow">League Wiki</a>
-
-      <icon icon="radix-icons:external-link" />
-    </context-menu-item>
-  </context-menu>
 
 </template>
 
 <style>
-/* beautify ignore:start */
-  .dragging {
-    @apply rounded-md shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px];
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
-    div.mx-context-menu.item-menu {
-      @apply !ml-4 backdrop-blur-md !left-64 !bg-base-100/0  z-[1] text-red-800;
-    }
-  }</style>
+.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+</style>

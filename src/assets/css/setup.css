@@ -1,10 +1,7 @@
 :root {
-  font-family: 'Geist Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  --rounded-box: 0.7rem !important;
+  --rounded-box: 0.6rem !important;
   --rounded-btn: 0.4rem !important;
-  --rounded-badge: 1.9rem !important;
+  --rounded-badge: 0.5rem !important;
   --animation-btn: 0.25s !important;
   --animation-input: 0.2s !important;
   --btn-focus-scale: 0.95 !important;
@@ -17,15 +14,8 @@
   @apply scroll-smooth bg-transparent p-0 m-0;
 }
 
-.tab {
-  --tab-bg: oklch(var(--b1) / 90%) !important;
-  --tab-corner-bg: oklch(var(--b1) / 60%) !important;
-}
-.layout.tabs {
-  @apply tabs-lg tabs-lifted mx-4;
-}
-.tabs > .tab-content {
-  @apply shadow-lg shadow-base-300 p-6  bg-base-100 border-base-300 rounded-box;
+.borders {
+  @apply border-[1px] border-base-300;
 }
 
 .input {
@@ -38,6 +28,19 @@
 
 .toggle {
   --tglbg: oklch(var(--b1) / 95%);
+}
+
+select {
+  @apply !ring-offset-0 !ring-0 !outline-1 !outline-offset-1;
+}
+
+button,
+.btn {
+  @apply !font-normal;
+}
+
+.collapse-arrow > .collapse-title:after {
+  @apply size-[0.43rem] opacity-80;
 }
 
 [data-mode='light'],
@@ -77,32 +80,6 @@ body {
 #app {
   @apply absolute top-0 left-0 backdrop-brightness-200 w-screen h-screen   drawer drawer-end;
 }
-.shadow-warm {
-  @apply shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px];
-}
-
-.shadow-cham {
-  @apply shadow-[inset_-12px_-8px_40px_#46464620];
-}
-
-.shadow-standard {
-  @apply shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)];
-}
-
-.shadow-lil {
-  @apply shadow-[2px_2px_4px_1px_#00000030];
-}
-
-.shadow-rune {
-  @apply shadow-[1px_3px_2px_1px_#00000034];
-}
-
-.shadow-contrast {
-  @apply shadow-[inset_1px_1px_2px_2px_#00000010,inset_-1px_-1px_2px_2px_#FFFFFF20];
-}
-.drop-shadow-xs {
-  filter: drop-shadow(0px 0px 1px #000000);
-}
 .checkbox-blue.checkbox {
   --chkbg: #81a1c1;
   --chkfg: oklch(var(--bc));
@@ -110,15 +87,6 @@ body {
 
 .checkbox-xs {
   @apply rounded-[4px];
-}
-
-.tab {
-  border-bottom-color: transparent !important;
-  padding-bottom: 0 !important;
-}
-
-.tab-active {
-  @apply !shadow-[inset_0px_0px_45px_#46464615];
 }
 
 .tooltip {
@@ -136,6 +104,9 @@ body {
   @apply border-b-base-300 border-b backdrop-blur-md absolute z-[1] top-0 left-0 bg-base-100/90  items-center flex w-full  justify-end gap-4 !h-fit flex-wrap shadow-[0px_5px_1px_rgba(0,_0,_0,_0.03),_0_5px_20px_rgba(0,_0,_0,_0.03)] py-1 px-4 rounded-t-box;
 }
 
+.badge-btn-dark {
+  @apply flex content-center hover:badge-ghost has-[:checked]:badge-ghost hover:opacity-75 badge badge-primary text-opacity-75;
+}
 /* -----------------------------------------------------------------------
         ♡ COLORS
 -----------------------------------------------------------------------*/

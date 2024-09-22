@@ -35,7 +35,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <ItemGrid />
+  <!-- <ItemGrid /> -->
 </template>
 
 <style scoped></style>

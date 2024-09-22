@@ -45,8 +45,8 @@ import { Icon } from "@iconify/vue";
     </div>
 
 
-    <div class="absolute bottom-0 left-0 p-8 w-full">
-      <div class="divider divider-start mt-12 text-xs">MADE WITH</div>
+    <div class="absolute bottom-0 left-0 w-full p-8">
+      <div class="mt-12 text-xs divider divider-start">MADE WITH</div>
       <div class="grid grid-cols-2">
         <div
           class="card rounded-box grid h-20 auto-cols-max gap-5 grid-flow-col place-items-center *:text-base-content/85 *:size-6">
@@ -59,18 +59,21 @@ import { Icon } from "@iconify/vue";
           <Icon icon="simple-icons:nodedotjs" />
           <Icon icon="simple-icons:tailwindcss" />
           <img class="grayscale contrast-200 brightness-50" src="/img/ui/daisyui.svg" />
+
+          <icon class="grayscale contrast-200 brightness-[80%]" icon='logos:pinia' />
+
         </div>
 
-        <div class="grid col-start-2 items-top text-xs font-mono justify-items-end">
+        <div class="grid col-start-2 font-mono text-xs items-top justify-items-end">
           <p class="">thanks for trying the app</p>
-          <p class="inline-flex gap-1 items-center">
+          <p class="inline-flex items-center gap-1">
             <Icon icon="typcn:heart-outline" class="size-3" />
             from
             <Icon icon="teenyicons:arrow-right-outline" class="size-3" />
             clem's human
           </p>
           <a href="https://github.com/clemony/lolpocket"
-            class="inline-flex gap-1 hover:font-bold hover:italic transition-all duration-300 underline items-center mt-2">
+            class="inline-flex items-center gap-1 mt-2 underline transition-all duration-300 hover:font-bold hover:italic">
             <Icon icon="ph:github-logo" />
             <Icon icon="ph:at" />
             clemony

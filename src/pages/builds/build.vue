@@ -1,5 +1,4 @@
-<route lang="json">
-{
+<route lang="json">{
   "name": "Build",
   "alias": "/build",
   "path": "/builds/build",
@@ -17,146 +16,149 @@
       "path": "buildRunes",
       "component": "buildRunes",
       "name": "Runes"
+    },
+    {
+      "path": "buildChampions",
+      "component": "buildChampions",
+      "name": "Champions"
     }
   ]
-}
-</route>
+}</route>
 
 <script setup lang="ts">
-  import { onMounted, ref, computed } from 'vue';
+import { onMounted, ref, computed } from 'vue';
 
-  import { useBStore } from '../../stores/buildStore';
-  import { useRuneStore } from '../../stores/runeStore';
-  import buildItems from './buildItems.vue'; // Import the components
-  import buildRunes from './buildRunes.vue'; // Import the components
+import { useItemStore } from '../../stores/itemStore';
+import { useRuneStore } from '../../stores/runeStore';
+import buildItems from './buildItems.vue'; // Import the components
+import buildRunes from './buildRunes.vue'; // Import the components
+import buildChampions from './buildChampions.vue';
+import { useUserStore } from '../../stores/userStore';
 
-  const rs = useRuneStore();
-  const bs = useBStore();
+const us = useUserStore();
+const rs = useRuneStore();
+const is = useItemStore();
 
-  const buildSection = ref('buildItems'); // Ref for reactivity
+const pocketSection = ref('Champions'); // Ref for reactivity
 
-  // Map section strings to components
-  const buildComponent = computed(() => {
-    if (buildSection.value === 'buildItems') {
-      return buildItems;
-    } else if (buildSection.value === 'buildRunes') {
-      return buildRunes;
-    } else if (buildSection.value === 'buildChampions') {
-      //return buildChampions;
-    }
-    return null; // Fallback in case no component matches
-  });
-
-  const isClicked = ref(false);
-  const isActive = ref(false);
-
-  function handleExport() {
-    isClicked.value = true;
-    isActive.value = true;
+// Map section strings to components
+const buildComponent = computed(() => {
+  if (pocketSection.value === 'Items') {
+    return buildItems;
+  } else if (pocketSection.value === 'Runes') {
+    return buildRunes;
+  } else if (pocketSection.value === 'Champions') {
+    return buildChampions;
   }
+  return null; // Fallback in case no component matches
+});
 
-  const emit = defineEmits(['openSidebar']);
+const isClicked = ref(false);
+console.log(isClicked);
+const isActive = ref(false);
 
-  function handleSidebarEvent() {
-    emit('openSidebar'); // Pass the event up to the parent
+function handleExport() {
+  isClicked.value = true;
+  isActive.value = true;
+}
+
+
+onMounted(() => {
+  if (is.itemSets.length < 1) {
+    is.newSet();
+
   }
+});
 
-  onMounted(() => {
-    if (bs.buildSets.length < 1) {
-      bs.newSet();
-    }
-  });
+const sidebarButton = computed(() => {
+  if (us.showSidebar == 'true') {
+    return 'Collapse Sidebar';
+  } else {
+    return 'Open Sidebar';
+  }
+});
 </script>
 
 <template>
-  <div class="w-full py-4 items-center content-center">
-    <div class="pb-0 mx-4 flex gap-4 w-[96%]">
-      <Icons />
+  <div class="items-center content-center w-full py-4">
+    <div class="pb-0 ml-5 pl-2 flex gap-5 w-[96%]">
 
-      <div class="has-[:focus]:border-b-base-300 grow border-b-transparent border-b">
-        <input
-          type="text"
-          placeholder="Build Name"
-          spellcheck="false"
-          class="input input-ghost focus:bg-transparent font-bold tracking-tight text-lg pl-0 border-none rounded-none focus:border-none placeholder:font-light" />
+      <!-- 
+      <div class="has-[:focus]:border-b-base-300 border-b-transparent border-b  relative">
+        <input type="text" placeholder="Build Name" spellcheck="false" v-model="is.buildName"
+          class="pl-0 pb-3 text-[1.3rem] antialiased flex items-end content-end border-none rounded-none input input-ghost focus:bg-transparent align-bottom  focus:border-none placeholder:font-light peer" />
+
+        <button :class="{ 'peer-focus:opacity-100': is.buildName != '' }"
+          class="opacity-0 transition-all duration-150 hover:text-base-content  text-base-content/60 z-30 bg-base-100  mr-1 pointer-events-auto absolute top-5 right-0.5"
+          alt="clear" title="clear">
+          <Icon icon="teenyicons:backspace-solid" class='size-4' />
+        </button>
+      </div> -->
+
+      <div class="flex items-center text-sm breadcrumbs">
+        <ul>
+          <li><a>Pockets</a></li>
+          <li><a>{{ is.buildName || "Pocket Name" }}</a></li>
+          <li>{{ pocketSection }}</li>
+        </ul>
       </div>
 
-      <!-- /* --------------------------- CHAMPION AVATAR ---------------------------- */ -->
+      <!-----------------------------⟢ Champ Avatars ⟣------------------------------>
 
       <div class="grow">
-        <ChampionAvatars />
+
       </div>
 
+
       <div class="join *:text-xs items-center *:font-normal justify-self-end">
-        <label
-          :class="{ active: buildSection == 'buildChampions' }"
-          class="join-item btn btn-sm">
-          <input
-            class="hidden"
-            v-model="buildSection"
-            type="radio"
-            name="section"
-            alt="Items"
-            value="buildItems"
-            checked />
+        <label :class="{ active: pocketSection == 'Champions' }" class="join-item btn btn-sm">
+          <input class="hidden" v-model="pocketSection" type="radio" name="section" alt="Champions" value="Champions" />
           <span>Champs</span>
         </label>
-        <label
-          :class="{ active: buildSection == 'buildItems' }"
-          class="join-item btn btn-sm">
-          <input
-            class="hidden"
-            v-model="buildSection"
-            type="radio"
-            name="section"
-            alt="Items"
-            value="buildItems"
-            checked />
+        <label :class="{ active: pocketSection == 'Items' }" class="join-item btn btn-sm">
+          <input class="hidden" v-model="pocketSection" type="radio" name="section" alt="Items" value="Items" checked />
           <span>Items</span>
         </label>
-        <label
-          :class="{ active: buildSection == 'buildRunes' }"
-          class="join-item btn btn-sm">
-          <input
-            class="hidden"
-            v-model="buildSection"
-            type="radio"
-            name="section"
-            alt="Runes"
-            value="buildRunes" />
+        <label :class="{ active: pocketSection == 'Runes' }" class="join-item btn btn-sm">
+          <input class="hidden" v-model="pocketSection" type="radio" name="section" alt="Runes" value="Runes" />
           <span>Runes</span>
         </label>
       </div>
 
-      <button
-        class="btn btn-sm hover:text-neutral-content hover:bg-neutral self-center relative *>:transition-all *>:duration-300"
-        :class="{ 'group/load': isClicked, active: isActive }"
-        alt="Create export for League Client"
-        title="Create export for League Client"
-        @click="handleExport()">
-        <Icon
-          icon="teenyicons:upload-outline"
-          alt="Export"
-          class="group-even/load:opacity-0" />
-        <icon
-          icon="eos-icons:three-dots-loading"
+      <!--       <button class="btn btn-sm self-center relative *>:transition-all *>:duration-300"
+        :class="{ 'group/load': isClicked, active: isActive }" alt="Create export for League Client"
+        title="Create export for League Client" @click="handleExport()">
+        <Icon icon="teenyicons:upload-outline" alt="Export" class="group-even/load:opacity-0" />
+        <icon icon="eos-icons:three-dots-loading"
           class="opacity-0 left-1.5 absolute group-even/load:opacity-100 size-5 delay-150 drop-shadow-md" />
         <span class="text-xs font-normal">Export</span>
       </button>
 
-      <dialog
-        id="my_modal_2"
-        class="modal">
-        <div class="modal-box m-auto">
+      <dialog id="my_modal_2" class="modal">
+        <div class="m-auto modal-box">
           <h3 class="text-lg font-bold">Hello!</h3>
           <p class="py-4">Press ESC key or click outside to close</p>
         </div>
-        <form
-          method="dialog"
-          class="modal-backdrop">
+        <form method="dialog" class="modal-backdrop">
           <button>close</button>
         </form>
-      </dialog>
+      </dialog> -->
+
+      <div class="items-center join">
+        <label :class="{ active: us.showSidebar == true }" :title="sidebarButton"
+          class="relative flex items-center join-item btn btn-sm swap swap-rotate text-nowrap">
+          <input type="checkbox" v-model="us.showSidebar" :value="us.showSidebar" class="hidden" checked />
+          <icon icon="teenyicons:send-right-solid" class=" swap-on size-3.5" />
+          <icon icon="teenyicons:send-left-outline" class="absolute swap-off size-3.5" />
+
+        </label>
+
+        <button class="btn btn-sm join-item">
+          <icon icon="teenyicons:more-horizontal-outline" class=" swap-on size-4" />
+
+        </button>
+      </div>
+
     </div>
   </div>
 
@@ -164,9 +166,7 @@
 
   <RouterView class="w-full h-full">
     <Transition name="list">
-      <component
-        :is="buildComponent"
-        class="w-full h-full" />
+      <component :is="buildComponent" class="w-full h-full" />
     </Transition>
   </RouterView>
 </template>
@@ -176,20 +176,20 @@
         /* -------------------------------------------------------------------------- */ -->
 
 <style>
-  button.active,
-  label.active {
-    @apply bg-neutral text-neutral-content border-neutral hover:bg-neutral/80;
-  }
+button.active,
+label.active {
+  @apply bg-neutral text-neutral-content border-neutral hover:bg-neutral/80;
+}
 
-  .slot {
-    @apply size-[60px] aspect-square rounded-md ring-1 ring-offset-[2px] ring-base-300/90 ring-offset-base-100;
-  }
+.slot {
+  @apply size-[60px] aspect-square rounded-md ring-1 ring-offset-[2px] ring-base-300/90 ring-offset-base-100;
+}
 
-  .show {
-    @apply opacity-100 block;
-  }
+.show {
+  @apply opacity-100 block;
+}
 
-  /* beautify ignore:start */
+/* beautify ignore:start */
   .empty {
     @apply !size-6 hover:!size-10;
   }
@@ -204,5 +204,4 @@
     opacity: 0 !important;
     visibility: hidden !important;
     display: none !important;
-  }
-</style>
+  }</style>

@@ -1,0 +1,56 @@
+.gradient {
+  background: linear-gradient(137deg, rgba(231, 207, 120, 0.7) 0%, rgba(220, 124, 124, 0.7) 20%, rgba(178, 164, 221, 0.7) 40%, rgba(175, 212, 150, 0.7) 60%, rgba(165, 226, 229, 0.7) 80%);
+  background-size: 550%;
+}
+
+.none {
+  background: linear-gradient(137deg, rgba(190, 190, 190, 1) 0%, rgba(193, 193, 193, 0.8) 10%, rgba(233, 233, 233, 1) 75%, rgba(252, 252, 252, 0) 90%);
+  @apply transition-all duration-500;
+}
+
+.inspiration {
+  background-position: 100%;
+
+  @apply transition-all duration-500;
+
+  #imgwrap {
+    @apply ring-offset-sky-300/30;
+  }
+}
+
+.resolve {
+  background-position: 83%;
+  @apply transition-all duration-500;
+
+  #imgwrap {
+    @apply ring-offset-lime-600/60;
+  }
+}
+
+.sorcery {
+  background-position: 42%;
+  @apply transition-all duration-500;
+
+  #imgwrap {
+    @apply ring-offset-purple-400/60;
+  }
+}
+
+.domination {
+  background-position: 20%;
+  @apply transition-all duration-500;
+
+  #imgwrap {
+    @apply ring-offset-red-500/60;
+  }
+}
+
+.precision {
+  background-position: 0%;
+
+  @apply transition-all duration-500;
+
+  #imgwrap {
+    @apply ring-offset-amber-500/60;
+  }
+}

@@ -147,7 +147,7 @@ export const useRuneStore = defineStore(
 
   {
     persist: {
-      storage: sessionStorage,
+      storage: localStorage,
     },
   }
 );

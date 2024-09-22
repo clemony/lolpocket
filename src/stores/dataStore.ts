@@ -12,7 +12,7 @@ export interface Rune {
   path: string;
 }
 
-interface Item {
+export interface Item {
   name: string;
   img: string;
   buy: number;
@@ -23,6 +23,8 @@ interface Item {
   type: string;
   tier: string;
   wiki: string;
+  id: number;
+  count: number;
 }
 
 interface Ability {
@@ -33,7 +35,7 @@ interface Ability {
   data: Record<string, string>;
 }
 
-interface Champion {
+export interface Champion {
   name: string;
   img: string;
   wiki: string;
@@ -105,15 +107,21 @@ export const useDataStore = defineStore('dataStore', () => {
       wiki: data.wiki,
       buy: data.buy,
       sell: data.sell,
-      passive: data.passive,
-      active: data.active,
+      passive:
+        data.passive
+          ?.toString()
+          .replace(/(Unique.*?:)+/g, '\n<b>$1</b>&nbsp;')
+          .trim() || '',
+      active:
+        data.active
+          ?.toString()
+          .replace(/(Unique.*?:)+/g, '\n<b>$1</b>&nbsp;')
+          .trim() || '',
       tier: data.tier,
-      // Replace multiple newlines with a single newline in `data.stats`
-      stats:
-        typeof data.stats === 'string'
-          ? data.stats.replace(/\n+/g, '\n').trim() // Replace multiple newlines with one
-          : data.stats || '', // Keep stats as-is if not a string, or return an empty string
+      stats: data.stats?.toString().replace(/\+/g, '').trim() || '', // Safely handle undefined and provide fallback
       type: data.type,
+      id: data.id,
+      count: 0,
     };
   };
 
@@ -240,8 +248,8 @@ export const useDataStore = defineStore('dataStore', () => {
           champions.value.push(transformedChampion);
         } else if (object.type === 'item') {
           const transformedItem = transformItemData(object);
-          //items.value.push(transformedItem);
-          items.value.push(object as Item);
+          items.value.push(transformedItem);
+          //items.value.push(object as Item);
         } else if (object.type === 'shard') {
           shards.value.push(object as Shard);
         }

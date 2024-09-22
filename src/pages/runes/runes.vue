@@ -9,6 +9,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
 import { useDataStore } from "../../stores/dataStore";
+import { useRuneStore } from '../../stores/runeStore';
 const ds = useDataStore();
 
 const runes = ref<Rune[]>([]);
@@ -34,7 +35,7 @@ onMounted(() => {
 
 
 </script>
-
+<!-- 
 <template>
     <div class="px-6 py-8">
         <div class="border border-base-300 shadow-warm w-fit rounded-btn h-96 bg-gradient-to-b to-transparent"
@@ -48,7 +49,7 @@ onMounted(() => {
                     <input class="hidden peer" type="radio" v-model="pathselect" name="path-select" :aria-label="path"
                         :value="path" @change="handlePath()" />
 
-                    <div class="size-8 aspect-square mx-2 flex justify-center items-center">
+                    <div class="flex items-center justify-center mx-2 size-8 aspect-square">
                         <img :src="'/img/runes/' + path + '.webp'" class="" />
                     </div>
                     <div
@@ -63,6 +64,6 @@ onMounted(() => {
     </div>
 
 
-</template>
+</template> -->
 
 <style scoped></style>
