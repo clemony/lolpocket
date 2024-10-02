@@ -53,3 +53,11 @@
 .drop-shadow-softest {
   filter: drop-shadow(0px 0px 1px #00000020);
 }
+
+.shadow-inset {
+  @apply shadow-[inset_1px_2px_8px_2px_#00000011,_inset_-2px_-1px_5px_1px_#00000009];
+}
+
+.shadow-inset-sm {
+  @apply shadow-[inset_1px_2px_1px_1px_#00000004,_inset_-1px_-1px_2px_1px_#00000009];
+}

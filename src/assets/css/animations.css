@@ -18,25 +18,22 @@
   @apply opacity-0;
 }
 
-.list-move, /* apply transition to moving elements */
-.list-leave-active {
-  transition: all 0.1s ease;
+.component-move, /* apply transition to moving elements */
+.component-leave-active {
+  transition: all 0.1s ease-in-out;
 }
 
-.list-enter-from,
-.list-leave-to {
+.component-enter-from,
+.component-leave-to {
   opacity: 0;
-  transform: translateX(30px);
 }
 
-.list-enter-active {
-  animation-delay: 0.3s;
-  transition: all 0.3s ease;
+.component-enter-active {
+  animation-delay: 0.2s;
+  transition: all 0.2s ease-in-out;
 }
 
-/* ensure leaving items are taken out of layout flow so that moving
-   animations can be calculated correctly. */
-.list-leave-active {
+.component-leave-active {
   position: absolute;
 }
 
@@ -77,19 +74,36 @@
 /* 1. declare transition */
 .fade-move,
 .fade-enter-active,
-.fade-leave-active {
-  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+.fade-leave-active,
+.fade-enter-from {
+  transition:
+    all 0.8s cubic-bezier(0.55, 0, 0.1, 1),
+    opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
-/* 2. declare enter from and leave to state */
-.fade-enter-from,
+/* Fade-in transition */
+.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade-out transition */
+.fade-out {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
 .fade-leave-to {
   opacity: 0;
-  transform: scaleY(0.01) translate(30px, 0);
+  transform: translate(5px, 0px);
 }
 
-/* 3. ensure leaving items are taken out of layout flow so that moving
-      animations can be calculated correctly. */
+.fade-enter-from {
+  opacity: 0;
+
+  transform: translate(0, -200%);
+}
+
 .fade-leave-active {
   position: absolute;
 }
@@ -217,4 +231,109 @@
 .fade-out-bottom {
   -webkit-animation: fade-out-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: fade-out-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.jello-horizontal {
+  -webkit-animation: jello-horizontal 0.9s both;
+  animation: jello-horizontal 0.9s both;
+}
+
+.swap-icons {
+  animation-composition: add;
+
+  :first-child {
+    animation: swap-in 0.9s both ease;
+  }
+  :last-child {
+    animation: swap-out 0.9s both ease-in-out;
+  }
+}
+
+.click {
+  animation: click 0.4s both;
+}
+
+@keyframes click {
+  0% {
+    scale: 90%;
+  }
+
+  100% {
+    transform-origin: center;
+    scale: 100%;
+  }
+}
+
+@keyframes swap-in {
+  0% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
 }

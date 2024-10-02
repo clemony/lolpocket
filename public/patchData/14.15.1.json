@@ -3169,7 +3169,8 @@
         "eImg": "/img/skills/AatroxE.webp",
         "rImg": "/img/skills/AatroxR.webp",
         "title": "the Darkin Blade",
-        "tags": "Fighter"
+        "tags": "Fighter",
+        "items": ""
     },
     {
         "name": "Ahri",
@@ -3187,7 +3188,8 @@
         "eImg": "/img/skills/AhriE.webp",
         "rImg": "/img/skills/AhriR.webp",
         "title": "the Nine-Tailed Fox",
-        "tags": "Mage, Assassin"
+        "tags": "Mage, Assassin",
+        "items": ""
     },
     {
         "name": "Akali",
@@ -3205,7 +3207,8 @@
         "eImg": "/img/skills/AkaliE.webp",
         "rImg": "/img/skills/AkaliR.webp",
         "title": "the Rogue Assassin",
-        "tags": "Assassin"
+        "tags": "Assassin",
+        "items": ""
     },
     {
         "name": "Akshan",
@@ -3223,7 +3226,8 @@
         "eImg": "/img/skills/AkshanE.webp",
         "rImg": "/img/skills/AkshanR.webp",
         "title": "the Rogue Sentinel",
-        "tags": "Marksman, Assassin"
+        "tags": "Marksman, Assassin",
+        "items": ""
     },
     {
         "name": "Alistar",
@@ -3241,7 +3245,8 @@
         "eImg": "/img/skills/AlistarE.webp",
         "rImg": "/img/skills/AlistarR.webp",
         "title": "the Minotaur",
-        "tags": "Tank, Support"
+        "tags": "Tank, Support",
+        "items": ""
     },
     {
         "name": "Amumu",
@@ -3259,7 +3264,8 @@
         "eImg": "/img/skills/AmumuE.webp",
         "rImg": "/img/skills/AmumuR.webp",
         "title": "the Sad Mummy",
-        "tags": "Tank, Support"
+        "tags": "Tank, Support",
+        "items": ""
     },
     {
         "name": "Anivia",
@@ -3277,7 +3283,8 @@
         "eImg": "/img/skills/AniviaE.webp",
         "rImg": "/img/skills/AniviaR.webp",
         "title": "the Cryophoenix",
-        "tags": "Mage"
+        "tags": "Mage",
+        "items": ""
     },
     {
         "name": "Annie",
@@ -3295,7 +3302,8 @@
         "eImg": "/img/skills/AnnieE.webp",
         "rImg": "/img/skills/AnnieR.webp",
         "title": "the Dark Child",
-        "tags": "Mage, Support"
+        "tags": "Mage, Support",
+        "items": ""
     },
     {
         "name": "Aphelios",
@@ -3313,7 +3321,8 @@
         "eImg": "/img/skills/ApheliosE.webp",
         "rImg": "/img/skills/ApheliosR.webp",
         "title": "the Weapon of the Faithful",
-        "tags": "Marksman"
+        "tags": "Marksman",
+        "items": ""
     },
     {
         "name": "Ashe",
@@ -3331,7 +3340,8 @@
         "eImg": "/img/skills/AsheE.webp",
         "rImg": "/img/skills/AsheR.webp",
         "title": "the Frost Archer",
-        "tags": "Marksman, Support"
+        "tags": "Marksman, Support",
+        "items": ""
     },
     {
         "name": "Aurelion Sol",
@@ -3349,7 +3359,8 @@
         "eImg": "/img/skills/AurelionSolE.webp",
         "rImg": "/img/skills/AurelionSolR.webp",
         "title": "The Star Forger",
-        "tags": "Mage"
+        "tags": "Mage",
+        "items": ""
     },
     {
         "name": "Aurora",
@@ -3367,7 +3378,8 @@
         "eImg": "/img/skills/AuroraE.webp",
         "rImg": "/img/skills/AuroraR.webp",
         "title": "the Witch Between Worlds",
-        "tags": "Mage, Assassin"
+        "tags": "Mage, Assassin",
+        "items": ""
     },
     {
         "name": "Azir",
@@ -3385,7 +3397,8 @@
         "eImg": "/img/skills/AzirE.webp",
         "rImg": "/img/skills/AzirR.webp",
         "title": "the Emperor of the Sands",
-        "tags": "Mage, Marksman"
+        "tags": "Mage, Marksman",
+        "items": ""
     },
     {
         "name": "Bard",
@@ -3403,7 +3416,8 @@
         "eImg": "/img/skills/BardE.webp",
         "rImg": "/img/skills/BardR.webp",
         "title": "the Wandering Caretaker",
-        "tags": "Support, Mage"
+        "tags": "Support, Mage",
+        "items": ""
     },
     {
         "name": "Bel'Veth",
@@ -3421,7 +3435,8 @@
         "eImg": "/img/skills/BelvethE.webp",
         "rImg": "/img/skills/BelvethR.webp",
         "title": "the Empress of the Void",
-        "tags": "Fighter"
+        "tags": "Fighter",
+        "items": ""
     },
     {
         "name": "Blitzcrank",
@@ -3439,7 +3454,8 @@
         "eImg": "/img/skills/BlitzcrankE.webp",
         "rImg": "/img/skills/BlitzcrankR.webp",
         "title": "the Great Steam Golem",
-        "tags": "Tank, Support"
+        "tags": "Tank, Support",
+        "items": ""
     },
     {
         "name": "Brand",
@@ -3457,7 +3473,8 @@
         "eImg": "/img/skills/BrandE.webp",
         "rImg": "/img/skills/BrandR.webp",
         "title": "the Burning Vengeance",
-        "tags": "Mage, Support"
+        "tags": "Mage, Support",
+        "items": ""
     },
     {
         "name": "Braum",
@@ -3475,7 +3492,8 @@
         "eImg": "/img/skills/BraumE.webp",
         "rImg": "/img/skills/BraumR.webp",
         "title": "the Heart of the Freljord",
-        "tags": "Tank, Support"
+        "tags": "Tank, Support",
+        "items": ""
     },
     {
         "name": "Briar",
@@ -3493,7 +3511,8 @@
         "eImg": "/img/skills/BriarE.webp",
         "rImg": "/img/skills/BriarR.webp",
         "title": "the Restrained Hunger",
-        "tags": "Fighter, Assassin"
+        "tags": "Fighter, Assassin",
+        "items": ""
     },
     {
         "name": "Caitlyn",
@@ -3511,7 +3530,8 @@
         "eImg": "/img/skills/CaitlynE.webp",
         "rImg": "/img/skills/CaitlynR.webp",
         "title": "the Sheriff of Piltover",
-        "tags": "Marksman"
+        "tags": "Marksman",
+        "items": ""
     },
     {
         "name": "Camille",
@@ -3529,7 +3549,8 @@
         "eImg": "/img/skills/CamilleE.webp",
         "rImg": "/img/skills/CamilleR.webp",
         "title": "the Steel Shadow",
-        "tags": "Fighter, Assassin"
+        "tags": "Fighter, Assassin",
+        "items": ""
     },
     {
         "name": "Cassiopeia",
@@ -3547,7 +3568,8 @@
         "eImg": "/img/skills/CassiopeiaE.webp",
         "rImg": "/img/skills/CassiopeiaR.webp",
         "title": "the Serpent's Embrace",
-        "tags": "Mage"
+        "tags": "Mage",
+        "items": ""
     },
     {
         "name": "Cho'Gath",
@@ -3565,7 +3587,8 @@
         "eImg": "/img/skills/ChogathE.webp",
         "rImg": "/img/skills/ChogathR.webp",
         "title": "the Terror of the Void",
-        "tags": "Tank, Mage"
+        "tags": "Tank, Mage",
+        "items": ""
     },
     {
         "name": "Corki",
@@ -3583,7 +3606,8 @@
         "eImg": "/img/skills/CorkiE.webp",
         "rImg": "/img/skills/CorkiR.webp",
         "title": "the Daring Bombardier",
-        "tags": "Marksman, Mage"
+        "tags": "Marksman, Mage",
+        "items": ""
     },
     {
         "name": "Darius",
@@ -3601,7 +3625,8 @@
         "eImg": "/img/skills/DariusE.webp",
         "rImg": "/img/skills/DariusR.webp",
         "title": "the Hand of Noxus",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Diana",
@@ -3619,7 +3644,8 @@
         "eImg": "/img/skills/DianaE.webp",
         "rImg": "/img/skills/DianaR.webp",
         "title": "Scorn of the Moon",
-        "tags": "Fighter, Assassin"
+        "tags": "Fighter, Assassin",
+        "items": ""
     },
     {
         "name": "Draven",
@@ -3637,7 +3663,8 @@
         "eImg": "/img/skills/DravenE.webp",
         "rImg": "/img/skills/DravenR.webp",
         "title": "the Glorious Executioner",
-        "tags": "Marksman"
+        "tags": "Marksman",
+        "items": ""
     },
     {
         "name": "Dr. Mundo",
@@ -3655,7 +3682,8 @@
         "eImg": "/img/skills/DrMundoE.webp",
         "rImg": "/img/skills/DrMundoR.webp",
         "title": "the Madman of Zaun",
-        "tags": "Tank, Fighter"
+        "tags": "Tank, Fighter",
+        "items": ""
     },
     {
         "name": "Ekko",
@@ -3673,7 +3701,8 @@
         "eImg": "/img/skills/EkkoE.webp",
         "rImg": "/img/skills/EkkoR.webp",
         "title": "the Boy Who Shattered Time",
-        "tags": "Assassin, Mage"
+        "tags": "Assassin, Mage",
+        "items": ""
     },
     {
         "name": "Elise",
@@ -3691,7 +3720,8 @@
         "eImg": "/img/skills/EliseE.webp",
         "rImg": "/img/skills/EliseR.webp",
         "title": "the Spider Queen",
-        "tags": "Assassin, Mage"
+        "tags": "Assassin, Mage",
+        "items": ""
     },
     {
         "name": "Evelynn",
@@ -3709,7 +3739,8 @@
         "eImg": "/img/skills/EvelynnE.webp",
         "rImg": "/img/skills/EvelynnR.webp",
         "title": "Agony's Embrace",
-        "tags": "Assassin, Mage"
+        "tags": "Assassin, Mage",
+        "items": ""
     },
     {
         "name": "Ezreal",
@@ -3727,7 +3758,8 @@
         "eImg": "/img/skills/EzrealE.webp",
         "rImg": "/img/skills/EzrealR.webp",
         "title": "the Prodigal Explorer",
-        "tags": "Marksman, Mage"
+        "tags": "Marksman, Mage",
+        "items": ""
     },
     {
         "name": "Fiddlesticks",
@@ -3745,7 +3777,8 @@
         "eImg": "/img/skills/FiddlesticksE.webp",
         "rImg": "/img/skills/FiddlesticksR.webp",
         "title": "the Ancient Fear",
-        "tags": "Mage, Support"
+        "tags": "Mage, Support",
+        "items": ""
     },
     {
         "name": "Fiora",
@@ -3763,7 +3796,8 @@
         "eImg": "/img/skills/FioraE.webp",
         "rImg": "/img/skills/FioraR.webp",
         "title": "the Grand Duelist",
-        "tags": "Fighter, Assassin"
+        "tags": "Fighter, Assassin",
+        "items": ""
     },
     {
         "name": "Fizz",
@@ -3781,7 +3815,8 @@
         "eImg": "/img/skills/FizzE.webp",
         "rImg": "/img/skills/FizzR.webp",
         "title": "the Tidal Trickster",
-        "tags": "Assassin, Fighter"
+        "tags": "Assassin, Fighter",
+        "items": ""
     },
     {
         "name": "Galio",
@@ -3799,7 +3834,8 @@
         "eImg": "/img/skills/GalioE.webp",
         "rImg": "/img/skills/GalioR.webp",
         "title": "the Colossus",
-        "tags": "Tank, Mage"
+        "tags": "Tank, Mage",
+        "items": ""
     },
     {
         "name": "Gangplank",
@@ -3817,7 +3853,8 @@
         "eImg": "/img/skills/GangplankE.webp",
         "rImg": "/img/skills/GangplankR.webp",
         "title": "the Saltwater Scourge",
-        "tags": "Fighter"
+        "tags": "Fighter",
+        "items": ""
     },
     {
         "name": "Garen",
@@ -3835,7 +3872,8 @@
         "eImg": "/img/skills/GarenE.webp",
         "rImg": "/img/skills/GarenR.webp",
         "title": "The Might of Demacia",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Gnar",
@@ -3853,7 +3891,8 @@
         "eImg": "/img/skills/GnarE.webp",
         "rImg": "/img/skills/GnarR.webp",
         "title": "the Missing Link",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Gragas",
@@ -3871,7 +3910,8 @@
         "eImg": "/img/skills/GragasE.webp",
         "rImg": "/img/skills/GragasR.webp",
         "title": "the Rabble Rouser",
-        "tags": "Fighter, Mage"
+        "tags": "Fighter, Mage",
+        "items": ""
     },
     {
         "name": "Graves",
@@ -3889,7 +3929,8 @@
         "eImg": "/img/skills/GravesE.webp",
         "rImg": "/img/skills/GravesR.webp",
         "title": "the Outlaw",
-        "tags": "Marksman"
+        "tags": "Marksman",
+        "items": ""
     },
     {
         "name": "Gwen",
@@ -3907,7 +3948,8 @@
         "eImg": "/img/skills/GwenE.webp",
         "rImg": "/img/skills/GwenR.webp",
         "title": "The Hallowed Seamstress",
-        "tags": "Fighter"
+        "tags": "Fighter",
+        "items": ""
     },
     {
         "name": "Hecarim",
@@ -3925,7 +3967,8 @@
         "eImg": "/img/skills/HecarimE.webp",
         "rImg": "/img/skills/HecarimR.webp",
         "title": "the Shadow of War",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Heimerdinger",
@@ -3943,7 +3986,8 @@
         "eImg": "/img/skills/HeimerdingerE.webp",
         "rImg": "/img/skills/HeimerdingerR.webp",
         "title": "the Revered Inventor",
-        "tags": "Mage, Support"
+        "tags": "Mage, Support",
+        "items": ""
     },
     {
         "name": "Hwei",
@@ -3958,7 +4002,8 @@
         "eImg": "/img/skills/HweiE.webp",
         "rImg": "/img/skills/HweiR.webp",
         "title": "the Visionary",
-        "tags": "Mage, Support"
+        "tags": "Mage, Support",
+        "items": ""
     },
     {
         "name": "Illaoi",
@@ -3976,7 +4021,8 @@
         "eImg": "/img/skills/IllaoiE.webp",
         "rImg": "/img/skills/IllaoiR.webp",
         "title": "the Kraken Priestess",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Irelia",
@@ -3994,7 +4040,8 @@
         "eImg": "/img/skills/IreliaE.webp",
         "rImg": "/img/skills/IreliaR.webp",
         "title": "the Blade Dancer",
-        "tags": "Fighter, Assassin"
+        "tags": "Fighter, Assassin",
+        "items": ""
     },
     {
         "name": "Ivern",
@@ -4012,7 +4059,8 @@
         "eImg": "/img/skills/IvernE.webp",
         "rImg": "/img/skills/IvernR.webp",
         "title": "the Green Father",
-        "tags": "Support, Mage"
+        "tags": "Support, Mage",
+        "items": ""
     },
     {
         "name": "Janna",
@@ -4030,7 +4078,8 @@
         "eImg": "/img/skills/JannaE.webp",
         "rImg": "/img/skills/JannaR.webp",
         "title": "the Storm's Fury",
-        "tags": "Support, Mage"
+        "tags": "Support, Mage",
+        "items": ""
     },
     {
         "name": "Jarvan IV",
@@ -4048,7 +4097,8 @@
         "eImg": "/img/skills/JarvanIVE.webp",
         "rImg": "/img/skills/JarvanIVR.webp",
         "title": "the Exemplar of Demacia",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Jax",
@@ -4066,7 +4116,8 @@
         "eImg": "/img/skills/JaxE.webp",
         "rImg": "/img/skills/JaxR.webp",
         "title": "Grandmaster at Arms",
-        "tags": "Fighter"
+        "tags": "Fighter",
+        "items": ""
     },
     {
         "name": "Jayce",
@@ -4084,7 +4135,8 @@
         "eImg": "/img/skills/JayceE.webp",
         "rImg": "/img/skills/JayceR.webp",
         "title": "the Defender of Tomorrow",
-        "tags": "Marksman, Fighter"
+        "tags": "Marksman, Fighter",
+        "items": ""
     },
     {
         "name": "Jhin",
@@ -4102,7 +4154,8 @@
         "eImg": "/img/skills/JhinE.webp",
         "rImg": "/img/skills/JhinR.webp",
         "title": "the Virtuoso",
-        "tags": "Marksman, Mage"
+        "tags": "Marksman, Mage",
+        "items": ""
     },
     {
         "name": "Jinx",
@@ -4120,7 +4173,8 @@
         "eImg": "/img/skills/JinxE.webp",
         "rImg": "/img/skills/JinxR.webp",
         "title": "the Loose Cannon",
-        "tags": "Marksman"
+        "tags": "Marksman",
+        "items": ""
     },
     {
         "name": "Kai'Sa",
@@ -4138,7 +4192,8 @@
         "eImg": "/img/skills/KaisaE.webp",
         "rImg": "/img/skills/KaisaR.webp",
         "title": "Daughter of the Void",
-        "tags": "Marksman, Mage"
+        "tags": "Marksman, Mage",
+        "items": ""
     },
     {
         "name": "Kalista",
@@ -4156,7 +4211,8 @@
         "eImg": "/img/skills/KalistaE.webp",
         "rImg": "/img/skills/KalistaR.webp",
         "title": "the Spear of Vengeance",
-        "tags": "Marksman"
+        "tags": "Marksman",
+        "items": ""
     },
     {
         "name": "Karma",
@@ -4174,7 +4230,8 @@
         "eImg": "/img/skills/KarmaE.webp",
         "rImg": "/img/skills/KarmaR.webp",
         "title": "the Enlightened One",
-        "tags": "Mage, Support"
+        "tags": "Mage, Support",
+        "items": ""
     },
     {
         "name": "Karthus",
@@ -4192,7 +4249,8 @@
         "eImg": "/img/skills/KarthusE.webp",
         "rImg": "/img/skills/KarthusR.webp",
         "title": "the Deathsinger",
-        "tags": "Mage"
+        "tags": "Mage",
+        "items": ""
     },
     {
         "name": "Kassadin",
@@ -4210,7 +4268,8 @@
         "eImg": "/img/skills/KassadinE.webp",
         "rImg": "/img/skills/KassadinR.webp",
         "title": "the Void Walker",
-        "tags": "Assassin, Mage"
+        "tags": "Assassin, Mage",
+        "items": ""
     },
     {
         "name": "Katarina",
@@ -4228,7 +4287,8 @@
         "eImg": "/img/skills/KatarinaE.webp",
         "rImg": "/img/skills/KatarinaR.webp",
         "title": "the Sinister Blade",
-        "tags": "Assassin, Mage"
+        "tags": "Assassin, Mage",
+        "items": ""
     },
     {
         "name": "Kayle",
@@ -4246,7 +4306,8 @@
         "eImg": "/img/skills/KayleE.webp",
         "rImg": "/img/skills/KayleR.webp",
         "title": "the Righteous",
-        "tags": "Mage, Marksman"
+        "tags": "Mage, Marksman",
+        "items": ""
     },
     {
         "name": "Kayn",
@@ -4264,7 +4325,8 @@
         "eImg": "/img/skills/KaynE.webp",
         "rImg": "/img/skills/KaynR.webp",
         "title": "the Shadow Reaper",
-        "tags": "Fighter, Assassin"
+        "tags": "Fighter, Assassin",
+        "items": ""
     },
     {
         "name": "Kennen",
@@ -4282,7 +4344,8 @@
         "eImg": "/img/skills/KennenE.webp",
         "rImg": "/img/skills/KennenR.webp",
         "title": "the Heart of the Tempest",
-        "tags": "Mage"
+        "tags": "Mage",
+        "items": ""
     },
     {
         "name": "Kha'Zix",
@@ -4300,7 +4363,8 @@
         "eImg": "/img/skills/KhazixE.webp",
         "rImg": "/img/skills/KhazixR.webp",
         "title": "the Voidreaver",
-        "tags": "Assassin"
+        "tags": "Assassin",
+        "items": ""
     },
     {
         "name": "Kindred",
@@ -4318,7 +4382,8 @@
         "eImg": "/img/skills/KindredE.webp",
         "rImg": "/img/skills/KindredR.webp",
         "title": "The Eternal Hunters",
-        "tags": "Marksman"
+        "tags": "Marksman",
+        "items": ""
     },
     {
         "name": "Kled",
@@ -4336,7 +4401,8 @@
         "eImg": "/img/skills/KledE.webp",
         "rImg": "/img/skills/KledR.webp",
         "title": "the Cantankerous Cavalier",
-        "tags": "Fighter"
+        "tags": "Fighter",
+        "items": ""
     },
     {
         "name": "Kog'Maw",
@@ -4354,7 +4420,8 @@
         "eImg": "/img/skills/KogMawE.webp",
         "rImg": "/img/skills/KogMawR.webp",
         "title": "the Mouth of the Abyss",
-        "tags": "Marksman, Mage"
+        "tags": "Marksman, Mage",
+        "items": ""
     },
     {
         "name": "K'Sante",
@@ -4372,7 +4439,8 @@
         "eImg": "/img/skills/KSanteE.webp",
         "rImg": "/img/skills/KSanteR.webp",
         "title": "the Pride of Nazumah",
-        "tags": "Tank, Fighter"
+        "tags": "Tank, Fighter",
+        "items": ""
     },
     {
         "name": "LeBlanc",
@@ -4390,7 +4458,8 @@
         "eImg": "/img/skills/LeblancE.webp",
         "rImg": "/img/skills/LeblancR.webp",
         "title": "the Deceiver",
-        "tags": "Assassin, Mage"
+        "tags": "Assassin, Mage",
+        "items": ""
     },
     {
         "name": "Lee Sin",
@@ -4408,7 +4477,8 @@
         "eImg": "/img/skills/LeeSinE.webp",
         "rImg": "/img/skills/LeeSinR.webp",
         "title": "the Blind Monk",
-        "tags": "Fighter, Assassin"
+        "tags": "Fighter, Assassin",
+        "items": ""
     },
     {
         "name": "Leona",
@@ -4426,7 +4496,8 @@
         "eImg": "/img/skills/LeonaE.webp",
         "rImg": "/img/skills/LeonaR.webp",
         "title": "the Radiant Dawn",
-        "tags": "Tank, Support"
+        "tags": "Tank, Support",
+        "items": ""
     },
     {
         "name": "Lillia",
@@ -4444,7 +4515,8 @@
         "eImg": "/img/skills/LilliaE.webp",
         "rImg": "/img/skills/LilliaR.webp",
         "title": "the Bashful Bloom",
-        "tags": "Fighter, Mage"
+        "tags": "Fighter, Mage",
+        "items": ""
     },
     {
         "name": "Lissandra",
@@ -4462,7 +4534,8 @@
         "eImg": "/img/skills/LissandraE.webp",
         "rImg": "/img/skills/LissandraR.webp",
         "title": "the Ice Witch",
-        "tags": "Mage"
+        "tags": "Mage",
+        "items": ""
     },
     {
         "name": "Lucian",
@@ -4480,7 +4553,8 @@
         "eImg": "/img/skills/LucianE.webp",
         "rImg": "/img/skills/LucianR.webp",
         "title": "the Purifier",
-        "tags": "Marksman, Assassin"
+        "tags": "Marksman, Assassin",
+        "items": ""
     },
     {
         "name": "Lulu",
@@ -4498,7 +4572,8 @@
         "eImg": "/img/skills/LuluE.webp",
         "rImg": "/img/skills/LuluR.webp",
         "title": "the Fae Sorceress",
-        "tags": "Support, Mage"
+        "tags": "Support, Mage",
+        "items": ""
     },
     {
         "name": "Lux",
@@ -4516,7 +4591,8 @@
         "eImg": "/img/skills/LuxE.webp",
         "rImg": "/img/skills/LuxR.webp",
         "title": "the Lady of Luminosity",
-        "tags": "Mage, Support"
+        "tags": "Mage, Support",
+        "items": ""
     },
     {
         "name": "Malphite",
@@ -4534,7 +4610,8 @@
         "eImg": "/img/skills/MalphiteE.webp",
         "rImg": "/img/skills/MalphiteR.webp",
         "title": "Shard of the Monolith",
-        "tags": "Tank, Mage"
+        "tags": "Tank, Mage",
+        "items": ""
     },
     {
         "name": "Malzahar",
@@ -4552,7 +4629,8 @@
         "eImg": "/img/skills/MalzaharE.webp",
         "rImg": "/img/skills/MalzaharR.webp",
         "title": "the Prophet of the Void",
-        "tags": "Mage"
+        "tags": "Mage",
+        "items": ""
     },
     {
         "name": "Maokai",
@@ -4570,7 +4648,8 @@
         "eImg": "/img/skills/MaokaiE.webp",
         "rImg": "/img/skills/MaokaiR.webp",
         "title": "the Twisted Treant",
-        "tags": "Tank, Support"
+        "tags": "Tank, Support",
+        "items": ""
     },
     {
         "name": "Master Yi",
@@ -4588,7 +4667,8 @@
         "eImg": "/img/skills/MasterYiE.webp",
         "rImg": "/img/skills/MasterYiR.webp",
         "title": "the Wuju Bladesman",
-        "tags": "Assassin, Fighter"
+        "tags": "Assassin, Fighter",
+        "items": ""
     },
     {
         "name": "Milio",
@@ -4606,7 +4686,8 @@
         "eImg": "/img/skills/MilioE.webp",
         "rImg": "/img/skills/MilioR.webp",
         "title": "The Gentle Flame",
-        "tags": "Support, Mage"
+        "tags": "Support, Mage",
+        "items": ""
     },
     {
         "name": "Miss Fortune",
@@ -4624,7 +4705,8 @@
         "eImg": "/img/skills/MissFortuneE.webp",
         "rImg": "/img/skills/MissFortuneR.webp",
         "title": "the Bounty Hunter",
-        "tags": "Marksman, Mage"
+        "tags": "Marksman, Mage",
+        "items": ""
     },
     {
         "name": "Wukong",
@@ -4642,7 +4724,8 @@
         "eImg": "/img/skills/MonkeyKingE.webp",
         "rImg": "/img/skills/MonkeyKingR.webp",
         "title": "the Monkey King",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Mordekaiser",
@@ -4660,7 +4743,8 @@
         "eImg": "/img/skills/MordekaiserE.webp",
         "rImg": "/img/skills/MordekaiserR.webp",
         "title": "the Iron Revenant",
-        "tags": "Fighter, Mage"
+        "tags": "Fighter, Mage",
+        "items": ""
     },
     {
         "name": "Morgana",
@@ -4678,7 +4762,8 @@
         "eImg": "/img/skills/MorganaE.webp",
         "rImg": "/img/skills/MorganaR.webp",
         "title": "the Fallen",
-        "tags": "Mage, Support"
+        "tags": "Mage, Support",
+        "items": ""
     },
     {
         "name": "Naafiri",
@@ -4696,7 +4781,8 @@
         "eImg": "/img/skills/NaafiriE.webp",
         "rImg": "/img/skills/NaafiriR.webp",
         "title": "the Hound of a Hundred Bites",
-        "tags": "Assassin, Fighter"
+        "tags": "Assassin, Fighter",
+        "items": ""
     },
     {
         "name": "Nami",
@@ -4714,7 +4800,8 @@
         "eImg": "/img/skills/NamiE.webp",
         "rImg": "/img/skills/NamiR.webp",
         "title": "the Tidecaller",
-        "tags": "Support, Mage"
+        "tags": "Support, Mage",
+        "items": ""
     },
     {
         "name": "Nasus",
@@ -4732,7 +4819,8 @@
         "eImg": "/img/skills/NasusE.webp",
         "rImg": "/img/skills/NasusR.webp",
         "title": "the Curator of the Sands",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Nautilus",
@@ -4750,7 +4838,8 @@
         "eImg": "/img/skills/NautilusE.webp",
         "rImg": "/img/skills/NautilusR.webp",
         "title": "the Titan of the Depths",
-        "tags": "Tank, Support"
+        "tags": "Tank, Support",
+        "items": ""
     },
     {
         "name": "Neeko",
@@ -4768,7 +4857,8 @@
         "eImg": "/img/skills/NeekoE.webp",
         "rImg": "/img/skills/NeekoR.webp",
         "title": "the Curious Chameleon",
-        "tags": "Mage, Support"
+        "tags": "Mage, Support",
+        "items": ""
     },
     {
         "name": "Nidalee",
@@ -4786,7 +4876,8 @@
         "eImg": "/img/skills/NidaleeE.webp",
         "rImg": "/img/skills/NidaleeR.webp",
         "title": "the Bestial Huntress",
-        "tags": "Assassin, Mage"
+        "tags": "Assassin, Mage",
+        "items": ""
     },
     {
         "name": "Nilah",
@@ -4804,7 +4895,8 @@
         "eImg": "/img/skills/NilahE.webp",
         "rImg": "/img/skills/NilahR.webp",
         "title": "the Joy Unbound",
-        "tags": "Fighter, Assassin"
+        "tags": "Fighter, Assassin",
+        "items": ""
     },
     {
         "name": "Nocturne",
@@ -4822,7 +4914,8 @@
         "eImg": "/img/skills/NocturneE.webp",
         "rImg": "/img/skills/NocturneR.webp",
         "title": "the Eternal Nightmare",
-        "tags": "Fighter, Assassin"
+        "tags": "Fighter, Assassin",
+        "items": ""
     },
     {
         "name": "Nunu & Willump",
@@ -4840,7 +4933,8 @@
         "eImg": "/img/skills/NunuE.webp",
         "rImg": "/img/skills/NunuR.webp",
         "title": "the Boy and His Yeti",
-        "tags": "Tank, Mage"
+        "tags": "Tank, Mage",
+        "items": ""
     },
     {
         "name": "Olaf",
@@ -4858,7 +4952,8 @@
         "eImg": "/img/skills/OlafE.webp",
         "rImg": "/img/skills/OlafR.webp",
         "title": "the Berserker",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Orianna",
@@ -4876,7 +4971,8 @@
         "eImg": "/img/skills/OriannaE.webp",
         "rImg": "/img/skills/OriannaR.webp",
         "title": "the Lady of Clockwork",
-        "tags": "Mage, Support"
+        "tags": "Mage, Support",
+        "items": ""
     },
     {
         "name": "Ornn",
@@ -4894,7 +4990,8 @@
         "eImg": "/img/skills/OrnnE.webp",
         "rImg": "/img/skills/OrnnR.webp",
         "title": "The Fire below the Mountain",
-        "tags": "Tank"
+        "tags": "Tank",
+        "items": ""
     },
     {
         "name": "Pantheon",
@@ -4912,7 +5009,8 @@
         "eImg": "/img/skills/PantheonE.webp",
         "rImg": "/img/skills/PantheonR.webp",
         "title": "the Unbreakable Spear",
-        "tags": "Fighter, Assassin"
+        "tags": "Fighter, Assassin",
+        "items": ""
     },
     {
         "name": "Poppy",
@@ -4930,7 +5028,8 @@
         "eImg": "/img/skills/PoppyE.webp",
         "rImg": "/img/skills/PoppyR.webp",
         "title": "Keeper of the Hammer",
-        "tags": "Tank, Fighter"
+        "tags": "Tank, Fighter",
+        "items": ""
     },
     {
         "name": "Pyke",
@@ -4948,7 +5047,8 @@
         "eImg": "/img/skills/PykeE.webp",
         "rImg": "/img/skills/PykeR.webp",
         "title": "the Bloodharbor Ripper",
-        "tags": "Support, Assassin"
+        "tags": "Support, Assassin",
+        "items": ""
     },
     {
         "name": "Qiyana",
@@ -4966,7 +5066,8 @@
         "eImg": "/img/skills/QiyanaE.webp",
         "rImg": "/img/skills/QiyanaR.webp",
         "title": "Empress of the Elements",
-        "tags": "Assassin"
+        "tags": "Assassin",
+        "items": ""
     },
     {
         "name": "Quinn",
@@ -4984,7 +5085,8 @@
         "eImg": "/img/skills/QuinnE.webp",
         "rImg": "/img/skills/QuinnR.webp",
         "title": "Demacia's Wings",
-        "tags": "Marksman, Assassin"
+        "tags": "Marksman, Assassin",
+        "items": ""
     },
     {
         "name": "Rakan",
@@ -5002,7 +5104,8 @@
         "eImg": "/img/skills/RakanE.webp",
         "rImg": "/img/skills/RakanR.webp",
         "title": "The Charmer",
-        "tags": "Support"
+        "tags": "Support",
+        "items": ""
     },
     {
         "name": "Rammus",
@@ -5020,7 +5123,8 @@
         "eImg": "/img/skills/RammusE.webp",
         "rImg": "/img/skills/RammusR.webp",
         "title": "the Armordillo",
-        "tags": "Tank"
+        "tags": "Tank",
+        "items": ""
     },
     {
         "name": "Rek'Sai",
@@ -5038,7 +5142,8 @@
         "eImg": "/img/skills/RekSaiE.webp",
         "rImg": "/img/skills/RekSaiR.webp",
         "title": "the Void Burrower",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Rell",
@@ -5056,7 +5161,8 @@
         "eImg": "/img/skills/RellE.webp",
         "rImg": "/img/skills/RellR.webp",
         "title": "the Iron Maiden",
-        "tags": "Tank, Support"
+        "tags": "Tank, Support",
+        "items": ""
     },
     {
         "name": "Renata Glasc",
@@ -5074,7 +5180,8 @@
         "eImg": "/img/skills/RenataE.webp",
         "rImg": "/img/skills/RenataR.webp",
         "title": "the Chem-Baroness",
-        "tags": "Support, Mage"
+        "tags": "Support, Mage",
+        "items": ""
     },
     {
         "name": "Renekton",
@@ -5092,7 +5199,8 @@
         "eImg": "/img/skills/RenektonE.webp",
         "rImg": "/img/skills/RenektonR.webp",
         "title": "the Butcher of the Sands",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Rengar",
@@ -5110,7 +5218,8 @@
         "eImg": "/img/skills/RengarE.webp",
         "rImg": "/img/skills/RengarR.webp",
         "title": "the Pridestalker",
-        "tags": "Assassin, Fighter"
+        "tags": "Assassin, Fighter",
+        "items": ""
     },
     {
         "name": "Riven",
@@ -5128,7 +5237,8 @@
         "eImg": "/img/skills/RivenE.webp",
         "rImg": "/img/skills/RivenR.webp",
         "title": "the Exile",
-        "tags": "Fighter, Assassin"
+        "tags": "Fighter, Assassin",
+        "items": ""
     },
     {
         "name": "Rumble",
@@ -5146,7 +5256,8 @@
         "eImg": "/img/skills/RumbleE.webp",
         "rImg": "/img/skills/RumbleR.webp",
         "title": "the Mechanized Menace",
-        "tags": "Fighter, Mage"
+        "tags": "Fighter, Mage",
+        "items": ""
     },
     {
         "name": "Ryze",
@@ -5164,7 +5275,8 @@
         "eImg": "/img/skills/RyzeE.webp",
         "rImg": "/img/skills/RyzeR.webp",
         "title": "the Rune Mage",
-        "tags": "Mage"
+        "tags": "Mage",
+        "items": ""
     },
     {
         "name": "Samira",
@@ -5182,7 +5294,8 @@
         "eImg": "/img/skills/SamiraE.webp",
         "rImg": "/img/skills/SamiraR.webp",
         "title": "the Desert Rose",
-        "tags": "Marksman, Assassin"
+        "tags": "Marksman, Assassin",
+        "items": ""
     },
     {
         "name": "Sejuani",
@@ -5200,7 +5313,8 @@
         "eImg": "/img/skills/SejuaniE.webp",
         "rImg": "/img/skills/SejuaniR.webp",
         "title": "Fury of the North",
-        "tags": "Tank"
+        "tags": "Tank",
+        "items": ""
     },
     {
         "name": "Senna",
@@ -5218,7 +5332,8 @@
         "eImg": "/img/skills/SennaE.webp",
         "rImg": "/img/skills/SennaR.webp",
         "title": "the Redeemer",
-        "tags": "Support, Marksman"
+        "tags": "Support, Marksman",
+        "items": ""
     },
     {
         "name": "Seraphine",
@@ -5236,7 +5351,8 @@
         "eImg": "/img/skills/SeraphineE.webp",
         "rImg": "/img/skills/SeraphineR.webp",
         "title": "the Starry-Eyed Songstress",
-        "tags": "Support, Mage"
+        "tags": "Support, Mage",
+        "items": ""
     },
     {
         "name": "Sett",
@@ -5254,7 +5370,8 @@
         "eImg": "/img/skills/SettE.webp",
         "rImg": "/img/skills/SettR.webp",
         "title": "the Boss",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Shaco",
@@ -5272,7 +5389,8 @@
         "eImg": "/img/skills/ShacoE.webp",
         "rImg": "/img/skills/ShacoR.webp",
         "title": "the Demon Jester",
-        "tags": "Assassin"
+        "tags": "Assassin",
+        "items": ""
     },
     {
         "name": "Shen",
@@ -5290,7 +5408,8 @@
         "eImg": "/img/skills/ShenE.webp",
         "rImg": "/img/skills/ShenR.webp",
         "title": "the Eye of Twilight",
-        "tags": "Tank"
+        "tags": "Tank",
+        "items": ""
     },
     {
         "name": "Shyvana",
@@ -5308,7 +5427,8 @@
         "eImg": "/img/skills/ShyvanaE.webp",
         "rImg": "/img/skills/ShyvanaR.webp",
         "title": "the Half-Dragon",
-        "tags": "Fighter, Mage"
+        "tags": "Fighter, Mage",
+        "items": ""
     },
     {
         "name": "Singed",
@@ -5326,7 +5446,8 @@
         "eImg": "/img/skills/SingedE.webp",
         "rImg": "/img/skills/SingedR.webp",
         "title": "the Mad Chemist",
-        "tags": "Tank, Mage"
+        "tags": "Tank, Mage",
+        "items": ""
     },
     {
         "name": "Sion",
@@ -5344,7 +5465,8 @@
         "eImg": "/img/skills/SionE.webp",
         "rImg": "/img/skills/SionR.webp",
         "title": "The Undead Juggernaut",
-        "tags": "Tank, Fighter"
+        "tags": "Tank, Fighter",
+        "items": ""
     },
     {
         "name": "Sivir",
@@ -5362,7 +5484,8 @@
         "eImg": "/img/skills/SivirE.webp",
         "rImg": "/img/skills/SivirR.webp",
         "title": "the Battle Mistress",
-        "tags": "Marksman"
+        "tags": "Marksman",
+        "items": ""
     },
     {
         "name": "Skarner",
@@ -5380,7 +5503,8 @@
         "eImg": "/img/skills/SkarnerE.webp",
         "rImg": "/img/skills/SkarnerR.webp",
         "title": "the Primordial Sovereign",
-        "tags": "Tank, Fighter"
+        "tags": "Tank, Fighter",
+        "items": ""
     },
     {
         "name": "Smolder",
@@ -5398,7 +5522,8 @@
         "eImg": "/img/skills/SmolderE.webp",
         "rImg": "/img/skills/SmolderR.webp",
         "title": "the Fiery Fledgling",
-        "tags": "Marksman, Mage"
+        "tags": "Marksman, Mage",
+        "items": ""
     },
     {
         "name": "Sona",
@@ -5416,7 +5541,8 @@
         "eImg": "/img/skills/SonaE.webp",
         "rImg": "/img/skills/SonaR.webp",
         "title": "Maven of the Strings",
-        "tags": "Support, Mage"
+        "tags": "Support, Mage",
+        "items": ""
     },
     {
         "name": "Soraka",
@@ -5434,7 +5560,8 @@
         "eImg": "/img/skills/SorakaE.webp",
         "rImg": "/img/skills/SorakaR.webp",
         "title": "the Starchild",
-        "tags": "Support, Mage"
+        "tags": "Support, Mage",
+        "items": ""
     },
     {
         "name": "Swain",
@@ -5452,7 +5579,8 @@
         "eImg": "/img/skills/SwainE.webp",
         "rImg": "/img/skills/SwainR.webp",
         "title": "the Noxian Grand General",
-        "tags": "Mage, Support"
+        "tags": "Mage, Support",
+        "items": ""
     },
     {
         "name": "Sylas",
@@ -5470,7 +5598,8 @@
         "eImg": "/img/skills/SylasE.webp",
         "rImg": "/img/skills/SylasR.webp",
         "title": "the Unshackled",
-        "tags": "Mage, Assassin"
+        "tags": "Mage, Assassin",
+        "items": ""
     },
     {
         "name": "Syndra",
@@ -5488,7 +5617,8 @@
         "eImg": "/img/skills/SyndraE.webp",
         "rImg": "/img/skills/SyndraR.webp",
         "title": "the Dark Sovereign",
-        "tags": "Mage"
+        "tags": "Mage",
+        "items": ""
     },
     {
         "name": "Tahm Kench",
@@ -5506,7 +5636,8 @@
         "eImg": "/img/skills/TahmKenchE.webp",
         "rImg": "/img/skills/TahmKenchR.webp",
         "title": "The River King",
-        "tags": "Tank, Support"
+        "tags": "Tank, Support",
+        "items": ""
     },
     {
         "name": "Taliyah",
@@ -5524,7 +5655,8 @@
         "eImg": "/img/skills/TaliyahE.webp",
         "rImg": "/img/skills/TaliyahR.webp",
         "title": "the Stoneweaver",
-        "tags": "Mage, Support"
+        "tags": "Mage, Support",
+        "items": ""
     },
     {
         "name": "Talon",
@@ -5542,7 +5674,8 @@
         "eImg": "/img/skills/TalonE.webp",
         "rImg": "/img/skills/TalonR.webp",
         "title": "the Blade's Shadow",
-        "tags": "Assassin"
+        "tags": "Assassin",
+        "items": ""
     },
     {
         "name": "Taric",
@@ -5560,7 +5693,8 @@
         "eImg": "/img/skills/TaricE.webp",
         "rImg": "/img/skills/TaricR.webp",
         "title": "the Shield of Valoran",
-        "tags": "Support, Tank"
+        "tags": "Support, Tank",
+        "items": ""
     },
     {
         "name": "Teemo",
@@ -5578,7 +5712,8 @@
         "eImg": "/img/skills/TeemoE.webp",
         "rImg": "/img/skills/TeemoR.webp",
         "title": "the Swift Scout",
-        "tags": "Marksman, Mage"
+        "tags": "Marksman, Mage",
+        "items": ""
     },
     {
         "name": "Thresh",
@@ -5596,7 +5731,8 @@
         "eImg": "/img/skills/ThreshE.webp",
         "rImg": "/img/skills/ThreshR.webp",
         "title": "the Chain Warden",
-        "tags": "Support, Tank"
+        "tags": "Support, Tank",
+        "items": ""
     },
     {
         "name": "Tristana",
@@ -5614,7 +5750,8 @@
         "eImg": "/img/skills/TristanaE.webp",
         "rImg": "/img/skills/TristanaR.webp",
         "title": "the Yordle Gunner",
-        "tags": "Marksman, Assassin"
+        "tags": "Marksman, Assassin",
+        "items": ""
     },
     {
         "name": "Trundle",
@@ -5632,7 +5769,8 @@
         "eImg": "/img/skills/TrundleE.webp",
         "rImg": "/img/skills/TrundleR.webp",
         "title": "the Troll King",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Tryndamere",
@@ -5650,7 +5788,8 @@
         "eImg": "/img/skills/TryndamereE.webp",
         "rImg": "/img/skills/TryndamereR.webp",
         "title": "the Barbarian King",
-        "tags": "Fighter, Assassin"
+        "tags": "Fighter, Assassin",
+        "items": ""
     },
     {
         "name": "Twisted Fate",
@@ -5668,7 +5807,8 @@
         "eImg": "/img/skills/TwistedFateE.webp",
         "rImg": "/img/skills/TwistedFateR.webp",
         "title": "the Card Master",
-        "tags": "Mage, Marksman"
+        "tags": "Mage, Marksman",
+        "items": ""
     },
     {
         "name": "Twitch",
@@ -5686,7 +5826,8 @@
         "eImg": "/img/skills/TwitchE.webp",
         "rImg": "/img/skills/TwitchR.webp",
         "title": "the Plague Rat",
-        "tags": "Marksman, Assassin"
+        "tags": "Marksman, Assassin",
+        "items": ""
     },
     {
         "name": "Udyr",
@@ -5704,7 +5845,8 @@
         "eImg": "/img/skills/UdyrE.webp",
         "rImg": "/img/skills/UdyrR.webp",
         "title": "the Spirit Walker",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Urgot",
@@ -5722,7 +5864,8 @@
         "eImg": "/img/skills/UrgotE.webp",
         "rImg": "/img/skills/UrgotR.webp",
         "title": "the Dreadnought",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Varus",
@@ -5740,7 +5883,8 @@
         "eImg": "/img/skills/VarusE.webp",
         "rImg": "/img/skills/VarusR.webp",
         "title": "the Arrow of Retribution",
-        "tags": "Marksman, Mage"
+        "tags": "Marksman, Mage",
+        "items": ""
     },
     {
         "name": "Vayne",
@@ -5758,7 +5902,8 @@
         "eImg": "/img/skills/VayneE.webp",
         "rImg": "/img/skills/VayneR.webp",
         "title": "the Night Hunter",
-        "tags": "Marksman, Assassin"
+        "tags": "Marksman, Assassin",
+        "items": ""
     },
     {
         "name": "Veigar",
@@ -5776,7 +5921,8 @@
         "eImg": "/img/skills/VeigarE.webp",
         "rImg": "/img/skills/VeigarR.webp",
         "title": "the Tiny Master of Evil",
-        "tags": "Mage"
+        "tags": "Mage",
+        "items": ""
     },
     {
         "name": "Vel'Koz",
@@ -5794,7 +5940,8 @@
         "eImg": "/img/skills/VelkozE.webp",
         "rImg": "/img/skills/VelkozR.webp",
         "title": "the Eye of the Void",
-        "tags": "Mage, Support"
+        "tags": "Mage, Support",
+        "items": ""
     },
     {
         "name": "Vex",
@@ -5812,7 +5959,8 @@
         "eImg": "/img/skills/VexE.webp",
         "rImg": "/img/skills/VexR.webp",
         "title": "the Gloomist",
-        "tags": "Mage"
+        "tags": "Mage",
+        "items": ""
     },
     {
         "name": "Vi",
@@ -5830,7 +5978,8 @@
         "eImg": "/img/skills/ViE.webp",
         "rImg": "/img/skills/ViR.webp",
         "title": "the Piltover Enforcer",
-        "tags": "Fighter, Assassin"
+        "tags": "Fighter, Assassin",
+        "items": ""
     },
     {
         "name": "Viego",
@@ -5848,7 +5997,8 @@
         "eImg": "/img/skills/ViegoE.webp",
         "rImg": "/img/skills/ViegoR.webp",
         "title": "The Ruined King",
-        "tags": "Fighter, Assassin"
+        "tags": "Fighter, Assassin",
+        "items": ""
     },
     {
         "name": "Viktor",
@@ -5866,7 +6016,8 @@
         "eImg": "/img/skills/ViktorE.webp",
         "rImg": "/img/skills/ViktorR.webp",
         "title": "the Machine Herald",
-        "tags": "Mage"
+        "tags": "Mage",
+        "items": ""
     },
     {
         "name": "Vladimir",
@@ -5884,7 +6035,8 @@
         "eImg": "/img/skills/VladimirE.webp",
         "rImg": "/img/skills/VladimirR.webp",
         "title": "the Crimson Reaper",
-        "tags": "Mage, Fighter"
+        "tags": "Mage, Fighter",
+        "items": ""
     },
     {
         "name": "Volibear",
@@ -5902,7 +6054,8 @@
         "eImg": "/img/skills/VolibearE.webp",
         "rImg": "/img/skills/VolibearR.webp",
         "title": "the Relentless Storm",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Warwick",
@@ -5920,7 +6073,8 @@
         "eImg": "/img/skills/WarwickE.webp",
         "rImg": "/img/skills/WarwickR.webp",
         "title": "the Uncaged Wrath of Zaun",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Xayah",
@@ -5938,7 +6092,8 @@
         "eImg": "/img/skills/XayahE.webp",
         "rImg": "/img/skills/XayahR.webp",
         "title": "the Rebel",
-        "tags": "Marksman"
+        "tags": "Marksman",
+        "items": ""
     },
     {
         "name": "Xerath",
@@ -5956,7 +6111,8 @@
         "eImg": "/img/skills/XerathE.webp",
         "rImg": "/img/skills/XerathR.webp",
         "title": "the Magus Ascendant",
-        "tags": "Mage, Support"
+        "tags": "Mage, Support",
+        "items": ""
     },
     {
         "name": "Xin Zhao",
@@ -5974,7 +6130,8 @@
         "eImg": "/img/skills/XinZhaoE.webp",
         "rImg": "/img/skills/XinZhaoR.webp",
         "title": "the Seneschal of Demacia",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Yasuo",
@@ -5992,7 +6149,8 @@
         "eImg": "/img/skills/YasuoE.webp",
         "rImg": "/img/skills/YasuoR.webp",
         "title": "the Unforgiven",
-        "tags": "Fighter, Assassin"
+        "tags": "Fighter, Assassin",
+        "items": ""
     },
     {
         "name": "Yone",
@@ -6010,7 +6168,8 @@
         "eImg": "/img/skills/YoneE.webp",
         "rImg": "/img/skills/YoneR.webp",
         "title": "the Unforgotten",
-        "tags": "Fighter, Assassin"
+        "tags": "Fighter, Assassin",
+        "items": ""
     },
     {
         "name": "Yorick",
@@ -6028,7 +6187,8 @@
         "eImg": "/img/skills/YorickE.webp",
         "rImg": "/img/skills/YorickR.webp",
         "title": "Shepherd of Souls",
-        "tags": "Fighter, Tank"
+        "tags": "Fighter, Tank",
+        "items": ""
     },
     {
         "name": "Yuumi",
@@ -6046,7 +6206,8 @@
         "eImg": "/img/skills/YuumiE.webp",
         "rImg": "/img/skills/YuumiR.webp",
         "title": "the Magical Cat",
-        "tags": "Support, Mage"
+        "tags": "Support, Mage",
+        "items": ""
     },
     {
         "name": "Zac",
@@ -6064,7 +6225,8 @@
         "eImg": "/img/skills/ZacE.webp",
         "rImg": "/img/skills/ZacR.webp",
         "title": "the Secret Weapon",
-        "tags": "Tank, Fighter"
+        "tags": "Tank, Fighter",
+        "items": ""
     },
     {
         "name": "Zed",
@@ -6082,7 +6244,8 @@
         "eImg": "/img/skills/ZedE.webp",
         "rImg": "/img/skills/ZedR.webp",
         "title": "the Master of Shadows",
-        "tags": "Assassin"
+        "tags": "Assassin",
+        "items": ""
     },
     {
         "name": "Zeri",
@@ -6100,7 +6263,8 @@
         "eImg": "/img/skills/ZeriE.webp",
         "rImg": "/img/skills/ZeriR.webp",
         "title": "The Spark of Zaun",
-        "tags": "Marksman"
+        "tags": "Marksman",
+        "items": ""
     },
     {
         "name": "Ziggs",
@@ -6118,7 +6282,8 @@
         "eImg": "/img/skills/ZiggsE.webp",
         "rImg": "/img/skills/ZiggsR.webp",
         "title": "the Hexplosives Expert",
-        "tags": "Mage"
+        "tags": "Mage",
+        "items": ""
     },
     {
         "name": "Zilean",
@@ -6136,7 +6301,8 @@
         "eImg": "/img/skills/ZileanE.webp",
         "rImg": "/img/skills/ZileanR.webp",
         "title": "the Chronokeeper",
-        "tags": "Support, Mage"
+        "tags": "Support, Mage",
+        "items": ""
     },
     {
         "name": "Zoe",
@@ -6154,7 +6320,8 @@
         "eImg": "/img/skills/ZoeE.webp",
         "rImg": "/img/skills/ZoeR.webp",
         "title": "the Aspect of Twilight",
-        "tags": "Mage"
+        "tags": "Mage",
+        "items": ""
     },
     {
         "name": "Zyra",
@@ -6172,7 +6339,8 @@
         "eImg": "/img/skills/ZyraE.webp",
         "rImg": "/img/skills/ZyraR.webp",
         "title": "Rise of the Thorns",
-        "tags": "Mage, Support"
+        "tags": "Mage, Support",
+        "items": ""
     },
     {
         "name": "Adaptive Power",

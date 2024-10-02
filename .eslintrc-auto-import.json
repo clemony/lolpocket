@@ -260,6 +260,10 @@
     "setMapStoreSuffix": true,
     "storeToRefs": true,
     "useDataStore()": true,
-    "ds": true
+    "ds": true,
+    "onWatcherCleanup": true,
+    "useId": true,
+    "useModel": true,
+    "useTemplateRef": true
   }
 }

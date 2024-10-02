@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useItemStore } from '../../stores/itemStore';
 const is = useItemStore();
 
@@ -9,6 +9,7 @@ const stats = [
     name: "Mana",
     icon: 'teenyicons:drop-solid',
     bgClass: 'bg-blues/90',
+    ringClass: 'ring-blues/90',
     classList: '',
     cat: 'utility',
   },
@@ -16,6 +17,7 @@ const stats = [
     name: "Mana Regen",
     icon: 'tabler:droplet-up',
     bgClass: 'bg-blues/90',
+    ringClass: 'ring-blues/90',
     classList: '',
     cat: 'utility',
   },
@@ -23,69 +25,81 @@ const stats = [
     name: "Heal + Shield",
     icon: 'ph:shield-plus',
     bgClass: 'bg-blues/90',
+    ringClass: 'ring-blues/90',
+    value: 'Heal and Shield Power',
     classList: '',
-    cat: 'utility',
+    cat: 'Magic',
   },
   {
     name: "Ability Haste",
     icon: 'ph:hourglass',
     bgClass: 'bg-blues/90',
+    ringClass: 'ring-blues/90',
     classList: '',
-    cat: 'utility',
+    cat: 'Utility',
   },
   {
     name: "Health",
     icon: 'mdi:plus-bold',
     bgClass: 'bg-success/90',
+    ringClass: 'ring-success/90',
     classList: '',
-    cat: 'utility',
+    cat: 'Defense',
   },
   {
     name: "Health Regen",
     icon: 'mdi:plus-bold',
     bgClass: 'bg-success/90',
+    ringClass: 'ring-success/90',
     classList: '',
-    cat: 'utility',
+    cat: 'Defense',
   },
   {
     name: "Armor",
     icon: 'ph:shield-chevron',
     bgClass: 'bg-success/90',
+    ringClass: 'ring-success/90',
     classList: '',
-    cat: 'utility',
+    cat: 'Defense',
   },
   {
     name: "Magic Resist",
     icon: 'ph:shield-star',
     bgClass: 'bg-success/90',
+    ringClass: 'ring-success/90',
     classList: '',
-    cat: 'utility',
+    cat: 'Defense',
   },
   {
     name: "Ability Power",
     icon: 'tabler:comet',
     bgClass: 'bg-info/90',
+    ringClass: 'ring-info/90',
     classList: ' -rotate-90 stroke-[0.7] size-[1.1rem] -mr-[2px] ',
-    cat: 'utility',
+    cat: 'Magic',
   },
   {
     name: "Magic Pen",
     icon: 'tabler:comet',
     bgClass: 'bg-info/90',
+    ringClass: 'ring-info/90',
     classList: ' -rotate-90 size-[1.1rem] -mr-[2px] ',
-    cat: 'utility',
+    cat: 'Magic',
   },
   {
     name: "Tenacity",
     icon: 'streamline:spiral-shape',
     bgClass: 'bg-base-300',
+    ringClass: 'ring-base-300',
     classList: ' -rotate-90 size-[1.1rem] -mr-[2px] ',
     cat: 'utility',
   },
   {
     name: "GP/10",
     icon: 'ph:hand-coins-fill',
+    value: '5 per 10 seconds',
     bgClass: 'bg-warning/90',
+    ringClass: 'ring-warning/90',
     classList: '',
     cat: 'utility',
   },
@@ -93,43 +107,50 @@ const stats = [
     name: "Movespeed",
     icon: 'mdi:run-fast',
     bgClass: 'bg-base-300',
+    ringClass: 'ring-base-300',
     classList: '',
+    value: 'Movement Speed',
     cat: 'utility',
   },
   {
     name: "Crit",
     icon: 'game-icons:comet-spark',
     bgClass: 'bg-error/90',
+    ringClass: 'ring-error/90',
     classList: '  ',
-    cat: 'utility',
+    cat: 'Physical',
   },
   {
     name: "Armor Pen",
     icon: 'ph:shield-slash',
     bgClass: 'bg-error/90',
+    ringClass: 'ring-error/90',
     classList: '',
-    cat: 'utility',
+    cat: 'Physical',
   },
   {
     name: "Lethality",
     icon: 'mdi:target',
     classList: ' size-[1.05rem] -mr-[3px] ',
     bgClass: 'bg-error/90',
-    cat: 'physical',
+    ringClass: 'ring-error/90',
+    cat: 'Physical',
   },
   {
     name: "Attack Speed",
     icon: 'mdi:bow-arrow',
     bgClass: 'bg-warning/90',
+    ringClass: 'ring-warning/90',
     classList: '',
-    cat: 'utility',
+    cat: 'Physical',
   },
   {
     name: "Attack Damage",
     icon: 'ph:axe',
     classList: ' size-[1.05rem] -mr-[3px] ',
-    bgClass: 'bg-warning/90',
-    cat: 'utility',
+    bgClass: 'bg-amber-600/50',
+    ringClass: 'ring-amber-600/50',
+    cat: 'Physical',
   }
 ];
 
@@ -143,72 +164,110 @@ interface stat {
   cat: string;
   badgeClass?: string;
 }
+
+// Compute the filtered magic stats
+const magic = computed(() => {
+  return stats.filter((stat) => stat.cat.toLowerCase() === 'magic'); // Filtering for 'magic' category
+});
+// Compute the filtered magic stats
+const utility = computed(() => {
+  return stats.filter((stat) => stat.cat.toLowerCase() === 'utility'); // Filtering for 'magic' category
+});
+// Compute the filtered magic stats
+const defense = computed(() => {
+  return stats.filter((stat) => stat.cat.toLowerCase() === 'defense'); // Filtering for 'magic' category
+});
+// Compute the filtered magic stats
+const physical = computed(() => {
+  return stats.filter((stat) => stat.cat.toLowerCase() === 'physical'); // Filtering for 'magic' category
+});
+
+const cats = [
+  {
+    name: 'magic',
+    icon: 'mdi:sparkles',
+    ringClass: 'ring-info/90',
+  },
+  {
+    name: 'utility',
+    icon: 'hugeicons:potion',
+    ringClass: 'ring-blues/90',
+  }
+  ,
+  {
+    name: 'defense',
+    icon: 'ph:shield-plus',
+    ringClass: 'ring-success/90',
+  },
+  {
+    name: 'physical',
+    icon: 'mdi:bow-arrow',
+    ringClass: 'ring-warning/90',
+  }
+];
+
+// Function to map category to its stats
+function getStatsForCategory(category: string) {
+  switch (category) {
+    case 'magic':
+      return magic.value;
+    case 'utility':
+      return utility.value;
+    case 'defense':
+      return defense.value;
+    case 'physical':
+      return physical.value;
+    default:
+      return [];
+  }
+}
+
+
+const isCollapsed = ref(true);
 </script>
 
 <template>
 
-  <VDropdown theme="menuDark" placement="bottom-end" class="border-none join-item btn btn-xs btn-outline">
-
-    <button class="flex">
-      <icon icon="teenyicons:filter-outline" class="size-3.5" />
-    </button>
-    <template #popper>
 
 
+  <div class="grid gap-5 px-1 py-2 mt-2 w-60 ">
 
-
-      <!-- 
-    <div v-if="is.statFilters.length > 0"
-      class="z-10 flex items-center gap-3 pointer-events-auto justify-self-start btn-xs ">
-
+    <template v-for="cat in cats">
       <div
-        class="filter-on rounded-full size-2 after:size-2 after:absolute after:top-0 after:-right-[0px] after:bg-success bg-success relative mb-2 top-[3px] right-[0px] after:rounded-full after:animate-ping">
-      </div>
-
-      <Icon icon="teenyicons:x-outline" class="self-center  size-3 -mt-[2px] p-0" @click="is.statFilters.length = 0"
-        alt="Reset Filters" title="Reset Filters" />
-
-    </div> -->
+        class="  pointer-events-auto p-3 gap-1.5 flex flex-wrap [&_div]:!text-xs border border-base-300/60 rounded-lg relative">
+        <div
+          class="pb-1.5  size-9 aspect-square mt-2 flex rounded-full items-center justify-center   absolute -top-4 -right-2 bg-base-100 brightness-[98%]">
+          <icon :icon="cat.icon" class="opacity-50 size-[18px]" />
 
 
+        </div>
 
+        <template v-if="getStatsForCategory(cat.name)">
+          <label v-for="stat in getStatsForCategory(cat.name)" :key="stat.name"
+            class="transition-all duration-150 relative z-0 overflow-hidden cursor-pointer  badge has-[:checked]:border-0 badge-outline hover:brightness-60 hover:text-neutral-content border-neutral/30   hover:!bg-neutral ">
 
-      <div class="scrollbar-hide pointer-events-auto  flex flex-wrap [&_div]:!text-xs gap-2 p-3 w-56">
+            <input type="checkbox" v-model="is.statFilters" class="hidden peer" :value="stat.value || stat.name" />
 
-        <span
-          class="w-full col-span-3 pb-1.5 border-b border-[groove] border-neutral-600 font-semibold text-neutral-content/70 ">Filter
-          by Stat
-        </span>
+            <div :class="stat.bgClass"
+              class="absolute z-10 w-full h-full transition-all   duration-150  peer-[:not(:checked)]:bg-transparent ">
 
-
-        <label v-for="stat in sorted"
-          class="badge  hover:opacity-60 cursor-pointer badge-primary has-[:checked]:badge-ghost ">
-
-          <input type="checkbox" v-model="is.statFilters" class="hidden peer" :value="stat.name"
-            @change="console.log(is.items.stats)" />
-
-          <div class="">
-            {{ stat.name }}
-          </div>
-          <!--         <icon :icon="stat.icon" :class="stat.classList" class="w-4 text-base-content/80 size-4 " /> -->
-        </label>
-
-
+            </div>
+            <div class="z-20 font-medium peer-checked:text-neutral-content peer-checked:hover:text-base-content">
+              {{ stat.name }}
+            </div>
+            <!--         <icon :icon="stat.icon" :class="stat.classList" class="w-4 text-base-content/80 size-4 " /> -->
+          </label>
+        </template>
       </div>
     </template>
-  </VDropdown>
+
+
+  </div>
+
 
 
 
 </template>
 
-<style scoped>
-.active,
-.v-popper--shown {
-  @apply bg-neutral text-neutral-content;
-}
 
-.active {
-  @apply ring-1 ring-offset-1 ring-neutral ring-offset-base-100;
-}
-</style>
+<style scoped></style>

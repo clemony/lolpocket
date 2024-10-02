@@ -9,18 +9,6 @@ export const useUserStore = defineStore(
   () => {
     const ds = useDataStore();
     const showSidebar = ref();
-    const faveChamps = <Champion[]>[];
-
-    const faveItems = <Item[]>[];
-
-    function toggleFavoriteItem(item) {
-      if (faveItems.includes(item)) {
-        faveItems.splice(item, 1);
-      } else {
-        faveItems.push(item);
-      }
-      console.log(faveItems);
-    }
 
     const dataMode = ref('light');
     const dataTheme = ref('lightminimalist');
@@ -34,16 +22,13 @@ export const useUserStore = defineStore(
     // Watch for mode changes
     watch(dataMode, (newMode) => {
       document.documentElement.setAttribute('data-mode', newMode);
-      console.log(`Mode changed to: ${newMode}`);
+      //console.log(`Mode changed to: ${newMode}`);
     });
 
     return {
       dataTheme,
       dataMode,
       dataAccent,
-      faveChamps,
-      faveItems,
-      toggleFavoriteItem,
       showSidebar,
     };
   },

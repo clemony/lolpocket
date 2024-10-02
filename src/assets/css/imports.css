@@ -11,6 +11,8 @@
 /* @import '@assets/css/themes.css'; */
 @import 'vue3-toastify/dist/index.css';
 @import 'floating-vue/dist/style.css';
+@import '@fontsource-variable/playwrite-it-moderna';
+@import '@fontsource-variable/roboto-serif';
 
 @layer base {
   @import '@fontsource/geist-mono';

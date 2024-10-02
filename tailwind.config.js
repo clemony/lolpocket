@@ -1,6 +1,5 @@
 const animate = require('tailwindcss-animate');
 const scrollbarhide = require('tailwind-scrollbar-hide');
-const typography = require('@tailwindcss/typography');
 /*const colors = require("tailwindcss/colors");*/
 const path = require('path');
 const daisyui = require('daisyui');
@@ -10,7 +9,7 @@ const daisyui = require('daisyui');
 /** @type {import('tailwindcss').Config} */
 (
   module.exports = {
-    plugins: [animate, scrollbarhide, typography, daisyui],
+    plugins: [animate, scrollbarhide, daisyui],
 
     darkMode: ['class'],
     safelist: ['dark'],
@@ -26,13 +25,22 @@ const daisyui = require('daisyui');
     ],
 
     theme: {
+      fontFamily: {
+        sans: ['Geist Sans', 'sans-serif'],
+        serif: ['Roboto Serif Variable', 'serif'],
+        mono: ['Geist\\ Mono', 'monospace'],
+        cursive: ['Playwrite\\ IT\\ Moderna \\ Variable', 'cursive'],
+      },
       extend: {
         colors: {
-          blues: '#91C1CA',
+          blues: '#7195AD',
           cyans: '#9AC4BF',
           'tea-rose': '#E2ACAC',
           'dark-rose': '#CE8E8E',
           'old-rose': '#CE8E8E',
+        },
+        flexBasis: {
+          18: '4.5rem',
         },
         fontSize: {
           xxs: '0.599rem',

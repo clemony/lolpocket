@@ -5,19 +5,19 @@ import { useDataStore } from './dataStore';
 
 const ds = useDataStore();
 
+export interface RuneSet {
+  key: number;
+  name: string;
+  primary: string;
+  secondary: string;
+  runes: string[]; // Array to store rune values
+  shards: string[];
+}
+
 export const useRuneStore = defineStore(
   'runeStore',
   () => {
     const runes = JSON.parse(JSON.stringify(ds.runes));
-
-    interface RuneSet {
-      key: number;
-      name: string;
-      primary: string;
-      secondary: string;
-      runes: string[]; // Array to store rune values
-      shards: string[];
-    }
 
     const runeSets = ref<RuneSet[]>([]);
     const selectedSetKey = ref<number>(1); // Default set key
@@ -67,7 +67,7 @@ export const useRuneStore = defineStore(
     });
 
     function setPath(selectIdentifier: string, path: string) {
-      console.log('selected paths: ', selectedPaths.value);
+      //console.log('selected paths: ', selectedPaths.value);
 
       if (selectedPaths.value[selectIdentifier] !== undefined) {
         // Update the selected path for the given identifier

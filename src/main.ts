@@ -11,7 +11,7 @@ import { useDataStore } from './stores/dataStore';
 import { useUserStore } from './stores/userStore.js';
 import Vue3Toastify, { toast, type ToastContainerOptions, type CSSTransitionProps } from 'vue3-toastify';
 import FloatingVue from 'floating-vue';
-import { FloatingVueOptions } from './utils/floatingVueConfig.js';
+import { createVfm } from 'vue-final-modal';
 
 const getRoutes = routes;
 
@@ -55,6 +55,8 @@ const customAnimation = {
   // appendPosition: true, // default to false
 } as CSSTransitionProps;
 
+const vfm = createVfm();
+
 app.component('Splitpanes', Splitpanes);
 app.component('Pane', Pane);
 app.component('Icon', Icon);
@@ -64,6 +66,7 @@ const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
 app.use(pinia);
 app.use(router);
+app.use(vfm);
 app.use(FloatingVue, {
   disabled: false,
   distance: 5,
@@ -80,7 +83,7 @@ app.use(FloatingVue, {
   // Overflow padding (px)
   overflowPadding: 15,
   // Arrow padding (px)
-  arrowPadding: 20,
+  arrowPadding: 30,
   // Compute arrow overflow (useful to hide it)
   arrowOverflow: true,
   /**
@@ -95,6 +98,8 @@ app.use(FloatingVue, {
       flip: true,
       instantMove: true,
       placement: 'bottom',
+      handleResize: true,
+      overflowPadding: 25,
     },
     minitt: {
       $extend: 'tooltip',
@@ -107,7 +112,19 @@ app.use(FloatingVue, {
       autoHide: true,
       placement: 'bottom',
     },
-
+    menuLight: {
+      $extend: 'dropdown',
+      triggers: ['click'],
+      autoHide: true,
+      placement: 'bottom',
+      distance: 8,
+      instantMove: true,
+      boundary: '#itemGrid',
+      delay: {
+        show: 100,
+        hide: 0,
+      },
+    },
     btn: {
       $extend: 'tooltip',
       triggers: ['click'],
@@ -127,6 +144,7 @@ app.use(FloatingVue, {
     menuDark: {
       $extend: 'menu',
       eagerMount: false,
+      distance: 1,
       placement: 'right-start',
       instantMove: true,
     },
@@ -136,8 +154,8 @@ app.use(Vue3Toastify, {
   autoClose: 4000,
   hideProgressBar: true,
   transition: customAnimation,
-  position: toast.POSITION.BOTTOM_RIGHT,
-  toastClassName: 'backdrop-blur-md !bg-neutral/80 !text-neutral-content !rounded-box shadow-warm text-sm',
+  position: toast.POSITION.TOP_CENTER,
+  toastClassName: 'toasty',
 } as ToastContainerOptions);
 
 const ds = useDataStore();

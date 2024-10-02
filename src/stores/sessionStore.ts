@@ -75,7 +75,7 @@ export const useSessionStore = defineStore(
     var sidebar = [];
     function getSidebarforTab(link) {
       sidebar = link;
-      console.log(link);
+      //console.log(link);
       return sidebar;
     }
 

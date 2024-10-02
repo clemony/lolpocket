@@ -1,37 +1,10 @@
 <script setup lang="ts">
-import { onMounted, ref, computed } from 'vue';
-import {
-    type DraggableEvent,
-    type UseDraggableReturn,
-    VueDraggable
-} from 'vue-draggable-plus'
+import { onMounted, ref, computed, reactive, watch } from 'vue';
+import { VueDraggable } from 'vue-draggable-plus'
 import { useItemStore } from "../../stores/itemStore";
-import { useDataStore } from "../../stores/dataStore";
-import { useUserStore } from '../../stores/userStore';
-const us = useUserStore();
+import { Item, useDataStore } from "../../stores/dataStore";
 const ds = useDataStore();
 const is = useItemStore();
-
-
-
-const quickSearch = ref('');
-const filteredItems = computed(() => {
-    let filtered = is.items;
-
-    // Apply search filter if any
-    if (quickSearch) {
-        const searchTerm = quickSearch.value.toLowerCase();
-        filtered = filtered.filter((item) => Object(item).some((value) => typeof value === 'string' && value.toLowerCase().includes(searchTerm)));
-    }
-    return filtered;
-});
-
-
-const disabled = ref(false)
-
-const onUpdate = () => {
-    console.log('update')
-}
 
 onMounted(() => {
     const ds = useDataStore();
@@ -42,56 +15,99 @@ onMounted(() => {
 
 });
 
+
+const quickSearch = ref('');
+const returnData = ref([]);
+
+// Use returnData to access the emitted array
+watch(returnData, (newVal) => {
+    console.log('Received array from child:', newVal);
+    is.addToSet(newVal[0], newVal[1]);
+
+});
+/* 
+watch(() => returnData,
+    (newVal) => {
+        console.log(returnData)
+        console.log("parentdata: ", newVal);
+    },
+    { immediate: true }
+);
+ */
+const filteredItems = computed(() => {
+    let filtered = is.items;
+
+
+    // Apply search filter if any
+    if (quickSearch) {
+        const searchTerm = quickSearch.value.toLowerCase();
+        filtered = filtered.filter((item: any) =>
+            Object.values(item).some((value) => typeof value === 'string' && value.toLowerCase().includes(searchTerm)));
+    }
+    return filtered;
+});
+
+
+function handleDragEnd(event) {
+    console.log('hi');
+    const draggedItem = event.item; // The item being dragged (from source)
+    console.log(draggedItem);
+    const targetSet = event.to; // The target set where the item is dropped
+
+    // Ensure you have access to the target set's items
+    if (targetSet && targetSet.items) {
+        // Check if the dragged item already exists in the target set
+        const isDuplicate = targetSet.items.some(item => item.name === draggedItem.name);
+
+        if (isDuplicate) {
+            // If it's a duplicate, do not add the dragged item
+            console.log('Duplicate item found. Item not added.');
+            event.item.remove(); // This removes the dragged item if it's a duplicate
+        } else {
+            // Proceed to add the dragged item if it's not a duplicate
+            targetSet.items.push(draggedItem); // Make sure to clone if necessary
+        }
+    }
+}
+
+
+
 const viewFilters = defineModel({
     default: 'hideFilters'
 });
 
+const dropdownShown = reactive({});
 
-function onAdd() {
-    console.log('add')
-}
-function remove() {
-    console.log('remove')
-}
 
-const isDropdownShown = ref(false); // Manage dropdown visibility state
-const set = ref({ key: 1, name: '' }); // Dummy set object for demonstration
 
-const submitAndClose = () => {
-    console.log('Form submitted with:', set.value.name);
+const submitAndClose = (key) => {
+    console.log('Form submitted for set key:', key);
 
-    // Close the dropdown after submission
-    isDropdownShown.value = false;
+    // Close the dropdown for the specific set after submission
+    dropdownShown[key] = false;
 };
 
 const suggestions = ["Early", "Mid", "Late", "Core", "Offensive", "Defensive", "Utility", "DPS", "Burst", "Situational"];
 
-const selectedSuggestion = ref('');
 </script>
 
 <template>
 
 
     <VueDraggable tag="div" v-model="is.itemSets" :delay="0" :animation="300" :group="{ name: 'sets' }"
-        :prevent-on-filter='true' ghostClass="ghost" @update="onUpdate" @add="onAdd" @remove="remove"
-        :force-fallback="true" :fallbackTolerance="0" fallbackClass="drag-clone" :fallbackOnBody="true"
-        class="z-0 h-full">
+        :prevent-on-filter='true' ghostClass="ghost" :force-fallback="true" :fallbackTolerance="0"
+        fallbackClass="drag-clone" :fallbackOnBody="true" class="z-0 h-full">
 
-        <div v-for="set in is.itemSets" dragClass="setDrag" class="grid px-3" :key="set.key">
-
-            <!-- 
-                <div class="h-full cursor-move">
-                    <icon icon='material-symbols-light:drag-handle' class="pointer-events-none size-7 opacity-20" />
-                </div> -->
+        <div v-for="set in is.itemSets" dragClass="setDrag" class="grid px-1 pt-1" :key="set.key">
 
             <div class="flex items-center h-10 gap-3 px-1 mt-1 ">
-                <VDropdown theme="overlay" class="" v-model:shown="isDropdownShown">
+                <VDropdown theme="detail" class="" v-model:shown="dropdownShown[set.key]">
                     <button class="self-center text-xs opacity-60">{{ set.name || 'Set ' + set.key }}</button>
 
                     <template #popper>
 
                         <div class="grid gap-2 rounded-lg ">
-                            <div class="relative p-1.5 overflow-hidden border-b border-neutral-500 ">
+                            <div class="relative p-1.5 overflow-hidden border-b border-base-300 ">
                                 <input type="text"
                                     class="w-full pt-1 italic bg-transparent rounded select-all input-xs peer focus:not-italic opacity-80 focus:opacity-100"
                                     spellcheck='false' :placeholder="'Set ' + set.key" v-model="set.name"
@@ -99,17 +115,19 @@ const selectedSuggestion = ref('');
 
                                 <icon icon='ri:edit-fill'
                                     class="opacity-50  size-3.5 absolute right-2.5 top-[11px] peer-focus:opacity-0" />
-                                <button
+                                <!--                     <button
                                     class="size-4 opacity-0 peer-focus:opacity-80 *:size-3 absolute right-2 top-[4px] *:absolute "
-                                    @click="set.name = ''">
+                                    @">
                                     <icon icon='teenyicons:x-outline' />
 
-                                </button>
+                                </button> -->
+
+                                <ClearButton :click="set.name = ''" />
                             </div>
 
                             <div class="flex flex-wrap gap-2 px-2 pb-3 max-w-44">
                                 <button v-close-popper v-for="word in suggestions"
-                                    class="text-xs  badge-sm badge-primary badge opacity-70 capitalize hover:badge-ghost has-[:checked]:badge-ghost"
+                                    class="text-xs capitalize badge-sm badge-neutral badge hover:badge-ghost"
                                     @click="set.name = word">
                                     {{ word }}
                                 </button>
@@ -120,7 +138,7 @@ const selectedSuggestion = ref('');
                 </VDropdown>
                 <span class="self-start border-b h-1/2 grow border-base-300"></span>
 
-                <VDropdown theme="overlay" placement="left-start" class="arrow ">
+                <VDropdown theme="detail" placement="left-start" class="arrow ">
 
                     <button class="relative flex items-center justify-center group/menu size-4">
                         <icon icon='teenyicons:cog-outline'
@@ -135,33 +153,23 @@ const selectedSuggestion = ref('');
                             <div class="grid items-center gap-1 flex-nowrap">
 
                                 <button
-                                    class="flex items-center gap-2 font-normal  !justify-start  px-3 btn btn-xs text-xs btn-ghost hover:bg-neutral "
+                                    class="flex items-center gap-3   !justify-start  px-3 btn btn-xs text-xs btn-ghost hover:bg-base-200"
                                     alt="Clear Items" @click="is.resetItems(set.key)">
-                                    <icon icon='material-symbols-light:reset-focus-sharp' class="-ml-1 size-5" />
-                                    <span>Clear All Items</span>
+                                    <icon icon='ph:eraser' class="-ml-1 size-4" />
+                                    <span>Clear Items</span>
                                 </button>
-                                <div class="border-b border-neutral-500"></div>
+                                <div class="border-b border-base-200"></div>
                                 <button
-                                    class="relative flex !justify-start items-center gap-2  px-3  btn btn-xs text-xs btn-ghost group/trash disabled:bg-transparent disabled:opacity-60 disabled:cursor-not-allowed font-normal !text-neutral-content"
+                                    class="relative flex !justify-start items-center gap-3  px-3  btn btn-xs text-xs btn-ghost group/trash disabled:bg-transparent  disabled:cursor-not-allowed  hover:bg-base-200"
                                     alt="Delete Set" @click="is.deleteSet(set.key)" :disabled="is.itemSets.length == 1">
-                                    <icon icon='ep:folder-delete'
-                                        class="object-center group-disabled/trash:opacity-0 size-4.5 -ml-0.5" />
-                                    <icon icon="ep:folder"
-                                        class="absolute opacity-0 group-disabled/trash:opacity-60 size-4.5 -ml-0.5" />
+                                    <icon icon='iconoir:bin-full'
+                                        class="object-center -ml-1 group-disabled/trash:opacity-0 size-4" />
+                                    <icon icon="iconoir:bin"
+                                        class="absolute -ml-1 opacity-0 group-disabled/trash:opacity-60 size-4" />
                                     <span> Delete Set</span>
                                 </button>
-
-
                             </div>
-
-                            <!--                                 <button
-                                    class="shadow-none  absolute bottom-3 right-1.5 transition-opacity duration-300  peer-focus:opacity-100 text-base-content/60 hover:text-base-content/90 opacity-0 peer-focus:z-10 z-0"
-                                    alt="Clear Text" title="Clear Text">
-
-                                    <icon icon='teenyicons:x-circle-solid' class=" size-3" />
-                                </button> -->
                         </div>
-
                     </template>
 
                 </VDropdown>
@@ -180,16 +188,17 @@ const selectedSuggestion = ref('');
             <VueDraggable ref="el" v-model="set.items" :group="{
                 name: 'items', pull: true, put: ['items'],
                 revertClone: false
-            }" :force-fallback="true" :fallbackTolerance="0" fallbackClass="drag-clone" :fallbackOnBody="true"
-                @remove="remove" class="!p-1 drag-draggable item overflow-hidden">
+            }" :scroll="false" :bubbleScroll="false" :key="set.key" :fallbackTolerance="0" fallbackClass="drag-clone"
+                :force-fallback="true" :fallbackOnBody="true" @end="handleDragEnd"
+                class="!p-1 drag-draggable item overflow-hidden  !justify-start scrollbar-hide">
 
 
                 <VDropdown v-for="item in set.items" :key="item.id" :overflow-padding="20" :shift="true" theme="detail"
-                    :distance="6" @click.right.prevent="" :ref="item.name" class="relative max-w-[64px] max-h-[64px]">
+                    :distance="6" @click.right.prevent="" :ref="item.name" class="relative max-w-[64px] max-h-[64px] ">
 
-                    <label class="drag-label">
-                        <div class="drag-wrapper">
-                            <input type="radio" :value="item" v-model="is.selectedItem" class="hidden peer" />
+                    <label class="!overflow-hidden drag-label">
+                        <div class="!overflow-hidden drag-wrapper">
+
                             <img :src="item.img" class="drag-img" />
 
                             <div :key="item.id + 'Count'" :class="{ '!opacity-85': item.count > 1 }"
@@ -206,30 +215,20 @@ const selectedSuggestion = ref('');
                 </VDropdown>
 
 
-                <!--          <button
-                    class="group-hover/item:opacity-100 opacity-0 absolute top-0.5 right-0.5 bg-base-100/70 rounded-full"
-                    alt="Remove item from set" title="Remove">
-                    <icon icon='teenyicons:x-circle-solid' class="   size-3.5" />
-                </button> -->
 
-                <VDropdown theme="overlay" class="p-1  ghosty drag-label !w-[64px] ">
+                <VDropdown theme="detail" alt="Quick Search" :distance="8"
+                    class="search-drop ghosty drag-label flex basis-16 !p-0 group/qs  after:grid after:place-content-center after:w-full after:h-full after:content-['+'] after:absolute relative hover:after:text-neutral z-0 hover:after:opacity-60 after:opacity-50 !cursor-pointer">
+
+
                     <div
-                        class="grid items-center border-none !pointer-events-auto drag-wrapper opacity-40 place-content-center w-full h-full">
-                        +
+                        class=" group-hover/qs:opacity-40 group-hover/qs:scale-95 scale-105 z-20 opacity-0 select-none bg-[url('/img/ui/frame.webp')] bg-center bg-contain transition-all bg-no-repeat duration-200  w-full h-full brightness-0 cursor-pointer ">
+
                     </div>
 
+
                     <template #popper>
-                        <div class="p-2">
-                            <input placeholder="search..." v-model="quickSearch" spellcheck="false"
-                                class="w-full h-full text-xs italic !outline-none !outline-0 !outline-transparent ring-0 focus:not-italic bg-transparent placeholder:text-xs "
-                                @keydown.enter.prevent
-                                @click="console.log('qs: ', quickSearch, 'filtI: ', filteredItems)" />
-                            <ul v-if="quickSearch" class="">
-                                <li v-for="item in filteredItems" :key="item.id">
-                                    {{ item.name }}
-                                </li>
-                            </ul>
-                        </div>
+                        <QuickSearch :array="filteredItems" v-model:quickSearch="quickSearch"
+                            v-model:returnData="returnData" v-model:thisSet="set.key" />
                     </template>
                 </VDropdown>
 
@@ -249,6 +248,8 @@ const selectedSuggestion = ref('');
         @apply opacity-80;
     }
 }
+
+
 
 .ghost {
     @apply w-[96%] rounded-box bg-base-200 m-4;

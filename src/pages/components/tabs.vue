@@ -57,7 +57,7 @@ onMounted(() => {
 <template>
 
 
-    <div data-tauri-drag-region role="tablist" class="tabs tabs-lifted flex z-10 pointer-events-auto">
+    <div data-tauri-drag-region role="tablist" class="z-10 flex pointer-events-auto tabs tabs-lifted">
         <template v-for="tab in sn.openTabs" :key="tab.id">
             <a role="tab"
                 class="group flex justify-start tab m-0 w-36 before:visible before:-left-[8px]  after:visible capitalize text-xs z-[5]  pointer-events-auto font-medium"
@@ -67,16 +67,17 @@ onMounted(() => {
                 <span class="mt-[2px] grow justify-start flex">{{ tab.title }}</span>
 
                 <button
-                    class="opacity-0 flex content-center justify-end group-hover:opacity-70 transition-opacity duration-300 size-4"
+                    class="flex content-center justify-end transition-opacity duration-300 opacity-0 group-hover:opacity-70 size-4"
                     @click.stop="removeTab(tab.id)"> <!-- Stop event propagation to prevent tab click -->
                     <Icon icon="material-symbols:close" class="size-3.5 ml-2 -mr-1" />
                 </button>
 
             </a>
             <div role="tabpanel" class="tab-content overflow-hidden  !bg-base-100/90 absolute inset-0 m-0 mt-[31px]   border-base-300 border h-auto !p-0 !rounded-bl-none !rounded-tr-none
-           !shadow-[inset_-12px_-8px_40px_#46464620] ">
+           !shadow-[inset_-12px_-8px_40px_#46464620]  ">
 
                 <RouterView />
+
             </div>
         </template>
         <a role="tab" class="hidden basket">egg</a>
@@ -104,6 +105,12 @@ onMounted(() => {
     padding-bottom: 0 !important;
 }
 
+
 .tab-active {
-    @apply brightness-[97%];
+    --shadow-color:  oklch(var(--b1) / 0.4) ;
+    @apply !brightness-[97%] ;
+}
+
+.tab-active {
+    @apply bg-base-100 brightness-[99%]  !z-30;
 }</style>

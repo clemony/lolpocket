@@ -21,7 +21,7 @@ export interface Item {
   passive: string;
   active: string;
   type: string;
-  tier: string;
+  cat: string;
   wiki: string;
   id: number;
   count: number;
@@ -49,6 +49,7 @@ export interface Champion {
     e: Ability;
     r: Ability;
   };
+  items: Item[];
 }
 
 interface Shard {
@@ -89,9 +90,9 @@ export const useDataStore = defineStore('dataStore', () => {
     return shards.value;
   }
   // Use a computed property to extract unique paths from the runes array
-  const uniqueTiers = computed(() => {
-    const tier = items.value.map((item) => item.tier.replace(' item', '').replace('Potions and ', '').replace(/s$/, '').trim());
-    return Array.from(new Set(tier)); // Create an array with only unique paths
+  const uniqueCats = computed(() => {
+    const cat = items.value.map((item) => item.cat.replace(' item', '').replace('Potions and ', '').replace(/s$/, '').trim());
+    return Array.from(new Set(cat)); // Create an array with only unique paths
   });
 
   // Use a computed property to extract unique paths from the runes array
@@ -117,7 +118,7 @@ export const useDataStore = defineStore('dataStore', () => {
           ?.toString()
           .replace(/(Unique.*?:)+/g, '\n<b>$1</b>&nbsp;')
           .trim() || '',
-      tier: data.tier,
+      cat: data.tier,
       stats: data.stats?.toString().replace(/\+/g, '').trim() || '', // Safely handle undefined and provide fallback
       type: data.type,
       id: data.id,
@@ -223,6 +224,7 @@ export const useDataStore = defineStore('dataStore', () => {
           img: data.rImg,
         },
       },
+      items: [],
     };
   }
 
@@ -268,7 +270,7 @@ export const useDataStore = defineStore('dataStore', () => {
     selectedChampion,
     setSelectedChampion,
     getRunes,
-    uniqueTiers,
+    uniqueCats,
     uniquePaths,
     shards,
     getShards,

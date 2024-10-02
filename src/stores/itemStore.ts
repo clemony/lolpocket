@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { ref } from 'vue';
+import { ref, Ref } from 'vue';
 import { useDataStore } from './dataStore';
 import type { Item } from './dataStore';
 
@@ -9,37 +9,63 @@ export interface ItemSet {
   key: number;
   name: string;
   items: Item[];
+  isDisabled: boolean; // Add this to track duplicates
 }
 
 export const useItemStore = defineStore(
   'itemStore',
   () => {
-    const buildName = ref('');
-    const buildIcon = ref('teenyicons:folder-outline');
-
     const selectedItem = ref();
 
-    const items = [...ds.items];
+    const items = ref([...ds.items]);
 
     const sortName = ref('');
     const sortPrice = ref('');
     const searchFilter = ref('');
-    const tierFilters = ref<string[]>([]);
+    const catFilters = ref<string[]>([]);
     const statFilters = ref<string[]>([]);
-
-    /* -------------------------------- BUILD -------------------------------- */
-
-    // Reactive array of BuildSet
+    const viewLiked = ref(false);
+    const likedItems = ref<Item[]>([]);
     const itemSets = ref<ItemSet[]>([]);
+    // const setItems = ref<Item[]>([]);
+
+    watch(
+      () => likedItems.value, // Watch the value of likedItems
+      (newVal) => {
+        // Check if likedItems is empty
+        if (newVal.length === 0) {
+          viewLiked.value = false; // Set viewLiked to false if array is empty
+        }
+      },
+      { immediate: true } // Ensure it runs on initialization
+    );
+
+    function handleLike(thisItem) {
+      // Use likedItems.value to access the underlying array
+      if (likedItems.value.some((item) => item.name === thisItem.name)) {
+        const index = likedItems.value.findIndex((item) => item.name === thisItem.name);
+        if (index !== -1) {
+          likedItems.value.splice(index, 1); // Access the value of likedItems
+          toast('♥︎ ' + thisItem.name + ' disliked!');
+        }
+      } else {
+        likedItems.value.push(thisItem); // Access the value of likedItems
+        toast('♥︎ ' + thisItem.name + ' liked!');
+      }
+    }
+    /* -------------------------------- BUILD -------------------------------- */
 
     function newSet() {
       const newKey = itemSets.value.length + 1;
 
-      itemSets.value.push({
-        key: newKey,
-        name: 'Set ' + newKey,
-        items: [], // Initialize items as an empty array of `Item`
-      });
+      itemSets.value.push(
+        reactive({
+          key: newKey,
+          name: 'Set ' + newKey,
+          items: [], // Initialize items as an empty array of `Item`
+          isDisabled: false, // Add isDisabled flag
+        })
+      );
     }
 
     function deleteSet(key: number) {
@@ -53,7 +79,6 @@ export const useItemStore = defineStore(
     /* -------------------------------- ITEMS -------------------------------- */
 
     // Wrap the arrays in `ref` to make them reactive
-    const buildItems = ref<Item[]>([]);
 
     function resetItems(key: number) {
       const set = itemSets.value.find((set) => set.key === key);
@@ -73,10 +98,9 @@ export const useItemStore = defineStore(
 
     function removeFromSet(itemx, key) {
       const set = itemSets.value.find((set) => set.key === key);
-      console.log('set: ', set);
+
       if (set) {
         const index = set.items.findIndex((item) => item === itemx);
-        console.log('index: ', index);
         if (set && Array.isArray(set.items)) {
           set.items.splice(index);
         }
@@ -86,29 +110,29 @@ export const useItemStore = defineStore(
     /* -------------------------------- RUNES  ------------------------------- */
 
     return {
-      buildName,
       items,
-      buildItems,
-      buildIcon,
       itemSets,
       newSet,
       deleteSet,
       resetItems,
       sortName,
       sortPrice,
-      tierFilters,
+      catFilters,
       statFilters,
       searchFilter,
       selectedItem,
       addToSet,
       removeFromSet,
+      viewLiked,
+      likedItems,
+      handleLike,
     };
-  } /* ,
+  },
 
   {
     persist: {
       storage: localStorage,
       key: 'itemStore',
     },
-  } */
+  }
 );

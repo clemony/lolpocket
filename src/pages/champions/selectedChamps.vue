@@ -1,67 +1,91 @@
 <script setup lang="ts">
+import { computed, ref, watch } from 'vue';
 import { useChampStore } from '../../stores/champStore';
-import {
-    VueDraggable,
-    UseDraggableReturn
-} from 'vue-draggable-plus'
-const cs = useChampStore();
+import { VueDraggable } from 'vue-draggable-plus'
+import { pocket, usePocketStore } from '../../stores/pocketStore';
 
-function onUpdate() {
-    console.log('update')
-}
-function onAdd() {
-    console.log('add')
-}
-function remove() {
-    console.log('remove')
-}
+const cs = useChampStore();
+const ps = usePocketStore();
+
+const props = defineProps<{
+    pocketKey: string;
+}>()
+
+console.log('pocket key in component: ', props.pocketKey)
+
+// Computed property to retrieve the specific pocket
+const thisPocket = computed<pocket | undefined>(() => {
+    if (!ps.pockets || !props.pocketKey) return undefined;
+    const key = Number(props.pocketKey);
+    return ps.pockets.find((pocket: pocket) => pocket.key === key);
+});
+
+// Create a reactive array to hold champions for VueDraggable
+const champions = ref<any[]>([]);
+
+// Watch for changes in thisPocket and update champions
+watch(thisPocket, (newPocket) => {
+    champions.value = newPocket?.champions[0]?.champions || []; // Assuming you want the first champions array
+}, { immediate: true });
+
+// Sync changes back to the store when champions are updated
+watch(champions, (newChampions) => {
+    if (thisPocket.value) {
+        thisPocket.value.champions[0].champions = newChampions; // Update the original pocket
+
+    }
+
+});
+
+console.log('this pocket: ', thisPocket);
+console.log('champions: ', champions.value);
+
+console.log(ps.pockets)
+
+
+const filteredChamps = ref('');
+const quickSearch = ref('');
 </script>
 
 <template>
 
-    <div
-        class=" border-b-base-300 border-b backdrop-blur-md absolute z-10 top-0 left-0 bg-base-100/90  items-center flex w-full  justify-end gap-3 !h-fit flex-wrap  py-1 px-4">
-
-        <h2 class="justify-start sub-text grow">
-            For...
-        </h2>
-
-        <div class="join">
-            <button class="join-item grid   btn btn-xs  place-items-center group *:size-4.5" @click="cs.resetChamps()">
-                <icon v-if="cs.champions2.length > 0" icon='iconoir:bin-full' class="" />
-                <icon v-else icon='iconoir:bin' class="" />
-            </button>
-
-        </div>
-    </div>
 
 
 
-    <VueDraggable v-model="cs.champions2" :delay="0" :animation="300"
+    <VueDraggable v-if="thisPocket" v-model="champions" :delay="0" :animation="300"
         :group="{ name: 'champs', pull: true, put: true, revertClone: false }" :prevent-on-filter='true'
-        ghostClass="ghosty" @update="onUpdate" @add="onAdd" @remove="remove" :force-fallback="true"
-        :fallbackTolerance="0" fallbackClass="drag-clone" :fallbackOnBody="true" class="drag-draggable champion">
+        ghostClass="ghosty" :force-fallback="true" :fallbackTolerance="0" fallbackClass="drag-clone"
+        :fallbackOnBody="true"
+        class="h-full overflow-x-scroll drag-draggable  !flex-nowrap py-1 items-center overflow-y-hidden px-0.5">
 
-        <template v-if="cs.champions2.length > 0">
-            <label v-for="(champion, index) in cs.champions2" :key="champion.name" :data-index="index"
-                class="drag-label" dragClass="setDrag">
 
-                <div class="drag-wrapper">
+        <div v-for="(champion, index) in champions" :key="champion.name" class=" basis-18 shrink-0">
+            <label class="drag-label basis-18 shrink-0" dragClass="setDrag">
 
-                    <img :src="champion.img" class="drag-img" />
+                <div class="drag-wrapper ">
+
+                    <img :src="champion.img" class="drag-img scale-[115%]" draggable='false' />
 
                     <input type="radio" :value="champion" v-model="cs.selectedChampion" class="hidden" />
                 </div>
 
             </label>
-        </template>
-
-        <div v-else
-            class="p-1 drag-label ghosty w-[70px] after:ring-1 after:ring-neutral/15 after:z-50 after:w-[98%] after:h-[98%] after:absolute after:rounded-md bg-gradient-to-br from-base-200/80 to-base-200/20">
-            <div class="grid items-center border-none drag-wrapper opacity-40 place-content-center">
-                +
-            </div>
         </div>
+
+        <VDropdown theme="detail" alt="Quick Search" :distance="8"
+            class=" ghosty shrink-0 drag-label flex w-[68px] h-[68px] !p-0 group/qs  after:grid after:place-content-center after:w-full after:h-full after:content-['+'] after:absolute relative hover:after:text-neutral z-0 hover:after:opacity-60 after:opacity-50 cursor-pointer  overflow-hidden search-drop">
+
+
+            <div
+                class=" group-hover/qs:opacity-40 group-hover/qs:scale-95 scale-105 z-20 opacity-0 select-none bg-[url('/img/ui/frame.webp')] bg-center bg-contain transition-all bg-no-repeat duration-200  w-full h-full brightness-0 cursor-pointer ">
+
+            </div>
+
+
+            <template #popper>
+                <QuickSearch :array="filteredChamps" v-model:quickSearch="quickSearch" />
+            </template>
+        </VDropdown>
         <!--          <button
             class="group-hover/item:opacity-100 opacity-0 absolute top-0.5 right-0.5 bg-base-100/70 rounded-full"
             alt="Remove item from set" title="Remove">

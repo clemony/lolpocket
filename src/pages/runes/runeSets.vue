@@ -59,7 +59,7 @@ const getKeystone = (path: string, index: number) => {
             class="z-20 flex items-center w-full h-full gap-4 p-2 transition-all duration-200 bg-right border-b group bg-clip-padding border-base-200">
             <input type="radio" :value="set.key" id="runeSets" v-model="rs.selectedSetKey" class="hidden peer" @change="
               rs.radioSelectRuneSet(set.key);
-            console.log(set.runes);
+
             " />
 
             <!-----------------------------⟢ DRAG ⟣-------------------------------->

@@ -3,16 +3,29 @@ import { Item } from '../../stores/dataStore';
 import { ItemSet } from './../../stores/itemStore';
 import { useItemStore } from './../../stores/itemStore';
 import { useUserStore } from '../../stores/userStore';
+import { toast } from 'vue3-toastify';
+import { computed, watch } from 'vue';
+import { useChampStore } from '../../stores/champStore';
 
-const us = useUserStore();
+const cs = useChampStore();
 const is = useItemStore();
 const props = defineProps<{
     item: Item;
     variant: string;
     set?: ItemSet;
+    champ?;
 }>();
 
 
+// Watch for changes to likedItems and log the new value
+watch(() => is.likedItems, (newVal) => {
+    //console.log('likedItems changed:', newVal);
+}, { immediate: true });
+
+// Computed property to check if the item is liked
+const isLiked = computed(() => {
+    return is.likedItems.some(item => item.name === props.item.name);
+});
 
 
 </script>
@@ -20,7 +33,7 @@ const props = defineProps<{
 
 <!-- This will be the content of the popover -->
 <template v-if="props.item">
-    <div class="relative grid p-2 w-60 overscroll-none">
+    <div class="relative grid p-4 !min-w-60  max-w-80 w-fit overscroll-none">
         <div class="grid grid-cols-[1fr_2fr] border-b border-base-300 pb-3 gap-2 w-full ">
 
             <div class="h-full col-start-1">
@@ -28,7 +41,7 @@ const props = defineProps<{
                     class="border rounded-md pointer-events-none border-base-300 shadow-warm" />
             </div>
 
-            <!-------------------------------⟢ Header ⟣-------------------------------->
+            <!---------------------------⟢ Header ⟣---------------------------->
 
             <div class="grid h-full grid-cols-1">
 
@@ -41,21 +54,21 @@ const props = defineProps<{
 
                 <div class="flex items-end justify-end gap-2 ">
 
-                    <label
-                        class="btn btn-circle btn-neutral btn-xs aspect-square group/fave hover:opacity-75 *:size-3.5 *:absolute relative  *:transition-all *:duration-100">
-
-
-                        <input type="checkbox" v-model="us.faveItems" :true-value="item" false-value=""
-                            class="hidden peer" />
-
-
-                        <icon icon="teenyicons:heart-solid" class="opacity-0 peer-checked:opacity-100 text-tea-rose " />
-                        <icon icon="teenyicons:heart-outline" class="peer-checked:text-old-rose " />
+                    <button
+                        class="btn btn-circle btn-neutral btn-xs aspect-square group/liked hover:opacity-75 *:size-3.5 *:absolute relative  *:transition-all *:duration-100"
+                        @click="is.handleLike(item)">
 
 
 
 
-                    </label>
+
+                        <icon v-if="isLiked" icon="teenyicons:heart-solid" class="text-dark-rose" />
+                        <icon icon="teenyicons:heart-outline" class="" :class="{ 'text-neutral/20': isLiked }" />
+
+
+
+
+                    </button>
 
 
 
@@ -72,8 +85,7 @@ const props = defineProps<{
                     </a>
 
 
-                    <VDropdown v-if="props.variant == 'add'" theme="menuDark" :triggers="['hover']"
-                        :popperTriggers="['hover']" :key="item.id + 'dropdown'"
+                    <VDropdown v-if="props.variant == 'add'" theme="detail" :key="item.id + 'dropdown'"
                         class="flex items-center gap-2 border-none btn btn-circle btn-neutral btn-xs aspect-square hover:opacity-75">
 
 
@@ -83,10 +95,9 @@ const props = defineProps<{
 
 
                         <template #popper :key="item.name + 'addToSet'">
-                            <ul class="!w-full items-center grid gap-2 p-2 min-w-28 pointer-events-auto">
-                                <span class="pl-2 cursor-default">Item Sets</span>
-                                <li v-for="set in is.itemSets"
-                                    class="justify-start btn btn-xs btn-ghost hover:btn-neutral hover:backdrop-brightness-95"
+                            <ul class="!w-full items-center p-2 grid gap-2 min-w-28 pointer-events-auto">
+                                <span class="pl-2 cursor-default">Add to Set</span>
+                                <li v-for="set in is.itemSets" class="justify-start btn btn-xs btn-ghost "
                                     @click="is.addToSet(item, set.key)">
                                     {{ set.name }}
                                 </li>
@@ -102,6 +113,16 @@ const props = defineProps<{
                         <icon icon='teenyicons:denied-outline' class="size-3.5" />
 
                     </button>
+
+                    <button v-if="props.variant == 'remove' && props.champ"
+                        class=" btn btn-circle btn-neutral btn-xs aspect-square hover:opacity-75" alt="remove from set"
+                        title="remove from set" @click="cs.removeFromSet(item, props.champ)">
+
+
+                        <icon icon='teenyicons:denied-outline' class="size-3.5" />
+
+                    </button>
+
                 </div>
 
 

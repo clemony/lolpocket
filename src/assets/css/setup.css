@@ -1,5 +1,5 @@
 :root {
-  --rounded-box: 0.6rem !important;
+  --rounded-box: 0.7rem !important;
   --rounded-btn: 0.4rem !important;
   --rounded-badge: 0.5rem !important;
   --animation-btn: 0.25s !important;
@@ -8,18 +8,22 @@
   --border-btn: 1px !important;
   --tab-border: 1px !important;
   --tab-radius: 0.5rem !important;
+  --toastify-font-family: 'Geist Sans';
+  --toastify-icon-color-info: oklch(var(--bc));
+  --toastify-icon-color-success: oklch(var(--bc)) !important;
+  --toastify-icon-color-warning: oklch(var(--bc));
+  --toastify-icon-color-error: oklch(var(--bc));
 
   overscroll-behavior: contain;
   user-select: none;
   @apply scroll-smooth bg-transparent p-0 m-0;
 }
+.toasty {
+  @apply backdrop-blur-md !bg-base-100/90 backdrop-brightness-95 top-11 max-w-64 self-center -right-10 border-base-300 !rounded-box shadow-warm !text-base-content text-sm border font-sans font-medium first-letter:mr-4;
+}
 
 .borders {
   @apply border-[1px] border-base-300;
-}
-
-.input {
-  @apply focus:outline-0;
 }
 
 .frost {
@@ -74,7 +78,7 @@ button,
 
 html,
 body {
-  @apply bg-transparent overflow-hidden overscroll-none;
+  @apply bg-transparent overflow-hidden overscroll-none h-screen;
 }
 
 #app {

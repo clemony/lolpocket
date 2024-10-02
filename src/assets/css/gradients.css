@@ -8,6 +8,37 @@
   @apply transition-all duration-500;
 }
 
+.clip-mask,
+#menu-bar::before {
+  /*   mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 99%, rgba(0, 0, 0, 1) 100%);
+  mask-position: center;
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-composite: subtract;
+ */
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 27px;
+  width: 24px;
+  height: 24px;
+  mask-image: linear-gradient(to top, red, red), radial-gradient(circle 15px at center, green 80%, transparent 81%);
+  background-image: linear-gradient(to top, oklch(var(--b1)), oklch(var(--b1))), radial-gradient(circle 15px at center, oklch(var(--b1)) 80%, transparent 81%);
+  background-size:
+    12px 12px,
+    100%;
+  background-position:
+    top left,
+    center;
+  background-repeat: no-repeat, repeat;
+  mask-position:
+    bottom left,
+    center;
+  mask-repeat: no-repeat, repeat;
+  mask-composite: subtract;
+  z-index: 50;
+  scale: 150% 100%;
+}
 .inspiration {
   background-position: 100%;
 

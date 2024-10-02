@@ -42,7 +42,6 @@ const filter = computed(() => {
         class="grid grid-cols-1 gap-2 cursor-pointer place-items-center" :data-tier="rune.tier"
         :class="rune.path + 'Color'" @click="
           rs.selectedRune = rune;
-        console.log(rs.selectedRune);
         ">
         <input type="radio" :value="index" v-model="rs.runeModels['v' + rs.selectedSetKey + props.set + rune.tier]"
           :name="'r' + props.set + rune.tier" @change="rs.updateCurrentSetRunes()" class="hidden peer"

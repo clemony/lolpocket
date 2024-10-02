@@ -76,6 +76,9 @@
             ],
             "@data/*": [
                 "src/data/*"
+            ],
+            "@pockets/*": [
+                "src/pages/pockets/*"
             ]
         }
     }

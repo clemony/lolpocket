@@ -76,7 +76,6 @@ function handleThemeChoice() {
   if (currenttheme) {
     settings.dataTheme = mode + currenttheme.key;
     settings.dataAccent = currenttheme.key;
-    console.log();
   }
 }
 
@@ -88,9 +87,6 @@ function handleFrameworkChoice() {
     const theme = settings.dataAccent;
     settings.dataTheme = currentFramework.mode + theme;
     settings.dataMode = currentFramework.mode;
-    console.log("currentframework:", currentFramework.mode);
-    console.log("settings.dataMode:", settings.dataMode);
-    console.log(" settings.dataTheme:", settings.dataTheme);
   }
 }
 
@@ -107,23 +103,23 @@ onMounted(() => {
 <template>
   <div class="grid grid-cols-[1fr_3fr] w-full gap-6 p-6 pl-10">
     <div class="grid grid-cols-1">
-      <h1 class="prose-lg font-semibold divider divider-start">Interface</h1>
+      <h1 class="font-semibold prose-lg divider divider-start">Interface</h1>
 
-      <form v-for="framework in frameworks" :key="framework.key" class="flex gap-2 my-2 items-center">
+      <form v-for="framework in frameworks" :key="framework.key" class="flex items-center gap-2 my-2">
         <input type="radio" v-model="frameworkChoice" :value="framework.key" :id="framework.name" name="ui-framework"
-          class="radio radio-xs shadow-inner" @change="handleFrameworkChoice" />
-        <label :for="framework.name" class="m-1 w-24 rounded-lg">
+          class="shadow-inner radio radio-xs" @change="handleFrameworkChoice" />
+        <label :for="framework.name" class="w-24 m-1 rounded-lg">
 
           <div class="w-full h-full" data-act-class="!outline-base-content">
             <div
               class="w-full h-full !text-xs ring-base-300 ring-1 shadow-warm bg-base-100 text-base-content cursor-pointer rounded-lg overflow-hidden has-[:checked]:ring-2 has-[:checked]:ring-neutral-content"
               :data-theme="framework.key + 'minimalist'">
-              <div class="grid grid-cols-5 grid-rows-3 w-full h-10 rounded-btn">
-                <div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div>
-                <div class="bg-base-300 col-start-1 row-start-3"></div>
+              <div class="grid w-full h-10 grid-cols-5 grid-rows-3 rounded-btn">
+                <div class="col-start-1 row-span-2 row-start-1 bg-base-200"></div>
+                <div class="col-start-1 row-start-3 bg-base-300"></div>
                 <div
-                  class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex gap-3 place-content-center items-center px-3">
-                  <div class="font-semibold flex-grow">{{ framework.name }}</div>
+                  class="flex items-center col-span-4 col-start-2 row-span-3 row-start-1 gap-3 px-3 bg-base-100 place-content-center">
+                  <div class="flex-grow font-semibold">{{ framework.name }}</div>
                 </div>
               </div>
             </div>
@@ -133,28 +129,28 @@ onMounted(() => {
     </div>
 
     <div
-      class="mockup-browser align-self-start max-w-96 col-start-2 m-6 bg-base-300 border border-neutral/5 shadow-warm">
+      class="col-start-2 m-6 border mockup-browser align-self-start max-w-96 bg-base-300 border-neutral/5 shadow-warm">
       <div class="mockup-browser-toolbar -ml-1.5">
         <div class="input !bg-base-100 text-xs text content-center  before:w-3 before:-mt-0.5 after:-mt-0.5 !ml-2">
           https://github.com/clemony/lolpocket
         </div>
       </div>
-      <div class="bg-base-200 flex justify-center px-4 py-20">Hello!</div>
+      <div class="flex justify-center px-4 py-20 bg-base-200">Hello!</div>
     </div>
 
 
-    <h1 class="prose-lg font-semibold mt-6 col-start-1">Accents</h1>
+    <h1 class="col-start-1 mt-6 font-semibold prose-lg">Accents</h1>
 
 
-    <div class=" col-start-1 grid grid-cols-1 gap-y-4">
-      <form v-for="theme in themes" class="items-center  " @change="handleThemeChoice()">
+    <div class="grid grid-cols-1 col-start-1 gap-y-4">
+      <form v-for="theme in themes" class="items-center " @change="handleThemeChoice()">
         <div class="  content-center grid grid-cols-[1fr_5fr] justify-start col-start-1 ">
 
           <input type="radio" v-model="themeChoice" :value="theme.key" :id="theme.name" name="ui-theme"
-            class="radio col-start-1 radio-xs shadow-inner self-center justify-self-start" />
+            class="self-center col-start-1 shadow-inner radio radio-xs justify-self-start" />
           <label :for="theme.name">
             <div
-              class="grid grid-cols-1 col-start-2 justify-content-start rounded-btn border border-base-300 max-w-36 py-2 gap-1 px-2 shadow-warm">
+              class="grid grid-cols-1 col-start-2 gap-1 px-2 py-2 border justify-content-start rounded-btn border-base-300 max-w-36 shadow-warm">
               <div class="content-center text-xs font-semibold">
                 {{ theme.name }}
               </div>

@@ -1,19 +1,21 @@
 .drag-draggable {
-  @apply flex flex-wrap w-full h-auto max-h-full gap-3.5 p-1 overflow-y-scroll  pt-11;
+  @apply flex flex-wrap w-full h-auto max-h-full gap-3.5 overflow-y-scroll;
 }
 .drag-label {
-  @apply flex justify-center items-center overflow-auto  p-[2px]  has-[:checked]:ring-neutral/40   ring-1 !relative z-0 ring-neutral/5 
-  rounded-md hover:ring-neutral/40;
+  @apply flex justify-center items-center overflow-auto  p-[2px]   ring-1 !relative z-0 ring-transparent 
+  rounded-lg hover:ring-neutral/40;
 }
 .drag-wrapper {
-  @apply border ring-1 ring-base-300/90 border-neutral/30 has-[:checked]:border-neutral/60 has-[:checked]:ring-0  rounded-md  grow aspect-square flex  pointer-events-none select-none overflow-hidden  bg-contain  bg-clip-border;
+  @apply border border-neutral/40
+
+  rounded-lg  aspect-square  pointer-events-none select-none overflow-hidden  bg-contain  bg-clip-border;
 }
 
 .drag-img {
-  @apply rounded-md bg-cover  pointer-events-none;
+  @apply bg-cover  pointer-events-none;
 }
 
-.champion {
+/* .champion {
   .drag-label {
     @apply max-w-[72px] max-h-[72px];
   }
@@ -23,17 +25,10 @@
   .drag-img {
     @apply scale-[115%];
   }
-}
-
-.item {
-  .drag-label,
-  .drag-wrapper {
-    @apply max-w-[64px] max-h-[64px] basis-12 grow;
-  }
-}
+} */
 
 .ghosty {
-  @apply aspect-square w-full h-full bg-base-200/40 p-5 shadow-[inset_1px_1px_2px_2px_#00000010]  !border-base-300 border !ring-0 rounded-md;
+  @apply aspect-square hover:ring-0 bg-base-200/30 p-5 shadow-[inset_1px_1px_2px_2px_#00000008]  !border-base-300 border rounded-md;
 
   & .drag-label,
   & .drag-wrapper {
@@ -43,7 +38,7 @@
     @apply opacity-100;
   }
   & .drag-wrapper {
-    @apply opacity-20 bg-[url('/img/ui/messag=e.svg')] bg-contain rounded-none;
+    @apply opacity-20  bg-contain rounded-none;
   }
   & .drag-img {
     @apply ring-transparent ring-offset-transparent shadow-none opacity-0 invisible hidden;
@@ -52,4 +47,14 @@
 
 .setDrag {
   @apply bg-base-100 rounded-box border-base-300 border;
+}
+
+.drag-clone {
+  opacity: 0.5;
+  pointer-events: none; /* Prevent interaction */
+  position: absolute; /* Ensure it behaves like a drag */
+}
+
+.v-popper--shown .drag-label {
+  @apply ring-neutral/40;
 }

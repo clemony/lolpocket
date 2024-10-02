@@ -3,16 +3,12 @@ import { computed, watch, ref } from 'vue';
 import { useItemStore } from '../../stores/itemStore';
 const is = useItemStore();
 
-const sortNameText = computed(() => {
-  let text = '';
-  if (is.sortName == 'az') {
-    text = 'From A';
-  } else if (is.sortName == 'za') {
-    text = 'From Z';
+const sortNameStatus = computed(() => {
+  if (is.sortName) {
+    return 'ON';
   } else {
-    text = "Name"
+    return 'OFF';
   }
-  return text;
 })
 
 const sortPriceText = computed(() => {
@@ -27,42 +23,14 @@ const sortPriceText = computed(() => {
   return text;
 })
 
-var previousPriceValue = '';
-var previousNameValue = '';
 
-const verifyName = (value: string) => {
-  // If the current value is the same as the previous value, clear it
-  if (previousNameValue === value) {
-    is.sortName = ''; // Clear the selection
-  }
-  previousNameValue = value;
-};
 
-// Function to verify value and clear if the active radio is clicked again
-const verifyValue = (value: string) => {
-  // If the current value is the same as the previous value, clear it
-  if (previousPriceValue === value) {
-    is.sortPrice = ''; // Clear the selection
-  }
-  previousPriceValue = value;
-};
 
 </script>
 <template>
 
-  <VDropdown theme="menuDark" placement="bottom-end" class="relative w-10 border-none join-item btn btn-xs btn-outline "
-    :class="{ 'active': is.sortName || is.sortPrice }" @click="{ is.sortName = ''; is.sortPrice = '' }">
 
-    <button class="">
-
-      <icon icon="system-uicons:sort" class="size-4.5" />
-    </button>
-
-
-    <template #popper>
-
-
-      <!--     <div v-if="is.sortName != '' || is.sortPrice != ''" class="z-10 flex items-center gap-3 justify-self-start btn-xs">
+  <!--     <div v-if="is.sortName != '' || is.sortPrice != ''" class="z-10 flex items-center gap-3 justify-self-start btn-xs">
       <div
         class="filter-on rounded-full size-2 after:size-2 after:absolute after:top-0 after:-right-[0px] after:bg-success bg-success relative mb-2 top-[3px] right-[0px] after:rounded-full after:animate-ping">
       </div>
@@ -76,82 +44,88 @@ const verifyValue = (value: string) => {
 
 
 
+  <div class="grid">
 
 
 
-      <!-------------------------------⟢ Name ⟣-------------------------------->
+    <!-------------------------------⟢ Name ⟣-------------------------------->
 
-      <div class="w-full px-2 font-semibold text-neutral-content/60">
-        <div class=" pt-3 pb-1 px-1 border-b border-[groove] border-neutral-600 ">
-          Sort
-        </div>
-      </div>
-
-      <div class=" p-3  relative pt-0 grid grid-cols-[2rem_1.3rem_auto] gap-y-1 gap-x-1 items-center ">
+    <div class="grid items-center justify-center w-full gap-3 pt-1 pb-3 -ml-2">
 
 
 
-        <span class="w-full col-span-3 py-1.5  text-mini   text-neutral-content/70 tracking-wide italic">Name
-        </span>
-        <label class="badge-btn-dark">
-          <input type="radio" v-model="is.sortName" value="az" id="sortName" class="hidden peer"
-            @click="verifyName('az')" />
-          A
-
-        </label>
-        <div class="relative  opacity-80 *:top-0 *:left-0 size-3.5 *:size-3.5 *:absolute">
-          <icon icon="teenyicons:arrow-left-outline" :class="{ 'opacity-0': is.sortName == 'az' }" class="mr-0.5" />
-          <icon icon="teenyicons:arrow-left-outline" :class="{ 'opacity-0': is.sortName == 'za' }"
-            class="ml-0.5 rotate-180" />
-        </div>
-        <label class="badge-btn-dark justify-self-end">
-          <input type="radio" v-model="is.sortName" value="za" id="sortName" class="hidden peer"
-            @click="verifyName('za')" />
-          Z
-
+      <div class="relative flex items-center w-full gap-2 px-1">
+        <label :class="{ 'opacity-40 ': is.sortName != 'az' }">
+          <input type="radio" value="az" v-model="is.sortName" class="hidden peer" />
+          <kbd class="p-0 kbd aspect-square *:size-6 overflow-clip">
+            <icon icon="mynaui:letter-a" />
+          </kbd>
         </label>
 
-        <!-------------------------------⟢ Price ⟣-------------------------------->
+        <button v-if="is.sortName == 'az'" @click="is.sortName = ''"
+          class="absolute z-10 opacity-0 top-0.5 left-[5px] size-6  ">
+        </button>
 
+        <icon v-if="is.sortName == ''" icon="codicon:arrow-swap" class="mb-1" />
 
-        <span class="w-full col-span-3 py-1.5  text-mini   text-neutral-content/70 tracking-wide italic">Price
-        </span>
+        <icon v-if="is.sortName != ''" :class="{ 'rotate-180': is.sortName == 'za' }" icon="codicon:arrow-right"
+          class="mb-1 transition-all duration-300" />
 
-
-        <label class="badge-btn-dark" role="button">
-          <input type="radio" v-model="is.sortPrice" value="ascending" id="sortPrice" class="hidden peer"
-            @click="verifyValue('ascending')" />
-          $
-
+        <label :class="{ 'opacity-40 ': is.sortName != 'za' }">
+          <input type="radio" value="za" v-model="is.sortName" class="hidden peer" />
+          <kbd class="p-0 kbd aspect-square *:size-6 overflow-clip">
+            <icon icon="mynaui:letter-z" />
+          </kbd>
         </label>
 
-        <div class="relative opacity-80 *:top-0 *:left-0 size-3.5 *:size-3.5 *:absolute">
-          <icon icon="teenyicons:arrow-left-outline" :class="{ 'opacity-0': is.sortPrice == 'ascending' }"
-            class="mr-0.5" />
-          <icon icon="teenyicons:arrow-left-outline" :class="{ 'opacity-0': is.sortPrice == 'descending' }"
-            class="ml-0.5 rotate-180" />
-        </div>
+        <button v-if="is.sortName == 'za'" @click="is.sortName = ''"
+          class="absolute z-10 opacity-0 top-0.5 right-1 size-6 ">
+        </button>
 
-        <label role="button" class="!px-1.5  badge-btn-dark justify-self-end">
-          <input type="radio" v-model="is.sortPrice" value="descending" id="sortPrice" class="hidden peer"
-            @click="verifyValue('descending')" />
-          $$
-        </label>
       </div>
 
 
-    </template>
-  </VDropdown>
+
+
+      <!-------------------------------⟢ Price ⟣-------------------------------->
+
+      <div class="flex w-full gap-2 px-1 py-0.5 relative">
+        <label :class="{ 'opacity-40 ring-0': is.sortPrice != 'ascending' }" class="z-10">
+          <input type="radio" value="ascending" v-model="is.sortPrice" class="hidden peer" />
+          <kbd class="p-0 kbd aspect-square *:size-5">
+            <icon icon="system-uicons:coin" />
+          </kbd>
+        </label>
+
+        <button v-if="is.sortPrice == 'ascending'" @click="is.sortPrice = ''"
+          class="absolute z-10 opacity-0 top-0.5 left-[5px] size-6 border ">
+        </button>
+
+
+        <icon v-if="is.sortPrice == ''" icon="codicon:arrow-swap" class="mt-1.5" />
+
+        <icon v-if="is.sortPrice != ''" :class="{ 'rotate-180': is.sortPrice == 'descending' }"
+          icon="codicon:arrow-right" class="mt-1.5 transition-all duration-300" />
+
+        <label :class="{ 'opacity-40 ': is.sortPrice != 'descending' }" class="z-0">
+          <input type="radio" value="descending" v-model="is.sortPrice" class="hidden peer" />
+          <kbd class="p-0 kbd aspect-square *:size-5">
+            <icon icon="system-uicons:coins" />
+          </kbd>
+        </label>
+
+        <button v-if="is.sortPrice == 'descending'" @click="is.sortPrice = ''"
+          class="absolute z-10 opacity-0 top-0.5 right-1 size-6 border ">
+        </button>
+      </div>
+
+    </div>
+  </div>
 
 </template>
 
 <style scoped>
-label.active {
-  @apply bg-neutral text-neutral-content border-neutral/70 hover:bg-neutral/80;
-}
-
-.active,
-.v-popper--shown {
-  @apply bg-neutral text-neutral-content;
-}
-</style>
+/* beautify ignore:start */
+.tab:is(.v-popper--shown .tab) {
+  @apply tab-active shadow-sm backdrop-brightness-150 after:hover:!opacity-0;
+}</style>

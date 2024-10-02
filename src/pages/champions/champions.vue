@@ -117,8 +117,8 @@ onMounted(async () => {
   <!-- Champ Tab -->
 
   <div class="px-6 h-full w-full  *:scrollbar-hide ">
-    <div class="w-full py-6 px-2 flex items-end">
-      <div class="flex grow items-center">
+    <div class="flex items-end w-full px-2 py-6">
+      <div class="flex items-center grow">
         <h2 class="text-2xl font-bold p-1.5">Champions</h2>
 
         <p class=" p-1.5 grow text-xs font-mono italic">{{ getQuote }}</p>
@@ -136,10 +136,10 @@ onMounted(async () => {
         <div
           class=" border-b-base-300 border-b backdrop-blur-md absolute z-10 top-0 left-0 bg-base-100/90  items-center flex w-full  justify-end gap-4 !h-fit flex-wrap  py-1 px-4">
 
-          <h2 class=" font-semibold text-base grow justify-start">
+          <h2 class="justify-start text-base font-semibold grow">
             Primary
           </h2>
-          <select class="select select-bordered select-xs max-w-xs align-self-end justify-self-end shadow-inner">
+          <select class="max-w-xs shadow-inner select select-bordered select-xs align-self-end justify-self-end">
             <option disabled selected>Class</option>
             <option>Marksman</option>
             <option>Mage</option>
@@ -151,11 +151,11 @@ onMounted(async () => {
 
         </div>
 
-        <div class="overflow-y-scroll max-h-full scroll-none flex flex-wrap gap-4 h-full p-2 pt-11 w-full ">
+        <div class="flex flex-wrap w-full h-full max-h-full gap-4 p-2 overflow-y-scroll scroll-none pt-11 ">
           <div v-for="(champion, index) in champions" :key="champion.name" :data-index="index" class="">
             <button
               class="item-wrapper__item min-w-[60px] rounded-md basis-14 max-w-[70px] grow aspect-square flex place-items-center  overflow-hidden bg-cover ring-1 ring-offset-1 ring-base-300 ring-offset-base-100 hover:ring-offset-primary drop-shadow-sm has-[:checked]:ring-offset-2 has-[:checked]:ring-offset-secondary pointer-events-auto"
-              @click="ds.setSelectedChampion(champion)" @contextmenu.prevent.stop="handleContextMenu($event, champion)">
+              @click="ds.setSelectedChampion(champion)">
               <div class="grid-image-container champ">
                 <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
                   class="scale-[115%] aspect-square" />
@@ -181,7 +181,7 @@ onMounted(async () => {
 
 
 
-        <div class=" max-h-full overflow-y-scroll scrollbar-hide rounded-box">
+        <div class="max-h-full overflow-y-scroll scrollbar-hide rounded-box">
           <ChampionSidebar />
         </div>
       </Pane>
