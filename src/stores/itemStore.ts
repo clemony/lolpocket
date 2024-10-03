@@ -9,7 +9,6 @@ export interface ItemSet {
   key: number;
   name: string;
   items: Item[];
-  isDisabled: boolean; // Add this to track duplicates
 }
 
 export const useItemStore = defineStore(
@@ -27,7 +26,7 @@ export const useItemStore = defineStore(
     const viewLiked = ref(false);
     const likedItems = ref<Item[]>([]);
     const itemSets = ref<ItemSet[]>([]);
-    // const setItems = ref<Item[]>([]);
+    const starred = ref<ItemSet | null>(null);
 
     watch(
       () => likedItems.value, // Watch the value of likedItems
@@ -64,6 +63,7 @@ export const useItemStore = defineStore(
           name: 'Set ' + newKey,
           items: [], // Initialize items as an empty array of `Item`
           isDisabled: false, // Add isDisabled flag
+          starred: false,
         })
       );
     }
@@ -107,6 +107,11 @@ export const useItemStore = defineStore(
       }
     }
 
+    // Method to reset the items array
+    const resetItemsArray = () => {
+      items.value = [...ds.items]; // Reset to the original data from dataStore
+    };
+
     /* -------------------------------- RUNES  ------------------------------- */
 
     return {
@@ -126,6 +131,8 @@ export const useItemStore = defineStore(
       viewLiked,
       likedItems,
       handleLike,
+      resetItemsArray,
+      starred,
     };
   },
 

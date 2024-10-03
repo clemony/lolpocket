@@ -37,7 +37,7 @@ const isLiked = computed(() => {
         <div class="grid grid-cols-[1fr_2fr] border-b border-base-300 pb-3 gap-2 w-full ">
 
             <div class="h-full col-start-1">
-                <img :key="item.id" :src="item.img" :alt="item.name + ' Image'"
+                <img :key="item.id" :src="`/img/items/${item.id}.webp`" :alt="item.name + ' Image'"
                     class="border rounded-md pointer-events-none border-base-300 shadow-warm" />
             </div>
 

@@ -1,31 +1,53 @@
 <script setup lang="ts">
-import { onMounted, ref, computed } from 'vue';
+import { onMounted, ref, computed, reactive } from 'vue';
 import { useItemStore } from "../../stores/itemStore";
 import { useDataStore } from "../../stores/dataStore";
 import { useUserStore } from '../../stores/userStore';
+import { pocket, usePocketStore } from '../../stores/pocketStore';
 const us = useUserStore();
 const is = useItemStore();
 
+const ps = usePocketStore();
 const search = ref();
+
+const props = defineProps<{
+    pocketKey: string;
+}>()
+
 
 const handleSearch = computed(() => {
     is.searchFilter = search.value; // Update Pinia store's searchFilter
 });
 
+const pocket = computed<pocket | undefined>(() => {
+    if (!ps.pockets || !props.pocketKey) return undefined;
+    const key = Number(props.pocketKey);
+    return ps.pockets.find((pocket: pocket) => pocket.key === key);
+});
+
+
 const animated = ref(false);
 
 function handleClick() {
-    is.newSet();
     animated.value = true;
+
+    const sets = pocket.value?.items[0].itemSets;
+
+    if (sets) {
+        const newKey = sets.length + 1;
+        sets.push(
+            reactive({
+                key: newKey,
+                name: 'Set ' + newKey,
+                items: [], // Initialize items as an empty array of `Item`
+
+            })
+        );
+    }
 };
 
 
 onMounted(() => {
-    const ds = useDataStore();
-    const is = useItemStore();
-    if (is.itemSets.length < 1) {
-        is.newSet();
-    }
 
 });
 
@@ -70,7 +92,7 @@ const likeText = computed(() => {
             </div>
 
             <div class="h-full overflow-y-scroll scrollbar-hide ">
-                <ItemSets />
+                <ItemSets :pocketKey="props.pocketKey" />
 
             </div>
 

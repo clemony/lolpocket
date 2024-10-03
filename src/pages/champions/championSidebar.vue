@@ -261,7 +261,7 @@ const bgClass = ((champion) => {
 
                         </label>
                         <template #popper :key="item.name + 'Pop'">
-                            <ItemPop :item="item" :variant="'remove'" :champ="champion.name" />
+                            <popItem :item="item" :variant="'remove'" :champ="champion.name" />
                         </template>
                     </VDropdown>
 

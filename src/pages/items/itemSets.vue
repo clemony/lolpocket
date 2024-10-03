@@ -1,23 +1,69 @@
 <script setup lang="ts">
 import { onMounted, ref, computed, reactive, watch } from 'vue';
 import { VueDraggable } from 'vue-draggable-plus'
-import { useItemStore } from "../../stores/itemStore";
+import { ItemSet, useItemStore } from "../../stores/itemStore";
 import { Item, useDataStore } from "../../stores/dataStore";
+import { pocket, usePocketStore } from '../../stores/pocketStore';
 const ds = useDataStore();
 const is = useItemStore();
 
-onMounted(() => {
-    const ds = useDataStore();
-    const is = useItemStore();
-    if (is.itemSets.length < 1) {
-        is.newSet();
-    }
 
-});
 
 
 const quickSearch = ref('');
 const returnData = ref([]);
+const ps = usePocketStore();
+
+const props = defineProps<{
+    pocketKey: string;
+}>()
+
+const pocketKey = Number(props.pocketKey);
+
+// Computed property to retrieve the specific pocket
+const pocket = computed<pocket | undefined>(() => {
+    if (!ps.pockets || !props.pocketKey) return undefined;
+    return ps.pockets.find((pocket: pocket) => pocket.key === pocketKey);
+});
+
+// Create a reactive array to hold champions for VueDraggable
+const items = ref<any[]>([]);
+console.log(pocket);
+// Watch for changes in pocket and update champions
+watch(pocket, (newPocket) => {
+    items.value = newPocket?.items[0]?.itemSets || []; // Assuming you want the first champions array
+}, { immediate: true });
+
+// Sync changes back to the store when champions are updated
+watch(items, (newItemSets) => {
+    if (pocket.value) {
+        pocket.value.items[0].itemSets = newItemSets; // Update the original pocket
+    }
+});
+
+// Function to update the starred item set for a specific pocket
+function updateStarredItemSet(newStarredItemSet: ItemSet) {
+    const pocket = ps.pockets.find(p => p.key === pocketKey);
+
+    if (pocket) {
+        // Ensure the starred array is initialized
+        if (!pocket.items[0].starred) {
+            pocket.items[0].starred = [];
+        }
+
+        // Clear existing starred sets and add the new one
+        pocket.items[0].starred.splice(0, pocket.items[0].starred.length, newStarredItemSet);
+    } else {
+        console.error(`Pocket with key ${pocketKey} not found.`);
+    }
+}
+
+
+console.log('this pocket: ', pocket);
+console.log('items: ', items.value);
+
+console.log(ps.pockets)
+
 
 // Use returnData to access the emitted array
 watch(returnData, (newVal) => {
@@ -25,20 +71,10 @@ watch(returnData, (newVal) => {
     is.addToSet(newVal[0], newVal[1]);
 
 });
-/* 
-watch(() => returnData,
-    (newVal) => {
-        console.log(returnData)
-        console.log("parentdata: ", newVal);
-    },
-    { immediate: true }
-);
- */
+
 const filteredItems = computed(() => {
     let filtered = is.items;
 
-
-    // Apply search filter if any
     if (quickSearch) {
         const searchTerm = quickSearch.value.toLowerCase();
         filtered = filtered.filter((item: any) =>
@@ -71,11 +107,6 @@ function handleDragEnd(event) {
 }
 
 
-
-const viewFilters = defineModel({
-    default: 'hideFilters'
-});
-
 const dropdownShown = reactive({});
 
 
@@ -87,18 +118,38 @@ const submitAndClose = (key) => {
     dropdownShown[key] = false;
 };
 
+
+
 const suggestions = ["Early", "Mid", "Late", "Core", "Offensive", "Defensive", "Utility", "DPS", "Burst", "Situational"];
+
+
+onMounted(() => {
+    const sets = pocket.value?.items[0].itemSets;
+
+    if (sets && sets.length == 0) {
+        const newKey = sets.length + 1;
+        sets.push(
+            reactive({
+                key: newKey,
+                name: 'Set ' + newKey,
+                items: [], // Initialize items as an empty array of `Item`
+
+            })
+        );
+    }
+});
+
 
 </script>
 
 <template>
 
 
-    <VueDraggable tag="div" v-model="is.itemSets" :delay="0" :animation="300" :group="{ name: 'sets' }"
-        :prevent-on-filter='true' ghostClass="ghost" :force-fallback="true" :fallbackTolerance="0"
-        fallbackClass="drag-clone" :fallbackOnBody="true" class="z-0 h-full">
+    <VueDraggable v-if="pocket" tag="div" v-model="pocket.items[0].itemSets" :delay="0" :animation="300"
+        :group="{ name: 'sets' }" :prevent-on-filter='true' ghostClass="ghost" :force-fallback="true"
+        :fallbackTolerance="0" fallbackClass="drag-clone" :fallbackOnBody="true" class="z-0 h-full">
 
-        <div v-for="set in is.itemSets" dragClass="setDrag" class="grid px-1 pt-1" :key="set.key">
+        <div v-for="set in pocket.items[0].itemSets" dragClass="setDrag" class="grid px-1 pt-1" :key="set.key">
 
             <div class="flex items-center h-10 gap-3 px-1 mt-1 ">
                 <VDropdown theme="detail" class="" v-model:shown="dropdownShown[set.key]">
@@ -137,6 +188,21 @@ const suggestions = ["Early", "Mid", "Late", "Core", "Offensive", "Defensive", "
                     </template>
                 </VDropdown>
                 <span class="self-start border-b h-1/2 grow border-base-300"></span>
+
+                <label class="group/star *:transition-all  *:duration-300  h-full w-4  *:h-full grid place-content-center  cursor-pointer relative 
+              
+                ">
+
+                    <input type="radio" name="defaultDisplayRunes" :value="set" class="hidden peer" v-model="is.starred"
+                        @change="updateStarredItemSet(set)" />
+                    <icon icon="iconoir:star-outline"
+                        class="absolute z-10 opacity-20 group-hover/star:opacity-15 peer-checked:opacity-20" />
+                    <icon icon='iconoir:star-solid'
+                        class="absolute z-0 text-yellow-400 opacity-0 group-hover/star:text-yellow-300 group-hover/star:opacity-70 peer-checked:opacity-80"
+                        id="solid" />
+
+                </label>
+
 
                 <VDropdown theme="detail" placement="left-start" class="arrow ">
 
@@ -199,7 +265,7 @@ const suggestions = ["Early", "Mid", "Late", "Core", "Offensive", "Defensive", "
                     <label class="!overflow-hidden drag-label">
                         <div class="!overflow-hidden drag-wrapper">
 
-                            <img :src="item.img" class="drag-img" />
+                            <img :src="`/img/items/${item.id}.webp`" class="drag-img" />
 
                             <div :key="item.id + 'Count'" :class="{ '!opacity-85': item.count > 1 }"
                                 class="absolute rounded-full bg-primary text-primary-content z-30 -right-1.5 -top-1.5 size-6 flex  place-items-center place-content-center font-mono opacity-0 text-sm shadow-warm overflow-hidden ">
@@ -210,7 +276,7 @@ const suggestions = ["Early", "Mid", "Late", "Core", "Offensive", "Defensive", "
 
                     </label>
                     <template #popper :key="item.name + 'Pop'">
-                        <ItemPop :item="item" :variant="'remove'" :set="set" />
+                        <popItem :item="item" :variant="'remove'" :set="set" />
                     </template>
                 </VDropdown>
 

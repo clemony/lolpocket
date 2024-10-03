@@ -101,6 +101,11 @@ export const useDataStore = defineStore('dataStore', () => {
     return Array.from(new Set(paths)); // Create an array with only unique paths
   });
 
+  const uniqueClass = computed(() => {
+    const classes = champions.value.flatMap((c) => c.tags);
+    return Array.from(new Set(classes)); // Create an array with only unique paths
+  });
+
   const transformItemData = (data: any): Item => {
     return {
       name: data.name,
@@ -272,6 +277,7 @@ export const useDataStore = defineStore('dataStore', () => {
     getRunes,
     uniqueCats,
     uniquePaths,
+    uniqueClass,
     shards,
     getShards,
   };

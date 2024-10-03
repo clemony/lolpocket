@@ -83,8 +83,9 @@ function handleChange(event: Event) {
       <!-----------------------------⟢ pockets ⟣------------------------------>
 
       <li id="pockets" @click="toggleShow(0)">
-        <a :class="{ 'menu-dropdown-show': showDropdowns[0] }" class="pointer-events-auto menu-dropdown-toggle"
-          @click="sn.navigateTo('/pockets/pockets')">
+        <a :class="{ 'menu-dropdown-show': showDropdowns[0] }"
+          class="pointer-events-auto menu-dropdown-toggle hover:[&_span]:underline"
+          @click.stop="sn.navigateTo('/pockets/pockets')">
 
           <Icon icon="teenyicons:folders-outline" />
           <span class="grow">Pockets</span>

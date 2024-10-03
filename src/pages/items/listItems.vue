@@ -100,12 +100,12 @@ watch(
 
         <label class="drag-label ">
           <div class="drag-wrapper shadow-warm ">
-            <img :key="item.id" :src="item.img" :alt="item.name + ' Image'" class="drag-img" />
+            <img :key="item.id" :src="`/img/items/${item.id}.webp`" :alt="item.name + ' Image'" class="drag-img" />
           </div>
 
         </label>
         <template #popper :key="item.name + 'Pop'" auto-boundary-max-size shift-cross-axis>
-          <ItemPop :item="item" :variant="'add'" />
+          <popItem :item="item" :variant="'add'" />
         </template>
       </VDropdown>
     </TransitionGroup>

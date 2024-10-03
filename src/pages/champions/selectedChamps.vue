@@ -11,7 +11,6 @@ const props = defineProps<{
     pocketKey: string;
 }>()
 
-console.log('pocket key in component: ', props.pocketKey)
 
 // Computed property to retrieve the specific pocket
 const thisPocket = computed<pocket | undefined>(() => {
@@ -36,11 +35,6 @@ watch(champions, (newChampions) => {
     }
 
 });
-
-console.log('this pocket: ', thisPocket);
-console.log('champions: ', champions.value);
-
-console.log(ps.pockets)
 
 
 const filteredChamps = ref('');

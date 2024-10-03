@@ -33,6 +33,14 @@ const filter = computed(() => {
 
   return filteredRunes;
 });
+
+// Handle image error
+const onImageError = (event: Event) => {
+  const target = event.target as HTMLImageElement | null;
+  if (target) {
+    target.src = '/img/runes/blankRune.webp';
+  }
+};
 </script>
 
 <template v-if="rs.selectedSetKey">
@@ -48,10 +56,11 @@ const filter = computed(() => {
           :disabled="rune.path == 'none'" />
 
         <VDropdown theme="detail" :triggers="['hover']" :popperTriggers="['hover']" :delay="{ show: 1000, hide: 0 }"
-          id="imgwrap"
+          :disabled="rune.path == 'none'" id="imgwrap"
           class="peer-checked:opacity-100 h-[inherit] w-[inherit] peer-checked:brightness-100 brightness-90 opacity-80 grayscale peer-checked:grayscale-0 transition-all duration-500 hover:opacity-100 hover:grayscale-0">
           <div class="overflow-hidden rounded-full">
-            <img :src="rune.img" :alt="rune.name" />
+            <img :src="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`" :alt="rune.name"
+              @error="onImageError" />
           </div>
 
           <template #popper>

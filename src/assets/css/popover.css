@@ -17,8 +17,7 @@
     @apply border-base-100;
   }
 }
-.v-popper--theme-menuDark,
-.v-popper--theme-overlay {
+.v-popper--theme-menuDark {
   .v-popper__inner {
     @apply !bg-neutral/70 backdrop-blur-lg *:text-neutral-content/80 !border-neutral-600
   !rounded-md shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px];
@@ -28,6 +27,19 @@
   }
   .v-popper__arrow-inner {
     @apply !border-neutral/20;
+  }
+}
+
+.v-popper--theme-overlay {
+  .v-popper__inner {
+    @apply !bg-black/25   w-screen h-screen top-0 *:text-neutral-content/80 !border-none -ml-5
+  !rounded-md shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px];
+  }
+  .v-popper__arrow-outer {
+    @apply !border-transparent;
+  }
+  .v-popper__arrow-inner {
+    @apply !border-transparent;
   }
 }
 

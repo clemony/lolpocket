@@ -90,8 +90,8 @@ const sidebarButton = computed(() => {
       <div class="flex items-center text-sm breadcrumbs">
         <ul>
           <li><a @click="sn.navigateTo('/pockets/pockets')"> Pockets </a></li>
-          <li><a>{{ ps.pocketName || " Pocket Name" }}</a></li>
-          <li>{{ pocketSection }}</li>
+          <li class="cursor-pointer">{{ " Pocket Name" }}</li>
+          <li class="cursor-default">{{ pocketSection }}</li>
         </ul>
       </div>
 

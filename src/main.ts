@@ -139,7 +139,11 @@ app.use(FloatingVue, {
       $extend: 'dropdown',
       triggers: ['click'],
       autoHide: true,
-      placement: 'bottom-start',
+      distance: -94,
+      placement: 'top-start',
+      container: 'body',
+      boundary: 'body',
+      strategy: 'absolute',
     },
     menuDark: {
       $extend: 'menu',

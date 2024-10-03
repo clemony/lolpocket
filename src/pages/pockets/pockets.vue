@@ -12,13 +12,12 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue';
 import { usePocketStore } from '../../stores/pocketStore';
-import { ModalsContainer, useModal } from 'vue-final-modal'
-import PocketForm from './pocketModal.vue'
 import { useSessionStore } from '../../stores/sessionStore';
 import { useRouter } from 'vue-router';
 import { useChampStore } from '../../stores/champStore';
 import { useItemStore } from '../../stores/itemStore';
 import { useDataStore } from '../../stores/dataStore';
+import { useRuneStore } from '../../stores/runeStore';
 
 const router = useRouter();
 
@@ -27,42 +26,15 @@ const ss = useSessionStore();
 const ps = usePocketStore();
 const cs = useChampStore();
 const ds = useDataStore();
+const rs = useRuneStore();
 
-const newPocketModal = useModal({
-  component: PocketForm,
-  attrs: {
-    title: 'New Pocket',
-    button: 'Create',
-    onSubmit() {
-      newPocketModal.close();
-    },
-  },
-})
 
-const selectedPocketKey = ref<number | null>(null);
-
-const modalAttrs = reactive({
-  title: 'Edit Pocket',
-  button: 'Save',
-  pocketKey: selectedPocketKey.value ?? undefined,
-});
-
-const editPocketModal = useModal({
-  component: PocketForm,
-  attrs: modalAttrs,
-});
-
-function openEditPocketModal(pocketKey: number) {
-  selectedPocketKey.value = pocketKey; // Set the reactive pocketKey
-  modalAttrs.pocketKey = pocketKey ?? undefined; // Update reactive attrs
-  console.log(pocketKey);
-  editPocketModal.open(); // Open the modal
-}
 
 const pocketID = ref();
 function handleCheck() {
   setTimeout(() => { console.log('World!'); }, 2000)
 };
+
 
 
 
@@ -100,7 +72,7 @@ function navigateToPocket(pocket) {
 
         <div class="join">
           <button
-            class="relative join-item btn btn-sm *:size-[21px] after:size-5 items-center flex justify-center  *:absolute *:transition-all *:duration-300"
+            class="relative join-item btn btn-sm *:size-4 after:size-5 items-center flex justify-center  *:absolute *:transition-all *:duration-300"
             alt="Trash" title="Trash">
             <icon icon="iconoir:bin" class="" />
             <icon icon="iconoir:bin-full" class="opacity-0" />
@@ -108,25 +80,35 @@ function navigateToPocket(pocket) {
           </button>
 
           <button class="join-item btn btn-sm" alt="Archive" title="Archive">
-            <icon icon="fluent:archive-20-regular" class="size-6" />
+            <icon icon="fluent:archive-20-regular" class="size-5" />
           </button>
         </div>
 
+        <VDropdown :overflow-padding="20" :shift="true" theme="overlay" class="new-pocket">
+          <button class="text-xs btn btn-sm btn-neutral hover:opacity-80 ">
+            <icon icon="teenyicons:folder-plus-outline" class=" size-4.5 mr-0.5 pr-0.5 " />
+            <span class="font-medium">
+              New Pocket
+            </span>
+          </button>
 
-        <button class="text-xs !font-bold btn btn-sm btn-neutral pr-4 mr-3" @click="() => newPocketModal.open()">
-          <icon icon="teenyicons:folder-plus-outline" class="size-5 mr-0.5 pr-0.5 overflow-auto" />
-          <span>
-            New Pocket
-          </span>
-        </button>
+
+          <template #popper>
+            <a v-close-popper class="absolute w-screen h-screen"></a>
+
+            <PopPocket :title="'New Pocket'" :button="'Create'" />
+
+          </template>
+        </VDropdown>
+
 
       </div>
       <div class="flex items-center w-full">
         <h2 class="text-xl font-semibold tracking-tight grow ">
           Pockets
         </h2>
-        <button @click="is.items.splice(0)"> clear</button>
-        <button @click="is.items = ref([...ds.items])"> logr</button>
+        <button @click="is.itemSets.splice(0)"> clear</button>
+        <button @click="console.log()"> logr</button>
 
       </div>
 
@@ -160,9 +142,14 @@ function navigateToPocket(pocket) {
       </div>
     </div>
 
-    <div class="grid h-full grid-cols-1 py-2 border-b border-b-base-300">
-      <div v-for="pocket in ps.pockets" :key="pocket.key"
-        class=" even:bg-gradient-to-r rounded-md even:bg-base-200/60 grid grid-cols-[30px_1.5fr_1.5fr_3fr_1fr_repeat(2,30px)] gap-x-2  *:text-xs items-center mx-1 px-2 py-1">
+    <div class="grid h-full grid-cols-1 py-2 border-b border-b-base-300 ">
+
+
+
+      <div v-for="pocket in ps.pockets" :key="pocket.key" @click="() => navigateToPocket(pocket)"
+        class=" even:bg-gradient-to-r rounded-sm hover:odd:bg-base-200
+        hover:even:bg-base-200 
+         even:bg-base-200/60 even:[&_avatar]:!border-base-200 grid grid-cols-[30px_1.5fr_2fr_3fr_1fr_repeat(2,30px)] gap-x-2  *:text-xs items-center mx-1 px-2 py-1 cursor-pointer">
 
         <!------------------------⟢ pin ⟣------------------------->
         <label
@@ -182,8 +169,7 @@ function navigateToPocket(pocket) {
         <!------------------------⟢ name ⟣------------------------->
 
         <div
-          class="grid grid-cols-[40px_auto] items-center gap-3 p-2 cursor-pointer *:pointer-events-none rounded-lg group/name overflow-clip"
-          @click="openEditPocketModal(pocket.key); console.log(pocket.key);">
+          class="grid grid-cols-[40px_auto] items-center gap-3 p-2 cursor-pointer *:pointer-events-none rounded-lg group/name overflow-clip">
 
           <div class="grid rounded-full place-items-center text-neutral-content size-10 bg-neutral">
             <icon :icon="pocket.icon" />
@@ -191,27 +177,63 @@ function navigateToPocket(pocket) {
           <div class="grid">
             <div class="grid text-sm font-bold text-left truncate group-hover/name:underline">{{
               pocket.name }}</div>
-            <div class="truncate opacity-50">{{ pocket.description }}</div>
+            <div class="truncate opacity-50">{{ pocket.type }}</div>
           </div>
         </div>
 
         <!------------------------⟢ champions ⟣------------------------->
 
-        <div class="grid items-center w-full h-full cursor-pointer" @click="() => navigateToPocket(pocket)">
+        <div class="grid items-center w-full h-full cursor-pointer ">
           <ChampionAvatars :pocketKey="pocket.key" :pocket="pocket" />
         </div>
 
         <!------------------------⟢ items ⟣------------------------->
-        <div></div>
+        <div class="flex items-center w-full h-full gap-2">
+
+          <template v-if="pocket.items?.[0]?.starred?.[0]?.items?.length > 0">
+
+            <template v-for="(item, index) in pocket.items[0].starred[0].items" :key="index">
+
+              <div v-if="index <= 5" :key="item.id" class="rounded-md basis-10 aspect-square">
+                <img :src="`/img/items/${item.id}.webp`" class="border rounded-md shadow-sm border-base-300" />
+
+              </div>
+            </template>
+
+
+          </template>
+
+          <div v-else class="flex items-center overflow-hidden size-10 opacity-40">
+
+            <img src="/img/ui/frame.webp" class="scale-110" />
+            <icon icon="teenyicons:add-outline" class="absolute p-4 size-10" />
+          </div>
+
+        </div>
+
+
+
 
         <!------------------------⟢ runes ⟣------------------------->
-        <div>Purple </div>
+        <div class="grid grid-cols-[40px_30px_auto] gap-3 items-center">
+
+          <div v-if="pocket.runes?.[0]?.starred?.[0]?.primary?.length > 0" class="overflow-hidden">
+            <img :src="rs.getKeystone(pocket.runes[0].starred[0].primary, pocket.runes[0].starred[0].runes[0])"
+              class="size-10 drop-shadow-softest" />
+          </div>
 
 
+          <template v-if="pocket.runes?.[0]?.starred?.[0]?.secondary?.length > 0">
+            <img :src="`/img/runes/${pocket.runes[0].starred[0].secondary}.webp`" class="size-7 drop-shadow-softest" />
+          </template>
+        </div>
+
+
+        <!------------------------⟢ menu ⟣------------------------->
 
 
         <div class="w-10 ">
-          <VDropdown theme="detail" placement="left-start" class="arrow ">
+          <VDropdown theme="detail" placement="left-start" class="arrow" @click.stop>
 
             <button class="relative flex items-center justify-center group/menu size-4">
               <icon icon='teenyicons:cog-outline' class="absolute opacity-50 i1 size-3 group-hover/menu:opacity-0" />
@@ -232,10 +254,10 @@ function navigateToPocket(pocket) {
                   <div class="border-b border-base-200"></div>
                   <button
                     class="relative flex !justify-start items-center gap-3  px-3  btn btn-xs text-xs btn-ghost group/trash disabled:bg-transparent  disabled:cursor-not-allowed  hover:bg-base-200"
-                    alt="Delete Set" @click="ps.deletePocket(pocket.key)" :disabled="ps.pockets.length == 1">
+                    alt="Delete Set" @click="ps.deletePocket(pocket.key)">
                     <icon icon='iconoir:bin-full' class="object-center -ml-1 group-disabled/trash:opacity-0 size-4" />
                     <icon icon="iconoir:bin" class="absolute -ml-1 opacity-0 group-disabled/trash:opacity-60 size-4" />
-                    <span> Delete Set</span>
+                    <span> Delete Pocket</span>
                   </button>
                 </div>
               </div>
@@ -264,3 +286,9 @@ function navigateToPocket(pocket) {
     </div>
   </div>
 </template>
+
+<style scoped>
+.v-popper--shown.new-pocket button {
+  @apply opacity-80;
+}
+</style>

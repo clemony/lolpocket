@@ -2,8 +2,8 @@ import { defineStore } from 'pinia';
 import { ref } from 'vue';
 import { useDataStore } from './dataStore';
 import type { Champion, Item } from './dataStore';
-import { RuneSet } from './runeStore';
-import { ItemSet } from './itemStore';
+import { RuneSet, useRuneStore } from './runeStore';
+import { ItemSet, useItemStore } from './itemStore';
 import { useChampStore } from './champStore';
 
 export interface pocketChampions {
@@ -14,16 +14,18 @@ export interface pocketChampions {
 export interface pocketItems {
   key: number;
   itemSets: ItemSet[];
+  starred: ItemSet[];
 }
 
 export interface pocketRunes {
   key: number;
   runeSets: RuneSet[];
+  starred: RuneSet[];
 }
 
 export interface pocket {
   name: string;
-  description: string;
+  type: string;
   key: number;
   icon: string;
   champions: pocketChampions[];
@@ -34,61 +36,74 @@ export interface pocket {
 export const usePocketStore = defineStore(
   'pocketStore',
   () => {
-    const champStore = useChampStore();
+    const cs = useChampStore();
+    const rs = useRuneStore();
+    const is = useItemStore();
 
-    const pocketName = ref('');
-    const pocketIcon = ref('teenyicons:folder-outline');
-    const pocketDescription = ref('');
     const pockets = ref<pocket[]>([]);
 
-    function newPocket() {
+    function newPocket(name: string, type: string, icon: string) {
       const newKey = pockets.value.length + 1;
 
       const pocketChampionsValue: pocketChampions = {
         key: newKey,
-        champions: JSON.parse(JSON.stringify(champStore.championsInPocket)),
+        champions: JSON.parse(JSON.stringify(cs.championsInPocket)),
       };
 
       const pocketItemsValue: pocketItems = {
         key: newKey,
-        itemSets: JSON.parse(JSON.stringify(champStore.championsInPocket)),
+        itemSets: JSON.parse(JSON.stringify(is.itemSets)) || [],
+        starred: [], // Initialize starred as an empty array
       };
 
       const pocketRunesValue: pocketRunes = {
         key: newKey,
-        runeSets: JSON.parse(JSON.stringify(champStore.championsInPocket)),
+        runeSets: JSON.parse(JSON.stringify(rs.runeSets)) || [],
+        starred: [], // Ensure starred is initialized
       };
 
+      // Create the new pocket
       const newPocket: pocket = {
-        name: pocketName.value || '',
-        description: pocketDescription.value || '',
+        name: name || '',
+        type: type || '',
         key: newKey,
-        icon: pocketIcon.value,
+        icon: icon || 'teenyicons:folder-outline',
         champions: [pocketChampionsValue],
         items: [pocketItemsValue],
         runes: [pocketRunesValue],
       };
 
-      pockets.value.push(newPocket); // Push the new pocket into pockets array
-      console.log('posciekts: ', pockets);
-      console.log(pocketName);
-      console.log(pocketDescription);
-      pocketName.value = '';
-      pocketDescription.value = '';
-      pocketIcon.value = 'teenyicons:folder-outline';
+      // Now push the first item set as the default starred set if it exists
+      if (newPocket.items[0].itemSets.length > 0) {
+        newPocket.items[0].starred.push(newPocket.items[0].itemSets[0]); // Push the first item set as starred
+      }
+      cs.championsInPocket.splice(0);
+      is.itemSets.splice(0);
+      rs.runeSets.splice(0);
+      rs.starred = []; // Clear starred for runes
+      // Push the new pocket into pockets array
+      pockets.value.push(newPocket);
+
+      // Clear temporary data after saving to the new pocket
     }
 
-    function deletePocket(key) {
-      //stuff
+    function getPocket(key) {
+      const findPocket = pockets.value.find((pocket: pocket) => pocket.key === key);
+    }
+
+    function deletePocket(key: number) {
+      const index = pockets.value.findIndex((set) => set.key === key);
+
+      if (index !== -1) {
+        pockets.value.splice(index, 1); // Use the index and delete 1 item
+      }
     }
 
     return {
-      pocketName,
-      pocketIcon,
       pockets,
       deletePocket,
-      pocketDescription,
       newPocket,
+      getPocket,
     };
   },
 

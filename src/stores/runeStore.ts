@@ -27,7 +27,7 @@ export const useRuneStore = defineStore(
 
     const selectedRune = ref[''];
 
-    const defaultSet = ref<number>(0);
+    const starred = ref<RuneSet | null>(null);
 
     function radioSelectRuneSet(setKey: number) {
       selectedSetKey.value = setKey;
@@ -123,6 +123,16 @@ export const useRuneStore = defineStore(
     }
     function resetRunes() {}
 
+    const getKeystone = (path: string, index: number) => {
+      const runes = ds.runes;
+
+      // Filter runes by path
+      const filteredRunes = runes.filter((rune) => rune.path === path);
+
+      // Return the rune's image or a default image if not found
+      return filteredRunes[index]?.img || '/img/runes/blankRune.webp';
+    };
+
     return {
       newRuneSet,
       runeSets,
@@ -134,7 +144,7 @@ export const useRuneStore = defineStore(
       updatePaths,
       selectedSetKey,
       radioSelectRuneSet,
-      defaultSet,
+      starred,
       deleteSet,
       resetRunes,
       runeModels,
@@ -142,6 +152,7 @@ export const useRuneStore = defineStore(
       currentSet,
       shardModels,
       updateShards,
+      getKeystone,
     };
   },
 

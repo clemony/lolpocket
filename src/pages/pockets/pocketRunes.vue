@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { onMounted, ref, computed } from 'vue';
-import { VueDraggable } from 'vue-draggable-plus';
 import { useItemStore } from '../../stores/itemStore';
 import { useDataStore } from '../../stores/dataStore';
-import type { Rune } from '../../stores/dataStore';
 import { useRuneStore } from '../../stores/runeStore';
 const rs = useRuneStore();
+
+const props = defineProps<{
+  pocketKey: string;
+}>()
 
 const ds = useDataStore();
 const is = useItemStore();
@@ -76,7 +78,7 @@ onMounted(() => {
     <Pane size="27" max-size="27" min-size="27" class="relative max-h-full ">
 
       <div class="rounded-box !bg-base-100/90 border border-base-300 shadow-warm relative overflow-hidden">
-        <RuneSets />
+        <RuneSets :pocketKey="pocketKey" />
       </div>
 
 

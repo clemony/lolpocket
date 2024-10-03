@@ -4,28 +4,41 @@ import { VueDraggable } from 'vue-draggable-plus';
 import { useItemStore } from '../../stores/itemStore';
 import { useDataStore } from '../../stores/dataStore';
 import type { Rune } from '../../stores/dataStore';
-import { useRuneStore } from '../../stores/runeStore';
+import { RuneSet, useRuneStore } from '../../stores/runeStore';
+import { usePocketStore } from '../../stores/pocketStore';
 const rs = useRuneStore();
 
 const ds = useDataStore();
-const is = useItemStore();
-const fs = ds.getShards();
-const runes = ds.runes;
+const ps = usePocketStore();
 
-onMounted(() => {
-  const ds = useDataStore();
-  const is = useItemStore();
-});
+const props = defineProps<{
+  pocketKey: string;
+}>()
 
-const getKeystone = (path: string, index: number) => {
-  const runes = ds.runes;
+const pocketKey = Number(props.pocketKey);
 
-  // Filter runes by path
-  const filteredRunes = runes.filter((rune) => rune.path === path);
 
-  // Return the rune's image or a default image if not found
-  return filteredRunes[index]?.img || './src/assets/img/blankRune1.webp';
-};
+
+
+
+
+// Function to update the starred item set for a specific pocket
+function updateStarredRuneSet(newStarredRuneSet: RuneSet) {
+  const pocket = ps.pockets.find(p => p.key === pocketKey);
+
+  if (pocket) {
+    // Ensure the starred array is initialized
+    if (!pocket.items[0].starred) {
+      pocket.items[0].starred = [];
+    }
+
+    // Clear existing starred sets and add the new one
+    pocket.runes[0].starred.splice(0, pocket.runes[0].starred.length, newStarredRuneSet);
+  } else {
+    console.error(`Pocket with key  not found.`);
+  }
+}
+
 </script>
 
 <template>
@@ -68,14 +81,13 @@ const getKeystone = (path: string, index: number) => {
 
             <div
               class="grid grid-cols-[repeat(3,_3rem)] py-1 ml-1 peer-checked:[&_#blank]:ring-neutral/15 opacity-75 grayscale-[0.25] peer-checked:grayscale-0 group-hover:grayscale-0 group-hover:opacity-95 peer-checked:[&_#blank]:opacity-80 items-center justify-center peer-[:checked]:opacity-100 place-items-center justify-self-center transition-all duration-300">
-              <img :src="getKeystone(set.primary, set.runes[0])" class="h-11 drop-shadow-soft" />
-              <!-- 
-              <img v-if="set.primary != 'none'" :src="'/img/runes/' + set.primary + '.webp'"
-                class="drop-shadow-softer h-9 p-1.5" /> -->
-
+              <img v-if="set.primary != 'none'" :src="rs.getKeystone(set.primary, set.runes[0])"
+                class="h-11 drop-shadow-soft" />
+              <img v-else src="/img/runes/blankRune.webp"
+                class="h-8 rounded-full ring-1 ring-base-300/90 opacity-70 group-hover:opacity-90" id="blank" />
               <img v-if="set.secondary != 'none'" :src="'/img/runes/' + set.secondary + '.webp'"
                 class="drop-shadow-softer h-9 p-1.5" />
-              <img v-else src="@/assets/img/blankRune1.webp"
+              <img v-else src="/img/runes/blankRune.webp"
                 class="h-8 rounded-full ring-1 ring-base-300/90 opacity-70 group-hover:opacity-90" id="blank" />
 
             </div>
@@ -86,7 +98,8 @@ const getKeystone = (path: string, index: number) => {
               
 ">
 
-              <input type="radio" name="defaultDisplayRunes" :value="set.key" class="hidden peer" />
+              <input type="radio" name="defaultDisplayRunes" :value="set" class="hidden peer" v-model="rs.starred"
+                @change="updateStarredRuneSet(set)" />
               <icon icon="iconoir:star-outline"
                 class="absolute z-10 opacity-20 group-hover/star:opacity-15 peer-checked:opacity-20" />
               <icon icon='iconoir:star-solid'
