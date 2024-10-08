@@ -10,56 +10,98 @@
 }</route>
 
 <script setup lang="ts">
-import { reactive, ref } from 'vue';
-import { usePocketStore } from '../../stores/pocketStore';
-import { useSessionStore } from '../../stores/sessionStore';
+import { computed, reactive, ref, Ref } from 'vue';
+import { usePocketStore, pocket } from '../../stores/pocketStore';
 import { useRouter } from 'vue-router';
-import { useChampStore } from '../../stores/champStore';
 import { useItemStore } from '../../stores/itemStore';
-import { useDataStore } from '../../stores/dataStore';
 import { useRuneStore } from '../../stores/runeStore';
+import { useVueTable, FlexRender, createTable, getCoreRowModel, createColumnHelper } from '@tanstack/vue-table';
+import pocketIcon from './../components/pocketIcon.vue'; // Your custom icon component
+
+
+
+//const data = ps.pockets;
+
+//const data = ref<User[]>([]) //vue
 
 const router = useRouter();
-
 const is = useItemStore();
-const ss = useSessionStore();
 const ps = usePocketStore();
-const cs = useChampStore();
-const ds = useDataStore();
 const rs = useRuneStore();
 
 
+// Example pockets data (can come from your ref data)
+const pockets = ref<pocket[]>([]);
 
-const pocketID = ref();
-function handleCheck() {
-  setTimeout(() => { console.log('World!'); }, 2000)
-};
+const columnHelper = createColumnHelper<pocket>()
+
+const columns = [
+
+  columnHelper.accessor('icon', {
+    id: 'icon',
+    header: ' ',
+    cell: info => h(pocketIcon, { pocket: info.row.original }),
+  }),
+  columnHelper.accessor(row => row.name, {
+    id: 'name',
+    header: () => 'Pocket',
+    cell: info => h(pocketName, { pocket: info.row.original }),
+  }),
+  columnHelper.accessor('champions', {
+    id: 'champions',
+    header: () => 'Champions',
+    cell: info => info.getValue(),
+  }),
+
+  columnHelper.accessor('items', {
+    id: 'items',
+    header: () => 'Items',
+    cell: info => info.getValue(),
+  }),
+  columnHelper.accessor('runes', {
+    id: 'runes',
+    header: 'Runes',
+    cell: info => info.getValue(),
+  }),
+  columnHelper.accessor('pinned', {
+    id: 'pinned',
+    header: '',
+    cell: info => info.getValue(),
+  }),
+]
 
 
+const defaultData: pocket[] = ps.pockets;
+const data = ref(defaultData)
 
-
-
-function navigateToPocket(pocket) {
-  console.log('Navigating to pocket:', pocket.key);
-  console.log(router.getRoutes());
-
-  router.push({
-    name: 'pocket',
-    params: {
-      pocketKey: String(pocket.key) // Convert to string if it's a number
-    }
-  }).catch((err) => {
-    console.error('Error navigating to pocket:', err);
-  });
+const rerender = () => {
+  data.value = defaultData
 }
+
+const table = useVueTable({
+  get data() {
+    return data.value
+  },
+  columns,
+  getCoreRowModel: getCoreRowModel(),
+})
+
+const generalPockets = computed(() => {
+  let filtered = ps.pockets;
+  filtered = filtered.filter((pocket) => pocket.pinned == false);
+  return filtered;
+});
+
+
+
 
 
 </script>
 <template>
 
-  <div class="grid w-full px-3 py-4">
+  <div class="w-full h-full px-3 py-4 ">
 
-    <div class="grid w-full gap-4 px-4 mb-4">
+    <div class="grid w-full gap-4 px-4 mb-4 h-fit">
       <div class="flex items-center gap-3">
         <div class="flex items-center text-sm breadcrumbs grow">
           <ul class="">
@@ -107,8 +149,8 @@ function navigateToPocket(pocket) {
         <h2 class="text-xl font-semibold tracking-tight grow ">
           Pockets
         </h2>
-        <button @click="is.itemSets.splice(0)"> clear</button>
-        <button @click="console.log()"> logr</button>
+
+
 
       </div>
 
@@ -116,179 +158,63 @@ function navigateToPocket(pocket) {
 
 
 
+    <div class="p-2">
+      <table>
+        <thead>
+          <tr v-for="headerGroup in table.getHeaderGroups()" :key="headerGroup.id">
+            <th v-for="header in headerGroup.headers" :key="header.id" :colSpan="header.colSpan"
+              class='text-xs !font-medium '>
+              <span class="flex items-center gap-2">
 
-    <div
-      class="grid  grid-cols-[30px_1.5fr_1.5fr_3fr_1fr_repeat(2,30px)]  gap-x-3  *:text-xs items-center mt-1 mx-3 py-1 border-b border-b-base-300 *:flex *:gap-1 [&_svg]:mt-0.5">
-      <!-- head -->
+                <FlexRender v-if="!header.isPlaceholder" :render="header.column.columnDef.header"
+                  :props="header.getContext()" />
 
-
-      <div></div>
-      <div class="font-semibold">Pocket
-        <icon icon="teenyicons:down-small-solid" />
-      </div>
-      <div class="font-semibold">Champions
-        <icon icon="teenyicons:down-small-solid" />
-      </div>
-      <div class="font-semibold">Items
-        <icon icon="teenyicons:down-small-solid" />
-      </div>
-      <div class="font-semibold">Runes
-        <icon icon="teenyicons:down-small-solid" />
-      </div>
-
-      <div class="w-10 font-semibold"></div>
-      <div class="w-12">
-        <input type="checkbox" class="checkbox checkbox-xs" />
-      </div>
-    </div>
-
-    <div class="grid h-full grid-cols-1 py-2 border-b border-b-base-300 ">
-
-
-
-      <div v-for="pocket in ps.pockets" :key="pocket.key" @click="() => navigateToPocket(pocket)"
-        class=" even:bg-gradient-to-r rounded-sm hover:odd:bg-base-200
-        hover:even:bg-base-200 
-         even:bg-base-200/60 even:[&_avatar]:!border-base-200 grid grid-cols-[30px_1.5fr_2fr_3fr_1fr_repeat(2,30px)] gap-x-2  *:text-xs items-center mx-1 px-2 py-1 cursor-pointer">
-
-        <!------------------------⟢ pin ⟣------------------------->
-        <label
-          class="  relative *:size-full p-2 flex items-center cursor-pointer hover:transition-all hover:duration-500 justify-center">
-          <input type="checkbox" class="hidden peer" @change="handleCheck" :key="'check' + pocket.key"
-            :v-model="pocket.key" />
-          <icon icon="iconoir:pin" class="absolute peer-checked:opacity-0" />
-          <icon icon="iconoir:pin-solid"
-            class="absolute opacity-0 pinned peer-checked:opacity-100 peer-checked:animate-bounce peer-checked:duration-700  peer-checked:[cubic-bezier(0,1.08,.71,.97)]  peer-checked:repeat-[1.5] fill-mode-both " />
-
-          <icon :class="{ 'visible': true }" :checked="pocket.key" icon="iconoir:pin-slash-solid"
-            class="absolute invisible transition-all duration-300 delay-200 opacity-0 hover:peer-checked:opacity-100 unpin size-full animate-out spin-out-90" />
-        </label>
-
-
-
-        <!------------------------⟢ name ⟣------------------------->
-
-        <div
-          class="grid grid-cols-[40px_auto] items-center gap-3 p-2 cursor-pointer *:pointer-events-none rounded-lg group/name overflow-clip">
-
-          <div class="grid rounded-full place-items-center text-neutral-content size-10 bg-neutral">
-            <icon :icon="pocket.icon" />
-          </div>
-          <div class="grid">
-            <div class="grid text-sm font-bold text-left truncate group-hover/name:underline">{{
-              pocket.name }}</div>
-            <div class="truncate opacity-50">{{ pocket.type }}</div>
-          </div>
-        </div>
-
-        <!------------------------⟢ champions ⟣------------------------->
-
-        <div class="grid items-center w-full h-full cursor-pointer ">
-          <ChampionAvatars :pocketKey="pocket.key" :pocket="pocket" />
-        </div>
-
-        <!------------------------⟢ items ⟣------------------------->
-        <div class="flex items-center w-full h-full gap-2">
-
-          <template v-if="pocket.items?.[0]?.starred?.[0]?.items?.length > 0">
-
-            <template v-for="(item, index) in pocket.items[0].starred[0].items" :key="index">
-
-              <div v-if="index <= 5" :key="item.id" class="rounded-md basis-10 aspect-square">
-                <img :src="`/img/items/${item.id}.webp`" class="border rounded-md shadow-sm border-base-300" />
-
-              </div>
-            </template>
-
-
-          </template>
-
-          <div v-else class="flex items-center overflow-hidden size-10 opacity-40">
-
-            <img src="/img/ui/frame.webp" class="scale-110" />
-            <icon icon="teenyicons:add-outline" class="absolute p-4 size-10" />
-          </div>
-
-        </div>
+                <icon v-if="header.id != 'icon' && header.id != 'pinned'" icon="teenyicons:down-small-solid" />
+              </span>
+            </th>
+          </tr>
+        </thead>
 
 
 
 
-        <!------------------------⟢ runes ⟣------------------------->
-        <div class="grid grid-cols-[40px_30px_auto] gap-3 items-center">
-
-          <div v-if="pocket.runes?.[0]?.starred?.[0]?.primary?.length > 0" class="overflow-hidden">
-            <img :src="rs.getKeystone(pocket.runes[0].starred[0].primary, pocket.runes[0].starred[0].runes[0])"
-              class="size-10 drop-shadow-softest" />
-          </div>
 
 
-          <template v-if="pocket.runes?.[0]?.starred?.[0]?.secondary?.length > 0">
-            <img :src="`/img/runes/${pocket.runes[0].starred[0].secondary}.webp`" class="size-7 drop-shadow-softest" />
-          </template>
-        </div>
+        <tbody>
+          <tr v-for="row in table.getRowModel().rows" :key="row.id">
+            <td v-for="cell in row.getVisibleCells()" :key="cell.id">
+              <FlexRender :render="cell.column.columnDef.cell" :props="cell.getContext()" />
+            </td>
 
 
-        <!------------------------⟢ menu ⟣------------------------->
+          </tr>
+        </tbody>
 
 
-        <div class="w-10 ">
-          <VDropdown theme="detail" placement="left-start" class="arrow" @click.stop>
+      </table>
 
-            <button class="relative flex items-center justify-center group/menu size-4">
-              <icon icon='teenyicons:cog-outline' class="absolute opacity-50 i1 size-3 group-hover/menu:opacity-0" />
-              <icon icon='teenyicons:cog-solid' class="absolute opacity-0 i2 size-3 group-hover/menu:opacity-80" />
-            </button>
-
-            <template #popper>
-              <div
-                class="relative items-center text-xs rounded-lg text-baseline shadow-[inset_1px_1px_10px_10px,_rgba(255,_255,_255,_0.9)] p-1 ">
-                <div class="grid items-center gap-1 flex-nowrap">
-
-                  <button
-                    class="flex items-center gap-3   !justify-start  px-3 btn btn-xs text-xs btn-ghost hover:bg-base-200"
-                    alt="Clear Items" @click="">
-                    <icon icon='ph:eraser' class="-ml-1 size-4" />
-                    <span>Clear Items</span>
-                  </button>
-                  <div class="border-b border-base-200"></div>
-                  <button
-                    class="relative flex !justify-start items-center gap-3  px-3  btn btn-xs text-xs btn-ghost group/trash disabled:bg-transparent  disabled:cursor-not-allowed  hover:bg-base-200"
-                    alt="Delete Set" @click="ps.deletePocket(pocket.key)">
-                    <icon icon='iconoir:bin-full' class="object-center -ml-1 group-disabled/trash:opacity-0 size-4" />
-                    <icon icon="iconoir:bin" class="absolute -ml-1 opacity-0 group-disabled/trash:opacity-60 size-4" />
-                    <span> Delete Pocket</span>
-                  </button>
-                </div>
-              </div>
-            </template>
-
-          </VDropdown>
-        </div>
-
-        <div class="h-full flex items-center content-center !self-center w-12  gap-2">
-          <input type="checkbox" class="checkbox checkbox-xs" />
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-  </div>
-
-  <div class="grid w-full place-items-center">
-    <div class=" *:text-xs  join join-horizontal">
-      <button class="join-item btn btn-sm">«</button>
-      <button class="join-item btn btn-sm">Page 1</button>
-      <button class="join-item btn btn-sm">»</button>
     </div>
   </div>
 </template>
 
-<style scoped>
+<style>
 .v-popper--shown.new-pocket button {
   @apply opacity-80;
+}
+
+
+
+table {
+  border: 1px solid lightgray;
+}
+
+tbody {
+  border-bottom: 1px solid lightgray;
+}
+
+th {
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  padding: 2px 4px;
 }
 </style>

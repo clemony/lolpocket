@@ -2,12 +2,30 @@
 import { computed, onMounted, ref } from 'vue';
 import { usePocketStore } from '../../stores/pocketStore';
 import type { pocket } from '../../stores/pocketStore';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
+
+function navigateToPocket(pocket) {
+  console.log('Navigating to pocket:', pocket.key);
+  console.log(router.getRoutes());
+
+  router
+    .push({
+      name: 'pocket',
+      params: {
+        pocketKey: String(pocket.key), // Convert to string if it's a number
+      },
+    })
+    .catch((err) => {
+      console.error('Error navigating to pocket:', err);
+    });
+}
 
 const ps = usePocketStore();
 
 const props = defineProps<{
-  pocketKey: number;
+  pocketKey: string;
   pocket: pocket;
 }>()
 
@@ -26,6 +44,8 @@ const length = computed(() => {
   return ''; // Return an empty string if conditions are not met
 });
 
+
+
 onMounted(() => {
   console.log('Pocket:', pocket.value);
 });
@@ -34,26 +54,30 @@ onMounted(() => {
 <template>
   <div v-if="pocket" class="">
     <div class="flex items-center gap-2 py-0 mr-1">
-      <template v-for="(champion, index) in pocket.champions[0].champions" :key="index">
-        <div v-if="index <= 2" class="z-0 items-center overflow-hidden rounded-md shadow-sm size-10">
-          <img :src="champion.img" class="scale-[115%]" />
-        </div>
+      <template v-if="pocket.champions[0].champions.length > 0">
+        <template v-for="(champion, index) in pocket.champions[0].champions" :key="index">
+          <button v-if="index <= 2" class="z-0 items-center overflow-hidden rounded-full shadow-sm size-10 hover-effect"
+            @click="() => ps.navigateToPocket(pocket)">
+            <img :src="champion.img" class="scale-[115%]" />
+          </button>
+
+        </template>
 
       </template>
+      <Placeholder v-else @click="() => ps.navigateToPocket(pocket)" />
 
-      <div v-if="pocket?.champions[0]?.champions?.length > 3" class="flex placeholder">
-        <div class="flex items-center pl-1 overflow-hidden font-semibold rounded-md size-9">
+      <button v-if="pocket.champions[0].champions.length > 3" class="flex placeholder"
+        @click="() => ps.navigateToPocket(pocket)">
+        <div class="flex items-center pl-1 overflow-hidden font-semibold rounded-full size-9 hover-effect">
           +<span class="ml-0.5">{{ length }}</span>
         </div>
-      </div>
+      </button>
 
 
-      <div v-if="pocket?.champions[0]?.champions?.length == 0"
-        class="flex items-center overflow-hidden size-10 opacity-40">
 
-        <img src="/img/ui/frame.webp" class="scale-110" />
-        <icon icon="teenyicons:add-outline" class="absolute p-4 size-10" />
-      </div>
+
+
+
     </div>
   </div>
 

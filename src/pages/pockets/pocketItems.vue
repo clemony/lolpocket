@@ -2,9 +2,9 @@
 import { onMounted, ref, computed, reactive } from 'vue';
 import { useItemStore } from "../../stores/itemStore";
 import { useDataStore } from "../../stores/dataStore";
-import { useUserStore } from '../../stores/userStore';
+import { usegeneralStore } from '../../stores/generalStore';
 import { pocket, usePocketStore } from '../../stores/pocketStore';
-const us = useUserStore();
+const us = usegeneralStore();
 const is = useItemStore();
 
 const ps = usePocketStore();
@@ -21,7 +21,7 @@ const handleSearch = computed(() => {
 
 const pocket = computed<pocket | undefined>(() => {
     if (!ps.pockets || !props.pocketKey) return undefined;
-    const key = Number(props.pocketKey);
+    const key = props.pocketKey;
     return ps.pockets.find((pocket: pocket) => pocket.key === key);
 });
 
@@ -100,7 +100,7 @@ const likeText = computed(() => {
 
 
 
-        <Pane v-if="us.showSidebar == true" size="45" min-size="18" max-size="82"
+        <Pane v-if="ps.showSidebar == true" size="45" min-size="18" max-size="82"
             class="relative mt-3  transition-all duration-500 z-[2] delay-150 border border-base-300 rounded-box bg-base-100 before:absolute before:w-4 h-[calc(100%-130px)] before:bg-red-700 before:-left-5 before:top-1/2 before:h-9 before:-z-1"
             id="itemGrid">
 

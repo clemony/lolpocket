@@ -1,9 +1,9 @@
 <script setup lang="ts">
 
 import { useRuneStore } from '../../stores/runeStore';
-import { useUserStore } from '../../stores/userStore';
+import { usegeneralStore } from '../../stores/generalStore';
 
-const us = useUserStore();
+const us = usegeneralStore();
 const is = useRuneStore();
 const props = defineProps(['rune'])
 

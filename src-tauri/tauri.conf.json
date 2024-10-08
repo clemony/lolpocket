@@ -1,89 +1,40 @@
 {
-  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "lolpocket",
+  "version": "0.1.0",
+  "identifier": "com.tauri.dev",
   "build": {
-    "beforeBuildCommand": "vite build",
+    "frontendDist": "../src",
+    "devUrl": "http://localhost:8080",
     "beforeDevCommand": "vite dev",
-    "devPath": "http://localhost:8080",
-    "distDir": "../src/"
+    "beforeBuildCommand": "vite build"
   },
-  "package": {
-    "productName": "lolpocket",
-    "version": "0.1.0"
-  },
-  "tauri": {
-    "allowlist": {
-      "window": {
-        "setResizable": true,
-        "setMaximizable": true,
-        "setMinimizable": true,
-        "setClosable": true,
-        "setTitle": true,
-        "maximize": true,
-        "unmaximize": true,
-        "minimize": true,
-        "unminimize": true,
-        "show": true,
-        "hide": true,
-        "close": true,
-        "startDragging": true
-        
-      },
-      "shell":{
-        "open": true
-      }
-    },
-   
-    "bundle": {
-      "active": true,
-      "category": "DeveloperTool",
-      "copyright": "",
-      "deb": {
-        "depends": []
-      },
-      "externalBin": [],
-      "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
-      ],
-      "identifier": "com.tauri.dev",
-      "longDescription": "",
-      "macOS": {
-        "entitlements": null,
-        "exceptionDomain": "",
-        "frameworks": [],
-        "providerShortName": null,
-        "signingIdentity": null
-      },
-      "resources": [],
-      "shortDescription": "",
-      "targets": "all",
-      "windows": {
-        "certificateThumbprint": null,
-        "digestAlgorithm": "sha256",
-        "timestampUrl": ""
-      }
-    },
-    "security": {
-      "csp": null
-    },
-    "updater": {
-      "active": false
-    },
-    "macOSPrivateApi": true,  
+  "app": {
     "windows": [
       {
-        "title": "lolpocket",
+        "title": "",
         "width": 1400,
         "height": 900,
         "resizable": true,
-        "decorations": false,
+        "fullscreen": false,
         "transparent": true,
-
-        "fileDropEnabled": false
+        "decorations": false
       }
+    ],
+    "security": {
+      "csp": null
+    },
+    "macOSPrivateApi": true
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
     ]
   }
 }

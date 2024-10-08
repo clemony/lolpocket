@@ -275,6 +275,10 @@ background-color:#f2f2f2
   }
 }
 
+.splitpanes--horizontal > .splitpanes__splitter {
+  background-color: red;
+}
+
 #likeSplit.splitpanes--vertical > .splitpanes__splitter,
 .default-theme .splitpanes--vertical > .splitpanes__splitter {
   @apply !w-5 !min-w-5;
@@ -286,12 +290,34 @@ background-color:#f2f2f2
 }
 
 #champSidebarSplit > div.splitpanes__splitter {
-  @apply !w-5 !min-w-5 pointer-events-none select-none;
+  @apply !w-5 !min-w-5 pointer-events-none select-none mask-circle;
 
   &::before,
   &::after {
     background-color: transparent !important;
     opacity: 0;
+  }
+}
+
+#pocketSplit.splitpanes--horizontal > div.splitpanes__splitter {
+  @apply h-4 z-50   w-full  !bg-transparent;
+
+  &::before,
+  &::after {
+    background-color: transparent !important;
+  }
+}
+
+#pocketSplit.splitpanes--vertical > .splitpanes__splitter {
+  @apply !w-1  border-l border-l-base-300 !bg-transparent;
+
+  mask-image: linear-gradient(transparent 30%, #000 0);
+  &::before,
+  &::after {
+    background-color: transparent !important;
+
+    mask-image: linear-gradient(transparent 30%, #000 0);
+    @apply w-0;
   }
 }
 

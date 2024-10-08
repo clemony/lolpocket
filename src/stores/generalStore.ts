@@ -4,12 +4,9 @@ import { useDataStore } from './dataStore';
 import type { Champion } from './dataStore';
 import type { Item } from './dataStore';
 
-export const useUserStore = defineStore(
-  'UserStore',
+export const usegeneralStore = defineStore(
+  'generalStore',
   () => {
-    const ds = useDataStore();
-    const showSidebar = ref();
-
     const dataMode = ref('light');
     const dataTheme = ref('lightminimalist');
     const dataAccent = ref('minimalist');
@@ -29,13 +26,12 @@ export const useUserStore = defineStore(
       dataTheme,
       dataMode,
       dataAccent,
-      showSidebar,
     };
   },
   {
     persist: {
       storage: localStorage,
-      key: 'userStore',
+      key: 'generalStore',
     },
   }
 );

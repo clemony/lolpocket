@@ -2,7 +2,7 @@
 import { Item } from '../../stores/dataStore';
 import { ItemSet } from './../../stores/itemStore';
 import { useItemStore } from './../../stores/itemStore';
-import { useUserStore } from '../../stores/userStore';
+import { usegeneralStore } from '../../stores/generalStore';
 import { toast } from 'vue3-toastify';
 import { computed, watch } from 'vue';
 import { useChampStore } from '../../stores/champStore';

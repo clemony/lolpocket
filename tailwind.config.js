@@ -38,6 +38,7 @@ const daisyui = require('daisyui');
           'tea-rose': '#E2ACAC',
           'dark-rose': '#CE8E8E',
           'old-rose': '#CE8E8E',
+          current: 'currentColor',
         },
         flexBasis: {
           18: '4.5rem',
@@ -53,6 +54,13 @@ const daisyui = require('daisyui');
         },
         height: {
           stretch: 'stretch',
+          4.5: '1.1rem',
+          inherit: 'inherit',
+        },
+        width: {
+          stretch: 'stretch',
+          4.5: '1.1rem',
+          inherit: 'inherit',
         },
         boxShadow: {
           lil: '2px 2px 4px 1px rgba(0, 0, 0, 0, 0.3)',

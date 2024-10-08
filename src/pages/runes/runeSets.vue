@@ -15,7 +15,7 @@ const props = defineProps<{
   pocketKey: string;
 }>()
 
-const pocketKey = Number(props.pocketKey);
+const pocketKey = props.pocketKey;
 
 
 

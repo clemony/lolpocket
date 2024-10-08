@@ -18,7 +18,7 @@ const props = defineProps<{
     pocketKey: string;
 }>()
 
-const pocketKey = Number(props.pocketKey);
+const pocketKey = props.pocketKey;
 
 // Computed property to retrieve the specific pocket
 const pocket = computed<pocket | undefined>(() => {
@@ -166,12 +166,6 @@ onMounted(() => {
 
                                 <icon icon='ri:edit-fill'
                                     class="opacity-50  size-3.5 absolute right-2.5 top-[11px] peer-focus:opacity-0" />
-                                <!--                     <button
-                                    class="size-4 opacity-0 peer-focus:opacity-80 *:size-3 absolute right-2 top-[4px] *:absolute "
-                                    @">
-                                    <icon icon='teenyicons:x-outline' />
-
-                                </button> -->
 
                                 <ClearButton :click="set.name = ''" />
                             </div>

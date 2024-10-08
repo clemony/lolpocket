@@ -9,14 +9,14 @@
 
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
-import { useUserStore } from "../stores/userStore";
+import { usegeneralStore } from "../stores/generalStore";
 import { storeToRefs } from "pinia";
 import { ref, computed, onMounted } from "vue";
-const myStore = storeToRefs(useUserStore());
+const myStore = storeToRefs(usegeneralStore());
 
 
 // Access user settings from the store
-const settings = useUserStore();
+const settings = usegeneralStore();
 
 // Use ref to track the selected framework
 const frameworkChoice = ref("light");

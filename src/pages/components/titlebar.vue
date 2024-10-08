@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { useSessionStore } from "../../stores/sessionStore";
-import { Icon } from "@iconify/vue";
 import { ref, computed, onMounted } from "vue";
-
+import { getCurrentWindow } from '@tauri-apps/api/window';
 
 
 const sn = useSessionStore();
 const isMinimized = ref(false);
+const appWindow = getCurrentWindow();
 
 function toggleMinimize() {
   if (isMinimized.value == false) {
@@ -15,6 +15,22 @@ function toggleMinimize() {
     isMinimized.value = false;
   }
 }
+
+
+document.getElementById('titlebar')?.addEventListener('mousedown', (e) => {
+  if (e.buttons === 1) {
+    // Primary (left) button
+    e.detail === 2
+      ? appWindow.toggleMaximize() // Maximize on double click
+      : appWindow.startDragging(); // Else start dragging
+  }
+});
+
+
+
+document.getElementById('titlebar-minimize')?.addEventListener('click', () => appWindow.minimize());
+document.getElementById('titlebar-maximize')?.addEventListener('click', () => appWindow.toggleMaximize());
+document.getElementById('titlebar-close')?.addEventListener('click', () => appWindow.close());
 
 </script>
 <template>
@@ -27,13 +43,13 @@ function toggleMinimize() {
     <!-- /* ----------------------------- TOOLBAR BUTTONS ---------------------------- */ -->
     <!-- beautify ignore:start -->
     <div
-      class="titlebar justify-self-end col-start-3 grid grid-cols-3 gap-2 mr-3 *:place-items-center *: *:rounded-md *:size-6 text-base-content/60"
+      class="titlebar justify-self-end col-start-3 grid grid-cols-3 gap-2 mr-3 *:place-items-center *: *:rounded-md *:size-6 text-base-content/60" id="titlebar"
     >
       <div
         id="titlebar-minimize"
         data-tip="minimize"
         alt="minimize"
-        class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20"
+        class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20" @click="appWindow.minimize()"
       >
         <Icon icon="ph:line-vertical" class="rotate-90" />
       </div>
@@ -42,7 +58,7 @@ function toggleMinimize() {
         id="titlebar-maximize"
         data-tip="maximize"
         alt="maximize"
-        class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20"
+        class="p-1 hover:bg-base-300 hover:text-base-content hover:shadow-inner hover:shadow-base-content/20"  @click="appWindow.toggleMaximize()"
       >
         <Icon icon="ph:arrows-out-simple" />
       </div>
@@ -51,7 +67,7 @@ function toggleMinimize() {
         id="titlebar-close"
         alt="close"
         data-tip="close"
-        class="p-1 hover:bg-base-300 hover:shadow-inner hover:shadow-base-content/20 hover:text-base-content"
+        class="p-1 hover:bg-base-300 hover:shadow-inner hover:shadow-base-content/20 hover:text-base-content" @click="appWindow.close()"
       >
         <Icon icon="ph:x" class="titlebar-button" />
       </div>

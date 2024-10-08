@@ -9,6 +9,8 @@ import { defineConfig } from 'vite';
 import { ViteAliases } from 'vite-aliases';
 import { promises as fs } from 'node:fs';
 import { FileSystemIconLoader } from 'unplugin-icons/loaders';
+import vueDevTools from 'vite-plugin-vue-devtools';
+import Inspector from 'unplugin-vue-inspector/vite'; // OR vite-plugin-vue-inspector
 
 export default defineConfig({
   plugins: [
@@ -18,6 +20,8 @@ export default defineConfig({
       dts: './typed-router.d.ts',
     }),
     vue(),
+    vueDevTools(),
+    Inspector(),
     ViteAliases({
       prefix: '@',
       deep: true,

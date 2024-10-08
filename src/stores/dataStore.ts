@@ -89,6 +89,7 @@ export const useDataStore = defineStore('dataStore', () => {
   function getShards() {
     return shards.value;
   }
+
   // Use a computed property to extract unique paths from the runes array
   const uniqueCats = computed(() => {
     const cat = items.value.map((item) => item.cat.replace(' item', '').replace('Potions and ', '').replace(/s$/, '').trim());
@@ -105,6 +106,10 @@ export const useDataStore = defineStore('dataStore', () => {
     const classes = champions.value.flatMap((c) => c.tags);
     return Array.from(new Set(classes)); // Create an array with only unique paths
   });
+
+  const roles = ['Small Tomato', 'Mid', 'Top', 'Jungle', 'Bot', 'Support', 'Enchanter', 'Catcher', 'Burst', 'DPS'];
+
+  const typeOptions = [...uniqueClass.value, ...roles]; // Spread both arrays to concatenate
 
   const transformItemData = (data: any): Item => {
     return {
@@ -280,5 +285,7 @@ export const useDataStore = defineStore('dataStore', () => {
     uniqueClass,
     shards,
     getShards,
+    roles,
+    typeOptions,
   };
 });

@@ -1,51 +1,92 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue';
 import { pocket, usePocketStore } from '../../stores/pocketStore';
+import { useDataStore } from '../../stores/dataStore';
 import { icons } from '../../data/icons';
 const ps = usePocketStore();
+const ds = useDataStore();
 const iconStore = icons;
 
 const props = defineProps<{
     title: string;
     button: string;
+    pocketKey?: number;
 }>()
 
-
+console.log('props key: ', props.pocketKey)
 // Form fields
 const name = ref('');
-const type = ref('');
+const type = defineModel({
+    default: ""
+});
 const selectedIcon = ref('teenyicons:folder-outline');
 const iconTabs = ref('icon');
 
 
 
 
-const bgColor = ref('#000');
-const iconColor = ref('#FFF');
+const colorValue = ref('#000');
 
-watch(() => bgColor.value, (newVal) => {
-    bgColor.value = newVal;
-}, { immediate: true });
-
-watch(() => iconColor.value, (newVal) => {
-    iconColor.value = newVal;
-}, { immediate: true });
-
-watch(() => type.value, (newVal) => {
-    type.value = newVal;
-    console.log(newVal);
-    console.log(type);
+watch(() => colorValue.value, (newVal) => {
+    colorValue.value = newVal;
 }, { immediate: true });
 
 
+
+
+const thisPocket = computed<pocket | undefined>(() => {
+    if (!ps.pockets || props.pocketKey === undefined) return undefined;
+
+    const key = Number(props.pocketKey);
+    const pocket = ps.pockets.find((pocket: pocket) => pocket.key === key);
+
+    // If a pocket is found, set the form fields to the pocket values
+    if (pocket) {
+        name.value = pocket.name;
+        type.value = pocket.type;
+        selectedIcon.value = pocket.icon;
+    }
+
+    return pocket;
+});
+
+watch(
+    () => props.pocketKey,
+    (newKey) => {
+        if (newKey !== undefined && ps.pockets) {
+            const key = Number(newKey);
+            const pocket = ps.pockets.find((pocket: pocket) => pocket.key === key);
+
+            if (pocket) {
+                name.value = pocket.name;
+                type.value = pocket.type;
+                selectedIcon.value = pocket.icon;
+            }
+        }
+    },
+    { immediate: true } // Ensure it runs immediately upon component mount
+);
+
+onMounted(() => {
+    console.log(thisPocket, props.pocketKey);
+});
+
+// Handle the submit logic for both creating a new pocket and editing an existing one
 function submitForm() {
+    if (thisPocket.value) {
+        // Editing an existing pocket
+        thisPocket.value.name = name.value;
+        thisPocket.value.type = type.value;
+        thisPocket.value.icon = selectedIcon.value;
+        console.log('Pocket updated:', thisPocket.value);
 
-    console.log(selectedIcon.value);
-    console.log(type);
-    console.log(name);
-    console.log(bgColor.value);
-
-    ps.newPocket(name.value, type.value, selectedIcon.value, bgColor.value, iconColor.value);
+    } else {
+        // Creating a new pocket
+        console.log(selectedIcon.value);
+        console.log(type);
+        console.log(name);
+        ps.newPocket(name.value, type.value, selectedIcon.value, colorValue.value);
+    }
 
 
     emit('submit')
@@ -53,8 +94,7 @@ function submitForm() {
     name.value = '';
     type.value = '';
 
-    bgColor.value = '#000';
-    iconColor.value = '#FFFFFF';
+    colorValue.value = '';
     selectedIcon.value = '';
 }
 
@@ -72,24 +112,30 @@ const emit = defineEmits<{
 <template>
 
     <div
-        class="absolute min-w-[300px] grid gap-4 p-5 z-10 bg-base-100/95 backdrop-blur-md right-7 rounded-box shadow-lg top-[105px] arrow before:absolute after:absolute border border-neutral/30">
+        class="absolute min-w-[300px] grid gap-4 p-5 z-10 bg-base-100/95 backdrop-blur-md right-7 rounded-lg shadow-lg top-[105px] arrow before:absolute after:absolute border border-neutral/30">
         <div class="flex items-center gap-2">
             <h1 class="text-base font-semibold tracking-tight text-base-content ">{{ title }}</h1>
 
 
         </div>
-        <form ref="form" class="grid gap-3 max-w-[300px]" @submit.prevent.stop="submitForm">
+        <form ref="form" class="grid gap-4 max-w-[300px]" @submit.prevent.stop="submitForm">
 
-            <div class="relative w-full mb-4 text-base-content join ">
+            <div
+                class="relative w-full mb-0 text-base-content join selector after:absolute after:right-1.5 after:top-3.5">
                 <input type="text" v-model="name" placeholder="Pocket Name"
                     class="!bg-transparent input input-sm input-bordered  join-item border-base-300 shadow-inner w-full"
                     spellcheck='false' />
 
                 <!--   <ClearButton @click="name = ''" /> -->
 
-                <SelectClassNew v-model:type="type" />
 
 
+                <select v-model="type"
+                    class="!bg-base-200/80 select select-bordered max-w-24 select-sm join-item text-xs border-base-300 [&_option]:truncate bg-none pl-1.5 pr-5 [&_option]:w-full">
+                    <option disabled value="">Type</option>
+                    <option v-for="c in ds.uniqueClass">{{ c }}</option>
+                    <option>Small Tomato</option>
+                </select>
             </div>
 
 
@@ -106,10 +152,10 @@ const emit = defineEmits<{
 
 
                     <div
-                        class="grid self-center grid-cols-5 gap-1 px-2 py-3 overflow-y-scroll max-h-52 justify-items-center scrollbar-hide justify-self-center">
+                        class="grid self-center grid-cols-5 gap-3 px-1 py-3 overflow-y-scroll max-h-52 justify-items-center scrollbar-hide justify-self-center">
 
                         <label v-for='icon in iconStore'
-                            class="self-center  p-3  btn-ghost btn btn-circle aspect-square  hover:has-[:checked]:opacity-80 has-[:checked]:bg-neutral"
+                            class="self-center  p-1  btn-ghost btn btn-square btn-sm   hover:has-[:checked]:opacity-80 has-[:checked]:bg-neutral"
                             @click.stop.prevent="selectedIcon = icon">
 
                             <input type="radio" name="iconPicker" v-model="selectedIcon" :value="icon"
@@ -131,11 +177,8 @@ const emit = defineEmits<{
                 <div role="tabpanel" :class="{ 'hidden': iconTabs == 'icon' }"
                     class="w-full grid  min-w-[298px] tab-content bg-base-100 border-base-300/70 rounded-box shadow-inset-sm ">
                     <div
-                        class="relative grid self-center p-1 overflow-y-scroll justify-items-center scrollbar-hide justify-self-center">
-                        <ColorPicker v-model:bgColor="bgColor" v-model:iconColor="iconColor"
-                            :selectedIcon="selectedIcon" />
-
-
+                        class="grid self-center px-1 py-3 overflow-y-scroll justify-items-center scrollbar-hide justify-self-center ">
+                        <ColorPicker v-model:color="colorValue" />
 
 
                     </div>

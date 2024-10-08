@@ -1,21 +1,11 @@
-<route lang="json">{
-    "name": "championGrid",
-    "alias": "/champions/championSelect",
-    "meta": {
-        "title": "Runes",
-        "icon": "teenyicons:hexagon-outline"
-    }
-}</route>
-
 <script setup lang="ts">
-import { useUserStore } from '../../stores/userStore';
-import { ref, computed, onMounted } from "vue";
 import { useChampStore } from '../../stores/champStore';
 import SelectedChamps from '../champions/selectedChamps.vue';
+import { usePocketStore } from '../../stores/pocketStore';
 
-const us = useUserStore();
+
 const cs = useChampStore();
-
+const ps = usePocketStore();
 const props = defineProps<{
     pocketKey: string;
 }>()
@@ -98,7 +88,7 @@ const props = defineProps<{
 
 
 
-        <Pane v-if="us.showSidebar == true" size="27" max-size="27" min-size="27" class="relative max-h-full ">
+        <Pane v-if="ps.showSidebar == true" size="27" max-size="27" min-size="27" class="relative max-h-full ">
 
 
             <ChampionSidebar :champion="cs.selectedChampion" />

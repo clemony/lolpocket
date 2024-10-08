@@ -15,7 +15,7 @@ const props = defineProps<{
 // Computed property to retrieve the specific pocket
 const thisPocket = computed<pocket | undefined>(() => {
     if (!ps.pockets || !props.pocketKey) return undefined;
-    const key = Number(props.pocketKey);
+    const key = props.pocketKey;
     return ps.pockets.find((pocket: pocket) => pocket.key === key);
 });
 
@@ -48,8 +48,8 @@ const quickSearch = ref('');
 
     <VueDraggable v-if="thisPocket" v-model="champions" :delay="0" :animation="300"
         :group="{ name: 'champs', pull: true, put: true, revertClone: false }" :prevent-on-filter='true'
-        ghostClass="ghosty" :force-fallback="true" :fallbackTolerance="0" fallbackClass="drag-clone"
-        :fallbackOnBody="true"
+        :bubbleScroll="false" :scroll="false" ghostClass="ghosty" :force-fallback="true" :fallbackTolerance="0"
+        fallbackClass="drag-clone" :fallbackOnBody="true"
         class="h-full overflow-x-scroll drag-draggable  !flex-nowrap py-1 items-center overflow-y-hidden px-0.5">
 
 

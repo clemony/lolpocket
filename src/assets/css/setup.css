@@ -22,6 +22,10 @@
   @apply backdrop-blur-md !bg-base-100/90 backdrop-brightness-95 top-11 max-w-64 self-center -right-10 border-base-300 !rounded-box shadow-warm !text-base-content text-sm border font-sans font-medium first-letter:mr-4;
 }
 
+.input-simple {
+  @apply border-b border-transparent outline-none   cursor-text focus:border-base-300 truncate transition-all duration-300 bg-transparent select-all;
+}
+
 .borders {
   @apply border-[1px] border-base-300;
 }
@@ -100,6 +104,9 @@ body {
   }
 }
 
+.btn-ghost:hover {
+  @apply bg-base-200/70;
+}
 .menu {
   @apply border-base-300 border-[0.5px];
 }
@@ -157,4 +164,10 @@ body {
 }
 .inspirationColor {
   --path-color: cyan-700;
+}
+
+@layer base {
+  .hover-effect {
+    @apply border border-neutral/15 hover:border-neutral/60  transition-all duration-200 hover:scale-105 hover:shadow-[1px_2px_3px_0px_#00000054] cursor-pointer;
+  }
 }

@@ -27,3 +27,4 @@ declare module '@assets/theme.ts';
 declare module '@pages/champions/championGrid.vue';
 declare module '@champions/championSidebar.vue';
 declare module '@pages/components/modal.vue';
+declare module '@data/icons.ts';

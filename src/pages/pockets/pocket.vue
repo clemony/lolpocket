@@ -12,16 +12,13 @@
 import { onMounted, ref, computed } from 'vue';
 
 import { useItemStore } from '../../stores/itemStore';
-import { useRuneStore } from '../../stores/runeStore';
 import pocketItems from './pocketItems.vue'; // Import the components
 import buildRunes from './pocketRunes.vue'; // Import the components
 import buildChampions from './pocketChampions.vue';
-import { useUserStore } from '../../stores/userStore';
 import { useSessionStore } from '../../stores/sessionStore';
 import { usePocketStore } from '../../stores/pocketStore';
 
-const us = useUserStore();
-const rs = useRuneStore();
+
 const is = useItemStore();
 const sn = useSessionStore();
 const ps = usePocketStore();
@@ -62,8 +59,10 @@ onMounted(() => {
   }
 });
 
+
+
 const sidebarButton = computed(() => {
-  if (us.showSidebar == 'true') {
+  if (ps.showSidebar == true) {
     return 'Collapse Sidebar';
   } else {
     return 'Open Sidebar';
@@ -138,9 +137,9 @@ const sidebarButton = computed(() => {
       </dialog> -->
 
       <div class="items-center join">
-        <label :class="{ active: us.showSidebar == true }" :title="sidebarButton"
+        <label :class="{ active: ps.showSidebar == true }" :title="sidebarButton"
           class="relative flex items-center join-item btn btn-sm swap swap-rotate text-nowrap">
-          <input type="checkbox" v-model="us.showSidebar" :value="us.showSidebar" class="hidden" checked />
+          <input type="checkbox" v-model="ps.showSidebar" :value="ps.showSidebar" class="hidden" checked />
           <icon icon="teenyicons:send-right-solid" class=" swap-on size-3.5" />
           <icon icon="teenyicons:send-left-outline" class="absolute swap-off size-3.5" />
 

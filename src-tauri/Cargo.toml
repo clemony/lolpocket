@@ -5,25 +5,26 @@ description = "A Tauri App"
 authors = ["you"]
 license = ""
 repository = ""
-default-run = "app"
 edition = "2021"
-rust-version = "1.60"
+rust-version = "1.71"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[lib]
+name = "app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
 [build-dependencies]
-tauri-build = { version = "1.5.3", features = [] }
+tauri-build = { version = "2.0.0-rc.13", features = [] }
 
 [dependencies]
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
-tauri = { version = "1.7.0", features = [ "shell-open", "window-start-dragging", "window-set-title", "macos-private-api", "window-set-maximizable", "window-set-closable", "window-close", "window-minimize", "window-maximize", "window-hide", "window-unminimize", "window-unmaximize", "window-set-minimizable", "window-show", "window-set-resizable"] }
-window-vibrancy = "=0.4.0"
-obj-c = "0.0.0"
-objc2 = "0.5.2"
+log = "0.4"
+tauri = { version = "2.0.0-rc.17", features = ["macos-private-api"] }
+tauri-plugin-log = "2.0.0-rc"
+window-vibrancy = "0.5.2"
+tauri-plugin-fs = "2.0.0-rc"
 
-[features]
-# this feature is used for production builds or when `devPath` points to the filesystem and the built-in dev server is disabled.
-# If you use cargo directly instead of tauri's cli you can use this feature flag to switch between tauri's `dev` and `build` modes.
-# DO NOT REMOVE!!
-custom-protocol = [ "tauri/custom-protocol" ]
+[target."cfg(target_os = \"macos\")".dependencies]
+cocoa = "0.25"

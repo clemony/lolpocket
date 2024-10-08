@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { ref, onMounted, watch, computed } from "vue";
 import "@assets/css/imports.css";
-import { useUserStore } from "../stores/userStore";
+import { usegeneralStore } from "../stores/generalStore";
 import { useSessionStore } from "./../stores/sessionStore";
-import { ModalsContainer } from 'vue-final-modal'
 
 
 
@@ -36,7 +35,7 @@ function log(resize, event: any) {
 
 
 onMounted(() => {
-  const settings = useUserStore();
+  const settings = usegeneralStore();
 });
 
 </script>
@@ -72,8 +71,8 @@ onMounted(() => {
   <div class="pointer-events-none w-screen h-screen fixed top-0 left-0 z-[999] shadow-frame rounded-[12px]">
 
   </div>
-  <!--   <div class="flex items-center justify-center !h-screen"> -->
-  <ModalsContainer />
+
+
 
 
 

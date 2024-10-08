@@ -61,11 +61,11 @@ function handleChange(event: Event) {
 
           <div class="relative size-full " :class="{ '*:size-full': isMinimized == true }">
             <h1 class="text-base font-semibold !duration-200 transition-translate"
-              :class="{ '!font-light absolute -mt-[1px] ml-[5px] group-hover/name:opacity-0 group-hover/name:-translate-x-10': isMinimized == true }">
+              :class="{ '!font-light absolute text-[currentColor] invert -mt-[1px] ml-[5px] group-hover/name:opacity-0 group-hover/name:-translate-x-20': isMinimized == true }">
               {{ appName }}
             </h1>
             <icon icon="teenyicons:right-outline" :class="{ 'hidden': isMinimized == false }"
-              class="absolute transition-translate !duration-200 translate-x-10 opacity-0 group-hover/name:opacity-100 group-hover/name:translate-x-0 mt-[2px] ml-1.5 " />
+              class="absolute text-[currentColor] invert transition-translate !duration-200 translate-x-10 opacity-0 group-hover/name:opacity-100 group-hover/name:translate-x-0 mt-[2px] ml-1.5 " />
           </div>
         </label>
 
@@ -92,11 +92,21 @@ function handleChange(event: Event) {
 
         </a>
         <ul :class="{ 'menu-dropdown-show': showDropdowns[0] }" class="menu-dropdown">
+          <li><a>
+              <icon icon="iconoir:pin" class="" />
+              Pinned
+            </a></li>
           <li>
-            <a @click="sn.navigateTo('')"><span>Submenu 1</span></a>
+            <a @click="sn.navigateTo('/pockets/trash')">
+              <icon icon="iconoir:bin-full" class="" />
+              Trash
+            </a>
           </li>
           <li>
-            <a><span>Submenu 2</span></a>
+            <a>
+              <icon icon="fluent:archive-20-regular" class="" />
+              Archive
+            </a>
           </li>
         </ul>
       </li>

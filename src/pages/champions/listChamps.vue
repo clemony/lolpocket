@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useUserStore } from '../../stores/userStore';
+import { usegeneralStore } from '../../stores/generalStore';
 import { ref, computed } from "vue";
 import { imageIn, imageOut } from '../../script/animations';
 import { useChampStore } from '../../stores/champStore';
@@ -7,7 +7,7 @@ import {
     VueDraggable
 } from 'vue-draggable-plus'
 
-const us = useUserStore();
+const us = usegeneralStore();
 const cs = useChampStore();
 
 
