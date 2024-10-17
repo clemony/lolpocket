@@ -1,15 +1,14 @@
 <script setup lang="ts">
-import { ref, onMounted, shallowRef } from "vue";
+import { ref, onMounted, shallowRef, watch } from "vue";
 import { useSessionStore } from "../../stores/sessionStore";
-
+import { useRoute, useRouter } from 'vue-router';
+import { usePocketStore } from '../../stores/pocketStore';
 
 /* ------------------------------- NAVIGATION ------------------------------- */
-
-
 const sn = useSessionStore();
-
-
-
+const ps = usePocketStore();
+const router = useRouter();
+const route = useRoute();
 
 // Track the active tab
 const activeTab = ref("");
@@ -40,48 +39,48 @@ function removeTab(id) {
     }
 }
 
+/* ------------------------------ WATCHES & ON MOUNTED ----------------------------- */
+// Watch openTabs to force the component to re-render when titles change
+watch(
+    () => sn.openTabs,
+    (newTabs, oldTabs) => {
+        console.log("Tabs updated:", newTabs);
+    },
+    { deep: true }
+);
 
-
-/* ------------------------------ ON MOUNTED ----------------------------- */
 
 
 onMounted(() => {
-    const sn = useSessionStore();
     if (!sn.activeTab) {
-        sn.navigateTo('/home');
+        sn.navigateTo('/');
     }
 });
-
 </script>
 
 <template>
-
-
-    <div data-tauri-drag-region role="tablist" class="z-10 flex pointer-events-auto tabs tabs-lifted">
+    <div data-tauri-drag-region role="tablist"
+        class="z-10 flex overflow-x-scroll overflow-y-hidden pointer-events-auto mr-28 tabs tabs-sm tabs-lifted scrollbar-hide">
         <template v-for="tab in sn.openTabs" :key="tab.id">
             <a role="tab"
-                class="group flex justify-start tab m-0 w-36 before:visible before:-left-[8px]  after:visible capitalize text-xs z-[5]  pointer-events-auto font-medium"
+                class="group flex h-7 flex-nowrap justify-start tab m-0 w-36 min-w-32 before:visible before:-left-[8px] after:visible capitalize text-xs z-[5] pointer-events-auto font-medium"
                 :alt="tab.tab.name" :class="['tab', { 'tab-active': sn.isActiveTab(tab.tab.link) }]"
                 @click.prevent="sn.navigateTo(tab.tab.link)">
-                <Icon :icon="tab.icon || 'default-icon'" class="size-3.5 mr-2 ml-1" />
-                <span class="mt-[2px] grow justify-start flex">{{ tab.title }}</span>
+                <Icon :icon="tab.icon || 'default-icon'" class="!size-3.5 shrink-0  mr-2 ml-1" />
+                <span class="mt-[2px] w-full text-start max-w-28 min-w-0 justify-start truncate ">{{ tab.title }}</span>
 
                 <button
                     class="flex content-center justify-end transition-opacity duration-300 opacity-0 group-hover:opacity-70 size-4"
                     @click.stop="removeTab(tab.id)"> <!-- Stop event propagation to prevent tab click -->
                     <Icon icon="material-symbols:close" class="size-3.5 ml-2 -mr-1" />
                 </button>
-
             </a>
-            <div role="tabpanel" class="tab-content overflow-hidden  !bg-base-100/90 absolute inset-0 m-0 mt-[31px]   border-base-300 border h-auto !p-0 !rounded-bl-none !rounded-tr-none
-           !shadow-[inset_-12px_-8px_40px_#46464620]  ">
-
+            <div role="tabpanel"
+                class="tab-content overflow-hidden !bg-base-100/90 absolute inset-0 m-0 mt-[27px] border-base-300 border h-auto !p-0 !rounded-bl-none !rounded-tr-none !shadow-[inset_-12px_-8px_40px_#46464620]">
                 <RouterView />
-
             </div>
         </template>
         <a role="tab" class="hidden basket">egg</a>
-
     </div>
 </template>
 
@@ -108,9 +107,10 @@ onMounted(() => {
 
 .tab-active {
     --shadow-color:  oklch(var(--b1) / 0.4) ;
-    @apply !brightness-[97%] ;
-}
+    @apply bg-base-100 brightness-[96.5%]  !z-30;
 
-.tab-active {
-    @apply bg-base-100 brightness-[99%]  !z-30;
+    &::after,
+    &::before {
+        @apply ml-[1.5px];
+    }
 }</style>

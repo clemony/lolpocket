@@ -1,0 +1,17 @@
+{
+  "$schema": "https://shadcn-vue.com/schema.json",
+  "style": "new-york",
+  "typescript": true,
+  "tsConfigPath": "./tsconfig.json",
+  "tailwind": {
+    "config": "./tailwind.config.js",
+    "css": "/Users/caitlin/Documents/lolpocket/lolpocket/src/blank/index.css",
+    "baseColor": "neutral",
+    "cssVariables": false
+  },
+  "framework": "vite",
+  "aliases": {
+    "components": "./src/pages/components",
+    "utils": "./src/lib/utils"
+  }
+}

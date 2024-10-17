@@ -1,10 +1,18 @@
 <script setup lang="ts">
 import { ref, onMounted, watch, computed } from "vue";
 import "@assets/css/imports.css";
-import { usegeneralStore } from "../stores/generalStore";
+import { useGeneralStore } from "../stores/generalStore";
 import { useSessionStore } from "./../stores/sessionStore";
+import { useDataStore } from '../stores/dataStore';
+import { usePocketStore } from '../stores/pocketStore';
 
 
+
+let ps;
+const sn = useSessionStore();
+
+const ds = useDataStore();
+ds.fetchData();
 
 
 const isMinimized = ref(false);
@@ -14,7 +22,8 @@ const isMinimized = ref(false);
 /* ------------------------------- NAVIGATION ------------------------------- */
 
 
-const sn = useSessionStore();
+
+
 
 const paneSize = computed(() => {
   let size = 19;
@@ -35,7 +44,11 @@ function log(resize, event: any) {
 
 
 onMounted(() => {
-  const settings = usegeneralStore();
+  const settings = useGeneralStore();
+  const sn = useSessionStore();
+  if (sn.openTabs.length == 0) {
+    sn.navigateTo('/');
+  }
 });
 
 </script>

@@ -38,6 +38,11 @@ const daisyui = require('daisyui');
           'tea-rose': '#E2ACAC',
           'dark-rose': '#CE8E8E',
           'old-rose': '#CE8E8E',
+          precision: '#ebcb8b',
+          domination: '#bf616a',
+          inspiration: '#A4C1C4',
+          sorcery: '#b48dad',
+          resolve: '#a3be8c',
           current: 'currentColor',
         },
         flexBasis: {
@@ -72,6 +77,9 @@ const daisyui = require('daisyui');
         size: {
           4.5: '1.1rem',
         },
+        borderRadius: {
+          xs: '4px',
+        },
       },
       container: {
         center: true,
@@ -97,7 +105,7 @@ const daisyui = require('daisyui');
           lg: '0.7rem',
           md: '0.5rem',
           DEFAULT: '0.3rem',
-          sm: '0.25rem',
+          sm: '4px',
         },
       },
     },

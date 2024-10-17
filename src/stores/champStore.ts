@@ -1,12 +1,14 @@
 import { defineStore } from 'pinia';
 import { ref, computed } from 'vue';
 import { useDataStore } from './dataStore';
-import type { Champion, Item } from './dataStore';
+import { Champion, Item } from '@types';
+import { usePocketStore } from './pocketStore';
 
 export const useChampStore = defineStore(
   'champStore',
   () => {
     const ds = useDataStore();
+    const ps = usePocketStore();
     // Use a computed property to ensure it reacts to changes in ds.champions
     const champions = computed(() => ds.champions);
 
@@ -18,22 +20,7 @@ export const useChampStore = defineStore(
     const likedChamps = ref<Champion[]>([]);
     const champTabs = ref('abilities');
 
-    const filteredChampions = computed(() => {
-      let filtered = [...champions.value];
-
-      if (championsInPocket.value.length > 0) {
-        const selectedNames = championsInPocket.value.map((champion) => champion.name);
-        filtered = filtered.filter((champion) => !selectedNames.includes(champion.name));
-      }
-
-      if (champSearch.value) {
-        filtered = filtered.filter((champion) => Object.values(champion).some((value) => typeof value === 'string' && value.toLowerCase().includes(champSearch.value)));
-      }
-
-      return filtered;
-    });
-
-    //--------------------------------------------------ITEMS MAP
+    //------------------------------------------ITEMS MAP
 
     const championItemsMap = ref<Record<string, Item[]>>({});
 
@@ -72,13 +59,21 @@ export const useChampStore = defineStore(
       championsInPocket.value = [];
     }
 
+    function removeChamp(champ, pocket) {
+      const find = pocket.champions[0].champions.find((champion) => champion.name == champ);
+
+      if (find) {
+        pocket.champions[0].champions.splice(find, 1);
+      }
+    }
+
     return {
       selectedChampion,
       champions, // champions is now a ref
-      filteredChampions,
       likedChamps,
       championsInPocket,
       resetChamps,
+      removeChamp,
       champSearch,
       addToSet,
       getChampionItems,

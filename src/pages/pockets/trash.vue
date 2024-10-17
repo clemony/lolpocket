@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import { usePocketStore } from '../../stores/pocketStore';
 import { useSessionStore } from '../../stores/sessionStore';
-import TrashPockets from './trashPockets.vue';
+
 
 const ps = usePocketStore();
 const sn = useSessionStore();
@@ -81,7 +81,9 @@ function clearOldPockets() {
 
         </div>
 
-        <PocketMenu />
+        <ul class="h-64 overflow-scroll border">
+            <li v-for="pocket in ps.trashPockets">{{ pocket.name }}</li>
+        </ul>
 
         <!--  <div v-if="ps.trashPockets.length > 0"
             class="relative flex flex-col h-auto pt-3 overflow-x-auto overflow-y-hidden tabs-lifted tabs scrollbar-hide ">

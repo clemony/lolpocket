@@ -1,72 +1,8 @@
+import { Champion, DataObject, Item, Rune, Shard } from 'types';
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
 // Define types for the JSON data
-export interface Rune {
-  name: string;
-  wiki: string;
-  tier: number;
-  type: string;
-  img: string;
-  stats: string;
-  path: string;
-}
-
-export interface Item {
-  name: string;
-  img: string;
-  buy: number;
-  sell: number;
-  stats: string;
-  passive: string;
-  active: string;
-  type: string;
-  cat: string;
-  wiki: string;
-  id: number;
-  count: number;
-}
-
-interface Ability {
-  key: string;
-  name: string;
-  context: string;
-  img: string;
-  data: Record<string, string>;
-}
-
-export interface Champion {
-  name: string;
-  img: string;
-  wiki: string;
-  title: string;
-  tags: string[];
-  type: string;
-  abilities: {
-    passive: Ability;
-    q: Ability;
-    w: Ability;
-    e: Ability;
-    r: Ability;
-  };
-  items: Item[];
-}
-
-interface Shard {
-  name: string;
-  stats: string;
-  slotID: number;
-  slotName: string;
-  type: string;
-  img: string;
-  color: string;
-}
-
-interface DataObject {
-  type: string;
-  tags?: string | string[]; // `tags` can be either a string or an array of strings
-  [key: string]: any;
-}
 
 export const useDataStore = defineStore('dataStore', () => {
   const runes = ref<Rune[]>([]);
@@ -257,6 +193,7 @@ export const useDataStore = defineStore('dataStore', () => {
           runes.value.push(object as Rune);
         } else if (object.type === 'champion') {
           const transformedChampion = transformChampionData(object);
+
           champions.value.push(transformedChampion);
         } else if (object.type === 'item') {
           const transformedItem = transformItemData(object);

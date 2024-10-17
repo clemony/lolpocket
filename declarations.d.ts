@@ -1,3 +1,7 @@
+import { Plugin } from 'vue';
+const vTableResizable: Plugin;
+export default vTableResizable;
+
 declare module '@stores/sessionStore';
 declare module '@stores/runeStore';
 declare module '@stores/dataStore';
@@ -7,7 +11,7 @@ declare module '@stores/itemStore';
 declare module '/src/stores/itemStore';
 declare module '@stores/news';
 declare module '@stores/champQuotes.ts';
-
+declare module '@script/types.ts';
 declare module '@iconify/vue';
 declare module '@pages/App.vue';
 declare module '@pages/hi.vue';
@@ -28,3 +32,4 @@ declare module '@pages/champions/championGrid.vue';
 declare module '@champions/championSidebar.vue';
 declare module '@pages/components/modal.vue';
 declare module '@data/icons.ts';
+declare module 'vue3-table-resizable' {}

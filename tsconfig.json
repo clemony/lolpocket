@@ -26,8 +26,8 @@
             "@assets/*": [
                 "src/assets/*"
             ],
-            "@components/*": [
-                "src/pages/components/*"
+            "@data/*": [
+                "src/data/*"
             ],
             "@lib/*": [
                 "src/lib/*"
@@ -47,38 +47,53 @@
             "@stores/*": [
                 "src/stores/*"
             ],
-            "@/*": [
-                "src/*"
-            ],
             "@utils/*": [
                 "src/utils/*"
             ],
-            "@css/*": [
-                "src/assets/css/*"
+            "@/*": [
+                "src/*"
             ],
-            "@img/*": [
-                "src/assets/img/*"
+            "~assets/*": [
+                "src/assets/*"
             ],
-            "@theming/*": [
-                "src/assets/theming/*"
-            ],
-            "@builds/*": [
-                "src/pages/builds/*"
-            ],
-            "@champions/*": [
-                "src/pages/champions/*"
-            ],
-            "@items/*": [
-                "src/pages/items/*"
-            ],
-            "@runes/*": [
-                "src/pages/runes/*"
-            ],
-            "@data/*": [
+            "~data/*": [
                 "src/data/*"
             ],
-            "@pockets/*": [
-                "src/pages/pockets/*"
+            "~lib/*": [
+                "src/lib/*"
+            ],
+            "~logs/*": [
+                "src/logs/*"
+            ],
+            "~pages/*": [
+                "src/pages/*"
+            ],
+            "~script/*": [
+                "src/script/*"
+            ],
+            "~service/*": [
+                "src/service/*"
+            ],
+            "~stores/*": [
+                "src/stores/*"
+            ],
+            "~utils/*": [
+                "src/utils/*"
+            ],
+            "~/*": [
+                "src/*"
+            ],
+            "@blank/*": [
+                "src/blank/*"
+            ],
+            "@types": [
+                "./types.d.ts"
+            ],
+            "@storage/*": [
+                "src/pages/storage/*"
+            ],
+            "@calculator/*": [
+                "src/pages/calculator/*"
             ]
         }
     }

@@ -2,20 +2,34 @@
 import { ColorPicker } from 'vue-accessible-color-picker'
 
 import { computed, nextTick, onMounted, ref } from 'vue';
-import { pocket } from '../../stores/pocketStore';
+import { usePocketStore } from '../../stores/pocketStore';
 
+const ps = usePocketStore();
 const props = defineProps<{
-    pocket?: pocket[];
-    bgColor: string;
-    iconColor: string;
+    pocket?: {
+        icon: string;
+        bgColor: string;
+        iconColor: string;
+    };
+    bgColor?: string;
+    iconColor?: string;
     selectedIcon?: string;
+    pocketKey?: string;
 }>()
 
+console.log(props.pocket);
+
 const emit = defineEmits(['update:bgColor', 'update:iconColor']);
+const pocket = computed(() => {
+    if (props.pocketKey) {
+        return props.pocket;
+    }
+});
 
 // Initialize color with the prop value
-const bgColor = ref(props.bgColor);
-const iconColor = ref(props.iconColor);
+
+const bgColor = ref('#000');
+const iconColor = ref('#FFF');
 const colorType = ref('background');
 const color = computed(() => {
     if (colorType.value == 'icon') {
@@ -24,7 +38,28 @@ const color = computed(() => {
         return bgColor.value;
     }
 });
-// Update color and emit the new value to the parent
+
+
+
+const getIcon = computed(() => {
+    return props.selectedIcon || 'teenyicons:folder-outline';
+});
+
+const getBgColor = computed(() => {
+    if (props.pocket) {
+        return props.pocket.bgColor;
+    } else {
+        return props.bgColor;
+    }
+});
+const getIconColor = computed(() => {
+    if (props.pocket) {
+        return props.pocket.iconColor;
+    } else {
+        return props.iconColor;
+    }
+});
+
 function updateColor(eventData) {
     if (colorType.value == 'background') {
         bgColor.value = eventData.cssColor;
@@ -36,11 +71,11 @@ function updateColor(eventData) {
 }
 onMounted(async () => {
     await nextTick();
-    if (!bgColor.value) {
-        bgColor.value = '#000';
+    if (props.pocket) {
+        bgColor.value = props.pocket.bgColor;
     }
-    if (!iconColor.value) {
-        iconColor.value = '#FFF';
+    if (props.pocket) {
+        iconColor.value = props.pocket.iconColor;
     }
 });
 </script>
@@ -75,9 +110,9 @@ onMounted(async () => {
             </label>
         </div>
 
-        <div :style="{ backgroundColor: bgColor }"
+        <div :style="{ backgroundColor: getBgColor }"
             class=" grid p-2.5 rounded-full join-item place-items-center size-9 icon-color ">
-            <icon :style="{ color: iconColor }" :icon="selectedIcon" class="size-full" />
+            <icon :style="{ color: getIconColor }" :icon="getIcon" class="size-full" />
         </div>
 
     </div>

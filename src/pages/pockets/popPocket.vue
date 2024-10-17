@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue';
-import { pocket, usePocketStore } from '../../stores/pocketStore';
+import { usePocketStore } from '../../stores/pocketStore';
 import { icons } from '../../data/icons';
 const ps = usePocketStore();
 const iconStore = icons;
@@ -15,7 +15,7 @@ const props = defineProps<{
 const name = ref('');
 const type = ref('');
 const selectedIcon = ref('teenyicons:folder-outline');
-const iconTabs = ref('icon');
+
 
 
 
@@ -33,30 +33,24 @@ watch(() => iconColor.value, (newVal) => {
 
 watch(() => type.value, (newVal) => {
     type.value = newVal;
-    console.log(newVal);
-    console.log(type);
 }, { immediate: true });
 
 
 function submitForm() {
+    ps.addPocket(name.value, type.value, selectedIcon.value, bgColor.value, iconColor.value);
+    emit('submit');
 
-    console.log(selectedIcon.value);
-    console.log(type);
-    console.log(name);
-    console.log(bgColor.value);
-
-    ps.newPocket(name.value, type.value, selectedIcon.value, bgColor.value, iconColor.value);
-
-
-    emit('submit')
     // Clear the form values
     name.value = '';
     type.value = '';
-
-    bgColor.value = '#000';
+    // bgColor.value = '#000';
     iconColor.value = '#FFFFFF';
     selectedIcon.value = '';
+    console.log('pocket added!', ps.pockets);
+
+
 }
+
 
 
 
@@ -93,55 +87,7 @@ const emit = defineEmits<{
             </div>
 
 
-            <div role="tablist"
-                class=" grid w-full [&_.tab]:!border-b-transparent [&_.tab-content]:!z-0  [&_.tab]:!z-30 relative tabs tabs-lifted  *:text-xs border-base-300/70 [&_.tab]:h-7 [&_.tab]:font-medium overflow-y-scroll scrollbar-hide">
-
-                <label role="tab" :class="{ 'tab-active': iconTabs == 'icon' }" class="tab first">
-                    <input type="radio" class="hidden peer" v-model="iconTabs" name="iconTabs" value="icon">
-                    Icons
-                </label>
-
-                <div role="tabpanel" :class="{ 'hidden': iconTabs == 'color' }"
-                    class="w-full grid rounded-tl-none min-w-[298px] tab-content bg-base-100 border-base-300/70 rounded-box shadow-inset-sm relative">
-
-
-                    <div
-                        class="grid self-center grid-cols-5 gap-1 px-2 py-3 overflow-y-scroll max-h-52 justify-items-center scrollbar-hide justify-self-center">
-
-                        <label v-for='icon in iconStore'
-                            class="self-center  p-3  btn-ghost btn btn-circle aspect-square  hover:has-[:checked]:opacity-80 has-[:checked]:bg-neutral"
-                            @click.stop.prevent="selectedIcon = icon">
-
-                            <input type="radio" name="iconPicker" v-model="selectedIcon" :value="icon"
-                                class="hidden peer" />
-                            <icon :icon='icon' class="size-full peer-checked:text-[currentColor] text-base-content " />
-
-                        </label>
-
-                    </div>
-                </div>
-
-
-
-                <label role="tab" :class="{ 'tab-active': iconTabs == 'color' }" class="tab">
-                    <input type="radio" class="hidden peer" v-model="iconTabs" name="iconTabs" value="color">
-                    Color
-                </label>
-
-                <div role="tabpanel" :class="{ 'hidden': iconTabs == 'icon' }"
-                    class="w-full grid  min-w-[298px] tab-content bg-base-100 border-base-300/70 rounded-box shadow-inset-sm ">
-                    <div
-                        class="relative grid self-center p-1 overflow-y-scroll justify-items-center scrollbar-hide justify-self-center">
-                        <ColorPicker v-model:bgColor="bgColor" v-model:iconColor="iconColor"
-                            :selectedIcon="selectedIcon" />
-
-
-
-
-                    </div>
-                </div>
-
-            </div>
+            <CreateIcon v-model:bgColor="bgColor" v-model:iconColor="iconColor" v-model:selectedIcon="selectedIcon" />
 
             <div class="grid w-full grid-cols-2">
                 <div class="self-start pt-0 -mt-1 cursor-default label label-text-alt">

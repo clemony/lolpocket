@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
 import { useDataStore } from '../../stores/dataStore';
-import type { pocket } from '../../stores/pocketStore';
 const ds = useDataStore();
 
 const props = defineProps<{

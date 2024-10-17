@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps, defineEmits } from 'vue';
+import { defineProps, defineEmits, computed } from 'vue';
 import { imageIn, imageOut } from '../../script/animations';
 
 // Define props for reusability
@@ -9,9 +9,11 @@ const props = defineProps<{
     returnData?: any;
     thisSet?: any;
     returned?: any;
+    type?: string;
 }>();
 
 const emit = defineEmits(['update:quickSearch', 'update:returnData']);
+
 
 function handleClick(data) {
     if (data) {
@@ -22,6 +24,11 @@ function handleClick(data) {
     }
 }
 
+const getData = (data) => {
+    if (props.type == "item") {
+        return data.id;
+    }
+};
 // Function to handle input change
 function handleInput(event: Event) {
     const target = event.target as HTMLInputElement | null; // Cast to HTMLInputElement
@@ -67,7 +74,7 @@ function afterLeave(el: Element) {
             <TransitionGroup name="fade" tag="div" @enter="imageIn" @leave='imageOut'>
                 <button v-close-popper v-for="data in props.array" :key="data.id" @click="handleClick(data)"
                     class="flex w-full gap-2 px-1 my-1 btn btn-ghost btn-xs py-0.5  hover:bg-base-200 cursor-pointer justify-start">
-                    <img :src="data.img" class="rounded-md size-4.5" />
+                    <img :src="`/img/${props.type}/${data.id || data.name}.webp`" class="rounded-md size-4.5" />
                     {{ data.name }}
                 </button>
             </TransitionGroup>

@@ -1,6 +1,6 @@
 <route lang="json">{
   "name": "home",
-  "alias": ["/", "/home"],
+  "alias": "/",
   "meta": {
     "title": "Home",
     "icon": "teenyicons:home-outline"

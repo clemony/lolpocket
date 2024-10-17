@@ -1,15 +1,14 @@
 import { defineStore } from 'pinia';
 import { ref, watch } from 'vue';
 import { useDataStore } from './dataStore';
-import type { Champion } from './dataStore';
-import type { Item } from './dataStore';
 
-export const usegeneralStore = defineStore(
+export const useGeneralStore = defineStore(
   'generalStore',
   () => {
     const dataMode = ref('light');
     const dataTheme = ref('lightminimalist');
     const dataAccent = ref('minimalist');
+    const ds = useDataStore();
 
     // Watch for theme changes
     watch(dataTheme, (newValue) => {
@@ -22,10 +21,19 @@ export const usegeneralStore = defineStore(
       //console.log(`Mode changed to: ${newMode}`);
     });
 
+    // Method to lose focus when Enter is pressed
+    const loseFocus = (event: KeyboardEvent) => {
+      const target = event.target as HTMLInputElement;
+      if (event.key === 'Enter') {
+        target.blur(); // Lose focus on the current input field
+      }
+    };
+
     return {
       dataTheme,
       dataMode,
       dataAccent,
+      loseFocus,
     };
   },
   {

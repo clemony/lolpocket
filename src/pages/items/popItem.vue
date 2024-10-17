@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import { Item } from '../../stores/dataStore';
-import { ItemSet } from './../../stores/itemStore';
 import { useItemStore } from './../../stores/itemStore';
-import { usegeneralStore } from '../../stores/generalStore';
-import { toast } from 'vue3-toastify';
+import { useGeneralStore } from '../../stores/generalStore';
 import { computed, watch } from 'vue';
 import { useChampStore } from '../../stores/champStore';
+import { Item, ItemSet } from '../../../types';
 
 const cs = useChampStore();
 const is = useItemStore();
@@ -14,6 +12,7 @@ const props = defineProps<{
     variant: string;
     set?: ItemSet;
     champ?;
+    pocketKey?: string;
 }>();
 
 
@@ -107,7 +106,7 @@ const isLiked = computed(() => {
 
                     <button v-if="props.variant == 'remove' && set"
                         class=" btn btn-circle btn-neutral btn-xs aspect-square hover:opacity-75" alt="remove from set"
-                        title="remove from set" @click="is.removeFromSet(item, set.key)">
+                        title="remove from set" @click="is.removeFromSet(pocketKey, set.key, item)">
 
 
                         <icon icon='teenyicons:denied-outline' class="size-3.5" />

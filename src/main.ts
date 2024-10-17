@@ -6,36 +6,34 @@ import { createRouter, createWebHistory } from 'vue-router';
 import { routes } from 'vue-router/auto-routes';
 import { Splitpanes, Pane } from 'splitpanes';
 import { Icon } from '@iconify/vue';
-import { useDataStore } from './stores/dataStore';
-import { usegeneralStore } from './stores/generalStore.js';
 import Vue3Toastify, { toast, type ToastContainerOptions, type CSSTransitionProps } from 'vue3-toastify';
 import FloatingVue from 'floating-vue';
+import { kinesisPlugin } from '@letstri/kinesis';
 
-const getRoutes = routes;
-
-// Create the router instance using generated routes
-const router = createRouter({
-  history: createWebHistory(),
-  routes, // Use the resolved routes
-});
-
+// Create a new Vue application instance
 const app = createApp(App);
 
-const customAnimation = {
-  enter: 'fade-in-bottom',
-  exit: 'fade-out-bottom',
-  // appendPosition: true, // default to false
-} as CSSTransitionProps;
+console.log('Initializing Pinia...');
+const pinia = createPinia();
+pinia.use(piniaPluginPersistedstate);
+app.use(pinia);
+console.log('Pinia initialized.');
 
+// Register global components
 app.component('Splitpanes', Splitpanes);
 app.component('Pane', Pane);
 app.component('Icon', Icon);
 
-const pinia = createPinia();
-pinia.use(piniaPluginPersistedstate);
-app.use(pinia);
+// Use router after Pinia
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
+
+app.use(kinesisPlugin);
 app.use(router);
 
+// Setup FloatingVue
 app.use(FloatingVue, {
   disabled: false,
   distance: 5,
@@ -49,15 +47,9 @@ app.use(FloatingVue, {
   preventOverflow: true,
   flip: true,
   shift: true,
-  // Overflow padding (px)
   overflowPadding: 15,
-  // Arrow padding (px)
   arrowPadding: 30,
-  // Compute arrow overflow (useful to hide it)
   arrowOverflow: true,
-  /**
-   * By default, compute autohide on 'click'.
-   */
   themes: {
     detail: {
       $resetCss: false,
@@ -76,7 +68,7 @@ app.use(FloatingVue, {
       autoHide: true,
       eagerMount: false,
       flip: true,
-      distance: -21,
+      distance: 1,
       instantMove: true,
       placement: 'bottom-start',
       handleResize: true,
@@ -119,8 +111,18 @@ app.use(FloatingVue, {
       $extend: 'dropdown',
       triggers: ['click'],
       autoHide: true,
-      distance: -94,
+      distance: -88,
       placement: 'top-start',
+      container: 'body',
+      boundary: 'body',
+      strategy: 'absolute',
+    },
+    context: {
+      $extend: 'dropdown',
+      triggers: [''],
+      autoHide: true,
+      distance: -94,
+      placement: 'bottom-start',
       container: 'body',
       boundary: 'body',
       strategy: 'absolute',
@@ -134,6 +136,13 @@ app.use(FloatingVue, {
     },
   },
 });
+
+// Setup Vue3Toastify
+const customAnimation = {
+  enter: 'fade-in-bottom',
+  exit: 'fade-out-bottom',
+} as CSSTransitionProps;
+
 app.use(Vue3Toastify, {
   autoClose: 4000,
   hideProgressBar: true,
@@ -142,8 +151,5 @@ app.use(Vue3Toastify, {
   toastClassName: 'toasty',
 } as ToastContainerOptions);
 
-const ds = useDataStore();
-const us = usegeneralStore();
-ds.fetchData();
 // Mount the app to the element with id "app" in your HTML
 app.mount('#app');

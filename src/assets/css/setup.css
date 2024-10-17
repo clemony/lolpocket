@@ -7,7 +7,7 @@
   --btn-focus-scale: 0.95 !important;
   --border-btn: 1px !important;
   --tab-border: 1px !important;
-  --tab-radius: 0.5rem !important;
+  --tab-radius: 0.4rem !important;
   --toastify-font-family: 'Geist Sans';
   --toastify-icon-color-info: oklch(var(--bc));
   --toastify-icon-color-success: oklch(var(--bc)) !important;
@@ -23,7 +23,7 @@
 }
 
 .input-simple {
-  @apply border-b border-transparent outline-none   cursor-text focus:border-base-300 truncate transition-all duration-300 bg-transparent select-all;
+  @apply outline-none   cursor-text focus:border-base-300/50 truncate transition-all duration-300 bg-transparent;
 }
 
 .borders {
@@ -38,6 +38,10 @@
   --tglbg: oklch(var(--b1) / 95%);
 }
 
+.btn-ghost:hover,
+.btn-ghost label:hover {
+  @apply !bg-base-200/30;
+}
 select {
   @apply !ring-offset-0 !ring-0 !outline-1 !outline-offset-1;
 }

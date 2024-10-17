@@ -1,19 +1,17 @@
 import { defineStore } from 'pinia';
-import { ref, Ref } from 'vue';
+import { ref } from 'vue';
 import { useDataStore } from './dataStore';
-import type { Item } from './dataStore';
+import { Item, ItemSet } from '@types';
 
-const ds = useDataStore();
-
-export interface ItemSet {
-  key: number;
-  name: string;
-  items: Item[];
-}
+import { generateRandomName } from '@script/keygen';
+import { usePocketStore } from './pocketStore';
+import { hexoid } from 'hexoid';
 
 export const useItemStore = defineStore(
   'itemStore',
   () => {
+    const ds = useDataStore();
+
     const selectedItem = ref();
 
     const items = ref([...ds.items]);
@@ -29,9 +27,8 @@ export const useItemStore = defineStore(
     const starred = ref<ItemSet | null>(null);
 
     watch(
-      () => likedItems.value, // Watch the value of likedItems
+      () => likedItems.value,
       (newVal) => {
-        // Check if likedItems is empty
         if (newVal.length === 0) {
           viewLiked.value = false; // Set viewLiked to false if array is empty
         }
@@ -40,39 +37,46 @@ export const useItemStore = defineStore(
     );
 
     function handleLike(thisItem) {
-      // Use likedItems.value to access the underlying array
       if (likedItems.value.some((item) => item.name === thisItem.name)) {
         const index = likedItems.value.findIndex((item) => item.name === thisItem.name);
         if (index !== -1) {
-          likedItems.value.splice(index, 1); // Access the value of likedItems
-          toast('♥︎ ' + thisItem.name + ' disliked!');
+          likedItems.value.splice(index, 1);
         }
       } else {
-        likedItems.value.push(thisItem); // Access the value of likedItems
-        toast('♥︎ ' + thisItem.name + ' liked!');
+        likedItems.value.push(thisItem);
       }
     }
-    /* -------------------------------- BUILD -------------------------------- */
 
-    function newSet() {
-      const newKey = itemSets.value.length + 1;
+    function newSet(pocketKey, star?) {
+      const ps = usePocketStore();
+      const pocket = ps.getPocket(pocketKey);
+      const starred = star ? true : false;
+      if (pocket) {
+        const toID = hexoid();
+        const newSet = reactive({
+          key: toID(),
+          name: generateRandomName() + ' Set',
+          items: [],
+          isDisabled: false,
+          starred: starred,
+        });
 
-      itemSets.value.push(
-        reactive({
-          key: newKey,
-          name: 'Set ' + newKey,
-          items: [], // Initialize items as an empty array of `Item`
-          isDisabled: false, // Add isDisabled flag
-          starred: false,
-        })
-      );
+        pocket.items[0].itemSets.push(newSet);
+        if (starred == true) {
+          pocket.items[0].starred.push(newSet);
+        }
+      }
     }
 
-    function deleteSet(key: number) {
-      const index = itemSets.value.findIndex((set) => set.key === key);
+    function deleteSet(pocketKey, key: string) {
+      const ps = usePocketStore();
+      const pocket = ps.getPocket(pocketKey);
+      if (pocket) {
+        const index = pocket.items[0].itemSets.findIndex((set) => set.key === key);
 
-      if (index !== -1) {
-        itemSets.value.splice(index, 1); // Use the index and delete 1 item
+        if (index !== -1) {
+          pocket.items[0].itemSets.splice(index, 1); // Use the index and delete 1 item
+        }
       }
     }
 
@@ -80,7 +84,7 @@ export const useItemStore = defineStore(
 
     // Wrap the arrays in `ref` to make them reactive
 
-    function resetItems(key: number) {
+    function resetItems(key: string) {
       const set = itemSets.value.find((set) => set.key === key);
 
       if (set && Array.isArray(set.items)) {
@@ -88,16 +92,20 @@ export const useItemStore = defineStore(
       }
     }
 
-    function addToSet(item, key) {
-      const set = itemSets.value.find((set) => set.key === key);
+    function addToSet(pocket, itemSet, item) {
+      const ps = usePocketStore();
+      const thisPocket = ps.getPocket(pocket);
+      const set = thisPocket?.items[0].itemSets.find((set) => set.key === itemSet);
 
       if (set && Array.isArray(set.items)) {
         set.items.push(item);
       }
     }
 
-    function removeFromSet(itemx, key) {
-      const set = itemSets.value.find((set) => set.key === key);
+    function removeFromSet(pocket, itemSet, itemx) {
+      const ps = usePocketStore();
+      const thisPocket = ps.getPocket(pocket);
+      const set = thisPocket?.items[0].itemSets.find((set) => set.key === itemSet);
 
       if (set) {
         const index = set.items.findIndex((item) => item === itemx);
