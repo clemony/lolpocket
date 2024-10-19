@@ -3,13 +3,12 @@ const scrollbarhide = require('tailwind-scrollbar-hide');
 /*const colors = require("tailwindcss/colors");*/
 const path = require('path');
 const daisyui = require('daisyui');
-//const pocketui = require("pocketui");
-//const containerQueries = require("@tailwindcss/container-queries");
+const containerQueries = require('@tailwindcss/container-queries');
 
 /** @type {import('tailwindcss').Config} */
 (
   module.exports = {
-    plugins: [animate, scrollbarhide, daisyui],
+    plugins: [animate, scrollbarhide, daisyui, containerQueries],
 
     darkMode: ['class'],
     safelist: ['dark'],

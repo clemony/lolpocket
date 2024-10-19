@@ -97,7 +97,7 @@ const isLiked = computed(() => {
                             <ul class="!w-full items-center p-2 grid gap-2 min-w-28 pointer-events-auto">
                                 <span class="pl-2 cursor-default">Add to Set</span>
                                 <li v-for="set in is.itemSets" class="justify-start btn btn-xs btn-ghost "
-                                    @click="is.addToSet(item, set.key)">
+                                    @click="is.addToSet(pocketKey, set.key, item)">
                                     {{ set.name }}
                                 </li>
                             </ul>
@@ -154,7 +154,7 @@ const isLiked = computed(() => {
             </p>
             <p v-if="item.buy" class="flex items-center self-end justify-end gap-1 px-1 text-xs">
 
-                <img src="@assets/img/icons/Gold.png" class="h-3" />
+                <img src="/img/icons/Gold.png" class="h-3" />
                 {{ item.buy }}
             </p>
         </div>

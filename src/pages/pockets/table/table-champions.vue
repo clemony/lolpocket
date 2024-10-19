@@ -4,40 +4,51 @@ import { usePocketStore } from '../../../stores/pocketStore';
 import { useRouter } from 'vue-router';
 import { useSessionStore } from '../../../stores/sessionStore';
 import { Champion } from '../../../../types';
+import { useGeneralStore } from '../../../stores/generalStore';
 
 
 const router = useRouter();
 
 const sn = useSessionStore();
+const gs = useGeneralStore();
 const props = defineProps<{
 
   params: {
     data: {
       name: string;
+      items: any;
+      pinned: boolean;
       key: string;
       champions: {
-        champions: Champion[];
-        starred: Champion;
+        champions: {
+          name: string;
+        };
+        starred: Champion[];
       }
     };
+    api: any;
+    node: any;
   };
 }>();
 
 
 const ps = usePocketStore();
 
-const pocket = ps.getPocket(props.params.data.key);
+const pocket = ref(ps.getPocket(props.params.data.key));
 
 const starred = computed(() => {
-  let star = pocket.champions[0].starred;
+  if (!pocket.value) { return; }
+  let star = pocket.value.champions[0].starred;
 
-  if (!star || star == '') {
+  if (!star || star == undefined || star == null) {
+    star = star.replace(/\s/g, '').replace(/\'/g, '').replace(/\./g, '');
     return;
   }
 
-  star = star.replace(/\s/g, '').replace(/\'/g, '').replace(/\./g, '');
+
   return star;
 });
+
 
 
 
@@ -45,16 +56,17 @@ const starred = computed(() => {
 
 <template>
   <!------------------------⟢ champions⟣------------------------->
-  <ContextMenu class='context-menu'>
+  <ContextMenu class='px-2 context-menu'>
     <ContextMenuTrigger
       class=" relative group  items-center justify-center overflow-hidden size-full rounded-[4px] cursor-pointer"
       v-if="pocket">
 
 
 
-      <KinesisContainer v-if="starred" :duration="1400" :perspective="2" class="overflow-auto scale-[120%] size-full">
+      <KinesisContainer v-if="starred" :duration="200" :perspective="150" class="overflow-auto scale-[120%] size-full"
+        :disabled="gs.reducedMotion == true">
 
-        <KinesisElement :strength="8"
+        <KinesisElement type="depth" :strength="7"
           class="  bg-[center_top_-2rem] bg-no-repeat z-0 bg-[length:400px_200px] size-full opacity-95  shadow-contrast !overflow-auto "
           :style="{ backgroundImage: `url(\'/img/champions/splash/${starred}_0.webp\'` }">
 
@@ -92,20 +104,20 @@ const starred = computed(() => {
 
 
 
-      <TableContextMenu type="champions" :params="props.params">
+      <TableContextMenu type="champions" :pocketKey="pocket.key">
         <ContextMenuSub>
           <ContextMenuSubTrigger :disabled="pocket.champions[0].champions.length <= 1"
             :class="{ 'last:[&_svg]:hidden': pocket.champions[0].champions.length <= 1, 'opacity-50 ': pocket.champions[0].champions.length == 0 }">
 
 
-            <icon v-if="pocket.champions[0].starred != ''" icon="iconoir:star" class='size-3.5' />
+            <icon v-if="pocket.champions[0].starred" icon="iconoir:star" class='size-3.5' />
             <icon v-else icon="iconoir:star-dashed" class='size-3.5' />
 
-            <span v-if="pocket.champions[0].starred != ''">
+            <span v-if="pocket.champions[0].starred">
               {{ pocket.champions[0].starred }}
             </span>
 
-            <span v-if="pocket.champions[0].starred == ''">
+            <span v-else>
               Champions
             </span>
 
@@ -114,11 +126,11 @@ const starred = computed(() => {
             <ContextMenuItem v-for="champion in pocket.champions[0].champions" class='items-center rounded-xs'
               :key="champion.name">
               <label class="flex items-center gap-2 font-semibold size-full">
-                <input type="radio" :value="champion.name" class="hidden peer" v-model="pocket.champions[0].starred" />
+                <input type="radio" :value="champion.name" class="hidden peer" v-model="pocket.champions[0].starred"
+                  @change="console.log(pocket.champions[0].starred)" />
 
 
-                <icon v-if="pocket.champions[0].starred == champion.name" icon="teenyicons:tick-outline" />
-                <span v-else class="w-3"></span>
+                <icon icon="teenyicons:tick-outline" class="invisible peer-checked:visible" />
                 <div class="overflow-hidden shadow-sm size-4.5 rounded-xs  mr-1">
                   <div class="scale-[116%] grid place-items-center">
                     <img

@@ -1,56 +1,44 @@
 <script setup lang="ts">
-import { onMounted, ref, watch } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
 import { useSessionStore } from '../../stores/sessionStore';
 import { usePocketStore } from '../../stores/pocketStore';
 import { useItemStore } from '../../stores/itemStore';
 import { useRuneStore } from '../../stores/runeStore';
 import { useChampStore } from '../../stores/champStore';
+import { useGeneralStore } from '../../stores/generalStore';
 
 const sn = useSessionStore();
-
+const gs = useGeneralStore();
 const cs = useChampStore();
 const ps = usePocketStore();
 
-const props = defineProps<{
-  isMinimized: boolean;
-}>();
-
-const isMinimized = ref(props.isMinimized);
-const appName = ref('lolpocket');
-
-const emit = defineEmits(['update:isMinimized']);
 
 
-const showDropdowns = ref([true, true, true]);
+const showDropdowns = computed(() => {
+  if (gs.isMinimized == true) {
+    return [false, false, false];
+  } else {
+    return [true, true, true];
+  }
+});
 
 function toggleShow(index: number) {
-  if (isMinimized.value == false) {
+  if (gs.isMinimized == false) {
     showDropdowns.value[index] = !showDropdowns.value[index];
   }
 }
 
-function handleChange(event: Event) {
-  const target = event.target as HTMLInputElement | null;
-  if (target) {
-    emit('update:isMinimized', target.checked);
-  }
+function handleChange() {
 
-  if (isMinimized.value == true) {
-    showDropdowns.value = [false, false, false];
-    appName.value = "LP";
+  if (gs.isMinimized == true) {
+    gs.firstPane = 3;
+    gs.secondPane = 97;
   } else {
-    showDropdowns.value = [true, true, true]
-    appName.value = "lolpocket";
+    gs.firstPane = 16;
+    gs.secondPane = 84;
   }
 }
 
-onMounted(() => {
-
-  const sn = useSessionStore();
-  if (sn.openTabs.length == 0) {
-    sn.navigateTo('/');
-  }
-});
 
 
 watch(() => cs.likedChamps, (newVal) => {
@@ -59,36 +47,43 @@ watch(() => cs.likedChamps, (newVal) => {
 </script>
 
 <template>
-  <div id="menu" class="w-full h-full " :class="{ 'minimize': isMinimized == true }" data-tauri-drag-region>
+  <div id="menu" class="w-full h-full " :class="{ 'minimize': gs.isMinimized == true }" data-tauri-drag-region>
 
 
     <div
       class="menu border-none flex w-full  flex-col h-inherit  flex-nowrap gap-1 py-2 pl-2 pr-1 [&_svg]:size-4 text-xs font-medium [&_ul]:before:opacity-20 *:w-full">
 
-      <div class="flex rounded-full group/name"
-        :class="{ 'overflow-hidden  !aspect-square bg-neutral text-neutral-content/80 !size-9 ml-[2px] !mb-2 ': isMinimized == true }">
+      <div class="z-0 flex rounded-full cursor-pointer group/name"
+        :class="{ 'overflow-hidden  !aspect-square bg-neutral text-neutral-content/80 !size-9 ml-[2px] !mb-2 ': gs.isMinimized == true }">
 
-        <label :class="{ ' size-full ml-0 p-2': isMinimized == true }"
-          class="flex items-center w-[97%] transition-all duration-700 toggle-btn">
+        <label :class="{ ' size-full ml-0 p-2': gs.isMinimized == true }"
+          class="flex items-center w-[97%] transition-all duration-700 cursor-pointer toggle-btn">
 
-          <input type="checkbox" v-model="isMinimized" class="hidden" @change="handleChange" />
-
-
+          <input type="checkbox" v-model="gs.isMinimized" class="hidden" @change="handleChange" />
 
 
 
-          <div class="relative flex items-center justify-center w-full gap-3 group"
-            :class="{ '*:size-full': isMinimized == true }">
-            <h1 class="text-base text-start align-end font-semibold !duration-200 transition-translate grow"
-              :class="{ '!font-light absolute left-[5px] -top-[10px] text-[currentColor] invert  group-hover/name:opacity-0 group-hover/name:-translate-x-10': isMinimized == true }">
-              {{ appName }}
+
+
+          <div class="relative z-20 flex items-center justify-start gap-3 size-full group">
+
+            <h1 v-if="gs.isMinimized == true"
+              class=" font-light !duration-200 transition-translate text-neutral-content size-full  group-hover/name:opacity-0 group-hover/name:-translate-x-10">
             </h1>
-            <icon icon="teenyicons:send-left-outline"
-              class="group-hover:opacity-100 transition-all duration-300 !size-4 opacity-30"
-              :class="{ 'hidden': isMinimized == true }" />
 
-            <icon icon="teenyicons:send-right-outline" :class="{ 'hidden': isMinimized == false }"
-              class="absolute text-[currentColor] invert transition-translate !duration-200 translate-x-10 opacity-0 group-hover/name:opacity-100 group-hover/name:translate-x-0 left-[8px] -top-[7px] " />
+            <h1 v-else class="text-base font-semibold text-start grow">
+              lolpocket
+            </h1>
+
+
+
+
+            <icon icon="teenyicons:send-right-outline" v-if="gs.isMinimized == true"
+              class="transition-translate text-neutral-content !size-4 !duration-200 translate-x-10 opacity-0 group-hover/name:opacity-100 group-hover/name:translate-x-0 left-[8px]  " />
+
+            <icon v-else icon="teenyicons:send-left-outline"
+              class="group-hover:opacity-100 transition-all duration-300 !size-4 opacity-30" />
+
           </div>
         </label>
 
@@ -96,7 +91,7 @@ watch(() => cs.likedChamps, (newVal) => {
 
       <!-----------------------------⟢ HOME  ⟣------------------------------>
 
-      <button @click="sn.navigateTo('/home')" class="">
+      <button @click="sn.navigateTo('/home')" class="!cursor-pointer">
         <Icon icon="teenyicons:home-outline" />
         <span>Home</span>
 
@@ -104,7 +99,7 @@ watch(() => cs.likedChamps, (newVal) => {
 
       <!-----------------------------⟢ pockets ⟣------------------------------>
 
-      <button :class="{ 'menu-dropdown-show': showDropdowns[0] }" class=" menu-dropdown-toggle"
+      <button :class="{ 'menu-dropdown-show': showDropdowns[0] }" class="!cursor-pointer  menu-dropdown-toggle"
         @click="sn.navigateTo('/pockets/pockets')">
 
         <Icon icon="teenyicons:folders-outline" />
@@ -132,7 +127,7 @@ watch(() => cs.likedChamps, (newVal) => {
             <ul :class="{ 'menu-dropdown-show': showDropdowns[0] }"
               class="flex overflow-y-scroll max-h-inherit menu-dropdown auto-rows-min">
 
-              <li v-for="pocket in ps.pinnedTopRowData">
+              <li v-for="pocket in ps.pinnedTopRowData" @click="sn.navigateTo('/pocket/pocket.key')">
                 <button class="flex flex-row items-center whitespace-nowrap text-nowrap flex-nowrap">
                   <icon :icon="pocket.icon" />
                   <span class='text-start truncate grow max-w-[65%]'>{{ pocket.name }}</span>
@@ -141,7 +136,7 @@ watch(() => cs.likedChamps, (newVal) => {
                 </button>
               </li>
 
-              <li v-for="pocket in ps.rowData">
+              <li v-for="pocket in ps.rowData" @click="sn.navigateTo(`/pocket/${pocket.key}/`)">
                 <button>
                   <icon :icon="pocket.icon" />
                   {{ pocket.name }}
@@ -160,9 +155,9 @@ watch(() => cs.likedChamps, (newVal) => {
       <ContextMenu>
         <ContextMenuTrigger>
           <button @click="sn.navigateTo('/pockets/trash')" class="w-full">
-            <div class='grid size-4 overflow-clip place-items-center' :class="{ 'size-5': isMinimized == true }">
+            <div class='grid size-4 overflow-clip place-items-center' :class="{ 'size-5': gs.isMinimized == true }">
               <icon icon="iconoir:bin-full" class="!size-4.5 -ml-[1px] -mt-[1px]"
-                :class="{ 'scale-110 mt-0 ml-0': isMinimized == true }" />
+                :class="{ 'scale-110 mt-0 ml-0': gs.isMinimized == true }" />
             </div>
             <span>Trash</span>
             <span class='grow'></span>
@@ -186,16 +181,16 @@ watch(() => cs.likedChamps, (newVal) => {
       <!------------------------⟢ archive ⟣------------------------->
 
       <button @click="sn.navigateTo('/pockets/archive')">
-        <div class='grid size-4 overflow-clip place-items-center' :class="{ 'size-5': isMinimized == true }">
+        <div class='grid size-4 overflow-clip place-items-center' :class="{ 'size-5': gs.isMinimized == true }">
           <icon icon="fluent:archive-20-regular" class="!size-5 -ml-0.5 -mt-0.5"
-            :class="{ 'scale-110 mt-0 ml-0': isMinimized == true }" />
+            :class="{ 'scale-110 mt-0 ml-0': gs.isMinimized == true }" />
         </div>
         <span>Archive</span>
         <span class='grow'></span>
-        <div v-if="ps.archivePockets && ps.archivePockets.length > 0"
+        <!--         <div v-if="ps.archivePockets && ps.archivePockets.length > 0"
           class="px-1.5 badge badge-sm badge-accent opacity-80 ">
           {{
-            ps.archivePockets.length }}</div>
+            ps.archivePockets.length }}</div> -->
       </button>
 
       <!-----------------------------⟢ CALC ⟣------------------------------>
@@ -223,7 +218,7 @@ watch(() => cs.likedChamps, (newVal) => {
           <span> Database</span>
           <span class="grow"></span>
           <button
-            class="btn grid hover:!bg-transparent !content-center !btn-xs !h-6 !w-6  absolute !p-1.5 right-1 btn-toggle">
+            class="btn grid hover:!bg-transparent !content-center !btn-xs !h-6 !w-6  absolute !p-1.5 right-2 btn-toggle">
             <icon v-if="showDropdowns[2] == false" icon="teenyicons:down-outline" class="stroke-2 " />
             <icon v-if="showDropdowns[2] == true" icon="teenyicons:up-outline" class="stroke-2 mt-[2px]" />
           </button>
@@ -280,6 +275,11 @@ watch(() => cs.likedChamps, (newVal) => {
 <style scoped>
 /* beautify ignore:start */
 
+:root{
+  *{
+    @apply flex-nowrap truncate;
+  }
+}
 .context-menu {
   @apply !w-32 !min-w-32;
 }
@@ -288,7 +288,7 @@ watch(() => cs.likedChamps, (newVal) => {
 }
 button,
 label:not(.minimize .toggle-btn) {
-  @apply btn btn-ghost btn-sm justify-start gap-3 text-xs !font-medium hover:bg-neutral/5 pr-2;
+  @apply btn btn-ghost btn-sm justify-start gap-3 text-xs !font-medium cursor-pointer hover:bg-neutral/5 pr-2 flex-nowrap;
 }
 
 .v-popper--shown a {

@@ -10,8 +10,9 @@ import pocketTableItems from './table/table-items.vue';
 import pocketTableRunes from './table/table-runes.vue';
 import tableDate from './table/table-date.vue';
 import { AgGridVue } from "ag-grid-vue3";
-import { pocketTheme } from './../../assets/script/gridTheme.ts';
+import { pocketTheme } from '../../assets/script/gridTheme';
 import { pocket } from '../../../types';
+import { CustomNoRowsOverlay } from './table/table-noRows';
 
 
 const ps = usePocketStore();
@@ -47,11 +48,11 @@ const columnDefs = ref([
             const champions = params.data.champions[0].champions;
             return champions.map((champion) => champion.name).join(", ");
         },
-        width: 200,
+        width: 170,
         maxWidth: 300,
-        minWidth: 150,
+        minWidth: 156,
         cellRenderer: "PocketTableChamps",
-        cellClass: "!px-0 !py-[3px] flex items-center",
+        cellClass: "!px-2 !py-[3px] flex items-center !w-170px",
 
         valueFormatter: (params) => {
 
@@ -179,6 +180,10 @@ const gridOptions = {
     getRowId: (params) => {
         return params.data.key;
     },
+
+    noRowsOverlayComponent: CustomNoRowsOverlay,
+    noRowsOverlayComponentParams: {
+    },
 };
 
 // Handle selection change event
@@ -208,7 +213,7 @@ const autoSizeStrategy = {
 
 
 const onPrintQuickFilterTexts = () => {
-    ps.tableApi.forEachNode(function (rowNode, index) {
+    ps.pocketApi.forEachNode(function (rowNode, index) {
         console.log(
             "Row " +
             index +
@@ -310,7 +315,7 @@ defineExpose({ pocketIcon, pocketName, pocketTableItems, PocketTableChamps, pock
     --ag-card-shadow: var(--ag-popup-shadow);
     --ag-range-selection-border-color: transparent;
     --ag-range-selection-border-style: none;
-    --ag-selected-row-background-color: oklch(var(--b2)/0.3);
+    --ag-selected-row-background-color: oklch(var(--b2)/0.4);
     --ag-row-height: 65px;
     --ag-text-color: oklch(var(--bc));
 

@@ -9,8 +9,14 @@ const cs = useChampStore();
 const ps = usePocketStore();
 const route = useRoute();
 
+const props = defineProps<{
+    pocketKey: string;
+}>();
+
+
+
 // Store the pocket key from route params
-const pocketKey = ref(route.params.pocketKey || '');
+const pocketKey = ref(props.pocketKey)
 
 // Compute the current pocket from the store based on pocketKey
 const pocket = computed(() => ps.getPocket(pocketKey.value));
@@ -21,7 +27,7 @@ const champions = computed(() => {
 });
 
 // Watch pocketKey changes (if route changes)
-watch(() => route.params.pocketKey, (newKey) => {
+watch(() => props.pocketKey, (newKey) => {
     pocketKey.value = newKey;
 });
 
@@ -35,7 +41,7 @@ watch(champions, (newChampions) => {
 
 function onAdd(e) {
     console.log(e);
-    if (pocket.value.champions[0].starred.length == 0) {
+    if (pocket.value && pocket.value.champions[0].starred.length == 0) {
         pocket.value.champions[0].starred = e.data.name;
         console.log(pocket.value.champions[0].starred);
     }

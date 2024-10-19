@@ -4,11 +4,10 @@ import { ref, h, watch, computed, shallowRef, onBeforeMount, onMounted } from 'v
 import { usePocketStore } from '../../stores/pocketStore';
 
 import { AgGridVue } from "ag-grid-vue3";
-import { pocketTheme } from './../../assets/script/gridTheme.ts';
+import { pocketTheme } from './../../assets/script/gridTheme';
 import { pocket } from '../../../types';
 import { stats } from '../../script/stats';
-import { deepStrictEqual } from 'assert';
-import { useDataStore } from '../../stores/dataStore.ts';
+import { useDataStore } from '../../stores/dataStore';
 
 const ps = usePocketStore();
 const ds = useDataStore();

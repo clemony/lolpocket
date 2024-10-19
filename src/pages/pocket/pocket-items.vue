@@ -39,8 +39,9 @@ const animated = ref(false);
 
 function handleClick() {
     animated.value = true;
-
-    is.newSet(pocket.key)
+    if (pocket) {
+        is.newSet(pocket.key)
+    }
 };
 
 
@@ -54,7 +55,6 @@ const likeText = computed(() => {
     }
 });
 
-console.log(pocket?.items[0].itemSets.length)
 
 </script>
 

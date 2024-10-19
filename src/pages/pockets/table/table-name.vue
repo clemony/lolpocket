@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { useGeneralStore } from '../../../stores/generalStore';
 import { usePocketStore } from '../../../stores/pocketStore';
 import TableContextMenu from './table-contextMenu.vue';
 import { Item } from '../../../../types';
+import { generateRandomString } from '../../../script/keygen';
 
 const gs = useGeneralStore();
 const ps = usePocketStore();
 
 const props = defineProps<{
-    params: {
+    params?: {
         data: {
             name: string;
             notes: string;
@@ -23,10 +24,17 @@ const props = defineProps<{
         api: any;
         node: any;
     };
+    pocketKey?: string;
 }>();
 
 
-const pocket = ps.getPocket(props.params.data.key);
+const pocket = computed(() => {
+    if (props.params) {
+        return ps.getPocket(props.params.data.key);
+    } else if (props.pocketKey) {
+        return ps.getPocket(props.pocketKey);
+    }
+});
 
 const name = ref('')
 
@@ -61,13 +69,13 @@ function doThis() {
             </div>
             <div class="flex self-start w-full h-full pb-1.5 text-xs">
 
-                <SelectClass :params="params" class="w-full" />
+                <SelectClass type="hover" :pocketKey="pocket.key" class="w-full" />
 
 
             </div>
 
-            <TableContextMenu type="Pocket" :params="props.params">
-                <ContextMenuItem @click="pocket.name = ps.generateRandomString()" class="gap-3 group/what">
+            <TableContextMenu type="Pocket" :pocketKey="pocket.key">
+                <ContextMenuItem @click="pocket.name = generateRandomString()" class="gap-3 group/what">
                     <icon icon="ph:question-mark"
                         class='duration-200 ease-in size-4 group-hover/what:rotate-45 group-hover/what:[transform-origin:bottom_center]  group-hover/what:fill-mode-both transition-all' />
                     New Mystery Name

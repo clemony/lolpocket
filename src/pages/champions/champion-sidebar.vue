@@ -1,9 +1,3 @@
-<route lang="json">{
-    "name": "championSidebar",
-    "alias": "/champions/championSidebar",
-    "meta": {}
-}</route>
-
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue';
 import { useChampStore } from '../../stores/champStore';

@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { ref, computed } from 'vue';
 import { useDataStore } from './dataStore';
-import { Champion, Item } from '@types';
+import { Champion, Item } from '../../types';
 import { usePocketStore } from './pocketStore';
 
 export const useChampStore = defineStore(

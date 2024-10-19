@@ -69,7 +69,7 @@ function updateNotes() {
 
 
 
-                <table-context-menu :params="props.params">
+                <table-context-menu :pocketKey="pocket.key">
                     <template #first>
                         <context-menu-item @click.stop="notesInput = '　'" class='-ml-0.5'>
 

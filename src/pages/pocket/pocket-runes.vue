@@ -17,50 +17,41 @@ const route = useRoute();
 
 const ps = usePocketStore();
 
-
-const pocketKey = ref(route.params.pocketKey || '');
-
 const props = defineProps<{
   pocketKey: string;
 }>();
+//const pocketKey = ref(route.params.pocketKey || '');
+
+
 
 const pocket = computed(() => {
-  return ps.getPocket(route.params.pocketKey);
+  return ps.getPocket(props.pocketKey);
 });
 
 const selected = computed(() => {
 
-  if (!pocket) return;
+  if (!pocket.value) return;
   return pocket.value.runes[0].runeSets[pocket.value.runes[0].selected];
 });
 
 const primary = computed(() => {
-  return selected.value.primary;
+  if (selected.value) {
+    return selected.value.primary;
+  }
 });
 
 const secondary = computed(() => {
-  console.log(selected.value.secondary);
-  return selected.value.secondary;
+  if (selected.value) {
+    return selected.value.secondary;
+  }
 
 });
 
 // Watch for changes in the route's pocketKey and update the local state
-watch(() => route.params.pocketKey, (newKey) => {
-  pocketKey.value = newKey;
+watch(() => props.pocketKey, (newKey) => {
+  //pocket = ps.getPocket(newKey);
 
 });
-
-
-
-
-onMounted(() => {
-
-
-});
-
-
-
-
 
 </script>
 

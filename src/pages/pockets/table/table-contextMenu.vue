@@ -8,23 +8,14 @@ const ps = usePocketStore();
 const sn = useSessionStore();
 
 const props = defineProps<{
-    params: {
-        data: {
-            name: string;
-            key: string;
-            items: {};
-            pinned: boolean;
 
-        };
-        api: any;
-        node: any;
-    },
     type?: string;
+    pocketKey: string;
 }>();
 
 // Get the pocket by its key
-const pocket = ps.getPocket(props.params.data.key);
-const api = props.params.api;
+const pocket = ps.getPocket(props.pocketKey);
+
 
 function navigate() {
     if (props.type == 'champions' && pocket) {
@@ -39,18 +30,11 @@ function navigate() {
 }
 
 const pinText = computed(() => {
+    if (!pocket) { return; }
     if (pocket.pinned == true) {
         return "Unpin";
     } else { return "Pin"; }
 });
-
-
-
-
-function updateGrid() {
-    //api.setGridOption('pinnedTopRowData', ps.pinnedTopRowData);
-    //api.setGridOption('rowData', ps.pockets);
-};
 
 const starred = [''];
 
@@ -68,7 +52,7 @@ const starred = [''];
 
         <ContextMenuItem>
             <label class="flex gap-3 size-full">
-                <input type="checkbox" v-model="pocket.pinned" class="hidden" @change="updateGrid()" />
+                <input type="checkbox" v-model="pocket.pinned" class="hidden" />
                 <icon v-if="pocket.pinned == true" icon='iconoir:pin-solid' class="size-3.5" />
                 <icon v-else icon='iconoir:pin' class="size-3.5" />
                 {{ pinText }}
@@ -106,7 +90,7 @@ const starred = [''];
 
 
 
-        <ContextMenuItem @click="ps.deletePocket(pocket.key); updateGrid()">
+        <ContextMenuItem @click="ps.deletePocket(pocket.key)">
             <icon icon="iconoir:bin-full" class=" size-3.5" />
             Trash Pocket
         </ContextMenuItem>

@@ -5,7 +5,6 @@ import { useChampStore } from './src/stores/champStore';
 import { useDataStore } from './src/stores/dataStore';
 import { useItemStore } from './src/stores/itemStore';
 import { useRuneStore } from './src/stores/runeStore';
-import { ds } from './src/stores/runeStore';
 
 export interface pocket {
   name: string;
@@ -21,12 +20,23 @@ export interface pocket {
   notes: string;
   dateCreated: dateObject[];
   dateUpdated: dateObject[];
+  activeComponent: string;
+}
+
+export interface module {
+  name: string;
+  component: string;
+  displayed: boolean;
+  w: number;
+  h: number;
+  x: number;
+  y: number;
 }
 
 export interface pocketChampions {
   key: string;
   champions: Champion[];
-  starred: Champion[];
+  starred: string;
 }
 
 export interface Champion {
@@ -57,7 +67,7 @@ export interface Ability {
 export interface pocketItems {
   key: string;
   itemSets: ItemSet[];
-  starred: ItemSet[];
+  starred: number;
 }
 
 export interface ItemSet {

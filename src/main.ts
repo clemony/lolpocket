@@ -9,6 +9,7 @@ import { Icon } from '@iconify/vue';
 import Vue3Toastify, { toast, type ToastContainerOptions, type CSSTransitionProps } from 'vue3-toastify';
 import FloatingVue from 'floating-vue';
 import { kinesisPlugin } from '@letstri/kinesis';
+import VueDraggableResizable from 'vue-draggable-resizable';
 
 // Create a new Vue application instance
 const app = createApp(App);
@@ -23,6 +24,7 @@ console.log('Pinia initialized.');
 app.component('Splitpanes', Splitpanes);
 app.component('Pane', Pane);
 app.component('Icon', Icon);
+app.component('vue-draggable-resizable', VueDraggableResizable);
 
 // Use router after Pinia
 const router = createRouter({

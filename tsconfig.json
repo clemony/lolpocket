@@ -1,30 +1,18 @@
 {
     "include": [
-        // other files...
-        "./typed-router.d.ts",
-        "./components.d.ts",
-        "./auto-imports.d.ts",
-        "declarations.d.ts"
+        "./typed-router.d.ts"
     ],
     "compilerOptions": {
-        "strict": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "noImplicitAny": false,
-        "isolatedModules": true,
         "baseUrl": ".",
-        "module": "esnext",
-        "target": "esnext",
-        "moduleResolution": "Bundler",
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
         "types": [
             "unplugin-vue-router/client"
         ],
-        "jsx": "preserve",
         "paths": {
             "@assets/*": [
                 "src/assets/*"
+            ],
+            "@blank/*": [
+                "src/blank/*"
             ],
             "@data/*": [
                 "src/data/*"
@@ -52,48 +40,6 @@
             ],
             "@/*": [
                 "src/*"
-            ],
-            "~assets/*": [
-                "src/assets/*"
-            ],
-            "~data/*": [
-                "src/data/*"
-            ],
-            "~lib/*": [
-                "src/lib/*"
-            ],
-            "~logs/*": [
-                "src/logs/*"
-            ],
-            "~pages/*": [
-                "src/pages/*"
-            ],
-            "~script/*": [
-                "src/script/*"
-            ],
-            "~service/*": [
-                "src/service/*"
-            ],
-            "~stores/*": [
-                "src/stores/*"
-            ],
-            "~utils/*": [
-                "src/utils/*"
-            ],
-            "~/*": [
-                "src/*"
-            ],
-            "@blank/*": [
-                "src/blank/*"
-            ],
-            "@types": [
-                "./types.d.ts"
-            ],
-            "@storage/*": [
-                "src/pages/storage/*"
-            ],
-            "@calculator/*": [
-                "src/pages/calculator/*"
             ]
         }
     }

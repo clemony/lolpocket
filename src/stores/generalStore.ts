@@ -10,6 +10,12 @@ export const useGeneralStore = defineStore(
     const dataAccent = ref('minimalist');
     const ds = useDataStore();
 
+    const isMinimized = ref(false);
+    const firstPane = ref(16);
+    const secondPane = ref(84);
+
+    const reducedMotion = ref();
+
     // Watch for theme changes
     watch(dataTheme, (newValue) => {
       document.documentElement.setAttribute('data-theme', newValue);
@@ -34,6 +40,10 @@ export const useGeneralStore = defineStore(
       dataMode,
       dataAccent,
       loseFocus,
+      reducedMotion,
+      isMinimized,
+      firstPane,
+      secondPane,
     };
   },
   {

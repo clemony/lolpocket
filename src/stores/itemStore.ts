@@ -1,9 +1,9 @@
 import { defineStore } from 'pinia';
-import { ref } from 'vue';
+import { reactive, ref, watch } from 'vue';
 import { useDataStore } from './dataStore';
-import { Item, ItemSet } from '@types';
+import { Item, ItemSet } from '../../types';
 
-import { generateRandomName } from '@script/keygen';
+import { generateRandomName } from '../script/keygen';
 import { usePocketStore } from './pocketStore';
 import { hexoid } from 'hexoid';
 
@@ -47,10 +47,10 @@ export const useItemStore = defineStore(
       }
     }
 
-    function newSet(pocketKey, star?) {
+    function newSet(pocketKey) {
       const ps = usePocketStore();
       const pocket = ps.getPocket(pocketKey);
-      const starred = star ? true : false;
+
       if (pocket) {
         const toID = hexoid();
         const newSet = reactive({
@@ -58,13 +58,10 @@ export const useItemStore = defineStore(
           name: generateRandomName() + ' Set',
           items: [],
           isDisabled: false,
-          starred: starred,
+          starred: 0,
         });
 
         pocket.items[0].itemSets.push(newSet);
-        if (starred == true) {
-          pocket.items[0].starred.push(newSet);
-        }
       }
     }
 

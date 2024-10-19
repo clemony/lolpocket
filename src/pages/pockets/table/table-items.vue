@@ -2,6 +2,7 @@
 import { computed, watch } from 'vue';
 import { useSessionStore } from '../../../stores/sessionStore';
 import { Item } from '../../../../types';
+import { useGeneralStore } from '../../../stores/generalStore';
 
 const props = defineProps<{
     params: {
@@ -12,6 +13,7 @@ const props = defineProps<{
                 items: Item[];
             }
             icon: string;
+            pinned: any;
         };
         api: any;
         node: any;
@@ -19,6 +21,7 @@ const props = defineProps<{
 }>();
 
 const sn = useSessionStore();
+const gs = useGeneralStore();
 const pocket = props.params.data;
 
 
@@ -40,46 +43,53 @@ function refresh() {
 }
 
 const starredItems = computed(() => {
-    return pocket.items[0].starred[0].items;
+    return pocket.items[0].itemSets[pocket.items[0].starred].items;
 });
 
 </script>
 
 <template>
-    <ContextMenu class='context-menu'>
+    <ContextMenu class='context-menu [&_>span]:size-full flex items-center'>
 
 
         <!------------------------⟢ items ⟣------------------------->
 
 
         <ContextMenuTrigger class=" size-full">
-            <button class="flex overflow-x-scroll overflow-y-hidden items-center w-full h-full  gap-[5px]">
+            <button class="flex items-center w-full h-full gap-[11px] px-1 overflow-x-scroll overflow-y-clip">
 
-                <template v-if="pocket.items[0].starred.items && pocket.items[0].starred.items.length > 0">
+                <template v-if="starredItems.length > 0">
 
 
-                    <template v-for="(item, index) in pocket.items[0].starred.items" :key="index">
+                    <template v-for="(item, index) in starredItems" :key="index">
 
-                        <div v-if="index <= 5" :key="item.id"
-                            class="h-full border rounded-md shadow-sm overflow-clip shrink-0 opacity-95 border-base-300 aspect-square ">
-                            <div class="size-full">
-                                <img :src="`/img/items/${item.id}.webp`" class=" size-full" :data-item="item.name" />
-                            </div>
-                        </div>
+                        <KinesisContainer :perspective="100" :duration="200" class='items-center h-full group'
+                            :disabled="gs.reducedMotion == true">
 
+                            <KinesisElement type="depth" :strength="4" class="flex items-center h-full">
+
+                                <div v-if="index <= 5" :key="item.id"
+                                    class="border rounded-md shadow-sm size-[52px]  overflow-clip shrink-0 opacity-95 border-base-300 aspect-square   transition-all duration-300">
+                                    <div class="size-full">
+                                        <img :src="`/img/items/${item.id}.webp`" class=" size-full"
+                                            :data-item="item.name" />
+                                    </div>
+                                </div>
+                            </KinesisElement>
+                        </KinesisContainer>
                     </template>
 
 
                 </template>
 
                 <div v-else @click.stop="sn.navigateTo(`/pocket/${pocket.key}/pocket-items`, pocket.name, pocket.icon)"
-                    class="flex group items-center rounded-[4px] justify-center !justify-self-start  w-auto h-full gap-2 border shadow-sm opacity-70 aspect-square bg-base-200/30 border-base-200 cursor-pointer hover:opacity-70 hover:border-base-300 transition-all duration-300 hover:shadow-inner ">
+                    class="flex group items-center rounded-[4px] size-[52px] justify-center self-center !justify-self-start  gap-2 border shadow-sm opacity-70 aspect-square bg-base-200/30 border-base-200 cursor-pointer hover:opacity-70 hover:border-base-300 transition-all duration-300 hover:shadow-inner ">
                     <icon icon="teenyicons:add-outline" class="group-hover:stroke-[1.5]" />
 
                 </div>
             </button>
 
-            <TableContextMenu type="items" :params="props.params">
+            <TableContextMenu type="items" :pocketKey="pocket.key">
                 <ContextMenuSub>
                     <ContextMenuSubTrigger :disabled="pocket.items[0].itemSets <= 1"
                         :class="{ 'last:[&_svg]:hidden': pocket.items[0].itemSets <= 1, 'opacity-50': pocket.items[0].itemSets == 0 }">

@@ -2,13 +2,12 @@
 import { onMounted, ref, computed, reactive, watch } from 'vue';
 import { VueDraggable } from 'vue-draggable-plus'
 import { useItemStore } from "../../stores/itemStore";
-import { useDataStore } from "../../stores/dataStore";
 import { usePocketStore } from '../../stores/pocketStore';
-import { ComputedRefSymbol } from '@vue/reactivity';
+
 import { ItemSet } from '../../../types';
 import ItemsetItems from './itemset-items.vue';
 import { generateRandomName } from '../../script/keygen';
-const ds = useDataStore();
+
 const is = useItemStore();
 
 
@@ -25,7 +24,6 @@ const pocketKey = props.pocketKey;
 
 
 const pocket = ps.getPocket(pocketKey);
-console.log('okl', pocket);
 
 
 const items = ref<any[]>([]);
@@ -44,46 +42,20 @@ if (pocket) {
 
 }
 
-const selectedStarIndex = ref(0);
+function updateStarredIndex(evt) {
+    const { oldIndex, newIndex } = evt;
 
-const findStarredIndex = () => {
-    if (pocket) {
-        const starredSet = pocket.items[0]?.starred?.[0];
-        if (starredSet) {
-            // Find the index of the starred set in the itemSets array
-            const index = pocket.items[0].itemSets.findIndex(itemSet => itemSet.key === starredSet.key);
-            if (index !== -1) {
-                selectedStarIndex.value = index;
-            }
-        }
+    if (!pocket) { return; }
+
+    if (pocket.items[0].starred === oldIndex) {
+        pocket.items[0].starred = newIndex;
+    } else if (pocket.items[0].starred > oldIndex && pocket.items[0].starred <= newIndex) {
+        pocket.items[0].starred--;
+    } else if (pocket.items[0].starred < oldIndex && pocket.items[0].starred >= newIndex) {
+
+        pocket.items[0].starred++;
     }
 };
-
-// Call this method when the pocket is loaded or updated
-findStarredIndex();
-
-function updateStarredItemSet(newStarredItemSet: ItemSet) {
-    const pocket = ps.pockets.find(p => p.key === pocketKey);
-
-    if (pocket) {
-        // Ensure the starred array is initialized
-        if (!pocket.items[0].starred) {
-            pocket.items[0].starred = [];
-        }
-
-        // Clear existing starred sets and add the new one
-        pocket.items[0].starred.splice(0, pocket.items[0].starred.length, newStarredItemSet);
-        ps.$persist;
-    } else {
-        console.error(`Pocket with key ${pocketKey} not found.`);
-    }
-}
-
-
-
-
-
-
 
 const dropdownShown = reactive({});
 
@@ -100,8 +72,8 @@ const suggestions = ["Early", "Mid", "Late", "Core", "Offensive", "Defensive", "
 
 
 onMounted(() => {
-    if (pocket && pocket.items[0].itemSets.length == '') {
-        is.newSet();
+    if (pocket && pocket.items[0].itemSets.length == 0) {
+        // is.newSet();
     }
 });
 
@@ -113,7 +85,8 @@ onMounted(() => {
 
     <VueDraggable v-if="pocket" tag="div" v-model="pocket.items[0].itemSets" :delay="0" :animation="300"
         :group="{ name: 'sets' }" :prevent-on-filter='true' ghostClass="ghost" :force-fallback="true"
-        :fallbackTolerance="0" fallbackClass="drag-clone" :fallbackOnBody="true" class="z-0 h-full">
+        @end="updateStarredIndex" :fallbackTolerance="0" fallbackClass="drag-clone" :fallbackOnBody="true"
+        class="z-0 h-full">
 
         <div v-for="(set, index) in pocket.items[0].itemSets" dragClass="setDrag" class="grid px-1 pt-1" :key="set.key">
 
@@ -159,9 +132,9 @@ onMounted(() => {
               
                 ">
 
-                    <input type="radio" name="starSet" :value="set" class="hidden peer"
+                    <input type="radio" name="starSet" :value="index" class="hidden peer"
                         v-model="pocket.items[0].starred" @change="console.log(pocket.items[0].starred)"
-                        :checked="pocket.items[0].starred.key == set.key" />
+                        :checked="pocket.items[0].starred == index" />
                     <icon icon="iconoir:star-outline"
                         class="absolute z-10 opacity-20 group-hover/star:opacity-15 peer-checked:opacity-20" />
                     <icon icon='iconoir:star-solid'

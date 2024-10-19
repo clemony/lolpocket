@@ -2,7 +2,7 @@
   "name": "pocket",
   "props": true,
   "path": "/pocket/:pocketKey",
-  "component": "/src/pages/pocket.vue",
+  "component": "pocket",
   "meta": {
     "title": "Pocket",
     "icon": "teenyicons:folder-outline"
@@ -10,29 +10,33 @@
 }</route>
 
 <script setup lang="ts">
-import { onMounted, ref, computed, watch } from 'vue';
-
-import { useItemStore } from './../stores/itemStore';
+import { ref, watch, getCurrentInstance, computed } from 'vue';
 import { useSessionStore } from './../stores/sessionStore';
 import { usePocketStore } from './../stores/pocketStore';
 import { useRoute, useRouter } from 'vue-router';
 
 const route = useRoute();
+const router = useRouter();
 
 const ps = usePocketStore();
 const ss = useSessionStore();
 
-const pocketKey = ref(route.params.pocketKey || '');
+const pocketKey = ref<string>(route.params.pocketKey as string || '');
 
 const props = defineProps<{
   pocketKey: string;
 }>();
 
-// Watch for changes in the route's pocketKey and update the local state
-watch(() => route.params.pocketKey, (newKey) => {
-  pocketKey.value = newKey;
+const pocket = ps.getPocket(pocketKey);
 
-});
+watch(
+  () => route.params.pocketKey,
+  (newKey) => {
+    if (newKey) {
+      pocketKey.value = newKey as string; // Type assertion to string
+    }
+  }
+);
 
 // Compute `currentPocket` based on the reactive `pocketKey`
 const currentPocket = computed(() => {
@@ -49,11 +53,6 @@ function handleExport() {
   isActive.value = true;
 }
 
-
-
-
-
-
 const sidebarButton = computed(() => {
   if (ps.showSidebar == true) {
     return 'Collapse Sidebar';
@@ -63,12 +62,6 @@ const sidebarButton = computed(() => {
 });
 
 
-
-
-// Set the title when the component is mounted
-onMounted(() => {
-
-});
 </script>
 
 <template>
@@ -78,20 +71,18 @@ onMounted(() => {
       <div class="flex items-center text-xs breadcrumbs">
         <ul>
           <li><a @click="ss.navigateTo('/pockets/pockets')"> Pockets </a></li>
-          <li class="flex gap-2 cursor-pointer">
-            <icon :icon="currentPocket.icon" />
-            {{ currentPocket.name }}
+          <li class="">
+            <RouterLink :to="{ path: `/pocket/${currentPocket.key}/` }" class="flex gap-2 cursor-pointer">
+
+              <icon :icon="currentPocket.icon" />
+              {{ currentPocket.name }}
+            </RouterLink>
           </li>
           <li class="cursor-default">{{ }}</li>
         </ul>
       </div>
 
-
-
-      <div class="grow ">
-
-      </div>
-
+      <div class="grow "> </div>
 
       <div class="join *:text-xs items-center *:font-normal justify-self-end">
         <RouterLink :to="{ path: `/pocket/${currentPocket.key}/pocket-champions` }" class="join-item btn btn-sm">Champs
@@ -124,9 +115,13 @@ onMounted(() => {
 
   <!------------------------⟢ router ⟣------------------------->
 
-  <!-- RouterView for displaying child routes -->
-  <RouterView class="w-full h-full">
+
+  <RouterView v-slot="{ Component }" class="w-full h-full">
+    <keep-alive>
+      <component :is="Component" ref="section" :pocketKey="pocketKey" />
+    </keep-alive>
   </RouterView>
+
 </template>
 
 <!------------------------⟢ style ⟣------------------------->

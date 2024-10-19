@@ -1,13 +1,11 @@
-import { ref, warn, watch } from 'vue';
+import { ref, shallowRef } from 'vue';
 import { defineStore } from 'pinia';
-import { useRoute, useRouter } from 'vue-router';
+import { useRoute, useRouter, RouteLocationNormalizedLoaded } from 'vue-router';
 import {} from 'pinia-plugin-persistedstate';
 
 export const useSessionStore = defineStore(
   'sessionStore',
   () => {
-    const minimized = ref(false);
-
     interface Tab {
       name: string;
       link: string;
@@ -19,6 +17,8 @@ export const useSessionStore = defineStore(
       tab: Tab;
       title: any;
       icon?: any;
+      pocketKey?: string;
+      lastActiveComponent?: string;
     }
 
     var openTabs = shallowRef<OpenTab[]>([]);
@@ -36,48 +36,65 @@ export const useSessionStore = defineStore(
       return activeTab.value === link;
     };
 
+    type PocketRouteParams = {
+      pocketKey: string;
+    };
+
     const navigateTo = (link: string, title?, icon?) => {
       try {
-        // Check if the tab already exists
-        const existingTab = openTabs.value.find((tab) => tab.tab.link === link);
-
-        // Resolve the route and check if it's valid
         const matchedRoute = router.resolve(link);
+        const params = matchedRoute.params as PocketRouteParams;
 
-        // Add debug logs to inspect matchedRoute
-        console.log('Matched route:', matchedRoute);
+        if (typeof matchedRoute.name === 'string' && matchedRoute.name.includes('pocket') && params.pocketKey) {
+          const basePocketPath = `/pocket/${params.pocketKey}`;
 
-        // Check if matchedRoute is valid
-        if (!matchedRoute || !matchedRoute.name) {
-          console.warn(`[Vue Router warn]: No match found for location with path "${link}"`);
-          return; // Early return if no matching route
-        }
-
-        // Check if matchedRoute.meta is valid before destructuring
-        if (!matchedRoute.meta) {
-          console.warn(`[Vue Router warn]: Route meta is missing for path "${link}"`);
-        }
-
-        if (!existingTab) {
-          // Add a new tab
-          const newId = openTabs.value.length + 1;
-          openTabs.value.push({
-            id: newId,
-            tab: {
-              name: link.split('/')[3] || 'home', // Dynamically extract component name from link
-              link,
-            },
-            title: title || matchedRoute.meta?.title || link.split('/')[3], // Safely access meta.title
-            icon: icon || matchedRoute.meta?.icon || 'default-icon', // Safely access meta.icon
+          const existingTab = openTabs.value.find((tab) => {
+            return tab.tab.link.startsWith(basePocketPath);
           });
 
-          // Set the active tab and navigate to the route
-          activeTab.value = link;
-          router.push(link).catch((err) => console.error('Navigation error:', err));
+          if (!existingTab) {
+            // Add a new tab
+            const newId = openTabs.value.length + 1;
+            openTabs.value.push({
+              id: newId,
+              tab: {
+                name: title || link.split('/')[3] || 'home',
+                link: basePocketPath,
+              },
+              title: title || matchedRoute.meta?.title || link.split('/')[3],
+              icon: icon || matchedRoute.meta?.icon || 'default-icon',
+            });
+
+            // Set the active tab and navigate to the route
+            activeTab.value = basePocketPath;
+            router.push(link).catch((err) => console.error('Navigation error:', err));
+          } else {
+            // Set the active tab if the tab already exists
+            activeTab.value = existingTab.tab.link;
+            router.push(link).catch((err) => console.error('Navigation error:', err));
+          }
         } else {
-          // Set the active tab if the tab already exists
-          activeTab.value = link;
-          router.push(link).catch((err) => console.error('Navigation error:', err));
+          // For non-pocket routes, continue with the normal navigation
+          const existingTab = openTabs.value.find((tab) => tab.tab.link === link);
+
+          if (!existingTab) {
+            const newId = openTabs.value.length + 1;
+            openTabs.value.push({
+              id: newId,
+              tab: {
+                name: title || link.split('/')[3] || 'home',
+                link,
+              },
+              title: title || matchedRoute.meta?.title || link.split('/')[3],
+              icon: icon || matchedRoute.meta?.icon || 'default-icon',
+            });
+
+            activeTab.value = link;
+            router.push(link).catch((err) => console.error('Navigation error:', err));
+          } else {
+            activeTab.value = link;
+            router.push(link).catch((err) => console.error('Navigation error:', err));
+          }
         }
       } catch (error) {
         console.error('Error in navigateTo function:', error);
@@ -98,7 +115,6 @@ export const useSessionStore = defineStore(
       activeTab,
       getSidebarforTab,
       sidebar,
-      minimized,
       currentRoute,
     };
   },

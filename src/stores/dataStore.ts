@@ -1,6 +1,6 @@
-import { Champion, DataObject, Item, Rune, Shard } from 'types';
+import { Champion, DataObject, Item, Rune, Shard } from '../../types';
 import { defineStore } from 'pinia';
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 
 // Define types for the JSON data
 

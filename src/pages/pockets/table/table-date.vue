@@ -4,43 +4,55 @@ import { usePocketStore } from '../../../stores/pocketStore';
 import { pocket, dateObject } from '../../../../types';
 const ps = usePocketStore();
 
+
 const props = defineProps<{
     params: {
         data: {
-            key: string;
             name: string;
+            key: string;
+            items: {};
+            pinned: boolean;
             notes: string;
             dateCreated: dateObject;
             dateUpdated: dateObject;
+
         };
-
+        api: any;
+        node: any;
         type: string;
-
-    };
+    },
+    type?: string;
 }>();
+
 
 const pocket = ps.getPocket(props.params.data.key);
 
 
 const patch = computed(() => {
+    if (!pocket) { return; }
     if (props.params.type == "created") {
         return pocket.dateCreated[0].patch;
     } else { return pocket.dateUpdated[0].patch; }
 });
 
 const date = computed(() => {
+    if (!pocket) { return; }
+
     if (props.params.type == "created") {
         return pocket.dateCreated[0].date;
     } else { return pocket.dateUpdated[0].date; }
 });
 
 const time = computed(() => {
+    if (!pocket) { return; }
+
     if (props.params.type == "created") {
         return pocket.dateCreated[0].time;
     } else { return pocket.dateUpdated[0].time; }
 });
 
 const getStyles = computed(() => {
+    if (!pocket) { return; }
     if (props.params.type == 'updated') {
         const lastUpdated = pocket.dateUpdated[0].patch;
         const currentPatch = ps.patch;
@@ -75,55 +87,94 @@ const dateObjects = [
     },
     {
         name: "Date",
-        icon: "radix-icons:calendar",
-        iconClass: " size-3.5",
+        // icon: "radix-icons:calendar",
+        //iconClass: " size-3.5",
         data: date,
     },
     {
         name: "Time",
-        icon: "fluent-mdl2:alarm-clock",
-        iconClass: " size-3.5",
+        //icon: "fluent-mdl2:alarm-clock",
+        //iconClass: " size-3.5",
         data: time,
     },
 ]
 
 
+
 const selectedObject = ref();
+
+
+function scroll(name) {
+    if (ps.refs[name]) {
+        ps.refs[name].forEach((el) => {
+            el.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+        });
+    }
+}
 </script>
 
 <template>
-    <div class="carousel carousel-vertical size-full group place-items-center">
+    <div class="carousel carousel-vertical size-full group place-items-center [&_>span]:w-full">
+        <ContextMenu>
 
 
+            <ContextMenuTrigger class="!overscroll-contain">
+                <div v-for="(object, index) in dateObjects"
+                    class="relative items-center justify-center overflow-x-clip carousel-item size-full group !overscroll-contain"
+                    :key="object.name" :ref="el => {
+                        ps.refs[object.name] = ps.refs[object.name] || [];
+                        ps.refs[object.name].push(el);
+                    }">
 
-        <!--         <button v-if="selectedObject" class="relative grid place-content-center">
-            <div :class="getStyles" class="badge text-mini ">
-                <icon :icon="selectedObject.icon || dateObjects[0].icon"
-                    :class='selectedObject.iconClass || dateObjects[0].iconClass' />
-                <span class='font-medium tracking-widest'>{{ selectedObject.data || patch }}</span>
-            </div>
-
-        </button>
-        <button v-else class="relative flex flex-col items-center justify-center">
-            <div :class="getStyles" class="gap-2 badge text-mini">
-                <icon :icon="dateObjects[0].icon" :class='dateObjects[0].iconClass' />
-                <span class='font-medium tracking-widest'>{{ patch }}</span>
-            </div>
-
-        </button>
-
-        <template #popper> -->
+                    <div :class="getStyles" class="gap-2 badge text-mini">
+                        <icon v-if="object.icon" :icon="object.icon" :class='object.iconClass' />
+                        <span class='font-medium tracking-widest'>{{ object.data }}</span>
+                    </div>
+                    <div class='absolute right-0 flex flex-col -space-y-1.5'>
 
 
-        <div v-close-popper v-for="(object, index) in dateObjects"
-            class="items-center justify-center carousel-item size-full">
-            <!--                 <input type="radio" v-model="selectedObject" :value="object" class="hidden peer" />
-                <span>{{ object.name }}</span> -->
-            <div :class="getStyles" class="gap-2 badge text-mini">
-                <icon :icon="object.icon" :class='object.iconClass' />
-                <span class='font-medium tracking-widest'>{{ object.data }}</span>
-            </div>
-        </div>
+                        <icon v-if="index == 1 || index == 2" icon="teenyicons:up-small-outline"
+                            class="transition-all duration-300 opacity-0 top-1 group-hover:opacity-100 size-4" />
+                        <icon v-if="index == 0 || index == 1" icon="teenyicons:down-small-outline"
+                            class=" -right-[1px] transition-all duration-300 opacity-0  group-hover:opacity-100 size-4" />
+                    </div>
+                </div>
+            </ContextMenuTrigger>
+
+            <table-context-menu v-if="pocket" :pocketKey="pocket.key">
+                <template #first>
+                    <ContextMenuItem disabled class='self-end h-4.5 -mb-1'>
+                        View All...
+                    </ContextMenuItem>
+                    <ContextMenuSeparator />
+                    <context-menu-item @click="scroll('Patch')">
+
+                        <icon icon="simple-icons:riotgames" class='opacity-70' />
+                        <span class='flex items-center gap-1'>
+                            Patch
+                        </span>
+                    </context-menu-item>
+
+                    <context-menu-item @click="scroll('Date')">
+                        <icon icon="radix-icons:calendar" />
+                        <span class='flex items-center gap-1'>
+
+                            Date
+                        </span>
+                    </context-menu-item>
+
+                    <context-menu-item @click="scroll('Time')">
+                        <icon icon="fluent-mdl2:alarm-clock" />
+                        <span class='flex items-center gap-1'>
+
+                            Time
+                        </span>
+                    </context-menu-item>
+
+                    <ContextMenuSeparator />
+                </template>
+            </table-context-menu>
+        </ContextMenu>
     </div>
 </template>
 

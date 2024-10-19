@@ -7,18 +7,14 @@ const ds = useDataStore();
 
 // Get the props containing the params
 const props = defineProps<{
-    params: {
-        data: {
-            key: string;
-            type: string;
-            notes: string;
-        };
-    };
+
+    pocketKey: string;
+    type?: string;
 }>();
 
 
 const ps = usePocketStore();
-const pocket = ps.getPocket(props.params.data.key);
+const pocket = ps.getPocket(props.pocketKey);
 /* watch(
     ps.pockets,
     (newPockets) => {
@@ -37,18 +33,19 @@ const pocket = ps.getPocket(props.params.data.key);
 </script>
 
 <template>
-    <VDropdown theme="select" class="relative flex self-end w-full p-0 grow" :skidding="1">
-        <button @click.stop.prevent
-            class="flex items-center w-full h-6 gap-2 m-0 bg-transparent border border-transparent group flex-nowrap badge badge-xs hover:border-base-200 rounded-xs">
-            <div class="opacity-40 transition-all w-full duration-300 group-hover:opacity-80 py-[2px] text-left">
+    <VDropdown v-if="pocket" theme="select" class="relative flex self-end w-full p-0 grow" :skidding="1">
+        <button @click.stop.prevent :class="{ 'border border-transparent  hover:border-base-200': props.type == 'hover' }"
+            class="flex items-center w-full h-6 gap-2 m-0 bg-transparent group flex-nowrap badge badge-xs rounded-xs">
+            <div class=" transition-all w-full duration-300  py-[2px] text-left"
+                :class="{ 'opacity-40 group-hover:opacity-80': props.type == 'hover' }">
                 {{ pocket.type }}
             </div>
-            <icon icon="teenyicons:down-small-outline"
-                class="group-hover:opacity-100 opacity-0 size-3.5 transition-all duration-300" />
+            <icon icon="teenyicons:down-small-outline" class=" size-3.5 transition-all duration-300"
+                :class="{ 'group-hover:opacity-100 opacity-0': props.type == 'hover' }" />
         </button>
 
         <template #popper>
-            <div v-if="props"
+            <div v-if="props && pocket"
                 class="w-[135px] h-32 overflow-scroll grid [&_label]:btn [&_label]:bg-transparent [&_label]:btn-xs [&_label]:btn-ghost [&_label]:rounded-xs [&_label]:font-normal  [&_label]:justify-start px-1 py-1.5 gap-1 overflow-y-scroll  relative ">
 
                 <label v-for="c in ds.typeOptions" :class="{ '!bg-base-200/60': pocket.type == c }" v-close-popper

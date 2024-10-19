@@ -12,7 +12,7 @@ import { Icon } from "@iconify/vue";
 import { useGeneralStore } from "../stores/generalStore";
 import { storeToRefs } from "pinia";
 import { ref, computed, onMounted } from "vue";
-const myStore = storeToRefs(useGeneralStore());
+const gs = useGeneralStore();
 
 
 // Access user settings from the store
@@ -102,6 +102,15 @@ onMounted(() => {
 
 <template>
   <div class="grid grid-cols-[1fr_3fr] w-full gap-6 p-6 pl-10">
+
+
+    <label class="cursor-pointer label">
+      <span class="label-text">Reduce Motion</span>
+      <input type="checkbox" v-model="gs.reducedMotion" class="toggle toggle-sm !rounded-md" />
+      <span class="label-text">{{ gs.reducedMotion }}</span>
+    </label>
+
+
     <div class="grid grid-cols-1">
       <h1 class="font-semibold prose-lg divider divider-start">Interface</h1>
 

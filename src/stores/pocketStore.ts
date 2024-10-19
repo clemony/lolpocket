@@ -1,10 +1,10 @@
 import { defineStore } from 'pinia';
-import { ref, shallowRef } from 'vue';
-import { pocket, pocketChampions, pocketItems, pocketRunes } from 'types';
+import { computed, ref, shallowRef } from 'vue';
+import { pocket, pocketChampions, pocketItems, pocketRunes } from './../../types';
 import { useRouter } from 'vue-router';
-import { generateRandomString } from '@script/keygen';
-import { useItemStore } from '@stores/itemStore';
-import { useRuneStore } from '@stores/runeStore';
+import { generateRandomString } from './../script/keygen';
+import { useItemStore } from './itemStore';
+import { useRuneStore } from './runeStore';
 import { hexoid } from 'hexoid';
 
 export const usePocketStore = defineStore(
@@ -81,13 +81,13 @@ export const usePocketStore = defineStore(
       const pocketChampionsValue: pocketChampions = {
         key: aKey,
         champions: [],
-        starred: [],
+        starred: '',
       };
 
       const pocketItemsValue: pocketItems = {
         key: aKey,
         itemSets: [],
-        starred: [],
+        starred: 0,
       };
 
       const pocketRunesValue: pocketRunes = {
@@ -112,6 +112,7 @@ export const usePocketStore = defineStore(
         notes: '',
         dateCreated: [createDateObject()],
         dateUpdated: [createDateObject()],
+        activeComponent: '',
       };
 
       // Initialize other stores here instead of top-level
@@ -119,7 +120,7 @@ export const usePocketStore = defineStore(
       const rs = useRuneStore();
 
       pockets.value.push(newPocket);
-      is.newSet(newPocket.key, 'star');
+      is.newSet(newPocket.key);
       rs.newRuneSet(newPocket.key);
       console.log('pinia pocket added');
     }
@@ -169,7 +170,10 @@ export const usePocketStore = defineStore(
       return newPocket;
     }
 
+    const refs = ref({}); //for date scroll
+
     return {
+      refs,
       pockets,
       filterText,
       updateGrid,

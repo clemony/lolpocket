@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { computed, ref, watch } from 'vue';
 import TableContextMenu from './table-contextMenu.vue';
+import { usePocketStore } from '../../../stores/pocketStore';
+import { get } from '@vueuse/core/index.cjs';
 
-
+const ps = usePocketStore();
 const props = defineProps<{
 
-    params: {
+    params?: {
         data: {
             key: string;
             bgColor: string;
@@ -18,42 +20,71 @@ const props = defineProps<{
         api: any;
         node: any;
     };
+    pocketKey?: string;
+    type?: string;
 }>();
 
-const pocket = props.params.data;
-const bgColor = ref(pocket.bgColor);
-const iconColor = ref(pocket.iconColor);
+const pocket = computed(() => {
+    if (props.params) {
+        return props.params.data;
+    } else if (props.pocketKey) {
+        return ps.getPocket(props.pocketKey);
+    }
+});
+
+const bgColor = computed({
+    get() {
+        if (pocket.value) {
+            return pocket.value.bgColor;
+        }
+    },
+    set(newVal) {
+        //bgColor.value = newValue;
+        emit('update:bgColor', newVal);
+    }
+});
+
+const iconColor = computed({
+    get() {
+        if (pocket.value) {
+            return pocket.value.iconColor;
+        }
+    },
+    set(newVal) {
+        //iconColor.value = newValue;
+        emit('update:iconColor', newVal);
+    }
+});
+
 const emit = defineEmits(['update:bgColor', 'update:iconColor']);
 
-// Watch for changes in `bgColor` and `iconColor` props to update local `ref`s
-watch(() => props.params.data.bgColor, (newVal) => {
-    bgColor.value = newVal;
-}, { immediate: true });
-
-watch(() => props.params.data.iconColor, (newVal) => {
-    iconColor.value = newVal;
-}, { immediate: true });
 
 // Watch for local `bgColor` and `iconColor` changes to update `pocket`
 watch(() => bgColor.value, (newVal) => {
-    pocket.bgColor = newVal;
+    if (pocket.value) {
+        pocket.value.bgColor = newVal as string;
+        emit('update:bgColor', newVal);
+    }
 });
 
 watch(() => iconColor.value, (newVal) => {
-    pocket.iconColor = newVal;
+    if (pocket.value) {
+        pocket.value.iconColor = newVal as string;
+        emit('update:iconColor', newVal);
+    }
 });
 
 watch(() => bgColor.value, (newVal) => {
-    if (pocket) {
-        pocket.bgColor = newVal;
+    if (pocket.value) {
+        pocket.value.bgColor = newVal as string;
     } else {
         emit('update:bgColor', newVal);
     }
 });
 
 watch(() => iconColor.value, (newVal) => {
-    if (pocket) {
-        pocket.iconColor = newVal;
+    if (pocket.value) {
+        pocket.value.iconColor = newVal as string;
     } else {
         emit('update:iconColor', newVal);
     }
@@ -63,10 +94,11 @@ watch(() => iconColor.value, (newVal) => {
 <template>
     <ContextMenu>
         <ContextMenuTrigger>
-            <VDropdown theme="detail" class="flex items-center justify-center p-1 size-full" placement="right-start"
-                :distance="0">
+            <VDropdown v-if="pocket" theme="detail" class="flex items-center justify-center p-1 size-full"
+                placement="right-start" :distance="0">
                 <button :style="{ backgroundColor: pocket.bgColor, color: pocket.iconColor }"
-                    class="grid p-3.5 transition-all duration-300 rounded-[4px] relative shadow-sm group place-items-center  apsect-square hover:shadow-warm hover:ring-1 hover:ring-[currentColor/60] size-12"
+                    :class="{ '!rounded-full': props.type == 'round' }"
+                    class="grid p-4 transition-all duration-300 rounded-[4px] relative shadow-sm group place-items-center  apsect-square hover:shadow-warm hover:ring-1 hover:ring-[currentColor/60] size-12"
                     @click.stop>
                     <icon :style="{ color: pocket.iconColor }" :icon="`${pocket.icon}`" class="size-full" />
 
@@ -82,7 +114,7 @@ watch(() => iconColor.value, (newVal) => {
                 </template>
             </VDropdown>
 
-            <TableContextMenu :pocketKey="pocket.key" />
+            <TableContextMenu v-if="props.params" :pocketKey="props.params.data.key" />
         </ContextMenuTrigger>
     </ContextMenu>
 </template>
