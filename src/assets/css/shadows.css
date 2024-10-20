@@ -1,67 +1,67 @@
 [data-mode='light'],
 [data-mode='neutral'] {
-  .shadow-contrast {
-    @apply shadow-[inset_1px_1px_2px_2px_#00000010,inset_-1px_-1px_2px_2px_#FFFFFF20];
-  }
+    .shadow-contrast {
+        @apply shadow-[inset_1px_1px_2px_2px_#00000010,inset_-1px_-1px_2px_2px_#FFFFFF20];
+    }
 }
 [data-mode='dark'],
 [data-mode='dim'] {
-  .shadow-contrast {
-    @apply shadow-[inset_1px_1px_2px_2px_#00000020,inset_-1px_-1px_2px_2px_#FFFFFF05];
-  }
+    .shadow-contrast {
+        @apply shadow-[inset_1px_1px_2px_2px_#00000020,inset_-1px_-1px_2px_2px_#FFFFFF05];
+    }
 }
 
 .shadow-soft-in {
-  @apply shadow-[inset_0px_0px_40px_#00000006];
+    @apply shadow-[inset_0px_0px_40px_#00000006];
 }
 
 .shadow-warm {
-  @apply shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px];
+    @apply shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px];
 }
 
 .shadow-fade {
-  box-shadow: inset 0px 10px 7px 6px oklch(var(--b1));
+    box-shadow: inset 0px 10px 7px 6px oklch(var(--b1));
 }
 
 .shadow-lil-in {
-  @apply shadow-[inset_1px_1px_1px_0px_#00000009];
+    @apply shadow-[inset_1px_1px_1px_0px_#00000009];
 }
 .shadow-cham {
-  @apply shadow-[inset_-12px_-8px_40px_#46464620];
+    @apply shadow-[inset_-12px_-8px_40px_#46464620];
 }
 
 .shadow-standard {
-  @apply shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)];
+    @apply shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)];
 }
 
 .shadow-lil {
-  @apply shadow-[2px_2px_4px_1px_#00000030];
+    @apply shadow-[2px_2px_4px_1px_#00000030];
 }
 
 .shadow-rune {
-  @apply shadow-[1px_3px_2px_1px_#00000034];
+    @apply shadow-[1px_3px_2px_1px_#00000034];
 }
 
 .drop-shadow-xs {
-  filter: drop-shadow(0px 0px 1px #000000);
+    filter: drop-shadow(0px 0px 1px #000000);
 }
 
 .drop-shadow-soft {
-  filter: drop-shadow(0px 0px 1px #00000060);
+    filter: drop-shadow(0px 0px 1px #00000060);
 }
 
 .drop-shadow-softer {
-  filter: drop-shadow(0px 0px 1px #00000040);
+    filter: drop-shadow(0px 0px 1px #00000040);
 }
 
 .drop-shadow-softest {
-  filter: drop-shadow(0px 0px 1px #00000020);
+    filter: drop-shadow(0px 0px 1px #00000020);
 }
 
 .shadow-inset {
-  @apply shadow-[inset_1px_2px_8px_2px_#00000011,_inset_-2px_-1px_5px_1px_#00000009];
+    @apply shadow-[inset_1px_2px_8px_2px_#00000011,_inset_-2px_-1px_5px_1px_#00000009];
 }
 
 .shadow-inset-sm {
-  @apply shadow-[inset_1px_2px_1px_1px_#00000004,_inset_-1px_-1px_2px_1px_#00000009];
+    @apply shadow-[inset_1px_2px_1px_1px_#00000004,_inset_-1px_-1px_2px_1px_#00000009];
 }

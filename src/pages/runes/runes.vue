@@ -1,39 +1,35 @@
-<route lang="json">{
+<route lang="json">
+{
     "name": "Runes",
     "alias": "/runes/runes",
     "meta": {
         "title": "Runes",
         "icon": "teenyicons:hexagon-outline"
     }
-}</route>
+}
+</route>
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue';
-import { useDataStore } from "../../stores/dataStore";
-import { useRuneStore } from '../../stores/runeStore';
-const ds = useDataStore();
+import { ref, computed, onMounted } from 'vue'
+import { useDataStore } from '../../stores/dataStore'
+import { useRuneStore } from '../../stores/runeStore'
+const ds = useDataStore()
 
-const runes = ref<Rune[]>([]);
-
-
-
+const runes = ref<Rune[]>([])
 
 interface Rune {
-    name: string;
-    wiki: string;
-    tier: number;
-    type: string;
-    img: string;
-    stats: string;
-    path: string;
+    name: string
+    wiki: string
+    tier: number
+    type: string
+    img: string
+    stats: string
+    path: string
 }
-
 
 // Populate runes array from data store on component mount
 onMounted(() => {
-    runes.value = ds.getRunes(); // Ensure `getRunes` returns the array of runes from the store
-});
-
-
+    runes.value = ds.getRunes() // Ensure `getRunes` returns the array of runes from the store
+})
 </script>
 <!-- 
 <template>

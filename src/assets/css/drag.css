@@ -1,18 +1,18 @@
 .drag-draggable {
-  @apply flex flex-wrap w-full h-auto max-h-full gap-3.5 overflow-y-scroll;
+    @apply flex flex-wrap w-full h-auto max-h-full gap-3.5 overflow-y-scroll;
 }
 .drag-label {
-  @apply flex justify-center items-center overflow-auto  p-[2px]   ring-1 !relative z-0 ring-transparent 
+    @apply flex justify-center items-center overflow-auto  p-[2px]   ring-1 !relative z-0 ring-transparent 
   rounded-lg hover:ring-neutral/40;
 }
 .drag-wrapper {
-  @apply border border-neutral/40
+    @apply border border-neutral/40
 
   rounded-lg  aspect-square  pointer-events-none select-none overflow-hidden  bg-contain  bg-clip-border;
 }
 
 .drag-img {
-  @apply bg-cover  pointer-events-none;
+    @apply bg-cover  pointer-events-none;
 }
 
 /* .champion {
@@ -28,33 +28,33 @@
 } */
 
 .ghosty {
-  @apply aspect-square hover:ring-0 bg-base-200/30 p-5 shadow-[inset_1px_1px_2px_2px_#00000008]  !border-base-300 border rounded-md;
+    @apply aspect-square hover:ring-0 bg-base-200/30 p-5 shadow-[inset_1px_1px_2px_2px_#00000008]  !border-base-300 border rounded-md;
 
-  & .drag-label,
-  & .drag-wrapper {
-    @apply !border-transparent  !ring-transparent !ring-offset-transparent;
-  }
-  & .drag-label {
-    @apply opacity-100;
-  }
-  & .drag-wrapper {
-    @apply opacity-20  bg-contain rounded-none;
-  }
-  & .drag-img {
-    @apply ring-transparent ring-offset-transparent shadow-none opacity-0 invisible hidden;
-  }
+    & .drag-label,
+    & .drag-wrapper {
+        @apply !border-transparent  !ring-transparent !ring-offset-transparent;
+    }
+    & .drag-label {
+        @apply opacity-100;
+    }
+    & .drag-wrapper {
+        @apply opacity-20  bg-contain rounded-none;
+    }
+    & .drag-img {
+        @apply ring-transparent ring-offset-transparent shadow-none opacity-0 invisible hidden;
+    }
 }
 
 .setDrag {
-  @apply bg-base-100 rounded-box border-base-300 border;
+    @apply bg-base-100 rounded-box border-base-300 border;
 }
 
 .drag-clone {
-  opacity: 0.5;
-  pointer-events: none; /* Prevent interaction */
-  position: absolute; /* Ensure it behaves like a drag */
+    opacity: 0.5;
+    pointer-events: none; /* Prevent interaction */
+    position: absolute; /* Ensure it behaves like a drag */
 }
 
 .v-popper--shown .drag-label {
-  @apply ring-neutral/40;
+    @apply ring-neutral/40;
 }

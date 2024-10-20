@@ -1,84 +1,75 @@
-<route lang="json">{
+<route lang="json">
+{
     "name": "trash",
-    "alias": [
-        "/trash"
-    ],
+    "alias": ["/trash"],
     "meta": {
         "title": "Trash",
         "icon": "iconoir:bin-full"
     }
-}</route>
+}
+</route>
 <script setup lang="ts">
-import { usePocketStore } from '../../stores/pocketStore';
-import { useSessionStore } from '../../stores/sessionStore';
+import { usePocketStore } from '../../stores/pocketStore'
+import { useSessionStore } from '../../stores/sessionStore'
 
-
-const ps = usePocketStore();
-const sn = useSessionStore();
+const ps = usePocketStore()
+const sn = useSessionStore()
 
 function clearOldPockets() {
-    const now = new Date();
-    const thirtyDays = 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
+    const now = new Date()
+    const thirtyDays = 30 * 24 * 60 * 60 * 1000 // 30 days in milliseconds
 
     // Filter out pockets that are older than 30 days
-    ps.trashPockets = ps.trashPockets.filter(pocket => {
+    ps.trashPockets = ps.trashPockets.filter((pocket) => {
         // const age = now.getTime() - new Date(pocket.deletedAt).getTime();
         //return age < thirtyDays; // Keep pockets that are younger than 30 days
-    });
+    })
 }
 </script>
 
 <template>
-    <div class="w-full h-full px-3 py-4 ">
-
+    <div class="w-full h-full px-3 py-4">
         <div class="grid w-full gap-4 px-4 mb-4 h-fit">
             <div class="flex items-center gap-3">
                 <div class="flex items-center text-sm breadcrumbs grow">
                     <ul class="">
-                        <li @click="sn.navigateTo('/pockets')"><a>Pockets</a></li>
+                        <li @click="sn.navigateTo('/pockets')">
+                            <a>Pockets</a>
+                        </li>
                         <li>Trash</li>
                     </ul>
                 </div>
 
-
-
                 <div class="join">
                     <button
-                        class="relative join-item btn btn-sm *:size-4 after:size-5 items-center flex justify-center  *:absolute *:transition-all *:duration-300"
-                        alt="Trash" title="Trash">
+                        class="relative join-item btn btn-sm *:size-4 after:size-5 items-center flex justify-center *:absolute *:transition-all *:duration-300"
+                        alt="Trash"
+                        title="Trash">
                         <icon icon="iconoir:bin" class="" />
                         <icon icon="iconoir:bin-full" class="opacity-0" />
-
                     </button>
 
-                    <button class="join-item btn btn-sm" alt="Archive" title="Archive">
+                    <button
+                        class="join-item btn btn-sm"
+                        alt="Archive"
+                        title="Archive">
                         <icon icon="fluent:archive-20-regular" class="size-5" />
                     </button>
                 </div>
 
-                <button class="relative text-xs btn btn-sm btn-neutral hover:opacity-80">
-                    <icon v-if="ps.trashPockets.length > 0" icon="iconoir:bin" class="size-4" />
+                <button
+                    class="relative text-xs btn btn-sm btn-neutral hover:opacity-80">
+                    <icon
+                        v-if="ps.trashPockets.length > 0"
+                        icon="iconoir:bin"
+                        class="size-4" />
                     <icon v-else icon="iconoir:bin-full" class="size-4" />
-                    <span class="font-medium"> Empty All
-                    </span>
+                    <span class="font-medium"> Empty All </span>
                 </button>
-
-
-
-
-
-
-
-
             </div>
             <div class="flex items-center w-full">
-                <h2 class="text-xl font-semibold tracking-tight grow ">
-                    Trash
-                </h2>
-
-
+                <h2 class="text-xl font-semibold tracking-tight grow">Trash</h2>
             </div>
-
         </div>
 
         <ul class="h-64 overflow-scroll border">
@@ -95,7 +86,6 @@ function clearOldPockets() {
             </div>
 
         </div> -->
-
     </div>
 </template>
 

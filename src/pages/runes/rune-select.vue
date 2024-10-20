@@ -1,100 +1,117 @@
 <script setup lang="ts">
-import { usePocketStore } from '../../stores/pocketStore';
-import { useRuneStore } from '../../stores/runeStore';
-const rs = useRuneStore();
-const ps = usePocketStore();
-import { computed, onMounted, ref, watch } from 'vue';
-import { useDataStore } from '../../stores/dataStore';
-import { Rune } from '../../../types';
-import { set } from '@vueuse/core/index.cjs';
-import { useRoute } from 'vue-router';
-const ds = useDataStore();
+import { usePocketStore } from '../../stores/pocketStore'
+import { useRuneStore } from '../../stores/runeStore'
+const rs = useRuneStore()
+const ps = usePocketStore()
+import { computed, onMounted, ref, watch } from 'vue'
+import { useDataStore } from '../../stores/dataStore'
+import { Rune } from '../../../types'
+import { set } from '@vueuse/core/index.cjs'
+import { useRoute } from 'vue-router'
+const ds = useDataStore()
 
-const route = useRoute();
+const route = useRoute()
 const props = defineProps<{
-    pocketKey: string;
-    set: number;
+    pocketKey: string
+    set: number
 }>()
 
-const pocketKey = ref(route.params.pocketKey || '');
+const pocketKey = ref(route.params.pocketKey || '')
 
 const pocket = computed(() => {
-    return ps.getPocket(route.params.pocketKey);
-});
+    return ps.getPocket(route.params.pocketKey)
+})
 
 const selected = computed(() => {
-    return pocket.value.runes[0].runeSets[pocket.value.runes[0].selected];
-});
-
-
+    return pocket.value.runes[0].runeSets[pocket.value.runes[0].selected]
+})
 
 const filter = computed(() => {
-    let filteredRunes = ds.runes;
+    let filteredRunes = ds.runes
 
-    if (!selected) return [];
+    if (!selected) return []
 
-    filteredRunes = filteredRunes.filter((rune: Rune) => rune.path.toLowerCase().includes(selected.value.primary));
+    filteredRunes = filteredRunes.filter((rune: Rune) =>
+        rune.path.toLowerCase().includes(selected.value.primary)
+    )
 
-
-    return filteredRunes;
-});
+    return filteredRunes
+})
 
 const filter2 = computed(() => {
-    let filteredRunes = ds.runes;
+    let filteredRunes = ds.runes
 
-    if (!selected) return [];
+    if (!selected) return []
 
-    filteredRunes = filteredRunes.filter((rune: Rune) => rune.path.toLowerCase().includes(selected.value.secondary));
+    filteredRunes = filteredRunes.filter((rune: Rune) =>
+        rune.path.toLowerCase().includes(selected.value.secondary)
+    )
 
-    const tiers = [1, 2, 3];
-    filteredRunes = filteredRunes.filter((rune: Rune) => tiers.includes(rune.tier));
+    const tiers = [1, 2, 3]
+    filteredRunes = filteredRunes.filter((rune: Rune) =>
+        tiers.includes(rune.tier)
+    )
 
-
-    return filteredRunes;
-});
+    return filteredRunes
+})
 
 // Handle image error
 const onImageError = (event: Event) => {
-    const target = event.target as HTMLImageElement | null;
+    const target = event.target as HTMLImageElement | null
     if (target) {
-        target.src = '/img/runes/blankRune.webp';
-    }
-};
-
-
-
-function handleChange() {
-    if (selected.value.primary == selected.value.secondary) {
-        selected.value.secondary = 'none';
+        target.src = '/img/runes/blankRune.webp'
     }
 }
 
-watch(() => route.params.pocketKey, (newKey) => {
-    pocketKey.value = newKey;
-});
+function handleChange() {
+    if (selected.value.primary == selected.value.secondary) {
+        selected.value.secondary = 'none'
+    }
+}
 
-onMounted(() => {
+watch(
+    () => route.params.pocketKey,
+    (newKey) => {
+        pocketKey.value = newKey
+    }
+)
 
-});
-
+onMounted(() => {})
 </script>
 <template>
     <div class="z-0 w-full transition-all duration-500 bg-clip-border">
         <div
             class="flex h-16 items-end [&_img]:h-[1.5rem] z-10 relative after:absolute after:w-full after:h-16 after:top-0 after:left-0 after:rounded-t-box">
-            <label v-for="(path, index) in ds.uniquePaths" :key="index"
-                class="flex grow overflow-hidden py-1 items-center border-b-transparent border-b-0 border-base-100 bg-clip-padding transition-all duration-500 has-[:checked]:-translate-y-2.5 justify-center z-30 disabled:hidden has-[:disabled]:size-0 has-[:disabled]:absolute has-[:disabled]:opacity-0  cursor-pointer"
+            <label
+                v-for="(path, index) in ds.uniquePaths"
+                :key="index"
+                class="flex grow overflow-hidden py-1 items-center border-b-transparent border-b-0 border-base-100 bg-clip-padding transition-all duration-500 has-[:checked]:-translate-y-2.5 justify-center z-30 disabled:hidden has-[:disabled]:size-0 has-[:disabled]:absolute has-[:disabled]:opacity-0 cursor-pointer"
                 :ref="path">
+                <input
+                    v-if="props.set == 1"
+                    class="hidden peer"
+                    v-model="selected.primary"
+                    :value="path"
+                    type="radio"
+                    :disabled="path == 'none'"
+                    @change="handleChange" />
 
-                <input v-if="props.set == 1" class="hidden peer" v-model="selected.primary" :value="path" type="radio"
-                    :disabled="path == 'none'" @change="handleChange" />
-
-                <input v-if="props.set == 2" class="hidden peer" v-model="selected.secondary" :value="path" type="radio"
+                <input
+                    v-if="props.set == 2"
+                    class="hidden peer"
+                    v-model="selected.secondary"
+                    :value="path"
+                    type="radio"
                     :disabled="path == 'none' || path == selected.primary" />
 
                 <div
                     class="flex items-center justify-center mx-2 grayscale brightness-75 peer-checked:brightness-100 peer-checked:grayscale-0 hover:brightness-100 drop-shadow-sm hover:grayscale-0 size-10 aspect-square">
-                    <img :src="'/img/runes/' + path + '.webp' || '/img/ui/RunesIcon.svg'" class="drop-shadow-softest" />
+                    <img
+                        :src="
+                            '/img/runes/' + path + '.webp' ||
+                            '/img/ui/RunesIcon.svg'
+                        "
+                        class="drop-shadow-softest" />
                 </div>
                 <div
                     class="capitalize opacity-0 w-0 peer-checked:w-32 peer-checked:opacity-100 transition-all duration-500 font-light mt-1.5 text-lg">
@@ -104,30 +121,61 @@ onMounted(() => {
         </div>
     </div>
 
-    <div v-if="props.set == 1" class="grid justify-center grid-cols-3 px-7 gap-y-9 gap-x-2 place-items-center my-9">
-        <label v-for="(rune, index) in filter" :key="rune.name"
-            class="grid grid-cols-1 gap-2 cursor-pointer place-items-center" :data-tier="rune.tier"
-            :class="rune.path + 'Color'" @click="
-                rs.selectedRune = rune;
-            ">
-            <input v-if="rune.tier == 0 && props.set == 1" type="radio" :value="rune" v-model="selected.keystone"
-                class="hidden peer" :disabled="rune.path == 'none'" />
+    <div
+        v-if="props.set == 1"
+        class="grid justify-center grid-cols-3 px-7 gap-y-9 gap-x-2 place-items-center my-9">
+        <label
+            v-for="(rune, index) in filter"
+            :key="rune.name"
+            class="grid grid-cols-1 gap-2 cursor-pointer place-items-center"
+            :data-tier="rune.tier"
+            :class="rune.path + 'Color'"
+            @click="rs.selectedRune = rune">
+            <input
+                v-if="rune.tier == 0 && props.set == 1"
+                type="radio"
+                :value="rune"
+                v-model="selected.keystone"
+                class="hidden peer"
+                :disabled="rune.path == 'none'" />
 
-            <input v-if="rune.tier == 1 && props.set == 1" type="radio" :value="rune" v-model="selected.p1"
-                class="hidden peer" :disabled="rune.path == 'none'" />
+            <input
+                v-if="rune.tier == 1 && props.set == 1"
+                type="radio"
+                :value="rune"
+                v-model="selected.p1"
+                class="hidden peer"
+                :disabled="rune.path == 'none'" />
 
-            <input v-if="rune.tier == 2 && props.set == 1" type="radio" :value="rune" v-model="selected.p2"
-                class="hidden peer" :disabled="rune.path == 'none'" />
+            <input
+                v-if="rune.tier == 2 && props.set == 1"
+                type="radio"
+                :value="rune"
+                v-model="selected.p2"
+                class="hidden peer"
+                :disabled="rune.path == 'none'" />
 
-            <input v-if="rune.tier == 3 && props.set == 1" type="radio" :value="rune" v-model="selected.p3"
-                class="hidden peer" :disabled="rune.path == 'none'" />
+            <input
+                v-if="rune.tier == 3 && props.set == 1"
+                type="radio"
+                :value="rune"
+                v-model="selected.p3"
+                class="hidden peer"
+                :disabled="rune.path == 'none'" />
 
-            <VDropdown theme="detail" :triggers="['hover']" :popperTriggers="['hover']" :delay="{ show: 1000, hide: 0 }"
-                :disabled="rune.path == 'none'" id="imgwrap"
+            <VDropdown
+                theme="detail"
+                :triggers="['hover']"
+                :popperTriggers="['hover']"
+                :delay="{ show: 1000, hide: 0 }"
+                :disabled="rune.path == 'none'"
+                id="imgwrap"
                 class="peer-checked:opacity-100 h-[inherit] w-[inherit] peer-checked:brightness-100 brightness-90 opacity-80 grayscale peer-checked:grayscale-0 transition-all duration-500 hover:opacity-100 hover:grayscale-0">
                 <div class="overflow-hidden rounded-full">
-                    <img :src="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
-                        :alt="rune.name" @error="onImageError" />
+                    <img
+                        :src="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
+                        :alt="rune.name"
+                        @error="onImageError" />
                 </div>
 
                 <template #popper>
@@ -137,29 +185,53 @@ onMounted(() => {
         </label>
     </div>
 
+    <div
+        v-if="props.set == 2"
+        class="grid justify-center grid-cols-3 px-7 gap-y-9 gap-x-2 place-items-center my-9">
+        <label
+            v-for="(rune, index) in filter2"
+            :key="rune.name"
+            class="grid grid-cols-1 gap-2 cursor-pointer place-items-center"
+            :data-tier="rune.tier"
+            :class="rune.path + 'Color'"
+            @click="rs.selectedRune = rune">
+            <input
+                v-if="rune.tier == 1 && props.set == 2"
+                type="radio"
+                :value="rune"
+                v-model="selected.s1"
+                class="hidden peer"
+                :disabled="rune.path == 'none'" />
 
-    <div v-if="props.set == 2" class="grid justify-center grid-cols-3 px-7 gap-y-9 gap-x-2 place-items-center my-9">
-        <label v-for="(rune, index) in filter2" :key="rune.name"
-            class="grid grid-cols-1 gap-2 cursor-pointer place-items-center" :data-tier="rune.tier"
-            :class="rune.path + 'Color'" @click="
-                rs.selectedRune = rune;
-            ">
+            <input
+                v-if="rune.tier == 2 && props.set == 2"
+                type="radio"
+                :value="rune"
+                v-model="selected.s2"
+                class="hidden peer"
+                :disabled="rune.path == 'none'" />
 
-            <input v-if="rune.tier == 1 && props.set == 2" type="radio" :value="rune" v-model="selected.s1"
-                class="hidden peer" :disabled="rune.path == 'none'" />
+            <input
+                v-if="rune.tier == 3 && props.set == 2"
+                type="radio"
+                :value="rune"
+                v-model="selected.s3"
+                class="hidden peer"
+                :disabled="rune.path == 'none'" />
 
-            <input v-if="rune.tier == 2 && props.set == 2" type="radio" :value="rune" v-model="selected.s2"
-                class="hidden peer" :disabled="rune.path == 'none'" />
-
-            <input v-if="rune.tier == 3 && props.set == 2" type="radio" :value="rune" v-model="selected.s3"
-                class="hidden peer" :disabled="rune.path == 'none'" />
-
-            <VDropdown theme="detail" :triggers="['hover']" :popperTriggers="['hover']" :delay="{ show: 1000, hide: 0 }"
-                :disabled="rune.path == 'none'" id="imgwrap"
+            <VDropdown
+                theme="detail"
+                :triggers="['hover']"
+                :popperTriggers="['hover']"
+                :delay="{ show: 1000, hide: 0 }"
+                :disabled="rune.path == 'none'"
+                id="imgwrap"
                 class="peer-checked:opacity-100 h-[inherit] w-[inherit] peer-checked:brightness-100 brightness-90 opacity-80 grayscale peer-checked:grayscale-0 transition-all duration-500 hover:opacity-100 hover:grayscale-0">
                 <div class="overflow-hidden rounded-full">
-                    <img :src="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
-                        :alt="rune.name" @error="onImageError" />
+                    <img
+                        :src="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
+                        :alt="rune.name"
+                        @error="onImageError" />
                 </div>
 
                 <template #popper>
@@ -172,53 +244,67 @@ onMounted(() => {
 
 <style scoped>
 .gradient {
-    background: linear-gradient(90deg, rgba(227, 195, 85, 1) 0%, rgba(215, 95, 95, 1) 25%, rgba(159, 139, 209, 1) 50%, rgba(144, 182, 137, 1) 75%, rgba(153, 215, 225, 1) 100%);
+    background: linear-gradient(
+        90deg,
+        rgba(227, 195, 85, 1) 0%,
+        rgba(215, 95, 95, 1) 25%,
+        rgba(159, 139, 209, 1) 50%,
+        rgba(144, 182, 137, 1) 75%,
+        rgba(153, 215, 225, 1) 100%
+    );
 }
 
 .border-gradient {
-    border-image: linear-gradient(to right, oklch(var(--b1)), rgba(0, 0, 0, 0), oklch(var(--b1))) 2;
+    border-image: linear-gradient(
+            to right,
+            oklch(var(--b1)),
+            rgba(0, 0, 0, 0),
+            oklch(var(--b1))
+        )
+        2;
 }
 
 /* beautify ignore:start */
 [data-tier='0'] {
     img {
-      @apply size-[4.4rem] drop-shadow-md;
+        @apply size-[4.4rem] drop-shadow-md;
     }
-  }
+}
 
-  [data-tier='1'],
-  [data-tier='2'],
-  [data-tier='3'] {
+[data-tier='1'],
+[data-tier='2'],
+[data-tier='3'] {
     & :checked + #imgwrap {
-      @apply ring-1 ring-offset-2 ring-neutral/30  shadow-inner transition-all duration-500;
+        @apply ring-1 ring-offset-2 ring-neutral/30  shadow-inner transition-all duration-500;
     }
 
     #imgwrap {
-      @apply rounded-full size-[2.8rem] shadow-[1px_3px_2px_1px_#00000034] border border-neutral/70 transition-all duration-500;
+        @apply rounded-full size-[2.8rem] shadow-[1px_3px_2px_1px_#00000034] border border-neutral/70 transition-all duration-500;
     }
     img {
-      @apply scale-110 object-cover aspect-square shadow-inner rounded-full;
+        @apply scale-110 object-cover aspect-square shadow-inner rounded-full;
     }
-  }
+}
 
-  .none {
+.none {
     [data-tier='0'] {
-      img {
-        @apply border border-neutral/15 transition-all duration-500 rounded-full;
-      }
+        img {
+            @apply border border-neutral/15 transition-all duration-500 rounded-full;
+        }
     }
 
     [data-tier='1'],
     [data-tier='2'],
     [data-tier='3'] {
-      & :checked + #imgwrap {
-        @apply ring-0 ring-offset-0  transition-all duration-500;
-      }
-      #imgwrap {
-        @apply rounded-full size-[2.8rem] shadow-[inset_1px_3px_2px_1px_#00000008] border border-neutral/15 transition-all duration-500 bg-base-200/20;
-      }
-      img {
-        @apply scale-110 object-cover aspect-square shadow-inner rounded-full;
-      }
+        & :checked + #imgwrap {
+            @apply ring-0 ring-offset-0  transition-all duration-500;
+        }
+        #imgwrap {
+            @apply rounded-full size-[2.8rem] shadow-[inset_1px_3px_2px_1px_#00000008] border border-neutral/15 transition-all duration-500 bg-base-200/20;
+        }
+        img {
+            @apply scale-110 object-cover aspect-square shadow-inner rounded-full;
+        }
     }
-  }</style>
+}
+</style>

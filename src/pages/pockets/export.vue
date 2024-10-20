@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-
+import { ref } from 'vue'
 
 const show = ref(false)
 
@@ -10,9 +9,6 @@ function confirm() {
 </script>
 
 <template>
-
-
-
     <!--       <button class="btn btn-sm self-center relative *>:transition-all *>:duration-300"
         :class="{ 'group/load': isClicked, active: isActive }" alt="Create export for League Client"
         title="Create export for League Client" @click="handleExport()">
@@ -31,5 +27,4 @@ function confirm() {
           <button>close</button>
         </form>
       </dialog> -->
-
 </template>

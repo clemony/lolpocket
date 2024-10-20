@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue';
-import { usePocketStore } from '../../stores/pocketStore';
+import { ref, watch } from 'vue'
+import { usePocketStore } from '../../stores/pocketStore'
 import {
     ContextMenu,
     ContextMenuCheckboxItem,
@@ -16,9 +16,7 @@ import {
     ContextMenuSubTrigger,
     ContextMenuTrigger,
 } from './../components/ui/context-menu'
-const ps = usePocketStore();
-
-
+const ps = usePocketStore()
 </script>
 
 <template>
@@ -63,9 +61,7 @@ const ps = usePocketStore();
             <ContextMenuCheckboxItem>Show Full URLs</ContextMenuCheckboxItem>
             <ContextMenuSeparator />
             <ContextMenuRadioGroup model-value="pedro">
-                <ContextMenuLabel inset>
-                    People
-                </ContextMenuLabel>
+                <ContextMenuLabel inset> People </ContextMenuLabel>
                 <ContextMenuSeparator />
                 <ContextMenuRadioItem value="pedro">
                     Pedro Duarte
@@ -77,8 +73,5 @@ const ps = usePocketStore();
         </ContextMenuContent>
     </ContextMenu>
 </template>
-
-
-
 
 <style scoped></style>

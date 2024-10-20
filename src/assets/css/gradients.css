@@ -1,87 +1,110 @@
 .gradient {
-  background: linear-gradient(137deg, rgba(231, 207, 120, 0.7) 0%, rgba(220, 124, 124, 0.7) 20%, rgba(178, 164, 221, 0.7) 40%, rgba(175, 212, 150, 0.7) 60%, rgba(165, 226, 229, 0.7) 80%);
-  background-size: 550%;
+    background: linear-gradient(
+        137deg,
+        rgba(231, 207, 120, 0.7) 0%,
+        rgba(220, 124, 124, 0.7) 20%,
+        rgba(178, 164, 221, 0.7) 40%,
+        rgba(175, 212, 150, 0.7) 60%,
+        rgba(165, 226, 229, 0.7) 80%
+    );
+    background-size: 550%;
 }
 
 .none {
-  background: linear-gradient(137deg, rgba(190, 190, 190, 1) 0%, rgba(193, 193, 193, 0.8) 10%, rgba(233, 233, 233, 1) 75%, rgba(252, 252, 252, 0) 90%);
-  @apply transition-all duration-500;
+    background: linear-gradient(
+        137deg,
+        rgba(190, 190, 190, 1) 0%,
+        rgba(193, 193, 193, 0.8) 10%,
+        rgba(233, 233, 233, 1) 75%,
+        rgba(252, 252, 252, 0) 90%
+    );
+    @apply transition-all duration-500;
 }
 
 .clip-mask,
 #menu-bar::before {
-  /*   mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 99%, rgba(0, 0, 0, 1) 100%);
+    /*   mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 99%, rgba(0, 0, 0, 1) 100%);
   mask-position: center;
   mask-size: cover;
   mask-repeat: no-repeat;
   mask-composite: subtract;
  */
-  content: '';
-  position: absolute;
-  left: 5px;
-  top: 27px;
-  width: 24px;
-  height: 24px;
-  mask-image: linear-gradient(to top, red, red), radial-gradient(circle 15px at center, green 80%, transparent 81%);
-  background-image: linear-gradient(to top, oklch(var(--b1)), oklch(var(--b1))), radial-gradient(circle 15px at center, oklch(var(--b1)) 80%, transparent 81%);
-  background-size:
-    12px 12px,
-    100%;
-  background-position:
-    top left,
-    center;
-  background-repeat: no-repeat, repeat;
-  mask-position:
-    bottom left,
-    center;
-  mask-repeat: no-repeat, repeat;
-  mask-composite: subtract;
-  z-index: 50;
-  scale: 150% 100%;
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 27px;
+    width: 24px;
+    height: 24px;
+    mask-image: linear-gradient(to top, red, red),
+        radial-gradient(circle 15px at center, green 80%, transparent 81%);
+    background-image: linear-gradient(
+            to top,
+            oklch(var(--b1)),
+            oklch(var(--b1))
+        ),
+        radial-gradient(
+            circle 15px at center,
+            oklch(var(--b1)) 80%,
+            transparent 81%
+        );
+    background-size:
+        12px 12px,
+        100%;
+    background-position:
+        top left,
+        center;
+    background-repeat: no-repeat, repeat;
+    mask-position:
+        bottom left,
+        center;
+    mask-repeat: no-repeat, repeat;
+    mask-composite: subtract;
+    z-index: 50;
+    scale: 150% 100%;
 }
 .inspiration {
-  background-position: 100%;
+    background-position: 100%;
 
-  @apply transition-all duration-500;
+    @apply transition-all duration-500;
 
-  #imgwrap {
-    @apply ring-offset-sky-300/30;
-  }
+    #imgwrap {
+        @apply ring-offset-sky-300/30;
+    }
 }
 
 .resolve {
-  background-position: 83%;
-  @apply transition-all duration-500;
+    background-position: 83%;
+    @apply transition-all duration-500;
 
-  #imgwrap {
-    @apply ring-offset-lime-600/60;
-  }
+    #imgwrap {
+        @apply ring-offset-lime-600/60;
+    }
 }
 
 .sorcery {
-  background-position: 42%;
-  @apply transition-all duration-500;
+    background-position: 42%;
+    @apply transition-all duration-500;
 
-  #imgwrap {
-    @apply ring-offset-purple-400/60;
-  }
+    #imgwrap {
+        @apply ring-offset-purple-400/60;
+    }
 }
 
 .domination {
-  background-position: 20%;
-  @apply transition-all duration-500;
+    background-position: 20%;
+    @apply transition-all duration-500;
 
-  #imgwrap {
-    @apply ring-offset-red-500/60;
-  }
+    #imgwrap {
+        @apply ring-offset-red-500/60;
+    }
 }
 
 .precision {
-  background-position: 0%;
+    background-position: 0%;
 
-  @apply transition-all duration-500;
+    @apply transition-all duration-500;
 
-  #imgwrap {
-    @apply ring-offset-amber-500/60;
-  }
+    #imgwrap {
+        @apply ring-offset-amber-500/60;
+    }
 }

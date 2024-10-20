@@ -1,55 +1,55 @@
 .grid-item,
 .grid-image-container,
 .grid-image {
-  @apply rounded-md transition-all duration-500;
+    @apply rounded-md transition-all duration-500;
 }
 
 .grid-container {
-  @apply grid w-full p-4 !overflow-y-auto h-full transition-all duration-500 grid-flow-row auto-cols-max;
+    @apply grid w-full p-4 !overflow-y-auto h-full transition-all duration-500 grid-flow-row auto-cols-max;
 
-  .grid-item {
-    @apply size-full z-0 w-full relative shadow-warm ring-1 ring-offset-1 ring-offset-base-200 ring-base-300 hover:ring-offset-primary/60;
+    .grid-item {
+        @apply size-full z-0 w-full relative shadow-warm ring-1 ring-offset-1 ring-offset-base-200 ring-base-300 hover:ring-offset-primary/60;
 
-    .grid-image-container {
-      justify-content: center;
-      align-items: center;
+        .grid-image-container {
+            justify-content: center;
+            align-items: center;
 
-      @apply size-full flex overflow-hidden relative  z-40 p-0 m-0;
+            @apply size-full flex overflow-hidden relative  z-40 p-0 m-0;
 
-      .grid-image {
-        @apply aspect-square relative z-0  object-cover;
-      }
-      .grid-image:after {
-      }
+            .grid-image {
+                @apply aspect-square relative z-0  object-cover;
+            }
+            .grid-image:after {
+            }
+        }
+
+        .grid-image-container::after {
+            content: '';
+            width: inherit;
+            height: inherit;
+            transition: all 0.3s ease;
+            box-shadow: inset 0px -6px 15px 10px rgba(0, 0, 0, 0.65);
+            @apply opacity-0 pointer-events-none absolute z-10;
+        }
     }
-
-    .grid-image-container::after {
-      content: "";
-      width: inherit;
-      height: inherit;
-      transition: all 0.3s ease;
-      box-shadow: inset 0px -6px 15px 10px rgba(0, 0, 0, 0.65);
-      @apply opacity-0 pointer-events-none absolute z-10;
-    }
-  }
 }
 
 .grid-tip {
-  transition: all 0.3s ease;
-  transform: translateY(200%);
-  @apply flex z-20 absolute w-full h-auto cursor-pointer pointer-events-none text-wrap opacity-0 bottom-0  left-0 text-white hyphens-auto  font-semibold   tracking-wider !text-[10px] p-1 uppercase text-end align-text-bottom justify-start;
+    transition: all 0.3s ease;
+    transform: translateY(200%);
+    @apply flex z-20 absolute w-full h-auto cursor-pointer pointer-events-none text-wrap opacity-0 bottom-0  left-0 text-white hyphens-auto  font-semibold   tracking-wider !text-[10px] p-1 uppercase text-end align-text-bottom justify-start;
 }
 
 .grid-item:hover {
-  @apply ring-[2px] ring-secondary;
-  .grid-image-container {
-    .grid-tip {
-      transform: none;
-      @apply opacity-100;
+    @apply ring-[2px] ring-secondary;
+    .grid-image-container {
+        .grid-tip {
+            transform: none;
+            @apply opacity-100;
+        }
     }
-  }
 
-  .grid-image-container::after {
-    @apply opacity-100;
-  }
+    .grid-image-container::after {
+        @apply opacity-100;
+    }
 }

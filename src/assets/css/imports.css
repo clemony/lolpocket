@@ -14,5 +14,5 @@
 @import '@fontsource-variable/roboto-serif';
 @import 'vue-draggable-resizable/style.css';
 @layer base {
-  @import '@fontsource/geist-mono';
+    @import '@fontsource/geist-mono';
 }

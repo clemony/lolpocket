@@ -1,4 +1,5 @@
-<route lang="json">{
+<route lang="json">
+{
     "props": true,
     "path": "/pocket/:pocketKey/pocket-champions",
     "component": "/src/pages/pocket/pocket-champions.vue",
@@ -6,76 +7,71 @@
         "title": "Pocket",
         "icon": "teenyicons:folder-outline"
     }
-}</route>
+}
+</route>
 
 <script setup lang="ts">
-import { useChampStore } from '../../stores/champStore';
-import SelectedChamps from './pocket-selectedChampions.vue';
-import { usePocketStore } from '../../stores/pocketStore';
-import { computed } from 'vue';
-import ChampionSidebar from '../champions/champion-sidebar.vue';
+import { useChampStore } from '../../stores/champStore'
+import SelectedChamps from './pocket-selectedChampions.vue'
+import { usePocketStore } from '../../stores/pocketStore'
+import { computed } from 'vue'
+import ChampionSidebar from '../champions/champion-sidebar.vue'
 
-
-const ps = usePocketStore();
-
-
+const ps = usePocketStore()
 
 const props = defineProps<{
-    pocketKey: string;
-}>();
-
+    pocketKey: string
+}>()
 
 // Compute the pocket based on the prop
-const currentPocket = computed(() => ps.getPocket(props.pocketKey));
+const currentPocket = computed(() => ps.getPocket(props.pocketKey))
 
-
-const cs = useChampStore();
-
-
-
+const cs = useChampStore()
 </script>
 
 <template>
-    <Splitpanes id="champSidebarSplit"
-        class="default-theme px-6  w-full max-h-[calc(100%-100px)] h-[calc(100%-100px)] ">
-        <Pane max-size="100" size="73" min-size="73" class="grid grid-rows-[1fr_3fr] h-full pb-1">
-
-
-
+    <Splitpanes
+        id="champSidebarSplit"
+        class="default-theme px-6 w-full max-h-[calc(100%-100px)] h-[calc(100%-100px)]">
+        <Pane
+            max-size="100"
+            size="73"
+            min-size="73"
+            class="grid grid-rows-[1fr_3fr] h-full pb-1">
             <div class="grid items-start w-full h-full gap-3 px-1 pb-4">
                 <div class="flex gap-3">
-                    <h2 class="text-xl font-semibold tracking-tight ">
+                    <h2 class="text-xl font-semibold tracking-tight">
                         Champions
                     </h2>
 
-                    <div class=" join">
+                    <div class="join">
                         <button
-                            class="grid mt-[1px]  btn btn-xs btn-outline border-none  btn-square  place-items-center group *:size-4 disabled:bg-transparent"
-                            :disabled="cs.championsInPocket.length == 0" @click="cs.resetChamps()">
-                            <icon icon='ph:eraser' class="" />
-
+                            class="grid mt-[1px] btn btn-xs btn-outline border-none btn-square place-items-center group *:size-4 disabled:bg-transparent"
+                            :disabled="cs.championsInPocket.length == 0"
+                            @click="cs.resetChamps()">
+                            <icon icon="ph:eraser" class="" />
                         </button>
-
                     </div>
                 </div>
                 <div class="overflow-clip scrollbar-hide">
-                    <PocketSelectedChampions v-if="currentPocket" :pocketKey="currentPocket.key" />
+                    <PocketSelectedChampions
+                        v-if="currentPocket"
+                        :pocketKey="currentPocket.key" />
                 </div>
             </div>
-
 
             <div
                 class="relative overflow-hidden transition-all duration-500 delay-150 border h-fullborder-base-300 rounded-box shadow-warm">
                 <div
                     class="absolute z-30 flex items-center content-center w-full h-8 gap-4 border-b border-b-base-300/50 flex-nowrap bg-base-100/95 backdrop-blur-md shadow-warm">
-
-                    <SearchBox :search="cs.champSearch" :placeholder="'Search Champions...'"
+                    <SearchBox
+                        :search="cs.champSearch"
+                        :placeholder="'Search Champions...'"
                         @update:search="cs.champSearch = $event" />
 
-
                     <span class="grow"></span>
-                    <div class="flex content-center justify-end w-full *:px-2 px-4">
-
+                    <div
+                        class="flex content-center justify-end w-full *:px-2 px-4">
                         <select
                             class="max-w-xs shadow-inner select select-bordered select-xs align-self-end justify-self-end">
                             <option disabled selected>Class</option>
@@ -86,40 +82,27 @@ const cs = useChampStore();
                             <option>Fighter</option>
                             <option>Assassin</option>
                         </select>
-
-
-
                     </div>
-
-
                 </div>
 
-                <div class="relative z-0 h-full px-3 shadow-inset rounded-b-box bg-base-100">
-
-                    <ListChamps v-if="currentPocket" :pocketKey="currentPocket.key" />
+                <div
+                    class="relative z-0 h-full px-3 shadow-inset rounded-b-box bg-base-100">
+                    <ListChamps
+                        v-if="currentPocket"
+                        :pocketKey="currentPocket.key" />
                 </div>
-
-
-
             </div>
-
-
-
         </Pane>
 
-
-
-        <Pane v-if="ps.showSidebar == true" size="27" max-size="27" min-size="27" class="relative max-h-full ">
-
-
+        <Pane
+            v-if="ps.showSidebar == true"
+            size="27"
+            max-size="27"
+            min-size="27"
+            class="relative max-h-full">
             <ChampionSidebar :champion="cs.selectedChampion" />
-
         </Pane>
-
     </Splitpanes>
-
-
-
 </template>
 
 <style scoped></style>
