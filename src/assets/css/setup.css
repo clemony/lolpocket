@@ -1,29 +1,18 @@
 :root {
-    --rounded-box: 0.7rem !important;
+    --rounded-box: 0.5rem !important;
     --rounded-btn: 0.4rem !important;
     --rounded-badge: 0.5rem !important;
     --animation-btn: 0.25s !important;
     --animation-input: 0.2s !important;
     --btn-focus-scale: 0.95 !important;
     --border-btn: 1px !important;
-    --tab-border: 1px !important;
-    --tab-radius: 0.4rem !important;
-    --toastify-font-family: 'Geist Sans';
-    --toastify-icon-color-info: oklch(var(--bc));
-    --toastify-icon-color-success: oklch(var(--bc)) !important;
-    --toastify-icon-color-warning: oklch(var(--bc));
-    --toastify-icon-color-error: oklch(var(--bc));
 
+    * {
+        @apply text-xs;
+    }
     overscroll-behavior: contain;
     user-select: none;
-    @apply scroll-smooth bg-transparent p-0 m-0;
-}
-.toasty {
-    @apply backdrop-blur-md !bg-base-100/90 backdrop-brightness-95 top-11 max-w-64 self-center -right-10 border-base-300 !rounded-box shadow-warm !text-base-content text-sm border font-sans font-medium first-letter:mr-4;
-}
-
-.input-simple {
-    @apply outline-none   cursor-text focus:border-base-300/50 truncate transition-all duration-300 bg-transparent;
+    @apply m-0 scroll-smooth bg-transparent p-0;
 }
 
 .borders {
@@ -31,7 +20,7 @@
 }
 
 .frost {
-    @apply backdrop-blur-md bg-base-100/90;
+    @apply bg-base-100/90 backdrop-blur-md;
 }
 
 .toggle {
@@ -43,7 +32,7 @@
     @apply !bg-base-200/40;
 }
 select {
-    @apply !ring-offset-0 !ring-0 !outline-1 !outline-offset-1;
+    @apply !outline-1 !outline-offset-1 !ring-0 !ring-offset-0;
 }
 
 button,
@@ -60,11 +49,7 @@ button,
     --dark-shadow: oklch(var(--bc) / 5%);
 
     #app {
-        @apply bg-blend-lighten backdrop-brightness-[250%] bg-base-100/60  backdrop-blur-md backdrop-contrast-[60%];
-    }
-
-    .menu-icons {
-        @apply brightness-75 saturate-150;
+        @apply bg-base-100/80 backdrop-blur-md backdrop-brightness-[100%];
     }
 }
 
@@ -73,7 +58,7 @@ button,
     --dark-shadow: rgba(0, 0, 0, 0.25);
 
     #app {
-        @apply bg-blend-normal bg-base-100/85 backdrop-blur-md;
+        @apply bg-base-100/85 bg-blend-normal backdrop-blur-md;
     }
 }
 .shadow-btn {
@@ -86,11 +71,11 @@ button,
 
 html,
 body {
-    @apply bg-transparent overflow-hidden overscroll-none h-screen;
+    @apply h-screen overflow-hidden overscroll-none bg-transparent;
 }
 
 #app {
-    @apply absolute top-0 left-0 backdrop-brightness-200 w-screen h-screen   drawer drawer-end;
+    @apply drawer drawer-end absolute left-0 top-0 h-screen w-screen backdrop-brightness-200;
 }
 .checkbox-blue.checkbox {
     --chkbg: #81a1c1;
@@ -103,31 +88,28 @@ body {
 
 .tooltip {
     @apply ![--tooltip-offset:30px] ![--tooltip-tail-offset:24px];
-    &::before {
-        @apply !text-xs;
-    }
 }
 
 .btn-ghost:hover {
     @apply bg-base-200/70;
 }
 .menu {
-    @apply border-base-300 border-[0.5px];
+    @apply border-[0.5px] border-base-300;
 }
 
 .menubar {
-    @apply border-b-base-300 border-b backdrop-blur-md absolute z-[1] top-0 left-0 bg-base-100/90  items-center flex w-full  justify-end gap-4 !h-fit flex-wrap shadow-[0px_5px_1px_rgba(0,_0,_0,_0.03),_0_5px_20px_rgba(0,_0,_0,_0.03)] py-1 px-4 rounded-t-box;
+    @apply absolute left-0 top-0 z-[1] flex !h-fit w-full flex-wrap items-center justify-end gap-4 rounded-t-box border-b border-b-base-300 bg-base-100/90 px-4 py-1 shadow-[0px_5px_1px_rgba(0,_0,_0,_0.03),_0_5px_20px_rgba(0,_0,_0,_0.03)] backdrop-blur-md;
 }
 
 .badge-btn-dark {
-    @apply flex content-center hover:badge-ghost has-[:checked]:badge-ghost hover:opacity-75 badge badge-primary text-opacity-75;
+    @apply badge badge-primary flex content-center text-opacity-75 hover:badge-ghost has-[:checked]:badge-ghost hover:opacity-75;
 }
 /* -----------------------------------------------------------------------
         ♡ COLORS
 -----------------------------------------------------------------------*/
 
 .frost {
-    @apply backdrop-blur-sm bg-base-100/80;
+    @apply bg-base-100/80 backdrop-blur-sm;
 }
 
 [data-tag='Support'] {
@@ -172,6 +154,6 @@ body {
 
 @layer base {
     .hover-effect {
-        @apply border border-neutral/15 hover:border-neutral/60  transition-all duration-200 hover:scale-105 hover:shadow-[1px_2px_3px_0px_#00000054] cursor-pointer;
+        @apply cursor-pointer border border-neutral/15 transition-all duration-200 hover:scale-105 hover:border-neutral/60 hover:shadow-[1px_2px_3px_0px_#00000054];
     }
 }

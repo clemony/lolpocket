@@ -1,13 +1,11 @@
-<route lang="json">
-{
+<route lang="json">{
     "name": "Champions",
     "alias": "/champions/champions",
     "meta": {
         "title": "Champions",
         "icon": "teenyicons:ghost-outline"
     }
-}
-</route>
+}</route>
 
 <script setup lang="ts">
 import { useItemStore } from '../stores/itemStore'
@@ -23,120 +21,90 @@ const quickSearch = ref('')
 
 const selectedChampion = computed(() => cs.selectedChampion)
 
-onMounted(async () => {})
+onMounted(async () => { })
 </script>
 
-<template>
-    <!-- Champ Tab -->
+<template><!-- Champ Tab -->
 
-    <div class="h-full w-full *:scrollbar-hide">
-        <div class="flex items-end w-full p-4">
-            <div class="flex items-center grow">
-                <h2 class="text-xl font-bold p-1.5">Things you Like</h2>
-            </div>
+<div class="h-full w-full *:scrollbar-hide">
+    <div class="flex w-full items-end p-4">
+        <div class="flex grow items-center">
+            <h2 class="p-1.5 text-xl font-bold">Things you Like</h2>
         </div>
+    </div>
 
-        <Splitpanes
-            id="likeSplit"
-            class="default-theme px-6 pb-2 w-full max-h-[calc(100%-100px)] h-[calc(100%-100px)]">
-            <Pane
-                size="50"
-                max-size="70"
-                min-size="30"
-                class="rounded-box !bg-base-100/90 border border-base-300 shadow-warm relative h-full px-4">
-                <div
-                    class="border-b-base-300 border-b backdrop-blur-md absolute z-10 top-0 left-0 bg-base-100/90 items-center flex w-full justify-end gap-4 !h-fit flex-wrap py-1 px-4">
-                    <h2 class="justify-start sub-text grow">Champions</h2>
+    <Splitpanes id="likeSplit" class="default-theme h-[calc(100%-100px)] max-h-[calc(100%-100px)] w-full px-6 pb-2">
+        <Pane size="50" max-size="70" min-size="30"
+            class="shadow-warm relative h-full rounded-box border border-base-300 !bg-base-100/90 px-4">
+            <div
+                class="absolute left-0 top-0 z-10 flex !h-fit w-full flex-wrap items-center justify-end gap-4 border-b border-b-base-300 bg-base-100/90 px-4 py-1 backdrop-blur-md">
+                <h2 class="sub-text grow justify-start">Champions</h2>
+            </div>
+
+            <div class="scroll-none flex h-full max-h-full w-full flex-wrap gap-4 overflow-y-scroll p-2 pt-11">
+                <div v-for="(champion, index) in cs.lovedChamps" :key="champion.name" :data-index="index" class="">
+                    <button
+                        class="item-wrapper__item pointer-events-auto flex aspect-square min-w-[60px] max-w-[70px] grow basis-14 place-items-center overflow-hidden rounded-md bg-cover ring-1 ring-base-300 ring-offset-1 ring-offset-base-100 drop-shadow-sm hover:ring-offset-primary has-[:checked]:ring-offset-2 has-[:checked]:ring-offset-secondary">
+                        <div class="grid-image-container champ">
+                            <img v-if="champion.type === 'champion'" :src="champion.img" :alt="champion.name + ' Image'"
+                                class="aspect-square scale-[115%]" />
+                            <div class="grid-tip">{{ champion.name }}</div>
+                        </div>
+                    </button>
                 </div>
+            </div>
+        </Pane>
 
-                <div
-                    class="flex flex-wrap w-full h-full max-h-full gap-4 p-2 overflow-y-scroll scroll-none pt-11">
-                    <div
-                        v-for="(champion, index) in cs.likedChamps"
-                        :key="champion.name"
-                        :data-index="index"
-                        class="">
-                        <button
-                            class="item-wrapper__item min-w-[60px] rounded-md basis-14 max-w-[70px] grow aspect-square flex place-items-center overflow-hidden bg-cover ring-1 ring-offset-1 ring-base-300 ring-offset-base-100 hover:ring-offset-primary drop-shadow-sm has-[:checked]:ring-offset-2 has-[:checked]:ring-offset-secondary pointer-events-auto">
-                            <div class="grid-image-container champ">
-                                <img
-                                    v-if="champion.type === 'champion'"
-                                    :src="champion.img"
-                                    :alt="champion.name + ' Image'"
-                                    class="scale-[115%] aspect-square" />
-                                <div class="grid-tip">{{ champion.name }}</div>
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </Pane>
-
-            <!--     /* -------------------------------------------------------------------------- */
+        <!--     /* -------------------------------------------------------------------------- */
          /*                                 PANE TWOOOOOOOO                            */
          /* -------------------------------------------------------------------------- */ -->
 
-            <Pane
-                size="50"
-                max-size="70"
-                min-size="30"
-                class="rounded-box border border-base-300 relative h-[inherit]">
-                <div
-                    class="border-b-base-300 border-b backdrop-blur-md absolute z-10 top-0 left-0 bg-base-100/80 items-center flex w-full justify-end gap-4 !h-fit flex-wrap py-1 px-4 shadow-warm">
-                    <h2 class="justify-start sub-text grow">Primary</h2>
-                </div>
+        <Pane size="50" max-size="70" min-size="30" class="relative h-[inherit] rounded-box border border-base-300">
+            <div
+                class="shadow-warm absolute left-0 top-0 z-10 flex !h-fit w-full flex-wrap items-center justify-end gap-4 border-b border-b-base-300 bg-base-100/80 px-4 py-1 backdrop-blur-md">
+                <h2 class="sub-text grow justify-start">Primary</h2>
+            </div>
 
-                <div
-                    class="items-start content-start justify-around w-full !h-full px-3 pt-12 pb-4 drag-draggable scrollbar-hide shadow-inset rounded-b-box">
-                    <VDropdown
-                        v-for="item in is.likedItems"
-                        :key="item.id"
-                        :overflow-padding="20"
-                        :shift="true"
-                        theme="detail"
-                        :distance="6"
-                        @click.right.prevent=""
-                        :ref="item.name"
-                        class="relative max-w-[64px] max-h-[64px]">
-                        <label class="!overflow-hidden drag-label">
-                            <div class="!overflow-hidden drag-wrapper">
-                                <img :src="item.img" class="drag-img" />
+            <div
+                class="drag-draggable shadow-inset !h-full w-full content-start items-start justify-around rounded-b-box px-3 pb-4 pt-12 scrollbar-hide">
+                <VDropdown v-for="item in is.lovedItems" :key="item.id" :overflow-padding="20" :shift="true"
+                    theme="detail" :distance="6" @click.right.prevent="" :ref="item.name"
+                    class="relative max-h-[64px] max-w-[64px]">
+                    <label class="drag-label !overflow-hidden">
+                        <div class="drag-wrapper !overflow-hidden">
+                            <img :src="item.img" class="drag-img" />
 
-                                <div
-                                    :key="item.id + 'Count'"
-                                    :class="{ '!opacity-85': item.count > 1 }"
-                                    class="absolute rounded-full bg-primary text-primary-content z-30 -right-1.5 -top-1.5 size-6 flex place-items-center place-content-center font-mono opacity-0 text-sm shadow-warm overflow-hidden">
-                                    {{ item.count }}
-                                </div>
+                            <div :key="item.id + 'Count'" :class="{ '!opacity-85': item.count > 1 }"
+                                class="shadow-warm absolute -right-1.5 -top-1.5 z-30 flex size-6 place-content-center place-items-center overflow-hidden rounded-full bg-primary font-mono text-sm text-primary-content opacity-0">
+                                {{ item.count }}
                             </div>
-                        </label>
-                        <template #popper :key="item.name + 'Pop'">
-                            <popItem :item="item" :variant="'none'" />
-                        </template>
-                    </VDropdown>
+                        </div>
+                    </label>
+                    <template #popper :key="item.name + 'Pop'">
+                        <pop-item :item="item" :variant="'none'" />
+                    </template>
+                </VDropdown>
 
-                    <VDropdown
-                        theme="detail"
-                        alt="Quick Search"
-                        class="ghosty drag-label flex basis-16 !p-0 group/qs after:grid after:place-content-center after:w-full after:h-full after:content-['+'] after:absolute relative hover:after:text-neutral z-0 hover:after:opacity-60 after:opacity-50 cursor-zoom-out">
-                        <div
-                            class="group-hover/qs:opacity-40 group-hover/qs:scale-95 scale-105 z-20 opacity-0 select-none bg-[url('/img/ui/frame.webp')] bg-center bg-contain transition-all bg-no-repeat duration-200 w-full h-full brightness-0 cursor-zoom-in"></div>
+                <VDropdown theme="detail" alt="Quick Search"
+                    class="ghosty drag-label group/qs relative z-0 flex basis-16 cursor-zoom-out !p-0 after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-['+'] hover:after:text-neutral hover:after:opacity-60">
+                    <div
+                        class="z-20 h-full w-full scale-105 cursor-zoom-in select-none bg-[url('/img/ui/frame.webp')] bg-contain bg-center bg-no-repeat opacity-0 brightness-0 transition-all duration-200 group-hover/qs:scale-95 group-hover/qs:opacity-40">
+                    </div>
 
-                        <template #popper>
-                            <QuickSearch
-                                :array="filteredItems"
-                                v-model:quickSearch="quickSearch"
-                                v-model:returnData="returnData" />
-                        </template>
-                    </VDropdown>
-                    <div class="aspect-square basis-16"></div>
-                    <div class="aspect-square basis-16"></div>
-                    <div class="aspect-square basis-16"></div>
-                    <div class="aspect-square basis-16"></div>
-                    <div class="aspect-square basis-16"></div>
-                </div>
-            </Pane>
-        </Splitpanes>
-    </div>
+                    <template #popper>
+                        <QuickSearch :array="filteredItems" v-model:quickSearch="quickSearch"
+                            v-model:returnData="returnData" />
+                    </template>
+                </VDropdown>
+                <div class="aspect-square basis-16"></div>
+                <div class="aspect-square basis-16"></div>
+                <div class="aspect-square basis-16"></div>
+                <div class="aspect-square basis-16"></div>
+                <div class="aspect-square basis-16"></div>
+            </div>
+        </Pane>
+    </Splitpanes>
+</div>
 </template>
 
 <style scoped></style>

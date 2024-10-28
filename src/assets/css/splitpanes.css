@@ -289,8 +289,10 @@ background-color:#f2f2f2
     }
 }
 
+#runeSidebarSplit > div.splitpanes__splitter,
+#runesplit.splitpanes--vertical > .splitpanes__splitter,
 #champSidebarSplit > div.splitpanes__splitter {
-    @apply !w-5 !min-w-5 pointer-events-none select-none mask-circle;
+    @apply mask-circle pointer-events-none !w-5 !min-w-5 select-none;
 
     &::before,
     &::after {
@@ -300,7 +302,7 @@ background-color:#f2f2f2
 }
 
 #pocketSplit.splitpanes--horizontal > div.splitpanes__splitter {
-    @apply h-4 z-50   w-full  !bg-transparent;
+    @apply z-50 h-4 w-full !bg-transparent;
 
     &::before,
     &::after {
@@ -309,7 +311,7 @@ background-color:#f2f2f2
 }
 
 #pocketSplit.splitpanes--vertical > .splitpanes__splitter {
-    @apply !w-1  border-l border-l-base-300 !bg-transparent;
+    @apply !w-1 border-l border-l-base-300 !bg-transparent;
 
     mask-image: linear-gradient(transparent 30%, #000 0);
     &::before,
@@ -322,7 +324,7 @@ background-color:#f2f2f2
 }
 
 #buildSplit .splitpanes--vertical > .splitpanes__splitter {
-    @apply w-4 h-4;
+    @apply h-4 w-4;
 
     &::before,
     &::after {
@@ -331,8 +333,7 @@ background-color:#f2f2f2
 }
 
 #itemSplit > div.splitpanes__splitter,
-#champSplit > div.splitpanes__splitter,
-#runesplit > div.splitpanes__splitter {
+#champSplit > div.splitpanes__splitter{
     @apply !h-6 !min-h-6 !w-full;
 
     &::before,

@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia'
-import { computed, ref, shallowRef } from 'vue'
 import {
     DefaultItem,
     Item,
@@ -8,17 +7,14 @@ import {
     pocketItems,
     pocketRunes,
 } from './../../types'
-import { useRouter } from 'vue-router'
-import { generateRandomString } from './../script/keygen'
+import { generateRandomString } from '../utils/keygen'
 import { useItemStore } from './itemStore'
 import { useRuneStore } from './runeStore'
 import { hexoid } from 'hexoid'
-import { count } from 'console'
 
 export const usePocketStore = defineStore(
     'pocketStore',
     () => {
-        const showSidebar = ref(true)
         const pockets = ref<pocket[]>([])
         const trashPockets = ref<pocket[]>([])
         const archivePockets = ref<pocket[]>([])
@@ -27,28 +23,21 @@ export const usePocketStore = defineStore(
         const filterText = ref('')
         const patch = '14.19'
         const selectedRows = ref([])
+        const tableSelectAll = ref()
         const pocketApi = shallowRef()
 
         function updateSelectedRows(rows) {
             selectedRows.value = rows // Update the selected rows in the store
         }
 
-        function navigateToPocket(pocket) {
-            console.log('Navigating to pocket:', pocket.key)
-            console.log(router.getRoutes())
+/* const resetComponents = () => {
+    pockets.value.forEach((pocket) => {
+        pocket.component = null; // or set to a default value if needed
+    });
+};
+resetComponents() */
 
-            router
-                .push({
-                    params: {
-                        pocketKey: String(pocket.key),
-                        pocketName: String(pocket.name),
-                    },
-                })
-                .catch((err) => {
-                    console.error('Error navigating to pocket:', err)
-                })
-        }
-
+console.log(router)
         // Filter for pinned pockets
         const pinnedTopRowData = computed(() => {
             return pockets.value.filter((pocket) => pocket.pinned)
@@ -154,7 +143,7 @@ export const usePocketStore = defineStore(
                 notes: '',
                 dateCreated: [createDateObject()],
                 dateUpdated: [createDateObject()],
-                activeComponent: '',
+                component: null,
             }
 
             // Initialize other stores here instead of top-level
@@ -216,6 +205,7 @@ export const usePocketStore = defineStore(
 
         const refs = ref({}) //for date scroll
 
+       
         return {
             refs,
             pockets,
@@ -224,15 +214,16 @@ export const usePocketStore = defineStore(
             deletePocket,
             patch,
             pinnedTopRowData,
+            archivePockets,
             rowData,
             addPocket,
             getPocket,
             pinnedRows,
-            showSidebar,
             trashPockets,
-            navigateToPocket,
+            //navigateToPocket,
             updatePocketType,
             selectedRows,
+            tableSelectAll,
             updateSelectedRows,
             duplicatePocket,
             pocketApi,

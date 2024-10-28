@@ -3,50 +3,28 @@ import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
-import VueRouter from 'unplugin-vue-router/vite'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
-import { ViteAliases } from 'vite-aliases'
-import { promises as fs } from 'node:fs'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import Inspector from 'unplugin-vue-inspector/vite'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { defineConfig, type PluginOption } from 'vite'
-import path, { resolve } from 'node:path'
-import { meta } from 'eslint-plugin-vue'
-import { url } from 'node:inspector'
-import { fileURLToPath } from 'node:url'
+import { resolve } from 'path'
 
 export default defineConfig({
     plugins: [
-        VueRouter({
-            extendRoute(route) {
-                if (route.name === 'pocket') {
-                    route.path = '/pocket/:pocketKey'
-                }
-            },
-            extensions: ['.vue'],
-            dts: './typed-router.d.ts',
-        }),
         vue(),
         vueDevTools(),
         Inspector(),
-        ViteAliases({
-            prefix: '@',
-            deep: true,
-            depth: 1,
-            createLog: true,
-            logPath: 'src/logs',
-        }),
         Components({
-            dirs: ['src/pages', 'splitpanes', '@iconify/vue'], // Ensure paths are correct
+            dirs: ['src/pages', 'splitpanes', '@iconify/vue', 'src/components'], // Ensure paths are correct
             extensions: ['vue'],
             deep: true,
             dts: './components.d.ts',
             resolvers: [
                 IconsResolver({
-                    enabledCollections: ['ui-icons'],
-                    customCollections: ['ui-icons'],
+                    prefix: false,
+                    enabledCollections: ['ui'],
+                    customCollections: ['ui'],
                 }),
             ],
             include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
@@ -61,11 +39,12 @@ export default defineConfig({
             ],
             imports: [
                 'vue',
-                VueRouterAutoImports,
-                {
-                    'vue3-toastify': ['toast', 'ToastContainerOptions'],
-                },
-            ],
+                 '@vueuse/core',
+                  '@vueuse/head',
+                'vue-i18n',
+                'vue-router',
+              ],
+
             dirs: [
                 // ...
             ],
@@ -78,12 +57,12 @@ export default defineConfig({
             viteOptimizeDeps: true,
             injectAtEnd: true,
 
-            dts: './auto-imports.d.ts', // Generates `auto-imports.d.ts` file
+            dts: true, // Generates `auto-imports.d.ts` file
         }),
 
         Icons({
             customCollections: {
-                'ui-icons': FileSystemIconLoader('public/img/icons', (svg) =>
+                ui: FileSystemIconLoader('public/img/icons', (svg) =>
                     svg.replace(
                         /^<svg /,
                         '<svg fill="currentColor" stroke="currentColor" '
@@ -104,7 +83,22 @@ export default defineConfig({
         port: 8080,
         open: false,
     },
-
+    resolve: {
+        alias: {
+            '@assets': resolve(__dirname, 'src/assets'),
+             '@components': resolve(__dirname, 'src/assets'),
+            '@data': resolve(__dirname, 'src/data'),
+            '@lib': resolve(__dirname, 'src/lib'),
+            '@logs': resolve(__dirname, 'src/logs'),
+            '@pages': resolve(__dirname, 'src/pages'),
+            '@script': resolve(__dirname, 'src/script'),
+            '@stores': resolve(__dirname, 'src/stores'),
+            '@utils': resolve(__dirname, 'src/utils'),
+            '@': resolve(__dirname, 'src'),
+            '@config': resolve(__dirname, 'src/config'),
+            '@css': resolve(__dirname, 'src/css'),
+        },
+    },
     build: {
         rollupOptions: {
             input: {

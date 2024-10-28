@@ -102,7 +102,7 @@ export const useDataStore = defineStore('dataStore', () => {
             .split('\n')
             .filter((line) => line.trim() !== '')
 
-        if (lines.length > 0) {
+        if (lines.length) {
             const name = lines[0].trim()
             let text = lines.slice(1).join('\n').trim()
 

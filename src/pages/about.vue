@@ -1,26 +1,20 @@
-<route lang="json">
-{
-    "name": "About",
+<route lang="json">{
+    "name": "about",
     "meta": {
         "title": "About",
         "icon": "teenyicons:info-outline"
     }
-}
-</route>
+}</route>
 
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
 </script>
 
 <template>
-    <div class="p-8">
-        <div
-            class="mockup-code font-normal text-xs w-2/5 min-w-[200px0] leading-loose *:whitespace-nowrap">
-            <pre
-                data-prefix="$"><code class="h-20 ">const CatTax: cat&#60;image: popUp&#62; = {</code></pre>
-            <pre
-                data-prefix=">"
-                class="flex"><code class="flex">&nbsp; 'Clem':&nbsp;{ image:
+<div class="p-8">
+    <div class="mockup-code w-2/5 min-w-[200px0]  font-normal leading-loose *:whitespace-nowrap">
+        <pre data-prefix="$"><code class="h-20 ">const CatTax: cat&#60;image: popUp&#62; = {</code></pre>
+        <pre data-prefix=">" class="flex"><code class="flex">&nbsp; 'Clem':&nbsp;{ image:
           <button
             class="hover:underline hover:bg-base-content/15"
             onclick="catModal.showModal()" >&nbsp;1</button>,
@@ -33,9 +27,7 @@ import { Icon } from '@iconify/vue'
           },
       </code></pre>
 
-            <pre
-                data-prefix=">"
-                class="flex"><code class="flex">&nbsp; 'Nell':&nbsp;{ image:
+        <pre data-prefix=">" class="flex"><code class="flex">&nbsp; 'Nell':&nbsp;{ image:
         <button
           class="hover:underline hover:bg-base-content/15"
           onclick="catModal.showModal()" >&nbsp;1</button>,
@@ -48,75 +40,84 @@ import { Icon } from '@iconify/vue'
         },
     </code></pre>
 
-            <pre
-                data-prefix=" "
-                class="flex"><code class="flex">&nbsp; };<span class="animate-[blink-1_1s_infinite_both] text-lg">|</span>
+        <pre data-prefix=" " class="flex"><code class="flex">&nbsp; };<span class="animate-[blink-1_1s_infinite_both] text-lg">|</span>
   </code></pre>
-        </div>
+    </div>
 
-        <div class="absolute bottom-0 left-0 w-full p-8">
-            <div class="mt-12 text-xs divider divider-start">MADE WITH</div>
-            <div class="grid grid-cols-2">
-                <div
-                    class="card rounded-box grid h-20 auto-cols-max gap-5 grid-flow-col place-items-center *:text-base-content/85 *:size-6">
-                    <Icon icon="fontisto:vuejs" />
+    <div class="absolute bottom-0 left-0 w-full p-8">
+        <div class="divider divider-start mt-12 ">MADE WITH</div>
+        <div class="grid grid-cols-2">
+            <div
+                class="card grid h-20 auto-cols-max grid-flow-col place-items-center gap-5 rounded-box *:size-6 *:text-base-content/85">
+                <Icon icon="fontisto:vuejs" />
 
-                    <Icon icon="tabler:brand-vite" />
-                    <Icon icon="devicon-plain:tauri" />
-                    <Icon icon="file-icons:typescript" />
-                    <Icon icon="codicon:vscode-insiders" />
-                    <Icon icon="simple-icons:nodedotjs" />
-                    <Icon icon="simple-icons:tailwindcss" />
-                    <img
-                        class="grayscale contrast-200 brightness-50"
-                        src="/img/ui/daisyui.svg" />
+                <Icon icon="tabler:brand-vite" />
+                <Icon icon="devicon-plain:tauri" />
+                <Icon icon="file-icons:typescript" />
+                <Icon icon="codicon:vscode-insiders" />
+                <Icon icon="simple-icons:nodedotjs" />
+                <Icon icon="simple-icons:tailwindcss" />
+                <img class="brightness-50 contrast-200 grayscale" src="/img/ui/daisyui.svg" />
 
-                    <icon
-                        class="grayscale contrast-200 brightness-[80%]"
-                        icon="logos:pinia" />
+                <icon class="brightness-[80%] contrast-200 grayscale" icon="logos:pinia" />
 
-                        <icon icon="simple-icons:nounproject" />
+                <VTooltip theme="tta" :popperTriggers="['hover']" class="arrow flex items-center">
+                    <icon icon="simple-icons:nounproject" />
+                    <template #popper>
+                        <div class="mb-1 w-full border-b border-b-neutral-500 pb-1">
+                            <a href="https://thenounproject.com/" class="italic">@ thenounproject</a>
+                        </div>
 
-                        <icon icon="simple-icons:iconify" />
+                        <ul class="list-inside list-disc">
+                            <li>
+                                <a href="https://thenounproject.com/creator/roseicon/">Puspitaningdyah</a>
+                            </li>
+                        </ul>
+                    </template>
+                </VTooltip>
 
-                        <icon icon="nonicons:prettier-16" />
+                <icon icon="simple-icons:iconify" />
 
-                        <icon icon="teenyicons:eslint-outline" />
+                <icon icon="nonicons:prettier-16" />
 
-                        <icon icon="simple-icons:shadcnui" />
-                </div>
+                <icon icon="teenyicons:eslint-outline" />
 
-                <div
-                    class="grid col-start-2 font-mono text-xs items-top justify-items-end">
-                    <p class="">thanks for trying the app</p>
-                    <p class="inline-flex items-center gap-1">
-                        <Icon icon="typcn:heart-outline" class="size-3" />
-                        from
-                        <Icon
-                            icon="teenyicons:arrow-right-outline"
-                            class="size-3" />
-                        clem's human
-                    </p>
-                    <a
-                        href="https://github.com/clemony/lolpocket"
-                        class="inline-flex items-center gap-1 mt-2 underline transition-all duration-300 hover:font-bold hover:italic">
-                        <Icon icon="ph:github-logo" />
-                        <Icon icon="ph:at" />
-                        clemony
-                    </a>
-                </div>
+                <icon icon="simple-icons:shadcnui" />
+            </div>
+
+            <div class="items-top col-start-2 grid justify-items-end font-mono ">
+                <p class="">thanks for trying the app</p>
+                <p class="inline-flex items-center gap-1">
+                    <Icon icon="typcn:heart-outline" class="size-3" />
+                    from
+                    <Icon icon="teenyicons:arrow-right-outline" class="size-3" />
+                    clem's human
+                </p>
+                <a href="https://github.com/clemony/lolpocket"
+                    class="mt-2 inline-flex items-center gap-1 underline transition-all duration-300 hover:font-bold hover:italic">
+                    <Icon icon="ph:github-logo" />
+                    <Icon icon="ph:at" />
+                    clemony
+                </a>
             </div>
         </div>
     </div>
-    <!-- Open the modal using ID.showModal() method -->
+</div>
+<!-- Open the modal using ID.showModal() method -->
 
-    <dialog id="catModal" class="modal">
-        <div class="modal-box">
-            <h3 class="text-lg font-bold">Hello!</h3>
-            <p class="py-4">Press ESC key or click outside to close</p>
-        </div>
-        <form method="dialog" class="modal-backdrop">
-            <button>close</button>
-        </form>
-    </dialog>
+<dialog id="catModal" class="modal">
+    <div class="modal-box">
+        <h3 class="text-lg font-bold">Hello!</h3>
+        <p class="py-4">Press ESC key or click outside to close</p>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+    </form>
+</dialog>
 </template>
+
+<style scoped>
+a {
+    @apply hover:underline;
+}
+</style>

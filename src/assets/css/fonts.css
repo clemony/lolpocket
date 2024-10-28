@@ -3,15 +3,8 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.font-cursive {
-    font-family: 'Playwrite IT Moderna Variable', cursive;
-    font-style: normal;
-    font-display: swap;
-    font-weight: 400;
-}
-
 .sub-text {
-    @apply font-medium tracking-tight text-sub;
+    @apply text-sub font-medium tracking-tight;
 }
 
 .font-sans {
@@ -92,48 +85,32 @@
             format('woff');
 }
 
-/* roboto-serif-latin-wght-italic */
+/* victor-mono-latin-wght-normal */
 @font-face {
-    font-family: 'Roboto Serif Variable';
+    font-family: 'Victor Mono Variable';
     font-style: italic;
     font-display: swap;
-    font-weight: 100 900;
-    src: url(@fontsource-variable/roboto-serif/files/roboto-serif-latin-wght-italic.woff2)
+    font-weight: 100 700;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/victor-mono:vf@latest/latin-wght-italic.woff2)
         format('woff2-variations');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
         U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
         U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* playwrite-it-moderna-latin-wght-normal */
+/* victor-mono-latin-wght-normal */
 @font-face {
-    font-family: 'Playwrite IT Moderna Variable';
+    font-family: 'Victor Mono Variable';
     font-style: normal;
     font-display: swap;
-    font-weight: 100 400;
-    src: url(@fontsource-variable/playwrite-it-moderna/files/playwrite-it-moderna-latin-wght-normal.woff2)
+    font-weight: 100 700;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/victor-mono:vf@latest/latin-wght-normal.woff2)
         format('woff2-variations');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
         U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
         U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* space-mono-latin-400-normal */
-@font-face {
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-display: swap;
-    font-weight: 400;
-    src:
-        url(https://cdn.jsdelivr.net/fontsource/fonts/space-mono@latest/latin-400-normal.woff2)
-            format('woff2'),
-        url(https://cdn.jsdelivr.net/fontsource/fonts/space-mono@latest/latin-400-normal.woff)
-            format('woff');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
-        U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-.space-mono {
-    font-family: 'Space Mono';
+.font-mono {
+    font-family: 'Victor Mono Variable';
 }

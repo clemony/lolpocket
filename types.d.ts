@@ -1,5 +1,17 @@
-import { count } from 'console'
-import { type } from 'os'
+export interface navObject {
+    title: string
+    url?: string
+    icon?: string
+    array?: Array<any>
+    isActive?: boolean
+    items?: navObject[];
+}
+
+export interface navData {
+    navCollapse: Array<navObject>
+    navLinks: Array<navObject>
+    pocketLinks: Array<navObject>
+}
 
 export interface pocket {
     name: string
@@ -15,7 +27,7 @@ export interface pocket {
     notes: string
     dateCreated: dateObject[]
     dateUpdated: dateObject[]
-    activeComponent: string
+    component: any
 }
 
 export interface pocketChampions {

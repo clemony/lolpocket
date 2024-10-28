@@ -9,15 +9,13 @@ export const useChampStore = defineStore(
     () => {
         const ds = useDataStore()
         const ps = usePocketStore()
-        // Use a computed property to ensure it reacts to changes in ds.champions
-        const champions = computed(() => ds.champions)
 
-        console.log('champions in pinia', champions.value) // This will now reflect the actual champions
+        const champions = computed(() => ds.champions)
 
         const championsInPocket = ref<Champion[]>([])
         const selectedChampion = ref('')
         const champSearch = ref('')
-        const likedChamps = ref<Champion[]>([])
+        const lovedChamps = ref<Champion[]>([])
         const champTabs = ref('abilities')
 
         //------------------------------------------ITEMS MAP
@@ -79,7 +77,7 @@ export const useChampStore = defineStore(
         return {
             selectedChampion,
             champions, // champions is now a ref
-            likedChamps,
+            lovedChamps,
             championsInPocket,
             resetChamps,
             removeChamp,

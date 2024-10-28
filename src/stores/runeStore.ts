@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref, reactive, watch, computed } from 'vue'
 import { Rune, RuneSet } from './../../types'
-import { getKey, generateRandomName } from '../script/keygen'
+import { getKey, generateRandomName } from '../utils/keygen'
 import { usePocketStore } from './pocketStore'
 import { useDataStore } from './dataStore'
 import { hexoid } from 'hexoid'

@@ -1,18 +1,28 @@
 {
     "include": [
-        "./typed-router.d.ts"
+        "src/**/*.ts",
+        "src/**/*.vue",
+        "src/**/*.d.ts",
+        "auto-imports.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
     ],
     "compilerOptions": {
         "baseUrl": ".",
+        "moduleResolution": "Bundler",
+        "module": "ES2022",
         "types": [
             "unplugin-vue-router/client"
+        ],
+        "lib": [
+            "es2020",
+            "dom"
         ],
         "paths": {
             "@assets/*": [
                 "src/assets/*"
-            ],
-            "@blank/*": [
-                "src/blank/*"
             ],
             "@data/*": [
                 "src/data/*"
@@ -29,16 +39,43 @@
             "@script/*": [
                 "src/script/*"
             ],
-            "@service/*": [
-                "src/service/*"
-            ],
             "@stores/*": [
                 "src/stores/*"
             ],
             "@utils/*": [
                 "src/utils/*"
             ],
+            "@components/*": [
+                "src/components/*"
+            ],
             "@/*": [
+                "src/*"
+            ],
+            "~assets/*": [
+                "src/assets/*"
+            ],
+            "~data/*": [
+                "src/data/*"
+            ],
+            "~lib/*": [
+                "src/lib/*"
+            ],
+            "~logs/*": [
+                "src/logs/*"
+            ],
+            "~pages/*": [
+                "src/pages/*"
+            ],
+            "~script/*": [
+                "src/script/*"
+            ],
+            "~stores/*": [
+                "src/stores/*"
+            ],
+            "~utils/*": [
+                "src/utils/*"
+            ],
+            "~/*": [
                 "src/*"
             ]
         }

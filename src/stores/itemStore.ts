@@ -3,7 +3,7 @@ import { reactive, ref, watch } from 'vue'
 import { useDataStore } from './dataStore'
 import { Item, ItemSet } from '../../types'
 
-import { generateRandomName } from '../script/keygen'
+import { generateRandomName } from '../utils/keygen'
 import { usePocketStore } from './pocketStore'
 import { hexoid } from 'hexoid'
 
@@ -22,30 +22,30 @@ export const useItemStore = defineStore(
         const catFilters = ref<string[]>([])
         const statFilters = ref<string[]>([])
         const viewLiked = ref(false)
-        const likedItems = ref<Item[]>([])
+        const lovedItems = ref<Item[]>([])
         const itemSets = ref<ItemSet[]>([])
         const starred = ref<ItemSet | null>(null)
 
         watch(
-            () => likedItems.value,
+            () => lovedItems.value,
             (newVal) => {
-                if (newVal.length === 0) {
-                    viewLiked.value = false // Set viewLiked to false if array is empty
+                if (!newVal.length) {
+                    viewLiked.value = false 
                 }
             },
-            { immediate: true } // Ensure it runs on initialization
+            { immediate: true } 
         )
 
         function handleLike(thisItem) {
-            if (likedItems.value.some((item) => item.name === thisItem.name)) {
-                const index = likedItems.value.findIndex(
+            if (lovedItems.value.some((item) => item.name === thisItem.name)) {
+                const index = lovedItems.value.findIndex(
                     (item) => item.name === thisItem.name
                 )
                 if (index !== -1) {
-                    likedItems.value.splice(index, 1)
+                    lovedItems.value.splice(index, 1)
                 }
             } else {
-                likedItems.value.push(thisItem)
+                lovedItems.value.push(thisItem)
             }
         }
 
@@ -142,7 +142,7 @@ export const useItemStore = defineStore(
             addToSet,
             removeFromSet,
             viewLiked,
-            likedItems,
+            lovedItems,
             handleLike,
             resetItemsArray,
             starred,

@@ -5,19 +5,19 @@
 }
 
 .grid-container {
-    @apply grid w-full p-4 !overflow-y-auto h-full transition-all duration-500 grid-flow-row auto-cols-max;
+    @apply grid h-full w-full auto-cols-max grid-flow-row !overflow-y-auto p-4 transition-all duration-500;
 
     .grid-item {
-        @apply size-full z-0 w-full relative shadow-warm ring-1 ring-offset-1 ring-offset-base-200 ring-base-300 hover:ring-offset-primary/60;
+        @apply shadow-warm relative z-0 size-full w-full ring-1 ring-base-300 ring-offset-1 ring-offset-base-200 hover:ring-offset-primary/60;
 
         .grid-image-container {
             justify-content: center;
             align-items: center;
 
-            @apply size-full flex overflow-hidden relative  z-40 p-0 m-0;
+            @apply relative z-40 m-0 flex size-full overflow-hidden p-0;
 
             .grid-image {
-                @apply aspect-square relative z-0  object-cover;
+                @apply relative z-0 aspect-square object-cover;
             }
             .grid-image:after {
             }
@@ -29,7 +29,7 @@
             height: inherit;
             transition: all 0.3s ease;
             box-shadow: inset 0px -6px 15px 10px rgba(0, 0, 0, 0.65);
-            @apply opacity-0 pointer-events-none absolute z-10;
+            @apply pointer-events-none absolute z-10 opacity-0;
         }
     }
 }
@@ -37,7 +37,7 @@
 .grid-tip {
     transition: all 0.3s ease;
     transform: translateY(200%);
-    @apply flex z-20 absolute w-full h-auto cursor-pointer pointer-events-none text-wrap opacity-0 bottom-0  left-0 text-white hyphens-auto  font-semibold   tracking-wider !text-[10px] p-1 uppercase text-end align-text-bottom justify-start;
+    @apply pointer-events-none absolute bottom-0 left-0 z-20 flex h-auto w-full cursor-pointer justify-start hyphens-auto text-wrap p-1 text-end align-text-bottom !text-[10px] font-semibold uppercase tracking-wider text-white opacity-0;
 }
 
 .grid-item:hover {

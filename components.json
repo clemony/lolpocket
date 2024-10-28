@@ -5,7 +5,7 @@
   "tsConfigPath": "./tsconfig.json",
   "tailwind": {
     "config": "./tailwind.config.js",
-    "css": "/Users/caitlin/Documents/lolpocket/lolpocket/src/blank/index.css",
+    "css": "/Users/caitlin/Documents/lolpocket/lolpocket/src/assets/css/index.css",
     "baseColor": "neutral",
     "cssVariables": false
   },

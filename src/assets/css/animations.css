@@ -3,10 +3,10 @@
 }
 
 .fadeSimple-leave-active {
-    @apply transition-all duration-500 absolute w-full h-full top-0 left-0;
+    @apply absolute left-0 top-0 h-full w-full transition-all duration-500;
 
     #wrap {
-        @apply absolute top-[1.82rem] left-0 right-0 h-full;
+        @apply absolute left-0 right-0 top-[1.82rem] h-full;
         .img-wrapper {
             @apply mt-1;
         }
@@ -287,63 +287,42 @@
     }
 }
 
-@-webkit-keyframes jello-horizontal {
+@keyframes toast {
     0% {
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+        opacity: 0;
     }
-    30% {
-        -webkit-transform: scale3d(1.25, 0.75, 1);
-        transform: scale3d(1.25, 0.75, 1);
+    10% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
     }
-    40% {
-        -webkit-transform: scale3d(0.75, 1.25, 1);
-        transform: scale3d(0.75, 1.25, 1);
-    }
-    50% {
-        -webkit-transform: scale3d(1.15, 0.85, 1);
-        transform: scale3d(1.15, 0.85, 1);
-    }
-    65% {
-        -webkit-transform: scale3d(0.95, 1.05, 1);
-        transform: scale3d(0.95, 1.05, 1);
-    }
-    75% {
-        -webkit-transform: scale3d(1.05, 0.95, 1);
-        transform: scale3d(1.05, 0.95, 1);
+    90% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
     }
     100% {
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+        opacity: 0;
     }
 }
-@keyframes jello-horizontal {
-    0% {
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-    }
-    30% {
-        -webkit-transform: scale3d(1.25, 0.75, 1);
-        transform: scale3d(1.25, 0.75, 1);
-    }
-    40% {
-        -webkit-transform: scale3d(0.75, 1.25, 1);
-        transform: scale3d(0.75, 1.25, 1);
-    }
-    50% {
-        -webkit-transform: scale3d(1.15, 0.85, 1);
-        transform: scale3d(1.15, 0.85, 1);
-    }
-    65% {
-        -webkit-transform: scale3d(0.95, 1.05, 1);
-        transform: scale3d(0.95, 1.05, 1);
-    }
-    75% {
-        -webkit-transform: scale3d(1.05, 0.95, 1);
-        transform: scale3d(1.05, 0.95, 1);
-    }
-    100% {
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-    }
+
+.toast-enter-from {
+    @apply opacity-0;
+}
+.toast-enter-active {
+    animation: toast 3s ease-in-out;
+    animation-fill-mode: forwards;
+}
+.toast-enter-to {
+    @apply opacity-0;
+}
+
+.toast-leave-from,
+.toast-leave-active,
+.toast-leave-to {
+    @apply hidden;
 }

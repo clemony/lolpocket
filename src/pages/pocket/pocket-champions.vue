@@ -1,108 +1,93 @@
-<route lang="json">
-{
-    "props": true,
-    "path": "/pocket/:pocketKey/pocket-champions",
-    "component": "/src/pages/pocket/pocket-champions.vue",
-    "meta": {
-        "title": "Pocket",
-        "icon": "teenyicons:folder-outline"
-    }
-}
-</route>
-
 <script setup lang="ts">
 import { useChampStore } from '../../stores/champStore'
-import SelectedChamps from './pocket-selectedChampions.vue'
 import { usePocketStore } from '../../stores/pocketStore'
-import { computed } from 'vue'
-import ChampionSidebar from '../champions/champion-sidebar.vue'
+import { useSessionStore } from '@stores/sessionStore'
 
+
+const sn = useSessionStore()
+const cs = useChampStore()
 const ps = usePocketStore()
 
 const props = defineProps<{
     pocketKey: string
 }>()
 
-// Compute the pocket based on the prop
-const currentPocket = computed(() => ps.getPocket(props.pocketKey))
+const pocket = ref(ps.getPocket(props.pocketKey));
 
-const cs = useChampStore()
+onBeforeRouteLeave((to, from) => {
+    console.log(from)
+    pocket.value.component = from.name
+});
+
+onBeforeRouteUpdate(async (to, from) => {
+    console.log('frompok', from.params.pocketKey);
+    console.log('tokp', to.params.pocketKey);
+    if (to.params.pocketKey != from.params.pocketKey) {
+
+        const newPocket = ps.getPocket(to.params.pocketKey)
+        pocket.value = await newPocket
+        if (newPocket.component) {
+            console.log('newpok', newPocket.component);
+            const component = newPocket.component
+            await useRoute(`/pocket/${newPocket.key}/${component}`)
+        }
+    }
+})
 </script>
 
 <template>
-    <Splitpanes
-        id="champSidebarSplit"
-        class="default-theme px-6 w-full max-h-[calc(100%-100px)] h-[calc(100%-100px)]">
-        <Pane
-            max-size="100"
-            size="73"
-            min-size="73"
-            class="grid grid-rows-[1fr_3fr] h-full pb-1">
-            <div class="grid items-start w-full h-full gap-3 px-1 pb-4">
-                <div class="flex gap-3">
-                    <h2 class="text-xl font-semibold tracking-tight">
-                        Champions
-                    </h2>
+<div class="grid grid-cols-[auto_300px]  gap-6 h-[calc(100%-100px)] max-h-[calc(100%-70px)] w-full px-6">
+    <div class="grid  max-h-[calc(100%-70px)] pb-1">
+        <div class="grid w-full items-start gap-3 px-1 pb-4">
+            <div class="flex gap-3">
+                <h2 class="!text-xl font-semibold tracking-tight">
+                    Champions
+                </h2>
 
-                    <div class="join">
-                        <button
-                            class="grid mt-[1px] btn btn-xs btn-outline border-none btn-square place-items-center group *:size-4 disabled:bg-transparent"
-                            :disabled="cs.championsInPocket.length == 0"
-                            @click="cs.resetChamps()">
-                            <icon icon="ph:eraser" class="" />
-                        </button>
-                    </div>
+                <div class="join">
+                    <button
+                        class="group btn btn-square btn-outline btn-xs mt-[1px] grid place-items-center border-none *:size-4 disabled:bg-transparent"
+                        :disabled="cs.championsInPocket.length == 0" @click="cs.resetChamps()">
+                        <icon icon="ph:eraser" class="" />
+                    </button>
                 </div>
-                <div class="overflow-clip scrollbar-hide">
-                    <PocketSelectedChampions
-                        v-if="currentPocket"
-                        :pocketKey="currentPocket.key" />
+            </div>
+            <div class="overflow-clip scrollbar-hide">
+                <PocketSelectedChampions v-if="pocket" :pocketKey="pocket.key" />
+            </div>
+        </div>
+
+        <div
+            class="border-base-300 shadow-warm relative overflow-hidden rounded-box border transition-all delay-150 duration-500">
+            <div
+                class="shadow-warm absolute z-30 flex h-8 w-full flex-nowrap content-center items-center gap-4 border-b border-b-base-300/50 bg-base-100/95 backdrop-blur-md">
+                <SearchBox :search="cs.champSearch" :placeholder="'Search Champions...'"
+                    @update:search="cs.champSearch = $event" />
+
+                <span class="grow"></span>
+                <div class="flex w-full content-center justify-end px-4 *:px-2">
+                    <select
+                        class="align-self-end select select-bordered select-xs max-w-xs justify-self-end shadow-inner">
+                        <option disabled selected>Class</option>
+                        <option>Marksman</option>
+                        <option>Mage</option>
+                        <option>Tank</option>
+                        <option>Support</option>
+                        <option>Fighter</option>
+                        <option>Assassin</option>
+                    </select>
                 </div>
             </div>
 
             <div
-                class="relative overflow-hidden transition-all duration-500 delay-150 border h-fullborder-base-300 rounded-box shadow-warm">
-                <div
-                    class="absolute z-30 flex items-center content-center w-full h-8 gap-4 border-b border-b-base-300/50 flex-nowrap bg-base-100/95 backdrop-blur-md shadow-warm">
-                    <SearchBox
-                        :search="cs.champSearch"
-                        :placeholder="'Search Champions...'"
-                        @update:search="cs.champSearch = $event" />
-
-                    <span class="grow"></span>
-                    <div
-                        class="flex content-center justify-end w-full *:px-2 px-4">
-                        <select
-                            class="max-w-xs shadow-inner select select-bordered select-xs align-self-end justify-self-end">
-                            <option disabled selected>Class</option>
-                            <option>Marksman</option>
-                            <option>Mage</option>
-                            <option>Tank</option>
-                            <option>Support</option>
-                            <option>Fighter</option>
-                            <option>Assassin</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div
-                    class="relative z-0 h-full px-3 shadow-inset rounded-b-box bg-base-100">
-                    <ListChamps
-                        v-if="currentPocket"
-                        :pocketKey="currentPocket.key" />
-                </div>
+                class="shadow-inset relative z-0 max-h-inherit rounded-b-box bg-base-100 px-3 h-[400px] overflow-y-scroll">
+                <ListChamps v-if="pocket" :pocketKey="pocket.key" />
             </div>
-        </Pane>
+        </div>
+    </div>
 
-        <Pane
-            v-if="ps.showSidebar == true"
-            size="27"
-            max-size="27"
-            min-size="27"
-            class="relative max-h-full">
-            <ChampionSidebar :champion="cs.selectedChampion" />
-        </Pane>
-    </Splitpanes>
+    <div class="relative max-h-inherit ">
+        <ChampionSidebar :champion="cs.selectedChampion" />
+    </div>
+</div>
 </template>
-
-<style scoped></style>

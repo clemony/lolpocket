@@ -11,8 +11,8 @@ export const useGeneralStore = defineStore(
         const ds = useDataStore()
 
         const isMinimized = ref(false)
-        const firstPane = ref(16)
-        const secondPane = ref(84)
+        const firstPane = ref(17)
+        const secondPane = ref(83)
 
         const reducedMotion = ref()
 
@@ -27,19 +27,12 @@ export const useGeneralStore = defineStore(
             //console.log(`Mode changed to: ${newMode}`);
         })
 
-        // Method to lose focus when Enter is pressed
-        const loseFocus = (event: KeyboardEvent) => {
-            const target = event.target as HTMLInputElement
-            if (event.key === 'Enter') {
-                target.blur() // Lose focus on the current input field
-            }
-        }
+
 
         return {
             dataTheme,
             dataMode,
             dataAccent,
-            loseFocus,
             reducedMotion,
             isMinimized,
             firstPane,

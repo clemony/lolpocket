@@ -11,27 +11,20 @@ export default [
     extends: [
       'eslint:recommended',
       'plugin:@typescript-eslint/recommended',
-      // ...
+      './.eslintrc-auto-import.json'
     ],
-  }),
-  // override the legacy rules
-  StylisticPlugin.configs['disable-legacy'],
-
-  { files: ['**/*.{js,mjs,cjs,vue}'] },
-  { languageOptions: { globals: globals.browser } },
-  pluginJs.configs.recommended,
-  ...pluginVue.configs['flat/essential'],
-  {
-    extends: ['./.eslintrc-auto-import.json'],
-  },
-  {
-    ignores: ['../notes/*', '/notes/*', './notes/*'],
-  },
-  {
-    plugins: {
+     ignores: ['../notes/*', '/notes/*', './notes/*'],
+     files: ['**/*.{js,mjs,cjs,vue}'], 
+     languageOptions: { 
+      globals: {
+        /* globals.browser, */
+      "definePage": "readonly"
+      }
+   },
+         plugins: {
       '@stylistic': stylistic,
     },
-    rules: {
+        rules: {
       // enable all recommended rules to warn
       ...eslintPluginReadableTailwind.configs.warning.rules,
       // enable all recommended rules to error
@@ -40,5 +33,11 @@ export default [
       'no-undef': '0',
       '@stylistic/indent': ['error', 2],
     },
-  },
+  }),
+  // override the legacy rules
+  StylisticPlugin.configs['disable-legacy'],
+
+  pluginJs.configs.recommended,
+  ...pluginVue.configs['flat/essential'],
+
 ];
