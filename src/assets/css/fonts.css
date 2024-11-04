@@ -111,6 +111,7 @@
         U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-.font-mono {
+.font-cursive {
     font-family: 'Victor Mono Variable';
+    font-style: italic;
 }

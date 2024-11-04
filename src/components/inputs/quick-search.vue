@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { defineProps, defineEmits, computed } from 'vue'
-import { imageIn, imageOut } from '@script/animations'
+import { imageIn, imageOut } from '@assets/animation/animations'
 
 // Define props for reusability
 const props = defineProps<{
@@ -47,7 +47,7 @@ function afterLeave(el: Element) {
 </script>
 
 <template>
-<VDropdown theme="detail" alt="Quick Search" placement="bottom" :distance="8"
+<VDropdown theme="default" alt="Quick Search" placement="bottom" :distance="8"
     class="no-drag search-drop ghosty drag-label group/qs relative z-0 flex basis-16 !cursor-pointer !p-0 after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-['+'] hover:after:text-neutral hover:after:opacity-60"
     :class="{ '!basis-12': type == 'alt' }">
     <div

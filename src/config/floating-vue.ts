@@ -3,7 +3,7 @@ import FloatingVue from 'floating-vue';
 
 const floatingVueOptions = {
     disabled: false,
-    distance: 5,
+    distance: 0,
     skidding: 0,
     container: 'body',
     boundary: undefined,
@@ -18,7 +18,7 @@ const floatingVueOptions = {
     arrowPadding: 30,
     arrowOverflow: true,
     themes: {
-        detail: {
+        default: {
             $resetCss: false,
             triggers: ['click', 'focus'],
             autoHide: true,
@@ -27,7 +27,20 @@ const floatingVueOptions = {
             instantMove: true,
             placement: 'auto',
             handleResize: true,
-            overflowPadding: 25,
+            overflowPadding: 0,
+        },
+                hoverdd: {
+            $resetCss: false,
+             $extend: 'default',
+            triggers: ['hover', 'focus'],
+            popperTriggers: ['hover', 'focus'],
+        },
+                        hidden: {
+            $resetCss: false,
+            autoHide: false,
+             $extend: 'hoverdd',
+            triggers: ['hover', 'focus'],
+            popperTriggers: ['hover', 'focus'],
         },
         tt: {
             $extend: 'tooltip',
@@ -45,17 +58,6 @@ const floatingVueOptions = {
             instantMove: true,
             placement: 'bottom-start',
             handleResize: true,
-        },
-        minitt: {
-            $extend: 'tooltip',
-            triggers: ['hover'],
-            eagerMount: false,
-            delay: {
-                show: 600,
-                hide: 200,
-            },
-            autoHide: true,
-            placement: 'bottom',
         },
         menuLight: {
             $extend: 'dropdown',
@@ -80,16 +82,7 @@ const floatingVueOptions = {
             },
             autoHide: true,
         },
-        overlay: {
-            $extend: 'dropdown',
-            triggers: ['click'],
-            autoHide: true,
-            distance: -88,
-            placement: 'top-start',
-            container: 'body',
-            boundary: 'body',
-            strategy: 'absolute',
-        },
+
         context: {
             $extend: 'dropdown',
             triggers: [''],

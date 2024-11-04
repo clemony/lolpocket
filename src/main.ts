@@ -9,6 +9,10 @@ import { kinesisPlugin } from '@letstri/kinesis'
 import router from '../router'
 import { FloatingVue, floatingVueOptions } from './config/floating-vue'
 
+
+
+
+
 // Create a new Vue application instance
 const app = createApp(App)
 
@@ -20,6 +24,7 @@ console.log('Pinia initialized.')
 
 
 
+
 // Register global components
 app.component('Splitpanes', Splitpanes)
 app.component('Pane', Pane)
@@ -27,7 +32,9 @@ app.component('Icon', Icon)
 app.use(kinesisPlugin)
 app.use(router)
 app.use(autoAnimatePlugin)
-app.use(FloatingVue, floatingVueOptions);
+app.use(FloatingVue, floatingVueOptions)
+
+
 
 // Mount the app to the element with id "app" in your HTML
 app.mount('#app')

@@ -91,10 +91,10 @@ import { Icon } from '@iconify/vue'
                     <Icon icon="typcn:heart-outline" class="size-3" />
                     from
                     <Icon icon="teenyicons:arrow-right-outline" class="size-3" />
-                    clem's human
+                    <span class='italic'> clem's human</span>
                 </p>
                 <a href="https://github.com/clemony/lolpocket"
-                    class="mt-2 inline-flex items-center gap-1 underline transition-all duration-300 hover:font-bold hover:italic">
+                    class="mt-2 inline-flex items-center gap-1 underline transition-all duration-300 hover:font-bold ">
                     <Icon icon="ph:github-logo" />
                     <Icon icon="ph:at" />
                     clemony

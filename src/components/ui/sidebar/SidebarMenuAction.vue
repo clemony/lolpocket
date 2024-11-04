@@ -13,7 +13,7 @@ const props = withDefaults(defineProps<PrimitiveProps & {
 
 <template>
 <Primitive data-sidebar="menu-action" :class="cn(
-  'absolute right-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-base-content outline-none ring-neutral/5 transition-transform hover:bg-neutral/5 hover:text-base-content focus-visible:ring-2 peer-hover/menu-button:text-base-content [&>svg]:size-4 [&>svg]:shrink-0',
+  'absolute right-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-base-content outline-none ring-base-300 transition-transform hover:bg-base-200 hover:text-base-content focus-visible:ring-2 peer-hover/menu-button:text-base-content [&>svg]:size-4 [&>svg]:shrink-0',
   // Increases the hit area of the button on mobile.
   'after:absolute after:-inset-2 after:md:hidden',
   'peer-data-[size=sm]/menu-button:top-1',

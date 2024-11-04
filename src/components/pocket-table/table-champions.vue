@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
 import { usePocketStore } from '@stores/pocketStore'
-import { useRouter } from 'vue-router'
 import { useSessionStore } from '@stores/sessionStore'
 import { Champion } from 'types'
 import { useGeneralStore } from '@stores/generalStore'
-import { clean } from '@utils/utils'
+import { clean } from '@lib/utils'
 const router = useRouter()
 
 const sn = useSessionStore()
@@ -49,52 +47,33 @@ const starred = computed(() => {
 </script>
 
 <template><!------------------------⟢ champions⟣------------------------->
-<!-- 
-<div :style="{
-    backgroundImage: `url(\'/img/champions/splash/${starred}_0.webp\'`,
-}" v-if="pocket && starred" class="absolute -z-1 size-full top-0 left-0"></div> -->
-
 
 <ContextMenu class="context-menu">
-    <ContextMenuTrigger class="group  size-full cursor-pointer items-center justify-center content-center "
+    <ContextMenuTrigger
+        class="group  w-[200px] size-full cursor-pointer items-center justify-center content-center relative "
         v-if="pocket">
-        <div v-if="starred" class='size-full '>
+        <div v-if="starred" class='size-full z-0 rounded-l-lg '
+            @click="sn.navigateTo(`/pocket/${pocket.key}`, pocket.name, pocket.icon)">
 
 
 
 
 
-            <KinesisContainer :duration="200" :perspective="150" class="size-full scale-[120%] !overflow-x-auto  "
-                :disabled="gs.reducedMotion == true">
+            <KinesisContainer :duration="200" :perspective="150"
+                class="size-full scale-[120%] !overflow-x-auto  rounded-l-full" :disabled="gs.reducedMotion == true">
 
-                <KinesisElement type="depth" :strength="7" class=" z-0 size-full  bg-[length:400px_200px]  bg-no-repeat opacity-95 !overflow-x-auto border-0
-                    [mask-image:linear-gradient(to_right,black_50%,transparent_99%,transparent_100%)] 
-                    [background-position-x:60%]
+                <KinesisElement type="depth" :strength="7" axis="x" class=" z-0 size-full  bg-[length:350px_175px]  bg-no-repeat opacity-95 !overflow-x-auto border-0 
+                    [mask-image:linear-gradient(to_right,transparent_0%,black_12%,black_55%,transparent_98%,transparent_100%)] 
+                    [background-position-x:55%]
                     [background-position-y:25%]" :style="{
-                        backgroundImage: `url(\'/img/champions/splash/${starred}_0.webp\'`,
+                        backgroundImage: `url(\'/img/champions/splash/${starred}_0.webp\')`,
                     }">
                 </KinesisElement>
             </KinesisContainer>
         </div>
 
-        <div v-else @click="
-            sn.navigateTo(
-                `/pocket/${pocket.key}/items`,
-                pocket.name,
-                pocket.icon
-            )
-            "
-            class="group flex size-full cursor-pointer items-center justify-center gap-2 border border-base-200 bg-base-200/30 opacity-70 shadow-sm transition-all duration-300 hover:border-base-300 hover:opacity-70 hover:shadow-inner">
-            <icon icon="teenyicons:add-outline" class="group-hover:stroke-[1.5]" />
-        </div>
 
-        <div v-if="pocket.champions[0].champions.length > 1"
-            class="pointer-events-none absolute -bottom-5 right-0.5 z-10 transform opacity-60 transition-all duration-500 group-hover:opacity-80">
-            <button class="btn btn-square btn-neutral btn-xs !pointer-events-none size-5 !min-h-0 p-0.5 font-bold"
-                @click.stop>
-                +{{ pocket.champions[0].champions.length - 1 }}
-            </button>
-        </div>
+
 
         <CmPocket type="champions" :pocketKey="pocket.key">
             <ContextMenuSub>

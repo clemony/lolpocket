@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
-import { NewsArticles } from '../stores/news'
+import { NewsArticles } from '../data/news'
 import { ref } from 'vue'
 import { useSessionStore } from '../stores/sessionStore'
 

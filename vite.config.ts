@@ -16,7 +16,7 @@ export default defineConfig({
         vueDevTools(),
         Inspector(),
         Components({
-            dirs: ['src/pages', 'splitpanes', '@iconify/vue', 'src/components'], // Ensure paths are correct
+            dirs: ['src/pages', 'splitpanes', '@iconify/vue', 'src/components', 'src/components/ui'], // Ensure paths are correct
             extensions: ['vue'],
             deep: true,
             dts: './components.d.ts',
@@ -99,12 +99,21 @@ export default defineConfig({
             '@css': resolve(__dirname, 'src/css'),
         },
     },
-    build: {
-        rollupOptions: {
+  envPrefix: ['VITE_', 'TAURI_ENV_*'],
+  build: {
+ rollupOptions: {
             input: {
-                main: 'src/main.ts', // Adjust to your entry file
+                main: 'index.html', // Adjust to your entry file
                 // Add additional entry points if needed
             },
         },
-    },
+    target:
+      process.env.TAURI_ENV_PLATFORM == 'windows'
+        ? 'chrome105'
+        : 'safari13',
+    // don't minify for debug builds
+    minify: !process.env.TAURI_ENV_DEBUG ? 'esbuild' : false,
+    // produce sourcemaps for debug builds
+    sourcemap: !!process.env.TAURI_ENV_DEBUG,
+  },
 })

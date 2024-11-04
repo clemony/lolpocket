@@ -27,7 +27,7 @@ module.exports = {
         fontFamily: {
             sans: ['Geist Sans', 'sans-serif'],
             serif: ['Roboto Serif Variable', 'serif'],
-            mono: ['Victor Mono', 'monospace'],
+            mono: ['Geist Mono', 'monospace'],
         },
         extend: {
             colors: {
@@ -67,10 +67,20 @@ module.exports = {
             },
             boxShadow: {
                 lil: '2px 2px 4px 1px rgba(0, 0, 0, 0, 0.3)',
-                warm: 'rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px]',
+                warm: '0px 2px 5px 0px rgba(50, 50, 105, 0.15) , 0px 1px 1px 0px rgba(0, 0, 0, 0.05) ',
+                standard:
+                    '0px 2px 3px -1px rgba(0,0,0,0.1),0px 1px 0px 0px rgba(25,28,33,0.02),0px 0px 0px 1px rgba(25,28,33,0.08)',
+                cham: 'inset 12px 8px 40px #46464620',
+                inset: 'inset 1px 2px 8px 2px #00000009, inset -2px -1px 5px 1px #00000009',
+                'inset-sm':
+                    'inset 1px 2px 1px 1px #00000004, inset -1px -1px 2px 1px #00000009',
+                card: '0px 2px 3px -1px rgba(0,0,0,0.1),0px 1px 0px 0px rgba(25,28,33,0.02),0px 0px 0px 1px rgba(25,28,33,0.08), inset 1px 2px 1px 1px #00000004, inset -1px -1px 2px 1px #00000009',
             },
             dropShadow: {
                 xs: '0px 0px 2px #00000020',
+                soft: '0px 0px 1px #00000060',
+                softer: '0px 0px 1px #00000040',
+                softest: '0px 0px 1px #00000020',
             },
             size: {
                 4.5: '1.1rem',

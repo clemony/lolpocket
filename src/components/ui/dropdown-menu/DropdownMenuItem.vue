@@ -15,14 +15,11 @@ const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
-  <DropdownMenuItem
-    v-bind="forwardedProps"
-    :class="cn(
-      'relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-xs outline-none transition-colors focus:bg-base-200/60 focus:text-base-content data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
-      inset && 'pl-8',
-      props.class,
-    )"
-  >
-    <slot />
-  </DropdownMenuItem>
+<DropdownMenuItem v-bind="forwardedProps" :class="cn(
+  'relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 gap-3 text-xs outline-none transition-colors focus:bg-base-200/60 focus:text-base-content data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+  inset && 'pl-8',
+  props.class,
+)">
+  <slot />
+</DropdownMenuItem>
 </template>

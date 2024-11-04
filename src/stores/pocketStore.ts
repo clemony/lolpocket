@@ -7,10 +7,11 @@ import {
     pocketItems,
     pocketRunes,
 } from './../../types'
-import { generateRandomString } from '../utils/keygen'
+import { generateRandomString } from '../lib/keygen'
 import { useItemStore } from './itemStore'
 import { useRuneStore } from './runeStore'
 import { hexoid } from 'hexoid'
+import {createDateObject, createDefaultItem} from '@lib/create-default'
 
 export const usePocketStore = defineStore(
     'pocketStore',
@@ -22,24 +23,20 @@ export const usePocketStore = defineStore(
         const router = useRouter()
         const filterText = ref('')
         const patch = '14.19'
+
         const selectedRows = ref([])
         const tableSelectAll = ref()
         const pocketApi = shallowRef()
+        const pinnedApi = shallowRef()
 
         function updateSelectedRows(rows) {
             selectedRows.value = rows // Update the selected rows in the store
         }
 
-/* const resetComponents = () => {
-    pockets.value.forEach((pocket) => {
-        pocket.component = null; // or set to a default value if needed
-    });
-};
-resetComponents() */
+const pinnedGrid = shallowRef()
+const pocketGrid = shallowRef()
 
-console.log(router)
-        // Filter for pinned pockets
-        const pinnedTopRowData = computed(() => {
+        const pinnedRowData = computed(() => {
             return pockets.value.filter((pocket) => pocket.pinned)
         })
 
@@ -50,34 +47,11 @@ console.log(router)
 
         const toID = hexoid()
 
-        function createDateObject() {
-            const now = new Date()
-            const patch = '14.19'
-            const formattedDate = now.toLocaleDateString('en-US', {
-                year: '2-digit',
-                month: '2-digit',
-                day: '2-digit',
-            })
 
-            let formattedTime = now.toLocaleTimeString([], {
-                hour: '2-digit',
-                minute: '2-digit',
-            })
-
-            if (formattedTime.startsWith('0')) {
-                formattedTime = formattedTime.slice(1)
-            }
-
-            return {
-                date: formattedDate,
-                time: formattedTime,
-                patch: patch,
-            }
-        }
 
         function addPocket(
             name: string,
-            type: string,
+            tags: Array<string>,
             icon: string,
             bgColor: string,
             iconColor: string
@@ -90,22 +64,7 @@ console.log(router)
                 starred: '',
             }
 
-            function createDefaultItem(): DefaultItem {
-                return {
-                    name: '',
-                    img: '',
-                    buy: 0,
-                    sell: 0,
-                    stats: '',
-                    passive: '',
-                    active: '',
-                    type: '',
-                    cat: '',
-                    wiki: '',
-                    id: 0,
-                    count: 0,
-                }
-            }
+
 
             const pocketItemsValue: pocketItems = {
                 key: aKey,
@@ -119,6 +78,9 @@ console.log(router)
                     alt5: [createDefaultItem()],
                     alt6: [createDefaultItem()],
                 },
+                start: undefined,
+                core: undefined,
+                final: undefined,
             }
 
             const pocketRunesValue: pocketRunes = {
@@ -131,7 +93,7 @@ console.log(router)
             // Create the new pocket
             const newPocket: pocket = {
                 name: name || generateRandomString(),
-                type: type || '',
+                tags: tags || [''],
                 pinned: false,
                 key: aKey,
                 icon: icon || 'teenyicons:folder-outline',
@@ -173,17 +135,17 @@ console.log(router)
             }
         }
 
-        const updatePocketType = (key: string, newType: string) => {
+        const updatePocketType = (key: string, newTags: Array<string>) => {
             const findPocket = pockets.value.find(
                 (pocket) => pocket.key === key
             )
             if (findPocket) {
-                findPocket.type = newType
+                findPocket.tags = newTags
             }
         }
 
         function updateGrid() {
-            pocketApi.value.setGridOption('pinnedTopRowData', pinnedTopRowData)
+            pocketApi.value.setGridOption('pinnedTopRowData', pinnedRowData)
             pocketApi.value.setGridOption('rowData', rowData)
         }
 
@@ -213,20 +175,22 @@ console.log(router)
             updateGrid,
             deletePocket,
             patch,
-            pinnedTopRowData,
+            pinnedRowData,
             archivePockets,
             rowData,
             addPocket,
             getPocket,
             pinnedRows,
             trashPockets,
-            //navigateToPocket,
             updatePocketType,
             selectedRows,
             tableSelectAll,
             updateSelectedRows,
             duplicatePocket,
             pocketApi,
+            pinnedApi,
+            pocketGrid,
+            pinnedGrid
         }
     },
 

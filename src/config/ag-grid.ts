@@ -11,7 +11,7 @@ export const pocketTheme = themeQuartz.withPart(iconSetQuartzLight).withParams({
     headerTextColor: 'oklch(var(--bc)/0.8)',
     headerFontWeight: 500,
     headerVerticalPaddingScale: 0.4,
-    rowVerticalPaddingScale: 1.9,
+    rowVerticalPaddingScale: 2,
     //oddRowBackgroundColor: 'oklch(var(--b2) / 40%)',
     rowBorder: true,
     borderColor: 'oklch(var(--b2)/0.6)',
@@ -20,7 +20,7 @@ export const pocketTheme = themeQuartz.withPart(iconSetQuartzLight).withParams({
     sidePanelBorder: true,
     wrapperBorder: false,
     wrapperBorderRadius: '0px',
-     columnBorder: false,
+     columnBorder: true,
        checkboxCheckedBackgroundColor: 'oklch(var(--n)/0.8)',
         checkboxCheckedBorderColor: 'oklch(var(--n))',
         checkboxCheckedShapeColor: 'oklch(var(--b1))',
@@ -35,5 +35,7 @@ export const pocketTheme = themeQuartz.withPart(iconSetQuartzLight).withParams({
 
 // provide localeText to all grids via global options
 provideGlobalGridOptions({
-    icons: {},
+    icons: {
+        filter: '<div class="size-full align-text-top leading-tight items-start -mt-1.5 opacity-60 hover:opacity-100">. . .</div>'
+    },
 })

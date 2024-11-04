@@ -8,9 +8,9 @@
 }</route>
 
 <script setup lang="ts">
-import { Quotes } from '../../stores/champQuotes.ts'
+import { Quotes } from '@data/champQuotes'
 import { ref, computed, onMounted } from 'vue'
-import { useDataStore } from '../../stores/dataStore'
+import { useDataStore } from '@stores/dataStore'
 
 const ds = useDataStore()
 

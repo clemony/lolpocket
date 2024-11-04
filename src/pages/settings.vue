@@ -86,83 +86,77 @@ onMounted(() => {
 </script>
 
 <template>
-<div class="grid w-full grid-cols-[1fr_3fr] gap-6 p-6 pl-10">
-    <label class="label cursor-pointer">
-        <span class="label-text">Reduce Motion</span>
-        <input type="checkbox" v-model="gs.reducedMotion" class="toggle toggle-sm !rounded-md" />
-        <span class="label-text">{{ gs.reducedMotion }}</span>
-    </label>
-
-    <div class="grid grid-cols-1">
-        <h1 class="prose-lg divider divider-start font-semibold">
-            Interface
+<main class="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col gap-4 bg-muted/40 p-4 md:gap-8 md:p-10">
+    <div class="mx-auto grid w-full max-w-6xl gap-2">
+        <h1 class="!text-2xl font-semibold">
+            Settings
         </h1>
-
-        <form v-for="framework in frameworks" :key="framework.key" class="my-2 flex items-center gap-2">
-            <input type="radio" v-model="frameworkChoice" :value="framework.key" :id="framework.name"
-                name="ui-framework" class="radio radio-xs shadow-inner" @change="handleFrameworkChoice" />
-            <label :for="framework.name" class="m-1 w-24 rounded-lg">
-                <div class="h-full w-full" data-act-class="!outline-base-content">
-                    <div class="shadow-warm h-full w-full cursor-pointer overflow-hidden rounded-lg bg-base-100 ! text-base-content ring-1 ring-base-300 has-[:checked]:ring-2 has-[:checked]:ring-neutral-content"
-                        :data-theme="framework.key + 'minimalist'">
-                        <div class="grid h-10 w-full grid-cols-5 grid-rows-3 rounded-btn">
-                            <div class="col-start-1 row-span-2 row-start-1 bg-base-200"></div>
-                            <div class="col-start-1 row-start-3 bg-base-300"></div>
-                            <div
-                                class="col-span-4 col-start-2 row-span-3 row-start-1 flex place-content-center items-center gap-3 bg-base-100 px-3">
-                                <div class="flex-grow font-semibold">
-                                    {{ framework.name }}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </label>
-        </form>
     </div>
-
-    <div
-        class="align-self-start shadow-warm mockup-browser col-start-2 m-6 max-w-96 border border-neutral/5 bg-base-300">
-        <div class="mockup-browser-toolbar -ml-1.5">
-            <div class="text input !ml-2 content-center !bg-base-100  before:-mt-0.5 before:w-3 after:-mt-0.5">
-                https://github.com/clemony/lolpocket
-            </div>
+    <div class="mx-auto grid w-full max-w-6xl items-start gap-6 md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr]">
+        <nav class="grid gap-4 text-sm text-muted-foreground">
+            <a href="#" class="font-semibold ">
+                General
+            </a>
+            <a href="#">
+                Appearance
+            </a>
+            <a href="#">
+                Storage
+            </a>
+            <a href="#">
+                Hotkeys
+            </a>
+            <a href="#">
+                Account
+            </a>
+            <a href="#">
+                About
+            </a>
+        </nav>
+        <div class="grid gap-6">
+            <Card>
+                <CardHeader>
+                    <CardTitle>Store Name</CardTitle>
+                    <CardDescription>
+                        Used to identify your store in the marketplace.
+                    </CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <form>
+                        <Input placeholder="Store Name" />
+                    </form>
+                </CardContent>
+                <CardFooter class="border-t px-6 py-4">
+                    <Button>Save</Button>
+                </CardFooter>
+            </Card>
+            <Card>
+                <CardHeader>
+                    <CardTitle>Plugins Directory</CardTitle>
+                    <CardDescription>
+                        The directory within your project, in which your plugins are
+                        located.
+                    </CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <form class="flex flex-col gap-4">
+                        <Input placeholder="Project Name" default-value="/content/plugins" />
+                        <div class="flex items-center space-x-2">
+                            <Checkbox id="include" default-checked />
+                            <label for="include"
+                                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                                Allow administrators to change the directory.
+                            </label>
+                        </div>
+                    </form>
+                </CardContent>
+                <CardFooter class="border-t px-6 py-4">
+                    <Button>Save</Button>
+                </CardFooter>
+            </Card>
         </div>
-        <div class="flex justify-center bg-base-200 px-4 py-20">Hello!</div>
     </div>
-
-    <h1 class="prose-lg col-start-1 mt-6 font-semibold">Accents</h1>
-
-    <div class="col-start-1 grid grid-cols-1 gap-y-4">
-        <form v-for="theme in themes" class="items-center" @change="handleThemeChoice()">
-            <div class="col-start-1 grid grid-cols-[1fr_5fr] content-center justify-start">
-                <input type="radio" v-model="themeChoice" :value="theme.key" :id="theme.name" name="ui-theme"
-                    class="radio radio-xs col-start-1 self-center justify-self-start shadow-inner" />
-                <label :for="theme.name">
-                    <div
-                        class="justify-content-start shadow-warm col-start-2 grid max-w-36 grid-cols-1 gap-1 rounded-btn border border-base-300 px-2 py-2">
-                        <div class="content-center  font-semibold">
-                            {{ theme.name }}
-                        </div>
-
-                        <div :data-theme="settings.dataMode + theme.key"
-                            class="*:shadow-warm grid grid-cols-4 justify-items-center gap-1 bg-transparent *:size-6 *:rounded-md *:ring-base-300/80 *:ring-offset-1">
-                            <div class="bg-primary ring-offset-primary/60"></div>
-                            <div class="bg-secondary ring-offset-secondary/60"></div>
-                            <div class="bg-accent ring-offset-accent/60"></div>
-                            <div class="bg-neutral ring-offset-neutral/60"></div>
-                            <!-- <div class="bg-info"></div>
-            <div class="bg-success"></div>
-            <div class="bg-warning"></div>
-            <div class="bg-error"></div>
-            <div class="bg-error-content"></div>-->
-                        </div>
-                    </div>
-                </label>
-            </div>
-        </form>
-    </div>
-</div>
+</main>
 </template>
 
 <style scoped></style>

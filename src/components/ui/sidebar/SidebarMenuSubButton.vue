@@ -16,7 +16,7 @@ const props = withDefaults(defineProps<PrimitiveProps & {
 
 <template>
 <Primitive data-sidebar="menu-sub-button" :as="as" :as-child="asChild" :data-size="size" :data-active="isActive" :class="cn(
-  'flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-base-content outline-none ring-neutral/5 cursor-pointer hover:bg-neutral/5 hover:text-base-content focus-visible:ring-2 active:bg-neutral/5 active:text-base-content disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-base-content',
+  'flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-base-content outline-none ring-base-300 cursor-pointer hover:bg-base-200 hover:text-base-content focus-visible:ring-2 active:bg-base-200 active:text-base-content  disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-base-content',
   'data-[active=true]:bg-neutral/5 data-[active=true]:text-base-content',
   size === 'sm' && 'text-xs',
   size === 'md' && 'text-sm',

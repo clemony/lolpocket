@@ -44,11 +44,13 @@ const keystone = computed(() => {
 </script>
 
 <template><!------------------------⟢ runes ⟣------------------------->
-<ContextMenu class="context-menu flex items-center [&_>span]:size-full">
-    <ContextMenuTrigger class="group relative flex size-full items-center justify-center gap-4 opacity-95">
+<ContextMenu class="context-menu flex items-center justify-center [&_>span]:size-full">
+    <ContextMenuTrigger class="group relative flex size-full items-center justify-center gap-4 opacity-95" @click.stop="sn.navigateTo(
+        `/pocket/${pocket.key}`, pocket.name, pocket.icon
+    )">
         <div class="flex size-full items-center justify-center gap-3">
             <div v-if="keystone && keystone.name != 'none' && runeSet"
-                class="relative flex aspect-square !size-[52px] shrink-0 cursor-pointer items-center rounded-full bg-gradient-to-br from-transparent to-75% shadow-sm"
+                class="relative flex aspect-square !size-10 shrink-0 cursor-pointer items-center rounded-full bg-gradient-to-br from-transparent to-75% shadow-sm"
                 :class="{
                     'border-resolve via-resolve':
                         keystone.path == 'resolve',
@@ -73,21 +75,13 @@ const keystone = computed(() => {
                         class="group flex size-full items-center">
                         <KinesisElement type="depth" :strength="6" class="group flex size-full items-center">
                             <img :src="keystone.img"
-                                class="drop-shadow-softer h-auto w-12  transition-all duration-200 hover:drop-shadow-sm" />
+                                class="drop-shadow-softer h-auto w-10  transition-all duration-200 hover:drop-shadow-sm" />
                         </KinesisElement>
                     </KinesisContainer>
                 </div>
             </div>
-            <div v-else-if="pocket" @click.stop="
-                sn.navigateTo(
-                    `/pocket/${pocket.key}/items`,
-                    pocket.name,
-                    pocket.icon
-                )
-                "
-                class="group flex aspect-square !size-[52px] shrink-0 cursor-pointer items-center justify-center gap-2 !justify-self-start rounded-[4px] border border-base-200 bg-base-200/30 opacity-70 shadow-sm transition-all duration-300 hover:border-base-300 hover:opacity-70 hover:shadow-inner">
-                <icon icon="teenyicons:add-outline" class="group-hover:stroke-[1.5]" />
-            </div>
+
+            <PlaceholderCircle v-else :size="41" />
 
             <KinesisContainer :disabled="gs.reducedMotion == true" :perspective="100" :duration="200"
                 class="group flex size-full items-center">
@@ -108,7 +102,7 @@ const keystone = computed(() => {
                         'border-precision':
                             runeSet.secondary == 'precision',
                     }"
-                        class="!aspect-square !size-7 cursor-pointer overflow-clip rounded-full border-2 bg-base-100/80 p-[2px] shadow-md backdrop-blur-md group-hover:scale-90">
+                        class="!aspect-square !size-7 cursor-pointer overflow-clip rounded-full border-2 bg-base-100/70 p-[2px] shadow-md backdrop-blur-md group-hover:scale-90">
                         <img :src="`/img/runes/${runeSet.secondary}.webp`"
                             class="drop-shadow-softest size-full !object-contain transition-all duration-200 hover:opacity-80" />
                     </div>

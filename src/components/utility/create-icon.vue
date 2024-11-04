@@ -66,14 +66,14 @@ function handleChange(icon) {
 
 <template>
 <div role="tablist"
-    class="tabs tabs-lifted relative grid w-full overflow-y-scroll border-base-300/70 scrollbar-hide *: [&_.tab-content]:!z-0 [&_.tab]:!z-30 [&_.tab]:h-7 [&_.tab]:!border-b-transparent [&_.tab]:font-medium">
+    class="tabs tabs-lifted relative grid w-full overflow-y-scroll border-base-300 scrollbar-hide *: [&_.tab-content]:!z-0 [&_.tab]:!z-30 [&_.tab]:h-7 [&_.tab]:!border-b-transparent [&_.tab]:font-medium">
     <label role="tab" :class="{ 'tab-active': iconTabs == 'icon' }" class="first tab">
         <input type="radio" class="peer hidden" v-model="iconTabs" name="iconTabs" value="icon" />
         Icons
     </label>
 
     <div role="tabpanel" :class="{ hidden: iconTabs == 'color' }"
-        class="shadow-inset-sm tab-content relative grid w-full min-w-[298px] rounded-box rounded-tl-none border-base-300/70 bg-base-100">
+        class=" tab-content relative grid w-full rounded-box rounded-tl-none border-base-300 bg-base-100">
         <div
             class="grid max-h-52 grid-cols-5 justify-items-center gap-1 self-center justify-self-center overflow-y-scroll px-2 py-3 scrollbar-hide">
             <label v-for="icon in iconStore"
@@ -95,9 +95,12 @@ function handleChange(icon) {
     </label>
 
     <div role="tabpanel" :class="{ hidden: iconTabs == 'icon' }"
-        class="shadow-inset-sm tab-content grid w-full min-w-[298px] rounded-box border-base-300/70 bg-base-100">
+        class=" tab-content grid w-inherit  rounded-box border-base-300 bg-base-100">
+
         <div
             class="relative grid justify-items-center self-center justify-self-center overflow-y-scroll p-1 scrollbar-hide">
+
+
             <ColorPicker v-model:bgColor="bgColor" v-model:iconColor="iconColor" :selectedIcon="selectedIcon" />
         </div>
     </div>
@@ -106,6 +109,6 @@ function handleChange(icon) {
 
 <style scoped>
 .tab-active {
-    @apply brightness-[98.5%];
+    @apply shadow-[2px_2px_3px_0_oklch(var(--b1))];
 }
 </style>

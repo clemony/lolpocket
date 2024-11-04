@@ -1,15 +1,12 @@
 @import '@assets/css/index.css';
 @import '@assets/css/setup.css';
-@import '@assets/css/grid.css';
 @import '@assets/css/fonts.css';
-@import '@assets/css/animations.css';
+@import '@assets/animation/animations.css';
 @import '@assets/css/splitpanes.css';
 @import '@assets/css/gradients.css';
-@import '@assets/css/shadows.css';
-@import '@assets/css/popover.css';
+@import '@assets/css/floating-vue.css';
 @import '@assets/css/drag.css';
-/* @import '@assets/css/themes.css'; */
-@import 'vue3-toastify/dist/index.css';
+
 @import 'floating-vue/dist/style.css';
 @layer base {
     @import '@fontsource/geist-mono';

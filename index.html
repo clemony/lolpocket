@@ -1,17 +1,34 @@
 <!doctype html>
-<html lang="en" data-theme="" data-mode="light">
+<html lang="en" data-theme="" data-mode="light" class='is-[]'>
 
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>lolpocket</title>
+  <style>
+    [data-mode='light'],
+    [data-mode='neutral'] {
+      #app {
+        backdrop-filter: brightness(200%);
+      }
+    }
+
+    [data-mode='dark'],
+    [data-mode='dim'] {
+      #app {
+        background-blend-mode: normal;
+        backdrop-filter: brightness(100%);
+      }
+    }
+  </style>
 </head>
 
 <script type="module" src="./src/main.ts"></script>
 
-<body>
-  <div id="app" class="overflow-hidden rounded-box">
+<body class='h-screen overflow-hidden overscroll-none bg-transparent'>
+  <div id="app" ref="app"
+    class="bg-base-100/80 overflow-clip max-w-screen backdrop-blur-md rounded-box absolute left-0 top-0 h-screen w-screen ">
   </div>
 </body>
 

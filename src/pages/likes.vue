@@ -68,7 +68,7 @@ onMounted(async () => { })
             <div
                 class="drag-draggable shadow-inset !h-full w-full content-start items-start justify-around rounded-b-box px-3 pb-4 pt-12 scrollbar-hide">
                 <VDropdown v-for="item in is.lovedItems" :key="item.id" :overflow-padding="20" :shift="true"
-                    theme="detail" :distance="6" @click.right.prevent="" :ref="item.name"
+                    theme="default" :distance="6" @click.right.prevent="" :ref="item.name"
                     class="relative max-h-[64px] max-w-[64px]">
                     <label class="drag-label !overflow-hidden">
                         <div class="drag-wrapper !overflow-hidden">
@@ -85,7 +85,7 @@ onMounted(async () => { })
                     </template>
                 </VDropdown>
 
-                <VDropdown theme="detail" alt="Quick Search"
+                <VDropdown theme="default" alt="Quick Search"
                     class="ghosty drag-label group/qs relative z-0 flex basis-16 cursor-zoom-out !p-0 after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-['+'] hover:after:text-neutral hover:after:opacity-60">
                     <div
                         class="z-20 h-full w-full scale-105 cursor-zoom-in select-none bg-[url('/img/ui/frame.webp')] bg-contain bg-center bg-no-repeat opacity-0 brightness-0 transition-all duration-200 group-hover/qs:scale-95 group-hover/qs:opacity-40">

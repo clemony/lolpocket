@@ -9,10 +9,11 @@ export const useGeneralStore = defineStore(
         const dataTheme = ref('lightminimalist')
         const dataAccent = ref('minimalist')
         const ds = useDataStore()
-
+    const app = ref()
         const isMinimized = ref(false)
         const firstPane = ref(17)
         const secondPane = ref(83)
+        const sidebar = ref()
 
         const reducedMotion = ref()
 
@@ -37,6 +38,8 @@ export const useGeneralStore = defineStore(
             isMinimized,
             firstPane,
             secondPane,
+            sidebar,
+            app
         }
     },
     {

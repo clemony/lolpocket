@@ -7,13 +7,11 @@ import { usePocketStore } from '@stores/pocketStore'
 const ps = usePocketStore()
 const props = defineProps<{
     pocket?: {
-        icon: string
         bgColor: string
         iconColor: string
     }
     bgColor?: string
     iconColor?: string
-    selectedIcon?: string
     pocketKey?: string
 }>()
 
@@ -32,15 +30,11 @@ const bgColor = ref('#000')
 const iconColor = ref('#FFF')
 const colorType = ref('background')
 const color = computed(() => {
-    if (colorType.value == 'icon') {
+    if (props.iconColor) {
         return iconColor.value
     } else {
         return bgColor.value
     }
-})
-
-const getIcon = computed(() => {
-    return props.selectedIcon || 'teenyicons:folder-outline'
 })
 
 const getBgColor = computed(() => {
@@ -59,10 +53,10 @@ const getIconColor = computed(() => {
 })
 
 function updateColor(eventData) {
-    if (colorType.value == 'background') {
+    if (props.bgColor) {
         bgColor.value = eventData.cssColor
         emit('update:bgColor', bgColor.value)
-    } else if (colorType.value == 'icon') {
+    } else if (props.iconColor) {
         iconColor.value = eventData.cssColor
         emit('update:iconColor', iconColor.value)
     }
@@ -79,30 +73,17 @@ onMounted(async () => {
 </script>
 
 <template>
-<ColorPicker :color="color" class="col-start-1 w-full" @color-change="updateColor" alpha-channel="hide">
-    <template #hue-range-input-label>
-        <span class="visually-hidden"> </span>
-    </template>
+<div class="grid items-center gap-4 ">
 
-    <template #copy-button> </template>
-</ColorPicker>
+    <ColorPicker :color="color" class=" w-full" @color-change="updateColor" alpha-channel="hide">
+        <template #hue-range-input-label>
+            <span class="visually-hidden"> </span>
+        </template>
 
-<div class="mx-3 mb-2 flex items-center gap-4 justify-self-end">
-    <div class="join self-end justify-self-end rounded-full *:">
-        <label class="btn join-item btn-xs has-[:checked]:btn-neutral">
-            <input type="radio" name="colorType" value="background" class="peer hidden" v-model="colorType" />
-            Background
-        </label>
-        <label class="btn join-item btn-xs has-[:checked]:btn-neutral">
-            <input type="radio" name="colorType" v-model="colorType" value="icon" class="peer hidden" />
-            Icon
-        </label>
-    </div>
+        <template #copy-button> </template>
+    </ColorPicker>
 
-    <div :style="{ backgroundColor: getBgColor }"
-        class="icon-color join-item grid size-9 place-items-center rounded-full p-2.5">
-        <icon :style="{ color: getIconColor }" :icon="getIcon" class="size-full" />
-    </div>
+
 </div>
 </template>
 

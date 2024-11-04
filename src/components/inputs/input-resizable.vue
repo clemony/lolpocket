@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useGeneralStore } from '@stores/generalStore';
-import { blur } from '@utils/utils'
+import { blur } from '@lib/utils'
 
 const gs = useGeneralStore();
 const props = defineProps<{

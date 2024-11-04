@@ -21,3 +21,11 @@ export function useResetStore() {
 
     return resetStore
 }
+
+
+/* const resetComponents = () => {
+    pockets.value.forEach((pocket) => {
+        pocket.component = null; // or set to a default value if needed
+    });
+};
+resetComponents() */

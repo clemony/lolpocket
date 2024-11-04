@@ -15,7 +15,7 @@ export interface navData {
 
 export interface pocket {
     name: string
-    type: string
+    tags: Array<string>
     pinned: boolean
     key: string
     icon: string
@@ -73,6 +73,9 @@ export interface pocketItems {
         alt5: DefaultItem[]
         alt6: DefaultItem[]
     }
+    start: ItemSet[]
+    core: ItemSet[]
+    final: ItemSet[]
 }
 
 export interface ItemSet {
@@ -96,7 +99,7 @@ export interface Item {
     count: number
 }
 
-interface DefaultItem {
+export interface DefaultItem {
     name: string
     img: string
     buy: number
@@ -162,4 +165,13 @@ export interface dateObject {
     patch: string
     date: string
     time: string
+}
+
+export interface navItem {
+    ref: any
+    isVisible: boolean
+    name: string
+    type: string
+    trigger: boolean
+    data: Array<any>
 }

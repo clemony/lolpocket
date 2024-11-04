@@ -1,6 +1,4 @@
 import { defineStore } from 'pinia'
-//import {} from 'pinia-plugin-persistedstate'
-import { usePocketStore } from './pocketStore'
 import { hexoid } from 'hexoid'
 
 export const useSessionStore = defineStore(
@@ -43,7 +41,6 @@ const isActiveTab = (link: string) => {
 
 
  const navigateTo = (link: string, title?, icon?) => {
-    try {
         const matchedRoute = router.resolve(link);
         const params = matchedRoute.params as PocketRouteParams;
 
@@ -76,11 +73,11 @@ const isActiveTab = (link: string) => {
 
                 // Set the active tab and navigate
                 activeTab.value = basePocketPath;
-                router.push(basePocketPath).catch((err) => console.error('Navigation error:', err));
+                router.push(basePocketPath)
             } else {
                 // Set existing tab as active
                 activeTab.value = existingTab.link;
-                router.push(existingTab.link).catch((err) => console.error('Navigation error:', err));
+                router.push(existingTab.link)
             }
         } else {
             // Handle non-pocket routes
@@ -101,18 +98,16 @@ const isActiveTab = (link: string) => {
                 });
 
                 activeTab.value = link;
-                router.push(link).catch((err) => console.error('Navigation error:', err));
+                router.push(link)
             } else {
                 // Switch to existing tab
                 activeTab.value = link;
-                router.push(link).catch((err) => console.error('Navigation error:', err));
+                router.push(link)
             }
         }
-    } catch (error) {
-        console.error('Error in navigateTo function:', error);
     }
 
-};
+
  
 
 
@@ -123,11 +118,11 @@ const isActiveTab = (link: string) => {
             getTab,
             activeTab,
         }
-    }/* ,
+    },
     {
         persist: {
-            storage: sessionStorage,
+            storage: localStorage,
             key: 'session',
         },
-    } */
+    }
 )

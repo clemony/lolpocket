@@ -3,7 +3,7 @@ import { reactive, ref, watch } from 'vue'
 import { useDataStore } from './dataStore'
 import { Item, ItemSet } from '../../types'
 
-import { generateRandomName } from '../utils/keygen'
+import { generateRandomName } from '../lib/keygen'
 import { usePocketStore } from './pocketStore'
 import { hexoid } from 'hexoid'
 

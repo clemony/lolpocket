@@ -3,6 +3,24 @@
 import { usePocketStore } from './../stores/pocketStore'
 import { useSessionStore } from '@stores/sessionStore'
 
+import { defineAsyncComponent } from 'vue'
+
+const Dashboard = defineAsyncComponent(() =>
+    import('../components/pocket/pocket-dashboard.vue')
+)
+
+const Champions = defineAsyncComponent(() =>
+    import('../components/pocket/pocket-champions.vue')
+)
+
+const Items = defineAsyncComponent(() =>
+    import('../components/pocket/pocket-items.vue')
+)
+
+const Runes = defineAsyncComponent(() =>
+    import('../components/pocket/pocket-runes.vue')
+)
+
 const props = defineProps<{
     pocketKey?: string;
     id?: any
@@ -28,158 +46,243 @@ console.log(route)
 const links = [
     {
         name: 'Dashboard',
-        link: '',
+        link: '#dashboard',
         icon: 'heroicons:squares-2x2-16-solid',
     },
     {
         name: 'Champions',
-        link: 'champions',
+        link: '#champions',
         icon: 'teenyicons:user-circle-outline',
     },
     {
         name: 'Items',
-        link: 'items',
+        link: '#items',
         icon: '',
     },
     {
         name: 'Runes',
-        link: 'runes',
+        link: '#runes',
         icon: '',
     },
 ]
 
+
+
+/* onMounted(() => {
+    if (props.pocketKey !== from.params.pocketKey) {
+        pocket.value = await(ps.getPocket(to.params.pocketKey))
+        if (pocket.value.component) {
+            const targetElement = pocket.value.component;
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'instant', block: 'nearest', inline: 'center' });
+            }
+        }
+        console.log('pok', pocket, pocket.value.component);
+    }
+
+}) */
+
+
+const dashboard = ref()
+const champions = ref()
+const items = ref()
+const runes = ref()
+
+const dashboardIsVisible = useElementVisibility(dashboard)
+const championsIsVisible = useElementVisibility(champions)
+const itemsIsVisible = useElementVisibility(items)
+const runesIsVisible = useElementVisibility(runes)
+
+const currentVisible = ref(null) // Will store the name of the visible element
+
+
+// Group refs, visibility states, and names
+const els = [
+    {
+        ref: dashboard,
+        isVisible: dashboardIsVisible,
+        name: 'dashboard'
+    },
+    {
+        ref: champions,
+        isVisible: championsIsVisible,
+        name: 'champions',
+        type: 'champion',
+        trigger: true,
+        data: pocket.value.champions[0].champions
+    },
+    {
+        ref: items,
+        isVisible:
+            itemsIsVisible,
+        name: 'items',
+        trigger: true,
+        type: 'item',
+        data: pocket.value.items[0].itemSets
+    },
+    {
+        ref: runes,
+        isVisible: runesIsVisible,
+        name: 'runes',
+        trigger: true,
+        type: 'rune',
+        data: pocket.value.runes[0].runeSets
+    }
+]
+
+// Observer setup with custom threshold for each element
+els.forEach(({ ref, isVisible, name }) => {
+    useIntersectionObserver(
+        ref,
+        ([{ isIntersecting }]) => {
+            isVisible.value = isIntersecting
+            if (isIntersecting) {
+                currentVisible.value = name
+                pocket.value.component = name
+            }
+        },
+        { threshold: 0.5 } // Adjust this value to control the visibility offset
+    )
+})
+
 onBeforeRouteUpdate(async (to, from) => {
     if (to.params.pocketKey !== from.params.pocketKey) {
         pocket.value = await (ps.getPocket(to.params.pocketKey))
+        /*      await nextTick()
+                if (pocket.value.component) {
+                    const find = els.find((el) => pocket.value.component)
+                    const targetElement = find ? find.ref.value : dashboard
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'instant', block: 'nearest', inline: 'center' });
+                    }
+                }
+                console.log('pok', pocket, pocket.value.component);  */
     }
 })
+
+function scrollToSection(el) {
+    var targetElement = ref(el)
+
+    if (targetElement) {
+        targetElement.value.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+    }
+}
+
+const headers = [
+    { name: 'dashboard', letters: ['d', 'a', 's', 'h', 'b', 'o', 'a', 'r', 'd'] },
+    { name: 'champions', letters: ['c', 'h', 'a', 'm', 'p', 'i', 'o', 'n', 's'] },
+    { name: 'items', letters: ['i', 't', 'e', 'm', 's'] },
+    { name: 'runes', letters: ['r', 'u', 'n', 'e', 's'] }
+];
+const previousVisible = ref()
+// Computed property to get the letters for the current visible header
+const letters = computed(() => {
+    const match = headers.find(header => header.name === currentVisible.value);
+    return match ? match.letters : [];
+});
 </script>
 
 <template>
-<div class="w-full content-center items-center py-4" :key="pocket.key">
-    <div class="ml-5 flex w-[96%] gap-5 pb-0 pl-2">
+<PageLayout :key="pocket.key" nav>
+    <template #header>
+        <template v-for="(letter, index) in letters">
+            {{ letter }}
+        </template>
+    </template>
 
-        <!------------------------⟢ breadcrumb ⟣------------------------->
+    <!------------------------⟢ menu ⟣------------------------->
 
-        <div class="breadcrumbs flex items-center ">
-            <ul>
-                <li>
-                    <a @click="sn.navigateTo('/pockets/pockets')">
-                        Pockets
-                    </a>
-                </li>
-                <li class="">
-                    <RouterLink :key="pocket.key" :to="{ path: `/pocket/${pocket.key}/` }"
-                        class="flex cursor-pointer gap-2">
-                        <!--  <icon :icon="pocket.icon" /> -->
-                        {{ pocket.name }}
-                    </RouterLink>
-                </li>
+    <template #header-center>
 
-                <!------------------------⟢ dd menu ⟣------------------------->
 
-                <li class="cursor-pointer">
-                    <VDropdown theme="detail" placement="bottom-start" :triggers="['hover']" :popperTriggers="['hover']"
-                        :skidding="-6" :distance="-22">
-                        <button class="flex items-center gap-2 capitalize">
-                            {{ cleanPath }}
-                            <icon icon="mi:select" class='size-3' />
-                        </button>
-                        <template #popper>
-                            <div class="flex min-w-28 flex-col space-y-1.5 p-1">
-                                <button v-for="link in links" class="btn-ghost btn-xs justify-start rounded-xs">
-                                    <RouterLink :to="{
-                                        path: `/pocket/${pocket.key}/${link.link}`,
-                                    }" class="flex items-center gap-2" v-close-popper>
-                                        <ui-noun-sword v-if="link.name == 'Items'" class="-ml-0.5 !size-4.5" />
+        <div v-for="el in els" :key="el.name">
 
-                                        <ui-rune v-if="link.name == 'Runes'" class="size-3.5 stroke-[2.5]" />
+            <span v-if="!el.trigger">
+                <label @click="scrollToSection(el.ref)"
+                    class='hover:cursor-pointer hover:opacity-100 opacity-50 transition-all group flex gap-1 duration-300 font-medium mb-px'
+                    :class="{ ' !opacity-100 text-base-content': el.name == pocket.component }">
+                    <input type="radio" :value="el.ref" v-model="currentVisible" class='peer hidden' />
+                    <span class=' capitalize  px-1.5 min-w-max w-max'>
+                        {{ el.name
+                        }}</span>
+                </label>
+            </span>
 
-                                        <icon :icon="link.icon" v-if="
-                                            link.name == '' ||
-                                            link.name == 'Champions'
-                                        " class="size-3.5 text-base-content" />
+            <VDropdown v-else theme="hoverdd" :delay="{ show: 400, hide: 200 }" placement="bottom" class=''>
 
-                                        {{ link.name }}
-                                    </RouterLink>
-                                </button>
-                            </div>
 
-                        </template>
-                    </VDropdown>
-                </li>
-            </ul>
+                <label @click="scrollToSection(el.ref)"
+                    class='hover:cursor-pointer hover:opacity-100 opacity-50 font-medium transition-all group flex gap-1 duration-300 items-center mb-px'
+                    :class="{ ' !opacity-100 text-base-content': el.name == pocket.component }">
+                    <input type="radio" :value="el.ref" v-model="currentVisible" class='peer hidden' />
+
+
+                    <span class=' capitalize  px-1 min-w-max w-max'>
+                        {{ el.name
+                        }}</span>
+
+                    <ButtonToggle class='pointer-events-none self-center' />
+
+                </label>
+
+
+                <template #popper>
+
+                    <HvPocket :type="el.type" :data="el.data" :pocket="pocket" />
+                </template>
+            </VDropdown>
+
         </div>
 
-        <div class="grow"></div>
 
-        <!------------------------⟢ side menu ⟣------------------------->
 
-        <div class="join items-center justify-self-end *: *:font-normal ">
-            <RouterLink v-for="link in links" exactActiveClass="link-active"
-                :to="{ path: `/pocket/${pocket.key}/${link.link}` }" class="w-[58px] btn join-item btn-sm ">
-                <ui-noun-sword v-if="link.name == 'Items'" class="-ml-0.5 !size-5" />
+    </template>
 
-                <ui-rune v-if="link.name == 'Runes'" class="size-4.5 stroke-[2.5]" />
-
-                <icon :icon="link.icon" v-if="
-                    link.name == 'Dashboard' || link.name == 'Champions'
-                " class="size-4.5 text-base-content" />
-            </RouterLink>
+    <template #indicator>
+        <div class=' -top-px self-start flex absolute transition-all duration-500 opacity-80' :class="{
+            'translate-x-[13px]': pocket.component == 'dashboard',
+            'translate-x-[123px]': pocket.component == 'champions',
+            'translate-x-[248px]': pocket.component == 'items',
+            'translate-x-[342px]': pocket.component == 'runes'
+        }">
+            <icon icon="fluent:line-horizontal-1-24-regular" class='size-3 -mt-1' />
         </div>
+    </template>
 
-        <button class="btn  btn-sm w-[45px]">
-            <icon icon="teenyicons:more-horizontal-outline" class="size-4" />
-        </button>
-
-    </div>
-</div>
-
-<!------------------------⟢ router ⟣------------------------->
-
-<RouterView v-slot="{ Component }" class="h-full w-full">
-
-    <Transition name="component">
-        <component :is="Component" :key="pocketKey" ref="section" :pocketKey="pocketKey" :id="props.id" />
-    </Transition>
+    <template #header-end>
+        <div class='flex h-full absolute right-4'>
+            <PocketButton :pocket="pocket" />
+        </div>
+    </template>
 
 
-</RouterView>
+    <template #content>
+        <div id='pocket-contents' class=" carousel mt-5 w-full h-full overflow-y-hidden overflow-x-scroll">
+            <a class="carousel-item w-full max-w-full relative" ref="dashboard" id="dashboard">
+                <Dashboard :pocketKey="pocket.key" :key="pocket.key" />
+            </a>
+            <a class="carousel-item w-full" ref="champions" id="champions">
+                <Champions :pocketKey="pocket.key" :key="pocket.key" />
+            </a>
+            <a class="carousel-item w-full" ref="items" id="items">
+                <Items :pocketKey="pocket.key" :key="pocket.key" />
+            </a>
+            <a class="carousel-item w-full" ref="runes" id="runes">
+                <Runes :pocketKey="pocket.key" :key="pocket.key" />
+            </a>
+
+        </div>
+    </template>
+
+</PageLayout>
 </template>
 
 <!------------------------⟢ style ⟣------------------------->
 <style>
-button.active,
-label.active,
-.link-active {
-    @apply border-neutral bg-neutral text-neutral-content hover:bg-neutral/80;
+.v-popper--shown {
 
-    & svg {
-        @apply text-neutral-content;
+    & label {
+        opacity: 1;
     }
 }
-
-.slot {
-    @apply aspect-square size-[60px] rounded-md ring-1 ring-base-300/90 ring-offset-[2px] ring-offset-base-100;
-}
-
-.show {
-    @apply block opacity-100;
-}
-
-/* beautify ignore:start */
-.empty {
-    @apply !size-6 hover:!size-10;
-}
-
-.filter-on {
-    &::after {
-        @apply content-[''];
-    }
-}
-
-.DragFeedback__feedback {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    display: none !important;
-}</style>
+</style>

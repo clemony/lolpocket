@@ -12,10 +12,14 @@ export const useChampStore = defineStore(
 
         const champions = computed(() => ds.champions)
 
-        const championsInPocket = ref<Champion[]>([])
         const selectedChampion = ref('')
         const champSearch = ref('')
         const lovedChamps = ref<Champion[]>([])
+const classFilters = ref([])
+const sortName = ref()
+const viewLoved = ref()
+
+
         const champTabs = ref('abilities')
 
         //------------------------------------------ITEMS MAP
@@ -60,9 +64,7 @@ export const useChampStore = defineStore(
             }
         }
 
-        function resetChamps() {
-            championsInPocket.value = []
-        }
+
 
         function removeChamp(champ, pocket) {
             const find = pocket.champions[0].champions.findIndex(
@@ -76,10 +78,9 @@ export const useChampStore = defineStore(
 
         return {
             selectedChampion,
-            champions, // champions is now a ref
+            champions, 
             lovedChamps,
-            championsInPocket,
-            resetChamps,
+            classFilters,
             removeChamp,
             champSearch,
             addToSet,
@@ -87,6 +88,8 @@ export const useChampStore = defineStore(
             removeFromSet,
             championItemsMap,
             champTabs,
+            sortName,
+            viewLoved
         }
     },
     {

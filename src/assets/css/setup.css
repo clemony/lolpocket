@@ -1,26 +1,36 @@
 :root {
-    --rounded-box: 0.5rem !important;
+    --rounded-box: 0.45rem !important;
     --rounded-btn: 0.4rem !important;
     --rounded-badge: 0.5rem !important;
     --animation-btn: 0.25s !important;
     --animation-input: 0.2s !important;
     --btn-focus-scale: 0.95 !important;
-    --border-btn: 1px !important;
 
     * {
-        @apply text-xs;
+        @apply text-xs tracking-tight;
+    }
+    h1 {
+        @apply text-xl font-semibold tracking-tight;
+    }
+    h2 {
+        @apply text-lg font-semibold tracking-tight;
+    }
+    h3 {
+        @apply text-base font-semibold tracking-tight;
+    }
+    h4 {
+        @apply text-sm font-medium tracking-tight;
     }
     overscroll-behavior: contain;
     user-select: none;
     @apply m-0 scroll-smooth bg-transparent p-0;
 }
 
-.borders {
-    @apply border-[1px] border-base-300;
-}
-
-.frost {
-    @apply bg-base-100/90 backdrop-blur-md;
+.tab {
+    --tab-bg: oklch(var(--b1) / 90%) !important;
+    --tab-corner-bg: oklch(var(--b1) / 60%) !important;
+    --tab-border: 1px !important;
+    --tab-radius: 0.35rem !important;
 }
 
 .toggle {
@@ -30,9 +40,6 @@
 .btn-ghost:hover,
 .btn-ghost label:hover {
     @apply !bg-base-200/40;
-}
-select {
-    @apply !outline-1 !outline-offset-1 !ring-0 !ring-offset-0;
 }
 
 button,
@@ -44,23 +51,6 @@ button,
     @apply size-[0.43rem] opacity-80;
 }
 
-[data-mode='light'],
-[data-mode='neutral'] {
-    --dark-shadow: oklch(var(--bc) / 5%);
-
-    #app {
-        @apply bg-base-100/80 backdrop-blur-md backdrop-brightness-[100%];
-    }
-}
-
-[data-mode='dark'],
-[data-mode='dim'] {
-    --dark-shadow: rgba(0, 0, 0, 0.25);
-
-    #app {
-        @apply bg-base-100/85 bg-blend-normal backdrop-blur-md;
-    }
-}
 .shadow-btn {
     @apply shadow-[inset_1px_1px_5px_1px_#00000010];
 }
@@ -69,14 +59,6 @@ button,
     @apply border-b border-base-300;
 }
 
-html,
-body {
-    @apply h-screen overflow-hidden overscroll-none bg-transparent;
-}
-
-#app {
-    @apply drawer drawer-end absolute left-0 top-0 h-screen w-screen backdrop-brightness-200;
-}
 .checkbox-blue.checkbox {
     --chkbg: #81a1c1;
     --chkfg: oklch(var(--bc));
@@ -86,31 +68,13 @@ body {
     @apply rounded-[4px];
 }
 
-.tooltip {
-    @apply ![--tooltip-offset:30px] ![--tooltip-tail-offset:24px];
-}
-
 .btn-ghost:hover {
     @apply bg-base-200/70;
 }
-.menu {
-    @apply border-[0.5px] border-base-300;
-}
 
-.menubar {
-    @apply absolute left-0 top-0 z-[1] flex !h-fit w-full flex-wrap items-center justify-end gap-4 rounded-t-box border-b border-b-base-300 bg-base-100/90 px-4 py-1 shadow-[0px_5px_1px_rgba(0,_0,_0,_0.03),_0_5px_20px_rgba(0,_0,_0,_0.03)] backdrop-blur-md;
-}
-
-.badge-btn-dark {
-    @apply badge badge-primary flex content-center text-opacity-75 hover:badge-ghost has-[:checked]:badge-ghost hover:opacity-75;
-}
 /* -----------------------------------------------------------------------
         ♡ COLORS
 -----------------------------------------------------------------------*/
-
-.frost {
-    @apply bg-base-100/80 backdrop-blur-sm;
-}
 
 [data-tag='Support'] {
     @apply bg-cyan-700/40 text-info-content;
@@ -150,10 +114,4 @@ body {
 }
 .inspirationColor {
     --path-color: cyan-700;
-}
-
-@layer base {
-    .hover-effect {
-        @apply cursor-pointer border border-neutral/15 transition-all duration-200 hover:scale-105 hover:border-neutral/60 hover:shadow-[1px_2px_3px_0px_#00000054];
-    }
 }

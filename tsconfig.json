@@ -3,7 +3,9 @@
         "src/**/*.ts",
         "src/**/*.vue",
         "src/**/*.d.ts",
-        "auto-imports.d.ts"
+        "auto-imports.d.ts",
+        "types.d.ts",
+        "src/assets/animation/bouncy.js"
     ],
     "exclude": [
         "node_modules",
@@ -13,9 +15,6 @@
         "baseUrl": ".",
         "moduleResolution": "Bundler",
         "module": "ES2022",
-        "types": [
-            "unplugin-vue-router/client"
-        ],
         "lib": [
             "es2020",
             "dom"

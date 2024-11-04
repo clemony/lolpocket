@@ -66,8 +66,8 @@ const onImageError = (event: Event) => {
                 " :name="'r' + props.set + rune.tier" @change="rs.updateCurrentSetRunes()" class="peer hidden"
                 :disabled="rune.path == 'none'" />
 
-            <VDropdown theme="detail" :triggers="['hover']" :popperTriggers="['hover']" :delay="{ show: 1000, hide: 0 }"
-                :disabled="rune.path == 'none'" id="imgwrap"
+            <VDropdown theme="default" :triggers="['hover']" :popperTriggers="['hover']"
+                :delay="{ show: 1000, hide: 0 }" :disabled="rune.path == 'none'" id="imgwrap"
                 class="h-[inherit] w-[inherit] opacity-80 brightness-90 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 peer-checked:opacity-100 peer-checked:brightness-100 peer-checked:grayscale-0">
                 <div class="overflow-hidden rounded-full">
                     <img :src="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
