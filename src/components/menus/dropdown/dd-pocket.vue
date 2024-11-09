@@ -1,17 +1,8 @@
 <script setup lang="ts">
-import { computed } from 'vue'
 import { pocket } from 'types'
 import { useSessionStore } from '@stores/sessionStore'
 import { usePocketStore } from '@stores/pocketStore'
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-
+import { duplicatePocket } from '@lib/functions/PocketUtilities'
 const ps = usePocketStore()
 const sn = useSessionStore()
 
@@ -50,16 +41,19 @@ const starred = ['']
 <!------------------------⟢ menu ⟣------------------------->
 
 <template>
-<DropdownMenuContent v-if="pocket" class='w-[--radix-dropdown-menu-trigger-width]'>
+<DropdownMenuContent v-if="pocket" class='w-[--radix-dropdown-menu-trigger-width]  [&_svg]:size-4.5'>
     <slot name="first" />
 
     <DropdownMenuItem>
-        <label class="flex size-full gap-3">
+        <label class="flex size-full gap-2.5">
             <input type="checkbox" v-model="pocket.pinned" class="hidden" />
-            <icon v-if="pocket.pinned == true" icon="iconoir:pin-solid" class="size-3.5" />
-            <icon v-else icon="iconoir:pin" class="size-3.5" />
+            <icon v-if="pocket.pinned == true" icon="iconoir:pin-solid" class="" />
+            <icon v-else icon="iconoir:pin" class="size-4" />
             {{ pinText }}
         </label>
+        <DropdownMenuShortcut>
+            <icon icon="ph:option-bold" /> P
+        </DropdownMenuShortcut>
     </DropdownMenuItem>
 
     <DropdownMenuItem @click.stop="doThis()">
@@ -67,21 +61,30 @@ const starred = ['']
 
 
 
-            <icon icon="ep:edit" class="size-3.5" />
+            <icon icon="ep:edit" class="" />
             <span class="-ml-[1px] capitalize"> Edit {{ props.type }}</span>
         </DialogTrigger>
+        <DropdownMenuShortcut>
+            <icon icon="ph:option-bold" /> E
+        </DropdownMenuShortcut>
     </DropdownMenuItem>
 
     <DropdownMenuSeparator />
 
-    <DropdownMenuItem @click="ps.duplicatePocket(pocket)" class='gap-3'>
-        <icon icon="radix-icons:copy" class="size-3.5" />
+    <DropdownMenuItem @click="duplicatePocket(pocket)" class='gap-3'>
+        <icon icon="radix-icons:copy" class="=" />
         <span class="-ml-[1px]">Duplicate</span>
+        <DropdownMenuShortcut>
+            <icon icon="ph:option-bold" /> C
+        </DropdownMenuShortcut>
     </DropdownMenuItem>
 
     <DropdownMenuItem>
-        <icon icon="teenyicons:upload-outline" class="size-3.5" />
+        <icon icon="teenyicons:upload-outline" class="" />
         <span>Export</span>
+        <DropdownMenuShortcut>
+            <icon icon="ph:option-bold" /> X
+        </DropdownMenuShortcut>
     </DropdownMenuItem>
 
     <DropdownMenuSeparator />
@@ -89,8 +92,11 @@ const starred = ['']
     <slot />
 
     <DropdownMenuItem @click="ps.deletePocket(pocket.key)">
-        <icon icon="iconoir:bin-full" class="size-3.5" />
+        <icon icon="iconoir:bin-full" class="" />
         Trash Pocket
+        <DropdownMenuShortcut>
+            <icon icon="ph:option-bold" /> D
+        </DropdownMenuShortcut>
     </DropdownMenuItem>
 </DropdownMenuContent>
 </template>

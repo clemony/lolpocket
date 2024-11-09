@@ -108,7 +108,7 @@ watch(
 <VueDraggable ref="el" :group="{ name: 'items', pull: 'clone', put: false, revertClone: true }" :sort="false"
     :bubbleScroll="false" :scroll="false" v-model="sfi" ghostClass="ghosty" :delay="0" :animation="300"
     :force-fallback="true" :fallbackTolerance="0" fallbackClass="drag-clone" :fallbackOnBody="true" @remove=""
-    class="drag-draggable content-start items-start justify-around px-2 pb-4 pt-12 scrollbar-hide">
+    class="drag-draggable content-start items-start justify-around  py-4 scrollbar-hide">
     <TransitionGroup name="pop">
 
         <template v-auto-animate v-for="item in sfi" :key="item.id">

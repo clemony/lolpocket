@@ -65,7 +65,7 @@ watch(
 
     <div
         class="frost absolute left-0 top-0 z-40 flex !h-fit w-full flex-wrap items-center justify-end gap-4 border-b border-b-base-300 px-2 py-1">
-        <h2 class="sub-text grow justify-start">Rune Sets</h2>
+        <h4 class="!font-semibold grow justify-start">Rune Sets</h4>
         <button class="btn btn-outline btn-xs relative h-full items-center rounded-md border-none font-normal"
             @click="rs.newRuneSet(pocket.key)">
             <Icon icon="teenyicons:add-solid" class="-mt-[2px] size-3 self-center" />

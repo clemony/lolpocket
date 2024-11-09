@@ -54,15 +54,16 @@ onMounted(() => {
 
 <template>
 <div data-tauri-drag-region class='flex mr-24 scrollbar-hide  overflow-x-scroll w-[calc(100%-108px)]'>
-    <div
+    <div data-tauri-drag-region
         class="pt-0.5  !overflow-x-scroll  pointer-events-auto z-10 mr-28  scrollbar-hide  tabs-lifted tabs-sm   !contents ">
         <template v-for="(tab, index) in sn.openTabs" :key="tab.id">
 
-            <a class="group pointer-events-auto z-[5]  m-0 flex flex-nowrap justify-start tab shrink h-[30px] w-32 min-w-32 max-w-min font-medium capitalize before:visible before:-left-[8px] after:visible  mt-0.5"
+            <a class="group pointer-events-auto z-[5]  m-0 flex flex-nowrap justify-start tab gap-1 items-center h-[31px] w-full grow font-medium capitalize  before:-left-[5.5px]  mt-0.5 "
                 :alt="tab.name" :class="{ 'tab-active': sn.isActiveTab(tab.link) }"
                 @click.prevent="navigate(tab, tab.link)">
-                <Icon :icon="tab.icon || 'default-icon'" class="ml-1 mr-2 !size-3.5 shrink-0" />
-                <span class="mt-[2px] w-full min-w-0 max-w-28 justify-start truncate text-start pr-3">{{ tab.title
+                <Icon :icon="tab.icon || 'default-icon'" class="ml-1 mr-2 w-3.5 h-auto  shrink-0 pointer-events-none" />
+                <span class=" grow text-base w-full min-w-0 max-w-36 justify-start truncate text-start pr-3">{{
+                    tab.title
                     }}</span>
 
                 <button
@@ -78,7 +79,7 @@ onMounted(() => {
         </template>
 
         <div role="tab" data-tauri-drag-region
-            class=" pointer-events-none   m-0 flex flex-nowrap justify-start tab  h-[30px] !w-28 min-w-28  mt-0.5">
+            class=" pointer-events-none   m-0 flex flex-nowrap justify-start tab  h-[30px] !w-full shrink min-w-28  mt-0.5">
 
         </div>
         <div role="tabpanel" class='size-full'>
@@ -90,9 +91,7 @@ onMounted(() => {
 /* beautify ignore:start */
 
 
-.layout.tabs {
-    @apply tabs-lifted tabs-lg mx-4;
-}
+
 
 .tabs > .tab-content {
     @apply rounded-box border-base-300 bg-base-100 p-6 shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px];
@@ -105,10 +104,7 @@ onMounted(() => {
 
 .tab-active {
     --shadow-color: oklch(var(--b1) / 0.4);
-    @apply !z-30 bg-base-100 brightness-[96%];
+    @apply !z-30 bg-base-100/90 brightness-[99.5%];
 
-    &::after,
-    &::before {
-        @apply ml-[2.5px];
-    }
+    
 }</style>

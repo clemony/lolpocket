@@ -3,7 +3,6 @@ import { reactive, ref, watch } from 'vue'
 import { useDataStore } from './dataStore'
 import { Item, ItemSet } from '../../types'
 
-import { generateRandomName } from '../lib/keygen'
 import { usePocketStore } from './pocketStore'
 import { hexoid } from 'hexoid'
 
@@ -30,10 +29,10 @@ export const useItemStore = defineStore(
             () => lovedItems.value,
             (newVal) => {
                 if (!newVal.length) {
-                    viewLiked.value = false 
+                    viewLiked.value = false
                 }
             },
-            { immediate: true } 
+            { immediate: true }
         )
 
         function handleLike(thisItem) {
@@ -46,38 +45,6 @@ export const useItemStore = defineStore(
                 }
             } else {
                 lovedItems.value.push(thisItem)
-            }
-        }
-
-        function newSet(pocketKey) {
-            const ps = usePocketStore()
-            const pocket = ps.getPocket(pocketKey)
-
-            if (pocket) {
-                const toID = hexoid()
-                const newSet = reactive({
-                    key: toID(),
-                    name: generateRandomName() + ' Set',
-                    items: [],
-                    isDisabled: false,
-                    starred: 0,
-                })
-
-                pocket.items[0].itemSets.push(newSet)
-            }
-        }
-
-        function deleteSet(pocketKey, key: string) {
-            const ps = usePocketStore()
-            const pocket = ps.getPocket(pocketKey)
-            if (pocket) {
-                const index = pocket.items[0].itemSets.findIndex(
-                    (set) => set.key === key
-                )
-
-                if (index !== -1) {
-                    pocket.items[0].itemSets.splice(index, 1) // Use the index and delete 1 item
-                }
             }
         }
 
@@ -130,8 +97,6 @@ export const useItemStore = defineStore(
         return {
             items,
             itemSets,
-            newSet,
-            deleteSet,
             resetItems,
             sortName,
             sortPrice,

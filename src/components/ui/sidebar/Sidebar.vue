@@ -19,6 +19,7 @@ const props = withDefaults(defineProps<{
 })
 
 const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
+const { toggleSidebar } = useSidebar()
 </script>
 
 <template>
@@ -38,7 +39,7 @@ const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
   </SheetContent>
 </Sheet>
 
-<div v-else class="group peer hidden md:block" :data-state="state"
+<div v-else class="group peer hidden md:block " :data-state="state"
   :data-collapsible="state === 'collapsed' ? collapsible : ''" :data-variant="variant" :data-side="side">
   <!-- This is what handles the sidebar gap on desktop  -->
   <div :class="cn(
@@ -61,9 +62,11 @@ const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
     props.class,
   )" v-bind="$attrs">
     <div data-sidebar="sidebar"
-      class="flex h-full w-full flex-col bg-base-100/70  group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-base-300  group-data-[variant=floating]:shadow">
-      <slot />
+      class="flex h-full w-full flex-col bg-gradient-to-b from-transparent from-[1%] to-base-100/70 to-10% group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-base-300  group-data-[variant=floating]:shadow ">
+      <slot :data-state="state" />
     </div>
   </div>
 </div>
+
+<div data-sidebar="trigger" v-shortkey.once="['meta', 'l']" @shortkey="toggleSidebar()" class='hidden'></div>
 </template>

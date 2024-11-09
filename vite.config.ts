@@ -16,7 +16,14 @@ export default defineConfig({
         vueDevTools(),
         Inspector(),
         Components({
-            dirs: ['src/pages', 'splitpanes', '@iconify/vue', 'src/components', 'src/components/ui'], // Ensure paths are correct
+            dirs: [
+                'src/pages',
+                'splitpanes',
+                '@iconify/vue',
+                'src/components',
+                'src/components/ui',
+                'src/utils',
+            ], // Ensure paths are correct
             extensions: ['vue'],
             deep: true,
             dts: './components.d.ts',
@@ -39,11 +46,11 @@ export default defineConfig({
             ],
             imports: [
                 'vue',
-                 '@vueuse/core',
-                  '@vueuse/head',
+                '@vueuse/core',
+                '@vueuse/head',
                 'vue-i18n',
                 'vue-router',
-              ],
+            ],
 
             dirs: [
                 // ...
@@ -86,7 +93,7 @@ export default defineConfig({
     resolve: {
         alias: {
             '@assets': resolve(__dirname, 'src/assets'),
-             '@components': resolve(__dirname, 'src/assets'),
+            '@components': resolve(__dirname, 'src/assets'),
             '@data': resolve(__dirname, 'src/data'),
             '@lib': resolve(__dirname, 'src/lib'),
             '@logs': resolve(__dirname, 'src/logs'),
@@ -99,21 +106,21 @@ export default defineConfig({
             '@css': resolve(__dirname, 'src/css'),
         },
     },
-  envPrefix: ['VITE_', 'TAURI_ENV_*'],
-  build: {
- rollupOptions: {
+    envPrefix: ['VITE_', 'TAURI_ENV_*'],
+    build: {
+        rollupOptions: {
             input: {
                 main: 'index.html', // Adjust to your entry file
                 // Add additional entry points if needed
             },
         },
-    target:
-      process.env.TAURI_ENV_PLATFORM == 'windows'
-        ? 'chrome105'
-        : 'safari13',
-    // don't minify for debug builds
-    minify: !process.env.TAURI_ENV_DEBUG ? 'esbuild' : false,
-    // produce sourcemaps for debug builds
-    sourcemap: !!process.env.TAURI_ENV_DEBUG,
-  },
+        target:
+            process.env.TAURI_ENV_PLATFORM == 'windows' ?
+                'chrome105'
+            :   'safari13',
+        // don't minify for debug builds
+        minify: !process.env.TAURI_ENV_DEBUG ? 'esbuild' : false,
+        // produce sourcemaps for debug builds
+        sourcemap: !!process.env.TAURI_ENV_DEBUG,
+    },
 })

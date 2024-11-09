@@ -32,9 +32,30 @@ const route = useRoute()
 
         </Dialog>
 
+        <VDropdown theme="hoverdd" :delay="{ show: 400, hide: 200 }" placement="bottom" class=''>
 
 
-        <TableSearch />
+            <label
+                class='hover:cursor-pointer hover:opacity-100  font-medium transition-all group flex gap-1 duration-300 items-center mb-px opacity-60'>
+
+
+
+                <span class=' capitalize  px-1 min-w-max w-max'>
+                    Options
+                </span>
+
+                <ButtonToggle class='pointer-events-none self-center' />
+
+            </label>
+
+
+            <template #popper>
+
+
+            </template>
+        </VDropdown>
+
+
 
         <div class="join">
 
@@ -51,12 +72,14 @@ const route = useRoute()
         </div>
 
     </template>
+    <template #header-end>
+        <span class='mr-2'>
+            <TableSearch />
+        </span>
 
-
-
+    </template>
 
     <template #content>
-
         <GridPockets />
     </template>
 

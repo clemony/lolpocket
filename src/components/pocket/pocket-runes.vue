@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { usePocketStore } from '../../stores/pocketStore'
-import { useSessionStore } from '@stores/sessionStore';
-
+import {
+    ResizablePanel,
+    ResizablePanelGroup,
+} from '@/components/ui/resizable'
 
 const ps = usePocketStore()
 const props = defineProps<{
@@ -31,9 +33,10 @@ const secondary = computed(() => {
 </script>
 
 <template>
-<Splitpanes id="runeSidebarSplit"
+<ResizablePanelGroup direction="horizontal"
     class="default-theme h-[calc(100%-100px)] max-h-[calc(100%-100px)] w-full px-6 pb-4 pt-4">
-    <Pane max-size="100" size="73" min-size="73">
+
+    <ResizablePanel :default-size="73" class='pt-24'>
         <div v-if="selected" class="flex justify-end gap-10 px-10">
             <!-------------------------------- PRIMARY RUNES ------------------------------ */ -->
 
@@ -63,13 +66,14 @@ const secondary = computed(() => {
                 </div>
             </div>
         </div>
-    </Pane>
-    <Pane size="27" max-size="27" min-size="27" class="relative max-h-full">
+    </ResizablePanel>
+    <ResizeHandle with-handle class='mx-3' />
+    <ResizablePanel class="relative max-h-full pt-24">
         <div class="shadow-warm relative overflow-hidden rounded-box border border-base-300 !bg-base-100/90">
             <RuneSets :pocketKey="props.pocketKey" />
         </div>
-    </Pane>
-</Splitpanes>
+    </ResizablePanel>
+</ResizablePanelGroup>
 </template>
 
 <style>

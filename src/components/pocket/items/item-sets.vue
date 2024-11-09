@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { onMounted, ref, computed, reactive, watch } from 'vue'
 import { VueDraggable } from 'vue-draggable-plus'
 import { useItemStore } from '@stores/itemStore'
 import { usePocketStore } from '@stores/pocketStore'
+import { deleteItemSet } from '@lib/functions/PocketUtilities';
+import ItemSetItems from './item-set-items.vue'
+import { generateRandomName } from '@lib/functions/Keygen'
+import { EditableArea, EditableCancelTrigger, EditableEditTrigger, EditableInput, EditablePreview, EditableRoot, EditableSubmitTrigger } from 'radix-vue'
 
-import { ItemSet } from 'types'
-import ItemsetItems from './itemset-items.vue'
-import { generateRandomName } from '@lib/keygen'
 
 const is = useItemStore()
 
@@ -21,6 +21,11 @@ const pocketKey = props.pocketKey
 const pocket = ps.getPocket(pocketKey)
 
 const items = ref<any[]>([])
+
+const start = ref(pocket.items[0].start[0])
+const core = ref(pocket.items[0].core[0])
+
+const final = ref(pocket.items[0].final[0])
 
 if (pocket) {
     watch(
@@ -67,18 +72,29 @@ const submitAndClose = (key) => {
     dropdownShown[key] = false
 }
 
-const suggestions = [
-    'Early',
-    'Mid',
-    'Late',
-    'Core',
-    'Offensive',
-    'Defensive',
-    'Utility',
-    'DPS',
-    'Burst',
-    'Situational',
-]
+function clear(set) {
+    if (set == core) {
+        core.value = null
+    } else if (set == start) {
+        start.value = null
+    } else if (set == final) {
+        final.value = null
+    }
+}
+
+function startChange(set, event) {
+    event.target.value == true ? pocket.items[0].final[0] = set : pocket.items[0].start[0] = null
+}
+
+function coreChange(set, event) {
+    event.target.value == true ? pocket.items[0].core[0] = set : pocket.items[0].core[0] = null
+}
+
+function finalChange(set, event) {
+    event.target.value == true ? pocket.items[0].final[0] = set : pocket.items[0].final[0] = null
+}
+
+const prevIndex = 0
 
 </script>
 
@@ -86,10 +102,29 @@ const suggestions = [
 <VueDraggable v-if="pocket" tag="div" v-model="pocket.items[0].itemSets" :delay="0" :animation="300"
     :group="{ name: 'sets' }" :prevent-on-filter="true" ghostClass="ghost" :force-fallback="true"
     @end="updateStarredIndex" :fallbackTolerance="0" fallbackClass="drag-clone" :fallbackOnBody="true"
-    class="z-0 h-full">
-    <div v-for="(set, index) in pocket.items[0].itemSets" dragClass="setDrag" class="grid px-1 pt-1" :key="set.key">
-        <div class="mt-1 flex h-10 items-center gap-3 px-1">
-            <VDropdown theme="default" class="" v-model:shown="dropdownShown[set.key]">
+    class="z-0 h-full pt-24 flex flex-col gap-4">
+    <InfoCard v-for="(set, index) in pocket.items[0].itemSets" dragClass="setDrag" :key="set.key" headerClass="pb-2"
+        :open="false">
+
+        <template #header>
+
+
+            <!--                 <label class="group/star items-center cursor-pointer  *:transition-all *:duration-300  size-3 relative">
+                    <input type="radio" name="starSet" :value="index" class="peer hidden"
+                        v-model="pocket.items[0].starred" @change="prevIndex = pocket.items[0].starred"
+                        :checked="pocket.items[0].starred == index" />
+                    <icon icon="iconoir:star-dashed" class="absolute z-10 opacity-30 group-hover/star:opacity-15 " />
+                    <icon v-if="pocket.items[0].starred == index" icon="iconoir:star-solid"
+                        class="absolute   text-yellow-300 group-hover/star:opacity-70  animate-in zoom-in-0 spin-in-90  duration-300"
+                        :class="{
+                            'slide-in-from-bottom-60': prevIndex > index,
+                            'slide-in-from-top-60': prevIndex < index
+                        }" />
+                </label> -->
+
+
+
+            <VDropdown theme="default" placement="bottom-start" :skidding="-5" v-model:shown="dropdownShown[set.key]">
                 <button class="self-center  capitalize opacity-60">
                     {{ set.name }}
                 </button>
@@ -98,41 +133,24 @@ const suggestions = [
                     <div class="grid gap-2 rounded-lg">
                         <div class="relative overflow-hidden border-b border-base-300 p-1.5">
                             <input type="text"
-                                class="peer input-xs w-full select-all rounded bg-transparent pt-1 capitalize italic opacity-80 focus:not-italic focus:opacity-100"
+                                class="peer input-xs w-full select-all rounded bg-transparent pt-1 focus:outline-0 capitalize italic opacity-80 focus:not-italic focus:opacity-100"
                                 spellcheck="false" :placeholder="set.name" @keyup.enter="submitAndClose" />
 
                             <icon icon="ri:edit-fill"
                                 class="absolute right-2.5 top-[11px] size-3.5 opacity-50 peer-focus:opacity-0" />
+                            <Button variant="ghost"
+                                class="absolute right-2.5 top-[11px] size-3.5 opacity-0 peer-focus:opacity-100">
+                                <icon icon="teenyicons:x-small-outline" />
+                            </Button>
                         </div>
 
-                        <div class="flex max-w-44 flex-wrap gap-2 px-2 pb-3">
-                            <button v-close-popper v-for="word in suggestions"
-                                class="badge badge-neutral badge-sm  capitalize hover:badge-ghost"
-                                @click="set.name = word">
-                                {{ word }}
-                            </button>
-                            <button v-close-popper
-                                class="gradient badge badge-sm  capitalize ![background-size:100%] hover:badge-ghost"
-                                @click="
-                                    set.name = generateRandomName() + ' Set'
-                                    ">
-                                Random
-                            </button>
-                        </div>
+
                     </div>
                 </template>
             </VDropdown>
-            <span class="h-1/2 grow self-start border-b border-base-300"></span>
+            <span class="h-1/2 grow self-center border-b border-base-300"></span>
 
-            <label
-                class="group/star relative grid h-full w-4 cursor-pointer place-content-center *:h-full *:transition-all *:duration-300">
-                <input type="radio" name="starSet" :value="index" class="peer hidden" v-model="pocket.items[0].starred"
-                    @change="console.log(pocket.items[0].starred)" :checked="pocket.items[0].starred == index" />
-                <icon icon="iconoir:star-dashed"
-                    class="absolute z-10 opacity-20 group-hover/star:opacity-15 peer-checked:opacity-20" />
-                <icon icon="iconoir:star-solid"
-                    class="absolute z-0 text-yellow-400 opacity-0 group-hover/star:text-yellow-300 group-hover/star:opacity-70 peer-checked:opacity-80" />
-            </label>
+
 
             <VDropdown theme="default" placement="left-start" class="arrow">
                 <button class="group/menu relative flex size-4 items-center justify-center">
@@ -155,7 +173,7 @@ const suggestions = [
                             <div class="border-b border-base-200"></div>
                             <button
                                 class="group/trash btn btn-ghost btn-xs relative flex items-center !justify-start gap-3 px-3  hover:bg-base-200 disabled:cursor-not-allowed disabled:bg-transparent"
-                                alt="Delete Set" @click="is.deleteSet(pocket.key, set.key)"
+                                alt="Delete Set" @click="deleteItemSet(pocket.key, set.key)"
                                 :disabled="is.itemSets.length == 1">
                                 <icon icon="iconoir:bin-full"
                                     class="-ml-1 size-4 object-center group-disabled/trash:opacity-0" />
@@ -167,10 +185,64 @@ const suggestions = [
                     </div>
                 </template>
             </VDropdown>
-        </div>
 
-        <ItemsetItems :pocketKey="pocketKey" :set="set" />
-    </div>
+        </template>
+
+        <template #description>
+            <div class='flex gap-2.5 mt-3  items-center flex-wrap'>
+
+                <Badge size="sm" class="shadow-sm gradient border-none text-white ![background-size:100%] " @click="
+                    set.name = generateRandomName() + ' Set'">
+                    <icon icon="fa-solid:question" class='drop-shadow-soft' />
+                </Badge>
+
+
+            </div>
+
+            <div class='flex gap-2.5 mt-3 items-center'>
+                <p>Type:</p>
+                <label>
+                    <Badge :variant="set == pocket.items[0].start[0] ? 'inspiration' : 'outline'" size="sm"
+                        class=' cursor-pointer font-semibold '>
+                        Start
+
+
+                    </Badge>
+                    <input type="radio" name="set-type" @change="pocket.items[0].start[0] = set" class='hidden'
+                        :value="set" />
+                </label>
+                <label>
+                    <Badge :variant="set == pocket.items[0].core[0] ? 'precision' : 'outline'" size="sm"
+                        class='cursor-pointer  font-semibold'>
+                        Core
+
+                        <input type="radio" name="set-type" @change="coreChange(set, $event)" class='hidden'
+                            :value="set" />
+
+                    </Badge>
+                </label>
+                <label>
+                    <Badge :variant="set == pocket.items[0].final[0] ? 'resolve' : 'outline'" size="sm"
+                        class='cursor-pointer font-semibold'>
+                        Complete</Badge>
+                    <input type="checkbox" :true-value="set" @change="finalChange(set, $event)" class='hidden'
+                        :value="set" />
+                </label>
+
+
+
+
+                <Badge size="sm" :variant="set != pocket.items[0].final[0]
+                    && set != pocket.items[0].core[0]
+                    && set != pocket.items[0].start[0] ? 'default' : 'outline'" class=' cursor-pointer  font-medium '
+                    @click="clear(set)">
+                    none
+                </Badge>
+            </div>
+        </template>
+
+        <ItemSetItems :pocketKey="pocketKey" :set="set" />
+    </InfoCard>
 </VueDraggable>
 </template>
 

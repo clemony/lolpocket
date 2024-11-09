@@ -11,12 +11,12 @@ const props = defineProps<{
 <template><!-- <TransitionGroup @enter="imageIn" name="fade" @leave="imageOut"> -->
 
 <VDropdown :triggers="['click']" :overflow-padding="20" :shift="true" theme="default" :key="props.item.id" :distance="6"
-    @click.right.prevent="" :ref="props.item.name" class="relative basis-16">
+    @click.right.prevent="" :ref="props.item.name" class="relative basis-14">
 
     <label class="drag-label">
-        <div class="drag-wrapper shadow-warm">
-            <img :key="props.item.id" :src="`/img/items/${props.item.id}.webp`" :alt="props.item.name + ' Image'"
-                class="drag-img" />
+        <div class="drag-wrapper has-[div.img-loaded]:shadow-standard">
+            <LoadImg :key="props.item.id" :url="`/img/items/${props.item.id}.webp`" :alt="props.item.name + ' Image'"
+                class="drag-img size-[52px]" />
         </div>
     </label>
     <template #popper :key="props.item.name + 'Pop'" auto-boundary-max-size shift-cross-axis>

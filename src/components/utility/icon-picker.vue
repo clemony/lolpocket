@@ -11,7 +11,6 @@ const props = defineProps<{
     pocketKey?: string
 }>()
 
-const iconTabs = ref('icon')
 const selectedIcon = ref('teenyicons:folder-outline')
 const bgColor = ref('')
 const iconColor = ref('')

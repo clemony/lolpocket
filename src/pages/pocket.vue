@@ -1,9 +1,10 @@
 <script setup lang="ts">
-
+import { scrollToSection } from '@/lib/functions/Navigation'
 import { usePocketStore } from './../stores/pocketStore'
 import { useSessionStore } from '@stores/sessionStore'
 
 import { defineAsyncComponent } from 'vue'
+import { log } from 'console';
 
 const Dashboard = defineAsyncComponent(() =>
     import('../components/pocket/pocket-dashboard.vue')
@@ -31,40 +32,6 @@ const ps = usePocketStore();
 const sn = useSessionStore();
 
 const pocket = ref(ps.getPocket(props.pocketKey))
-
-const route = useRoute()
-const matchedPath = computed(() => route.name)
-
-const cleanPath = computed(() => {
-    matchedPath.toString() == '' ? 'Dashboard' : matchedPath.toString()
-});
-
-
-console.log('match', matchedPath.value)
-console.log(route)
-
-const links = [
-    {
-        name: 'Dashboard',
-        link: '#dashboard',
-        icon: 'heroicons:squares-2x2-16-solid',
-    },
-    {
-        name: 'Champions',
-        link: '#champions',
-        icon: 'teenyicons:user-circle-outline',
-    },
-    {
-        name: 'Items',
-        link: '#items',
-        icon: '',
-    },
-    {
-        name: 'Runes',
-        link: '#runes',
-        icon: '',
-    },
-]
 
 
 
@@ -94,7 +61,7 @@ const itemsIsVisible = useElementVisibility(items)
 const runesIsVisible = useElementVisibility(runes)
 
 const currentVisible = ref(null) // Will store the name of the visible element
-
+const currentRef = ref(dashboard)
 
 // Group refs, visibility states, and names
 const els = [
@@ -113,12 +80,11 @@ const els = [
     },
     {
         ref: items,
-        isVisible:
-            itemsIsVisible,
+        isVisible: itemsIsVisible,
         name: 'items',
         trigger: true,
         type: 'item',
-        data: pocket.value.items[0].itemSets
+        data: pocket.value.items[0].itemSets,
     },
     {
         ref: runes,
@@ -145,6 +111,14 @@ els.forEach(({ ref, isVisible, name }) => {
     )
 })
 
+watch(
+    () => pocket.value.component,
+    (newVal) => {
+        console.log(newVal);
+
+    }
+)
+
 onBeforeRouteUpdate(async (to, from) => {
     if (to.params.pocketKey !== from.params.pocketKey) {
         pocket.value = await (ps.getPocket(to.params.pocketKey))
@@ -160,13 +134,6 @@ onBeforeRouteUpdate(async (to, from) => {
     }
 })
 
-function scrollToSection(el) {
-    var targetElement = ref(el)
-
-    if (targetElement) {
-        targetElement.value.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
-    }
-}
 
 const headers = [
     { name: 'dashboard', letters: ['d', 'a', 's', 'h', 'b', 'o', 'a', 'r', 'd'] },
@@ -208,7 +175,8 @@ const letters = computed(() => {
                 </label>
             </span>
 
-            <VDropdown v-else theme="hoverdd" :delay="{ show: 400, hide: 200 }" placement="bottom" class=''>
+            <VDropdown v-else theme="hoverdd" :delay="{ show: 400, hide: 200 }" placement="bottom" class=''
+                no-auto-focus>
 
 
                 <label @click="scrollToSection(el.ref)"
@@ -240,24 +208,25 @@ const letters = computed(() => {
 
     <template #indicator>
         <div class=' -top-px self-start flex absolute transition-all duration-500 opacity-80' :class="{
-            'translate-x-[13px]': pocket.component == 'dashboard',
-            'translate-x-[123px]': pocket.component == 'champions',
-            'translate-x-[248px]': pocket.component == 'items',
-            'translate-x-[342px]': pocket.component == 'runes'
+            'translate-x-[11px]': pocket.component == 'dashboard',
+            'translate-x-[110px]': pocket.component == 'champions',
+            'translate-x-[221px]': pocket.component == 'items',
+            'translate-x-[301px]': pocket.component == 'runes'
         }">
             <icon icon="fluent:line-horizontal-1-24-regular" class='size-3 -mt-1' />
         </div>
     </template>
 
     <template #header-end>
-        <div class='flex h-full absolute right-4'>
+        <div class='flex h-full absolute  py-1 right-4 mb-3'>
             <PocketButton :pocket="pocket" />
         </div>
     </template>
 
 
     <template #content>
-        <div id='pocket-contents' class=" carousel mt-5 w-full h-full overflow-y-hidden overflow-x-scroll">
+        <div id='pocket-contents'
+            class=" carousel  w-[98%] h-full justify-self-center  overflow-y-hidden overflow-x-scroll ">
             <a class="carousel-item w-full max-w-full relative" ref="dashboard" id="dashboard">
                 <Dashboard :pocketKey="pocket.key" :key="pocket.key" />
             </a>

@@ -3,12 +3,25 @@ const scrollbarhide = require('tailwind-scrollbar-hide')
 /*const colors = require("tailwindcss/colors");*/
 const path = require('path')
 const daisyui = require('daisyui')
+const plugin = require('tailwindcss/plugin')
+
 const containerQueries = require('@tailwindcss/container-queries')
 import { mask } from '@windwards/plugin-mask'
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    plugins: [animate, scrollbarhide, daisyui, containerQueries, mask()],
+    plugins: [
+        animate,
+        scrollbarhide,
+        daisyui,
+        containerQueries,
+        mask(),
+        plugin(function ({ addBase }) {
+            addBase({
+                html: { fontSize: '12px' },
+            })
+        }),
+    ],
 
     darkMode: ['class'],
     safelist: ['dark'],
@@ -29,6 +42,7 @@ module.exports = {
             serif: ['Roboto Serif Variable', 'serif'],
             mono: ['Geist Mono', 'monospace'],
         },
+
         extend: {
             colors: {
                 blues: '#7195AD',
@@ -47,13 +61,13 @@ module.exports = {
                 18: '4.5rem',
             },
             fontSize: {
-                xxs: '0.599rem',
-                mini: '0.66rem',
-                sub: '0.81rem',
+                md: ['1.075rem', { lineHeight: '1.5rem' }],
             },
             transitionProperty: {
                 height: 'height',
                 width: 'width',
+                'max-h': 'max-height',
+                'max-w': 'max-width',
             },
             height: {
                 stretch: 'stretch',

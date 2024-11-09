@@ -1,23 +1,30 @@
 :root {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
 
-.sub-text {
-    @apply text-sub font-medium tracking-tight;
+    h1 {
+        @apply text-2xl font-semibold;
+    }
+    h2 {
+        @apply text-xl font-semibold;
+    }
+    h3 {
+        @apply text-lg font-semibold;
+    }
+    h4 {
+        @apply text-md font-medium;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        @apply leading-none tracking-tight;
+    }
 }
 
 .font-sans {
-    font-family:
-        'Geist Sans',
-        BlinkMacSystemFont,
-        system-ui,
-        -apple-system,
-        'Segoe UI',
-        Roboto,
-        'Open Sans',
-        'Helvetica Neue',
-        sans-serif !important;
+    font-family: 'Geist Sans', sans-serif !important;
 }
 
 /* geist-sans-latin-300-normal */

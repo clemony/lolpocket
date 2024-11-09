@@ -7,6 +7,7 @@ import pocketTableItems from './table-items.vue'
 import pocketTableRunes from './table-runes.vue'
 import tableDate from './table-date.vue'
 import TableCheckbox from './table-checkbox.vue'
+import TableHeader from './table-header.vue'
 import TableCheckboxHeader from './table-checkbox-header.vue'
 import { AgGridVue } from 'ag-grid-vue3'
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '@/components/ui/resizable'
@@ -17,6 +18,7 @@ const ps = usePocketStore()
 
 defineExpose({
     TableName,
+    TableHeader,
     pocketTableItems,
     PocketTableChamps,
     pocketTableRunes,
@@ -26,51 +28,49 @@ defineExpose({
     TableCheckbox
 })
 
-
-
 const gridApi = shallowRef()
 const pinnedApi = shallowRef()
-
-const onGridReady = (params) => {
-    gridApi.value = params.api
-    params.api.setGridOption('rowData', ps.rowData)
-}
-
-const onPinnedReady = (params) => {
-    pinnedApi.value = params.api
-    params.api.setGridOption('rowData', ps.pinnedRowData)
-}
 
 const pocketGrid = ref()
 const pinnedGrid = ref()
 
+const rowData = ref(ps.rowData)
+const pinnedData = ref(ps.pinnedRowData)
+
+const pinnedTopRowData = ref(null)
+const pinnedPinnedTopRowData = ref(null)
+
+const isFullWidthRow = ref(null)
+const getRowHeight = ref(null)
+
+const onGridReady = (params) => {
+    gridApi.value = params.api
+    params.api.setGridOption('rowData', rowData.value)
+
+    console.log(ps.rowData);
+}
+
+const onPinnedReady = (params) => {
+    pinnedApi.value = params.api
+    params.api.setGridOption('rowData', pinnedData.value)
+}
+
 const gridOptions = {
     gridId: 'pocketGrid',
-    quickFilterText: '',
-    defaultColDef,
-    onGridReady: onGridReady,
-    rowData: ps.rowData,
-    getRowId: (params) => {
-        return params.data.key
-    },
     alignedGrids: () => [pinnedGrid.value],
-    noRowsOverlayComponent: CustomNoRowsOverlay,
-    noRowsOverlayComponentParams: {},
+
+    // getRowHeight: (params) => params.data.fullWidth ? 75 : undefined, // Custom height for full-width row
 }
+
 
 const pinnedOptions = {
     gridId: 'pinnedGrid',
-    quickFilterText: '',
-    defaultColDef,
-    onGridReady: onPinnedReady,
-    rowData: ps.pinnedRowData,
-    getRowId: (params) => {
-        return params.data.key
-    },
     alignedGrids: () => [pocketGrid.value],
-    noRowsOverlayComponent: CustomNoRowsOverlay,
-    noRowsOverlayComponentParams: {},
+
+    // getRowHeight: (params) => params.data.fullWidth ? 75 : undefined, // Custom height for full-width row
 }
+
+
 
 const filterText = computed(() => ps.filterText)
 
@@ -140,24 +140,21 @@ watch(
 )
 
 
+
 </script>
 
 <template>
-<ResizablePanelGroup direction="vertical">
+<ResizablePanelGroup direction="vertical" class='h-full pt-[70px]' auto-save-id="gs.pocketGridSize">
 
-    <ResizablePanel :default-size='30'>
-
-
-
-
+    <ResizablePanel :minSize="8" collapsible :collapsed-size="3.5">
 
         <ag-grid-vue :theme="pocketTheme" class="h-full items-center !rounded-none bg-transparent " ref="pinnedGrid"
-            @grid-ready="onPinnedReady" :columnDefs="columnDefs" :gridOptions="pinnedOptions"
-            :rowData="ps.pinnedRowData" @selection-changed="onSelectionChanged" :getRowId="getRowId"
-            :rowSelection="rowSelection" :defaultColDef="defaultColDef" :suppressHorizontalScroll="false"
-            :autoSizeStrategy="autoSizeStrategy" :cacheQuickFilter="true" :quickFilterParser="quickFilterParser"
-            :quickFilterMatcher="quickFilterMatcher" />
-
+            @grid-ready="onPinnedReady" :columnDefs="columnDefs" :gridOptions="pinnedOptions" :rowData="pinnedData"
+            @selection-changed="onSelectionChanged" :getRowId="getRowId" :rowSelection="rowSelection"
+            :defaultColDef="defaultColDef" :suppressHorizontalScroll="false" :autoSizeStrategy="autoSizeStrategy"
+            :cacheQuickFilter="true" :quickFilterParser="quickFilterParser" :quickFilterMatcher="quickFilterMatcher"
+            :isFullWidthRow="isFullWidthRow" :pinnedTopRowData="pinnedPinnedTopRowData"
+            :fullWidthCellRenderer="TableHeader" :noRowsOverlayComponent="CustomNoRowsOverlay" />
 
 
     </ResizablePanel>
@@ -165,13 +162,14 @@ watch(
     <ResizableHandle class=' border-y border-y-base-200 !h-4 !justify-start px-4'>
         <Label>General Pockets</Label>
     </ResizableHandle>
-    <ResizablePanel :default-size='70'>
-        <ag-grid-vue :theme="pocketTheme" class="bottom-grid h-full items-center !rounded-none bg-transparent "
+    <ResizablePanel :defaultSize='80' collapsible :collapsed-size="5" :minSize="20">
+        <ag-grid-vue :theme="pocketTheme" class="bottom-grid h-[93%] items-center !rounded-none bg-transparent "
             ref="pocketGrid" @grid-ready="onGridReady" :columnDefs="columnDefs" :gridOptions="gridOptions"
-            :rowData="ps.rowData" @selection-changed="onSelectionChanged" :getRowId="getRowId"
-            :rowSelection="rowSelection" :defaultColDef="defaultColDef" :suppressHorizontalScroll="false"
-            :autoSizeStrategy="autoSizeStrategy" :cacheQuickFilter="true" :quickFilterParser="quickFilterParser"
-            :quickFilterMatcher="quickFilterMatcher" />
+            :rowData="rowData" @selection-changed="onSelectionChanged" :getRowId="getRowId" :rowSelection="rowSelection"
+            :defaultColDef="defaultColDef" :suppressHorizontalScroll="false" :autoSizeStrategy="autoSizeStrategy"
+            :cacheQuickFilter="true" :quickFilterParser="quickFilterParser" :quickFilterMatcher="quickFilterMatcher"
+            :isFullWidthRow="isFullWidthRow" :pinnedTopRowData="pinnedTopRowData" :fullWidthCellRenderer="TableHeader"
+            :noRowsOverlayComponent="CustomNoRowsOverlay" />
 
 
     </ResizablePanel>

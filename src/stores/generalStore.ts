@@ -9,11 +9,13 @@ export const useGeneralStore = defineStore(
         const dataTheme = ref('lightminimalist')
         const dataAccent = ref('minimalist')
         const ds = useDataStore()
-    const app = ref()
+        const app = ref()
         const isMinimized = ref(false)
         const firstPane = ref(17)
         const secondPane = ref(83)
         const sidebar = ref()
+
+        const pocketGridSize = ref()
 
         const reducedMotion = ref()
 
@@ -28,8 +30,6 @@ export const useGeneralStore = defineStore(
             //console.log(`Mode changed to: ${newMode}`);
         })
 
-
-
         return {
             dataTheme,
             dataMode,
@@ -39,7 +39,8 @@ export const useGeneralStore = defineStore(
             firstPane,
             secondPane,
             sidebar,
-            app
+            app,
+            pocketGridSize,
         }
     },
     {

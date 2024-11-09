@@ -82,7 +82,7 @@ const filteredItems = computed(() => {
             class="relative max-h-[64px] max-w-[64px]">
             <label class="drag-label !overflow-hidden">
                 <div class="drag-wrapper !overflow-hidden">
-                    <img :src="`/img/items/${item.id}.webp`" class="drag-img" />
+                    <LoadImg :url="`/img/items/${item.id}.webp`" class="drag-img size-[52px]" />
 
                     <!--   <div :key="item.id + 'Count'" :class="{ '!opacity-85': item.count > 1 }"
                             class="absolute rounded-full bg-primary text-primary-content z-30 -right-1.5 -top-1.5 size-6 flex place-items-center place-content-center font-mono opacity-0 text-sm shadow-warm overflow-hidden">
@@ -97,12 +97,14 @@ const filteredItems = computed(() => {
     </template>
 
     <QuickSearch v-if="!props.limit || (props.limit && set.items.length < 6)" :array="filteredItems"
-        v-model:quickSearch="quickSearch" v-model:returnData="returnData" v-model:thisSet="set.key" type="items" />
+        v-model:quickSearch="quickSearch" v-model:returnData="returnData" v-model:thisSet="set.key" type="items"
+        :size="54" />
 
     <!-- Additional QuickSearch Components to Ensure 6 Total -->
     <template v-if="props.limit">
         <QuickSearch v-for="index in additionalQuickSearchCount" :key="'quicksearch-' + index" :array="filteredItems"
-            v-model:quickSearch="quickSearch" v-model:returnData="returnData" v-model:thisSet="set.key" type="items" />
+            v-model:quickSearch="quickSearch" v-model:returnData="returnData" v-model:thisSet="set.key" type="items"
+            :size="54" />
     </template>
 </VueDraggable>
 </template>

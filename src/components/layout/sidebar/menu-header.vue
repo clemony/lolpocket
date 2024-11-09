@@ -1,80 +1,97 @@
 <script setup lang="ts">
 import { useGeneralStore } from '@stores/generalStore'
 const gs = useGeneralStore();
+import { NPobj } from '@/data/dialog-pop'
+import { useSidebar } from '@/components/ui/sidebar/utils'
+
+const props = defineProps<{
+    open: boolean
+}>()
+
+const state = ref(props.open)
+const emit = defineEmits(['update:state'])
+function toggleState(obj) {
+    if (state.value == false) {
+        state.value = true
+        emit('update:state', obj)
+    }
+}
+
+
+
+
+const sidebar = useSidebar()
+const { toggleSidebar } = useSidebar()
+const sidebarState = sidebar.state
 </script>
 
 <template>
 <SidebarHeader>
     <SidebarMenu :ref="gs.sidebar">
         <SidebarMenuItem>
-            <Dialog>
-                <DropdownMenu>
-                    <DropdownMenuTrigger as-child>
-                        <SidebarMenuButton size="md"
-                            class="data-[state=open]:bg-base-100/70 -ml-1 data-[state=open]:text-base-content data-[state=closed]:ring-0">
-                            <div
-                                class="flex aspect-square size-6 items-center justify-center rounded-md bg-neutral text-neutral-content text-xl">
 
-                                LP
-                            </div>
-                            <div class="grid flex-1 text-left text-sm leading-tight">
-                                <span class="truncate font-semibold !text-base">lolpockets</span>
+            <DropdownMenu>
 
-                            </div>
-                            <icon icon="teenyicons:caret-vertical-small-outline" class=" ml-auto" />
-                        </SidebarMenuButton>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent class="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
-                        align="start" side="bottom" :side-offset="4">
+                <DropdownMenuTrigger as-child class='py-3'>
+                    <SidebarMenuButton variant="ghost" size="md"
+                        class="!border-0 flex gap-3 pr-2.5 items-center  h-full data-[state=open]:!ring-1 data-[state=open]:!ring-base-300/40 data-[state=open]:shadow-sm !ring-0 focus:!ring-1 focus:!outline-0 focus:!ring-base-200 focus:!border-0 flex-nowrap">
+                        <div
+                            class="flex aspect-square size-8 items-center justify-center rounded-md bg-neutral text-neutral-content/90">
 
-                        <DropdownMenuItem class='hover:bg-transparent data-[highlighted]:bg-transparent '>
-                            <div class="relative w-full max-w-sm items-center max-h-8 ">
-                                <Input id="search" type="text" placeholder="Search..." @click.stop
-                                    class="pl-10 !max-h-8 !h-8 bg-base-100/80" />
-                                <span class="absolute start-0 inset-y-0 flex items-center justify-center px-2 7">
-                                    <icon icon="teenyicons:search-outline" class="h-5 text-base-content/80" />
-                                </span>
-                            </div>
-                        </DropdownMenuItem>
-                        <DropdownMenuSeparator />
+                            <h4>LP</h4>
+                        </div>
+                        <div class="grid flex-1 text-left  leading-tight">
+                            <h2>lolpockets</h2>
 
+                        </div>
+                        <icon icon="teenyicons:caret-vertical-small-outline" class=" ml-auto !size-5" />
+                    </SidebarMenuButton>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent class="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg last:mb-1"
+                    align="start" side="bottom" :side-offset="4">
 
+                    <DropdownMenuItem class='hover:bg-transparent data-[highlighted]:bg-transparent '>
+                        <Button variant="outline"
+                            class="relative hover:cursor-text w-full justify-start px-2 items-center max-h-9 bg-base-100/80">
+                            <span class="inset-y-0 justify-self-start flex items-center justify-center">
+                                <icon icon="teenyicons:search-outline" class=" text-base-content/80" />
+                            </span>
+                            <span class='grow text-left px-2 pt-0.5 text-base-content/80 align-end'>Search...</span>
+                            <DropdownMenuShortcut>
+                                ⌘ K
+                            </DropdownMenuShortcut>
+                        </Button>
+                    </DropdownMenuItem>
+                    <DropdownMenuSeparator />
 
-                        <DropdownMenuItem class="gap-2 p-2">
+                    <DropdownMenuGroup class='font-medium *:text-sm [&_svg]:size-5  [&_>div]:gap-4 mr-0.5 px-1.5'>
 
+                        <DropdownMenuItem class="" @click="toggleState(NPobj)">
+                            <icon icon="teenyicons:folder-plus-outline" class="size-3.5" />
+                            New Pocket
 
-
-
-                            <DialogTrigger class='flex items-center gap-2'>
-                                <div class="flex size-6 items-center justify-center rounded-md">
-                                    <icon icon="teenyicons:folder-plus-outline" class="size-4" />
-                                </div>
-                                <div class="font-medium text-muted-foreground">
-                                    New Pocket
-                                </div>
-
-                            </DialogTrigger>
-
-
+                            <DropdownMenuShortcut>
+                                ⌘ N
+                            </DropdownMenuShortcut>
                         </DropdownMenuItem>
 
+                        <DropdownMenuItem class="" data-sidebar="trigger" @click="toggleSidebar">
+                            <icon v-if="sidebarState == 'expanded'" icon="teenyicons:send-left-outline"
+                                class="size-3" />
+                            <icon v-if="sidebarState == 'collapsed'" icon="teenyicons:send-right-outline"
+                                class="size-3" />
 
+                            {{ sidebarState == 'expanded' ? 'Collapse Sidebar' : 'Expand Sidebar' }}
 
-
-
-
-
-                        <DropdownMenuItem>
-                            <SidebarTrigger class="-ml-1" />
+                            <DropdownMenuShortcut>
+                                ⌘ L
+                            </DropdownMenuShortcut>
                         </DropdownMenuItem>
-                    </DropdownMenuContent>
-                </DropdownMenu>
-
-                <PopPocket :title="'New Pocket'" submitText="Create"
-                    description="Choose a pocket name (empty for random), tag your pocket for easier searching, and create your pocket icon." />
+                    </DropdownMenuGroup>
+                </DropdownMenuContent>
+            </DropdownMenu>
 
 
-            </Dialog>
         </SidebarMenuItem>
     </SidebarMenu>
 </SidebarHeader>

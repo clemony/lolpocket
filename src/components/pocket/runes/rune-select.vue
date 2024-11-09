@@ -95,7 +95,7 @@ onMounted(() => { })
                     " class="drop-shadow-softest" />
             </div>
             <div
-                class="mt-1.5 w-0 text-lg font-light capitalize opacity-0 transition-all duration-500 peer-checked:w-32 peer-checked:opacity-100">
+                class="mt-1.5 w-0 !text-lg font-light capitalize opacity-0 transition-all duration-500 peer-checked:w-32 peer-checked:opacity-100">
                 {{ path }}
             </div>
         </label>

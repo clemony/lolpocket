@@ -142,7 +142,7 @@ onMounted(() => {
                     <form class="flex flex-col gap-4">
                         <Input placeholder="Project Name" default-value="/content/plugins" />
                         <div class="flex items-center space-x-2">
-                            <Checkbox id="include" default-checked />
+                            <input type="checkbox" id="include" class='checkbox checkbox-xs' />
                             <label for="include"
                                 class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                                 Allow administrators to change the directory.

@@ -4,7 +4,7 @@ export interface navObject {
     icon?: string
     array?: Array<any>
     isActive?: boolean
-    items?: navObject[];
+    items?: navObject[]
 }
 
 export interface navData {
@@ -28,6 +28,7 @@ export interface pocket {
     dateCreated: dateObject[]
     dateUpdated: dateObject[]
     component: any
+    fullWidth: boolean
 }
 
 export interface pocketChampions {

@@ -19,7 +19,7 @@ function handleInput(event: Event) {
     <Icon icon="teenyicons:search-outline" class="pointer-events-none absolute left-1.5 top-1.5 size-3.5 opacity-60" />
 
     <input :placeholder="placeholder" :value="search" @input="handleInput" spellcheck="false"
-        class="flex h-7 w-full rounded-md border border-input bg-transparent pl-7 pr-3 py-2 text-xs  file:border-0 file:bg-transparent file:text-xs file:font-medium placeholder:text-base-content/60 focus-visible:outline-none focus-visible:ring-1 hover:ring-1 focus-visible:ring-neutral/40 hover:ring-neutral/5    disabled:cursor-not-allowed disabled:opacity-50"
+        class="flex h-7 w-full rounded-md border border-input bg-transparent pl-7 pr-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-base-content/60 focus-visible:outline-none focus-visible:ring-1 hover:ring-1 focus-visible:ring-neutral/40 hover:ring-neutral/5    disabled:cursor-not-allowed disabled:opacity-50"
         @keydown.enter.prevent />
 
     <button v-if="search"

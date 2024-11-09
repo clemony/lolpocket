@@ -25,27 +25,19 @@ const dataValue = ref()
 
 <template>
 <ResizablePanelGroup direction="horizontal"
-    class=" h-[calc(100%-130px)] max-h-[calc(100%-130px)] w-full px-6 overflow-hidden">
+    class=" h-[calc(100%-130px)] max-h-[calc(100%-130px)] w-full px-6 overflow-hidden pt-24">
     <ResizablePanel>
         <ResizablePanelGroup direction="vertical">
             <ResizablePanel :default-size='30' class="h-full pb-4">
-                <Card class='h-full overflow-hidden'>
-                    <CardContent>
-                        <CardHeader>
-                            <h4>Selected Champions</h4>
-                            <CardDescription>
-                                <p>Drag champions up, add from the sidebar and context menus, or quick search by
-                                    pressing the empty slot right here. </p>
-                            </CardDescription>
-                        </CardHeader>
+                <InfoCard title="Selected Champions"
+                    description="Drag champions up, add from the sidebar and context menus, or quick search by pressing the empty slot right here.">
 
-                        <div class="overflow-clip scrollbar-hide px-5">
-                            <ChampionsSelected v-if="pocket" :pocketKey="pocket.key" />
-                        </div>
-                    </CardContent>
-                </Card>
+
+                    <!--    <div class="overflow-clip scrollbar-hide px-5"> -->
+                    <ChampionsSelected v-if="pocket" :pocketKey="pocket.key" class='px-1' />
+                </InfoCard>
             </ResizablePanel>
-            <ResizableHandle with-handle class='!h-6' />
+            <ResizeHandle with-handle class='!h-4 mb-3' />
             <ResizablePanel :default-size='70' class="contain-strict">
                 <Card class='h-full max-h-inherit '>
                     <CardContent class='h-full max-h-inherit p-0 w-full '>
@@ -75,9 +67,9 @@ const dataValue = ref()
             </ResizablePanel>
         </ResizablePanelGroup>
     </ResizablePanel>
-    <ResizableHandle with-handle class='!w-6' />
+    <ResizeHandle with-handle class='!w-4 mx-3' />
 
-    <ResizablePanel :default-size="28" :min-size="10" class="relative max-h-inherit w-[300px]">
+    <ResizablePanel :default-size="30" :min-size="10" class="relative max-h-inherit w-[300px]">
         <ChampionSidebar :champion="cs.selectedChampion" />
     </ResizablePanel>
 </ResizablePanelGroup>

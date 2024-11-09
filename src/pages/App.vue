@@ -1,18 +1,16 @@
 <script setup lang="ts">
 import '@assets/css/imports.css'
-import { useGeneralStore } from '@stores/generalStore'
 import { useSessionStore } from '@stores/sessionStore'
 import { useDataStore } from '@stores/dataStore'
 import { usePocketStore } from '@stores/pocketStore'
 import { Toaster } from '@/components/ui/sonner'
-
-
-
+import { navData } from '@data/pocket-nav'
+import { NPobj } from '@/data/dialog-pop'
 const ps = usePocketStore();
 const sn = useSessionStore()
-const gs = useGeneralStore()
 const ds = useDataStore()
 ds.fetchData()
+
 
 const pinnedPockets = ref(ps.pinnedRowData)
 watch(
@@ -25,65 +23,8 @@ watch(
 /* ------------------------------ ON MOUNTED ----------------------------- */
 
 
-
-
-const navData = {
-    navCollapse: [
-
-        {
-            title: 'Database',
-            url: '',
-            icon: 'cil:save',
-            isActive: true,
-
-            items: [
-                {
-                    title: 'Champions',
-                    url: '/champions',
-                    icon: '',
-                    array: '',
-                },
-                {
-                    title: 'Items',
-                    url: '/items',
-                    icon: '',
-                },
-                {
-                    title: 'Runes',
-                    url: '/runes',
-                    icon: '',
-                },
-            ],
-        },
-        {
-            title: 'Settings',
-            url: '#',
-            icon: 'teenyicons:cog-outline',
-            items: [
-                {
-                    title: 'General',
-                    url: '/settings',
-                    icon: '',
-                },
-                {
-                    title: 'Account',
-                    url: '#',
-                    icon: 'teenyicons:at-outline',
-                },
-                {
-                    title: 'About',
-                    url: '/about',
-                    icon: 'teenyicons:info-outline',
-                },
-
-            ],
-        },
-    ],
-
-}
-
-
 const navPockets = [
+
     {
         title: 'Trash',
         url: '/trash',
@@ -98,34 +39,57 @@ const navPockets = [
     },
 ]
 
+
+const state = ref(false)
+
+const component = shallowRef()
+const title = ref('')
+const description = ref('')
+const submitText = ref('')
+const obj = ref()
+
+
+function toggleState(obj) {
+    if (state.value == false) {
+        state.value = true
+        obj.value = obj.cmpt
+        title.value = obj.title
+        description.value = obj.description
+        submitText.value = obj.submitText
+    }
+}
+
+console.log(state.value);
+
 </script>
 
 <template>
+<div v-shortkey.once="['meta', 'p']" @shortkey="toggleState(NPobj)" class="hidden absolute"></div>
 <Titlebar />
 <Toaster />
 <SidebarProvider>
-    <Sidebar collapsible="icon">
-        <MenuHeader />
-        <SidebarContent>
+    <Sidebar collapsible="icon" class='justify-center'>
+        <MenuHeader v-model:open="state" v-model:obj="obj" @update:state="toggleState(obj)" />
+        <SidebarContent class='[&_button]:py-5'>
             <SidebarGroup>
 
                 <SidebarGroupLabel data-tauri-drag-region>Basics</SidebarGroupLabel>
 
-                <SidebarMenu class='mb-1'>
+                <SidebarMenu class='mb-1 [&_svg]:!size-5'>
 
                     <Collapsible as-child :default-open="true" class="group/collapsible ">
                         <SidebarMenuItem>
 
-                            <SidebarMenuButton tooltip="Pockets" class='gap-3 group/pocket'
+                            <SidebarMenuButton tooltip="Pockets" class='gap-4 group/pocket'
                                 @click="sn.navigateTo('/pockets')">
                                 <icon icon="formkit:folder" />
-                                <span class='font-medium'>Pockets</span>
+                                <span class='font-medium text-base'>Pockets</span>
 
 
-                                <SidebarMenuBadge v-if="ps.pockets && ps.pockets.length"
-                                    class='right-2.5 badge badge-neutral badge-sm group-hover/pocket:opacity-60'>
+                                <Badge variant="primary" size="sm" v-if="ps.pockets && ps.pockets.length"
+                                    class='absolute right-3 group-hover/pocket:opacity-60 px-1.5'>
                                     {{ ps.pockets.length }}
-                                </SidebarMenuBadge>
+                                </Badge>
 
                             </SidebarMenuButton>
 
@@ -139,13 +103,14 @@ const navPockets = [
                                             <div class='flex items-center'>
                                                 <!--  <icon :icon="item.icon" class='!size-4.5' /> -->
 
-                                                <span class='font-medium'>{{ item.title }}</span>
+                                                <span class='font-medium text-base'>{{ item.title }}</span>
 
-                                                <SidebarMenuBadge
+                                                <Badge variant="secondary" size="sm"
                                                     v-if="item.array && Array.isArray(item.array) && item.array.length"
-                                                    class='right-0 badge badge-neutral flex items-center badge-sm group-hover/pocketstuff:opacity-60'>
+                                                    class='absolute px-1.5 right-1 group-hover/pocket:opacity-60'>
                                                     {{ item.array.length }}
-                                                </SidebarMenuBadge>
+                                                </Badge>
+
 
                                             </div>
                                         </SidebarMenuSubButton>
@@ -157,11 +122,11 @@ const navPockets = [
 
                 </SidebarMenu>
                 <SidebarMenu>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem class='mt-1'>
                         <SidebarMenuButton as-child>
-                            <a @click="sn.navigateTo('/loved')" class='gap-3'>
-                                <icon icon="teenyicons:heart-outline" />
-                                <span class='font-medium'>Loved</span>
+                            <a @click="sn.navigateTo('/loved')" class='gap-4 py-5'>
+                                <icon icon="teenyicons:heart-outline" class='!size-5' />
+                                <span class='font-medium text-base'>Loved</span>
 
                                 <SidebarMenuBadge>
                                     <MenuLoves />
@@ -170,11 +135,11 @@ const navPockets = [
                         </SidebarMenuButton>
                     </SidebarMenuItem>
 
-                    <SidebarMenuItem>
+                    <SidebarMenuItem class='mb-2'>
                         <SidebarMenuButton as-child>
-                            <a @click="sn.navigateTo('')" class='gap-3'>
-                                <icon icon="teenyicons:calculator-outline" />
-                                <span class='font-medium'>Calculator</span>
+                            <a @click="sn.navigateTo('')" class='gap-4 py-5'>
+                                <icon icon="teenyicons:calculator-outline" class='!size-5' />
+                                <span class='font-medium text-base'>Calculator</span>
                             </a>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
@@ -185,9 +150,9 @@ const navPockets = [
                         :default-open="item.isActive" class="group/collapsible ">
                         <SidebarMenuItem>
                             <CollapsibleTrigger as-child>
-                                <SidebarMenuButton :tooltip="item.title" class='gap-3'>
-                                    <icon :icon="item.icon" />
-                                    <span class='font-medium'>{{ item.title }}</span>
+                                <SidebarMenuButton :tooltip="item.title" class='gap-4 py-5'>
+                                    <icon :icon="item.icon" class='!size-5' />
+                                    <span class='font-medium text-base'>{{ item.title }}</span>
                                     <icon icon="teenyicons:left-small-outline"
                                         class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:-rotate-90" />
 
@@ -200,7 +165,7 @@ const navPockets = [
                                         <SidebarMenuSubButton as-child>
                                             <a @click="sn.navigateTo(subItem.url, subItem.title, subItem.icon)">
                                                 <!--     <icon :icon="subItem.icon" /> -->
-                                                <span class='font-medium'>{{ subItem.title }}</span>
+                                                <span class='font-medium text-base'>{{ subItem.title }}</span>
 
                                             </a>
                                         </SidebarMenuSubButton>
@@ -218,10 +183,10 @@ const navPockets = [
 
 
 
-            <MenuPockets v-show="ps.pinnedRowData.length"
-                class='animate-in animate-out fade-in-100 fade-out-100 transition-all duration-700'
-                :data="pinnedPockets" title="Pinned" :key="ps.pinnedRowData" />
-            <MenuPockets :data="ps.rowData" title="Pockets" :key="ps.rowData" />
+            <MenuPockets v-show="ps.pinned"
+                class='animate-in animate-out fade-in-100 fade-out-100 transition-all duration-700' :data="ps.pinned"
+                title="Pinned" :key="ps.pinned" />
+            <MenuPockets :data="ps.general" title="Pockets" :key="ps.general" />
 
 
 
@@ -238,7 +203,8 @@ const navPockets = [
         <div class='w-full min-w-full h-full  flex overflow-scroll absolute'>
             <NavTabs />
         </div>
-        <div class=" absolute  w-full max-w-full top-0 left-0  inset-0 m-0 mt-[31px] h-full  rounded-tl-box  border border-base-300 !bg-base-100/90 !p-0 !shadow-[inset_-12px_-8px_40px_#00000020]  overflow-y-clip object-contain first:contain-inline-size first:flex"
+        <div data-tauri-drag-region
+            class=" absolute  w-full max-w-full top-0 left-0  inset-0 m-0 mt-[31px] h-full  rounded-tl-box  border border-base-300 !bg-base-100/90 !p-0 !shadow-[inset_-12px_-8px_40px_#00000020]  overflow-y-clip object-contain first:contain-inline-size first:flex"
             :class="{ '!rounded-tl-none': sn.activeTab == sn.openTabs[0].link }">
 
             <router-view v-slot="{ Component }">
@@ -248,6 +214,14 @@ const navPockets = [
                 </KeepAlive>
             </router-view>
         </div>
+
+        <Dialog v-model:open="state">
+
+
+
+            <component :is="component" :title="title" :description="description" :submitText="submitText" />
+
+        </Dialog>
 
     </SidebarInset>
 </SidebarProvider>

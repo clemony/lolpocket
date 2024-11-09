@@ -3,7 +3,6 @@ import { useChampStore } from '@stores/champStore'
 import { useItemStore } from '@stores/itemStore'
 import { usePocketStore } from '@stores/pocketStore'
 import type { pocket } from 'types'
-import { Skeleton } from '@/components/ui/skeleton'
 
 const ps = usePocketStore()
 const props = defineProps<{
@@ -12,12 +11,7 @@ const props = defineProps<{
 
 const pocket = ref(ps.getPocket(props.pocketKey)) as unknown as pocket
 
-const LgChampion = defineAsyncComponent({
-    loader: () => import('../champions/lg-champion.vue'),
 
-    loadingComponent: Skeleton,
-    delay: 200,
-})
 
 const cs = useChampStore()
 const is = useItemStore()
@@ -57,21 +51,19 @@ function updateNotes() {
 const sTabs = ref('sTabs')
 </script>
 <template>
-<div v-if="pocket" :key="pocket.key"
-    class="mt-2 grid !max-h-full grid-cols-1 grid-rows-[min-content_1fr_min-content] gap-4">
+<div v-if="pocket" :key="pocket.key" class="grid  grid-cols-1 grid-rows-[min-content_1fr_min-content] gap-4 pt-32">
 
+    <Card>
+        <CardContent class="h-36  p-0 rounded-lg overflow-hidden ">
 
-    <div class="shadow-standard w-full h-32 rounded-box border border-black/25 bg-base-100/80 overflow-hidden">
+            <LgChampion v-if="pocket.champions[0].starred" :pocket="pocket" />
 
-        <Suspense>
-            <template #default>
-                <LgChampion :pocket="pocket" />
-            </template>
-            <template #fallback>
-                <Skeleton class="size-full" />
-            </template>
-        </Suspense>
-    </div>
+            <div v-else class="size-full items-center">
+                <icon icon="bi:person-vcard-fill" class='size-full text-base-200/30' />
+            </div>
+        </CardContent>
+    </Card>
+
 </div>
 
 <div class="h-[calc(100%-270px)]">
@@ -80,8 +72,8 @@ const sTabs = ref('sTabs')
         <Tab :value="1">
 
             <template #header>
-                hi
-                <input type="radio" class="peer hidden" name="sTabs" v-model="sTabs" value="hi" />
+                Spells
+                <input type="radio" class="peer hidden" name="sTabs" v-model="sTabs" value="spells" />
             </template>
             <template #content>
             </template>
@@ -91,6 +83,18 @@ const sTabs = ref('sTabs')
 
 
         <Tab :value="2">
+            <template #header>
+                Runes
+                <input type="radio" v-model="sTabs" class="peer hidden" name="sTabs" value="notes" />
+            </template>
+            <template #content>
+                <DashboardRunes :pocket="pocket" />
+            </template>
+
+        </Tab>
+
+
+        <Tab :value="3">
 
             <template #header>
                 Notes
@@ -112,18 +116,6 @@ const sTabs = ref('sTabs')
                     icon="hugeicons:note-remove" class='size-3.5 opacity-0 absolute bottom-1.5 right-1.5'
                     @click.stop="notesInput = '　'" />
             </template>
-        </Tab>
-
-
-        <Tab :value="3">
-
-            <template #header>
-                hi
-                <input type="radio" v-model="sTabs" class="peer hidden" name="sTabs" value="zhi" />
-            </template>
-            <template #content>
-            </template>
-
         </Tab>
 
     </TabListPocket>

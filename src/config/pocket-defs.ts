@@ -1,7 +1,7 @@
-
+import { pocket } from 'types'
+import { usePocketStore } from '@stores/pocketStore'
 
 export const columnDefs = ref([
-
     {
         headerName: '',
         colId: 'checkbox',
@@ -13,7 +13,6 @@ export const columnDefs = ref([
         cellRenderer: 'TableCheckbox',
         filter: false,
     },
-
 
     {
         headerName: 'Pocket',
@@ -41,7 +40,8 @@ export const columnDefs = ref([
         maxWidth: 300,
         minWidth: 156,
         cellRenderer: 'PocketTableChamps',
-        cellClass: '!overflow-x-auto flex items-center !w-200px !p-0 rounded-l overflow-hidden',
+        cellClass:
+            '!overflow-x-auto flex items-center !w-200px !p-0 rounded-l overflow-hidden',
 
         valueFormatter: (params) => {
             if (params.value && params.value.champions) {
@@ -114,7 +114,6 @@ export const columnDefs = ref([
         },
     },
 
-
     {
         headerName: 'Notes',
         width: 400,
@@ -127,7 +126,6 @@ export const columnDefs = ref([
         },
     },
 ])
-
 
 export const defaultColDef = {
     flex: 1,
@@ -145,15 +143,11 @@ export const rowSelection = {
     headerCheckbox: false,
 }
 
-
 export const autoSizeStrategy = {
     type: 'fitCellContents',
 }
 
 export const getRowId = (params) => params.data.key
-
-
-
 
 export const quickFilterParser = (quickFilter) => {
     let quickFilterParts: string[] = []
@@ -170,7 +164,7 @@ export const quickFilterParser = (quickFilter) => {
         const startIndex =
             startsWithQuote && endsWithQuote ?
                 lastSpaceIndex + 2
-                : lastSpaceIndex + 1
+            :   lastSpaceIndex + 1
         const endIndex =
             startsWithQuote && endsWithQuote ? currentIndex - 1 : currentIndex
         return quickFilter.slice(startIndex, endIndex)
@@ -192,7 +186,10 @@ export const quickFilterParser = (quickFilter) => {
     return quickFilterParts
 }
 
-export const quickFilterMatcher = (quickFilterParts, rowQuickFilterAggregateText) => {
+export const quickFilterMatcher = (
+    quickFilterParts,
+    rowQuickFilterAggregateText
+) => {
     let result
     try {
         result = quickFilterParts.every((part) =>

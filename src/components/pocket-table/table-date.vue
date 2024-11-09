@@ -128,19 +128,14 @@ const dateObjects = [
 <div class="group rounded overflow-hidden size-full place-items-center [&_>span]:w-full px-2">
     <ContextMenu>
         <ContextMenuTrigger>
-            <div v-for="(object, index) in dateObjects" class="group   relative  items-center justify-end  "
-                :key="object.name" :ref="(el) => {
-                    ps.refs[object.name] = ps.refs[object.name] || []
-                    ps.refs[object.name].push(el)
-                }
-                    ">
-                <div class="gap-2 text-mini flex items-center justify-end ">
+            <div v-for="(object, index) in dateObjects" class="group   relative  items-center justify-center ">
+                <div class="gap-2 text-sm flex items-center justify-center ">
                     <input type="checkbox" v-if="object.name == 'Patch' && props.params.type == 'updated'"
                         class="checkbox !rounded-sm !size-3  pointer-events-none" :class="getStyles"
                         :checked="lastUpdated == currentPatch" />
                     <span
-                        class=" !tracking-wide transition-all duration-500 !text-[11px] text-right opacity-0 group-hover:opacity-80"
-                        :class="{ ' !text-xs !tracking-widest opacity-100': object.name == 'Patch' }">{{
+                        class=" !tracking-wide transition-all duration-500 text-base text-right opacity-0 group-hover:opacity-80"
+                        :class="{ ' !text-sm !tracking-wider opacity-100': object.name == 'Patch' }">{{
                             object.data
                         }}</span>
                 </div>

@@ -1,17 +1,9 @@
 import { defineStore } from 'pinia'
+import { pocket } from './../../types'
 import {
-    DefaultItem,
-    Item,
-    pocket,
-    pocketChampions,
-    pocketItems,
-    pocketRunes,
-} from './../../types'
-import { generateRandomString } from '../lib/keygen'
-import { useItemStore } from './itemStore'
-import { useRuneStore } from './runeStore'
-import { hexoid } from 'hexoid'
-import {createDateObject, createDefaultItem} from '@lib/create-default'
+    createDateObject,
+    createGridHeader,
+} from '@lib/functions/CreateDefault'
 
 export const usePocketStore = defineStore(
     'pocketStore',
@@ -20,7 +12,7 @@ export const usePocketStore = defineStore(
         const trashPockets = ref<pocket[]>([])
         const archivePockets = ref<pocket[]>([])
         const pinnedRows = ref<pocket[]>([])
-        const router = useRouter()
+
         const filterText = ref('')
         const patch = '14.19'
 
@@ -28,95 +20,32 @@ export const usePocketStore = defineStore(
         const tableSelectAll = ref()
         const pocketApi = shallowRef()
         const pinnedApi = shallowRef()
+        const pinnedGrid = shallowRef()
+        const pocketGrid = shallowRef()
 
         function updateSelectedRows(rows) {
             selectedRows.value = rows // Update the selected rows in the store
         }
 
-const pinnedGrid = shallowRef()
-const pocketGrid = shallowRef()
+        const pinned = computed(() => {
+            return pockets.value.filter((pocket) => pocket.pinned)
+        })
+        const general = computed(() => {
+            return pockets.value.filter((pocket) => !pocket.pinned)
+        })
 
         const pinnedRowData = computed(() => {
-            return pockets.value.filter((pocket) => pocket.pinned)
+            const p = [...pinned.value]
+            // const create = createGridHeader(false)
+            return p //.push(create)
         })
 
         // Filter for non-pinned pockets
         const rowData = computed(() => {
-            return pockets.value.filter((pocket) => !pocket.pinned)
+            const p = [...general.value]
+            //  const create = createGridHeader(false)
+            return p //.push(create)
         })
-
-        const toID = hexoid()
-
-
-
-        function addPocket(
-            name: string,
-            tags: Array<string>,
-            icon: string,
-            bgColor: string,
-            iconColor: string
-        ) {
-            const aKey = toID()
-
-            const pocketChampionsValue: pocketChampions = {
-                key: aKey,
-                champions: [],
-                starred: '',
-            }
-
-
-
-            const pocketItemsValue: pocketItems = {
-                key: aKey,
-                itemSets: [],
-                starred: 0,
-                alts: {
-                    alt1: [createDefaultItem()],
-                    alt2: [createDefaultItem()],
-                    alt3: [createDefaultItem()],
-                    alt4: [createDefaultItem()],
-                    alt5: [createDefaultItem()],
-                    alt6: [createDefaultItem()],
-                },
-                start: undefined,
-                core: undefined,
-                final: undefined,
-            }
-
-            const pocketRunesValue: pocketRunes = {
-                key: aKey,
-                runeSets: [],
-                starred: 0,
-                selected: 0,
-            }
-
-            // Create the new pocket
-            const newPocket: pocket = {
-                name: name || generateRandomString(),
-                tags: tags || [''],
-                pinned: false,
-                key: aKey,
-                icon: icon || 'teenyicons:folder-outline',
-                bgColor: bgColor || '#000',
-                iconColor: iconColor || '#FFF',
-                champions: [pocketChampionsValue],
-                items: [pocketItemsValue],
-                runes: [pocketRunesValue],
-                notes: '',
-                dateCreated: [createDateObject()],
-                dateUpdated: [createDateObject()],
-                component: null,
-            }
-
-            // Initialize other stores here instead of top-level
-            const is = useItemStore()
-            const rs = useRuneStore()
-
-            pockets.value.push(newPocket)
-            is.newSet(newPocket.key)
-            rs.newRuneSet(newPocket.key)
-            console.log('pinia pocket added')
-        }
 
         function getPocket(key) {
             return pockets.value.find((pocket: pocket) => pocket.key === key)
@@ -149,27 +78,7 @@ const pocketGrid = shallowRef()
             pocketApi.value.setGridOption('rowData', rowData)
         }
 
-        function deepCopy<T>(obj: T): T {
-            return JSON.parse(JSON.stringify(obj))
-        }
-
-        function duplicatePocket(original: pocket): pocket {
-            const newPocket = deepCopy(original)
-
-            newPocket.key = toID()
-            newPocket.name = `${original.name} (copy)`
-            newPocket.dateCreated = [createDateObject()]
-            newPocket.dateUpdated = [createDateObject()]
-
-            pockets.value.push(newPocket)
-            return newPocket
-        }
-
-        const refs = ref({}) //for date scroll
-
-       
         return {
-            refs,
             pockets,
             filterText,
             updateGrid,
@@ -178,7 +87,6 @@ const pocketGrid = shallowRef()
             pinnedRowData,
             archivePockets,
             rowData,
-            addPocket,
             getPocket,
             pinnedRows,
             trashPockets,
@@ -186,11 +94,12 @@ const pocketGrid = shallowRef()
             selectedRows,
             tableSelectAll,
             updateSelectedRows,
-            duplicatePocket,
             pocketApi,
             pinnedApi,
             pocketGrid,
-            pinnedGrid
+            pinnedGrid,
+            pinned,
+            general,
         }
     },
 
@@ -198,7 +107,6 @@ const pocketGrid = shallowRef()
         persist: {
             storage: localStorage,
             key: 'pocketStore',
-            pick: ['pockets', 'trashPockets', 'pinnedRows', 'showSidebar'],
         },
     }
 )

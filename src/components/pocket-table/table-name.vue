@@ -20,7 +20,7 @@ const pocket = ref(ps.getPocket(props.params.data.key))
 </script>
 
 <template>
-<div class='grid items-center justify-start size-full [&_.text]:hidden'>
+<div class='grid items-center justify-start px-1 size-full [&_.text]:hidden'>
     <PocketButton iconOrder :pocket="pocket" />
 </div>
 </template>

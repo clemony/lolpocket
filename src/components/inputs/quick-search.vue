@@ -10,7 +10,14 @@ const props = defineProps<{
     thisSet?: any
     returned?: any
     type?: string
+    size?: number
+    width?: number
+    height?: number
+
 }>()
+
+const size = props.size + 'px'
+
 
 const emit = defineEmits(['update:quickSearch', 'update:returnData'])
 
@@ -48,10 +55,13 @@ function afterLeave(el: Element) {
 
 <template>
 <VDropdown theme="default" alt="Quick Search" placement="bottom" :distance="8"
-    class="no-drag search-drop ghosty drag-label group/qs relative z-0 flex basis-16 !cursor-pointer !p-0 after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-['+'] hover:after:text-neutral hover:after:opacity-60"
-    :class="{ '!basis-12': type == 'alt' }">
+    class="no-drag search-drop ghosty drag-label group/qs relative z-0 flex  !cursor-pointer !p-0 after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-['+'] hover:after:text-neutral hover:after:opacity-60"
+    :style="{
+        height: size || width + 'px',
+        width: size || height + 'px',
+    }">
     <div
-        class="z-20 h-full w-full scale-105 cursor-pointer select-none bg-[url('/i@frame.webp')] bg-contain bg-center bg-no-repeat opacity-0 brightness-0 transition-all duration-200 group-hover/qs:scale-95 group-hover/qs:opacity-40">
+        class="z-20 h-full w-full scale-105 cursor-pointer select-none bg-[url('/img/ui/frame.webp')] bg-contain bg-center bg-no-repeat opacity-0 brightness-0 transition-all duration-200 group-hover/qs:scale-95 group-hover/qs:opacity-40">
     </div>
 
     <template #popper>

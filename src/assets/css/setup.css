@@ -1,26 +1,8 @@
 :root {
-    --rounded-box: 0.45rem !important;
+    --rounded-box: 0.55rem !important;
     --rounded-btn: 0.4rem !important;
     --rounded-badge: 0.5rem !important;
-    --animation-btn: 0.25s !important;
-    --animation-input: 0.2s !important;
-    --btn-focus-scale: 0.95 !important;
 
-    * {
-        @apply text-xs tracking-tight;
-    }
-    h1 {
-        @apply text-xl font-semibold tracking-tight;
-    }
-    h2 {
-        @apply text-lg font-semibold tracking-tight;
-    }
-    h3 {
-        @apply text-base font-semibold tracking-tight;
-    }
-    h4 {
-        @apply text-sm font-medium tracking-tight;
-    }
     overscroll-behavior: contain;
     user-select: none;
     @apply m-0 scroll-smooth bg-transparent p-0;
@@ -30,29 +12,19 @@
     --tab-bg: oklch(var(--b1) / 90%) !important;
     --tab-corner-bg: oklch(var(--b1) / 60%) !important;
     --tab-border: 1px !important;
-    --tab-radius: 0.35rem !important;
+    --tab-radius: 0.45rem !important;
+}
+
+.text-base {
+    @apply tracking-tight;
 }
 
 .toggle {
     --tglbg: oklch(var(--b1) / 95%);
 }
 
-.btn-ghost:hover,
-.btn-ghost label:hover {
-    @apply !bg-base-200/40;
-}
-
-button,
-.btn {
-    @apply !font-normal;
-}
-
 .collapse-arrow > .collapse-title:after {
     @apply size-[0.43rem] opacity-80;
-}
-
-.shadow-btn {
-    @apply shadow-[inset_1px_1px_5px_1px_#00000010];
 }
 
 .divider-thin {
@@ -66,10 +38,6 @@ button,
 
 .checkbox-xs {
     @apply rounded-[4px];
-}
-
-.btn-ghost:hover {
-    @apply bg-base-200/70;
 }
 
 /* -----------------------------------------------------------------------

@@ -17,7 +17,7 @@ const props = defineProps<{
 
 
 
-    <ItemsetItems v-if="props.set" :set="props.set" :pocketKey="props.pocket.key" :limit="6" />
+    <ItemSetItems v-if="props.set" :set="props.set" :pocketKey="props.pocket.key" :limit="6" />
 
 </div>
 </template>

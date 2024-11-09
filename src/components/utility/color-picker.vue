@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ColorPicker } from 'vue-accessible-color-picker'
 
-import { computed, nextTick, onMounted, ref } from 'vue'
 import { usePocketStore } from '@stores/pocketStore'
 
 const ps = usePocketStore()

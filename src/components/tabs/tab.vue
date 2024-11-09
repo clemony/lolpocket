@@ -13,20 +13,22 @@ if (!tabValue || !updateTab) {
 }
 </script>
 
-<template><label role="tab" :class="{ 'tab-active': tabValue === props.value }" class="tab !z-20 " @click="updateTab(props.value)"
-    v-bind="$attrs">
+<template><label role="tab" :class="{ 'tab-active': tabValue === props.value }"
+    class="tab !z-20 [--tab-border-color:oklch(var(--b2))]" @click="updateTab(props.value)" v-bind="$attrs">
     <slot name="header" />
 </label>
 
 <div v-if="tabValue === props.value" role="tabpanel" :class="{ 'rounded-tl-none': props.value === 1 }"
-    class="shadow-inset-sm tab-content w-full min-w-[298px] rounded-box border-base-300/70 p-4">
+    class="shadow-sm mb-1 tab-content w-full min-w-[298px] rounded-box border-base-200 bg-base-100/90 p-4">
     <slot name="content" />
 </div>
 </template>
 
 <style scoped>
+:root {}
+
 .tab-active {
-    @apply !z-30 shadow-[6px_4px_5px_1px_oklch(var(--b1))] brightness-[99%];
+    @apply !z-30 shadow-[6px_4px_5px_1px_oklch(var(--b1))] border-base-200;
 }
 
 .tab-active:is(:nth-child(3)) {

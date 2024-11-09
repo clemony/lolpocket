@@ -1,5 +1,5 @@
 import { generate, count } from 'random-words'
-import { useDataStore } from '../stores/dataStore'
+import { useDataStore } from '@/stores/dataStore'
 
 function word() {
     let key = ''

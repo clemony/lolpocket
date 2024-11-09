@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { pocket } from 'types';
 import { usePocketStore } from '@stores/pocketStore'
+import { newItemSet } from '@lib/functions/PocketUtilities';
 const ps = usePocketStore();
 
 const props = defineProps<{
@@ -8,12 +9,18 @@ const props = defineProps<{
     pocket: pocket
     type: string
 }>()
+
+function thisFunction() {
+    props.type == 'item' ? newItemSet(props.pocket.key) :
+        props.type == 'rune' ? 'hi' : 'no'
+}
 </script>
 
 
 <template>
 <div class='max-w-48 [&_Button]:gap-3 [&_Button]:justify-start [&_Button]:w-full '>
-    <Button v-if="props.type != 'champion'" variant="ghost" size="xs" class='justify-start gap-3 w-full'>
+    <Button v-if="props.type == 'item' || props.type == 'rune'" variant="ghost" size="xs"
+        class='justify-start gap-3 w-full' @click="thisFunction">
         <icon icon="streamline:add-square" lass='size-3.5' />
         <span>New <span class=' capitalize'>{{ props.type }}</span> set</span>
     </Button>

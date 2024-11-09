@@ -16,6 +16,8 @@ const size = props.size + 'px'
         width: size || height + 'px',
     }">
     <icon v-if="props.icon == 'plus'" icon="teenyicons:add-outline" class="group-hover:stroke-[1.5]" />
+
+    <slot />
 </div>
 </template>
 

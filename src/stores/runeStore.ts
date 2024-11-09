@@ -1,10 +1,11 @@
 import { defineStore } from 'pinia'
 import { ref, reactive, watch, computed } from 'vue'
 import { Rune, RuneSet } from './../../types'
-import { getKey, generateRandomName } from '../lib/keygen'
+import { getKey, generateRandomName } from '../lib/functions/Keygen'
 import { usePocketStore } from './pocketStore'
 import { useDataStore } from './dataStore'
 import { hexoid } from 'hexoid'
+import { createDefaultRune } from '@lib/functions/CreateDefault'
 
 export const useRuneStore = defineStore(
     'runeStore',
@@ -20,29 +21,7 @@ export const useRuneStore = defineStore(
 
         const starred = ref<RuneSet | null>(null)
 
-        function createDefaultRune(): {
-            name: string
-            wiki: string
-            tier: number
-            type: string
-            img: string
-            stats: string
-            path: string
-        } {
-            return {
-                name: 'none',
-                wiki: '',
-                tier: 0,
-                type: '',
-                img: '/img/runes/blankRune.webp',
-                stats: '',
-                path: 'none',
-            }
-        }
-
-        function newRuneSet(key) {
-            const pocket = ps.getPocket(key)
-            if (!pocket) return
+        function newRuneSet(key?) {
             const toID = hexoid()
             const newSet = {
                 key: toID(),
@@ -57,14 +36,12 @@ export const useRuneStore = defineStore(
                 secondary: 'none',
                 shards: [],
             }
-
-            pocket.runes[0].runeSets.push(newSet)
-            /*   if (pocket.runes[0].runeSets.length <= 1) {
-        pocket.runes[0].starred.push(newSet);
-        pocket.runes[0].selected.push(newSet);
-      }
- */
-            //selectedSet.value = newSet;
+            if (key) {
+                const pocket = ps.getPocket(key)
+                pocket.runes[0].runeSets.push(newSet)
+            } else {
+                return newSet
+            }
         }
 
         /* ----------------- Path  ------------------- */

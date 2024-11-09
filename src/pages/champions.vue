@@ -1,42 +1,9 @@
-<route lang="json">{
-    "name": "Champions",
-    "alias": "/champions/champions",
-    "meta": {
-        "title": "Champions",
-        "icon": "teenyicons:ghost-outline"
-    }
-}</route>
-
 <script setup lang="ts">
 import { Quotes } from '@data/champQuotes'
-import { ref, computed, onMounted } from 'vue'
 import { useDataStore } from '@stores/dataStore'
 
 const ds = useDataStore()
 
-interface Ability {
-    key: string
-    name: string
-    context: string
-    img: string
-    data: Record<string, string>
-}
-
-interface Champion {
-    name: string
-    img: string
-    wiki: string
-    title: string
-    tags: string[]
-    type: string
-    abilities: {
-        passive: Ability
-        q: Ability
-        w: Ability
-        e: Ability
-        r: Ability
-    }
-}
 
 // Reactive references to champions and selectedChampion from the store
 const champions = computed(() => ds.champions)

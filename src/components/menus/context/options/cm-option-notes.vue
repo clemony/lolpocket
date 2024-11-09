@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { generateRandomString } from '@lib/keygen'
+import { generateRandomString } from '@lib/functions/Keygen'
 import type { pocket } from 'types'
 
 const props = defineProps<{

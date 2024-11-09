@@ -12,25 +12,21 @@ const props = defineProps<{
 <Dialog>
     <DropdownMenu>
         <DropdownMenuTrigger as-child>
-            <Button variant="ghost" size="md"
-                class="py-2 w-44 min-w-44 !border-0 flex gap-1 btn btn-ghost btn-sm h-12  rounded-md data-[state=open]:!ring-1 data-[state=open]:!ring-base-300/40 data-[state=open]:shadow-sm !ring-0 !pr-1 !pl-2 focus:!ring-1 focus:!outline-0 focus:!ring-base-200 focus:!border-0 flex-nowrap"
-                :class="{ '!h-full': props.iconOrder }">
+            <ButtonDd :pocket="props.pocket" :iconOrder="props.iconOrder" class="pl-4 pr-5">
 
-                <div class="grid flex-1 leading-tight text-right mr-2"
-                    :class="{ '!text-left !mr-0 ml-2': props.iconOrder }">
-                    <span class='!text-[11px] text'> Pocket Name </span>
-                    <span class="truncate  font-medium ">
+                <template #text>
+                    <span class='text-sm leading-none text-right w-full'> Pocket Name </span>
+                    <h3 class="truncate  max-w-36 text-right">
                         {{ pocket.name }}
-                    </span>
-                </div>
-                <div :class="{ 'order-first': props.iconOrder }">
-                    <PocketIcon :pocketKey="pocket.key" :size="33" :padding="9" />
+                    </h3>
+                </template>
 
-                </div>
-                <span class='rounded-full shadow-sm shrink-0'>
-                    <icon icon="teenyicons:caret-vertical-small-outline" class=" ml-auto" />
-                </span>
-            </Button>
+                <template #icon>
+                    <PocketIcon :pocketKey="pocket.key" :size="36" :padding="9" />
+                </template>
+
+
+            </ButtonDd>
 
 
         </DropdownMenuTrigger>

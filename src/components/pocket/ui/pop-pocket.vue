@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import { usePocketStore } from '@stores/pocketStore'
+import { addPocket } from '@lib/functions/AddPocket'
+import { generateRandomString } from '@lib/functions/Keygen'
 const ps = usePocketStore()
-import { generateRandomString } from '@lib/keygen'
+import { useSessionStore } from '@stores/sessionStore'
+import { hexoid } from 'hexoid';
+const sn = useSessionStore();
+
+
+
+const toID = hexoid()
 
 const props = defineProps<{
     title: string
@@ -41,16 +49,19 @@ function clearForm() {
 }
 
 function submitForm() {
-    ps.addPocket(
+    const key = toID()
+    addPocket(
         name.value,
         tags.value,
         selectedIcon.value,
         bgColor.value,
-        iconColor.value
+        iconColor.value,
+        key
     )
     emit('submit')
     clearForm()
     console.log('pocket added!', ps.pockets)
+    sn.navigateTo(`/pocket/${key}`)
 }
 
 const emit = defineEmits<{
@@ -104,7 +115,7 @@ onMounted(() => {
                         ..?
 
                         <p
-                            class="absolute -right-2 -top-6 flex translate-y-1 flex-nowrap px-2 py-1 !text-[11px] opacity-0 transition-all duration-700 group-hover:translate-y-0 group-hover:opacity-100">
+                            class="absolute -right-2 -top-6 flex translate-y-1 flex-nowrap px-2 py-1 text-xs opacity-0 transition-all duration-700 group-hover:translate-y-0 group-hover:opacity-100">
                             No brain? Meet button.
                         </p>
                     </Button>

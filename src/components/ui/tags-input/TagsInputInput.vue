@@ -16,5 +16,5 @@ const forwardedProps = useForwardProps(delegatedProps)
 
 <template>
 <TagsInputInput spellcheck='false' v-bind="forwardedProps"
-  :class="cn('text-xs min-h-6 focus:outline-none flex-1 bg-transparent px-2', props.class)" />
+  :class="cn('text-sm min-h-6 focus:outline-none flex-1 bg-transparent px-2', props.class)" />
 </template>

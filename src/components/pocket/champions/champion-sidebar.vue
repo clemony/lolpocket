@@ -136,7 +136,7 @@ const championItems = computed(() => {
                 </h2>
 
                 <p
-                    class="mt-0 flex place-items-center text-pretty pb-1 pl-[10px] pr-3 pt-0 -indent-[11px] !text-[11px] font-medium uppercase tracking-wide antialiased">
+                    class="mt-0 flex place-items-center text-pretty pb-1 pl-[10px] pr-3 pt-0 -indent-[11px] text-xs font-medium uppercase tracking-wide antialiased">
                     @{{ champion.title }}
                 </p>
 
@@ -151,7 +151,7 @@ const championItems = computed(() => {
 
         <div class="justify-content-end relative right-3 col-start-2 flex gap-2 justify-self-end pb-1 text-center ">
             <code v-for="(tag, index) in champion.tags" :key="index"
-                class="badge flex h-max w-auto flex-nowrap text-center font-mono !text-[11px] font-medium lowercase tracking-normal"
+                class="badge flex h-max w-auto flex-nowrap text-center font-mono text-xs font-medium lowercase tracking-normal"
                 :data-tag="tag">#{{
                     tag }}</code>
         </div>
@@ -196,7 +196,7 @@ const championItems = computed(() => {
                             </div>
                             <kbd class="kbd">{{
                                 ability.key.toUpperCase()
-                                }}</kbd>
+                            }}</kbd>
                         </div>
 
                         <div class="collapse-content h-auto overflow-y-auto">
