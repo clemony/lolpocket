@@ -43,6 +43,15 @@ module.exports = {
             mono: ['Geist Mono', 'monospace'],
         },
 
+        fontSize: {
+            xs: ['0.8rem', { lineHeight: '1rem' }],
+            sm: ['0.93rem', { lineHeight: '1.25rem' }],
+            base: ['1rem', { lineHeight: '1.5rem' }],
+            lg: ['1.125rem', { lineHeight: '1.75rem' }],
+            xl: ['1.25rem', { lineHeight: '1.75rem' }],
+            '2xl': ['1.5rem', { lineHeight: '2rem' }],
+        },
+
         extend: {
             colors: {
                 blues: '#7195AD',

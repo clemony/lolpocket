@@ -1,3 +1,5 @@
+@import './pop.css';
+
 .fadeSimple-enter-active {
     @apply transition-all duration-700;
 }
@@ -16,28 +18,6 @@
 .fadeSimple-leave-to,
 .fadeSimple-enter-from {
     @apply opacity-0;
-}
-
-.pop-move, /* apply transition to moving elements */
-.pop-leave-active,
-.pop-enter-active {
-    transition: all 0.5s ease-in-out;
-}
-
-.pop-enter-from,
-.pop-leave-to {
-    @apply flex translate-y-1 opacity-0 !outline-0 !ring-0;
-}
-
-.pop-move, /* apply transition to moving elements */
-.pop-leave-active,
-.pop-enter-active {
-    transition: all 0.2s ease-in-out;
-}
-
-.pop-enter-from,
-.pop-leave-to {
-    @apply flex translate-y-1 opacity-0 !outline-0 !ring-0;
 }
 
 .component-move, /* apply transition to moving elements */
@@ -100,27 +80,21 @@
         opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
-/* Fade-in transition */
-.fade-in {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* Fade-out transition */
-.fade-out {
-    opacity: 0;
-    transform: translateX(20px);
-}
-
 .fade-leave-to {
     opacity: 0;
     transform: translate(5px, 0px);
+    transition-duration:
+        transform 300ms,
+        opacity 100ms;
 }
 
 .fade-enter-from {
     opacity: 0;
 
-    transform: translate(0, -200%);
+    transform: translate(-5px, 0px);
+    transition-duration:
+        transform 300ms,
+        opacity 100ms;
 }
 
 .fade-leave-active {

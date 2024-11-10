@@ -13,7 +13,7 @@
 }
 .v-popper--theme-hoverdd {
     .v-popper__inner {
-        @apply mt-5 !rounded-md p-1;
+        @apply mt-3.5 !rounded-md p-1;
     }
 }
 .v-popper--theme-hidden {
@@ -83,7 +83,7 @@
 .v-popper--theme-tt,
 .v-popper--theme-tta {
     .v-popper__inner {
-        @apply shadow-inset-sm !bg-neutral/80 text-neutral-content backdrop-blur-md;
+        @apply !bg-neutral/80 text-neutral-content shadow-inset-sm backdrop-blur-md;
     }
 }
 

@@ -1,0 +1,111 @@
+<!------------------------⟢ tablist ⟣------------------------->
+
+<TabListPocket :modelName="cTabs" :defaultTab="2">
+    <!----------------------⟢ stats ⟣---------------------------->
+
+    <Tab :value="1">
+        <template #header>
+            <input type="radio" class="peer hidden" name="cTabs" value="stats" v-model="cTabs" />
+            Stats
+        </template>
+
+        <template #content>
+            Tab content 1
+        </template>
+    </Tab>
+
+
+    <!------------------------⟢ abilities ⟣--------------------------->
+
+    <Tab :value="2">
+        <template #header>
+            <input type="radio" class="peer hidden" name="cTabs" value="abilities" v-model="cTabs" />
+            Abilities
+        </template>
+
+
+        <template #content>
+            <div class="ability-wrapper join join-vertical grid w-full grid-cols-1 overflow-y-scroll !border-none">
+                <div
+                    class="collapse join-item collapse-arrow h-full !border-l-0 !border-r-0 !border-y-base-200/50 first:!border-t-0 last:!border-b-0">
+                    <input type="radio" :id="'radio-' + key" v-model="checkedAbility" :value="key"
+                        @change="console.log(ability)" />
+                    <div class="collapse-title h-12 pr-3.5 after:max-h-0">
+                        <img :src="ability.img" :alt="ability.name" class="shadow-standard" />
+                        <div class="!text-[0.8rem] font-medium">
+                            {{ ability.name }}
+                        </div>
+                        <kbd class="kbd">{{
+                            ability.key.toUpperCase()
+                            }}</kbd>
+                    </div>
+
+                    <div class="collapse-content h-auto overflow-y-auto">
+                        <!-- Filter and display specific keys from ability data -->
+                        <div v-for="(value, key) in filteredData(
+                                ability.data
+                            )" :key="key"
+                            class="my-3 grid grid-flow-row grid-cols-[1fr_2fr] rounded-btn bg-base-200 p-1 px-2 ">
+                            <div class="text-medium text-xxs capitalize">
+                                {{ key }}
+                            </div>
+                            <div class="text-nowrap text-right">
+                                {{ value }}
+                            </div>
+                        </div>
+
+                        <p class="h-auto overflow-y-scroll whitespace-pre-line text-balance p-1 ">
+                            {{ ability.context }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </Tab>
+
+
+    <!------------------------⟢ items ⟣------------------------->
+
+    <Tab :value="3">
+        <template #header>
+            <input type="radio" class="peer hidden" name="cTabs" value="items" v-model="cTabs" />
+            Items
+        </template>
+        <template #content>
+            <div class="w-full px-2 pb-3 pt-1 font-medium">
+                {{ champion.name }} likes...
+            </div>
+
+            <div class="drag-draggable !justify-start !gap-3 overflow-y-scroll !p-1 scrollbar-hide">
+                <VDropdown v-for="item in cs.getChampionItems(champion.name)" :key="item.id" :overflow-padding="20"
+                    :shift="true" theme="default" :distance="6" @click.right.prevent="" :ref="item.name"
+                    class="relative aspect-square !max-h-14 basis-14">
+                    <label class="drag-label !overflow-hidden">
+                        <div class="drag-wrapper !overflow-hidden">
+                            <img :src="item.img" class="drag-img" />
+                        </div>
+                    </label>
+                    <template #popper :key="item.name + 'Pop'">
+                        <pop-item :item="item" :variant="'remove'" :champ="champion.name" />
+                    </template>
+                </VDropdown>
+
+                <VDropdown theme="default" alt="Quick Search" :distance="8"
+                    class="search-drop ghosty drag-label group/qs relative z-0 flex !aspect-square h-auto !max-h-14 basis-14 !cursor-pointer overflow-clip !p-0 after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-['+'] hover:after:text-neutral hover:after:opacity-60">
+                    <div
+                        class="z-20 h-full w-full scale-105 cursor-pointer select-none bg-[url('/img/ui/frame.webp')] bg-contain bg-center bg-no-repeat opacity-0 brightness-0 transition-all duration-200 group-hover/qs:scale-95 group-hover/qs:opacity-40">
+                    </div>
+
+                    <template #popper>
+                        <QuickSearch :array="filteredItems" v-model:quickSearch="quickSearch"
+                            v-model:returnData="returnData" v-model:thisSet="champion.name" />
+                    </template>
+                </VDropdown>
+
+                <div class="aspect-square basis-14"></div>
+                <div class="aspect-square basis-14"></div>
+            </div>
+        </template>
+    </Tab>
+
+</TabListPocket>

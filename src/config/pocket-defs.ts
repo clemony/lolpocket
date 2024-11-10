@@ -22,7 +22,7 @@ export const columnDefs = ref([
         //hide: true,
         maxWidth: 200,
         minWidth: 180,
-        cellClass: 'w-[170px] !pl-0',
+        cellClass: 'w-[170px] !p-0',
         filterValueGetter: (params) => {
             const name = params.data.name.split(' ')
             return name
