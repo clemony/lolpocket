@@ -50,9 +50,14 @@ module.exports = {
             lg: ['1.125rem', { lineHeight: '1.75rem' }],
             xl: ['1.25rem', { lineHeight: '1.75rem' }],
             '2xl': ['1.5rem', { lineHeight: '2rem' }],
+            '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
+            '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
         },
 
         extend: {
+            containers: {
+                'header-min': '230px',
+            },
             colors: {
                 blues: '#7195AD',
                 cyans: '#9AC4BF',
@@ -81,11 +86,13 @@ module.exports = {
             height: {
                 stretch: 'stretch',
                 4.5: '1.1rem',
+                5.5: '1.35rem',
                 inherit: 'inherit',
             },
             width: {
                 stretch: 'stretch',
                 4.5: '1.1rem',
+                5.5: '1.35rem',
                 inherit: 'inherit',
             },
             boxShadow: {
@@ -97,7 +104,7 @@ module.exports = {
                 inset: 'inset 1px 2px 8px 2px #00000009, inset -2px -1px 5px 1px #00000009',
                 'inset-sm':
                     'inset 1px 2px 1px 1px #00000004, inset -1px -1px 2px 1px #00000009',
-                card: '0px 2px 3px -1px rgba(0,0,0,0.1),0px 1px 0px 0px rgba(25,28,33,0.02),0px 0px 0px 1px rgba(25,28,33,0.08), inset 1px 2px 1px 1px #00000004, inset -1px -1px 2px 1px #00000009',
+                smooth: 'rgba(17, 17, 26, 0.07) 0px 0px 16px',
             },
             dropShadow: {
                 xs: '0px 0px 2px #00000020',
@@ -107,9 +114,15 @@ module.exports = {
             },
             size: {
                 4.5: '1.1rem',
+                5.5: '1.35rem',
             },
             borderRadius: {
                 xs: '4px',
+            },
+            spacing: {
+                '2px': '2px',
+                4.5: '1.1rem',
+                5.5: '1.35rem',
             },
             keyframes: {
                 'accordion-down': {

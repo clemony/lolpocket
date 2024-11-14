@@ -1,0 +1,19 @@
+<script setup lang="ts">
+const isOpen = ref(false)
+</script>
+
+<template>
+<Collapsible v-model:open="isOpen" class="!rounded-l-none join-item">
+    <CollapsibleTrigger as-child>
+        <Button variant="outline" size="icon">
+
+            <icon icon="teenyicons:filter-outline" class='size-4.5 opacity-70' />
+        </Button>
+    </CollapsibleTrigger>
+    <CollapsibleContent>
+        <slot />
+    </CollapsibleContent>
+</Collapsible>
+</template>
+
+<style scoped></style>

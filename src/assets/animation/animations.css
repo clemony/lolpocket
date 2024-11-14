@@ -1,4 +1,5 @@
 @import './pop.css';
+@import './fade.css';
 
 .fadeSimple-enter-active {
     @apply transition-all duration-700;
@@ -68,37 +69,6 @@
         -webkit-transform: rotate(-180deg);
         transform: rotate(-180deg);
     }
-}
-
-/* 1. declare transition */
-.fade-move,
-.fade-enter-active,
-.fade-leave-active,
-.fade-enter-from {
-    transition:
-        all 0.8s cubic-bezier(0.55, 0, 0.1, 1),
-        opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-}
-
-.fade-leave-to {
-    opacity: 0;
-    transform: translate(5px, 0px);
-    transition-duration:
-        transform 300ms,
-        opacity 100ms;
-}
-
-.fade-enter-from {
-    opacity: 0;
-
-    transform: translate(-5px, 0px);
-    transition-duration:
-        transform 300ms,
-        opacity 100ms;
-}
-
-.fade-leave-active {
-    position: absolute;
 }
 
 .glow {

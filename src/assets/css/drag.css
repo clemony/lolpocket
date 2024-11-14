@@ -5,7 +5,7 @@
     @apply !relative z-0 flex items-center justify-center overflow-auto rounded-lg p-[2px] shadow-sm ring-1 ring-transparent has-[div.img-loaded]:hover:ring-neutral/40;
 }
 .drag-wrapper {
-    @apply pointer-events-none aspect-square select-none overflow-hidden rounded-lg border bg-contain bg-clip-border has-[div.img-loaded]:border-neutral/40;
+    @apply pointer-events-none aspect-square select-none overflow-hidden rounded-lg border border-base-300 bg-contain;
 }
 
 .drag-img {

@@ -1,0 +1,43 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+import { useItemStore } from '@stores/itemStore'
+import { useDataStore } from '@stores/dataStore'
+
+const ds = useDataStore()
+const is = useItemStore()
+
+const icons = [
+    {
+        index: 0,
+        icon: ['teenyicons:circle-solid'],
+    },
+    {
+        index: 1,
+        icon: [''],
+    },
+]
+</script>
+
+<template>
+    <h4>Tier</h4>
+    <ul class="pointer-events-none overflow-y-scroll rounded-lg bg-base-200/60 p-2 pb-2 [&_label]:py-1.5 [&_span]:!">
+        <li v-for="cat in ds.uniqueCats">
+            <label class="label pointer-events-auto cursor-pointer justify-start gap-4">
+                <input type="checkbox" :value="cat" :id="cat" v-model="is.catFilters"
+                    class="checked:checkbox-neutral checkbox checkbox-xs rounded-[4px] opacity-80" />
+                <span class="label-text"> {{ cat }}</span>
+            </label>
+        </li>
+    </ul>
+</div>
+</template>
+
+<style scoped>
+/* beautify ignore:start */
+.tab:is(.v-popper--shown .tab) {
+    @apply tab-active shadow-sm backdrop-brightness-150 after:hover:!opacity-0;
+}
+
+.v-popper--theme-menuLight .v-popper__inner {
+    @apply !rounded-b-box !rounded-tr-none;
+}</style>

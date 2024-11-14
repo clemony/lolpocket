@@ -13,7 +13,18 @@
 }
 .v-popper--theme-hoverdd {
     .v-popper__inner {
-        @apply mt-3.5 !rounded-md p-1;
+        @apply !mb-0 mt-1.5 items-center justify-center !rounded-md !p-1 !pb-0;
+        & svg {
+            @apply size-4.5;
+        }
+    }
+}
+.v-popper--theme-hoverdd-inner {
+    .v-popper__inner {
+        @apply ml-0.5 mt-6 items-center justify-center !rounded-md p-1;
+        & svg {
+            @apply size-4.5;
+        }
     }
 }
 .v-popper--theme-hidden {

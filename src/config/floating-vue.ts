@@ -1,5 +1,5 @@
 // src/plugins/floatingVueConfig.js
-import FloatingVue from 'floating-vue';
+import FloatingVue, { placements } from 'floating-vue'
 
 const floatingVueOptions = {
     disabled: false,
@@ -29,16 +29,24 @@ const floatingVueOptions = {
             handleResize: true,
             overflowPadding: 0,
         },
-                hoverdd: {
+        hoverdd: {
             $resetCss: false,
-             $extend: 'default',
+            $extend: 'default',
+            skidding: 30,
             triggers: ['hover', 'focus'],
             popperTriggers: ['hover', 'focus'],
         },
-                        hidden: {
+        'hoverdd-inner': {
+            $resetCss: false,
+            $extend: 'default',
+            placement: 'right-start',
+            triggers: ['hover', 'focus'],
+            popperTriggers: ['hover', 'focus'],
+        },
+        hidden: {
             $resetCss: false,
             autoHide: false,
-             $extend: 'hoverdd',
+            $extend: 'hoverdd',
             triggers: ['hover', 'focus'],
             popperTriggers: ['hover', 'focus'],
         },
@@ -101,6 +109,6 @@ const floatingVueOptions = {
             instantMove: true,
         },
     },
-};
+}
 
-export { FloatingVue, floatingVueOptions };
+export { FloatingVue, floatingVueOptions }

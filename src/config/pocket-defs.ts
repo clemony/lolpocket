@@ -125,6 +125,17 @@ export const columnDefs = ref([
             return notes
         },
     },
+    {
+        headerName: 'Tags',
+        width: 200,
+        maxWidth: 500,
+        minWidth: 50,
+        cellRenderer: 'TableTags',
+        filterValueGetter: (params) => {
+            const tags = params.data.tags
+            return tags
+        },
+    },
 ])
 
 export const defaultColDef = {

@@ -15,21 +15,22 @@ export const useItemStore = defineStore(
 
         const items = ref([...ds.items])
 
-        const sortName = ref('')
-        const sortPrice = ref('')
+        const sortAZ = ref(0)
+        const sortPrice = ref(0)
         const searchFilter = ref('')
         const catFilters = ref<string[]>([])
         const statFilters = ref<string[]>([])
-        const viewLiked = ref(false)
+        const viewLoved = ref(false)
         const lovedItems = ref<Item[]>([])
         const itemSets = ref<ItemSet[]>([])
+        const selectedSet = ref<ItemSet | null>(null)
         const starred = ref<ItemSet | null>(null)
 
         watch(
             () => lovedItems.value,
             (newVal) => {
                 if (!newVal.length) {
-                    viewLiked.value = false
+                    viewLoved.value = false
                 }
             },
             { immediate: true }
@@ -98,7 +99,7 @@ export const useItemStore = defineStore(
             items,
             itemSets,
             resetItems,
-            sortName,
+            sortAZ,
             sortPrice,
             catFilters,
             statFilters,
@@ -106,7 +107,8 @@ export const useItemStore = defineStore(
             selectedItem,
             addToSet,
             removeFromSet,
-            viewLiked,
+            selectedSet,
+            viewLoved,
             lovedItems,
             handleLike,
             resetItemsArray,

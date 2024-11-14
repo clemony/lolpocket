@@ -50,11 +50,12 @@ export default defineConfig({
                 '@vueuse/head',
                 'vue-i18n',
                 'vue-router',
+                {
+                    '/src/lib/utils/': ['cn'],
+                },
             ],
 
-            dirs: [
-                // ...
-            ],
+            dirs: [],
             eslintrc: {
                 enabled: true,
                 filepath: './.eslintrc-auto-import.json',

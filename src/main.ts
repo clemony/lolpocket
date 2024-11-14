@@ -4,7 +4,6 @@ import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import { createApp } from 'vue'
 import { Splitpanes, Pane } from 'splitpanes'
 import { Icon } from '@iconify/vue'
-import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
 import { kinesisPlugin } from '@letstri/kinesis'
 import router from '../router'
 import { FloatingVue, floatingVueOptions } from './config/floating-vue'
@@ -25,9 +24,7 @@ app.component('Pane', Pane)
 app.component('Icon', Icon)
 app.use(kinesisPlugin)
 app.use(router)
-app.use(autoAnimatePlugin)
 app.use(FloatingVue, floatingVueOptions)
-
 app.use(Shortkey)
 // Mount the app to the element with id "app" in your HTML
 app.mount('#app')

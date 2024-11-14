@@ -20,8 +20,10 @@ export const usePocketStore = defineStore(
         const tableSelectAll = ref()
         const pocketApi = shallowRef()
         const pinnedApi = shallowRef()
+        const headerApi = shallowRef()
         const pinnedGrid = shallowRef()
         const pocketGrid = shallowRef()
+        const columns = ref([])
 
         function updateSelectedRows(rows) {
             selectedRows.value = rows // Update the selected rows in the store
@@ -96,10 +98,12 @@ export const usePocketStore = defineStore(
             updateSelectedRows,
             pocketApi,
             pinnedApi,
+            headerApi,
             pocketGrid,
             pinnedGrid,
             pinned,
             general,
+            columns,
         }
     },
 
