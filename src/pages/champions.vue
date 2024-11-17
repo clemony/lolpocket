@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Quotes } from '@data/champQuotes'
-import { useDataStore } from '@stores/dataStore'
+import { Quotes } from '@/data/champQuotes'
+import { useDataStore } from '@/stores/dataStore'
 
 const ds = useDataStore()
 

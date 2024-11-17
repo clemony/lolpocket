@@ -1,11 +1,107 @@
-import { useRuneStore } from '@stores/runeStore'
+import { useRuneStore } from '@/stores/runeStore'
 import { hexoid } from 'hexoid'
-import { pocketChampions, pocketItems, pocketRunes, pocket } from 'types'
-import { createDefaultItem, createDateObject } from './CreateDefault'
-import { generateRandomString } from './Keygen'
+import {
+    pocketChampions,
+    pocketItems,
+    pocketRunes,
+    pocket,
+    DefaultItem,
+    spell,
+} from 'types'
+import { generateRandomString, generateRandomName } from './Keygen'
 import { newItemSet } from './PocketUtilities'
-import { usePocketStore } from '@stores/pocketStore'
+import { usePocketStore } from '@/stores/pocketStore'
 const toID = hexoid()
+
+export function createDefaultItem(): DefaultItem {
+    return {
+        name: '',
+        img: '',
+        buy: 0,
+        sell: 0,
+        stats: '',
+        passive: '',
+        active: '',
+        type: '',
+        cat: '',
+        wiki: '',
+        id: 0,
+        count: 0,
+    }
+}
+
+export function createDateObject() {
+    const now = new Date()
+    const patch = '14.19'
+    const formattedDate = now.toLocaleDateString('en-US', {
+        year: '2-digit',
+        month: '2-digit',
+        day: '2-digit',
+    })
+
+    let formattedTime = now.toLocaleTimeString([], {
+        hour: '2-digit',
+        minute: '2-digit',
+    })
+
+    if (formattedTime.startsWith('0')) {
+        formattedTime = formattedTime.slice(1)
+    }
+
+    return {
+        date: formattedDate,
+        time: formattedTime,
+        patch: patch,
+    }
+}
+
+export function createDefaultRune(): {
+    name: string
+    wiki: string
+    tier: number
+    type: string
+    img: string
+    stats: string
+    path: string
+} {
+    return {
+        name: 'none',
+        wiki: '',
+        tier: 0,
+        type: '',
+        img: '/img/runes/blankRune.webp',
+        stats: '',
+        path: 'none',
+    }
+}
+
+export function createDefaultShard(): {
+    name: string
+    slotID: number
+    slotName: string
+    type: string
+    icon: string
+    stats: string
+    color: string
+} {
+    return {
+        name: 'none',
+        stats: '',
+        slotID: 0,
+        slotName: 'none',
+        type: '',
+        icon: 'oui:shard',
+        color: 'none',
+    }
+}
+
+export const createDefaultSpell = (): spell => ({
+    name: '',
+    description: '',
+    cd: 0,
+    recharge: 0,
+    charges: 0,
+})
 
 export function addPocket(
     name: string,
@@ -59,11 +155,16 @@ export function addPocket(
         champions: [pocketChampionsValue],
         items: [pocketItemsValue],
         runes: [pocketRunesValue],
+        spells: {
+            spell1: createDefaultSpell(),
+            spell2: createDefaultSpell(),
+            alt1: createDefaultSpell(),
+            alt2: createDefaultSpell(),
+        },
         notes: '',
         dateCreated: [createDateObject()],
         dateUpdated: [createDateObject()],
         component: null,
-        fullWidth: false,
     }
 
     const rs = useRuneStore()

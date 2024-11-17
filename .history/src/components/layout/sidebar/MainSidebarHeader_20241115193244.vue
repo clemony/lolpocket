@@ -1,0 +1,123 @@
+<script setup lang="ts">
+import { useGeneralStore } from '@/stores/generalStore'
+const gs = useGeneralStore()
+import { newPocketModal, commandModal } from '@/components/Layout/ui/Modal'
+
+import { useSidebar } from '@/components/base/sidebar/utils'
+
+const sidebar = useSidebar()
+console.log(sidebar)
+const { toggleSidebar } = useSidebar()
+const state = computed(() => {
+    return sidebar.state.value
+})
+
+watch(
+    () => state.value,
+    (newVal) => {
+        gs.sidebarState = newVal
+        console.log(newVal)
+    }
+)
+
+const collapsed = computed(() => {
+    const state = gs.sidebarState == 'collapsed' ? true : false
+    return state
+})
+</script>
+
+<template>
+    <SidebarHeader>
+        <SidebarMenu
+            class="w-full"
+            :class="{ 'items-center': collapsed, 'mx-2': !collapsed }">
+            <SidebarMenuItem>
+                <DropdownMenu>
+                    <DropdownMenuTrigger as-child>
+                        <SidebarMenuButton
+                            variant="ghost"
+                            size="md"
+                            class="flex size-full shrink-0 flex-nowrap items-center gap-3 !border-0 !p-0 !ring-0 focus:!border-0 focus:!outline-0 focus:!ring-1 focus:!ring-base-200">
+                            <div
+                                class="flex aspect-square w-[20px] shrink-0 items-center justify-center rounded-md bg-neutral text-neutral-content/90 shadow-sm">
+                                <span class="mt-1px !text-xs font-bold">
+                                    LP
+                                </span>
+                            </div>
+                            <span
+                                class="mt-px text-lg font-semibold opacity-80">
+                                lolpockets
+                            </span>
+                            <icon
+                                icon="teenyicons:caret-vertical-small-outline"
+                                class="ml-auto !size-5" />
+                        </SidebarMenuButton>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent
+                        class="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg last:mb-1"
+                        align="start"
+                        side="bottom"
+                        :side-offset="4">
+                        <DropdownMenuSeparator />
+
+                        <DropdownMenuGroup
+                            class="mr-0.5 px-1.5 font-medium *:text-sm [&_>div]:gap-4 [&_svg]:size-5">
+                            <DropdownMenuItem
+                                class=""
+                                @click="gs.toggleModalState(newPocketModal)">
+                                <icon
+                                    icon="teenyicons:folder-plus-outline"
+                                    class="size-3.5" />
+                                New Pocket
+
+                                <DropdownMenuShortcut>⌘ N</DropdownMenuShortcut>
+                            </DropdownMenuItem>
+
+                            <DropdownMenuItem
+                                class=""
+                                data-sidebar="trigger"
+                                @click="toggleSidebar">
+                                <icon
+                                    v-if="!collapsed"
+                                    icon="teenyicons:send-left-outline"
+                                    class="size-3" />
+                                <icon
+                                    v-if="collapsed"
+                                    icon="teenyicons:send-right-outline"
+                                    class="size-3" />
+
+                                {{
+                                    !collapsed ? 'Collapse Sidebar' : (
+                                        'Expand Sidebar'
+                                    )
+                                }}
+
+                                <DropdownMenuShortcut>⌘ L</DropdownMenuShortcut>
+                            </DropdownMenuItem>
+                        </DropdownMenuGroup>
+                    </DropdownMenuContent>
+                </DropdownMenu>
+            </SidebarMenuItem>
+            <SidebarMenuItem class="mt-1">
+                <SidebarMenuButton
+                    class="relative h-8 w-full max-w-44 items-center justify-start border border-base-300/80 bg-base-100/60 px-2 hover:cursor-text"
+                    :class="{
+                        'aspect-square justify-center !p-0 [&_span]:hidden [&_svg]:-ml-px':
+                            collapsed,
+                    }">
+                    <icon
+                        icon="teenyicons:search-outline"
+                        class="-mt-px size-[11px] shrink-0 text-base-content/80" />
+
+                    <span
+                        class="align-end grow px-1 pt-2px text-left text-base-content/80">
+                        Search
+                    </span>
+                    <DropdownMenuShortcut>⌘ K</DropdownMenuShortcut>
+                </SidebarMenuButton>
+            </SidebarMenuItem>
+        </SidebarMenu>
+    </SidebarHeader>
+</template>
+
+<style scoped></style>

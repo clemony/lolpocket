@@ -1,27 +1,35 @@
 <script setup lang="ts">
-import { usePocketStore } from '@stores/pocketStore'
+import { usePocketStore } from '@/stores/pocketStore'
+import { createDefaultSpell } from '@lib/functions/AddPocket';
+
 const ps = usePocketStore();
 
-function set() {
-    ps.pockets.forEach(pocket => {
-        const isFullWidthRow = false;
-        //(pocket.items[0].start ??= []).push(null);
-        console.log('done', ps.pockets)
+      const  spells = [
+           { spell1: createDefaultSpell()},
+        {spell2: createDefaultSpell()},
+        {alt1: createDefaultSpell()},
+      {  alt2: createDefaultSpell()}
+]
+function updatePocketShards(pockets, spells) {
+    pockets.forEach((pocket) => {
+
+        pocket.push(spells)
+        console.log(pocket);
+        /* pocket.spells.forEach((runeSet) => {
+            runeSet.runeSets.forEach((runeSetItem) => {
+                runeSetItem.shards = shards;
+            });
+        }); */
     });
 }
 
- function fix() {
-            // Add `fullWidth` to each pocket if it doesn’t exist
-            ps.pockets = ps.pockets.map((pocket) => ({
-                ...pocket,
-                fullWidth:
-                    pocket.fullWidth !== undefined ? pocket.fullWidth : false,
-            }))
-        }
+// Example usage
+
+
+
+
 </script>
-
-<template><button @click="set">
-    <h1>set ogiglif</h1>
-</button></template>
-
+<template>
+    <button @click="updatePocketShards(ps.pockets, spells)">update</button>
+    </template>
 <style scoped></style>

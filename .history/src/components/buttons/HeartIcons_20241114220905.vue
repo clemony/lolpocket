@@ -1,0 +1,14 @@
+<script setup lang="ts"></script>
+
+<template>
+    <icon
+        icon="teenyicons:heart-outline"
+        class="swap-off absolute -left-3 -top-3 size-5.5 p-px opacity-70 disabled:opacity-0 peer-checked:opacity-70" />
+    <icon
+        icon="teenyicons:heart-solid"
+        class="swap-on absolute -left-3 -top-3 size-5.5 p-px text-base-content/80 text-dark-rose opacity-0 disabled:opacity-0 peer-checked:opacity-100" />
+
+    <icon
+        icon="fluent:heart-off-20-regular"
+        class="absolute -left-3 -top-3 size-5.5 text-base-content/30 opacity-0 disabled:opacity-100" />
+</template>

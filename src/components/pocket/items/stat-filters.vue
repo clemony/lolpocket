@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { useItemStore } from '@stores/itemStore'
+import { useItemStore } from '@/stores/itemStore'
 const is = useItemStore()
-import { stats } from '@data/stats'
+import { stats } from '@/data/stats'
 
 const sorted = stats.sort((a, b) => {
     return a.name.localeCompare(b.name)

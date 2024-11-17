@@ -1,0 +1,15 @@
+<script setup lang="ts">
+const searchQuery = ref('')
+</script>
+
+<template>
+    <div class="w-full rounded-2xl p-0">
+        <SearchBox
+            class="h-16 w-full overflow-hidden"
+            inputClass="rounded-lg pl-14 text-xl pt-2 align-baseline"
+            iconClass="p-4.5 left-0"
+            @update:search="(v) => (searchQuery = v)" />
+    </div>
+</template>
+
+<style scoped></style>

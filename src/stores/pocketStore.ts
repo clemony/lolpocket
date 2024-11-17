@@ -1,9 +1,5 @@
 import { defineStore } from 'pinia'
-import { pocket } from './../../types'
-import {
-    createDateObject,
-    createGridHeader,
-} from '@lib/functions/CreateDefault'
+import { pocket } from '../../types'
 
 export const usePocketStore = defineStore(
     'pocketStore',
@@ -11,12 +7,12 @@ export const usePocketStore = defineStore(
         const pockets = ref<pocket[]>([])
         const trashPockets = ref<pocket[]>([])
         const archivePockets = ref<pocket[]>([])
-        const pinnedRows = ref<pocket[]>([])
 
         const filterText = ref('')
         const patch = '14.19'
 
         const selectedRows = ref([])
+        const pinnedRows = ref<pocket[]>([])
         const tableSelectAll = ref()
         const pocketApi = shallowRef()
         const pinnedApi = shallowRef()
@@ -34,19 +30,6 @@ export const usePocketStore = defineStore(
         })
         const general = computed(() => {
             return pockets.value.filter((pocket) => !pocket.pinned)
-        })
-
-        const pinnedRowData = computed(() => {
-            const p = [...pinned.value]
-            // const create = createGridHeader(false)
-            return p //.push(create)
-        })
-
-        // Filter for non-pinned pockets
-        const rowData = computed(() => {
-            const p = [...general.value]
-            //  const create = createGridHeader(false)
-            return p //.push(create)
         })
 
         function getPocket(key) {
@@ -75,22 +58,13 @@ export const usePocketStore = defineStore(
             }
         }
 
-        function updateGrid() {
-            pocketApi.value.setGridOption('pinnedTopRowData', pinnedRowData)
-            pocketApi.value.setGridOption('rowData', rowData)
-        }
-
         return {
             pockets,
             filterText,
-            updateGrid,
             deletePocket,
             patch,
-            pinnedRowData,
             archivePockets,
-            rowData,
             getPocket,
-            pinnedRows,
             trashPockets,
             updatePocketType,
             selectedRows,

@@ -13,22 +13,44 @@ export interface navData {
     pocketLinks: Array<navObject>
 }
 
-export interface pocket {
+interface OpenTab {
+    id: string
     name: string
-    tags: Array<string>
-    pinned: boolean
+    link: string
+    title: any
+    icon?: any
+    pocketKey?: string
+}
+
+export interface modal {
+    component?: any
+    id?: string
+    title?: string
+    description?: string
+    submitText?: string
+}
+
+export interface pocket {
     key: string
-    icon: string
-    bgColor: string
-    iconColor: string
+    name: string
     champions: pocketChampions[]
     items: pocketItems[]
     runes: pocketRunes[]
-    notes: string
+    spells: {
+        spell1: spell
+        spell2: spell
+        alt1: spell
+        alt2: spell
+    }
     dateCreated: dateObject[]
     dateUpdated: dateObject[]
+    tags: Array<string>
+    pinned: boolean
+    icon: string
+    bgColor: string
+    iconColor: string
+    notes: string
     component: any
-    fullWidth: boolean
 }
 
 export interface pocketChampions {
@@ -60,6 +82,14 @@ export interface Ability {
     context: string
     img: string
     data: Record<string, string>
+}
+
+export interface spell {
+    name: string
+    description: string
+    cd: number
+    recharge?: number
+    charges?: number
 }
 
 export interface pocketItems {
@@ -133,7 +163,11 @@ export interface RuneSet {
     secondary: string
     s1: Rune
     s2: Rune
-    shards: string[]
+    shards: {
+        shard1: Shard
+        shard2: Shard
+        shard3: Shard
+    }
 }
 
 export interface Rune {
@@ -152,7 +186,7 @@ export interface Shard {
     slotID: number
     slotName: string
     type: string
-    img: string
+    icon: string
     color: string
 }
 

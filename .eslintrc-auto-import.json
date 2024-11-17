@@ -332,6 +332,7 @@
     "watchPausable": true,
     "watchThrottled": true,
     "watchTriggerable": true,
-    "useSeoMeta": true
+    "useSeoMeta": true,
+    "clean": true
   }
 }

@@ -51,7 +51,7 @@ export default defineConfig({
                 'vue-i18n',
                 'vue-router',
                 {
-                    '/src/lib/utils/': ['cn'],
+                    '/src/lib/utils.ts': ['cn', 'clean'],
                 },
             ],
 

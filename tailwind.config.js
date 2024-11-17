@@ -4,9 +4,11 @@ const scrollbarhide = require('tailwind-scrollbar-hide')
 const path = require('path')
 const daisyui = require('daisyui')
 const plugin = require('tailwindcss/plugin')
-
+import { themes } from ''
+const themeConfig = require('./src/Config/themes')
 const containerQueries = require('@tailwindcss/container-queries')
 import { mask } from '@windwards/plugin-mask'
+//const themer = require('tailwindcss-themer')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -15,6 +17,7 @@ module.exports = {
         scrollbarhide,
         daisyui,
         containerQueries,
+        //themer(themeConfig),
         mask(),
         plugin(function ({ addBase }) {
             addBase({
@@ -75,7 +78,10 @@ module.exports = {
                 18: '4.5rem',
             },
             fontSize: {
+                'sm+': ['0.97rem', { lineHeight: '1.4rem' }],
+
                 md: ['1.075rem', { lineHeight: '1.5rem' }],
+                'lg+': ['1.2rem', { lineHeight: '1.55rem' }],
             },
             transitionProperty: {
                 height: 'height',
@@ -141,12 +147,12 @@ module.exports = {
                     from: { height: 'var(--radix-collapsible-content-height)' },
                     to: { height: 0 },
                 },
-            },
-            animation: {
-                'accordion-down': 'accordion-down 0.2s ease-in-out',
-                'accordion-up': 'accordion-up 0.2s ease-in-out',
-                'collapsible-down': 'collapsible-down 0.2s ease-in-out',
-                'collapsible-up': 'collapsible-up 0.2s ease-in-out',
+                animation: {
+                    'accordion-down': 'accordion-down 0.2s ease-in-out',
+                    'accordion-up': 'accordion-up 0.2s ease-in-out',
+                    'collapsible-down': 'collapsible-down 0.2s ease-in-out',
+                    'collapsible-up': 'collapsible-up 0.2s ease-in-out',
+                },
             },
         },
         container: {
@@ -186,6 +192,7 @@ module.exports = {
                     error: '#BF616A',
                     'info-content': 'oklch(22.3899% 0.031305 278.07229)',
                 },
+
                 lightaesthetic: {
                     ...require('daisyui/src/theming/themes')['light'],
                     'base-100': 'oklch(100% 0 0)',

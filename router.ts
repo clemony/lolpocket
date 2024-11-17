@@ -1,24 +1,20 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Pocket from './src/pages/pocket.vue'
-import Pockets from './src/pages/pockets.vue'
-import Settings from './src/pages/settings.vue'
-import Trash from './src/pages/trash.vue'
-import Archive from './src/pages/archive.vue'
-import { usePocketStore } from '@stores/pocketStore'
-import Home from '@pages/home.vue'
+import Pocket from './src/Pages/pocket.vue'
+import Pockets from './src/Pages/pockets.vue'
+import Settings from './src/Pages/settings.vue'
+import Trash from './src/Pages/trash.vue'
+import Archive from './src/Pages/archive.vue'
+import { usePocketStore } from '@/stores/pocketStore'
+import { useGeneralStore } from '@stores/generalStore'
 
+import Home from './src/Pages/home.vue'
+import Runes from './src/Pages/runes.vue'
 
 const routes: RouteRecordRaw[] = [
-    
     {
         path: '/about',
         name: 'about',
-        component: () => import('./src/pages/about.vue'),
-    },
-    {
-        path: '/app',
-        name: 'app',
-        component: () => import('./src/pages/app.vue'),
+        component: () => import('./src/Pages/about.vue'),
     },
     {
         path: '/archive',
@@ -29,17 +25,17 @@ const routes: RouteRecordRaw[] = [
         path: '/calculator',
         name: 'calculator',
         component: Trash,
-    }, 
+    },
     {
         path: '/champions',
         name: 'champions',
-        component: () => import('./src/pages/champions.vue'),
+        component: () => import('./src/Pages/champions.vue'),
     },
     {
         path: '/home',
         name: 'home',
         alias: '/',
-        component: () => import('./src/pages/home.vue'),
+        component: Home,
         meta: {
             title: 'Home',
             icon: 'teenyicons:home-outline',
@@ -48,12 +44,12 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/items',
         name: 'items',
-        component: () => import('./src/pages/items.vue'),
+        component: () => import('./src/Pages/items.vue'),
     },
     {
         path: '/likes',
         name: 'likes',
-        component: () => import('./src/pages/likes.vue'),
+        component: () => import('./src/Pages/likes.vue'),
     },
     {
         path: '/pocket/:pocketKey',
@@ -63,7 +59,6 @@ const routes: RouteRecordRaw[] = [
             icon: 'teenyicons:folder-outline',
         },
         props: true,
-       
     },
     {
         path: '/pockets',
@@ -72,6 +67,15 @@ const routes: RouteRecordRaw[] = [
         meta: {
             title: 'Pockets',
             icon: 'formkit:folder',
+        },
+    },
+    {
+        path: '/runes',
+        name: 'rettings',
+        component: Runes,
+        meta: {
+            title: 'Runes',
+            icon: 'teenyicons:cog-outline',
         },
     },
     {
@@ -99,8 +103,4 @@ const router = createRouter({
     routes,
 })
 
-
-
 export default router
-
-
