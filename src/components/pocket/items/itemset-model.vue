@@ -29,7 +29,7 @@ onMounted(() => {
                 <img
                     v-if="index < 6"
                     :src="`/img/items/${item.id}.webp`"
-                    class="size-[55px] overflow-hidden rounded-lg border border-base-300 shadow-sm" />
+                    class="size-[55px] overflow-hidden rounded-lg border border-b3 shadow-xs" />
             </template>
             <Placeholder
                 v-for="index in makeBox(model.items.length)"

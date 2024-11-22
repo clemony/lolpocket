@@ -30,7 +30,7 @@ const { toggleSidebar } = useSidebar()
         v-if="collapsible === 'none'"
         :class="
             cn(
-                'flex h-full w-[--sidebar-width] flex-col bg-base-100/90 text-base-content',
+                'flex h-full w-(--sidebar-width) flex-col bg-b1/90 font-size-4-content',
                 props.class
             )
         "
@@ -46,7 +46,7 @@ const { toggleSidebar } = useSidebar()
         <SheetContent
             data-sidebar="sidebar"
             data-mobile="true"
-            class="w-[--sidebar-width] bg-base-100/90 p-0 text-base-content [&>button]:hidden"
+            class="w-(--sidebar-width) bg-b1/90 p-0 font-size-4-content [&>button]:hidden"
             :style="{
                 '--sidebar-width': SIDEBAR_WIDTH_MOBILE,
             }">
@@ -67,32 +67,32 @@ const { toggleSidebar } = useSidebar()
         <div
             :class="
                 cn(
-                    'relative h-svh w-[--sidebar-width] bg-transparent transition-[width] duration-200 ease-linear',
+                    'relative h-svh w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear',
                     'group-data-[collapsible=offcanvas]:w-0',
                     'group-data-[side=right]:rotate-180',
                     variant === 'floating' || variant === 'inset' ?
-                        'group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]'
-                    :   'group-data-[collapsible=icon]:w-[--sidebar-width-icon]'
+                        'group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+calc(var(--spacing)*4))]'
+                    :   'group-data-[collapsible=icon]:w-(--sidebar-width-icon)'
                 )
             " />
         <div
             :class="
                 cn(
-                    'fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] duration-200 ease-linear md:flex',
+                    'fixed inset-y-0 z-10 hidden h-svh w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear md:flex',
                     side === 'left' ?
                         'left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]'
                     :   'right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]',
                     // Adjust the padding for floating and inset variants.
                     variant === 'floating' || variant === 'inset' ?
-                        'p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]'
-                    :   'group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l',
+                        'p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+calc(var(--spacing)*4)+2px)]'
+                    :   'group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l',
                     props.class
                 )
             "
             v-bind="$attrs">
             <div
                 data-sidebar="sidebar"
-                class="flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-base-200 group-data-[variant=floating]:shadow">
+                class="flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-b2 group-data-[variant=floating]:shadow-sm">
                 <slot :data-state="state" />
             </div>
         </div>

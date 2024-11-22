@@ -166,7 +166,7 @@ const letters = computed(() => {
                         @click="scrollToSection(el.ref)"
                         class="group mb-px flex gap-1 font-medium opacity-50 transition-all duration-300 hover:cursor-pointer hover:opacity-100"
                         :class="{
-                            'text-base-content !opacity-100':
+                            'font-size-4-content opacity-100!':
                                 el.name == pocket.component,
                         }">
                         <input
@@ -192,7 +192,7 @@ const letters = computed(() => {
                         @click="scrollToSection(el.ref)"
                         class="dd group mb-px flex items-center gap-1 font-medium opacity-50 transition-all duration-300 hover:cursor-pointer hover:opacity-100"
                         :class="{
-                            'text-base-content !opacity-100':
+                            'font-size-4-content opacity-100!':
                                 el.name == pocket.component,
                         }">
                         <input

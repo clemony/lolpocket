@@ -50,7 +50,7 @@ function updateNotes() {
     <context-menu>
         <context-menu-trigger>
             <textarea
-                class="peer flex size-full cursor-pointer items-start overflow-y-scroll rounded-[4px] border border-transparent bg-transparent focus:border-base-200/40 focus:bg-base-200/25 px-1.5 py-1 align-top text-sm  leading-3 tracking-[0.015em] outline-none transition-all duration-300 [resize:none]  placeholder:font-light  hover:border-base-300/70 hover:opacity-70 hover:shadow-inner focus:opacity-100 focus:shadow-inner"
+                class="peer flex size-full cursor-pointer items-start overflow-y-scroll rounded-[4px] border border-transparent bg-transparent focus:border-b2/40 focus:bg-b2/25 px-1.5 py-1 align-top font-size-2  leading-3 tracking-[0.015em] outline-hidden transition-all duration-300 [resize:none]  placeholder:font-light  hover:border-b3/70 hover:opacity-70 hover:shadow-inner focus:opacity-100 focus:shadow-inner"
                 v-model="notesInput" @blur="updateNotes" @click.stop placeholder="notes..." spellcheck="false">
                 </textarea>
 

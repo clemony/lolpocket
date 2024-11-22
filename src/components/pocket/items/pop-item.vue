@@ -32,15 +32,15 @@ const isLiked = computed(() => {
 
 <!-- This will be the content of the popover -->
 <template v-if="props.item">
-    <div class="relative grid w-72 !min-w-60 max-w-96 overscroll-none p-4">
+    <div class="relative grid w-72 min-w-60! max-w-96 overscroll-none p-4">
         <div
-            class="grid w-full grid-cols-[1fr_2fr] gap-2 border-b border-base-300 pb-3">
+            class="grid w-full grid-cols-[1fr_2fr] gap-2 border-b border-b3 pb-3">
             <div class="col-start-1 h-full">
                 <img
                     :key="item.id"
                     :src="`/img/items/${item.id}.webp`"
                     :alt="item.name + ' Image'"
-                    class="pointer-events-none size-14 rounded-md border border-base-300 shadow-warm" />
+                    class="pointer-events-none size-14 rounded-md border border-b3 shadow-warm" />
             </div>
 
             <!---------------------------⟢ Header ⟣---------------------------->
@@ -48,7 +48,7 @@ const isLiked = computed(() => {
             <div class="grid h-full grid-cols-1">
                 <div class="text-middle flex">
                     <h3
-                        class="flex flex-wrap text-sm font-bold leading-4 tracking-tight">
+                        class="flex flex-wrap font-size-2 font-bold leading-4 tracking-tight">
                         {{ item.name }}
                     </h3>
                 </div>
@@ -88,7 +88,7 @@ const isLiked = computed(() => {
 
                         <template #popper :key="item.name + 'addToSet'">
                             <ul
-                                class="pointer-events-auto grid !w-full min-w-28 items-center gap-2 p-2">
+                                class="pointer-events-auto grid w-full! min-w-28 items-center gap-2 p-2">
                                 <span class="cursor-default pl-2">
                                     Add to Set
                                 </span>
@@ -138,11 +138,11 @@ const isLiked = computed(() => {
             v-show="
                 item.stats || item.active.length > 2 || item.passive.length > 2
             "
-            class="grid grid-cols-1 gap-2 self-start whitespace-pre-line border-b border-base-300 py-2 text-sm">
+            class="grid grid-cols-1 gap-2 self-start whitespace-pre-line border-b border-b3 py-2 font-size-2">
             <p
                 v-html="item.stats"
                 v-if="item.stats"
-                class="text-sm capitalize leading-5"></p>
+                class="font-size-2 capitalize leading-5"></p>
 
             <p v-html="item.active" v-if="item.active.length > 2" class=""></p>
 

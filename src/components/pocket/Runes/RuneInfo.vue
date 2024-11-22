@@ -33,7 +33,7 @@ const rune = computed(() => {
         <!-------------------------------⟢ Header ⟣-------------------------------->
 
         <label :key="rune.name + '1'"
-            class="frost sticky left-0 top-0 z-50 flex !h-fit w-full flex-wrap items-center justify-end gap-4 rounded-t-box border-b border-b-base-300 px-4 py-1">
+            class="frost sticky left-0 top-0 z-50 flex h-fit! w-full flex-wrap items-center justify-end gap-4 rounded-t-box border-b border-b-b3 px-4 py-1">
             <h2 class="sub-text flex grow items-center justify-start gap-3">
                 <span class="grow"> {{ rune.name || 'Rune Detail' }}</span>
                 <div v-if="rune">
@@ -55,7 +55,7 @@ const rune = computed(() => {
                 </div>
             </div>
             <div id="runeStats" :key="rune.name + '3'"
-                class="mt-1 whitespace-pre-line text-justify font-serif text-[0.76rem] first-letter:float-left first-letter:mr-1.5 first-letter:text-3xl first-letter:font-[700] first-line:font-[700] first-line:uppercase first-line:tracking-widest">
+                class="mt-1 whitespace-pre-line text-justify font-serif text-[0.76rem] first-letter:float-left first-letter:mr-1.5 first-letter:font-size-10 first-letter:font-[700] first-line:font-[700] first-line:uppercase first-line:tracking-widest">
                 {{ rune.stats }}
             </div>
         </div>
@@ -98,7 +98,7 @@ const rune = computed(() => {
     }
 
     #runeImg {
-        @apply size-14 shadow-[inset_0px_0px_2px_3px_#00000099,_1px_2px_1px_2px_#00000018] ring-1 ring-base-200 ring-offset-1 ring-offset-base-300;
+        @apply size-14 shadow-[inset_0px_0px_2px_3px_#00000099,_1px_2px_1px_2px_#00000018] ring-1 ring-b2 ring-offset-1 ring-offset-b3;
     }
 
     .link-set:hover .link-icon {

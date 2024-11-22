@@ -43,7 +43,7 @@ const likeText = computed(() => {
                 scrollbar-hide>
                 <LayoutSpacer />
                 <InfoCard
-                    cardClass="mb-2 bg-transparent border-none !shadow-none !px-0">
+                    cardClass="mb-2 bg-transparent border-none shadow-none! px-0!">
                     <template #header>
                         <h1>Item Sets</h1>
                     </template>
@@ -60,7 +60,7 @@ const likeText = computed(() => {
                         <div class="relative inline-block h-4.5 w-14">
                             <Label
                                 class="absolute -top-px flex w-14 items-center justify-center gap-1">
-                                <span class="text-base">⌘</span>
+                                <span class="font-size-4">⌘</span>
                                 +
                                 <icon
                                     icon="ph:mouse-left-click-fill"
@@ -89,13 +89,13 @@ const likeText = computed(() => {
                             @update:search="is.searchFilter = $event"
                             iconClass="p-2.5 -ml-2"
                             inputClass="pr-6 pl-12 "
-                            class="max-w-1/2 h-10 justify-self-start bg-base-100/40 [&_input]:join-item [&_input]:!rounded-l-lg" />
+                            class="max-w-1/2 h-10 justify-self-start bg-b1/40 [&_input]:join-item [&_input]:rounded-l-lg!" />
 
                         <Label
                             @click.stop
                             variant="outline"
                             size="icon"
-                            class="join-item swap swap-flip relative aspect-square size-10 shrink-0 has-[:disabled]:cursor-default"
+                            class="join-item swap swap-flip relative aspect-square size-10 shrink-0 has-disabled:cursor-default"
                             alt="Filter Likes">
                             <input
                                 type="checkbox"
@@ -126,8 +126,8 @@ const likeText = computed(() => {
                             @update:model="(v) => (is.sortPrice = v)" />
 
                         <FilterButton
-                            class="join-item !rounded-l-none"
-                            :class="{ 'bg-base-200': isOpen == true }">
+                            class="join-item rounded-l-none!"
+                            :class="{ 'bg-b2': isOpen == true }">
                             hi
                         </FilterButton>
                     </div>

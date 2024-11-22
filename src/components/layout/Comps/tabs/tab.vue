@@ -20,7 +20,7 @@ watch(
 
 </script>
 <template><label role="tab" :class="cn('max-w-24 ', { 'tab-active': model === props.value, 'first': props.first }, props.class)"
-    class="tab !z-20 text-base   top-0 left-0  [--tab-border-color:oklch(var(--b2))]" v-bind="$attrs">
+    class="tab z-20! font-size-4   top-0 left-0  [--tab-border-color:oklch(var(--b2))]" v-bind="$attrs">
     <input type="radio" class="peer hidden" :value="props.value" :v-model="model"
         @change="emit('update:modelName', model)" />
     <slot name="header" />
@@ -30,7 +30,7 @@ watch(
 :root {}
 
 .tab-active {
-    @apply !z-30 shadow-[6px_4px_5px_1px_oklch(var(--b1))] border-base-200;
+    @apply !z-30 shadow-[6px_4px_5px_1px_oklch(var(--b1))] border-b2;
 }
 
 .tab-active:not(:first-child) {

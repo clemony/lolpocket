@@ -28,7 +28,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         v-bind="forwarded"
         :class="
             cn(
-                'relative flex cursor-default select-none items-center gap-4 rounded-sm px-2 py-1.5 text-sm font-medium outline-none focus:bg-base-200/60 focus:text-base-content data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:size-4.5 [&_svg]:opacity-90',
+                'relative flex cursor-default select-none items-center gap-4 rounded-sm px-2 py-1.5 font-size-2 font-medium outline-hidden focus:bg-b2/60 focus:font-size-4-content data-disabled:pointer-events-none data-disabled:opacity-50 [&_svg]:size-4.5 [&_svg]:opacity-90',
                 inset && 'pl-8',
                 props.class
             )

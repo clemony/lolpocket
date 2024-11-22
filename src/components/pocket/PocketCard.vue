@@ -28,18 +28,18 @@ const flip = ref(false)
                     backgroundImage: champImage,
                 }"></div>
             <CardContent
-                class="relative h-inherit w-inherit items-center bg-gradient-to-b from-base-100/40 from-0% via-base-100/70 via-15% to-base-100/80 to-30%">
+                class="relative h-inherit w-inherit items-center bg-linear-to-b from-b1/40 from-0% via-b1/70 via-15% to-b1/80 to-30%">
                 <CardHeader class="relative flex px-3 pb-5">
-                    <CardTitle class="z-10 pb-0 !text-[1.45rem] font-semibold">
+                    <CardTitle class="z-10 pb-0 text-[1.45rem]! font-semibold">
                         {{ pocket.name }}
                     </CardTitle>
                     <CardDescription>
                         <!--                       <h4
-                            class="font-cursive ml-3 scale-x-110 font-semibold lowercase !not-italic text-base-content/80">
+                            class="font-cursive ml-3 scale-x-110 font-semibold lowercase not-italic! font-size-4-content/80">
                             @{{ pocket.champions[0].starred }}
                         </h4> -->
                         <h4
-                            class="z-10 pt-0 !text-base font-semibold !not-italic">
+                            class="z-10 pt-0 font-size-4! font-semibold not-italic!">
                             #{{ pocket.tags[0] }}
                         </h4>
                     </CardDescription>
@@ -50,7 +50,7 @@ const flip = ref(false)
                         <div class="absolute flex gap-2">
                             <SpellDisplay :pocket="pocket" />
                             <!--                   <span
-                                class="font-cursive flex grow items-end justify-end text-2xl">
+                                class="font-cursive flex grow items-end justify-end font-size-9">
                                 {{ pocket.champions[0].starred }}
                             </span> -->
                         </div>

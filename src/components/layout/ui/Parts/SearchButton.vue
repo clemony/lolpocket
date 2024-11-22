@@ -10,12 +10,12 @@ const props = defineProps<{
 <template>
     <Button
         size="xs"
-        class="h-9 !min-h-6 w-full min-w-40 items-center border border-base-300/60 bg-base-100/30 !py-1 px-3 shadow-[inset_0px_0px_2px_2px_#00000004,inset_1px_2px_2px_2px_#00000005] hover:border-base-300 hover:bg-base-200/20 hover:ring-0"
+        class="h-9 min-h-6! w-full min-w-40 items-center border border-b3/60 bg-b1/30 py-1! px-3 shadow-[inset_0px_0px_2px_2px_#00000004,inset_1px_2px_2px_2px_#00000005] hover:border-b3 hover:bg-b2/20 hover:ring-0"
         @click="gs.toggleModalState(commandModal)">
-        <icon icon="teenyicons:search-outline" class="-mt-px !size-[11px]" />
+        <icon icon="teenyicons:search-outline" class="-mt-px size-[11px]!" />
 
         <span
-            class="align-end grow px-1 pt-2px text-center text-sm font-semibold opacity-70">
+            class="align-end grow px-1 pt-2px text-center font-size-2 font-semibold opacity-70">
             {{ props.placeholder }}
         </span>
         <DropdownMenuShortcut class="">⌘ K</DropdownMenuShortcut>

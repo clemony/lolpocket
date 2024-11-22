@@ -12,7 +12,7 @@ const props = defineProps<{
     <div class="font-medium  text-start text-muted-foreground grow">
         {{ props.title }}
     </div>
-    <div class='justify-self-end justify-end text-xs opacity-80 pr-2'>
+    <div class='justify-self-end justify-end font-size-1 opacity-80 pr-2'>
         {{ props.shortcut }}
     </div>
 </Button></template>

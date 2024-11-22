@@ -83,7 +83,7 @@
                 <div class='relative w-fit'>
 
                     <div
-                        class='size-[75px]  join-item border-base-300 border grid place-items-center  overflow-y-hidden rounded-lg'>
+                        class='size-[75px]  join-item border-b3 border grid place-items-center  overflow-y-hidden rounded-lg'>
                         <loadImg
                             class=" size-[75px] scale-[108%] mr-1   aspect-square object-center shrink-0 !rounded-none "
                             :url="`/img/champions/${clean(champion.name)}.webp`" />
@@ -97,12 +97,12 @@
 
 
                 <div class="flex flex-col w-full h-full *:shrink-0 ">
-                    <p class=" font-semibold font-serif !text-3xl">
+                    <p class=" font-semibold font-serif !font-size-10">
                         {{ champion.name }}
                     </p>
 
                     <p
-                        class="mt-1 flex place-items-center text-pretty pb-1 pl-[10px] pr-3 pt-0 -indent-[11px] scale-y-[99%] text-sm font-medium uppercase tracking-wide ">
+                        class="mt-1 flex place-items-center text-pretty pb-1 pl-[10px] pr-3 pt-0 -indent-[11px] scale-y-[99%] font-size-2 font-medium uppercase tracking-wide ">
                         @ {{ champion.title }}
                     </p>
 
@@ -110,7 +110,7 @@
 
                     <div class="justify-content-end w-full mt-1.5 flex gap-2 justify-self-end  text-center ">
                         <code v-for="(tag, index) in champion.tags" :key="index"
-                            class="badge flex h-max w-auto flex-nowrap text-center font-mono text-sm font-medium lowercase tracking-normal"
+                            class="badge flex h-max w-auto flex-nowrap text-center font-mono font-size-2 font-medium lowercase tracking-normal"
                             :data-tag="tag">#{{
                             tag }}</code>
                     </div>
@@ -149,11 +149,11 @@
     .tab {
     --tab-border-color: oklch(var(--b3)/0.8);
 
-    @apply text-sm text-start;
+    @apply font-size-2 text-start;
     }
 
     .collapse-title {
-    @apply flex items-center gap-3 text-sm;
+    @apply flex items-center gap-3 font-size-2;
 
     img {
     @apply -ml-1 size-9 rounded-full border border-neutral/40;

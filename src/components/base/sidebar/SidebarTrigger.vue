@@ -37,7 +37,7 @@ const state = sidebar.state
             {{ state == 'expanded' ? 'Collapse Sidebar' : 'Expand Sidebar' }}
         </span>
 
-        <div class="justify-end justify-self-end pr-2 text-xs opacity-80">
+        <div class="justify-end justify-self-end pr-2 font-size-1 opacity-80">
             ⌘ L
         </div>
     </Button>

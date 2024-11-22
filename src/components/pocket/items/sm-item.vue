@@ -26,11 +26,11 @@ function imageLoaded() {
         :disabled="gs.reducedMotion == true">
         <KinesisElement type="translate" :strength="6" class="flex  items-center ">
             <div :key="item.id"
-                class="aspect-square size-[48px] shrink-0   border border-base-300 opacity-95 transition-all duration-300 ">
+                class="aspect-square size-[48px] shrink-0   border border-b3 opacity-95 transition-all duration-300 ">
 
                 <div class="size-full absolute top-0 left-0 z-0 ">
                     <img @load="imageLoaded()" :src="`/img/items/${item.id}.webp`"
-                        class="z-0 size-full scale-150 blur-sm" :data-item="item.name" />
+                        class="z-0 size-full scale-150 blur-xs" :data-item="item.name" />
                 </div>
 
                 <div class="size-full absolute top-0 left-0 z-10 ">

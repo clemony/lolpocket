@@ -26,7 +26,7 @@ const dataValue = ref(props.dataValue)
 
 
     <label v-for="data in props.data">
-        <Button variant="ghost" size="sm" class='w-full  !justify-start text-start'>
+        <Button variant="ghost" size="sm" class='w-full  justify-start! text-start'>
 
 
 
@@ -37,7 +37,7 @@ const dataValue = ref(props.dataValue)
     </label>
 
 
-    <Button variant="" size="xs" class='border-t border-t-base-300/50 fixed bottom-0 left-0 w-full rounded-none'
+    <Button variant="" size="xs" class='border-t border-t-b3/50 fixed bottom-0 left-0 w-full rounded-none'
         @click="dataValue = ''">
         <icon v-if="dataValue == ''" icon="teenyicons:tick-outline" class="size-3" />
         <span v-else class="w-3"></span>
@@ -52,7 +52,7 @@ const dataValue = ref(props.dataValue)
 }
 
 .v-popper--shown button {
-    @apply border-base-300/90;
+    @apply border-b3/90;
 
     &>div {
         @apply opacity-80;

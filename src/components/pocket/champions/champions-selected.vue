@@ -46,7 +46,7 @@ function onAdd(e) {
     :group="{ name: 'champs', pull: true, put: true, revertClone: false }" :prevent-on-filter="true"
     direction="horizontal" :bubbleScroll="false" :scroll="false" ghostClass="ghosty" :force-fallback="true"
     :fallbackTolerance="0" fallbackClass="drag-clone" :fallbackOnBody="true" @add="onAdd($event)"
-    class="drag-draggable h-full !flex-nowrap items-center overflow-y-clip overflow-x-scroll px-0.5 py-1 scrollbar-hide">
+    class="drag-draggable h-full flex-nowrap! items-center overflow-y-clip overflow-x-scroll px-0.5 py-1 scrollbar-hide">
     <!-- Display each champion in the draggable list -->
     <div v-for="(champion, index) in pocket.champions[0].champions" :key="champion.name"
         class="group relative shrink-0 size-[68px]">
@@ -70,7 +70,7 @@ function onAdd(e) {
 
 
         <button @click="cs.removeChamp(champion.name, pocket)"
-            class="absolute right-1.5 top-1.5 rounded-full bg-base-100 opacity-0 transition-all duration-300 group-hover:opacity-70">
+            class="absolute right-1.5 top-1.5 rounded-full bg-b1 opacity-0 transition-all duration-300 group-hover:opacity-70">
             <icon icon="teenyicons:x-circle-solid" />
         </button>
     </div>

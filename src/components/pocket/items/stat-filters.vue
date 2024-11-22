@@ -82,7 +82,7 @@ function getStatsForCategory(category: string) {
         class="grid h-fit grid-cols-2 justify-around gap-x-8 gap-y-4 odd:col-start-2">
         <!--    <h2>Item Stats</h2> -->
         <div v-for="(cat, i) in cats" :defaultOpen="false">
-            <h4 class="semibold mb-1.5 !text-base capitalize">
+            <h4 class="semibold mb-1.5 font-size-4! capitalize">
                 {{ cat.name }}
             </h4>
 
@@ -98,10 +98,10 @@ function getStatsForCategory(category: string) {
                                 v-model="is.statFilters"
                                 class="checkbox checkbox-sm rounded-xs opacity-80"
                                 :value="stat.value || stat.name" />
-                            <div class="text-nowrap text-sm">
+                            <div class="text-nowrap font-size-2">
                                 {{ stat.name }}
                             </div>
-                            <!--         <icon :icon="stat.icon" :class="stat.classList" class="w-4 text-base-content/80 size-4 " /> -->
+                            <!--         <icon :icon="stat.icon" :class="stat.classList" class="w-4 font-size-4-content/80 size-4 " /> -->
                         </label>
                     </li>
                     <li v-if="cat.name == 'physical'" class="w-1/4 grow"></li>

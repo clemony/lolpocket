@@ -17,9 +17,9 @@ const userData = {
                         <SidebarMenuButton
                             variant="ghost"
                             size="default"
-                            class="flex h-16 flex-nowrap items-center gap-2 !border-0 pr-2.5 !ring-0 focus:!border-0 focus:!outline-0 focus:!ring-1 focus:!ring-base-200 data-[state=open]:shadow-sm data-[state=open]:!ring-1 data-[state=open]:!ring-base-300/40">
+                            class="flex h-16 flex-nowrap items-center gap-2 border-0! pr-2.5 ring-0! focus:border-0! focus:outline-0! focus:ring-1! focus:ring-b2! data-[state=open]:shadow-xs data-[state=open]:ring-1! data-[state=open]:ring-b3/40!">
                             <Avatar
-                                class="border-1 mt-0.5 size-10 rounded-lg border border-transparent shadow-sm">
+                                class="border-1 mt-0.5 size-10 rounded-lg border border-transparent shadow-xs">
                                 <AvatarImage
                                     :src="userData.user.avatar"
                                     :alt="userData.user.name" />
@@ -29,8 +29,8 @@ const userData = {
                             </Avatar>
 
                             <div
-                                class="grid flex-1 text-left text-base leading-none">
-                                <span class="truncate text-md font-semibold">
+                                class="grid flex-1 text-left font-size-4 leading-none">
+                                <span class="truncate font-size-5 font-semibold">
                                     {{ userData.user.name }}
                                 </span>
                                 <span class="truncate">
@@ -39,17 +39,17 @@ const userData = {
                             </div>
                             <icon
                                 icon="teenyicons:caret-vertical-small-outline"
-                                class="ml-auto !size-5" />
+                                class="ml-auto size-5!" />
                         </SidebarMenuButton>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent
-                        class="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg !shadow-standard backdrop-brightness-[97%] *:text-base"
+                        class="w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg shadow-standard! backdrop-brightness-[97%] *:font-size-4"
                         side="bottom"
                         align="end"
                         :side-offset="6">
                         <DropdownMenuLabel class="p-0 font-normal">
                             <div
-                                class="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
+                                class="flex items-center gap-2 px-1 py-1.5 text-left font-size-2">
                                 <Avatar class="h-10 w-10 rounded-lg">
                                     <AvatarImage
                                         :src="userData.user.avatar"
@@ -59,11 +59,11 @@ const userData = {
                                     </AvatarFallback>
                                 </Avatar>
                                 <div
-                                    class="grid flex-1 pt-[2px] text-left text-sm">
-                                    <h4 class="truncate !font-semibold">
+                                    class="grid flex-1 pt-[2px] text-left font-size-2">
+                                    <h4 class="truncate font-semibold!">
                                         {{ userData.user.name }}
                                     </h4>
-                                    <span class="truncate text-base">
+                                    <span class="truncate font-size-4">
                                         {{ userData.user.tag }}
                                     </span>
                                 </div>
@@ -99,7 +99,7 @@ const userData = {
                             </DropdownMenuItem>
                         </DropdownMenuGroup>
                         <DropdownMenuSeparator />
-                        <DropdownMenuItem class="gap-4 !text-sm font-medium">
+                        <DropdownMenuItem class="gap-4 font-size-2! font-medium">
                             <icon
                                 icon="qlementine-icons:on-off-16"
                                 class="size-5 stroke-2" />

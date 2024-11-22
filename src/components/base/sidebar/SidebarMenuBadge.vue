@@ -12,8 +12,8 @@ const props = defineProps<{
         data-sidebar="menu-badge"
         :class="
             cn(
-                'pointer-events-none absolute right-1 flex min-w-5 select-none items-center justify-center px-1 text-xs tabular-nums',
-                'peer-hover/menu-button:text-base-content peer-data-[active=true]/menu-button:text-base-content',
+                'pointer-events-none absolute right-1 flex min-w-5 select-none items-center justify-center px-1 font-size-1 tabular-nums',
+                'peer-hover/menu-button:font-size-4-content peer-data-[active=true]/menu-button:font-size-4-content',
                 'peer-data-[size=sm]/menu-button:top-1',
                 'peer-data-[size=default]/menu-button:top-1.5',
                 'peer-data-[size=lg]/menu-button:top-2.5',

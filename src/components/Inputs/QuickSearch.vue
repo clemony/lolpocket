@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { defineProps, defineEmits, computed } from 'vue'
-import { imageIn, imageOut } from '@/Assets/Animation/animations'
+import { imageIn, imageOut } from '@/assets/Animation/animations'
 import type { HTMLAttributes } from 'vue'
 
 // Define props for reusability
@@ -61,7 +61,7 @@ function afterLeave(el: Element) {
         :distance="8"
         :class="
             cn(
-                'no-drag search-drop ghosty drag-label group/qs border-box after:content-[ relative z-0 flex !cursor-pointer !p-0 after:absolute after:grid after:h-full after:w-full after:place-content-center after:text-lg after:opacity-50 after:content-[\'+\'] hover:after:text-neutral hover:after:opacity-60',
+                'no-drag search-drop ghosty drag-label group/qs border-box after:content-[ relative z-0 flex cursor-pointer! p-0! after:absolute after:grid after:h-full after:w-full after:place-content-center after:font-size-6 after:opacity-50 after:content-[\'+\'] hover:after:text-neutral hover:after:opacity-60',
                 props.class
             )
         "
@@ -92,14 +92,14 @@ function afterLeave(el: Element) {
                         :value="quickSearch"
                         @input="handleInput"
                         spellcheck="false"
-                        class="placeholder: z-0 h-7 w-full select-all rounded-btn bg-transparent px-2 italic !outline-none focus:bg-base-200/50 focus:not-italic"
+                        class="placeholder: z-0 h-7 w-full select-all rounded-btn bg-transparent px-2 italic outline-hidden! focus:bg-b2/50 focus:not-italic"
                         autofocus />
                 </div>
 
                 <!--    <transition name="list-transition" @enter="beforeEnter" @leave="afterLeave"> -->
                 <div
                     v-if="quickSearch"
-                    class="grid max-h-72 w-full overflow-y-scroll border border-transparent border-t-base-300 px-1 pt-2 transition-all duration-500">
+                    class="grid max-h-72 w-full overflow-y-scroll border border-transparent border-t-b3 px-1 pt-2 transition-all duration-500">
                     <TransitionGroup
                         name="fade"
                         tag="div"
@@ -110,7 +110,7 @@ function afterLeave(el: Element) {
                             v-for="data in props.array"
                             :key="data.id"
                             @click="handleClick(data)"
-                            class="btn btn-ghost btn-xs my-1 flex w-full cursor-pointer justify-start gap-2 px-1 py-0.5 hover:bg-base-200">
+                            class="btn btn-ghost btn-xs my-1 flex w-full cursor-pointer justify-start gap-2 px-1 py-0.5 hover:bg-b2">
                             <img
                                 :src="`/img/${props.type}/${data.id || data.name}.webp`"
                                 class="size-4.5 rounded-md" />

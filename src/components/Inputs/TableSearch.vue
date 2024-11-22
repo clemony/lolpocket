@@ -6,13 +6,13 @@ const ps = usePocketStore()
 
 <template>
     <div
-        class="relative -mt-1 flex h-10 min-w-[225px] items-center rounded-md border border-base-200 bg-base-100 focus-within:border-base-300">
+        class="relative -mt-1 flex h-10 min-w-[225px] items-center rounded-md border border-b2 bg-b1 focus-within:border-b3">
         <input
             type="text"
             spellcheck="false"
             v-model="ps.filterText"
             placeholder="Search..."
-            class="input input-xs h-full !border-none bg-transparent pl-3 pr-5 !outline-0 !outline-offset-0 !ring-0 !ring-offset-0 [border-image-width:0] focus:!outline-0 focus:!outline-offset-0 focus:!ring-0 focus:!ring-offset-0" />
+            class="input input-xs h-full border-none! bg-transparent pl-3 pr-5 outline-0! outline-offset-0! ring-0! ring-offset-0! [border-image-width:0] focus:outline-0! focus:outline-offset-0! focus:ring-0! focus:ring-offset-0!" />
 
         <icon
             icon="teenyicons:search-outline"

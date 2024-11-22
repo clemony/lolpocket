@@ -29,7 +29,7 @@ const emit = defineEmits(['update:open'])
                 <slot name="header" class="flex w-full gap-3" />
             </CardTitle>
 
-            <CardDescription v-if="props.description" class="pt-2 text-base">
+            <CardDescription v-if="props.description" class="pt-2 font-size-4">
                 {{ props.description }}
                 <slot name="description" />
             </CardDescription>

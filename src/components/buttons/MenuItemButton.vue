@@ -27,6 +27,6 @@ const props = defineProps<{
 
 <style scoped>
 .v-popper--shown {
-    @apply bg-base-200;
+    @apply bg-b2;
 }
 </style>

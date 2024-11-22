@@ -10,7 +10,7 @@ const props = defineProps<{
 <template>
     <div
         data-sidebar="group-content"
-        :class="cn('text-sm+ w-full', props.class)">
+        :class="cn('font-size-3 w-full', props.class)">
         <slot />
     </div>
 </template>

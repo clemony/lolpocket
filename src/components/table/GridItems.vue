@@ -52,7 +52,7 @@ const starredItems = computed(() => {
                             v-if="index < 6"
                             :url="`/img/items/${item.id}.webp`"
                             :index="index"
-                            class="size-14 rounded-lg border border-base-300 shadow-sm" />
+                            class="size-14 rounded-lg border border-b3 shadow-xs" />
                     </template>
                 </template>
 

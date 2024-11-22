@@ -39,9 +39,9 @@ onMounted(async () => {
             <DialogContent
                 :class="
                     cn(
-                        '!px-12 py-8',
+                        'px-12! py-8',
                         {
-                            'max-w-screen ring-none !m-0 size-full border-none bg-transparent !p-0 shadow-none':
+                            'max-w-screen ring-none m-0! size-full border-none bg-transparent p-0! shadow-none':
                                 gs.modalValue.id == 'command',
                         },
                         { 'max-w-[550px]': gs.modalValue.id != 'command' }
@@ -54,7 +54,7 @@ onMounted(async () => {
                         </DialogTitle>
                         <DialogDescription
                             v-html="gs.modalValue.description"
-                            class="text-base"></DialogDescription>
+                            class="font-size-4"></DialogDescription>
                     </DialogHeader>
                 </Hide>
 

@@ -59,7 +59,7 @@ const columnDefs = ref([
 
 const defaultColDef = {
     flex: 1,
-    cellClass: ['flex items-center !px-1 py-[3px]'],
+    cellClass: ['flex items-center px-1! py-[3px]'],
     sortable: true,
     filter: true,
     resizable: true,
@@ -112,7 +112,7 @@ const autoSizeStrategy = {
 defineExpose({})
 </script>
 <!-- 
-<template><ag-grid-vue :theme="pocketTheme" class="h-[calc(100%-107px)] items-center !rounded-none bg-transparent "
+<template><ag-grid-vue :theme="pocketTheme" class="h-[calc(100%-107px)] items-center rounded-none! bg-transparent "
     ref="pocketTable" @grid-ready="onGridReady" :columnDefs="columnDefs" :gridOptions="gridOptions" :rowData="rowData"
     @selection-changed="onSelectionChanged" :rowSelection="rowSelection" :defaultColDef="defaultColDef"
     :suppressHorizontalScroll="false" :autoSizeStrategy="autoSizeStrategy" :cacheQuickFilter="true" /></template>
@@ -140,15 +140,15 @@ defineExpose({})
 }
 
 .ag-menu {
-    @apply !z-10 mt-1.5 border-base-300/80 !bg-base-100/95 backdrop-blur-md;
+    @apply !z-10 mt-1.5 border-b3/80 !bg-b1/95 backdrop-blur-md;
 }
 
 .ag-text-field-input {
-    @apply z-20 !bg-base-100 outline-0 ring-0;
+    @apply z-20 !bg-b1 outline-0 ring-0;
 }
 
 .ag-picker-field {
-    @apply z-50 !bg-base-100/95 opacity-100 outline-0 !ring-0 backdrop-blur-md focus:ring-0;
+    @apply z-50 !bg-b1/95 opacity-100 outline-0 !ring-0 backdrop-blur-md focus:ring-0;
 }
 
 .ag-picker-field-wrapper {
@@ -156,6 +156,6 @@ defineExpose({})
 }
 
 .ag-select-list {
-    @apply z-50 !bg-base-100/95 backdrop-blur-md;
+    @apply z-50 !bg-b1/95 backdrop-blur-md;
 }</style>
  -->

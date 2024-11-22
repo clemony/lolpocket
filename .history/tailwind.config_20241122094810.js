@@ -1,19 +1,16 @@
-const animate = require('tailwindcss-animate')
+//const animate = require('tailwindcss-animate')
 const scrollbarhide = require('tailwind-scrollbar-hide')
 /*const colors = require("tailwindcss/colors");*/
 const path = require('path')
 const daisyui = require('daisyui')
 const plugin = require('tailwindcss/plugin')
-import { themes } from ''
-const themeConfig = require('./src/Config/themes')
-const containerQueries = require('@tailwindcss/container-queries')
-import { mask } from '@windwards/plugin-mask'
+//import { mask } from '@windwards/plugin-mask'
 //const themer = require('tailwindcss-themer')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     plugins: [
-        animate,
+       // animate,
         scrollbarhide,
         daisyui,
         containerQueries,

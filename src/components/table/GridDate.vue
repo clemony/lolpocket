@@ -125,15 +125,15 @@ const dateObjects = [
 </script>
 
 <template>
-<div class="group rounded overflow-hidden max-h-inherit size-full grid   px-2">
+<div class="group rounded-sm overflow-hidden max-h-inherit size-full grid   px-2">
     <ContextMenu>
         <ContextMenuTrigger class='size-full grid gap-1 place-content-between justify-center'>
             <div v-for="(object, index) in dateObjects" class="group ">
-                <div class="gap-2 text-sm flex items-center justify-center ">
+                <div class="gap-2 font-size-2 flex items-center justify-center ">
 
                     <template v-if="object.name != 'Patch'">
                         <span
-                            class=" !tracking-wide transition-all duration-500 text-sm text-right opacity-0 group-hover:opacity-80">{{
+                            class=" tracking-wide! transition-all duration-500 font-size-2 text-right opacity-0 group-hover:opacity-80">{{
                                 object.data
                             }}</span>
                     </template>
@@ -142,7 +142,7 @@ const dateObjects = [
                         <input type="checkbox" v-if="object.name == 'Patch' && props.params.type == 'updated'"
                             class="checkbox checkbox-xs pointer-events-none" :class="getStyles"
                             :checked="lastUpdated == currentPatch" />
-                        <span class='!text-sm justify-self-center !tracking-wider opacity-100'>{{
+                        <span class='font-size-2! justify-self-center tracking-wider! opacity-100'>{{
                             object.data
                         }}</span>
                     </template>

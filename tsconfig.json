@@ -20,7 +20,7 @@
         ],
         "paths": {
             "@assets/*": [
-                "src/Assets/*"
+                "src/assets/*"
             ],
             "@data/*": [
                 "src/data/*"
@@ -50,7 +50,7 @@
                 "src/*"
             ],
             "~assets/*": [
-                "src/Assets/*"
+                "src/assets/*"
             ],
             "~data/*": [
                 "src/data/*"

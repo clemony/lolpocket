@@ -104,7 +104,7 @@ els.forEach(({ ref, isVisible, name }) => {
                 <div class="row-span-4 mt-0.5 justify-start">
                     <icon
                         icon="radix-icons:caret-right"
-                        class="absolute !size-5 transition-all duration-300"
+                        class="absolute size-5! transition-all duration-300"
                         :class="{
                             'translate-y-0': currentVisible == 'Overview',
                             'translate-y-[33px]': currentVisible == 'Start',

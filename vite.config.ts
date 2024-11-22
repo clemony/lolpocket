@@ -21,7 +21,6 @@ export default defineConfig({
         Components({
             dirs: [
                 'src/pages',
-                'splitpanes',
                 '@iconify/vue',
                 'src/components',
                 'src/components/ui',

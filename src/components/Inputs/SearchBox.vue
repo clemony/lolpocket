@@ -43,7 +43,7 @@ function handleInput(event: Event) {
             @keydown.enter.prevent
             :class="
                 cn(
-                    'inset-0 mx-0 h-full w-full items-center gap-2 self-center overflow-hidden border border-base-200 bg-transparent px-0 pt-px text-base transition-opacity duration-300 hover:ring-1 hover:ring-neutral/40 focus:outline-none focus:ring-1 focus:ring-neutral/30 disabled:cursor-not-allowed disabled:opacity-50',
+                    'inset-0 mx-0 h-full w-full items-center gap-2 self-center overflow-hidden border border-b2 bg-transparent px-0 pt-px font-size-4 transition-opacity duration-300 hover:ring-1 hover:ring-neutral/40 focus:outline-hidden focus:ring-1 focus:ring-neutral/30 disabled:cursor-not-allowed disabled:opacity-50',
                     props.inputClass
                 )
             " />
@@ -51,11 +51,11 @@ function handleInput(event: Event) {
         <Button
             variant="ghost"
             v-if="search"
-            class="pointer-events-auto absolute right-2 z-10 aspect-square !h-full text-base-content/60 opacity-0 transition-all duration-300 hover:text-base-content/70 peer-focus:opacity-100"
+            class="pointer-events-auto absolute right-2 z-10 aspect-square h-full! font-size-4-content/60 opacity-0 transition-all duration-300 hover:font-size-4-content/70 peer-focus:opacity-100"
             @click="$emit('update:search', '')">
             <Icon
                 icon="teenyicons:x-circle-solid"
-                class="!h-full w-auto shrink-0" />
+                class="h-full! w-auto shrink-0" />
         </Button>
     </div>
 </template>

@@ -23,7 +23,7 @@ const userData = {
 </script>
 <template>
     <MenubarItem class="p-0 font-normal">
-        <div class="flex items-center gap-2 px-1 py-1 text-left text-sm">
+        <div class="flex items-center gap-2 px-1 py-1 text-left font-size-2">
             <Avatar class="size-9 rounded-lg">
                 <AvatarImage
                     :src="userData.user.avatar"
@@ -31,11 +31,11 @@ const userData = {
                 <AvatarFallback class="rounded-lg">LP</AvatarFallback>
             </Avatar>
             <div
-                class="flex items-center gap-2 pt-[2px] text-left align-baseline text-sm">
-                <h4 class="truncate !font-semibold">
+                class="flex items-center gap-2 pt-[2px] text-left align-baseline font-size-2">
+                <h4 class="truncate font-semibold!">
                     {{ userData.user.name }}
                 </h4>
-                <span class="truncate text-base">
+                <span class="truncate font-size-4">
                     {{ userData.user.tag }}
                 </span>
             </div>
@@ -73,7 +73,7 @@ const userData = {
         <span class="relative w-4.5">
             <icon
                 icon="teenyicons:add-small-outline"
-                class="-ml-px !size-5.5" />
+                class="-ml-px size-5.5!" />
         </span>
         Maximize
         <MenubarShortcut>⌘</MenubarShortcut>

@@ -7,7 +7,7 @@ const { x, y, isOutside } = useMouseInElement(target)
 
 <template>
     <ul
-        class="mt-6 flex h-9 items-center px-1 before:absolute before:h-9 before:w-[55px] before:rounded-md before:border before:border-base-200 before:bg-base-100 before:opacity-90 before:shadow-sm [&_li]:z-10 [&_li]:w-20 [&_li]:px-2">
+        class="mt-6 flex h-9 items-center px-1 before:absolute before:h-9 before:w-[55px] before:rounded-md before:border before:border-b2 before:bg-b1 before:opacity-90 before:shadow-xs [&_li]:z-10 [&_li]:w-20 [&_li]:px-2">
         <li>
             <label>Spells</label>
         </li>

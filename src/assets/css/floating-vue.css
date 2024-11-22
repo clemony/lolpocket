@@ -1,6 +1,6 @@
 .v-popper--theme-default {
     .v-popper__inner {
-        @apply !rounded-lg border border-base-300 !bg-base-100/85 p-0 text-base-content shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] backdrop-blur-md backdrop-brightness-90;
+        @apply border-b3 !bg-b1/85 font-size-4-content !rounded-lg border p-0 shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] backdrop-blur-md backdrop-brightness-90;
     }
 
     .v-popper__arrow-outer {
@@ -13,7 +13,7 @@
 }
 .v-popper--theme-hover.dd {
     .v-popper__inner {
-        @apply !mb-0 mt-1.5 items-center justify-center !rounded-md !p-1 !pb-0;
+        @apply mt-1.5 !mb-0 items-center justify-center !rounded-md !p-1 !pb-0;
         & svg {
             @apply size-4.5;
         }
@@ -21,7 +21,7 @@
 }
 .v-popper--theme-hover.dd-inner {
     .v-popper__inner {
-        @apply ml-0.5 mt-6 items-center justify-center !rounded-md p-1;
+        @apply mt-6 ml-0.5 items-center justify-center !rounded-md p-1;
         & svg {
             @apply size-4.5;
         }
@@ -30,7 +30,7 @@
 
 .v-popper--theme-hover {
     .v-popper__inner .shard {
-        @apply !mb-0 !mt-0 items-center justify-center !rounded-md !px-2 !py-1;
+        @apply !mt-0 !mb-0 items-center justify-center !rounded-md !px-2 !py-1;
         & svg {
             @apply size-4.5;
         }
@@ -44,7 +44,7 @@
 }
 .v-popper--theme-context {
     .v-popper__inner {
-        @apply w-52 max-w-52 !rounded-[4px] border border-base-300 !bg-base-100/85 p-0 text-base-content shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] backdrop-blur-md backdrop-brightness-90;
+        @apply border-b3 !bg-b1/85 font-size-4-content w-52 max-w-52 !rounded-[4px] border p-0 shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] backdrop-blur-md backdrop-brightness-90;
     }
 
     .v-popper__arrow-outer {
@@ -58,7 +58,7 @@
 
 .v-popper--theme-select {
     .v-popper__inner {
-        @apply !rounded-xs border border-base-300 !bg-base-100/90 p-0 text-base-content !shadow-md backdrop-blur-md backdrop-brightness-90;
+        @apply border-b3 !bg-b1/90 font-size-4-content !rounded-xs border p-0 !shadow-md backdrop-blur-md backdrop-brightness-90;
 
         &.round-more {
             @apply !rounded-full;
@@ -76,7 +76,7 @@
 
 .v-popper--theme-menuDark {
     .v-popper__inner {
-        @apply !rounded-md !border-neutral-600 !bg-neutral/80 shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] backdrop-blur-lg *:text-neutral-content/80;
+        @apply !bg-neutral/80 *:text-neutral-content/80 !rounded-md !border-neutral-600 shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] backdrop-blur-lg;
     }
     .v-popper__arrow-outer {
         @apply !border-neutral/60;
@@ -92,12 +92,12 @@
         border-bottom-color: transparent !important;
     }
     .v-popper__inner {
-        @apply !rounded-[9px] border !border-t-0 !border-base-300 !bg-base-100/95 p-2 text-base-content !shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] backdrop-blur-md backdrop-brightness-90;
+        @apply !border-b3 !bg-b1/95 font-size-4-content !rounded-[9px] border !border-t-0 p-2 !shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] backdrop-blur-md backdrop-brightness-90;
     }
 }
 .v-popper--theme-tt {
     .v-popper__inner {
-        @apply border border-base-300;
+        @apply border-b3 border;
     }
 }
 

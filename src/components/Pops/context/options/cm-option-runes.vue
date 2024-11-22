@@ -11,7 +11,7 @@ const pocket = props.pocket
 <template>
 <ContextMenuSub v-if="pocket">
     <ContextMenuSubTrigger :disabled="pocket.runes[0].runeSets.length <= 1" :class="{
-        'last:[&_svg]:hidden':
+        '[&_svg]:last:hidden':
             pocket.runes[0].runeSets.length <= 1,
         'opacity-50': pocket.runes[0].runeSets.length == 0,
     }">

@@ -35,10 +35,10 @@ function handleLinks() {}
         </template>
 
         <template #content>
-            <div class="!z-0 m-0 mt-2 grid w-full gap-y-3 py-4">
+            <div class="z-0! m-0 mt-2 grid w-full gap-y-3 py-4">
                 <div class="flex w-full items-end gap-2 px-6">
                     <div class="flex grow items-center gap-4">
-                        <h1 class="text-xl font-bold tracking-tight">
+                        <h1 class="font-size-8 font-bold tracking-tight">
                             News & Updates
                         </h1>
 
@@ -49,10 +49,10 @@ function handleLinks() {}
                 </div>
 
                 <div
-                    class="!z-1 -transition-all news-after flex h-64 w-full content-center items-center gap-5 overflow-x-scroll pl-6 delay-200 duration-700 scrollbar-hide">
+                    class="z-1! -transition-all news-after flex h-64 w-full content-center items-center gap-5 overflow-x-scroll pl-6 delay-200 duration-700 scrollbar-hide">
                     <a
                         v-for="article in NewsArticles"
-                        class="!*:z-0 group card relative !z-0 m-0 h-56 min-w-96 overflow-hidden border border-base-100 bg-cover p-0 text-sm shadow-warm transition-transform duration-700 hover:scale-[1.02]"
+                        class="!*:z-0 group card relative z-0! m-0 h-56 min-w-96 overflow-hidden border border-b1 bg-cover p-0 font-size-2 shadow-warm transition-transform duration-700 hover:scale-[1.02]"
                         :title="article.link"
                         :style="{
                             backgroundImage: 'url(' + article.image + ')',
@@ -63,7 +63,7 @@ function handleLinks() {}
                             class="absolute left-0 top-0 grid h-full w-full grid-cols-1 content-start justify-items-center rounded-box bg-neutral/40 pt-6 italic opacity-0 shadow-inner backdrop-blur-sm transition-all duration-500 group-hover:opacity-100"></div>
 
                         <div
-                            class="frost z-1 card-body absolute inset-x-0 bottom-0 m-0 h-2/5 !bg-base-100/90 object-bottom pb-0 pt-5 transition-all duration-500 group-hover:h-1/2">
+                            class="frost z-1 card-body absolute inset-x-0 bottom-0 m-0 h-2/5 bg-b1/90! object-bottom pb-0 pt-5 transition-all duration-500 group-hover:h-1/2">
                             <div class="z-10 col-start-1 overflow-hidden">
                                 <p
                                     v-if="article && article.date"
@@ -71,7 +71,7 @@ function handleLinks() {}
                                     {{ article.date }}
                                 </p>
                                 <h2
-                                    class="text-balanced card-title mb-0 text-base">
+                                    class="text-balanced card-title mb-0 font-size-4">
                                     {{ article.title }}
                                 </h2>
 
@@ -115,17 +115,17 @@ function handleLinks() {}
                 <div class="mx-6 grid w-full grid-cols-2 gap-6 pr-12 pt-2">
                     <div class="col-start-1">
                         <h2
-                            class="h-8 w-full justify-end pl-1 text-xl font-bold tracking-tight">
+                            class="h-8 w-full justify-end pl-1 font-size-8 font-bold tracking-tight">
                             Recent builds
                         </h2>
 
                         <div class="mt-4 grid grid-cols-1 gap-4">
                             <div
-                                class="card overflow-x-hidden overflow-y-scroll bg-base-100/60 shadow-warm backdrop-blur-md scrollbar-hide">
+                                class="card overflow-x-hidden overflow-y-scroll bg-b1/60 shadow-warm backdrop-blur-md scrollbar-hide">
                                 <table class="0 table table-pin-rows">
                                     <!-- head -->
                                     <thead>
-                                        <tr class="bg-base-200/50 shadow-cham">
+                                        <tr class="bg-b2/50 shadow-page-inset">
                                             <th>Champion</th>
                                             <th>Role</th>
                                             <th>Winrate</th>
@@ -151,7 +151,7 @@ function handleLinks() {}
                                                             Hart Hagerty
                                                         </div>
                                                         <div
-                                                            class="text-sm opacity-50">
+                                                            class="font-size-2 opacity-50">
                                                             United States
                                                         </div>
                                                     </div>
@@ -185,7 +185,7 @@ function handleLinks() {}
                                                             Brice Swyre
                                                         </div>
                                                         <div
-                                                            class="text-sm opacity-50">
+                                                            class="font-size-2 opacity-50">
                                                             China
                                                         </div>
                                                     </div>
@@ -219,7 +219,7 @@ function handleLinks() {}
                                                             Marjy Ferencz
                                                         </div>
                                                         <div
-                                                            class="text-sm opacity-50">
+                                                            class="font-size-2 opacity-50">
                                                             Russia
                                                         </div>
                                                     </div>
@@ -253,7 +253,7 @@ function handleLinks() {}
                                                             Yancy Tear
                                                         </div>
                                                         <div
-                                                            class="text-sm opacity-50">
+                                                            class="font-size-2 opacity-50">
                                                             Brazil
                                                         </div>
                                                     </div>
@@ -278,12 +278,12 @@ function handleLinks() {}
 
                     <div class="col-start-2 pl-1">
                         <h2
-                            class="h-8 w-full justify-end pr-5 text-xl font-bold tracking-tight">
+                            class="h-8 w-full justify-end pr-5 font-size-8 font-bold tracking-tight">
                             Champion Winrates
                         </h2>
                         <div class="mt-4 grid grid-cols-1 gap-4">
                             <div
-                                class="frost card overflow-x-auto bg-base-100/60 shadow-warm backdrop-brightness-105">
+                                class="frost card overflow-x-auto bg-b1/60 shadow-warm backdrop-brightness-105">
                                 <table class="table">
                                     <!-- head -->
                                     <thead>
@@ -313,7 +313,7 @@ function handleLinks() {}
                                                             Hart Hagerty
                                                         </div>
                                                         <div
-                                                            class="text-sm opacity-50">
+                                                            class="font-size-2 opacity-50">
                                                             United States
                                                         </div>
                                                     </div>
@@ -347,7 +347,7 @@ function handleLinks() {}
                                                             Brice Swyre
                                                         </div>
                                                         <div
-                                                            class="text-sm opacity-50">
+                                                            class="font-size-2 opacity-50">
                                                             China
                                                         </div>
                                                     </div>
@@ -381,7 +381,7 @@ function handleLinks() {}
                                                             Marjy Ferencz
                                                         </div>
                                                         <div
-                                                            class="text-sm opacity-50">
+                                                            class="font-size-2 opacity-50">
                                                             Russia
                                                         </div>
                                                     </div>
@@ -415,7 +415,7 @@ function handleLinks() {}
                                                             Yancy Tear
                                                         </div>
                                                         <div
-                                                            class="text-sm opacity-50">
+                                                            class="font-size-2 opacity-50">
                                                             Brazil
                                                         </div>
                                                     </div>

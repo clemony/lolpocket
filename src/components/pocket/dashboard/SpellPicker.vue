@@ -81,7 +81,7 @@ function onChange(e, spell) {
             </PopoverTrigger>
 
             <PopoverContent
-                class="-ml-[22px] w-[300px] overflow-hidden !rounded-box bg-transparent p-0 backdrop-blur-none"
+                class="-ml-[22px] w-[300px] overflow-hidden rounded-box! bg-transparent p-0 backdrop-blur-none"
                 :sideOffset="-70"
                 :alignOffset="props.alignOffset"
                 align="end"
@@ -89,7 +89,7 @@ function onChange(e, spell) {
                 <div class="h-24" />
 
                 <div
-                    class="gap flex flex-wrap justify-end gap-x-8 gap-y-4 bg-base-100 px-12 py-6 pb-8 backdrop-blur-md">
+                    class="gap flex flex-wrap justify-end gap-x-8 gap-y-4 bg-b1 px-12 py-6 pb-8 backdrop-blur-md">
                     <PopoverClose
                         v-for="spell in state.data"
                         :key="spell.name"

@@ -8,6 +8,5 @@
 @import '@assets/css/drag.css';
 
 @import 'floating-vue/dist/style.css';
-@layer base {
-    @import '@fontsource/geist-mono';
-}
+
+@import '@fontsource/geist-mono';

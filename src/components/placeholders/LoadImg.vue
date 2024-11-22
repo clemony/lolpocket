@@ -25,9 +25,9 @@ function setBlankImg(event) {
 
 <template>
 <div :class="cn('overflow-hidden', props.class)">
-    <Skeleton v-show="!isImageLoaded" :class="cn('!border-none', props.class)" />
+    <Skeleton v-show="!isImageLoaded" :class="cn('border-none!', props.class)" />
 
-    <div v-show="isImageLoaded" class='size-full bg-base-200/40 overflow-hidden'>
+    <div v-show="isImageLoaded" class='size-full bg-b2/40 overflow-hidden'>
         <img :src="props.url" @load="imageLoaded()"
             :class="cn('scale-105 size-full animate-in fade-in-0 duration-700', props.class)" />
     </div>

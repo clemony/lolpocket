@@ -17,13 +17,13 @@ const set = ref(pocket.value.runes[0].runeSets[pocket.value.runes[0].starred])
         class="grid size-7 shrink-0 place-items-center rounded-full"
         :class="
             cn(
-                /* 'border border-base-200 bg-base-100/70 p-1.5 shadow-[0_3px_10px_rgb(0,0,0,0.2),inset_-1px_-1px_0px_1px_#00000008] backdrop-blur-sm',*/
+                /* 'border border-b2 bg-b1/70 p-1.5 shadow-[0_3px_10px_rgb(0,0,0,0.2),inset_-1px_-1px_0px_1px_#00000008] backdrop-blur-sm',*/
 
                 getShardClass(shard)
                     .toString()
                     .replace(/border.*/, ''),
                 {
-                    'bg-base-200/20': shard.name == 'none',
+                    'bg-b2/20': shard.name == 'none',
                 }
             )
         ">

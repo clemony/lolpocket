@@ -19,7 +19,7 @@ function thisFunction() {
 
 <template>
     <div
-        class="max-w-48 [&_Button]:w-full [&_Button]:justify-start [&_Button]:gap-3 [&_span]:!text-sm [&_svg]:shrink-0"
+        class="max-w-48 [&_Button]:w-full [&_Button]:justify-start [&_Button]:gap-3 [&_span]:font-size-2! [&_svg]:shrink-0"
         :key="props.type">
         <Button
             v-if="props.type == 'item' || props.type == 'rune'"
@@ -39,7 +39,10 @@ function thisFunction() {
             theme="hover-inner"
             placement="right-start"
             :disabled="!ps.pockets.length">
-            <Button variant="ghost" size="xs">
+            <Button
+                variant="ghost"
+                size="xs"
+                class="[.v-popper--shown]:bg-b2/60">
                 <icon icon="radix-icons:copy" class="size-3.5" />
                 <span class="-ml-[2px] capitalize">
                     Copy {{ props.type }}
@@ -78,7 +81,7 @@ function thisFunction() {
             :disabled="data.length == 0"
             @click="data.length = 0">
             <icon icon="ph:eraser" class="size-3.5" />
-            <span class="-ml-[2px] !text-sm">
+            <span class="-ml-[2px] font-size-2!">
                 Clear
                 <span class="capitalize">{{ props.type }}</span>
                 <span v-if="props.type != 'champion'">set</span>
@@ -88,8 +91,4 @@ function thisFunction() {
     </div>
 </template>
 
-<style scoped>
-.v-popper--shown {
-    @apply bg-base-200/60;
-}
-</style>
+<style scoped></style>

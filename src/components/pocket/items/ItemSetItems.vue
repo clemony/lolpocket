@@ -86,8 +86,8 @@ const filteredItems = computed(() => {
         :force-fallback="true"
         :fallbackOnBody="true"
         @end="handleDragEnd"
-        class="drag-draggable item !justify-start overflow-hidden !p-1 scrollbar-hide"
-        :class="{ '!gap-5': props.limit }">
+        class="drag-draggable item justify-start! overflow-hidden p-1! scrollbar-hide"
+        :class="{ 'gap-5!': props.limit }">
         <template v-for="(item, index) in set.items" :key="item.id">
             <VDropdown
                 v-if="!props.limit || (props.limit && index < 6)"
@@ -98,14 +98,14 @@ const filteredItems = computed(() => {
                 @click.right.prevent=""
                 :ref="item.name"
                 class="relative max-h-[64px] max-w-[64px]">
-                <label class="drag-label !overflow-hidden">
-                    <div class="drag-wrapper !overflow-hidden">
+                <label class="drag-label overflow-hidden!">
+                    <div class="drag-wrapper overflow-hidden!">
                         <LoadImg
                             :url="`/img/items/${item.id}.webp`"
                             class="drag-img size-[52px]" />
 
-                        <!--   <div :key="item.id + 'Count'" :class="{ '!opacity-85': item.count > 1 }"
-                            class="absolute rounded-full bg-primary text-primary-content z-30 -right-1.5 -top-1.5 size-6 flex place-items-center place-content-center font-mono opacity-0 text-sm shadow-warm overflow-hidden">
+                        <!--   <div :key="item.id + 'Count'" :class="{ 'opacity-85!': item.count > 1 }"
+                            class="absolute rounded-full bg-primary text-primary-content z-30 -right-1.5 -top-1.5 size-6 flex place-items-center place-content-center font-mono opacity-0 font-size-2 shadow-warm overflow-hidden">
                             {{ item.count }}
                         </div> -->
                     </div>

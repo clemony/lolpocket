@@ -1,0 +1,42 @@
+//const animate = require()
+
+const path = require('path')
+const plugin = require('tailwindcss/plugin')
+//import
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    plugins: [
+        plugin(function ({ addBase }) {
+            addBase({
+                html: { fontSize: '12px' },
+            })
+        }),
+    ],
+
+    theme: {
+        extend: {
+            transitionProperty: {
+                height: 'height',
+                width: 'width',
+                'max-h': 'max-height',
+                'max-w': 'max-width',
+            },
+
+            boxShadow: {
+                lil: '2px 2px 4px 1px rgba(0, 0, 0, 0, 0.3)',
+                warm: '0px 2px 5px 0px rgba(50, 50, 105, 0.15) , 0px 1px 1px 0px rgba(0, 0, 0, 0.05) ',
+                standard:
+                    '0px 2px 3px -1px rgba(0,0,0,0.1),0px 1px 0px 0px rgba(25,28,33,0.02),0px 0px 0px 1px rgba(25,28,33,0.08)',
+                cham: 'inset 12px 8px 40px #46464620',
+                inset: 'inset 1px 2px 8px 2px #00000009, inset -2px -1px 5px 1px #00000009',
+                'inset-sm':
+                    'inset 1px 2px 1px 1px #00000004, inset -1px -1px 2px 1px #00000009',
+                smooth: 'rgba(17, 17, 26, 0.07) 0px 0px 16px',
+                pretty: '0 3px 10px rgb(0,0,0,0.2)',
+            },
+
+            animation: {},
+        },
+    },
+}
