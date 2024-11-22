@@ -25,7 +25,7 @@ const data = props.data
     <SidebarMenuSubItem
         v-for="pocket in data"
         :key="pocket.key"
-        :class="cn('font-size-4')">
+        :class="cn('text-base')">
         <ContextMenu>
             <ContextMenuTrigger>
                 <VDropdown
@@ -36,16 +36,16 @@ const data = props.data
                     :showGroup="pocket.key"
                     :overflowPadding="0"
                     :delay="{ show: 500, hide: 100 }"
-                    class="flex w-full flex-row items-center justify-start!">
+                    class="flex w-full flex-row items-center !justify-start">
                     <RouterLink :to="`/pocket/${pocket.key}`" class="w-full">
                         <SidebarMenuSubButton
                             :tooltip="pocket.name"
-                            class="flex w-full flex-nowrap items-center gap-4 px-2! py-5">
+                            class="flex w-full flex-nowrap items-center gap-4 !px-2 py-5">
                             <PocketIcon
                                 :pocket="pocket"
-                                class="size-6 rounded-lg shadow-xs!"
+                                class="size-6 rounded-lg !shadow-sm"
                                 iconClass="rounded-lg" />
-                            <span class="text-nowrap text-start font-size-3">
+                            <span class="text-nowrap text-start text-sm+">
                                 {{ pocket.name }}
                             </span>
                         </SidebarMenuSubButton>

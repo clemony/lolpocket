@@ -18,7 +18,7 @@ const size = props.size + 'px'
     <div
         :class="
             cn(
-                'group flex aspect-square cursor-pointer items-center justify-center gap-2 self-center rounded-full border border-b2 bg-b2/30 opacity-70 shadow-xs',
+                'group flex aspect-square cursor-pointer items-center justify-center gap-2 self-center rounded-full border border-base-200 bg-base-200/30 opacity-70 shadow-sm',
                 props.class
             )
         "

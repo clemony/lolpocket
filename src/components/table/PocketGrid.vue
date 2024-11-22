@@ -167,10 +167,10 @@ watch(
 
 <template>
     <div
-        class="bg-b1/80 absolute top-[65px] z-10 h-10 w-full backdrop-blur-md">
+        class="absolute top-[65px] z-10 h-10 w-full bg-base-100/80 backdrop-blur-md">
         <ag-grid-vue
             :theme="pocketTheme"
-            class="col-headers h-full items-center rounded-none! bg-transparent"
+            class="col-headers h-full items-center !rounded-none bg-transparent"
             ref="headerGrid"
             @grid-ready="onHeaderReady"
             :columnDefs="columnDefs"
@@ -194,7 +194,7 @@ watch(
         <ResizablePanel :minSize="8" collapsible :collapsed-size="3.5">
             <ag-grid-vue
                 :theme="pocketTheme"
-                class="top-grid h-full items-center rounded-none! bg-transparent!"
+                class="top-grid h-full items-center !rounded-none !bg-transparent"
                 ref="pinnedGrid"
                 @grid-ready="onPinnedReady"
                 :columnDefs="columnDefs"
@@ -214,7 +214,7 @@ watch(
         </ResizablePanel>
 
         <ResizableHandle
-            class="h-8! w-full border-transparent! bg-transparent! [color:transparent]! ring-0 shadow-none! shadow-transparent!"></ResizableHandle>
+            class="!h-8 w-full !border-transparent !bg-transparent !shadow-none !shadow-transparent ring-0 ![color:transparent]"></ResizableHandle>
 
         <ResizablePanel
             :defaultSize="80"
@@ -223,7 +223,7 @@ watch(
             :minSize="20">
             <ag-grid-vue
                 :theme="pocketTheme"
-                class="bottom-grid h-[93%] items-center rounded-none! bg-transparent!"
+                class="bottom-grid h-[93%] items-center !rounded-none !bg-transparent"
                 ref="pocketGrid"
                 @grid-ready="onGridReady"
                 :columnDefs="columnDefs"
@@ -265,11 +265,9 @@ watch(
 }
 
 .ag-header-cell {
-    padding-left: 0.5rem;
-    padding-left: 1rem;
+    @apply pl-2 pr-4;
 }
 
-/* 
 .ag-cell.ag-column-first {
     @apply ml-0;
 }
@@ -278,25 +276,25 @@ watch(
 }
 
 .ag-menu {
-    @apply border-b3/80 !bg-b1/95 !z-10 mt-1.5 backdrop-blur-md;
+    @apply !z-10 mt-1.5 border-base-300/80 !bg-base-100/95 backdrop-blur-md;
 }
 
 .ag-text-field-input {
-    @apply !bg-b1 z-20 ring-0 outline-0;
+    @apply z-20 !bg-base-100 outline-0 ring-0;
 }
 
 .ag-picker-field {
-    @apply !bg-b1/95 z-50 opacity-100 !ring-0 outline-0 backdrop-blur-md focus:ring-0;
+    @apply z-50 !bg-base-100/95 opacity-100 outline-0 !ring-0 backdrop-blur-md focus:ring-0;
 }
 
 .ag-picker-field-wrapper {
-    @apply !ring-0 outline-0 focus:ring-0;
+    @apply outline-0 !ring-0 focus:ring-0;
 }
 
 .ag-select-list {
-    @apply !bg-b1/95 z-50 border-0 backdrop-blur-md;
+    @apply z-50 border-0 !bg-base-100/95 backdrop-blur-md;
 }
- */
+
 .ag-body-horizontal-scroll,
 .ag-apple-scrollbar {
     opacity: 0.1 !important;

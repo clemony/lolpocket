@@ -40,7 +40,7 @@ const emit = defineEmits(['update:open'])
                     </CardTitle>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
-                    <CardDescription class="pt-2 font-size-4">
+                    <CardDescription class="pt-2 text-base">
                         {{ props.description }}
                         <slot name="description" />
                     </CardDescription>

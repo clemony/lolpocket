@@ -20,17 +20,17 @@ const filteredData = (data: Record<string, string>) => {
     @update:modelValue="(v) => modelValue = v">
     <AccordionItem v-for="(ability, key) in champion.abilities" :key="key" :value="key"
         :class="{ 'h-0': modelValue && modelValue != key, ' border-transparent': modelValue, 'delay-300': !modelValue }"
-        class='last:border-b-transparent max-h-inherit flex-1 overflow-hidden flex flex-col transition-all duration-1000!'>
+        class='last:border-b-transparent max-h-inherit flex-1 overflow-hidden flex flex-col transition-all !duration-1000'>
         <AccordionTrigger class='flex py-2'>
 
             <loadImg :url="ability.img" :alt="ability.name"
-                class="rounded-lg shadow-xs border border-b3 size-[45px]" />
+                class="rounded-lg shadow-sm border border-base-300 size-[45px]" />
 
-            <div class="font-size-5! font-medium tracking-tight text-start grow px-4">
+            <div class="!text-md font-medium tracking-tight text-start grow px-4">
                 {{ ability.name }}
             </div>
             <p
-                class=" mr-6 hover:no-underline! font-cursive font-size-2 scale-x-125 not-italic! no-underline! font-mono capitalize  ">
+                class=" mr-6 hover:!no-underline font-cursive text-sm scale-x-125 !not-italic !no-underline font-mono capitalize  ">
                 {{
                     ability.key
                 }}</p>
@@ -40,11 +40,11 @@ const filteredData = (data: Record<string, string>) => {
 
             <div class='flex flex-col gap-3 py-3'>
                 <div v-for="(value, key) in filteredData(
-                    ability.data)" :key="key" class='flex flex-nowrap w-full bg-b2/60 rounded-md px-2 py-1'>
-                    <div class="text-medium font-size-2 capitalize opacity-80">
+                    ability.data)" :key="key" class='flex flex-nowrap w-full bg-base-200/60 rounded-md px-2 py-1'>
+                    <div class="text-medium text-sm capitalize opacity-80">
                         {{ key }}
                     </div>
-                    <div class="text-nowrap text-right font-size-2 grow opacity-80">
+                    <div class="text-nowrap text-right text-sm grow opacity-80">
                         {{ value }}
                     </div>
                 </div>
@@ -53,7 +53,7 @@ const filteredData = (data: Record<string, string>) => {
 
 
             <ScrollArea
-                class=" overflow-auto  p-1 font-size-2 whitespace-pre-line text-balance [scrollbar-color:bg-b3/20]">
+                class=" overflow-auto  p-1 text-sm whitespace-pre-line text-balance [scrollbar-color:bg-base-300/20]">
                 {{
                     ability.context }}
             </ScrollArea>

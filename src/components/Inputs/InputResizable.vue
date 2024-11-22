@@ -55,9 +55,9 @@ onMounted(() => {
 <template>
 <div class="group/name relative w-full pointer-events-auto">
     <input v-model="input" type="text"
-        class="peer z-0  min-w-4  bg-transparent capitalize outline-hidden ring-0 transition-all duration-300 hover:cursor-text!   adjustable-input p-0 m-0"
+        class="peer z-0  min-w-4  bg-transparent capitalize outline-none ring-0 transition-all duration-300 hover:!cursor-text   adjustable-input p-0 m-0"
         :class="{
-            'pointer-events-none!': props.notouch,
+            '!pointer-events-none': props.notouch,
             'justify-center': props.centered,
             'pr-5': props.clear,
             'text-center': props.textCenter
@@ -65,7 +65,7 @@ onMounted(() => {
             fontWeight: props.fontWeight,
             fontSize: props.fontSize + 'px',
             width: inputWidth + 'px'
-        }" @input="updateWidth" @keydown.enter.prevent="blur-sm" :placeholder='props.placeholder' spellcheck="false" />
+        }" @input="updateWidth" @keydown.enter.prevent="blur" :placeholder='props.placeholder' spellcheck="false" />
 
     <span ref="textWidth" class="invisible whitespace-pre absolute top-0 left-0 pointer-events-none " :class="{
         'pr-5': props.clear

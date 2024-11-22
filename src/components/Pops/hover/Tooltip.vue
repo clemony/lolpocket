@@ -18,7 +18,7 @@ const width = useElementSize(contents)
         <TooltipContent
             :class="
                 cn(
-                    'text-medium flex max-w-44 shrink text-wrap rounded-lg font-size-2 shadow-pretty',
+                    'text-medium flex max-w-44 flex-shrink text-wrap rounded-lg text-sm shadow-pretty',
                     {
                         'border-neutral bg-neutral/70 text-neutral-content backdrop-blur-md':
                             props.dark,
@@ -29,7 +29,7 @@ const width = useElementSize(contents)
             :style="{ width: width + 'px' }"
             side="bottom"
             align="start">
-            <p ref="contents" class="flex shrink">{{ content }}</p>
+            <p ref="contents" class="flex flex-shrink">{{ content }}</p>
         </TooltipContent>
     </TooltipRoot>
 </template>

@@ -83,8 +83,8 @@ export const stats = [
     {
         name: 'Tenacity',
         icon: 'streamline:spiral-shape',
-        bgClass: 'bg-b3',
-        ringClass: 'ring-b3',
+        bgClass: 'bg-base-300',
+        ringClass: 'ring-base-300',
         classList: ' -rotate-90 size-[1.1rem] -mr-[2px] ',
         cat: 'utility',
     },
@@ -100,8 +100,8 @@ export const stats = [
     {
         name: 'Movespeed',
         icon: 'mdi:run-fast',
-        bgClass: 'bg-b3',
-        ringClass: 'ring-b3',
+        bgClass: 'bg-base-300',
+        ringClass: 'ring-base-300',
         classList: '',
         value: 'Movement Speed',
         cat: 'utility',

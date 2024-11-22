@@ -67,7 +67,7 @@ function handleChange(icon) {
 <template>
     <div
         role="tablist"
-        class="*: tabs tabs-lifted relative grid w-full overflow-y-scroll border-b3 scrollbar-hide [&_.tab-content]:z-0! [&_.tab]:z-30! [&_.tab]:h-7 [&_.tab]:border-b-transparent! [&_.tab]:font-medium">
+        class="*: tabs tabs-lifted relative grid w-full overflow-y-scroll border-base-300 scrollbar-hide [&_.tab-content]:!z-0 [&_.tab]:!z-30 [&_.tab]:h-7 [&_.tab]:!border-b-transparent [&_.tab]:font-medium">
         <label
             role="tab"
             :class="{ 'tab-active': iconTabs == 'icon' }"
@@ -84,12 +84,12 @@ function handleChange(icon) {
         <div
             role="tabpanel"
             :class="{ hidden: iconTabs == 'color' }"
-            class="tab-content relative grid w-full rounded-box rounded-tl-none border-b3 bg-b1">
+            class="tab-content relative grid w-full rounded-box rounded-tl-none border-base-300 bg-base-100">
             <div
                 class="grid max-h-52 grid-cols-5 justify-items-center gap-1 self-center justify-self-center overflow-y-scroll px-2 py-3 scrollbar-hide">
                 <label
                     v-for="icon in iconStore"
-                    class="border-1 btn btn-ghost aspect-square self-center border-transparent p-3 has-checked:border-neutral has-checked:shadow-xs">
+                    class="border-1 btn btn-ghost aspect-square self-center border-transparent p-3 has-[:checked]:border-neutral has-[:checked]:shadow-sm">
                     <input
                         v-if="pocket"
                         type="radio"
@@ -107,7 +107,7 @@ function handleChange(icon) {
                         class="peer hidden"
                         @change="handleChange(icon)" />
 
-                    <icon :icon="icon" class="size-full font-size-4-content" />
+                    <icon :icon="icon" class="size-full text-base-content" />
                 </label>
             </div>
         </div>
@@ -128,7 +128,7 @@ function handleChange(icon) {
         <div
             role="tabpanel"
             :class="{ hidden: iconTabs == 'icon' }"
-            class="tab-content grid w-inherit rounded-box border-b3 bg-b1">
+            class="tab-content grid w-inherit rounded-box border-base-300 bg-base-100">
             <div
                 class="relative grid justify-items-center self-center justify-self-center overflow-y-scroll p-1 scrollbar-hide">
                 <ColorPicker

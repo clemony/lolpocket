@@ -52,7 +52,7 @@ const icons = [
 
             <pre
                 data-prefix=" "
-                class="flex"><code class="flex">&nbsp; };<span class="animate-[blink-1_1s_infinite_both] font-size-6">|</span>
+                class="flex"><code class="flex">&nbsp; };<span class="animate-[blink-1_1s_infinite_both] text-lg">|</span>
   </code></pre>
         </div>
 
@@ -60,7 +60,7 @@ const icons = [
             <div class="divider divider-start mt-12">MADE WITH</div>
             <div class="grid grid-cols-2">
                 <div
-                    class="card grid h-20 auto-cols-max grid-flow-col place-items-center gap-5 rounded-box *:size-6 *:font-size-4-content/85">
+                    class="card grid h-20 auto-cols-max grid-flow-col place-items-center gap-5 rounded-box *:size-6 *:text-base-content/85">
                     <icon v-for="icon in icons" :icon="icon" />
                     <img
                         class="brightness-50 contrast-200 grayscale"
@@ -97,7 +97,7 @@ const icons = [
 
     <dialog id="catModal" class="modal">
         <div class="modal-box">
-            <h3 class="font-size-6 font-bold">Hello!</h3>
+            <h3 class="text-lg font-bold">Hello!</h3>
             <p class="py-4">Press ESC key or click outside to close</p>
         </div>
         <form method="dialog" class="modal-backdrop">

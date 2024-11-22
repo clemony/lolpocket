@@ -31,7 +31,7 @@ const icons = [
                         :id="cat"
                         v-model="is.catFilters"
                         class="checkbox checkbox-sm rounded-xs opacity-80" />
-                    <span class="font-size-2">{{ cat }}</span>
+                    <span class="text-sm">{{ cat }}</span>
                 </label>
             </li>
         </ul>
@@ -41,7 +41,7 @@ const icons = [
 <style scoped>
 /* beautify ignore:start */
 .tab:is(.v-popper--shown .tab) {
-    @apply tab-active shadow-sm backdrop-brightness-150 hover:after:opacity-0!;
+    @apply tab-active shadow-sm backdrop-brightness-150 after:hover:!opacity-0;
 }
 
 .v-popper--theme-menuLight .v-popper__inner {

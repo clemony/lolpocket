@@ -61,12 +61,12 @@ const filteredItems = computed(() => {
     revertClone: false,
 }" :scroll="false" :bubbleScroll="false" :key="set.key" :fallbackTolerance="0" fallbackClass="drag-clone"
     :force-fallback="true" :fallbackOnBody="true" @end="handleDragEnd"
-    class="drag-draggable item justify-center! overflow-hidden p-1! scrollbar-hide">
+    class="drag-draggable item !justify-center overflow-hidden !p-1 scrollbar-hide">
     <template v-if="item && item.name != ''" :key="item.id">
         <VDropdown :overflow-padding="20" :shift="true" theme="default" :distance="6" @click.right.prevent=""
             :ref="item.name" class="relative max-h-[50px] max-w-[50px]">
-            <label class="drag-label overflow-hidden!">
-                <div class="drag-wrapper overflow-hidden!">
+            <label class="drag-label !overflow-hidden">
+                <div class="drag-wrapper !overflow-hidden">
                     <img :src="`/img/items/${item.id}.webp`" class="drag-img" />
                 </div>
             </label>

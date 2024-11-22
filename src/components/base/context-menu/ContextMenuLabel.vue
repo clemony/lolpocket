@@ -16,7 +16,7 @@ const delegatedProps = computed(() => {
 
 <template>
 <ContextMenuLabel v-bind="delegatedProps" :class="cn(
-    'px-2 py-1.5  font-semibold font-size-4-content',
+    'px-2 py-1.5  font-semibold text-base-content',
     inset && 'pl-8',
     props.class
 )

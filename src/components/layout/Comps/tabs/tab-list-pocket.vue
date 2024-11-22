@@ -9,7 +9,7 @@ const props = defineProps<{
 
 <template>
 <div role="tablist"
-    :class="cn('tabs tabs-lifted relative overflow-hidden  w-full  border-b3/70 scrollbar-hide *: [&_.tab-content]:z-0! [&_.tab]:z-30! [&_.tab]:border-b-transparent! [&_.tab]:font-medium ', props.class)">
+    :class="cn('tabs tabs-lifted relative overflow-hidden  w-full  border-base-300/70 scrollbar-hide *: [&_.tab-content]:!z-0 [&_.tab]:!z-30 [&_.tab]:!border-b-transparent [&_.tab]:font-medium ', props.class)">
     <slot />
 </div>
 </template>

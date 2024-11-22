@@ -90,7 +90,7 @@ onMounted(async () => {
 @import url('vue-accessible-color-picker/styles');
 /* beautify ignore:start */
 label {
-    @apply font-size-4-content;
+    @apply text-base-content;
 }
 .visually-hidden {
     position: absolute;

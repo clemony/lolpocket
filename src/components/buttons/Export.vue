@@ -19,7 +19,7 @@ function confirm() {
 
       <dialog id="my_modal_2" class="modal">
         <div class="m-auto modal-box">
-          <h3 class="font-size-6 font-bold">Hello!</h3>
+          <h3 class="text-lg font-bold">Hello!</h3>
           <p class="py-4">Press ESC key or click outside to close</p>
         </div>
         <form method="dialog" class="modal-backdrop">

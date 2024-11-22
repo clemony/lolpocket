@@ -6,7 +6,7 @@ const isOpen = ref(false)
     <Button
         variant="outline"
         size="icon"
-        class="rounded-l-none! px-6 transition-all duration-300">
+        class="!rounded-l-none px-6 transition-all duration-300">
         <icon
             icon="teenyicons:filter-outline"
             class="size-4.5 shrink-0 opacity-70" />

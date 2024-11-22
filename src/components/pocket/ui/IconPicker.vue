@@ -54,7 +54,7 @@ const isShown = props.isShown
         <ScrollArea class="col-start-2 flex h-full flex-wrap">
             <label
                 v-for="icon in iconStore"
-                class="border-1 btn btn-ghost btn-sm m-1 aspect-square size-9 self-center border-transparent p-2 has-checked:bg-b2/60 has-checked:shadow-standard">
+                class="border-1 btn btn-ghost btn-sm m-1 aspect-square size-9 self-center border-transparent p-2 has-[:checked]:bg-base-200/60 has-[:checked]:shadow-standard">
                 <input
                     v-if="pocket"
                     type="radio"
@@ -72,11 +72,11 @@ const isShown = props.isShown
                     class="peer hidden"
                     @change="handleChange(icon)" />
 
-                <icon :icon="icon" class="size-full font-size-4-content" />
+                <icon :icon="icon" class="size-full text-base-content" />
             </label>
             <label
                 v-for="champion in ds.champions"
-                class="border-1 btn btn-ghost btn-sm m-1 aspect-square size-9 self-center border-transparent has-checked:bg-b2/60 has-checked:shadow-standard">
+                class="border-1 btn btn-ghost btn-sm m-1 aspect-square size-9 self-center border-transparent has-[:checked]:bg-base-200/60 has-[:checked]:shadow-standard">
                 <input
                     v-if="pocket"
                     type="radio"

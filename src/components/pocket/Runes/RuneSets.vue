@@ -64,12 +64,12 @@ watch(
 <template>
     <div
         v-if="pocket"
-        class="h-full w-full overflow-y-scroll overscroll-none bg-b2/20 pt-8">
+        class="h-full w-full overflow-y-scroll overscroll-none bg-base-200/20 pt-8">
         <!-------------------------------- HEADER --------------------------------->
 
         <div
-            class="frost absolute left-0 top-0 z-40 flex h-fit! w-full flex-wrap items-center justify-end gap-4 border-b border-b-b3 px-2 py-1">
-            <h4 class="grow justify-start font-semibold!">Rune Sets</h4>
+            class="frost absolute left-0 top-0 z-40 flex !h-fit w-full flex-wrap items-center justify-end gap-4 border-b border-b-base-300 px-2 py-1">
+            <h4 class="grow justify-start !font-semibold">Rune Sets</h4>
             <button
                 class="btn btn-outline btn-xs relative h-full items-center rounded-md border-none font-normal"
                 @click="newRuneSet(pocket.key)">
@@ -94,9 +94,9 @@ watch(
                     v-for="(set, index) in pocket.runes[0].runeSets"
                     :key="set.key"
                     :class="set.primary"
-                    class="gradient overlay pointer-events-auto relative z-0 grid h-16 cursor-pointer items-center overflow-hidden transition-all duration-1000 after:absolute after:right-0 after:z-10 after:h-full after:w-[200%] after:bg-linear-to-r after:from-b2/30 after:via-b2 after:via-55% after:to-b2 odd:after:brightness-[108%] even:after:brightness-[106%] hover:after:-right-1/2 has-[#runeSets:checked]:after:-right-full">
+                    class="gradient overlay pointer-events-auto relative z-0 grid h-16 cursor-pointer items-center overflow-hidden transition-all duration-1000 after:absolute after:right-0 after:z-10 after:h-full after:w-[200%] after:bg-gradient-to-r after:from-base-200/30 after:via-base-200 after:via-55% after:to-base-200 odd:after:brightness-[108%] even:after:brightness-[106%] hover:after:-right-1/2 has-[#runeSets:checked]:after:-right-full">
                     <div
-                        class="group z-20 flex h-full w-full items-center gap-4 border-b border-b2 bg-clip-padding bg-right p-2 transition-all duration-200">
+                        class="group z-20 flex h-full w-full items-center gap-4 border-b border-base-200 bg-clip-padding bg-right p-2 transition-all duration-200">
                         <input
                             type="radio"
                             :value="index"
@@ -107,7 +107,7 @@ watch(
                         <!-----------------------------⟢ DRAG ⟣-------------------------------->
 
                         <div
-                            class="ml-1 grid grid-cols-[repeat(3,3rem)] place-items-center items-center justify-center justify-self-center py-1 opacity-75 grayscale-[0.25] transition-all duration-300 group-hover:opacity-95 group-hover:grayscale-0 peer-checked:grayscale-0 peer-checked:opacity-100 [&_#blank]:peer-checked:opacity-80 [&_#blank]:peer-checked:ring-neutral/15">
+                            class="ml-1 grid grid-cols-[repeat(3,_3rem)] place-items-center items-center justify-center justify-self-center py-1 opacity-75 grayscale-[0.25] transition-all duration-300 group-hover:opacity-95 group-hover:grayscale-0 peer-checked:grayscale-0 peer-[:checked]:opacity-100 peer-checked:[&_#blank]:opacity-80 peer-checked:[&_#blank]:ring-neutral/15">
                             <img
                                 v-if="
                                     set.keystone.name != 'none' &&
@@ -119,7 +119,7 @@ watch(
                             <img
                                 v-else
                                 src="/img/runes/blankRune.webp"
-                                class="h-8 rounded-full opacity-70 ring-1 ring-b3/90 group-hover:opacity-90"
+                                class="h-8 rounded-full opacity-70 ring-1 ring-base-300/90 group-hover:opacity-90"
                                 id="blank" />
                             <img
                                 v-if="
@@ -132,10 +132,10 @@ watch(
                             <img
                                 v-else
                                 src="/img/runes/blankRune.webp"
-                                class="h-8 rounded-full opacity-70 ring-1 ring-b3/90 group-hover:opacity-90"
+                                class="h-8 rounded-full opacity-70 ring-1 ring-base-300/90 group-hover:opacity-90"
                                 id="blank" />
                         </div>
-                        <div class="grow font-size-2"><!-- {{ set.name }} --></div>
+                        <div class="grow text-sm"><!-- {{ set.name }} --></div>
 
                         <!-----------------------------⟢ menu ⟣-------------------------------->
                         <label
@@ -156,7 +156,7 @@ watch(
                         </label>
 
                         <button
-                            class="flex items-center justify-center justify-self-end rounded-btn py-1 opacity-50 hover:bg-b2 hover:opacity-100"
+                            class="flex items-center justify-center justify-self-end rounded-btn py-1 opacity-50 hover:bg-base-200 hover:opacity-100"
                             alt="menu">
                             <icon
                                 icon="teenyicons:more-vertical-outline"
@@ -165,12 +165,12 @@ watch(
 
                         <!--   
                           <div
-              class="grid grid-cols-3 *:aspect-square *:size-5 *:rounded-btn *:font-size-4-content/80 *:transition-all *:flex *:justify-center *:items-center *:duration-300 gap-1.5">  <button class="hover:bg-b2" alt="Clear Items" title="Clear Items" @click="rs.resetRunes()">
+              class="grid grid-cols-3 *:aspect-square *:size-5 *:rounded-btn *:text-base-content/80 *:transition-all *:flex *:justify-center *:items-center *:duration-300 gap-1.5">  <button class="hover:bg-base-200" alt="Clear Items" title="Clear Items" @click="rs.resetRunes()">
                 <icon icon="teenyicons:clockwise-outline" class="size-[0.8rem] pb-[2px]" />
               </button>
 
               <button
-                class="disabled:bg-transparent hover:bg-b2 disabled:hover:bg-transparent disabled:opacity-40"
+                class="disabled:bg-transparent hover:bg-base-200 disabled:hover:bg-transparent disabled:opacity-40"
                 alt="Delete Set" title="Delete Set" @click="rs.deleteSet(set.key)" :disabled="rs.runeSets.length == 1">
                 <icon icon="ph:trash-light" class="size-3.5" />
               </button>

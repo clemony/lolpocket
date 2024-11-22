@@ -24,7 +24,7 @@ onMounted(() => {
 <template v-if="set">
     <template v-for="rune in this1">
         <template v-if="rune.name != 'none'">
-            <LoadImg :url="rune.img" class="-mt-1 -ml-1 size-16" />
+            <LoadImg :url="rune.img" class="-ml-1 -mt-1 size-16" />
         </template>
         <TextureOutline v-else type="rune" class="size-12 p-2" />
     </template>

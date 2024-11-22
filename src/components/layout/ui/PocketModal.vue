@@ -98,7 +98,7 @@ const elForm = ref()
         <div ref="elForm" class="carousel-item w-full min-w-full">
             <form
                 ref="form"
-                class="grid w-full min-w-full grid-cols-[4fr_1.5fr_2fr] gap-10 py-4 [&_label]:font-size-4"
+                class="grid w-full min-w-full grid-cols-[4fr_1.5fr_2fr] gap-10 py-4 [&_label]:text-base"
                 @submit.prevent.stop="submitForm">
                 <div class="flex flex-col gap-2">
                     <Label for="pocket-name">Pocket Name</Label>
@@ -109,12 +109,12 @@ const elForm = ref()
                             name="pocket-name"
                             v-model="name"
                             placeholder="optional"
-                            class="join-item h-10 border-r-0 font-size-4" />
+                            class="join-item h-10 border-r-0 text-base" />
 
                         <Button
                             variant="outline"
                             size="sm"
-                            class="group join-item aspect-square h-10 overflow-hidden border-l-0!">
+                            class="group join-item aspect-square h-10 overflow-hidden !border-l-0">
                             <icon
                                 icon="qlementine-icons:close-16"
                                 class="size-6 shrink-0 object-cover opacity-40 group-hover:opacity-100" />
@@ -129,7 +129,7 @@ const elForm = ref()
                                 class="size-4 shrink-0" />
 
                             <p
-                                class="absolute -right-2 -top-8 z-30 flex translate-y-1 flex-nowrap px-2 py-1 font-size-1 opacity-0 transition-all duration-700 group-hover:translate-y-0 group-hover:opacity-100">
+                                class="absolute -right-2 -top-8 z-30 flex translate-y-1 flex-nowrap px-2 py-1 text-xs opacity-0 transition-all duration-700 group-hover:translate-y-0 group-hover:opacity-100">
                                 No brain? Meet button.
                             </p>
                         </Button>
@@ -139,7 +139,7 @@ const elForm = ref()
 
                     <TagsInput v-model="tags" class="flex-col p-2">
                         <div
-                            class="flex w-full flex-row flex-wrap justify-start gap-2 *:font-size-4">
+                            class="flex w-full flex-row flex-wrap justify-start gap-2 *:text-base">
                             <template v-if="tags.length">
                                 <TransitionGroup name="pop">
                                     <TagsInputItem
@@ -167,7 +167,7 @@ const elForm = ref()
 
                         <TagsInputInput
                             placeholder="optional"
-                            class="min-h-10 w-full font-size-4"
+                            class="min-h-10 w-full text-base"
                             name="pocket-tags " />
                     </TagsInput>
                 </div>
@@ -181,7 +181,7 @@ const elForm = ref()
                             backgroundColor: bgColor,
                             color: iconColor,
                         }"
-                        class="mt-4 aspect-square size-14 self-center rounded-full p-4 ring-neutral/80 ring-offset-b1 data-[state=open]:ring-1 data-[state=open]:ring-offset-4">
+                        class="mt-4 aspect-square size-14 self-center rounded-full p-4 ring-neutral/80 ring-offset-base-100 data-[state=open]:ring-1 data-[state=open]:ring-offset-4">
                         <icon :icon="selectedIcon" class="-mt-px size-full" />
                     </a>
                 </div>
@@ -190,13 +190,13 @@ const elForm = ref()
                     <Label for="pocket-tags" class="">Colors</Label>
                     <DropdownMenu class="w-full">
                         <DropdownMenuTrigger
-                            class="mt-1.5 w-full rounded-md data-[state=open]:bg-b2/60">
+                            class="mt-1.5 w-full rounded-md data-[state=open]:bg-base-200/60">
                             <Button
                                 variant="ghost"
                                 size="sm"
-                                class="w-full justify-start font-size-4">
+                                class="w-full justify-start text-base">
                                 <span
-                                    class="size-6 shrink-0 rounded-sm border border-b3"
+                                    class="size-6 shrink-0 rounded border border-base-300"
                                     :style="{
                                         backgroundColor: bgColor,
                                     }"></span>
@@ -210,13 +210,13 @@ const elForm = ref()
 
                     <DropdownMenu>
                         <DropdownMenuTrigger
-                            class="rounded-md data-[state=open]:bg-b2/60">
+                            class="rounded-md data-[state=open]:bg-base-200/60">
                             <Button
                                 variant="ghost"
                                 size="sm"
-                                class="w-full justify-start font-size-4">
+                                class="w-full justify-start text-base">
                                 <span
-                                    class="size-6 shrink-0 rounded-sm border border-b3"
+                                    class="size-6 shrink-0 rounded border border-base-300"
                                     :style="{
                                         backgroundColor: iconColor,
                                     }"></span>

@@ -80,7 +80,7 @@ watch(
 
 <Transition name="toast">
     <div v-if="loveMessage && !gs.isMinimized" :key="loveMessage"
-        class="badge  badge-sm flex items-center justify-start  badge-ghost text-nowrap bg-b1/70! opacity-0 border-b2/20 shadow-xs">
+        class="badge  badge-sm flex items-center justify-start  badge-ghost text-nowrap !bg-base-100/70 opacity-0 border-base-200/20 shadow-sm">
         <span class='truncate max-w-24'>{{ loveMessage
             }}</span>
     </div>

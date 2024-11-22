@@ -32,18 +32,18 @@ const dataValue = ref()
                 <Card
                     class="mt-9 h-[calc(100%-315px)] max-h-[calc(100%-315px)] overflow-hidden">
                     <CardHeader
-                        class="absolute left-0 top-0 z-10 w-full flex-row items-center rounded-t-box bg-b1/90 px-12 py-4 backdrop-blur-md">
+                        class="absolute left-0 top-0 z-10 w-full flex-row items-center rounded-t-box bg-base-100/90 px-12 py-4 backdrop-blur-md">
                         <SearchBox
                             :search="cs.champSearch"
                             :placeholder="'Search Champions...'"
                             @update:search="cs.champSearch = $event"
-                            class="rounded-md bg-b1/80 shadow-inset-sm" />
+                            class="rounded-md bg-base-100/80 shadow-inset-sm" />
                         <Grow />
                         <div class="join mr-1">
                             <Label
                                 variant="outline"
                                 size="icon"
-                                class="join-item swap swap-flip relative has-disabled:cursor-default has-checked:bg-b2!"
+                                class="join-item swap swap-flip relative has-[:disabled]:cursor-default has-[:checked]:!bg-base-200"
                                 alt="Filter Likes">
                                 <input
                                     type="checkbox"
@@ -61,9 +61,9 @@ const dataValue = ref()
                     </CardHeader>
 
                     <CardContent
-                        class="h-full! max-h-full! w-full pb-0 pl-5 pr-0">
+                        class="!h-full !max-h-full w-full pb-0 pl-5 pr-0">
                         <ScrollArea
-                            class="max-h-inherit! h-inherit! overflow-y-auto!">
+                            class="!max-h-inherit !h-inherit !overflow-y-auto">
                             <ChampionList
                                 v-if="pocket"
                                 :pocketKey="pocket.key"

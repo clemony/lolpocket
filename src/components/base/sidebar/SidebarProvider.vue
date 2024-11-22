@@ -70,7 +70,7 @@ provideSidebarContext({
     '--sidebar-width': SIDEBAR_WIDTH,
     '--sidebar-width-icon': SIDEBAR_WIDTH_ICON,
   }"
-    :class="cn('group/sidebar-wrapper flex min-h-svh w-svw max-w-svw font-size-4-content has-data-[variant=inset]:bg-b1/35', props.class)">
+    :class="cn('group/sidebar-wrapper flex min-h-svh w-svw max-w-svw text-base-content has-[[data-variant=inset]]:bg-base-100/35', props.class)">
     <slot />
   </div>
 </TooltipProvider>

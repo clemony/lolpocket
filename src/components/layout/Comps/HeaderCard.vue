@@ -28,18 +28,18 @@ onClickOutside(target, (event) => (isOpen.value = false))
 
 <template>
     <Card
-        :class="cn('relative h-fit w-full pt-0!', props.cardClass)"
+        :class="cn('relative h-fit w-full !pt-0', props.cardClass)"
         ref="card">
         <CardHeader
             ref="target"
             :class="
                 cn(
-                    'w-full bg-b1/95 px-10 pt-0 backdrop-blur-md transition-all duration-200',
+                    'w-full bg-base-100/95 px-10 pt-0 backdrop-blur-md transition-all duration-200',
                     {
                         'pb-4 pt-6': isAnchorVisible,
-                        'absolute z-20 border-b border-b-b2 py-2':
+                        'absolute z-20 border-b border-b-base-200 py-2':
                             !isAnchorVisible,
-                        'rounded-b-box border-b border-b-b2 shadow-smooth':
+                        'rounded-b-box border-b border-b-base-200 shadow-smooth':
                             isOpen,
                     },
                     props.headerClass
@@ -58,7 +58,7 @@ onClickOutside(target, (event) => (isOpen.value = false))
                 </CollapsibleTrigger>
                 <CollapsibleContent class="w-full duration-1000">
                     <CardDescription
-                        class="w-full justify-between pb-3 pt-2 font-size-4">
+                        class="w-full justify-between pb-3 pt-2 text-base">
                         {{ props.description }}
                         <slot name="description" />
                     </CardDescription>

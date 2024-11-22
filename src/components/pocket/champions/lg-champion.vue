@@ -18,7 +18,7 @@ const props = defineProps<{
 <Skeleton v-show="!isImageLoaded" class='w-full h-inherit rounded-box' />
 
 <div v-show='isImageLoaded'
-    class='bg-b2/60 h-inherit border border-neutral/20 bg-clip-border rounded-box overflow-hidden'>
+    class='bg-base-200/60 h-inherit border border-neutral/20 bg-clip-border rounded-box overflow-hidden'>
 
     <KinesisContainer v-show='isImageLoaded' :perspective="100"
         class="shadow-inset-sm h-inherit size-full overflow-hidden animate-in fade-in-0  duration-700 ">
@@ -36,7 +36,7 @@ const props = defineProps<{
 
 
         <div v-if="pocket.champions[0].starred" class=' absolute bottom-2.5 right-3'>
-            <Badge class=' font-bold tracking-tighter font-size-4 antialiased bg-opacity-70 font-cursive'>
+            <Badge class=' font-bold tracking-tighter text-base antialiased bg-opacity-70 font-cursive'>
                 {{
                     pocket.champions[0].starred }}
             </Badge>

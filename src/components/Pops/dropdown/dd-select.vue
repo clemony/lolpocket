@@ -70,7 +70,7 @@ const data = props.data
 }
 
 .v-popper--shown button {
-    @apply border-b3/90;
+    @apply border-base-300/90;
 
     &>div {
         @apply opacity-80;

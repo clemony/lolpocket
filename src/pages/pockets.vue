@@ -18,7 +18,7 @@ const route = useRoute()
                 @click="gs.toggleModalState(newPocketModal)"
                 variant="ghost"
                 size="sm"
-                class="align-baseline font-medium!">
+                class="align-baseline !font-medium">
                 New Pocket
                 <icon
                     icon="teenyicons:add-small-outline"

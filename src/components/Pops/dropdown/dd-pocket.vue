@@ -44,7 +44,7 @@ const starred = ['']
 <!------------------------⟢ menu ⟣------------------------->
 
 <template>
-<DropdownMenuContent v-if="pocket" class='w-(--radix-dropdown-menu-trigger-width)  [&_svg]:size-4.5'>
+<DropdownMenuContent v-if="pocket" class='w-[--radix-dropdown-menu-trigger-width]  [&_svg]:size-4.5'>
     <slot name="first" />
 
     <DropdownMenuItem>

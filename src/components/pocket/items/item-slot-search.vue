@@ -3,7 +3,7 @@ import { defineProps, defineEmits, computed, ref } from 'vue'
 import { cn } from '@lib/utils'
 import { useDataStore } from '@/stores/dataStore'
 import { usePocketStore } from '@/stores/pocketStore'
-import { imageIn, imageOut } from '@/assets/Animation/animations'
+import { imageIn, imageOut } from '@/Assets/Animation/animations'
 
 const ds = useDataStore()
 const ps = usePocketStore()
@@ -68,8 +68,8 @@ const value = ref('')
 <Popover v-model:open="open">
     <PopoverTrigger as-child>
         <button variant="outline" role="combobox" :aria-expanded="open"
-            class="no-drag search-drop ghosty drag-label group/qs relative z-0 flex w-[200px] basis-16 cursor-pointer! justify-between p-0! after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-['+'] hover:after:text-neutral hover:after:opacity-60"
-            :class="{ 'basis-12!': type == 'alt' }">
+            class="no-drag search-drop ghosty drag-label group/qs relative z-0 flex w-[200px] basis-16 !cursor-pointer justify-between !p-0 after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-['+'] hover:after:text-neutral hover:after:opacity-60"
+            :class="{ '!basis-12': type == 'alt' }">
             <div
                 class="z-20 h-full w-full scale-105 cursor-pointer select-none bg-[url('/i@frame.webp')] bg-contain bg-center bg-no-repeat opacity-0 brightness-0 transition-all duration-200 group-hover/qs:scale-95 group-hover/qs:opacity-40">
             </div>
@@ -84,7 +84,7 @@ const value = ref('')
                 <CommandGroup v-auto-animate heading="Items in Set" class="flex flex-wrap">
                     <template v-for="(item, index) in set.items" :key="item.id">
                         <CommandItem v-if="index > 5" :key="item.id" :value="item.name">
-                            <img :src="`/img/items/${item.id}.webp`" class="shadow-2xs size-10 rounded-md" :key="item.id"
+                            <img :src="`/img/items/${item.id}.webp`" class="shadow-xs size-10 rounded-md" :key="item.id"
                                 :class="cn(
                                     value === item.name ?
                                         'ring-1'
@@ -98,7 +98,7 @@ const value = ref('')
                 <CommandGroup v-auto-animate heading="Items in Set" class="flex flex-wrap">
                     <template v-for="(item, index) in set.items" :key="item.id">
                         <CommandItem v-if="index > 5" :key="item.id" :value="item.name">
-                            <img :src="`/img/items/${item.id}.webp`" class="shadow-2xs size-10 rounded-md" :key="item.id"
+                            <img :src="`/img/items/${item.id}.webp`" class="shadow-xs size-10 rounded-md" :key="item.id"
                                 :class="cn(
                                     value === item.name ?
                                         'ring-1'
@@ -111,7 +111,7 @@ const value = ref('')
 
                 <CommandGroup v-auto-animate heading="Loved Items" class="flex flex-wrap">
                     <CommandItem v-for="item in items" :key="item.id" :value="item.name">
-                        <img :src="`/img/items/${item.id}.webp`" class="shadow-2xs size-10 rounded-md" :key="item.id"
+                        <img :src="`/img/items/${item.id}.webp`" class="shadow-xs size-10 rounded-md" :key="item.id"
                             :class="cn(
                                 value === item.name ?
                                     'ring-1'
@@ -157,16 +157,16 @@ const value = ref('')
                     </button>
 
                     <input placeholder="Quick search..." :value="quickSearch" @input="handleInput" spellcheck="false"
-                        class="z-0 w-full  italic select-all focus:not-italic focus:bg-b2/50 placeholder: rounded-btn bg-transparent h-7 px-2 outline-hidden!"
+                        class="z-0 w-full  italic select-all focus:not-italic focus:bg-base-200/50 placeholder: rounded-btn bg-transparent h-7 px-2 !outline-none"
                         autofocus />
                 </div>
 
                  <transition name="list-transition" @enter="beforeEnter" @leave="afterLeave"> -->
 <!-- <div v-if="quickSearch"
-                    class="grid w-full px-1 pt-2 overflow-y-scroll transition-all duration-500 border border-transparent border-t-b3 max-h-72">
+                    class="grid w-full px-1 pt-2 overflow-y-scroll transition-all duration-500 border border-transparent border-t-base-300 max-h-72">
                     <TransitionGroup name="fade" tag="div" @enter="imageIn" @leave="imageOut">
                         <button v-close-popper v-for="data in props.array" :key="data.id" @click="handleClick(data)"
-                            class="flex w-full gap-2 px-1 my-1 btn btn-ghost btn-xs py-0.5 hover:bg-b2 cursor-pointer justify-start">
+                            class="flex w-full gap-2 px-1 my-1 btn btn-ghost btn-xs py-0.5 hover:bg-base-200 cursor-pointer justify-start">
                             <img :src="`/img/${props.type}/${data.id || data.name}.webp`" class="rounded-md size-4.5" />
                             {{ data.name }}
                         </button>

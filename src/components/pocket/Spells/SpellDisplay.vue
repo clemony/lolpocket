@@ -14,11 +14,11 @@ const spells = [
 <template>
     <div
         v-for="spell in spells"
-        class="size-12 shrink-0 rounded-lg border border-b3/70 bg-b1/50 p-0 shadow-warm">
+        class="size-12 shrink-0 rounded-lg border border-base-300/70 bg-base-100/50 p-0 shadow-warm">
         <template v-if="spell != ''">
             <img
                 :src="`/img/spells/Summoner${spell}.webp`"
-                class="m-0 size-full rounded-lg object-center p-0!" />
+                class="m-0 size-full rounded-lg object-center !p-0" />
         </template>
         <Placeholder v-else class="size-[42px] rounded-lg" />
     </div>

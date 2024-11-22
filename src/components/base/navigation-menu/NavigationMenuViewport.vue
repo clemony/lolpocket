@@ -21,7 +21,7 @@ const forwardedProps = useForwardProps(delegatedProps)
 <template>
 <div class="absolute left-0 top-full flex justify-center">
   <NavigationMenuViewport v-bind="forwardedProps" :class="cn(
-    'origin-top-center relative mt-1.5 h-(--radix-navigation-menu-viewport-height) w-full overflow-hidden rounded-md border bg-b1/80 backdrop-blur-md  shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-(--radix-navigation-menu-viewport-width)',
+    'origin-top-center relative mt-1.5 h-[--radix-navigation-menu-viewport-height] w-full overflow-hidden rounded-md border bg-base-100/80 backdrop-blur-md  shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[--radix-navigation-menu-viewport-width]',
     props.class,
   )
     " />

@@ -21,7 +21,7 @@ function clearOldPockets() {
 <div class="h-full w-full px-3 py-4">
     <div class="mb-4 grid h-fit w-full gap-4 px-4">
         <div class="flex items-center gap-3">
-            <div class="breadcrumbs flex grow items-center font-size-2">
+            <div class="breadcrumbs flex grow items-center text-sm">
                 <ul class="">
                     <li @click="sn.navigateTo('/pockets')">
                         <a>Pockets</a>
@@ -44,7 +44,7 @@ function clearOldPockets() {
             </div>
 
             <Button variant="ghost" size="lg"
-                class='bg-error text-white font-size-4 justify-center shadow-xs px-5 border border-error hover:bg-error hover:opacity-80 disabled:bg-inspiration disabled:border-inspiration disabled:font-size-4-content'
+                class='bg-error text-white text-base justify-center shadow-sm px-5 border border-error hover:bg-error hover:opacity-80 disabled:bg-inspiration disabled:border-inspiration disabled:text-base-content'
                 :disabled="ps.trashPockets.length == 0" @click="ps.trashPockets.length = 0">
                 <span v-if="ps.trashPockets.length > 0" class="font-medium flex gap-2 items-center">
                     <icon icon="ant-design:fire-outlined" class="size-6 -ml-0.5" />
@@ -59,7 +59,7 @@ function clearOldPockets() {
             </Button>
         </div>
         <div class="flex w-full items-center">
-            <h2 class="grow font-size-8 font-semibold tracking-tight">Trash</h2>
+            <h2 class="grow text-xl font-semibold tracking-tight">Trash</h2>
         </div>
     </div>
 
@@ -72,7 +72,7 @@ function clearOldPockets() {
 
 
             <div
-                class="flex flex-col justify-end grow mt-[15px]  overflow-y-auto border-y   border-b3 after:shadow-[inset_0px_0px_6px_3px_oklch(var(--b1)/0)] after:size-full after:absolute relative after:top-0 after:z-10 after:brightness-[97%]  after:pointer-events-none">
+                class="flex flex-col justify-end flex-grow mt-[15px]  overflow-y-auto border-y   border-base-300 after:shadow-[inset_0px_0px_6px_3px_oklch(var(--b1)/0)] after:size-full after:absolute relative after:top-0 after:z-10 after:brightness-[97%]  after:pointer-events-none">
                 <PocketGrid :pocketArray="ps.trashPockets" arrayName="trashPockets" class="overflow-auto" />
             </div>
 

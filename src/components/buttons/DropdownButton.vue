@@ -21,7 +21,7 @@ const props = withDefaults(
             <Button
                 :class="
                     cn(
-                        'flex h-full w-full flex-nowrap items-center gap-4 rounded-lg border-0! px-3 font-size-4 ring-0! focus:border-0! focus:outline-0! focus:ring-1! focus:ring-b2! data-[state=open]:shadow-xs data-[state=open]:ring-1! data-[state=open]:ring-b3/40!',
+                        'flex h-full w-full flex-nowrap items-center gap-4 rounded-lg !border-0 px-3 text-base !ring-0 focus:!border-0 focus:!outline-0 focus:!ring-1 focus:!ring-base-200 data-[state=open]:shadow-sm data-[state=open]:!ring-1 data-[state=open]:!ring-base-300/40',
                         props.class
                     )
                 "

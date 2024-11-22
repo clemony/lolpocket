@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import '@assets/css/imports.css'
 import { useSessionStore } from '@/stores/sessionStore'
-import '@/assets/css/index.css'
-import '@/assets/css/theme.css'
+//import {navigateTo}
 import { useDataStore } from '@/stores/dataStore'
 import { usePocketStore } from '@/stores/pocketStore'
 import { Toaster } from '@/components/base/sonner'
@@ -67,7 +67,7 @@ const navPockets = [
     <SidebarProvider>
         <Sidebar
             collapsible="icon"
-            class="border-b-b3 border-l-b2 justify-center border border-r-transparent">
+            class="justify-center border border-b-base-300 border-l-base-200 border-r-transparent">
             <SidebarContent class="pt-12">
                 <ScrollArea>
                     <SidebarGroup>
@@ -81,7 +81,7 @@ const navPockets = [
                                         <icon
                                             icon="teenyicons:home-outline"
                                             class="m-0 overflow-auto object-none p-0" />
-                                        <span class="font-size-4">Home</span>
+                                        <span class="text-base">Home</span>
                                     </SidebarMenuButton>
                                 </RouterLink>
                             </SidebarMenuItem>
@@ -90,7 +90,7 @@ const navPockets = [
                                     <icon
                                         icon="teenyicons:home-outline"
                                         class="m-0 overflow-auto object-none p-0" />
-                                    <span class="font-size-4">Home</span>
+                                    <span class="text-base">Home</span>
                                 </SidebarMenuButton>
                                 <DropdownMenu>
                                     <DropdownMenuTrigger as-child>
@@ -130,7 +130,7 @@ const navPockets = [
                                             tooltip="Pockets"
                                             class="py-5">
                                             <icon icon="formkit:folder" />
-                                            <span class="font-size-4">
+                                            <span class="text-base">
                                                 Pockets
                                             </span>
                                             <icon
@@ -142,7 +142,7 @@ const navPockets = [
                                     <CollapsibleContent>
                                         <SidebarMenuSub
                                             v-show="ps.pinned"
-                                            class="animate-in animate-out fade-in-100 fade-out-100 transition-all duration-700">
+                                            class="transition-all duration-700 animate-in animate-out fade-in-100 fade-out-100">
                                             <SidebarPockets
                                                 :data="ps.pinned"
                                                 title="Pinned"
@@ -196,7 +196,7 @@ const navPockets = [
                                                     class="group/pocketstuff">
                                                     <div
                                                         class="flex items-center">
-                                                        <!--  <icon :icon="item.icon" class='size-4.5!' /> -->
+                                                        <!--  <icon :icon="item.icon" class='!size-4.5' /> -->
 
                                                         <span>
                                                             {{ item.title }}
@@ -221,7 +221,7 @@ const navPockets = [
                                 <RouterLink to="/loved">
                                     <SidebarMenuButton class="py-5">
                                         <icon icon="teenyicons:heart-outline" />
-                                        <span class="font-size-4">Loved</span>
+                                        <span class="text-base">Loved</span>
 
                                         <SidebarMenuBadge>
                                             <SidebarMenuLoves />
@@ -235,7 +235,7 @@ const navPockets = [
                                     <SidebarMenuButton class="py-5">
                                         <icon
                                             icon="teenyicons:calculator-outline" />
-                                        <span class="font-size-4">
+                                        <span class="text-base">
                                             Calculator
                                         </span>
                                     </SidebarMenuButton>
@@ -254,7 +254,7 @@ const navPockets = [
                                             :tooltip="item.title"
                                             class="py-5">
                                             <icon :icon="item.icon" />
-                                            <span class="font-size-4">
+                                            <span class="text-base">
                                                 {{ item.title }}
                                             </span>
                                             <icon
@@ -270,8 +270,7 @@ const navPockets = [
                                                 <RouterLink :to="subItem.url">
                                                     <SidebarMenuSubButton>
                                                         <!--     <icon :icon="subItem.icon" /> -->
-                                                        <span
-                                                            class="font-size-4">
+                                                        <span class="text-base">
                                                             {{ subItem.title }}
                                                         </span>
                                                     </SidebarMenuSubButton>
@@ -291,7 +290,7 @@ const navPockets = [
         <SidebarInset class="relative">
             <div
                 data-tauri-drag-region
-                class="border-y-b3 border-r-b3 absolute inset-0 top-0 left-0 m-0 h-full w-full overflow-y-clip border border-l-transparent p-0!">
+                class="absolute inset-0 left-0 top-0 m-0 h-full w-full overflow-y-clip border border-y-base-300 border-l-transparent border-r-base-300 !p-0">
                 <router-view v-slot="{ Component }">
                     <KeepAlive
                         :include="[
@@ -316,4 +315,8 @@ const navPockets = [
     </SidebarProvider>
 </template>
 
-<style></style>
+<style>
+/* :root {
+    :v-bind(gs.mainTheme);
+} */
+</style>

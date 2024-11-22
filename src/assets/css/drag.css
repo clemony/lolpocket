@@ -2,10 +2,10 @@
     @apply flex h-auto max-h-full w-full flex-wrap items-center gap-3.5 overflow-y-scroll;
 }
 .drag-label {
-    @apply has-[div.img-loaded]:hover:ring-neutral/40 !relative z-0 flex items-center justify-center overflow-auto rounded-lg p-[2px] ring-1 shadow-sm ring-transparent;
+    @apply !relative z-0 flex items-center justify-center overflow-auto rounded-lg p-[2px] shadow-sm ring-1 ring-transparent has-[div.img-loaded]:hover:ring-neutral/40;
 }
 .drag-wrapper {
-    @apply border-b3 pointer-events-none aspect-square overflow-hidden rounded-lg border bg-contain select-none;
+    @apply pointer-events-none aspect-square select-none overflow-hidden rounded-lg border border-base-300 bg-contain;
 }
 
 .drag-img {
@@ -25,7 +25,7 @@
 } */
 
 .ghosty {
-    @apply !border-b3 bg-b2/30 aspect-square rounded-md border p-5 shadow-[inset_1px_1px_2px_2px_#00000008] hover:ring-0;
+    @apply aspect-square rounded-md border !border-base-300 bg-base-200/30 p-5 shadow-[inset_1px_1px_2px_2px_#00000008] hover:ring-0;
 
     & .drag-label,
     & .drag-wrapper {
@@ -43,7 +43,7 @@
 }
 
 .setDrag {
-    @apply rounded-box border-b3 bg-b1 border;
+    @apply rounded-box border border-base-300 bg-base-100;
 }
 
 .drag-clone {

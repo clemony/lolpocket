@@ -18,7 +18,7 @@ onMounted(() => {
 </script>
 
 <template><label
-    :class="cn('swap swap-flip  shrink-0 [&_svg]:shrink-0 [&_svg]:stroke-2 group  transition-all duration-300 outline-0! w-3!  pr-2! hover:bg-transparent!  relative self-center grid content-center items-center'), props.class">
+    :class="cn('swap swap-flip  shrink-0 [&_svg]:shrink-0 [&_svg]:stroke-2 group  transition-all duration-300 !outline-0 !w-3  !pr-2 hover:!bg-transparent  relative self-center grid content-center items-center'), props.class">
 
     <input v-if="props.model" type="checkbox" v-model="isShown" @change="emit('update:model', isShown)" />
 

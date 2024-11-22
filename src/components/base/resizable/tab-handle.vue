@@ -20,11 +20,11 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
-<SplitterResizeHandle v-bind="forwarded" :class="cn('relative bg-transparent! flex ', props.class)">
+<SplitterResizeHandle v-bind="forwarded" :class="cn('relative !bg-transparent flex ', props.class)">
 
   <template v-if="props.label">
-    <div role="tablist" class=" -rotate-0!  tabs tabs-lifted  bg-transparent!">
-      <Label class='absolute pointer-events-none bg-transparent! tab tab-active flex-nowrap text-nowrap'>{{ props.label
+    <div role="tablist" class=" !-rotate-0  tabs tabs-lifted  !bg-transparent">
+      <Label class='absolute pointer-events-none !bg-transparent tab tab-active flex-nowrap text-nowrap'>{{ props.label
         }}</Label>
       <Label role="tab" class='absolute left-4  tab hidden'>{{
         }}</Label>

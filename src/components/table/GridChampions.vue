@@ -57,7 +57,7 @@ const starred = computed(() => {
                 v-for="(champion, index) in pocket.champions[0].champions">
                 <div
                     v-if="index < 3"
-                    class="size-14 overflow-hidden rounded-lg border border-b3 shadow-xs">
+                    class="size-14 overflow-hidden rounded-lg border border-base-300 shadow-sm">
                     <loadImg
                         :url="`/img/champions/${clean(champion.name)}.webp`"
                         class="size-14 scale-[108%] object-cover" />
@@ -69,7 +69,7 @@ const starred = computed(() => {
                     <ContextMenuSubTrigger
                         :disabled="pocket.champions[0].champions.length <= 1"
                         :class="{
-                            '[&_svg]:last:hidden':
+                            'last:[&_svg]:hidden':
                                 pocket.champions[0].champions.length <= 1,
                             'opacity-50':
                                 pocket.champions[0].champions.length == 0,
@@ -109,7 +109,7 @@ const starred = computed(() => {
                                     icon="teenyicons:tick-outline"
                                     class="invisible peer-checked:visible" />
                                 <div
-                                    class="mr-1 size-4.5 overflow-hidden rounded-xs shadow-xs">
+                                    class="mr-1 size-4.5 overflow-hidden rounded-xs shadow-sm">
                                     <div
                                         class="grid scale-[116%] place-items-center">
                                         <img

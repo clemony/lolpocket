@@ -6,7 +6,7 @@ const props = defineProps<{
 
 <template>
     <div
-        class="backdrop-saturate-125 backdrop-contrast-5 mask absolute z-50 mt-[35px] grid w-full grid-cols-[1fr_4fr_2fr] grid-rows-[50px_25px] items-center bg-b1/60 pl-3 pr-12 pt-3.5 backdrop-blur-md backdrop-brightness-[98%] mask-b-10">
+        class="backdrop-saturate-125 backdrop-contrast-5 mask absolute z-50 mt-[35px] grid w-full grid-cols-[1fr_4fr_2fr] grid-rows-[50px_25px] items-center bg-base-100/60 pl-3 pr-12 pt-3.5 backdrop-blur-md backdrop-brightness-[98%] mask-b-10">
         <div class="flex w-40 min-w-40 max-w-40 items-center px-8">
             <h1
                 class="self-end pl-0.5 pt-2.5 font-semibold tracking-tight first:capitalize">

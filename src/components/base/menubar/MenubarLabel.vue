@@ -12,7 +12,7 @@ const props = defineProps<
     <MenubarLabel
         :class="
             cn(
-                'px-2 py-1.5 font-size-2 font-semibold',
+                'px-2 py-1.5 text-sm font-semibold',
                 inset && 'pl-8',
                 props.class
             )

@@ -29,7 +29,7 @@ export function runeColors(runeSet) {
         } else if (runeSet.secondary == 'precision') {
             var r = 'to-precision'
         } else if (!runeSet.secondary) {
-            var r = 'to-bg-b2'
+            var r = 'to-bg-base-200'
         }
 
         const classes = k + ' ' + r
@@ -47,23 +47,23 @@ export function runeColors(runeSet) {
             return 'to-precision'
         }
     } else if (keystone.path != 'none' && runeSet.secondary == 'none') {
-        return 'to-b2'
+        return 'to-base-200'
     }
 }
 
 export function getShardClass(shard: Shard) {
-    const gray = ['[&_svg]:font-size-4-300 border-b3']
+    const gray = ['[&_svg]:text-base-300 border-base-300']
     const green = [
-        'has-checked:shadow-[0_3px_20px_#a3be8c,inset_-1px_-1px_0px_1px_#00000008] [&_svg]:text-resolve border-resolve',
+        'has-[:checked]:shadow-[0_3px_20px_#a3be8c,inset_-1px_-1px_0px_1px_#00000008] [&_svg]:text-resolve border-resolve',
     ]
     const blue = [
-        'has-checked:shadow-[0_3px_20px_#A4C1C4,inset_-1px_-1px_0px_1px_#00000008] [&_svg]:text-inspiration border-inspiration',
+        'has-[:checked]:shadow-[0_3px_20px_#A4C1C4,inset_-1px_-1px_0px_1px_#00000008] [&_svg]:text-inspiration border-inspiration',
     ]
     const yellow = [
-        'has-checked:shadow-[0_3px_20px_#ebcb8b,inset_-1px_-1px_0px_1px_#00000008] [&_svg]:text-precision border-precision',
+        'has-[:checked]:shadow-[0_3px_20px_#ebcb8b,inset_-1px_-1px_0px_1px_#00000008] [&_svg]:text-precision border-precision',
     ]
     const purple = [
-        'has-checked:shadow-[0_3px_20px_#b48dad,inset_-1px_-1px_0px_1px_#00000008] [&_svg]:text-sorcery border-sorcery',
+        'has-[:checked]:shadow-[0_3px_20px_#b48dad,inset_-1px_-1px_0px_1px_#00000008] [&_svg]:text-sorcery border-sorcery',
     ]
 
     const c =

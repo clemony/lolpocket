@@ -78,7 +78,7 @@ onMounted(() => {})
             <label
                 v-for="(path, index) in ds.uniquePaths"
                 :key="index"
-                class="z-30 flex grow cursor-pointer items-center justify-center overflow-hidden border-b-0 border-b1 border-b-transparent bg-clip-padding py-1 transition-all duration-500 disabled:hidden has-disabled:absolute has-disabled:size-0 has-checked:-translate-y-2.5 has-disabled:opacity-0"
+                class="z-30 flex grow cursor-pointer items-center justify-center overflow-hidden border-b-0 border-base-100 border-b-transparent bg-clip-padding py-1 transition-all duration-500 disabled:hidden has-[:disabled]:absolute has-[:disabled]:size-0 has-[:checked]:-translate-y-2.5 has-[:disabled]:opacity-0"
                 :ref="path">
                 <input
                     v-if="props.set == 1"
@@ -107,7 +107,7 @@ onMounted(() => {})
                         class="drop-shadow-softest" />
                 </div>
                 <div
-                    class="mt-1.5 w-0 font-size-8! font-light capitalize opacity-0 transition-all duration-500 peer-checked:w-32 peer-checked:opacity-100">
+                    class="mt-1.5 w-0 !text-xl font-light capitalize opacity-0 transition-all duration-500 peer-checked:w-32 peer-checked:opacity-100">
                     {{ path }}
                 </div>
             </label>
@@ -165,7 +165,7 @@ onMounted(() => {})
                 :delay="{ show: 1400, hide: 0 }"
                 :disabled="rune.path == 'none'"
                 id="imgwrap"
-                class="mask h-[inherit] w-[inherit] opacity-80 transition-all duration-500 mask-3 hover:opacity-100 peer-checked:opacity-100 [&_img]:grayscale [&_img]:hover:grayscale-0 [&_img]:peer-checked:grayscale-0">
+                class="mask h-[inherit] w-[inherit] opacity-80 transition-all duration-500 mask-3 hover:opacity-100 peer-checked:opacity-100 [&_img]:grayscale hover:[&_img]:grayscale-0 peer-checked:[&_img]:grayscale-0">
                 <loadImg
                     :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
                     :alt="rune.name"
@@ -185,7 +185,7 @@ onMounted(() => {})
                 placement="bottom"
                 :disabled="rune.path == 'none'"
                 id="imgwrap"
-                class="h-[inherit] w-[inherit] opacity-80 brightness-90 transition-all duration-500 hover:opacity-100 peer-checked:opacity-100 peer-checked:brightness-100 [&_img]:grayscale [&_img]:hover:grayscale-0 [&_img]:peer-checked:grayscale-0">
+                class="h-[inherit] w-[inherit] opacity-80 brightness-90 transition-all duration-500 hover:opacity-100 peer-checked:opacity-100 peer-checked:brightness-100 [&_img]:grayscale hover:[&_img]:grayscale-0 peer-checked:[&_img]:grayscale-0">
                 <div class="overflow-hidden">
                     <loadImg
                         :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
@@ -315,7 +315,7 @@ onMounted(() => {})
             @apply ring-0 ring-offset-0 transition-all duration-500;
         }
         #imgwrap {
-            @apply size-[2.8rem] rounded-full border border-neutral/15 bg-b2/20 shadow-[inset_1px_3px_2px_1px_#00000008] transition-all duration-500;
+            @apply size-[2.8rem] rounded-full border border-neutral/15 bg-base-200/20 shadow-[inset_1px_3px_2px_1px_#00000008] transition-all duration-500;
         }
         img {
             @apply aspect-square scale-110 rounded-full object-cover shadow-inner;

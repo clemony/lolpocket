@@ -8,10 +8,10 @@
             class="a swap-off opacity-40 disabled:opacity-0" />
         <icon
             icon="teenyicons:heart-solid"
-            class="swap-on font-size-4-content/80 text-dark-rose opacity-0 disabled:opacity-0 peer-checked:opacity-100" />
+            class="swap-on text-base-content/80 text-dark-rose opacity-0 disabled:opacity-0 peer-checked:opacity-100" />
 
         <icon
             icon="fluent:heart-off-20-regular"
-            class="font-size-4-content/30 opacity-0 disabled:opacity-100" />
+            class="text-base-content/30 opacity-0 disabled:opacity-100" />
     </div>
 </template>

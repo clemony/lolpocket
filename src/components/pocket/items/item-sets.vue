@@ -108,7 +108,7 @@ const prevIndex = 0
                         <InputEditable
                             v-model:modelValue="set.name"
                             :defaultValue="set.name"
-                            class="hidden w-fit items-center truncate border-transparent text-start align-baseline font-size-4! font-medium capitalize transition-all duration-300 focus-within:border-b2 hover:border-b2 @[230px]/set:flex">
+                            class="hidden w-fit items-center truncate border-transparent text-start align-baseline !text-base font-medium capitalize transition-all duration-300 focus-within:border-base-200 hover:border-base-200 @[230px]/set:flex">
                             <Button
                                 variant="simple"
                                 size="xs"
@@ -139,7 +139,7 @@ const prevIndex = 0
                         class="arrow p-0">
                         <Button
                             variant="ghost"
-                            class="m-0! aspect-square! size-6 px-1">
+                            class="!m-0 !aspect-square size-6 px-1">
                             <icon
                                 icon="qlementine-icons:settings-16"
                                 class="size-4.5 shrink-0 opacity-50" />
@@ -200,7 +200,7 @@ const prevIndex = 0
             </DisplayCard>
         </TransitionGroup>
         <Card
-            class="mb-12 grid h-[60px] w-[calc(100%-48px)] cursor-pointer items-center justify-center bg-b2/10 opacity-60 shadow-none transition-all duration-500 hover:bg-transparent hover:opacity-100 hover:shadow-xs!"
+            class="mb-12 grid h-[60px] w-[calc(100%-48px)] cursor-pointer items-center justify-center bg-base-200/10 opacity-60 shadow-none transition-all duration-500 hover:bg-transparent hover:opacity-100 hover:!shadow-sm"
             @click="newItemSet(pocket.key)">
             <icon icon="teenyicons:add-outline" class="size-6 opacity-40" />
         </Card>
@@ -219,6 +219,6 @@ const prevIndex = 0
 }
 
 .ghost {
-    @apply m-4 w-[96%] rounded-box bg-b2;
+    @apply m-4 w-[96%] rounded-box bg-base-200;
 }
 </style>

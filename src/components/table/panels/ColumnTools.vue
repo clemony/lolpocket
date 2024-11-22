@@ -30,7 +30,7 @@ console.log(ps.columns)
         <template v-for="column in ps.columns" :key="column.colId">
 
             <VDropdown v-if="column.headerName == 'Updated' || column.headerName == 'Created'" theme="hoverdd-inner">
-                <Label class="flex gap-4 font-size-2 items-center rounded-md hover:bg-b2/60 w-full py-1 px-3">
+                <Label class="flex gap-4 text-sm items-center rounded-md hover:bg-base-200/60 w-full py-1 px-3">
                     <input type="checkbox" :checked="column.isVisible"
                         @change="toggleColumnVisibility(column.colId, $event)" class='checkbox checkbox-xs' />
                     <span class='pr-4'>{{ column.headerName }}</span>
@@ -40,7 +40,7 @@ console.log(ps.columns)
             </VDropdown>
 
             <VDropdown v-else-if="column.headerName != ''" theme="hidden">
-                <Label class="flex gap-4 font-size-2 items-center rounded-md hover:bg-b2/60 w-full py-1 px-3">
+                <Label class="flex gap-4 text-sm items-center rounded-md hover:bg-base-200/60 w-full py-1 px-3">
                     <input type="checkbox" :checked="column.isVisible"
                         @change="toggleColumnVisibility(column.colId, $event)" class='checkbox checkbox-xs' />
                     <span class='pr-4'>{{ column.headerName }}</span>
@@ -55,8 +55,8 @@ console.log(ps.columns)
 
 <VDropdown theme="hoverdd-inner" placement="right-start" :disabled="!ps.pockets.length">
     <Button variant="ghost" size="xs" class='gap-4 items-center'>
-        <icon icon="fluent:mail-inbox-all-20-regular" class='size-6! -ml-1' />
-        <span class='-ml-[3px] capitalize pr-4 font-size-2'>
+        <icon icon="fluent:mail-inbox-all-20-regular" class='!size-6 -ml-1' />
+        <span class='-ml-[3px] capitalize pr-4 text-sm'>
             Pocket Drawers
         </span>
         <icon icon="teenyicons:right-small-outline" class='ml-2 -mr-1 justify-self-end size-3.5' />

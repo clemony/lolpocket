@@ -57,7 +57,7 @@ function handleLike(thisChamp) {
                         class="group join-item size-full items-center justify-center p-0">
                         <Icon
                             icon="ph:link-simple"
-                            class="size-5! transition-all duration-500 group-hover:rotate-180" />
+                            class="!size-5 transition-all duration-500 group-hover:rotate-180" />
                     </Button>
                 </a>
 
@@ -80,20 +80,20 @@ function handleLike(thisChamp) {
             <CardHeader class="flex flex-row items-center gap-8">
                 <div class="relative w-fit">
                     <div
-                        class="join-item grid size-[70px] place-items-center overflow-y-hidden rounded-lg border border-b3">
+                        class="join-item grid size-[70px] place-items-center overflow-y-hidden rounded-lg border border-base-300">
                         <loadImg
-                            class="mr-1 aspect-square size-[70px] shrink-0 scale-[108%] rounded-none! object-center"
+                            class="mr-1 aspect-square size-[70px] shrink-0 scale-[108%] !rounded-none object-center"
                             :url="`/img/champions/${clean(champion.name)}.webp`" />
                     </div>
                 </div>
 
                 <div class="flex h-full w-full flex-col *:shrink-0">
-                    <p class="scale-x-105 font-serif font-size-9! font-medium">
+                    <p class="scale-x-105 font-serif !text-2xl font-medium">
                         {{ champion.name }}
                     </p>
 
                     <p
-                        class="mt-1 flex scale-y-[99%] place-items-center text-pretty pb-1 pl-[10px] pr-3 pt-0 -indent-[11px] font-size-2 font-medium uppercase tracking-wide">
+                        class="mt-1 flex scale-y-[99%] place-items-center text-pretty pb-1 pl-[10px] pr-3 pt-0 -indent-[11px] text-sm font-medium uppercase tracking-wide">
                         @ {{ champion.title }}
                     </p>
 
@@ -102,7 +102,7 @@ function handleLike(thisChamp) {
                         <code
                             v-for="(tag, index) in champion.tags"
                             :key="index"
-                            class="badge flex h-max w-auto flex-nowrap text-center font-mono font-size-2 font-medium lowercase tracking-normal"
+                            class="badge flex h-max w-auto flex-nowrap text-center font-mono text-sm font-medium lowercase tracking-normal"
                             :data-tag="tag">
                             #{{ tag }}
                         </code>
@@ -127,18 +127,18 @@ function handleLike(thisChamp) {
 .tab {
     --tab-border-color: oklch(var(--b3) / 0.8);
 
-    @apply text-start font-size-2;
+    @apply text-start text-sm;
 }
 
 .collapse-title {
-    @apply flex items-center gap-3 font-size-2;
+    @apply flex items-center gap-3 text-sm;
 
     img {
         @apply -ml-1 size-9 rounded-full border border-neutral/40;
     }
 
     div {
-        @apply grow truncate text-nowrap;
+        @apply flex-grow truncate text-nowrap;
     }
 
     kbd {

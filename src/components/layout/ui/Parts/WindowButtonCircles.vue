@@ -19,13 +19,13 @@ const { isOutside } = useMouseInElement(target)
 const variant = 'ghost'
 const size = 'icon'
 const classObject = [
-    'stroke-[1.5] [&_svg]:object-center shadow-xs [&_svg]:size-5 [&_svg]:shrink-0 [&_svg]:shadow-inner hover:shadow-b3 size-4.5 rounded-full [&_svg]:absolute group/button',
+    'stroke-[1.5] [&_svg]:object-center shadow-sm [&_svg]:size-5 [&_svg]:shrink-0 [&_svg]:shadow-inner hover:shadow-base-300 size-4.5 rounded-full [&_svg]:absolute group/button',
 ]
 </script>
 <template>
     <div
         ref="target"
-        class="group flex h-full items-center gap-3 justify-self-end px-3 font-size-4-content/70">
+        class="group flex h-full items-center gap-3 justify-self-end px-3 text-base-content/70">
         <Button
             :variant="variant"
             :size="size"

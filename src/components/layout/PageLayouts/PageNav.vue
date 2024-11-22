@@ -97,7 +97,7 @@ function scrollToSection(el) {
             <span v-if="!el.trigger">
                 <label @click="scrollToSection(el.ref)"
                     class='hover:cursor-pointer hover:opacity-100 opacity-50 transition-all group flex gap-1 duration-300 font-medium mb-px'
-                    :class="{ ' opacity-100! font-size-4-content': el.name == props.storeValue }">
+                    :class="{ ' !opacity-100 text-base-content': el.name == props.storeValue }">
                     <input type="radio" :value="el.ref" v-model="currentVisible" class='peer hidden' />
                     <span class=' capitalize  px-1.5 min-w-max w-max'>
                         {{ el.name
@@ -110,7 +110,7 @@ function scrollToSection(el) {
 
                 <label @click="scrollToSection(el.ref)"
                     class='hover:cursor-pointer hover:opacity-100 opacity-50 font-medium transition-all group flex gap-1 duration-300 items-center mb-px'
-                    :class="{ ' opacity-100! font-size-4-content': el.name == props.storeValue }">
+                    :class="{ ' !opacity-100 text-base-content': el.name == props.storeValue }">
                     <input type="radio" :value="el.ref" v-model="currentVisible" class='peer hidden' />
 
 
