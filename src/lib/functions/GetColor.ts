@@ -54,16 +54,16 @@ export function runeColors(runeSet) {
 export function getShardClass(shard: Shard) {
     const gray = ['[&_svg]:text-base-300 border-base-300']
     const green = [
-        'has-[:checked]:bg-resolve [&_svg]:text-resolve border-resolve',
+        'has-[:checked]:shadow-[0_3px_20px_#a3be8c,inset_-1px_-1px_0px_1px_#00000008] [&_svg]:text-resolve border-resolve',
     ]
     const blue = [
-        'has-[:checked]:bg-inspiration [&_svg]:text-inspiration border-inspiration',
+        'has-[:checked]:shadow-[0_3px_20px_#A4C1C4,inset_-1px_-1px_0px_1px_#00000008] [&_svg]:text-inspiration border-inspiration',
     ]
     const yellow = [
-        'has-[:checked]:bg-precision [&_svg]:text-precision border-precision',
+        'has-[:checked]:shadow-[0_3px_20px_#ebcb8b,inset_-1px_-1px_0px_1px_#00000008] [&_svg]:text-precision border-precision',
     ]
     const purple = [
-        'has-[:checked]:bg-sorcery [&_svg]:text-sorcery border-sorcery',
+        'has-[:checked]:shadow-[0_3px_20px_#b48dad,inset_-1px_-1px_0px_1px_#00000008] [&_svg]:text-sorcery border-sorcery',
     ]
 
     const c =

@@ -47,9 +47,9 @@ const routes: RouteRecordRaw[] = [
         component: () => import('./src/Pages/items.vue'),
     },
     {
-        path: '/likes',
-        name: 'likes',
-        component: () => import('./src/Pages/likes.vue'),
+        path: '/loved',
+        name: 'loved',
+        component: () => import('./src/Pages/Loved.vue'),
     },
     {
         path: '/pocket/:pocketKey',
@@ -71,10 +71,19 @@ const routes: RouteRecordRaw[] = [
     },
     {
         path: '/runes',
-        name: 'rettings',
+        name: 'runes',
         component: Runes,
         meta: {
             title: 'Runes',
+            icon: 'teenyicons:cog-outline',
+        },
+    },
+    {
+        path: '/spells',
+        name: 'spells',
+        component: () => import('./src/Pages/Spells.vue'),
+        meta: {
+            title: 'Spells',
             icon: 'teenyicons:cog-outline',
         },
     },

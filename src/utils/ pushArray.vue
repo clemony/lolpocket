@@ -1,14 +1,10 @@
 <script setup lang="ts">
-import { usePocketStore } from '@/stores/pocketStore'
-import { createDefaultSpell } from '@lib/functions/AddPocket';
+import { usePocketStore } from '../stores/pocketStore'
 
 const ps = usePocketStore();
 
       const  spells = [
-           { spell1: createDefaultSpell()},
-        {spell2: createDefaultSpell()},
-        {alt1: createDefaultSpell()},
-      {  alt2: createDefaultSpell()}
+
 ]
 function updatePocketShards(pockets, spells) {
     pockets.forEach((pocket) => {

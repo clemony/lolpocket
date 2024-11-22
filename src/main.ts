@@ -8,6 +8,7 @@ import { kinesisPlugin } from '@letstri/kinesis'
 import router from '../router'
 import { FloatingVue, floatingVueOptions } from './Config/floating-vue'
 import Shortkey from 'vue3-shortkey'
+import { WebviewWindow } from '@tauri-apps/api/webviewWindow'
 
 // Create a new Vue application instance
 const app = createApp(App)
@@ -18,7 +19,7 @@ pinia.use(piniaPluginPersistedstate)
 app.use(pinia)
 app.use(PiniaColada)
 console.log('Pinia initialized.')
-
+const devWindow = WebviewWindow.getByLabel('devtools')
 // Register global components
 app.component('Icon', Icon)
 app.use(kinesisPlugin)

@@ -8,6 +8,8 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import Inspector from 'unplugin-vue-inspector/vite'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { defineConfig, type PluginOption } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+
 import { resolve } from 'path'
 
 export default defineConfig({
@@ -15,6 +17,7 @@ export default defineConfig({
         vue(),
         vueDevTools(),
         Inspector(),
+        tailwindcss(),
         Components({
             dirs: [
                 'src/pages',
@@ -112,7 +115,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: 'index.html', // Adjust to your entry file
-                // Add additional entry points if needed
+                devtools: '/__devtools__/',
             },
         },
         target:

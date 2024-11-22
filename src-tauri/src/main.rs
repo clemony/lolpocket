@@ -11,6 +11,7 @@ use window_vibrancy::*;
 
 fn main() {
     tauri::Builder::default()
+        .plugin(tauri_plugin_window_state::Builder::new().build())
         .plugin(tauri_plugin_fs::init())
         .setup(|app| {
             // Attempt to get the webview window
@@ -22,7 +23,7 @@ fn main() {
                 window.set_title_bar_style(TitleBarStyle::Overlay).unwrap();
 
                 // Apply vibrancy if window is valid
-                apply_vibrancy(&window, NSVisualEffectMaterial::HudWindow, None, Some(12.0))
+                apply_vibrancy(&window, NSVisualEffectMaterial::HudWindow, None, Some(15.0))
                     .expect("Unsupported platform! 'apply_vibrancy' is only supported on macOS");
             }
 
@@ -37,6 +38,10 @@ fn main() {
         })
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
+
+
+
+
 }
 /*
 fn main() {

@@ -2,7 +2,6 @@ import { usePocketStore } from '@/stores/pocketStore'
 
 export const navData = {
     navCollapse: [
-
         {
             title: 'Database',
             url: '',
@@ -26,12 +25,18 @@ export const navData = {
                     url: '/runes',
                     icon: '',
                 },
+
+                {
+                    title: 'Spells',
+                    url: '/spells',
+                    icon: '',
+                },
             ],
         },
         {
             title: 'Settings',
             url: '#',
-            icon: 'qlementine-icons:settings-16',
+            icon: 'ph:gear-six',
             items: [
                 {
                     title: 'General',
@@ -48,11 +53,7 @@ export const navData = {
                     url: '/about',
                     icon: 'teenyicons:info-outline',
                 },
-
             ],
         },
     ],
-
 }
-
-

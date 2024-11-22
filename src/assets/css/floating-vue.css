@@ -11,7 +11,7 @@
         @apply hidden;
     }
 }
-.v-popper--theme-hoverdd {
+.v-popper--theme-hover.dd {
     .v-popper__inner {
         @apply !mb-0 mt-1.5 items-center justify-center !rounded-md !p-1 !pb-0;
         & svg {
@@ -19,7 +19,7 @@
         }
     }
 }
-.v-popper--theme-hoverdd-inner {
+.v-popper--theme-hover.dd-inner {
     .v-popper__inner {
         @apply ml-0.5 mt-6 items-center justify-center !rounded-md p-1;
         & svg {
@@ -27,6 +27,16 @@
         }
     }
 }
+
+.v-popper--theme-hover {
+    .v-popper__inner .shard {
+        @apply !mb-0 !mt-0 items-center justify-center !rounded-md !px-2 !py-1;
+        & svg {
+            @apply size-4.5;
+        }
+    }
+}
+
 .v-popper--theme-hidden {
     .v-popper__inner {
         @apply pointer-events-none invisible hidden opacity-0;

@@ -29,14 +29,14 @@ const floatingVueOptions = {
             handleResize: true,
             overflowPadding: 0,
         },
-        hoverdd: {
+        hover: {
             $resetCss: false,
             $extend: 'default',
             skidding: 30,
             triggers: ['hover', 'focus'],
             popperTriggers: ['hover', 'focus'],
         },
-        'hoverdd-inner': {
+        'hover-inner': {
             $resetCss: false,
             $extend: 'default',
             placement: 'right-start',
