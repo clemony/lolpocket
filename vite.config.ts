@@ -113,7 +113,6 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: 'index.html', // Adjust to your entry file
-                devtools: '/__devtools__/',
             },
         },
         target:
