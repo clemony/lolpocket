@@ -4,7 +4,7 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
-//import vueDevTools from 'vite-plugin-vue-devtools'
+import vueDevTools from 'vite-plugin-vue-devtools'
 import Inspector from 'unplugin-vue-inspector/vite'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { defineConfig, type PluginOption } from 'vite'
@@ -14,7 +14,7 @@ import { resolve } from 'path'
 export default defineConfig({
     plugins: [
         vue(),
-        //vueDevTools(),
+        vueDevTools(),
         Inspector(),
         Components({
             dirs: [
