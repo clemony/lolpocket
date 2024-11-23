@@ -46,7 +46,7 @@ const floatingVueOptions = {
         hidden: {
             $resetCss: false,
             autoHide: false,
-            $extend: 'hover',
+            $extend: 'hoverdd',
             triggers: ['hover', 'focus'],
             popperTriggers: ['hover', 'focus'],
         },
