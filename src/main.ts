@@ -6,7 +6,7 @@ import { createApp } from 'vue'
 import { Icon } from '@iconify/vue'
 import { kinesisPlugin } from '@letstri/kinesis'
 import router from '../router'
-import { FloatingVue, floatingVueOptions } from './Config/floating-vue'
+import { FloatingVue, floatingVueOptions } from '@/Config/floating-vue'
 import Shortkey from 'vue3-shortkey'
 
 // Create a new Vue application instance
