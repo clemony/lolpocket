@@ -69,7 +69,7 @@ function imageLoaded() {
 
                     <div
                         v-show="isImageLoaded"
-                        class="relative grid aspect-square !size-14 shrink-0 cursor-pointer place-items-center items-center rounded-full bg-gradient-to-br from-transparent to-75% shadow-sm"
+                        class="relative flex aspect-square !size-14 shrink-0 cursor-pointer items-center rounded-full bg-gradient-to-br from-transparent to-75% shadow-sm"
                         :class="{
                             'border-resolve via-resolve':
                                 keystone.path == 'resolve',
@@ -90,7 +90,7 @@ function imageLoaded() {
                             'to-bg-base-200': !runeSet.secondary,
                         }">
                         <div
-                            class="grid size-full place-items-center rounded-full bg-gradient-to-br from-base-100/90 to-base-100/40 p-1 backdrop-blur-md">
+                            class="flex size-full items-start justify-center gap-2 rounded-full bg-gradient-to-br from-base-100/90 to-base-100/40 p-1 backdrop-blur-md">
                             <KinesisContainer
                                 :disabled="gs.reducedMotion == true"
                                 :perspective="100"
@@ -102,23 +102,23 @@ function imageLoaded() {
                                     class="group flex size-full items-center">
                                     <img
                                         :src="keystone.img"
-                                        class="shrink-0 object-contain drop-shadow-softer transition-all duration-200 hover:drop-shadow-sm"
+                                        class="h-auto w-10 drop-shadow-softer transition-all duration-200 hover:drop-shadow-sm"
                                         @load="imageLoaded()" />
                                 </KinesisElement>
                             </KinesisContainer>
                         </div>
                     </div>
                 </template>
-                <Placeholder v-else class="size-14" />
+                <Placeholder v-else :size="41" />
 
                 <template v-if="runeSet.secondary != 'none' && runeSet">
                     <Skeleton
                         v-show="!isImageLoaded"
-                        class="size-14 rounded-full" />
+                        class="size-10 rounded-full" />
 
                     <div
                         v-show="isImageLoaded"
-                        class="relative flex aspect-square !size-14 shrink-0 cursor-pointer items-center rounded-full bg-gradient-to-br from-transparent to-75% shadow-sm"
+                        class="relative flex aspect-square !size-10 shrink-0 cursor-pointer items-center rounded-full bg-gradient-to-br from-transparent to-75% shadow-sm"
                         :class="{
                             'to-resolve': runeSet.secondary == 'resolve',
                             'to-sorcery': runeSet.secondary == 'sorcery',
@@ -138,7 +138,7 @@ function imageLoaded() {
                                 :strength="5"
                                 class="group flex size-full items-center">
                                 <div
-                                    class="!aspect-square !size-14 cursor-pointer overflow-clip rounded-full bg-base-100/70 p-2.5 backdrop-blur-md group-hover:scale-90">
+                                    class="!aspect-square !size-10 cursor-pointer overflow-clip rounded-full bg-base-100/70 p-2.5 backdrop-blur-md group-hover:scale-90">
                                     <img
                                         :src="`/img/runes/${runeSet.secondary}.webp`"
                                         class="size-full !object-contain drop-shadow-softest transition-all duration-200 hover:opacity-80"

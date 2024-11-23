@@ -66,6 +66,8 @@ const getStyles = computed(() => {
         return
     }
     if (props.params.type == 'updated') {
+
+
         // Slice off the third part (hotfix patch) and only keep the first two parts
         const [lastMajor, lastMinor] = lastUpdated
             .split('.')
@@ -98,6 +100,7 @@ const getStyles = computed(() => {
 })
 
 const dateObjects = [
+
     {
         name: 'Date',
         // icon: "radix-icons:calendar",
@@ -117,70 +120,63 @@ const dateObjects = [
         data: time,
     },
 ]
+
+
 </script>
 
 <template>
-    <div
-        class="max-h-inherit group grid size-full overflow-hidden rounded px-2">
-        <ContextMenu>
-            <ContextMenuTrigger
-                class="grid size-full place-content-between justify-center gap-1">
-                <div v-for="(object, index) in dateObjects" class="group">
-                    <div class="flex items-center justify-center gap-2 text-sm">
-                        <template v-if="object.name != 'Patch'">
-                            <span
-                                class="text-right text-sm !tracking-wide opacity-0 transition-all duration-500 group-hover:opacity-80">
-                                {{ object.data }}
-                            </span>
-                        </template>
+<div class="group rounded overflow-hidden max-h-inherit size-full grid   px-2">
+    <ContextMenu>
+        <ContextMenuTrigger class='size-full grid gap-1 place-content-between justify-center'>
+            <div v-for="(object, index) in dateObjects" class="group ">
+                <div class="gap-2 text-sm flex items-center justify-center ">
 
-                        <template v-else>
-                            <input
-                                type="checkbox"
-                                v-if="
-                                    object.name == 'Patch' &&
-                                    props.params.type == 'updated'
-                                "
-                                class="checkbox checkbox-xs pointer-events-none"
-                                :class="getStyles"
-                                :checked="lastUpdated == currentPatch" />
-                            <span
-                                class="justify-self-center !text-sm !tracking-wider opacity-100">
-                                {{ object.data }}
-                            </span>
-                        </template>
-                    </div>
+                    <template v-if="object.name != 'Patch'">
+                        <span
+                            class=" !tracking-wide transition-all duration-500 text-sm text-right opacity-0 group-hover:opacity-80">{{
+                                object.data
+                            }}</span>
+                    </template>
+
+                    <template v-else>
+                        <input type="checkbox" v-if="object.name == 'Patch' && props.params.type == 'updated'"
+                            class="checkbox checkbox-xs pointer-events-none" :class="getStyles"
+                            :checked="lastUpdated == currentPatch" />
+                        <span class='!text-sm justify-self-center !tracking-wider opacity-100'>{{
+                            object.data
+                        }}</span>
+                    </template>
                 </div>
-            </ContextMenuTrigger>
 
-            <PocketContext v-if="pocket" :pocket="pocket">
-                <template #first>
-                    <ContextMenuItem disabled class="-mb-1 h-4.5 self-end">
-                        Set all to...
-                    </ContextMenuItem>
-                    <ContextMenuSeparator />
-                    <context-menu-item>
-                        <icon
-                            icon="simple-icons:riotgames"
-                            class="opacity-70" />
-                        <span class="flex items-center gap-1">Patch</span>
-                    </context-menu-item>
+            </div>
+        </ContextMenuTrigger>
 
-                    <context-menu-item>
-                        <icon icon="radix-icons:calendar" />
-                        <span class="flex items-center gap-1">Date</span>
-                    </context-menu-item>
+        <CmPocket v-if="pocket" :pocketKey="pocket.key">
+            <template #first>
+                <ContextMenuItem disabled class="-mb-1 h-4.5 self-end">
+                    Set all to...
+                </ContextMenuItem>
+                <ContextMenuSeparator />
+                <context-menu-item>
+                    <icon icon="simple-icons:riotgames" class="opacity-70" />
+                    <span class="flex items-center gap-1"> Patch </span>
+                </context-menu-item>
 
-                    <context-menu-item>
-                        <icon icon="fluent-mdl2:alarm-clock" />
-                        <span class="flex items-center gap-1">Time</span>
-                    </context-menu-item>
+                <context-menu-item>
+                    <icon icon="radix-icons:calendar" />
+                    <span class="flex items-center gap-1"> Date </span>
+                </context-menu-item>
 
-                    <ContextMenuSeparator />
-                </template>
-            </PocketContext>
-        </ContextMenu>
-    </div>
+                <context-menu-item>
+                    <icon icon="fluent-mdl2:alarm-clock" />
+                    <span class="flex items-center gap-1"> Time </span>
+                </context-menu-item>
+
+                <ContextMenuSeparator />
+            </template>
+        </CmPocket>
+    </ContextMenu>
+</div>
 </template>
 
 <style scoped></style>

@@ -153,7 +153,7 @@ const dateObjects = [
                 </div>
             </ContextMenuTrigger>
 
-            <PocketContext v-if="pocket" :pocket="pocket">
+            <PocketContext v-if="pocket" :pocketKey="pocket.key">
                 <template #first>
                     <ContextMenuItem disabled class="-mb-1 h-4.5 self-end">
                         Set all to...

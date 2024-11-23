@@ -24,7 +24,7 @@ const pocket = ref(ps.getPocket(props.params.data.key))
         <template #1>
             <PocketIcon
                 :pocket="pocket"
-                class="size-14 rounded-lg [&_svg]:p-3"
+                class="size-11 rounded-lg [&_svg]:p-3"
                 iconClass="rounded-lg" />
         </template>
         <template #2>

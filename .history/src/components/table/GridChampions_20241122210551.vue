@@ -57,14 +57,14 @@ const starred = computed(() => {
                 v-for="(champion, index) in pocket.champions[0].champions">
                 <div
                     v-if="index < 3"
-                    class="size-14 shrink-0 overflow-hidden rounded-lg border border-base-300 shadow-sm">
+                    class="size-14 overflow-hidden rounded-lg border border-base-300 shadow-sm">
                     <loadImg
                         :url="`/img/champions/${clean(champion.name)}.webp`"
                         class="size-14 scale-[108%] object-cover" />
                 </div>
             </template>
 
-            <PocketContext type="champions" :pocket="pocket">
+            <PocketContext type="champions" :pocketKey="pocket.key">
                 <ContextMenuSub>
                     <ContextMenuSubTrigger
                         :disabled="pocket.champions[0].champions.length <= 1"

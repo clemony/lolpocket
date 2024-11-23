@@ -109,16 +109,16 @@ function imageLoaded() {
                         </div>
                     </div>
                 </template>
-                <Placeholder v-else class="size-14" />
+                <Placeholder v-else :size="41" />
 
                 <template v-if="runeSet.secondary != 'none' && runeSet">
                     <Skeleton
                         v-show="!isImageLoaded"
-                        class="size-14 rounded-full" />
+                        class="size-10 rounded-full" />
 
                     <div
                         v-show="isImageLoaded"
-                        class="relative flex aspect-square !size-14 shrink-0 cursor-pointer items-center rounded-full bg-gradient-to-br from-transparent to-75% shadow-sm"
+                        class="relative flex aspect-square !size-10 shrink-0 cursor-pointer items-center rounded-full bg-gradient-to-br from-transparent to-75% shadow-sm"
                         :class="{
                             'to-resolve': runeSet.secondary == 'resolve',
                             'to-sorcery': runeSet.secondary == 'sorcery',
@@ -138,7 +138,7 @@ function imageLoaded() {
                                 :strength="5"
                                 class="group flex size-full items-center">
                                 <div
-                                    class="!aspect-square !size-14 cursor-pointer overflow-clip rounded-full bg-base-100/70 p-2.5 backdrop-blur-md group-hover:scale-90">
+                                    class="!aspect-square !size-10 cursor-pointer overflow-clip rounded-full bg-base-100/70 p-2.5 backdrop-blur-md group-hover:scale-90">
                                     <img
                                         :src="`/img/runes/${runeSet.secondary}.webp`"
                                         class="size-full !object-contain drop-shadow-softest transition-all duration-200 hover:opacity-80"

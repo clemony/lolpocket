@@ -77,7 +77,7 @@ function updateNotes() {
                     class="absolute bottom-1.5 right-1.5 size-3.5 opacity-0"
                     @click.stop="notesInput = '　'" />
 
-                <PocketContext :pocket="pocket">
+                <PocketContext :pocketKey="pocket.key">
                     <CmOptionNotes v-model:model="notesInput" />
                 </PocketContext>
             </context-menu-trigger>

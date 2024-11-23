@@ -59,7 +59,7 @@ const starredItems = computed(() => {
                 <Placeholder v-else class="m-px size-14 rounded-lg" />
             </button>
 
-            <PocketContext type="items" :pocket="pocket">
+            <PocketContext type="items" :pocketKey="pocket.key">
                 <CmOptionItems :pocket="pocket" />
             </PocketContext>
         </ContextMenuTrigger>

@@ -191,6 +191,7 @@ declare module 'vue' {
     Pocket: typeof import('./src/pages/pocket.vue')['default']
     PocketCard: typeof import('./src/components/Pocket/PocketCard.vue')['default']
     PocketChampions: typeof import('./src/components/Pocket/PocketChampions.vue')['default']
+    PocketContext: typeof import('./src/components/Pops/context/PocketContext.vue')['default']
     PocketDashboard: typeof import('./src/components/Pocket/PocketDashboard.vue')['default']
     PocketGrid: typeof import('./src/components/Table/PocketGrid.vue')['default']
     PocketIcon: typeof import('./src/components/Pocket/ui/PocketIcon.vue')['default']
