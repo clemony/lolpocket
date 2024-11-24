@@ -9,7 +9,7 @@ import {
     spell,
 } from 'types'
 import { generateRandomString, generateRandomName } from './Keygen'
-import { newItemSet } from './PocketUtilities'
+import { newItemSet } from '../../utils/PocketUtilities'
 import { usePocketStore } from '@/stores/pocketStore'
 const toID = hexoid()
 

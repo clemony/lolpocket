@@ -39,7 +39,7 @@ const floatingVueOptions = {
         'hover-inner': {
             $resetCss: false,
             $extend: 'default',
-            placement: 'right-start',
+            placement: 'right-end',
             triggers: ['hover', 'focus'],
             popperTriggers: ['hover', 'focus'],
         },

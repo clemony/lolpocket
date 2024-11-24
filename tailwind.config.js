@@ -5,6 +5,7 @@ const path = require('path')
 const daisyui = require('daisyui')
 const plugin = require('tailwindcss/plugin')
 const containerQueries = require('@tailwindcss/container-queries')
+const radix = require('tailwindcss-radix')
 import { mask } from '@windwards/plugin-mask'
 //const themer = require('tailwindcss-themer')
 
@@ -14,6 +15,7 @@ module.exports = {
         animate,
         scrollbarhide,
         daisyui,
+        radix,
         containerQueries,
         //themer(themeConfig),
         mask(),
@@ -53,6 +55,11 @@ module.exports = {
             '2xl': ['1.5rem', { lineHeight: '2rem' }],
             '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
             '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
+            '5xl': ['2.9rem', { lineHeight: '1' }],
+            '6xl': ['3.75rem', { lineHeight: '1' }],
+            '7xl': ['4.5rem', { lineHeight: '1' }],
+            '8xl': ['6rem', { lineHeight: '1' }],
+            '9xl': ['8rem', { lineHeight: '1' }],
         },
 
         extend: {

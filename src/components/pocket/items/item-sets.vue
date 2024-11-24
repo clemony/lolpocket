@@ -2,7 +2,7 @@
 import { VueDraggable } from 'vue-draggable-plus'
 import { useItemStore } from '@/stores/itemStore'
 import { usePocketStore } from '@/stores/pocketStore'
-import { deleteItemSet, newItemSet } from '@lib/functions/PocketUtilities'
+import { deleteItemSet, newItemSet } from '@utils/PocketUtilities'
 import ItemSetItems from './ItemSetItems.vue'
 import { generateRandomName } from '@lib/functions/Keygen'
 

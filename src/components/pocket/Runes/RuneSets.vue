@@ -3,7 +3,7 @@ import { VueDraggable } from 'vue-draggable-plus'
 import { useRuneStore } from '@/stores/runeStore'
 import { usePocketStore } from '@/stores/pocketStore'
 import { useRoute } from 'vue-router'
-import { newRuneSet } from '@lib/functions/PocketUtilities'
+import { newRuneSet } from '@utils/PocketUtilities'
 import type { RuneSet } from 'types'
 const rs = useRuneStore()
 

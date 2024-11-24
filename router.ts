@@ -1,20 +1,19 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Pocket from './src/Pages/pocket.vue'
-import Pockets from './src/Pages/pockets.vue'
-import Settings from './src/Pages/settings.vue'
-import Trash from './src/Pages/trash.vue'
-import Archive from './src/Pages/archive.vue'
+import Pockets from './src/pages/pockets.vue'
+import Settings from './src/pages/settings.vue'
+import Trash from './src/pages/trash.vue'
+import Archive from './src/pages/archive.vue'
 import { usePocketStore } from '@/stores/pocketStore'
 import { useGeneralStore } from '@stores/generalStore'
 
-import Home from './src/Pages/home.vue'
-import Runes from './src/Pages/runes.vue'
+import Home from './src/pages/home.vue'
+import Runes from './src/pages/runes.vue'
 
 const routes: RouteRecordRaw[] = [
     {
         path: '/about',
         name: 'about',
-        component: () => import('./src/Pages/about.vue'),
+        component: () => import('./src/pages/about.vue'),
     },
     {
         path: '/archive',
@@ -29,7 +28,7 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/champions',
         name: 'champions',
-        component: () => import('./src/Pages/champions.vue'),
+        component: () => import('./src/pages/champions.vue'),
     },
     {
         path: '/home',
@@ -44,21 +43,53 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/items',
         name: 'items',
-        component: () => import('./src/Pages/items.vue'),
+        component: () => import('./src/pages/items.vue'),
     },
     {
         path: '/loved',
         name: 'loved',
-        component: () => import('./src/Pages/Loved.vue'),
+        component: () => import('./src/pages/Loved.vue'),
     },
+
     {
         path: '/pocket/:pocketKey',
-        component: Pocket,
+        component: () => import('./src/components/pocket/Pocket.vue'),
         meta: {
             title: 'Pocket',
             icon: 'teenyicons:folder-outline',
         },
         props: true,
+        children: [
+            {
+                name: 'Dashboard',
+                path: '',
+                component: () =>
+                    import(
+                        './src/components/pocket/dashboard/PocketDashboard.vue'
+                    ),
+            },
+            {
+                name: 'Champions',
+                path: 'champions',
+                component: () =>
+                    import(
+                        './src/components/pocket/champions/PocketChampions.vue'
+                    ),
+            },
+            {
+                name: 'Items',
+                path: 'items',
+                props: true,
+                component: () =>
+                    import('./src/components/pocket/items/PocketItems.vue'),
+            },
+            {
+                name: 'Runes',
+                path: 'runes',
+                component: () =>
+                    import('./src/components/pocket/runes/PocketRunes.vue'),
+            },
+        ],
     },
     {
         path: '/pockets',
@@ -81,7 +112,7 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/spells',
         name: 'spells',
-        component: () => import('./src/Pages/Spells.vue'),
+        component: () => import('./src/pages/Spells.vue'),
         meta: {
             title: 'Spells',
             icon: 'teenyicons:cog-outline',

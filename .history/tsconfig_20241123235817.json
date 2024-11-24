@@ -1,0 +1,81 @@
+{
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.vue",
+        "src/**/*.d.ts",
+        "auto-imports.d.ts",
+        "types.d.ts",
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "moduleResolution": "Bundler",
+        "module": "ES2022",
+        "lib": [
+            "es2020",
+            "dom"
+        ],
+        "paths": {
+            "@assets/*": [
+                "src/Assets/*"
+            ],
+            "@data/*": [
+                "src/data/*"
+            ],
+            "@lib/*": [
+                "src/lib/*"
+            ],
+            "@logs/*": [
+                "src/logs/*"
+            ],
+            "@pages/*": [
+                "src/pages/*"
+            ],
+            "@script/*": [
+                "src/script/*"
+            ],
+            "@stores/*": [
+                "src/stores/*"
+            ],
+            "@utils/*": [
+                "src/utils/*"
+            ],
+            "@components/*": [
+                "src/components/*"
+            ],
+            "@/*": [
+                "src/*"
+            ],
+            "~assets/*": [
+                "src/Assets/*"
+            ],
+            "~data/*": [
+                "src/data/*"
+            ],
+            "~lib/*": [
+                "src/lib/*"
+            ],
+            "~logs/*": [
+                "src/logs/*"
+            ],
+            "~pages/*": [
+                "src/pages/*"
+            ],
+            "~script/*": [
+                "src/script/*"
+            ],
+            "~stores/*": [
+                "src/stores/*"
+            ],
+            "~utils/*": [
+                "src/utils/*"
+            ],
+            "~/*": [
+                "src/*"
+            ]
+        }
+    }
+}
