@@ -35,7 +35,7 @@ onMounted(async () => { })
 
     <Splitpanes id="likeSplit" class="default-theme h-[calc(100%-100px)] max-h-[calc(100%-100px)] w-full px-6 pb-2">
         <Pane size="50" max-size="70" min-size="30"
-            class="shadow-warm relative h-full rounded-box border border-base-300 !bg-base-100/90 px-4">
+            class="shadow-warm relative h-full rounded-xl border border-base-300 !bg-base-100/90 px-4">
             <div
                 class="absolute left-0 top-0 z-10 flex !h-fit w-full flex-wrap items-center justify-end gap-4 border-b border-b-base-300 bg-base-100/90 px-4 py-1 backdrop-blur-md">
                 <h2 class="sub-text grow justify-start">Champions</h2>
@@ -59,14 +59,14 @@ onMounted(async () => { })
          /*                                 PANE TWOOOOOOOO                            */
          /* -------------------------------------------------------------------------- */ -->
 
-        <Pane size="50" max-size="70" min-size="30" class="relative h-[inherit] rounded-box border border-base-300">
+        <Pane size="50" max-size="70" min-size="30" class="relative h-[inherit] rounded-xl border border-base-300">
             <div
                 class="shadow-warm absolute left-0 top-0 z-10 flex !h-fit w-full flex-wrap items-center justify-end gap-4 border-b border-b-base-300 bg-base-100/80 px-4 py-1 backdrop-blur-md">
                 <h2 class="sub-text grow justify-start">Primary</h2>
             </div>
 
             <div
-                class="drag-draggable shadow-inset !h-full w-full content-start items-start justify-around rounded-b-box px-3 pb-4 pt-12 scrollbar-hide">
+                class="drag-draggable shadow-inset !h-full w-full content-start items-start justify-around rounded-b-xl px-3 pb-4 pt-12 scrollbar-hide">
                 <VDropdown v-for="item in is.lovedItems" :key="item.id" :overflow-padding="20" :shift="true"
                     theme="default" :distance="6" @click.right.prevent="" :ref="item.name"
                     class="relative max-h-[64px] max-w-[64px]">

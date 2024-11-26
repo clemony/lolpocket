@@ -39,7 +39,7 @@ onMounted(() => {
             <PopoverClose
                 class="absolute -left-96 -top-96 h-screen w-screen scale-150 bg-black/20">
                 <PopoverContent
-                    class="relative h-fit max-h-fit !rounded-box border-none bg-transparent p-0 px-7 py-5 shadow-sm"
+                    class="relative h-fit max-h-fit !rounded-xl border-none bg-transparent p-0 px-7 py-5 shadow-sm"
                     align="start"
                     :align-offset="-34"
                     side="bottom"
@@ -61,7 +61,7 @@ onMounted(() => {
                                 <ItemsetModel
                                     :pocket="props.pocket"
                                     :model="props.model"
-                                    class="-ml-2.5 w-fit rounded-box border border-base-200 p-2 shadow-sm">
+                                    class="-ml-2.5 w-fit rounded-xl border border-base-200 p-2 shadow-sm">
                                     <input
                                         type="checkbox"
                                         :checked="true"
@@ -72,7 +72,7 @@ onMounted(() => {
                                     <label
                                         v-for="set in filter"
                                         v-close-popper
-                                        class="sets -ml-2.5 flex w-fit cursor-pointer items-center gap-4 overflow-hidden rounded-box border border-transparent p-2 hover:border-base-300 hover:shadow-sm"
+                                        class="sets -ml-2.5 flex w-fit cursor-pointer items-center gap-4 overflow-hidden rounded-xl border border-transparent p-2 hover:border-base-300 hover:shadow-sm"
                                         :key="set.key">
                                         <template v-if="set.items.length">
                                             <template

@@ -39,7 +39,7 @@ onClickOutside(target, (event) => (isOpen.value = false))
                         'pb-4 pt-6': isAnchorVisible,
                         'absolute z-20 border-b border-b-base-200 py-2':
                             !isAnchorVisible,
-                        'rounded-b-box border-b border-b-base-200 shadow-smooth':
+                        'rounded-b-xl border-b border-b-base-200 shadow-smooth':
                             isOpen,
                     },
                     props.headerClass

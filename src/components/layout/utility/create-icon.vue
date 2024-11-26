@@ -84,7 +84,7 @@ function handleChange(icon) {
         <div
             role="tabpanel"
             :class="{ hidden: iconTabs == 'color' }"
-            class="tab-content relative grid w-full rounded-box rounded-tl-none border-base-300 bg-base-100">
+            class="tab-content relative grid w-full rounded-xl rounded-tl-none border-base-300 bg-base-100">
             <div
                 class="grid max-h-52 grid-cols-5 justify-items-center gap-1 self-center justify-self-center overflow-y-scroll px-2 py-3 scrollbar-hide">
                 <label
@@ -128,7 +128,7 @@ function handleChange(icon) {
         <div
             role="tabpanel"
             :class="{ hidden: iconTabs == 'icon' }"
-            class="tab-content grid w-inherit rounded-box border-base-300 bg-base-100">
+            class="tab-content grid w-inherit rounded-xl border-base-300 bg-base-100">
             <div
                 class="relative grid justify-items-center self-center justify-self-center overflow-y-scroll p-1 scrollbar-hide">
                 <ColorPicker

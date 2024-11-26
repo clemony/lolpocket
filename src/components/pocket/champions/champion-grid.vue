@@ -106,7 +106,7 @@ const options = [
 
 <template>
 <div
-    class="scroll-none shadow-cham mx-0 flex h-full w-full flex-wrap gap-4 overflow-scroll rounded-box border border-base-300 bg-base-100/90 p-4 backdrop-blur-md">
+    class="scroll-none shadow-cham mx-0 flex h-full w-full flex-wrap gap-4 overflow-scroll rounded-xl border border-base-300 bg-base-100/90 p-4 backdrop-blur-md">
     <label :for="champion.name" v-for="(champion, index) in champions" :key="champion.name" :data-index="index"
         class="item-wrapper__item flex aspect-square w-[65px] min-w-[60px] max-w-[70px] grow place-items-center overflow-hidden rounded-full bg-cover ring-1 ring-base-300 ring-offset-1 ring-offset-base-100 drop-shadow-sm hover:ring-offset-primary has-[:checked]:ring-offset-2 has-[:checked]:ring-offset-secondary"
         @click="handleChampions(champion.img, $event)" @contextmenu.prevent.stop="handleContextMenu($event, champion)">

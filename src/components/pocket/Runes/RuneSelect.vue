@@ -74,7 +74,7 @@ onMounted(() => {})
 <template>
     <div class="z-0 w-full bg-clip-border transition-all duration-500">
         <div
-            class="relative z-10 flex h-16 items-end after:absolute after:left-0 after:top-0 after:h-16 after:w-full after:rounded-t-box [&_img]:h-[1.5rem]">
+            class="relative z-10 flex h-16 items-end after:absolute after:left-0 after:top-0 after:h-16 after:w-full after:rounded-t-xl [&_img]:h-[1.5rem]">
             <label
                 v-for="(path, index) in ds.uniquePaths"
                 :key="index"

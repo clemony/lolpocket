@@ -1,19 +1,28 @@
 export type CallbackFunctionVariadicAnyReturn = (...args: any[]) => any
 type CallbackFunctionVariadic = (...args: any[]) => void
 
-export interface navObject {
-    title: string
+export type navData = navGroup[]
+
+export interface navGroup {
+    name: string
     url?: string
     icon?: string
     array?: Array<any>
     isActive?: boolean
-    items?: navObject[]
+    items?: navItem[]
 }
 
-export interface navData {
-    navCollapse: Array<navObject>
-    navLinks: Array<navObject>
-    pocketLinks: Array<navObject>
+export interface navItem {
+    name: string
+    url?: string
+    icon?: string
+    isActive?: boolean
+    hash?: string
+    ref?: any
+    isVisible?: boolean
+    type?: string
+    trigger?: boolean
+    data?: Array<any>
 }
 
 export type menu = menuGroup[]
@@ -213,13 +222,4 @@ export interface dateObject {
     patch: string
     date: string
     time: string
-}
-
-export interface navItem {
-    ref: any
-    isVisible: boolean
-    name: string
-    type: string
-    trigger: boolean
-    data: Array<any>
 }

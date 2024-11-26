@@ -56,7 +56,7 @@ console.log(filter)
                     <PopoverClose
                         class="absolute -left-96 -top-96 h-screen w-screen scale-150 bg-black/20">
                         <PopoverContent
-                            class="relative w-[--popper-trigger-width] !rounded-box px-7 py-5"
+                            class="relative w-[--popper-trigger-width] !rounded-xl px-7 py-5"
                             align="start"
                             :align-offset="-20"
                             side="bottom"

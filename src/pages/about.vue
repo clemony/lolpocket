@@ -60,7 +60,7 @@ const icons = [
             <div class="divider divider-start mt-12">MADE WITH</div>
             <div class="grid grid-cols-2">
                 <div
-                    class="card grid h-20 auto-cols-max grid-flow-col place-items-center gap-5 rounded-box *:size-6 *:text-base-content/85">
+                    class="card grid h-20 auto-cols-max grid-flow-col place-items-center gap-5 rounded-xl *:size-6 *:text-base-content/85">
                     <icon v-for="icon in icons" :icon="icon" />
                     <img
                         class="brightness-50 contrast-200 grayscale"

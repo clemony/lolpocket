@@ -84,7 +84,7 @@ const prevIndex = 0
                 :key="set.key"
                 headerClass="pb-1"
                 :cardClass="{
-                    '@container/set relative w-[calc(100%-48px)]  inset-0 before:absolute before:bg-transparent before:border  before:w-full before:h-full  before:pointer-events-none before:border-transparent before:z-50  mx-[24px] before:rounded-box':
+                    '@container/set relative w-[calc(100%-48px)]  inset-0 before:absolute before:bg-transparent before:border  before:w-full before:h-full  before:pointer-events-none before:border-transparent before:z-50  mx-[24px] before:rounded-xl':
                         set,
                     ' before:border-neutral/50 before:shadow-inner':
                         set == is.selectedSet,
@@ -219,6 +219,6 @@ const prevIndex = 0
 }
 
 .ghost {
-    @apply m-4 w-[96%] rounded-box bg-base-200;
+    @apply m-4 w-[96%] rounded-xl bg-base-200;
 }
 </style>

@@ -1,59 +1,59 @@
 import { usePocketStore } from '@/stores/pocketStore'
+import type { navData } from 'types'
+export const nav: navData = [
+    {
+        name: 'Database',
+        url: '',
+        icon: 'qlementine-icons:drive-16', //cil:save
+        isActive: true,
 
-export const navData = {
-    navCollapse: [
-        {
-            title: 'Database',
-            url: '',
-            icon: 'qlementine-icons:drive-16', //cil:save
-            isActive: true,
+        items: [
+            {
+                name: 'Champions',
+                url: 'champions',
+                icon: '',
+            },
+            {
+                name: 'Items',
+                url: 'items',
+                icon: '',
+            },
+            {
+                name: 'Runes',
+                url: 'runes',
+                icon: '',
+            },
 
-            items: [
-                {
-                    title: 'Champions',
-                    url: '/champions',
-                    icon: '',
-                    array: '',
-                },
-                {
-                    title: 'Items',
-                    url: '/items',
-                    icon: '',
-                },
-                {
-                    title: 'Runes',
-                    url: '/runes',
-                    icon: '',
-                },
-
-                {
-                    title: 'Spells',
-                    url: '/spells',
-                    icon: '',
-                },
-            ],
-        },
-        {
-            title: 'Settings',
-            url: '#',
-            icon: 'ph:gear-six',
-            items: [
-                {
-                    title: 'General',
-                    url: '/settings',
-                    icon: '',
-                },
-                {
-                    title: 'Account',
-                    url: '#',
-                    icon: 'teenyicons:at-outline',
-                },
-                {
-                    title: 'About',
-                    url: '/about',
-                    icon: 'teenyicons:info-outline',
-                },
-            ],
-        },
-    ],
-}
+            {
+                name: 'Spells',
+                url: 'spells',
+                icon: '',
+            },
+        ],
+    },
+    {
+        name: 'Settings',
+        url: '#',
+        icon: 'ph:gear-six',
+        items: [
+            {
+                name: 'General',
+                url: 'settings',
+                hash: '#general',
+                icon: '',
+            },
+            {
+                name: 'Appearance',
+                url: 'settings',
+                hash: '#appearance',
+                icon: 'teenyicons:info-outline',
+            },
+            {
+                name: 'Account',
+                url: 'settings',
+                hash: '#account',
+                icon: 'teenyicons:at-outline',
+            },
+        ],
+    },
+]

@@ -82,7 +82,7 @@ onMounted(async () => {
                 size="70"
                 min-size="60"
                 max-size="72"
-                class="relative h-full rounded-box border border-base-300 !bg-base-100/90 px-4 shadow-warm">
+                class="relative h-full rounded-xl border border-base-300 !bg-base-100/90 px-4 shadow-warm">
                 <div
                     class="absolute left-0 top-0 z-10 flex !h-fit w-full flex-wrap items-center justify-end gap-4 border-b border-b-base-300 bg-base-100/90 px-4 py-1 backdrop-blur-md">
                     <h2 class="grow justify-start text-base font-semibold">
@@ -133,7 +133,7 @@ onMounted(async () => {
                 min-size="28"
                 class="relative max-h-full min-w-[105px]">
                 <div
-                    class="max-h-full overflow-y-scroll rounded-box scrollbar-hide">
+                    class="max-h-full overflow-y-scroll rounded-xl scrollbar-hide">
                     <ChampionSidebar />
                 </div>
             </Pane>

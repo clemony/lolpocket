@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" :data-theme="gs.dataTheme" class='bg-transparent'>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lolpocket</title>
+  <style>
+    .split-bg {
+      background: linear-gradient(to bottom, oklch(var(--b1) / 0.1) 35px, oklch(var(--b1) / 0.96) 36px);
+      background-position: top, bottom;
+    }
+  </style>
+</head>
+
+<script type="module" src="./src/main.ts"></script>
+
+<body :class="gs.dataTheme" class=' h-screen overflow-hidden overscroll-none !bg-transparent'>
+  <div id="app" ref="app"
+    class="split-bg overflow-clip max-w-screen backdrop-blur-md rounded-box !rounded-b-3xl  absolute left-0 top-0 h-screen w-screen !shadow-[inset_-12px_-8px_40px_#00000020]">
+  </div>
+</body>
+
+</html>

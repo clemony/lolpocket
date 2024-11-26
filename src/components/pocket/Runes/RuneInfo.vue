@@ -33,7 +33,7 @@ const rune = computed(() => {
         <!-------------------------------⟢ Header ⟣-------------------------------->
 
         <label :key="rune.name + '1'"
-            class="frost sticky left-0 top-0 z-50 flex !h-fit w-full flex-wrap items-center justify-end gap-4 rounded-t-box border-b border-b-base-300 px-4 py-1">
+            class="frost sticky left-0 top-0 z-50 flex !h-fit w-full flex-wrap items-center justify-end gap-4 rounded-t-xl border-b border-b-base-300 px-4 py-1">
             <h2 class="sub-text flex grow items-center justify-start gap-3">
                 <span class="grow"> {{ rune.name || 'Rune Detail' }}</span>
                 <div v-if="rune">

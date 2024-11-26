@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useChampStore } from '../../stores/champStore'
-import { usePocketStore } from '../../stores/pocketStore'
+import { useChampStore } from '@/stores/champStore'
+import { usePocketStore } from '@/stores/pocketStore'
 import { useDataStore } from '@/stores/dataStore'
 import { useItemStore } from '@/stores/itemStore'
 const ds = useDataStore()
@@ -32,7 +32,7 @@ const dataValue = ref()
                 <Card
                     class="mt-9 h-[calc(100%-315px)] max-h-[calc(100%-315px)] overflow-hidden">
                     <CardHeader
-                        class="absolute left-0 top-0 z-10 w-full flex-row items-center rounded-t-box bg-base-100/90 px-12 py-4 backdrop-blur-md">
+                        class="absolute left-0 top-0 z-10 w-full flex-row items-center rounded-t-xl bg-base-100/90 px-12 py-4 backdrop-blur-md">
                         <SearchBox
                             :search="cs.champSearch"
                             :placeholder="'Search Champions...'"

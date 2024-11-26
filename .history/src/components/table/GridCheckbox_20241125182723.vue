@@ -1,0 +1,49 @@
+<script setup lang="ts">
+import { usePocketStore } from '@/stores/pocketStore'
+import { ContextMenuTrigger } from 'radix-vue'
+
+const ps = usePocketStore()
+const props = defineProps<{
+    params: {
+        data: {
+            key: string
+            name: string
+            notes?: string // Notes can be undefined
+        }
+        api
+        node
+    }
+}>()
+
+// Get the pocket by its key
+const pocket = ps.getPocket(props.params.data.key)
+
+function select(e) {
+    props.params.node.setSelected(e.target.checked)
+    console.log(e)
+}
+
+const selected = ref(props.params.node.isSelected())
+
+watch(
+    () => ps.tableSelectAll,
+    (newVal) => {
+        console.log('hi', newVal)
+        selected.value = newVal
+    }
+)
+</script>
+
+<template>
+    <div class="grid size-full place-items-center">
+        <label class="size-full">
+            <input
+                type="checkbox"
+                class="checkbox checkbox-xs"
+                v-model="selected"
+                @change="select($event)" />
+        </label>
+    </div>
+</template>
+
+<style scoped></style>

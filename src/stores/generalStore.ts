@@ -9,7 +9,7 @@ export const useGeneralStore = defineStore(
         const dataMode = ref('light')
         const mainTheme = ref('defaultTheme')
         const dataAccent = ref('minimalist')
-        const dataTheme = ref('lightminimalist')
+        const dataTheme = ref('light')
         const ds = useDataStore()
         const app = ref()
         const isMinimized = ref(false)
@@ -27,8 +27,8 @@ export const useGeneralStore = defineStore(
         }
 
         const pocketGridSize = ref()
-
-        const reducedMotion = ref()
+        const pocketPreview = ref(false)
+        const reducedMotion = ref(false)
 
         // Watch for theme changes
         watch(mainTheme, (newValue) => {
@@ -46,6 +46,7 @@ export const useGeneralStore = defineStore(
             dataMode,
             dataAccent,
             reducedMotion,
+            pocketPreview,
             isMinimized,
             firstPane,
             secondPane,

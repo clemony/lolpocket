@@ -15,10 +15,10 @@ const props = defineProps<{
 </script>
 
 <template>
-<Skeleton v-show="!isImageLoaded" class='w-full h-inherit rounded-box' />
+<Skeleton v-show="!isImageLoaded" class='w-full h-inherit rounded-xl' />
 
 <div v-show='isImageLoaded'
-    class='bg-base-200/60 h-inherit border border-neutral/20 bg-clip-border rounded-box overflow-hidden'>
+    class='bg-base-200/60 h-inherit border border-neutral/20 bg-clip-border rounded-xl overflow-hidden'>
 
     <KinesisContainer v-show='isImageLoaded' :perspective="100"
         class="shadow-inset-sm h-inherit size-full overflow-hidden animate-in fade-in-0  duration-700 ">

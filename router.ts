@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Pockets from './src/pages/pockets.vue'
-import Settings from './src/pages/settings.vue'
+import Table from './src/pages/PocketTables.vue'
+import Settings from './src/pages/Settings.vue'
 import Trash from './src/pages/trash.vue'
 import Archive from './src/pages/archive.vue'
+import Cards from './src/pages/PocketCards.vue'
 import { usePocketStore } from '@/stores/pocketStore'
 import { useGeneralStore } from '@stores/generalStore'
 
@@ -92,12 +93,21 @@ const routes: RouteRecordRaw[] = [
         ],
     },
     {
-        path: '/pockets',
-        name: 'pockets',
-        component: Pockets,
+        path: '/tables',
+        name: 'PocketTables',
+        component: Table,
         meta: {
-            title: 'Pockets',
+            title: 'Tables',
             icon: 'formkit:folder',
+        },
+    },
+    {
+        path: '/cards',
+        name: 'PocketCards',
+        component: Cards,
+        meta: {
+            title: 'Cards',
+            icon: 'teenyicons:layers-outline',
         },
     },
     {
@@ -126,6 +136,41 @@ const routes: RouteRecordRaw[] = [
             title: 'Settings',
             icon: 'teenyicons:cog-outline',
         },
+        props: true,
+        children: [
+            {
+                name: 'General',
+                path: '',
+                component: () =>
+                    import('./src/components/settings/GeneralSettings.vue'),
+            },
+            {
+                name: 'Appearance',
+                path: 'appearance',
+                component: () =>
+                    import('./src/components/settings/AppearanceSettings.vue'),
+            },
+            {
+                name: 'Account',
+                path: 'account',
+                props: true,
+                component: () =>
+                    import('./src/components/settings/AccountSettings.vue'),
+            },
+            {
+                name: 'Hotkeys',
+                path: 'hotkeys',
+                props: true,
+                component: () =>
+                    import('./src/components/settings/HotkeySettings.vue'),
+            },
+            {
+                name: 'Storage',
+                path: 'storage',
+                component: () =>
+                    import('./src/components/settings/StorageSettings.vue'),
+            },
+        ],
     },
     {
         path: '/trash',
@@ -141,6 +186,14 @@ const routes: RouteRecordRaw[] = [
 const router = createRouter({
     history: createWebHistory(),
     routes,
+    scrollBehavior(to, from, savedPosition) {
+        if (to.hash) {
+            return {
+                el: to.hash,
+                behavior: 'smooth',
+            }
+        }
+    },
 })
 
 export default router

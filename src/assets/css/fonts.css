@@ -6,19 +6,23 @@
         @apply text-2xl font-semibold;
     }
     h2 {
-        @apply text-xl font-semibold;
+        @apply text-6 font-semibold;
     }
     h3 {
-        @apply text-lg font-semibold;
+        @apply text-xl font-semibold;
     }
     h4 {
+        @apply text-lg font-semibold;
+    }
+    h5 {
         @apply text-md font-medium;
     }
 
     h1,
     h2,
     h3,
-    h4 {
+    h4,
+    h5 {
         @apply leading-none tracking-tight;
     }
 
