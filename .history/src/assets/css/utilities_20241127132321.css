@@ -1,0 +1,82 @@
+@import '../assets/css/theme.css' theme(reference);
+@utility h1 {
+    @apply font-size-9 font-semibold;
+}
+h2 {
+    @apply font-size-8 font-semibold;
+}
+h3 {
+    @apply font-size-6 font-semibold;
+}
+h4 {
+    @apply font-size-5 font-medium;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    @apply leading-none tracking-tight;
+}
+
+@utility color-chip {
+    .color-chip {
+        @apply flex aspect-square size-9 items-center justify-center rounded-md shadow-sm;
+    }
+}
+@utility pocketGridCss {
+    .bottom-grid,
+    .top-grid {
+        .ag-header {
+            display: none;
+        }
+    }
+
+    .ag-cell.ag-column-first {
+        @apply ml-6 !rounded-l-xl;
+    }
+
+    .ag-cell.ag-column-last {
+        @apply !rounded-r-xl;
+    }
+
+    .ag-header-cell-filter-button {
+        display: none;
+    }
+
+    .ag-menu {
+        @apply border-base-300/80 !bg-base-100/95 !z-10 mt-1.5 backdrop-blur-md;
+    }
+
+    .ag-text-field-input {
+        @apply !bg-base-100 z-20 ring-0 outline-0;
+    }
+
+    .ag-picker-field {
+        @apply !bg-base-100/95 z-50 opacity-100 !ring-0 outline-0 backdrop-blur-md focus:ring-0;
+    }
+
+    .ag-picker-field-wrapper {
+        @apply !ring-0 outline-0 focus:ring-0;
+    }
+
+    .ag-select-list {
+        @apply !bg-base-100/95 z-50 border-0 backdrop-blur-md;
+    }
+
+    .ag-body-horizontal-scroll,
+    .ag-apple-scrollbar {
+        opacity: 0.1 !important;
+    }
+
+    #header-grid {
+        .col-headers {
+            .ag-overlay,
+            .ag-body-horizontal-scroll,
+            .ag-apple-scrollbar {
+                opacity: 0 !important;
+                display: none;
+            }
+        }
+    }
+}

@@ -22,7 +22,7 @@ export const columnDefs = ref([
         //hide: true,
         maxWidth: 300,
         minWidth: 85,
-        cellClass: '!m-0 !p-0',
+        cellClass: 'm-0! p-0!',
         filterValueGetter: (params) => {
             const name = params.data.name.split(' ')
             return name
@@ -41,7 +41,7 @@ export const columnDefs = ref([
         minWidth: 49,
         cellRenderer: 'PocketTableChamps',
         cellClass:
-            '!overflow-x-auto flex items-center !w-200px !p-0 rounded-l overflow-hidden',
+            'overflow-x-auto! flex items-center w-200px! p-0! rounded-l overflow-hidden',
 
         valueFormatter: (params) => {
             if (params.value && params.value.champions) {

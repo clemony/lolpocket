@@ -15,7 +15,7 @@ const ps = usePocketStore()
                 @click="toggleModalState(newPocketModal)"
                 variant="ghost"
                 size="sm"
-                class="align-baseline !font-medium">
+                class="align-baseline font-medium!">
                 New Pocket
                 <icon
                     icon="teenyicons:add-small-outline"
@@ -46,7 +46,7 @@ const ps = usePocketStore()
                     <MoveButton :to="ps.trashPockets" text="Trash" class="">
                         <icon
                             icon="fluent:bin-recycle-24-regular"
-                            class="!size-7 shrink-0 scale-x-[115%]" />
+                            class="size-7! shrink-0 scale-x-[115%]" />
                     </MoveButton>
 
                     <MoveButton :to="ps.archivePockets" text="Archive">

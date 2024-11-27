@@ -1,0 +1,108 @@
+@layer  base, components, utilities;
+
+/* @import './theme.css' layer(theme); */
+@import './utilities.css' layer(utilities);
+@import './preflight.css' layer(base);
+@import 'tailwindcss';
+
+/* @import './setup.css'; */
+@import './fonts.css';
+/*@import './animation/animations.css';
+@import './css/splitpanes.css';
+@import './css/gradients.css';
+@import './css/floating-vue.css';
+@import './css/drag.css';
+
+@import 'floating-vue/dist/style.css'; */
+
+@import '@fontsource/geist-mono';
+
+@plugin "daisyui"
+@plugin 'tailwind-scrollbar-hide'
+
+@plugin 'tailwindcss-animate'
+@plugin '@windwards/plugin-mask'
+
+@layer base {
+    input,
+    textarea,
+    select,
+    button {
+        border: 0px solid;
+        border-radius: 0;
+        padding: 0;
+        color: inherit;
+        background-color: transparent;
+    }
+}
+
+@theme {
+    --font-*: initial;
+    --font-sans: 'Geist Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-serif: 'Lora Variable', ui-serif, Georgia, Cambria, 'Times New Roman',
+        Times, serif;
+    --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco,
+        Consolas, monospace;
+    --font-cursive: 'Victor Mono Variable';
+
+   --text-*: initial;
+    --text-1: '0.8rem', {lineHeight: '1rem'};
+    --text-2: '0.93rem', {lineHeight: '1.25rem'};
+    --text-3: '0.97rem', {lineHeight: '1.4rem'};
+    --text-4: '1rem', {lineHeight: '1.5rem'};
+    --text-5: '1.075rem', {lineHeight: '1.5rem'};
+    --text-6: '1.125rem', {lineHeight: '1.75rem'};
+    --text-7: '1.2rem', {lineHeight: '1.55rem'};
+    --text-8: '1.25rem', {lineHeight: '1.75rem'};
+    --text-9: '1.5rem', {lineHeight: '2rem'};
+    --text-10: '1.875rem', {lineHeight: '2.25rem'};
+    --text-11: '2.25rem', {lineHeight: '2.5rem'};
+
+    --color-tea-rose: '#E2ACAC';
+    --color-dark-rose: '#CE8E8E';
+    --color-precision: '#ebcb8b';
+    --color-domination: '#bf616a';
+    --color-inspiration: '#A4C1C4';
+    --color-sorcery: '#b48dad';
+    --color-resolve: '#a3be8c';
+    --color-current: 'currentColor';
+
+        --radius-box: 0.7rem;
+    --radius-btn: 0.4rem;
+    --radius-badge: 0.5rem;
+
+    @keyframes accordion-down {
+        from: { height: 0 },
+        to: { height: 'var(--radix-accordion-content-height)' },
+    }
+    @keyframes accordion-up{
+        from: { height: 'var(--radix-accordion-content-height)' },
+        to: { height: 0 },
+    }
+    @keyframes collapsible-down {
+        from: { height: 0 },
+        to: { height: 'var(--radix-collapsible-content-height)' },
+    }
+    @keyframes collapsible-up {
+        from: { height: 'var(--radix-collapsible-content-height)' },
+        to: { height: 0 },
+    }
+
+    --accordion-down: accordion-down 0.2s ease-in-out;
+    --accordion-up: accordion-up 0.2s ease-in-out;
+    --collapsible-down: collapsible-down0.2s ease-in-out;
+    --collapsible-up: collapsible-up 0.2s ease-in-out;
+
+    --shadow-lil: 2px 2px 4px 1px rgba(0, 0, 0, 0, 0.3);
+    --shadow-warm: 0px 2px 5px 0px rgba(50, 50, 105, 0.15) , 0px 1px 1px 0px rgba(0, 0, 0, 0.05) ;
+    --shadow-standard:0px 2px 3px -1px rgba(0,0,0,0.1),0px 1px 0px 0px rgba(25,28,33,0.02),0px 0px 0px 1px rgba(25,28,33,0.08);
+    --shadow-cham: inset 12px 8px 40px #46464620;
+    --shadow-inset: inset 1px 2px 8px 2px #00000009, inset -2px -1px 5px 1px inset-sm;
+    --shadow-inset 1px 2px 1px 1px #00000004, inset -1px -1px 2px 1px #00000009;
+    --shadow-smooth: rgba(17, 17, 26, 0.07) 0px 0px 16px;
+    --shadow-pretty: 0 3px 10px rgb(0,0,0,0.2);
+
+    --drop-shadow-soft: '0px 0px 1px #00000060';
+    --drop-shadow-softer: '0px 0px 1px #00000040';
+    --drop-shadow-softest: '0px 0px 1px #00000020';   
+}

@@ -1,0 +1,12 @@
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+h3 {
+    @apply text-6 font-semibold;
+}
+h4 {
+    @apply text-5 font-semibold;
+}
+
+h5 {
+    @apply text-4 font-medium;
+}

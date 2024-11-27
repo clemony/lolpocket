@@ -1,4 +1,6 @@
-import App from '@/Pages/App.vue'
+import App from '@/pages/App.vue'
+import '@assets/css/index.css'
+import '@assets/css/themes/light.css'
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import { PiniaColada } from '@pinia/colada'

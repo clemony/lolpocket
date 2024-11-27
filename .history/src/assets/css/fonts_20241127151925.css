@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+@import './themes/theme' theme(reference);
+
+:root {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    h1 {
+        @apply text-8 font-semibold;
+    }
+    h2 {
+        @apply text-7 font-semibold;
+    }
+    h3 {
+        @apply text-6 font-semibold;
+    }
+    h4 {
+        @apply text-5 font-semibold;
+    }
+
+    h5 {
+        @apply text-4 font-medium;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        @apply leading-none tracking-tight;
+    }
+}

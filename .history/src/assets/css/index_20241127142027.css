@@ -1,0 +1,52 @@
+@layer theme, base, components, utilities;
+
+@import 'tailwindcss';
+@import './themes/theme.css' layer(theme);
+@import './themes/light.css' layer(theme);
+@import './utilities.css' layer(utilities);
+@import './preflight.css' layer(base);
+@import './fonts.css' layer(base);
+
+/* @import './setup.css';*/
+/*@import './animation/animations.css';
+@import './css/splitpanes.css';
+@import './css/gradients.css';
+@import './css/floating-vue.css';
+@import './css/drag.css';
+
+@import 'floating-vue/dist/style.css'; */
+/* 
+@import '@fontsource/geist-mono';
+
+@plugin "daisyui";
+@plugin 'tailwind-scrollbar-hide';
+
+@plugin 'tailwindcss-animate';
+@plugin '@windwards/plugin-mask'; */
+
+@theme {
+    --font-*: initial;
+    --font-sans: 'Geist Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-serif: 'Lora Variable', ui-serif, Georgia, Cambria,
+        'Times New Roman', Times, serif;
+    --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco,
+        Consolas, monospace;
+    --font-cursive: 'Victor Mono Variable';
+}
+
+@layer base {
+    html {
+        font-size: 12px;
+    }
+
+    input,
+    textarea,
+    select,
+    button {
+        border: 0px solid;
+        border-radius: 0;
+        padding: 0;
+        color: inherit;
+        background-color: transparent;
+    }
+}

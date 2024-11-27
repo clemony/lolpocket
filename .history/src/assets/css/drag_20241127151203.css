@@ -1,0 +1,57 @@
+.drag-draggable {
+    @apply flex h-auto max-h-full w-full flex-wrap items-center gap-3.5 overflow-y-scroll;
+}
+.drag-label {
+    @apply has-[div.img-loaded]:hover:ring-neutral/40 !relative z-0 flex items-center justify-center overflow-auto rounded-lg p-[2px] ring-1 shadow-sm ring-transparent;
+}
+.drag-wrapper {
+    @apply border-base-300 pointer-events-none aspect-square overflow-hidden rounded-lg border bg-contain select-none;
+}
+
+.drag-img {
+    @apply pointer-events-none bg-cover;
+}
+
+/* .champion {
+  .drag-label {
+    @apply max-w-[72px] max-h-[72px];
+  }
+  .drag-wrapper {
+    @apply max-w-[68px]  min-w-[60px];
+  }
+  .drag-img {
+    @apply scale-[115%];
+  }
+} */
+
+.ghosty {
+    @apply !border-base-300 bg-base-200/30 aspect-square rounded-md border p-5 shadow-[inset_1px_1px_2px_2px_#00000008] hover:ring-0;
+
+    & .drag-label,
+    & .drag-wrapper {
+        @apply !border-transparent !ring-transparent !ring-offset-transparent;
+    }
+    & .drag-label {
+        @apply opacity-100;
+    }
+    & .drag-wrapper {
+        @apply rounded-none bg-contain opacity-20;
+    }
+    & .drag-img {
+        @apply invisible hidden opacity-0 shadow-none ring-transparent ring-offset-transparent;
+    }
+}
+
+.setDrag {
+    @apply border-base-300 bg-b1 rounded-xl border;
+}
+
+.drag-clone {
+    opacity: 0.5;
+    pointer-events: none; /* Prevent interaction */
+    position: absolute; /* Ensure it behaves like a drag */
+}
+
+.v-popper--shown .drag-label {
+    @apply ring-neutral/40;
+}

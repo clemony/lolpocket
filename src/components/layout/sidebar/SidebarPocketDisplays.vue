@@ -17,7 +17,7 @@ const ps = usePocketStore()
             title="Unsorted"
             :key="ps.general"
             icon="formkit:folder"
-            iconClass="!size-[13px]" />
+            iconClass="size-[13px]!" />
 
         <SidebarMenu>
             <SidebarLink

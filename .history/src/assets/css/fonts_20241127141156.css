@@ -1,0 +1,6 @@
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+
+h5 {
+    @apply text-4 font-medium;
+}
