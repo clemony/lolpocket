@@ -1,0 +1,101 @@
+<script setup lang="ts">
+import { useItemStore } from '@/stores/itemStore'
+import { useChampStore } from '@/stores/champStore'
+import { useGeneralStore } from '@/stores/generalStore'
+import { useSessionStore } from '@/stores/sessionStore'
+
+const sn = useSessionStore()
+const gs = useGeneralStore()
+const cs = useChampStore()
+const is = useItemStore()
+
+const loveMessage = ref('')
+
+let previousFavoritesChamps = [...toRaw(cs.lovedChamps)] // Initial copy of the champions array
+
+watch(
+    () => cs.lovedChamps.length, // Watch only the length to detect add/remove
+    (newLength, oldLength) => {
+        const rawNewChamps = toRaw(cs.lovedChamps)
+
+        console.log('Previous champions:', previousFavoritesChamps)
+        console.log('Current champions:', rawNewChamps)
+
+        if (newLength > oldLength) {
+            // A new champion was added
+            const newChamp = rawNewChamps.find(
+                (champ) => !previousFavoritesChamps.includes(champ)
+            )
+            if (newChamp) {
+                console.log('New champion added:', newChamp)
+                loveMessage.value = `+ ${newChamp.name}`
+            }
+        } else if (newLength < oldLength) {
+            // A champion was removed
+            const removedChamp = previousFavoritesChamps.find(
+                (champ) => !rawNewChamps.includes(champ)
+            )
+            if (removedChamp) {
+                console.log('Removed champion:', removedChamp)
+                loveMessage.value = `- ${removedChamp.name}`
+            }
+        }
+
+        // Update the previous array copy
+        previousFavoritesChamps = [...rawNewChamps]
+    }
+)
+
+let previousFavoritesItems = [...toRaw(is.lovedItems)] // Initial copy of the array
+
+watch(
+    () => is.lovedItems.length, // Watch only the length to detect add/remove
+    (newLength, oldLength) => {
+        const rawNewItems = toRaw(is.lovedItems)
+
+        console.log('Previous items:', previousFavoritesItems)
+        console.log('Current items:', rawNewItems)
+
+        if (newLength > oldLength) {
+            // A new object was added
+            const newItem = rawNewItems.find(
+                (item) => !previousFavoritesItems.includes(item)
+            )
+            if (newItem) {
+                console.log('New item added:', newItem)
+                loveMessage.value = `+ ${newItem.name}`
+            }
+        } else if (newLength < oldLength) {
+            // An object was removed
+            const removedItem = previousFavoritesItems.find(
+                (item) => !rawNewItems.includes(item)
+            )
+            if (removedItem) {
+                console.log('Removed item:', removedItem)
+                loveMessage.value = `- ${removedItem.name}`
+            }
+        }
+
+        // Update the previous array copy
+        previousFavoritesItems = [...rawNewItems]
+    }
+)
+</script>
+
+<template>
+    <!-- <ButtonMenuItem @click="sn.navigateTo('/likes')">
+    <Icon icon="teenyicons:heart-outline" />
+    <span class=''>Favorites</span> -->
+
+    <Transition name="toast">
+        <div
+            v-if="loveMessage && !gs.isMinimized"
+            :key="loveMessage"
+            class="badge badge-ghost badge-sm flex items-center justify-start text-nowrap border-base-200/20 !bg-base-100/70 opacity-0 shadow-sm">
+            <span class="max-w-24 truncate">{{ loveMessage }}</span>
+        </div>
+    </Transition>
+    <!-- </ButtonMenuItem> -->
+</template>
+
+<style scoped></style>

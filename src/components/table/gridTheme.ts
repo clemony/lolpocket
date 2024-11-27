@@ -21,7 +21,7 @@ export const pocketTheme = themeQuartz.withPart(iconSetQuartzLight).withParams({
     selectCellBorder: false,
     sidePanelBorder: true,
     wrapperBorder: false,
-    wrapperBorderRadius: '0px',
+    wrapperBorderRadius: '0.7rem',
     columnBorder: false,
     checkboxCheckedBackgroundColor: 'oklch(var(--n)/0.8)',
     checkboxCheckedBorderColor: 'oklch(var(--n))',

@@ -44,7 +44,6 @@
     "js-beautify": "^1.15.1",
     "lru-cache": "^11.0.1",
     "micromatch": "^4.0.8",
-    "mount-vue-component": "^0.10.2",
     "pinia": "^2.2.4",
     "pinia-plugin-persistedstate": "^4.1.2",
     "radix-vue": "^1.9.8",

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" :data-theme="gs.dataMode" class='bg-transparent'>
+<html lang="en" :data-theme="gs.dataMode" :class="gs.dataTheme">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,18 +7,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>lolpocket</title>
   <style>
-    .split-bg {
+    .html,
+    .body {
+      background: transparent;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      width: 100vh;
+      height: 100vh;
+      overscroll-behavior: none;
+    }
+
+    /* .split-bg {
       background: linear-gradient(to bottom, oklch(var(--b1) / 0.1) 35px, oklch(var(--b1) / 0.96) 36px);
       background-position: top, bottom;
-    }
+    } */
   </style>
 </head>
 
 <script type="module" src="./src/main.ts"></script>
 
-<body :class="gs.dataTheme" class='light h-screen overflow-hidden overscroll-none !bg-transparent'>
+<body>
   <div id="app" ref="app"
-    class="split-bg overflow-hidden max-w-screen backdrop-blur-md rounded-box !rounded-b-3xl  absolute left-0 top-0 h-screen w-screen !shadow-[inset_-12px_-8px_40px_#00000020]">
+    class="overflow-hidden max-w-screen backdrop-blur-md rounded-xl  absolute left-0 top-0 h-screen w-screen !shadow-[inset_-12px_-8px_40px_#00000020]">
   </div>
 </body>
 

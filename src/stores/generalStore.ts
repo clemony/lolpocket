@@ -1,6 +1,5 @@
 import { defineStore } from 'pinia'
 import { ref, watch } from 'vue'
-import { useDataStore } from './dataStore'
 import { pocket, modal } from 'types'
 
 export const useGeneralStore = defineStore(
@@ -10,11 +9,8 @@ export const useGeneralStore = defineStore(
         const mainTheme = ref('defaultTheme')
         const dataAccent = ref('minimalist')
         const dataTheme = ref('light')
-        const ds = useDataStore()
         const app = ref()
         const isMinimized = ref(false)
-        const firstPane = ref(17)
-        const secondPane = ref(83)
         const sidebarState = ref()
         const sidebarWidth = ref(18)
         const modalState = ref(false)
@@ -25,11 +21,12 @@ export const useGeneralStore = defineStore(
             modalValue.value = modalData
             pocket ? (modalPocket.value = pocket) : ''
         }
-
+        const commandOpen = ref(false)
         const pocketGridSize = ref()
         const pocketPreview = ref(false)
         const reducedMotion = ref(false)
 
+        const appearanceRef = ref()
         // Watch for theme changes
         watch(mainTheme, (newValue) => {
             document.documentElement.setAttribute('data-theme', newValue)
@@ -48,8 +45,7 @@ export const useGeneralStore = defineStore(
             reducedMotion,
             pocketPreview,
             isMinimized,
-            firstPane,
-            secondPane,
+            commandOpen,
             sidebarState,
             sidebarWidth,
             app,
@@ -59,6 +55,7 @@ export const useGeneralStore = defineStore(
             modalValue,
             modalPocket,
             dataTheme,
+            appearanceRef,
         }
     },
     {

@@ -21,8 +21,8 @@ export const columnDefs = ref([
         width: 220,
         //hide: true,
         maxWidth: 300,
-         minWidth: 85,
-        cellClass: '!p-0',
+        minWidth: 85,
+        cellClass: '!m-0 !p-0',
         filterValueGetter: (params) => {
             const name = params.data.name.split(' ')
             return name
@@ -56,7 +56,7 @@ export const columnDefs = ref([
         headerName: 'Items',
         width: 400,
         maxWidth: 500,
-       minWidth: 49,
+        minWidth: 49,
         cellRenderer: 'pocketTableItems',
         filterValueGetter: (params) => {
             if (params.data.items[0].itemSets[0]) {
@@ -71,7 +71,7 @@ export const columnDefs = ref([
                     .join(', ')
             }
             return ''
-        },                  
+        },
     },
     {
         headerName: 'Runes',
@@ -97,7 +97,8 @@ export const columnDefs = ref([
         },
     },
 
-    { //⟳
+    {
+        //⟳
         headerName: 'Created',
         field: 'dateCreated',
         width: 100,
@@ -142,7 +143,7 @@ export const columnDefs = ref([
 
 export const defaultColDef = {
     flex: 1,
-    cellClass: ['flex items-center !px-1 py-[3px]'],
+    cellClass: ['flex items-center p-0 m-0'],
     sortable: true,
     //filter: false,
     resizable: true,
@@ -151,8 +152,7 @@ export const defaultColDef = {
 export const iconColDef = {
     width: 100,
     headerComponentParams: {
-        template:
-            `<div class="ag-cell-label-container" role="presentation">
+        template: `<div class="ag-cell-label-container" role="presentation">
               <span data-ref="eMenu" class="ag-header-icon ag-header-cell-menu-button"></span>
               <span data-ref="eFilterButton" class="ag-header-icon ag-header-cell-filter-button"></span>
               <div data-ref="eLabel" class="ag-header-cell-label" role="presentation">
@@ -165,10 +165,9 @@ export const iconColDef = {
                  </span>
                 <span data-ref="eFilter" class="ag-header-icon ag-filter-icon"></span>
               </div>
-            </div>`
-    }
-};
-
+            </div>`,
+    },
+}
 
 export const rowSelection = {
     mode: 'multiRow',

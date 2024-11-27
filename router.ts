@@ -4,6 +4,8 @@ import Settings from './src/pages/Settings.vue'
 import Trash from './src/pages/trash.vue'
 import Archive from './src/pages/archive.vue'
 import Cards from './src/pages/PocketCards.vue'
+import Favorites from './src/pages/Favorites.vue'
+
 import { usePocketStore } from '@/stores/pocketStore'
 import { useGeneralStore } from '@stores/generalStore'
 
@@ -47,9 +49,9 @@ const routes: RouteRecordRaw[] = [
         component: () => import('./src/pages/items.vue'),
     },
     {
-        path: '/loved',
-        name: 'loved',
-        component: () => import('./src/pages/Loved.vue'),
+        path: '/favorites',
+        name: 'favorites',
+        component: Favorites,
     },
 
     {
@@ -93,8 +95,8 @@ const routes: RouteRecordRaw[] = [
         ],
     },
     {
-        path: '/tables',
-        name: 'PocketTables',
+        path: '/table',
+        name: 'table',
         component: Table,
         meta: {
             title: 'Tables',
@@ -103,7 +105,7 @@ const routes: RouteRecordRaw[] = [
     },
     {
         path: '/cards',
-        name: 'PocketCards',
+        name: 'cards',
         component: Cards,
         meta: {
             title: 'Cards',
@@ -139,33 +141,33 @@ const routes: RouteRecordRaw[] = [
         props: true,
         children: [
             {
-                name: 'General',
+                name: 'general',
                 path: '',
                 component: () =>
                     import('./src/components/settings/GeneralSettings.vue'),
             },
             {
-                name: 'Appearance',
-                path: 'appearance',
+                name: 'appearance',
+                path: '/settings',
                 component: () =>
                     import('./src/components/settings/AppearanceSettings.vue'),
             },
             {
-                name: 'Account',
+                name: 'account',
                 path: 'account',
                 props: true,
                 component: () =>
                     import('./src/components/settings/AccountSettings.vue'),
             },
             {
-                name: 'Hotkeys',
+                name: 'hotkeys',
                 path: 'hotkeys',
                 props: true,
                 component: () =>
                     import('./src/components/settings/HotkeySettings.vue'),
             },
             {
-                name: 'Storage',
+                name: 'storage',
                 path: 'storage',
                 component: () =>
                     import('./src/components/settings/StorageSettings.vue'),
@@ -186,13 +188,19 @@ const routes: RouteRecordRaw[] = [
 const router = createRouter({
     history: createWebHistory(),
     routes,
-    scrollBehavior(to, from, savedPosition) {
+    scrollBehavior(to) {
         if (to.hash) {
-            return {
-                el: to.hash,
-                behavior: 'smooth',
-            }
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    const element = document.querySelector(to.hash)
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' })
+                    }
+                    resolve({ el: to.hash, behavior: 'smooth' })
+                }, 500) // Adjust the delay if needed
+            })
         }
+        return { top: 0 } // Default scroll position
     },
 })
 
