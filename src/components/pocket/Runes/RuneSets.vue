@@ -1,68 +1,28 @@
 <script setup lang="ts">
 import { useRuneStore } from '@/stores/runeStore'
 import { usePocketStore } from '@/stores/pocketStore'
-import { useRoute } from 'vue-router'
 import { VueDraggable } from 'vue-draggable-plus'
-import { newRuneSet } from '@utils/PocketUtilities'
+import type { pocket } from 'types'
+import { getPocket, newRuneSet, deleteRuneSet } from '@utils/pocketUtilities'
 const rs = useRuneStore()
 
 const ps = usePocketStore()
 
-const route = useRoute()
 const props = defineProps<{
-    pocketKey: string
+    pocket: pocket
+    selected: number
 }>()
 
 // Reactive reference for the pocket
-const pocket = ref(ps.getPocket(props.pocketKey))
+const pocket = ref(props.pocket)
 
-// Sync with the latest data from the store when the component is mounted
-onMounted(() => {
-    if (pocket.value) {
-        // Fetch the latest pocket data using the provided pocketKey
-        const latestPocket = ps.getPocket(props.pocketKey)
-        if (latestPocket) {
-            pocket.value = latestPocket
-        }
+const emit = defineEmits(['update:selected'])
 
-        // Ensure new runes are set up if none exist
-        if (!pocket.value.runes[0].runeSets.length) {
-            newRuneSet()
-        }
-        rs.selectedSetIndex = 0
-    }
-})
-
-// Watch for changes in the route's pocketKey and update the local state
-watch(
-    () => route.params.pocketKey,
-    (newKey) => {
-        if (newKey) {
-            const updatedPocket = ps.getPocket(newKey)
-            if (updatedPocket) {
-                pocket.value = updatedPocket
-            }
-        }
-    }
-)
-
-// Watch for props pocketKey changes and update pocket data
-watch(
-    () => props.pocketKey,
-    (newKey) => {
-        if (newKey) {
-            const updatedPocket = ps.getPocket(newKey)
-            if (updatedPocket) {
-                pocket.value = updatedPocket
-            }
-        }
-    }
-)
+const selectedSet = ref(0)
 </script>
 
 <template>
     <div
-        v-if="pocket"
         class="h-full w-full overflow-y-scroll overscroll-none bg-base-200/20 pt-8">
         <!-------------------------------- HEADER --------------------------------->
 
@@ -100,7 +60,8 @@ watch(
                             type="radio"
                             :value="index"
                             id="runeSets"
-                            v-model="rs.selectedRuneSetIndex"
+                            v-model="selectedSet"
+                            @change="emit('update:selected', selectedSet)"
                             class="peer hidden" />
 
                         <!-----------------------------⟢ DRAG ⟣-------------------------------->
@@ -108,31 +69,12 @@ watch(
                         <div
                             class="ml-1 grid grid-cols-[repeat(3,_3rem)] place-items-center items-center justify-center justify-self-center py-1 opacity-75 grayscale-[0.25] transition-all duration-300 group-hover:opacity-95 group-hover:grayscale-0 peer-checked:grayscale-0 peer-[:checked]:opacity-100 peer-checked:[&_#blank]:opacity-80 peer-checked:[&_#blank]:ring-neutral/15">
                             <img
-                                v-if="
-                                    set.keystone.name != 'none' &&
-                                    set.keystone.name != '' &&
-                                    set.keystone != undefined
-                                "
                                 :src="set.keystone.img"
                                 class="h-11 drop-shadow-soft" />
+
                             <img
-                                v-else
-                                src="/img/runes/blankRune.webp"
-                                class="h-8 rounded-full opacity-70 ring-1 ring-base-300/90 group-hover:opacity-90"
-                                id="blank" />
-                            <img
-                                v-if="
-                                    set.secondary != 'none' &&
-                                    set.secondary != '' &&
-                                    set.secondary != undefined
-                                "
                                 :src="'/img/runes/' + set.secondary + '.webp'"
                                 class="h-9 p-1.5 drop-shadow-softer" />
-                            <img
-                                v-else
-                                src="/img/runes/blankRune.webp"
-                                class="h-8 rounded-full opacity-70 ring-1 ring-base-300/90 group-hover:opacity-90"
-                                id="blank" />
                         </div>
                         <div class="grow text-sm"><!-- {{ set.name }} --></div>
 
@@ -162,18 +104,27 @@ watch(
                                 class="size-5" />
                         </button>
 
-                        <!--   
-                          <div
-              class="grid grid-cols-3 *:aspect-square *:size-5 *:rounded-btn *:text-base-content/80 *:transition-all *:flex *:justify-center *:items-center *:duration-300 gap-1.5">  <button class="hover:bg-base-200" alt="Clear Items" title="Clear Items" @click="rs.resetRunes()">
-                <icon icon="teenyicons:clockwise-outline" class="size-[0.8rem] pb-[2px]" />
-              </button>
+                        <div
+                            class="grid grid-cols-3 gap-1.5 *:flex *:aspect-square *:size-5 *:items-center *:justify-center *:rounded-btn *:text-base-content/80 *:transition-all *:duration-300">
+                            <button
+                                class="hover:bg-base-200"
+                                alt="Clear Items"
+                                title="Clear Items"
+                                @click="rs.resetRunes()">
+                                <icon
+                                    icon="teenyicons:clockwise-outline"
+                                    class="size-[0.8rem] pb-[2px]" />
+                            </button>
 
-              <button
-                class="disabled:bg-transparent hover:bg-base-200 disabled:hover:bg-transparent disabled:opacity-40"
-                alt="Delete Set" title="Delete Set" @click="rs.deleteSet(set.key)" :disabled="rs.runeSets.length == 1">
-                <icon icon="ph:trash-light" class="size-3.5" />
-              </button>
-            </div> -->
+                            <button
+                                class="hover:bg-base-200 disabled:bg-transparent disabled:opacity-40 disabled:hover:bg-transparent"
+                                alt="Delete Set"
+                                title="Delete Set"
+                                @click="deleteRuneSet(pocket, set.key)"
+                                :disabled="rs.runeSets.length == 1">
+                                <icon icon="ph:trash-light" class="size-3.5" />
+                            </button>
+                        </div>
                     </div>
                     <!-- <div class="h-[1px] w-full"></div> -->
                 </label>

@@ -11,7 +11,7 @@ const props = withDefaults(
     defineProps<{
         side?: 'left' | 'right'
         variant?: 'sidebar' | 'floating' | 'inset'
-        collapsible?: 'offcanvas' | 'icon' | 'none'
+        collapsible?: 'offcanvas' | 'icon' | 'empty'
         class?: HTMLAttributes['class']
     }>(),
     {
@@ -27,10 +27,10 @@ const { toggleSidebar } = useSidebar()
 
 <template>
     <div
-        v-if="collapsible === 'none'"
+        v-if="collapsible === 'empty'"
         :class="
             cn(
-                'flex h-full w-[--sidebar-width] flex-col bg-base-100/90 text-base-content',
+                'flex h-full w-[--sidebar-width] flex-col overflow-hidden rounded-xl bg-base-100/90 text-base-content',
                 props.class
             )
         "
@@ -46,11 +46,11 @@ const { toggleSidebar } = useSidebar()
         <SheetContent
             data-sidebar="sidebar"
             data-mobile="true"
-            class="w-[--sidebar-width] bg-base-100/90 p-0 text-base-content [&>button]:hidden"
+            class="w-[--sidebar-width] overflow-hidden rounded-xl bg-base-100/90 p-0 text-base-content [&>button]:hidden"
             :style="{
                 '--sidebar-width': SIDEBAR_WIDTH_MOBILE,
             }">
-            <div class="flex h-full w-full flex-col">
+            <div class="flex h-full w-full flex-col overflow-hidden rounded-xl">
                 <slot />
             </div>
         </SheetContent>
@@ -69,16 +69,16 @@ const { toggleSidebar } = useSidebar()
                 cn(
                     'relative h-svh w-[--sidebar-width] bg-transparent transition-[width] duration-200 ease-linear',
                     'group-data-[collapsible=offcanvas]:w-0',
-                    'group-data-[side=right]:rotate-180',
+                    'overflow-hidden rounded-xl group-data-[side=right]:rotate-180',
                     variant === 'floating' || variant === 'inset' ?
                         'group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]'
-                    :   'group-data-[collapsible=icon]:w-[--sidebar-width-icon]'
+                    :   'overflow-hidden rounded-xl group-data-[collapsible=icon]:w-[--sidebar-width-icon]'
                 )
             " />
         <div
             :class="
                 cn(
-                    'fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] duration-200 ease-linear md:flex',
+                    'fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] overflow-hidden rounded-xl transition-[left,right,width] duration-200 ease-linear md:flex',
                     side === 'left' ?
                         'left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]'
                     :   'right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]',

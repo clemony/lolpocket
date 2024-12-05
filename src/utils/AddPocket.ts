@@ -8,8 +8,11 @@ import {
     DefaultItem,
     spell,
 } from 'types'
-import { generateRandomString, generateRandomName } from '../lib/functions/Keygen'
-import { newItemSet, newRuneSet } from './PocketUtilities'
+import {
+    generateRandomString,
+    generateRandomName,
+} from '../lib/functions/Keygen'
+import { newItemSet, newRuneSet } from './pocketUtilities'
 import { usePocketStore } from '@/stores/pocketStore'
 const toID = hexoid()
 
@@ -65,13 +68,13 @@ export function createDefaultRune(): {
     path: string
 } {
     return {
-        name: 'none',
+        name: 'empty',
         wiki: '',
         tier: 0,
         type: '',
         img: '/img/runes/blankRune.webp',
         stats: '',
-        path: 'none',
+        path: 'empty',
     }
 }
 
@@ -85,13 +88,13 @@ export function createDefaultShard(): {
     color: string
 } {
     return {
-        name: 'none',
+        name: 'empty',
         stats: '',
         slotID: 0,
-        slotName: 'none',
+        slotName: 'empty',
         type: '',
         icon: 'oui:shard',
-        color: 'none',
+        color: 'empty',
     }
 }
 

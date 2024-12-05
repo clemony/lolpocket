@@ -2,27 +2,25 @@
 import { useDataStore } from '@/stores/dataStore'
 import { useRuneStore } from '@/stores/runeStore'
 import type { pocket } from 'types'
-import { getShardIcon, getShardClass } from '@lib/functions/GetColor'
+import { getShardIcon, getShardClass } from '@utils/GetColor'
 
 import { usePocketStore } from '@stores/pocketStore'
+import { getPocket } from '@utils/pocketUtilities'
 const ps = usePocketStore()
 const ds = useDataStore()
 const rs = useRuneStore()
 
 const props = defineProps<{
     pocket: pocket
+    selected: number
 }>()
 
-const pocket = ref(ps.getPocket(props.pocket.key))
+const pocket = ref(getPocket(props.pocket.key))
 
-const runeIndex = ref(rs.selectedRuneSetIndex)
+const runeIndex = ref(props.selected)
 
 const set = computed(() => {
     return pocket.value.runes[0].runeSets[runeIndex.value]
-})
-
-onMounted(() => {
-    rs.selectedRuneSetIndex = 0
 })
 </script>
 
@@ -55,7 +53,7 @@ onMounted(() => {
                                 .toString()
                                 .replace(/border.*/, ''),
                             {
-                                'bg-base-200/20': shard.name == 'none',
+                                'bg-base-200/20': shard.name == 'empty',
                             }
                         )
                     "
@@ -92,7 +90,7 @@ onMounted(() => {
                         class="size-full rounded-full opacity-90 brightness-95 drop-shadow-md grayscale peer-checked:!opacity-100 peer-checked:!grayscale-0"
                         :class="
                             cn(getShardClass(shard), {
-                                'opacity-40': shard.name == 'none',
+                                'opacity-40': shard.name == 'empty',
                             })
                         " />
                 </label>

@@ -4,21 +4,23 @@ import {
     ResizablePanel,
     ResizablePanelGroup,
 } from '@/components/base/resizable'
-import { runeColors } from '@lib/functions/GetColor'
+import { runeColors } from '@utils/GetColor'
 
 const props = defineProps<{
     pocket: pocket
 }>()
 
-const pocket = props.pocket
-const set = ref(pocket.runes[0].runeSets[pocket.runes[0].starred]).value
+const pocket = ref(props.pocket)
+const set = ref(
+    pocket.value.runes[0].runeSets[pocket.value.runes[0].starred]
+).value
 
 const runes = [set.p1, set.p2, set.p3, set.s1, set.s2]
 console.log(set)
 </script>
 
 <template>
-    <div class="grid gap-4 px-3 py-2">
+    <div class="grid gap-4 px-3 py-2" :key="pocket.key">
         <Button
             variant="outline"
             class="h-16 w-full overflow-hidden bg-gradient-to-r from-transparent !p-0 backdrop-saturate-200"
@@ -26,7 +28,7 @@ console.log(set)
             <div
                 class="flex size-full items-center justify-start gap-3 bg-gradient-to-r from-base-100/90 to-base-100/70 px-2 backdrop-blur-md">
                 <LoadRune
-                    v-if="set.keystone.name != 'none'"
+                    v-if="set.keystone.name != 'empty'"
                     :url="set.keystone.img"
                     keystone />
                 <Placeholder v-else :size="30" class="shrink-0" />
@@ -46,7 +48,7 @@ console.log(set)
                         <div
                             class="col-start-1 grid items-center justify-center">
                             <LoadRune
-                                v-if="rune.name != 'none'"
+                                v-if="rune.name != 'empty'"
                                 :url="rune.img" />
                             <Placeholder v-else :size="45" />
                         </div>

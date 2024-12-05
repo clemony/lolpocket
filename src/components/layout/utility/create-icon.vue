@@ -23,7 +23,7 @@ const emit = defineEmits([
     'update:selectedIcon',
 ])
 
-const pocket = ps.getPocket(props.pocketKey)
+const pocket = getPocket(props.pocketKey)
 
 watch(
     () => props.bgColor,

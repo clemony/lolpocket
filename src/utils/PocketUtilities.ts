@@ -1,16 +1,21 @@
 import { usePocketStore } from '@/stores/pocketStore'
 import { hexoid } from 'hexoid'
-import { pocket } from 'types'
+import { pocket, Shard } from 'types'
 import {
     createDateObject,
     createDefaultRune,
     createDefaultShard,
-} from './AddPocket'
+} from './addPocket'
 import { generateRandomName } from '../lib/functions/Keygen'
+
+export function getPocket(key) {
+    const ps = usePocketStore()
+    return ps.pockets.find((pocket: pocket) => pocket.key === key)
+}
 
 export function deletePocket(pocketKey: string) {
     const ps = usePocketStore()
-    const pocket = ps.getPocket(pocketKey)
+    const pocket = getPocket(pocketKey)
     const index = ps.pockets.findIndex((set) => set.key === pocketKey)
 
     if (index !== -1 && pocket) {
@@ -25,7 +30,7 @@ export function deletePocket(pocketKey: string) {
 export function newItemSet(pocketKey?) {
     if (pocketKey) {
         const ps = usePocketStore()
-        const pocket = ps.getPocket(pocketKey)
+        const pocket = getPocket(pocketKey)
 
         if (pocket) {
             const toID = hexoid()
@@ -53,7 +58,7 @@ export function newItemSet(pocketKey?) {
 
 export function deleteItemSet(pocketKey, key: string) {
     const ps = usePocketStore()
-    const pocket = ps.getPocket(pocketKey)
+    const pocket = getPocket(pocketKey)
     if (pocket) {
         const index = pocket.items[0].itemSets.findIndex(
             (set) => set.key === key
@@ -83,29 +88,30 @@ export function duplicatePocket(original: pocket): pocket {
     ps.pockets.push(newPocket)
     return newPocket
 }
+const shard = createDefaultShard() as Shard
 
 export function newRuneSet(key?) {
     const toID = hexoid()
     const newSet = {
         key: toID(),
         name: generateRandomName() + ' Set',
-        primary: 'none',
+        primary: 'empty',
         keystone: createDefaultRune(),
         p1: createDefaultRune(),
         p2: createDefaultRune(),
         p3: createDefaultRune(),
         s1: createDefaultRune(),
         s2: createDefaultRune(),
-        secondary: 'none',
+        secondary: 'empty',
         shards: {
-            shard1: createDefaultShard(),
-            shard2: createDefaultShard(),
-            shard3: createDefaultShard(),
+            0: createDefaultShard() as Shard,
+            1: createDefaultShard() as Shard,
+            2: createDefaultShard() as Shard,
         },
     }
+
     if (key) {
-        const ps = usePocketStore()
-        const pocket = ps.getPocket(key)
+        const pocket = getPocket(key)
         pocket.runes[0].runeSets.push(newSet)
     } else {
         return newSet
@@ -114,8 +120,8 @@ export function newRuneSet(key?) {
 
 export function deleteRuneSet(pocket, setKey) {
     const runeSets = pocket.runes[0].runeSets
-    const index = runeSets.value.findIndex((set) => set.key == setKey)
-    runeSets.value.splice(index, 1)
+    const index = runeSets.findIndex((set) => set.key == setKey)
+    runeSets.splice(index, 1)
 }
 function resetRunes() {}
 
@@ -129,7 +135,7 @@ export function addToSet(pocket, itemSet, item) {
 
 export function removeFromSet(pocket, itemSet, itemx) {
     const ps = usePocketStore()
-    const thisPocket = ps.getPocket(pocket)
+    const thisPocket = getPocket(pocket)
     const set = thisPocket?.items[0].itemSets.find((set) => set.key === itemSet)
 
     if (set) {

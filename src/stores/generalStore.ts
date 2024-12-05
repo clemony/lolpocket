@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, watch } from 'vue'
-import { pocket, modal } from 'types'
+import { pocket, drawer } from 'types'
 
 export const useGeneralStore = defineStore(
     'generalStore',
@@ -13,18 +13,17 @@ export const useGeneralStore = defineStore(
         const isMinimized = ref(false)
         const sidebarState = ref()
         const sidebarWidth = ref(18)
-        const modalState = ref(false)
-        const modalValue = shallowRef(undefined as modal)
-        const modalPocket = ref(undefined)
-        function toggleModalState(modalData, pocket?) {
-            modalState.value = !modalState.value
-            modalValue.value = modalData
-            pocket ? (modalPocket.value = pocket) : ''
-        }
+
+        const drawerState = ref(false)
+        const drawerValue = shallowRef(undefined as drawer)
+        const drawerPocket = ref(undefined)
+
+        const cardBack = ref('/img/cards/moonfall.webp')
         const commandOpen = ref(false)
         const pocketGridSize = ref()
         const pocketPreview = ref(false)
         const reducedMotion = ref(false)
+        const routeHistory = []
 
         const appearanceRef = ref()
         // Watch for theme changes
@@ -49,23 +48,24 @@ export const useGeneralStore = defineStore(
             sidebarState,
             sidebarWidth,
             app,
+            cardBack,
             pocketGridSize,
-            modalState,
-            toggleModalState,
-            modalValue,
-            modalPocket,
+            drawerState,
+            drawerValue,
+            drawerPocket,
             dataTheme,
             appearanceRef,
+            routeHistory,
         }
     },
     {
         persist: {
             storage: localStorage,
             key: 'generalStore',
-            omit: ['modal, modalPocket, modalState'],
+            omit: ['drawer, drawerPocket, drawerState'],
             afterHydrate: (ctx) => {
                 const gs = useGeneralStore()
-                gs.modalState = false
+                gs.drawerState = false
             },
         },
     }

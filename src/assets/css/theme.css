@@ -1,0 +1,21 @@
+:root {
+    --precision: #ebcb8b;
+    --precision-light: #f3dcaa;
+
+    --domination: #bf616a;
+    --domination-light: #deb8bb;
+
+    --sorcery: #b48dad;
+    --sorcery-light: #cbbbca;
+
+    --resolve: #a3be8c;
+    --resolve-light: #ccd2c5;
+
+    --inspiration: #a4c1c4;
+    --inspiration-light: #aecace;
+
+    --empty: oklch(var(--b3));
+    --empty-light: oklch(var(--b2));
+
+    --shadow-warm: 0px 2px 5px 0px rgba(50, 50, 105, 0.15);
+}

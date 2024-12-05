@@ -1,19 +1,18 @@
 <script setup lang="ts">
 import { usePocketStore } from '@/stores/pocketStore'
 import { useRuneStore } from '@/stores/runeStore'
+import { getPocket } from '@utils/pocketUtilities'
 const rs = useRuneStore()
 const ps = usePocketStore()
 const props = defineProps<{
     pocketKey: string
 }>()
 
-const pocket = ref(ps.getPocket(props.pocketKey))
+const pocket = ref(getPocket(props.pocketKey))
 console.log('pok', pocket)
 
-const selected = computed(() => {
-    return rs.selectedRuneSetIndex ? rs.selectedRuneSetIndex : 0
-})
-console.log('rs sele', selected)
+const selected = ref(0)
+console.log('rs sele', selected.value)
 
 const set = ref(pocket.value.runes[0].runeSets[selected.value])
 console.log('rs', pocket.value.runes[0].runeSets)
@@ -73,7 +72,7 @@ const secondary = computed(() => {
                         class="relative mt-6 h-fit max-h-fit rounded-xl border border-base-300 shadow-warm">
                         <div
                             class="h-full w-full px-6 py-8 shadow-[inset_0px_0px_40px_#00000006]">
-                            <RuneShards :pocket="pocket" :selected="set" />
+                            <RuneShards :pocket="pocket" :selected="selected" />
                         </div>
                     </div>
                 </div>
@@ -82,7 +81,10 @@ const secondary = computed(() => {
         <template #panel2>
             <div
                 class="relative overflow-hidden rounded-xl border border-base-300 !bg-base-100/90 shadow-warm">
-                <RuneSets :pocketKey="props.pocketKey" />
+                <RuneSets
+                    :pocket="pocket"
+                    v-model:selected="selected"
+                    @update:selected="(v) => (selected = v)" />
             </div>
         </template>
     </Layout2>
@@ -94,5 +96,76 @@ const secondary = computed(() => {
 .focus-hover:hover,
 .focus-hover:focus-within {
     @apply grow border-base-300 bg-base-100/50 shadow-inner ring-offset-base-content/40 [&_button]:opacity-100;
+}
+
+.gradient {
+    background: linear-gradient(
+        137deg,
+        rgba(231, 207, 120, 0.7) 0%,
+        rgba(220, 124, 124, 0.7) 20%,
+        rgba(178, 164, 221, 0.7) 40%,
+        rgba(175, 212, 150, 0.7) 60%,
+        rgba(165, 226, 229, 0.7) 80%
+    );
+    background-size: 550%;
+}
+
+.none {
+    background: linear-gradient(
+        137deg,
+        rgba(190, 190, 190, 1) 0%,
+        rgba(193, 193, 193, 0.8) 10%,
+        rgba(233, 233, 233, 1) 75%,
+        rgba(252, 252, 252, 0) 90%
+    );
+}
+
+.none,
+.precision,
+.domination,
+.sorcery,
+.resolve,
+.inspiration {
+    transition: all 0.5s ease-in-out;
+}
+
+.precision {
+    background-position: 0%;
+
+    #imgwrap {
+        @apply ring-offset-amber-500/60;
+    }
+}
+
+.domination {
+    background-position: 20%;
+
+    #imgwrap {
+        @apply ring-offset-red-500/60;
+    }
+}
+
+.sorcery {
+    background-position: 42%;
+
+    #imgwrap {
+        @apply ring-offset-purple-400/60;
+    }
+}
+
+.resolve {
+    background-position: 83%;
+
+    #imgwrap {
+        @apply ring-offset-lime-600/60;
+    }
+}
+
+.inspiration {
+    background-position: 100%;
+
+    #imgwrap {
+        @apply ring-offset-sky-300/30;
+    }
 }
 </style>

@@ -65,7 +65,7 @@ const onImageError = (event: Event) => {
 
 function handleChange() {
     if (selected.value.primary == selected.value.secondary) {
-        selected.value.secondary = 'none'
+        selected.value.secondary = 'empty'
     }
 }
 
@@ -86,7 +86,7 @@ onMounted(() => {})
                     v-model="selected.primary"
                     :value="path"
                     type="radio"
-                    :disabled="path == 'none'"
+                    :disabled="path == 'empty'"
                     @change="handleChange" />
 
                 <input
@@ -95,7 +95,7 @@ onMounted(() => {})
                     v-model="selected.secondary"
                     :value="path"
                     type="radio"
-                    :disabled="path == 'none' || path == selected.primary" />
+                    :disabled="path == 'empty' || path == selected.primary" />
 
                 <div
                     class="mx-2 flex aspect-square size-10 items-center justify-center brightness-75 drop-shadow-sm grayscale hover:brightness-100 hover:grayscale-0 peer-checked:brightness-100 peer-checked:grayscale-0">
@@ -130,7 +130,7 @@ onMounted(() => {})
                 :value="rune"
                 v-model="selected.keystone"
                 class="peer hidden"
-                :disabled="rune.path == 'none'" />
+                :disabled="rune.path == 'empty'" />
 
             <input
                 v-if="rune.tier == 1 && props.set == 1"
@@ -138,7 +138,7 @@ onMounted(() => {})
                 :value="rune"
                 v-model="selected.p1"
                 class="peer hidden"
-                :disabled="rune.path == 'none'" />
+                :disabled="rune.path == 'empty'" />
 
             <input
                 v-if="rune.tier == 2 && props.set == 1"
@@ -146,7 +146,7 @@ onMounted(() => {})
                 :value="rune"
                 v-model="selected.p2"
                 class="peer hidden"
-                :disabled="rune.path == 'none'" />
+                :disabled="rune.path == 'empty'" />
 
             <input
                 v-if="rune.tier == 3 && props.set == 1"
@@ -154,7 +154,7 @@ onMounted(() => {})
                 :value="rune"
                 v-model="selected.p3"
                 class="peer hidden"
-                :disabled="rune.path == 'none'" />
+                :disabled="rune.path == 'empty'" />
 
             <VDropdown
                 v-if="rune.tier == 0"
@@ -163,7 +163,7 @@ onMounted(() => {})
                 :popperTriggers="['hover']"
                 placement="bottom"
                 :delay="{ show: 1400, hide: 0 }"
-                :disabled="rune.path == 'none'"
+                :disabled="rune.path == 'empty'"
                 id="imgwrap"
                 class="mask h-[inherit] w-[inherit] opacity-80 transition-all duration-500 mask-3 hover:opacity-100 peer-checked:opacity-100 [&_img]:grayscale hover:[&_img]:grayscale-0 peer-checked:[&_img]:grayscale-0">
                 <loadImg
@@ -183,7 +183,7 @@ onMounted(() => {})
                 :popperTriggers="['hover']"
                 :delay="{ show: 1400, hide: 0 }"
                 placement="bottom"
-                :disabled="rune.path == 'none'"
+                :disabled="rune.path == 'empty'"
                 id="imgwrap"
                 class="h-[inherit] w-[inherit] opacity-80 brightness-90 transition-all duration-500 hover:opacity-100 peer-checked:opacity-100 peer-checked:brightness-100 [&_img]:grayscale hover:[&_img]:grayscale-0 peer-checked:[&_img]:grayscale-0">
                 <div class="overflow-hidden">
@@ -216,7 +216,7 @@ onMounted(() => {})
                 :value="rune"
                 v-model="selected.s1"
                 class="peer hidden"
-                :disabled="rune.path == 'none'" />
+                :disabled="rune.path == 'empty'" />
 
             <input
                 v-if="rune.tier == 2 && props.set == 2"
@@ -224,7 +224,7 @@ onMounted(() => {})
                 :value="rune"
                 v-model="selected.s2"
                 class="peer hidden"
-                :disabled="rune.path == 'none'" />
+                :disabled="rune.path == 'empty'" />
 
             <VDropdown
                 theme="default"
@@ -233,7 +233,7 @@ onMounted(() => {})
                 placement="bottom"
                 :delay="{ show: 1400, hide: 0 }"
                 :distance="8"
-                :disabled="rune.path == 'none'"
+                :disabled="rune.path == 'empty'"
                 id="imgwrap"
                 class="shine h-[inherit] w-[inherit] opacity-80 brightness-90 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 peer-checked:opacity-100 peer-checked:brightness-100 peer-checked:grayscale-0">
                 <div class="overflow-hidden rounded-full">
@@ -301,7 +301,7 @@ onMounted(() => {})
     }
 }
 
-.none {
+.empty {
     [data-tier='0'] {
         img {
             @apply rounded-full border border-neutral/15 transition-all duration-500;

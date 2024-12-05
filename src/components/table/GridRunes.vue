@@ -3,7 +3,8 @@ import { computed } from 'vue'
 import { Item, Rune } from 'types'
 import { usePocketStore } from '@/stores/pocketStore'
 import { useGeneralStore } from '@/stores/generalStore'
-import { runeColors } from '@lib/functions/GetColor'
+import { runeColors } from '@utils/GetColor'
+import { getPocket } from '@utils/pocketUtilities'
 const props = defineProps<{
     params: {
         data: {
@@ -23,7 +24,7 @@ const props = defineProps<{
 const gs = useGeneralStore()
 
 const ps = usePocketStore()
-const pocket = ps.getPocket(props.params.data.key)
+const pocket = getPocket(props.params.data.key)
 const runeSet = computed(() => {
     if (!pocket) {
         return
@@ -44,7 +45,7 @@ const keystone = computed(() => {
     <!------------------------⟢ runes ⟣------------------------->
     <PocketMenu v-if="pocket" :pocket="pocket" type="context">
         <div class="flex size-full items-center justify-center gap-3">
-            <template v-if="keystone && keystone.name != 'none' && runeSet">
+            <template v-if="keystone && keystone.name != 'empty' && runeSet">
                 <RouterLink
                     :to="`/pocket/${pocket.key}/runes`"
                     class="relative grid aspect-square !size-14 shrink-0 cursor-pointer place-items-center items-center rounded-full bg-gradient-to-br from-transparent to-75% shadow-sm"
@@ -72,7 +73,7 @@ const keystone = computed(() => {
 
             <!-- <template
                     v-if="
-                        runeSet.secondary != 'none' &&
+                        runeSet.secondary != 'empty' &&
                         runeSet.secondary != 'undefined' &&
                         runeSet
                     ">

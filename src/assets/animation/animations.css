@@ -1,6 +1,5 @@
 @import './pop.css';
 @import './fade.css';
-@import './Shine.css';
 
 .fadeSimple-enter-active {
     @apply transition-all duration-700;

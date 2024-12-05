@@ -237,6 +237,34 @@ export const useDataStore = defineStore('dataStore', () => {
                     shards.value.push(object as Shard)
                 }
             })
+
+            fetchBlankRunes()
+        } catch (error) {
+            console.error('Failed to fetch data:', error)
+        }
+    }
+
+    const fetchBlankRunes = async () => {
+        try {
+            const response = await fetch('/api/blankRunes.json')
+            if (!response.ok) {
+                throw new Error(
+                    `Network response was not ok: ${response.statusText}`
+                )
+            }
+
+            const contentType = response.headers.get('content-type')
+            if (!contentType || !contentType.includes('application/json')) {
+                throw new TypeError('Received non-JSON response')
+            }
+
+            const json: DataObject[] = await response.json()
+
+            json.forEach((object: DataObject) => {
+                if (object.type === 'rune') {
+                    runes.value.push(object as Rune)
+                }
+            })
         } catch (error) {
             console.error('Failed to fetch data:', error)
         }

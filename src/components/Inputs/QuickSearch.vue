@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { defineProps, defineEmits, computed } from 'vue'
-import { imageIn, imageOut } from '@/Assets/Animation/animations'
+import { imageIn, imageOut } from '@/assets/animation/animations'
 import type { HTMLAttributes } from 'vue'
 
 // Define props for reusability

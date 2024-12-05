@@ -18,11 +18,11 @@ export const columnDefs = ref([
         headerName: 'Pocket',
         field: 'name',
         cellRenderer: 'TableName',
-        width: 220,
+        width: 250,
         //hide: true,
         maxWidth: 300,
         minWidth: 85,
-        cellClass: '!m-0 !p-0',
+        cellClass: '!m-0 px-2',
         filterValueGetter: (params) => {
             const name = params.data.name.split(' ')
             return name

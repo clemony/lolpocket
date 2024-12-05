@@ -1,10 +1,11 @@
 import { useGeneralStore } from '@stores/generalStore'
 
-export function toggleModalState(modalData, pocket?) {
+export function toggleDrawerState(drawerData, pocket?) {
     const gs = useGeneralStore()
-    gs.modalState = !gs.modalState
-    gs.modalValue = modalData
-    pocket ? (gs.modalPocket = pocket) : ''
+
+    gs.drawerValue = drawerData
+    pocket ? (gs.drawerPocket = pocket) : gs.drawerPocket = null
+    gs.drawerState = !gs.drawerState
 }
 
 export function scrollToSection(el) {

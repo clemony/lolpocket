@@ -38,7 +38,7 @@ const pocket = props.pocket
                         pocket.runes[0].runeSets[pocket.runes[0].starred]
                             .keystone &&
                         pocket.runes[0].runeSets[pocket.runes[0].starred]
-                            .keystone.name != 'none'
+                            .keystone.name != 'empty'
                     "
                     class="flex !aspect-square size-[40px] justify-center rounded-lg drop-shadow-sm">
                     <img
@@ -51,7 +51,7 @@ const pocket = props.pocket
 
                 <Placeholder v-else :size="40" class="rounded-lg" />
 
-                <!--   <div v-if="pocket.runes[0].runeSets[pocket.runes[0].starred].secondary && pocket.runes[0].runeSets[pocket.runes[0].starred].secondary != 'none'"
+                <!--   <div v-if="pocket.runes[0].runeSets[pocket.runes[0].starred].secondary && pocket.runes[0].runeSets[pocket.runes[0].starred].secondary != 'empty'"
                                         class=' rounded !aspect-square size-5 flex justify-center p-px shadow-sm'>
                                         <img :src="`/img/runes/${pocket.runes[0].runeSets[pocket.runes[0].starred].secondary}.webp`"
                                             class='h-full w-auto  shrink-0  object-contain'>

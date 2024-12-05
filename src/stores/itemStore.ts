@@ -37,7 +37,9 @@ export const useItemStore = defineStore(
         )
 
         function handleLike(thisItem) {
-            if (favoriteItems.value.some((item) => item.name === thisItem.name)) {
+            if (
+                favoriteItems.value.some((item) => item.name === thisItem.name)
+            ) {
                 const index = favoriteItems.value.findIndex(
                     (item) => item.name === thisItem.name
                 )
@@ -63,7 +65,7 @@ export const useItemStore = defineStore(
 
         function addToSet(pocket, itemSet, item) {
             const ps = usePocketStore()
-            const thisPocket = ps.getPocket(pocket)
+            const thisPocket = getPocket(pocket)
             const set = thisPocket?.items[0].itemSets.find(
                 (set) => set.key === itemSet
             )
@@ -75,7 +77,7 @@ export const useItemStore = defineStore(
 
         function removeFromSet(pocket, itemSet, itemx) {
             const ps = usePocketStore()
-            const thisPocket = ps.getPocket(pocket)
+            const thisPocket = getPocket(pocket)
             const set = thisPocket?.items[0].itemSets.find(
                 (set) => set.key === itemSet
             )

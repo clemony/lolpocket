@@ -54,26 +54,26 @@ const sTabs = ref('sTabs')
         <Card class="shadow-smooth">
             <CardContent class="h-36 overflow-hidden rounded-lg p-0">
                 <LgChampion
-                    v-if="pocket.champions[0].starred"
+                    v-if="pocket.champions[0].champions[0]"
                     :pocket="pocket" />
 
                 <div
                     v-else
                     class="text-middle flex size-full items-center justify-center">
                     <p
-                        class="items-center whitespace-pre-line text-pretty px-12 align-middle font-serif text-lg tracking-wide [text-align-last:right]">
+                        class="font-cursive items-center whitespace-pre-line text-pretty px-12 align-middle text-lg [text-align-last:right]">
                         {{ formattedQuote() }}
                     </p>
                 </div>
             </CardContent>
         </Card>
 
-        <Tabs default-value="spells" class="w-full">
-            <!--             <TabsList class="mb-2 mt-5 bg-transparent [&_button]:rounded-md">
+        <Tabs default-value="spells">
+            <TabsList class="!mb-1 mt-5 [&_button]:rounded-md">
                 <TabsTrigger value="spells">Spells</TabsTrigger>
                 <TabsTrigger value="runes">Runes</TabsTrigger>
                 <TabsTrigger value="notes">Notes</TabsTrigger>
-            </TabsList> -->
+            </TabsList>
 
             <TabsContent value="spells">
                 <DashboardSpells :pocket="pocket" />

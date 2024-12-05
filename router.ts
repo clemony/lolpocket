@@ -1,22 +1,22 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Table from './src/pages/PocketTables.vue'
 import Settings from './src/pages/Settings.vue'
-import Trash from './src/pages/trash.vue'
-import Archive from './src/pages/archive.vue'
+import Trash from './src/pages/Trash.vue'
+import Archive from './src/pages/Archive.vue'
 import Cards from './src/pages/PocketCards.vue'
 import Favorites from './src/pages/Favorites.vue'
 
 import { usePocketStore } from '@/stores/pocketStore'
 import { useGeneralStore } from '@stores/generalStore'
 
-import Home from './src/pages/home.vue'
-import Runes from './src/pages/runes.vue'
+import Home from './src/pages/Home.vue'
+import Runes from './src/pages/Runes.vue'
 
 const routes: RouteRecordRaw[] = [
     {
         path: '/about',
         name: 'about',
-        component: () => import('./src/pages/about.vue'),
+        component: () => import('./src/pages/About.vue'),
     },
     {
         path: '/archive',
@@ -31,7 +31,7 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/champions',
         name: 'champions',
-        component: () => import('./src/pages/champions.vue'),
+        component: () => import('./src/pages/Champions.vue'),
     },
     {
         path: '/home',
@@ -46,7 +46,7 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/items',
         name: 'items',
-        component: () => import('./src/pages/items.vue'),
+        component: () => import('./src/pages/iIems.vue'),
     },
     {
         path: '/favorites',
@@ -204,4 +204,20 @@ const router = createRouter({
     },
 })
 
+router.afterEach((to, from) => {
+    const gs = useGeneralStore()
+    const route = to.name.toString()
+    const history = gs.routeHistory
+
+    if (history.includes(route)) {
+        console.log('is in history?', history.includes(route))
+        const a = history.findIndex((route) => route)
+        console.log('splicing', a)
+        history.splice(a, 1)
+    }
+
+    history.push(route)
+    history.length > 5 ? history.splice(0, 1) : ''
+    console.log(history)
+})
 export default router

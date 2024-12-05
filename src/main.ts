@@ -1,4 +1,5 @@
-import App from '@/Pages/App.vue'
+import App from '@/pages/App.vue'
+
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import { PiniaColada } from '@pinia/colada'
@@ -9,7 +10,6 @@ import router from '../router'
 import { FloatingVue, floatingVueOptions } from '@/config/floating-vue'
 import Shortkey from 'vue3-shortkey'
 
-// Create a new Vue application instance
 const app = createApp(App)
 
 console.log('Initializing Pinia...')
@@ -24,5 +24,5 @@ app.use(kinesisPlugin)
 app.use(router)
 app.use(FloatingVue, floatingVueOptions)
 app.use(Shortkey)
-// Mount the app to the element with id "app" in your HTML
+
 app.mount('#app')

@@ -44,9 +44,10 @@ export interface menuItem {
     subMenu?: Array<menuItem>
 }
 
-export interface modal {
+export interface drawer {
     component?: any
     id?: string
+    direction?: string
     title?: string
     description?: string
     submitText?: string
@@ -186,9 +187,9 @@ export interface RuneSet {
     s1: Rune
     s2: Rune
     shards: {
-        shard1: Shard
-        shard2: Shard
-        shard3: Shard
+        0: Shard
+        1: Shard
+        2: Shard
     }
 }
 

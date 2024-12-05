@@ -42,25 +42,25 @@ module.exports = {
     theme: {
         fontFamily: {
             sans: ['Geist Sans', 'sans-serif'],
-            serif: ['Roboto Serif Variable', 'serif'],
-            mono: ['Geist Mono', 'monospace'],
+            serif: ['Noto Serif Georgian Variable', 'serif'],
+            mono: ['Victor Mono Variable', 'monospace'],
         },
 
         fontSize: {
-            xs: ['0.8rem', { lineHeight: '1rem' }],
-            sm: ['0.93rem', { lineHeight: '1.25rem' }],
-            base: ['1rem', { lineHeight: '1.5rem' }],
-            lg: ['1.125rem', { lineHeight: '1.75rem' }],
-            xl: ['1.25rem', { lineHeight: '1.75rem' }],
-            6: ['1.35rem', { lineHeight: '1.75rem' }],
-            '2xl': ['1.5rem', { lineHeight: '2rem' }],
-            '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-            '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-            '5xl': ['2.9rem', { lineHeight: '1' }],
-            '6xl': ['3.75rem', { lineHeight: '1' }],
-            '7xl': ['4.5rem', { lineHeight: '1' }],
-            '8xl': ['6rem', { lineHeight: '1' }],
-            '9xl': ['8rem', { lineHeight: '1' }],
+            xs: ['var(--text-1)', { lineHeight: '1rem' }],
+            sm: ['var(--text-2)', { lineHeight: '1.5rem' }],
+            base: ['var(--text-3)', { lineHeight: '1.5rem' }],
+            lg: ['var(--text-4)', { lineHeight: '1.75rem' }],
+            xl: ['var(--text-5)', { lineHeight: '1.75rem' }],
+            6: ['var(--text-6)', { lineHeight: '1.75rem' }],
+            '2xl': ['var(--text-7)', { lineHeight: '2rem' }],
+            '3xl': [' var(--text-8) ', { lineHeight: '2.25rem' }],
+            '4xl': ['var(--text-9)', { lineHeight: '2.5rem' }],
+            '5xl': ['var(--text-10)', { lineHeight: '1' }],
+            '6xl': ['var(--text-11)', { lineHeight: '1' }],
+            '7xl': ['var(--text-12)', { lineHeight: '1' }],
+            '8xl': ['var(--text-13)', { lineHeight: '1' }],
+            '9xl': ['var(--text-14)', { lineHeight: '1' }],
         },
 
         extend: {
@@ -68,17 +68,28 @@ module.exports = {
                 'header-min': '230px',
             },
             colors: {
-                blues: '#7195AD',
-                cyans: '#9AC4BF',
                 'tea-rose': '#E2ACAC',
                 'dark-rose': '#CE8E8E',
                 'old-rose': '#CE8E8E',
-                precision: '#ebcb8b',
-                domination: '#bf616a',
-                inspiration: '#A4C1C4',
-                sorcery: '#b48dad',
-                resolve: '#a3be8c',
                 current: 'currentColor',
+
+                precision: 'var(--precision)',
+                'precision-light': 'var(--precision-light)',
+
+                domination: 'var(--domination)',
+                'domination-light': 'var(--domination-light)',
+
+                sorcery: 'var(--sorcery)',
+                'sorcery-light': 'var(--sorcery-light)',
+
+                resolve: 'var(--resolve)',
+                'resolve-light': 'var(--resolve-light)',
+
+                inspiration: 'var(--inspiration)',
+                'inspiration-light': 'var(--inspiration-light)',
+
+                empty: 'var(--empty)',
+                'empty-light': 'var(--empty-light)',
             },
             flexBasis: {
                 18: '4.5rem',

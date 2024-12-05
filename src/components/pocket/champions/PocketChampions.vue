@@ -3,6 +3,7 @@ import { useChampStore } from '@/stores/champStore'
 import { usePocketStore } from '@/stores/pocketStore'
 import { useDataStore } from '@/stores/dataStore'
 import { useItemStore } from '@/stores/itemStore'
+import { getPocket } from '@utils/pocketUtilities'
 const ds = useDataStore()
 const is = useItemStore()
 const cs = useChampStore()
@@ -12,7 +13,7 @@ const props = defineProps<{
     pocketKey: string
 }>()
 
-const pocket = ref(ps.getPocket(props.pocketKey))
+const pocket = ref(getPocket(props.pocketKey))
 const dataValue = ref()
 </script>
 
@@ -22,10 +23,19 @@ const dataValue = ref()
             <div class="h-full w-[97%]">
                 <InfoCard
                     title="Selected Champions"
-                    description="Drag champions up, add from the sidebar and context menus, or quick search by pressing the empty slot right here.">
-                    <ChampionsSelected
+                    description="Drag champions up, add from the sidebar and context menus, or quick search by pressing the empty slot right here."
+                    class="">
+                    <div class="relative">
+                        <div
+                            class="absolute left-1.5 top-1.5 z-10 rounded-full border-2 border-precision bg-neutral/70 p-1.5 opacity-85 ring-1 ring-neutral/40 backdrop-blur-md">
+                            <icon
+                                icon="fontisto:star"
+                                class="-ml-px -mt-2px size-4 shrink-0 object-center text-precision drop-shadow-sm" />
+                        </div>
+                    </div>
+                    <SelectedChampions
                         v-if="pocket"
-                        :pocketKey="pocket.key"
+                        :pocket="pocket"
                         class="px-1" />
                 </InfoCard>
 
@@ -66,7 +76,7 @@ const dataValue = ref()
                             class="!max-h-inherit !h-inherit !overflow-y-auto">
                             <ChampionList
                                 v-if="pocket"
-                                :pocketKey="pocket.key"
+                                :pocket="pocket"
                                 class="px-5 pt-14" />
                         </ScrollArea>
                     </CardContent>

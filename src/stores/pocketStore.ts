@@ -31,10 +31,6 @@ export const usePocketStore = defineStore(
             return pockets.value.filter((pocket) => !pocket.pinned)
         })
 
-        function getPocket(key) {
-            return pockets.value.find((pocket: pocket) => pocket.key === key)
-        }
-
         const updatePocketType = (key: string, newTags: Array<string>) => {
             const findPocket = pockets.value.find(
                 (pocket) => pocket.key === key
@@ -49,7 +45,6 @@ export const usePocketStore = defineStore(
             filterText,
             patch,
             archivePockets,
-            getPocket,
             trashPockets,
             updatePocketType,
             selectedRows,
