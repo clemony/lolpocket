@@ -73,6 +73,12 @@ module.exports = {
                 'old-rose': '#CE8E8E',
                 current: 'currentColor',
 
+                b1: 'var(--b1)',
+                b2: 'var(--b2)',
+                b3: 'var(--b3)',
+                accent: 'var(--accent)',
+                'accent-content': 'var(--accent-content)',
+
                 precision: 'var(--precision)',
                 'precision-light': 'var(--precision-light)',
 
