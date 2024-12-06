@@ -43,7 +43,7 @@ console.log(router)
 
             <Sidebar
                 collapsible="icon"
-                class="justify-center border border-b-base-300 border-l-base-200 border-r-transparent">
+                class="justify-center border border-b-b3 border-l-b2 border-r-transparent">
                 <SidebarContent class="pt-16">
                     <ScrollArea>
                         <SidebarGroup>
@@ -51,7 +51,7 @@ console.log(router)
                                 <SidebarMenuItem>
                                     <RouterLink
                                         to="/home"
-                                        active-class="bg-base-200/30">
+                                        active-class="bg-b2/30">
                                         <SidebarMenuButton>
                                             <icon
                                                 icon="teenyicons:home-outline"
@@ -78,7 +78,7 @@ console.log(router)
             <SidebarInset class="relative">
                 <div
                     data-tauri-drag-region
-                    class="absolute inset-0 left-0 top-0 m-0 h-full w-full overflow-y-clip border border-y-base-300 border-l-transparent border-r-base-300 !p-0">
+                    class="absolute inset-0 left-0 top-0 m-0 h-full w-full overflow-y-clip border border-y-b3 border-l-transparent border-r-b3 !p-0">
                     <router-view v-slot="{ Component }">
                         <KeepAlive
                             :include="[

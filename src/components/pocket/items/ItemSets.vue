@@ -86,7 +86,7 @@ const prevIndex = 0
                 :cardClass="{
                     '@container/set relative w-[calc(100%-48px)]  inset-0 before:absolute before:bg-transparent before:border  before:w-full before:h-full  before:pointer-events-none before:border-transparent before:z-50  mx-[24px] before:rounded-xl ':
                         set,
-                    ' before:border-neutral/50 before:shadow-inner':
+                    ' before:border-accent/50 before:shadow-inner':
                         set == is.selectedSet,
                 }">
                 <template #header>
@@ -108,7 +108,7 @@ const prevIndex = 0
                         <InputEditable
                             v-model:modelValue="set.name"
                             :defaultValue="set.name"
-                            class="hidden w-fit min-w-24 items-center truncate border-transparent text-start align-baseline !text-base font-medium capitalize transition-all duration-300 focus-within:border-base-200 hover:border-base-200 @[230px]/set:flex">
+                            class="hidden w-fit min-w-24 items-center truncate border-transparent text-start align-baseline !text-base font-medium capitalize transition-all duration-300 focus-within:border-b2 hover:border-b2 @[230px]/set:flex">
                             <Button
                                 variant="simple"
                                 size="xs"
@@ -184,7 +184,7 @@ const prevIndex = 0
             </DisplayCard>
         </TransitionGroup>
         <Card
-            class="mb-12 grid h-[60px] w-full cursor-pointer items-center justify-center border-base-200 bg-base-200/10 opacity-80 !shadow-sm transition-all duration-300 hover:bg-base-200/60 hover:opacity-100 hover:shadow-inset-sm"
+            class="mb-12 grid h-[60px] w-full cursor-pointer items-center justify-center border-b2 bg-b2/10 opacity-80 !shadow-sm transition-all duration-300 hover:bg-b2/60 hover:opacity-100 hover:shadow-inset-sm"
             @click="newItemSet(pocket.key)">
             <icon icon="teenyicons:add-outline" class="size-6 opacity-40" />
         </Card>
@@ -203,6 +203,6 @@ const prevIndex = 0
 }
 
 .ghost {
-    @apply m-4 w-[96%] rounded-xl bg-base-200;
+    @apply m-4 w-[96%] rounded-xl bg-b2;
 }
 </style>

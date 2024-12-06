@@ -27,25 +27,27 @@ export { default as SidebarTrigger } from './SidebarTrigger.vue'
 export { useSidebar } from './utils'
 
 export const sidebarMenuButtonVariants = cva(
-  'peer/menu-button flex w-full items-center gap-4 overflow-hidden rounded-md p-2 text-left text-sm+ outline-none ring-neutral/5 transition-[width,height,padding] hover:bg-base-200 hover:text-base-content focus-visible:ring-1 active:bg-neutral/5 active:text-base-content disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-neutral/5 data-[active=true]: data-[active=true]:text-base-content data-[state=open]:hover:bg-base-200 data-[state=open]:hover:text-base-content group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-0 [&>span:last-child]:truncate [&>svg]:size-4.5 [&>svg]:shrink-0',
-  {
-    variants: {
-      variant: {
-        default: 'hover:bg-base-200 hover:text-base-content',
-        outline:
-          'bg-transparent shadow-[0_0_0_1px_hsl(var(--base-300))] hover:bg-base-300 hover:text-base-content hover:shadow-[0_0_0_1px_hsl(var(--sidebar-accent))]',
-      },
-      size: {
-        default: 'h-8 text-sm+',
-        sm: 'h-7 text-sm+',
-        lg: 'h-12 text-sm+ group-data-[collapsible=icon]:!p-0',
-      },
-    },
-    defaultVariants: {
-      variant: 'default',
-      size: 'default',
-    },
-  },
+    'peer/menu-button flex w-full items-center gap-4 overflow-hidden rounded-md p-2 text-left text-sm+ outline-none ring-accent/5 transition-[width,height,padding] hover:bg-b2 hover:text-ac focus-visible:ring-1 active:bg-accent/5 active:text-ac disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-accent/5 data-[active=true]: data-[active=true]:text-ac data-[state=open]:hover:bg-b2 data-[state=open]:hover:text-ac group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-0 [&>span:last-child]:truncate [&>svg]:size-4.5 [&>svg]:shrink-0',
+    {
+        variants: {
+            variant: {
+                default: 'hover:bg-b2 hover:text-ac',
+                outline:
+                    'bg-transparent shadow-[0_0_0_1px_hsl(var(--b3))] hover:bg-b3 hover:text-ac hover:shadow-[0_0_0_1px_hsl(var(--sidebar-accent))]',
+            },
+            size: {
+                default: 'h-8 text-sm+',
+                sm: 'h-7 text-sm+',
+                lg: 'h-12 text-sm+ group-data-[collapsible=icon]:!p-0',
+            },
+        },
+        defaultVariants: {
+            variant: 'default',
+            size: 'default',
+        },
+    }
 )
 
-export type SidebarMenuButtonVariants = VariantProps<typeof sidebarMenuButtonVariants>
+export type SidebarMenuButtonVariants = VariantProps<
+    typeof sidebarMenuButtonVariants
+>

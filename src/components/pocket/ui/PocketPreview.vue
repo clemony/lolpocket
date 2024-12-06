@@ -21,7 +21,7 @@ const pocket = props.pocket
             <div class="">
                 <div
                     v-if="pocket.champions[0].starred"
-                    class="grid size-[40px] shrink-0 place-items-center overflow-hidden rounded-lg shadow-sm ring-0 ring-neutral/25">
+                    class="grid size-[40px] shrink-0 place-items-center overflow-hidden rounded-lg shadow-sm ring-0 ring-accent/25">
                     <img
                         :src="`/img/champions/${clean(pocket.champions[0].starred)}.webp`"
                         class="size-[40px] scale-[115%]" />

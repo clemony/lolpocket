@@ -40,13 +40,13 @@ const isLiked = computed(() => {
             class="relative grid w-80 !min-w-60 max-w-96 overscroll-none p-4"
             hideWhenDetached>
             <div
-                class="grid w-full grid-cols-[1fr_3fr] gap-2 border-b border-base-200 pb-3">
+                class="grid w-full grid-cols-[1fr_3fr] gap-2 border-b border-b2 pb-3">
                 <div class="col-start-1 h-full">
                     <img
                         :key="item.id"
                         :src="`/img/items/${item.id}.webp`"
                         :alt="item.name + ' Image'"
-                        class="pointer-events-none size-14 rounded-md border border-base-300 shadow-warm" />
+                        class="pointer-events-none size-14 rounded-md border border-b3 shadow-warm" />
                 </div>
 
                 <!---------------------------⟢ Header ⟣---------------------------->
@@ -60,7 +60,7 @@ const isLiked = computed(() => {
                     <div class="flex items-end justify-end gap-2">
                         <Button
                             size="xs"
-                            variant="neutral"
+                            variant="accent"
                             class="group/liked relative aspect-square rounded-full p-2 *:absolute *:size-4.5 *:shrink-0 *:transition-all *:duration-100 hover:opacity-75"
                             @click="is.handleLike(item)">
                             <icon
@@ -70,12 +70,12 @@ const isLiked = computed(() => {
                             <icon
                                 icon="teenyicons:heart-outline"
                                 class=""
-                                :class="{ 'text-neutral/20': isLiked }" />
+                                :class="{ 'text-accent/20': isLiked }" />
                         </Button>
 
                         <Button
                             size="xs"
-                            variant="neutral"
+                            variant="accent"
                             :href="item.wiki"
                             target="_blank"
                             class="aspect-square overflow-hidden rounded-full p-2 hover:opacity-75"
@@ -97,7 +97,7 @@ const isLiked = computed(() => {
                                 as-child>
                                 <Button
                                     size="xs"
-                                    variant="neutral"
+                                    variant="accent"
                                     class="rounded-full">
                                     <icon
                                         icon="teenyicons:add-solid"
@@ -121,7 +121,7 @@ const isLiked = computed(() => {
 
                         <button
                             v-if="props.variant == 'remove' && set"
-                            class="btn btn-circle btn-neutral btn-xs aspect-square hover:opacity-75"
+                            class="btn btn-circle btn-accent btn-xs aspect-square hover:opacity-75"
                             alt="remove from set"
                             title="remove from set"
                             @click="
@@ -134,7 +134,7 @@ const isLiked = computed(() => {
 
                         <button
                             v-if="props.variant == 'remove' && props.champ"
-                            class="btn btn-circle btn-neutral btn-xs aspect-square hover:opacity-75"
+                            class="btn btn-circle btn-accent btn-xs aspect-square hover:opacity-75"
                             alt="remove from set"
                             title="remove from set"
                             @click="cs.removeFromSet(item, props.champ)">
@@ -174,7 +174,7 @@ const isLiked = computed(() => {
                 </div>
                 <!--  {{ item.passive }} first-line:font-bold  first-line:tracking-wide-->
             </ScrollArea>
-            <div class="flex items-end border-t border-t-base-200 pt-2">
+            <div class="flex items-end border-t border-t-b2 pt-2">
                 <p
                     v-if="item.id"
                     class="flex grow items-center gap-3 pt-2 align-text-bottom leading-none">

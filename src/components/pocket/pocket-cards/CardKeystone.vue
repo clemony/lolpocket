@@ -8,9 +8,9 @@ const props = defineProps<{
 </script>
 <template>
     <div
-        class="absolute left-3 top-3 z-20 flex size-16 items-center justify-center rounded-full bg-neutral shadow-warm ring-1 ring-neutral/20 backdrop-blur-sm"
+        class="absolute left-3 top-3 z-20 flex size-16 items-center justify-center rounded-full bg-accent shadow-warm ring-1 ring-accent/20 backdrop-blur-sm"
         :style="{
-            //outlineColor: 'var(oklch(--n) / 0.2)',
+            //outlineColor: 'var(--n) / 0.2',
             borderColor: `var(--${set.primary})`,
             borderWidth: '4px',
             borderStyle: 'solid',

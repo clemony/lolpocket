@@ -47,7 +47,7 @@ onMounted(async () => {
                         <PopoverTrigger aschild>
                             <Button
                                 variant="ghost"
-                                class="relative -ml-2.5 h-fit justify-start ring-base-200 hover:bg-transparent hover:ring-1">
+                                class="relative -ml-2.5 h-fit justify-start ring-b2 hover:bg-transparent hover:ring-1">
                                 <!--        <ItemsetModel
                                     :pocket="props.pocket"
                                     :model="start"
@@ -86,7 +86,7 @@ onMounted(async () => {
                         <PopoverTrigger>
                             <Button
                                 variant="ghost"
-                                class="justify-core relative -ml-2.5 h-fit ring-base-200 hover:bg-transparent hover:ring-1">
+                                class="justify-core relative -ml-2.5 h-fit ring-b2 hover:bg-transparent hover:ring-1">
                                 <!--    <ItemsetModel
                                     :pocket="props.pocket"
                                     :model="core" /> -->
@@ -124,7 +124,7 @@ onMounted(async () => {
                         <PopoverTrigger>
                             <Button
                                 variant="ghost"
-                                class="justify-final relative -ml-2.5 h-fit ring-base-200 hover:bg-transparent hover:ring-1">
+                                class="justify-final relative -ml-2.5 h-fit ring-b2 hover:bg-transparent hover:ring-1">
                                 <!--    <ItemsetModel
                                     :pocket="props.pocket"
                                     :model="final" /> -->

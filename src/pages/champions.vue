@@ -76,7 +76,7 @@ onMounted(async () => {
         </div>
 
         <div
-            class="absolute left-0 top-0 z-10 flex !h-fit w-full flex-wrap items-center justify-end gap-4 border-b border-b-base-300 bg-base-100/90 px-4 py-1 backdrop-blur-md">
+            class="absolute left-0 top-0 z-10 flex !h-fit w-full flex-wrap items-center justify-end gap-4 border-b border-b-b3 bg-b1/90 px-4 py-1 backdrop-blur-md">
             <h2 class="grow justify-start text-base font-semibold">Primary</h2>
             <select
                 class="align-self-end select select-bordered select-xs max-w-xs justify-self-end shadow-inner">
@@ -98,7 +98,7 @@ onMounted(async () => {
                 :data-index="index"
                 class="">
                 <button
-                    class="item-wrapper__item pointer-events-auto flex aspect-square min-w-[60px] max-w-[70px] grow basis-14 place-items-center overflow-hidden rounded-md bg-cover ring-1 ring-base-300 ring-offset-1 ring-offset-base-100 drop-shadow-sm hover:ring-offset-primary has-[:checked]:ring-offset-2 has-[:checked]:ring-offset-secondary"
+                    class="item-wrapper__item pointer-events-auto flex aspect-square min-w-[60px] max-w-[70px] grow basis-14 place-items-center overflow-hidden rounded-md bg-cover ring-1 ring-b3 ring-offset-1 ring-offset-b1 drop-shadow-sm hover:ring-offset-primary has-[:checked]:ring-offset-2 has-[:checked]:ring-offset-secondary"
                     @click="ds.setSelectedChampion(champion)">
                     <div class="grid-image-container champ">
                         <img

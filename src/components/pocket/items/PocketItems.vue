@@ -90,13 +90,13 @@ const likeText = computed(() => {
                             @update:search="is.searchFilter = $event"
                             iconClass="p-2.5 -ml-2"
                             inputClass="pr-6 pl-12 "
-                            class="max-w-1/2 h-10 justify-self-start bg-base-100/40 [&_input]:join-item [&_input]:!rounded-l-lg" />
+                            class="max-w-1/2 h-10 justify-self-start bg-b1/40 [&_input]:join-item [&_input]:!rounded-l-lg" />
 
                         <Label
                             @click.stop
                             variant="outline"
                             size="icon"
-                            class="join-item swap swap-flip relative aspect-square size-10 shrink-0 border-base-200 has-[:disabled]:cursor-default"
+                            class="join-item swap swap-flip relative aspect-square size-10 shrink-0 border-b2 has-[:disabled]:cursor-default"
                             alt="Filter Likes">
                             <input
                                 type="checkbox"
@@ -128,7 +128,7 @@ const likeText = computed(() => {
 
                         <FilterButton
                             class="join-item !rounded-l-none"
-                            :class="{ 'bg-base-200': isOpen == true }">
+                            :class="{ 'bg-b2': isOpen == true }">
                             hi
                         </FilterButton>
                     </div>

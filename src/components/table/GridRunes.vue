@@ -51,7 +51,7 @@ const keystone = computed(() => {
                     class="relative grid aspect-square !size-14 shrink-0 cursor-pointer place-items-center items-center rounded-full bg-gradient-to-br from-transparent to-75% shadow-sm"
                     :class="runeColors(runeSet)">
                     <div
-                        class="grid size-full place-items-center rounded-full bg-gradient-to-br from-base-100/90 to-base-100/40 p-1 backdrop-blur-md">
+                        class="grid size-full place-items-center rounded-full bg-gradient-to-br from-b1/90 to-b1/40 p-1 backdrop-blur-md">
                         <KinesisContainer
                             :disabled="gs.reducedMotion == true"
                             :perspective="100"
@@ -90,7 +90,7 @@ const keystone = computed(() => {
                                 :strength="5"
                                 class="group flex size-full items-center">
                                 <div
-                                    class="!aspect-square !size-14 cursor-pointer overflow-clip rounded-full bg-base-100/70 p-2.5 backdrop-blur-md group-hover:scale-90">
+                                    class="!aspect-square !size-14 cursor-pointer overflow-clip rounded-full bg-b1/70 p-2.5 backdrop-blur-md group-hover:scale-90">
                                     <img
                                         :src="`/img/runes/${runeSet.secondary}.webp`"
                                         class="size-full !object-contain drop-shadow-softest transition-all duration-200 hover:opacity-80" />

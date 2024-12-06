@@ -15,7 +15,7 @@ const settings = useGeneralStore()
             <LayoutSpacer class="!h-10" />
             <h1 class="!text-3xl font-semibold">Settings</h1>
 
-            <nav class="flex flex-col gap-5 pl-6 text-base-content/80">
+            <nav class="flex flex-col gap-5 pl-6 text-ac/80">
                 <a href="#" class="font-semibold">General</a>
                 <a href="#">Appearance</a>
                 <a href="#">Storage</a>

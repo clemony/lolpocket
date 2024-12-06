@@ -18,7 +18,7 @@ const props = defineProps<
         :as-child="asChild"
         :class="
             cn(
-                'text-sm+text-base-content absolute right-3 top-3.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 outline-none ring-base-300 transition-transform hover:bg-base-200 hover:text-base-content focus-visible:ring-2 [&>svg]:size-5 [&>svg]:shrink-0',
+                'text-sm+text-ac absolute right-3 top-3.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 outline-none ring-b3 transition-transform hover:bg-b2 hover:text-ac focus-visible:ring-2 [&>svg]:size-5 [&>svg]:shrink-0',
                 // Increases the hit area of the button on mobile.
                 'after:absolute after:-inset-2 after:md:hidden',
                 'group-data-[collapsible=icon]:hidden',

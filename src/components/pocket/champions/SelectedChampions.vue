@@ -48,7 +48,7 @@ const champions = computed(() => {
         <div
             v-for="(champion, index) in pocket.champions[0].champions"
             :key="champion.name"
-            class="relative grid size-22 shrink-0 place-items-center rounded-lg border border-base-300 shadow-warm first:ring-1 first:ring-neutral/40 first:ring-offset-2 first:ring-offset-precision">
+            class="relative grid size-22 shrink-0 place-items-center rounded-lg border border-b3 shadow-warm first:ring-1 first:ring-accent/40 first:ring-offset-2 first:ring-offset-precision">
             <label
                 class="size-full overflow-hidden rounded-lg"
                 dragClass="setDrag">
@@ -65,7 +65,7 @@ const champions = computed(() => {
 
             <button
                 @click="cs.removeChamp(champion.name, pocket)"
-                class="absolute right-1.5 top-1.5 rounded-full bg-base-100 opacity-0 transition-all duration-300 group-hover:opacity-70">
+                class="absolute right-1.5 top-1.5 rounded-full bg-b1 opacity-0 transition-all duration-300 group-hover:opacity-70">
                 <icon icon="teenyicons:x-circle-solid" />
             </button>
         </div>

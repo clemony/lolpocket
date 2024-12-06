@@ -53,7 +53,7 @@ const pageStyle = computed(() => ({
                     :class="
                         cn(
                             /*base */
-                            'top-1/2 z-0 size-3/4 overflow-hidden rounded-2xl bg-base-100',
+                            'top-1/2 z-0 size-3/4 overflow-hidden rounded-2xl bg-b1',
 
                             /* children */
                             '[&_nth-child(2)]:-top-10',
@@ -83,11 +83,11 @@ const pageStyle = computed(() => ({
                     :disabled="!gs.commandOpen ? true : false" />
 
                 <SidebarProvider
-                    class="page relative size-full overflow-hidden rounded-2xl bg-base-100/95 transition-all duration-1000"
+                    class="page relative size-full overflow-hidden rounded-2xl bg-b1/95 transition-all duration-1000"
                     :class="
                         cn({
                             /*base */
-                            'top-1/2 z-0 overflow-hidden rounded-2xl bg-base-100':
+                            'top-1/2 z-0 overflow-hidden rounded-2xl bg-b1':
                                 gs.commandOpen,
 
                             /* styling */

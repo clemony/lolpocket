@@ -2,7 +2,7 @@ const animate = require('tailwindcss-animate')
 const scrollbarhide = require('tailwind-scrollbar-hide')
 /*const colors = require("tailwindcss/colors");*/
 const path = require('path')
-const daisyui = require('daisyui')
+//const daisyui = require('daisyui')
 const plugin = require('tailwindcss/plugin')
 const containerQueries = require('@tailwindcss/container-queries')
 const radix = require('tailwindcss-radix')
@@ -14,7 +14,7 @@ module.exports = {
     plugins: [
         animate,
         scrollbarhide,
-        daisyui,
+        // daisyui,
         radix,
         containerQueries,
         //themer(themeConfig),
@@ -73,11 +73,12 @@ module.exports = {
                 'old-rose': '#CE8E8E',
                 current: 'currentColor',
 
-                b1: 'var(--b1)',
-                b2: 'var(--b2)',
-                b3: 'var(--b3)',
-                accent: 'var(--accent)',
-                'accent-content': 'var(--accent-content)',
+                b1: 'oklch(var(--b1) / 100)',
+                b2: 'oklch(var(--b2) / 100)',
+                b3: 'oklch(var(--b3))',
+                bc: 'oklch(var(--bc) / 100)',
+                accent: 'oklch(var(--accent) / 100)',
+                ac: 'oklch(var(--accent-content) / 100)',
 
                 precision: 'var(--precision)',
                 'precision-light': 'var(--precision-light)',

@@ -31,7 +31,7 @@ const classObject = [
         ref="target"
         :class="
             cn(
-                'group -mt-2px flex h-full items-center gap-1.5 justify-self-end text-base-content/70',
+                'group -mt-2px flex h-full items-center gap-1.5 justify-self-end text-ac/70',
                 props.class
             )
         ">

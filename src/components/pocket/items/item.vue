@@ -37,7 +37,7 @@ function add(item) {
         <div
             :class="
                 cn(
-                    'relative size-16 rounded-lg border border-neutral/70 shadow-standard hover:ring-1 hover:ring-neutral/40 hover:ring-offset-1',
+                    'relative size-16 rounded-lg border border-accent/70 shadow-standard hover:ring-1 hover:ring-accent/40 hover:ring-offset-1',
                     props.class
                 )
             ">

@@ -191,7 +191,7 @@ watch(
                             backgroundColor: bgColor,
                             color: iconColor,
                         }"
-                        class="my-2 aspect-square size-14 self-center rounded-lg p-4 ring-neutral/80 hover:ring-1 hover:ring-offset-4">
+                        class="my-2 aspect-square size-14 self-center rounded-lg p-4 ring-accent/80 hover:ring-1 hover:ring-offset-4">
                         <icon :icon="selectedIcon" class="-mt-px size-full" />
                     </button>
                 </div>
@@ -200,13 +200,13 @@ watch(
                     <Label for="pocket-tags" class="">Colors</Label>
                     <DropdownMenu class="w-full">
                         <DropdownMenuTrigger
-                            class="mt-1.5 w-full rounded-md data-[state=open]:bg-base-200/60">
+                            class="mt-1.5 w-full rounded-md data-[state=open]:bg-b2/60">
                             <Button
                                 variant="ghost"
                                 size="sm"
                                 class="w-full justify-start text-base">
                                 <span
-                                    class="size-6 shrink-0 rounded border border-base-300"
+                                    class="size-6 shrink-0 rounded border border-b3"
                                     :style="{
                                         backgroundColor: bgColor,
                                     }"></span>
@@ -220,13 +220,13 @@ watch(
 
                     <DropdownMenu>
                         <DropdownMenuTrigger
-                            class="rounded-md data-[state=open]:bg-base-200/60">
+                            class="rounded-md data-[state=open]:bg-b2/60">
                             <Button
                                 variant="ghost"
                                 size="sm"
                                 class="w-full justify-start text-base">
                                 <span
-                                    class="size-6 shrink-0 rounded border border-base-300"
+                                    class="size-6 shrink-0 rounded border border-b3"
                                     :style="{
                                         backgroundColor: iconColor,
                                     }"></span>
@@ -252,7 +252,7 @@ watch(
                     <Button
                         @click="submitForm"
                         v-if="!gs.drawerPocket"
-                        variant="neutral"
+                        variant="accent"
                         type="submit"
                         class="btn btn-sm cursor-pointer justify-self-end">
                         {{ submitText }}
@@ -260,7 +260,7 @@ watch(
 
                     <Button
                         v-else
-                        variant="neutral"
+                        variant="accent"
                         type="submit"
                         class="btn btn-sm cursor-pointer justify-self-end"
                         @click="updatePocket">

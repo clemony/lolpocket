@@ -186,7 +186,7 @@ onMounted(() => {
                     <Button
                         @click="submitForm"
                         v-if="!gs.drawerPocket"
-                        variant="neutral"
+                        variant="accent"
                         size="lg"
                         type="submit"
                         class="justify-self-end">
@@ -195,7 +195,7 @@ onMounted(() => {
 
                     <Button
                         v-else
-                        variant="neutral"
+                        variant="accent"
                         type="button"
                         size="md"
                         class="justify-self-end"

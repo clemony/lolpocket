@@ -27,7 +27,7 @@ onBeforeUpdate(async () => {
             v-bind="forwarded"
             :class="
                 cn(
-                    'fixed z-50 flex flex-col rounded-xl bg-base-100',
+                    'fixed z-50 flex flex-col rounded-xl bg-b1',
                     props.class,
                     {
                         'inset-x-0 bottom-0 mt-24 h-auto overflow-hidden':
@@ -39,7 +39,7 @@ onBeforeUpdate(async () => {
                 )
             ">
             <div
-                class="rounded-full bg-base-200"
+                class="rounded-full bg-b2"
                 :class="{
                     'absolute bottom-1/2 left-5 top-1/2 my-auto h-[100px] w-2':
                         side == 'right',

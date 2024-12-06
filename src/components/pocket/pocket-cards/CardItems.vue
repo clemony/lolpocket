@@ -44,7 +44,7 @@ const items = computed(() => {
         </template>
         <ShadowedPlaceholder
             v-for="index in makeBox(items.length, 6)"
-            class="size-9 rounded-full border-black/5 bg-neutral-200 shadow-warm"
+            class="size-9 rounded-full border-black/5 bg-accent-200 shadow-warm"
             :style="{
                 /*                 backgroundColor: `var(--${set.secondary}-light`,
                  */

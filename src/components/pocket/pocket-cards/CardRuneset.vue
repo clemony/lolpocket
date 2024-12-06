@@ -53,7 +53,7 @@ const runes = runes1.concat(runes2)
                     }" />
                 <ShadowedPlaceholder
                     v-else
-                    class="z-0 size-full rounded-full border-black/5 bg-neutral-200"
+                    class="z-0 size-full rounded-full border-black/5 bg-accent-200"
                     :style="{
                         /*   backgroundColor: `var(--${set.primary}-light)`, */
                     }" />
@@ -69,7 +69,7 @@ const runes = runes1.concat(runes2)
             <div
                 class="grid aspect-square size-9 place-items-center overflow-hidden rounded-full shadow-inner"
                 :class="{
-                    'overflow-hidden border border-neutral/80':
+                    'overflow-hidden border border-accent/80':
                         rune.name != 'empty',
                 }">
                 <LoadImg

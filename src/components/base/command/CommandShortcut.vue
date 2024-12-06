@@ -8,7 +8,7 @@ const props = defineProps<{
 </script>
 
 <template><span :class="cn(
-    'ml-auto  tracking-widest text-base-content/60',
+    'ml-auto  tracking-widest text-ac/60',
     props.class
 )
     ">

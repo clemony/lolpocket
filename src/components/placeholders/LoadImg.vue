@@ -28,7 +28,7 @@ function setBlankImg(event) {
 
         <div
             v-show="isImageLoaded"
-            class="size-full overflow-hidden bg-base-200/40">
+            class="size-full overflow-hidden bg-b2/40">
             <img
                 :src="props.url"
                 @load="imageLoaded()"

@@ -26,7 +26,7 @@ onMounted(async () => {})
         </div>
 
         <div
-            class="absolute left-0 top-0 z-10 flex !h-fit w-full flex-wrap items-center justify-end gap-4 border-b border-b-base-300 bg-base-100/90 px-4 py-1 backdrop-blur-md">
+            class="absolute left-0 top-0 z-10 flex !h-fit w-full flex-wrap items-center justify-end gap-4 border-b border-b-b3 bg-b1/90 px-4 py-1 backdrop-blur-md">
             <h2 class="sub-text grow justify-start">Champions</h2>
         </div>
 
@@ -38,7 +38,7 @@ onMounted(async () => {})
                 :data-index="index"
                 class="">
                 <button
-                    class="item-wrapper__item pointer-events-auto flex aspect-square min-w-[60px] max-w-[70px] grow basis-14 place-items-center overflow-hidden rounded-md bg-cover ring-1 ring-base-300 ring-offset-1 ring-offset-base-100 drop-shadow-sm hover:ring-offset-primary has-[:checked]:ring-offset-2 has-[:checked]:ring-offset-secondary">
+                    class="item-wrapper__item pointer-events-auto flex aspect-square min-w-[60px] max-w-[70px] grow basis-14 place-items-center overflow-hidden rounded-md bg-cover ring-1 ring-b3 ring-offset-1 ring-offset-b1 drop-shadow-sm hover:ring-offset-primary has-[:checked]:ring-offset-2 has-[:checked]:ring-offset-secondary">
                     <div class="grid-image-container champ">
                         <img
                             v-if="champion.type === 'champion'"
@@ -52,7 +52,7 @@ onMounted(async () => {})
         </div>
 
         <div
-            class="absolute left-0 top-0 z-10 flex !h-fit w-full flex-wrap items-center justify-end gap-4 border-b border-b-base-300 bg-base-100/80 px-4 py-1 shadow-warm backdrop-blur-md">
+            class="absolute left-0 top-0 z-10 flex !h-fit w-full flex-wrap items-center justify-end gap-4 border-b border-b-b3 bg-b1/80 px-4 py-1 shadow-warm backdrop-blur-md">
             <h2 class="sub-text grow justify-start">Primary</h2>
         </div>
 
@@ -88,7 +88,7 @@ onMounted(async () => {})
             <VDropdown
                 theme="default"
                 alt="Quick Search"
-                class="ghosty drag-label group/qs relative z-0 flex basis-16 cursor-zoom-out !p-0 after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-['+'] hover:after:text-neutral hover:after:opacity-60">
+                class="ghosty drag-label group/qs relative z-0 flex basis-16 cursor-zoom-out !p-0 after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-['+'] hover:after:text-accent hover:after:opacity-60">
                 <div
                     class="z-20 h-full w-full scale-105 cursor-zoom-in select-none bg-[url('/img/UI/frame.webp')] bg-contain bg-center bg-no-repeat opacity-0 brightness-0 transition-all duration-200 group-hover/qs:scale-95 group-hover/qs:opacity-40"></div>
 

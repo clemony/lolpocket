@@ -48,7 +48,7 @@ function handleLinks() {}
                 class="!z-1 -transition-all news-after flex h-64 w-full content-center items-center gap-5 overflow-x-scroll pl-6 delay-200 duration-700 scrollbar-hide">
                 <a
                     v-for="article in NewsArticles"
-                    class="!*:z-0 group card relative !z-0 m-0 h-56 min-w-96 overflow-hidden border border-base-100 bg-cover p-0 text-sm shadow-warm transition-transform duration-700 hover:scale-[1.02]"
+                    class="!*:z-0 group card relative !z-0 m-0 h-56 min-w-96 overflow-hidden border border-b1 bg-cover p-0 text-sm shadow-warm transition-transform duration-700 hover:scale-[1.02]"
                     :title="article.link"
                     :style="{
                         backgroundImage: 'url(' + article.image + ')',
@@ -56,10 +56,10 @@ function handleLinks() {}
                     :href="article.link"
                     target="_blank">
                     <div
-                        class="absolute left-0 top-0 grid h-full w-full grid-cols-1 content-start justify-items-center rounded-xl bg-neutral/40 pt-6 italic opacity-0 shadow-inner backdrop-blur-sm transition-all duration-500 group-hover:opacity-100"></div>
+                        class="absolute left-0 top-0 grid h-full w-full grid-cols-1 content-start justify-items-center rounded-xl bg-accent/40 pt-6 italic opacity-0 shadow-inner backdrop-blur-sm transition-all duration-500 group-hover:opacity-100"></div>
 
                     <div
-                        class="frost z-1 card-body absolute inset-x-0 bottom-0 m-0 h-2/5 !bg-base-100/90 object-bottom pb-0 pt-5 transition-all duration-500 group-hover:h-1/2">
+                        class="frost z-1 card-body absolute inset-x-0 bottom-0 m-0 h-2/5 !bg-b1/90 object-bottom pb-0 pt-5 transition-all duration-500 group-hover:h-1/2">
                         <div class="z-10 col-start-1 overflow-hidden">
                             <p
                                 v-if="article && article.date"
@@ -115,11 +115,11 @@ function handleLinks() {}
 
                     <div class="mt-4 grid grid-cols-1 gap-4">
                         <div
-                            class="card overflow-x-hidden overflow-y-scroll bg-base-100/60 shadow-warm backdrop-blur-md scrollbar-hide">
+                            class="card overflow-x-hidden overflow-y-scroll bg-b1/60 shadow-warm backdrop-blur-md scrollbar-hide">
                             <table class="0 table table-pin-rows">
                                 <!-- head -->
                                 <thead>
-                                    <tr class="bg-base-200/50 shadow-cham">
+                                    <tr class="bg-b2/50 shadow-cham">
                                         <th>Champion</th>
                                         <th>Role</th>
                                         <th>Winrate</th>
@@ -276,7 +276,7 @@ function handleLinks() {}
                     </h2>
                     <div class="mt-4 grid grid-cols-1 gap-4">
                         <div
-                            class="frost card overflow-x-auto bg-base-100/60 shadow-warm backdrop-brightness-105">
+                            class="frost card overflow-x-auto bg-b1/60 shadow-warm backdrop-brightness-105">
                             <table class="table">
                                 <!-- head -->
                                 <thead>

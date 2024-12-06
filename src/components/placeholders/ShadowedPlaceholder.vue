@@ -9,7 +9,7 @@ const props = defineProps<{
     <div
         :class="
             cn(
-                'aspect-square size-12 shrink-0 rounded-lg border border-base-300/50 bg-base-200/15 shadow-inner',
+                'aspect-square size-12 shrink-0 rounded-lg border border-b3/50 bg-b2/15 shadow-inner',
                 props.class
             )
         " />

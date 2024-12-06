@@ -36,7 +36,7 @@ const pocket = ref(getPocket(props.params.data.key))
         <template v-for="(champion, index) in pocket.champions[0].champions">
             <div
                 v-if="index < 3"
-                class="size-14 shrink-0 overflow-hidden rounded-lg border border-base-300 shadow-warm">
+                class="size-14 shrink-0 overflow-hidden rounded-lg border border-b3 shadow-warm">
                 <loadImg
                     :url="`/img/champions/${clean(champion.name)}.webp`"
                     class="size-14 scale-[108%] object-cover" />

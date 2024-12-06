@@ -24,7 +24,7 @@ const filteredData = (data: Record<string, string>) => {
         <AccordionTrigger class='flex py-2'>
 
             <loadImg :url="ability.img" :alt="ability.name"
-                class="rounded-lg shadow-sm border border-base-300 size-[45px]" />
+                class="rounded-lg shadow-sm border border-b3 size-[45px]" />
 
             <div class="!text-md font-medium tracking-tight text-start grow px-4">
                 {{ ability.name }}
@@ -40,7 +40,7 @@ const filteredData = (data: Record<string, string>) => {
 
             <div class='flex flex-col gap-3 py-3'>
                 <div v-for="(value, key) in filteredData(
-                    ability.data)" :key="key" class='flex flex-nowrap w-full bg-base-200/60 rounded-md px-2 py-1'>
+                    ability.data)" :key="key" class='flex flex-nowrap w-full bg-b2/60 rounded-md px-2 py-1'>
                     <div class="text-medium text-sm capitalize opacity-80">
                         {{ key }}
                     </div>
@@ -53,7 +53,7 @@ const filteredData = (data: Record<string, string>) => {
 
 
             <ScrollArea
-                class=" overflow-auto  p-1 text-sm whitespace-pre-line text-balance [scrollbar-color:bg-base-300/20]">
+                class=" overflow-auto  p-1 text-sm whitespace-pre-line text-balance [scrollbar-color:bg-b3/20]">
                 {{
                     ability.context }}
             </ScrollArea>

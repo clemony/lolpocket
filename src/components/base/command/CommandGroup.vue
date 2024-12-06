@@ -20,11 +20,11 @@ const delegatedProps = computed(() => {
 
 <template>
 <ComboboxGroup v-bind="delegatedProps" :class="cn(
-    'text-foreground overflow-hidden p-1 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]: [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-base-content/60',
+    'text-foreground overflow-hidden p-1 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]: [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-ac/60',
     props.class
 )
     ">
-    <ComboboxLabel v-if="heading" class="!w-full px-2 py-1.5  font-medium text-base-content/60">
+    <ComboboxLabel v-if="heading" class="!w-full px-2 py-1.5  font-medium text-ac/60">
         {{ heading }}
     </ComboboxLabel>
     <slot />

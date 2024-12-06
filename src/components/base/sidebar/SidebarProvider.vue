@@ -86,7 +86,7 @@ provideSidebarContext({
             }"
             :class="
                 cn(
-                    'group/sidebar-wrapper max-w-svw flex min-h-svh w-svw text-base-content has-[[data-variant=inset]]:bg-base-100/35',
+                    'group/sidebar-wrapper max-w-svw flex min-h-svh w-svw text-ac has-[[data-variant=inset]]:bg-b1/35',
                     props.class
                 )
             ">

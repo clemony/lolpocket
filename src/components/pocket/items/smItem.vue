@@ -22,11 +22,11 @@ function imageLoaded() {
     <Skeleton v-show="!isImageLoaded" class='size-[50px] rounded-md' />
 
     <KinesisContainer v-show="isImageLoaded" :perspective="100" :duration="1000"
-        class="group overflow-hidden content-center relative rounded-md  border border-neutral/40"
+        class="group overflow-hidden content-center relative rounded-md  border border-accent/40"
         :disabled="gs.reducedMotion == true">
         <KinesisElement type="translate" :strength="6" class="flex  items-center ">
             <div :key="item.id"
-                class="aspect-square size-[48px] shrink-0   border border-base-300 opacity-95 transition-all duration-300 ">
+                class="aspect-square size-[48px] shrink-0   border border-b3 opacity-95 transition-all duration-300 ">
 
                 <div class="size-full absolute top-0 left-0 z-0 ">
                     <img @load="imageLoaded()" :src="`/img/items/${item.id}.webp`"

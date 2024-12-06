@@ -15,7 +15,7 @@ const props = defineProps<{
     <div class="mt-28 flex h-full flex-col gap-20">
         <RouterLink :to="`pocket/${pocket.key}`" as-child>
             <Badge
-                class="flex justify-center bg-black/70 !py-1 text-neutral-300 shadow-smooth ring-1 ring-black/5 ring-offset-2 ring-offset-neutral-100/20 backdrop-blur-md hover:bg-neutral/20">
+                class="flex justify-center bg-black/70 !py-1 text-accent-300 shadow-smooth ring-1 ring-black/5 ring-offset-2 ring-offset-accent-100/20 backdrop-blur-md hover:bg-accent/20">
                 <h5 class="!font-normal">
                     {{ pocket.name }}
                 </h5>
@@ -23,7 +23,7 @@ const props = defineProps<{
         </RouterLink>
 
         <div
-            class="flex gap-5 [&_>*]:grid [&_>*]:!aspect-square [&_>*]:size-11 [&_>*]:place-items-center [&_>*]:justify-start [&_>*]:rounded-full [&_>*]:bg-neutral/70 [&_>*]:text-neutral-content [&_>*]:shadow-smooth [&_>*]:ring-1 [&_>*]:ring-black/5 [&_>*]:ring-offset-2 [&_>*]:ring-offset-neutral-100/20 [&_>*]:backdrop-blur-md hover:[&_>*]:bg-neutral-100/20 [&_svg]:mr-1">
+            class="flex gap-5 [&_>*]:grid [&_>*]:!aspect-square [&_>*]:size-11 [&_>*]:place-items-center [&_>*]:justify-start [&_>*]:rounded-full [&_>*]:bg-accent/70 [&_>*]:text-ac [&_>*]:shadow-smooth [&_>*]:ring-1 [&_>*]:ring-black/5 [&_>*]:ring-offset-2 [&_>*]:ring-offset-accent-100/20 [&_>*]:backdrop-blur-md hover:[&_>*]:bg-accent-100/20 [&_svg]:mr-1">
             <Tooltip content="Edit Pocket Data" align="bottom" dark>
                 <Button
                     @click="toggleDrawerState(editPocketDrawer, pocket)"
@@ -63,7 +63,7 @@ const props = defineProps<{
                     </Tooltip>
                 </template>
                 <div
-                    class="dir size-full pr-0 [&_>*]:w-full [&_>*]:justify-start [&_>*]:gap-4 [&_>*]:pl-3 hover:[&_>*]:bg-neutral-100/20">
+                    class="dir size-full pr-0 [&_>*]:w-full [&_>*]:justify-start [&_>*]:gap-4 [&_>*]:pl-3 hover:[&_>*]:bg-accent-100/20">
                     <Button @click="duplicatePocket(pocket)" :variant="variant">
                         <icon icon="teenyicons:layers-subtract-outline" />
                         <span class="-ml-[1px]">Duplicate</span>

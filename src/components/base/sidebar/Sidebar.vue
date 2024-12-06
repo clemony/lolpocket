@@ -30,7 +30,7 @@ const { toggleSidebar } = useSidebar()
         v-if="collapsible === 'empty'"
         :class="
             cn(
-                'flex h-full w-[--sidebar-width] flex-col overflow-hidden rounded-xl bg-base-100/90 text-base-content',
+                'flex h-full w-[--sidebar-width] flex-col overflow-hidden rounded-xl bg-b1/90 text-ac',
                 props.class
             )
         "
@@ -46,7 +46,7 @@ const { toggleSidebar } = useSidebar()
         <SheetContent
             data-sidebar="sidebar"
             data-mobile="true"
-            class="w-[--sidebar-width] overflow-hidden rounded-xl bg-base-100/90 p-0 text-base-content [&>button]:hidden"
+            class="w-[--sidebar-width] overflow-hidden rounded-xl bg-b1/90 p-0 text-ac [&>button]:hidden"
             :style="{
                 '--sidebar-width': SIDEBAR_WIDTH_MOBILE,
             }">
@@ -92,7 +92,7 @@ const { toggleSidebar } = useSidebar()
             v-bind="$attrs">
             <div
                 data-sidebar="sidebar"
-                class="flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-base-200 group-data-[variant=floating]:shadow">
+                class="flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-b2 group-data-[variant=floating]:shadow">
                 <slot :data-state="state" />
             </div>
         </div>

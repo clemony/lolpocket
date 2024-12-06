@@ -29,7 +29,7 @@ export function runeColors(runeSet) {
         } else if (runeSet.secondary == 'precision') {
             var r = 'to-precision'
         } else if (runeSet.secondary == 'empty') {
-            var r = 'to-bg-base-200'
+            var r = 'to-bg-b2'
         }
 
         const classes = k + ' ' + r
@@ -47,12 +47,12 @@ export function runeColors(runeSet) {
             return 'to-precision'
         }
     } else if (keystone.path != 'empty' && runeSet.secondary == 'empty') {
-        return 'to-base-200'
+        return 'to-b2'
     }
 }
 
 export function getShardClass(shard: Shard) {
-    const gray = ['[&_svg]:text-base-300 border-base-300']
+    const gray = ['[&_svg]:text-b3 border-b3']
     const green = [
         'has-[:checked]:shadow-[0_3px_20px_#a3be8c,inset_-1px_-1px_0px_1px_#00000008] [&_svg]:text-resolve border-resolve',
     ]
@@ -95,13 +95,13 @@ export function getShardIcon(shard: Shard) {
 
 // from = location of primary or secondary color identifier
 export function getColor(from, prefix, opacity?) {
-    const a = from != 'empty' ? from : 'base-200'
+    const a = from != 'empty' ? from : 'b2'
     const b = prefix + '-' + a
     const c = opacity ? b + '/' + opacity : b
     return c
 }
 export function getLightColor(from, prefix, opacity?) {
-    const a = from != 'empty' ? from : 'base-200'
+    const a = from != 'empty' ? from : 'b2'
     const b = prefix + '-' + a + '-light'
     const c = opacity ? b + '/' + opacity : b
     return c

@@ -8,7 +8,7 @@ const props = defineProps<{
 </script>
 
 <template><Input data-sidebar="input" :class="cn(
-  'h-8 w-full bg-transparent shadow-none focus-visible:ring-2 focus-visible:ring-neutral/5',
+  'h-8 w-full bg-transparent shadow-none focus-visible:ring-2 focus-visible:ring-accent/5',
   props.class,
 )">
 <slot />

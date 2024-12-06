@@ -33,7 +33,7 @@ const rune = computed(() => {
         <!-------------------------------⟢ Header ⟣-------------------------------->
 
         <label :key="rune.name + '1'"
-            class="frost sticky left-0 top-0 z-50 flex !h-fit w-full flex-wrap items-center justify-end gap-4 rounded-t-xl border-b border-b-base-300 px-4 py-1">
+            class="frost sticky left-0 top-0 z-50 flex !h-fit w-full flex-wrap items-center justify-end gap-4 rounded-t-xl border-b border-b-b3 px-4 py-1">
             <h2 class="sub-text flex grow items-center justify-start gap-3">
                 <span class="grow"> {{ rune.name || 'Rune Detail' }}</span>
                 <div v-if="rune">
@@ -50,7 +50,7 @@ const rune = computed(() => {
                 <div class="link-set">
                     <img id="runeImg" :src="rune.img" class="float-right ml-2.5 mt-1 rounded-full" />
                     <div class="link-icon flex items-center justify-center">
-                        <Icon icon="teenyicons:link-outline" class="size-3 text-neutral-content" />
+                        <Icon icon="teenyicons:link-outline" class="size-3 text-ac" />
                     </div>
                 </div>
             </div>
@@ -77,10 +77,10 @@ const rune = computed(() => {
     }
 
     .img-wrapper .link-icon {
-        @apply right-[-0.01rem] top-[4rem] z-20 size-[1.5rem] bg-neutral shadow-md transition-all duration-500;
+        @apply right-[-0.01rem] top-[4rem] z-20 size-[1.5rem] bg-accent shadow-md transition-all duration-500;
     }
     .link-set:hover .link-icon {
-        @apply rotate-180 ring-2 ring-neutral ring-offset-neutral;
+        @apply rotate-180 ring-2 ring-accent ring-offset-accent;
     }
 }
 
@@ -94,14 +94,14 @@ const rune = computed(() => {
     }
 
     .img-wrapper .link-icon {
-        @apply right-[-0.01rem] top-[2.17rem] z-20 size-[1.5rem] bg-neutral shadow-md transition-all duration-500;
+        @apply right-[-0.01rem] top-[2.17rem] z-20 size-[1.5rem] bg-accent shadow-md transition-all duration-500;
     }
 
     #runeImg {
-        @apply size-14 shadow-[inset_0px_0px_2px_3px_#00000099,_1px_2px_1px_2px_#00000018] ring-1 ring-base-200 ring-offset-1 ring-offset-base-300;
+        @apply size-14 shadow-[inset_0px_0px_2px_3px_#00000099,_1px_2px_1px_2px_#00000018] ring-1 ring-b2 ring-offset-1 ring-offset-b3;
     }
 
     .link-set:hover .link-icon {
-        @apply rotate-180 ring-2 ring-neutral ring-offset-neutral;
+        @apply rotate-180 ring-2 ring-accent ring-offset-accent;
     }
 }</style>

@@ -21,9 +21,9 @@ function imageLoaded() {
     :class="{ 'size-[45px]': !props.keystone, 'size-10 mr-2 opacity-60  ': props.keystone }" />
 
 <div v-show="isImageLoaded" class='rounded-full animate-in fade-in-0 '
-    :class="{ 'ring-1 ring-neutral size-[45px]': !props.keystone, 'size-12': props.keystone }">
+    :class="{ 'ring-1 ring-accent size-[45px]': !props.keystone, 'size-12': props.keystone }">
     <img :src="props.url" @load="imageLoaded()" class='scale-105 ' :class="{
-        'rounded-full shadow-inner shadow-neutral': !props.keystone, 'drop-shadow-md': props.keystone
+        'rounded-full shadow-inner shadow-accent': !props.keystone, 'drop-shadow-md': props.keystone
     }" />
 </div>
 </template>

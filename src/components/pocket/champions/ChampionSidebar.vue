@@ -73,14 +73,14 @@ function handleLike(thisChamp) {
                     <icon
                         icon="teenyicons:heart-outline"
                         class=""
-                        :class="{ 'text-neutral/20': isLiked }" />
+                        :class="{ 'text-accent/20': isLiked }" />
                 </Button>
             </div>
 
             <CardHeader class="flex flex-row gap-8">
                 <div class="relative size-fit pt-px shadow-warm">
                     <div
-                        class="grid size-[70px] content-start items-start overflow-hidden rounded-lg border border-neutral/40">
+                        class="grid size-[70px] content-start items-start overflow-hidden rounded-lg border border-accent/40">
                         <loadImg
                             class="mr-1 aspect-square size-[70px] shrink-0 scale-[109%] !rounded-none object-center"
                             :url="`/img/champions/${clean(champion.name)}.webp`" />
@@ -142,7 +142,7 @@ function handleLike(thisChamp) {
 }
 
 [data-tag='Assassin'] {
-    @apply bg-error/80 text-base-content;
+    @apply bg-error/80 text-ac;
 }
 
 [data-tag='Tank'] {
@@ -150,11 +150,11 @@ function handleLike(thisChamp) {
 }
 
 [data-tag='Fighter'] {
-    @apply bg-orange-600/60 text-base-content;
+    @apply bg-orange-600/60 text-ac;
 }
 
 .tab {
-    --tab-border-color: oklch(var(--b3) / 0.8);
+    --tab-border-color: var(--b3) / 0.8;
 
     @apply text-start text-sm;
 }
@@ -163,7 +163,7 @@ function handleLike(thisChamp) {
     @apply flex items-center gap-3 text-sm;
 
     img {
-        @apply -ml-1 size-9 rounded-full border border-neutral/40;
+        @apply -ml-1 size-9 rounded-full border border-accent/40;
     }
 
     div {
@@ -179,6 +179,6 @@ function handleLike(thisChamp) {
 }
 
 .ability-wrapper > div {
-    @apply border border-neutral/15;
+    @apply border border-accent/15;
 }
 </style>

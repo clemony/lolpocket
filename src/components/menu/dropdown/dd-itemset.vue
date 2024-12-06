@@ -61,7 +61,7 @@ onMounted(() => {
                                 <ItemsetModel
                                     :pocket="props.pocket"
                                     :model="props.model"
-                                    class="-ml-2.5 w-fit rounded-xl border border-base-200 p-2 shadow-sm">
+                                    class="-ml-2.5 w-fit rounded-xl border border-b2 p-2 shadow-sm">
                                     <input
                                         type="checkbox"
                                         :checked="true"
@@ -72,7 +72,7 @@ onMounted(() => {
                                     <label
                                         v-for="set in filter"
                                         v-close-popper
-                                        class="sets -ml-2.5 flex w-fit cursor-pointer items-center gap-4 overflow-hidden rounded-xl border border-transparent p-2 hover:border-base-300 hover:shadow-sm"
+                                        class="sets -ml-2.5 flex w-fit cursor-pointer items-center gap-4 overflow-hidden rounded-xl border border-transparent p-2 hover:border-b3 hover:shadow-sm"
                                         :key="set.key">
                                         <template v-if="set.items.length">
                                             <template

@@ -35,7 +35,7 @@ export const icons = [
     'teenyicons:compass-outline',
     'teenyicons:ethereum-outline',
     'teenyicons:garage-outline',
-    'teenyicons:gbc-outline',
+    'teenyicons:gac-outline',
     'teenyicons:game-controller-retro-outline',
     'teenyicons:n64-outline',
     'teenyicons:headset-outline',

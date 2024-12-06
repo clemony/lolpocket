@@ -15,7 +15,7 @@ props.rune.value = 'rune'
         class="relative grid max-w-96 overscroll-none py-2"
         :data-tier="rune.tier">
         <div
-            class="grid w-full grid-cols-[1fr_2fr] gap-1 border-b border-base-300 px-2 pb-3">
+            class="grid w-full grid-cols-[1fr_2fr] gap-1 border-b border-b3 px-2 pb-3">
             <a
                 :href="rune.wiki"
                 target="_blank"
@@ -28,10 +28,10 @@ props.rune.value = 'rune'
                     :alt="rune.name + ' Image'"
                     class="runeImg pointer-events-none rounded-full" />
                 <div
-                    class="link-icon absolute bottom-0 z-30 flex size-8 items-center justify-center rounded-full border-2 border-base-100 bg-neutral transition-all duration-500 group-hover/link:rotate-180 group-hover/link:border-primary">
+                    class="link-icon absolute bottom-0 z-30 flex size-8 items-center justify-center rounded-full border-2 border-b1 bg-accent transition-all duration-500 group-hover/link:rotate-180 group-hover/link:border-primary">
                     <Icon
                         icon="teenyicons:link-outline"
-                        class="size-5 text-neutral-content" />
+                        class="size-5 text-ac" />
                 </div>
             </a>
 
@@ -100,7 +100,7 @@ props.rune.value = 'rune'
     }
 
     .runeImg {
-        @apply size-12 shadow-[inset_0px_0px_2px_3px_#00000099,_1px_2px_1px_2px_#00000018] ring-1 ring-base-200 ring-offset-1 ring-offset-base-300;
+        @apply size-12 shadow-[inset_0px_0px_2px_3px_#00000099,_1px_2px_1px_2px_#00000018] ring-1 ring-b2 ring-offset-1 ring-offset-b3;
     }
 }
 </style>

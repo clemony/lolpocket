@@ -27,7 +27,7 @@ const width = useElementSize(contents)
                     cn(
                         'text-medium flex max-w-44 flex-shrink text-wrap rounded-lg text-sm shadow-pretty',
                         {
-                            'border-neutral bg-neutral/70 text-neutral-content backdrop-blur-md':
+                            'border-accent bg-accent/70 text-ac backdrop-blur-md':
                                 props.dark,
                         },
                         props.class

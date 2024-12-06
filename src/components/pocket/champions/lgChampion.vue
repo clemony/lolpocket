@@ -24,7 +24,7 @@ const champ = computed(() => {
 
     <div
         v-show="isImageLoaded"
-        class="h-inherit overflow-hidden rounded-xl border border-neutral/20 bg-base-200/60 bg-clip-border">
+        class="h-inherit overflow-hidden rounded-xl border border-accent/20 bg-b2/60 bg-clip-border">
         <KinesisContainer
             v-show="isImageLoaded"
             :perspective="100"

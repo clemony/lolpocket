@@ -9,7 +9,7 @@ const props = defineProps<{
 
 <template>
 <div :class="cn(
-  'rounded-xl border bg-base-100/90 backdrop-blur-md shadow-smooth',
+  'rounded-xl border bg-b1/90 backdrop-blur-md shadow-smooth',
   props.class,
 )
   ">

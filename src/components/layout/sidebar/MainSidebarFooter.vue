@@ -17,7 +17,7 @@ const userData = {
                         <SidebarMenuButton
                             variant="ghost"
                             size="default"
-                            class="flex h-16 flex-nowrap items-center gap-2 !border-0 pr-2.5 !ring-0 focus:!border-0 focus:!outline-0 focus:!ring-1 focus:!ring-base-200 data-[state=open]:shadow-sm data-[state=open]:!ring-1 data-[state=open]:!ring-base-300/40">
+                            class="flex h-16 flex-nowrap items-center gap-2 !border-0 pr-2.5 !ring-0 focus:!border-0 focus:!outline-0 focus:!ring-1 focus:!ring-b2 data-[state=open]:shadow-sm data-[state=open]:!ring-1 data-[state=open]:!ring-b3/40">
                             <Avatar
                                 class="border-1 mt-0.5 size-10 rounded-lg border border-transparent shadow-sm">
                                 <AvatarImage

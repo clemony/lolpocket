@@ -48,7 +48,7 @@ const updateWidth = () => {
         :default-value="props.defaultValue"
         :class="
             cn(
-                'border-input flex h-8 cursor-text overflow-hidden rounded-md border bg-transparent pl-3 pr-1 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-base-content/60 hover:ring-1 hover:ring-neutral/5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral/40 disabled:cursor-not-allowed disabled:opacity-50',
+                'border-input flex h-8 cursor-text overflow-hidden rounded-md border bg-transparent pl-3 pr-1 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-ac/60 hover:ring-1 hover:ring-accent/5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent/40 disabled:cursor-not-allowed disabled:opacity-50',
                 props.class
             )
         "

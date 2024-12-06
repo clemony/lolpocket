@@ -43,7 +43,7 @@ function handleInput(event: Event) {
             @keydown.enter.prevent
             :class="
                 cn(
-                    'inset-0 mx-0 flex h-full w-full gap-2 self-center overflow-hidden border border-base-200 bg-transparent px-0 pb-0 pt-1 text-base font-normal tracking-normal transition-opacity duration-300 placeholder:pt-1 placeholder:text-base placeholder:tracking-normal placeholder:text-base-content/70 hover:ring-0 focus:outline-none focus:ring-0 disabled:cursor-not-allowed disabled:opacity-50',
+                    'inset-0 mx-0 flex h-full w-full gap-2 self-center overflow-hidden border border-b2 bg-transparent px-0 pb-0 pt-1 text-base font-normal tracking-normal transition-opacity duration-300 placeholder:pt-1 placeholder:text-base placeholder:tracking-normal placeholder:text-ac/70 hover:ring-0 focus:outline-none focus:ring-0 disabled:cursor-not-allowed disabled:opacity-50',
                     props.inputClass
                 )
             " />
@@ -51,7 +51,7 @@ function handleInput(event: Event) {
         <Button
             variant="ghost"
             v-if="search"
-            class="pointer-events-auto absolute right-2 z-10 aspect-square !h-full text-base-content/60 opacity-0 transition-all duration-300 hover:text-base-content/70 peer-focus:opacity-100"
+            class="pointer-events-auto absolute right-2 z-10 aspect-square !h-full text-ac/60 opacity-0 transition-all duration-300 hover:text-ac/70 peer-focus:opacity-100"
             @click="$emit('update:search', '')">
             <Icon
                 icon="teenyicons:x-circle-solid"

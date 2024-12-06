@@ -86,7 +86,7 @@ const sTabs = ref('sTabs')
             <TabsContent value="notes">
                 <div class="h-inherit">
                     <textarea
-                        class="peer flex size-full cursor-pointer items-start overflow-y-scroll rounded-[4px] border border-base-200/40 bg-base-200/25 px-1.5 py-1 align-top text-[10px] font-light leading-3 tracking-[0.015em] outline-none transition-all duration-300 [resize:none] first-line:indent-2 placeholder:italic hover:border-base-300/70 hover:opacity-70 hover:shadow-inner focus:border-base-300/70 focus:opacity-100 focus:shadow-inner"
+                        class="peer flex size-full cursor-pointer items-start overflow-y-scroll rounded-[4px] border border-b2/40 bg-b2/25 px-1.5 py-1 align-top text-[10px] font-light leading-3 tracking-[0.015em] outline-none transition-all duration-300 [resize:none] first-line:indent-2 placeholder:italic hover:border-b3/70 hover:opacity-70 hover:shadow-inner focus:border-b3/70 focus:opacity-100 focus:shadow-inner"
                         v-model="notesInput"
                         @blur="updateNotes"
                         @click.stop

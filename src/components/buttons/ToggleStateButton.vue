@@ -23,7 +23,7 @@ function onClick() {
 
 <template>
     <Button
-        :variant="modelValue ? 'neutral' : 'outline'"
+        :variant="modelValue ? 'accent' : 'outline'"
         size="icon"
         class="relative [&_input]:hidden"
         @click="onClick"

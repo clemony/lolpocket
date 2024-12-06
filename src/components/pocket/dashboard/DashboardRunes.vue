@@ -26,7 +26,7 @@ console.log(set)
             class="h-16 w-full overflow-hidden bg-gradient-to-r from-transparent !p-0 backdrop-saturate-200"
             :class="runeColors(set)">
             <div
-                class="flex size-full items-center justify-start gap-3 bg-gradient-to-r from-base-100/90 to-base-100/70 px-2 backdrop-blur-md">
+                class="flex size-full items-center justify-start gap-3 bg-gradient-to-r from-b1/90 to-b1/70 px-2 backdrop-blur-md">
                 <LoadRune
                     v-if="set.keystone.name != 'empty'"
                     :url="set.keystone.img"
@@ -57,7 +57,7 @@ console.log(set)
             </ResizablePanel>
             <ResizeHandle class="" with-handle />
             <ResizablePanel>
-                <div class="size-full rounded-xl bg-base-200/40"></div>
+                <div class="size-full rounded-xl bg-b2/40"></div>
             </ResizablePanel>
         </ResizablePanelGroup>
     </div>

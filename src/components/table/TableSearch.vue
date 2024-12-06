@@ -6,7 +6,7 @@ const ps = usePocketStore()
 
 <template>
     <div
-        class="relative -mt-1 flex h-10 min-w-[225px] items-center rounded-md border border-base-200 bg-base-100 focus-within:border-base-300">
+        class="relative -mt-1 flex h-10 min-w-[225px] items-center rounded-md border border-b2 bg-b1 focus-within:border-b3">
         <input
             type="text"
             spellcheck="false"

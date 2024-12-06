@@ -78,7 +78,7 @@ onMounted(() => {})
             <label
                 v-for="(path, index) in ds.uniquePaths"
                 :key="index"
-                class="z-30 flex grow cursor-pointer items-center justify-center overflow-hidden border-b-0 border-base-100 border-b-transparent bg-clip-padding py-1 transition-all duration-500 disabled:hidden has-[:disabled]:absolute has-[:disabled]:size-0 has-[:checked]:-translate-y-2.5 has-[:disabled]:opacity-0"
+                class="z-30 flex grow cursor-pointer items-center justify-center overflow-hidden border-b-0 border-b1 border-b-transparent bg-clip-padding py-1 transition-all duration-500 disabled:hidden has-[:disabled]:absolute has-[:disabled]:size-0 has-[:checked]:-translate-y-2.5 has-[:disabled]:opacity-0"
                 :ref="path">
                 <input
                     v-if="props.set == 1"
@@ -266,9 +266,9 @@ onMounted(() => {})
 .border-gradient {
     border-image: linear-gradient(
             to right,
-            oklch(var(--b1)),
+            var(--b1),
             rgba(0, 0, 0, 0),
-            oklch(var(--b1))
+            var(--b1)
         )
         2;
 }
@@ -287,11 +287,11 @@ onMounted(() => {})
 [data-tier='2'],
 [data-tier='3'] {
     & :checked + #imgwrap {
-        @apply shadow-inner ring-1 ring-neutral/30 ring-offset-2 transition-all duration-500;
+        @apply shadow-inner ring-1 ring-accent/30 ring-offset-2 transition-all duration-500;
     }
 
     #imgwrap {
-        @apply size-14 rounded-full border border-neutral/70 shadow-[1px_3px_2px_1px_#00000034] transition-all duration-500;
+        @apply size-14 rounded-full border border-accent/70 shadow-[1px_3px_2px_1px_#00000034] transition-all duration-500;
     }
     div {
         @apply rounded-full;
@@ -304,7 +304,7 @@ onMounted(() => {})
 .empty {
     [data-tier='0'] {
         img {
-            @apply rounded-full border border-neutral/15 transition-all duration-500;
+            @apply rounded-full border border-accent/15 transition-all duration-500;
         }
     }
 
@@ -315,7 +315,7 @@ onMounted(() => {})
             @apply ring-0 ring-offset-0 transition-all duration-500;
         }
         #imgwrap {
-            @apply size-[2.8rem] rounded-full border border-neutral/15 bg-base-200/20 shadow-[inset_1px_3px_2px_1px_#00000008] transition-all duration-500;
+            @apply size-[2.8rem] rounded-full border border-accent/15 bg-b2/20 shadow-[inset_1px_3px_2px_1px_#00000008] transition-all duration-500;
         }
         img {
             @apply aspect-square scale-110 rounded-full object-cover shadow-inner;

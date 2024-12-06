@@ -90,6 +90,6 @@ function thisFunction() {
 
 <style scoped>
 .v-popper--shown {
-    @apply bg-base-200/60;
+    @apply bg-b2/60;
 }
 </style>

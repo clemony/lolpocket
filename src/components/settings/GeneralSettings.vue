@@ -57,7 +57,7 @@ const isPreview = computed(() => {
             </DisplayCard>
         </div>
 
-        <div class="mt-8 flex border-t border-t-base-200 pt-6">
+        <div class="mt-8 flex border-t border-t-b2 pt-6">
             <Button size="md">Save</Button>
             <Grow />
         </div>

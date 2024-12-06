@@ -16,7 +16,7 @@ const set = ref(pocket.value.runes[0].runeSets[pocket.value.runes[0].starred])
         <TextureOutline
             :img="set.keystone.img"
             type="keystone"
-            class="size-16 bg-base-200/30 p-1.5" />
+            class="size-16 bg-b2/30 p-1.5" />
     </template>
     <TextureOutline
         v-else

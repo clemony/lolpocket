@@ -82,7 +82,7 @@ els.forEach(({ ref, isVisible, name }) => {
                         @click="scrollToSection(el.ref)"
                         class="group mb-px flex gap-1 font-medium opacity-50 transition-all duration-300 hover:cursor-pointer hover:opacity-100"
                         :class="{
-                            'text-base-content !opacity-100':
+                            'text-ac !opacity-100':
                                 el.name == props.storeValue,
                         }">
                         <input
@@ -106,7 +106,7 @@ els.forEach(({ ref, isVisible, name }) => {
                         @click="scrollToSection(el.ref)"
                         class="group mb-px flex items-center gap-1 font-medium opacity-50 transition-all duration-300 hover:cursor-pointer hover:opacity-100"
                         :class="{
-                            'text-base-content !opacity-100':
+                            'text-ac !opacity-100':
                                 el.name == props.storeValue,
                         }">
                         <input

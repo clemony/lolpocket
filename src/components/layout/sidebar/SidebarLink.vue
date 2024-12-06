@@ -47,7 +47,7 @@ const components = computed(() => {
         <RouterLink
             :to="{ name: props.to, hash: props.hash }"
             class="flex rounded-lg"
-            exactActiveClass="bg-base-200/70">
+            exactActiveClass="bg-b2/70">
             <component :is="components.button" class="flex" :tooltip="tooltip">
                 <Icon :icon="props.icon" class="size-4.5" />
                 <span class="capitalize">{{ linkName }}</span>

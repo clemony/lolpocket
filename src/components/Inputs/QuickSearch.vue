@@ -61,7 +61,7 @@ function afterLeave(el: Element) {
         :distance="8"
         :class="
             cn(
-                'no-drag search-drop ghosty drag-label group/qs border-box after:content-[ relative z-0 flex !cursor-pointer !p-0 after:absolute after:grid after:h-full after:w-full after:place-content-center after:text-lg after:opacity-50 after:content-[\'+\'] hover:after:text-neutral hover:after:opacity-60',
+                'no-drag search-drop ghosty drag-label group/qs border-box after:content-[ relative z-0 flex !cursor-pointer !p-0 after:absolute after:grid after:h-full after:w-full after:place-content-center after:text-lg after:opacity-50 after:content-[\'+\'] hover:after:text-accent hover:after:opacity-60',
                 props.class
             )
         "
@@ -78,11 +78,11 @@ function afterLeave(el: Element) {
                     <Icon
                         v-if="!quickSearch"
                         icon="teenyicons:search-outline"
-                        class="pointer-events-none absolute right-3.5 top-[0.45rem] size-3.5 text-neutral-content/50" />
+                        class="pointer-events-none absolute right-3.5 top-[0.45rem] size-3.5 text-ac/50" />
 
                     <button
                         v-else
-                        class="pointer-events-auto absolute right-3.5 top-[7px] z-10 size-3.5 text-neutral/40 transition-all duration-300 hover:text-neutral/60"
+                        class="pointer-events-auto absolute right-3.5 top-[7px] z-10 size-3.5 text-accent/40 transition-all duration-300 hover:text-accent/60"
                         @click="$emit('update:quickSearch', '')">
                         <Icon icon="teenyicons:x-outline" />
                     </button>
@@ -92,14 +92,14 @@ function afterLeave(el: Element) {
                         :value="quickSearch"
                         @input="handleInput"
                         spellcheck="false"
-                        class="placeholder: z-0 h-7 w-full select-all rounded-btn bg-transparent px-2 italic !outline-none focus:bg-base-200/50 focus:not-italic"
+                        class="placeholder: z-0 h-7 w-full select-all rounded-btn bg-transparent px-2 italic !outline-none focus:bg-b2/50 focus:not-italic"
                         autofocus />
                 </div>
 
                 <!--    <transition name="list-transition" @enter="beforeEnter" @leave="afterLeave"> -->
                 <div
                     v-if="quickSearch"
-                    class="grid max-h-72 w-full overflow-y-scroll border border-transparent border-t-base-300 px-1 pt-2 transition-all duration-500">
+                    class="grid max-h-72 w-full overflow-y-scroll border border-transparent border-t-b3 px-1 pt-2 transition-all duration-500">
                     <TransitionGroup
                         name="fade"
                         tag="div"
@@ -110,7 +110,7 @@ function afterLeave(el: Element) {
                             v-for="data in props.array"
                             :key="data.id"
                             @click="handleClick(data)"
-                            class="btn btn-ghost btn-xs my-1 flex w-full cursor-pointer justify-start gap-2 px-1 py-0.5 hover:bg-base-200">
+                            class="btn btn-ghost btn-xs my-1 flex w-full cursor-pointer justify-start gap-2 px-1 py-0.5 hover:bg-b2">
                             <img
                                 :src="`/img/${props.type}/${data.id || data.name}.webp`"
                                 class="size-4.5 rounded-md" />

@@ -15,13 +15,13 @@ const hs = history.state
 
 <template>
     <Menubar
-        class="absolute z-[199] grid w-full grid-cols-3 items-center rounded-t-md bg-base-100/[97%] p-0 shadow-[inset_0px_0px_3px_2px_#00000006,inset_3px_3px_3px_2px_#00000007,rgba(0,_0,_0,_0.15)_0px_7px_10px_-12px] [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center"
+        class="absolute z-[199] grid w-full grid-cols-3 items-center rounded-t-md bg-b1/[97%] p-0 shadow-[inset_0px_0px_3px_2px_#00000006,inset_3px_3px_3px_2px_#00000007,rgba(0,_0,_0,_0.15)_0px_7px_10px_-12px] [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center"
         data-tauri-drag-region>
         <div data-tauri-drag-region>
             <MenubarMenu>
                 <div class="flex items-center gap-2 pl-1 pr-6">
                     <div
-                        class="ml-2 flex aspect-square size-7 shrink-0 items-center justify-center rounded-md bg-neutral text-neutral-content/90 shadow-sm">
+                        class="ml-2 flex aspect-square size-7 shrink-0 items-center justify-center rounded-md bg-accent text-ac/90 shadow-sm">
                         <span
                             class="mt-1px cursor-default select-none !text-xs font-bold">
                             LP

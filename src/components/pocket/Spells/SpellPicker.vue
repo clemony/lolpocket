@@ -55,7 +55,7 @@ function onChange(e, spell) {
                         variant="outline"
                         size="icon"
                         v-else-if="model"
-                        class="size-[50px] overflow-hidden rounded-lg p-0 shadow-standard ring-1 ring-transparent ring-offset-2 transition-all duration-300 hover:ring-neutral/60 data-[state=open]:ring-neutral/60">
+                        class="size-[50px] overflow-hidden rounded-lg p-0 shadow-standard ring-1 ring-transparent ring-offset-2 transition-all duration-300 hover:ring-accent/60 data-[state=open]:ring-accent/60">
                         <img
                             :src="`/img/spells/Summoner${model.name}.webp`"
                             class="size-full" />
@@ -72,14 +72,14 @@ function onChange(e, spell) {
                 <div class="h-24" />
 
                 <div
-                    class="gap flex flex-wrap justify-end gap-x-8 gap-y-4 bg-base-100 px-12 py-6 pb-8 backdrop-blur-md">
+                    class="gap flex flex-wrap justify-end gap-x-8 gap-y-4 bg-b1 px-12 py-6 pb-8 backdrop-blur-md">
                     <PopoverClose
                         v-for="spell in state.data"
                         :key="spell.name"
                         :disabled="''">
                         <label
                             @click=""
-                            class="rounded-lg shadow-standard ring-neutral/40 ring-offset-2 hover:ring-1">
+                            class="rounded-lg shadow-standard ring-accent/40 ring-offset-2 hover:ring-1">
                             <input
                                 type="radio"
                                 :value="spell"
@@ -88,7 +88,7 @@ function onChange(e, spell) {
                                 class="hidden"
                                 :disabled="false" />
                             <div
-                                class="size-[50px] overflow-hidden rounded-lg border border-neutral/10">
+                                class="size-[50px] overflow-hidden rounded-lg border border-accent/10">
                                 <img
                                     :src="`/img/spells/Summoner${spell.name}.webp`"
                                     class="size-full" />

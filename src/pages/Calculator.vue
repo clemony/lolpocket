@@ -120,7 +120,7 @@ defineExpose({})
 <style>
 /* beautify ignore:start */
 :root {
-    --ag-row-border-color: oklch(var(--b2) / 0.5);
+    --ag-row-border-color: var(--b2) / 0.5;
     --ag-card-radius: 4px;
     --ag-border-radius: 4px;
     --ag-popup-shadow: rgba(50, _50, _105, _0.15) _0px_2px_5px_0px,
@@ -128,9 +128,9 @@ defineExpose({})
     --ag-card-shadow: var(--ag-popup-shadow);
     --ag-range-selection-border-color: transparent;
     --ag-range-selection-border-style: none;
-    --ag-selected-row-background-color: oklch(var(--b2) / 0.3);
+    --ag-selected-row-background-color: var(--b2) / 0.3;
     --ag-row-height: 65px;
-    --ag-text-color: oklch(var(--bc));
+    --ag-text-color: var(--ac);
 }
 .ag-header-cell {
 }
@@ -140,15 +140,15 @@ defineExpose({})
 }
 
 .ag-menu {
-    @apply !z-10 mt-1.5 border-base-300/80 !bg-base-100/95 backdrop-blur-md;
+    @apply !z-10 mt-1.5 border-b3/80 !bg-b1/95 backdrop-blur-md;
 }
 
 .ag-text-field-input {
-    @apply z-20 !bg-base-100 outline-0 ring-0;
+    @apply z-20 !bg-b1 outline-0 ring-0;
 }
 
 .ag-picker-field {
-    @apply z-50 !bg-base-100/95 opacity-100 outline-0 !ring-0 backdrop-blur-md focus:ring-0;
+    @apply z-50 !bg-b1/95 opacity-100 outline-0 !ring-0 backdrop-blur-md focus:ring-0;
 }
 
 .ag-picker-field-wrapper {
@@ -156,6 +156,6 @@ defineExpose({})
 }
 
 .ag-select-list {
-    @apply z-50 !bg-base-100/95 backdrop-blur-md;
+    @apply z-50 !bg-b1/95 backdrop-blur-md;
 }</style>
  -->

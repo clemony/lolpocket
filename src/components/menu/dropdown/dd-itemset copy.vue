@@ -31,14 +31,14 @@ console.log(filter)
                 <PopoverTrigger>
                     <Button
                         variant="ghost"
-                        class="relative -ml-3 h-fit justify-start ring-base-200 hover:bg-transparent hover:ring-1">
+                        class="relative -ml-3 h-fit justify-start ring-b2 hover:bg-transparent hover:ring-1">
                         <template
                             v-for="(item, index) in props.model.items"
                             :key="item.key">
                             <LoadImg
                                 v-if="index < 6"
                                 :url="`/img/items/${item.id}.webp`"
-                                class="size-[55px] overflow-hidden rounded-md border border-base-300 shadow-sm" />
+                                class="size-[55px] overflow-hidden rounded-md border border-b3 shadow-sm" />
                         </template>
                         <template
                             v-if="props.model.items.length < 6"></template>

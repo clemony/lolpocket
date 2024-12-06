@@ -38,7 +38,7 @@ console.log(ps.columns)
                     "
                     theme="hover-inner">
                     <Label
-                        class="flex w-full items-center gap-4 rounded-md px-3 py-1 text-sm hover:bg-base-200/60">
+                        class="flex w-full items-center gap-4 rounded-md px-3 py-1 text-sm hover:bg-b2/60">
                         <input
                             type="checkbox"
                             :checked="column.isVisible"
@@ -52,7 +52,7 @@ console.log(ps.columns)
 
                 <VDropdown v-else-if="column.headerName != ''" theme="hidden">
                     <Label
-                        class="flex w-full items-center gap-4 rounded-md px-3 py-1 text-sm hover:bg-base-200/60">
+                        class="flex w-full items-center gap-4 rounded-md px-3 py-1 text-sm hover:bg-b2/60">
                         <input
                             type="checkbox"
                             :checked="column.isVisible"

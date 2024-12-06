@@ -23,7 +23,7 @@ const styleRevert = computed(() => ({
 <template>
     <div class="shape relative flex w-full justify-center drop-shadow-lg">
         <!--        <div
-            class="absolute bottom-2 left-3 z-20 flex h-8 items-center rounded-lg border-none bg-base-100/50 !py-0.5 backdrop-blur-sm">
+            class="absolute bottom-2 left-3 z-20 flex h-8 items-center rounded-lg border-none bg-b1/50 !py-0.5 backdrop-blur-sm">
             <h3
                 class="absolute scale-x-110 px-1 !font-serif !font-extrabold italic leading-none text-black blur-[5px] drop-shadow-sm">
                 {{ pocket.champions[0].starred }}
@@ -35,7 +35,7 @@ const styleRevert = computed(() => ({
         </div> -->
 
         <div
-            class="relative z-0 size-full h-48 overflow-hidden rounded-[8px] bg-base-200/60">
+            class="relative z-0 size-full h-48 overflow-hidden rounded-[8px] bg-b2/60">
             <slot />
             <div
                 class="relative grid size-full place-items-center content-center items-center overflow-hidden">

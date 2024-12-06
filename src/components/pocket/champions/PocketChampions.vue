@@ -27,7 +27,7 @@ const dataValue = ref()
                     class="">
                     <div class="relative">
                         <div
-                            class="absolute left-1.5 top-1.5 z-10 rounded-full border-2 border-precision bg-neutral/70 p-1.5 opacity-85 ring-1 ring-neutral/40 backdrop-blur-md">
+                            class="absolute left-1.5 top-1.5 z-10 rounded-full border-2 border-precision bg-accent/70 p-1.5 opacity-85 ring-1 ring-accent/40 backdrop-blur-md">
                             <icon
                                 icon="fontisto:star"
                                 class="-ml-px -mt-2px size-4 shrink-0 object-center text-precision drop-shadow-sm" />
@@ -42,18 +42,18 @@ const dataValue = ref()
                 <Card
                     class="mt-9 h-[calc(100%-315px)] max-h-[calc(100%-315px)] overflow-hidden">
                     <CardHeader
-                        class="absolute left-0 top-0 z-10 w-full flex-row items-center rounded-t-xl bg-base-100/90 px-12 py-4 backdrop-blur-md">
+                        class="absolute left-0 top-0 z-10 w-full flex-row items-center rounded-t-xl bg-b1/90 px-12 py-4 backdrop-blur-md">
                         <SearchBox
                             :search="cs.champSearch"
                             :placeholder="'Search Champions...'"
                             @update:search="cs.champSearch = $event"
-                            class="rounded-md bg-base-100/80 shadow-inset-sm" />
+                            class="rounded-md bg-b1/80 shadow-inset-sm" />
                         <Grow />
                         <div class="join mr-1">
                             <Label
                                 variant="outline"
                                 size="icon"
-                                class="join-item swap swap-flip relative has-[:disabled]:cursor-default has-[:checked]:!bg-base-200"
+                                class="join-item swap swap-flip relative has-[:disabled]:cursor-default has-[:checked]:!bg-b2"
                                 alt="Filter Likes">
                                 <input
                                     type="checkbox"

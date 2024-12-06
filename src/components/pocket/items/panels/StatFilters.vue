@@ -101,7 +101,7 @@ function getStatsForCategory(category: string) {
                             <div class="text-nowrap text-sm">
                                 {{ stat.name }}
                             </div>
-                            <!--         <icon :icon="stat.icon" :class="stat.classList" class="w-4 text-base-content/80 size-4 " /> -->
+                            <!--         <icon :icon="stat.icon" :class="stat.classList" class="w-4 text-ac/80 size-4 " /> -->
                         </label>
                     </li>
                     <li v-if="cat.name == 'physical'" class="w-1/4 grow"></li>

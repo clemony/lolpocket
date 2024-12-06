@@ -79,7 +79,7 @@ const getStyles = computed(() => {
 
         // Success: exact same major and minor version
         if (lastMajor === currentMajor && lastMinor === currentMinor) {
-            return 'checkbox-success [--chkfg:oklch(var(--b1))]'
+            return 'checkbox-success [--chkfg:var(--b1)]'
         }
 
         // Warning: same major version and lastMinor is within two versions (e.g., 14.18, 14.17) of the currentMinor (e.g., 14.19)

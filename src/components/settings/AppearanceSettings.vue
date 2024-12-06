@@ -21,7 +21,7 @@ const themes = [
             "That guy that otp's Zed. Doesn't care about their 40% winrate. Team diff.",
     },
     {
-        name: 'neutral',
+        name: 'accent',
         description:
             "Creamy and easy on the eyes. It's eyes cream! Yeah...goes well with Latte.",
     },
@@ -58,7 +58,7 @@ function handleChoice() {
                 <label
                     :for="theme.name"
                     class="self-end rounded-lg"
-                    data-act-class="!outline-base-content">
+                    data-act-class="!outline-ac">
                     <input
                         type="radio"
                         v-model="gs.dataTheme"
@@ -73,12 +73,12 @@ function handleChoice() {
                         class="hidden" />
 
                     <div
-                        class="h-20 w-full cursor-pointer overflow-hidden rounded-xl border border-base-300 bg-base-100 text-base-content shadow-warm"
+                        class="h-20 w-full cursor-pointer overflow-hidden rounded-xl border border-b3 bg-b1 text-ac shadow-warm"
                         :data-theme="theme.name + 'minimalist'">
                         <div class="grid h-full w-full grid-cols-[1fr_4fr]">
                             <div class="h-full flex-col">
-                                <div class="h-2/3 bg-base-200"></div>
-                                <div class="h-1/3 bg-base-300"></div>
+                                <div class="h-2/3 bg-b2"></div>
+                                <div class="h-1/3 bg-b3"></div>
                             </div>
                             <div
                                 class="flex h-full items-center gap-2 px-5 font-medium">
@@ -87,11 +87,11 @@ function handleChoice() {
                                     Aa
                                 </div>
                                 <div
-                                    class="color-chip bg-base-200 text-base-content"></div>
+                                    class="color-chip bg-b2 text-ac"></div>
                                 <div
-                                    class="color-chip bg-base-300 text-base-content"></div>
+                                    class="color-chip bg-b3 text-ac"></div>
                                 <div
-                                    class="color-chip bg-neutral text-neutral-content"></div>
+                                    class="color-chip bg-accent text-ac"></div>
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@ function handleChoice() {
             </DisplayCard>
         </div>
 
-        <div class="mt-8 flex border-t border-t-base-200 pt-6">
+        <div class="mt-8 flex border-t border-t-b2 pt-6">
             <Button size="md">Save</Button>
             <Grow />
         </div>

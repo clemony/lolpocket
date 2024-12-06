@@ -20,7 +20,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="text-neutral-300 drop-shadow-sm">
+    <div class="text-accent-300 drop-shadow-sm">
         <icon icon="game-icons:spell-book" class="size-7 shrink-0" />
         <!--  <div
             class="size-9 overflow-hidden rounded-full border border-transparent bg-white/20 shadow-smooth backdrop-blur-sm">

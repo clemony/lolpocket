@@ -64,12 +64,12 @@ watch(
             ref="target"
             :class="
                 cn(
-                    'absolute z-20 w-full bg-base-100/95 px-10 pb-4 pt-6 backdrop-blur-md transition-all duration-200',
+                    'absolute z-20 w-full bg-b1/95 px-10 pb-4 pt-6 backdrop-blur-md transition-all duration-200',
                     {
                         '': isAnchorVisible || isOpen,
-                        'border-b border-b-base-200':
+                        'border-b border-b-b2':
                             !isAnchorVisible && !isOpen,
-                        'rounded-b-xl border-b border-b-base-200 shadow-smooth':
+                        'rounded-b-xl border-b border-b-b2 shadow-smooth':
                             isOpen,
                     },
                     props.headerClass

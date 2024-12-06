@@ -60,7 +60,7 @@ const isShown = props.isShown
                         backgroundColor: bgColor,
                         color: iconColor,
                     }"
-                    class="my-2 aspect-square size-16 self-center rounded-lg p-4.5 ring-neutral/80 hover:ring-1 hover:ring-offset-4">
+                    class="my-2 aspect-square size-16 self-center rounded-lg p-4.5 ring-accent/80 hover:ring-1 hover:ring-offset-4">
                     <icon :icon="selectedIcon" class="-mt-px size-full" />
                 </button>
             </div>
@@ -69,13 +69,13 @@ const isShown = props.isShown
                 <Label for="pocket-tags" class="">Colors</Label>
                 <DropdownMenu class="w-full">
                     <DropdownMenuTrigger
-                        class="mt-1.5 w-full rounded-md data-[state=open]:bg-base-200/60">
+                        class="mt-1.5 w-full rounded-md data-[state=open]:bg-b2/60">
                         <Button
                             variant="ghost"
                             size="sm"
                             class="w-full justify-start text-base">
                             <span
-                                class="size-6 shrink-0 rounded border border-base-300"
+                                class="size-6 shrink-0 rounded border border-b3"
                                 :style="{
                                     backgroundColor: bgColor,
                                 }"></span>
@@ -89,13 +89,13 @@ const isShown = props.isShown
 
                 <DropdownMenu>
                     <DropdownMenuTrigger
-                        class="rounded-md data-[state=open]:bg-base-200/60">
+                        class="rounded-md data-[state=open]:bg-b2/60">
                         <Button
                             variant="ghost"
                             size="sm"
                             class="w-full justify-start text-base">
                             <span
-                                class="size-6 shrink-0 rounded border border-base-300"
+                                class="size-6 shrink-0 rounded border border-b3"
                                 :style="{
                                     backgroundColor: iconColor,
                                 }"></span>
@@ -125,7 +125,7 @@ const isShown = props.isShown
                         <Label
                             variant="ghost"
                             v-for="icon in iconStore"
-                            class="aspect-square size-14 self-center rounded-md border-transparent p-4.5 has-[:checked]:bg-base-200/60 has-[:checked]:shadow-standard">
+                            class="aspect-square size-14 self-center rounded-md border-transparent p-4.5 has-[:checked]:bg-b2/60 has-[:checked]:shadow-standard">
                             <input
                                 v-if="pocket"
                                 type="radio"
@@ -145,7 +145,7 @@ const isShown = props.isShown
 
                             <icon
                                 :icon="icon"
-                                class="size-full shrink-0 text-base-content" />
+                                class="size-full shrink-0 text-ac" />
                         </Label>
                     </div>
                 </ScrollArea>
@@ -157,7 +157,7 @@ const isShown = props.isShown
                         <Label
                             variant="outline"
                             v-for="champion in ds.champions"
-                            class="grid aspect-square size-14 place-items-center self-center overflow-hidden rounded-lg border border-transparent shadow-warm has-[:checked]:bg-base-200/60">
+                            class="grid aspect-square size-14 place-items-center self-center overflow-hidden rounded-lg border border-transparent shadow-warm has-[:checked]:bg-b2/60">
                             <input
                                 v-if="pocket"
                                 type="radio"

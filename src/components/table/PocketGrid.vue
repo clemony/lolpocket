@@ -229,7 +229,7 @@ const genIsOpen = ref(true)
                     :noRowsOverlayComponent="CustomNoRowsOverlay" />
 
                 <div
-                    class="absolute left-0 top-0 z-10 h-10 w-full rounded-t-xl bg-base-100/80 backdrop-blur-md">
+                    class="absolute left-0 top-0 z-10 h-10 w-full rounded-t-xl bg-b1/80 backdrop-blur-md">
                     <ag-grid-vue
                         :theme="pocketTheme"
                         class="col-headers h-full items-center !rounded-none bg-transparent"
@@ -260,7 +260,7 @@ const genIsOpen = ref(true)
         _rgba(0, _0, _0, _0.05) _0px_1px_1px_0px;
     --ag-card-shadow: var(--ag-popup-shadow);
 
-    --ag-selected-row-background-color: oklch(var(--b2) / 0.4);
+    --ag-selected-row-background-color: var(--b2) / 0.4;
     --ag-row-height: 58px;
 }
 
@@ -276,15 +276,15 @@ const genIsOpen = ref(true)
 }
 
 .ag-menu {
-    @apply !z-10 mt-1.5 border-base-300/80 !bg-base-100/95 backdrop-blur-md;
+    @apply !z-10 mt-1.5 border-b3/80 !bg-b1/95 backdrop-blur-md;
 }
 
 .ag-text-field-input {
-    @apply z-20 !bg-base-100 outline-0 ring-0;
+    @apply z-20 !bg-b1 outline-0 ring-0;
 }
 
 .ag-picker-field {
-    @apply z-50 !bg-base-100/95 opacity-100 outline-0 !ring-0 backdrop-blur-md focus:ring-0;
+    @apply z-50 !bg-b1/95 opacity-100 outline-0 !ring-0 backdrop-blur-md focus:ring-0;
 }
 
 .ag-picker-field-wrapper {
@@ -295,7 +295,7 @@ const genIsOpen = ref(true)
 }
 
 .ag-select-list {
-    @apply z-50 border-0 !bg-base-100/95 backdrop-blur-md;
+    @apply z-50 border-0 !bg-b1/95 backdrop-blur-md;
 }
 
 .ag-body-horizontal-scroll,

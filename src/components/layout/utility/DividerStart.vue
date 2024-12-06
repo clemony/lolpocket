@@ -11,7 +11,7 @@ const props = defineProps<{
     <div :class="cn('flex items-center gap-3 opacity-60', props.class)">
         <slot />
 
-        <div class="h-1/2 grow self-start border-b border-b-neutral/25"></div>
+        <div class="h-1/2 grow self-start border-b border-b-accent/25"></div>
     </div>
 </template>
 

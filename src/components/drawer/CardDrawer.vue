@@ -53,7 +53,7 @@ console.log('gug', images)
             <DialogClose>
                 <Button
                     v-if="!gs.drawerPocket"
-                    variant="neutral"
+                    variant="accent"
                     size="lg"
                     type="submit"
                     class="justify-self-end">
@@ -62,7 +62,7 @@ console.log('gug', images)
 
                 <Button
                     v-else
-                    variant="neutral"
+                    variant="accent"
                     type="button"
                     size="md"
                     class="justify-self-end">

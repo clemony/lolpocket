@@ -48,7 +48,7 @@ function clearOldPockets() {
                 <Button
                     variant="ghost"
                     size="lg"
-                    class="justify-center border border-error bg-error px-5 text-base text-white shadow-sm hover:bg-error hover:opacity-80 disabled:border-inspiration disabled:bg-inspiration disabled:text-base-content"
+                    class="justify-center border border-error bg-error px-5 text-base text-white shadow-sm hover:bg-error hover:opacity-80 disabled:border-inspiration disabled:bg-inspiration disabled:text-ac"
                     :disabled="ps.trashPockets.length == 0"
                     @click="ps.trashPockets.length = 0">
                     <span
@@ -82,7 +82,7 @@ function clearOldPockets() {
 
 
             <div
-                class="flex flex-col justify-end flex-grow mt-[15px]  overflow-y-auto border-y   border-base-300 after:shadow-[inset_0px_0px_6px_3px_oklch(var(--b1)/0)] after:size-full after:absolute relative after:top-0 after:z-10 after:brightness-[97%]  after:pointer-events-none">
+                class="flex flex-col justify-end flex-grow mt-[15px]  overflow-y-auto border-y   border-b3 after:shadow-[inset_0px_0px_6px_3px_var(--b1)/0] after:size-full after:absolute relative after:top-0 after:z-10 after:brightness-[97%]  after:pointer-events-none">
                 <PocketGrid :pocketArray="ps.trashPockets" arrayName="trashPockets" class="overflow-auto" />
             </div>
 

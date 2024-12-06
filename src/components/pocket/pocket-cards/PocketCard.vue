@@ -97,12 +97,12 @@ const layer3 = computed(() => ({
                     <input type="checkbox" class="hidden" />
 
                     <Card
-                        class="swap-off relative grid h-[290px] w-[230px] justify-center overflow-hidden rounded-xl border-4 border-neutral-100 bg-gradient-to-br from-transparent to-sorcery px-2 ring-1 ring-neutral/20 before:absolute before:size-full before:rounded-xl before:bg-[url('/img/overlay/cardboard.png')]"
+                        class="swap-off relative grid h-[290px] w-[230px] justify-center overflow-hidden rounded-xl border-4 border-accent-100 bg-gradient-to-br from-transparent to-sorcery px-2 ring-1 ring-accent/20 before:absolute before:size-full before:rounded-xl before:bg-[url('/img/overlay/cardboard.png')]"
                         :style="{
                             background: `linear-gradient(to right bottom, transparent, var(--${set.primary}-light), var(--${set.primary}))`,
                         }">
                         <CardContent
-                            class="relative size-full w-inherit items-center rounded-xl bg-gradient-to-br from-neutral-50/60 via-neutral-50/50 to-neutral-50/40 p-5">
+                            class="relative size-full w-inherit items-center rounded-xl bg-gradient-to-br from-accent-50/60 via-accent-50/50 to-accent-50/40 p-5">
                             <CardChampion
                                 :pocket="pocket"
                                 :wrapper="wrapper"

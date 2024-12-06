@@ -11,7 +11,7 @@ const props = defineProps<{
     <span
         :class="
             cn(
-                'ml-auto flex flex-nowrap items-center text-sm tracking-widest text-base-content/60',
+                'ml-auto flex flex-nowrap items-center text-sm tracking-widest text-ac/60',
                 props.class
             )
         ">
