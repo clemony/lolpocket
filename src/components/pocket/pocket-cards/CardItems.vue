@@ -20,32 +20,34 @@ const items = computed(() => {
 </script>
 <template>
     <div
-        class="flex w-full shrink-0 justify-center gap-0.5 rounded-full p-1.5 shadow-inset"
+        class="flex w-full shrink-0 justify-evenly rounded-full p-2 shadow-inset backdrop-brightness-95 backdrop-saturate-150"
         :style="{
-            background: `linear-gradient(to right, var(--${set.secondary}), var(--${set.secondary}-light)`,
+            /*    backgroundColor: `var(--${set.secondary}-light)`, */
         }">
         <template v-for="(item, i) in items" :key="item.id">
-            <div
-                v-if="i < 6"
-                :key="item.id"
-                class="z-10 size-10 shrink-0 rounded-full p-0 shadow-warm"
-                :style="{
-                    zIndex: items.length + 1 - i,
-                }">
-                <Item
-                    :item="item"
-                    :pocket="pocket"
-                    imgClass="rounded-full  !p-0 m-0 object-center  size-full "
-                    class="z-0 !size-full rounded-full !p-0"
-                    labelClass=" !p-0 !border-0  overflow-hidden rounded-full" />
-            </div>
+            <ItemPop :item="item">
+                <div
+                    v-if="i < 6"
+                    :key="item.id"
+                    class="z-10 size-9 shrink-0 rounded-full p-0"
+                    :style="{
+                        zIndex: items.length + 1 - i /*
+                    outlineStyle: 'double thick',
+                    outlineColor: `var(--${set.primary})`,
+                    outlineWidth: '1px', */,
+                    }">
+                    <LoadImg
+                        :url="`/img/items/${item.id}.webp`"
+                        class="z-0 !size-full rounded-full" />
+                </div>
+            </ItemPop>
         </template>
         <ShadowedPlaceholder
             v-for="index in makeBox(items.length, 6)"
-            class="size-10 rounded-full border-black/5"
+            class="size-9 rounded-full border-black/5 bg-neutral-200 shadow-warm"
             :style="{
-                backgroundColor: `var(--${set.secondary}-light`,
-
+                /*                 backgroundColor: `var(--${set.secondary}-light`,
+                 */
                 zIndex: 6 + 1 - index,
             }" />
     </div>

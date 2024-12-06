@@ -81,7 +81,7 @@ onMounted(async () => {})
                     </div>
                 </label>
                 <template #popper :key="item.name + 'Pop'">
-                    <pop-item :item="item" :variant="'empty'" />
+                    <ItemPop :item="item" :variant="'empty'" />
                 </template>
             </VDropdown>
 

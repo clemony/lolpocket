@@ -99,7 +99,6 @@ const disabled = ref(false)
 
 <template>
     <VueDraggable
-        ref="el"
         :group="{ name: 'items', pull: 'clone', put: false, revertClone: true }"
         :sort="false"
         :bubbleScroll="false"
@@ -122,10 +121,8 @@ const disabled = ref(false)
         </template>
         <!--     </TransitionGroup> -->
 
-        <div v-for="index in 7" class="drag-label opacity-0" :key="index">
-            <div class="drag-label">
-                <div class="drag-img aspect-square size-[52px]"></div>
-            </div>
+        <div v-for="index in 5" class="opacity-0" :key="index">
+            <div class="aspect-square size-18"></div>
         </div>
     </VueDraggable>
 </template>

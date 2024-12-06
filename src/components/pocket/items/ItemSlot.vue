@@ -90,7 +90,7 @@ const filteredItems = computed(() => {
                     </div>
                 </label>
                 <template #popper :key="item.name + 'Pop'">
-                    <pop-item
+                    <ItemPop
                         :item="item"
                         :variant="'remove'"
                         :set="set"

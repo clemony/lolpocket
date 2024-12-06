@@ -9,21 +9,51 @@ const props = withDefaults(
         headerClass?: HTMLAttributes['class']
         cardClass?: HTMLAttributes['class']
         isTop?: boolean
+        wrapper?: HTMLElement | null
     }>(),
     {
         open: false,
     }
 )
-
-const isOpen = ref(props.open)
-//const isTop = ref(true)
-const emit = defineEmits(['update:open'])
-
 const topAnchor = ref<HTMLElement | null>(null)
 const isAnchorVisible = useElementVisibility(topAnchor)
 const target = ref(null)
 
-onClickOutside(target, (event) => (isOpen.value = false))
+const openTrigger = ref(false)
+const isOpen = ref(false)
+
+if (props.open) {
+    isOpen.value = true
+}
+if ((openTrigger.value = true)) {
+    isOpen.value = true
+}
+onClickOutside(target, (event) => {
+    isOpen.value = false
+    openTrigger.value = false
+})
+
+const scrollArea = ref(null)
+
+const { x, y, isScrolling, arrivedState, directions } = useScroll(scrollArea)
+
+watch(
+    () => isScrolling.value,
+    (newVal) => {
+        console.log(newVal)
+        isOpen.value = false
+        openTrigger.value = false
+    }
+)
+/*
+watch(
+    () => isScrolling.value,
+    (newVal) => {
+        console.log(isScrolling)
+    
+    }
+) */
+//const isTop = ref(true)
 </script>
 
 <template>
@@ -34,11 +64,11 @@ onClickOutside(target, (event) => (isOpen.value = false))
             ref="target"
             :class="
                 cn(
-                    'w-full bg-base-100/95 px-10 pt-0 backdrop-blur-md transition-all duration-200',
+                    'absolute z-20 w-full bg-base-100/95 px-10 pb-4 pt-6 backdrop-blur-md transition-all duration-200',
                     {
-                        'pb-4 pt-6': isAnchorVisible,
-                        'absolute z-20 border-b border-b-base-200 py-2':
-                            !isAnchorVisible,
+                        '': isAnchorVisible || isOpen,
+                        'border-b border-b-base-200':
+                            !isAnchorVisible && !isOpen,
                         'rounded-b-xl border-b border-b-base-200 shadow-smooth':
                             isOpen,
                     },
@@ -47,7 +77,7 @@ onClickOutside(target, (event) => (isOpen.value = false))
             ">
             <Collapsible
                 v-model:open="isOpen"
-                @update:open="emit('update:open', isOpen)">
+                @update:open="(v) => (isOpen = v)">
                 <CollapsibleTrigger
                     class="flex w-full cursor-pointer items-center gap-3 pt-1"
                     as-child>
@@ -66,13 +96,13 @@ onClickOutside(target, (event) => (isOpen.value = false))
             </Collapsible>
         </CardHeader>
         <CardContent class="px-0 pb-0">
-            <ScrollArea
-                ref="el"
-                class="h-full max-h-full overflow-auto px-8 pb-0">
+            <ScrollArea class="h-full max-h-full overflow-auto px-8 pb-0 pt-18">
                 <div
                     ref="topAnchor"
                     class="h-1 w-full transition-all duration-500" />
-                <slot />
+                <div ref="scrollArea">
+                    <slot />
+                </div>
             </ScrollArea>
         </CardContent>
     </Card>

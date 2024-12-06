@@ -79,7 +79,8 @@ const likeText = computed(() => {
                 v-model:open="isOpen"
                 @update:isOpen="(v) => (isOpen = v)"
                 cardClass="inset-0 w-fit justify-self-end h-[calc(100%-140px)] max-h-[calc(100%-140px)] overflow-hidden pt-4 ml-8 mr-2 "
-                headerClass="-ml-px">
+                headerClass="-ml-px"
+                wrapper="itemWrapper">
                 <template #header>
                     <div class="join shadow-sm">
                         <SearchBox

@@ -136,7 +136,7 @@ module.exports = {
                 'inset-sm':
                     'inset 1px 2px 1px 1px #00000004, inset -1px -1px 2px 1px #00000009',
                 smooth: 'rgba(17, 17, 26, 0.07) 0px 0px 16px',
-                pretty: '0 3px 10px rgb(0,0,0,0.2)',
+                pretty: 'var(--shadow-pretty)',
             },
             dropShadow: {
                 xs: '0px 0px 2px #00000020',

@@ -99,13 +99,7 @@ const layer3 = computed(() => ({
                     <Card
                         class="swap-off relative grid h-[290px] w-[230px] justify-center overflow-hidden rounded-xl border-4 border-neutral-100 bg-gradient-to-br from-transparent to-sorcery px-2 ring-1 ring-neutral/20 before:absolute before:size-full before:rounded-xl before:bg-[url('/img/overlay/cardboard.png')]"
                         :style="{
-                            /*     borderColor: `var(--${set.primary}-light)`,
-                            borderStyle: 'solid',
-                            borderWidth: '2px',
-                         outlineOffset: '-4px',
-                            outlineWidth: '2px',
-                            outlineColor: 'rgba(255,255,255,1)',
-                            outlineStyle: 'solid', */
+                            background: `linear-gradient(to right bottom, transparent, var(--${set.primary}-light), var(--${set.primary}))`,
                         }">
                         <CardContent
                             class="relative size-full w-inherit items-center rounded-xl bg-gradient-to-br from-neutral-50/60 via-neutral-50/50 to-neutral-50/40 p-5">
@@ -116,7 +110,11 @@ const layer3 = computed(() => ({
                                 :layer1="layer1"
                                 :layer2="layer2"
                                 :layer3="layer3">
-                                <CardSpells :pocket="pocket" />
+                                <menu
+                                    class="absolute bottom-2 right-2 z-10 flex items-center gap-3">
+                                    <CardSpells :pocket="pocket" />
+                                    <CardShards :pocket="pocket" />
+                                </menu>
                             </CardChampion>
                             <CardKeystone :set="set" :style="layer0" />
 
@@ -124,9 +122,7 @@ const layer3 = computed(() => ({
                                 <CardRuneset
                                     :pocket="pocket"
                                     :style="layer0"
-                                    :set="set">
-                                    <!--    <CardShards :pocket="pocket" /> -->
-                                </CardRuneset>
+                                    :set="set"></CardRuneset>
 
                                 <CardItems :pocket="pocket" :set="set" />
                             </div>

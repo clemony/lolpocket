@@ -11,7 +11,7 @@ const props = defineProps<{
     <h3
         :class="
             cn(
-                'text-2xl font-semibold leading-none tracking-tight',
+                'title text-2xl font-semibold leading-none tracking-tight',
                 props.class
             )
         ">

@@ -82,9 +82,9 @@ const prevIndex = 0
                 v-for="(set, index) in pocket.items[0].itemSets"
                 dragClass="setDrag"
                 :key="set.key"
-                headerClass="pb-1"
+                headerClass="!pb-2 [&_.description]:hidden"
                 :cardClass="{
-                    '@container/set relative w-[calc(100%-48px)]  inset-0 before:absolute before:bg-transparent before:border  before:w-full before:h-full  before:pointer-events-none before:border-transparent before:z-50  mx-[24px] before:rounded-xl':
+                    '@container/set relative w-[calc(100%-48px)]  inset-0 before:absolute before:bg-transparent before:border  before:w-full before:h-full  before:pointer-events-none before:border-transparent before:z-50  mx-[24px] before:rounded-xl ':
                         set,
                     ' before:border-neutral/50 before:shadow-inner':
                         set == is.selectedSet,
@@ -108,7 +108,7 @@ const prevIndex = 0
                         <InputEditable
                             v-model:modelValue="set.name"
                             :defaultValue="set.name"
-                            class="hidden w-fit items-center truncate border-transparent text-start align-baseline !text-base font-medium capitalize transition-all duration-300 focus-within:border-base-200 hover:border-base-200 @[230px]/set:flex">
+                            class="hidden w-fit min-w-24 items-center truncate border-transparent text-start align-baseline !text-base font-medium capitalize transition-all duration-300 focus-within:border-base-200 hover:border-base-200 @[230px]/set:flex">
                             <Button
                                 variant="simple"
                                 size="xs"
@@ -133,51 +133,43 @@ const prevIndex = 0
 
                     <span class="grow self-center"></span>
 
-                    <VDropdown
-                        theme="default"
-                        placement="left-start"
-                        class="arrow p-0">
-                        <Button
-                            variant="ghost"
-                            class="!m-0 !aspect-square size-6 px-1">
-                            <icon
-                                icon="qlementine-icons:settings-16"
-                                class="size-4.5 shrink-0 opacity-50" />
-                        </Button>
+                    <DropdownMenu>
+                        <DropdownMenuTrigger as-child>
+                            <Button variant="ghost" size="icon">
+                                <icon
+                                    icon="ph:gear-six"
+                                    class="size-4.5 shrink-0 opacity-50" />
+                            </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent>
+                            <DropdownMenuLabel>Set Type</DropdownMenuLabel>
 
-                        <template #popper>
-                            <VDropdown theme="hover-inner">
-                                <MenuItemButton text="Set Type" indent open />
+                            <!-- <DdSetType :pocket="pocket" :set="set" /> -->
 
-                                <template #popper>
-                                    <DdSetType :pocket="pocket" :set="set" />
-                                </template>
-                            </VDropdown>
-
-                            <MenuItemButton
-                                text="Clear Items"
+                            <DropdownMenuItem
                                 alt="Clear Items"
                                 @click="is.resetItems(set.key)">
                                 <icon
                                     icon="qlementine-icons:eraser-16"
                                     class="-ml-1 size-4" />
-                            </MenuItemButton>
+                                Clear Items
+                            </DropdownMenuItem>
 
-                            <Separator />
+                            <DropdownMenuSeparator />
 
-                            <MenuItemButton
-                                text="Delete Set"
+                            <DropdownMenuItem
                                 alt="Delete Set"
                                 @click="deleteItemSet(pocket.key, set.key)"
                                 :disabled="is.itemSets.length == 1">
                                 <icon
                                     icon="teenyicons:bin-outline"
                                     class="-ml-1 size-4" />
-                            </MenuItemButton>
-                        </template>
-                    </VDropdown>
+                                Delete Set
+                            </DropdownMenuItem>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
 
-                    <!--     <label
+                    <label
                         class="group absolute right-2 top-0 h-full w-7 shrink-0">
                         <input
                             type="radio"
@@ -185,15 +177,7 @@ const prevIndex = 0
                             v-model="is.selectedSet"
                             :value="set"
                             class="hidden" />
-                        <img
-                            v-if="is.selectedSet == set"
-                            src="/img/ui/caret.png"
-                            class="absolute top-[44%] size-5.5 shrink-0 group-hover:opacity-0" />
-
-                        <img
-                            src="/img/ui/caret.gif"
-                            class="absolute top-[43%] size-7 shrink-0 opacity-0 transition-all duration-500 group-hover:opacity-40" />
-                    </label> -->
+                    </label>
                 </template>
 
                 <ItemSetItems :pocketKey="pocketKey" :set="set" />

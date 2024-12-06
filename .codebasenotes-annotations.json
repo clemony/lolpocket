@@ -1,3 +1,29 @@
 {
-  "type": "dir"
+  "type": "dir",
+  "subNodes": {
+    "src": {
+      "type": "dir",
+      "subNodes": {
+        "components": {
+          "type": "dir",
+          "subNodes": {
+            "pocket": {
+              "type": "dir",
+              "subNodes": {
+                "items": {
+                  "type": "dir",
+                  "subNodes": {
+                    "Item.vue": {
+                      "type": "vue",
+                      "annotation": "control click thingy"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

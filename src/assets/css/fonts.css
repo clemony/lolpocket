@@ -53,6 +53,11 @@
     font-family: 'Geist Sans', sans-serif !important;
 }
 
+.font-mono:not(.italic) {
+    font-family: 'Victor Mono Variable', monospace;
+    scale: 1.1 1;
+}
+
 @font-face {
     font-family: 'Geist Sans';
     font-style: normal;

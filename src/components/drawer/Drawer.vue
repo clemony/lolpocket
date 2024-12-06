@@ -15,14 +15,14 @@ const side = ref(gs.drawerValue.direction)
             class="pt-3 focus:outline-none"
             :class="{
                 'justify-center px-[8%]': side == 'bottom',
-                'px-8': side == 'right',
+                'items-start px-8': side == 'right',
             }"
             @openAutoFocus.prevent>
             <DrawerHeader
                 class="mt-6"
                 :class="{
                     'w-1/2 pr-32': side == 'bottom',
-                    '': side == 'right',
+                    'w-full items-start': side == 'right',
                 }">
                 <DrawerTitle>
                     {{ gs.drawerValue.title }}

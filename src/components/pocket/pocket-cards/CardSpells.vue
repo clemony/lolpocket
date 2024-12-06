@@ -20,24 +20,22 @@ onMounted(() => {
 </script>
 
 <template>
-    <div
-        class="absolute right-2 top-2 z-20 flex flex-col items-center justify-center gap-3">
-        <div
-            class="size-9 overflow-hidden rounded-full bg-white/20 shadow-smooth backdrop-blur-sm"
-            :class="{ 'border border-neutral/70': a && a.name }">
+    <div class="text-neutral-300 drop-shadow-sm">
+        <icon icon="game-icons:spell-book" class="size-7 shrink-0" />
+        <!--  <div
+            class="size-9 overflow-hidden rounded-full border border-transparent bg-white/20 shadow-smooth backdrop-blur-sm">
             <img
                 v-if="a && a.name"
                 :src="`/img/spells/Summoner${a.name}.webp`"
                 class="size-full" />
         </div>
         <div
-            class="size-9 overflow-hidden rounded-full bg-white/20 shadow-smooth backdrop-blur-sm"
-            :class="{ 'border border-neutral/70': b && b.name }">
+            class="size-9 overflow-hidden rounded-full border border-transparent bg-white/20 shadow-smooth backdrop-blur-sm">
             <img
                 v-if="b && b.name"
                 :src="`/img/spells/Summoner${b.name}.webp`"
                 class="size-full" />
-        </div>
+        </div> -->
     </div>
 </template>
 

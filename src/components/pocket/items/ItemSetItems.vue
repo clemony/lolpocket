@@ -87,7 +87,7 @@ const filteredItems = computed(() => {
         :force-fallback="true"
         :fallbackOnBody="true"
         @end="handleDragEnd"
-        class="drag-draggable item !justify-start overflow-hidden !p-1 scrollbar-hide"
+        class="drag-draggable item overflow-hidden !p-1 scrollbar-hide"
         :class="{ '!gap-5': props.limit }">
         <template v-for="(item, index) in set.items" :key="item.id">
             <VDropdown
@@ -112,7 +112,7 @@ const filteredItems = computed(() => {
                     </div>
                 </label>
                 <template #popper :key="item.name + 'Pop'">
-                    <pop-item
+                    <ItemPop
                         :item="item"
                         :variant="'remove'"
                         :set="set"

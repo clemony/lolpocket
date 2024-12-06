@@ -9,11 +9,14 @@ const ps = usePocketStore()
         <template #header>Pocket Cards</template>
 
         <template #header-center>
-            <Shortcut
-                @click="toggleDrawerState(newPocketDrawer)"
-                title="New Pocket"
-                shortcut="( ⌘ N )"
-                class="max-w-40" />
+            <Tooltip content="New Pocket">
+                <Button
+                    @click="toggleDrawerState(newPocketDrawer)"
+                    variant="outline"
+                    size="icon">
+                    <icon icon="teenyicons:add-outline" />
+                </Button>
+            </Tooltip>
         </template>
         <template #header-end>
             <span class="mr-0 flex items-center justify-end gap-3">

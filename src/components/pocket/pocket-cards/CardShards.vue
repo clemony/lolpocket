@@ -11,9 +11,9 @@ const pocket = ref(props.pocket)
 const set = ref(pocket.value.runes[0].runeSets[pocket.value.runes[0].starred])
 </script>
 <template>
-    <div
-        class="absolute -right-12 top-0 z-0 flex aspect-square h-full flex-col items-end gap-0.5 rounded-r-full bg-base-300/60 p-1 [&_:nth-child(2)]:absolute [&_:nth-child(2)]:right-5.5 [&_:nth-child(2)]:top-3.5">
-        <template v-for="shard in set.shards" :key="shard.name">
+    <div class="1 text-neutral-300">
+        <icon icon="game-icons:floating-crystal" class="size-6 shrink-0" />
+        <!--         <template v-for="shard in set.shards" :key="shard.name">
             <div
                 class="grid flex-nowrap place-items-center"
                 :class="
@@ -34,7 +34,7 @@ const set = ref(pocket.value.runes[0].runeSets[pocket.value.runes[0].starred])
                         })
                     " />
             </div>
-        </template>
+        </template> -->
     </div>
 </template>
 <style scoped></style>

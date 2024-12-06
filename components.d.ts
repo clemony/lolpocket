@@ -166,6 +166,7 @@ declare module 'vue' {
     Item: typeof import('./src/components/pocket/items/Item.vue')['default']
     ItemContextMenu: typeof import('./src/components/pocket/items/item-context-menu.vue')['default']
     ItemList: typeof import('./src/components/pocket/items/ItemList.vue')['default']
+    ItemPop: typeof import('./src/components/pocket/items/ItemPop.vue')['default']
     Items: typeof import('./src/pages/items.vue')['default']
     ItemSetItems: typeof import('./src/components/pocket/items/ItemSetItems.vue')['default']
     ItemsetModel: typeof import('./src/components/pocket/items/ItemsetModel.vue')['default']

@@ -7,37 +7,37 @@ const props = defineProps<{
 }>()
 
 const pocket = ref(props.pocket)
-const start = ref(pocket.value.items[0].start[0])
-const core = ref(pocket.value.items[0].core[0])
+const start = ref(pocket.value.items[0].start[0].key)
+const core = ref(pocket.value.items[0].core[0].key)
 
-const final = ref(pocket.value.items[0].final[0])
+const final = ref(pocket.value.items[0].final[0].key)
 
 function clear(set) {
-    if (set == core) {
+    if (set.key == core[0].key) {
         core.value = null
-    } else if (set == start) {
+    } else if (set.key == start[0].key) {
         start.value = null
-    } else if (set == final) {
+    } else if (set.key == final[0].key) {
         final.value = null
     }
 }
 
 function startChange(set, event) {
     event.target.value == true ?
-        (pocket.value.items[0].final[0] = set)
-    :   (pocket.value.items[0].start[0] = null)
+        (pocket.value.items[0].final[0].key = set.key)
+    :   (pocket.value.items[0].start[0].key = null)
 }
 
 function coreChange(set, event) {
     event.target.value == true ?
-        (pocket.value.items[0].core[0] = set)
-    :   (pocket.value.items[0].core[0] = null)
+        (pocket.value.items[0].core[0].key = set.key)
+    :   (pocket.value.items[0].core[0].key = null)
 }
 
 function finalChange(set, event) {
     event.target.value == true ?
-        (pocket.value.items[0].final[0] = set)
-    :   (pocket.value.items[0].final[0] = null)
+        (pocket.value.items[0].final[0].key = set.key)
+    :   (pocket.value.items[0].final[0].key = null)
 }
 </script>
 
@@ -45,21 +45,27 @@ function finalChange(set, event) {
     <label>
         <Button
             class="w-full justify-start"
-            :variant="set == pocket.items[0].start[0] ? 'inspiration' : 'ghost'"
+            :variant="
+                set.key == pocket.items[0].start[0].key ?
+                    'inspiration'
+                :   'ghost'
+            "
             size="sm">
             Start
         </Button>
         <input
             type="radio"
             name="set-type"
-            @change="pocket.items[0].start[0] = set"
+            @change="pocket.items[0].start[0].key = set.key"
             class="hidden"
             :value="set" />
     </label>
     <label>
         <Button
             class="w-full justify-start"
-            :variant="set == pocket.items[0].core[0] ? 'precision' : 'ghost'"
+            :variant="
+                set.key == pocket.items[0].core[0].key ? 'precision' : 'ghost'
+            "
             size="sm">
             Core
         </Button>
@@ -73,7 +79,9 @@ function finalChange(set, event) {
     <label>
         <Button
             class="w-full justify-start"
-            :variant="set == pocket.items[0].final[0] ? 'resolve' : 'ghost'"
+            :variant="
+                set.key == pocket.items[0].final[0].key ? 'resolve' : 'ghost'
+            "
             size="sm">
             Complete
         </Button>
@@ -90,9 +98,9 @@ function finalChange(set, event) {
         size="sm"
         :variant="
             (
-                set != pocket.items[0].final[0] &&
-                set != pocket.items[0].core[0] &&
-                set != pocket.items[0].start[0]
+                set.key != pocket.items[0].final[0].key &&
+                set.key != pocket.items[0].core[0].key &&
+                set.key != pocket.items[0].start[0].key
             ) ?
                 'default'
             :   'ghost'
