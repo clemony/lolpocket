@@ -15,12 +15,15 @@ const delegatedProps = computed(() => {
 </script>
 
 <template>
-<ContextMenuLabel v-bind="delegatedProps" :class="cn(
-    'px-2 py-1.5  font-semibold text-ac',
-    inset && 'pl-8',
-    props.class
-)
-    ">
-    <slot />
-</ContextMenuLabel>
+    <ContextMenuLabel
+        v-bind="delegatedProps"
+        :class="
+            cn(
+                'text-bc px-2 py-1.5 font-semibold',
+                inset && 'pl-8',
+                props.class
+            )
+        ">
+        <slot />
+    </ContextMenuLabel>
 </template>

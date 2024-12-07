@@ -1,75 +1,6 @@
 @import './pop.css';
 @import './fade.css';
-
-.fadeSimple-enter-active {
-    @apply transition-all duration-700;
-}
-
-.fadeSimple-leave-active {
-    @apply absolute left-0 top-0 h-full w-full transition-all duration-500;
-
-    #wrap {
-        @apply absolute left-0 right-0 top-[1.82rem] h-full;
-        .img-wrapper {
-            @apply mt-1;
-        }
-    }
-}
-
-.fadeSimple-leave-to,
-.fadeSimple-enter-from {
-    @apply opacity-0;
-}
-
-.component-move, /* apply transition to moving elements */
-.component-leave-active {
-    transition: all 0.1s ease-in-out;
-}
-
-.component-enter-from,
-.component-leave-to {
-    opacity: 0;
-}
-
-.component-enter-active {
-    animation-delay: 0.2s;
-    transition: all 0.2s ease-in-out;
-}
-
-.component-leave-active {
-    position: absolute;
-}
-
-.rotate-180-ccw {
-    -webkit-animation: rotate-180-ccw 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-        forwards;
-    animation: rotate-180-ccw 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-.reverse {
-    animation-direction: reverse;
-}
-
-@-webkit-keyframes rotate-180-ccw {
-    0% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-    }
-    100% {
-        -webkit-transform: rotate(-180deg);
-        transform: rotate(-180deg);
-    }
-}
-@keyframes rotate-180-ccw {
-    0% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-    }
-    100% {
-        -webkit-transform: rotate(-180deg);
-        transform: rotate(-180deg);
-    }
-}
+@import './collapse.css';
 
 .glow {
     background: linear-gradient(
@@ -273,18 +204,18 @@
 }
 
 .toast-enter-from {
-    @apply opacity-0;
+    opacity: 0;
 }
 .toast-enter-active {
     animation: toast 3s ease-in-out;
     animation-fill-mode: forwards;
 }
 .toast-enter-to {
-    @apply opacity-0;
+    opacity: 0;
 }
 
 .toast-leave-from,
 .toast-leave-active,
 .toast-leave-to {
-    @apply hidden;
+    display: none;
 }

@@ -15,18 +15,20 @@ const hs = history.state
 
 <template>
     <Menubar
-        class="absolute z-[199] grid w-full grid-cols-3 items-center rounded-t-md bg-b1/[97%] p-0 shadow-[inset_0px_0px_3px_2px_#00000006,inset_3px_3px_3px_2px_#00000007,rgba(0,_0,_0,_0.15)_0px_7px_10px_-12px] [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center"
+        class="bg-b1/[97%] absolute inset-0 right-0 left-0 z-199 grid w-full grid-cols-3 items-center rounded-t-md border-none p-0 shadow-[inset_0px_0px_3px_2px_#00000006,inset_3px_3px_3px_2px_#00000007,rgba(0,_0,_0,_0.15)_0px_7px_10px_-12px] outline-hidden [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center"
         data-tauri-drag-region>
         <div data-tauri-drag-region>
             <MenubarMenu>
-                <div class="flex items-center gap-2 pl-1 pr-6">
-                    <div
-                        class="ml-2 flex aspect-square size-7 shrink-0 items-center justify-center rounded-md bg-accent text-ac/90 shadow-sm">
+                <div class="flex items-center gap-2 px-6">
+                    <Button
+                        variant="accent"
+                        size="icon"
+                        class="ml-2 flex aspect-square size-7 shrink-0 items-center justify-center rounded-md">
                         <span
-                            class="mt-1px cursor-default select-none !text-xs font-bold">
+                            class="text-ac text-1 mt-px cursor-default font-bold select-none">
                             LP
                         </span>
-                    </div>
+                    </Button>
 
                     <Tooltip content="to top">
                         <Button
@@ -80,10 +82,10 @@ const hs = history.state
 
             <MenubarMenu>
                 <MenubarTrigger
-                    class="flex min-w-fit max-w-64 grow items-center justify-end gap-2 px-3">
+                    class="flex max-w-64 min-w-fit grow items-center justify-end gap-2 px-3">
                     <div
-                        class="flex w-full items-center justify-center gap-1 text-center align-baseline text-base leading-none opacity-80">
-                        <span class="truncate text-md font-semibold">
+                        class="text-3 flex w-full items-center justify-center gap-1 text-center align-baseline leading-none opacity-80">
+                        <span class="text-md truncate font-semibold">
                             {{ userData.user.name }}
                         </span>
                         <span class="truncate">
@@ -94,14 +96,14 @@ const hs = history.state
                         icon="ph:gear-six"
                         class="oapcity-80 ml-3 size-6 shrink-0" /> -->
                     <Avatar
-                        class="border-1 ml-2 size-7 rounded-full border border-transparent shadow-sm">
+                        class="ml-2 size-7 rounded-full border border-1 border-transparent shadow-xs">
                         <AvatarImage
                             :src="userData.user.avatar"
                             :alt="userData.user.name" />
                         <AvatarFallback class="rounded-full">LP</AvatarFallback>
                     </Avatar>
                 </MenubarTrigger>
-                <MenubarContent class="w-[--radix-menubar-trigger-width]">
+                <MenubarContent class="w-(--radix-menubar-trigger-width)">
                     <SettingsDropdown />
                 </MenubarContent>
             </MenubarMenu>

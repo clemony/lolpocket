@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Champion } from 'types';
+import type { Champion } from 'types'
 
 const props = defineProps<{
     champion: Champion
@@ -12,54 +12,68 @@ const filteredData = (data: Record<string, string>) => {
         Object.entries(data).filter(([key]) => keysToDisplay.includes(key))
     )
 }
-
 </script>
 
 <template>
-<Accordion default-value="Q" collapsible class='  overflow-hidden' v-model:modelValue="modelValue"
-    @update:modelValue="(v) => modelValue = v">
-    <AccordionItem v-for="(ability, key) in champion.abilities" :key="key" :value="key"
-        :class="{ 'h-0': modelValue && modelValue != key, ' border-transparent': modelValue, 'delay-300': !modelValue }"
-        class='last:border-b-transparent max-h-inherit flex-1 overflow-hidden flex flex-col transition-all !duration-1000'>
-        <AccordionTrigger class='flex py-2'>
+    <Accordion
+        default-value="Q"
+        collapsible
+        class="overflow-hidden"
+        v-model:modelValue="modelValue"
+        @update:modelValue="(v) => (modelValue = v)">
+        <AccordionItem
+            v-for="(ability, key) in champion.abilities"
+            :key="key"
+            :value="key"
+            :class="{
+                'h-0': modelValue && modelValue != key,
+                'border-transparent': modelValue,
+                'delay-300': !modelValue,
+            }"
+            class="max-h-inherit flex flex-1 flex-col overflow-hidden transition-all duration-1000! last:border-b-transparent">
+            <AccordionTrigger class="flex py-2">
+                <loadImg
+                    :url="ability.img"
+                    :alt="ability.name"
+                    class="border-b3 size-[45px] rounded-lg border shadow-xs" />
 
-            <loadImg :url="ability.img" :alt="ability.name"
-                class="rounded-lg shadow-sm border border-b3 size-[45px]" />
-
-            <div class="!text-md font-medium tracking-tight text-start grow px-4">
-                {{ ability.name }}
-            </div>
-            <p
-                class=" mr-6 hover:!no-underline font-cursive text-sm scale-x-125 !not-italic !no-underline font-mono capitalize  ">
-                {{
-                    ability.key
-                }}</p>
-
-        </AccordionTrigger>
-        <AccordionContent class=''>
-
-            <div class='flex flex-col gap-3 py-3'>
-                <div v-for="(value, key) in filteredData(
-                    ability.data)" :key="key" class='flex flex-nowrap w-full bg-b2/60 rounded-md px-2 py-1'>
-                    <div class="text-medium text-sm capitalize opacity-80">
-                        {{ key }}
-                    </div>
-                    <div class="text-nowrap text-right text-sm grow opacity-80">
-                        {{ value }}
+                <div
+                    class="text-md! grow px-4 text-start font-medium tracking-tight">
+                    {{ ability.name }}
+                </div>
+                <p
+                    class="font-cursive kbd-sm text-2 mr-6 scale-x-125 font-mono capitalize not-italic! no-underline! hover:no-underline!">
+                    {{ ability.key }}
+                </p>
+            </AccordionTrigger>
+            <AccordionContent class="">
+                <div class="flex flex-col gap-3 py-3">
+                    <div
+                        v-for="(value, key) in filteredData(ability.data)"
+                        :key="key"
+                        class="bg-b2/60 flex w-full flex-nowrap rounded-md px-2 py-1">
+                        <div class="text-medium text-2 capitalize opacity-80">
+                            {{ key }}
+                        </div>
+                        <div
+                            class="text-2 grow text-right text-nowrap opacity-80">
+                            {{ value }}
+                        </div>
                     </div>
                 </div>
-            </div>
 
-
-
-            <ScrollArea
-                class=" overflow-auto  p-1 text-sm whitespace-pre-line text-balance [scrollbar-color:bg-b3/20]">
-                {{
-                    ability.context }}
-            </ScrollArea>
-        </AccordionContent>
-    </AccordionItem>
-</Accordion>
+                <ScrollArea
+                    class="text-2 overflow-auto p-1 text-balance whitespace-pre-line [scrollbar-color:bg-b3/20]">
+                    {{ ability.context }}
+                </ScrollArea>
+            </AccordionContent>
+        </AccordionItem>
+    </Accordion>
 </template>
 
-<style scoped></style>
+<style scoped>
+kbd {
+    width: 1.5rem;
+    font-family: var(--mono);
+}
+</style>

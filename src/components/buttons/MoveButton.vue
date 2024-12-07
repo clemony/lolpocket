@@ -57,7 +57,7 @@ watch(
 
         <div
             v-if="ps.selectedRows.length"
-            class="pointer-events-none absolute right-1 top-[1px] grid aspect-square size-3.5 place-content-center place-items-center rounded-full bg-accent text-ac">
+            class="bg-accent text-bc pointer-events-none absolute top-[1px] right-1 grid aspect-square size-3.5 place-content-center place-items-center rounded-full">
             {{ selectedCount }}
         </div>
     </Button>

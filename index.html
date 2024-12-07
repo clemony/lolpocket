@@ -10,9 +10,9 @@
   <title>lolpocket</title>
   <style>
     :root {
-      --rounded-xl: 0.7rem !important;
 
-      overscroll-behavior: contain;
+
+      overscroll-behavior: none;
       scroll-behavior: smooth;
       margin: 0;
       padding: 0;
@@ -28,31 +28,17 @@
       width: 100vh;
       height: 100vh;
       overscroll-behavior: none;
+      font-size: '12px';
     }
 
-    .tab {
-      --tab-bg: oklch(var(--b1) / 90%) !important;
-      --tab-corner-bg: oklch(var(--b1) / 60%) !important;
-      --tab-border: 1px !important;
-      --tab-radius: 0.45rem !important;
-    }
-
-    .toggle {
-      --tglbg: oklch(var(--b1) / 95%);
-    }
-
-    /* .split-bg {
-      background: linear-gradient(to bottom, oklch(var(--b1) / 0.1) 35px, oklch(var(--b1) / 0.96) 36px);
-      background-position: top, bottom;
-    } */
+    .tab {}
   </style>
 </head>
 
 <script type="module" src="./src/main.ts"></script>
 
 <body>
-  <div id="app" ref="app" data-tauri-drag-region
-    class="overflow-hidden max-w-screen backdrop-blur-md !rounded-lg  absolute left-0 top-0 h-screen w-screen !shadow-[inset_-12px_-8px_40px_#00000020]">
+  <div id="app" ref="app" data-tauri-drag-region class="">
   </div>
 </body>
 

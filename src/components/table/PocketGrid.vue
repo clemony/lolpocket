@@ -189,7 +189,7 @@ const genIsOpen = ref(true)
             <ResizablePanel as-child>
                 <ag-grid-vue
                     :theme="pocketTheme"
-                    class="top-grid l h-1/2 w-full items-center !bg-transparent"
+                    class="top-grid l h-1/2 w-full items-center bg-transparent!"
                     ref="pinnedGrid"
                     @grid-ready="onPinnedReady"
                     :columnDefs="columnDefs"
@@ -211,7 +211,7 @@ const genIsOpen = ref(true)
             <ResizablePanel as-child>
                 <ag-grid-vue
                     :theme="pocketTheme"
-                    class="bottom-grid h-1/2 w-full items-center !bg-transparent"
+                    class="bottom-grid h-1/2 w-full items-center bg-transparent!"
                     ref="pocketGrid"
                     @grid-ready="onGridReady"
                     :columnDefs="columnDefs"
@@ -232,7 +232,7 @@ const genIsOpen = ref(true)
                     class="absolute left-0 top-0 z-10 h-10 w-full rounded-t-xl bg-b1/80 backdrop-blur-md">
                     <ag-grid-vue
                         :theme="pocketTheme"
-                        class="col-headers h-full items-center !rounded-none bg-transparent"
+                        class="col-headers h-full items-center rounded-none! bg-transparent"
                         ref="headerGrid"
                         id="header-grid"
                         @grid-ready="onHeaderReady"
@@ -276,15 +276,30 @@ const genIsOpen = ref(true)
 }
 
 .ag-menu {
-    @apply !z-10 mt-1.5 border-b3/80 !bg-b1/95 backdrop-blur-md;
+    z-index: 10;
+    margin-top: 7px;
+    border: 1px solid var(--b3) / 80;
+    background: var(--b1) / 95;
+    backdrop-filter: blur(12px);
 }
 
 .ag-text-field-input {
-    @apply z-20 !bg-b1 outline-0 ring-0;
+       z-index: 20;
+       background: var(--b1);
+       outline: none;
+       box-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
 }
 
 .ag-picker-field {
-    @apply z-50 !bg-b1/95 opacity-100 outline-0 !ring-0 backdrop-blur-md focus:ring-0;
+       z-index: 50;
+           background: var(--b1) / 95;
+           opacity: 1;
+              outline: none;
+              box-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+                  backdrop-filter: blur(12px);
+   :focus{
+           box-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+   }
 }
 
 .ag-picker-field-wrapper {
@@ -295,7 +310,10 @@ const genIsOpen = ref(true)
 }
 
 .ag-select-list {
-    @apply z-50 border-0 !bg-b1/95 backdrop-blur-md;
+           z-index: 50;
+           border: none;
+                background: var(--b1) / 95;
+                 backdrop-filter: blur(12px);
 }
 
 .ag-body-horizontal-scroll,

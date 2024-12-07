@@ -15,23 +15,38 @@ props.rune.value = 'rune'
         class="relative grid max-w-96 overscroll-none py-2"
         :data-tier="rune.tier">
         <div
-            class="grid w-full grid-cols-[1fr_2fr] gap-1 border-b border-b3 px-2 pb-3">
+            class="border-b3 grid w-full grid-cols-[1fr_2fr] gap-1 border-b px-2 pb-3">
             <a
                 :href="rune.wiki"
                 target="_blank"
                 :title="'GO TO: ' + rune.wiki"
                 alt="link to league wiki"
-                class="group/link img-wrapper relative col-start-1 h-full items-center justify-center">
+                class="group/link relative col-start-1 h-full items-center justify-center"
+                :class="{
+                    '-mt-1 grid size-[3.4rem] place-items-center overflow-hidden':
+                        rune.tier == 0,
+                }">
                 <img
                     :key="rune.name"
                     :src="rune.img"
                     :alt="rune.name + ' Image'"
-                    class="runeImg pointer-events-none rounded-full" />
+                    class="pointer-events-none rounded-full"
+                    :class="{
+                        'z-20 size-[3.5rem] self-center rounded-none object-cover drop-shadow-md':
+                            rune.tier == 0,
+                        'ring-b2 ring-offset-b3 size-12 ring-1 shadow-[inset_0px_0px_2px_3px_#00000099,_1px_2px_1px_2px_#00000018] ring-offset-1':
+                            rune.tier != 0,
+                    }" />
+
                 <div
-                    class="link-icon absolute bottom-0 z-30 flex size-8 items-center justify-center rounded-full border-2 border-b1 bg-accent transition-all duration-500 group-hover/link:rotate-180 group-hover/link:border-primary">
+                    class="border-b1 bg-accent group-hover/link:border-primary absolute bottom-0 z-30 flex size-8 items-center justify-center rounded-full border-2 transition-all duration-500 group-hover/link:rotate-180"
+                    :class="{
+                        'absolute right-0 rounded-full': rune.tier == 0,
+                        'right-3': rune.tier != 0,
+                    }">
                     <Icon
                         icon="teenyicons:link-outline"
-                        class="size-5 text-ac" />
+                        class="text-bc size-5" />
                 </div>
             </a>
 
@@ -40,7 +55,7 @@ props.rune.value = 'rune'
             <div class="grid h-full grid-cols-1">
                 <div class="text-middle flex">
                     <h3
-                        class="flex flex-wrap text-sm font-bold leading-4 tracking-tight">
+                        class="text-2 flex flex-wrap leading-4 font-bold tracking-tight">
                         {{ rune.name }}
                     </h3>
                 </div>
@@ -67,40 +82,11 @@ props.rune.value = 'rune'
             <div
                 id="runeStats"
                 :key="rune.name + '3'"
-                class="whitespace-pre-line text-pretty">
+                class="text-pretty whitespace-pre-line">
                 {{ rune.stats }}
             </div>
         </div>
     </div>
 </template>
 
-<style scoped>
-/* beautify ignore:start */
-[data-tier='0'] {
-    .img-wrapper::before,
-    .img-wrapper .link-icon {
-        @apply absolute rounded-full;
-    }
-    .runeImg {
-        @apply z-20 size-[3.5rem] self-center rounded-none object-cover drop-shadow-md;
-    }
-    .link-icon {
-        @apply right-0;
-    }
-    .img-wrapper {
-        @apply -mt-1 grid size-[3.4rem] place-items-center overflow-hidden;
-    }
-}
-
-[data-tier='1'],
-[data-tier='2'],
-[data-tier='3'] {
-    .link-icon {
-        @apply right-3;
-    }
-
-    .runeImg {
-        @apply size-12 shadow-[inset_0px_0px_2px_3px_#00000099,_1px_2px_1px_2px_#00000018] ring-1 ring-b2 ring-offset-1 ring-offset-b3;
-    }
-}
-</style>
+<style scoped></style>

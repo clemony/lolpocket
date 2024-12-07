@@ -28,10 +28,10 @@ onMounted(async () => {
 </script>
 
 <template>
-    <DisplayCard class="relative" headerClass="!hidden">
+    <DisplayCard class="relative" headerClass="hidden!">
         <div class="grid grid-cols-[2fr_1fr_1fr] gap-3 px-5 pt-6" ref="el">
             <div>
-                <h4 class="h-sans self-start pt-1 !font-medium">
+                <h4 class="h-sans self-start pt-1 font-medium!">
                     Summoner
                     <br />
                     Spells
@@ -105,6 +105,6 @@ onMounted(async () => {
 <style>
 input[type='range']::-webkit-slider-thumb,
 input[type='range']::-webkit-media-slider-thumb {
-    @apply !rounded-md;
+    border-radius: 0.375rem;
 }
 </style>

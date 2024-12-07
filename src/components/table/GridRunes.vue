@@ -48,10 +48,10 @@ const keystone = computed(() => {
             <template v-if="keystone && keystone.name != 'empty' && runeSet">
                 <RouterLink
                     :to="`/pocket/${pocket.key}/runes`"
-                    class="relative grid aspect-square !size-14 shrink-0 cursor-pointer place-items-center items-center rounded-full bg-gradient-to-br from-transparent to-75% shadow-sm"
+                    class="relative grid aspect-square size-14! shrink-0 cursor-pointer place-items-center items-center rounded-full bg-linear-to-br from-transparent to-75% shadow-xs"
                     :class="runeColors(runeSet)">
                     <div
-                        class="grid size-full place-items-center rounded-full bg-gradient-to-br from-b1/90 to-b1/40 p-1 backdrop-blur-md">
+                        class="grid size-full place-items-center rounded-full bg-linear-to-br from-b1/90 to-b1/40 p-1 backdrop-blur-md">
                         <KinesisContainer
                             :disabled="gs.reducedMotion == true"
                             :perspective="100"
@@ -78,7 +78,7 @@ const keystone = computed(() => {
                         runeSet
                     ">
                     <div
-                        class="relative flex aspect-square !size-14 shrink-0 cursor-pointer items-center rounded-full bg-gradient-to-br from-transparent to-75% shadow-sm"
+                        class="relative flex aspect-square size-14! shrink-0 cursor-pointer items-center rounded-full bg-linear-to-br from-transparent to-75% shadow-xs"
                         :class="runeColors(runeSet)"">
                         <KinesisContainer
                             :disabled="gs.reducedMotion == true"
@@ -90,10 +90,10 @@ const keystone = computed(() => {
                                 :strength="5"
                                 class="group flex size-full items-center">
                                 <div
-                                    class="!aspect-square !size-14 cursor-pointer overflow-clip rounded-full bg-b1/70 p-2.5 backdrop-blur-md group-hover:scale-90">
+                                    class="aspect-square! size-14! cursor-pointer overflow-clip rounded-full bg-b1/70 p-2.5 backdrop-blur-md group-hover:scale-90">
                                     <img
                                         :src="`/img/runes/${runeSet.secondary}.webp`"
-                                        class="size-full !object-contain drop-shadow-softest transition-all duration-200 hover:opacity-80" />
+                                        class="size-full object-contain! drop-shadow-softest transition-all duration-200 hover:opacity-80" />
                                 </div>
                             </KinesisElement>
                         </KinesisContainer>

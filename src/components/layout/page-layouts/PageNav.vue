@@ -74,7 +74,7 @@ els.forEach(({ ref, isVisible, name }) => {
 </script>
 
 <template>
-    <div class="ml-4 mt-0.5 grid h-full w-full items-center">
+    <div class="mt-0.5 ml-4 grid h-full w-full items-center">
         <div class="flex gap-8">
             <div v-for="el in els" :key="el.name">
                 <span v-if="!el.trigger">
@@ -82,8 +82,7 @@ els.forEach(({ ref, isVisible, name }) => {
                         @click="scrollToSection(el.ref)"
                         class="group mb-px flex gap-1 font-medium opacity-50 transition-all duration-300 hover:cursor-pointer hover:opacity-100"
                         :class="{
-                            'text-ac !opacity-100':
-                                el.name == props.storeValue,
+                            'text-bc opacity-100!': el.name == props.storeValue,
                         }">
                         <input
                             type="radio"
@@ -106,8 +105,7 @@ els.forEach(({ ref, isVisible, name }) => {
                         @click="scrollToSection(el.ref)"
                         class="group mb-px flex items-center gap-1 font-medium opacity-50 transition-all duration-300 hover:cursor-pointer hover:opacity-100"
                         :class="{
-                            'text-ac !opacity-100':
-                                el.name == props.storeValue,
+                            'text-bc opacity-100!': el.name == props.storeValue,
                         }">
                         <input
                             type="radio"

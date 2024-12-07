@@ -21,7 +21,7 @@ const pocket = props.pocket
             <div class="">
                 <div
                     v-if="pocket.champions[0].starred"
-                    class="grid size-[40px] shrink-0 place-items-center overflow-hidden rounded-lg shadow-sm ring-0 ring-accent/25">
+                    class="grid size-[40px] shrink-0 place-items-center overflow-hidden rounded-lg shadow-xs ring-0 ring-accent/25">
                     <img
                         :src="`/img/champions/${clean(pocket.champions[0].starred)}.webp`"
                         class="size-[40px] scale-[115%]" />
@@ -40,7 +40,7 @@ const pocket = props.pocket
                         pocket.runes[0].runeSets[pocket.runes[0].starred]
                             .keystone.name != 'empty'
                     "
-                    class="flex !aspect-square size-[40px] justify-center rounded-lg drop-shadow-sm">
+                    class="flex aspect-square! size-[40px] justify-center rounded-lg drop-shadow-sm">
                     <img
                         :src="
                             pocket.runes[0].runeSets[pocket.runes[0].starred]
@@ -52,7 +52,7 @@ const pocket = props.pocket
                 <Placeholder v-else :size="40" class="rounded-lg" />
 
                 <!--   <div v-if="pocket.runes[0].runeSets[pocket.runes[0].starred].secondary && pocket.runes[0].runeSets[pocket.runes[0].starred].secondary != 'empty'"
-                                        class=' rounded !aspect-square size-5 flex justify-center p-px shadow-sm'>
+                                        class=' rounded-sm aspect-square! size-5 flex justify-center p-px shadow-xs'>
                                         <img :src="`/img/runes/${pocket.runes[0].runeSets[pocket.runes[0].starred].secondary}.webp`"
                                             class='h-full w-auto  shrink-0  object-contain'>
                                     </div> -->
@@ -72,7 +72,7 @@ const pocket = props.pocket
                         v-if="index <= 5"
                         :key="item.id"
                         :src="`/img/items/${item.id}.webp`"
-                        class="r size-[40px] shrink-0 rounded-lg shadow-sm" />
+                        class="r size-[40px] shrink-0 rounded-lg shadow-xs" />
                 </template>
             </template>
 

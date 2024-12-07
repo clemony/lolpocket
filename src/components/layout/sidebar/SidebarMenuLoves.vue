@@ -89,7 +89,7 @@ watch(
         <div
             v-if="loveMessage && !gs.isMinimized"
             :key="loveMessage"
-            class="badge badge-ghost badge-sm flex items-center justify-start text-nowrap border-b2/20 !bg-b1/70 opacity-0 shadow-sm">
+            class="badge badge-ghost badge-sm flex items-center justify-start text-nowrap border-b2/20 bg-b1/70! opacity-0 shadow-xs">
             <span class="max-w-24 truncate">{{ loveMessage }}</span>
         </div>
     </Transition>

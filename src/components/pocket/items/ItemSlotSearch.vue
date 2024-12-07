@@ -69,10 +69,10 @@ const value = ref('')
                 variant="outline"
                 role="combobox"
                 :aria-expanded="open"
-                class="no-drag search-drop ghosty drag-label group/qs relative z-0 flex w-[200px] basis-16 !cursor-pointer justify-between !p-0 after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-['+'] hover:after:text-accent hover:after:opacity-60"
-                :class="{ '!basis-12': type == 'alt' }">
+                class="no-drag search-drop ghosty drag-label group/qs hover:after:text-bccent relative z-0 flex w-[200px] basis-16 cursor-pointer! justify-between p-0! after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-['+'] hover:after:opacity-60"
+                :class="{ 'basis-12!': type == 'alt' }">
                 <div
-                    class="z-20 h-full w-full scale-105 cursor-pointer select-none bg-[url('/i@frame.webp')] bg-contain bg-center bg-no-repeat opacity-0 brightness-0 transition-all duration-200 group-hover/qs:scale-95 group-hover/qs:opacity-40"></div>
+                    class="z-20 h-full w-full scale-105 cursor-pointer bg-[url('/i@frame.webp')] bg-contain bg-center bg-no-repeat opacity-0 brightness-0 transition-all duration-200 select-none group-hover/qs:scale-95 group-hover/qs:opacity-40"></div>
             </button>
         </PopoverTrigger>
         <PopoverContent class="w-[350px] p-0">
@@ -94,7 +94,7 @@ const value = ref('')
                                 :value="item.name">
                                 <img
                                     :src="`/img/items/${item.id}.webp`"
-                                    class="shadow-xs size-10 rounded-md"
+                                    class="size-10 rounded-md shadow-2xs"
                                     :key="item.id"
                                     :class="
                                         cn(
@@ -120,7 +120,7 @@ const value = ref('')
                                 :value="item.name">
                                 <img
                                     :src="`/img/items/${item.id}.webp`"
-                                    class="shadow-xs size-10 rounded-md"
+                                    class="size-10 rounded-md shadow-2xs"
                                     :key="item.id"
                                     :class="
                                         cn(
@@ -143,7 +143,7 @@ const value = ref('')
                             :value="item.name">
                             <img
                                 :src="`/img/items/${item.id}.webp`"
-                                class="shadow-xs size-10 rounded-md"
+                                class="size-10 rounded-md shadow-2xs"
                                 :key="item.id"
                                 :class="
                                     cn(
@@ -182,16 +182,16 @@ const value = ref('')
             <div class="relative pt-1.5 pb-0">
                 <div class="relative flex justify-center w-full px-2 pb-1">
                     <Icon v-if="!quickSearch" icon="teenyicons:search-outline"
-                        class="pointer-events-none text-ac/50 size-3.5 right-3.5 top-[0.45rem] absolute" />
+                        class="pointer-events-none text-bc/50 size-3.5 right-3.5 top-[0.45rem] absolute" />
 
                     <button v-else
-                        class="pointer-events-auto z-10 transition-all duration-300 text-accent/40 hover:text-accent/60 size-3.5 right-3.5 top-[7px] absolute"
+                        class="pointer-events-auto z-10 transition-all duration-300 text-bccent/40 hover:text-bccent/60 size-3.5 right-3.5 top-[7px] absolute"
                         @click="$emit('update:quickSearch', '')">
                         <Icon icon="teenyicons:x-outline" />
                     </button>
 
                     <input placeholder="Quick search..." :value="quickSearch" @input="handleInput" spellcheck="false"
-                        class="z-0 w-full  italic select-all focus:not-italic focus:bg-b2/50 placeholder: rounded-btn bg-transparent h-7 px-2 !outline-none"
+                        class="z-0 w-full  italic select-all focus:not-italic focus:bg-b2/50 placeholder: rounded-btn bg-transparent h-7 px-2 outline-hidden!"
                         autofocus />
                 </div>
 

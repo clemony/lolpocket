@@ -58,18 +58,17 @@ watch(
 
 <template>
     <Card
-        :class="cn('relative h-fit w-full !pt-0', props.cardClass)"
+        :class="cn('relative h-fit w-full pt-0!', props.cardClass)"
         ref="card">
         <CardHeader
             ref="target"
             :class="
                 cn(
-                    'absolute z-20 w-full bg-b1/95 px-10 pb-4 pt-6 backdrop-blur-md transition-all duration-200',
+                    'bg-b1/95 absolute z-20 w-full px-10 pt-6 pb-4 backdrop-blur-md transition-all duration-200',
                     {
                         '': isAnchorVisible || isOpen,
-                        'border-b border-b-b2':
-                            !isAnchorVisible && !isOpen,
-                        'rounded-b-xl border-b border-b-b2 shadow-smooth':
+                        'border-b-b2 border-b': !isAnchorVisible && !isOpen,
+                        'border-b-b2 shadow-smooth rounded-b-xl border-b':
                             isOpen,
                     },
                     props.headerClass
@@ -88,7 +87,7 @@ watch(
                 </CollapsibleTrigger>
                 <CollapsibleContent class="w-full duration-1000">
                     <CardDescription
-                        class="w-full justify-between pb-3 pt-2 text-base">
+                        class="text-3 w-full justify-between pt-2 pb-3">
                         {{ props.description }}
                         <slot name="description" />
                     </CardDescription>
@@ -96,7 +95,7 @@ watch(
             </Collapsible>
         </CardHeader>
         <CardContent class="px-0 pb-0">
-            <ScrollArea class="h-full max-h-full overflow-auto px-8 pb-0 pt-18">
+            <ScrollArea class="h-full max-h-full overflow-auto px-8 pt-18 pb-0">
                 <div
                     ref="topAnchor"
                     class="h-1 w-full transition-all duration-500" />

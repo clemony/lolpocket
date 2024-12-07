@@ -38,7 +38,7 @@ console.log(ps.columns)
                     "
                     theme="hover-inner">
                     <Label
-                        class="flex w-full items-center gap-4 rounded-md px-3 py-1 text-sm hover:bg-b2/60">
+                        class="text-2 hover:bg-b2/60 flex w-full items-center gap-4 rounded-md px-3 py-1">
                         <input
                             type="checkbox"
                             :checked="column.isVisible"
@@ -52,7 +52,7 @@ console.log(ps.columns)
 
                 <VDropdown v-else-if="column.headerName != ''" theme="hidden">
                     <Label
-                        class="flex w-full items-center gap-4 rounded-md px-3 py-1 text-sm hover:bg-b2/60">
+                        class="text-2 hover:bg-b2/60 flex w-full items-center gap-4 rounded-md px-3 py-1">
                         <input
                             type="checkbox"
                             :checked="column.isVisible"
@@ -74,10 +74,8 @@ console.log(ps.columns)
         <Button variant="ghost" size="xs" class="items-center gap-4">
             <icon
                 icon="fluent:mail-inbox-all-20-regular"
-                class="-ml-1 !size-6" />
-            <span class="-ml-[3px] pr-4 text-sm capitalize">
-                Pocket Drawers
-            </span>
+                class="-ml-1 size-6!" />
+            <span class="text-2 -ml-[3px] pr-4 capitalize">Pocket Drawers</span>
             <icon
                 icon="teenyicons:right-small-outline"
                 class="-mr-1 ml-2 size-3.5 justify-self-end" />

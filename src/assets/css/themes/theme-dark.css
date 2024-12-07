@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+@variant theme-light (&:where([data-theme="light"] *)) {
+    --color-*: initial;
+    --color-b1: oklch(100% 0 0);
+    --color-b2: oklch(93% 0 0);
+    --color-b3: oklch(86% 0 0);
+    --color-bc: oklch(0% 0.02476 255.701624);
+    --color-accent: oklch(0% 0.02476 255.701624);
+    --color-ac: oklch(100% 0 0);
+}
+
+@variant theme-sunrise (&:where([data-theme="sunrise"] *)) {
+    --color-*: initial;
+    --color-b1: oklch(95.18% 0.0054 95.1);
+    --color-b2: oklch(82.25% 0.0083 98.91);
+    --color-b3: ;
+    --color-bc: oklch(100% 0 0);
+    --color-accent: oklch(93% 0 0);
+    --color-ac: oklch(100% 0 0);
+}
+
+@variant theme-dusk (&:where([data-theme="dusk"] *)) {
+    --color-*: initial;
+    --color-b1: oklch(30.86% 0.0232 264.15);
+    --color-b2: oklch(28.04% 0.0198 264.18);
+    --color-b3: oklch(26.35% 0.0184 262.18);
+    --color-bc: oklch(84.8707% 0 0);
+    --color-accent: oklch(24.73% 0.0205 264.09);
+    --color-ac: oklch(84.8707% 0 0);
+}
+
+@variant theme-midnight (&:where([data-theme="midnight"] *)) {
+    --color-*: initial;
+    --color-b1: oklch(100% 0 0);
+    --color-b2: oklch(93% 0 0);
+    --color-b3: oklch(86% 0 0);
+    --color-bc: oklch(0% 0.02476 255.701624);
+    --color-accent: oklch(0% 0.02476 255.701624);
+    --color-ac: oklch(100% 0 0);
+}

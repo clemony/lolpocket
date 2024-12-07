@@ -12,7 +12,7 @@ const side = ref(gs.drawerValue.direction)
         :direction="gs.drawerValue.direction"
         :fixed="true">
         <DrawerContent
-            class="pt-3 focus:outline-none"
+            class="pt-3 focus:outline-hidden"
             :class="{
                 'justify-center px-[8%]': side == 'bottom',
                 'items-start px-8': side == 'right',
@@ -28,7 +28,7 @@ const side = ref(gs.drawerValue.direction)
                     {{ gs.drawerValue.title }}
                 </DrawerTitle>
                 <DrawerDescription
-                    class="flex-wrap text-base tracking-tight"
+                    class="text-3 flex-wrap tracking-tight"
                     :class="{ 'w-1/3': side == 'bottom' }"
                     v-html="gs.drawerValue.description" />
             </DrawerHeader>

@@ -28,7 +28,7 @@ const forwardedProps = useForwardProps(delegatedProps)
         v-bind="forwardedProps"
         :class="
             cn(
-                'data-[state=open]:text-accent-foreground flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-b2/60 focus:text-ac data-[state=open]:bg-b2/60',
+                'data-[state=open]:text-bccent-foreground text-2 focus:bg-b2/60 focus:text-bc data-[state=open]:bg-b2/60 flex cursor-default items-center rounded-sm px-2 py-1.5 outline-hidden select-none',
                 inset && 'pl-8',
                 props.class
             )

@@ -44,7 +44,7 @@ const champions = computed(() => {
         :fallbackTolerance="0"
         fallbackClass="drag-clone"
         :fallbackOnBody="true"
-        class="drag-draggable h-full !flex-nowrap items-center !gap-5 overflow-y-clip overflow-x-scroll px-2 py-2 scrollbar-hide">
+        class="drag-draggable h-full flex-nowrap! items-center gap-5! overflow-y-clip overflow-x-scroll px-2 py-2 scrollbar-hide">
         <div
             v-for="(champion, index) in pocket.champions[0].champions"
             :key="champion.name"

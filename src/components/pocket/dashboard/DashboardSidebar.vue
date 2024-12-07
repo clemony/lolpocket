@@ -61,7 +61,7 @@ const sTabs = ref('sTabs')
                     v-else
                     class="text-middle flex size-full items-center justify-center">
                     <p
-                        class="font-cursive items-center whitespace-pre-line text-pretty px-12 align-middle text-lg [text-align-last:right]">
+                        class="font-cursive text-4 items-center px-12 align-middle text-pretty whitespace-pre-line [text-align-last:right]">
                         {{ formattedQuote() }}
                     </p>
                 </div>
@@ -69,7 +69,7 @@ const sTabs = ref('sTabs')
         </Card>
 
         <Tabs default-value="spells">
-            <TabsList class="!mb-1 mt-5 [&_button]:rounded-md">
+            <TabsList class="mt-5 mb-1! [&_button]:rounded-md">
                 <TabsTrigger value="spells">Spells</TabsTrigger>
                 <TabsTrigger value="runes">Runes</TabsTrigger>
                 <TabsTrigger value="notes">Notes</TabsTrigger>
@@ -86,7 +86,7 @@ const sTabs = ref('sTabs')
             <TabsContent value="notes">
                 <div class="h-inherit">
                     <textarea
-                        class="peer flex size-full cursor-pointer items-start overflow-y-scroll rounded-[4px] border border-b2/40 bg-b2/25 px-1.5 py-1 align-top text-[10px] font-light leading-3 tracking-[0.015em] outline-none transition-all duration-300 [resize:none] first-line:indent-2 placeholder:italic hover:border-b3/70 hover:opacity-70 hover:shadow-inner focus:border-b3/70 focus:opacity-100 focus:shadow-inner"
+                        class="peer border-b2/40 bg-b2/25 hover:border-b3/70 focus:border-b3/70 flex size-full cursor-pointer [resize:none] items-start overflow-y-scroll rounded-[4px] border px-1.5 py-1 align-top text-[10px] leading-3 font-light tracking-[0.015em] outline-hidden transition-all duration-300 first-line:indent-2 placeholder:italic hover:opacity-70 hover:shadow-inner focus:opacity-100 focus:shadow-inner"
                         v-model="notesInput"
                         @blur="updateNotes"
                         @click.stop
@@ -99,7 +99,7 @@ const sTabs = ref('sTabs')
 
                 <icon
                     icon="hugeicons:note-01"
-                    class="absolute bottom-1.5 right-1.5 size-3.5 opacity-30"
+                    class="absolute right-1.5 bottom-1.5 size-3.5 opacity-30"
                     :class="{
                         'peer-focus:opacity-0':
                             notesInput != '' && notesInput != '',
@@ -110,7 +110,7 @@ const sTabs = ref('sTabs')
                             notesInput != '' && notesInput != '',
                     }"
                     icon="hugeicons:note-remove"
-                    class="absolute bottom-1.5 right-1.5 size-3.5 opacity-0"
+                    class="absolute right-1.5 bottom-1.5 size-3.5 opacity-0"
                     @click.stop="notesInput = '　'" />
             </TabsContent>
         </Tabs>

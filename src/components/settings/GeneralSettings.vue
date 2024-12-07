@@ -11,8 +11,8 @@ const isPreview = computed(() => {
 </script>
 <template>
     <main class="w-full">
-        <LayoutSpacer class="col-span-full !h-40" />
-        <div class="grid w-full grid-cols-3 gap-6 [&_>*]:size-full">
+        <LayoutSpacer class="col-span-full h-40!" />
+        <div class="grid w-full grid-cols-3 gap-6 *:size-full">
             <DisplayCard
                 class="relative grid h-full grid-rows-2"
                 description="Get rid of the wiggly wobblies.">
@@ -26,7 +26,7 @@ const isPreview = computed(() => {
                         type="checkbox"
                         v-model="gs.reducedMotion"
                         :checked="gs.reducedMotion == false"
-                        class="toggle toggle-sm !rounded-md" />
+                        class="toggle toggle-sm rounded-md!" />
                     <span class="label-text w-full text-left">
                         {{ isWobble }}
                     </span>
@@ -49,7 +49,7 @@ const isPreview = computed(() => {
                         type="checkbox"
                         v-model="gs.pocketPreview"
                         :checked="gs.pocketPreview == true"
-                        class="toggle toggle-sm !rounded-md" />
+                        class="toggle toggle-sm rounded-md!" />
                     <span class="label-text w-full text-left">
                         {{ isPreview }}
                     </span>

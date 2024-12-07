@@ -27,41 +27,61 @@ const rune = computed(() => {
 </script>
 
 <template>
-<div v-if="rune"
-    class="relative h-fit max-h-full max-w-64 overflow-y-auto pb-6 shadow-[inset_0px_0px_40px_#00000009,_rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] transition-all duration-500">
-    <div :rune="rune" :key="rune.name" class="h-full">
-        <!-------------------------------⟢ Header ⟣-------------------------------->
+    <div
+        v-if="rune"
+        class="relative h-fit max-h-full max-w-64 overflow-y-auto pb-6 shadow-[inset_0px_0px_40px_#00000009,_rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] transition-all duration-500">
+        <div :rune="rune" :key="rune.name" class="h-full">
+            <!-------------------------------⟢ Header ⟣-------------------------------->
 
-        <label :key="rune.name + '1'"
-            class="frost sticky left-0 top-0 z-50 flex !h-fit w-full flex-wrap items-center justify-end gap-4 rounded-t-xl border-b border-b-b3 px-4 py-1">
-            <h2 class="sub-text flex grow items-center justify-start gap-3">
-                <span class="grow"> {{ rune.name || 'Rune Detail' }}</span>
-                <div v-if="rune">
-                    <img :src="'/img/runes/' + rune.path + '.webp'" class="h-5 object-contain" />
-                </div>
-            </h2>
-        </label>
+            <label
+                :key="rune.name + '1'"
+                class="frost border-b-b3 sticky top-0 left-0 z-50 flex h-fit! w-full flex-wrap items-center justify-end gap-4 rounded-t-xl border-b px-4 py-1">
+                <h2 class="sub-text flex grow items-center justify-start gap-3">
+                    <span class="grow">{{ rune.name || 'Rune Detail' }}</span>
+                    <div v-if="rune">
+                        <img
+                            :src="'/img/runes/' + rune.path + '.webp'"
+                            class="h-5 object-contain" />
+                    </div>
+                </h2>
+            </label>
 
-        <!-------------------------------⟢ Data ⟣-------------------------------->
+            <!-------------------------------⟢ Data ⟣-------------------------------->
 
-        <div id="wrap" :data-tier="rune.tier" class="relative px-4 pt-3" :key="rune.name + '2'">
-            <div class="img-wrapper group relative z-0 before:absolute" :href="rune.wiki" target="_blank"
-                :title="rune.wiki" :alt="rune.wiki" :key="rune.name + 'img'">
-                <div class="link-set">
-                    <img id="runeImg" :src="rune.img" class="float-right ml-2.5 mt-1 rounded-full" />
-                    <div class="link-icon flex items-center justify-center">
-                        <Icon icon="teenyicons:link-outline" class="size-3 text-ac" />
+            <div
+                id="wrap"
+                :data-tier="rune.tier"
+                class="relative px-4 pt-3"
+                :key="rune.name + '2'">
+                <div
+                    class="img-wrapper group relative z-0 before:absolute"
+                    :href="rune.wiki"
+                    target="_blank"
+                    :title="rune.wiki"
+                    :alt="rune.wiki"
+                    :key="rune.name + 'img'">
+                    <div class="link-set">
+                        <img
+                            id="runeImg"
+                            :src="rune.img"
+                            class="float-right mt-1 ml-2.5 rounded-full" />
+                        <div class="link-icon flex items-center justify-center">
+                            <Icon
+                                icon="teenyicons:link-outline"
+                                class="text-bc size-3" />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="runeStats" :key="rune.name + '3'"
-                class="mt-1 whitespace-pre-line text-justify font-serif text-[0.76rem] first-letter:float-left first-letter:mr-1.5 first-letter:text-3xl first-letter:font-[700] first-line:font-[700] first-line:uppercase first-line:tracking-widest">
-                {{ rune.stats }}
+                <div
+                    id="runeStats"
+                    :key="rune.name + '3'"
+                    class="first-letter:text-8 mt-1 text-justify font-serif text-[0.76rem] whitespace-pre-line first-letter:float-left first-letter:mr-1.5 first-letter:font-[700] first-line:font-[700] first-line:tracking-widest first-line:uppercase">
+                    {{ rune.stats }}
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div v-else></div>
+    <div v-else></div>
 </template>
 
 <style scoped>
@@ -77,10 +97,10 @@ const rune = computed(() => {
     }
 
     .img-wrapper .link-icon {
-        @apply right-[-0.01rem] top-[4rem] z-20 size-[1.5rem] bg-accent shadow-md transition-all duration-500;
+        @apply bg-accent top-[4rem] right-[-0.01rem] z-20 size-[1.5rem] shadow-md transition-all duration-500;
     }
     .link-set:hover .link-icon {
-        @apply rotate-180 ring-2 ring-accent ring-offset-accent;
+        @apply ring-accent ring-offset-accent rotate-180 ring-2;
     }
 }
 
@@ -94,14 +114,15 @@ const rune = computed(() => {
     }
 
     .img-wrapper .link-icon {
-        @apply right-[-0.01rem] top-[2.17rem] z-20 size-[1.5rem] bg-accent shadow-md transition-all duration-500;
+        @apply bg-accent top-[2.17rem] right-[-0.01rem] z-20 size-[1.5rem] shadow-md transition-all duration-500;
     }
 
     #runeImg {
-        @apply size-14 shadow-[inset_0px_0px_2px_3px_#00000099,_1px_2px_1px_2px_#00000018] ring-1 ring-b2 ring-offset-1 ring-offset-b3;
+        @apply ring-b2 ring-offset-b3 size-14 ring-1 shadow-[inset_0px_0px_2px_3px_#00000099,_1px_2px_1px_2px_#00000018] ring-offset-1;
     }
 
     .link-set:hover .link-icon {
-        @apply rotate-180 ring-2 ring-accent ring-offset-accent;
+        @apply ring-accent ring-offset-accent rotate-180 ring-2;
     }
-}</style>
+}
+</style>

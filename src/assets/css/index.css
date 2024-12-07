@@ -1,34 +1,38 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import '@assets/css/utilities.css';
+@import '@assets/css/fonts.css' layer(base);
+@import '@fontsource/geist-sans/400.css';
+@import '@fontsource/geist-sans/500.css';
+@import '@fontsource/geist-sans/600.css';
+@import '@fontsource/geist-sans/700.css';
+@import '@assets/animation/animations.css';
+/* @import '@assets/css/drag.css'; */
+@import './theme.css' layer(base);
+
+@plugin "daisyui" {
+    logs: true;
+    root: ':root';
+
+    themes: false;
+}
+/*     include: reset, keyframes, carousel, checkbox, join, swap, kbd, rating,
+        radio, tabs, toggle, mask, properties, states; */
+@config './tailwind.config.js';
 
 @layer base {
-    :root {
-        --b1: 100% 0 0;
-        --b2: 96.1151% 0 0;
-        --b3: 92.4169% 0.00108 197.137559;
-        --bc: 0% 0.02476 255.701624;
-        --accent: 32.1785% 0.02476 255.701624;
-        --ac: 89.4994% 0.011585 252.096176;
-        --precision: #ebcb8b;
-        --precision-light: #f3dcaa;
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--b2, currentColor);
+    }
 
-        --domination: #bf616a;
-        --domination-light: #deb8bb;
+    :root * {
+        font-family: 'Geist Sans', 'sans-serif';
+    }
 
-        --sorcery: #b48dad;
-        --sorcery-light: #cbbbca;
-
-        --resolve: #a3be8c;
-        --resolve-light: #ccd2c5;
-
-        --inspiration: #a4c1c4;
-        --inspiration-light: #aecace;
-
-        --empty: #bab9b1;
-        --empty-light: #cecdc8;
-
-        --shadow-warm: 0px 2px 5px 0px rgba(50, 50, 105, 0.15);
-        --shadow-pretty: 0 3px 10px rgba(0, 0, 0, 0.2);
+    body {
+        @apply absolute top-0 left-0 h-screen w-screen max-w-screen overflow-hidden !rounded-lg !shadow-[inset_-12px_-8px_40px_#00000020] backdrop-blur-md;
     }
 }

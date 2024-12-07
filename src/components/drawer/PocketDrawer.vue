@@ -98,9 +98,9 @@ onMounted(() => {
 <template>
     <div class="relative w-full justify-center">
         <form
-            class="flex w-full gap-6 pt-4 [&_label]:text-base"
+            class="[&_label]:text-3 flex w-full gap-6 pt-4"
             @submit.prevent.stop="submitForm">
-            <div class="ml-px flex w-[40%] flex-col gap-2 pl-4 pr-8">
+            <div class="ml-px flex w-[40%] flex-col gap-2 pr-8 pl-4">
                 <Label for="pocket-name">Pocket Name</Label>
 
                 <div class="join relative">
@@ -109,13 +109,13 @@ onMounted(() => {
                         name="pocket-name"
                         v-model="name"
                         placeholder="optional"
-                        class="join-item h-10 border-r-0 text-base" />
+                        class="join-item text-3 h-10 border-r-0" />
 
                     <Button
                         variant="ghost"
                         size="icon"
                         type="button"
-                        class="group absolute right-12 top-1 aspect-square !size-8 overflow-hidden !border-l-0">
+                        class="group absolute top-1 right-12 aspect-square size-8! overflow-hidden border-l-0!">
                         <icon
                             icon="teenyicons:x-small-outline"
                             class="size-6 shrink-0 object-cover opacity-40 group-hover:opacity-100" />
@@ -131,7 +131,7 @@ onMounted(() => {
                             class="size-4 shrink-0" />
 
                         <p
-                            class="absolute -right-2 -top-8 z-30 flex translate-y-1 flex-nowrap px-2 py-1 text-xs opacity-0 transition-all duration-700 group-hover:translate-y-0 group-hover:opacity-100">
+                            class="text-1 absolute -top-8 -right-2 z-30 flex translate-y-1 flex-nowrap px-2 py-1 opacity-0 transition-all duration-700 group-hover:translate-y-0 group-hover:opacity-100">
                             No brain? Meet button.
                         </p>
                     </Button>
@@ -141,7 +141,7 @@ onMounted(() => {
 
                 <TagsInput v-model="tags" class="flex-col p-2">
                     <div
-                        class="flex w-full flex-row flex-wrap justify-start gap-2 *:text-base">
+                        class="*:text-3 flex w-full flex-row flex-wrap justify-start gap-2">
                         <template v-if="tags.length">
                             <TransitionGroup name="pop">
                                 <TagsInputItem
@@ -169,7 +169,7 @@ onMounted(() => {
 
                     <TagsInputInput
                         placeholder="optional"
-                        class="min-h-10 w-full text-base"
+                        class="text-3 min-h-10 w-full"
                         name="pocket-tags " />
                 </TagsInput>
             </div>
@@ -181,7 +181,7 @@ onMounted(() => {
                     v-model:iconColor="iconColor" />
             </div>
 
-            <DialogFooter class="absolute left-0 w-full pb-3 pt-5">
+            <DialogFooter class="absolute left-0 w-full pt-5 pb-3">
                 <DialogClose>
                     <Button
                         @click="submitForm"

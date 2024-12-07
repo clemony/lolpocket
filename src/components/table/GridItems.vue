@@ -41,7 +41,7 @@ const box = computed(() => {
             <template v-for="(item, index) in starredItems" :key="index">
                 <button
                     v-if="index < 5"
-                    class="size-14 overflow-hidden rounded-lg border border-b3 shadow-sm">
+                    class="size-14 overflow-hidden rounded-lg border border-b3 shadow-xs">
                     <loadImg
                         :url="`/img/items/${item.id}.webp`"
                         :index="index" />

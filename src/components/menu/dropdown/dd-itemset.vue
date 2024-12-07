@@ -39,7 +39,7 @@ onMounted(() => {
             <PopoverClose
                 class="absolute -left-96 -top-96 h-screen w-screen scale-150 bg-black/20">
                 <PopoverContent
-                    class="relative h-fit max-h-fit !rounded-xl border-none bg-transparent p-0 px-7 py-5 shadow-sm"
+                    class="relative h-fit max-h-fit rounded-xl! border-none bg-transparent p-0 px-7 py-5 shadow-xs"
                     align="start"
                     :align-offset="-34"
                     side="bottom"
@@ -50,7 +50,7 @@ onMounted(() => {
                             title=" Starter Items"
                             :key="props.pocket.key"
                             description="Your early game items. What are you starting with or buying first back?"
-                            cardClass="relative overflow-hidden w-full !h-full"
+                            cardClass="relative overflow-hidden w-full h-full!"
                             class=""
                             noPadding
                             :style="{
@@ -61,7 +61,7 @@ onMounted(() => {
                                 <ItemsetModel
                                     :pocket="props.pocket"
                                     :model="props.model"
-                                    class="-ml-2.5 w-fit rounded-xl border border-b2 p-2 shadow-sm">
+                                    class="-ml-2.5 w-fit rounded-xl border border-b2 p-2 shadow-xs">
                                     <input
                                         type="checkbox"
                                         :checked="true"
@@ -72,7 +72,7 @@ onMounted(() => {
                                     <label
                                         v-for="set in filter"
                                         v-close-popper
-                                        class="sets -ml-2.5 flex w-fit cursor-pointer items-center gap-4 overflow-hidden rounded-xl border border-transparent p-2 hover:border-b3 hover:shadow-sm"
+                                        class="sets -ml-2.5 flex w-fit cursor-pointer items-center gap-4 overflow-hidden rounded-xl border border-transparent p-2 hover:border-b3 hover:shadow-xs"
                                         :key="set.key">
                                         <template v-if="set.items.length">
                                             <template
@@ -83,7 +83,7 @@ onMounted(() => {
                                                 <LoadImg
                                                     v-if="index < 6"
                                                     :url="`/img/items/${item.id}.webp`"
-                                                    class="border-1 size-[55px] rounded-lg border-transparent shadow-sm" />
+                                                    class="border-1 size-[55px] rounded-lg border-transparent shadow-xs" />
                                             </template>
 
                                             <Placeholder

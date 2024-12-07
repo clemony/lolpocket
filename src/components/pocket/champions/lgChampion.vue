@@ -24,11 +24,11 @@ const champ = computed(() => {
 
     <div
         v-show="isImageLoaded"
-        class="h-inherit overflow-hidden rounded-xl border border-accent/20 bg-b2/60 bg-clip-border">
+        class="h-inherit border-accent/20 bg-b2/60 overflow-hidden rounded-xl border bg-clip-border">
         <KinesisContainer
             v-show="isImageLoaded"
             :perspective="100"
-            class="size-full h-inherit overflow-hidden shadow-inset-sm duration-700 animate-in fade-in-0">
+            class="h-inherit shadow-inset-sm animate-in fade-in-0 size-full overflow-hidden duration-700">
             <KinesisElement
                 v-if="champ"
                 type="depth"
@@ -40,9 +40,9 @@ const champ = computed(() => {
                     class="object-none object-[50%_25%]" />
             </KinesisElement>
 
-            <div v-if="champ" class="absolute bottom-2.5 right-3">
+            <div v-if="champ" class="absolute right-3 bottom-2.5">
                 <Badge
-                    class="font-cursive bg-opacity-70 text-base font-bold tracking-tighter antialiased">
+                    class="font-cursive bg-opacity-70 text-3 font-bold tracking-tighter antialiased">
                     {{ champ }}
                 </Badge>
             </div>

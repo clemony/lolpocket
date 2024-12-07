@@ -19,11 +19,14 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
-<ComboboxItem v-bind="forwarded" :class="cn(
-    'relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5  outline-none data-[disabled]:pointer-events-none data-[highlighted]:bg-b2/60 data-[highlighted]:text-ac data-[disabled]:opacity-50',
-    props.class
-)
-    ">
-    <slot />
-</ComboboxItem>
+    <ComboboxItem
+        v-bind="forwarded"
+        :class="
+            cn(
+                'data-highlighted:bg-b2/60 data-highlighted:text-bc relative flex cursor-default items-center rounded-sm px-2 py-1.5 outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50',
+                props.class
+            )
+        ">
+        <slot />
+    </ComboboxItem>
 </template>

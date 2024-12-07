@@ -17,7 +17,7 @@ const icons = [
 <template>
     <div class="p-8 pt-20">
         <div
-            class="mockup-code w-2/5 min-w-[200px0] font-normal leading-loose *:whitespace-nowrap">
+            class="mockup-code w-2/5 min-w-[200px0] leading-loose font-normal *:whitespace-nowrap">
             <pre
                 data-prefix="$"><code class="h-20 ">const CatTax: cat&#60;image: popUp&#62; = {</code></pre>
             <pre
@@ -52,7 +52,7 @@ const icons = [
 
             <pre
                 data-prefix=" "
-                class="flex"><code class="flex">&nbsp; };<span class="animate-[blink-1_1s_infinite_both] text-lg">|</span>
+                class="flex"><code class="flex">&nbsp; };<span class="animate-[blink-1_1s_infinite_both] text-4">|</span>
   </code></pre>
         </div>
 
@@ -60,7 +60,7 @@ const icons = [
             <div class="divider divider-start mt-12">MADE WITH</div>
             <div class="grid grid-cols-2">
                 <div
-                    class="card grid h-20 auto-cols-max grid-flow-col place-items-center gap-5 rounded-xl *:size-6 *:text-ac/85">
+                    class="card *:text-bc/85 grid h-20 auto-cols-max grid-flow-col place-items-center gap-5 rounded-xl *:size-6">
                     <icon v-for="icon in icons" :icon="icon" />
                     <img
                         class="brightness-50 contrast-200 grayscale"
@@ -84,7 +84,7 @@ const icons = [
                     </p>
                     <a
                         href="https://github.com/clemony/lolpocket"
-                        class="mt-2 inline-flex items-center gap-1 underline transition-all duration-300 hover:font-bold">
+                        class="mt-2 inline-flex items-center gap-1 underline transition-all duration-300 hover:font-bold hover:underline">
                         <Icon icon="ph:github-logo" />
                         <Icon icon="ph:at" />
                         clemony
@@ -97,7 +97,7 @@ const icons = [
 
     <dialog id="catModal" class="modal">
         <div class="modal-box">
-            <h3 class="text-lg font-bold">Hello!</h3>
+            <h3 class="text-4 font-bold">Hello!</h3>
             <p class="py-4">Press ESC key or click outside to close</p>
         </div>
         <form method="dialog" class="modal-backdrop">
@@ -106,8 +106,4 @@ const icons = [
     </dialog>
 </template>
 
-<style scoped>
-a {
-    @apply hover:underline;
-}
-</style>
+<style scoped></style>

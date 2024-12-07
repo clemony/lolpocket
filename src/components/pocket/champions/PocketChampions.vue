@@ -53,7 +53,7 @@ const dataValue = ref()
                             <Label
                                 variant="outline"
                                 size="icon"
-                                class="join-item swap swap-flip relative has-[:disabled]:cursor-default has-[:checked]:!bg-b2"
+                                class="join-item swap swap-flip relative has-disabled:cursor-default has-checked:bg-b2!"
                                 alt="Filter Likes">
                                 <input
                                     type="checkbox"
@@ -71,9 +71,9 @@ const dataValue = ref()
                     </CardHeader>
 
                     <CardContent
-                        class="!h-full !max-h-full w-full pb-0 pl-5 pr-0">
+                        class="h-full! max-h-full! w-full pb-0 pl-5 pr-0">
                         <ScrollArea
-                            class="!max-h-inherit !h-inherit !overflow-y-auto">
+                            class="max-h-inherit! h-inherit! overflow-y-auto!">
                             <ChampionList
                                 v-if="pocket"
                                 :pocket="pocket"

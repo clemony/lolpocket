@@ -38,10 +38,10 @@ const secondary = computed(() => {
                 <!-------------------------------- PRIMARY RUNES ------------------------------ */ -->
 
                 <div
-                    class="ease gradient relative h-fit max-h-fit w-[350px] min-w-[350px] overflow-hidden rounded-xl border border-b3 shadow-warm transition-all duration-300"
+                    class="ease gradient border-b3 shadow-warm relative h-fit max-h-fit w-[350px] min-w-[350px] overflow-hidden rounded-xl border transition-all duration-300"
                     :class="primary">
                     <div
-                        class="h-full bg-gradient-to-b from-b1/10 via-b1/90 via-25% to-b1">
+                        class="from-b1/10 via-b1/90 to-b1 h-full bg-linear-to-b via-25%">
                         <RuneSelect
                             :pocketKey="props.pocketKey"
                             :pocket="pocket"
@@ -55,9 +55,9 @@ const secondary = computed(() => {
                 <div>
                     <div
                         :class="secondary"
-                        class="gradient relative h-fit max-h-fit w-[350px] min-w-[350px] overflow-hidden rounded-xl border border-b3 shadow-warm">
+                        class="gradient border-b3 shadow-warm relative h-fit max-h-fit w-[350px] min-w-[350px] overflow-hidden rounded-xl border">
                         <div
-                            class="h-full bg-gradient-to-b from-b1/10 via-b1/90 via-35% to-b1 px-2">
+                            class="from-b1/10 via-b1/90 to-b1 h-full bg-linear-to-b via-35% px-2">
                             <RuneSelect
                                 :pocketKey="props.pocketKey"
                                 :pocket="pocket"
@@ -69,7 +69,7 @@ const secondary = computed(() => {
                     <!----------------------------------- SHARDS --------------------------------- */ -->
 
                     <div
-                        class="relative mt-6 h-fit max-h-fit rounded-xl border border-b3 shadow-warm">
+                        class="border-b3 shadow-warm relative mt-6 h-fit max-h-fit rounded-xl border">
                         <div
                             class="h-full w-full px-6 py-8 shadow-[inset_0px_0px_40px_#00000006]">
                             <RuneShards :pocket="pocket" :selected="selected" />
@@ -80,7 +80,7 @@ const secondary = computed(() => {
         </template>
         <template #panel2>
             <div
-                class="relative overflow-hidden rounded-xl border border-b3 !bg-b1/90 shadow-warm">
+                class="border-b3 bg-b1/90! shadow-warm relative overflow-hidden rounded-xl border">
                 <RuneSets
                     :pocket="pocket"
                     v-model:selected="selected"
@@ -91,13 +91,6 @@ const secondary = computed(() => {
 </template>
 
 <style>
-/* ] */
-.focus-hover:focus,
-.focus-hover:hover,
-.focus-hover:focus-within {
-    @apply grow border-b3 bg-b1/50 shadow-inner ring-offset-ac/40 [&_button]:opacity-100;
-}
-
 .gradient {
     background: linear-gradient(
         137deg,
@@ -131,41 +124,21 @@ const secondary = computed(() => {
 
 .precision {
     background-position: 0%;
-
-    #imgwrap {
-        @apply ring-offset-amber-500/60;
-    }
 }
 
 .domination {
     background-position: 20%;
-
-    #imgwrap {
-        @apply ring-offset-red-500/60;
-    }
 }
 
 .sorcery {
     background-position: 42%;
-
-    #imgwrap {
-        @apply ring-offset-purple-400/60;
-    }
 }
 
 .resolve {
     background-position: 83%;
-
-    #imgwrap {
-        @apply ring-offset-lime-600/60;
-    }
 }
 
 .inspiration {
     background-position: 100%;
-
-    #imgwrap {
-        @apply ring-offset-sky-300/30;
-    }
 }
 </style>

@@ -22,13 +22,12 @@ const selectedSet = ref(0)
 </script>
 
 <template>
-    <div
-        class="h-full w-full overflow-y-scroll overscroll-none bg-b2/20 pt-8">
+    <div class="bg-b2/20 h-full w-full overflow-y-scroll overscroll-none pt-8">
         <!-------------------------------- HEADER --------------------------------->
 
         <div
-            class="frost absolute left-0 top-0 z-40 flex !h-fit w-full flex-wrap items-center justify-end gap-4 border-b border-b-b3 px-2 py-1">
-            <h5 class="grow justify-start !font-semibold">Rune Sets</h5>
+            class="frost border-b-b3 absolute top-0 left-0 z-40 flex h-fit! w-full flex-wrap items-center justify-end gap-4 border-b px-2 py-1">
+            <h5 class="grow justify-start font-semibold!">Rune Sets</h5>
             <button
                 class="btn btn-outline btn-xs relative h-full items-center rounded-md border-none font-normal"
                 @click="newRuneSet(pocket.key)">
@@ -53,9 +52,9 @@ const selectedSet = ref(0)
                     v-for="(set, index) in pocket.runes[0].runeSets"
                     :key="set.key"
                     :class="set.primary"
-                    class="gradient overlay pointer-events-auto relative z-0 grid h-16 cursor-pointer items-center overflow-hidden transition-all duration-1000 after:absolute after:right-0 after:z-10 after:h-full after:w-[200%] after:bg-gradient-to-r after:from-b2/30 after:via-b2 after:via-55% after:to-b2 odd:after:brightness-[108%] even:after:brightness-[106%] hover:after:-right-1/2 has-[#runeSets:checked]:after:-right-full">
+                    class="gradient overlay after:from-b2/30 after:via-b2 after:to-b2 pointer-events-auto relative z-0 grid h-16 cursor-pointer items-center overflow-hidden transition-all duration-1000 after:absolute after:right-0 after:z-10 after:h-full after:w-[200%] after:bg-linear-to-r after:via-55% odd:after:brightness-[108%] even:after:brightness-[106%] hover:after:-right-1/2 has-[#runeSets:checked]:after:-right-full">
                     <div
-                        class="group z-20 flex h-full w-full items-center gap-4 border-b border-b2 bg-clip-padding bg-right p-2 transition-all duration-200">
+                        class="group border-b2 z-20 flex h-full w-full items-center gap-4 border-b bg-clip-padding bg-right p-2 transition-all duration-200">
                         <input
                             type="radio"
                             :value="index"
@@ -67,16 +66,16 @@ const selectedSet = ref(0)
                         <!-----------------------------⟢ DRAG ⟣-------------------------------->
 
                         <div
-                            class="ml-1 grid grid-cols-[repeat(3,_3rem)] place-items-center items-center justify-center justify-self-center py-1 opacity-75 grayscale-[0.25] transition-all duration-300 group-hover:opacity-95 group-hover:grayscale-0 peer-checked:grayscale-0 peer-[:checked]:opacity-100 peer-checked:[&_#blank]:opacity-80 peer-checked:[&_#blank]:ring-accent/15">
+                            class="[&_#blank]:peer-checked:ring-accent/15 ml-1 grid grid-cols-[repeat(3,3rem)] place-items-center items-center justify-center justify-self-center py-1 opacity-75 grayscale-[0.25] transition-all duration-300 group-hover:opacity-95 group-hover:grayscale-0 peer-checked:opacity-100 peer-checked:grayscale-0 [&_#blank]:peer-checked:opacity-80">
                             <img
                                 :src="set.keystone.img"
-                                class="h-11 drop-shadow-soft" />
+                                class="drop-shadow-soft h-11" />
 
                             <img
                                 :src="'/img/runes/' + set.secondary + '.webp'"
-                                class="h-9 p-1.5 drop-shadow-softer" />
+                                class="drop-shadow-softer h-9 p-1.5" />
                         </div>
-                        <div class="grow text-sm"><!-- {{ set.name }} --></div>
+                        <div class="text-2 grow"><!-- {{ set.name }} --></div>
 
                         <!-----------------------------⟢ menu ⟣-------------------------------->
                         <label
@@ -97,7 +96,7 @@ const selectedSet = ref(0)
                         </label>
 
                         <button
-                            class="flex items-center justify-center justify-self-end rounded-btn py-1 opacity-50 hover:bg-b2 hover:opacity-100"
+                            class="rounded-btn hover:bg-b2 flex items-center justify-center justify-self-end py-1 opacity-50 hover:opacity-100"
                             alt="menu">
                             <icon
                                 icon="teenyicons:more-vertical-outline"
@@ -105,7 +104,7 @@ const selectedSet = ref(0)
                         </button>
 
                         <div
-                            class="grid grid-cols-3 gap-1.5 *:flex *:aspect-square *:size-5 *:items-center *:justify-center *:rounded-btn *:text-ac/80 *:transition-all *:duration-300">
+                            class="*:rounded-btn *:text-bc/80 grid grid-cols-3 gap-1.5 *:flex *:aspect-square *:size-5 *:items-center *:justify-center *:transition-all *:duration-300">
                             <button
                                 class="hover:bg-b2"
                                 alt="Clear Items"
@@ -136,11 +135,10 @@ const selectedSet = ref(0)
 <style scoped>
 .overlay:after {
     content: '';
-
-    @apply transition-all duration-500;
+    transition: all 0.5s ease;
 }
 
 #bghover:hover .overlay:after {
-    @apply !-right-[50%];
+    right: 50% !important;
 }
 </style>

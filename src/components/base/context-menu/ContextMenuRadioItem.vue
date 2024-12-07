@@ -24,16 +24,20 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
-<ContextMenuRadioItem v-bind="forwarded" :class="cn(
-    'relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2  outline-none focus:bg-b2/60 focus:text-ac data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
-    props.class
-)
-    ">
-    <span class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-        <ContextMenuItemIndicator>
-            <icon icon="lucide:circle" class="h-2 w-2 fill-current" />
-        </ContextMenuItemIndicator>
-    </span>
-    <slot />
-</ContextMenuRadioItem>
+    <ContextMenuRadioItem
+        v-bind="forwarded"
+        :class="
+            cn(
+                'focus:bg-b2/60 focus:text-bc relative flex cursor-default items-center rounded-sm py-1.5 pr-2 pl-8 outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50',
+                props.class
+            )
+        ">
+        <span
+            class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+            <ContextMenuItemIndicator>
+                <icon icon="lucide:circle" class="h-2 w-2 fill-current" />
+            </ContextMenuItemIndicator>
+        </span>
+        <slot />
+    </ContextMenuRadioItem>
 </template>

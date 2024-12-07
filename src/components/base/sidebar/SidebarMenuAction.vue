@@ -21,15 +21,15 @@ const props = withDefaults(
         data-sidebar="menu-action"
         :class="
             cn(
-                'absolute right-1 top-1.5 flex aspect-square h-full items-center justify-center rounded-md p-0 text-ac outline-none ring-b3 transition-transform hover:bg-b2 hover:text-ac focus-visible:ring-2 peer-hover/menu-button:text-ac [&>svg]:size-5 [&>svg]:shrink-0',
+                'text-bc ring-b3 hover:bg-b2 hover:text-bc peer-hover/menu-button:text-bc absolute top-1.5 right-1 flex aspect-square h-full items-center justify-center rounded-md p-0 outline-hidden transition-transform focus-visible:ring-2 [&>svg]:size-5 [&>svg]:shrink-0',
                 // Increases the hit area of the button on mobile.
-                'after:absolute after:-inset-2 after:md:hidden',
+                'after:absolute after:-inset-2 md:after:hidden',
                 'peer-data-[size=sm]/menu-button:top-1',
                 'peer-data-[size=default]/menu-button:top-1.5',
                 'peer-data-[size=lg]/menu-button:top-2.5',
                 'group-data-[collapsible=icon]:hidden',
                 showOnHover &&
-                    'group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 data-[state=open]:opacity-100 peer-data-[active=true]/menu-button:text-ac md:opacity-0',
+                    'peer-data-[active=true]/menu-button:text-bc group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 data-[state=open]:opacity-100 md:opacity-0',
                 props.class
             )
         "

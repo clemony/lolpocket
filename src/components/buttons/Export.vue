@@ -4,11 +4,12 @@ import { ref } from 'vue'
 const show = ref(false)
 
 function confirm() {
-  show.value = false
+    show.value = false
 }
 </script>
 
-<template><!--       <button class="btn btn-sm self-center relative *>:transition-all *>:duration-300"
+<template>
+    <!--       <button class="btn btn-sm self-center relative *>:transition-all *>:duration-300"
         :class="{ 'group/load': isClicked, active: isActive }" alt="Create export for League Client"
         title="Create export for League Client" @click="handleExport()">
         <Icon icon="teenyicons:upload-outline" alt="Export" class="group-even/load:opacity-0" />
@@ -19,10 +20,11 @@ function confirm() {
 
       <dialog id="my_modal_2" class="modal">
         <div class="m-auto modal-box">
-          <h3 class="text-lg font-bold">Hello!</h3>
+          <h3 class="text-4 font-bold">Hello!</h3>
           <p class="py-4">Press ESC key or click outside to close</p>
         </div>
         <form method="dialog" class="modal-backdrop">
           <button>close</button>
         </form>
-      </dialog> --></template>
+      </dialog> -->
+</template>

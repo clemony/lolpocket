@@ -12,10 +12,10 @@ const settings = useGeneralStore()
 <template>
     <main class="grid size-full grid-cols-[1fr_3.5fr] pr-12">
         <div class="mx-auto flex w-full flex-col items-center gap-12">
-            <LayoutSpacer class="!h-10" />
-            <h1 class="!text-3xl font-semibold">Settings</h1>
+            <LayoutSpacer class="h-10!" />
+            <h1 class="text-8! font-semibold">Settings</h1>
 
-            <nav class="flex flex-col gap-5 pl-6 text-ac/80">
+            <nav class="text-bc/80 flex flex-col gap-5 pl-6">
                 <a href="#" class="font-semibold">General</a>
                 <a href="#">Appearance</a>
                 <a href="#">Storage</a>

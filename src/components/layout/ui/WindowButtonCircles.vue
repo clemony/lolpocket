@@ -19,13 +19,13 @@ const { isOutside } = useMouseInElement(target)
 const variant = 'ghost'
 const size = 'icon'
 const classObject = [
-    'stroke-[1.5] [&_svg]:object-center shadow-sm [&_svg]:size-5 [&_svg]:shrink-0 [&_svg]:shadow-inner hover:shadow-b3 size-4.5 rounded-full [&_svg]:absolute group/button',
+    'stroke-[1.5] [&_svg]:object-center shadow-xs [&_svg]:size-5 [&_svg]:shrink-0 [&_svg]:shadow-inner hover:shadow-b3 size-4.5 rounded-full [&_svg]:absolute group/button',
 ]
 </script>
 <template>
     <div
         ref="target"
-        class="group flex h-full items-center gap-3 justify-self-end px-3 text-ac/70">
+        class="group text-bc/70 flex h-full items-center gap-3 justify-self-end px-3">
         <Button
             :variant="variant"
             :size="size"
@@ -39,7 +39,7 @@ const classObject = [
                 class="opacity-60 group-hover:opacity-0" />
             <icon
                 icon="mynaui:plus-circle"
-                class="opacity-0 group-hover/button:opacity-0 group-hover:opacity-80" />
+                class="opacity-0 group-hover:opacity-80 group-hover/button:opacity-0" />
             <Icon
                 icon="mynaui:plus-circle-solid"
                 class="opacity-0 group-hover/button:opacity-90" />
@@ -58,7 +58,7 @@ const classObject = [
                 class="opacity-60 group-hover:opacity-0" />
             <icon
                 icon="mynaui:plus-circle"
-                class="opacity-0 group-hover/button:opacity-0 group-hover:opacity-80" />
+                class="opacity-0 group-hover:opacity-80 group-hover/button:opacity-0" />
             <Icon
                 icon="mynaui:plus-circle-solid"
                 class="opacity-0 group-hover/button:opacity-90" />
@@ -77,7 +77,7 @@ const classObject = [
                 class="opacity-60 group-hover:opacity-0" />
             <icon
                 icon="mynaui:x-circle"
-                class="opacity-0 group-hover/button:opacity-0 group-hover:opacity-80" />
+                class="opacity-0 group-hover:opacity-80 group-hover/button:opacity-0" />
             <Icon
                 icon="mynaui:x-circle-solid"
                 class="opacity-0 group-hover/button:opacity-90" />

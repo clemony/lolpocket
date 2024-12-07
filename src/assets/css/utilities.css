@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+@utility color-chip {
+    @apply flex aspect-square size-9 items-center justify-center rounded-md shadow-sm;
+}
+
+@utility scrollbar-hide {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+@utility join-item {
+    @apply border-b2 border;
+}
+
+@utility animate-accordion-down {
+    animation: var(--animate-accordion-down);
+}
+@utility animate-accordion-up {
+    animation: var(--animate-accordion-up);
+}
+@utility animate-collapsible-down {
+    animation: var(--animate-collapsible-down);
+}
+@utility animate-collapsible-up {
+    animation: var(--animate-collapsible-up);
+}

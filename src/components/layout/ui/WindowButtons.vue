@@ -31,7 +31,7 @@ const classObject = [
         ref="target"
         :class="
             cn(
-                'group -mt-2px flex h-full items-center gap-1.5 justify-self-end text-ac/70',
+                'group -mt-2px text-bc/70 flex h-full items-center gap-1.5 justify-self-end',
                 props.class
             )
         ">
@@ -54,7 +54,7 @@ const classObject = [
             alt="maximize"
             :class="classObject"
             @click="appWindow.toggleMaximize()">
-            <icon icon="mynaui:maximize-one" class="!size-[13px]" />
+            <icon icon="mynaui:maximize-one" class="size-[13px]!" />
         </Button>
 
         <Button

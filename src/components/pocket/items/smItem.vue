@@ -30,7 +30,7 @@ function imageLoaded() {
 
                 <div class="size-full absolute top-0 left-0 z-0 ">
                     <img @load="imageLoaded()" :src="`/img/items/${item.id}.webp`"
-                        class="z-0 size-full scale-150 blur-sm" :data-item="item.name" />
+                        class="z-0 size-full scale-150 blur-xs" :data-item="item.name" />
                 </div>
 
                 <div class="size-full absolute top-0 left-0 z-10 ">

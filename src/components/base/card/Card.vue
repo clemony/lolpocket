@@ -3,16 +3,18 @@ import type { HTMLAttributes } from 'vue'
 import { cn } from '@lib/utils'
 
 const props = defineProps<{
-  class?: HTMLAttributes['class']
+    class?: HTMLAttributes['class']
 }>()
 </script>
 
 <template>
-<div :class="cn(
-  'rounded-xl border bg-b1/90 backdrop-blur-md shadow-smooth',
-  props.class,
-)
-  ">
-  <slot />
-</div>
+    <div
+        :class="
+            cn(
+                '!border-b2 bg-b1/90 shadow-smooth rounded-xl backdrop-blur-md',
+                props.class
+            )
+        ">
+        <slot />
+    </div>
 </template>

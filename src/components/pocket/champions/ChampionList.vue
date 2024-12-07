@@ -119,7 +119,7 @@ watch(
                     dragClass="setDrag"
                     @click.right.prevent="">
                     <div
-                        class="drag-wrapper !border-accent/50 !shadow-standard">
+                        class="drag-wrapper border-accent/50! shadow-standard!">
                         <input
                             type="radio"
                             :value="champion"

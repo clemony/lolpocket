@@ -12,9 +12,10 @@
     ],
     "compilerOptions": {
         "baseUrl": ".",
-        "moduleResolution": "Bundler",
-        "module": "ES2022",
+        "moduleResolution": "bundler",
+        "module": "ESNext",
         "esModuleInterop": true,
+        "resolveJsonModule": true,
         "lib": [
             "es2020",
             "dom"

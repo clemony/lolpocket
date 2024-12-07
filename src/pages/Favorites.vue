@@ -18,15 +18,15 @@ onMounted(async () => {})
 <template>
     <!-- Champ Tab -->
 
-    <div class="h-full w-full *:scrollbar-hide">
+    <div class="*:scrollbar-hide h-full w-full">
         <div class="flex w-full items-end p-4">
             <div class="flex grow items-center">
-                <h2 class="p-1.5 text-xl font-bold">Favorites</h2>
+                <h2 class="text-5 p-1.5 font-bold">Favorites</h2>
             </div>
         </div>
 
         <div
-            class="absolute left-0 top-0 z-10 flex !h-fit w-full flex-wrap items-center justify-end gap-4 border-b border-b-b3 bg-b1/90 px-4 py-1 backdrop-blur-md">
+            class="border-b-b3 bg-b1/90 absolute top-0 left-0 z-10 flex h-fit! w-full flex-wrap items-center justify-end gap-4 border-b px-4 py-1 backdrop-blur-md">
             <h2 class="sub-text grow justify-start">Champions</h2>
         </div>
 
@@ -38,7 +38,7 @@ onMounted(async () => {})
                 :data-index="index"
                 class="">
                 <button
-                    class="item-wrapper__item pointer-events-auto flex aspect-square min-w-[60px] max-w-[70px] grow basis-14 place-items-center overflow-hidden rounded-md bg-cover ring-1 ring-b3 ring-offset-1 ring-offset-b1 drop-shadow-sm hover:ring-offset-primary has-[:checked]:ring-offset-2 has-[:checked]:ring-offset-secondary">
+                    class="item-wrapper__item ring-b3 ring-offset-b1 hover:ring-offset-primary has-checked:ring-offset-secondary pointer-events-auto flex aspect-square max-w-[70px] min-w-[60px] grow basis-14 place-items-center overflow-hidden rounded-md bg-cover ring-1 ring-offset-1 drop-shadow-sm has-checked:ring-offset-2">
                     <div class="grid-image-container champ">
                         <img
                             v-if="champion.type === 'champion'"
@@ -52,12 +52,12 @@ onMounted(async () => {})
         </div>
 
         <div
-            class="absolute left-0 top-0 z-10 flex !h-fit w-full flex-wrap items-center justify-end gap-4 border-b border-b-b3 bg-b1/80 px-4 py-1 shadow-warm backdrop-blur-md">
+            class="border-b-b3 bg-b1/80 shadow-warm absolute top-0 left-0 z-10 flex h-fit! w-full flex-wrap items-center justify-end gap-4 border-b px-4 py-1 backdrop-blur-md">
             <h2 class="sub-text grow justify-start">Primary</h2>
         </div>
 
         <div
-            class="drag-draggable !h-full w-full content-start items-start justify-around rounded-b-xl px-3 pb-4 pt-12 shadow-inset scrollbar-hide">
+            class="drag-draggable shadow-inset scrollbar-hide h-full! w-full content-start items-start justify-around rounded-b-xl px-3 pt-12 pb-4">
             <VDropdown
                 v-for="item in is.favoriteItems"
                 :key="item.id"
@@ -68,14 +68,14 @@ onMounted(async () => {})
                 @click.right.prevent=""
                 :ref="item.name"
                 class="relative max-h-[64px] max-w-[64px]">
-                <label class="drag-label !overflow-hidden">
-                    <div class="drag-wrapper !overflow-hidden">
+                <label class="drag-label overflow-hidden!">
+                    <div class="drag-wrapper overflow-hidden!">
                         <img :src="item.img" class="drag-img" />
 
                         <div
                             :key="item.id + 'Count'"
-                            :class="{ '!opacity-85': item.count > 1 }"
-                            class="absolute -right-1.5 -top-1.5 z-30 flex size-6 place-content-center place-items-center overflow-hidden rounded-full bg-primary font-mono text-sm text-primary-content opacity-0 shadow-warm">
+                            :class="{ 'opacity-85!': item.count > 1 }"
+                            class="bg-primary text-2 text-primary-content shadow-warm absolute -top-1.5 -right-1.5 z-30 flex size-6 place-content-center place-items-center overflow-hidden rounded-full font-mono opacity-0">
                             {{ item.count }}
                         </div>
                     </div>
@@ -88,9 +88,9 @@ onMounted(async () => {})
             <VDropdown
                 theme="default"
                 alt="Quick Search"
-                class="ghosty drag-label group/qs relative z-0 flex basis-16 cursor-zoom-out !p-0 after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-['+'] hover:after:text-accent hover:after:opacity-60">
+                class="ghosty drag-label group/qs hover:after:text-bccent relative z-0 flex basis-16 cursor-zoom-out p-0! after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-['+'] hover:after:opacity-60">
                 <div
-                    class="z-20 h-full w-full scale-105 cursor-zoom-in select-none bg-[url('/img/UI/frame.webp')] bg-contain bg-center bg-no-repeat opacity-0 brightness-0 transition-all duration-200 group-hover/qs:scale-95 group-hover/qs:opacity-40"></div>
+                    class="z-20 h-full w-full scale-105 cursor-zoom-in bg-[url('/img/UI/frame.webp')] bg-contain bg-center bg-no-repeat opacity-0 brightness-0 transition-all duration-200 select-none group-hover/qs:scale-95 group-hover/qs:opacity-40"></div>
 
                 <template #popper>
                     <QuickSearch

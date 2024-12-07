@@ -52,7 +52,7 @@ const items = [
                                     }">
                                     <SidebarMenuSubButton>
                                         <!--     <icon :icon="item.icon" /> -->
-                                        <span class="text-base">
+                                        <span class="">
                                             {{ item.name }}
                                         </span>
                                     </SidebarMenuSubButton>

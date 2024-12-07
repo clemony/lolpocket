@@ -72,25 +72,26 @@ onMounted(async () => {
 </script>
 
 <template>
-<div class="grid items-center gap-4 ">
+    <div class="grid items-center gap-4">
+        <ColorPicker
+            :color="color"
+            class="w-full"
+            @color-change="updateColor"
+            alpha-channel="hide">
+            <template #hue-range-input-label>
+                <span class="visually-hidden"></span>
+            </template>
 
-    <ColorPicker :color="color" class=" w-full" @color-change="updateColor" alpha-channel="hide">
-        <template #hue-range-input-label>
-            <span class="visually-hidden"> </span>
-        </template>
-
-        <template #copy-button> </template>
-    </ColorPicker>
-
-
-</div>
+            <template #copy-button></template>
+        </ColorPicker>
+    </div>
 </template>
 
 <style>
 @import url('vue-accessible-color-picker/styles');
 /* beautify ignore:start */
 label {
-    @apply text-ac;
+    color: var(--ac);
 }
 .visually-hidden {
     position: absolute;
@@ -112,28 +113,43 @@ label {
 
 .vacp-color-space {
     --vacp-thumb-size: 5px !important;
-    @apply !size-full !overflow-hidden !rounded-lg shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)];
-}
-::--webkit-slider-thumb {
-    @apply pt-2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-warm);
+
+    ::--webkit-slider-thumb {
+        padding-top: 10px;
+    }
 }
 
 label.vacp-range-input-label {
-    @apply rounded-full;
+    border-radius: 100%;
 }
 .vacp-color-inputs,
 .vacp-range-copy-button {
-    @apply !hidden hover:bg-transparent;
+    display: none;
+
+    &:hover {
+        background-color: transparent;
+    }
 }
 
 #color-picker-hue-slider,
 #color-picker-alpha-slider {
     --vacp-width-border: 0px;
-    @apply h-3 w-full overflow-hidden rounded-full bg-none shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)];
+    width: 100%;
+    height: 0.75rem;
+    overflow: hidden;
+    border-radius: 100%;
+    background-color: transparent;
+    box-shadow: var(--shadow-warm);
 }
 
 .vacp-copy-button {
     display: none;
     width: 0;
     height: 0;
-}</style>
+}
+</style>

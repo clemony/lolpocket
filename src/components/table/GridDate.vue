@@ -122,17 +122,17 @@ const dateObjects = [
 
 <template>
     <div
-        class="max-h-inherit group grid size-full overflow-hidden rounded px-2">
+        class="max-h-inherit group grid size-full overflow-hidden rounded-sm px-2">
         <PocketMenu
             v-if="pocket"
             :pocket="pocket"
             type="context"
             class="grid size-full place-content-between justify-center gap-1">
             <div v-for="(object, index) in dateObjects" class="group">
-                <div class="flex items-center justify-center gap-2 text-sm">
+                <div class="text-2 flex items-center justify-center gap-2">
                     <template v-if="object.name != 'Patch'">
                         <span
-                            class="text-right text-sm !tracking-wide opacity-0 transition-all duration-500 group-hover:opacity-80">
+                            class="text-2 text-right tracking-wide! opacity-0 transition-all duration-500 group-hover:opacity-80">
                             {{ object.data }}
                         </span>
                     </template>
@@ -148,7 +148,7 @@ const dateObjects = [
                             :class="getStyles"
                             :checked="lastUpdated == currentPatch" />
                         <span
-                            class="justify-self-center !text-sm !tracking-wider opacity-100">
+                            class="text-2! justify-self-center tracking-wider! opacity-100">
                             {{ object.data }}
                         </span>
                     </template>

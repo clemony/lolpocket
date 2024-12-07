@@ -25,7 +25,7 @@ const tabModel = ref('Spells')
         class="mt-6 flex h-9 items-center px-1 [&_li]:z-10 [&_li]:w-20 [&_li]:px-2">
         <div
             ref="dinger"
-            class="absolute h-9 w-[55px] rounded-md border border-b2 bg-b1 opacity-90 shadow-sm" />
+            class="absolute h-9 w-[55px] rounded-md border border-b2 bg-b1 opacity-90 shadow-xs" />
 
         <li>
             <label ref="tab1">

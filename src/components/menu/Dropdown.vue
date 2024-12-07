@@ -27,7 +27,7 @@ const menu = ref(props.menu)
             <Button
                 :class="
                     cn(
-                        'flex h-full w-full flex-nowrap items-center rounded-lg !border-0 px-3 text-base !ring-0 focus:!border-0 focus:!outline-0 focus:!ring-1 focus:!ring-b2 data-[state=open]:shadow-sm data-[state=open]:!ring-1 data-[state=open]:!ring-b3/40',
+                        'text-3 focus:ring-b2! data-[state=open]:ring-b3/40! flex h-full w-full flex-nowrap items-center rounded-lg border-0! px-3 ring-0! focus:border-0! focus:ring-1! focus:outline-0! data-[state=open]:ring-1! data-[state=open]:shadow-xs',
                         props.class
                     )
                 "
@@ -46,10 +46,10 @@ const menu = ref(props.menu)
         <DropdownMenuContent
             :class="
                 cn(
-                    'w-radix-dropdown-menu-trigger [&_>*]:w-full [&_>*]:justify-start [&_svg]:size-4.5',
+                    'w-radix-dropdown-menu-trigger *:w-full *:justify-start [&_svg]:size-4.5',
                     props.contentClass,
                     {
-                        'border-ac/30 bg-accent/60 text-ac ring-1 ring-accent backdrop-brightness-110 [border-style:outset]':
+                        'border-ac/30 bg-accent/60 text-bc ring-accent [border-style:outset] ring-1 backdrop-brightness-110':
                             props.dark,
                     }
                 )

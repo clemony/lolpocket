@@ -61,7 +61,7 @@ function afterLeave(el: Element) {
         :distance="8"
         :class="
             cn(
-                'no-drag search-drop ghosty drag-label group/qs border-box after:content-[ relative z-0 flex !cursor-pointer !p-0 after:absolute after:grid after:h-full after:w-full after:place-content-center after:text-lg after:opacity-50 after:content-[\'+\'] hover:after:text-accent hover:after:opacity-60',
+                'no-drag search-drop ghosty drag-label group/qs border-box after:content-[ after:text-4 hover:after:text-bccent relative z-0 flex cursor-pointer! p-0! after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-[\'+\'] hover:after:opacity-60',
                 props.class
             )
         "
@@ -70,19 +70,19 @@ function afterLeave(el: Element) {
             width: size || height + 'px',
         }">
         <div
-            class="z-20 h-full w-full scale-105 cursor-pointer select-none bg-[url('/img/ui/frame.webp')] bg-contain bg-center bg-no-repeat opacity-0 brightness-0 transition-all duration-200 group-hover/qs:scale-95 group-hover/qs:opacity-40"></div>
+            class="z-20 h-full w-full scale-105 cursor-pointer bg-[url('/img/ui/frame.webp')] bg-contain bg-center bg-no-repeat opacity-0 brightness-0 transition-all duration-200 select-none group-hover/qs:scale-95 group-hover/qs:opacity-40"></div>
 
         <template #popper>
-            <div class="relative pb-0 pt-1.5">
+            <div class="relative pt-1.5 pb-0">
                 <div class="relative flex w-full justify-center px-2 pb-1">
                     <Icon
                         v-if="!quickSearch"
                         icon="teenyicons:search-outline"
-                        class="pointer-events-none absolute right-3.5 top-[0.45rem] size-3.5 text-ac/50" />
+                        class="text-bc/50 pointer-events-none absolute top-[0.45rem] right-3.5 size-3.5" />
 
                     <button
                         v-else
-                        class="pointer-events-auto absolute right-3.5 top-[7px] z-10 size-3.5 text-accent/40 transition-all duration-300 hover:text-accent/60"
+                        class="text-bccent/40 hover:text-bccent/60 pointer-events-auto absolute top-[7px] right-3.5 z-10 size-3.5 transition-all duration-300"
                         @click="$emit('update:quickSearch', '')">
                         <Icon icon="teenyicons:x-outline" />
                     </button>
@@ -92,14 +92,14 @@ function afterLeave(el: Element) {
                         :value="quickSearch"
                         @input="handleInput"
                         spellcheck="false"
-                        class="placeholder: z-0 h-7 w-full select-all rounded-btn bg-transparent px-2 italic !outline-none focus:bg-b2/50 focus:not-italic"
+                        class="placeholder: rounded-btn focus:bg-b2/50 z-0 h-7 w-full bg-transparent px-2 italic outline-hidden! select-all focus:not-italic"
                         autofocus />
                 </div>
 
                 <!--    <transition name="list-transition" @enter="beforeEnter" @leave="afterLeave"> -->
                 <div
                     v-if="quickSearch"
-                    class="grid max-h-72 w-full overflow-y-scroll border border-transparent border-t-b3 px-1 pt-2 transition-all duration-500">
+                    class="border-t-b3 grid max-h-72 w-full overflow-y-scroll border border-transparent px-1 pt-2 transition-all duration-500">
                     <TransitionGroup
                         name="fade"
                         tag="div"
@@ -110,7 +110,7 @@ function afterLeave(el: Element) {
                             v-for="data in props.array"
                             :key="data.id"
                             @click="handleClick(data)"
-                            class="btn btn-ghost btn-xs my-1 flex w-full cursor-pointer justify-start gap-2 px-1 py-0.5 hover:bg-b2">
+                            class="btn btn-ghost btn-xs hover:bg-b2 my-1 flex w-full cursor-pointer justify-start gap-2 px-1 py-0.5">
                             <img
                                 :src="`/img/${props.type}/${data.id || data.name}.webp`"
                                 class="size-4.5 rounded-md" />

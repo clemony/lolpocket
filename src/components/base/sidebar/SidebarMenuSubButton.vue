@@ -28,10 +28,10 @@ const props = withDefaults(
         :data-active="isActive"
         :class="
             cn(
-                'flex h-8 w-full min-w-0 -translate-x-px cursor-pointer items-center gap-2 overflow-hidden rounded-md px-2 py-5 text-ac outline-none ring-b3 hover:bg-b2 focus-visible:ring-1 active:bg-b2 disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-5 [&>svg]:shrink-0 [&>svg]:text-ac',
-                'data-[active=true]:bg-accent/5 data-[active=true]:text-ac',
-                size === 'sm' && 'text-sm+',
-                size === 'md' && 'text-sm+',
+                'text-bc ring-b3 hover:bg-b2 active:bg-b2 [&>svg]:text-bc flex h-8 w-full min-w-0 -translate-x-px cursor-pointer items-center gap-2 overflow-hidden rounded-md px-2 py-5 outline-hidden focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-5 [&>svg]:shrink-0',
+                'data-[active=true]:bg-accent/5 data-[active=true]:text-bc',
+                size === 'sm' && 'text-3',
+                size === 'md' && 'text-3',
                 'group-data-[collapsible=icon]:hidden',
                 props.class
             )

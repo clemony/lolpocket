@@ -23,7 +23,13 @@ const items = [
 </script>
 <template>
     <SidebarGroup>
-        <SidebarGroupLabel data-tauri-drag-region>Else</SidebarGroupLabel>
+        <SidebarGroupLabel data-tauri-drag-region>
+            Else
+            <span class="text-3 tracking-tight">
+                <span class="tracking-tighter">&nbsp.</span>
+                . .
+            </span>
+        </SidebarGroupLabel>
         <SidebarMenu class="mb-1">
             <SidebarLink to="about" icon="teenyicons:info-outline" />
 
@@ -32,7 +38,7 @@ const items = [
                     <CollapsibleTrigger as-child>
                         <SidebarMenuButton tooltip="Settings" class="py-5">
                             <icon icon="ph:gear-six" />
-                            <span class="text-base">Settings</span>
+                            <span class="text-3">Settings</span>
                             <ExpandIndicator />
                         </SidebarMenuButton>
                     </CollapsibleTrigger>

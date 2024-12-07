@@ -48,7 +48,7 @@ const updateWidth = () => {
         :default-value="props.defaultValue"
         :class="
             cn(
-                'border-input flex h-8 cursor-text overflow-hidden rounded-md border bg-transparent pl-3 pr-1 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-ac/60 hover:ring-1 hover:ring-accent/5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent/40 disabled:cursor-not-allowed disabled:opacity-50',
+                'border-input text-2 file:text-2 placeholder:text-bc/60 hover:ring-accent/5 focus-visible:ring-accent/40 flex h-8 cursor-text overflow-hidden rounded-md border bg-transparent pr-1 pl-3 file:border-0 file:bg-transparent file:font-medium hover:ring-1 focus-visible:ring-1 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50',
                 props.class
             )
         "
@@ -71,8 +71,8 @@ const updateWidth = () => {
 
     <span
         ref="textWidth"
-        class="!pointer-events-none !invisible !absolute !left-0 !top-0"
-        :class="cn('whitespace-pre px-3 text-sm', props.class)">
+        class="pointer-events-none! invisible! absolute! top-0! left-0!"
+        :class="cn('text-2 px-3 whitespace-pre', props.class)">
         {{ modelValue }}
     </span>
 </template>

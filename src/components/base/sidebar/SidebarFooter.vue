@@ -10,7 +10,7 @@ const props = defineProps<{
 <template>
     <div
         data-sidebar="footer"
-        :class="cn('text-sm+ flex flex-col gap-1 py-2', props.class)">
+        :class="cn('text-3 flex flex-col gap-1 py-2', props.class)">
         <slot />
     </div>
 </template>

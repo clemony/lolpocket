@@ -29,7 +29,7 @@ const pageStyle = computed(() => ({
     <div
         data-tauri-drag-region
         v-show="gs.commandOpen"
-        class="command margin-auto z-[100] mt-24 overflow-hidden rounded-xl delay-100 animate-in fade-in-100 slide-in-from-bottom">
+        class="command margin-auto z-100 mt-24 overflow-hidden rounded-xl delay-100 animate-in fade-in-100 slide-in-from-bottom">
         <Command />
     </div>
     <div

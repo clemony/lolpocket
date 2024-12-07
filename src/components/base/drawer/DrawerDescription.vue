@@ -21,7 +21,7 @@ const delegatedProps = computed(() => {
 <template>
     <DrawerDescription
         v-bind="delegatedProps"
-        :class="cn('text-xs text-ac/60', props.class)">
+        :class="cn('text-1 text-bc/60', props.class)">
         <slot />
     </DrawerDescription>
 </template>

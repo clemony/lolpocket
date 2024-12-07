@@ -4,18 +4,19 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
-import vueDevTools from 'vite-plugin-vue-devtools'
 import { visualizer } from 'rollup-plugin-visualizer'
-import { defineConfig, searchForWorkspaceRoot, type PluginOption } from 'vite'
-
+import { defineConfig, type PluginOption } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+import vueDevTools from 'vite-plugin-vue-devtools'
 import { resolve } from 'path'
+import RadixVueResolver from 'radix-vue/resolver'
+import OkuMotionResolver from '@oku-ui/motion/resolver'
 
 export default defineConfig({
     plugins: [
         vue(),
-        vueDevTools({
-            launchEditor: 'code',
-        }),
+        vueDevTools(),
+        tailwindcss(),
         Components({
             dirs: [
                 'src/pages',
@@ -28,6 +29,8 @@ export default defineConfig({
             deep: true,
             dts: './components.d.ts',
             resolvers: [
+                RadixVueResolver(),
+                OkuMotionResolver(),
                 IconsResolver({
                     prefix: false,
                     enabledCollections: ['ui'],

@@ -32,28 +32,28 @@ const isLiked = computed(() => {
 
 <template>
     <!-- This will be the content of the popover -->
-    <Popover>
-        <PopoverTrigger autofocus="false">
+    <Popover :autofocus="false">
+        <PopoverTrigger>
             <slot />
         </PopoverTrigger>
         <PopoverContent
-            class="relative grid w-80 !min-w-60 max-w-96 overscroll-none p-4"
+            class="relative grid w-80 max-w-96 min-w-60! overscroll-none p-4"
             hideWhenDetached>
             <div
-                class="grid w-full grid-cols-[1fr_3fr] gap-2 border-b border-b2 pb-3">
+                class="border-b2 grid w-full grid-cols-[1fr_3fr] gap-2 border-b pb-3">
                 <div class="col-start-1 h-full">
                     <img
                         :key="item.id"
                         :src="`/img/items/${item.id}.webp`"
                         :alt="item.name + ' Image'"
-                        class="pointer-events-none size-14 rounded-md border border-b3 shadow-warm" />
+                        class="border-b3 shadow-warm pointer-events-none size-14 rounded-md border" />
                 </div>
 
                 <!---------------------------⟢ Header ⟣---------------------------->
 
                 <div class="grid h-full grid-cols-1">
                     <h5
-                        class="flex flex-wrap items-start pb-3 pt-1 !text-lg leading-none tracking-tight">
+                        class="text-4! flex flex-wrap items-start pt-1 pb-3 leading-none tracking-tight">
                         {{ item.name }}
                     </h5>
 
@@ -69,8 +69,7 @@ const isLiked = computed(() => {
                                 class="text-dark-rose" />
                             <icon
                                 icon="teenyicons:heart-outline"
-                                class=""
-                                :class="{ 'text-accent/20': isLiked }" />
+                                class="text-ac" />
                         </Button>
 
                         <Button
@@ -82,7 +81,7 @@ const isLiked = computed(() => {
                             alt="link to league wiki">
                             <Icon
                                 icon="teenyicons:link-outline"
-                                class="aspect-square size-4 shrink-0" />
+                                class="text-ac aspect-square size-4 shrink-0" />
 
                             <!--  <Icon icon="teenyicons:link-remove-outline"
                             class="p-0 m-0 opacity-0 size-3 group-hover:opacity-100" />
@@ -155,11 +154,11 @@ const isLiked = computed(() => {
                         item.active.length > 2 ||
                         item.passive.length > 2
                     "
-                    class="grid grid-cols-1 gap-2 self-start whitespace-pre-line py-2 text-sm">
+                    class="text-2 grid grid-cols-1 gap-2 self-start py-2 whitespace-pre-line">
                     <p
                         v-html="item.stats"
                         v-if="item.stats"
-                        class="text-sm capitalize leading-5"></p>
+                        class="text-2 leading-5 capitalize"></p>
 
                     <p
                         v-html="item.active"
@@ -174,7 +173,7 @@ const isLiked = computed(() => {
                 </div>
                 <!--  {{ item.passive }} first-line:font-bold  first-line:tracking-wide-->
             </ScrollArea>
-            <div class="flex items-end border-t border-t-b2 pt-2">
+            <div class="border-t-b2 flex items-end border-t pt-2">
                 <p
                     v-if="item.id"
                     class="flex grow items-center gap-3 pt-2 align-text-bottom leading-none">

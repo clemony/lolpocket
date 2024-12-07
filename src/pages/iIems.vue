@@ -32,18 +32,4 @@ const items = dataStore.items
     </div>
 </template>
 
-<style scoped>
-.grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(70px, 1fr));
-    @apply gap-6;
-}
-
-.item {
-    @apply h-[70px] w-[70px];
-}
-
-.grid-tip {
-    @apply max-w-[70px];
-}
-</style>
+<style scoped></style>

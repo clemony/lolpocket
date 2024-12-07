@@ -32,7 +32,7 @@ const emit = defineEmits(['update:open'])
                 @update:open="emit('update:open', isOpen)"
                 :disabled="props.noCollapse">
                 <CollapsibleTrigger
-                    class="flex w-full cursor-pointer items-center gap-3 pt-1"
+                    class="text-bc flex w-full cursor-pointer items-center gap-3 pt-1"
                     as-child>
                     <CardTitle>
                         <h4 v-if="props.title" class="h-sans">
@@ -42,7 +42,7 @@ const emit = defineEmits(['update:open'])
                     </CardTitle>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
-                    <CardDescription class="pt-2 text-base tracking-tight">
+                    <CardDescription class="text-3 text-bc pt-2 tracking-tight">
                         {{ props.description }}
                         <slot name="description" />
                     </CardDescription>

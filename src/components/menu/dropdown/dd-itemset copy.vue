@@ -38,7 +38,7 @@ console.log(filter)
                             <LoadImg
                                 v-if="index < 6"
                                 :url="`/img/items/${item.id}.webp`"
-                                class="size-[55px] overflow-hidden rounded-md border border-b3 shadow-sm" />
+                                class="size-[55px] overflow-hidden rounded-md border border-b3 shadow-xs" />
                         </template>
                         <template
                             v-if="props.model.items.length < 6"></template>
@@ -56,7 +56,7 @@ console.log(filter)
                     <PopoverClose
                         class="absolute -left-96 -top-96 h-screen w-screen scale-150 bg-black/20">
                         <PopoverContent
-                            class="relative w-[--popper-trigger-width] !rounded-xl px-7 py-5"
+                            class="relative w-(--popper-trigger-width) rounded-xl! px-7 py-5"
                             align="start"
                             :align-offset="-20"
                             side="bottom"
@@ -95,7 +95,7 @@ console.log(filter)
                                             <LoadImg
                                                 v-if="index < 6"
                                                 :url="`/img/items/${item.id}.webp`"
-                                                class="border-1 size-[55px] rounded-md border-transparent shadow-sm" />
+                                                class="border-1 size-[55px] rounded-md border-transparent shadow-xs" />
                                         </template>
 
                                         <!--           <Placeholder v-else class='size-14' /> -->

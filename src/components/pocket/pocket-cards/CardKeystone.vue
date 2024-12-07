@@ -8,7 +8,7 @@ const props = defineProps<{
 </script>
 <template>
     <div
-        class="absolute left-3 top-3 z-20 flex size-16 items-center justify-center rounded-full bg-accent shadow-warm ring-1 ring-accent/20 backdrop-blur-sm"
+        class="absolute left-3 top-3 z-20 flex size-16 items-center justify-center rounded-full bg-accent shadow-warm ring-1 ring-accent/20 backdrop-blur-xs"
         :style="{
             //outlineColor: 'var(--n) / 0.2',
             borderColor: `var(--${set.primary})`,
@@ -16,7 +16,7 @@ const props = defineProps<{
             borderStyle: 'solid',
         }">
         <div
-            class="z-40 grid !aspect-square size-full place-items-center rounded-full">
+            class="z-40 grid aspect-square! size-full place-items-center rounded-full">
             <img
                 v-if="set.keystone && set.keystone.name != 'empty'"
                 :src="set.keystone.img"

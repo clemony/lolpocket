@@ -64,10 +64,10 @@ onMounted(async () => {
 <template>
     <!-- Champ Tab -->
 
-    <div class="h-full w-full px-6 *:scrollbar-hide">
+    <div class="*:scrollbar-hide h-full w-full px-6">
         <div class="flex w-full items-end px-2 py-6">
             <div class="flex grow items-center">
-                <h2 class="p-1.5 text-2xl font-bold">Champions</h2>
+                <h2 class="text-7 p-1.5 font-bold">Champions</h2>
 
                 <p class="grow p-1.5 font-mono italic">
                     {{ getQuote }}
@@ -76,8 +76,8 @@ onMounted(async () => {
         </div>
 
         <div
-            class="absolute left-0 top-0 z-10 flex !h-fit w-full flex-wrap items-center justify-end gap-4 border-b border-b-b3 bg-b1/90 px-4 py-1 backdrop-blur-md">
-            <h2 class="grow justify-start text-base font-semibold">Primary</h2>
+            class="border-b-b3 bg-b1/90 absolute top-0 left-0 z-10 flex h-fit! w-full flex-wrap items-center justify-end gap-4 border-b px-4 py-1 backdrop-blur-md">
+            <h2 class="text-3 grow justify-start font-semibold">Primary</h2>
             <select
                 class="align-self-end select select-bordered select-xs max-w-xs justify-self-end shadow-inner">
                 <option disabled selected>Class</option>
@@ -98,7 +98,7 @@ onMounted(async () => {
                 :data-index="index"
                 class="">
                 <button
-                    class="item-wrapper__item pointer-events-auto flex aspect-square min-w-[60px] max-w-[70px] grow basis-14 place-items-center overflow-hidden rounded-md bg-cover ring-1 ring-b3 ring-offset-1 ring-offset-b1 drop-shadow-sm hover:ring-offset-primary has-[:checked]:ring-offset-2 has-[:checked]:ring-offset-secondary"
+                    class="item-wrapper__item ring-b3 ring-offset-b1 hover:ring-offset-primary has-checked:ring-offset-secondary pointer-events-auto flex aspect-square max-w-[70px] min-w-[60px] grow basis-14 place-items-center overflow-hidden rounded-md bg-cover ring-1 ring-offset-1 drop-shadow-sm has-checked:ring-offset-2"
                     @click="ds.setSelectedChampion(champion)">
                     <div class="grid-image-container champ">
                         <img
@@ -112,7 +112,7 @@ onMounted(async () => {
             </div>
         </div>
 
-        <div class="max-h-full overflow-y-scroll rounded-xl scrollbar-hide">
+        <div class="scrollbar-hide max-h-full overflow-y-scroll rounded-xl">
             <ChampionSidebar />
         </div>
     </div>

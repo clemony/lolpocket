@@ -64,7 +64,7 @@ function onChange(e, spell) {
             </PopoverTrigger>
 
             <PopoverContent
-                class="-ml-[22px] w-[300px] overflow-hidden !rounded-xl bg-transparent p-0 backdrop-blur-none"
+                class="-ml-[22px] w-[300px] overflow-hidden rounded-xl! bg-transparent p-0 backdrop-blur-none"
                 :sideOffset="-70"
                 :alignOffset="props.alignOffset"
                 align="end"

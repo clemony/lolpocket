@@ -26,7 +26,7 @@ const dataValue = ref(props.dataValue)
 
 
     <label v-for="data in props.data">
-        <Button variant="ghost" size="sm" class='w-full  !justify-start text-start'>
+        <Button variant="ghost" size="sm" class='w-full  justify-start! text-start'>
 
 
 

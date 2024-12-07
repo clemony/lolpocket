@@ -20,10 +20,7 @@ const items = computed(() => {
 </script>
 <template>
     <div
-        class="flex w-full shrink-0 justify-evenly rounded-full p-2 shadow-inset backdrop-brightness-95 backdrop-saturate-150"
-        :style="{
-            /*    backgroundColor: `var(--${set.secondary}-light)`, */
-        }">
+        class="shadow-pretty flex w-full shrink-0 justify-evenly rounded-full p-2 backdrop-blur-md backdrop-brightness-97 backdrop-saturate-115">
         <template v-for="(item, i) in items" :key="item.id">
             <ItemPop :item="item">
                 <div
@@ -38,13 +35,13 @@ const items = computed(() => {
                     }">
                     <LoadImg
                         :url="`/img/items/${item.id}.webp`"
-                        class="z-0 !size-full rounded-full" />
+                        class="z-0 size-full rounded-full outline-hidden" />
                 </div>
             </ItemPop>
         </template>
         <ShadowedPlaceholder
             v-for="index in makeBox(items.length, 6)"
-            class="size-9 rounded-full border-black/5 bg-accent-200 shadow-warm"
+            class="border-dark-1/15 bg-light-1/50 shadow-warm size-9 rounded-full"
             :style="{
                 /*                 backgroundColor: `var(--${set.secondary}-light`,
                  */

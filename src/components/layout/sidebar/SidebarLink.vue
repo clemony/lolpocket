@@ -52,7 +52,7 @@ const components = computed(() => {
                 <Icon :icon="props.icon" class="size-4.5" />
                 <span class="capitalize">{{ linkName }}</span>
 
-                <SidebarMenuBadge class="mr-8">
+                <SidebarMenuBadge class="text-bc mr-8">
                     {{ badge }}
                 </SidebarMenuBadge>
             </component>

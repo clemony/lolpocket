@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import '@assets/css/imports.css'
+import '@assets/css/index.css'
+
 import { Toaster } from '@/components/base/sonner'
 import { useGeneralStore } from '@stores/generalStore'
 import { toggleDrawerState } from '@utils/utils'
@@ -39,11 +40,11 @@ console.log(router)
         class="wrapper size-full overflow-hidden rounded-lg"
         :key="state">
         <History>
-            <MainMenubar :class="{ '!z-0': state == 'open' }" class="menubar" />
+            <MainMenubar :class="{ 'z-0!': state == 'open' }" class="menubar" />
 
             <Sidebar
                 collapsible="icon"
-                class="justify-center border border-b-b3 border-l-b2 border-r-transparent">
+                class="border-b-b3 border-l-b2 justify-center border border-r-transparent">
                 <SidebarContent class="pt-16">
                     <ScrollArea>
                         <SidebarGroup>
@@ -56,16 +57,17 @@ console.log(router)
                                             <icon
                                                 icon="teenyicons:home-outline"
                                                 class="m-0 overflow-auto object-none p-0" />
-                                            <span class="text-base">Home</span>
+                                            <span class="text-3">Home</span>
                                         </SidebarMenuButton>
                                     </RouterLink>
                                 </SidebarMenuItem>
                             </SidebarMenu>
                         </SidebarGroup>
+                        <SidebarGroup>
+                            <SidebarPocketDisplays />
 
-                        <SidebarPocketDisplays />
-
-                        <SidebarPocketUtilities />
+                            <SidebarPocketUtilities />
+                        </SidebarGroup>
 
                         <SidebarBrowse />
 
@@ -78,7 +80,7 @@ console.log(router)
             <SidebarInset class="relative">
                 <div
                     data-tauri-drag-region
-                    class="absolute inset-0 left-0 top-0 m-0 h-full w-full overflow-y-clip border border-y-b3 border-l-transparent border-r-b3 !p-0">
+                    class="border-y-b3 border-r-b3 absolute inset-0 top-0 left-0 m-0 h-full w-full overflow-y-clip border border-l-transparent p-0!">
                     <router-view v-slot="{ Component }">
                         <KeepAlive
                             :include="[
@@ -107,6 +109,6 @@ console.log(router)
 <style>
 .page,
 .command {
-    @apply transition-all duration-300 [animation-fill-mode:forwards];
+    transition: all 0.3s ease-in-out forwards;
 }
 </style>

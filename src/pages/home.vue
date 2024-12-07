@@ -23,18 +23,18 @@ function handleLinks() {}
     <PageLayout>
         <template #header>Home</template>
         <template #header-end>
-            <Badge variant="primary" class="select-none font-mono">
+            <Badge variant="primary" class="font-mono select-none">
                 21 days ago
             </Badge>
-            <Badge variant="secondary" class="select-none font-mono">
+            <Badge variant="secondary" class="font-mono select-none">
                 14.16.1
             </Badge>
         </template>
 
-        <div class="!z-0 m-0 mt-2 grid w-full gap-y-3 py-4">
+        <div class="z-0! m-0 mt-2 grid w-full gap-y-3 py-4">
             <div class="flex w-full items-end gap-2 px-6">
                 <div class="flex grow items-center gap-4">
-                    <h1 class="text-xl font-bold tracking-tight">
+                    <h1 class="text-5 font-bold tracking-tight">
                         News & Updates
                     </h1>
 
@@ -45,10 +45,10 @@ function handleLinks() {}
             </div>
 
             <div
-                class="!z-1 -transition-all news-after flex h-64 w-full content-center items-center gap-5 overflow-x-scroll pl-6 delay-200 duration-700 scrollbar-hide">
+                class="-transition-all news-after scrollbar-hide z-1! flex h-64 w-full content-center items-center gap-5 overflow-x-scroll pl-6 delay-200 duration-700">
                 <a
                     v-for="article in NewsArticles"
-                    class="!*:z-0 group card relative !z-0 m-0 h-56 min-w-96 overflow-hidden border border-b1 bg-cover p-0 text-sm shadow-warm transition-transform duration-700 hover:scale-[1.02]"
+                    class="!*:z-0 group card border-b1 shadow-warm text-2 relative z-0! m-0 h-56 min-w-96 overflow-hidden border bg-cover p-0 transition-transform duration-700 hover:scale-[1.02]"
                     :title="article.link"
                     :style="{
                         backgroundImage: 'url(' + article.image + ')',
@@ -56,17 +56,17 @@ function handleLinks() {}
                     :href="article.link"
                     target="_blank">
                     <div
-                        class="absolute left-0 top-0 grid h-full w-full grid-cols-1 content-start justify-items-center rounded-xl bg-accent/40 pt-6 italic opacity-0 shadow-inner backdrop-blur-sm transition-all duration-500 group-hover:opacity-100"></div>
+                        class="bg-accent/40 absolute top-0 left-0 grid h-full w-full grid-cols-1 content-start justify-items-center rounded-xl pt-6 italic opacity-0 shadow-inner backdrop-blur-xs transition-all duration-500 group-hover:opacity-100"></div>
 
                     <div
-                        class="frost z-1 card-body absolute inset-x-0 bottom-0 m-0 h-2/5 !bg-b1/90 object-bottom pb-0 pt-5 transition-all duration-500 group-hover:h-1/2">
+                        class="frost card-body bg-b1/90! absolute inset-x-0 bottom-0 z-1 m-0 h-2/5 object-bottom pt-5 pb-0 transition-all duration-500 group-hover:h-1/2">
                         <div class="z-10 col-start-1 overflow-hidden">
                             <p
                                 v-if="article && article.date"
                                 class="text-xxs flex gap-1 font-mono">
                                 {{ article.date }}
                             </p>
-                            <h2 class="text-balanced card-title mb-0 text-base">
+                            <h2 class="text-balanced card-title text-3 mb-0">
                                 {{ article.title }}
                             </h2>
 
@@ -95,7 +95,7 @@ function handleLinks() {}
                             </div>
                         </div>
 
-                        <div class="absolute bottom-5 right-5">
+                        <div class="absolute right-5 bottom-5">
                             <Icon
                                 v-if="article && article.icon"
                                 :icon="article.icon"
@@ -106,17 +106,17 @@ function handleLinks() {}
                 </a>
             </div>
 
-            <div class="mx-6 grid w-full grid-cols-2 gap-6 pr-12 pt-2">
+            <div class="mx-6 grid w-full grid-cols-2 gap-6 pt-2 pr-12">
                 <div class="col-start-1">
                     <h2
-                        class="h-8 w-full justify-end pl-1 text-xl font-bold tracking-tight">
+                        class="text-5 h-8 w-full justify-end pl-1 font-bold tracking-tight">
                         Recent builds
                     </h2>
 
                     <div class="mt-4 grid grid-cols-1 gap-4">
                         <div
-                            class="card overflow-x-hidden overflow-y-scroll bg-b1/60 shadow-warm backdrop-blur-md scrollbar-hide">
-                            <table class="0 table table-pin-rows">
+                            class="card bg-b1/60 shadow-warm scrollbar-hide overflow-x-hidden overflow-y-scroll backdrop-blur-md">
+                            <table class="0 table-pin-rows table">
                                 <!-- head -->
                                 <thead>
                                     <tr class="bg-b2/50 shadow-cham">
@@ -145,7 +145,7 @@ function handleLinks() {}
                                                         Hart Hagerty
                                                     </div>
                                                     <div
-                                                        class="text-sm opacity-50">
+                                                        class="text-2 opacity-50">
                                                         United States
                                                     </div>
                                                 </div>
@@ -179,7 +179,7 @@ function handleLinks() {}
                                                         Brice Swyre
                                                     </div>
                                                     <div
-                                                        class="text-sm opacity-50">
+                                                        class="text-2 opacity-50">
                                                         China
                                                     </div>
                                                 </div>
@@ -213,7 +213,7 @@ function handleLinks() {}
                                                         Marjy Ferencz
                                                     </div>
                                                     <div
-                                                        class="text-sm opacity-50">
+                                                        class="text-2 opacity-50">
                                                         Russia
                                                     </div>
                                                 </div>
@@ -247,7 +247,7 @@ function handleLinks() {}
                                                         Yancy Tear
                                                     </div>
                                                     <div
-                                                        class="text-sm opacity-50">
+                                                        class="text-2 opacity-50">
                                                         Brazil
                                                     </div>
                                                 </div>
@@ -271,12 +271,12 @@ function handleLinks() {}
 
                 <div class="col-start-2 pl-1">
                     <h2
-                        class="h-8 w-full justify-end pr-5 text-xl font-bold tracking-tight">
+                        class="text-5 h-8 w-full justify-end pr-5 font-bold tracking-tight">
                         Champion Winrates
                     </h2>
                     <div class="mt-4 grid grid-cols-1 gap-4">
                         <div
-                            class="frost card overflow-x-auto bg-b1/60 shadow-warm backdrop-brightness-105">
+                            class="frost card bg-b1/60 shadow-warm overflow-x-auto backdrop-brightness-105">
                             <table class="table">
                                 <!-- head -->
                                 <thead>
@@ -306,7 +306,7 @@ function handleLinks() {}
                                                         Hart Hagerty
                                                     </div>
                                                     <div
-                                                        class="text-sm opacity-50">
+                                                        class="text-2 opacity-50">
                                                         United States
                                                     </div>
                                                 </div>
@@ -340,7 +340,7 @@ function handleLinks() {}
                                                         Brice Swyre
                                                     </div>
                                                     <div
-                                                        class="text-sm opacity-50">
+                                                        class="text-2 opacity-50">
                                                         China
                                                     </div>
                                                 </div>
@@ -374,7 +374,7 @@ function handleLinks() {}
                                                         Marjy Ferencz
                                                     </div>
                                                     <div
-                                                        class="text-sm opacity-50">
+                                                        class="text-2 opacity-50">
                                                         Russia
                                                     </div>
                                                 </div>
@@ -408,7 +408,7 @@ function handleLinks() {}
                                                         Yancy Tear
                                                     </div>
                                                     <div
-                                                        class="text-sm opacity-50">
+                                                        class="text-2 opacity-50">
                                                         Brazil
                                                     </div>
                                                 </div>

@@ -59,7 +59,7 @@ const columnDefs = ref([
 
 const defaultColDef = {
     flex: 1,
-    cellClass: ['flex items-center !px-1 py-[3px]'],
+    cellClass: ['flex items-center px-1! py-[3px]'],
     sortable: true,
     filter: true,
     resizable: true,
@@ -112,50 +112,11 @@ const autoSizeStrategy = {
 defineExpose({})
 </script>
 <!-- 
-<template><ag-grid-vue :theme="pocketTheme" class="h-[calc(100%-107px)] items-center !rounded-none bg-transparent "
+<template><ag-grid-vue :theme="pocketTheme" class="h-[calc(100%-107px)] items-center rounded-none! bg-transparent "
     ref="pocketTable" @grid-ready="onGridReady" :columnDefs="columnDefs" :gridOptions="gridOptions" :rowData="rowData"
     @selection-changed="onSelectionChanged" :rowSelection="rowSelection" :defaultColDef="defaultColDef"
     :suppressHorizontalScroll="false" :autoSizeStrategy="autoSizeStrategy" :cacheQuickFilter="true" /></template>
 
 <style>
-/* beautify ignore:start */
-:root {
-    --ag-row-border-color: var(--b2) / 0.5;
-    --ag-card-radius: 4px;
-    --ag-border-radius: 4px;
-    --ag-popup-shadow: rgba(50, _50, _105, _0.15) _0px_2px_5px_0px,
-        _rgba(0, _0, _0, _0.05) _0px_1px_1px_0px;
-    --ag-card-shadow: var(--ag-popup-shadow);
-    --ag-range-selection-border-color: transparent;
-    --ag-range-selection-border-style: none;
-    --ag-selected-row-background-color: var(--b2) / 0.3;
-    --ag-row-height: 65px;
-    --ag-text-color: var(--ac);
-}
-.ag-header-cell {
-}
+</style>
 
-.ag-cell.ag-column-first {
-    @apply ml-3;
-}
-
-.ag-menu {
-    @apply !z-10 mt-1.5 border-b3/80 !bg-b1/95 backdrop-blur-md;
-}
-
-.ag-text-field-input {
-    @apply z-20 !bg-b1 outline-0 ring-0;
-}
-
-.ag-picker-field {
-    @apply z-50 !bg-b1/95 opacity-100 outline-0 !ring-0 backdrop-blur-md focus:ring-0;
-}
-
-.ag-picker-field-wrapper {
-    @apply outline-0 !ring-0 focus:ring-0;
-}
-
-.ag-select-list {
-    @apply z-50 !bg-b1/95 backdrop-blur-md;
-}</style>
- -->

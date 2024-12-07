@@ -82,7 +82,7 @@ const prevIndex = 0
                 v-for="(set, index) in pocket.items[0].itemSets"
                 dragClass="setDrag"
                 :key="set.key"
-                headerClass="!pb-2 [&_.description]:hidden"
+                headerClass="pb-2! [&_.description]:hidden"
                 :cardClass="{
                     '@container/set relative w-[calc(100%-48px)]  inset-0 before:absolute before:bg-transparent before:border  before:w-full before:h-full  before:pointer-events-none before:border-transparent before:z-50  mx-[24px] before:rounded-xl ':
                         set,
@@ -108,7 +108,7 @@ const prevIndex = 0
                         <InputEditable
                             v-model:modelValue="set.name"
                             :defaultValue="set.name"
-                            class="hidden w-fit min-w-24 items-center truncate border-transparent text-start align-baseline !text-base font-medium capitalize transition-all duration-300 focus-within:border-b2 hover:border-b2 @[230px]/set:flex">
+                            class="focus-within:border-b2 hover:border-b2 text-3! hidden w-fit min-w-24 items-center truncate border-transparent text-start align-baseline font-medium capitalize transition-all duration-300 @[230px]/set:flex">
                             <Button
                                 variant="simple"
                                 size="xs"
@@ -170,7 +170,7 @@ const prevIndex = 0
                     </DropdownMenu>
 
                     <label
-                        class="group absolute right-2 top-0 h-full w-7 shrink-0">
+                        class="group absolute top-0 right-2 h-full w-7 shrink-0">
                         <input
                             type="radio"
                             name="itemset"
@@ -184,7 +184,7 @@ const prevIndex = 0
             </DisplayCard>
         </TransitionGroup>
         <Card
-            class="mb-12 grid h-[60px] w-full cursor-pointer items-center justify-center border-b2 bg-b2/10 opacity-80 !shadow-sm transition-all duration-300 hover:bg-b2/60 hover:opacity-100 hover:shadow-inset-sm"
+            class="border-b2 bg-b2/10 hover:bg-b2/60 hover:shadow-inset-sm mb-12 grid h-[60px] w-full cursor-pointer items-center justify-center opacity-80 shadow-xs! transition-all duration-300 hover:opacity-100"
             @click="newItemSet(pocket.key)">
             <icon icon="teenyicons:add-outline" class="size-6 opacity-40" />
         </Card>
@@ -194,15 +194,18 @@ const prevIndex = 0
 <style scoped>
 .v-popper--shown {
     .i1 {
-        @apply opacity-0;
+        opacity: 0;
     }
 
     .i2 {
-        @apply opacity-80;
+        opacity: 0.8;
     }
 }
 
 .ghost {
-    @apply m-4 w-[96%] rounded-xl bg-b2;
+    margin: 1rem;
+    width: 96%;
+    background: var(--b2);
+    border-radius: 0.75rem;
 }
 </style>

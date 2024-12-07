@@ -5,6 +5,7 @@ import { runeColors } from '@utils/GetColor'
 import { CSSProperties } from 'vue'
 
 import { useGeneralStore } from '@stores/generalStore'
+import { easeInOut } from '@oku-ui/motion'
 
 const props = defineProps<{
     pocket: pocket
@@ -36,7 +37,6 @@ const wrapperStyle: CSSProperties = {
 }
 
 const containerStyle: CSSProperties = {
-    //margin: '3em auto',
     perspective: '350px',
 }
 
@@ -54,23 +54,21 @@ const layer0 = computed(() => ({
 
 const layer1 = computed(() => ({
     perspective: '45px',
-    /*     background: `url('${champImage.value}')`, */
     transform:
         isHovered ?
             `translateX(${parallax.tilt * 8}px) translateY(${
                 parallax.roll * 8
-            }px) scale(2.5)`
+            }px) scale(1)`
         :   null,
 }))
 
 const layer2 = computed(() => ({
     perspective: '250px',
-    //perspective: '300px',
     transform:
         isHovered ?
             `translateX(${parallax.tilt * 4}px) translateY(${
                 parallax.roll * 4
-            }px) scale(1.95)`
+            }px) scale(1)`
         :   null,
 }))
 
@@ -81,28 +79,28 @@ const layer3 = computed(() => ({
         isHovered ?
             `translateX(${parallax.tilt * 6}px) translateY(${
                 parallax.roll * 6
-            }px) scale(1.95)`
+            }px) scale(1)`
         :   null,
 }))
+
+/*  before:absolute before:z-0 before:size-full before:rounded-xl before:bg-[url('/img/overlay/cardboard.png')] */
 </script>
 
 <template>
     <div :style="wrapperStyle" ref="wrapper" class="rounded-xl">
-        <div :style="containerStyle" class="size-fit rounded-xl">
+        <div :style="containerStyle" class="rounded-xl">
             <div
                 :style="isHovered ? cardStyle : null"
-                class="size-fit rounded-xl transition-all duration-300 ease-out">
+                class="frounded-xl transition-all duration-300 ease-out">
                 <label
-                    class="swap swap-flip relative size-fit rounded-xl shadow-smooth">
+                    class="swap swap-flip shadow-smooth relative size-full rounded-xl">
                     <input type="checkbox" class="hidden" />
 
                     <Card
-                        class="swap-off relative grid h-[290px] w-[230px] justify-center overflow-hidden rounded-xl border-4 border-accent-100 bg-gradient-to-br from-transparent to-sorcery px-2 ring-1 ring-accent/20 before:absolute before:size-full before:rounded-xl before:bg-[url('/img/overlay/cardboard.png')]"
-                        :style="{
-                            background: `linear-gradient(to right bottom, transparent, var(--${set.primary}-light), var(--${set.primary}))`,
-                        }">
+                        class="swap-off border-dark-3 z-10 flex size-fit h-[290px] w-[230px] items-center justify-center rounded-xl border-1 !p-0"
+                        :class="`bg-linear-to-br from-transparent via-${set.primary}-light to-${set.primary}`">
                         <CardContent
-                            class="relative size-full w-inherit items-center rounded-xl bg-gradient-to-br from-accent-50/60 via-accent-50/50 to-accent-50/40 p-5">
+                            class="via-light-1/50 to-light-1/40 border-light-1 relative !m-0 !size-full items-center rounded-lg border-4 bg-linear-to-br from-transparent/60 p-5">
                             <CardChampion
                                 :pocket="pocket"
                                 :wrapper="wrapper"
@@ -111,9 +109,9 @@ const layer3 = computed(() => ({
                                 :layer2="layer2"
                                 :layer3="layer3">
                                 <menu
-                                    class="absolute bottom-2 right-2 z-10 flex items-center gap-3">
-                                    <CardSpells :pocket="pocket" />
+                                    class="absolute right-2.5 bottom-2.5 z-10 flex items-center gap-3">
                                     <CardShards :pocket="pocket" />
+                                    <CardSpells :pocket="pocket" />
                                 </menu>
                             </CardChampion>
                             <CardKeystone :set="set" :style="layer0" />
@@ -130,7 +128,7 @@ const layer3 = computed(() => ({
                     </Card>
                     <div
                         :style="{ backgroundImage: `url(${gs.cardBack})` }"
-                        class="swap-on flex h-[290px] w-[230px] items-center justify-center !bg-transparent bg-center [background-size:230px_290px]">
+                        class="swap-on flex h-[290px] w-[230px] items-center justify-center bg-transparent! [background-size:230px_290px] bg-center">
                         <CardBack :pocket="pocket" :style="layer0" />
                     </div>
                 </label>

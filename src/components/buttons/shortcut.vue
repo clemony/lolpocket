@@ -15,7 +15,7 @@ const props = defineProps<{
             {{ props.title }}
         </div>
         <slot name="2" />
-        <div class="justify-end justify-self-end pr-2 text-xs opacity-80">
+        <div class="text-1 justify-end justify-self-end pr-2 opacity-80">
             {{ props.shortcut }}
         </div>
     </Button>

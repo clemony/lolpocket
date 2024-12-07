@@ -74,11 +74,11 @@ onMounted(() => {})
 <template>
     <div class="z-0 w-full bg-clip-border transition-all duration-500">
         <div
-            class="relative z-10 flex h-16 items-end after:absolute after:left-0 after:top-0 after:h-16 after:w-full after:rounded-t-xl [&_img]:h-[1.5rem]">
+            class="relative z-10 flex h-16 items-end after:absolute after:top-0 after:left-0 after:h-16 after:w-full after:rounded-t-xl [&_img]:h-[1.5rem]">
             <label
                 v-for="(path, index) in ds.uniquePaths"
                 :key="index"
-                class="z-30 flex grow cursor-pointer items-center justify-center overflow-hidden border-b-0 border-b1 border-b-transparent bg-clip-padding py-1 transition-all duration-500 disabled:hidden has-[:disabled]:absolute has-[:disabled]:size-0 has-[:checked]:-translate-y-2.5 has-[:disabled]:opacity-0"
+                class="border-b1 z-30 flex grow cursor-pointer items-center justify-center overflow-hidden border-b-0 border-b-transparent bg-clip-padding py-1 transition-all duration-500 disabled:hidden has-checked:-translate-y-2.5 has-disabled:absolute has-disabled:size-0 has-disabled:opacity-0"
                 :ref="path">
                 <input
                     v-if="props.set == 1"
@@ -98,7 +98,7 @@ onMounted(() => {})
                     :disabled="path == 'empty' || path == selected.primary" />
 
                 <div
-                    class="mx-2 flex aspect-square size-10 items-center justify-center brightness-75 drop-shadow-sm grayscale hover:brightness-100 hover:grayscale-0 peer-checked:brightness-100 peer-checked:grayscale-0">
+                    class="mx-2 flex aspect-square size-10 items-center justify-center brightness-75 drop-shadow-sm grayscale peer-checked:brightness-100 peer-checked:grayscale-0 hover:brightness-100 hover:grayscale-0">
                     <img
                         :src="
                             '/img/runes/' + path + '.webp' ||
@@ -107,7 +107,7 @@ onMounted(() => {})
                         class="drop-shadow-softest" />
                 </div>
                 <div
-                    class="mt-1.5 w-0 !text-xl font-light capitalize opacity-0 transition-all duration-500 peer-checked:w-32 peer-checked:opacity-100">
+                    class="text-5! mt-1.5 w-0 font-light capitalize opacity-0 transition-all duration-500 peer-checked:w-32 peer-checked:opacity-100">
                     {{ path }}
                 </div>
             </label>
@@ -165,7 +165,7 @@ onMounted(() => {})
                 :delay="{ show: 1400, hide: 0 }"
                 :disabled="rune.path == 'empty'"
                 id="imgwrap"
-                class="mask h-[inherit] w-[inherit] opacity-80 transition-all duration-500 mask-3 hover:opacity-100 peer-checked:opacity-100 [&_img]:grayscale hover:[&_img]:grayscale-0 peer-checked:[&_img]:grayscale-0">
+                class="mask mask-3 h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0">
                 <loadImg
                     :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
                     :alt="rune.name"
@@ -185,7 +185,7 @@ onMounted(() => {})
                 placement="bottom"
                 :disabled="rune.path == 'empty'"
                 id="imgwrap"
-                class="h-[inherit] w-[inherit] opacity-80 brightness-90 transition-all duration-500 hover:opacity-100 peer-checked:opacity-100 peer-checked:brightness-100 [&_img]:grayscale hover:[&_img]:grayscale-0 peer-checked:[&_img]:grayscale-0">
+                class="h-[inherit] w-[inherit] opacity-80 brightness-90 transition-all duration-500 peer-checked:opacity-100 peer-checked:brightness-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0">
                 <div class="overflow-hidden">
                     <loadImg
                         :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
@@ -235,7 +235,7 @@ onMounted(() => {})
                 :distance="8"
                 :disabled="rune.path == 'empty'"
                 id="imgwrap"
-                class="shine h-[inherit] w-[inherit] opacity-80 brightness-90 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 peer-checked:opacity-100 peer-checked:brightness-100 peer-checked:grayscale-0">
+                class="shine h-[inherit] w-[inherit] opacity-80 brightness-90 grayscale transition-all duration-500 peer-checked:opacity-100 peer-checked:brightness-100 peer-checked:grayscale-0 hover:opacity-100 hover:grayscale-0">
                 <div class="overflow-hidden rounded-full">
                     <loadImg
                         :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
@@ -252,7 +252,7 @@ onMounted(() => {})
 </template>
 
 <style scoped>
-.gradient {
+/* .gradient {
     background: linear-gradient(
         90deg,
         rgba(227, 195, 85, 1) 0%,
@@ -273,7 +273,7 @@ onMounted(() => {})
         2;
 }
 
-/* beautify ignore:start */
+
 [data-tier='0'] {
     #imgwrap {
         @apply size-20 rounded-none p-1;
@@ -287,11 +287,11 @@ onMounted(() => {})
 [data-tier='2'],
 [data-tier='3'] {
     & :checked + #imgwrap {
-        @apply shadow-inner ring-1 ring-accent/30 ring-offset-2 transition-all duration-500;
+        @apply ring-accent/30 ring-1 shadow-inner ring-offset-2 transition-all duration-500;
     }
 
     #imgwrap {
-        @apply size-14 rounded-full border border-accent/70 shadow-[1px_3px_2px_1px_#00000034] transition-all duration-500;
+        @apply border-accent/70 size-14 rounded-full border shadow-[1px_3px_2px_1px_#00000034] transition-all duration-500;
     }
     div {
         @apply rounded-full;
@@ -304,7 +304,7 @@ onMounted(() => {})
 .empty {
     [data-tier='0'] {
         img {
-            @apply rounded-full border border-accent/15 transition-all duration-500;
+            @apply border-accent/15 rounded-full border transition-all duration-500;
         }
     }
 
@@ -315,11 +315,11 @@ onMounted(() => {})
             @apply ring-0 ring-offset-0 transition-all duration-500;
         }
         #imgwrap {
-            @apply size-[2.8rem] rounded-full border border-accent/15 bg-b2/20 shadow-[inset_1px_3px_2px_1px_#00000008] transition-all duration-500;
+            @apply border-accent/15 bg-b2/20 size-[2.8rem] rounded-full border shadow-[inset_1px_3px_2px_1px_#00000008] transition-all duration-500;
         }
         img {
             @apply aspect-square scale-110 rounded-full object-cover shadow-inner;
         }
     }
-}
+} */
 </style>

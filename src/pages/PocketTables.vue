@@ -15,12 +15,12 @@ const ps = usePocketStore()
         <template #header-center>
             <Button
                 variant="ghost"
-                class="-mb-1 text-base"
+                class="text-3 -mb-1"
                 @click="toggleDrawerState(newPocketDrawer)">
                 New Pocket
                 <icon
                     icon="teenyicons:add-small-outline"
-                    class="-ml-1 mb-px size-4.5" />
+                    class="mb-px -ml-1 size-4.5" />
             </Button>
 
             <VDropdown
@@ -47,7 +47,7 @@ const ps = usePocketStore()
                     <MoveButton :to="ps.trashPockets" text="Trash" class="">
                         <icon
                             icon="fluent:bin-recycle-24-regular"
-                            class="!size-7 shrink-0 scale-x-[115%]" />
+                            class="size-7! shrink-0 scale-x-[115%]" />
                     </MoveButton>
 
                     <MoveButton :to="ps.archivePockets" text="Archive">

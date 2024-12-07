@@ -2,6 +2,7 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import { usePocketStore } from '@/stores/pocketStore'
 import { icons } from '@/data/PocketIcons'
+import type { pocket } from 'types'
 const ps = usePocketStore()
 const iconStore = icons
 
@@ -9,7 +10,7 @@ const props = defineProps<{
     selectedIcon: string
     bgColor: string
     iconColor: string
-    pocketKey?: string
+    pocket?: pocket
 }>()
 
 const iconTabs = ref('icon')
@@ -23,7 +24,7 @@ const emit = defineEmits([
     'update:selectedIcon',
 ])
 
-const pocket = getPocket(props.pocketKey)
+const pocket = ref(props.pocket)
 
 watch(
     () => props.bgColor,
@@ -58,7 +59,7 @@ watch(
 
 function handleChange(icon) {
     if (pocket) {
-        pocket.icon = icon
+        pocket.value.icon = icon
     }
     emit('update:selectedIcon', icon)
 }
@@ -67,7 +68,7 @@ function handleChange(icon) {
 <template>
     <div
         role="tablist"
-        class="*: tabs tabs-lifted relative grid w-full overflow-y-scroll border-b3 scrollbar-hide [&_.tab-content]:!z-0 [&_.tab]:!z-30 [&_.tab]:h-7 [&_.tab]:!border-b-transparent [&_.tab]:font-medium">
+        class="*: tabs tabs-lifted border-b3 scrollbar-hide relative grid w-full overflow-y-scroll [&_.tab]:z-30! [&_.tab]:h-7 [&_.tab]:border-b-transparent! [&_.tab]:font-medium [&_.tab-content]:z-0!">
         <label
             role="tab"
             :class="{ 'tab-active': iconTabs == 'icon' }"
@@ -84,12 +85,12 @@ function handleChange(icon) {
         <div
             role="tabpanel"
             :class="{ hidden: iconTabs == 'color' }"
-            class="tab-content relative grid w-full rounded-xl rounded-tl-none border-b3 bg-b1">
+            class="tab-content border-b3 bg-b1 relative grid w-full rounded-xl rounded-tl-none">
             <div
-                class="grid max-h-52 grid-cols-5 justify-items-center gap-1 self-center justify-self-center overflow-y-scroll px-2 py-3 scrollbar-hide">
+                class="scrollbar-hide grid max-h-52 grid-cols-5 justify-items-center gap-1 self-center justify-self-center overflow-y-scroll px-2 py-3">
                 <label
                     v-for="icon in iconStore"
-                    class="border-1 btn btn-ghost aspect-square self-center border-transparent p-3 has-[:checked]:border-accent has-[:checked]:shadow-sm">
+                    class="btn btn-ghost has-checked:border-accent aspect-square self-center border-1 border-transparent p-3 has-checked:shadow-xs">
                     <input
                         v-if="pocket"
                         type="radio"
@@ -107,7 +108,7 @@ function handleChange(icon) {
                         class="peer hidden"
                         @change="handleChange(icon)" />
 
-                    <icon :icon="icon" class="size-full text-ac" />
+                    <icon :icon="icon" class="text-bc size-full" />
                 </label>
             </div>
         </div>
@@ -128,9 +129,9 @@ function handleChange(icon) {
         <div
             role="tabpanel"
             :class="{ hidden: iconTabs == 'icon' }"
-            class="tab-content grid w-inherit rounded-xl border-b3 bg-b1">
+            class="tab-content w-inherit border-b3 bg-b1 grid rounded-xl">
             <div
-                class="relative grid justify-items-center self-center justify-self-center overflow-y-scroll p-1 scrollbar-hide">
+                class="scrollbar-hide relative grid justify-items-center self-center justify-self-center overflow-y-scroll p-1">
                 <ColorPicker
                     v-model:bgColor="bgColor"
                     v-model:iconColor="iconColor"
@@ -140,8 +141,4 @@ function handleChange(icon) {
     </div>
 </template>
 
-<style scoped>
-.tab-active {
-    @apply shadow-[2px_2px_3px_0_var(--b1)];
-}
-</style>
+<style scoped></style>

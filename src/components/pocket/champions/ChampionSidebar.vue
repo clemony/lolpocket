@@ -47,7 +47,7 @@ function handleLike(thisChamp) {
         class="max-w-inherit h-full w-full flex-col gap-6 pr-[3px]">
         <Card class="relative">
             <div
-                class="join join-item join-horizontal absolute right-2 top-2 h-9 w-20 overflow-hidden">
+                class="join join-item join-horizontal absolute top-2 right-2 h-9 w-20 overflow-hidden">
                 <a
                     :href="champion.wiki"
                     target="_blank"
@@ -57,7 +57,7 @@ function handleLike(thisChamp) {
                         class="group join-item size-full items-center justify-center p-0">
                         <Icon
                             icon="ph:link-simple"
-                            class="!size-5 transition-all duration-500 group-hover:rotate-180" />
+                            class="size-5! transition-all duration-500 group-hover:rotate-180" />
                     </Button>
                 </a>
 
@@ -73,27 +73,27 @@ function handleLike(thisChamp) {
                     <icon
                         icon="teenyicons:heart-outline"
                         class=""
-                        :class="{ 'text-accent/20': isLiked }" />
+                        :class="{ 'text-bccent/20': isLiked }" />
                 </Button>
             </div>
 
             <CardHeader class="flex flex-row gap-8">
-                <div class="relative size-fit pt-px shadow-warm">
+                <div class="shadow-warm relative size-fit pt-px">
                     <div
-                        class="grid size-[70px] content-start items-start overflow-hidden rounded-lg border border-accent/40">
+                        class="border-accent/40 grid size-[70px] content-start items-start overflow-hidden rounded-lg border">
                         <loadImg
-                            class="mr-1 aspect-square size-[70px] shrink-0 scale-[109%] !rounded-none object-center"
+                            class="mr-1 aspect-square size-[70px] shrink-0 scale-[109%] rounded-none! object-center"
                             :url="`/img/champions/${clean(champion.name)}.webp`" />
                     </div>
                 </div>
 
                 <div class="flex h-full w-full flex-col *:shrink-0">
-                    <h1 class="font-serif !font-semibold leading-none">
+                    <h1 class="font-serif leading-none font-semibold!">
                         {{ champion.name }}
                     </h1>
 
                     <p
-                        class="mt-1 flex scale-y-[99%] place-items-center text-pretty pb-1 pl-[10px] pr-3 pt-0 -indent-[11px] text-sm font-medium uppercase tracking-wide">
+                        class="text-2 mt-1 flex scale-y-[99%] place-items-center pt-0 pr-3 pb-1 pl-[10px] -indent-[11px] font-medium tracking-wide text-pretty uppercase">
                         @ {{ champion.title }}
                     </p>
 
@@ -102,7 +102,7 @@ function handleLike(thisChamp) {
                         <code
                             v-for="(tag, index) in champion.tags"
                             :key="index"
-                            class="badge flex h-max w-auto flex-nowrap text-center font-mono text-sm font-medium lowercase tracking-normal"
+                            class="badge text-2 flex h-max w-auto flex-nowrap text-center font-mono font-medium tracking-normal lowercase"
                             :data-tag="tag">
                             #{{ tag }}
                         </code>
@@ -116,9 +116,9 @@ function handleLike(thisChamp) {
                 <TabsTrigger value="stats">Stats</TabsTrigger>
                 <TabsTrigger value="abilities">Abilities</TabsTrigger>
             </TabsList>
-            <TabsContent value="stats" class="!mt-3">stats</TabsContent>
-            <TabsContent value="abilities" class="!mt-3">
-                <Card class="overflow-hidden px-6 pb-3 pt-0">
+            <TabsContent value="stats" class="mt-3!">stats</TabsContent>
+            <TabsContent value="abilities" class="mt-3!">
+                <Card class="overflow-hidden px-6 pt-0 pb-3">
                     <ChampionAbilities
                         :champion="champion"
                         class="max-w-inherit w-inherit pt-5" />
@@ -130,55 +130,51 @@ function handleLike(thisChamp) {
 
 <style scoped>
 [data-tag='Support'] {
-    @apply bg-cyan-700/40 text-info-content;
+    background: var(--inspiration-light);
 }
 
 [data-tag='Mage'] {
-    @apply bg-info text-primary-content;
+    background: var(--sorcery-light);
 }
 
 [data-tag='Marksman'] {
-    @apply bg-warning/70 text-warning-content;
+    background: var(--precision-light);
 }
 
 [data-tag='Assassin'] {
-    @apply bg-error/80 text-ac;
+    background: var(--domination-light);
 }
 
 [data-tag='Tank'] {
-    @apply bg-success/70 text-success-content;
+    background: var(--resolve-light);
 }
 
 [data-tag='Fighter'] {
-    @apply bg-orange-600/60 text-ac;
-}
-
-.tab {
-    --tab-border-color: var(--b3) / 0.8;
-
-    @apply text-start text-sm;
+    background: var(--orange-600) / 60;
 }
 
 .collapse-title {
-    @apply flex items-center gap-3 text-sm;
+    font-size: var(--text-3);
+    align-items: center;
+    display: flex;
+    gap: 0.75rem;
 
     img {
-        @apply -ml-1 size-9 rounded-full border border-accent/40;
+        border: 1px solid var(--accent) / 40;
+
+        border-radius: 100%;
     }
 
     div {
-        @apply flex-grow truncate text-nowrap;
+        flex: grow;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        flex-grow: 1;
     }
-
-    kbd {
-        @apply kbd-sm size-6 font-mono;
-    }
-}
-
-.collapse-title:has(input[type='radio']:checked) {
 }
 
 .ability-wrapper > div {
-    @apply border border-accent/15;
+    border: 1px solid var(--accent) / 15;
 }
 </style>

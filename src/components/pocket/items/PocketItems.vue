@@ -39,11 +39,11 @@ const likeText = computed(() => {
         :panel2Min="26">
         <template #panel1>
             <ScrollArea
-                class="relative h-full max-h-full overflow-y-auto overflow-x-hidden"
+                class="relative h-full max-h-full overflow-x-hidden overflow-y-auto"
                 scrollbar-hide>
                 <LayoutSpacer />
                 <InfoCard
-                    cardClass="mb-2 bg-transparent border-none !shadow-none !px-0">
+                    cardClass="mb-2 bg-transparent border-none shadow-none! px-0!">
                     <template #header>
                         <h1>Item Sets</h1>
                     </template>
@@ -60,7 +60,7 @@ const likeText = computed(() => {
                         <div class="relative inline-block h-4.5 w-14">
                             <Label
                                 class="absolute -top-px flex w-14 items-center justify-center gap-1">
-                                <span class="text-base">⌘</span>
+                                <span class="text-3">⌘</span>
                                 +
                                 <icon
                                     icon="ph:mouse-left-click-fill"
@@ -82,36 +82,31 @@ const likeText = computed(() => {
                 headerClass="-ml-px"
                 wrapper="itemWrapper">
                 <template #header>
-                    <div class="join shadow-sm">
+                    <div class="border-0 ring-0 ring-offset-0 outline-hidden">
                         <SearchBox
                             @click.stop
                             :search="is.searchFilter"
                             :placeholder="'Search Items...'"
                             @update:search="is.searchFilter = $event"
-                            iconClass="p-2.5 -ml-2"
-                            inputClass="pr-6 pl-12 "
-                            class="max-w-1/2 h-10 justify-self-start bg-b1/40 [&_input]:join-item [&_input]:!rounded-l-lg" />
+                            iconClass="p-2.5 -ml-2 ring-0 ring-offset-0 outline-hidden"
+                            inputClass="pr-6 pl-12 ring-0 ring-offset-0 outline-hidden"
+                            class="bg-b1/40 border-b2 h-10 max-w-1/2 justify-self-start [&_input]:rounded-l-lg!" />
 
                         <Label
                             @click.stop
-                            variant="outline"
                             size="icon"
-                            class="join-item swap swap-flip relative aspect-square size-10 shrink-0 border-b2 has-[:disabled]:cursor-default"
+                            class="rating"
                             alt="Filter Likes">
                             <input
-                                type="checkbox"
-                                name="viewFavorite"
-                                v-model="is.viewFavorite"
-                                class="hidden"
-                                :disabled="!is.favoriteItems.length" />
-
-                            <HeartIcons />
+                                type="radio"
+                                name="rating-2"
+                                class="mask mask-heart bg-domination" />
                         </Label>
                     </div>
 
                     <Grow />
 
-                    <div class="join shadow-sm">
+                    <div class="shadow-xs">
                         <ToggleStateButton
                             @click.stop
                             v-model:model="sortAZ"
@@ -127,7 +122,7 @@ const likeText = computed(() => {
                             @update:model="(v) => (is.sortPrice = v)" />
 
                         <FilterButton
-                            class="join-item !rounded-l-none"
+                            class="rounded-l-none"
                             :class="{ 'bg-b2': isOpen == true }">
                             hi
                         </FilterButton>

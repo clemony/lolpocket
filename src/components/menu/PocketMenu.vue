@@ -77,7 +77,7 @@ const pinText = computed(() => {
 
         <component
             :is="menuComponents?.content"
-            class="text-sm+ [&_svg]:size-[11px]">
+            class="text-2 [&_svg]:size-[11px]">
             <slot name="first" />
 
             <label class="flex size-full gap-3">

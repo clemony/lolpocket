@@ -19,7 +19,7 @@ function thisFunction() {
 
 <template>
     <div
-        class="max-w-48 [&_Button]:w-full [&_Button]:justify-start [&_Button]:gap-3 [&_span]:!text-sm [&_svg]:shrink-0"
+        class="[&_span]:text-2! max-w-48 [&_Button]:w-full [&_Button]:justify-start [&_Button]:gap-3 [&_svg]:shrink-0"
         :key="props.type">
         <Button
             v-if="props.type == 'item' || props.type == 'rune'"
@@ -78,7 +78,7 @@ function thisFunction() {
             :disabled="data.length == 0"
             @click="data.length = 0">
             <icon icon="ph:eraser" class="size-3.5" />
-            <span class="-ml-[2px] !text-sm">
+            <span class="text-2! -ml-[2px]">
                 Clear
                 <span class="capitalize">{{ props.type }}</span>
                 <span v-if="props.type != 'champion'">set</span>

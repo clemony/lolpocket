@@ -46,7 +46,7 @@ function add(item) {
                 :src="`/img/items/${props.item.id}.webp`"
                 :alt="props.item.name + ' Image'"
                 :class="
-                    cn('drag-img aspect-square !size-full', props.imgClass)
+                    cn('drag-img aspect-square size-full!', props.imgClass)
                 " />
         </div>
     </ItemPop>

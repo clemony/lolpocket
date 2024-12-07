@@ -44,7 +44,7 @@ function handleChoice() {
 <template>
     <main class="w-full">
         <LayoutSpacer class="flex items-end justify-end">hi</LayoutSpacer>
-        <div class="grid w-full grid-cols-3 gap-6 [&_>*]:size-full">
+        <div class="grid w-full grid-cols-3 gap-6 *:size-full">
             <DisplayCard
                 v-for="theme in themes"
                 :key="theme.name"
@@ -58,7 +58,7 @@ function handleChoice() {
                 <label
                     :for="theme.name"
                     class="self-end rounded-lg"
-                    data-act-class="!outline-ac">
+                    data-act-class="outline-ac!">
                     <input
                         type="radio"
                         v-model="gs.dataTheme"
@@ -73,25 +73,21 @@ function handleChoice() {
                         class="hidden" />
 
                     <div
-                        class="h-20 w-full cursor-pointer overflow-hidden rounded-xl border border-b3 bg-b1 text-ac shadow-warm"
+                        class="border-b3 bg-b1 text-bc shadow-warm h-20 w-full cursor-pointer overflow-hidden rounded-xl border"
                         :data-theme="theme.name + 'minimalist'">
                         <div class="grid h-full w-full grid-cols-[1fr_4fr]">
                             <div class="h-full flex-col">
-                                <div class="h-2/3 bg-b2"></div>
-                                <div class="h-1/3 bg-b3"></div>
+                                <div class="bg-b2 h-2/3"></div>
+                                <div class="bg-b3 h-1/3"></div>
                             </div>
                             <div
                                 class="flex h-full items-center gap-2 px-5 font-medium">
-                                <div
-                                    class="flex-grow px-1 text-lg font-semibold">
+                                <div class="text-4 grow px-1 font-semibold">
                                     Aa
                                 </div>
-                                <div
-                                    class="color-chip bg-b2 text-ac"></div>
-                                <div
-                                    class="color-chip bg-b3 text-ac"></div>
-                                <div
-                                    class="color-chip bg-accent text-ac"></div>
+                                <div class="color-chip bg-b2 text-bc"></div>
+                                <div class="color-chip bg-b3 text-bc"></div>
+                                <div class="color-chip bg-accent text-bc"></div>
                             </div>
                         </div>
                     </div>
@@ -99,14 +95,10 @@ function handleChoice() {
             </DisplayCard>
         </div>
 
-        <div class="mt-8 flex border-t border-t-b2 pt-6">
+        <div class="border-t-b2 mt-8 flex border-t pt-6">
             <Button size="md">Save</Button>
             <Grow />
         </div>
     </main>
 </template>
-<style scoped>
-.color-chip {
-    @apply flex aspect-square size-9 items-center justify-center rounded-md shadow-sm;
-}
-</style>
+<style scoped></style>

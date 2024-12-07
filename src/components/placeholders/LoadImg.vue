@@ -24,7 +24,7 @@ function setBlankImg(event) {
     <div :class="cn('overflow-hidden', props.class)">
         <Skeleton
             v-show="!isImageLoaded"
-            :class="cn('!border-none', props.class)" />
+            :class="cn('border-none!', props.class)" />
 
         <div
             v-show="isImageLoaded"

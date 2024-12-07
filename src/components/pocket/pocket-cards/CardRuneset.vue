@@ -32,14 +32,14 @@ const runes = runes1.concat(runes2)
 </script>
 <template>
     <div
-        class="relative flex w-full justify-evenly rounded-full p-2 shadow-inset backdrop-brightness-95 backdrop-saturate-150"
+        class="shadow-inset relative flex w-full justify-evenly rounded-full p-2 backdrop-brightness-95 backdrop-saturate-150"
         :style="{
             /* backgroundColor: `var(--${set.primary}-light)`, */
             /*   boxShadow: `0px 2px 5px 0px var(--${set.primary}), 0px 1px 1px 0px var(--${set.primary}-light))` */
         }">
         <template v-for="(rune, i) in runes">
             <div
-                class="z-10 size-9 shrink-0 rounded-full p-0 shadow-warm"
+                class="shadow-warm z-10 size-9 shrink-0 rounded-full p-0"
                 :style="{
                     /*   backgroundColor: `var(--${set.primary})`, */
                     zIndex: runes.length + 1 - i,
@@ -53,7 +53,7 @@ const runes = runes1.concat(runes2)
                     }" />
                 <ShadowedPlaceholder
                     v-else
-                    class="z-0 size-full rounded-full border-black/5 bg-accent-200"
+                    class="border-dark-1/15 bg-accent-200 z-0 size-full rounded-full"
                     :style="{
                         /*   backgroundColor: `var(--${set.primary}-light)`, */
                     }" />

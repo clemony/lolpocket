@@ -103,7 +103,7 @@ watch(
 <template>
     <div class="relative w-full justify-center py-2">
         <form
-            class="carousel flex gap-8 py-4 [&_label]:text-base"
+            class="carousel [&_label]:text-3 flex gap-8 py-4"
             @submit.prevent.stop="submitForm">
             <div
                 ref="elForm"
@@ -116,13 +116,13 @@ watch(
                         name="pocket-name"
                         v-model="name"
                         placeholder="optional"
-                        class="join-item h-10 border-r-0 text-base" />
+                        class="join-item text-3 h-10 border-r-0" />
 
                     <Button
                         variant="outline"
                         size="sm"
                         type="button"
-                        class="group join-item aspect-square h-10 overflow-hidden !border-l-0">
+                        class="group join-item aspect-square h-10 overflow-hidden border-l-0!">
                         <icon
                             icon="teenyicons:x-small-outline"
                             class="size-6 shrink-0 object-cover opacity-40 group-hover:opacity-100" />
@@ -138,7 +138,7 @@ watch(
                             class="size-4 shrink-0" />
 
                         <p
-                            class="absolute -right-2 -top-8 z-30 flex translate-y-1 flex-nowrap px-2 py-1 text-xs opacity-0 transition-all duration-700 group-hover:translate-y-0 group-hover:opacity-100">
+                            class="text-1 absolute -top-8 -right-2 z-30 flex translate-y-1 flex-nowrap px-2 py-1 opacity-0 transition-all duration-700 group-hover:translate-y-0 group-hover:opacity-100">
                             No brain? Meet button.
                         </p>
                     </Button>
@@ -148,7 +148,7 @@ watch(
 
                 <TagsInput v-model="tags" class="flex-col p-2">
                     <div
-                        class="flex w-full flex-row flex-wrap justify-start gap-2 *:text-base">
+                        class="*:text-3 flex w-full flex-row flex-wrap justify-start gap-2">
                         <template v-if="tags.length">
                             <TransitionGroup name="pop">
                                 <TagsInputItem
@@ -176,7 +176,7 @@ watch(
 
                     <TagsInputInput
                         placeholder="optional"
-                        class="min-h-10 w-full text-base"
+                        class="text-3 min-h-10 w-full"
                         name="pocket-tags " />
                 </TagsInput>
             </div>
@@ -191,7 +191,7 @@ watch(
                             backgroundColor: bgColor,
                             color: iconColor,
                         }"
-                        class="my-2 aspect-square size-14 self-center rounded-lg p-4 ring-accent/80 hover:ring-1 hover:ring-offset-4">
+                        class="ring-accent/80 my-2 aspect-square size-14 self-center rounded-lg p-4 hover:ring-1 hover:ring-offset-4">
                         <icon :icon="selectedIcon" class="-mt-px size-full" />
                     </button>
                 </div>
@@ -200,13 +200,13 @@ watch(
                     <Label for="pocket-tags" class="">Colors</Label>
                     <DropdownMenu class="w-full">
                         <DropdownMenuTrigger
-                            class="mt-1.5 w-full rounded-md data-[state=open]:bg-b2/60">
+                            class="data-[state=open]:bg-b2/60 mt-1.5 w-full rounded-md">
                             <Button
                                 variant="ghost"
                                 size="sm"
-                                class="w-full justify-start text-base">
+                                class="text-3 w-full justify-start">
                                 <span
-                                    class="size-6 shrink-0 rounded border border-b3"
+                                    class="border-b3 size-6 shrink-0 rounded-sm border"
                                     :style="{
                                         backgroundColor: bgColor,
                                     }"></span>
@@ -220,13 +220,13 @@ watch(
 
                     <DropdownMenu>
                         <DropdownMenuTrigger
-                            class="rounded-md data-[state=open]:bg-b2/60">
+                            class="data-[state=open]:bg-b2/60 rounded-md">
                             <Button
                                 variant="ghost"
                                 size="sm"
-                                class="w-full justify-start text-base">
+                                class="text-3 w-full justify-start">
                                 <span
-                                    class="size-6 shrink-0 rounded border border-b3"
+                                    class="border-b3 size-6 shrink-0 rounded-sm border"
                                     :style="{
                                         backgroundColor: iconColor,
                                     }"></span>

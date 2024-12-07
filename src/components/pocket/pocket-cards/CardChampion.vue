@@ -22,28 +22,16 @@ const styleRevert = computed(() => ({
 </script>
 <template>
     <div class="shape relative flex w-full justify-center drop-shadow-lg">
-        <!--        <div
-            class="absolute bottom-2 left-3 z-20 flex h-8 items-center rounded-lg border-none bg-b1/50 !py-0.5 backdrop-blur-sm">
-            <h3
-                class="absolute scale-x-110 px-1 !font-serif !font-extrabold italic leading-none text-black blur-[5px] drop-shadow-sm">
-                {{ pocket.champions[0].starred }}
-            </h3>
-            <h4
-                class="absolute scale-x-110 px-1 !font-serif !font-[400] leading-none !tracking-[0.25px] text-white/95 drop-shadow-[0px_0px_6px_black]">
-                {{ pocket.champions[0].starred }}
-            </h4>
-        </div> -->
-
         <div
-            class="relative z-0 size-full h-48 overflow-hidden rounded-[8px] bg-b2/60">
+            class="bg-b2/60 relative z-0 size-full h-48 overflow-hidden rounded-[8px]">
             <slot />
             <div
-                class="relative grid size-full place-items-center content-center items-center overflow-hidden">
+                class="relative grid size-full place-items-center content-center items-center">
                 <img
                     id="champion"
                     v-if="champ"
                     :src="`/img/champions/splash/${clean(champ)}_0.webp`"
-                    class="absolute left-[0%] top-[50%] z-0 scale-[250%] object-center"
+                    class="absolute top-[55%] left-[0%] z-0 scale-300 object-center"
                     :style="isHovered ? props.layer1 : styleRevert" />
 
                 <img
@@ -54,7 +42,7 @@ const styleRevert = computed(() => ({
                 <img
                     v-if="champ"
                     src="/img/overlay/dust.webp"
-                    class="absolute -left-[40%] top-[20%] z-0 !rotate-90 scale-[200%] object-center opacity-60"
+                    class="absolute top-[20%] -left-[40%] z-0 scale-[200%] rotate-90! object-center opacity-60"
                     :style="props.layer3" />
             </div>
         </div>
