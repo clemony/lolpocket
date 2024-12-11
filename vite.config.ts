@@ -1,40 +1,45 @@
 import vue from '@vitejs/plugin-vue'
+import { fileURLToPath, URL } from 'node:url'
+
 import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
-import { visualizer } from 'rollup-plugin-visualizer'
-import { defineConfig, type PluginOption } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
+//import { nodePolyfills } from 'vite-plugin-node-polyfills'
 import { resolve } from 'path'
 import RadixVueResolver from 'radix-vue/resolver'
 import OkuMotionResolver from '@oku-ui/motion/resolver'
+
+
 
 export default defineConfig({
     plugins: [
         vue(),
         vueDevTools(),
         tailwindcss(),
+        // nodePolyfills(),
         Components({
             dirs: [
-                'src/pages',
+                'src/client/pages',
                 '@iconify/vue',
-                'src/components',
-                'src/components/ui',
-                'src/utils',
+                'src/client/components',
+                'src/client/components/ui',
+                'src/client/utils',
             ], // Ensure paths are correct
             extensions: ['vue'],
             deep: true,
-            dts: './components.d.ts',
+            dts: './src/client/components.d.ts',
             resolvers: [
                 RadixVueResolver(),
                 OkuMotionResolver(),
                 IconsResolver({
                     prefix: false,
-                    enabledCollections: ['ui'],
-                    customCollections: ['ui'],
+                    enabledCollections: ['ui', 'logo'],
+                    customCollections: ['ui', 'logo'],
                 }),
             ],
             include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
@@ -54,7 +59,7 @@ export default defineConfig({
                 'vue-i18n',
                 'vue-router',
                 {
-                    '/src/lib/utils.ts': ['cn', 'clean'],
+                    '/src/client/lib/utils.ts': ['cn', 'clean'],
                 },
             ],
 
@@ -79,51 +84,49 @@ export default defineConfig({
                         '<svg fill="currentColor" stroke="currentColor" '
                     )
                 ),
+                logo: FileSystemIconLoader('public/img/logos', (svg) =>
+                    svg.replace(
+                        /^<svg /,
+                        '<svg fill="currentColor" stroke="currentColor" '
+                    )
+                ),
             },
         }),
-        [
-            visualizer({
-                filename: './dist/stats.html',
-                open: true,
-            }) as PluginOption,
-        ],
     ],
     clearScreen: false,
 
     server: {
         port: 8080,
-        open: false,
+        open: '/',
     },
     resolve: {
         alias: {
-            '@assets': resolve(__dirname, 'src/assets'),
-            '@components': resolve(__dirname, 'src/assets'),
-            '@data': resolve(__dirname, 'src/data'),
-            '@lib': resolve(__dirname, 'src/lib'),
-            '@logs': resolve(__dirname, 'src/logs'),
-            '@pages': resolve(__dirname, 'src/pages'),
-            '@script': resolve(__dirname, 'src/script'),
-            '@stores': resolve(__dirname, 'src/stores'),
-            '@utils': resolve(__dirname, 'src/utils'),
+            '@assets': resolve(__dirname, '/src/client/assets'),
+            '@components': resolve(__dirname, 'src/client/components'),
+            '@data': resolve(__dirname, '/src/client/data'),
+            '@lib': resolve(__dirname, '/src/client/lib'),
+            '@pages': resolve(__dirname, '/src/client/pages'),
+            '@script': resolve(__dirname, '/src/client/script'),
+            '@stores': resolve(__dirname, '/src/client/stores'),
+            '@utils': resolve(__dirname, '/src/client/utils'),
             '@': resolve(__dirname, 'src'),
-            '@config': resolve(__dirname, 'src/config'),
-            '@css': resolve(__dirname, 'src/css'),
+            '@config': resolve(__dirname, '/src/client/config'),
+            '@css': resolve(__dirname, '/src/client/css'),
         },
     },
-    envPrefix: ['VITE_', 'TAURI_ENV_*'],
     build: {
         rollupOptions: {
             input: {
                 main: 'index.html', // Adjust to your entry file
             },
         },
-        target:
+        /* , 'TAURI_ENV_*        target:
             process.env.TAURI_ENV_PLATFORM == 'windows' ?
                 'chrome105'
             :   'safari13',
         // don't minify for debug builds
         minify: !process.env.TAURI_ENV_DEBUG ? 'esbuild' : false,
         // produce sourcemaps for debug builds
-        sourcemap: !!process.env.TAURI_ENV_DEBUG,
+        sourcemap: !!process.env.TAURI_ENV_DEBUG, */
     },
 })

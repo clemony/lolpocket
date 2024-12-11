@@ -51,33 +51,6 @@
             "@/*": [
                 "src/*"
             ],
-            "~assets/*": [
-                "src/Assets/*"
-            ],
-            "~data/*": [
-                "src/data/*"
-            ],
-            "~lib/*": [
-                "src/lib/*"
-            ],
-            "~logs/*": [
-                "src/logs/*"
-            ],
-            "~pages/*": [
-                "src/pages/*"
-            ],
-            "~script/*": [
-                "src/script/*"
-            ],
-            "~stores/*": [
-                "src/stores/*"
-            ],
-            "~utils/*": [
-                "src/utils/*"
-            ],
-            "~/*": [
-                "src/*"
-            ]
         }
     }
 }

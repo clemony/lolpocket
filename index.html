@@ -1,45 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
-<!-- :data-theme="gs.dataMode" :class="gs.dataTheme" -->
+<!-- :data-theme=" gs.dataMode" :class="gs.dataTheme" -->
 
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
   <title>lolpocket</title>
-  <style>
-    :root {
-
-
-      overscroll-behavior: none;
-      scroll-behavior: smooth;
-      margin: 0;
-      padding: 0;
-      user-select: none;
-      background: transparent !important;
-    }
-
-    .html,
-    .body {
-      background: transparent !important;
-      border-radius: 0.75rem;
-      overflow: hidden;
-      width: 100vh;
-      height: 100vh;
-      overscroll-behavior: none;
-      font-size: '12px';
-    }
-
-    .tab {}
-  </style>
 </head>
 
-<script type="module" src="./src/main.ts"></script>
+<script type="module" src="./src/client/main.ts"></script>
 
 <body>
-  <div id="app" ref="app" data-tauri-drag-region class="">
-  </div>
+  <main id="app" ref="app" data-tauri-drag-region />
+
 </body>
 
 </html>

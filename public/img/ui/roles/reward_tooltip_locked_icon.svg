@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="37" viewBox="0 0 37 37">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c140 79.160451, 2017/05/06-01:08:21        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>                                                                          
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #1f2429;
+        stroke: #765d29;
+        stroke-width: 1px;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #917851;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="11" y="10" width="12" height="16" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="2" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="1.414"/>
+      <feFlood result="flood" flood-opacity="0.31"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path class="cls-1" d="M18.5,0.822L36.178,18.5,18.5,36.178,0.822,18.5Z"/>
+  <path id="Lock_copy_5" data-name="Lock copy 5" class="cls-2" d="M22.1,15.875l-1.795,0,0-1.629a1.808,1.808,0,0,0-3.6,0v1.626H14.9V14.249A3.416,3.416,0,0,1,18.5,11a3.416,3.416,0,0,1,3.6,3.251v1.626Zm-8.093,0v5.69L18.5,24,23,21.565v-5.69H14Zm3.6,4.877a2.879,2.879,0,0,1-.9-1.626,1.808,1.808,0,0,1,3.6,0,2.833,2.833,0,0,1-.9,1.626v0.813H17.6V20.752Z"/>
+</svg>

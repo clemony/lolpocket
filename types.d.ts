@@ -224,3 +224,37 @@ export interface dateObject {
     date: string
     time: string
 }
+
+export interface summoner {
+    name: string
+    tag: string
+    region: string
+    level: number
+    icon: string
+    border: string
+    peakRank: {
+        peak: string
+        season: string
+    }
+    ranks: {
+        soloDuo: queue
+        flex: queue
+    }
+    mostPlayed?: [champPlayCount]
+}
+
+export interface queue {
+    rank: string
+    tier: number
+    games: number
+    win: number
+    loss: number
+}
+
+export interface champPlayCount {
+    name: string
+    games: number
+    win: number
+    loss: number
+    kda: string
+}

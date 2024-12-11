@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "moduleResolution": "bundler",
+        "module": "ESNext",
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "outDir": "./dist",
+        "lib": [
+            "es2020",
+            "dom"
+        ]
+    }
+}
