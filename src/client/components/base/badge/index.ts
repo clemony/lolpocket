@@ -10,8 +10,8 @@ export const badgeVariants = cva(
                 default: 'border-transparent bg-b2 text-bc hover:bg-b2/80',
                 primary:
                     'border-transparent bg-primary text-primary-content hover:bg-primary/80',
-                secondary:
-                    'border-transparent bg-secondary text-secondary-content hover:bg-secondary/80',
+                neutral:
+                    'border-transparent bg-neutral text-nc hover:bg-neutral/80',
                 error: 'border-transparent bg-error text-error-content hover:bg-error/80',
 
                 sorcery: 'border-transparent bg-sorcery/90 hover:bg-sorcery/80',

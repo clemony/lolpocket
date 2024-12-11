@@ -25,7 +25,7 @@ console.log(ps.pockets)
             <Badge variant="primary" class="font-mono select-none">
                 21 days ago
             </Badge>
-            <Badge variant="secondary" class="font-mono select-none">
+            <Badge variant="neutral" class="font-mono select-none">
                 14.16.1
             </Badge>
         </template>
@@ -41,9 +41,14 @@ console.log(ps.pockets)
             <div class="grid h-[calc(100%-12rem)] w-120 gap-8">
                 <DisplayCard class="h-full" no-padding>
                     <template #header>
-                        <h3>News & Updates</h3>
-                        <div class="text-mini badge badge-primary font-mono">
-                            1 new!
+                        <div class="flex items-center gap-4">
+                            <h3>News & Updates</h3>
+                            <Badge
+                                variant="neutral"
+                                size="sm"
+                                class="!text-3 text-nc px-2.5">
+                                1
+                            </Badge>
                         </div>
                     </template>
                 </DisplayCard>
