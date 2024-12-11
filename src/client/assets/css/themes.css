@@ -24,7 +24,7 @@
     --b3: oklch(85.05% 0.0177 67.59);
     --bc: ooklch(26.45% 0 0);
     --neutral: oklch(26.45% 0 0);
-    --nc: klch(95.89% 0.001 17.18);
+    --nc: oklch(95.89% 0.001 17.18);
 }
 
 :is([data-theme='dusk']) {
