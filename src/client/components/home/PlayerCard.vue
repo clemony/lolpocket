@@ -1,13 +1,8 @@
 <script setup lang="ts">
-import type { summoner } from 'types'
-
-const props = defineProps<{
-    summoner: summoner
-}>()
-const summoner = ref(props.summoner)
+import { summoner } from '@/client/data/playerData'
 </script>
 <template>
-    <Card class="w-110">
+    <Card>
         <CardHeader class="">
             <CardTitle class="flex items-center gap-2">
                 <h2>{{ summoner.name }}</h2>
@@ -15,11 +10,11 @@ const summoner = ref(props.summoner)
             </CardTitle>
         </CardHeader>
         <CardContent class="relative flex max-h-44 w-full gap-10 px-8">
-            <div class="h-36 w-1/2 drop-shadow-lg">
+            <div class="grid h-36 w-1/2 place-items-center drop-shadow-lg">
                 <img
                     :src="summoner.icon"
-                    class="absolute top-7.5 left-14.5 size-19 rounded-full" />
-                <div class="absolute -top-6 left-5 size-38">
+                    class="absolute top-7.5 left-5.5 size-19 rounded-full" />
+                <div class="absolute -top-6 -left-4 size-38">
                     <img
                         :src="`/img/profile-borders/${summoner.border}.png`"
                         class="h-48 w-auto object-cover" />

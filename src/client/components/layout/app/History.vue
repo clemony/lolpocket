@@ -27,7 +27,6 @@ const pageStyle = computed(() => ({
 </script>
 <template>
     <div
-        data-tauri-drag-region
         v-show="gs.commandOpen"
         class="command margin-auto animate-in fade-in-100 slide-in-from-bottom z-100 mt-24 overflow-hidden rounded-lg delay-100">
         <Command />
@@ -80,6 +79,7 @@ const pageStyle = computed(() => ({
                     type="checkbox"
                     v-model="gs.commandOpen"
                     class="hidden"
+                    name="history"
                     :disabled="!gs.commandOpen ? true : false" />
 
                 <SidebarProvider

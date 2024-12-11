@@ -5,18 +5,32 @@ import Trash from '@/client/pages/Trash.vue'
 import Archive from '@/client/pages/Archive.vue'
 import Cards from '@/client/pages/PocketCards.vue'
 import Favorites from '@/client/pages/Favorites.vue'
-
-import { usePocketStore } from '@/client/stores/pocketStore'
 import { useGeneralStore } from '@/client/stores/generalStore'
-
+import About from '@/client/pages/About.vue'
 import Home from '@/client/pages/Home.vue'
+
 import Runes from '@/client/pages/Runes.vue'
+import Champions from '@/client/pages/Champions.vue'
+import Items from './pages/Items.vue'
+import Spells from '@/client/pages/Spells.vue'
+import Pocket from '@/client/components/pocket/Pocket.vue'
+
+import PocketDashboard from '@/client/components/pocket/dashboard/PocketDashboard.vue'
+import PocketChampions from '@/client/components/pocket/champions/PocketChampions.vue'
+import PocketItems from '@/client/components/pocket/items/PocketItems.vue'
+import PocketRunes from '@/client/components/pocket/runes/PocketRunes.vue'
+
+import GeneralSettings from '@/client/components/settings/GeneralSettings.vue'
+import AppearanceSettings from '@/client/components/settings/AppearanceSettings.vue'
+import AccountSettings from '@/client/components/settings/AccountSettings.vue'
+import HotkeySettings from '@/client/components/settings/HotkeySettings.vue'
+import StorageSettings from '@/client/components/settings/StorageSettings.vue'
 
 const routes: RouteRecordRaw[] = [
     {
         path: '/about',
         name: 'about',
-        component: () => import('@/client/pages/About.vue'),
+        component: About,
     },
     {
         path: '/archive',
@@ -31,22 +45,17 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/champions',
         name: 'champions',
-        component: () => import('@/client/pages/Champions.vue'),
+        component: Champions,
     },
     {
         path: '/',
         name: 'home',
-        alias: '/',
         component: Home,
-        meta: {
-            title: 'Home',
-            icon: 'teenyicons:home-outline',
-        },
     },
     {
         path: '/items',
         name: 'items',
-        component: () => import('@/client/pages/iIems.vue'),
+        component: Items,
     },
     {
         path: '/favorites',
@@ -56,41 +65,32 @@ const routes: RouteRecordRaw[] = [
 
     {
         path: '/pocket/:pocketKey',
-        component: () => import('@/client/components/pocket/Pocket.vue'),
+        component: Pocket,
         meta: {
             title: 'Pocket',
-            icon: 'teenyicons:folder-outline',
         },
         props: true,
         children: [
             {
                 name: 'Dashboard',
                 path: '',
-                component: () =>
-                    import(
-                        '@/client/components/pocket/dashboard/PocketDashboard.vue'
-                    ),
+                component: PocketDashboard,
             },
             {
                 name: 'Champions',
                 path: 'champions',
-                component: () =>
-                    import(
-                        '@/client/components/pocket/champions/PocketChampions.vue'
-                    ),
+                component: PocketChampions,
             },
             {
                 name: 'Items',
                 path: 'items',
                 props: true,
-                component: () =>
-                    import('@/client/components/pocket/items/PocketItems.vue'),
+                component: PocketItems,
             },
             {
                 name: 'Runes',
                 path: 'runes',
-                component: () =>
-                    import('@/client/components/pocket/runes/PocketRunes.vue'),
+                component: PocketRunes,
             },
         ],
     },
@@ -100,7 +100,6 @@ const routes: RouteRecordRaw[] = [
         component: Table,
         meta: {
             title: 'Tables',
-            icon: 'formkit:folder',
         },
     },
     {
@@ -109,7 +108,6 @@ const routes: RouteRecordRaw[] = [
         component: Cards,
         meta: {
             title: 'Cards',
-            icon: 'teenyicons:layers-outline',
         },
     },
     {
@@ -118,59 +116,52 @@ const routes: RouteRecordRaw[] = [
         component: Runes,
         meta: {
             title: 'Runes',
-            icon: 'teenyicons:cog-outline',
         },
     },
     {
         path: '/spells',
         name: 'spells',
-        component: () => import('@/client/pages/Spells.vue'),
+        component: Spells,
         meta: {
             title: 'Spells',
-            icon: 'teenyicons:cog-outline',
         },
     },
+
     {
         path: '/settings',
         name: 'settings',
         component: Settings,
         meta: {
             title: 'Settings',
-            icon: 'teenyicons:cog-outline',
         },
         props: true,
         children: [
             {
                 name: 'general',
-                path: '',
-                component: () =>
-                    import('@/client/components/settings/GeneralSettings.vue'),
+                path: '/settings',
+                component: GeneralSettings,
             },
             {
                 name: 'appearance',
                 path: '/settings',
-                component: () =>
-                    import('@/client/components/settings/AppearanceSettings.vue'),
+                component: AppearanceSettings,
             },
             {
                 name: 'account',
                 path: 'account',
                 props: true,
-                component: () =>
-                    import('@/client/components/settings/AccountSettings.vue'),
+                component: AccountSettings,
             },
             {
                 name: 'hotkeys',
                 path: 'hotkeys',
                 props: true,
-                component: () =>
-                    import('@/client/components/settings/HotkeySettings.vue'),
+                component: HotkeySettings,
             },
             {
                 name: 'storage',
                 path: 'storage',
-                component: () =>
-                    import('@/client/components/settings/StorageSettings.vue'),
+                component: StorageSettings,
             },
         ],
     },
@@ -179,8 +170,7 @@ const routes: RouteRecordRaw[] = [
         name: 'trash',
         component: Trash,
         meta: {
-            title: 'Trash',
-            icon: 'teenyicons:bin-outline',
+            title: 'lolpockets | Trash',
         },
     },
 ]
@@ -188,25 +178,28 @@ const routes: RouteRecordRaw[] = [
 const router = createRouter({
     history: createWebHistory(),
     routes,
-    scrollBehavior(to) {
-        if (to.hash) {
-            return new Promise((resolve) => {
-                setTimeout(() => {
-                    const element = document.querySelector(to.hash)
-                    if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' })
-                    }
-                    resolve({ el: to.hash, behavior: 'smooth' })
-                }, 500) // Adjust the delay if needed
-            })
-        }
-        return { top: 0 } // Default scroll position
-    },
 })
+
+const scrollBehavior = (to) => {
+    if (to.hash) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                const element = document.querySelector(to.hash)
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                }
+                resolve({ el: to.hash, behavior: 'smooth' })
+            }, 500) // Adjust the delay if needed
+        })
+    }
+    return { top: 0 } // Default scroll position
+}
 
 router.afterEach((to, from) => {
     const gs = useGeneralStore()
-    const route = to.name.toString()
+    const route = computed(() => {
+        to.name == '' || to.name == '/' ? 'home' : to.name.toString()
+    })
     const history = gs.routeHistory
 
     if (history && history.includes(route)) {

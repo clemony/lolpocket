@@ -84,6 +84,7 @@ function onChange(e, spell) {
                                 type="radio"
                                 :value="spell"
                                 v-model="model"
+                                id="spells"
                                 @change="onChange($event, spell)"
                                 class="hidden"
                                 :disabled="false" />

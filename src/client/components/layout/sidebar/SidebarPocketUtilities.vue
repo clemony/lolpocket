@@ -1,9 +1,7 @@
 <script setup lang="ts"></script>
 <template>
     <SidebarGroup>
-        <SidebarGroupLabel data-tauri-drag-region>
-            Pocket Utilities
-        </SidebarGroupLabel>
+        <SidebarGroupLabel>Pocket Utilities</SidebarGroupLabel>
         <SidebarMenu>
             <SidebarLink to="table" icon="teenyicons:border-all-outline" />
             <SidebarLink to="cards" icon="teenyicons:layers-outline" />

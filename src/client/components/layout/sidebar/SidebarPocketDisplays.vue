@@ -4,7 +4,7 @@ const ps = usePocketStore()
 </script>
 <template>
     <SidebarGroup>
-        <SidebarGroupLabel data-tauri-drag-region>
+        <SidebarGroupLabel>
             Pockets
 
             <SidebarGroupAction as-child>

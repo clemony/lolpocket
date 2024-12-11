@@ -50,7 +50,7 @@ console.log('💠 - state:', state)
 </script>
 <template>
     <SidebarGroup>
-        <SidebarGroupLabel data-tauri-drag-region>Browse</SidebarGroupLabel>
+        <SidebarGroupLabel>Browse</SidebarGroupLabel>
         <SidebarMenu class="mb-1">
             <SidebarLink to="favorites" icon="teenyicons:heart-outline" />
 

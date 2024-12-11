@@ -4,6 +4,7 @@ import { Toaster } from '@/client/components/base/sonner'
 import { useGeneralStore } from '@/client/stores/generalStore'
 import { toggleDrawerState } from '@/client/utils/utils'
 import { useDataStore } from '@/client/stores/dataStore'
+import Home from '@/client/pages/Home.vue'
 
 const ds = useDataStore()
 ds.fetchData()
@@ -34,23 +35,18 @@ console.log(router)
     <Shortkeys />
     <Toaster />
 
-    <main
-        data-tauri-drag-region
-        vaul-drawer-wrapper
-        class="wrapper size-full p-0"
-        :key="state">
+    <main vaul-drawer-wrapper class="wrapper size-full p-0" :key="state">
         <History>
             <MainMenubar :class="{ 'z-0!': state == 'open' }" class="menubar" />
 
             <Sidebar collapsible="icon" class="justify-center">
                 <SidebarContent class="pt-16">
+                    <MainSidebarHeader />
                     <ScrollArea>
                         <SidebarGroup>
                             <SidebarMenu class="mb-1">
                                 <SidebarMenuItem>
-                                    <RouterLink
-                                        to="/home"
-                                        active-class="bg-b2/30">
+                                    <RouterLink to="/" active-class="bg-b2/30">
                                         <SidebarMenuButton>
                                             <icon
                                                 icon="teenyicons:home-outline"
@@ -76,27 +72,13 @@ console.log(router)
             </Sidebar>
             <SidebarInset>
                 <div
-                    data-tauri-drag-region
                     class="border-y-b3 border-r-b3 absolute inset-0 top-0 left-0 m-0 h-full w-full overflow-y-clip border border-l-transparent p-0!">
-                    <router-view v-slot="{ Component }">
-                        <KeepAlive
-                            :include="[
-                                'Pockets',
-                                'Pocket',
-                                'PocketChampions',
-                                'PocketDashboard',
-                                'PocketItems',
-                                'PocketRunes',
-                                'PocketSelectedChampions',
-                            ]">
-                            <component
-                                :is="Component"
-                                ref="currentComponent"
-                                @update:modalState="
-                                    (modal) => toggleDrawerState(modal)
-                                " />
-                        </KeepAlive>
-                    </router-view>
+                    <RouterView v-slot="{ Component }">
+                        <component :is="Component" ref="currentComponent" />
+                    </RouterView>
+                    <!--     @update:modalState="
+                                (modal) => toggleDrawerState(modal)
+                            " -->
                 </div>
             </SidebarInset>
         </History>

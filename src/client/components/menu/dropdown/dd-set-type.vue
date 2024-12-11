@@ -39,18 +39,23 @@ function finalChange(set, event) {
         (pocket.value.items[0].final[0].key = set.key)
     :   (pocket.value.items[0].final[0].key = null)
 }
+/*
+const variant = computed (() => {
+
+             const a  =  set.key == pocket.items[0].start[0].key ?
+                    'inspiration'
+                :   'ghost'
+
+                set.key == pocket.items[0].core[0].key ? 'precision' : 'ghost'
+     
+                
+                set.key == pocket.items[0].final[0].key ? 'resolve' : 'ghost'
+}) */
 </script>
 
 <template>
     <label>
-        <Button
-            class="w-full justify-start"
-            :variant="
-                set.key == pocket.items[0].start[0].key ?
-                    'inspiration'
-                :   'ghost'
-            "
-            size="sm">
+        <Button class="w-full justify-start" variant="ghost" size="sm">
             Start
         </Button>
         <input
@@ -61,12 +66,7 @@ function finalChange(set, event) {
             :value="set" />
     </label>
     <label>
-        <Button
-            class="w-full justify-start"
-            :variant="
-                set.key == pocket.items[0].core[0].key ? 'precision' : 'ghost'
-            "
-            size="sm">
+        <Button class="w-full justify-start" variant="ghost" size="sm">
             Core
         </Button>
         <input
@@ -77,12 +77,7 @@ function finalChange(set, event) {
             :value="set" />
     </label>
     <label>
-        <Button
-            class="w-full justify-start"
-            :variant="
-                set.key == pocket.items[0].final[0].key ? 'resolve' : 'ghost'
-            "
-            size="sm">
+        <Button class="w-full justify-start" variant="ghost" size="sm">
             Complete
         </Button>
         <input

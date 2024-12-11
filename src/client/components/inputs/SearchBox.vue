@@ -38,6 +38,7 @@ function handleInput(event: Event) {
         <input
             :placeholder="placeholder"
             :value="search"
+            id="search"
             @input="handleInput"
             spellcheck="false"
             @keydown.enter.prevent

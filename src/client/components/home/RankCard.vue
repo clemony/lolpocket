@@ -1,20 +1,21 @@
 <script setup lang="ts">
 import type { queue } from 'types'
+import { summoner } from '@/client/data/playerData'
 
 const props = defineProps<{
-    queue: queue
+    queue: string
     title: string
 }>()
 
-const queue = ref(props.queue)
+const queue = computed(() => {
+    const a =
+        props.queue == 'soloDuo' ? summoner.ranks.soloDuo : summoner.ranks.flex
+    return a
+})
 const winrate = computed(() => {
     return (queue.value.win / queue.value.games) * 100
 })
 const rank = ref(queue.value.rank)
-
-const classObject = computed(() => {
-    return `text-${queue.value.rank}`
-})
 
 console.log('💠 - winrate - winrate:', winrate)
 </script>
@@ -43,6 +44,7 @@ console.log('💠 - winrate - winrate:', winrate)
                     }"
                     class="radial-progress absolute -top-8 -left-9 size-20 drop-shadow-xs"
                     :class="{
+                        'text-bc': rank == 'unranked',
                         'text-iron': rank == 'gold',
                         'text-bronze': rank == 'bronze',
                         'text-silver': rank == 'silver',

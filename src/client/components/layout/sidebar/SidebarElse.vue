@@ -23,7 +23,7 @@ const items = [
 </script>
 <template>
     <SidebarGroup>
-        <SidebarGroupLabel data-tauri-drag-region>
+        <SidebarGroupLabel>
             Else
             <span class="text-3 tracking-tight">
                 <span class="tracking-tighter">&nbsp.</span>

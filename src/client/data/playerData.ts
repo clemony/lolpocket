@@ -5,7 +5,7 @@ export const summoner =
         region: 'na',
         level: 143,
         icon: '/img/summoner-icons/space-yuumi.jpg',
-        border: 'theme-1-border',
+        border: 'theme-21-border',
 
         peakRank: {
             peak: 'diamond',

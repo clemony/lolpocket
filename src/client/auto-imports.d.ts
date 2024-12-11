@@ -9,8 +9,8 @@ declare global {
   const EffectScope: typeof import('vue')['EffectScope']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
-  const clean: typeof import('../../../../.'@/client//lib/utils')['clean']
-  const cn: typeof import('../../../../.'@/client//lib/utils')['cn']
+  const clean: typeof import('@/client/lib/utils.ts')['clean']
+  const cn: typeof import('@/client/lib/utils.ts')['cn']
   const computed: typeof import('vue')['computed']
   const computedAsync: typeof import('@vueuse/core')['computedAsync']
   const computedEager: typeof import('@vueuse/core')['computedEager']
@@ -309,8 +309,8 @@ declare module 'vue' {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
-    readonly clean: UnwrapRef<typeof import('../../../../.'@/client//lib/utils')['clean']>
-    readonly cn: UnwrapRef<typeof import('../../../../.'@/client//lib/utils')['cn']>
+    readonly clean: UnwrapRef<typeof import('@/client/lib/utils.ts')['clean']>
+    readonly cn: UnwrapRef<typeof import('@/client/lib/utils.ts')['cn']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly computedAsync: UnwrapRef<typeof import('@vueuse/core')['computedAsync']>
     readonly computedEager: UnwrapRef<typeof import('@vueuse/core')['computedEager']>

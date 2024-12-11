@@ -14,8 +14,6 @@ import { resolve } from 'path'
 import RadixVueResolver from 'radix-vue/resolver'
 import OkuMotionResolver from '@oku-ui/motion/resolver'
 
-
-
 export default defineConfig({
     plugins: [
         vue(),
@@ -59,21 +57,21 @@ export default defineConfig({
                 'vue-i18n',
                 'vue-router',
                 {
-                    '/src/client/lib/utils.ts': ['cn', 'clean'],
+                    '@/client/lib/utils.ts': ['cn', 'clean'],
                 },
             ],
 
             dirs: [],
             eslintrc: {
                 enabled: true,
-                filepath: './.eslintrc-auto-import.json',
+                filepath: './src/client/.eslintrc-auto-import.json',
             },
 
             vueTemplate: true,
             viteOptimizeDeps: true,
             injectAtEnd: true,
 
-            dts: true, // Generates `auto-imports.d.ts` file
+            dts: './src/client/auto-imports.d.ts', // Generates `auto-imports.d.ts` file
         }),
 
         Icons({
