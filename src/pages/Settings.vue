@@ -1,5 +1,8 @@
 <script setup lang="ts">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
 <<<<<<< HEAD:src/pages/Settings.vue
 import GeneralSettings from '@/components/settings/GeneralSettings.vue'
 import { useAccountStore } from '@stores/accountStore'
@@ -11,6 +14,7 @@ const settinas = useAccountStore()
 import GeneralSettings from '@/client/components/settings/GeneralSettings.vue'
 import { useGeneralStore } from '@/client/stores/generalStore'
 import AppearanceSettings from '@/client/components/settings/AppearanceSettings.vue'
+<<<<<<< HEAD
 =======
 import GeneralSettings from '@/components/settings/GeneralSettings.vue'
 import { useAccountStore } from '@stores/accountStore'
@@ -25,6 +29,12 @@ const settings = useGeneralStore()
 const as = useAccountStore()
 const settinas = useAccountStore()
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+
+const gs = useGeneralStore()
+const settings = useGeneralStore()
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/pages/Settings.vue
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
 
 // Use ref to track the selected framework
 </script>

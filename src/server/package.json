@@ -1,0 +1,18 @@
+{
+    "name": "lolpocket",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "main": "./server/dist/main.js",
+    "scripts": {
+        "dev": "nodemon",
+        "server": "node ./server/dist/main.js"
+    },
+    "nodemonConfig": {
+        "watch": [
+            "src"
+        ],
+        "exec": "tsc && node ./server/dist/main.js",
+        "ext": "ts,js,json"
+    }
+}

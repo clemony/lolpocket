@@ -1,4 +1,5 @@
 <script setup lang="ts">
+<<<<<<< HEAD:src/components/home/PlayerMatches.vue
 import { summoner } from '@data/playerData'
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6,6 +7,7 @@ import { useAccountStore } from '@stores/accountStore'
 import { colorB3 } from '@utils/getColor'
 const as = useAccountStore()
 =======
+<<<<<<< HEAD
 import { useGeneralStore } from '@stores/generalStore'
 import { colorB3 } from '@utils/getColor'
 const gs = useGeneralStore()
@@ -15,6 +17,23 @@ import { useAccountStore } from '@stores/accountStore'
 import { colorB3 } from '@utils/getColor'
 const as = useAccountStore()
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+import { summoner } from '@/client/data/playerData'
+import { useGeneralStore } from '@/client/stores/generalStore'
+const gs = useGeneralStore()
+
+import { Doughnut } from 'vue-chartjs'
+import { externalTooltip } from '@/client/config/charts'
+import {
+    Chart as ChartJS,
+    Tooltip,
+    DoughnutController,
+    ArcElement,
+} from 'chart.js'
+
+ChartJS.register(Tooltip, DoughnutController, ArcElement)
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/PlayerMatches.vue
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
 
 const recentWinrate = ref(55)
 const recentMatchNum = ref(20)
@@ -22,6 +41,10 @@ const recentMatchNum = ref(20)
 const color1 = computed(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/components/home/PlayerMatches.vue
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
     return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
 =======
     return gs.colorBlindMode ? '#99c4c8' : '#a3be8c'
@@ -66,6 +89,7 @@ const labels = ['Win', 'Loss']
                 aria="Recent winrate in percentage"
                 class="!size-22" />
 =======
+<<<<<<< HEAD
                 aria="Recent winrate in percentage" />
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
@@ -73,6 +97,47 @@ const labels = ['Win', 'Loss']
                 aria="Recent winrate in percentage"
                 class="!size-22" />
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+    return gs.colorBlindMode ? '#99c4c8' : '#a3be8c'
+})
+
+const chartData = {
+    type: 'doughnut',
+    labels: ['Win', 'Loss'],
+    datasets: [
+        {
+            data: [recentWinrate.value, 100 - recentWinrate.value],
+        },
+    ],
+
+    options: {
+        plugins: {
+            tooltip: {
+                enabled: false,
+                external: externalTooltip,
+            },
+        },
+        elements: {
+            arc: {
+                backgroundColor: [color1.value, 'oklch(60.61% 0.1206 15.34)'],
+                hoverOffset: 1,
+            },
+        },
+        cutout: '75%',
+    },
+}
+</script>
+<template>
+    <div class="flex h-22 items-center pr-10" ref="matches">
+        <div class="relative flex size-22 grow items-center gap-4">
+            <Doughnut
+                :data="chartData"
+                :options="chartData.options"
+                ref="chart"
+                aria-label="Recent winrate in percentage"
+                role="img" />
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/PlayerMatches.vue
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
             <span class="text-bc absolute left-7 font-medium">
                 {{ recentWinrate }}%
             </span>
@@ -85,8 +150,12 @@ const labels = ['Win', 'Loss']
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+<<<<<<< HEAD:src/components/home/PlayerMatches.vue
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
         <div class="flex gap-3">
             <div
                 v-for="champion in summoner.recentChampions"
@@ -119,10 +188,15 @@ const labels = ['Win', 'Loss']
             </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+=======
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/PlayerMatches.vue
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
 
         <RoleDonut />
     </div>

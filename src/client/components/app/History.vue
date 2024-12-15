@@ -57,9 +57,12 @@ const pageStyle = computed(() => ({
             :style="containerStyle"
             :class="{
                 'inset-0 m-0 flex size-full flex-col items-center justify-center -space-y-[42%]':
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/app/History.vue
                     as.commandOpen,
 ========
+=======
+>>>>>>> fcc65b9c (update 38 files and delete 54 files)
                     gs.commandOpen,
 >>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/app/History.vue
             }">

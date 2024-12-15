@@ -1,14 +1,21 @@
 <script setup lang="ts">
+<<<<<<< HEAD:src/components/home/ChampBar.vue
 import { externalTooltip } from '@/config/charts'
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 =======
+<<<<<<< HEAD
 import { useGeneralStore } from '@stores/generalStore'
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 import { useAccountStore } from '@stores/accountStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+import { externalTooltip } from '@/client/config/charts'
+import { useGeneralStore } from '@/client/stores/generalStore'
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampBar.vue
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
 import { Bar } from 'vue-chartjs'
 import {
     Chart,
@@ -32,6 +39,7 @@ Chart.register(
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const as = useAccountStore()
 =======
 const gs = useGeneralStore()
@@ -39,6 +47,13 @@ const gs = useGeneralStore()
 =======
 const as = useAccountStore()
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+<<<<<<< HEAD:src/components/home/ChampBar.vue
+const as = useAccountStore()
+=======
+const gs = useGeneralStore()
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampBar.vue
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
 const props = defineProps<{
     champion: any
 }>()
@@ -53,6 +68,7 @@ const b = computed(() => {
 const color1 = computed(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
 =======
     return gs.colorBlindMode ? '#99c4c8' : '#a3be8c'
@@ -60,6 +76,13 @@ const color1 = computed(() => {
 =======
     return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+<<<<<<< HEAD:src/components/home/ChampBar.vue
+    return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
+=======
+    return gs.colorBlindMode ? '#99c4c8' : '#a3be8c'
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampBar.vue
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
 })
 
 const chartData: ChartData<'bar'> = {
@@ -130,6 +153,7 @@ const chartOptions: ChartOptions<'bar'> = {
     <div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         class="relative -mt-1 flex w-[90%] items-center justify-center overflow-hidden rounded-lg p-0">
 =======
         class="relative flex w-[90%] items-center justify-center overflow-hidden rounded-lg p-0">
@@ -137,12 +161,23 @@ const chartOptions: ChartOptions<'bar'> = {
 =======
         class="relative -mt-1 flex w-[90%] items-center justify-center overflow-hidden rounded-lg p-0">
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+<<<<<<< HEAD:src/components/home/ChampBar.vue
+        class="relative -mt-1 flex w-[90%] items-center justify-center overflow-hidden rounded-lg p-0">
+=======
+        class="relative flex w-[90%] items-center justify-center overflow-hidden rounded-lg p-0">
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampBar.vue
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
         <div class="h-7 w-full overflow-hidden rounded-lg">
             <Bar
                 :data="chartData"
                 :options="chartOptions"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/components/home/ChampBar.vue
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
                 class="-mt-13 -ml-4.5 !h-50 w-31" />
 =======
                 class="mt-3 size-full scale-x-170 scale-y-500" />
@@ -152,5 +187,37 @@ const chartOptions: ChartOptions<'bar'> = {
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
         </div>
     </div>
+=======
+                class="mt-3 size-full scale-x-170 scale-y-500" />
+        </div>
+    </div>
+    <!--  <div class="rounded-md">
+        <div class="flex h-6 w-full overflow-hidden rounded-md">
+            <Tooltip :content="a + '% Win Rate'" :disabled="a >= 31">
+                <div
+                    class="text-1 bg-resolve/80 flex items-center justify-center p-2"
+                    :class="{ '!bg-support': gs.colorBlindMode }"
+                    :style="{
+                        width: a + '%',
+                    }">
+                    <span class="font-medium" :class="{ hidden: a < 31 }">
+                        {{ a + '%' }}
+                    </span>
+                </div>
+            </Tooltip>
+            <Tooltip :content="b + '% Loss Rate'" :disabled="b >= 31">
+                <div
+                    class="text-1 bg-domination/90 flex items-center justify-center p-2"
+                    :style="{
+                        width: b + '%',
+                    }">
+                    <span class="font-medium" :class="{ hidden: b < 31 }">
+                        {{ b + '%' }}
+                    </span>
+                </div>
+            </Tooltip>
+        </div>
+    </div> -->
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampBar.vue
 </template>
 <style scoped></style>

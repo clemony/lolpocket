@@ -122,14 +122,21 @@ watch(
         @start="console.log($event)">
         <TransitionGroup name="pop">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
 <<<<<<< HEAD:src/components/pocket/champions/ChampionList.vue
         
 =======
             >
+<<<<<<< HEAD
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/components/pocket/champions/ChampionList.vue
 =======
         
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/pocket/champions/ChampionList.vue
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
             <label
                 v-for="champion in filteredChampions"
                 :key="champion.name"
@@ -141,14 +148,21 @@ watch(
                     type="radio"
                     :value="champion"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
 <<<<<<< HEAD:src/components/pocket/champions/ChampionList.vue
                     v-model="ts.selectedChampion"
 =======
                     v-model="cs.selectedChampion"
+<<<<<<< HEAD
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/components/pocket/champions/ChampionList.vue
 =======
                     v-model="ts.selectedChampion"
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/pocket/champions/ChampionList.vue
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
                     class="peer hidden" />
                 <LoadImg
                     :url="`/img/champions/${clean(champion.name)}.webp`"

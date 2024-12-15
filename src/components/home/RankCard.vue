@@ -51,6 +51,9 @@ const colors = [colorB3.value, color1.value]
             </p>
         </template>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
 <<<<<<< HEAD:src/components/home/RankCard.vue
         <div
             class="relative grid grid-cols-[1.1fr_1fr_1fr] place-items-center pt-6">
@@ -62,6 +65,7 @@ const colors = [colorB3.value, color1.value]
             <div>
                 <div
                     class="absolute top-1 left-2 grid size-34 place-items-center">
+<<<<<<< HEAD
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/components/home/RankCard.vue
 =======
         <div
@@ -70,6 +74,9 @@ const colors = [colorB3.value, color1.value]
                 <div
                     class="absolute top-1 left-1 grid size-34 place-items-center">
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/RankCard.vue
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
                     <img
                         :src="`/img/crests/${queue.rank}.webp`"
                         class="object-contain drop-shadow-lg" />
@@ -77,9 +84,13 @@ const colors = [colorB3.value, color1.value]
             </div>
             <div class="relative">
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/home/RankCard.vue
 =======
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+<<<<<<< HEAD:src/components/home/RankCard.vue
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
                 <Donut
                     :datasets="datasets"
                     :colors="colors"
@@ -99,6 +110,9 @@ const colors = [colorB3.value, color1.value]
                     {{ winrate }}%
                 </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
 =======
                 <div
                     :style="{
@@ -121,9 +135,13 @@ const colors = [colorB3.value, color1.value]
                     role="progressbar">
                     <span class="text-bc font-medium">{{ winrate }}%</span>
                 </div>
+<<<<<<< HEAD
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/components/home/RankCard.vue
 =======
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/RankCard.vue
+>>>>>>> 2c930845 (update 38 files and delete 54 files)
             </div>
             <div
                 class="text-2 mt-0 flex flex-col justify-center gap-2 font-medium">
