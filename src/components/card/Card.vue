@@ -17,6 +17,7 @@ const props = defineProps<{
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 =======
@@ -24,6 +25,8 @@ const props = defineProps<{
 =======
 >>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
@@ -59,7 +62,13 @@ const props = defineProps<{
 >>>>>>> c29d3eca (update 84 files and delete 4 files)
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+=======
+                '!border-b3 bg-b1/95 shadow-smooth rounded-xl backdrop-blur-md',
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
                 props.class
             )
         ">

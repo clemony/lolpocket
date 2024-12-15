@@ -1,6 +1,7 @@
 <script setup lang="ts">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
 <<<<<<< HEAD:src/components/home/RoleDonut.vue
@@ -37,6 +38,11 @@ const hexColors = {
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+=======
+import { summoner } from '@data/playerData'
+
+const hexColors = {
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
     support: '#99c4c8',
     bottom: '#ebcb8b',
     mid: '#be86b5',
@@ -44,6 +50,7 @@ const hexColors = {
     top: '#e0746b',
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -59,6 +66,9 @@ function gradient(context) {
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+=======
+/* function gradient(context) {
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
     const index = context.dataIndex
     console.log('💠 - gradient - index:', index)
     const value = context.dataset.data[index]
@@ -73,12 +83,15 @@ function gradient(context) {
     return g
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/home/RoleDonut.vue
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 =======
 <<<<<<< HEAD:src/components/home/RoleDonut.vue
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+=======
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
 } */
 
 const labels = ['Support', 'Bottom', 'Mid', 'Jungle', 'Top']
@@ -100,6 +113,7 @@ const colors = [
     hexColors.jungle,
     hexColors.top,
 ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -150,10 +164,13 @@ const chartData = {
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+=======
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
 
 const chartRef = document.getElementById('roleChart') as HTMLCanvasElement
 
 const mostRoled = computed(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -169,12 +186,16 @@ const mostRoled = computed(() => {
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+=======
+    /*     const labelValuePairs = chartData.labels.map((label, index) => ({
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
         label,
         value: chartData.datasets[0].data[index],
     }))
     const highestPair = labelValuePairs.reduce((max, current) =>
         current.value > max.value ? current : max
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -192,6 +213,10 @@ const mostRoled = computed(() => {
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+=======
+    return highestPair.label */
+    return 'Support'
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
 })
 </script>
 <template>
@@ -202,12 +227,15 @@ const mostRoled = computed(() => {
                 class="drop-shadow-neutral/70 size-8 drop-shadow-xs"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/home/RoleDonut.vue
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 =======
 <<<<<<< HEAD:src/components/home/RoleDonut.vue
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+=======
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
                 :style="{ color: hexColors.support }" />
             <BottomSvg
                 v-if="mostRoled == 'Bottom'"
@@ -232,6 +260,7 @@ const mostRoled = computed(() => {
             :colors="colors"
             :labels="labels"
             aria="Playrate by role in percentage" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -269,6 +298,8 @@ const mostRoled = computed(() => {
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+=======
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
     </div>
 </template>
 <style></style>

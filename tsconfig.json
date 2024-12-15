@@ -9,6 +9,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 =======
@@ -16,6 +17,8 @@
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
 =======
+=======
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
@@ -55,7 +58,14 @@
 =======
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+=======
+        "components.d.ts",
+        "types.d.ts"
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
     ],
     "exclude": [
         "node_modules",

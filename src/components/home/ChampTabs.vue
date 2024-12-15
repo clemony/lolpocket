@@ -1,6 +1,7 @@
 <script setup lang="ts">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
 <<<<<<< HEAD:src/components/home/ChampTabs.vue
@@ -52,7 +53,15 @@ const as = useAccountStore()
 const gs = useGeneralStore()
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampTabs.vue
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+=======
+import { summoner } from '@data/playerData'
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
 </script>
 
 <template>
@@ -114,6 +123,7 @@ const gs = useGeneralStore()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     'text-inspiration': as.colorBlindMode,
 =======
                                     'text-inspiration': gs.colorBlindMode,
@@ -125,6 +135,8 @@ const gs = useGeneralStore()
 =======
 >>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
@@ -157,7 +169,13 @@ const gs = useGeneralStore()
 >>>>>>> c29d3eca (update 84 files and delete 4 files)
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+=======
+                                    'text-inspiration': as.colorBlindMode,
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
                                 }" />
                         </p>
                         <p class="flex items-center text-nowrap">

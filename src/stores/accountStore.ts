@@ -40,10 +40,13 @@ export const useAccountStore = defineStore(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 =======
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
 <<<<<<< HEAD:src/stores/accountStore.ts
 =======
 <<<<<<<< HEAD:src/stores/generalStore.ts
@@ -69,7 +72,12 @@ export const useAccountStore = defineStore(
 =======
 <<<<<<< HEAD:src/stores/accountStore.ts
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+=======
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
         watch(theme, (newValue) => {
             document.documentElement.setAttribute('data-theme', newValue)
         })
@@ -83,6 +91,7 @@ export const useAccountStore = defineStore(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/stores/generalStore.ts
 =======
@@ -106,6 +115,8 @@ export const useAccountStore = defineStore(
 =======
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
 =======
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
+=======
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/stores/generalStore.ts
 =======
 <<<<<<<< HEAD:src/stores/generalStore.ts
@@ -121,7 +132,12 @@ export const useAccountStore = defineStore(
 =======
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/stores/generalStore.ts
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+=======
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
 
         const reducedMotion = ref(false)
         const colorBlindMode = ref(false)
@@ -132,6 +148,7 @@ export const useAccountStore = defineStore(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:src/stores/generalStore.ts
 >>>>>>> 404a531d (update 84 files and delete 4 files)
@@ -153,6 +170,8 @@ export const useAccountStore = defineStore(
 >>>>>>> c29d3eca (update 84 files and delete 4 files)
 >>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
 =======
 <<<<<<<< HEAD:src/stores/generalStore.ts
 >>>>>>> c29d3eca (update 84 files and delete 4 files)
@@ -183,7 +202,12 @@ export const useAccountStore = defineStore(
 =======
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+=======
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
         const isMinimized = ref(false)
         const sidebarState = ref()
         const defaultSidebarState = ref(true)
@@ -205,6 +229,7 @@ export const useAccountStore = defineStore(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:src/stores/generalStore.ts
 >>>>>>> 404a531d (update 84 files and delete 4 files)
@@ -217,6 +242,8 @@ export const useAccountStore = defineStore(
 >>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 =======
 =======
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
+=======
 <<<<<<<< HEAD:src/stores/generalStore.ts
 >>>>>>> c29d3eca (update 84 files and delete 4 files)
 =======
@@ -224,10 +251,14 @@ export const useAccountStore = defineStore(
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
 <<<<<<< HEAD:src/stores/accountStore.ts
 =======
+<<<<<<< HEAD
 >>>>>>> 9bb9b9a6 (update src/client/assets/css/index.css)
 =======
 <<<<<<< HEAD:src/stores/accountStore.ts
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
         const favoriteChamps = ref<Champion[]>([])
 
         //items
@@ -235,8 +266,11 @@ export const useAccountStore = defineStore(
         const itemSets = ref<ItemSet[]>([])
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
 =======
         watch(theme, (newValue) => {
             document.documentElement.setAttribute('data-theme', newValue)
@@ -288,7 +322,12 @@ export const useAccountStore = defineStore(
 =======
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+=======
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
 
         return {
             //settings

@@ -10,6 +10,7 @@ Chart.defaults.datasets.doughnut.hoverBorderWidth = 1
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/config/charts.ts
 =======
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
@@ -27,13 +28,20 @@ Chart.defaults.datasets.doughnut.hoverBorderWidth = 1
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 >>>>>>> be133e04 (update 8 files and delete 426 files)
 =======
+=======
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
 <<<<<<< HEAD:src/config/charts.ts
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 =======
 <<<<<<< HEAD:src/config/charts.ts
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+=======
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
 export const externalTooltip = (context) => {
     // Tooltip Element
     let tooltipEl = document.getElementById('chartjs-tooltip')
@@ -112,6 +120,7 @@ export const externalTooltip = (context) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 =======
@@ -119,6 +128,8 @@ export const externalTooltip = (context) => {
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
 =======
+=======
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
@@ -224,11 +235,17 @@ if (body) {
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+=======
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
     }
 
     // Adjust for Overflow on the Bottom
     if (posY + tooltipHeight > chartTop + chartHeight) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -252,13 +269,20 @@ if (body) {
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 >>>>>>> be133e04 (update 8 files and delete 426 files)
 =======
+=======
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
 <<<<<<< HEAD:src/config/charts.ts
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 =======
 <<<<<<< HEAD:src/config/charts.ts
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+=======
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
         posY = chartTop + caretY - tooltipHeight - 10 // Flip above
     }
 
@@ -308,6 +332,7 @@ function getGradient(ctx, chartArea, colors) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 =======
@@ -315,6 +340,8 @@ function getGradient(ctx, chartArea, colors) {
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
 =======
+=======
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
@@ -381,4 +408,9 @@ function getGradient(ctx, chartArea, colors) {
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+=======
+>>>>>>> c6fb873c (update src/client/assets/css/index.css)
+>>>>>>> 5cbbad1d (update src/client/assets/css/index.css)
