@@ -99,6 +99,7 @@ export default defineConfig({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         open: true,
 =======
         open: false,
@@ -112,6 +113,9 @@ export default defineConfig({
         open: false,
 >>>>>>> fcc65b9c (update 38 files and delete 54 files)
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
+=======
+        open: true,
+>>>>>>> 9bb9b9a6 (update src/client/assets/css/index.css)
     },
     resolve: {
         alias: {

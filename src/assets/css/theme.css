@@ -3,6 +3,7 @@
 @theme {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 <<<<<<< HEAD:src/assets/css/theme.css
@@ -25,6 +26,10 @@
 =======
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/assets/css/theme.css
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
+=======
+    --spacing: 0.25rem;
+
+>>>>>>> 9bb9b9a6 (update src/client/assets/css/index.css)
     --text-1: 0.8rem;
     --text-2: 0.93rem;
     --text-3: 1rem;
@@ -169,6 +174,7 @@
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 <<<<<<< HEAD:src/assets/css/theme.css
@@ -189,4 +195,6 @@
 =======
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/assets/css/theme.css
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
+=======
+>>>>>>> 9bb9b9a6 (update src/client/assets/css/index.css)
 }

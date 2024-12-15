@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
         "components.d.ts",
@@ -21,6 +22,10 @@
 =======
 >>>>>>> fcc65b9c (update 38 files and delete 54 files)
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
+=======
+        "components.d.ts",
+        "types.d.ts"
+>>>>>>> 9bb9b9a6 (update src/client/assets/css/index.css)
     ],
     "exclude": [
         "node_modules",

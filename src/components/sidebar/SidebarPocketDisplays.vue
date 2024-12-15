@@ -1,6 +1,7 @@
 <script setup lang="ts">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:src/client/components/sidebar/SidebarPocketDisplays.vue
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
@@ -26,6 +27,9 @@ import { usePocketStore } from '@/stores/pocketStore'
 =======
 >>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/sidebar/SidebarPocketDisplays.vue
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
+=======
+import { usePocketStore } from '@/stores/pocketStore'
+>>>>>>> 9bb9b9a6 (update src/client/assets/css/index.css)
 
 const ps = usePocketStore()
 </script>
