@@ -8,7 +8,6 @@ import {
     DoughnutController,
     ArcElement,
 } from 'chart.js'
-import 'chartjs-plugin-style'
 
 ChartJS.register(Tooltip, DoughnutController, ArcElement)
 
