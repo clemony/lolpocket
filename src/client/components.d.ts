@@ -316,6 +316,7 @@ declare module 'vue' {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Data: typeof import('./components/settings/data.vue')['default']
     DdCheckbox: typeof import('./components/menu/dropdown/dd-checkbox.vue')['default']
     DdItemset: typeof import('./components/menu/dropdown/dd-itemset.vue')['default']
@@ -323,6 +324,9 @@ declare module 'vue' {
 =======
     Data: typeof import('./components/settings/data.vue')['default']
 >>>>>>> 12d6db59 (update 38 files and delete 54 files)
+=======
+    Data: typeof import('./components/settings/data.vue')['default']
+>>>>>>> a7b8fc50 (update 38 files and delete 54 files)
     DdCheckbox: typeof import('./components/menu/dropdown/dd-checkbox.vue')['default']
     DdItemset: typeof import('./components/menu/dropdown/dd-itemset.vue')['default']
     'DdItemset copy': typeof import('./components/menu/dropdown/dd-itemset copy.vue')['default']
@@ -578,6 +582,7 @@ declare module 'vue' {
     Home: typeof import('./pages/Home.vue')['default']
     HotkeySettings: typeof import('./components/settings/HotkeySettings.vue')['default']
     HvPocket: typeof import('./components/menu/hover/hv-pocket.vue')['default']
+    Icon: typeof import('~icons/ic/on')['default']
     IconPicker: typeof import('./components/pocket/ui/IconPicker.vue')['default']
     IconRenderer: typeof import('./components/table/IconRenderer.vue')['default']
 <<<<<<< HEAD
