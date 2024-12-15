@@ -1,5 +1,17 @@
 @import 'tailwindcss';
 
+<<<<<<< HEAD:src/assets/css/themes.css
+=======
+:root {
+    --b1: oklch(100% 0 0);
+    --b2: oklch(93% 0 0);
+    --b3: oklch(76% 0 0);
+    --bc: oklch(0% 0.02476 255.701624);
+    --neutral: oklch(0% 0.02476 255.701624);
+    --nc: oklch(100% 0 0);
+}
+
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/assets/css/themes.css
 :is([data-theme='light']) {
     --b1: oklch(100% 0 0);
     --b2: oklch(93% 0 0);
