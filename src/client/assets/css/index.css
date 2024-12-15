@@ -17,6 +17,9 @@
     logs: true;
     root: ':root';
     themes: false;
+    include: reset, keyframes, carousel, checkbox, join, swap, kbd, rating,
+        radio, tab, toggle, mask, properties, states, radialprogress, typography;
+    exclude: avatar;
 }
 /*    include: reset, keyframes, carousel, checkbox, join, swap, kbd, rating,
         radio, tab, toggle, mask, properties, states, radialprogress, typography
