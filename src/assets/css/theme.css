@@ -1,18 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
-<<<<<<< HEAD:src/assets/css/theme.css
     --spacing: 0.25rem;
 
-=======
-    --font-*: initial;
-
-    --font-sans: 'Geist Sans', 'sans-serif';
-    --font-serif: 'Noto Serif KR Variable', 'serif';
-    --font-mono: 'Victor Mono Variable', 'monospace';
-
-    --text-*: initial;
->>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/assets/css/theme.css
     --text-1: 0.8rem;
     --text-2: 0.93rem;
     --text-3: 1rem;
@@ -155,16 +145,4 @@
             }
         }
     }
-<<<<<<< HEAD:src/assets/css/theme.css
-=======
-    --tab-bg: oklch(var(--b1) / 90%) !important;
-    --tab-corner-bg: oklch(var(--b1) / 60%) !important;
-    --tab-border: 1px !important;
-    --tab-border-color: var(--b3);
-    --tab-radius: 0.45rem !important;
-    --tab-border-colors: transparent transparent var(--tab-border-color)
-        transparent;
-    --spacing-tab-border: 1px;
-    --tglbg: oklch(var(--b1) / 95%);
->>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/assets/css/theme.css
 }

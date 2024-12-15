@@ -1,13 +1,7 @@
 <script setup lang="ts">
-<<<<<<< HEAD:src/components/home/ChampTabs.vue
 import { summoner } from '@data/playerData'
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
-=======
-import { summoner } from '@/client/data/playerData'
-import { useGeneralStore } from '@/client/stores/generalStore'
-const gs = useGeneralStore()
->>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampTabs.vue
 </script>
 
 <template>
@@ -62,11 +56,7 @@ const gs = useGeneralStore()
                                 icon="ion:caret-up-outline"
                                 class="text-resolve"
                                 :class="{
-<<<<<<< HEAD:src/components/home/ChampTabs.vue
                                     'text-inspiration': as.colorBlindMode,
-=======
-                                    'text-inspiration': gs.colorBlindMode,
->>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampTabs.vue
                                 }" />
                         </p>
                         <p class="flex items-center text-nowrap">

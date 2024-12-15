@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { type Component, computed } from 'vue'
-import SidebarMenuButtonChild, {
-    type SidebarMenuButtonProps,
+import SidebarMenuButtonChild , { type SidebarMenuButtonProps
 } from './SidebarMenuButtonChild.vue'
 import { useSidebar } from './utils'
 

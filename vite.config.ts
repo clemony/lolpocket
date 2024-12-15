@@ -96,11 +96,7 @@ export default defineConfig({
 
     server: {
         port: 8080,
-<<<<<<< HEAD
         open: true,
-=======
-        open: false,
->>>>>>> fcc65b9c (update 38 files and delete 54 files)
     },
     resolve: {
         alias: {
