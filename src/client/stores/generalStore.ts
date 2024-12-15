@@ -5,13 +5,16 @@ import { pocket, drawer } from 'types'
 export const useGeneralStore = defineStore(
     'generalStore',
     () => {
-        const dataMode = ref('light')
         const theme = ref('light')
-        const dataneutral = ref('minimalist')
-        const dataTheme = ref('light')
+        const accents = ref('light')
+
+        const reducedMotion = ref(false)
+        const colorBlindMode = ref(false)
+
         const app = ref()
         const isMinimized = ref(false)
         const sidebarState = ref()
+        const defaultSidebarState = ref(true)
         const sidebarWidth = ref(18)
 
         const drawerState = ref(false)
@@ -22,27 +25,25 @@ export const useGeneralStore = defineStore(
         const commandOpen = ref(false)
         const pocketGridSize = ref()
         const pocketPreview = ref(false)
-        const reducedMotion = ref(false)
         const routeHistory = []
 
-        const appearanceRef = ref()
-        // Watch for theme changes
         watch(theme, (newValue) => {
             document.documentElement.setAttribute('data-theme', newValue)
         })
 
         // Watch for mode changes
-        watch(dataTheme, (newMode) => {
+        watch(accents, (newMode) => {
             document.documentElement.setAttribute('data-mode', newMode)
             //console.log(`Mode changed to: ${newMode}`);
         })
 
         return {
             theme,
-            dataMode,
-            dataneutral,
+            accents,
+            colorBlindMode,
             reducedMotion,
             pocketPreview,
+            defaultSidebarState,
             isMinimized,
             commandOpen,
             sidebarState,
@@ -53,8 +54,6 @@ export const useGeneralStore = defineStore(
             drawerState,
             drawerValue,
             drawerPocket,
-            dataTheme,
-            appearanceRef,
             routeHistory,
         }
     },

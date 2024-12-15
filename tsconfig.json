@@ -5,6 +5,7 @@
         "src/**/*.d.ts",
         "auto-imports.d.ts",
         "types.d.ts",
+        "api/*"
     ],
     "exclude": [
         "node_modules",

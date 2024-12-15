@@ -62,7 +62,7 @@ const delegatedProps = computed(() => {
             side="right"
             align="center"
             :hidden="state !== 'collapsed' || isMobile"
-            class="invisible opacity-0"
+            class="border-b3 invisible capitalize opacity-0"
             :class="{ 'visible opacity-100': state == 'collapsed' }">
             <template v-if="typeof tooltip === 'string'">
                 {{ tooltip }}

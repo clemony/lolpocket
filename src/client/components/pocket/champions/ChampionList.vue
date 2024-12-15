@@ -106,32 +106,27 @@ watch(
         :fallbackTolerance="0"
         fallbackClass="drag-clone"
         :fallbackOnBody="true"
-        class="drag-draggable max-h-inherit h-inherit scrollbar-hide items-start justify-around overflow-y-auto rounded-lg pt-4 pr-10 pb-4"
+        class="max-h-inherit h-inherit scrollbar-hide flex flex-wrap items-start justify-around gap-4 overflow-y-auto rounded-lg pt-4 pb-4"
         @start="console.log($event)">
         <TransitionGroup name="pop">
-            <div
+            >
+            <label
                 v-for="champion in filteredChampions"
                 :key="champion.name"
                 ref="list"
-                class="size-22">
-                <label
-                    class="drag-label"
-                    dragClass="setDrag"
-                    @click.right.prevent="">
-                    <div
-                        class="drag-wrapper border-neutral/50! shadow-standard!">
-                        <input
-                            type="radio"
-                            :value="champion"
-                            v-model="cs.selectedChampion"
-                            class="peer hidden" />
-                        <LoadImg
-                            :url="`/img/champions/${clean(champion.name)}.webp`"
-                            class="load-img drag-img scale-[108%]"
-                            draggable="false" />
-                    </div>
-                </label>
-            </div>
+                class="size-22 shrink-0 overflow-hidden rounded-lg"
+                dragClass="setDrag"
+                @click.right.prevent="">
+                <input
+                    type="radio"
+                    :value="champion"
+                    v-model="cs.selectedChampion"
+                    class="peer hidden" />
+                <LoadImg
+                    :url="`/img/champions/${clean(champion.name)}.webp`"
+                    class="load-img drag-img scale-114"
+                    draggable="false" />
+            </label>
         </TransitionGroup>
 
         <div class="aspect-square size-[68px]"></div>

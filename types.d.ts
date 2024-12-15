@@ -241,6 +241,13 @@ export interface summoner {
         flex: queue
     }
     mostPlayed?: [champPlayCount]
+    roles: {
+        role: string
+    }
+}
+
+export interface role {
+    percent: number
 }
 
 export interface queue {
@@ -257,4 +264,16 @@ export interface champPlayCount {
     win: number
     loss: number
     kda: string
+}
+
+export interface article {
+    title: string
+    source: string
+    icon?: string
+    source2?: string
+    image: string
+    link?: string
+    linkTitle?: string
+    color?: string
+    date?: string
 }

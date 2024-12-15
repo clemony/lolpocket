@@ -3,16 +3,16 @@
     "version": "0.0.0",
     "private": true,
     "type": "module",
-    "main": "main.js",
+    "main": "./server/dist/main.js",
     "scripts": {
         "dev": "nodemon",
-        "server": "node main.ts"
+        "server": "node ./server/dist/main.js"
     },
     "nodemonConfig": {
         "watch": [
             "src"
         ],
-        "exec": "tsc && node ./dist/main.js",
+        "exec": "tsc && node ./server/dist/main.js",
         "ext": "ts,js,json"
     }
 }

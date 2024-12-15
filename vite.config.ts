@@ -75,6 +75,7 @@ export default defineConfig({
         }),
 
         Icons({
+            compiler: 'vue3',
             customCollections: {
                 ui: FileSystemIconLoader('public/img/icons', (svg) =>
                     svg.replace(
@@ -95,7 +96,7 @@ export default defineConfig({
 
     server: {
         port: 8080,
-        open: '/',
+        open: false,
     },
     resolve: {
         alias: {

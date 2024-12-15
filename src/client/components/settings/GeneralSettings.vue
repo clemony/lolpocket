@@ -1,57 +1,70 @@
 <script setup lang="ts">
 import { useGeneralStore } from '@/client/stores/generalStore'
-const gs = useGeneralStore()
 
-const isWobble = computed(() => {
-    return gs.reducedMotion == false ? 'Wigglies On' : 'Less Wobblies'
-})
-const isPreview = computed(() => {
-    return gs.pocketPreview == false ? 'Previews Visible' : 'Previews Hidden'
-})
+const gs = useGeneralStore()
+const motion = ref()
+const sidebar = ref(gs.defaultSidebarState)
+const toggleSetting = (model) => {
+    useToggle(model)
+}
+
+const settingsData = {
+    general: [
+        {
+            title: 'Reduce Motion',
+            description: 'Reduce the wobblies.',
+            model: gs.reducedMotion,
+            text: gs.reducedMotion == false ? 'Wigglies On' : 'Less Wobblies',
+        },
+        {
+            title: 'Suppress Pocket Preview',
+            description:
+                'The little pocket that slides down in the sidebar and is annoying sometimes.',
+            model: gs.pocketPreview,
+            text:
+                gs.pocketPreview == false ?
+                    'Previews Visible'
+                :   'Previews Hidden',
+        },
+        {
+            title: 'Colorblind Mode',
+            description: 'Changes many of the green shades to blue.',
+            model: gs.colorBlindMode,
+            text:
+                gs.colorBlindMode == false ? 'Colorblind Off' : 'Colorblind On',
+        },
+        {
+            title: 'Sidebar Default State',
+            description:
+                'Upon login, should your sidebar be expanded or collapsed?.',
+            model: sidebar.value,
+            text: gs.defaultSidebarState == false ? 'Collapsed' : 'Expanded',
+        },
+    ],
+}
 </script>
 <template>
     <main class="w-full">
         <LayoutSpacer class="col-span-full h-40!" />
-        <div class="grid w-full grid-cols-3 gap-6 *:size-full">
+        <div class="grid w-full grid-cols-3 gap-6 px-2 *:size-full">
             <DisplayCard
-                class="relative grid h-full grid-rows-2"
-                description="Get rid of the wiggly wobblies.">
+                v-for="item in settingsData.general"
+                class="relative !h-56 grid-rows-2 **:tracking-tight">
                 <template #header>
-                    <h4>Reduce Motion</h4>
-                </template>
-
-                <label
-                    class="absolute bottom-0 left-0 flex w-full cursor-pointer items-end gap-4 p-6">
-                    <input
-                        type="checkbox"
-                        v-model="gs.reducedMotion"
-                        :checked="gs.reducedMotion == false"
-                        class="toggle toggle-sm rounded-md!" />
-                    <span class="label-text w-full text-left">
-                        {{ isWobble }}
-                    </span>
-                </label>
-            </DisplayCard>
-
-            <DisplayCard class="grid">
-                <template #header>
-                    <h4>Suppress Pocket Preview</h4>
+                    <h4>{{ item.title }}</h4>
                 </template>
                 <template #description>
                     <div class="grow">
-                        The little pocket that slides down in the sidebar. That
-                        thing.
+                        {{ item.description }}
                     </div>
                 </template>
+
                 <label
-                    class="absolute bottom-0 left-0 flex w-full cursor-pointer items-end gap-4 p-6">
-                    <input
-                        type="checkbox"
-                        v-model="gs.pocketPreview"
-                        :checked="gs.pocketPreview == true"
-                        class="toggle toggle-sm rounded-md!" />
+                    class="absolute bottom-0 left-0 flex w-full cursor-pointer items-end gap-4 p-6"
+                    @click="toggleSetting(item.model)">
+                    <Switch v-model:checked="item.model" />
                     <span class="label-text w-full text-left">
-                        {{ isPreview }}
+                        {{ item.text }}
                     </span>
                 </label>
             </DisplayCard>

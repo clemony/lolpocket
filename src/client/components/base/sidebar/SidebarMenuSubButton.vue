@@ -7,14 +7,14 @@ import { Primitive } from 'radix-vue'
 const props = withDefaults(
     defineProps<
         PrimitiveProps & {
-            size?: 'sm' | 'md'
+            size?: 'sm' | 'md' | 'lg'
             isActive?: boolean
             class?: HTMLAttributes['class']
         }
     >(),
     {
         as: 'a',
-        size: 'sm',
+        size: 'lg',
     }
 )
 </script>
@@ -32,6 +32,7 @@ const props = withDefaults(
                 'data-[active=true]:bg-neutral/5 data-[active=true]:text-bc',
                 size === 'sm' && 'text-3',
                 size === 'md' && 'text-3',
+                size === 'lg' && 'text-3',
                 'group-data-[collapsible=icon]:hidden',
                 props.class
             )

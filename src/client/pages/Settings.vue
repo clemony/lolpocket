@@ -2,7 +2,7 @@
 import GeneralSettings from '@/client/components/settings/GeneralSettings.vue'
 import { useGeneralStore } from '@/client/stores/generalStore'
 import AppearanceSettings from '@/client/components/settings/AppearanceSettings.vue'
-import { appearanceRef } from '@/client/components/settings/settingsRefs'
+
 const gs = useGeneralStore()
 const settings = useGeneralStore()
 
