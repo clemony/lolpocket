@@ -1,13 +1,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-<<<<<<< HEAD:src/components/base/sidebar/SidebarMenuButtonChild.vue
 import { cn } from '@lib/utils'
 
-=======
-import { cn } from '@/client/lib/utils'
-import { useGeneralStore } from '@/client/stores/generalStore'
-const gs = useGeneralStore()
->>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/base/sidebar/SidebarMenuButtonChild.vue
 import { Primitive, type PrimitiveProps } from 'radix-vue'
 import { type SidebarMenuButtonVariants, sidebarMenuButtonVariants } from '.'
 

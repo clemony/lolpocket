@@ -36,7 +36,7 @@ export const usePocketStore = defineStore(
                 (pocket) => pocket.key === key
             )
             if (findPocket) {
-                findPocket.taas =newTags
+                findPocket.tags = newTags
             }
         }
 
