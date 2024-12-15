@@ -12,7 +12,7 @@ module.exports = {
         mask(),
         plugin(function ({ addBase }) {
             addBase({
-                html: { fontSize: '14px' },
+                html: { fontSize: '12px' },
             })
         }),
     ],

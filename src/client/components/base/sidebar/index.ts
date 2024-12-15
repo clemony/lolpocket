@@ -27,7 +27,7 @@ export { default as SidebarTrigger } from './SidebarTrigger.vue'
 export { useSidebar } from './utils'
 
 export const sidebarMenuButtonVariants = cva(
-    'peer/menu-button flex w-full items-center gap-4 overflow-hidden rounded-md p-2 text-left text-3 outline-hidden ring-neutral/5 transition-[width,height,padding] hover:bg-b2 hover:text-bc focus-visible:ring-1 active:bg-neutral/5 active:text-bc disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-neutral/5 data-[active=true]: data-[active=true]:text-bc data-[state=open]:hover:bg-b2 data-[state=open]:hover:text-bc group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-0! [&>span:last-child]:truncate [&>svg]:size-4.5 [&>svg]:shrink-0',
+    'peer/menu-button flex w-full items-center gap-4 overflow-hidden rounded-md p-2 text-left text-3 outline-hidden ring-neutral/5 transition-[width,height,padding] hover:bg-b2 hover:text-bc focus-visible:ring-1 active:bg-neutral/5 active:text-bc disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-neutral/5 data-[active=true]: data-[active=true]:text-bc data-[state=open]:hover:bg-b2 data-[state=open]:hover:text-bc group-data-[collapsible=icon]:size-8 group-data-[collapsible=icon]:p-0 [&>span:last-child]:truncate [&>svg]:size-4.5 [&>svg]:shrink-0',
     {
         variants: {
             variant: {

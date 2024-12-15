@@ -22,16 +22,16 @@ console.log('💠 - winrate - winrate:', winrate)
 <template>
     <DisplayCard
         headerClass="!pb-0 [&_.description]:hidden"
-        class="h-48 w-110 pb-4">
+        class="h-48 w-full pb-4">
         <template #header>
-            <h5 class="text-4 mt-2 ml-2 font-semibold" :style="{}">
+            <p class="text-4 mt-2 ml-2 font-semibold" :style="{}">
                 {{ 'Ranked ' + props.title }}
-            </h5>
+            </p>
         </template>
-        <div class="relative grid grid-cols-3 place-items-center pt-8">
+        <div class="relative grid grid-cols-3 place-items-center pt-7">
             <div>
                 <div
-                    class="absolute top-2 left-2 grid size-34 place-items-center">
+                    class="absolute top-1 left-2 grid size-34 place-items-center">
                     <img
                         :src="`/img/crests/${queue.rank}.webp`"
                         class="object-contain drop-shadow-lg" />
@@ -42,7 +42,7 @@ console.log('💠 - winrate - winrate:', winrate)
                     :style="{
                         '--value': winrate,
                     }"
-                    class="radial-progress absolute -top-8 -left-9 size-20 drop-shadow-xs"
+                    class="radial-progress absolute -top-10 -left-9 size-20 drop-shadow-xs"
                     :class="{
                         'text-bc': rank == 'unranked',
                         'text-iron': rank == 'gold',
@@ -61,16 +61,19 @@ console.log('💠 - winrate - winrate:', winrate)
                 </div>
             </div>
             <div
-                class="text-2 mt-3 flex flex-col justify-center gap-2 font-medium">
-                <div>
-                    <p>{{ queue.games }} Games</p>
-                </div>
+                class="text-2 mt-0 flex flex-col justify-center gap-2 font-medium">
+                <p class="capitalize">
+                    {{ queue.rank + ' ' + queue.tier }}
+                </p>
+
+                <p>{{ queue.games }} Games</p>
+
                 <div class="flex items-center gap-2">
                     <p class="flex items-center text-nowrap">
                         {{ queue.win }}W
                         <icon
                             icon="ion:caret-up-outline"
-                            class="text-resolve" />
+                            class="text-inspiration" />
                     </p>
                     <p class="flex items-center text-nowrap">
                         {{ queue.loss }}L

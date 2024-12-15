@@ -71,7 +71,7 @@ const { toggleSidebar } = useSidebar()
                     'group-data-[collapsible=offcanvas]:w-0',
                     'group-data-[side=right]:rotate-180',
                     variant === 'floating' || variant === 'inset' ?
-                        'group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+calc(var(--spacing)*4))]'
+                        'group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+calc(var(--spacing)*6))]'
                     :   'group-data-[collapsible=icon]:w-(--sidebar-width-icon)'
                 )
             " />

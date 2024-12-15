@@ -4,7 +4,6 @@ import { Toaster } from '@/client/components/base/sonner'
 import { useGeneralStore } from '@/client/stores/generalStore'
 import { toggleDrawerState } from '@/client/utils/utils'
 import { useDataStore } from '@/client/stores/dataStore'
-import Home from '@/client/pages/Home.vue'
 
 const ds = useDataStore()
 ds.fetchData()
@@ -35,29 +34,13 @@ console.log(router)
     <Shortkeys />
     <Toaster />
 
-    <main vaul-drawer-wrapper class="wrapper size-full p-0" :key="state">
+    <main vaul-drawer-wrapper class="size-full p-0" :key="state">
         <History>
             <MainMenubar :class="{ 'z-0!': state == 'open' }" class="menubar" />
 
             <Sidebar collapsible="icon" class="justify-center">
-                <SidebarContent class="pt-16">
-                    <MainSidebarHeader />
-                    <ScrollArea>
-                        <SidebarGroup>
-                            <SidebarMenu class="mb-1">
-                                <SidebarMenuItem>
-                                    <RouterLink to="/" active-class="bg-b2/30">
-                                        <SidebarMenuButton>
-                                            <icon
-                                                icon="teenyicons:home-outline"
-                                                class="m-0 overflow-auto object-none p-0" />
-                                            <span class="text-3">Home</span>
-                                        </SidebarMenuButton>
-                                    </RouterLink>
-                                </SidebarMenuItem>
-                            </SidebarMenu>
-                        </SidebarGroup>
-
+                <SidebarContent class="pt-18">
+                    <ScrollArea class="!overflow-auto !overscroll-contain">
                         <SidebarPocketDisplays />
 
                         <SidebarPocketUtilities />
@@ -66,13 +49,15 @@ console.log(router)
 
                         <SidebarElse />
                     </ScrollArea>
+
+                    <SidebarAccount />
                 </SidebarContent>
 
                 <SidebarRail />
             </Sidebar>
             <SidebarInset>
                 <div
-                    class="border-y-b3 border-r-b3 absolute inset-0 top-0 left-0 m-0 h-full w-full overflow-y-clip border border-l-transparent p-0!">
+                    class="absolute inset-0 top-0 left-0 m-0 h-full w-full overflow-y-clip border border-y-0 border-r-0 border-l-transparent p-0!">
                     <RouterView v-slot="{ Component }">
                         <component :is="Component" ref="currentComponent" />
                     </RouterView>
