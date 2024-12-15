@@ -137,6 +137,7 @@ const pageStyle = computed(() => ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/app/History.vue
                     as.commandOpen,
 ========
@@ -158,6 +159,8 @@ const pageStyle = computed(() => ({
 >>>>>>> be133e04 (update 8 files and delete 426 files)
 =======
 >>>>>>> c5d8fff8 (update 84 files and delete 4 files)
+=======
+>>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
 <<<<<<<< HEAD:src/components/app/History.vue
                     as.commandOpen,
 ========
@@ -177,7 +180,17 @@ const pageStyle = computed(() => ({
 =======
                     as.commandOpen,
 >>>>>>> c29d3eca (update 84 files and delete 4 files)
+<<<<<<< HEAD
 >>>>>>> c5d8fff8 (update 84 files and delete 4 files)
+=======
+=======
+<<<<<<<< HEAD:src/components/app/History.vue
+                    as.commandOpen,
+========
+                    gs.commandOpen,
+>>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/app/History.vue
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
+>>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
             }">
             <template v-if="as.commandOpen">
                 <div
@@ -220,6 +233,7 @@ const pageStyle = computed(() => ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:src/client/components/app/History.vue
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
@@ -230,6 +244,13 @@ const pageStyle = computed(() => ({
 <<<<<<<< HEAD:src/client/components/app/History.vue
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+<<<<<<<< HEAD:src/client/components/app/History.vue
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
+>>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
 <<<<<<<< HEAD:src/components/app/History.vue
                 <slot />
 ========
@@ -251,6 +272,7 @@ const pageStyle = computed(() => ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ========
                 <slot />
@@ -260,11 +282,18 @@ const pageStyle = computed(() => ({
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 =======
 =======
+>>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
 ========
                 <slot />
 >>>>>>>> 5132f0ce (update 8 files and delete 426 files):src/components/app/History.vue
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
+>>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
             </label>
         </div>
     </div>

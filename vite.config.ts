@@ -102,6 +102,7 @@ export default defineConfig({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         open: true,
 =======
         open: false,
@@ -112,10 +113,15 @@ export default defineConfig({
 =======
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
+>>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
         open: true,
 =======
         open: false,
 >>>>>>> fcc65b9c (update 38 files and delete 54 files)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 =======
@@ -132,6 +138,13 @@ export default defineConfig({
         open: true,
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+        open: true,
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
+>>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
     },
     resolve: {
         alias: {

@@ -1,5 +1,8 @@
 <script setup lang="ts">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
 <<<<<<< HEAD:src/components/home/ChampTabs.vue
 import { summoner } from '@data/playerData'
 <<<<<<< HEAD
@@ -22,6 +25,7 @@ const as = useAccountStore()
 =======
 import { summoner } from '@/client/data/playerData'
 import { useGeneralStore } from '@/client/stores/generalStore'
+<<<<<<< HEAD
 =======
 import { summoner } from '@data/playerData'
 <<<<<<< HEAD
@@ -41,7 +45,14 @@ const gs = useGeneralStore()
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
 >>>>>>> c29d3eca (update 84 files and delete 4 files)
+<<<<<<< HEAD
 >>>>>>> c5d8fff8 (update 84 files and delete 4 files)
+=======
+=======
+const gs = useGeneralStore()
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampTabs.vue
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
+>>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
 </script>
 
 <template>
@@ -102,6 +113,7 @@ const as = useAccountStore()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     'text-inspiration': as.colorBlindMode,
 =======
                                     'text-inspiration': gs.colorBlindMode,
@@ -112,11 +124,16 @@ const as = useAccountStore()
 =======
 =======
 >>>>>>> c5d8fff8 (update 84 files and delete 4 files)
+=======
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
+>>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
 <<<<<<< HEAD:src/components/home/ChampTabs.vue
                                     'text-inspiration': as.colorBlindMode,
 =======
                                     'text-inspiration': gs.colorBlindMode,
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampTabs.vue
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 =======
@@ -134,6 +151,13 @@ const as = useAccountStore()
                                     'text-inspiration': as.colorBlindMode,
 >>>>>>> c29d3eca (update 84 files and delete 4 files)
 >>>>>>> c5d8fff8 (update 84 files and delete 4 files)
+=======
+=======
+                                    'text-inspiration': as.colorBlindMode,
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
+>>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
                                 }" />
                         </p>
                         <p class="flex items-center text-nowrap">

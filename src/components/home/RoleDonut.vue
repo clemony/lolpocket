@@ -1,5 +1,8 @@
 <script setup lang="ts">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
 <<<<<<< HEAD:src/components/home/RoleDonut.vue
 import { summoner } from '@data/playerData'
 
@@ -14,16 +17,23 @@ import {
     DoughnutController,
     ArcElement,
 } from 'chart.js'
+<<<<<<< HEAD
+=======
+import 'chartjs-plugin-style'
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
 
 ChartJS.register(Tooltip, DoughnutController, ArcElement)
 
 const colors = {
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/RoleDonut.vue
+<<<<<<< HEAD
 =======
 import { summoner } from '@data/playerData'
 
 const hexColors = {
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
     support: '#99c4c8',
     bottom: '#ebcb8b',
     mid: '#be86b5',
@@ -32,14 +42,20 @@ const hexColors = {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
 <<<<<<< HEAD:src/components/home/RoleDonut.vue
 /* function gradient(context) {
 =======
 function gradient(context) {
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/RoleDonut.vue
+<<<<<<< HEAD
 =======
 /* function gradient(context) {
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
     const index = context.dataIndex
     console.log('💠 - gradient - index:', index)
     const value = context.dataset.data[index]
@@ -53,9 +69,13 @@ function gradient(context) {
     g.addColorStop(1, 'blue')
     return g
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/home/RoleDonut.vue
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+=======
+<<<<<<< HEAD:src/components/home/RoleDonut.vue
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
 } */
 
 const labels = ['Support', 'Bottom', 'Mid', 'Jungle', 'Top']
@@ -78,6 +98,9 @@ const colors = [
     hexColors.top,
 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
 =======
 }
 
@@ -119,21 +142,30 @@ const chartData = {
     },
 }
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/RoleDonut.vue
+<<<<<<< HEAD
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
 
 const chartRef = document.getElementById('roleChart') as HTMLCanvasElement
 
 const mostRoled = computed(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
 <<<<<<< HEAD:src/components/home/RoleDonut.vue
     /*     const labelValuePairs = chartData.labels.map((label, index) => ({
 =======
     const labelValuePairs = chartData.labels.map((label, index) => ({
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/RoleDonut.vue
+<<<<<<< HEAD
 =======
     /*     const labelValuePairs = chartData.labels.map((label, index) => ({
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
         label,
         value: chartData.datasets[0].data[index],
     }))
@@ -141,16 +173,22 @@ const mostRoled = computed(() => {
         current.value > max.value ? current : max
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
 <<<<<<< HEAD:src/components/home/RoleDonut.vue
     return highestPair.label */
     return 'Support'
 =======
     return highestPair.label
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/RoleDonut.vue
+<<<<<<< HEAD
 =======
     return highestPair.label */
     return 'Support'
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
 })
 </script>
 <template>
@@ -160,9 +198,13 @@ const mostRoled = computed(() => {
                 v-if="mostRoled == 'Support'"
                 class="drop-shadow-neutral/70 size-8 drop-shadow-xs"
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/home/RoleDonut.vue
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+=======
+<<<<<<< HEAD:src/components/home/RoleDonut.vue
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
                 :style="{ color: hexColors.support }" />
             <BottomSvg
                 v-if="mostRoled == 'Bottom'"
@@ -188,6 +230,9 @@ const mostRoled = computed(() => {
             :labels="labels"
             aria="Playrate by role in percentage" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
 =======
                 :style="{ color: colors.support }" />
             <BottomSvg
@@ -216,8 +261,11 @@ const mostRoled = computed(() => {
             aria-label="Percentage of recent games by role"
             role="img" />
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/RoleDonut.vue
+<<<<<<< HEAD
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+=======
+>>>>>>> 44bf1088 (update 38 files and delete 54 files)
     </div>
 </template>
 <style></style>
