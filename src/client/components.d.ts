@@ -167,6 +167,7 @@ declare module 'vue' {
     Collapsible: typeof import('./components/base/collapsible/Collapsible.vue')['default']
     CollapsibleContent: typeof import('./components/base/collapsible/CollapsibleContent.vue')['default']
     CollapsibleTrigger: typeof import('./components/base/collapsible/CollapsibleTrigger.vue')['default']
+<<<<<<< HEAD
     ColorPicker: typeof import('./components/utility/ColorPicker.vue')['default']
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -213,6 +214,9 @@ declare module 'vue' {
 =======
     ColorPicker: typeof import('./components/utility/ColorPicker.vue')['default']
 >>>>>>> 90299573 (update 38 files and delete 54 files)
+=======
+    ColorPicker: typeof import('./components/layout/utility/color-picker.vue')['default']
+>>>>>>> 3de7f5b3 (update components.d.ts)
     ColumnTools: typeof import('./components/table/panels/ColumnTools.vue')['default']
     Command: typeof import('./components/command/Command.vue')['default']
     CommandDialog: typeof import('./components/base/command/CommandDialog.vue')['default']
@@ -240,6 +244,7 @@ declare module 'vue' {
     ContextMenuSubTrigger: typeof import('./components/base/context-menu/ContextMenuSubTrigger.vue')['default']
     ContextMenuTrigger: typeof import('./components/base/context-menu/ContextMenuTrigger.vue')['default']
     copy: typeof import('./components/menu/dropdown/dd-itemset copy.vue')['default']
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -273,6 +278,9 @@ declare module 'vue' {
 =======
     CreateIcon: typeof import('./components/utility/CreateIcon.vue')['default']
 >>>>>>> 90299573 (update 38 files and delete 54 files)
+=======
+    CreateIcon: typeof import('./components/layout/utility/create-icon.vue')['default']
+>>>>>>> 3de7f5b3 (update components.d.ts)
     DashboardItems: typeof import('./components/pocket/dashboard/DashboardItems.vue')['default']
     DashboardOverview: typeof import('./components/pocket/dashboard/DashboardOverview.vue')['default']
     DashboardRunes: typeof import('./components/pocket/dashboard/DashboardRunes.vue')['default']
@@ -442,6 +450,7 @@ declare module 'vue' {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Grow: typeof import('./components/utility/Grow.vue')['default']
     HeaderCard: typeof import('./components/ui/HeaderCard.vue')['default']
     Grow: typeof import('./components/utility/Grow.vue')['default']
@@ -449,6 +458,10 @@ declare module 'vue' {
 <<<<<<< HEAD
     Grow: typeof import('./components/utility/Grow.vue')['default']
     HeaderCard: typeof import('./components/ui/HeaderCard.vue')['default']
+=======
+    Grow: typeof import('./components/layout/utility/Grow.vue')['default']
+    HeaderCard: typeof import('./components/layout/HeaderCard.vue')['default']
+>>>>>>> 3de7f5b3 (update components.d.ts)
     HeartIcons: typeof import('./components/buttons/HeartIcons.vue')['default']
     Hide: typeof import('./components/utility/Hide.vue')['default']
     History: typeof import('./components/app/History.vue')['default']
@@ -519,6 +532,7 @@ declare module 'vue' {
     IconPicker: typeof import('./components/pocket/ui/IconPicker.vue')['default']
     IconRenderer: typeof import('./components/table/IconRenderer.vue')['default']
 <<<<<<< HEAD
+<<<<<<< HEAD
     InfoCard: typeof import('./components/layout/InfoCard.vue')['default']
 >>>>>>> f5f00c30 (update components.d.ts)
 =======
@@ -528,6 +542,9 @@ declare module 'vue' {
 =======
     InfoCard: typeof import('./components/ui/InfoCard.vue')['default']
 >>>>>>> 90299573 (update 38 files and delete 54 files)
+=======
+    InfoCard: typeof import('./components/layout/InfoCard.vue')['default']
+>>>>>>> 3de7f5b3 (update components.d.ts)
     Input: typeof import('./components/base/input/Input.vue')['default']
     InputEditable: typeof import('./components/inputs/InputEditable.vue')['default']
     InputResizable: typeof import('./components/inputs/InputResizable.vue')['default']
@@ -757,6 +774,7 @@ declare module 'vue' {
     PocketChampions: typeof import('./components/pocket/champions/PocketChampions.vue')['default']
     PocketDashboard: typeof import('./components/pocket/dashboard/PocketDashboard.vue')['default']
     PocketDrawer: typeof import('./components/drawer/PocketDrawer.vue')['default']
+    PocketGrid: typeof import('./components/table/PocketGrid.vue')['default']
     PocketGrid: typeof import('./components/table/PocketGrid.vue')['default']
     PocketIcon: typeof import('./components/pocket/ui/PocketIcon.vue')['default']
     PocketItems: typeof import('./components/pocket/items/PocketItems.vue')['default']
@@ -1178,6 +1196,7 @@ declare module 'vue' {
     Switch: typeof import('./components/base/switch/Switch.vue')['default']
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
     TabHandle: typeof import('./components/base/resizable/tab-handle.vue')['default']
+    TableSearch: typeof import('./components/table/TableSearch.vue')['default']
     TableSearch: typeof import('./components/table/TableSearch.vue')['default']
     Tabs: typeof import('./components/base/tabs/Tabs.vue')['default']
     TabsContent: typeof import('./components/base/tabs/TabsContent.vue')['default']
