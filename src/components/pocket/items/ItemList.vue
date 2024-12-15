@@ -11,9 +11,6 @@ const props = defineProps<{
     dragDisabled?: boolean
     class?: HTMLAttributes['class']
 }>()
-/* --------------------------- FILTER -------------------------- */
-
-// Filter logic
 const filteredItems = computed(() => {
     let filtered = ts.items
 
