@@ -9,6 +9,7 @@ export const useAccountStore = defineStore(
     () => {
         const theme = ref('light')
         const accents = ref('light')
+<<<<<<< HEAD:src/stores/accountStore.ts
         watch(theme, (newValue) => {
             document.documentElement.setAttribute('data-theme', newValue)
         })
@@ -16,10 +17,16 @@ export const useAccountStore = defineStore(
         watch(accents, (newValue) => {
             document.documentElement.setAttribute('data-accents', newValue)
         })
+=======
+>>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/stores/generalStore.ts
 
         const reducedMotion = ref(false)
         const colorBlindMode = ref(false)
 
+<<<<<<< HEAD:src/stores/accountStore.ts
+=======
+        const app = ref()
+>>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/stores/generalStore.ts
         const isMinimized = ref(false)
         const sidebarState = ref()
         const defaultSidebarState = ref(true)
@@ -35,11 +42,23 @@ export const useAccountStore = defineStore(
         const pocketPreview = ref(false)
         const routeHistory = []
 
+<<<<<<< HEAD:src/stores/accountStore.ts
         const favoriteChamps = ref<Champion[]>([])
 
         //items
         const favoriteItems = ref<Item[]>([])
         const itemSets = ref<ItemSet[]>([])
+=======
+        watch(theme, (newValue) => {
+            document.documentElement.setAttribute('data-theme', newValue)
+        })
+
+        // Watch for mode changes
+        watch(accents, (newMode) => {
+            document.documentElement.setAttribute('data-mode', newMode)
+            //console.log(`Mode changed to: ${newMode}`);
+        })
+>>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/stores/generalStore.ts
 
         return {
             //settings

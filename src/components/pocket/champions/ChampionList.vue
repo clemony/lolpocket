@@ -109,7 +109,11 @@ watch(
         class="max-h-inherit h-inherit scrollbar-hide flex flex-wrap items-start justify-around gap-4 overflow-y-auto rounded-lg pt-4 pb-4"
         @start="console.log($event)">
         <TransitionGroup name="pop">
+<<<<<<< HEAD:src/components/pocket/champions/ChampionList.vue
         
+=======
+            >
+>>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/components/pocket/champions/ChampionList.vue
             <label
                 v-for="champion in filteredChampions"
                 :key="champion.name"
@@ -120,7 +124,11 @@ watch(
                 <input
                     type="radio"
                     :value="champion"
+<<<<<<< HEAD:src/components/pocket/champions/ChampionList.vue
                     v-model="ts.selectedChampion"
+=======
+                    v-model="cs.selectedChampion"
+>>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/components/pocket/champions/ChampionList.vue
                     class="peer hidden" />
                 <LoadImg
                     :url="`/img/champions/${clean(champion.name)}.webp`"

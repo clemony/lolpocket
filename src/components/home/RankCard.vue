@@ -42,17 +42,25 @@ const colors = [colorB3.value, color1.value]
                 {{ 'Ranked ' + props.title }}
             </p>
         </template>
+<<<<<<< HEAD:src/components/home/RankCard.vue
         <div
             class="relative grid grid-cols-[1.1fr_1fr_1fr] place-items-center pt-6">
             <div>
                 <div
                     class="absolute top-1 left-1 grid size-34 place-items-center">
+=======
+        <div class="relative grid grid-cols-3 place-items-center pt-7">
+            <div>
+                <div
+                    class="absolute top-1 left-2 grid size-34 place-items-center">
+>>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/components/home/RankCard.vue
                     <img
                         :src="`/img/crests/${queue.rank}.webp`"
                         class="object-contain drop-shadow-lg" />
                 </div>
             </div>
             <div class="relative">
+<<<<<<< HEAD:src/components/home/RankCard.vue
                 <Donut
                     :datasets="datasets"
                     :colors="colors"
@@ -64,6 +72,29 @@ const colors = [colorB3.value, color1.value]
                 <span class="text-bc absolute top-8 left-7 font-medium">
                     {{ winrate }}%
                 </span>
+=======
+                <div
+                    :style="{
+                        '--value': winrate,
+                    }"
+                    class="radial-progress absolute -top-10 -left-9 size-20 drop-shadow-xs"
+                    :class="{
+                        'text-bc': rank == 'unranked',
+                        'text-iron': rank == 'gold',
+                        'text-bronze': rank == 'bronze',
+                        'text-silver': rank == 'silver',
+                        'text-gold': rank == 'gold',
+                        'text-platinum': rank == 'platinum',
+                        'text-emerald': rank == 'emerald',
+                        'text-diamond': rank == 'diamond',
+                        'text-master': rank == 'master',
+                        'text-grandmaster': rank == 'grandmaster',
+                        'text-challenger': rank == 'challenger',
+                    }"
+                    role="progressbar">
+                    <span class="text-bc font-medium">{{ winrate }}%</span>
+                </div>
+>>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/components/home/RankCard.vue
             </div>
             <div
                 class="text-2 mt-0 flex flex-col justify-center gap-2 font-medium">

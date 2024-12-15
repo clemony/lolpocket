@@ -1,10 +1,19 @@
 <script setup lang="ts">
+<<<<<<< HEAD:src/pages/Settings.vue
 import GeneralSettings from '@/components/settings/GeneralSettings.vue'
 import { useAccountStore } from '@stores/accountStore'
 import AppearanceSettings from '@/components/settings/AppearanceSettings.vue'
 
 const as = useAccountStore()
 const settinas = useAccountStore()
+=======
+import GeneralSettings from '@/client/components/settings/GeneralSettings.vue'
+import { useGeneralStore } from '@/client/stores/generalStore'
+import AppearanceSettings from '@/client/components/settings/AppearanceSettings.vue'
+
+const gs = useGeneralStore()
+const settings = useGeneralStore()
+>>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/pages/Settings.vue
 
 // Use ref to track the selected framework
 </script>

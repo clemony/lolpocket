@@ -3,7 +3,11 @@
 import { usePocketStore } from '@/stores/pocketStore'
 ========
 import { usePocketStore } from '@/client/stores/pocketStore'
+<<<<<<< HEAD
 >>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/sidebar/SidebarPocketDisplays.vue
+=======
+>>>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/components/sidebar/SidebarPocketDisplays.vue
+>>>>>>> 12d6db59 (update 38 files and delete 54 files)
 
 const ps = usePocketStore()
 </script>

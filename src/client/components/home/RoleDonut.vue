@@ -1,13 +1,23 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 import { summoner } from '@data/playerData'
 import { Doughnut } from 'vue-chartjs'
 import { externalTooltip } from '@config/charts'
+=======
+import { summoner } from '@/client/data/playerData'
+import { Doughnut } from 'vue-chartjs'
+import { externalTooltip } from '@/client/config/charts'
+>>>>>>> 12d6db59 (update 38 files and delete 54 files)
 import {
     Chart as ChartJS,
     Tooltip,
     DoughnutController,
     ArcElement,
 } from 'chart.js'
+<<<<<<< HEAD
+=======
+import 'chartjs-plugin-style'
+>>>>>>> 12d6db59 (update 38 files and delete 54 files)
 
 ChartJS.register(Tooltip, DoughnutController, ArcElement)
 

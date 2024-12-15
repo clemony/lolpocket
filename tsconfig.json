@@ -2,8 +2,13 @@
     "include": [
         "src/**/*",
         "auto-imports.d.ts",
+<<<<<<< HEAD
         "components.d.ts",
         "types.d.ts"
+=======
+        "types.d.ts",
+        "api/*"
+>>>>>>> 12d6db59 (update 38 files and delete 54 files)
     ],
     "exclude": [
         "node_modules",

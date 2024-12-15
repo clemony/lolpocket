@@ -1,0 +1,79 @@
+<script setup lang="ts">
+import { useGeneralStore } from '@/client/stores/generalStore'
+
+const gs = useGeneralStore()
+const motion = ref()
+const sidebar = ref(gs.defaultSidebarState)
+const toggleSetting = (model) => {
+    useToggle(model)
+}
+
+const settingsData = {
+    general: [
+        {
+            title: 'Reduce Motion',
+            description: 'Reduce the wobblies.',
+            model: gs.reducedMotion,
+            text: gs.reducedMotion == false ? 'Wigglies On' : 'Less Wobblies',
+        },
+        {
+            title: 'Suppress Pocket Preview',
+            description:
+                'The little pocket that slides down in the sidebar and is annoying sometimes.',
+            model: gs.pocketPreview,
+            text:
+                gs.pocketPreview == false ?
+                    'Previews Visible'
+                :   'Previews Hidden',
+        },
+        {
+            title: 'Colorblind Mode',
+            description: 'Changes many of the green shades to blue.',
+            model: gs.colorBlindMode,
+            text:
+                gs.colorBlindMode == false ? 'Colorblind Off' : 'Colorblind On',
+        },
+        {
+            title: 'Sidebar Default State',
+            description:
+                'Upon login, should your sidebar be expanded or collapsed?.',
+            model: sidebar.value,
+            text: gs.defaultSidebarState == false ? 'Collapsed' : 'Expanded',
+        },
+    ],
+}
+</script>
+<template>
+    <main class="w-full">
+        <LayoutSpacer class="col-span-full h-40!" />
+        <div class="grid w-full grid-cols-3 gap-6 px-2 *:size-full">
+            <DisplayCard
+                v-for="item in settingsData.general"
+                class="relative !h-56 grid-rows-2 **:tracking-tight">
+                <template #header>
+                    <h4>{{ item.title }}</h4>
+                </template>
+                <template #description>
+                    <div class="grow">
+                        {{ item.description }}
+                    </div>
+                </template>
+
+                <label
+                    class="absolute bottom-0 left-0 flex w-full cursor-pointer items-end gap-4 p-6"
+                    @click="toggleSetting(item.model)">
+                    <Switch v-model:checked="item.model" />
+                    <span class="label-text w-full text-left">
+                        {{ item.text }}
+                    </span>
+                </label>
+            </DisplayCard>
+        </div>
+
+        <div class="border-t-b2 mt-8 flex border-t pt-6">
+            <Button size="md">Save</Button>
+            <Grow />
+        </div>
+    </main>
+</template>
+<style scoped></style>
