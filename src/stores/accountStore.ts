@@ -26,6 +26,7 @@ export const useAccountStore = defineStore(
         const theme = ref('light')
         const accents = ref('light')
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/stores/accountStore.ts
 =======
 <<<<<<<< HEAD:src/stores/generalStore.ts
@@ -33,6 +34,9 @@ export const useAccountStore = defineStore(
 ========
 >>>>>>>> 404a531d (update 84 files and delete 4 files):src/stores/accountStore.ts
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+<<<<<<< HEAD:src/stores/accountStore.ts
+>>>>>>> 58212a1a (update 38 files and delete 54 files)
         watch(theme, (newValue) => {
             document.documentElement.setAttribute('data-theme', newValue)
         })
@@ -40,6 +44,7 @@ export const useAccountStore = defineStore(
         watch(accents, (newValue) => {
             document.documentElement.setAttribute('data-accents', newValue)
         })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/stores/generalStore.ts
@@ -50,10 +55,15 @@ export const useAccountStore = defineStore(
 ========
 >>>>>>>> 404a531d (update 84 files and delete 4 files):src/stores/accountStore.ts
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+=======
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/stores/generalStore.ts
+>>>>>>> 58212a1a (update 38 files and delete 54 files)
 
         const reducedMotion = ref(false)
         const colorBlindMode = ref(false)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<<< HEAD:src/stores/generalStore.ts
@@ -67,6 +77,12 @@ export const useAccountStore = defineStore(
 ========
 >>>>>>>> 404a531d (update 84 files and delete 4 files):src/stores/accountStore.ts
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+<<<<<<< HEAD:src/stores/accountStore.ts
+=======
+        const app = ref()
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/stores/generalStore.ts
+>>>>>>> 58212a1a (update 38 files and delete 54 files)
         const isMinimized = ref(false)
         const sidebarState = ref()
         const defaultSidebarState = ref(true)
@@ -83,9 +99,12 @@ export const useAccountStore = defineStore(
         const routeHistory = []
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:src/stores/generalStore.ts
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 58212a1a (update 38 files and delete 54 files)
 <<<<<<< HEAD:src/stores/accountStore.ts
         const favoriteChamps = ref<Champion[]>([])
 
@@ -102,6 +121,7 @@ export const useAccountStore = defineStore(
             document.documentElement.setAttribute('data-mode', newMode)
             //console.log(`Mode changed to: ${newMode}`);
         })
+<<<<<<< HEAD
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/stores/generalStore.ts
 <<<<<<< HEAD
 =======
@@ -113,6 +133,9 @@ export const useAccountStore = defineStore(
         const itemSets = ref<ItemSet[]>([])
 >>>>>>>> 404a531d (update 84 files and delete 4 files):src/stores/accountStore.ts
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/stores/generalStore.ts
+>>>>>>> 58212a1a (update 38 files and delete 54 files)
 
         return {
             //settings
