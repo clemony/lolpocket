@@ -280,6 +280,7 @@ declare module 'vue' {
 >>>>>>> f5f00c30 (update components.d.ts)
 =======
     CreateIcon: typeof import('./components/utility/CreateIcon.vue')['default']
+<<<<<<< HEAD
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 =======
     CreateIcon: typeof import('./components/utility/CreateIcon.vue')['default']
@@ -308,6 +309,9 @@ declare module 'vue' {
 =======
     CreateIcon: typeof import('./components/utility/CreateIcon.vue')['default']
 >>>>>>> 3193e323 (update 38 files and delete 54 files)
+=======
+    CreateIcon: typeof import('./components/utility/CreateIcon.vue')['default']
+>>>>>>> 52f322ec (update 38 files and delete 54 files)
     DashboardItems: typeof import('./components/pocket/dashboard/DashboardItems.vue')['default']
     DashboardOverview: typeof import('./components/pocket/dashboard/DashboardOverview.vue')['default']
     DashboardRunes: typeof import('./components/pocket/dashboard/DashboardRunes.vue')['default']
