@@ -178,12 +178,16 @@ declare module 'vue' {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
 =======
 >>>>>>> f5f00c30 (update components.d.ts)
 =======
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -192,11 +196,15 @@ declare module 'vue' {
 >>>>>>> 90299573 (update 38 files and delete 54 files)
 =======
 >>>>>>> 3193e323 (update 38 files and delete 54 files)
+=======
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     ChampTabs: typeof import('./components/home/ChampTabs.vue')['default']
     ChartCrosshair: typeof import('./components/base/chart/ChartCrosshair.vue')['default']
     ChartLegend: typeof import('./components/base/chart/ChartLegend.vue')['default']
     ChartSingleTooltip: typeof import('./components/base/chart/ChartSingleTooltip.vue')['default']
     ChartTooltip: typeof import('./components/base/chart/ChartTooltip.vue')['default']
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -221,6 +229,9 @@ declare module 'vue' {
 >>>>>>> 115d5a5c (update components.d.ts)
 =======
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+>>>>>>> 90299573 (update 38 files and delete 54 files)
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     Checkbox: typeof import('./components/base/checkbox/Checkbox.vue')['default']
     CmOptionItems: typeof import('./components/menu/options/cm-option-items.vue')['default']
     CmOptionName: typeof import('./components/menu/options/cm-option-name.vue')['default']
@@ -237,6 +248,7 @@ declare module 'vue' {
     Collapse: typeof import('./components/ui/Collapse.vue')['default']
     Collapse: typeof import('./components/ui/Collapse.vue')['default']
     Collapse: typeof import('./components/ui/Collapse.vue')['default']
+    Collapse: typeof import('./components/ui/Collapse.vue')['default']
     Collapsible: typeof import('./components/base/collapsible/Collapsible.vue')['default']
     CollapsibleContent: typeof import('./components/base/collapsible/CollapsibleContent.vue')['default']
     CollapsibleTrigger: typeof import('./components/base/collapsible/CollapsibleTrigger.vue')['default']
@@ -246,6 +258,9 @@ declare module 'vue' {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
 =======
 =======
 >>>>>>> f5f00c30 (update components.d.ts)
@@ -295,6 +310,7 @@ declare module 'vue' {
 =======
     ColorPicker: typeof import('./components/utility/ColorPicker.vue')['default']
 >>>>>>> 90299573 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 =======
     ColorPicker: typeof import('./components/layout/utility/color-picker.vue')['default']
 >>>>>>> 3de7f5b3 (update components.d.ts)
@@ -325,6 +341,8 @@ declare module 'vue' {
     ColorPicker: typeof import('./components/utility/ColorPicker.vue')['default']
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     ColumnTools: typeof import('./components/table/panels/ColumnTools.vue')['default']
     Command: typeof import('./components/command/Command.vue')['default']
     CommandDialog: typeof import('./components/base/command/CommandDialog.vue')['default']
@@ -422,6 +440,7 @@ declare module 'vue' {
 =======
 >>>>>>> 44bf1088 (update 38 files and delete 54 files)
     CreateIcon: typeof import('./components/utility/CreateIcon.vue')['default']
+<<<<<<< HEAD
 =======
     CreateIcon: typeof import('./components/layout/utility/create-icon.vue')['default']
 >>>>>>> f5f00c30 (update components.d.ts)
@@ -431,7 +450,13 @@ declare module 'vue' {
 =======
     CreateIcon: typeof import('./components/utility/CreateIcon.vue')['default']
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
+<<<<<<< HEAD
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+=======
+    CreateIcon: typeof import('./components/utility/CreateIcon.vue')['default']
+>>>>>>> 90299573 (update 38 files and delete 54 files)
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     DashboardItems: typeof import('./components/pocket/dashboard/DashboardItems.vue')['default']
     DashboardOverview: typeof import('./components/pocket/dashboard/DashboardOverview.vue')['default']
     DashboardRunes: typeof import('./components/pocket/dashboard/DashboardRunes.vue')['default']
@@ -500,6 +525,7 @@ declare module 'vue' {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     DisplayCard: typeof import('./components/ui/DisplayCard.vue')['default']
     DividerStart: typeof import('./components/utility/DividerStart.vue')['default']
@@ -535,6 +561,8 @@ declare module 'vue' {
     DonutChart: typeof import('./components/base/chart-donut/DonutChart.vue')['default']
 >>>>>>> 18878a61 (update 38 files and delete 54 files)
 =======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
+=======
     DisplayCard: typeof import('./components/layout/DisplayCard.vue')['default']
     DividerStart: typeof import('./components/layout/utility/DividerStart.vue')['default']
 >>>>>>> f5f00c30 (update components.d.ts)
@@ -548,6 +576,7 @@ declare module 'vue' {
     DividerStart: typeof import('./components/utility/DividerStart.vue')['default']
     DonutChart: typeof import('./components/base/chart-donut/DonutChart.vue')['default']
 >>>>>>> 90299573 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 =======
     DisplayCard: typeof import('./components/ui/DisplayCard.vue')['default']
     DividerStart: typeof import('./components/utility/DividerStart.vue')['default']
@@ -559,6 +588,8 @@ declare module 'vue' {
 >>>>>>> 115d5a5c (update components.d.ts)
 =======
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     Drawer: typeof import('./components/drawer/Drawer.vue')['default']
     DrawerContent: typeof import('./components/base/drawer/DrawerContent.vue')['default']
     DrawerDescription: typeof import('./components/base/drawer/DrawerDescription.vue')['default']
@@ -599,6 +630,7 @@ declare module 'vue' {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     ErrorMessage: typeof import('./components/utility/ErrorMessage.vue')['default']
     ExpandIndicator: typeof import('./components/utility/ExpandIndicator.vue')['default']
@@ -629,6 +661,8 @@ declare module 'vue' {
     ExpandIndicator: typeof import('./components/utility/ExpandIndicator.vue')['default']
 >>>>>>> 18878a61 (update 38 files and delete 54 files)
 =======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
+=======
     ErrorMessage: typeof import('./components/layout/utility/ErrorMessage.vue')['default']
     ExpandIndicator: typeof import('./components/layout/utility/ExpandIndicator.vue')['default']
 >>>>>>> f5f00c30 (update components.d.ts)
@@ -640,6 +674,7 @@ declare module 'vue' {
     ErrorMessage: typeof import('./components/utility/ErrorMessage.vue')['default']
     ExpandIndicator: typeof import('./components/utility/ExpandIndicator.vue')['default']
 >>>>>>> 90299573 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 =======
     ErrorMessage: typeof import('./components/utility/ErrorMessage.vue')['default']
     ExpandIndicator: typeof import('./components/utility/ExpandIndicator.vue')['default']
@@ -650,6 +685,8 @@ declare module 'vue' {
 >>>>>>> 115d5a5c (update components.d.ts)
 =======
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     Export: typeof import('./components/buttons/Export.vue')['default']
     Favorites: typeof import('./pages/Favorites.vue')['default']
     FilterButton: typeof import('./components/buttons/FilterButton.vue')['default']
@@ -680,6 +717,7 @@ declare module 'vue' {
     Grow: typeof import('./components/utility/Grow.vue')['default']
     HeaderCard: typeof import('./components/ui/HeaderCard.vue')['default']
 <<<<<<< HEAD
+<<<<<<< HEAD
     Grow: typeof import('./components/utility/Grow.vue')['default']
     HeaderCard: typeof import('./components/ui/HeaderCard.vue')['default']
 <<<<<<< HEAD
@@ -696,12 +734,19 @@ declare module 'vue' {
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
 =======
 >>>>>>> 3193e323 (update 38 files and delete 54 files)
+=======
+    Grow: typeof import('./components/utility/Grow.vue')['default']
+    HeaderCard: typeof import('./components/ui/HeaderCard.vue')['default']
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     HeartIcons: typeof import('./components/buttons/HeartIcons.vue')['default']
     Hide: typeof import('./components/utility/Hide.vue')['default']
     History: typeof import('./components/app/History.vue')['default']
     Hide: typeof import('./components/utility/Hide.vue')['default']
     History: typeof import('./components/app/History.vue')['default']
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     Home: typeof import('./pages/Home.vue')['default']
     HotkeySettings: typeof import('./components/settings/HotkeySettings.vue')['default']
     HvPocket: typeof import('./components/menu/hover/hv-pocket.vue')['default']
@@ -709,6 +754,7 @@ declare module 'vue' {
     IconPicker: typeof import('./components/pocket/ui/IconPicker.vue')['default']
     IconRenderer: typeof import('./components/table/IconRenderer.vue')['default']
     InfoCard: typeof import('./components/ui/InfoCard.vue')['default']
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -802,6 +848,8 @@ declare module 'vue' {
 >>>>>>> be133e04 (update 8 files and delete 426 files)
 =======
 =======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
+=======
     Grow: typeof import('./components/layout/utility/Grow.vue')['default']
     HeaderCard: typeof import('./components/layout/HeaderCard.vue')['default']
 =======
@@ -825,7 +873,13 @@ declare module 'vue' {
 =======
     InfoCard: typeof import('./components/ui/InfoCard.vue')['default']
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
+<<<<<<< HEAD
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+=======
+    InfoCard: typeof import('./components/ui/InfoCard.vue')['default']
+>>>>>>> 90299573 (update 38 files and delete 54 files)
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     Input: typeof import('./components/base/input/Input.vue')['default']
     InputEditable: typeof import('./components/inputs/InputEditable.vue')['default']
     InputResizable: typeof import('./components/inputs/InputResizable.vue')['default']
@@ -855,11 +909,13 @@ declare module 'vue' {
 =======
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
     JungleSvg: typeof import('./components/ui/role/JungleSvg.vue')['default']
+    JungleSvg: typeof import('./components/ui/role/JungleSvg.vue')['default']
     Keystone: typeof import('./components/pocket/runes/Keystone.vue')['default']
     Label: typeof import('./components/base/label/Label.vue')['default']
     Layout2: typeof import('./components/app/page-layouts/Layout2.vue')['default']
     Layout3: typeof import('./components/app/page-layouts/Layout3.vue')['default']
     LayoutSpacer: typeof import('./components/utility/LayoutSpacer.vue')['default']
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -889,6 +945,8 @@ declare module 'vue' {
     LayoutSpacer: typeof import('./components/utility/LayoutSpacer.vue')['default']
 =======
 >>>>>>> 3193e323 (update 38 files and delete 54 files)
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     Layout2: typeof import('./components/app/page-layouts/Layout2.vue')['default']
     Layout3: typeof import('./components/app/page-layouts/Layout3.vue')['default']
     LayoutSpacer: typeof import('./components/utility/LayoutSpacer.vue')['default']
@@ -1031,12 +1089,19 @@ declare module 'vue' {
 >>>>>>> 115d5a5c (update components.d.ts)
 =======
     MidSvg: typeof import('./components/ui/role/MidSvg.vue')['default']
+<<<<<<< HEAD
 =======
 >>>>>>> f5f00c30 (update components.d.ts)
 =======
     MidSvg: typeof import('./components/ui/role/MidSvg.vue')['default']
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
+<<<<<<< HEAD
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+=======
+    MidSvg: typeof import('./components/ui/role/MidSvg.vue')['default']
+>>>>>>> 90299573 (update 38 files and delete 54 files)
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     Modal: typeof import('./components/command/Modal.vue')['default']
     Motion: typeof import('@oku-ui/motion')['Motion']
     MotionPresence: typeof import('@oku-ui/motion')['MotionPresence']
@@ -1072,6 +1137,9 @@ declare module 'vue' {
     News: typeof import('./components/menubar/News.vue')['default']
     PageLayout: typeof import('./components/app/page-layouts/PageLayout.vue')['default']
     PageNav: typeof import('./components/app/page-layouts/PageNav.vue')['default']
+    News: typeof import('./components/menubar/News.vue')['default']
+    PageLayout: typeof import('./components/app/page-layouts/PageLayout.vue')['default']
+    PageNav: typeof import('./components/app/page-layouts/PageNav.vue')['default']
     Placeholder: typeof import('./components/placeholders/placeholder.vue')['default']
     PlayerCard: typeof import('./components/home/PlayerCard.vue')['default']
     PlayerMatches: typeof import('./components/home/PlayerMatches.vue')['default']
@@ -1081,6 +1149,9 @@ declare module 'vue' {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
 =======
 =======
 >>>>>>> f5f00c30 (update components.d.ts)
@@ -1102,6 +1173,7 @@ declare module 'vue' {
     PlayerCard: typeof import('./components/home/PlayerCard.vue')['default']
     PlayerMatches: typeof import('./components/home/PlayerMatches.vue')['default']
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     PlayerMatches: typeof import('./components/home/PlayerMatches.vue')['default']
@@ -1140,6 +1212,11 @@ declare module 'vue' {
 >>>>>>> 115d5a5c (update components.d.ts)
 =======
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+=======
+    PlayerMatches: typeof import('./components/home/PlayerMatches.vue')['default']
+>>>>>>> 90299573 (update 38 files and delete 54 files)
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     Pocket: typeof import('./components/pocket/Pocket.vue')['default']
     PocketCard: typeof import('./components/pocket/pocket-cards/PocketCard.vue')['default']
     PocketCards: typeof import('./pages/PocketCards.vue')['default']
@@ -1177,8 +1254,10 @@ declare module 'vue' {
 =======
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
     ResizeHandle: typeof import('./components/utility/ResizeHandle.vue')['default']
+    ResizeHandle: typeof import('./components/utility/ResizeHandle.vue')['default']
     Resources: typeof import('./components/home/Resources.vue')['default']
     RoleDonut: typeof import('./components/home/RoleDonut.vue')['default']
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1215,6 +1294,8 @@ declare module 'vue' {
     RoleDonut: typeof import('./components/home/RoleDonut.vue')['default']
 >>>>>>> 18878a61 (update 38 files and delete 54 files)
 =======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
+=======
     ResizeHandle: typeof import('./components/layout/utility/ResizeHandle.vue')['default']
     Resources: typeof import('./components/home/Resources.vue')['default']
 >>>>>>> f5f00c30 (update components.d.ts)
@@ -1226,6 +1307,7 @@ declare module 'vue' {
 =======
     RoleDonut: typeof import('./components/home/RoleDonut.vue')['default']
 >>>>>>> 90299573 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 =======
     RoleDonut: typeof import('./components/home/RoleDonut.vue')['default']
 >>>>>>> 3193e323 (update 38 files and delete 54 files)
@@ -1235,6 +1317,8 @@ declare module 'vue' {
 >>>>>>> 115d5a5c (update components.d.ts)
 =======
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     RuneInfo: typeof import('./components/pocket/runes/RuneInfo.vue')['default']
@@ -1261,6 +1345,7 @@ declare module 'vue' {
 =======
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
     SearchButton: typeof import('./components/menubar/SearchButton.vue')['default']
+    SearchButton: typeof import('./components/menubar/SearchButton.vue')['default']
     SelectedChampions: typeof import('./components/pocket/champions/SelectedChampions.vue')['default']
     Separator: typeof import('./components/base/separator/Separator.vue')['default']
     Settings: typeof import('./pages/Settings.vue')['default']
@@ -1271,6 +1356,9 @@ declare module 'vue' {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
 =======
 =======
 >>>>>>> f5f00c30 (update components.d.ts)
@@ -1292,6 +1380,7 @@ declare module 'vue' {
     Settings: typeof import('./pages/Settings.vue')['default']
     SettingsDropdown: typeof import('./components/menubar/SettingsDropdown.vue')['default']
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     SettingsDropdown: typeof import('./components/menubar/SettingsDropdown.vue')['default']
@@ -1328,6 +1417,11 @@ declare module 'vue' {
 >>>>>>> 115d5a5c (update components.d.ts)
 =======
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+=======
+    SettingsDropdown: typeof import('./components/menubar/SettingsDropdown.vue')['default']
+>>>>>>> 90299573 (update 38 files and delete 54 files)
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     ShadowedPlaceholder: typeof import('./components/placeholders/ShadowedPlaceholder.vue')['default']
     Sheet: typeof import('./components/base/sheet/Sheet.vue')['default']
     SheetClose: typeof import('./components/base/sheet/SheetClose.vue')['default']
@@ -1357,11 +1451,16 @@ declare module 'vue' {
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
     Shortkey: typeof import('./components/utility/Shortkey.vue')['default']
     Shortkeys: typeof import('./components/app/Shortkeys.vue')['default']
+    Shortkey: typeof import('./components/utility/Shortkey.vue')['default']
+    Shortkeys: typeof import('./components/app/Shortkeys.vue')['default']
     Sidebar: typeof import('./components/base/sidebar/Sidebar.vue')['default']
+    SidebarAccount: typeof import('./components/sidebar/SidebarAccount.vue')['default']
+    SidebarBrowse: typeof import('./components/sidebar/SidebarBrowse.vue')['default']
     SidebarAccount: typeof import('./components/sidebar/SidebarAccount.vue')['default']
     SidebarBrowse: typeof import('./components/sidebar/SidebarBrowse.vue')['default']
     SidebarContent: typeof import('./components/base/sidebar/SidebarContent.vue')['default']
     SidebarElse: typeof import('./components/sidebar/SidebarElse.vue')['default']
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1400,6 +1499,8 @@ declare module 'vue' {
     SidebarElse: typeof import('./components/sidebar/SidebarElse.vue')['default']
 >>>>>>> 18878a61 (update 38 files and delete 54 files)
 =======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
+=======
     Shortkey: typeof import('./components/layout/utility/Shortkey.vue')['default']
     Shortkeys: typeof import('./components/layout/app/Shortkeys.vue')['default']
 =======
@@ -1419,6 +1520,7 @@ declare module 'vue' {
 =======
     SidebarElse: typeof import('./components/sidebar/SidebarElse.vue')['default']
 >>>>>>> 90299573 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 =======
     SidebarElse: typeof import('./components/sidebar/SidebarElse.vue')['default']
 >>>>>>> 3193e323 (update 38 files and delete 54 files)
@@ -1446,6 +1548,8 @@ declare module 'vue' {
     SidebarElse: typeof import('./components/sidebar/SidebarElse.vue')['default']
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     SidebarFooter: typeof import('./components/base/sidebar/SidebarFooter.vue')['default']
     SidebarGroup: typeof import('./components/base/sidebar/SidebarGroup.vue')['default']
     SidebarGroupAction: typeof import('./components/base/sidebar/SidebarGroupAction.vue')['default']
@@ -1467,6 +1571,9 @@ declare module 'vue' {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
 =======
     SidebarLink: typeof import('./components/layout/sidebar/SidebarLink.vue')['default']
 >>>>>>> f5f00c30 (update components.d.ts)
@@ -1476,6 +1583,7 @@ declare module 'vue' {
 =======
     SidebarLink: typeof import('./components/sidebar/SidebarLink.vue')['default']
 >>>>>>> 90299573 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 =======
     SidebarLink: typeof import('./components/sidebar/SidebarLink.vue')['default']
 >>>>>>> 12d6db59 (update 38 files and delete 54 files)
@@ -1510,6 +1618,8 @@ declare module 'vue' {
     SidebarLink: typeof import('./components/sidebar/SidebarLink.vue')['default']
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     SidebarMenu: typeof import('./components/base/sidebar/SidebarMenu.vue')['default']
     SidebarMenuAction: typeof import('./components/base/sidebar/SidebarMenuAction.vue')['default']
     SidebarMenuBadge: typeof import('./components/base/sidebar/SidebarMenuBadge.vue')['default']
@@ -1529,6 +1639,9 @@ declare module 'vue' {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
 =======
     SidebarMenuLoves: typeof import('./components/layout/sidebar/SidebarMenuLoves.vue')['default']
 >>>>>>> f5f00c30 (update components.d.ts)
@@ -1538,6 +1651,7 @@ declare module 'vue' {
 =======
     SidebarMenuLoves: typeof import('./components/sidebar/SidebarMenuLoves.vue')['default']
 >>>>>>> 90299573 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 =======
     SidebarMenuLoves: typeof import('./components/sidebar/SidebarMenuLoves.vue')['default']
 >>>>>>> 12d6db59 (update 38 files and delete 54 files)
@@ -1572,6 +1686,8 @@ declare module 'vue' {
     SidebarMenuLoves: typeof import('./components/sidebar/SidebarMenuLoves.vue')['default']
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     SidebarMenuSkeleton: typeof import('./components/base/sidebar/SidebarMenuSkeleton.vue')['default']
     SidebarMenuSub: typeof import('./components/base/sidebar/SidebarMenuSub.vue')['default']
     SidebarMenuSubButton: typeof import('./components/base/sidebar/SidebarMenuSubButton.vue')['default']
@@ -1593,6 +1709,7 @@ declare module 'vue' {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     SidebarPocketDisplays: typeof import('./components/sidebar/SidebarPocketDisplays.vue')['default']
     SidebarPockets: typeof import('./components/sidebar/SidebarPockets.vue')['default']
@@ -1629,6 +1746,8 @@ declare module 'vue' {
     SidebarPocketUtilities: typeof import('./components/sidebar/SidebarPocketUtilities.vue')['default']
 >>>>>>> 18878a61 (update 38 files and delete 54 files)
 =======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
+=======
     SidebarPocketDisplays: typeof import('./components/layout/sidebar/SidebarPocketDisplays.vue')['default']
     SidebarPockets: typeof import('./components/layout/sidebar/SidebarPockets.vue')['default']
     SidebarPocketUtilities: typeof import('./components/layout/sidebar/SidebarPocketUtilities.vue')['default']
@@ -1643,6 +1762,7 @@ declare module 'vue' {
     SidebarPockets: typeof import('./components/sidebar/SidebarPockets.vue')['default']
     SidebarPocketUtilities: typeof import('./components/sidebar/SidebarPocketUtilities.vue')['default']
 >>>>>>> 90299573 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 =======
     SidebarPocketDisplays: typeof import('./components/sidebar/SidebarPocketDisplays.vue')['default']
     SidebarPockets: typeof import('./components/sidebar/SidebarPockets.vue')['default']
@@ -1654,6 +1774,8 @@ declare module 'vue' {
 >>>>>>> 115d5a5c (update components.d.ts)
 =======
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     SidebarProvider: typeof import('./components/base/sidebar/SidebarProvider.vue')['default']
     SidebarRail: typeof import('./components/base/sidebar/SidebarRail.vue')['default']
     SidebarSeparator: typeof import('./components/base/sidebar/SidebarSeparator.vue')['default']
@@ -1673,6 +1795,9 @@ declare module 'vue' {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
 =======
     SmallLogo: typeof import('./components/layout/ui/SmallLogo.vue')['default']
 >>>>>>> f5f00c30 (update components.d.ts)
@@ -1682,6 +1807,7 @@ declare module 'vue' {
 =======
     SmallLogo: typeof import('./components/ui/SmallLogo.vue')['default']
 >>>>>>> 90299573 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 =======
     SmallLogo: typeof import('./components/ui/SmallLogo.vue')['default']
 >>>>>>> 12d6db59 (update 38 files and delete 54 files)
@@ -1716,6 +1842,8 @@ declare module 'vue' {
     SmallLogo: typeof import('./components/ui/SmallLogo.vue')['default']
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     SmItem: typeof import('./components/pocket/items/smItem.vue')['default']
     Sonner: typeof import('./components/base/sonner/Sonner.vue')['default']
     SpellPicker: typeof import('./components/pocket/spells/SpellPicker.vue')['default']
@@ -1790,6 +1918,9 @@ declare module 'vue' {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
 =======
     Toasted: typeof import('./components/layout/utility/toasted.vue')['default']
 >>>>>>> f5f00c30 (update components.d.ts)
@@ -1799,6 +1930,7 @@ declare module 'vue' {
 =======
     Toasted: typeof import('./components/utility/toasted.vue')['default']
 >>>>>>> 90299573 (update 38 files and delete 54 files)
+<<<<<<< HEAD
 =======
     Toasted: typeof import('./components/utility/toasted.vue')['default']
 >>>>>>> 12d6db59 (update 38 files and delete 54 files)
@@ -1833,6 +1965,8 @@ declare module 'vue' {
     Toasted: typeof import('./components/utility/toasted.vue')['default']
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+=======
+>>>>>>> 5b5a4351 (update 38 files and delete 54 files)
     ToggleButton: typeof import('./components/buttons/ToggleButton.vue')['default']
     ToggleStateButton: typeof import('./components/buttons/ToggleStateButton.vue')['default']
     Tooltip: typeof import('./components/menu/Tooltip.vue')['default']
@@ -1852,6 +1986,7 @@ declare module 'vue' {
 <<<<<<< HEAD
 =======
 >>>>>>> 3a4d0ed0 (update 38 files and delete 54 files)
+    TopSvg: typeof import('./components/ui/role/TopSvg.vue')['default']
     TopSvg: typeof import('./components/ui/role/TopSvg.vue')['default']
     Trash: typeof import('./pages/Trash.vue')['default']
 =======
