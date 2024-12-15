@@ -15,9 +15,12 @@ import {
     ArcElement,
 } from 'chart.js'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import 'chartjs-plugin-style'
 >>>>>>> 12d6db59 (update 38 files and delete 54 files)
+=======
+>>>>>>> 18878a61 (update 38 files and delete 54 files)
 
 ChartJS.register(Tooltip, DoughnutController, ArcElement)
 
