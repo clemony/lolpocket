@@ -9,20 +9,18 @@
 /* @import '@assets/css/drag.css'; */
 @import './theme.css' layer(base);
 @import './themes.css' layer(base);
-@import 'vue-css-donut-chart/dist/vcdonut.css';
 
-@plugin "tailwindcss-animate";
+/*@plugin "tailwindcss-animate";*/
 @plugin "tailwindcss-radix";
 
 @plugin "daisyui" {
     logs: true;
     root: ':root';
     themes: false;
-    include: reset, keyframes, carousel, checkbox, join, swap, kbd, rating,
-        radio, tab, toggle, mask, properties, states, radialprogress, typography;
-    exclude: avatar;
 }
-/*     */
+/*    include: reset, keyframes, carousel, checkbox, join, swap, kbd, rating,
+        radio, tab, toggle, mask, properties, states, radialprogress, typography
+    exclude: avatar;     */
 @config './tailwind.config.js';
 
 @layer base {
