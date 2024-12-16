@@ -1,11 +1,9 @@
 {
     "include": [
-        "src/**/*.ts",
-        "src/**/*.vue",
-        "src/**/*.d.ts",
+        "src/**/*",
         "auto-imports.d.ts",
-        "types.d.ts",
-        "api/*"
+        "components.d.ts",
+        "types.d.ts"
     ],
     "exclude": [
         "node_modules",
@@ -23,7 +21,10 @@
         ],
         "paths": {
             "@assets/*": [
-                "src/Assets/*"
+                "src/assets/*"
+            ],
+                  "@/assets/*": [
+                "src/assets/*"
             ],
             "@data/*": [
                 "src/data/*"
@@ -34,7 +35,10 @@
             "@logs/*": [
                 "src/logs/*"
             ],
-            "@pages/*": [
+            "@/pages/*": [
+                "src/pages/*"
+            ],
+                        "@pages/*": [
                 "src/pages/*"
             ],
             "@script/*": [
@@ -46,7 +50,10 @@
             "@utils/*": [
                 "src/utils/*"
             ],
-            "@components/*": [
+            "@/components/*": [
+                "src/components/*"
+            ],
+                  "@components/*": [
                 "src/components/*"
             ],
             "@/*": [
