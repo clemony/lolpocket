@@ -3,7 +3,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 export { default as Badge } from './Badge.vue'
 
 export const badgeVariants = cva(
-    'inline-flex items-center rounded-full border px-2.5 py-0.5 text-2  transition-colors focus:outline-hidden focus:ring-2 focus:ring-b2 focus:ring-offset-2 ',
+    'inline-flex items-center rounded-md border px-2.5 py-0.5 text-2  transition-colors   ',
     {
         variants: {
             variant: {
@@ -23,7 +23,7 @@ export const badgeVariants = cva(
                 inspiration:
                     'border-transparent bg-inspiration/90 hover:bg-inspiration/80 text-white',
 
-                outline: 'text-b3',
+                outline: 'border-b3',
             },
             size: {
                 sm: 'text-2 h-6 px-2',

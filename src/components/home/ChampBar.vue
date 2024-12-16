@@ -104,12 +104,12 @@ const chartOptions: ChartOptions<'bar'> = {
 </script>
 <template>
     <div
-        class="relative flex w-[90%] items-center justify-center overflow-hidden rounded-lg p-0">
+        class="relative -mt-1 flex w-[90%] items-center justify-center overflow-hidden rounded-lg p-0">
         <div class="h-7 w-full overflow-hidden rounded-lg">
             <Bar
                 :data="chartData"
                 :options="chartOptions"
-                class="mt-3 size-full scale-x-170 scale-y-500" />
+                class="-mt-13 -ml-4.5 !h-50 w-31" />
         </div>
     </div>
 </template>

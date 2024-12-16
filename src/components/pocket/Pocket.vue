@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { scrollToSection } from '@/utils/utils'
 import { usePocketStore } from '@/stores/pocketStore'
+import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
+import emblaCarouselVue from 'embla-carousel-vue'
 
 import { defineAsyncComponent } from 'vue'
 import { getPocket } from '@/utils/pocketUtilities'
 
+const [emblaRef, emblaApi] = emblaCarouselVue()
 const Dashboard = defineAsyncComponent(
     () => import('./dashboard/PocketDashboard.vue')
 )
@@ -22,20 +25,6 @@ const props = defineProps<{
 const ps = usePocketStore()
 
 const pocket = ref(getPocket(props.pocketKey))
-
-/* onMounted(() => {
-    if (props.pocketKey !== from.params.pocketKey) {
-        pocket.value = await(getPocket(to.params.pocketKey))
-        if (pocket.value.component) {
-            const targetElement = pocket.value.component;
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'instant', block: 'nearest', inline: 'center' });
-            }
-        }
-        console.log('pok', pocket, pocket.value.component);
-    }
-
-}) */
 
 const dashboard = ref()
 const champions = ref()
@@ -135,7 +124,7 @@ const header = computed(() => {
 
         <template #header-center>
             <div v-for="el in els" :key="el.name">
-                <span v-if="!el.trigger">
+                <span>
                     <label
                         @click="scrollToSection(el.ref)"
                         class="group mb-px flex gap-1 font-medium opacity-50 transition-all duration-300 hover:cursor-pointer hover:opacity-100"
@@ -152,41 +141,25 @@ const header = computed(() => {
                         </span>
                     </label>
                 </span>
+            </div>
 
-                <VDropdown
-                    v-else
-                    theme="hover"
-                    :delay="{ show: 400, hide: 200 }"
-                    placement="bottom"
-                    instant-move
-                    :show-group="el.type"
-                    no-auto-focus>
-                    <label
-                        @click="scrollToSection(el.ref)"
-                        class="dd group mb-px flex items-center gap-1 font-medium opacity-50 transition-all duration-300 hover:cursor-pointer hover:opacity-100"
-                        :class="{
-                            'text-bc opacity-100!': el.name == pocket.component,
-                        }">
-                        <input
-                            type="radio"
-                            :value="el.ref"
-                            v-model="currentVisible"
-                            class="peer hidden" />
-
-                        <span class="w-max min-w-max px-1 capitalize">
-                            {{ el.name }}
-                        </span>
-
-                        <ToggleButton class="pointer-events-none self-center" />
-                    </label>
-
-                    <template #popper>
-                        <!--  <HvPocket
-                            :type="el.type"
-                            :data="el.data"
-                            :pocket="pocket" /> -->
-                    </template>
-                </VDropdown>
+            <div ref="carouselButtons" class="border-b2 rounded-lg border">
+                <Button
+                    variant="ghost"
+                    size="icon"
+                    class="border-r-b2 group !rounded-r-none border-r transition-all duration-300">
+                    <icon
+                        icon="teenyicons:arrow-left-outline"
+                        class="size-6 opacity-50 transition-all duration-300 group-hover:opacity-100" />
+                </Button>
+                <Button
+                    variant="ghost"
+                    size="icon"
+                    class="group rounded-l-none">
+                    <icon
+                        icon="teenyicons:arrow-right-outline"
+                        class="size-6 opacity-50 transition-all duration-300 group-hover:opacity-100" />
+                </Button>
             </div>
         </template>
 
@@ -207,7 +180,7 @@ const header = computed(() => {
 
         <template #header-end>
             <div class="absolute -right-2 mb-3 flex h-full pt-1">
-                <!--    <Dropdown class="w-full">
+                <Dropdown class="w-full">
                     <template #1>
                         <PocketIcon
                             :pocket="pocket"
@@ -216,49 +189,70 @@ const header = computed(() => {
                     <template #2>
                         <span class="grow text-left">{{ pocket.name }}</span>
                     </template>
-                </Dropdown> -->
+                </Dropdown>
             </div>
         </template>
 
-        <div
-            id="pocket-contents"
-            class="carousel h-full w-[98%] justify-self-center overflow-x-scroll overflow-y-hidden">
-            <a
-                class="carousel-item relative w-full max-w-full"
-                ref="dashboard"
-                id="dashboard">
-                <router-view v-slot="{ Component }">
-                    <component
-                        :is="Dashboard"
-                        :pocketKey="pocket.key"
-                        :key="pocket.key" />
-                </router-view>
-            </a>
-            <a class="carousel-item w-full" ref="champions" id="champions">
-                <router-view v-slot="{ Component }">
-                    <component
-                        :is="Champions"
-                        :pocketKey="pocket.key"
-                        :key="pocket.key" />
-                </router-view>
-            </a>
-            <a class="carousel-item w-full" ref="items" id="items">
-                <router-view v-slot="{ Component }">
-                    <component
-                        :is="Items"
-                        :pocketKey="pocket.key"
-                        :key="pocket.key" />
-                </router-view>
-            </a>
-            <a class="carousel-item w-full" ref="runes" id="runes">
-                <router-view v-slot="{ Component }">
-                    <component
-                        :is="Runes"
-                        :pocketKey="pocket.key"
-                        :key="pocket.key" />
-                </router-view>
-            </a>
-        </div>
+        <Carousel
+            v-slot="{ canScrollNext, canScrollPrev }"
+            :plugins="[WheelGesturesPlugin()]"
+            :opts="{
+                align: 'start',
+                loop: true,
+            }"
+            class="h-full w-[98%] justify-self-center overflow-x-scroll overflow-y-hidden">
+            <CarouselContent>
+                <CarouselItem>
+                    <a
+                        class="carousel-item relative w-full max-w-full"
+                        ref="dashboard"
+                        id="dashboard">
+                        <router-view v-slot="{ Component }">
+                            <component
+                                :is="Dashboard"
+                                :pocketKey="pocket.key"
+                                :key="pocket.key" />
+                        </router-view>
+                    </a>
+                </CarouselItem>
+
+                <CarouselItem>
+                    <a
+                        class="carousel-item w-full"
+                        ref="champions"
+                        id="champions">
+                        <router-view v-slot="{ Component }">
+                            <component
+                                :is="Champions"
+                                :pocketKey="pocket.key"
+                                :key="pocket.key" />
+                        </router-view>
+                    </a>
+                </CarouselItem>
+
+                <CarouselItem>
+                    <a class="carousel-item w-full" ref="items" id="items">
+                        <router-view v-slot="{ Component }">
+                            <component
+                                :is="Items"
+                                :pocketKey="pocket.key"
+                                :key="pocket.key" />
+                        </router-view>
+                    </a>
+                </CarouselItem>
+
+                <CarouselItem>
+                    <a class="carousel-item w-full" ref="runes" id="runes">
+                        <router-view v-slot="{ Component }">
+                            <component
+                                :is="Runes"
+                                :pocketKey="pocket.key"
+                                :key="pocket.key" />
+                        </router-view>
+                    </a>
+                </CarouselItem>
+            </CarouselContent>
+        </Carousel>
     </PageLayout>
 </template>
 

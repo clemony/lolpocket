@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import { useGeneralStore } from '@stores/generalStore'
-//import { useSidebar } from '@/components/base/sidebar/utils'
+import { useSidebar } from '@/components/base/sidebar/utils'
 import { summoner } from '@data/playerData'
 const gs = useGeneralStore()
 
-/*
-@click="toggleSidebar()"
 const sidebar = useSidebar()
 console.log(sidebar)
 const { toggleSidebar } = useSidebar()
@@ -25,7 +23,7 @@ const collapsed = computed(() => {
     const state = gs.sidebarState == 'collapsed' ? true : false
     return state
 })
- */
+
 const router = useRouter()
 const hs = history.state
 </script>
@@ -47,7 +45,11 @@ const hs = history.state
                         </span>
                     </Button> -->
 
-                    <Button variant="ghost" size="icon" class="gap-3">
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        class="gap-3"
+                        @click="toggleSidebar()">
                         <icon
                             icon="system-uicons:menu-hamburger"
                             class="size-7 shrink-0 object-center transition-all duration-300"
@@ -75,7 +77,7 @@ const hs = history.state
             </MenubarMenu>
         </div>
         <Grow />
-        <div class="gap-2">
+        <div class="">
             <MenubarMenu>
                 <SearchButton
                     class="mr-2 h-9 rounded-lg px-4 backdrop-brightness-[97%]"

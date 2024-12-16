@@ -1,16 +1,17 @@
 import App from './src/pages/App.vue'
-import 'tailwindcss'
-import '@assets/css/index.css'
 import { motionPlugin } from '@oku-ui/motion'
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import { PiniaColada } from '@pinia/colada'
 import { createApp } from 'vue'
 import { Icon } from '@iconify/vue'
-import { kinesisPlugin } from '@letstri/kinesis'
 import router from './router'
-//import { FloatingVue, floatingVueOptions } from '@/config/floating-vue'
 import Shortkey from 'vue3-shortkey'
+import '@fontsource/geist-sans/300.css'
+import '@fontsource/geist-sans/400.css'
+import '@fontsource/geist-sans/500.css'
+import '@fontsource/geist-sans/600.css'
+import '@fontsource/geist-sans/700.css'
 
 const app = createApp(App)
 
@@ -24,9 +25,7 @@ console.log('Pinia initialized.')
 // Register global components
 app.use(motionPlugin)
 app.component('Icon', Icon)
-app.use(kinesisPlugin)
 app.use(router)
-//app.use(FloatingVue, floatingVueOptions)
 app.use(Shortkey)
 
 app.mount('#app')

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { pocket } from 'types'
 import { ResizablePanel, ResizablePanelGroup } from '@components/base/resizable'
-import { runeColors } from '@/utils/GetColor'
+import { runeColors } from '@utils/getColor'
 
 const props = defineProps<{
     pocket: pocket

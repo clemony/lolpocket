@@ -69,18 +69,5 @@ const champions = computed(() => {
                 <icon icon="teenyicons:x-circle-solid" />
             </button>
         </div>
-
-        <!-- Quick Search Placeholder -->
-        <VDropdown
-            theme="default"
-            alt="Quick Search"
-            :distance="8"
-            class="ghosty drag-label flex size-[62px] shrink-0">
-            <div
-                class="cursor-pointer bg-[url('/img/UI/frame.webp')] bg-contain bg-center"></div>
-            <template #popper>
-                <!--        <QuickSearch :array="filteredChamps" v-model:quickSearch="quickSearch" type="champions" /> -->
-            </template>
-        </VDropdown>
     </VueDraggable>
 </template>
