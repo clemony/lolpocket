@@ -20,14 +20,14 @@ const match = {
     <Card>
         <Collapsible class="group">
             <CollapsibleTrigger as-child>
-                <CardHeader>
+                <CardHeader class="pt-4">
                     <CardTitle
                         class="text-3 flex w-full items-center gap-4 font-normal">
                         <p
                             class="flex grow items-center gap-3 text-[1.075rem] font-medium">
                             <icon
                                 icon="icon-park-solid:ranking-list"
-                                class="size-7 drop-shadow-sm"
+                                class="size-7"
                                 :class="{
                                     'text-resolve':
                                         match.playerOutcome == 'win',
@@ -37,14 +37,13 @@ const match = {
                             {{ match.type }}
                         </p>
 
-                        <p>
+                        <p class="text-3 !font-normal">
                             {{ match.gameTime }}
                         </p>
 
                         <Badge
-                            size="sm"
                             variant="resolve"
-                            class="!tracking-wide text-white capitalize">
+                            class="!text-3 !font-medium !tracking-wide text-white capitalize">
                             {{ match.playerOutcome }}
                         </Badge>
 

@@ -1,5 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref, watch } from 'vue'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+
 import { pocket, drawer } from 'types'
 
 export const useGeneralStore = defineStore(

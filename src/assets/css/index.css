@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+<<<<<<< HEAD
 @import './utilities.css';
 @import './fonts.css' layer(base);
 @import '@fontsource/geist-sans/400.css';
@@ -25,32 +26,32 @@
 @config './tailwind.config.js';
 =======
 >>>>>>> 4634f11e (update 8 files and delete 426 files):src/assets/css/index.css
+=======
+@import './theme.css';
+@import './themes.css';
+/* @import '../animation/animations.css';*/
+
+@import './fonts.css';
+@config './tailwind.config.ts';
+@plugin "tailwindcss-animate";
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 
 @layer base {
-    *,
-    ::after,
-    ::before,
-    ::backdrop,
-    ::file-selector-button {
-        border-color: var(--b2, currentColor);
-    }
-
-    :root * {
-        font-family: 'Geist Sans', 'sans-serif';
-        user-select: none;
-    }
-
     html {
-        font-size: 12px;
-        @apply !overflow-hidden bg-transparent select-none;
+        @apply bg-transparent select-none;
         ** {
             @apply scroll-smooth select-none;
         }
     }
+
+    html,
+    body {
+        font-family: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto,
+            'Helvetica Neue', Arial, sans-serif;
+        font-size: var(--text-3);
+        @apply text-3 inset-0 m-0 h-screen w-screen p-0;
+    }
     #app {
-        @apply top-0 left-0 m-0 h-screen w-screen max-w-screen !overflow-hidden bg-transparent p-0 select-none;
-        > * {
-            @apply !rounded-[0.70rem];
-        }
+        @apply top-0 left-0 m-0 h-screen w-screen bg-transparent p-0 select-none;
     }
 }

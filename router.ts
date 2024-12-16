@@ -1,71 +1,49 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Table from '@/pages/PocketTables.vue'
-import Settings from '@/pages/Settings.vue'
-import Trash from '@/pages/Trash.vue'
-import Archive from '@/pages/Archive.vue'
-import Cards from '@/pages/PocketCards.vue'
-import Favorites from '@/pages/Favorites.vue'
-import { useGeneralStore } from '@stores/generalStore'
-import About from '@/pages/About.vue'
-import Home from '@/pages/Home.vue'
 
-import Runes from '@/pages/Runes.vue'
-import Champions from '@/pages/Champions.vue'
-import Items from '@/pages/Items.vue'
-import Spells from '@/pages/Spells.vue'
-import Pocket from '@/components/pocket/Pocket.vue'
+import { useGeneralStore } from './src/stores/generalStore'
 
-import PocketDashboard from '@/components/pocket/dashboard/PocketDashboard.vue'
-import PocketChampions from '@/components/pocket/champions/PocketChampions.vue'
-import PocketItems from '@/components/pocket/items/PocketItems.vue'
-import PocketRunes from '@/components/pocket/runes/PocketRunes.vue'
-
-import GeneralSettings from '@/components/settings/GeneralSettings.vue'
-import AppearanceSettings from '@/components/settings/AppearanceSettings.vue'
-import AccountSettings from '@/components/settings/AccountSettings.vue'
-import HotkeySettings from '@/components/settings/HotkeySettings.vue'
-import StorageSettings from '@/components/settings/StorageSettings.vue'
+import { computed } from 'vue'
 
 const routes: RouteRecordRaw[] = [
     {
         path: '/about',
         name: 'about',
-        component: About,
+        component: () => import(`./src/pages/About.vue`),
     },
     {
         path: '/archive',
         name: 'archive',
-        component: Archive,
+        component: () => import(`./src/pages/Archive.vue`),
     },
     {
         path: '/calculator',
         name: 'calculator',
-        component: Trash,
+        component: () => import(`./src/pages/Trash.vue`),
     },
     {
         path: '/champions',
         name: 'champions',
-        component: Champions,
+        component: () => import(`./src/pages/Champions.vue`),
     },
     {
         path: '/',
         name: 'home',
-        component: Home,
+        component: () => import(`./src/pages/Home.vue`),
     },
     {
         path: '/items',
         name: 'items',
-        component: Items,
+        component: () => import(`./src/pages/Items.vue`),
     },
     {
         path: '/favorites',
         name: 'favorites',
-        component: Favorites,
+        component: () => import(`./src/pages/Favorites.vue`),
     },
 
     {
         path: '/pocket/:pocketKey',
-        component: Pocket,
+        component: () => import(`./src/components/pocket/Pocket.vue`),
         meta: {
             title: 'Pocket',
         },
@@ -74,30 +52,38 @@ const routes: RouteRecordRaw[] = [
             {
                 name: 'Dashboard',
                 path: '',
-                component: PocketDashboard,
+                component: () =>
+                    import(
+                        `./src/components/pocket/dashboard/PocketDashboard.vue`
+                    ),
             },
             {
                 name: 'Champions',
                 path: 'champions',
-                component: PocketChampions,
+                component: () =>
+                    import(
+                        `./src/components/pocket/champions/PocketChampions.vue`
+                    ),
             },
             {
                 name: 'Items',
                 path: 'items',
                 props: true,
-                component: PocketItems,
+                component: () =>
+                    import(`./src/components/pocket/items/PocketItems.vue`),
             },
             {
                 name: 'Runes',
                 path: 'runes',
-                component: PocketRunes,
+                component: () =>
+                    import(`./src/components/pocket/runes/PocketRunes.vue`),
             },
         ],
     },
     {
         path: '/table',
         name: 'table',
-        component: Table,
+        component: () => import(`./src/pages/PocketTables.vue`),
         meta: {
             title: 'Tables',
         },
@@ -105,7 +91,7 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/cards',
         name: 'cards',
-        component: Cards,
+        component: () => import(`./src/pages/PocketCards.vue`),
         meta: {
             title: 'Cards',
         },
@@ -113,7 +99,7 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/runes',
         name: 'runes',
-        component: Runes,
+        component: () => import(`./src/pages/Runes.vue`),
         meta: {
             title: 'Runes',
         },
@@ -121,16 +107,16 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/spells',
         name: 'spells',
-        component: Spells,
+        component: () => import(`./src/pages/Spells.vue`),
         meta: {
             title: 'Spells',
         },
     },
 
     {
-        path: '/settings',
+        path: '/settings/general',
         name: 'settings',
-        component: Settings,
+        component: () => import(`./src/pages/Settings.vue`),
         meta: {
             title: 'Settings',
         },
@@ -138,37 +124,42 @@ const routes: RouteRecordRaw[] = [
         children: [
             {
                 name: 'general',
-                path: '/settings',
-                component: GeneralSettings,
+                path: 'general',
+                component: () =>
+                    import(`./src/components/settings/GeneralSettings.vue`),
             },
             {
                 name: 'appearance',
-                path: '/settings',
-                component: AppearanceSettings,
+                path: 'appearance',
+                component: () =>
+                    import(`./src/components/settings/AppearanceSettings.vue`),
             },
             {
                 name: 'account',
                 path: 'account',
                 props: true,
-                component: AccountSettings,
+                component: () =>
+                    import(`./src/components/settings/AccountSettings.vue`),
             },
             {
                 name: 'hotkeys',
                 path: 'hotkeys',
                 props: true,
-                component: HotkeySettings,
+                component: () =>
+                    import(`./src/components/settings/HotkeySettings.vue`),
             },
             {
                 name: 'storage',
                 path: 'storage',
-                component: StorageSettings,
+                component: () =>
+                    import(`./src/components/settings/StorageSettings.vue`),
             },
         ],
     },
     {
         path: '/trash',
         name: 'trash',
-        component: Trash,
+        component: () => import(`./src/pages/Trash.vue`),
         meta: {
             title: 'lolpockets | Trash',
         },
@@ -198,7 +189,9 @@ const scrollBehavior = (to) => {
 router.afterEach((to, from) => {
     const gs = useGeneralStore()
     const route = computed(() => {
-        to.name == '' || to.name == '/' ? 'home' : to.name.toString()
+        to.name == '' || to.name == '/' || to.name == undefined ?
+            'home'
+        :   to.name.toString()
     })
     const history = gs.routeHistory
 

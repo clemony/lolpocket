@@ -2,7 +2,7 @@
 import { useChampStore } from '@stores/champStore'
 import { useItemStore } from '@stores/itemStore'
 import { usePocketStore } from '@stores/pocketStore'
-import { formattedQuote } from '@data/champQuotes'
+import { getQuote } from '@data/champQuotes'
 import type { pocket } from 'types'
 
 const ps = usePocketStore()
@@ -46,7 +46,6 @@ function updateNotes() {
     }
 }
 
-console.log('quo', formattedQuote())
 const sTabs = ref('sTabs')
 </script>
 <template>
@@ -61,9 +60,8 @@ const sTabs = ref('sTabs')
                     v-else
                     class="text-middle flex size-full items-center justify-center">
                     <p
-                        class="font-cursive text-4 items-center px-12 align-middle text-pretty whitespace-pre-line [text-align-last:right]">
-                        {{ formattedQuote() }}
-                    </p>
+                        v-html="getQuote()"
+                        class="text-4 items-center px-12 align-middle font-serif text-pretty whitespace-pre-line [text-align-last:right]"></p>
                 </div>
             </CardContent>
         </Card>

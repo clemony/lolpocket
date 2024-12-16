@@ -2,7 +2,7 @@
 import { useDataStore } from '@/stores/dataStore'
 import { useRuneStore } from '@/stores/runeStore'
 import type { pocket } from 'types'
-import { getShardIcon, getShardClass } from '@/utils/GetColor'
+import { getShardIcon, getShardClass } from '@utils/getColor'
 
 import { usePocketStore } from '@/stores/pocketStore'
 import { getPocket } from '@/utils/pocketUtilities'

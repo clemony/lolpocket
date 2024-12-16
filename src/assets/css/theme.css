@@ -1,17 +1,11 @@
 @import 'tailwindcss';
 
 @theme {
-    --font-*: initial;
+    --spacing: 0.25rem;
 
-    --font-sans: 'Geist Sans', 'sans-serif';
-    --font-serif: 'Noto Serif KR Variable', 'serif';
-    --font-mono: 'Victor Mono Variable', 'monospace';
-
-    --text-*: initial;
     --text-1: 0.8rem;
     --text-2: 0.93rem;
     --text-3: 1rem;
-    --text-3.5: 1.075rem;
     --text-4: 1.125rem;
     --text-5: 1.25rem;
     --text-6: 1.35rem;
@@ -24,7 +18,12 @@
     --text-13: 6rem;
     --text-14: 8rem;
 
-    --color-*: initial;
+    --b1: oklch(100% 0 0);
+    --b2: oklch(93% 0 0);
+    --b3: oklch(76% 0 0);
+    --bc: oklch(0% 0.02476 255.701624);
+    --neutral: oklch(0% 0.02476 255.701624);
+    --nc: oklch(100% 0 0);
 
     --color-precision: oklch(85.49% 0.0892 84.09);
     --color-precision-light: #oklch(90.13% 0.0695 86.13);
@@ -145,13 +144,4 @@
             }
         }
     }
-    --tab-bg: oklch(var(--b1) / 90%) !important;
-    --tab-corner-bg: oklch(var(--b1) / 60%) !important;
-    --tab-border: 1px !important;
-    --tab-border-color: var(--b3);
-    --tab-radius: 0.45rem !important;
-    --tab-border-colors: transparent transparent var(--tab-border-color)
-        transparent;
-    --spacing-tab-border: 1px;
-    --tglbg: oklch(var(--b1) / 95%);
 }

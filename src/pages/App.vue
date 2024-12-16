@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import '@assets/css/index.css'
 //import { Toaster } from '@components/base/sonner'
 import { useGeneralStore } from '@stores/generalStore'
 import { toggleDrawerState } from '@utils/utils'
@@ -33,12 +32,12 @@ console.log(router)
      <Shortkeys />
     <Toaster /> -->
 
-    <MainMenubar />
-
     <SidebarProvider
-        class="bg-b2/10 relative size-full transition-all duration-1000">
+        class="bg-b1 relative size-full backdrop-brightness-[97%] transition-all duration-1000">
+        <MainMenubar />
         <Sidebar collapsible="icon" class="justify-center">
-            <SidebarContent class="pt-18">
+            <SidebarContent class="pt-14">
+                <SidebarAccount />
                 <ScrollArea class="!overflow-auto !overscroll-contain">
                     <SidebarPocketDisplays />
 
@@ -48,8 +47,6 @@ console.log(router)
 
                     <SidebarElse />
                 </ScrollArea>
-
-                <SidebarAccount />
             </SidebarContent>
 
             <SidebarRail />

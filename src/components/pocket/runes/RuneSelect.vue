@@ -156,47 +156,37 @@ onMounted(() => {})
                 class="peer hidden"
                 :disabled="rune.path == 'empty'" />
 
-            <VDropdown
+            <Popover
                 v-if="rune.tier == 0"
-                theme="default"
-                :triggers="['hover']"
-                :popperTriggers="['hover']"
-                placement="bottom"
-                :delay="{ show: 1400, hide: 0 }"
                 :disabled="rune.path == 'empty'"
                 id="imgwrap"
-                class="mask mask-3 h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0">
-                <loadImg
-                    :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
-                    :alt="rune.name"
-                    @error="onImageError" />
-
-                <template #popper>
-                    <RunePop :rune="rune" />
-                </template>
-            </VDropdown>
-
-            <VDropdown
-                v-else
-                theme="default"
-                :triggers="['hover']"
-                :popperTriggers="['hover']"
-                :delay="{ show: 1400, hide: 0 }"
-                placement="bottom"
-                :disabled="rune.path == 'empty'"
-                id="imgwrap"
-                class="h-[inherit] w-[inherit] opacity-80 brightness-90 transition-all duration-500 peer-checked:opacity-100 peer-checked:brightness-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0">
-                <div class="overflow-hidden">
-                    <loadImg
+                class="h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0">
+                <PopoverTrigger>
+                    <LoadImg
                         :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
                         :alt="rune.name"
                         @error="onImageError" />
-                </div>
-
-                <template #popper>
+                </PopoverTrigger>
+                <PopoverContent>
                     <RunePop :rune="rune" />
-                </template>
-            </VDropdown>
+                </PopoverContent>
+            </Popover>
+
+            <Popover
+                v-else
+                :disabled="rune.path == 'empty'"
+                id="imgwrap"
+                class="h-[inherit] w-[inherit] opacity-80 brightness-90 transition-all duration-500 peer-checked:opacity-100 peer-checked:brightness-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0">
+                <PopoverTrigger class="overflow-hidden">
+                    <LoadImg
+                        :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
+                        :alt="rune.name"
+                        @error="onImageError" />
+                </PopoverTrigger>
+                <PopoverContent>
+                    <RunePop :rune="rune" />
+                </PopoverContent>
+            </Popover>
         </label>
     </div>
 
@@ -226,27 +216,20 @@ onMounted(() => {})
                 class="peer hidden"
                 :disabled="rune.path == 'empty'" />
 
-            <VDropdown
-                theme="default"
-                :triggers="['hover']"
-                :popperTriggers="['hover']"
-                placement="bottom"
-                :delay="{ show: 1400, hide: 0 }"
-                :distance="8"
+            <Popover
                 :disabled="rune.path == 'empty'"
                 id="imgwrap"
-                class="shine h-[inherit] w-[inherit] opacity-80 brightness-90 grayscale transition-all duration-500 peer-checked:opacity-100 peer-checked:brightness-100 peer-checked:grayscale-0 hover:opacity-100 hover:grayscale-0">
-                <div class="overflow-hidden rounded-full">
-                    <loadImg
+                class="h-[inherit] w-[inherit] opacity-80 brightness-90 transition-all duration-500 peer-checked:opacity-100 peer-checked:brightness-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0">
+                <PopoverTrigger class="overflow-hidden">
+                    <LoadImg
                         :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
                         :alt="rune.name"
                         @error="onImageError" />
-                </div>
-
-                <template #popper>
+                </PopoverTrigger>
+                <PopoverContent>
                     <RunePop :rune="rune" />
-                </template>
-            </VDropdown>
+                </PopoverContent>
+            </Popover>
         </label>
     </div>
 </template>

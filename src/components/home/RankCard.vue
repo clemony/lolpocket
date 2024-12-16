@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { queue } from 'types'
 import { summoner } from '@data/playerData'
-import { colorB3 } from '@utils/GetColor'
+import { colorB3 } from '@utils/getColor'
 const props = defineProps<{
     queue: string
     title: string
@@ -57,6 +57,7 @@ const colors = [colorB3.value, color1.value]
                     :datasets="datasets"
                     :colors="colors"
                     :labels="labels"
+                    type="gauge"
                     aria="Recent winrate in percentage"
                     class="size-22" />
 

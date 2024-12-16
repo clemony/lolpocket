@@ -2,6 +2,7 @@
 import { Doughnut } from 'vue-chartjs'
 import { externalTooltip } from '@/config/charts'
 import { Chart, Tooltip, DoughnutController, ArcElement } from 'chart.js'
+import type { HTMLAttributes } from 'vue'
 
 Chart.register(Tooltip, DoughnutController, ArcElement)
 
@@ -11,6 +12,9 @@ const props = defineProps<{
     colors: Array<string>
     aria: string
     overlap?: boolean
+    class?: HTMLAttributes['class']
+    type?: string
+    cutout?: string
 }>()
 
 const chartData = {
@@ -18,7 +22,7 @@ const chartData = {
     labels: props.labels,
     datasets: props.datasets,
     options: {
-        spacing: -8,
+        spacing: props.type == 'gauge' ? -4 : 2,
         plugins: {
             tooltip: {
                 enabled: false,
@@ -33,7 +37,7 @@ const chartData = {
                 roundedCornersFor: props.overlap ? 0 : null,
             },
         },
-        cutout: '80%',
+        cutout: props.cutout ? props.cutout : '80%',
     },
 }
 </script>
@@ -43,6 +47,7 @@ const chartData = {
         :options="chartData.options"
         ref="chart"
         :aria-label="props.aria"
-        role="img" />
+        role="img"
+        :class="props.class" />
 </template>
 <style scoped></style>

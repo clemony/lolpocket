@@ -11,13 +11,8 @@ const props = defineProps<{
     thisSet?: any
     returned?: any
     type?: string
-    size?: number
-    width?: number
-    height?: number
     class?: HTMLAttributes['class']
 }>()
-
-const size = props.size + 'px'
 
 const emit = defineEmits(['update:quickSearch', 'update:returnData'])
 
@@ -54,25 +49,20 @@ function afterLeave(el: Element) {
 </script>
 
 <template>
-    <VDropdown
-        theme="default"
-        alt="Quick Search"
-        placement="bottom"
-        :distance="8"
+    <Popover
         :class="
             cn(
                 'no-drag search-drop ghosty drag-label group/qs border-box after:content-[ after:text-4 hover:after:text-bccent relative z-0 flex cursor-pointer! p-0! after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-[\'+\'] hover:after:opacity-60',
                 props.class
             )
-        "
-        :style="{
-            height: size || width + 'px',
-            width: size || height + 'px',
-        }">
-        <div
-            class="z-20 h-full w-full scale-105 cursor-pointer bg-[url('/img/ui/frame.webp')] bg-contain bg-center bg-no-repeat opacity-0 brightness-0 transition-all duration-200 select-none group-hover/qs:scale-95 group-hover/qs:opacity-40"></div>
+        ">
+        <PopoverTrigger>
+            <icon
+                icon="ph:corners-out-thin"
+                class="z-20 h-full w-full scale-105 cursor-pointer opacity-0 brightness-0 transition-all duration-200 select-none group-hover/qs:scale-95 group-hover/qs:opacity-40" />
+        </PopoverTrigger>
 
-        <template #popper>
+        <PopoverContent>
             <div class="relative pt-1.5 pb-0">
                 <div class="relative flex w-full justify-center px-2 pb-1">
                     <Icon
@@ -106,7 +96,6 @@ function afterLeave(el: Element) {
                         @enter="imageIn"
                         @leave="imageOut">
                         <button
-                            v-close-popper
                             v-for="data in props.array"
                             :key="data.id"
                             @click="handleClick(data)"
@@ -119,8 +108,8 @@ function afterLeave(el: Element) {
                     </TransitionGroup>
                 </div>
             </div>
-        </template>
-    </VDropdown>
+        </PopoverContent>
+    </Popover>
 </template>
 
 <style scoped>

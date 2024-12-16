@@ -5,13 +5,13 @@
   "tsConfigPath": "./tsconfig.json",
   "tailwind": {
     "config": "./tailwind.config.js",
-    "css": "/Users/caitlin/Documents/lolpocket/lolpocket/src/client/assets/css/index.css",
+    "css": "/Users/caitlin/Documents/lolpocket/lolpocket/src/client/assets/css/shadcn.css",
     "baseColor": "neutral",
     "cssVariables": false
   },
   "framework": "vite",
   "aliases": {
-    "components": "'@/client//pages/components",
-    "utils": "'@/client//lib/utils"
+    "components": ".src/components/base",
+    "utils": "'src/lib/utils"
   }
 }

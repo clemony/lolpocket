@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import type { WithClassAsProps } from './interface'
-import { Button } from '@/components/base/ui/button'
+import { Button } from '@/components/base/button'
 import { cn } from '@lib/utils'
-import { ArrowLeftIcon } from '@radix-icons/vue'
 import { useCarousel } from './useCarousel'
 
 const props = defineProps<WithClassAsProps>()
@@ -25,7 +24,9 @@ const { orientation, canScrollPrev, scrollPrev } = useCarousel()
         variant="outline"
         @click="scrollPrev">
         <slot>
-            <ArrowLeftIcon class="h-4 w-4 text-current" />
+            <icon
+                icon="teenyicons:arrow-right-outline"
+                class="h-4 w-4 text-current" />
             <span class="sr-only">Previous Slide</span>
         </slot>
     </Button>
