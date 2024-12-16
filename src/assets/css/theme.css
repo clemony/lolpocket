@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
+<<<<<<< HEAD
 <<<<<<< HEAD:src/assets/css/theme.css
     --spacing: 0.25rem;
 
@@ -13,10 +14,13 @@
 
     --text-*: initial;
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/assets/css/theme.css
+=======
+    --spacing: 0.25rem;
+
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
     --text-1: 0.8rem;
     --text-2: 0.93rem;
     --text-3: 1rem;
-    --text-3.5: 1.075rem;
     --text-4: 1.125rem;
     --text-5: 1.25rem;
     --text-6: 1.35rem;
@@ -155,6 +159,7 @@
             }
         }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD:src/assets/css/theme.css
 =======
     --tab-bg: oklch(var(--b1) / 90%) !important;
@@ -167,4 +172,6 @@
     --spacing-tab-border: 1px;
     --tglbg: oklch(var(--b1) / 95%);
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/assets/css/theme.css
+=======
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 }

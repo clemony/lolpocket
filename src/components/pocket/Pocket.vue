@@ -8,12 +8,18 @@ import { getPocket } from '@/utils/pocketUtilities'
 import { useTempStore } from '@stores/tempStore'
 =======
 import { usePocketStore } from '@/stores/pocketStore'
+import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
+import emblaCarouselVue from 'embla-carousel-vue'
 
 import { defineAsyncComponent } from 'vue'
 import { getPocket } from '@/utils/pocketUtilities'
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 
+<<<<<<< HEAD
 const ts = useTempStore()
+=======
+const [emblaRef, emblaApi] = emblaCarouselVue()
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 const Dashboard = defineAsyncComponent(
     () => import('./dashboard/PocketDashboard.vue')
 )
@@ -202,6 +208,7 @@ const header = computed(() => {
             </div>
         </template>
 
+<<<<<<< HEAD
  <div
             id="pocket-contents"
             class="carousel h-full w-[98%] justify-self-center overflow-x-scroll overflow-y-hidden">
@@ -241,6 +248,68 @@ const header = computed(() => {
                 </router-view>
             </a>
         </div>
+=======
+        <Carousel
+            v-slot="{ canScrollNext, canScrollPrev }"
+            :plugins="[WheelGesturesPlugin()]"
+            :opts="{
+                align: 'start',
+                loop: true,
+            }"
+            class="h-full w-[98%] justify-self-center overflow-x-scroll overflow-y-hidden">
+            <CarouselContent>
+                <CarouselItem>
+                    <a
+                        class="carousel-item relative w-full max-w-full"
+                        ref="dashboard"
+                        id="dashboard">
+                        <router-view v-slot="{ Component }">
+                            <component
+                                :is="Dashboard"
+                                :pocketKey="pocket.key"
+                                :key="pocket.key" />
+                        </router-view>
+                    </a>
+                </CarouselItem>
+
+                <CarouselItem>
+                    <a
+                        class="carousel-item w-full"
+                        ref="champions"
+                        id="champions">
+                        <router-view v-slot="{ Component }">
+                            <component
+                                :is="Champions"
+                                :pocketKey="pocket.key"
+                                :key="pocket.key" />
+                        </router-view>
+                    </a>
+                </CarouselItem>
+
+                <CarouselItem>
+                    <a class="carousel-item w-full" ref="items" id="items">
+                        <router-view v-slot="{ Component }">
+                            <component
+                                :is="Items"
+                                :pocketKey="pocket.key"
+                                :key="pocket.key" />
+                        </router-view>
+                    </a>
+                </CarouselItem>
+
+                <CarouselItem>
+                    <a class="carousel-item w-full" ref="runes" id="runes">
+                        <router-view v-slot="{ Component }">
+                            <component
+                                :is="Runes"
+                                :pocketKey="pocket.key"
+                                :key="pocket.key" />
+                        </router-view>
+                    </a>
+                </CarouselItem>
+            </CarouselContent>
+        </Carousel>
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
     </PageLayout>
 </template>
 

@@ -1,8 +1,11 @@
 <script setup lang="ts">
 <<<<<<< HEAD
+<<<<<<< HEAD
 //import { Toaster } from '@components/base/sonner'
 =======
 import '@assets/css/index.css'
+=======
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 //import { Toaster } from '@components/base/sonner'
 import { useGeneralStore } from '@stores/generalStore'
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
@@ -60,13 +63,17 @@ console.log(router)
      <Shortkeys />
     <Toaster /> -->
 
-    <MainMenubar />
-
     <SidebarProvider
-        class="bg-b2/10 relative size-full transition-all duration-1000">
+        class="bg-b1 relative size-full backdrop-brightness-[97%] transition-all duration-1000">
+        <MainMenubar />
         <Sidebar collapsible="icon" class="justify-center">
+<<<<<<< HEAD
             <SidebarContent class="pt-18">
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+            <SidebarContent class="pt-14">
+                <SidebarAccount />
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
                 <ScrollArea class="!overflow-auto !overscroll-contain">
                     <SidebarPocketDisplays />
 
@@ -77,10 +84,13 @@ console.log(router)
                     <SidebarElse />
                 </ScrollArea>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                 <SidebarAccount />
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
             </SidebarContent>
 
             <SidebarRail />

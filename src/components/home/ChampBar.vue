@@ -117,19 +117,27 @@ const chartOptions: ChartOptions<'bar'> = {
 <template>
     <div
 <<<<<<< HEAD
+<<<<<<< HEAD
         class="relative -mt-1 flex w-[90%] items-center justify-center overflow-hidden rounded-lg p-0">
 =======
         class="relative flex w-[90%] items-center justify-center overflow-hidden rounded-lg p-0">
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+        class="relative -mt-1 flex w-[90%] items-center justify-center overflow-hidden rounded-lg p-0">
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
         <div class="h-7 w-full overflow-hidden rounded-lg">
             <Bar
                 :data="chartData"
                 :options="chartOptions"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 class="-mt-13 -ml-4.5 !h-50 w-31" />
 =======
                 class="mt-3 size-full scale-x-170 scale-y-500" />
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+                class="-mt-13 -ml-4.5 !h-50 w-31" />
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
         </div>
     </div>
 </template>

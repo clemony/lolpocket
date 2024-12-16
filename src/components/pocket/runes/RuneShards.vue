@@ -7,8 +7,12 @@ import { getShardIcon, getShardClass } from '@utils/getColor'
 =======
 import { useRuneStore } from '@/stores/runeStore'
 import type { pocket } from 'types'
+<<<<<<< HEAD
 import { getShardIcon, getShardClass } from '@/utils/GetColor'
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+import { getShardIcon, getShardClass } from '@utils/getColor'
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 
 import { usePocketStore } from '@/stores/pocketStore'
 import { getPocket } from '@/utils/pocketUtilities'

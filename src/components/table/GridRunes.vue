@@ -7,8 +7,12 @@ import { useAccountStore } from '@stores/accountStore'
 import { runeColors } from '@utils/getColor'
 =======
 import { useGeneralStore } from '@/stores/generalStore'
+<<<<<<< HEAD
 import { runeColors } from '@/utils/GetColor'
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+import { runeColors } from '@utils/getColor'
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 import { getPocket } from '@/utils/pocketUtilities'
 const props = defineProps<{
     params: {

@@ -34,10 +34,14 @@
                 "src/assets/*"
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "@/assets/*": [
 =======
                   "@/assets/*": [
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+            "@/assets/*": [
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
                 "src/assets/*"
             ],
             "@data/*": [
@@ -53,10 +57,14 @@
                 "src/pages/*"
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "@pages/*": [
 =======
                         "@pages/*": [
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+            "@pages/*": [
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
                 "src/pages/*"
             ],
             "@script/*": [
@@ -72,10 +80,14 @@
                 "src/components/*"
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "@components/*": [
 =======
                   "@components/*": [
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+            "@components/*": [
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
                 "src/components/*"
             ],
             "@/*": [

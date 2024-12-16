@@ -164,7 +164,11 @@ onMounted(() => {})
                 v-if="rune.tier == 0"
                 :disabled="rune.path == 'empty'"
                 id="imgwrap"
+<<<<<<< HEAD
                 class="h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0 ">
+=======
+                class="h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0">
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
                 <PopoverTrigger>
                     <LoadImg
                         :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
@@ -180,11 +184,19 @@ onMounted(() => {})
                 v-else
                 :disabled="rune.path == 'empty'"
                 id="imgwrap"
+<<<<<<< HEAD
                 class="h-[inherit] w-[inherit] opacity-80 brightness-90 transition-all duration-500 peer-checked:opacity-100 peer-checked:brightness-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0 ">
                 <PopoverTrigger class="overflow-hidden">
                     <LoadImg
                         :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
                         :alt="rune.name" class='size-16 rounded-full'
+=======
+                class="h-[inherit] w-[inherit] opacity-80 brightness-90 transition-all duration-500 peer-checked:opacity-100 peer-checked:brightness-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0">
+                <PopoverTrigger class="overflow-hidden">
+                    <LoadImg
+                        :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
+                        :alt="rune.name"
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
                         @error="onImageError" />
                 </PopoverTrigger>
                 <PopoverContent>
@@ -228,7 +240,11 @@ onMounted(() => {})
                     <LoadImg
                         :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
                         :alt="rune.name"
+<<<<<<< HEAD
                         @error="onImageError" class='rounded-full size-17' />
+=======
+                        @error="onImageError" />
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
                 </PopoverTrigger>
                 <PopoverContent>
                     <RunePop :rune="rune" />

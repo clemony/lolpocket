@@ -2,10 +2,14 @@
 import type { queue } from 'types'
 import { summoner } from '@data/playerData'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { colorB3 } from '@utils/getColor'
 =======
 import { colorB3 } from '@utils/GetColor'
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+import { colorB3 } from '@utils/getColor'
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 const props = defineProps<{
     queue: string
     title: string
@@ -81,9 +85,13 @@ const colors = [colorB3.value, color1.value]
                     :colors="colors"
                     :labels="labels"
 <<<<<<< HEAD
+<<<<<<< HEAD
                     type="gauge"
 =======
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+                    type="gauge"
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
                     aria="Recent winrate in percentage"
                     class="size-22" />
 

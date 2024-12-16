@@ -7,13 +7,16 @@ const as = useAccountStore()
 
 =======
 import { useGeneralStore } from '@stores/generalStore'
-//import { useSidebar } from '@/components/base/sidebar/utils'
+import { useSidebar } from '@/components/base/sidebar/utils'
 import { summoner } from '@data/playerData'
 const gs = useGeneralStore()
 
+<<<<<<< HEAD
 /*
 @click="toggleSidebar()"
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 const sidebar = useSidebar()
 console.log(sidebar)
 const { toggleSidebar } = useSidebar()
@@ -43,8 +46,12 @@ const collapsed = computed(() => {
     const state = gs.sidebarState == 'collapsed' ? true : false
     return state
 })
+<<<<<<< HEAD
  */
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 const router = useRouter()
 const hs = history.state
 </script>
@@ -67,14 +74,20 @@ const hs = history.state
                     </Button> -->
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
                     <Button
                         variant="ghost"
                         size="icon"
                         class="gap-3"
                         @click="toggleSidebar()">
+<<<<<<< HEAD
 =======
                     <Button variant="ghost" size="icon" class="gap-3">
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
                         <icon
                             icon="system-uicons:menu-hamburger"
                             class="size-7 shrink-0 object-center transition-all duration-300"
@@ -107,10 +120,14 @@ const hs = history.state
         </div>
         <Grow />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div class="">
 =======
         <div class="gap-2">
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+        <div class="">
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
             <MenubarMenu>
                 <SearchButton
                     class="mr-2 h-9 rounded-lg px-4 backdrop-brightness-[97%]"

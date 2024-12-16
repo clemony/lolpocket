@@ -26,10 +26,14 @@ const match = {
         <Collapsible class="group">
             <CollapsibleTrigger as-child>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <CardHeader class="pt-4">
 =======
                 <CardHeader>
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+                <CardHeader class="pt-4">
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
                     <CardTitle
                         class="text-3 flex w-full items-center gap-4 font-normal">
                         <p
@@ -37,10 +41,14 @@ const match = {
                             <icon
                                 icon="icon-park-solid:ranking-list"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 class="size-7"
 =======
                                 class="size-7 drop-shadow-sm"
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+                                class="size-7"
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
                                 :class="{
                                     'text-resolve':
                                         match.playerOutcome == 'win',
@@ -51,14 +59,19 @@ const match = {
                         </p>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <p class="text-3 !font-normal">
 =======
                         <p>
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+                        <p class="text-3 !font-normal">
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
                             {{ match.gameTime }}
                         </p>
 
                         <Badge
+<<<<<<< HEAD
 <<<<<<< HEAD
                             variant="resolve"
                             class="!text-3 !font-medium !tracking-wide text-white capitalize">
@@ -67,6 +80,10 @@ const match = {
                             variant="resolve"
                             class="!tracking-wide text-white capitalize">
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+                            variant="resolve"
+                            class="!text-3 !font-medium !tracking-wide text-white capitalize">
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
                             {{ match.playerOutcome }}
                         </Badge>
 

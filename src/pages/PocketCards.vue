@@ -3,9 +3,13 @@ import { usePocketStore } from '@stores/pocketStore'
 import { newPocketDrawer, cardDrawer } from '@components/drawer/data'
 import { toggleDrawerState } from '@utils/utils'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 const ps = usePocketStore()
 </script>
 <template>

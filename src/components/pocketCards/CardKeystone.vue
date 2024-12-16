@@ -1,10 +1,20 @@
 <script setup lang="ts">
 import { RuneSet } from 'types'
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/components/pocket/pocket-cards/CardKeystone.vue
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 <<<<<<<< HEAD:src/components/pocketCards/CardKeystone.vue
 import { runeColors } from '@utils/getColor'
 ========
 import { runeColors } from '@/utils/GetColor'
 >>>>>>>> 4634f11e (update 8 files and delete 426 files):src/components/pocket/pocket-cards/CardKeystone.vue
+<<<<<<< HEAD
+=======
+========
+import { runeColors } from '@utils/getColor'
+>>>>>>>> 83f9266d (update 42 files and delete 17 files):src/components/pocketCards/CardKeystone.vue
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 const props = defineProps<{
     set: RuneSet
     style: any

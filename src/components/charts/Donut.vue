@@ -3,9 +3,13 @@ import { Doughnut } from 'vue-chartjs'
 import { externalTooltip } from '@/config/charts'
 import { Chart, Tooltip, DoughnutController, ArcElement } from 'chart.js'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { HTMLAttributes } from 'vue'
 =======
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+import type { HTMLAttributes } from 'vue'
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 
 Chart.register(Tooltip, DoughnutController, ArcElement)
 
@@ -16,11 +20,17 @@ const props = defineProps<{
     aria: string
     overlap?: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
     class?: HTMLAttributes['class']
     type?: string
     cutout?: string
 =======
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+    class?: HTMLAttributes['class']
+    type?: string
+    cutout?: string
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 }>()
 
 const chartData = {
@@ -29,10 +39,14 @@ const chartData = {
     datasets: props.datasets,
     options: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         spacing: props.type == 'gauge' ? -4 : 2,
 =======
         spacing: -8,
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+        spacing: props.type == 'gauge' ? -4 : 2,
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
         plugins: {
             tooltip: {
                 enabled: false,
@@ -48,10 +62,14 @@ const chartData = {
             },
         },
 <<<<<<< HEAD
+<<<<<<< HEAD
         cutout: props.cutout ? props.cutout : '80%',
 =======
         cutout: '80%',
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+        cutout: props.cutout ? props.cutout : '80%',
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
     },
 }
 </script>
@@ -62,10 +80,15 @@ const chartData = {
         ref="chart"
         :aria-label="props.aria"
 <<<<<<< HEAD
+<<<<<<< HEAD
         role="img"
         :class="props.class" />
 =======
         role="img" />
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+        role="img"
+        :class="props.class" />
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 </template>
 <style scoped></style>

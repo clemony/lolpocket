@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 
+<<<<<<< HEAD
 <<<<<<< HEAD:src/assets/css/themes.css
 =======
 :root {
@@ -12,6 +13,8 @@
 }
 
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/assets/css/themes.css
+=======
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 :is([data-theme='light']) {
     --b1: oklch(100% 0 0);
     --b2: oklch(93% 0 0);

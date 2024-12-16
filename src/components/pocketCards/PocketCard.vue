@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import type { pocket } from 'types'
 import { clean } from '@lib/utils'
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/components/pocket/pocket-cards/PocketCard.vue
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 <<<<<<<< HEAD:src/components/pocketCards/PocketCard.vue
 import { runeColors } from '@utils/getColor'
 import { CSSProperties } from 'vue'
@@ -8,6 +12,12 @@ import { CSSProperties } from 'vue'
 import { useAccountStore } from '@stores/accountStore'
 ========
 import { runeColors } from '@utils/GetColor'
+<<<<<<< HEAD
+=======
+========
+import { runeColors } from '@utils/getColor'
+>>>>>>>> 83f9266d (update 42 files and delete 17 files):src/components/pocketCards/PocketCard.vue
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 import { CSSProperties } from 'vue'
 
 import { useGeneralStore } from '@stores/generalStore'

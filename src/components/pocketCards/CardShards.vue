@@ -1,10 +1,20 @@
 <script setup lang="ts">
 import type { pocket } from 'types'
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/components/pocket/pocket-cards/CardShards.vue
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 <<<<<<<< HEAD:src/components/pocketCards/CardShards.vue
 import { getShardIcon, getShardClass } from '@utils/getColor'
 ========
 import { getShardIcon, getShardClass } from '@/utils/GetColor'
 >>>>>>>> 4634f11e (update 8 files and delete 426 files):src/components/pocket/pocket-cards/CardShards.vue
+<<<<<<< HEAD
+=======
+========
+import { getShardIcon, getShardClass } from '@utils/getColor'
+>>>>>>>> 83f9266d (update 42 files and delete 17 files):src/components/pocketCards/CardShards.vue
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 
 const props = defineProps<{
     pocket: pocket

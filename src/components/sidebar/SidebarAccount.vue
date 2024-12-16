@@ -100,24 +100,21 @@ const collapsed = computed(() => {
                     <SidebarMenuButton
                         variant="default"
                         size="lg"
-                        class=""
+                        class="h-14 !px-1 !py-2"
                         :class="{ 'px-3': !collapsed }">
                         <Avatar
                             class="size-11 rounded-lg border border-1 border-transparent shadow-xs">
                             <AvatarImage
                                 :src="summoner.icon"
                                 :alt="summoner.name" />
-                            <AvatarFallback class="rounded-full">
+                            <AvatarFallback class="rounded-lg">
                                 LP
                             </AvatarFallback>
                         </Avatar>
                         <div
                             class="flex w-full items-center gap-1 align-baseline leading-none opacity-80">
-                            <div class="text-md text-4 truncate font-semibold">
-                                {{ summoner.name }}
-                            </div>
-                            <div class="text-3 truncate">
-                                #{{ summoner.tag }}
+                            <div class="text-4 truncate !font-medium">
+                                {{ summoner.name }}'s profile
                             </div>
                         </div>
                         <Grow />
