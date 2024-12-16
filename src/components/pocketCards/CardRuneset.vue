@@ -3,11 +3,17 @@ import { newRuneSet } from '@/utils/pocketUtilities'
 import type { pocket, RuneSet } from 'types'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:src/components/pocket/pocket-cards/CardRuneset.vue
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+<<<<<<<< HEAD:src/components/pocket/pocket-cards/CardRuneset.vue
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 <<<<<<<< HEAD:src/components/pocketCards/CardRuneset.vue
 import { getColor } from '@utils/getColor'
 ========
@@ -22,7 +28,16 @@ import { getColor } from '@utils/getColor'
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 >>>>>>>> 5132f0ce (update 8 files and delete 426 files):src/components/pocket/pocket-cards/CardRuneset.vue
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+<<<<<<< HEAD
+=======
+========
+import { getColor } from '@utils/getColor'
+>>>>>>>> 621837bd (update 42 files and delete 17 files):src/components/pocketCards/CardRuneset.vue
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 
 import type { HTMLAttributes } from 'vue'
 

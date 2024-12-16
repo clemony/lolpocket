@@ -32,13 +32,22 @@ import { getPocket } from '@/utils/pocketUtilities'
 import { useTempStore } from '@stores/tempStore'
 =======
 import { usePocketStore } from '@/stores/pocketStore'
+import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
+import emblaCarouselVue from 'embla-carousel-vue'
 
 import { defineAsyncComponent } from 'vue'
 import { getPocket } from '@/utils/pocketUtilities'
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 
+<<<<<<< HEAD
 const ts = useTempStore()
+<<<<<<< HEAD
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+=======
+const [emblaRef, emblaApi] = emblaCarouselVue()
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 const Dashboard = defineAsyncComponent(
     () => import('./dashboard/PocketDashboard.vue')
 )
@@ -229,8 +238,11 @@ const header = computed(() => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
  <div
             id="pocket-contents"
             class="carousel h-full w-[98%] justify-self-center overflow-x-scroll overflow-y-hidden">
@@ -271,6 +283,9 @@ const header = computed(() => {
             </a>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 =======
         <Carousel
             v-slot="{ canScrollNext, canScrollPrev }"
@@ -332,9 +347,13 @@ const header = computed(() => {
                 </CarouselItem>
             </CarouselContent>
         </Carousel>
+<<<<<<< HEAD
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
     </PageLayout>
 </template>
 

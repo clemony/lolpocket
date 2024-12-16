@@ -23,9 +23,16 @@ import { getQuote } from '@data/champQuotes'
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 import { usePocketStore } from '@stores/pocketStore'
+<<<<<<< HEAD
 import { formattedQuote } from '@data/champQuotes'
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+import { getQuote } from '@data/champQuotes'
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 import type { pocket } from 'types'
 
 const ps = usePocketStore()

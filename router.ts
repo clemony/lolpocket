@@ -2,8 +2,11 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 
 import { useAccountStore } from './src/stores/accountStore'
 
@@ -19,6 +22,7 @@ import { useGeneralStore } from '@stores/generalStore'
 import About from '@/pages/About.vue'
 import Home from '@/pages/Home.vue'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 
@@ -26,14 +30,18 @@ import { useAccountStore } from './src/stores/accountStore'
 
 <<<<<<< HEAD
 =======
+=======
+=======
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 
-import Runes from '@/pages/Runes.vue'
-import Champions from '@/pages/Champions.vue'
-import Items from '@/pages/Items.vue'
-import Spells from '@/pages/Spells.vue'
-import Pocket from '@/components/pocket/Pocket.vue'
+import { useGeneralStore } from './src/stores/generalStore'
 
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+<<<<<<< HEAD
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 import PocketDashboard from '@/components/pocket/dashboard/PocketDashboard.vue'
 import PocketChampions from '@/components/pocket/champions/PocketChampions.vue'
 import PocketItems from '@/components/pocket/items/PocketItems.vue'
@@ -51,7 +59,13 @@ import { computed } from 'vue'
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+import { computed } from 'vue'
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 
 const routes: RouteRecordRaw[] = [
     {

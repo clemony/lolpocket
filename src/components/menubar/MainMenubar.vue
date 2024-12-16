@@ -12,6 +12,7 @@ const as = useAccountStore()
 =======
 import { useGeneralStore } from '@stores/generalStore'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useAccountStore } from '@stores/accountStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
@@ -27,13 +28,22 @@ const as = useAccountStore()
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 //import { useSidebar } from '@/components/base/sidebar/utils'
+=======
+import { useSidebar } from '@/components/base/sidebar/utils'
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 import { summoner } from '@data/playerData'
 const gs = useGeneralStore()
 
+<<<<<<< HEAD
 /*
 @click="toggleSidebar()"
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 const sidebar = useSidebar()
 console.log(sidebar)
 const { toggleSidebar } = useSidebar()
@@ -82,6 +92,7 @@ const collapsed = computed(() => {
 })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  */
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
@@ -91,6 +102,13 @@ const collapsed = computed(() => {
  */
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+ */
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+=======
+
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 const router = useRouter()
 const hs = history.state
 </script>
@@ -115,15 +133,21 @@ const hs = history.state
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
                     <Button
                         variant="ghost"
                         size="icon"
                         class="gap-3"
                         @click="toggleSidebar()">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -136,6 +160,13 @@ const hs = history.state
                     <Button variant="ghost" size="icon" class="gap-3">
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+                    <Button variant="ghost" size="icon" class="gap-3">
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+=======
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
                         <icon
                             icon="system-uicons:menu-hamburger"
                             class="size-7 shrink-0 object-center transition-all duration-300"
@@ -181,6 +212,7 @@ const hs = history.state
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div class="">
 =======
         <div class="gap-2">
@@ -189,11 +221,19 @@ const hs = history.state
         <div class="">
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
         <div class="">
 =======
         <div class="gap-2">
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+        <div class="">
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
             <MenubarMenu>
                 <SearchButton
                     class="mr-2 h-9 rounded-lg px-4 backdrop-brightness-[97%]"

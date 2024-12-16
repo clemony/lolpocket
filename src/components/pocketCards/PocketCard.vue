@@ -3,11 +3,17 @@ import type { pocket } from 'types'
 import { clean } from '@lib/utils'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:src/components/pocket/pocket-cards/PocketCard.vue
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+<<<<<<<< HEAD:src/components/pocket/pocket-cards/PocketCard.vue
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 <<<<<<<< HEAD:src/components/pocketCards/PocketCard.vue
 import { runeColors } from '@utils/getColor'
 import { CSSProperties } from 'vue'
@@ -32,6 +38,12 @@ import { useGeneralStore } from '@stores/generalStore'
 =======
 ========
 import { runeColors } from '@utils/GetColor'
+<<<<<<< HEAD
+=======
+========
+import { runeColors } from '@utils/getColor'
+>>>>>>>> 621837bd (update 42 files and delete 17 files):src/components/pocketCards/PocketCard.vue
+>>>>>>> 621837bd (update 42 files and delete 17 files)
 import { CSSProperties } from 'vue'
 
 import { useGeneralStore } from '@stores/generalStore'

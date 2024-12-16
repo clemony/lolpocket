@@ -15,6 +15,7 @@ import { runeColors } from '@utils/getColor'
 import { useGeneralStore } from '@/stores/generalStore'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { runeColors } from '@/utils/GetColor'
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
@@ -24,6 +25,13 @@ import { runeColors } from '@utils/getColor'
 import { runeColors } from '@/utils/GetColor'
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+import { runeColors } from '@/utils/GetColor'
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+=======
+import { runeColors } from '@utils/getColor'
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 import { getPocket } from '@/utils/pocketUtilities'
 const props = defineProps<{
     params: {

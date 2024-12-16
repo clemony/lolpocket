@@ -162,6 +162,7 @@ const chartOptions: ChartOptions<'bar'> = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         class="relative -mt-1 flex w-[90%] items-center justify-center overflow-hidden rounded-lg p-0">
 =======
         class="relative flex w-[90%] items-center justify-center overflow-hidden rounded-lg p-0">
@@ -170,12 +171,20 @@ const chartOptions: ChartOptions<'bar'> = {
         class="relative -mt-1 flex w-[90%] items-center justify-center overflow-hidden rounded-lg p-0">
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 <<<<<<< HEAD:src/components/home/ChampBar.vue
         class="relative -mt-1 flex w-[90%] items-center justify-center overflow-hidden rounded-lg p-0">
 =======
         class="relative flex w-[90%] items-center justify-center overflow-hidden rounded-lg p-0">
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampBar.vue
+<<<<<<< HEAD
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+        class="relative -mt-1 flex w-[90%] items-center justify-center overflow-hidden rounded-lg p-0">
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
         <div class="h-7 w-full overflow-hidden rounded-lg">
             <Bar
                 :data="chartData"
@@ -183,7 +192,10 @@ const chartOptions: ChartOptions<'bar'> = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 <<<<<<< HEAD:src/components/home/ChampBar.vue
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
                 class="-mt-13 -ml-4.5 !h-50 w-31" />
@@ -197,6 +209,9 @@ const chartOptions: ChartOptions<'bar'> = {
     </div>
 =======
                 class="mt-3 size-full scale-x-170 scale-y-500" />
+=======
+                class="-mt-13 -ml-4.5 !h-50 w-31" />
+>>>>>>> 621837bd (update 42 files and delete 17 files)
         </div>
     </div>
 <<<<<<< HEAD

@@ -2,11 +2,17 @@
 import type { pocket } from 'types'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:src/components/pocket/pocket-cards/CardShards.vue
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+<<<<<<<< HEAD:src/components/pocket/pocket-cards/CardShards.vue
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 <<<<<<<< HEAD:src/components/pocketCards/CardShards.vue
 import { getShardIcon, getShardClass } from '@utils/getColor'
 ========
@@ -21,7 +27,16 @@ import { getShardIcon, getShardClass } from '@utils/getColor'
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 >>>>>>>> 5132f0ce (update 8 files and delete 426 files):src/components/pocket/pocket-cards/CardShards.vue
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+<<<<<<< HEAD
+=======
+========
+import { getShardIcon, getShardClass } from '@utils/getColor'
+>>>>>>>> 621837bd (update 42 files and delete 17 files):src/components/pocketCards/CardShards.vue
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 
 const props = defineProps<{
     pocket: pocket

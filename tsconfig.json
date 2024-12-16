@@ -65,6 +65,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "@/assets/*": [
 =======
                   "@/assets/*": [
@@ -73,11 +74,19 @@
             "@/assets/*": [
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
             "@/assets/*": [
 =======
                   "@/assets/*": [
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+            "@/assets/*": [
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
                 "src/assets/*"
             ],
             "@data/*": [
@@ -95,6 +104,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "@pages/*": [
 =======
                         "@pages/*": [
@@ -103,11 +113,19 @@
             "@pages/*": [
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
             "@pages/*": [
 =======
                         "@pages/*": [
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+            "@pages/*": [
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
                 "src/pages/*"
             ],
             "@script/*": [
@@ -125,6 +143,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "@components/*": [
 =======
                   "@components/*": [
@@ -133,11 +152,19 @@
             "@components/*": [
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
             "@components/*": [
 =======
                   "@components/*": [
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+            "@components/*": [
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
                 "src/components/*"
             ],
             "@/*": [

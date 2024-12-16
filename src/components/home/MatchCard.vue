@@ -46,6 +46,7 @@ const match = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <CardHeader class="pt-4">
 =======
                 <CardHeader>
@@ -54,12 +55,20 @@ const match = {
                 <CardHeader class="pt-4">
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 <<<<<<< HEAD:src/components/home/MatchCard.vue
                 <CardHeader class="pt-4">
 =======
                 <CardHeader>
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/MatchCard.vue
+<<<<<<< HEAD
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+                <CardHeader class="pt-4">
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
                     <CardTitle
                         class="text-3 flex w-full items-center gap-4 font-normal">
                         <p
@@ -69,6 +78,7 @@ const match = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 class="size-7"
 =======
                                 class="size-7 drop-shadow-sm"
@@ -77,12 +87,20 @@ const match = {
                                 class="size-7"
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 <<<<<<< HEAD:src/components/home/MatchCard.vue
                                 class="size-7"
 =======
                                 class="size-7 drop-shadow-sm"
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/MatchCard.vue
+<<<<<<< HEAD
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+                                class="size-7"
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
                                 :class="{
                                     'text-resolve':
                                         match.playerOutcome == 'win',
@@ -95,6 +113,7 @@ const match = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <p class="text-3 !font-normal">
 =======
                         <p>
@@ -103,12 +122,20 @@ const match = {
                         <p class="text-3 !font-normal">
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 <<<<<<< HEAD:src/components/home/MatchCard.vue
                         <p class="text-3 !font-normal">
 =======
                         <p>
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/MatchCard.vue
+<<<<<<< HEAD
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+                        <p class="text-3 !font-normal">
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
                             {{ match.gameTime }}
                         </p>
 
@@ -116,7 +143,10 @@ const match = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 <<<<<<< HEAD:src/components/home/MatchCard.vue
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
                             variant="resolve"
@@ -133,7 +163,14 @@ const match = {
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/MatchCard.vue
+<<<<<<< HEAD
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+                            variant="resolve"
+                            class="!text-3 !font-medium !tracking-wide text-white capitalize">
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
                             {{ match.playerOutcome }}
                         </Badge>
 

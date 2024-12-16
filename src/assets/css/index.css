@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 @import './utilities.css';
 @import './fonts.css' layer(base);
@@ -20,6 +21,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 @import './theme.css';
 @import './themes.css';
 /* @import '../animation/animations.css';*/
@@ -38,6 +41,7 @@
     html {
         @apply bg-transparent select-none;
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 @import './theme.css';
@@ -59,6 +63,10 @@
         @apply bg-transparent select-none;
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
+=======
+=======
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 @import './utilities.css';
 @import './fonts.css' layer(base);
 @import '@fontsource/geist-sans/400.css';
@@ -85,26 +93,29 @@
 @config './tailwind.config.js';
 =======
 >>>>>>> 4634f11e (update 8 files and delete 426 files):src/assets/css/index.css
+=======
+@import './theme.css';
+@import './themes.css';
+/* @import '../animation/animations.css';*/
+
+@import './fonts.css';
+@config './tailwind.config.ts';
+@plugin "tailwindcss-animate";
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
 
 @layer base {
-    *,
-    ::after,
-    ::before,
-    ::backdrop,
-    ::file-selector-button {
-        border-color: var(--b2, currentColor);
-    }
-
-    :root * {
-        font-family: 'Geist Sans', 'sans-serif';
-        user-select: none;
-    }
-
     html {
+<<<<<<< HEAD
         font-size: 12px;
         @apply !overflow-hidden bg-transparent select-none;
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+        @apply bg-transparent select-none;
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
         ** {
             @apply scroll-smooth select-none;
         }
@@ -112,10 +123,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 
     html,
     body {
@@ -141,6 +157,13 @@
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+    #app {
+        @apply top-0 left-0 m-0 h-screen w-screen bg-transparent p-0 select-none;
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
     }
 }

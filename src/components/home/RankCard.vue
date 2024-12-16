@@ -4,6 +4,7 @@ import { summoner } from '@data/playerData'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { colorB3 } from '@utils/getColor'
 =======
 import { colorB3 } from '@utils/GetColor'
@@ -12,11 +13,19 @@ import { colorB3 } from '@utils/GetColor'
 import { colorB3 } from '@utils/getColor'
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 import { colorB3 } from '@utils/getColor'
 =======
 import { colorB3 } from '@utils/GetColor'
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+import { colorB3 } from '@utils/getColor'
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 const props = defineProps<{
     queue: string
     title: string
@@ -124,6 +133,7 @@ const colors = [colorB3.value, color1.value]
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     type="gauge"
 =======
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
@@ -135,6 +145,14 @@ const colors = [colorB3.value, color1.value]
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+                    type="gauge"
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+=======
+                    type="gauge"
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
                     aria="Recent winrate in percentage"
                     class="size-22" />
 

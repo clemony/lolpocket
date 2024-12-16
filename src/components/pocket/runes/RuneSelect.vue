@@ -176,6 +176,7 @@ onMounted(() => {})
                 id="imgwrap"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 class="h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0 ">
 =======
                 class="h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0">
@@ -183,6 +184,12 @@ onMounted(() => {})
 =======
                 class="h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0 ">
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+                class="h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0 ">
+=======
+                class="h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0">
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
                 <PopoverTrigger>
                     <LoadImg
                         :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
@@ -200,6 +207,9 @@ onMounted(() => {})
                 id="imgwrap"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
                 class="h-[inherit] w-[inherit] opacity-80 brightness-90 transition-all duration-500 peer-checked:opacity-100 peer-checked:brightness-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0 ">
                 <PopoverTrigger class="overflow-hidden">
                     <LoadImg
@@ -211,6 +221,7 @@ onMounted(() => {})
                     <LoadImg
                         :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
                         :alt="rune.name"
+<<<<<<< HEAD
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
                 class="h-[inherit] w-[inherit] opacity-80 brightness-90 transition-all duration-500 peer-checked:opacity-100 peer-checked:brightness-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0 ">
@@ -219,6 +230,9 @@ onMounted(() => {})
                         :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
                         :alt="rune.name" class='size-16 rounded-full'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
                         @error="onImageError" />
                 </PopoverTrigger>
                 <PopoverContent>
@@ -264,6 +278,7 @@ onMounted(() => {})
                         :alt="rune.name"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         @error="onImageError" class='rounded-full size-17' />
 =======
                         @error="onImageError" />
@@ -271,6 +286,12 @@ onMounted(() => {})
 =======
                         @error="onImageError" class='rounded-full size-17' />
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+                        @error="onImageError" class='rounded-full size-17' />
+=======
+                        @error="onImageError" />
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
                 </PopoverTrigger>
                 <PopoverContent>
                     <RunePop :rune="rune" />

@@ -2,11 +2,17 @@
 import { RuneSet } from 'types'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:src/components/pocket/pocket-cards/CardKeystone.vue
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+<<<<<<<< HEAD:src/components/pocket/pocket-cards/CardKeystone.vue
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 <<<<<<<< HEAD:src/components/pocketCards/CardKeystone.vue
 import { runeColors } from '@utils/getColor'
 ========
@@ -21,7 +27,16 @@ import { runeColors } from '@utils/getColor'
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 >>>>>>>> 5132f0ce (update 8 files and delete 426 files):src/components/pocket/pocket-cards/CardKeystone.vue
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+<<<<<<< HEAD
+=======
+========
+import { runeColors } from '@utils/getColor'
+>>>>>>>> 621837bd (update 42 files and delete 17 files):src/components/pocketCards/CardKeystone.vue
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 const props = defineProps<{
     set: RuneSet
     style: any

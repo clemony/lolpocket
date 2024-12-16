@@ -39,7 +39,7 @@ ChartJS.register(Tooltip, DoughnutController, ArcElement)
 =======
 import { summoner } from '@data/playerData'
 import { useGeneralStore } from '@stores/generalStore'
-import { colorB3 } from '@utils/GetColor'
+import { colorB3 } from '@utils/getColor'
 const gs = useGeneralStore()
 
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
@@ -82,14 +82,20 @@ const labels = ['Win', 'Loss']
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
     <div
         class="grid h-22 w-full grid-cols-[2.5fr_3fr_1fr] items-center gap-3 px-2"
         ref="matches">
         <div class="relative flex items-center gap-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -100,10 +106,17 @@ const labels = ['Win', 'Loss']
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 =======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
+=======
     <div class="flex h-22 items-center pr-10" ref="matches">
         <div class="relative flex size-22 grow items-center gap-4">
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
             <Donut
                 :datasets="datasets"
                 :colors="colors"
@@ -111,8 +124,11 @@ const labels = ['Win', 'Loss']
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
                 type="gauge"
                 aria="Recent winrate in percentage"
                 class="!size-22" />
@@ -171,7 +187,15 @@ const chartData = {
 =======
                 aria="Recent winrate in percentage" />
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+                type="gauge"
+                aria="Recent winrate in percentage"
+                class="!size-22" />
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
             <span class="text-bc absolute left-7 font-medium">
                 {{ recentWinrate }}%
             </span>
@@ -186,6 +210,7 @@ const chartData = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
@@ -193,6 +218,11 @@ const chartData = {
 >>>>>>> be133e04 (update 8 files and delete 426 files)
 <<<<<<< HEAD:src/components/home/PlayerMatches.vue
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+<<<<<<< HEAD:src/components/home/PlayerMatches.vue
+=======
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
         <div class="flex gap-3">
             <div
                 v-for="champion in summoner.recentChampions"
@@ -226,11 +256,14 @@ const chartData = {
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 =======
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/PlayerMatches.vue
 <<<<<<< HEAD
@@ -238,7 +271,12 @@ const chartData = {
 =======
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 
         <RoleDonut />
     </div>

@@ -5,6 +5,7 @@ import { Chart, Tooltip, DoughnutController, ArcElement } from 'chart.js'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { HTMLAttributes } from 'vue'
 =======
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
@@ -16,6 +17,14 @@ import type { HTMLAttributes } from 'vue'
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+import type { HTMLAttributes } from 'vue'
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+=======
+import type { HTMLAttributes } from 'vue'
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 
 Chart.register(Tooltip, DoughnutController, ArcElement)
 
@@ -28,8 +37,11 @@ const props = defineProps<{
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
     class?: HTMLAttributes['class']
     type?: string
     cutout?: string
@@ -43,7 +55,15 @@ const props = defineProps<{
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+    class?: HTMLAttributes['class']
+    type?: string
+    cutout?: string
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 }>()
 
 const chartData = {
@@ -54,6 +74,7 @@ const chartData = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         spacing: props.type == 'gauge' ? -4 : 2,
 =======
         spacing: -8,
@@ -62,11 +83,19 @@ const chartData = {
         spacing: props.type == 'gauge' ? -4 : 2,
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
         spacing: props.type == 'gauge' ? -4 : 2,
 =======
         spacing: -8,
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+        spacing: props.type == 'gauge' ? -4 : 2,
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
         plugins: {
             tooltip: {
                 enabled: false,
@@ -84,6 +113,7 @@ const chartData = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         cutout: props.cutout ? props.cutout : '80%',
 =======
         cutout: '80%',
@@ -92,11 +122,19 @@ const chartData = {
         cutout: props.cutout ? props.cutout : '80%',
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
         cutout: props.cutout ? props.cutout : '80%',
 =======
         cutout: '80%',
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+        cutout: props.cutout ? props.cutout : '80%',
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
     },
 }
 </script>
@@ -109,8 +147,11 @@ const chartData = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
         role="img"
         :class="props.class" />
 =======
@@ -123,6 +164,13 @@ const chartData = {
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+        role="img"
+        :class="props.class" />
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 </template>
 <style scoped></style>

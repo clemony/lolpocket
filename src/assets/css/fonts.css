@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 @import 'tailwindcss';
 h1 {
     font-size: var(--text-8);
@@ -117,10 +120,14 @@ h5 {
     font-style: normal;
     font-display: swap;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 =======
 @import 'tailwindcss';
 h1 {
     font-size: var(--text-8);
+<<<<<<< HEAD
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
     font-weight: 600;
 }
@@ -147,15 +154,37 @@ h5 {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
     font-weight: 600;
-    src:
-        url(https://cdn.jsdelivr.net/fontsource/fonts/geist-sans@latest/latin-600-normal.woff2)
-            format('woff2'),
-        url(https://cdn.jsdelivr.net/fontsource/fonts/geist-sans@latest/latin-600-normal.woff)
-            format('woff');
+}
+h2 {
+    font-size: var(--text-7);
+    font-weight: 600;
+}
+h3 {
+    font-size: var(--text-6);
+    font-weight: 600;
+}
+h4 {
+    font-size: var(--text-5);
+    font-weight: 600;
+}
+h5 {
+    font-size: var(--text-4);
+    font-weight: 500;
+}
+h5 {
+    font-size: var(--text-3);
+    font-weight: 500;
 }
 
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+<<<<<<< HEAD
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 /* geist-sans-latin-700-normal */
 @font-face {
     font-family: 'Geist Sans';
@@ -181,7 +210,20 @@ h5 {
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+@theme {
+    --default-font-family: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto,
+        'Helvetica Neue', Arial, sans-serif 'sans-serif';
+    --font-sans: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto,
+        'Helvetica Neue', Arial, sans-serif 'sans-serif';
+
+    --font-serif: 'Noto Serif KR Variable', 'serif';
+    --font-mono: 'Victor Mono Variable', 'monospace';
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 }
 
 @font-face {

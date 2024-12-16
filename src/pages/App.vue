@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //import { Toaster } from '@components/base/sonner'
 =======
 import '@assets/css/index.css'
@@ -14,9 +15,13 @@ import { useGeneralStore } from '@stores/generalStore'
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 //import { Toaster } from '@components/base/sonner'
 =======
 import '@assets/css/index.css'
+=======
+>>>>>>> 621837bd (update 42 files and delete 17 files)
 //import { Toaster } from '@components/base/sonner'
 import { useGeneralStore } from '@stores/generalStore'
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
@@ -108,6 +113,7 @@ console.log(router)
     <Toaster /> -->
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
     <SidebarProvider
@@ -124,12 +130,23 @@ console.log(router)
 =======
     <MainMenubar />
 
+=======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
     <SidebarProvider
-        class="bg-b2/10 relative size-full transition-all duration-1000">
+        class="bg-b1 relative size-full backdrop-brightness-[97%] transition-all duration-1000">
+        <MainMenubar />
         <Sidebar collapsible="icon" class="justify-center">
+<<<<<<< HEAD
             <SidebarContent class="pt-18">
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+            <SidebarContent class="pt-14">
+                <SidebarAccount />
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
                 <ScrollArea class="!overflow-auto !overscroll-contain">
                     <SidebarPocketDisplays />
 
@@ -142,6 +159,7 @@ console.log(router)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                 <SidebarAccount />
@@ -150,10 +168,17 @@ console.log(router)
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
 =======
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
+=======
 
                 <SidebarAccount />
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+>>>>>>> 621837bd (update 42 files and delete 17 files)
+>>>>>>> a59cb6f4 (update 42 files and delete 17 files)
             </SidebarContent>
 
             <SidebarRail />
