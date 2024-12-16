@@ -1,7 +1,15 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 import { stats } from '@data/stats'
 import { useTempStore } from '@stores/tempStore'
 const ts = useTempStore()
+=======
+import { computed, ref } from 'vue'
+import { useItemStore } from '@stores/itemStore'
+const is = useItemStore()
+import { stats } from '@data/stats'
+
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 const sorted = stats.sort((a, b) => {
     return a.name.localeCompare(b.name)
 })

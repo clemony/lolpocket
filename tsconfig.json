@@ -3,12 +3,17 @@
         "src/**/*",
         "auto-imports.d.ts",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "components.d.ts",
         "types.d.ts"
 =======
         "types.d.ts",
         "api/*"
 >>>>>>> 12d6db59 (update 38 files and delete 54 files)
+=======
+        "components.d.ts",
+        "types.d.ts"
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
     ],
     "exclude": [
         "node_modules",
@@ -28,7 +33,11 @@
             "@assets/*": [
                 "src/assets/*"
             ],
+<<<<<<< HEAD
             "@/assets/*": [
+=======
+                  "@/assets/*": [
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
                 "src/assets/*"
             ],
             "@data/*": [
@@ -43,7 +52,11 @@
             "@/pages/*": [
                 "src/pages/*"
             ],
+<<<<<<< HEAD
             "@pages/*": [
+=======
+                        "@pages/*": [
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
                 "src/pages/*"
             ],
             "@script/*": [
@@ -58,7 +71,11 @@
             "@/components/*": [
                 "src/components/*"
             ],
+<<<<<<< HEAD
             "@components/*": [
+=======
+                  "@components/*": [
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
                 "src/components/*"
             ],
             "@/*": [

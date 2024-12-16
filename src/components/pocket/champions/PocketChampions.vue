@@ -1,8 +1,20 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 import { useTempStore } from '@stores/tempStore'
 import { useAccountStore } from '@stores/accountStore'
 import { getPocket } from '@/utils/pocketUtilities'
 const ts = useTempStore()
+=======
+import { useChampStore } from '@/stores/champStore'
+import { usePocketStore } from '@/stores/pocketStore'
+import { useDataStore } from '@/stores/dataStore'
+import { useItemStore } from '@/stores/itemStore'
+import { getPocket } from '@/utils/pocketUtilities'
+const ds = useDataStore()
+const is = useItemStore()
+const cs = useChampStore()
+const ps = usePocketStore()
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 
 const as = useAccountStore()
 const props = defineProps<{

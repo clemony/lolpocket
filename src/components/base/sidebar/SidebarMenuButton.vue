@@ -2,7 +2,12 @@
 import SidebarMenuButtonChild , { type SidebarMenuButtonProps
 } from './SidebarMenuButtonChild.vue'
 import { useSidebar } from './utils'
+<<<<<<< HEAD
 
+=======
+import { useGeneralStore } from '@/stores/generalStore'
+const gs = useGeneralStore()
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 defineOptions({
     inheritAttrs: false,
 })

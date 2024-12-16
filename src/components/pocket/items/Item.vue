@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import type { Item, pocket } from 'types'
+<<<<<<< HEAD
 import { useTempStore } from '@stores/tempStore'
+=======
+import { useItemStore } from '@/stores/itemStore'
+const is = useItemStore()
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 import type { HTMLAttributes } from 'vue'
 import { addItemToSet } from '@utils/pocketUtilities'
 

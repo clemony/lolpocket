@@ -1,8 +1,14 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+<<<<<<< HEAD
 
 import { useDataStore } from '@/stores/dataStore'
 import { useTempStore } from '@/stores/tempStore'
+=======
+import { useItemStore } from '@/stores/itemStore'
+import { useDataStore } from '@/stores/dataStore'
+import { useRuneStore } from '@/stores/runeStore'
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 
 const ds = useDataStore()
 const ts = useTempStore()

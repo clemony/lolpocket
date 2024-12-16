@@ -1,8 +1,14 @@
 <script setup lang="ts">
 import { useDataStore } from '@/stores/dataStore'
+<<<<<<< HEAD
 import { useTempStore } from '@/stores/tempStore'
 import type { pocket } from 'types'
 import { getShardIcon, getShardClass } from '@utils/getColor'
+=======
+import { useRuneStore } from '@/stores/runeStore'
+import type { pocket } from 'types'
+import { getShardIcon, getShardClass } from '@/utils/GetColor'
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 
 import { usePocketStore } from '@/stores/pocketStore'
 import { getPocket } from '@/utils/pocketUtilities'

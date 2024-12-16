@@ -2,7 +2,10 @@
 import { Doughnut } from 'vue-chartjs'
 import { externalTooltip } from '@/config/charts'
 import { Chart, Tooltip, DoughnutController, ArcElement } from 'chart.js'
+<<<<<<< HEAD
 import type { HTMLAttributes } from 'vue'
+=======
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 
 Chart.register(Tooltip, DoughnutController, ArcElement)
 
@@ -12,9 +15,12 @@ const props = defineProps<{
     colors: Array<string>
     aria: string
     overlap?: boolean
+<<<<<<< HEAD
     class?: HTMLAttributes['class']
     type?: string
     cutout?: string
+=======
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 }>()
 
 const chartData = {
@@ -22,7 +28,11 @@ const chartData = {
     labels: props.labels,
     datasets: props.datasets,
     options: {
+<<<<<<< HEAD
         spacing: props.type == 'gauge' ? -4 : 2,
+=======
+        spacing: -8,
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
         plugins: {
             tooltip: {
                 enabled: false,
@@ -37,7 +47,11 @@ const chartData = {
                 roundedCornersFor: props.overlap ? 0 : null,
             },
         },
+<<<<<<< HEAD
         cutout: props.cutout ? props.cutout : '80%',
+=======
+        cutout: '80%',
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
     },
 }
 </script>
@@ -47,7 +61,11 @@ const chartData = {
         :options="chartData.options"
         ref="chart"
         :aria-label="props.aria"
+<<<<<<< HEAD
         role="img"
         :class="props.class" />
+=======
+        role="img" />
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 </template>
 <style scoped></style>

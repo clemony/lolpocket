@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import type { pocket } from 'types'
 import { ResizablePanel, ResizablePanelGroup } from '@components/base/resizable'
+<<<<<<< HEAD
 import { runeColors } from '@utils/getColor'
+=======
+import { runeColors } from '@/utils/GetColor'
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 
 const props = defineProps<{
     pocket: pocket

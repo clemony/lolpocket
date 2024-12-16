@@ -4,7 +4,10 @@ Chart.defaults.datasets.doughnut.borderRadius = 100
 Chart.defaults.datasets.doughnut.borderJoinStyle = 'round'
 Chart.defaults.datasets.doughnut.hoverBorderWidth = 1
 
+<<<<<<< HEAD
 <<<<<<< HEAD:src/config/charts.ts
+=======
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 export const externalTooltip = (context) => {
     // Tooltip Element
     let tooltipEl = document.getElementById('chartjs-tooltip')
@@ -77,6 +80,7 @@ export const externalTooltip = (context) => {
     // Adjust for Overflow on the Right
     if (posX + tooltipWidth > chartLeft + chartWidth) {
         posX = chartLeft + caretX - tooltipWidth - 10 // Flip to the left
+<<<<<<< HEAD
 =======
 
 
@@ -156,11 +160,16 @@ if (body) {
     if (posX + tooltipWidth > chartLeft + chartWidth) {
         posX = chartLeft + caretX - tooltipWidth - 10; // Flip to the left
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/config/charts.ts
+=======
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
     }
 
     // Adjust for Overflow on the Bottom
     if (posY + tooltipHeight > chartTop + chartHeight) {
+<<<<<<< HEAD
 <<<<<<< HEAD:src/config/charts.ts
+=======
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
         posY = chartTop + caretY - tooltipHeight - 10 // Flip above
     }
 
@@ -204,6 +213,7 @@ function getGradient(ctx, chartArea, colors) {
 
     return gradient
 }
+<<<<<<< HEAD
 =======
         posY = chartTop + caretY - tooltipHeight - 10; // Flip above
     }
@@ -244,3 +254,5 @@ function getGradient(ctx, chartArea, colors) {
   return gradient;
 }
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/config/charts.ts
+=======
+>>>>>>> 4634f11e (update 8 files and delete 426 files)

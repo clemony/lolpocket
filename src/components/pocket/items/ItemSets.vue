@@ -1,10 +1,19 @@
 <script setup lang="ts">
 import { VueDraggable } from 'vue-draggable-plus'
+<<<<<<< HEAD
 import { useTempStore } from '@stores/tempStore'
+=======
+import { useItemStore } from '@stores/itemStore'
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 import { usePocketStore } from '@stores/pocketStore'
 import { deleteItemSet, getPocket, newItemSet } from '@utils/pocketUtilities'
 import ItemSetItems from './ItemSetItems.vue'
 import { generateRandomName } from '@lib/functions/Keygen'
+<<<<<<< HEAD
+=======
+
+const is = useItemStore()
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 
 const ts = useTempStore()
 const ps = usePocketStore()

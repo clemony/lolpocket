@@ -1,6 +1,17 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 import { useTempStore } from '@stores/tempStore'
 import { useAccountStore } from '@stores/accountStore'
+=======
+<<<<<<<< HEAD:src/client/components/sidebar/SidebarMenuLoves.vue
+import { useTempStore } from '@stores/tempStore'
+import { useAccountStore } from '@stores/accountStore'
+========
+import { useItemStore } from '@/stores/itemStore'
+import { useChampStore } from '@/stores/champStore'
+import { useGeneralStore } from '@/stores/generalStore'
+>>>>>>>> 4634f11e (update 8 files and delete 426 files):src/components/sidebar/SidebarMenuLoves.vue
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 
 const as = useAccountStore()
 const ts = useTempStore()

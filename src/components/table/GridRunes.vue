@@ -2,8 +2,13 @@
 import { computed } from 'vue'
 import { Item, Rune } from 'types'
 import { usePocketStore } from '@/stores/pocketStore'
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 import { runeColors } from '@utils/getColor'
+=======
+import { useGeneralStore } from '@/stores/generalStore'
+import { runeColors } from '@/utils/GetColor'
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 import { getPocket } from '@/utils/pocketUtilities'
 const props = defineProps<{
     params: {

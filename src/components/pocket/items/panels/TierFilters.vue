@@ -1,7 +1,14 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 import { useDataStore } from '@/stores/dataStore'
 import { useTempStore } from '@stores/tempStore'
 const ts = useTempStore()
+=======
+import { computed } from 'vue'
+import { useItemStore } from '@/stores/itemStore'
+import { useDataStore } from '@/stores/dataStore'
+
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 const ds = useDataStore()
 
 const icons = [

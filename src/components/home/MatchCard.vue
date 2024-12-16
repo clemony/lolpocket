@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { useDataStore } from '@/stores/dataStore'
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
+=======
+import { useGeneralStore } from '@/stores/generalStore'
+const gs = useGeneralStore()
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 const ds = useDataStore()
 const match = {
     type: 'Ranked Solo/Duo',
@@ -20,14 +25,22 @@ const match = {
     <Card>
         <Collapsible class="group">
             <CollapsibleTrigger as-child>
+<<<<<<< HEAD
                 <CardHeader class="pt-4">
+=======
+                <CardHeader>
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
                     <CardTitle
                         class="text-3 flex w-full items-center gap-4 font-normal">
                         <p
                             class="flex grow items-center gap-3 text-[1.075rem] font-medium">
                             <icon
                                 icon="icon-park-solid:ranking-list"
+<<<<<<< HEAD
                                 class="size-7"
+=======
+                                class="size-7 drop-shadow-sm"
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
                                 :class="{
                                     'text-resolve':
                                         match.playerOutcome == 'win',
@@ -37,13 +50,23 @@ const match = {
                             {{ match.type }}
                         </p>
 
+<<<<<<< HEAD
                         <p class="text-3 !font-normal">
+=======
+                        <p>
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
                             {{ match.gameTime }}
                         </p>
 
                         <Badge
+<<<<<<< HEAD
                             variant="resolve"
                             class="!text-3 !font-medium !tracking-wide text-white capitalize">
+=======
+                            size="sm"
+                            variant="resolve"
+                            class="!tracking-wide text-white capitalize">
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
                             {{ match.playerOutcome }}
                         </Badge>
 

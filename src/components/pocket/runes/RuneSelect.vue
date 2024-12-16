@@ -1,4 +1,11 @@
 <script setup lang="ts">
+<<<<<<< HEAD
+=======
+import { usePocketStore } from '@/stores/pocketStore'
+import { useRuneStore } from '@/stores/runeStore'
+const rs = useRuneStore()
+const ps = usePocketStore()
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 import { useDataStore } from '@/stores/dataStore'
 import type { pocket, Rune, RuneSet } from 'types'
 import { useTempStore } from '@stores/tempStore'

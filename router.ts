@@ -1,8 +1,37 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+<<<<<<< HEAD
 
 import { useAccountStore } from './src/stores/accountStore'
 
 import { computed } from 'vue'
+=======
+import Table from '@/pages/PocketTables.vue'
+import Settings from '@/pages/Settings.vue'
+import Trash from '@/pages/Trash.vue'
+import Archive from '@/pages/Archive.vue'
+import Cards from '@/pages/PocketCards.vue'
+import Favorites from '@/pages/Favorites.vue'
+import { useGeneralStore } from '@stores/generalStore'
+import About from '@/pages/About.vue'
+import Home from '@/pages/Home.vue'
+
+import Runes from '@/pages/Runes.vue'
+import Champions from '@/pages/Champions.vue'
+import Items from '@/pages/Items.vue'
+import Spells from '@/pages/Spells.vue'
+import Pocket from '@/components/pocket/Pocket.vue'
+
+import PocketDashboard from '@/components/pocket/dashboard/PocketDashboard.vue'
+import PocketChampions from '@/components/pocket/champions/PocketChampions.vue'
+import PocketItems from '@/components/pocket/items/PocketItems.vue'
+import PocketRunes from '@/components/pocket/runes/PocketRunes.vue'
+
+import GeneralSettings from '@/components/settings/GeneralSettings.vue'
+import AppearanceSettings from '@/components/settings/AppearanceSettings.vue'
+import AccountSettings from '@/components/settings/AccountSettings.vue'
+import HotkeySettings from '@/components/settings/HotkeySettings.vue'
+import StorageSettings from '@/components/settings/StorageSettings.vue'
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 
 const routes: RouteRecordRaw[] = [
     {

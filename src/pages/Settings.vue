@@ -1,4 +1,5 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 <<<<<<< HEAD:src/pages/Settings.vue
 import GeneralSettings from '@/components/settings/GeneralSettings.vue'
 import { useAccountStore } from '@stores/accountStore'
@@ -10,6 +11,11 @@ const settinas = useAccountStore()
 import GeneralSettings from '@/client/components/settings/GeneralSettings.vue'
 import { useGeneralStore } from '@/client/stores/generalStore'
 import AppearanceSettings from '@/client/components/settings/AppearanceSettings.vue'
+=======
+import GeneralSettings from '@/components/settings/GeneralSettings.vue'
+import { useGeneralStore } from '@/stores/generalStore'
+import AppearanceSettings from '@/components/settings/AppearanceSettings.vue'
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 
 const gs = useGeneralStore()
 const settings = useGeneralStore()

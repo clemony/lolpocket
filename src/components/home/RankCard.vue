@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import type { queue } from 'types'
 import { summoner } from '@data/playerData'
+<<<<<<< HEAD
 import { colorB3 } from '@utils/getColor'
+=======
+import { colorB3 } from '@utils/GetColor'
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 const props = defineProps<{
     queue: string
     title: string
@@ -42,6 +46,7 @@ const colors = [colorB3.value, color1.value]
                 {{ 'Ranked ' + props.title }}
             </p>
         </template>
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/home/RankCard.vue
         <div
             class="relative grid grid-cols-[1.1fr_1fr_1fr] place-items-center pt-6">
@@ -54,24 +59,38 @@ const colors = [colorB3.value, color1.value]
                 <div
                     class="absolute top-1 left-2 grid size-34 place-items-center">
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/components/home/RankCard.vue
+=======
+        <div
+            class="relative grid grid-cols-[1.1fr_1fr_1fr] place-items-center pt-6">
+            <div>
+                <div
+                    class="absolute top-1 left-1 grid size-34 place-items-center">
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
                     <img
                         :src="`/img/crests/${queue.rank}.webp`"
                         class="object-contain drop-shadow-lg" />
                 </div>
             </div>
             <div class="relative">
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/home/RankCard.vue
+=======
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
                 <Donut
                     :datasets="datasets"
                     :colors="colors"
                     :labels="labels"
+<<<<<<< HEAD
                     type="gauge"
+=======
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
                     aria="Recent winrate in percentage"
                     class="size-22" />
 
                 <span class="text-bc absolute top-8 left-7 font-medium">
                     {{ winrate }}%
                 </span>
+<<<<<<< HEAD
 =======
                 <div
                     :style="{
@@ -95,6 +114,8 @@ const colors = [colorB3.value, color1.value]
                     <span class="text-bc font-medium">{{ winrate }}%</span>
                 </div>
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/components/home/RankCard.vue
+=======
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
             </div>
             <div
                 class="text-2 mt-0 flex flex-col justify-center gap-2 font-medium">

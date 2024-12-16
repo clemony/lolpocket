@@ -1,5 +1,13 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
+=======
+<<<<<<<< HEAD:src/client/components/app/History.vue
+import { useAccountStore } from '@stores/accountStore'
+========
+import { useGeneralStore } from '@stores/generalStore'
+>>>>>>>> 4634f11e (update 8 files and delete 426 files):src/components/app/History.vue
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 import { useParallax } from '@vueuse/core'
 import { CSSProperties } from 'vue'
 
@@ -32,11 +40,25 @@ const pageStyle = computed(() => ({
         :class="
             cn({
                 /*base */
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/client/components/app/History.vue
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
                 'bg-b1 top-1/2 z-0': as.commandOpen,
 
                 /* styling */
                 'shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px,_2px_1px_0px_1px_rgba(221,_221,_221,_0.4),_0_2px_0px_rgba(204,_204,_204,_0.4)] after:absolute after:z-50 after:size-full after:bg-black/5':
                     as.commandOpen,
+<<<<<<< HEAD
+=======
+========
+                'bg-b1 top-1/2 z-0': gs.commandOpen,
+
+                /* styling */
+                'shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px,_2px_1px_0px_1px_rgba(221,_221,_221,_0.4),_0_2px_0px_rgba(204,_204,_204,_0.4)] after:absolute after:z-50 after:size-full after:bg-black/5':
+                    gs.commandOpen,
+>>>>>>>> 4634f11e (update 8 files and delete 426 files):src/components/app/History.vue
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
             })
         ">   <main vaul-drawer-wrapper class="size-full p-0" :key="state">
           </main>
@@ -57,9 +79,18 @@ const pageStyle = computed(() => ({
             :style="containerStyle"
             :class="{
                 'inset-0 m-0 flex size-full flex-col items-center justify-center -space-y-[42%]':
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/app/History.vue
                     as.commandOpen,
 ========
+=======
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/app/History.vue
+                    as.commandOpen,
+========
+=======
+>>>>>>> 12d6db59 (update 38 files and delete 54 files)
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
                     gs.commandOpen,
 >>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/app/History.vue
             }">
@@ -101,6 +132,10 @@ const pageStyle = computed(() => ({
                     name="history"
                     :disabled="!as.commandOpen ? true : false" />
 
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/client/components/app/History.vue
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 <<<<<<<< HEAD:src/components/app/History.vue
                 <slot />
 ========
@@ -119,6 +154,12 @@ const pageStyle = computed(() => ({
                     <slot />
                 </SidebarProvider>
 >>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/app/History.vue
+<<<<<<< HEAD
+=======
+========
+                <slot />
+>>>>>>>> 4634f11e (update 8 files and delete 426 files):src/components/app/History.vue
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
             </label>
         </div>
     </div>

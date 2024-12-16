@@ -121,6 +121,25 @@ export const summoner = {
         },
     ],
     role: {
+<<<<<<< HEAD
+=======
+  /*             support: {
+            percent: 20,
+        },
+        bottom: {
+            percent: 20,
+        },
+        mid: {
+            percent: 20,
+        },
+        jungle: {
+            percent: 20,
+        },
+        top: {
+            percent: 20,
+        }, */
+
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
         support: {
             percent: 80,
         },
@@ -137,6 +156,7 @@ export const summoner = {
             percent: 0,
         },
     },
+<<<<<<< HEAD
      recentChampions: [
          {
             name: 'Seraphine',
@@ -240,3 +260,6 @@ recentMatches:[
         kdaRatio: 1.75  // (10+4)/8
     }
 ]}
+=======
+}
+>>>>>>> 4634f11e (update 8 files and delete 426 files)

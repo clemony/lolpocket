@@ -1,4 +1,10 @@
 <script setup lang="ts">
+<<<<<<< HEAD
+=======
+import { useItemStore } from '@/stores/itemStore'
+const is = useItemStore()
+
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 function filter() {
     ts.sortItemsAZ = 0
     ts.sortPrice = 0

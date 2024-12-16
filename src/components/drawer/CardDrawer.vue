@@ -1,6 +1,11 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
+=======
+import { useGeneralStore } from '@/stores/generalStore'
+const gs = useGeneralStore()
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 
 const imports = import.meta.glob('/public/img/cards/*.webp', {
     import: 'default',

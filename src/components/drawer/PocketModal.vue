@@ -5,9 +5,15 @@ import { generateRandomString } from '@lib/functions/Keygen'
 const ps = usePocketStore()
 import { hexoid } from 'hexoid'
 import { pocket } from 'types'
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 import { scrollToSection } from '@utils/utils'
 const as = useAccountStore()
+=======
+import { useGeneralStore } from '@stores/generalStore'
+import { scrollToSection } from '@utils/utils'
+const gs = useGeneralStore()
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 
 const toID = hexoid()
 

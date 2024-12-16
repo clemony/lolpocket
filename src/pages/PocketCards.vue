@@ -2,7 +2,10 @@
 import { usePocketStore } from '@stores/pocketStore'
 import { newPocketDrawer, cardDrawer } from '@components/drawer/data'
 import { toggleDrawerState } from '@utils/utils'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 const ps = usePocketStore()
 </script>
 <template>

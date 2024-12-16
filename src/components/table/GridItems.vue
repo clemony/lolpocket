@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { Item } from 'types'
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
+=======
+import { useGeneralStore } from '@/stores/generalStore'
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 
 const props = defineProps<{
     params: {

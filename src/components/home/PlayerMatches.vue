@@ -1,14 +1,24 @@
 <script setup lang="ts">
 import { summoner } from '@data/playerData'
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 import { colorB3 } from '@utils/getColor'
 const as = useAccountStore()
+=======
+import { useGeneralStore } from '@stores/generalStore'
+import { colorB3 } from '@utils/GetColor'
+const gs = useGeneralStore()
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 
 const recentWinrate = ref(55)
 const recentMatchNum = ref(20)
 
 const color1 = computed(() => {
+<<<<<<< HEAD
     return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
+=======
+    return gs.colorBlindMode ? '#99c4c8' : '#a3be8c'
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 })
 
 const datasets = [
@@ -21,17 +31,26 @@ const colors = [colorB3.value, color1.value]
 const labels = ['Win', 'Loss']
 </script>
 <template>
+<<<<<<< HEAD
     <div
         class="grid h-22 w-full grid-cols-[2.5fr_3fr_1fr] items-center gap-3 px-2"
         ref="matches">
         <div class="relative flex items-center gap-4">
+=======
+    <div class="flex h-22 items-center pr-10" ref="matches">
+        <div class="relative flex size-22 grow items-center gap-4">
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
             <Donut
                 :datasets="datasets"
                 :colors="colors"
                 :labels="labels"
+<<<<<<< HEAD
                 type="gauge"
                 aria="Recent winrate in percentage"
                 class="!size-22" />
+=======
+                aria="Recent winrate in percentage" />
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
             <span class="text-bc absolute left-7 font-medium">
                 {{ recentWinrate }}%
             </span>
@@ -42,6 +61,7 @@ const labels = ['Win', 'Loss']
                 Last {{ recentMatchNum }} Games
             </h5>
         </div>
+<<<<<<< HEAD
         <div class="flex gap-3">
             <div
                 v-for="champion in summoner.recentChampions"
@@ -73,6 +93,8 @@ const labels = ['Win', 'Loss']
                 </div>
             </div>
         </div>
+=======
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 
         <RoleDonut />
     </div>

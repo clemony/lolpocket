@@ -1,6 +1,16 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
+=======
+import { ref, computed, watch } from 'vue'
+import { useChampStore } from '@stores/champStore'
+import { useItemStore } from '@stores/itemStore'
+import { clean } from '@lib/utils'
+
+const cs = useChampStore()
+const is = useItemStore()
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 
 const props = defineProps(['champion'])
 

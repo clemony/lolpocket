@@ -1,9 +1,19 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 import { useSidebar } from '@/components/base/sidebar/utils'
 import { summoner } from '@data/playerData'
 const as = useAccountStore()
 
+=======
+import { useGeneralStore } from '@stores/generalStore'
+//import { useSidebar } from '@/components/base/sidebar/utils'
+import { summoner } from '@data/playerData'
+const gs = useGeneralStore()
+
+/*
+@click="toggleSidebar()"
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 const sidebar = useSidebar()
 console.log(sidebar)
 const { toggleSidebar } = useSidebar()
@@ -14,16 +24,27 @@ const state = computed(() => {
 watch(
     () => state.value,
     (newVal) => {
+<<<<<<< HEAD
         as.sidebarState = newVal
+=======
+        gs.sidebarState = newVal
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
         console.log(newVal)
     }
 )
 
 const collapsed = computed(() => {
+<<<<<<< HEAD
     const state = as.sidebarState == 'collapsed' ? true : false
     return state
 })
 
+=======
+    const state = gs.sidebarState == 'collapsed' ? true : false
+    return state
+})
+ */
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 const router = useRouter()
 const hs = history.state
 </script>
@@ -45,17 +66,25 @@ const hs = history.state
                         </span>
                     </Button> -->
 
+<<<<<<< HEAD
                     <Button
                         variant="ghost"
                         size="icon"
                         class="gap-3"
                         @click="toggleSidebar()">
+=======
+                    <Button variant="ghost" size="icon" class="gap-3">
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
                         <icon
                             icon="system-uicons:menu-hamburger"
                             class="size-7 shrink-0 object-center transition-all duration-300"
                             :class="{
                                 'stroke-1.5 scale-x-20 scale-y-150':
+<<<<<<< HEAD
                                     as.sidebarState == 'collapsed',
+=======
+                                    gs.sidebarState == 'collapsed',
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
                             }" />
                     </Button>
 
@@ -77,7 +106,11 @@ const hs = history.state
             </MenubarMenu>
         </div>
         <Grow />
+<<<<<<< HEAD
         <div class="">
+=======
+        <div class="gap-2">
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
             <MenubarMenu>
                 <SearchButton
                     class="mr-2 h-9 rounded-lg px-4 backdrop-brightness-[97%]"

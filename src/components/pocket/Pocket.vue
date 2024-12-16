@@ -1,10 +1,17 @@
 <script setup lang="ts">
 import { scrollToSection } from '@/utils/utils'
+<<<<<<< HEAD
 import type { UseScrollReturn } from '@vueuse/core'
 import { vScroll } from '@vueuse/components'
 import { defineAsyncComponent } from 'vue'
 import { getPocket } from '@/utils/pocketUtilities'
 import { useTempStore } from '@stores/tempStore'
+=======
+import { usePocketStore } from '@/stores/pocketStore'
+
+import { defineAsyncComponent } from 'vue'
+import { getPocket } from '@/utils/pocketUtilities'
+>>>>>>> 4634f11e (update 8 files and delete 426 files)
 
 const ts = useTempStore()
 const Dashboard = defineAsyncComponent(
