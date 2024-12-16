@@ -4,6 +4,9 @@ import { commandModal } from '@components/command/data'
 import { toggleDrawerState } from '@utils/utils'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { useAccountStore } from '@stores/accountStore'
 
 const as = useAccountStore()
@@ -15,6 +18,7 @@ function toggleCommand() {
     console.log('gs', as.commandOpen)
 =======
 import { useGeneralStore } from '@stores/generalStore'
+<<<<<<< HEAD
 =======
 import { useAccountStore } from '@stores/accountStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
@@ -31,6 +35,17 @@ function toggleCommand() {
 =======
     console.log('gs', as.commandOpen)
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+
+const gs = useGeneralStore()
+
+function toggleCommand() {
+    const a = gs.commandOpen
+    a == false ? (gs.commandOpen = true) : (gs.commandOpen = false)
+    console.log(a)
+    console.log('gs', gs.commandOpen)
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 }
 </script>
 <template>

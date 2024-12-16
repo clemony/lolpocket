@@ -2,13 +2,17 @@
 import { makeBox } from '@/utils/makeBox'
 import type { pocket, RuneSet } from 'types'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:src/components/pocket/pocket-cards/CardItems.vue
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 <<<<<<<< HEAD:src/components/pocketCards/CardItems.vue
 import { getColor } from '@utils/getColor'
 ========
 import { getColor } from '@/utils/GetColor'
+<<<<<<< HEAD
 >>>>>>>> 4634f11e (update 8 files and delete 426 files):src/components/pocket/pocket-cards/CardItems.vue
 <<<<<<< HEAD
 =======
@@ -16,6 +20,9 @@ import { getColor } from '@/utils/GetColor'
 import { getColor } from '@utils/getColor'
 >>>>>>>> 83f9266d (update 42 files and delete 17 files):src/components/pocketCards/CardItems.vue
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+>>>>>>>> 5132f0ce (update 8 files and delete 426 files):src/components/pocket/pocket-cards/CardItems.vue
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 
 const props = defineProps<{
     pocket: pocket

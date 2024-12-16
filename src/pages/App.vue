@@ -1,6 +1,7 @@
 <script setup lang="ts">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //import { Toaster } from '@components/base/sonner'
 =======
 import '@assets/css/index.css'
@@ -12,12 +13,23 @@ import { useGeneralStore } from '@stores/generalStore'
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+//import { Toaster } from '@components/base/sonner'
+=======
+import '@assets/css/index.css'
+//import { Toaster } from '@components/base/sonner'
+import { useGeneralStore } from '@stores/generalStore'
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { toggleDrawerState } from '@utils/utils'
 import { useDataStore } from '@stores/dataStore'
 const ds = useDataStore()
 ds.fetchData()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 /* const state = computed(() => {
     return (
         as.commandOpen == true ? 'open'
@@ -28,6 +40,7 @@ const gs = useGeneralStore()
     return (
         gs.commandOpen == true ? 'open'
         : gs.commandOpen == false ? 'closed'
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 /* const state = computed(() => {
@@ -35,10 +48,14 @@ const gs = useGeneralStore()
         as.commandOpen == true ? 'open'
         : as.commandOpen == false ? 'closed'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
         : null
     )
 })
 watch(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     () => as.commandOpen,
@@ -48,6 +65,12 @@ watch(
 =======
     () => as.commandOpen,
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+    () => as.commandOpen,
+=======
+    () => gs.commandOpen,
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     (newVal) => {
         console.log(newVal)
         console.log('st', state)
@@ -63,8 +86,11 @@ console.log(router)
 <template>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     <Drawer />
     <Shortkeys />
     <!--     <Toaster />
@@ -81,6 +107,7 @@ console.log(router)
      <Shortkeys />
     <Toaster /> -->
 
+<<<<<<< HEAD
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
     <SidebarProvider
@@ -94,6 +121,15 @@ console.log(router)
             <SidebarContent class="pt-14">
                 <SidebarAccount />
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+    <MainMenubar />
+
+    <SidebarProvider
+        class="bg-b2/10 relative size-full transition-all duration-1000">
+        <Sidebar collapsible="icon" class="justify-center">
+            <SidebarContent class="pt-18">
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
                 <ScrollArea class="!overflow-auto !overscroll-contain">
                     <SidebarPocketDisplays />
 
@@ -105,12 +141,19 @@ console.log(router)
                 </ScrollArea>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                 <SidebarAccount />
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+=======
+
+                <SidebarAccount />
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
             </SidebarContent>
 
             <SidebarRail />

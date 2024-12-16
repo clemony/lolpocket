@@ -2,6 +2,9 @@
 import { ref, computed } from 'vue'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 
 import { useDataStore } from '@/stores/dataStore'
 import { useTempStore } from '@/stores/tempStore'
@@ -9,12 +12,16 @@ import { useTempStore } from '@/stores/tempStore'
 import { useItemStore } from '@/stores/itemStore'
 import { useDataStore } from '@/stores/dataStore'
 import { useRuneStore } from '@/stores/runeStore'
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 
 import { useDataStore } from '@/stores/dataStore'
 import { useTempStore } from '@/stores/tempStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 
 const ds = useDataStore()
 const ts = useTempStore()

@@ -1,6 +1,9 @@
 <script setup lang="ts">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { useAccountStore } from '@stores/accountStore'
 import { getPocket } from '@/utils/pocketUtilities'
 import { useTempStore } from '@stores/tempStore'
@@ -11,6 +14,7 @@ const as = useAccountStore()
 =======
 import { useItemStore } from '@/stores/itemStore'
 import { usePocketStore } from '@/stores/pocketStore'
+<<<<<<< HEAD
 =======
 import { useAccountStore } from '@stores/accountStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
@@ -25,6 +29,13 @@ const ps = usePocketStore()
 =======
 const as = useAccountStore()
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+import { getPocket } from '@/utils/pocketUtilities'
+import { useScroll } from '@vueuse/core'
+
+const ps = usePocketStore()
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 const props = defineProps<{
     pocketKey: string
 }>()
@@ -33,14 +44,21 @@ const pocket = ref(getPocket(props.pocketKey))
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 const sortItemsAZ = ref(0)
 =======
 const is = useItemStore()
 const sortAZ = ref(0)
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 const sortItemsAZ = ref(0)
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 const sortPrice = ref(0)
 const isOpen = ref(false)
 
@@ -48,6 +66,9 @@ const search = ref()
 const handleSearch = computed(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     ts.itemSearchFilter = search.value // Update Pinia store's searchFilter
 })
 
@@ -63,6 +84,7 @@ const isFilterOpen = ref(false)
 const toggleFilter = useToggle(isFilterOpen)
 =======
     is.searchFilter = search.value // Update Pinia store's searchFilter
+<<<<<<< HEAD
 =======
     ts.itemSearchFilter = search.value // Update Pinia store's searchFilter
 >>>>>>> 404a531d (update 84 files and delete 4 files)
@@ -82,6 +104,19 @@ const likeText = computed(() => {
 const isFilterOpen = ref(false)
 const toggleFilter = useToggle(isFilterOpen)
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+})
+
+const likeText = computed(() => {
+    if (is.favoriteItems.length) {
+        return 'Show favorite items'
+    }
+    if (is.favoriteItems.length) {
+        return 'No favorite items'
+    }
+})
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 </script>
 
 <template>
@@ -97,14 +132,20 @@ const toggleFilter = useToggle(isFilterOpen)
                 <LayoutSpacer />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
                 <Card class="mb-2 border-none bg-transparent px-0 shadow-none!">
                     <CardHeader class="pb-4">
                         <h1 class="tracking-tighter">Item Sets</h1>
                     </CardHeader>
                     <CardDescription class="px-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 =======
                 <InfoCard
                     cardClass="mb-2 bg-transparent border-none shadow-none! px-0!">
@@ -112,9 +153,13 @@ const toggleFilter = useToggle(isFilterOpen)
                         <h1>Item Sets</h1>
                     </template>
                     <template #description>
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
                         Drag items from the list at the right. Items are
                         draggable & reorderable within sets and between them.
                         Select
@@ -128,6 +173,7 @@ const toggleFilter = useToggle(isFilterOpen)
                             <Label
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 class="absolute top-1 flex w-14 items-center justify-center gap-1">
 =======
                                 class="absolute -top-px flex w-14 items-center justify-center gap-1">
@@ -135,6 +181,12 @@ const toggleFilter = useToggle(isFilterOpen)
 =======
                                 class="absolute top-1 flex w-14 items-center justify-center gap-1">
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+                                class="absolute top-1 flex w-14 items-center justify-center gap-1">
+=======
+                                class="absolute -top-px flex w-14 items-center justify-center gap-1">
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
                                 <span class="text-3">⌘</span>
                                 +
                                 <icon
@@ -146,24 +198,34 @@ const toggleFilter = useToggle(isFilterOpen)
                         themselves, can be dragged into your preferred order.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
                     </CardDescription>
                 </Card>
 =======
                     </template>
                 </InfoCard>
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
                     </CardDescription>
                 </Card>
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
                 <ItemSets :pocketKey="pocketKey" />
             </ScrollArea>
         </template>
         <template #panel2>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
             <Card as-child
                     class="inset-0 mr-2 ml-8 h-[calc(100%-140px)] max-h-[calc(100%-140px)] w-fit justify-self-end overflow-hidden pt-4">
                 <Collapsible
@@ -251,6 +313,7 @@ const toggleFilter = useToggle(isFilterOpen)
                             iconClass="p-2.5 -ml-2 ring-0 ring-offset-0 outline-hidden"
                             inputClass="pr-6 pl-12 ring-0 ring-offset-0 outline-hidden"
                             class="bg-b1/40 border-b2 h-10 max-w-1/2 justify-self-start [&_input]:rounded-l-lg!" />
+<<<<<<< HEAD
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 
@@ -289,6 +352,38 @@ const toggleFilter = useToggle(isFilterOpen)
                                     @update:model="(v) => (ts.sortPrice = v)" />
 
 <<<<<<< HEAD
+=======
+
+                        <Label
+                            @click.stop
+                            size="icon"
+                            class="rating"
+                            alt="Filter Likes">
+                            <input
+                                type="radio"
+                                name="rating-2"
+                                class="mask mask-heart bg-domination" />
+                        </Label>
+                    </div>
+
+                    <Grow />
+
+                    <div class="shadow-xs">
+                        <ToggleStateButton
+                            @click.stop
+                            v-model:model="sortAZ"
+                            icon1="qlementine-icons:sort-alpha-asc-16"
+                            icon2="qlementine-icons:sort-alpha-desc-16"
+                            @update:model="(v) => (is.sortAZ = v)" />
+                        <ToggleStateButton
+                            @click.stop
+                            :model="sortPrice"
+                            icon1="bi:sort-numeric-down"
+                            icon2="bi:sort-numeric-up"
+                            :iconSize="7"
+                            @update:model="(v) => (is.sortPrice = v)" />
+
+>>>>>>> be133e04 (update 8 files and delete 426 files)
                         <FilterButton
                             class="rounded-l-none"
                             :class="{ 'bg-b2': isOpen == true }">
@@ -302,6 +397,7 @@ const toggleFilter = useToggle(isFilterOpen)
 
                 <ItemList :pocket="pocket" />
             </HeaderCard>
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
                                 <FilterButton
@@ -324,14 +420,20 @@ const toggleFilter = useToggle(isFilterOpen)
 </CardContent>
             </Card>
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
         </template>
     </Layout2>
 </template>
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 <style>
 .red-gradient {
     background: linear-gradient(270deg, #c56758, #e4aba1, #ca7852);
@@ -353,8 +455,14 @@ const toggleFilter = useToggle(isFilterOpen)
 }
 </style>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <style scoped></style>
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+=======
+<style scoped></style>
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)

@@ -2,13 +2,20 @@
 import { VueDraggable } from 'vue-draggable-plus'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 =======
 import { useItemStore } from '@/stores/itemStore'
 import { ItemSet } from 'types'
 import { getPocket } from '@/utils/pocketUtilities'
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 
 import { ItemSet } from 'types'
 import { addItemToSet, getPocket } from '@/utils/pocketUtilities'

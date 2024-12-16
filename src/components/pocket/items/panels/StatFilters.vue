@@ -1,6 +1,9 @@
 <script setup lang="ts">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { stats } from '@data/stats'
 import { useTempStore } from '@stores/tempStore'
 const ts = useTempStore()
@@ -10,12 +13,16 @@ import { useItemStore } from '@stores/itemStore'
 const is = useItemStore()
 import { stats } from '@data/stats'
 
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 import { stats } from '@data/stats'
 import { useTempStore } from '@stores/tempStore'
 const ts = useTempStore()
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 const sorted = stats.sort((a, b) => {
     return a.name.localeCompare(b.name)
 })

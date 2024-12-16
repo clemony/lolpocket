@@ -15,8 +15,11 @@ return quote
 export const Quotes = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     '<p>"Braum! What are you doing over there?! Are you drunk?"</p><p>-Ashe</p>',
     '<p>"So, Braum. No shirt, huh? And I don\'t have pants. Yay, Freljord."</p><p>-Ashe</p>',
     '<p>"A Crownguard and a mage? Wouldn\'t want to be her."</p><p>-Sona</p>',
@@ -67,6 +70,7 @@ export const Quotes = [
     '"Time flies like an arrow, fruit flies like banana" -Zilean',
     '"Put it on my tab, the names \'Pantheon\',with a P..." -Aurelion Sol',
     '"You even die ugly" -Qiyana',
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
     'I fought a house once. I\'m pretty sure I won." -Galio',
@@ -83,6 +87,9 @@ export const Quotes = [
     '<p>"Put it on my tab, the names \'Pantheon\',with a P..."</p><p>-Aurelion Sol</p>',
     '<p>"You even die ugly"</p><p>-Qiyana</p>',
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 ]
 
 let quotes = Quotes

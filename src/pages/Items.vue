@@ -3,6 +3,9 @@ import { useDataStore } from '@/stores/dataStore'
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 const ds = useDataStore()
 
 const items = ref(ds.items)
@@ -24,6 +27,7 @@ const items = ref(ds.items)
     </PageLayout>
 =======
 const dataStore = useDataStore()
+<<<<<<< HEAD
 =======
 const ds = useDataStore()
 >>>>>>> 404a531d (update 84 files and delete 4 files)
@@ -33,6 +37,24 @@ const items = ref(ds.items)
 
 <template>
 <<<<<<< HEAD
+=======
+
+interface Item {
+    name: string
+    img: string
+    buy: number
+    sell: number
+    stats: string
+    passive: string
+    active: string
+    type: string // Assuming 'type' is a property in your JSON data
+}
+
+const items = dataStore.items
+</script>
+
+<template>
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     <div class="grid-container">
         <div class="grid-item item" v-for="item in items">
             <div class="grid-image-container item">
@@ -45,6 +67,7 @@ const items = ref(ds.items)
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
     <PageLayout>
@@ -61,6 +84,9 @@ const items = ref(ds.items)
         </main>
     </PageLayout>
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 </template>
 
 <style scoped></style>

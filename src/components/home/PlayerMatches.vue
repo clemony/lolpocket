@@ -1,4 +1,5 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/home/PlayerMatches.vue
 import { summoner } from '@data/playerData'
 <<<<<<< HEAD
@@ -35,6 +36,13 @@ ChartJS.register(Tooltip, DoughnutController, ArcElement)
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/PlayerMatches.vue
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
 
+=======
+import { summoner } from '@data/playerData'
+import { useGeneralStore } from '@stores/generalStore'
+import { colorB3 } from '@utils/GetColor'
+const gs = useGeneralStore()
+
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
 const recentWinrate = ref(55)
 const recentMatchNum = ref(20)
 
@@ -42,16 +50,23 @@ const color1 = computed(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 <<<<<<< HEAD:src/components/home/PlayerMatches.vue
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
     return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
 =======
     return gs.colorBlindMode ? '#99c4c8' : '#a3be8c'
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
     return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 })
 
 const datasets = [
@@ -66,12 +81,16 @@ const labels = ['Win', 'Loss']
 <template>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     <div
         class="grid h-22 w-full grid-cols-[2.5fr_3fr_1fr] items-center gap-3 px-2"
         ref="matches">
         <div class="relative flex items-center gap-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     <div class="flex h-22 items-center pr-10" ref="matches">
@@ -79,12 +98,21 @@ const labels = ['Win', 'Loss']
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+=======
+    <div class="flex h-22 items-center pr-10" ref="matches">
+        <div class="relative flex size-22 grow items-center gap-4">
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
             <Donut
                 :datasets="datasets"
                 :colors="colors"
                 :labels="labels"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
                 type="gauge"
                 aria="Recent winrate in percentage"
                 class="!size-22" />
@@ -137,7 +165,13 @@ const chartData = {
                 aria-label="Recent winrate in percentage"
                 role="img" />
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/PlayerMatches.vue
+<<<<<<< HEAD
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+                aria="Recent winrate in percentage" />
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
             <span class="text-bc absolute left-7 font-medium">
                 {{ recentWinrate }}%
             </span>
@@ -151,9 +185,12 @@ const chartData = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 <<<<<<< HEAD:src/components/home/PlayerMatches.vue
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
         <div class="flex gap-3">
@@ -196,7 +233,12 @@ const chartData = {
 =======
 =======
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/PlayerMatches.vue
+<<<<<<< HEAD
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 
         <RoleDonut />
     </div>

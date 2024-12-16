@@ -1,6 +1,9 @@
 <script setup lang="ts">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
 import { useTempStore } from '@stores/tempStore'
@@ -8,12 +11,16 @@ import { useTempStore } from '@stores/tempStore'
 import { clean } from '@lib/utils'
 
 import { useChampStore } from '@stores/champStore'
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
 import { useTempStore } from '@stores/tempStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { VueDraggable } from 'vue-draggable-plus'
 import { useDataStore } from '@stores/dataStore'
 import type { pocket } from 'types'

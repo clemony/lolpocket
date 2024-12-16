@@ -3,6 +3,7 @@ import type { pocket } from 'types'
 import { ResizablePanel, ResizablePanelGroup } from '@components/base/resizable'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { runeColors } from '@utils/getColor'
 =======
 import { runeColors } from '@/utils/GetColor'
@@ -10,6 +11,12 @@ import { runeColors } from '@/utils/GetColor'
 =======
 import { runeColors } from '@utils/getColor'
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+import { runeColors } from '@utils/getColor'
+=======
+import { runeColors } from '@/utils/GetColor'
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 
 const props = defineProps<{
     pocket: pocket

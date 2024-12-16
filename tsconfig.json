@@ -7,10 +7,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 =======
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
         "components.d.ts",
         "types.d.ts"
 =======
@@ -25,6 +28,7 @@
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> fcc65b9c (update 38 files and delete 54 files)
+<<<<<<< HEAD
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 =======
         "components.d.ts",
@@ -33,6 +37,12 @@
 =======
 >>>>>>> fcc65b9c (update 38 files and delete 54 files)
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+        "components.d.ts",
+        "types.d.ts"
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     ],
     "exclude": [
         "node_modules",
@@ -54,6 +64,7 @@
             ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "@/assets/*": [
 =======
                   "@/assets/*": [
@@ -61,6 +72,12 @@
 =======
             "@/assets/*": [
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+            "@/assets/*": [
+=======
+                  "@/assets/*": [
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
                 "src/assets/*"
             ],
             "@data/*": [
@@ -77,6 +94,7 @@
             ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "@pages/*": [
 =======
                         "@pages/*": [
@@ -84,6 +102,12 @@
 =======
             "@pages/*": [
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+            "@pages/*": [
+=======
+                        "@pages/*": [
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
                 "src/pages/*"
             ],
             "@script/*": [
@@ -100,6 +124,7 @@
             ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "@components/*": [
 =======
                   "@components/*": [
@@ -107,6 +132,12 @@
 =======
             "@components/*": [
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+            "@components/*": [
+=======
+                  "@components/*": [
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
                 "src/components/*"
             ],
             "@/*": [

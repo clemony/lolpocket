@@ -117,6 +117,7 @@
   "private": true,
   "type": "module",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "main": "index.html",
   "scripts": {
     "build": "vite build",
@@ -127,19 +128,21 @@
     "analyze": "vite build && open dist/stats.html"
 =======
   "main": "main.js",
+=======
+  "main": "index.html",
+>>>>>>> be133e04 (update 8 files and delete 426 files)
   "scripts": {
     "build": "vite build",
     "preview": "vite preview",
-    "test:unit": "vitest",
     "vite": "vite dev",
-    "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
-    "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
-    "format": "prettier .  --write",
     "clean-cache": "rm -rf .vite",
+<<<<<<< HEAD
     "analyze": "vite build && open dist/stats.html",
     "server": "node server.js"
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+    "analyze": "vite build && open dist/stats.html"
+>>>>>>> be133e04 (update 8 files and delete 426 files)
   },
   "types": "./src/script/types.d.ts",
   "dependencies": {
@@ -169,12 +172,13 @@
     "@letstri/kinesis": "^0.2.1",
     "@oku-ui/motion": "^0.4.3",
     "@pinia/colada": "^0.12.1",
-    "@tailwindcss/postcss": "^4.0.0-beta.6",
-    "@tailwindcss/vite": "^4.0.0-beta.6",
+    "@tailwindcss/cli": "^4.0.0-beta.7",
+    "@tailwindcss/postcss": "^4.0.0-beta.7",
+    "@tailwindcss/vite": "^4.0.0-beta.7",
     "@vue/runtime-core": "^3.5.13",
     "@vueuse/motion": "^2.2.6",
-    "@windwards/plugin-mask": "^1.0.3",
     "ag-grid-community": "^32.3.0",
+<<<<<<< HEAD
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
     "ag-grid-vue3": "^32.3.0",
     "chart.js": "^4.4.7",
@@ -187,13 +191,21 @@
     "eslint-plugin-readable-tailwind": "^1.8.2",
     "fast-glob": "^3.3.2",
 =======
+=======
+    "ag-grid-vue3": "^32.3.3",
+    "chart.js": "^4.4.7",
+    "chartjs-plugin-stacked100": "^1.7.0",
+    "class-variance-authority": "^0.7.1",
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     "clsx": "^2.1.1",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.21.2",
+    "dotenv": "^16.4.7",
+    "embla-carousel-vue": "^8.5.1",
     "fast-glob": "^3.3.2",
+<<<<<<< HEAD
     "floating-vue": "^5.2.2",
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     "glob": "^11.0.0",
     "globby": "^14.0.2",
     "hexoid": "^2.0.0",
@@ -201,9 +213,11 @@
     "micromatch": "^4.0.8",
     "pinia": "^2.3.0",
     "pinia-plugin-persistedstate": "^4.1.3",
+    "postcss-import": "^16.1.0",
     "radix-vue": "^1.9.11",
     "random-words": "^2.0.1",
     "rimraf": "^6.0.1",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "shadcn-vue": "^0.11.3",
     "tailwind-merge": "^2.5.5",
@@ -224,30 +238,38 @@
 >>>>>>> fcc65b9c (update 38 files and delete 54 files)
 =======
     "shadcn-vue": "^1.0.0-next.0",
+=======
+    "shadcn-vue": "^0.11.3",
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     "tailwind-merge": "^2.5.5",
-    "tailwindcss-radix": "^3.0.5",
-    "tsx": "^4.4.0",
+    "tailwindcss-animate": "^1.0.7",
+    "tsx": "^4.19.2",
     "vaul-vue": "^0.2.0",
-    "vite-express": "^0.20.0",
-    "vite-plugin-node-polyfills": "^0.22.0",
     "vue": "^3.5.13",
     "vue-accessible-color-picker": "^5.1.0",
     "vue-chartjs": "^5.3.2",
+<<<<<<< HEAD
     "vue-css-donut-chart": "^2.1.0",
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     "vue-draggable-plus": "^0.6.0",
     "vue-sonner": "^1.3.0",
     "vue3-shortkey": "^4.0.0"
   },
   "devDependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "-": "^0.0.1",
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     "@eslint/js": "^10.0.0",
     "@iconify-json/ic": "^1.2.1",
     "@iconify-json/ph": "^1.2.1",
     "@rushstack/eslint-patch": "^1.10.4",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "@types/chart.js": "^2.9.41",
@@ -267,10 +289,16 @@
 >>>>>>> fcc65b9c (update 38 files and delete 54 files)
 =======
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+    "@types/chart.js": "^2.9.41",
+    "@types/node": "^22.10.2",
+    "@typescript-eslint/parser": "^8.18.0",
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/compiler-sfc": "^3.5.13",
     "@vue/test-utils": "^2.4.6",
     "@vueuse/core": "^12.0.0",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "daisyui": "^5.0.0-alpha.48",
@@ -283,11 +311,17 @@
     "daisyui": "^5.0.0-alpha.47",
     "eslint": "^9.16.0",
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^5.0.0-alpha.48",
+    "eslint": "^9.17.0",
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-cypress": "^4.1.0",
     "eslint-plugin-vue": "^9.32.0",
     "globals": "^15.13.0",
     "jsdom": "^25.0.1",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
@@ -309,21 +343,26 @@
     "vite-plugin-vue-devtools": "^7.6.8",
 =======
     "nodemon": "^3.1.7",
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     "prettier": "^3.4.2",
     "prettier-eslint": "^16.3.0",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "rollup-plugin-visualizer": "^5.12.0",
-    "start-server-and-test": "^2.0.8",
-    "tailwindcss": "^4.0.0-beta.6",
-    "tailwindcss-animate": "^1.0.7",
+    "start-server-and-test": "^2.0.9",
+    "tailwindcss": "^4.0.0-beta.7",
     "typescript": "^5.7.2",
-    "unplugin-auto-import": "^0.18.6",
+    "unplugin-auto-import": "^0.19.0",
     "unplugin-icons": "^0.21.0",
     "unplugin-vue-components": "^0.27.5",
     "vite": "^6.0.3",
+<<<<<<< HEAD
     "vite-plugin-csp-guard": "^1.1.3",
     "vite-plugin-vue-devtools": "^7.6.7",
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+    "vite-plugin-vue-devtools": "^7.6.8",
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     "vitest": "^2.1.8",
     "vue-eslint-parser": "^9.4.3",
     "vue-router": "^4.5.0",
@@ -331,11 +370,14 @@
   },
   "overrides": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "vite-plugin-node-polyfills": {
       "vite": "^6.0.0"
     },
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     "vite-plugin-inspect": {
       "vite": "^6.0.0"
     },
@@ -464,9 +506,17 @@
 >>>>>>> 9bb9b9a6 (update src/client/assets/css/index.css)
 =======
     },
+<<<<<<< HEAD
     "tailwindcss-radix": {
       "tailwindcss": ">=3.0.0 || >=4.0.0-beta || insiders"
 >>>>>>> fcc65b9c (update 38 files and delete 54 files)
+<<<<<<< HEAD
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+    "chartjs-chart-radial-gauge": {
+      "chart.js": ">=2.7.3 || >= 4.0.0"
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     }
 }

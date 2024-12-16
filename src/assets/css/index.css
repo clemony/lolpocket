@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 @import './utilities.css';
 @import './fonts.css' layer(base);
@@ -17,6 +18,8 @@
     themes: false;
 }
 <<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 @import './theme.css';
 @import './themes.css';
 /* @import '../animation/animations.css';*/
@@ -35,6 +38,7 @@
     html {
         @apply bg-transparent select-none;
 =======
+<<<<<<< HEAD
 =======
 @import './theme.css';
 @import './themes.css';
@@ -54,14 +58,64 @@
 =======
         @apply bg-transparent select-none;
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+@import './utilities.css';
+@import './fonts.css' layer(base);
+@import '@fontsource/geist-sans/400.css';
+@import '@fontsource/geist-sans/500.css';
+@import '@fontsource/geist-sans/600.css';
+@import '@fontsource/geist-sans/700.css';
+@import '../animation/animations.css';
+@import './theme.css' layer(base);
+@import './themes.css' layer(base);
+<<<<<<< HEAD:src/client/assets/css/index.css
+
+/*@plugin "tailwindcss-animate";*/
+@plugin "tailwindcss-radix";
+=======
+>>>>>>> 4634f11e (update 8 files and delete 426 files):src/assets/css/index.css
+
+@plugin "daisyui" {
+    themes: false;
+}
+<<<<<<< HEAD:src/client/assets/css/index.css
+/*    include: reset, keyframes, carousel, checkbox, join, swap, kbd, rating,
+        radio, tab, toggle, mask, properties, states, radialprogress, typography
+    exclude: avatar;     */
+@config './tailwind.config.js';
+=======
+>>>>>>> 4634f11e (update 8 files and delete 426 files):src/assets/css/index.css
+
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--b2, currentColor);
+    }
+
+    :root * {
+        font-family: 'Geist Sans', 'sans-serif';
+        user-select: none;
+    }
+
+    html {
+        font-size: 12px;
+        @apply !overflow-hidden bg-transparent select-none;
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
         ** {
             @apply scroll-smooth select-none;
         }
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 
     html,
     body {
@@ -79,10 +133,14 @@
         > * {
             @apply !rounded-[0.70rem];
         }
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
     #app {
         @apply top-0 left-0 m-0 h-screen w-screen bg-transparent p-0 select-none;
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     }
 }

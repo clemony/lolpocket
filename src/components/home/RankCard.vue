@@ -3,6 +3,7 @@ import type { queue } from 'types'
 import { summoner } from '@data/playerData'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { colorB3 } from '@utils/getColor'
 =======
 import { colorB3 } from '@utils/GetColor'
@@ -10,6 +11,12 @@ import { colorB3 } from '@utils/GetColor'
 =======
 import { colorB3 } from '@utils/getColor'
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+import { colorB3 } from '@utils/getColor'
+=======
+import { colorB3 } from '@utils/GetColor'
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 const props = defineProps<{
     queue: string
     title: string
@@ -52,8 +59,11 @@ const colors = [colorB3.value, color1.value]
         </template>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 <<<<<<< HEAD:src/components/home/RankCard.vue
         <div
             class="relative grid grid-cols-[1.1fr_1fr_1fr] place-items-center pt-6">
@@ -76,7 +86,17 @@ const colors = [colorB3.value, color1.value]
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/RankCard.vue
+<<<<<<< HEAD
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+        <div
+            class="relative grid grid-cols-[1.1fr_1fr_1fr] place-items-center pt-6">
+            <div>
+                <div
+                    class="absolute top-1 left-1 grid size-34 place-items-center">
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
                     <img
                         :src="`/img/crests/${queue.rank}.webp`"
                         class="object-contain drop-shadow-lg" />
@@ -85,16 +105,23 @@ const colors = [colorB3.value, color1.value]
             <div class="relative">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/home/RankCard.vue
 =======
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 <<<<<<< HEAD:src/components/home/RankCard.vue
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+<<<<<<< HEAD:src/components/home/RankCard.vue
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
                 <Donut
                     :datasets="datasets"
                     :colors="colors"
                     :labels="labels"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     type="gauge"
@@ -103,6 +130,11 @@ const colors = [colorB3.value, color1.value]
 =======
                     type="gauge"
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+                    type="gauge"
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
                     aria="Recent winrate in percentage"
                     class="size-22" />
 
@@ -111,8 +143,11 @@ const colors = [colorB3.value, color1.value]
                 </span>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 =======
                 <div
                     :style="{
@@ -141,7 +176,12 @@ const colors = [colorB3.value, color1.value]
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/RankCard.vue
+<<<<<<< HEAD
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
             </div>
             <div
                 class="text-2 mt-0 flex flex-col justify-center gap-2 font-medium">

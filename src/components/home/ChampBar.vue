@@ -1,4 +1,5 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/home/ChampBar.vue
 import { externalTooltip } from '@/config/charts'
 <<<<<<< HEAD
@@ -15,7 +16,14 @@ import { useAccountStore } from '@stores/accountStore'
 import { externalTooltip } from '@/client/config/charts'
 import { useGeneralStore } from '@/client/stores/generalStore'
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampBar.vue
+<<<<<<< HEAD
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+import { externalTooltip } from '@/config/charts'
+import { useGeneralStore } from '@stores/generalStore'
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { Bar } from 'vue-chartjs'
 import {
     Chart,
@@ -191,6 +199,7 @@ const chartOptions: ChartOptions<'bar'> = {
                 class="mt-3 size-full scale-x-170 scale-y-500" />
         </div>
     </div>
+<<<<<<< HEAD
     <!--  <div class="rounded-md">
         <div class="flex h-6 w-full overflow-hidden rounded-md">
             <Tooltip :content="a + '% Win Rate'" :disabled="a >= 31">
@@ -219,5 +228,7 @@ const chartOptions: ChartOptions<'bar'> = {
         </div>
     </div> -->
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampBar.vue
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
 </template>
 <style scoped></style>

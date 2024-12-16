@@ -1,8 +1,11 @@
 <script setup lang="ts">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 <<<<<<< HEAD:src/pages/Settings.vue
 import GeneralSettings from '@/components/settings/GeneralSettings.vue'
 import { useAccountStore } from '@stores/accountStore'
@@ -14,6 +17,7 @@ const settinas = useAccountStore()
 import GeneralSettings from '@/client/components/settings/GeneralSettings.vue'
 import { useGeneralStore } from '@/client/stores/generalStore'
 import AppearanceSettings from '@/client/components/settings/AppearanceSettings.vue'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import GeneralSettings from '@/components/settings/GeneralSettings.vue'
@@ -30,6 +34,13 @@ const as = useAccountStore()
 const settinas = useAccountStore()
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
+=======
+=======
+import GeneralSettings from '@/components/settings/GeneralSettings.vue'
+import { useGeneralStore } from '@/stores/generalStore'
+import AppearanceSettings from '@/components/settings/AppearanceSettings.vue'
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 
 const gs = useGeneralStore()
 const settings = useGeneralStore()

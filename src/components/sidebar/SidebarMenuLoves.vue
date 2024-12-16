@@ -1,6 +1,9 @@
 <script setup lang="ts">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { useTempStore } from '@stores/tempStore'
 import { useAccountStore } from '@stores/accountStore'
 =======
@@ -11,12 +14,17 @@ import { useAccountStore } from '@stores/accountStore'
 import { useItemStore } from '@/stores/itemStore'
 import { useChampStore } from '@/stores/champStore'
 import { useGeneralStore } from '@/stores/generalStore'
+<<<<<<< HEAD
 >>>>>>>> 4634f11e (update 8 files and delete 426 files):src/components/sidebar/SidebarMenuLoves.vue
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 import { useTempStore } from '@stores/tempStore'
 import { useAccountStore } from '@stores/accountStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>>> 5132f0ce (update 8 files and delete 426 files):src/components/sidebar/SidebarMenuLoves.vue
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 
 const as = useAccountStore()
 const ts = useTempStore()

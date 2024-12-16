@@ -1,4 +1,5 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/home/MatchCard.vue
 import { useDataStore } from '@/stores/dataStore'
 <<<<<<< HEAD
@@ -17,6 +18,10 @@ const as = useAccountStore()
 =======
 import { useDataStore } from '@/client/stores/dataStore'
 import { useGeneralStore } from '@/client/stores/generalStore'
+=======
+import { useDataStore } from '@/stores/dataStore'
+import { useGeneralStore } from '@/stores/generalStore'
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
 const gs = useGeneralStore()
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/MatchCard.vue
 >>>>>>> 2c930845 (update 38 files and delete 54 files)

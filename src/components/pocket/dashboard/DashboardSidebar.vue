@@ -1,12 +1,16 @@
 <script setup lang="ts">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { useTempStore } from '@stores/tempStore'
 import { usePocketStore } from '@stores/pocketStore'
 import { getQuote } from '@data/champQuotes'
 =======
 import { useChampStore } from '@stores/champStore'
 import { useItemStore } from '@stores/itemStore'
+<<<<<<< HEAD
 =======
 import { useTempStore } from '@stores/tempStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
@@ -17,6 +21,11 @@ import { formattedQuote } from '@data/champQuotes'
 =======
 import { getQuote } from '@data/champQuotes'
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+import { usePocketStore } from '@stores/pocketStore'
+import { formattedQuote } from '@data/champQuotes'
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import type { pocket } from 'types'
 
 const ps = usePocketStore()

@@ -2,14 +2,18 @@
 import type { pocket } from 'types'
 import { clean } from '@lib/utils'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:src/components/pocket/pocket-cards/PocketCard.vue
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 <<<<<<<< HEAD:src/components/pocketCards/PocketCard.vue
 import { runeColors } from '@utils/getColor'
 import { CSSProperties } from 'vue'
 
 import { useAccountStore } from '@stores/accountStore'
+<<<<<<< HEAD
 <<<<<<< HEAD
 ========
 import { runeColors } from '@utils/GetColor'
@@ -25,6 +29,14 @@ import { useGeneralStore } from '@stores/generalStore'
 >>>>>>>> 4634f11e (update 8 files and delete 426 files):src/components/pocket/pocket-cards/PocketCard.vue
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+========
+import { runeColors } from '@utils/GetColor'
+import { CSSProperties } from 'vue'
+
+import { useGeneralStore } from '@stores/generalStore'
+>>>>>>>> 5132f0ce (update 8 files and delete 426 files):src/components/pocket/pocket-cards/PocketCard.vue
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { easeInOut } from '@oku-ui/motion'
 
 const props = defineProps<{

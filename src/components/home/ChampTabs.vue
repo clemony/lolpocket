@@ -1,4 +1,5 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/home/ChampTabs.vue
 import { summoner } from '@data/playerData'
 <<<<<<< HEAD
@@ -21,6 +22,10 @@ const as = useAccountStore()
 =======
 import { summoner } from '@/client/data/playerData'
 import { useGeneralStore } from '@/client/stores/generalStore'
+=======
+import { summoner } from '@data/playerData'
+import { useGeneralStore } from '@stores/generalStore'
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
 const gs = useGeneralStore()
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampTabs.vue
 <<<<<<< HEAD

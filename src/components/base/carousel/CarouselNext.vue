@@ -2,17 +2,24 @@
 import type { WithClassAsProps } from './interface'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { Button } from '@/components/base/button'
 import { cn } from '@lib/utils'
 =======
 import { Button } from '@/components/base/ui/button'
 import { cn } from '@lib/utils'
 import { ArrowRightIcon } from '@radix-icons/vue'
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 import { Button } from '@/components/base/button'
 import { cn } from '@lib/utils'
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { useCarousel } from './useCarousel'
 
 const props = defineProps<WithClassAsProps>()
@@ -37,17 +44,24 @@ const { orientation, canScrollNext, scrollNext } = useCarousel()
         <slot>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
             <icon
                 icon="teenyicons:arrow-right-outline"
                 class="h-4 w-4 text-current" />
 =======
             <ArrowRightIcon class="h-4 w-4 text-current" />
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
             <icon
                 icon="teenyicons:arrow-right-outline"
                 class="h-4 w-4 text-current" />
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
             <span class="sr-only">Next Slide</span>
         </slot>
     </Button>

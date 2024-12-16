@@ -2,6 +2,7 @@
 import { scrollToSection } from '@/utils/utils'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { UseScrollReturn } from '@vueuse/core'
 import { vScroll } from '@vueuse/components'
 import { defineAsyncComponent } from 'vue'
@@ -22,11 +23,19 @@ const ts = useTempStore()
 const [emblaRef, emblaApi] = emblaCarouselVue()
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import type { UseScrollReturn } from '@vueuse/core'
 import { vScroll } from '@vueuse/components'
 import { defineAsyncComponent } from 'vue'
 import { getPocket } from '@/utils/pocketUtilities'
 import { useTempStore } from '@stores/tempStore'
+=======
+import { usePocketStore } from '@/stores/pocketStore'
+
+import { defineAsyncComponent } from 'vue'
+import { getPocket } from '@/utils/pocketUtilities'
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
 
 const ts = useTempStore()
 >>>>>>> 404a531d (update 84 files and delete 4 files)

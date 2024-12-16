@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:src/client/components/sidebar/SidebarPocketDisplays.vue
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
@@ -10,6 +11,11 @@
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 =======
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+<<<<<<<< HEAD:src/client/components/sidebar/SidebarPocketDisplays.vue
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 <<<<<<<< HEAD:src/components/sidebar/SidebarPocketDisplays.vue
 import { usePocketStore } from '@/stores/pocketStore'
 ========
@@ -21,6 +27,7 @@ import { usePocketStore } from '@/client/stores/pocketStore'
 =======
 <<<<<<< HEAD
 >>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/sidebar/SidebarPocketDisplays.vue
+<<<<<<< HEAD
 =======
 >>>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/components/sidebar/SidebarPocketDisplays.vue
 >>>>>>> 12d6db59 (update 38 files and delete 54 files)
@@ -37,6 +44,14 @@ import { usePocketStore } from '@/stores/pocketStore'
 =======
 >>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/sidebar/SidebarPocketDisplays.vue
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+<<<<<<< HEAD
+=======
+========
+import { usePocketStore } from '@/stores/pocketStore'
+>>>>>>>> 5132f0ce (update 8 files and delete 426 files):src/components/sidebar/SidebarPocketDisplays.vue
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 
 const ps = usePocketStore()
 </script>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 =======
 import { useGeneralStore } from '@stores/generalStore'
@@ -8,6 +9,12 @@ import { useGeneralStore } from '@stores/generalStore'
 =======
 import { useAccountStore } from '@stores/accountStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+import { useAccountStore } from '@stores/accountStore'
+=======
+import { useGeneralStore } from '@stores/generalStore'
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { blur } from '@lib/utils'
 
 const as = useAccountStore()

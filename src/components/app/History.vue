@@ -1,17 +1,25 @@
 <script setup lang="ts">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { useAccountStore } from '@stores/accountStore'
 =======
 <<<<<<<< HEAD:src/client/components/app/History.vue
 import { useAccountStore } from '@stores/accountStore'
 ========
 import { useGeneralStore } from '@stores/generalStore'
+<<<<<<< HEAD
 >>>>>>>> 4634f11e (update 8 files and delete 426 files):src/components/app/History.vue
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 import { useAccountStore } from '@stores/accountStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>>> 5132f0ce (update 8 files and delete 426 files):src/components/app/History.vue
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { useParallax } from '@vueuse/core'
 import { CSSProperties } from 'vue'
 
@@ -46,9 +54,15 @@ const pageStyle = computed(() => ({
                 /*base */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:src/client/components/app/History.vue
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+=======
+<<<<<<<< HEAD:src/client/components/app/History.vue
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
                 'bg-b1 top-1/2 z-0': as.commandOpen,
 
                 /* styling */
@@ -62,6 +76,7 @@ const pageStyle = computed(() => ({
                 /* styling */
                 'shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px,_2px_1px_0px_1px_rgba(221,_221,_221,_0.4),_0_2px_0px_rgba(204,_204,_204,_0.4)] after:absolute after:z-50 after:size-full after:bg-black/5':
                     gs.commandOpen,
+<<<<<<< HEAD
 >>>>>>>> 4634f11e (update 8 files and delete 426 files):src/components/app/History.vue
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
@@ -71,6 +86,10 @@ const pageStyle = computed(() => ({
                 'shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px,_2px_1px_0px_1px_rgba(221,_221,_221,_0.4),_0_2px_0px_rgba(204,_204,_204,_0.4)] after:absolute after:z-50 after:size-full after:bg-black/5':
                     as.commandOpen,
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>>> 5132f0ce (update 8 files and delete 426 files):src/components/app/History.vue
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
             })
         ">   <main vaul-drawer-wrapper class="size-full p-0" :key="state">
           </main>
@@ -94,6 +113,7 @@ const pageStyle = computed(() => ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/app/History.vue
                     as.commandOpen,
 ========
@@ -111,9 +131,19 @@ const pageStyle = computed(() => ({
                     as.commandOpen,
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 <<<<<<<< HEAD:src/components/app/History.vue
                     as.commandOpen,
 ========
+=======
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/app/History.vue
+                    as.commandOpen,
+========
+=======
+>>>>>>> fcc65b9c (update 38 files and delete 54 files)
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
                     gs.commandOpen,
 >>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/app/History.vue
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
@@ -158,11 +188,17 @@ const pageStyle = computed(() => ({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:src/client/components/app/History.vue
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
+=======
+=======
+<<<<<<<< HEAD:src/client/components/app/History.vue
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 <<<<<<<< HEAD:src/components/app/History.vue
                 <slot />
 ========
@@ -183,6 +219,7 @@ const pageStyle = computed(() => ({
 >>>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/app/History.vue
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ========
                 <slot />
@@ -190,6 +227,13 @@ const pageStyle = computed(() => ({
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
+=======
+=======
+========
+                <slot />
+>>>>>>>> 5132f0ce (update 8 files and delete 426 files):src/components/app/History.vue
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
             </label>
         </div>
     </div>

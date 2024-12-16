@@ -2,6 +2,9 @@
 import { usePocketStore } from '@/stores/pocketStore'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { useTempStore } from '@/stores/tempStore'
 import { getPocket } from '@/utils/pocketUtilities'
 const ts = useTempStore()
@@ -9,12 +12,16 @@ const ts = useTempStore()
 import { useRuneStore } from '@/stores/runeStore'
 import { getPocket } from '@/utils/pocketUtilities'
 const rs = useRuneStore()
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 import { useTempStore } from '@/stores/tempStore'
 import { getPocket } from '@/utils/pocketUtilities'
 const ts = useTempStore()
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 const ps = usePocketStore()
 const props = defineProps<{
     pocketKey: string

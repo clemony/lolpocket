@@ -1,8 +1,11 @@
 <script setup lang="ts">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import {
     handleItemLike,
     removeItemFromSet,
@@ -16,11 +19,15 @@ import { useItemStore } from '@/stores/itemStore'
 import { useGeneralStore } from '@/stores/generalStore'
 import { computed, watch } from 'vue'
 import { useChampStore } from '@/stores/champStore'
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 import { computed, watch } from 'vue'
 import { useTempStore } from '@stores/tempStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { Item, ItemSet } from 'types'
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()

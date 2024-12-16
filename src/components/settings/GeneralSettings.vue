@@ -1,6 +1,9 @@
 <script setup lang="ts">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { useAccountStore } from '@stores/accountStore'
 
 const as = useAccountStore()
@@ -8,6 +11,7 @@ const motion = ref()
 const sidebar = ref(as.defaultSidebarState)
 =======
 import { useGeneralStore } from '@/stores/generalStore'
+<<<<<<< HEAD
 =======
 import { useAccountStore } from '@stores/accountStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
@@ -20,6 +24,13 @@ const sidebar = ref(gs.defaultSidebarState)
 =======
 const sidebar = ref(as.defaultSidebarState)
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+
+const gs = useGeneralStore()
+const motion = ref()
+const sidebar = ref(gs.defaultSidebarState)
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 const toggleSetting = (model) => {
     useToggle(model)
 }
@@ -31,16 +42,23 @@ const settingsData = {
             description: 'Reduce the wobblies.',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
             model: as.reducedMotion,
             text: as.reducedMotion == false ? 'Wigglies On' : 'Less Wobblies',
 =======
             model: gs.reducedMotion,
             text: gs.reducedMotion == false ? 'Wigglies On' : 'Less Wobblies',
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
             model: as.reducedMotion,
             text: as.reducedMotion == false ? 'Wigglies On' : 'Less Wobblies',
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
         },
         {
             title: 'Suppress Pocket Preview',
@@ -48,6 +66,9 @@ const settingsData = {
                 'The little pocket that slides down in the sidebar and is annoying sometimes.',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
             model: as.pocketPreview,
             text:
                 as.pocketPreview == false ?
@@ -55,12 +76,16 @@ const settingsData = {
             model: gs.pocketPreview,
             text:
                 gs.pocketPreview == false ?
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
             model: as.pocketPreview,
             text:
                 as.pocketPreview == false ?
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
                     'Previews Visible'
                 :   'Previews Hidden',
         },
@@ -69,6 +94,9 @@ const settingsData = {
             description: 'Changes many of the green shades to blue.',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
             model: as.colorBlindMode,
             text:
                 as.colorBlindMode == false ? 'Colorblind Off' : 'Colorblind On',
@@ -76,18 +104,23 @@ const settingsData = {
             model: gs.colorBlindMode,
             text:
                 gs.colorBlindMode == false ? 'Colorblind Off' : 'Colorblind On',
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
             model: as.colorBlindMode,
             text:
                 as.colorBlindMode == false ? 'Colorblind Off' : 'Colorblind On',
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
         },
         {
             title: 'Sidebar Default State',
             description:
                 'Upon login, should your sidebar be expanded or collapsed?.',
             model: sidebar.value,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             text: as.defaultSidebarState == false ? 'Collapsed' : 'Expanded',
@@ -97,6 +130,12 @@ const settingsData = {
 =======
             text: as.defaultSidebarState == false ? 'Collapsed' : 'Expanded',
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+            text: as.defaultSidebarState == false ? 'Collapsed' : 'Expanded',
+=======
+            text: gs.defaultSidebarState == false ? 'Collapsed' : 'Expanded',
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
         },
     ],
 }

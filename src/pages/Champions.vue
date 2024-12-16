@@ -1,6 +1,9 @@
 <script setup lang="ts">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { useDataStore } from '@/stores/dataStore'
 
 const ds = useDataStore()
@@ -25,6 +28,7 @@ const champions = ref(ds.champions)
 =======
 import { getQuote } from '@data/champQuotes'
 import { useDataStore } from '@stores/dataStore'
+<<<<<<< HEAD
 =======
 import { useDataStore } from '@/stores/dataStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
@@ -36,6 +40,69 @@ const champions = ref(ds.champions)
 
 <template>
 <<<<<<< HEAD
+=======
+
+const ds = useDataStore()
+
+// Reactive references to champions and selectedChampion from the store
+const champions = computed(() => ds.champions)
+const selectedChampion = computed(() => ds.selectedChampion)
+
+// Checked abilities array
+const checkedAbilities = ref<string[]>([])
+
+const query = ref('')
+
+// Search list based on the query
+const searchList = computed(() => {
+    return champions.value.filter((champion) =>
+        champion.name.toLowerCase().includes(query.value.toLowerCase())
+    )
+})
+
+// Clear checked abilities
+const uncheckAbilities = () => {
+    checkedAbilities.value = []
+}
+
+function handleContextMenu(event, item) {
+    this.$refs.vueSimpleContextMenu.showMenu(event, item)
+}
+
+function optionClicked(event) {
+    window.alert(JSON.stringify(event))
+}
+const options = [
+    {
+        name: 'Add',
+        action: '',
+        icon: 'teenyicons:section-add-outline',
+    },
+    {
+        name: 'Remove',
+        action: '',
+        icon: 'teenyicons:section-remove-outline',
+    },
+    {
+        name: 'Open in Sidebar',
+        action: '',
+        icon: 'teenyicons:send-left-outline',
+    },
+    {
+        name: 'View on League Wiki',
+        action: '',
+        icon: 'teenyicons:download-outline',
+    },
+]
+
+onMounted(async () => {
+    const ds = useDataStore()
+    const champions = ds.champions
+})
+</script>
+
+<template>
+>>>>>>> be133e04 (update 8 files and delete 426 files)
     <!-- Champ Tab -->
 
     <div class="*:scrollbar-hide h-full w-full px-6">
@@ -90,6 +157,7 @@ const champions = ref(ds.champions)
             <ChampionSidebar />
         </div>
     </div>
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
     <PageLayout>
@@ -106,6 +174,9 @@ const champions = ref(ds.champions)
         </main>
     </PageLayout>
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 </template>
 
 <style scoped></style>

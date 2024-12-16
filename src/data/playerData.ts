@@ -123,6 +123,9 @@ export const summoner = {
     role: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 =======
   /*             support: {
             percent: 20,
@@ -140,9 +143,13 @@ export const summoner = {
             percent: 20,
         }, */
 
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
         support: {
             percent: 80,
         },
@@ -161,8 +168,11 @@ export const summoner = {
     },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
      recentChampions: [
          {
             name: 'Seraphine',
@@ -267,8 +277,14 @@ recentMatches:[
     }
 ]}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+=======
+}
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)

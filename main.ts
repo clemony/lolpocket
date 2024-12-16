@@ -1,12 +1,19 @@
 import App from './src/pages/App.vue'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import 'tailwindcss'
 import '@assets/css/index.css'
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+=======
+import 'tailwindcss'
+import '@assets/css/index.css'
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { motionPlugin } from '@oku-ui/motion'
 import { createPinia } from 'pinia'
 import piniaPluginPersistedState from 'pinia-plugin-persistedstate'
@@ -15,15 +22,22 @@ import { createApp } from 'vue'
 import { Icon } from '@iconify/vue'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import router from './router'
 =======
 import { kinesisPlugin } from '@letstri/kinesis'
 import router from './router'
 //import { FloatingVue, floatingVueOptions } from '@/config/floating-vue'
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 import router from './router'
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import Shortkey from 'vue3-shortkey'
 import '@fontsource/geist-sans/300.css'
 import '@fontsource/geist-sans/400.css'
@@ -46,11 +60,17 @@ app.component('Icon', Icon)
 app.use(router)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 //app.use(FloatingVue, floatingVueOptions)
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+=======
+//app.use(FloatingVue, floatingVueOptions)
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 app.use(Shortkey)
 
 app.mount('#app')

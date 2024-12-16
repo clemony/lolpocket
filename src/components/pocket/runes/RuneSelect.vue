@@ -1,14 +1,21 @@
 <script setup lang="ts">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 =======
 import { usePocketStore } from '@/stores/pocketStore'
 import { useRuneStore } from '@/stores/runeStore'
 const rs = useRuneStore()
 const ps = usePocketStore()
+<<<<<<< HEAD
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+>>>>>>> 5132f0ce (update 8 files and delete 426 files)
+>>>>>>> be133e04 (update 8 files and delete 426 files)
 import { useDataStore } from '@/stores/dataStore'
 import type { pocket, Rune, RuneSet } from 'types'
 import { useTempStore } from '@stores/tempStore'
