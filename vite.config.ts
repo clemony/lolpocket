@@ -1,5 +1,4 @@
 import vue from '@vitejs/plugin-vue'
-import { fileURLToPath, URL } from 'node:url'
 
 import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
@@ -9,7 +8,6 @@ import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 import { defineConfig, loadEnv } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
-//import { nodePolyfills } from 'vite-plugin-node-polyfills'
 import { resolve } from 'path'
 import RadixVueResolver from 'radix-vue/resolver'
 import OkuMotionResolver from '@oku-ui/motion/resolver'
@@ -19,18 +17,17 @@ export default defineConfig({
         vue(),
         vueDevTools(),
         tailwindcss(),
-        // nodePolyfills(),
         Components({
             dirs: [
-                'src/client/pages',
+                './src/pages',
                 '@iconify/vue',
-                'src/client/components',
-                'src/client/components/ui',
-                'src/client/utils',
+                './src/components',
+                './src/components/base',
+                './src/utils',
             ], // Ensure paths are correct
             extensions: ['vue'],
             deep: true,
-            dts: './src/client/components.d.ts',
+            dts: './components.d.ts',
             resolvers: [
                 RadixVueResolver(),
                 OkuMotionResolver(),
@@ -57,21 +54,21 @@ export default defineConfig({
                 'vue-i18n',
                 'vue-router',
                 {
-                    '@/client/lib/utils.ts': ['cn', 'clean'],
+                    '@/lib/utils.ts': ['cn', 'clean'],
                 },
             ],
 
             dirs: [],
             eslintrc: {
                 enabled: true,
-                filepath: './src/client/.eslintrc-auto-import.json',
+                filepath: './.eslintrc-auto-import.json',
             },
 
             vueTemplate: true,
             viteOptimizeDeps: true,
             injectAtEnd: true,
 
-            dts: './src/client/auto-imports.d.ts', // Generates `auto-imports.d.ts` file
+            dts: './auto-imports.d.ts', // Generates `auto-imports.d.ts` file
         }),
 
         Icons({
@@ -92,40 +89,38 @@ export default defineConfig({
             },
         }),
     ],
+    optimizeDeps: {
+        include: ['tailwindcss', './src/components/*'],
+    },
     clearScreen: false,
 
     server: {
         port: 8080,
-        open: false,
+        open: true,
     },
     resolve: {
         alias: {
-            '@assets': resolve(__dirname, '/src/client/assets'),
-            '@components': resolve(__dirname, 'src/client/components'),
-            '@data': resolve(__dirname, '/src/client/data'),
-            '@lib': resolve(__dirname, '/src/client/lib'),
-            '@pages': resolve(__dirname, '/src/client/pages'),
-            '@script': resolve(__dirname, '/src/client/script'),
-            '@stores': resolve(__dirname, '/src/client/stores'),
-            '@utils': resolve(__dirname, '/src/client/utils'),
+            '@assets': resolve(__dirname, '/src/assets'),
+            '@/assets': resolve(__dirname, '/src/assets'),
+            '@/components': resolve(__dirname, 'src/components'),
+            '@components': resolve(__dirname, 'src/components'),
+            '@base': resolve(__dirname, 'src/components/base'),
+            '@data': resolve(__dirname, '/src/data'),
+            '@lib': resolve(__dirname, '/src/lib'),
+            '@pages': resolve(__dirname, '/src/pages'),
+            '@/pages': resolve(__dirname, '/src/pages'),
+            '@script': resolve(__dirname, '/src/script'),
+            '@stores': resolve(__dirname, '/src/stores'),
+            '@utils': resolve(__dirname, '/src/utils/'),
             '@': resolve(__dirname, 'src'),
-            '@config': resolve(__dirname, '/src/client/config'),
-            '@css': resolve(__dirname, '/src/client/css'),
+            '@client': resolve(__dirname, '/src/'),
+            '@config': resolve(__dirname, '/src/config'),
+            '@css': resolve(__dirname, '/src/css'),
         },
     },
     build: {
         rollupOptions: {
-            input: {
-                main: 'index.html', // Adjust to your entry file
-            },
+            input: 'index.html',
         },
-        /* , 'TAURI_ENV_*        target:
-            process.env.TAURI_ENV_PLATFORM == 'windows' ?
-                'chrome105'
-            :   'safari13',
-        // don't minify for debug builds
-        minify: !process.env.TAURI_ENV_DEBUG ? 'esbuild' : false,
-        // produce sourcemaps for debug builds
-        sourcemap: !!process.env.TAURI_ENV_DEBUG, */
     },
 })
