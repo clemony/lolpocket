@@ -1,4 +1,8 @@
 @import 'tailwindcss';
+
+@plugin "daisyui" {
+    themes: false;
+}
 @import './theme.css';
 @import './themes.css';
 /* @import '../animation/animations.css';*/
@@ -9,7 +13,6 @@
 @plugin 'daisyui' {
     themes: false;
 }
-
 @layer base {
     html {
         @apply bg-transparent select-none;

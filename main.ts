@@ -7,11 +7,6 @@ import { createApp } from 'vue'
 import { Icon } from '@iconify/vue'
 import router from './router'
 import Shortkey from 'vue3-shortkey'
-import '@fontsource/geist-sans/300.css'
-import '@fontsource/geist-sans/400.css'
-import '@fontsource/geist-sans/500.css'
-import '@fontsource/geist-sans/600.css'
-import '@fontsource/geist-sans/700.css'
 
 const app = createApp(App)
 

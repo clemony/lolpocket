@@ -23,6 +23,7 @@ const router = useRouter()
 const history = router.options.history
 console.log(history)
 console.log(router)
+
 </script>
 
 <template>
