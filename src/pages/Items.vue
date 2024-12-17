@@ -4,8 +4,11 @@ import { useDataStore } from '@/stores/dataStore'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 const ds = useDataStore()
 
 const items = ref(ds.items)
@@ -28,6 +31,7 @@ const items = ref(ds.items)
 =======
 const dataStore = useDataStore()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const ds = useDataStore()
 >>>>>>> 404a531d (update 84 files and delete 4 files)
@@ -38,23 +42,21 @@ const items = ref(ds.items)
 <template>
 <<<<<<< HEAD
 =======
+=======
+=======
+const ds = useDataStore()
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 
-interface Item {
-    name: string
-    img: string
-    buy: number
-    sell: number
-    stats: string
-    passive: string
-    active: string
-    type: string // Assuming 'type' is a property in your JSON data
-}
-
-const items = dataStore.items
+const items = ref(ds.items)
 </script>
 
 <template>
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+<<<<<<< HEAD
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
     <div class="grid-container">
         <div class="grid-item item" v-for="item in items">
             <div class="grid-image-container item">
@@ -86,7 +88,25 @@ const items = dataStore.items
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+    <PageLayout>
+        <template #header>Items</template>
+        <LayoutSpacer />
+        <main class="px-12">
+            <Card>
+                <CardContent class="px-8 py-5">
+                    <ScrollArea class="overflow-y-scroll">
+                        <ItemList drag-disabled class="gap-5" />
+                    </ScrollArea>
+                </CardContent>
+            </Card>
+        </main>
+    </PageLayout>
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 </template>
 
 <style scoped></style>

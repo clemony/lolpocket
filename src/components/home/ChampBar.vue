@@ -21,9 +21,16 @@ import { useGeneralStore } from '@/client/stores/generalStore'
 =======
 =======
 import { externalTooltip } from '@/config/charts'
+<<<<<<< HEAD
 import { useGeneralStore } from '@stores/generalStore'
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+import { useAccountStore } from '@stores/accountStore'
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { Bar } from 'vue-chartjs'
 import {
     Chart,
@@ -48,6 +55,7 @@ Chart.register(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const as = useAccountStore()
 =======
 const gs = useGeneralStore()
@@ -56,12 +64,20 @@ const gs = useGeneralStore()
 const as = useAccountStore()
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 <<<<<<< HEAD:src/components/home/ChampBar.vue
 const as = useAccountStore()
 =======
 const gs = useGeneralStore()
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampBar.vue
+<<<<<<< HEAD
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+const as = useAccountStore()
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 const props = defineProps<{
     champion: any
 }>()
@@ -77,6 +93,7 @@ const color1 = computed(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
 =======
     return gs.colorBlindMode ? '#99c4c8' : '#a3be8c'
@@ -85,12 +102,20 @@ const color1 = computed(() => {
     return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 <<<<<<< HEAD:src/components/home/ChampBar.vue
     return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
 =======
     return gs.colorBlindMode ? '#99c4c8' : '#a3be8c'
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampBar.vue
+<<<<<<< HEAD
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+    return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 })
 
 const chartData: ChartData<'bar'> = {

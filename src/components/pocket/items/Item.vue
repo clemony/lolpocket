@@ -3,8 +3,11 @@ import type { Item, pocket } from 'types'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { useTempStore } from '@stores/tempStore'
 =======
 import { useItemStore } from '@/stores/itemStore'
@@ -16,7 +19,13 @@ import { useTempStore } from '@stores/tempStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+import { useTempStore } from '@stores/tempStore'
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import type { HTMLAttributes } from 'vue'
 import { addItemToSet } from '@utils/pocketUtilities'
 

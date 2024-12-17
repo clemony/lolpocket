@@ -3,6 +3,7 @@ import { scrollToSection } from '@/utils/utils'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { UseScrollReturn } from '@vueuse/core'
 import { vScroll } from '@vueuse/components'
 import { defineAsyncComponent } from 'vue'
@@ -25,6 +26,8 @@ const [emblaRef, emblaApi] = emblaCarouselVue()
 =======
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import type { UseScrollReturn } from '@vueuse/core'
 import { vScroll } from '@vueuse/components'
 import { defineAsyncComponent } from 'vue'
@@ -47,7 +50,19 @@ const ts = useTempStore()
 =======
 const [emblaRef, emblaApi] = emblaCarouselVue()
 >>>>>>> 621837bd (update 42 files and delete 17 files)
+<<<<<<< HEAD
 >>>>>>> a59cb6f4 (update 42 files and delete 17 files)
+=======
+=======
+import type { UseScrollReturn } from '@vueuse/core'
+import { vScroll } from '@vueuse/components'
+import { defineAsyncComponent } from 'vue'
+import { getPocket } from '@/utils/pocketUtilities'
+import { useTempStore } from '@stores/tempStore'
+
+const ts = useTempStore()
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 const Dashboard = defineAsyncComponent(
     () => import('./dashboard/PocketDashboard.vue')
 )
@@ -239,10 +254,15 @@ const header = computed(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> a59cb6f4 (update 42 files and delete 17 files)
+=======
+=======
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
  <div
             id="pocket-contents"
             class="carousel h-full w-[98%] justify-self-center overflow-x-scroll overflow-y-hidden">
@@ -284,8 +304,11 @@ const header = computed(() => {
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a59cb6f4 (update 42 files and delete 17 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 =======
         <Carousel
             v-slot="{ canScrollNext, canScrollPrev }"
@@ -353,7 +376,12 @@ const header = computed(() => {
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> 621837bd (update 42 files and delete 17 files)
+<<<<<<< HEAD
 >>>>>>> a59cb6f4 (update 42 files and delete 17 files)
+=======
+=======
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
     </PageLayout>
 </template>
 

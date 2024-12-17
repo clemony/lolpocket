@@ -202,8 +202,7 @@
 >>>>>>> be133e04 (update 8 files and delete 426 files)
     "clsx": "^2.1.1",
     "dotenv": "^16.4.7",
-    "embla-carousel-vue": "^8.5.1",
-    "embla-carousel-wheel-gestures": "^8.0.1",
+    "eslint-plugin-readable-tailwind": "^1.8.2",
     "fast-glob": "^3.3.2",
 <<<<<<< HEAD
     "floating-vue": "^5.2.2",
@@ -305,6 +304,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
     "daisyui": "^5.0.0-alpha.48",
     "eslint": "^9.17.0",
 =======
@@ -352,12 +354,12 @@
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
     "prettier": "^3.4.2",
-    "prettier-eslint": "^16.3.0",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "rollup-plugin-visualizer": "^5.12.0",
     "start-server-and-test": "^2.0.9",
     "tailwindcss": "^4.0.0-beta.7",
     "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.1",
     "unplugin-auto-import": "^0.19.0",
     "unplugin-icons": "^0.21.0",
     "unplugin-vue-components": "^0.27.5",
@@ -389,6 +391,7 @@
     },
     "tailwindcss-animate": {
       "tailwindcss": ">=3.0.0 || >=4.0.0-beta || insiders"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -514,6 +517,8 @@
 =======
 =======
 >>>>>>> a59cb6f4 (update 42 files and delete 17 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
     },
 <<<<<<< HEAD
     "tailwindcss-radix": {
@@ -531,6 +536,14 @@
 =======
 =======
 >>>>>>> 621837bd (update 42 files and delete 17 files)
+<<<<<<< HEAD
 >>>>>>> a59cb6f4 (update 42 files and delete 17 files)
+=======
+=======
+    },
+    "eslint-plugin-readable-tailwind": {
+      "tailwindcss": ">=3.3.0 || >= 4.0.0-beta || insiders"
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
     }
 }

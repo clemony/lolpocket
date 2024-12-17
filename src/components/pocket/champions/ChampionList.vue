@@ -2,8 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
 import { useTempStore } from '@stores/tempStore'
@@ -20,7 +23,15 @@ import { useTempStore } from '@stores/tempStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
+import { useTempStore } from '@stores/tempStore'
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { VueDraggable } from 'vue-draggable-plus'
 import { useDataStore } from '@stores/dataStore'
 import type { pocket } from 'types'
@@ -130,8 +141,11 @@ watch(
         <TransitionGroup name="pop">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 <<<<<<< HEAD:src/components/pocket/champions/ChampionList.vue
         
 =======
@@ -143,7 +157,13 @@ watch(
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/pocket/champions/ChampionList.vue
+<<<<<<< HEAD
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+        
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
             <label
                 v-for="champion in filteredChampions"
                 :key="champion.name"
@@ -156,8 +176,11 @@ watch(
                     :value="champion"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 <<<<<<< HEAD:src/components/pocket/champions/ChampionList.vue
                     v-model="ts.selectedChampion"
 =======
@@ -169,7 +192,13 @@ watch(
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/pocket/champions/ChampionList.vue
+<<<<<<< HEAD
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+                    v-model="ts.selectedChampion"
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
                     class="peer hidden" />
                 <LoadImg
                     :url="`/img/champions/${clean(champion.name)}.webp`"

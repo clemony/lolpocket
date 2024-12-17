@@ -38,9 +38,9 @@ ChartJS.register(Tooltip, DoughnutController, ArcElement)
 
 =======
 import { summoner } from '@data/playerData'
-import { useGeneralStore } from '@stores/generalStore'
+import { useAccountStore } from '@stores/accountStore'
 import { colorB3 } from '@utils/getColor'
-const gs = useGeneralStore()
+const as = useAccountStore()
 
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 const recentWinrate = ref(55)
@@ -51,9 +51,12 @@ const color1 = computed(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 <<<<<<< HEAD:src/components/home/PlayerMatches.vue
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
     return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
@@ -66,7 +69,13 @@ const color1 = computed(() => {
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+    return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 })
 
 const datasets = [

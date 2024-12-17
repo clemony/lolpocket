@@ -2,8 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { useAccountStore } from '@stores/accountStore'
 
 const as = useAccountStore()
@@ -11,6 +14,7 @@ const motion = ref()
 const sidebar = ref(as.defaultSidebarState)
 =======
 import { useGeneralStore } from '@/stores/generalStore'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { useAccountStore } from '@stores/accountStore'
@@ -25,12 +29,24 @@ const sidebar = ref(gs.defaultSidebarState)
 const sidebar = ref(as.defaultSidebarState)
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
+=======
+=======
+import { useAccountStore } from '@stores/accountStore'
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 
-const gs = useGeneralStore()
+const as = useAccountStore()
 const motion = ref()
+<<<<<<< HEAD
 const sidebar = ref(gs.defaultSidebarState)
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+const sidebar = ref(as.defaultSidebarState)
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 const toggleSetting = (model) => {
     useToggle(model)
 }
@@ -43,8 +59,11 @@ const settingsData = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
             model: as.reducedMotion,
             text: as.reducedMotion == false ? 'Wigglies On' : 'Less Wobblies',
 =======
@@ -58,7 +77,14 @@ const settingsData = {
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+            model: as.reducedMotion,
+            text: as.reducedMotion == false ? 'Wigglies On' : 'Less Wobblies',
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
         },
         {
             title: 'Suppress Pocket Preview',
@@ -67,8 +93,11 @@ const settingsData = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
             model: as.pocketPreview,
             text:
                 as.pocketPreview == false ?
@@ -85,7 +114,15 @@ const settingsData = {
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+            model: as.pocketPreview,
+            text:
+                as.pocketPreview == false ?
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
                     'Previews Visible'
                 :   'Previews Hidden',
         },
@@ -95,8 +132,11 @@ const settingsData = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
             model: as.colorBlindMode,
             text:
                 as.colorBlindMode == false ? 'Colorblind Off' : 'Colorblind On',
@@ -113,13 +153,22 @@ const settingsData = {
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+            model: as.colorBlindMode,
+            text:
+                as.colorBlindMode == false ? 'Colorblind Off' : 'Colorblind On',
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
         },
         {
             title: 'Sidebar Default State',
             description:
                 'Upon login, should your sidebar be expanded or collapsed?.',
             model: sidebar.value,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -131,11 +180,19 @@ const settingsData = {
             text: as.defaultSidebarState == false ? 'Collapsed' : 'Expanded',
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
             text: as.defaultSidebarState == false ? 'Collapsed' : 'Expanded',
 =======
             text: gs.defaultSidebarState == false ? 'Collapsed' : 'Expanded',
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+            text: as.defaultSidebarState == false ? 'Collapsed' : 'Expanded',
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
         },
     ],
 }

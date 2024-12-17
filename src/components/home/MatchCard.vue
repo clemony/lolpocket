@@ -20,11 +20,19 @@ import { useDataStore } from '@/client/stores/dataStore'
 import { useGeneralStore } from '@/client/stores/generalStore'
 =======
 import { useDataStore } from '@/stores/dataStore'
+<<<<<<< HEAD
 import { useGeneralStore } from '@/stores/generalStore'
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 const gs = useGeneralStore()
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/MatchCard.vue
+<<<<<<< HEAD
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 const ds = useDataStore()
 const match = {
     type: 'Ranked Solo/Duo',

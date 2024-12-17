@@ -2,8 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { useTempStore } from '@stores/tempStore'
 import { useAccountStore } from '@stores/accountStore'
 =======
@@ -24,7 +27,14 @@ import { useAccountStore } from '@stores/accountStore'
 =======
 >>>>>>>> 5132f0ce (update 8 files and delete 426 files):src/components/sidebar/SidebarMenuLoves.vue
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+import { useTempStore } from '@stores/tempStore'
+import { useAccountStore } from '@stores/accountStore'
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 
 const as = useAccountStore()
 const ts = useTempStore()

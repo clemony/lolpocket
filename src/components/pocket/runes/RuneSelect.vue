@@ -2,8 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 =======
 import { usePocketStore } from '@/stores/pocketStore'
 import { useRuneStore } from '@/stores/runeStore'
@@ -15,7 +18,12 @@ const ps = usePocketStore()
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { useDataStore } from '@/stores/dataStore'
 import type { pocket, Rune, RuneSet } from 'types'
 import { useTempStore } from '@stores/tempStore'
@@ -177,6 +185,7 @@ onMounted(() => {})
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 class="h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0 ">
 =======
                 class="h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0">
@@ -185,11 +194,19 @@ onMounted(() => {})
                 class="h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0 ">
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
                 class="h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0 ">
 =======
                 class="h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0">
 >>>>>>> 621837bd (update 42 files and delete 17 files)
+<<<<<<< HEAD
 >>>>>>> a59cb6f4 (update 42 files and delete 17 files)
+=======
+=======
+                class="h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0 ">
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
                 <PopoverTrigger>
                     <LoadImg
                         :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
@@ -208,8 +225,11 @@ onMounted(() => {})
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a59cb6f4 (update 42 files and delete 17 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
                 class="h-[inherit] w-[inherit] opacity-80 brightness-90 transition-all duration-500 peer-checked:opacity-100 peer-checked:brightness-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0 ">
                 <PopoverTrigger class="overflow-hidden">
                     <LoadImg
@@ -232,7 +252,17 @@ onMounted(() => {})
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> 621837bd (update 42 files and delete 17 files)
+<<<<<<< HEAD
 >>>>>>> a59cb6f4 (update 42 files and delete 17 files)
+=======
+=======
+                class="h-[inherit] w-[inherit] opacity-80 brightness-90 transition-all duration-500 peer-checked:opacity-100 peer-checked:brightness-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0 ">
+                <PopoverTrigger class="overflow-hidden">
+                    <LoadImg
+                        :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
+                        :alt="rune.name" class='size-16 rounded-full'
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
                         @error="onImageError" />
                 </PopoverTrigger>
                 <PopoverContent>
@@ -279,6 +309,7 @@ onMounted(() => {})
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         @error="onImageError" class='rounded-full size-17' />
 =======
                         @error="onImageError" />
@@ -287,11 +318,19 @@ onMounted(() => {})
                         @error="onImageError" class='rounded-full size-17' />
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
                         @error="onImageError" class='rounded-full size-17' />
 =======
                         @error="onImageError" />
 >>>>>>> 621837bd (update 42 files and delete 17 files)
+<<<<<<< HEAD
 >>>>>>> a59cb6f4 (update 42 files and delete 17 files)
+=======
+=======
+                        @error="onImageError" class='rounded-full size-17' />
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
                 </PopoverTrigger>
                 <PopoverContent>
                     <RunePop :rune="rune" />

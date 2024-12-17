@@ -15,10 +15,13 @@ const props = defineProps<{
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 =======
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 <<<<<<< HEAD:src/components/card/Card.vue
                 '!border-b3 bg-b1/95 shadow-smooth rounded-xl backdrop-blur-md',
 =======
@@ -31,6 +34,7 @@ const props = defineProps<{
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/base/card/Card.vue
+<<<<<<< HEAD
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 =======
                 '!border-b3 bg-b1/95 shadow-smooth rounded-xl backdrop-blur-md',
@@ -38,6 +42,11 @@ const props = defineProps<{
 =======
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/base/card/Card.vue
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+                '!border-b3 bg-b1/95 shadow-smooth rounded-xl backdrop-blur-md',
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
                 props.class
             )
         ">

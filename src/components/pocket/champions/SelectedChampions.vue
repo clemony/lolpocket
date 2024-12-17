@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useTempStore } from '@stores/tempStore'
 =======
 import { useChampStore } from '@/stores/champStore'
@@ -10,11 +11,19 @@ import { useChampStore } from '@/stores/champStore'
 import { useTempStore } from '@stores/tempStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { useTempStore } from '@stores/tempStore'
 =======
 import { useChampStore } from '@/stores/champStore'
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+import { useTempStore } from '@stores/tempStore'
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { VueDraggable } from 'vue-draggable-plus'
 import type { pocket } from 'types'
 import { removeChamp } from '@utils/pocketUtilities'

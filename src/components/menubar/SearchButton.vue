@@ -4,8 +4,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
 =======
@@ -19,7 +22,14 @@ const as = useAccountStore()
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 const props = defineProps<{
     placeholder: string
 }>()
@@ -42,6 +52,7 @@ const props = defineProps<{
             as.commandOpen ? (as.commandOpen = false) : (as.commandOpen = true)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         class="border-b3 bg-b1 hover:border-b3 hover:bg-b2/20 flex !h-9 min-h-6 w-full min-w-44 items-center border !px-2 !py-0 hover:ring-0"
 =======
@@ -55,6 +66,8 @@ const props = defineProps<{
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 =======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
+=======
         class="border-b3 bg-b1 hover:border-b3 hover:bg-b2/20 flex !h-9 min-h-6 w-full min-w-44 items-center border !px-2 !py-0 hover:ring-0"
 =======
         variant="outline"
@@ -63,7 +76,12 @@ const props = defineProps<{
         @click="
             gs.commandOpen ? (gs.commandOpen = false) : (gs.commandOpen = true)
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
         ">
         <icon
             icon="teenyicons:search-outline"

@@ -2,14 +2,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { useTempStore } from '@stores/tempStore'
 import { usePocketStore } from '@stores/pocketStore'
 import { getQuote } from '@data/champQuotes'
 =======
 import { useChampStore } from '@stores/champStore'
 import { useItemStore } from '@stores/itemStore'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { useTempStore } from '@stores/tempStore'
@@ -22,6 +26,11 @@ import { formattedQuote } from '@data/champQuotes'
 import { getQuote } from '@data/champQuotes'
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 =======
+=======
+=======
+import { useTempStore } from '@stores/tempStore'
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { usePocketStore } from '@stores/pocketStore'
 <<<<<<< HEAD
 import { formattedQuote } from '@data/champQuotes'

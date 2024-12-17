@@ -24,16 +24,24 @@ import { summoner } from '@/client/data/playerData'
 import { useGeneralStore } from '@/client/stores/generalStore'
 =======
 import { summoner } from '@data/playerData'
+<<<<<<< HEAD
 import { useGeneralStore } from '@stores/generalStore'
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 const gs = useGeneralStore()
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampTabs.vue
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 =======
 >>>>>>> 9bb9b9a6 (update src/client/assets/css/index.css)
 =======
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 </script>
 
 <template>
@@ -93,6 +101,7 @@ const gs = useGeneralStore()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     'text-inspiration': as.colorBlindMode,
 =======
                                     'text-inspiration': gs.colorBlindMode,
@@ -101,11 +110,14 @@ const gs = useGeneralStore()
                                     'text-inspiration': as.colorBlindMode,
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 <<<<<<< HEAD:src/components/home/ChampTabs.vue
                                     'text-inspiration': as.colorBlindMode,
 =======
                                     'text-inspiration': gs.colorBlindMode,
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampTabs.vue
+<<<<<<< HEAD
 >>>>>>> 58212a1a (update 38 files and delete 54 files)
 =======
                                     'text-inspiration': as.colorBlindMode,
@@ -117,6 +129,11 @@ const gs = useGeneralStore()
                                     'text-inspiration': gs.colorBlindMode,
 >>>>>>> fcc65b9c (update 38 files and delete 54 files):src/client/components/home/ChampTabs.vue
 >>>>>>> 2c930845 (update 38 files and delete 54 files)
+=======
+=======
+                                    'text-inspiration': as.colorBlindMode,
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
                                 }" />
                         </p>
                         <p class="flex items-center text-nowrap">

@@ -8,8 +8,11 @@ import { pocket } from 'types'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { useAccountStore } from '@stores/accountStore'
 import { scrollToSection } from '@utils/utils'
 const as = useAccountStore()
@@ -26,7 +29,15 @@ const as = useAccountStore()
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+import { useAccountStore } from '@stores/accountStore'
+import { scrollToSection } from '@utils/utils'
+const as = useAccountStore()
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 
 const toID = hexoid()
 

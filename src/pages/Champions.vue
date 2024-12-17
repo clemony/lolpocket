@@ -2,8 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { useDataStore } from '@/stores/dataStore'
 
 const ds = useDataStore()
@@ -29,6 +32,7 @@ const champions = ref(ds.champions)
 import { getQuote } from '@data/champQuotes'
 import { useDataStore } from '@stores/dataStore'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useDataStore } from '@/stores/dataStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
@@ -41,68 +45,23 @@ const champions = ref(ds.champions)
 <template>
 <<<<<<< HEAD
 =======
+=======
+=======
+import { useDataStore } from '@/stores/dataStore'
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 
 const ds = useDataStore()
 
-// Reactive references to champions and selectedChampion from the store
-const champions = computed(() => ds.champions)
-const selectedChampion = computed(() => ds.selectedChampion)
-
-// Checked abilities array
-const checkedAbilities = ref<string[]>([])
-
-const query = ref('')
-
-// Search list based on the query
-const searchList = computed(() => {
-    return champions.value.filter((champion) =>
-        champion.name.toLowerCase().includes(query.value.toLowerCase())
-    )
-})
-
-// Clear checked abilities
-const uncheckAbilities = () => {
-    checkedAbilities.value = []
-}
-
-function handleContextMenu(event, item) {
-    this.$refs.vueSimpleContextMenu.showMenu(event, item)
-}
-
-function optionClicked(event) {
-    window.alert(JSON.stringify(event))
-}
-const options = [
-    {
-        name: 'Add',
-        action: '',
-        icon: 'teenyicons:section-add-outline',
-    },
-    {
-        name: 'Remove',
-        action: '',
-        icon: 'teenyicons:section-remove-outline',
-    },
-    {
-        name: 'Open in Sidebar',
-        action: '',
-        icon: 'teenyicons:send-left-outline',
-    },
-    {
-        name: 'View on League Wiki',
-        action: '',
-        icon: 'teenyicons:download-outline',
-    },
-]
-
-onMounted(async () => {
-    const ds = useDataStore()
-    const champions = ds.champions
-})
+const champions = ref(ds.champions)
 </script>
 
 <template>
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+<<<<<<< HEAD
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
     <!-- Champ Tab -->
 
     <div class="*:scrollbar-hide h-full w-full px-6">
@@ -176,7 +135,25 @@ onMounted(async () => {
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+    <PageLayout>
+        <template #header>Champions</template>
+        <LayoutSpacer />
+        <main class="px-12">
+            <Card>
+                <CardContent class="px-8 py-5">
+                    <ScrollArea class="overflow-y-scroll">
+                        <ChampionList drag-disabled class="gap-5" />
+                    </ScrollArea>
+                </CardContent>
+            </Card>
+        </main>
+    </PageLayout>
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 </template>
 
 <style scoped></style>

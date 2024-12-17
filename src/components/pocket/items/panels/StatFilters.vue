@@ -2,8 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { stats } from '@data/stats'
 import { useTempStore } from '@stores/tempStore'
 const ts = useTempStore()
@@ -22,7 +25,15 @@ const ts = useTempStore()
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+import { stats } from '@data/stats'
+import { useTempStore } from '@stores/tempStore'
+const ts = useTempStore()
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 const sorted = stats.sort((a, b) => {
     return a.name.localeCompare(b.name)
 })

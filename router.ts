@@ -35,7 +35,7 @@ import { useAccountStore } from './src/stores/accountStore'
 >>>>>>> 621837bd (update 42 files and delete 17 files)
 >>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 
-import { useGeneralStore } from './src/stores/generalStore'
+import { useAccountStore } from './src/stores/accountStore'
 
 <<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)

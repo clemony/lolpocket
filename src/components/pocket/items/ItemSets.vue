@@ -3,6 +3,7 @@ import { VueDraggable } from 'vue-draggable-plus'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useTempStore } from '@stores/tempStore'
 =======
 import { useItemStore } from '@stores/itemStore'
@@ -11,11 +12,19 @@ import { useItemStore } from '@stores/itemStore'
 import { useTempStore } from '@stores/tempStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { useTempStore } from '@stores/tempStore'
 =======
 import { useItemStore } from '@stores/itemStore'
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+import { useTempStore } from '@stores/tempStore'
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { usePocketStore } from '@stores/pocketStore'
 import { deleteItemSet, getPocket, newItemSet } from '@utils/pocketUtilities'
 import ItemSetItems from './ItemSetItems.vue'
@@ -25,16 +34,22 @@ import { generateRandomName } from '@lib/functions/Keygen'
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 const is = useItemStore()
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
 >>>>>>> be133e04 (update 8 files and delete 426 files)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const is = useItemStore()
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
+=======
+=======
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 const ts = useTempStore()
 const ps = usePocketStore()
 

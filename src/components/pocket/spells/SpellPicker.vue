@@ -3,6 +3,7 @@ import { useQuery } from '@pinia/colada'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useTempStore } from '@/stores/tempStore'
 =======
 import { useRuneStore } from '@/stores/runeStore'
@@ -11,11 +12,19 @@ import { useRuneStore } from '@/stores/runeStore'
 import { useTempStore } from '@/stores/tempStore'
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { useTempStore } from '@/stores/tempStore'
 =======
 import { useRuneStore } from '@/stores/runeStore'
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+import { useTempStore } from '@/stores/tempStore'
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { PopoverClose, PopoverPortal } from 'radix-vue'
 import type { spell } from 'types'
 

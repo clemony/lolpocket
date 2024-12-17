@@ -23,9 +23,15 @@ import '@assets/css/index.css'
 =======
 >>>>>>> 621837bd (update 42 files and delete 17 files)
 //import { Toaster } from '@components/base/sonner'
+<<<<<<< HEAD
 import { useGeneralStore } from '@stores/generalStore'
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { toggleDrawerState } from '@utils/utils'
 import { useDataStore } from '@stores/dataStore'
 const ds = useDataStore()
@@ -33,8 +39,11 @@ ds.fetchData()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 /* const state = computed(() => {
     return (
         as.commandOpen == true ? 'open'
@@ -55,11 +64,21 @@ const gs = useGeneralStore()
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+/* const state = computed(() => {
+    return (
+        as.commandOpen == true ? 'open'
+        : as.commandOpen == false ? 'closed'
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
         : null
     )
 })
 watch(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -71,11 +90,19 @@ watch(
     () => as.commandOpen,
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
     () => as.commandOpen,
 =======
     () => gs.commandOpen,
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+    () => as.commandOpen,
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
     (newVal) => {
         console.log(newVal)
         console.log('st', state)
@@ -92,10 +119,15 @@ console.log(router)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
     <Drawer />
     <Shortkeys />
     <!--     <Toaster />
@@ -112,6 +144,7 @@ console.log(router)
      <Shortkeys />
     <Toaster /> -->
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -132,8 +165,12 @@ console.log(router)
 
 =======
 >>>>>>> a59cb6f4 (update 42 files and delete 17 files)
+=======
+=======
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
     <SidebarProvider
-        class="bg-b1 relative size-full backdrop-brightness-[97%] transition-all duration-1000">
+        class="bg-b1 relative size-full backdrop-brightness-[96%] transition-all duration-1000">
         <MainMenubar />
         <Sidebar collapsible="icon" class="justify-center">
 <<<<<<< HEAD

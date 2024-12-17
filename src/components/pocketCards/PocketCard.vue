@@ -21,6 +21,7 @@ import { CSSProperties } from 'vue'
 import { useAccountStore } from '@stores/accountStore'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ========
 import { runeColors } from '@utils/GetColor'
 <<<<<<< HEAD
@@ -36,6 +37,8 @@ import { useGeneralStore } from '@stores/generalStore'
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 ========
 import { runeColors } from '@utils/GetColor'
 <<<<<<< HEAD
@@ -48,7 +51,12 @@ import { CSSProperties } from 'vue'
 
 import { useGeneralStore } from '@stores/generalStore'
 >>>>>>>> 5132f0ce (update 8 files and delete 426 files):src/components/pocket/pocket-cards/PocketCard.vue
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { easeInOut } from '@oku-ui/motion'
 
 const props = defineProps<{

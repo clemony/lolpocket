@@ -2,8 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 import { useAccountStore } from '@stores/accountStore'
 import { useSidebar } from '@/components/base/sidebar/utils'
 import { summoner } from '@data/playerData'
@@ -11,6 +14,7 @@ const as = useAccountStore()
 
 =======
 import { useGeneralStore } from '@stores/generalStore'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -33,6 +37,14 @@ import { useSidebar } from '@/components/base/sidebar/utils'
 >>>>>>> a59cb6f4 (update 42 files and delete 17 files)
 import { summoner } from '@data/playerData'
 const gs = useGeneralStore()
+=======
+=======
+import { useAccountStore } from '@stores/accountStore'
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+import { useSidebar } from '@/components/base/sidebar/utils'
+import { summoner } from '@data/playerData'
+const as = useAccountStore()
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
 
 <<<<<<< HEAD
 /*
@@ -57,6 +69,7 @@ watch(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         as.sidebarState = newVal
 =======
         gs.sidebarState = newVal
@@ -65,11 +78,19 @@ watch(
         as.sidebarState = newVal
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
         as.sidebarState = newVal
 =======
         gs.sidebarState = newVal
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+        as.sidebarState = newVal
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
         console.log(newVal)
     }
 )
@@ -78,10 +99,15 @@ const collapsed = computed(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
     const state = as.sidebarState == 'collapsed' ? true : false
     return state
 })
@@ -175,6 +201,7 @@ const hs = history.state
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     as.sidebarState == 'collapsed',
 =======
                                     gs.sidebarState == 'collapsed',
@@ -183,11 +210,19 @@ const hs = history.state
                                     as.sidebarState == 'collapsed',
 >>>>>>> 404a531d (update 84 files and delete 4 files)
 =======
+=======
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
                                     as.sidebarState == 'collapsed',
 =======
                                     gs.sidebarState == 'collapsed',
 >>>>>>> 5132f0ce (update 8 files and delete 426 files)
+<<<<<<< HEAD
 >>>>>>> be133e04 (update 8 files and delete 426 files)
+=======
+=======
+                                    as.sidebarState == 'collapsed',
+>>>>>>> c29d3eca (update 84 files and delete 4 files)
+>>>>>>> c5d8fff8 (update 84 files and delete 4 files)
                             }" />
                     </Button>
 
