@@ -7,12 +7,16 @@ import '@assets/css/index.css'
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 //import { Toaster } from '@components/base/sonner'
+<<<<<<< HEAD
 import { useGeneralStore } from '@stores/generalStore'
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 import { toggleDrawerState } from '@utils/utils'
 import { useDataStore } from '@stores/dataStore'
 const ds = useDataStore()
 ds.fetchData()
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* const state = computed(() => {
     return (
@@ -25,15 +29,25 @@ const gs = useGeneralStore()
         gs.commandOpen == true ? 'open'
         : gs.commandOpen == false ? 'closed'
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+/* const state = computed(() => {
+    return (
+        as.commandOpen == true ? 'open'
+        : as.commandOpen == false ? 'closed'
+>>>>>>> 404a531d (update 84 files and delete 4 files)
         : null
     )
 })
 watch(
 <<<<<<< HEAD
+<<<<<<< HEAD
     () => as.commandOpen,
 =======
     () => gs.commandOpen,
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+    () => as.commandOpen,
+>>>>>>> 404a531d (update 84 files and delete 4 files)
     (newVal) => {
         console.log(newVal)
         console.log('st', state)
@@ -48,10 +62,14 @@ console.log(router)
 
 <template>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 404a531d (update 84 files and delete 4 files)
     <Drawer />
     <Shortkeys />
     <!--     <Toaster />
  -->
+<<<<<<< HEAD
     <SidebarProvider
         class="bg-b1 relative size-full backdrop-brightness-[96%] transition-all duration-1000">
         <MainMenubar />
@@ -63,8 +81,10 @@ console.log(router)
      <Shortkeys />
     <Toaster /> -->
 
+=======
+>>>>>>> 404a531d (update 84 files and delete 4 files)
     <SidebarProvider
-        class="bg-b1 relative size-full backdrop-brightness-[97%] transition-all duration-1000">
+        class="bg-b1 relative size-full backdrop-brightness-[96%] transition-all duration-1000">
         <MainMenubar />
         <Sidebar collapsible="icon" class="justify-center">
 <<<<<<< HEAD

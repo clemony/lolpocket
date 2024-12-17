@@ -114,6 +114,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "vite": "vite dev",
+    "lint": "npx eslint '*/src/**' --fix --ignore-pattern '.gitignore'",
     "clean-cache": "rm -rf .vite",
     "analyze": "vite build && open dist/stats.html"
   },
@@ -130,6 +131,7 @@
     "@tailwindcss/postcss": "^4.0.0-beta.7",
     "@tailwindcss/vite": "^4.0.0-beta.7",
     "@vue/runtime-core": "^3.5.13",
+    "@vueuse/components": "^12.0.0",
     "ag-grid-community": "^32.3.0",
     "ag-grid-vue3": "^32.3.3",
     "chart.js": "^4.4.7",
@@ -137,8 +139,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.7",
-    "embla-carousel-vue": "^8.5.1",
-    "embla-carousel-wheel-gestures": "^8.0.1",
+    "eslint-plugin-readable-tailwind": "^1.8.2",
     "fast-glob": "^3.3.2",
     "glob": "^11.0.0",
     "globby": "^14.0.2",
@@ -174,6 +175,7 @@
     "@vue/compiler-sfc": "^3.5.13",
     "@vue/test-utils": "^2.4.6",
     "@vueuse/core": "^12.0.0",
+    "daisyui": "^5.0.0-alpha.48",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-cypress": "^4.1.0",
@@ -181,12 +183,12 @@
     "globals": "^15.13.0",
     "jsdom": "^25.0.1",
     "prettier": "^3.4.2",
-    "prettier-eslint": "^16.3.0",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "rollup-plugin-visualizer": "^5.12.0",
     "start-server-and-test": "^2.0.9",
     "tailwindcss": "^4.0.0-beta.7",
     "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.1",
     "unplugin-auto-import": "^0.19.0",
     "unplugin-icons": "^0.21.0",
     "unplugin-vue-components": "^0.27.5",
@@ -204,6 +206,7 @@
     "tailwindcss-animate": {
       "tailwindcss": ">=3.0.0 || >=4.0.0-beta || insiders"
 <<<<<<< HEAD
+<<<<<<< HEAD
     },
 <<<<<<< HEAD
     "tailwindcss-radix": {
@@ -215,5 +218,10 @@
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+    },
+    "eslint-plugin-readable-tailwind": {
+      "tailwindcss": ">=3.3.0 || >= 4.0.0-beta || insiders"
+>>>>>>> 404a531d (update 84 files and delete 4 files)
     }
 }

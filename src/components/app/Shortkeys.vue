@@ -3,6 +3,7 @@ import { newPocketDrawer } from '@components/drawer/data'
 import { commandModal } from '@components/command/data'
 import { toggleDrawerState } from '@utils/utils'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 
 const as = useAccountStore()
@@ -14,15 +15,22 @@ function toggleCommand() {
     console.log('gs', as.commandOpen)
 =======
 import { useGeneralStore } from '@stores/generalStore'
+=======
+import { useAccountStore } from '@stores/accountStore'
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 
-const gs = useGeneralStore()
+const as = useAccountStore()
 
 function toggleCommand() {
-    const a = gs.commandOpen
-    a == false ? (gs.commandOpen = true) : (gs.commandOpen = false)
+    const a = as.commandOpen
+    a == false ? (as.commandOpen = true) : (as.commandOpen = false)
     console.log(a)
+<<<<<<< HEAD
     console.log('gs', gs.commandOpen)
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+    console.log('gs', as.commandOpen)
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 }
 </script>
 <template>

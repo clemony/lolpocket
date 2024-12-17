@@ -1,11 +1,15 @@
 <script setup lang="ts">
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useTempStore } from '@stores/tempStore'
 import { usePocketStore } from '@stores/pocketStore'
 import { getQuote } from '@data/champQuotes'
 =======
 import { useChampStore } from '@stores/champStore'
 import { useItemStore } from '@stores/itemStore'
+=======
+import { useTempStore } from '@stores/tempStore'
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 import { usePocketStore } from '@stores/pocketStore'
 <<<<<<< HEAD
 import { formattedQuote } from '@data/champQuotes'

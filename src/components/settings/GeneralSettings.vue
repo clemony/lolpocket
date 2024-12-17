@@ -1,5 +1,6 @@
 <script setup lang="ts">
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 
 const as = useAccountStore()
@@ -7,11 +8,18 @@ const motion = ref()
 const sidebar = ref(as.defaultSidebarState)
 =======
 import { useGeneralStore } from '@/stores/generalStore'
+=======
+import { useAccountStore } from '@stores/accountStore'
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 
-const gs = useGeneralStore()
+const as = useAccountStore()
 const motion = ref()
+<<<<<<< HEAD
 const sidebar = ref(gs.defaultSidebarState)
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+const sidebar = ref(as.defaultSidebarState)
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 const toggleSetting = (model) => {
     useToggle(model)
 }
@@ -22,17 +30,23 @@ const settingsData = {
             title: 'Reduce Motion',
             description: 'Reduce the wobblies.',
 <<<<<<< HEAD
+<<<<<<< HEAD
             model: as.reducedMotion,
             text: as.reducedMotion == false ? 'Wigglies On' : 'Less Wobblies',
 =======
             model: gs.reducedMotion,
             text: gs.reducedMotion == false ? 'Wigglies On' : 'Less Wobblies',
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+            model: as.reducedMotion,
+            text: as.reducedMotion == false ? 'Wigglies On' : 'Less Wobblies',
+>>>>>>> 404a531d (update 84 files and delete 4 files)
         },
         {
             title: 'Suppress Pocket Preview',
             description:
                 'The little pocket that slides down in the sidebar and is annoying sometimes.',
+<<<<<<< HEAD
 <<<<<<< HEAD
             model: as.pocketPreview,
             text:
@@ -42,12 +56,18 @@ const settingsData = {
             text:
                 gs.pocketPreview == false ?
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+            model: as.pocketPreview,
+            text:
+                as.pocketPreview == false ?
+>>>>>>> 404a531d (update 84 files and delete 4 files)
                     'Previews Visible'
                 :   'Previews Hidden',
         },
         {
             title: 'Colorblind Mode',
             description: 'Changes many of the green shades to blue.',
+<<<<<<< HEAD
 <<<<<<< HEAD
             model: as.colorBlindMode,
             text:
@@ -57,6 +77,11 @@ const settingsData = {
             text:
                 gs.colorBlindMode == false ? 'Colorblind Off' : 'Colorblind On',
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+            model: as.colorBlindMode,
+            text:
+                as.colorBlindMode == false ? 'Colorblind Off' : 'Colorblind On',
+>>>>>>> 404a531d (update 84 files and delete 4 files)
         },
         {
             title: 'Sidebar Default State',
@@ -64,10 +89,14 @@ const settingsData = {
                 'Upon login, should your sidebar be expanded or collapsed?.',
             model: sidebar.value,
 <<<<<<< HEAD
+<<<<<<< HEAD
             text: as.defaultSidebarState == false ? 'Collapsed' : 'Expanded',
 =======
             text: gs.defaultSidebarState == false ? 'Collapsed' : 'Expanded',
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+            text: as.defaultSidebarState == false ? 'Collapsed' : 'Expanded',
+>>>>>>> 404a531d (update 84 files and delete 4 files)
         },
     ],
 }

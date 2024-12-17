@@ -1,5 +1,6 @@
 <script setup lang="ts">
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
 import { useTempStore } from '@stores/tempStore'
@@ -8,6 +9,11 @@ import { clean } from '@lib/utils'
 
 import { useChampStore } from '@stores/champStore'
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
+import { useTempStore } from '@stores/tempStore'
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 import { VueDraggable } from 'vue-draggable-plus'
 import { useDataStore } from '@stores/dataStore'
 import type { pocket } from 'types'
@@ -115,11 +121,15 @@ watch(
         class="max-h-inherit h-inherit scrollbar-hide flex flex-wrap items-start justify-around gap-4 overflow-y-auto rounded-lg pt-4 pb-4"
         @start="console.log($event)">
         <TransitionGroup name="pop">
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/pocket/champions/ChampionList.vue
         
 =======
             >
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/components/pocket/champions/ChampionList.vue
+=======
+        
+>>>>>>> 404a531d (update 84 files and delete 4 files)
             <label
                 v-for="champion in filteredChampions"
                 :key="champion.name"
@@ -130,11 +140,15 @@ watch(
                 <input
                     type="radio"
                     :value="champion"
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/pocket/champions/ChampionList.vue
                     v-model="ts.selectedChampion"
 =======
                     v-model="cs.selectedChampion"
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/components/pocket/champions/ChampionList.vue
+=======
+                    v-model="ts.selectedChampion"
+>>>>>>> 404a531d (update 84 files and delete 4 files)
                     class="peer hidden" />
                 <LoadImg
                     :url="`/img/champions/${clean(champion.name)}.webp`"

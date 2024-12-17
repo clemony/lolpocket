@@ -18,7 +18,7 @@ import Home from '@/pages/Home.vue'
 =======
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
 
-import { useGeneralStore } from './src/stores/generalStore'
+import { useAccountStore } from './src/stores/accountStore'
 
 <<<<<<< HEAD
 import PocketDashboard from '@/components/pocket/dashboard/PocketDashboard.vue'

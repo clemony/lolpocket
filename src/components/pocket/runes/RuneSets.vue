@@ -1,5 +1,6 @@
 <script setup lang="ts">
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { usePocketStore } from '@/stores/pocketStore'
 import { VueDraggable } from 'vue-draggable-plus'
 import type { pocket } from 'types'
@@ -12,6 +13,12 @@ import type { pocket } from 'types'
 import { getPocket, newRuneSet, deleteRuneSet } from '@/utils/pocketUtilities'
 const rs = useRuneStore()
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+import { usePocketStore } from '@/stores/pocketStore'
+import { VueDraggable } from 'vue-draggable-plus'
+import type { pocket } from 'types'
+import { newRuneSet, deleteRuneSet, resetRunes } from '@/utils/pocketUtilities'
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 
 const ps = usePocketStore()
 

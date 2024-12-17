@@ -13,13 +13,18 @@ import { useGeneralStore } from '@/client/stores/generalStore'
 import AppearanceSettings from '@/client/components/settings/AppearanceSettings.vue'
 =======
 import GeneralSettings from '@/components/settings/GeneralSettings.vue'
-import { useGeneralStore } from '@/stores/generalStore'
+import { useAccountStore } from '@stores/accountStore'
 import AppearanceSettings from '@/components/settings/AppearanceSettings.vue'
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
 
+<<<<<<< HEAD
 const gs = useGeneralStore()
 const settings = useGeneralStore()
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/pages/Settings.vue
+=======
+const as = useAccountStore()
+const settinas = useAccountStore()
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 
 // Use ref to track the selected framework
 </script>

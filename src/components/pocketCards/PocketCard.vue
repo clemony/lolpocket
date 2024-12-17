@@ -10,6 +10,7 @@ import { runeColors } from '@utils/getColor'
 import { CSSProperties } from 'vue'
 
 import { useAccountStore } from '@stores/accountStore'
+<<<<<<< HEAD
 ========
 import { runeColors } from '@utils/GetColor'
 <<<<<<< HEAD
@@ -22,6 +23,8 @@ import { CSSProperties } from 'vue'
 
 import { useGeneralStore } from '@stores/generalStore'
 >>>>>>>> 4634f11e (update 8 files and delete 426 files):src/components/pocket/pocket-cards/PocketCard.vue
+=======
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 import { easeInOut } from '@oku-ui/motion'
 
 const props = defineProps<{

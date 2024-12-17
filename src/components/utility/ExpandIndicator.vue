@@ -1,5 +1,6 @@
 <script setup lang="ts">
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 import type { HTMLAttributes } from 'vue'
 
@@ -10,6 +11,12 @@ import type { HTMLAttributes } from 'vue'
 
 const gs = useGeneralStore()
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+import { useAccountStore } from '@stores/accountStore'
+import type { HTMLAttributes } from 'vue'
+
+const as = useAccountStore()
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 
 const props = defineProps<{
     class?: HTMLAttributes['class']

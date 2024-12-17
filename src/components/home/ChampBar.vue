@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import { externalTooltip } from '@/config/charts'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 =======
 import { useGeneralStore } from '@stores/generalStore'
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+import { useAccountStore } from '@stores/accountStore'
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 import { Bar } from 'vue-chartjs'
 import {
     Chart,
@@ -27,10 +31,14 @@ Chart.register(
 )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const as = useAccountStore()
 =======
 const gs = useGeneralStore()
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+const as = useAccountStore()
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 const props = defineProps<{
     champion: any
 }>()
@@ -44,10 +52,14 @@ const b = computed(() => {
 
 const color1 = computed(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
 =======
     return gs.colorBlindMode ? '#99c4c8' : '#a3be8c'
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+    return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 })
 
 const chartData: ChartData<'bar'> = {

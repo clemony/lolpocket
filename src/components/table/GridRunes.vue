@@ -3,6 +3,9 @@ import { computed } from 'vue'
 import { Item, Rune } from 'types'
 import { usePocketStore } from '@/stores/pocketStore'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 import { useAccountStore } from '@stores/accountStore'
 import { runeColors } from '@utils/getColor'
 =======

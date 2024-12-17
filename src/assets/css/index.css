@@ -27,6 +27,10 @@
 @plugin 'daisyui' {
     themes: false;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 @layer base {
     html {
         @apply bg-transparent select-none;

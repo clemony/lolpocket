@@ -1,5 +1,6 @@
 <script setup lang="ts">
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 import { useSidebar } from '@/components/base/sidebar/utils'
 import { summoner } from '@data/playerData'
@@ -7,9 +8,12 @@ const as = useAccountStore()
 
 =======
 import { useGeneralStore } from '@stores/generalStore'
+=======
+import { useAccountStore } from '@stores/accountStore'
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 import { useSidebar } from '@/components/base/sidebar/utils'
 import { summoner } from '@data/playerData'
-const gs = useGeneralStore()
+const as = useAccountStore()
 
 <<<<<<< HEAD
 /*
@@ -28,16 +32,23 @@ watch(
     () => state.value,
     (newVal) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
         as.sidebarState = newVal
 =======
         gs.sidebarState = newVal
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+        as.sidebarState = newVal
+>>>>>>> 404a531d (update 84 files and delete 4 files)
         console.log(newVal)
     }
 )
 
 const collapsed = computed(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 404a531d (update 84 files and delete 4 files)
     const state = as.sidebarState == 'collapsed' ? true : false
     return state
 })
@@ -94,10 +105,14 @@ const hs = history.state
                             :class="{
                                 'stroke-1.5 scale-x-20 scale-y-150':
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     as.sidebarState == 'collapsed',
 =======
                                     gs.sidebarState == 'collapsed',
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+                                    as.sidebarState == 'collapsed',
+>>>>>>> 404a531d (update 84 files and delete 4 files)
                             }" />
                     </Button>
 

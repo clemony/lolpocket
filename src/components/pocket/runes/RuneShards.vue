@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { useDataStore } from '@/stores/dataStore'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 import { useTempStore } from '@/stores/tempStore'
 import type { pocket } from 'types'
 import { getShardIcon, getShardClass } from '@utils/getColor'

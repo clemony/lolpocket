@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import { usePocketStore } from '@stores/pocketStore'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
 =======
 import { useGeneralStore } from '@stores/generalStore'
 const gs = useGeneralStore()
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 import { newPocketDrawer } from '@components/drawer/data'
 import { toggleDrawerState } from '@utils/utils'
 

@@ -6,12 +6,17 @@ import { useForwardPropsEmits } from 'radix-vue'
 import { DrawerContent, DrawerPortal } from 'vaul-vue'
 import DrawerOverlay from './DrawerOverlay.vue'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
 =======
 import { useGeneralStore } from '@stores/generalStore'
 const gs = useGeneralStore()
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 const props = defineProps<
     DialogContentProps & { class?: HtmlHTMLAttributes['class'] }
 >()

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { usePocketStore } from '@/stores/pocketStore'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useTempStore } from '@/stores/tempStore'
 import { getPocket } from '@/utils/pocketUtilities'
 const ts = useTempStore()
@@ -9,6 +10,11 @@ import { useRuneStore } from '@/stores/runeStore'
 import { getPocket } from '@/utils/pocketUtilities'
 const rs = useRuneStore()
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+import { useTempStore } from '@/stores/tempStore'
+import { getPocket } from '@/utils/pocketUtilities'
+const ts = useTempStore()
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 const ps = usePocketStore()
 const props = defineProps<{
     pocketKey: string

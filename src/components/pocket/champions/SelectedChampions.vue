@@ -1,9 +1,13 @@
 <script setup lang="ts">
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useTempStore } from '@stores/tempStore'
 =======
 import { useChampStore } from '@/stores/champStore'
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+import { useTempStore } from '@stores/tempStore'
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 import { VueDraggable } from 'vue-draggable-plus'
 import type { pocket } from 'types'
 import { removeChamp } from '@utils/pocketUtilities'

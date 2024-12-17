@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { summoner } from '@data/playerData'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useAccountStore } from '@stores/accountStore'
 import { colorB3 } from '@utils/getColor'
 const as = useAccountStore()
@@ -9,16 +10,25 @@ import { useGeneralStore } from '@stores/generalStore'
 import { colorB3 } from '@utils/getColor'
 const gs = useGeneralStore()
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+import { useAccountStore } from '@stores/accountStore'
+import { colorB3 } from '@utils/getColor'
+const as = useAccountStore()
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 
 const recentWinrate = ref(55)
 const recentMatchNum = ref(20)
 
 const color1 = computed(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
 =======
     return gs.colorBlindMode ? '#99c4c8' : '#a3be8c'
 >>>>>>> 4634f11e (update 8 files and delete 426 files)
+=======
+    return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 })
 
 const datasets = [

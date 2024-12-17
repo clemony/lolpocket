@@ -1,15 +1,38 @@
 import { defineStore } from 'pinia'
 import { ref, watch } from 'vue'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+<<<<<<< HEAD
 
 import { pocket, drawer, Champion, Item, ItemSet } from 'types'
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<<< HEAD:src/stores/generalStore.ts
+import { pocket, drawer } from 'types'
+>>>>>>> 83f9266d (update 42 files and delete 17 files)
+
+import { pocket, drawer, Champion, Item, ItemSet } from 'types'
+
+========
+import { pocket, drawer, Champion, Item, ItemSet } from 'types'
+
+>>>>>>>> 404a531d (update 84 files and delete 4 files):src/stores/accountStore.ts
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 export const useAccountStore = defineStore(
     'accountStore',
     () => {
         const theme = ref('light')
         const accents = ref('light')
+<<<<<<< HEAD
 <<<<<<< HEAD:src/stores/accountStore.ts
+=======
+<<<<<<<< HEAD:src/stores/generalStore.ts
+<<<<<<< HEAD:src/stores/accountStore.ts
+========
+>>>>>>>> 404a531d (update 84 files and delete 4 files):src/stores/accountStore.ts
+>>>>>>> 404a531d (update 84 files and delete 4 files)
         watch(theme, (newValue) => {
             document.documentElement.setAttribute('data-theme', newValue)
         })
@@ -17,16 +40,33 @@ export const useAccountStore = defineStore(
         watch(accents, (newValue) => {
             document.documentElement.setAttribute('data-accents', newValue)
         })
+<<<<<<< HEAD
 =======
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/stores/generalStore.ts
+=======
+<<<<<<<< HEAD:src/stores/generalStore.ts
+=======
+>>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/stores/generalStore.ts
+========
+>>>>>>>> 404a531d (update 84 files and delete 4 files):src/stores/accountStore.ts
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 
         const reducedMotion = ref(false)
         const colorBlindMode = ref(false)
 
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/stores/generalStore.ts
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 <<<<<<< HEAD:src/stores/accountStore.ts
 =======
         const app = ref()
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/stores/generalStore.ts
+<<<<<<< HEAD
+=======
+========
+>>>>>>>> 404a531d (update 84 files and delete 4 files):src/stores/accountStore.ts
+>>>>>>> 404a531d (update 84 files and delete 4 files)
         const isMinimized = ref(false)
         const sidebarState = ref()
         const defaultSidebarState = ref(true)
@@ -42,6 +82,10 @@ export const useAccountStore = defineStore(
         const pocketPreview = ref(false)
         const routeHistory = []
 
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/stores/generalStore.ts
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 <<<<<<< HEAD:src/stores/accountStore.ts
         const favoriteChamps = ref<Champion[]>([])
 
@@ -59,6 +103,16 @@ export const useAccountStore = defineStore(
             //console.log(`Mode changed to: ${newMode}`);
         })
 >>>>>>> 12d6db59 (update 38 files and delete 54 files):src/client/stores/generalStore.ts
+<<<<<<< HEAD
+=======
+========
+        const favoriteChamps = ref<Champion[]>([])
+
+        //items
+        const favoriteItems = ref<Item[]>([])
+        const itemSets = ref<ItemSet[]>([])
+>>>>>>>> 404a531d (update 84 files and delete 4 files):src/stores/accountStore.ts
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 
         return {
             //settings
