@@ -98,8 +98,5 @@
         "tailwindcss-animate": {
             "tailwindcss": ">=3.0.0 || >=4.0.0-beta || insiders"
         }
-    },
-    "optionalDependencies": {
-        "@rollup/dist/native.js": "*"
     }
 }
