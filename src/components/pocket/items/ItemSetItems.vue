@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { VueDraggable } from 'vue-draggable-plus'
-import { useItemStore } from '@/stores/itemStore'
-import { ItemSet } from 'types'
-import { getPocket } from '@/utils/pocketUtilities'
 
-const is = useItemStore()
+import { ItemSet } from 'types'
+import { addItemToSet, getPocket } from '@/utils/pocketUtilities'
+import { useTempStore } from '@stores/tempStore'
+const ts = useTempStore()
 
 const props = defineProps<{
     pocketKey: string
@@ -44,12 +44,12 @@ const returnData = ref([])
 watch(returnData, (newVal) => {
     if (pocket) {
         console.log('Received array from child:', newVal)
-        is.addToSet(pocket.key, newVal[1], newVal[0])
+        addItemToSet(pocket.key, newVal[1], newVal[0])
     }
 })
 
 const filteredItems = computed(() => {
-    let filtered = is.items
+    let filtered = ts.items
 
     if (quickSearch) {
         const searchTerm = quickSearch.value.toLowerCase()

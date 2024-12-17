@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Item } from 'types'
-import { useGeneralStore } from '@/stores/generalStore'
+import { useAccountStore } from '@stores/accountStore'
 
 const props = defineProps<{
     params: {
@@ -18,7 +18,7 @@ const props = defineProps<{
     }
 }>()
 
-const gs = useGeneralStore()
+const as = useAccountStore()
 const pocket = ref(props.params.data)
 
 const starredItems = computed(() => {

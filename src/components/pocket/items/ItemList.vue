@@ -1,19 +1,24 @@
 <script setup lang="ts">
-import { useItemStore } from '@/stores/itemStore'
+import { useTempStore } from '@stores/tempStore'
 import type { pocket } from 'types'
 import { VueDraggable } from 'vue-draggable-plus'
-const is = useItemStore()
+import type { HTMLAttributes } from 'vue'
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
+const ts = useTempStore()
 const props = defineProps<{
-    pocket: pocket
+    pocket?: pocket
+    dragDisabled?: boolean
+    class?: HTMLAttributes['class']
 }>()
 /* --------------------------- FILTER -------------------------- */
 
 // Filter logic
 const filteredItems = computed(() => {
-    let filtered = is.items
+    let filtered = ts.items
 
-    if (is.searchFilter) {
-        const searchTerm = is.searchFilter.toLowerCase()
+    if (ts.itemSearchFilter) {
+        const searchTerm = ts.itemSearchFilter.toLowerCase()
         filtered = filtered.filter((item: any) =>
             Object.values(item).some(
                 (value) =>
@@ -24,20 +29,20 @@ const filteredItems = computed(() => {
     }
 
     // Apply cat filters if any
-    if (is.catFilters.length) {
+    if (ts.catFilters.length) {
         filtered = filtered.filter((item: { cat: string }) =>
-            is.catFilters.some((filter) =>
+            ts.catFilters.some((filter) =>
                 item.cat?.toLowerCase().includes(filter.toLowerCase())
             )
         )
     }
 
     // Apply stat filters if any
-    if (is.statFilters.length) {
+    if (ts.statFilters.length) {
         filtered = filtered.filter(
             (item: { stats: string }) =>
                 item.stats &&
-                is.statFilters.some((filter) =>
+                ts.statFilters.some((filter) =>
                     item.stats.toLowerCase().includes(filter.toLowerCase())
                 )
         )
@@ -50,13 +55,13 @@ const filteredItems = computed(() => {
 const sfi = computed(() => {
     let sorted = ref([...filteredItems.value]) // Use ref instead of reactive
 
-    if (is.sortAZ) {
-        if (is.sortAZ === 1) {
+    if (ts.sortItemsAZ) {
+        if (ts.sortItemsAZ === 1) {
             sorted.value = sorted.value.sort(
                 (a: { name: string }, b: { name: string }) =>
                     a.name.localeCompare(b.name)
             )
-        } else if (is.sortAZ === 2) {
+        } else if (ts.sortItemsAZ === 2) {
             sorted.value = sorted.value.sort(
                 (a: { name: string }, b: { name: string }) =>
                     b.name.localeCompare(a.name)
@@ -64,21 +69,21 @@ const sfi = computed(() => {
         }
     }
 
-    if (is.sortPrice) {
-        if (is.sortPrice === 1) {
+    if (ts.sortPrice) {
+        if (ts.sortPrice === 1) {
             sorted.value = sorted.value.sort(
                 (a: { buy: number }, b: { buy: number }) => a.buy - b.buy
             )
-        } else if (is.sortPrice === 2) {
+        } else if (ts.sortPrice === 2) {
             sorted.value = sorted.value.sort(
                 (a: { buy: number }, b: { buy: number }) => b.buy - a.buy
             )
         }
     }
 
-    if (is.viewFavorite == true && is.favoriteItems.length) {
+    if (ts.viewFavoriteItems == true && as.favoriteItems.length) {
         sorted.value = sorted.value.filter((item) =>
-            is.favoriteItems.some((likedItem) => likedItem.id === item.id)
+            as.favoriteItems.some((likedItem) => likedItem.id === item.id)
         )
     }
 
@@ -86,10 +91,10 @@ const sfi = computed(() => {
 })
 
 watch(
-    () => is.favoriteItems, // Watch the actual value of favoriteItems
+    () => as.favoriteItems, // Watch the actual value of favoriteItems
     (newVal) => {
         if (!newVal.length) {
-            is.viewFavorite = false
+            ts.viewFavoriteItems = false
         }
     },
     { immediate: true } // Ensure it runs on initialization
@@ -107,14 +112,20 @@ const disabled = ref(false)
         ghostClass="ghosty"
         @click.meta="disabled = true"
         :delay="0"
-        :disabled="disabled"
+        :disabled="disabled || props.dragDisabled"
         :animation="300"
         :force-fallback="true"
         :fallbackTolerance="0"
         fallbackClass="drag-clone"
         :fallbackOnBody="true"
+        @click.stop.prevent
         @remove=""
-        class="scrollbar-hide flex max-h-full flex-wrap items-start justify-around gap-3 px-1 py-4">
+        :class="
+            cn(
+                'scrollbar-hide flex max-h-full flex-wrap items-start justify-around gap-3 px-1 py-4',
+                props.class
+            )
+        ">
         <!--     <TransitionGroup name="fade"> -->
 
         <Item
@@ -122,7 +133,8 @@ const disabled = ref(false)
             :key="item.id"
             :item="item"
             :pocket="pocket"
-            class="size-18 shadow-sm" />
+            class="size-18 shadow-sm"
+            @click.stop.prevent />
 
         <!--     </TransitionGroup> -->
 

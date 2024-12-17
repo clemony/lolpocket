@@ -4,7 +4,7 @@ import { clean } from '@lib/utils'
 import { runeColors } from '@utils/getColor'
 import { CSSProperties } from 'vue'
 
-import { useGeneralStore } from '@stores/generalStore'
+import { useAccountStore } from '@stores/accountStore'
 import { easeInOut } from '@oku-ui/motion'
 
 const props = defineProps<{
@@ -13,7 +13,7 @@ const props = defineProps<{
 
 const pocket = ref(props.pocket)
 
-const gs = useGeneralStore()
+const as = useAccountStore()
 
 const set = ref(pocket.value.runes[0].runeSets[pocket.value.runes[0].starred])
 console.log(set)
@@ -127,7 +127,7 @@ const layer3 = computed(() => ({
                         </CardContent>
                     </Card>
                     <div
-                        :style="{ backgroundImage: `url(${gs.cardBack})` }"
+                        :style="{ backgroundImage: `url(${as.cardBack})` }"
                         class="swap-on flex h-[290px] w-[230px] items-center justify-center bg-transparent! [background-size:230px_290px] bg-center">
                         <CardBack :pocket="pocket" :style="layer0" />
                     </div>

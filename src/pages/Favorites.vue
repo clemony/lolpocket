@@ -1,16 +1,15 @@
 <script setup lang="ts">
-import { useItemStore } from '../stores/itemStore'
 import { ref, computed, onMounted } from 'vue'
-import { useChampStore } from '../stores/champStore'
+import { useTempStore } from '../stores/tempStore'
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
+const ts = useTempStore()
 
-const is = useItemStore()
-const cs = useChampStore()
-
-const filteredItems = ref('')
+const filteredItems = ref['']
 const returnData = ref('')
 const quickSearch = ref('')
 
-const selectedChampion = computed(() => cs.selectedChampion)
+const selectedChampion = computed(() => ts.selectedChampion)
 
 onMounted(async () => {})
 </script>
@@ -33,7 +32,7 @@ onMounted(async () => {})
         <div
             class="scroll-none flex h-full max-h-full w-full flex-wrap gap-4 overflow-y-scroll p-2 pt-11">
             <div
-                v-for="(champion, index) in cs.favoriteChamps"
+                v-for="(champion, index) in as.favoriteChamps"
                 :key="champion.name"
                 :data-index="index"
                 class="">
@@ -59,7 +58,7 @@ onMounted(async () => {})
         <div
             class="drag-draggable shadow-inset scrollbar-hide h-full! w-full content-start items-start justify-around rounded-b-xl px-3 pt-12 pb-4">
             <VDropdown
-                v-for="item in is.favoriteItems"
+                v-for="item in as.favoriteItems"
                 :key="item.id"
                 :overflow-padding="20"
                 :shift="true"

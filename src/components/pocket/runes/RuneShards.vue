@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useDataStore } from '@/stores/dataStore'
-import { useRuneStore } from '@/stores/runeStore'
+import { useTempStore } from '@/stores/tempStore'
 import type { pocket } from 'types'
 import { getShardIcon, getShardClass } from '@utils/getColor'
 
@@ -8,7 +8,7 @@ import { usePocketStore } from '@/stores/pocketStore'
 import { getPocket } from '@/utils/pocketUtilities'
 const ps = usePocketStore()
 const ds = useDataStore()
-const rs = useRuneStore()
+const ts = useTempStore()
 
 const props = defineProps<{
     pocket: pocket

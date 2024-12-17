@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { summoner } from '@data/playerData'
-import { useGeneralStore } from '@stores/generalStore'
-const gs = useGeneralStore()
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
 </script>
 
 <template>
@@ -56,7 +56,7 @@ const gs = useGeneralStore()
                                 icon="ion:caret-up-outline"
                                 class="text-resolve"
                                 :class="{
-                                    'text-inspiration': gs.colorBlindMode,
+                                    'text-inspiration': as.colorBlindMode,
                                 }" />
                         </p>
                         <p class="flex items-center text-nowrap">

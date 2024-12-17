@@ -7,6 +7,7 @@ import {
     createDefaultShard,
 } from './addPocket'
 import { generateRandomName } from '../lib/functions/Keygen'
+import { useAccountStore } from '@stores/accountStore'
 
 export function getPocket(key) {
     const ps = usePocketStore()
@@ -123,9 +124,23 @@ export function deleteRuneSet(pocket, setKey) {
     const index = runeSets.findIndex((set) => set.key == setKey)
     runeSets.splice(index, 1)
 }
-function resetRunes() {}
+export function resetRunes(pocket, set, number?) {
+    const runes1 = [set.value.p1, set.value.p2, set.value.p3]
 
-export function addToSet(pocket, itemSet, item) {
+    const runes2 = [set.value.s1, set.value.s2]
+
+    const runes =
+        !number ? runes1.concat(runes2)
+        : number == 1 ? runes1
+        : number == 2 ? runes2
+        : null
+
+    runes.forEach((rune) => {
+        rune = createDefaultRune()
+    })
+}
+
+export function addItemToSet(pocket, itemSet, item) {
     const set = pocket.items[0].itemSets.find((set) => set.key === itemSet)
 
     if (set && Array.isArray(set.items)) {
@@ -133,7 +148,7 @@ export function addToSet(pocket, itemSet, item) {
     }
 }
 
-export function removeFromSet(pocket, itemSet, itemx) {
+export function removeItemFromSet(pocket, itemSet, itemx) {
     const ps = usePocketStore()
     const thisPocket = getPocket(pocket)
     const set = thisPocket?.items[0].itemSets.find((set) => set.key === itemSet)
@@ -143,5 +158,38 @@ export function removeFromSet(pocket, itemSet, itemx) {
         if (set && Array.isArray(set.items)) {
             set.items.splice(index)
         }
+    }
+}
+
+export function removeChamp(champ, pocket) {
+    const find = pocket.champions[0].champions.findIndex(
+        (champion) => champion.name == champ
+    )
+
+    if (find && find! - -1) {
+        pocket.champions[0].champions.splice(find, 1)
+    }
+}
+
+export function handleItemLike(thisItem) {
+    const as = useAccountStore()
+    if (as.favoriteItems.some((item) => item.name === thisItem.name)) {
+        const index = as.favoriteItems.findIndex(
+            (item) => item.name === thisItem.name
+        )
+        if (index !== -1) {
+            as.favoriteItems.splice(index, 1)
+        }
+    } else {
+        as.favoriteItems.push(thisItem)
+    }
+}
+
+export function resetItems(key: string) {
+    const as = useAccountStore()
+    const set = as.itemSets.find((set) => set.key === key)
+
+    if (set && Array.isArray(set.items)) {
+        set.items.splice(0, set.items.length) // Reset the array
     }
 }

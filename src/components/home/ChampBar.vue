@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { externalTooltip } from '@/config/charts'
-import { useGeneralStore } from '@stores/generalStore'
+import { useAccountStore } from '@stores/accountStore'
 import { Bar } from 'vue-chartjs'
 import {
     Chart,
@@ -22,7 +22,7 @@ Chart.register(
     LinearScale
 )
 
-const gs = useGeneralStore()
+const as = useAccountStore()
 const props = defineProps<{
     champion: any
 }>()
@@ -35,7 +35,7 @@ const b = computed(() => {
 })
 
 const color1 = computed(() => {
-    return gs.colorBlindMode ? '#99c4c8' : '#a3be8c'
+    return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
 })
 
 const chartData: ChartData<'bar'> = {

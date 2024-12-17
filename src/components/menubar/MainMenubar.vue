@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useGeneralStore } from '@stores/generalStore'
+import { useAccountStore } from '@stores/accountStore'
 import { useSidebar } from '@/components/base/sidebar/utils'
 import { summoner } from '@data/playerData'
-const gs = useGeneralStore()
+const as = useAccountStore()
 
 const sidebar = useSidebar()
 console.log(sidebar)
@@ -14,13 +14,13 @@ const state = computed(() => {
 watch(
     () => state.value,
     (newVal) => {
-        gs.sidebarState = newVal
+        as.sidebarState = newVal
         console.log(newVal)
     }
 )
 
 const collapsed = computed(() => {
-    const state = gs.sidebarState == 'collapsed' ? true : false
+    const state = as.sidebarState == 'collapsed' ? true : false
     return state
 })
 
@@ -55,7 +55,7 @@ const hs = history.state
                             class="size-7 shrink-0 object-center transition-all duration-300"
                             :class="{
                                 'stroke-1.5 scale-x-20 scale-y-150':
-                                    gs.sidebarState == 'collapsed',
+                                    as.sidebarState == 'collapsed',
                             }" />
                     </Button>
 

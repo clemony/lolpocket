@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { usePocketStore } from '@/stores/pocketStore'
-import { useRuneStore } from '@/stores/runeStore'
+import { useTempStore } from '@/stores/tempStore'
 import { getPocket } from '@/utils/pocketUtilities'
-const rs = useRuneStore()
+const ts = useTempStore()
 const ps = usePocketStore()
 const props = defineProps<{
     pocketKey: string
@@ -103,7 +103,7 @@ const secondary = computed(() => {
     background-size: 550%;
 }
 
-.none {
+.empty {
     background: linear-gradient(
         137deg,
         rgba(190, 190, 190, 1) 0%,

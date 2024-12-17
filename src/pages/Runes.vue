@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import { useDataStore } from '@/stores/dataStore'
-import { useRuneStore } from '@/stores/runeStore'
+import { useTempStore } from '@/stores/tempStore'
 import { usePocketStore } from '@/stores/pocketStore'
 import { createDefaultShard, createDefaultSpell } from '@/utils/addPocket'
 

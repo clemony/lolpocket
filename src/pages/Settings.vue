@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import GeneralSettings from '@/components/settings/GeneralSettings.vue'
-import { useGeneralStore } from '@/stores/generalStore'
+import { useAccountStore } from '@stores/accountStore'
 import AppearanceSettings from '@/components/settings/AppearanceSettings.vue'
 
-const gs = useGeneralStore()
-const settings = useGeneralStore()
+const as = useAccountStore()
+const settinas = useAccountStore()
 
 // Use ref to track the selected framework
 </script>
@@ -22,6 +22,7 @@ const settings = useGeneralStore()
                 <a href="#">Hotkeys</a>
                 <a href="#">Account</a>
                 <a href="#">About</a>
+                <input type="checkbox" class='checkbox checkbox-sm checkbox-neutral' />
             </nav>
         </div>
         <router-view>

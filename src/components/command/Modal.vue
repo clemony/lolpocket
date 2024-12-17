@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { modal } from 'types'
-import { useGeneralStore } from '@/stores/generalStore'
+import { useAccountStore } from '@stores/accountStore'
 import { DialogOverlay } from 'radix-vue'
-const gs = useGeneralStore()
+const as = useAccountStore()
 
 const emit = defineEmits(['update:open'])
 
@@ -10,31 +10,31 @@ const emit = defineEmits(['update:open'])
 
 const pocket = ref(undefined)
 watch(
-    () => gs.modalValue,
+    () => as.modalValue,
 
     (newOpen) => {
-        gs.modalValue = newOpen
-        gs.modalPocket ? (pocket.value = gs.modalPocket) : null
-        gs.modalState = true
+        as.modalValue = newOpen
+        as.modalPocket ? (pocket.value = as.modalPocket) : null
+        as.modalState = true
     }
 )
 
 function onClose() {
-    gs.modalState = false
+    as.modalState = false
     emit('update:open', false)
-    gs.modalPocket = undefined
+    as.modalPocket = undefined
 }
 
 onMounted(async () => {
-    await gs.modalValue
+    await as.modalValue
 })
 </script>
 
 <template>
-    <template v-if="gs.modalState">
+    <template v-if="as.modalState">
         <Dialog
-            :key="gs.modalValue.id"
-            v-model:open="gs.modalState"
+            :key="as.modalValue.id"
+            v-model:open="as.modalState"
             @close="onClose">
             <DialogContent
                 :class="
@@ -42,25 +42,25 @@ onMounted(async () => {
                         'px-12! py-8',
                         {
                             'ring-none m-0! size-full max-w-screen border-none bg-transparent p-0! shadow-none':
-                                gs.modalValue.id == 'command',
+                                as.modalValue.id == 'command',
                         },
-                        { 'max-w-[550px]': gs.modalValue.id != 'command' }
+                        { 'max-w-[550px]': as.modalValue.id != 'command' }
                     )
                 ">
-                <Hide :if="gs.modalValue.id == 'command'">
+                <Hide :if="as.modalValue.id == 'command'">
                     <DialogHeader>
                         <DialogTitle>
-                            <h2>{{ gs.modalValue.title }}</h2>
+                            <h2>{{ as.modalValue.title }}</h2>
                         </DialogTitle>
                         <DialogDescription
-                            v-html="gs.modalValue.description"
+                            v-html="as.modalValue.description"
                             class="text-3"></DialogDescription>
                     </DialogHeader>
                 </Hide>
 
                 <component
-                    :is="gs.modalValue.component"
-                    :submitText="gs.modalValue.submitText"
+                    :is="as.modalValue.component"
+                    :submitText="as.modalValue.submitText"
                     :pocket="pocket"
                     @update:open="onClose" />
             </DialogContent>

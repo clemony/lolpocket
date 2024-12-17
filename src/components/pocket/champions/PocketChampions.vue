@@ -1,14 +1,10 @@
 <script setup lang="ts">
-import { useChampStore } from '@/stores/champStore'
-import { usePocketStore } from '@/stores/pocketStore'
-import { useDataStore } from '@/stores/dataStore'
-import { useItemStore } from '@/stores/itemStore'
+import { useTempStore } from '@stores/tempStore'
+import { useAccountStore } from '@stores/accountStore'
 import { getPocket } from '@/utils/pocketUtilities'
-const ds = useDataStore()
-const is = useItemStore()
-const cs = useChampStore()
-const ps = usePocketStore()
+const ts = useTempStore()
 
+const as = useAccountStore()
 const props = defineProps<{
     pocketKey: string
 }>()
@@ -44,9 +40,9 @@ const dataValue = ref()
                     <CardHeader
                         class="bg-b1/90 absolute top-0 left-0 z-10 w-full flex-row items-center rounded-t-xl px-12 py-4 backdrop-blur-md">
                         <SearchBox
-                            :search="cs.champSearch"
+                            :search="ts.champSearch"
                             :placeholder="'Search Champions...'"
-                            @update:search="cs.champSearch = $event"
+                            @update:search="ts.champSearch = $event"
                             class="bg-b1/80 shadow-inset-sm rounded-md" />
                         <Grow />
                         <div class="join mr-1">
@@ -58,9 +54,9 @@ const dataValue = ref()
                                 <input
                                     type="checkbox"
                                     name="viewFavorite"
-                                    v-model="cs.viewFavorite"
+                                    v-model="ts.viewFavoriteChamps"
                                     class="hidden"
-                                    :disabled="!cs.favoriteChamps.length" />
+                                    :disabled="!as.favoriteChamps.length" />
                                 <HeartIcons />
                             </Label>
                         </div>
@@ -86,7 +82,7 @@ const dataValue = ref()
 
         <template #panel2>
             <div class="h-full w-[97%] justify-end justify-items-end pl-6">
-                <ChampionSidebar :champion="cs.selectedChampion" />
+                <ChampionSidebar :champion="ts.selectedChampion" />
             </div>
         </template>
     </Layout2>

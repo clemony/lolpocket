@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { useRuneStore } from '@/stores/runeStore'
 import { usePocketStore } from '@/stores/pocketStore'
 import { VueDraggable } from 'vue-draggable-plus'
 import type { pocket } from 'types'
-import { getPocket, newRuneSet, deleteRuneSet } from '@/utils/pocketUtilities'
-const rs = useRuneStore()
+import { newRuneSet, deleteRuneSet, resetRunes } from '@/utils/pocketUtilities'
 
 const ps = usePocketStore()
 
@@ -23,8 +21,6 @@ const selectedSet = ref(0)
 
 <template>
     <div class="bg-b2/20 h-full w-full overflow-y-scroll overscroll-none pt-8">
-        <!-------------------------------- HEADER --------------------------------->
-
         <div
             class="frost border-b-b3 absolute top-0 left-0 z-40 flex h-fit! w-full flex-wrap items-center justify-end gap-4 border-b px-2 py-1">
             <h5 class="grow justify-start font-semibold!">Rune Sets</h5>
@@ -37,8 +33,6 @@ const selectedSet = ref(0)
                 new set
             </button>
         </div>
-
-        <!-------------------------------⟢ SETS ⟣-------------------------------->
 
         <div class="z-0 flex flex-col overflow-y-scroll">
             <VueDraggable
@@ -109,7 +103,7 @@ const selectedSet = ref(0)
                                 class="hover:bg-b2"
                                 alt="Clear Items"
                                 title="Clear Items"
-                                @click="rs.resetRunes()">
+                                @click="resetRunes(pocket, set.key)">
                                 <icon
                                     icon="teenyicons:clockwise-outline"
                                     class="size-[0.8rem] pb-[2px]" />
@@ -120,7 +114,9 @@ const selectedSet = ref(0)
                                 alt="Delete Set"
                                 title="Delete Set"
                                 @click="deleteRuneSet(pocket, set.key)"
-                                :disabled="rs.runeSets.length == 1">
+                                :disabled="
+                                    pocket.runes[0].runeSets.length == 1
+                                ">
                                 <icon icon="ph:trash-light" class="size-3.5" />
                             </button>
                         </div>

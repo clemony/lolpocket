@@ -1,7 +1,7 @@
 import App from './src/pages/App.vue'
 import { motionPlugin } from '@oku-ui/motion'
 import { createPinia } from 'pinia'
-import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+import piniaPluginPersistedState from 'pinia-plugin-persistedstate'
 import { PiniaColada } from '@pinia/colada'
 import { createApp } from 'vue'
 import { Icon } from '@iconify/vue'
@@ -17,7 +17,7 @@ const app = createApp(App)
 
 console.log('Initializing Pinia...')
 const pinia = createPinia()
-pinia.use(piniaPluginPersistedstate)
+pinia.use(piniaPluginPersistedState)
 app.use(pinia)
 app.use(PiniaColada)
 console.log('Pinia initialized.')

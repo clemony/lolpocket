@@ -1,20 +1,18 @@
 <script setup lang="ts">
 //import { Toaster } from '@components/base/sonner'
-import { useGeneralStore } from '@stores/generalStore'
 import { toggleDrawerState } from '@utils/utils'
 import { useDataStore } from '@stores/dataStore'
 const ds = useDataStore()
 ds.fetchData()
-const gs = useGeneralStore()
 /* const state = computed(() => {
     return (
-        gs.commandOpen == true ? 'open'
-        : gs.commandOpen == false ? 'closed'
+        as.commandOpen == true ? 'open'
+        : as.commandOpen == false ? 'closed'
         : null
     )
 })
 watch(
-    () => gs.commandOpen,
+    () => as.commandOpen,
     (newVal) => {
         console.log(newVal)
         console.log('st', state)
@@ -28,12 +26,12 @@ console.log(router)
 </script>
 
 <template>
-    <!--  <Drawer />
-     <Shortkeys />
-    <Toaster /> -->
-
+    <Drawer />
+    <Shortkeys />
+    <!--     <Toaster />
+ -->
     <SidebarProvider
-        class="bg-b1 relative size-full backdrop-brightness-[97%] transition-all duration-1000">
+        class="bg-b1 relative size-full backdrop-brightness-[96%] transition-all duration-1000">
         <MainMenubar />
         <Sidebar collapsible="icon" class="justify-center">
             <SidebarContent class="pt-14">

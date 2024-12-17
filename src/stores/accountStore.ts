@@ -2,18 +2,24 @@ import { defineStore } from 'pinia'
 import { ref, watch } from 'vue'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
-import { pocket, drawer } from 'types'
+import { pocket, drawer, Champion, Item, ItemSet } from 'types'
 
-export const useGeneralStore = defineStore(
-    'generalStore',
+export const useAccountStore = defineStore(
+    'accountStore',
     () => {
         const theme = ref('light')
         const accents = ref('light')
+        watch(theme, (newValue) => {
+            document.documentElement.setAttribute('data-theme', newValue)
+        })
+
+        watch(accents, (newValue) => {
+            document.documentElement.setAttribute('data-accents', newValue)
+        })
 
         const reducedMotion = ref(false)
         const colorBlindMode = ref(false)
 
-        const app = ref()
         const isMinimized = ref(false)
         const sidebarState = ref()
         const defaultSidebarState = ref(true)
@@ -29,17 +35,14 @@ export const useGeneralStore = defineStore(
         const pocketPreview = ref(false)
         const routeHistory = []
 
-        watch(theme, (newValue) => {
-            document.documentElement.setAttribute('data-theme', newValue)
-        })
+        const favoriteChamps = ref<Champion[]>([])
 
-        // Watch for mode changes
-        watch(accents, (newMode) => {
-            document.documentElement.setAttribute('data-mode', newMode)
-            //console.log(`Mode changed to: ${newMode}`);
-        })
+        //items
+        const favoriteItems = ref<Item[]>([])
+        const itemSets = ref<ItemSet[]>([])
 
         return {
+            //settings
             theme,
             accents,
             colorBlindMode,
@@ -50,23 +53,29 @@ export const useGeneralStore = defineStore(
             commandOpen,
             sidebarState,
             sidebarWidth,
-            app,
             cardBack,
             pocketGridSize,
             drawerState,
             drawerValue,
             drawerPocket,
             routeHistory,
+
+            //champs
+            favoriteChamps,
+
+            //items
+            favoriteItems,
+            itemSets,
         }
     },
     {
         persist: {
             storage: localStorage,
-            key: 'generalStore',
+            key: 'accountStore',
             omit: ['drawer, drawerPocket, drawerState'],
             afterHydrate: (ctx) => {
-                const gs = useGeneralStore()
-                gs.drawerState = false
+                const as = useAccountStore()
+                as.drawerState = false
             },
         },
     }

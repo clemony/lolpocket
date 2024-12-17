@@ -1,4 +1,4 @@
-import { useRuneStore } from '@/stores/runeStore'
+import { useTempStore } from '@/stores/tempStore'
 import { hexoid } from 'hexoid'
 import {
     pocketChampions,

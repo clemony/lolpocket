@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { useItemStore } from '@/stores/itemStore'
+
 import { useDataStore } from '@/stores/dataStore'
-import { useRuneStore } from '@/stores/runeStore'
+import { useTempStore } from '@/stores/tempStore'
 
 const ds = useDataStore()
-const rs = useRuneStore()
+const ts = useTempStore()
 
 const isCollapsed = ref('')
 
@@ -22,7 +22,7 @@ const props = defineProps<{
 
 // Create a computed property for the rune
 const rune = computed(() => {
-    return props.rune || rs.selectedRune // Fallback to rs.selectedRune if no prop is passed
+    return props.rune || ts.selectedRune // Fallback to ts.selectedRune if no prop is passed
 })
 </script>
 

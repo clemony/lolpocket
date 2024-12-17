@@ -6,6 +6,9 @@
 @import './fonts.css';
 @config './tailwind.config.ts';
 @plugin "tailwindcss-animate";
+@plugin 'daisyui' {
+    themes: false;
+}
 
 @layer base {
     html {

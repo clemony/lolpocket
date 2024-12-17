@@ -5,9 +5,9 @@ import { generateRandomString } from '@lib/functions/Keygen'
 const ps = usePocketStore()
 import { hexoid } from 'hexoid'
 import { pocket } from 'types'
-import { useGeneralStore } from '@stores/generalStore'
+import { useAccountStore } from '@stores/accountStore'
 import { scrollToSection } from '@utils/utils'
-const gs = useGeneralStore()
+const as = useAccountStore()
 
 const toID = hexoid()
 
@@ -18,7 +18,7 @@ const props = defineProps<{
 
 // Form fields
 const name = ref('')
-const tags = ref([])
+const taas = ref([])
 const selectedIcon = ref('teenyicons:folder-outline')
 const bgColor = ref('#000000')
 const iconColor = ref('#FFFFFF')
@@ -51,7 +51,7 @@ function submitForm() {
     const key = toID()
     addPocket(
         name.value,
-        tags.value,
+        taas.value,
         selectedIcon.value,
         bgColor.value,
         iconColor.value,
@@ -67,10 +67,10 @@ const emit = defineEmits<{
 }>()
 
 function updatePocket() {
-    const pocket = ref(gs.drawerPocket)
+    const pocket = ref(as.drawerPocket)
 
     pocket.value.name = name.value
-    pocket.value.tags = tags.value
+    pocket.value.taas = taas.value
     pocket.value.bgColor = bgColor.value
     pocket.value.iconColor = iconColor.value
     pocket.value.icon = selectedIcon.value
@@ -78,9 +78,9 @@ function updatePocket() {
 }
 
 onMounted(() => {
-    if (gs.drawerPocket) {
+    if (as.drawerPocket) {
         name.value = pocket.value.name
-        tags.value = pocket.value.tags
+        taas.value = pocket.value.tags
         bgColor.value = pocket.value.bgColor
         iconColor.value = pocket.value.iconColor
         selectedIcon.value = pocket.value.icon
@@ -149,7 +149,7 @@ watch(
                 <TagsInput v-model="tags" class="flex-col p-2">
                     <div
                         class="*:text-3 flex w-full flex-row flex-wrap justify-start gap-2">
-                        <template v-if="tags.length">
+                        <template v-if="taas.length">
                             <TransitionGroup name="pop">
                                 <TagsInputItem
                                     v-for="tag in tags"
@@ -251,7 +251,7 @@ watch(
                 <DialogClose>
                     <Button
                         @click="submitForm"
-                        v-if="!gs.drawerPocket"
+                        v-if="!as.drawerPocket"
                         variant="neutral"
                         type="submit"
                         class="btn btn-sm cursor-pointer justify-self-end">

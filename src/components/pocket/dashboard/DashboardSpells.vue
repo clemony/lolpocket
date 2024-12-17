@@ -14,7 +14,8 @@ const spellbookIsOpen = ref(false)
 const spellIsOpen = ref(false)
 
 //const isHovered = useElementHover(myHoverableElement)
-
+const spell1 = ref(props.pocket.spells[0])
+const spell2 = ref(props.pocket.spells[1])
 const el = ref()
 
 console.log('hihi', props.pocket.spells[0])
@@ -80,7 +81,7 @@ onMounted(async () => {
         </CollapsibleTrigger>
         <CollapsibleContent>
             <DisplayCard class="px-5 pb-4">
-                <SpellPicker />
+                <SpellPicker :model="spell1" />
             </DisplayCard>
         </CollapsibleContent>
     </Collapsible>
@@ -96,7 +97,7 @@ onMounted(async () => {
         </CollapsibleTrigger>
         <CollapsibleContent>
             <DisplayCard class="px-5 pb-4">
-                <SpellPicker />
+                <SpellPicker :model="spell2"/>
             </DisplayCard>
         </CollapsibleContent>
     </Collapsible>

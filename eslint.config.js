@@ -1,36 +1,29 @@
-import pluginJs from '@eslint/js'
-import pluginVue, { configs, rules } from 'eslint-plugin-vue'
+import eslint from '@eslint/js'
+import eslintConfigPrettier from 'eslint-config-prettier'
+import eslintPluginVue from 'eslint-plugin-vue'
 import globals from 'globals'
-import { FlatCompat } from '@eslint/eslintrc'
+import typescriptEslint from 'typescript-eslint'
 
-const compat = new FlatCompat()
-
-export default [
-    ...compat({
+export default typescriptEslint.config(
+    { ignores: ['*.d.ts', '**/coverage', '**/dist'] },
+    {
         extends: [
-            'eslint:recommended',
-            'plugin:@typescript-eslint/recommended',
-            './.eslintrc-auto-import.json',
+            eslint.configs.recommended,
+            ...typescriptEslint.configs.recommended,
+            ...eslintPluginVue.configs['flat/recommended'],
         ],
-        ignores: ['../notes/*', '/notes/*', './notes/*'],
-        files: ['**/*.{js,mjs,cjs,vue}'],
+        files: ['**/*.{ts,vue}'],
         languageOptions: {
-            globals: {
-                /* globals.browser, */
-                definePage: 'readonly',
+            ecmaVersion: 'latest',
+            sourceType: 'module',
+            globals: globals.browser,
+            parserOptions: {
+                parser: typescriptEslint.parser,
             },
         },
-
         rules: {
-            // enable all recommended rules to warn
-            ...eslintPluginReadableTailwind.configs.warning.rules,
-            // enable all recommended rules to error
-            ...eslintPluginReadableTailwind.configs.error.rules,
-            'no-unused-vars': '0',
-            'no-undef': '0',
+            'vue/no-unused-vars': false,
         },
-    }),
-
-    pluginJs.configs.recommended,
-    ...pluginVue.configs['flat/essential'],
-]
+    },
+    eslintConfigPrettier
+)

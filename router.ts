@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
-import { useGeneralStore } from './src/stores/generalStore'
+import { useAccountStore } from './src/stores/accountStore'
 
 import { computed } from 'vue'
 
@@ -187,13 +187,13 @@ const scrollBehavior = (to) => {
 }
 
 router.afterEach((to, from) => {
-    const gs = useGeneralStore()
+    const as = useAccountStore()
     const route = computed(() => {
         to.name == '' || to.name == '/' || to.name == undefined ?
             'home'
         :   to.name.toString()
     })
-    const history = gs.routeHistory
+    const history = as.routeHistory
 
     if (history && history.includes(route)) {
         console.log('is in history?', history.includes(route))

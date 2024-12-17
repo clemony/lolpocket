@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { DrawerClose } from '@components/base/drawer'
-import { useGeneralStore } from '@stores/generalStore'
-const gs = useGeneralStore()
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
 
 const drawer = computed(() => {
-    return gs.drawerValue ? gs.drawerValue : null
+    return as.drawerValue ? as.drawerValue : null
 })
 const side = computed(() => {
     return drawer ? drawer.value.direction : ''
@@ -13,7 +13,7 @@ const side = computed(() => {
 <template>
     <DrawerRoot
         v-if="drawer"
-        v-model:open="gs.drawerState"
+        v-model:open="as.drawerState"
         :key="drawer.id"
         :direction="side"
         :fixed="true">
