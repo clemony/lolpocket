@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 @import './utilities.css';
 @import './fonts.css' layer(base);
@@ -23,6 +24,8 @@
 >>>>>>> be133e04 (update 8 files and delete 426 files)
 =======
 >>>>>>> a59cb6f4 (update 42 files and delete 17 files)
+=======
+>>>>>>> 3b388882 (update 1 file and create 1 file)
 @import './theme.css';
 @import './themes.css';
 /* @import '../animation/animations.css';*/
@@ -82,18 +85,12 @@
 @plugin "tailwindcss-radix";
 =======
 >>>>>>> 4634f11e (update 8 files and delete 426 files):src/assets/css/index.css
+=======
+>>>>>>> af37d556 (update 1 file and create 1 file)
 
 @plugin "daisyui" {
     themes: false;
 }
-<<<<<<< HEAD:src/client/assets/css/index.css
-/*    include: reset, keyframes, carousel, checkbox, join, swap, kbd, rating,
-        radio, tab, toggle, mask, properties, states, radialprogress, typography
-    exclude: avatar;     */
-@config './tailwind.config.js';
-=======
->>>>>>> 4634f11e (update 8 files and delete 426 files):src/assets/css/index.css
-=======
 @import './theme.css';
 @import './themes.css';
 /* @import '../animation/animations.css';*/
@@ -101,14 +98,9 @@
 @import './fonts.css';
 @config './tailwind.config.ts';
 @plugin "tailwindcss-animate";
-<<<<<<< HEAD
->>>>>>> 83f9266d (update 42 files and delete 17 files)
-=======
 @plugin 'daisyui' {
     themes: false;
 }
->>>>>>> 404a531d (update 84 files and delete 4 files)
-
 @layer base {
     html {
 <<<<<<< HEAD

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { summoner } from '@data/playerData'
 import { Doughnut } from 'vue-chartjs'
 import { externalTooltip } from '@config/charts'
@@ -8,6 +9,11 @@ import { summoner } from '@/client/data/playerData'
 import { Doughnut } from 'vue-chartjs'
 import { externalTooltip } from '@/client/config/charts'
 >>>>>>> 12d6db59 (update 38 files and delete 54 files)
+=======
+import { summoner } from '@data/playerData'
+import { Doughnut } from 'vue-chartjs'
+import { externalTooltip } from '@config/charts'
+>>>>>>> 3b388882 (update 1 file and create 1 file)
 import {
     Chart as ChartJS,
     Tooltip,
@@ -16,11 +22,14 @@ import {
 } from 'chart.js'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import 'chartjs-plugin-style'
 >>>>>>> 12d6db59 (update 38 files and delete 54 files)
 =======
 >>>>>>> 18878a61 (update 38 files and delete 54 files)
+=======
+>>>>>>> 3b388882 (update 1 file and create 1 file)
 
 ChartJS.register(Tooltip, DoughnutController, ArcElement)
 
