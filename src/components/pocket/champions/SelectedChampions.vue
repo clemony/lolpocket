@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useChampStore } from '@/stores/champStore'
+import { useTempStore } from '@stores/tempStore'
 import { VueDraggable } from 'vue-draggable-plus'
 import type { pocket } from 'types'
-
-const cs = useChampStore()
+import { removeChamp } from '@utils/pocketUtilities'
+const ts = useTempStore()
 
 const props = defineProps<{
     pocket: pocket
@@ -14,18 +14,6 @@ const pocket = ref(props.pocket)
 const champions = computed(() => {
     return pocket.value?.champions[0]?.champions || []
 })
-
-// Watch for any changes in the champions data and persist it to the store
-/* watch(
-    champions,
-    (newChampions) => {
-        if (pocket.value) {
-            pocket.value.champions[0].champions = newChampions
-            ps.$persist() // Ensure persistence when champions update
-        }
-    },
-    { deep: true }
-)  */
 </script>
 
 <template>
@@ -59,12 +47,12 @@ const champions = computed(() => {
                 <input
                     type="radio"
                     :value="champion"
-                    v-model="cs.selectedChampion"
+                    v-model="ts.selectedChampion"
                     class="hidden" />
             </label>
 
             <button
-                @click="cs.removeChamp(champion.name, pocket)"
+                @click="removeChamp(champion.name, pocket)"
                 class="bg-b1 absolute top-1.5 right-1.5 rounded-full opacity-0 transition-all duration-300 group-hover:opacity-70">
                 <icon icon="teenyicons:x-circle-solid" />
             </button>

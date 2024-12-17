@@ -135,7 +135,7 @@ export const columnDefs = ref([
         minWidth: 50,
         cellRenderer: 'TableTags',
         filterValueGetter: (params) => {
-            const tags = params.data.tags
+            const taas =params.data.tags
             return tags
         },
     },

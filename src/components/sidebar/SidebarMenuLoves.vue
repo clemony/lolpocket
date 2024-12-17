@@ -1,20 +1,18 @@
 <script setup lang="ts">
-import { useItemStore } from '@/stores/itemStore'
-import { useChampStore } from '@/stores/champStore'
-import { useGeneralStore } from '@/stores/generalStore'
+import { useTempStore } from '@stores/tempStore'
+import { useAccountStore } from '@stores/accountStore'
 
-const gs = useGeneralStore()
-const cs = useChampStore()
-const is = useItemStore()
+const as = useAccountStore()
+const ts = useTempStore()
 
 const loveMessage = ref('')
 
-let previousFavoriteChamps = [...toRaw(cs.favoriteChamps)] // Initial copy of the champions array
+let previousFavoriteChamps = [...toRaw(as.favoriteChamps)] // Initial copy of the champions array
 
 watch(
-    () => cs.favoriteChamps.length, // Watch only the length to detect add/remove
+    () => as.favoriteChamps.length, // Watch only the length to detect add/remove
     (newLength, oldLength) => {
-        const rawNewChamps = toRaw(cs.favoriteChamps)
+        const rawNewChamps = toRaw(as.favoriteChamps)
 
         console.log('Previous champions:', previousFavoriteChamps)
         console.log('Current champions:', rawNewChamps)
@@ -44,12 +42,12 @@ watch(
     }
 )
 
-let previousFavoriteItems = [...toRaw(is.favoriteItems)] // Initial copy of the array
+let previousFavoriteItems = [...toRaw(as.favoriteItems)] // Initial copy of the array
 
 watch(
-    () => is.favoriteItems.length, // Watch only the length to detect add/remove
+    () => as.favoriteItems.length, // Watch only the length to detect add/remove
     (newLength, oldLength) => {
-        const rawNewItems = toRaw(is.favoriteItems)
+        const rawNewItems = toRaw(as.favoriteItems)
 
         console.log('Previous items:', previousFavoriteItems)
         console.log('Current items:', rawNewItems)
@@ -87,7 +85,7 @@ watch(
 
     <Transition name="toast">
         <div
-            v-if="loveMessage && !gs.isMinimized"
+            v-if="loveMessage && !as.isMinimized"
             :key="loveMessage"
             class="badge badge-ghost badge-sm border-b2/20 bg-b1/70! flex items-center justify-start text-nowrap opacity-0 shadow-xs">
             <span class="max-w-24 truncate">{{ loveMessage }}</span>

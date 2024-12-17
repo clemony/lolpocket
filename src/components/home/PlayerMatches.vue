@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { summoner } from '@data/playerData'
-import { useGeneralStore } from '@stores/generalStore'
+import { useAccountStore } from '@stores/accountStore'
 import { colorB3 } from '@utils/getColor'
-const gs = useGeneralStore()
+const as = useAccountStore()
 
 const recentWinrate = ref(55)
 const recentMatchNum = ref(20)
 
 const color1 = computed(() => {
-    return gs.colorBlindMode ? '#99c4c8' : '#a3be8c'
+    return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
 })
 
 const datasets = [

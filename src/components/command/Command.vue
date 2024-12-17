@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { useGeneralStore } from '@/stores/generalStore'
-const gs = useGeneralStore()
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
 const emit = defineEmits(['update:open'])
 
 const searchQuery = ref('')
 function onClose() {
-    gs.commandOpen = false
+    as.commandOpen = false
     emit('update:open', false)
 }
 </script>

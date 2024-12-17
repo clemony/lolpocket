@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { useChampStore } from '@stores/champStore'
-import { useItemStore } from '@stores/itemStore'
+import { useTempStore } from '@stores/tempStore'
 import { usePocketStore } from '@stores/pocketStore'
 import { getQuote } from '@data/champQuotes'
 import type { pocket } from 'types'
@@ -12,8 +11,7 @@ const props = defineProps<{
 
 const pocket = ref(props.pocket)
 
-const cs = useChampStore()
-const is = useItemStore()
+const ts = useTempStore()
 
 // Create a local ref for the text input
 const notesInput = ref<string>('')

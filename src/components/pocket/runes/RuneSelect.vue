@@ -1,13 +1,10 @@
 <script setup lang="ts">
-import { usePocketStore } from '@/stores/pocketStore'
-import { useRuneStore } from '@/stores/runeStore'
-const rs = useRuneStore()
-const ps = usePocketStore()
 import { useDataStore } from '@/stores/dataStore'
 import type { pocket, Rune, RuneSet } from 'types'
+import { useTempStore } from '@stores/tempStore'
+const ts = useTempStore()
 const ds = useDataStore()
 
-const route = useRoute()
 const props = defineProps<{
     pocketKey: string
     set: number
@@ -20,7 +17,7 @@ const pocket = ref(props.pocket)
 const selected = ref(pocket.value.runes[0].runeSets[props.runeSet])
 
 watch(
-    () => rs.selectedRuneSetIndex,
+    () => ts.selectedRuneSetIndex,
     (newVal) => {
         selected.value = pocket.value.runes[0].runeSets[newVal]
     }
@@ -72,9 +69,9 @@ function handleChange() {
 onMounted(() => {})
 </script>
 <template>
-    <div class="z-0 w-full bg-clip-border transition-all duration-500">
+    <div class="z-0 size-full bg-clip-border transition-all duration-500">
         <div
-            class="relative z-10 flex h-16 items-end after:absolute after:top-0 after:left-0 after:h-16 after:w-full after:rounded-t-xl [&_img]:h-[1.5rem]">
+            class="relative z-10 flex h-16 items-end after:absolute after:top-0 after:left-0 after:h-16 after:size-full after:rounded-t-xl [&_img]:h-[1.5rem]">
             <label
                 v-for="(path, index) in ds.uniquePaths"
                 :key="index"
@@ -123,7 +120,7 @@ onMounted(() => {})
             class="shine grid cursor-pointer grid-cols-1 place-items-center gap-2"
             :data-tier="rune.tier"
             :class="rune.path + 'Color'"
-            @click="rs.selectedRune = rune">
+            @click="ts.selectedRune = rune">
             <input
                 v-if="rune.tier == 0 && props.set == 1"
                 type="radio"
@@ -160,11 +157,11 @@ onMounted(() => {})
                 v-if="rune.tier == 0"
                 :disabled="rune.path == 'empty'"
                 id="imgwrap"
-                class="h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0">
+                class="h-[inherit] w-[inherit] opacity-80 transition-all duration-500 peer-checked:opacity-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0 ">
                 <PopoverTrigger>
                     <LoadImg
                         :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
-                        :alt="rune.name"
+                        :alt="rune.name" class='size-20 rounded-full'
                         @error="onImageError" />
                 </PopoverTrigger>
                 <PopoverContent>
@@ -176,11 +173,11 @@ onMounted(() => {})
                 v-else
                 :disabled="rune.path == 'empty'"
                 id="imgwrap"
-                class="h-[inherit] w-[inherit] opacity-80 brightness-90 transition-all duration-500 peer-checked:opacity-100 peer-checked:brightness-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0">
+                class="h-[inherit] w-[inherit] opacity-80 brightness-90 transition-all duration-500 peer-checked:opacity-100 peer-checked:brightness-100 hover:opacity-100 [&_img]:grayscale [&_img]:peer-checked:grayscale-0 [&_img]:hover:grayscale-0 ">
                 <PopoverTrigger class="overflow-hidden">
                     <LoadImg
                         :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
-                        :alt="rune.name"
+                        :alt="rune.name" class='size-16 rounded-full'
                         @error="onImageError" />
                 </PopoverTrigger>
                 <PopoverContent>
@@ -199,7 +196,7 @@ onMounted(() => {})
             class="grid cursor-pointer grid-cols-1 place-items-center gap-2"
             :data-tier="rune.tier"
             :class="rune.path + 'Color'"
-            @click="rs.selectedRune = rune">
+            @click="ts.selectedRune = rune">
             <input
                 v-if="rune.tier == 1 && props.set == 2"
                 type="radio"
@@ -224,7 +221,7 @@ onMounted(() => {})
                     <LoadImg
                         :url="`/img/runes/${rune.path.toLowerCase()}/${rune.name.replace(/\s+/g, '')}.webp`"
                         :alt="rune.name"
-                        @error="onImageError" />
+                        @error="onImageError" class='rounded-full size-17' />
                 </PopoverTrigger>
                 <PopoverContent>
                     <RunePop :rune="rune" />

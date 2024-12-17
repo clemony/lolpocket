@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import { useItemStore } from '@stores/itemStore'
-const is = useItemStore()
 import { stats } from '@data/stats'
-
+import { useTempStore } from '@stores/tempStore'
+const ts = useTempStore()
 const sorted = stats.sort((a, b) => {
     return a.name.localeCompare(b.name)
 })
@@ -95,7 +93,7 @@ function getStatsForCategory(category: string) {
                         <label class="flex flex-nowrap gap-3">
                             <input
                                 type="checkbox"
-                                v-model="is.statFilters"
+                                v-model="ts.statFilters"
                                 class="checkbox checkbox-sm rounded-xs opacity-80"
                                 :value="stat.value || stat.name" />
                             <div class="text-2 text-nowrap">

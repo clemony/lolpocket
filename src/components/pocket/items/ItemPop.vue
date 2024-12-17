@@ -1,12 +1,17 @@
 <script setup lang="ts">
-import { useItemStore } from '@/stores/itemStore'
-import { useGeneralStore } from '@/stores/generalStore'
+import {
+    handleItemLike,
+    removeItemFromSet,
+    addItemToSet,
+} from '@utils/pocketUtilities'
 import { computed, watch } from 'vue'
-import { useChampStore } from '@/stores/champStore'
+import { useTempStore } from '@stores/tempStore'
 import { Item, ItemSet } from 'types'
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
 
-const cs = useChampStore()
-const is = useItemStore()
+const ts = useTempStore()
+
 const props = defineProps<{
     item: Item
     variant?: string
@@ -17,7 +22,7 @@ const props = defineProps<{
 
 // Watch for changes to favoriteItems and log the new value
 watch(
-    () => is.favoriteItems,
+    () => as.favoriteItems,
     (newVal) => {
         //console.log('favoriteItems changed:', newVal);
     },
@@ -26,7 +31,7 @@ watch(
 
 // Computed property to check if the item is liked
 const isLiked = computed(() => {
-    return is.favoriteItems.some((item) => item.name === props.item.name)
+    return as.favoriteItems.some((item) => item.name === props.item.name)
 })
 </script>
 
@@ -62,7 +67,7 @@ const isLiked = computed(() => {
                             size="xs"
                             variant="neutral"
                             class="group/liked relative aspect-square rounded-full p-2 *:absolute *:size-4.5 *:shrink-0 *:transition-all *:duration-100 hover:opacity-75"
-                            @click="is.handleLike(item)">
+                            @click="handleItemLike(item)">
                             <icon
                                 v-if="isLiked"
                                 icon="teenyicons:heart-solid"
@@ -108,10 +113,10 @@ const isLiked = computed(() => {
                                     Add to Set
                                 </DropdownMenuLabel>
                                 <DropdownMenuItem
-                                    v-for="set in is.itemSets"
+                                    v-for="set in as.itemSets"
                                     class="justify-start"
                                     @click="
-                                        is.addToSet(pocketKey, set.key, item)
+                                        addItemToSet(pocketKey, set.key, item)
                                     ">
                                     {{ set.name }}
                                 </DropdownMenuItem>
@@ -124,19 +129,12 @@ const isLiked = computed(() => {
                             alt="remove from set"
                             title="remove from set"
                             @click="
-                                is.removeFromSet(props.pocketKey, set.key, item)
+                                removeItemFromSet(
+                                    props.pocketKey,
+                                    set.key,
+                                    item
+                                )
                             ">
-                            <icon
-                                icon="teenyicons:denied-outline"
-                                class="size-3.5" />
-                        </button>
-
-                        <button
-                            v-if="props.variant == 'remove' && props.champ"
-                            class="btn btn-circle btn-neutral btn-xs aspect-square hover:opacity-75"
-                            alt="remove from set"
-                            title="remove from set"
-                            @click="cs.removeFromSet(item, props.champ)">
                             <icon
                                 icon="teenyicons:denied-outline"
                                 class="size-3.5" />

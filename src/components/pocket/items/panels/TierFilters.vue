@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useItemStore } from '@/stores/itemStore'
 import { useDataStore } from '@/stores/dataStore'
-
+import { useTempStore } from '@stores/tempStore'
+const ts = useTempStore()
 const ds = useDataStore()
-const is = useItemStore()
 
 const icons = [
     {
@@ -29,7 +27,7 @@ const icons = [
                         type="checkbox"
                         :value="cat"
                         :id="cat"
-                        v-model="is.catFilters"
+                        v-model="ts.catFilters"
                         class="checkbox checkbox-sm rounded-xs opacity-80" />
                     <span class="text-2">{{ cat }}</span>
                 </label>

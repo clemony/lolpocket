@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { VueDraggable } from 'vue-draggable-plus'
-import { useItemStore } from '@stores/itemStore'
+import { useTempStore } from '@stores/tempStore'
 import { usePocketStore } from '@stores/pocketStore'
 import { deleteItemSet, getPocket, newItemSet } from '@utils/pocketUtilities'
 import ItemSetItems from './ItemSetItems.vue'
 import { generateRandomName } from '@lib/functions/Keygen'
 
-const is = useItemStore()
-
+const ts = useTempStore()
 const ps = usePocketStore()
 
 const props = defineProps<{
@@ -87,7 +86,7 @@ const prevIndex = 0
                     '@container/set relative w-[calc(100%-48px)]  inset-0 before:absolute before:bg-transparent before:border  before:w-full before:h-full  before:pointer-events-none before:border-transparent before:z-50  mx-[24px] before:rounded-xl ':
                         set,
                     ' before:border-neutral/50 before:shadow-inner':
-                        set == is.selectedSet,
+                        set == ts.selectedItemSet,
                 }">
                 <template #header>
                     <!--                <label class="group/star items-center cursor-pointer  *:transition-all *:duration-300  size-3 relative">
@@ -148,7 +147,7 @@ const prevIndex = 0
 
                             <DropdownMenuItem
                                 alt="Clear Items"
-                                @click="is.resetItems(set.key)">
+                                @click="ts.resetItems(set.key)">
                                 <icon
                                     icon="qlementine-icons:eraser-16"
                                     class="-ml-1 size-4" />
@@ -160,7 +159,7 @@ const prevIndex = 0
                             <DropdownMenuItem
                                 alt="Delete Set"
                                 @click="deleteItemSet(pocket.key, set.key)"
-                                :disabled="is.itemSets.length == 1">
+                                :disabled="ts.itemSets.length == 1">
                                 <icon
                                     icon="teenyicons:bin-outline"
                                     class="-ml-1 size-4" />
@@ -174,7 +173,7 @@ const prevIndex = 0
                         <input
                             type="radio"
                             name="itemset"
-                            v-model="is.selectedSet"
+                            v-model="ts.selectedItemSet"
                             :value="set"
                             class="hidden" />
                     </label>

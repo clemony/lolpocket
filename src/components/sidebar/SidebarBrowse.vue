@@ -1,52 +1,9 @@
 <script setup lang="ts">
 import { useQuery } from '@pinia/colada'
 import { navGroup, navItem } from 'types'
+import LinksJson from './links.json'
+console.log('💠 - LinksJson:', LinksJson)
 
-const items = [
-    {
-        name: 'Champions',
-        url: 'champions',
-        icon: '',
-    },
-    {
-        name: 'Items',
-        url: 'items',
-        icon: '',
-    },
-    {
-        name: 'Runes',
-        url: 'runes',
-        icon: '',
-    },
-
-    {
-        name: 'Spells',
-        url: 'spells',
-        icon: '',
-    },
-]
-
-const {
-    // main query properties
-    state,
-    asyncStatus,
-    refresh,
-    refetch,
-    // convenient aliases
-    error,
-    data,
-    status,
-    isLoading,
-    isPending,
-    isPlaceholderData,
-} = useQuery({
-    key: ['links'],
-    query: () => fetch('/api/links.json').then((res) => res.json()),
-})
-console.log('💠 - error:', error)
-console.log('💠 - asyncStatus:', asyncStatus)
-
-console.log('💠 - state:', state)
 </script>
 <template>
     <SidebarGroup>
@@ -55,7 +12,7 @@ console.log('💠 - state:', state)
             <SidebarLink to="favorites" icon="teenyicons:heart-outline" />
 
             <Collapsible
-                v-for="section in state.data"
+                v-for="section in LinksJson"
                 as-child
                 :default-open="section.open"
                 class="group">

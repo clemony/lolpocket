@@ -33,7 +33,7 @@ onMounted(() => {
             </template>
             <Placeholder
                 v-for="index in makeBox(model.items.length, 6)"
-                :key="model"
+                :key="index"
                 class="size-[55px] rounded-lg"
                 no-hover />
         </template>

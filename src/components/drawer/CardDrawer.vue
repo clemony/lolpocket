@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useGeneralStore } from '@/stores/generalStore'
-const gs = useGeneralStore()
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
 
 const imports = import.meta.glob('/public/img/cards/*.webp', {
     import: 'default',
@@ -52,12 +52,12 @@ console.log('gug', images)
         <DialogFooter class="absolute -bottom-12 left-0 w-full pt-5 pb-3">
             <DialogClose>
                 <Button
-                    v-if="!gs.drawerPocket"
+                    v-if="!as.drawerPocket"
                     variant="neutral"
                     size="lg"
                     type="submit"
                     class="justify-self-end">
-                    {{ gs.drawerValue.submitText }}
+                    {{ as.drawerValue.submitText }}
                 </Button>
 
                 <Button
@@ -66,7 +66,7 @@ console.log('gug', images)
                     type="button"
                     size="md"
                     class="justify-self-end">
-                    {{ gs.drawerValue.submitText }}
+                    {{ as.drawerValue.submitText }}
                 </Button>
             </DialogClose>
         </DialogFooter>

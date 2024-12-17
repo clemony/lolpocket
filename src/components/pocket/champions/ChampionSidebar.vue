@@ -1,32 +1,27 @@
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
-import { useChampStore } from '@stores/champStore'
-import { useItemStore } from '@stores/itemStore'
-import { clean } from '@lib/utils'
-
-const cs = useChampStore()
-const is = useItemStore()
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
 
 const props = defineProps(['champion'])
 
 const tabModel = ref('abilities')
 
 watch(
-    () => cs.favoriteChamps,
+    () => as.favoriteChamps,
     (newVal) => {},
     { immediate: true }
 )
 
 const isLiked = computed(() => {
-    return cs.favoriteChamps.some((champ) => champ.name === props.champion.name)
+    return as.favoriteChamps.some((champ) => champ.name === props.champion.name)
 })
 
 function handleLike(thisChamp) {
-    let favoriteChamps = cs.favoriteChamps
+    let favoriteChamps = as.favoriteChamps
 
     if (!Array.isArray(favoriteChamps)) {
         favoriteChamps = []
-        cs.favoriteChamps = favoriteChamps
+        as.favoriteChamps = favoriteChamps
     }
 
     if (favoriteChamps.some((champ) => champ.name === thisChamp.name)) {

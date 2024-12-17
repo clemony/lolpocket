@@ -185,7 +185,6 @@ declare module 'vue' {
     LoadImg: typeof import('./src/components/placeholders/LoadImg.vue')['default']
     LoadRune: typeof import('./src/components/placeholders/LoadRune.vue')['default']
     MainMenubar: typeof import('./src/components/menubar/MainMenubar.vue')['default']
-    MainSidebarFooter: typeof import('./src/components/sidebar/SidebarPlayer.vue')['default']
     MatchCard: typeof import('./src/components/home/MatchCard.vue')['default']
     Menubar: typeof import('./src/components/base/menubar/Menubar.vue')['default']
     MenubarCheckboxItem: typeof import('./src/components/base/menubar/MenubarCheckboxItem.vue')['default']

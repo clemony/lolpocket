@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import type { Item, pocket } from 'types'
-import { useItemStore } from '@/stores/itemStore'
-const is = useItemStore()
+import { useTempStore } from '@stores/tempStore'
 import type { HTMLAttributes } from 'vue'
+import { addItemToSet } from '@utils/pocketUtilities'
 
+const ts = useTempStore()
 const props = defineProps<{
     item: Item
-    pocket: pocket
+    pocket?: pocket
     class?: HTMLAttributes['class']
     imgClass?: HTMLAttributes['class']
     labelClass?: HTMLAttributes['class']
@@ -21,7 +22,7 @@ watch(
 
 function add(item) {
     disabled.value = true
-    is.addToSet(props.pocket.key, is.selectedSet.key, item)
+    addItemToSet(props.pocket.key, ts.selectedItemSet.key, item)
 }
 </script>
 

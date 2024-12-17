@@ -23,13 +23,13 @@ const ps = usePocketStore()
         <SidebarPockets
             :data="ps.pinned"
             title="Pinned"
-            :key="ps.pinned"
+            key="pinned"
             icon="teenyicons:attach-outline" />
 
         <SidebarPockets
             :data="ps.general"
             title="Unsorted"
-            :key="ps.general"
+            key="general"
             icon="formkit:folder"
             iconClass="size-[13px]!" />
 

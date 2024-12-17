@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useGeneralStore } from '@stores/generalStore'
+import { useAccountStore } from '@stores/accountStore'
 import { useParallax } from '@vueuse/core'
 import { CSSProperties } from 'vue'
 
-const gs = useGeneralStore()
+const as = useAccountStore()
 
 const wrapper = ref(null)
 const parallax = reactive(useParallax(wrapper))
@@ -32,36 +32,36 @@ const pageStyle = computed(() => ({
         :class="
             cn({
                 /*base */
-                'bg-b1 top-1/2 z-0': gs.commandOpen,
+                'bg-b1 top-1/2 z-0': as.commandOpen,
 
                 /* styling */
                 'shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px,_2px_1px_0px_1px_rgba(221,_221,_221,_0.4),_0_2px_0px_rgba(204,_204,_204,_0.4)] after:absolute after:z-50 after:size-full after:bg-black/5':
-                    gs.commandOpen,
+                    as.commandOpen,
             })
         ">   <main vaul-drawer-wrapper class="size-full p-0" :key="state">
           </main>
     <History></History> -->
     <div
-        v-show="gs.commandOpen"
+        v-show="as.commandOpen"
         class="command margin-auto animate-in fade-in-100 slide-in-from-bottom z-100 mt-24 overflow-hidden rounded-lg delay-100">
         <Command />
     </div>
     <div
         ref="wrapper"
-        :style="gs.commandOpen ? wrapperStyle : ''"
+        :style="as.commandOpen ? wrapperStyle : ''"
         :class="{
             'absolute top-[38%] size-full items-end justify-center':
-                gs.commandOpen,
+                as.commandOpen,
         }">
         <div
             :style="containerStyle"
             :class="{
                 'inset-0 m-0 flex size-full flex-col items-center justify-center -space-y-[42%]':
-                    gs.commandOpen,
+                    as.commandOpen,
             }">
-            <template v-if="gs.commandOpen">
+            <template v-if="as.commandOpen">
                 <div
-                    v-for="(page, index) in gs.routeHistory"
+                    v-for="(page, index) in as.routeHistory"
                     ref="page"
                     :style="pageStyle"
                     :class="
@@ -87,15 +87,15 @@ const pageStyle = computed(() => ({
             <label
                 class="flex size-full justify-center"
                 :class="{
-                    absolute: gs.commandOpen,
+                    absolute: as.commandOpen,
                 }"
-                :style="gs.commandOpen ? pageStyle : ''">
+                :style="as.commandOpen ? pageStyle : ''">
                 <input
                     type="checkbox"
-                    v-model="gs.commandOpen"
+                    v-model="as.commandOpen"
                     class="hidden"
                     name="history"
-                    :disabled="!gs.commandOpen ? true : false" />
+                    :disabled="!as.commandOpen ? true : false" />
 
                 <slot />
             </label>

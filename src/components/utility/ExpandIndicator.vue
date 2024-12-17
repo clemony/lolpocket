@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useGeneralStore } from '@/stores/generalStore'
+import { useAccountStore } from '@stores/accountStore'
 import type { HTMLAttributes } from 'vue'
 
-const gs = useGeneralStore()
+const as = useAccountStore()
 
 const props = defineProps<{
     class?: HTMLAttributes['class']

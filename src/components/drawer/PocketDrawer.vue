@@ -5,18 +5,18 @@ import { generateRandomString } from '@lib/functions/Keygen'
 const ps = usePocketStore()
 import { hexoid } from 'hexoid'
 import type { pocket } from 'types'
-import { useGeneralStore } from '@stores/generalStore'
-const gs = useGeneralStore()
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
 
 const toID = hexoid()
 
 // Form fields
 const name = ref('')
-const tags = ref([])
+const taas = ref([])
 const selectedIcon = ref('teenyicons:folder-outline')
 const bgColor = ref('#000000')
 const iconColor = ref('#FFFFFF')
-const pocket = ref(gs.drawerPocket)
+const pocket = ref(as.drawerPocket)
 watch(
     () => bgColor.value,
     (newVal) => {
@@ -34,7 +34,7 @@ watch(
 )
 
 watch(
-    () => tags.value,
+    () => taas.value,
     (newVal) => {
         console.log(newVal)
     }
@@ -52,7 +52,7 @@ function submitForm() {
     const key = toID()
     addPocket(
         name.value,
-        tags.value,
+        taas.value,
         selectedIcon.value,
         bgColor.value,
         iconColor.value,
@@ -68,12 +68,12 @@ const emit = defineEmits<{
 }>()
 
 function updatePocket() {
-    const pocket = ref(gs.drawerPocket)
+    const pocket = ref(as.drawerPocket)
 
     pocket.value.name = name.value
-    pocket.value.tags = [...tags.value]
-    /*     tags.value.forEach((tag) => {
-        pocket.value.tags.push(tag)
+    pocket.value.taas = [...taas.value]
+    /*     taas.value.forEach((tag) => {
+        pocket.value.taas.push(tag)
     }) */
 
     pocket.value.bgColor = bgColor.value
@@ -83,9 +83,9 @@ function updatePocket() {
 }
 
 onMounted(() => {
-    if (gs.drawerPocket) {
+    if (as.drawerPocket) {
         name.value = pocket.value.name
-        tags.value = pocket.value.tags
+        taas.value = pocket.value.tags
         bgColor.value = pocket.value.bgColor
         iconColor.value = pocket.value.iconColor
         selectedIcon.value = pocket.value.icon
@@ -142,7 +142,7 @@ onMounted(() => {
                 <TagsInput v-model="tags" class="flex-col p-2">
                     <div
                         class="*:text-3 flex w-full flex-row flex-wrap justify-start gap-2">
-                        <template v-if="tags.length">
+                        <template v-if="taas.length">
                             <TransitionGroup name="pop">
                                 <TagsInputItem
                                     v-for="tag in tags"
@@ -185,12 +185,12 @@ onMounted(() => {
                 <DialogClose>
                     <Button
                         @click="submitForm"
-                        v-if="!gs.drawerPocket"
+                        v-if="!as.drawerPocket"
                         variant="neutral"
                         size="lg"
                         type="submit"
                         class="justify-self-end">
-                        {{ gs.drawerValue.submitText }}
+                        {{ as.drawerValue.submitText }}
                     </Button>
 
                     <Button
@@ -200,7 +200,7 @@ onMounted(() => {
                         size="md"
                         class="justify-self-end"
                         @click="updatePocket">
-                        {{ gs.drawerValue.submitText }}
+                        {{ as.drawerValue.submitText }}
                     </Button>
                 </DialogClose>
             </DialogFooter>

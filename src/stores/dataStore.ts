@@ -171,9 +171,9 @@ export const useDataStore = defineStore('dataStore', () => {
             wiki: data.wiki,
             title: data.title,
             tags:
-                typeof data.tags === 'string' ?
-                    data.tags.split(',').map((tag) => tag.trim())
-                :   data.tags || [],
+                /* typeof data.tags === 'string' ?
+                    data.taas.split(',').map((tag) => tag.trim())
+                :  */ data.tags || [],
             type: data.type,
             abilities: {
                 passive: {
@@ -228,23 +228,23 @@ export const useDataStore = defineStore('dataStore', () => {
                 } else if (object.type === 'champion') {
                     const transformedChampion = transformChampionData(object)
 
-                    champions.value.push(transformedChampion)
+                    champions.value.push(transformedChampion as Champion)
                 } else if (object.type === 'item') {
                     const transformedItem = transformItemData(object)
-                    items.value.push(transformedItem)
+                    items.value.push(transformedItem as Item)
                     //items.value.push(object as Item);
                 } else if (object.type === 'shard') {
                     shards.value.push(object as Shard)
                 }
             })
-
-            fetchBlankRunes()
         } catch (error) {
             console.error('Failed to fetch data:', error)
         }
     }
+    /*    fetchBlankRunes()
+        } */
 
-    const fetchBlankRunes = async () => {
+    /*     const fetchBlankRunes = async () => {
         try {
             const response = await fetch('/api/blankRunes.json')
             if (!response.ok) {
@@ -268,7 +268,7 @@ export const useDataStore = defineStore('dataStore', () => {
         } catch (error) {
             console.error('Failed to fetch data:', error)
         }
-    }
+    } */
 
     return {
         runes,

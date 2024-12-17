@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { clean } from '@lib/utils'
-
-import { useChampStore } from '@stores/champStore'
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
+import { useTempStore } from '@stores/tempStore'
 import { VueDraggable } from 'vue-draggable-plus'
 import { useDataStore } from '@stores/dataStore'
 import type { pocket } from 'types'
 
 const ds = useDataStore()
-const cs = useChampStore()
+const ts = useTempStore()
 
 const props = defineProps<{
-    pocket: pocket
+    pocket?: pocket
 }>()
 
 const pocket = ref(props.pocket)
@@ -32,19 +32,19 @@ const filteredChampions = computed(() => {
         )
     }
 
-    if (cs.champSearch) {
+    if (ts.champSearch) {
         filtered = filtered.filter((champion) =>
             Object.values(champion).some(
                 (value) =>
                     typeof value === 'string' &&
-                    value.toLowerCase().includes(cs.champSearch)
+                    value.toLowerCase().includes(ts.champSearch)
             )
         )
     }
     // Apply cat filters if any
-    if (cs.classFilters.length) {
+    if (ts.champClassFilters.length) {
         filtered = filtered.filter((champion) =>
-            cs.classFilters.some((filter) =>
+            ts.champClassFilters.some((filter) =>
                 champion.tags
                     ?.toString()
                     .toLowerCase()
@@ -53,13 +53,13 @@ const filteredChampions = computed(() => {
         )
     }
 
-    if (cs.sortAZ) {
-        if (cs.sortAZ === 'az') {
+    if (ts.sortChampsAZ) {
+        if (ts.sortChampsAZ === 'az') {
             filtered = filtered.sort(
                 (a: { name: string }, b: { name: string }) =>
                     a.name.localeCompare(b.name)
             )
-        } else if (cs.sortAZ === 'za') {
+        } else if (ts.sortChampsAZ === 'za') {
             filtered = filtered.sort(
                 (a: { name: string }, b: { name: string }) =>
                     b.name.localeCompare(a.name)
@@ -67,9 +67,9 @@ const filteredChampions = computed(() => {
         }
     }
 
-    if (cs.viewFavorite == true && cs.favoriteChamps.length) {
+    if (ts.viewFavoriteChamps == true && as.favoriteChamps.length) {
         filtered = filtered.filter((champion) =>
-            cs.favoriteChamps.some(
+            as.favoriteChamps.some(
                 (favoriteChampion) => favoriteChampion.name === champion.name
             )
         )
@@ -78,10 +78,10 @@ const filteredChampions = computed(() => {
 })
 
 watch(
-    () => cs.favoriteChamps, // Watch the actual value of favoriteChampions
+    () => as.favoriteChamps, // Watch the actual value of favoriteChampions
     (newVal) => {
         if (!newVal.length) {
-            cs.viewFavorite = false
+            ts.viewFavoriteChamps = false
         }
     },
     { immediate: true } // Ensure it runs on initialization
@@ -109,7 +109,7 @@ watch(
         class="max-h-inherit h-inherit scrollbar-hide flex flex-wrap items-start justify-around gap-4 overflow-y-auto rounded-lg pt-4 pb-4"
         @start="console.log($event)">
         <TransitionGroup name="pop">
-            >
+        
             <label
                 v-for="champion in filteredChampions"
                 :key="champion.name"
@@ -120,7 +120,7 @@ watch(
                 <input
                     type="radio"
                     :value="champion"
-                    v-model="cs.selectedChampion"
+                    v-model="ts.selectedChampion"
                     class="peer hidden" />
                 <LoadImg
                     :url="`/img/champions/${clean(champion.name)}.webp`"

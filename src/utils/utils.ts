@@ -1,11 +1,11 @@
-import { useGeneralStore } from '@/stores/generalStore'
+import { useAccountStore } from '@stores/accountStore'
 
 export function toggleDrawerState(drawerData, pocket?) {
-    const gs = useGeneralStore()
+    const as = useAccountStore()
 
-    gs.drawerValue = drawerData
-    pocket ? (gs.drawerPocket = pocket) : gs.drawerPocket = null
-    gs.drawerState = !gs.drawerState
+    as.drawerValue = drawerData
+    pocket ? (as.drawerPocket = pocket) : as.drawerPocket = null
+    as.drawerState = !as.drawerState
 }
 
 export function scrollToSection(el) {

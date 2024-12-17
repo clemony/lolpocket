@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useDataStore } from '@/stores/dataStore'
-import { useGeneralStore } from '@/stores/generalStore'
-const gs = useGeneralStore()
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
 const ds = useDataStore()
 const match = {
     type: 'Ranked Solo/Duo',

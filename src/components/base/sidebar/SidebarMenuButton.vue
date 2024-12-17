@@ -4,8 +4,7 @@ import SidebarMenuButtonChild, {
     type SidebarMenuButtonProps,
 } from './SidebarMenuButtonChild.vue'
 import { useSidebar } from './utils'
-import { useGeneralStore } from '@/stores/generalStore'
-const gs = useGeneralStore()
+
 defineOptions({
     inheritAttrs: false,
 })
@@ -24,7 +23,7 @@ const props = withDefaults(
     }
 )
 
-const savedState = ref(gs.sidebarState)
+//const savedState = ref(as.sidebarState)
 
 const { isMobile, state } = useSidebar()
 watch(

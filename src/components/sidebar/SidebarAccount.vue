@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useGeneralStore } from '@stores/generalStore'
+import { useAccountStore } from '@stores/accountStore'
 import { useSidebar } from '@components/base/sidebar/utils'
 import { summoner } from '@data/playerData'
-const gs = useGeneralStore()
+const as = useAccountStore()
 
 const sidebar = useSidebar()
 console.log(sidebar)
@@ -14,33 +14,38 @@ const state = computed(() => {
 watch(
     () => state.value,
     (newVal) => {
-        gs.sidebarState = newVal
+        as.sidebarState = newVal
         console.log(newVal)
     }
 )
 
 const collapsed = computed(() => {
-    const state = gs.sidebarState == 'collapsed' ? true : false
+    const state = as.sidebarState == 'collapsed' ? true : false
     return state
 })
 </script>
 
 <template>
-    <SidebarFooter>
+    <SidebarHeader>
         <SidebarMenu
-            class="w-full pt-3 pr-6"
-            :class="{
-                'items-center': collapsed,
-            }">
+            class="w-full pt-3 pr-6">
+
+                <Collapsible
+                as-child
+                :default-open="true"
+                class="group">
+
             <SidebarMenuItem>
-                <RouterLink to="/" active-class="bg-b2/30" class="">
+                <div class='flex flex-nowrap items-center'>
+                <RouterLink to="/" active-class="bg-b2/30" class="grow">
                     <SidebarMenuButton
                         variant="default"
                         size="lg"
                         class="h-14 !px-1 !py-2"
-                        :class="{ 'px-3': !collapsed }">
+                        :class="{ 'px-3': !collapsed }"
+                        tooltip="Insights">
                         <Avatar
-                            class="size-11 rounded-lg border border-1 border-transparent shadow-xs">
+                            class="size-9 rounded-lg border border-1 border-transparent shadow-xs">
                             <AvatarImage
                                 :src="summoner.icon"
                                 :alt="summoner.name" />
@@ -48,18 +53,25 @@ const collapsed = computed(() => {
                                 LP
                             </AvatarFallback>
                         </Avatar>
-                        <div
-                            class="flex w-full items-center gap-1 align-baseline leading-none opacity-80">
-                            <div class="text-4 truncate !font-medium">
-                                {{ summoner.name }}'s profile
-                            </div>
-                        </div>
-                        <Grow />
+                  
+                            <span class='font-normal text-4'>
+                                {{ summoner.name }}'s insights
+                            </span>
+                        
+                       
                     </SidebarMenuButton>
                 </RouterLink>
+                       <CollapsibleTrigger as-child class="group" :class="{ 'hidden': collapsed }">
+                        <Button size="icon" class=' grid place-items-center' variant="ghost" >
+                            <ExpandIndicator />
+                        </Button>
+                    </CollapsibleTrigger>
+                </div>
             </SidebarMenuItem>
+                </Collapsible>
         </SidebarMenu>
-    </SidebarFooter>
+
+    </SidebarHeader>
 </template>
 
 <style scoped></style>

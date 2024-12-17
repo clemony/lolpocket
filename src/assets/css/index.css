@@ -34,7 +34,13 @@
 @import './fonts.css';
 @config './tailwind.config.ts';
 @plugin "tailwindcss-animate";
+<<<<<<< HEAD
 >>>>>>> 83f9266d (update 42 files and delete 17 files)
+=======
+@plugin 'daisyui' {
+    themes: false;
+}
+>>>>>>> 404a531d (update 84 files and delete 4 files)
 
 @layer base {
     html {

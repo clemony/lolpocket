@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useGeneralStore } from '@/stores/generalStore'
+import { useAccountStore } from '@stores/accountStore'
 
-const gs = useGeneralStore()
+const as = useAccountStore()
 const motion = ref()
-const sidebar = ref(gs.defaultSidebarState)
+const sidebar = ref(as.defaultSidebarState)
 const toggleSetting = (model) => {
     useToggle(model)
 }
@@ -13,32 +13,32 @@ const settingsData = {
         {
             title: 'Reduce Motion',
             description: 'Reduce the wobblies.',
-            model: gs.reducedMotion,
-            text: gs.reducedMotion == false ? 'Wigglies On' : 'Less Wobblies',
+            model: as.reducedMotion,
+            text: as.reducedMotion == false ? 'Wigglies On' : 'Less Wobblies',
         },
         {
             title: 'Suppress Pocket Preview',
             description:
                 'The little pocket that slides down in the sidebar and is annoying sometimes.',
-            model: gs.pocketPreview,
+            model: as.pocketPreview,
             text:
-                gs.pocketPreview == false ?
+                as.pocketPreview == false ?
                     'Previews Visible'
                 :   'Previews Hidden',
         },
         {
             title: 'Colorblind Mode',
             description: 'Changes many of the green shades to blue.',
-            model: gs.colorBlindMode,
+            model: as.colorBlindMode,
             text:
-                gs.colorBlindMode == false ? 'Colorblind Off' : 'Colorblind On',
+                as.colorBlindMode == false ? 'Colorblind Off' : 'Colorblind On',
         },
         {
             title: 'Sidebar Default State',
             description:
                 'Upon login, should your sidebar be expanded or collapsed?.',
             model: sidebar.value,
-            text: gs.defaultSidebarState == false ? 'Collapsed' : 'Expanded',
+            text: as.defaultSidebarState == false ? 'Collapsed' : 'Expanded',
         },
     ],
 }

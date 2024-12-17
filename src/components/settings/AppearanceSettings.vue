@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useGeneralStore } from '@/stores/generalStore'
-const gs = useGeneralStore()
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
 
 const props = defineProps<{
     scrollTo: string
@@ -34,7 +34,7 @@ const themes = [
 const neutrals = ['minimalist', 'aesthetic', 'nord', 'latte']
 
 function handleChoice() {
-    console.log('theme', gs.dataTheme)
+    console.log('theme', as.dataTheme)
 }
 </script>
 <template>
@@ -57,7 +57,7 @@ function handleChoice() {
                     data-act-class="outline-ac">
                     <input
                         type="radio"
-                        v-model="gs.theme"
+                        v-model="as.theme"
                         :value="theme.name"
                         :id="theme.name"
                         name="ui-theme"

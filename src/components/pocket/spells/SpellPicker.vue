@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { useQuery } from '@pinia/colada'
-import { useRuneStore } from '@/stores/runeStore'
+import { useTempStore } from '@/stores/tempStore'
 import { PopoverClose, PopoverPortal } from 'radix-vue'
 import type { spell } from 'types'
 
-const rs = useRuneStore()
+const ts = useTempStore()
 
 const props = defineProps<{
     model: spell | undefined

@@ -38,7 +38,7 @@
                             {{ theme.name }}
                         </div>
 
-                        <div :data-theme="settings.dataMode + theme.key"
+                        <div :data-theme="settinas.dataMode + theme.key"
                             class="*:shadow-warm grid grid-cols-4 justify-items-center gap-1 bg-transparent *:size-6 *:rounded-md *:ring-b3/80 *:ring-offset-1">
                             <div class="bg-primary ring-offset-primary/60"></div>
                             <div class="bg-secondary ring-offset-secondary/60"></div>

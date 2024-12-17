@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useGeneralStore } from '@/stores/generalStore'
+import { useAccountStore } from '@stores/accountStore'
 
 import type { Item } from 'types'
-const gs = useGeneralStore()
+const as = useAccountStore()
 const props = defineProps<{
     item: Item
     index: number
@@ -26,7 +26,7 @@ function imageLoaded() {
             :perspective="100"
             :duration="1000"
             class="group border-neutral/40 relative content-center overflow-hidden rounded-md border"
-            :disabled="gs.reducedMotion == true">
+            :disabled="as.reducedMotion == true">
             <KinesisElement
                 type="translate"
                 :strength="6"

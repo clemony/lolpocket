@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { Item, Rune } from 'types'
 import { usePocketStore } from '@/stores/pocketStore'
-import { useGeneralStore } from '@/stores/generalStore'
+import { useAccountStore } from '@stores/accountStore'
 import { runeColors } from '@utils/getColor'
 import { getPocket } from '@/utils/pocketUtilities'
 const props = defineProps<{
@@ -21,7 +21,7 @@ const props = defineProps<{
         node: any
     }
 }>()
-const gs = useGeneralStore()
+const as = useAccountStore()
 
 const ps = usePocketStore()
 const pocket = getPocket(props.params.data.key)
@@ -53,7 +53,7 @@ const keystone = computed(() => {
                     <div
                         class="from-b1/90 to-b1/40 grid size-full place-items-center rounded-full bg-linear-to-br p-1 backdrop-blur-md">
                         <KinesisContainer
-                            :disabled="gs.reducedMotion == true"
+                            :disabled="as.reducedMotion == true"
                             :perspective="100"
                             :duration="200"
                             class="group flex size-full items-center">
@@ -81,7 +81,7 @@ const keystone = computed(() => {
                         class="relative flex aspect-square size-14! shrink-0 cursor-pointer items-center rounded-full bg-linear-to-br from-transparent to-75% shadow-xs"
                         :class="runeColors(runeSet)"">
                         <KinesisContainer
-                            :disabled="gs.reducedMotion == true"
+                            :disabled="as.reducedMotion == true"
                             :perspective="100"
                             :duration="200"
                             class="group flex size-full items-center">
