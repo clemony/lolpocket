@@ -22,7 +22,7 @@ const chartData = {
     labels: props.labels,
     datasets: props.datasets,
     options: {
-        spacing: props.type == 'gauge' ? 0 : 2,
+        spacing: props.type == 'gauge' ? -4 : 2,
         plugins: {
             tooltip: {
                 enabled: false,

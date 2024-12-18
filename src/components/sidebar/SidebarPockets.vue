@@ -57,10 +57,9 @@ const data = props.data
                                         class="flex w-full flex-nowrap items-center gap-4 px-2! py-5">
                                         <PocketIcon
                                             :pocket="pocket"
-                                            class="size-6 rounded-lg shadow-xs!"
+                                            class="size-6 rounded-xs shadow-xs!"
                                             iconClass="rounded-lg" />
-                                        <span
-                                            class="text-2 text-start text-nowrap">
+                                        <span class="text-start text-nowrap">
                                             {{ pocket.name }}
                                         </span>
                                     </SidebarMenuSubButton>

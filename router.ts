@@ -6,40 +6,30 @@ import { computed } from 'vue'
 
 const routes: RouteRecordRaw[] = [
     {
-        path: '/about',
-        name: 'about',
-        component: () => import(`./src/pages/About.vue`),
-    },
-    {
-        path: '/archive',
-        name: 'archive',
-        component: () => import(`./src/pages/Archive.vue`),
-    },
-    {
-        path: '/calculator',
-        name: 'calculator',
-        component: () => import(`./src/pages/Trash.vue`),
-    },
-    {
-        path: '/champions',
-        name: 'champions',
-        component: () => import(`./src/pages/Champions.vue`),
-    },
-    {
         path: '/',
         name: 'home',
         component: () => import(`./src/pages/Home.vue`),
     },
+
+    // player
+
     {
-        path: '/items',
-        name: 'items',
-        component: () => import(`./src/pages/Items.vue`),
+        path: '/insights',
+        name: 'insights',
+        component: () => import(`./src/pages/Home.vue`),
     },
     {
-        path: '/favorites',
-        name: 'favorites',
-        component: () => import(`./src/pages/Favorites.vue`),
+        path: '/buildanalysis',
+        name: 'build-analysis',
+        component: () => import(`./src/pages/BuildAnalysis.vue`),
     },
+    {
+        path: '/matchhistory',
+        name: 'match-history',
+        component: () => import(`./src/pages/MatchHistory.vue`),
+    },
+
+    // pocket
 
     {
         path: '/pocket/:pocketKey',
@@ -80,10 +70,26 @@ const routes: RouteRecordRaw[] = [
             },
         ],
     },
+
+    // pocket tools
+
+    {
+        path: '/archive',
+        name: 'archive',
+        component: () => import(`./src/pages/pocketTools/Archive.vue`),
+    },
+    {
+        path: '/trash',
+        name: 'trash',
+        component: () => import(`./src/pages/pocketTools/Trash.vue`),
+        meta: {
+            title: 'lolpockets | Trash',
+        },
+    },
     {
         path: '/table',
         name: 'table',
-        component: () => import(`./src/pages/PocketTables.vue`),
+        component: () => import(`./src/pages/pocketTools/PocketTables.vue`),
         meta: {
             title: 'Tables',
         },
@@ -91,10 +97,36 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/cards',
         name: 'cards',
-        component: () => import(`./src/pages/PocketCards.vue`),
+        component: () => import(`./src/pages/pocketTools/PocketCards.vue`),
         meta: {
             title: 'Cards',
         },
+    },
+
+    // tools
+
+    {
+        path: '/calculator',
+        name: 'calculator',
+        component: () => import(`./src/pages/pocketTools/Trash.vue`),
+    },
+
+    // database
+
+    {
+        path: '/favorites',
+        name: 'favorites',
+        component: () => import(`./src/pages/Favorites.vue`),
+    },
+    {
+        path: '/champions',
+        name: 'champions',
+        component: () => import(`./src/pages/Champions.vue`),
+    },
+    {
+        path: '/items',
+        name: 'items',
+        component: () => import(`./src/pages/Items.vue`),
     },
     {
         path: '/runes',
@@ -112,6 +144,8 @@ const routes: RouteRecordRaw[] = [
             title: 'Spells',
         },
     },
+
+    // settings
 
     {
         path: '/settings/general',
@@ -156,20 +190,15 @@ const routes: RouteRecordRaw[] = [
             },
         ],
     },
+
+    // unimportant
+
     {
-        path: '/trash',
-        name: 'trash',
-        component: () => import(`./src/pages/Trash.vue`),
-        meta: {
-            title: 'lolpockets | Trash',
-        },
+        path: '/about',
+        name: 'about',
+        component: () => import(`./src/pages/About.vue`),
     },
 ]
-
-const router = createRouter({
-    history: createWebHistory(),
-    routes,
-})
 
 const scrollBehavior = (to) => {
     if (to.hash) {
@@ -185,6 +214,11 @@ const scrollBehavior = (to) => {
     }
     return { top: 0 } // Default scroll position
 }
+
+const router = createRouter({
+    history: createWebHistory(),
+    routes,
+})
 
 router.afterEach((to, from) => {
     const as = useAccountStore()

@@ -90,7 +90,7 @@ const hs = history.state
                 <MenubarTrigger
                     class="group data-[state=open]:bg-transparent"
                     as-child>
-                    <Button variant="ghost">
+                    <Button variant="ghost" class="pr-1">
                         <div
                             class="text-3 w-fit pt-1 pt-px pr-3 opacity-60 group-hover:opacity-100">
                             14.16.1

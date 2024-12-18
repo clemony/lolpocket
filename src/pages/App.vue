@@ -23,7 +23,6 @@ const router = useRouter()
 const history = router.options.history
 console.log(history)
 console.log(router)
-
 </script>
 
 <template>
@@ -35,7 +34,7 @@ console.log(router)
         class="bg-b1 relative size-full backdrop-brightness-[96%] transition-all duration-1000">
         <MainMenubar />
         <Sidebar collapsible="icon" class="justify-center">
-            <SidebarContent class="pt-14">
+            <SidebarContent class="pt-15">
                 <SidebarAccount />
                 <ScrollArea class="!overflow-auto !overscroll-contain">
                     <SidebarPocketDisplays />
