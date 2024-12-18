@@ -11,6 +11,9 @@
     ],
     "compilerOptions": {
         "baseUrl": ".",
+            "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+      "skipLibCheck": true,
         "moduleResolution": "bundler",
         "module": "ESNext",
         "esModuleInterop": true,

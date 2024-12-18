@@ -1,4 +1,4 @@
-import type { Shard } from 'types'
+import type { RuneSet, Shard } from 'types'
 
 export const colorB3 = computed(() => {
     return getComputedStyle(document.documentElement).getPropertyValue(
@@ -6,7 +6,7 @@ export const colorB3 = computed(() => {
     )
 })
 
-export function runeColors(runeSet) {
+export function runeColors(runeSet: RuneSet) {
     const keystone = runeSet.keystone
 
     if (keystone.path != 'empty' && runeSet.secondary != 'empty') {
@@ -100,13 +100,13 @@ export function getShardIcon(shard: Shard) {
 }
 
 // from = location of primary or secondary color identifier
-export function getColor(from, prefix, opacity?) {
+export function getColor(from: string, prefix: string, opacity?: number) {
     const a = from != 'empty' ? from : 'b2'
     const b = prefix + '-' + a
     const c = opacity ? b + '/' + opacity : b
     return c
 }
-export function getLightColor(from, prefix, opacity?) {
+export function getLightColor(from: string, prefix: string, opacity?: number) {
     const a = from != 'empty' ? from : 'b2'
     const b = prefix + '-' + a + '-light'
     const c = opacity ? b + '/' + opacity : b
@@ -115,7 +115,13 @@ export function getLightColor(from, prefix, opacity?) {
 
 /* "getColor(set.primary, 'from', 60), getColor(set.secondary, 'to', 60)"
  */
-export function makeGradient(from, fromOpacity, to, toOpacity, direction) {
+export function makeGradient(
+    from: string,
+    fromOpacity: number,
+    to: string,
+    toOpacity: number,
+    direction: string
+) {
     let a = 'from-' + from
     a = fromOpacity ? a + '/' + fromOpacity : a
 
