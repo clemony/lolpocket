@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { makeBox } from '@/utils/makeBox'
 import type { pocket, RuneSet } from 'types'
-import { getColor } from '@utils/getColor'
+import { getColor } from '@utils/colors'
 
 const props = defineProps<{
     pocket: pocket
