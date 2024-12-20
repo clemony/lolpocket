@@ -23,7 +23,7 @@ const classObject =
 </script>
 <template>
     <div
-        class="[&_hr]:bg-b2 bg-b1 border-b2/30 mt-[100vh] border-t px-12 py-26 [&_hr]:mx-8">
+        class="[&_hr]:bg-b2 bg-b1 border-b2/30 z-10 w-full border-t px-12 py-26 [&_hr]:mx-8">
         <ul
             class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical [&_h1]:!font-extrabold [&_h1]:!tracking-tight [&_p]:max-w-150">
             <li v-in-viewport :class="classObject">

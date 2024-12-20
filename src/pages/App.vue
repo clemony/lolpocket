@@ -74,7 +74,7 @@ const open = ref()
         </Sidebar>
         <SidebarInset>
             <div
-                class="absolute inset-0 top-0 left-0 m-0 h-full w-full overflow-y-clip border border-y-0 border-r-0 border-l-transparent p-0">
+                class="absolute inset-0 top-0 left-0 m-0 h-full w-full overflow-y-clip border-none">
                 <RouterView v-slot="{ Component }">
                     <component
                         :is="Component"

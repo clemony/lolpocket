@@ -8,9 +8,13 @@ onMounted(() => {
 })
 </script>
 <template>
-    <Hero />
-    <ScrollArea class="absolute top-0 left-0 size-full overflow-y-scroll">
-        <HomeSteps />
+    <ScrollArea class="size-full overflow-y-scroll !border-none outline-hidden">
+        <Hero />
+
+        <div class="absolute inset-0 w-full">
+            <HomeSteps />
+            <HomeEtc />
+        </div>
     </ScrollArea>
 </template>
 <style scoped></style>

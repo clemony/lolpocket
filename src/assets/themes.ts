@@ -10,21 +10,21 @@ export const themes = [
         name: 'noon',
         icon: 'marketeq:mountain',
         description:
-            'Creamy and easy on the eyes. Only plays Yuummi so it can snack.',
+            'Creamy and easy on the eyes. Only plays Yummi so it can snack.',
         color: 'var(--b1)',
     },
     {
         name: 'dusk',
         icon: 'ep:sunset',
         description:
-            "That guy that otp's Zed. Doesn't care about their 40% winrate",
+            "Gets carried by their Volibear every game and insists they're better than you",
         color: '#353E53',
     },
     {
         name: 'midnight',
         icon: 'ph:moon',
         description:
-            'Look like banana. Must be banana. No one expects the banana.',
+            "That guy that otp's Zed. Doesn't care about their 40% winrate",
         color: 'var(--b1)',
     },
 ]

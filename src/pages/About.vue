@@ -2,7 +2,6 @@
 const icons = [
     'fontisto:vuejs',
     'tabler:brand-vite',
-    'devicon-plain:tauri',
     'file-icons:typescript',
     'codicon:vscode-insiders',
     'simple-icons:nodedotjs',
@@ -17,35 +16,28 @@ const icons = [
 <template>
     <div class="p-8 pt-20">
         <div
-            class="mockup-code w-2/5 min-w-[200px0] leading-loose font-normal *:whitespace-nowrap">
+            class="mockup-code bg-neutral text-nc *:ws-nowrap w-2/5 min-w-[200px] rounded-xl leading-loose font-normal">
             <pre
-                data-prefix="$"><code class="h-20 ">const CatTax: cat&#60;image: popUp&#62; = {</code></pre>
-            <pre
-                data-prefix=">"
-                class="flex"><code class="flex">&nbsp; 'Clem':&nbsp;{ image:
+                data-prefix="$"><code class="h-20 scale-x-110">const CatTax: cat&#60;image: popUp&#62; = {</code></pre>
+            <pre data-prefix=">" class="flex">
+                <code class="flex">&nbsp; 'Clem':&nbsp;{ image:
           <button
-            class="hover:underline hover:bg-ac/15"
-            onclick="catModal.showModal()" >&nbsp;1</button>,
+            class="hover:underline hover:bg-b3/15" >&nbsp;1</button>,
 
-          <button class="hover:underline hover:bg-ac/15"
-            onclick="catModal.showModal()">&nbsp;2</button >,
-          <button class="hover:underline hover:bg-ac/15"
-            onclick="catModal.showModal()"
+          <button class="hover:underline hover:bg-b3/15">&nbsp;2</button>,
+          <button class="hover:underline hover:bg-b3/15"
           >&nbsp;3&nbsp;</button>
           },
       </code></pre>
 
             <pre
                 data-prefix=">"
-                class="flex"><code class="flex">&nbsp; 'Nell':&nbsp;{ image:
+                class="flex items-center"><code class="flex">&nbsp; 'Nell':&nbsp;{ image:
         <button
-          class="hover:underline hover:bg-ac/15"
-          onclick="catModal.showModal()" >&nbsp;1</button>,
+          class="hover:underline hover:bg-b3/15" >&nbsp;1</button>,
 
-        <button class="hover:underline hover:bg-ac/15"
-          onclick="catModal.showModal()">&nbsp;2</button >,
-        <button class="hover:underline hover:bg-ac/15"
-          onclick="catModal.showModal()"
+        <button class="hover:underline hover:bg-b3/15">&nbsp;2</button >,
+        <button class="hover:underline hover:bg-b3/15"
         >&nbsp;3&nbsp;</button>
         },
     </code></pre>
@@ -60,7 +52,7 @@ const icons = [
             <div class="divider divider-start mt-12">MADE WITH</div>
             <div class="grid grid-cols-2">
                 <div
-                    class="card *:text-bc/85 grid h-20 auto-cols-max grid-flow-col place-items-center gap-5 rounded-xl *:size-6">
+                    class="card *:text-bc/85 plb3e-items-center grid h-20 auto-cols-max grid-flow-col gap-5 rounded-xl *:size-6">
                     <icon v-for="icon in icons" :icon="icon" />
                     <img
                         class="brightness-50 contrast-200 grayscale"
@@ -100,7 +92,7 @@ const icons = [
             <h3 class="text-4 font-bold">Hello!</h3>
             <p class="py-4">Press ESC key or click outside to close</p>
         </div>
-        <form method="dialog" class="modal-backdrop">
+        <form method="dialog" class="modal-bb3kdrop">
             <button>close</button>
         </form>
     </dialog>

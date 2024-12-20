@@ -11,19 +11,20 @@ const props = defineProps<{
 </script>
 
 <template>
-    <div
+    <label
         :class="
             cn(
-                'border-neutral/70 shadow-standard relative size-16 rounded-lg border',
+                'border-neutral/30 relative size-16 rounded-lg border shadow-sm',
                 props.class
             )
         ">
+        <slot />
         <LoadImg
             :key="props.champion.name"
             :url="`/img/champions/${clean(props.champion.name)}.webp`"
             :alt="props.champion.name + ' Image'"
-            :class="cn('aspect-square size-full!')" />
-    </div>
+            :class="cn('aspect-square size-full scale-108')" />
+    </label>
 
     <!-- </TransitionGroup> -->
 </template>

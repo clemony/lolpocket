@@ -1,11 +1,11 @@
 <script setup lang="ts"></script>
 <template>
-    <div class="size-screen absolute z-0 grid w-full grid-cols-2">
+    <div class="size-screen sticky top-0 left-0 z-0 grid w-full grid-cols-2">
         <div
-            class="grid size-full shrink-0 grid-rows-[1fr_2.5fr] flex-col items-center justify-center">
+            class="grid size-full shrink-0 grid-rows-[1fr_3fr] flex-col items-center justify-center">
             <div class="relative w-[80%]">
                 <div
-                    class="wrapper **:!text-13 absolute top-44 flex items-center justify-center **:!font-bold **:tracking-tight">
+                    class="wrapper **:!text-12 absolute top-44 flex items-center justify-center **:!font-bold **:tracking-tight">
                     <div class="ws-nowrap relative -ml-1 flex">
                         <h1 class="">l</h1>
                         <h1 class="tracking-in-expand">ol</h1>
@@ -22,7 +22,7 @@
                     </div>
                 </div>
             </div>
-            <div class="h-1/2 justify-self-start">
+            <div class="h-1/2 w-full justify-self-start">
                 <div class="flex items-center gap-2">
                     <h1 class="!text-9">lolpocket</h1>
                     <span class="text-7 font-serif italic">noun</span>
@@ -41,6 +41,14 @@
                         so you can focus on your
                         <span class="text-6 mt-4 ml-1 font-bold">game.</span>
                     </p>
+                </div>
+                <div class="mt-4 flex w-full justify-end px-2">
+                    <Button
+                        variant="outline"
+                        size="lg"
+                        class="hover:bg-neutral hover:text-nc !font-sans">
+                        Log In
+                    </Button>
                 </div>
             </div>
         </div>

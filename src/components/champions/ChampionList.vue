@@ -5,12 +5,15 @@ import { useTempStore } from '@stores/tempStore'
 import { VueDraggable } from 'vue-draggable-plus'
 import { useDataStore } from '@stores/dataStore'
 import type { pocket } from 'types'
+import ChampionSidebar from '@components/champions/ChampionSidebar.vue'
+import { toggleDrawerState } from '@utils/utils'
 
 const ds = useDataStore()
 const ts = useTempStore()
 
 const props = defineProps<{
     pocket?: pocket
+    disableDrawer?: boolean
 }>()
 
 const pocket = ref(props.pocket)
@@ -109,24 +112,20 @@ watch(
         class="max-h-inherit h-inherit scrollbar-hide flex flex-wrap items-start justify-around gap-4 overflow-y-auto rounded-lg pt-4 pb-4"
         @start="console.log($event)">
         <TransitionGroup name="pop">
-        
-            <label
+            <Champion
                 v-for="champion in filteredChampions"
                 :key="champion.name"
+                :champion="champion"
                 ref="list"
                 class="size-22 shrink-0 overflow-hidden rounded-lg"
                 dragClass="setDrag"
-                @click.right.prevent="">
+                @click="toggleDrawerState(ChampionSidebar)">
                 <input
                     type="radio"
                     :value="champion"
                     v-model="ts.selectedChampion"
                     class="peer hidden" />
-                <LoadImg
-                    :url="`/img/champions/${clean(champion.name)}.webp`"
-                    class="load-img drag-img scale-114"
-                    draggable="false" />
-            </label>
+            </Champion>
         </TransitionGroup>
 
         <div class="aspect-square size-[68px]"></div>

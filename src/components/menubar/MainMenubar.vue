@@ -65,8 +65,13 @@ const hs = history.state
                             }" />
                     </Button>
 
-                    <Button variant="ghost" class="justify-start gap-3">
-                        <h3>lolpocket</h3>
+                    <Button
+                        variant="ghost"
+                        class="justify-start gap-3"
+                        as-child>
+                        <RouterLink to="/">
+                            <h3>lolpocket</h3>
+                        </RouterLink>
                     </Button>
 
                     <!--     <Tooltip content="to top">

@@ -22,7 +22,7 @@ const as = useAccountStore()
 
     <MenubarSeparator />
     <MenubarItem class="flex items-center">
-        <icon icon="iconoir:fill-color" class="!size-6 stroke-2" />
+        <icon icon="teenyicons:paintbucket-outline" class="!size-6 stroke-2" />
         <div class="flex w-full items-center gap-3 px-3">
             <Label
                 v-for="theme in themes"
