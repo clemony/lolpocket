@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-    <div class="size-screen sticky top-0 left-0 z-0 grid w-full grid-cols-2">
+    <div class="size-screen sticky top-0 left-0 z-0 grid grid-cols-2">
         <div
             class="grid size-full shrink-0 grid-rows-[1fr_3fr] flex-col items-center justify-center">
             <div class="relative w-[80%]">
@@ -38,8 +38,8 @@
                         planning,
                     </p>
                     <p>
-                        so you can focus on your
-                        <span class="text-6 mt-4 ml-1 font-bold">game.</span>
+                        so you can focus on the
+                        <span class="text-6 mt-4 ml-1 font-bold">win.</span>
                     </p>
                 </div>
                 <div class="mt-4 flex w-full justify-end px-2">

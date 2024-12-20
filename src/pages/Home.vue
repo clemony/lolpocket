@@ -11,7 +11,7 @@ onMounted(() => {
     <ScrollArea class="size-full overflow-y-scroll !border-none outline-hidden">
         <Hero />
 
-        <div class="absolute inset-0 w-full">
+        <div class="absolute inset-0 top-full w-full">
             <HomeSteps />
             <HomeEtc />
         </div>

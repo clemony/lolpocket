@@ -27,8 +27,7 @@ const data = [
         class="bg-neutral text-nc flex w-full justify-center justify-items-center px-24 py-20">
         <div class="grid w-4/5 grid-cols-4 items-start gap-16">
             <div v-for="item in data" class="grid items-start p-6">
-                <h3
-                    class="!text-6 text-center !font-serif !font-normal tracking-wide">
+                <h3 class="!text-6 text-center !font-normal tracking-tight">
                     {{ item.title }}
                 </h3>
 

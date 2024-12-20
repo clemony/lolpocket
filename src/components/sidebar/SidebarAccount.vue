@@ -45,7 +45,10 @@ const collapsed = computed(() => {
                 <Collapsible as-child :default-open="true" class="w-full">
                     <SidebarMenuItem>
                         <RouterLink
-                            to="player-home"
+                            :to="{
+                                name: 'player-home',
+                                /*  hash: item.hash, */
+                            }"
                             active-class="bg-b2/30"
                             class="join flex h-14 flex-nowrap items-center rounded-md"
                             as-child>
