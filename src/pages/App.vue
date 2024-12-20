@@ -3,6 +3,7 @@
 import { toggleDrawerState } from '@utils/utils'
 import { useDataStore } from '@stores/dataStore'
 import { useAccountStore } from '@stores/accountStore'
+import { getOS } from '@utils/detectOS'
 const as = useAccountStore()
 const ds = useDataStore()
 ds.fetchData()
@@ -23,17 +24,11 @@ watch(
  */
 const router = useRouter()
 const history = router.options.history
+const routeName = ref(null)
 const route = useRoute()
-watch(
-    () => route.name,
-    (newVal) => {
-        console.log('💠 - route:', newVal)
-    }
-)
+
 onMounted(() => {
-    console.log('💠 - route:', route.name)
-    as.defaultSidebarOpen = true
-    as.sidebarOpen = true
+    getOS()
 })
 /*
 const open = ref(as.defaultSidebarOpen)
@@ -42,7 +37,13 @@ const open = ref(as.defaultSidebarOpen)
         v-model:open="as.sidebarOpen"
         @update:open="(e) => (open = e)" */
 
-const open = ref()
+onMounted(async () => {
+    const route = useRoute()
+    nextTick(() => {
+        routeName.value = route.name
+    })
+})
+const open = ref(as.sidebarOpen)
 </script>
 
 <template>
@@ -51,12 +52,12 @@ const open = ref()
     <!--     <Toaster />
  -->
     <SidebarProvider
-        v-model:open="open"
+        v-model:open="as.sidebarOpen"
+        @onOpenChange="open = as.sidebarOpen"
+        :default-open="as.defaultSidebarOpen"
         class="bg-b1 relative size-full backdrop-brightness-[96%] transition-all duration-1000">
         <MainMenubar />
-        <Sidebar
-            :collapsible="route.name == 'home' ? 'offcanvas' : 'icon'"
-            class="justify-center">
+        <Sidebar :collapsible="as.sidebarCollapsible" class="justify-center">
             <SidebarContent class="pt-16">
                 <SidebarAccount />
                 <ScrollArea class="!overflow-auto !overscroll-contain">
@@ -76,10 +77,7 @@ const open = ref()
             <div
                 class="absolute inset-0 top-0 left-0 m-0 h-full w-full overflow-y-clip border-none">
                 <RouterView v-slot="{ Component }">
-                    <component
-                        :is="Component"
-                        ref="currentComponent"
-                        @update:open="(e) => (open = e)" />
+                    <component :is="Component" ref="currentComponent" />
                 </RouterView>
             </div>
         </SidebarInset>

@@ -36,7 +36,7 @@ const champions = computed(() => {
         <div
             v-for="(champion, index) in pocket.champions[0].champions"
             :key="champion.name"
-            class="border-b3 shadow-warm first:ring-neutral/40 first:ring-offset-precision relative grid size-22 shrink-0 place-items-center rounded-lg border first:ring-1 first:ring-offset-2">
+            class="border-b3 shadow-warm relative grid size-22 shrink-0 place-items-center rounded-lg border">
             <label
                 class="size-full overflow-hidden rounded-lg"
                 dragClass="setDrag">

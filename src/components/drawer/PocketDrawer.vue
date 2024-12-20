@@ -12,7 +12,7 @@ const toID = hexoid()
 
 // Form fields
 const name = ref('')
-const taas = ref([])
+const tags = ref([])
 const selectedIcon = ref('teenyicons:folder-outline')
 const bgColor = ref('#000000')
 const iconColor = ref('#FFFFFF')
@@ -34,7 +34,7 @@ watch(
 )
 
 watch(
-    () => taas.value,
+    () => tags.value,
     (newVal) => {
         console.log(newVal)
     }
@@ -52,7 +52,7 @@ function submitForm() {
     const key = toID()
     addPocket(
         name.value,
-        taas.value,
+        tags.value,
         selectedIcon.value,
         bgColor.value,
         iconColor.value,
@@ -71,9 +71,9 @@ function updatePocket() {
     const pocket = ref(as.drawerPocket)
 
     pocket.value.name = name.value
-    pocket.value.taas = [...taas.value]
-    /*     taas.value.forEach((tag) => {
-        pocket.value.taas.push(tag)
+    pocket.value.tags = [...tags.value]
+    /*     tags.value.forEach((tag) => {
+        pocket.value.tags.push(tag)
     }) */
 
     pocket.value.bgColor = bgColor.value
@@ -85,7 +85,7 @@ function updatePocket() {
 onMounted(() => {
     if (as.drawerPocket) {
         name.value = pocket.value.name
-        taas.value = pocket.value.tags
+        tags.value = pocket.value.tags
         bgColor.value = pocket.value.bgColor
         iconColor.value = pocket.value.iconColor
         selectedIcon.value = pocket.value.icon
@@ -142,7 +142,7 @@ onMounted(() => {
                 <TagsInput v-model="tags" class="flex-col p-2">
                     <div
                         class="*:text-3 flex w-full flex-row flex-wrap justify-start gap-2">
-                        <template v-if="taas.length">
+                        <template v-if="tags.length">
                             <TransitionGroup name="pop">
                                 <TagsInputItem
                                     v-for="tag in tags"

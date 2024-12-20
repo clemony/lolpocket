@@ -23,7 +23,7 @@ const ps = usePocketStore()
                     class="mb-px -ml-1 size-4.5" />
             </Button>
 
-            <VDropdown
+            <!--             <VDropdown
                 theme="hover"
                 :delay="{ show: 400, hide: 200 }"
                 placement="bottom"
@@ -38,7 +38,7 @@ const ps = usePocketStore()
                 <template #popper>
                     <ColumnTools />
                 </template>
-            </VDropdown>
+            </VDropdown> -->
         </template>
         <template #header-end>
             <span class="mr-0 flex items-center justify-end gap-3">
@@ -59,7 +59,7 @@ const ps = usePocketStore()
             </span>
         </template>
 
-        <PocketGrid />
+        <PocketTable />
     </PageLayout>
 </template>
 

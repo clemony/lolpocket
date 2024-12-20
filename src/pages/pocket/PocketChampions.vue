@@ -22,11 +22,11 @@ const dataValue = ref()
                     description="Drag champions up, add from the sidebar and context menus, or quick search by pressing the empty slot right here."
                     class="">
                     <div class="relative">
-                        <div
-                            class="border-precision bg-neutral/70 ring-neutral/40 absolute top-1.5 left-1.5 z-10 rounded-full border-2 p-1.5 opacity-85 ring-1 backdrop-blur-md">
-                            <icon
-                                icon="fontisto:star"
-                                class="-mt-2px text-precision -ml-px size-4 shrink-0 object-center drop-shadow-sm" />
+                        <div class="absolute top-1.5 left-1.5 z-10 size-16">
+                            <video-background
+                                src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-tft/global/default/videos/claimable-sparkles-free.webm"
+                                style="height: 100%"
+                                class="bg-center"></video-background>
                         </div>
                     </div>
                     <SelectedChampions

@@ -7,6 +7,7 @@ import { pocket, drawer, Champion, Item, ItemSet } from 'types'
 export const useAccountStore = defineStore(
     'accountStore',
     () => {
+        const userOS = ref('')
         const theme = ref('light')
         const accents = ref('light')
         watch(theme, (newValue) => {
@@ -21,9 +22,10 @@ export const useAccountStore = defineStore(
         const colorBlindMode = ref(false)
 
         const isMinimized = ref(false)
-        const sidebarOpen = ref()
-        const defaultSidebarOpen = ref(true)
+        const sidebarOpen = ref(false)
+        const defaultSidebarOpen = ref(false)
         const sidebarWidth = ref(18)
+        const sidebarCollapsible = ref()
 
         const drawerState = ref(false)
         const drawerValue = shallowRef(undefined as drawer)
@@ -43,22 +45,27 @@ export const useAccountStore = defineStore(
 
         return {
             //settings
+            userOS,
             theme,
             accents,
             colorBlindMode,
             reducedMotion,
             pocketPreview,
+
+            //sidebar
             defaultSidebarOpen,
-            isMinimized,
-            commandOpen,
             sidebarOpen,
             sidebarWidth,
-            cardBack,
-            pocketGridSize,
+            sidebarCollapsible,
+
+            commandOpen,
             drawerState,
             drawerValue,
             drawerPocket,
             routeHistory,
+
+            cardBack,
+            pocketGridSize,
 
             //champs
             favoriteChamps,

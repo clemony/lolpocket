@@ -214,6 +214,19 @@ const router = createRouter({
     routes,
 })
 
+router.beforeResolve(async (to) => {
+    const as = useAccountStore()
+    if (to.name == 'home' || to.path == '/') {
+        as.sidebarOpen = false
+        as.defaultSidebarOpen = false
+        as.sidebarCollapsible = 'offcanvas'
+    } else {
+        as.sidebarOpen = true
+        as.defaultSidebarOpen = true
+        as.sidebarCollapsible = 'icon'
+    }
+})
+
 router.afterEach((to, from) => {
     const as = useAccountStore()
     const route = computed(() => {

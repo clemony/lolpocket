@@ -57,47 +57,6 @@ onMounted(async () => {})
 
         <div
             class="drag-draggable shadow-inset scrollbar-hide h-full! w-full content-start items-start justify-around rounded-b-xl px-3 pt-12 pb-4">
-            <VDropdown
-                v-for="item in as.favoriteItems"
-                :key="item.id"
-                :overflow-padding="20"
-                :shift="true"
-                theme="default"
-                :distance="6"
-                @click.right.prevent=""
-                :ref="item.name"
-                class="relative max-h-[64px] max-w-[64px]">
-                <label class="drag-label overflow-hidden!">
-                    <div class="drag-wrapper overflow-hidden!">
-                        <img :src="item.img" class="drag-img" />
-
-                        <div
-                            :key="item.id + 'Count'"
-                            :class="{ 'opacity-85!': item.count > 1 }"
-                            class="bg-primary text-2 text-primary-content shadow-warm absolute -top-1.5 -right-1.5 z-30 flex size-6 place-content-center place-items-center overflow-hidden rounded-full font-mono opacity-0">
-                            {{ item.count }}
-                        </div>
-                    </div>
-                </label>
-                <template #popper :key="item.name + 'Pop'">
-                    <ItemPop :item="item" :variant="'empty'" />
-                </template>
-            </VDropdown>
-
-            <VDropdown
-                theme="default"
-                alt="Quick Search"
-                class="ghosty drag-label group/qs hover:after:text-bccent relative z-0 flex basis-16 cursor-zoom-out p-0! after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-['+'] hover:after:opacity-60">
-                <div
-                    class="z-20 h-full w-full scale-105 cursor-zoom-in bg-[url('/img/UI/frame.webp')] bg-contain bg-center bg-no-repeat opacity-0 brightness-0 transition-all duration-200 select-none group-hover/qs:scale-95 group-hover/qs:opacity-40"></div>
-
-                <template #popper>
-                    <QuickSearch
-                        :array="filteredItems"
-                        v-model:quickSearch="quickSearch"
-                        v-model:returnData="returnData" />
-                </template>
-            </VDropdown>
             <div class="aspect-square basis-16"></div>
             <div class="aspect-square basis-16"></div>
             <div class="aspect-square basis-16"></div>

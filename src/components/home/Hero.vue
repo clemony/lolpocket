@@ -2,7 +2,7 @@
 <template>
     <div class="size-screen sticky top-0 left-0 z-0 grid grid-cols-2">
         <div
-            class="grid size-full shrink-0 grid-rows-[1fr_3fr] flex-col items-center justify-center">
+            class="relative grid size-full shrink-0 grid-rows-[1fr_3fr] flex-col items-center justify-center">
             <div class="relative w-[80%]">
                 <div
                     class="wrapper **:!text-12 absolute top-44 flex items-center justify-center **:!font-bold **:tracking-tight">
@@ -50,6 +50,11 @@
                         Log In
                     </Button>
                 </div>
+            </div>
+            <div class="absolute bottom-5 left-4 self-end">
+                <icon
+                    icon="teenyicons:down-outline"
+                    class="animate-pulse stroke-[1.5]" />
             </div>
         </div>
         <div class="overflow-hidden">

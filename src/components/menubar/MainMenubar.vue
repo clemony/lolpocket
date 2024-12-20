@@ -10,25 +10,8 @@ const ResourcesDropdown = defineAsyncComponent(
 
 const as = useAccountStore()
 
-const sidebar = useSidebar()
-console.log(sidebar)
-const { toggleSidebar } = useSidebar()
-const state = computed(() => {
-    return sidebar.open.value
-})
-
-watch(
-    () => state.value,
-    (newVal) => {
-        as.sidebarOpen = newVal
-        console.log(newVal)
-    }
-)
-/*
-const collapsed = computed(() => {
-    const state = as.sidebarOpen == 'collapsed' ? true : false
-    return state
-}) */
+const sidebar = ref(as.sidebarOpen)
+const toggleSidebar = useToggle(sidebar)
 
 const router = useRouter()
 const hs = history.state
@@ -55,7 +38,16 @@ const hs = history.state
                         variant="ghost"
                         size="icon"
                         class="gap-3"
-                        @click="toggleSidebar()">
+                        @click="
+                            {
+                                /* prettier-ignore */
+                                as.sidebarOpen == true ? as.sidebarOpen = false : as.sidebarOpen == false ? as.sidebarOpen = true : null;
+                                console.log(
+                                    '💠 - as.sidebarOpen:',
+                                    as.sidebarOpen
+                                )
+                            }
+                        ">
                         <icon
                             icon="system-uicons:menu-hamburger"
                             class="size-7 shrink-0 object-center transition-all duration-300"
@@ -97,6 +89,16 @@ const hs = history.state
         </div>
 
         <div class="!-mt-1 flex items-center">
+            <MenubarMenu>
+                <Tooltip content="New Pocket / ⌘N ">
+                    <Button variant="ghost" size="default" class="!h-10.75">
+                        <icon
+                            icon="teenyicons:add-outline"
+                            class="size-5 opacity-60" />
+                    </Button>
+                </Tooltip>
+            </MenubarMenu>
+
             <MenubarMenu>
                 <MenubarTrigger class="group pt-1.5" as-child>
                     <icon

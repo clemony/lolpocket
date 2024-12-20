@@ -4,21 +4,6 @@ import { useSidebar } from '@components/base/sidebar/utils'
 import { summoner } from '@data/playerData'
 const as = useAccountStore()
 
-const sidebar = useSidebar()
-console.log(sidebar)
-const { toggleSidebar } = useSidebar()
-const state = computed(() => {
-    return sidebar.state.value
-})
-
-watch(
-    () => state.value,
-    (newVal) => {
-        as.sidebarOpen = newVal
-        console.log(newVal)
-    }
-)
-
 /*   */
 const links = [
     {
@@ -32,10 +17,8 @@ const links = [
         icon: 'iconoir:archery-match',
     },
 ]
-const collapsed = computed(() => {
-    const state = as.sidebarOpen == 'collapsed' ? true : false
-    return state
-})
+
+const collapsed = ref()
 </script>
 
 <template>

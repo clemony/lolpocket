@@ -38,7 +38,7 @@ const settingsData = {
             description:
                 'Upon login, should your sidebar be expanded or collapsed?.',
             // model: sidebar.value,
-            text: as.defaultSidebarOpen == false ? 'Collapsed' : 'Expanded',
+            // text: as.defaultSidebarOpen == false ? 'Collapsed' : 'Expanded',
         },
     ],
 }

@@ -27,7 +27,7 @@ import pocketTableRunes from './GridRunes.vue'
 import tableDate from './GridDate.vue'
 import TableCheckbox from './GridCheckbox.vue'
 import TableCheckboxHeader from './GridCheckboxHeader.vue'
-import TableTags from './GridTaas.vue'
+import TableTags from './GridTags.vue'
 defineExpose({
     TableName,
     IconRenderer,
