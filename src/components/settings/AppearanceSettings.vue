@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { themes } from '@assets/themes'
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
 
@@ -9,33 +10,8 @@ const route = useRoute()
 console.log(route)
 console.log(props.scrollTo)
 // theme options
-const themes = [
-    {
-        name: 'light',
-        description:
-            'Always queues fill. So basic it can pretty much work itself into any team.',
-    },
-    {
-        name: 'midnight',
-        description:
-            "That guy that otp's Zed. Doesn't care about their 40% winrate.",
-    },
-    {
-        name: 'sunrise',
-        description:
-            "Creamy and easy on the eyes. It's eyes cream! Yeah...goes well with Latte.",
-    },
-    {
-        name: 'dusk',
-        description: 'Crisp and modern. Gets carried by Nord.',
-    },
-]
 
 const neutrals = ['minimalist', 'aesthetic', 'nord', 'latte']
-
-function handleChoice() {
-    console.log('theme', as.dataTheme)
-}
 </script>
 <template>
     <main class="w-full">
@@ -54,33 +30,30 @@ function handleChoice() {
                 <label
                     :for="theme.name"
                     class="self-end rounded-lg"
-                    data-act-class="outline-ac">
+                    data-act-class="">
                     <input
                         type="radio"
                         v-model="as.theme"
                         :value="theme.name"
                         :id="theme.name"
                         name="ui-theme"
-                        class="peer hidden"
-                        @change="handleChoice" />
+                        class="peer hidden" />
 
                     <div
-                        class="border-b3 bg-b1 text-bc shadow-warm h-20 w-full cursor-pointer overflow-hidden rounded-xl border"
+                        class="bg-b1 text-bc shadow-warm border-b3 h-20 w-full cursor-pointer overflow-hidden rounded-xl border"
                         :data-theme="theme.name">
                         <div class="grid h-full w-full grid-cols-[1fr_4fr]">
-                            <div class="h-full flex-col">
-                                <div class="bg-b2 h-2/3"></div>
-                                <div class="bg-b3 h-1/3"></div>
-                            </div>
+                            <div
+                                class="bg-b2 grid size-full place-items-center"></div>
                             <div
                                 class="flex h-full items-center gap-2 px-5 font-medium">
                                 <div class="text-4 grow px-1 font-semibold">
                                     Aa
                                 </div>
                                 <div class="color-chip bg-b2 text-bc"></div>
-                                <div class="color-chip bg-b3 text-bc"></div>
+                                <div class="color-chip text-bc bg-b3"></div>
                                 <div
-                                    class="color-chip bg-neutral text-bc"></div>
+                                    class="color-chip bg-neutral text-nc"></div>
                             </div>
                         </div>
                     </div>

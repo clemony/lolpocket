@@ -21,13 +21,16 @@ const match = {
         <Collapsible class="group">
             <div class="flex gap-5">
                 <div class="flex flex-col items-start justify-center gap-0">
-                    <icon
-                        icon="icon-park-solid:ranking-list"
-                        class="size-7"
+                    <Badge
                         :class="{
-                            'text-resolve': match.playerOutcome == 'win',
-                            'text-domination': match.playerOutcome == 'loss',
-                        }" />
+                            'bg-resolve': match.playerOutcome == 'win',
+                            'bg-domination': match.playerOutcome == 'loss',
+                        }"
+                        class="!text-2 mb-2 items-center gap-2 pl-2 !font-medium !tracking-wide text-white capitalize">
+                        <icon icon="uis:graph-bar" class="size-3.5" />
+
+                        {{ match.playerOutcome }}
+                    </Badge>
 
                     <p>{{ match.type[0] }}</p>
                     <p v-if="match.type[1]">{{ match.type[1] }}</p>
@@ -35,12 +38,6 @@ const match = {
                     <p class="">
                         {{ match.gameTime }}
                     </p>
-
-                    <Badge
-                        variant="resolve"
-                        class="!text-2 !font-medium !tracking-wide text-white capitalize">
-                        {{ match.playerOutcome }}
-                    </Badge>
                 </div>
                 <div>
                     <div class="flex gap-4">
@@ -51,16 +48,18 @@ const match = {
                         </div>
                     </div>
 
-                    <div class="flex gap-3">
+                    <div class="flex gap-1">
                         <template v-for="index in 6" :key="index">
-                            <ShadowedPlaceholder class="size-18" />
+                            <ShadowedPlaceholder class="size-10" />
                         </template>
                     </div>
                 </div>
 
-                <CollapsibleTrigger as-child class="group">
+                <CollapsibleTrigger
+                    as-child
+                    class="group bg-base-200/30 grid h-full w-10 place-items-center">
                     <ExpandIndicator
-                        class="[&_svg]:!size-7 [&_svg]:!shrink-0" />
+                        class="[&_svg]:!size-5 [&_svg]:!shrink-0" />
                 </CollapsibleTrigger>
             </div>
             <CollapsibleContent as-child>

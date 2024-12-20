@@ -6,6 +6,10 @@ import news from './news.json'
         <div
             class="bg-b1/90 absolute top-0 left-0 z-10 flex h-16 w-full items-center gap-4 px-4 backdrop-blur-md">
             <h4 class="grow !font-[500]">News & Updates</h4>
+            <span
+                class="text-4 w-fit pt-1 pt-px pr-6 opacity-60 group-hover:opacity-100 group-data-[state=open]:opacity-100">
+                14.16.1
+            </span>
         </div>
 
         <template v-for="(item, i) in news">

@@ -3,17 +3,17 @@
 :is([data-theme='light']) {
     --b1: oklch(100% 0 0);
     --b2: oklch(93% 0 0);
-    --b3: oklch(76% 0 0);
+    --b3: oklch(89% 0 0);
     --bc: oklch(0% 0.02476 255.701624);
     --neutral: oklch(0% 0.02476 255.701624);
     --nc: oklch(100% 0 0);
 }
 
-:is([data-theme='sunrise']) {
+:is([data-theme='noon']) {
     --b1: oklch(94.5% 0.0053 106.5);
     --b2: oklch(89.95% 0.0109 76.59);
     --b3: oklch(85.05% 0.0177 67.59);
-    --bc: ooklch(26.45% 0 0);
+    --bc: oklch(26.45% 0 0);
     --neutral: oklch(26.45% 0 0);
     --nc: oklch(95.89% 0.001 17.18);
 }
@@ -39,7 +39,7 @@
 @theme inline {
     --color-b1: var(--b1);
     --color-b2: var(--b2);
-    --color-b3: var(--b2);
+    --color-b3: var(--b3);
     --color-bc: var(--bc);
     --color-neutral: var(--neutral);
     --color-nc: var(--nc);

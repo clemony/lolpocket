@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Database",
+        "icon": "qlementine-icons:drive-16",
+        "open": true,
+        "links": [
+            {
+                "name": "Champions",
+                "link": "champions",
+                "icon": ""
+            },
+            {
+                "name": "Items",
+                "link": "items",
+                "icon": ""
+            },
+            {
+                "name": "Runes",
+                "link": "runes",
+                "icon": ""
+            },
+            {
+                "name": "Spells",
+                "link": "spells",
+                "icon": ""
+            }
+        ]
+    }
+]

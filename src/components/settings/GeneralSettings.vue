@@ -3,7 +3,7 @@ import { useAccountStore } from '@stores/accountStore'
 
 const as = useAccountStore()
 const motion = ref()
-const sidebar = ref(as.defaultSidebarState)
+//const sidebar = ref(as.defaultSidebarOpen)
 const toggleSetting = (model) => {
     useToggle(model)
 }
@@ -37,8 +37,8 @@ const settingsData = {
             title: 'Sidebar Default State',
             description:
                 'Upon login, should your sidebar be expanded or collapsed?.',
-            model: sidebar.value,
-            text: as.defaultSidebarState == false ? 'Collapsed' : 'Expanded',
+            // model: sidebar.value,
+            text: as.defaultSidebarOpen == false ? 'Collapsed' : 'Expanded',
         },
     ],
 }

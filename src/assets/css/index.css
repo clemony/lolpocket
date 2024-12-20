@@ -1,15 +1,16 @@
 @import 'tailwindcss';
+@import './theme.css';
+@import './themes.css';
+@import '../animation/animations.css';
+@import './fonts.css';
+@import './utilities.css';
 
 @plugin "daisyui" {
     themes: false;
 }
-@import './theme.css';
-@import './themes.css';
-/* @import '../animation/animations.css';*/
-
-@import './fonts.css';
 @config './tailwind.config.ts';
 @plugin "tailwindcss-animate";
+@plugin "tailwindcss-animated";
 @plugin 'daisyui' {
     themes: false;
 }

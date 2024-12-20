@@ -14,7 +14,7 @@
     --text-11: 3.75rem;
     --text-12: 4.5rem;
     --text-13: 6rem;
-    --text-14: 8rem;
+    --text-14: 7rem;
 
     --b1: oklch(100% 0 0);
     --b2: oklch(93% 0 0);
@@ -79,8 +79,8 @@
 
     --shadow-pretty: 0 3px 10px rgba(0, 0, 0, 0.2);
     --shadow-lil: 2px 2px 4px 1px rgba(0, 0, 0, 0, 0.3);
-    --shadow-warm: 0px 2px 5px 0px rgba(0, 0, 0, 0.2),
-        0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+    --shadow-warm: 0px 2px 5px 0px rgba(0, 0, 0, 0.1),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.09);
     --shadow-standard: 0px 2px 3px -1px rgba(0, 0, 0, 0.1),
         0px 1px 0px 0px rgba(25, 28, 33, 0.02),
         0px 0px 0px 1px rgba(25, 28, 33, 0.08);

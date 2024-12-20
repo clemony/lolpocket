@@ -1,28 +1,34 @@
 <script setup lang="ts">
 import { useAccountStore } from '@stores/accountStore'
 import { useSidebar } from '@/components/base/sidebar/utils'
-import { summoner } from '@data/playerData'
+const SettingsDropdown = defineAsyncComponent(
+    () => import('./SettingsDropdown.vue')
+)
+const ResourcesDropdown = defineAsyncComponent(
+    () => import('./ResourcesDropdown.vue')
+)
+
 const as = useAccountStore()
 
 const sidebar = useSidebar()
 console.log(sidebar)
 const { toggleSidebar } = useSidebar()
 const state = computed(() => {
-    return sidebar.state.value
+    return sidebar.open.value
 })
 
 watch(
     () => state.value,
     (newVal) => {
-        as.sidebarState = newVal
+        as.sidebarOpen = newVal
         console.log(newVal)
     }
 )
-
+/*
 const collapsed = computed(() => {
-    const state = as.sidebarState == 'collapsed' ? true : false
+    const state = as.sidebarOpen == 'collapsed' ? true : false
     return state
-})
+}) */
 
 const router = useRouter()
 const hs = history.state
@@ -30,7 +36,7 @@ const hs = history.state
 
 <template>
     <Menubar
-        class="bg-b1/80 absolute z-199 m-0 flex w-full items-center gap-3 overflow-hidden border-x-0 border-t-0 border-b border-b-transparent p-0 pr-4 pl-2 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center">
+        class="bg-b1/80 absolute z-199 m-0 flex w-full items-center gap-6 overflow-hidden border-x-0 border-t-0 border-b border-b-transparent p-0 pr-4 pl-2 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center">
         <div>
             <MenubarMenu>
                 <div class="flex items-center">
@@ -55,7 +61,7 @@ const hs = history.state
                             class="size-7 shrink-0 object-center transition-all duration-300"
                             :class="{
                                 'stroke-1.5 scale-x-20 scale-y-150':
-                                    as.sidebarState == 'collapsed',
+                                    as.sidebarOpen == false,
                             }" />
                     </Button>
 
@@ -80,25 +86,17 @@ const hs = history.state
         <div class="">
             <MenubarMenu>
                 <SearchButton
-                    class="mr-2 h-9 rounded-lg px-4 backdrop-brightness-[97%]"
+                    class="h-9 rounded-lg px-4 backdrop-brightness-[97%]"
                     placeholder="Search" />
             </MenubarMenu>
         </div>
 
-        <div class="flex items-center">
+        <div class="!-mt-1 flex items-center">
             <MenubarMenu>
-                <MenubarTrigger
-                    class="group data-[state=open]:bg-transparent"
-                    as-child>
-                    <Button variant="ghost" class="pr-1">
-                        <div
-                            class="text-3 w-fit pt-1 pt-px pr-3 opacity-60 group-hover:opacity-100">
-                            14.16.1
-                        </div>
-                        <icon
-                            icon="material-symbols-light:breaking-news-outline-rounded"
-                            class="size-7.25 shrink-0 stroke-2 opacity-60 group-hover:opacity-100 group-data-[state=open]:opacity-100" />
-                    </Button>
+                <MenubarTrigger class="group pt-1.5" as-child>
+                    <icon
+                        icon="material-symbols-light:breaking-news-outline-rounded"
+                        class="size-7.25 shrink-0 stroke-2 opacity-60 group-hover:opacity-100 group-data-[state=open]:opacity-100" />
                 </MenubarTrigger>
                 <MenubarContent class="w-96">
                     <News />
@@ -109,11 +107,24 @@ const hs = history.state
                 <MenubarTrigger
                     class="group flex min-w-fit grow items-center justify-end">
                     <icon
-                        icon="ph:gear-six"
-                        class="size-6 shrink-0 opacity-60 group-hover:opacity-100" />
+                        icon="qlementine-icons:external-link-16"
+                        class="-mt-0.75 size-5.75 shrink-0 opacity-60 group-hover:opacity-100" />
                 </MenubarTrigger>
 
-                <MenubarContent class="">
+                <MenubarContent class="pl-2">
+                    <ResourcesDropdown />
+                </MenubarContent>
+            </MenubarMenu>
+
+            <MenubarMenu>
+                <MenubarTrigger
+                    class="group -mt-[1.5px] flex min-w-fit grow items-center justify-end">
+                    <icon
+                        icon="ph:gear-six"
+                        class="size-6.25 shrink-0 opacity-60 group-hover:opacity-100" />
+                </MenubarTrigger>
+
+                <MenubarContent class="min-w-64">
                     <SettingsDropdown />
                 </MenubarContent>
             </MenubarMenu>

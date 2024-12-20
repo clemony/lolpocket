@@ -4,7 +4,7 @@ import { summoner } from '@data/playerData'
 <template>
     <div class="align-end flex h-fit items-center gap-3 px-3 normal-case">
         <h1 class="font-serif font-bold">{{ summoner.name }}</h1>
-        <span class="text-4 pt-1.5 font-normal">#{{ summoner.tag }}</span>
+        <span class="text-4 pt-1.75 font-normal">#{{ summoner.tag }}</span>
     </div>
     <Card class="w-full">
         <CardContent class="relative flex h-50 w-full px-8">

@@ -14,26 +14,26 @@ const routes: RouteRecordRaw[] = [
     // player
 
     {
-        path: '/insights',
-        name: 'insights',
-        component: () => import(`./src/pages/Home.vue`),
+        path: '/player/home',
+        name: 'player-home',
+        component: () => import(`./src/pages/player/PlayerHome.vue`),
     },
     {
         path: '/buildanalysis',
         name: 'build-analysis',
-        component: () => import(`./src/pages/BuildAnalysis.vue`),
+        component: () => import(`./src/pages/player/BuildAnalysis.vue`),
     },
     {
         path: '/matchhistory',
         name: 'match-history',
-        component: () => import(`./src/pages/MatchHistory.vue`),
+        component: () => import(`./src/pages/player/MatchHistory.vue`),
     },
 
     // pocket
 
     {
         path: '/pocket/:pocketKey',
-        component: () => import(`./src/components/pocket/Pocket.vue`),
+        component: () => import(`./src/pages/Pocket.vue`),
         meta: {
             title: 'Pocket',
         },
@@ -43,30 +43,24 @@ const routes: RouteRecordRaw[] = [
                 name: 'Dashboard',
                 path: '',
                 component: () =>
-                    import(
-                        `./src/components/pocket/dashboard/PocketDashboard.vue`
-                    ),
+                    import(`./src/pages/pocket/PocketDashboard.vue`),
             },
             {
                 name: 'Champions',
                 path: 'champions',
                 component: () =>
-                    import(
-                        `./src/components/pocket/champions/PocketChampions.vue`
-                    ),
+                    import(`./src/pages/pocket/PocketChampions.vue`),
             },
             {
                 name: 'Items',
                 path: 'items',
                 props: true,
-                component: () =>
-                    import(`./src/components/pocket/items/PocketItems.vue`),
+                component: () => import(`./src/pages/pocket/PocketItems.vue`),
             },
             {
                 name: 'Runes',
                 path: 'runes',
-                component: () =>
-                    import(`./src/components/pocket/runes/PocketRunes.vue`),
+                component: () => import(`./src/pages/pocket/PocketRunes.vue`),
             },
         ],
     },

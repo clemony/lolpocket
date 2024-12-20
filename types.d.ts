@@ -9,7 +9,9 @@ export interface navGroup {
     icon?: string
     array?: Array<any>
     isActive?: boolean
+    open?: boolean
     items?: navItem[]
+    submenu?: navGroup[]
 }
 
 export interface navItem {

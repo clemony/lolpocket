@@ -29,6 +29,7 @@ const iconImg = computed(() => {
             )
         ">
         <div
+            v-if="iconImg"
             :class="
                 cn(
                     'grid size-full place-items-center overflow-hidden rounded-full',
@@ -40,14 +41,27 @@ const iconImg = computed(() => {
                 color: pocket.iconColor,
             }">
             <img
-                v-if="iconImg"
                 :src="pocket.icon"
                 :class="cn('scale-[115%]', props.imgClass)" />
+        </div>
+
+        <div
+            v-else
+            :class="
+                cn(
+                    'grid size-full place-items-center overflow-hidden rounded-full',
+                    props.iconClass
+                )
+            "
+            class="!p-1.25"
+            :style="{
+                backgroundColor: pocket.bgColor,
+                color: pocket.iconColor,
+            }">
             <icon
-                v-else
                 :style="{ color: pocket.iconColor }"
                 :icon="`${pocket.icon}`"
-                class="size-fit" />
+                class="size-full object-contain" />
         </div>
     </div>
 </template>

@@ -57,8 +57,8 @@ const data = props.data
                                         class="flex w-full flex-nowrap items-center gap-4 px-2! py-5">
                                         <PocketIcon
                                             :pocket="pocket"
-                                            class="size-6 rounded-xs shadow-xs!"
-                                            iconClass="rounded-lg" />
+                                            class="size-6 rounded-xs stroke-2 shadow-xs!"
+                                            iconClass="rounded-md" />
                                         <span class="text-start text-nowrap">
                                             {{ pocket.name }}
                                         </span>

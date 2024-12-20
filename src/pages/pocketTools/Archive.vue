@@ -6,7 +6,8 @@ const ps = usePocketStore()
 </script>
 
 <template>
-    <Nmenu />
+    <LayoutSpacer />
+    <icon icon="file-icons:build-boot" class="size-10" />
 </template>
 
 <style scoped></style>

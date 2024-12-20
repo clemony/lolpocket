@@ -21,8 +21,8 @@ export const useAccountStore = defineStore(
         const colorBlindMode = ref(false)
 
         const isMinimized = ref(false)
-        const sidebarState = ref()
-        const defaultSidebarState = ref(true)
+        const sidebarOpen = ref()
+        const defaultSidebarOpen = ref(true)
         const sidebarWidth = ref(18)
 
         const drawerState = ref(false)
@@ -48,10 +48,10 @@ export const useAccountStore = defineStore(
             colorBlindMode,
             reducedMotion,
             pocketPreview,
-            defaultSidebarState,
+            defaultSidebarOpen,
             isMinimized,
             commandOpen,
-            sidebarState,
+            sidebarOpen,
             sidebarWidth,
             cardBack,
             pocketGridSize,
