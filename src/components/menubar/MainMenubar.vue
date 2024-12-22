@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useAccountStore } from '@stores/accountStore'
-import { useSidebar } from '@/components/base/sidebar/utils'
+import { newPocketDrawer } from '@components/drawer/data'
+import { toggleDrawerState } from '@utils/utils'
+
 const SettingsDropdown = defineAsyncComponent(
     () => import('./SettingsDropdown.vue')
 )
@@ -11,7 +13,6 @@ const ResourcesDropdown = defineAsyncComponent(
 const as = useAccountStore()
 
 const sidebar = ref(as.sidebarOpen)
-const toggleSidebar = useToggle(sidebar)
 
 const router = useRouter()
 const hs = history.state
@@ -91,7 +92,11 @@ const hs = history.state
         <div class="!-mt-1 flex items-center">
             <MenubarMenu>
                 <Tooltip content="New Pocket / ⌘N ">
-                    <Button variant="ghost" size="default" class="!h-10.75">
+                    <Button
+                        variant="ghost"
+                        size="default"
+                        class="!h-10.75"
+                        @click="toggleDrawerState(newPocketDrawer)">
                         <icon
                             icon="teenyicons:add-outline"
                             class="size-5 opacity-60" />

@@ -26,7 +26,7 @@ const forwardedProps = useForwardProps(delegatedProps)
         v-bind="forwardedProps"
         :class="
             cn(
-                'bg-b2/60 py-2px data-[state=active]:ring-neutral/80 flex h-7 items-center rounded-full px-px data-[state=active]:ring-1',
+                'bg-b2/60 py-2px data-[state=active]:ring-neutral/80 flex h-7 items-center rounded-md px-px data-[state=active]:ring-1',
                 props.class
             )
         ">

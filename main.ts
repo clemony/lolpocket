@@ -21,6 +21,7 @@ console.log('Pinia initialized.')
 // Register global components
 app.component('video-background', VideoBackground)
 app.component('Icon', Icon)
+
 app.use(router)
 app.use(Shortkey)
 // Or provide custom options

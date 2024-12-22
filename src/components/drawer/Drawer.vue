@@ -17,19 +17,20 @@ const side = computed(() => {
         :key="drawer.id"
         :direction="side"
         :fixed="true">
-        <DrawerOverlay class="overflow-hidden rounded-[0.95rem]" />
+        <DrawerOverlay class="overflow-hidden" />
         <DrawerContent
             class="pt-3 focus:outline-hidden"
             :class="{
                 'justify-center px-[8%]': side == 'bottom',
-                'items-start px-8': side == 'right',
+                'h-screen max-h-screen items-start overflow-hidden pr-8 pl-16':
+                    side == 'right',
             }"
             @openAutoFocus.prevent>
             <DrawerHeader
                 class="mt-6"
                 :class="{
                     'w-1/2 pr-32': side == 'bottom',
-                    'w-full items-start': side == 'right',
+                    'max-w-130 items-start': side == 'right',
                 }">
                 <DrawerTitle>
                     {{ drawer.title }}

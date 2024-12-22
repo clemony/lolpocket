@@ -4,6 +4,18 @@
     @apply flex aspect-square size-9 items-center justify-center rounded-md shadow-sm;
 }
 
+@utility mask-left {
+    mask-image: linear-gradient(to right, black 50%, transparent);
+}
+
+@utility mask-top {
+    mask-image: linear-gradient(to top, black 50%, transparent);
+}
+
+@utility mask-bottom {
+    mask-image: linear-gradient(to bottom, black 50%, transparent);
+}
+
 @utility scrollbar-hide {
     &::-webkit-scrollbar {
         display: none;

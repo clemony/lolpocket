@@ -14,7 +14,7 @@ const ChampionSidebar = defineAsyncComponent({
 
 export const newPocketDrawer: drawer = {
     component: PocketDrawer,
-    direction: 'bottom',
+    direction: 'right',
     id: 'newPocket',
     title: 'New Pocket',
     description:
@@ -24,7 +24,7 @@ export const newPocketDrawer: drawer = {
 
 export const editPocketDrawer: drawer = {
     component: PocketDrawer,
-    direction: 'bottom',
+    direction: 'right',
     id: 'editPocket',
     title: 'Edit Pocket',
     description:

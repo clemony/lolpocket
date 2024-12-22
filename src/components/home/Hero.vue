@@ -61,7 +61,7 @@
             <video-background
                 src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ahri/skins/skin86/animatedsplash/ahri_skin86_centered.skins_ahri_hol.webm"
                 style="height: 100vh"
-                class="mask-this fixed -scale-x-[1] bg-center opacity-50 brightness-125 contrast-160 grayscale"></video-background>
+                class="mask-left fixed -scale-x-[1] bg-center opacity-50 brightness-125 contrast-160 grayscale"></video-background>
         </div>
     </div>
 </template>
@@ -82,9 +82,5 @@
     100% {
         opacity: 1;
     }
-}
-
-.mask-this {
-    mask-image: linear-gradient(to right, black 50%, transparent);
 }
 </style>

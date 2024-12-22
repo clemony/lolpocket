@@ -23,6 +23,7 @@ const emit = defineEmits(['update:selectedIcon', 'update:isShown'])
 
 const pocket = getPocket(props.pocketKey)
 
+const modelValue = ref('symbols')
 watch(
     () => props.bgColor,
     (newVal) => {
@@ -50,36 +51,36 @@ const isShown = props.isShown
 </script>
 
 <template>
-    <div class="mr-0 flex w-full">
-        <div class="flex flex-col justify-start gap-4">
-            <div class="flex flex-col gap-1 justify-self-start">
-                <Label class="">Icon</Label>
-                <button
-                    type="button"
-                    :style="{
-                        backgroundColor: bgColor,
-                        color: iconColor,
-                    }"
-                    class="ring-neutral/80 my-2 aspect-square size-16 self-center rounded-lg p-4.5 hover:ring-1 hover:ring-offset-4">
-                    <icon :icon="selectedIcon" class="-mt-px size-full" />
-                </button>
-            </div>
-
-            <div class="flex flex-col gap-2">
-                <Label for="pocket-tags" class="">Colors</Label>
-                <DropdownMenu class="w-full">
-                    <DropdownMenuTrigger
-                        class="data-[state=open]:bg-b2/60 mt-1.5 w-full rounded-md">
+    <div class="mt-3 flex items-center gap-12">
+        <h4 class="!text-4 grow self-start pt-2 pl-1">Create Icon</h4>
+        <div class="grid gap-3 pr-2">
+            <Label class="">Preview</Label>
+            <Button
+                size="icon"
+                :style="{
+                    backgroundColor: bgColor,
+                    color: iconColor,
+                }"
+                class="size-16 self-center p-4.5 inset-shadow-sm">
+                <icon :icon="selectedIcon" class="size-full" />
+            </Button>
+        </div>
+        <div class="grid gap-3 justify-self-end overflow-y-auto">
+            <Label class="">Colors</Label>
+            <div class="flex gap-4">
+                <DropdownMenu>
+                    <DropdownMenuTrigger class="rounded-md">
                         <Button
-                            variant="ghost"
-                            size="sm"
-                            class="text-3 w-full justify-start">
-                            <span
-                                class="border-b3 size-6 shrink-0 rounded-sm border"
-                                :style="{
-                                    backgroundColor: bgColor,
-                                }"></span>
-                            Backdrop
+                            variant="outline"
+                            size="icon"
+                            class="hover:border-neutral/60 size-16 inset-shadow-sm transition-colors duration-300"
+                            :style="{
+                                backgroundColor: bgColor,
+                                color: bgColor,
+                            }">
+                            <icon
+                                icon="mingcute:color-picker-fill"
+                                class="size-7 contrast-[600%] grayscale invert saturate-0" />
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
@@ -88,19 +89,18 @@ const isShown = props.isShown
                 </DropdownMenu>
 
                 <DropdownMenu>
-                    <DropdownMenuTrigger
-                        class="data-[state=open]:bg-b2/60 rounded-md">
+                    <DropdownMenuTrigger class="rounded-md">
                         <Button
-                            variant="ghost"
-                            size="sm"
-                            class="text-3 w-full justify-start">
-                            <span
-                                class="border-b3 size-6 shrink-0 rounded-sm border"
-                                :style="{
-                                    backgroundColor: iconColor,
-                                }"></span>
-
-                            Icon
+                            variant="outline"
+                            size="icon"
+                            class="hover:border-neutral/60 size-16 inset-shadow-sm transition-colors duration-300"
+                            :style="{
+                                backgroundColor: iconColor,
+                                color: iconColor,
+                            }">
+                            <icon
+                                icon="mingcute:color-picker-fill"
+                                class="size-7 contrast-[600%] grayscale invert saturate-0" />
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
@@ -109,84 +109,81 @@ const isShown = props.isShown
                 </DropdownMenu>
             </div>
         </div>
+    </div>
 
-        <Tabs default-value="Icons" class="-mt-28 mr-0 w-full justify-end">
-            <div class="flex w-full pr-0">
-                <Grow />
-                <TabsList class="justify-self-end">
-                    <TabsTrigger value="Icons">Icons</TabsTrigger>
-                    <TabsTrigger value="Champions">Champions</TabsTrigger>
-                </TabsList>
-            </div>
-            <TabsContent value="Icons">
-                <ScrollArea as-child>
-                    <div
-                        class="scroll mb-10 flex h-full max-h-80 w-full flex-row flex-wrap justify-evenly gap-2 overflow-y-scroll p-1">
-                        <Label
-                            variant="ghost"
-                            v-for="icon in iconStore"
-                            class="has-checked:bg-b2/60 has-checked:shadow-standard aspect-square size-14 self-center rounded-md border-transparent p-4.5">
-                            <input
-                                v-if="pocket"
-                                type="radio"
-                                name="iconPicker"
-                                v-model="pocket.icon"
-                                :value="icon"
-                                class="peer hidden" />
+    <Tabs default-value="Icons" class="w-full" v-model="modelValue">
+        <div class="flex w-full pr-0">
+            <TabsList class="">
+                <TabsTrigger value="symbols">Symbols</TabsTrigger>
+                <TabsTrigger value="champions">Champions</TabsTrigger>
+            </TabsList>
+        </div>
+    </Tabs>
+    <div
+        v-if="modelValue == 'symbols'"
+        value="symbols"
+        class="border-b2/70 my-4 flex w-full flex-row flex-wrap justify-evenly gap-2 overflow-y-scroll rounded-lg border px-2 py-4 inset-shadow-xs">
+        <Label
+            variant="ghost"
+            v-for="icon in iconStore"
+            class="has-checked:bg-b2/60 has-checked:shadow-standard aspect-square size-14 self-center rounded-md border-transparent p-3">
+            <input
+                v-if="pocket"
+                type="radio"
+                name="iconPicker"
+                v-model="pocket.icon"
+                :value="icon"
+                class="peer hidden" />
 
-                            <input
-                                v-else
-                                type="radio"
-                                name="iconPicker"
-                                v-model="selectedIcon"
-                                :value="icon"
-                                class="peer hidden"
-                                @change="handleChange(icon)" />
+            <input
+                v-else
+                type="radio"
+                name="iconPicker"
+                v-model="selectedIcon"
+                :value="icon"
+                class="peer hidden"
+                @change="handleChange(icon)" />
 
-                            <icon
-                                :icon="icon"
-                                class="text-bc size-full shrink-0" />
-                        </Label>
-                    </div>
-                </ScrollArea>
-            </TabsContent>
-            <TabsContent value="Champions">
-                <ScrollArea as-child>
-                    <div
-                        class="scroll mb-10 flex h-full max-h-80 w-full flex-row flex-wrap justify-evenly gap-2 overflow-y-scroll p-1">
-                        <Label
-                            variant="outline"
-                            v-for="champion in ds.champions"
-                            class="shadow-warm has-checked:bg-b2/60 grid aspect-square size-14 place-items-center self-center overflow-hidden rounded-lg border border-transparent">
-                            <input
-                                v-if="pocket"
-                                type="radio"
-                                name="iconPicker"
-                                v-model="pocket.icon"
-                                :value="`/img/champions/${champion.name}.webp`"
-                                class="peer hidden" />
+            <icon
+                :icon="icon"
+                class="text-bc size-full shrink-0 drop-shadow-sm" />
+        </Label>
+    </div>
 
-                            <input
-                                v-else
-                                type="radio"
-                                name="iconPicker"
-                                v-model="selectedIcon"
-                                :value="`/img/champions/${champion.name}/.webp`"
-                                class="peer hidden"
-                                @change="
-                                    handleChange(
-                                        `/img/champions/${champion.name}.webp`
-                                    )
-                                " />
+    <div
+        v-if="modelValue == 'champions'"
+        value="champions"
+        class="max-h-[calc(100%-500px) h-[calc(100%-500px)] h-full">
+        <div
+            class="bg-b2/30 border-b2/70 my-4 flex w-full flex-row flex-wrap justify-evenly gap-2 overflow-y-scroll rounded-lg border px-2 py-4 inset-shadow-xs">
+            <Label
+                variant="outline"
+                v-for="champion in ds.champions"
+                class="shadow-warm has-checked:bg-b2/60 border-b2 grid aspect-square size-14 place-items-center self-center overflow-hidden rounded-lg border">
+                <input
+                    v-if="pocket"
+                    type="radio"
+                    name="iconPicker"
+                    v-model="pocket.icon"
+                    :value="`/img/champions/${champion.name}.webp`"
+                    class="peer hidden" />
 
-                            <img
-                                :src="`/img/champions/${clean(champion.name)}.webp`"
-                                class="size-14 scale-110" />
-                        </Label>
-                    </div>
-                </ScrollArea>
-            </TabsContent>
-        </Tabs>
+                <input
+                    v-else
+                    type="radio"
+                    name="iconPicker"
+                    v-model="selectedIcon"
+                    :value="`/img/champions/${champion.name}/.webp`"
+                    class="peer hidden"
+                    @change="
+                        handleChange(`/img/champions/${champion.name}.webp`)
+                    " />
+
+                <img
+                    :src="`/img/champions/${clean(champion.name)}.webp`"
+                    class="size-14 scale-110" />
+            </Label>
+        </div>
     </div>
 </template>
 

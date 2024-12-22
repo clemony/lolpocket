@@ -14,52 +14,44 @@ const visibilityChanged = (step) => (isVisible) => {
 const data = [
     {
         title: 'Calculate',
-        icon: 'teenyicons:calculator-outline',
-        text: 'Evaluate the stats on each item and rune, and figure the sum of all stats for each build, Optionally, view how passives and actives affect those stats.',
+        icon: 'carbon:function-math',
+        text: 'Learn about the stats on each item and rune, and sum the totals for each build, Optionally, view how passives and actives affect those stats.',
     },
     {
         title: 'Browse',
-        icon: 'oui:glasses',
-        text: 'Examine a database of League champions, items, spells,and runes. Get the data you need for build completionall in one spot.',
+        icon: 'iconoir:glasses',
+        text: 'Peruse a database of League champions, items, spells,and runes. Get the data you need for build completion all in one spot.',
     },
     {
         title: 'Export & Share',
-        icon: 'teenyicons:upload-outline',
-        text: 'Export your builds to the League Client, or share yourbuild with others. Never forget the item set you were theorycrafting and intended to test.',
+        icon: 'iconoir:git-pull-request',
+        text: 'Upload to the cloud, export to the League Client, or share your build with friends. Never forget the item set you were cooking up.',
     },
     {
         title: 'Customize',
-        icon: 'material-symbols-light:dashboard-customize-outline-rounded',
-        text: 'Your personal homepage can be personalized with data modules -- so you always have the most important data on hand. App color themes allow you to select your favorite style.',
+        icon: 'hugeicons:dna-01',
+        text: 'Personal homepages can be customized with modules -- so you always have the most important data on hand.',
     },
 ]
-function getDelay(i) {
-    const ms = i * 100 * 2
-    return `animate-delay-${ms}`
-}
-const classObject =
-    'animate-fade-up animate-once animate-duration-1000 animate-ease-in-out animate-alternate animate-fill-both'
 </script>
 <template>
     <div
-        class="sticky-this bg-neutral text-nc grid w-full justify-center justify-items-center px-10 pt-44 pb-58">
-        <h2
-            v-in-viewport
-            :class="classObject"
-            class="!text-12 mb-10 justify-self-start px-32">
-            Additional Tools.
-        </h2>
+        class="bg-neutral text-nc sticky top-0 left-0 !z-0 flex h-[100vh] w-full flex-col items-center justify-center px-10">
+        <Parallaxy :speed="120" axis="x">
+            <div>
+                <h2 class="!text-12 mb-38 justify-self-start px-32">
+                    Additional Tools.
+                </h2>
+            </div>
+        </Parallaxy>
 
         <div class="grid w-[85%] grid-cols-4 items-start gap-18">
-            <div
-                v-for="(item, i) in data"
-                v-in-viewport
-                :class="cn(classObject, getDelay(i))"
-                class="grid items-start p-6">
-                <div class="mt-22 mb-5 grid w-full items-center gap-24">
+            <div v-for="(item, i) in data" class="grid items-start p-6">
+                <div class="mb-5 grid w-full items-center gap-24">
                     <icon
                         :icon="item.icon"
-                        class="size-12 justify-self-center" />
+                        class="size-14 justify-self-center stroke-[0.5]" />
+
                     <h3 class="!text-7 grow !font-semibold">
                         {{ item.title }}
                     </h3>
@@ -80,24 +72,4 @@ const classObject =
         </div>
     </div>
 </template>
-<style scoped>
-.wrapper {
-    position: relative;
-    height: 900px;
-    /*         clip-path: inset(0); */
-    border-radius: 25px;
-    overflow: clip;
-}
-
-.overflow-container {
-    height: 2000vh;
-    margin-top: -1000vh;
-}
-
-.sticky-this {
-    /* IMPORTANT This is the part related to the effect */
-    /*  object-fit: cover;
-    position: sticky;
-    top: 0; */
-}
-</style>
+<style scoped></style>

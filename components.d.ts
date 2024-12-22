@@ -223,6 +223,7 @@ declare module 'vue' {
     News: typeof import('./src/components/menubar/News.vue')['default']
     PageLayout: typeof import('./src/components/app/page-layouts/PageLayout.vue')['default']
     PageNav: typeof import('./src/components/app/page-layouts/PageNav.vue')['default']
+    Parallax: typeof import('./src/components/utility/Parallax.vue')['default']
     Placeholder: typeof import('./src/components/placeholders/placeholder.vue')['default']
     PlayerCard: typeof import('./src/components/player/PlayerCard.vue')['default']
     PlayerHome: typeof import('./src/pages/player/PlayerHome.vue')['default']

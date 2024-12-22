@@ -11,6 +11,8 @@ const props = defineProps<{
 </script>
 
 <template>
+    <!--     <Tooltip :content="champion.name">
+ -->
     <label
         :class="
             cn(
@@ -25,7 +27,8 @@ const props = defineProps<{
             :alt="props.champion.name + ' Image'"
             :class="cn('aspect-square size-full scale-108')" />
     </label>
-
+    <!--     </Tooltip>
+ -->
     <!-- </TransitionGroup> -->
 </template>
 
