@@ -14,7 +14,7 @@ export const labelVariants = cva(
                 primary: 'bg-primary text-primary-content hover:bg-primary/90',
                 destructive: 'bg-error text-error-content hover:bg-error/90',
                 outline:
-                    'border border-input bg-background hover:bg-b2/60 hover:text-bccent-foreground',
+                    'border border-b3 bg-transparent hover:bg-b2/60 hover:text-bc',
                 secondary:
                     'bg-secondary text-secondary-foreground hover:bg-secondary/80',
                 ghost: 'hover:bg-b2/60 hover:text-bccent-foreground',

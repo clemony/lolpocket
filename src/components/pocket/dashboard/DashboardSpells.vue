@@ -97,15 +97,14 @@ onMounted(async () => {
         </CollapsibleTrigger>
         <CollapsibleContent>
             <DisplayCard class="px-5 pb-4">
-                <SpellPicker :model="spell2"/>
+                <SpellPicker :model="spell2" />
             </DisplayCard>
         </CollapsibleContent>
     </Collapsible>
 </template>
 
 <style>
-input[type='range']::-webkit-slider-thumb,
-input[type='range']::-webkit-media-slider-thumb {
+input[type='range']:state(webkit-slider-thumb) {
     border-radius: 0.375rem;
 }
 </style>

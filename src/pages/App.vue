@@ -1,5 +1,5 @@
 <script setup lang="ts">
-//import { Toaster } from '@components/base/sonner'
+import { Toaster } from '@components/base/sonner'
 import { toggleDrawerState } from '@utils/utils'
 import { useDataStore } from '@stores/dataStore'
 import { useAccountStore } from '@stores/accountStore'
@@ -49,13 +49,19 @@ const open = ref(as.sidebarOpen)
 <template>
     <Drawer />
     <Shortkeys />
-    <!--     <Toaster />
- -->
+
+    <Toaster
+        closeButton
+        position="top-right"
+        :hotkey="['KeyC']"
+        :toastOptions="{}"
+        :expand="true" />
+
     <SidebarProvider
         v-model:open="as.sidebarOpen"
         @onOpenChange="open = as.sidebarOpen"
         :default-open="as.defaultSidebarOpen"
-        class="bg-b1 relative size-full backdrop-brightness-[96%] transition-all duration-1000">
+        class="bg-b1 relative size-full backdrop-brightness-[96%] transition-all duration-200">
         <MainMenubar />
         <Sidebar :collapsible="as.sidebarCollapsible" class="justify-center">
             <SidebarContent class="pt-16">

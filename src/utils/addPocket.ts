@@ -1,5 +1,7 @@
 import { useTempStore } from '@/stores/tempStore'
 import { hexoid } from 'hexoid'
+import { toast } from 'vue-sonner'
+import PocketToast from '@/components/toast/PocketToast.vue'
 import {
     pocketChampions,
     pocketItems,
@@ -175,5 +177,15 @@ export function addPocket(
     ps.pockets.push(newPocket)
     newItemSet(newPocket.key)
     newRuneSet(newPocket.key)
-    console.log('pinia pocket added')
+
+    toast(markRaw(PocketToast), {
+        unstyled: true,
+        //duration: Infinity,
+        classes: {
+            toast: 'bg-b1/95 border !border-b2 shadow-pretty mt-14   w-98 max-w-98 justify-start rounded-lg p-5  !h-40 backdrop-blur-md relative ',
+        },
+        componentProps: {
+            pocket: newPocket,
+        },
+    })
 }

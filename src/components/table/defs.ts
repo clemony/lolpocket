@@ -1,6 +1,3 @@
-import { pocket } from 'types'
-import { usePocketStore } from '@/stores/pocketStore'
-
 export const columnDefs = ref([
     {
         headerName: '',
@@ -135,7 +132,7 @@ export const columnDefs = ref([
         minWidth: 50,
         cellRenderer: 'TableTags',
         filterValueGetter: (params) => {
-            const taas =params.data.tags
+            const tags = params.data.tags
             return tags
         },
     },

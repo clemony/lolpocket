@@ -109,8 +109,7 @@ watch(
         :fallbackTolerance="0"
         fallbackClass="drag-clone"
         :fallbackOnBody="true"
-        class="max-h-inherit h-inherit scrollbar-hide flex flex-wrap items-start justify-around gap-4 overflow-y-auto rounded-lg pt-4 pb-4"
-        @start="console.log($event)">
+        class="max-h-inherit h-inherit scrollbar-hide flex flex-wrap items-start justify-around gap-4 overflow-y-auto rounded-lg pt-4 pb-4">
         <TransitionGroup name="pop">
             <Champion
                 v-for="champion in filteredChampions"

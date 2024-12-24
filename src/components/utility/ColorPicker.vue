@@ -112,14 +112,14 @@ label {
 }
 
 .vacp-color-space {
-    --vacp-thumb-size: 5px !important;
+    --vacp-thumb-size: 4px !important;
     width: 100%;
     height: 100%;
     overflow: hidden;
     border-radius: 0.5rem;
     box-shadow: var(--shadow-warm);
 
-    ::--webkit-slider-thumb {
+    :state(webkit-slider-thumb) {
         padding-top: 10px;
     }
 }
@@ -142,7 +142,7 @@ label.vacp-range-input-label {
     width: 100%;
     height: 0.75rem;
     overflow: hidden;
-    border-radius: 100%;
+    border-radius: 10%;
     background-color: transparent;
     box-shadow: var(--shadow-warm);
 }

@@ -3,6 +3,7 @@ import { useTempStore } from '@stores/tempStore'
 import { VueDraggable } from 'vue-draggable-plus'
 import type { pocket } from 'types'
 import { removeChamp } from '@utils/pocketUtilities'
+import '@assets/css/drag.css'
 const ts = useTempStore()
 
 const props = defineProps<{
@@ -32,24 +33,19 @@ const champions = computed(() => {
         :fallbackTolerance="0"
         fallbackClass="drag-clone"
         :fallbackOnBody="true"
-        class="drag-draggable scrollbar-hide h-full flex-nowrap! items-center gap-5! overflow-x-scroll overflow-y-clip px-2 py-2">
+        class="drag-draggable scrollbar-hide h-full flex-nowrap items-center gap-5! overflow-x-scroll overflow-y-clip px-2 py-2">
         <div
             v-for="(champion, index) in pocket.champions[0].champions"
             :key="champion.name"
             class="border-b3 shadow-warm relative grid size-22 shrink-0 place-items-center rounded-lg border">
-            <label
-                class="size-full overflow-hidden rounded-lg"
-                dragClass="setDrag">
-                <img
-                    :src="champion.img"
-                    class="size-22 scale-[115%]"
-                    draggable="false" />
-                <input
-                    type="radio"
-                    :value="champion"
-                    v-model="ts.selectedChampion"
-                    class="hidden" />
-            </label>
+            <TransitionGroup name="pop">
+                <Champion
+                    :key="champion.name"
+                    :champion="champion"
+                    ref="list"
+                    class="size-22 shrink-0 overflow-hidden rounded-lg"
+                    dragClass="setDrag"></Champion>
+            </TransitionGroup>
 
             <button
                 @click="removeChamp(champion.name, pocket)"
@@ -57,5 +53,8 @@ const champions = computed(() => {
                 <icon icon="teenyicons:x-circle-solid" />
             </button>
         </div>
+        <Placeholder class="sortable-ghost size-21 rounded-lg" />
     </VueDraggable>
 </template>
+
+<style scoped></style>

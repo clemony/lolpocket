@@ -2,14 +2,13 @@ import { iconSetQuartzLight, themeQuartz } from 'ag-grid-community'
 import { provideGlobalGridOptions } from 'ag-grid-community'
 import { Icon } from '@iconify/vue'
 export const pocketTheme = themeQuartz.withPart(iconSetQuartzLight).withParams({
-    neutralColor: 'var(--b3)',
     backgroundColor: 'transparent',
     fontFamily: 'Geist Sans, system ui',
     fontSize: '12px',
     foregroundColor: '#000000',
     cellTextColor: 'var(--ac)',
     headerBackgroundColor: 'var(--b2) / 20%',
-    headerTextColor: 'var(--ac)/0.8',
+    headerTextColor: 'var(--bc)/0.8',
     headerFontWeight: 500,
     headerVerticalPaddingScale: 0.4,
     rowVerticalPaddingScale: 2,
@@ -23,14 +22,14 @@ export const pocketTheme = themeQuartz.withPart(iconSetQuartzLight).withParams({
     wrapperBorder: false,
     wrapperBorderRadius: '0.7rem',
     columnBorder: false,
-    checkboxCheckedBackgroundColor: 'var(--n)/0.8',
-    checkboxCheckedBorderColor: 'var(--n)',
+    checkboxCheckedBackgroundColor: 'var(--neutral)/0.8',
+    checkboxCheckedBorderColor: 'var(--neutral)',
     checkboxCheckedShapeColor: 'var(--b1)',
     checkboxIndeterminateBackgroundColor: '#1C3043',
     checkboxIndeterminateBorderColor: '#1F3A4F',
     checkboxIndeterminateShapeColor: 'var(--b1)',
     checkboxUncheckedBackgroundColor: 'transparent',
-    checkboxUncheckedBorderColor: 'var(--n)/0.25',
+    checkboxUncheckedBorderColor: 'var(--neutral)/0.25',
     // chromeBackgroundColor: "#654D4D",
     borderRadius: '0.7rem',
 })

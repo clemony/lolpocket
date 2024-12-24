@@ -5,8 +5,8 @@ import type { menu, menuGroup, menuItem, pocket } from 'types'
 const props = withDefaults(
     defineProps<{
         class?: HTMLAttributes['class']
-        size?: string
-        variant?: string
+        size?: any
+        variant?: any
         menu?: menu
         noArrow?: boolean
         style?: any
@@ -89,7 +89,9 @@ const menu = ref(props.menu)
 
                 <template v-if="menuGroup.type == 'radio'">
                     <DropdownMenuRadioGroup>
-                        <DropdownMenuRadioItem v-for="item in menuGroup.items">
+                        <DropdownMenuRadioItem
+                            v-for="item in menuGroup.items"
+                            :value="item.title">
                             {{ item.title }}
                             <DropdownMenuShortcut>
                                 {{ item.shortcut }}

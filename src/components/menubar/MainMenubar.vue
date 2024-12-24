@@ -53,7 +53,7 @@ const hs = history.state
                             icon="system-uicons:menu-hamburger"
                             class="size-7 shrink-0 object-center transition-all duration-300"
                             :class="{
-                                'stroke-1.5 scale-x-20 scale-y-150':
+                                'stroke-1.5 scale-x-15 scale-y-150':
                                     as.sidebarOpen == false,
                             }" />
                     </Button>
@@ -91,7 +91,7 @@ const hs = history.state
 
         <div class="!-mt-1 flex items-center">
             <MenubarMenu>
-                <Tooltip content="New Pocket / ⌘N ">
+                <Tooltip content="New Pocket / ⌘N " ignoreNonKeyboardFocus>
                     <Button
                         variant="ghost"
                         size="default"

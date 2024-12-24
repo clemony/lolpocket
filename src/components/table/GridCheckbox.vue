@@ -40,7 +40,7 @@ watch(
         <label class="grid size-full place-items-center">
             <input
                 type="checkbox"
-                class="checkbox checkbox-xs"
+                class="checkbox checkbox-sm border-neutral/60 rounded-sm border"
                 v-model="selected"
                 @change="select($event)" />
         </label>

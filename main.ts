@@ -8,6 +8,7 @@ import router from './router'
 import Shortkey from 'vue3-shortkey'
 import VideoBackground from 'vue-responsive-video-background-player'
 import VueInViewport from 'vue-in-viewport'
+//import vue3GoogleLogin from 'vue3-google-login'
 
 const app = createApp(App)
 
@@ -24,7 +25,12 @@ app.component('Icon', Icon)
 
 app.use(router)
 app.use(Shortkey)
-// Or provide custom options
+
+/* app.use(vue3GoogleLogin, {
+    clientId:
+        '336895968645-65d39emeg3q8d3mlffqckig0u89la6tp.apps.googleusercontent.com',
+})
+ */
 app.use(VueInViewport, {
     classInit: 'in-viewport',
     delay: 300,

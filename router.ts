@@ -192,6 +192,11 @@ const routes: RouteRecordRaw[] = [
         name: 'about',
         component: () => import(`./src/pages/About.vue`),
     },
+    {
+        path: '/docs',
+        name: 'docs',
+        component: () => import(`./src/pages/Docs.vue`),
+    },
 ]
 
 const scrollBehavior = (to) => {

@@ -51,9 +51,13 @@ const isShown = props.isShown
 </script>
 
 <template>
-    <div class="mt-3 flex items-center gap-12">
-        <h4 class="!text-4 grow self-start pt-2 pl-1">Create Icon</h4>
-        <div class="grid gap-3 pr-2">
+    <div class="mt-3 mb-1 flex items-center gap-12">
+        <h4 class="!text-4 grow pt-3 pl-1">
+            Create
+            <br />
+            Icon
+        </h4>
+        <div class="grid gap-3 pr-0">
             <Label class="">Preview</Label>
             <Button
                 size="icon"
@@ -61,7 +65,7 @@ const isShown = props.isShown
                     backgroundColor: bgColor,
                     color: iconColor,
                 }"
-                class="size-16 self-center p-4.5 inset-shadow-sm">
+                class="size-15 self-center p-4.5 inset-shadow-sm">
                 <icon :icon="selectedIcon" class="size-full" />
             </Button>
         </div>
@@ -73,7 +77,7 @@ const isShown = props.isShown
                         <Button
                             variant="outline"
                             size="icon"
-                            class="hover:border-neutral/60 size-16 inset-shadow-sm transition-colors duration-300"
+                            class="hover:border-neutral/60 size-15 inset-shadow-sm transition-colors duration-300"
                             :style="{
                                 backgroundColor: bgColor,
                                 color: bgColor,
@@ -93,7 +97,7 @@ const isShown = props.isShown
                         <Button
                             variant="outline"
                             size="icon"
-                            class="hover:border-neutral/60 size-16 inset-shadow-sm transition-colors duration-300"
+                            class="hover:border-neutral/60 size-15 inset-shadow-sm transition-colors duration-300"
                             :style="{
                                 backgroundColor: iconColor,
                                 color: iconColor,
@@ -111,7 +115,10 @@ const isShown = props.isShown
         </div>
     </div>
 
-    <Tabs default-value="Icons" class="w-full" v-model="modelValue">
+    <Tabs
+        default-value="Icons"
+        class="flex w-full flex-col items-start"
+        v-model="modelValue">
         <div class="flex w-full pr-0">
             <TabsList class="">
                 <TabsTrigger value="symbols">Symbols</TabsTrigger>
@@ -122,11 +129,11 @@ const isShown = props.isShown
     <div
         v-if="modelValue == 'symbols'"
         value="symbols"
-        class="border-b2/70 my-4 flex w-full flex-row flex-wrap justify-evenly gap-2 overflow-y-scroll rounded-lg border px-2 py-4 inset-shadow-xs">
+        class="border-b2/70 flex h-[calc(100%-580px)] w-full flex-row flex-wrap justify-evenly gap-2 overflow-auto rounded-lg border px-2 py-4 inset-shadow-xs">
         <Label
             variant="ghost"
             v-for="icon in iconStore"
-            class="has-checked:bg-b2/60 has-checked:shadow-standard aspect-square size-14 self-center rounded-md border-transparent p-3">
+            class="has-checked:bg-b2/60 has-checked:shadow-standard aspect-square size-14 self-center rounded-md border-transparent p-3.5">
             <input
                 v-if="pocket"
                 type="radio"
@@ -153,9 +160,9 @@ const isShown = props.isShown
     <div
         v-if="modelValue == 'champions'"
         value="champions"
-        class="max-h-[calc(100%-500px) h-[calc(100%-500px)] h-full">
+        class="max-h-[calc(100%-740px) h-[calc(100%-740px)] h-full">
         <div
-            class="bg-b2/30 border-b2/70 my-4 flex w-full flex-row flex-wrap justify-evenly gap-2 overflow-y-scroll rounded-lg border px-2 py-4 inset-shadow-xs">
+            class="bg-b2/30 border-b2/70 flex w-full flex-row flex-wrap justify-evenly gap-2 overflow-y-scroll rounded-lg border px-2 py-4 inset-shadow-xs">
             <Label
                 variant="outline"
                 v-for="champion in ds.champions"

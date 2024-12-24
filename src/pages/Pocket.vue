@@ -8,13 +8,17 @@ import { useTempStore } from '@stores/tempStore'
 
 const ts = useTempStore()
 const Dashboard = defineAsyncComponent(
-    () => import('./pocket/PocketDashboard.vue')
+    () => import('@pages/pocket/PocketDashboard.vue')
 )
 const Champions = defineAsyncComponent(
-    () => import('./pocket/PocketChampions.vue')
+    () => import('@pages/pocket/PocketChampions.vue')
 )
-const Items = defineAsyncComponent(() => import('./pocket/PocketItems.vue'))
-const Runes = defineAsyncComponent(() => import('./pocket/PocketRunes.vue'))
+const Items = defineAsyncComponent(
+    () => import('@pages/pocket/PocketItems.vue')
+)
+const Runes = defineAsyncComponent(
+    () => import('@pages/pocket/PocketRunes.vue')
+)
 
 const props = defineProps<{
     pocketKey?: string
@@ -99,15 +103,6 @@ watch(
 onBeforeRouteUpdate(async (to, from) => {
     if (to.params.pocketKey !== from.params.pocketKey) {
         pocket.value = await getPocket(to.params.pocketKey)
-        /*      await nextTick()
-                if (pocket.value.component) {
-                    const find = els.find((el) => pocket.value.component)
-                    const targetElement = find ? find.ref.value : dashboard
-                    if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'instant', block: 'nearest', inline: 'center' });
-                    }
-                }
-                console.log('pok', pocket, pocket.value.component);  */
     }
 })
 
@@ -118,32 +113,43 @@ const header = computed(() => {
 
 <template>
     <PageLayout :key="pocket.key" nav>
-        <template #header>
-            {{ header }}
-        </template>
+        <header
+            class="bg-b1/60 mask mask-x-3 pointer-events-none absolute z-20 mt-[35px] grid h-22 w-full shrink-0 grid-cols-[1fr_4fr_2fr] items-center pt-3.5 pr-8 pl-6 backdrop-blur-md">
+            <PocketMenu type="dropdown" :pocket="pocket">
+                <Button variant="ghost" size="lg">
+                    <PocketIcon
+                        :pocket="pocket"
+                        class="size-9"
+                        iconClass=" p-2 rounded-lg" />
 
-        <!------------------------⟢ menu ⟣------------------------->
+                    <h2>{{ pocket.name }}</h2>
+                </Button>
+            </PocketMenu>
 
-        <template #header-center>
-            <div v-for="el in els" :key="el.name">
-                <span>
-                    <label
-                        @click="scrollToSection(el.ref)"
-                        class="group mb-px flex gap-1 font-medium opacity-50 transition-all duration-300 hover:cursor-pointer hover:opacity-100"
-                        :class="{
-                            'text-bc opacity-100!': el.name == pocket.component,
-                        }">
-                        <input
-                            type="radio"
-                            :value="el.ref"
-                            v-model="currentVisible"
-                            class="peer hidden" />
-                        <span class="w-max min-w-max px-1.5 capitalize">
-                            {{ el.name }}
-                        </span>
-                    </label>
-                </span>
-            </div>
+            <hgroup class="pointer-events-auto flex items-center px-8">
+                <ul class="flex gap-1">
+                    <li v-for="el in els" :key="el.name">
+                        <Button variant="ghost" size="md" as-child>
+                            <Label
+                                @click="scrollToSection(el.ref)"
+                                class="group flex gap-1 rounded-lg font-medium opacity-50 transition-all duration-300 hover:cursor-pointer hover:opacity-100"
+                                :class="{
+                                    'text-bc opacity-100!':
+                                        el.name == pocket.component,
+                                }">
+                                <input
+                                    type="radio"
+                                    :value="el.ref"
+                                    v-model="currentVisible"
+                                    class="peer hidden" />
+                                <span class="w-max min-w-max px-1.5 capitalize">
+                                    {{ el.name }}
+                                </span>
+                            </Label>
+                        </Button>
+                    </li>
+                </ul>
+            </hgroup>
 
             <div ref="carouselButtons" class="border-b2 rounded-lg border">
                 <Button
@@ -163,9 +169,7 @@ const header = computed(() => {
                         class="size-6 opacity-50 transition-all duration-300 group-hover:opacity-100" />
                 </Button>
             </div>
-        </template>
 
-        <template #indicator>
             <div
                 class="absolute -top-px flex self-start opacity-80 transition-all duration-500"
                 :class="{
@@ -178,22 +182,7 @@ const header = computed(() => {
                     icon="fluent:line-horizontal-1-24-regular"
                     class="-mt-1 size-3" />
             </div>
-        </template>
-
-        <template #header-end>
-            <div class="absolute -right-2 mb-3 flex h-full pt-1">
-                <Dropdown class="w-full">
-                    <template #1>
-                        <PocketIcon
-                            :pocket="pocket"
-                            class="size-9 rounded-full" />
-                    </template>
-                    <template #2>
-                        <span class="grow text-left">{{ pocket.name }}</span>
-                    </template>
-                </Dropdown>
-            </div>
-        </template>
+        </header>
 
         <div
             id="pocket-contents"

@@ -21,12 +21,16 @@ const dataValue = ref()
                     title="Selected Champions"
                     description="Drag champions up, add from the sidebar and context menus, or quick search by pressing the empty slot right here."
                     class="">
-                    <div class="relative">
-                        <div class="absolute top-1.5 left-1.5 z-10 size-16">
+                    <div class="pointer-events-none relative">
+                        <div
+                            class="before:border-precision after:bg-precision pointer-events-none absolute z-10 size-27 rounded-lg before:absolute before:top-1 before:left-1 before:z-0 before:m-auto before:size-[90%] before:rounded-xl before:border-3 before:inset-shadow-sm before:inset-shadow-black">
+                            <icon
+                                icon="octicon:feed-star-16"
+                                class="text-precision/80 border-precision inset-shadow-precision absolute bottom-0 left-[40%] z-0 size-6 rounded-full border bg-black bg-clip-border bg-blend-screen inset-shadow-sm" />
                             <video-background
-                                src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-tft/global/default/videos/claimable-sparkles-free.webm"
+                                src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-tft/global/default/videos/claimable-sparkles-premium.webm"
                                 style="height: 100%"
-                                class="bg-center"></video-background>
+                                class="pointer-events-none size-full bg-center"></video-background>
                         </div>
                     </div>
                     <SelectedChampions
@@ -77,12 +81,6 @@ const dataValue = ref()
                         </ScrollArea>
                     </CardContent>
                 </Card>
-            </div>
-        </template>
-
-        <template #panel2>
-            <div class="h-full w-[97%] justify-end justify-items-end pl-6">
-                <ChampionSidebar :champion="ts.selectedChampion" />
             </div>
         </template>
     </Layout2>

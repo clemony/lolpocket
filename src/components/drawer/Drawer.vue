@@ -22,7 +22,7 @@ const side = computed(() => {
             class="pt-3 focus:outline-hidden"
             :class="{
                 'justify-center px-[8%]': side == 'bottom',
-                'h-screen max-h-screen items-start overflow-hidden pr-8 pl-16':
+                'h-screen max-h-screen max-w-127 items-start overflow-hidden pr-10 pl-12':
                     side == 'right',
             }"
             @openAutoFocus.prevent>
@@ -30,7 +30,7 @@ const side = computed(() => {
                 class="mt-6"
                 :class="{
                     'w-1/2 pr-32': side == 'bottom',
-                    'max-w-130 items-start': side == 'right',
+                    'items-start': side == 'right',
                 }">
                 <DrawerTitle>
                     {{ drawer.title }}

@@ -6,8 +6,18 @@ import { newPocketDrawer } from '@components/drawer/data'
 import { toggleDrawerState } from '@utils/utils'
 
 const ps = usePocketStore()
-</script>
 
+const list = [
+    { name: 'All', id: 'tableAll', icon: '', link: 'table' },
+    {
+        name: 'Pinned',
+        id: 'tablePinned',
+        icon: 'teenyicons:pin-alt-outline',
+        link: 'home',
+    },
+    { name: 'this tab', link: 'home' },
+]
+</script>
 <template>
     <PageLayout class="pb-4">
         <template #header>Pockets</template>
@@ -58,9 +68,53 @@ const ps = usePocketStore()
                 </div>
             </span>
         </template>
+        <LayoutSpacer />
 
-        <PocketTable />
+        <div class="flex">
+            <div v-for="tab in list" class="size-fit">
+                <RouterLink
+                    :to="{ name: tab.link }"
+                    class="relative flex h-12 w-44 items-center justify-center"
+                    exactActiveClass="tabby-right bg-b1 before:absolute before:shadow-pretty border-x-b2 border-t-b2 border-b-0 rounded-t-xl border shadow-warm">
+                    {{ tab.name }}
+                </RouterLink>
+            </div>
+        </div>
+
+        <PocketTable :data="ps.pockets" />
     </PageLayout>
 </template>
 
-<style></style>
+<style>
+.tabby-right:not(last-child):before,
+.tabby-right:not(last-child):after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    mask-image: linear-gradient(to top, red, red),
+        radial-gradient(circle 15px at center, green 80%, transparent 81%);
+    mask-size:
+        12px 12px,
+        100%;
+    mask-position:
+        bottom left,
+        center;
+    mask-repeat: no-repeat, repeat;
+    mask-composite: subtract;
+}
+
+.tabby-right:not(last-child):before,
+.tabby-left:not(first-child):before {
+    width: 24px;
+    height: 24px;
+    background-color: var(--b2);
+}
+
+.tabby-right:not(last-child):after,
+.tabby-left:not(first-child):after {
+    width: 23px;
+    height: 23px;
+    background-color: var(--b1);
+}
+</style>

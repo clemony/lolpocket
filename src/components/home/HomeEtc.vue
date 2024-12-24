@@ -37,16 +37,16 @@ const data = [
 <template>
     <div
         class="bg-neutral text-nc sticky top-0 left-0 !z-0 flex h-[100vh] w-full flex-col items-center justify-center px-10">
-        <Parallaxy :speed="120" axis="x">
-            <div>
-                <h2 class="!text-12 mb-38 justify-self-start px-32">
-                    Additional Tools.
-                </h2>
-            </div>
-        </Parallaxy>
+        <div>
+            <h2 class="!text-12 mb-38 justify-self-start px-32">
+                Additional Tools.
+            </h2>
+        </div>
 
-        <div class="grid w-[85%] grid-cols-4 items-start gap-18">
-            <div v-for="(item, i) in data" class="grid items-start p-6">
+        <div class="flex w-[85%] flex-wrap items-start justify-evenly gap-18">
+            <div
+                v-for="(item, i) in data"
+                class="grid max-w-82 min-w-48 items-start p-6">
                 <div class="mb-5 grid w-full items-center gap-24">
                     <icon
                         :icon="item.icon"

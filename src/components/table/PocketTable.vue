@@ -182,14 +182,13 @@ const genIsOpen = ref(true)
 </script>
 
 <template>
-    <LayoutSpacer />
     <ResizablePanelGroup direction="vertical" as-child>
         <Card
-            class="relative ml-2 size-full max-h-[84.5%] max-w-[98%] overflow-hidden rounded-xl">
+            class="relative mx-6 ml-2 size-full max-h-[84.5%] max-w-[98%] overflow-hidden rounded-xl">
             <ResizablePanel as-child>
                 <ag-grid-vue
                     :theme="pocketTheme"
-                    class="top-grid l h-1/2 w-full items-center bg-transparent!"
+                    class="top-grid l hidden h-1/2 w-full items-center bg-transparent!"
                     ref="pinnedGrid"
                     @grid-ready="onPinnedReady"
                     :columnDefs="columnDefs"
@@ -261,7 +260,7 @@ const genIsOpen = ref(true)
     --ag-card-shadow: var(--ag-popup-shadow);
 
     --ag-selected-row-background-color: var(--b2) / 0.4;
-    --ag-row-height: 58px;
+    --ag-row-height: 65px;
 }
 
 .bottom-grid,

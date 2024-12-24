@@ -52,20 +52,9 @@ const keystone = computed(() => {
                     :class="runeColors(runeSet)">
                     <div
                         class="from-b1/90 to-b1/40 grid size-full place-items-center rounded-full bg-linear-to-br p-1 backdrop-blur-md">
-                        <KinesisContainer
-                            :disabled="as.reducedMotion == true"
-                            :perspective="100"
-                            :duration="200"
-                            class="group flex size-full items-center">
-                            <KinesisElement
-                                type="depth"
-                                :strength="6"
-                                class="group flex size-full items-center">
-                                <img
-                                    :src="keystone.img"
-                                    class="drop-shadow-softer shrink-0 object-contain transition-all duration-200 hover:drop-shadow-sm" />
-                            </KinesisElement>
-                        </KinesisContainer>
+                        <img
+                            :src="keystone.img"
+                            class="drop-shadow-softer shrink-0 object-contain transition-all duration-200 hover:drop-shadow-sm" />
                     </div>
                 </RouterLink>
             </template>

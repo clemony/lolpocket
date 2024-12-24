@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Item } from 'types'
 import { useAccountStore } from '@stores/accountStore'
+import { getPocket } from '@utils/pocketUtilities'
 
 const props = defineProps<{
     params: {
@@ -19,7 +20,9 @@ const props = defineProps<{
 }>()
 
 const as = useAccountStore()
-const pocket = ref(props.params.data)
+const pocket = computed(() => {
+    return getPocket(props.params.data.key)
+})
 
 const starredItems = computed(() => {
     return pocket.value.items[0].itemSets[pocket.value.items[0].starred].items
@@ -57,7 +60,6 @@ const box = computed(() => {
                 <CmOptionItems :pocket="pocket" />
             </template>
         </PocketMenu>
-        <RouterLink :to="`/pocket/${pocket.key}/items`">hi</RouterLink>
     </div>
 </template>
 

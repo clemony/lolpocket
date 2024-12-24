@@ -59,17 +59,17 @@ export const links: navData = [
                 open: true,
                 items: [
                     {
-                        name: 'LoLalytics',
+                        name: 'Lolalytics',
                         url: 'https://lolalytics.com',
                         icon: '/img/logos/lolalytics.webp',
                     },
                     {
-                        name: 'OP.GG',
+                        name: 'op.gg',
                         url: 'https://www.op.gg',
                         icon: '/img/logos/opgg2.webp',
                     },
                     {
-                        name: 'U.GG',
+                        name: 'u.gg',
                         url: 'https://u.gg',
                         icon: '/img/logos/ugg2.webp',
                     },
@@ -86,5 +86,56 @@ export const links: navData = [
                 ],
             },
         ],
+    },
+]
+
+export const settingLinks: navData = [
+    {
+        name: 'General',
+        url: 'general',
+        icon: '',
+    },
+    {
+        name: 'appearance',
+        url: 'appearance',
+        icon: '',
+    },
+    {
+        name: 'account',
+        url: 'account',
+        icon: '',
+    },
+    {
+        name: 'hotkeys',
+        url: 'hotkeys',
+        icon: '',
+    },
+]
+
+export const infoLinks = [
+    {
+        name: 'Docs',
+        url: 'docs',
+        type: 'i',
+    },
+    {
+        name: 'About',
+        url: 'about',
+        type: 'i',
+    },
+    {
+        name: 'contact@lolpocket.win',
+        url: '',
+        type: 'ex',
+    },
+    {
+        name: 'support@lolpocket.win',
+        url: '',
+        type: 'ex',
+    },
+    {
+        name: 'Discord',
+        url: 'https://discord.gg/Jzuu7bYTZY',
+        type: 'ex',
     },
 ]

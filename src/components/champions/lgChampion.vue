@@ -20,25 +20,19 @@ const champ = computed(() => {
 </script>
 
 <template>
-    <Skeleton v-show="!isImageLoaded" class="h-inherit w-full rounded-xl" />
-
     <div
-        v-show="isImageLoaded"
         class="h-inherit border-neutral/20 bg-b2/60 overflow-hidden rounded-xl border bg-clip-border">
-        <KinesisContainer
-            v-show="isImageLoaded"
-            :perspective="100"
+        <div
             class="h-inherit shadow-inset-sm animate-in fade-in-0 size-full overflow-hidden duration-700">
-            <KinesisElement
+            <div
                 v-if="champ"
                 type="depth"
                 :strength="1"
                 class="relative z-0 size-full">
-                <img
-                    :src="`/img/champions/splash/${clean(champ)}_0.webp`"
-                    @load="imageLoaded()"
+                <LoadImg
+                    :url="`/img/champions/splash/${clean(champ)}_0.webp`"
                     class="object-none object-[50%_25%]" />
-            </KinesisElement>
+            </div>
 
             <div v-if="champ" class="absolute right-3 bottom-2.5">
                 <Badge
@@ -46,7 +40,7 @@ const champ = computed(() => {
                     {{ champ }}
                 </Badge>
             </div>
-        </KinesisContainer>
+        </div>
     </div>
 </template>
 
