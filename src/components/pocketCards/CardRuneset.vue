@@ -32,7 +32,7 @@ const runes = runes1.concat(runes2)
 </script>
 <template>
     <div
-        class="shadow-inset relative flex w-full justify-evenly rounded-full p-2 backdrop-brightness-95 backdrop-saturate-150"
+        class="relative flex w-full justify-evenly rounded-full p-2 inset-shadow-sm backdrop-brightness-95 backdrop-saturate-130"
         :style="{
             /* backgroundColor: `var(--${set.primary}-light)`, */
             /*   boxShadow: `0px 2px 5px 0px var(--${set.primary}), 0px 1px 1px 0px var(--${set.primary}-light))` */
@@ -53,7 +53,7 @@ const runes = runes1.concat(runes2)
                     }" />
                 <ShadowedPlaceholder
                     v-else
-                    class="border-dark-1/15 z-0 size-full rounded-full bg-neutral-200"
+                    class="border-dark-1/15 bg-light-2 z-0 size-full rounded-full"
                     :style="{
                         /*   backgroundColor: `var(--${set.primary}-light)`, */
                     }" />

@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-
+import { usePocketStore } from '@stores/pocketStore'
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
+const ps = usePocketStore()
 import type { pocket } from 'types'
 
 const props = defineProps<{
@@ -11,36 +14,71 @@ const props = defineProps<{
     icon?: string
 }>()
 
-const data = props.data
+const dataKey = computed(() => {
+    console.log('💠 - dataKey - props.data.length:', props.data.length)
+    return props.title + 'key' + props.data.length
+})
+
+const dataLength = computed(() => {
+    console.log('💠 - dataKey - props.data.length:', props.data.length)
+    return props.title + 'LengthKey' + props.data.length
+})
+
+const open = ref()
 </script>
 
 <template>
     <SidebarMenu>
-        <SidebarMenuItem class="group">
+        <SidebarMenuItem
+            class="group"
+            :class="{
+                '-ml-2 !grid !aspect-square !size-12 !place-items-center':
+                    !as.sidebarOpen,
+            }">
             <Collapse
                 key="pockets"
                 as-child
-                :open="title == 'pinned' ? true : false"
+                :defaultOpen="title == 'pinned' ? true : false"
                 class="group"
+                :open="open"
                 :disabled="!data.length">
                 <template #a>
                     <SidebarMenuButton
-                        size="lg"
+                        :size="as.sidebarOpen ? 'lg' : 'icon'"
                         :tooltip="title + ' Pockets'"
-                        class="text-bc pocket-icon flex items-center py-5">
-                        <Icon :icon="props.icon" :class="props.iconClass" />
-                        <span class="">
+                        class="text-bc pocket-icon flex items-center py-5"
+                        :class="{
+                            '!grid !aspect-square !size-12 !place-items-center overflow-hidden':
+                                !as.sidebarOpen,
+                        }">
+                        <Icon
+                            :icon="props.icon"
+                            :class="{
+                                '!size-5 shrink-0 object-center':
+                                    !as.sidebarOpen,
+                            }" />
+                        <span
+                            class=""
+                            :class="{
+                                '!invisible hidden !opacity-0': !as.sidebarOpen,
+                            }">
                             {{ props.title }}
                         </span>
 
-                        <SidebarMenuBadge class="mr-8">
+                        <SidebarMenuBadge
+                            class="mr-8"
+                            v-if="props.data"
+                            :key="dataLength">
                             {{ data.length }}
                         </SidebarMenuBadge>
-                        <ExpandIndicator />
+                        <ExpandIndicator
+                            :class="{
+                                '!invisible hidden !opacity-0': !as.sidebarOpen,
+                            }" />
                     </SidebarMenuButton>
                 </template>
                 <template #b>
-                    <SidebarMenuSub>
+                    <SidebarMenuSub v-if="props.data" :key="dataKey">
                         <SidebarMenuSubItem
                             v-for="pocket in data"
                             :key="pocket.key"

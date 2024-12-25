@@ -9,14 +9,19 @@ const drawer = computed(() => {
 const side = computed(() => {
     return drawer ? drawer.value.direction : ''
 })
+
+function onOpenChange() {
+    !as.drawerState ? (as.drawerValue = null) : ''
+}
 </script>
 <template>
     <DrawerRoot
-        v-if="drawer"
+        v-if="as.drawerValue"
         v-model:open="as.drawerState"
         :key="drawer.id"
         :direction="side"
-        :fixed="true">
+        :fixed="true"
+        @onOpenChange="onOpenChange">
         <DrawerOverlay class="overflow-hidden" />
         <DrawerContent
             class="pt-3 focus:outline-hidden"
@@ -40,8 +45,8 @@ const side = computed(() => {
                     :class="{ 'w-1/3': side == 'bottom' }"
                     v-html="drawer.description" />
             </DrawerHeader>
-            <component :is="drawer.component" :submitText="drawer.submitText" />
-            <DrawerFooter class="mt-0 pt-0">
+            <component :is="drawer.component" />
+            <DrawerFooter class="mt-0 pt-0" v-if="drawer.submitText">
                 <DrawerClose class="-mt-1 flex justify-end pr-24">
                     <slot name="submit-button" />
                 </DrawerClose>

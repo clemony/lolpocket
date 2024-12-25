@@ -1,10 +1,21 @@
 import { useAccountStore } from '@stores/accountStore'
+import { useTempStore } from '@stores/tempStore'
+import type { Champion } from 'types'
 
-export function toggleDrawerState(drawerData, pocket?) {
+export function toggleDrawerState(drawerData, pocket?, champion?: Champion) {
+    console.log('💠 - toggleDrawerState - champion:', champion)
+    console.log('💠 - toggleDrawerState - pocket:', pocket)
+    console.log('💠 - toggleDrawerState - drawerData:', drawerData)
     const as = useAccountStore()
 
     as.drawerValue = drawerData
-    pocket ? (as.drawerPocket = pocket) : as.drawerPocket = null
+
+    if (pocket != null) {
+        as.drawerPocket = pocket
+    } else if (champion != null) {
+        const ts = useTempStore()
+        ts.selectedChampion = champion
+    }
     as.drawerState = !as.drawerState
 }
 

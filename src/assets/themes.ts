@@ -7,7 +7,7 @@ export const themes = [
         color: 'var(--b1)',
     },
     {
-        name: 'noon',
+        name: 'sunset',
         icon: 'marketeq:mountain',
         description:
             'Creamy and easy on the eyes. Only plays Yummi so it can snack.',

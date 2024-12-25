@@ -8,8 +8,8 @@ const CardDrawer = defineAsyncComponent({
     loader: () => import('@/components/drawer/CardDrawer.vue'),
 })
 
-const ChampionSidebar = defineAsyncComponent({
-    loader: () => import('@/components/champions/ChampionSidebar.vue'),
+const ChampionDrawer = defineAsyncComponent({
+    loader: () => import('@/components/drawer/ChampionDrawer.vue'),
 })
 
 export const newPocketDrawer: drawer = {
@@ -42,7 +42,9 @@ export const cardDrawer: drawer = {
 }
 
 export const championDrawer: drawer = {
-    component: ChampionSidebar,
+    component: ChampionDrawer,
+    title: 'Champion',
+    description: 'Examine a champion and their abilities',
     direction: 'right',
-    id: 'champion',
+    id: 'championDrawer',
 }

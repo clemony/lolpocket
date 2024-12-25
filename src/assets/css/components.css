@@ -1,0 +1,63 @@
+@import 'tailwindcss';
+@import './theme.css';
+
+@utility tabby {
+    @apply bg-b1 border-x-b3 border-t-b3 z-20 rounded-t-xl border border-b-0;
+}
+@layer base {
+    .tabby-right:not(last-child):before,
+    .tabby-right:not(last-child):after {
+        content: '';
+        position: absolute;
+        left: 100%;
+        bottom: 0;
+        mask-image: linear-gradient(to top, red, red),
+            radial-gradient(circle 14px at center, green 80%, transparent 81%);
+        mask-size:
+            14px 14px,
+            100%;
+        mask-position:
+            bottom left,
+            center;
+        mask-repeat: no-repeat, repeat;
+        mask-composite: subtract;
+    }
+
+    .tabby-right:not(last-child):before,
+    .tabby-left:not(first-child):before {
+        width: 24px;
+        height: 24px;
+        background-color: var(--b3);
+    }
+
+    .tabby-right:not(last-child):after,
+    .tabby-left:not(first-child):after {
+        width: 23px;
+        height: 23px;
+        background-color: var(--b1);
+    }
+}
+
+[data-tag='Support'] {
+    background: var(--inspiration-light);
+}
+
+[data-tag='Mage'] {
+    background-color: var(--sorcery) !important;
+}
+
+[data-tag='Marksman'] {
+    background: var(--precision-light);
+}
+
+[data-tag='Assassin'] {
+    background: var(--domination-light);
+}
+
+[data-tag='Tank'] {
+    background: var(--resolve-light);
+}
+
+[data-tag='Fighter'] {
+    background: var(--orange-600) / 60;
+}

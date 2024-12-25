@@ -91,7 +91,7 @@ const layer3 = computed(() => ({
         <div :style="containerStyle" class="rounded-xl">
             <div
                 :style="isHovered ? cardStyle : null"
-                class="frounded-xl transition-all duration-300 ease-out">
+                class="rounded-xl transition-all duration-300 ease-out">
                 <label
                     class="swap swap-flip shadow-smooth relative size-full rounded-xl">
                     <input type="checkbox" class="hidden" />
@@ -109,7 +109,7 @@ const layer3 = computed(() => ({
                                 :layer2="layer2"
                                 :layer3="layer3">
                                 <menu
-                                    class="absolute right-2.5 bottom-2.5 z-10 flex items-center gap-3">
+                                    class="absolute right-2.5 bottom-2.5 z-10 flex items-center gap-3 text-white">
                                     <CardShards :pocket="pocket" />
                                     <CardSpells :pocket="pocket" />
                                 </menu>

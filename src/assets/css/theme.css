@@ -36,7 +36,8 @@
     --color-resolve: oklch(76.83% 0.0749 131.06);
     --color-resolve-light: oklch(85.55% 0.0188 127.18);
 
-    --color-inspiration: oklch(79.03% 0.0317 204.19);
+    --color-inspiration: oklch(76.93% 0.0494 204.19);
+
     --color-inspiration-light: oklch(81.95% 0.0306 207.05);
 
     --color-iron: oklch(44.16% 0.0168 35.72);
@@ -66,7 +67,8 @@
 
     --color-error: oklch(59.33% 0.1319 21.78);
 
-    --color-support: #99c4c8;
+    --color-support: oklch(76.93% 0.0494 204.19);
+
     --color-bottom: #ebcb8b;
     --color-mid: #be86b5;
     --color-jungle: #a3be8c;

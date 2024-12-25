@@ -85,7 +85,7 @@ const { toggleSidebar } = useSidebar()
                     // Adjust the padding for floating and inset variants.
                     variant === 'floating' || variant === 'inset' ?
                         'p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+calc(var(--spacing)*4)+2px)]'
-                    :   'group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=right]:border-l',
+                    :   'group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=right]:border-l group-data-[collapsible=icon]:[&_SidebarMenuButton]:size-6',
                     props.class
                 )
             "

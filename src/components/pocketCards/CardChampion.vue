@@ -34,11 +34,12 @@ const styleRevert = computed(() => ({
                     class="absolute top-[55%] left-[0%] z-0 scale-300 object-center"
                     :style="isHovered ? props.layer1 : styleRevert" />
 
-                <img
+                <video-background
                     v-if="champ"
-                    src="/img/overlay/dust.webp"
-                    class="absolute top-[30%] z-0 scale-[200%] object-center opacity-50"
-                    :style="props.layer2" />
+                    src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/videos/reward-item-claimable-glow-idle.webm"
+                    :loop="true"
+                    :style="props.layer2"
+                    class="vid pointer-events-none absolute top-0 -left-20 z-50 scale-[100%] bg-center object-center"></video-background>
                 <img
                     v-if="champ"
                     src="/img/overlay/dust.webp"
@@ -49,6 +50,10 @@ const styleRevert = computed(() => ({
     </div>
 </template>
 <style scoped>
+.vid {
+    height: 120px !important;
+    width: 250px !important;
+}
 .shape {
     --r: 8px; /* the radius */
     --s: 43px; /* the size of the cut */

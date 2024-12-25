@@ -20,7 +20,7 @@ const hs = history.state
 
 <template>
     <Menubar
-        class="bg-b1/80 absolute z-199 m-0 flex w-full items-center gap-6 overflow-hidden border-x-0 border-t-0 border-b border-b-transparent p-0 pr-4 pl-2 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center">
+        class="bg-b1/80 absolute z-199 m-0 flex w-full items-center gap-6 overflow-hidden border-x-0 border-t-0 border-b border-b-transparent !pt-2 pr-4 pl-2 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center">
         <div>
             <MenubarMenu>
                 <div class="flex items-center">
@@ -110,7 +110,7 @@ const hs = history.state
                         icon="material-symbols-light:breaking-news-outline-rounded"
                         class="size-7.25 shrink-0 stroke-2 opacity-60 group-hover:opacity-100 group-data-[state=open]:opacity-100" />
                 </MenubarTrigger>
-                <MenubarContent class="w-96">
+                <MenubarContent :side-offset="8" class="w-96">
                     <News />
                 </MenubarContent>
             </MenubarMenu>
@@ -123,7 +123,7 @@ const hs = history.state
                         class="-mt-0.75 size-5.75 shrink-0 opacity-60 group-hover:opacity-100" />
                 </MenubarTrigger>
 
-                <MenubarContent class="pl-2">
+                <MenubarContent :side-offset="8" class="pl-2">
                     <ResourcesDropdown />
                 </MenubarContent>
             </MenubarMenu>
@@ -136,7 +136,7 @@ const hs = history.state
                         class="size-6.25 shrink-0 opacity-60 group-hover:opacity-100" />
                 </MenubarTrigger>
 
-                <MenubarContent class="min-w-64">
+                <MenubarContent class="min-w-64" :side-offset="8">
                     <SettingsDropdown />
                 </MenubarContent>
             </MenubarMenu>

@@ -53,7 +53,7 @@
             .replace(/([a-z])-([a-z])/g, function (e, n, t) {
                 return n + t.toUpperCase()
             })
-            .replace(/^-/, '')
+            .replace(/^-/, '');
     }
     function a(e, n) {
         return !!~('' + e).indexOf(n)
@@ -89,7 +89,7 @@
             .replace(/([A-Z])/g, function (e, n) {
                 return '-' + n.toLowerCase()
             })
-            .replace(/^ms-/, '-ms-')
+            .replace(/^ms-/, '-ms-');
     }
     function d() {
         var e = n.body

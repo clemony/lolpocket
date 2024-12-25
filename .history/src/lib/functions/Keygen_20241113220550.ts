@@ -25,7 +25,7 @@ function cleanName(name: string): string[] {
         .replace(/[.]/g, '')
         .trim()
 
-    return cleanedName.split(/\s+/).filter(Boolean)
+    return cleanedName.split(/\s+/).filter(Boolean);
 }
 
 export function generateRandomString(): string {

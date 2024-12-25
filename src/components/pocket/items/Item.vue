@@ -3,8 +3,10 @@ import type { Item, pocket } from 'types'
 import { useTempStore } from '@stores/tempStore'
 import type { HTMLAttributes } from 'vue'
 import { addItemToSet } from '@utils/pocketUtilities'
-
+import { useDataStore } from '@stores/dataStore'
+const ds = useDataStore()
 const ts = useTempStore()
+
 const props = defineProps<{
     item: Item
     pocket?: pocket

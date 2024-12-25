@@ -10,7 +10,7 @@
     --nc: oklch(100% 0 0);
 }
 
-:is([data-theme='noon']) {
+:is([data-theme='sunset']) {
     --b1: oklch(94.5% 0.0053 106.5);
     --b2: oklch(89.95% 0.0109 76.59);
     --b3: oklch(85.05% 0.0177 67.59);

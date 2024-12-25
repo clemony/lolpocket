@@ -4,6 +4,7 @@
 @import '../animation/animations.css';
 @import './fonts.css';
 @import './utilities.css';
+@import './components.css';
 
 @plugin "daisyui" {
     themes: false;

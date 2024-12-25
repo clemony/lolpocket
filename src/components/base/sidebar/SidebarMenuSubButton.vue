@@ -7,7 +7,7 @@ import { Primitive } from 'radix-vue'
 const props = withDefaults(
     defineProps<
         PrimitiveProps & {
-            size?: 'sm' | 'md' | 'lg'
+            size?: 'sm' | 'md' | 'lg' | 'icon'
             isActive?: boolean
             class?: HTMLAttributes['class']
         }

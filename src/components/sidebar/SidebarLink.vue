@@ -5,6 +5,8 @@ import {
     SidebarMenuSubButton,
     SidebarMenuSubItem,
 } from '@components/base/sidebar'
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
 
 const props = defineProps<{
     to: string
@@ -41,26 +43,70 @@ const components = computed(() => {
         return null // Fallback for invalid type
     }
 })
+
+/* const showText = ref(true)
+watch(
+    () => as.sidebarOpen,
+    (newVal) => {
+        if (!newVal) {
+            setTimeout(() => {
+                showText.value = false
+            }, 140)
+        } else if (newVal) {
+            showText.value = true
+        }
+    }
+) */
+const open = ref(as.sidebarOpen)
+
+const size = computed(() => {
+    const open = ref(as.sidebarOpen)
+    const a =
+        open.value ? 'default'
+        : !open.value ? 'icon'
+        : 'default'
+    return a
+})
 </script>
 <template>
-    <component :is="components.item">
+    <SidebarMenuItem>
         <RouterLink
             :to="{ name: props.to, hash: props.hash }"
-            class="flex rounded-lg"
+            class="duration- flex rounded-lg transition-all"
+            :class="{
+                '-ml-2 !grid !aspect-square !size-12 !place-items-center':
+                    !as.sidebarOpen,
+            }"
             exactActiveClass="bg-b2/70">
-            <component
-                :is="components.button"
+            <SidebarMenuButton
                 class="flex"
                 size="lg"
-                :tooltip="tooltip">
-                <Icon :icon="props.icon" class="size-4.5" />
-                <span class="capitalize">{{ linkName }}</span>
+                :tooltip="tooltip"
+                :class="{
+                    '!grid !aspect-square !size-12 !place-items-center':
+                        !as.sidebarOpen,
+                }">
+                <Icon
+                    :icon="props.icon"
+                    class=""
+                    :class="{
+                        'size-4.5': as.sidebarOpen,
+                        '!size-5 shrink-0 overflow-hidden object-center':
+                            !as.sidebarOpen,
+                    }" />
+                <span
+                    class="capitalize"
+                    :class="{
+                        '!invisible hidden !opacity-0': !as.sidebarOpen,
+                    }">
+                    {{ linkName }}
+                </span>
 
                 <SidebarMenuBadge class="text-bc mr-8">
                     {{ badge }}
                 </SidebarMenuBadge>
-            </component>
+            </SidebarMenuButton>
         </RouterLink>
-    </component>
+    </SidebarMenuItem>
 </template>
 <style scoped></style>

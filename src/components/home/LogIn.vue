@@ -46,64 +46,100 @@ const callback = (response) => {
 /* const loginError = (response) => {
     console.log('Handle the response', response)
 } */
+
+const tabModel = ref('connect')
+const variant1 = computed(() => {
+    return tabModel.value == 'connect' ? 'neutral' : 'outline'
+})
+
+const variant2 = computed(() => {
+    return tabModel.value == 'email' ? 'neutral' : 'outline'
+})
 </script>
 <template>
-    <Card
-        class="!shadow-color-b3/40 !border-b3 mt-4 mt-20 h-84 overflow-hidden">
-        <Tabs default-value="connect" class="w-147">
-            <TabsList class="grid h-14 w-full grid-cols-2">
-                <TabsTrigger value="connect" class="">
-                    <div class="flex h-9 flex-nowrap items-center gap-4">
-                        <icon icon="bi:usb-c" class="size-6" />
+    <div class="mt-18 h-84">
+        <Tabs class="w-147">
+            <div class="flex items-center gap-5">
+                <Badge
+                    :variant="variant1"
+                    class="border-b3 shadow-b2 !rounded-full shadow-sm transition-all duration-300"
+                    as-child>
+                    <label
+                        class="text-bc/80 flex h-8 items-center gap-3 pr-4 pl-1"
+                        :class="{ 'text-nc': tabModel == 'connect' }">
+                        <input
+                            type="radio"
+                            class="radio radio-sm border-b3 border"
+                            :class="{ 'ring-b1': tabModel == 'connect' }"
+                            value="connect"
+                            v-model="tabModel" />
+
                         Connect
-                    </div>
-                </TabsTrigger>
+                    </label>
+                </Badge>
 
-                <TabsTrigger value="email">
-                    <div class="flex h-9 flex-nowrap items-center gap-4">
-                        <icon
-                            icon="teenyicons:at-outline"
-                            class="size-4.5 stroke-[1.5]" />
+                <Badge
+                    :variant="variant2"
+                    class="border-b3 shadow-b2 !rounded-full shadow-sm transition-all duration-300"
+                    as-child>
+                    <label
+                        class="text-bc/80 flex h-8 items-center gap-3 pr-4 pl-1"
+                        :class="{ 'text-nc': tabModel == 'email' }">
+                        <input
+                            type="radio"
+                            class="radio radio-sm border-b3 border"
+                            :class="{ 'ring-b1': tabModel == 'email' }"
+                            value="email"
+                            v-model="tabModel" />
                         Email
-                    </div>
-                </TabsTrigger>
-            </TabsList>
-            <TabsContent value="connect">
-                <CardHeader>
-                    <CardTitle>Connect</CardTitle>
-                    <CardDescription>
-                        Log in with Riot or Google account.
-                    </CardDescription>
-                </CardHeader>
-                <CardContent class="">
-                    <!--    <GoogleLogin :callback="callback" /> -->
-                </CardContent>
-            </TabsContent>
+                    </label>
+                </Badge>
+            </div>
 
-            <TabsContent value="email">
-                <CardHeader>
-                    <CardTitle>Email</CardTitle>
-                    <CardDescription>Login with email address.</CardDescription>
-                </CardHeader>
-                <CardContent class="space-y-4 px-6">
-                    <div class="space-y-3">
+            <div
+                v-if="tabModel == 'connect'"
+                class="z-0 mt-12 w-full gap-2 px-1">
+                <h3>Connect</h3>
+                <p class="mb-10">Log in with Riot or Google account.</p>
+
+                <div class="grid w-[60%] gap-4">
+                    <!--    <GoogleLogin :callback="callback" /> -->
+                    <Button variant="outline" size="lg" class="h-14 gap-4">
+                        <icon
+                            icon="simple-icons:riotgames"
+                            class="-ml-4 size-4.5" />
+                        Log in with Riot ID
+                    </Button>
+
+                    <Button variant="outline" size="lg" class="h-14 gap-4">
+                        <icon icon="mdi:google" class="-ml-3 size-4.5" />
+                        Log in with Google
+                    </Button>
+                </div>
+            </div>
+
+            <div v-if="tabModel == 'email'" class="z-0 mt-12 w-4/5 px-1">
+                <h3>Email</h3>
+                <p class="mb-10">Log in with email address.</p>
+
+                <div class="grid space-y-4">
+                    <div>
                         <Label for="username">Username</Label>
                         <Input id="username" class="border-b3 h-10" />
                     </div>
-                    <div class="space-y-1">
+                    <div>
                         <Label for="password">Password</Label>
                         <Input id="password" class="border-b3 h-10" />
                     </div>
-                </CardContent>
-                <CardFooter class="flex items-center">
-                    <Grow />
-                    <div class="-mt-4">
-                        <slot />
-                    </div>
-                    <Button size="lg" class="">Log in</Button>
-                </CardFooter>
-            </TabsContent>
+
+                    <a
+                        href=""
+                        class="text-2 mt-2 underline-offset-2 hover:underline">
+                        Forgot Password?
+                    </a>
+                </div>
+            </div>
         </Tabs>
-    </Card>
+    </div>
 </template>
 <style scoped></style>

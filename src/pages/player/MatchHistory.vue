@@ -1,7 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-    <main class="m-0 flex h-screen w-full gap-8 px-4 py-0">
+    <main
+        class="m-0 flex h-screen w-[90%] justify-between gap-8 justify-self-center px-4 py-0">
         <div class="flex w-130">
             <ScrollArea class="overflow-auto overscroll-auto rounded-none">
                 <div class="flex w-110 flex-col gap-8 px-3 pb-10">

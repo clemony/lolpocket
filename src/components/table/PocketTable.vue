@@ -1,7 +1,18 @@
 <script setup lang="ts">
-import { usePocketStore } from '@stores/pocketStore'
+import {
+    AllCommunityModule,
+    ModuleRegistry,
+    provideGlobalGridOptions,
+} from 'ag-grid-community'
 
+// Register all community features
+ModuleRegistry.registerModules([AllCommunityModule])
+
+// Mark all grids as using legacy themes
+provideGlobalGridOptions({ theme: 'legacy' })
+import { usePocketStore } from '@stores/pocketStore'
 import { AgGridVue } from 'ag-grid-vue3'
+import('ag-grid-community')
 import {
     ResizableHandle,
     ResizablePanel,
@@ -11,7 +22,7 @@ import { pocketTheme } from './gridTheme'
 import { CustomNoRowsOverlay } from './GridNoRows'
 import {
     columnDefs,
-    rowSelection,
+    rowSelectionOptions,
     defaultColDef,
     quickFilterMatcher,
     quickFilterParser,
@@ -57,10 +68,6 @@ const pinnedData = ref(ps.pinned)
 const domLayout = ref(null)
 const filter = ref()
 
-/* .then(filterInstance => {
-    filterInstance.myMethod();
-});
- */
 onBeforeMount(() => {
     domLayout.value = 'autoHeight'
 })
@@ -176,9 +183,6 @@ watch(
     },
     { deep: true }
 )
-
-const pinIsOpen = ref(true)
-const genIsOpen = ref(true)
 </script>
 
 <template>
@@ -197,10 +201,10 @@ const genIsOpen = ref(true)
                     @selection-changed="onSelectionChanged"
                     :getRowId="getRowId"
                     :rowClass="topRowClass"
-                    :rowSelection="rowSelection"
+                    :rowSelectionOptions="rowSelectionOptions"
+                    SizeColumnsToFitGridStrategy
                     :defaultColDef="defaultColDef"
                     :suppressHorizontalScroll="false"
-                    :autoSizeStrategy="autoSizeStrategy"
                     :cacheQuickFilter="true"
                     :quickFilterParser="quickFilterParser"
                     :quickFilterMatcher="quickFilterMatcher"
@@ -218,10 +222,10 @@ const genIsOpen = ref(true)
                     :rowData="rowData"
                     @selection-changed="onSelectionChanged"
                     :getRowId="getRowId"
-                    :rowSelection="rowSelection"
+                    :rowSelectionOptions="rowSelectionOptions"
                     :defaultColDef="defaultColDef"
                     :suppressHorizontalScroll="false"
-                    :autoSizeStrategy="autoSizeStrategy"
+                    SizeColumnsToFitGridStrategy
                     :cacheQuickFilter="true"
                     :quickFilterParser="quickFilterParser"
                     :quickFilterMatcher="quickFilterMatcher"
@@ -241,11 +245,11 @@ const genIsOpen = ref(true)
                         @selection-changed="onSelectionChanged"
                         :getRowId="getRowId"
                         :loading="false"
-                        :rowSelection="rowSelection"
+                        SizeColumnsToFitGridStrategy
+                        :rowSelectionOptions="rowSelectionOptions"
                         :suppressNoRowsOverlay="true"
                         :defaultColDef="defaultColDef"
-                        :suppressHorizontalScroll="false"
-                        :autoSizeStrategy="autoSizeStrategy" />
+                        :suppressHorizontalScroll="false" />
                 </div>
             </ResizablePanel>
         </Card>

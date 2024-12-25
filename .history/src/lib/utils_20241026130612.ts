@@ -16,5 +16,5 @@ export function cn(...inputs: ClassValue[]) {
         /*-------------------⟢  regex clean stuff ⟣--------------------*/ 
         
         export function clean(thing){
-    return thing.replace(/\s/g, '').replace(/\'/g, '').replace(/\./g, '')
+    return thing.replace(/\s/g, '').replace(/\'/g, '').replace(/\./g, '');
 }

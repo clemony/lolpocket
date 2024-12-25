@@ -85,36 +85,4 @@ const list = [
     </PageLayout>
 </template>
 
-<style>
-.tabby-right:not(last-child):before,
-.tabby-right:not(last-child):after {
-    content: '';
-    position: absolute;
-    left: 100%;
-    bottom: 0;
-    mask-image: linear-gradient(to top, red, red),
-        radial-gradient(circle 15px at center, green 80%, transparent 81%);
-    mask-size:
-        12px 12px,
-        100%;
-    mask-position:
-        bottom left,
-        center;
-    mask-repeat: no-repeat, repeat;
-    mask-composite: subtract;
-}
-
-.tabby-right:not(last-child):before,
-.tabby-left:not(first-child):before {
-    width: 24px;
-    height: 24px;
-    background-color: var(--b2);
-}
-
-.tabby-right:not(last-child):after,
-.tabby-left:not(first-child):after {
-    width: 23px;
-    height: 23px;
-    background-color: var(--b1);
-}
-</style>
+<style></style>

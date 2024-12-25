@@ -21,7 +21,6 @@ export const useAccountStore = defineStore(
         const reducedMotion = ref(false)
         const colorBlindMode = ref(false)
 
-        const isMinimized = ref(false)
         const sidebarOpen = ref(false)
         const defaultSidebarOpen = ref(false)
         const sidebarWidth = ref(18)
@@ -29,7 +28,7 @@ export const useAccountStore = defineStore(
 
         const drawerState = ref(false)
         const drawerValue = shallowRef(undefined as drawer)
-        const drawerPocket = ref(undefined)
+        const drawerPocket = ref(null)
 
         const cardBack = ref('/img/cards/moonfall.webp')
         const commandOpen = ref(false)

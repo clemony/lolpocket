@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import SidebarMenuButtonChild , { type SidebarMenuButtonProps
+import SidebarMenuButtonChild, {
+    type SidebarMenuButtonProps,
 } from './SidebarMenuButtonChild.vue'
 import { useSidebar } from './utils'
+import { useAccountStore } from '@stores/accountStore'
 
 defineOptions({
     inheritAttrs: false,
 })
+
+const as = useAccountStore()
 
 const props = withDefaults(
     defineProps<
@@ -34,6 +38,23 @@ const delegatedProps = computed(() => {
     const { tooltip, ...delegated } = props
     return delegated
 })
+
+const open = ref(as.sidebarOpen)
+const size = computed(() => {
+    const a =
+        open.value ? 'lg'
+        : !open.value ? 'icon'
+        : 'default'
+    return a
+})
+
+const classObject = computed(() => {
+    if (!open.value) {
+        return 'size-8 grid place-items-center !aspect-square'
+    } else {
+        return
+    }
+})
 </script>
 
 <template>
@@ -59,7 +80,7 @@ const delegatedProps = computed(() => {
             side="right"
             align="center"
             :hidden="state !== 'collapsed' || isMobile"
-            class="border-b3 invisible capitalize opacity-0"
+            class="border-b3 invisible opacity-0"
             :class="{ 'visible opacity-100': state == 'collapsed' }">
             <template v-if="typeof tooltip === 'string'">
                 {{ tooltip }}

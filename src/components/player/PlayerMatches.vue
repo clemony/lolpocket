@@ -8,7 +8,7 @@ const recentWinrate = ref(55)
 const recentMatchNum = ref(20)
 
 const color1 = computed(() => {
-    return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
+    return as.colorBlindMode ? '#99c4c8' : 'oklch(76.93% 0.0494 204.19)'
 })
 
 const datasets = [
@@ -22,7 +22,7 @@ const labels = ['Win', 'Loss']
 </script>
 <template>
     <div
-        class="grid h-22 w-full grid-cols-[2.5fr_3fr_1fr] items-center gap-3 px-2"
+        class="grid h-22 w-full max-w-[600px] grid-cols-[2.5fr_3fr_1fr] items-center gap-3 px-2"
         ref="matches">
         <div class="relative flex items-center gap-4">
             <Donut

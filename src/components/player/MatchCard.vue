@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useDataStore } from '@/stores/dataStore'
 import { useAccountStore } from '@stores/accountStore'
+import { summoner } from '@data/playerData'
 const as = useAccountStore()
 const ds = useDataStore()
 const match = {
@@ -15,15 +16,21 @@ const match = {
         },
     ],
 }
+
+function getItem(id) {
+    const a = ds.items.find((item) => item.id == id)
+    console.log('💠 - getItem - a:', a)
+    return a
+}
 </script>
 <template>
-    <Card class="px-5 py-4">
+    <Card class="max-w-[600px] px-5 py-4">
         <Collapsible class="group">
-            <div class="flex gap-5">
-                <div class="flex flex-col items-start justify-center gap-0">
+            <div class="flex gap-8">
+                <div class="flex h-full flex-col justify-start gap-1.5">
                     <Badge
                         :class="{
-                            'bg-resolve': match.playerOutcome == 'win',
+                            'bg-inspiration': match.playerOutcome == 'win',
                             'bg-domination': match.playerOutcome == 'loss',
                         }"
                         class="!text-2 mb-2 items-center gap-2 pl-2 !font-medium !tracking-wide text-white capitalize">
@@ -31,35 +38,52 @@ const match = {
 
                         {{ match.playerOutcome }}
                     </Badge>
-
-                    <p>{{ match.type[0] }}</p>
-                    <p v-if="match.type[1]">{{ match.type[1] }}</p>
+                    <div>
+                        <p>{{ match.type[0] }}</p>
+                        <p v-if="match.type[1]">{{ match.type[1] }}</p>
+                    </div>
 
                     <p class="">
                         {{ match.gameTime }}
                     </p>
                 </div>
-                <div>
-                    <div class="flex gap-4">
-                        <div class="size-18 overflow-hidden rounded-lg">
+                <div class="flex flex-col gap-2">
+                    <div class="flex gap-6">
+                        <div class="size-17 overflow-hidden rounded-lg">
                             <img
                                 :src="`/img/champions/Sona.webp`"
-                                class="size-18 scale-114" />
+                                class="size-17 scale-115" />
+                        </div>
+
+                        <div class="grid h-full">
+                            <p>
+                                {{ summoner.recentMatches[0].kda }}
+                            </p>
+                            <p class="text-2 text-bc/60 font-medium">
+                                {{
+                                    summoner.recentMatches[0].kdaRatio.toFixed(
+                                        2
+                                    )
+                                }}
+                                KDA
+                            </p>
                         </div>
                     </div>
-
-                    <div class="flex gap-1">
-                        <template v-for="index in 6" :key="index">
-                            <ShadowedPlaceholder class="size-10" />
-                        </template>
+                    <div class="flex gap-1.5">
+                        <Item :item="getItem(3870)" class="size-11" />
+                        <Item :item="getItem(3158)" class="size-11" />
+                        <Item :item="getItem(6620)" class="size-11" />
+                        <Item :item="getItem(6617)" class="size-11" />
+                        <Item :item="getItem(3070)" class="size-11" />
+                        <Item :item="getItem(2055)" class="size-11" />
                     </div>
                 </div>
 
                 <CollapsibleTrigger
                     as-child
-                    class="group bg-base-200/30 grid h-full w-10 place-items-center">
+                    class="group bg-base-200/30 grid h-full w-7 place-items-center">
                     <ExpandIndicator
-                        class="[&_svg]:!size-5 [&_svg]:!shrink-0" />
+                        class="[&_svg]:!size-4 [&_svg]:!shrink-0" />
                 </CollapsibleTrigger>
             </div>
             <CollapsibleContent as-child>

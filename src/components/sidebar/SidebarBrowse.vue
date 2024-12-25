@@ -2,7 +2,17 @@
 import { useQuery } from '@pinia/colada'
 import { navGroup, navItem } from 'types'
 import LinksJson from '@data/databaseLinks.json'
-console.log('💠 - LinksJson:', LinksJson)
+import { useAccountStore } from '@stores/accountStore'
+const as = useAccountStore()
+
+const size = computed(() => {
+    const open = ref(as.sidebarOpen)
+    return (
+        open ? 'lg'
+        : !open ? 'icon'
+        : 'default'
+    )
+})
 </script>
 <template>
     <SidebarGroup>
@@ -15,11 +25,32 @@ console.log('💠 - LinksJson:', LinksJson)
                 as-child
                 :default-open="section.open"
                 class="group">
-                <SidebarMenuItem>
+                <SidebarMenuItem
+                    :class="{
+                        '-ml-2 !grid !aspect-square !size-12 !place-items-center':
+                            !as.sidebarOpen,
+                    }">
                     <CollapsibleTrigger as-child class="group">
-                        <SidebarMenuButton size="lg" :tooltip="section.name">
-                            <icon :icon="section.icon" />
-                            <span class="capitalize">{{ section.name }}</span>
+                        <SidebarMenuButton
+                            :size="as.sidebarOpen ? 'lg' : 'icon'"
+                            :tooltip="section.name"
+                            :class="{
+                                '!grid !aspect-square !size-12 !place-items-center overflow-hidden':
+                                    !as.sidebarOpen,
+                            }">
+                            <icon
+                                :icon="section.icon"
+                                :class="{
+                                    'mt-3.5 -ml-6.25 !size-5 shrink-0':
+                                        !as.sidebarOpen,
+                                }" />
+                            <span
+                                class="capitalize"
+                                :class="{
+                                    '!invisible !opacity-0': !as.sidebarOpen,
+                                }">
+                                {{ section.name }}
+                            </span>
                             <ExpandIndicator />
                         </SidebarMenuButton>
                     </CollapsibleTrigger>

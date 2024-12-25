@@ -13,8 +13,23 @@ function onChange() {
     visible.value = true
     setTimeout(() => {
         visible.value = false
-    }, 2000)
+    }, 2200)
 }
+
+const bg = [
+    {
+        name: 'ahri',
+        url: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/loot/video/open_cm_outro.webm',
+    },
+    {
+        name: 'sona',
+        url: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sona/skins/skin06/animatedsplash/sona_skin6_centered.webm',
+    },
+    {
+        name: 'udyr',
+        url: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/udyr/skins/skin03/animatedsplash/udyr_skin3_centered.webm',
+    },
+]
 </script>
 <template>
     <div class="size-screen sticky top-0 left-0 z-0 grid grid-cols-2">
@@ -55,7 +70,7 @@ function onChange() {
                 <Button
                     variant="outline"
                     size="lg"
-                    class="hover:bg-neutral hover:text-nc shadow-b3/50 w-fit self-start overflow-hidden shadow-sm transition-all duration-200"
+                    class="hover:bg-neutral border-b2 hover:text-nc shadow-b3/50 w-fit self-start overflow-hidden shadow-sm transition-all duration-200"
                     as-child>
                     <label>
                         <input

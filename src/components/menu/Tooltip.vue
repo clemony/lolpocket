@@ -7,9 +7,11 @@ const props = withDefaults(
         dark?: boolean
         align?: any
         sideOffset?: number
+        side?: any
     }>(),
     {
         align: 'start',
+        side: 'bottom',
     }
 )
 
@@ -27,14 +29,14 @@ const width = useElementSize(contents)
                     cn(
                         'text-medium text-2 shadow-pretty border-b2 flex max-w-44 shrink rounded-lg text-wrap',
                         {
-                            'border-neutral bg-neutral/70 text-bc backdrop-blur-md':
+                            'border-neutral bg-neutral/90 text-nc backdrop-blur-md':
                                 props.dark,
                         },
                         props.class
                     )
                 "
                 :style="{ width: width + 'px' }"
-                side="bottom"
+                :side="props.side"
                 :sideOffset="props.sideOffset"
                 :align="props.align">
                 <p ref="contents" class="flex shrink">{{ content }}</p>

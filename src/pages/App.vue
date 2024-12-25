@@ -64,7 +64,7 @@ const open = ref(as.sidebarOpen)
         class="bg-b1 relative size-full backdrop-brightness-[96%] transition-all duration-200">
         <MainMenubar />
         <Sidebar :collapsible="as.sidebarCollapsible" class="justify-center">
-            <SidebarContent class="pt-16">
+            <SidebarContent class="pt-14">
                 <SidebarAccount />
                 <ScrollArea class="!overflow-auto !overscroll-contain">
                     <SidebarPocketDisplays />

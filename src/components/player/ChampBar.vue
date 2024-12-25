@@ -35,7 +35,7 @@ const b = computed(() => {
 })
 
 const color1 = computed(() => {
-    return as.colorBlindMode ? '#99c4c8' : '#a3be8c'
+    return 'oklch(76.93% 0.0494 204.19)'
 })
 
 const chartData: ChartData<'bar'> = {

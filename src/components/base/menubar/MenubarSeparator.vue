@@ -22,6 +22,6 @@ const forwardedProps = useForwardProps(delegatedProps)
 
 <template>
     <MenubarSeparator
-        :class="cn('bg-b2/60 -mx-1 my-1 h-px', props.class)"
+        :class="cn('bg-b2 -mx-1 my-1 h-px', props.class)"
         v-bind="forwardedProps" />
 </template>

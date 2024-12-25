@@ -1,5 +1,23 @@
 import { navData } from 'types'
 
+export const pocketLinks = [
+    {
+        name: 'table',
+        url: 'table',
+        icon: '',
+    },
+    {
+        name: 'cards',
+        url: 'cards',
+        icon: '',
+    },
+    {
+        name: 'calculator',
+        url: 'calculator',
+        icon: '',
+    },
+]
+
 export const links: navData = [
     {
         name: 'Database',
@@ -122,6 +140,11 @@ export const infoLinks = [
         name: 'About',
         url: 'about',
         type: 'i',
+    },
+    {
+        name: 'Github',
+        url: 'https://github.com/clemony/lolpocket',
+        type: 'ex',
     },
     {
         name: 'contact@lolpocket.win',

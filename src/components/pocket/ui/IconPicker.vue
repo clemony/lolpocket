@@ -48,6 +48,12 @@ function handleChange(icon) {
 }
 
 const isShown = props.isShown
+
+const regex = /\.webp/g
+const iconImg = computed(() => {
+    const match = selectedIcon.value.match(regex) ? true : false
+    return match
+})
 </script>
 
 <template>
@@ -58,55 +64,84 @@ const isShown = props.isShown
             Icon
         </h4>
         <div class="grid gap-3 pr-0">
-            <Label class="">Preview</Label>
-            <Button
-                size="icon"
-                :style="{
-                    backgroundColor: bgColor,
-                    color: iconColor,
-                }"
-                class="size-15 self-center p-4.5 inset-shadow-sm">
-                <icon :icon="selectedIcon" class="size-full" />
+            <Label class="mb-px">Preview</Label>
+            <Button size="icon" class="size-14.5 overflow-hidden">
+                <div v-if="iconImg" class="grid size-full place-items-center">
+                    <img :src="selectedIcon" class="scale-[115%]" />
+                </div>
+
+                <div
+                    v-else
+                    class="grid size-full place-items-center !p-3"
+                    :style="{
+                        backgroundColor: bgColor,
+                        color: iconColor,
+                    }">
+                    <icon
+                        :style="{ color: iconColor }"
+                        :icon="`${selectedIcon}`"
+                        class="size-full object-contain" />
+                </div>
             </Button>
         </div>
         <div class="grid gap-3 justify-self-end overflow-y-auto">
             <Label class="">Colors</Label>
             <div class="flex gap-4">
                 <DropdownMenu>
-                    <DropdownMenuTrigger class="rounded-md">
-                        <Button
-                            variant="outline"
-                            size="icon"
-                            class="hover:border-neutral/60 size-15 inset-shadow-sm transition-colors duration-300"
-                            :style="{
-                                backgroundColor: bgColor,
-                                color: bgColor,
-                            }">
-                            <icon
-                                icon="mingcute:color-picker-fill"
-                                class="size-7 contrast-[600%] grayscale invert saturate-0" />
-                        </Button>
-                    </DropdownMenuTrigger>
+                    <Tooltip
+                        :disabled="!iconImg"
+                        dark
+                        align="center"
+                        side="top"
+                        content="Color not available for image type">
+                        <DropdownMenuTrigger
+                            class="rounded-md"
+                            :disabled="iconImg">
+                            <Button
+                                :disabled="iconImg"
+                                variant="outline"
+                                size="icon"
+                                class="hover:border-neutral/60 group size-15 inset-shadow-sm transition-colors duration-300"
+                                :style="{
+                                    backgroundColor: bgColor,
+                                    color: bgColor,
+                                }">
+                                <icon
+                                    icon="mingcute:color-picker-fill"
+                                    class="size-7 contrast-[600%] grayscale invert saturate-0 group-disabled:opacity-60" />
+                            </Button>
+                        </DropdownMenuTrigger>
+                    </Tooltip>
                     <DropdownMenuContent>
                         <ColorPicker v-model:bgColor="bgColor" />
                     </DropdownMenuContent>
                 </DropdownMenu>
 
                 <DropdownMenu>
-                    <DropdownMenuTrigger class="rounded-md">
-                        <Button
-                            variant="outline"
-                            size="icon"
-                            class="hover:border-neutral/60 size-15 inset-shadow-sm transition-colors duration-300"
-                            :style="{
-                                backgroundColor: iconColor,
-                                color: iconColor,
-                            }">
-                            <icon
-                                icon="mingcute:color-picker-fill"
-                                class="size-7 contrast-[600%] grayscale invert saturate-0" />
-                        </Button>
-                    </DropdownMenuTrigger>
+                    <Tooltip
+                        :disabled="!iconImg"
+                        dark
+                        align="center"
+                        side="top"
+                        content="Color not available for image type">
+                        <DropdownMenuTrigger
+                            class="rounded-md"
+                            :disabled="iconImg">
+                            <Button
+                                variant="outline"
+                                size="icon"
+                                :disabled="iconImg"
+                                class="hover:border-neutral/60 group size-15 inset-shadow-sm transition-colors duration-300"
+                                :style="{
+                                    backgroundColor: iconColor,
+                                    color: iconColor,
+                                }">
+                                <icon
+                                    icon="mingcute:color-picker-fill"
+                                    class="size-7 contrast-[600%] grayscale invert saturate-0 group-disabled:opacity-60" />
+                            </Button>
+                        </DropdownMenuTrigger>
+                    </Tooltip>
                     <DropdownMenuContent>
                         <ColorPicker v-model:iconColor="iconColor" />
                     </DropdownMenuContent>
@@ -129,7 +164,7 @@ const isShown = props.isShown
     <div
         v-if="modelValue == 'symbols'"
         value="symbols"
-        class="border-b2/70 flex h-[calc(100%-580px)] w-full flex-row flex-wrap justify-evenly gap-2 overflow-auto rounded-lg border px-2 py-4 inset-shadow-xs">
+        class="max-h-inherit bg-b2/30 border-b2/70 max-h-inherit flex h-[45%] w-full flex-row flex-wrap justify-evenly gap-2 overflow-y-scroll rounded-lg border px-2 py-4 inset-shadow-xs">
         <Label
             variant="ghost"
             v-for="icon in iconStore"
@@ -160,37 +195,34 @@ const isShown = props.isShown
     <div
         v-if="modelValue == 'champions'"
         value="champions"
-        class="max-h-[calc(100%-740px) h-[calc(100%-740px)] h-full">
-        <div
-            class="bg-b2/30 border-b2/70 flex w-full flex-row flex-wrap justify-evenly gap-2 overflow-y-scroll rounded-lg border px-2 py-4 inset-shadow-xs">
-            <Label
-                variant="outline"
-                v-for="champion in ds.champions"
-                class="shadow-warm has-checked:bg-b2/60 border-b2 grid aspect-square size-14 place-items-center self-center overflow-hidden rounded-lg border">
-                <input
-                    v-if="pocket"
-                    type="radio"
-                    name="iconPicker"
-                    v-model="pocket.icon"
-                    :value="`/img/champions/${champion.name}.webp`"
-                    class="peer hidden" />
+        class="max-h-inherit bg-b2/30 border-b2/70 max-h-inherit flex h-[45%] w-full flex-row flex-wrap justify-evenly gap-2 overflow-y-scroll rounded-lg border px-2 py-4 inset-shadow-xs">
+        <Label
+            variant="outline"
+            v-for="champion in ds.champions"
+            class="shadow-warm has-checked:bg-b2/60 border-b2 grid aspect-square size-14 place-items-center self-center overflow-hidden rounded-lg border">
+            <input
+                v-if="pocket"
+                type="radio"
+                name="iconPicker"
+                v-model="pocket.icon"
+                :value="`/img/champions/${clean(champion.name)}.webp`"
+                class="peer hidden" />
 
-                <input
-                    v-else
-                    type="radio"
-                    name="iconPicker"
-                    v-model="selectedIcon"
-                    :value="`/img/champions/${champion.name}/.webp`"
-                    class="peer hidden"
-                    @change="
-                        handleChange(`/img/champions/${champion.name}.webp`)
-                    " />
+            <input
+                v-else
+                type="radio"
+                name="iconPicker"
+                v-model="selectedIcon"
+                :value="`/img/champions/${clean(champion.name)}.webp`"
+                class="peer hidden"
+                @change="
+                    handleChange(`/img/champions/${clean(champion.name)}.webp`)
+                " />
 
-                <img
-                    :src="`/img/champions/${clean(champion.name)}.webp`"
-                    class="size-14 scale-110" />
-            </Label>
-        </div>
+            <img
+                :src="`/img/champions/${clean(champion.name)}.webp`"
+                class="size-14 scale-110" />
+        </Label>
     </div>
 </template>
 

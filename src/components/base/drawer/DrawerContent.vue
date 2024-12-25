@@ -27,7 +27,7 @@ onBeforeUpdate(async () => {
             v-bind="forwarded"
             :class="
                 cn(
-                    'bg-b1 fixed z-50 flex flex-col rounded-xl',
+                    'bg-b1 text-bc fixed z-50 flex flex-col rounded-xl',
                     props.class,
                     {
                         'inset-x-0 bottom-0 mt-24 h-auto overflow-hidden':

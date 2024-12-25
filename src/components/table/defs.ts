@@ -1,6 +1,7 @@
 export const columnDefs = ref([
     {
         headerName: '',
+        field: 'checkbox header',
         colId: 'checkbox',
         headerComponent: 'TableCheckboxHeader',
         width: 50,
@@ -9,6 +10,8 @@ export const columnDefs = ref([
         pinned: 'right',
         cellRenderer: 'TableCheckbox',
         filter: false,
+        valueFormatter: '',
+        filterValueGetter: '',
     },
 
     {
@@ -16,7 +19,6 @@ export const columnDefs = ref([
         field: 'name',
         cellRenderer: 'TableName',
         width: 250,
-        //hide: true,
         maxWidth: 300,
         minWidth: 85,
         cellClass: 'm-0! px-2',
@@ -114,18 +116,6 @@ export const columnDefs = ref([
     },
 
     {
-        headerName: 'Notes',
-        hide: true,
-        width: 400,
-        maxWidth: 500,
-        minWidth: 50,
-        cellRenderer: 'pocketNotes',
-        filterValueGetter: (params) => {
-            const notes = params.data.notes.split(' ')
-            return notes
-        },
-    },
-    {
         headerName: 'Tags',
         width: 200,
         maxWidth: 500,
@@ -166,8 +156,8 @@ export const iconColDef = {
     },
 }
 
-export const rowSelection = {
-    mode: 'multiRow',
+export const rowSelectionOptions = {
+    mode: 'multiple',
     checkboxes: false,
     enableClickSelection: false,
     hideDisabledCheckboxes: true,

@@ -4,8 +4,8 @@ const as = useAccountStore()
 import { useTempStore } from '@stores/tempStore'
 import { VueDraggable } from 'vue-draggable-plus'
 import { useDataStore } from '@stores/dataStore'
-import type { pocket } from 'types'
-import ChampionSidebar from '@components/champions/ChampionSidebar.vue'
+import type { Champion, pocket } from 'types'
+import { championDrawer } from '@components/drawer/data'
 import { toggleDrawerState } from '@utils/utils'
 
 const ds = useDataStore()
@@ -118,13 +118,9 @@ watch(
                 ref="list"
                 class="size-22 shrink-0 overflow-hidden rounded-lg"
                 dragClass="setDrag"
-                @click="toggleDrawerState(ChampionSidebar)">
-                <input
-                    type="radio"
-                    :value="champion"
-                    v-model="ts.selectedChampion"
-                    class="peer hidden" />
-            </Champion>
+                @click="
+                    toggleDrawerState(championDrawer, null, champion)
+                "></Champion>
         </TransitionGroup>
 
         <div class="aspect-square size-[68px]"></div>

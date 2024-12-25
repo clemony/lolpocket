@@ -171,9 +171,9 @@ export const useDataStore = defineStore('dataStore', () => {
             wiki: data.wiki,
             title: data.title,
             tags:
-                /* typeof data.tags === 'string' ?
-                    data.taas.split(',').map((tag) => tag.trim())
-                :  */ data.tags || [],
+                typeof data.tags === 'string' ?
+                    data.tags.split(',').map((tag) => tag.trim())
+                :   data.tags || [],
             type: data.type,
             abilities: {
                 passive: {

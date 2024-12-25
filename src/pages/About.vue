@@ -11,48 +11,62 @@ const icons = [
     'teenyicons:eslint-outline',
     'simple-icons:shadcnui',
 ]
+
+const hoverClass =
+    'hover:underline hover:bg-b2/35 underline-offset-2 !cursor-pointer'
 </script>
 
 <template>
-    <div class="p-8 pt-20">
+    <div class="p-8 pt-30">
+        <!-- prettier-ignore -->
+        <div class="flex">
+
+        <Grow />
+        <div class="flex flex-col gap-6">
         <div
-            class="mockup-code bg-neutral text-nc *:ws-nowrap w-2/5 min-w-[200px] rounded-xl leading-loose font-normal">
+            class="mockup-code bg-neutral text-nc *:ws-nowrap w-2/5 min-w-[400px] rounded-xl leading-loose font-normal">
             <pre
                 data-prefix="$"><code class="h-20 scale-x-110">const CatTax: cat&#60;image: popUp&#62; = {</code></pre>
             <pre data-prefix=">" class="flex">
-                <code class="flex">&nbsp; 'Clem':&nbsp;{ image:
-          <button
-            class="hover:underline hover:bg-b3/15" >&nbsp;1</button>,
-
-          <button class="hover:underline hover:bg-b3/15">&nbsp;2</button>,
-          <button class="hover:underline hover:bg-b3/15"
-          >&nbsp;3&nbsp;</button>
-          },
-      </code></pre>
-
-            <pre
+                <code class="flex leading-none pt-2">&nbsp; 'Clem':&nbsp;{ image:
+          <span :class="hoverClass" >&nbsp; 1</span>, <span :class="hoverClass">&nbsp;2</span>, <span :class="hoverClass">&nbsp;3&nbsp;</span>}, </code></pre> <pre
                 data-prefix=">"
-                class="flex items-center"><code class="flex">&nbsp; 'Nell':&nbsp;{ image:
-        <button
-          class="hover:underline hover:bg-b3/15" >&nbsp;1</button>,
-
-        <button class="hover:underline hover:bg-b3/15">&nbsp;2</button >,
-        <button class="hover:underline hover:bg-b3/15"
-        >&nbsp;3&nbsp;</button>
-        },
+                class="flex items-center"><code class="flex leading-none pt-3">&nbsp; 'Nell':&nbsp;{ image: <span
+          :class="hoverClass" >&nbsp;1</span>, <span :class="hoverClass">&nbsp;2</span >, <span :class="hoverClass" >&nbsp;3&nbsp;</span>},
     </code></pre>
-
             <pre
                 data-prefix=" "
-                class="flex"><code class="flex">&nbsp; };<span class="animate-[blink-1_1s_infinite_both] text-4">|</span>
+                class="flex"><code class="flex items-center">&nbsp; };<span class="animate-[blink-1_1s_infinite_both] text-4">|</span>
   </code></pre>
         </div>
 
-        <div class="absolute bottom-0 left-0 w-full p-8">
-            <div class="divider divider-start mt-12">MADE WITH</div>
-            <div class="grid grid-cols-2">
                 <div
-                    class="card *:text-bc/85 plb3e-items-center grid h-20 auto-cols-max grid-flow-col gap-5 rounded-xl *:size-6">
+                    class="items-end flex flex-col gap-2">
+                    <p class="">thanks for trying the app</p>
+                    <p class="inline-flex items-center gap-1">
+                        <Icon icon="typcn:heart-outline" class="size-3" />
+                        from
+                        <Icon
+                            icon="teenyicons:arrow-right-outline"
+                            class="size-3" />
+                        <span class="italic font-mono">clem & nell's</span> human
+                    </p>
+                   <p> <a
+                        href="https://github.com/clemony/lolpocket"
+                        class="mt-2 inline-flex items-center gap-1 underline transition-all duration-300 underline-offset-2 font-mono italic hover:underline">
+                        <Icon icon="ph:github-logo" />
+                        <Icon icon="ph:at" />
+                        clemony
+                    </a></p>
+                </div>
+         </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full p-8">
+            <Separator label="MADE WITH" />
+            <div class="flex">
+                <div
+                    class="card *:text-bc/85 plb3e-items-center grid auto-cols-max grid-flow-col gap-5 rounded-xl pt-16 pb-8 *:size-6">
                     <icon v-for="icon in icons" :icon="icon" />
                     <img
                         class="brightness-50 contrast-200 grayscale"
@@ -63,39 +77,16 @@ const icons = [
                         icon="logos:pinia" />
                 </div>
 
-                <div
-                    class="items-top col-start-2 grid justify-items-end font-mono">
-                    <p class="">thanks for trying the app</p>
-                    <p class="inline-flex items-center gap-1">
-                        <Icon icon="typcn:heart-outline" class="size-3" />
-                        from
-                        <Icon
-                            icon="teenyicons:arrow-right-outline"
-                            class="size-3" />
-                        <span class="italic">clem's human</span>
-                    </p>
-                    <a
-                        href="https://github.com/clemony/lolpocket"
-                        class="mt-2 inline-flex items-center gap-1 underline transition-all duration-300 hover:font-bold hover:underline">
-                        <Icon icon="ph:github-logo" />
-                        <Icon icon="ph:at" />
-                        clemony
-                    </a>
+                <Grow />
+
+                <div class="flex flex-col items-end justify-center pt-8">
+                    <p>All in game assets are the property of Riot Games.</p>
+                    <p>Riot Games is in no way affiliated with this app.</p>
+                    <p>All content is my own opinion.</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Open the modal using ID.showModal() method -->
-
-    <dialog id="catModal" class="modal">
-        <div class="modal-box">
-            <h3 class="text-4 font-bold">Hello!</h3>
-            <p class="py-4">Press ESC key or click outside to close</p>
-        </div>
-        <form method="dialog" class="modal-bb3kdrop">
-            <button>close</button>
-        </form>
-    </dialog>
 </template>
 
 <style scoped></style>

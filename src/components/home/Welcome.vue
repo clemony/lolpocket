@@ -17,7 +17,7 @@
             </div>
         </div>
 
-        <div class="w-full justify-self-start">
+        <div class="w-full space-y-3 justify-self-start">
             <div class="flex items-center gap-2">
                 <h1 class="!text-9">lolpocket</h1>
                 <span class="text-7 font-serif italic">noun</span>

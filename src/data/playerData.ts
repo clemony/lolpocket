@@ -150,6 +150,15 @@ export const summoner = {
         // Bottom
 
         {
+            name: 'clem',
+            champion: 'sona',
+            role: 'support',
+            tag: 'cats',
+            rank: 'platinum',
+            kda: '1/3/26',
+            kdaRatio: 9,
+        },
+        {
             name: 'vortex',
             champion: 'jinx',
             role: 'bottom',
@@ -166,16 +175,6 @@ export const summoner = {
             rank: 'diamond',
             kda: '2/0/12',
             kdaRatio: 14, // (2+12)/1 (deaths treated as 1)
-        },
-
-        {
-            name: 'clem',
-            champion: 'sona',
-            role: 'support',
-            tag: 'cats',
-            rank: 'platinum',
-            kda: '1/3/26',
-            kdaRatio: 9,
         },
         {
             name: 'jungleboss',

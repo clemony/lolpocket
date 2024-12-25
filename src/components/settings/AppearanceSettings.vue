@@ -15,8 +15,8 @@ const neutrals = ['minimalist', 'aesthetic', 'nord', 'latte']
 </script>
 <template>
     <main class="w-full">
-        <LayoutSpacer class="flex items-end justify-end">hi</LayoutSpacer>
-        <div class="grid w-full grid-cols-3 gap-6 *:size-full">
+        <LayoutSpacer class="flex items-end justify-end"></LayoutSpacer>
+        <div class="grid w-full grid-cols-3 gap-6 px-2 *:size-full">
             <DisplayCard
                 v-for="theme in themes"
                 :key="theme.name"

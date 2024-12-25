@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { links, settingLinks, infoLinks } from '@data/links'
+import { links, settingLinks, infoLinks, pocketLinks } from '@data/links'
+import { newPocketDrawer } from '@components/drawer/data'
+import { toggleDrawerState } from '@utils/utils'
 
 const listClass = 'flex flex-col gap-3  min-w-44'
 
@@ -9,11 +11,27 @@ const itemClass =
 <template>
     <div class="bg-b1 text-bc flex w-full justify-center">
         <div
-            class="flex w-4/5 flex-wrap justify-evenly gap-x-[10%] gap-y-16 px-12 pt-36 pb-40">
+            class="flex w-full flex-wrap justify-evenly gap-x-10 gap-y-16 px-12 pt-36 pb-40">
+            <ul :class="listClass">
+                <h3>Tools</h3>
+                <li
+                    @click="toggleDrawerState(newPocketDrawer)"
+                    :class="itemClass">
+                    Create a Pocket
+                </li>
+                <li
+                    v-for="link in pocketLinks"
+                    class="flex items-center gap-2 capitalize">
+                    <RouterLink :to="{ name: link.url }" :class="itemClass">
+                        {{ link.name }}
+                    </RouterLink>
+                </li>
+            </ul>
+
             <template v-for="section in links">
                 <ul v-if="section.items" :class="listClass">
                     <h3>{{ section.name }}</h3>
-                    <li v-for="link in section.items">
+                    <li v-for="link in section.items" :class="itemClass">
                         {{ link.name }}
                     </li>
                 </ul>
