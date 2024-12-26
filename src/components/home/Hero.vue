@@ -1,11 +1,9 @@
 <script setup lang="ts">
-const Welcome = defineAsyncComponent(() => import('./Welcome.vue'))
-const Login = defineAsyncComponent(() => import('./Login.vue'))
+const Welcome = defineAsyncComponent(
+    () => import('@components/home/Welcome.vue')
+)
+const Login = defineAsyncComponent(() => import('@components/home/Login.vue'))
 const viewLogin = ref(false)
-
-const component = computed(() => {
-    return viewLogin ? Login : Welcome
-})
 
 const visible = ref(false)
 
