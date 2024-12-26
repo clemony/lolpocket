@@ -16,7 +16,7 @@ const visibilityChanged = (step) => (isVisible) => {
     if (step === 'step4') is4Visible.value = isVisible
 }
 const classObject =
-    '[&.was-in-viewport]:animate-fade-up [&.was-in-viewport]:animate-duration-1000 [&.was-in-viewport]:animate-ease-in-out [&.was-in-viewport]: [&.was-in-viewport]:animate-fill-both [&.was-in-viewport]:animate-once translate-y-6 opacity-0 [&.was-in-viewport]:opacity-100 '
+    '[&.was-in-viewport]:animate-fade-up [&.was-in-viewport]:animate-duration-700 [&.was-in-viewport]:animate-ease-in-out [&.was-in-viewport]: [&.was-in-viewport]:animate-fill-both [&.was-in-viewport]:animate-once translate-y-6 opacity-0 [&.was-in-viewport]:opacity-100 '
 
 // Create a ref to access the component instance
 const gameplayVideoRef = ref(null)

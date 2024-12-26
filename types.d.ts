@@ -177,30 +177,39 @@ export interface pocketRunes {
     selected: number
 }
 
-export interface RuneSet {
-    key: string
-    name: string
-    primary: string
-    keystone: Rune
-    p1: Rune
-    p2: Rune
-    p3: Rune
-    secondary: string
-    s1: Rune
-    s2: Rune
+export interface RuneTree {
+    primary: {
+        path: string
+        keystone: Rune
+        runes: {
+            1: Rune
+            2: Rune
+            3: Rune
+        }
+    }
+    secondary: {
+        path: string
+        runes: {
+            1: Rune
+            2: Rune
+        }
+    }
     shards: {
         0: Shard
         1: Shard
         2: Shard
     }
 }
+export interface RuneSet extends RuneTree {
+    key: string
+    name: string
+}
 
 export interface Rune {
     name: string
-    wiki: string
+    id: number
     tier: number
     type: string
-    img: string
     stats: string
     path: string
 }

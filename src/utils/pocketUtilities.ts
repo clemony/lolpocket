@@ -96,14 +96,23 @@ export function newRuneSet(key?) {
     const newSet = {
         key: toID(),
         name: generateRandomName() + ' Set',
-        primary: 'empty',
-        keystone: createDefaultRune(),
-        p1: createDefaultRune(),
-        p2: createDefaultRune(),
-        p3: createDefaultRune(),
-        s1: createDefaultRune(),
-        s2: createDefaultRune(),
-        secondary: 'empty',
+        primary: {
+            path: 'empty',
+            keystone: createDefaultRune(),
+            runes: {
+                1: createDefaultRune(),
+                2: createDefaultRune(),
+                3: createDefaultRune(),
+            },
+        },
+
+        secondary: {
+            path: 'empty',
+            runes: {
+                1: createDefaultRune(),
+                2: createDefaultRune(),
+            },
+        },
         shards: {
             0: createDefaultShard() as Shard,
             1: createDefaultShard() as Shard,

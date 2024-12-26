@@ -62,7 +62,7 @@ export function createDateObject() {
 
 export function createDefaultRune(): {
     name: string
-    wiki: string
+    id: number
     tier: number
     type: string
     img: string
@@ -71,7 +71,7 @@ export function createDefaultRune(): {
 } {
     return {
         name: 'empty',
-        wiki: '',
+        id: 0,
         tier: 0,
         type: '',
         img: '/img/runes/blankRune.webp',

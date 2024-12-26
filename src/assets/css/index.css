@@ -14,7 +14,6 @@
 @plugin "tailwindcss-animated";
 @plugin 'daisyui' {
     themes: false;
-    exclude: rootcolor;
 }
 
 @layer base {

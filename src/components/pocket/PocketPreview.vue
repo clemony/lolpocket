@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { pocket } from '../../../../types'
+import { pocket } from '../../../types'
 const props = defineProps<{
     pocket?: pocket
 }>()
@@ -21,7 +21,7 @@ const pocket = props.pocket
             <div class="">
                 <div
                     v-if="pocket.champions[0].starred"
-                    class="grid size-[40px] shrink-0 place-items-center overflow-hidden rounded-lg shadow-xs ring-0 ring-neutral/25">
+                    class="ring-neutral/25 grid size-[40px] shrink-0 place-items-center overflow-hidden rounded-lg ring-0 shadow-xs">
                     <img
                         :src="`/img/champions/${clean(pocket.champions[0].starred)}.webp`"
                         class="size-[40px] scale-[115%]" />

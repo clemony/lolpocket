@@ -10,7 +10,11 @@ import {
 import { cn } from '@lib/utils'
 
 const props = defineProps<
-    ContextMenuContentProps & { class?: HTMLAttributes['class'] }
+    ContextMenuContentProps & {
+        class?: HTMLAttributes['class']
+        align?: string
+        side?: string
+    }
 >()
 const emits = defineEmits<ContextMenuContentEmits>()
 
@@ -26,6 +30,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
     <ContextMenuPortal>
         <ContextMenuContent
+            as-child
             v-bind="forwarded"
             :class="
                 cn(

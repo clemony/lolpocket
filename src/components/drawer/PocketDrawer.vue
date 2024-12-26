@@ -43,9 +43,11 @@ watch(
 
 function clearForm() {
     name.value = ''
+    console.log('💠 - clearForm - name.value:', name.value)
     bgColor.value = '#000000'
     iconColor.value = '#FFFFFF'
     selectedIcon.value = 'teenyicons:folder-outline'
+    tags.value = ['']
 }
 
 function submitForm() {
@@ -68,10 +70,6 @@ function updatePocket() {
 
     pocket.value.name = name.value
     pocket.value.tags = [...tags.value]
-    /*     tags.value.forEach((tag) => {
-        pocket.value.tags.push(tag)
-    }) */
-
     pocket.value.bgColor = bgColor.value
     pocket.value.iconColor = iconColor.value
     pocket.value.icon = selectedIcon.value
@@ -88,6 +86,11 @@ onMounted(() => {
     } else {
         name.value = ''
     }
+})
+
+defineExpose({
+    clearForm,
+    name,
 })
 </script>
 

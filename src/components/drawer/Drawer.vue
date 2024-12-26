@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { DrawerClose } from '@components/base/drawer'
+import PocketDrawer from '@components/drawer/PocketDrawer.vue'
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
 
@@ -10,9 +11,20 @@ const side = computed(() => {
     return drawer ? drawer.value.direction : ''
 })
 
-function onOpenChange() {
-    !as.drawerState ? (as.drawerValue = null) : ''
-}
+const childRef = ref()
+
+watch(
+    () => as.drawerState,
+    (newVal) => {
+        if (!newVal) {
+            as.drawerValue = null
+            as.drawerPocket = null
+            childRef.value.clearForm()
+            childRef.value.name = ''
+            console.log('💠 - onOpenChange - as.drawerPocket:', as.drawerPocket)
+        }
+    }
+)
 </script>
 <template>
     <DrawerRoot
@@ -20,8 +32,7 @@ function onOpenChange() {
         v-model:open="as.drawerState"
         :key="drawer.id"
         :direction="side"
-        :fixed="true"
-        @onOpenChange="onOpenChange">
+        :fixed="true">
         <DrawerOverlay class="overflow-hidden" />
         <DrawerContent
             class="pt-3 focus:outline-hidden"
@@ -45,7 +56,7 @@ function onOpenChange() {
                     :class="{ 'w-1/3': side == 'bottom' }"
                     v-html="drawer.description" />
             </DrawerHeader>
-            <component :is="drawer.component" />
+            <component :is="drawer.component" ref="childRef" />
             <DrawerFooter class="mt-0 pt-0" v-if="drawer.submitText">
                 <DrawerClose class="-mt-1 flex justify-end pr-24">
                     <slot name="submit-button" />

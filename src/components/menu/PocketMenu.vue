@@ -26,6 +26,8 @@ const props = defineProps<{
     type: string
     class?: HTMLAttributes['class']
     contentClass?: HTMLAttributes['class']
+    align?: string
+    side?: string
 }>()
 
 const pocket = ref(props.pocket)
@@ -67,16 +69,18 @@ const pinText = computed(() => {
     <component
         :is="menuComponents?.wrapper"
         v-if="pocket"
-        :class="cn('flex items-center', props.class)">
+        :class="cn('flex items-center !p-0', props.class)">
         <component
             :is="menuComponents?.trigger"
             :class="cn('flex items-center gap-2', props.contentClass)"
-            as-chld>
+            as-child>
             <slot />
         </component>
 
         <component
             :is="menuComponents?.content"
+            :align="props.align"
+            :side="props.side"
             class="text-2 [&_svg]:size-[11px]">
             <slot name="first" />
 

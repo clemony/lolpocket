@@ -44,6 +44,10 @@ onMounted(async () => {
     })
 })
 const open = ref(as.sidebarOpen)
+function onOpenChange() {
+    open.value = as.sidebarOpen
+    open.value = as.mobileOpen
+}
 </script>
 
 <template>
@@ -59,7 +63,7 @@ const open = ref(as.sidebarOpen)
 
     <SidebarProvider
         v-model:open="as.sidebarOpen"
-        @onOpenChange="open = as.sidebarOpen"
+        @onOpenChange="onOpenChange"
         :default-open="as.defaultSidebarOpen"
         class="bg-b1 relative size-full backdrop-brightness-[96%] transition-all duration-200">
         <MainMenubar />

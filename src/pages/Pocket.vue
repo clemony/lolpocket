@@ -112,17 +112,21 @@ const header = computed(() => {
 </script>
 
 <template>
-    <PageLayout :key="pocket.key" nav>
+    <div :key="pocket.key">
         <header
-            class="bg-b1/60 mask mask-x-3 pointer-events-none absolute z-20 mt-[35px] grid h-22 w-full shrink-0 grid-cols-[1fr_4fr_2fr] items-center pt-3.5 pr-8 pl-6 backdrop-blur-md">
-            <PocketMenu type="dropdown" :pocket="pocket">
-                <Button variant="ghost" size="lg">
+            class="bg-b1/60 mask mask-x-3 absolute z-40 mt-[35px] grid h-22 w-full shrink-0 grid-cols-[1fr_4fr_2fr] items-center pt-3.5 pr-8 pl-6 backdrop-blur-md">
+            <PocketMenu type="dropdown" :pocket="pocket" align="end">
+                <Button
+                    variant="ghost"
+                    size="lg"
+                    class="group justify-start gap-4 px-2 !py-3">
                     <PocketIcon
                         :pocket="pocket"
-                        class="size-9"
-                        iconClass=" p-2 rounded-lg" />
+                        class="relative size-9"
+                        iconClass=" !p-2.25 rounded-lg " />
 
                     <h2>{{ pocket.name }}</h2>
+                    <ExpandIndicator class="" />
                 </Button>
             </PocketMenu>
 
@@ -223,7 +227,7 @@ const header = computed(() => {
                 </router-view>
             </a>
         </div>
-    </PageLayout>
+    </div>
 </template>
 
 <!------------------------⟢ style ⟣------------------------->

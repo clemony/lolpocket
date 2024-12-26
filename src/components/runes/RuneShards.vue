@@ -11,8 +11,10 @@ const ds = useDataStore()
 const ts = useTempStore()
 
 const props = defineProps<{
-    pocket: pocket
-    selected: number
+    pocket?: pocket
+    selected?: number
+
+    selectedShard?: number
 }>()
 
 const pocket = ref(getPocket(props.pocket.key))

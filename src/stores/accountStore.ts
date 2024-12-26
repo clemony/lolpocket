@@ -22,6 +22,7 @@ export const useAccountStore = defineStore(
         const colorBlindMode = ref(false)
 
         const sidebarOpen = ref(false)
+        const mobileOpen = ref(false)
         const defaultSidebarOpen = ref(false)
         const sidebarWidth = ref(18)
         const sidebarCollapsible = ref()
@@ -54,6 +55,7 @@ export const useAccountStore = defineStore(
             //sidebar
             defaultSidebarOpen,
             sidebarOpen,
+            mobileOpen,
             sidebarWidth,
             sidebarCollapsible,
 

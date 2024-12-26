@@ -24,7 +24,12 @@ function getItem(id) {
 }
 </script>
 <template>
-    <Card class="max-w-[600px] px-5 py-4">
+    <Card
+        class="max-w-[600px] bg-gradient-to-r from-transparent from-80% px-5 py-4"
+        :class="{
+            'to-inspiration-light': match.playerOutcome == 'win',
+            'to-domination-light': match.playerOutcome == 'loss',
+        }">
         <Collapsible class="group">
             <div class="flex gap-8">
                 <div class="flex h-full flex-col justify-start gap-1.5">
@@ -56,10 +61,14 @@ function getItem(id) {
                         </div>
 
                         <div class="grid h-full">
-                            <p>
-                                {{ summoner.recentMatches[0].kda }}
+                            <p class="text-4 flex gap-0.75 font-bold">
+                                <span>1</span>
+                                /
+                                <span class="text-red-700">3</span>
+                                /
+                                <span>15</span>
                             </p>
-                            <p class="text-2 text-bc/60 font-medium">
+                            <p class="text-3 text-bc/80 pb-1 font-medium">
                                 {{
                                     summoner.recentMatches[0].kdaRatio.toFixed(
                                         2

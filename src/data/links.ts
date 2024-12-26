@@ -152,11 +152,6 @@ export const infoLinks = [
         type: 'ex',
     },
     {
-        name: 'support@lolpocket.win',
-        url: '',
-        type: 'ex',
-    },
-    {
         name: 'Discord',
         url: 'https://discord.gg/Jzuu7bYTZY',
         type: 'ex',

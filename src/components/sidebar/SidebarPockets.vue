@@ -83,13 +83,13 @@ const open = ref()
                             v-for="pocket in data"
                             :key="pocket.key"
                             :class="cn('text-3')">
-                            <PocketMenu
-                                :pocket="pocket"
-                                type="context"
-                                class="flex w-full flex-row items-center justify-start!">
-                                <RouterLink
-                                    :to="`/pocket/${pocket.key}`"
-                                    class="w-full">
+                            <RouterLink
+                                :to="`/pocket/${pocket.key}`"
+                                class="w-full">
+                                <PocketMenu
+                                    :pocket="pocket"
+                                    type="context"
+                                    class="flex w-full flex-row items-center justify-start">
                                     <SidebarMenuSubButton
                                         size="lg"
                                         class="flex w-full flex-nowrap items-center gap-4 px-2! py-5">
@@ -97,12 +97,13 @@ const open = ref()
                                             :pocket="pocket"
                                             class="size-6 rounded-xs stroke-2 shadow-xs!"
                                             iconClass="rounded-md" />
-                                        <span class="text-start text-nowrap">
+                                        <span
+                                            class="text-start !font-normal text-nowrap">
                                             {{ pocket.name }}
                                         </span>
                                     </SidebarMenuSubButton>
-                                </RouterLink>
-                            </PocketMenu>
+                                </PocketMenu>
+                            </RouterLink>
                         </SidebarMenuSubItem>
                     </SidebarMenuSub>
                 </template>
