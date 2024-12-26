@@ -1,8 +1,4 @@
 <script setup lang="ts">
-const Welcome = defineAsyncComponent(
-    () => import('@components/home/Welcome.vue')
-)
-const Login = defineAsyncComponent(() => import('@components/home/Login.vue'))
 const viewLogin = ref(false)
 
 const visible = ref(false)
