@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Login from './Login.vue'
-import Welcome from './Welcome.vue'
+const Welcome = defineAsyncComponent(() => import('./Welcome.vue'))
+const Login = defineAsyncComponent(() => import('./Login.vue'))
 const viewLogin = ref(false)
 
 const component = computed(() => {
