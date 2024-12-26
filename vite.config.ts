@@ -1,5 +1,5 @@
 import vue from '@vitejs/plugin-vue'
-
+import nitro from '@analogjs/vite-plugin-nitro'
 import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
@@ -17,6 +17,13 @@ export default defineConfig({
         vue(),
         vueDevTools(),
         tailwindcss(),
+        nitro({
+            ssr: false,
+            entryServer: 'src/main.server.tsx',
+            prerender: {
+                routes: ['/'],
+            },
+        }),
         Components({
             dirs: [
                 './src/pages',

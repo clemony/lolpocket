@@ -1,4 +1,8 @@
+// https://nitro.unjs.io/guide/typescript
+
+
 {
+     "extends": "./.nitro/types/tsconfig.json",
     "include": [
         "src/**/*",
         "auto-imports.d.ts",
