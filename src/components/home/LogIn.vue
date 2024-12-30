@@ -107,7 +107,7 @@ const variant2 = computed(() => {
 
                     <Discord />
 
-                    <Google />
+                    <!--     <Google /> -->
                 </div>
             </div>
 
