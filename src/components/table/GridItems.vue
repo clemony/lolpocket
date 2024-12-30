@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { Item } from 'types'
+import { Item } from '@/types/pocketTypes'
 import { useAccountStore } from '@stores/accountStore'
-import { getPocket } from '@utils/pocketUtilities'
+import { getPocket } from '@/functions/pocketUtilities'
 
 const props = defineProps<{
     params: {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Champion, pocket } from 'types'
-
+import type { pocket } from '@/types/pocketTypes'
+import type { Champion } from '@/types/dataTypes'
 import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<{
@@ -8,6 +8,8 @@ const props = defineProps<{
     pocket?: pocket
     class?: HTMLAttributes['class']
 }>()
+
+console.log('💠 - champion.image.full:', props.champion)
 </script>
 
 <template>
@@ -22,8 +24,8 @@ const props = defineProps<{
         ">
         <slot />
         <LoadImg
-            :key="props.champion.name"
-            :url="`/img/champions/${clean(props.champion.name)}.webp`"
+            :key="props.champion.key"
+            :url="`https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${champion.id}.png`"
             :alt="props.champion.name + ' Image'"
             :class="cn('aspect-square size-full scale-108')" />
     </label>

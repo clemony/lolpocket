@@ -1,12 +1,12 @@
 import { usePocketStore } from '@/stores/pocketStore'
 import { hexoid } from 'hexoid'
-import { pocket, Shard } from 'types'
+import { pocket, Shard } from '@/types/pocketTypes'
 import {
     createDateObject,
     createDefaultRune,
     createDefaultShard,
 } from './addPocket'
-import { generateRandomName } from '../lib/functions/Keygen'
+import { generateRandomName } from './Keygen'
 import { useAccountStore } from '@stores/accountStore'
 
 export function getPocket(key) {

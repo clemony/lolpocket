@@ -5,19 +5,14 @@ import { cn } from '@lib/utils'
 import { useForwardPropsEmits } from 'radix-vue'
 import { DrawerContent, DrawerPortal } from 'vaul-vue'
 import DrawerOverlay from './DrawerOverlay.vue'
-import { useAccountStore } from '@stores/accountStore'
-const as = useAccountStore()
+import { useTempStore } from '@stores/tempStore'
+const ts = useTempStore()
 const props = defineProps<
     DialogContentProps & { class?: HtmlHTMLAttributes['class'] }
 >()
 const emits = defineEmits<DialogContentEmits>()
-const side = ref(as.drawerValue.direction)
+const side = ref(ts.drawerValue.direction)
 const forwarded = useForwardPropsEmits(props, emits)
-
-onBeforeUpdate(async () => {
-    await as.drawerValue.direction
-    side.value = as.drawerValue.direction
-})
 </script>
 
 <template>

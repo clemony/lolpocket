@@ -1,9 +1,9 @@
 @import 'tailwindcss';
 
 @theme {
-    --text-1: 0.8rem;
-    --text-2: 0.93rem;
-    --text-3: 1rem;
+    --text-1: 0.9rem;
+    --text-2: 0.96rem;
+    --text-3: 0.99rem;
     --text-4: 1.125rem;
     --text-5: 1.25rem;
     --text-6: 1.35rem;
@@ -25,34 +25,25 @@
 
     --color-precision: oklch(85.49% 0.0892 84.09);
     --color-precision-light: #oklch(90.13% 0.0695 86.13);
-
     --color-domination: oklch(60.61% 0.1206 15.34);
-
     --color-domination-light: oklch(81.67% 0.044 12.73);
-
     --color-sorcery: oklch(69.02% 0.0644 332.52);
     --color-sorcery-light: #oklch(80.99% 0.0273 327.74);
-
     --color-resolve: oklch(76.83% 0.0749 131.06);
     --color-resolve-light: oklch(85.55% 0.0188 127.18);
-
     --color-inspiration: oklch(76.93% 0.0494 204.19);
-
     --color-inspiration-light: oklch(94.48% 0.0273 204.19);
 
     --color-iron: oklch(44.16% 0.0168 35.72);
     --color-bronze: oklch(57.31% 0.0484 39.76);
     --color-silver: oklch(65.69% 0.022 257.49);
     --color-gold: oklch(85.49% 0.0892 84.09);
-
     --color-platinum: oklch(69.21% 0.0957 233.45);
     --color-emerald: oklch(56.81% 0.0628 168.43);
-    --color-diamond: oklch(55.72% 0.1265 260.79);
+    --color-diamond: oklch(62.17% 0.1762 284.11);
     --color-master: oklch(75.18% 0.1157 325.26);
     --color-grandmaster: oklch(68.06% 0.1352 26.61);
     --color-challenger: oklch(83.25% 0.0787 213.4);
-
-    --color-neon-pink: oklch(75.18% 0.152 352.36);
 
     --color-empty: #bab9b1;
     --color-empty-light: #cecdc8;
@@ -74,8 +65,6 @@
     --color-jungle: #a3be8c;
     --color-top: #e0746b;
 
-    --color-current: currentColor;
-
     --radius-xl: initial;
     --radius-xl: 0.7rem;
 
@@ -91,57 +80,9 @@
         inset -2px -1px 5px 1px #00000019;
     --shadow-inset-sm: inset 1px 2px 1px 1px #00000004,
         inset -1px -1px 2px 1px #00000009;
-    --shadow-smooth: 0px 0px 16px rgba(17, 17, 26, 0.08);
+    --shadow-smooth: 0px 0px 15px rgba(17, 17, 26, 0.075);
 
     --drop-shadow-soft: 0px 0px 1px #00000060;
     --drop-shadow-softer: 0px 0px 1px #00000040;
     --drop-shadow-softest: 0px 0px 1px #00000020;
-
-    --animate-accordion-down: accordion-down 0.2s ease-in-out;
-    --animate-accordion-up: accordion-up 0.2s ease-in-out;
-    --animate-collapsible-down: collapsible-down 0.2s ease-in-out;
-    --animate-collapsible-up: collapsible-up 0.2s ease-in-out;
-
-    @keyframes {
-        accordion-down {
-            from {
-                height: 0;
-            }
-            ,
-            to {
-                height: 'var(--radix-accordion-content-height)';
-            }
-        }
-        ,
-        accordion-up {
-            from {
-                height: 'var(--radix-accordion-content-height)';
-            }
-            ,
-            to {
-                height: 0;
-            }
-        }
-    }
-    @keyframes {
-        collapsible-down {
-            from {
-                height: 0;
-            }
-            ,
-            to {
-                height: 'var(--radix-collapsible-content-height)';
-            }
-        }
-        ,
-        collapsible-up {
-            from {
-                height: 'var(--radix-collapsible-content-height)';
-            }
-            ,
-            to {
-                height: 0;
-            }
-        }
-    }
 }

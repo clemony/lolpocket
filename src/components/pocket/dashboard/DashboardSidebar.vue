@@ -2,7 +2,7 @@
 import { useTempStore } from '@stores/tempStore'
 import { usePocketStore } from '@stores/pocketStore'
 import { getQuote } from '@data/champQuotes'
-import type { pocket } from 'types'
+import type { pocket } from '@/types/pocketTypes'
 
 const ps = usePocketStore()
 const props = defineProps<{

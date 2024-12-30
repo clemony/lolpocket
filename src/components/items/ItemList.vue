@@ -1,17 +1,22 @@
 <script setup lang="ts">
 import { useTempStore } from '@stores/tempStore'
-import type { pocket } from 'types'
+import type { pocket } from '@/types/pocketTypes'
 import { VueDraggable } from 'vue-draggable-plus'
 import type { HTMLAttributes } from 'vue'
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
 const ts = useTempStore()
+import { useDataStore } from '@stores/dataStore'
+import { itemDrawer } from '@components/drawer/data'
+import { toggleDrawerState } from '@/functions/utils'
+import { remCalc } from '@/functions/remCalc'
+const ds = useDataStore()
 const props = defineProps<{
     pocket?: pocket
     dragDisabled?: boolean
     class?: HTMLAttributes['class']
 }>()
-const filteredItems = computed(() => {
+/* const filteredItems = computed(() => {
     let filtered = ts.items
 
     if (ts.itemSearchFilter) {
@@ -88,24 +93,40 @@ const sfi = computed(() => {
 })
 
 watch(
-    () => as.favoriteItems, // Watch the actual value of favoriteItems
+    () => as.favoriteItems,
     (newVal) => {
         if (!newVal.length) {
             ts.viewFavoriteItems = false
         }
     },
-    { immediate: true } // Ensure it runs on initialization
-)
+    { immediate: true }
+) */
+
+const target = ref(null)
+const boxes = computed(() => {
+    const itemWidth = 7
+
+    const { width, height } = useElementBounding(target)
+    const a = remCalc(width.value)
+    return Math.round(a / itemWidth)
+})
+
+console.log('💠 - boxes - boxes:', boxes.value)
 const disabled = ref(false)
+
+onMounted(() => {
+    console.log('💠 - target:', target)
+})
 </script>
 
 <template>
     <VueDraggable
         :group="{ name: 'items', pull: 'clone', put: false, revertClone: true }"
+        ref="target"
         :sort="false"
         :bubbleScroll="false"
         :scroll="false"
-        v-model="sfi"
+        v-model="ds.items"
         ghostClass="ghosty"
         @click.meta="disabled = true"
         :delay="0"
@@ -126,16 +147,17 @@ const disabled = ref(false)
         <!--     <TransitionGroup name="fade"> -->
 
         <Item
-            v-for="item in sfi"
-            :key="item.id"
+            v-for="item in ds.items"
+            :key="item.name"
             :item="item"
             :pocket="pocket"
             class="size-18 shadow-sm"
-            @click.stop.prevent />
+            @click.right.stop.prevent="
+                toggleDrawerState(itemDrawer, null, null, item)
+            " />
 
         <!--     </TransitionGroup> -->
-
-        <div v-for="index in 5" class="opacity-0" :key="index">
+        <div v-for="index in boxes" class="opacity-0" :key="index">
             <div class="aspect-square size-18"></div>
         </div>
     </VueDraggable>

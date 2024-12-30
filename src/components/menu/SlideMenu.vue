@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useElementTransform, useMotion } from '@vueuse/motion'
-
 const target = ref(null)
 const tab1 = ref(null)
 const tab2 = ref(null)
@@ -25,7 +23,7 @@ const tabModel = ref('Spells')
         class="mt-6 flex h-9 items-center px-1 [&_li]:z-10 [&_li]:w-20 [&_li]:px-2">
         <div
             ref="dinger"
-            class="absolute h-9 w-[55px] rounded-md border border-b2 bg-b1 opacity-90 shadow-xs" />
+            class="border-b2 bg-b1 absolute h-9 w-[55px] rounded-md border opacity-90 shadow-xs" />
 
         <li>
             <label ref="tab1">

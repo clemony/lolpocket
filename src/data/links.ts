@@ -1,4 +1,4 @@
-import { navData } from 'types'
+import { navData } from '@/types/pocketTypes'
 
 export const pocketLinks = [
     {

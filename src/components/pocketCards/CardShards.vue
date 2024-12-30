@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { pocket } from 'types'
-import { getShardIcon, getShardClass } from '@utils/colors'
+import type { pocket } from '@/types/pocketTypes'
+import { getShardIcon, getShardClass } from '@/functions/colors'
 
 const props = defineProps<{
     pocket: pocket

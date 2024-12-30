@@ -2,9 +2,9 @@
 import { VueDraggable } from 'vue-draggable-plus'
 import { useTempStore } from '@stores/tempStore'
 import { usePocketStore } from '@stores/pocketStore'
-import { deleteItemSet, getPocket, newItemSet } from '@utils/pocketUtilities'
+import { deleteItemSet, getPocket, newItemSet } from '@/functions/pocketUtilities'
 import ItemSetItems from './ItemSetItems.vue'
-import { generateRandomName } from '@lib/functions/Keygen'
+import { generateRandomName } from '@/functions/Keygen'
 
 const ts = useTempStore()
 const ps = usePocketStore()

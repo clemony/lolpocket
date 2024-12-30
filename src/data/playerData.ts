@@ -13,7 +13,7 @@ export const summoner = {
 
     ranks: {
         soloDuo: {
-            rank: 'bronze',
+            rank: 'diamond',
             tier: 4,
             games: 200,
             win: 100,

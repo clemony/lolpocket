@@ -1,4 +1,4 @@
-import type { RuneSet, Shard } from 'types'
+import type { RuneSet, Shard } from '@/types/pocketTypes'
 
 export const colorB3 = computed(() => {
     return getComputedStyle(document.documentElement).getPropertyValue(

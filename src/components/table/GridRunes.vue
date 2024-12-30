@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { Item, Rune } from 'types'
+import { Item, Rune } from '@/types/pocketTypes'
 import { usePocketStore } from '@/stores/pocketStore'
 import { useAccountStore } from '@stores/accountStore'
-import { runeColors } from '@utils/colors'
-import { getPocket } from '@/utils/pocketUtilities'
+import { runeColors } from '@/functions/colors'
+import { getPocket } from '@/functions/pocketUtilities'
 const props = defineProps<{
     params: {
         data: {

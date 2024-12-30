@@ -1,28 +1,35 @@
 <script setup lang="ts"></script>
 
 <template>
-    <main
-        class="m-0 flex h-screen w-[90%] justify-between gap-8 justify-self-center px-4 py-0">
-        <div class="flex w-130">
-            <ScrollArea class="overflow-auto overscroll-auto rounded-none">
-                <div class="flex w-110 flex-col gap-8 px-3 pb-10">
-                    <LayoutSpacer class="!h-10" />
+    <main class="h-screen w-full pr-4 pl-16">
+        <div class="shrink-0">
+            <LayoutSpacer class="!h-26" />
 
-                    <PlayerCard />
+            <PlayerHeader />
+            <div
+                class="grid h-full w-[86%] grid-cols-[1fr_1.5fr] justify-around gap-3">
+                <ScrollArea as-child>
+                    <div
+                        class="flex w-128 flex-col gap-10 overflow-auto overscroll-auto rounded-none px-3 pb-10">
+                        <LayoutSpacer class="!h-5" />
 
-                    <RankCard title="Solo/Duo" queue="soloDuo" />
+                        <RankCard title="Solo/Duo" queue="soloDuo" />
 
-                    <RankCard title="Flex" queue="flex" />
+                        <RankCard title="Flex" queue="flex" />
 
-                    <ChampTabs />
-                </div>
-            </ScrollArea>
-        </div>
-        <ScrollArea class="overflow-auto overscroll-auto">
-            <div class="flex w-full flex-col gap-8 px-3 pb-10">
-                <LayoutSpacer class="!h-28" />
-                <PlayerMatches />
+                        <!--  <ChampTabs /> -->
+                    </div>
+                </ScrollArea>
+
+                <ScrollArea as-child>
+                    <div
+                        class="size-full justify-center overflow-auto overscroll-auto px-3">
+                        <LayoutSpacer class="!h-15" />
+
+                        <MatchCard />
+                    </div>
+                </ScrollArea>
             </div>
-        </ScrollArea>
+        </div>
     </main>
 </template>

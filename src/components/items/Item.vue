@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import type { Item, pocket } from 'types'
+import type { pocket } from '@/types/pocketTypes'
 import { useTempStore } from '@stores/tempStore'
 import type { HTMLAttributes } from 'vue'
-import { addItemToSet } from '@utils/pocketUtilities'
+import { addItemToSet } from '@/functions/pocketUtilities'
+import type { Item } from '@/types/dataTypes'
 import { useDataStore } from '@stores/dataStore'
+
 const ds = useDataStore()
 const ts = useTempStore()
 
@@ -31,28 +33,26 @@ function add(item) {
 <template>
     <!-- <TransitionGroup @enter="imageIn" name="fade" @leave="imageOut"> -->
 
-    <ItemPop
+    <!--   <ItemPop
         :item="props.item"
         :variant="'add'"
-        :key="props.item.id"
+        :key="props.item.name"
         @click.meta="add(item)"
-        :ref="props.item.name">
-        <div
-            :class="
-                cn(
-                    'border-neutral/70 shadow-standard hover:ring-neutral/40 relative size-16 rounded-lg border hover:ring-1 hover:ring-offset-1',
-                    props.class
-                )
-            ">
-            <img
-                :key="props.item.id"
-                :src="`/img/items/${props.item.id}.webp`"
-                :alt="props.item.name + ' Image'"
-                :class="
-                    cn('drag-img aspect-square size-full!', props.imgClass)
-                " />
-        </div>
-    </ItemPop>
+        :ref="props.item.name"> -->
+    <div
+        :class="
+            cn(
+                'border-neutral/70 shadow-standard hover:ring-neutral/40 relative size-16 rounded-lg border hover:ring-1 hover:ring-offset-1',
+                props.class
+            )
+        ">
+        <LoadImg
+            :key="props.item.name"
+            :url="getItemImage(props.item.name)"
+            :alt="props.item.name + ' Image'"
+            :class="cn('drag-img aspect-square size-full!', props.imgClass)" />
+    </div>
+    <!--  </ItemPop> -->
 
     <!-- </TransitionGroup> -->
 </template>

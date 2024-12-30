@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { pocket } from '../../../types'
+import { pocket } from '../../types/pocketTypes'
 const props = defineProps<{
     pocket?: pocket
 }>()

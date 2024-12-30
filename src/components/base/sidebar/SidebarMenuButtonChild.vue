@@ -28,7 +28,7 @@ const props = withDefaults(defineProps<SidebarMenuButtonProps>(), {
         :as="as"
         :as-child="asChild"
         v-bind="$attrs"
-        class="group gap-4 py-5">
+        class="group gap-4">
         <slot />
     </Primitive>
 </template>

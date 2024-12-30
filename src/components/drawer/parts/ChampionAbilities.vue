@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Champion } from 'types'
+import type { Champion } from '@/types/dataTypes'
 
 const props = defineProps<{
     champion: Champion

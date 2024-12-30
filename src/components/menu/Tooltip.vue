@@ -8,6 +8,7 @@ const props = withDefaults(
         align?: any
         sideOffset?: number
         side?: any
+        noWrap?: boolean
     }>(),
     {
         align: 'start',
@@ -27,7 +28,7 @@ const width = useElementSize(contents)
             <TooltipContent
                 :class="
                     cn(
-                        'text-medium text-2 shadow-pretty border-b2 flex max-w-44 shrink rounded-lg text-wrap',
+                        'text-medium text-2 shadow-pretty border-b2 relative flex max-w-44 shrink rounded-lg text-wrap',
                         {
                             'border-neutral bg-neutral/90 text-nc backdrop-blur-md':
                                 props.dark,
@@ -39,7 +40,13 @@ const width = useElementSize(contents)
                 :side="props.side"
                 :sideOffset="props.sideOffset"
                 :align="props.align">
-                <p ref="contents" class="flex shrink">{{ content }}</p>
+                <div
+                    ref="contents"
+                    class="flex shrink items-center gap-1 overflow-hidden"
+                    :class="{ 'flex-nowrap': props.noWrap }">
+                    {{ content }}
+                    <slot name="tooltip" />
+                </div>
             </TooltipContent>
         </TooltipRoot>
     </TooltipProvider>

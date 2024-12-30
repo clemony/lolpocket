@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useTempStore } from '@stores/tempStore'
 import { VueDraggable } from 'vue-draggable-plus'
-import type { pocket } from 'types'
-import { removeChamp } from '@utils/pocketUtilities'
+import type { pocket } from '@/types/pocketTypes'
+import { removeChamp } from '@/functions/pocketUtilities'
 import '@assets/css/drag.css'
 const ts = useTempStore()
 

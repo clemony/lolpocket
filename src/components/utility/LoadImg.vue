@@ -3,10 +3,17 @@ import { HTMLAttributes } from 'vue'
 import { cn } from '@lib/utils'
 
 const isImageLoaded = ref<Boolean>(false)
-const props = defineProps<{
-    url: string
-    class?: HTMLAttributes['class']
-}>()
+
+const props = withDefaults(
+    defineProps<{
+        url: string
+        alt: string
+        class?: HTMLAttributes['class']
+    }>(),
+    {
+        alt: 'image',
+    }
+)
 
 function imageLoaded() {
     setTimeout(() => {
@@ -26,13 +33,14 @@ function setBlankImg(event) {
             v-show="!isImageLoaded"
             :class="cn('border-none!', props.class)" />
 
-        <div v-show="isImageLoaded" class="bg-b2/40 size-full overflow-hidden">
-            <img
+        <div v-show="isImageLoaded" class="size-full overflow-hidden">
+            <Img
                 :src="props.url"
+                :alt="props.alt"
                 @load="imageLoaded()"
                 :class="
                     cn(
-                        'animate-in fade-in-0 size-full scale-105 duration-700',
+                        'animate-in fade-in-0 size-full duration-700',
                         props.class
                     )
                 " />

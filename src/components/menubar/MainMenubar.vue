@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useAccountStore } from '@stores/accountStore'
 import { newPocketDrawer } from '@components/drawer/data'
-import { toggleDrawerState } from '@utils/utils'
+import { toggleDrawerState } from '@/functions/utils'
 
 const SettingsDropdown = defineAsyncComponent(
     () => import('./SettingsDropdown.vue')
@@ -63,20 +63,17 @@ const hs = history.state
                         class="justify-start gap-3"
                         as-child>
                         <RouterLink to="/">
-                            <h3>lolpocket</h3>
+                            <h4 class="">lolpocket</h4>
                         </RouterLink>
                     </Button>
 
-                    <!--     <Tooltip content="to top">
-                        <Button
-                            variant="ghost"
-                            size="icon"
-                            class="size-8 opacity-60">
-                            <icon
-                                icon="teenyicons:up-small-outline"
-                                class="size-full p-1" />
-                        </Button>
-                    </Tooltip> -->
+                    <Button
+                        v-if="!as.isLoggedIn"
+                        variant="outline"
+                        size="xs"
+                        class="text-1 ml-8 font-medium shadow-xs">
+                        log in
+                    </Button>
                 </div>
             </MenubarMenu>
         </div>

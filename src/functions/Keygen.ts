@@ -1,5 +1,5 @@
 import { generate, count } from 'random-words'
-import { useDataStore } from '@stores/dataStore'
+import { useDataStore } from '@stores/oldDataStore'
 
 function word() {
     let key = ''
@@ -25,7 +25,7 @@ function cleanName(name: string): string[] {
         .replace(/[.]/g, '')
         .trim()
 
-    return cleanedName.split(/\s+/).filter(Boolean);
+    return cleanedName.split(/\s+/).filter(Boolean)
 }
 
 export function generateRandomString(): string {

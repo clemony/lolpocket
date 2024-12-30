@@ -1,3 +1,4 @@
+@import 'tailwindcss';
 .pop-move, /* apply transition to moving elements */
 .pop-leave-active,
 .pop-enter-active {
@@ -6,7 +7,7 @@
 
 .pop-enter-from,
 .pop-leave-to {
-    @apply flex translate-y-1 opacity-0 !outline-0 !ring-0;
+    @apply flex translate-y-1 opacity-0 !ring-0 !outline-0;
 }
 
 .pop-move, /* apply transition to moving elements */
@@ -17,7 +18,7 @@
 
 .pop-enter-from,
 .pop-leave-to {
-    @apply flex translate-y-1 opacity-0 !outline-0 !ring-0;
+    @apply flex translate-y-1 opacity-0 !ring-0 !outline-0;
 }
 
 /*------------⟢ absolute  ⟣-------------*/
@@ -30,7 +31,7 @@
 
 .pop-enter-from,
 .pop-leave-to {
-    @apply flex translate-y-1 opacity-0 !outline-0 !ring-0;
+    @apply flex translate-y-1 opacity-0 !ring-0 !outline-0;
 }
 
 .pop-move, /* apply transition to moving elements */
@@ -41,5 +42,5 @@
 
 .pop-enter-from,
 .pop-leave-to {
-    @apply flex translate-y-1 opacity-0 !outline-0 !ring-0;
+    @apply flex translate-y-1 opacity-0 !ring-0 !outline-0;
 }

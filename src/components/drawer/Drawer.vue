@@ -3,9 +3,11 @@ import { DrawerClose } from '@components/base/drawer'
 import PocketDrawer from '@components/drawer/PocketDrawer.vue'
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
+import { useTempStore } from '@stores/tempStore'
+const ts = useTempStore()
 
 const drawer = computed(() => {
-    return as.drawerValue ? as.drawerValue : null
+    return ts.drawerValue ? ts.drawerValue : null
 })
 const side = computed(() => {
     return drawer ? drawer.value.direction : ''
@@ -14,26 +16,26 @@ const side = computed(() => {
 const childRef = ref()
 
 watch(
-    () => as.drawerState,
+    () => ts.drawerState,
     (newVal) => {
         if (!newVal) {
-            as.drawerValue = null
-            as.drawerPocket = null
-            childRef.value.clearForm()
+            ts.drawerValue = null
+            ts.drawerPocket = null
+            //childRef.value.clearForm()
             childRef.value.name = ''
-            console.log('💠 - onOpenChange - as.drawerPocket:', as.drawerPocket)
+            console.log('💠 - onOpenChange - ts.drawerPocket:', ts.drawerPocket)
         }
     }
 )
 </script>
 <template>
     <DrawerRoot
-        v-if="as.drawerValue"
-        v-model:open="as.drawerState"
+        v-if="ts.drawerValue"
+        v-model:open="ts.drawerState"
         :key="drawer.id"
         :direction="side"
         :fixed="true">
-        <DrawerOverlay class="overflow-hidden" />
+        <DrawerOverlay class="overflow-hidden" @click.stop.prevent />
         <DrawerContent
             class="pt-3 focus:outline-hidden"
             :class="{

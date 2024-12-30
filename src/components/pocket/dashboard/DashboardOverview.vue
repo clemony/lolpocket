@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { pocket } from 'types'
+import type { pocket } from '@/types/pocketTypes'
 import { usePocketStore } from '@/stores/pocketStore'
 const ps = usePocketStore()
 const props = defineProps<{

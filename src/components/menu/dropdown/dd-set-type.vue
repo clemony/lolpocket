@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ItemSet, pocket } from 'types'
+import type { ItemSet, pocket } from '@/types/pocketTypes'
 
 const props = defineProps<{
     set: ItemSet

@@ -1,12 +1,20 @@
 <script setup lang="ts">
 import { Toaster } from '@components/base/sonner'
-import { toggleDrawerState } from '@utils/utils'
-import { useDataStore } from '@stores/dataStore'
+import { toggleDrawerState } from '@/functions/utils'
 import { useAccountStore } from '@stores/accountStore'
-import { getOS } from '@utils/detectOS'
+import { getOS } from '@/functions/detectOS'
+import {
+    getChampionData,
+    getItemData,
+    getRuneData,
+    getShardData,
+} from '@data/getData'
+import { useDataStore } from '@stores/dataStore'
+import { useTempStore } from '@stores/tempStore'
+const ts = useTempStore()
 const as = useAccountStore()
 const ds = useDataStore()
-ds.fetchData()
+
 /* const state = computed(() => {
     return (
         as.commandOpen == true ? 'open'
@@ -22,32 +30,40 @@ watch(
     }
 )
  */
+
 const router = useRouter()
 const history = router.options.history
 const routeName = ref(null)
 const route = useRoute()
 
-onMounted(() => {
-    getOS()
-})
-/*
-const open = ref(as.defaultSidebarOpen)
-
-        :defaultOpen="route.name == 'home' ? false : true"
-        v-model:open="as.sidebarOpen"
-        @update:open="(e) => (open = e)" */
-
 onMounted(async () => {
+    // os
+    ts.userOS = getOS()
+
+    // from cache | get data ****TODO****: add patch update parameter
+
+    !ds.paths.length ? getRuneData() : ''
+    !ds.champions.length ? getChampionData() : ''
+    !ds.items.length ? getItemData() : ''
+
+    // getItemData()
+    // getRuneData()
+    //getShardData()
+    // route
     const route = useRoute()
     nextTick(() => {
         routeName.value = route.name
     })
 })
+
 const open = ref(as.sidebarOpen)
 function onOpenChange() {
     open.value = as.sidebarOpen
     open.value = as.mobileOpen
 }
+
+const scroll = ref(null)
+const { isScrolling } = useScroll(scroll)
 </script>
 
 <template>
@@ -68,16 +84,18 @@ function onOpenChange() {
         class="bg-b1 relative size-full backdrop-brightness-[96%] transition-all duration-200">
         <MainMenubar />
         <Sidebar :collapsible="as.sidebarCollapsible" class="justify-center">
-            <SidebarContent class="pt-14">
-                <SidebarAccount />
-                <ScrollArea class="!overflow-auto !overscroll-contain">
-                    <SidebarPocketDisplays />
+            <SidebarContent class="pt-16">
+                <SidebarAccount :scrolling="isScrolling" />
+                <ScrollArea class="!overflow-auto !overscroll-contain" as-child>
+                    <div ref="scroll">
+                        <SidebarPocketDisplays />
 
-                    <SidebarPocketUtilities />
+                        <SidebarPocketUtilities />
 
-                    <SidebarBrowse />
+                        <SidebarBrowse />
 
-                    <SidebarElse />
+                        <SidebarElse />
+                    </div>
                 </ScrollArea>
             </SidebarContent>
 

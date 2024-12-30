@@ -4,9 +4,10 @@ const as = useAccountStore()
 import { useTempStore } from '@stores/tempStore'
 import { VueDraggable } from 'vue-draggable-plus'
 import { useDataStore } from '@stores/dataStore'
-import type { Champion, pocket } from 'types'
+import type { pocket } from '@/types/pocketTypes'
+import type { Champion } from '@/types/dataTypes'
 import { championDrawer } from '@components/drawer/data'
-import { toggleDrawerState } from '@utils/utils'
+import { toggleDrawerState } from '@/functions/utils'
 
 const ds = useDataStore()
 const ts = useTempStore()
@@ -18,7 +19,7 @@ const props = defineProps<{
 
 const pocket = ref(props.pocket)
 
-const champions = computed(() => {
+/* const champions = computed(() => {
     if (pocket.value) {
         return pocket.value.champions[0].champions
     }
@@ -88,7 +89,9 @@ watch(
         }
     },
     { immediate: true } // Ensure it runs on initialization
-)
+) */
+
+console.log('💠 - champions:', ds.champions[0])
 </script>
 
 <template>
@@ -101,7 +104,7 @@ watch(
             revertClone: true,
         }"
         :sort="false"
-        v-model="filteredChampions"
+        v-model="ds.champions"
         ghostClass="ghosty"
         :delay="0"
         :animation="300"
@@ -112,15 +115,13 @@ watch(
         class="max-h-inherit h-inherit scrollbar-hide flex flex-wrap items-start justify-around gap-4 overflow-y-auto rounded-lg pt-4 pb-4">
         <TransitionGroup name="pop">
             <Champion
-                v-for="champion in filteredChampions"
-                :key="champion.name"
+                v-for="champion in ds.champions"
+                :key="champion.id"
                 :champion="champion"
                 ref="list"
                 class="size-22 shrink-0 overflow-hidden rounded-lg"
                 dragClass="setDrag"
-                @click="
-                    toggleDrawerState(championDrawer, null, champion)
-                "></Champion>
+                @click="toggleDrawerState(championDrawer, null, champion)" />
         </TransitionGroup>
 
         <div class="aspect-square size-[68px]"></div>

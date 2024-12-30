@@ -3,8 +3,8 @@ import { ref, computed, watch } from 'vue'
 import { VueDraggable } from 'vue-draggable-plus'
 
 import { usePocketStore } from '@/stores/pocketStore'
-import * as types from 'types'
-import { getPocket } from '@/utils/pocketUtilities'
+import * as types from '@/types/pocketTypes'
+import { getPocket } from '@/functions/pocketUtilities'
 import { useTempStore } from '@stores/tempStore'
 const ts = useTempStore()
 

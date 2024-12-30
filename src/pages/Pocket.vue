@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { scrollToSection } from '@/utils/utils'
+import { scrollToSection } from '@/functions/utils'
 import type { UseScrollReturn } from '@vueuse/core'
 import { vScroll } from '@vueuse/components'
 import { defineAsyncComponent } from 'vue'
-import { getPocket } from '@/utils/pocketUtilities'
+import { getPocket } from '@/functions/pocketUtilities'
 import { useTempStore } from '@stores/tempStore'
 
 const ts = useTempStore()

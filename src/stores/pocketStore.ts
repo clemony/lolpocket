@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { pocket } from '../../types'
+import { pocket } from '../types/pocketTypes'
 
 export const usePocketStore = defineStore(
     'pocketStore',

@@ -1,13 +1,14 @@
 import { defineStore } from 'pinia'
 import { ref, watch } from 'vue'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
-
-import { pocket, drawer, Champion, Item, ItemSet } from 'types'
+import { Champion, Item, Rune } from '@/types/dataTypes'
+import { ItemSet } from '@/types/pocketTypes'
 
 export const useAccountStore = defineStore(
     'accountStore',
     () => {
-        const userOS = ref('')
+        const isLoggedIn = ref(false)
+
         const theme = ref('light')
         const accents = ref('light')
         watch(theme, (newValue) => {
@@ -18,6 +19,8 @@ export const useAccountStore = defineStore(
             document.documentElement.setAttribute('data-accents', newValue)
         })
 
+        const heroModel = ref(0)
+
         const reducedMotion = ref(false)
         const colorBlindMode = ref(false)
 
@@ -27,13 +30,8 @@ export const useAccountStore = defineStore(
         const sidebarWidth = ref(18)
         const sidebarCollapsible = ref()
 
-        const drawerState = ref(false)
-        const drawerValue = shallowRef(undefined as drawer)
-        const drawerPocket = ref(null)
-
         const cardBack = ref('/img/cards/moonfall.webp')
         const commandOpen = ref(false)
-        const pocketGridSize = ref()
         const pocketPreview = ref(false)
         const routeHistory = []
 
@@ -44,10 +42,12 @@ export const useAccountStore = defineStore(
         const itemSets = ref<ItemSet[]>([])
 
         return {
+            isLoggedIn,
+
             //settings
-            userOS,
             theme,
             accents,
+            heroModel,
             colorBlindMode,
             reducedMotion,
             pocketPreview,
@@ -60,13 +60,9 @@ export const useAccountStore = defineStore(
             sidebarCollapsible,
 
             commandOpen,
-            drawerState,
-            drawerValue,
-            drawerPocket,
             routeHistory,
 
             cardBack,
-            pocketGridSize,
 
             //champs
             favoriteChamps,
@@ -83,7 +79,7 @@ export const useAccountStore = defineStore(
             omit: ['drawer, drawerPocket, drawerState'],
             afterHydrate: (ctx) => {
                 const as = useAccountStore()
-                as.drawerState = false
+                // ts.drawerState = false
             },
         },
     }

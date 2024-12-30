@@ -13,7 +13,7 @@ watch(
 )
 
 const isLiked = computed(() => {
-    return as.favoriteChamps.some((champ) => champ.name === champion.name)
+    return as.favoriteChamps.some((champ) => champ.name === champion.value.name)
 })
 
 function handleLike(thisChamp) {
@@ -76,7 +76,8 @@ function getVariant(tag) {
                 <div class="shadow-warm relative size-fit pt-px">
                     <div
                         class="border-neutral/40 grid size-[70px] content-start items-start overflow-hidden rounded-lg border">
-                        <loadImg
+                        <LoadImg
+                            :alt="champion.name"
                             class="mr-1 aspect-square size-[70px] shrink-0 scale-[109%] rounded-none! object-center"
                             :url="`/img/champions/${clean(champion.name)}.webp`" />
                     </div>

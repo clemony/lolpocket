@@ -10,9 +10,7 @@ const props = defineProps<{
 <template>
     <li
         data-sidebar="menu-item"
-        :class="
-            cn('group/menu-item text-3! relative font-medium', props.class)
-        ">
+        :class="cn('group/menu-item text-3 relative font-medium', props.class)">
         <slot />
     </li>
 </template>

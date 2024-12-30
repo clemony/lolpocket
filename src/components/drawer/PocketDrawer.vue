@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { usePocketStore } from '@stores/pocketStore'
-import { addPocket } from '@utils/addPocket'
-import { generateRandomString } from '@lib/functions/Keygen'
+import { addPocket } from '@/functions/addPocket'
+import { generateRandomString } from '@/functions/Keygen'
 const ps = usePocketStore()
 import { hexoid } from 'hexoid'
-import type { pocket } from 'types'
+import type { pocket } from '@/types/pocketTypes'
 import { useAccountStore } from '@stores/accountStore'
+import { useTempStore } from '@stores/tempStore'
+const ts = useTempStore()
 import { toast } from 'vue-sonner'
 const as = useAccountStore()
 
@@ -17,7 +19,7 @@ const tags = ref([])
 const selectedIcon = ref('teenyicons:folder-outline')
 const bgColor = ref('#000000')
 const iconColor = ref('#FFFFFF')
-const pocket = ref(as.drawerPocket)
+const pocket = ref(ts.drawerPocket)
 watch(
     () => bgColor.value,
     (newVal) => {
@@ -66,7 +68,7 @@ function submitForm() {
 }
 
 function updatePocket() {
-    const pocket = ref(as.drawerPocket)
+    const pocket = ref(ts.drawerPocket)
 
     pocket.value.name = name.value
     pocket.value.tags = [...tags.value]
@@ -77,7 +79,7 @@ function updatePocket() {
 }
 
 onMounted(() => {
-    if (as.drawerPocket) {
+    if (ts.drawerPocket) {
         name.value = pocket.value.name
         tags.value = pocket.value.tags
         bgColor.value = pocket.value.bgColor
@@ -178,12 +180,12 @@ defineExpose({
             <DialogClose>
                 <Button
                     @click="submitForm"
-                    v-if="!as.drawerPocket"
+                    v-if="!ts.drawerPocket"
                     variant="neutral"
                     size="lg"
                     type="submit"
                     class="">
-                    {{ as.drawerValue.submitText }}
+                    {{ ts.drawerValue.submitText }}
                 </Button>
 
                 <Button
@@ -193,7 +195,7 @@ defineExpose({
                     size="md"
                     class=""
                     @click="updatePocket">
-                    {{ as.drawerValue.submitText }}
+                    {{ ts.drawerValue.submitText }}
                 </Button>
             </DialogClose>
         </div>

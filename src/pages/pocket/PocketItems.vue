@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useAccountStore } from '@stores/accountStore'
-import { getPocket } from '@/utils/pocketUtilities'
+import { getPocket } from '@/functions/pocketUtilities'
 import { useTempStore } from '@stores/tempStore'
 const ts = useTempStore()
 import { useScroll } from '@vueuse/core'

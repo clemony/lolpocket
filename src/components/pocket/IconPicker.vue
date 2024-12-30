@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { usePocketStore } from '@stores/pocketStore'
 import { icons } from '@data/pocketIcons'
-import { useDataStore } from '@stores/dataStore'
-import { getPocket } from '@utils/pocketUtilities'
+import { useDataStore } from '@stores/oldDataStore'
+import { getPocket } from '@/functions/pocketUtilities'
 const ds = useDataStore()
 const ps = usePocketStore()
 const iconStore = icons

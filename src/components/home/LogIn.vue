@@ -62,7 +62,7 @@ const variant2 = computed(() => {
             <div class="flex items-center gap-5">
                 <Badge
                     :variant="variant1"
-                    class="border-b3 shadow-b2 !rounded-full shadow-sm transition-all duration-300"
+                    class="border-b3 shadow-b2 rounded-lg shadow-sm transition-all duration-300"
                     as-child>
                     <label
                         class="text-bc/80 flex h-8 items-center gap-3 pr-4 pl-1"
@@ -80,14 +80,14 @@ const variant2 = computed(() => {
 
                 <Badge
                     :variant="variant2"
-                    class="border-b3 shadow-b2 !rounded-full shadow-sm transition-all duration-300"
+                    class="border-b3 shadow-b2 rounded-lg shadow-sm transition-all duration-300"
                     as-child>
                     <label
                         class="text-bc/80 flex h-8 items-center gap-3 pr-4 pl-1"
                         :class="{ 'text-nc': tabModel == 'email' }">
                         <input
                             type="radio"
-                            class="radio radio-sm border-b3 border"
+                            class="radio radio-sm border-b3 before:!shadow-neutral border"
                             :class="{ 'ring-b1': tabModel == 'email' }"
                             value="email"
                             v-model="tabModel" />
@@ -100,21 +100,14 @@ const variant2 = computed(() => {
                 v-if="tabModel == 'connect'"
                 class="z-0 mt-12 w-full gap-2 px-1">
                 <h3>Connect</h3>
-                <p class="mb-10">Log in with Riot or Google account.</p>
+                <p class="mb-10">Log in with another account.</p>
 
                 <div class="grid w-[60%] gap-4">
-                    <!--    <GoogleLogin :callback="callback" /> -->
-                    <Button variant="outline" size="lg" class="h-14 gap-4">
-                        <icon
-                            icon="simple-icons:riotgames"
-                            class="-ml-4 size-4.5" />
-                        Log in with Riot ID
-                    </Button>
+                    <Riot />
 
-                    <Button variant="outline" size="lg" class="h-14 gap-4">
-                        <icon icon="mdi:google" class="-ml-3 size-4.5" />
-                        Log in with Google
-                    </Button>
+                    <Discord />
+
+                    <Google />
                 </div>
             </div>
 

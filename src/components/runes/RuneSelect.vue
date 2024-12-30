@@ -1,95 +1,131 @@
 <script setup lang="ts">
-import { useDataStore } from '@/stores/dataStore'
-import type { pocket, Rune, RuneSet } from 'types'
-import { useTempStore } from '@stores/tempStore'
-const ts = useTempStore()
+import { useDataStore } from '@stores/oldDataStore'
+import type { pocket } from '@/types/pocketTypes'
+import { runeDrawer } from '@components/drawer/data'
+import { toggleDrawerState } from '@/functions/utils'
+import { Rune } from '@/types/dataTypes'
 const ds = useDataStore()
 
 const props = defineProps<{
     pocketKey?: string
-    set?: number
+    pathSet?: number
     runeSet?: number
     pocket?: pocket
     selectedRune?: string
+    modelValue?: string
 }>()
 
-const pocket = ref(props.pocket)
+//const pocket = ref(props.pocket)
 
-const selected = ref(pocket.value.runes[0].runeSets[props.runeSet])
+//const pathSet = ref(props.pathSet == 1 ? 'primary' : 'secondary')
+const paths = [...ds.paths]
+const selectedPath = ref(props.modelValue)
 
-onMounted(() => {})
+const selectedPathData = computed(() => {
+    return paths.find((path) => path.name === selectedPath.value)
+})
+const selectedRunes = ref(
+    selectedPathData ?
+        Array(selectedPathData.value.slots.length).fill(null)
+    :   []
+)
+
+watch(
+    () => props.modelValue,
+    (newVal) => {
+        selectedPath.value = newVal
+        selectedRunes.value = []
+    }
+)
+
+const runeWatcher = []
+function handleSelection(slotIndex, rune) {
+    selectedRunes.value[slotIndex] = rune
+    console.log('💠 - pathSet:', props.pathSet)
+
+    props.pathSet == 2 ? handleSecondaryRunes(slotIndex.toString()) : ''
+}
+
+function handleSecondaryRunes(slot) {
+    const index = runeWatcher.findIndex((slotNum) => slotNum == slot)
+
+    if (index > -1) {
+        runeWatcher.splice(index, 1)
+        runeWatcher.push(slot)
+    } else {
+        runeWatcher.push(slot)
+    }
+    //push()
+    if (runeWatcher.length > 2) {
+        selectedRunes.value[runeWatcher[0]] = null
+        runeWatcher.splice(0, 1)
+    }
+}
+
+onMounted(() => {
+    selectedPath.value = props.modelValue
+})
 </script>
-<template></template>
+<template>
+    <div
+        class="ease gradient border-b3 shadow-smooth relative size-full h-fit w-120 max-w-120 rounded-xl bg-clip-border transition-all duration-500"
+        :data-path="selectedPath">
+        <div
+            class="from-b1/20 via-b1/90 to-b1 flex size-full flex-col justify-center gap-16 justify-self-center rounded-xl bg-linear-to-b via-25% py-12">
+            <div
+                v-for="(slot, i) in selectedPathData.slots"
+                :key="i"
+                class="animate-in animate-out fade-out fade-in flex h-16 justify-evenly gap-3 transition-all duration-500"
+                :class="{
+                    'h-22 w-auto justify-between':
+                        slot === selectedPathData.slots[0],
 
-<style scoped>
-/* .gradient {
-    background: linear-gradient(
-        90deg,
-        rgba(227, 195, 85, 1) 0%,
-        rgba(215, 95, 95, 1) 25%,
-        rgba(159, 139, 209, 1) 50%,
-        rgba(144, 182, 137, 1) 75%,
-        rgba(153, 215, 225, 1) 100%
-    );
-}
+                    hidden:
+                        slot === selectedPathData.slots[0] &&
+                        props.pathSet == 2,
+                }">
+                <label
+                    v-for="rune in slot.runes"
+                    :data-path="selectedPath"
+                    @click.right="
+                        toggleDrawerState(runeDrawer, null, null, null, rune)
+                    "
+                    :key="rune.id"
+                    class="h-full rounded-full opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+                    :class="{
+                        'scale-115 opacity-100 grayscale-0':
+                            selectedRunes[i] === rune,
+                        'shadow-pretty':
+                            slot != selectedPathData.slots[0] &&
+                            selectedRunes[i] === rune,
+                        'scale-125':
+                            slot == selectedPathData.slots[0] &&
+                            selectedRunes[i] === rune,
+                        'gradient shadow-standard border-2 border-transparent [&_img]:rounded-full [&_img]:inset-shadow-sm [&_img]:inset-shadow-black':
+                            slot != selectedPathData.slots[0],
+                        '[&_img]:drop-shadow-md':
+                            slot == selectedPathData.slots[0],
+                    }">
+                    <input
+                        type="radio"
+                        :name="`slot-${i}`"
+                        :value="rune"
+                        v-model="selectedRunes[i]"
+                        @change="handleSelection(i, rune)"
+                        class="absolute hidden" />
+                    <Tooltip
+                        :content="rune.name"
+                        icon="ph:mouse-right-click-fill"
+                        no-wrap>
+                        <LoadImg
+                            :url="lolImgCdn + rune.icon"
+                            :alt="rune.name"
+                            class="size-full" />
+                    </Tooltip>
+                </label>
+            </div>
+        </div>
+    </div>
+</template>
 
-.border-gradient {
-    border-image: linear-gradient(
-            to right,
-            var(--b1),
-            rgba(0, 0, 0, 0),
-            var(--b1)
-        )
-        2;
-}
-
-
-[data-tier='0'] {
-    #imgwrap {
-        @apply size-20 rounded-none p-1;
-    }
-    img {
-        @apply drop-shadow-md;
-    }
-}
-
-[data-tier='1'],
-[data-tier='2'],
-[data-tier='3'] {
-    & :checked + #imgwrap {
-        @apply ring-neutral/30 ring-1 shadow-inner ring-offset-2 transition-all duration-500;
-    }
-
-    #imgwrap {
-        @apply border-neutral/70 size-14 rounded-full border shadow-[1px_3px_2px_1px_#00000034] transition-all duration-500;
-    }
-    div {
-        @apply rounded-full;
-    }
-    img {
-        @apply aspect-square scale-110 rounded-full object-cover shadow-inner;
-    }
-}
-
-.empty {
-    [data-tier='0'] {
-        img {
-            @apply border-neutral/15 rounded-full border transition-all duration-500;
-        }
-    }
-
-    [data-tier='1'],
-    [data-tier='2'],
-    [data-tier='3'] {
-        & :checked + #imgwrap {
-            @apply ring-0 ring-offset-0 transition-all duration-500;
-        }
-        #imgwrap {
-            @apply border-neutral/15 bg-b2/20 size-[2.8rem] rounded-full border shadow-[inset_1px_3px_2px_1px_#00000008] transition-all duration-500;
-        }
-        img {
-            @apply aspect-square scale-110 rounded-full object-cover shadow-inner;
-        }
-    }
-} */
-</style>
+<style scoped></style>

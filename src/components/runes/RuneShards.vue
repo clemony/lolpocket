@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { useDataStore } from '@/stores/dataStore'
+import { useDataStore } from '@stores/oldDataStore'
 import { useTempStore } from '@/stores/tempStore'
-import type { pocket } from 'types'
-import { getShardIcon, getShardClass } from '@utils/colors'
+import type { pocket } from '@/types/pocketTypes'
+import { getShardIcon, getShardClass } from '@/functions/colors'
 
 import { usePocketStore } from '@/stores/pocketStore'
-import { getPocket } from '@/utils/pocketUtilities'
+import { getPocket } from '@/functions/pocketUtilities'
 const ps = usePocketStore()
 const ds = useDataStore()
 const ts = useTempStore()

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useQuery } from '@pinia/colada'
-import { navGroup, navItem } from 'types'
+import { navGroup, navItem } from '@/types/pocketTypes'
 import LinksJson from '@data/databaseLinks.json'
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()

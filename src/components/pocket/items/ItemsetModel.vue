@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { pocket } from 'types'
-import { makeBox } from '@/utils/makeBox'
+import type { pocket } from '@/types/pocketTypes'
+import { makeBox } from '@/functions/makeBox'
 
 const props = defineProps<{
     pocket: pocket

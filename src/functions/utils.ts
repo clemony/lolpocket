@@ -1,22 +1,39 @@
-import { useAccountStore } from '@stores/accountStore'
 import { useTempStore } from '@stores/tempStore'
-import type { Champion } from 'types'
+import type { Champion, Item, Rune } from '@/types/dataTypes'
+import { drawer } from '@/types/pocketTypes'
 
-export function toggleDrawerState(drawerData, pocket?, champion?: Champion) {
+export function toggleDrawerState(
+    drawerData,
+    pocket?,
+    champion?: Champion,
+    item?: Item,
+    rune?: Rune
+) {
     console.log('💠 - toggleDrawerState - champion:', champion)
     console.log('💠 - toggleDrawerState - pocket:', pocket)
     console.log('💠 - toggleDrawerState - drawerData:', drawerData)
-    const as = useAccountStore()
+    const ts = useTempStore()
 
-    as.drawerValue = drawerData
+    ts.drawerValue = drawerData
 
     if (pocket != null) {
-        as.drawerPocket = pocket
+        ts.drawerPocket = pocket
     } else if (champion != null) {
-        const ts = useTempStore()
         ts.selectedChampion = champion
+    } else if (item != null) {
+        ts.selectedItem = item
+    } else if (rune != null) {
+        ts.selectedRune = rune
     }
-    as.drawerState = !as.drawerState
+    ts.drawerState = !ts.drawerState
+
+    if (!ts.drawerState) {
+        ts.drawerPocket = null
+        ts.selectedChampion = null
+        ts.selectedItem = null
+        ts.selectedRune = null
+        ts.drawerValue = null as drawer
+    }
 }
 
 export function scrollToSection(el) {

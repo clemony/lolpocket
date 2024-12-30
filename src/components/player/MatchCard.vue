@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDataStore } from '@/stores/dataStore'
+import { useDataStore } from '@stores/oldDataStore'
 import { useAccountStore } from '@stores/accountStore'
 import { summoner } from '@data/playerData'
 const as = useAccountStore()
@@ -16,20 +16,10 @@ const match = {
         },
     ],
 }
-
-function getItem(id) {
-    const a = ds.items.find((item) => item.id == id)
-    console.log('💠 - getItem - a:', a)
-    return a
-}
 </script>
 <template>
     <Card
-        class="max-w-[600px] bg-gradient-to-r from-transparent from-80% px-5 py-4"
-        :class="{
-            'to-inspiration-light': match.playerOutcome == 'win',
-            'to-domination-light': match.playerOutcome == 'loss',
-        }">
+        class="max-w-[600px] bg-gradient-to-r from-transparent from-80% px-5 py-4">
         <Collapsible class="group">
             <div class="flex gap-8">
                 <div class="flex h-full flex-col justify-start gap-1.5">
@@ -78,13 +68,26 @@ function getItem(id) {
                             </p>
                         </div>
                     </div>
-                    <div class="flex gap-1.5">
-                        <Item :item="getItem(3870)" class="size-11" />
-                        <Item :item="getItem(3158)" class="size-11" />
-                        <Item :item="getItem(6620)" class="size-11" />
-                        <Item :item="getItem(6617)" class="size-11" />
-                        <Item :item="getItem(3070)" class="size-11" />
-                        <Item :item="getItem(2055)" class="size-11" />
+                    <div class="flex gap-1.5 *:rounded-md">
+                        <img
+                            src="https://ddragon.leagueoflegends.com/cdn/14.24.1/img/item/3870.png"
+                            class="size-11" />
+
+                        <img
+                            src="https://ddragon.leagueoflegends.com/cdn/14.24.1/img/item/3158.png"
+                            class="size-11" />
+                        <img
+                            src="https://ddragon.leagueoflegends.com/cdn/14.24.1/img/item/6620.png"
+                            class="size-11" />
+                        <img
+                            src="https://ddragon.leagueoflegends.com/cdn/14.24.1/img/item/6617.png"
+                            class="size-11" />
+                        <img
+                            src="https://ddragon.leagueoflegends.com/cdn/14.24.1/img/item/3070.png"
+                            class="size-11" />
+                        <img
+                            src="https://ddragon.leagueoflegends.com/cdn/14.24.1/img/item/2055.png"
+                            class="size-11" />
                     </div>
                 </div>
 

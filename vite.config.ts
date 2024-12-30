@@ -9,7 +9,6 @@ import tailwindcss from '@tailwindcss/vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { resolve } from 'path'
 import RadixVueResolver from 'radix-vue/resolver'
-import OkuMotionResolver from '@oku-ui/motion/resolver'
 
 export default defineConfig({
     plugins: [
@@ -29,7 +28,6 @@ export default defineConfig({
             dts: './components.d.ts',
             resolvers: [
                 RadixVueResolver(),
-                OkuMotionResolver(),
                 IconsResolver({
                     prefix: false,
                     enabledCollections: ['ui', 'logo'],
@@ -54,6 +52,15 @@ export default defineConfig({
                 'vue-router',
                 {
                     '@/lib/utils.ts': ['cn', 'clean'],
+                    '@/functions/makeLinks.ts': [
+                        'lolImgCdn',
+                        'formatLink',
+                        'getItemId',
+                        'getItembyId',
+                        'getItemImage',
+                        'getWikiLink',
+                    ],
+                    '@/functions/getItem.ts': [],
                 },
             ],
 
@@ -106,11 +113,12 @@ export default defineConfig({
             '@lib': resolve(__dirname, '/src/lib/'),
             '@pages': resolve(__dirname, '/src/pages/'),
             '@stores': resolve(__dirname, '/src/stores/'),
-            '@utils': resolve(__dirname, '/src/utils/'),
+            '@functions': resolve(__dirname, '/src/functions/'),
             '@': resolve(__dirname, 'src/'),
             '@config': resolve(__dirname, '/src/config/'),
             '@css': resolve(__dirname, '/src/css/'),
             '@loading': resolve(__dirname, '/src/css/'),
+            '@types': resolve(__dirname, '/src/css/'),
         },
     },
     build: {
@@ -118,4 +126,5 @@ export default defineConfig({
             input: 'index.html',
         },
     },
+    envDir: resolve(__dirname),
 })

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { pocket } from 'types'
+import type { pocket } from '@/types/pocketTypes'
 
 const props = defineProps<{
     isHovered: any

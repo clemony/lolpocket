@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Item, ItemSet } from 'types'
+import { Item, ItemSet } from '@/types/pocketTypes'
 import { PopoverPortal, PopoverClose } from 'radix-vue'
 
 const props = defineProps<{

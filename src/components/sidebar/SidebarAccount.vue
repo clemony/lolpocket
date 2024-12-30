@@ -18,6 +18,8 @@ const links = [
     },
 ]
 
+
+
 const collapsed = ref()
 </script>
 
@@ -40,14 +42,14 @@ const collapsed = ref()
                                 :size="as.sidebarOpen ? 'lg' : 'icon'"
                                 class="flex border-none"
                                 :class="{
-                                    'px-3 !py-2': !collapsed,
+                                    'px-3': !collapsed,
                                     'join-item h-14 w-full grow rounded-r-none !px-1':
                                         as.sidebarOpen,
                                     '-ml-1 aspect-square !size-10':
                                         !as.sidebarOpen,
                                 }"
                                 tooltip="Insights">
-                                <Avatar class="size-9 rounded-lg shadow-xs">
+                                <Avatar class="size-9 rounded-full shadow-xs">
                                     <AvatarImage
                                         :src="summoner.icon"
                                         :alt="summoner.name" />

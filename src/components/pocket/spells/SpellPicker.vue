@@ -2,7 +2,7 @@
 import { useQuery } from '@pinia/colada'
 import { useTempStore } from '@/stores/tempStore'
 import { PopoverClose, PopoverPortal } from 'radix-vue'
-import type { spell } from 'types'
+import type { spell } from '@/types/pocketTypes'
 
 const ts = useTempStore()
 

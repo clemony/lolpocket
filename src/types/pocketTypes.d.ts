@@ -84,31 +84,6 @@ export interface pocketChampions {
     starred: string
 }
 
-export interface Champion {
-    name: string
-    img: string
-    wiki: string
-    title: string
-    tags: string[]
-    type: string
-    abilities: {
-        passive: Ability
-        q: Ability
-        w: Ability
-        e: Ability
-        r: Ability
-    }
-    items: Item[]
-}
-
-export interface Ability {
-    key: string
-    name: string
-    context: string
-    img: string
-    data: Record<string, string>
-}
-
 export interface spell {
     name: string
     description: string
@@ -138,21 +113,6 @@ export interface ItemSet {
     key: string
     name: string
     items: Item[]
-}
-
-export interface Item {
-    name: string
-    img: string
-    buy: number
-    sell: number
-    stats: string
-    passive: string
-    active: string
-    type: string
-    cat: string
-    wiki: string
-    id: number
-    count: number
 }
 
 export interface DefaultItem {
@@ -203,15 +163,6 @@ export interface RuneTree {
 export interface RuneSet extends RuneTree {
     key: string
     name: string
-}
-
-export interface Rune {
-    name: string
-    id: number
-    tier: number
-    type: string
-    stats: string
-    path: string
 }
 
 export interface Shard {

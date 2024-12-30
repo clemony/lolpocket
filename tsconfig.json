@@ -3,14 +3,16 @@
         "src/**/*",
         "auto-imports.d.ts",
         "components.d.ts",
-        "types.d.ts"
+        "src/types/pocketTypes.d.ts"
     ],
     "exclude": [
         "node_modules",
-        "dist"
+        "dist",
+        "/dist/**/*"
     ],
     "compilerOptions": {
         "baseUrl": ".",
+        "outDir": "/dist",
         "allowSyntheticDefaultImports": true,
         "allowJs": true,
         "skipLibCheck": true,
@@ -51,7 +53,7 @@
                 "src/stores/*"
             ],
             "@utils/*": [
-                "src/utils/*"
+                "src/functions/*"
             ],
             "@/components/*": [
                 "src/components/*"

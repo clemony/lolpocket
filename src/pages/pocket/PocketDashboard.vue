@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { scrollToSection } from '@/utils/utils'
+import { scrollToSection } from '@/functions/utils'
 import DashboardOverview from '@components/pocket/dashboard/DashboardOverview.vue'
 import { usePocketStore } from '@/stores/pocketStore'
-import { getPocket } from '@/utils/pocketUtilities'
+import { getPocket } from '@/functions/pocketUtilities'
 
 const ps = usePocketStore()
 const props = defineProps<{

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { usePocketStore } from '@/stores/pocketStore'
-import type { pocket, ItemSet } from 'types'
+import type { pocket, ItemSet } from '@/types/pocketTypes'
 
 const ps = usePocketStore()
 const props = defineProps<{

@@ -1,4 +1,4 @@
-import type { drawer } from 'types'
+import type { drawer } from '@/types/pocketTypes'
 
 const PocketDrawer = defineAsyncComponent({
     loader: () => import('@/components/drawer/PocketDrawer.vue'),
@@ -10,6 +10,14 @@ const CardDrawer = defineAsyncComponent({
 
 const ChampionDrawer = defineAsyncComponent({
     loader: () => import('@/components/drawer/ChampionDrawer.vue'),
+})
+
+const RuneDrawer = defineAsyncComponent({
+    loader: () => import('@/components/drawer/RuneDrawer.vue'),
+})
+
+const ItemDrawer = defineAsyncComponent({
+    loader: () => import('@/components/drawer/ItemDrawer.vue'),
 })
 
 export const newPocketDrawer: drawer = {
@@ -44,7 +52,23 @@ export const cardDrawer: drawer = {
 export const championDrawer: drawer = {
     component: ChampionDrawer,
     title: 'Champion',
-    description: 'Examine a champion and their abilities',
+    description: ' ',
     direction: 'right',
     id: 'championDrawer',
+}
+
+export const runeDrawer: drawer = {
+    component: RuneDrawer,
+    title: ' ',
+    description: ' ',
+    direction: 'right',
+    id: 'runeDrawer',
+}
+
+export const itemDrawer: drawer = {
+    component: ItemDrawer,
+    title: ' ',
+    description: ' ',
+    direction: 'right',
+    id: 'itemDrawer',
 }

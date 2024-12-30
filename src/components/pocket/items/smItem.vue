@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useAccountStore } from '@stores/accountStore'
 
-import type { Item } from 'types'
+import type { Item } from '@/types/pocketTypes'
 const as = useAccountStore()
 const props = defineProps<{
     item: Item

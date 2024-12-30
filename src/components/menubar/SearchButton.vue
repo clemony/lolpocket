@@ -25,7 +25,9 @@ const props = defineProps<{
             {{ props.placeholder }}
         </span>
         <DropdownMenuShortcut as-child>
-            <Badge size="sm" class="text-3 -mr-1 rounded-md shadow-xs">
+            <Badge
+                size="sm"
+                class="text-3 border-b3 -mr-1 rounded-md border shadow-xs">
                 ⌘ K
             </Badge>
         </DropdownMenuShortcut>

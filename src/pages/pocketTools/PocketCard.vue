@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import type { pocket } from 'types'
+import type { pocket } from '@/types/pocketTypes'
 import { clean } from '@lib/utils'
-import { runeColors } from '@utils/colors'
+import { runeColors } from '@/functions/colors'
 import { CSSProperties } from 'vue'
 
 import { useAccountStore } from '@stores/accountStore'
-import { easeInOut } from '@oku-ui/motion'
 
 const props = defineProps<{
     pocket: pocket

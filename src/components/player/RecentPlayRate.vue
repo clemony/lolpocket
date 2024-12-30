@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { summoner } from '@data/playerData'
 import { useAccountStore } from '@stores/accountStore'
-import { colorB3 } from '@utils/colors'
+import { colorB3 } from '@/functions/colors'
 const as = useAccountStore()
 
 const recentWinrate = ref(55)
@@ -69,16 +69,13 @@ const labels = ['Win', 'Loss']
                     class="border-neutral/40 absolute left-1.75 size-18.5 overflow-hidden rounded-full border-2 font-medium">
                     <LoadImg
                         :url="`/img/champions/${clean(champion.name)}.webp`"
+                        alt="champion.name"
                         class="size-18.5 scale-105 object-center" />
                 </div>
             </div>
         </div>
 
         <RoleDonut />
-    </div>
-
-    <div class="pr-6">
-        <MatchCard />
     </div>
 </template>
 <style scoped></style>

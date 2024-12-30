@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { VueDraggable } from 'vue-draggable-plus'
 
-import { ItemSet } from 'types'
-import { addItemToSet, getPocket } from '@/utils/pocketUtilities'
+import { ItemSet } from '@/types/pocketTypes'
+import { addItemToSet, getPocket } from '@/functions/pocketUtilities'
 import { useTempStore } from '@stores/tempStore'
 const ts = useTempStore()
 

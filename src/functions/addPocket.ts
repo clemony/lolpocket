@@ -9,11 +9,8 @@ import {
     pocket,
     DefaultItem,
     spell,
-} from 'types'
-import {
-    generateRandomString,
-    generateRandomName,
-} from '../lib/functions/Keygen'
+} from '@/types/pocketTypes'
+import { generateRandomString, generateRandomName } from './Keygen'
 import { newItemSet, newRuneSet } from './pocketUtilities'
 import { usePocketStore } from '@/stores/pocketStore'
 const toID = hexoid()

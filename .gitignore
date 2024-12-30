@@ -15,7 +15,6 @@ coverage
 *.local
 .env*
 .data
-.nitro
 .cache
 .output
 

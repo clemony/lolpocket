@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { newPocketDrawer } from '@components/drawer/data'
 import { commandModal } from '@components/command/data'
-import { toggleDrawerState } from '@utils/utils'
+import { toggleDrawerState } from '@/functions/utils'
 import { useAccountStore } from '@stores/accountStore'
 
 const as = useAccountStore()

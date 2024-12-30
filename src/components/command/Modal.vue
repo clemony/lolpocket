@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { modal } from 'types'
+import type { modal } from '@/types/pocketTypes'
 import { useAccountStore } from '@stores/accountStore'
 import { DialogOverlay } from 'radix-vue'
 const as = useAccountStore()

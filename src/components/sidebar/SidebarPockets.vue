@@ -4,7 +4,7 @@ import { usePocketStore } from '@stores/pocketStore'
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
 const ps = usePocketStore()
-import type { pocket } from 'types'
+import type { pocket } from '@/types/pocketTypes'
 
 const props = defineProps<{
     data: Array<pocket>
@@ -35,14 +35,14 @@ const open = ref()
                 '-ml-2 !grid !aspect-square !size-12 !place-items-center':
                     !as.sidebarOpen,
             }">
-            <Collapse
+            <Collapsible
                 key="pockets"
                 as-child
                 :defaultOpen="title == 'pinned' ? true : false"
                 class="group"
                 :open="open"
                 :disabled="!data.length">
-                <template #a>
+                <CollapsibleTrigger as-child>
                     <SidebarMenuButton
                         :size="as.sidebarOpen ? 'lg' : 'icon'"
                         :tooltip="title + ' Pockets'"
@@ -76,8 +76,8 @@ const open = ref()
                                 '!invisible hidden !opacity-0': !as.sidebarOpen,
                             }" />
                     </SidebarMenuButton>
-                </template>
-                <template #b>
+                </CollapsibleTrigger>
+                <CollapsibleContent as-child>
                     <SidebarMenuSub v-if="props.data" :key="dataKey">
                         <SidebarMenuSubItem
                             v-for="pocket in data"
@@ -106,8 +106,8 @@ const open = ref()
                             </RouterLink>
                         </SidebarMenuSubItem>
                     </SidebarMenuSub>
-                </template>
-            </Collapse>
+                </CollapsibleContent>
+            </Collapsible>
         </SidebarMenuItem>
     </SidebarMenu>
 </template>

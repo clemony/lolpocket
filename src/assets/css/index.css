@@ -5,22 +5,21 @@
 @import './fonts.css';
 @import './utilities.css';
 @import './components.css';
+@import './daisy.css';
 
 @plugin "daisyui" {
-    themes: false;
 }
 @config './tailwind.config.ts';
 @plugin "tailwindcss-animate";
 @plugin "tailwindcss-animated";
-@plugin 'daisyui' {
-    themes: false;
-}
+
+@import 'tailwindcss';
 
 @layer base {
     html {
-        @apply bg-transparent select-none;
+        @apply bg-transparent;
         ** {
-            @apply scroll-smooth select-none;
+            @apply scroll-smooth;
         }
     }
 
@@ -32,6 +31,6 @@
         @apply text-3 inset-0 m-0 h-screen w-screen p-0;
     }
     #app {
-        @apply top-0 left-0 m-0 h-screen w-screen bg-transparent p-0 select-none;
+        @apply top-0 left-0 m-0 h-screen w-screen bg-transparent p-0;
     }
 }

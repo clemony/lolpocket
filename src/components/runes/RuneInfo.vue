@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 
-import { useDataStore } from '@/stores/dataStore'
+import { useDataStore } from '@stores/oldDataStore'
 import { useTempStore } from '@/stores/tempStore'
 
 const ds = useDataStore()

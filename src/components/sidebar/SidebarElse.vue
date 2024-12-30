@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { navData } from 'types'
+import type { navData } from '@/types/pocketTypes'
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
 const items = [

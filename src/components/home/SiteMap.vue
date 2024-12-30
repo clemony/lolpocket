@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { links, settingLinks, infoLinks, pocketLinks } from '@data/links'
 import { newPocketDrawer } from '@components/drawer/data'
-import { toggleDrawerState } from '@utils/utils'
+import { toggleDrawerState } from '@/functions/utils'
 
 const listClass = 'flex flex-col gap-3  min-w-44'
 

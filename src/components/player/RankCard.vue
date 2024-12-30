@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { queue } from 'types'
+import type { queue } from '@/types/pocketTypes'
 import { summoner } from '@data/playerData'
-import { colorB3 } from '@/utils/colors'
+import { colorB3 } from '@/functions/colors'
 const props = defineProps<{
     queue: string
     title: string
@@ -34,39 +34,34 @@ const datasets = [
 const colors = [colorB3.value, color1.value]
 </script>
 <template>
-    <DisplayCard
-        headerClass="!pb-0 [&_.description]:hidden"
-        class="h-48 w-full pb-4">
-        <template #header>
-            <p class="text-4 mt-2 ml-2 font-semibold" :style="{}">
-                {{ 'Ranked ' + props.title }}
-            </p>
-        </template>
-        <div
-            class="relative grid grid-cols-[1.1fr_1fr_1fr] place-items-center pt-6">
-            <div>
-                <div
-                    class="absolute top-1 left-1 grid size-34 place-items-center">
-                    <img
-                        :src="`/img/crests/${queue.rank}.webp`"
-                        class="object-contain drop-shadow-lg" />
-                </div>
+    <Card class="h-51 px-4 py-3">
+        <p class="text-4 mt-2 ml-2 font-medium drop-shadow-sm">
+            {{ 'Ranked ' + props.title }}
+        </p>
+
+        <div class="relative grid grid-cols-[1.1fr_1fr_1fr] place-items-center">
+            <div class="grid size-36 place-items-center">
+                <img
+                    :src="`/img/crests/${queue.rank}.webp`"
+                    class="object-contain drop-shadow-lg" />
             </div>
-            <div class="relative">
+
+            <div class="relative -mt-1">
                 <Donut
                     :datasets="datasets"
                     :colors="colors"
                     :labels="labels"
                     type="gauge"
                     aria="Recent winrate in percentage"
-                    class="size-22" />
+                    class="size-24" />
 
-                <span class="text-bc absolute top-8 left-7 font-medium">
+                <span
+                    class="text-bc absolute top-9 left-8 font-medium drop-shadow-sm">
                     {{ winrate }}%
                 </span>
             </div>
-            <div
-                class="text-2 mt-0 flex flex-col justify-center gap-2 font-medium">
+
+            <div class="-mt-1 flex flex-col justify-center gap-2 font-medium">
                 <p class="capitalize">
                     {{ queue.rank + ' ' + queue.tier }}
                 </p>
@@ -89,7 +84,7 @@ const colors = [colorB3.value, color1.value]
                 </div>
             </div>
         </div>
-    </DisplayCard>
+    </Card>
 </template>
 <style scoped>
 .radial-progress::after,
