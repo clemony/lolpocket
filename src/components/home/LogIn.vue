@@ -1,9 +1,4 @@
 <script setup lang="ts">
-//import GoogleLogin from 'vue3-google-login'
-/* import type { CallbackTypes } from 'vue3-google-login'
-import { googleAuthCodeLogin } from 'vue3-google-login'
-import { googleLogout } from 'vue3-google-login'
-import { decodeCredential } from 'vue3-google-login' */
 const accountTypes = [
     {
         id: 'riotAccount',
@@ -21,31 +16,6 @@ const accountTypes = [
         icon: 'teenyicons:at-outline',
     },
 ]
-
-/* const login = () => {
-    googleAuthCodeLogin().then((response) => {
-        console.log('Handle the response', response)
-    })
-}
-
-const yourLogoutFunction = () => {
-    // your logout logics
-    googleLogout()
-} */
-
-const callback = (response) => {
-    // This callback will be triggered when the user selects or login to
-    // his Google account from the popup
-    console.log('Handle the response', response)
-}
-
-/* const callback: CallbackTypes.CredentialCallback = (response) => {
-    const userData = decodeCredential(response.credential)
-    console.log('Handle the userData', userData)
-} */
-/* const loginError = (response) => {
-    console.log('Handle the response', response)
-} */
 
 const tabModel = ref('connect')
 const variant1 = computed(() => {
@@ -107,7 +77,7 @@ const variant2 = computed(() => {
 
                     <Discord />
 
-                    <!--     <Google /> -->
+                    <Google />
                 </div>
             </div>
 

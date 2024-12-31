@@ -12,7 +12,13 @@ import RadixVueResolver from 'radix-vue/resolver'
 
 export default defineConfig({
     plugins: [
-        vue(),
+        vue({
+            template: {
+                compilerOptions: {
+                    isCustomElement: (tag) => tag.startsWith('hanko-'),
+                },
+            },
+        }),
         vueDevTools(),
         tailwindcss(),
         Components({

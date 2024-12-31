@@ -9,10 +9,9 @@ console.log('💠 - ds.champions:', ds.champions)
 
 <template>
     <LayoutSpacer />
-    <div class="">
-        <p v-for="i in 14" :style="{ fontSize: `var(--text-${i})` }">
-            This is a font size text.
-        </p>
+    <div class="flex">
+        <HankoAuth />
+        <HankoProfile />
     </div>
 </template>
 
