@@ -89,6 +89,7 @@ declare module 'vue' {
     ContextMenuSubContent: typeof import('./src/components/base/context-menu/ContextMenuSubContent.vue')['default']
     ContextMenuSubTrigger: typeof import('./src/components/base/context-menu/ContextMenuSubTrigger.vue')['default']
     ContextMenuTrigger: typeof import('./src/components/base/context-menu/ContextMenuTrigger.vue')['default']
+    copy: typeof import('./src/components/menu/dropdown/dd-itemset copy.vue')['default']
     CreateIcon: typeof import('./src/components/utility/CreateIcon.vue')['default']
     DashboardItems: typeof import('./src/components/pocket/dashboard/DashboardItems.vue')['default']
     DashboardOverview: typeof import('./src/components/pocket/dashboard/DashboardOverview.vue')['default']
