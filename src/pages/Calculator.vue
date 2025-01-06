@@ -14,8 +14,8 @@ import { usePocketStore } from '@stores/pocketStore'
 import { AgGridVue } from 'ag-grid-vue3'
 import { pocketTheme } from '@components/Table/gridTheme'
 import type { pocket } from '@/types/pocketTypes'
-import { stats } from '@data/stats'
-import { useDataStore } from '@stores/oldDataStore'
+import { stats } from '@/components/items/data/client/stats'
+import { useDataStore } from '@stores/dataStore'
 
 const ps = usePocketStore()
 const ds = useDataStore()

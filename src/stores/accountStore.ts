@@ -76,7 +76,6 @@ export const useAccountStore = defineStore(
         persist: {
             storage: localStorage,
             key: 'accountStore',
-            omit: ['drawer, drawerPocket, drawerState'],
             afterHydrate: (ctx) => {
                 const as = useAccountStore()
                 // ts.drawerState = false

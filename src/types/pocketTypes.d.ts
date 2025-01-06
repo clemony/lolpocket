@@ -1,60 +1,3 @@
-export type CallbackFunctionVariadicAnyReturn = (...args: any[]) => any
-type CallbackFunctionVariadic = (...args: any[]) => void
-
-export type navData = navGroup[]
-
-export interface navGroup {
-    name: string
-    url?: string
-    icon?: string
-    array?: Array<any>
-    isActive?: boolean
-    open?: boolean
-    items?: navItem[]
-    submenu?: navGroup[]
-}
-
-export interface navItem {
-    name: string
-    url?: string
-    icon?: string
-    isActive?: boolean
-    hash?: string
-    ref?: any
-    isVisible?: boolean
-    type?: string
-    trigger?: boolean
-    data?: Array<any>
-}
-
-export type menu = menuGroup[]
-export interface menuGroup {
-    title?: string
-    type?: string
-    items: menuItem[]
-}
-
-export interface menuItem {
-    title: string | ComputedRef<any>
-    type?: string
-    action?: any
-    link?: string
-    model?: any
-    icon?: string
-    iconTrue?: string
-    shortcut?: string
-    subMenu?: Array<menuItem>
-}
-
-export interface drawer {
-    component?: any
-    id?: string
-    direction?: string
-    title?: string
-    description?: string
-    submitText?: string
-}
-
 export interface pocket {
     key: string
     name: string
@@ -175,18 +118,6 @@ export interface Shard {
     color: string
 }
 
-export interface DataObject {
-    type: string
-    tags?: string | string[] // `tags` can be either a string or an array of strings
-    [key: string]: any
-}
-
-export interface dateObject {
-    patch: string
-    date: string
-    time: string
-}
-
 export interface summoner {
     name: string
     tag: string
@@ -226,16 +157,4 @@ export interface champPlayCount {
     win: number
     loss: number
     kda: string
-}
-
-export interface article {
-    title: string
-    source: string
-    icon?: string
-    source2?: string
-    image: string
-    link?: string
-    linkTitle?: string
-    color?: string
-    date?: string
 }

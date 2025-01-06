@@ -2,9 +2,9 @@
 import { useAccountStore } from '@stores/accountStore'
 import { useSidebar } from '@components/base/sidebar/utils'
 import { summoner } from '@data/playerData'
+import { supabase } from '@lib/supabase'
 const as = useAccountStore()
 
-/*   */
 const links = [
     {
         name: 'Build Analysis',
@@ -18,7 +18,35 @@ const links = [
     },
 ]
 
+const userMatches = async () => {
+    const {
+        data: { user },
+        error: userError,
+    } = await supabase.auth.getUser()
 
+    console.log('💠 - user - user:', user)
+    console.log('💠 - userMatches - user.value.id,:', user.id)
+    if (!user) {
+        console.error('User not logged in or failed to fetch user')
+        return false
+    }
+
+    const { data, error } = await supabase.rpc('auth_user', {
+        uid: user.id,
+    })
+    console.log('💠 - userMatches - data:', data)
+
+    return data // Boolean value returned by the function (true if match)
+}
+
+// Call `userMatches` and handle the result
+userMatches().then((matches) => {
+    if (matches) {
+        console.log('User matches!')
+    } else {
+        console.log('User does not match.')
+    }
+})
 
 const collapsed = ref()
 </script>
@@ -32,7 +60,6 @@ const collapsed = ref()
                         <RouterLink
                             :to="{
                                 name: 'player-home',
-                                /*  hash: item.hash, */
                             }"
                             active-class="bg-b2/30"
                             class="flex h-14 flex-nowrap items-center rounded-md"
@@ -82,13 +109,27 @@ const collapsed = ref()
 
                         <CollapsibleContent v-if="as.sidebarOpen">
                             <SidebarMenuSub>
+                                <!-- Admin -->
+                                <SidebarMenuSubItem>
+                                    <RouterLink to="/admindashboard">
+                                        <SidebarMenuSubButton
+                                            size="lg"
+                                            class="gap-4">
+                                            <icon
+                                                icon="codicon:source-control" />
+                                            <span class="">
+                                                Admin Dashboard
+                                            </span>
+                                        </SidebarMenuSubButton>
+                                    </RouterLink>
+                                </SidebarMenuSubItem>
+
                                 <SidebarMenuSubItem
                                     v-for="link in links"
                                     :key="link.name">
                                     <RouterLink
                                         :to="{
                                             name: link.link,
-                                            /*  hash: item.hash, */
                                         }">
                                         <SidebarMenuSubButton
                                             size="lg"

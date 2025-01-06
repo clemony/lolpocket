@@ -8,6 +8,8 @@ import router from './router'
 import Shortkey from 'vue3-shortkey'
 import VideoBackground from 'vue-responsive-video-background-player'
 import VueInViewport from 'vue-in-viewport'
+import { getPatch } from './src/data/getData'
+import { plugin as vueTransitionsPlugin } from '@morev/vue-transitions'
 
 const app = createApp(App)
 
@@ -25,6 +27,21 @@ app.component('Icon', Icon)
 app.use(router)
 app.use(Shortkey)
 
+app.use(
+    vueTransitionsPlugin({
+        defaultProps: {
+            duration: 400,
+        },
+        componentDefaultProps: {
+            TransitionSlide: {
+                duration: 200,
+                easing: 'cubic-bezier(.25, .8, .5, 1)',
+                offset: [0, 8],
+                mode: 'out-in',
+            },
+        },
+    })
+)
 app.use(VueInViewport, {
     classInit: 'in-viewport',
     delay: 300,
@@ -34,3 +51,5 @@ app.use(VueInViewport, {
 })
 
 app.mount('#app')
+
+getPatch()

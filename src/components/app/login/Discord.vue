@@ -5,6 +5,11 @@ async function signInWithDiscord() {
     const { data, error } = await supabase.auth.signInWithOAuth({
         provider: 'discord',
     })
+    if (error) {
+        console.error('Error logging in with Discord:', error)
+    } else {
+        // await updateItemData(user.id)
+    }
 }
 </script>
 <template>

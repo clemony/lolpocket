@@ -1,6 +1,6 @@
 import { useTempStore } from '@stores/tempStore'
 import type { Champion, Item, Rune } from '@/types/dataTypes'
-import { drawer } from '@/types/pocketTypes'
+import type { drawer } from '@/types/utilityTypes'
 
 export function toggleDrawerState(
     drawerData,

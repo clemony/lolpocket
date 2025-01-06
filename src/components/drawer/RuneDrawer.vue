@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useTempStore } from '@stores/tempStore'
-import { formatDataText } from '@/functions/formatting'
+import { formatDataText } from '@components/runes/data/format'
 const ts = useTempStore()
 
 const rune = ts.selectedRune

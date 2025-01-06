@@ -1,15 +1,16 @@
 import { defineStore } from 'pinia'
-import { useDataStore } from './oldDataStore'
+import { useDataStore } from './dataStore'
 import { useAccountStore } from '@stores/accountStore'
-import { drawer, ItemSet } from '@/types/pocketTypes'
+import { ItemSet } from '@/types/pocketTypes'
+import { Item } from '@/types/dataTypes'
+import type { drawer } from '@/types/utilityTypes'
 
 export const useTempStore = defineStore(
     'tempStore',
     () => {
-        const ds = useDataStore()
+        // const ds = useDataStore()
         const as = useAccountStore()
 
-        const currentPatch = '14.24.1'
         const userOS = ref()
         const clickType = computed(() => {
             return userOS.value == 'Mac' || 'Windows' ?
@@ -17,14 +18,14 @@ export const useTempStore = defineStore(
                 :   'force press'
         })
 
-        // drawerhttps://github.com/saadeghi/daisyui/blob/v5/packages/daisyui/functions/themePlugin.js
+        // drawer
         const drawerState = ref(false)
         const drawerValue = shallowRef(null as drawer)
 
         // drawer selections
         const drawerPocket = ref(null)
         const selectedChampion = ref(null)
-        const selectedItem = ref(null)
+        const selectedItem = ref()
         const selectedRune = ref(null)
 
         //champs
@@ -32,9 +33,14 @@ export const useTempStore = defineStore(
         const champClassFilters = ref([])
         const sortChampsAZ = ref()
         const viewFavoriteChamps = ref()
+        const browseChampionClass = ref([])
+        const browseChampionTypes = ref(null)
+        const browseChampSearch = ref(null)
+        const sortBrowseChampsAZ = ref(null)
+        const browseFavoriteChamps = ref(false)
 
         //items
-        const items = ref([...ds.items])
+        //const items = ref([...ds.items])
         const sortItemsAZ = ref(0)
         const sortPrice = ref(0)
         const itemSearchFilter = ref('')
@@ -42,10 +48,14 @@ export const useTempStore = defineStore(
         const statFilters = ref<string[]>([])
         const viewFavoriteItems = ref(false)
         const selectedItemSet = ref<ItemSet | null>(null)
+        const browseItemTypes = ref()
+        const browseItemStats = ref([])
+        const browseItemCats = ref([])
+        const biSearchResult = ref()
 
         // Method to reset the items array
         const resetItemsArray = () => {
-            items.value = [...ds.items] // Reset to the original data from dataStore
+            //items.value = [...ds.items] // Reset to the original data from dataStore
         }
 
         watch(
@@ -65,7 +75,6 @@ export const useTempStore = defineStore(
         const selectedSpell = ref()
 
         return {
-            currentPatch,
             userOS,
             clickType,
 
@@ -85,9 +94,13 @@ export const useTempStore = defineStore(
             sortChampsAZ,
             champClassFilters,
             champSearch,
-
+            browseChampionClass,
+            browseChampionTypes,
+            browseChampSearch,
+            browseFavoriteChamps,
+            sortBrowseChampsAZ,
             //items
-            items,
+            // items,
             viewFavoriteItems,
             sortItemsAZ,
             sortPrice,
@@ -96,6 +109,10 @@ export const useTempStore = defineStore(
             itemSearchFilter,
             resetItemsArray,
             selectedItemSet,
+            browseItemTypes,
+            browseItemStats,
+            browseItemCats,
+            biSearchResult,
 
             //runes
             selectedRuneSetIndex,

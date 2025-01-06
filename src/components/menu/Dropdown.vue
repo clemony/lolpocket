@@ -1,13 +1,11 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-import type { menu, menuGroup, menuItem, pocket } from '@/types/pocketTypes'
 
 const props = withDefaults(
     defineProps<{
         class?: HTMLAttributes['class']
         size?: any
         variant?: any
-        menu?: menu
         noArrow?: boolean
         style?: any
         contentClass?: HTMLAttributes['class']
@@ -18,7 +16,6 @@ const props = withDefaults(
         variant: 'ghost',
     }
 )
-const menu = ref(props.menu)
 </script>
 
 <template>

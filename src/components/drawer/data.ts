@@ -1,4 +1,4 @@
-import type { drawer } from '@/types/pocketTypes'
+import { drawer } from '@/types/utilityTypes'
 
 const PocketDrawer = defineAsyncComponent({
     loader: () => import('@/components/drawer/PocketDrawer.vue'),
@@ -51,7 +51,7 @@ export const cardDrawer: drawer = {
 
 export const championDrawer: drawer = {
     component: ChampionDrawer,
-    title: 'Champion',
+    title: ' ',
     description: ' ',
     direction: 'right',
     id: 'championDrawer',

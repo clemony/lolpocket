@@ -63,7 +63,7 @@ function controlVideo(action) {
             class="[&_hr]:bg-b2 bg-b1 border-b2/30 relative z-10 w-full border-b px-12 py-26 transition-all duration-300 [&_hr]:mx-8">
             <slot />
             <ul
-                class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical [&_.timeline-end]:w-full [&_.timeline-start]:w-full [&_div]:max-w-150 [&_h1]:!font-extrabold [&_h1]:!tracking-tight">
+                class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical [&_hr]:bg/b2 [&_.timeline-end]:w-full [&_.timeline-start]:w-full [&_div]:max-w-150 [&_h1]:!font-extrabold [&_h2]:drop-shadow-sm [&_p]:drop-shadow-xs [&_svg]:drop-shadow-sm">
                 <li v-in-viewport :class="classObject" class="w-full">
                     <div class="timeline-middle">
                         <icon icon="bi:check-circle-fill" class="size-5" />
@@ -82,7 +82,8 @@ function controlVideo(action) {
                             role.
                         </p>
 
-                        <div class="bg-b2/40 mt-10 h-90 w-full rounded-lg" />
+                        <div
+                            class="bg-b2/40 shadow-smooth mt-10 h-90 w-full rounded-lg" />
                     </div>
                     <hr />
                 </li>
@@ -96,7 +97,8 @@ function controlVideo(action) {
                         <h2>Craft a Build</h2>
 
                         <p>craft bukild bflsjfl</p>
-                        <div class="bg-b2/40 mt-10 h-90 w-full rounded-lg" />
+                        <div
+                            class="bg-b2/40 shadow-smooth mt-10 h-90 w-full rounded-lg" />
                     </div>
                     <hr />
                 </li>
@@ -114,7 +116,7 @@ function controlVideo(action) {
                             some LP.
                         </p>
                         <div
-                            class="bg-b2/40 shadow-warm relative mt-10 h-90 w-full overflow-hidden rounded-xl">
+                            class="bg-b2/40 shadow-smooth relative mt-10 h-90 w-full overflow-hidden rounded-xl">
                             <video-background
                                 ref="gameplayVideoRef"
                                 src="https://universe.communitydragon.org/events/riot-client/2024/04/lol/product-details-background.aea0275.webm"
@@ -156,7 +158,8 @@ function controlVideo(action) {
 
                         <p>The stuff that does stuff.</p>
 
-                        <div class="bg-b2/40 mt-10 h-90 w-full rounded-lg" />
+                        <div
+                            class="bg-b2/40 shadow-smooth mt-10 h-90 w-full rounded-lg" />
                     </div>
                 </li>
             </ul>

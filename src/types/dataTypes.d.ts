@@ -36,107 +36,88 @@ export type effectAmount = number
 export type Champions = Champion[]
 
 export interface Champion {
-    version: string
-    id: string
-    key: string
     name: string
-    title: string
-    blurb: string
-    info: {
-        attack: number
-        defense: number
-        magic: number
-        difficulty: number
+    adaptivetype: string
+    alttype: string
+    apiname: string
+    be: number
+    changes: string
+    client_positions: string
+    control: number
+    damage: number
+    date: string
+    difficulty: number
+    external_positions: string
+    herotype: string
+    id: number
+    mobility: number
+    nickname: string
+    patch: string
+    rangetype: string
+    resource: string
+    role: string
+    rp: number
+    skills: {
+        1: Skill
+        2: Skill
+        3: Skill
+        4: Skill
+        5: Skill
     }
-    image: {
-        full: string
-        sprite: string
-        group: string
-        x: number
-        y: number
-        w: number
-        h: number
-    }
-    tags: string[]
-    partype: string
     stats: {
-        hp: number
-        hpperlevel: number
-        mp: number
-        mpperlevel: number
-        movespeed: number
-        armor: number
-        armorperlevel: number
-        spellblock: number
-        spellblockperlevel: number
-        attackrange: number
-        hpregen: number
-        hpregenperlevel: number
-        mpregen: number
-        mpregenperlevel: number
-        crit: number
-        critperlevel: number
-        attackdamage: number
-        attackdamageperlevel: number
-        attackspeedperlevel: number
-        attackspeed: number
+        acquisition_radius: number
+        arm_base: number
+        arm_lvl: number
+        as_base: number
+        as_lvl: number
+        as_ratio: number
+        attack_cast_time: number
+        attack_total_time: number
+        dam_base: number
+        dam_lvl: number
+        hp5_base: number
+        hp5_lvl: number
+        hp_base: number
+        hp_lvl: number
+        mp5_base: number
+        mp5_lvl: number
+        mp_base: number
+        mp_lvl: number
+        mr_base: number
+        mr_lvl: number
+        ms: number
+        pathing_radius: number
+        range: number
+        selection_height: number
+        selection_radius: number
     }
+    style: number | string
+    title: string
+    toughness: number
+    utility: number
 }
 
 // item
 
-export interface Item {
-    name: string
-    description: string
-    colloq: string
-    plaintext: string
-    into: {
-        0: string
-        1: string
-        2: string
-        3: string
-        4: string
-        5: string
-        6: string
-        7: string
-        8: string
-    }
-    image: {
-        full: string
-        sprite: string
-        group: string
-        x: number
-        y: number
-        w: number
-        h: number
-    }
-    inStore: boolean
-    gold: {
-        base: number
-        purchasable: boolean
-        total: number
-        sell: number
-    }
-    tags: string[]
-    maps: {
-        11: boolean
-        12: boolean
-        21: boolean
-        22: boolean
-        30: boolean
-        33: boolean
-    }
-    stats: stat[]
-}
-
 export type stat = string | number
 
-export interface itemData {
-    id: number
-    nickname?: string[]
+export type StatKeys = keyof Item['stats']
+
+export type Items = {
+    [name: string]: itemData
+}
+
+export interface Item {
+    id?: number
+    name: string
+    nickname: string | string[] | null
     tier?: number
     type?: string
-    modes: {
+    caption?: string
+    champion?: string
+    itemlimit?: string
+    limit?: string
+    modes?: {
         'classic sr 5v5'?: boolean
         aram?: boolean
         nb?: boolean
@@ -164,7 +145,7 @@ export interface itemData {
         movement?: boolean
         'lifesteal vamp'?: boolean
     }
-    stats: {
+    stats?: {
         ad?: number
         ah?: number
         ap?: number
@@ -198,7 +179,7 @@ export interface itemData {
         spec?: number
         spec2?: number
     }
-    effects: {
+    effects?: {
         pass?: effect
         pass2?: effect
         pass3?: effect
@@ -207,6 +188,7 @@ export interface itemData {
     }
     recipe?: [Item[]]
     buy?: number
+    removed?: boolean | string
 }
 
 export interface effect {

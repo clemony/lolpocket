@@ -6,8 +6,10 @@
 @import './utilities.css';
 @import './components.css';
 @import './daisy.css';
+@import '@morev/vue-transitions/styles';
 
 @plugin "daisyui" {
+    exclude: radialprogress, toast;
 }
 @config './tailwind.config.ts';
 @plugin "tailwindcss-animate";
@@ -16,6 +18,9 @@
 @import 'tailwindcss';
 
 @layer base {
+    :root {
+        scrollbar-color: oklch(0 0.02476 255.702 / 0.075) rgba(0, 0, 0, 0) !important;
+    }
     html {
         @apply bg-transparent;
         ** {

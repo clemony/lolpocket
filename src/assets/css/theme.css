@@ -58,12 +58,28 @@
 
     --color-error: oklch(59.33% 0.1319 21.78);
 
-    --color-support: oklch(76.93% 0.0494 204.19);
+    --color-support: var(--color-inspiration);
+    --color-utility: var(--color-inspiration);
 
-    --color-bottom: #ebcb8b;
-    --color-mid: #be86b5;
-    --color-jungle: #a3be8c;
     --color-top: #e0746b;
+    --color-fighter: oklch(72.5% 0.1303 34.36);
+
+    --color-marksman: var(--color-precision);
+    --color-mobility: var(--color-precision);
+    --color-bottom: #ebcb8b;
+
+    --color-mid: #be86b5;
+    --color-mage: var(--color-sorcery);
+    --color-control: var(--color-sorcery);
+
+    --color-tank: var(--color-resolve);
+    --color-toughness: var(--color-resolve);
+    --color-jungle: #a3be8c;
+
+    --color-assassin: var(--color-domination);
+    --color-damage: var(--color-domination);
+
+    --color-onhit: oklch(70.72% 0.0996 10.55);
 
     --radius-xl: initial;
     --radius-xl: 0.7rem;
@@ -80,9 +96,10 @@
         inset -2px -1px 5px 1px #00000019;
     --shadow-inset-sm: inset 1px 2px 1px 1px #00000004,
         inset -1px -1px 2px 1px #00000009;
-    --shadow-smooth: 0px 0px 15px rgba(17, 17, 26, 0.075);
+    --shadow-smooth: 0px 1px 10px rgba(17, 17, 26, 0.075);
 
     --drop-shadow-soft: 0px 0px 1px #00000060;
     --drop-shadow-softer: 0px 0px 1px #00000040;
     --drop-shadow-softest: 0px 0px 1px #00000020;
+    --drop-shadow-text: 1px 0px 1px #00000020;
 }

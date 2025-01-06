@@ -3,14 +3,10 @@ import { Toaster } from '@components/base/sonner'
 import { toggleDrawerState } from '@/functions/utils'
 import { useAccountStore } from '@stores/accountStore'
 import { getOS } from '@/functions/detectOS'
-import {
-    getChampionData,
-    getItemData,
-    getRuneData,
-    getShardData,
-} from '@data/getData'
+
 import { useDataStore } from '@stores/dataStore'
 import { useTempStore } from '@stores/tempStore'
+
 const ts = useTempStore()
 const as = useAccountStore()
 const ds = useDataStore()
@@ -40,15 +36,6 @@ onMounted(async () => {
     // os
     ts.userOS = getOS()
 
-    // from cache | get data ****TODO****: add patch update parameter
-
-    !ds.paths.length ? getRuneData() : ''
-    !ds.champions.length ? getChampionData() : ''
-    !ds.items.length ? getItemData() : ''
-
-    // getItemData()
-    // getRuneData()
-    //getShardData()
     // route
     const route = useRoute()
     nextTick(() => {

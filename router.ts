@@ -10,7 +10,11 @@ const routes: RouteRecordRaw[] = [
         name: 'home',
         component: () => import(`./src/pages/Home.vue`),
     },
-
+    {
+        path: '/admindashboard',
+        name: 'admin-dashboard',
+        component: () => import(`./src/pages/admin/AdminDashboard.vue`),
+    },
     // player
 
     {
@@ -232,7 +236,7 @@ router.beforeResolve(async (to) => {
     }
 })
 
-router.afterEach((to, from) => {
+/* router.afterEach((to, from) => {
     const as = useAccountStore()
     const route = computed(() => {
         to.name == '' || to.name == '/' || to.name == undefined ?
@@ -251,5 +255,5 @@ router.afterEach((to, from) => {
     history.push(route)
     history.length > 5 ? history.splice(0, 1) : ''
     console.log(history)
-})
+}) */
 export default router

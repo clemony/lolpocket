@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDataStore } from '@stores/oldDataStore'
+import { useDataStore } from '@stores/dataStore'
 import { useTempStore } from '@stores/tempStore'
 const ts = useTempStore()
 const ds = useDataStore()

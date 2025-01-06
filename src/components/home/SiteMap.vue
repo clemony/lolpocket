@@ -11,7 +11,7 @@ const itemClass =
 <template>
     <div class="bg-b1 text-bc flex w-full justify-center">
         <div
-            class="flex w-full flex-wrap justify-evenly gap-x-10 gap-y-16 px-12 pt-36 pb-40">
+            class="flex w-full flex-wrap justify-evenly gap-x-10 gap-y-16 px-12 pt-36 pb-40 [&_h3]:drop-shadow-sm [&_li]:drop-shadow-sm">
             <ul :class="listClass">
                 <h3>Tools</h3>
                 <li

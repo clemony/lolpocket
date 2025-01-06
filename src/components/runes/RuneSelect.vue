@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDataStore } from '@stores/oldDataStore'
+import { useDataStore } from '@stores/dataStore'
 import type { pocket } from '@/types/pocketTypes'
 import { runeDrawer } from '@components/drawer/data'
 import { toggleDrawerState } from '@/functions/utils'

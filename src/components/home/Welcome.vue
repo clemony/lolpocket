@@ -3,7 +3,7 @@
     <div class="relative grid gap-12">
         <div
             class="wrapper **:!text-12 flex items-center **:!font-bold **:tracking-tight">
-            <div class="ws-nowrap relative -ml-1 flex">
+            <div class="ws-nowrap relative -ml-1 flex drop-shadow-sm">
                 <h1 class="">l</h1>
                 <h1 class="tracking-in-expand">ol</h1>
                 <h1 class="">p</h1>
@@ -18,12 +18,13 @@
         </div>
 
         <div class="w-full space-y-3 justify-self-start">
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 drop-shadow-sm">
                 <h1 class="!text-9">lolpocket</h1>
                 <span class="text-7 font-serif italic">noun</span>
             </div>
             <p class="mb-3 px-1">[ lohl - pok - it ]</p>
-            <div class="text-5 flex flex-col gap-3 font-serif !font-light">
+            <div
+                class="text-5 flex flex-col gap-3 font-serif !font-light drop-shadow-sm">
                 <p class="">
                     A pocket to store your League picks, builds, and
                     theorycrafts.

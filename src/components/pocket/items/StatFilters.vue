@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { stats } from '@data/stats'
+import { stats } from '@/components/items/data/client/stats'
 import { useTempStore } from '@stores/tempStore'
 const ts = useTempStore()
 const sorted = stats.sort((a, b) => {

@@ -1,91 +1,101 @@
 <script setup lang="ts">
-import { handleItemLike } from '@/functions/pocketUtilities'
-import { formatItemStats } from '@/functions/formatting'
+import { formatItemStats } from '@/components/items/data/database/formatItemStats'
 import { useTempStore } from '@stores/tempStore'
 import { useAccountStore } from '@stores/accountStore'
-import { itemDatabase } from '@data/itemDatabase'
-import { itemData } from '@/types/dataTypes'
-import { matchItemName } from '@/functions/makeLinks'
-
+import { useDataStore } from '@stores/dataStore'
+const ds = useDataStore()
 const as = useAccountStore()
 
 const ts = useTempStore()
 
 const item = ref(ts.selectedItem)
-const itemId = getItemId(item.value.name)
+console.log('💠 - item:', item)
 
-const matchedItem = computed(() => {
-    console.log('💠 - matchedItem - matchedItem:', matchedItem)
-    return matchItemName(item.value.name)
-})
+const type = ref(item.value.type)
+const stats = ref(formatItemStats(item.value.stats))
+const effects = ref(item.value.effects)
+const id = ref(item.value.id)
 
-const type = ref(matchedItem.value.type)
+const recipe = ref(item.value.recipe)
 
-const formattedStats = computed(() => {
-    return formatItemStats(matchedItem.value.stats)
-})
 const isLiked = computed(() => {
     return as.favoriteItems.some((item) => item.name === item.name)
 })
-const handleItemChange = (itemName) => {
-    const a = getItemId(itemName.toString())
-    console.log('💠 - handleItemChange - a:', a)
-    const b = getItembyId(a)
-    console.log('💠 - handleItemChange - b:', b)
-    ts.selectedItem = b
+
+const findItem = (itemName) => {
+    return ds.SRitems.find((item) => item.name == itemName)
+}
+
+watch(
+    () => as.favoriteItems,
+    (newVal) => {
+        console.log('💠 - newVal:', newVal)
+    }
+)
+onMounted(() => {
+    console.log('💠 - item:', item)
+})
+
+function handleTooltip(item) {
+    const a = findItem(item).buy
+    if (a) {
+        return item + ' ' + a + 'g'
+    } else {
+        return item
+    }
 }
 </script>
 
 <template>
-    <div class="relative h-full w-120 pr-16" :key="matchedItem.id">
+    <div :item="ts.selectedItem" class="relative h-full w-120 pr-16" key="id">
+        <div class="rating absolute top-1 right-17 size-fit gap-1">
+            <input
+                type="checkbox"
+                v-model="as.favoriteItems"
+                :value="item"
+                name="favorite-item"
+                :aria-label="'favorite ' + item.name"
+                class="mask mask-heart bg-[#dd5f61]" />
+        </div>
+
         <div class="flex w-full gap-6 pb-5">
             <LoadImg
                 :key="item.name"
-                :url="getItemImage(item.name)"
+                :url="getItemImage(item.id)"
                 :alt="item.name + ' Image'"
                 class="border-b3/90 shadow-warm pointer-events-none size-20 rounded-lg border" />
 
             <div class="flex flex-col">
                 <h1
-                    class="flex flex-wrap items-start pt-1 leading-none tracking-tighter">
+                    class="flex flex-wrap items-start pt-1 leading-none tracking-tighter drop-shadow-sm">
                     {{ item.name }}
                 </h1>
-                <p v-if="type" class="pt-1 font-semibold opacity-50">
-                    <!--  {{ type.replace('=>', '-> ') }} -->
-                </p>
-                <!--
-                <a
-                    class="flex items-center gap-2 pl-0.75 capitalize underline-offset-2 hover:underline"
-                    :href="getWikiLink(item.name)"
-                    target="_blank"
-                    alt="link to league wiki">
-                    Official Wiki
-                    <icon
-                        icon="mingcute:external-link-line"
-                        class="mb-[2px] !size-4.25 shrink-0" />
-                </a> -->
 
-                <!--
-                <div class="flex items-end justify-end gap-2">     <Button
-                        size="xs"
-                        variant="neutral"
-                        class="group/liked relative aspect-square rounded-full p-2 *:absolute *:size-4.5 *:shrink-0 *:transition-all *:duration-100 hover:opacity-75"
-                        @click="handleItemLike(item)">
-                        <icon
-                            v-if="isLiked"
-                            icon="teenyicons:heart-solid"
-                            class="text-dark-rose" />
-                        <icon icon="teenyicons:heart-outline" class="text-ac" />
-                    </Button>
- -->
+                <template v-if="item.nickname">
+                    <p class="text-1 ml-0.5 italic">
+                        a.k.a.
+
+                        {{
+                            item.nickname.toString().replace(/\[(.*)\]/g, '$1')
+                        }}
+                    </p>
+                </template>
+
+                <template v-if="type">
+                    <p class="group ml-0.5 font-semibold opacity-50">
+                        {{ type }}
+                        <span class="group-last:hidden">,&nbsp;</span>
+                    </p>
+                </template>
             </div>
         </div>
 
-        <template v-if="formattedStats">
+        <template v-if="stats">
             <Separator class="mt-4 mb-10" label="STATS" />
             <div class="grid grid-cols-[1.5fr_2fr] gap-2 *:flex">
-                <template v-for="stat in formattedStats">
-                    <p class="col-start-1 items-end pt-[2px] font-medium">
+                <template v-for="stat in stats">
+                    <p
+                        class="col-start-1 items-end pt-[2px] font-medium tracking-tight">
                         {{ stat.key }}
                     </p>
                     <p class="col-start-2 items-center">{{ stat.value }}</p>
@@ -93,81 +103,82 @@ const handleItemChange = (itemName) => {
             </div>
         </template>
 
-        <div v-if="matchedItem.effects && matchedItem.effects.pass">
+        <div v-if="effects && effects.pass">
             <Separator label="PASSIVES" class="mt-11 mb-9" />
-            <p v-if="typeof matchedItem.effects.pass === 'string'"></p>
+            <p v-if="typeof effects.pass === 'string'"></p>
+            <ItemEffect v-else v-if="effects.pass" :data="effects.pass" />
             <ItemEffect
-                v-else
-                v-if="matchedItem.effects.pass"
-                :data="matchedItem.effects.pass" />
-            <ItemEffect
-                v-if="matchedItem.effects.pass2"
-                :data="matchedItem.effects.pass2"
+                v-if="effects.pass2"
+                :data="effects.pass2"
                 class="mt-5" />
-            <ItemEffect
-                v-if="matchedItem.effects.pass3"
-                :data="matchedItem.effects.pass3" />
+            <ItemEffect v-if="effects.pass3" :data="effects.pass3" />
         </div>
 
-        <div v-if="matchedItem.effects && matchedItem.effects.act">
+        <div v-if="item.itemlimit" class="mt-10 items-end self-end">
+            <!-- <Separator class="mt-11 mb-3" /> -->
+
+            Limited to one {{ item.itemlimit }} item.
+        </div>
+
+        <div v-if="effects && effects.act">
             <Separator
-                v-if="matchedItem.effects && matchedItem.effects.act"
+                v-if="effects && effects.act"
                 label="ACTIVES"
                 class="my-11" />
 
-            <p v-if="typeof matchedItem.effects.act === 'string'"></p>
-            <ItemEffect
-                v-else
-                v-if="matchedItem.effects.act"
-                :data="matchedItem.effects.act" />
+            <p v-if="typeof effects.act === 'string'"></p>
+            <ItemEffect v-else v-if="effects.act" :data="effects.act" />
         </div>
 
-        <template v-if="matchedItem.recipe">
+        <template v-if="recipe">
             <Separator label="RECIPE" class="my-11" />
 
             <div class="group flex items-center justify-center gap-4">
-                <template
-                    v-for="(item, index) in matchedItem.recipe"
-                    :key="item.toString()">
-                    <Tooltip
-                        :content="
-                            item.toString() +
-                            ' ' +
-                            matchItemName(item.toString()).buy +
-                            'g'
-                        ">
+                <template v-for="(item, index) in recipe" :key="item.name">
+                    <Tooltip :content="handleTooltip(item)">
                         <button
-                            @click="handleItemChange(item)"
+                            @click=""
                             class="ring-neutral/80 ring-offset-b1 size-14 overflow-hidden rounded-lg shadow-sm hover:ring-1 hover:ring-offset-2">
                             <LoadImg
-                                :url="getItemImage(item)"
+                                :url="getItemImage(findItem(item).id)"
                                 :alt="item + 'image'" />
                         </button>
                     </Tooltip>
                     <icon
-                        v-if="matchedItem.recipe.length != index + 1"
                         icon="teenyicons:add-outline"
-                        class="stroke-[2]" />
+                        class="stroke-[1.5] last:hidden" />
                 </template>
             </div>
         </template>
 
-        <div
-            v-if="matchedItem.id || matchedItem.buy"
-            class="items-end self-end">
+        <div class="items-end self-end">
             <Separator class="mt-11 mb-3" />
             <div class="flex items-center px-2">
-                <p
-                    v-if="matchedItem.id"
+                <!--       <p
+                    v-if="id"
                     class="flex grow items-end gap-3 pt-2 leading-none">
                     <span class="">Item ID:</span>
-                    <span class="">{{ getItemId(item.name) }}</span>
-                </p>
+                    <span class="">{{ id }}</span>
+                </p> -->
+
+                <div class="flex grow items-center gap-3">
+                    <Tooltip content="Official Wiki">
+                        <a
+                            class="hover:ring-neutral/70 hover:ring-offset-b1 flex items-center gap-1 rounded-sm hover:ring-1 hover:ring-offset-2"
+                            :href="getWikiLink(item.name)"
+                            target="_blank"
+                            alt="link to league wiki">
+                            <img
+                                src="/img/logos/wikilogo.webp"
+                                class="size-6.5 rounded-sm" />
+                        </a>
+                    </Tooltip>
+                </div>
                 <p
-                    v-if="matchedItem.buy"
+                    v-if="item.buy"
                     class="flex items-center justify-end gap-2 self-end leading-none font-medium">
                     <img src="/img/icons/Gold.png" class="h-4.5" />
-                    {{ matchedItem.buy.toString().replace('=>', '-> ') }}
+                    {{ item.buy.toString().replace(':>', '-> ') }}
                 </p>
             </div>
         </div>

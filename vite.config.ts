@@ -36,8 +36,8 @@ export default defineConfig({
                 RadixVueResolver(),
                 IconsResolver({
                     prefix: false,
-                    enabledCollections: ['ui', 'logo'],
-                    customCollections: ['ui', 'logo'],
+                    enabledCollections: ['ui', 'logo', 'stats'],
+                    customCollections: ['ui', 'logo', 'stats'],
                 }),
             ],
             include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
@@ -58,6 +58,7 @@ export default defineConfig({
                 'vue-router',
                 {
                     '@/lib/utils.ts': ['cn', 'clean'],
+                    '@/lib/rateLimit.ts': ['limit', 'limiter'],
                     '@/functions/makeLinks.ts': [
                         'lolImgCdn',
                         'formatLink',
@@ -93,6 +94,12 @@ export default defineConfig({
                     )
                 ),
                 logo: FileSystemIconLoader('public/img/logos', (svg) =>
+                    svg.replace(
+                        /^<svg /,
+                        '<svg fill="currentColor" stroke="currentColor" '
+                    )
+                ),
+                stats: FileSystemIconLoader('public/img/stats', (svg) =>
                     svg.replace(
                         /^<svg /,
                         '<svg fill="currentColor" stroke="currentColor" '

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useTempStore } from '@stores/tempStore'
 import { usePocketStore } from '@stores/pocketStore'
-import { getQuote } from '@data/champQuotes'
+import { getQuote } from '@/components/champions/data/champQuotes'
 import type { pocket } from '@/types/pocketTypes'
 
 const ps = usePocketStore()

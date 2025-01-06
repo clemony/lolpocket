@@ -5,6 +5,8 @@ import type { HTMLAttributes } from 'vue'
 import { addItemToSet } from '@/functions/pocketUtilities'
 import type { Item } from '@/types/dataTypes'
 import { useDataStore } from '@stores/dataStore'
+import { itemDrawer } from '@components/drawer/data'
+import { toggleDrawerState } from '@/functions/utils'
 
 const ds = useDataStore()
 const ts = useTempStore()
@@ -28,33 +30,26 @@ function add(item) {
     disabled.value = true
     addItemToSet(props.pocket.key, ts.selectedItemSet.key, item)
 }
+
+const isImgLoaded = ref(false)
 </script>
 
 <template>
-    <!-- <TransitionGroup @enter="imageIn" name="fade" @leave="imageOut"> -->
-
-    <!--   <ItemPop
-        :item="props.item"
-        :variant="'add'"
-        :key="props.item.name"
-        @click.meta="add(item)"
-        :ref="props.item.name"> -->
     <div
+        @click.right="toggleDrawerState(itemDrawer, null, null, item)"
         :class="
             cn(
-                'border-neutral/70 shadow-standard hover:ring-neutral/40 relative size-16 rounded-lg border hover:ring-1 hover:ring-offset-1',
+                'hover:ring-neutral/40 border-b3 relative overflow-hidden rounded-lg border shadow-sm transition-all duration-200 hover:ring-1 hover:ring-offset-1',
+
                 props.class
             )
         ">
-        <LoadImg
+        <img
             :key="props.item.name"
-            :url="getItemImage(props.item.name)"
+            :src="getItemImage(props.item.id)"
             :alt="props.item.name + ' Image'"
             :class="cn('drag-img aspect-square size-full!', props.imgClass)" />
     </div>
-    <!--  </ItemPop> -->
-
-    <!-- </TransitionGroup> -->
 </template>
 
 <style scoped></style>

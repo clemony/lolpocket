@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { defineProps, defineEmits, computed, ref } from 'vue'
 import { cn } from '@lib/utils'
-import { useDataStore } from '@stores/oldDataStore'
+import { useDataStore } from '@stores/dataStore'
 import { usePocketStore } from '@stores/pocketStore'
 import { imageIn, imageOut } from '@/assets/animation/animations'
 import { getPocket } from '@/functions/pocketUtilities'

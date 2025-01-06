@@ -14,11 +14,12 @@ const props = withDefaults(
         alt: 'image',
     }
 )
-
+const emit = defineEmits(['update:loaded'])
 function imageLoaded() {
     setTimeout(() => {
         isImageLoaded.value = true
     }, 500)
+    emit('update:loaded', true)
 }
 
 //@error="setBlankImg($event)"
@@ -34,13 +35,13 @@ function setBlankImg(event) {
             :class="cn('border-none!', props.class)" />
 
         <div v-show="isImageLoaded" class="size-full overflow-hidden">
-            <Img
+            <img
                 :src="props.url"
                 :alt="props.alt"
                 @load="imageLoaded()"
                 :class="
                     cn(
-                        'animate-in fade-in-0 size-full duration-700',
+                        'animate-in fade-in-0 size-full duration-1400',
                         props.class
                     )
                 " />

@@ -51,6 +51,8 @@ declare global {
   const isReactive: typeof import('vue')['isReactive']
   const isReadonly: typeof import('vue')['isReadonly']
   const isRef: typeof import('vue')['isRef']
+  const limit: typeof import('@/lib/rateLimit.ts')['limit']
+  const limiter: typeof import('@/lib/rateLimit.ts')['limiter']
   const lolImgCdn: typeof import('@/functions/makeLinks.ts')['lolImgCdn']
   const makeDestructurable: typeof import('@vueuse/core')['makeDestructurable']
   const markRaw: typeof import('vue')['markRaw']
@@ -357,6 +359,8 @@ declare module 'vue' {
     readonly isReactive: UnwrapRef<typeof import('vue')['isReactive']>
     readonly isReadonly: UnwrapRef<typeof import('vue')['isReadonly']>
     readonly isRef: UnwrapRef<typeof import('vue')['isRef']>
+    readonly limit: UnwrapRef<typeof import('@/lib/rateLimit.ts')['limit']>
+    readonly limiter: UnwrapRef<typeof import('@/lib/rateLimit.ts')['limiter']>
     readonly lolImgCdn: UnwrapRef<typeof import('@/functions/makeLinks.ts')['lolImgCdn']>
     readonly makeDestructurable: UnwrapRef<typeof import('@vueuse/core')['makeDestructurable']>
     readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>

@@ -59,6 +59,8 @@
     "isReactive": true,
     "isReadonly": true,
     "isRef": true,
+    "limit": true,
+    "limiter": true,
     "lolImgCdn": true,
     "makeDestructurable": true,
     "markRaw": true,

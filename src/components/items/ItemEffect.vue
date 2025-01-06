@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { effect } from '@/types/dataTypes'
-import { formatEffects } from '@/functions//formatItemEffects'
+import { formatEffects } from './data/database/formatEffects'
 
 const props = defineProps<{
     data: effect

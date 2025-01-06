@@ -40,7 +40,7 @@ watch(
             class="pt-3 focus:outline-hidden"
             :class="{
                 'justify-center px-[8%]': side == 'bottom',
-                'h-screen max-h-screen max-w-127 items-start overflow-hidden pr-10 pl-12':
+                'h-screen max-h-screen max-w-fit items-start overflow-hidden pr-0 pl-16':
                     side == 'right',
             }"
             @openAutoFocus.prevent>

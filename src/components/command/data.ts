@@ -1,4 +1,4 @@
-import type { drawer } from '@/types/pocketTypes'
+import type { drawer } from '@/types/utilityTypes'
 
 const command = defineAsyncComponent({
     loader: () => import('@/components/command/Command.vue'),

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDataStore } from '@stores/oldDataStore'
+import { useDataStore } from '@stores/dataStore'
 import { useAccountStore } from '@stores/accountStore'
 import { summoner } from '@data/playerData'
 const as = useAccountStore()

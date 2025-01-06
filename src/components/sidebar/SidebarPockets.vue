@@ -15,12 +15,12 @@ const props = defineProps<{
 }>()
 
 const dataKey = computed(() => {
-    console.log('💠 - dataKey - props.data.length:', props.data.length)
+    // console.log('💠 - dataKey - props.data.length:', props.data.length)
     return props.title + 'key' + props.data.length
 })
 
 const dataLength = computed(() => {
-    console.log('💠 - dataKey - props.data.length:', props.data.length)
+    // console.log('💠 - dataKey - props.data.length:', props.data.length)
     return props.title + 'LengthKey' + props.data.length
 })
 
@@ -93,10 +93,14 @@ const open = ref()
                                     <SidebarMenuSubButton
                                         size="lg"
                                         class="flex w-full flex-nowrap items-center gap-4 px-2! py-5">
-                                        <PocketIcon
-                                            :pocket="pocket"
-                                            class="size-6 rounded-xs stroke-2 shadow-xs!"
-                                            iconClass="rounded-md" />
+                                        <div
+                                            class="grid size-8 place-items-center overflow-hidden">
+                                            <PocketIcon
+                                                :pocket="pocket"
+                                                class="-mt-2 -ml-2 rounded-full object-center shadow-xs"
+                                                iconClass="rounded-full size-5 "
+                                                imgClass="!size-10 shrink-0" />
+                                        </div>
                                         <span
                                             class="text-start !font-normal text-nowrap">
                                             {{ pocket.name }}

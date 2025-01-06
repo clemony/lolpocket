@@ -51,7 +51,7 @@ const hs = history.state
                         ">
                         <icon
                             icon="system-uicons:menu-hamburger"
-                            class="size-7 shrink-0 object-center transition-all duration-300"
+                            class="size-7 shrink-0 object-center drop-shadow-xs transition-all duration-300"
                             :class="{
                                 'stroke-1.5 scale-x-15 scale-y-150':
                                     as.sidebarOpen == false,
@@ -63,17 +63,19 @@ const hs = history.state
                         class="justify-start gap-3"
                         as-child>
                         <RouterLink to="/">
-                            <h4 class="">lolpocket</h4>
+                            <h4 class="drop-shadow-text">lolpocket</h4>
                         </RouterLink>
                     </Button>
 
-                    <Button
-                        v-if="!as.isLoggedIn"
-                        variant="outline"
-                        size="xs"
-                        class="text-1 ml-8 font-medium shadow-xs">
-                        log in
-                    </Button>
+                    <LoginDialog>
+                        <Button
+                            v-if="!as.isLoggedIn"
+                            variant="outline"
+                            size="xs"
+                            class="text-1 ml-23 font-medium shadow-xs">
+                            log in
+                        </Button>
+                    </LoginDialog>
                 </div>
             </MenubarMenu>
         </div>
@@ -96,7 +98,7 @@ const hs = history.state
                         @click="toggleDrawerState(newPocketDrawer)">
                         <icon
                             icon="teenyicons:add-outline"
-                            class="size-5 opacity-60" />
+                            class="size-5 stroke-[1.2] opacity-60 drop-shadow-sm" />
                     </Button>
                 </Tooltip>
             </MenubarMenu>
@@ -105,7 +107,7 @@ const hs = history.state
                 <MenubarTrigger class="group pt-1.5" as-child>
                     <icon
                         icon="material-symbols-light:breaking-news-outline-rounded"
-                        class="size-7.25 shrink-0 stroke-2 opacity-60 group-hover:opacity-100 group-data-[state=open]:opacity-100" />
+                        class="size-7.25 shrink-0 stroke-2 opacity-60 drop-shadow-sm group-hover:opacity-100 group-data-[state=open]:opacity-100" />
                 </MenubarTrigger>
                 <MenubarContent :side-offset="8" class="w-96">
                     <News />
@@ -130,7 +132,7 @@ const hs = history.state
                     class="group -mt-[1.5px] flex min-w-fit grow items-center justify-end">
                     <icon
                         icon="ph:gear-six"
-                        class="size-6.25 shrink-0 opacity-60 group-hover:opacity-100" />
+                        class="size-6.25 shrink-0 opacity-60 drop-shadow-sm group-hover:opacity-100" />
                 </MenubarTrigger>
 
                 <MenubarContent class="min-w-64" :side-offset="8">
