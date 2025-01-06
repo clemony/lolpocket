@@ -6,7 +6,19 @@ import { getOS } from '@/functions/detectOS'
 
 import { useDataStore } from '@stores/dataStore'
 import { useTempStore } from '@stores/tempStore'
+import { supabase } from '@lib/supabase'
 
+const session = ref()
+
+onMounted(() => {
+    supabase.auth.getSession().then(({ data }) => {
+        session.value = data.session
+    })
+
+    supabase.auth.onAuthStateChange((_, _session) => {
+        session.value = _session
+    })
+})
 const ts = useTempStore()
 const as = useAccountStore()
 const ds = useDataStore()
