@@ -90,15 +90,3 @@
     pointer-events: none;
     position: absolute;
 }
-
-.autocomplete-input {
-    @apply border-b2 !text-3 placeholder:text-bc/80 !bg-b1 shadow-smooth flex h-12 w-full rounded-md border py-2 pr-3 pl-12 inset-shadow-xs focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50;
-}
-
-.autocomplete-results {
-    @apply !text-3 !bg-b1/95 flex h-8 w-full rounded-md px-3 py-2;
-}
-
-.autocomplete-result-list {
-    @apply border-b2 !text-3 !bg-b1/98 shadow-smooth mt-1 max-h-80 w-full overflow-y-scroll !rounded-lg border px-2 py-2;
-}

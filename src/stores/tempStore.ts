@@ -4,6 +4,7 @@ import { useAccountStore } from '@stores/accountStore'
 import { ItemSet } from '@/types/pocketTypes'
 import { Item } from '@/types/dataTypes'
 import type { drawer } from '@/types/utilityTypes'
+import { supabase } from '@lib/supabase'
 
 export const useTempStore = defineStore(
     'tempStore',
@@ -12,6 +13,17 @@ export const useTempStore = defineStore(
         const as = useAccountStore()
 
         const userOS = ref()
+
+        const sessionInfo = computedAsync(
+            async () => {
+                const {
+                    data: { user },
+                } = await supabase.auth.getUser()
+                return user
+            },
+            null // initial state
+        )
+
         const clickType = computed(() => {
             return userOS.value == 'Mac' || 'Windows' ?
                     'right click'
@@ -76,6 +88,7 @@ export const useTempStore = defineStore(
 
         return {
             userOS,
+            sessionInfo,
             clickType,
 
             //drawer

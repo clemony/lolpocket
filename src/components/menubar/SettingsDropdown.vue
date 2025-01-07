@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import { summoner } from '@data/playerData'
+import { supabase } from '@lib/supabase'
 import { useAccountStore } from '@stores/accountStore'
+import { useTempStore } from '@stores/tempStore'
+const ts = useTempStore()
 const as = useAccountStore()
+
+async function signOut() {
+    const { error } = await supabase.auth.signOut()
+    console.log('Signed Out')
+}
 </script>
 <template>
     <MenubarItem
@@ -36,9 +44,17 @@ const as = useAccountStore()
 
     <MenubarSeparator />
 
-    <MenubarItem>
-        <icon icon="radix-icons:enter" class="mr-px" />
+    <MenubarItem v-if="ts.sessionInfo" @click="signOut">
+        <icon icon="iconamoon:player-stop-light" class="-ml-0.5 !size-5.5" />
         Log out
+
+        <MenubarShortcut>⌘Q</MenubarShortcut>
+    </MenubarItem>
+
+    <MenubarItem v-if="!ts.sessionInfo" class="flex">
+        <icon icon="iconamoon:player-play-light" class="-ml-0.5 !size-5.5" />
+        Log in
+
         <MenubarShortcut>⌘Q</MenubarShortcut>
     </MenubarItem>
 </template>

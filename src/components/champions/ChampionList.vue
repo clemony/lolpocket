@@ -48,38 +48,26 @@ const filteredChampions = computed(() => {
             )
         )
     }
-    transitionKey.value++
+
     return filtered
 })
-
-const transitionKey = ref(0)
-const debounceArray = refDebounced(filteredChampions, 200)
 
 console.log('💠 - filteredChampions - filteredChampions:', filteredChampions)
 </script>
 
 <template>
-    <div
-        class="max-h-inherit h-inherit scrollbar-hide flex flex-wrap items-start justify-around gap-4 overflow-y-auto rounded-lg pt-4 pb-4">
-        <TransitionGroup
-            enter-active-class="transition-opacity duration-700"
-            move-class="transition-all duration-700"
-            enter-from-class="opacity-0"
-            enter-to-class="opacity-100"
-            leave-active-class="transition-opacity duration-700 absolute"
-            leave-from-class="opacity-100"
-            leave-to-class="opacity-0"
-            :key="transitionKey">
-            <Champion
-                v-for="champion in debounceArray"
-                :key="champion.id"
-                :champion="champion"
-                class="champion animate-in size-20 shrink-0 overflow-hidden rounded-lg"
-                dragClass="setDrag"
-                @click="toggleDrawerState(championDrawer, null, champion)" />
-        </TransitionGroup>
-        <div v-for="i in 10" class="aspect-square size-20"></div>
-    </div>
+    <transition-slide
+        group
+        class="max-h-inherit h-inherit scrollbar-hide user-select-none flex flex-wrap items-start justify-around gap-4 overflow-y-auto rounded-lg pt-4 pb-4">
+        <Champion
+            v-for="champion in filteredChampions"
+            :key="champion.id"
+            :champion="champion"
+            class="champion size-20"
+            dragClass="setDrag"
+            @click="toggleDrawerState(championDrawer, null, champion)" />
+        <div v-for="i in 10" class="aspect-square size-20" />
+    </transition-slide>
 </template>
 
 <style scoped></style>

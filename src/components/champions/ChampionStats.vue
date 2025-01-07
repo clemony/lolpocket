@@ -6,6 +6,8 @@ const props = defineProps<{
 }>()
 
 const statModel = ref(true)
+
+const level = ref(1)
 </script>
 <template>
     <div class="collapse !w-full !p-0">
@@ -14,6 +16,14 @@ const statModel = ref(true)
             <Separator class="mt-5" label="STATS" />
         </div>
         <div class="collapse-content flex gap-9 !p-0">
+            <input
+                type="range"
+                min="1"
+                max="18"
+                value="level"
+                class="range"
+                step="18" />
+
             <div class="flex w-1/2 flex-col gap-4">
                 <div
                     class="stats border-b2 w-full self-start border shadow-sm"
@@ -21,11 +31,12 @@ const statModel = ref(true)
                     <div class="stat">
                         <ChampStatDisplay
                             :champion="props.champion"
-                            :stat="stat" />
+                            :stat="stat"
+                            :level="level" />
                     </div>
                 </div>
             </div>
-            <div class="mb-1 flex w-1/2 flex-col gap-4">
+            <!--  <div class="mb-1 flex w-1/2 flex-col gap-4">
                 <div
                     class="stats border-b2 w-full self-start border shadow-sm"
                     v-for="stat in statArray2">
@@ -35,7 +46,7 @@ const statModel = ref(true)
                             :stat="stat" />
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </template>

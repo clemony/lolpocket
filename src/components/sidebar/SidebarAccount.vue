@@ -3,6 +3,8 @@ import { useAccountStore } from '@stores/accountStore'
 import { useSidebar } from '@components/base/sidebar/utils'
 import { summoner } from '@data/playerData'
 import { supabase } from '@lib/supabase'
+import { jwtDecode, JwtPayload } from 'jwt-decode'
+import type { JwtPayloadExtended } from '@/types/utilityTypes'
 const as = useAccountStore()
 
 const links = [
@@ -18,33 +20,24 @@ const links = [
     },
 ]
 
-const userMatches = async () => {
-    const {
-        data: { user },
-        error: userError,
-    } = await supabase.auth.getUser()
+const {
+    data: { subscription: authListener },
+} = supabase.auth.onAuthStateChange(async (event, session) => {
+    console.log('💠 - event:', event)
+    console.log('💠 - session:', session)
+    if (session) {
+        const decodedToken = jwtDecode<JwtPayload>(session.access_token)
+        console.log('💠 - decodedToken:', decodedToken)
+        const userRole = decodedToken
 
-    console.log('💠 - user - user:', user)
-    console.log('💠 - userMatches - user.value.id,:', user.id)
-    if (!user) {
-        console.error('User not logged in or failed to fetch user')
-        return false
-    }
-
-    const { data, error } = await supabase.rpc('auth_user', {
-        uid: user.id,
-    })
-    console.log('💠 - userMatches - data:', data)
-
-    return data // Boolean value returned by the function (true if match)
-}
-
-// Call `userMatches` and handle the result
-userMatches().then((matches) => {
-    if (matches) {
-        console.log('User matches!')
-    } else {
-        console.log('User does not match.')
+        console.log('💠 - userRole:', userRole)
+        /*        if (userRole === 'admin') {
+            console.log('Access to admin dashboard')
+        } else if (userRole === 'user') {
+            console.log('Access to user dashboard')
+        } else {
+            console.log('Access denied')
+        } */
     }
 })
 

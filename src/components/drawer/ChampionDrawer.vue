@@ -39,12 +39,11 @@ console.log('💠 - championTags - championTags:', champion.value.tags)
         </div>
 
         <div class="flex w-full gap-6 pb-5">
-            <div class="shadow-standard mr-1 size-fit rounded-lg">
-                <LoadImg
-                    :alt="champion.name"
-                    class="aspect-square size-24 shrink-0 overflow-hidden rounded-lg object-center inset-shadow-sm [&_img]:scale-[115%]"
-                    :url="getChampionImage(champion.apiname)" />
-            </div>
+            <Champion
+                :champion="champion"
+                class="pointer-events-none size-24 shrink-0"
+                :src="`/img/champion/${champion.apiname}.webp`" />
+
             <div class="flex flex-col">
                 <h1
                     class="flex flex-wrap items-end gap-2 pt-1 leading-none tracking-tighter drop-shadow-sm">

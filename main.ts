@@ -10,6 +10,7 @@ import VideoBackground from 'vue-responsive-video-background-player'
 import VueInViewport from 'vue-in-viewport'
 import { getPatch } from './src/data/getData'
 import { plugin as vueTransitionsPlugin } from '@morev/vue-transitions'
+import VueTippy from 'vue-tippy'
 
 const app = createApp(App)
 
@@ -49,6 +50,21 @@ app.use(VueInViewport, {
     triggerOnce: true,
     threshold: 60,
 })
+
+app.use(
+    VueTippy,
+    // optional
+    {
+        directive: 'tippy', // => v-tippy
+        component: 'tippy', // => <tippy/>
+        componentSingleton: 'tippies', // => <tippy-singleton/>,
+        defaultProps: {
+            placement: 'bottom-start',
+            allowHTML: true,
+            arrow: false,
+        }, // => Global default options * see all props
+    }
+)
 
 app.mount('#app')
 

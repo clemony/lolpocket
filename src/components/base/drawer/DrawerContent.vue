@@ -1,14 +1,15 @@
 <script lang="ts" setup>
 import type { DialogContentEmits, DialogContentProps } from 'radix-vue'
 import type { HtmlHTMLAttributes } from 'vue'
-import { cn } from '@lib/utils'
 import { useForwardPropsEmits } from 'radix-vue'
 import { DrawerContent, DrawerPortal } from 'vaul-vue'
 import DrawerOverlay from './DrawerOverlay.vue'
 import { useTempStore } from '@stores/tempStore'
 const ts = useTempStore()
 const props = defineProps<
-    DialogContentProps & { class?: HtmlHTMLAttributes['class'] }
+    DialogContentProps & {
+        class?: HtmlHTMLAttributes['class']
+    }
 >()
 const emits = defineEmits<DialogContentEmits>()
 const side = ref(ts.drawerValue.direction)
@@ -19,6 +20,7 @@ const forwarded = useForwardPropsEmits(props, emits)
     <DrawerPortal>
         <DrawerOverlay />
         <DrawerContent
+            class="drawer pointer-events-none z-0"
             v-bind="forwarded"
             :class="
                 cn(
@@ -34,11 +36,11 @@ const forwarded = useForwardPropsEmits(props, emits)
                 )
             ">
             <div
-                class="bg-b2 rounded-full"
+                class="bg-b2 drawer-handle pointer-events-auto z-10 rounded-full"
                 :class="{
                     'absolute top-1/2 bottom-1/2 left-5 my-auto h-[100px] w-2':
-                        side == 'right',
-                    'mx-auto mt-4 h-2 w-[100px]': side == 'bottom',
+                        side === 'right',
+                    'mx-auto mt-4 h-2 w-[100px]': side === 'bottom',
                 }" />
 
             <slot />

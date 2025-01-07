@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { DrawerClose } from '@components/base/drawer'
-import PocketDrawer from '@components/drawer/PocketDrawer.vue'
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
 import { useTempStore } from '@stores/tempStore'
@@ -27,6 +26,8 @@ watch(
         }
     }
 )
+
+//drawer.isAllowedToDrag.value = isDragEnabled.value
 </script>
 <template>
     <DrawerRoot
@@ -37,7 +38,7 @@ watch(
         :fixed="true">
         <DrawerOverlay class="overflow-hidden" @click.stop.prevent />
         <DrawerContent
-            class="pt-3 focus:outline-hidden"
+            class="absolute top-0 right-0 pt-3 focus:outline-hidden"
             :class="{
                 'justify-center px-[8%]': side == 'bottom',
                 'h-screen max-h-screen max-w-fit items-start overflow-hidden pr-0 pl-16':
@@ -53,6 +54,7 @@ watch(
                 <DrawerTitle>
                     {{ drawer.title }}
                 </DrawerTitle>
+
                 <DrawerDescription
                     class="text-3 flex-wrap tracking-tight"
                     :class="{ 'w-1/3': side == 'bottom' }"

@@ -5,9 +5,9 @@
 @import './fonts.css';
 @import './utilities.css';
 @import './components.css';
-@import './daisy.css';
+@import './plugins/daisy.css';
 @import '@morev/vue-transitions/styles';
-
+@import './plugins/tippy.css';
 @plugin "daisyui" {
     exclude: radialprogress, toast;
 }

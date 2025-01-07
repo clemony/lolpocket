@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 import { useAccountStore } from './src/stores/accountStore'
-
+import { supabase } from './src/lib/supabase'
+import { jwtDecode, JwtPayload } from 'jwt-decode'
+import type { JwtPayloadExtended } from './src/types/utilityTypes'
 import { computed } from 'vue'
 
 const routes: RouteRecordRaw[] = [
@@ -13,6 +15,7 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/admindashboard',
         name: 'admin-dashboard',
+        meta: { requiresAdmin: true },
         component: () => import(`./src/pages/admin/AdminDashboard.vue`),
     },
     // player
@@ -21,11 +24,13 @@ const routes: RouteRecordRaw[] = [
         path: '/player/home',
         name: 'player-home',
         component: () => import(`./src/pages/player/PlayerHome.vue`),
+        meta: { requiresAuth: true },
     },
     {
         path: '/buildanalysis',
         name: 'build-analysis',
         component: () => import(`./src/pages/player/BuildAnalysis.vue`),
+        meta: { requiresAuth: true },
     },
     {
         path: '/matchhistory',
@@ -234,6 +239,29 @@ router.beforeResolve(async (to) => {
         as.defaultSidebarOpen = true
         as.sidebarCollapsible = 'icon'
     }
+})
+
+router.beforeEach((to, from, next) => {
+    const {
+        data: { subscription: authListener },
+    } = supabase.auth.onAuthStateChange(async (event, session) => {
+        if (session) {
+            const decodedToken = jwtDecode<JwtPayloadExtended>(
+                session.access_token
+            )
+            const userRole = decodedToken.role
+
+            if (userRole === 'admin') {
+                console.log('Access to admin dashboard')
+            } else if (userRole === 'user') {
+                console.log('Access to user dashboard')
+            } else {
+                console.log('Access denied')
+            }
+        }
+    })
+
+    next()
 })
 
 /* router.afterEach((to, from) => {

@@ -4,7 +4,6 @@ import type { Champion } from '@/types/dataTypes'
 import type { HTMLAttributes } from 'vue'
 import { championDrawer } from '@components/drawer/data'
 import { toggleDrawerState } from '@/functions/utils'
-import { getChampionImage } from '@/functions/makeLinks'
 const props = defineProps<{
     champion: Champion
     pocket?: pocket
@@ -15,25 +14,22 @@ const props = defineProps<{
 </script>
 
 <template>
-    <!--     <Tooltip :content="champion.name">
- -->
-    <label
+    <button
         @click.right="toggleDrawerState(championDrawer, null, champion)"
-        :class="
-            cn(
-                'border-b3 relative size-16 rounded-lg border shadow-sm',
-                props.class
-            )
-        ">
-        <LoadImg
-            :key="props.champion.name"
-            :url="getChampionImage(champion.apiname)"
-            :alt="props.champion.name + ' Image'"
-            class="size-full scale-108" />
-    </label>
-    <!--     </Tooltip>
- -->
-    <!-- </TransitionGroup> -->
+        class="shadow-warm ring-b2 hover:ring-neutral/60 hover:ring-offset-b1/95 relative rounded-lg border-none inset-shadow-sm ring-1 **:select-none hover:ring-offset-2">
+        <LittleTip :content="champion.name">
+            <div
+                :class="
+                    cn('size-full overflow-hidden rounded-lg', props.class)
+                ">
+                <img
+                    :key="props.champion.name"
+                    :src="`/img/champion/${champion.apiname}.webp`"
+                    :alt="props.champion.name + ' Image'"
+                    class="size-full scale-115" />
+            </div>
+        </LittleTip>
+    </button>
 </template>
 
 <style scoped></style>

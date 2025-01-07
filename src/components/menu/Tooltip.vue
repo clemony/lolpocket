@@ -28,10 +28,9 @@ const width = useElementSize(contents)
             <TooltipContent
                 :class="
                     cn(
-                        'text-medium text-2 shadow-pretty border-b2 relative flex max-w-44 shrink rounded-lg text-wrap',
+                        'text-medium text-2 border-b2 relative flex max-w-44 shrink rounded-lg text-wrap',
                         {
-                            'border-neutral bg-neutral/90 text-nc backdrop-blur-md':
-                                props.dark,
+                            'border-neutral': props.dark,
                         },
                         props.class
                     )

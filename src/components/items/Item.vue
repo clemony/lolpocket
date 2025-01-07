@@ -1,22 +1,12 @@
 <script setup lang="ts">
-import type { pocket } from '@/types/pocketTypes'
-import { useTempStore } from '@stores/tempStore'
 import type { HTMLAttributes } from 'vue'
-import { addItemToSet } from '@/functions/pocketUtilities'
 import type { Item } from '@/types/dataTypes'
-import { useDataStore } from '@stores/dataStore'
 import { itemDrawer } from '@components/drawer/data'
 import { toggleDrawerState } from '@/functions/utils'
 
-const ds = useDataStore()
-const ts = useTempStore()
-
 const props = defineProps<{
     item: Item
-    pocket?: pocket
     class?: HTMLAttributes['class']
-    imgClass?: HTMLAttributes['class']
-    labelClass?: HTMLAttributes['class']
 }>()
 const disabled = ref(false)
 watch(
@@ -25,31 +15,25 @@ watch(
         console.log(newVal)
     }
 )
-
-function add(item) {
-    disabled.value = true
-    addItemToSet(props.pocket.key, ts.selectedItemSet.key, item)
-}
-
-const isImgLoaded = ref(false)
 </script>
 
 <template>
-    <div
+    <button
         @click.right="toggleDrawerState(itemDrawer, null, null, item)"
-        :class="
-            cn(
-                'hover:ring-neutral/40 border-b3 relative overflow-hidden rounded-lg border shadow-sm transition-all duration-200 hover:ring-1 hover:ring-offset-1',
-
-                props.class
-            )
-        ">
-        <img
-            :key="props.item.name"
-            :src="getItemImage(props.item.id)"
-            :alt="props.item.name + ' Image'"
-            :class="cn('drag-img aspect-square size-full!', props.imgClass)" />
-    </div>
+        class="shadow-warm ring-b2 hover:ring-neutral/60 hover:ring-offset-b1/95 relative rounded-lg border-none inset-shadow-sm ring-1 hover:ring-offset-2">
+        <LittleTip :content="props.item.name">
+            <div
+                :class="
+                    cn('size-full overflow-hidden rounded-lg', props.class)
+                ">
+                <img
+                    :key="props.item.name"
+                    :src="`/img/item/${props.item.id}.webp`"
+                    :alt="props.item.name + ' Image'"
+                    class="aspect-square size-full" />
+            </div>
+        </LittleTip>
+    </button>
 </template>
 
 <style scoped></style>

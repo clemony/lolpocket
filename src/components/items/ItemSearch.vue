@@ -36,7 +36,7 @@ watch(searchQuery, (newQuery) => {
     clearTimeout(debounceTimeout.value)
     debounceTimeout.value = setTimeout(() => {
         debouncedSearchQuery.value = newQuery
-    }, 100)
+    }, 0)
 })
 
 const chunkSize = 50
@@ -85,7 +85,7 @@ watch(searchResult, (newSearchResults) => {
                 loadNextChunk(newSearchResults)
             }
             loading.value = false
-        }, 100)
+        }, 0)
     }
 })
 
@@ -102,7 +102,7 @@ watch(
             setTimeout(() => {
                 loadNextChunk(searchResult.value) // Continue loading more results
                 loading.value = false
-            }, 100)
+            }, 0)
         }
     },
     { immediate: true }

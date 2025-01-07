@@ -103,14 +103,12 @@ export type stat = string | number
 
 export type StatKeys = keyof Item['stats']
 
-export type Items = {
-    [name: string]: itemData
-}
+export type Items = [Item]
 
 export interface Item {
     id?: number
-    name: string
-    nickname: string | string[] | null
+    name?: string
+    nickname?: string | string[] | null
     tier?: number
     type?: string
     caption?: string

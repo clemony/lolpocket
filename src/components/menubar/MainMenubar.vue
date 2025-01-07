@@ -2,7 +2,8 @@
 import { useAccountStore } from '@stores/accountStore'
 import { newPocketDrawer } from '@components/drawer/data'
 import { toggleDrawerState } from '@/functions/utils'
-
+import { useTempStore } from '@stores/tempStore'
+const ts = useTempStore()
 const SettingsDropdown = defineAsyncComponent(
     () => import('./SettingsDropdown.vue')
 )
@@ -67,15 +68,16 @@ const hs = history.state
                         </RouterLink>
                     </Button>
 
-                    <LoginDialog>
-                        <Button
-                            v-if="!as.isLoggedIn"
-                            variant="outline"
-                            size="xs"
-                            class="text-1 ml-23 font-medium shadow-xs">
-                            log in
-                        </Button>
-                    </LoginDialog>
+                    <Dialog>
+                        <LoginDialog v-if="!ts.sessionInfo">
+                            <Button
+                                variant="outline"
+                                size="xs"
+                                class="text-1 ml-23 font-medium shadow-xs">
+                                log in
+                            </Button>
+                        </LoginDialog>
+                    </Dialog>
                 </div>
             </MenubarMenu>
         </div>

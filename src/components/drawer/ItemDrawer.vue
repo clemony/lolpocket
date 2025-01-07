@@ -17,13 +17,24 @@ const effects = ref(item.value.effects)
 const id = ref(item.value.id)
 
 const recipe = ref(item.value.recipe)
+const recipeArray = asyncComputed(() => {
+    return Array.isArray(recipe.value) ? true : false
+})
 
 const isLiked = computed(() => {
     return as.favoriteItems.some((item) => item.name === item.name)
 })
 
-const findItem = (itemName) => {
-    return ds.SRitems.find((item) => item.name == itemName)
+const itemId = (itemName) => {
+    const a = ds.SRitems.find((item) => item.name == itemName)
+
+    return a.id
+}
+
+const itemBuy = (itemName) => {
+    const a = ds.SRitems.find((item) => item.name == itemName)
+
+    return a.buy
 }
 
 watch(
@@ -37,10 +48,10 @@ onMounted(() => {
 })
 
 function handleTooltip(item) {
-    const a = findItem(item).buy
-    if (a) {
-        return item + ' ' + a + 'g'
-    } else {
+    const a = itemBuy(item)
+    if (itemBuy) {
+        return item + ' ・ ' + a + 'g'
+    } else if (!a) {
         return item
     }
 }
@@ -134,20 +145,35 @@ function handleTooltip(item) {
             <Separator label="RECIPE" class="my-11" />
 
             <div class="group flex items-center justify-center gap-4">
-                <template v-for="(item, index) in recipe" :key="item.name">
-                    <Tooltip :content="handleTooltip(item)">
-                        <button
-                            @click=""
-                            class="ring-neutral/80 ring-offset-b1 size-14 overflow-hidden rounded-lg shadow-sm hover:ring-1 hover:ring-offset-2">
-                            <LoadImg
-                                :url="getItemImage(findItem(item).id)"
-                                :alt="item + 'image'" />
-                        </button>
-                    </Tooltip>
-                    <icon
-                        icon="teenyicons:add-outline"
-                        class="stroke-[1.5] last:hidden" />
+                <template v-if="recipeArray">
+                    <template v-for="(item, i) in item.recipe" :key="i">
+                        <LittleTip :content="handleTooltip(item)">
+                            <button
+                                @click=""
+                                class="ring-neutral/80 ring-offset-b1 size-14 overflow-hidden rounded-lg shadow-sm hover:ring-1 hover:ring-offset-2">
+                                <LoadImg
+                                    v-if="itemId(item)"
+                                    :url="`/img/item/${itemId(item)}.webp`"
+                                    :alt="item + 'image'" />
+                            </button>
+                        </LittleTip>
+                        <icon
+                            icon="teenyicons:add-outline"
+                            class="stroke-[1.5] last:hidden" />
+                    </template>
                 </template>
+                <LittleTip
+                    v-else
+                    :content="recipe[0] + item.buy ? item.buy + 'g' : ''">
+                    <button
+                        @click=""
+                        class="ring-neutral/80 ring-offset-b1 size-14 overflow-hidden rounded-lg shadow-sm hover:ring-1 hover:ring-offset-2">
+                        <LoadImg
+                            v-if="recipe"
+                            :url="`/img/item/${itemId(recipe[0])}.webp`"
+                            :alt="recipe + 'image'" />
+                    </button>
+                </LittleTip>
             </div>
         </template>
 

@@ -8,6 +8,10 @@
     --bc: oklch(0% 0.02476 255.701624);
     --neutral: oklch(0% 0.02476 255.701624);
     --nc: oklch(100% 0 0);
+
+    .invert-dark {
+        @apply invert;
+    }
 }
 
 :is([data-theme='sunset']) {
@@ -17,6 +21,10 @@
     --bc: oklch(26.45% 0 0);
     --neutral: oklch(26.45% 0 0);
     --nc: oklch(95.89% 0.001 17.18);
+
+    .invert-dark {
+        @apply invert;
+    }
 }
 
 :is([data-theme='dusk']) {

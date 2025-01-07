@@ -1,7 +1,7 @@
 import { useTempStore } from '@stores/tempStore'
 import { useDataStore } from '@stores/dataStore'
 import { useAccountStore } from '@stores/accountStore'
-import { Item } from '@/types/dataTypes'
+import { Item, Items } from '@/types/dataTypes'
 
 const ds = computedAsync(async () => {
     return await useDataStore()

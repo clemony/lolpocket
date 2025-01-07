@@ -1,3 +1,8 @@
+export interface JwtPayloadExtended extends JwtPayload {
+    user_id: string
+    role: string
+}
+
 export interface Category {
     id: string
     displayName?: string
