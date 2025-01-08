@@ -58,7 +58,10 @@ function handleTooltip(item) {
 </script>
 
 <template>
-    <div :item="ts.selectedItem" class="relative h-full w-120 pr-16" key="id">
+    <div
+        :item="ts.selectedItem"
+        class="relative h-full w-110 justify-self-center"
+        key="id">
         <div class="rating absolute top-1 right-17 size-fit gap-1">
             <input
                 type="checkbox"
