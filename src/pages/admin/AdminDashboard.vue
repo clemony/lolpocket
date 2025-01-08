@@ -34,7 +34,7 @@ function reGet() {
 }
 </script>
 <template>
-    <div
+    <!--     <div
         class="wrapper flex size-full flex-col items-center justify-center gap-15">
         <LayoutSpacer />
         <div class="">your pocket picks</div>
@@ -113,6 +113,6 @@ function reGet() {
                 </Button>
             </div>
         </div>
-    </div>
+    </div> -->
 </template>
 <style scoped></style>
