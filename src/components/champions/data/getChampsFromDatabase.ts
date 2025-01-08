@@ -1,4 +1,4 @@
-import { supabase } from '@lib/supabase'
+import { supabase } from '@/lib/supabase'
 import { useDataStore } from '@stores/dataStore'
 import { Champion, Champions } from '@/types/dataTypes'
 const ds = useDataStore()

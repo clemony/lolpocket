@@ -8,9 +8,12 @@ import { toggleDrawerState } from '@/components/drawer/toggleDrawer'
 import { types } from '../../data/champion/roles'
 import { categories } from '../../data/champion/categories'
 import { Category } from '@/types/utilityTypes'
+import { getChampsFromDatabase } from './data/getChampsFromDatabase'
 
 const ds = useDataStore()
 const ts = useTempStore()
+
+!ds.champions ? getChampsFromDatabase() : ''
 
 const filteredChampions = computed(() => {
     let filtered = [...ds.champions]

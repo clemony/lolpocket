@@ -12,15 +12,6 @@ import { getItemsFromDatabase } from '@/components/items/data/client/getItemsFro
 
 const session = ref()
 
-onMounted(() => {
-    supabase.auth.getSession().then(({ data }) => {
-        session.value = data.session
-    })
-
-    supabase.auth.onAuthStateChange((_, _session) => {
-        session.value = _session
-    })
-})
 const ts = useTempStore()
 const as = useAccountStore()
 const ds = useDataStore()
@@ -47,11 +38,16 @@ const routeName = ref(null)
 const route = useRoute()
 
 onMounted(async () => {
+    supabase.auth.getSession().then(({ data }) => {
+        session.value = data.session
+    })
+
+    supabase.auth.onAuthStateChange((_, _session) => {
+        session.value = _session
+    })
     // os
     ts.userOS = getOS()
 
-    !ds.champions ? getChampsFromDatabase() : ''
-    !ds.SRitems ? getItemsFromDatabase() : ''
     // route
     const route = useRoute()
     nextTick(() => {

@@ -3,9 +3,12 @@ import { useDataStore } from '@stores/dataStore'
 import { categories } from '@data/item/categories'
 import { useTempStore } from '@stores/tempStore'
 import { types } from '@data/item'
+import { getItemsFromDatabase } from '@/components/items/data/client/getItemsFromDatabase'
+
 const ts = useTempStore()
 const ds = useDataStore()
 
+!ds.SRitems ? getItemsFromDatabase() : ''
 const items = computed(() => [...(ds.SRitems || [])])
 
 const captions = computed(() => {

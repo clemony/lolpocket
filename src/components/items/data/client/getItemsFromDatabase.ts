@@ -1,4 +1,4 @@
-import { supabase } from '@lib/supabase'
+import { supabase } from '@/lib/supabase'
 import { toDictionary } from './toDictionary'
 import { useDataStore } from '@stores/dataStore'
 import { Items } from '@/types/dataTypes'
