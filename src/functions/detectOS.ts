@@ -1,12 +1,13 @@
 import { useAccountStore } from '@stores/accountStore'
+import { useTempStore } from '@stores/tempStore'
 
 export function getOS() {
-    const as = useAccountStore()
+    const ts = useTempStore()
     if (navigator.userAgent.indexOf('Mac OS X') != -1) {
-        as.userOS = 'Mac'
-        console.log('🍎 - getOS - userOS:', as.userOS)
+        ts.userOS = 'Mac'
+        console.log('🍎 - getOS - userOS:', ts.userOS)
     } else {
-        as.userOS = 'Windows'
-        console.log('🪟 - getOS - userOS:', as.userOS)
+        ts.userOS = 'Windows'
+        console.log('🪟 - getOS - userOS:', ts.userOS)
     }
 }

@@ -7,13 +7,6 @@ export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
-const {
-    data: { subscription: authListener },
-} = supabase.auth.onAuthStateChange(async (event, session) => {
-    if (session) {
-    }
-})
-
 export const getUserRole = () => {
     const { data } = supabase.auth.onAuthStateChange(async (event, session) => {
         if (session) {

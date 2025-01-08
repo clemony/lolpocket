@@ -35,7 +35,7 @@
                 "src/data/*"
             ],
             "@lib/*": [
-                "src/lib/*"
+                "src/functions/lib/*"
             ],
             "@logs/*": [
                 "src/logs/*"

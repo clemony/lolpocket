@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { summoner } from '@data/playerData'
-import { supabase } from '@lib/supabase'
+import { supabase } from '@/lib/supabase'
 import { useAccountStore } from '@stores/accountStore'
 import { useTempStore } from '@stores/tempStore'
 const ts = useTempStore()

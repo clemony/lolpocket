@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { patchItemDatabase } from '@/components/items/data/database/updateItemData'
-import { getWikiData } from '@lib/getWikiData'
+import { getWikiData } from '@/lib/getWikiData'
 import { getItemsFromDatabase } from '@/components/items/data/client/getItemsFromDatabase'
 import { getRuneData, getShardData } from '@data/getData'
 import { useDataStore } from '@stores/dataStore'

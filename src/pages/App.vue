@@ -6,7 +6,7 @@ import { getOS } from '@/functions/detectOS'
 
 import { useDataStore } from '@stores/dataStore'
 import { useTempStore } from '@stores/tempStore'
-import { supabase } from '@lib/supabase'
+import { supabase } from '@/lib/supabase'
 
 const session = ref()
 

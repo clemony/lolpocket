@@ -2,7 +2,7 @@
 import { useAccountStore } from '@stores/accountStore'
 import { useSidebar } from '@components/base/sidebar/utils'
 import { summoner } from '@data/playerData'
-import { supabase } from '@lib/supabase'
+import { supabase } from '@/lib/supabase'
 const as = useAccountStore()
 
 const links = [
