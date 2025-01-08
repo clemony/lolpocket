@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useDataStore } from '@stores/dataStore'
 import { Champion, Champions, Item, Path, Rune } from '@/types/dataTypes'
-import { supabase } from '@lib/supabase'
+import { supabase } from '@/lib/supabase'
 
 export function getRuneData() {
     limiter.schedule(() =>

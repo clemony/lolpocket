@@ -4,6 +4,9 @@ import { useAccountStore } from './src/stores/accountStore'
 import { supabase } from './src/lib/supabase'
 import { jwtDecode, JwtPayload } from 'jwt-decode'
 import { computed } from 'vue'
+import { useDataStore } from './src/stores/dataStore'
+
+import { useTempStore } from './src/stores/tempStore'
 
 const routes: RouteRecordRaw[] = [
     {
@@ -238,6 +241,23 @@ router.beforeResolve(async (to) => {
         as.defaultSidebarOpen = true
         as.sidebarCollapsible = 'icon'
     }
+})
+
+router.beforeEach(async (to, from, next) => {
+    const as = useAccountStore()
+    const ds = useDataStore()
+    const ts = useTempStore()
+    // Optionally wait for the store to load data
+    if (!ds.isLoaded) {
+        await ds.loadData
+    }
+
+    // Perform your navigation logic here
+    if (to.meta.requiresAuth && !as.isLoggedIn) {
+        return next('/login') // Redirect if not authenticated
+    }
+
+    next() // Continue navigation
 })
 
 /* router.beforeEach((to, from, next) => {

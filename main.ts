@@ -20,7 +20,7 @@ pinia.use(piniaPluginPersistedState)
 app.use(pinia)
 app.use(PiniaColada)
 console.log('Pinia initialized.')
-
+app.provide('global', 'hello injections')
 // Register global components
 app.component('video-background', VideoBackground)
 app.component('Icon', Icon)

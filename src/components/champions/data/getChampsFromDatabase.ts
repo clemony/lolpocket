@@ -1,9 +1,9 @@
 import { supabase } from '@/lib/supabase'
 import { useDataStore } from '@stores/dataStore'
 import { Champion, Champions } from '@/types/dataTypes'
-const ds = useDataStore()
 
 export const getChampsFromDatabase = async () => {
+    const ds = useDataStore()
     try {
         const { data, error } = await supabase
             .from('league-data')

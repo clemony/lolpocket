@@ -3,7 +3,6 @@ import { useDataStore } from '@stores/dataStore'
 import { categories } from '@data/item/categories'
 import { useTempStore } from '@stores/tempStore'
 import { types } from '@data/item'
-import { getItemsFromDatabase } from '@/components/items/data/client/getItemsFromDatabase'
 
 const ts = useTempStore()
 const ds = useDataStore()
@@ -24,9 +23,7 @@ watch(
     }
 )
 
-onMounted(() => {
-    !ds.SRitems ? getItemsFromDatabase() : ''
-})
+onMounted(() => {})
 </script>
 
 <template>

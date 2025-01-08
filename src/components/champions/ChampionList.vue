@@ -8,7 +8,6 @@ import { toggleDrawerState } from '@/components/drawer/toggleDrawer'
 import { types } from '../../data/champion/roles'
 import { categories } from '../../data/champion/categories'
 import { Category } from '@/types/utilityTypes'
-import { getChampsFromDatabase } from './data/getChampsFromDatabase'
 
 const ds = useDataStore()
 const ts = useTempStore()
@@ -53,9 +52,7 @@ const filteredChampions = computed(() => {
     return filtered
 })
 
-onMounted(() => {
-    !ds.champions ? getChampsFromDatabase() : ''
-})
+onMounted(() => {})
 console.log('💠 - filteredChampions - filteredChampions:', filteredChampions)
 </script>
 
