@@ -7,6 +7,8 @@ import { getOS } from '@/functions/detectOS'
 import { useDataStore } from '@stores/dataStore'
 import { useTempStore } from '@stores/tempStore'
 import { supabase } from '@/lib/supabase'
+import { getChampsFromDatabase } from '@/components/champions/data/getChampsFromDatabase'
+import { getItemsFromDatabase } from '@/components/items/data/client/getItemsFromDatabase'
 
 const session = ref()
 
@@ -48,6 +50,8 @@ onMounted(async () => {
     // os
     ts.userOS = getOS()
 
+    !ds.champions ? getChampsFromDatabase() : ''
+    !ds.SRitems ? getItemsFromDatabase() : ''
     // route
     const route = useRoute()
     nextTick(() => {
