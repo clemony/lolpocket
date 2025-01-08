@@ -1,6 +1,5 @@
-export interface JwtPayloadExtended extends JwtPayload {
-    user_id: string
-    role: string
+export interface AuthRoleJwtPayload extends JWTPayload {
+    user_role: string
 }
 
 export interface Category {

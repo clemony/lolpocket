@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { supabase } from '@lib/supabase'
+import { getUserRole, supabase } from '@lib/supabase'
 
 async function signInWithDiscord() {
     const { data, error } = await supabase.auth.signInWithOAuth({
@@ -10,6 +10,8 @@ async function signInWithDiscord() {
     } else {
         // await updateItemData(user.id)
     }
+
+    getUserRole()
 }
 </script>
 <template>

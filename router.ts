@@ -1,9 +1,8 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-
+import { AuthRoleJwtPayload } from './src/types/utilityTypes'
 import { useAccountStore } from './src/stores/accountStore'
 import { supabase } from './src/lib/supabase'
 import { jwtDecode, JwtPayload } from 'jwt-decode'
-import type { JwtPayloadExtended } from './src/types/utilityTypes'
 import { computed } from 'vue'
 
 const routes: RouteRecordRaw[] = [
@@ -241,29 +240,26 @@ router.beforeResolve(async (to) => {
     }
 })
 
-router.beforeEach((to, from, next) => {
+/* router.beforeEach((to, from, next) => {
     const {
         data: { subscription: authListener },
     } = supabase.auth.onAuthStateChange(async (event, session) => {
         if (session) {
-            const decodedToken = jwtDecode<JwtPayloadExtended>(
+            let decodedJwt: AuthRoleJwtPayload = jwtDecode<AuthRoleJwtPayload>(
                 session.access_token
             )
-            const userRole = decodedToken.role
-
-            if (userRole === 'admin') {
-                console.log('Access to admin dashboard')
-            } else if (userRole === 'user') {
-                console.log('Access to user dashboard')
-            } else {
-                console.log('Access denied')
-            }
+            const userRole = decodedJwt.user_role
+            console.log('💠 - router.beforeEach - userRole:', userRole)
+            console.log(
+                '💠 - const{data}=supabase.auth.onAuthStateChange - decodedJwt:',
+                decodedJwt
+            )
         }
     })
 
     next()
 })
-
+ */
 /* router.afterEach((to, from) => {
     const as = useAccountStore()
     const route = computed(() => {

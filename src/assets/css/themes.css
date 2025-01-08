@@ -14,6 +14,15 @@
     }
 }
 
+::is([data-theme='dawn']) {
+    --color-base-100: oklch(97.788% 0.004 56.375);
+    --color-base-200: oklch(93.982% 0.007 61.449);
+    --color-base-300: oklch(91.586% 0.006 53.44);
+    --color-base-content: oklch(23.574% 0.066 313.189);
+    --color-neutral: oklch(27% 0.006 286.033);
+    --color-neutral-content: oklch(92% 0.004 286.32);
+}
+
 :is([data-theme='sunset']) {
     --b1: oklch(94.5% 0.0053 106.5);
     --b2: oklch(89.95% 0.0109 76.59);
@@ -41,8 +50,14 @@
     --b2: oklch(23.5% 0 0);
     --b3: oklch(0% 0.02476 255.701624);
     --bc: oklch(84.8707% 0 0);
-    --neutral: oklch(0% 0.02476 255.701624);
-    --nc: oklch(100% 0 0);
+
+    --color-base-100: oklch(26% 0 0);
+    --color-base-200: oklch(20% 0 0);
+    --color-base-300: oklch(14% 0 0);
+    --color-base-content: oklch(87.609% 0 0);
+
+    --color-neutral: oklch(26% 0 0);
+    --color-nc: oklch(100% 0 0);
 }
 
 @theme inline {

@@ -3,8 +3,6 @@ import { useAccountStore } from '@stores/accountStore'
 import { useSidebar } from '@components/base/sidebar/utils'
 import { summoner } from '@data/playerData'
 import { supabase } from '@lib/supabase'
-import { jwtDecode, JwtPayload } from 'jwt-decode'
-import type { JwtPayloadExtended } from '@/types/utilityTypes'
 const as = useAccountStore()
 
 const links = [
@@ -19,27 +17,6 @@ const links = [
         icon: 'iconoir:archery-match',
     },
 ]
-
-const {
-    data: { subscription: authListener },
-} = supabase.auth.onAuthStateChange(async (event, session) => {
-    console.log('💠 - event:', event)
-    console.log('💠 - session:', session)
-    if (session) {
-        const decodedToken = jwtDecode<JwtPayload>(session.access_token)
-        console.log('💠 - decodedToken:', decodedToken)
-        const userRole = decodedToken
-
-        console.log('💠 - userRole:', userRole)
-        /*        if (userRole === 'admin') {
-            console.log('Access to admin dashboard')
-        } else if (userRole === 'user') {
-            console.log('Access to user dashboard')
-        } else {
-            console.log('Access denied')
-        } */
-    }
-})
 
 const collapsed = ref()
 </script>

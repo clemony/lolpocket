@@ -1,9 +1,12 @@
 <script setup lang="ts">
-import { supabase } from '@lib/supabase'
-const googleLogin = () =>
+import { getUserRole, supabase } from '@lib/supabase'
+const googleLogin = () => {
     supabase.auth.signInWithOAuth({
         provider: 'google',
     })
+
+    getUserRole()
+}
 </script>
 
 <template>
