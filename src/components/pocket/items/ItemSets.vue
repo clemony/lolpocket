@@ -8,7 +8,7 @@ import {
     newItemSet,
 } from '@/functions/pocket/pocketUtilities'
 import ItemSetItems from './ItemSetItems.vue'
-import { generateRandomName } from '@/functions/ui/keygen'
+import { generateRandomName } from '@/functions/ui/Keygen'
 
 const ts = useTempStore()
 const ps = usePocketStore()
