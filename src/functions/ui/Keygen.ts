@@ -44,10 +44,7 @@ export function generateRandomString(): string {
         'Dongers',
     ]
 
-    const leagueWords = championNames
-        .concat(itemNames)
-        .concat(ds.uniqueClass)
-        .concat(moreWords)
+    const leagueWords = championNames.concat(itemNames).concat(moreWords)
 
     function getRandomElement(array: string[]): string {
         return array[Math.floor(Math.random() * array.length)]
@@ -78,10 +75,7 @@ export function generateRandomName(): string {
         'Dongers',
     ]
 
-    const leagueWords = championNames
-        .concat(itemNames)
-        .concat(ds.uniqueClass)
-        .concat(moreWords)
+    const leagueWords = championNames.concat(itemNames).concat(moreWords)
 
     function getRandomElement(array: string[]): string {
         return array[Math.floor(Math.random() * array.length)]
