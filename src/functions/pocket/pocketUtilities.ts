@@ -6,9 +6,12 @@ import {
     createDefaultRune,
     createDefaultShard,
 } from './addPocket'
-import { generateRandomName } from '../ui/keygen'
+//import { generateRandomName } from '../ui/keygen'
 import { useAccountStore } from '@stores/accountStore'
 
+function generateRandomName() {
+    return ''
+}
 export function getPocket(key) {
     const ps = usePocketStore()
     return ps.pockets.find((pocket: pocket) => pocket.key === key)
