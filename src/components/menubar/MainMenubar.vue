@@ -92,7 +92,7 @@ const hs = history.state
 
         <div class="!-mt-1 flex items-center">
             <MenubarMenu>
-                <Tooltip content="New Pocket / ⌘N " ignoreNonKeyboardFocus>
+                <LittleTip content="New Pocket ・ ⌘N " ignoreNonKeyboardFocus>
                     <Button
                         variant="ghost"
                         size="default"
@@ -102,7 +102,7 @@ const hs = history.state
                             icon="teenyicons:add-outline"
                             class="size-5 stroke-[1.2] opacity-60 drop-shadow-sm" />
                     </Button>
-                </Tooltip>
+                </LittleTip>
             </MenubarMenu>
 
             <MenubarMenu>

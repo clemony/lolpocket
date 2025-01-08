@@ -54,8 +54,7 @@ function handleChange(newTheme) {
                         :class="{
                             'ring-neutral/60 inset-shadow-sm ring-1':
                                 as.theme == theme.name &&
-                                (theme.name == 'light' ||
-                                    theme.name == 'sunset'),
+                                (theme.name == 'light' || theme.name == 'dawn'),
                             'inset-shadow-sm ring-1 ring-white/60':
                                 as.theme == theme.name &&
                                 (theme.name == 'dusk' ||

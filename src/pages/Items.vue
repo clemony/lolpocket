@@ -8,7 +8,6 @@ import { getItemsFromDatabase } from '@/components/items/data/client/getItemsFro
 const ts = useTempStore()
 const ds = useDataStore()
 
-!ds.SRitems ? getItemsFromDatabase() : ''
 const items = computed(() => [...(ds.SRitems || [])])
 
 const captions = computed(() => {
@@ -24,6 +23,10 @@ watch(
         console.log('💠 - newVal:', newVal)
     }
 )
+
+onMounted(() => {
+    !ds.SRitems ? getItemsFromDatabase() : ''
+})
 </script>
 
 <template>

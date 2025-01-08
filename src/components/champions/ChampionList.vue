@@ -13,8 +13,6 @@ import { getChampsFromDatabase } from './data/getChampsFromDatabase'
 const ds = useDataStore()
 const ts = useTempStore()
 
-!ds.champions ? getChampsFromDatabase() : ''
-
 const filteredChampions = computed(() => {
     let filtered = [...ds.champions]
     const includedChampions = new Set()
@@ -55,6 +53,9 @@ const filteredChampions = computed(() => {
     return filtered
 })
 
+onMounted(() => {
+    !ds.champions ? getChampsFromDatabase() : ''
+})
 console.log('💠 - filteredChampions - filteredChampions:', filteredChampions)
 </script>
 
