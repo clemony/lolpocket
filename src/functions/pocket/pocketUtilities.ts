@@ -6,7 +6,7 @@ import {
     createDefaultRune,
     createDefaultShard,
 } from './addPocket'
-import { generateRandomName } from '../ui/Keygen'
+import { generateRandomName } from '../ui/keygen'
 import { useAccountStore } from '@stores/accountStore'
 
 export function getPocket(key) {

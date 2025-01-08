@@ -10,7 +10,7 @@ import {
     DefaultItem,
     spell,
 } from '@/types/pocketTypes'
-import { generateRandomString, generateRandomName } from '@/functions/ui/Keygen'
+import { generateRandomString, generateRandomName } from '@/functions/ui/keygen'
 import { newItemSet, newRuneSet } from './pocketUtilities'
 import { usePocketStore } from '@/stores/pocketStore'
 const toID = hexoid()

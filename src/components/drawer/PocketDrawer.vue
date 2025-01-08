@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { usePocketStore } from '@stores/pocketStore'
 import { addPocket } from '@/functions/pocket/addPocket'
-import { generateRandomString } from '@/functions/ui/Keygen'
+import { generateRandomString } from '@/functions/ui/keygen'
 const ps = usePocketStore()
 import { hexoid } from 'hexoid'
 import type { pocket } from '@/types/pocketTypes'
