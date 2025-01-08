@@ -7,7 +7,7 @@ export function formattedQuote() {
     return quote
 }
 
-export const Quotes = [
+export const quotes = [
     '<p>"Braum! What are you doing over there?! Are you drunk?"</p><p>-Ashe</p>',
     '<p>"So, Braum. No shirt, huh? And I don\'t have pants. Yay, Freljord."</p><p>-Ashe</p>',
     '<p>"A Crownguard and a mage? Wouldn\'t want to be her."</p><p>-Sona</p>',
@@ -50,5 +50,3 @@ export const Quotes = [
     '<p>"Who needs a map?"</p><p>-Ezreal</p>',
     "<p>\"I'm a mage. You're a mage. I'm blond. You're blonde. Doesn't it feel like we're made for each other?\"</p><p>-Ezreal (to Lux)</p>",
 ]
-
-let quotes = Quotes

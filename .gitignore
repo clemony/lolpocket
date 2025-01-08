@@ -13,7 +13,6 @@ dist
 dist-ssr
 coverage
 *.local
-.env*
 .data
 .cache
 .output
@@ -23,6 +22,7 @@ coverage
 /cypress/screenshots/
 
 # Editor directories and files
+src/data/example/*
 .vscode/*
 !.vscode/extensions.json
 .idea

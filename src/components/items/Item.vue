@@ -2,7 +2,7 @@
 import type { HTMLAttributes } from 'vue'
 import type { Item } from '@/types/dataTypes'
 import { itemDrawer } from '@components/drawer/data'
-import { toggleDrawerState } from '@/functions/utils'
+import { toggleDrawerState } from '@/components/drawer/toggleDrawer'
 
 const props = defineProps<{
     item: Item

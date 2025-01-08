@@ -25,23 +25,6 @@ export function getRuneData() {
     )
 }
 
-export function getChampionData() {
-    limiter.schedule(() =>
-        axios({
-            method: 'get',
-            url: 'https://ddragon.leagueoflegends.com/cdn/14.24.1/data/en_US/champion.json',
-            responseType: 'json',
-        }).then(function (response) {
-            const ds = useDataStore()
-
-            const championData = response.data.data
-            const championsArray = Object.values(championData) as Champion[]
-
-            ds.champions.push(...championsArray)
-        })
-    )
-}
-
 export function getShardData() {
     limiter.schedule(() =>
         axios({
@@ -74,11 +57,6 @@ export function getPatch() {
             console.log('💠 - getPatch - patch:', patch)
 
             if (ds.currentPatch != patch) {
-                getRuneData()
-                getChampionData()
-                // getItemData()
-                // summs
-                //shards
                 ds.currentPatch = patch
             } else {
                 return

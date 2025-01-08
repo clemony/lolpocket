@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { usePocketStore } from '@/stores/pocketStore'
-import { deletePocket } from '@/functions/pocketUtilities'
+import { deletePocket } from '@/functions/pocket/pocketUtilities'
 import { toast } from 'vue-sonner'
 
 const ps = usePocketStore()

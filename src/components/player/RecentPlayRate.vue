@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { summoner } from '@data/playerData'
 import { useAccountStore } from '@stores/accountStore'
-import { colorB3 } from '@/functions/colors'
+import { colorB3 } from '@/functions/ui/colors'
 const as = useAccountStore()
 
 const recentWinrate = ref(55)

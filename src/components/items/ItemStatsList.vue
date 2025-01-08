@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useTempStore } from '@stores/tempStore'
-import { stats } from './data/client/arrays'
+import { stats } from '@data/item'
 const ts = useTempStore()
 </script>
 <template>

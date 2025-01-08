@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { newRuneSet } from '@/functions/pocketUtilities'
+import { newRuneSet } from '@/functions/pocket/pocketUtilities'
 import type { pocket, RuneSet } from '@/types/pocketTypes'
-import { getColor } from '@/functions/colors'
+import { getColor } from '@/functions/ui/colors'
 
 import type { HTMLAttributes } from 'vue'
 

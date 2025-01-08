@@ -1,27 +1,23 @@
-<script lang="ts" setup>
-import type { DialogOverlayProps } from 'radix-vue'
-import { cn } from '@lib/utils'
-import { DrawerOverlay } from 'vaul-vue'
-import { computed, type HtmlHTMLAttributes } from 'vue'
+<script setup lang="ts">
+import { DialogOverlay } from 'radix-vue'
+import { computed } from 'vue'
+import { injectDrawerRootContext } from './src/context'
 
-const props = defineProps<
-    DialogOverlayProps & { class?: HtmlHTMLAttributes['class'] }
->()
+const { overlayRef, snapPoints, isVisible, isOpen, shouldFade } =
+    injectDrawerRootContext()
 
-const delegatedProps = computed(() => {
-    const { class: _, ...delegated } = props
-
-    return delegated
-})
+const hasSnapPoints = computed(
+    () => snapPoints && (snapPoints.value?.length ?? 0) > 0
+)
 </script>
 
 <template>
-    <DrawerOverlay
-        v-bind="delegatedProps"
-        :class="
-            cn(
-                'fixed inset-0 z-50 overflow-hidden rounded-[0.95rem] bg-black/70',
-                props.class
-            )
-        " />
+    <DialogOverlay
+        ref="overlayRef"
+        :vaul-drawer-visible="isVisible ? 'true' : 'false'"
+        vaul-overlay=""
+        :vaul-snap-points="isOpen && hasSnapPoints ? 'true' : 'false'"
+        :vaul-snap-points-overlay="isOpen && shouldFade ? 'true' : 'false'" />
 </template>
+
+<style scoped></style>

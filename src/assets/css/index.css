@@ -8,6 +8,7 @@
 @import './plugins/daisy.css';
 @import '@morev/vue-transitions/styles';
 @import './plugins/tippy.css';
+@import './plugins/drag.css';
 @plugin "daisyui" {
     exclude: radialprogress, toast;
 }

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { itemDrawer } from '@components/drawer/data'
-import { toggleDrawerState } from '@/functions/utils'
+import { toggleDrawerState } from '@/components/drawer/toggleDrawer'
 import { filteredItems } from './data/client/filter'
 </script>
 

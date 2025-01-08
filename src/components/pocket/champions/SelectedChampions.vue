@@ -2,8 +2,7 @@
 import { useTempStore } from '@stores/tempStore'
 import { VueDraggable } from 'vue-draggable-plus'
 import type { pocket } from '@/types/pocketTypes'
-import { removeChamp } from '@/functions/pocketUtilities'
-import '@assets/css/drag.css'
+import { removeChamp } from '@/functions/pocket/pocketUtilities'
 const ts = useTempStore()
 
 const props = defineProps<{

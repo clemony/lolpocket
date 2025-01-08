@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { categories, stats, types } from './data/client/arrays'
+import { categories, stats, types } from '@data/item'
 import { useDataStore } from '@stores/dataStore'
 import { useTempStore } from '@stores/tempStore'
 const ts = useTempStore()

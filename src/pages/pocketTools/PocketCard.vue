@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { pocket } from '@/types/pocketTypes'
 import { clean } from '@lib/utils'
-import { runeColors } from '@/functions/colors'
+import { runeColors } from '@/functions/ui/colors'
 import { CSSProperties } from 'vue'
 
 import { useAccountStore } from '@stores/accountStore'

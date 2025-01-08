@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { usePocketStore } from '@/stores/pocketStore'
 import { useTempStore } from '@/stores/tempStore'
-import { getPocket } from '@/functions/pocketUtilities'
+import { getPocket } from '@/functions/pocket/pocketUtilities'
 const ts = useTempStore()
 const ps = usePocketStore()
 const props = defineProps<{

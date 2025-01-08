@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { VueDraggable } from 'vue-draggable-plus'
-
 import { ItemSet } from '@/types/pocketTypes'
-import { addItemToSet, getPocket } from '@/functions/pocketUtilities'
+import { addItemToSet, getPocket } from '@/functions/pocket/pocketUtilities'
 import { useTempStore } from '@stores/tempStore'
+import { useDataStore } from '@stores/dataStore'
+const ds = useDataStore()
 const ts = useTempStore()
 
 const props = defineProps<{
@@ -49,7 +50,7 @@ watch(returnData, (newVal) => {
 })
 
 const filteredItems = computed(() => {
-    let filtered = ts.items
+    let filtered = ds.SRitems
 
     if (quickSearch) {
         const searchTerm = quickSearch.value.toLowerCase()
@@ -93,7 +94,7 @@ const filteredItems = computed(() => {
             :pocket="pocket"
             class="size-18 shadow-sm" />
 
-        <QuickSearch
+        <!--      <QuickSearch
             v-if="!props.limit || (props.limit && set.items.length < 6)"
             :array="filteredItems"
             v-model:quickSearch="quickSearch"
@@ -101,10 +102,10 @@ const filteredItems = computed(() => {
             v-model:thisSet="set.key"
             type="items"
             :size="52"
-            class="mx-1" />
+            class="mx-1" /> -->
 
         <!-- Additional QuickSearch Components to Ensure 6 Total -->
-        <template v-if="props.limit">
+        <!--      <template v-if="props.limit">
             <QuickSearch
                 v-for="index in additionalQuickSearchCount"
                 :key="'quicksearch-' + index"
@@ -114,8 +115,9 @@ const filteredItems = computed(() => {
                 v-model:thisSet="set.key"
                 type="items"
                 :size="52"
-                class="mx-1" />
-        </template>
+        </template
+                class="mx-1" /> -->
+        >
     </VueDraggable>
 </template>
 

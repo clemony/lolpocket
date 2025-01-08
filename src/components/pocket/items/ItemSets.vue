@@ -2,9 +2,13 @@
 import { VueDraggable } from 'vue-draggable-plus'
 import { useTempStore } from '@stores/tempStore'
 import { usePocketStore } from '@stores/pocketStore'
-import { deleteItemSet, getPocket, newItemSet } from '@/functions/pocketUtilities'
+import {
+    deleteItemSet,
+    getPocket,
+    newItemSet,
+} from '@/functions/pocket/pocketUtilities'
 import ItemSetItems from './ItemSetItems.vue'
-import { generateRandomName } from '@/functions/Keygen'
+import { generateRandomName } from '@/functions/ui/keygen'
 
 const ts = useTempStore()
 const ps = usePocketStore()
@@ -145,9 +149,7 @@ const prevIndex = 0
 
                             <!-- <DdSetType :pocket="pocket" :set="set" /> -->
 
-                            <DropdownMenuItem
-                                alt="Clear Items"
-                                @click="ts.resetItems(set.key)">
+                            <DropdownMenuItem alt="Clear Items">
                                 <icon
                                     icon="qlementine-icons:eraser-16"
                                     class="-ml-1 size-4" />
@@ -158,8 +160,7 @@ const prevIndex = 0
 
                             <DropdownMenuItem
                                 alt="Delete Set"
-                                @click="deleteItemSet(pocket.key, set.key)"
-                                :disabled="ts.itemSets.length == 1">
+                                @click="deleteItemSet(pocket.key, set.key)">
                                 <icon
                                     icon="teenyicons:bin-outline"
                                     class="-ml-1 size-4" />

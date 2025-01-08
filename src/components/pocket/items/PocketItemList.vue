@@ -6,11 +6,11 @@ import type { HTMLAttributes } from 'vue'
 import { useAccountStore } from '@stores/accountStore'
 const as = useAccountStore()
 const ts = useTempStore()
-import { makeBox } from '@/functions/makeBox'
+import { makeBox } from '@/functions/ui/makeBox'
 import { useDataStore } from '@stores/dataStore'
 import { itemDrawer } from '@components/drawer/data'
-import { toggleDrawerState } from '@/functions/utils'
-import { remCalc } from '@/functions/remCalc'
+import { toggleDrawerState } from '@/components/drawer/toggleDrawer'
+import { remCalc } from '@utils/ui/remCalc'
 import type { Item } from '@/types/dataTypes'
 const ds = useDataStore()
 const props = defineProps<{

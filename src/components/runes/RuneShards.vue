@@ -2,10 +2,10 @@
 import { useDataStore } from '@stores/dataStore'
 import { useTempStore } from '@/stores/tempStore'
 import type { pocket } from '@/types/pocketTypes'
-import { getShardIcon, getShardClass } from '@/functions/colors'
+import { getShardIcon, getShardClass } from '@/functions/ui/colors'
 
 import { usePocketStore } from '@/stores/pocketStore'
-import { getPocket } from '@/functions/pocketUtilities'
+import { getPocket } from '@/functions/pocket/pocketUtilities'
 const ps = usePocketStore()
 const ds = useDataStore()
 const ts = useTempStore()

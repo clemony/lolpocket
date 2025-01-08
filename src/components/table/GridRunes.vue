@@ -3,8 +3,8 @@ import { computed } from 'vue'
 import { Item, Rune } from '@/types/pocketTypes'
 import { usePocketStore } from '@/stores/pocketStore'
 import { useAccountStore } from '@stores/accountStore'
-import { runeColors } from '@/functions/colors'
-import { getPocket } from '@/functions/pocketUtilities'
+import { runeColors } from '@/functions/ui/colors'
+import { getPocket } from '@/functions/pocket/pocketUtilities'
 const props = defineProps<{
     params: {
         data: {

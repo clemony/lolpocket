@@ -1,10 +1,5 @@
 <script setup lang="ts">
-function filter() {
-    ts.sortItemsAZ = 0
-    ts.sortPrice = 0
-    ts.statFilters.splice(0)
-    ts.catFilters.splice(0)
-}
+function filter() {}
 </script>
 
 <template>

@@ -1,4 +1,4 @@
-export const statArray = [
+export const stats = [
     {
         name: 'Attack Damage',
         img: '/img/stats/ad.webp',
@@ -32,9 +32,6 @@ export const statArray = [
             { id: 'mr_lvl', display: 'mr / lvl' },
         ],
     },
-]
-
-export const statArray2 = [
     {
         name: 'Health',
         img: '/img/stats/hp.webp',

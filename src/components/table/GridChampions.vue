@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { usePocketStore } from '@/stores/pocketStore'
 import { Champion } from '@/types/pocketTypes'
-import { getPocket } from '@/functions/pocketUtilities'
-import { makeBox } from '@/functions/makeBox'
+import { getPocket } from '@/functions/pocket/pocketUtilities'
+import { makeBox } from '@/functions/ui/makeBox'
 const props = defineProps<{
     params: {
         data: {

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { pocket, spell } from '@/types/pocketTypes'
 import { usePocketStore } from '@/stores/pocketStore'
-import { createDefaultSpell } from '@/functions/addPocket'
-import { getPocket } from '@/functions/pocketUtilities'
+import { createDefaultSpell } from '@/functions/pocket/addPocket'
+import { getPocket } from '@/functions/pocket/pocketUtilities'
 const ps = usePocketStore()
 const props = defineProps<{
     pocket: pocket

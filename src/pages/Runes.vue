@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useDataStore } from '@stores/dataStore'
-import { pathDescriptions } from '@data/pathDescriptions'
+import { pathDescriptions } from '@data/runes/pathDescriptions'
 const ds = useDataStore()
 
 const runePaths = ref(ds.paths)

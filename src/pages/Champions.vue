@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { getQuote } from '@/components/champions/data/champQuotes'
-import { categories } from '@components/champions/data/championClasses'
+import { getQuote } from '@data/champion/quotes'
+import { categories } from '@data/champion/categories'
 import { useTempStore } from '@stores/tempStore'
-import { types } from '@components/champions/data/championRoles'
+import { types } from '@data/champion/roles'
 const ts = useTempStore()
 
 const a = Object.values(types)[3]

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { createDefaultSpell } from '@/functions/addPocket'
+import { createDefaultSpell } from '@/functions/pocket/addPocket'
 import type { pocket, spell } from '@/types/pocketTypes'
 const props = defineProps<{
     pocket: pocket

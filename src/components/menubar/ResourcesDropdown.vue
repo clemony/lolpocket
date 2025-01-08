@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { links } from '@data/links'
+import { links } from '@data/ui/links'
 console.log('💠 - links:', links)
 </script>
 <template>

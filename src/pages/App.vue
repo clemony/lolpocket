@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Toaster } from '@components/base/sonner'
-import { toggleDrawerState } from '@/functions/utils'
+import { toggleDrawerState } from '@/components/drawer/toggleDrawer'
 import { useAccountStore } from '@stores/accountStore'
 import { getOS } from '@/functions/detectOS'
 

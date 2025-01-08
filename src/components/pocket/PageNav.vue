@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { pocket, navItem } from '@/types/pocketTypes'
-import { scrollToSection } from '@/functions/utils'
+import { scrollToSection } from '@/components/drawer/toggleDrawer'
 const props = defineProps<{
     storeValue: any
     currentVisible: string

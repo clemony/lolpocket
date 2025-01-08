@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useTempStore } from '@stores/tempStore'
 import { useAccountStore } from '@stores/accountStore'
-import { getPocket } from '@/functions/pocketUtilities'
+import { getPocket } from '@/functions/pocket/pocketUtilities'
 const ts = useTempStore()
 
 const as = useAccountStore()

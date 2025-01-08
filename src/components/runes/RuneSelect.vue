@@ -2,7 +2,7 @@
 import { useDataStore } from '@stores/dataStore'
 import type { pocket } from '@/types/pocketTypes'
 import { runeDrawer } from '@components/drawer/data'
-import { toggleDrawerState } from '@/functions/utils'
+import { toggleDrawerState } from '@/components/drawer/toggleDrawer'
 import { Rune } from '@/types/dataTypes'
 const ds = useDataStore()
 

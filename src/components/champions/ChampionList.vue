@@ -4,9 +4,9 @@ const as = useAccountStore()
 import { useTempStore } from '@stores/tempStore'
 import { useDataStore } from '@stores/dataStore'
 import { championDrawer } from '@components/drawer/data'
-import { toggleDrawerState } from '@/functions/utils'
-import { types } from './data/championRoles'
-import { categories } from './data/championClasses'
+import { toggleDrawerState } from '@/components/drawer/toggleDrawer'
+import { types } from '../../data/champion/roles'
+import { categories } from '../../data/champion/categories'
 import { Category } from '@/types/utilityTypes'
 
 const ds = useDataStore()

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { usePocketStore } from '@/stores/pocketStore'
-import { getPocket } from '@/functions/pocketUtilities'
+import { getPocket } from '@/functions/pocket/pocketUtilities'
 import { ContextMenuTrigger } from 'radix-vue'
 
 const ps = usePocketStore()

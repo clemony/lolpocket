@@ -2,7 +2,11 @@
 import { usePocketStore } from '@/stores/pocketStore'
 import { VueDraggable } from 'vue-draggable-plus'
 import type { pocket } from '@/types/pocketTypes'
-import { newRuneSet, deleteRuneSet, resetRunes } from '@/functions/pocketUtilities'
+import {
+    newRuneSet,
+    deleteRuneSet,
+    resetRunes,
+} from '@/functions/pocket/pocketUtilities'
 
 const ps = usePocketStore()
 

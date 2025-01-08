@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { toggleDrawerState } from '@/functions/utils'
+import { toggleDrawerState } from '@/components/drawer/toggleDrawer'
 import { editPocketDrawer } from '@components/drawer/data'
-import { deletePocket, duplicatePocket } from '@/functions/pocketUtilities'
+import {
+    deletePocket,
+    duplicatePocket,
+} from '@/functions/pocket/pocketUtilities'
 import type { pocket } from '@/types/pocketTypes'
 
 const variant = 'ghost'

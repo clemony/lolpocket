@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { pocket } from '@/types/pocketTypes'
 import { usePocketStore } from '@/stores/pocketStore'
-import { newItemSet } from '@/functions/pocketUtilities'
+import { newItemSet } from '@/functions/pocket/pocketUtilities'
 const ps = usePocketStore()
 
 const props = defineProps<{

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { queue } from '@/types/pocketTypes'
 import { summoner } from '@data/playerData'
-import { colorB3 } from '@/functions/colors'
+import { colorB3 } from '@/functions/ui/colors'
 const props = defineProps<{
     queue: string
     title: string

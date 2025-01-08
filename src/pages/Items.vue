@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useDataStore } from '@stores/dataStore'
-import { categories } from '@/components/items/data/client/arrays'
+import { categories } from '@data/item/categories'
 import { useTempStore } from '@stores/tempStore'
-import { types } from '@/components/items/data/client/arrays'
+import { types } from '@data/item'
 const ts = useTempStore()
 const ds = useDataStore()
 

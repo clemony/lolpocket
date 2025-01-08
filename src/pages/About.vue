@@ -60,6 +60,9 @@ const hoverClass =
                     </a></p>
                 </div>
          </div>
+
+         https://gitlab.com/lol-math/lolmath/-/tree/main/packages/calc
+         
         </div>
 
         <div class="absolute bottom-0 left-0 w-full p-8">

@@ -26,7 +26,7 @@ console.log('💠 - championTags - championTags:', champion.value.tags)
 <template>
     <div
         :champion="ts.selectedChampion"
-        class="relative h-full w-130 justify-self-center pr-16"
+        class="relative h-full w-110 justify-self-center"
         key="id">
         <div class="rating absolute top-1 right-17 size-fit gap-1">
             <input
@@ -87,8 +87,8 @@ console.log('💠 - championTags - championTags:', champion.value.tags)
         <ChampionStats :champion="champion" />
         <!-- <ChampionAspects /> -->
 
-        <Separator label="ACTIVES" class="my-11" />
-        <ChampionAbilities :champion="champion" />
+        <Separator label="ABILITIES" class="my-11" />
+        <!--   <ChampionAbilities :champion="champion" /> -->
     </div>
 </template>
 

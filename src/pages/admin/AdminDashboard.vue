@@ -2,7 +2,7 @@
 import { patchItemDatabase } from '@/components/items/data/database/updateItemData'
 import { getWikiData } from '@lib/getWikiData'
 import { getItemsFromDatabase } from '@/components/items/data/client/getItemsFromDatabase'
-import { getChampionData, getRuneData, getShardData } from '@data/getData'
+import { getRuneData, getShardData } from '@data/getData'
 import { useDataStore } from '@stores/dataStore'
 import { useTempStore } from '@stores/tempStore'
 import { patchChampionDatabase } from '@/components/champions/data/updateChampionData'
@@ -27,7 +27,6 @@ function reset() {
 
 function reGet() {
     getRuneData()
-    getChampionData()
     getItemsFromDatabase()
     // getRuneData()
     //getShardData()

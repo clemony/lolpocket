@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import type { pocket } from '@/types/pocketTypes'
-import { deletePocket, duplicatePocket } from '@/functions/pocketUtilities'
+import {
+    deletePocket,
+    duplicatePocket,
+} from '@/functions/pocket/pocketUtilities'
 import { editPocketDrawer } from '@components/drawer/data'
-import { toggleDrawerState } from '@/functions/utils'
+import { toggleDrawerState } from '@/components/drawer/toggleDrawer'
 import type { HTMLAttributes } from 'vue'
 
 import {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RuneSet } from '@/types/pocketTypes'
-import { runeColors } from '@/functions/colors'
+import { runeColors } from '@/functions/ui/colors'
 const props = defineProps<{
     set: RuneSet
     style: any

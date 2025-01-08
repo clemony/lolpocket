@@ -7,7 +7,7 @@ import { useDataStore } from '@stores/dataStore'
 import type { pocket } from '@/types/pocketTypes'
 import type { Champion } from '@/types/dataTypes'
 import { championDrawer } from '@components/drawer/data'
-import { toggleDrawerState } from '@/functions/utils'
+import { toggleDrawerState } from '@/components/drawer/toggleDrawer'
 
 const ds = useDataStore()
 const ts = useTempStore()

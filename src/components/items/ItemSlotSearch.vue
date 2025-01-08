@@ -4,7 +4,7 @@ import { cn } from '@lib/utils'
 import { useDataStore } from '@stores/dataStore'
 import { usePocketStore } from '@stores/pocketStore'
 import { imageIn, imageOut } from '@/assets/animation/animations'
-import { getPocket } from '@/functions/pocketUtilities'
+import { getPocket } from '@/functions/pocket/pocketUtilities'
 
 const ds = useDataStore()
 const ps = usePocketStore()

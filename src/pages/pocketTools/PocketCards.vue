@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { usePocketStore } from '@stores/pocketStore'
 import { newPocketDrawer, cardDrawer } from '@components/drawer/data'
-import { toggleDrawerState } from '@/functions/utils'
+import { toggleDrawerState } from '@/components/drawer/toggleDrawer'
 
 const ps = usePocketStore()
 </script>

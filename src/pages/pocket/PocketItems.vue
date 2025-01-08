@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useAccountStore } from '@stores/accountStore'
-import { getPocket } from '@/functions/pocketUtilities'
+import { getPocket } from '@/functions/pocket/pocketUtilities'
 import { useTempStore } from '@stores/tempStore'
 const ts = useTempStore()
 import { useScroll } from '@vueuse/core'
@@ -76,10 +76,10 @@ const toggleFilter = useToggle(isFilterOpen)
             </ScrollArea>
         </template>
         <template #panel2>
-            <Card as-child
-                    class="inset-0 mr-2 ml-8 h-[calc(100%-140px)] max-h-[calc(100%-140px)] w-fit justify-self-end overflow-hidden pt-4">
-                <Collapsible
-                    v-model:open="isFilterOpen">
+            <Card
+                as-child
+                class="inset-0 mr-2 ml-8 h-[calc(100%-140px)] max-h-[calc(100%-140px)] w-fit justify-self-end overflow-hidden pt-4">
+                <Collapsible v-model:open="isFilterOpen">
                     <CardHeader as-child>
                         <CollapsibleTrigger
                             class="flex border-0 ring-0 ring-offset-0 outline-hidden">
@@ -141,9 +141,9 @@ const toggleFilter = useToggle(isFilterOpen)
                         </CollapsibleContent>
                     </CardDescription>
                 </Collapsible>
-<CardContent>
+                <CardContent>
                     <ItemList :pocket="pocket" />
-</CardContent>
+                </CardContent>
             </Card>
         </template>
     </Layout2>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { usePocketStore } from '@/stores/pocketStore'
-import { getPocket } from '@/functions/pocketUtilities'
+import { getPocket } from '@/functions/pocket/pocketUtilities'
 import { pocket } from '@/types/pocketTypes'
 import { dateObject } from '@/types/utilityTypes'
 const ps = usePocketStore()
