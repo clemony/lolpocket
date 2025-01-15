@@ -1,0 +1,33 @@
+<script setup lang="ts">
+  const ts = useTempStore()
+</script>
+
+<template>
+  <main
+    id="app"
+    ref="app"
+    :class="{ 'bg-black': ts.sidebarTrigger || ts.pocketDrawerTrigger || ts.championDrawerTrigger }">
+    <Drawer />
+    <Toaster
+      closeButton
+      position="top-right"
+      :hotkey="['KeyC']"
+      :toastOptions="{}"
+      :expand="true" />
+    <SidebarDrawer />
+    <ChampionDrawer />
+    <PocketDrawer />
+    <div
+      class="bg-b1 transition-all duration-300"
+      :class="{ 'scale-98 h-full rounded-xl overflow-hidden': ts.sidebarTrigger || ts.pocketDrawerTrigger || ts.championDrawerTrigger }">
+      <MainMenubar />
+      <!--     <div class="absolute z-0 top-0 left-0 inset-0 m-0 size-full overflow-y-clip border-none"> -->
+      <div class="size-screen max-w-screen max-h-screen overflow-hidden">
+        <slot />
+      </div>
+    </div>
+  </main>
+  [
+</template>
+
+<style></style>

@@ -1,0 +1,182 @@
+@import './pop.css';
+@import './fade.css';
+@import './collapse.css';
+@import './toast.css';
+
+.glow {
+    background: linear-gradient(
+        137deg,
+        rgba(231, 207, 120, 0.7) 0%,
+        rgba(220, 124, 124, 0.7) 20%,
+        rgba(178, 164, 221, 0.7) 40%,
+        rgba(175, 212, 150, 0.7) 60%,
+        rgba(165, 226, 229, 0.7) 80%
+    );
+    background-size: 1000% 1000%;
+    animation: GradientBackground 5s ease infinite;
+    /*mask-image: radial-gradient(circle at 0% 1%, rgba(0, 0, 0, 0) 50px, #fff 51px);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;*/
+}
+
+@keyframes GradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@-webkit-keyframes blink-1 {
+    0% {
+        opacity: 1;
+    }
+    49% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes blink-1 {
+    0% {
+        opacity: 1;
+    }
+    49% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+ * ----------------------------------------
+ * animation fade-in-bottom
+ * ----------------------------------------
+ */
+
+.fade-in-bottom {
+    -webkit-animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1)
+        both;
+    animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*
+ * ----------------------------------------
+ * animation fade-out-bottom
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes fade-out-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+@keyframes fade-out-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+.fade-out-bottom {
+    -webkit-animation: fade-out-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        both;
+    animation: fade-out-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.jello-horizontal {
+    -webkit-animation: jello-horizontal 0.9s both;
+    animation: jello-horizontal 0.9s both;
+}
+
+.swap-icons {
+    animation-composition: add;
+
+    :first-child {
+        animation: swap-in 0.9s both ease;
+    }
+    :last-child {
+        animation: swap-out 0.9s both ease-in-out;
+    }
+}
+
+.click {
+    animation: click 0.4s both;
+}
+
+@keyframes click {
+    0% {
+        scale: 90%;
+    }
+
+    100% {
+        transform-origin: center;
+        scale: 100%;
+    }
+}
+
+@keyframes swap-in {
+    0% {
+        opacity: 0;
+    }
+    92% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

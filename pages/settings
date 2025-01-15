@@ -1,0 +1,58 @@
+<div class="grid w-full grid-cols-[1fr_3fr] gap-6 p-6 pl-10">
+
+
+
+
+    <div class="grid grid-cols-1">
+        <h1 class="prose-lg divider divider-start font-semibold">
+            Interface
+        </h1>
+
+        <form class="my-2 flex items-center gap-2">
+
+            </label>
+        </form>
+    </div>
+
+    <div
+        class="align-self-start shadow-warm mockup-browser col-start-2 m-6 max-w-96 border border-neutral/5 bg-b3">
+        <div class="mockup-browser-toolbar -ml-1.5">
+            <div class="text input !ml-2 content-center !bg-b1  before:-mt-0.5 before:w-3 after:-mt-0.5">
+                https://github.com/clemony/lolpocket
+            </div>
+        </div>
+        <div class="flex justify-center bg-b2 px-4 py-20">Hello!</div>
+    </div>
+
+    <h1 class="prose-lg col-start-1 mt-6 font-semibold">neutrals</h1>
+
+    <div class="col-start-1 grid grid-cols-1 gap-y-4">
+        <form v-for="theme in themes" class="items-center" @change="handleThemeChoice()">
+            <div class="col-start-1 grid grid-cols-[1fr_5fr] content-center justify-start">
+                <input type="radio" v-model="themeChoice" :value="theme.key" :id="theme.name" name="ui-theme"
+                    class="radio radio-xs col-start-1 self-center justify-self-start shadow-inner" />
+                <label :for="theme.name">
+                    <div
+                        class="justify-content-start shadow-warm col-start-2 grid max-w-36 grid-cols-1 gap-1 rounded-btn border border-b3 px-2 py-2">
+                        <div class="content-center  font-semibold">
+                            {{ theme.name }}
+                        </div>
+
+                        <div :data-theme="settinas.dataMode + theme.key"
+                            class="*:shadow-warm grid grid-cols-4 justify-items-center gap-1 bg-transparent *:size-6 *:rounded-md *:ring-b3/80 *:ring-offset-1">
+                            <div class="bg-primary ring-offset-primary/60"></div>
+                            <div class="bg-secondary ring-offset-secondary/60"></div>
+                            <div class="bg-neutral ring-offset-neutral/60"></div>
+                            <div class="bg-neutral ring-offset-neutral/60"></div>
+                            <!-- <div class="bg-info"></div>
+            <div class="bg-success"></div>
+            <div class="bg-warning"></div>
+            <div class="bg-error"></div>
+            <div class="bg-error-content"></div>-->
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </form>
+    </div>
+</div>
