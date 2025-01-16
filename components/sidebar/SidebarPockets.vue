@@ -42,7 +42,7 @@
     <ul class="collapse-content">
       <li
         v-for="folder in folders"
-        v-tippy="{ content: folder.items.length == 0 ? 'No pockets here!' : 'hi' }"
+        v-tippy="{ content: folder.items.length == 0 ? 'Empty' : '' }"
         class="collapse group has-disabled:opacity-60">
         <input
           :name="folder.name"
@@ -66,15 +66,14 @@
 
         <ul class="collapse-content">
           <li v-for="pocket in folder.items">
-            <a
-              href="item.link"
-              target="_blank"
-              class="flex gap-4 items-center">
+            <NuxtLink
+              :to="`/pocket/${pocket.key}`"
+              class="w-full">
               <img
                 :src="pocket.icon"
                 class="size-5.5 rounded-full shadow-sm" />
               {{ pocket.name }}
-            </a>
+            </NuxtLink>
           </li>
         </ul>
       </li>

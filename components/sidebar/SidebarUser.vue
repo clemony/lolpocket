@@ -32,18 +32,18 @@
 </script>
 
 <template>
-  <div class="h-22 px-5 pt-5 pb-1 flex flex-col backdrop-blur-md bg-b1/70 absolute w-full z-10 top-0 left-0">
-    <div class="flex items-center gap-6">
-      <Avatar class="size-12 border-1 border-bc ring-1 ring-b1 rounded-full shadow-sm">
+  <div class="h-18 px-5 pt-5 pb-1 flex flex-col backdrop-blur-md bg-b1/70 absolute w-full z-10 bottom-0 left-0">
+    <div class="flex items-center gap-4">
+      <Avatar class="size-10 border-1 border-bc ring-1 ring-b1 rounded-md shadow-sm">
         <AvatarImage
           :src="summoner.icon"
           :alt="summoner.name" />
-        <AvatarFallback class="rounded-lg"> LP </AvatarFallback>
+        <AvatarFallback class="rounded-full"> LP </AvatarFallback>
       </Avatar>
 
-      <div class="text-7 tracking-tight font-serif font-bold flex drop-shadow-text pb-0.5">
+      <h4 class="tracking-tight flex">
         {{ summonerName }}
-      </div>
+      </h4>
     </div>
   </div>
 </template>

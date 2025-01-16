@@ -60,7 +60,7 @@
 <template>
   <transition-slide
     group
-    class="max-h-full user-select-none champions-start grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(170px,1fr))] justify-around gap-4 overflow-auto px-3 rounded-lg pb-8 h-fit">
+    class="max-h-full user-select-none champions-start grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(170px,1fr))] gap-4 overflow-auto px-3 rounded-lg pb-8">
     <ChampionSplash
       v-for="champion in filteredChampions"
       :key="champion.id"

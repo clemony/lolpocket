@@ -17,12 +17,6 @@
     await preloadComponents('HoverSidebar')
   })
 
-  const open = ref(ts.sidebarOpen)
-  function onOpenChange() {
-    open.value = ts.sidebarOpen
-    open.value = as.mobileOpen
-  }
-
   const scroll = ref(null)
   const { isScrolling } = useScroll(scroll)
 </script>

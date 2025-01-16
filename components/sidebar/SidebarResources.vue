@@ -1,10 +1,6 @@
 <script setup lang="ts">
   const as = useAccountStore()
   const ts = useTempStore()
-  const size = computed(() => {
-    const open = ref(ts.sidebarOpen)
-    return open ? 'lg' : !open ? 'icon' : 'default'
-  })
 
   const ex = {
     name: 'Resources',

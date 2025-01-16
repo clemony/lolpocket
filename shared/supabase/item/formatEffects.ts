@@ -1,6 +1,6 @@
 export function formatEffects(effect) {
   if (!effect) {
-    return;
+    return
   }
 
   // Static replacements
@@ -20,7 +20,7 @@ export function formatEffects(effect) {
     ']': '',
     '[': '',
     // Add item-specific static replacements here
-  };
+  }
 
   // Pattern-based replacements
   const b = [
@@ -50,17 +50,18 @@ export function formatEffects(effect) {
     { pattern: /{{(.*)}}/g, replacement: ' $1 ' },
     { pattern: / \s+/g, replacement: ' ' },
     { pattern: /\[+?(.*)\]+?/g, replacement: '$1' },
-  ];
+    { pattern: /\s.*\|/g, replacement: ' ' },
+  ]
 
   // Apply static replacements
   Object.keys(a).forEach((key) => {
-    effect = effect.replaceAll(key, a[key]).trim();
-  });
+    effect = effect.replaceAll(key, a[key]).trim()
+  })
 
   // Apply pattern-based replacements
   b.forEach(({ pattern, replacement }) => {
-    effect = effect.replace(pattern, replacement).trim();
-  });
+    effect = effect.replace(pattern, replacement).trim()
+  })
 
-  return effect;
+  return effect
 }

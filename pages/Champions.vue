@@ -49,7 +49,7 @@
         :types="b"
         @update:model="(e) => (ts.browseChampionTypes = e)"
         class="ml-0.75" />
-      <div class="max-h-inherit mt-2 h-[calc(100vh-12.5rem)] overflow-auto">
+      <div class="max-h-inherit mt-2 h-[calc(100vh-13.3rem)] overflow-auto">
         <ChampionList class="gap-4 px-1 pt-3" />
       </div>
     </template>

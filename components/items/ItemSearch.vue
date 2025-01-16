@@ -1,16 +1,16 @@
 <script setup lang="ts">
-  import { categories, stats, types } from 'shared/data/item';
+  import { categories, stats, types } from 'shared/data/item'
 
-  const ts = useTempStore();
-  const ds = useDataStore();
-  import Fuse from 'fuse.js';
+  const ts = useTempStore()
+  const ds = useDataStore()
+  import Fuse from 'fuse.js'
 
   const items = computedAsync(async () => {
-    return await [...(ds.SRitems || [])]; // Assuming ds.SRitems is an array or undefined.
-  }, null);
+    return await [...(ds.SRitems || [])] // Assuming ds.SRitems is an array or undefined.
+  }, null)
 
-  const searchQuery = ref('');
-  const fuse = ref<Fuse<any> | null>(null);
+  const searchQuery = ref('')
+  const fuse = ref<Fuse<any> | null>(null)
 
   // Initialize Fuse once the items are available
   watch(
@@ -21,31 +21,27 @@
           keys: ['name', 'nickname'],
           includeScore: true,
           threshold: 0.3,
-        });
+        })
       }
     },
     { immediate: true }
-  );
+  )
 
-  // Function to get the search results from Fuse based on the debounced query
   const searchResult = computed(() => {
     if (!searchQuery.value) {
-      // If there's no query, return all items to load all chunks
-      return items.value || [];
+      return items.value || []
     }
 
-    if (!fuse.value) return [];
+    if (!fuse.value) return []
 
-    const results = fuse.value.search(searchQuery.value);
-    return results.map((result) => result.item);
-  });
+    const results = fuse.value.search(searchQuery.value)
+    return results.map((result) => result.item)
+  })
 
-  // Watch for changes in searchResult and load all chunks on initial render
   watch(searchResult, (newSearchResults) => {
-    // Store the search results in the Pinia store
-    ts.biSearchResult = newSearchResults;
-    console.log('💠 - Search Results:', newSearchResults);
-  });
+    ts.biSearchResult = newSearchResults
+    console.log('💠 - Search Results:', newSearchResults)
+  })
 </script>
 
 <template>
@@ -56,7 +52,7 @@
     <Input
       v-model="searchQuery"
       placeholder="Search Item Database..."
-      class="border-b2 !text-3 placeholder:text-bc/80 !bg-b1 shadow-smooth flex h-12 border py-2 pr-3 pl-12 inset-shadow-xs" />
+      class="border-b3 !text-3 placeholder:text-bc/80 !bg-b1 flex h-12 border py-2 pr-3 pl-12" />
   </div>
 </template>
 <style></style>

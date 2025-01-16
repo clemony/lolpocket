@@ -1,4 +1,3 @@
-import { SidebarTrigger } from './../.nuxt/components.d'
 import { defineStore } from 'pinia'
 import { useAccountStore } from './accountStore'
 export const useTempStore = defineStore(
@@ -17,18 +16,11 @@ export const useTempStore = defineStore(
 
     //sidebar
     const sidebarTrigger = ref(false)
-    const sidebarMenu = ref(false)
 
     const pocketDrawerTrigger = ref(false)
     const championDrawerTrigger = ref(false)
-
-    const sidebarOpen = computed(() => {
-      if (sidebarTrigger || sidebarMenu) {
-        return true
-      } else {
-        return false
-      }
-    })
+    const itemDrawerTrigger = ref(false)
+    const runeDrawerTrigger = ref(false)
 
     // drawer
     const drawerState = ref(false)
@@ -90,9 +82,9 @@ export const useTempStore = defineStore(
       //sidebar
       pocketDrawerTrigger,
       championDrawerTrigger,
+      itemDrawerTrigger,
+      runeDrawerTrigger,
       sidebarTrigger,
-      sidebarMenu,
-      sidebarOpen,
 
       //drawer
 

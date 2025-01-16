@@ -9,11 +9,6 @@
 
   const userLinks = [
     {
-      name: summonerName.value + "'s Board",
-      link: '/summoner',
-      icon: 'ph:squares-four-light',
-    },
-    {
       name: 'Build Analysis',
       link: '/summoner/BuildAnalysis',
       icon: 'octicon:graph-24',
@@ -34,7 +29,7 @@
 </script>
 
 <template>
-  <li class="mt-2 mb-1.5">
+  <li class="">
     <NuxtLink
       to="/admin/Admin"
       class="flex items-center gap-4 px-2.5">
@@ -42,6 +37,17 @@
         name="codicon:source-control"
         class="size-4.5" />
       Admin Board
+    </NuxtLink>
+  </li>
+
+  <li class="">
+    <NuxtLink
+      to="/summoner"
+      class="flex items-center gap-4 px-2.5 capitalize">
+      <icon
+        name="f7:grid"
+        class="size-5 border border-bc rounded-sm" />
+      {{ summonerName }}'s Board
     </NuxtLink>
   </li>
 
@@ -56,7 +62,7 @@
       <LittleIcon
         icon="teenyicons:home-outline"
         class="size-4.5" />
-      {{ summonerName }}'s Home
+      {{ summonerName }}'s Tools
       <ExpandIndicator v-model:check="userCheck" />
     </div>
     <ul class="collapse-content">

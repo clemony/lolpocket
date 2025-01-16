@@ -11,12 +11,10 @@ export default defineNuxtConfig({
     '@nuxt/devtools',
     '@nuxt/eslint',
     'vue-sonner/nuxt',
-    'nuxt-locomotive-scroll',
     'nuxt-tailwindcss4',
     '@nuxt/icon',
-    '@nuxt/fonts',
-    'nuxt-security',
     'nuxt-aos',
+    '@nuxt/image',
   ],
 
   /*   image: {
@@ -26,12 +24,6 @@ export default defineNuxtConfig({
   icon: {
     provider: 'iconify',
     serverBundle: false,
-  },
-
-  security: {
-    corsHandler: {
-      // origin: '*',
-    },
   },
 
   vite: {
@@ -157,14 +149,4 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-11-01',
   ssr: false,
-
-  fonts: {
-    defaults: {
-      weights: ['100', '200', '300', '400'],
-      styles: ['normal', 'italic'],
-      subsets: ['cyrillic-ext', 'cyrillic', 'greek-ext', 'greek', 'vietnamese', 'latin-ext', 'latin'],
-    },
-
-    families: [{ name: 'Zodiak', provider: 'fontshare' }],
-  },
 })
