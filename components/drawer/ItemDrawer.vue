@@ -82,7 +82,7 @@
           class="relative h-screen w-130 p-9 justify-self-center backdrop-blur-md min-h-screen bg-b1 shadow-pretty overflow-hidden rounded-r-md inset-shadow-sm"
           key="id">
           <div class="flex w-full gap-6 pb-5">
-            <NuxtImg
+            <img
               :key="item.name"
               :src="`/img/item/${item.id}.webp`"
               :alt="item.name + ' Image'"

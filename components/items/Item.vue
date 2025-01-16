@@ -16,7 +16,7 @@
       v-model="ts.itemDrawerTrigger"
       class="hidden" />
     <LittleTip :content="thisItem.name">
-      <NuxtImg
+      <img
         :src="`/img/item/${thisItem.id}.webp`"
         :alt="thisItem.name + ' Image'"
         class="aspect-square size-full rounded-lg" />
