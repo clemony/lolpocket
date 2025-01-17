@@ -4,21 +4,20 @@
   const as = useAccountStore()
 
   const champion = ref(ts.selectedChampion)
-  console.log('💠 - champion:', champion)
 
   watch(
-    () => as.favoriteChamps,
-    (newVal) => {},
-    { immediate: true }
+    () => ts.selectedChampion,
+    (newVal) => {
+      champion.value = newVal
+      //console.log('💠 - newVal:', newVal)
+    }
   )
-
-  const isLiked = computed(() => {
-    return as.favoriteChamps.some((champ) => champ.name === champion.value.name)
-  })
 </script>
 
 <template>
-  <div class="drawer">
+  <div
+    class="drawer"
+    :key="champion">
     <input
       id="champ-drawer"
       v-model="ts.championDrawerTrigger"
@@ -33,7 +32,7 @@
 
       <div class="backdrop-blur-md min-h-full w-100 bg-b1 shadow-pretty overflow-hidden rounded-r-md inset-shadow-sm relative">
         <div
-          :champion="ts.selectedChampion"
+          :champion="champion"
           class="relative h-full w-110 justify-self-center"
           key="id">
           <div class="rating absolute top-1 right-17 size-fit gap-1">

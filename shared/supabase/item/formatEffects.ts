@@ -19,6 +19,10 @@ export function formatEffects(effect) {
     ' ,': ', ',
     ']': '',
     '[': '',
+    '{{pp|': '',
+    '|type:your level}}': '(based on your level)',
+    '|1;7': '',
+    'non- minion': 'non-minion',
     // Add item-specific static replacements here
   }
 
@@ -50,7 +54,6 @@ export function formatEffects(effect) {
     { pattern: /{{(.*)}}/g, replacement: ' $1 ' },
     { pattern: / \s+/g, replacement: ' ' },
     { pattern: /\[+?(.*)\]+?/g, replacement: '$1' },
-    { pattern: /\s.*\|/g, replacement: ' ' },
   ]
 
   // Apply static replacements

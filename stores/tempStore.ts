@@ -22,15 +22,32 @@ export const useTempStore = defineStore(
     const itemDrawerTrigger = ref(false)
     const runeDrawerTrigger = ref(false)
 
-    // drawer
-    const drawerState = ref(false)
-    const drawerType = ref()
-
     // drawer selections
     const drawerPocket = ref(null)
     const selectedChampion = ref(null)
-    const selectedItem = ref()
+    const selectedItem = ref(null)
     const selectedRune = ref(null)
+
+    watch(
+      () => championDrawerTrigger.value,
+      (newVal) => {
+        if ((newVal = false)) {
+          selectedChampion.value = null
+        }
+      }
+    )
+
+    watch(
+      () => itemDrawerTrigger.value,
+      (newVal) => {
+        if ((newVal = false)) {
+          selectedItem.value = null
+        }
+      }
+    )
+    // drawer
+    const drawerState = ref(false)
+    const drawerType = ref()
 
     //champs
     const champSearch = ref('')

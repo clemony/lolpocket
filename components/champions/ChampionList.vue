@@ -6,7 +6,7 @@
 
   const ds = useDataStore()
   const ts = useTempStore()
-
+  ts.selectedChampion = ref()
   const filteredChampions = computed(() => {
     let filtered = [...ds.champions]
     const includedChampions = new Set()
@@ -52,9 +52,6 @@
 
     return filtered
   })
-
-  onMounted(() => {})
-  console.log('💠 - filteredChampions - filteredChampions:', filteredChampions)
 </script>
 
 <template>
@@ -66,6 +63,8 @@
       :key="champion.id"
       :champion="champion"
       class="champion w-full"
+      @click.right.prevent
+      @click="ts.selectedChampion = champion"
       dragClass="setDrag" />
   </transition-slide>
 </template>

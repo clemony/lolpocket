@@ -14,8 +14,12 @@
       :toastOptions="{}"
       :expand="true" />
     <SidebarDrawer />
-    <ChampionDrawer />
-    <ItemDrawer v-if="ts.selectedItem" />
+    <ChampionDrawer
+      v-if="ts.selectedChampion"
+      :key="ts.selectedChampion" />
+    <ItemDrawer
+      v-if="ts.selectedItem"
+      :key="ts.selectedItem" />
     <PocketDrawer />
     <div
       class="bg-b1 transition-all duration-300"
@@ -27,7 +31,6 @@
       </div>
     </div>
   </main>
-  [
 </template>
 
 <style></style>

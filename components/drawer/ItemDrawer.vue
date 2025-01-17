@@ -6,26 +6,19 @@
 
   const ts = useTempStore()
 
-  const item = computed(() => {
-    return ts.selectedItem
-  })
-  console.log('💠 - item:', item)
-
-  const stats = computed(() => {
-    return formatItemStats(ts.selectedItem.stats)
-  })
-  const effects = computed(() => {
-    if (ts.selectedItem) {
-      return ts.selectedItem.effects
+  const item = ref(ts.selectedItem)
+  watch(
+    () => item.value,
+    (newVal) => {
+      item.value = newVal
+      console.log('💠 - newVal:', newVal)
     }
-  })
-  //const id = ref(item.value.id)
+  )
 
-  const recipe = computed(() => {
-    if (ts.selectedItem) {
-      return ts.selectedItem.recipe
-    }
-  })
+  const stats = ref(formatItemStats(item.value.stats))
+  const effects = ref(item.value.effects)
+
+  const recipe = ref(item.value.recipe)
   const recipeArray = asyncComputed(() => {
     return Array.isArray(recipe.value) ? true : false
   })
@@ -43,16 +36,6 @@
     return a.buy
   }
 
-  watch(
-    () => as.favoriteItems,
-    (newVal) => {
-      console.log('💠 - newVal:', newVal)
-    }
-  )
-  onMounted(async () => {
-    await item.value
-  })
-
   function handleTooltip(item) {
     const a = itemBuy(item)
     if (itemBuy) {
@@ -64,7 +47,9 @@
 </script>
 
 <template>
-  <div class="drawer">
+  <div
+    class="drawer"
+    :key="item">
     <input
       id="item-drawer"
       v-model="ts.itemDrawerTrigger"
@@ -79,6 +64,7 @@
 
       <div class="">
         <div
+          :item="item"
           class="relative h-screen w-130 p-9 justify-self-center backdrop-blur-md min-h-screen bg-b1 shadow-pretty overflow-hidden rounded-r-md inset-shadow-sm"
           key="id">
           <div class="flex w-full gap-6 pb-5">
@@ -178,7 +164,7 @@
               :data="effects.act" />
           </div>
 
-          <template v-if="recipe">
+          <template v-if="recipe && recipeArray">
             <Separator
               label="RECIPE"
               class="my-11" />

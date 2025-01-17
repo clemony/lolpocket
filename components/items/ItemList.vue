@@ -1,6 +1,5 @@
 <script setup lang="ts">
   const ts = useTempStore()
-  ts.selectedItem = ref()
 </script>
 <template>
   <transition-slide
