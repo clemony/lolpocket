@@ -7,11 +7,13 @@
   const route = useRoute()
   console.log(route)
 
-  const user = useSupabaseUser()
-  console.log('💠 - user:', user.value.app_metadata.providers)
+  const user = useSupabaseUser() || null
+  //console.log('💠 - user:', user.value.app_metadata.providers)
 </script>
 <template>
-  <NuxtLayout name="setting-section-layout">
+  <NuxtLayout
+    v-if="user != null && user != undefined"
+    name="setting-section-layout">
     <label
       v-for="provider in providers"
       v-tippy="
