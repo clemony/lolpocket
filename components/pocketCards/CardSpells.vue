@@ -1,16 +1,16 @@
 <script setup lang="ts">
   const props = defineProps<{
-    pocket: pocket;
-  }>();
+    pocket: pocket
+  }>()
 
-  const a = ref(props.pocket.spells[0]);
+  const a = ref(props.pocket.spells[0])
 
-  const b = ref(props.pocket.spells[1]);
+  const b = ref(props.pocket.spells[1])
 
   onMounted(() => {
-    !a.value ? ((a.value = createDefaultSpell()) as spell) : props.pocket.spells[0];
-    !b.value ? ((b.value = createDefaultSpell()) as spell) : props.pocket.spells[1];
-  });
+    !a.value ? ((a.value = createDefaultSpell()) as Spell) : props.pocket.spells[0]
+    !b.value ? ((b.value = createDefaultSpell()) as Spell) : props.pocket.spells[1]
+  })
 </script>
 
 <template>

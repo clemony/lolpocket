@@ -1,6 +1,17 @@
 <script setup lang="ts">
   import { categories, stats, types } from 'shared/data/item'
+  import type { HTMLAttributes } from 'vue'
 
+  const props = withDefaults(
+    defineProps<{
+      class?: HTMLAttributes['class']
+      placeholder?: string
+      inputClass?: HTMLAttributes['class']
+    }>(),
+    {
+      placeholder: 'Search Items...',
+    }
+  )
   const ts = useTempStore()
   const ds = useDataStore()
   import Fuse from 'fuse.js'
@@ -39,20 +50,20 @@
   })
 
   watch(searchResult, (newSearchResults) => {
-    ts.biSearchResult = newSearchResults
-    console.log('💠 - Search Results:', newSearchResults)
+    ts.itemSearchResult = newSearchResults
+    //console.log('💠 - Search Results:', newSearchResults)
   })
 </script>
 
 <template>
-  <div class="relative">
+  <div :class="cn('border-b3 text-3 items-center gap-4 !bg-b1 flex h-12 border py-2 px-3', props.class)">
     <icon
       name="teenyicons:search-outline"
-      class="pointer-events-none absolute top-3.25 left-3.5 z-20 size-5 opacity-70" />
-    <Input
+      class="pointer-events-none size-5 opacity-70" />
+    <input
       v-model="searchQuery"
-      placeholder="Search Item Database..."
-      class="border-b3 !text-3 placeholder:text-bc/80 !bg-b1 flex h-12 border py-2 pr-3 pl-12" />
+      :placeholder="props.placeholder"
+      :class="cn('text-3  outline-0 ring-0 border-0 flex h-full grow text-start  hover:outline-0 hover:ring-0 hover:border-0', props.inputClass)" />
   </div>
 </template>
 <style></style>

@@ -18,7 +18,7 @@
   console.log('💠 - b - b:', b.value)
 
   watch(
-    () => ts.browseChampionTypes,
+    () => ts.filterChampionTypes,
     (newVal) => {
       console.log('💠 - newVal:', newVal)
     }
@@ -27,11 +27,12 @@
 
 <template>
   <NuxtLayout
-    name="list-layout"
-    title="Champions">
+    name="split-layout"
+    title="Champions"
+    class="pr-0">
     <template #1>
       <div
-        class="text-4 drop-shadow-text h-28 items-center px-2 font-serif tracking-wide last-of-type:text-right"
+        class="text-4 drop-shadow-text h-28 mt-6 items-center px-2 font-serif tracking-wide last-of-type:text-right"
         v-html="getQuote()"></div>
       <ChampionSearch />
 
@@ -40,17 +41,17 @@
       <!-- ItemStatsList /> -->
       <CheckboxFilterList
         :source="categories"
-        @update:model="(e) => (ts.browseChampionClass = e)" />
+        @update:model="(e) => (ts.filterChampionClass = e)" />
     </template>
 
     <template #2>
       <RadioFilterList
         bg
         :types="b"
-        @update:model="(e) => (ts.browseChampionTypes = e)"
+        @update:model="(e) => (ts.filterChampionTypes = e)"
         class="ml-0.75" />
-      <div class="max-h-inherit mt-2 h-[calc(100vh-13.3rem)] overflow-auto">
-        <ChampionList class="gap-4 px-1 pt-3" />
+      <div class="max-h-inherit mt-2 h-[calc(100vh-10.6rem)] overflow-auto">
+        <ChampionList class="gap-4 px-1 pt-3 pr-6" />
       </div>
     </template>
   </NuxtLayout>

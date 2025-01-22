@@ -1,5 +1,3 @@
-import { getChampsFromDatabase, getItemsFromDatabase, getRuneData } from 'shared/supabase/supaIndex'
-
 export default defineNuxtRouteMiddleware(async (to, from) => {
   const ds = useDataStore()
   if (!ds) {

@@ -11,9 +11,9 @@
     let filtered = [...ds.champions]
     const includedChampions = new Set()
 
-    if (ts.browseChampionClass && ts.browseChampionClass.length > 0) {
+    if (ts.filterChampionClass && ts.filterChampionClass.length > 0) {
       filtered = filtered.filter((champion) => {
-        return ts.browseChampionClass.some((className) => {
+        return ts.filterChampionClass.some((className) => {
           const category = categories.value.find((cat) => cat.id === className)
           if (category?.champions.includes(champion.name)) {
             if (!includedChampions.has(champion.name)) {
@@ -26,32 +26,34 @@
       })
     }
 
-    /*    if (ts.browseChampionTypes && ts.browseChampionTypes !== 'Favorites') {
+    /*    if (ts.filterChampionTypes && ts.filterChampionTypes !== 'Favorites') {
         filtered = filtered.filter(
             (champion) =>
                 champion.external_positions.toLowerCase() ==
-                ts.browseChampionTypes
+                ts.filterChampionTypes
         )
     } */
 
-    if (ts.browseChampionTypes && ts.browseChampionTypes === 'Favorites') {
+    if (ts.filterChampionTypes && ts.filterChampionTypes === 'Favorites') {
       filtered = filtered.filter((champion) => as.favoriteChamps.includes(champion))
     }
 
     if (ts.sortChampsAZ) {
-      if (ts.sortBrowseChampsAZ === 'az') {
+      if (ts.sortChampsAZ === 'az') {
         filtered = filtered.sort((a, b) => a.name.localeCompare(b.name))
-      } else if (ts.sortBrowseChampsAZ === 'za') {
+      } else if (ts.sortChampsAZ === 'za') {
         filtered = filtered.sort((a, b) => b.name.localeCompare(a.name))
       }
     }
 
-    if (ts.browseFavoriteChamps === true && as.favoriteChamps.length > 0) {
+    if (ts.filterFavoriteChamps === true && as.favoriteChamps.length > 0) {
       filtered = filtered.filter((champion) => as.favoriteChamps.some((favoriteChampion) => favoriteChampion.name === champion.name))
     }
 
     return filtered
   })
+
+  console.log('💠 - filteredChampions - filteredChampions:', filteredChampions)
 </script>
 
 <template>

@@ -10,9 +10,9 @@ export const useTempStore = defineStore(
     const userRole = ref()
     const sessionInfo = ref()
 
-    const clickType = computed(() => {
+    /*     const clickType = computed(() => {
       return userOS.value == 'Mac' || 'Windows' ? 'right click' : 'force press'
-    })
+    }) */
 
     //sidebar
     const sidebarTrigger = ref(false)
@@ -21,6 +21,7 @@ export const useTempStore = defineStore(
     const championDrawerTrigger = ref(false)
     const itemDrawerTrigger = ref(false)
     const runeDrawerTrigger = ref(false)
+    const champSelectDrawerTrigger = ref(false)
 
     // drawer selections
     const drawerPocket = ref(null)
@@ -53,28 +54,24 @@ export const useTempStore = defineStore(
     const champSearch = ref('')
     const champClassFilters = ref([])
     const sortChampsAZ = ref()
-    const viewFavoriteChamps = ref()
-    const browseChampionClass = ref([])
-    const browseChampionTypes = ref(null)
-    const browseChampSearch = ref(null)
-    const sortBrowseChampsAZ = ref(null)
-    const browseFavoriteChamps = ref(false)
+    const filterChampionClass = ref([])
+    const filterChampionTypes = ref(null)
+    const filterFavoriteChamps = ref(false)
 
     //items
     //const items = ref([...ds.items])
     const sortItemsAZ = ref(0)
     const sortPrice = ref(0)
-    const itemSearchFilter = ref('')
+    const itemSearchResult = ref()
     const catFilters = ref<string[]>([])
     const statFilters = ref<string[]>([])
     const viewFavoriteItems = ref(false)
     const selectedItemSet = ref<ItemSet | null>(null)
-    const browseItemTypes = ref()
-    const browseItemStats = ref([])
-    const browseItemCats = ref([])
-    const biSearchResult = ref()
+    const filterItemTypes = ref()
+    const filterItemStats = ref([])
+    const filterItemCats = ref([])
 
-    watch(
+    /*     watch(
       () => as.favoriteItems,
       (newVal) => {
         if (!newVal.length) {
@@ -83,7 +80,7 @@ export const useTempStore = defineStore(
       },
       { immediate: true }
     )
-
+ */
     //runes
     const selectedRuneSetIndex = ref(0)
 
@@ -94,7 +91,7 @@ export const useTempStore = defineStore(
       userOS,
       userRole,
       sessionInfo,
-      clickType,
+      //clickType,
 
       //sidebar
       pocketDrawerTrigger,
@@ -102,6 +99,7 @@ export const useTempStore = defineStore(
       itemDrawerTrigger,
       runeDrawerTrigger,
       sidebarTrigger,
+      champSelectDrawerTrigger,
 
       //drawer
 
@@ -115,15 +113,12 @@ export const useTempStore = defineStore(
       selectedRune,
 
       //champions
-      viewFavoriteChamps,
       sortChampsAZ,
       champClassFilters,
       champSearch,
-      browseChampionClass,
-      browseChampionTypes,
-      browseChampSearch,
-      browseFavoriteChamps,
-      sortBrowseChampsAZ,
+      filterChampionClass,
+      filterChampionTypes,
+      filterFavoriteChamps,
       //items
       // items,
       viewFavoriteItems,
@@ -131,12 +126,11 @@ export const useTempStore = defineStore(
       sortPrice,
       catFilters,
       statFilters,
-      itemSearchFilter,
+      itemSearchResult,
       selectedItemSet,
-      browseItemTypes,
-      browseItemStats,
-      browseItemCats,
-      biSearchResult,
+      filterItemTypes,
+      filterItemStats,
+      filterItemCats,
 
       //runes
       selectedRuneSetIndex,

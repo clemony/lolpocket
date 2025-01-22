@@ -1,21 +1,21 @@
 <script setup lang="ts">
-  import { SplitterResizeHandle, type SplitterResizeHandleEmits, type SplitterResizeHandleProps, useForwardPropsEmits } from 'radix-vue';
-  import { computed, type HTMLAttributes } from 'vue';
+  import { SplitterResizeHandle, type SplitterResizeHandleEmits, type SplitterResizeHandleProps, useForwardPropsEmits } from 'radix-vue'
+  import { computed, type HTMLAttributes } from 'vue'
 
   const props = defineProps<
     SplitterResizeHandleProps & {
-      class?: HTMLAttributes['class'];
-      withHandle?: boolean;
+      class?: HTMLAttributes['class']
+      withHandle?: boolean
     }
-  >();
-  const emits = defineEmits<SplitterResizeHandleEmits>();
+  >()
+  const emits = defineEmits<SplitterResizeHandleEmits>()
 
   const delegatedProps = computed(() => {
-    const { class: _, ...delegated } = props;
-    return delegated;
-  });
+    const { class: _, ...delegated } = props
+    return delegated
+  })
 
-  const forwarded = useForwardPropsEmits(delegatedProps, emits);
+  const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
@@ -29,10 +29,10 @@
     ">
     <slot />
     <template v-if="props.withHandle">
-      <div class="bg-b1 z-10 flex h-4 w-3 items-center justify-center rounded-sm border brightness-[99%]">
+      <div class="bg-b2/60 z-10 flex h-6 w-4 items-center justify-center rounded-sm border brightness-[99%] border-b3">
         <icon
           name="teenyicons:drag-vertical-outline"
-          class="h-2.5 w-2.5" />
+          class="size-3.5" />
       </div>
     </template>
   </SplitterResizeHandle>

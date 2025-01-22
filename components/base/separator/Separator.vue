@@ -1,20 +1,20 @@
 <script setup lang="ts">
-  import { Separator, type SeparatorProps } from 'radix-vue';
-  import { computed, type HTMLAttributes } from 'vue';
+  import { Separator, type SeparatorProps } from 'radix-vue'
+  import { computed, type HTMLAttributes } from 'vue'
 
-  const props = defineProps<SeparatorProps & { class?: HTMLAttributes['class']; label?: string }>();
+  const props = defineProps<SeparatorProps & { class?: HTMLAttributes['class']; label?: string }>()
 
   const delegatedProps = computed(() => {
-    const { class: _, ...delegated } = props;
+    const { class: _, ...delegated } = props
 
-    return delegated;
-  });
+    return delegated
+  })
 </script>
 
 <template>
   <Separator
     v-bind="delegatedProps"
-    :class="cn('bg-b2 relative shrink-0', props.orientation === 'vertical' ? 'h-full w-px' : 'h-px w-full', props.class)">
+    :class="cn('bg-b3/60 relative shrink-0', props.orientation === 'vertical' ? 'h-full w-px' : 'h-px w-full', props.class)">
     <span
       v-if="props.label"
       :class="

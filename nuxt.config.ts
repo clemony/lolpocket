@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     'nuxt-tailwindcss4',
     '@nuxt/icon',
     'nuxt-aos',
+    'nuxt-svgo',
   ],
 
   /*   image: {
@@ -66,6 +67,8 @@ export default defineNuxtConfig({
   vueTransitions: {
     defaultProps: {
       duration: 400,
+      easing: 'cubic-bezier(.25, .8, .5, 1)',
+      mode: 'out-in',
     },
     componentDefaultProps: {
       TransitionSlide: {
@@ -84,10 +87,14 @@ export default defineNuxtConfig({
     },
   ],
 
+  svgo: {
+    componentPrefix: 'i',
+  },
+
   css: ['~/assets/css/tailwind.css'],
 
   imports: {
-    presets: [],
+    dirs: ['./shared/supabase/*', './shared/supabase'],
   },
 
   webpack: {

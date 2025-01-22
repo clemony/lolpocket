@@ -1,5 +1,5 @@
 @plugin "daisyui/theme" {
-  name: 'my-theme';
+  name: 'light';
   default: true;
   styled: true;
   prefersdark: false;

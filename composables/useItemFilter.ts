@@ -3,30 +3,31 @@ export const useItemFilter = () => {
   const as = useAccountStore()
   const ds = useDataStore()
 
-  const items = [...(ds.SRitems || [])]
+  const items = ds.SRitems || []
   let filtered = [...items]
-  console.log('💠 - filteredItems - filtered:', filtered)
+
+  //console.log('💠 - filteredItems - filtered:', filtered)
   // Apply your filtering logic
-  if (ts.browseItemStats.length) {
-    ts.browseItemStats.forEach((stat) => {
+  if (ts.filterItemStats.length) {
+    ts.filterItemStats.forEach((stat) => {
       filtered = filtered.filter((item) => Object.keys(item.stats ? item.stats : '').includes(stat))
     })
   }
 
-  if (ts.browseItemCats.length) {
-    ts.browseItemCats.forEach((cat) => {
+  if (ts.filterItemCats.length) {
+    ts.filterItemCats.forEach((cat) => {
       filtered = filtered.filter((item) => Object.keys(item.menu ? item.menu : '').includes(cat))
     })
   }
 
-  if (ts.browseItemTypes && ts.browseItemTypes !== 'Favorites') {
-    filtered = filtered.filter((item) => item.type.includes(ts.browseItemTypes))
+  if (ts.filterItemTypes && ts.filterItemTypes !== 'Favorites') {
+    filtered = filtered.filter((item) => item.type.includes(ts.filterItemTypes))
   }
 
-  if (ts.browseItemTypes && ts.browseItemTypes === 'Favorites') {
+  if (ts.filterItemTypes && ts.filterItemTypes === 'Favorites') {
     filtered = filtered.filter((item) => as.favoriteItems.includes(item))
   }
 
-  if (ts.biSearchResult) filtered = filtered.filter((item) => ts.biSearchResult.includes(item))
+  if (ts.itemSearchResult) filtered = filtered.filter((item) => ts.itemSearchResult.includes(item))
   return filtered
 }

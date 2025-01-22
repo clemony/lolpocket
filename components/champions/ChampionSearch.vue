@@ -33,7 +33,7 @@
     return results.map((result) => result.item)
   })
   watch(searchResult, (newSearchResults) => {
-    ts.biSearchResult = newSearchResults
+    ts.itemSearchResult = newSearchResults
     //console.log('💠 - Search Results:', newSearchResults)
   })
 </script>

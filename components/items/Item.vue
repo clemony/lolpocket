@@ -10,7 +10,7 @@
 </script>
 
 <template>
-  <label class="shadow-warm ring-b2 hover:ring-neutral/60 hover:ring-offset-b1/95 relative rounded-lg border-none inset-shadow-sm ring-1 hover:ring-offset-2">
+  <label class="shadow-sm ring-b2 hover:ring-neutral/60 hover:ring-offset-b1/95 relative rounded-lg border border-b3 inset-shadow-sm ring-1 hover:ring-offset-2">
     <input
       type="checkbox"
       v-model="ts.itemDrawerTrigger"

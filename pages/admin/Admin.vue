@@ -1,25 +1,23 @@
 <script setup lang="ts">
-  import { getItemsFromDatabase, getChampsFromDatabase, getRuneData, patchNewData } from 'shared/supabase/supaIndex';
-
-  const ts = useTempStore();
-  const ds = useDataStore();
+  const ts = useTempStore()
+  const ds = useDataStore()
 
   function reset() {
-    ds.paths.length = 0;
-    ds.champions.length = 0;
-    ds.items.length = 0;
-    ds.SRitems.length = 0;
-    ds.SRitems.length = null;
-    console.log('store arrays reset');
+    ds.paths.length = 0
+    ds.champions.length = 0
+    ds.items.length = 0
+    ds.SRitems.length = 0
+    ds.SRitems.length = null
+    console.log('store arrays reset')
   }
 
   function reGet() {
     // getRuneData()
-    getItemsFromDatabase();
-    getChampsFromDatabase();
+    getItemsFromDatabase()
+    getChampsFromDatabase()
     // getRuneData()
     //getShardData()
-    console.log('data fetch complete!');
+    console.log('data fetch complete!')
   }
 </script>
 <template>

@@ -23,8 +23,10 @@
 
 <template>
   <NuxtLayout>
-    <Progress />
+    <!-- <Progress /> -->
     <LazyNuxtPage :page-key="(route) => route.fullPath" />
+
+    <!-- <StepLoader /> -->
   </NuxtLayout>
 </template>
 

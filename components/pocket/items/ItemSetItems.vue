@@ -1,58 +1,58 @@
 <script setup lang="ts">
-  import { VueDraggable } from 'vue-draggable-plus';
+  import { VueDraggable } from 'vue-draggable-plus'
 
-  const ds = useDataStore();
-  const ts = useTempStore();
+  const ds = useDataStore()
+  const ts = useTempStore()
 
   const props = defineProps<{
-    pocketKey: string;
-    set: ItemSet;
-    limit?: number;
-  }>();
+    pocket: pocket
+    set: ItemSet
+    limit?: number
+  }>()
 
-  const pocket = getPocket(props.pocketKey);
+  const pocket = ref(props.pocket)
 
   function handleDragEnd(event) {
-    console.log('hi');
-    const draggedItem = event.item;
-    console.log(draggedItem);
-    const targetSet = event.to;
+    console.log('hi')
+    const draggedItem = event.item
+    console.log(draggedItem)
+    const targetSet = event.to
 
     if (targetSet && targetSet.items) {
-      const isDuplicate = targetSet.items.some((item) => item.name === draggedItem.name);
+      const isDuplicate = targetSet.items.some((item) => item.name === draggedItem.name)
 
       if (isDuplicate) {
-        console.log('Duplicate item found. Item not added.');
-        event.item.remove();
+        console.log('Duplicate item found. Item not added.')
+        event.item.remove()
       } else {
-        targetSet.items.push(draggedItem);
+        targetSet.items.push(draggedItem)
       }
     }
   }
 
   const additionalQuickSearchCount = computed(() => {
-    return Math.max(0, 6 - props.set.items.length - 1);
-  });
+    return Math.max(0, 6 - props.set.items.length - 1)
+  })
 
-  const quickSearch = ref('');
-  const returnData = ref([]);
+  const quickSearch = ref('')
+  const returnData = ref([])
   // Use returnData to access the emitted array
   watch(returnData, (newVal) => {
     if (pocket) {
-      console.log('Received array from child:', newVal);
-      addItemToSet(pocket.key, newVal[1], newVal[0]);
+      console.log('Received array from child:', newVal)
+      addItemToSet(pocket.value.key, newVal[1], newVal[0])
     }
-  });
+  })
 
   const filteredItems = computed(() => {
-    let filtered = ds.SRitems;
+    let filtered = ds.SRitems
 
     if (quickSearch) {
-      const searchTerm = quickSearch.value.toLowerCase();
-      filtered = filtered.filter((item: any) => Object.values(item).some((value) => typeof value === 'string' && value.toLowerCase().includes(searchTerm)));
+      const searchTerm = quickSearch.value.toLowerCase()
+      filtered = filtered.filter((item: any) => Object.values(item).some((value) => typeof value === 'string' && value.toLowerCase().includes(searchTerm)))
     }
-    return filtered;
-  });
+    return filtered
+  })
 </script>
 
 <template>
@@ -106,7 +106,6 @@
                 :size="52"
         </template
                 class="mx-1" /> -->
-    >
   </VueDraggable>
 </template>
 

@@ -10,11 +10,13 @@
 @import './modules/tippy.css';
 @import './modules/drag.css';
 @plugin "daisyui" {
+  themes: 'light';
   exclude: radialprogress, toast;
 }
 @config './tailwind.config.ts';
 @plugin "tailwindcss-animate";
 @plugin "tailwindcss-animated";
+@plugin "tailwind-gradient-mask-image";
 
 @layer base {
   :root {

@@ -1,20 +1,20 @@
 <script setup lang="ts">
-  import type { HTMLAttributes } from 'vue';
+  import type { HTMLAttributes } from 'vue'
 
   const props = defineProps<{
-    pocket: pocket;
-    class?: HTMLAttributes['class'];
-    imgClass?: HTMLAttributes['class'];
-    iconClass?: HTMLAttributes['class'];
-  }>();
+    pocket: pocket
+    class?: HTMLAttributes['class']
+    imgClass?: HTMLAttributes['class']
+    iconClass?: HTMLAttributes['class']
+  }>()
 
-  const pocket = ref(props.pocket);
+  const pocket = ref(props.pocket)
 
-  const regex = /\.webp/g;
+  const regex = /\.webp/g
   const iconImg = computed(() => {
-    const match = pocket.value.icon.match(regex) ? true : false;
-    return match;
-  });
+    const match = pocket.value.icon.match(regex) ? true : false
+    return match
+  })
 </script>
 
 <template>
@@ -31,11 +31,15 @@
 
     <div
       v-else
-      :class="cn('grid size-full place-items-center', props.iconClass)"
-      class=""
+      class="grid size-full place-items-center"
       :style="{
-        color: pocket.bgColor,
-      }"></div>
+        background: pocket.bgColor,
+        color: pocket.iconColor,
+      }">
+      <icon
+        :name="pocket.icon"
+        :class="cn('p-1.25 size-full', props.iconClass)" />
+    </div>
   </div>
 </template>
 

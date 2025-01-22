@@ -10,9 +10,9 @@
     'nonicons:prettier-16',
     'teenyicons:eslint-outline',
     'simple-icons:shadcnui',
-  ];
+  ]
 
-  const hoverClass = 'hover:underline hover:bg-b2/35 underline-offset-2 !cursor-pointer';
+  const hoverClass = 'hover:underline hover:bg-b2/35 underline-offset-2 !cursor-pointer'
 </script>
 
 <template>
@@ -53,8 +53,8 @@
                    <p> <a
                         href="https://github.com/clemony/lolpocket"
                         class="mt-2 inline-flex items-center gap-1 underline transition-all duration-300 underline-offset-2 font-mono italic hover:underline">
-                        <Icon name="ph:github-logo" />
-                        <Icon name="ph:at" />
+                        <Icon name="github" />
+                        <Icon name="at" />
                         clemony
                     </a></p>
                 </div>
@@ -62,6 +62,7 @@
 
          <a href="https://gitlab.com/lol-math/lolmath/-/tree/main/packages/calc" target="_blank" />
          
+         game item by Petai Jantrapoon from <a href="https://thenounproject.com/browse/icons/term/game-item/" target="_blank" title="game item Icons">Noun Project</a> (CC BY 3.0)
         </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8">
@@ -82,10 +83,10 @@
 
         <Grow />
 
-        <div class="flex flex-col items-end justify-center pt-8">
+        <div class="flex flex-col items-end justify-center pt-8 tracking-tight">
           <p>All in game assets are the property of Riot Games.</p>
           <p>Riot Games is in no way affiliated with this app.</p>
-          <p>All content is my own opinion.</p>
+          <p>All content is the developer's own opinion.</p>
         </div>
       </div>
     </div>

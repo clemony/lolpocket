@@ -1,18 +1,15 @@
 <script setup lang="ts">
-  import { getUserRole } from 'shared/supabase/supaIndex';
-  const supabase = useSupabaseClient();
+  const supabase = useSupabaseClient()
 
-  async function signInWithDiscord() {
+  const signInWithDiscord = async () => {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'discord',
-    });
+    })
     if (error) {
-      console.error('Error logging in with Discord:', error);
-    } else {
-      // await updateItemData(user.id)
+      console.error('Error logging in with Discord:', error)
+    } else if (data) {
+      console.log('💠 - withGoogle - data:', data)
     }
-
-    getUserRole();
   }
 </script>
 <template>

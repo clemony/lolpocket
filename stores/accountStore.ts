@@ -1,37 +1,39 @@
-import { defineStore } from 'pinia';
+import { defineStore } from 'pinia'
 
 export const useAccountStore = defineStore(
   'as',
   () => {
-    const themeClass = ref('data-theme-light');
-    const dataTheme = ref('light');
-    const accents = ref('light');
+    const ts = useTempStore()
 
-    const riotAccountLinked = ref(true);
+    const themeClass = ref('data-theme-light')
+    const dataTheme = ref('light')
+    const accents = ref('light')
+
+    const riotAccountLinked = ref(true)
     const riotAccount = {
-      name: ref('clem'),
-      tag: ref('cats'),
-    };
+      name: ref(),
+      tag: ref(),
+    }
 
-    const userFolders = ref<Folder[]>([]);
-    const heroModel = ref(0);
+    const userFolders = ref<Folder[]>([])
+    const heroModel = ref(0)
 
-    const reducedMotion = ref(false);
-    const colorBlindMode = ref(false);
+    const reducedMotion = ref(false)
+    const colorBlindMode = ref(false)
 
-    const mobileOpen = ref(false);
-    const sidebarWidth = ref(18);
+    const mobileOpen = ref(false)
+    const sidebarWidth = ref(18)
 
-    const cardBack = ref('/img/cards/moonfall.webp');
-    const commandOpen = ref(false);
-    const pocketPreview = ref(false);
-    const routeHistory: any = [];
+    const cardBack = ref('/img/cards/moonfall.webp')
+    const commandOpen = ref(false)
+    const pocketPreview = ref(false)
+    const routeHistory: any = []
 
-    const favoriteChamps = ref<Champion[]>([]);
+    const favoriteChamps = ref<Champion[]>([])
 
     //items
-    const favoriteItems = ref<Item[]>([]);
-    const itemSets = ref<ItemSet[]>([]);
+    const favoriteItems = ref<Item[]>([])
+    const itemSets = ref<ItemSet[]>([])
 
     return {
       //account
@@ -62,7 +64,7 @@ export const useAccountStore = defineStore(
       //items
       favoriteItems,
       itemSets,
-    };
+    }
   },
   {
     persist: {
@@ -74,4 +76,4 @@ export const useAccountStore = defineStore(
       },
     },
   }
-);
+)

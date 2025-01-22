@@ -1,17 +1,17 @@
-import { hexoid } from 'hexoid';
-import { toast } from 'vue-sonner';
-import PocketToast from 'components/toast/PocketToast.vue';
+import { hexoid } from 'hexoid'
+import { toast } from 'vue-sonner'
+import PocketToast from 'components/app/toast/PocketToast.vue'
 
-const toID = hexoid();
+const toID = hexoid()
 
 export default function addPocket(name: string, tags: Array<string>, icon: string, bgColor: string, iconColor: string, key?: string) {
-  const aKey = toID();
+  const aKey = toID()
 
   const pocketChampionsValue: pocketChampions = {
     key: key || aKey,
     champions: [],
     starred: '',
-  };
+  }
 
   const pocketItemsValue: pocketItems = {
     key: key || aKey,
@@ -28,14 +28,14 @@ export default function addPocket(name: string, tags: Array<string>, icon: strin
     start: undefined,
     core: undefined,
     final: undefined,
-  };
+  }
 
   const pocketRunesValue: pocketRunes = {
     key: key || aKey,
     runeSets: [],
     starred: 0,
     selected: 0,
-  };
+  }
 
   // Create the new pocket
   const newPocket: pocket = {
@@ -47,24 +47,20 @@ export default function addPocket(name: string, tags: Array<string>, icon: strin
     bgColor: bgColor || '#000',
     iconColor: iconColor || '#FFF',
     champions: [pocketChampionsValue],
+    roles: [],
     items: [pocketItemsValue],
     runes: [pocketRunesValue],
-    spells: {
-      spell1: createDefaultSpell(),
-      spell2: createDefaultSpell(),
-      alt1: createDefaultSpell(),
-      alt2: createDefaultSpell(),
-    },
+    spells: [createDefaultSpell(), createDefaultSpell()],
     notes: '',
     dateCreated: [createDateObject()],
     dateUpdated: [createDateObject()],
     component: null,
-    inFolder: [],
-  };
+    inFolder: ['all'],
+  }
 
-  usePocketStore().pockets.push(newPocket);
-  newItemSet(newPocket.key);
-  newRuneSet(newPocket.key);
+  usePocketStore().pockets.push(newPocket)
+  newItemSet(newPocket.key)
+  newRuneSet(newPocket.key)
 
   toast(markRaw(PocketToast), {
     unstyled: true,
@@ -75,5 +71,5 @@ export default function addPocket(name: string, tags: Array<string>, icon: strin
     componentProps: {
       pocket: newPocket,
     },
-  });
+  })
 }

@@ -1,4 +1,4 @@
-import { cva, type VariantProps } from 'class-variance-authority';
+import { cva, type VariantProps } from 'class-variance-authority'
 
 export const labelVariants = cva('text-2 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70', {
   variants: {
@@ -19,10 +19,11 @@ export const labelVariants = cva('text-2 font-medium leading-none peer-disabled:
       default: 'h-9 px-4 py-2',
       xs: 'h-7 rounded-sm px-2',
       sm: 'h-8 rounded-md px-3',
+      md: 'h-10 rounded-md px-6',
       lg: 'h-11 rounded-md px-8',
       icon: 'h-10 w-10',
     },
   },
-});
+})
 
-export type LabelVariants = VariantProps<typeof labelVariants>;
+export type LabelVariants = VariantProps<typeof labelVariants>

@@ -1,19 +1,18 @@
 <script setup lang="ts">
-  import { getUserRole } from 'shared/supabase/supaIndex';
-  const supabase = useSupabaseClient();
+  const supabase = useSupabaseClient()
 
-  const googleLogin = () => {
-    supabase.auth.signInWithOAuth({
+  const signInWithGoogle = async () => {
+    const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
-    });
-
-    getUserRole();
-  };
+    })
+    console.log('💠 - signInWithGoogle - data:', data)
+    return data
+  }
 </script>
 
 <template>
   <Button
-    @click="googleLogin"
+    @click="signInWithGoogle()"
     variant="outline"
     size="lg"
     class="hover:border-neutral/80 h-14 gap-4.5 shadow-xs">
