@@ -5,6 +5,7 @@
     col1Size?: string
     col2Size?: string
     class?: HTMLAttributes['class']
+    pocket: pocket
   }>()
 </script>
 
@@ -14,7 +15,7 @@
     <slot name="header" />
     <div class="h-3 w-full" />
 
-    <div class="inset-0 overflow-hidden max-h-inherit h-[85vh]">
+    <div class="inset-0 overflow-hidden flex max-h-inherit h-[85vh]">
       <slot />
     </div>
   </main>

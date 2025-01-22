@@ -1,7 +1,15 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+  const props = defineProps<{
+    link: string
+  }>()
+</script>
 
 <template>
-  <button class="size-full py-3 hover:underline text-left underline-offset-2 cursor-pointer"><slot /></button>
+  <NuxtLink
+    :to="props.link"
+    class="btn btn-md hover:border-b2 hover:bg-b2 btn-ghost !text-3 !font-normal size-full justify-start px-2 py-1.5 text-left cursor-pointer"
+    ><slot
+  /></NuxtLink>
 </template>
 
 <style scoped></style>

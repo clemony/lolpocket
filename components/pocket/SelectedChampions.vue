@@ -6,6 +6,10 @@
   }>()
 
   const pocket = ref(props.pocket)
+
+  const champs = computedAsync(() => {
+    return pocket.value.champions[0].champions
+  })
 </script>
 
 <template>
@@ -15,7 +19,7 @@
     <Button
       variant="ghost"
       size="md"
-      v-for="(champion, index) in pocket.champions[0].champions"
+      v-for="(champion, index) in champs"
       :key="champion.apiname"
       class="flex gap-3 items-center justify-start pl-2 pr-3"
       :class="`group/${champion.apiname}`">

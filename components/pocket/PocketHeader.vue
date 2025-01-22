@@ -10,6 +10,14 @@
   }>()
 
   const pocket = ref(props.pocket)
+
+  const folder = computedAsync(() => {
+    return pocket.value.inFolder
+  })
+
+  const name = computedAsync(() => {
+    return pocket.value.name
+  })
 </script>
 <template>
   <header class="w-full flex flex-nowrap h-23 shrink-0 flex-col gap-5 pb-2 pt-1 justify-start items-start">
@@ -31,7 +39,7 @@
         <li>
           <span class="inline-flex items-center !gap-2.5 capitalize">
             <icon name="teenyicons:folder-outline" />
-            {{ props.pocket.inFolder }}
+            {{ folder }}
           </span>
         </li>
       </ul>
@@ -40,7 +48,7 @@
       <!--  <PocketIcon
         :pocket="props.pocket"
         class="size-7.25 rounded-full overflow-hidden -ml-1" /> -->
-      <h1 class="!text-8 drop-shadow-text w-full tracking-tight truncate">{{ props.pocket.name }}</h1>
+      <h1 class="!text-8 drop-shadow-text w-full tracking-tight truncate">{{ name }}</h1>
     </div>
   </header>
 </template>

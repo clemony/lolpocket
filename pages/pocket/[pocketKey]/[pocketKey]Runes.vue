@@ -1,31 +1,31 @@
 <script setup lang="ts">
-  const ts = useTempStore();
-  const ps = usePocketStore();
+  const ts = useTempStore()
+  const ps = usePocketStore()
   const props = defineProps<{
-    pocketKey: string;
-  }>();
+    pocketKey: string
+  }>()
 
-  const pocket = ref(getPocket(props.pocketKey));
-  console.log('pok', pocket);
+  const pocket = ref(getPocket(props.pocketKey))
+  console.log('pok', pocket)
 
-  const selected = ref(0);
-  console.log('rs sele', selected.value);
+  const selected = ref(0)
+  console.log('rs sele', selected.value)
 
-  const set = ref(pocket.value.runes[0].runeSets[selected.value]);
-  console.log('rs', pocket.value.runes[0].runeSets);
-  console.log('set', set);
+  const set = ref(pocket.value.runes[0].runeSets[selected.value])
+  console.log('rs', pocket.value.runes[0].runeSets)
+  console.log('set', set)
 
   const primary = computed(() => {
     if (set.value && set.value.primary != undefined) {
-      return set.value.primary;
+      return set.value.primary
     }
-  });
+  })
 
   const secondary = computed(() => {
     if (set.value && set.value.secondary) {
-      return set.value.secondary;
+      return set.value.secondary
     }
-  });
+  })
 </script>
 
 <template>

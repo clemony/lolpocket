@@ -5,9 +5,13 @@
   const route = useRoute()
   const pocket = getPocket(route.params.pocketKey)
 
-  const champions = [...ds.champions]
+  const champions = computedAsync (() => {
+  [...ds.champions]
+  })
 
-
+  const champs = computedAsync(() => {
+    return pocket.champions[0].champions
+  })
 
 
 </script>
@@ -32,7 +36,7 @@
 
         <transition-slide group class="min-h-14 mt-6 mb-3 px-1 flex py-1 flex-wrap gap-3 bg-b2/20  items-center ring-1 ring-offset-2 ring-offset-b1/90 ring-b3 rounded-lg transition-all duration-300">
           <Champion @click="removeChamp(champion, pocket)"
-            v-for="champion in pocket.champions[0].champions"
+            v-for="champion in champs"
             :champion="champion" class="size-12  aspect-square"/>
             </transition-slide>
 

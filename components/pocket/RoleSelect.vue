@@ -3,6 +3,7 @@
     pocket: pocket
   }>()
 
+  const pocket = ref(props.pocket)
   const roles = [
     { name: 'top', icon: 'top' },
     { name: 'jungle', icon: 'jungle' },
@@ -17,27 +18,27 @@
   <transition-slide
     group
     class="p-0 w-full">
-    <Label
-      v-if="pocket.roles.length"
-      variant="ghost"
-      size="md"
-      class="px-2 rounded-md w-full hover:border-b2 flex items-center gap-4"
-      v-for="role in pocket.roles">
-      <input
-        type="checkbox"
-        class="hidden peer"
-        :id="role.name"
-        :value="role"
-        v-model="pocket.roles"
-        @change="console.log(pocket.roles)" />
-      <component
-        v-tippy="role.name"
-        :key="role.name"
-        :is="'i-' + role.icon"
-        class="size-5.5 drop-shadow-text shrink-0 !text-3" />
-      <span class="capitalize"> {{ role.name }}</span>
-    </Label>
-
+    <template v-if="pocket.roles.length">
+      <Label
+        variant="ghost"
+        size="md"
+        class="px-2 rounded-md w-full hover:border-b2 flex items-center gap-4"
+        v-for="role in pocket.roles">
+        <input
+          type="checkbox"
+          class="hidden peer"
+          :id="role.name"
+          :value="role"
+          v-model="pocket.roles"
+          @change="console.log(pocket.roles)" />
+        <component
+          v-tippy="role.name"
+          :key="role.name"
+          :is="'i-' + role.icon"
+          class="size-5.5 drop-shadow-text shrink-0 !text-3" />
+        <span class="capitalize"> {{ role.name }}</span>
+      </Label>
+    </template>
     <Button
       variant="ghost"
       size="md"

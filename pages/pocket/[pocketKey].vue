@@ -2,12 +2,9 @@
   import { ResizablePanel } from 'components/base/resizable/rindex'
   const ts = useTempStore()
 
-  definePageMeta({
-    path: '/pocket/:pocketKey',
-  })
   const route = useRoute()
   //const pocket = ref(getPocket(props.pocketKey))
-  const pocket = getPocket(route.params.pocketKey)
+  const pocket = ref(getPocket(route.params.pocketKey))
   console.log('💠 - pocket:', pocket)
 </script>
 

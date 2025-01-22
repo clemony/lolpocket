@@ -33,10 +33,10 @@
     ref="el">
     <PocketHeader :pocket="pocket" />
 
-    <ul class="flex flex-col gap-1 pt-3 pb-4 w-full">
-      <li><LinkButton>Overview</LinkButton></li>
-      <li><LinkButton>Items</LinkButton></li>
-      <li><LinkButton>Runes</LinkButton></li>
+    <ul class="flex flex-col gap-3 pt-3 pb-4 w-full">
+      <li><LinkButton link="">Overview</LinkButton></li>
+      <li><LinkButton link="Items">Items</LinkButton></li>
+      <li><LinkButton link="Runes">Runes</LinkButton></li>
     </ul>
     <Separator />
 
@@ -71,7 +71,7 @@
         <PlusMinusExpand :check="roleCheck" />
       </div>
       <div class="collapse-content !px-0.75 py-0">
-        <RoleSelect
+        <LazyRoleSelect
           :pocket="pocket"
           class="" />
       </div>
@@ -89,7 +89,7 @@
         <PlusMinusExpand :check="spellCheck" />
       </div>
       <div class="collapse-content !px-0.75 py-0">
-        <SummonerSpellDisplay
+        <LazySummonerSpellDisplay
           :pocket="pocket"
           class="" />
       </div>

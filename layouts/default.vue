@@ -69,8 +69,8 @@
       :expand="true" />
     <SidebarDrawer />
 
-    <ChampSelectDrawer v-if="route.params.pocketKey" />
-    <ChampionDrawer
+    <LazyChampSelectDrawer v-if="route.params.pocketKey" />
+    <LazyChampionDrawer
       v-if="ts.selectedChampion"
       :key="ts.selectedChampion" />
     <ItemDrawer

@@ -47,7 +47,7 @@
       <icon
         name="f7:grid"
         class="size-5 border border-bc rounded-sm" />
-      {{ summonerName }}'s Board
+      {{ summonerName || 'Summoner' }}'s Board
     </NuxtLink>
   </li>
 
@@ -62,7 +62,7 @@
       <LittleIcon
         icon="teenyicons:home-outline"
         class="size-4.5" />
-      {{ summonerName }}'s Data
+      {{ summonerName || 'Summoner' }}'s Data
       <ExpandIndicator v-model:check="userCheck" />
     </div>
     <ul class="collapse-content">

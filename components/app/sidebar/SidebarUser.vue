@@ -35,13 +35,18 @@
     <div class="flex items-center gap-4">
       <Avatar class="size-10 border-1 border-bc ring-1 ring-b1 rounded-lg shadow-sm grayscale">
         <AvatarImage
+          v-if="summoner"
           :src="summoner.icon"
           :alt="summonerName" />
-        <AvatarFallback class="rounded-full"> LP </AvatarFallback>
+        <AvatarFallback
+          v-else
+          class="rounded-full">
+          LP
+        </AvatarFallback>
       </Avatar>
 
       <h4 class="tracking-tight flex">
-        {{ summonerName }}
+        {{ summonerName || 'Summoner' }}
       </h4>
     </div>
   </div>
