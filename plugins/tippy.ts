@@ -1,5 +1,6 @@
 import VueTippy from 'vue-tippy'
 import 'tippy.js/animations/scale.css'
+
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(
     VueTippy,
@@ -25,6 +26,6 @@ export default defineNuxtPlugin((nuxtApp) => {
           expanded: 'auto',
         },
       },
-    }
+    },
   )
 })

@@ -2,16 +2,16 @@
 import { CollapsibleTrigger, type CollapsibleTriggerProps } from 'radix-vue'
 
 const props = defineProps<
-    CollapsibleTriggerProps & {
-        open?: boolean
-    }
+  CollapsibleTriggerProps & {
+    open?: boolean
+  }
 >()
 
 const emit = defineEmits(['update:open'])
 </script>
 
 <template>
-    <CollapsibleTrigger v-bind="props">
-        <slot />
-    </CollapsibleTrigger>
+  <CollapsibleTrigger v-bind="props">
+    <slot />
+  </CollapsibleTrigger>
 </template>

@@ -1,15 +1,15 @@
-export const toDictionary = (nestedData: any): Item[] => {
-  let itemsArray: Item[] = [];
+export function toDictionary(nestedData: any): Item[] {
+  const itemsArray: Item[] = []
 
   // Check if the data has the expected structure
   if (!nestedData || typeof nestedData !== 'object') {
-    console.error('Unexpected data structure:', nestedData);
-    return itemsArray;
+    console.error('Unexpected data structure:', nestedData)
+    return itemsArray
   }
 
   // Loop through each item (item name) in the nested data
   Object.keys(nestedData).forEach((name) => {
-    const item = nestedData[name];
+    const item = nestedData[name]
 
     // Check if item is an object and contains the expected properties
     if (item && typeof item === 'object') {
@@ -30,11 +30,12 @@ export const toDictionary = (nestedData: any): Item[] => {
         recipe: item.recipe || null,
         buy: item.buy || null,
         removed: item.removed || null,
-      });
-    } else {
-      console.error('Item is not an object:', name);
+      })
     }
-  });
+    else {
+      console.error('Item is not an object:', name)
+    }
+  })
 
-  return itemsArray;
-};
+  return itemsArray
+}

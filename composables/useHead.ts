@@ -1,4 +1,4 @@
-export const useHeader = () => {
+export function useHeader() {
   return useHead({
     title: 'lolpocket',
     meta: [{ name: 'pockets', content: 'for all' }],
@@ -7,5 +7,5 @@ export const useHeader = () => {
     },
     htmlAttrs: {},
     script: [{}],
-  });
-};
+  })
+}

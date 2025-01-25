@@ -1,3 +1,3 @@
 export const as = computedAsync(async () => {
-  return await useAccountStore();
-}, null);
+  return await useAccountStore()
+}, null)

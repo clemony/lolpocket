@@ -1,33 +1,38 @@
 <script lang="ts" setup>
-  const ts = useTempStore()
-  import { summoner } from 'shared/data/summonerData'
-  const as = useAccountStore()
+import { summoner } from 'shared/data/summonerData'
 
-  const summonerName = ref(as.riotAccount.name)
-  const summonerTag = ref(as.riotAccount.tag)
+const ts = useTempStore()
+const as = useAccountStore()
 
-  const links = [
-    {
-      name: summonerName.value + "'s Board",
-      link: '/summoner',
-      icon: 'ph:squares-four-light',
-    },
-    {
-      name: 'Build Analysis',
-      link: '/summoner/BuildAnalysis',
-      icon: 'octicon:graph-24',
-    },
-    {
-      name: 'Match History',
-      link: '/summoner/MatchHistory',
-      icon: 'iconoir:archery-match',
-    },
-    {
-      name: 'Favorites',
-      link: '/summoner/Favorites',
-      icon: 'teenyicons:heart-outline',
-    },
-  ]
+const summonerName = computed(() => {
+  return as.riotAccount.name ? as.riotAccount.name : 'Summoner'
+})
+const summonerTag = computed(() => {
+  return as.riotAccount.tag ? as.riotAccount.tag : 'Summoner'
+})
+
+const links = [
+  {
+    name: `${summonerName.value}'s Board`,
+    link: '/summoner',
+    icon: 'ph:squares-four-light',
+  },
+  {
+    name: 'Build Analysis',
+    link: '/summoner/BuildAnalysis',
+    icon: 'octicon:graph-24',
+  },
+  {
+    name: 'Match History',
+    link: '/summoner/MatchHistory',
+    icon: 'iconoir:archery-match',
+  },
+  {
+    name: 'Favorites',
+    link: '/summoner/Favorites',
+    icon: 'teenyicons:heart-outline',
+  },
+]
 </script>
 
 <template>
@@ -37,16 +42,18 @@
         <AvatarImage
           v-if="summoner"
           :src="summoner.icon"
-          :alt="summonerName" />
+          :alt="summonerName"
+        />
         <AvatarFallback
           v-else
-          class="rounded-full">
+          class="rounded-full"
+        >
           LP
         </AvatarFallback>
       </Avatar>
 
       <h4 class="tracking-tight flex">
-        {{ summonerName || 'Summoner' }}
+        {{ summonerName }}
       </h4>
     </div>
   </div>

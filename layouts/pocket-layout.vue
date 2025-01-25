@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-  import type { HTMLAttributes } from 'vue'
+import type { HTMLAttributes } from 'vue'
 
-  const props = defineProps<{
-    col1Size?: string
-    col2Size?: string
-    class?: HTMLAttributes['class']
-    pocket: pocket
-  }>()
+const props = defineProps<{
+  col1Size?: string
+  col2Size?: string
+  class?: HTMLAttributes['class']
+  pocket: pocket
+}>()
 </script>
 
 <template>

@@ -1,6 +1,6 @@
+import PocketToast from 'components/app/toast/PocketToast.vue'
 import { hexoid } from 'hexoid'
 import { toast } from 'vue-sonner'
-import PocketToast from 'components/app/toast/PocketToast.vue'
 
 const toID = hexoid()
 
@@ -64,7 +64,7 @@ export default function addPocket(name: string, tags: Array<string>, icon: strin
 
   toast(markRaw(PocketToast), {
     unstyled: true,
-    //duration: Infinity,
+    // duration: Infinity,
     classes: {
       toast: 'bg-b1/95 border !border-b2 shadow-pretty mt-14   w-98 max-w-98 justify-start rounded-lg p-5  !h-40 backdrop-blur-md relative ',
     },

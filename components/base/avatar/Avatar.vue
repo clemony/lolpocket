@@ -1,19 +1,19 @@
 <script setup lang="ts">
-  import type { HTMLAttributes } from 'vue';
-  import { AvatarRoot } from 'radix-vue';
-  import { avatarVariant, type AvatarVariants } from './avindex';
+import type { HTMLAttributes } from 'vue'
+import { AvatarRoot } from 'radix-vue'
+import { avatarVariant, type AvatarVariants } from './avindex'
 
-  const props = withDefaults(
-    defineProps<{
-      class?: HTMLAttributes['class'];
-      size?: AvatarVariants['size'];
-      shape?: AvatarVariants['shape'];
-    }>(),
-    {
-      size: 'sm',
-      shape: 'circle',
-    }
-  );
+const props = withDefaults(
+  defineProps<{
+    class?: HTMLAttributes['class']
+    size?: AvatarVariants['size']
+    shape?: AvatarVariants['shape']
+  }>(),
+  {
+    size: 'sm',
+    shape: 'circle',
+  },
+)
 </script>
 
 <template>

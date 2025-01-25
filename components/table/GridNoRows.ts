@@ -20,7 +20,7 @@ export class CustomNoRowsOverlay implements INoRowsOverlayComp {
         this.eGui.innerHTML = `
             <div role="presentation" class="ag-overlay-loading-center" class="size-full">
                 <div class="flex size-full  gap-1.5 items-center font-medium">With no pockets, you can't hold stuff D:
-           
+
                 </div>
             </div>
         `

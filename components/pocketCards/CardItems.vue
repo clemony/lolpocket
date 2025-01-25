@@ -1,38 +1,41 @@
 <script setup lang="ts">
-  const props = defineProps<{
-    pocket: pocket;
-    set: RuneSet;
-  }>();
+const props = defineProps<{
+  pocket: pocket
+  set: RuneSet
+}>()
 
-  const pocket = ref(props.pocket);
+const pocket = ref(props.pocket)
 
-  const items = computed(() => {
-    const s =
-      /*         pocket.value.items[0].final[0].items ?
+const items = computed(() => {
+  const s
+  /*         pocket.value.items[0].final[0].items ?
             pocket.value.items[0].final[0].items
-        : */ pocket.value.items[0].itemSets[pocket.value.items[0].starred].items;
-    return s;
-  });
+        : */ = pocket.value.items[0].itemSets[pocket.value.items[0].starred].items
+  return s
+})
 </script>
+
 <template>
   <div class="relative flex w-full justify-evenly rounded-full p-2 inset-shadow-sm backdrop-brightness-95 backdrop-saturate-130">
     <template
       v-for="(item, i) in items"
-      :key="item.id">
+      :key="item.id"
+    >
       <ItemPop :item="item">
         <div
           v-if="i < 6"
           :key="item.id"
           class="shadow-warm z-10 size-9 shrink-0 rounded-full p-0"
           :style="{
-            zIndex: items.length + 1 - i /*
-                    outlineStyle: 'double thick',
+            zIndex: items.length + 1 - i, /*                    outlineStyle: 'double thick',
                     outlineColor: `var(--${set.primary})`,
-                    outlineWidth: '1px', */,
-          }">
+                    outlineWidth: '1px', */
+          }"
+        >
           <img
             :url="`/img/items/${item.id}.webp`"
-            class="z-0 size-full rounded-full outline-hidden" />
+            class="z-0 size-full rounded-full outline-hidden"
+          />
         </div>
       </ItemPop>
     </template>
@@ -43,7 +46,8 @@
         /*                 backgroundColor: `var(--${set.secondary}-light`,
          */
         zIndex: 6 + 1 - index,
-      }" />
+      }"
+    />
   </div>
 </template>
 

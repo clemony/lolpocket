@@ -1,30 +1,31 @@
 <script setup lang="ts">
-  const ts = useTempStore();
-  const as = useAccountStore();
-  const viewLogin = ref(false);
+const ts = useTempStore()
+const as = useAccountStore()
+const viewLogin = ref(false)
 
-  watch(
-    () => ts.sessionInfo,
-    (newVal) => {
-      newVal ? (viewLogin.value = false) : '';
-    }
-  );
-  const visible = ref(false);
+watch(
+  () => ts.sessionInfo,
+  (newVal) => {
+    newVal ? (viewLogin.value = false) : ''
+  },
+)
+const visible = ref(false)
 
-  function onChange() {
-    visible.value = true;
-    setTimeout(() => {
-      visible.value = false;
-    }, 2200);
-  }
+function onChange() {
+  visible.value = true
+  setTimeout(() => {
+    visible.value = false
+  }, 2200)
+}
 
-  const heroDisplays = [
-    'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ahri/skins/skin86/animatedsplash/ahri_skin86_centered.skins_ahri_hol.webm',
-    'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin03/animatedsplash/seraphine_skin3_centered.webm',
-    'https://universe.communitydragon.org/events/2021/coven/videos/Ashe.webm',
-    'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/udyr/skins/skin03/animatedsplash/udyr_skin3_centered.webm',
-  ];
+const heroDisplays = [
+  'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ahri/skins/skin86/animatedsplash/ahri_skin86_centered.skins_ahri_hol.webm',
+  'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin03/animatedsplash/seraphine_skin3_centered.webm',
+  'https://universe.communitydragon.org/events/2021/coven/videos/Ashe.webm',
+  'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/udyr/skins/skin03/animatedsplash/udyr_skin3_centered.webm',
+]
 </script>
+
 <template>
   <div class="size-screen sticky top-0 left-0 z-0 grid grid-cols-2">
     <div class="relative grid size-full shrink-0 items-center justify-center">
@@ -36,38 +37,44 @@
           leave-active-class="transition-all duration-500"
           leave-from-class="opacity-100 "
           leave-to-class="opacity-0 -translate-y-2"
-          mode="out-in">
+          mode="out-in"
+        >
           <Welcome v-if="!viewLogin" />
           <Login v-else-if="viewLogin" />
         </Transition>
 
         <div
           v-if="visible"
-          class="pointer-events-none absolute top-12 left-10 size-110 overflow-hidden object-center">
+          class="pointer-events-none absolute top-12 left-10 size-110 overflow-hidden object-center"
+        >
           <video-background
             src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/loot/video/open_cm_outro.webm"
             style="height: 100%"
             :loop="false"
-            class="z-50 bg-center opacity-65 brightness-180 grayscale"></video-background>
+            class="z-50 bg-center opacity-65 brightness-180 grayscale"
+          ></video-background>
         </div>
         <Button
           v-show="!ts.sessionInfo"
           variant="outline"
           size="lg"
           class="hover:bg-neutral hover:text-nc w-fit self-start overflow-hidden shadow-xs transition-all duration-200"
-          as-child>
+          as-child
+        >
           <label>
             <input
-              type="checkbox"
               v-model="viewLogin"
+              type="checkbox"
               class="peer hidden"
-              @change="onChange" />
+              @change="onChange"
+            />
             <span v-if="!viewLogin">Log In</span>
 
             <icon
               v-else
               name="mynaui:arrow-long-left"
-              class="size-7 object-center opacity-70" />
+              class="size-7 object-center opacity-70"
+            />
           </label>
         </Button>
       </div>
@@ -75,7 +82,8 @@
       <div class="absolute bottom-5 left-4 self-end">
         <icon
           name="teenyicons:down-outline"
-          class="animate-pulse stroke-[1.5]" />
+          class="animate-pulse stroke-[1.5]"
+        />
       </div>
     </div>
 
@@ -83,7 +91,8 @@
       <video-background
         src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ahri/skins/skin86/animatedsplash/ahri_skin86_centered.skins_ahri_hol.webm"
         style="height: 100vh"
-        class="mask-left fixed -scale-x-[1] bg-center opacity-50 brightness-125 contrast-160 grayscale"></video-background>
+        class="mask-left fixed -scale-x-[1] bg-center opacity-50 brightness-125 contrast-160 grayscale"
+      ></video-background>
     </div>
     <!--     <div
             class="pointer-events-none absolute bottom-10 flex w-screen items-center justify-center gap-4">
@@ -98,4 +107,5 @@
         </div> -->
   </div>
 </template>
+
 <style scoped></style>

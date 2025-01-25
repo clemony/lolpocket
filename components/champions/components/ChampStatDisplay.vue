@@ -1,64 +1,65 @@
 <script setup lang="ts">
-  import { growth } from '@lolmath/calc';
+import { growth } from '@lolmath/calc'
 
-  const props = defineProps<{
-    champion: Champion;
-    stat: any;
-    lvl: number;
-  }>();
+const props = defineProps<{
+  champion: Champion
+  stat: any
+  lvl: number
+}>()
 
-  const stat = ref(props.stat);
-  const lvl = ref(props.lvl[0]);
-  const champion = ref(props.champion);
+const stat = ref(props.stat)
+const lvl = ref(props.lvl[0])
+const champion = ref(props.champion)
 
-  watch(
-    () => lvl.value,
-    (newVal) => {
-      console.log('💠 - newVal:', newVal);
-    }
-  );
-  const champStats = Object.entries(champion.value.stats);
+watch(
+  () => lvl.value,
+  (newVal) => {
+    console.log('💠 - newVal:', newVal)
+  },
+)
+const champStats = Object.entries(champion.value.stats)
 
-  const base = computed(() => {
-    if (!stat.value.stats[0].id || stat.value.stats[0].id == undefined) {
-      return;
-    }
-    const a = champStats.find((key) => key[0] == stat.value.stats[0].id);
-    return a[1] as number;
-  });
-
-  const perLvl = computed(() => {
-    if (!stat.value.stats[1].id || stat.value.stats[1].id == undefined) {
-      return;
-    }
-    const a = champStats.find((key) => key[0] == stat.value.stats[1].id);
-
-    return a ? (a[1] as number) : null;
-  });
-
-  if (stat.value.name == 'Attack Speed') {
-    const asRatio = computed(() => {
-      const a = champStats.find((key) => key[0] == stat.value.stats.value[2].id);
-      return a ? (a[1] as number) : null;
-    });
+const base = computed(() => {
+  if (!stat.value.stats[0].id || stat.value.stats[0].id == undefined) {
+    return
   }
-  const statVal = computed(() => {
-    return base.value + growth(lvl.value) * perLvl.value;
-  });
+  const a = champStats.find(key => key[0] == stat.value.stats[0].id)
+  return a[1] as number
+})
 
-  const statMin = computed(() => {
-    return base.value + growth(1) * perLvl.value;
-  });
+const perLvl = computed(() => {
+  if (!stat.value.stats[1].id || stat.value.stats[1].id == undefined) {
+    return
+  }
+  const a = champStats.find(key => key[0] == stat.value.stats[1].id)
 
-  const statMax = computed(() => {
-    return base.value + growth(18) * perLvl.value;
-  });
+  return a ? (a[1] as number) : null
+})
 
-  onMounted(async () => {
-    await props.stat;
-    stat.value = props.stat;
-  });
+if (stat.value.name == 'Attack Speed') {
+  const asRatio = computed(() => {
+    const a = champStats.find(key => key[0] == stat.value.stats.value[2].id)
+    return a ? (a[1] as number) : null
+  })
+}
+const statVal = computed(() => {
+  return base.value + growth(lvl.value) * perLvl.value
+})
+
+const statMin = computed(() => {
+  return base.value + growth(1) * perLvl.value
+})
+
+const statMax = computed(() => {
+  return base.value + growth(18) * perLvl.value
+})
+
+onMounted(async () => {
+  await props.stat
+  stat.value = props.stat
+})
 </script>
+
 <template>
   <div class="stat-title !text-3 text-bc mb-0.5 font-semibold opacity-60">
     {{ stat.name }}
@@ -67,11 +68,14 @@
   <progress
     class="progress progress-neutral"
     :value="statVal"
-    :max="statMax"></progress>
+    :max="statMax"
+  ></progress>
 
   <div class="flex items-center gap-3">
     <div class="stat-value text-8 drop-shadow-text">
-      <div class="stat-value text-8 drop-shadow-text">{{}}</div>
+      <div class="stat-value text-8 drop-shadow-text">
+        {{}}
+      </div>
     </div>
 
     <div class="stat-desc text-3 text-bc mt-0.75 h-full items-start font-semibold tracking-tight opacity-60">
@@ -83,6 +87,8 @@
 
   <img
     :src="stat.img"
-    class="stat-img drop-shadow-xs: invert-dark size-6.5 justify-self-end opacity-80" />
+    class="stat-img drop-shadow-xs: invert-dark size-6.5 justify-self-end opacity-80"
+  />
 </template>
+
 <style scoped></style>

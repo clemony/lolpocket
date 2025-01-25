@@ -1,23 +1,27 @@
 <script setup lang="ts">
-  const props = defineProps<{
-    pocket: pocket;
-  }>();
+const props = defineProps<{
+  pocket: pocket
+}>()
 
-  const viewButton = ref(null);
+const viewButton = ref(null)
 
-  const { focused } = useFocus(viewButton, { initialValue: true });
+const { focused } = useFocus(viewButton, { initialValue: true })
 
-  onMounted(() => {
-    //viewButton.value.focus()
-  });
+onMounted(() => {
+  // viewButton.value.focus()
+})
 </script>
+
 <template>
   <div class="flex gap-3">
     <PocketIcon
       :pocket="pocket"
-      class="rounded-md **:rounded-md" />
+      class="rounded-md **:rounded-md"
+    />
     <div class="flex flex-col gap-3">
-      <h5 class="!text-4 pt-0.5 leading-none tracking-tight">New Pocket Created!</h5>
+      <h5 class="!text-4 pt-0.5 leading-none tracking-tight">
+        New Pocket Created!
+      </h5>
 
       <p class="text-3 font-normal text-wrap">
         Pocket
@@ -33,7 +37,8 @@
             ref="viewButton"
             variant="outline"
             size="sm"
-            class="">
+            class=""
+          >
             View
           </Button>
         </NuxtLink>
@@ -41,24 +46,25 @@
     </div>
   </div>
 </template>
+
 <style>
   :root {
-    [data-sonner-toaster] {
-      --offset: 6px !important;
+  [data-sonner-toaster] {
+    --offset: 6px !important;
 
-      & [data-expanded='true'] {
-        height: var(--initial-height) !important;
-        transform: none;
-      }
-    }
-
-    [data-close-button] {
-      --toast-close-button-start: 93% !important;
-      --toast-close-button-end: 15px !important;
-      top: 12px;
-      outline: 0;
-      border: 0;
-      box-shadow: unset;
+    & [data-expanded='true'] {
+      height: var(--initial-height) !important;
+      transform: none;
     }
   }
+
+  [data-close-button] {
+    --toast-close-button-start: 93% !important;
+    --toast-close-button-end: 15px !important;
+    top: 12px;
+    outline: 0;
+    border: 0;
+    box-shadow: unset;
+  }
+}
 </style>

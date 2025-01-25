@@ -1,40 +1,40 @@
 @import 'tailwindcss';
 @keyframes toast {
-    0% {
-        -webkit-transform: translateY(10px);
-        transform: translateY(10px);
-        opacity: 0;
-    }
-    10% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 1;
-    }
-    90% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: translateY(10px);
-        transform: translateY(10px);
-        opacity: 0;
-    }
+  0% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  90% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    opacity: 0;
+  }
 }
 
 .toast-enter-from {
-    opacity: 0;
+  opacity: 0;
 }
 .toast-enter-active {
-    animation: toast 3s ease-in-out;
-    animation-fill-mode: forwards;
+  animation: toast 3s ease-in-out;
+  animation-fill-mode: forwards;
 }
 .toast-enter-to {
-    opacity: 0;
+  opacity: 0;
 }
 
 .toast-leave-from,
 .toast-leave-active,
 .toast-leave-to {
-    display: none;
+  display: none;
 }

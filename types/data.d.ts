@@ -117,17 +117,17 @@ declare global {
     limit?: string
     modes?: {
       'classic sr 5v5'?: boolean
-      aram?: boolean
-      nb?: boolean
-      arena?: boolean
+      'aram'?: boolean
+      'nb'?: boolean
+      'arena'?: boolean
     }
     menu?: {
-      fighter?: boolean
-      marksman?: boolean
-      assassin?: boolean
-      mage?: boolean
-      tank?: boolean
-      support?: boolean
+      'fighter'?: boolean
+      'marksman'?: boolean
+      'assassin'?: boolean
+      'mage'?: boolean
+      'tank'?: boolean
+      'support'?: boolean
       'attack damage'?: boolean
       'critical strike'?: boolean
       'attack speed'?: boolean
@@ -137,10 +137,10 @@ declare global {
       'mana and reg'?: boolean
       'magic pen'?: boolean
       'health and reg'?: boolean
-      armor?: boolean
+      'armor'?: boolean
       'magic res'?: boolean
       'ability haste'?: boolean
-      movement?: boolean
+      'movement'?: boolean
       'lifesteal vamp'?: boolean
     }
     stats?: {

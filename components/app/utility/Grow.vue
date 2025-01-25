@@ -2,6 +2,8 @@
 
 </script>
 
-<template><span class='grow'></span></template>
+<template>
+  <span class="grow"></span>
+</template>
 
 <style scoped></style>

@@ -1,16 +1,24 @@
 <script setup lang="ts">
-  import { summoner } from 'shared/data/summonerData'
+import { summoner } from 'shared/data/summonerData'
 
-  const ts = useTempStore()
-  const as = useAccountStore()
+const ts = useTempStore()
+const as = useAccountStore()
+
+function handleLogin() {
+  useDialogToggle('login')
+}
 </script>
+
 <template>
   <MenubarItem class="text-2 flex w-full items-center justify-end gap-2 px-1 py-1 font-normal">
     <Avatar class="size-8 shrink-0 rounded-lg shadow-sm">
       <AvatarImage
         :src="summoner.icon"
-        :alt="summoner.name" />
-      <AvatarFallback class="rounded-lg">LP</AvatarFallback>
+        :alt="summoner.name"
+      />
+      <AvatarFallback class="rounded-lg">
+        LP
+      </AvatarFallback>
     </Avatar>
     <!-- <icon name="teenyicons:at-outline" class="-ml-px !size-6" /> -->
     <div class="text-2 flex w-full items-center gap-2 px-2 pt-[2px] text-start align-baseline">
@@ -29,7 +37,8 @@
   <MenubarItem class="mr-px">
     <icon
       name="ph:gear-six"
-      class="-ml-px !size-5" />
+      class="-ml-px !size-5"
+    />
     Settings
     <MenubarShortcut>
       <icon name="lucide:arrow-big-up" />
@@ -41,24 +50,31 @@
 
   <MenubarItem
     v-if="ts.sessionInfo"
-    @click="signOut()">
+    @click="signOut()"
+  >
     <icon
-      name="iconamoon:player-stop-light"
-      class="-ml-0.5 !size-5.5" />
+      name="teenyicons:logout-outline"
+      class="-ml-0.5 !size-5.5"
+    />
     Log out
 
     <MenubarShortcut>⌘Q</MenubarShortcut>
   </MenubarItem>
-
-  <MenubarItem
-    v-if="!ts.sessionInfo"
-    class="flex">
-    <icon
-      name="iconamoon:player-play-light"
-      class="-ml-0.5 !size-5.5" />
-    Log in
-
-    <MenubarShortcut>⌘Q</MenubarShortcut>
-  </MenubarItem>
+  <Dialog>
+    <LoginDialog v-if="!ts.sessionInfo">
+      <MenubarItem
+        class="flex"
+        @click="handleLogin"
+      >
+        <icon
+          name="teenyicons:signin-outline"
+          class="-ml-0.5 !size-5.5"
+        />
+        Log In
+        <MenubarShortcut>⌘Q</MenubarShortcut>
+      </MenubarItem>
+    </LoginDialog>
+  </Dialog>
 </template>
+
 <style scoped></style>

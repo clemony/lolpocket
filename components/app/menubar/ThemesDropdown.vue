@@ -1,22 +1,26 @@
 <script setup lang="ts">
-  import { themes } from 'assets/css/themes'
-  const as = useAccountStore()
-  function handleChange(newData, newName) {
-    as.dataTheme = newData
-    as.themeClass = newName
-    document.documentElement.setAttribute('data-theme', newData)
-  }
+import { themes } from 'assets/css/themes'
+
+const as = useAccountStore()
+function handleChange(newData, newName) {
+  as.dataTheme = newData
+  as.themeClass = newName
+  document.documentElement.setAttribute('data-theme', newData)
+}
 </script>
+
 <template>
   <Collapsible>
     <CollapsibleTrigger as-child>
       <Button
         variant="ghost"
         size="sm"
-        class="group flex w-full gap-4 rounded-sm pl-1.75">
+        class="group flex w-full gap-4 rounded-sm pl-1.75"
+      >
         <icon
           name="teenyicons:paintbucket-outline"
-          class="!size-4.5 shrink-0" />
+          class="!size-4.5 shrink-0"
+        />
 
         Themes
 
@@ -27,20 +31,23 @@
       <div class="flex flex-col gap-1">
         <Label
           v-for="theme in themes"
-          class="hover:bg-b2 flex h-10 items-center px-11">
+          class="hover:bg-b2 flex h-10 items-center px-11"
+        >
           <input
             type="radio"
             class="peer hidden"
             name="themeChanger"
             :value="theme.name"
             :v-model="as.dataTheme"
-            @change="handleChange(theme.name, theme.id)" />
+            @change="handleChange(theme.name, theme.id)"
+          />
 
           <div
             class="flex items-center capitalize"
             :class="{
               'underline underline-offset-2': as.dataTheme == theme.name,
-            }">
+            }"
+          >
             {{ theme.name }}
           </div>
           <Grow />
@@ -52,15 +59,18 @@
               'opacity-60': as.dataTheme != theme.name,
             }"
             class="text-bc border-neutral pointer-events-auto grid size-8 place-items-center rounded-lg border p-1 shadow-sm transition-all duration-300 hover:opacity-100"
-            :style="{ background: theme.color }">
+            :style="{ background: theme.color }"
+          >
             <icon
               v-if="theme.icon"
               :name="theme.icon"
-              class="[&_path]:stroke-bc !size-full stroke-2" />
+              class="[&_path]:stroke-bc !size-full stroke-2"
+            />
           </div>
         </Label>
       </div>
     </CollapsibleContent>
   </Collapsible>
 </template>
+
 <style scoped></style>

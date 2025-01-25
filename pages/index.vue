@@ -1,42 +1,47 @@
 <script setup lang="ts">
-  import type { UseScrollReturn } from '@vueuse/core';
-  import { vScroll } from '@vueuse/components';
+import type { UseScrollReturn } from '@vueuse/core'
+import { vScroll } from '@vueuse/components'
 
-  const as = useAccountStore();
+const emit = defineEmits(['update:open'])
 
-  const HomeSteps = defineAsyncComponent(() => import('components/home/HomeSteps.vue'));
-  const HomeEtc = defineAsyncComponent(() => import('components/home/HomeEtc.vue'));
+const as = useAccountStore()
 
-  const emit = defineEmits(['update:open']);
-  onMounted(() => {
-    emit('update:open', false);
-  });
+const HomeSteps = defineAsyncComponent(() => import('components/home/HomeSteps.vue'))
+const HomeEtc = defineAsyncComponent(() => import('components/home/HomeEtc.vue'))
 
-  const shadow = ref(false);
+onMounted(() => {
+  emit('update:open', false)
+})
 
-  function onScroll(state: UseScrollReturn) {
-    // console.log(state) // {x, y, isScrolling, arrivedState, directions}
-    state.y.value > 0 ? (shadow.value = true) : (shadow.value = false);
-  }
+const shadow = ref(false)
 
-  const etc = ref(false);
+function onScroll(state: UseScrollReturn) {
+  // console.log(state) // {x, y, isScrolling, arrivedState, directions}
+  state.y.value > 0 ? (shadow.value = true) : (shadow.value = false)
+}
 
-  const steps = ref(null);
-  const { top } = useElementBounding(steps);
-  const stepTop = ref(top);
+const etc = ref(false)
+
+const steps = ref(null)
+const { top } = useElementBounding(steps)
+const stepTop = ref(top)
 </script>
+
 <template>
   <div
     v-scroll="onScroll"
-    class="relative size-full overflow-y-scroll !border-none outline-hidden">
+    class="relative size-full overflow-y-scroll !border-none outline-hidden"
+  >
     <Hero />
     <div class="absolute inset-0 top-full z-10 w-full">
       <div
+        ref="steps"
         class="size-full"
-        ref="steps">
+      >
         <HomeSteps
           ref="steps"
-          :shadow="shadow" />
+          :shadow="shadow"
+        />
 
         <HomeEtc />
 
@@ -45,4 +50,5 @@
     </div>
   </div>
 </template>
+
 <style scoped></style>

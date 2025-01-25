@@ -22,30 +22,30 @@ const statNames = {
   mpenflat: 'Flat Magic Pen',
   crit: 'Crit Chance',
   critdamage: 'Crit Damage',
-};
+}
 
 export function formatItemStats(stats) {
   if (!stats) {
-    return;
+    return
   }
 
   const replacedStats = Object.entries(stats).map(([key, value]) => {
-    const isPercentStat = key === 'ms' || key === 'as' || key === 'hp5' || key === 'mp5' || key === 'tenacity' || key === 'mpen' || key === 'lifesteal' || key === 'hsp' || key === 'crit';
+    const isPercentStat = key === 'ms' || key === 'as' || key === 'hp5' || key === 'mp5' || key === 'tenacity' || key === 'mpen' || key === 'lifesteal' || key === 'hsp' || key === 'crit'
 
     return {
       key: statNames[key] || key, // Use the formatted name or fallback to the key
       value: isPercentStat ? `${value}%` : value, // Append '%' for specific keys
-    };
-  });
+    }
+  })
 
-  replacedStats.sort(function (a, b) {
+  replacedStats.sort((a, b) => {
     if (a.key < b.key) {
-      return -1;
+      return -1
     }
     if (a.key > b.key) {
-      return 1;
+      return 1
     }
-    return 0;
-  });
-  return replacedStats; // Add this return statement
+    return 0
+  })
+  return replacedStats // Add this return statement
 }

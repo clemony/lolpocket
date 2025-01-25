@@ -1,24 +1,28 @@
 <script setup lang="ts">
-  const listClass = 'flex flex-col gap-3  min-w-44';
+const listClass = 'flex flex-col gap-3  min-w-44'
 
-  const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underline';
+const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underline'
 </script>
+
 <template>
   <div class="bg-b1 text-bc flex w-full justify-center">
     <div class="flex w-full flex-wrap justify-evenly gap-x-10 gap-y-16 px-12 pt-36 pb-40 [&_h3]:drop-shadow-sm [&_li]:drop-shadow-sm">
       <ul :class="listClass">
         <h3>Tools</h3>
         <li
-          @click="useDrawer('PocketDrawer')"
-          :class="itemClass">
+          :class="itemClass"
+          @click="useDrawerToggle('pocket')"
+        >
           Create a Pocket
         </li>
         <li
           v-for="link in links.pocketLinks"
-          class="flex items-center gap-2 capitalize">
+          class="flex items-center gap-2 capitalize"
+        >
           <NuxtLink
             :to="{ path: link.url }"
-            :class="itemClass">
+            :class="itemClass"
+          >
             {{ link.name }}
           </NuxtLink>
         </li>
@@ -27,25 +31,29 @@
       <template v-for="section in links.links">
         <ul
           v-if="section.items"
-          :class="listClass">
+          :class="listClass"
+        >
           <h3>{{ section.name }}</h3>
           <li
             v-for="link in section.items"
-            :class="itemClass">
+            :class="itemClass"
+          >
             {{ link.name }}
           </li>
         </ul>
         <template v-else-if="section.submenu">
           <ul
             v-for="menu in section.submenu"
-            :class="listClass">
-            <h3>{{ menu.name + ' Links' }}</h3>
+            :class="listClass"
+          >
+            <h3>{{ `${menu.name} Links` }}</h3>
 
             <li
               v-for="link in menu.items"
+              :key="link.name"
               target="_blank"
               :href="link.url"
-              :key="link.name">
+            >
               <a :class="itemClass">
                 {{ link.name }}
                 <icon name="mingcute:external-link-line" />
@@ -59,7 +67,8 @@
         <h3>Settings</h3>
         <li
           v-for="link in links.settingLinks"
-          class="flex items-center gap-2 capitalize">
+          class="flex items-center gap-2 capitalize"
+        >
           {{ link.name }}
         </li>
       </ul>
@@ -68,18 +77,21 @@
         <h3>Info</h3>
         <li
           v-for="link in links.infoLinks"
-          class="flex items-center gap-2">
+          class="flex items-center gap-2"
+        >
           <NuxtLink
             v-if="link.type == 'i'"
-            :to="{ path: link.url }">
+            :to="{ path: link.url }"
+          >
             {{ link.name }}
           </NuxtLink>
 
           <a
             v-else
+            :key="link.name"
             target="_blank"
             :href="link.url"
-            :key="link.name">
+          >
             {{ link.name }}
           </a>
         </li>
@@ -87,4 +99,5 @@
     </div>
   </div>
 </template>
+
 <style scoped></style>

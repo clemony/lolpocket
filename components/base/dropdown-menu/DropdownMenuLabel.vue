@@ -1,27 +1,28 @@
 <script setup lang="ts">
-  import { DropdownMenuLabel, type DropdownMenuLabelProps, useForwardProps } from 'radix-vue';
-  import { computed, type HTMLAttributes } from 'vue';
+import { DropdownMenuLabel, type DropdownMenuLabelProps, useForwardProps } from 'radix-vue'
+import { computed, type HTMLAttributes } from 'vue'
 
-  const props = defineProps<
-    DropdownMenuLabelProps & {
-      class?: HTMLAttributes['class'];
-      inset?: boolean;
-    }
-  >();
+const props = defineProps<
+  DropdownMenuLabelProps & {
+    class?: HTMLAttributes['class']
+    inset?: boolean
+  }
+>()
 
-  const delegatedProps = computed(() => {
-    const { class: _, ...delegated } = props;
+const delegatedProps = computed(() => {
+  const { class: _, ...delegated } = props
 
-    return delegated;
-  });
+  return delegated
+})
 
-  const forwardedProps = useForwardProps(delegatedProps);
+const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
   <DropdownMenuLabel
     v-bind="forwardedProps"
-    :class="cn('text-2 px-2 py-1.5 font-semibold', inset && 'pl-8', props.class)">
+    :class="cn('text-2 px-2 py-1.5 font-semibold', inset && 'pl-8', props.class)"
+  >
     <slot />
   </DropdownMenuLabel>
 </template>

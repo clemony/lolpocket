@@ -2,23 +2,23 @@
 .pop-move, /* apply transition to moving elements */
 .pop-leave-active,
 .pop-enter-active {
-    transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .pop-enter-from,
 .pop-leave-to {
-    @apply flex translate-y-1 opacity-0 !ring-0 !outline-0;
+  @apply flex translate-y-1 opacity-0 !ring-0 !outline-0;
 }
 
 .pop-move, /* apply transition to moving elements */
 .pop-leave-active,
 .pop-enter-active {
-    transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .pop-enter-from,
 .pop-leave-to {
-    @apply flex translate-y-1 opacity-0 !ring-0 !outline-0;
+  @apply flex translate-y-1 opacity-0 !ring-0 !outline-0;
 }
 
 /*------------⟢ absolute  ⟣-------------*/
@@ -26,21 +26,21 @@
 .pop-move, /* apply transition to moving elements */
 .pop-leave-active,
 .pop-enter-active {
-    transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .pop-enter-from,
 .pop-leave-to {
-    @apply flex translate-y-1 opacity-0 !ring-0 !outline-0;
+  @apply flex translate-y-1 opacity-0 !ring-0 !outline-0;
 }
 
 .pop-move, /* apply transition to moving elements */
 .pop-leave-active,
 .pop-enter-active {
-    transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .pop-enter-from,
 .pop-leave-to {
-    @apply flex translate-y-1 opacity-0 !ring-0 !outline-0;
+  @apply flex translate-y-1 opacity-0 !ring-0 !outline-0;
 }

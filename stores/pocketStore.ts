@@ -22,14 +22,14 @@ export const usePocketStore = defineStore(
     }
 
     const pinnedPockets = computed(() => {
-      return pockets.value.filter((pocket) => pocket.pinned)
+      return pockets.value.filter(pocket => pocket.pinned)
     })
     const allPockets = computed(() => {
-      return pockets.value.filter((pocket) => !pocket.pinned)
+      return pockets.value.filter(pocket => !pocket.pinned)
     })
 
     const updatePocketType = (key: string, newTags: Array<string>) => {
-      const findPocket = pockets.value.find((pocket) => pocket.key === key)
+      const findPocket = pockets.value.find(pocket => pocket.key === key)
       if (findPocket) {
         findPocket.tags = newTags
       }
@@ -60,5 +60,5 @@ export const usePocketStore = defineStore(
       storage: piniaPluginPersistedstate.localStorage(),
       key: 'pocketStore',
     },
-  }
+  },
 )

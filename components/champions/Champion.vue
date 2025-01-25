@@ -1,32 +1,33 @@
 <script setup lang="ts">
-  import type { HTMLAttributes } from 'vue'
+import type { HTMLAttributes } from 'vue'
 
-  const props = defineProps<{
-    champion: Champion
-    pocket?: pocket
-    class?: HTMLAttributes['class']
-    rounded?: boolean
-    removable?: boolean
-    roundedMd?: boolean
-  }>()
+const props = defineProps<{
+  champion: Champion
+  pocket?: pocket
+  class?: HTMLAttributes['class']
+  rounded?: boolean
+  removable?: boolean
+  roundedMd?: boolean
+}>()
 
-  const handleClick = () => {
-    props.removable ? removeChamp(props.champion.name, props.pocket) : ''
-  }
-  ///console.log('💠 - champion.image.full:', props.champion)
+function handleClick() {
+  props.removable ? removeChamp(props.champion.name, props.pocket) : ''
+}
+/// console.log('💠 - champion.image.full:', props.champion)
 </script>
 
 <template>
   <label
-    @click="handleClick"
     class=""
     :class="
       cn(
         ' shadow-sm ring-b2 hover:ring-neutral/60 hover:ring-offset-b1/95 relative rounded-lg border border-b3 inset-shadow-sm ring-1 **:select-none hover:ring-offset-2',
         { '!rounded-full': props.rounded, '!rounded-md': props.roundedMd },
-        props.class
+        props.class,
       )
-    ">
+    "
+    @click="handleClick"
+  >
     <slot />
 
     <LittleTip :content="champion.name">
@@ -36,14 +37,16 @@
           cn(
             { '!rounded-full': props.rounded },
             { '!rounded-md': props.roundedMd },
-            { 'cursor-pointer  hover:after:opacity-100 after:bg-neutral/60 after:text-nc/80 after:transition-all after:duration-300': props.removable }
+            { 'cursor-pointer  hover:after:opacity-100 after:bg-neutral/60 after:text-nc/80 after:transition-all after:duration-300': props.removable },
           )
-        ">
+        "
+      >
         <img
           :key="props.champion.name"
           :src="`/img/champion/${champion.apiname}.webp`"
-          :alt="props.champion.name + ' Image'"
-          class="size-full scale-115" />
+          :alt="`${props.champion.name} Image`"
+          class="size-full scale-115"
+        />
       </div>
     </LittleTip>
   </label>

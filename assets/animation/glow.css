@@ -1,0 +1,30 @@
+.glow {
+  background: linear-gradient(
+    137deg,
+    rgba(231, 207, 120, 0.7) 0%,
+    rgba(220, 124, 124, 0.7) 20%,
+    rgba(178, 164, 221, 0.7) 40%,
+    rgba(175, 212, 150, 0.7) 60%,
+    rgba(165, 226, 229, 0.7) 80%
+  );
+  background-size: 1000% 1000%;
+  animation: GradientBackground 5s ease infinite;
+  /*mask-image: radial-gradient(circle at 0% 1%, rgba(0, 0, 0, 0) 50px, #fff 51px);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;*/
+}
+
+@keyframes GradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

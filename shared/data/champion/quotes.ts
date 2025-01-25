@@ -3,7 +3,7 @@ export function getQuote() {
 }
 
 export function formattedQuote() {
-  let quote = getQuote().replace(/( \-)/, '\n$1')
+  const quote = getQuote().replace(/( -)/, '\n$1')
   return quote
 }
 
@@ -12,7 +12,7 @@ export const quotes = [
   '<p>"So, Braum. No shirt, huh? And I don\'t have pants. Yay, Freljord."</p><p>-Ashe</p>',
   '<p>"A Crownguard and a mage? Wouldn\'t want to be her."</p><p>-Sona</p>',
   '<p>"Sylas? He hasn\'t changed. And my answer is still no."</p><p>-Sona</p>',
-  "\<p>\"It's good to see Taric hasn't changed. And bad. It's both.\"</p><p>-Sona</p>",
+  '\<p>"It\'s good to see Taric hasn\'t changed. And bad. It\'s both."</p><p>-Sona</p>',
   '<p>"Stay positive."</p><p>-Lux</p>',
   '<p>"Kat and Garen sitting in a tree~ And you better just be holding hands or I\'m telling!"</p><p>-Lux</p>',
   '<p>"I\'m sure your wife forgives you for getting her soul taken by a remorseless creature of darkness!"</p><p>-Lux</p>',
@@ -48,6 +48,6 @@ export const quotes = [
   '<p>"Jinx... Sketchy tats and certifiable. It\'s just sad."</p><p>-Akali</p>',
   '<p>"You know, we\'ve never met, but you seem really annoying."</p><p>-Akali (to Zoe)</p>',
   '<p>"Who needs a map?"</p><p>-Ezreal</p>',
-  "<p>\"I'm a mage. You're a mage. I'm blond. You're blonde. Doesn't it feel like we're made for each other?\"</p><p>-Ezreal (to Lux)</p>",
+  '<p>"I\'m a mage. You\'re a mage. I\'m blond. You\'re blonde. Doesn\'t it feel like we\'re made for each other?"</p><p>-Ezreal (to Lux)</p>',
   '<p>"It is not why I fight, but who I fight for."</p><p>-Pantheon</p>',
 ]

@@ -3,17 +3,17 @@
   "extends": "./.nuxt/tsconfig.json",
 
   "compilerOptions": {
+    "lib": ["es2020", "dom"],
     "baseUrl": ".",
-    "outDir": "/dist",
-    "allowSyntheticDefaultImports": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "paths": {},
+    "resolveJsonModule": true,
     "allowJs": true,
     "strict": false,
-    "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "module": "ESNext",
+    "outDir": "/dist",
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "lib": ["es2020", "dom"],
-    "paths": {}
+    "skipLibCheck": true
   }
 }

@@ -1,7 +1,8 @@
-import { Chart, BarController, BarElement, CategoryScale, LinearScale } from 'chart.js';
-import { Bar } from 'vue-chartjs';
+import { BarController, BarElement, CategoryScale, Chart, LinearScale } from 'chart.js'
+import { Bar } from 'vue-chartjs'
+
 export default defineNuxtPlugin((nuxtApp) => {
-  Chart.register(BarElement, BarController, CategoryScale, LinearScale);
+  Chart.register(BarElement, BarController, CategoryScale, LinearScale)
 
   nuxtApp.vueApp.component('BarChart', {
     extends: Bar,
@@ -22,5 +23,5 @@ export default defineNuxtPlugin((nuxtApp) => {
         }),
       },
     },
-  });
-});
+  })
+})

@@ -1,54 +1,66 @@
 <script setup lang="ts">
-  import { VueDraggable } from 'vue-draggable-plus'
-  import type { HTMLAttributes } from 'vue'
+import type { HTMLAttributes } from 'vue';
+import { vDraggable } from 'vue-draggable-plus';
 
-  const as = useAccountStore()
-  const ts = useTempStore()
+const props = defineProps<{
+  pocket?: pocket
+  dragDisabled?: boolean
+  class?: HTMLAttributes['class']
+}>()
+const ts = useTempStore()
 
-  const ds = useDataStore()
-  const props = defineProps<{
-    pocket?: pocket
-    dragDisabled?: boolean
-    class?: HTMLAttributes['class']
-  }>()
+const list = computed(() => {
+  return useItemFilter()
+})
 
-  const list = computed(() => {
-    return useItemFilter()
-  })
+const isDisabled = computed (() => {
+  return props.dragDisabled
+})
 
-  const disabled = ref(false)
+
 </script>
 
 <template>
-  <div class="max-h-[89.4vh] h-[89.4vh] min-h-[89.4vh] w-full">
-    <VueDraggable
-      :group="{ name: 'items', pull: 'clone', put: false, revertClone: true }"
-      ref="target"
-      :sort="false"
-      :bubbleScroll="false"
-      :scroll="false"
-      v-model="list"
-      ghostClass="ghosty"
-      @click.meta="disabled = true"
-      :delay="0"
-      :disabled="disabled || props.dragDisabled"
-      :animation="300"
-      :force-fallback="true"
-      :fallbackTolerance="0"
-      fallbackClass="drag-clone"
-      :fallbackOnBody="true"
-      @click.stop.prevent
-      @remove=""
-      :class="cn(' overflow-y-auto max-h-[89.4vh] grid grid-flow-row auto-cols-auto  h-fit  grid-cols-[repeat(auto-fill,minmax(64px,1fr))] justify-center gap-3 p-6  ', props.class)">
-      <Item
-        v-for="item in list"
-        :key="item.id"
-        :item="item"
-        :pocket="pocket"
-        class="size-20 shadow-sm"
-        @click.right.stop.prevent="useDrawer('ItemDrawer', null, null, item)" />
-    </VueDraggable>
+  <transition-slide
+    v-draggable="[
+      list,
+      {
+        'group': {
+          name: 'items',
+          pull: 'clone',
+          put: false,
+          revertClone: true,
+        },
+        'sort': false,
+        'bubbleScroll': false,
+        'scroll': false,
+        'delay': 0,
+        'animation': 300,
+        'force-fallback': true,
+        'fallbackTolerance': 0,
+        'fallbackOnBody': true,
+      },
+    ]"
+    group
+    :disabled="isDisabled"
+    :class="cn('px-10  overflow-y-auto max-h-full grid grid-flow-row auto-cols-auto  h-fit  grid-cols-[repeat(auto-fill,minmax(56px,1fr))] justify-center gap-2  pt-[12.8vh] pb-6 ', props.class)"
+  >
+  <div v-for="item in list" :key="item.id">
+   <Popover
+      :key="item.id" >
+    <PopoverTrigger as-child>
+      <img
+        :src="`/img/item/${item.id}.webp`"
+        :alt="`${item.name} Image`"
+        class="aspect-square size-full rounded-lg"
+      />
+    </PopoverTrigger>
+    <PopoverContent class="w-92 max-h-100 overflow-y-auto shadow-pretty">
+     <ItemInfo :item="item" class="[&_h1]:!text-5 [&_.stat-grid]:!grid-cols-[2fr_1fr]"/>
+    </PopoverContent>
+  </Popover>
   </div>
+  </transition-slide>
 </template>
 
 <style></style>

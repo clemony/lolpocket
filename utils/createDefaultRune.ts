@@ -1,15 +1,15 @@
 export default function createDefaultRune(): {
-  id: number;
-  key: string;
-  icon: string;
-  name: string;
-  shortDesc: string;
-  longDesc: string;
-  tier?: number;
-  type?: string;
-  img?: string;
-  stats?: string;
-  path?: string;
+  id: number
+  key: string
+  icon: string
+  name: string
+  shortDesc: string
+  longDesc: string
+  tier?: number
+  type?: string
+  img?: string
+  stats?: string
+  path?: string
 } {
   return {
     name: 'empty',
@@ -23,5 +23,5 @@ export default function createDefaultRune(): {
     img: '/img/runes/blankRune.webp',
     stats: '',
     path: 'empty',
-  };
+  }
 }

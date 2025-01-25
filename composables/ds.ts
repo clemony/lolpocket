@@ -1,3 +1,3 @@
 export const ds = computedAsync(async () => {
-  return await useDataStore();
-}, null);
+  return await useDataStore()
+}, null)

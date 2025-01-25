@@ -1,6 +1,10 @@
 @import 'tailwindcss';
 
 @theme {
+  --menubar-height: 5vh;
+  --main-height: 95vh;
+  --page-header-height: 8vh;
+
   --text-1: 0.9rem;
   --text-2: 0.96rem;
   --text-3: 0.99rem;
@@ -88,7 +92,8 @@
   --shadow-pretty: 0 3px 10px rgba(0, 0, 0, 0.2);
   --shadow-lil: 2px 2px 4px 1px rgba(0, 0, 0, 0, 0.3);
   --shadow-warm: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
-  --shadow-standard: 0px 2px 3px -1px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(25, 28, 33, 0.02), 0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+  --shadow-standard: 0px 2px 3px -1px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
   --shadow-cham: inset 12px 8px 40px #46464620;
   --shadow-inset: inset 1px 2px 8px 2px #00000019, inset -2px -1px 5px 1px #00000019;
   --shadow-inset-sm: inset 1px 2px 1px 1px #00000004, inset -1px -1px 2px 1px #00000009;

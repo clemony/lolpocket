@@ -1,65 +1,66 @@
 <script setup lang="ts">
-  import type { HTMLAttributes } from 'vue';
+import type { HTMLAttributes } from 'vue'
 
-  const props = withDefaults(
-    defineProps<{
-      title?: string;
-      description?: string;
-      open?: boolean;
-      headerClass?: HTMLAttributes['class'];
-      cardClass?: HTMLAttributes['class'];
-      isTop?: boolean;
-      wrapper?: HTMLElement | null;
-    }>(),
-    {
-      open: false,
-    }
-  );
-  const topAnchor = ref<HTMLElement | null>(null);
-  const isAnchorVisible = useElementVisibility(topAnchor);
-  const target = ref(null);
+const props = withDefaults(
+  defineProps<{
+    title?: string
+    description?: string
+    open?: boolean
+    headerClass?: HTMLAttributes['class']
+    cardClass?: HTMLAttributes['class']
+    isTop?: boolean
+    wrapper?: HTMLElement | null
+  }>(),
+  {
+    open: false,
+  },
+)
+const topAnchor = ref<HTMLElement | null>(null)
+const isAnchorVisible = useElementVisibility(topAnchor)
+const target = ref(null)
 
-  const openTrigger = ref(false);
-  const isOpen = ref(false);
+const openTrigger = ref(false)
+const isOpen = ref(false)
 
-  if (props.open) {
-    isOpen.value = true;
-  }
-  if ((openTrigger.value = true)) {
-    isOpen.value = true;
-  }
-  onClickOutside(target, (event) => {
-    isOpen.value = false;
-    openTrigger.value = false;
-  });
+if (props.open) {
+  isOpen.value = true
+}
+if ((openTrigger.value = true)) {
+  isOpen.value = true
+}
+onClickOutside(target, (event) => {
+  isOpen.value = false
+  openTrigger.value = false
+})
 
-  const scrollArea = ref(null);
+const scrollArea = ref(null)
 
-  const { x, y, isScrolling, arrivedState, directions } = useScroll(scrollArea);
+const { x, y, isScrolling, arrivedState, directions } = useScroll(scrollArea)
 
-  watch(
-    () => isScrolling.value,
-    (newVal) => {
-      console.log(newVal);
-      isOpen.value = false;
-      openTrigger.value = false;
-    }
-  );
-  /*
+watch(
+  () => isScrolling.value,
+  (newVal) => {
+    console.log(newVal)
+    isOpen.value = false
+    openTrigger.value = false
+  },
+)
+/*
 watch(
     () => isScrolling.value,
     (newVal) => {
         console.log(isScrolling)
-    
+
     }
 ) */
-  //const isTop = ref(true)
+// const isTop = ref(true)
 </script>
 
 <template>
   <Card
+    ref="card"
     :class="cn('relative h-fit w-full pt-0!', props.cardClass)"
-    ref="card">
+  >
     <CardHeader
       ref="target"
       :class="
@@ -70,20 +71,26 @@ watch(
             'border-b-b2 border-b': !isAnchorVisible && !isOpen,
             'border-b-b2 shadow-smooth rounded-b-xl border-b': isOpen,
           },
-          props.headerClass
+          props.headerClass,
         )
-      ">
+      "
+    >
       <Collapsible
         v-model:open="isOpen"
-        @update:open="(v) => (isOpen = v)">
+        @update:open="(v) => (isOpen = v)"
+      >
         <CollapsibleTrigger
           class="flex w-full cursor-pointer items-center gap-3 pt-1"
-          as-child>
+          as-child
+        >
           <CardTitle>
-            <h2 v-if="props.title">{{ props.title }}</h2>
+            <h2 v-if="props.title">
+              {{ props.title }}
+            </h2>
             <slot
               name="header"
-              class="" />
+              class=""
+            />
           </CardTitle>
         </CollapsibleTrigger>
         <CollapsibleContent class="w-full duration-1000">
@@ -98,7 +105,8 @@ watch(
       <ScrollArea class="h-full max-h-full overflow-auto px-8 pt-18 pb-0">
         <div
           ref="topAnchor"
-          class="h-1 w-full transition-all duration-500" />
+          class="h-1 w-full transition-all duration-500"
+        />
         <div ref="scrollArea">
           <slot />
         </div>

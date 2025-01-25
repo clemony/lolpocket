@@ -1,56 +1,55 @@
 <script setup lang="ts">
-  const ds = useDataStore();
-  const ps = usePocketStore();
-  const items = [...ds.items];
-  // Define props for reusability
-  const props = defineProps<{
-    array: Array<{ id: string; img: string; name: string }>;
-    quickSearch: string;
-    returnData?: any;
-    thisSet?: any;
-    returned?: any;
-    type?: string;
-    pocketKey: string;
-  }>();
+// Define props for reusability
+const props = defineProps<{
+  array: Array<{ id: string, img: string, name: string }>
+  quickSearch: string
+  returnData?: any
+  thisSet?: any
+  returned?: any
+  type?: string
+  pocketKey: string
+}>()
+const emit = defineEmits(['update:quickSearch', 'update:returnData'])
+const ds = useDataStore()
+const ps = usePocketStore()
+const items = [...ds.items]
+const pocket = ref(getPocket(props.pocketKey))
 
-  const emit = defineEmits(['update:quickSearch', 'update:returnData']);
-  const pocket = ref(getPocket(props.pocketKey));
+const set = computed(() => {
+  return pocket.value.items[0].itemSets.find(set => set.key == props.thisSet)
+})
 
-  const set = computed(() => {
-    return pocket.value.items[0].itemSets.find((set) => set.key == props.thisSet);
-  });
-
-  function handleClick(data) {
-    if (data) {
-      const set = props.thisSet;
-      const returned = [data, set];
-      console.log(returned);
-      emit('update:returnData', returned);
-    }
+function handleClick(data) {
+  if (data) {
+    const set = props.thisSet
+    const returned = [data, set]
+    console.log(returned)
+    emit('update:returnData', returned)
   }
+}
 
-  const getData = (data) => {
-    return data.id;
-  };
-  // Function to handle input change
-  function handleInput(event: Event) {
-    const target = event.target as HTMLInputElement | null; // Cast to HTMLInputElement
-    if (target) {
-      emit('update:quickSearch', target.value); // Emit only if target is not null
-    }
+function getData(data) {
+  return data.id
+}
+// Function to handle input change
+function handleInput(event: Event) {
+  const target = event.target as HTMLInputElement | null // Cast to HTMLInputElement
+  if (target) {
+    emit('update:quickSearch', target.value) // Emit only if target is not null
   }
+}
 
-  function beforeLeave(el: HTMLElement) {
-    el.style.position = 'relative'; // Make sure it's not absolute
-    el.style.transition = 'all 0.3s ease';
-  }
+function beforeLeave(el: HTMLElement) {
+  el.style.position = 'relative' // Make sure it's not absolute
+  el.style.transition = 'all 0.3s ease'
+}
 
-  function afterLeave(el: HTMLElement) {
-    el.style.display = 'empty'; // Hide after the transition is complete
-  }
+function afterLeave(el: HTMLElement) {
+  el.style.display = 'empty' // Hide after the transition is complete
+}
 
-  const open = ref(false);
-  const value = ref('');
+const open = ref(false)
+const value = ref('')
 </script>
 
 <template>
@@ -61,35 +60,42 @@
         role="combobox"
         :aria-expanded="open"
         class="no-drag search-drop ghosty drag-label group/qs hover:after:text-bccent relative z-0 flex w-[200px] basis-16 cursor-pointer! justify-between p-0! after:absolute after:grid after:h-full after:w-full after:place-content-center after:opacity-50 after:content-['+'] hover:after:opacity-60"
-        :class="{ 'basis-12!': type == 'alt' }">
+        :class="{ 'basis-12!': type == 'alt' }"
+      >
         <div
-          class="z-20 h-full w-full scale-105 cursor-pointer bg-[url('/i@frame.webp')] bg-contain bg-center bg-no-repeat opacity-0 brightness-0 transition-all duration-200 select-none group-hover/qs:scale-95 group-hover/qs:opacity-40"></div>
+          class="z-20 h-full w-full scale-105 cursor-pointer bg-[url('/i@frame.webp')] bg-contain bg-center bg-no-repeat opacity-0 brightness-0 transition-all duration-200 select-none group-hover/qs:scale-95 group-hover/qs:opacity-40"
+        ></div>
       </button>
     </PopoverTrigger>
     <PopoverContent class="w-[350px] p-0">
       <Command>
         <CommandInput
           class="h-9"
-          placeholder="Search Items..." />
+          placeholder="Search Items..."
+        />
         <CommandEmpty>No Items found.</CommandEmpty>
 
         <CommandList>
           <CommandGroup
             v-auto-animate
             heading="Items in Set"
-            class="flex flex-wrap">
+            class="flex flex-wrap"
+          >
             <template
               v-for="(item, index) in set.items"
-              :key="item.id">
+              :key="item.id"
+            >
               <CommandItem
                 v-if="index > 5"
                 :key="item.id"
-                :value="item.name">
+                :value="item.name"
+              >
                 <img
+                  :key="item.id"
                   :src="`/img/items/${item.id}.webp`"
                   class="size-10 rounded-md shadow-2xs"
-                  :key="item.id"
-                  :class="cn(value === item.name ? 'ring-1' : 'ring-0')" />
+                  :class="cn(value === item.name ? 'ring-1' : 'ring-0')"
+                />
               </CommandItem>
             </template>
           </CommandGroup>
@@ -97,19 +103,23 @@
           <CommandGroup
             v-auto-animate
             heading="Items in Set"
-            class="flex flex-wrap">
+            class="flex flex-wrap"
+          >
             <template
               v-for="(item, index) in set.items"
-              :key="item.id">
+              :key="item.id"
+            >
               <CommandItem
                 v-if="index > 5"
                 :key="item.id"
-                :value="item.name">
+                :value="item.name"
+              >
                 <img
+                  :key="item.id"
                   :src="`/img/items/${item.id}.webp`"
                   class="size-10 rounded-md shadow-2xs"
-                  :key="item.id"
-                  :class="cn(value === item.name ? 'ring-1' : 'ring-0')" />
+                  :class="cn(value === item.name ? 'ring-1' : 'ring-0')"
+                />
               </CommandItem>
             </template>
           </CommandGroup>
@@ -117,16 +127,19 @@
           <CommandGroup
             v-auto-animate
             heading="Favorite Items"
-            class="flex flex-wrap">
+            class="flex flex-wrap"
+          >
             <CommandItem
               v-for="item in items"
               :key="item.id"
-              :value="item.name">
+              :value="item.name"
+            >
               <img
+                :key="item.id"
                 :src="`/img/items/${item.id}.webp`"
                 class="size-10 rounded-md shadow-2xs"
-                :key="item.id"
-                :class="cn(value === item.name ? 'ring-1' : 'ring-0')" />
+                :class="cn(value === item.name ? 'ring-1' : 'ring-0')"
+              />
             </CommandItem>
           </CommandGroup>
         </CommandList>
@@ -134,7 +147,7 @@
     </PopoverContent>
   </Popover>
 
-  <!--    
+  <!--
    @select="(item) => {
                 if (typeof item.detail.value[0].name === 'string') {
                   value = item.detail.value[0].name
@@ -188,31 +201,31 @@
 
 <style scoped>
   .transition-list {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
 
-  .fade-list-enter-active,
-  .fade-list-leave-active {
-    transition:
-      opacity 1s ease,
-      transform 1s ease;
-  }
+.fade-list-enter-active,
+.fade-list-leave-active {
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
 
-  .fade-list-enter-from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
+.fade-list-enter-from {
+  opacity: 0;
+  transform: translateY(-10px);
+}
 
-  .fade-list-leave-to {
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
-    /* Prevent interaction during animation */
-  }
+.fade-list-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  /* Prevent interaction during animation */
+}
 
-  .fade-list-move {
-    transition: transform 1s;
-  }
+.fade-list-move {
+  transition: transform 1s;
+}
 </style>

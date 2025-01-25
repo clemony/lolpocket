@@ -1,3 +1,3 @@
-export const useHi = () => {
+export function useHi() {
   return ref()
 }

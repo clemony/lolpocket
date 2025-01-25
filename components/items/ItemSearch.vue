@@ -1,69 +1,72 @@
 <script setup lang="ts">
-  import { categories, stats, types } from 'shared/data/item'
-  import type { HTMLAttributes } from 'vue'
+import type { HTMLAttributes } from 'vue'
+import Fuse from 'fuse.js'
 
-  const props = withDefaults(
-    defineProps<{
-      class?: HTMLAttributes['class']
-      placeholder?: string
-      inputClass?: HTMLAttributes['class']
-    }>(),
-    {
-      placeholder: 'Search Items...',
+const props = withDefaults(
+  defineProps<{
+    class?: HTMLAttributes['class']
+    placeholder?: string
+    inputClass?: HTMLAttributes['class']
+  }>(),
+  {
+    placeholder: 'Search Items...',
+  },
+)
+const ts = useTempStore()
+const ds = useDataStore()
+
+const items = computedAsync(async () => {
+  return await [...(ds.SRitems || [])] // Assuming ds.SRitems is an array or undefined.
+}, null)
+
+const searchQuery = ref('')
+const fuse = ref<Fuse<any> | null>(null)
+
+// Initialize Fuse once the items are available
+watch(
+  () => items.value,
+  (newItems) => {
+    if (newItems && newItems.length > 0) {
+      fuse.value = new Fuse(newItems, {
+        keys: ['name', 'nickname'],
+        includeScore: true,
+        threshold: 0.3,
+      })
     }
-  )
-  const ts = useTempStore()
-  const ds = useDataStore()
-  import Fuse from 'fuse.js'
+  },
+  { immediate: true },
+)
 
-  const items = computedAsync(async () => {
-    return await [...(ds.SRitems || [])] // Assuming ds.SRitems is an array or undefined.
-  }, null)
+const searchResult = computed(() => {
+  if (!searchQuery.value) {
+    return items.value || []
+  }
 
-  const searchQuery = ref('')
-  const fuse = ref<Fuse<any> | null>(null)
+  if (!fuse.value)
+    return []
 
-  // Initialize Fuse once the items are available
-  watch(
-    () => items.value,
-    (newItems) => {
-      if (newItems && newItems.length > 0) {
-        fuse.value = new Fuse(newItems, {
-          keys: ['name', 'nickname'],
-          includeScore: true,
-          threshold: 0.3,
-        })
-      }
-    },
-    { immediate: true }
-  )
+  const results = fuse.value.search(searchQuery.value)
+  return results.map(result => result.item)
+})
 
-  const searchResult = computed(() => {
-    if (!searchQuery.value) {
-      return items.value || []
-    }
-
-    if (!fuse.value) return []
-
-    const results = fuse.value.search(searchQuery.value)
-    return results.map((result) => result.item)
-  })
-
-  watch(searchResult, (newSearchResults) => {
-    ts.itemSearchResult = newSearchResults
-    //console.log('💠 - Search Results:', newSearchResults)
-  })
+watch(searchResult, (newSearchResults) => {
+  ts.itemSearchResult = newSearchResults
+  // console.log('💠 - Search Results:', newSearchResults)
+})
 </script>
 
 <template>
   <div :class="cn('border-b3 text-3 items-center gap-4 !bg-b1 flex h-12 border py-2 px-3', props.class)">
     <icon
-      name="teenyicons:search-outline"
-      class="pointer-events-none size-5 opacity-70" />
+      name="search"
+      class="pointer-events-none size-5 opacity-70"
+    />
     <input
       v-model="searchQuery"
       :placeholder="props.placeholder"
-      :class="cn('text-3  outline-0 ring-0 border-0 flex h-full grow text-start  hover:outline-0 hover:ring-0 hover:border-0', props.inputClass)" />
+      :class="cn('text-3  outline-0 ring-0 border-0 flex h-full grow text-start  hover:outline-0 hover:ring-0 hover:border-0', props.inputClass)"
+    />
   </div>
 </template>
+
 <style></style>

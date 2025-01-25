@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { summoner } from 'shared/data/summonerData';
+import { summoner } from 'shared/data/summonerData'
 </script>
 
 <template>
@@ -10,12 +10,16 @@
           <DropdownMenuTrigger>
             <SidebarMenuButton
               size="default"
-              class="focus:ring-b2! data-[state=open]:ring-b3/40! flex h-16 flex-nowrap items-center gap-2 border-0! pr-2.5 ring-0! focus:border-0! focus:ring-1! focus:outline-0! data-[state=open]:ring-1! data-[state=open]:shadow-xs">
+              class="focus:ring-b2! data-[state=open]:ring-b3/40! flex h-16 flex-nowrap items-center gap-2 border-0! pr-2.5 ring-0! focus:border-0! focus:ring-1! focus:outline-0! data-[state=open]:ring-1! data-[state=open]:shadow-xs"
+            >
               <Avatar class="mt-0.5 size-10 rounded-full border border-transparent shadow-xs">
                 <AvatarImage
                   :src="summoner.icon"
-                  :alt="summoner.name" />
-                <AvatarFallback class="rounded-lg"> LP </AvatarFallback>
+                  :alt="summoner.name"
+                />
+                <AvatarFallback class="rounded-lg">
+                  LP
+                </AvatarFallback>
               </Avatar>
 
               <div class="text-3 grid flex-1 text-left leading-none">
@@ -23,24 +27,31 @@
               </div>
               <icon
                 name="teenyicons:caret-vertical-small-outline"
-                class="ml-auto size-5!" />
+                class="ml-auto size-5!"
+              />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
             class="shadow-standard! *:text-3 w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg backdrop-brightness-[97%]"
             side="bottom"
             align="end"
-            :side-offset="6">
+            :side-offset="6"
+          >
             <DropdownMenuLabel class="p-0 font-normal">
               <div class="text-2 flex items-center gap-2 px-1 py-1.5 text-left">
                 <Avatar class="h-10 w-10 rounded-full">
                   <AvatarImage
                     :src="summoner.icon"
-                    :alt="summoner.name" />
-                  <AvatarFallback class="rounded-full"> CN </AvatarFallback>
+                    :alt="summoner.name"
+                  />
+                  <AvatarFallback class="rounded-full">
+                    CN
+                  </AvatarFallback>
                 </Avatar>
                 <div class="text-2 grid flex-1 pt-[2px] text-left">
-                  <h5 class="truncate font-semibold!">{{ summoner.name }}'s profile</h5>
+                  <h5 class="truncate font-semibold!">
+                    {{ summoner.name }}'s profile
+                  </h5>
                 </div>
               </div>
             </DropdownMenuLabel>
@@ -53,7 +64,8 @@
                 <DropdownMenuShortcut class="flex gap-1">
                   <icon
                     name="lucide:arrow-big-up"
-                    class="opacity-80" />
+                    class="opacity-80"
+                  />
                   A
                 </DropdownMenuShortcut>
               </DropdownMenuItem>
@@ -63,7 +75,8 @@
                 <DropdownMenuShortcut class="flex gap-1">
                   <icon
                     name="lucide:arrow-big-up"
-                    class="opacity-80" />
+                    class="opacity-80"
+                  />
                   S
                 </DropdownMenuShortcut>
               </DropdownMenuItem>
@@ -76,7 +89,8 @@
             <DropdownMenuItem class="text-2! gap-4 font-medium">
               <icon
                 name="qlementine-icons:on-off-16"
-                class="size-5 stroke-2" />
+                class="size-5 stroke-2"
+              />
               Quit
               <DropdownMenuShortcut>⌘ Q</DropdownMenuShortcut>
             </DropdownMenuItem>

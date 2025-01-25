@@ -78,3 +78,7 @@
   --tab-radius-es: -20px !important;
   --tab-radius-ee: -20px !important;
 }
+
+.glass-button {
+  @apply bg-b2/40 hover:bg-b2/95 shadow-sm  shadow-b2/20  font-normal    !text-3 border border-b2;
+}

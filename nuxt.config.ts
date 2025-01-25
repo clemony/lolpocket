@@ -1,5 +1,5 @@
+import { fileURLToPath } from 'node:url'
 import tailwindcss from '@tailwindcss/vite'
-import { fileURLToPath } from 'url'
 
 export default defineNuxtConfig({
   modules: [
@@ -45,7 +45,7 @@ export default defineNuxtConfig({
 
   vue: {
     compilerOptions: {
-      isCustomElement: (tag) => tag === 'iconify-icon',
+      isCustomElement: tag => tag === 'iconify-icon',
     },
   },
 
@@ -124,7 +124,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      //ignore: ['/dynamic'],
+      // ignore: ['/dynamic'],
     },
   },
 
@@ -142,15 +142,15 @@ export default defineNuxtConfig({
 
   alias: {
     '@': fileURLToPath(new URL('/*', import.meta.url)),
-    css: fileURLToPath(new URL('./assets/css', import.meta.url)),
-    types: fileURLToPath(new URL('./types', import.meta.url)),
-    stores: fileURLToPath(new URL('./stores', import.meta.url)),
-    composables: fileURLToPath(new URL('./composables', import.meta.url)),
-    shared: fileURLToPath(new URL('./shared', import.meta.url)),
-    supabase: fileURLToPath(new URL('./shared/supabase', import.meta.url)),
-    img: fileURLToPath(new URL('./public/img', import.meta.url)),
-    components: fileURLToPath(new URL('./components', import.meta.url)),
-    plugins: fileURLToPath(new URL('./plugins', import.meta.url)),
+    'css': fileURLToPath(new URL('./assets/css', import.meta.url)),
+    'types': fileURLToPath(new URL('./types', import.meta.url)),
+    'stores': fileURLToPath(new URL('./stores', import.meta.url)),
+    'composables': fileURLToPath(new URL('./composables', import.meta.url)),
+    'shared': fileURLToPath(new URL('./shared', import.meta.url)),
+    'supabase': fileURLToPath(new URL('./shared/supabase', import.meta.url)),
+    'img': fileURLToPath(new URL('./public/img', import.meta.url)),
+    'components': fileURLToPath(new URL('./components', import.meta.url)),
+    'plugins': fileURLToPath(new URL('./plugins', import.meta.url)),
   },
 
   compatibilityDate: '2024-11-01',

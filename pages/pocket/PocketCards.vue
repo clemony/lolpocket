@@ -1,6 +1,7 @@
 <script setup lang="ts">
-  const ps = usePocketStore();
+const ps = usePocketStore()
 </script>
+
 <template>
   <PageLayout>
     <template #header>
@@ -9,11 +10,13 @@
         <Button
           variant="outline"
           size="icon"
-          @click="useDrawer('CardDrawer')"
-          class="">
+          class=""
+          @click="useDrawerToggle('cardBack')"
+        >
           <icon
             name="material-symbols-light:stack-hexagon-outline"
-            class="size-7 shrink-0" />
+            class="size-7 shrink-0"
+          />
         </Button>
       </div>
     </template>
@@ -24,8 +27,10 @@
       <PocketCard
         v-for="(pocket, i) in ps.pockets"
         :key="pocket.key"
-        :pocket="pocket" />
+        :pocket="pocket"
+      />
     </div>
   </PageLayout>
 </template>
+
 <style scoped></style>

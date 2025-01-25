@@ -2,12 +2,12 @@
 import { VisuallyHidden } from 'radix-vue'
 
 const props = defineProps<{
-    if?: boolean
+  if?: boolean
 }>()
 </script>
 
 <template>
-    <VisuallyHidden>
-        <slot />
-    </VisuallyHidden>
+  <VisuallyHidden>
+    <slot />
+  </VisuallyHidden>
 </template>

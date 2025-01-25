@@ -1,26 +1,28 @@
 <script setup lang="ts">
-  import { TagsInputItemDelete, type TagsInputItemDeleteProps, useForwardProps } from 'radix-vue';
-  import { computed, type HTMLAttributes } from 'vue';
+import { TagsInputItemDelete, type TagsInputItemDeleteProps, useForwardProps } from 'radix-vue'
+import { computed, type HTMLAttributes } from 'vue'
 
-  const props = defineProps<TagsInputItemDeleteProps & { class?: HTMLAttributes['class'] }>();
+const props = defineProps<TagsInputItemDeleteProps & { class?: HTMLAttributes['class'] }>()
 
-  const delegatedProps = computed(() => {
-    const { class: _, ...delegated } = props;
+const delegatedProps = computed(() => {
+  const { class: _, ...delegated } = props
 
-    return delegated;
-  });
+  return delegated
+})
 
-  const forwardedProps = useForwardProps(delegatedProps);
+const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
   <TagsInputItemDelete
     v-bind="forwardedProps"
-    :class="cn('mr-1 flex rounded-sm bg-transparent', props.class)">
+    :class="cn('mr-1 flex rounded-sm bg-transparent', props.class)"
+  >
     <slot>
       <icon
         name="teenyicons:x-small-outline"
-        class="h-4 w-4" />
+        class="h-4 w-4"
+      />
     </slot>
   </TagsInputItemDelete>
 </template>

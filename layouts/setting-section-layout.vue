@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-  import type { HTMLAttributes } from 'vue'
+import type { HTMLAttributes } from 'vue'
 
-  const props = defineProps<{
-    class?: HTMLAttributes['class']
-  }>()
+const props = defineProps<{
+  class?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
@@ -13,7 +13,9 @@
     </div>
 
     <div class="border-t-b2 mt-12 flex border-t pt-10 px-2">
-      <Button size="md">Save</Button>
+      <Button size="md">
+        Save
+      </Button>
       <Grow />
     </div>
   </div>

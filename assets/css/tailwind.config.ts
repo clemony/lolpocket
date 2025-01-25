@@ -1,13 +1,14 @@
-import animate from 'tailwindcss-animate';
+import animate from 'tailwindcss-animate'
 
 /** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin');
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   plugins: [
-    plugin(function ({ addBase }) {
+    plugin(({ addBase }) => {
       addBase({
         html: { fontSize: '12px' },
-      });
+      })
     }),
     animate,
   ],
@@ -39,4 +40,4 @@ module.exports = {
       },
     },
   },
-};
+}

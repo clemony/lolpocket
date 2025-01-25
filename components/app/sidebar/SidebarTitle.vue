@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  const ts = useTempStore()
+const ts = useTempStore()
 </script>
 
 <template>
@@ -8,20 +8,25 @@
       <div class="bg-neutral rounded-md size-8 aspect-square overflow-hidden grid place-items-center text-nc shadow-sm">
         <span class="mt-px text-1">LP</span>
       </div>
-      <h4 class="grow tracking-tight">lolpocket</h4>
+      <h4 class="grow tracking-tight">
+        lolpocket
+      </h4>
       <LittleTip content="New Pocket">
         <Label
           variant="ghost"
           size="icon"
-          @click="ts.sidebarTrigger = false">
+          @click="ts.sidebarTrigger = false"
+        >
           <input
+            v-model="ts.pocketDrawerTrigger"
             type="checkbox"
             class="hidden"
             @change="console.log(ts.pocketDrawerTrigger)"
-            v-model="ts.pocketDrawerTrigger" />
+          />
           <icon
             name="add-sm"
-            class="size-6" />
+            class="size-6"
+          />
         </Label>
       </LittleTip>
     </div>

@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { useAccountStore } from './accountStore'
+
 export const useTempStore = defineStore(
   'tempStore',
   () => {
@@ -7,14 +8,13 @@ export const useTempStore = defineStore(
 
     const as = useAccountStore()
     const userOS = ref()
-    const userRole = ref()
     const sessionInfo = ref()
 
     /*     const clickType = computed(() => {
       return userOS.value == 'Mac' || 'Windows' ? 'right click' : 'force press'
     }) */
 
-    //sidebar
+    // sidebar
     const sidebarTrigger = ref(false)
 
     const pocketDrawerTrigger = ref(false)
@@ -22,6 +22,7 @@ export const useTempStore = defineStore(
     const itemDrawerTrigger = ref(false)
     const runeDrawerTrigger = ref(false)
     const champSelectDrawerTrigger = ref(false)
+    const cardDrawerTrigger = ref(false)
 
     // drawer selections
     const drawerPocket = ref(null)
@@ -35,7 +36,7 @@ export const useTempStore = defineStore(
         if ((newVal = false)) {
           selectedChampion.value = null
         }
-      }
+      },
     )
 
     watch(
@@ -44,13 +45,17 @@ export const useTempStore = defineStore(
         if ((newVal = false)) {
           selectedItem.value = null
         }
-      }
+      },
     )
     // drawer
     const drawerState = ref(false)
     const drawerType = ref()
 
-    //champs
+    // dialog
+
+    const loginOpen = ref(false)
+
+    // champs
     const champSearch = ref('')
     const champClassFilters = ref([])
     const sortChampsAZ = ref()
@@ -58,8 +63,8 @@ export const useTempStore = defineStore(
     const filterChampionTypes = ref(null)
     const filterFavoriteChamps = ref(false)
 
-    //items
-    //const items = ref([...ds.items])
+    // items
+    // const items = ref([...ds.items])
     const sortItemsAZ = ref(0)
     const sortPrice = ref(0)
     const itemSearchResult = ref()
@@ -81,45 +86,48 @@ export const useTempStore = defineStore(
       { immediate: true }
     )
  */
-    //runes
+    // runes
     const selectedRuneSetIndex = ref(0)
 
-    //spells
+    // spells
     const selectedSpell = ref()
 
     return {
       userOS,
-      userRole,
       sessionInfo,
-      //clickType,
+      // clickType,
 
-      //sidebar
+      // sidebar
       pocketDrawerTrigger,
       championDrawerTrigger,
       itemDrawerTrigger,
       runeDrawerTrigger,
       sidebarTrigger,
       champSelectDrawerTrigger,
+      cardDrawerTrigger,
 
-      //drawer
+      // drawer
 
       drawerState,
       drawerType,
 
-      //drawer selections
+      // dialog
+      loginOpen,
+
+      // drawer selections
       drawerPocket,
       selectedItem,
       selectedChampion,
       selectedRune,
 
-      //champions
+      // champions
       sortChampsAZ,
       champClassFilters,
       champSearch,
       filterChampionClass,
       filterChampionTypes,
       filterFavoriteChamps,
-      //items
+      // items
       // items,
       viewFavoriteItems,
       sortItemsAZ,
@@ -132,10 +140,10 @@ export const useTempStore = defineStore(
       filterItemStats,
       filterItemCats,
 
-      //runes
+      // runes
       selectedRuneSetIndex,
 
-      //spells
+      // spells
       selectedSpell,
     }
   },
@@ -145,5 +153,5 @@ export const useTempStore = defineStore(
       key: 'tempStore',
       omit: ['sidebarTrigger', 'drawerState'],
     },
-  }
+  },
 )

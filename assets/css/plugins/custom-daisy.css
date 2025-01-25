@@ -1,0 +1,4 @@
+@import 'tailwindcss';
+.btn-neutral {
+  @apply hover:bg-neutral/80  **:text-nc border-neutral/60 shadow-sm shadow-neutral/20 transition-all duration-300;
+}

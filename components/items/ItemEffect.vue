@@ -1,10 +1,11 @@
 <script setup lang="ts">
-  const props = defineProps<{
-    data: effect
-  }>()
+const props = defineProps<{
+  data: effect
+}>()
 
-  const effect = ref(props.data)
+const effect = ref(props.data)
 </script>
+
 <template>
   <p>
     <span class="text-4 font-semibold tracking-tight">
@@ -13,9 +14,11 @@
     </span>
     <span
       v-if="effect.description"
-      class="whitespace-break-spaces">
+      class="whitespace-break-spaces"
+    >
       {{ formatEffects(effect.description) }}
     </span>
   </p>
 </template>
+
 <style scoped></style>

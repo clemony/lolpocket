@@ -72,7 +72,7 @@ export const stats = [
       { id: 'mp5_lvl', display: 'mp 5 / lvl' },
     ],
   },
-]; /*  { id: 'range', display: 'range' },
+] /*  { id: 'range', display: 'range' },
     { id: 'ms', display: 'ms' },
     { id: 'attack_cast_time', display: 'attack cast time' },
     { id: 'attack_total_time', display: 'attack total time' },

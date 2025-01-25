@@ -1,6 +1,6 @@
 export default function getShardIcon(shard: Shard) {
-  const s =
-    shard.name == 'Adaptive Power'
+  const s
+    = shard.name == 'Adaptive Power'
       ? 'mdi:star-four-points'
       : shard.name == 'Attack Speed'
         ? 'mdi:axe'
@@ -14,6 +14,6 @@ export default function getShardIcon(shard: Shard) {
                 ? 'mdi:heart'
                 : shard.name == 'Tenacity and Slow Resist'
                   ? 'ph:spiral-light'
-                  : 'icomoon-free:diamonds';
-  return s;
+                  : 'icomoon-free:diamonds'
+  return s
 }

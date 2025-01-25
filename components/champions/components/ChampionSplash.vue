@@ -1,13 +1,13 @@
 <script setup lang="ts">
-  import type { HTMLAttributes } from 'vue'
-  const ts = useTempStore()
-  const props = defineProps<{
-    champion: Champion
-    pocket?: pocket
-    class?: HTMLAttributes['class']
-  }>()
+import type { HTMLAttributes } from 'vue'
 
-  ///console.log('💠 - champion.image.full:', props.champion)
+const props = defineProps<{
+  champion: Champion
+  pocket?: pocket
+  class?: HTMLAttributes['class']
+}>()
+const ts = useTempStore()
+/// console.log('💠 - champion.image.full:', props.champion)
 </script>
 
 <template>
@@ -19,14 +19,17 @@
       backgroundSize: '360%',
       backgroundRepeat: 'none',
       backgroundPosition: 'center top 20%',
-    }">
+    }"
+  >
     <input
-      type="checkbox"
       v-model="ts.championDrawerTrigger"
-      class="hidden" />
+      type="checkbox"
+      class="hidden"
+    />
 
     <div
-      class="size-full max-w-full overflow-hidden opacity-0 pointer-events-none group-hover:opacity-100 bg-neutral/50 text-nc transition-all duration-300 p-4 text-10 break-all hyphens-manual tracking-tighter font-bold flex flex-wrap leading-none text-balanced items-end whitespace-break-spaces">
+      class="size-full max-w-full overflow-hidden opacity-0 pointer-events-none group-hover:opacity-100 bg-neutral/50 text-nc transition-all duration-300 p-4 text-10 break-all hyphens-manual tracking-tighter font-bold flex flex-wrap leading-none text-balanced items-end whitespace-break-spaces"
+    >
       {{
         champion.name
           .replace('Ambessa', 'Am-\nbessa')

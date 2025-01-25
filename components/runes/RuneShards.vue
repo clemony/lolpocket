@@ -1,30 +1,30 @@
 <script setup lang="ts">
-  const ps = usePocketStore();
-  const ds = useDataStore();
-  const ts = useTempStore();
+const props = defineProps<{
+  pocket?: pocket
+  selected?: number
 
-  const props = defineProps<{
-    pocket?: pocket;
-    selected?: number;
+  selectedShard?: number
+}>()
+const ps = usePocketStore()
+const ds = useDataStore()
+const ts = useTempStore()
 
-    selectedShard?: number;
-  }>();
+const pocket = ref(getPocket(props.pocket.key))
 
-  const pocket = ref(getPocket(props.pocket.key));
+const runeIndex = ref(props.selected)
 
-  const runeIndex = ref(props.selected);
-
-  const set = computed(() => {
-    return pocket.value.runes[0].runeSets[runeIndex.value];
-  });
+const set = computed(() => {
+  return pocket.value.runes[0].runeSets[runeIndex.value]
+})
 </script>
 
 <template>
   <div
+    :key="set.key"
     class="flex justify-center"
-    :key="set.key">
+  >
     <div class="grid max-w-64 grid-cols-3 place-items-center gap-x-12 gap-y-7">
-   <!--    <Tooltip
+      <!--    <Tooltip
         dark
         v-for="shard in ds.shards"
         :key="shard.name + shard.slotID"

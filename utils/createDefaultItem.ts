@@ -12,5 +12,5 @@ export default function createDefaultItem(): DefaultItem {
     wiki: '',
     id: 0,
     count: 0,
-  };
+  }
 }

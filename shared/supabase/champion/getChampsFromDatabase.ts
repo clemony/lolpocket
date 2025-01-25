@@ -1,38 +1,39 @@
-export const getChampsFromDatabase = async () => {
-  const supabase = useSupabaseClient();
+export async function getChampsFromDatabase() {
+  const supabase = useSupabaseClient()
 
   try {
-    const { data, error } = await supabase.from('league_data').select('champion_data');
+    const { data, error } = await supabase.from('league_data').select('champion_data')
 
     if (error) {
-      console.error('Error fetching JSONB object:', error);
-      return null;
+      console.error('Error fetching JSONB object:', error)
+      return null
     }
-    const champdata = Object.values(data[0]);
-    console.log('💠 - getChampsFromDatabase - champdata:', champdata);
-    const b = manageObject(champdata[0]);
-    const c = b.sort((a, b) => a.name.localeCompare(b.name));
-    const d = c.filter((champion) => champion.name != 'Mega Gnar');
-    const e = d.filter((champion) => champion.name != 'Kled & Skaarl');
-    useDataStore().champions = [...e];
-    console.log('💠 - getChampsFromDatabase -useDataStore().champions:', useDataStore().champions);
-  } catch (error) {
-    console.error('Error processing data:', error);
+    const champdata = Object.values(data[0])
+    console.log('💠 - getChampsFromDatabase - champdata:', champdata)
+    const b = manageObject(champdata[0])
+    const c = b.sort((a, b) => a.name.localeCompare(b.name))
+    const d = c.filter(champion => champion.name != 'Mega Gnar')
+    const e = d.filter(champion => champion.name != 'Kled & Skaarl')
+    useDataStore().champions = [...e]
+    console.log('💠 - getChampsFromDatabase -useDataStore().champions:', useDataStore().champions)
   }
-};
+  catch (error) {
+    console.error('Error processing data:', error)
+  }
+}
 
-export const manageObject = (nestedData: any): Champion[] => {
-  let championsArray: Champion[] = [];
+export function manageObject(nestedData: any): Champion[] {
+  const championsArray: Champion[] = []
 
   // Check if the data has the expected structure
   if (!nestedData || typeof nestedData !== 'object') {
-    console.error('Unexpected data structure:', nestedData);
-    return championsArray;
+    console.error('Unexpected data structure:', nestedData)
+    return championsArray
   }
 
   // Loop through each champion (champion name) in the nested data
   Object.keys(nestedData).forEach((name) => {
-    const champion = nestedData[name];
+    const champion = nestedData[name]
 
     // Check if champion is an object and contains the expected properties
     if (champion && typeof champion === 'object') {
@@ -64,11 +65,12 @@ export const manageObject = (nestedData: any): Champion[] => {
         title: champion.title || null,
         toughness: champion.toughness || null,
         utility: champion.utility || null,
-      });
-    } else {
-      console.error('Champion is not an object:', name);
+      })
     }
-  });
+    else {
+      console.error('Champion is not an object:', name)
+    }
+  })
 
-  return championsArray;
-};
+  return championsArray
+}

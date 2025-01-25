@@ -5,6 +5,9 @@ export const useAccountStore = defineStore(
   () => {
     const ts = useTempStore()
 
+    const userRole = ref()
+    const userId = ref()
+
     const themeClass = ref('data-theme-light')
     const dataTheme = ref('light')
     const accents = ref('light')
@@ -31,16 +34,18 @@ export const useAccountStore = defineStore(
 
     const favoriteChamps = ref<Champion[]>([])
 
-    //items
+    // items
     const favoriteItems = ref<Item[]>([])
     const itemSets = ref<ItemSet[]>([])
 
     return {
-      //account
+      // account
+      userRole,
+      userId,
       riotAccountLinked,
       riotAccount,
       userFolders,
-      //settings
+      // settings
       themeClass,
       dataTheme,
       accents,
@@ -49,7 +54,7 @@ export const useAccountStore = defineStore(
       reducedMotion,
       pocketPreview,
 
-      //sidebar
+      // sidebar
       mobileOpen,
       sidebarWidth,
 
@@ -58,10 +63,10 @@ export const useAccountStore = defineStore(
 
       cardBack,
 
-      //champs
+      // champs
       favoriteChamps,
 
-      //items
+      // items
       favoriteItems,
       itemSets,
     }
@@ -71,9 +76,9 @@ export const useAccountStore = defineStore(
       storage: piniaPluginPersistedstate.localStorage(),
       key: 'accountStore',
       afterHydrate: (ctx) => {
-        //const as = useAccountStore();
+        // const as = useAccountStore();
         // ts.drawerState = false
       },
     },
-  }
+  },
 )

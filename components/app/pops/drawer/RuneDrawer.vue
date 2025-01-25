@@ -1,8 +1,9 @@
 <script setup lang="ts">
-  import { formatDataText } from 'components/runes/data/format'
-  const ts = useTempStore()
+import { formatDataText } from 'components/runes/data/format'
 
-  const rune = ts.selectedRune
+const ts = useTempStore()
+
+const rune = ts.selectedRune
 </script>
 
 <!-- This will be the content of the popover -->
@@ -12,13 +13,15 @@
       id="champ-drawer"
       v-model="ts.runeDrawerTrigger"
       type="checkbox"
-      class="drawer-toggle" />
+      class="drawer-toggle"
+    />
 
     <div class="drawer-side z-60">
       <label
         for="champ-drawer"
         aria-label="close sidebar"
-        class="drawer-overlay !bg-black/70"></label>
+        class="drawer-overlay !bg-black/70"
+      ></label>
 
       <div class="backdrop-blur-md min-h-full w-100 bg-b1 shadow-pretty overflow-hidden rounded-r-md inset-shadow-sm relative">
         <div class="relative grid w-110 justify-center overscroll-none px-6 py-5">
@@ -27,8 +30,9 @@
               <LoadImg
                 :key="rune.name"
                 :url="rune.icon"
-                :alt="rune.name + ' Image'"
-                class="'ring-b2 ring-offset-b3 pointer-events-none size-20 rounded-full bg-black ring-1 ring-offset-1" />
+                :alt="`${rune.name} Image`"
+                class="'ring-b2 ring-offset-b3 pointer-events-none size-20 rounded-full bg-black ring-1 ring-offset-1"
+              />
             </div>
 
             <div class="grid h-full grid-cols-1">
@@ -42,11 +46,13 @@
                 class="flex items-center gap-2 capitalize underline-offset-2 hover:underline"
                 :href="getWikiLink(rune.name)"
                 target="_blank"
-                alt="link to league wiki">
+                alt="link to league wiki"
+              >
                 Official Wiki
                 <icon
                   name="mingcute:external-link-line"
-                  class="mb-[2px] !size-4.25 shrink-0" />
+                  class="mb-[2px] !size-4.25 shrink-0"
+                />
               </a>
             </div>
           </div>
@@ -54,13 +60,15 @@
           <!-------------------------------⟢ Stats ⟣-------------------------------->
 
           <div
+            :key="`${rune.name}2`"
             class="relative"
-            :key="rune.name + '2'">
+          >
             <div
               id="runeStats"
-              :key="rune.name + '3'"
+              :key="`${rune.name}3`"
               class="max-w-105 pr-10 text-pretty whitespace-pre-line"
-              v-html="formatDataText(rune.longDesc)"></div>
+              v-html="formatDataText(rune.longDesc)"
+            ></div>
 
             <!--       <p class="mt-20 text-wrap">
                 {{ rune.longDesc }}

@@ -1,38 +1,43 @@
 <script setup lang="ts">
-  const ts = useTempStore()
+const props = defineProps<{
+  types: Array<any> | null
+  bg?: boolean
+}>()
 
-  const props = defineProps<{
-    types: Array<any> | null
-    bg?: boolean
-  }>()
+const emit = defineEmits(['update:model'])
 
-  const selectedTypes = ref(null)
+const ts = useTempStore()
 
-  const emit = defineEmits(['update:model'])
-  function handleReset() {
-    selectedTypes.value = null
-    emit('update:model', selectedTypes.value)
-  }
+const selectedTypes = ref(null)
+
+function handleReset() {
+  selectedTypes.value = null
+  emit('update:model', selectedTypes.value)
+}
 </script>
+
 <template>
   <form class="mb-3 -ml-2 filter">
     <input
-      @click="handleReset"
       class="btn btn-square text-5 !mr-2 rounded-md font-normal"
       type="reset"
-      value="×" />
+      value="×"
+      @click="handleReset"
+    />
     <input
       v-for="type in types"
+      v-model="selectedTypes"
       class="btn checked:bg-neutral checked:border-neutral checked:shadow-neutral/20 text-2 relative z-0 mr-0 rounded-md font-medium tracking-normal capitalize checked:shadow-sm"
       :class="{
         '!mr-3': selectedTypes == null || selectedTypes == undefined,
       }"
-      v-model="selectedTypes"
-      @change="emit('update:model', selectedTypes)"
       type="radio"
       :value="type"
       name="item-types"
-      :aria-label="type" />
+      :aria-label="type"
+      @change="emit('update:model', selectedTypes)"
+    />
   </form>
 </template>
+
 <style scoped></style>

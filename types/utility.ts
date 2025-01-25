@@ -1,4 +1,5 @@
 import type { JwtPayload } from 'jwt-decode'
+
 declare global {
   interface AuthRoleJwtPayload extends JwtPayload {
     app_metadata: {

@@ -1,40 +1,26 @@
 <script setup lang="ts">
-  import type { HTMLAttributes } from 'vue'
-  import { summoner } from 'shared/data/summonerData'
+const props = defineProps<{
+  pocket?: pocket
+}>()
 
-  const as = useAccountStore()
-  const ts = useTempStore()
+const pocket = ref(props.pocket)
 
-  const props = defineProps<{
-    pocket?: pocket
-  }>()
+const folder = computedAsync(() => {
+  return pocket.value.inFolder
+})
 
-  const pocket = ref(props.pocket)
-
-  const folder = computedAsync(() => {
-    return pocket.value.inFolder
-  })
-
-  const name = computedAsync(() => {
-    return pocket.value.name
-  })
+const name = computedAsync(() => {
+  return pocket.value.name
+})
 </script>
+
 <template>
-  <header class="w-full flex flex-nowrap h-23 shrink-0 flex-col gap-5 pb-2 pt-1 justify-start items-start">
+  <header class="w-full !h-[var(--page-header-height)]  flex flex-nowrap shrink-0 flex-col px-1 gap-5 py-2 justify-end items-start">
     <div class="breadcrumbs text-2">
       <ul class="flex items-center ml-0.5">
-        <!--           <li>
-            <a class="capitalize inline-flex items-center !gap-2.5">
-              <img
-                :src="summoner.icon"
-                class="size-5 rounded-full" />
-              {{ as.riotAccount.name }}
-            </a>
-          </li> -->
         <li>
           <a>
-            <span class="inline-flex items-center gap-2.5"> <icon name="formkit:folder" />Pocket Folders </span></a
-          >
+            <span class="inline-flex items-center gap-2.5"> <icon name="formkit:folder" />Pocket Folders </span></a>
         </li>
         <li>
           <span class="inline-flex items-center !gap-2.5 capitalize">
@@ -48,8 +34,11 @@
       <!--  <PocketIcon
         :pocket="props.pocket"
         class="size-7.25 rounded-full overflow-hidden -ml-1" /> -->
-      <h1 class="!text-8 drop-shadow-text w-full tracking-tight truncate">{{ name }}</h1>
+      <h1 class="!text-8 drop-shadow-text w-full tracking-tight truncate">
+        {{ name }}
+      </h1>
     </div>
   </header>
 </template>
+
 <style scoped></style>

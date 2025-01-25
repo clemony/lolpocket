@@ -34,9 +34,7 @@
   --color-error: var(--color-domination);
   --color-error-content: var(--color-domination-light);
 
-  --radius-badge: 0.5rem;
-  --radius-btn: 0.5rem;
-  --radius-box: 0.5rem;
-  --spacing-button-border: 1px;
-  --spacing-tab-border: 1px;
+  --radius-selector: var(--rounded-sm) !important;
+  --radius-field: var(--rounded-md) !important;
+  --radius-box: var(--rounded-xl) !important;
 }

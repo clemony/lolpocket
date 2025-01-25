@@ -1,11 +1,11 @@
 export default function createDefaultShard(): {
-  name: string;
-  slotID: number;
-  slotName: string;
-  type: string;
-  icon: string;
-  stats: string;
-  color: string;
+  name: string
+  slotID: number
+  slotName: string
+  type: string
+  icon: string
+  stats: string
+  color: string
 } {
   return {
     name: 'empty',
@@ -15,5 +15,5 @@ export default function createDefaultShard(): {
     type: '',
     icon: 'oui:shard',
     color: 'empty',
-  };
+  }
 }

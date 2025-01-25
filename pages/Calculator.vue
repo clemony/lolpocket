@@ -1,4 +1,7 @@
 <script setup lang="ts"></script>
 
-<template>hi</template>
+<template>
+  hi
+</template>
+
 <style></style>

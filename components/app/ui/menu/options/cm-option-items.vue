@@ -1,9 +1,9 @@
 <script setup lang="ts">
-  const props = defineProps<{
-    pocket: pocket;
-  }>();
+const props = defineProps<{
+  pocket: pocket
+}>()
 
-  const pocket = props.pocket;
+const pocket = props.pocket
 </script>
 
 <template>
@@ -13,15 +13,18 @@
       :class="{
         '[&_svg]:last:hidden': pocket.items[0].itemSets.length <= 1,
         'opacity-50': pocket.items[0].itemSets.length == 0,
-      }">
+      }"
+    >
       <icon
         v-if="pocket.items[0].itemSets"
         name="iconoir:star"
-        class="size-3.5" />
+        class="size-3.5"
+      />
       <icon
         v-else
         name="iconoir:star-dashed"
-        class="size-3.5" />
+        class="size-3.5"
+      />
       Set
     </ContextMenuSubTrigger>
 
@@ -31,19 +34,23 @@
           <icon
             v-if="pocket.items[0].starred == index"
             name="teenyicons:tick-outline"
-            class="mr-2" />
+            class="mr-2"
+          />
           <span
             v-else
-            class="w-5"></span>
+            class="w-5"
+          ></span>
           <input
+            v-model="pocket.items[0].starred"
             type="radio"
             class="hidden"
             :value="set"
-            v-model="pocket.items[0].starred" />
+          />
           <div v-for="(item, index) in set.items">
             <img
               :src="`/img/items/${item.id}.webp`"
-              class="size-5 rounded-xs" />
+              class="size-5 rounded-xs"
+            />
           </div>
         </label>
       </ContextMenuItem>

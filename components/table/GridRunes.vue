@@ -1,38 +1,38 @@
 <script setup lang="ts">
-  const props = defineProps<{
-    params: {
-      data: {
-        name: string;
-        items: Item[];
-        pinned: boolean;
-        key: string;
-        runes: {
-          runes: Rune[];
-          starred: number;
-        };
-      };
-      api: any;
-      node: any;
-    };
-  }>();
-  const as = useAccountStore();
-
-  const ps = usePocketStore();
-  const pocket = getPocket(props.params.data.key);
-  const runeSet = computed(() => {
-    if (!pocket) {
-      return;
+const props = defineProps<{
+  params: {
+    data: {
+      name: string
+      items: Item[]
+      pinned: boolean
+      key: string
+      runes: {
+        runes: Rune[]
+        starred: number
+      }
     }
-    return pocket.runes[0].runeSets[pocket.runes[0].starred];
-  });
+    api: any
+    node: any
+  }
+}>()
+const as = useAccountStore()
 
-  const keystone = computed(() => {
-    if (runeSet.value && keystone) {
-      const stone = runeSet.value.primary.keystone;
+const ps = usePocketStore()
+const pocket = getPocket(props.params.data.key)
+const runeSet = computed(() => {
+  if (!pocket) {
+    return
+  }
+  return pocket.runes[0].runeSets[pocket.runes[0].starred]
+})
 
-      return stone;
-    }
-  });
+const keystone = computed(() => {
+  if (runeSet.value && keystone) {
+    const stone = runeSet.value.primary.keystone
+
+    return stone
+  }
+})
 </script>
 
 <template>
@@ -40,23 +40,27 @@
   <PocketMenu
     v-if="pocket"
     :pocket="pocket"
-    type="context">
+    type="context"
+  >
     <div class="flex size-full items-center justify-center gap-3">
       <template v-if="keystone && keystone.name != 'empty' && runeSet">
         <NuxtLink
           :to="`/pocket/${pocket.key}/runes`"
           class="relative grid aspect-square size-14! shrink-0 cursor-pointer place-items-center items-center rounded-full bg-linear-to-br from-transparent to-75% shadow-xs"
-          :class="{}">
+          :class="{}"
+        >
           <div class="from-b1/90 to-b1/40 grid size-full place-items-center rounded-full bg-linear-to-br p-1 backdrop-blur-md">
             <img
               :src="keystone.icon"
-              class="drop-shadow-softer shrink-0 object-contain transition-all duration-200 hover:drop-shadow-sm" />
+              class="drop-shadow-softer shrink-0 object-contain transition-all duration-200 hover:drop-shadow-sm"
+            />
           </div>
         </NuxtLink>
       </template>
       <Placeholder
         v-else
-        class="size-14" />
+        class="size-14"
+      />
 
       <!-- <template
                     v-if="
@@ -88,7 +92,8 @@
                 </template> -->
       <Placeholder
         v-else
-        :size="41" />
+        :size="41"
+      />
     </div>
 
     <!--   <CmOptionRunes :pocket="pocket" /> -->

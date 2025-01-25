@@ -1,92 +1,30 @@
 @import 'tailwindcss';
 
 @utility color-chip {
-    @apply flex aspect-square size-9 items-center justify-center rounded-md shadow-sm;
+  @apply flex aspect-square size-9 items-center justify-center rounded-md shadow-sm;
 }
 
 @utility mask-left {
-    mask-image: linear-gradient(to right, black 50%, transparent);
+  mask-image: linear-gradient(to right, black 50%, transparent);
 }
 
 @utility mask-right {
-    mask-image: linear-gradient(to left, black 50%, transparent);
+  mask-image: linear-gradient(to left, black 50%, transparent);
 }
 
 @utility mask-top {
-    mask-image: linear-gradient(to top, black 50%, transparent);
+  mask-image: linear-gradient(to top, black 50%, transparent);
 }
 
 @utility mask-bottom {
-    mask-image: linear-gradient(to bottom, black 50%, transparent);
+  mask-image: linear-gradient(to bottom, black 50%, transparent);
 }
 
 @utility scrollbar-hide {
-    &::-webkit-scrollbar {
-        display: none;
-    }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 @utility join-item {
-    @apply border-b2 border;
-}
-
-@utility ghostClass {
-    @apply border-b2 bg-b2/30 aspect-square size-16 cursor-pointer items-center justify-center gap-2 self-center rounded-md border opacity-70 shadow-xs;
-}
-
-@utility dragClass {
-    @apply border-b2 bg-b2/30 aspect-square size-16 cursor-pointer items-center justify-center gap-2 self-center rounded-md border opacity-70 shadow-xs;
-}
-
-@utility drag-draggable {
-    @apply flex h-auto max-h-full w-full flex-wrap items-center gap-3.5 overflow-y-scroll;
-}
-@utility drag-label {
-    @apply !relative z-0 flex items-center justify-center overflow-auto rounded-lg p-[2px] ring-1 shadow-sm ring-transparent;
-}
-@utility drag-wrapper {
-    @apply border-b3 pointer-events-none aspect-square overflow-hidden rounded-lg border bg-contain select-none;
-}
-
-@utility drag-img {
-    @apply pointer-events-none bg-cover;
-}
-
-/* .champion {
-  @utility drag-label {
-    @apply max-w-[72px] max-h-[72px];
-  }
-  @utility drag-wrapper {
-    @apply max-w-[68px]  min-w-[60px];
-  }
-  @utility drag-img {
-    @apply scale-[115%];
-  }
-} */
-
-/* .ghosty {
-    @apply bg-b2/30 !border-b3 aspect-square rounded-md border p-5 shadow-[inset_1px_1px_2px_2px_#00000008] hover:ring-0;
-
-    & @utility drag-label,
-    & @utility drag-wrapper {
-        @apply !border-transparent !ring-transparent !ring-offset-transparent;
-    }
-    & @utility drag-label {
-        @apply opacity-100;
-    }
-    & @utility drag-wrapper {
-        @apply rounded-none bg-contain opacity-20;
-    }
-    & @utility drag-img {
-        @apply invisible hidden opacity-0 shadow-none ring-transparent ring-offset-transparent;
-    }
-} */
-
-@utility setDrag {
-    @apply bg-b1 border-b3 rounded-xl border;
-}
-
-@utility drag-clone {
-    opacity: 0.5;
-    pointer-events: none;
-    position: absolute;
+  @apply border-b2 border;
 }

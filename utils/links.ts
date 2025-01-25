@@ -186,4 +186,4 @@ export const links: any = {
       ],
     },
   ],
-};
+}

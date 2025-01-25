@@ -1,3 +1,3 @@
 export const ts = computedAsync(async () => {
-  return await useTempStore();
-}, null);
+  return await useTempStore()
+}, null)

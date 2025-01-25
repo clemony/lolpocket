@@ -1,11 +1,11 @@
 export default function makeGradient(from: string, fromOpacity: number, to: string, toOpacity: number, direction: string) {
-  let a = 'from-' + from;
-  a = fromOpacity ? a + '/' + fromOpacity : a;
+  let a = `from-${from}`
+  a = fromOpacity ? `${a}/${fromOpacity}` : a
 
-  let b = 'to-' + to;
-  b = fromOpacity ? b + '/' + toOpacity : b;
+  let b = `to-${to}`
+  b = fromOpacity ? `${b}/${toOpacity}` : b
 
-  const c = 'bg-gradient-to-' + direction;
+  const c = `bg-gradient-to-${direction}`
 
-  return a + ' ' + b + ' ' + c;
+  return `${a} ${b} ${c}`
 }

@@ -1,11 +1,12 @@
 <script lang="ts" setup>
-  import type { HTMLAttributes } from 'vue'
-  const props = defineProps<{
-    title: string
-    description: string
-    noContent?: boolean
-    contentClass?: HTMLAttributes['class']
-  }>()
+import type { HTMLAttributes } from 'vue'
+
+const props = defineProps<{
+  title: string
+  description: string
+  noContent?: boolean
+  contentClass?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
@@ -13,7 +14,9 @@
     <CardHeader class="w-full grow">
       <CardTitle class="flex items-center gap-6 drop-shadow-text">
         <slot name="header-icon" />
-        <h4 class="capitalize grow items-center">{{ props.title }}</h4>
+        <h4 class="capitalize grow items-center">
+          {{ props.title }}
+        </h4>
         <slot name="header-badge" />
       </CardTitle>
       <CardDescription>{{ props.description }}</CardDescription>

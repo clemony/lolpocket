@@ -23,8 +23,8 @@ export const columnDefs = ref([
     minWidth: 85,
     cellClass: 'm-0! px-2',
     filterValueGetter: (params) => {
-      const name = params.data.name.split(' ');
-      return name;
+      const name = params.data.name.split(' ')
+      return name
     },
   },
   {
@@ -32,8 +32,8 @@ export const columnDefs = ref([
     field: 'header', // The field in the row data
     filter: 'agTextColumnFilter', // Set the text filter
     filterValueGetter: (params) => {
-      const champions = params.data.champions[0].champions;
-      return champions.map((champion) => champion.name).join(', ');
+      const champions = params.data.champions[0].champions
+      return champions.map(champion => champion.name).join(', ')
     },
     width: 200,
     maxWidth: 300,
@@ -43,9 +43,9 @@ export const columnDefs = ref([
 
     valueFormatter: (params) => {
       if (params.value && params.value.champions) {
-        return params.value.champions.map((champion) => champion.name).join(', ');
+        return params.value.champions.map(champion => champion.name).join(', ')
       }
-      return '';
+      return ''
     },
   },
   {
@@ -56,15 +56,15 @@ export const columnDefs = ref([
     cellRenderer: 'pocketTableItems',
     filterValueGetter: (params) => {
       if (params.data.items[0].itemSets[0]) {
-        const items = params.data.items[0].itemSets[0].items;
-        return items.map((item) => item.name).join(', ');
+        const items = params.data.items[0].itemSets[0].items
+        return items.map(item => item.name).join(', ')
       }
     },
     valueFormatter: (params) => {
       if (params.value && params.value.itemSets[0]) {
-        return params.value.itemSets[0].items.map((item) => item.name).join(', ');
+        return params.value.itemSets[0].items.map(item => item.name).join(', ')
       }
-      return '';
+      return ''
     },
   },
   {
@@ -82,17 +82,17 @@ export const columnDefs = ref([
     cellRenderer: 'tableDate',
     cellRendererParams: { type: 'updated' },
     valueFormatter: (params) => {
-      const { date, time, patch } = params.value;
-      return `${date} - ${time} (Patch: ${patch})`;
+      const { date, time, patch } = params.value
+      return `${date} - ${time} (Patch: ${patch})`
     },
     filterValueGetter: (params) => {
-      const dateObj = params.data.dateUpdated[0];
-      return `${dateObj.date}, ${dateObj.patch}, ${dateObj.time}`;
+      const dateObj = params.data.dateUpdated[0]
+      return `${dateObj.date}, ${dateObj.patch}, ${dateObj.time}`
     },
   },
 
   {
-    //⟳
+    // ⟳
     headerName: 'Created',
     field: 'dateCreated',
     width: 100,
@@ -101,12 +101,12 @@ export const columnDefs = ref([
     cellRenderer: 'tableDate',
     cellRendererParams: { type: 'created' },
     valueFormatter: (params) => {
-      const { date, time, patch } = params.value;
-      return `${date} - ${time} (Patch: ${patch})`;
+      const { date, time, patch } = params.value
+      return `${date} - ${time} (Patch: ${patch})`
     },
     filterValueGetter: (params) => {
-      const dateObj = params.data.dateCreated[0];
-      return `${dateObj.date}, ${dateObj.patch}, ${dateObj.time}`;
+      const dateObj = params.data.dateCreated[0]
+      return `${dateObj.date}, ${dateObj.patch}, ${dateObj.time}`
     },
   },
 
@@ -117,19 +117,19 @@ export const columnDefs = ref([
     minWidth: 50,
     cellRenderer: 'TableTags',
     filterValueGetter: (params) => {
-      const tags = params.data.tags;
-      return tags;
+      const tags = params.data.tags
+      return tags
     },
   },
-]);
+])
 
 export const defaultColDef = {
   flex: 1,
   cellClass: ['flex items-center p-0 m-0'],
   sortable: true,
-  //filter: false,
+  // filter: false,
   resizable: true,
-};
+}
 
 export const iconColDef = {
   /* width: 100,
@@ -149,7 +149,7 @@ export const iconColDef = {
               </div>
             </div>`,
   }, */
-};
+}
 
 export const rowSelectionOptions = {
   mode: 'multiple',
@@ -157,48 +157,49 @@ export const rowSelectionOptions = {
   enableClickSelection: false,
   hideDisabledCheckboxes: true,
   headerCheckbox: false,
-};
+}
 
 export const autoSizeStrategy = {
   type: 'fitGridWidth',
-};
+}
 
-export const getRowId = (params) => params.data.key;
+export const getRowId = params => params.data.key
 
-export const quickFilterParser = (quickFilter) => {
-  let quickFilterParts: string[] = [];
-  let lastSpaceIndex = -1;
+export function quickFilterParser(quickFilter) {
+  const quickFilterParts: string[] = []
+  let lastSpaceIndex = -1
 
-  const isQuote = (index) => quickFilter[index] === '"';
+  const isQuote = index => quickFilter[index] === '"'
 
   const getQuickFilterPart = (lastSpaceIndex: number, currentIndex: number): string => {
-    const startsWithQuote = isQuote(lastSpaceIndex + 1);
-    const endsWithQuote = isQuote(currentIndex - 1);
-    const startIndex = startsWithQuote && endsWithQuote ? lastSpaceIndex + 2 : lastSpaceIndex + 1;
-    const endIndex = startsWithQuote && endsWithQuote ? currentIndex - 1 : currentIndex;
-    return quickFilter.slice(startIndex, endIndex);
-  };
+    const startsWithQuote = isQuote(lastSpaceIndex + 1)
+    const endsWithQuote = isQuote(currentIndex - 1)
+    const startIndex = startsWithQuote && endsWithQuote ? lastSpaceIndex + 2 : lastSpaceIndex + 1
+    const endIndex = startsWithQuote && endsWithQuote ? currentIndex - 1 : currentIndex
+    return quickFilter.slice(startIndex, endIndex)
+  }
   for (let i = 0; i < quickFilter.length; i++) {
-    const char = quickFilter[i];
+    const char = quickFilter[i]
     if (char === ' ') {
       if (!isQuote(lastSpaceIndex + 1) || isQuote(i - 1)) {
-        quickFilterParts.push(getQuickFilterPart(lastSpaceIndex, i));
-        lastSpaceIndex = i;
+        quickFilterParts.push(getQuickFilterPart(lastSpaceIndex, i))
+        lastSpaceIndex = i
       }
     }
   }
   if (lastSpaceIndex !== quickFilter.length - 1) {
-    quickFilterParts.push(getQuickFilterPart(lastSpaceIndex, quickFilter.length));
+    quickFilterParts.push(getQuickFilterPart(lastSpaceIndex, quickFilter.length))
   }
-  return quickFilterParts;
-};
+  return quickFilterParts
+}
 
-export const quickFilterMatcher = (quickFilterParts, rowQuickFilterAggregateText) => {
-  let result;
+export function quickFilterMatcher(quickFilterParts, rowQuickFilterAggregateText) {
+  let result
   try {
-    result = quickFilterParts.every((part) => rowQuickFilterAggregateText.match(part));
-  } catch {
-    result = false;
+    result = quickFilterParts.every(part => rowQuickFilterAggregateText.match(part))
   }
-  return result;
-};
+  catch {
+    result = false
+  }
+  return result
+}

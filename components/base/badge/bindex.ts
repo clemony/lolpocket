@@ -1,6 +1,6 @@
-import { cva, type VariantProps } from 'class-variance-authority';
+import { cva, type VariantProps } from 'class-variance-authority'
 
-//export { default as Badge } from './Badge.vue'
+// export { default as Badge } from './Badge.vue'
 
 export const badgeVariants = cva('inline-flex items-center rounded-md border px-2.5 py-0.5 text-2  transition-colors   ', {
   variants: {
@@ -25,6 +25,6 @@ export const badgeVariants = cva('inline-flex items-center rounded-md border px-
   defaultVariants: {
     variant: 'default',
   },
-});
+})
 
-export type BadgeVariants = VariantProps<typeof badgeVariants>;
+export type BadgeVariants = VariantProps<typeof badgeVariants>

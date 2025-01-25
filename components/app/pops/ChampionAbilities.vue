@@ -1,15 +1,15 @@
 <script setup lang="ts">
-  const props = defineProps<{
-    champion: Champion;
-  }>();
+const props = defineProps<{
+  champion: Champion
+}>()
 
-  const keysToDisplay = ['COST:', 'COOLDOWN:', 'STATIC COOLDOWN:'];
-  const modelValue = ref();
-  const filteredData = (data: Record<string, string>) => {
-    return Object.fromEntries(Object.entries(data).filter(([key]) => keysToDisplay.includes(key)));
-  };
+const keysToDisplay = ['COST:', 'COOLDOWN:', 'STATIC COOLDOWN:']
+const modelValue = ref()
+function filteredData(data: Record<string, string>) {
+  return Object.fromEntries(Object.entries(data).filter(([key]) => keysToDisplay.includes(key)))
+}
 
-  const tabModel = ref(0);
+const tabModel = ref(0)
 </script>
 
 <template>
@@ -95,7 +95,7 @@
 
 <style scoped>
   kbd {
-    width: 1.5rem;
-    font-family: var(--mono);
-  }
+  width: 1.5rem;
+  font-family: var(--mono);
+}
 </style>

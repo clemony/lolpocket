@@ -1,32 +1,37 @@
 <script setup lang="ts">
-  const as = useAccountStore();
+const as = useAccountStore()
 
-  const ps = usePocketStore();
+const ps = usePocketStore()
 
-  const list = [
-    { name: 'All', id: 'tableAll', icon: '', link: 'table' },
-    {
-      name: 'Pinned',
-      id: 'tablePinned',
-      icon: 'teenyicons:pin-alt-outline',
-      link: 'home',
-    },
-    { name: 'this tab', link: 'home' },
-  ];
+const list = [
+  { name: 'All', id: 'tableAll', icon: '', link: 'table' },
+  {
+    name: 'Pinned',
+    id: 'tablePinned',
+    icon: 'teenyicons:pin-alt-outline',
+    link: 'home',
+  },
+  { name: 'this tab', link: 'home' },
+]
 </script>
+
 <template>
   <PageLayout class="pb-4">
-    <template #header>Pockets</template>
+    <template #header>
+      Pockets
+    </template>
 
     <template #header-center>
       <Button
         variant="ghost"
         class="text-3 -mb-1"
-        @click="useDrawer('PocketDrawer')">
+        @click="useDrawerToggle('pocket')"
+      >
         New Pocket
         <icon
           name="teenyicons:add-small-outline"
-          class="mb-px -ml-1 size-4.5" />
+          class="mb-px -ml-1 size-4.5"
+        />
       </Button>
 
       <!--             <VDropdown
@@ -53,18 +58,22 @@
           <MoveButton
             :to="ps.trashPockets"
             text="Trash"
-            class="">
+            class=""
+          >
             <icon
               name="fluent:bin-recycle-24-regular"
-              class="size-7! shrink-0 scale-x-[115%]" />
+              class="size-7! shrink-0 scale-x-[115%]"
+            />
           </MoveButton>
 
           <MoveButton
             :to="ps.archivePockets"
-            text="Archive">
+            text="Archive"
+          >
             <icon
               name="fluent:archive-32-regular"
-              class="size-[22px]" />
+              class="size-[22px]"
+            />
           </MoveButton>
         </div>
       </span>
@@ -74,11 +83,13 @@
     <div class="flex">
       <div
         v-for="tab in list"
-        class="size-fit">
+        class="size-fit"
+      >
         <NuxtLink
           :to="{ name: tab.link }"
           class="relative flex h-12 w-44 items-center justify-center"
-          exactActiveClass="tabby-right bg-b1 before:absolute before:shadow-pretty border-x-b2 border-t-b2 border-b-0 rounded-t-xl border shadow-warm">
+          exact-active-class="tabby-right bg-b1 before:absolute before:shadow-pretty border-x-b2 border-t-b2 border-b-0 rounded-t-xl border shadow-warm"
+        >
           {{ tab.name }}
         </NuxtLink>
       </div>

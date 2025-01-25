@@ -24,7 +24,7 @@ export const categories = ref<Category[]>([
       'Lee Sin',
       'Olaf',
       'Pantheon',
-      "Rek'Sai",
+      'Rek\'Sai',
       'Renekton',
       'Rengar',
       'Vi',
@@ -41,7 +41,7 @@ export const categories = ref<Category[]>([
   {
     id: 'artillery mage',
     checked: false,
-    champions: ['Hwei', 'Jayce', 'Lux', 'Varus', "Vel'Koz", 'Xerath', 'Ziggs'],
+    champions: ['Hwei', 'Jayce', 'Lux', 'Varus', 'Vel\'Koz', 'Xerath', 'Ziggs'],
   },
   {
     id: 'battlemage',
@@ -66,10 +66,10 @@ export const categories = ref<Category[]>([
       'Ezreal',
       'Jhin',
       'Jinx',
-      "Kai'Sa",
+      'Kai\'Sa',
       'Kalista',
       'Kindred',
-      "Kog'Maw",
+      'Kog\'Maw',
       'Lucian',
       'Miss Fortune',
       'Samira',
@@ -88,17 +88,17 @@ export const categories = ref<Category[]>([
   {
     id: 'assassin',
     checked: false,
-    champions: ['Akali', 'Akshan', 'Aurora', 'Diana', 'Ekko', 'Evelynn', 'Fizz', 'Kassadin', 'Katarina', "Kha'Zix", 'Naafiri', 'Nocturne', 'Pyke', 'Qiyana', 'Rengar', 'Shaco', 'Talon', 'Yone', 'Zed'],
+    champions: ['Akali', 'Akshan', 'Aurora', 'Diana', 'Ekko', 'Evelynn', 'Fizz', 'Kassadin', 'Katarina', 'Kha\'Zix', 'Naafiri', 'Nocturne', 'Pyke', 'Qiyana', 'Rengar', 'Shaco', 'Talon', 'Yone', 'Zed'],
   },
   {
     id: 'skirmisher',
     checked: false,
-    champions: ['Ambessa', "Bel'Veth", 'Fiora', 'Gwen', 'Jax', "K'Sante", 'Kayn', 'Kled', 'Lillia', 'Master Yi', 'Nilah', 'Riven', 'Sylas', 'Tryndamere', 'Viego', 'Yasuo', 'Yone'],
+    champions: ['Ambessa', 'Bel\'Veth', 'Fiora', 'Gwen', 'Jax', 'K\'Sante', 'Kayn', 'Kled', 'Lillia', 'Master Yi', 'Nilah', 'Riven', 'Sylas', 'Tryndamere', 'Viego', 'Yasuo', 'Yone'],
   },
   {
     id: 'specialist',
     checked: false,
-    champions: ['Azir', "Cho'Gath", 'Fiddlesticks', 'Gangplank', 'Gnar', 'Graves', 'Heimerdinger', 'Kayle', 'Kennen', 'Nidalee', 'Quinn', 'Singed', 'Teemo', 'Zilean'],
+    champions: ['Azir', 'Cho\'Gath', 'Fiddlesticks', 'Gangplank', 'Gnar', 'Graves', 'Heimerdinger', 'Kayle', 'Kennen', 'Nidalee', 'Quinn', 'Singed', 'Teemo', 'Zilean'],
   },
   {
     id: 'vanguard',
@@ -108,6 +108,6 @@ export const categories = ref<Category[]>([
   {
     id: 'warden',
     checked: false,
-    champions: ['Braum', 'Galio', "K'Sante", 'Poppy', 'Shen', 'Tahm Kench', 'Taric'],
+    champions: ['Braum', 'Galio', 'K\'Sante', 'Poppy', 'Shen', 'Tahm Kench', 'Taric'],
   },
-]);
+])

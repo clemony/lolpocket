@@ -1,46 +1,46 @@
-export const formatDataText = (text) => {
-    let a = text
+export function formatDataText(text) {
+  let a = text
 
-    const format = {
-        '<scaleAP>': '<span class="font-medium tracking-tight ">',
+  const format = {
+    '<scaleAP>': '<span class="font-medium tracking-tight ">',
 
-        '</scaleAP>': '</span>',
+    '</scaleAP>': '</span>',
 
-        '<scaleAD>': '<span class="font-medium tracking-tight ">',
+    '<scaleAD>': '<span class="font-medium tracking-tight ">',
 
-        '</scaleAD>': '</span>',
+    '</scaleAD>': '</span>',
 
-        '<scaleLevel>': '<span class="font-medium tracking-tight ">',
+    '<scaleLevel>': '<span class="font-medium tracking-tight ">',
 
-        '</scaleLevel>': '</span>',
+    '</scaleLevel>': '</span>',
 
-        '<scalehealth>': '<span class="font-medium tracking-tight t">',
+    '<scalehealth>': '<span class="font-medium tracking-tight t">',
 
-        '</scalehealth>': '</span>',
+    '</scalehealth>': '</span>',
 
-        '<speed>': '<span class="font-medium tracking-tight ">',
+    '<speed>': '<span class="font-medium tracking-tight ">',
 
-        '</speed>': '</span>',
+    '</speed>': '</span>',
 
-        '<status>': '<span class="font-medium ">',
+    '<status>': '<span class="font-medium ">',
 
-        '</status>': '</span>',
+    '</status>': '</span>',
 
-        '<gold>': '<span class="font-medium >',
+    '<gold>': '<span class="font-medium >',
 
-        '</gold>': '</span>',
+    '</gold>': '</span>',
 
-        '<truedamage>': '<span class="font-medium ">',
+    '<truedamage>': '<span class="font-medium ">',
 
-        '</truedamage>': '</span>',
+    '</truedamage>': '</span>',
 
-        '<healing>': '<span class="font-medium >',
+    '<healing>': '<span class="font-medium >',
 
-        '</healing>': '</span>',
-    }
-    Object.keys(format).forEach((key) => {
-        a = a.replaceAll(key, format[key])
-    })
+    '</healing>': '</span>',
+  }
+  Object.keys(format).forEach((key) => {
+    a = a.replaceAll(key, format[key])
+  })
 
-    return a
+  return a
 }

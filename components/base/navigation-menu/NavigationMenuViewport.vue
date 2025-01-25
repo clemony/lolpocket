@@ -1,16 +1,16 @@
 <script setup lang="ts">
-  import { NavigationMenuViewport, type NavigationMenuViewportProps, useForwardProps } from 'radix-vue'
-  import { computed, type HTMLAttributes } from 'vue'
+import { NavigationMenuViewport, type NavigationMenuViewportProps, useForwardProps } from 'radix-vue'
+import { computed, type HTMLAttributes } from 'vue'
 
-  const props = defineProps<NavigationMenuViewportProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<NavigationMenuViewportProps & { class?: HTMLAttributes['class'] }>()
 
-  const delegatedProps = computed(() => {
-    const { class: _, ...delegated } = props
+const delegatedProps = computed(() => {
+  const { class: _, ...delegated } = props
 
-    return delegated
-  })
+  return delegated
+})
 
-  const forwardedProps = useForwardProps(delegatedProps)
+const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -19,9 +19,10 @@
       v-bind="forwardedProps"
       :class="
         cn(
-          'origin-top-center bg-b1/95 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 relative mt-1.5 h-(--radix-navigation-menu-viewport-height) w-full overflow-hidden rounded-md border border-b2 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] backdrop-blur-md md:w-(--radix-navigation-menu-viewport-width)',
-          props.class
+          'origin-top-center bg-b1/90 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 relative mt-1.5 h-(--radix-navigation-menu-viewport-height) w-full overflow-hidden rounded-lg border border-b3/60 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] backdrop-blur-md md:w-(--radix-navigation-menu-viewport-width)',
+          props.class,
         )
-      " />
+      "
+    />
   </div>
 </template>

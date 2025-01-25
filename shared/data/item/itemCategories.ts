@@ -42,4 +42,4 @@ export const categories = ref<Category[]>([
     color: '--color-onhit',
   },
   { id: 'movement', displayName: 'movement', checked: false },
-]);
+])

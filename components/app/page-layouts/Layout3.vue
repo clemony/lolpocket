@@ -1,16 +1,17 @@
 <script setup lang="ts">
-  import type { HTMLAttributes } from 'vue';
+import type { HTMLAttributes } from 'vue'
 
-  const props = defineProps<{
-    pocketKey?: string;
-    col2Class?: HTMLAttributes['class'];
-  }>();
+const props = defineProps<{
+  pocketKey?: string
+  col2Class?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
   <div
+    :key="props.pocketKey"
     class="relative grid h-[calc(100%-30px)] max-h-[calc(100%-30px)] w-full grid-cols-[150px_auto_300px] gap-14 pr-8 pl-7"
-    :key="props.pocketKey">
+  >
     <div class="h-fit w-full items-start gap-3">
       <div class="flex h-auto flex-col gap-4 font-medium tracking-tight">
         <LayoutSpacer />
