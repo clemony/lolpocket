@@ -9,7 +9,7 @@ const props = defineProps<{
 const pocket = ref(props.pocket)
 
 const champ = computed(() => {
-  const a = pocket.value.champions[0].champions[0]
+  const a = pocket.value.champions.champions[0]
   const b = !a ? null : a.name
   return b
 })
@@ -27,7 +27,7 @@ const styleRevert = computed(() => ({
         <img
           v-if="champ"
           id="champion"
-          :src="`/img/champions/splash/${champ}_0.webp`"
+          :src="`/img/champion/centered/${champ}_0.webp`"
           class="absolute top-[55%] left-[0%] z-0 scale-300 object-center"
           :style="isHovered ? props.layer1 : styleRevert"
         />

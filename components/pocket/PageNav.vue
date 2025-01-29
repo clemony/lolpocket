@@ -31,7 +31,7 @@ const els = [
     name: 'champions',
     type: 'champion',
     trigger: true,
-    data: props.pocket.champions[0].champions,
+    data: props.pocket.champions.champions,
   },
   {
     ref: items,
@@ -39,7 +39,7 @@ const els = [
     name: 'items',
     trigger: true,
     type: 'item',
-    data: props.pocket.items[0].itemSets,
+    data: props.pocket.items.sets,
   },
   {
     ref: runes,

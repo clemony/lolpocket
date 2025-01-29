@@ -18,6 +18,10 @@ export const useAccountStore = defineStore(
       tag: ref(),
     }
 
+    const champCheck = ref(true)
+    const roleCheck = ref(false)
+    const spellCheck = ref(true)
+
     const userFolders = ref<Folder[]>([])
     const heroModel = ref(0)
 
@@ -54,6 +58,10 @@ export const useAccountStore = defineStore(
       reducedMotion,
       pocketPreview,
 
+      // checks
+      champCheck,
+      roleCheck,
+      spellCheck,
       // sidebar
       mobileOpen,
       sidebarWidth,

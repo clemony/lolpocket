@@ -5,7 +5,7 @@ const props = defineProps<{
 
 const pocket = ref(props.pocket)
 
-const set = ref(pocket.value.runes[0].runeSets[pocket.value.runes[0].starred])
+const set = ref(pocket.value.runes.starred.shards)
 </script>
 
 <template>

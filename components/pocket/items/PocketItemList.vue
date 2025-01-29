@@ -7,7 +7,6 @@ const props = defineProps<{
   dragDisabled?: boolean
   class?: HTMLAttributes['class']
 }>()
-const ts = useTempStore()
 
 const list = computed(() => {
   return useItemFilter()
@@ -16,8 +15,6 @@ const list = computed(() => {
 const isDisabled = computed (() => {
   return props.dragDisabled
 })
-
-
 </script>
 
 <template>
@@ -43,23 +40,11 @@ const isDisabled = computed (() => {
     ]"
     group
     :disabled="isDisabled"
-    :class="cn('px-10  overflow-y-auto max-h-full grid grid-flow-row auto-cols-auto  h-fit  grid-cols-[repeat(auto-fill,minmax(56px,1fr))] justify-center gap-2  pt-[12.8vh] pb-6 ', props.class)"
+    :class="cn('pl-10 pr-2 overflow-y-auto max-h-full grid grid-flow-row auto-cols-auto  h-fit  grid-cols-[repeat(auto-fill,minmax(56px,1fr))] justify-center gap-2  pt-[6.8vh] pb-6 ', props.class)"
   >
-  <div v-for="item in list" :key="item.id">
-   <Popover
-      :key="item.id" >
-    <PopoverTrigger as-child>
-      <img
-        :src="`/img/item/${item.id}.webp`"
-        :alt="`${item.name} Image`"
-        class="aspect-square size-full rounded-lg"
-      />
-    </PopoverTrigger>
-    <PopoverContent class="w-92 max-h-100 overflow-y-auto shadow-pretty">
-     <ItemInfo :item="item" class="[&_h1]:!text-5 [&_.stat-grid]:!grid-cols-[2fr_1fr]"/>
-    </PopoverContent>
-  </Popover>
-  </div>
+    <div v-for="item in list" :key="item.id">
+      <Item :item="item" />
+    </div>
   </transition-slide>
 </template>
 

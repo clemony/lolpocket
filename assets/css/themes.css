@@ -9,13 +9,6 @@
   --bc: oklch(0% 0.02476 255.701624);
   --neutral: oklch(0% 0.02476 255.701624);
   --nc: oklch(100% 0 0);
-
-  .app-bg {
-    @apply bg-b1;
-  }
-  .invert-dark {
-    @apply invert;
-  }
 }
 
 :is([data-theme='dawn']) {
@@ -25,10 +18,6 @@
   --bc: oklch(0% 0.02476 255.701624);
   --neutral: oklch(27% 0.006 286.033);
   --nc: oklch(97.788% 0.004 56.375);
-
-  .invert-dark {
-    @apply invert;
-  }
 }
 
 :is([data-theme='dusk']) {
@@ -56,4 +45,18 @@
   --color-bc: var(--bc);
   --color-neutral: var(--neutral);
   --color-nc: var(--nc);
+}
+
+:is([data-theme='light']),
+:is([data-theme='dawn']) {
+  .invert-light {
+    @apply invert;
+  }
+}
+
+:is([data-theme='dusk']),
+:is([data-theme='midnight']) {
+  .invert-dark {
+    @apply invert;
+  }
 }

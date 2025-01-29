@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ResizablePanel } from 'components/base/resizable/rindex'
+import { ResizablePanel } from 'components/base/resizable/rindex';
 
 const props = defineProps<{
   pocket: pocket
@@ -7,12 +7,11 @@ const props = defineProps<{
 
 const pocket = ref(props.pocket)
 
-const el = ref<HTMLElement | null>(null)
-const { arrivedState } = useScroll(el)
+// const { arrivedState } = useScroll(el)
 </script>
 
 <template>
-  <div class="size-full">
+  <div class="size-full flex">
     <ResizablePanelGroup
       direction="horizontal"
       class="max-h-full h-full"
@@ -28,11 +27,19 @@ const { arrivedState } = useScroll(el)
       />
       <ResizablePanel>
         <div class="h-full w-full relative">
-          <PocketHeaderMenu :pocket="pocket" :class="{ 'scroll-state': !arrivedState.top }" />
-          <PocketItemList ref="el" :pocket="pocket" />
+          <PocketItemList :pocket="pocket" />
         </div>
       </ResizablePanel>
     </ResizablePanelGroup>
+    <div class="w-21 h-full relative ">
+      <div class="w-20   h-full absolute bg-b1  top-0 right-0 flex flex-col items-center py-6 pr-2 overflow-auto  z-50">
+        <MenubarSpacer />
+
+
+
+        <PocketItemFilter :pocket="pocket" />
+      </div>
+    </div>
   </div>
 </template>
 

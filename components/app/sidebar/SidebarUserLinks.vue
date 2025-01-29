@@ -29,16 +29,11 @@ const userCheck = ref(true)
 const user = useSupabaseUser()
 
 const role = computedAsync(() => {
-  if (!ts.sessionInfo) {
-
+  if (user.value && user.value.app_metadata.user_role == 'admin') {
+    return 'admin'
   }
-  else {
-    if (user.value && user.value.app_metadata.user_role == 'admin') {
-      return 'admin'
-    }
-    else if (user.value) {
-      return 'summoner'
-    }
+  else if (user.value) {
+    return 'summoner'
   }
 })
 </script>

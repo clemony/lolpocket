@@ -56,7 +56,7 @@ const list = [
         <TableSearch />
         <div class="join">
           <MoveButton
-            :to="ps.trashPockets"
+            :to="ps.trashFolder"
             text="Trash"
             class=""
           >
@@ -67,7 +67,7 @@ const list = [
           </MoveButton>
 
           <MoveButton
-            :to="ps.archivePockets"
+            :to="ps.archiveFolder"
             text="Archive"
           >
             <icon

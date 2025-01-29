@@ -1,12 +1,16 @@
-export function useDrawerToggle(drawer) {
+export function useDrawerToggle(drawer: string, side?: string) {
   const ts = useTempStore()
 
-  const toggle = ref()
+  const toggle = ref(false)
   if (drawer == 'sidebar') {
-    toggle.value = ts.sidebarTrigger
+    ts.drawerComponent = 'sidebar'
+    ts.drawerTrigger = true
   }
   else if (drawer == 'pocket') {
     toggle.value = ts.pocketDrawerTrigger
+  }
+  else if (drawer == 'editPocket') {
+    toggle.value = ts.editPocketTrigger
   }
   else if (drawer == 'item') {
     toggle.value = ts.itemDrawerTrigger
@@ -24,5 +28,5 @@ export function useDrawerToggle(drawer) {
     toggle.value = ts.runeDrawerTrigger
   }
 
-  !toggle.value ? (toggle.value = true) : (toggle.value = false)
+  toggle.value == false ? (toggle.value = true) : (toggle.value = false)
 }

@@ -1,5 +1,7 @@
-import { fileURLToPath } from 'node:url'
+/* eslint-disable perfectionist/sort-imports */
 import tailwindcss from '@tailwindcss/vite'
+import process from 'node:process'
+import { fileURLToPath } from 'node:url'
 
 export default defineNuxtConfig({
   modules: [
@@ -94,7 +96,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
 
   imports: {
-    dirs: ['./shared/supabase/*', './shared/supabase'],
+    dirs: ['./shared/supabase/*', './shared/supabase', '@vueuse/components'],
   },
 
   webpack: {

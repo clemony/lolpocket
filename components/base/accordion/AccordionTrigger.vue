@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { AccordionHeader, AccordionTrigger, type AccordionTriggerProps } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+import type { AccordionTriggerProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
+import { AccordionHeader, AccordionTrigger } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = defineProps<AccordionTriggerProps & { class?: HTMLAttributes['class'] }>()
 

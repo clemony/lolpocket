@@ -1,4 +1,5 @@
-import { cva, type VariantProps } from 'class-variance-authority'
+import type { VariantProps } from 'class-variance-authority'
+import { cva } from 'class-variance-authority'
 
 export const labelVariants = cva('text-2 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 rounded-md', {
   variants: {

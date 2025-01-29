@@ -10,7 +10,8 @@ const eventAt = ref()
 <template>
   <div>
     <li
-      v-for="(pocket, i) in folder.items"
+      v-for="pocket in folder.items"
+      :key="pocket.key"
       class="!mr-5"
     >
       <details
@@ -23,9 +24,9 @@ const eventAt = ref()
         "
       >
         <summary class="capitalizeflex w-full after:hidden items-center hover:bg-b2/60 flex-nowrap">
-          <icon
-            :name="pocket.icon"
-            class="shrink-0"
+          <PocketIcon
+            :image="pocket.icon"
+            class="shrink-0 size-7"
           />
           <span class="w-full truncate"> {{ pocket.name }}</span>
 
@@ -43,12 +44,22 @@ const eventAt = ref()
             </NuxtLink>
           </li>
           <li>
-            <label>
+            <LazyCardPop :pocket="pocket">
               <icon name="fa-regular:address-card" />
-              View Card
-            </label>
+              <span class="ml-0.5">View Card</span>
+            </LazyCardPop>
           </li>
           <ChampionSubTree
+            :pocket="pocket"
+            :folder="folder"
+          />
+
+          <ItemSubTree
+            :pocket="pocket"
+            :folder="folder"
+          />
+
+          <RuneSubTree
             :pocket="pocket"
             :folder="folder"
           />

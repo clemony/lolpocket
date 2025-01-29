@@ -1,0 +1,122 @@
+@import 'tailwindcss';
+
+@theme {
+  --menubar-height: 5vh;
+  --main-height: 95vh;
+  --page-header-height: 8vh;
+
+  --text-1: 0.9rem;
+  --text-2: 0.96rem;
+  --text-3: 0.99rem;
+  --text-4: 1.125rem;
+  --text-5: 1.25rem;
+  --text-6: 1.35rem;
+  --text-7: 1.5rem;
+  --text-8: 1.675rem;
+  --text-9: 2.25rem;
+  --text-10: 2.9rem;
+  --text-11: 3.75rem;
+  --text-12: 4.5rem;
+  --text-13: 6rem;
+  --text-14: 7rem;
+
+  --b1: oklch(100% 0 0);
+  --b2: oklch(95.12% 0 0);
+
+  --b3: oklch(89% 0 0);
+  --bc: oklch(0% 0.02476 255.701624);
+  --neutral: oklch(0% 0.02476 255.701624);
+  --nc: oklch(100% 0 0);
+
+  --color-precision: oklch(85.49% 0.0892 84.09);
+  --color-precision-light: #oklch(90.13% 0.0695 86.13);
+  --color-domination: oklch(60.61% 0.1206 15.34);
+  --color-domination-light: oklch(81.67% 0.044 12.73);
+  --color-sorcery: oklch(69.02% 0.0644 332.52);
+  --color-sorcery-light: #oklch(80.99% 0.0273 327.74);
+  --color-resolve: oklch(76.83% 0.0749 131.06);
+  --color-resolve-light: oklch(85.55% 0.0188 127.18);
+  --color-inspiration: oklch(76.93% 0.0494 204.19);
+  --color-inspiration-light: oklch(94.48% 0.0273 204.19);
+
+  --color-iron: oklch(44.16% 0.0168 35.72);
+  --color-bronze: oklch(57.31% 0.0484 39.76);
+  --color-silver: oklch(65.69% 0.022 257.49);
+  --color-gold: oklch(85.49% 0.0892 84.09);
+  --color-platinum: oklch(69.21% 0.0957 233.45);
+  --color-emerald: oklch(56.81% 0.0628 168.43);
+  --color-diamond: oklch(62.17% 0.1762 284.11);
+  --color-master: oklch(75.18% 0.1157 325.26);
+  --color-grandmaster: oklch(68.06% 0.1352 26.61);
+  --color-challenger: oklch(83.25% 0.0787 213.4);
+
+  --color-empty: #bab9b1;
+  --color-empty-light: #cecdc8;
+
+  --color-light-1: oklch(100% 0 0);
+  --color-light-2: oklch(96.12% 0 0);
+  --color-light-3: oklch(86% 0 0);
+
+  --color-dark-1: oklch(47.84% 0 0);
+  --color-dark-2: oklch(36% 0 0);
+  --color-dark-3: oklch(0% 0.02476 255.701624);
+
+  --color-error: oklch(59.33% 0.1319 21.78);
+
+  --color-support: var(--color-inspiration);
+  --color-utility: var(--color-inspiration);
+
+  --color-top: #e0746b;
+  --color-fighter: oklch(78.32% 0.1173 37);
+
+  --color-marksman: var(--color-precision);
+  --color-mobility: var(--color-precision);
+  --color-bottom: #ebcb8b;
+
+  --color-mid: #be86b5;
+  --color-mage: var(--color-sorcery);
+  --color-control: var(--color-sorcery);
+
+  --color-tank: var(--color-resolve);
+  --color-toughness: var(--color-resolve);
+  --color-jungle: #a3be8c;
+
+  --color-assassin: var(--color-domination);
+  --color-damage: var(--color-domination);
+
+  --color-onhit: oklch(70.72% 0.0996 10.55);
+
+  --radius-xl: initial;
+  --radius-xl: 0.7rem;
+
+  --shadow-pretty: 0 3px 10px rgba(0, 0, 0, 0.2);
+  --shadow-lil: 2px 2px 4px 1px rgba(0, 0, 0, 0, 0.3);
+  --shadow-warm: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  --shadow-standard: 0px 2px 3px -1px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+  --shadow-cham: inset 12px 8px 40px #46464620;
+  --shadow-inset: inset 1px 2px 8px 2px #00000019, inset -2px -1px 5px 1px #00000019;
+  --shadow-inset-sm: inset 1px 2px 1px 1px #00000004, inset -1px -1px 2px 1px #00000009;
+  --shadow-smooth: 0px 1px 10px rgba(17, 17, 26, 0.075);
+
+  --drop-shadow-soft: 0px 0px 1px #00000060;
+  --drop-shadow-softer: 0px 0px 1px #00000040;
+  --drop-shadow-softest: 0px 0px 1px #00000020;
+  --drop-shadow-text: 1px 0px 1px #00000020;
+  --dst: var(--drop-shadow-text);
+
+  --transition-height: height;
+
+      --animate-translate-x: translate-x 1s forwards;
+    --animate-translate-x-reverse: translate-x 1s reverse;
+
+
+@keyframes translate-x {
+  from {
+    translateX: 0%;
+  }
+  to {
+    translateX: 60%;
+  }
+}
+}

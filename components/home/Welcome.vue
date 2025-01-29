@@ -3,7 +3,7 @@
 <template>
   <div class="relative grid gap-12 shrink-0">
     <div class="**:!text-12 flex items-center **:!font-bold **:tracking-tight">
-      <div class="ws-nowrap relative -ml-1 flex drop-shadow-sm">
+      <div class="ws-nowrap relative items-center shrink-0 -ml-1 flex drop-shadow-sm">
         <h1 class="">
           l
         </h1>
@@ -21,16 +21,15 @@
           up
           <icon
             name="streamline:arrow-up-1"
-            class="mt-6 size-12"
+            class="mt-6  size-12"
           />
         </div>
       </div>
     </div>
 
     <div
-      data-aos="fade-up"
-      data-aos-once="true"
-      class="w-full space-y-3 justify-self-start shrink-0"
+
+      class="w-full space-y-3 justify-self-start shrink-0 animate-in fade-in duration-1000"
     >
       <div class="flex items-center gap-2 drop-shadow-sm">
         <h1 class="!text-9">

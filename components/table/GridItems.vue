@@ -21,7 +21,7 @@ const pocket = computed(() => {
 })
 
 const starredItems = computed(() => {
-  return pocket.value.items[0].itemSets[pocket.value.items[0].starred].items
+  return pocket.value.items.sets[pocket.value.items.starred].items
 })
 
 console.log('this', starredItems.value[0])

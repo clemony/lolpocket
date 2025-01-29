@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Chart, type ChartData, type ChartOptions } from 'chart.js'
+import type { ChartData, ChartOptions } from 'chart.js'
+import { Chart } from 'chart.js'
 import ChartjsPluginStacked100 from 'chartjs-plugin-stacked100'
 import { externalTooltip } from 'plugins/chartJS/externalTooltip'
 

@@ -9,14 +9,14 @@ const pocket = props.pocket
 <template>
   <ContextMenuSub>
     <ContextMenuSubTrigger
-      :disabled="pocket.items[0].itemSets.length <= 1"
+      :disabled="pocket.items.sets.length <= 1"
       :class="{
-        '[&_svg]:last:hidden': pocket.items[0].itemSets.length <= 1,
-        'opacity-50': pocket.items[0].itemSets.length == 0,
+        '[&_svg]:last:hidden': pocket.items.sets.length <= 1,
+        'opacity-50': pocket.items.sets.length == 0,
       }"
     >
       <icon
-        v-if="pocket.items[0].itemSets"
+        v-if="pocket.items.sets"
         name="iconoir:star"
         class="size-3.5"
       />
@@ -29,7 +29,7 @@ const pocket = props.pocket
     </ContextMenuSubTrigger>
 
     <ContextMenuSubContent>
-      <ContextMenuItem v-for="(set, index) in pocket.items[0].itemSets">
+      <ContextMenuItem v-for="(set, index) in pocket.items.sets">
         <label class="flex items-center gap-0.5">
           <icon
             v-if="pocket.items[0].starred == index"

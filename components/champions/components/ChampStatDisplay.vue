@@ -87,7 +87,7 @@ onMounted(async () => {
 
   <img
     :src="stat.img"
-    class="stat-img drop-shadow-xs: invert-dark size-6.5 justify-self-end opacity-80"
+    class="stat-img drop-shadow-xs: invert-light size-6.5 justify-self-end opacity-80"
   />
 </template>
 

@@ -15,27 +15,10 @@ const pocket = getPocket(props.params.data.key)
 // Create a local ref for the text input
 const notesInput = ref<string>('')
 
-// Initialize notesInput when the component is mounted
-onMounted(() => {
-  if (pocket?.notes) {
-    notesInput.value = pocket.notes
-  }
-})
-
-// Watch for changes to pocket.notes and update notesInput accordingly
-watch(
-  () => pocket?.notes,
-  (newNotes) => {
-    if (newNotes !== undefined) {
-      notesInput.value = newNotes
-    }
-  },
-)
-
 // Update pocket.notes only when the field loses focus
 function updateNotes() {
   if (pocket) {
-    pocket.notes = notesInput.value
+    // pocket.notes = notesInput.value
     ps.$persist()
   }
 }

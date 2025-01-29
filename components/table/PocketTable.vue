@@ -49,7 +49,7 @@ const pinnedGrid = ref()
 
 const noData = ref()
 const rowData = ref(ps.allPockets)
-const pinnedData = ref(ps.pinnedPockets)
+const pinnedData = ref(ps.pinnedFolder)
 
 const domLayout = ref(null)
 const filter = ref()
@@ -163,10 +163,10 @@ watch(
 )
 
 watch(
-  () => ps.pinnedPockets,
+  () => ps.pinnedFolder,
   () => {
     if (pinnedApi.value) {
-      gridApi.value.setGridOption('rowData', ps.pinnedPockets)
+      gridApi.value.setGridOption('rowData', ps.pinnedFolder)
     }
   },
   { deep: true },

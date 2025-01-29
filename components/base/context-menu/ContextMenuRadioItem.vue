@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { ContextMenuItemIndicator, ContextMenuRadioItem, type ContextMenuRadioItemEmits, type ContextMenuRadioItemProps, useForwardPropsEmits } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+import type { ContextMenuRadioItemEmits, ContextMenuRadioItemProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
+import { ContextMenuItemIndicator, ContextMenuRadioItem, useForwardPropsEmits } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = defineProps<ContextMenuRadioItemProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<ContextMenuRadioItemEmits>()

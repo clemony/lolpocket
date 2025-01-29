@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { DropdownMenuItemIndicator, DropdownMenuRadioItem, type DropdownMenuRadioItemEmits, type DropdownMenuRadioItemProps, useForwardPropsEmits } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+import type { DropdownMenuRadioItemEmits, DropdownMenuRadioItemProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
+
+import { DropdownMenuItemIndicator, DropdownMenuRadioItem, useForwardPropsEmits } from 'radix-vue'
 
 const props = defineProps<DropdownMenuRadioItemProps & { class?: HTMLAttributes['class'] }>()
 
@@ -20,7 +22,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     v-bind="forwarded"
     :class="
       cn(
-        'text-2 focus:bg-b2/60 focus:text-bc relative flex cursor-default items-center rounded-sm py-1.5 pr-2 pl-8 outline-hidden transition-colors select-none data-disabled:pointer-events-none data-disabled:opacity-50',
+        'text-2 focus:bg-b2/60 focus:text-bc relative flex cursor-default items-center rounded-sm py-1.5 pr-2 pl-9 outline-hidden transition-colors select-none data-disabled:pointer-events-none data-disabled:opacity-50',
         props.class,
       )
     "
@@ -28,8 +30,8 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     <span class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <DropdownMenuItemIndicator>
         <icon
-          name="teenyicons:circle-outline"
-          class="h-2 w-2 fill-current"
+          name="tick-sm"
+          class="size-5 fill-current"
         />
       </DropdownMenuItemIndicator>
     </span>

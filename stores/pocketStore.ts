@@ -4,8 +4,9 @@ export const usePocketStore = defineStore(
   'pocketStore',
   () => {
     const pockets = ref<pocket[]>([])
-    const trashPockets = ref<pocket[]>([])
-    const archivePockets = ref<pocket[]>([])
+    const trashFolder = ref<pocket[]>([])
+    const archiveFolder = ref<pocket[]>([])
+    const pinnedFolder = ref<pocket[]>([])
 
     const filterText = ref('')
     const selectedRows = ref([])
@@ -21,11 +22,8 @@ export const usePocketStore = defineStore(
       selectedRows.value = rows // Update the selected rows in the store
     }
 
-    const pinnedPockets = computed(() => {
-      return pockets.value.filter(pocket => pocket.pinned)
-    })
     const allPockets = computed(() => {
-      return pockets.value.filter(pocket => !pocket.pinned)
+      return pockets.value
     })
 
     const updatePocketType = (key: string, newTags: Array<string>) => {
@@ -38,8 +36,8 @@ export const usePocketStore = defineStore(
     return {
       pockets,
       filterText,
-      archivePockets,
-      trashPockets,
+      archiveFolder,
+      trashFolder,
       updatePocketType,
       selectedRows,
       tableSelectAll,
@@ -49,7 +47,7 @@ export const usePocketStore = defineStore(
       headerApi,
       pocketGrid,
       pinnedGrid,
-      pinnedPockets,
+      pinnedFolder,
       allPockets,
       columns,
     }

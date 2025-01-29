@@ -11,7 +11,8 @@ watch(
 
 <template>
   <ul
-    v-for="folder in defaultFolders()" :key="folder.key"
+    v-for="folder in defaultFolders()"
+    v-bind="$attrs" :key="folder.key"
     class="menu h-inherit !w-full mx-0 z-0 px-0 **:text-3 **:[&_svg]:shrink-0"
   >
     <li class="flex gap-3 !w-full">

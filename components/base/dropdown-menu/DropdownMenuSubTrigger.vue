@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { DropdownMenuSubTrigger, type DropdownMenuSubTriggerProps, useForwardProps } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+import type { DropdownMenuSubTriggerProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
+import { DropdownMenuSubTrigger, useForwardProps } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = defineProps<DropdownMenuSubTriggerProps & { class?: HTMLAttributes['class'] }>()
 

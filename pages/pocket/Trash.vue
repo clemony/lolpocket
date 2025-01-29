@@ -6,7 +6,7 @@ function clearOldPockets() {
   const thirtyDays = 30 * 24 * 60 * 60 * 1000 // 30 days in milliseconds
 
   // Filter out pockets that are older than 30 days
-  ps.trashPockets = ps.trashPockets.filter((pocket) => {
+  ps.trashFolder = ps.trashFolder.filter((pocket) => {
     // const age = now.getTime() - new Date(pocket.deletedAt).getTime();
     // return age < thirtyDays; // Keep pockets that are younger than 30 days
   })
@@ -58,11 +58,11 @@ function clearOldPockets() {
           variant="ghost"
           size="lg"
           class="border-error bg-error text-3 hover:bg-error disabled:border-inspiration disabled:bg-inspiration disabled:text-bc justify-center border px-5 text-white shadow-xs hover:opacity-80"
-          :disabled="ps.trashPockets.length == 0"
-          @click="ps.trashPockets.length = 0"
+          :disabled="ps.trashFolder.length == 0"
+          @click="ps.trashFolder.length = 0"
         >
           <span
-            v-if="ps.trashPockets.length > 0"
+            v-if="ps.trashFolder.length > 0"
             class="flex items-center gap-2 font-medium"
           >
             <icon
@@ -92,17 +92,17 @@ function clearOldPockets() {
     </div>
 
     <ul class="h-64 overflow-scroll border">
-      <li v-for="pocket in ps.trashPockets">
+      <li v-for="pocket in ps.trashFolder">
         {{ pocket.name }}
       </li>
     </ul>
 
-    <!--  <div v-if="ps.trashPockets.length > 0"
+    <!--  <div v-if="ps.trashFolder.length > 0"
             class="relative flex flex-col h-auto pt-3 overflow-x-auto overflow-y-hidden tabs-lifted tabs scrollbar-hide ">
 
             <div
                 class="flex flex-col justify-end grow mt-[15px]  overflow-y-auto border-y   border-b3 after:shadow-[inset_0px_0px_6px_3px_var(--b1)/0] after:size-full after:absolute relative after:top-0 after:z-10 after:brightness-[97%]  after:pointer-events-none">
-                <PocketGrid :pocketArray="ps.trashPockets" arrayName="trashPockets" class="overflow-auto" />
+                <PocketGrid :pocketArray="ps.trashFolder" arrayName="trashFolder" class="overflow-auto" />
             </div>
 
         </div> -->

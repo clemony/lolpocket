@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+@theme {
+    :root {
+    --animate-translate-x: translate-x 8s forwards;
+    --animate-translate-x-reverse: translate-x 8s reverse;
+    }
+}
+
+@keyframes translate-x {
+  from {
+    translateX: 0;
+  }
+  to {
+    translateX: 60%;
+  }
+}

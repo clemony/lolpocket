@@ -70,7 +70,10 @@ const hoverClass = 'hover:underline hover:bg-b2/35 underline-offset-2 !cursor-po
           </p>
         </div>
       </div>
-
+      <p>
+        Q: Where going?
+        LP: <icon name="hugeicons:moon-01" />
+      </p>
       <a href="https://gitlab.com/lol-math/lolmath/-/tree/main/packages/calc" target="_blank" />
 
       game item by Petai Jantrapoon from <a href="https://thenounproject.com/browse/icons/term/game-item/" target="_blank" title="game item Icons">Noun Project</a> (CC BY 3.0)
@@ -82,6 +85,7 @@ const hoverClass = 'hover:underline hover:bg-b2/35 underline-offset-2 !cursor-po
         <div class="card *:text-bc/85 plb3e-items-center grid auto-cols-max grid-flow-col gap-5 rounded-xl pt-16 pb-8 *:size-6">
           <icon
             v-for="icon in icons"
+            :key="icon"
             :name="icon"
           />
           <img

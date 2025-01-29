@@ -1,0 +1,34 @@
+@import 'tailwindcss';
+
+.animate-title {
+  animation-name:translate-x;
+  animation-duration: 8s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+.animate-forward {
+  animation-direction: forwards;
+}
+
+.animate-reverse {
+  animation-direction: reverse;
+}
+
+.animate-pause {
+  animation-play-state: paused;
+}
+
+.animate-play {
+  animation-play-state: running !important;
+}
+
+@keyframes translate-x {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(60%);
+  }
+}

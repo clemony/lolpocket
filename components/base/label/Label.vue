@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import type { PrimitiveProps } from 'radix-vue'
 import type { HTMLAttributes } from 'vue'
-import { Primitive, type PrimitiveProps } from 'radix-vue'
-import { type LabelVariants, labelVariants } from './lindex'
+import type { LabelVariants } from './lindex'
+import { Primitive } from 'radix-vue'
+import { labelVariants } from './lindex'
 
 interface Props extends PrimitiveProps {
   variant?: LabelVariants['variant']

@@ -1,33 +1,32 @@
 declare global {
+
   interface pocket {
     key: string
     name: string
-    champions: pocketChampions[]
     roles: Role[]
-    items: pocketItems[]
-    runes: pocketRunes[]
-    spells: [Spell, Spell]
-    dateCreated: dateObject[]
-    dateUpdated: dateObject[]
-    tags: Array<string>
-    pinned: boolean
+    champions: {
+      champions: Champion[]
+      starred: Champion
+    }
+    items: {
+      sets: ItemSet[]
+      starred: Itemset
+    }
+    runes: {
+      sets: RuneSet[]
+      starred: RuneSet
+    }
+    spells: Spell[]
+    dateCreated: dateObject
+    dateUpdated: dateObject
+    tags: string[]
     icon: string
-    bgColor: string
-    iconColor: string
-    notes: string
-    component: any
-    inFolder: [Folder.name]
+    notes: string[]
   }
 
   interface Role {
     name: string
     icon: string
-  }
-
-  interface pocketChampions {
-    key: string
-    champions: Champion[]
-    starred: string
   }
 
   interface Spell {
@@ -38,25 +37,7 @@ declare global {
     charges?: number
   }
 
-  interface pocketItems {
-    key: string
-    itemSets: ItemSet[]
-    starred: number
-    alts: {
-      alt1: DefaultItem[]
-      alt2: DefaultItem[]
-      alt3: DefaultItem[]
-      alt4: DefaultItem[]
-      alt5: DefaultItem[]
-      alt6: DefaultItem[]
-    }
-    start: ItemSet[]
-    core: ItemSet[]
-    final: ItemSet[]
-  }
-
   interface ItemSet {
-    key: string
     name: string
     items: Item[]
   }
@@ -74,13 +55,6 @@ declare global {
     wiki: string
     id: number
     count: number
-  }
-
-  interface pocketRunes {
-    key: string
-    runeSets: RuneSet[]
-    starred: number
-    selected: number
   }
 
   interface RuneTree {
@@ -107,7 +81,6 @@ declare global {
     }
   }
   interface RuneSet extends RuneTree {
-    key: string
     name: string
   }
 
@@ -162,4 +135,4 @@ declare global {
     kda: string
   }
 }
-export {}
+export { }

@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+@keyframes translate-x {
+  from {
+    translateX: 0;
+  }
+  to {
+    translateX: 60%;
+  }
+}

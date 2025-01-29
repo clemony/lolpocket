@@ -1,10 +1,5 @@
-import { hexoid } from 'hexoid'
-
 export default function newRuneSet(key?) {
-  const shard = createDefaultShard() as Shard
-  const toID = hexoid()
   const newSet = {
-    key: toID(),
     name: `${generateRandomName()} Set`,
     primary: {
       path: 'empty',
@@ -32,7 +27,11 @@ export default function newRuneSet(key?) {
 
   if (key) {
     const pocket = getPocket(key)
-    pocket.runes[0].runeSets.push(newSet)
+    pocket.runes.sets.push(newSet)
+
+    if (pocket.runes.sets.length == 1) {
+      pocket.runes.starred = newSet
+    }
   }
   else {
     return newSet

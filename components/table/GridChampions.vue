@@ -30,7 +30,7 @@ const pocket = ref(getPocket(props.params.data.key))
     :pocket="pocket"
     class="group relative flex size-full cursor-pointer content-center items-center justify-start gap-2 px-2"
   >
-    <template v-for="(champion, index) in pocket.champions[0].champions">
+    <template v-for="(champion, index) in pocket.champions.champions">
       <div
         v-if="index < 3"
         class="border-b3 shadow-warm size-14 shrink-0 overflow-hidden rounded-lg border"
@@ -42,7 +42,7 @@ const pocket = ref(getPocket(props.params.data.key))
       </div>
     </template>
     <ShadowedPlaceholder
-      v-for="index in makeBox(pocket.champions[0].champions.length, 3)"
+      v-for="index in makeBox(pocket.champions.champions.length, 3)"
       class="size-14"
     />
   </PocketMenu>

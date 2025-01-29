@@ -20,7 +20,7 @@ const folders = defaultFolders()
     />
     <div class="collapse-title flex items-center gap-4">
       <LittleIcon
-        icon="formkit:folder"
+        icon="folders"
         class="size-4.5"
       />
       Pocket Folders
@@ -57,16 +57,14 @@ const folders = defaultFolders()
           </div>
 
           <ul class="collapse-content">
-            <li v-for="pocket in folder.items">
+            <li v-for="pocket in folder.items" :key="pocket.key">
               <NuxtLink
                 :to="`/pocket/${pocket.key}`"
                 class="w-full flex gap-3 items-center"
               >
                 <PocketIcon
-                  :pocket="pocket"
-                  class="rounded-lg -ml-1 overflow-hidden object-center shadow-sm size-6"
-                  icon-class=" !text-white"
-                  img-class="!size-10 shrink-0"
+                  :image="pocket.icon"
+                  class="**:rounded-md rounded-md size-fit  -ml-1 overflow-hidden object-center size-7 !bg-transparent text-bc shrink-0 shadow-sm"
                 />
                 {{ pocket.name }}
               </NuxtLink>
@@ -87,11 +85,11 @@ const folders = defaultFolders()
 
           <Grow />
           <div
-            v-if="ps.trashPockets.length"
-            :key="ps.trashPockets.length"
+            v-if="ps.trashFolder.length"
+            :key="ps.trashFolder.length"
             class="badge badge-neutral px-0 py-1 justify-self-end"
           >
-            {{ ps.trashPockets.length }}
+            {{ ps.trashFolder.length }}
           </div>
         </NuxtLink>
       </li>
@@ -109,11 +107,11 @@ const folders = defaultFolders()
 
           <Grow />
           <div
-            v-if="ps.archivePockets.length"
-            :key="ps.archivePockets.length"
+            v-if="ps.archiveFolder.length"
+            :key="ps.archiveFolder.length"
             class="badge badge-neutral px-0 py-1 justify-self-end"
           >
-            {{ ps.archivePockets.length }}
+            {{ ps.archiveFolder.length }}
           </div>
         </NuxtLink>
       </li>

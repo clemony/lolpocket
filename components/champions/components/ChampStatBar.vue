@@ -186,7 +186,7 @@ const chartOptions: ChartOptions<'bar'> = {
       <span class="text-2 !text-bc/60 mb-0.5 grow font-medium tracking-tight"> + {{ perLvl }}/lvl </span>
       <img
         :src="stat.img"
-        class="invert-dark mb-1 size-5 justify-self-end opacity-80 drop-shadow-xs"
+        class="invert-light mb-1 size-5 justify-self-end opacity-80 drop-shadow-xs"
       />
     </div>
   </div>

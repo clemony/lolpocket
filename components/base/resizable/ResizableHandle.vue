@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { SplitterResizeHandle, type SplitterResizeHandleEmits, type SplitterResizeHandleProps, useForwardPropsEmits } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+import type { SplitterResizeHandleEmits, SplitterResizeHandleProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
+import { SplitterResizeHandle, useForwardPropsEmits } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = defineProps<
   SplitterResizeHandleProps & {

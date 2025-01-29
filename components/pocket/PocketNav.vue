@@ -1,22 +1,13 @@
 <script lang="ts" setup>
-import { ResizablePanel } from 'components/base/resizable/rindex'
+import { ResizablePanel } from 'components/base/resizable/rindex';
 
 const props = defineProps<{
   pocket?: pocket
 }>()
 
+const as = useAccountStore()
+
 const pocket = ref(props.pocket)
-
-const champCheck = ref(true)
-const roleCheck = ref(false)
-const spellCheck = ref(true)
-
-watch(
-  () => champCheck.value,
-  (newVal) => {
-    console.log('💠 - newVal:', newVal)
-  },
-)
 
 function handleResize(e) {
   console.log('💠 - handleResize - e:', e)
@@ -27,14 +18,14 @@ function handleResize(e) {
   <ResizablePanelGroup
     auto-save-id="nav-split"
     direction="vertical"
-    class="  h-full min-h-full max-h-full  pl-7  bg-b2/30  border-b2 border-l "
+    class="  h-full min-h-full max-h-full max-w-100 pl-5  bg-b2/30  border-b2 border-l "
   >
     <ResizablePanel :default-size="60">
-      <div class="pr-7">
-        <MenubarSpacer class="bg-b3 w-full" />
+      <MenubarSpacer class=" w-[115%]" />
+      <div class="pl-1 pr-5">
         <PocketHeader :pocket="pocket" />
 
-        <ul class="flex flex-col gap-3 pt-5  w-full">
+        <ul class="flex flex-col gap-3 pt-3  w-full">
           <li>
             <LinkButton link="">
               Overview
@@ -58,14 +49,14 @@ function handleResize(e) {
         >
           <input
             id="champ"
-            v-model="champCheck"
+            v-model="as.champCheck"
             type="checkbox"
             class="peer"
           />
-          <div class="collapse-title pl-2  pr-2 text-start w-full flex items-center flex-nowrap  pb-0 relative">
+          <div class="collapse-title  pl-3 pr-4  text-start w-full flex items-center flex-nowrap  pb-0 relative">
             <span class="grow">Champions</span>
 
-            <PlusMinusExpand v-model:check="champCheck" />
+            <PlusMinusExpand v-model:check="as.champCheck" />
           </div>
           <div class="collapse-content  py-0">
             <SelectedChampions
@@ -77,14 +68,14 @@ function handleResize(e) {
 
         <div class="collapse p-0 w-full ">
           <input
-            v-model="roleCheck"
+            v-model="as.roleCheck"
             type="checkbox"
           />
 
-          <div class="collapse-title flex items-center mt-2 flex-nowrap px-2 pt-0 !pb-0 text-start w-full ">
+          <div class="collapse-title flex items-center mt-2 flex-nowrap pl-3 pr-4  pt-0 !pb-0 text-start w-full ">
             <span class="grow">Roles</span>
 
-            <PlusMinusExpand :check="roleCheck" />
+            <PlusMinusExpand :check="as.roleCheck" />
           </div>
           <div class="collapse-content !pt-0">
             <LazyRoleSelect
@@ -96,15 +87,15 @@ function handleResize(e) {
 
         <div class="collapse p-0 w-full -mt-2">
           <input
-            v-model="spellCheck"
+            v-model="as.spellCheck"
             type="checkbox"
             checkThis
           />
 
-          <div class="collapse-title flex items-center flex-nowrap px-2 text-start w-full pt-0 pb-0 ">
+          <div class="collapse-title flex items-center flex-nowrap pl-3 pr-4 text-start w-full pt-0 pb-0 ">
             <span class="grow">Summoner Spells</span>
 
-            <PlusMinusExpand :check="spellCheck" />
+            <PlusMinusExpand :check="as.spellCheck" />
           </div>
           <div class="collapse-content  py-0">
             <LazySummonerSpellDisplay

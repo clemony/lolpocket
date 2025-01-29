@@ -31,7 +31,7 @@ function handleDragEnd(event) {
 
 <template>
   <transition-slide
-    :key="set.key" v-draggable="[
+    :key="set.name" v-draggable="[
       set.items,
       {
         'group': {

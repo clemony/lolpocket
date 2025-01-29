@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { MenubarContent, type MenubarContentProps, MenubarPortal, useForwardProps } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+import type { MenubarContentProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
+import { MenubarContent, MenubarPortal, useForwardProps } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = withDefaults(defineProps<MenubarContentProps & { class?: HTMLAttributes['class'] }>(), {
   align: 'start',

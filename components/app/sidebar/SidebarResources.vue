@@ -10,6 +10,7 @@ const ex = {
     {
       name: 'Official',
       open: false,
+      icon: '',
       items: [
         {
           name: 'Dev Updates',
@@ -30,6 +31,7 @@ const ex = {
     },
     {
       name: 'Statistics',
+      icon: 'teenyicons:bar-chart-outline',
       open: false,
       items: [
         {
@@ -68,23 +70,9 @@ const statisticsCheck = ref(ex.submenu[1].open)
 </script>
 
 <template>
-  <!--   <li
-    class="collapse"
-    key="resources">
-    <input
-      v-model="resourceCheck"
-      name="resources"
-      type="checkbox" />
-    <div class="collapse-title flex items-center gap-4">
-      <LittleIcon
-        icon="carbon:group-resource"
-        class="size-5" />
-      Resources
-      <ExpandIndicator v-model:check="resourceCheck" />
-    </div>
-    <ul class="collapse-content"> -->
   <li
-    v-for="(submenu, i) in ex.submenu"
+    v-for="submenu in ex.submenu"
+    :key="submenu.name"
     class="collapse group"
   >
     <input
@@ -92,12 +80,16 @@ const statisticsCheck = ref(ex.submenu[1].open)
       type="checkbox"
     />
     <div class="collapse-title flex items-center gap-4">
+      <div v-if="submenu.name == 'Official'" class="size-4.5 relative ">
+        <i-riot-cute-fist class="size-6 -ml-1 -mt-0.75 invert-dark absolute" />
+      </div>
+      <icon v-else :name="submenu.icon" class="size-4.5 " />
       {{ submenu.name }}
       <ExpandIndicator v-model:check="submenu.open" />
     </div>
 
     <ul class="collapse-content">
-      <li v-for="item in submenu.items">
+      <li v-for="item in submenu.items" :key="item.name">
         <a
           href="item.link"
           target="_blank"

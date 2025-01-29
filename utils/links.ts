@@ -18,7 +18,7 @@ export const links: any = {
   ],
 
   links: [
-    {
+    /*     {
       name: 'Database',
       icon: 'qlementine-icons:drive-16',
       open: true,
@@ -44,7 +44,7 @@ export const links: any = {
           icon: '',
         },
       ],
-    },
+    }, */
     {
       name: 'Resources',
       icon: 'carbon:group-resource',

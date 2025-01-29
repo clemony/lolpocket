@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { DialogClose, DialogContent, type DialogContentEmits, type DialogContentProps, DialogOverlay, DialogPortal, useForwardPropsEmits } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
-import { type SheetVariants, sheetVariants } from './shindex'
+import type { DialogContentEmits, DialogContentProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
+import type { SheetVariants } from './shindex'
+import { DialogClose, DialogContent, DialogOverlay, DialogPortal, useForwardPropsEmits } from 'radix-vue'
+import { computed } from 'vue'
+import { sheetVariants } from './shindex'
 
 interface SheetContentProps extends DialogContentProps {
   class?: HTMLAttributes['class']
@@ -12,9 +15,16 @@ defineOptions({
   inheritAttrs: false,
 })
 
-const props = defineProps<SheetContentProps>()
-
-const emits = defineEmits<DialogContentEmits>()
+const props = defineProps<
+  SheetContentProps & {
+  }
+>()
+// pr
+const emits = defineEmits<
+  DialogContentEmits & {
+    'update:clicked'
+  }
+>()
 
 const delegatedProps = computed(() => {
   const { class: _, side, ...delegated } = props
@@ -23,25 +33,33 @@ const delegatedProps = computed(() => {
 })
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
+
+const target = ref()
+const { isOutside } = useMouseInElement(target)
+
+function handleClick() {
+  if (isOutside.value) {
+    emits('update:clicked')
+  }
+}
 </script>
 
 <template>
   <DialogPortal>
-    <DialogOverlay class="data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/80" />
+    <DialogClose class="pointer-events-auto" as-child @click="handleClick">
+      <DialogOverlay class="isolate data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-70 bg-black/70" />
+    </DialogClose>
     <DialogContent
+      ref="target"
       :class="cn(sheetVariants({ side }), props.class)"
       v-bind="{ ...forwarded, ...$attrs }"
+      class="!z-80 isolate  bg-b1 px-0 focus:ring-0 focus:ring-offset-0 focus:outline-0"
     >
+      <Hide>
+        <DialogTitle> </DialogTitle>
+        <DialogDescription> </DialogDescription>
+      </Hide>
       <slot />
-
-      <DialogClose
-        class="ring-b3 focus:ring-b2 data-[state=open]:bg-b3 absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-1 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none"
-      >
-        <icon
-          name="teenyicons:x-outline"
-          class="text-bc/60 h-4 w-4"
-        />
-      </DialogClose>
     </DialogContent>
   </DialogPortal>
 </template>

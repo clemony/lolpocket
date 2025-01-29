@@ -96,12 +96,11 @@ function resetItems() {
       />
       <div
         id="item-results"
-        ref="item-results"
         class=".item-results max-h-inherit h-[calc(100vh-11.2rem)] overflow-auto"
         as-child
       >
         <ItemList
-          :key="listKey"
+          :list-key="listKey"
           class="pt-5 pr-6"
         />
       </div>

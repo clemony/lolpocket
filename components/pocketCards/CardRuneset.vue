@@ -31,7 +31,7 @@ const runes = ref()
       /*   boxShadow: `0px 2px 5px 0px var(--${set.primary}), 0px 1px 1px 0px var(--${set.primary}-light))` */
     }"
   >
-    <template v-for="(rune, i) in runes">
+    <template v-for="(rune, i) in runes" :key="rune.name">
       <div
         class="shadow-warm z-10 size-9 shrink-0 rounded-full p-0"
         :style="{

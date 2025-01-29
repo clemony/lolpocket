@@ -4,6 +4,13 @@ const ts = useTempStore()
 
 const sidebarTrigger = ref()
 
+const route = useRoute()
+console.log('💠 - route:', route)
+
+const isPocket = computed (() => {
+  const regEx = /^\/pocket/
+  return route.path.match(regEx)
+})
 /*   const isHovered = useElementHover(sidebarTrigger);
   console.log('💠 - isHovered:', isHovered);
 
@@ -18,7 +25,8 @@ const sidebarTrigger = ref()
 
 <template>
   <Menubar
-    class="bg-b1/80 h-[var(--menubar-height)] absolute z-50 m-0 flex w-full items-center gap-6 overflow-hidden border-x-0 border-t-0 border-b border-b-transparent !pt-2 pr-4 pl-2 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center"
+    class="bg-b1/80 isolate h-[var(--menubar-height)] absolute z-60 m-0 flex w-full items-center gap-6 overflow-hidden border-x-0 border-t-0 border-b border-b-transparent !pt-2 pr-4 pl-2 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center"
+    :class="{ 'border-b-b2': isPocket }"
   >
     <div>
       <MenubarMenu>
@@ -59,6 +67,48 @@ const sidebarTrigger = ref()
         </div>
       </MenubarMenu>
     </div>
+     <MenubarMenu>
+      <MenubarTrigger>Summoner</MenubarTrigger>
+      <MenubarContent>
+        <MenubarItem>
+          New Tab <MenubarShortcut>⌘T</MenubarShortcut>
+        </MenubarItem>
+        <MenubarItem>New Window</MenubarItem>
+        <MenubarSeparator />
+        <MenubarItem>Share</MenubarItem>
+        <MenubarSeparator />
+        <MenubarItem>Print</MenubarItem>
+      </MenubarContent>
+    </MenubarMenu>
+
+     <MenubarMenu>
+      <MenubarTrigger>Pockets</MenubarTrigger>
+      <MenubarContent>
+        <MenubarItem>
+          New Tab <MenubarShortcut>⌘T</MenubarShortcut>
+        </MenubarItem>
+        <MenubarItem>New Window</MenubarItem>
+        <MenubarSeparator />
+        <MenubarItem>Share</MenubarItem>
+        <MenubarSeparator />
+        <MenubarItem>Print</MenubarItem>
+      </MenubarContent>
+    </MenubarMenu>
+
+     <MenubarMenu>
+      <MenubarTrigger>Database</MenubarTrigger>
+      <MenubarContent>
+        <MenubarItem>
+          New Tab <MenubarShortcut>⌘T</MenubarShortcut>
+        </MenubarItem>
+        <MenubarItem>New Window</MenubarItem>
+        <MenubarSeparator />
+        <MenubarItem>Share</MenubarItem>
+        <MenubarSeparator />
+        <MenubarItem>Print</MenubarItem>
+      </MenubarContent>
+    </MenubarMenu>
+
     <Grow />
     <div class="">
       <MenubarMenu>

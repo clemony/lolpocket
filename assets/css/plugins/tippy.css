@@ -12,3 +12,8 @@
 .tippy-box[data-inertia][data-state='visible'] {
   transition-timing-function: cubic-bezier(0.28, 0.93, 0.75, 1.38);
 }
+
+.tippy-box[data-theme~='basic'] {
+  background-color: var(--color-b1);
+  color: var(--color-bc);
+}

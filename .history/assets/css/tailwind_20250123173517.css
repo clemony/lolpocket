@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+@config './tailwind.config.ts';
+@import './utilities.css';
+@import './plugins/plugins.css';
+@import './components.css';
+@import './theme.css';
+@import './themes.css';
+@import '../animation/animations.css';
+@import './fonts.css';
+
+@layer base {
+  :root {
+    scrollbar-color: oklch(0 0.02476 255.702 / 0.075) rgba(0, 0, 0, 0) !important;
+    --default-font-family: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+      sans-serif 'sans-serif';
+  }
+  html {
+    @apply bg-transparent;
+    ** {
+      @apply scroll-smooth;
+    }
+  }
+
+  html,
+  body,
+  #app {
+    font-family: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: var(--text-3);
+    @apply text-3 inset-0 m-0 h-screen w-screen p-0 overflow-hidden max-h-screen max-w-screen;
+  }
+}

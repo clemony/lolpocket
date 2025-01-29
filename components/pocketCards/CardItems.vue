@@ -10,7 +10,7 @@ const items = computed(() => {
   const s
   /*         pocket.value.items[0].final[0].items ?
             pocket.value.items[0].final[0].items
-        : */ = pocket.value.items[0].itemSets[pocket.value.items[0].starred].items
+        : */ = pocket.value.items.sets[pocket.value.items.starred].items
   return s
 })
 </script>
@@ -40,7 +40,7 @@ const items = computed(() => {
       </ItemPop>
     </template>
     <ShadowedPlaceholder
-      v-for="index in makeBox(items.length, 6)"
+      v-for="index in makeBox(items.length, 6)" :key="index"
       class="border-dark-1/15 bg-light-2 z-0 size-9 rounded-full"
       :style="{
         /*                 backgroundColor: `var(--${set.secondary}-light`,

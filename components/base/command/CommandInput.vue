@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { ComboboxInput, type ComboboxInputProps, useForwardProps } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+import type { ComboboxInputProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
+import { ComboboxInput, useForwardProps } from 'radix-vue'
+import { computed } from 'vue'
 
 defineOptions({
   inheritAttrs: false,
@@ -23,7 +25,7 @@ const forwardedProps = useForwardProps(delegatedProps)
 
 <template>
   <div
-    class="flex items-center border-b px-3"
+    class="flex items-center border-b px-3 border-b-b3"
     cmdk-input-wrapper
   >
     <icon
@@ -33,7 +35,8 @@ const forwardedProps = useForwardProps(delegatedProps)
     <ComboboxInput
       v-bind="{ ...forwardedProps, ...$attrs }"
       auto-focus
-      :class="cn('placeholder:text-bc/60 flex h-11 w-full rounded-md bg-transparent py-3 outline-hidden disabled:cursor-not-allowed disabled:opacity-50', props.class)"
+      :class="cn('placeholder:text-bc/60 flex h-11 w-full rounded-md bg-b1/90 py-3 outline-hidden border-0 disabled:cursor-not-allowed disabled:opacity-50 *:select-all', props.class)"
     />
+    <slot />
   </div>
 </template>

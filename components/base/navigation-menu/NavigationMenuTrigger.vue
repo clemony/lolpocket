@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { NavigationMenuTrigger, type NavigationMenuTriggerProps, useForwardProps } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+import type { NavigationMenuTriggerProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
+import { NavigationMenuTrigger, useForwardProps } from 'radix-vue'
+import { computed } from 'vue'
 import { navigationMenuTriggerStyle } from './nin'
 
 const props = defineProps<NavigationMenuTriggerProps & {

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 const ts = useTempStore()
 
 const item = ref(ts.selectedItem)
@@ -12,42 +11,42 @@ watch(
 )
 
 watch(
-() => ts.itemDrawerTrigger,
-(newVal) => {
- if(!newVal) {ts.selectedItem = ''}
-}
+  () => ts.itemDrawerTrigger,
+  (newVal) => {
+    if (!newVal) {
+      ts.selectedItem = ''
+    }
+  },
 )
-
 </script>
 
 <template>
-          <div
-          key="id"
-          :item="item"
-          class="relative h-screen w-130 p-9 justify-self-center backdrop-blur-md min-h-screen bg-b1 shadow-pretty overflow-hidden rounded-r-md inset-shadow-sm"
-        >
   <div
-    :key="item"
-    class="drawer"
+    key="id"
+    :item="item"
+    class="relative h-screen w-130 p-9 justify-self-center backdrop-blur-md min-h-screen bg-b1 shadow-pretty overflow-hidden rounded-r-md inset-shadow-sm"
   >
-    <input
-      id="item-drawer"
-      v-model="ts.itemDrawerTrigger"
-      type="checkbox"
-      class="drawer-toggle"
-    />
+    <div
+      :key="item"
+      class="drawer"
+    >
+      <input
+        id="item-drawer"
+        v-model="ts.itemDrawerTrigger"
+        type="checkbox"
+        class="drawer-toggle"
+      />
 
-    <div class="drawer-side z-60">
-      <label
-        for="item-drawer"
-        aria-label="close sidebar"
-        class="drawer-overlay !bg-black/70"
-      ></label>
-<ItemInfo  />
-      
+      <div class="drawer-side z-60">
+        <label
+          for="item-drawer"
+          aria-label="close sidebar"
+          class="drawer-overlay !bg-black/70"
+        ></label>
+        <ItemInfo />
+      </div>
     </div>
   </div>
-       </div>
 </template>
 
 <style scoped></style>

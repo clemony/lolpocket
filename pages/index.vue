@@ -6,9 +6,6 @@ const emit = defineEmits(['update:open'])
 
 const as = useAccountStore()
 
-const HomeSteps = defineAsyncComponent(() => import('components/home/HomeSteps.vue'))
-const HomeEtc = defineAsyncComponent(() => import('components/home/HomeEtc.vue'))
-
 onMounted(() => {
   emit('update:open', false)
 })
@@ -23,12 +20,37 @@ function onScroll(state: UseScrollReturn) {
 const etc = ref(false)
 
 const steps = ref(null)
+
 const { top } = useElementBounding(steps)
 const stepTop = ref(top)
+
+const el = ref<HTMLElement | null>(null)
+
+const { x, y, isScrolling, arrivedState, directions } = useScroll(el)
+
+const direction = ref('')
+watch(
+  () => directions.bottom,
+  (newVal) => {
+    if (newVal) {
+      direction.value = 'right'
+    }
+  },
+)
+
+watch(
+  () => directions.top,
+  (newVal) => {
+    if (newVal) {
+      direction.value = 'left'
+    }
+  },
+)
 </script>
 
 <template>
   <div
+    ref="el"
     v-scroll="onScroll"
     class="relative size-full overflow-y-scroll !border-none outline-hidden"
   >
@@ -43,9 +65,10 @@ const stepTop = ref(top)
           :shadow="shadow"
         />
 
-        <HomeEtc />
-
+        <HomeEtc :direction="direction" :is-scrolling="isScrolling" />
+        <UserReviews />
         <SiteMap />
+        <HomeFooter />
       </div>
     </div>
   </div>

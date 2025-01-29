@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+
+@utility color-chip {
+
+}
+
+
+@utility scrollbar-hide {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+@utility join-item {
+  @apply border-b2 border;
+}
+

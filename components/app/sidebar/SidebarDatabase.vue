@@ -6,12 +6,12 @@ const db = [
   {
     name: 'Champions',
     link: 'Champions',
-    icon: '',
+    icon: 'i-helmet',
   },
   {
     name: 'Items',
     link: 'Items',
-    icon: '',
+    icon: 'teenyicons:shield-tick-outline',
   },
   {
     name: 'Runes',
@@ -21,7 +21,7 @@ const db = [
   {
     name: 'Spells',
     link: 'Spells',
-    icon: '',
+    icon: 'shield',
   },
 ]
 
@@ -55,10 +55,17 @@ const databaseCheck = ref(true)
           :to="{ name: submenu.link }"
           class="flex gap-4 items-center"
         >
-          <!-- <component
-            :key="submenu.name"
-            :is="submenu.icon"
-            class="size-5.5 text-bc stroke-1" /> -->
+          <div
+            v-if="submenu.name == 'Champions' || submenu.name == 'Runes' "
+            class="size-5 relative"
+          >
+            <component
+              :is="submenu.icon"
+              :key="submenu.name"
+              class="size-5.5 text-bc stroke-1 absolute -left-px"
+            />
+          </div>
+          <icon v-else :name="submenu.icon" class="size-5" />
           {{ submenu.name }}
         </NuxtLink>
       </li>

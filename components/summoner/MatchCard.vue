@@ -51,7 +51,7 @@ const match = {
           <div class="flex gap-6">
             <div class="size-17 overflow-hidden rounded-lg">
               <img
-                src="/img/champions/Sona.webp"
+                src="/img/champion/Sona.webp"
                 class="size-17 scale-115"
               />
             </div>

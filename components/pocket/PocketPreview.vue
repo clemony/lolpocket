@@ -64,8 +64,8 @@ const pocket = props.pocket
     <!-------------------⟢ items ⟣-------------------->
 
     <div class="grid w-full grid-cols-3 items-center justify-around gap-1.5">
-      <template v-if="pocket.items[0].itemSets[pocket.items[0].starred]">
-        <template v-for="(item, index) in pocket.items[0].itemSets[pocket.items[0].starred].items">
+      <template v-if="pocket.items.sets[pocket.items[0].starred]">
+        <template v-for="(item, index) in pocket.items.sets[pocket.items[0].starred].items">
           <img
             v-if="index <= 5"
             :key="item.id"
@@ -76,7 +76,7 @@ const pocket = props.pocket
       </template>
 
       <template v-for="(slot, index) in slotIndex">
-        <template v-if="index >= pocket.items[0].itemSets[pocket.items[0].starred].items.length">
+        <template v-if="index >= pocket.items.sets[pocket.items[0].starred].items.length">
           <Placeholder
             :size="40"
             class="rounded-lg"

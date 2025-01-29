@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { ProgressIndicator, ProgressRoot, type ProgressRootProps } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+import type { ProgressRootProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
+import { ProgressIndicator, ProgressRoot } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = withDefaults(defineProps<ProgressRootProps & { class?: HTMLAttributes['class'] }>(), {
   modelValue: 0,

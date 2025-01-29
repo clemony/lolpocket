@@ -1,29 +1,10 @@
 <script setup lang="ts">
+import 'aos/dist/aos.css'
+
 const props = defineProps<{
   shadow?: boolean
 }>()
 
-const is1Visible = ref(false)
-const is2Visible = ref(false)
-const is3Visible = ref(false)
-const is4Visible = ref(false)
-
-// Function to handle visibility changes
-function visibilityChanged(step) {
-  return (isVisible) => {
-    if (step === 'step1')
-      is1Visible.value = isVisible
-    if (step === 'step2')
-      is2Visible.value = isVisible
-    if (step === 'step3')
-      is3Visible.value = isVisible
-    if (step === 'step4')
-      is4Visible.value = isVisible
-  }
-}
-const classObject = 'animate-fade-up animate-duration-700 animate-ease-in-out  animate-fill-both animate-once !opacity-100 '
-
-// Create a ref to access the component instance
 const gameplayVideoRef = ref(null)
 
 onMounted(() => {
@@ -48,21 +29,61 @@ function controlVideo(action) {
   }
 }
 
-const step1 = ref(null)
-const step1IsVisible = useElementVisibility(step1)
-const step1On = ref(false)
-watchOnce(
-  () => step1IsVisible.value,
+const target1 = ref(null)
+const target1IsVisible = ref(false)
+const target1Check = useElementVisibility(target1, { threshold: 1.0 })
+
+watch(
+  target1Check,
   (newVal) => {
-    console.log('💠 - newVal:', newVal)
+    if (newVal) {
+      target1IsVisible.value = true
+    }
   },
+  { once: true },
 )
-/* const target = ref(null)
-const targetIsVisible = useElementVisibility(target)
-const target = ref(null)
-const targetIsVisible = useElementVisibility(target)
-const target = ref(null)
-const targetIsVisible = useElementVisibility(target) */
+
+const target2 = ref(null)
+const target2IsVisible = ref(false)
+const target2Check = useElementVisibility(target2, { threshold: 1.0 })
+
+watch(
+  target2Check,
+  (newVal) => {
+    if (newVal) {
+      target2IsVisible.value = true
+    }
+  },
+  { once: true },
+)
+
+const target3 = ref(null)
+const target3IsVisible = ref(false)
+const target3Check = useElementVisibility(target3, { threshold: 1.0 })
+
+watch(
+  target3Check,
+  (newVal) => {
+    if (newVal) {
+      target3IsVisible.value = true
+    }
+  },
+  { once: true },
+)
+
+const target4 = ref(null)
+const target4IsVisible = ref(false)
+const target4Check = useElementVisibility(target4, { threshold: 1.0 })
+
+watch(
+  target4Check,
+  (newVal) => {
+    if (newVal) {
+      target4IsVisible.value = true
+    }
+  },
+  { once: true },
+)
 </script>
 
 <template>
@@ -76,38 +97,40 @@ const targetIsVisible = useElementVisibility(target) */
     <div class="[&_hr]:bg-b2 bg-b1 border-b2/30 relative z-10 w-full border-b px-12 py-26 transition-all duration-300 [&_hr]:mx-8">
       <slot />
       <ul
-        class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical [&_hr]:bg/b2 [&_.timeline-end]:w-full [&_.timeline-start]:w-full [&_div]:max-w-150 [&_h1]:!font-extrabold [&_h2]:drop-shadow-sm [&_p]:drop-shadow-xs [&_svg]:drop-shadow-sm"
+        class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical [&_hr]:bg/b2 [&_.timeline-end]:w-full [&_.timeline-start]:w-full [&_div]:max-w-150 [&_h1]:!font-extrabold [&_h2]:drop-shadow-sm [&_p]:drop-shadow-xs [&_svg]:drop-shadow-sm "
       >
-        <li
-          ref="step1"
-          class="w-full translate-y-6 opacity-0"
-          :class="{ 'animate-in fade-in-100 opacity-100': step1On == true }"
-        >
+        <li ref="target1" class="w-full">
           <div class="timeline-middle">
             <icon
               name="bi:check-circle-fill"
               class="size-5"
             />
           </div>
-          <div class="timeline-start mb-10 w-full md:text-end">
+
+          <div
+            class="timeline-start mb-10 w-full md:text-end opacity-0 transition-all duration-500 delay-100"
+            :class="{ 'opacity-100 animate-in slide-in-from-bottom-10 fade-in': target1IsVisible }"
+          >
             <p class="font-mono italic">
               Step 1
             </p>
 
             <h2>Create a Pocket</h2>
 
-            <p>
+            <p class="pt-3">
               Pockets are little spaces designed to hold your builds and ideas -- similar to a pocket folder. Theorycraft within them, or use them to remember that ONE build you saw your favorite pro
               use. Pockets can be linked to champions or a general role.
             </p>
 
             <div class="bg-b2/40 shadow-smooth mt-10 h-90 w-full rounded-lg" />
           </div>
+
           <hr />
         </li>
+
         <li
-          ref="step1"
-          class="w-full translate-y-6 opacity-0"
+          ref="target2"
+          class="w-full"
         >
           <hr />
           <div class="timeline-middle">
@@ -116,20 +139,25 @@ const targetIsVisible = useElementVisibility(target) */
               class="size-5"
             />
           </div>
-          <div class="timeline-end mb-10">
+          <div
+            class="timeline-end mb-10 w-full md:text-start opacity-0 transition-all duration-500 delay-100"
+            :class="{ 'opacity-100 animate-in slide-in-from-bottom-10 fade-in': target2IsVisible }"
+          >
             <p class="font-mono italic">
               Step 2
             </p>
             <h2>Craft a Build</h2>
 
-            <p>craft bukild bflsjfl</p>
+            <p class="pt-3">
+              craft bukild bflsjfl
+            </p>
             <div class="bg-b2/40 shadow-smooth mt-10 h-90 w-full rounded-lg" />
           </div>
           <hr />
         </li>
         <li
-          ref="step3"
-          class="w-full translate-y-6 opacity-0"
+          ref="target3"
+          class="w-full "
         >
           <hr />
           <div class="timeline-middle">
@@ -138,13 +166,18 @@ const targetIsVisible = useElementVisibility(target) */
               class="size-5"
             />
           </div>
-          <div class="timeline-start mb-10 md:text-end">
+          <div
+            class="timeline-start mb-10 w-full md:text-end opacity-0 transition-all duration-500 delay-100"
+            :class="{ 'opacity-100 animate-in slide-in-from-bottom-10 fade-in': target3IsVisible }"
+          >
             <p class="font-mono italic">
               Step 3
             </p>
             <h2>Play Games</h2>
 
-            <p>Do what you're best at. Get on the rift and grind some LP.</p>
+            <p class="pt-3">
+              Do what you're best at. Get on the rift and grind some LP.
+            </p>
             <div class="bg-b2/40 shadow-smooth relative mt-10 h-90 w-full overflow-hidden rounded-xl">
               <video-background
                 ref="gameplayVideoRef"
@@ -181,8 +214,8 @@ const targetIsVisible = useElementVisibility(target) */
           <hr />
         </li>
         <li
-          ref="step4"
-          class="w-full translate-y-6 opacity-0"
+          ref="target4"
+          class="w-full"
         >
           <hr />
           <div class="timeline-middle">
@@ -191,13 +224,18 @@ const targetIsVisible = useElementVisibility(target) */
               class="size-5"
             />
           </div>
-          <div class="timeline-end mb-10">
+          <div
+            class="timeline-end mb-10 w-full md:text-start opacity-0 transition-all duration-500 delay-100"
+            :class="{ 'opacity-100 animate-in slide-in-from-bottom-10 fade-in': target4IsVisible }"
+          >
             <p class="font-mono italic">
               Step 4
             </p>
             <h2>Analyze Results</h2>
 
-            <p>The stuff that does stuff.</p>
+            <p class="pt-3">
+              The stuff that does stuff.
+            </p>
 
             <div class="bg-b2/40 shadow-smooth mt-10 h-90 w-full rounded-lg" />
           </div>

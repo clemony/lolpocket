@@ -1,4 +1,8 @@
 <script setup lang="ts">
+const props = defineProps<{
+  direction: string
+  isScrolling: boolean
+}>()
 const data = [
   {
     title: 'Calculate',
@@ -21,7 +25,24 @@ const data = [
     text: 'Personal homepages can be customized with modules -- so you always have the most important data on hand.',
   },
 ]
-const title = ref()
+const title = ref<HTMLElement | null>(null)
+
+const title1IsVisible = useElementVisibility(title, { threshold: 1.0 })
+
+const el = ref<HTMLElement | null>(null)
+watch(
+  () => title1IsVisible.value,
+  (newVal) => {
+    // console.log('💠 - newVal:', newVal)
+  },
+)
+
+watch(
+  () => props.isScrolling,
+  (newVal) => {
+    // console.log('💠 - newVal:', newVal)
+  },
+)
 </script>
 
 <template>
@@ -30,12 +51,14 @@ const title = ref()
             class="border-b1 ring-b1 ring-offset-b1 before:bg-b1 after:bg-b1 inset-shadow-b1 -ring-offset-10 pointer-events-none absolute top-3 left-0 !z-20 mx-auto h-[70vh] w-full rounded-xl border border-3 bg-transparent inset-shadow-sm ring-10 before:absolute before:left-0 before:-mt-1 before:h-[70vh] before:w-[3%] after:absolute after:right-0 after:-mt-1 after:h-[70vh] after:w-[3%]"> -->
     <div class="border-b1 ring-offset-b1 absolute z-20 m-auto size-[95%] rounded-3xl border inset-shadow-sm ring-1 ring-offset-50" />
 
-    <h2
-      ref="title"
-      class="!text-12 mb-38 justify-self-start px-32"
-    >
-      Additional Tools.
-    </h2>
+    <div class="w-full relative h-32">
+      <h2
+        ref="title"
+        class="!text-12 absolute mb-38 justify-self-start px-42  animate-title"
+      >
+        Additional Tools.
+      </h2>
+    </div>
 
     <div class="grid w-[85%] items-start justify-evenly gap-18 @[40rem]:!grid-cols-2 @[65rem]:!grid-cols-4">
       <div
@@ -73,4 +96,6 @@ const title = ref()
   </div>
 </template>
 
-<style scoped></style>
+<style>
+
+</style>

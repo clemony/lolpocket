@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { ContextMenuSubTrigger, type ContextMenuSubTriggerProps, useForwardProps } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+import type { ContextMenuSubTriggerProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
+import { ContextMenuSubTrigger, useForwardProps } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = defineProps<
   ContextMenuSubTriggerProps & {

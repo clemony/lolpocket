@@ -7,7 +7,7 @@ const props = defineProps<{
 <template>
   <NuxtLink
     :to="props.link"
-    class="btn btn-md hover:border-b2 hover:bg-b2 btn-ghost !text-3 !font-normal size-full justify-start px-2 py-1.5 text-left cursor-pointer"
+    class="btn btn-md hover:border-b2 hover:bg-b2 btn-ghost !text-3 !font-normal size-full justify-start px-3 py-1.5 text-left cursor-pointer"
   >
     <slot />
   </NuxtLink>
