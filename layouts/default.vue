@@ -3,15 +3,22 @@ const ts = useTempStore()
 const route = useRoute()
 
 const client = useSupabaseClient()
-client.auth.onAuthStateChange((event, session) => {
-  if (event === 'SIGNED_IN') {
+client.auth.onAuthStateChange(async(event, session) => {
+if (event === 'INITIAL_SESSION'){
     useSetAccount(session)
+  } else {
+      const { data, error } = await client.auth.setSession({access_token: ts.accessToken, refresh_token: ts.refreshToken})
+      ts.accessToken = data.session.access_token
+      ts.refreshToken = data.session.refresh_token
+      ts.sessionInfo = data.session
   }
 })
 
 const drawerOpen = computed (() => {
   return !!(ts.sidebarTrigger || ts.pocketDrawerTrigger || ts.championDrawerTrigger || ts.itemDrawerTrigger || ts.champSelectDrawerTrigger || ts.editPocketTrigger)
 })
+
+
 
 /*
     :class="{ 'bg-black transition-all duration-500': drawerOpen }"
@@ -42,7 +49,6 @@ const drawerOpen = computed (() => {
       :key="ts.selectedItem"
     />
 
-    <SidebarDrawer />
     <div
       class="bg-b1 transition-all duration-400 size-screen min-h-screen grid"
     >

@@ -17,8 +17,9 @@ export default antfu({
     'vue/eqeqeq': 'off',
     'ts/no-unused-expressions': 'off',
     'unused-imports/no-unused-vars': 'off',
+    'unused-imports/no-unused-imports': 'off',
     'vue/no-v-text-v-html-on-component': 'off',
-    'ol-last': 'off',
+    'style/eol-last': 'off',
   },
   formatters: {
     /**

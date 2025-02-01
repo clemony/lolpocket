@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ResizablePanel } from 'components/base/resizable/rindex';
+import { ResizablePanel } from 'components/base/resizable/rindex'
 
 const props = defineProps<{
   pocket: pocket
@@ -31,15 +31,6 @@ const pocket = ref(props.pocket)
         </div>
       </ResizablePanel>
     </ResizablePanelGroup>
-    <div class="w-21 h-full relative ">
-      <div class="w-20   h-full absolute bg-b1  top-0 right-0 flex flex-col items-center py-6 pr-2 overflow-auto  z-50">
-        <MenubarSpacer />
-
-
-
-        <PocketItemFilter :pocket="pocket" />
-      </div>
-    </div>
   </div>
 </template>
 

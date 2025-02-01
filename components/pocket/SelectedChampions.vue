@@ -8,50 +8,34 @@ const ts = useTempStore()
 const pocket = ref(props.pocket)
 
 const champs = computedAsync(() => {
-  return pocket.value.champions[0].champions
+  return pocket.value.champions.champions
 })
 </script>
 
 <template>
   <transition-slide
-    group
-    class="grid h-auto items-center pt-0"
+    group :appear="false"
+    class=" gap-3 grid grid-cols-4 h-auto items-center pt-4 px-0.25"
   >
-    <Button
+    <button
       v-for="champion in champs"
       :key="champion.apiname"
-      variant="ghost"
-      size="md"
-      class="flex gap-3 items-center justify-start pl-2 pr-3"
+      class="size-20 shadow-sm btn p-0 rounded-lg"
       :class="`group/${champion.apiname}`"
     >
       <Champion
         :key="champion.name"
         :champion="champion"
         :pocket="pocket"
-        class="size-8 shrink-0 hover:ring-0 hover:ring-offset-0"
-        :rounded-md="true"
+        class="size-full shrink-0"
       />
-      <span class="text-start grow !tracking-normal !font-normal text-3">{{ champion.name }}</span>
+    </button>
 
-      <icon
-        name="x-sm"
-        class="size-4.5 opacity-0"
-        :class="`group/${champion.apiname}-hover:opacity-100`"
-      />
-    </Button>
-
-    <Button
-      variant="ghost"
-      class="flex gap-4.5 justify-start font-normal  pl-2.5  w-full  mt-1 "
-      @click="ts.champSelectDrawerTrigger = true"
+    <Placeholder
+      class="size-20 rounded-lg bg-b2/70 border-b3/70" @click="ts.champSelectDrawerTrigger = true"
     >
-      <icon
-        name="add-sm"
-        class="size-6 shrink-0"
-      />
-      add
-    </Button>
+      <i-no-champ class="size-13 opacity-30" />
+    </Placeholder>
   </transition-slide>
 </template>
 

@@ -15,6 +15,7 @@ function fixInvalidJson(jsonString: string): string {
   jsonString = jsonString.replace(/:\s*\{\s*"([^"]+)"\s*\}/g, ': ["$1"]')
   jsonString = jsonString.replace(/(\s)+/g, '$1')
   jsonString = jsonString.replace(/(\d)+\s:/g, '"$1":')
+  jsonString = jsonString.replace('Invalid Number', '0')
 
   return jsonString
 }

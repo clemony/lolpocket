@@ -7,19 +7,12 @@ const ts = useTempStore()
 const as = useAccountStore()
 
 const userId = as.userId
+//console.log("💠 - userId:", userId)
 
 onMounted(async () => {
-  const session = useSupabaseSession()
-  if (!ts.sessionInfo) {
-    ts.sessionInfo = session
-  }
-  if (!as.userId) {
-    useSetAccount(session)
-  }
-  if (!as.riotAccount.name || !as.riotAccount.tag) {
-    useSetSummonerData()
-  }
+useSetSummonerData(as.userId)
 })
+
 </script>
 
 <template>

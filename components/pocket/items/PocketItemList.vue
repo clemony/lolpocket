@@ -12,12 +12,11 @@ const list = computed(() => {
   return useItemFilter()
 })
 
-const isDisabled = computed (() => {
-  return props.dragDisabled
-})
+
 </script>
 
 <template>
+
   <transition-slide
     v-draggable="[
       list,
@@ -32,15 +31,14 @@ const isDisabled = computed (() => {
         'bubbleScroll': false,
         'scroll': false,
         'delay': 0,
-        'animation': 300,
+
         'force-fallback': true,
         'fallbackTolerance': 0,
         'fallbackOnBody': true,
       },
     ]"
     group
-    :disabled="isDisabled"
-    :class="cn('pl-10 pr-2 overflow-y-auto max-h-full grid grid-flow-row auto-cols-auto  h-fit  grid-cols-[repeat(auto-fill,minmax(56px,1fr))] justify-center gap-2  pt-[6.8vh] pb-6 ', props.class)"
+    class="pl-10 pr-2 overflow-y-auto max-h-full grid grid-flow-row auto-cols-auto  h-fit  grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center gap-2   py-6 "
   >
     <div v-for="item in list" :key="item.id">
       <Item :item="item" />

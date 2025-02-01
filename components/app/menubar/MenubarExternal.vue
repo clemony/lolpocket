@@ -1,4 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { navigationMenuTriggerStyle } from 'components/base/navigation-menu/nin'
+
+</script>
 
 <template>
   <template v-for="section in links">
@@ -7,16 +10,18 @@
     </MenubarLabel>
     <MenubarSeparator />
 
-    <MenubarItem
+    <NavigationMenuItem
       v-for="link in section.items"
       class="pr-14"
     >
+       <NavigationMenuLink :class="navigationMenuTriggerStyle()">
       <img
         :src="link.icon"
         class="size-6 rounded-md"
       />
       <span class="truncate">{{ link.name }}</span>
-    </MenubarItem>
+       </NavigationMenuLink>
+    </NavigationMenuItem>
 
     <MenubarSeparator class="last:hidden" />
   </template>

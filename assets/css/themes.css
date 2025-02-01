@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+@custom-variant light (&:where([data-theme=light], [data-theme=light] *), &:where([data-theme=dawn], [data-theme=dawn] *));
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *), &:where([data-theme=midnight], [data-theme=midnight] *));
+
 :is([data-theme='light']),
 .data-theme-light {
   --b1: oklch(100% 0 0);

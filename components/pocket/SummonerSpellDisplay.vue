@@ -2,23 +2,24 @@
 const props = defineProps<{
   pocket: pocket
 }>()
+const pocket = ref(props.pocket)
 const ps = usePocketStore()
 function update(event, i) {
   console.log(event)
-  props.pocket.spells[i] = event
+  pocket.value.spells[i] = event
 }
 </script>
 
 <template>
-  <div class="items-center">
+  <div class=" gap-3 grid grid-cols-4 h-auto items-center pt-3 px-0.25">
     <SpellPicker
-      v-model:model="props.pocket.spells[0]"
+      v-model:model="pocket.spells[0]"
       :pocket="props.pocket"
       @update:model="update($event, 0)"
     />
 
     <SpellPicker
-      v-model:model="props.pocket.spells[1]"
+      v-model:model="pocket.spells[1]"
       :pocket="props.pocket"
       @update:model="update($event, 1)"
     />

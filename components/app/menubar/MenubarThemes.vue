@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { navigationMenuTriggerStyle } from 'components/base/navigation-menu/nin'
+
 import { themes } from 'assets/css/themes'
 
 const as = useAccountStore()

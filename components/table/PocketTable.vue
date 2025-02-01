@@ -4,6 +4,7 @@ import { AllCommunityModule, ModuleRegistry, provideGlobalGridOptions } from 'ag
 import { AgGridVue } from 'ag-grid-vue3'
 
 import { SplitterPanel as ResizablePanel } from 'radix-vue'
+import { pocketTheme } from '../../utils/gridTheme'
 // import { CustomNoRowsOverlay } from './GridNoRows';
 import { defaultColDef, getRowId, quickFilterMatcher, quickFilterParser, rowSelectionOptions } from './defs'
 import PocketTableChamps from './GridChampions.vue'
@@ -15,7 +16,6 @@ import TableName from './GridName.vue'
 import pocketNotes from './GridNotes.vue'
 import pocketTableRunes from './GridRunes.vue'
 import TableTags from './GridTags.vue'
-import { pocketTheme } from './gridTheme'
 import IconRenderer from './IconRenderer.vue'
 
 // Register all community features
@@ -244,7 +244,7 @@ watch(
 </template>
 
 <style>
-  :root {
+  /* :root {
   --ag-card-radius: 4px;
 
   --ag-popup-shadow: rgba(50, _50, _105, _0.15) _0px_2px_5px_0px, _rgba(0, _0, _0, _0.05) _0px_1px_1px_0px;
@@ -320,5 +320,5 @@ watch(
       display: none;
     }
   }
-}
+} */
 </style>

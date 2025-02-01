@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { summoner } from 'shared/data/summonerData'
+
+import { summoner } from 'shared/data/summonerData';
 
 const ts = useTempStore()
 const as = useAccountStore()
@@ -10,7 +11,8 @@ function handleLogin() {
 </script>
 
 <template>
-  <MenubarItem class="text-2 flex w-full items-center justify-end gap-2 px-1 py-1 font-normal">
+  <ul v-bind="$attrs">
+    <NavigationMenuLink class="text-2 flex w-full items-center justify-end gap-2 px-1 py-1 font-normal">
     <Avatar class="size-8 shrink-0 rounded-lg shadow-sm">
       <AvatarImage
         :src="summoner.icon"
@@ -27,28 +29,28 @@ function handleLogin() {
       </h5>
       <span class="text-3">#{{ summoner.tag }}</span>
     </div>
-  </MenubarItem>
+  </NavigationMenuLink>
 
   <MenubarSeparator />
   <Themes />
 
   <MenubarSeparator />
 
-  <MenubarItem class="mr-px">
+   <NavigationMenuLink class="mr-px">
     <icon
       name="ph:gear-six"
       class="-ml-px !size-5"
     />
     Settings
-    <MenubarShortcut>
+    <div>
       <icon name="lucide:arrow-big-up" />
       S
-    </MenubarShortcut>
-  </MenubarItem>
+    </div>
+  </NavigationMenuLink>
 
-  <MenubarSeparator />
+  <Separator />
 
-  <MenubarItem
+ <NavigationMenuLink
     v-if="ts.sessionInfo"
     @click="signOut()"
   >
@@ -58,11 +60,11 @@ function handleLogin() {
     />
     Log out
 
-    <MenubarShortcut>⌘Q</MenubarShortcut>
-  </MenubarItem>
+    <div>⌘Q</div>
+</NavigationMenuLink>
   <Dialog>
     <LoginDialog v-if="!ts.sessionInfo">
-      <MenubarItem
+      <NavigationMenuLink
         class="flex"
         @click="handleLogin"
       >
@@ -71,10 +73,11 @@ function handleLogin() {
           class="-ml-0.5 !size-5.5"
         />
         Log In
-        <MenubarShortcut>⌘Q</MenubarShortcut>
-      </MenubarItem>
+        <div>⌘Q</div>
+      </NavigationMenuLink>
     </LoginDialog>
   </Dialog>
+  </ul>
 </template>
 
 <style scoped></style>

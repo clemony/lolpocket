@@ -38,42 +38,32 @@ watch(
 onMounted(() => {
   model.value = props.model
 })
+
+const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells/barrier.webp', '/img/spells/ghost.webp', '/img/spells/exhaust.webp', '/img/spells/smite.webp', '/img/spells/flash.webp', '/img/spells/teleport.webp']
 </script>
 
 <template>
   <div v-if="state.data">
     <Popover>
-      <PopoverTrigger class="p-0 w-full">
-        <Button
+      <PopoverTrigger v-tippy="model.name ? model.name : 'Select Spell'" class="p-0 size-20 rounded-lg btn shadow-sm inset-shadow-sm">
+        <img
           v-if="!model || model.name == ''"
-          variant="ghost"
-          size="md"
-          class="flex w-full gap-3.5 !tracking-normal !font-normal text-3 items-center justify-start pl-2 pr-3 mt-1"
-        >
-          <icon
-            name="add-sm"
-            class="size-8 shadow-sm border p-0.5 border-b3 rounded-[5px] bg-neutral text-nc/90"
-          />
-          Spell
-        </Button>
+          :src="useRandom(imgArr)"
+          class=" rounded-lg overflow-hidden grayscale opacity-30 color-mix-screen"
+        />
 
-        <Button
+        <img
           v-else-if="model"
-          variant="ghost"
-          size="md"
-          class="flex gap-4 items-center w-full justify-start pl-2.5 pr-3 mt-1"
-        >
-          <img
-            :src="`/img/spells/${model.name.toLowerCase()}.webp`"
-            class="size-7 rounded-md"
-          />
-          {{ model.name }}
-        </Button>
+          :src="`/img/spells/${model.name.toLowerCase()}.webp`"
+
+          class=" rounded-lg overflow-hidden"
+        />
       </PopoverTrigger>
 
       <PopoverContent
         class="overflow-hidden rounded-xl size-fit"
         side="bottom"
+        align="start"
       >
         <div class="gap-3 place-content-evenly grid grid-cols-3 bg-b1 backdrop-blur-md">
           <PopoverClose

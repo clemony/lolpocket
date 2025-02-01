@@ -1,0 +1,41 @@
+@import  'tailwindcss';
+
+
+.ag-column-hover{
+    @apply bg-transparent;
+   &.ag-header-cell {
+      @apply bg-neutral text-nc rounded-xl border border-4 border-b1;
+    }
+}
+
+.ag-row-selected{
+    @apply bg-b2/60;
+}
+.ag-row-hover{
+    @apply bg-b2/30;
+}
+
+.ag-row {
+    @apply border-b-b2/60
+}
+
+
+
+.cell-class{
+    @apply !px-1 items-center justify-center flex;
+}
+:is([col-id='buy']).cell-class{
+    @apply justify-end;
+}
+
+:is([col-id='name']).cell-class{
+    @apply justify-start;
+}
+
+.ag-header-cell-label{
+    @apply flex;
+}
+
+.ag-cell.ag-column-last {
+   @apply !pr-6;
+}

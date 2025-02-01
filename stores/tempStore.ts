@@ -1,3 +1,4 @@
+import type { GridApi } from 'ag-grid-community'
 import { defineStore } from 'pinia'
 
 export const useTempStore = defineStore(
@@ -7,11 +8,13 @@ export const useTempStore = defineStore(
 
     const userOS = ref()
     const sessionInfo = ref()
+    const accessToken = ref()
+    const refreshToken = ref()
 
     /*     const clickType = computed(() => {
       return userOS.value == 'Mac' || 'Windows' ? 'right click' : 'force press'
     }) */
-
+    const itemGridApi = shallowRef<GridApi | null>(null)
     // sidebar
     const sidebarTrigger = ref(false)
     const sidebarOpen = ref(false)
@@ -25,6 +28,8 @@ export const useTempStore = defineStore(
     const runeDrawerTrigger = ref(false)
     const champSelectDrawerTrigger = ref(false)
     const cardDrawerTrigger = ref(false)
+
+    const pocketBarComponent = shallowRef(null)
 
     // drawer selections
     const selectedChampion = ref(null)
@@ -100,6 +105,9 @@ export const useTempStore = defineStore(
     return {
       userOS,
       sessionInfo,
+      accessToken,
+      refreshToken,
+      itemGridApi,
       // clickType,
 
       // sidebar
@@ -115,6 +123,8 @@ export const useTempStore = defineStore(
       cardDrawerTrigger,
 
       sidebarOpen,
+
+      pocketBarComponent,
 
       // drawer
 

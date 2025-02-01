@@ -2,9 +2,7 @@
 const ts = useTempStore()
 const as = useAccountStore()
 
-const summonerName = computed(() => {
-  return as.riotAccountLinked ? as.riotAccount.name : 'Summoner'
-})
+const summonerName = ref()
 
 const userLinks = [
   {

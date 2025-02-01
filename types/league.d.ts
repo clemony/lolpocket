@@ -1,5 +1,14 @@
 declare global {
 
+  interface RiotAccount {
+      puuid: string
+    gameName: string
+    tagLine: string
+    profileIconId: string
+    summonerLevel: number
+    region: string
+  }
+
   interface pocket {
     key: string
     name: string

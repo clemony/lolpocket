@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import 'tippy.js/animations/scale.css'
+import 'tippy.js/animations/scale.css';
 
 const props = defineProps<{
   content: string

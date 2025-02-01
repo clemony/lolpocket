@@ -11,8 +11,6 @@ const open = ref(false)
 function selectRandomChamp() {
   ts.drawerChampSelectDropdown = useRandom(props.champNames)
 }
-
-
 </script>
 
 <template>
@@ -54,7 +52,7 @@ function selectRandomChamp() {
                   ts.drawerChampSelectDropdown === champion ? 'opacity-100' : 'opacity-0',
                 )"
               />
-              {{ champion}}
+              {{ champion }}
             </CommandItem>
           </CommandGroup>
         </CommandList>

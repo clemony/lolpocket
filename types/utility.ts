@@ -11,6 +11,8 @@ declare global {
     name: string
     key: string
     type: string
+    description?: string
+    link?: string
     items: any[]
     icon?: string
     permanent?: boolean

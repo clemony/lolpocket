@@ -32,6 +32,9 @@ export default defineAppConfig({
       'folders': 'formkit:folder',
       'star': 'uiw:star-off',
       'infinity': 'solar:infinity-outline',
+      'calc': 'teenyicons:calculator-outline',
+      'filter': 'teenyicons:filter-outline',
+      'heart': 'teenyicons:heart-outline',
     },
   },
 })

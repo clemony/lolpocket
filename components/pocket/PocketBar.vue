@@ -1,105 +1,97 @@
 <script lang="ts" setup>
-import PocketBrowser from './file-tree/PocketFileTree.vue'
-import ChampSelectSheet from './sheet/ChampSelectSheet.vue'
-import EditPocketDrawer from './sheet/EditPocketDrawer.vue'
 
 const props = defineProps<{
   pocket: pocket
 }>()
-const component = shallowRef(null)
-watch(
-  () => component.value,
-  (newVal) => {
-    console.log('💠 - newVal:', newVal)
-  },
-)
-const target = ref(null)
 
+const FilterSheet = defineAsyncComponent(() => import('./sheet/FilterSheet.vue'))
+const  PocketBrowser= defineAsyncComponent(() => import('./file-tree/PocketFileTree.vue'))
+const  ChampSelectSheet= defineAsyncComponent(() => import('./sheet/ChampSelectSheet.vue'))
+const EditPocketDrawer = defineAsyncComponent(() => import('./sheet/EditPocketDrawer.vue'))
+const FavoriteSheet = defineAsyncComponent(() => import('./sheet/FavoriteSheet.vue'))
+
+const pocket = ref(props.pocket)
+const component = shallowRef(null)
+
+const target = ref(null)
 const isHovered = useElementHover(target)
 const isOpen = ref(false)
 
-const browser = ref(null)
-const isBHovered = useElementHover(browser)
+watchEffect(() => {
+  if (isHovered.value) {
+    setTimeout(() => {
+      if (isHovered.value) {
+        isOpen.value = true
+      }
+    }, 1000)
+  }
+})
 
-const champions = ref(null)
-const isCHovered = useElementHover(champions)
+const overview = ref(null)
+const elements = [
+  { ref: ref(null), component: EditPocketDrawer },
+  { ref: ref(null), component: ChampSelectSheet },
+  { ref: ref(null), component: FilterSheet },
+  { ref: ref(null), component: FavoriteSheet },
+  { ref: ref(null), component: PocketBrowser },
+]
 
-const edit = ref(null)
-const isEHovered = useElementHover(edit)
+const hoverStates = elements.map(el => ({
+  ref: el.ref,
+  isHovered: useElementHover(el.ref),
+  component: el.component,
+}))
 
-watch(
-  () => isHovered.value,
-  (newVal) => {
-    if (newVal) {
-      isOpen.value = true
-    }
-  },
-)
-
-watch(
-  () => isBHovered.value,
-  (newVal) => {
-    if (newVal) {
-      component.value = PocketBrowser
-    }
-  },
-)
-
-watch(
-  () => isCHovered.value,
-  (newVal) => {
-    if (newVal) {
-      component.value = ChampSelectSheet
-    }
-  },
-)
-
-watch(
-  () => isEHovered.value,
-  (newVal) => {
-    if (newVal) {
-      component.value = EditPocketDrawer
-    }
-  },
-)
+watchEffect(() => {
+  const hovered = hoverStates.find(el => el.isHovered.value)
+  if (hovered) {
+    component.value = hovered.component
+  }
+})
 </script>
 
 <template>
   <Sheet id="sheet" v-model:open="isOpen" class=" w-20 h-screen">
-    <SheetPortal :disabled="true" to="#sheet">
-      <SheetTrigger ref="target" class="outline-0 z-59 pointer-events-none">
-        <MenubarSpacer />
+    <SheetTrigger ref="target" class="outline-0 z-59 pointer-events-none ">
+      <MenubarSpacer />
 
-        <div class=" w-16 h-screen bg-b1 flex flex-col py-4 items-center gap-3">
+      <div class=" w-16 h-screen bg-b1 flex flex-col py-4 items-center gap-3.5 *:pointer-events-auto **:[&_svg]:shrink-0">
+        <ShineButton :ref="elements[0].ref">
           <PocketIcon :image="pocket.icon" class="size-10" />
+        </ShineButton>
+
+        <PocketBarButton ref="overview">
           <icon name="infinity" class="size-6.5 " />
+        </PocketBarButton>
 
-          <Label ref="champions" variant="ghost" class="pointer-events-auto">
+        <PocketBarButton :ref="elements[1].ref">
+          <i-no-champ class="size-10" />
+        </PocketBarButton>
 
-            <i-no-champ class="size-10" />
-          </Label>
+        <PocketBarButton :ref="elements[2].ref">
+          <icon name="teenyicons:filter-outline" class="size-5" />
+        </PocketBarButton>
 
-          <i-rune class="size-6.5 dst" />
-          <div class=" size-5.5   relative ">
-            <icon name="grommet-icons:square" class="absolute z-0 size-5.5" />
-            <div class="top-0 size-1.75 bg-b1  absolute right-0  z-10"></div>
-            <div class=" bottom-0 size-1.75 bg-b1  absolute left-0  z-10"></div>
-          </div>
+        <PocketBarButton :ref="elements[3].ref">
+          <icon name="teenyicons:heart-outline" class="size-5.5" />
+        </PocketBarButton>
 
-          <Label ref="browser" variant="ghost" class="pointer-events-auto">
+        <PocketBarButton :ref="elements[4].ref">
+          <icon name="folders" class="size-5.5 overflow-hidden " />
+        </PocketBarButton>
 
-            <icon name="folders" class="size-5.5 overflow-hidden " />
-          </Label>
-
-          <Label ref="edit" variant="ghost" class="pointer-events-auto">
-            <icon name="gear" class="size-6" />
-          </Label>
-        </div>
-      </SheetTrigger>
-      <BasicSheet class="top-[5vh] left-16 outline-0 border-r-b2 min-w-105">
-        <component :is="component" :pocket="pocket" />
-      </BasicSheet>
-    </SheetPortal>
+        <PocketBarButton :ref="elements[0].ref">
+          <icon name="gear" class="size-6" />
+        </PocketBarButton>
+      </div>
+    </SheetTrigger>
+    <BasicSheet>
+      <div
+        class="min-w-110 w-110 *:w-full h-full pt-7.5 pl-3 pr-6"
+      >
+        <component :is="component" :pocket="pocket" @update:drag="(e) => isOpen = false" />
+      </div>
+    </BasicSheet>
   </Sheet>
 </template>
 

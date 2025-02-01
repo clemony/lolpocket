@@ -1,6 +1,6 @@
 <!-- eslint-disable unused-imports/no-unused-vars -->
 <script setup lang="ts">
-import { stats, types } from 'shared/data/item';
+import { stats, types } from 'shared/data/item'
 
 const props = defineProps<{
   pocket: pocket

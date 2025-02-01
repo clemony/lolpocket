@@ -14,8 +14,6 @@ onMounted(async () => {
 
   // os
   ts.userOS = getOS()
-
-  await preloadComponents('HoverSidebar')
 })
 
 const scroll = ref(null)

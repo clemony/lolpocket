@@ -33,6 +33,7 @@ const forwardedProps = useForwardProps(delegatedProps)
       class="mr-2 h-4 w-4 shrink-0 opacity-50"
     />
     <ComboboxInput
+      :spellcheck="false"
       v-bind="{ ...forwardedProps, ...$attrs }"
       auto-focus
       :class="cn('placeholder:text-bc/60 flex h-11 w-full rounded-md bg-b1/90 py-3 outline-hidden border-0 disabled:cursor-not-allowed disabled:opacity-50 *:select-all', props.class)"

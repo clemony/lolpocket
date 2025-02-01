@@ -1,24 +1,29 @@
-async function useSummonerData() {
+async function useSummonerData(userId) {
   const ts = useTempStore()
   const as = useAccountStore()
   const client = useSupabaseClient()
   if (!ts.sessionInfo) {
     return
   }
-  const { data } = await client.from('user_data').select('riot_id,summoner_name, summoner_tag').eq('user_id', as.userId).limit(1).single()
-  const name = data.summoner_name
-  const tag = data.summoner_tag
-  if (data && data.summoner_name && data.summoner_tag) {
-    return { name, tag }
+  const { data } = await client.from('user_data').select('"gameName", "tagLine", "profileIconId", "summonerLevel","region"').eq('user_id', userId).limit(1).single()
+  const name = data.gameName
+  const tag = data.tagLine
+  if (data) {
+    return data
   }
 }
 
-export async function useSetSummonerData() {
-  await useSummonerData().then((result) => {
-    if (result && result.name && result.tag) {
+export async function useSetSummonerData(userId) {
+  console.log('working')
+  await useSummonerData(userId).then((result) => {
+    if (result) {
       const as = useAccountStore()
-      as.riotAccount.name = result.name
-      as.riotAccount.tag = result.tag
+      as.riotAccount.gameName = result.gameName
+      as.riotAccount.tagLine = result.tagLine
+      as.riotAccount.profileIconId = result.profileIconId
+      as.riotAccount.summonerLevel = result.summonerLevel
+      as.riotAccount.region = result.region
+      as.$persist
     }
   })
 }

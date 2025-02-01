@@ -12,7 +12,7 @@ const eventAt = ref()
     <li
       v-for="pocket in folder.items"
       :key="pocket.key"
-      class="!mr-5"
+      class="!mr-5 odd:bg-b2/30"
     >
       <details
         :key="pocket.key"

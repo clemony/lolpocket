@@ -4,12 +4,8 @@ import { summoner } from 'shared/data/summonerData'
 const ts = useTempStore()
 const as = useAccountStore()
 
-const summonerName = computed(() => {
-  return as.riotAccount.name ? as.riotAccount.name : 'Summoner'
-})
-const summonerTag = computed(() => {
-  return as.riotAccount.tag ? as.riotAccount.tag : 'Summoner'
-})
+const summonerName = ref()
+const summonerTag = ref()
 
 const links = [
   {

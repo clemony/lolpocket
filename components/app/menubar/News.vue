@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { navigationMenuTriggerStyle } from 'components/base/navigation-menu/nin'
+
 import news from './news.json'
 </script>
 

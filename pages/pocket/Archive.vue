@@ -8,6 +8,8 @@ console.log('💠 - ds.champions:', ds.champions)
 <template>
   <div class="relative size-screen">
   <Pocketbar  />
+
+          <SidebarPockets />
   </div>
 </template>
 

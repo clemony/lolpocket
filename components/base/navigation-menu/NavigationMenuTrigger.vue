@@ -28,11 +28,11 @@ const forwardedProps = useForwardProps(delegatedProps)
     <div class="grow">
       <slot />
     </div>
-    <icon
+    <!--  <icon
       name="teenyicons:down-small-outline"
       class="relative justify-self-end justify-end top-px ml-1 size-4 shrink-0 transition duration-200 group-data-[state=open]:rotate-180"
       :class="{ hidden: props.noArrow }"
       aria-hidden="true"
-    />
+    /> -->
   </NavigationMenuTrigger>
 </template>

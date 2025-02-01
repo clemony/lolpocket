@@ -25,7 +25,7 @@ function handleDrawer() {
 
 <template>
   <header class="w-full !h-[var(--page-header-height)]  flex flex-nowrap shrink-0 flex-col  gap-2 py-2 justify-end items-start">
-    <div class="breadcrumbs text-2 pl-3">
+    <div class="breadcrumbs text-2 pl-0.25">
       <ul class="flex items-center ml-0.5">
         <li>
           <a>
@@ -40,7 +40,7 @@ function handleDrawer() {
       </ul>
     </div>
 
-    <Label variant="ghost" size="lg" class="group flex items-center gap-3 px-3  h-14 w-full cursor-pointer select-none">
+    <Label variant="ghost" size="lg" class="group flex items-center gap-3 justify-start pl-0.5 pr-2 h-14 w-full cursor-pointer select-none">
       <input
         id="edit-pocket-drawer"
         v-model="ts.editPocketTrigger"

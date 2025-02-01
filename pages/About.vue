@@ -13,14 +13,54 @@ const icons = [
 ]
 
 const hoverClass = 'hover:underline hover:bg-b2/35 underline-offset-2 !cursor-pointer'
+
+const faq = [
+  {
+    q: 'Where going?',
+    a: ''
+  }
+]
 </script>
 
 <template>
-  <div class="p-8 pt-30">
+  <div class="px-14 pt-30">
     <!-- prettier-ignore -->
-    <div class="flex">
-      <Grow />
-      <div class="flex flex-col gap-6">
+    <div class="grid grid-cols-2 gap-[20%]">
+      <div class="">
+        <h1 class="!text-9 dst tracking-wider">n/faq</h1>
+        
+            <div class="mt-8 text-4 grid grid-cols-[30px_1fr] gap-4 grid-flow-row items-center [&_span]:text-5">
+
+          <span class="font-semibold">Q:</span>
+        <p class="flex gap-4"> Where going?</p>
+        <span class="font-semibold">LP:</span>
+         <p><icon name="hugeicons:moon-01" class="size-8" /></p>
+      </div>
+     <Separator label="MADE WITH" class="mt-16"/>
+      <div class="flex">
+        <div class="card *:text-bc/85 plb3e-items-center grid auto-cols-max grid-flow-col gap-5 rounded-xl pt-16 pb-8 *:size-6">
+          <icon
+            v-for="icon in icons"
+            :key="icon"
+            :name="icon"
+          />
+          <img
+            class="brightness-50 contrast-200 grayscale"
+            src="/img/ui/daisyui.svg"
+          />
+
+          <icon
+            class="brightness-[80%] contrast-200 grayscale"
+            name="logos:pinia"
+          />
+        </div>
+
+        <Grow />
+
+      </div>
+</div>
+
+      <div class="flex flex-col gap-6 items-end">
         <div
           class="mockup-code bg-neutral text-nc *:ws-nowrap w-2/5 min-w-[400px] rounded-xl leading-loose font-normal"
         >
@@ -70,43 +110,18 @@ const hoverClass = 'hover:underline hover:bg-b2/35 underline-offset-2 !cursor-po
           </p>
         </div>
       </div>
-      <p>
-        Q: Where going?
-        LP: <icon name="hugeicons:moon-01" />
-      </p>
+     
       <a href="https://gitlab.com/lol-math/lolmath/-/tree/main/packages/calc" target="_blank" />
 
-      game item by Petai Jantrapoon from <a href="https://thenounproject.com/browse/icons/term/game-item/" target="_blank" title="game item Icons">Noun Project</a> (CC BY 3.0)
     </div>
 
-    <div class="absolute bottom-0 left-0 w-full p-8">
-      <Separator label="MADE WITH" />
-      <div class="flex">
-        <div class="card *:text-bc/85 plb3e-items-center grid auto-cols-max grid-flow-col gap-5 rounded-xl pt-16 pb-8 *:size-6">
-          <icon
-            v-for="icon in icons"
-            :key="icon"
-            :name="icon"
-          />
-          <img
-            class="brightness-50 contrast-200 grayscale"
-            src="/img/ui/daisyui.svg"
-          />
-
-          <icon
-            class="brightness-[80%] contrast-200 grayscale"
-            name="logos:pinia"
-          />
-        </div>
-
-        <Grow />
-
-        <div class="flex flex-col items-end justify-center pt-8 tracking-tight">
+    <div class="absolute bottom-0 left-0 w-full px-10 py-8 bg-b2/40 border-t border-b2">
+      
+        <div class="flex flex-col items-end justify-center tracking-tight">
           <p>All in game assets are the property of Riot Games.</p>
           <p>Riot Games is in no way affiliated with this app.</p>
           <p>All content is the developer's own opinion.</p>
         </div>
-      </div>
     </div>
   </div>
 </template>

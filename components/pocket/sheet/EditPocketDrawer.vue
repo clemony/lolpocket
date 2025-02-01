@@ -61,7 +61,7 @@ const pocket = ref(props.pocket)
 
     <SelectIcon v-model:selected-icon="pocket.icon" :pocket="pocket" @update:selected-icon="(e) => pocket.icon = e" />
 
-    <template #button>
+  <!--   <template #button>
       <Label
         variant="neutral"
         type="button"
@@ -70,7 +70,7 @@ const pocket = ref(props.pocket)
       >
         Update
       </Label>
-    </template>
+    </template> -->
   </PocketSheetContent>
 </template>
 

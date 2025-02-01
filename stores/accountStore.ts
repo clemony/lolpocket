@@ -14,8 +14,12 @@ export const useAccountStore = defineStore(
 
     const riotAccountLinked = ref(true)
     const riotAccount = {
-      name: ref(),
-      tag: ref(),
+      puuid: ref(null),
+      gameName: ref(null),
+      tagLine: ref(null),
+      profileIconId: ref('/img/summoner-icons/space-yuumi.jpg'),
+      summonerLevel: ref(null),
+      region: ref(null) || 'Americas',
     }
 
     const champCheck = ref(true)
@@ -83,10 +87,6 @@ export const useAccountStore = defineStore(
     persist: {
       storage: piniaPluginPersistedstate.localStorage(),
       key: 'accountStore',
-      afterHydrate: (ctx) => {
-        // const as = useAccountStore();
-        // ts.drawerState = false
-      },
     },
   },
 )

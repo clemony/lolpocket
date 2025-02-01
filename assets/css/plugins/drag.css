@@ -5,7 +5,7 @@
 }
 
 .sortable-drag {
-  @apply border-b2 bg-b2/30 aspect-square size-16 cursor-pointer items-center justify-center gap-2 self-center rounded-md border opacity-70 shadow-xs;
+  @apply border-b2 bg-b2/30 overflow-hidden aspect-square size-16 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
 }
 
 .sortable-fallback {

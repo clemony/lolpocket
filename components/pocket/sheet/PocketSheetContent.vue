@@ -8,14 +8,16 @@ const emit = defineEmits(['update:name'])
 </script>
 
 <template>
-  <div class=" overflow-hidden  min-h-full max-h-screen  !w-105 min-w-105   px-6 py-4 [&_h2]:tracking-tight [&_p]:mt-2">
-    <DialogHeader class="h-[8vh]">
-      <DialogTitle>{{ props.title }}</DialogTitle>
-      <DialogDescription class="text-bc" v-html="props.description" />
+  <div class="relative inset-0 ">
+    <DialogHeader>
+      <h1 class="tracking-tight dst">
+        {{ props.title }}
+      </h1>
+      <p class="text-bc mt-0" v-html="props.description" />
     </DialogHeader>
 
-    <div class="[&_label]:text-3 relative flex h-[92vh] max-h-[92vh] w-full flex-col justify-start gap-6 overflow-clip pt-4 px-0.5">
-      <div class="flex flex-col h-[13.5vh] gap-1">
+    <div class="[&_label]:text-3   flex flex-col justify-start gap-6  pt-8 px-0.5">
+      <div class="flex flex-col  gap-1">
         <Label>Pocket Name</Label>
 
         <div class="flex text-3 h-11 px-3 border-b3 border w-full rounded-md items-center shrink-0">
@@ -37,11 +39,11 @@ const emit = defineEmits(['update:name'])
           </button>
         </div>
 
-        <Label class="mt-3">Tags</Label>
+        <Label class="mt-6">Tags</Label>
         <slot name="tags" />
       </div>
 
-      <div class="h-[66vh]">
+      <div class="relative inset-0">
         <slot />
       </div>
 

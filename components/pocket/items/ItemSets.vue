@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { vDraggable } from 'vue-draggable-plus'
 
 const props = defineProps<{
   pocket: pocket
@@ -7,15 +8,15 @@ const ts = useTempStore()
 
 const pocket = ref(props.pocket)
 
-//const items = ref<any[]>([])
-/*
+const items = ref<any[]>([])
+
 watch(items, (newItemSets) => {
   if (pocket.value) {
     pocket.value.items.sets = newItemSets
   }
-}) */
+})
 
-/* function updateStarredIndex(evt) {
+function updateStarredIndex(evt) {
   const { oldIndex, newIndex } = evt
 
   if (!pocket.value) {
@@ -31,11 +32,11 @@ watch(items, (newItemSets) => {
   else if (pocket.value.items.starred < oldIndex && pocket.value.items.starred >= newIndex) {
     pocket.value.items.starred++
   }
-} */
+}
 </script>
 
 <template>
-<!--   <div class="min-h-90vh 90vh">
+  <div class="min-h-90vh 90vh">
     <div
       v-draggable="[
         pocket.items.sets,
@@ -57,16 +58,15 @@ watch(items, (newItemSets) => {
         },
       ]"
       group
-      class="z-0 h-full w-full pt-8 px-8 flex-col items-center gap-10 flex" >-->
-    <!--
-      @end="updateStarredIndex" -->
-    <!--   <Card
+      class="z-0 h-full w-full pt-8 px-8 flex-col items-center gap-10 flex"
+    >
+      <Card
         v-for="set, in pocket.items.sets"
         :key="set.name"
         drag-class="setDrag"
         class="relative w-full !shadow-sm shadow-b2/70"
       >
-        <CardHeader class="flex w-full flex-row items-center  pb-3 px-4"> -->
+        <CardHeader class="flex w-full flex-row items-center  pb-3 px-4">
           <!--                <label class="group/star items-center cursor-pointer  *:transition-all *:duration-300  size-3 relative">
                     <input type="radio" name="starSet" :value="index" class="peer hidden"
                         v-model="pocket.items[0].starred" @change="prevIndex = pocket.items[0].starred"
@@ -80,7 +80,7 @@ watch(items, (newItemSets) => {
                         }" />
                 </label> -->
 
-       <!--    <div class="-mt-1 flex w-fit items-center gap-1 overflow-hidden **:items-center">
+          <div class="-mt-1 flex w-fit items-center gap-1 overflow-hidden **:items-center">
             <InputEditable
               v-model:model-value="set.name"
               :default-value="set.name"
@@ -132,8 +132,8 @@ watch(items, (newItemSets) => {
               />
             </button>
           </div>
-        </CardHeader> -->
-       <!--  <CardContent class="px-7">
+        </CardHeader>
+        <CardContent class="px-7">
           <ItemSetItems
             :pocket="pocket"
             :set="set"
@@ -141,7 +141,7 @@ watch(items, (newItemSets) => {
         </CardContent>
       </Card>
     </div>
-  </div>-->
+  </div>
 </template>
 
 <style scoped>

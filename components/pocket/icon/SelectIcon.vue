@@ -67,13 +67,13 @@ onMounted (async () => {
         <ChampionComboBox :champ-names="champions" />
       </div>
       <div class="size-full justify-end items-center  relative flex">
-        <div class="rounded-lg shadow-md border-neutral/50 inset-shadow-sm inset-shadow-black absolute">
-          <PocketIcon :image="selectIcon" class="size-28 rounded-lg **:rounded-lg" />
+        <div class="rounded-full shadow-md border-neutral/50 inset-shadow-sm inset-shadow-black absolute">
+          <PocketIcon :image="selectIcon" class="size-28" />
         </div>
       </div>
     </div>
     <div
-      class=" w-full h-auto  justify-between gap-2 justify-self-center overflow-y-scroll  py-4 place-items-center grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(60px,1fr))] px-1 "
+      class=" w-full h-auto  justify-between gap-1 justify-self-center overflow-y-scroll  py-4 place-items-center grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(60px,1fr))] px-1 "
     >
       <label
         v-for="result in searchResult" :key="result.item" alt="Champion Image"
