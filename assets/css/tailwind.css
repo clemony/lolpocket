@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@config './tailwind.config.ts';
 @import './utilities.css';
 @import './plugins/plugins.css';
 @import './components.css';
@@ -13,9 +12,9 @@
     scrollbar-color: oklch(0 0.02476 255.702 / 0.075) rgba(0, 0, 0, 0) !important;
     --default-font-family: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
       sans-serif 'sans-serif';
+      font-size: 12.2px;
   }
   html {
-    @apply bg-transparent;
     ** {
       @apply scroll-smooth;
     }
@@ -34,4 +33,9 @@
   .reset-input {
     @apply outline-0 ring-0 ring-offset-0 focus:outline-0 focus:ring-0 border-transparent;
   }
+
+  htnml{
+    font-size: 12px;
+  }
 }
+ 

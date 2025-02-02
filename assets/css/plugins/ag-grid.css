@@ -4,7 +4,7 @@
 .ag-column-hover{
     @apply bg-transparent;
    &.ag-header-cell {
-      @apply bg-neutral text-nc rounded-xl border border-4 border-b1;
+      @apply bg-neutral text-nc rounded-xl  border-4 border-b1;
     }
 }
 
