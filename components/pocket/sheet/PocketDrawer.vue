@@ -12,6 +12,9 @@ const name = ref('')
 const tags = ref([])
 const selectedIcon = ref('/img/champion/centered/-1.webp')
 
+const emit = defineEmits(['update:name'])
+
+
 watch(
   () => tags.value,
   (newVal) => {
@@ -51,6 +54,11 @@ defineExpose({
           placeholder="optional"
           class="size-full"
         />
+      </template>
+
+      <template #name-buttons >
+        <CloseButton  />
+        <RandomButton v-tippy="'No brain? Meet Button.'" @click.stop="emit('update:name', generateRandomString())"  />
       </template>
 
       <template #tags>

@@ -29,3 +29,6 @@
   @apply border-b2 border;
 }
 
+@utility dst {
+  @apply drop-shadow-text;
+}

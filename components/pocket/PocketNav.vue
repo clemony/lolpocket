@@ -13,9 +13,8 @@ function handleResize(e) {
 </script>
 
 <template>
-  <div class=" h-full min-h-full max-h-full w-140  pl-5 border-b2 border-x">
-    <MenubarSpacer class=" w-[115%]" />
-    <div class="pl-3 pr-8">
+  <div class=" h-full min-h-full max-h-full w-146  pl-5 border-b2 border-x pt-[5.5vh]">
+    <div class="pl-4 pr-10">
       <PocketHeader :pocket="pocket" />
 
       <div class="w-full h-54  shadow-sm border border-b3 rounded-lg shadow-b3  relative size-fit">
@@ -34,14 +33,14 @@ function handleResize(e) {
 
       <SelectedChampions
         :pocket="pocket"
-        class="mt-2"
+        class="mt-4"
       />
 
       <Separator class="my-6" />
 
       <!--           <h4 class="tracking-tighter mb-3 dst">Summoner Spells</h4>
  -->
-      <LazySummonerSpellDisplay
+      <SummonerSpellDisplay
         :pocket="pocket"
         class=""
       />

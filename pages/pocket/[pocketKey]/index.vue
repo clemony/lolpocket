@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ResizablePanel } from 'components/base/resizable/rindex'
+import { ResizablePanel } from 'components/base/resizable/rindex';
 
 const props = defineProps<{
   pocket: pocket

@@ -2,7 +2,7 @@
 import type { SheetVariants } from 'components/base/sheet/shindex'
 import type { DialogContentEmits, DialogContentProps } from 'radix-vue'
 import type { HTMLAttributes } from 'vue'
-import { DialogClose, DialogContent, DialogOverlay, DialogPortal, useForwardPropsEmits } from 'radix-vue'
+import { DialogClose, DialogContent, DialogPortal, useForwardPropsEmits } from 'radix-vue'
 import { computed } from 'vue'
 import { sheetVariants } from './shindex'
 
@@ -51,9 +51,9 @@ function handleClick() {
     </DialogClose>
     <DialogContent
       ref="target"
-      :class="cn(sheetVariants({ side }), props.class)"
+      :class="cn('', sheetVariants({ side }), props.class)"
       v-bind="{ ...forwarded, ...$attrs }"
-      class="!z-58 isolate top-[5vh] max-h-[95vh]  bg-b1/90 backdrop-blur-md !p-0 focus:ring-0 focus:ring-offset-0 focus:outline-0 left-16 outline-0 border-r-b2   min-w-110 w-110"
+      class="!z-58 isolate !pt-[5vh] max-h-screen  bg-b1 backdrop-blur-md !p-0 focus:ring-0 focus:ring-offset-0 focus:outline-0 outline-0 border-x-b2   min-w-120 w-120"
     >
       <Hide>
         <DialogTitle> </DialogTitle>

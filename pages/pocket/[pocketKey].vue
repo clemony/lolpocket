@@ -7,13 +7,13 @@ console.log('💠 - pocket:', pocket)
 
 <template>
   <main class="h-screen w-full flex">
-    <PocketBar :pocket="pocket" />
     <PocketNav :pocket="pocket" />
 
     <NuxtPage
       :pocket="pocket"
       :page-key="(route) => route.fullPath"
     />
+    <PocketBar :pocket="pocket" />
   </main>
 </template>
 

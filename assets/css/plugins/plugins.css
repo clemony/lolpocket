@@ -11,4 +11,4 @@
 @plugin "tailwindcss-animated";
 @plugin "tailwind-gradient-mask-image";
 @import 'aos/dist/aos.css';
-@import './ag-gird.css';
+@import './ag-grid.css';

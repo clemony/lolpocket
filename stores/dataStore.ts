@@ -11,6 +11,10 @@ export const useDataStore = defineStore(
     const SRitems = ref<Item[] | null>(null)
     const shards = ref()
 
+    const championNames = computedAsync (() => {
+      return champions.value.map(c => c.name)
+    })
+
     const loadData = () => {
       !SRitems ? getItemsFromDatabase() : ''
       !champions ? getChampsFromDatabase() : ''
@@ -25,6 +29,7 @@ export const useDataStore = defineStore(
       paths,
       SRitems,
       champions,
+      championNames,
       items,
       shards,
     }

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { HTMLAttributes } from 'vue'
+import type { HTMLAttributes } from 'vue';
 
 const props = defineProps<{
   item?: Item
@@ -15,8 +15,11 @@ const item = computed (() => {
   if (props.item) {
     return props.item
   }
-  else {
+  else if (ts.selectedItem) {
     return ts.selectedItem
+  }
+  else {
+    return ts.pocketItemSelect
   }
 })
 /* watch(
@@ -60,8 +63,8 @@ function handleTooltip(item) {
 </script>
 
 <template>
-  <div :class="cn(props.class)">
-    <div class="flex w-full gap-6 pb-5">
+  <div :class="cn('flex w-full gap-6 pb-5 ', props.class)">
+ 
       <img
         :key="item.name"
         :src="`/img/item/${item.id}.webp`"
@@ -252,7 +255,7 @@ function handleTooltip(item) {
         </p>
       </div>
     </div>
-  </div>
+ 
 </template>
 
 <style scoped>

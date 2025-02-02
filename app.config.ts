@@ -35,6 +35,8 @@ export default defineAppConfig({
       'calc': 'teenyicons:calculator-outline',
       'filter': 'teenyicons:filter-outline',
       'heart': 'teenyicons:heart-outline',
+      'x-folder': 'teenyicons:folder-x-outline',
+      'add-folder': 'teenyicons:folder-plus-outline',
     },
   },
 })

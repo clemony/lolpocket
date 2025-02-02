@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import ColumnDisplay from './panels/ColumnDisplay.vue'
+
 const component = shallowRef(null)
 
 const target = ref(null)
@@ -42,7 +43,7 @@ watchEffect(() => {
   <Sheet id="sheet" v-model:open="isOpen" class=" w-20 h-full">
     <SheetTrigger ref="target" class="outline-0 z-59 pointer-events-none   border-b2 border-t">
       <div class=" w-16 h-screen bg-b1 flex flex-col py-4 items-center gap-3.5 *:pointer-events-auto **:[&_svg]:shrink-0">
-          <PocketBarButton  :ref="elements[0].ref">
+        <PocketBarButton :ref="elements[0].ref">
           <icon name="infinity" class="size-6.5 " />
         </PocketBarButton>
 
@@ -61,8 +62,6 @@ watchEffect(() => {
         <PocketBarButton :ref="elements[4].ref">
           <icon name="folders" class="size-5.5 overflow-hidden " />
         </PocketBarButton>
-
-  
       </div>
     </SheetTrigger>
     <BasicSheet>

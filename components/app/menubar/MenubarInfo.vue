@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { navigationMenuTriggerStyle } from 'components/base/navigation-menu/nin';
+import { navigationMenuTriggerStyle } from 'components/base/navigation-menu/nin'
 
 const info = [
   {
@@ -12,28 +12,28 @@ const info = [
   {
     name: 'About',
     link: '/About',
-       description: 'It\'s just cats and stuff.',
+    description: 'It\'s just cats and stuff.',
     type: 'i',
     icon: 'clarity:help-line',
   },
   {
     name: 'Github',
     link: 'https://github.com/clemony/lolpocket',
-       description: '',
+    description: '',
     type: 'ex',
     icon: 'ph:github-logo',
   },
   {
     name: 'contact@lolpocket.win',
     link: '',
-       description: '',
+    description: '',
     type: 'ex',
     icon: 'fluent:mail-48-regular',
   },
   {
     name: 'Discord',
     link: 'https://discord.gg/Jzuu7bYTZY',
-       description: 'Join the channel.',
+    description: 'Join the channel.',
     type: 'ex',
     icon: 'streamline:discord',
   },
@@ -53,12 +53,14 @@ const info = [
             <NuxtLink
               :to="{ path: item.link }"
             >
-              <NavigationMenuLink :class="cn(navigationMenuTriggerStyle(), {'group/about': item.name == 'About'})"
-              class="flex gap-4 items-center ">
+              <NavigationMenuLink
+                :class="cn(navigationMenuTriggerStyle(), { 'group/about': item.name == 'About' })"
+                class="flex gap-4 items-center "
+              >
                 <LittleIcon
                   :icon="item.icon"
                   class="size-5.5"
-                  :class="{'group-hover/about:rotate-90 duration-300 transition-all': item.name == 'About'}"
+                  :class="{ 'group-hover/about:rotate-90 duration-300 transition-all': item.name == 'About' }"
                 />
                 {{ item.name }}
               </NavigationMenuLink>
@@ -80,7 +82,7 @@ const info = [
             </NavigationMenuLink>
           </template>
 
-             <NuxtLink
+          <NuxtLink
             to="/Settings"
             class="flex gap-4 px-2.5 items-center"
           >

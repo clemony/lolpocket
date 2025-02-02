@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  listKey: number
+  listKey?: number
 }>()
 const ts = useTempStore()
 const ds = useDataStore()

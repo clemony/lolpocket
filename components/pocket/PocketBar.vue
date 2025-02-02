@@ -1,14 +1,16 @@
 <script lang="ts" setup>
-
 const props = defineProps<{
   pocket: pocket
 }>()
 
+const ts = useTempStore()
+
 const FilterSheet = defineAsyncComponent(() => import('./sheet/FilterSheet.vue'))
-const  PocketBrowser= defineAsyncComponent(() => import('./file-tree/PocketFileTree.vue'))
-const  ChampSelectSheet= defineAsyncComponent(() => import('./sheet/ChampSelectSheet.vue'))
+const PocketBrowser = defineAsyncComponent(() => import('./file-tree/PocketFileTree.vue'))
+const ChampSelectSheet = defineAsyncComponent(() => import('./sheet/ChampSelectSheet.vue'))
 const EditPocketDrawer = defineAsyncComponent(() => import('./sheet/EditPocketDrawer.vue'))
 const FavoriteSheet = defineAsyncComponent(() => import('./sheet/FavoriteSheet.vue'))
+const ItemView = defineAsyncComponent(() => import('components/pocket/items/PocketItemView.vue'))
 
 const pocket = ref(props.pocket)
 const component = shallowRef(null)
@@ -48,46 +50,73 @@ watchEffect(() => {
     component.value = hovered.component
   }
 })
+
+const isPopOpen = ref(false)
+watch(
+  () => ts.pocketItemSelect,
+  (newVal) => {
+    if (newVal) {
+      isPopOpen.value = true
+    }
+  },
+)
 </script>
 
 <template>
   <Sheet id="sheet" v-model:open="isOpen" class=" w-20 h-screen">
-    <SheetTrigger ref="target" class="outline-0 z-59 pointer-events-none ">
-      <MenubarSpacer />
+    <div class=" w-20  flex-col items-center flex h-screen bg-b1 flex-nowrap pb-2  z-59 outline-0">
+      <SheetTrigger ref="target" class="outline-0 pointer-events-none ">
+        <MenubarSpacer />
+        <div class="flex w-full flex-col  py-6 items-center  gap-4 *:pointer-events-auto **:[&_svg]:shrink-0">
+          <ShineButton :ref="elements[0].ref">
+            <PocketIcon :image="pocket.icon" class="size-11 border border-neutral" />
+          </ShineButton>
 
-      <div class=" w-16 h-screen bg-b1 flex flex-col py-4 items-center gap-3.5 *:pointer-events-auto **:[&_svg]:shrink-0">
-        <ShineButton :ref="elements[0].ref">
-          <PocketIcon :image="pocket.icon" class="size-10" />
-        </ShineButton>
+          <PocketBarButton ref="overview">
+            <icon name="infinity" class="size-6.5 " />
+          </PocketBarButton>
 
-        <PocketBarButton ref="overview">
-          <icon name="infinity" class="size-6.5 " />
-        </PocketBarButton>
+          <PocketBarButton :ref="elements[1].ref">
+            <i-no-champ class="size-10" />
+          </PocketBarButton>
 
-        <PocketBarButton :ref="elements[1].ref">
-          <i-no-champ class="size-10" />
-        </PocketBarButton>
+          <PocketBarButton :ref="elements[2].ref">
+            <icon name="teenyicons:filter-outline" class="size-5 stroke-[1.3]" />
+          </PocketBarButton>
 
-        <PocketBarButton :ref="elements[2].ref">
-          <icon name="teenyicons:filter-outline" class="size-5" />
-        </PocketBarButton>
+          <PocketBarButton :ref="elements[3].ref">
+            <icon name="teenyicons:heart-outline" class="size-5.5 stroke-[1.3]" />
+          </PocketBarButton>
 
-        <PocketBarButton :ref="elements[3].ref">
-          <icon name="teenyicons:heart-outline" class="size-5.5" />
-        </PocketBarButton>
+          <PocketBarButton :ref="elements[4].ref">
+            <icon name="folders" class="size-5.5 overflow-hidden stroke-[1.3]" />
+          </PocketBarButton>
+        </div>
+      </SheetTrigger>
 
-        <PocketBarButton :ref="elements[4].ref">
-          <icon name="folders" class="size-5.5 overflow-hidden " />
-        </PocketBarButton>
+      <Grow />
 
-        <PocketBarButton :ref="elements[0].ref">
-          <icon name="gear" class="size-6" />
-        </PocketBarButton>
-      </div>
-    </SheetTrigger>
-    <BasicSheet>
+      <Popover v-if="ts.pocketItemSelect" :open="isPopOpen">
+        <PopoverTrigger @click="isPopOpen = true">
+          <Button class="p-0 rounded-full shadow-sm border border-neutral">
+            <img :src="`/img/item/${ts.pocketItemSelect.id}.webp`" class="size-11 rounded-full" />
+          </Button>
+        </PopoverTrigger>
+        <PopoverContent
+          side="left"
+          :side-offset="18" :align-offset="-3" align="end" class="max-h-100 h-100 w-90 pr-0 rounded-xl" @click="isPopOpen = false"
+          @interact-outside="isPopOpen = false"
+        >
+          <div class="max-h-90 h-90  overflow-y-auto pr-4">
+            <LazyItemInfo />
+          </div>
+        </PopoverContent>
+      </Popover>
+    </div>
+
+    <BasicSheet side="right" class="!right-15 ">
       <div
-        class="min-w-110 w-110 *:w-full h-full pt-7.5 pl-3 pr-6"
+        class="min-w-120 w-120 *:w-full h-full pt-7.5 pr-3 pl-6"
       >
         <component :is="component" :pocket="pocket" @update:drag="(e) => isOpen = false" />
       </div>

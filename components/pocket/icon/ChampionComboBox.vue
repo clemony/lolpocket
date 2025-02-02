@@ -1,16 +1,18 @@
 <script lang="ts" setup>
+const ds = useDataStore()
 const props = defineProps<{
   selectedIcon?: string
   pocket?: pocket
-  champNames: string[]
 }>()
 
 const ts = useTempStore()
 const open = ref(false)
 
 function selectRandomChamp() {
-  ts.drawerChampSelectDropdown = useRandom(props.champNames)
+  ts.drawerChampSelectDropdown = useRandom(ds.championNames)
 }
+
+
 </script>
 
 <template>
@@ -29,19 +31,18 @@ function selectRandomChamp() {
     <PopoverContent class="w-54 p-0 isolate z-80">
       <CommandRoot v-model="ts.drawerChampSelectDropdown">
         <CommandInput placeholder="Search...">
-          <button v-tippy="'Clear'" variant="ghost" size="icon" class="btn btn-xs size-6  aspect-square" @click="ts.drawerChampSelectDropdown = null">
-            <icon name="x" class="size-3 shrink-0" />
-          </button>
-          <span class="size-2"></span>
-          <button v-tippy="'Random Champ'" variant="ghost" size="icon" class="btn size-6 btn-xs aspect-square" @click="selectRandomChamp">
-            <icon name="qlementine-icons:shuffle-16" class="size-3.5 shrink-0" />
-          </button>
+
+          <span class="flex gap-1">
+          <CloseButton @click="ts.drawerChampSelectDropdown = null" />
+          <RandomButton v-tippy="'Random Champ'" @click="selectRandomChamp" />
+          </span>
+
         </CommandInput>
         <CommandEmpty>No champions found.</CommandEmpty>
         <CommandList>
           <CommandGroup>
             <CommandItem
-              v-for="champion in champNames" :key="champion"
+              v-for="champion in ds.championNames" :key="champion"
               :value="champion"
               @select="ts.drawerChampSelectDropdown = champion"
             >

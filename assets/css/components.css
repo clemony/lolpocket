@@ -79,6 +79,12 @@
   --tab-radius-ee: -20px !important;
 }
 
+@layer components {
+
+  .dropdown-trigger-button {
+    @apply btn border border-transparent btn-ghost btn-lg h-11 rounded-lg hover:bg-b1 hover:btn-outline flex-nowrap  px-0.5 flex items-center hover:border-b2  mb-0.5 w-full ;
+  }
+
 .glass-button {
   @apply bg-b2/40 hover:bg-b2/95 shadow-sm  shadow-b2/20  font-normal    !text-3 border border-b2;
 }
@@ -87,3 +93,4 @@
     @apply flex aspect-square size-9 items-center justify-center rounded-md shadow-sm;
 }
 
+}

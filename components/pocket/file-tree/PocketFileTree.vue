@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+const props = defineProps<{
+  pocket: pocket
+}>()
 const folderMain = ref()
 
 watch(
@@ -7,15 +10,22 @@ watch(
     console.log('💠 - newVal:', newVal)
   },
 )
+
+const activePocket = ref(props.pocket)
+
+onMounted (async () => {
+  await props.pocket
+  activePocket.value = props.pocket
+})
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col w-full">
     <div class="pb-5">
       <h1>Browse Pockets</h1>
     </div>
 
-    <div class="border border-b2 mt-1 rounded-xl pr-3 inset-shadow-xxs  pl-1 py-1">
+    <div class=" mt-1 rounded-xl pr-3 inset-shadow-xxs  pl-1 py-1">
       <ul
         v-for="folder in defaultFolders()"
         v-bind="$attrs" :key="folder.key"
@@ -25,21 +35,38 @@ watch(
           <details
             @toggle="folderMain = $event.newState"
           >
-            <summary class="capitalize flex gap-3 overflow-auto w-full after:hidden items-center hover:bg-b2/60 pr-2">
+            <summary class="capitalize flex gap-3 overflow-auto w-full after:hidden items-center hover:bg-b2/60 pr-2 flex-nowrap">
               <icon
                 :name="folder.icon"
                 class="size-4 shrink-0"
               />
               <span class="w-full truncate"> {{ folder.name }}</span>
+              <span v-if="folder.items.length" class="badge badge-neutral text-2 badge-sm">{{ folder.items.length }}</span>
               <PlusMinusExpand :check="folderMain == 'open' ? true : false" />
             </summary>
             <ul>
-              <SubTree :folder="folder" />
+              <li
+                v-for="item in folder.items"
+                :key="item.key"
+                class="!mr-5"
+              >
+                <label class="capitalize flex w-full after:hidden items-center hover:bg-b2/60 flex-nowrap has-checked:bg-b2/40 rounded-lg">
+                  <input v-model="activePocket" type="radio" class="peer hidden" name="active-pocket" :value="item" />
+                  <PocketIcon
+                    :image="item.icon"
+                    class="shrink-0 size-7"
+                  />
+                  <span class="w-full truncate"> {{ item.name }}</span>
+
+                </label>
+              </li>
             </ul>
           </details>
         </li>
       </ul>
     </div>
+
+    <MiniPocket :pocket="activePocket" />
   </div>
 </template>
 

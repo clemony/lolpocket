@@ -85,6 +85,7 @@ export const useTempStore = defineStore(
     const filterItemTypes = ref()
     const filterItemStats = ref([])
     const filterItemCats = ref([])
+    const pocketItemSelect = ref()
 
     /*     watch(
       () => as.favoriteItems,
@@ -162,6 +163,7 @@ export const useTempStore = defineStore(
       filterItemTypes,
       filterItemStats,
       filterItemCats,
+      pocketItemSelect,
 
       // runes
       selectedRuneSetIndex,

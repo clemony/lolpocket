@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from 'vue';
-import { vDraggable } from 'vue-draggable-plus';
+import type { HTMLAttributes } from 'vue'
+import { vDraggable } from 'vue-draggable-plus'
 
 const props = defineProps<{
   pocket?: pocket
@@ -11,12 +11,9 @@ const props = defineProps<{
 const list = computed(() => {
   return useItemFilter()
 })
-
-
 </script>
 
 <template>
-
   <transition-slide
     v-draggable="[
       list,
@@ -38,7 +35,7 @@ const list = computed(() => {
       },
     ]"
     group
-    class="pl-10 pr-2 overflow-y-auto max-h-full grid grid-flow-row auto-cols-auto  h-fit  grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center gap-2   py-6 "
+    class="pl-10 pr-1 overflow-y-auto max-h-full grid grid-flow-row auto-cols-auto  h-fit  grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center gap-3  pt-[6.5vh] py-6 "
   >
     <div v-for="item in list" :key="item.id">
       <Item :item="item" />

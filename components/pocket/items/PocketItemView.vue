@@ -1,14 +1,11 @@
 <script lang="ts" setup>
 
-const ts = useTempStore()
-const userCheck = ref(true)
-
-
-
 </script>
 
 <template>
-
+  <div>
+    
+  </div>
 </template>
 
 <style scoped>
