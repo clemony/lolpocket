@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { hexoid } from 'hexoid'
 
+const emit = defineEmits(['update:name'])
 const ts = useTempStore()
 const ps = usePocketStore()
 const as = useAccountStore()
@@ -11,9 +12,6 @@ const toID = hexoid()
 const name = ref('')
 const tags = ref([])
 const selectedIcon = ref('/img/champion/centered/-1.webp')
-
-const emit = defineEmits(['update:name'])
-
 
 watch(
   () => tags.value,
@@ -56,9 +54,9 @@ defineExpose({
         />
       </template>
 
-      <template #name-buttons >
-        <CloseButton  />
-        <RandomButton v-tippy="'No brain? Meet Button.'" @click.stop="emit('update:name', generateRandomString())"  />
+      <template #name-buttons>
+        <CloseButton />
+        <RandomButton v-tippy="'No brain? Meet Button.'" @click.stop="emit('update:name', generateRandomString())" />
       </template>
 
       <template #tags>

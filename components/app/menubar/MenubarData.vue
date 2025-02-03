@@ -38,7 +38,7 @@ const db = [
   <NavigationMenuItem>
     <NavigationMenuTrigger>Game</NavigationMenuTrigger>
     <NavigationMenuContent>
-      <div class="min-w-130 min-h-84 h-84 py-6 px-7 gap-4 grid grid-cols-2">
+      <div class=" nav-menu-size  py-6 px-7 gap-4 grid grid-cols-2">
         <NuxtLink
           v-for="submenu in db"
           :key="submenu.name"

@@ -1,18 +1,15 @@
 <script lang="ts" setup>
-const ds = useDataStore()
 const props = defineProps<{
   selectedIcon?: string
   pocket?: pocket
 }>()
-
+const ds = useDataStore()
 const ts = useTempStore()
 const open = ref(false)
 
 function selectRandomChamp() {
   ts.drawerChampSelectDropdown = useRandom(ds.championNames)
 }
-
-
 </script>
 
 <template>
@@ -31,12 +28,10 @@ function selectRandomChamp() {
     <PopoverContent class="w-54 p-0 isolate z-80">
       <CommandRoot v-model="ts.drawerChampSelectDropdown">
         <CommandInput placeholder="Search...">
-
           <span class="flex gap-1">
-          <CloseButton @click="ts.drawerChampSelectDropdown = null" />
-          <RandomButton v-tippy="'Random Champ'" @click="selectRandomChamp" />
+            <CloseButton @click="ts.drawerChampSelectDropdown = null" />
+            <RandomButton v-tippy="'Random Champ'" @click="selectRandomChamp" />
           </span>
-
         </CommandInput>
         <CommandEmpty>No champions found.</CommandEmpty>
         <CommandList>

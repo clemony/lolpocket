@@ -7,6 +7,22 @@ declare global {
     }
   }
 
+  interface userAccount {
+    name: string
+    image: string
+    role: string
+    id: string
+    session: string
+    accessToken: string
+    refreshToken: string
+    puuid: string
+    gameName: string
+    tagLine: string
+    profileIconId: number
+    summonerLevel: number
+    region: string
+  }
+
   interface Folder {
     name: string
     key: string

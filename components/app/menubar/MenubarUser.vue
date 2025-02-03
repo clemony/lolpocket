@@ -1,15 +1,19 @@
 <script lang="ts" setup>
 import { navigationMenuTriggerStyle } from 'components/base/navigation-menu/nin'
 
+const config = useRuntimeConfig()
+console.log('💠 - config:', config)
 const ts = useTempStore()
 const as = useAccountStore()
 
 const summoner = computed(() => {
-  return as.riotAccount ? as.riotAccount : defaultUser
+  return as.userAccount ? as.userAccount : defaultUser
 })
+console.log('💠 - summoner - summoner:', summoner)
+console.log('💠 - summoner - summoner:', summoner)
 
 const role = computedAsync(() => {
-  if (ts.sessionInfo && ts.sessionInfo.user.app_metadata.user_role == 'admin') {
+  if (as.userAccount.session && as.userAccount.role == 'admin') {
     return 'admin'
   }
   else {
@@ -22,8 +26,7 @@ const links = [
   {
     name: `Board`,
     link: '/summoner',
-    icon: 'ph:squares-four-light',
-    altIcon: 'system-uicons:browser-alt',
+    icon: 'material-symbols-light:newsmode-outline',
   },
   {
     name: 'Build Analysis',
@@ -46,7 +49,11 @@ const links = [
 const { data, isFinished } =  useAxios(`https://ddragon.leagueoflegends.com/cdn/15.2.1/img/profileicon/${summoner.value.profileIconId}.png`)
 await data
 summonerIcon.value = data
-}) */
+})
+
+system-uicons:browser-alt
+
+ */
 </script>
 
 <template>
@@ -55,37 +62,64 @@ summonerIcon.value = data
       {{ summoner.gameName }}
     </NavigationMenuTrigger>
     <NavigationMenuContent>
-      <div class=" min-w-130 min-h-84 h-84 py-6 px-7 gap-4 grid grid-cols-[1fr_1.2fr]">
+      <div class=" nav-menu-size py-6 px-7 h-full  gap-4 grid grid-cols-[1fr_1.2fr] relative">
         <SummonerCard :summoner="summoner" />
 
-        <div class="flex flex-col w-full">
+        <div class="flex flex-col gap-0   w-full">
           <NuxtLink
             v-for="submenu in links"
             :key="submenu.name"
             :to="{
               path: submenu.link,
             }"
-            class="flex items-center  w-full gap-4 px-2.5"
+            class="flex w-full -mt-1 pr-3  pl-6.5 py-2 "
           >
-            <NavigationMenuLink class="flex relative group justify-start grow w-full" :class="cn(navigationMenuTriggerStyle(), `group/${submenu.name}`)">
-              {{ submenu.name }}
-              <span class="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-indigo-600" :class="`group-hover/${submenu.name}:w-full`"></span>
+            <NavigationMenuLink class="flex relative group justify-start grow w-full gap-4 items-center   pl-0  " :class="cn(`group/${submenu.name}`)">
+              <div class=" size-10 btn shadow-sm">
+                <icon
+                  :name="submenu.icon"
+                  class="size-5.5 shrink-0 dst"
+                  :class="{ 'stroke-[1.5] -ml-1 -mr-1 size-7': submenu.name == 'Board' }"
+                />
+              </div>
+
+              <div
+                class="!font-semibold !text-3 underline-offset-2 "
+                :class="cn(`group-hover/${submenu.name}:underline`)"
+              >
+                {{ submenu.name }}
+              </div>
             </NavigationMenuLink>
           </NuxtLink>
 
-          <NuxtLink
+          <!--   <NuxtLink
             v-if="role == 'admin'"
             to="/admin/Admin"
             class="flex items-center gap-4 px-2.5"
           >
             <NavigationMenuLink :class="navigationMenuTriggerStyle()">
-              <!--  <icon
+            <icon
         name="codicon:source-control"
-        class="size-4.5"
-      /> -->
+        class="size-4.5" />
+
               Admin Board
             </NavigationMenuLink>
           </NuxtLink>
+          <Grow /> -->
+
+          <div class="absolute w-57  bottom-6.5 right-16.5">
+            <button v-if="as.userAccount.session" class="btn btn-neutral ml-6.5 flex btn-md rounded-md mb-1 w-full gap-4 " @click="signOut()">
+              <icon name="teenyicons:upload-outline" class="-ml-2 !text-nc size-5 -rotate-90" />
+              Sign out
+            </button>
+
+            <LoginDialog v-else>
+              <button class="btn rounded-md  btn-neutral ml-6.5 flex btn-md mb-1 w-full gap-4 ">
+                <icon name="teenyicons:signin-outline" class="-ml-2 !text-nc size-5 " />
+                Sign in
+              </button>
+            </LoginDialog>
+          </div>
         </div>
       </div>
     </NavigationMenuContent>

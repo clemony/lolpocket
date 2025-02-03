@@ -1,11 +1,3 @@
-export function getQuote() {
-  return quotes[Math.floor(Math.random() * quotes.length)]
-}
-
-export function formattedQuote() {
-  const quote = getQuote().replace(/( -)/, '\n$1')
-  return quote
-}
 
 export const quotes = [
   '<p>"Braum! What are you doing over there?! Are you drunk?"</p><p>-Ashe</p>',
@@ -66,3 +58,11 @@ export const quotes = [
   '<p>"I now like you less. I did not think that was possible."/p><p>-Ornn</p>',
   '<p>"No."/p><p>-Ornn</p>',
 ]
+export function getQuote() {
+  return quotes[Math.floor(Math.random() * quotes.length)]
+}
+
+export function formattedQuote() {
+  const quote = getQuote().replace(/( -)/, '\n$1')
+  return quote
+}

@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-import SidebarDrawer from 'components/app/sidebar/SidebarDrawer.vue'
 import CardDrawer from './CardDrawer.vue'
-import EditPocketSheet from '../../../pocket/sheet/EditPocketSheet.vue'
+import EditPocketSheet from 'components/pocket/sheet/EditPocketSheet.vue'
 import ItemDrawer from './ItemDrawer.vue'
 import PocketSheet from '../../../pocket/sheet/PocketSheet.vue'
 import RuneDrawer from './RuneDrawer.vue'
@@ -11,18 +10,17 @@ const ts = useTempStore()
 const t = ref(ts.drawerComponent)
 const component = computed (() => {
   return t.value == 'sidebar'
-    ? SidebarDrawer
-    : t.value == 'pocket'
-      ? PocketSheet
-      : t.value == 'editPocket'
-        ? EditPocketSheet
-        : t.value == 'card'
-          ? CardDrawer
-          : t.value == 'rune'
-            ? RuneDrawer
-            : t.value == 'item'
-              ? ItemDrawer
-              : ''
+  t.value == 'pocket'
+    ? PocketSheet
+    : t.value == 'editPocket'
+      ? EditPocketSheet
+      : t.value == 'card'
+        ? CardDrawer
+        : t.value == 'rune'
+          ? RuneDrawer
+          : t.value == 'item'
+            ? ItemDrawer
+            : ''
 })
 
 onMounted (async () => {

@@ -4,14 +4,10 @@ const ps = usePocketStore()
 console.log('💠 - ds.champions:', ds.champions)
 </script>
 
-
 <template>
   <div class="relative size-screen">
-  <Pocketbar  />
-
-         
+    <Pocketbar />
   </div>
 </template>
-
 
 <style scoped></style>

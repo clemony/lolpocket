@@ -4,7 +4,7 @@ const as = useAccountStore()
 const viewLogin = ref(false)
 
 watch(
-  () => ts.sessionInfo,
+  () => as.userAccount.session,
   (newVal) => {
     newVal ? (viewLogin.value = false) : ''
   },
@@ -55,7 +55,7 @@ const heroDisplays = [
           ></video-background>
         </div>
         <Button
-          v-show="!ts.sessionInfo"
+          v-show="!as.userAccount.session"
           variant="outline"
           size="lg"
           class="hover:bg-neutral hover:text-nc w-fit self-start overflow-hidden shadow-xs transition-all duration-200"

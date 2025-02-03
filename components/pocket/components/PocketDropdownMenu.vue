@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-
-
 const props = defineProps<{
   pocket: pocket
 }>()
@@ -9,8 +7,6 @@ const pocket = ref(props.pocket)
 </script>
 
 <template>
-
-
   <DropdownMenuItem
     @click="duplicatePocket(pocket)"
   >
@@ -28,7 +24,7 @@ const pocket = ref(props.pocket)
     <span>Share Pocket Card</span>
   </DropdownMenuItem>
 
-  <DropdownMenuSeparator  />
+  <DropdownMenuSeparator />
   <DropdownMenuItem class="!text-3 font-medium" @click="deletePocket(pocket.key)">
     <icon name="x-folder" class="size-5" />Send to Trash
   </DropdownMenuItem>

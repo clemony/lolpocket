@@ -1,7 +1,15 @@
 export const defaultUser = {
+  name: 'Summoner',
+  image: ref(null),
+  role: ref(null),
+  id: ref(null),
+  session: ref(null),
+  accessToken: '',
+  refreshToken: '',
+  puuid: ref(null),
   gameName: 'Summoner',
-  tagLine: '#tag',
-  profileIconId: '/img/summoner-icons/space-yuumi.jpg',
+  tagLine: 'log in to save',
+  profileIconId: '',
   summonerLevel: 0,
-  region: 'Americas',
+  region: 'Runeterra',
 }

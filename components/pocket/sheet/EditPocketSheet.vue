@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-
 // Form fields
 const props = defineProps<{
   pocket: pocket
@@ -20,10 +19,10 @@ const pocket = ref(props.pocket)
       />
     </template>
 
-          <template #name-buttons >
-            <CloseButton @click="pocket.name = ''" />
-        <RandomButton v-tippy="'No brain? Meet Button.'" @click="pocket.name = generateRandomName()" />
-      </template>
+    <template #name-buttons>
+      <CloseButton @click="pocket.name = ''" />
+      <RandomButton v-tippy="'No brain? Meet Button.'" @click="pocket.name = generateRandomName()" />
+    </template>
 
     <template #tags>
       <TagsInput
@@ -65,7 +64,7 @@ const pocket = ref(props.pocket)
       </TagsInput>
     </template>
 
-    <SelectIcon v-model:selected-icon="pocket.icon" :pocket="pocket" @update:selected-icon="console.log($event)" class="h-full"/>
+    <SelectIcon v-model:selected-icon="pocket.icon" :pocket="pocket" class="h-full" @update:selected-icon="console.log($event)" />
 
   <!--   <template #button>
       <Label

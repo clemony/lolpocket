@@ -1,11 +1,9 @@
 <script lang="ts" setup>
 import { ResizablePanel } from 'components/base/resizable/rindex'
-
 </script>
 
 <template>
-
-   <div class="size-full pt-[8vh]">
+  <div class="size-full pt-[8vh]">
     <ResizablePanelGroup
       direction="horizontal"
       class="max-h-full h-full"
@@ -16,7 +14,7 @@ import { ResizablePanel } from 'components/base/resizable/rindex'
             All Pockets
           </h1>
         </div>
- <SidebarPockets />
+        <SidebarPockets />
       </ResizablePanel>
       <ResizableHandle
         with-handle
@@ -28,7 +26,6 @@ import { ResizablePanel } from 'components/base/resizable/rindex'
       </ResizablePanel>
     </ResizablePanelGroup>
   </div>
-
 </template>
 
 <style scoped>

@@ -5,21 +5,24 @@ export const useAccountStore = defineStore(
   () => {
     const ts = useTempStore()
 
-    const userRole = ref()
-    const userId = ref()
-
     const themeClass = ref('data-theme-light')
     const dataTheme = ref('light')
     const accents = ref('light')
 
-    const riotAccountLinked = ref(true)
-    const riotAccount = {
+    const userAccount = {
+      name: ref('Summoner'),
+      image: ref(null),
+      role: ref(null),
+      id: ref(null),
+      session: ref(null),
+      accessToken: '',
+      refreshToken: '',
       puuid: ref(null),
-      gameName: ref(null),
-      tagLine: ref(null),
-      profileIconId: ref('/img/summoner-icons/space-yuumi.jpg'),
-      summonerLevel: ref(null),
-      region: ref(null) || 'Americas',
+      gameName: ref('Summoner'),
+      tagLine: ref('log in to save'),
+      profileIconId: ref(''),
+      summonerLevel: ref(0),
+      region: ref('Runeterra'),
     }
 
     const champCheck = ref(true)
@@ -48,10 +51,7 @@ export const useAccountStore = defineStore(
 
     return {
       // account
-      userRole,
-      userId,
-      riotAccountLinked,
-      riotAccount,
+      userAccount,
       userFolders,
       // settings
       themeClass,

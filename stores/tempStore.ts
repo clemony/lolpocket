@@ -7,10 +7,7 @@ export const useTempStore = defineStore(
   () => {
     //
 
-    const userOS = ref()
-    const sessionInfo = ref()
-    const accessToken = ref()
-    const refreshToken = ref()
+    const userOS = ref(null)
 
     /*     const clickType = computed(() => {
       return userOS.value == 'Mac' || 'Windows' ? 'right click' : 'force press'
@@ -107,9 +104,6 @@ export const useTempStore = defineStore(
 
     return {
       userOS,
-      sessionInfo,
-      accessToken,
-      refreshToken,
       itemGridApi,
       // clickType,
 

@@ -6,6 +6,7 @@ import pluginVue from 'eslint-plugin-vue'
 export default antfu({
   ...pluginVue.configs['flat/essential'],
 
+  ignores: ['.storage/*'],
   vue: true,
   rules: {
     'no-undef': 'off',
@@ -21,6 +22,7 @@ export default antfu({
     'vue/no-v-text-v-html-on-component': 'off',
     'style/eol-last': 'off',
     'perfectionist/sort-imports': 'off',
+    'no-irregular-whitespace': 'off',
 
   },
   formatters: {

@@ -40,13 +40,9 @@ function handleDrawer() {
       </ul>
     </div>
 
-          <h1 class="!text-8 text-start dst tracking-tight !leading-none truncate  overflow-hidden capitalize grow">
-            {{ name }}
-          </h1>
-
-          
-
-
+    <h1 class="!text-8 text-start dst tracking-tight !leading-none truncate  overflow-hidden capitalize grow">
+      {{ name }}
+    </h1>
 
     <div v-if="pocket.tags" class=" w-full text-2 italic font-medium">
       <p class="flex gap-2">

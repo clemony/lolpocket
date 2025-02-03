@@ -10,5 +10,3 @@
 .btn:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
   @apply bg-b2/60 border-b2;
 }
-
-

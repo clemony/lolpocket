@@ -1,34 +1,35 @@
 <script setup lang="ts">
-  import type { HTMLAttributes } from 'vue';
-  import { SIDEBAR_WIDTH_MOBILE, useSidebar } from './utils';
+import type { HTMLAttributes } from 'vue'
+import { SIDEBAR_WIDTH_MOBILE, useSidebar } from './utils'
 
-  defineOptions({
-    inheritAttrs: false,
-  });
+defineOptions({
+  inheritAttrs: false,
+})
 
-  const props = withDefaults(
-    defineProps<{
-      side?: 'left' | 'right';
-      variant?: 'sidebar' | 'floating' | 'inset';
-      collapsible?: 'offcanvas' | 'icon' | 'empty';
-      class?: HTMLAttributes['class'];
-    }>(),
-    {
-      side: 'left',
-      variant: 'sidebar',
-      collapsible: 'offcanvas',
-    }
-  );
+const props = withDefaults(
+  defineProps<{
+    side?: 'left' | 'right'
+    variant?: 'sidebar' | 'floating' | 'inset'
+    collapsible?: 'offcanvas' | 'icon' | 'empty'
+    class?: HTMLAttributes['class']
+  }>(),
+  {
+    side: 'left',
+    variant: 'sidebar',
+    collapsible: 'offcanvas',
+  },
+)
 
-  const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
-  const { toggleSidebar } = useSidebar();
+const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
+const { toggleSidebar } = useSidebar()
 </script>
 
 <template>
   <div
     v-if="collapsible === 'empty'"
     :class="cn('bg-b1/90 text-bc flex h-full w-(--sidebar-width) flex-col', props.class)"
-    v-bind="$attrs">
+    v-bind="$attrs"
+  >
     <slot />
   </div>
 
@@ -36,14 +37,16 @@
     v-else-if="isMobile"
     :open="openMobile"
     v-bind="$attrs"
-    @update:open="setOpenMobile">
+    @update:open="setOpenMobile"
+  >
     <SheetContent
       data-sidebar="sidebar"
       data-mobile="true"
       class="bg-b1/90 text-bc w-(--sidebar-width) p-0 [&>button]:hidden"
       :style="{
         '--sidebar-width': SIDEBAR_WIDTH_MOBILE,
-      }">
+      }"
+    >
       <div class="flex h-full w-full flex-col">
         <slot />
       </div>
@@ -56,7 +59,8 @@
     :data-state="state"
     :data-collapsible="state === 'collapsed' ? collapsible : ''"
     :data-variant="variant"
-    :data-side="side">
+    :data-side="side"
+  >
     <!-- This is what handles the sidebar gap on desktop  -->
     <div
       :class="
@@ -66,9 +70,10 @@
           'group-data-[side=right]:rotate-180',
           variant === 'floating' || variant === 'inset'
             ? 'group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+calc(var(--spacing)*6))]'
-            : 'group-data-[collapsible=icon]:w-(--sidebar-width-icon)'
+            : 'group-data-[collapsible=icon]:w-(--sidebar-width-icon)',
         )
-      " />
+      "
+    />
     <div
       :class="
         cn(
@@ -78,13 +83,15 @@
           variant === 'floating' || variant === 'inset'
             ? 'p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+calc(var(--spacing)*4)+2px)]'
             : 'group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=right]:border-l group-data-[collapsible=icon]:[&_SidebarMenuButton]:size-6',
-          props.class
+          props.class,
         )
       "
-      v-bind="$attrs">
+      v-bind="$attrs"
+    >
       <div
         data-sidebar="sidebar"
-        class="group-data-[variant=floating]:border-0 flex flex-col group-data-[variant=floating]:shadow-pretty">
+        class="group-data-[variant=floating]:border-0 flex flex-col group-data-[variant=floating]:shadow-pretty"
+      >
         <slot :data-state="state" />
       </div>
     </div>
@@ -92,5 +99,6 @@
 
   <div
     data-sidebar="trigger"
-    class="hidden"></div>
+    class="hidden"
+  ></div>
 </template>

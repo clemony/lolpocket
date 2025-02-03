@@ -87,6 +87,32 @@
           </p>
         </div>
       </div>
+
+      <div class="flex gap-4">
+        <div class="size-20 overflow-hidden rounded-full shrink-0 border border-neutral/40 shadow-sm">
+          <img src="/img/champion/Ezreal.webp" class="size-full shrink-0 scale-110" />
+        </div>
+        <div class="">
+          <h1 class="font-serif !font-black dst !leading-9">
+            Who needs a map?
+          </h1>
+
+          <p class="text-bc dst text-4 w-full mt-5">
+            "When you've got <span class="font-light">[ </span>
+            <b>lolpocket</b>
+            <span class="font-light"> ]</span>, there's no such thing as a lucky shot. Little piece of advice: If no one tells you something's impossible, then it's still possible. So go
+            <span class="font-light">[</span>
+            sign up for <b>lolpocket! </b>
+            <span class="font-light">]</span>
+          </p>
+
+          <p class="text-right mt-2 italic justify-self-end flex gap-2 items-center">
+            - Ezreal, Some Random Ruins
+
+            <icon v-tippy="'Quote procured through questionable means.'" name="carbon:information" class="size-4.5 stroke-2" />
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </template>

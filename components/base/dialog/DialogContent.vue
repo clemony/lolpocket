@@ -23,7 +23,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <DialogPortal>
     <DialogOverlay
-      class="data-[state=closed]:animate-out data-[state=closed]:fade-out-0 fixed inset-0 z-50 bg-black/25"
+      class="data-[state=closed]:animate-out data-[state=closed]:fade-out-0 fixed inset-0 z-80 bg-black/25"
       :class="{ 'data-[state=open]:animate-in data-[state=open]:fade-in-0 ': props.noAnimateIn == true }"
     />
     <DialogContent

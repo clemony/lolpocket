@@ -1,22 +1,22 @@
 <script setup lang="ts">
-  import type { PrimitiveProps } from 'radix-vue';
-  import type { HTMLAttributes } from 'vue';
+import type { PrimitiveProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 
-  import { Primitive } from 'radix-vue';
+import { Primitive } from 'radix-vue'
 
-  const props = withDefaults(
-    defineProps<
-      PrimitiveProps & {
-        size?: 'sm' | 'md' | 'lg' | 'icon';
-        isActive?: boolean;
-        class?: HTMLAttributes['class'];
-      }
-    >(),
-    {
-      as: 'a',
-      size: 'lg',
+const props = withDefaults(
+  defineProps<
+    PrimitiveProps & {
+      size?: 'sm' | 'md' | 'lg' | 'icon'
+      isActive?: boolean
+      class?: HTMLAttributes['class']
     }
-  );
+  >(),
+  {
+    as: 'a',
+    size: 'lg',
+  },
+)
 </script>
 
 <template>
@@ -34,9 +34,10 @@
         size === 'md' && 'text-3',
         size === 'lg' && 'text-3',
         'group-data-[collapsible=icon]:hidden',
-        props.class
+        props.class,
       )
-    ">
+    "
+  >
     <slot />
   </Primitive>
 </template>

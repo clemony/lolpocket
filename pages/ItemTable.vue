@@ -14,17 +14,17 @@ const itemList = [...items]
 const cellClass = []
 const gridOptions: GridOptions<Item> = {
   rowData: itemList,
-   columnHoverHighlight: true,
-     autoSizeStrategy: {
-        type: 'fitGridWidth',
-        defaultMinWidth: 50,
-     },
-       rowSelection: {
-        mode: 'multiRow',
-        checkboxes: false,
-        headerCheckbox: false,
-        enableClickSelection: true,
-    },
+  columnHoverHighlight: true,
+  autoSizeStrategy: {
+    type: 'fitGridWidth',
+    defaultMinWidth: 50,
+  },
+  rowSelection: {
+    mode: 'multiRow',
+    checkboxes: false,
+    headerCheckbox: false,
+    enableClickSelection: true,
+  },
 
   /*  getRowId: (params: number) => {
     return params.data.id
@@ -34,7 +34,7 @@ const gridOptions: GridOptions<Item> = {
     minWidth: 50,
     cellClass: 'cell-class',
     initialHide: false,
-/*     headerComponentParams: {
+    /*     headerComponentParams: {
       innerHeaderComponent: CustomInnerHeader,
     }, */
     resizable: false,
@@ -149,7 +149,7 @@ const colDefs: ColDef<Item>[] = [
       icon: 'msflat',
     },
   } },
-  { field: 'buy', headerName: 'cost', cellDataType: 'number', headerTooltip: 'Buy Price',  headerComponentParams: {
+  { field: 'buy', headerName: 'cost', cellDataType: 'number', headerTooltip: 'Buy Price', headerComponentParams: {
     innerHeaderComponentParams: {
       icon: 'gold',
     },
@@ -171,7 +171,7 @@ defineExpose({
   <div class="size-full">
     <MenubarSpacer />
     <div class="flex size-full">
-      <GridBar  />
+      <GridBar />
       <AgGridVue
         :grid-options="gridOptions"
         :theme="theme"

@@ -6,13 +6,12 @@ definePageMeta({
 const ts = useTempStore()
 const as = useAccountStore()
 
-const userId = as.userId
-//console.log("💠 - userId:", userId)
+// const userId = as.userAccount.id
+// console.log("💠 - userId:", userId)
 
-onMounted(async () => {
+/* onMounted(async () => {
 useSetSummonerData(as.userId)
-})
-
+}) */
 </script>
 
 <template>
@@ -21,11 +20,11 @@ useSetSummonerData(as.userId)
     <div class="">
       your pocket picks
     </div>
-    <NuxtPage
+    <!--     <NuxtPage
       v-if="userId"
       :user-id="userId"
       :page-key="(route) => route.fullPath"
-    />
+    /> -->
   </div>
 </template>
 

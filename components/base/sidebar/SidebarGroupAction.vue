@@ -1,14 +1,14 @@
 <script setup lang="ts">
-  import type { PrimitiveProps } from 'radix-vue';
-  import type { HTMLAttributes } from 'vue';
+import type { PrimitiveProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 
-  import { Primitive } from 'radix-vue';
+import { Primitive } from 'radix-vue'
 
-  const props = defineProps<
-    PrimitiveProps & {
-      class?: HTMLAttributes['class'];
-    }
-  >();
+const props = defineProps<
+  PrimitiveProps & {
+    class?: HTMLAttributes['class']
+  }
+>()
 </script>
 
 <template>
@@ -22,9 +22,10 @@
         // Increases the hit area of the button on mobile.
         'after:absolute after:-inset-2 md:after:hidden',
         'group-data-[collapsible=icon]:hidden',
-        props.class
+        props.class,
       )
-    ">
+    "
+  >
     <slot />
   </Primitive>
 </template>

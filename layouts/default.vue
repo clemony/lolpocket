@@ -1,24 +1,42 @@
 <script setup lang="ts">
+import { toast } from 'vue-sonner'
+
 const ts = useTempStore()
+const as = useAccountStore()
 const route = useRoute()
+const router = useRouter()
 
 const client = useSupabaseClient()
-client.auth.onAuthStateChange(async(event, session) => {
-if (event === 'INITIAL_SESSION'){
+client.auth.onAuthStateChange(async (event, session) => {
+  console.log('💠 - client.auth.onAuthStateChange - session:', session)
+  console.log('💠 - client.auth.onAuthStateChange - event:', event)
+  if (event === 'INITIAL_SESSION') {
+    console.log('using this one')
     useSetAccount(session)
-  } else {
-      const { data, error } = await client.auth.setSession({access_token: ts.accessToken, refresh_token: ts.refreshToken})
-      ts.accessToken = data.session.access_token
-      ts.refreshToken = data.session.refresh_token
-      ts.sessionInfo = data.session
+  }
+  else if (event === 'SIGNED_OUT') {
+    as.userAccount = defaultUser
+    console.log('😰 - Signed Out')
+    if (route.path != '/') {
+      router.push('/')
+    }
+    else {
+      location.reload()
+    }
+    toast.success('Successfully logged out')
+  }
+  else {
+    console.log('using that one')
+    const { data, error } = await client.auth.setSession({ access_token: as.userAccount.accessToken, refresh_token: as.userAccount.refreshToken })
+    as.userAccount.accessToken = data.session.access_token
+    as.userAccount.refreshToken = data.session.refresh_token
+    as.userAccount.session = data.session
   }
 })
 
 const drawerOpen = computed (() => {
   return !!(ts.sidebarTrigger || ts.PocketSheetTrigger || ts.championDrawerTrigger || ts.itemDrawerTrigger || ts.champSelectDrawerTrigger || ts.editPocketTrigger)
 })
-
-
 
 /*
     :class="{ 'bg-black transition-all duration-500': drawerOpen }"
@@ -33,11 +51,14 @@ const drawerOpen = computed (() => {
     class="relative size-screen min-size-screen"
   >
     <Toaster
-      close-button
       position="top-right"
-      :hotkey="['KeyC']"
-      :toast-options="{}"
+
+      :toast-options="{
+        class: 'my-toast',
+        descriptionClass: 'my-toast-description',
+      }"
       :expand="true"
+      :duration="4000"
     />
 
     <LazyChampionDrawer

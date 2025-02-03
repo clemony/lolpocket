@@ -28,7 +28,6 @@
   --nc: oklch(100% 0 0);
   --accent: var(--color-inspiration);
 
-
   --color-precision: oklch(85.49% 0.0892 84.09);
   --color-precision-light: #oklch(90.13% 0.0695 86.13);
   --color-domination: oklch(60.61% 0.1206 15.34);
@@ -107,8 +106,6 @@
   --dst: var(--drop-shadow-text);
 
   --transition-height: height;
-
-
 
 --animate-pause: {
   animation-play-state: pause;

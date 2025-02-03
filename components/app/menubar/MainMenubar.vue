@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { navigationMenuTriggerStyle } from 'components/base/navigation-menu/nin'
+import { toast } from 'vue-sonner'
 
 const ts = useTempStore()
 // const hs = history.state;
@@ -32,11 +33,7 @@ const isPocket = computed (() => {
 
     <NavigationMenu :skip-delay-duration="100" :disable-click-trigger="true">
       <NavigationMenuList class="pt-0.75">
-        <MenubarUser v-if="ts.sessionInfo" />
-        <LazyDialog v-else>
-          <LoginDialog v-if="!ts.sessionInfo">
-          </LoginDialog>
-        </LazyDialog>
+        <MenubarUser />
 
         <MenubarPocket />
         <MenubarData />
@@ -50,10 +47,14 @@ const isPocket = computed (() => {
           </NuxtLink>
         </NavigationMenuItem>
 
-        <NavigationMenuViewport class="top-[3px] left-4 rounded-xl" />
+        <NavigationMenuViewport class="top-[3px] rounded-xl" />
       </NavigationMenuList>
     </NavigationMenu>
+
     <Grow />
+    <button class="btn btn-md" @click="toast('Test toast', { description: 'Hey hi that\'s really cool!' })">
+      test toast
+    </button>
     <div class="">
       <MenubarSearch
         class="h-9 rounded-lg px-4 backdrop-brightness-[97%]"
@@ -61,27 +62,6 @@ const isPocket = computed (() => {
       />
     </div>
 
-    <label
-      :class="navigationMenuTriggerStyle()"
-
-      class="!size-10.75 grid place-items-center border-transparent border hover:border-b3 cursor-pointer"
-    >
-      <input
-        v-model="ts.PocketSheetTrigger"
-        type="checkbox"
-        class="hidden"
-        @change="console.log(ts.PocketSheetTrigger)"
-      />
-      <LittleTip
-        content="New Pocket ⌘N"
-        class="grid place-items-center"
-      >
-        <icon
-          name="teenyicons:add-outline"
-          class="size-5 stroke-[1.2] opacity-60 drop-shadow-sm"
-        />
-      </LittleTip>
-    </label>
     <NavigationMenu>
       <NavigationMenuList>
         <!--   <NavigationMenuItem>

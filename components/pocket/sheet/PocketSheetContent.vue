@@ -3,7 +3,6 @@ const props = defineProps<{
   title: string
   description: string
 }>()
-
 </script>
 
 <template>
@@ -23,11 +22,10 @@ const props = defineProps<{
           <div class="grow">
             <slot name="name" />
           </div>
-       
 
           <span class="flex gap-1">
-<slot name="name-buttons" />
-   </span>
+            <slot name="name-buttons" />
+          </span>
         </div>
 
         <Label class="mt-6">Tags</Label>

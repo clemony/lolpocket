@@ -1,60 +1,62 @@
 <script setup lang="ts">
-  import SidebarMenuButtonChild, { type SidebarMenuButtonProps } from './SidebarMenuButtonChild.vue';
-  import { useSidebar } from './utils';
-  const ts = useTempStore();
-  defineOptions({
-    inheritAttrs: false,
-  });
+import SidebarMenuButtonChild from './SidebarMenuButtonChild.vue'
+import type { SidebarMenuButtonProps } from './SidebarMenuButtonChild.vue'
+import { useSidebar } from './utils'
 
-  const as = useAccountStore();
-
-  const props = withDefaults(
-    defineProps<
-      SidebarMenuButtonProps & {
-        tooltip?: string | Component;
-        size?: string;
-      }
-    >(),
-    {
-      as: 'button',
-      variant: 'default',
-      size: 'default',
+defineOptions({
+  inheritAttrs: false,
+})
+const props = withDefaults(
+  defineProps<
+    SidebarMenuButtonProps & {
+      tooltip?: string | Component
+      size?: string
     }
-  );
+  >(),
+  {
+    as: 'button',
+    variant: 'default',
+    size: 'default',
+  },
+)
+const ts = useTempStore()
+const as = useAccountStore()
 
-  //const savedState = ref(as.sidebarState)
+// const savedState = ref(as.sidebarState)
 
-  const { isMobile, state } = useSidebar();
-  watch(
-    () => state,
-    (newVal) => {
-      console.log(newVal);
-    }
-  );
-  const delegatedProps = computed(() => {
-    const { tooltip, ...delegated } = props;
-    return delegated;
-  });
+const { isMobile, state } = useSidebar()
+watch(
+  () => state,
+  (newVal) => {
+    console.log(newVal)
+  },
+)
+const delegatedProps = computed(() => {
+  const { tooltip, ...delegated } = props
+  return delegated
+})
 
-  const open = ref(ts.sidebarOpen);
-  const size = computed(() => {
-    const a = open.value ? 'lg' : !open.value ? 'icon' : 'default';
-    return a;
-  });
+const open = ref(ts.sidebarOpen)
+const size = computed(() => {
+  const a = open.value ? 'lg' : !open.value ? 'icon' : 'default'
+  return a
+})
 
-  const classObject = computed(() => {
-    if (!open.value) {
-      return 'size-8 grid place-items-center !aspect-square';
-    } else {
-      return;
-    }
-  });
+const classObject = computed(() => {
+  if (!open.value) {
+    return 'size-8 grid place-items-center !aspect-square'
+  }
+  else {
+
+  }
+})
 </script>
 
 <template>
   <SidebarMenuButtonChild
     v-if="!tooltip"
-    v-bind="{ ...delegatedProps, as: props.as as string, ...$attrs }">
+    v-bind="{ ...delegatedProps, as: props.as as string, ...$attrs }"
+  >
     <slot />
   </SidebarMenuButtonChild>
 
@@ -66,7 +68,8 @@
           as: props.as as string,
           ...$attrs,
         }"
-        class="cursor-pointer">
+        class="cursor-pointer"
+      >
         <slot />
       </SidebarMenuButtonChild>
     </TooltipTrigger>
@@ -75,13 +78,15 @@
       align="center"
       :hidden="state !== 'collapsed' || isMobile"
       class="border-b3 invisible opacity-0"
-      :class="{ 'visible opacity-100': state == 'collapsed' }">
+      :class="{ 'visible opacity-100': state == 'collapsed' }"
+    >
       <template v-if="typeof tooltip === 'string'">
         {{ tooltip }}
       </template>
       <component
         :is="tooltip"
-        v-else />
+        v-else
+      />
     </TooltipContent>
   </TooltipRoot>
 </template>

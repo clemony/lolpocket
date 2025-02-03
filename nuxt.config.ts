@@ -56,6 +56,7 @@ export default defineNuxtConfig({
 
     public: {
       baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+      redirectUrl: 'http://localhost:8080/summoner',
     },
   },
 

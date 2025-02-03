@@ -1,11 +1,14 @@
 <script setup lang="ts">
+const config = useRuntimeConfig()
+console.log('💠 - config:', config)
+
 const supabase = useSupabaseClient()
 
 async function signInWithGoogle() {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
     options: {
-      redirectTo: 'http://localhost:8080/summoner',
+      redirectTo: config.public.redirectUrl,
     },
   })
   console.log('💠 - signInWithGoogle - data:', data)
