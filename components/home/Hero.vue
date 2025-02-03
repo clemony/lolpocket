@@ -29,7 +29,7 @@ const heroDisplays = [
 <template>
   <div class="size-screen sticky top-0 left-0 z-0 grid grid-cols-2">
     <div class="relative grid size-full shrink-0 items-center justify-center">
-      <div class="relative mt-32 grid h-200 max-w-200 min-w-140 grid-rows-[2fr_1fr] flex-col justify-center">
+      <div class="relative mt-28 grid h-170 max-w-170 min-w-170 grid-rows-[2fr_1fr] flex-col justify-center">
         <Transition
           enter-active-class="delay-1000 transition-all duration-500"
           enter-from-class="opacity-0 -translate-y-2"
@@ -51,7 +51,7 @@ const heroDisplays = [
             src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/loot/video/open_cm_outro.webm"
             style="height: 100%"
             :loop="false"
-            class="z-50 bg-center opacity-65 brightness-180 grayscale"
+            class="z-50 bg-center opacity-65 brightness-180 grayscale aspect-video"
           ></video-background>
         </div>
         <Button

@@ -44,7 +44,7 @@ const ts = useTempStore()
 
             <icon
               name="add-sm"
-              class="size-5 stroke-[1.2] 0 drop-shadow-sm -ml-2"
+              class="size-5 stroke-[1.2] 0 drop-shadow-sm -ml-4"
             />
             New Pocket
 

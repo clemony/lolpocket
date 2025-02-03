@@ -93,6 +93,6 @@
   }
 
   .nav-menu-size {
-    @apply min-w-140 w-140 max-w-140 max-h-84 min-h-84 h-84;
+    @apply min-w-160 w-160 max-w-160 max-h-100 min-h-100 h-100;
   }
 }

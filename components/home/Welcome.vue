@@ -1,9 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="relative grid gap-12 shrink-0">
-    <div class="**:!text-12 flex items-center **:!font-bold **:tracking-tight">
-      <div class="ws-nowrap relative items-center shrink-0 -ml-1 flex drop-shadow-sm">
+  <div class="relative grid gap-12 shrink-0 w-170">
+    <div class="**:!text-12 flex items-center **:!font-bold **:tracking-tight w-170">
+      <div class="ws-nowrap relative items-center shrink-0 -ml-1 flex drop-shadow-sm w-170">
         <h1 class="">
           l
         </h1>
@@ -29,7 +29,7 @@
 
     <div
 
-      class="w-full space-y-3 justify-self-start shrink-0 animate-in fade-in duration-1000"
+      class="w-full space-y-3 justify-self-start shrink-0 animate-in fade-in duration-1000 w-170"
     >
       <div class="flex items-center gap-2 drop-shadow-sm">
         <h1 class="!text-9">

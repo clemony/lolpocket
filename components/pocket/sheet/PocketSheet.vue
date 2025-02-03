@@ -42,8 +42,10 @@ defineExpose({
 </script>
 
 <template>
-  <Sheet :open="ts.PocketSheetTrigger">
-    <PocketSheetContent title="New Pocket" description="Choose a pocket name, tag your pocket (for easier searching), and create your pocket icon. <b>All items can be left blank</b> and edited later." @update:clicked="ts.PocketSheetTrigger = false">
+  <Sheet :open="ts.PocketSheetTrigger" class="max-w-140">
+    <SheetTrigger></SheetTrigger>
+
+    <PocketSheetContent title="New Pocket" description="Choose a pocket name, tag your pocket (for easier searching), and create your pocket icon. <b>All items can be left blank</b> and edited later." class="max-w-140" @update:clicked="ts.PocketSheetTrigger = false">
       <template #name>
         <input
           v-model="name"

@@ -10,7 +10,7 @@ const summonerIcon = ref('/img/summoner-icons/space-yuumi.jpg')
 </script>
 
 <template>
-  <div class="flex shadow-black/6 justify-start flex-col gap-2 rounded-xl bg-b2/40 border-b3/50 border shadow-md">
+  <div class="flex shadow-black/4 justify-start flex-col gap-2 rounded-xl bg-b2/40 border-b3/50 border shadow-md">
     <div class=" grid place-items-center size-full">
       <Avatar class="size-26 ring-1 ring-b3 rounded-full  shadow-md border border-neutral ">
         <AvatarImage
@@ -31,7 +31,7 @@ const summonerIcon = ref('/img/summoner-icons/space-yuumi.jpg')
 
     <div class="justify-center items-center flex flex-col px-4 pb-5">
       <h1 class="tracking-tight font-serif !font-black dst">
-        {{ summoner.gameName }}
+        {{ summoner.gameName != 'Summoner' ? summoner.gameName : summoner.name != 'Summoner' ? summoner.name : 'Summoner' }}
       </h1>
       <p>#{{ summoner.tagLine }}</p>
       <p class="mt-2">

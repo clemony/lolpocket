@@ -54,6 +54,23 @@ summonerIcon.value = data
 system-uicons:browser-alt
 
  */
+
+function handleClick(mode) {
+  if (mode == 'out') {
+    signOut()
+  }
+  else if (mode == 'in') {
+    ts.loginOpen == true
+  }
+}
+
+const cardKey = ref(0)
+
+watchEffect(() => {
+  if (!as.userAccount.session) {
+    cardKey.value++
+  }
+})
 </script>
 
 <template>
@@ -63,8 +80,9 @@ system-uicons:browser-alt
     </NavigationMenuTrigger>
     <NavigationMenuContent>
       <div class=" nav-menu-size py-6 px-7 h-full  gap-4 grid grid-cols-[1fr_1.2fr] relative">
-        <SummonerCard :summoner="summoner" />
+        <SummonerCard :key="cardKey" :summoner="summoner" />
 
+        <div class="relative size-full">
         <div class="flex flex-col gap-0   w-full">
           <NuxtLink
             v-for="submenu in links"
@@ -105,19 +123,20 @@ system-uicons:browser-alt
           </NuxtLink>
           <Grow /> -->
 
-          <div class="absolute w-57  bottom-6.5 right-16.5">
-            <button v-if="as.userAccount.session" class="btn btn-neutral ml-6.5 flex btn-md rounded-md mb-1 w-full gap-4 " @click="signOut()">
-              <icon name="teenyicons:upload-outline" class="-ml-2 !text-nc size-5 -rotate-90" />
+          <div class="absolute w-full bottom-0 left-0 pr-10">
+            <button v-if="as.userAccount.session" class="btn btn-neutral ml-6.5 flex btn-md rounded-md mb-1 w-full gap-4 !text-2" @click="handleClick('out')">
+              <icon name="teenyicons:upload-outline" class="-ml-3 !text-nc size-5 -rotate-90" />
               Sign out
             </button>
 
             <LoginDialog v-else>
-              <button class="btn rounded-md  btn-neutral ml-6.5 flex btn-md mb-1 w-full gap-4 ">
-                <icon name="teenyicons:signin-outline" class="-ml-2 !text-nc size-5 " />
+              <button class="btn rounded-md   btn-neutral ml-6.5 flex btn-md mb-1 w-full gap-4 !text-2">
+                <icon name="teenyicons:signin-outline" class="-ml-3 !text-nc size-5 " />
                 Sign in
               </button>
             </LoginDialog>
           </div>
+        </div>
         </div>
       </div>
     </NavigationMenuContent>

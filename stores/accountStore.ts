@@ -19,7 +19,7 @@ export const useAccountStore = defineStore(
       refreshToken: '',
       puuid: ref(null),
       gameName: ref('Summoner'),
-      tagLine: ref('log in to save'),
+      tagLine: ref('Link Riot Account?'),
       profileIconId: ref(''),
       summonerLevel: ref(0),
       region: ref('Runeterra'),

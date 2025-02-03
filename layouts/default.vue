@@ -77,6 +77,9 @@ const drawerOpen = computed (() => {
       <div class="size-screen ">
         <slot />
       </div>
+      <!-- <LazyPocketSheet
+        v-if="ts.PocketSheetTrigger"
+      /> -->
     </div>
   </main>
 </template>

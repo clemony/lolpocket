@@ -1,6 +1,8 @@
 @import 'tailwindcss';
+
+@layer components {
 .btn-neutral {
-  @apply hover:bg-neutral/80  **:text-nc border-neutral/60 shadow-sm shadow-neutral/20 transition-all duration-300;
+  @apply hover:bg-neutral/80  **:text-nc border-neutral/60 !shadow-sm transition-all shadow-black/20 duration-300;
 }
 
 .btn-ghost {
@@ -9,4 +11,10 @@
 
 .btn:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
   @apply bg-b2/60 border-b2;
+}
+
+
+.btn {
+  @apply font-normal text-3 rounded-md;
+}
 }

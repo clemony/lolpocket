@@ -25,6 +25,8 @@
     "@nuxt/icon": "^1.10.3",
     "@nuxt/image": "^1.9.0",
     "@nuxt/types": "^2.18.1",
+    "@nuxthub/core": "^0.8.15",
+    "@nuxtjs/fontaine": "^0.4.4",
     "@nuxtjs/supabase": "^1.4.6",
     "@nuxtjs/tailwindcss": "^6.13.1",
     "@pinia/colada": "^0.13.4",
@@ -105,7 +107,8 @@
     "vite": "^6.0.11",
     "vue-eslint-parser": "^9.4.3",
     "vue-router": "^4.5.0",
-    "vue-tsc": "^2.2.0"
+    "vue-tsc": "^2.2.0",
+    "wrangler": "^3.107.2"
   },
   "overrides": {
     "tailwindcss-animate": {

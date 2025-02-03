@@ -47,7 +47,7 @@ const isPocket = computed (() => {
           </NuxtLink>
         </NavigationMenuItem>
 
-        <NavigationMenuViewport class="top-[3px] rounded-xl" />
+        <NavigationMenuViewport class="top-[3px] left-14 rounded-xl" />
       </NavigationMenuList>
     </NavigationMenu>
 

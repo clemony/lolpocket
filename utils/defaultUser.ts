@@ -8,7 +8,7 @@ export const defaultUser = {
   refreshToken: '',
   puuid: ref(null),
   gameName: 'Summoner',
-  tagLine: 'log in to save',
+  tagLine: 'Link Riot Account?',
   profileIconId: '',
   summonerLevel: 0,
   region: 'Runeterra',

@@ -12,6 +12,8 @@
 }
 
 @import 'tailwindcss';
+
+@layer components {
 h1 {
   font-size: var(--text-8);
   font-weight: 600;
@@ -45,6 +47,7 @@ h5 {
   @apply tracking-tight leading-none;
 }
 
+}
 @theme {
   --font-sans: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif 'sans-serif';
   --font-serif: 'Noto Serif KR Variable', 'serif';

@@ -1,29 +1,57 @@
 <script lang="ts" setup>
 import { ResizablePanel } from 'components/base/resizable/rindex'
+
+const viewPocket = ref()
+
+const selectedFolder = ref()
 </script>
 
 <template>
-  <div class="size-full pt-[8vh]">
+  <div class="size-full pt-[6vh]">
     <ResizablePanelGroup
       direction="horizontal"
-      class="max-h-full h-full"
+      class="max-h-full h-full  border-t border-t-b3 "
     >
-      <ResizablePanel :default-size="50" :min-size="20">
-        <div class="h-[5.5vh] px-12 py-3 w-full border-b border-b-b2">
-          <h1 class="!text-9">
+      <ResizablePanel :default-size="22" :min-size="10">
+        <div class="h-[7vh] px-12 w-full flex items-center border-b border-b-b2">
+          <h1 class="!text-8 text-nowrap">
             All Pockets
           </h1>
         </div>
-        <SidebarPockets />
+        <PocketsCollapse v-for="folder in defaultFolders()" :key="folder.key" :folder="folder" />
       </ResizablePanel>
       <ResizableHandle
         with-handle
-        class="bg-transparent bg-gradient-to-b from-transparent via-b3/60 via-20% to-transparent to-180%"
+        class=""
       />
-      <ResizablePanel :min-size="20">
-        <div class="h-full w-full relative">
+      <ResizablePanel :min-size="20"  :default-size="50">
+             <div class="h-[7vh] px-12 w-full flex items-center border-b border-b-b2">
+          <h3 class=" text-nowrap">
+            Pocket
+          </h3>
         </div>
+
+          <div class="bg-b2/40 size-full pt-12 justify-items-center shadow-inset-sm">
+
+   <PocketIdCard v-for="item in selectedFolder"  />
+    
+  </div>
       </ResizablePanel>
+
+            <ResizableHandle
+        with-handle
+        class=""
+      />
+
+            <ResizablePanel :default-size="25" :min-size="10">
+               <div class="h-[7vh] px-12 w-full flex items-center border-b border-b-b2">
+          <h3 class="text-nowrap">
+            Detail
+          </h3>
+        </div>
+ 
+      </ResizablePanel>
+
     </ResizablePanelGroup>
   </div>
 </template>
