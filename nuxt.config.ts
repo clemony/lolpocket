@@ -1,4 +1,3 @@
-/* eslint-disable perfectionist/sort-imports */
 import tailwindcss from '@tailwindcss/vite'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
@@ -91,6 +90,7 @@ export default defineNuxtConfig({
 
   svgo: {
     componentPrefix: 'i',
+
   },
 
   css: ['~/assets/css/tailwind.css'],
@@ -135,7 +135,7 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: true,
+    enabled: false,
   },
 
   pinia: {
@@ -153,6 +153,7 @@ export default defineNuxtConfig({
     'img': fileURLToPath(new URL('./public/img', import.meta.url)),
     'components': fileURLToPath(new URL('./components', import.meta.url)),
     'plugins': fileURLToPath(new URL('./plugins', import.meta.url)),
+    'modules': fileURLToPath(new URL('./modules', import.meta.url)),
   },
 
   compatibilityDate: '2024-11-01',

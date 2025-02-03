@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+
+
 const props = defineProps<{
   pocket: pocket
 }>()
@@ -7,28 +9,18 @@ const pocket = ref(props.pocket)
 </script>
 
 <template>
-  <DropdownMenuItem as-child class="w-full">
-    <button class=" group w-full justify-between">
-      <h1 class="!text-8 text-start dst tracking-tight !leading-none truncate overflow-hidden capitalize ">
-        {{ pocket.name }}
-      </h1>
 
-      <ExpandIndicator :check="true" class="w-fit"/>
-    </button>
-  </DropdownMenuItem>
-
-  <DropdownMenuSeparator class="mb-2" />
 
   <DropdownMenuItem
     @click="duplicatePocket(pocket)"
   >
     <icon name="teenyicons:layers-subtract-outline" class="size-5" />
-    <span class="-ml-[1px]">Duplicate</span>
+    <span class="-ml-[1px] text-3">Duplicate</span>
   </DropdownMenuItem>
 
   <DropdownMenuItem>
     <icon name="teenyicons:upload-outline" class="size-5" />
-    <span>Export to League Client</span>
+    <span class="text-3">Export to League Client</span>
   </DropdownMenuItem>
 
   <DropdownMenuItem>
@@ -36,7 +28,8 @@ const pocket = ref(props.pocket)
     <span>Share Pocket Card</span>
   </DropdownMenuItem>
 
-  <DropdownMenuItem @click="deletePocket(pocket.key)">
+  <DropdownMenuSeparator  />
+  <DropdownMenuItem class="!text-3 font-medium" @click="deletePocket(pocket.key)">
     <icon name="x-folder" class="size-5" />Send to Trash
   </DropdownMenuItem>
 </template>

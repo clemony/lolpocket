@@ -1,5 +1,5 @@
-export default function deleteRuneSet(pocket, setKey) {
+export default function deleteRuneSet(pocket, index) {
   const runeSets = pocket.runes[0].runeSets
-  const index = runeSets.findIndex(set => set.key == setKey)
+  const find = runeSets.findIndex(set => set.index == index)
   runeSets.splice(index, 1)
 }

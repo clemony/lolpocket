@@ -121,8 +121,7 @@ watch(
               Pockets are little spaces designed to hold your builds and ideas -- similar to a pocket folder. Theorycraft within them, or use them to remember that ONE build you saw your favorite pro
               use. Pockets can be linked to champions or a general role.
             </p>
-
-            <div class="bg-b2/40 shadow-smooth mt-10 h-90 w-full rounded-lg" />
+            <CreateAPocket />
           </div>
 
           <hr />
@@ -151,7 +150,7 @@ watch(
             <p class="pt-3">
               craft bukild bflsjfl
             </p>
-            <div class="bg-b2/40 shadow-smooth mt-10 h-90 w-full rounded-lg" />
+            <CraftABuild />
           </div>
           <hr />
         </li>
@@ -237,7 +236,7 @@ watch(
               The stuff that does stuff.
             </p>
 
-            <div class="bg-b2/40 shadow-smooth mt-10 h-90 w-full rounded-lg" />
+            <AnalyzeResults />
           </div>
         </li>
       </ul>

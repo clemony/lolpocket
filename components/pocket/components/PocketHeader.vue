@@ -39,21 +39,14 @@ function handleDrawer() {
         </li>
       </ul>
     </div>
-    <DropdownMenu class="w-full">
-      <DropdownMenuTrigger class="group w-full">
-        <button class="dropdown-trigger-button group pr-2">
+
           <h1 class="!text-8 text-start dst tracking-tight !leading-none truncate  overflow-hidden capitalize grow">
             {{ name }}
           </h1>
 
-          <ExpandIndicator />
-        </button>
-      </DropdownMenuTrigger>
+          
 
-      <LazyDropdownMenuContent align="end" :align-offset="4" :side-offset="-36" class="w-96 !shadow-b3/60 pb-2">
-        <PocketDropdownMenu :pocket="pocket" />
-      </LazyDropdownMenuContent>
-    </DropdownMenu>
+
 
     <div v-if="pocket.tags" class=" w-full text-2 italic font-medium">
       <p class="flex gap-2">

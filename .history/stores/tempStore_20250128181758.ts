@@ -14,11 +14,11 @@ export const useTempStore = defineStore(
 
     // sidebar
     const sidebarTrigger = ref(false)
-const sidebarOpen = ref(false)
+    const sidebarOpen = ref(false)
     const drawerTrigger = ref(false)
     const drawerComponent = ref<string | boolean>(false)
 
-    const pocketDrawerTrigger = ref(false)
+    const PocketSheetTrigger = ref(false)
     const editPocketTrigger = ref(false)
     const championDrawerTrigger = ref(false)
     const itemDrawerTrigger = ref(false)
@@ -105,7 +105,7 @@ const sidebarOpen = ref(false)
       // sidebar
       drawerTrigger,
       drawerComponent,
-      pocketDrawerTrigger,
+      PocketSheetTrigger,
       editPocketTrigger,
       championDrawerTrigger,
       itemDrawerTrigger,

@@ -23,6 +23,7 @@ const links = [
     name: `Board`,
     link: '/summoner',
     icon: 'ph:squares-four-light',
+    altIcon: 'system-uicons:browser-alt',
   },
   {
     name: 'Build Analysis',

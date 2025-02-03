@@ -6,7 +6,7 @@ export function useDrawerToggle(drawer) {
     toggle.value = ts.sidebarTrigger
   }
   else if (drawer == 'pocket') {
-    toggle.value = ts.pocketDrawerTrigger
+    toggle.value = ts.PocketSheetTrigger
   }
   else if (drawer == 'editPocket') {
     toggle.value = ts.editPocketTrigger

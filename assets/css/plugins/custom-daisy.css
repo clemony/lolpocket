@@ -2,3 +2,13 @@
 .btn-neutral {
   @apply hover:bg-neutral/80  **:text-nc border-neutral/60 shadow-sm shadow-neutral/20 transition-all duration-300;
 }
+
+.btn-ghost {
+  @apply hover:bg-b2/60 hover:border-b2 rounded-lg;
+}
+
+.btn:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
+  @apply bg-b2/60 border-b2;
+}
+
+

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const props = defineProps<{
-  pocketKey?: string
   pathSet?: number
   runeSet?: number
   pocket?: pocket
@@ -59,7 +58,7 @@ onMounted(() => {
 
 function handleSelect(rune) {
   ts.selectedRune == 'rune'
-  useDrawerToggle('rune')
+  // useDrawerToggle('rune')
 }
 </script>
 
@@ -82,6 +81,7 @@ function handleSelect(rune) {
         <label
           v-for="rune in slot.runes"
           :key="rune.id"
+          v-tippy="rune.name"
           :data-path="selectedPath"
           class="h-full rounded-full opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
           :class="{
@@ -106,6 +106,7 @@ function handleSelect(rune) {
             name="ph:mouse-right-click-fill"
             no-wrap> -->
           <img
+            :src="`/img/runes/${selectedPath}/${rune.name.replace(/\s/g, '')}.webp`"
             :alt="rune.name"
             class="size-full"
           />

@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import SidebarDrawer from 'components/app/sidebar/SidebarDrawer.vue'
 import CardDrawer from './CardDrawer.vue'
-import EditPocketDrawer from '../../../pocket/sheet/EditPocketDrawer.vue'
+import EditPocketSheet from '../../../pocket/sheet/EditPocketSheet.vue'
 import ItemDrawer from './ItemDrawer.vue'
-import PocketDrawer from '../../../pocket/sheet/PocketDrawer.vue'
+import PocketSheet from '../../../pocket/sheet/PocketSheet.vue'
 import RuneDrawer from './RuneDrawer.vue'
 
 const ts = useTempStore()
@@ -13,9 +13,9 @@ const component = computed (() => {
   return t.value == 'sidebar'
     ? SidebarDrawer
     : t.value == 'pocket'
-      ? PocketDrawer
+      ? PocketSheet
       : t.value == 'editPocket'
-        ? EditPocketDrawer
+        ? EditPocketSheet
         : t.value == 'card'
           ? CardDrawer
           : t.value == 'rune'

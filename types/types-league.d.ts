@@ -1,7 +1,7 @@
 declare global {
 
   interface RiotAccount {
-      puuid: string
+    puuid: string
     gameName: string
     tagLine: string
     profileIconId: string
@@ -41,9 +41,9 @@ declare global {
   interface Spell {
     name: string
     description: string
-    cd: number
-    recharge?: number
-    charges?: number
+    cd: number | string
+    recharge?: number | string
+    charges?: number | string
   }
 
   interface ItemSet {

@@ -1,5 +1,6 @@
 import type { GridApi } from 'ag-grid-community'
 import { defineStore } from 'pinia'
+import type { SplitterPanel } from 'radix-vue'
 
 export const useTempStore = defineStore(
   'tempStore',
@@ -21,7 +22,7 @@ export const useTempStore = defineStore(
     const drawerTrigger = ref(false)
     const drawerComponent = ref<string | boolean>(false)
 
-    const pocketDrawerTrigger = ref(false)
+    const PocketSheetTrigger = ref(false)
     const editPocketTrigger = ref(false)
     const championDrawerTrigger = ref(false)
     const itemDrawerTrigger = ref(false)
@@ -97,6 +98,7 @@ export const useTempStore = defineStore(
       { immediate: true }
     )
  */
+
     // runes
     const selectedRuneSetIndex = ref(0)
 
@@ -114,7 +116,7 @@ export const useTempStore = defineStore(
       // sidebar
       drawerTrigger,
       drawerComponent,
-      pocketDrawerTrigger,
+      PocketSheetTrigger,
       editPocketTrigger,
       championDrawerTrigger,
       itemDrawerTrigger,

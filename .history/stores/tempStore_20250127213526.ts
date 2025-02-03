@@ -15,7 +15,7 @@ export const useTempStore = defineStore(
     // sidebar
     const sidebarTrigger = ref(false)
 
-    const pocketDrawerTrigger = ref(false)
+    const PocketSheetTrigger = ref(false)
     const editPocketTrigger = ref(false)
     const championDrawerTrigger = ref(false)
     const itemDrawerTrigger = ref(false)
@@ -97,7 +97,7 @@ export const useTempStore = defineStore(
       // clickType,
 
       // sidebar
-      pocketDrawerTrigger,
+      PocketSheetTrigger,
       editPocketTrigger,
       championDrawerTrigger,
       itemDrawerTrigger,

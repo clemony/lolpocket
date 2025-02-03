@@ -11,7 +11,8 @@ function update(event, i) {
 </script>
 
 <template>
-  <div class=" gap-3 grid grid-cols-4 h-auto items-center pt-3 px-0.25">
+  hi
+<!--   <div class=" gap-3 grid grid-cols-4 h-auto items-center pt-3 px-2">
     <SpellPicker
       v-model:model="pocket.spells[0]"
       :pocket="props.pocket"
@@ -23,7 +24,7 @@ function update(event, i) {
       :pocket="props.pocket"
       @update:model="update($event, 1)"
     />
-  </div>
+  </div> -->
 </template>
 
 <style></style>

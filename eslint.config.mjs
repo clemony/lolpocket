@@ -20,6 +20,8 @@ export default antfu({
     'unused-imports/no-unused-imports': 'off',
     'vue/no-v-text-v-html-on-component': 'off',
     'style/eol-last': 'off',
+    'perfectionist/sort-imports': 'off',
+
   },
   formatters: {
     /**

@@ -3,17 +3,16 @@ const props = defineProps<{
   pocket?: pocket
 }>()
 
-const as = useAccountStore()
-
 const pocket = ref(props.pocket)
 
-function handleResize(e) {
-  console.log('💠 - handleResize - e:', e)
+function update(event, i) {
+  console.log(event)
+  pocket.value.spells[i] = event
 }
 </script>
 
 <template>
-  <div class=" h-full min-h-full max-h-full w-146  pl-5 border-b2 border-x pt-[5.5vh]">
+  <div class=" h-full min-h-full max-h-full w-110 min-w-110  pl-5 border-b2 border-x pt-[5.5vh] ">
     <div class="pl-4 pr-10">
       <PocketHeader :pocket="pocket" />
 
@@ -38,12 +37,19 @@ function handleResize(e) {
 
       <Separator class="my-6" />
 
-      <!--           <h4 class="tracking-tighter mb-3 dst">Summoner Spells</h4>
- -->
-      <SummonerSpellDisplay
-        :pocket="pocket"
-        class=""
-      />
+      <div class=" gap-3 grid grid-cols-4 h-auto items-center pt-3 px-2">
+        <SpellPicker
+          :model="0"
+          :pocket="pocket"
+          @update:model="update($event, 0)"
+        />
+
+        <SpellPicker
+          :model="1"
+          :pocket="pocket"
+          @update:model="update($event, 1)"
+        />
+      </div>
 
       <Separator class="my-6" />
     </div>

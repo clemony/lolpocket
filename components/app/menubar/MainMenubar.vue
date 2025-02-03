@@ -15,7 +15,7 @@ const isPocket = computed (() => {
 
 <template>
   <div
-    class="bg-b1/80 w-screen max-w-screen isolate h-[var(--menubar-height)] max-h-[5vh] absolute z-60 m-0 flex items-center gap-5 border-b border-b-transparent !pt-2 pr-4 pl-5 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center "
+    class="bg-b1/80 w-screen max-w-screen isolate h-[5vh] min-h-[5vh] max-h-[5vh] absolute z-60 m-0 flex items-center gap-7.5 border-b border-b-transparent !pt-2 pr-4 pl-5 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center "
     :class="{ '': isPocket }"
   >
     <Button
@@ -67,10 +67,10 @@ const isPocket = computed (() => {
       class="!size-10.75 grid place-items-center border-transparent border hover:border-b3 cursor-pointer"
     >
       <input
-        v-model="ts.pocketDrawerTrigger"
+        v-model="ts.PocketSheetTrigger"
         type="checkbox"
         class="hidden"
-        @change="console.log(ts.pocketDrawerTrigger)"
+        @change="console.log(ts.PocketSheetTrigger)"
       />
       <LittleTip
         content="New Pocket ⌘N"

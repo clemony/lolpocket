@@ -16,7 +16,7 @@ export function defaultFolders() {
     {
       name: 'All',
       key: 'all-pockets',
-           link: '/pocket/PocketTable',
+           link: '/pocket/Pockets',
                description:"View all of your pockets in table format.",
       type: 'pocket',
       items: ps.allPockets,

@@ -14,12 +14,7 @@
       sans-serif 'sans-serif';
       font-size: 12.2px;
   }
-  html {
-    ** {
-      @apply scroll-smooth;
-    }
-  }
-
+  
   html,
   body,
   #app {

@@ -9,7 +9,7 @@ console.log('💠 - ds.champions:', ds.champions)
   <div class="relative size-screen">
   <Pocketbar  />
 
-          <SidebarPockets />
+         
   </div>
 </template>
 

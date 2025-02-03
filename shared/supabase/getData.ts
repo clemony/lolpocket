@@ -20,21 +20,20 @@ export function getRuneData() {
   })
 }
 
-export function getShardData() {
+/* export function getShardData() {
   axios({
     method: 'get',
     url: 'https://raw.communitydragon.org/latest/game/perks.cdtb.bin.json',
     responseType: 'json',
   }).then((response) => {
-    const regex = /Perks\/StatMods.*/
+    const regex = /Perks\/StatMods.
     const a = [...response.data]
     console.log('💠 - getShardData - a:', a)
     const b = a.filter(item => item.match(regex))
     console.log('💠 - getShardData - b:', b)
 
-    // ds.shards.push(...e)
   })
-}
+} */
 
 export async function getPatch() {
   const request = new Request('https://ddragon.leagueoflegends.com/api/versions.json', {

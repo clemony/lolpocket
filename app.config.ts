@@ -37,6 +37,9 @@ export default defineAppConfig({
       'heart': 'teenyicons:heart-outline',
       'x-folder': 'teenyicons:folder-x-outline',
       'add-folder': 'teenyicons:folder-plus-outline',
+      'lines': 'teenyicons:align-text-justify-outline',
+      'mail': 'fluent:mail-48-regular',
+      'info': 'teenyicons:info-outline',
     },
   },
 })

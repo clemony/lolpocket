@@ -18,10 +18,10 @@ const ts = useTempStore()
           @click="ts.sidebarTrigger = false"
         >
           <input
-            v-model="ts.pocketDrawerTrigger"
+            v-model="ts.PocketSheetTrigger"
             type="checkbox"
             class="hidden"
-            @change="console.log(ts.pocketDrawerTrigger)"
+            @change="console.log(ts.PocketSheetTrigger)"
           />
           <icon
             name="add-sm"

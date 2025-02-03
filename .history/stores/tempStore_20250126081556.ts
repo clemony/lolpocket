@@ -17,7 +17,7 @@ export const useTempStore = defineStore(
     // sidebar
     const sidebarTrigger = ref(false)
 
-    const pocketDrawerTrigger = ref(false)
+    const PocketSheetTrigger = ref(false)
     const editPocketTrigger = ref(false)
     const championDrawerTrigger = ref(false)
     const itemDrawerTrigger = ref(false)
@@ -30,7 +30,7 @@ export const useTempStore = defineStore(
     const selectedChampion = ref(null)
     const selectedItem = ref(null)
     const selectedRune = ref(null)
-    const selectedPocket  = ref(null)
+    const selectedPocket = ref(null)
 
     watch(
       () => championDrawerTrigger.value,
@@ -100,7 +100,7 @@ export const useTempStore = defineStore(
       // clickType,
 
       // sidebar
-      pocketDrawerTrigger,
+      PocketSheetTrigger,
       editPocketTrigger,
       championDrawerTrigger,
       itemDrawerTrigger,

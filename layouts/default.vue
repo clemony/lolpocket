@@ -15,7 +15,7 @@ if (event === 'INITIAL_SESSION'){
 })
 
 const drawerOpen = computed (() => {
-  return !!(ts.sidebarTrigger || ts.pocketDrawerTrigger || ts.championDrawerTrigger || ts.itemDrawerTrigger || ts.champSelectDrawerTrigger || ts.editPocketTrigger)
+  return !!(ts.sidebarTrigger || ts.PocketSheetTrigger || ts.championDrawerTrigger || ts.itemDrawerTrigger || ts.champSelectDrawerTrigger || ts.editPocketTrigger)
 })
 
 
