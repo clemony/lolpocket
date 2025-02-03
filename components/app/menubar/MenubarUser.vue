@@ -75,7 +75,7 @@ system-uicons:browser-alt
             class="flex w-full -mt-1 pr-3  pl-6.5 py-2 "
           >
             <NavigationMenuLink class="flex relative group justify-start grow w-full gap-4 items-center   pl-0  " :class="cn(`group/${submenu.name}`)">
-              <div class=" size-10 btn shadow-sm">
+              <div class=" size-10 ">
                 <icon
                   :name="submenu.icon"
                   class="size-5.5 shrink-0 dst"
