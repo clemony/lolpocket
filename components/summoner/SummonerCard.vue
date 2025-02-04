@@ -6,19 +6,18 @@ const props = defineProps<{
 const as = useAccountStore()
 
 const summoner = ref(props.summoner)
-const summonerIcon = ref('/img/summoner-icons/space-yuumi.jpg')
 </script>
 
 <template>
   <div class="flex shadow-black/4 justify-start flex-col gap-2 rounded-xl bg-b2/40 border-b3/50 border shadow-md">
     <div class=" grid place-items-center size-full">
-      <Avatar class="size-26 ring-1 ring-b3 rounded-full  shadow-md border border-neutral ">
+      <Avatar class="size-30  rounded-full  shadow-md  ">
         <AvatarImage
 
-          v-if="summoner && as.userAccount.session"
-          :src="summonerIcon"
+          v-if="summoner.gameName && as.userAccount.session"
+          :src="`https://ddragon.leagueoflegends.com/cdn/15.2.1/img/profileicon/${summoner.profileIconId}.png`"
           :alt="summoner.gameName"
-          class="size-full [&_img]:scale-115 rounded-full  inset-shadow-sm inset-shadow-black"
+          class="size-full [&_img]:scale-115 rounded-full  inset-shadow-sm inset-shadow-black/90"
         />
         <AvatarFallback
           v-else
@@ -29,7 +28,7 @@ const summonerIcon = ref('/img/summoner-icons/space-yuumi.jpg')
       </Avatar>
     </div>
 
-    <div class="justify-center items-center flex flex-col px-4 pb-5">
+    <div class="justify-center items-center flex flex-col px-4 pb-9">
       <h1 class="tracking-tight font-serif !font-black dst">
         {{ summoner.gameName != 'Summoner' ? summoner.gameName : summoner.name != 'Summoner' ? summoner.name : 'Summoner' }}
       </h1>

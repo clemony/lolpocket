@@ -12,6 +12,12 @@ const isPocket = computed (() => {
   const regEx = /^\/pocket/
   return route.path.match(regEx)
 })
+
+const as = useAccountStore()
+
+const summoner = ref(as.userAccount)
+
+const modelSettings = ref()
 </script>
 
 <template>
@@ -47,7 +53,7 @@ const isPocket = computed (() => {
           </NuxtLink>
         </NavigationMenuItem>
 
-        <NavigationMenuViewport class="top-[3px] left-14 rounded-xl" />
+        <NavigationMenuViewport class="top-4 left-14 rounded-xl" />
       </NavigationMenuList>
     </NavigationMenu>
 
@@ -62,7 +68,7 @@ const isPocket = computed (() => {
       />
     </div>
 
-    <NavigationMenu>
+    <NavigationMenu v-model:model-value="modelSettings" @update:model-value="(e) => modelSettings = e">
       <NavigationMenuList>
         <!--   <NavigationMenuItem>
         <NavigationMenuTrigger
@@ -99,19 +105,30 @@ const isPocket = computed (() => {
       </MenubarMenu> -->
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger class="group -mt-[1.5px] flex min-w-fit grow items-center justify-end">
-            <NavigationMenuLink v-tippy="'Settings'">
-              <icon
-                name="ph:gear-six"
-                class="size-6.25 shrink-0 opacity-60 drop-shadow-sm group-hover:opacity-100"
-              />
-            </NavigationMenuLink>
+          <NavigationMenuTrigger as-child class=" hover:bg-transparent focus:bg-transparent ">
+            <button class="group  flex min-w-fit grow items-center justify-end">
+              <Avatar class="size-10  rounded-full  shadow-sm ">
+                <AvatarImage
+
+                  v-if="summoner.gameName && as.userAccount.session"
+                  :src="`https://ddragon.leagueoflegends.com/cdn/15.2.1/img/profileicon/${summoner.profileIconId}.png`"
+                  :alt="summoner.gameName || summoner.name"
+                  class="size-full [&_img]:scale-115 rounded-full  inset-shadow-sm inset-shadow-black"
+                />
+                <AvatarFallback
+                  v-else
+                  class="rounded-full grid place-items-center"
+                >
+                  <icon name="octicon:person-24" class=" -mb-1  text-nc shrink-0 size-6.5 shadow-sm" />
+                </AvatarFallback>
+              </Avatar>
+            </button>
           </NavigationMenuTrigger>
 
-          <NavigationMenuContent class="min-w-64">
+          <NavigationMenuContent class="min-w-70">
             <LazyMenubarSettings />
           </NavigationMenuContent>
-          <LazyNavigationMenuViewport class="top-[3px] right-4 rounded-xl" />
+          <LazyNavigationMenuViewport class="top-4 right-54 rounded-xl  border border-x-b3 border-b-b3 border-t-b2" />
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

@@ -22,6 +22,7 @@ export default antfu({
     'vue/no-v-text-v-html-on-component': 'off',
     'style/eol-last': 'off',
     'perfectionist/sort-imports': 'off',
+    'vue/no-irregular-whitespace': 'off',
     'no-irregular-whitespace': 'off',
 
   },

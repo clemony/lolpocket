@@ -20,11 +20,7 @@ useSetSummonerData(as.userId)
     <div class="">
       your pocket picks
     </div>
-    <!--     <NuxtPage
-      v-if="userId"
-      :user-id="userId"
-      :page-key="(route) => route.fullPath"
-    /> -->
+    <TopBuilds />
   </div>
 </template>
 

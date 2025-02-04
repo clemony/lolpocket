@@ -16,9 +16,9 @@ export const themes = [
   {
     name: 'dusk',
     id: 'data-theme-dusk',
-    icon: 'ep:dawn',
+    icon: 'si:sun-set-line',
     description: 'Gets carried by their Volibear every game and insists they\'re better than you.',
-    color: '#353E53',
+    color: 'var(--b1)',
   },
   {
     name: 'midnight',

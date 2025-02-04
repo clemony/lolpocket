@@ -108,20 +108,21 @@ watchEffect(() => {
             </NavigationMenuLink>
           </NuxtLink>
 
-          <!--   <NuxtLink
-            v-if="role == 'admin'"
+           <NuxtLink
+            v-if="role == 'admin' && as.userAccount.session"
             to="/admin/Admin"
-            class="flex items-center gap-4 px-2.5"
+            class="flex w-full -mt-1 pl-5 pr-2 py-2 "
           >
-            <NavigationMenuLink :class="navigationMenuTriggerStyle()">
+            <NavigationMenuLink class="flex relative group justify-start grow w-full gap-4 items-center btn btn-ghost btn-md  !font-medium !text-3 " >
             <icon
-        name="codicon:source-control"
-        class="size-4.5" />
+        name="mynaui:key"
+        class="size-7 -mr-1 -ml-1" />
 
               Admin Board
-            </NavigationMenuLink>
-          </NuxtLink>
-          <Grow /> -->
+           
+          </NavigationMenuLink>
+              </NuxtLink>
+          <Grow />
 
           <div class="absolute w-full bottom-0 left-0 pr-10">
             <button v-if="as.userAccount.session" class="btn btn-neutral ml-6.5 flex btn-md rounded-md mb-1 w-full gap-4 !text-2" @click="handleClick('out')">

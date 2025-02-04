@@ -41,6 +41,7 @@ export default defineAppConfig({
       'lines': 'teenyicons:align-text-justify-outline',
       'mail': 'fluent:mail-48-regular',
       'info': 'teenyicons:info-outline',
+      'chain': 'ph:link-simple',
     },
   },
 })

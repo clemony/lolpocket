@@ -6,7 +6,7 @@ const props = defineProps<{
 
 <template>
   <div class="collapse menu group">
-    <input type="checkbox" :name="folder.name" class="parent-check !py-0 !min-h-11 peer/check h-11" :disabled="!folder.items.length" :checked="folder.name == 'All'" />
+    <input type="checkbox" :name="folder.name" class="collapse-input parent-check !py-0 !min-h-11 peer/check h-11" :disabled="!folder.items.length" :checked="folder.name == 'All'" />
     <div class="group-has-disabled:opacity-40 collapse-title overflow-auto font-semibold !min-h-11 flex gap-4 flex-nowrap text-nowrap text-3 items-center !py-0 h-11 peer-hover/check:bg-b2/40 btn btn-ghost justify-start pr-6">
       <icon name="right-sm" class="group-has-[input.parent-check:checked]:rotate-90 size-5.5 transition-all duration-300" />
 

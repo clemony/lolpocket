@@ -6,7 +6,7 @@
 }
 
 .btn-ghost {
-  @apply hover:bg-b2/60 hover:border-b2 rounded-lg;
+  @apply hover:!bg-b2/60 hover:!border-b2 !rounded-md;
 }
 
 .btn:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
@@ -17,4 +17,9 @@
 .btn {
   @apply font-normal text-3 rounded-md;
 }
+}
+
+.collapse-input,
+.collapse-title {
+  @apply !min-h-0 !py-0 h-11 text-nowrap flex-nowrap items-center justify-start;
 }

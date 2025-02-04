@@ -14,7 +14,6 @@ const ts = useTempStore()
           :key="folder.name"
           :to="folder.link"
           class="flex gap-4 items-center size-full"
-          :disabled="!as.userAccount.session && folder.name != 'All'"
         >
           <NavigationMenuLink :class="navigationMenuTriggerStyle()" class="!size-full !place-content-center rounded-xl !grid  gap-2 !py-5">
             <div class="flex gap-2">

@@ -7,16 +7,19 @@ const settingBarLinks = [
     name: 'General',
     link: '/settings',
     icon: 'ph:gear-six',
+    text: 'Accessibility and defaults.',
   },
   {
     name: 'Account',
     link: '/settings#account',
     icon: 'ri:user-settings-line',
+    text: 'Connect and manage.',
   },
   {
     name: 'Theme',
     link: '/settings#theme',
     icon: 'teenyicons:paintbucket-outline',
+    text: 'App colors.',
   },
 ]
 </script>
@@ -27,10 +30,12 @@ const settingBarLinks = [
     <NavigationMenuContent>
       <div class=" nav-menu-size ">
         <div class="size-full flex flex-col items-between">
-          <div class="grow py-5 px-7 gap-10 grid grid-cols-[1fr_1fr]  ">
-            
-
+          <div class="grow py-5 px-7 h-full gap-10 grid grid-cols-[1fr_1fr]  ">
             <div class="col-start-1 grid *:h-fit *:w-full">
+              <h5 class="!font-semibold opacity-60 mb-3 mt-1">
+                Tools
+              </h5>
+
               <NuxtLink
                 to="/Docs"
                 class="flex flex-col  justify-center items-start"
@@ -81,32 +86,32 @@ const settingBarLinks = [
               </NuxtLink>
             </div>
 
-            <ul class="py-1 w-full flex flex-col gap-2 *:w-full">
+            <div class="col-start-2 grid *:h-fit *:w-full">
+              <h5 class="!font-semibold opacity-60 mb-3 mt-1">
+                Settings
+              </h5>
+
               <NuxtLink
-                to="/Settings"
-                class="flex gap-4   items-center col-start-1"
+                v-for="link in settingBarLinks" :key="link.name"
+                class=" px-2.5 flex flex-col justify-center cursor-pointer items-start"
+                :class="navigationMenuTriggerStyle()"
               >
-                <span class="pb-3 flex items-center gap-4">
-                  <h5 class="!font-semibold opacity-60">
-                    Settings
-                  </h5>
-                </span>
-              </NuxtLink>
-              <li v-for="link in settingBarLinks" :key="link.name" class=" justify-start pointer-events-none -ml-3" :class="navigationMenuTriggerStyle()">
-                <NuxtLink
-                  :to="link.link"
-                  class="flex gap-4 py-2  pointer-events-auto items-center col-start-1 font-semibold "
-                >
+                <div class="flex gap-4 mb-2 items-center">
                   <LittleIcon
                     :icon="link.icon"
                     class="size-5.5"
                   />
-                  {{ link.name }}
-                </NuxtLink>
-              </li>
-            </ul>
-
+                  <h5 class="!font-semibold">
+                    {{ link.name }}
+                  </h5>
+                </div>
+                <p>
+                  {{ link.text }}
+                </p>
+              </NuxtLink>
+            </div>
           </div>
+
           <div class="w-full bg-b2/40 border border-t-b2 min-h-20 px-9 flex items-center justify-between rounded-b-xl border-x-b3 border-b-b3">
             <a
               href="https://github.com/clemony/lolpocket"
@@ -140,7 +145,7 @@ const settingBarLinks = [
 </template>
 
 <style scoped>
-h5{
+h5 {
   font-weight: 600 !important;
 }
 </style>
