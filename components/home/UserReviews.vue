@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <div class="w-full bg-b1 px-60 py-30">
-    <div class="w-full justify-center justify-self-center grid grid-cols-2 py-30 gap-34">
+  <div class="w-full bg-b1 px-60 py-30 h-280">
+    <div class="w-full justify-center justify-self-center grid grid-cols-2 py-30 gap-34 h-full items-center">
       <div class="flex gap-4">
         <div class="size-20 overflow-hidden rounded-full shrink-0 border border-neutral/40 shadow-sm">
           <img src="/img/champion/Pantheon.webp" class="size-full scale-110 shrink-0" />

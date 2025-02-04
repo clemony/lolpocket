@@ -60,7 +60,7 @@ export default defineNuxtConfig({
     supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
 
     public: {
-      baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+      // baseUrl: process.env.BASE_URL || 'http://localhost:8080',
       redirectUrl: 'http://localhost:8080/summoner',
     },
   },
@@ -141,7 +141,9 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: false,
+    enabled: true,
+    componentInspector: true,
+    viteInspect: true,
   },
 
   pinia: {

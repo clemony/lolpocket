@@ -9,7 +9,7 @@ const copyMsg = computed (() => {
 </script>
 
 <template>
-  <footer class="footer sm:footer-horizontal bg-neutral text-nc items-center p-6">
+  <footer class="h-24 max-h-24 min-h-24 footer sm:footer-horizontal bg-neutral text-nc items-center p-6">
     <aside class="grid-flow-col items-center">
       <div class="font-bold text-9">
         LP

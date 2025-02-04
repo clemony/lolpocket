@@ -5,7 +5,7 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
 </script>
 
 <template>
-  <div class="bg-b2 text-bc flex w-full justify-center border-t border-t-b3/60">
+  <div class="bg-b2 text-bc flex w-full items-center justify-center border-t border-t-b3/60 h-140 min-h-140 max-h-140">
     <div class="flex w-full flex-wrap justify-evenly gap-x-10 gap-y-16 px-12 pt-36 pb-40 [&_h3]:drop-shadow-sm [&_li]:drop-shadow-sm">
       <ul :class="listClass">
         <h3>Tools</h3>
