@@ -30,7 +30,7 @@ export default function newRuneSet(key?) {
     pocket.runes.sets.push(newSet)
 
     if (pocket.runes.sets.length == 1) {
-      pocket.runes.starred = newSet
+      pocket.runes.default = newSet
     }
   }
   else {

@@ -20,7 +20,7 @@ const db = [
     name: 'Item Stats',
     link: 'ItemTable',
     icon: 'teenyicons:shield-tick-outline',
-    badge: 'Table'
+    badge: 'Table',
   },
   {
     name: 'Runes',

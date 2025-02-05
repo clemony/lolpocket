@@ -75,7 +75,7 @@ const selectedSet = ref(0)
 
                 <label class="group/star relative grid h-full w-4 cursor-pointer place-content-center *:h-full *:transition-all *:duration-300">
                   <input
-                    v-model="pocket.runes.starred"
+                    v-model="pocket.runes.default"
                     type="radio"
                     name="defaultDisplayRunes"
                     :value="index"

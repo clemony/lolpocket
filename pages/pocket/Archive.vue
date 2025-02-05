@@ -7,6 +7,7 @@ console.log('💠 - ds.champions:', ds.champions)
 <template>
   <div class="relative size-screen">
     <Pocketbar />
+    <NuxtLayout name="inbox-layout"></NuxtLayout>
   </div>
 </template>
 

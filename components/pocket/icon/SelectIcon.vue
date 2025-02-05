@@ -77,6 +77,9 @@ onMounted (async () => {
       <div
         class="absolute top-0 left-0 w-full h-fit justify-end justify-items-end gap-x-2 gap-y-3  overflow-y-scroll px-0.5 py-4 items-center grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(64px,1fr))]  "
       >
+        <PocketIcon image="/img/champion/centered/-1.webp" class="rounded-lg **:rounded-lg size-[64px] has-checked:ring-1 has-checked:ring-offset-2 has-checked:ring-neutral has-checked:ring-offset-b1 hover:ring-1">
+          <input v-model="selectIcon" type="radio" value="/img/champion/centered/-1.webp" class="hidden" @change="handleChange('/img/champion/centered/-1.webp')" />
+        </PocketIcon>
         <template v-for="result in searchResult" :key="result.item">
           <LazySplashIcon v-model:model-value="selectIcon" :result="result" @update:selected-icon="handleChange($event)" />
         </template>

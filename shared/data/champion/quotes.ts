@@ -1,4 +1,3 @@
-
 export const quotes = [
   '<p>"Braum! What are you doing over there?! Are you drunk?"</p><p>-Ashe</p>',
   '<p>"So, Braum. No shirt, huh? And I don\'t have pants. Yay, Freljord."</p><p>-Ashe</p>',
@@ -53,7 +52,7 @@ export const quotes = [
   '<p>"I do not need company; only a wall, to keep out company."</p><p>-Ornn</p>',
   '<p>"I will make an axe that is also a sword... and possibly a spoon."</p><p>-Ornn</p>',
   '<p>"Solitude always meets my expectations."</p><p>-Ornn</p>',
-  '<p>"I do not care at all."/p><p>-Ornn</p>',
+  '<p>"I do not care at all."</p><p>-Ornn</p>',
   '<p>"I don\'t know what you do and I don\'t care."/p><p>-Ornn</p>',
   '<p>"I now like you less. I did not think that was possible."/p><p>-Ornn</p>',
   '<p>"No."/p><p>-Ornn</p>',

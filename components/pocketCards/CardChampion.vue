@@ -9,7 +9,7 @@ const props = defineProps<{
 const pocket = ref(props.pocket)
 
 const champ = computed(() => {
-  const a = pocket.value.champions.champions[0]
+  const a = pocket.value.champions.children[0]
   const b = !a ? null : a.name
   return b
 })

@@ -16,12 +16,12 @@ function update(event, i) {
     <div class="pl-4 pr-10">
       <PocketHeader :pocket="pocket" />
 
-      <div class="w-full h-54  shadow-sm border border-b3 rounded-lg shadow-b3  relative size-fit">
+      <div class="w-full h-54  shadow-sm border border-b3 rounded-lg shadow-b3  relative size-fit bg-gradient-to-br from-neutral/70 to-neutral">
         <div
           class="rounded-lg shrink-0 size-full overflow-hidden "
           :style="{
             backgroundImage: `url(${pocket.icon})`,
-            backgroundSize: pocket.icon == '/img/champion/centered/-1.webp' ? '100%' : '350%',
+            backgroundSize: pocket.icon == '/img/champion/centered/-1.webp' ? '0%' : '350%',
             backgroundPosition: 'center 20%' }"
         />
 

@@ -20,14 +20,14 @@ const pocket = computed(() => {
   return getPocket(props.params.data.key)
 })
 
-const starredItems = computed(() => {
-  return pocket.value.items.sets[pocket.value.items.starred].items
+const defaultItems = computed(() => {
+  return pocket.value.items.sets[pocket.value.items.default].items
 })
 
-console.log('this', starredItems.value[0])
+console.log('this', defaultItems.value[0])
 
 const box = computed(() => {
-  return 6 - starredItems.value.length
+  return 6 - defaultItems.value.length
 })
 </script>
 
@@ -39,7 +39,7 @@ const box = computed(() => {
       content-class="flex size-full items-center gap-2 overflow-y-clip overflow-x-scroll px-1"
     >
       <template
-        v-for="(item, index) in starredItems"
+        v-for="(item, index) in defaultItems"
         :key="index"
       >
         <button
@@ -52,7 +52,7 @@ const box = computed(() => {
           />
         </button>
       </template>
-      <template v-if="starredItems.length < 6">
+      <template v-if="defaultItems.length < 6">
         <Placeholder
           v-for="index in box"
           :key="index"

@@ -14,7 +14,7 @@ const champions = computedAsync (() => {
 })
 
 const champs = computedAsync(() => {
-  return pocket.value.champions.champions
+  return pocket.value.champions.children
 })
 
 const quote = getQuote().replace(/<\/p>/g, ' ').replace(/<p>/g, ' ').replace(/<i>/g, ' ').replace(/<\/i>/g, ' ')
@@ -39,7 +39,7 @@ const quote = getQuote().replace(/<\/p>/g, ' ').replace(/<p>/g, ' ').replace(/<i
         :champion="champion" class="has-checked:grayscale has-checked:opacity-70 brightness-110 has-checked:scale-85  contrast-90 has-checked:rounded-xl  transition-all duration-300"
       >
         <input
-          v-model="pocket.champions.champions" type="checkbox" :value="champion" class="hidden"
+          v-model="pocket.champions.children" type="checkbox" :value="champion" class="hidden"
         />
       </Champion>
     </div>

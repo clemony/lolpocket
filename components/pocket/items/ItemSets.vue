@@ -16,21 +16,21 @@ watch(items, (newItemSets) => {
   }
 })
 
-function updateStarredIndex(evt) {
+function updatecChildIndex(evt) {
   const { oldIndex, newIndex } = evt
 
   if (!pocket.value) {
     return
   }
 
-  if (pocket.value.items.starred === oldIndex) {
-    pocket.value.items.starred = newIndex
+  if (pocket.value.items.default === oldIndex) {
+    pocket.value.items.default = newIndex
   }
-  else if (pocket.value.items.starred > oldIndex && pocket.value.items.starred <= newIndex) {
-    pocket.value.items.starred--
+  else if (pocket.value.items.default > oldIndex && pocket.value.items.default <= newIndex) {
+    pocket.value.items.default--
   }
-  else if (pocket.value.items.starred < oldIndex && pocket.value.items.starred >= newIndex) {
-    pocket.value.items.starred++
+  else if (pocket.value.items.default < oldIndex && pocket.value.items.default >= newIndex) {
+    pocket.value.items.default++
   }
 }
 </script>
@@ -69,10 +69,10 @@ function updateStarredIndex(evt) {
         <CardHeader class="flex w-full flex-row items-center  pb-3 px-4">
           <!--                <label class="group/star items-center cursor-pointer  *:transition-all *:duration-300  size-3 relative">
                     <input type="radio" name="starSet" :value="index" class="peer hidden"
-                        v-model="pocket.items[0].starred" @change="prevIndex = pocket.items[0].starred"
-                        :checked="pocket.items[0].starred == index" />
+                        v-model="pocket.items[0].default" @change="prevIndex = pocket.items[0].default"
+                        :checked="pocket.items[0].default == index" />
                     <icon name="iconoir:star-dashed" class="absolute z-10 opacity-30 group-hover/star:opacity-15 " />
-                    <icon v-if="pocket.items[0].starred == index" name="iconoir:star-solid"
+                    <icon v-if="pocket.items[0].default == index" name="iconoir:star-solid"
                         class="absolute   text-yellow-300 group-hover/star:opacity-70  animate-in zoom-in-0 spin-in-90  duration-300"
                         :class="{
                             'slide-in-from-bottom-60': prevIndex > index,

@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { navigationMenuTriggerStyle } from 'components/base/navigation-menu/nin'
 
+const ps = usePocketStore()
 const ts = useTempStore()
 </script>
 
@@ -29,25 +30,18 @@ const ts = useTempStore()
 
         <div class="row-start-3 w-full"></div>
         <div class="row-start-3 col-start-2  w-full justify-end justify-self-end relative ">
-          <label
+          <button
             :class="navigationMenuTriggerStyle()"
+            class="absolute right-1 bottom-5 btn btn-neutral pr-3 !w-57 flex btn-md grow  hover:text-nc hover:!bg-neutral/80 focus:text-nc active:text-nc hover:text-nc"
 
-            class="absolute right-1 bottom-5 btn btn-neutral pr-3 !w-57 flex btn-md grow  hover:text-nc"
+            @click="ts.pocketSheetTrigger = true"
           >
-            <input
-              v-model="ts.PocketSheetTrigger"
-              type="checkbox"
-              class="hidden"
-              @change="console.log(ts.PocketSheetTrigger)"
-            />
-
             <icon
               name="add-sm"
               class="size-5 stroke-[1.2] 0 drop-shadow-sm -ml-4"
             />
             New Pocket
-
-          </label>
+          </button>
         </div>
       </div>
     </NavigationMenuContent>

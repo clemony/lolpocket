@@ -12,8 +12,6 @@ const emit = defineEmits(['update:model'])
 
 const spellData = ref<Spell[]>([])
 
-const ts = useTempStore()
-
 const pocket = ref(props.pocket)
 
 const spells = ref(pocket.value.spells)
@@ -46,7 +44,7 @@ const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells
   <Popover>
     <PopoverTrigger class="p-0 size-20 rounded-lg btn shadow-sm inset-shadow-sm">
       <img
-        v-if="!pocket.spells[props.model].name || pocket.spells[props.model].name == ''"
+        v-if="!pocket.spells[props.model] || !pocket.spells[props.model].name || pocket.spells[props.model].name == 'empty' || pocket.spells[props.model].name == undefined"
         :src="useRandom(imgArr)"
         class=" rounded-lg overflow-hidden grayscale opacity-30 color-mix-screen"
       />

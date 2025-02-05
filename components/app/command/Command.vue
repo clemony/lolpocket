@@ -16,9 +16,9 @@ else if (useDevice() == 'Windows') {
 </script>
 
 <template>
-  <CommandDialog v-model:open="ts.commandOpen" :overlay-opacity="60">
-    <div class="py-1 px-2 ">
-      <CommandInput placeholder="Type a command or search..." class="pl-1 !h-12 pt-3.5" />
+  <CommandDialog v-model:open="ts.commandOpen" :overlay-opacity="60" class=" ">
+    <div class="py-1 px-2 size-full **:text-3">
+      <CommandInput placeholder="Type a search term or browse..." class="pl-1 !h-12 pt-3.5 bg-transparent" />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading="Suggestions" class="*:flex *:items-center *:gap-4 *:[&_span]:nth-of-type-[2]:opacity-70">

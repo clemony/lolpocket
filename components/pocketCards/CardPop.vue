@@ -9,7 +9,7 @@ const pocket = ref(props.pocket)
 
 const as = useAccountStore()
 
-const set = ref(pocket.value.runes.starred)
+const set = ref(pocket.value.runes.default)
 console.log(set)
 
 const wrapper = ref(null)

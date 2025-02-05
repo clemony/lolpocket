@@ -13,16 +13,16 @@ export default function addPocket(name: string, tags: Array<string>, icon: strin
     roles: [],
     icon: icon || '/img/champion/centered/-1.webp',
     champions: {
-      champions: [],
-      starred: null,
+      children: [],
+      default: null,
     },
     items: {
       sets: [],
-      starred: null,
+      default: null,
     },
     runes: {
       sets: [],
-      starred: null,
+      default: null,
     },
     spells: [],
     tags: tags || [''],
@@ -31,9 +31,13 @@ export default function addPocket(name: string, tags: Array<string>, icon: strin
     dateUpdated: createDateObject(),
   }
 
-  usePocketStore().pockets.push(newPocket)
-  newItemSet(pocketKey)
-  newRuneSet(pocketKey)
+  const ps = usePocketStore()
+  ps.pockets.push(newPocket)
+  const p = getPocket(pocketKey)
+  const a = newItemSet(p)
+  p.items.default.push(a)
+  const b = newRuneSet(p)
+  p.runes.default = b
 
   toast(markRaw(PocketToast), {
     unstyled: true,

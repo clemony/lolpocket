@@ -9,10 +9,10 @@ export default function createDefaultShard(): {
 } {
   return {
     name: 'empty',
-    stats: '',
+    stats: 'h',
     slotID: 0,
     slotName: 'empty',
-    type: '',
+    type: 'h',
     icon: 'oui:shard',
     color: 'empty',
   }

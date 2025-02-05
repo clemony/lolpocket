@@ -23,7 +23,7 @@ const props = defineProps<{
             <slot name="name" />
           </div>
 
-          <span class="flex gap-1">
+          <span class="flex gap-2">
             <slot name="name-buttons" />
           </span>
         </div>

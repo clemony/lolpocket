@@ -38,7 +38,7 @@ const isThis = computed (() => {
 
     <div class="">
       <div class="flex gap-2 h-21 items-center p-1">
-        <Champion :champion="pocket.champions.starred || pocket.champions.champions[0]" class="size-20" />
+        <Champion :champion="pocket.champions.default || pocket.champions.children[0]" class="size-20" />
 
         <div class="flex flex-col h-full justify-between">
           <div v-for="spell in pocket.spells" :key="spell.name" class="btn btn-md p-0 aspect-square">
@@ -47,8 +47,8 @@ const isThis = computed (() => {
         </div>
       </div>
 
-      <div v-if="pocket.items.starred || pocket.items.sets[0]" class="flex gap-2">
-        <div v-for="item in pocket.items.starred || pocket.items.sets[0]" :key="item.name">
+      <div v-if="pocket.items.default || pocket.items.sets[0]" class="flex gap-2">
+        <div v-for="item in pocket.items.default || pocket.items.sets[0]" :key="item.name">
           <img :src="item.img" />
         </div>
       </div>

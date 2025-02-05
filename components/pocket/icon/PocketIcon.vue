@@ -13,9 +13,10 @@ const image = computed (() => {
 </script>
 
 <template>
-  <div
+  <label
     :class="cn('relative grid  shrink-0 place-items-center  size-full shadow-sm  rounded-full', props.class)"
   >
+    <slot />
     <div
       class="size-full rounded-full  shrink-0  overflow-hidden "
       :style="{
@@ -24,7 +25,8 @@ const image = computed (() => {
         backgroundPosition: 'center 20%' }"
     >
     </div>
-  </div>
+
+  </label>
 </template>
 
 <style scoped></style>

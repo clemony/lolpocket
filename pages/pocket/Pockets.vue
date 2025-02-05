@@ -1,89 +1,199 @@
 <script lang="ts" setup>
-import { ResizablePanel } from 'components/base/resizable/rindex'
-import { DropdownMenuRadioGroup } from 'radix-vue'
+import type { ColDef, GridApi, GridOptions, GridReadyEvent } from 'ag-grid-community'
+import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community'
+import { AgGridVue } from 'ag-grid-vue3'
+import { CustomTooltip } from 'components/table/customTooltip'
+import 'tippy.js/animations/scale.css'
 
-const viewPocket = ref()
+definePageMeta({
+  alias: '/pockets',
+})
+const ps = usePocketStore()
+const theme = ref(pocketTheme)
+const pocketList = [...ps.pockets]
 
-const openFolder = ref()
+const cellClass = []
+const gridOptions: GridOptions<Item> = {
+  rowData: pocketList,
+  columnHoverHighlight: true,
+  autoSizeStrategy: {
+    type: 'fitGridWidth',
+    defaultMinWidth: 50,
+  },
+  rowSelection: {
+    mode: 'multiRow',
+    checkboxes: false,
+    headerCheckbox: false,
+    enableClickSelection: true,
+  },
 
-onMounted (() => {
-  const a = defaultFolders()[0].items.length ? defaultFolders()[0] : defaultFolders()[1]
-  openFolder.value = a.name
+  /*  getRowId: (params: number) => {
+    return params.data.id
+  }, */
+  defaultColDef: {
+    width: 50,
+    minWidth: 50,
+    cellClass: 'cell-class',
+    initialHide: false,
+    /*     headerComponentParams: {
+      innerHeaderComponent: CustomInnerHeader,
+    }, */
+    resizable: false,
+    tooltipComponent: CustomTooltip,
+  },
+}
+
+const colDefs: ColDef<pocket>[] = [
+  { field: 'icon', headerName: '', cellRenderer: params => `<img src="/img/item/${params.value}.webp" class="size-full aspect-square rounded-full shadow-sm" />`, cellClass: '!py-1 !pr-1 !pl-3', sortable: false, width: 51, maxWidth: 51, minWidth: 51 },
+
+  { field: 'name', cellDataType: 'text', width: 140, sortable: false, cellClass: 'font-medium  ', headerComponentParams: {
+    innerHeaderComponentParams: {
+      displayName: 'Pocket',
+    },
+  } },
+  /* {
+    headerName: 'Champions',
+    children: [
+      { field: 'champions.children[0]', headerName: 'ad', cellDataType: 'number', headerTooltip: 'Attack Damage', headerComponentParams: {
+        innerHeaderComponentParams: {
+          icon: 'ad',
+        },
+      } },
+      { field: 'champions.children' },
+      { field: 'champions.children' },
+    ],
+  },
+  { field: 'stats.ah', headerName: 'ah', cellDataType: 'number', headerTooltip: 'Ability Haste', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'ah',
+    },
+  } },
+  { field: 'stats.ap', headerName: 'ap', cellDataType: 'number', headerTooltip: 'Ability Power', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'ap',
+    },
+  } },
+  { field: 'stats.armor', headerName: 'armor', cellDataType: 'number', headerTooltip: 'Armor', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'armor',
+    },
+  } },
+  { field: 'stats.armpen', headerName: 'apen', cellDataType: 'number', headerTooltip: 'Armor Pen', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'armpen',
+    },
+  } },
+  { field: 'stats.as', headerName: 'as', cellDataType: 'number', headerTooltip: 'Attack Speed', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'as',
+    },
+  } },
+  { field: 'stats.crit', headerName: 'crit', cellDataType: 'number', headerTooltip: 'Critical Strike', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'crit',
+    },
+  } },
+  { field: 'stats.gp10', headerName: 'gp/10', cellDataType: 'number', headerTooltip: 'Gold / 10s', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'gp10',
+    },
+  } },
+  { field: 'stats.hp', headerName: 'hp', cellDataType: 'number', headerTooltip: 'Health', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'hp',
+    },
+  } },
+  { field: 'stats.hp5', headerName: 'hp/5', cellDataType: 'number', headerTooltip: 'Health Regen / 5s', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'hp5',
+    },
+  } },
+  { field: 'stats.hsp', headerName: 'hsp', cellDataType: 'number', headerTooltip: 'Heal & Shield Power', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'hsp',
+    },
+  } },
+  { field: 'stats.lethality', headerName: 'lty', cellDataType: 'number', headerTooltip: 'Lethality', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'lethality',
+    },
+  } },
+  { field: 'stats.lifesteal', headerName: 'ls', cellDataType: 'number', headerTooltip: 'Lifesteal', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'lifesteal',
+    },
+  } },
+  { field: 'stats.mana', headerName: 'mana', cellDataType: 'number', headerTooltip: 'Mana', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'mana',
+    },
+  } },
+  { field: 'stats.mp5', headerName: 'mp/5', cellDataType: 'number', headerTooltip: 'Mana Regen / 5s', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'mp5',
+    },
+  } },
+  { field: 'stats.mpen', headerName: 'mpen %', cellDataType: 'number', headerTooltip: 'Magic Pen', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'mpen',
+    },
+  } },
+  { field: 'stats.mpenflat', headerName: 'mpen', cellDataType: 'number', headerTooltip: 'Flat Magic Pen', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'mpenflat',
+    },
+  } },
+  { field: 'stats.mr', headerName: 'mr', cellDataType: 'number', headerTooltip: 'Magic Resist', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'mr',
+    },
+  } },
+  { field: 'stats.ms', headerName: 'ms %', cellDataType: 'number', headerTooltip: 'Movespeed', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'ms',
+    },
+  } },
+  { field: 'stats.msflat', headerName: 'ms', cellDataType: 'number', headerTooltip: 'Flat Movespeed', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'msflat',
+    },
+  } },
+  { field: 'buy', headerName: 'cost', cellDataType: 'number', headerTooltip: 'Buy Price', headerComponentParams: {
+    innerHeaderComponentParams: {
+      icon: 'gold',
+    },
+  } }, */
+]
+
+const gridApi = shallowRef<GridApi | null>(null)
+async function onGridReady(params: GridReadyEvent) {
+  await params.api
+  gridApi.value = params.api
+  ps.pocketApi = gridApi.value
+}
+ModuleRegistry.registerModules([AllCommunityModule])
+defineExpose({
 })
 </script>
 
 <template>
-  <div class="size-full pt-[6vh]">
-    <ResizablePanelGroup
-      direction="horizontal"
-      class="max-h-full h-full  border-t border-t-b3 "
-    >
-      <ResizablePanel :default-size="28" :min-size="10">
-        <div class="h-[7vh] px-12 w-full flex items-center border-b border-b-b2">
-          <h1 class="!text-8 text-nowrap">
-            All Pockets
-          </h1>
-        </div>
-        <PocketsCollapse v-for="folder in defaultFolders()" :key="folder.key" :folder="folder" />
-      </ResizablePanel>
-      <ResizableHandle
-        with-handle
-        class=""
-      />
+  <div class="size-full">
+    <MenubarSpacer />
+    <div class="flex size-full">
+      <GridBar />
+      <AgGridVue
+        :grid-options="gridOptions"
+        :theme="theme"
+        :column-defs="colDefs"
+        class="size-full border-t border-b2 border-l"
+        :tooltip-show-delay="400"
 
-      <ResizablePanel :default-size="44" :min-size="10">
-        <div class="h-[7vh] px-12 w-full flex items-center border-b border-b-b2">
-          <div class="breadcrumbs text-3 font-medium tracking-tight">
-            <ul class="flex items-center ">
-              <li>
-                <span class="inline-flex items-center gap-2.5">
-                  <icon name="formkit:folder" class="size-4.5 dst" />
-                  Pocket Folders
-                </span>
-              </li>
-              <li class="">
-                <DropdownMenu>
-                  <DropdownMenuTrigger class="ml-2 border border-b3 rounded-md py-1.5 w-50 px-3 inset-shadow-sm items-center">
-                    <span class="inline-flex items-center grow !gap-2.5 capitalize">
-                      <icon name="teenyicons:folder-outline" />
-                      {{ openFolder }}
-                    </span>
-                    <icon name="select" class="size-4.5" />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent class="w-50">
-                    <DropdownMenuRadioGroup v-model="openFolder">
-                      <DropdownMenuRadioItem v-for="folder in defaultFolders()" :key="folder.key" :value="folder.name">
-                        {{ folder.name }}
-                      </DropdownMenuRadioItem>
-                    </DropdownMenuRadioGroup>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </ResizablePanel>
-
-      <ResizableHandle
-        with-handle
-        class=""
-      />
-
-      <ResizablePanel :min-size="20" :default-size="40">
-        <div class="h-[7vh] px-12 w-full flex items-center border-b border-b-b2">
-          <h3 class="text-nowrap">
-            Detail
-          </h3>
-        </div>
-
-        <div class="size-full pt-12 justify-items-center shadow-inset-sm">
-          <PocketIdCard />
-        </div>
-      </ResizablePanel>
-    </ResizablePanelGroup>
+        @grid-ready="onGridReady"
+      >
+      </AgGridVue>
+    </div>
   </div>
 </template>
 
-<style scoped>
-
+<style>
 </style>

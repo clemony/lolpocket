@@ -10,7 +10,7 @@ const items = computed(() => {
   const s
   /*         pocket.value.items[0].final[0].items ?
             pocket.value.items[0].final[0].items
-        : */ = pocket.value.items.sets[pocket.value.items.starred].items
+        : */ = pocket.value.items.sets[pocket.value.items.default].items
   return s
 })
 </script>

@@ -9,7 +9,7 @@ const champions = computedAsync (() => {
 })
 
 const champs = computedAsync(() => {
-  return pocket.champions.champions
+  return pocket.champions.children
 })
 </script>
 
@@ -41,7 +41,7 @@ const champs = computedAsync(() => {
           :champion="champion" class="has-checked:grayscale has-checked:opacity-70 brightness-110 has-checked:scale-85  contrast-90 has-checked:rounded-xl  transition-all duration-300"
         >
           <input
-            v-model="pocket.champions.champions" type="checkbox" :value="champion" class="hidden"
+            v-model="pocket.champions.children" type="checkbox" :value="champion" class="hidden"
           />
         </Champion>
       </div>

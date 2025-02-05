@@ -10,7 +10,7 @@ export default function newItemSet(pocketKey?) {
 
       pocket.items.sets.push(newSet)
       if (pocket.items.sets.length == 1) {
-        pocket.items.starred = newSet
+        pocket.items.default = newSet
       }
     }
   }

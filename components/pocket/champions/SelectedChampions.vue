@@ -8,7 +8,7 @@ const ts = useTempStore()
 const pocket = ref(props.pocket)
 
 const champs = computedAsync(() => {
-  return pocket.value.champions.champions
+  return pocket.value.champions.children
 })
 </script>
 

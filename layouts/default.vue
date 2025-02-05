@@ -35,7 +35,7 @@ client.auth.onAuthStateChange(async (event, session) => {
 })
 
 const drawerOpen = computed (() => {
-  return !!(ts.sidebarTrigger || ts.PocketSheetTrigger || ts.championDrawerTrigger || ts.itemDrawerTrigger || ts.champSelectDrawerTrigger || ts.editPocketTrigger)
+  return !!(ts.sidebarTrigger || ts.pocketSheetTrigger || ts.championDrawerTrigger || ts.itemDrawerTrigger || ts.champSelectDrawerTrigger || ts.editPocketTrigger)
 })
 
 /*
@@ -69,6 +69,9 @@ const drawerOpen = computed (() => {
       v-if="ts.selectedItem"
       :key="ts.selectedItem"
     />
+    <LazyPocketSheet
+      v-if="ts.pocketSheetTrigger"
+    />
 
     <div
       class="bg-b1 transition-all duration-400 size-screen min-h-screen grid"
@@ -77,9 +80,6 @@ const drawerOpen = computed (() => {
       <div class="size-screen ">
         <slot />
       </div>
-      <!-- <LazyPocketSheet
-        v-if="ts.PocketSheetTrigger"
-      /> -->
     </div>
   </main>
 </template>

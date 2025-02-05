@@ -14,16 +14,16 @@ declare global {
     name: string
     roles: Role[]
     champions: {
-      champions: Champion[]
-      starred: Champion
+      children: Champion[]
+      default: Champion
     }
     items: {
       sets: ItemSet[]
-      starred: Itemset
+      default: Itemset
     }
     runes: {
       sets: RuneSet[]
-      starred: RuneSet
+      default: RuneSet
     }
     spells: Spell[]
     dateCreated: dateObject
