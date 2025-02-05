@@ -49,18 +49,12 @@ export default defineNuxtConfig({
     database: true,
   },
 
-  vue: {
-    compilerOptions: {
-      isCustomElement: tag => tag === 'iconify-icon',
-    },
-  },
-
   runtimeConfig: {
     supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
     supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
 
     public: {
-      // baseUrl: process.env.BASE_URL || 'http://localhost:8080',
+      baseUrl: process.env.BASE_URL || 'http://localhost:8080',
       redirectUrl: 'http://localhost:8080/summoner',
     },
   },
