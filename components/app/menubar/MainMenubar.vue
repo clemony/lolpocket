@@ -61,12 +61,10 @@ const modelSettings = ref()
     <button class="btn btn-md" @click="toast('Test toast', { description: 'Hey hi that\'s really cool!' })">
       test toast
     </button>
-    <div class="">
-      <MenubarSearch
-        class="h-9 rounded-lg px-4 backdrop-brightness-[97%]"
-        placeholder="Search"
-      />
-    </div>
+
+    <LazyCommand  />
+<MenubarSearch  />
+
 
     <NavigationMenu v-model:model-value="modelSettings" @update:model-value="(e) => modelSettings = e">
       <NavigationMenuList>

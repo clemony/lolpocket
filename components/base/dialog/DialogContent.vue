@@ -3,12 +3,19 @@ import type { DialogContentEmits, DialogContentProps } from 'radix-vue'
 import type { HTMLAttributes } from 'vue'
 import { DialogClose, DialogContent, DialogOverlay, DialogPortal, useForwardPropsEmits } from 'radix-vue'
 
-const props = defineProps<
+
+const props = withDefaults(
+defineProps<
   DialogContentProps & {
     class?: HTMLAttributes['class']
     noAnimateIn?: boolean
+    overlayOpacity?: number
   }
->()
+>(),
+  {
+overlayOpacity: 25
+  }
+)
 const emits = defineEmits<DialogContentEmits>()
 
 const delegatedProps = computed(() => {
@@ -23,8 +30,11 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <DialogPortal>
     <DialogOverlay
-      class="data-[state=closed]:animate-out data-[state=closed]:fade-out-0 fixed inset-0 z-80 bg-black/25"
-      :class="{ 'data-[state=open]:animate-in data-[state=open]:fade-in-0 ': props.noAnimateIn == true }"
+      class="data-[state=closed]:animate-out data-[state=closed]:fade-out-0 fixed inset-0 z-80  data-[state=open]:animate-in data-[state=open]:fade-in-0 dialog-overlay"
+      :style="{
+        backgroundColor: '#000000',
+        opacity: `${props.overlayOpacity}%`
+      }"
     />
     <DialogContent
       v-bind="forwarded"
@@ -35,14 +45,18 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         )
       "
     >
+    <Hide>
+      <DialogTitle>Dialog Title</DialogTitle>
+      <DialogDescription>Dialog Description</DialogDescription>
+    </Hide>
       <slot />
 
       <DialogClose
-        class="ring-offset-b1 focus:ring-neutral/80 data-[state=open]:bg-b2/60 data-[state=open]:text-bc/60 absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-1 focus:outline-hidden disabled:pointer-events-none"
+        class=" focus:ring-neutral/80  cursor-pointer data-[state=open]:text-bc/60  shadow-xs absolute top-4.25  right-5 rounded-sm  transition-opacity hover:opacity-100 focus:ring-1 focus:outline-hidden grid place-items-center disabled:pointer-events-none hover:stroke-[1.5]"
       >
         <icon
-          name="teenyicons:x-small-outline"
-          class="h-4 w-4"
+          name="x"
+          class="size-3.5"
         />
         <span class="sr-only">Close</span>
       </DialogClose>

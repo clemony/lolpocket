@@ -15,7 +15,7 @@ useSetSummonerData(as.userId)
 </script>
 
 <template>
-  <div class="wrapper flex size-full flex-col items-center justify-center gap-15">
+  <div class="wrapper flex size-full items-center justify-center gap-15">
     <LayoutSpacer />
     <div class="">
       your pocket picks

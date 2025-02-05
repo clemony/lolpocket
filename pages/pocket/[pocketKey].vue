@@ -15,7 +15,7 @@ const pocketComponents = [
   },
   {
     ref: Items,
-    icon: 'mdi:sword',
+    icon: 'bow',
     tip: 'Choose Items',
   },
   {
@@ -74,7 +74,7 @@ const classObject = computed (() => {
 
                 <i-no-champ v-if="comp.ref == Champions" class="fill-nc dst !size-7  z-20  text-nc" />
                 <i-rune-icon v-else-if="comp.ref == Runes" class="fill-nc size-6 dst  z-20 " />
-                <icon v-else :name="comp.icon" class="size-5.5 z-20 text-nc dst" />
+                <icon v-else :name="comp.icon" class="size-5.5 z-20 text-nc dst" :class="{ '!size-5': comp.ref == Items }" />
               </div>
             </label>
             <hr v-if="i != 3" />

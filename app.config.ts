@@ -42,6 +42,7 @@ export default defineAppConfig({
       'mail': 'fluent:mail-48-regular',
       'info': 'teenyicons:info-outline',
       'chain': 'ph:link-simple',
+      'bow': 'mdi:bow-arrow',
     },
   },
 })

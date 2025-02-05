@@ -60,6 +60,7 @@ export const useTempStore = defineStore(
     // dialog
 
     const loginOpen = ref(false)
+    const commandOpen = ref(false)
 
     // champs
     const champSearch = ref('')
@@ -131,6 +132,7 @@ export const useTempStore = defineStore(
 
       // dialog
       loginOpen,
+      commandOpen,
 
       // drawer selections
       selectedItem,

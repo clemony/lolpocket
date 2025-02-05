@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import {PopoverClose} from 'radix-vue'
 const props = defineProps<{
   selectedIcon?: string
   pocket?: pocket
@@ -40,7 +41,8 @@ function selectRandomChamp() {
               v-for="champion in ds.championNames" :key="champion"
               :value="champion"
               @select="ts.drawerChampSelectDropdown = champion"
-            >
+            as-child>
+            <PopoverClose class="w-full">
               <icon
                 name="tick-sm"
                 :class="cn(
@@ -49,6 +51,7 @@ function selectRandomChamp() {
                 )"
               />
               {{ champion }}
+              </PopoverClose>
             </CommandItem>
           </CommandGroup>
         </CommandList>

@@ -2,26 +2,7 @@
 import { navigationMenuTriggerStyle } from 'components/base/navigation-menu/nin'
 import { UseClipboard } from '@vueuse/components'
 
-const settingBarLinks = [
-  {
-    name: 'General',
-    link: '/settings',
-    icon: 'ph:gear-six',
-    text: 'Accessibility and defaults.',
-  },
-  {
-    name: 'Account',
-    link: '/settings#account',
-    icon: 'ri:user-settings-line',
-    text: 'Connect and manage.',
-  },
-  {
-    name: 'Theme',
-    link: '/settings#theme',
-    icon: 'teenyicons:paintbucket-outline',
-    text: 'App colors.',
-  },
-]
+
 </script>
 
 <template>
