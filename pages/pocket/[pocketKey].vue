@@ -43,7 +43,6 @@ watchEffect(() => {
   index.value = i
   prevPage.value = pocketPage.value
   console.log('💠 - watchEffect - prevPage.value:', prevPage.value)
-  console.log('💠 - watchEffect - i:', i)
 })
 
 onMounted (async () => {
