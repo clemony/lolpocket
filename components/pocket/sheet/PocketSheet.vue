@@ -33,6 +33,7 @@ function submitForm() {
   addPocket(name.value, tags.value, selectedIcon.value, key)
   clearForm()
   console.log('pocket added!', ps.pockets)
+  ts.pocketSheetTrigger = false
 }
 
 defineExpose({
@@ -43,7 +44,7 @@ defineExpose({
 
 <template>
   <Sheet :open="ts.pocketSheetTrigger" class="max-w-140">
-    <SheetContent side="right" class="min-w-140 w-140 px-12 py-9">
+    <SheetContent side="right" class="min-w-140 w-140 px-12 py-9" @interact-outside="ts.pocketSheetTrigger = false">
       <PocketSheetContent title="New Pocket" description="Choose a pocket name, tag your pocket (for easier searching), and create your pocket icon. <b>All items can be left blank</b> and edited later." class="max-w-140" @update:clicked="ts.pocketSheetTrigger = false">
         <template #name>
           <input

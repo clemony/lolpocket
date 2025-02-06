@@ -2,7 +2,7 @@
 import type { ColDef, GridApi, GridOptions, GridReadyEvent } from 'ag-grid-community'
 import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import { CustomTooltip } from 'components/table/customTooltip'
+import { CustomTooltip } from 'components/table/components/customTooltip'
 import 'tippy.js/animations/scale.css'
 
 const ts = useTempStore()

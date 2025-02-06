@@ -1,11 +1,12 @@
-import PocketToast from 'components/app/pops/toast/PocketToast.vue'
 import { hexoid } from 'hexoid'
 import { toast } from 'vue-sonner'
 
-const toID = hexoid()
-
-export default function addPocket(name: string, tags: Array<string>, icon: string, key?: string) {
+export async function addPocket(name: string, tags: Array<string>, icon: string, key?: string) {
+    const toID = hexoid()
   const pocketKey = key || toID()
+
+  const itemSet = newItemSet()
+  const runeSet = newRuneSet()
 
   const newPocket: pocket = {
     key: pocketKey,
@@ -17,12 +18,12 @@ export default function addPocket(name: string, tags: Array<string>, icon: strin
       default: null,
     },
     items: {
-      sets: [],
-      default: null,
+      sets: [itemSet],
+      default: itemSet.key,
     },
     runes: {
-      sets: [],
-      default: null,
+      sets: [runeSet],
+      default: runeSet.key,
     },
     spells: [],
     tags: tags || [''],
@@ -31,22 +32,16 @@ export default function addPocket(name: string, tags: Array<string>, icon: strin
     dateUpdated: createDateObject(),
   }
 
+  newPocket.items.sets[0].items.splice(0, 1)
   const ps = usePocketStore()
   ps.pockets.push(newPocket)
-  const p = getPocket(pocketKey)
-  const a = newItemSet(p)
-  p.items.default.push(a)
-  const b = newRuneSet(p)
-  p.runes.default = b
 
-  toast(markRaw(PocketToast), {
-    unstyled: true,
-    duration: Infinity,
-    classes: {
-      toast: 'bg-b1/95 border !border-b2 shadow-pretty mt-14   w-98 max-w-98 justify-start rounded-lg p-5  !h-40 backdrop-blur-md relative ',
-    },
-    componentProps: {
-      pocket: newPocket,
+  toast.success(`Pocket ${newPocket.name} created.`, {
+    description: 'Head to your new pocket and start editing?',
+    duration: 6000,
+    action: {
+      label: 'Edit Pocket',
+      onClick: () => navigateTo({ path: `/pocket/${newPocket.key}` }),
     },
   })
 }

@@ -1,4 +1,4 @@
-import { useAccountStore } from '../stores/accountStore'
+import { useAccountStore } from '../../stores/accountStore'
 
 const as = useAccountStore()
 export default function handleItemLike(thisItem) {

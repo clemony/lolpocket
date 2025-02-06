@@ -1,6 +1,10 @@
 <script setup lang="ts">
+definePageMeta({
+  alias: '/settings',
+  path: '/settings',
+
+})
 const as = useAccountStore()
-const motion = ref()
 // const sidebar = ref(as.defaultSidebarOpen)
 function toggleSetting(model) {
   useToggle(model)
@@ -27,8 +31,8 @@ const settingsData = {
       text: as.colorBlindMode == false ? 'Colorblind Off' : 'Colorblind On',
     },
     {
-      title: 'Sidebar Default State',
-      description: 'Upon login, should your sidebar be expanded or collapsed?.',
+      title: 'Automatic Archiving',
+      description: 'Upon new patch, current pockets will be archived until updated. A notificaton will remind you to update.',
       // model: sidebar.value,
       // text: as.defaultSidebarOpen == false ? 'Collapsed' : 'Expanded',
     },
@@ -40,6 +44,7 @@ const settingsData = {
   <NuxtLayout name="setting-section-layout">
     <SettingCard
       v-for="item in settingsData.general"
+      :key="item.title"
       :title="item.title"
       :description="item.description"
       class="h-28"

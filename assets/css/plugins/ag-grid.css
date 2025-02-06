@@ -19,7 +19,7 @@
 }
 
 .cell-class {
-  @apply !px-1 items-center justify-center flex;
+  @apply !px-1 items-center justify-center flex h-full;
 }
 :is([col-id='buy']).cell-class {
   @apply justify-end;
@@ -30,9 +30,25 @@
 }
 
 .ag-header-cell-label {
-  @apply flex;
+  @apply flex items-start w-full m-0 pt-2.5 text-left justify-start;
 }
 
 .ag-cell.ag-column-last {
   @apply !pr-6;
+}
+
+.icon-class {
+  @apply !py-1 !pr-1 !pl-3;
+}
+
+.ag-header-row.ag-header-row-column-group {
+  @apply border-b border-b-b3/70;
+}
+
+.ag-header-row .ag-header-row-column {
+  @apply !hidden opacity-0 !h-1;
+}
+
+.ti-rune {
+  @apply pl-6;
 }

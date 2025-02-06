@@ -13,7 +13,7 @@ const champs = computedAsync(() => {
 </script>
 
 <template>
-  <NuxtLink to="/pocket" class="btn btn-ghost h-26 !py-2 flex items-center  !px-2 rounded-lg w-full hover:bg-b2/40 hover-border-b2 group">
+  <NuxtLink class="btn btn-ghost h-26 !py-2 flex items-center  !px-2 rounded-lg w-full hover:bg-b2/40 hover-border-b2 group">
     <transition-slide
       group :appear="false"
       class=" gap-3 grid grid-cols-4 h-auto items-center w-full justify-between "

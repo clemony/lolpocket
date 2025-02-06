@@ -1,10 +1,16 @@
 <script lang="ts" setup>
-import type { ColDef, GridApi, GridOptions, GridReadyEvent } from 'ag-grid-community'
+import type { ColDef, ColGroupDef, GridApi, GridOptions, GridReadyEvent } from 'ag-grid-community'
 import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import { CustomTooltip } from 'components/table/customTooltip'
-import 'tippy.js/animations/scale.css'
+import TableIcon from 'components/table/components/TableIcon.vue'
+import TableLink from 'components/table/components/TableLink.vue'
+import TableKey from 'components/table/components/TableKey.vue'
 
+defineExpose({
+  TableIcon,
+  TableLink,
+  TableKey,
+})
 definePageMeta({
   alias: '/pockets',
 })
@@ -12,14 +18,14 @@ const ps = usePocketStore()
 const theme = ref(pocketTheme)
 const pocketList = [...ps.pockets]
 
-const cellClass = []
 const gridOptions: GridOptions<Item> = {
   rowData: pocketList,
-  columnHoverHighlight: true,
+  columnHoverHighlight: false,
   autoSizeStrategy: {
     type: 'fitGridWidth',
     defaultMinWidth: 50,
   },
+  rowHeight: 70,
   rowSelection: {
     mode: 'multiRow',
     checkboxes: false,
@@ -27,143 +33,91 @@ const gridOptions: GridOptions<Item> = {
     enableClickSelection: true,
   },
 
-  /*  getRowId: (params: number) => {
-    return params.data.id
-  }, */
   defaultColDef: {
-    width: 50,
-    minWidth: 50,
-    cellClass: 'cell-class',
+    width: 51,
+    minWidth: 51,
+    suppressHeaderMenuButton: true,
+    cellClass: 'cell-class py-2',
     initialHide: false,
-    /*     headerComponentParams: {
-      innerHeaderComponent: CustomInnerHeader,
-    }, */
+    suppressHeaderFilterButton: true,
     resizable: false,
-    tooltipComponent: CustomTooltip,
+  },
+  defaultColGroupDef: {
+    marryChildren: true,
   },
 }
 
-const colDefs: ColDef<pocket>[] = [
-  { field: 'icon', headerName: '', cellRenderer: params => `<img src="/img/item/${params.value}.webp" class="size-full aspect-square rounded-full shadow-sm" />`, cellClass: '!py-1 !pr-1 !pl-3', sortable: false, width: 51, maxWidth: 51, minWidth: 51 },
+const colDefs = ref<(ColDef | ColGroupDef)[]>([
+  { field: 'icon', headerName: '', cellRenderer: TableIcon, cellClass: 'ti-pocket-icon', sortable: false },
 
-  { field: 'name', cellDataType: 'text', width: 140, sortable: false, cellClass: 'font-medium  ', headerComponentParams: {
+  { field: 'name', cellRenderer: TableLink, width: 140, sortable: false, cellClass: 'font-medium  ', headerComponentParams: {
     innerHeaderComponentParams: {
       displayName: 'Pocket',
     },
-  } },
-  /* {
+  }
+},
+  { field: 'role', cellRenderer: params => {}, width: 140, sortable: false, cellClass: 'font-medium  ', headerComponentParams: {
+    innerHeaderComponentParams: {
+      displayName: 'Pocket',
+    },
+  }
+},
+  {
     headerName: 'Champions',
     children: [
-      { field: 'champions.children[0]', headerName: 'ad', cellDataType: 'number', headerTooltip: 'Attack Damage', headerComponentParams: {
-        innerHeaderComponentParams: {
-          icon: 'ad',
-        },
-      } },
-      { field: 'champions.children' },
-      { field: 'champions.children' },
+      { field: '',  valueGetter: p => p.data.champions.children[0], cellRenderer: TableIcon, cellClass: 'ti-champ' },
+      { field: '',  valueGetter: p => p.data.champions.children[1], cellRenderer: TableIcon, cellClass: 'ti-champ' },
+      { field: '',  valueGetter: p => p.data.champions.children[2], cellRenderer: TableIcon, cellClass: 'ti-champ' },
+      { field: '',  sortable: false, width:20, suppressMovable: true},
     ],
   },
-  { field: 'stats.ah', headerName: 'ah', cellDataType: 'number', headerTooltip: 'Ability Haste', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'ah',
-    },
-  } },
-  { field: 'stats.ap', headerName: 'ap', cellDataType: 'number', headerTooltip: 'Ability Power', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'ap',
-    },
-  } },
-  { field: 'stats.armor', headerName: 'armor', cellDataType: 'number', headerTooltip: 'Armor', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'armor',
-    },
-  } },
-  { field: 'stats.armpen', headerName: 'apen', cellDataType: 'number', headerTooltip: 'Armor Pen', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'armpen',
-    },
-  } },
-  { field: 'stats.as', headerName: 'as', cellDataType: 'number', headerTooltip: 'Attack Speed', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'as',
-    },
-  } },
-  { field: 'stats.crit', headerName: 'crit', cellDataType: 'number', headerTooltip: 'Critical Strike', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'crit',
-    },
-  } },
-  { field: 'stats.gp10', headerName: 'gp/10', cellDataType: 'number', headerTooltip: 'Gold / 10s', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'gp10',
-    },
-  } },
-  { field: 'stats.hp', headerName: 'hp', cellDataType: 'number', headerTooltip: 'Health', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'hp',
-    },
-  } },
-  { field: 'stats.hp5', headerName: 'hp/5', cellDataType: 'number', headerTooltip: 'Health Regen / 5s', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'hp5',
-    },
-  } },
-  { field: 'stats.hsp', headerName: 'hsp', cellDataType: 'number', headerTooltip: 'Heal & Shield Power', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'hsp',
-    },
-  } },
-  { field: 'stats.lethality', headerName: 'lty', cellDataType: 'number', headerTooltip: 'Lethality', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'lethality',
-    },
-  } },
-  { field: 'stats.lifesteal', headerName: 'ls', cellDataType: 'number', headerTooltip: 'Lifesteal', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'lifesteal',
-    },
-  } },
-  { field: 'stats.mana', headerName: 'mana', cellDataType: 'number', headerTooltip: 'Mana', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'mana',
-    },
-  } },
-  { field: 'stats.mp5', headerName: 'mp/5', cellDataType: 'number', headerTooltip: 'Mana Regen / 5s', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'mp5',
-    },
-  } },
-  { field: 'stats.mpen', headerName: 'mpen %', cellDataType: 'number', headerTooltip: 'Magic Pen', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'mpen',
-    },
-  } },
-  { field: 'stats.mpenflat', headerName: 'mpen', cellDataType: 'number', headerTooltip: 'Flat Magic Pen', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'mpenflat',
-    },
-  } },
-  { field: 'stats.mr', headerName: 'mr', cellDataType: 'number', headerTooltip: 'Magic Resist', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'mr',
-    },
-  } },
-  { field: 'stats.ms', headerName: 'ms %', cellDataType: 'number', headerTooltip: 'Movespeed', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'ms',
-    },
-  } },
-  { field: 'stats.msflat', headerName: 'ms', cellDataType: 'number', headerTooltip: 'Flat Movespeed', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'msflat',
-    },
-  } },
-  { field: 'buy', headerName: 'cost', cellDataType: 'number', headerTooltip: 'Buy Price', headerComponentParams: {
-    innerHeaderComponentParams: {
-      icon: 'gold',
-    },
-  } }, */
-]
+  {
+    headerName: 'Items',
+    children: [
+      { field: '1', headerName: '', cellRendererParams: { index: 0 }, cellRenderer: TableIcon, cellClass: 'ti-item' },
+      { field: '2', headerName: '', cellRendererParams: { index: 1 }, cellRenderer: TableIcon, cellClass: 'ti-item' },
+      { field: '3', headerName: '', cellRendererParams: { index: 2 }, cellRenderer: TableIcon, cellClass: 'ti-item' },
+      { field: '4', headerName: '', cellRendererParams: { index: 3 }, cellRenderer: TableIcon, cellClass: 'ti-item' },
+      { field: '5', headerName: '', cellRendererParams: { index: 4 }, cellRenderer: TableIcon, cellClass: 'ti-item' },
+      { field: '6', headerName: '', cellRendererParams: { index: 5 }, cellRenderer: TableIcon, cellClass: 'ti-item' },
+         { field: '',  sortable: false, width:20, suppressMovable: true},
+    ],
+  },
+  {
+    headerName: 'Runes',
+    children: [
+      { field: 'Keystone', width: 60, cellRenderer: TableIcon, cellClass: 'ti-irune'},
+      { field: 'Secondary', width: 60, cellRenderer: TableIcon, cellClass: 'ti-rune' },
+         { field: '',  sortable: false, width:20, suppressMovable: true},
+    ],
+  },
+  {
+    headerName: 'Spells',
+    children: [
+      { field: 'D', headerComponentParams: {
+        innerHeaderComponent: TableKey,
+        innerHeaderComponentParams: {
+          kbdKey: 'D',
+        },
+      }, cellRenderer: TableIcon, cellRendererParams: {index: 1}, cellClass: 'ti-spell' },
+      { field: 'F', headerComponentParams: {
+        innerHeaderComponent: TableKey,
+        innerHeaderComponentParams: {
+          kbdKey: 'F',
+        },
+      }, cellRenderer: TableIcon, cellRendererParams: {index: 1}, cellClass: 'ti-spell' },
+         { field: '',  sortable: false, width:20, suppressMovable: true},
+    ],
+  },
+
+  {
+    field: 'tags',
+    headerName: 'Tags',
+    width: 140,
+    valueGetter: p => p.data.tags,
+  },
+
+])
 
 const gridApi = shallowRef<GridApi | null>(null)
 async function onGridReady(params: GridReadyEvent) {
@@ -172,27 +126,23 @@ async function onGridReady(params: GridReadyEvent) {
   ps.pocketApi = gridApi.value
 }
 ModuleRegistry.registerModules([AllCommunityModule])
-defineExpose({
-})
+
+
 </script>
 
 <template>
-  <div class="size-full">
-    <MenubarSpacer />
-    <div class="flex size-full">
-      <GridBar />
+<NuxtLayout name="grid-layout" title="Pockets">
       <AgGridVue
         :grid-options="gridOptions"
         :theme="theme"
         :column-defs="colDefs"
-        class="size-full border-t border-b2 border-l"
+        class="size-full"
         :tooltip-show-delay="400"
 
         @grid-ready="onGridReady"
       >
       </AgGridVue>
-    </div>
-  </div>
+</NuxtLayout>
 </template>
 
 <style>

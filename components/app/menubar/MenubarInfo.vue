@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import { navigationMenuTriggerStyle } from 'components/base/navigation-menu/nin'
 import { UseClipboard } from '@vueuse/components'
-
-
 </script>
 
 <template>
@@ -74,6 +72,7 @@ import { UseClipboard } from '@vueuse/components'
 
               <NuxtLink
                 v-for="link in settingBarLinks" :key="link.name"
+                :to="link.link"
                 class=" px-2.5 flex flex-col justify-center cursor-pointer items-start"
                 :class="navigationMenuTriggerStyle()"
               >

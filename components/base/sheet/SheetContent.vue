@@ -46,9 +46,8 @@ function handleClick() {
 
 <template>
   <DialogPortal>
-    <DialogClose class="pointer-events-auto" as-child @click="handleClick">
-      <DialogOverlay class="isolate data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-70 bg-black/70" />
-    </DialogClose>
+    <DialogOverlay class="isolate data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-70 bg-black/70" />
+
     <DialogContent
       ref="target"
       :class="cn(sheetVariants({ side }), props.class)"

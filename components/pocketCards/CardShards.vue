@@ -5,7 +5,7 @@ const props = defineProps<{
 
 const pocket = ref(props.pocket)
 
-const set = ref(pocket.value.runes.default.shards)
+//const set = ref(pocket.value.runes.default.shards)
 </script>
 
 <template>

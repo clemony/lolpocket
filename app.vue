@@ -11,9 +11,6 @@ const useHead = useHeader()
 
 onMounted(async () => {
   document.documentElement.setAttribute('data-theme', 'light')
-
-  // os
-  ts.userOS = getOS()
 })
 
 const scroll = ref(null)

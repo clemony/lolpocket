@@ -16,7 +16,7 @@ const isPocket = computed (() => {
 const as = useAccountStore()
 
 const summoner = ref(as.userAccount)
-
+const messages = ref()
 const modelSettings = ref()
 </script>
 
@@ -68,17 +68,18 @@ const modelSettings = ref()
 
     <NavigationMenu v-model:model-value="modelSettings" @update:model-value="(e) => modelSettings = e">
       <NavigationMenuList>
-        <!--   <NavigationMenuItem>
+       <NavigationMenuItem>
         <NavigationMenuTrigger
-        class="group pt-1.5"
-        as-child
-      >
-        <LittleTip content="News">
+        class="group pt-1.5 relative aspect-square btn-ghost px-2 rounded-md">
           <icon
-            name="material-symbols-light:breaking-news-outline-rounded"
-            class="size-7.25 shrink-0 stroke-2 opacity-60 drop-shadow-sm group-hover:opacity-100 group-data-[state=open]:opacity-100"
+            name="system-uicons:message"
+            class="size-8.5 shrink-0 stroke-[0.7] opacity-50 drop-shadow-sm group-hover:opacity-100 group-data-[state=open]:opacity-100"
           />
-        </LittleTip>
+   
+      <div v-if="messages" class="inline-grid *:[grid-area:1/1] absolute top-0.5 right-1.75">
+  <div class="status !bg-resolve animate-ping"></div>
+  <div class="status !bg-resolve"></div>
+</div>
         </NavigationMenuTrigger>
       <NavigationMenuContent
         :side-offset="8"
@@ -87,7 +88,7 @@ const modelSettings = ref()
         <News />
       </NavigationMenuContent>
    </NavigationMenuItem>
- -->
+
         <!--    <NavigationMenuItem>
         <NavigationMenuTrigger class="group flex min-w-fit grow items-center justify-end">
           <icon

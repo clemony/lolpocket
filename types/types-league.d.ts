@@ -19,11 +19,11 @@ declare global {
     }
     items: {
       sets: ItemSet[]
-      default: Itemset
+      default: string
     }
     runes: {
       sets: RuneSet[]
-      default: RuneSet
+      default: string
     }
     spells: Spell[]
     dateCreated: dateObject
@@ -48,6 +48,7 @@ declare global {
 
   interface ItemSet {
     name: string
+    key: string
     items: Item[]
   }
 
@@ -91,6 +92,7 @@ declare global {
   }
   interface RuneSet extends RuneTree {
     name: string
+    key: string
   }
 
   interface Shard {

@@ -90,7 +90,7 @@ const layer3 = computed(() => ({
                 class="hidden"
               />
 
-              <Card
+             <!--  <Card
                 class="swap-off border-dark-3 z-10 flex size-fit h-[290px] w-[230px] items-center justify-center rounded-xl border-1 !p-0"
                 :class="`bg-linear-to-br from-transparent via-${set.primary}-light to-${set.primary}`"
               >
@@ -126,7 +126,7 @@ const layer3 = computed(() => ({
                     />
                   </div>
                 </CardContent>
-              </Card>
+              </Card> -->
               <div
                 :style="{ backgroundImage: `url(${as.cardBack})` }"
                 class="swap-on flex h-[290px] w-[230px] items-center justify-center bg-transparent! [background-size:230px_290px] bg-center"

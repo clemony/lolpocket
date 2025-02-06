@@ -16,7 +16,7 @@ watch(items, (newItemSets) => {
   }
 })
 
-function updatecChildIndex(evt) {
+/* function updatecChildIndex(evt) {
   const { oldIndex, newIndex } = evt
 
   if (!pocket.value) {
@@ -32,7 +32,7 @@ function updatecChildIndex(evt) {
   else if (pocket.value.items.default < oldIndex && pocket.value.items.default >= newIndex) {
     pocket.value.items.default++
   }
-}
+} */
 </script>
 
 <template>
