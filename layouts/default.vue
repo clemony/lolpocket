@@ -11,7 +11,6 @@ client.auth.onAuthStateChange(async (event, session) => {
   console.log('💠 - client.auth.onAuthStateChange - session:', session)
   console.log('💠 - client.auth.onAuthStateChange - event:', event)
   if (event === 'INITIAL_SESSION') {
-    console.log('using this one')
     useSetAccount(session)
   }
   else if (event === 'SIGNED_OUT') {
@@ -26,23 +25,12 @@ client.auth.onAuthStateChange(async (event, session) => {
     toast.success('Successfully logged out')
   }
   else {
-    console.log('using that one')
     const { data, error } = await client.auth.setSession({ access_token: as.userAccount.accessToken, refresh_token: as.userAccount.refreshToken })
     as.userAccount.accessToken = data.session.access_token
     as.userAccount.refreshToken = data.session.refresh_token
     as.userAccount.session = data.session
   }
 })
-
-const drawerOpen = computed (() => {
-  return !!(ts.sidebarTrigger || ts.pocketSheetTrigger || ts.championDrawerTrigger || ts.itemDrawerTrigger || ts.champSelectDrawerTrigger || ts.editPocketTrigger)
-})
-
-/*
-    :class="{ 'bg-black transition-all duration-500': drawerOpen }"
-
-      :class="{ 'scale-98 h-full rounded-xl overflow-hidden': drawerOpen }"
-    */
 </script>
 
 <template>
@@ -50,7 +38,7 @@ const drawerOpen = computed (() => {
     id="app"
     class="relative size-screen min-size-screen"
   >
-    <Toaster
+    <Sonner
       position="top-right"
 
       :toast-options="{
@@ -58,7 +46,7 @@ const drawerOpen = computed (() => {
         descriptionClass: 'my-toast-description',
       }"
       :expand="true"
-      :duration="4000"
+      :duration="6000"
     />
 
     <LazyChampionDrawer
@@ -73,11 +61,13 @@ const drawerOpen = computed (() => {
       v-if="ts.pocketSheetTrigger"
     />
 
+    <LazyNewFolderDialog />
+
     <div
       class="bg-b1 transition-all duration-400 size-screen min-h-screen grid"
     >
       <MainMenubar />
-      <div class="size-screen ">
+      <div class="size-screen max-size-screen overflow-hidden">
         <slot />
       </div>
     </div>

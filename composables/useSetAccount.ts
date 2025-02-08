@@ -2,7 +2,6 @@ import { jwtDecode } from 'jwt-decode'
 import { toast } from 'vue-sonner'
 
 export async function useSetAccount(session) {
-  console.log('💠 - useSetAccount - session:', session)
   if (!session) {
     return
   }
@@ -32,7 +31,4 @@ export async function useSetAccount(session) {
   as.userAccount.refreshToken = session.refresh_token
 
   const riot = useSetSummonerData(session.user.id)
-  console.log('💠 - useSetAccount - riot:', riot)
-  console.log('👑 - Hi', as.userAccount.role)
-  console.log('💠 - useSetAccount - as.userAccount:', as.userAccount)
 }

@@ -8,6 +8,7 @@ export default function deletePocket(pocketKey: string) {
       ps.pinnedFolder.splice(index, 1)
     }
     ps.trashFolder.push(pocket)
+    pocket.folderKey = 'trash'
     ps.pockets.splice(index, 1)
   }
 }

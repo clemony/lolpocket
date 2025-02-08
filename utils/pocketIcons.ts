@@ -1,4 +1,5 @@
 export const icons = [
+  'formkit:folder',
   'teenyicons:folder-outline',
   'teenyicons:square-outline',
   'teenyicons:triangle-outline',

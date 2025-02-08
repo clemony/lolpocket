@@ -9,7 +9,7 @@ const props = defineProps<{
 }>()
 
 const pocket = ref(props.pocket)
-//console.log("💠 - pocket:", pocket)
+// console.log("💠 - pocket:", pocket)
 
 /* function handleDragEnd(event: DraggableEvent) {
   const draggedItem = event.item
@@ -31,29 +31,27 @@ const pocket = ref(props.pocket)
 } */
 
 function onStart(event: DraggableEvent) {
-  //console.log('start drag')
+  // console.log('start drag')
 }
 
 function onEnd(event: DraggableEvent) {
-  //console.log('end drag')
+  // console.log('end drag')
 }
 function onAdd(event: DraggableEvent) {
- /*  console.log("💠 - onAdd - event:", event.item)
+  /*  console.log("💠 - onAdd - event:", event.item)
   console.log('end drag') */
 }
-
-
 </script>
 
 <template>
- <transition-slide
+  <transition-slide
     :key="set.name" v-draggable="[
       set.items,
       {
         'group': {
           name: 'items',
           pull: 'clone',
-         put: 'items',
+          put: 'items',
           revertClone: false,
         },
         'bubbleScroll': false,
@@ -86,7 +84,7 @@ function onAdd(event: DraggableEvent) {
 
   <!-- <VueDraggable  :key="set.name"
       v-model="set.items"
- 
+
         :group="{
           name: 'items',
           pull: true,
@@ -106,7 +104,7 @@ function onAdd(event: DraggableEvent) {
     :class="{ 'gap-5!': props.limit }"
     @end="onEnd"
     @start="onStart">
-    
+
     <Item
       v-for="item in set.items"
       :key="item.id"

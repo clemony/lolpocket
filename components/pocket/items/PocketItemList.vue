@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-import { vDraggable, } from 'vue-draggable-plus'
-  import type {DraggableEvent } from 'vue-draggable-plus'
+import { vDraggable } from 'vue-draggable-plus'
+import type { DraggableEvent } from 'vue-draggable-plus'
 
 const props = defineProps<{
   pocket?: pocket
@@ -18,15 +18,14 @@ function onStart(event: DraggableEvent) {
 }
 
 function onEnd(event: DraggableEvent) {
-
-  //console.log("💠 - handleDragEnd - event:", event)
-  //console.log('hi')
+  // console.log("💠 - handleDragEnd - event:", event)
+  // console.log('hi')
   const draggedItem = event.item
-  //console.log(draggedItem)
+  // console.log(draggedItem)
   const targetSet = event.to
-  //console.log("💠 - handleDragEnd - targetSet:", targetSet)
+  // console.log("💠 - handleDragEnd - targetSet:", targetSet)
 
- /*  if (targetSet && targetSet.items) {
+  /*  if (targetSet && targetSet.items) {
     const isDuplicate = targetSet.items.some(item => item.name === draggedItem.name)
 
     if (isDuplicate) {
@@ -39,9 +38,8 @@ function onEnd(event: DraggableEvent) {
   } */
 }
 
-
 function onClone(event: DraggableEvent) {
-  console.log("💠 - onClone - event:", event)
+  console.log('💠 - onClone - event:', event)
   console.log('clone')
 }
 </script>
@@ -67,11 +65,11 @@ function onClone(event: DraggableEvent) {
       },
     ]"
     group
-        @end="onEnd"
+    class="pl-10 pr-1 overflow-y-auto h-screen grid grid-flow-row auto-cols-auto    grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center gap-3  pt-[6.5vh] py-6 "
 
+    @end="onEnd"
     @clone="onClone"
     @start="onStart"
-    class="pl-10 pr-1 overflow-y-auto max-h-full grid grid-flow-row auto-cols-auto  h-fit  grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center gap-3  pt-[6.5vh] py-6 "
   >
     <div v-for="item in list" :key="item.id">
       <Item :item="item" />

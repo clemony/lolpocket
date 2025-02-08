@@ -28,8 +28,9 @@ function handleDrawer() {
     <div class="breadcrumbs text-2 font-medium tracking-tight">
       <ul class="flex items-center ">
         <li>
-          <a>
-            <span class="inline-flex items-center gap-2.5"> <icon name="formkit:folder" />Pocket Folders </span></a>
+          <NuxtLink to="/pockets">
+            <span class="inline-flex items-center gap-2.5"> <icon name="formkit:folder" />Pocket Folders </span>
+          </NuxtLink>
         </li>
         <li>
           <span class="inline-flex items-center !gap-2.5 capitalize">

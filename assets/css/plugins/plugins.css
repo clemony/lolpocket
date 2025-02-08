@@ -14,3 +14,4 @@
 @import 'aos/dist/aos.css';
 @import './ag-grid.css';
 @import './toast.css';
+@config '../../../tailwind.config.js';

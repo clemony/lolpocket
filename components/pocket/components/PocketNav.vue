@@ -18,16 +18,16 @@ function update(event, i) {
 
       <div class="w-full h-54  shadow-sm border border-b3 rounded-lg shadow-b3  relative size-fit bg-gradient-to-br from-neutral/70 to-neutral">
         <div
-          class="rounded-lg shrink-0 size-full overflow-hidden "
+          class="rounded-lg shrink-0 size-full overflow-hidden  justify-end items-start flex pr-2 pt-1"
           :style="{
             backgroundImage: `url(${pocket.icon})`,
             backgroundSize: pocket.icon == '/img/champion/centered/-1.webp' ? '0%' : '350%',
             backgroundPosition: 'center 20%' }"
-        />
-
-        <LazyRoleSelect
-          :pocket="pocket"
-        />
+        >
+          <LazyRoleSelect
+            :pocket="pocket"
+          />
+        </div>
       </div>
 
       <SelectedChampions

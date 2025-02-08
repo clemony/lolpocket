@@ -4,7 +4,10 @@ import type { HTMLAttributes } from 'vue'
 
 import { DropdownMenuItemIndicator, DropdownMenuRadioItem, useForwardPropsEmits } from 'radix-vue'
 
-const props = defineProps<DropdownMenuRadioItemProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<DropdownMenuRadioItemProps & {
+  class?: HTMLAttributes['class']
+  tickClass?: HTMLAttributes['class']
+}>()
 
 const emits = defineEmits<DropdownMenuRadioItemEmits>()
 
@@ -22,12 +25,13 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     v-bind="forwarded"
     :class="
       cn(
-        'text-2 focus:bg-b2/60 focus:text-bc relative flex cursor-default items-center rounded-sm py-1.5 pr-2 pl-9 outline-hidden transition-colors select-none data-disabled:pointer-events-none data-disabled:opacity-50',
+        'text-2 focus:bg-b2/60 focus:text-bc relative flex cursor-default items-center rounded-sm py-1.5 pr-2 pl-9 outline-hidden transition-colors select-none data-disabled:pointer-events-none data-disabled:opacity-50 hover:ring-b2 hover:ring-1 data-[state=checked]:bg-b2/30',
         props.class,
       )
     "
   >
-    <span class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+    <slot />
+    <span class="absolute left-2 flex size-4 items-center justify-center hidden">
       <DropdownMenuItemIndicator>
         <icon
           name="tick-sm"
@@ -35,6 +39,5 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         />
       </DropdownMenuItemIndicator>
     </span>
-    <slot />
   </DropdownMenuRadioItem>
 </template>

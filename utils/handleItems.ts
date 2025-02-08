@@ -20,7 +20,7 @@ export function createItem(): Item {
   }
 }
 export function newItemSet(pocketKey?) {
-    const toID = hexoid()
+  const toID = hexoid()
   const newSet = {
     name: `${generateRandomName()} Set`,
     key: toID(),

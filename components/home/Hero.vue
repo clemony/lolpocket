@@ -79,10 +79,10 @@ const heroDisplays = [
         </Button>
       </div>
 
-      <div class="absolute bottom-5 left-4 self-end">
+      <div class="absolute bottom-7 w-full self-end">
         <icon
-          name="teenyicons:down-outline"
-          class="animate-pulse stroke-[1.5]"
+          name="down-sm"
+          class="animate-bounce delay-1000 opacity-40 stroke-[1.5] mx-auto size-6"
         />
       </div>
     </div>

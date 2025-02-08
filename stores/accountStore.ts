@@ -39,7 +39,6 @@ export const useAccountStore = defineStore(
     const sidebarWidth = ref(18)
 
     const cardBack = ref('/img/cards/moonfall.webp')
-    const commandOpen = ref(false)
     const pocketPreview = ref(false)
     const routeHistory: any = []
 
@@ -70,7 +69,6 @@ export const useAccountStore = defineStore(
       mobileOpen,
       sidebarWidth,
 
-      commandOpen,
       routeHistory,
 
       cardBack,

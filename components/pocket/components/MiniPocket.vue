@@ -47,7 +47,7 @@ const isThis = computed (() => {
         </div>
       </div>
 
-   <!--    <div v-if="pocket.items.default || pocket.items.sets[0]" class="flex gap-2">
+      <!--    <div v-if="pocket.items.default || pocket.items.sets[0]" class="flex gap-2">
         <div v-for="item in pocket.items.default || pocket.items.sets[0]" :key="item.name">
           <img :src="item.img" />
         </div>

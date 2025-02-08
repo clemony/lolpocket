@@ -1,6 +1,10 @@
 import tailwindcss from '@tailwindcss/vite'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
+//  Configuration Vite
+
+import { defineConfig } from 'vite'
+import vueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineNuxtConfig({
   modules: [
@@ -28,7 +32,10 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [
+      tailwindcss(),
+      vueDevTools(),
+    ],
     vue: {
       customElement: true,
     },

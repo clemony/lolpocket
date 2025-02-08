@@ -1,43 +1,58 @@
 <script lang="ts" setup>
+import ColumnDisplay from 'components/table/panels/ColumnDisplay.vue'
+
 const props = defineProps<{
-modelValue: boolean
+  modelValue: boolean
 }>()
+
 const emit = defineEmits(['update:modelValue'])
 
+const ts = useTempStore()
+
 const isChecked = ref(false)
+
+const component = ref()
+
+watchEffect(() => {
+  console.log('💠 - component:', component)
+})
 </script>
 
 <template>
-<div class="size-full">
+  <div class=" flex pr-3 transition-all duration-400 overflow-hidden" >
+    <div class="  flex  items-center gap-4 *:pointer-events-auto **:[&_svg]:shrink-0">
+      <PocketBarButton class="mt-1">
+        <input type="checkbox" class="hidden" />
+        <input v-model="component" type="radio" class="hidden" value="search" />
+        <icon name="search" class="size-5" />
+      </PocketBarButton>
 
+      <PocketBarButton>
+        <input v-model="isChecked" type="checkbox" class="hidden" @change="emit('update:modelValue', isChecked)" />
+        <input v-model="component" type="radio" class="hidden" :value="ColumnDisplay" />
+        <icon name="gear" class="size-6" />
+      </PocketBarButton>
 
-   <div class=" w-16 h-screen bg-b1 flex flex-col py-4 items-center gap-3.5 *:pointer-events-auto **:[&_svg]:shrink-0">
-        <PocketBarButton >
-          <input type="checkbox" v-model="isChecked" class="hidden" @change="emit('update:modelValue', isChecked)"/>
-          <icon name="infinity" class="size-6.5 " />
-        </PocketBarButton>
+      <PocketBarButton>
+        <input v-model="isChecked" type="checkbox" class="hidden" @change="emit('update:modelValue', isChecked)" />
+        <icon name="trash" class="size-6" />
+      </PocketBarButton>
 
-        <PocketBarButton >
-          <input type="checkbox" v-model="isChecked" class="hidden" @change="emit('update:modelValue', isChecked)"/>
-          <icon name="search" class="size-5" />
-        </PocketBarButton>
+      <PocketBarButton>
+        <input v-model="isChecked" type="checkbox" class="hidden" @change="emit('update:modelValue', isChecked)" />
+        <input v-model="component" type="radio" class="hidden" value="" />
+        <icon name="folders" class="size-5.5 overflow-hidden " />
+      </PocketBarButton>
+      <NeutralButton
+class=""
+        @click="ts.pocketSheetTrigger = true"
+      >
+        <icon name="add-sm" class="shrink-0 size-6" />
+      </NeutralButton>
+    </div>
 
-        <PocketBarButton >
-          <input type="checkbox" v-model="isChecked" class="hidden" @change="emit('update:modelValue', isChecked)"/>
-          <icon name="filter" class="size-5" />
-        </PocketBarButton>
-
-        <PocketBarButton >
-          <input type="checkbox" v-model="isChecked" class="hidden" @change="emit('update:modelValue', isChecked)"/>
-          <icon name="heart" class="size-5.5" />
-        </PocketBarButton>
-
-        <PocketBarButton >
-          <input type="checkbox" v-model="isChecked" class="hidden" @change="emit('update:modelValue', isChecked)"/>
-          <icon name="folders" class="size-5.5 overflow-hidden " />
-        </PocketBarButton>
-      </div>
-</div>
+    <component :is="component" class="opacity-0 transition-all duration-400" :class="{ 'opacity-100': isChecked }" />
+  </div>
 </template>
 
 <style scoped>

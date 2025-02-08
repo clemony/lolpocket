@@ -15,36 +15,24 @@ const roles = [
 </script>
 
 <template>
-  <DropdownMenu key="role">
-    <DropdownMenuTrigger
-      v-if="pocket.roles.length" class="flex flex-col justify-center gap-3"
-    >
+  <DropdownMenu>
+    <DropdownMenuTrigger as-child>
       <Button
-        v-for="(role, i) in pocket.roles" :key="i"
         variant="ghost"
-        class="flex  absolute aspect-square rounded-full px-1 top-1.5 right-2 hover:bg-neutral/50 size-12"
+        class="flex   aspect-square rounded-lg px-1 top-1.5 right-2 hover:bg-neutral/50 size-10"
       >
         <component
-          :is="`i-${role.icon}`"
-          :key="role.name"
-          v-tippy="role.name"
+          :is="`i-${pocket.roles[0].icon}`"
+          v-if="pocket.roles[0].name"
+          :key="pocket.roles[0].name"
+          v-tippy="pocket.roles[0].name"
           class="size-6.5 drop-shadow-text focus:outline-0 shrink-0 !text-3 text-white/70"
         />
+        <i-all-lanes v-else class="size-6 shrink-0 dst text-white/80" />
       </Button>
     </DropdownMenuTrigger>
 
-    <DropdownMenuTrigger
-      v-else class=" justify-center"
-    >
-      <Button
-        variant="ghost"
-        class="flex  absolute aspect-square rounded-full px-1 top-1.5 right-2 hover:bg-neutral/50 size-12"
-      >
-        <i-all-lanes class="size-6 shrink-0 dst text-white/80" />
-      </Button>
-    </DropdownMenuTrigger>
-
-    <DropdownMenuContent key="role" class="w-48">
+    <DropdownMenuContent key="role" class="w-48" side="bottom">
       <DropdownMenuItem>
         <label
           for="all"
@@ -79,7 +67,7 @@ const roles = [
         >
           <input
             :id="role.name"
-            v-model="pocket.roles"
+            v-model="pocket.roles[0]"
             type="radio"
             class="hidden peer"
             :value="role"

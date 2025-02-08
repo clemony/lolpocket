@@ -5,17 +5,8 @@ import type { SplitterPanel } from 'radix-vue'
 export const useTempStore = defineStore(
   'tempStore',
   () => {
-    //
-
-    const userOS = ref(null)
-
-    /*     const clickType = computed(() => {
-      return userOS.value == 'Mac' || 'Windows' ? 'right click' : 'force press'
-    }) */
     const itemGridApi = shallowRef<GridApi | null>(null)
-    // sidebar
-    const sidebarTrigger = ref(false)
-    const sidebarOpen = ref(false)
+
     const drawerTrigger = ref(false)
     const drawerComponent = ref<string | boolean>(false)
 
@@ -53,14 +44,12 @@ export const useTempStore = defineStore(
         }
       },
     )
-    // drawer
-    const drawerState = ref(false)
-    const drawerType = ref()
 
     // dialog
 
     const loginOpen = ref(false)
     const commandOpen = ref(false)
+    const newFolderOpen = ref(false)
 
     // champs
     const champSearch = ref('')
@@ -86,17 +75,6 @@ export const useTempStore = defineStore(
     const filterItemCats = ref([])
     const pocketItemSelect = ref()
 
-    /*     watch(
-      () => as.favoriteItems,
-      (newVal) => {
-        if (!newVal.length) {
-          viewFavoriteItems.value = false
-        }
-      },
-      { immediate: true }
-    )
- */
-
     // runes
     const selectedRuneSetIndex = ref(0)
 
@@ -104,7 +82,6 @@ export const useTempStore = defineStore(
     const selectedSpell = ref()
 
     return {
-      userOS,
       itemGridApi,
       // clickType,
 
@@ -116,23 +93,19 @@ export const useTempStore = defineStore(
       championDrawerTrigger,
       itemDrawerTrigger,
       runeDrawerTrigger,
-      sidebarTrigger,
       champSelectDrawerTrigger,
       cardDrawerTrigger,
-
-      sidebarOpen,
 
       pocketBarComponent,
 
       // drawer
 
-      drawerState,
-      drawerType,
       drawerChampSelectDropdown,
 
       // dialog
       loginOpen,
       commandOpen,
+      newFolderOpen,
 
       // drawer selections
       selectedItem,

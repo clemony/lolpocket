@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 const ps = usePocketStore()
-
 </script>
 
 <template>
@@ -9,7 +8,7 @@ const ps = usePocketStore()
       Best Recent Builds
     </li>
 
-    <TopBuild  v-for="(pocket, index) in ps.pockets" :key="pocket.key" :index="index" :pocket="pocket"/>
+    <TopBuild v-for="(pocket, index) in ps.pockets" :key="pocket.key" :index="index" :pocket="pocket" />
   </ul>
 </template>
 

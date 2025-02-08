@@ -1,15 +1,13 @@
 @layer components {
-.my-toast {
-    @apply !bg-b1/97 backdrop-blur-md !border-b3 border !top-[3.6vh]  !shadow-[0_25px_40px_-15px_rgba(0,0,0,0.2)] shadow-neutral/20 [&_div[data-title]]:!font-semibold [&_div[data-title]]:!tracking-tight [&_div[data-title]]:dst !-right-3 !pl-6 ;
-}
+  .my-toast {
+    @apply !bg-b1/97 backdrop-blur-md !border-b3 border !top-[3.6vh]  !shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] shadow-neutral/3 [&_div[data-title]]:!font-semibold [&_div[data-title]]:!tracking-tight [&_div[data-title]]:dst !-right-3 !pl-6;
+  }
 
-
-.my-toast-description {
+  .my-toast-description {
     @apply !text-3;
-}
+  }
 
-[data-sonner-toast] [data-close-button]{
-
-        @apply !right-2 absolute justify-self-end !top-6.5 scale-105  translate-x-0 !border-0 !shadow-none !drop-shadow-none !bg-transparent;
-    }
+  [data-sonner-toast] [data-close-button] {
+    @apply !right-2 absolute justify-self-end !top-6.5 scale-105  translate-x-0 !border-0 !shadow-none !drop-shadow-none !bg-transparent;
+  }
 }

@@ -26,14 +26,19 @@ declare global {
   interface Folder {
     name: string
     key: string
-    type: string
+    type?: string
     description?: string
     link?: string
-    items: any[]
+    items?: any[]
     icon?: string
     permanent?: boolean
     locked?: boolean
   }
+
+  interface FolderData extends Folder {
+    pockets: pocket[]
+  }
+
   interface Category {
     id: string
     displayName?: string

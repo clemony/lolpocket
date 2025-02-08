@@ -5,7 +5,7 @@ export function defaultFolders() {
   const defaultFolders: Array<Folder> = [
     {
       name: 'Pinned',
-      key: 'pinned-pockets',
+      key: 'pinned',
       link: '/pocket/Pockets-pinned',
       description: 'All your favorite pockets in one place.',
       type: 'pocket',
@@ -15,18 +15,18 @@ export function defaultFolders() {
     },
     {
       name: 'All',
-      key: 'all-pockets',
+      key: 'all',
       link: '/pocket/Pockets',
       description: 'View all of your pockets in table format.',
       type: 'pocket',
-      items: ps.allPockets,
+      items: ps.pockets,
       permanent: true,
       icon: 'teenyicons:folders-outline',
     },
     {
       name: 'Trash',
       link: '/pocket/Trash',
-      key: 'all-pockets',
+      key: 'trash',
       type: 'pocket',
       description: 'The ideas that didn\'t pan out exactly as planned.',
       items: ps.trashFolder,
@@ -36,7 +36,7 @@ export function defaultFolders() {
     {
       name: 'Archive',
       link: '/pocket/Archive',
-      key: 'all-pockets',
+      key: 'archive',
       description: 'Creations from previous patches.',
       type: 'pocket',
       items: ps.archiveFolder,

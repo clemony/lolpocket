@@ -1,10 +1,14 @@
 <script setup lang="ts">
-import type { ContextMenuItemEmits, ContextMenuItemProps } from 'radix-vue'
-import type { HTMLAttributes } from 'vue'
-import { ContextMenuItem, useForwardPropsEmits } from 'radix-vue'
-import { computed } from 'vue'
+import {
+  ContextMenuItem,
 
-const props = defineProps<ContextMenuItemProps & { class?: HTMLAttributes['class'], inset?: boolean }>()
+  useForwardPropsEmits,
+} from 'radix-vue'
+import type { ContextMenuItemEmits, ContextMenuItemProps } from 'radix-vue'
+import { computed } from 'vue'
+import type { HTMLAttributes } from 'vue'
+
+const props = defineProps<ContextMenuItemProps & { class?: HTMLAttributes['class'],  icon?: string, iconClass?: string }>()
 const emits = defineEmits<ContextMenuItemEmits>()
 
 const delegatedProps = computed(() => {
@@ -19,14 +23,14 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <ContextMenuItem
     v-bind="forwarded"
-    :class="
-      cn(
-        'focus:bg-b2/60 focus:text-bc relative flex cursor-default items-center gap-3.5 rounded-sm px-2 py-1.5 font-medium outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50',
-        inset && 'pl-8',
-        props.class,
-      )
-    "
+    :class="cn(
+      'relative flex gap-1 cursor-default select-none items-center rounded-sm px-2 py-1.5 text-xs outline-none focus:bg-b2/60 focus:text-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+      props.class,
+    )"
   >
+  <div class="size-7 overflow-hidden grid place-items-center">
+    <LittleIcon v-if="props.icon" :icon="props.icon" :class="cn('dst', props.iconClass)" />
+  </div>
     <slot />
   </ContextMenuItem>
 </template>

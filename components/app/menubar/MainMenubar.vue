@@ -6,7 +6,7 @@ const ts = useTempStore()
 // const hs = history.state;
 
 const route = useRoute()
-console.log('💠 - route:', route)
+
 
 const isPocket = computed (() => {
   const regEx = /^\/pocket/
@@ -22,7 +22,7 @@ const modelSettings = ref()
 
 <template>
   <div
-    class="bg-b1/80 w-screen max-w-screen isolate h-[5vh] min-h-[5vh] max-h-[5vh] absolute z-60 m-0 flex items-center gap-7.5 border-b border-b-transparent !pt-2 pr-4 pl-5 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center "
+    class="bg-b1/80 w-screen max-w-screen  h-[5vh] min-h-[5vh] max-h-[5vh] fixed z-60 m-0 flex items-center gap-7.5 border-b border-b-transparent !pt-2 pr-4 pl-5 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center "
     :class="{ '': isPocket }"
   >
     <Button
@@ -58,36 +58,36 @@ const modelSettings = ref()
     </NavigationMenu>
 
     <Grow />
-    <button class="btn btn-md" @click="toast('Test toast', { description: 'Hey hi that\'s really cool!' })">
+    <button class="btn btn-md invisible" @click="toast('Test toast', { description: 'Hey hi that\'s really cool!' })">
       test toast
     </button>
 
-    <LazyCommand  />
-<MenubarSearch  />
-
+    <LazyCommand />
+    <MenubarSearch />
 
     <NavigationMenu v-model:model-value="modelSettings" @update:model-value="(e) => modelSettings = e">
       <NavigationMenuList>
-       <NavigationMenuItem>
-        <NavigationMenuTrigger
-        class="group pt-1.5 relative aspect-square btn-ghost px-2 rounded-md">
-          <icon
-            name="system-uicons:message"
-            class="size-8.5 shrink-0 stroke-[0.7] opacity-50 drop-shadow-sm group-hover:opacity-100 group-data-[state=open]:opacity-100"
-          />
-   
-      <div v-if="messages" class="inline-grid *:[grid-area:1/1] absolute top-0.5 right-1.75">
-  <div class="status !bg-resolve animate-ping"></div>
-  <div class="status !bg-resolve"></div>
-</div>
-        </NavigationMenuTrigger>
-      <NavigationMenuContent
-        :side-offset="8"
-        class="w-96"
-      >
-        <News />
-      </NavigationMenuContent>
-   </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger
+            class="group pt-1.5 relative aspect-square btn-ghost px-2 rounded-md"
+          >
+            <icon
+              name="system-uicons:message"
+              class="size-8.5 shrink-0 stroke-[0.7] opacity-50 drop-shadow-sm group-hover:opacity-100 group-data-[state=open]:opacity-100"
+            />
+
+            <div v-if="messages" class="inline-grid *:[grid-area:1/1] absolute top-0.5 right-1.75">
+              <div class="status !bg-resolve animate-ping"></div>
+              <div class="status !bg-resolve"></div>
+            </div>
+          </NavigationMenuTrigger>
+          <NavigationMenuContent
+            :side-offset="8"
+            class="w-96"
+          >
+            <News />
+          </NavigationMenuContent>
+        </NavigationMenuItem>
 
         <!--    <NavigationMenuItem>
         <NavigationMenuTrigger class="group flex min-w-fit grow items-center justify-end">

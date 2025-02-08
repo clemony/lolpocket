@@ -1,20 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  params: {
-    data: {
-      name: string
-      key: string
-      items: {}
-      pinned: boolean
-      notes: string
-      dateCreated: dateObject
-      dateUpdated: dateObject
-    }
-    api: any
-    node: any
-    type: string
-  }
-  type?: string
+  params: any
 }>()
 const ps = usePocketStore()
 const ds = useDataStore()

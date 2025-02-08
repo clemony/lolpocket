@@ -1,15 +1,5 @@
 <script lang="ts" setup>
 import { ResizablePanel } from 'components/base/resizable/rindex'
-import { DropdownMenuRadioGroup } from 'radix-vue'
-
-const viewPocket = ref()
-
-const openFolder = ref()
-
-onMounted (() => {
-  const a = defaultFolders()[0].items.length ? defaultFolders()[0] : defaultFolders()[1]
-  openFolder.value = a.name
-})
 </script>
 
 <template>
@@ -32,36 +22,6 @@ onMounted (() => {
       />
 
       <ResizablePanel :default-size="44" :min-size="10">
-        <div class="h-[7vh] px-12 w-full flex items-center border-b border-b-b2">
-          <div class="breadcrumbs text-3 font-medium tracking-tight">
-            <ul class="flex items-center ">
-              <li>
-                <span class="inline-flex items-center gap-2.5">
-                  <icon name="formkit:folder" class="size-4.5 dst" />
-                  Pocket Folders
-                </span>
-              </li>
-              <li class="">
-                <DropdownMenu>
-                  <DropdownMenuTrigger class="ml-2 border border-b3 rounded-md py-1.5 w-50 px-3 inset-shadow-sm items-center">
-                    <span class="inline-flex items-center grow !gap-2.5 capitalize">
-                      <icon name="teenyicons:folder-outline" />
-                      {{ openFolder }}
-                    </span>
-                    <icon name="select" class="size-4.5" />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent class="w-50">
-                    <DropdownMenuRadioGroup v-model="openFolder">
-                      <DropdownMenuRadioItem v-for="folder in defaultFolders()" :key="folder.key" :value="folder.name">
-                        {{ folder.name }}
-                      </DropdownMenuRadioItem>
-                    </DropdownMenuRadioGroup>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </li>
-            </ul>
-          </div>
-        </div>
       </ResizablePanel>
 
       <ResizableHandle

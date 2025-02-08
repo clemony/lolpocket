@@ -1,8 +1,13 @@
 <script setup lang="ts">
+import {
+  ContextMenuItemIndicator,
+  ContextMenuRadioItem,
+
+  useForwardPropsEmits,
+} from 'radix-vue'
 import type { ContextMenuRadioItemEmits, ContextMenuRadioItemProps } from 'radix-vue'
-import type { HTMLAttributes } from 'vue'
-import { ContextMenuItemIndicator, ContextMenuRadioItem, useForwardPropsEmits } from 'radix-vue'
 import { computed } from 'vue'
+import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<ContextMenuRadioItemProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<ContextMenuRadioItemEmits>()
@@ -19,19 +24,14 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <ContextMenuRadioItem
     v-bind="forwarded"
-    :class="
-      cn(
-        'focus:bg-b2/60 focus:text-bc relative flex cursor-default items-center rounded-sm py-1.5 pr-2 pl-8 outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50',
-        props.class,
-      )
-    "
+    :class="cn(
+      'relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-xs outline-none focus:bg-base-200/60 focus:text-base-content data-[disabled]:pointer-events-none data-[disabled]:opacity-50 hover:ring-b2 hover:ring-1 data-[state=checked]:bg-b2/30',
+      props.class,
+    )"
   >
     <span class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <ContextMenuItemIndicator>
-        <icon
-          name="lucide:circle"
-          class="h-2 w-2 fill-current"
-        />
+      <ContextMenuItemIndicator class="size-7 grid place-items-center">
+        <icon name="tick-sm" class="size-5 fill-current" />
       </ContextMenuItemIndicator>
     </span>
     <slot />

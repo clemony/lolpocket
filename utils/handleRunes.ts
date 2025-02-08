@@ -49,7 +49,7 @@ export function createDefaultShard(): {
 }
 
 export function newRuneSet(key?) {
-    const toID = hexoid()
+  const toID = hexoid()
   const newSet = {
     name: `${generateRandomName()} Set`,
     key: toID(),

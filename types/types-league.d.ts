@@ -12,7 +12,10 @@ declare global {
   interface pocket {
     key: string
     name: string
-    roles: Role[]
+    roles: {
+      0: Role
+      1: Role
+    }
     champions: {
       children: Champion[]
       default: Champion
@@ -29,6 +32,7 @@ declare global {
     dateCreated: dateObject
     dateUpdated: dateObject
     tags: string[]
+    folderKey: string
     icon: string
     notes: string[]
   }

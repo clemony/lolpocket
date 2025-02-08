@@ -11,15 +11,15 @@
   @apply bg-b2/60;
 }
 .ag-row-hover {
-  @apply bg-b2/30;
+  @apply bg-b2/30 cursor-context-menu;
 }
 
 .ag-row {
-  @apply border-b-b2/60;
+  @apply border-b-b2/60 rounded-lg;
 }
 
 .cell-class {
-  @apply !px-1 items-center justify-center flex h-full;
+  @apply !px-1 items-center justify-center flex h-full cursor-context-menu;
 }
 :is([col-id='buy']).cell-class {
   @apply justify-end;
@@ -33,7 +33,11 @@
   @apply flex items-start w-full m-0 pt-2.5 text-left justify-start;
 }
 
-.ag-cell.ag-column-last {
+.ag-cell.ag-column-first {
+  .ag-cell.ag-column-last {
+  @apply !pl-6;
+}
+
   @apply !pr-6;
 }
 
@@ -51,4 +55,17 @@
 
 .ti-rune {
   @apply pl-6;
+}
+
+.ti-container {
+  @apply rounded-lg shadow-sm shadow-black/40;
+}
+
+
+.ti-wrapper {
+  @apply overflow-hidden aspect-square rounded-lg **:rounded-lg bg-b2/40  inset-shadow-sm  size-16;
+}
+
+.btn-table-class{
+  @apply btn btn-md  join-item w-11 h-16 bg-b2/50;
 }

@@ -4,44 +4,64 @@ export default defineAppConfig({
     mode: 'svg',
     class: 'text-[var(--color-bc)]',
     aliases: {
-      'nuxt': 'logos:nuxt-icon',
       'search': 'teenyicons:search-outline',
+
+      // math
       'add': 'teenyicons:add-outline',
       'add-sm': 'teenyicons:add-small-outline',
-      'more': 'teenyicons:more-horizontal-outline',
+      'add-sq-outline': 'basil:add-outline',
+      'minus-sm': 'teenyicons:minus-small-outline',
+      'calc': 'teenyicons:calculator-outline',
+
+      // letters
+      'x-sm': 'teenyicons:x-small-outline',
+      'x': 'teenyicons:x-outline',
+      'and': 'mynaui:ampersand',
+
+      // check
       'tick': 'teenyicons:tick-outline',
       'tick-sm': 'teenyicons:tick-small-outline',
+
+      // arrow
       'down': 'teenyicons:down-outline',
       'up': 'teenyicons:up-outline',
       'down-sm': 'teenyicons:down-small-outline',
       'right-sm': 'teenyicons:right-small-outline',
       'up-sm': 'teenyicons:up-small-outline',
       'select': 'teenyicons:caret-vertical-small-outline',
+
+      // menu
+      'more': 'teenyicons:more-horizontal-outline',
+      'reset': 'mynaui:refresh',
+      'gear': 'ph:gear-six',
+      'lines': 'teenyicons:align-text-justify-outline',
+      'trash': 'formkit:trash',
+      'info': 'teenyicons:info-outline',
+      'chain': 'ph:link-simple',
+      'filter': 'teenyicons:filter-outline',
+      'copy': 'teenyicons:layers-subtract-outline',
+      'shuffle': 'qlementine-icons:shuffle-16',
+
+      // folder
+      'x-folder': 'teenyicons:folder-x-outline',
+      'add-folder': 'teenyicons:folder-plus-outline',
+      'folder': 'formkit:folder',
+      'folders': 'teenyicons:folders-outline',
+      'pin': 'iconoir:pin',
+      'clip': 'teenyicons:attach-outline',
+
+      // social
       'at': 'teenyicons:at-outline',
       'riot': 'simple-icons:riotgames',
       'github': 'ph:github-logo',
-      'x-sm': 'teenyicons:x-small-outline',
-      'x': 'teenyicons:x-outline',
-      'minus-sm': 'teenyicons:minus-small-outline',
-      'and': 'mynaui:ampersand',
       'id-card': 'icon-park-twotone:id-card-v',
-      'reset': 'mynaui:refresh',
-      'gear': 'ph:gear-six',
-      'shield': 'teenyicons:shield-tick-outline',
-      'copy': 'teenyicons:layers-subtract-outline',
-      'shuffle': 'qlementine-icons:shuffle-16',
-      'folders': 'formkit:folder',
-      'star': 'uiw:star-off',
-      'infinity': 'solar:infinity-outline',
-      'calc': 'teenyicons:calculator-outline',
-      'filter': 'teenyicons:filter-outline',
-      'heart': 'teenyicons:heart-outline',
-      'x-folder': 'teenyicons:folder-x-outline',
-      'add-folder': 'teenyicons:folder-plus-outline',
-      'lines': 'teenyicons:align-text-justify-outline',
       'mail': 'fluent:mail-48-regular',
-      'info': 'teenyicons:info-outline',
-      'chain': 'ph:link-simple',
+
+      // pic
+      'infinity': 'solar:infinity-outline',
+      'shield': 'teenyicons:shield-tick-outline',
+      'star': 'uiw:star-off',
+      'heart': 'teenyicons:heart-outline',
       'bow': 'mdi:bow-arrow',
     },
   },

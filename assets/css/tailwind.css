@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import './utilities.css';
+@import './abbreviations.css';
 @import './plugins/plugins.css';
 @import './components.css';
 @import './theme.css';
@@ -14,9 +15,9 @@
       sans-serif 'sans-serif';
     font-size: 12.2px;
     ::selection {
-        color: var(--nc);
-  background: var(--color-neutral);
-}
+      color: var(--nc);
+      background: var(--color-neutral);
+    }
   }
 
   html,

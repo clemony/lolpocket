@@ -1,0 +1,69 @@
+@import 'tailwindcss';
+
+@layer components {
+
+/* text */
+
+    .f-n {
+@apply font-normal;
+}
+.f-m {
+@apply font-medium;
+}
+.f-sb {
+@apply font-semibold;
+}
+.f-b {
+@apply font-bold;
+}
+.f-bl {
+@apply font-black;
+}
+
+.f-ttt {
+@apply tracking-tighter;
+}
+.f-tt {
+@apply tracking-tight;
+}
+
+.t-nw {
+  @apply text-nowrap;
+}
+
+/* pos */
+
+.i-c{
+    @apply items-center;
+}
+
+.i-s{
+    @apply items-start;
+}
+
+.i-e{
+    @apply items-end;
+}
+
+.j-c{
+    @apply justify-center;
+}
+
+.j-s{
+    @apply justify-start;
+}
+
+.j-e{
+    @apply justify-end;
+}
+
+.p-i-c{
+    @apply place-items-center;
+}
+
+/*user */
+
+.point-none{
+    @apply pointer-events-none;
+}
+}

@@ -35,21 +35,6 @@ const delegatedProps = computed(() => {
   const { tooltip, ...delegated } = props
   return delegated
 })
-
-const open = ref(ts.sidebarOpen)
-const size = computed(() => {
-  const a = open.value ? 'lg' : !open.value ? 'icon' : 'default'
-  return a
-})
-
-const classObject = computed(() => {
-  if (!open.value) {
-    return 'size-8 grid place-items-center !aspect-square'
-  }
-  else {
-
-  }
-})
 </script>
 
 <template>

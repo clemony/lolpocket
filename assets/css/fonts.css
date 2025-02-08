@@ -1,4 +1,67 @@
-/* poppins-latin-400-normal */
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif 'sans-serif';
+  --font-serif: 'Noto Serif KR Variable', 'serif';
+  --font-mono: 'Geist Mono', 'monospace';
+  
+    --text-1: 0.9rem;
+  --text-2: 0.96rem;
+  --text-3: 0.99rem;
+  --text-4: 1.125rem;
+  --text-5: 1.25rem;
+  --text-6: 1.35rem;
+  --text-7: 1.5rem;
+  --text-8: 1.675rem;
+  --text-9: 2.25rem;
+  --text-10: 2.9rem;
+  --text-11: 3.75rem;
+  --text-12: 4.5rem;
+  --text-13: 6rem;
+  --text-14: 7rem;
+
+
+}
+
+
+@layer components {
+  h1 {
+    font-size: var(--text-8);
+    font-weight: 600;
+  }
+  h2 {
+    font-size: var(--text-7);
+    font-weight: 600;
+  }
+  h3 {
+    font-size: var(--text-6);
+    font-weight: 600;
+  }
+  h4 {
+    font-size: var(--text-5);
+    font-weight: 600;
+  }
+  h5 {
+    font-size: var(--text-4);
+    font-weight: 500;
+  }
+  h5 {
+    font-size: var(--text-3);
+    font-weight: 500;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply tracking-tight leading-none;
+  }
+
+
+}
+
+
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
@@ -9,49 +72,6 @@
     url(https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-400-normal.woff) format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
     U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@import 'tailwindcss';
-
-@layer components {
-h1 {
-  font-size: var(--text-8);
-  font-weight: 600;
-}
-h2 {
-  font-size: var(--text-7);
-  font-weight: 600;
-}
-h3 {
-  font-size: var(--text-6);
-  font-weight: 600;
-}
-h4 {
-  font-size: var(--text-5);
-  font-weight: 600;
-}
-h5 {
-  font-size: var(--text-4);
-  font-weight: 500;
-}
-h5 {
-  font-size: var(--text-3);
-  font-weight: 500;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  @apply tracking-tight leading-none;
-}
-
-}
-@theme {
-  --font-sans: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif 'sans-serif';
-  --font-serif: 'Noto Serif KR Variable', 'serif';
-  --font-mono: 'Geist Mono', 'monospace';
 }
 
 /* geist-mono-latin-300-normal */

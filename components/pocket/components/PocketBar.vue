@@ -47,7 +47,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  <Sheet id="sheet" v-model:open="isOpen" class=" w-24 max-w-24 min-w-24  h-screen max-h-screen">
+  <Sheet id="sheet" v-model:open="isOpen" class=" w-28 max-w-28 min-w-24  h-screen max-h-screen">
     <div class=" w-24  flex-col items-center flex h-screen bg-b1 flex-nowrap pb-2  z-59 outline-0">
       <MenubarSpacer class="!h-[5.8vh]" />
 
@@ -106,7 +106,7 @@ watchEffect(() => {
           </button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" side="right" :align-offset="0" :side-offset="15" class="w-70  pb-2">
-          <LazyPocketDropdownMenu :pocket="pocket" />
+          <PocketDropdownMenu :pocket="pocket" />
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
