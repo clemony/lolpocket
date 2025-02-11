@@ -123,7 +123,8 @@ watchEffect(() => {
             </NuxtLink>
             <Grow />
 
-            <div class="absolute w-full bottom-0 left-0 pr-10">
+             <NavigationMenuLink
+             class="absolute w-full bottom-0 left-0 pr-10">
               <button v-if="as.userAccount.session" class="btn btn-neutral ml-6.5 flex btn-md rounded-md mb-1 w-full gap-4 !text-2" @click="handleClick('out')">
                 <icon name="teenyicons:upload-outline" class="-ml-3 !text-nc size-5 -rotate-90" />
                 Sign out
@@ -135,7 +136,7 @@ watchEffect(() => {
                   Sign in
                 </button>
               </LoginDialog>
-            </div>
+             </NavigationMenuLink>
           </div>
         </div>
       </div>

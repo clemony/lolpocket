@@ -16,7 +16,7 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
           Create a Pocket
         </li>
         <li
-          v-for="link in links.pocketLinks" :key="link.name"
+          v-for="link in pocketLinks" :key="link.name"
           class="flex items-center gap-2 capitalize"
         >
           <NuxtLink
@@ -28,15 +28,15 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
         </li>
       </ul>
 
-      <template v-for="section in links.links" :key="section">
+      <template v-for="section in externalLinks" :key="section">
         <ul
-          v-if="section.items && section.name != 'Database'"
+          v-if="section.name"
           :class="listClass"
         >
           <h3>{{ section.name }}</h3>
           <li
-            v-for="link in section.items"
-            :key="link"
+            v-for="link in section.submenu"
+            :key="link.name"
             :class="itemClass"
           >
             {{ link.name }}
@@ -45,7 +45,7 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
         <template v-else-if="section.submenu">
           <ul
             v-for="menu in section.submenu"
-            :key="menu"
+            :key="menu.name"
             :class="listClass"
           >
             <h3>{{ `${menu.name} Links` }}</h3>
@@ -68,8 +68,8 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
       <ul :class="listClass">
         <h3>Settings</h3>
         <li
-          v-for="link in links.settingLinks"
-          :key="link"
+          v-for="link in settingLinks"
+          :key="link.name"
           class="flex items-center gap-2 capitalize"
         >
           {{ link.name }}
@@ -79,8 +79,8 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
       <ul :class="listClass">
         <h3>Info</h3>
         <li
-          v-for="link in links.infoLinks"
-          :key="link"
+          v-for="link in infoLinks"
+          :key="link.name"
           class="flex items-center gap-2"
         >
           <NuxtLink

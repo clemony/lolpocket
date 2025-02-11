@@ -57,8 +57,15 @@ onMounted(() => {
 })
 
 function handleSelect(rune) {
-  ts.selectedRune == 'rune'
+  ts.selectedRune == rune
   // useDrawerToggle('rune')
+}
+
+function onHover(rune) {
+  setTimeout(() => {
+  ts.hoveredRune = rune
+  console.log("💠 - onHover - ts.hoveredRune:", ts.hoveredRune)
+  }, 1000)
 }
 </script>
 
@@ -82,8 +89,10 @@ function handleSelect(rune) {
           v-for="rune in slot.runes"
           :key="rune.id"
           v-tippy="rune.name"
+            @mouseover="onHover(rune)"
           :data-path="selectedPath"
           class="h-full rounded-full opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+          
           :class="{
             'scale-115 opacity-100 grayscale-0': selectedRunes[i] === rune,
             'shadow-pretty': slot != selectedPathData.slots[0] && selectedRunes[i] === rune,
@@ -101,10 +110,6 @@ function handleSelect(rune) {
             class="absolute hidden"
             @change="handleSelection(i, rune)"
           />
-          <!--   <Tooltip
-            :content="rune.name"
-            name="ph:mouse-right-click-fill"
-            no-wrap> -->
           <img
             :src="`/img/runes/${selectedPath}/${rune.name.replace(/\s/g, '')}.webp`"
             :alt="rune.name"

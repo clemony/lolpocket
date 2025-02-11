@@ -8,6 +8,7 @@ const props = defineProps<
   SplitterResizeHandleProps & {
     class?: HTMLAttributes['class']
     withHandle?: boolean
+    withPlainHandle?: boolean
   }
 >()
 const emits = defineEmits<SplitterResizeHandleEmits>()
@@ -37,6 +38,12 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
           name="teenyicons:drag-vertical-outline"
           class="size-3.5"
         />
+      </div>
+    </template>
+
+     <template v-if="props.withPlainHandle">
+      <div class="bg-b2/90 z-10 flex h-32 shadow-xs !w-3 items-center justify-center rounded-md border  border-b3">
+  <div class="size-3" />
       </div>
     </template>
   </SplitterResizeHandle>

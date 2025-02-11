@@ -47,7 +47,6 @@ export async function getPatch() {
       throw new Error(`Response status: ${response.status}`)
     }
     const json = await response.json()
-    console.log('💠 - getPatch - json:', json)
 
     const patch = json[0]
     console.log('💠 - getPatch - patch:', patch)

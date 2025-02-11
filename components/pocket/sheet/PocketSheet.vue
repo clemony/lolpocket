@@ -4,14 +4,13 @@ import { hexoid } from 'hexoid'
 const emit = defineEmits(['update:name'])
 const ts = useTempStore()
 const ps = usePocketStore()
-const as = useAccountStore()
 
 const toID = hexoid()
 
 // Form fields
 const name = ref('')
 const tags = ref([])
-const selectedIcon = ref('/img/champion/centered/-1.webp')
+const selectedIcon = ref('/img/champion/centered/1.webp')
 
 watch(
   () => tags.value,
@@ -45,7 +44,7 @@ defineExpose({
 <template>
   <Sheet :open="ts.pocketSheetTrigger" class="max-w-140">
     <SheetContent side="right" class="min-w-140 w-140 px-12 py-9" @interact-outside="ts.pocketSheetTrigger = false">
-      <PocketSheetContent title="New Pocket" description="Choose a pocket name, tag your pocket (for easier searching), and create your pocket icon. <b>All items can be left blank</b> and edited later." class="max-w-140" @update:clicked="ts.pocketSheetTrigger = false">
+      <PocketSheetContent title="New Pocket" description="Choose a pocket name, tag your pocket (for easier searching), and create your pocket icon. <b>All items can be left blank</b> and edited later." class="max-w-140">
         <template #name>
           <input
             v-model="name"
@@ -58,7 +57,7 @@ defineExpose({
 
         <template #name-buttons>
           <CloseButton />
-          <RandomButton v-tippy="'No brain? Meet Button.'" @click.stop="emit('update:name', generateRandomString())" />
+          <RandomButton v-tippy="'No brain? Meet Button.'" @click.stop="emit('update:name', generateShortString())" />
         </template>
 
         <template #tags>

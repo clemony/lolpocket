@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import createDefaultSpell from 'utils/handlePocket'
+
 const props = defineProps<{
   pocket: pocket
 }>()

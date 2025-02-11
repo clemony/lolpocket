@@ -7,7 +7,6 @@ const ts = useTempStore()
 
 const route = useRoute()
 
-
 const isPocket = computed (() => {
   const regEx = /^\/pocket/
   return route.path.match(regEx)
@@ -18,16 +17,17 @@ const as = useAccountStore()
 const summoner = ref(as.userAccount)
 const messages = ref()
 const modelSettings = ref()
+const isOpen = ref('closed')
 </script>
 
 <template>
   <div
-    class="bg-b1/80 w-screen max-w-screen  h-[5vh] min-h-[5vh] max-h-[5vh] fixed z-60 m-0 flex items-center gap-7.5 border-b border-b-transparent !pt-2 pr-4 pl-5 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center "
+    class="bg-b1/80 w-screen max-w-screen  h-[5vh] min-h-[5vh] max-h-[5vh] fixed z-60 m-0 flex items-center gap-5 border-b border-b-transparent !pt-2 pr-7.5 pl-7.5 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center "
     :class="{ '': isPocket }"
   >
     <Button
       variant="ghost"
-      class=" size-11"
+      class=" size-11 mr-2"
       as-child
     >
       <NuxtLink to="/">
@@ -37,7 +37,10 @@ const modelSettings = ref()
       </NuxtLink>
     </Button>
 
-    <NavigationMenu :skip-delay-duration="100" :disable-click-trigger="true">
+    <NavigationMenu
+      :skip-delay-duration="100"
+      :disable-click-trigger="true"
+    >
       <NavigationMenuList class="pt-0.75">
         <MenubarUser />
 
@@ -65,72 +68,34 @@ const modelSettings = ref()
     <LazyCommand />
     <MenubarSearch />
 
-    <NavigationMenu v-model:model-value="modelSettings" @update:model-value="(e) => modelSettings = e">
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger
-            class="group pt-1.5 relative aspect-square btn-ghost px-2 rounded-md"
+    <DropdownMenu>
+      <DropdownMenuTrigger class="ml-2 mb-1 hover:bg-transparent focus:bg-transparent max-w-11 group/acc transition-all duration-150 flex items-center">
+        <Avatar class="size-11 hover:ring-2 rounded-lg hover:ring-b3 shadow-sm group-data-[state=open]/acc:ring group-data-[state=open]/acc:ring-neutral cursor-pointer">
+          <AvatarImage
+
+            v-if="summoner.gameName && as.userAccount.session"
+            :src="`https://ddragon.leagueoflegends.com/cdn/15.2.1/img/profileicon/${summoner.profileIconId}.png`"
+            :alt="summoner.gameName || summoner.name"
+            class="size-full [&_img]:scale-115 rounded-lg  inset-shadow-sm inset-shadow-black"
+          />
+          <AvatarFallback
+            v-else
+            class="rounded-lg grid place-items-center"
           >
-            <icon
-              name="system-uicons:message"
-              class="size-8.5 shrink-0 stroke-[0.7] opacity-50 drop-shadow-sm group-hover:opacity-100 group-data-[state=open]:opacity-100"
-            />
+            <icon name="octicon:person-24" class=" -mb-1  text-nc shrink-0 size-6.5 shadow-sm" />
+          </AvatarFallback>
 
-            <div v-if="messages" class="inline-grid *:[grid-area:1/1] absolute top-0.5 right-1.75">
-              <div class="status !bg-resolve animate-ping"></div>
-              <div class="status !bg-resolve"></div>
-            </div>
-          </NavigationMenuTrigger>
-          <NavigationMenuContent
-            :side-offset="8"
-            class="w-96"
-          >
-            <News />
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+          <div v-if="messages" class="inline-grid *:[grid-area:1/1] absolute top-0.5 right-1.75">
+            <div class="status !bg-resolve animate-ping"></div>
+            <div class="status !bg-resolve"></div>
+          </div>
+        </Avatar>
+      </DropdownMenuTrigger>
 
-        <!--    <NavigationMenuItem>
-        <NavigationMenuTrigger class="group flex min-w-fit grow items-center justify-end">
-          <icon
-            name="qlementine-icons:external-link-16"
-            class="-mt-0.75 size-5.75 shrink-0 opacity-60 group-hover:opacity-100" />
-        </NavigationMenuTrigger>
-
-   <MenubarContent
-          :side-offset="8"
-          class="pl-2">
-          <ResourcesDropdown />
-        </MenubarContent>
-      </MenubarMenu> -->
-
-        <NavigationMenuItem>
-          <NavigationMenuTrigger as-child class=" hover:bg-transparent focus:bg-transparent ">
-            <button class="group  flex min-w-fit grow items-center justify-end">
-              <Avatar class="size-10  rounded-full  shadow-sm ">
-                <AvatarImage
-
-                  v-if="summoner.gameName && as.userAccount.session"
-                  :src="`https://ddragon.leagueoflegends.com/cdn/15.2.1/img/profileicon/${summoner.profileIconId}.png`"
-                  :alt="summoner.gameName || summoner.name"
-                  class="size-full [&_img]:scale-115 rounded-full  inset-shadow-sm inset-shadow-black"
-                />
-                <AvatarFallback
-                  v-else
-                  class="rounded-full grid place-items-center"
-                >
-                  <icon name="octicon:person-24" class=" -mb-1  text-nc shrink-0 size-6.5 shadow-sm" />
-                </AvatarFallback>
-              </Avatar>
-            </button>
-          </NavigationMenuTrigger>
-
-          <NavigationMenuContent class="min-w-70">
-            <LazyMenubarSettings />
-          </NavigationMenuContent>
-          <LazyNavigationMenuViewport class="top-4 right-54 rounded-xl  border border-x-b3 border-b-b3 border-t-b2" />
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+      <DropdownMenuContent class="min-w-96" align="end" :align-offset="-9" side="bottom" :side-offset="9">
+        <LazyMenubarSettings />
+      </DropdownMenuContent>
+    </DropdownMenu>
   </div>
 </template>
 

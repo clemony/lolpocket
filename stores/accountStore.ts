@@ -1,3 +1,4 @@
+import DefaultModule from 'components/summoner/modules/DefaultModule.vue'
 import { defineStore } from 'pinia'
 
 export const useAccountStore = defineStore(
@@ -32,6 +33,25 @@ export const useAccountStore = defineStore(
     const userFolders = ref<Folder[]>([])
     const heroModel = ref(0)
 
+    /*    const userBoardModules: ModuleList[] = [
+      [null, null, null, null, null, null, null, null, null, null, null],
+    ] */
+
+    const userBoardModules: ModuleList = [
+      { name: '', component: null, ghost: null },
+      { name: '', component: null, ghost: null },
+      { name: '', component: null, ghost: null },
+      { name: '', component: null, ghost: null },
+      { name: '', component: null, ghost: null },
+      { name: '', component: null, ghost: null },
+      { name: '', component: null, ghost: null },
+      { name: '', component: null, ghost: null },
+      { name: '', component: null, ghost: null },
+      { name: '', component: null, ghost: null },
+      { name: '', component: null, ghost: null },
+      { name: '', component: null, ghost: null },
+    ]
+
     const reducedMotion = ref(false)
     const colorBlindMode = ref(false)
 
@@ -52,6 +72,7 @@ export const useAccountStore = defineStore(
       // account
       userAccount,
       userFolders,
+      userBoardModules,
       // settings
       themeClass,
       dataTheme,

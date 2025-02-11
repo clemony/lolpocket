@@ -1,10 +1,10 @@
 <script lang="ts" setup>
+import type { GridApi } from 'ag-grid-community'
+
 definePageMeta({
   name: 'pockets',
   path: '/pockets',
 })
-
-const isChecked = ref(false)
 </script>
 
 <template>
@@ -12,10 +12,18 @@ const isChecked = ref(false)
     <MenubarSpacer />
     <div class="h-[9.5vh] min-h-[9vh] pl-18 pr-8 w-full  flex items-center">
       <PocketBreadcrumbs />
-      <Grow  />
-      <TableBar v-model:model-value="isChecked" />
+      <TableBar />
+      <Grow />
+
+      <NeutralButton
+        class=" ring-neutral ring btn-md mr-2 gap-3 pr-8 pl-4"
+        @click="ts.pocketSheetTrigger = true"
+      >
+        <icon name="add-sm" class="shrink-0 size-6" />
+        New Pocket
+      </NeutralButton>
     </div>
-    <div class=" grid grid-cols-[auto_0px] size-full transition-all duration-400 relative" :class="{ 'grid-cols-[auto_350px]': isChecked }">
+    <div class=" grid grid-cols-[auto_0px] size-full transition-all duration-400 relative">
       <PocketsTable />
     </div>
   </div>

@@ -5,5 +5,5 @@ export function useDevice() {
 }
 
 export function useDeviceKey() {
-  return useDevice() == 'MacOS' ? '⌘' : useDevice() == 'Windows' ? '^' : 'meta'
+  return useDevice() == 'MacOS' ? '⌘' : useDevice() == 'Windows' ? 'ctrl' : useDevice() == 'Mobile' ? '' : 'meta'
 }

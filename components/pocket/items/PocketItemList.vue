@@ -65,13 +65,13 @@ function onClone(event: DraggableEvent) {
       },
     ]"
     group
-    class="pl-10 pr-1 overflow-y-auto h-screen grid grid-flow-row auto-cols-auto    grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center gap-3  pt-[6.5vh] py-6 "
+    class="pl-10 pr-1 overflow-y-auto h-screen grid grid-flow-row auto-cols-auto select-none   grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center gap-3  pt-[6.5vh] py-6 "
 
     @end="onEnd"
     @clone="onClone"
     @start="onStart"
   >
-    <div v-for="item in list" :key="item.id">
+    <div v-for="item in list" :key="item.id" class="select-none">
       <Item :item="item" />
     </div>
   </transition-slide>

@@ -17,6 +17,7 @@ export const useTempStore = defineStore(
     const runeDrawerTrigger = ref(false)
     const champSelectDrawerTrigger = ref(false)
     const cardDrawerTrigger = ref(false)
+    const moduleDrawerTrigger = ref(false)
 
     const pocketBarComponent = shallowRef(null)
 
@@ -49,6 +50,7 @@ export const useTempStore = defineStore(
 
     const loginOpen = ref(false)
     const commandOpen = ref(false)
+    const contextMenuOpen = ref(false)
     const newFolderOpen = ref(false)
 
     // champs
@@ -77,6 +79,7 @@ export const useTempStore = defineStore(
 
     // runes
     const selectedRuneSetIndex = ref(0)
+    const hoveredRune = ref<Rune | null>(null)
 
     // spells
     const selectedSpell = ref()
@@ -95,6 +98,7 @@ export const useTempStore = defineStore(
       runeDrawerTrigger,
       champSelectDrawerTrigger,
       cardDrawerTrigger,
+      moduleDrawerTrigger,
 
       pocketBarComponent,
 
@@ -105,6 +109,7 @@ export const useTempStore = defineStore(
       // dialog
       loginOpen,
       commandOpen,
+      contextMenuOpen,
       newFolderOpen,
 
       // drawer selections
@@ -138,6 +143,7 @@ export const useTempStore = defineStore(
 
       // runes
       selectedRuneSetIndex,
+      hoveredRune,
 
       // spells
       selectedSpell,

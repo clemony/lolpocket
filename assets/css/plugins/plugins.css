@@ -2,10 +2,7 @@
 @import '@morev/vue-transitions/styles';
 @import './tippy.css';
 @import './drag.css';
-@plugin "daisyui" {
-  themes: 'light';
-  exclude: radialprogress, toast;
-}
+
 @import './custom-daisy.css';
 @plugin "tailwindcss-animate";
 @plugin "tailwindcss-animated";

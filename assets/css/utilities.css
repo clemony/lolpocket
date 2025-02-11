@@ -25,9 +25,7 @@
     display: none;
   }
 }
-@utility join-item {
-  @apply border-b2 border;
-}
+
 
 @utility dst {
   @apply drop-shadow-text;

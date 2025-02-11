@@ -32,7 +32,10 @@ declare global {
     dateCreated: dateObject
     dateUpdated: dateObject
     tags: string[]
-    folderKey: string
+    location: {
+      pinned: number
+      folder: string
+    }
     icon: string
     notes: string[]
   }

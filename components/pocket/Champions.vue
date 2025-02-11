@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { getQuote } from 'shared/data/champion/quotes'
 
 const props = defineProps<{
   pocket: pocket

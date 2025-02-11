@@ -2,7 +2,6 @@
 import { categories } from 'shared/data/champion/championCategories'
 import { types } from 'shared/data/champion/championRoles'
 
-import { getQuote } from 'shared/data/champion/quotes'
 
 const ts = useTempStore()
 

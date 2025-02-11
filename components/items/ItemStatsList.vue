@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { stats } from 'shared/data/item'
+
 
 const emit = defineEmits(['update:model'])
 
 const ts = useTempStore()
 
 const to = ref([])
-const categories = ref(stats)
+const categories = ref(itemStats)
 const originalOrder = ref([
   ...categories.value.sort((a, b) => {
     if (a.displayName < b.displayName) {

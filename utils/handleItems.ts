@@ -1,5 +1,15 @@
 import { hexoid } from 'hexoid'
 
+/*
+createItem
+newItemSet
+removeItemFromSet
+addItemToSet
+itemCategories
+itemTypes
+itemStats
+*/
+
 export function createItem(): Item {
   return {
     name: '',
@@ -22,7 +32,7 @@ export function createItem(): Item {
 export function newItemSet(pocketKey?) {
   const toID = hexoid()
   const newSet = {
-    name: `${generateRandomName()} Set`,
+    name: `${generateMediumString()} Set`,
     key: toID(),
     items: [createItem()],
   }
@@ -64,3 +74,84 @@ export function resetItems(set) {
     set.items.splice(0, set.items.length) // Reset the array
   }
 }
+
+export const itemCategories = ref<Category[]>([
+  {
+    id: 'fighter',
+    displayName: 'fighter',
+    checked: false,
+    color: '--color-fighter',
+  },
+  {
+    id: 'marksman',
+    displayName: 'marksman',
+    checked: false,
+    color: '--color-precision',
+  },
+  {
+    id: 'assassin',
+    displayName: 'assassin',
+    checked: false,
+    color: '--color-domination',
+  },
+  {
+    id: 'mage',
+    displayName: 'mage',
+    checked: false,
+    color: '--color-sorcery',
+  },
+  {
+    id: 'tank',
+    displayName: 'tank',
+    checked: false,
+    color: '--color-resolve',
+  },
+  {
+    id: 'support',
+    displayName: 'support',
+    checked: false,
+    color: '--color-inspiration',
+  },
+  {
+    id: 'onhit effects',
+    displayName: 'on-hit Effects',
+    checked: false,
+    color: '--color-onhit',
+  },
+  { id: 'movement', displayName: 'movement', checked: false },
+])
+
+export const itemTypes = [
+  'Starter',
+  'Epic',
+  'Boots',
+  'Basic',
+  'Legendary',
+  'Trinket',
+  'Consumable',
+  'Potion',
+  'Favorites',
+]
+
+export const itemStats = [
+  { id: 'ad', displayName: 'Attack Damage', checked: false },
+  { id: 'ah', displayName: 'Ability Haste', checked: false },
+  { id: 'ap', displayName: 'Ability Power', checked: false },
+  { id: 'armor', displayName: 'Armor', checked: false },
+  { id: 'armpen', displayName: 'Armor Penetration', shortName: 'Armor Pen', checked: false },
+  { id: 'as', displayName: 'Attack Speed', checked: false },
+  { id: 'crit', displayName: 'Crit Chance', checked: false },
+  { id: 'gp10', displayName: 'Gold / 10', shortName: 'GP/10', checked: false },
+  { id: 'hp', displayName: 'Health', shortName: 'HP', checked: false },
+  { id: 'hp5', displayName: 'Health Regen / 5', shortName: 'HP/5', checked: false },
+  { id: 'hsp', displayName: 'Heal & Shield Power', checked: false },
+  { id: 'lethality', displayName: 'Lethality', checked: false },
+  { id: 'lifesteal', displayName: 'Lifesteal', checked: false },
+  { id: 'mana', displayName: 'Mana', checked: false },
+  { id: 'mp5', displayName: 'Mana Regen / 5', shortName: 'MP/5', checked: false },
+  { id: 'mpen', displayName: 'Magic Penetration', shortName: 'Magic Pen', checked: false },
+  { id: 'mpenflat', displayName: 'Flat Magic Pen', checked: false },
+  { id: 'mr', displayName: 'Magic Resist', checked: false },
+  { id: 'ms', displayName: 'Movespeed', checked: false },
+  { id: 'msflat', displayName: 'Base Movespeed', checked: false },
+]

@@ -2,7 +2,7 @@
 const props = defineProps<{
   params: any
 }>()
-console.log('💠 - params:', props.params)
+
 
 /* :style="{
       backgroundColor: `var(--color-${props.params.value.name.toLowerCase().replace(' ', '-')})`,

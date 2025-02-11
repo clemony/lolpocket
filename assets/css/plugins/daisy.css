@@ -1,5 +1,7 @@
+@import "tailwindcss";
+@plugin "daisyui";
 @plugin "daisyui/theme" {
-  name: 'light';
+  name: 'bumblebee';
   default: true;
   styled: true;
   prefersdark: false;
@@ -34,7 +36,10 @@
   --color-error: var(--color-domination);
   --color-error-content: var(--color-domination-light);
 
-  --radius-selector: var(--rounded-md) !important;
-  --radius-field: var(--rounded-md) !important;
-  --radius-box: var(--rounded-xl) !important;
+
+  --depth: 1;
+  --noise: 1;
+    --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
 }

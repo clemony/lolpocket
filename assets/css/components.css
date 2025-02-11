@@ -1,41 +1,7 @@
 @import 'tailwindcss';
 @import './theme.css';
 
-@utility tabby {
-  @apply bg-b1 border-x-b3 border-t-b3 z-20 rounded-t-xl border border-b-0;
-}
-@layer base {
-  .tabby-right:not(last-child):before,
-  .tabby-right:not(last-child):after {
-    content: '';
-    position: absolute;
-    left: 100%;
-    bottom: 0;
-    mask-image: linear-gradient(to top, red, red), radial-gradient(circle 14px at center, green 80%, transparent 81%);
-    mask-size:
-      14px 14px,
-      100%;
-    mask-position:
-      bottom left,
-      center;
-    mask-repeat: no-repeat, repeat;
-    mask-composite: subtract;
-  }
 
-  .tabby-right:not(last-child):before,
-  .tabby-left:not(first-child):before {
-    width: 24px;
-    height: 24px;
-    background-color: var(--b3);
-  }
-
-  .tabby-right:not(last-child):after,
-  .tabby-left:not(first-child):after {
-    width: 23px;
-    height: 23px;
-    background-color: var(--b1);
-  }
-}
 
 [data-tag='Support'] {
   background: var(--inspiration-light);
@@ -95,4 +61,14 @@
   .nav-menu-size {
     @apply min-w-160 w-160 max-w-160 max-h-100 min-h-100 h-100;
   }
+}
+
+.hover-tabs {
+  @apply btn btn-ghost !text-2 font-normal gap-3  hover:bg-b1 btn-md px-3 rounded-md hover:shadow-black/1 border hover:border-b3;
+  --depth:0;
+}
+
+.active-hover-tabs {
+  @apply  bg-b1 shadow-black/1 border border-b3;
+  --depth:0;
 }

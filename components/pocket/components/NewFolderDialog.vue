@@ -13,7 +13,7 @@ const toggleIcons = useToggle(openIcons)
 
 function handleSubmit() {
   const a = computed (() => {
-    return name.value == '' ? generateRandomString() : name.value
+    return name.value == '' ? generateMediumString() : name.value
   })
   const folder = {
     name: name.value,
@@ -68,7 +68,7 @@ function handleSubmit() {
 
         <div class="absolute right-3 border-0 flex items-center gap-2 h-13">
           <CloseButton class="btn-ghost " @click="name = ''" />
-          <RandomButton class="btn-ghost " @click="name = generateRandomString()" />
+          <RandomButton class="btn-ghost " @click="name = generateMediumString()" />
         </div>
       </div>
 

@@ -32,6 +32,12 @@ const db = [
     link: 'Spells',
     icon: 'shield',
   },
+  {
+    name: 'Summoners',
+    link: '',
+    icon: 'shield',
+    text: 'Look up your friends... or your foes.',
+  },
 ]
 </script>
 

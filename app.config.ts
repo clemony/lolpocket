@@ -27,6 +27,7 @@ export default defineAppConfig({
       'up': 'teenyicons:up-outline',
       'down-sm': 'teenyicons:down-small-outline',
       'right-sm': 'teenyicons:right-small-outline',
+      'right': 'teenyicons:right-outline',
       'up-sm': 'teenyicons:up-small-outline',
       'select': 'teenyicons:caret-vertical-small-outline',
 
@@ -35,9 +36,7 @@ export default defineAppConfig({
       'reset': 'mynaui:refresh',
       'gear': 'ph:gear-six',
       'lines': 'teenyicons:align-text-justify-outline',
-      'trash': 'formkit:trash',
       'info': 'teenyicons:info-outline',
-      'chain': 'ph:link-simple',
       'filter': 'teenyicons:filter-outline',
       'copy': 'teenyicons:layers-subtract-outline',
       'shuffle': 'qlementine-icons:shuffle-16',
@@ -49,13 +48,17 @@ export default defineAppConfig({
       'folders': 'teenyicons:folders-outline',
       'pin': 'iconoir:pin',
       'clip': 'teenyicons:attach-outline',
+      'trash': 'formkit:trash',
+      'archive': 'teenyicons:archive-outline',
 
-      // social
+      // external / social
       'at': 'teenyicons:at-outline',
       'riot': 'simple-icons:riotgames',
       'github': 'ph:github-logo',
       'id-card': 'icon-park-twotone:id-card-v',
       'mail': 'fluent:mail-48-regular',
+      'link': 'mingcute:external-link-line',
+      'chain': 'ph:link-simple',
 
       // pic
       'infinity': 'solar:infinity-outline',

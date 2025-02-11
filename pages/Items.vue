@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { categories } from 'shared/data/item/itemCategories'
-
-import { types } from 'shared/data/item/itemTypes'
 
 const ts = useTempStore()
 const ds = useDataStore()
@@ -83,14 +80,14 @@ function resetItems() {
       <ItemStatsList />
       <span class="h-1 w-full" />
       <CheckboxFilterList
-        :source="categories"
+        :source="itemCategories"
         @update:model="(e) => (ts.filterItemCats = e)"
       />
     </template>
 
     <template #2>
       <RadioFilterList
-        :types="types"
+        :types="itemTypes"
         class="pl-2"
         @update:model="(e) => (ts.filterItemTypes = e)"
       />

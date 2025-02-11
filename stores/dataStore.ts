@@ -1,3 +1,4 @@
+import type { GridApi } from 'ag-grid-community'
 import { defineStore } from 'pinia'
 // Define types for the JSON data
 

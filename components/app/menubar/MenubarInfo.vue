@@ -16,10 +16,11 @@ import { UseClipboard } from '@vueuse/components'
               </h5>
 
               <NuxtLink
-                to="/Docs"
-                class="flex flex-col  justify-center items-start"
+                to="/Docs" >
+              <NavigationMenuLink
                 :class="cn(navigationMenuTriggerStyle())"
-              >
+                class="flex flex-col !w-full  h-14 justify-center items-start"
+             >
                 <div class="flex gap-4 mb-2 items-center justify-start">
                   <icon name="qlementine-icons:book-16" class="size-5 stroke-[1.5]" />
                   <h5 class="!font-semibold">
@@ -27,13 +28,14 @@ import { UseClipboard } from '@vueuse/components'
                   </h5>
                 </div>
                 How this works.
+                </NavigationMenuLink>
               </NuxtLink>
 
-              <a
-                :class="navigationMenuTriggerStyle()"
+              <NavigationMenuLink
                 href="https://discord.gg/Jzuu7bYTZY"
                 target="_blank"
-                class="flex flex-col  justify-center items-start"
+                class="flex flex-col !w-full h-14 justify-center items-start"
+                :class="cn(navigationMenuTriggerStyle())"
               >
                 <div class="flex gap-3 mb-2 items-center">
                   <icon
@@ -43,13 +45,14 @@ import { UseClipboard } from '@vueuse/components'
                   <h5 class="!font-semibold">Discord</h5>
                 </div>
                 <p class="">Join the channel.</p>
-              </a>
+             </NavigationMenuLink>
 
               <NuxtLink
                 to="/About"
-                class=" px-2.5flex flex-col justify-center items-start"
-                :class="navigationMenuTriggerStyle()"
               >
+              <NavigationMenuLink
+                class=" !w-full h-14  px-2.5 flex flex-col justify-center items-start"
+                :class="navigationMenuTriggerStyle()">
                 <div class="flex gap-4 mb-2 items-center">
                   <icon
                     name="teenyicons:info-outline"
@@ -62,6 +65,7 @@ import { UseClipboard } from '@vueuse/components'
                 <p class="">
                   It's just cats and stuff.
                 </p>
+                </NavigationMenuLink>
               </NuxtLink>
             </div>
 
@@ -71,11 +75,12 @@ import { UseClipboard } from '@vueuse/components'
               </h5>
 
               <NuxtLink
-                v-for="link in settingBarLinks" :key="link.name"
-                :to="link.link"
-                class=" px-2.5 flex flex-col justify-center cursor-pointer items-start"
+                v-for="link in settingLinks" :key="link.name"
+                :to="link.link" >
+              <NavigationMenuLink
+                class=" !w-full h-14  px-2.5 flex flex-col justify-center cursor-pointer items-start"
                 :class="navigationMenuTriggerStyle()"
-              >
+             >
                 <div class="flex gap-4 mb-2 items-center">
                   <LittleIcon
                     :icon="link.icon"
@@ -88,12 +93,13 @@ import { UseClipboard } from '@vueuse/components'
                 <p>
                   {{ link.text }}
                 </p>
+                </NavigationMenuLink>
               </NuxtLink>
             </div>
           </div>
 
           <div class="w-full bg-b2/40 border border-t-b2 min-h-20 px-9 flex items-center justify-between rounded-b-xl border-x-b3 border-b-b3">
-            <a
+            <NavigationMenuLink
               href="https://github.com/clemony/lolpocket"
               target="_blank"
               class="flex dst  text-1 underline-offset-2 hover:underline items-center align-text-bottom font-mono"
@@ -103,9 +109,9 @@ import { UseClipboard } from '@vueuse/components'
                 class="size-5.5 mr-3 dst"
               />
               github @clemony
-            </a>
+            </NavigationMenuLink>
 
-            <div
+            <NavigationMenuLink
               class="flex gap-2 items-center "
             >
               <icon name="mail" class="size-6 dst stroke-[1.2]" />
@@ -116,7 +122,7 @@ import { UseClipboard } from '@vueuse/components'
                   <icon name="copy" class="text-nc !size-3.5 shrink-0" />
                 </button>
               </UseClipboard>
-            </div>
+           </NavigationMenuLink>
           </div>
         </div>
       </div>

@@ -171,7 +171,7 @@ defineExpose({
   <div class="size-full">
     <MenubarSpacer />
     <div class="flex size-full">
-      <GridBar />
+      <TableBar :api="ts.itemGridApi"/>
       <AgGridVue
         :grid-options="gridOptions"
         :theme="theme"

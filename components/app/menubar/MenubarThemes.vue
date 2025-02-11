@@ -15,25 +15,15 @@ function handleChange(newData, newName) {
 </script>
 
 <template>
-  <div v-bind="$attrs" class="collapse  w-full  group">
-    <input type="checkbox" class="collapse-input !h-9 " />
-    <div class="collapse-title btn !text-3 font-medium btn-md btn-ghost justify-start pl-4 gap-4 pr-4 !h-9 flex ">
-      <icon
-        name="teenyicons:paintbucket-outline"
-        class="!size-5.5 shrink-0"
-      />
+  <div v-bind="$attrs" class=" group">
 
-      Themes
-
-      <ExpandIndicator />
-    </div>
-    <div class="collapse-content  flex flex-col gap-1 mb-0">
+    <div class="flex gap-2 i-c">
       <label
         v-for="theme in themes"
         :key="theme.name"
-        class="btn  btn-md group/theme pl-9 gap-5 !text-3 justify-start font-normal first:mt-2"
+        class=" group/theme "
         :class="{
-          '!btn-active': as.dataTheme == theme.name,
+          ' rounded-md': as.dataTheme == theme.name,
           '!btn-ghost hover:bg-b2/60 hover:border-b2': as.dataTheme != theme.name,
         }"
       >
@@ -48,7 +38,7 @@ function handleChange(newData, newName) {
 
         <div
           :data-theme="theme.name"
-          class="text-bc border-neutral pointer-events-auto grid size-8 place-items-center rounded-lg border p-1 shadow-sm transition-all duration-300 z-0 group-hover/theme:opacity-100"
+          class="text-bc shrink-0 border-neutral pointer-events-auto grid size-8 place-items-center rounded-lg border p-1 shadow-sm transition-all duration-300 z-0 group-hover/theme:opacity-100"
           :style="{ background: theme.color }"
         >
           <LittleIcon
@@ -58,11 +48,7 @@ function handleChange(newData, newName) {
             :style="{ color: 'var(--bc) !important' }"
           />
         </div>
-        <div
-          class="flex items-center capitalize"
-        >
-          {{ theme.name }}
-        </div>
+
       </label>
     </div>
   </div>

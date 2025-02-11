@@ -5,7 +5,7 @@ export function useUserFolders() {
   const userFolders = computed<Folder[]>(() =>
     as.userFolders.map(folder => ({
       ...folder,
-      items: ps.pockets.filter(pocket => pocket.folderKey === folder.key),
+      items: ps.pockets.filter(pocket => pocket.location.folder === folder.key),
     })),
   )
 

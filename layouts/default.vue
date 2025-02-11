@@ -63,14 +63,15 @@ client.auth.onAuthStateChange(async (event, session) => {
 
     <LazyNewFolderDialog />
 
-    <div
-      class="bg-b1 transition-all duration-400 size-screen min-h-screen grid"
+    <div ref="app" id="app"
+      class="app-body bg-b1 transition-all duration-400 size-screen min-h-screen grid"
     >
       <MainMenubar />
       <div class="size-screen max-size-screen overflow-hidden">
         <slot />
       </div>
     </div>
+
   </main>
 </template>
 

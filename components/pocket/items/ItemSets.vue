@@ -100,7 +100,7 @@ watch(items, (newItemSets) => {
                 variant="simple"
                 class="mr-1 h-full px-0"
                 size="xs"
-                @click.stop="set.name = `${generateRandomName()} Set`"
+                @click.stop="set.name = `${generateMediumString()} Set`"
               >
                 <icon
                   name="qlementine-icons:shuffle-16"

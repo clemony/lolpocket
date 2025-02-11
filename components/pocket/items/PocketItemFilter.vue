@@ -1,6 +1,5 @@
 <!-- eslint-disable unused-imports/no-unused-vars -->
 <script setup lang="ts">
-import { stats, types } from 'shared/data/item'
 
 const props = defineProps<{
   pocket: pocket
@@ -47,7 +46,7 @@ const ts = useTempStore()
           <icon name="reset" class="!size-4 shrink-0 ml-2 " />
         </Button>
       </template>
-      <MenubarItem v-for="stat in stats" :key="stat.id" class="pointer-events-none">
+      <MenubarItem v-for="stat in itemStats" :key="stat.id" class="pointer-events-none">
         <label class="flex gap-3 pointer-events-auto" @click.stop>
           <input v-model="ts.filterItemStats" type="checkbox" :value="stat.id" class="hidden  peer" />
           <div class="size-4 relative">
@@ -65,7 +64,7 @@ const ts = useTempStore()
         </button>
       </template>
       <MenubarRadioGroup v-model:model-value="ts.filterItemTypes">
-        <MenubarRadioItem v-for="type in types" :key="type" :value="type">
+        <MenubarRadioItem v-for="type in itemTypes" :key="type" :value="type">
           {{ type }}
         </MenubarRadioItem>
       </MenubarRadioGroup>

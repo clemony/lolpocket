@@ -62,12 +62,12 @@ const classObject = computed (() => {
     <div class="flex">
       <PocketBar :pocket="pocket">
         <ul class="timeline timeline-vertical">
-          <li v-for="(comp, i) in pocketComponents" :key="i" v-tippy="comp.tip" class="h-20 group">
+          <li v-for="(comp, i) in pocketComponents" :key="i" v-tippy="comp.tip" class="h-20 group ">
             <hr v-if="i != 0" />
-            <label class="timeline-middle size-8 rounded-full  bg-b3/80 shadow-sm  [&_svg]:!text-nc z-0">
+            <label class="timeline-middle size-8 rounded-full  bg-b3/80 shadow-sm  [&_svg]:!text-nc z-0 ">
               <div class="grid place-items-center size-full rounded-full relative  !overflow-hidden">
 
-                <div class="size-8 translate-y-100 scale-y-0 bg-neutral z-0 transition-all absolute  duration-2000 " :class="{ '!translate-y-0 !scale-y-100': component == comp.ref }" />
+                <div class="size-8  translate-y-100 scale-y-0 bg-neutral z-0 transition-all absolute  duration-2000 " :class="{ '!translate-y-0 !scale-y-100': component == comp.ref }" />
 
                 <input v-model="component" type="radio" name="pocket-page" :value="comp.ref" class="hidden peer" />
 

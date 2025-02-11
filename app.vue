@@ -11,6 +11,7 @@ const useHead = useHeader()
 
 onMounted(async () => {
   document.documentElement.setAttribute('data-theme', 'light')
+  getPatch()
 })
 
 const scroll = ref(null)

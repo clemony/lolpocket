@@ -1,5 +1,16 @@
 import { hexoid } from 'hexoid'
 
+/* KEY
+1. createDefaultRune
+2. createDefaultShard
+3. newRuneSet
+4. resetRunes
+5. deleteRuneSet
+6. getShardClass
+7. getShardIcon
+8. getRunePathName
+*/
+
 export function createDefaultRune(): {
   id: number
   key: string
@@ -51,7 +62,7 @@ export function createDefaultShard(): {
 export function newRuneSet(key?) {
   const toID = hexoid()
   const newSet = {
-    name: `${generateRandomName()} Set`,
+    name: `${generateMediumString()} Set`,
     key: toID(),
     primary: {
       path: 'empty',
@@ -146,4 +157,15 @@ export function getShardIcon(shard: Shard) {
                   ? 'ph:spiral-light'
                   : 'icomoon-free:diamonds'
   return s
+}
+
+export function getRunePathName(runeId: number, runePaths: any[]): string | null {
+  for (const path of runePaths) {
+    for (const slot of path.slots) {
+      if (slot.runes.some(rune => rune.id === runeId)) {
+        return path.name // Return the name of the path if the rune is found
+      }
+    }
+  }
+  return null // Return null if the rune isn't found in any path
 }

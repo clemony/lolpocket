@@ -21,7 +21,7 @@ const pocket = ref(props.pocket)
 
     <template #name-buttons>
       <CloseButton @click="pocket.name = ''" />
-      <RandomButton v-tippy="'No brain? Meet Button.'" @click="pocket.name = generateRandomName()" />
+      <RandomButton v-tippy="'No brain? Meet Button.'" @click="pocket.name = generateMediumString()" />
     </template>
 
     <template #tags>

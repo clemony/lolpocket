@@ -7,5 +7,3 @@ export * from './item/formatEffects'
 export * from './item/formatItemStats'
 export * from './item/getItemsFromDatabase'
 export * from './patchNewData'
-export * from './useSupabase'
-declare namespace supabase {}

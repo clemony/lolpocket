@@ -5,7 +5,7 @@ function toggleColumnVisibility(colId: string, event: Event) {
   const inputElement = event.target as HTMLInputElement
   const isVisible = inputElement.checked
 
-  ps.headerApi.setColumnsVisible([colId], isVisible)
+
 
   const columnToUpdate = ps.columns.find(col => col.colId === colId)
   if (columnToUpdate) {

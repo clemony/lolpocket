@@ -1,3 +1,4 @@
+import type { GridApi } from 'ag-grid-community'
 import { defineStore } from 'pinia'
 
 export const usePocketStore = defineStore(
@@ -11,10 +12,9 @@ export const usePocketStore = defineStore(
     const filterText = ref('')
     const selectedRows = ref([])
     const tableSelectAll = ref()
-    const pocketApi = shallowRef()
-    const pinnedApi = shallowRef()
-    const headerApi = shallowRef()
-    const pinnedGrid = shallowRef()
+    const pocketGridApi = shallowRef<GridApi | null>(null)
+
+    const pinnedTopRowData = ref([])
     const pocketGrid = shallowRef()
     const columns = ref([])
 
@@ -42,11 +42,9 @@ export const usePocketStore = defineStore(
       selectedRows,
       tableSelectAll,
       updateSelectedRows,
-      pocketApi,
-      pinnedApi,
-      headerApi,
+      pocketGridApi,
       pocketGrid,
-      pinnedGrid,
+      pinnedTopRowData,
       pinnedFolder,
       allPockets,
       columns,

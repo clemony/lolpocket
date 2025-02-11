@@ -9,15 +9,15 @@ import { computed } from 'vue'
 import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<ContextMenuSubTriggerProps & {
-  as?: string,
-  class?: HTMLAttributes['class'],
-  icon?: string,
+  as?: string
+  class?: HTMLAttributes['class']
+  icon?: string
   iconClass?: string
- }>()
+}>()
 
 const delegatedProps = computed(() => {
-  const { class: _, as = 'div', ...delegated } = props;
-  return { as, ...delegated };
+  const { class: _, as = 'div', ...delegated } = props
+  return { as, ...delegated }
 })
 
 const forwardedProps = useForwardProps(delegatedProps)
@@ -32,9 +32,9 @@ const forwardedProps = useForwardProps(delegatedProps)
     )"
   >
     <div class="size-7 overflow-hidden grid place-items-center">
-  
     </div>
     <slot />
-    <LittleIcon icon="stash:chevron-left-light" class="absolute group-data-[state=open]:-scale-x-100   transition-all duration-50 right-2 size-6 text-bc shrink-0 opacity-100" />
+    <LittleIcon icon="stash:chevron-right-light" class="absolute  right-2 size-6 text-bc shrink-0 opacity-100" />
   </ContextMenuSubTrigger>
 </template>
+<!-- group-data-[state=open]:-scale-x-100   transition-all duration-50 -->

@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { stats, types } from 'shared/data/item'
 
 const props = defineProps<{
   pocket: pocket
@@ -21,7 +20,7 @@ const ts = useTempStore()
         </button>
 
         <ul class="flex flex-col gap-2">
-          <li v-for="type in types" :key="type">
+          <li v-for="type in itemTypes" :key="type">
             <label class=" flex gap-4 items-center">
               <input v-model="ts.filterItemTypes" type="radio" :value="type" class="radio radio-neutral radio-xs" />
               {{ type }}
@@ -38,7 +37,7 @@ const ts = useTempStore()
       </Button>
 
       <ul class="flex flex-col gap-2">
-        <li v-for="stat in stats" :key="stat.id" class="pointer-events-none">
+        <li v-for="stat in itemStats" :key="stat.id" class="pointer-events-none">
           <label class="flex gap-4 pointer-events-auto" @click.stop>
             <input v-model="ts.filterItemStats" type="checkbox" :value="stat.id" class="checkbox-neutral peer" />
 

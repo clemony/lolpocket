@@ -8,9 +8,11 @@ import TableTags from 'components/table/components/TableTags.vue'
 import TableItem from 'components/table/components/TableItem.vue'
 import TableRune from 'components/table/components/TableRune.vue'
 import TableRole from 'components/table/components/TableRole.vue'
+import TableDate from 'components/table/components/TableDate.vue'
 import TableChampion from 'components/table/components/TableChampion.vue'
 import TableLink from 'components/table/components/TableLink.vue'
 import TableKey from 'components/table/components/TableKey.vue'
+import TablePin from 'components/table/components/TablePin.vue'
 import GridNoRows from 'components/table/components/NoPocketsOverlay.vue'
 
 defineExpose({
@@ -22,24 +24,27 @@ defineExpose({
   TableRune,
   TableChampion,
   TableItem,
+  TableDate,
   TableTags,
   TableRole,
+  TablePin,
 })
 
 const ps = usePocketStore()
+const ds = useDataStore()
 const theme = ref(pocketTheme)
 
 const rowData = ref<pocket[] | null>([...ps.pockets])
 
 const pocketData = ref(null)
 const selectData = ref(null)
-
 const gridApi = shallowRef<GridApi | null>(null)
 
 async function onGridReady(params: GridReadyEvent) {
   await params.api
   gridApi.value = params.api
-  ps.pocketApi = gridApi.value
+  ps.pocketGridApi = gridApi.value
+
 }
 
 function handleRightClick() {
@@ -48,6 +53,9 @@ function handleRightClick() {
     gridApi.value.setGridOption('rowData', rowData.value)
   })
 }
+
+  const pinnedKeys = ps.pinnedTopRowData.map(p => p.key)
+
 
 function refreshGrid() {
   selectData.value = null
@@ -58,10 +66,7 @@ function refreshGrid() {
 
 const gridOptions: GridOptions<pocket> = {
   columnHoverHighlight: false,
-  autoSizeStrategy: {
-    type: 'fitGridWidth',
-    defaultMinWidth: 51,
-  },
+  pinnedTopRowData: ps.pinnedTopRowData,
   rowHeight: 70,
   rowSelection: {
     mode: 'multiRow',
@@ -69,58 +74,131 @@ const gridOptions: GridOptions<pocket> = {
     headerCheckbox: false,
     enableClickSelection: true,
   },
-  /* rowClassRules: {
-  '!bg-b2': (params) => {
-    const cell =  ref(selectData.value)
-    return cell.value && params.data.key === cell.value.key
-    }
+/*    rowClassRules: {
+  '!hidden': (params) => {return pinnedKeys.includes(params.data.key) ? true : false}
 }, */
   defaultColDef: {
-    width: 51,
-    minWidth: 51,
-    //suppressHeaderMenuButton: true,
+    width: 58,
+    minWidth: 58,
+    suppressHeaderMenuButton: true,
     cellClass: 'cell-class py-2 items-center',
     initialHide: false,
-    //suppressHeaderFilterButton: true,
+    suppressHeaderFilterButton: true,
     resizable: false,
+    context: {
+      group: false,
+    },
   },
   defaultColGroupDef: {
     marryChildren: true,
+    context: {
+      group: true,
+    },
   },
 }
 const colDefs = ref<(ColDef | ColGroupDef)[]>([
-  { field: 'icon', headerName: '', cellRenderer: TableIcon, sortable: false, valueGetter: p => p.data.icon },
-  { field: 'name', cellRenderer: TableLink, width: 140, sortable: false, cellClass: 'font-medium  ', headerComponentParams: {
-    innerHeaderComponentParams: {
-      displayName: 'Pocket',
-    },
-  } },
+  {
+    field: 'icon',
+    headerName: 'Icon',
+    cellRenderer: TableIcon,
+    sortable: false,
+    valueGetter: p => p.data.icon,
+    width: 51,
+    suppressMovable: true,
+  },
+
+  {
+    field: 'name',
+    headerName: 'Name',
+    cellRenderer: TableLink,
+    width: 180,
+    cellClass: 'font-medium  ',
+    suppressMovable: true,
+  },
   {
     headerName: 'Role',
+    groupId: 'Role',
     children: [
-      { field: '', headerName: '', sortable: false, valueGetter: p => p.data.roles[0], cellRenderer: TableRole },
-      { field: '', sortable: false, width: 10, suppressMovable: true },
+      {
+        field: '',
+        headerName: '',
+        valueGetter: p => p.data.roles[0],
+        cellRenderer: TableRole,
+      },
+      {
+        field: '',
+        width: 10,
+        suppressMovable: true,
+      },
     ],
   },
   {
     headerName: 'Champions',
+    groupId: 'Champions',
     children: [
-      { field: '', valueGetter: p => p.data.champions.children[0], cellRenderer: TableChampion },
-      { field: '', valueGetter: p => p.data.champions.children[1], cellRenderer: TableChampion },
-      { field: '', valueGetter: p => p.data.champions.children[2], cellRenderer: TableChampion },
-      { field: '', sortable: false, width: 10, suppressMovable: true },
+      {
+        field: '',
+        valueGetter: p => p.data.champions.children[0],
+        cellRenderer: TableChampion,
+      },
+      {
+        field: '',
+        valueGetter: p => p.data.champions.children[1],
+        cellRenderer: TableChampion,
+      },
+      {
+        field: '',
+        valueGetter: p => p.data.champions.children[2],
+        cellRenderer: TableChampion,
+      },
+      { field: '', width: 10, suppressMovable: true },
     ],
   },
   {
+    groupId: 'Items',
     headerName: 'Items',
     children: [
-      { field: '1', headerName: '', valueGetter: p => p.data.items.sets[0].items[0], cellRenderer: TableItem },
-      { field: '2', headerName: '', valueGetter: p => p.data.items.sets[0].items[1], cellRenderer: TableItem },
-      { field: '3', headerName: '', valueGetter: p => p.data.items.sets[0].items[2], cellRenderer: TableItem },
-      { field: '4', headerName: '', valueGetter: p => p.data.items.sets[0].items[3], cellRenderer: TableItem },
-      { field: '5', headerName: '', valueGetter: p => p.data.items.sets[0].items[4], cellRenderer: TableItem },
-      { field: '6', headerName: '', valueGetter: p => p.data.items.sets[0].items[5], cellRenderer: TableItem },
-      { field: '', sortable: false, width: 10, suppressMovable: true },
+      {
+        field: '1',
+        headerName: '',
+        valueGetter: p => p.data.items.sets[0].items[0],
+        cellRenderer: TableItem,
+      },
+      {
+        field: '2',
+        headerName: '',
+        valueGetter: p => p.data.items.sets[0].items[1],
+        cellRenderer: TableItem,
+      },
+      {
+        field: '3',
+        headerName: '',
+        valueGetter: p => p.data.items.sets[0].items[2],
+        cellRenderer: TableItem,
+      },
+      {
+        field: '4',
+        headerName: '',
+        valueGetter: p => p.data.items.sets[0].items[3],
+        cellRenderer: TableItem,
+      },
+      {
+        field: '5',
+        headerName: '',
+        valueGetter: p => p.data.items.sets[0].items[4],
+        cellRenderer: TableItem,
+      },
+      {
+        field: '6',
+        headerName: '',
+        valueGetter: p => p.data.items.sets[0].items[5],
+        cellRenderer: TableItem,
+      },
+      {
+        field: '',
+        width: 10,
+        suppressMovable: true,
+      },
     ],
   }, /*
   {
@@ -133,6 +211,7 @@ const colDefs = ref<(ColDef | ColGroupDef)[]>([
   }, */
   {
     headerName: 'Spells',
+    groupId: 'Spells',
     children: [
       {
         field: 'D',
@@ -169,6 +248,44 @@ const colDefs = ref<(ColDef | ColGroupDef)[]>([
     cellRenderer: TableTags,
     valueGetter: p => p.data.tags,
   },
+  {
+    headerName: 'Updated',
+    field: 'dateUpdated',
+    width: 100,
+    maxWidth: 200,
+    minWidth: 50,
+    cellRenderer: TableDate,
+    valueFormatter: (params) => {
+      const { date, time, patch } = params.value
+      return `${patch}, ${date}, ${time}`
+    },
+    filterValueGetter: (params) => {
+      const dateObj = params.data.dateUpdated[0]
+      return `${dateObj.patch}, ${dateObj.date}, ${dateObj.time}`
+    },
+  },
+  {
+    headerName: 'Created',
+    field: 'dateCreated',
+    width: 100,
+    maxWidth: 200,
+    minWidth: 50,
+    cellRenderer: TableDate,
+    valueFormatter: (params) => {
+      const { date, time, patch } = params.value
+      return `${patch}, ${date}, ${time}`
+    },
+    filterValueGetter: (params) => {
+      const dateObj = params.data.dateUpdated[0]
+      return `${dateObj.patch}, ${dateObj.date}, ${dateObj.time}`
+    },
+  },
+  {
+    field: '',
+    headerName: 'Pin',
+    cellRenderer: TablePin,
+    valueGetter: p => p.data.tags,
+  },
 ])
 
 const getRowId = ref<GetRowIdFunc>((params: GetRowIdParams) =>
@@ -180,29 +297,48 @@ watch(ps.pockets, (newValue, oldValue) => {
     gridApi.value.setGridOption('rowData', ps.pockets)
   }
 })
+
+
+
+
 ModuleRegistry.registerModules([AllCommunityModule])
+
 function onMouseEnter(event) {
-  pocketData.value = event.node.data
+  //console.log("💠 - onMouseEnter - event:", event)
+
 }
+
+function handleClick(event) {
+  console.log('💠 - event:', event)
+  event.node.setSelected(true)
+  event.node.isSelected()
+  pocketData.value = event.node.data
+  //console.log('💠 - handleClick -  event.node.data:', event.node.data)
+}
+
+const pocketContextTarget = ref()
 </script>
 
 <template>
+
   <PocketContextMenu class="size-full" :pocket-data="pocketData" @update:grid="refreshGrid()">
     <AgGridVue
       :grid-options="gridOptions"
       :theme="theme"
       :column-defs="colDefs"
-      class="size-full  rounded-2xl   px-12 "
+      class=".pocket-grid size-full  rounded-2xl   px-12 "
       :tooltip-show-delay="400"
       :no-rows-overlay-component="GridNoRows"
       :row-data="rowData"
+      :pinned-top-row-data="ps.pinnedTopRowData"
       :get-row-id="getRowId"
-      @click.right="handleRightClick()"
-      @cell-mouse-over="onMouseEnter($event)"
       @grid-ready="onGridReady"
+      @cell-mouse-over="onMouseEnter($event)"
+      @cell-context-menu="handleClick($event)"
     >
     </AgGridVue>
   </PocketContextMenu>
+
 </template>
 
 <style>

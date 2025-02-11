@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 .ghostClass {
-  @apply border-b2 bg-b2/30 aspect-square size-16 cursor-pointer items-center justify-center gap-2 self-center rounded-md border opacity-70 shadow-xs;
+  @apply border-b2 bg-b2/30 aspect-square size-full cursor-pointer items-center justify-center gap-2 self-center rounded-md border opacity-70 shadow-xs;
 }
 
 .sortable-drag {
@@ -18,5 +18,17 @@
 }
 
 .sortable-ghost {
-  @apply size-18 rounded-lg border-b2 ring ring-neutral/90 ring-offset-1 ring-offset-b2;
+  @apply size-full rounded-lg border-b2 ring ring-neutral/90 ring-offset-1 ring-offset-b2;
+}
+
+.module-ghost {
+  @apply size-full bg-b2/20 rounded-xl inset-shadow-sm;
+
+  &::before{
+    @apply opacity-0;
+  }
+}
+
+.module-drag {
+  @apply w-full h-80 bg-b1 rounded-xl border-b3 shadow-smooth !opacity-95;
 }

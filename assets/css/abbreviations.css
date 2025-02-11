@@ -13,9 +13,6 @@
 .f-sb {
 @apply font-semibold;
 }
-.f-b {
-@apply font-bold;
-}
 .f-bl {
 @apply font-black;
 }
@@ -65,5 +62,14 @@
 
 .point-none{
     @apply pointer-events-none;
+}
+
+.point-auto{
+    @apply pointer-events-auto;
+}
+
+/*shadow*/
+.dst {
+  @apply drop-shadow-text;
 }
 }

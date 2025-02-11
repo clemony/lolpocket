@@ -21,7 +21,7 @@ function update(event, i) {
           class="rounded-lg shrink-0 size-full overflow-hidden  justify-end items-start flex pr-2 pt-1"
           :style="{
             backgroundImage: `url(${pocket.icon})`,
-            backgroundSize: pocket.icon == '/img/champion/centered/-1.webp' ? '0%' : '350%',
+            backgroundSize: pocket.icon == '/img/champion/centered/1.webp' ? '0%' : '350%',
             backgroundPosition: 'center 20%' }"
         >
           <LazyRoleSelect

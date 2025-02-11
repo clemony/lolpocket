@@ -4,7 +4,7 @@
 
 <template>
   <button
-    class="rounded-lg  btn btn-outline  border-b3 hover:ring-neutral/50 flex h-10 bg-b1/80  min-w-48 w-48 cursor-pointer items-center  !px-2 !py-0   hover:bg-b1 hover:ring-1 group"
+    class="rounded-lg  btn btn-outline  border-b3 hover:ring-neutral/50 flex h-10 bg-b1/80  min-w-48 w-48 cursor-pointer items-center  !px-2 !py-0  mb-1 hover:bg-b1 hover:ring-1 group"
     @click="ts.commandOpen = true"
   >
     <icon

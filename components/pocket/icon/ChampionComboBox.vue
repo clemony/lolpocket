@@ -12,6 +12,10 @@ const open = ref(false)
 function selectRandomChamp() {
   ts.drawerChampSelectDropdown = useRandom(ds.championNames)
 }
+
+onMounted (() => {
+  selectRandomChamp()
+})
 </script>
 
 <template>

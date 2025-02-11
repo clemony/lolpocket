@@ -2,7 +2,7 @@
 const props = defineProps<{
   params: any
 }>()
-console.log('💠 - params:', props.params)
+
 </script>
 
 <template>

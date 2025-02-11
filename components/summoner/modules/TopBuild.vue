@@ -26,45 +26,54 @@ const colors = [getColorFromVariable('--color-b3'), '#a3be8c']
 </script>
 
 <template>
-  <li class="list-row items-center">
+  <li v-if="index < 4" class="items-center  p-0 group">
     <!--      <div class="text-[2.3rem] font-thin opacity-30 tabular-nums mr-4">
         0{{ index }}
       </div> -->
-    <div>
+    <!--  <div class="flex flex-col gap-2"> -->
+    <div class="flex gap-3">
       <PocketIcon class="size-14 rounded-lg **:rounded-lg" :image="pocket.icon" />
-    </div>
-    <div class="list-col-grow text-5 ">
-      <div class="capitalize  mb-1 tracking-tight">
-        {{ pocket.name }}
-      </div>
-      <div class="text-xs uppercase  opacity-60">
+
+      <div class="list-col grow">
+        <div class="capitalize f-sb   text-4  tracking-tight">
+          {{ pocket.name }}
+        </div>
+
         <template v-for="(champion, i) in pocket.champions.children" :key="champion.name">
-          <span v-if="i <= 2" class="text-1 tracking-wide font-medium scale-x-110">{{ champion.name }}<span v-if="i != 2 && i != pocket.champions.children.length">, </span></span>
+          <span v-if="i <= 2" class=" text-1 opacity-80 uppercase font-medium  scale-x-110">{{ champion.name }}<span v-if="i != 2 && i != pocket.champions.children.length">, </span></span>
         </template>
       </div>
+
+      <div class="relative -mt-1">
+        <Donut
+          :datasets="datasets"
+          :colors="colors"
+          :labels="labels"
+          type="gauge"
+          aria="Recent winrate in percentage"
+          class="!size-14"
+        />
+
+        <span class="text-bc absolute top-4.5 left-3.25 !text-1 opacity-90 f-sb  drop-shadow-sm"> {{ winrate }}% </span>
+      </div>
+
+      <div class="h-full m-auto">
+        <icon name="right" class="size-3 stroke-[1.8]" />
+      </div>
+
+      <!--
+       </div><div v-if="pocket.items.sets" class="flex h-full w-auto gap-1">
+        <template
+          v-for="(item, i) in pocket.items.sets[0].items" :key="item.id"
+        >
+          <div v-if="i < 6" class="size-8 aspect-square">
+            <img :src="`/img/item/${item.id}.webp`" class="size-8  aspect-square rounded-md" />
+          </div>
+        </template>
+      </div> -->
     </div>
 
-    <div v-if="pocket.items.sets" class="grid grid-cols-3 grid-flow-row grid-rows-2 h-full w-auto">
-      <template
-        v-for="(item, index) in pocket.items.sets[0].items" :key="item.id"
-      >
-        <div v-if="index < 6" class="size-full aspect-square">
-          <img :src="`/img/item/${item.id}.webp`" class="h-full w-auto aspect-square rounded-lg" />
-        </div>
-      </template>
-    </div>
-    <div class="relative -mt-1">
-      <Donut
-        :datasets="datasets"
-        :colors="colors"
-        :labels="labels"
-        type="gauge"
-        aria="Recent winrate in percentage"
-        class="size-18"
-      />
-
-      <span class="text-bc absolute top-5 left-5 text-5 opacity-60 font-thin font-medium drop-shadow-sm"> {{ winrate }} </span>
-    </div>
+    <Separator class="group-last-of-type:hidden mt-2.5 mb-0.25" />
   </li>
 </template>
 
