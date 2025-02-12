@@ -4,6 +4,7 @@ import RankedGhost from 'components/summoner/modules/ghost/RankedGhost.vue'
 import MasteryGhost from 'components/summoner/modules/ghost/MasteryGhost.vue'
 import NotesGhost from 'components/summoner/modules/ghost/NotesGhost.vue'
 import RankedModule from 'components/summoner/modules/module/RankedModule.vue'
+import ChampionMastery from 'components/summoner/modules/module/ChampionMastery.vue'
 
 export const allUserModules = [
   {
@@ -18,7 +19,7 @@ export const allUserModules = [
   },
   {
     name: 'championmastery',
-    component: markRaw(TopBuilds),
+    component: markRaw(ChampionMastery),
     ghost: markRaw(MasteryGhost),
   },
   {
