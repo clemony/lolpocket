@@ -1,6 +1,3 @@
-import TopBuilds from 'components/summoner/modules/TopBuilds.vue'
-import TopBuildsGhost from 'components/summoner/modules/TopBuildsGhost.vue'
-
 export const defaultUser = {
   name: 'Summoner',
   image: ref(null),
@@ -23,12 +20,3 @@ export async function signOut() {
   const client = useSupabaseClient()
   await client.auth.signOut()
 }
-
-export const allUserModules = [
-
-  {
-    name: 'Top Builds',
-    component: markRaw(TopBuilds),
-    ghost: markRaw(TopBuildsGhost),
-  },
-]

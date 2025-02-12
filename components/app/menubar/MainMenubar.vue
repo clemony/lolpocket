@@ -56,7 +56,7 @@ const isOpen = ref('closed')
           </NuxtLink>
         </NavigationMenuItem>
 
-        <NavigationMenuViewport class="top-4 left-14 rounded-xl" />
+        <NavigationMenuViewport class="top-2 left-14 rounded-xl" />
       </NavigationMenuList>
     </NavigationMenu>
 

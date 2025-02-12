@@ -26,3 +26,17 @@
 .badge-neutral {
   @apply bg-neutral !text-nc;
 }
+
+:root {
+  .tab{
+  --tab-border-color: var(--color-b3) !important;
+  --tab-border-colors: var(--color-b3) !important;
+  	--tab-paddings: 0 !important;
+    --tab-p: 0 !important;
+  }
+    --depth: 1;
+  --noise: 1;
+    --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
+}

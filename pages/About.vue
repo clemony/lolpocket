@@ -27,10 +27,14 @@ const faq = [
     <!-- prettier-ignore -->
     <div class="grid grid-cols-[auto_450px] gap-[20%]">
       <div class="">
-        <h1 class="!text-9 dst tracking-wider">
-          n/faq
+        <div class="flex gap-2 items-end relative">
+         
+          
+        <h1 class="!text-9 dst tracking-wider relative">
+          faq
+          <p class="absolute -bottom-3 right-3 text-2 font-normal text-nowrap tracking-tight">not very</p>
         </h1>
-
+</div>
         <div class="mt-8 text-4 grid grid-cols-[30px_1fr] gap-4 grid-flow-row items-center [&_span]:text-5">
           <span class="font-semibold">Q:</span>
           <p class="flex gap-4">

@@ -15,10 +15,12 @@
           >
             <LayoutSpacer class="!h-5" />
 
+              <Card class="h-51 px-4 py-3">
             <RankCard title="Solo/Duo" queue="soloDuo" />
-
+  </Card>
+              <Card class="h-51 px-4 py-3">
             <RankCard title="Flex" queue="flex" />
-
+  </Card>
             <!--  <ChampTabs /> -->
           </div>
         </ScrollArea>

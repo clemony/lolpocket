@@ -7,7 +7,7 @@ const ps = usePocketStore()
 
 <template>
   <ModuleTemplate title="Best Recent Builds">
-    <ul v class="list bg-base-100 rounded-lg shadow-sm gap-3 pt-3.5 pb-1">
+    <ul  class="px-2.5 pt-3.5">
       <TopBuild v-for="(pocket, index) in ps.pockets" :key="pocket.key" :index="index" :pocket="pocket" />
     </ul>
   </ModuleTemplate>

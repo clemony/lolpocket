@@ -31,7 +31,7 @@ const colors = [getColorFromVariable('--color-b3'), color1.value]
 </script>
 
 <template>
-  <Card class="h-51 px-4 py-3">
+
     <p class="text-4 mt-2 ml-2 font-medium drop-shadow-sm">
       {{ `Ranked ${props.title}` }}
     </p>
@@ -82,7 +82,7 @@ const colors = [getColorFromVariable('--color-b3'), color1.value]
         </div>
       </div>
     </div>
-  </Card>
+
 </template>
 
 <style scoped>

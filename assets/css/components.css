@@ -72,3 +72,49 @@
   @apply  bg-b1 shadow-black/1 border border-b3;
   --depth:0;
 }
+
+
+
+
+
+.tab-fix:before {
+  content: "";
+  position: absolute !important;
+  left: 100% !important;
+  bottom: 0 !important;
+  width: 24px !important;
+  height: 24px !important;
+  background-color: var(--color-b1);
+  z-index:1;
+  mask-image: linear-gradient(to top, red, red), radial-gradient(circle
+        15px at center, green 86%, transparent 87%) !important;
+  mask-size:
+    12px 12px,
+    100% !important;
+  mask-position:
+    bottom left,
+    center !important;
+  mask-repeat: no-repeat, repeat !important;
+  mask-composite: subtract !important;
+}
+
+.tab-fix:after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  width: 24px;
+  height: 24px;
+  background-color:  var(--color-b1);
+z-index:1;
+  mask-image: linear-gradient(to top, red, red), radial-gradient(circle
+        15px at center, green 85%, transparent 86%);
+  mask-size:
+    12px 12px,
+    100%;
+mask-position:
+    bottom right,
+    center;
+  mask-repeat: no-repeat, repeat;
+  mask-composite: subtract;
+}
