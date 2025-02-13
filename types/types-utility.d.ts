@@ -2,6 +2,7 @@ import type { JwtPayload } from 'jwt-decode'
 import type { RefOrElement } from 'vue-draggable-plus'
 
 declare global {
+
   interface AuthRoleJwtPayload extends JwtPayload {
     app_metadata: {
       user_role: string
@@ -38,6 +39,11 @@ declare global {
 
   interface FolderData extends Folder {
     pockets: pocket[]
+  }
+
+  interface Note {
+    title: string
+    content: string
   }
 
   interface Category {

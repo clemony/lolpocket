@@ -3,7 +3,9 @@ import { summoner } from 'shared/data/summonerData'
 
 const props = defineProps<{
   queue: string
-  title: string
+  title?: string
+  class?: HTMLAttributes['class']
+
 }>()
 
 const queue = computed(() => {
@@ -31,12 +33,12 @@ const colors = [getColorFromVariable('--color-b3'), color1.value]
 </script>
 
 <template>
-
-    <p class="text-4 mt-2 ml-2 font-medium drop-shadow-sm">
+  <div :class="cn('size-fit', props.class)">
+    <p class="text-4 mt-2 ml-2 font-medium drop-shadow-sm ranked-title">
       {{ `Ranked ${props.title}` }}
     </p>
 
-    <div class="relative grid grid-cols-[1.1fr_1fr_1fr] place-items-center">
+    <div class="ranked-grid relative grid grid-cols-[1.1fr_1fr_1fr] place-items-center">
       <div class="grid size-36 place-items-center">
         <img
           :src="`/img/crests/${queue.rank}.webp`"
@@ -82,7 +84,7 @@ const colors = [getColorFromVariable('--color-b3'), color1.value]
         </div>
       </div>
     </div>
-
+  </div>
 </template>
 
 <style scoped>

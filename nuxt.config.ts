@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     'nuxt-aos',
     'nuxt-svgo',
+    'nuxt-tiptap-editor',
   ],
 
   /*   image: {

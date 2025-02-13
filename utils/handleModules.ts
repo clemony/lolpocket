@@ -1,15 +1,18 @@
-import TopBuilds from 'components/summoner/modules/module/TopBuilds.vue'
+import TopBuildsModule from 'components/summoner/modules/module/TopBuildsModule.vue'
 import TopBuildsGhost from 'components/summoner/modules/ghost/TopBuildsGhost.vue'
 import RankedGhost from 'components/summoner/modules/ghost/RankedGhost.vue'
-import MasteryGhost from 'components/summoner/modules/ghost/MasteryGhost.vue'
+import ChampionMasteryGhost from 'components/summoner/modules/ghost/ChampionMasteryGhost.vue'
 import NotesGhost from 'components/summoner/modules/ghost/NotesGhost.vue'
 import RankedModule from 'components/summoner/modules/module/RankedModule.vue'
-import ChampionMastery from 'components/summoner/modules/module/ChampionMastery.vue'
+import ChampionMasteryModule from 'components/summoner/modules/module/ChampionMasteryModule.vue'
+import ChallengeOverviewGhost from 'components/summoner/modules/ghost/ChallengeOverviewGhost.vue'
+import ChallengeOverviewModule from 'components/summoner/modules/module/ChallengeOverviewModule.vue'
+import NotesModule from 'components/summoner/modules/module/NotesModule.vue'
 
 export const allUserModules = [
   {
     name: 'topbuilds',
-    component: markRaw(TopBuilds),
+    component: markRaw(TopBuildsModule),
     ghost: markRaw(TopBuildsGhost),
   },
   {
@@ -19,13 +22,18 @@ export const allUserModules = [
   },
   {
     name: 'championmastery',
-    component: markRaw(ChampionMastery),
-    ghost: markRaw(MasteryGhost),
+    component: markRaw(ChampionMasteryModule),
+    ghost: markRaw(ChampionMasteryGhost),
   },
   {
     name: 'usernotes',
-    component: markRaw(TopBuilds),
+    component: markRaw(NotesModule),
     ghost: markRaw(NotesGhost),
+  },
+  {
+    name: 'challengecategories',
+    component: markRaw(ChallengeOverviewModule),
+    ghost: markRaw(ChallengeOverviewGhost),
   },
 ]
 
@@ -51,3 +59,32 @@ export function resetModules() {
   const as = useAccountStore()
   as.userBoardModules = Array.from({ length: 9 }, () => null)
 }
+
+export const challengeCats = [
+  {
+    name: 'expertise',
+    icon: 'expertise',
+    color: 'var(--color-domination)',
+  },
+  {
+    name: 'veterancy',
+    icon: 'veterancy',
+    color: 'var(--color-sorcery)',
+  },
+  {
+    name: 'collection',
+    icon: 'collection',
+    color: 'var(--color-precision)',
+
+  },
+  {
+    name: 'imagination',
+    icon: 'imagination',
+    color: 'var(--color-inspiration)',
+  },
+  {
+    name: 'teamwork & strategy',
+    icon: 'teamwork',
+    color: 'var(--color-resolve)',
+  },
+]

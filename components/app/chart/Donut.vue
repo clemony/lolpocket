@@ -13,7 +13,11 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
   type?: string
   cutout?: string
+  noTooltip?: boolean
 }>()
+Chart.defaults.datasets.doughnut.borderRadius = 100
+Chart.defaults.datasets.doughnut.borderJoinStyle = 'round'
+Chart.defaults.datasets.doughnut.hoverBorderWidth = 1
 
 Chart.register(Tooltip, DoughnutController, ArcElement)
 
@@ -26,7 +30,7 @@ const chartData = {
     plugins: {
       tooltip: {
         enabled: false,
-        external: externalTooltip,
+        external: props.noTooltip ? null : externalTooltip,
       },
     },
     elements: {
@@ -44,7 +48,6 @@ const chartData = {
 
 <template>
   <Doughnut
-    ref="chart"
     :data="chartData"
     :options="chartData.options"
     :aria-label="props.aria"

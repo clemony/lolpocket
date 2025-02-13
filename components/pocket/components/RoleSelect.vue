@@ -22,13 +22,13 @@ const roles = [
         class="flex   aspect-square rounded-lg px-1 top-1.5 right-2 hover:bg-neutral/50 size-10"
       >
         <component
-          :is="`i-${pocket.roles[0].icon}`"
+          :is="`i-roles-${pocket.roles[0].icon}`"
           v-if="pocket.roles[0].name"
           :key="pocket.roles[0].name"
           v-tippy="pocket.roles[0].name"
           class="size-6.5 drop-shadow-text focus:outline-0 shrink-0 !text-3 text-white/70"
         />
-        <i-all-lanes v-else class="size-6 shrink-0 dst text-white/80" />
+        <i-roles-all-lanes v-else class="size-6 shrink-0 dst text-white/80" />
       </Button>
     </DropdownMenuTrigger>
 

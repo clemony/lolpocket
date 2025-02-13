@@ -39,6 +39,8 @@ export const useAccountStore = defineStore(
       const filter = userBoardModules.value.filter(m => m != null)
       return filter.length
     })
+    const userNotes = ref<Note[]>([])
+
     const reducedMotion = ref(false)
     const colorBlindMode = ref(false)
 
@@ -61,6 +63,7 @@ export const useAccountStore = defineStore(
       userFolders,
       userBoardModules,
       userModuleCount,
+      userNotes,
 
       // settings
       themeClass,

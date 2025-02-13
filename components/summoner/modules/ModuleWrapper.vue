@@ -8,8 +8,6 @@ const props = defineProps<{
 }>()
 
 const as = useAccountStore()
-console.log('💠 - userBoardModules:', as.userModuleCount)
-console.log('💠 - onAdd - as.userBoardModules:', as.userBoardModules)
 function onAdd(event: any) {
   console.log('💠 - onAdd - event:', event)
 
@@ -33,7 +31,7 @@ function onAdd(event: any) {
   const filter = computed (() => {
   const a = as.userBoardModules.filter((m) => m != null)
 return a.map((m) => m.name)
-})
+  })
 
   if(filter.value.includes(undefined)){
     const a = as.userBoardModules.findIndex((m) => m.name == undefined)
@@ -66,12 +64,12 @@ return a.map((m) => m.name)
         dragClass: 'module-drag',
       },
     ]"
-    :class="cn('grid grid-cols-[repeat(auto-fill,minmax(400px,1fr))] grid-rows-[repeat(auto-fill,minmax(300px,1fr))] gap-6 px-14  auto-rows-min h-[84vh] max-h-[88vh] overflow-y-auto min-h-0', props.class) "
+    :class="cn('grid grid-cols-[repeat(auto-fill,minmax(400px,1fr))] grid-rows-[repeat(auto-fill,minmax(300px,1fr))] gap-6 px-14  auto-rows-min h-[84vh] max-h-[88vh] overflow-y-auto min-h-0 p-i-c', props.class) "
     ghost-class="module-ghost"
     drag-class="module-drag"
     @add="onAdd"
   >
-    <div v-for="(module, i) in as.userBoardModules" :key="`module-${i}`" class="size-full overflow-hidden select-none">
+    <div v-for="(module, i) in as.userBoardModules" :key="`module-${i}`" class="size-full overflow-hidden select-none grid p-i-c">
       <template v-if="module?.name">
         <component :is="moduleRegistry[module?.name]" :module-name="module?.name" :index="i" />
       </template>

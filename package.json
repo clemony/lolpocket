@@ -59,6 +59,7 @@
     "nuxt-aos": "^1.2.5",
     "nuxt-svgo": "^4.0.14",
     "nuxt-tailwindcss4": "^0.1.1",
+    "nuxt-tiptap-editor": "^2.1.4",
     "pinia": "^3.0.0",
     "pinia-plugin-persistedstate": "^4.2.0",
     "radix-vue": "^1.9.13",

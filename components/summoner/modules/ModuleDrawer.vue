@@ -27,11 +27,10 @@ const as = useAccountStore()
 console.log(as.userBoardModules)
 
 const filter = computed (() => {
-  const a = as.userBoardModules.filter((m) => m != null)
-return a.map((m) => m.name)
+  const a = as.userBoardModules.filter(m => m != null)
+  return a.map(m => m.name)
 })
-console.log("💠 - filter - filter:", filter)
-
+console.log('💠 - filter - filter:', filter)
 </script>
 
 <template>
@@ -88,10 +87,12 @@ console.log("💠 - filter - filter:", filter)
                 @remove="remove"
                 @end="onDragEnd()"
               >
-                <div v-for="module in allUserModules" :key="module.name" class="size-full max-w-120"
-                :class="{hidden: filter.includes(module.name)}"
-                 :data-name="module.name">
-                  <component :is="ghostRegistry[module.name]" :data-name="module.name"  />
+                <div
+                  v-for="module in allUserModules" :key="module.name" class="size-full max-w-120"
+                  :class="{ hidden: filter.includes(module.name) }"
+                  :data-name="module.name"
+                >
+                  <component :is="ghostRegistry[module.name]" :data-name="module.name" />
                 </div>
               </div>
             </div>
