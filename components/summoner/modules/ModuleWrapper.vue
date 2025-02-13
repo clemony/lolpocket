@@ -29,13 +29,13 @@ function onAdd(event: any) {
   as.userBoardModules[index] = { name: moduleName }
 
   const filter = computed (() => {
-  const a = as.userBoardModules.filter((m) => m != null)
-return a.map((m) => m.name)
+    const a = as.userBoardModules.filter(m => m != null)
+    return a.map(m => m.name)
   })
 
-  if(filter.value.includes(undefined)){
-    const a = as.userBoardModules.findIndex((m) => m.name == undefined)
-    if(a != -1){
+  if (filter.value.includes(undefined)) {
+    const a = as.userBoardModules.findIndex(m => m.name == undefined)
+    if (a != -1) {
       as.userBoardModules.splice(a, 1)
     }
   }
@@ -64,7 +64,7 @@ return a.map((m) => m.name)
         dragClass: 'module-drag',
       },
     ]"
-    :class="cn('grid grid-cols-[repeat(auto-fill,minmax(400px,1fr))] grid-rows-[repeat(auto-fill,minmax(300px,1fr))] gap-6 px-14  auto-rows-min h-[84vh] max-h-[88vh] overflow-y-auto min-h-0 p-i-c', props.class) "
+    :class="cn('grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] grid-rows-[repeat(auto-fill,minmax(280px,1fr))] gap-6 px-14  auto-rows-min h-[84vh] max-h-[88vh] overflow-y-auto min-h-0 p-i-c', props.class) "
     ghost-class="module-ghost"
     drag-class="module-drag"
     @add="onAdd"

@@ -13,7 +13,7 @@ const colors = [getColorFromVariable('--color-b3'), getColorFromVariable(`--colo
 
 <template>
   <ModuleTemplate title="Challenge Totals">
-    <div class="grid grid-cols-[1fr_2fr] size-full gap-4">
+    <div class="grid grid-cols-[1fr_2fr] size-full gap-4 pt-1.5">
       <div class=" h-fit grid-cols-1 items-center  relative py-4.5">
         <div v-tippy="`${challenges.totalPoints.current} / ${challenges.totalPoints.max}`" class="relative -mt-1 justify-self-center">
           <Donut
