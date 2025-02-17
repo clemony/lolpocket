@@ -59,7 +59,7 @@
   }
 
   .nav-menu-size {
-    @apply min-w-160 w-160 max-w-160 max-h-100 min-h-100 h-100;
+    @apply min-w-190 w-190 max-w-190 max-h-120 min-h-120 h-120 border-x border-b border-b2 !border-t-b2/60 border-t  *:rounded-xl;
   }
 }
 
@@ -71,6 +71,57 @@
 .active-hover-tabs {
   @apply  bg-b1 shadow-black/1 border border-b3;
   --depth:0;
+}
+
+  .gradient {
+  background: linear-gradient(
+    137deg,
+    rgba(231, 207, 120, 0.7) 0%,
+    rgba(220, 124, 124, 0.7) 20%,
+    rgba(178, 164, 221, 0.7) 40%,
+    rgba(175, 212, 150, 0.7) 60%,
+    rgba(165, 226, 229, 0.7) 80%
+  );
+  background-size: 550%;
+}
+
+.empty {
+  background: linear-gradient(
+    137deg,
+    rgba(190, 190, 190, 1) 0%,
+    rgba(193, 193, 193, 0.8) 10%,
+    rgba(233, 233, 233, 1) 75%,
+    rgba(252, 252, 252, 0) 90%
+  );
+}
+
+.none,
+.precision,
+.domination,
+.sorcery,
+.resolve,
+.inspiration {
+  transition: all 0.5s ease-in-out;
+}
+
+.precision {
+  background-position: 0%;
+}
+
+.domination {
+  background-position: 20%;
+}
+
+.sorcery {
+  background-position: 42%;
+}
+
+.resolve {
+  background-position: 83%;
+}
+
+.inspiration {
+  background-position: 100%;
 }
 
 

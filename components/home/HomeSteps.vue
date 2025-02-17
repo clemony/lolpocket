@@ -94,7 +94,7 @@ watch(
         'shadow-[0px_-10px_20px_5px_#00000010]': props.shadow == true,
       }"
     />
-    <div class="[&_hr]:bg-b2 bg-b1 border-b2/30 relative z-10 w-full border-b px-12 py-26 transition-all duration-300 [&_hr]:mx-8">
+    <div class="[&_hr]:bg-b2 bg-b1 border-b2/30 relative z-10 w-full border-b px-12 py-46 transition-all duration-300 [&_hr]:mx-12">
       <slot />
       <ul
         class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical [&_hr]:bg/b2 [&_.timeline-end]:w-full [&_.timeline-start]:w-full [&_div]:max-w-150 [&_h1]:!font-extrabold [&_h2]:drop-shadow-sm [&_p]:drop-shadow-xs [&_svg]:drop-shadow-sm "
@@ -108,7 +108,7 @@ watch(
           </div>
 
           <div
-            class="timeline-start mb-10 w-full md:text-end opacity-0 transition-all duration-500 delay-100"
+            class="timeline-start  pb-44  mb-10 w-full md:text-end opacity-0 transition-all duration-500 delay-100"
             :class="{ 'opacity-100 animate-in slide-in-from-bottom-10 fade-in': target1IsVisible }"
           >
             <p class="font-mono italic">
@@ -139,7 +139,7 @@ watch(
             />
           </div>
           <div
-            class="timeline-end mb-10 w-full md:text-start opacity-0 transition-all duration-500 delay-100"
+            class="timeline-end mb-10  pb-44  w-full md:text-start opacity-0 transition-all duration-500 delay-100"
             :class="{ 'opacity-100 animate-in slide-in-from-bottom-10 fade-in': target2IsVisible }"
           >
             <p class="font-mono italic">
@@ -156,17 +156,16 @@ watch(
         </li>
         <li
           ref="target3"
-          class="w-full "
         >
           <hr />
-          <div class="timeline-middle">
+          <div class="timeline-middle ">
             <icon
               name="bi:check-circle-fill"
               class="size-5"
             />
           </div>
           <div
-            class="timeline-start mb-10 w-full md:text-end opacity-0 transition-all duration-500 delay-100"
+            class="timeline-start mb-10 pb-44 w-full md:text-end opacity-0 transition-all duration-500 delay-100"
             :class="{ 'opacity-100 animate-in slide-in-from-bottom-10 fade-in': target3IsVisible }"
           >
             <p class="font-mono italic">
@@ -224,7 +223,7 @@ watch(
             />
           </div>
           <div
-            class="timeline-end mb-10 w-full md:text-start opacity-0 transition-all duration-500 delay-100"
+            class="timeline-end  mb-10 w-full md:text-start opacity-0 transition-all duration-500 delay-100"
             :class="{ 'opacity-100 animate-in slide-in-from-bottom-10 fade-in': target4IsVisible }"
           >
             <p class="font-mono italic">

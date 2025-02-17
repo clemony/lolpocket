@@ -1,48 +1,45 @@
 <script lang="ts" setup>
 const ds = useDataStore()
-const champions = [
-  {
-    name: 'Yuumi',
-    apiname: 'Yuumi',
-    mastery: '1,955,999',
-    level: 10,
-  },
-  {
-    name: 'Seraphine',
-    apiname: 'Seraphine',
-    mastery: '345,000',
-    level: 8,
-  },
-  {
-    name: 'Rengar',
-    apiname: 'Rengar',
-
-    mastery: '234,555',
-    level: 4,
-  },
-]
 </script>
 
 <template>
-  <ModuleTemplate title="Top Champion Mastery">
-    <div class="grid grid-cols-3 p-i-c pt-10">
-      <div v-for="(champion) in champions" :key="champion.name" class="flex flex-col items-center justify-center h-full px-4">
-        <div class="rounded-full shadow-sm shadow-black/20 border border-b3">
-          <div class="size-22 rounded-full overflow-hidden bg-neutral">
-            <img :src="`/img/champion/${champion.apiname}.webp`" class="size-22 rounded-full scale-115" />
-          </div>
-        </div>
+  <ModuleTemplate title="Top Champion Mastery" class="module-bg border border-b2">
+    <div class=" size-[96%] grid grid-cols-3 p-i-c self-center ">
+      <div v-for="i in top3Mastery" :key="i.championId" class="flex flex-col items-center justify-end h-full w-full  overflow-hidden">
+        <div class="size-full"
+      :style="
+      {backgroundImage: `url(/img/champion/centered/${ds.champions.find((c) => c.id == i.championId).apiname}_0.jpg)`,
+      backgroundSize: '453%',
+      backgroundPositionX:'48%',
+      backgroundPositionY:'21%',
+      }">
 
-        <img :src="`/img/mastery/mastery-${champion.level}.webp`" class="size-20 drop-shadow-md" />
-        <p class="text-5 font-semibold f-tt dst">
-          {{ champion.name }}
+      </div>
+<!--         <div class="rounded-full shadow-sm  ">
+          <div class="size-22 rounded-full overflow-hidden bg-neutral">
+            <img :src="" class="size-22 rounded-full scale-115" />
+          </div>
+        </div> -->
+
+       <div class="z-10 items-center flex flex-col gap-1  pb-5">
+        <p class="text-5 font-semibold font-serif f-tt dst">
+          {{ ds.champions.find((c) => c.id == i.championId).name }}
         </p>
-        <p class="pt-2 font-medium">
-          Level {{ champion.level }}
+        <p class="font-medium">
+          Level {{ i.championLevel }}
         </p>
-        <p class="">
-          {{ champion.mastery }}
+        <p class=" font-medium">
+          {{ i.championPoints.toLocaleString() }}
         </p>
+
+        <img
+          :src="`/img/mastery/mastery-${
+            computed (() => {
+              const a = i.championLevel
+              return a < 4 ? 0 : a >= 10 ? 10 : a
+            }).value}.webp`" class="size-19 drop-shadow-sm  grayscale opacity-85 contrast-130"
+        />
+      </div>
       </div>
     </div>
   </ModuleTemplate>

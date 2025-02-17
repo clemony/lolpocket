@@ -74,14 +74,17 @@ declare global {
     count: number
   }
 
-  interface RuneTree {
+  interface RuneSet {
+    name: string
+    key: string
     primary: {
       path: string
-      keystone: Rune
       runes: {
+        0: Rune
         1: Rune
         2: Rune
         3: Rune
+
       }
     }
     secondary: {
@@ -89,6 +92,7 @@ declare global {
       runes: {
         1: Rune
         2: Rune
+        3: Rune
       }
     }
     shards: {
@@ -96,10 +100,6 @@ declare global {
       1: Shard
       2: Shard
     }
-  }
-  interface RuneSet extends RuneTree {
-    name: string
-    key: string
   }
 
   interface Shard {

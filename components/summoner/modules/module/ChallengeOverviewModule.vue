@@ -12,10 +12,10 @@ const colors = [getColorFromVariable('--color-b3'), getColorFromVariable(`--colo
 </script>
 
 <template>
-  <ModuleTemplate title="Challenge Totals">
-    <div class="grid grid-cols-[1fr_2fr] size-full gap-4 pt-1.5">
+  <ModuleTemplate title="Challenge Totals" class="module-bg">
+    <div class="grid  size-[96%] grid-cols-[1fr_2fr]  gap-4 pt-1.5 self-center items-center">
       <div class=" h-fit grid-cols-1 items-center  relative py-4.5">
-        <div v-tippy="`${challenges.totalPoints.current} / ${challenges.totalPoints.max}`" class="relative -mt-1 justify-self-center">
+        <div v-tippy="`${challenges.totalPoints.current.toLocaleString()} / ${challenges.totalPoints.max.toLocaleString()}`" class="relative -mt-1 justify-self-center">
           <Donut
             :datasets="datasets"
             :colors="colors"
@@ -50,7 +50,7 @@ const colors = [getColorFromVariable('--color-b3'), getColorFromVariable(`--colo
               Points
             </p>
             <p class="f-sb  text-3  ">
-              {{ challenges.totalPoints.current }} / {{ challenges.totalPoints.max }}
+              {{ challenges.totalPoints.current.toLocaleString() }} / {{ challenges.totalPoints.max.toLocaleString() }}
             </p>
           </div>
 
@@ -60,9 +60,9 @@ const colors = [getColorFromVariable('--color-b3'), getColorFromVariable(`--colo
         </div>
       </div>
 
-      <div class="flex flex-col gap-6 pt-2.5  pr-5 h-full">
+      <div class="flex flex-col gap-6 pt-2.5 justify-center pr-5 h-full">
         <div v-for="cat in Object.keys(challenges.categoryPoints)" :key="cat" class="flex i-c gap-5 w-full group">
-          <div v-tippy="`${challenges.categoryPoints[cat].current} / ${challenges.categoryPoints[cat].max}`" class="flex-col flex gap-2">
+          <div v-tippy="`${challenges.categoryPoints[cat].current.toLocaleString()} / ${challenges.categoryPoints[cat].max.toLocaleString()}`" class="flex-col flex gap-2">
             <div class="flex gap-3">
               <i-challenges-icon_category_veterancy v-if="cat.toLowerCase() == 'veterancy'" class="size-5.5 dst text fill-bc [&_svg]:fill-bc" />
               <i-challenges-icon_category_imagination v-if="cat.toLowerCase() == 'imagination'" class="size-5.5 dst text fill-bc [&_svg]:fill-bc" />

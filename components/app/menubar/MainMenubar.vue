@@ -18,11 +18,14 @@ const summoner = ref(as.userAccount)
 const messages = ref()
 const modelSettings = ref()
 const isOpen = ref('closed')
+
+const ps = usePocketStore()
+// ps.pockets = []
 </script>
 
 <template>
   <div
-    class="bg-b1/80 w-screen max-w-screen  h-[5vh] min-h-[5vh] max-h-[5vh] fixed z-60 m-0 flex items-center gap-5 border-b border-b-transparent !pt-2 pr-7.5 pl-7.5 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center "
+    class="bg-b1/80 w-screen max-w-screen  h-[5vh] min-h-[5vh] max-h-[5vh] fixed z-66 m-0 flex items-center gap-5 border-b border-b-transparent !pt-2 pr-7.5 pl-6 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center "
     :class="{ '': isPocket }"
   >
     <Button
@@ -56,7 +59,7 @@ const isOpen = ref('closed')
           </NuxtLink>
         </NavigationMenuItem>
 
-        <NavigationMenuViewport class="top-2 left-14 rounded-xl" />
+        <NavigationMenuViewport class="top-1  left-24 !rounded-xl" />
       </NavigationMenuList>
     </NavigationMenu>
 

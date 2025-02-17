@@ -50,10 +50,11 @@ function handleClick() {
     <!--   <DialogOverlay class="top-[5vh] isolate data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-57 bg-black/40" /> -->
     </DialogClose>
     <DialogContent
+    @open-auto-focus.prevent
       ref="target"
       :class="cn('', sheetVariants({ side }), props.class)"
       v-bind="{ ...forwarded, ...$attrs }"
-      class="!z-58 isolate !pt-[5vh] max-h-screen  bg-b1 backdrop-blur-md !p-0 focus:ring-0 focus:ring-offset-0 focus:outline-0 outline-0 border-x-b2   min-w-120 w-120"
+      class="!z-58 isolate !pt-[5vh] max-h-screen  bg-b1/92 backdrop-blur-md !p-0 focus:ring-0 focus:ring-offset-0 focus:outline-0 outline-0 border-x-b2  "
     >
       <Hide>
         <DialogTitle> </DialogTitle>

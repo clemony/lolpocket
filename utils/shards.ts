@@ -1,8 +1,8 @@
-[
+export const shards = [
   {
     "name": "Adaptive Power",
     "stats": "5.4 bonus Attack Damage or 9 Ability Power (Adaptive)",
-    "slotID": "1",
+    "slotID": 1,
     "slotName": "offense",
     "type": "shard",
     "icon": "mdi:star-four-points",
@@ -11,7 +11,7 @@
   {
     "name": "Attack Speed",
     "stats": "10% bonus attack speed",
-    "slotID": "1",
+    "slotID": 1,
     "slotName": "offense",
     "type": "shard",
     "icon": "mdi:axe",
@@ -20,7 +20,7 @@
   {
     "name": "Ability Haste",
     "stats": "8 ability haste",
-    "slotID": "1",
+    "slotID": 1,
     "slotName": "offense",
     "type": "shard",
     "icon": "ph:hourglass-medium-fill",
@@ -29,7 +29,7 @@
   {
     "name": "Adaptive Power",
     "stats": "5.4 bonus Attack Damage or 9 Ability Power (Adaptive)",
-    "slotID": "2",
+    "slotID": 2,
     "slotName": "flex",
     "type": "shard",
     "icon": "mdi:star-four-points",
@@ -38,7 +38,7 @@
   {
     "name": "Move Speed",
     "stats": "2% bonus movement speed",
-    "slotID": "2",
+    "slotID": 2,
     "slotName": "flex",
     "type": "shard",
     "icon": "mdi:run-fast",
@@ -47,7 +47,7 @@
   {
     "name": "Scaling Health",
     "stats": "10 − 180 (based on level) bonus health",
-    "slotID": "2",
+    "slotID": 2,
     "slotName": "flex",
     "type": "shard",
     "icon": "mdi:heart-plus",
@@ -56,7 +56,7 @@
   {
     "name": "Health",
     "stats": "65 bonus health",
-    "slotID": "3",
+    "slotID": 3,
     "slotName": "defense",
     "type": "shard",
     "icon": "mdi:heart",
@@ -64,8 +64,8 @@
   },
   {
     "name": "Tenacity and Slow Resist",
-    "stats": "10% Tenacity icon tenacity and Slow immune icon slow resist",
-    "slotID": "3",
+    "stats": "10% Tenacity and Slow Resist",
+    "slotID": 3,
     "slotName": "defense",
     "type": "shard",
     "icon": "ph:spiral-light",
@@ -74,7 +74,7 @@
   {
     "name": "Scaling Health",
     "stats": "10 − 180 (based on level) bonus health",
-    "slotID": "3",
+    "slotID": 3,
     "slotName": "defense",
     "type": "shard",
     "icon": "mdi:heart-plus",

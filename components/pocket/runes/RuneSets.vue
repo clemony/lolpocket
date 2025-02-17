@@ -1,150 +1,130 @@
 <script setup lang="ts">
-import { VueDraggable } from 'vue-draggable-plus'
-
 const props = defineProps<{
   pocket: pocket
-  selected: number
+  selected: RuneSet
 }>()
 
 const emit = defineEmits(['update:selected'])
 
-const ps = usePocketStore()
-
-// Reactive reference for the pocket
 const pocket = ref(props.pocket)
 
-const selectedSet = ref(0)
+const selectedSet = ref<RuneSet>(props.pocket.runes.sets[0])
+
+const secondary = computed(() => {
+  const a = Object.values(selectedSet.value.secondary.runes).filter(r => r != null || undefined)
+  return a.filter(r => r.name != 'empty')
+})
+
+const primaryColor = computedAsync (() => {
+
+})
 </script>
 
 <template>
   <div class="flex flex-col gap-4 h-full">
-    <div class="flex items-center gap-8 leading-none">
-      <h1 class="grow justify-start tracking-tight">
-        Rune Sets
-      </h1>
-      <button
-        class="btn btn-outline btn-xs relative h-full items-center rounded-md border-none font-normal"
-        @click="newRuneSet(pocket.key)"
+    <DropdownMenu>
+      <DropdownMenuTrigger
+        class="rounded-lg   gap-4 cursor-pointer  p-3 hover:border-b3 hover:shadow-warm-2 hover:shadow-black/6 hover:shadow-inset-sm transition-all duration-300  border-transparent items-center    h-fit  justify-start  data-[state=open]:border-b3 group grid grid-cols-3"
       >
-        <icon
-          name="add-sm"
-          class="-mt-[2px] size-6 self-center"
-        />
-      </button>
-    </div>
+      
 
-    <div class="border-b3 bg-b1/90! shadow-smooth  relative overflow-hidden rounded-xl border ">
-      <div class="bg-b2/20 h-full w-full overflow-y-auto">
-        <div class="z-0 flex flex-col overflow-y-scroll">
-          <VueDraggable
-            v-model="pocket.runes.sets"
-            class="grid overflow-hidden"
-            tag="div"
-            group="sets"
-            drag-class="setDrag"
-            direction="vertical"
-          >
-            <label
-              v-for="(set, index) in pocket.runes.sets"
-              :key="set.name + index"
-              :class="set.primary"
-              class="gradient overlay after:from-b2/30 after:via-b2 after:to-b2 pointer-events-auto relative z-0 grid cursor-pointer items-center overflow-hidden transition-all duration-1000 after:absolute after:right-0 after:z-10 after:h-full after:w-[200%] after:bg-linear-to-r after:via-55% odd:after:brightness-[108%] even:after:brightness-[106%] hover:after:-right-1/2 has-[#runeSets:checked]:after:-right-full px-5 py-2"
-            >
-              <div class="group border-b2 z-20 flex h-full w-full items-center gap-4 border-b bg-clip-padding bg-right p-2 transition-all duration-200">
-                <input
-                  id="runeSets"
-                  v-model="selectedSet"
-                  type="radio"
-                  :value="index"
-                  class="peer hidden"
-                  @change="emit('update:selected', selectedSet)"
-                />
 
-                <div
-                  class="[&_#blank]:peer-checked:ring-neutral/15 ml-1 flex  items-center justify-center justify-self-center py-3 opacity-75 grayscale-[0.25] transition-all duration-300 group-hover:opacity-95 gap-2 group-hover:grayscale-0 peer-checked:opacity-100 peer-checked:grayscale-0 [&_#blank]:peer-checked:opacity-80"
-                >
-                  <img :src="`/img/runes/${set.primary.path}.webp`" class="drop-shadow-soft size-16 aspect-square" />
+            <div
+          class="relative  shadow-outline shadow-black/19 grid aspect-square size-19  place-items-center items-center rounded-full "   :style="{
+          background: `linear-gradient(110deg, transparent, var(--color-${selectedSet.primary.path.toLowerCase()}))`}"
+        >
+   
+          <div class="from-b1/90 to-b1/40 grid place-items-center rounded-full bg-gradient-to-br size-full backdrop-blur-md overflow-hidden">
+            <div class="p-2 ">
+            <img
+      :src="selectedSet.primary.runes[0].name == 'empty' ? '/img/runes/blankRune.webp' : `/img/runes/${selectedSet.primary.path}/${selectedSet.primary.runes[0].name.replace(/\s/g, '')}.webp`"
 
-                  <img
-                    :src="`/img/runes/${set.secondary.path}.webp`"
-                    class="drop-shadow-softer size-16 p-1.5"
-                  />
-                </div>
+              class="drop-shadow-softer shrink-0 object-contain transition-all duration-200 hover:drop-shadow-sm"
+            />
+            </div>
+          </div>
 
-                <Grow />
-
-                <label class="group/star relative grid h-full w-4 cursor-pointer place-content-center *:h-full *:transition-all *:duration-300">
-                  <input
-                    v-model="pocket.runes.default"
-                    type="radio"
-                    name="defaultDisplayRunes"
-                    :value="index"
-                    class="peer hidden"
-                  />
-                  <icon
-                    name="iconoir:star-dashed"
-                    class="absolute z-10 opacity-20 group-hover/star:opacity-15 peer-checked:opacity-20"
-                  />
-                  <icon
-                    id="solid"
-                    name="iconoir:star-solid"
-                    class="absolute z-0 text-yellow-400 opacity-0 group-hover/star:text-yellow-300 group-hover/star:opacity-70 peer-checked:opacity-80"
-                  />
-                </label>
-
-                <button
-                  class="rounded-btn hover:bg-b2 flex items-center justify-center justify-self-end py-1 opacity-50 hover:opacity-100"
-                  alt="menu"
-                >
-                  <icon
-                    name="teenyicons:more-vertical-outline"
-                    class="size-5"
-                  />
-                </button>
-
-                <div class="*:rounded-btn *:text-bc/80 grid grid-cols-3 gap-1.5 *:flex *:aspect-square *:size-5 *:items-center *:justify-center *:transition-all *:duration-300">
-                  <button
-                    class="hover:bg-b2"
-                    alt="Clear Items"
-                    title="Clear Items"
-                    @click="resetRunes(pocket, set)"
-                  >
-                    <icon
-                      name="teenyicons:clockwise-outline"
-                      class="size-[0.8rem] pb-[2px]"
-                    />
-                  </button>
-
-                  <button
-                    class="hover:bg-b2 disabled:bg-transparent disabled:opacity-40 disabled:hover:bg-transparent"
-                    alt="Delete Set"
-                    title="Delete Set"
-                    :disabled="pocket.runes.sets.length == 1"
-                    @click="deleteRuneSet(pocket, index)"
-                  >
-                    <icon
-                      name="ph:trash-light"
-                      class="size-3.5"
-                    />
-                  </button>
-                </div>
-              </div>
-              <!-- <div class="h-[1px] w-full"></div> -->
-            </label>
-          </VueDraggable>
-        </div>
       </div>
-    </div>
+           <div
+          class="relative  shadow-outline shadow-black/15 grid aspect-square size-19 place-items-center items-center rounded-full  "   :style="{
+          background: `linear-gradient(110deg, transparent, var(--color-${selectedSet.secondary.path.toLowerCase()}))`}"
+        >
+   
+          <div class="from-b1/90 to-b1/40 grid size-19 place-items-center rounded-full bg-gradient-to-br p-1 backdrop-blur-md overflow-hidden ">
+            <img
+      :src="selectedSet.secondary.path == 'empty' ? '/img/runes/blankRune.webp' : `/img/runes/${selectedSet.secondary.path}.webp`"
+              class="drop-shadow-softer shrink-0 h-10 w-auto object-contain transition-all duration-200 hover:drop-shadow-sm"
+            />
+          </div>
+  
+      
+        </div>
+        <icon name="select" class="size-5 justify-self-end mr-2" />
+      </DropdownMenuTrigger>
+      <DropdownMenuContent class="w-[var(--radix-dropdown-menu-trigger-width)] pr-0">
+        <DropdownMenuItem
+          v-for="(set, index) in pocket.runes.sets"
+          :key="set.name + index"
+          :class="set.primary"
+        >
+          <label class="group flex h-full w-full items-center gap-4  pr-3">
+            <input
+              id="runeSets"
+
+              v-model="selectedSet"
+              :value="set"
+              type="radio"
+              class="peer hidden"
+              @change="emit('update:selected', selectedSet)"
+            />
+
+            <icon name="tick-sm" class="size-5.5 peer-checked:opacity-100 opacity-0" />
+
+            <div
+              class="[&_#blank]:peer-checked:ring-neutral/15  grid grid-cols-2 w-22 gap-3 place-items-center justify-self-center   transition-all duration-300 peer-checked:opacity-100  [&_#blank]:peer-checked:opacity-80 "
+            >
+              <img :src="set.primary.runes[0].name == 'empty' ? '/img/runes/blankRune.webp' : `/img/runes/${set.primary.path}/${set.primary.runes[0].name.replace(/\s/g, '')}.webp`" class="drop-shadow-soft h-10 w-auto aspect-square" :class="{'!h-8.5': set.primary.runes[0].name == 'empty'}"/>
+
+              <img
+                :src="`/img/runes/${set.secondary.path}.webp`"
+                class="drop-shadow-softer h-10 w-auto p-1.5"
+                :class="{'!h-9': set.secondary.path == 'empty'}"
+              />
+            </div>
+
+            <Grow />
+
+            <button v-tippy="'Delete Set'" class="btn btn-sm btn-ghost px-2 -mr-3" @click.stop>
+              <span class="size-3.5 relative">
+                <icon name="x-sm" class="opacity-70 -top-0.75 -left-0.75 absolute shrink-0 mb-0.5 size-5" />
+              </span>
+            </button>
+
+            <button v-tippy="set.key == pocket.runes.default ? 'Default Set' : 'Set as default'" class="btn btn-ghost btn-sm px-2 -mr-1" @click.stop="set.key == pocket.runes.default">
+
+              <icon v-if="set.key == pocket.runes.default" name="star-fill" class="opacity-70 shrink-0 mb-0.5 size-3.5" />
+              <icon v-else name="star" class="opacity-70 shrink-0 mb-0.5 size-3.5" />
+
+            </button>
+          </label>
+        </DropdownMenuItem>
+
+        <DropdownMenuSeparator />
+        <DropdownMenuItem
+          class=""
+          @click="newRuneSet(pocket.key)"
+        >
+          <icon
+            name="add-sm"
+            class="-mt-[2px] size-5.5 self-center"
+          />
+          Add Rune Set
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   </div>
 </template>
 
-<style scoped>
-  .overlay:after {
-  content: '';
-  transition: all 0.5s ease;
-}
+<style>
 
-#bghover:hover .overlay:after {
-  right: 50% !important;
-}
 </style>

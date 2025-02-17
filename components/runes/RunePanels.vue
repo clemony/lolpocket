@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 import { pathDescriptions } from 'shared/data/runes/pathDescriptions'
 
+const props = defineProps<{
+  set?: RuneSet
+  pocket?: pocket
+}>()
 const ds = useDataStore()
 
 const runePaths = ref(ds.paths)

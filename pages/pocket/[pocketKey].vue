@@ -1,93 +1,102 @@
 <script setup lang="ts">
+const emit = defineEmits(['update:hovered'])
 const route = useRoute()
 const pocket = ref(getPocket(route.params.pocketKey))
 
-const Champions = defineAsyncComponent(() => import('components/pocket/Champions.vue'))
-const Items = defineAsyncComponent(() => import('components/pocket/Items.vue'))
-const Runes = defineAsyncComponent(() => import('components/pocket/Runes.vue'))
-const Complete = defineAsyncComponent(() => import('components/pocket/Complete.vue'))
+const selectedRuneSet = ref(pocket.value.runes.sets[0])
 
-const pocketComponents = [
-  {
-    ref: Champions,
-    icon: '',
-    tip: 'Select Champions',
+const component = shallowRef(pocketComponents[0].compRef)
+watch(
+  () => selectedRuneSet.value,
+  (newVal) => {
+    if (newVal) {
+      nextTick(() => {
+        component.value != pocketComponents[2].compRef ? component.value = pocketComponents[2].compRef : ''
+      })
+    }
   },
-  {
-    ref: Items,
-    icon: 'bow',
-    tip: 'Choose Items',
-  },
-  {
-    ref: Runes,
-    icon: '',
-    tip: 'Configure Runes',
-  },
-  {
-    ref: Complete,
-    icon: 'stash:infinity-solid',
-    tip: 'Complete Build',
-  },
-]
+)
 
-const component = shallowRef(Champions)
+const isOpen = ref(false)
 
-const prevPage = ref()
-const pocketPage = ref(route.name)
-const prevIndex = ref(0)
-const index = ref()
+const hovered = ref()
 
-watchEffect(() => {
-  prevIndex.value = index.value
-  const i = 1
-  index.value = i
-  prevPage.value = pocketPage.value
-  console.log('💠 - watchEffect - prevPage.value:', prevPage.value)
+const previousIndex = ref(0);
+
+const totalTranslateY = ref(0)
+
+const transitionName = ref("pocket-move-down"); // Default direction
+
+watch(component, (newComp) => {
+  const newIndex = pocketComponents.findIndex(c => c.compRef === newComp);
+  if (newIndex === -1) return; // Safety check
+  const oldIndex = previousIndex.value;
+    const diff = newIndex - oldIndex;
+  totalTranslateY.value += diff * 30;
+
+  transitionName.value = newIndex > previousIndex.value ? "pocket-move-up" : "pocket-move-down";
+
+  previousIndex.value = newIndex
+});
+
+
+const translateY = computed(() => {
+  return `translateY(${totalTranslateY.value}%) `
 })
 
-onMounted (async () => {
-  const oi = 1
-  await oi
-  prevIndex.value = oi
-  prevPage.value = route.name
-})
 
-const classObject = computed (() => {
-  return ''
-})
 </script>
 
 <template>
-  <main class="h-screen w-full grid grid-cols-[400px_auto]">
-    <div class="flex">
-      <PocketBar :pocket="pocket">
-        <ul class="timeline timeline-vertical">
-          <li v-for="(comp, i) in pocketComponents" :key="i" v-tippy="comp.tip" class="h-20 group ">
-            <hr v-if="i != 0" />
-            <label class="timeline-middle size-8 rounded-full  bg-b3/80 shadow-sm  [&_svg]:!text-nc z-0 ">
-              <div class="grid place-items-center size-full rounded-full relative  !overflow-hidden">
+  <main class="h-screen w-full grid grid-cols-[50px_320px_auto] ">     <PocketBar :pocket="pocket" @update:open="(e) => isOpen = e" @update:hovered="(e) => hovered = e" @update:component="(e) => component = e">
+        <ul class="timeline timeline-vertical justify-center items-center relative !w-full ">
+          <div class="absolute  w-1  bg-b2 h-4/5 overflow-hidden justify-center">
+            <div class="size-full  duration-1000 transition-all " :style="{ transform: translateY }">
+              <div
+                class="size-5 bg-neutral shadow-[0px_0px_30px_5px_var(--color-bc)]"
+              >
+              </div>
+            </div>
+          </div>
 
-                <div class="size-8  translate-y-100 scale-y-0 bg-neutral z-0 transition-all absolute  duration-2000 " :class="{ '!translate-y-0 !scale-y-100': component == comp.ref }" />
+          <li v-for="comp in pocketComponents" :ref="comp.btnRef" :key="comp.title" class="h-18 group   cursor-pointer pointer-events-auto ">
+            <label class=" timeline-middle cursor-pointer"  @click.stop>
 
-                <input v-model="component" type="radio" name="pocket-page" :value="comp.ref" class="hidden peer" />
+              <div class="size-fit rounded-full bg-b1 pointer-events-none">
+                <div class="!size-10 rounded-full shadow-sm   transition-all duration-700  bg-b3 group-hover:bg-neutral/40    z-1 [&_svg]:!text-nc" :class="{ 'bg-neutral/40': hovered.title == comp.title && hovered.hovered == true, 'drop-shadow-sm  scale-115': component == comp.compRef }">
 
-                <i-no-champ v-if="comp.ref == Champions" class="fill-nc dst !size-7  z-20  text-nc" />
-                <i-rune-icon v-else-if="comp.ref == Runes" class="fill-nc size-6 dst  z-20 " />
-                <icon v-else :name="comp.icon" class="size-5.5 z-20 text-nc dst" :class="{ '!size-5': comp.ref == Items }" />
+                  <div class="grid place-items-center size-full rounded-full relative z-0 !overflow-hidden">
+
+            <Transition :name="transitionName" mode="out-in">
+  <div v-if="component == comp.compRef" class="size-10 pointer-events-none bg-neutral z-10 absolute"/>
+</Transition>
+
+                    <input v-model="component" type="radio" name="pocket-page" :value="comp.compRef" class="hidden peer" />
+
+                    <i-no-champ v-if="comp.compRef == pocketComponents[0].compRef" class="fill-nc dst !size-7  z-20  text-nc" />
+                    <i-rune-icon v-else-if="comp.compRef == pocketComponents[2].compRef" class="fill-nc size-6 dst  z-20 " />
+                    <icon v-else :name="comp.icon" class="size-5.5 z-20 text-nc dst" :class="{ '!size-5': comp.compRef == pocketComponents[1].compRef }" />
+                  </div>
+                </div>
               </div>
             </label>
-            <hr v-if="i != 3" />
           </li>
         </ul>
       </PocketBar>
 
-      <PocketNav :pocket="pocket" />
-    </div>
+ 
+
+      <PocketNav
+        :pocket="pocket"
+        @update:selected="(e) => selectedRuneSet = e"
+      />
+  
     <transition-slide class="w-full min-w-full max-w-full">
-      <component :is="component" :pocket="pocket" />
+      <component :is="component" :selected-runes="selectedRuneSet" :pocket="pocket" />
     </transition-slide>
   </main>
 </template>
 
 <style>
+
 </style>

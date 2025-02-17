@@ -2,36 +2,30 @@
 const props = defineProps<{
   pocket?: pocket
   selected?: number
+  runeSet: RuneSet
 
   selectedShard?: number
 }>()
-const ps = usePocketStore()
-const ds = useDataStore()
-const ts = useTempStore()
-
-const pocket = ref(getPocket(props.pocket.key))
-
-const runeIndex = ref(props.selected)
-
-const set = computed(() => {
-  return pocket.value.runes[0].runeSets[runeIndex.value]
+const set = computed (() => {
+return props.runeSet
 })
 </script>
 
 <template>
   <div
     :key="set.key"
-    class="flex justify-center"
+    class="flex justify-center shadow-smooth rounded-xl w-full bg-b2/70 backdrop-blur-md py-10"
   >
-    <div class="grid max-w-64 grid-cols-3 place-items-center gap-x-12 gap-y-7">
-      <!--    <Tooltip
-        dark
-        v-for="shard in ds.shards"
+    <div class="grid  grid-cols-3 place-items-center gap-x-16 gap-y-7">
+ 
+      <div
+        v-for="shard in shards"
         :key="shard.name + shard.slotID"
-        :content="shard.stats">
-        <label
+        v-tippy="shard.stats"
           :alt="shard.stats"
-          :data-tag="shard.color"
+          :data-tag="shard.color" :class="getShardBg(shard)"
+          class="group">
+        <label
           :class="
             cn(
               /* b4 */
@@ -40,10 +34,10 @@ const set = computed(() => {
               'border-b-b3 border-l-b3/60 border-r-b3 border-t-b3/60 border',
 
               /* shadow */
-              'shadow-[0_3px_10px_rgb(0,0,0,0.2),inset_-1px_-1px_0px_1px_#00000008]',
+              'shadow-warm-2',
 
               /* struct  */
-              'grid size-14 shrink-0 place-items-center overflow-hidden rounded-full p-3.5 transition-all duration-300 has-checked:scale-105',
+              'grid size-14 shrink-0 place-items-center cursor-pointer overflow-hidden rounded-full p-3.5 transition-all duration-300 has-checked:scale-105 group',
               shard.name,
               getShardClass(shard)
                 .toString()
@@ -82,14 +76,14 @@ const set = computed(() => {
 
           <icon
             :name="getShardIcon(shard)"
-            class="size-full rounded-full opacity-90 brightness-95 drop-shadow-md grayscale peer-checked:opacity-100! peer-checked:grayscale-0!"
+            class="size-full rounded-full opacity-90 brightness-95 drop-shadow-md grayscale peer-checked:opacity-100 peer-checked:grayscale-0 group-hover:grayscale-0"
             :class="
-              cn(getShardClass(shard), {
+              cn(getShardIconColor(shard), {
                 'opacity-40': shard.name == 'empty',
               })
             " />
         </label>
-      </Tooltip> -->
+ </div>
     </div>
   </div>
 </template>

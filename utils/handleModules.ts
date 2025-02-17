@@ -8,6 +8,8 @@ import ChampionMasteryModule from 'components/summoner/modules/module/ChampionMa
 import ChallengeOverviewGhost from 'components/summoner/modules/ghost/ChallengeOverviewGhost.vue'
 import ChallengeOverviewModule from 'components/summoner/modules/module/ChallengeOverviewModule.vue'
 import NotesModule from 'components/summoner/modules/module/NotesModule.vue'
+import SingleMasteryModule from 'components/summoner/modules/module/SingleMasteryModule.vue'
+import SingleMasteryGhost from 'components/summoner/modules/ghost/SingleMasteryGhost.vue'
 
 export const allUserModules = [
   {
@@ -34,6 +36,12 @@ export const allUserModules = [
     name: 'challengecategories',
     component: markRaw(ChallengeOverviewModule),
     ghost: markRaw(ChallengeOverviewGhost),
+  },
+
+  {
+    name: 'singlemastery',
+    component: markRaw(SingleMasteryModule),
+    ghost: markRaw(SingleMasteryGhost),
   },
 ]
 

@@ -6,7 +6,7 @@
   }
 
   .btn-ghost {
-    @apply hover:!bg-b2/60 hover:!border-b2 !rounded-md;
+    @apply hover:!bg-b2/50 hover:!border-b2 ;
   }
 
   .btn:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {

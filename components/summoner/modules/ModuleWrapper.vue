@@ -64,12 +64,12 @@ function onAdd(event: any) {
         dragClass: 'module-drag',
       },
     ]"
-    :class="cn('grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] grid-rows-[repeat(auto-fill,minmax(280px,1fr))] gap-6 px-14  auto-rows-min h-[84vh] max-h-[88vh] overflow-y-auto min-h-0 p-i-c', props.class) "
+    :class="cn('grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] grid-rows-[repeat(auto-fill,minmax(280px,1fr))] gap-6 px-14   auto-rows-min h-[84vh] max-h-[88vh] overflow-y-auto min-h-0 p-i-c cursor-move', props.class) "
     ghost-class="module-ghost"
     drag-class="module-drag"
     @add="onAdd"
   >
-    <div v-for="(module, i) in as.userBoardModules" :key="`module-${i}`" class="size-full overflow-hidden select-none grid p-i-c">
+    <div v-for="(module, i) in as.userBoardModules" :key="`module-${i}`" class=" select-none size-full  relative grid p-i-c">
       <template v-if="module?.name">
         <component :is="moduleRegistry[module?.name]" :module-name="module?.name" :index="i" />
       </template>

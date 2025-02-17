@@ -21,7 +21,7 @@ const forwardedProps = useForwardProps(delegatedProps)
       v-bind="forwardedProps"
       :class="
         cn(
-          'origin-top-center bg-b1/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 relative mt-1.5 h-(--radix-navigation-menu-viewport-height) w-full overflow-hidden rounded-md border border-b2 shadow-[0_25px_40px_-15px_rgba(0,0,0,0.2)] backdrop-blur-md md:w-(--radix-navigation-menu-viewport-width)',
+          'origin-top-center bg-b1/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 relative mt-1.5 h-(--radix-navigation-menu-viewport-height) w-full overflow-hidden rounded-xl  shadow-menu backdrop-blur-md md:w-(--radix-navigation-menu-viewport-width)',
           props.class,
         )
       "

@@ -8,7 +8,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="size-full">
+  <div class="size-full bg-gradient-to-b from-b1 to-b2/40">
     <MenubarSpacer />
     <div class="h-[9.5vh] min-h-[9vh] pl-18 pr-8 w-full  flex items-center">
       <PocketBreadcrumbs />

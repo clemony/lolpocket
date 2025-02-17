@@ -20,7 +20,7 @@ const quote = getQuote().replace(/<\/p>/g, ' ').replace(/<p>/g, ' ').replace(/<i
 </script>
 
 <template>
-  <div class="size-full px-12 overflow-y-auto">
+  <div class="size-full px-12 overflow-y-auto ">
     <div class="flex pt-[8.9vh] items-center pb-6">
       <h1 class="dst">
         Champions

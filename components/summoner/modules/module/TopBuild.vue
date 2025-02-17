@@ -26,14 +26,14 @@ const colors = [getColorFromVariable('--color-b3'), '#a3be8c']
 </script>
 
 <template>
-  <li v-if="index < 4" class="items-center  p-0 group first-of-type:-mt-2">
+  <li v-if="index < 4" class="items-center  p-0 group/y first-of-type:-mt-2">
     <!--      <div class="text-[2.3rem] font-thin opacity-30 tabular-nums mr-4">
         0{{ index }}
       </div> -->
     <!--  <div class="flex flex-col gap-2"> -->
 
     <NuxtLink :to="`/pocket/${pocket.key}`">
-      <button class="flex btn h-20 gap-3 rounded-lg px-3 py-2 items-center mt-0 btn-ghost btn-lg w-full justify-start group-hover:!border-x-b3">
+      <button class="flex btn h-20 gap-3 rounded-lg px-3 py-2 items-center mt-0 btn-ghost btn-lg w-full justify-start ">
         <PocketIcon class="size-14 rounded-lg **:rounded-lg shadow-sm" :image="pocket.icon" />
 
         <div class="flex flex-col justify-items-between grow h-full">
@@ -78,7 +78,7 @@ const colors = [getColorFromVariable('--color-b3'), '#a3be8c']
       </button>
     </NuxtLink>
 
-    <Separator class="group-last-of-type:hidden my-0 mx-auto opacity-70  w-[97%]" />
+    <Separator class="group-last-of-type/y:hidden my-0 mx-auto opacity-70  w-[97%]" />
   </li>
 </template>
 

@@ -63,8 +63,8 @@ function handleSelect(rune) {
 
 function onHover(rune) {
   setTimeout(() => {
-  ts.hoveredRune = rune
-  console.log("💠 - onHover - ts.hoveredRune:", ts.hoveredRune)
+    ts.hoveredRune = rune
+    console.log('💠 - onHover - ts.hoveredRune:', ts.hoveredRune)
   }, 1000)
 }
 </script>
@@ -89,10 +89,8 @@ function onHover(rune) {
           v-for="rune in slot.runes"
           :key="rune.id"
           v-tippy="rune.name"
-            @mouseover="onHover(rune)"
           :data-path="selectedPath"
           class="h-full rounded-full opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
-          
           :class="{
             'scale-115 opacity-100 grayscale-0': selectedRunes[i] === rune,
             'shadow-pretty': slot != selectedPathData.slots[0] && selectedRunes[i] === rune,
@@ -100,6 +98,8 @@ function onHover(rune) {
             'gradient shadow-standard border-2 border-transparent [&_img]:rounded-full [&_img]:inset-shadow-sm [&_img]:inset-shadow-black': slot != selectedPathData.slots[0],
             '[&_img]:drop-shadow-md': slot == selectedPathData.slots[0],
           }"
+
+          @mouseover="onHover(rune)"
           @click.right="handleSelect(rune)"
         >
           <input

@@ -65,9 +65,9 @@ export function newRuneSet(key?) {
     name: `${generateMediumString()} Set`,
     key: toID(),
     primary: {
-      path: 'empty',
-      keystone: createDefaultRune(),
+      path: 'Resolve',
       runes: {
+        0: createDefaultRune(),
         1: createDefaultRune(),
         2: createDefaultRune(),
         3: createDefaultRune(),
@@ -75,10 +75,11 @@ export function newRuneSet(key?) {
     },
 
     secondary: {
-      path: 'empty',
+      path: 'Inspiration',
       runes: {
         1: createDefaultRune(),
         2: createDefaultRune(),
+        3: createDefaultRune(),
       },
     },
     shards: {
@@ -120,11 +121,53 @@ export function deleteRuneSet(pocket, index) {
 }
 
 export function getShardClass(shard: Shard) {
-  const gray = ['[&_svg]:text-b3 border-b3']
-  const green = ['has-checked:shadow-[0_3px_20px_#a3be8c,inset_-1px_-1px_0px_1px_#00000008] [&_svg]:text-resolve border-resolve']
-  const blue = ['has-checked:shadow-[0_3px_20px_#A4C1C4,inset_-1px_-1px_0px_1px_#00000008] [&_svg]:text-inspiration border-inspiration']
-  const yellow = ['has-checked:shadow-[0_3px_20px_#ebcb8b,inset_-1px_-1px_0px_1px_#00000008] [&_svg]:text-precision border-precision']
-  const purple = ['has-checked:shadow-[0_3px_20px_#b48dad,inset_-1px_-1px_0px_1px_#00000008] [&_svg]:text-sorcery border-sorcery']
+  const gray = ''
+  const green = 'has-checked:shadow-[0_3px_20px_#a3be8c,inset_-1px_-1px_0px_1px_#00000008] hover:shadow-[0_3px_20px_#a3be8c,inset_-1px_-1px_0px_1px_#00000008] '
+  const blue = 'has-checked:shadow-[0_3px_20px_#A4C1C4,inset_-1px_-1px_0px_1px_#00000008] hover:shadow-[0_3px_20px_#A4C1C4,inset_-1px_-1px_0px_1px_#00000008] n'
+  const yellow = 'has-checked:shadow-[0_3px_20px_#ebcb8b,inset_-1px_-1px_0px_1px_#00000008] hover:shadow-[0_3px_20px_#ebcb8b,inset_-1px_-1px_0px_1px_#00000008] '
+  const purple = 'has-checked:shadow-[0_3px_20px_#b48dad,inset_-1px_-1px_0px_1px_#00000008] hover:shadow-[0_3px_20px_#b48dad,inset_-1px_-1px_0px_1px_#00000008]  '
+
+  const c
+    = shard.name == 'Adaptive Power'
+      ? purple
+      : shard.name == 'Attack Speed'
+        ? yellow
+        : shard.name == 'Ability Haste' || shard.name == 'Tenacity and Slow Resist' || shard.name == 'Move Speed'
+          ? blue
+          : shard.name == 'Scaling Health' || shard.name == 'Health'
+            ? green
+            : gray
+  return c
+}
+
+export function getShardIconColor(shard: Shard) {
+  const gray = 'text-b3 group-hover:text-b3 '
+  const green = 'text-resolve  group-hover:text-resolve'
+  const blue = 'text-inspiration  group-hover:text-inspiration '
+  const yellow = 'text-precision  group-hover:text-precision'
+  const purple = 'text-sorcery  group-hover:text-sorcery'
+
+  const c
+    = shard.name == 'Adaptive Power'
+      ? purple
+      : shard.name == 'Attack Speed'
+        ? yellow
+        : shard.name == 'Ability Haste' || shard.name == 'Tenacity and Slow Resist' || shard.name == 'Move Speed'
+          ? blue
+          : shard.name == 'Scaling Health' || shard.name == 'Health'
+            ? green
+            : gray
+  return c
+}
+
+
+
+export function getShardBg(shard: Shard) {
+  const gray = 'has-checked:bg-gradient-to-br from-b1/80 to-b1/20 rounded-full hover:bg-gradient-to-br'
+  const green = 'has-checked:bg-gradient-to-br from-b1/80 to-resolve/20 rounded-full hover:bg-gradient-to-br'
+  const blue = 'has-checked:bg-gradient-to-br from-b1/80 to-inspiration/20 rounded-full hover:bg-gradient-to-br'
+  const yellow = 'has-checked:bg-gradient-to-br from-b1/80 to-precision/20 rounded-full hover:bg-gradient-to-br'
+  const purple = 'has-checked:bg-gradient-to-br hover:bg-gradient-to-br  from-b1/80 to-sorcery/20 rounded-full'
 
   const c
     = shard.name == 'Adaptive Power'
@@ -168,4 +211,53 @@ export function getRunePathName(runeId: number, runePaths: any[]): string | null
     }
   }
   return null // Return null if the rune isn't found in any path
+}
+
+export function resetRuneTree(runeSet) {
+  runeSet.primary.path = 'empty'
+  runeSet.primary.keystone = createDefaultRune()
+  runeSet.primary.runes[0] = createDefaultRune()
+  runeSet.primary.runes[1] = createDefaultRune()
+  runeSet.primary.runes[2] = createDefaultRune()
+  runeSet.secondary.runes[0] = createDefaultRune()
+  runeSet.secondary.runes[1] = createDefaultRune()
+}
+
+export function createDefaultRuneTree() {
+  return {
+    id: 0,
+    key: 'empty',
+    icon: '/img/runes/blankRune.webp',
+    name: 'empty',
+    slots: [
+      {
+        runes: [
+          createDefaultRune(),
+          createDefaultRune(),
+          createDefaultRune(),
+        ],
+      },
+      {
+        runes: [
+          createDefaultRune(),
+          createDefaultRune(),
+          createDefaultRune(),
+        ],
+      },
+      {
+        runes: [
+          createDefaultRune(),
+          createDefaultRune(),
+          createDefaultRune(),
+        ],
+      },
+      {
+        runes: [
+          createDefaultRune(),
+          createDefaultRune(),
+          createDefaultRune(),
+        ],
+      },
+    ],
+  }
 }

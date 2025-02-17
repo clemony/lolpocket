@@ -7,10 +7,6 @@ export function removeChamp(champ, pocket) {
   }
 }
 
-export function getQuote() {
-  return quotes[Math.floor(Math.random() * quotes.length)]
-}
-
 export function formattedQuote() {
   const quote = getQuote().replace(/( -)/, '\n$1')
   return quote
@@ -41,7 +37,7 @@ export const quotes = [
   '<p>"Time flies like an arrow, fruit flies like banana"</p><p>-Zilean</p>',
   '<p>"Put it on my tab, the names \'Pantheon\',with a P..."</p><p>-Aurelion Sol</p>',
   '<p>"You even die ugly"</p><p>-Qiyana</p>',
-  '<p><""Caught between a rock... and a hard place."</p><p>-Malphite</p>',
+  '<p>"Caught between a rock... and a hard place."</p><p>-Malphite</p>',
   '<p>"Same hat? Same hat."</p><p>-Auroria (to Lulu)</p>',
   '<p>"Toe beans!"</p><p>-Aurora (to Yuumi)</p>',
   '<p>"I am evil! Stop laughing!"</p><p>-Veigar</p>',
@@ -72,6 +68,10 @@ export const quotes = [
   '<p>"Solitude always meets my expectations."</p><p>-Ornn</p>',
   '<p>"I do not care at all."</p><p>-Ornn</p>',
   '<p>"I don\'t know what you do and I don\'t care."</p><p>-Ornn</p>',
-  '<p>"I now like you less. I did not think that was possible."/p><<p>-Ornn</p>',
+  '<p>"I now like you less. I did not think that was possible."</p><<p>-Ornn</p>',
   '<p>"No."</p><p>-Ornn</p>',
 ]
+
+export function getQuote() {
+  return quotes[Math.floor(Math.random() * quotes.length)]
+}

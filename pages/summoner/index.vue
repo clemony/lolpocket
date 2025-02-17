@@ -11,7 +11,7 @@ const user = ref(as.userAccount)
 
 <template>
   <ModuleDrawer>
-    <div class="pt-[5vh] wrapper h-[100vh] w-full items-center justify-center gap-15">
+    <div class="pt-[5vh] wrapper h-[100vh] w-full items-center justify-center gap-15 bg-gradient-to-b from-b1 to-b2/40 ">
       <div class="w-full grid-cols-3 grid h-[8vh] items-center px-12">
         <div class=" flex items-center gap-3">
           <h1 class="!text-9 drop-shadow-text px-2 tracking-tight flex flex-wrap capitalize">

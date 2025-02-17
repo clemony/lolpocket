@@ -26,6 +26,9 @@
   }
 }
 
+@utility body-bg {
+  @apply bg-gradient-to-b from-b1 to-b2/60;
+}
 
 @utility dst {
   @apply drop-shadow-text;

@@ -3,46 +3,62 @@ const props = defineProps<{
   pocket?: pocket
 }>()
 
+const emit = defineEmits(['update:selected'])
+
 const pocket = ref(props.pocket)
 
 function update(event, i) {
   console.log(event)
   pocket.value.spells[i] = event
 }
+
+const selectedRuneSet = ref()
 </script>
 
 <template>
-  <div class=" h-full min-h-full max-h-full w-110 min-w-110  pl-5 border-b2 border-x pt-[5.5vh] ">
-    <div class="pl-4 pr-10">
+  <div class=" h-full min-h-full max-h-full w-full border-b2 border-x pt-[5.5vh] pl-15 pr-10">
+   
       <PocketHeader :pocket="pocket" />
-
-      <div class="w-full h-54  shadow-sm border border-b3 rounded-lg shadow-b3  relative size-fit bg-gradient-to-br from-neutral/70 to-neutral">
+ <div class="flex flex-col gap-8">
+      <div class="w-full h-54  shadow-sm  rounded-lg relative size-fit ">
         <div
-          class="rounded-lg shrink-0 size-full overflow-hidden  justify-end items-start flex pr-2 pt-1"
+          class="rounded-lg size-full relative shrink-0  overflow-hidden  justify-end items-start flex pr-2 pt-2"
           :style="{
-            backgroundImage: `url(${pocket.icon})`,
-            backgroundSize: pocket.icon == '/img/champion/centered/1.webp' ? '0%' : '350%',
+            backgroundImage: `url(${pocket.icon == '/img/champion/centered/1.webp' ? '' : pocket.icon})`,
+            backgroundSize: pocket.icon == '/img/champion/centered/1.webp' ? '0' : '350%',
             backgroundPosition: 'center 20%' }"
-        >
+         :class="{'bg-gradient-to-br from-neutral/70 to-neutral': pocket.icon == '/img/champion/centered/1.webp'}">
           <LazyRoleSelect
             :pocket="pocket"
           />
+
+          <div v-if="pocket.icon == '/img/champion/centered/1.webp'" class="absolute size-full top-[45%] left-[44%] text-nc">
+            <h1>LP</h1>
+          </div>
         </div>
       </div>
 
+      <div class="rounded-lg font-medium p-3">
+        <!-- Champions -->
       <SelectedChampions
         :pocket="pocket"
-        class="mt-4"
+        class="mt-3"
       />
+</div>
+<Separator  />
 
-      <Separator class="my-6" />
-
-      <div class=" gap-3 grid grid-cols-4 h-auto items-center pt-3 px-2">
+<div class="font-medium">
+<!-- <span class="pl-3">
+      Summoner Spells
+</span> -->
+      <div class=" gap-3 grid grid-cols-3 h-auto items-center  rounded-lg p-3 mt-3">
         <SpellPicker
           :model="0"
           :pocket="pocket"
           @update:model="update($event, 0)"
+       
         />
+      
 
         <SpellPicker
           :model="1"
@@ -50,8 +66,18 @@ function update(event, i) {
           @update:model="update($event, 1)"
         />
       </div>
+</div>
 
-      <Separator class="my-6" />
+ 
+<Separator  />
+
+      <RuneSets
+        v-model:selected="selectedRuneSet"
+        :pocket="pocket"
+        @update:selected="(e) => (emit('update:selected', e))"
+      />
+ <Separator  />
+
     </div>
   </div>
 </template>

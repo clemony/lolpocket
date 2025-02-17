@@ -2,7 +2,9 @@
 </script>
 
 <template>
-  hi
+  <div>
+    hi
+  </div>
 </template>
 
 <style scoped>

@@ -63,7 +63,8 @@ export default defineAppConfig({
       // pic
       'infinity': 'solar:infinity-outline',
       'shield': 'teenyicons:shield-tick-outline',
-      'star': 'uiw:star-off',
+      'star': 'teenyicons:star-outline',
+      'star-fill': 'teenyicons:star-solid',
       'heart': 'teenyicons:heart-outline',
       'bow': 'mdi:bow-arrow',
     },

@@ -151,6 +151,12 @@ onBeforeUnmount(() => {
         <icon name="iconoir:redo" class="size-5" />
       </button>
     </div>
-    <TiptapEditorContent :editor="editor" class="overflow-auto h-full [&_h1]:text-6 pt-5 pb-3" />
+    <TiptapEditorContent :editor="editor" class="overflow-auto text-thing  [&_h1]:text-6 pt-5 pb-3 " />
   </div>
 </template>
+<style >
+
+.text-thing{
+  border-image-width: 0px !important;
+}
+</style>

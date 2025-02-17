@@ -30,5 +30,8 @@
 }
 
 .module-drag {
-  @apply w-full h-80 bg-b1 rounded-xl border-b3 shadow-smooth !opacity-95;
+  @apply w-full  !bg-transparent !opacity-97  border-transparent  ;
+.module-bg {
+  @apply bg-b1 border-b2 transition-all duration-300 shadow-smooth;
+}
 }

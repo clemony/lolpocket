@@ -109,7 +109,8 @@ export function editPocket(pocket: pocket) {
 // get
 
 export function getPocket(key) {
-  return usePocketStore().pockets.find((pocket: pocket) => pocket.key === key)
+  const ps = usePocketStore()
+  return ps.pockets.find((pocket: pocket) => pocket.key === key)
 }
 
 // date
@@ -145,3 +146,55 @@ export function createDefaultSpell() {
   const spell: Spell = { name: '', description: '', cd: 0, recharge: 0, charges: 0 }
   return spell
 }
+
+const champions = ref(null)
+const items = ref(null)
+const runes = ref(null)
+const complete = ref(null)
+
+const championsBtn = ref(null)
+const itemsBtn = ref(null)
+const runesBtn = ref(null)
+const completeBtn = ref(null)
+export const pocketComponents = [
+  {
+
+    compRef: markRaw(defineAsyncComponent(() => import('components/pocket/Champions.vue'))),
+    hoverRef: champions,
+    btnRef: championsBtn,
+    icon: '',
+    title: 'Champions',
+  },
+  {
+    compRef: markRaw(defineAsyncComponent(() => import('components/pocket/Items.vue'))),
+    hoverRef: items,
+    btnRef: itemsBtn,
+    icon: 'bow',
+    title: 'Items',
+  },
+  {
+
+    compRef: markRaw(defineAsyncComponent(() => import('components/pocket/Runes.vue'))),
+    hoverRef: runes,
+    btnRef: runesBtn,
+    icon: '',
+    title: 'Runes',
+  },
+  {
+
+    compRef: markRaw(defineAsyncComponent(() => import('components/pocket/Complete.vue'))),
+    hoverRef: complete,
+    btnRef: completeBtn,
+    icon: 'stash:infinity-solid',
+    title: 'Complete Build',
+  },
+]
+
+export const hoverStates = pocketComponents.map(el => ({
+  ref: el.ref,
+  btnRef: el.btnRef,
+  title: el.title,
+  isHovered: useElementHover(el.hoverRef),
+  isBtnHovered: useElementHover(el.btnRef),
+}))
+

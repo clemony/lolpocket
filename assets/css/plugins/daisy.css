@@ -18,8 +18,8 @@
   --color-secondary: var(--neutral);
   --color-secondary-content: var(--nc);
 
-  --color-accent: var(--color-inspiration);
-  --color-accent-content: var(--color-inspiration-light);
+  --color-accent: var(--neutral);
+  --color-accent-content: var(--nc);
 
   --color-neutral: var(--neutral);
   --color-neutral-content: var(--nc);

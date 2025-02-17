@@ -42,7 +42,7 @@ const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells
 
 <template>
   <Popover>
-    <PopoverTrigger class="p-0 size-20 rounded-lg btn shadow-sm inset-shadow-sm">
+    <PopoverTrigger  class="p-0 size-20 rounded-lg btn shadow-sm inset-shadow-sm">
       <img
         v-if="!pocket.spells[props.model] || !pocket.spells[props.model].name || pocket.spells[props.model].name == 'empty' || pocket.spells[props.model].name == undefined"
         :src="useRandom(imgArr)"

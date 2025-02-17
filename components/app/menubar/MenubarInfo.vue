@@ -8,10 +8,10 @@ import { UseClipboard } from '@vueuse/components'
     <NavigationMenuTrigger>Info</NavigationMenuTrigger>
     <NavigationMenuContent>
       <div class=" nav-menu-size ">
-        <div class="size-full flex flex-col items-between">
-          <div class="grow py-5 px-7 h-full gap-10 grid grid-cols-[1fr_1fr]  ">
+        <div class="size-full pt-2 flex flex-col items-between">
+          <div class="grow py-7 px-7 h-full gap-10 grid grid-cols-[1fr_1fr]  ">
             <div class="col-start-1 grid *:h-fit *:w-full">
-              <h5 class="!font-semibold opacity-60 mb-3 mt-1">
+              <h5 class="!font-semibold text-5  pl-3 mt-1">
                 Tools
               </h5>
 
@@ -19,7 +19,7 @@ import { UseClipboard } from '@vueuse/components'
                 to="/Docs" >
               <NavigationMenuLink
                 :class="cn(navigationMenuTriggerStyle())"
-                class="flex flex-col !w-full  h-14 justify-center items-start"
+                class="flex flex-col mt-2 !w-full  h-20 justify-center items-start"
              >
                 <div class="flex gap-4 mb-2 items-center justify-start">
                   <icon name="qlementine-icons:book-16" class="size-5 stroke-[1.5]" />
@@ -34,7 +34,7 @@ import { UseClipboard } from '@vueuse/components'
               <NavigationMenuLink
                 href="https://discord.gg/Jzuu7bYTZY"
                 target="_blank"
-                class="flex flex-col !w-full h-14 justify-center items-start"
+                class="flex flex-col !w-full h-20 justify-center items-start"
                 :class="cn(navigationMenuTriggerStyle())"
               >
                 <div class="flex gap-3 mb-2 items-center">
@@ -51,7 +51,7 @@ import { UseClipboard } from '@vueuse/components'
                 to="/About"
               >
               <NavigationMenuLink
-                class=" !w-full h-14  px-2.5 flex flex-col justify-center items-start"
+                class=" !w-full h-20  px-2.5 flex flex-col justify-center items-start"
                 :class="navigationMenuTriggerStyle()">
                 <div class="flex gap-4 mb-2 items-center">
                   <icon
@@ -70,15 +70,15 @@ import { UseClipboard } from '@vueuse/components'
             </div>
 
             <div class="col-start-2 grid *:h-fit *:w-full">
-              <h5 class="!font-semibold opacity-60 mb-3 mt-1">
+              <h5 class="!font-semibold text-5  pl-3 mt-1">
                 Settings
               </h5>
 
               <NuxtLink
                 v-for="link in settingLinks" :key="link.name"
-                :to="link.link" >
+                :to="link.link" class="group/l" >
               <NavigationMenuLink
-                class=" !w-full h-14  px-2.5 flex flex-col justify-center cursor-pointer items-start"
+                class="group-first-of-type/l:mt-3 !w-full h-20  px-2.5 flex flex-col justify-center cursor-pointer items-start"
                 :class="navigationMenuTriggerStyle()"
              >
                 <div class="flex gap-4 mb-2 items-center">

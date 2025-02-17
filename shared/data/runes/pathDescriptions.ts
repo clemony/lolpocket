@@ -24,4 +24,10 @@ export const pathDescriptions = [
     tag: 'Outwit Mere Mortals',
     description: 'Creative tools and rule bending',
   },
+
+  {
+    name: 'empty',
+    tag: 'Select a Path',
+    description: 'Choose your perks',
+  },
 ]

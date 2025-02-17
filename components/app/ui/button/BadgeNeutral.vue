@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="badge badge-sm bg-b2/60 group-hover/b:bg-neutral group-hover/b:badge-neutral group-hover/b:text-nc transition-all duration-200">
+  <div class="badge badge-sm bg-b2/60 group-hover/b:bg-neutral group-hover/b:badge-neutral group-hover/b:text-nc transition-all duration-200 font-medium">
     <slot />
   </div>
 </template>
