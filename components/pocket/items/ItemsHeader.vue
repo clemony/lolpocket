@@ -5,30 +5,29 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="w-full flex items-center flex-nowrap gap-4 h-20 px-8 py-2">
-    <!--  <h2 class="tracking-tighter text-nowrap grow">Item Sets</h2> -->
 
-    <div class="join join-vertical lg:join-horizontal">
+
+    <div class="[&_svg]:shrink-0  *:btn-square *:size-8 *:btn-ghost *:btn-sm flex gap-2 ">
       <button
         v-tippy="'Add Set'"
-        class="btn join-item"
+        class="btn  "
         @click="newItemSet(props.pocket.key)"
       >
         <icon
-          name="add-sm"
-          class="size-6"
+          name="add"
+           class="size-4 stroke-[1.5]"
         />
       </button>
       <button
         v-tippy="'Reset All Items'"
-        class="btn join-item"
+        class="btn    "
       >
         <icon
-          name="mynaui:refresh"
-          class="size-4.5"
+          name="refresh"
+          class="size-4 stroke-[1.5]"
         />
       </button>
-      <button class="btn join-item">
+      <button class="btn    ">
         <tippy
           tag="button"
           content-tag="div"
@@ -36,8 +35,8 @@ const props = defineProps<{
         >
           <template #default>
             <icon
-              name="ant-design:question-outlined"
-              class="size-4.5"
+              name="teenyicons:question-outline"
+              class="size-4 stroke-[1.5]"
             />
           </template>
           <template #content>
@@ -64,7 +63,7 @@ const props = defineProps<{
         </tippy>
       </button>
     </div>
-  </div>
+
 </template>
 
 <style scoped></style>

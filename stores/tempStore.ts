@@ -147,6 +147,9 @@ export const useTempStore = defineStore(
 
       // spells
       selectedSpell,
+
+      // sidebar
+
     }
   },
   {

@@ -21,17 +21,15 @@ const quote = getQuote().replace(/<\/p>/g, ' ').replace(/<p>/g, ' ').replace(/<i
 
 <template>
   <div class="size-full px-12 overflow-y-auto ">
-    <div class="flex pt-[8.9vh] items-center pb-6">
-      <h1 class="dst">
-        Champions
-      </h1>
+
+          <PocketHeader title="Champions" :pocket="pocket" class="">
 
       <p class="text-4 ml-10.5 dst font-serif **:!text-nowrap">
         {{ quote }}
       </p>
-    </div>
+          </PocketHeader>
 
-    <div class="grid    inset-0 grid-flow-row auto-cols-auto  h-fit  grid-cols-[repeat(auto-fill,minmax(70px,1fr))] justify-center gap-4   py-7">
+    <div class="grid    inset-0 grid-flow-row auto-cols-auto  h-fit  grid-cols-[repeat(auto-fill,minmax(70px,1fr))] justify-center gap-4   pt-10 pb-7">
       <Champion
         v-for="champion in champions"
         :key="champion.apiname"

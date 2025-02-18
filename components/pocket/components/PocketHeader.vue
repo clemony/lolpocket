@@ -1,6 +1,8 @@
 <script setup lang="ts">
 const props = defineProps<{
   pocket?: pocket
+  class?: HTMLAttributes['class']
+  title?: string
 }>()
 
 const ts = useTempStore()
@@ -24,31 +26,27 @@ function handleDrawer() {
 </script>
 
 <template>
-  <header class="w-full   flex flex-nowrap shrink-0 flex-col mb-4  py-2 justify-end items-start gap-1.5">
+  <header class="w-full pt-[6.4vh]  flex flex-nowrap shrink-0 flex-col justify-end items-start gap-3">
     <div class="breadcrumbs text-2 font-medium tracking-tight">
-      <ul class="flex items-center ">
+      <ul class="flex items-center **:[&_li]:before:!hidden">
         <li>
           <NuxtLink to="/pockets">
-            <span class="inline-flex items-center gap-2.5"> <icon name="formkit:folder" />Pocket Folders </span>
+            <span class="inline-flex items-center gap-2.5 capitalize"> <icon name="formkit:folder" class="size-4 shrink-0" />{{ pocket.location.folder }} Folder </span>
           </NuxtLink>
         </li>
-        <li>
+        <li class="before:!opacity-100 before:dst">
           <span class="inline-flex items-center !gap-2.5 capitalize">
-            <icon name="teenyicons:folder-outline" />
-            All
+            <icon name="teenyicons:folder-outline" class="shrink-0" />
+            {{ name }}
           </span>
         </li>
       </ul>
     </div>
-
-    <h1 class="!text-8 text-start dst tracking-tight !leading-none truncate  overflow-hidden capitalize grow">
-      {{ name }}
-    </h1>
-
-    <div v-if="pocket.tags" class=" w-full text-2 italic font-medium">
-      <p class="flex gap-2">
-        <span v-for="tag in pocket.tags" :key="tag">#{{ tag }}</span>
-      </p>
+    <div :class="cn('flex w-full  items-center', props.class)">
+      <h1 class="!text-8 text-start dst tracking-tight !leading-none truncate  overflow-hidden capitalize  flex">
+        {{ props.title }}
+      </h1>
+      <slot />
     </div>
   </header>
 </template>

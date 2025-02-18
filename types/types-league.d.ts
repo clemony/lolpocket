@@ -40,6 +40,14 @@ declare global {
     notes: string[]
   }
 
+  interface PocketComponent {
+    ref: MaybeRefOrGetter
+    linkRef: MaybeRef
+    buttonRef: MaybeRef
+    icon: string
+    title: string
+  }
+
   interface Role {
     name: string
     icon: string

@@ -39,6 +39,7 @@ return a.value == 'Sorcery' ? 'https://raw.communitydragon.org/latest/plugins/rc
 
 <template>
   <div class="relative overflow-hidden">
+        <PocketHeader title="Champions" :pocket="pocket" class="" />
   <videoBackground :src="runeVideo" class="size-full grayscale bg-center opacity-65 brightness-180 aspect-video absolute z-0 gradient-mask-l-0" />
 
   <div class="absolute inset-0">

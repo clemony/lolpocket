@@ -11,6 +11,8 @@ watch(
   },
 )
 
+const emit = defineEmits(['update:component'])
+
 const activePocket = ref(props.pocket)
 
 onMounted (async () => {
@@ -22,11 +24,14 @@ onMounted (async () => {
 <template>
   <div class="grid grid-rows-[auto_200px] w-full h-full   pr-4">
     <div>
-      <div class="pb-5 pl-2.5">
+      <div class="pb-5  flex gap-2 items-center">
+        <button @click="emit('update:component', null)" v-tippy="'Back to Menu'" class="btn btn-ghost size-10 -ml-0.5">
+          <icon name="formkit:arrowleft" class="size-6 shrink-0" />
+        </button>
         <h1>Browse Pockets</h1>
       </div>
 
-      <div class=" mt-1 rounded-xl  inset-shadow-xxs  pl-1 py-1">
+      <div class=" mt-1 rounded-xl  inset-shadow-xxs   py-1">
         <ul
           v-for="folder in defaultFolders()"
           v-bind="$attrs" :key="folder.key"
@@ -39,9 +44,9 @@ onMounted (async () => {
               <summary class="capitalize flex gap-3 overflow-auto w-full after:hidden items-center hover:bg-b2/60 pr-2 flex-nowrap">
                 <icon
                   :name="folder.icon"
-                  class="size-4 shrink-0"
+                  class="size-5 shrink-0"
                 />
-                <span class="w-full truncate"> {{ folder.name }}</span>
+                <span class="w-full truncate text-3 fontmedium"> {{ folder.name }}</span>
                 <span v-if="folder.items.length" class="badge badge-neutral text-2 badge-sm">{{ folder.items.length }}</span>
                 <PlusMinusExpand :check="folderMain == 'open' ? true : false" />
               </summary>
@@ -51,7 +56,7 @@ onMounted (async () => {
                   :key="item.key"
                   class="!mr-5"
                 >
-                  <label class="capitalize flex w-full after:hidden items-center hover:bg-b2/60 flex-nowrap has-checked:bg-b2/40 rounded-lg">
+                  <label class="capitalize flex w-full after:hidden items-center hover:bg-b2/60 flex-nowrap  text-3 font-medium has-checked:bg-b2/40 rounded-lg">
                     <input v-model="activePocket" type="radio" class="peer hidden" name="active-pocket" :value="item" />
                     <PocketIcon
                       :image="item.icon"

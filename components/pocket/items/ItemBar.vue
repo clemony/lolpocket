@@ -31,7 +31,7 @@ watch(
           <LazyItemInfo />
         </div>
       </PopoverContent>
-    </Popover>>
+    </Popover>
   </div>
 </template>
 

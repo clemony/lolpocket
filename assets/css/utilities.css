@@ -33,3 +33,7 @@
 @utility dst {
   @apply drop-shadow-text;
 }
+
+@utility sidebar {
+  @apply grid grid-cols-[66px_auto] w-screen h-screen;
+}

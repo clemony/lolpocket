@@ -38,6 +38,7 @@ export default defineAppConfig({
       'lines': 'teenyicons:align-text-justify-outline',
       'info': 'teenyicons:info-outline',
       'filter': 'teenyicons:filter-outline',
+      'refresh': 'teenyicons:refresh-alt-outline',
       'copy': 'teenyicons:layers-subtract-outline',
       'shuffle': 'qlementine-icons:shuffle-16',
 

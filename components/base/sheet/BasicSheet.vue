@@ -17,6 +17,7 @@ defineOptions({
 
 const props = defineProps<
   SheetContentProps & {
+
   }
 >()
 // pr
@@ -38,7 +39,7 @@ const target = ref()
 const { isOutside } = useMouseInElement(target)
 
 function handleClick() {
-  if (isOutside.value) {
+  if (isOutside.value ) {
     emits('update:clicked')
   }
 }

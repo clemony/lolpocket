@@ -6,6 +6,7 @@ const props = defineProps<{
   model: number
   alignOffset?: number
   pocket?: pocket
+  isMenuOpen?: boolean
 }>()
 
 const emit = defineEmits(['update:model'])
@@ -42,18 +43,19 @@ const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells
 
 <template>
   <Popover>
-    <PopoverTrigger  class="p-0 size-20 rounded-lg btn shadow-sm inset-shadow-sm">
+    <PopoverTrigger  class="p-0 size-11.5 rounded-full btn shadow-sm inset-shadow-sm">
       <img
         v-if="!pocket.spells[props.model] || !pocket.spells[props.model].name || pocket.spells[props.model].name == 'empty' || pocket.spells[props.model].name == undefined"
         :src="useRandom(imgArr)"
-        class=" rounded-lg overflow-hidden grayscale opacity-30 color-mix-screen"
+        class=" rounded-full overflow-hidden grayscale opacity-30 color-mix-screen  transition-all duration-500"
       />
 
       <img
         v-else-if="pocket.spells[props.model]"
         :src="`/img/spells/${pocket.spells[props.model].name}.webp`"
 
-        class=" rounded-lg overflow-hidden"
+        class=" rounded-full overflow-hidden grayscale-0 transition-all duration-500"
+          :class="{'!grayscale  !brightness-115 contrast-85 ': !isMenuOpen}"
       />
     </PopoverTrigger>
 

@@ -1,3 +1,5 @@
+import { useSidebarStore } from 'stores/sidebarStore'
+
 export const as = computedAsync(async () => {
   return await useAccountStore()
 }, null)
@@ -12,4 +14,8 @@ export const ps = computedAsync(async () => {
 
 export const ts = computedAsync(async () => {
   return await useTempStore()
+}, null)
+
+export const ss = computedAsync(async () => {
+  return await useSidebarStore()
 }, null)

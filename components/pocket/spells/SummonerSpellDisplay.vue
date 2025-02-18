@@ -1,9 +1,15 @@
 <script setup lang="ts">
 const props = defineProps<{
-  pocket: pocket
+  pocket?: pocket
 }>()
+
+const ss = useSidebarStore()
+const isOpen = ref(ss.isSidebarOpen)
+
+const emit = defineEmits(['update:selected'])
+
 const pocket = ref(props.pocket)
-const ps = usePocketStore()
+
 function update(event, i) {
   console.log(event)
   pocket.value.spells[i] = event
@@ -11,20 +17,22 @@ function update(event, i) {
 </script>
 
 <template>
-  hi
-<!--   <div class=" gap-3 grid grid-cols-4 h-auto items-center pt-3 px-2">
-    <SpellPicker
-      v-model:model="pocket.spells[0]"
-      :pocket="props.pocket"
-      @update:model="update($event, 0)"
-    />
+            <div class=" gap-2 flex flex-col h-auto items-center  rounded-full  py-2 px-2  bg-b2 border-b3 shadow-sm">
+        <SpellPicker
+          :model="0"
+          :pocket="pocket"
+          @update:model="update($event, 0)"
+       :is-menu-open="isOpen"
+        />
+      
 
-    <SpellPicker
-      v-model:model="pocket.spells[1]"
-      :pocket="props.pocket"
-      @update:model="update($event, 1)"
-    />
-  </div> -->
+        <SpellPicker
+          :model="1"
+          :pocket="pocket"
+          @update:model="update($event, 1)"
+          :is-menu-open="isOpen"
+        />
+      </div>
 </template>
 
 <style></style>

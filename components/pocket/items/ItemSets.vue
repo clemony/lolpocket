@@ -36,7 +36,8 @@ watch(items, (newItemSets) => {
 </script>
 
 <template>
-  <div class="min-h-90vh 90vh">
+  <div class="min-h-90vh 90vh pr-12 pl-1 relative z-20">
+            
     <div
       v-draggable="[
         pocket.items.sets,
@@ -58,13 +59,13 @@ watch(items, (newItemSets) => {
         },
       ]"
       group
-      class="z-0 h-full w-full pt-8 px-8 flex-col items-center gap-10 flex"
+      class="z-0 h-full w-full pt-8 flex-col items-center gap-10 flex"
     >
       <Card
         v-for="set, in pocket.items.sets"
         :key="set.name"
         drag-class="setDrag"
-        class="relative w-full !shadow-sm shadow-b2/70"
+        class="relative w-full !shadow-smooth "
       >
         <CardHeader class="flex w-full flex-row items-center  pb-3 px-4">
           <!--                <label class="group/star items-center cursor-pointer  *:transition-all *:duration-300  size-3 relative">

@@ -2,7 +2,6 @@
 const ts = useTempStore()
 const as = useAccountStore()
 const ds = useDataStore()
-const colorMode = useColorMode()
 const appConfig = useAppConfig()
 const useHead = useHeader()
 
@@ -13,9 +12,6 @@ onMounted(async () => {
   document.documentElement.setAttribute('data-theme', 'light')
   getPatch()
 })
-
-const scroll = ref(null)
-const { isScrolling } = useScroll(scroll)
 </script>
 
 <template>

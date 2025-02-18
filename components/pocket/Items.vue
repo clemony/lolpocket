@@ -17,14 +17,17 @@ ref="panelRef" */
 </script>
 
 <template>
-  <div class="size-full flex">
+  <div class="size-full overflow-hidden  px-12">
+        <PocketHeader title="Item Sets" :pocket="pocket" class="">
+
+    <ItemsHeader :pocket="pocket" class="ml-8 -mt-0.5" />
+        </PocketHeader>
     <ResizablePanelGroup
       direction="horizontal"
-      class="max-h-full h-full"
+      class="h-[86vh] max-h-[86vh]"
     >
-      <ResizablePanel :default-size="42" :min-size="20">
-        <MenubarSpacer />
-        <ItemsHeader :pocket="pocket" />
+      <ResizablePanel :default-size="48" :min-size="20" >
+   
         <ItemSets :pocket="pocket" />
       </ResizablePanel>
       <ResizableHandle
@@ -32,7 +35,7 @@ ref="panelRef" */
         class="bg-transparent bg-gradient-to-b from-transparent via-b3/60 via-20% to-transparent to-180%"
       />
       <ResizablePanel :min-size="10">
-        <div class="h-full w-full relative">
+        <div class="h-full w-full relative border-2 rounded-xl border-b2 flex justify-center  ">
           <PocketItemList :pocket="pocket" />
         </div>
       </ResizablePanel>

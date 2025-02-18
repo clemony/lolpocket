@@ -34,44 +34,40 @@ client.auth.onAuthStateChange(async (event, session) => {
 </script>
 
 <template>
-  <main
-    id="app"
-    class="relative size-screen min-size-screen"
-  >
-    <Sonner
-      position="top-right"
-
-      :toast-options="{
-        class: 'my-toast',
-        descriptionClass: 'my-toast-description',
-      }"
-      :expand="true"
-      :duration="6000"
-    />
-
-    <LazyChampionDrawer
-      v-if="ts.selectedChampion"
-      :key="ts.selectedChampion"
-    />
-    <ItemDrawer
-      v-if="ts.selectedItem"
-      :key="ts.selectedItem"
-    />
-    <LazyPocketSheet
-      v-if="ts.pocketSheetTrigger"
-    />
-
-    <LazyNewFolderDialog />
-
-    <div ref="app" id="app"
-      class="app-body bg-b1 transition-all duration-400 size-screen min-h-screen grid"
+  <main class="size-screen">
+    <MainMenubar />
+    <div
+      id="app"
+      class="app-body bg-b1 h-screen w-full relative"
     >
-      <MainMenubar />
-      <div class="size-screen max-size-screen overflow-hidden">
+      <Sonner
+        position="top-right"
+
+        :toast-options="{
+          class: 'my-toast',
+          descriptionClass: 'my-toast-description',
+        }"
+        :expand="true"
+        :duration="6000"
+      />
+
+      <LazyChampionDrawer
+        v-if="ts.selectedChampion"
+        :key="ts.selectedChampion"
+      />
+      <ItemDrawer
+        v-if="ts.selectedItem"
+        :key="ts.selectedItem"
+      />
+      <LazyPocketSheet
+        v-if="ts.pocketSheetTrigger"
+      />
+      <LazyNewFolderDialog />
+
+      <div class="size-full max-size-full overflow-hidden">
         <slot />
       </div>
     </div>
-
   </main>
 </template>
 

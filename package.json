@@ -13,12 +13,12 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^4.2.0",
+    "@antfu/eslint-config": "^4.2.1",
     "@basitcodeenv/vue3-device-detect": "^1.0.3",
     "@eslint/object-schema": "^2.1.6",
     "@fontsource-variable/noto-serif-kr": "^5.1.2",
     "@fontsource/geist-sans": "^5.1.0",
-    "@iconify/json": "^2.2.306",
+    "@iconify/json": "^2.2.307",
     "@iconify/vue": "^4.3.0",
     "@lolmath/calc": "^0.0.7",
     "@morev/vue-transitions": "^3.0.5",
@@ -36,9 +36,9 @@
     "@tailwindcss/postcss": "^4.0.6",
     "@tailwindcss/vite": "^4.0.6",
     "@vue/runtime-core": "^3.5.13",
-    "@vueuse/components": "^12.6.1",
-    "@vueuse/integrations": "^12.6.1",
-    "@vueuse/nuxt": "^12.6.1",
+    "@vueuse/components": "^12.5.0",
+    "@vueuse/integrations": "^12.5.0",
+    "@vueuse/nuxt": "^12.5.0",
     "ag-grid-community": "33.1.0",
     "ag-grid-vue3": "33.1.0",
     "axios": "^1.7.9",
@@ -92,7 +92,7 @@
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/compiler-sfc": "^3.5.13",
     "@vue/test-utils": "^2.4.6",
-    "@vueuse/core": "^12.6.1",
+    "@vueuse/core": "^12.5.0",
     "daisyui": "^5.0.0-beta.8",
     "eslint": "^9.20.1",
     "eslint-plugin-format": "^1.0.1",
@@ -107,7 +107,7 @@
     "vue-eslint-parser": "^9.4.3",
     "vue-router": "^4.5.0",
     "vue-tsc": "^2.2.0",
-    "wrangler": "^3.107.3"
+    "wrangler": "^3.109.0"
   },
   "overrides": {
     "tailwindcss-animate": {

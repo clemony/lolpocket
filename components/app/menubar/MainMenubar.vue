@@ -14,23 +14,22 @@ const isPocket = computed (() => {
 
 const as = useAccountStore()
 
-const summoner = ref(as.userAccount)
+const summoner = computed(() => {
+  return as.userAccount ? as.userAccount : defaultUser
+})
 const messages = ref()
 const modelSettings = ref()
 const isOpen = ref('closed')
-
-const ps = usePocketStore()
-// ps.pockets = []
 </script>
 
 <template>
   <div
-    class="bg-b1/80 w-screen max-w-screen  h-[5vh] min-h-[5vh] max-h-[5vh] fixed z-66 m-0 flex items-center gap-5 border-b border-b-transparent !pt-2 pr-7.5 pl-6 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center "
+    class="bg-b1/80 w-screen max-w-screen  h-[5vh] min-h-[5vh] max-h-[5vh] fixed z-66 m-0 flex items-center gap-5 border-b border-b-transparent !pt-2 pr-7.5 pl-5.5 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center "
     :class="{ '': isPocket }"
   >
     <Button
       variant="ghost"
-      class=" size-11 mr-2"
+      class=" size-11 mr-8"
       as-child
     >
       <NuxtLink to="/">
@@ -45,7 +44,13 @@ const ps = usePocketStore()
       :disable-click-trigger="true"
     >
       <NavigationMenuList class="pt-0.75">
-        <MenubarUser />
+        <NavigationMenuItem>
+          <NuxtLink to="/summoner">
+            <NavigationMenuLink :class="navigationMenuTriggerStyle()" class="capitalize">
+              {{ summoner.gameName || summoner.name || 'Summoner' }}
+            </NavigationMenuLink>
+          </NuxtLink>
+        </NavigationMenuItem>
 
         <MenubarPocket />
         <MenubarData />

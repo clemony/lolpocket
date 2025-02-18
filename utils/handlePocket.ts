@@ -1,5 +1,9 @@
 import { hexoid } from 'hexoid'
 import { toast } from 'vue-sonner'
+import Champions from 'components/pocket/Champions.vue'
+import Items from 'components/pocket/Items.vue'
+import Runes from 'components/pocket/Runes.vue'
+import Complete from 'components/pocket/Complete.vue'
 
 export async function addPocket(name: string, tags: Array<string>, icon: string, key?: string) {
   const toID = hexoid()
@@ -147,54 +151,59 @@ export function createDefaultSpell() {
   return spell
 }
 
-const champions = ref(null)
-const items = ref(null)
-const runes = ref(null)
-const complete = ref(null)
+const championsButton = ref(null)
+const itemsButton = ref(null)
+const runesButton = ref(null)
+const completeButton = ref(null)
 
-const championsBtn = ref(null)
-const itemsBtn = ref(null)
-const runesBtn = ref(null)
-const completeBtn = ref(null)
+const championsLink = ref(null)
+const itemsLink = ref(null)
+const runesLink = ref(null)
+const completeLink = ref(null)
 export const pocketComponents = [
   {
 
-    compRef: markRaw(defineAsyncComponent(() => import('components/pocket/Champions.vue'))),
-    hoverRef: champions,
-    btnRef: championsBtn,
+    compRef: Champions,
+    linkRef: championsLink,
+    buttonRef: championsButton,
     icon: '',
     title: 'Champions',
   },
   {
-    compRef: markRaw(defineAsyncComponent(() => import('components/pocket/Items.vue'))),
-    hoverRef: items,
-    btnRef: itemsBtn,
+    compRef: Items,
+    linkRef: itemsLink,
+    buttonRef: itemsButton,
     icon: 'bow',
     title: 'Items',
   },
   {
 
-    compRef: markRaw(defineAsyncComponent(() => import('components/pocket/Runes.vue'))),
-    hoverRef: runes,
-    btnRef: runesBtn,
+    compRef: Runes,
+    linkRef: runesLink,
+    buttonRef: runesButton,
     icon: '',
     title: 'Runes',
   },
   {
 
-    compRef: markRaw(defineAsyncComponent(() => import('components/pocket/Complete.vue'))),
-    hoverRef: complete,
-    btnRef: completeBtn,
+    compRef: Complete,
+    linkRef: completeLink,
+    buttonRef: completeButton,
     icon: 'stash:infinity-solid',
     title: 'Complete Build',
   },
 ]
 
 export const hoverStates = pocketComponents.map(el => ({
-  ref: el.ref,
+  compRef: el.ref,
   btnRef: el.btnRef,
   title: el.title,
-  isHovered: useElementHover(el.hoverRef),
-  isBtnHovered: useElementHover(el.btnRef),
+  isLinkHovered: el.linkRef ? useElementHover(computed(() => el.linkRef.value)) : ref(false),
+  isButtonHovered: el.buttonRef ? useElementHover(computed(() => el.buttonRef.value)) : ref(false),
 }))
-
+watch(
+  () => hoverStates,
+  (newVal) => {
+    console.log('💠 - newVal:', newVal)
+  },
+)
