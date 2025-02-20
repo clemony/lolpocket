@@ -1,11 +1,12 @@
 <script setup lang="ts">
 const props = defineProps<{
   pocket: pocket
+  isOpen?: boolean
 }>()
 
 const ts = useTempStore()
 const ss = useSidebarStore()
-const isOpen = ref(ss.isSidebarOpen)
+
 const pocket = ref(props.pocket)
 
 const champs = computedAsync(() => {

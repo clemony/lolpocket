@@ -33,7 +33,7 @@ onMounted (async () => {
 
       <div class=" mt-1 rounded-xl  inset-shadow-xxs   py-1">
         <ul
-          v-for="folder in defaultFolders()"
+          v-for="folder in defaultFolders"
           v-bind="$attrs" :key="folder.key"
           class="menu h-inherit !w-full mx-0 z-0 px-0 **:text-3 **:[&_svg]:shrink-0"
         >

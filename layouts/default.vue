@@ -31,15 +31,17 @@ client.auth.onAuthStateChange(async (event, session) => {
     as.userAccount.session = data.session
   }
 })
+
+const ss = useSidebarStore()
 </script>
 
 <template>
-  <main class="size-screen">
+  <main class="h-screen w-screen ">
     <MainMenubar />
     <div
-      id="app"
-      class="app-body bg-b1 h-screen w-full relative"
+      class="bg-b1 h-screen w-full relative"
     >
+
       <Sonner
         position="top-right"
 

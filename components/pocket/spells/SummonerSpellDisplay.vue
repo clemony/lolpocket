@@ -1,10 +1,8 @@
 <script setup lang="ts">
 const props = defineProps<{
   pocket?: pocket
+  isOpen?: boolean
 }>()
-
-const ss = useSidebarStore()
-const isOpen = ref(ss.isSidebarOpen)
 
 const emit = defineEmits(['update:selected'])
 
@@ -17,22 +15,21 @@ function update(event, i) {
 </script>
 
 <template>
-            <div class=" gap-2 flex flex-col h-auto items-center  rounded-full  py-2 px-2  bg-b2 border-b3 shadow-sm">
-        <SpellPicker
-          :model="0"
-          :pocket="pocket"
-          @update:model="update($event, 0)"
-       :is-menu-open="isOpen"
-        />
-      
+  <div class=" gap-2 flex flex-col h-auto items-center  rounded-full  py-2 px-2  bg-b2 border-b3 shadow-sm">
+    <SpellPicker
+      :model="0"
+      :pocket="pocket"
+      :is-menu-open="isOpen"
+      @update:model="update($event, 0)"
+    />
 
-        <SpellPicker
-          :model="1"
-          :pocket="pocket"
-          @update:model="update($event, 1)"
-          :is-menu-open="isOpen"
-        />
-      </div>
+    <SpellPicker
+      :model="1"
+      :pocket="pocket"
+      :is-menu-open="isOpen"
+      @update:model="update($event, 1)"
+    />
+  </div>
 </template>
 
 <style></style>

@@ -34,7 +34,7 @@ const searchResult = computedAsync (() => {
 watch(
   () => searchResult.value,
   (newVal) => {
-    console.log('💠 - newVal:', newVal)
+    //console.log('💠 - newVal:', newVal)
   },
 )
 

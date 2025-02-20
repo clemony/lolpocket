@@ -9,6 +9,7 @@ import { twMerge } from 'tailwind-merge'
 4. get wiki link
 5. make box
 6. remove items
+7. type mixins
 */
 
 // cn
@@ -68,4 +69,16 @@ export function onRemove<T>(evt: any, array: T[]) {
     array.splice(index, 1) // Remove item from array
     delete removingItems.value[itemKey] // Cleanup
   }, 600) // Match animation duration
+}
+
+// type mixins
+
+export function applyMixins(derivedCtor: any, baseCtors: any[]) {
+  baseCtors.forEach((baseCtor) => {
+    Object.getOwnPropertyNames(baseCtor.prototype).forEach((name) => {
+      if (name !== 'constructor') {
+        derivedCtor.prototype[name] = baseCtor.prototype[name]
+      }
+    })
+  })
 }

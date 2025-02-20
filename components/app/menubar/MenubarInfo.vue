@@ -4,9 +4,9 @@ import { UseClipboard } from '@vueuse/components'
 </script>
 
 <template>
-  <NavigationMenuItem>
-    <NavigationMenuTrigger>Info</NavigationMenuTrigger>
-    <NavigationMenuContent>
+  <MenubarMenu>
+    <MenubarTrigger>Info</MenubarTrigger>
+    <MenubarContent>
       <div class=" nav-menu-size ">
         <div class="size-full pt-2 flex flex-col items-between">
           <div class="grow py-7 px-7 h-full gap-10 grid grid-cols-[1fr_1fr]  ">
@@ -17,7 +17,7 @@ import { UseClipboard } from '@vueuse/components'
 
               <NuxtLink
                 to="/Docs" >
-              <NavigationMenuLink
+              <div
                 :class="cn(navigationMenuTriggerStyle())"
                 class="flex flex-col mt-2 !w-full  h-20 justify-center items-start"
              >
@@ -28,10 +28,10 @@ import { UseClipboard } from '@vueuse/components'
                   </h5>
                 </div>
                 How this works.
-                </NavigationMenuLink>
+                </div>
               </NuxtLink>
 
-              <NavigationMenuLink
+              <div
                 href="https://discord.gg/Jzuu7bYTZY"
                 target="_blank"
                 class="flex flex-col !w-full h-20 justify-center items-start"
@@ -45,12 +45,12 @@ import { UseClipboard } from '@vueuse/components'
                   <h5 class="!font-semibold">Discord</h5>
                 </div>
                 <p class="">Join the channel.</p>
-             </NavigationMenuLink>
+             </div>
 
               <NuxtLink
                 to="/About"
               >
-              <NavigationMenuLink
+              <div
                 class=" !w-full h-20  px-2.5 flex flex-col justify-center items-start"
                 :class="navigationMenuTriggerStyle()">
                 <div class="flex gap-4 mb-2 items-center">
@@ -65,7 +65,7 @@ import { UseClipboard } from '@vueuse/components'
                 <p class="">
                   It's just cats and stuff.
                 </p>
-                </NavigationMenuLink>
+                </div>
               </NuxtLink>
             </div>
 
@@ -77,7 +77,7 @@ import { UseClipboard } from '@vueuse/components'
               <NuxtLink
                 v-for="link in settingLinks" :key="link.name"
                 :to="link.link" class="group/l" >
-              <NavigationMenuLink
+              <div
                 class="group-first-of-type/l:mt-3 !w-full h-20  px-2.5 flex flex-col justify-center cursor-pointer items-start"
                 :class="navigationMenuTriggerStyle()"
              >
@@ -93,13 +93,13 @@ import { UseClipboard } from '@vueuse/components'
                 <p>
                   {{ link.text }}
                 </p>
-                </NavigationMenuLink>
+                </div>
               </NuxtLink>
             </div>
           </div>
 
           <div class="w-full bg-b2/40 border border-t-b2 min-h-20 px-9 flex items-center justify-between rounded-b-xl border-x-b3 border-b-b3">
-            <NavigationMenuLink
+            <div
               href="https://github.com/clemony/lolpocket"
               target="_blank"
               class="flex dst  text-1 underline-offset-2 hover:underline items-center align-text-bottom font-mono"
@@ -109,9 +109,9 @@ import { UseClipboard } from '@vueuse/components'
                 class="size-5.5 mr-3 dst"
               />
               github @clemony
-            </NavigationMenuLink>
+            </div>
 
-            <NavigationMenuLink
+            <div
               class="flex gap-2 items-center "
             >
               <icon name="mail" class="size-6 dst stroke-[1.2]" />
@@ -122,12 +122,12 @@ import { UseClipboard } from '@vueuse/components'
                   <icon name="copy" class="text-nc !size-3.5 shrink-0" />
                 </button>
               </UseClipboard>
-           </NavigationMenuLink>
+           </div>
           </div>
         </div>
       </div>
-    </NavigationMenuContent>
-  </NavigationMenuItem>
+    </MenubarContent>
+  </MenubarMenu>
 </template>
 
 <style scoped>

@@ -7,13 +7,13 @@ const ts = useTempStore()
 const items = [
   {
     name: 'Items',
-    link: 'Items',
+    link: '/items',
     icon: 'streamline:bow',
     text: 'Browse a visual grid and read item data.'
   },
   {
     name: 'Item Stats',
-    link: 'ItemTable',
+    link: '/item-stats',
     icon: 'teenyicons:align-bottom-solid',
     badge: 'Table',
     text: 'An item stat spreadsheet for the data nerds :)'
@@ -22,23 +22,23 @@ const items = [
 const db = [
   {
     name: 'Champions',
-    link: 'Champions',
+    link: '/champions',
     icon: 'i-helmet',
   },
 
   {
     name: 'Runes',
-    link: 'Runes',
+    link: '/runes',
     icon: 'i-rune',
   },
   {
     name: 'Spells',
-    link: 'Spells',
-    icon: 'shield',
+    link: '/spells',
+    icon: 'mdi:run-fast',
   },
   {
     name: 'Summoners',
-    link: '',
+    link: '/summoners',
     icon: 'shield',
     text: 'Look up your friends... or your foes.',
   },
@@ -46,53 +46,49 @@ const db = [
 </script>
 
 <template>
-  <NavigationMenuItem>
-    <NavigationMenuTrigger>Game</NavigationMenuTrigger>
-    <NavigationMenuContent>
-      <div class=" nav-menu-size  py-6 px-7 gap-8 grid grid-cols-2">
+  <MenubarMenu class=" ">
+    <MenubarTrigger>Game</MenubarTrigger>
+    <MenubarContent class="!w-74">
 
-        <div class="bg-b2/40 rounded-lg px-3 py-3 grid border-b2 border bg-[var(--bg-noise)] group/i gap-2">
+
+      <MenubarLabel>Items</MenubarLabel>
            <NuxtLink
           v-for="item in items"
           :key="item.name"
-          :to="{ name: item.link }"
-          class="flex gap-4 items-center justify-start btn btn-ghost !h-full "
+          :to="item.link"
+          class=""
         >
-          <NavigationMenuLink  class="text-left">
-            <div class="flex items-center gap-3 ">
-              <icon :name="item.icon" class="size-4 shrink-0"/>
-           <h5 class="f-sb grow f-tt"> {{ item.name }}</h5>
+         <MenubarItem>
+         
+              <icon :name="item.icon" class="size-3 shrink-0"/>
+         {{ item.name }}
 
-           <BadgeNeutral v-if="item.badge" class="uppercase">
+           <MenubarShortcut v-if="item.badge" class="tracking-normal text-2 uppercase">
 {{item.badge}}
-           </BadgeNeutral>
-          </div>
-           <p class="text-3 !font-normal mt-1">{{item.text}}</p>
+           </MenubarShortcut>
+     
 
 
-          </NavigationMenuLink>
+          </MenubarItem>
 
         </NuxtLink>
-        </div>
+   
+        <MenubarSeparator  />
         <NuxtLink
           v-for="submenu in db"
           :key="submenu.name"
-          :to="{ name: submenu.link }"
-          class="flex gap-4 items-center"
+          :to="submenu.link"
+          class=""
         >
-          <NavigationMenuLink :class="navigationMenuTriggerStyle()">
+           <MenubarItem>
+                       <icon :name="submenu.icon" class="size-3 shrink-0"/>
             {{ submenu.name }}
-          </NavigationMenuLink>
+           </MenubarItem>
         </NuxtLink>
 
-        <NuxtLink to="/Summoners">
-          <NavigationMenuLink :class="navigationMenuTriggerStyle()">
-            Summoners
-          </NavigationMenuLink>
-        </NuxtLink>
-      </div>
-    </NavigationMenuContent>
-  </NavigationMenuItem>
+  
+    </MenubarContent>
+  </MenubarMenu>
 </template>
 
 <style scoped></style>

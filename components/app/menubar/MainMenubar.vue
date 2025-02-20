@@ -23,9 +23,9 @@ const isOpen = ref('closed')
 </script>
 
 <template>
-  <div
-    class="bg-b1/80 w-screen max-w-screen  h-[5vh] min-h-[5vh] max-h-[5vh] fixed z-66 m-0 flex items-center gap-5 border-b border-b-transparent !pt-2 pr-7.5 pl-5.5 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center "
-    :class="{ '': isPocket }"
+  <Menubar
+    class="bg-b1/80 w-screen  max-w-screen  h-[5vh] min-h-[5vh] max-h-[5vh] fixed z-66 m-0 flex items-center gap-5 border-b border-b-transparent !pt-2 pr-7.5 pl-5.5 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center transition-all duration-400"
+    :class="{ 'bg-b2/30': route.name == 'items' }"
   >
     <Button
       variant="ghost"
@@ -39,45 +39,41 @@ const isOpen = ref('closed')
       </NuxtLink>
     </Button>
 
-    <NavigationMenu
-      :skip-delay-duration="100"
-      :disable-click-trigger="true"
-    >
-      <NavigationMenuList class="pt-0.75">
-        <NavigationMenuItem>
-          <NuxtLink to="/summoner">
-            <NavigationMenuLink :class="navigationMenuTriggerStyle()" class="capitalize">
-              {{ summoner.gameName || summoner.name || 'Summoner' }}
-            </NavigationMenuLink>
-          </NuxtLink>
-        </NavigationMenuItem>
+    <NuxtLink to="/summoner">
+      <MenubarMenu>
+        <span class="capitalize">  {{ summoner.gameName || summoner.name || 'Summoner' }}</span>
+      </MenubarMenu>
+    </NuxtLink>
 
-        <MenubarPocket />
-        <MenubarData />
-        <MenubarInfo />
+    <NuxtLink to="/pockets">
+      <MenubarMenu>
+        Pockets
+      </MenubarMenu>
+    </NuxtLink>
 
-        <NavigationMenuItem>
-          <NuxtLink to="/Summoners">
-            <NavigationMenuLink :class="navigationMenuTriggerStyle()">
-              Calculator
-            </NavigationMenuLink>
-          </NuxtLink>
-        </NavigationMenuItem>
+    <MenubarData />
+    <MenubarInfo />
 
-        <NavigationMenuViewport class="top-1  left-24 !rounded-xl" />
-      </NavigationMenuList>
-    </NavigationMenu>
+    <NuxtLink to="/Summoners">
+      <MenubarMenu>
+        Calculator
+      </MenubarMenu>
+    </NuxtLink>
 
     <Grow />
     <button class="btn btn-md invisible" @click="toast('Test toast', { description: 'Hey hi that\'s really cool!' })">
       test toast
     </button>
 
+    <button class="btn" @click="ss.isSidebarOpen = true">
+      hihi
+    </button>
+
     <LazyCommand />
     <MenubarSearch />
 
-    <DropdownMenu>
-      <DropdownMenuTrigger class="ml-2 mb-1 hover:bg-transparent focus:bg-transparent max-w-11 group/acc transition-all duration-150 flex items-center">
+    <MenubarMenu>
+      <MenubarTrigger class="ml-2 mb-1 hover:bg-transparent focus:bg-transparent max-w-11 group/acc transition-all duration-150 flex items-center">
         <Avatar class="size-11 hover:ring-2 rounded-lg hover:ring-b3 shadow-sm group-data-[state=open]/acc:ring group-data-[state=open]/acc:ring-neutral cursor-pointer">
           <AvatarImage
 
@@ -98,13 +94,13 @@ const isOpen = ref('closed')
             <div class="status !bg-resolve"></div>
           </div>
         </Avatar>
-      </DropdownMenuTrigger>
+      </MenubarTrigger>
 
-      <DropdownMenuContent class="min-w-96" align="end" :align-offset="-9" side="bottom" :side-offset="9">
+      <MenubarContent class="min-w-96" align="end" :align-offset="-9" side="bottom" :side-offset="9">
         <LazyMenubarSettings />
-      </DropdownMenuContent>
-    </DropdownMenu>
-  </div>
+      </MenubarContent>
+    </MenubarMenu>
+  </Menubar>
 </template>
 
 <style scoped></style>

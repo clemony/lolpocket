@@ -17,6 +17,7 @@ export default defineAppConfig({
       'x-sm': 'teenyicons:x-small-outline',
       'x': 'teenyicons:x-outline',
       'and': 'mynaui:ampersand',
+      'x-solid': 'teenyicons:x-circle-solid',
 
       // check
       'tick': 'teenyicons:tick-outline',
@@ -30,6 +31,7 @@ export default defineAppConfig({
       'right': 'teenyicons:right-outline',
       'up-sm': 'teenyicons:up-small-outline',
       'select': 'teenyicons:caret-vertical-small-outline',
+      'arrow-up': 'teenyicons:arrow-up-small-outline',
 
       // menu
       'more': 'teenyicons:more-horizontal-outline',

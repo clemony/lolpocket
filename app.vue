@@ -17,7 +17,7 @@ onMounted(async () => {
 <template>
   <NuxtLayout>
     <!-- <Progress /> -->
-    <LazyNuxtPage :page-key="(route) => route.fullPath" />
+    <LazyNuxtPage />
 
     <!-- <StepLoader /> -->
   </NuxtLayout>

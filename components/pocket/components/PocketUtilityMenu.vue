@@ -7,7 +7,7 @@ const pocket = ref(props.pocket)
 </script>
 
 <template>
-  <div class="flex *:cursor-pointer flex-col gap-2 *:py-3 *:justify-start *:text-left *:w-full *:text-3">
+  <div class="flex *:cursor-pointer flex-col gap-2 *:py-3 *:justify-start *:text-left *:w-full *:text-3 **:pointer-events-auto">
     <button
       class="group btn btn-ghost btn-lg"
 
@@ -25,8 +25,8 @@ const pocket = ref(props.pocket)
     </button>
 
     <button
-      class="group btn btn-ghost btn-lg"
-      @click="deletePocket(pocket.key)"
+      class="group btn btn-ghost btn-lg cursor-pointer "
+      @click="deletePocket(pocket)"
     >
       Send Pocket to Trash
     </button>

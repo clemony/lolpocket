@@ -1,9 +1,9 @@
 import { hexoid } from 'hexoid'
 import { toast } from 'vue-sonner'
-import Champions from 'components/pocket/Champions.vue'
-import Items from 'components/pocket/Items.vue'
-import Runes from 'components/pocket/Runes.vue'
-import Complete from 'components/pocket/Complete.vue'
+/* import Champions from 'pages/pocket/[pocketKey]/champions.vue'
+import Items from 'pages/pocket/[pocketKey]/items.vue'
+import Runes from 'pages/pocket/[pocketKey]/runes.vue'
+import Complete from 'pages/pocket/[pocketKey]/complete.vue' */
 
 export async function addPocket(name: string, tags: Array<string>, icon: string, key?: string) {
   const toID = hexoid()
@@ -42,7 +42,7 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
     tags: tags || [''],
     location: {
       pinned: 0,
-      folder: 'default',
+      folder: 'all',
     },
     notes: [''],
     dateCreated: createDateObject(),
@@ -67,18 +67,19 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
 
 // delete
 
-export function deletePocket(pocketKey: string) {
+export function deletePocket(pocket) {
   const ps = usePocketStore()
-  const pocket: pocket = getPocket(pocketKey)
-  const index = ps.pockets.findIndex(set => set.key === pocketKey)
+  const route = useRoute()
+  const inPocket = route.path == `/pocket/${pocket.key}`
+  const index = ps.pockets.findIndex(p => p === pocket)
+  console.log('💠 - deletePocket - inPocket:', inPocket)
 
-  if (index !== -1 && pocket) {
-    if (ps.pinnedFolder.includes(pocket)) {
-      ps.pinnedFolder.splice(index, 1)
-    }
-    ps.trashFolder.push(pocket)
-    pocket.location.folder = 'trash'
-    ps.pockets.splice(index, 1)
+  ps.trashFolder.push(pocket)
+  pocket.location.folder = 'trash'
+  ps.pockets.splice(index, 1)
+
+  if (inPocket) {
+    navigateTo('/pockets')
   }
 }
 
@@ -156,49 +157,42 @@ const itemsButton = ref(null)
 const runesButton = ref(null)
 const completeButton = ref(null)
 
-const championsLink = ref(null)
-const itemsLink = ref(null)
-const runesLink = ref(null)
-const completeLink = ref(null)
-export const pocketComponents = [
-  {
+export function getPocketLinks(pocket: pocket) {
+  const pocketPages: SidebarItem[] = [
+    {
 
-    compRef: Champions,
-    linkRef: championsLink,
-    buttonRef: championsButton,
-    icon: '',
-    title: 'Champions',
-  },
-  {
-    compRef: Items,
-    linkRef: itemsLink,
-    buttonRef: itemsButton,
-    icon: 'bow',
-    title: 'Items',
-  },
-  {
+      link: `/pocket/${pocket.key}/champions`,
+      name: 'Champions',
+      buttonRef: championsButton,
+      icon: 'i-no-champ',
+    },
+    {
+      link: `/pocket/${pocket.key}/items`,
+      name: 'items',
+      buttonRef: itemsButton,
+      icon: 'mdi:bow-arrow',
+    },
+    {
 
-    compRef: Runes,
-    linkRef: runesLink,
-    buttonRef: runesButton,
-    icon: '',
-    title: 'Runes',
-  },
-  {
+      link: `/pocket/${pocket.key}/runes`,
+      name: 'runes',
+      buttonRef: runesButton,
+      icon: 'i-rune-icon',
+    },
+    {
 
-    compRef: Complete,
-    linkRef: completeLink,
-    buttonRef: completeButton,
-    icon: 'stash:infinity-solid',
-    title: 'Complete Build',
-  },
-]
+      link: `/pocket/${pocket.key}/complete`,
+      name: 'complete',
+      buttonRef: completeButton,
+      icon: 'stash:infinity-solid',
+    },
+  ]
 
-export const hoverStates = pocketComponents.map(el => ({
-  compRef: el.ref,
-  btnRef: el.btnRef,
-  title: el.title,
-  isLinkHovered: el.linkRef ? useElementHover(computed(() => el.linkRef.value)) : ref(false),
+  return pocketPages
+}
+/*
+export const hoverStates = pocketPages.map(el => ({
+
   isButtonHovered: el.buttonRef ? useElementHover(computed(() => el.buttonRef.value)) : ref(false),
 }))
 watch(
@@ -207,3 +201,4 @@ watch(
     console.log('💠 - newVal:', newVal)
   },
 )
+ */

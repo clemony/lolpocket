@@ -30,6 +30,7 @@ declare global {
     key: string
     type?: string
     description?: string
+    buttonRef?: any
     link?: string
     items?: any[]
     icon?: string
@@ -37,13 +38,17 @@ declare global {
     locked?: boolean
   }
 
-  interface FolderData extends Folder {
-    pockets: pocket[]
-  }
-
   interface Note {
     title: string
     content: string
+  }
+
+  interface SidebarItem {
+    name?: string
+    link?: string
+    key?: string
+    buttonRef?: any
+    icon?: string
   }
 
   interface Category {

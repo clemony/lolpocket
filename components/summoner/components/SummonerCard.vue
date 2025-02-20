@@ -9,9 +9,9 @@ const summoner = ref(props.summoner)
 </script>
 
 <template>
-  <div class="flex shadow-black/4 justify-start flex-col gap-2 rounded-xl bg-b2/40 border-b3/50 border shadow-md">
+  <div class="flex shadow-black/4 justify-start flex-col gap-2 rounded-xl bg-b2/40 border-b3/50 border shadow-md  py-9">
     <div class=" grid place-items-center size-full">
-      <Avatar class="size-30  rounded-full  shadow-md  ">
+      <Avatar class="size-30  rounded-full  shadow-md">
         <AvatarImage
 
           v-if="summoner.gameName && as.userAccount.session"
@@ -28,7 +28,7 @@ const summoner = ref(props.summoner)
       </Avatar>
     </div>
 
-    <div class="justify-center items-center flex flex-col px-4 pb-9">
+    <div class="justify-center items-center flex flex-col px-4  pt-6">
       <h1 class="tracking-tight font-serif !font-black dst">
         {{ summoner.gameName != 'Summoner' ? summoner.gameName : summoner.name != 'Summoner' ? summoner.name : 'Summoner' }}
       </h1>

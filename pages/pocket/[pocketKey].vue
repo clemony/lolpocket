@@ -1,107 +1,75 @@
 <script setup lang="ts">
 const emit = defineEmits(['update:hovered'])
-const route = useRoute()
-const pocket = ref(getPocket(route.params.pocketKey))
-
 const ss = useSidebarStore()
+const route = useRoute()
 
+const pocket = ref(getPocket(route.params.pocketKey))
 const selectedRuneSet = ref(pocket.value?.runes.sets?.[0] ?? null)
 
-const component = shallowRef(pocketComponents[0].compRef)
+const EditPocketSheet = defineAsyncComponent(() => import('components/pocket/sheet/EditPocketSheet.vue'))
 
-/* const hoverStates = computed(() =>
-  pocketComponents.map(el => ({
-    ref: el.ref,
-    buttonRef: el.buttonRef,
-    title: el.title,
-    isLinkHovered: el.linkRef ? useElementHover(computed(() => el.linkRef.value)) : ref(false),
-    isButtonHovered: el.buttonRef ? useElementHover(computed(() => el.buttonRef.value)) : ref(false),
-  })),
-) */
-
-/* const hovered = computed(() => {
-  return hoverStates.value.find(el => el.isLinkHovered.value) || null
-})
-
-const isButtonHovered = computed(() => {
-  const hovered = hoverStates.value.find(el => el.isButtonHovered.value)
-  return hovered ? hovered.title : null
-}) */
-
-const isButtonHovered = ref()
-const previousIndex = ref(0)
-
-const totalTranslateY = ref(0)
-
-const transitionName = ref('pocket-move-down')
-
-watch(
-  () => component.value, // Watch the value, not the ref itself
-  (newComp) => {
-    console.log('💠 - newVal:', newComp)
-    const newIndex = pocketComponents.findIndex(c => c.compRef === newComp)
-    if (newIndex === -1)
-      return
-    const oldIndex = previousIndex.value
-    const diff = newIndex - oldIndex
-    totalTranslateY.value += diff * 30
-    transitionName.value = newIndex > previousIndex.value ? 'pocket-move-up' : 'pocket-move-down'
-    previousIndex.value = newIndex
-  },
-)
-
-const translateY = computed(() => {
-  return `translateY(${totalTranslateY.value}%) `
-})
+const PocketBrowser = defineAsyncComponent(() => import('components/pocket/sheet/PocketBrowser.vue'))
 </script>
 
 <template>
-  <main class="h-screen w-full grid grid-cols-[66px_auto] ">
-    <div class="h-screen w-full relative">
-      <PocketBar :pocket="pocket" @update:component="(e) => component = e">
-        <ul class="timeline timeline-vertical justify-center items-center relative self-center w-fit py-0 px-2 rounded-full bg-b2 border-b3 shadow-sm ">
-          <div class="absolute  w-1  bg-b3/30 h-4/5 overflow-hidden justify-center">
-            <div class="size-full  duration-1000 transition-all " :style="{ transform: translateY }">
-              <div
-                class="size-5 bg-neutral shadow-[0px_0px_30px_5px_var(--color-bc)]"
-              >
-              </div>
-            </div>
-          </div>
-          <li v-for="comp in pocketComponents" :key="comp.title" class="h-18 group ">
-            <label :ref="comp.buttonRef" for="pocket-page" class=" !pointer-events-auto timeline-middle cursor-pointer" @click="component = comp.compRef">
-              <input
-                type="radio"
-                name="pocket-page"
-                :value="comp.compRef"
-                class="hidden peer"
-                @change="component = comp.compRef; console.log('change:', component)"
-              />
-              <div class="size-fit rounded-full bg-b1 pointer-events-none">
-                <div class="!size-10 rounded-full shadow-sm   transition-all duration-700  bg-b3 group-hover:bg-neutral/40    z-1 [&_svg]:!text-nc" :class="{ 'bg-neutral/40': isButtonHovered == comp.buttonRef, 'drop-shadow-sm  scale-115': component == comp.compRef }">
+  <Sidebar>
+    <SidebarWrapper>
+      <SidebarTrigger>
+        <button
+          class=" aspect-square size-12 mb-8 rounded-full !pointer-events-auto !cursor-pointer grayscale hover:grayscale-0 shadow-sm drop-shadow-sm  transition-all duration-300 "
+          :class="{ 'grayscale-0  !brightness-115 !contrast-85 !opacity-90': ss.isSidebarOpen }"
+          @mouseenter="ss.sidebarComponent = EditPocketSheet"
+          @mouseleave="ss.onSidebarButtonLeave()"
+        >
+          <PocketIcon :image="pocket.icon" class="size-12 pointer-events-none" />
+        </button>
 
-                  <div class="grid place-items-center size-full rounded-full relative z-0 !overflow-hidden">
+        <SidebarNav :model-value="getPocketLinks(pocket)">
+        </SidebarNav>
 
-                    <Transition :name="transitionName" mode="out-in">
-                      <div v-if="component == comp.compRef" class="size-10 pointer-events-none bg-neutral z-10 absolute" />
-                    </Transition>
+        <div class="flex flex-col gap-12 items-center justify-start size-full">
+          <SelectedChampions :pocket="pocket" :is-open="ss.isSidebarOpen" />
+          <SummonerSpellDisplay :pocket="pocket" :is-open="ss.isSidebarOpen" />
+          <PocketRuneDisplay :pocket="pocket" :is-open="ss.isSidebarOpen" />
+        </div>
 
-                    <i-no-champ v-if="comp == pocketComponents[0]" class="fill-nc dst !size-7  z-20  text-nc" />
-                    <i-rune-icon v-else-if="comp == pocketComponents[2]" class="fill-nc size-6 dst  z-20 " />
-                    <icon v-else :name="comp.icon" class="size-5.5 z-20 text-nc dst" :class="{ '!size-5': comp == pocketComponents[1] }" />
-                  </div>
-                </div>
-              </div>
-            </label>
-          </li>
-        </ul>
-      </PocketBar>
-    </div>
+        <Grow />
 
-    <transition-slide class="w-full min-w-full max-w-full ">
-      <component :is="component" :key="component.title" :selected-runes="selectedRuneSet" :pocket="pocket" />
-    </transition-slide>
-  </main>
+        <label
+
+          class="pointer-events-auto relative btn size-14 aspect-square btn-ghost  group  "
+          :class="{ 'bg-b2/60 border-b2': ss.isSidebarOpen && ss.sidebarComponent == PocketBrowser }"
+        >
+          <button for="pocket-menu" class="relative size-full place-items-center grid group-hover:rotate-180 transition-all duration-300 " @mouseenter="ss.sidebarComponent = PocketBrowser" @mouseleave="ss.onSidebarButtonLeave()">
+
+            <icon
+              name="teenyicons:compass-outline" class="size-9 opacity-0  dst  absolute transition-all duration-300 group-hover:opacity-100"
+              :class="{ 'opacity-100': ss.isSidebarOpen && ss.sidebarComponent == PocketBrowser }"
+            />
+            <icon
+              name="teenyicons:compass-solid" class=" size-9 dst  absolute transition-all duration-300 group-hover:opacity-0"
+              :class="{ 'opacity-0': ss.isSidebarOpen && ss.sidebarComponent == PocketBrowser }"
+            />
+          </button>
+        </label>
+      </SidebarTrigger>
+
+      <NuxtPage
+        :selected-runes="selectedRuneSet"
+        :pocket="pocket"
+        :transition="{
+          name: 'push-up',
+          mode: 'out-in',
+        }"
+      />
+    </SidebarWrapper>
+    <SidebarContent :class="{ ' bg-b2/80': route.name == 'items' }">
+      <transition-slide group class="size-full">
+        <component :is="ss.sidebarComponent" v-if="ss.sidebarComponent != null" :key="ss.sidebarComponent" :pocket="pocket" class="pt-2" />
+        <DefaultPocketMenu v-else :pocket="pocket" />
+      </transition-slide>
+    </SidebarContent>
+  </Sidebar>
 </template>
 
 <style>

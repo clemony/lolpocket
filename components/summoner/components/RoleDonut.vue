@@ -50,27 +50,27 @@ const mostRoled = computed(() => {
 <template>
   <div class="relative size-22">
     <div class="absolute top-7 left-7">
-      <SupportSvg
+      <i-roles-support
         v-if="mostRoled == 'Support'"
         class="drop-shadow-neutral/70 size-8 drop-shadow-xs"
         :style="{ color: hexColors.support }"
       />
-      <BottomSvg
+      <i-roles-bottom
         v-if="mostRoled == 'Bottom'"
         class="drop-shadow-neutral/70 text-gold size-8 drop-shadow-xs"
         :style="{ color: hexColors.bottom }"
       />
-      <MidSvg
+      <i-roles-middle
         v-if="mostRoled == 'Mid'"
         class="drop-shadow-neutral/70 size-8 text-purple-400 drop-shadow-xs"
         :style="{ color: hexColors.mid }"
       />
-      <JungleSvg
+      <i-roles-jungle
         v-if="mostRoled == 'Jungle'"
         class="drop-shadow-neutral/70 text-resolve size-8 drop-shadow-xs"
         :style="{ color: hexColors.jungle }"
       />
-      <TopSvg
+      <i-roles-top
         v-if="mostRoled == 'Top'"
         class="drop-shadow-neutral/70 text-grandmaster size-8 drop-shadow-xs"
         :style="{ color: hexColors.top }"

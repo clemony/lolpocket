@@ -1,5 +1,10 @@
 <script setup lang="ts">
 const ts = useTempStore()
+
+definePageMeta({
+  name: 'runes-data',
+})
+
 </script>
 
 <template>

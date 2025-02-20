@@ -16,7 +16,7 @@ const a = .forEach(location.folder => {
 const { userFolders } = useUserFolders()
 
 onMounted (() => {
-  const a = defaultFolders()[0].items.length ? defaultFolders()[0] : defaultFolders()[1]
+  const a = defaultFolders[0].items.length ? defaultFolders[0] : defaultFolders[1]
   openFolder.value = a.name
 })
 </script>
@@ -41,7 +41,7 @@ onMounted (() => {
         </DropdownMenuTrigger>
         <DropdownMenuContent class="w-60" align="end"  :align-offset="1">
           <DropdownMenuRadioGroup v-model="openFolder">
-            <DropdownMenuRadioItem v-for="folder in defaultFolders()" :key="folder.key" :disabled="!folder.items.length && folder.name != 'all'" :value="folder.name" class="pl-2 pr-4 flex gap-4 text-2 py-2 disabled:opacity-60">
+            <DropdownMenuRadioItem v-for="folder in defaultFolders" :key="folder.key" :disabled="!folder.items.length && folder.name != 'all'" :value="folder.name" class="pl-2 pr-4 flex gap-4 text-2 py-2 disabled:opacity-60">
               <icon :name="folder.icon" class="size-4.5" />
 
               {{ folder.name }}

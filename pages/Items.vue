@@ -1,7 +1,11 @@
 <script setup lang="ts">
-
 const ts = useTempStore()
 const ds = useDataStore()
+
+definePageMeta({
+  name: 'item-data',
+  path: '/items'
+})
 
 const items = computed(() => [...(ds.SRitems || [])])
 

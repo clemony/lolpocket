@@ -55,7 +55,7 @@ onMounted (async () => {
     api.value = ps.pocketGridApi
   }
   await api.value
-  console.log('💠 - column:', props.column)
+  //console.log('💠 - column:', props.column)
 })
 </script>
 

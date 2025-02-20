@@ -14,7 +14,7 @@ import { ResizablePanel } from 'components/base/resizable/rindex'
             All Pockets
           </h1>
         </div>
-        <PocketsCollapse v-for="folder in defaultFolders()" :key="folder.key" :folder="folder" />
+        <PocketsCollapse v-for="folder in defaultFolders" :key="folder.key" :folder="folder" />
       </ResizablePanel>
       <ResizableHandle
         with-handle

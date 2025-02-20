@@ -1,7 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>hi</div>
+  <PagePlaceholder />
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>

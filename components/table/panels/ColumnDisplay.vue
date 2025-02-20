@@ -7,10 +7,11 @@ const ps = usePocketStore()
 const api = shallowRef()
 
 onMounted (async () => {
+    console.log("💠 - onMounted - props.grid:", props.grid)
   if (props.grid == 'item') {
     api.value = ts.itemGridApi
   }
-  else if (props.grid == 'pocket') {
+  else if (props.grid == 'All') {
     api.value = ps.pocketGridApi
   }
   await api.value
@@ -34,7 +35,7 @@ const columns = computedAsync (() => {
 watch(
   () => columns.value,
   (newVal) => {
-    console.log('💠 - newVal:', newVal)
+    //console.log('💠 - newVal:', newVal)
   },
 )
 </script>

@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import Spells from 'shared/data/spells.json'
 
+definePageMeta({
+  name: 'spell-data',
+  path: '/spells'
+})
+
+
 const selectedSpell = ref(0)
 
 const extra = [

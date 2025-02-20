@@ -63,8 +63,8 @@ export const useTempStore = defineStore(
 
     // items
     // const items = ref([...ds.items])
-    const AZmodel = ref('0')
-    const priceModel = ref('0')
+    const AZmodel = ref(0)
+    const priceModel = ref(0)
     const sortItemsAZ = ref(0)
     const sortPrice = ref(0)
     const itemSearchResult = ref()

@@ -2,6 +2,11 @@
 import { categories } from 'shared/data/champion/championCategories'
 import { types } from 'shared/data/champion/championRoles'
 
+definePageMeta({
+  name: 'champion-data',
+  path: '/champions'
+})
+
 
 const ts = useTempStore()
 

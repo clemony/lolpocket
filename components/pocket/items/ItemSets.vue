@@ -36,8 +36,7 @@ watch(items, (newItemSets) => {
 </script>
 
 <template>
-  <div class="min-h-90vh 90vh pr-12 pl-1 relative z-20">
-            
+  <div class="size-full px-6  relative z-20">
     <div
       v-draggable="[
         pocket.items.sets,
@@ -61,13 +60,13 @@ watch(items, (newItemSets) => {
       group
       class="z-0 h-full w-full pt-8 flex-col items-center gap-10 flex"
     >
-      <Card
+      <div
         v-for="set, in pocket.items.sets"
         :key="set.name"
         drag-class="setDrag"
-        class="relative w-full !shadow-smooth "
+        class="relative w-full "
       >
-        <CardHeader class="flex w-full flex-row items-center  pb-3 px-4">
+        <div class="flex w-full flex-row items-center  pb-3 px-4">
           <!--                <label class="group/star items-center cursor-pointer  *:transition-all *:duration-300  size-3 relative">
                     <input type="radio" name="starSet" :value="index" class="peer hidden"
                         v-model="pocket.items[0].default" @change="prevIndex = pocket.items[0].default"
@@ -133,14 +132,16 @@ watch(items, (newItemSets) => {
               />
             </button>
           </div>
-        </CardHeader>
-        <CardContent class="px-7">
+        </div>
+        <div class="px-7">
           <ItemSetItems
             :pocket="pocket"
             :set="set"
           />
-        </CardContent>
-      </Card>
+        </div>
+
+        <Separator class="bg-b2 mt-8 w-[96%] place-self-center" />
+      </div>
     </div>
   </div>
 </template>

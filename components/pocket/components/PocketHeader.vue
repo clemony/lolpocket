@@ -2,6 +2,7 @@
 const props = defineProps<{
   pocket?: pocket
   class?: HTMLAttributes['class']
+  bgClass?: HTMLAttributes['class']
   title?: string
 }>()
 
@@ -26,8 +27,8 @@ function handleDrawer() {
 </script>
 
 <template>
-  <header class="w-full pt-[6.4vh]  flex flex-nowrap shrink-0 flex-col justify-end items-start gap-3">
-    <div class="breadcrumbs text-2 font-medium tracking-tight">
+  <header :class="cn('w-full pt-[6.4vh]  flex flex-nowrap shrink-0 flex-col justify-end items-start gap-3', props.bgClass)">
+    <div class="breadcrumbs text-2 font-medium tracking-tight bread">
       <ul class="flex items-center **:[&_li]:before:!hidden">
         <li>
           <NuxtLink to="/pockets">
@@ -43,7 +44,7 @@ function handleDrawer() {
       </ul>
     </div>
     <div :class="cn('flex w-full  items-center', props.class)">
-      <h1 class="!text-8 text-start dst tracking-tight !leading-none truncate  overflow-hidden capitalize  flex">
+      <h1 class="!text-8 text-start dst tracking-tight !leading-none truncate shrink-0 w-fit overflow-hidden capitalize  flex">
         {{ props.title }}
       </h1>
       <slot />

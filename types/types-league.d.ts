@@ -48,6 +48,12 @@ declare global {
     title: string
   }
 
+
+  interface SidebarComponent {
+    button: HTMLButtonElement | null
+    component: any // Adjust as needed
+  }
+
   interface Role {
     name: string
     icon: string

@@ -9,6 +9,7 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
+const Item = defineAsyncComponent(() => import('components/items/Item.vue'))
 const list = computed(() => {
   return [...useItemFilter()]
 })
@@ -71,9 +72,13 @@ function onClone(event: DraggableEvent) {
     @clone="onClone"
     @start="onStart"
   >
-    <div v-for="item in list" :key="item.id" class="select-none">
-      <Item :item="item" class=""/>
-    </div>
+     <Suspense>
+      <Item v-for="item in list" :key="item.id" :item="item" class="select-none"/>
+
+      <template #fallback>
+        <Skeleton class="size-full rounded-lg"  />
+      </template>
+      </Suspense>
   </transition-slide>
 </template>
 
