@@ -108,7 +108,6 @@ export function duplicatePocket(original: pocket): pocket {
 export function editPocket(pocket: pocket) {
   const ts = useTempStore()
   ts.selectedPocket = pocket
-  ts.editPocketTrigger = true
 }
 
 // get
@@ -161,7 +160,7 @@ export function getPocketLinks(pocket: pocket) {
   const pocketPages: SidebarItem[] = [
     {
 
-      link: `/pocket/${pocket.key}/champions`,
+      link: `/pocket/${pocket.key}`,
       name: 'Champions',
       buttonRef: championsButton,
       icon: 'i-no-champ',

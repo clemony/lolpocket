@@ -1,13 +1,12 @@
 <script lang="ts" setup>
+const props = defineProps<{
+  title?: string
+}>()
 const as = useAccountStore()
-
-const title = computed (() => {
-  return `${as.userAccount.gameName}'s Ranked Data` || 'Summoner Ranked Data'
-})
 </script>
 
 <template>
-  <ModuleGhostTemplate :title="title">
+  <ModuleGhostTemplate :title="props.title">
     <div class="grid grid-cols-3 size-full place-items-center h-24">
       <i-unranked class="size-28 drop-shadow-sm  opacity-30" />
 

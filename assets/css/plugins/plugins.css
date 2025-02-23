@@ -3,7 +3,6 @@
 @import './tippy.css';
 @import './drag.css';
 
-@import './custom-daisy.css';
 @plugin "tailwindcss-animate";
 @plugin "tailwindcss-animated";
 @plugin "tailwind-gradient-mask-image";
@@ -11,4 +10,3 @@
 @import 'aos/dist/aos.css';
 @import './ag-grid.css';
 @import './toast.css';
-@config '../../../tailwind.config.js';

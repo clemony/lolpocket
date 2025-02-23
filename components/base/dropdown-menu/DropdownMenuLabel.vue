@@ -1,14 +1,10 @@
 <script setup lang="ts">
-import type { DropdownMenuLabelProps } from 'radix-vue'
+import { DropdownMenuLabel, useForwardProps } from 'reka-ui'
+import type { DropdownMenuLabelProps } from 'reka-ui'
+import { computed } from 'vue'
 import type { HTMLAttributes } from 'vue'
-import { DropdownMenuLabel, useForwardProps } from 'radix-vue'
 
-const props = defineProps<
-  DropdownMenuLabelProps & {
-    class?: HTMLAttributes['class']
-    inset?: boolean
-  }
->()
+const props = defineProps<DropdownMenuLabelProps & { class?: HTMLAttributes['class'], inset?: boolean }>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
@@ -22,7 +18,7 @@ const forwardedProps = useForwardProps(delegatedProps)
 <template>
   <DropdownMenuLabel
     v-bind="forwardedProps"
-    :class="cn('text-2 px-2 py-1.5 font-semibold', inset && 'pl-8', props.class)"
+    :class="cn('px-2 py-1.5 text-2 font-semibold', inset && 'pl-8', props.class)"
   >
     <slot />
   </DropdownMenuLabel>

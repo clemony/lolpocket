@@ -53,17 +53,8 @@ const ss = useSidebarStore()
         :duration="6000"
       />
 
-      <LazyChampionDrawer
-        v-if="ts.selectedChampion"
-        :key="ts.selectedChampion"
-      />
-      <ItemDrawer
-        v-if="ts.selectedItem"
-        :key="ts.selectedItem"
-      />
-      <LazyPocketSheet
-        v-if="ts.pocketSheetTrigger"
-      />
+
+
       <LazyNewFolderDialog />
 
       <div class="size-full max-size-full overflow-hidden">

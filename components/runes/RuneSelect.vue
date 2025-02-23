@@ -58,7 +58,6 @@ onMounted(() => {
 
 function handleSelect(rune) {
   ts.selectedRune == rune
-  // useDrawerToggle('rune')
 }
 
 function onHover(rune) {

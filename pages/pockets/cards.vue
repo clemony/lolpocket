@@ -11,7 +11,6 @@ const ps = usePocketStore()
           variant="outline"
           size="icon"
           class=""
-          @click="useDrawerToggle('cardBack')"
         >
           <icon
             name="material-symbols-light:stack-hexagon-outline"
@@ -25,7 +24,7 @@ const ps = usePocketStore()
 
     <div class="flex w-full flex-wrap justify-between gap-8 pr-16 pl-12">
       <PocketCard
-        v-for="(pocket, i) in ps.pockets"
+        v-for="pocket in ps.pockets"
         :key="pocket.key"
         :pocket="pocket"
       />

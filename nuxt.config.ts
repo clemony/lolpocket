@@ -16,20 +16,22 @@ export default defineNuxtConfig({
     '@nuxt/devtools',
     '@nuxt/eslint',
     'vue-sonner/nuxt',
-    'nuxt-tailwindcss4',
     '@nuxt/icon',
     'nuxt-aos',
     'nuxt-svgo',
-    'nuxt-tiptap-editor',
+    'nuxt-tailwindcss4',
+    '@nuxt/image',
   ],
 
-  /*   image: {
-    format: ['webp'],
-    quality: 80,
-  }, */
   icon: {
     provider: 'iconify',
     serverBundle: false,
+  },
+
+  image: {
+    quality: 80,
+    format: ['webp'],
+    domains: ['ddragon.leagueoflegends.com', 'raw.communitydragon.org'],
   },
 
   vite: {
@@ -62,11 +64,11 @@ export default defineNuxtConfig({
     },
   },
 
-  postcss: {
+  /*   postcss: {
     plugins: {
       '@tailwindcss/postcss': {},
     },
-  },
+  }, */
 
   vueTransitions: {
     defaultProps: {
@@ -138,7 +140,7 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: true,
+    enabled: false,
     componentInspector: true,
     viteInspect: true,
   },
@@ -159,6 +161,8 @@ export default defineNuxtConfig({
     'components': fileURLToPath(new URL('./components', import.meta.url)),
     'plugins': fileURLToPath(new URL('./plugins', import.meta.url)),
     'modules': fileURLToPath(new URL('./modules', import.meta.url)),
+    '#app': fileURLToPath(new URL('./node_modules/nuxt/dist/app/index', import.meta.url)),
+    '#imports': fileURLToPath(new URL('./node_modules/nuxt/dist/app/index', import.meta.url)),
   },
 
   compatibilityDate: '2024-11-01',

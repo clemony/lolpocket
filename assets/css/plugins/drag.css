@@ -20,7 +20,7 @@
 .sortable-ghost {
   @apply size-full rounded-lg border-b2 ring ring-neutral/90 ring-offset-1 ring-offset-b2;
 }
-
+/*
 .module-ghost {
   @apply size-full bg-b2/20 rounded-xl inset-shadow-sm;
 
@@ -35,3 +35,4 @@
   @apply bg-b1 border-b2 transition-all duration-300 shadow-smooth;
 }
 }
+ */

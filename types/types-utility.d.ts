@@ -41,6 +41,9 @@ declare global {
   interface Note {
     title: string
     content: string
+    icon: string
+    date: string
+    heart?: boolean
   }
 
   interface SidebarItem {
@@ -49,6 +52,7 @@ declare global {
     key?: string
     buttonRef?: any
     icon?: string
+    shortcut?: string
   }
 
   interface Category {
@@ -70,6 +74,8 @@ declare global {
     name?: string
     component?: DefineComponent
     ghost?: DefineComponent
+    queue?: string
+    title?: string
   }
 
   type ModuleSlot = Module | null

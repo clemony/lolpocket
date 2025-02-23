@@ -135,24 +135,3 @@ export const dataLinks = [
     ],
   },
 ]
-
-export const settingLinks = [
-  {
-    name: 'General',
-    link: '/settings',
-    icon: 'ph:gear-six',
-    text: 'Accessibility and defaults.',
-  },
-  {
-    name: 'Account',
-    link: '/settings#account',
-    icon: 'ri:user-settings-line',
-    text: 'Connect and manage.',
-  },
-  {
-    name: 'Theme',
-    link: '/settings#theme',
-    icon: 'teenyicons:paintbucket-outline',
-    text: 'App colors.',
-  },
-]

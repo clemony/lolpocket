@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { TabsTriggerProps } from 'radix-vue'
-import type { HTMLAttributes } from 'vue'
-import { TabsTrigger, useForwardProps } from 'radix-vue'
+import { TabsTrigger, useForwardProps } from 'reka-ui'
+import type { TabsTriggerProps } from 'reka-ui'
 import { computed } from 'vue'
+import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<TabsTriggerProps & { class?: HTMLAttributes['class'] }>()
 
@@ -18,12 +18,10 @@ const forwardedProps = useForwardProps(delegatedProps)
 <template>
   <TabsTrigger
     v-bind="forwardedProps"
-    :class="
-      cn(
-        'text-2 ring-offset-b2 focus-visible:ring-ring data-[state=active]:bg-b1/90 data-[state=active]:text-bc inline-flex items-center justify-center rounded-sm px-3 py-1.5 font-medium whitespace-nowrap transition-all focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-xs',
-        props.class,
-      )
-    "
+    :class="cn(
+      'inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-2 font-medium ring-offset-b1 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-b2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-b1 data-[state=active]:text-bc data-[state=active]:shadow',
+      props.class,
+    )"
   >
     <span class="truncate">
       <slot />

@@ -13,7 +13,7 @@
               TOTAL LEVEL
             </p>
           </div>
-          <progress class="progress w-68 dst opacity-30" value="66" max="100"></progress>
+          <progress class="progress w-52 dst opacity-30" value="66" max="100"></progress>
         </div>
 
         <div class="size-9 drop-shadow-sm rounded-full bg-b3 border-neutral/40 inset-shadow-sm border -mt-0.5  ring-1 ring-offset-2 ring-offset-b2 ring-neutral/30 opacity-70">
@@ -29,7 +29,7 @@
               VETERANCY
             </p>
           </div>
-          <progress class="progress w-68 dst opacity-30" value="66" max="100"></progress>
+          <progress class="progress w-52 dst opacity-30" value="66" max="100"></progress>
         </div>
 
         <div class="size-9 drop-shadow-sm rounded-full bg-b3 border-neutral/40 inset-shadow-sm border -mt-0.5  ring-1 ring-offset-2 ring-offset-b2 ring-neutral/30 opacity-70">

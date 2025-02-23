@@ -13,7 +13,7 @@ const ts = useTempStore()
         v-tippy="{ content: 'Create Pocket', side: 'bottom' }"
         class="btn !pointer-events-auto btn-neutral rounded-md  flex btn-md  hover:text-nc hover:!bg-neutral/80 focus:text-nc active:text-nc !text-4 hover:text-nc"
 
-        @click="ts.pocketSheetTrigger = true"
+   
       >
         Here's a button.
       </button>

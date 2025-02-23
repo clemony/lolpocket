@@ -9,69 +9,89 @@ const selectedRuneSet = ref(pocket.value?.runes.sets?.[0] ?? null)
 const EditPocketSheet = defineAsyncComponent(() => import('components/pocket/sheet/EditPocketSheet.vue'))
 
 const PocketBrowser = defineAsyncComponent(() => import('components/pocket/sheet/PocketBrowser.vue'))
+
+const tabValue = ref('/')
+
+const pages = computed (() => {
+  return getPocketLinks(pocket.value)
+})
+
+const isLoading = ref(false)
+useRuntimeHook('page:loading:start', () => {
+  isLoading.value = true
+  console.log('💠 - useRuntimeHook - loading:', 'loading')
+})
+
+useRuntimeHook('page:loading:end', () => {
+  isLoading.value = false
+  console.log('💠 - useRuntimeHook - loading:', 'loaded')
+})
+
+onMounted (() => {
+  tabValue.value = route.path
+})
 </script>
 
 <template>
-  <Sidebar>
-    <SidebarWrapper>
-      <SidebarTrigger>
-        <button
-          class=" aspect-square size-12 mb-8 rounded-full !pointer-events-auto !cursor-pointer grayscale hover:grayscale-0 shadow-sm drop-shadow-sm  transition-all duration-300 "
-          :class="{ 'grayscale-0  !brightness-115 !contrast-85 !opacity-90': ss.isSidebarOpen }"
-          @mouseenter="ss.sidebarComponent = EditPocketSheet"
-          @mouseleave="ss.onSidebarButtonLeave()"
-        >
-          <PocketIcon :image="pocket.icon" class="size-12 pointer-events-none" />
-        </button>
+  <div class=" grid  size-full bg-b2/40 gap-6">
+    <div class="size-full  pt-[6.4vh]  overflow-hidden px-14">
+      <div class="breadcrumbs text-2 font-medium tracking-tight pl-1 mb-5">
+        <ul class="flex items-center **:[&_li]:before:!hidden dst">
+          <li>
+            <NuxtLink to="/pockets">
+              <span class="inline-flex items-center gap-2.5 capitalize"> <icon name="formkit:folder" class="size-4 shrink-0" />{{ pocket.location.folder }} Folder </span>
+            </NuxtLink>
+          </li>
+          <li class="before:!opacity-100 before:dst">
+            <span class="inline-flex items-center !gap-2.5 capitalize">
+              <icon name="teenyicons:folder-outline" class="shrink-0" />
+              {{ pocket.name }}
+            </span>
+          </li>
+        </ul>
+      </div>
 
-        <SidebarNav :model-value="getPocketLinks(pocket)">
-        </SidebarNav>
+      <div class=" size-full relative before:absolute before:w-full  before:top-14 before:bg-b1 before:border-b3 before:h-[82.9vh] before:border before:border-b3 before:rounded-xl drop-shadow-[1px_2px_2px_#00000010] ">
+        <div class="tabs tabs-lift size-full tabs-xl max-h-[83vh] drop-shadow-[1px_2px_2px_#00000010] ">
+          <div class="tab dst pb-8  !overflow-visible  pr-6 after:min-w-80 !border-b-transparent relative items-center justify-start -ml-4" role="tab">
+            <div class="absolute h-full w-80 bottom-1  flex gap-4 ">
+              <button
+                class=" aspect-square size-10  rounded-full !pointer-events-auto !cursor-pointer grayscale hover:grayscale-0 shadow-sm !drop-shadow-none  transition-all duration-300 "
+                :class="{ 'grayscale-0  !brightness-115 !contrast-85 !opacity-90': ss.isSidebarOpen }"
+              >
+                <PocketIcon :image="pocket.icon" class="size-10 pointer-events-none" />
+              </button>
 
-        <div class="flex flex-col gap-12 items-center justify-start size-full">
-          <SelectedChampions :pocket="pocket" :is-open="ss.isSidebarOpen" />
-          <SummonerSpellDisplay :pocket="pocket" :is-open="ss.isSidebarOpen" />
-          <PocketRuneDisplay :pocket="pocket" :is-open="ss.isSidebarOpen" />
+              <div class="pt-2 !leading-none truncate !text-8 capitalize  !opacity-100 tracking-tight text-left !drop-shadow-none  font-semibold !text-bc ">
+                {{ route.name.toString() }}
+              </div>
+            </div>
+          </div>
+          <div class="tab-content" />
+
+          <template v-for="tab in pages" :key="tab.name">
+            <input
+              :id="tab.link"
+              v-model="tabValue" name="pocket-tabs" type="radio" :value="tab.link"
+              role="tab"
+              :aria-label="tab.name"
+              class="tab tab-title not-checked:!border-b-transparent   w-49 -ml-1  font-semibold capitalize text-3 text-center " @change="navigateTo(tab.link)"
+            />
+
+            <div class="tab-content  bg-b1 border-b3 p-0 size-full rounded-tl-xl  overflow-hidden ">
+              <LazyNuxtPage
+                :selected-runes="selectedRuneSet"
+                :pocket="pocket"
+                :transition="{
+                }"
+              />
+            </div><!--  -->
+          </template>
         </div>
-
-        <Grow />
-
-        <label
-
-          class="pointer-events-auto relative btn size-14 aspect-square btn-ghost  group  "
-          :class="{ 'bg-b2/60 border-b2': ss.isSidebarOpen && ss.sidebarComponent == PocketBrowser }"
-        >
-          <button for="pocket-menu" class="relative size-full place-items-center grid group-hover:rotate-180 transition-all duration-300 " @mouseenter="ss.sidebarComponent = PocketBrowser" @mouseleave="ss.onSidebarButtonLeave()">
-
-            <icon
-              name="teenyicons:compass-outline" class="size-9 opacity-0  dst  absolute transition-all duration-300 group-hover:opacity-100"
-              :class="{ 'opacity-100': ss.isSidebarOpen && ss.sidebarComponent == PocketBrowser }"
-            />
-            <icon
-              name="teenyicons:compass-solid" class=" size-9 dst  absolute transition-all duration-300 group-hover:opacity-0"
-              :class="{ 'opacity-0': ss.isSidebarOpen && ss.sidebarComponent == PocketBrowser }"
-            />
-          </button>
-        </label>
-      </SidebarTrigger>
-
-      <NuxtPage
-        :selected-runes="selectedRuneSet"
-        :pocket="pocket"
-        :transition="{
-          name: 'push-up',
-          mode: 'out-in',
-        }"
-      />
-    </SidebarWrapper>
-    <SidebarContent :class="{ ' bg-b2/80': route.name == 'items' }">
-      <transition-slide group class="size-full">
-        <component :is="ss.sidebarComponent" v-if="ss.sidebarComponent != null" :key="ss.sidebarComponent" :pocket="pocket" class="pt-2" />
-        <DefaultPocketMenu v-else :pocket="pocket" />
-      </transition-slide>
-    </SidebarContent>
-  </Sidebar>
+      </div>
+    </div>
+  </div>
 </template>
 
-<style>
-
+<style scoped>
 </style>

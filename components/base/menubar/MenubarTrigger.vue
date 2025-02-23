@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { MenubarTriggerProps } from 'radix-vue'
-import { MenubarTrigger, useForwardProps } from 'radix-vue'
-import type { HTMLAttributes } from 'vue'
+import { MenubarTrigger, useForwardProps } from 'reka-ui'
+import type { MenubarTriggerProps } from 'reka-ui'
 import { computed } from 'vue'
+import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<MenubarTriggerProps & { class?: HTMLAttributes['class'] }>()
 
@@ -20,7 +20,7 @@ const forwardedProps = useForwardProps(delegatedProps)
     v-bind="forwardedProps"
     :class="
       cn(
-        'text-2 focus:bg-b2/60 focus:text-bc data-[state=open]:bg-b2/60 data-[state=open]:text-bc/60 flex cursor-default items-center rounded-sm px-3 py-1.5 font-medium outline-hidden select-none',
+        'flex cursor-default select-none items-center rounded-sm px-3 py-1 text-2 font-medium outline-none focus:bg-b2 focus:text-neutral-bc data-[state=open]:bg-b2 data-[state=open]:text-neutral-bc',
         props.class,
       )
     "

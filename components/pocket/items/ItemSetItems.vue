@@ -57,7 +57,7 @@ const itemSet = ref(props.set.items)
       class="shadow-sm size-full shrink-0"
       :class="{'rotate-out-center': removingItems[item?.id ?? `item-${i}`]}"
     />
-    <Placeholder class="rounded-lg border-b3/50 inset-shadow-xs group-has-[.sortable-ghost]:hidden" />
+    <Placeholder class="rounded-lg border-b3  bg-gradient-to-br from-b2/30 to-b2/60 inset-shadow-xxs group-has-[.sortable-ghost]:hidden" />
   </transition-slide>
 </template>
 

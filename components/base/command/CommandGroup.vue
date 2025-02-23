@@ -24,7 +24,7 @@ const delegatedProps = computed(() => {
     v-bind="delegatedProps"
     :class="
       cn(
-        'text-foreground [&_[cmdk-group-heading]]: [&_[cmdk-group-heading]]:text-bc/60 overflow-hidden p-1 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:font-medium',
+        'text-bc [&_[cmdk-group-heading]]: [&_[cmdk-group-heading]]:text-bc/60 overflow-hidden p-1 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:font-medium',
         props.class,
       )
     "

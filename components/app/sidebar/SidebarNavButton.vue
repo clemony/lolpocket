@@ -101,7 +101,7 @@ function handleClick() {
 
             <component :is="icon" v-if="match && icon && icon != null" class="size-8 z-20 !text-nc dst" />
 
-            <LittleIcon v-else-if="!match || icon == null" :icon="page.icon" class="size-5 z-20 !text-nc dst " />
+            <LittleIcon v-else-if="!match || icon == null" :icon="page.icon" class="size-4.5 z-20 !text-nc dst " />
           </div>
         </div>
       </div>

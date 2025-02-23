@@ -9,7 +9,7 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const Item = defineAsyncComponent(() => import('components/items/Item.vue'))
+const ItemLoad = defineAsyncComponent(() => import('components/items/Item.vue'))
 const list = computed(() => {
   return [...useItemFilter()]
 })
@@ -66,15 +66,16 @@ function onClone(event: DraggableEvent) {
       },
     ]"
     group
-    class="overflow-y-auto absolute inset-0 grid grid-flow-row auto-cols-auto select-none   grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center gap-4 px-4 py-6 "
+    class="overflow-y-auto absolute inset-0 grid grid-flow-row auto-cols-auto select-none h-fit  grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center gap-4 px-4 py-6 "
 
     @end="onEnd"
     @clone="onClone"
     @start="onStart"
   >
      <Suspense>
-      <Item v-for="item in list" :key="item.id" :item="item" class="select-none"/>
-
+      <template #default>
+      <ItemLoad v-for="item in list" :key="item.id" :item="item" class="select-none"/>
+</template>
       <template #fallback>
         <Skeleton class="size-full rounded-lg"  />
       </template>

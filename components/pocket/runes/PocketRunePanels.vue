@@ -48,11 +48,13 @@ watch(
 
       selectedSecondary.value = runePaths.value[index == 4 ? 0 : index + 1].name
       runeSet.value.secondary.path = selectedSecondary.value
+
+      resetSecondaryPath(runeSet.value)
     }
   },
 )
 
-const tabListClass = 'bg-b1/45  shadow-smooth h-18 w-120 justify-evenly gap-5  overflow-hidden rounded-xl border border-b1/20 py-3  z-20 absolute flex items-center '
+const tabListClass = ' h-18 w-120 justify-start gap-5  overflow-hidden rounded-xl py-3  z-20 absolute flex items-center '
 
 const a = computed(() => {
   return pathDescriptions.find(path => path.name == selectedPrimary.value)
@@ -73,69 +75,42 @@ onMounted (async () => {
   }
 })
 
-const runeWatcher = []
 
-function handleRunes(slot, rune) {
-  runeSet.value.secondary.runes[slot] = rune
-  const index = runeWatcher.findIndex(slotNum => slotNum == slot)
-
-  if (index > -1) {
-    runeWatcher.splice(index, 1)
-    runeWatcher.push(slot)
-  }
-  else {
-    runeWatcher.push(slot)
-  }
-  // push()
-  if (runeWatcher.length > 2) {
-    runeSet.value.secondary.runes[runeWatcher[0]] = null
-    runeWatcher.splice(0, 1)
-  }
-  console.log('💠 - runeWatcher:', runeWatcher)
-}
 </script>
 
 <template>
   <div class="flex gap-18 px-12">
     <div
-      class="flex flex-col gap-8 **:select-none"
+      class="flex flex-col **:select-none"
       :data-path="selectedPrimary"
     >
-      <Transition
-        enter-active-class="transition-all duration-500"
-        enter-from-class="opacity-0 -translate-y-2"
-        enter-to-class="opacity-100"
-        leave-active-class="transition-all duration-500"
-        leave-from-class="opacity-100 "
-        leave-to-class="opacity-0 -translate-y-2"
-        mode="out-in"
-      >
+
+    <div class="ml-10 flex flex-col gap-2 ">
         <div :key="selectedPrimary">
           <div class="flex items-center gap-8 leading-none">
-            <h1 class="tracking-tight transition-all duration-300">
+            <h1 class="tracking-tight text-9 dst  font-serif font-bold transition-all duration-300">
               {{ selectedPrimary }}
             </h1>
           </div>
         </div>
-      </Transition>
-      <div class="shadow-smooth relative h-18 w-120 rounded-xl">
+
+      <div class=" relative h-18  rounded-xl">
         <div
           class="absolute z-0 size-full rounded-xl"
           :class="selectedPrimary.toLowerCase()"
           :data-path="selectedPrimary"
         />
 
+
         <div :class="tabListClass">
-          <template
+  
+            <label
             v-for="path in runePaths"
             :key="path.name"
-          >
-            <label
-              v-if="path.name != 'empty'"
               v-tippy="path.name.replace(/^([a-z])/, '\U$1')"
-              class="grid aspect-square size-14 place-items-center rounded-full"
+              class="grid border border-transparent aspect-square size-14 place-items-center rounded-full"
               :class="{
-                'bg-b1/80 shadow-sm shadow-black/5 backdrop-blur-md duration-500': path.name == selectedPrimary,
+                'bg-b1 shadow-warm-2 drop-shadow-xs border-b2 inset-shadow-xs  p-0 duration-500': path.name == selectedPrimary,              'hidden': path.name == 'empty',
               }"
             >
               <input
@@ -148,15 +123,19 @@ function handleRunes(slot, rune) {
               <img
                 :src="`/img/runes/${path.name}.webp`"
                 :alt="`${path.name} icon`"
-                class="z-10 h-9 w-auto brightness-90 grayscale transition-all duration-300 [&_img]:drop-shadow-sm"
+                class="z-10 h-9 w-auto brightness-90 grayscale transition-all duration-300 dst shrink-0"
                 :class="{
                   'brightness-100 grayscale-0': path.name == selectedPrimary,
                 }"
               />
             </label>
-          </template>
-        </div>
+       
       </div>
+    
+      </div>
+
+
+</div>
 
       <PocketRuneSelect
         path-set="p"
@@ -165,59 +144,35 @@ function handleRunes(slot, rune) {
         :model-value="selectedPrimary"
       />
 
-      <div class="flex gap-10 w-full">
-      <button
-        v-tippy="'New Set'"
-        class="grid p-i-c h-38 btn btn-ghost grow !rounded-xl "
-      >
-        <icon name="add" class="size-7 dst" />
-      </button>
-
-          <button
-        v-tippy="'New Set'"
-        class="grid p-i-c h-38 btn grow btn-ghost  !rounded-xl "
-      >
-        <icon name="trash" class="size-7 dst" />
-      </button>
-      </div>
+  
     </div>
 
-    <div class="flex flex-col gap-8">
-      <Transition
-        enter-active-class="transition-all duration-500"
-        enter-from-class="opacity-0 -translate-y-2"
-        enter-to-class="opacity-100"
-        leave-active-class="transition-all duration-500"
-        leave-from-class="opacity-100 "
-        leave-to-class="opacity-0 -translate-y-2"
-        mode="out-in"
-      >
+    <div class="flex flex-col ">
+    <div class="ml-10 flex flex-col gap-2 ">
         <div :key="selectedSecondary">
-          <div class="flex items-center gap-8 leading-none">
-            <h1 class="tracking-tight transition-all duration-300">
+          <div class="flex items-center gap-8 leading-none ">
+            <h1 class="tracking-tight  text-9 dst font-serif font-bold  transition-all duration-300">
               {{ selectedSecondary }}
             </h1>
           </div>
         </div>
-      </Transition>
-      <div class="shadow-smooth relative h-18 w-120 rounded-xl">
+
+      <div class=" relative h-18 w-120 rounded-xl">
         <div
           class="absolute z-0 size-full rounded-xl"
           :class="selectedSecondary.toLowerCase()"
           :data-path="selectedSecondary"
         />
 
-        <div :class="tabListClass">
-          <template
+ 
+          <div :class="tabListClass">
+    
+            <label
             v-for="path in secondaryPaths"
             :key="path.name"
-          >
-            <label
-              v-if="path.name != 'empty'"
-              :key="path.name"
-              class="grid aspect-square size-14 place-items-center rounded-full"
-              :class="{
-                'bg-b1/80 shadow-sm shadow-black/5 backdrop-blur-md duration-500': path.name == selectedSecondary,
+              class="grid border border-transparent aspect-square size-14 place-items-center rounded-full"
+                :class="{
+                'bg-b1 shadow-warm-2 drop-shadow-xs border-b2 inset-shadow-xs  p-0 duration-500': path.name == selectedSecondary,              'hidden': path.name == 'empty',
               }"
             >
               <input
@@ -230,24 +185,29 @@ function handleRunes(slot, rune) {
               <img
                 :src="`/img/runes/${path.name}.webp`"
                 :alt="`${path.name} icon`"
-                class="z-10 h-9 w-auto brightness-90 grayscale transition-all duration-300 [&_img]:drop-shadow-sm"
+                class="z-10 h-9 w-auto brightness-90 grayscale transition-all duration-300 dst"
                 :class="{
                   'brightness-100 grayscale-0': path.name == selectedSecondary,
                 }"
               />
             </label>
-          </template>
+     
         </div>
+      
       </div>
+
+
+    </div>
       <PocketRuneSelect
         path-set="s"
         :rune-set="runeSet"
         :pocket="pocket"
         :model-value="selectedSecondary"
-        @update:runes="handleRunes($event.rune, $event.index)"
       />
 
+      <div class="mt-6 -ml-8">
       <RuneShards :pocket="pocket" :rune-set="runeSet" />
+      </div>
     </div>
   </div>
 </template>

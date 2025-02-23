@@ -48,7 +48,14 @@ const mostRoled = computed(() => {
 </script>
 
 <template>
-  <div class="relative size-22">
+  <div class="relative size-22 grid items-center justify-center">
+
+      <Donut
+        :datasets="datasets"
+        :colors="colors"
+        :labels="labels"
+        aria="Playrate by role in percentage"
+      />
     <div class="absolute top-7 left-7">
       <i-roles-support
         v-if="mostRoled == 'Support'"
@@ -76,13 +83,6 @@ const mostRoled = computed(() => {
         :style="{ color: hexColors.top }"
       />
     </div>
-
-    <Donut
-      :datasets="datasets"
-      :colors="colors"
-      :labels="labels"
-      aria="Playrate by role in percentage"
-    />
   </div>
 </template>
 

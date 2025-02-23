@@ -21,7 +21,6 @@ watch(
   >
     <input
       id="champ-drawer"
-      v-model="ts.championDrawerTrigger"
       type="checkbox"
       class="drawer-toggle"
     />

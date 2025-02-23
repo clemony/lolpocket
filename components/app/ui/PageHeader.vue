@@ -19,7 +19,7 @@ const pocket = ref(props.pocket)
 
 <template>
   <div class="pt-[5vh] w-full">
-    <header :class="cn('w-full  px-12 flex flex-nowrap shrink-0 flex-col justify-center items-start gap-3 h-[8vh]', props.bgClass)">
+    <header :class="cn('w-full  px-8 flex flex-nowrap shrink-0 flex-col justify-center items-start gap-3 h-[8vh]', props.bgClass)">
       <div v-if="crumbOne || crumbTwo" class="breadcrumbs text-2 font-medium tracking-tight bread">
         <ul class="flex items-center **:[&_li]:before:!hidden">
           <li>

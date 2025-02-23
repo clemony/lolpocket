@@ -1,6 +1,6 @@
 export const themes = [
   {
-    name: 'light',
+    name: 'daylight',
     id: 'data-theme-light',
     icon: 'iconoir:sun-light',
     description: 'Always queues fill. So basic it can pretty much work itself into any team.',

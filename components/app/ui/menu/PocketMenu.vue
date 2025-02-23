@@ -89,7 +89,6 @@ const menuComponents = computed(() => {
       <component
         :is="menuComponents?.item"
         class="pr-8 capitalize"
-        @click="useDrawerToggle('pocket')"
       >
         <icon name="teenyicons:edit-1-outline" />
         <span class="-ml-[1px]">Edit Pocket Info</span>

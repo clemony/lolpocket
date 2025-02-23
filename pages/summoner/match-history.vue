@@ -1,10 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const as = useAccountStore()
+</script>
 
 <template>
   <div class="size-full relative">
-    <LayoutSpacer class="!h-26" />
-
-    <PlayerHeader />
+    <PlayerHeader :summoner="as.userAccount">
+      <SummonerIcon class="rounded-full size-19" />
+    </PlayerHeader>
     <div
       class="grid h-full w-[86%] grid-cols-[1fr_1.5fr] justify-around gap-3"
     >

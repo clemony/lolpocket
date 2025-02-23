@@ -11,7 +11,6 @@ const rune = ts.selectedRune
   <div class="drawer">
     <input
       id="champ-drawer"
-      v-model="ts.runeDrawerTrigger"
       type="checkbox"
       class="drawer-toggle"
     />

@@ -160,8 +160,6 @@ export function getShardIconColor(shard: Shard) {
   return c
 }
 
-
-
 export function getShardBg(shard: Shard) {
   const gray = 'has-checked:bg-gradient-to-br from-b1/80 to-b1/20 rounded-full hover:bg-gradient-to-br'
   const green = 'has-checked:bg-gradient-to-br from-b1/80 to-resolve/20 rounded-full hover:bg-gradient-to-br'
@@ -213,14 +211,17 @@ export function getRunePathName(runeId: number, runePaths: any[]): string | null
   return null // Return null if the rune isn't found in any path
 }
 
-export function resetRuneTree(runeSet) {
-  runeSet.primary.path = 'empty'
-  runeSet.primary.keystone = createDefaultRune()
+export function resetSecondaryPath(runeSet: RuneSet) {
+  runeSet.secondary.runes[0] = createDefaultRune()
+  runeSet.secondary.runes[1] = createDefaultRune()
+  runeSet.secondary.runes[2] = createDefaultRune()
+}
+
+export function resetPrimaryPath(runeSet: RuneSet) {
   runeSet.primary.runes[0] = createDefaultRune()
   runeSet.primary.runes[1] = createDefaultRune()
   runeSet.primary.runes[2] = createDefaultRune()
-  runeSet.secondary.runes[0] = createDefaultRune()
-  runeSet.secondary.runes[1] = createDefaultRune()
+  runeSet.primary.runes[3] = createDefaultRune()
 }
 
 export function createDefaultRuneTree() {

@@ -2,8 +2,8 @@
 import {
   ContextMenuSeparator,
 
-} from 'radix-vue'
-import type { ContextMenuSeparatorProps } from 'radix-vue'
+} from 'reka-ui'
+import type { ContextMenuSeparatorProps } from 'reka-ui'
 import { computed } from 'vue'
 import type { HTMLAttributes } from 'vue'
 
@@ -17,5 +17,5 @@ const delegatedProps = computed(() => {
 </script>
 
 <template>
-  <ContextMenuSeparator v-bind="delegatedProps" :class="cn('-mx-1 my-1 h-px bg-b2', props.class)" />
+  <ContextMenuSeparator v-bind="delegatedProps" :class="cn('-mx-1 my-1 h-px bg-border border-b2 ', props.class)" />
 </template>

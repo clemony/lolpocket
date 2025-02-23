@@ -36,7 +36,7 @@ watch(items, (newItemSets) => {
 </script>
 
 <template>
-  <div class="size-full px-6  relative z-20">
+  <div class="absolute top-0 left-0 inset-0 ">
     <div
       v-draggable="[
         pocket.items.sets,

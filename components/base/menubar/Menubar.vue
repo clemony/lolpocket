@@ -1,8 +1,12 @@
 <script setup lang="ts">
-import type { MenubarRootEmits, MenubarRootProps } from 'radix-vue'
-import type { HTMLAttributes } from 'vue'
-import { MenubarRoot, useForwardPropsEmits } from 'radix-vue'
+import {
+  MenubarRoot,
+
+  useForwardPropsEmits,
+} from 'reka-ui'
+import type { MenubarRootEmits, MenubarRootProps } from 'reka-ui'
 import { computed } from 'vue'
+import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<MenubarRootProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<MenubarRootEmits>()
@@ -19,7 +23,12 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <MenubarRoot
     v-bind="forwarded"
-    :class="cn(' flex h-16 items-center gap-x-1  p-1', props.class)"
+    :class="
+      cn(
+        'flex h-9 items-center space-x-1 rounded-md border border-b2  bg-b1 p-1 shadow-sm',
+        props.class,
+      )
+    "
   >
     <slot />
   </MenubarRoot>

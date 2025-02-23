@@ -4,8 +4,8 @@ import {
 
   ContextMenuPortal,
   useForwardPropsEmits,
-} from 'radix-vue'
-import type { ContextMenuContentEmits, ContextMenuContentProps } from 'radix-vue'
+} from 'reka-ui'
+import type { ContextMenuContentEmits, ContextMenuContentProps } from 'reka-ui'
 import { computed } from 'vue'
 import type { HTMLAttributes } from 'vue'
 
@@ -26,7 +26,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     <ContextMenuContent
       v-bind="forwarded"
       :class="cn(
-        'z-50 min-w-32 overflow-hidden rounded-md border border-b3/60 bg-b1/80 backdrop-blur-md py-2 px-1 text-popover-foreground shadow-md animate-in fade-in-80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
+        'z-50 min-w-32 overflow-hidden rounded-md border border-b2  bg-b1 p-1 text-popover-bc shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
         props.class,
       )"
     >

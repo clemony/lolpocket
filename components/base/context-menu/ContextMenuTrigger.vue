@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { ContextMenuTrigger, useForwardProps } from 'radix-vue'
-import type { ContextMenuTriggerProps } from 'radix-vue'
+import { ContextMenuTrigger, type ContextMenuTriggerProps, useForwardProps } from 'reka-ui'
 
 const props = defineProps<ContextMenuTriggerProps>()
 

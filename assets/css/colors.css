@@ -1,0 +1,109 @@
+@import 'tailwindcss';
+
+@theme {
+          --color-precision: oklch(85.49% 0.0892 84.09);
+  --color-precision-light: #oklch(90.13% 0.0695 86.13);
+  --color-domination: oklch(60.61% 0.1206 15.34);
+  --color-domination-light: oklch(81.67% 0.044 12.73);
+  --color-sorcery: oklch(69.02% 0.0644 332.52);
+  --color-sorcery-light: #oklch(80.99% 0.0273 327.74);
+  --color-resolve: oklch(76.83% 0.0749 131.06);
+  --color-resolve-light: oklch(85.55% 0.0188 127.18);
+  --color-inspiration: oklch(76.93% 0.0494 204.19);
+  --color-inspiration-light: oklch(94.48% 0.0273 204.19);
+  --color-iron: oklch(44.16% 0.0168 35.72);
+  --color-bronze: oklch(57.31% 0.0484 39.76);
+  --color-silver: oklch(65.69% 0.022 257.49);
+  --color-gold: oklch(85.49% 0.0892 84.09);
+  --color-platinum: oklch(69.21% 0.085 233.45);
+  --color-emerald: oklch(56.81% 0.0628 168.43);
+  --color-diamond: oklch(62.17% 0.1762 284.11);
+  --color-master: oklch(75.18% 0.1157 325.26);
+  --color-grandmaster: oklch(68.06% 0.1352 26.61);
+  --color-challenger: oklch(83.25% 0.0787 213.4);
+  --color-light-1: oklch(100% 0 0);
+  --color-light-2: oklch(96.12% 0 0);
+  --color-light-3: oklch(86% 0 0);
+
+  --color-dark-1: oklch(47.84% 0 0);
+  --color-dark-2: oklch(36% 0 0);
+  --color-dark-3: oklch(0% 0.02476 255.701624);
+    --color-empty: #bab9b1;
+  --color-empty-light: #cecdc8;
+
+
+  --color-error: oklch(59.33% 0.1319 21.78);
+
+    --color-top: #e0746b;
+  --color-fighter: oklch(78.32% 0.1173 37);
+
+   --color-tiny-carrot: oklch(78.32% 0.1173 37);
+
+     --color-onhit: oklch(70.72% 0.0996 10.55);
+
+       --color-bottom: #ebcb8b;
+
+  --color-mid: #be86b5;
+}
+
+@theme inline {
+  --accent: var(--color-inspiration);
+
+  --color-support: var(--color-inspiration);
+  --color-utility: var(--color-inspiraration);
+  --color-marksman: var(--color-precision);
+  --color-mobility: var(--color-precision);
+
+  --color-mage: var(--color-sorcery);
+    --color-middle: var(--color-sorcery);
+  --color-control: var(--color-sorcery);
+
+  --color-tank: var(--color-resolve);
+  --color-toughness: var(--color-resolve);
+  --color-jungle: #a3be8c;
+
+  --color-assassin: var(--color-domination);
+  --color-damage: var(--color-domination);
+
+
+
+}
+
+@utility iron {
+background-color:  var(--color-iron);
+color:  var(--color-iron);
+}
+  @utility bronze {
+background-color: var(--color-bronze);
+color: var(--color-bronze);
+}
+  @utility silver {
+@apply text-[var(--color-silver)];
+}
+  @utility gold {
+background-color: var(--color-gold);
+color: var(--color-gold);
+}
+.platinum {
+@apply   text-[var(--color-platinum)];
+}
+  @utility emerald {
+background-color: var(--color-emerald);
+color: var(--color-emerald);
+}
+  @utility diamond {
+background-color: var(--color-diamond);
+color: var(--color-diamond);
+}
+  @utility master {
+background-color: var(--color-master);
+color: var(--color-master);
+}
+  @utility grandmaster {
+background-color: var(--color-grandmaster);
+color: var(--color-grandmaster);
+}
+  @utility challenger {
+background-color: var(--color-challenger);
+color: var(--color-challenger);
+}

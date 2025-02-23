@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import {
   ContextMenuSub,
-
+  type ContextMenuSubEmits,
+  type ContextMenuSubProps,
   useForwardPropsEmits,
-} from 'radix-vue'
-import type { ContextMenuSubEmits, ContextMenuSubProps } from 'radix-vue'
+} from 'reka-ui'
 
 const props = defineProps<ContextMenuSubProps>()
 const emits = defineEmits<ContextMenuSubEmits>()

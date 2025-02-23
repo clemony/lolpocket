@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const ts = useTempStore()
 
+const props = defineProps<{
+item?: Item
+}>()
 const item = ref(ts.selectedItem)
 watch(
   () => item.value,
@@ -10,14 +13,7 @@ watch(
   },
 )
 
-watch(
-  () => ts.itemDrawerTrigger,
-  (newVal) => {
-    if (!newVal) {
-      ts.selectedItem = ''
-    }
-  },
-)
+
 </script>
 
 <template>
@@ -32,7 +28,6 @@ watch(
     >
       <input
         id="item-drawer"
-        v-model="ts.itemDrawerTrigger"
         type="checkbox"
         class="drawer-toggle"
       />

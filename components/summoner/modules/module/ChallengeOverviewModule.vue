@@ -8,15 +8,15 @@ const datasets = [
   },
 ]
 
-const colors = [getColorFromVariable('--color-b3'), getColorFromVariable(`--color-${challenges.totalPoints.level.toLowerCase()}`)]
+const colors = [getColorFromVariable('--color-b3'), `--color-${challenges.totalPoints.level.toLowerCase()}`]
 </script>
 
 <template>
   <ModuleTemplate title="Challenge Totals" class="module-bg">
     <div class="grid  size-[96%] grid-cols-[1fr_2fr]  gap-4 pt-1.5 self-center items-center">
       <div class=" h-fit grid-cols-1 items-center  relative py-4.5">
-        <div v-tippy="`${challenges.totalPoints.current.toLocaleString()} / ${challenges.totalPoints.max.toLocaleString()}`" class="relative -mt-1 justify-self-center">
-          <Donut
+        <div v-tippy="`${challenges.totalPoints.current.toLocaleString()} / ${challenges.totalPoints.max.toLocaleString()}`"  class="relative -mt-1 justify-self-center">
+     <Donut
             :datasets="datasets"
             :colors="colors"
             :labels="labels"
@@ -73,9 +73,9 @@ const colors = [getColorFromVariable('--color-b3'), getColorFromVariable(`--colo
                 {{ cat.toLowerCase() }}
               </p>
             </div>
+
             <progress
-              class="bg-b3/60 progress w-68 dst " :value="challenges.categoryPoints[cat].current" :max="challenges.categoryPoints[cat].max"
-              :style="{ color: `var(--color-${challenges.categoryPoints[cat].level.toLowerCase()})` }"
+              class="bg-b3/60 progress w-68 dst " :value="challenges.categoryPoints[cat].current" :max="challenges.categoryPoints[cat].max" :class="challenges.categoryPoints[cat].level.toLowerCase()"
             ></progress>
           </div>
 

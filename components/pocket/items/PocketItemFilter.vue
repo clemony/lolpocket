@@ -27,31 +27,34 @@ function handlePrice() {
 </script>
 
 <template>
-  <button class="btn btn-md !text-4 font-normal items-center" :class="{ 'opacity-60': ts.AZmodel == 0 }" @click="handleAZ()">
+
+  <div class="flex  items-center gap-2 py-3 px-1.5 z-10   ">
+  <button class="btn btn-md !text-4 font-normal items-center bg-b1"  @click="handleAZ()">
     <span class="dst"> abc</span>
-    <transition-scale group>
-      <icon v-if="ts.AZmodel != 0" name="arrow-up" class="shrink-0 size-6 transition-alldst  duration-300" :class="{ '-scale-y-100': ts.AZmodel == 1 }" />
-      <icon v-if="ts.AZmodel == 0" name="carbon:asleep" class="shrink-0 dst size-6 py-0.5" />
+    <transition-scale group class="size-6 grid place-items-center">
+      <icon v-if="ts.AZmodel != 0" name="arrow-up" class="shrink-0 size-6 transition-alld st  duration-300" :class="{ '-scale-y-100': ts.AZmodel == 1 }" />
+      <icon v-if="ts.AZmodel == 0" name="carbon:asleep" class="shrink-0 dst size-5 py-0.5 " />
     </transition-scale>
   </button>
 
-  <button class="btn btn-md !text-4 font-normal items-center" :class="{ 'opacity-60': ts.priceModel == 0 }" @click="handlePrice()">
+  <button class="btn btn-md !text-4 font-normal items-center bg-b1"  @click="handlePrice()">
     <icon name="fluent:tag-20-regular" class="shrink-0 size-6 dst" />
-    <transition-scale group>
+    <transition-scale group class="size-6 grid place-items-center">
       <icon v-if="ts.priceModel != 0" name="arrow-up" class="shrink-0 dst size-6 transition-all duration-300" :class="{ '-scale-y-100': ts.priceModel == 1 }" />
-      <icon v-if="ts.priceModel == 0" name="carbon:asleep" class="dst shrink-0 size-6 py-0.5" />
+      <icon v-if="ts.priceModel == 0" name="carbon:asleep" class="shrink-0 dst size-5 py-0.5 " />
     </transition-scale>
   </button>
+    <DropdownMenu>
+      <DropdownMenuTrigger class="btn btn-md bg-b1">
+        <icon name="teenyicons:bar-chart-outline" class="size-5" />
+      </DropdownMenuTrigger>
+  <DropdownMenuContent>
 
-  <Menubar class="flex  items-center gap-2 py-3 px-1.5 z-10  rounded-lg h-68 ">
-    <DropdownHover icon="teenyicons:bar-chart-outline" title="Item Stats">
-      <template #title>
         <Button v-tippy="'Reset all'" size="sm" variant="ghost" @click="ts.filterItemStats = []">
           <span class="opacity-60">{{ ts.filterItemStats.length }}</span>
           <icon name="reset" class="!size-4 shrink-0 ml-2 " />
         </Button>
-      </template>
-      <MenubarItem v-for="stat in itemStats" :key="stat.id" class="pointer-events-none">
+      <DropdownMenuCheckboxItem v-for="stat in itemStats" :key="stat.id" class="pointer-events-none">
         <label class="flex gap-3 pointer-events-auto" @click.stop>
           <input v-model="ts.filterItemStats" type="checkbox" :value="stat.id" class="hidden  peer" />
           <div class="size-4 relative">
@@ -59,28 +62,35 @@ function handlePrice() {
           </div>
           {{ stat.displayName }}
         </label>
-      </MenubarItem>
-    </DropdownHover>
+      </DropdownMenuCheckboxItem>
+    </DropdownMenuContent>
 
-    <DropdownHover icon="teenyicons:filter-outline" title="Category">
-      <template #title>
+    </DropdownMenu>
+
+    <DropdownMenu>
+      <DropdownMenuTrigger class="btn btn-md bg-b1">
+
+    <icon name="teenyicons:filter-outline" class="size-5" />
+  </DropdownMenuTrigger>
+  <DropdownMenuContent>
         <button v-tippy="'Reset all'" size="sm" variant="ghost" @click="ts.filterItemTypes = ''">
           <icon name="reset" class="!size-4 shrink-0 ml-2 " />
         </button>
-      </template>
-      <MenubarRadioGroup v-model:model-value="ts.filterItemTypes">
+  
+      <DropdownMenuRadioGroup v-model:model-value="ts.filterItemTypes">
         <MenubarRadioItem v-for="type in itemTypes" :key="type" :value="type">
           {{ type }}
         </MenubarRadioItem>
-      </MenubarRadioGroup>
-    </DropdownHover>
+      </DropdownMenuRadioGroup>
+      </DropdownMenuContent>
+    </DropdownMenu>
 
     <ItemSearch
       placeholder="Search Items"
       input-class=" text-bc  "
       class=" shadow-none h-11 [&_svg]:size-4  rounded-lg "
     />
-  </Menubar>
+  </div>
 </template>
 
 <style>

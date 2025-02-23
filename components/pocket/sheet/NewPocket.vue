@@ -32,7 +32,6 @@ function submitForm() {
   addPocket(name.value, tags.value, selectedIcon.value, key)
   clearForm()
   console.log('pocket added!', ps.pockets)
-  ts.pocketSheetTrigger = false
 }
 
 defineExpose({

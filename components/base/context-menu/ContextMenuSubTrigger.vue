@@ -1,23 +1,20 @@
 <script setup lang="ts">
+import { ChevronRightIcon } from '@radix-icons/vue'
 import {
   ContextMenuSubTrigger,
 
   useForwardProps,
-} from 'radix-vue'
-import type { ContextMenuSubTriggerProps } from 'radix-vue'
+} from 'reka-ui'
+import type { ContextMenuSubTriggerProps } from 'reka-ui'
 import { computed } from 'vue'
 import type { HTMLAttributes } from 'vue'
 
-const props = defineProps<ContextMenuSubTriggerProps & {
-  as?: string
-  class?: HTMLAttributes['class']
-  icon?: string
-  iconClass?: string
-}>()
+const props = defineProps<ContextMenuSubTriggerProps & { class?: HTMLAttributes['class'], inset?: boolean }>()
 
 const delegatedProps = computed(() => {
-  const { class: _, as = 'div', ...delegated } = props
-  return { as, ...delegated }
+  const { class: _, ...delegated } = props
+
+  return delegated
 })
 
 const forwardedProps = useForwardProps(delegatedProps)
@@ -27,14 +24,12 @@ const forwardedProps = useForwardProps(delegatedProps)
   <ContextMenuSubTrigger
     v-bind="forwardedProps"
     :class="cn(
-      'flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-xs outline-none focus:bg-base-200/60 gap-1 focus:text-base-content data-[state=open]:bg-base-200/60 data-[state=open]:text-accent-foreground relative group',
+      'flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-2 outline-none focus:bg-b2 focus:text-neutral-bc data-[state=open]:bg-b2 data-[state=open]:text-neutral-bc',
+      inset && 'pl-8',
       props.class,
     )"
   >
-    <div class="size-7 overflow-hidden grid place-items-center">
-    </div>
     <slot />
-    <LittleIcon icon="stash:chevron-right-light" class="absolute  right-2 size-6 text-bc shrink-0 opacity-100" />
+    <ChevronRightIcon class="ml-auto h-4 w-4" />
   </ContextMenuSubTrigger>
 </template>
-<!-- group-data-[state=open]:-scale-x-100   transition-all duration-50 -->

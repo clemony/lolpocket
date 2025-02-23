@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import type { MenubarSubEmits } from 'radix-vue'
-import { MenubarSub, useForwardPropsEmits } from 'radix-vue'
+import { MenubarSub, type MenubarSubEmits, useForwardPropsEmits } from 'reka-ui'
 
 interface MenubarSubRootProps {
   defaultOpen?: boolean

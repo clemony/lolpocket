@@ -1,20 +1,19 @@
 <script setup lang="ts">
-import type { DialogContentEmits, DialogContentProps } from 'radix-vue'
-import type { HTMLAttributes } from 'vue'
-import { DialogClose, DialogContent, DialogOverlay, DialogPortal, useForwardPropsEmits } from 'radix-vue'
+import { Cross2Icon } from '@radix-icons/vue'
+import {
+  DialogClose,
+  DialogContent,
 
-const props = withDefaults(
-  defineProps<
-    DialogContentProps & {
-      class?: HTMLAttributes['class']
-      noAnimateIn?: boolean
-      overlayOpacity?: number
-    }
-  >(),
-  {
-    overlayOpacity: 25,
-  },
-)
+  DialogOverlay,
+  DialogPortal,
+  useForwardPropsEmits,
+  VisuallyHidden,
+} from 'reka-ui'
+import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
+import { computed } from 'vue'
+import type { HTMLAttributes } from 'vue'
+
+const props = defineProps<DialogContentProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<DialogContentEmits>()
 
 const delegatedProps = computed(() => {
@@ -23,42 +22,38 @@ const delegatedProps = computed(() => {
   return delegated
 })
 
+defineOptions({
+  inheritAttrs: false
+})
+
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
   <DialogPortal>
     <DialogOverlay
-      class="data-[state=closed]:animate-out data-[state=closed]:fade-out-0 fixed inset-0 z-80  data-[state=open]:animate-in data-[state=open]:fade-in-0 dialog-overlay"
-      :style="{
-        backgroundColor: '#000000',
-        opacity: `${props.overlayOpacity}%`,
-      }"
+      class="fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0"
     />
     <DialogContent
       v-bind="forwarded"
       :class="
         cn(
-          'bg-b1 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0   data-[state=closed]:slide-out-to-bottom-[2%] data-[state=closed] z-500 :slide-out-to-bottom-[2%] data-[state=open]:slide-in-from-lbottom-1/2 data-[state=open]:slide-in-from-bottom-[2%] border-b3 fixed top-[45%] left-1/2  grid w-full max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 rounded-xl border p-6 shadow-lg duration-200',
+          'fixed left-1/2 top-1/2 z-50 grid w-full max-w-lg -translate-x-1/2 -translate-y-3/5 gap-4 border border-b2  bg-b1 p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95  data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg',
           props.class,
-        )
-      "
+        )"
     >
-      <Hide>
-        <DialogTitle>Dialog Title</DialogTitle>
-        <DialogDescription>Dialog Description</DialogDescription>
-      </Hide>
+    <VisuallyHidden>
+      <DialogTitle></DialogTitle>
+      <DialogDescription></DialogDescription>
+    </VisuallyHidden>
       <slot />
 
-      <!--       <DialogClose
-        class=" focus:ring-neutral/80  cursor-pointer data-[state=open]:text-bc/60  shadow-xs absolute top-4.25  right-5 rounded-sm  transition-opacity hover:opacity-100 focus:ring-1 focus:outline-hidden grid place-items-center disabled:pointer-events-none hover:stroke-[1.5]"
+      <DialogClose
+        class="dialog-close absolute right-4 top-4 rounded-sm opacity-70 ring-offset-b1 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-b2 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-b2 data-[state=open]:text-b2-bc"
       >
-        <icon
-          name="x"
-          class="size-3.5"
-        />
+        <Cross2Icon class="w-4 h-4" />
         <span class="sr-only">Close</span>
-      </DialogClose> -->
+      </DialogClose>
     </DialogContent>
   </DialogPortal>
 </template>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
 
+
 const props = defineProps<{
   champion: Champion
   pocket?: pocket
@@ -14,8 +15,13 @@ const props = defineProps<{
 function handleClick() {
   props.removable ? removeChamp(props.champion.name, props.pocket) : ''
 }
-/// console.log('💠 - champion.image.full:', props.champion)
+
+
+
+
 </script>
+
+
 
 <template>
   <label
@@ -41,7 +47,7 @@ function handleClick() {
         )
       "
     >
-      <img
+      <NuxtImg
         :key="props.champion.name"
         :src="`/img/champion/${champion.apiname}.webp`"
         :alt="`${props.champion.name} Image`"

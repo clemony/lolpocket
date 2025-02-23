@@ -7,29 +7,29 @@ const props = defineProps<{
   selectedShard?: number
 }>()
 const set = computed (() => {
-return props.runeSet
+  return props.runeSet
 })
 </script>
 
 <template>
   <div
     :key="set.key"
-    class="flex justify-center shadow-smooth rounded-xl w-full bg-b2/70 backdrop-blur-md py-10"
+    class="flex justify-center  rounded-xl w-full py-10"
   >
     <div class="grid  grid-cols-3 place-items-center gap-x-16 gap-y-7">
- 
       <div
         v-for="shard in shards"
         :key="shard.name + shard.slotID"
         v-tippy="shard.stats"
-          :alt="shard.stats"
-          :data-tag="shard.color" :class="getShardBg(shard)"
-          class="group">
+        :alt="shard.stats"
+        :data-tag="shard.color" :class="getShardBg(shard)"
+        class="group"
+      >
         <label
           :class="
             cn(
               /* b4 */
-              'backdrop-blur-xs',
+              'backdrop-blur-xs bg-b1/30',
               /* border */
               'border-b-b3 border-l-b3/60 border-r-b3 border-t-b3/60 border',
 
@@ -44,35 +44,39 @@ return props.runeSet
                 .replace(/border.*/, ''),
               {
                 'bg-b2/20': shard.name == 'empty',
-              }
+              },
             )
           "
           :style="{
             backgroundImage: 'url(/img/ui/green-dust-and-scratches.png),linear-gradient(135deg,var(--b1) / 0.4) 50%, oklch(var(--b2)) 100%',
-          }">
+          }"
+        >
           <input
             v-if="shard.slotID == 1"
+            v-model="set.shards[0]"
             type="radio"
             :name="shard.slotName"
             :value="shard"
-            v-model="set.shards[0]"
+            class="peer hidden"
             @change="console.log(set)"
-            class="peer hidden" />
+          />
 
           <input
             v-if="shard.slotID == 2"
+            v-model="set.shards[1]"
             type="radio"
             :name="shard.slotName"
             :value="shard"
-            v-model="set.shards[1]"
-            class="peer hidden" />
+            class="peer hidden"
+          />
           <input
             v-if="shard.slotID == 3"
+            v-model="set.shards[2]"
             type="radio"
             :name="shard.name + shard.slotID"
             :value="shard"
-            v-model="set.shards[2]"
-            class="peer hidden" />
+            class="peer hidden"
+          />
 
           <icon
             :name="getShardIcon(shard)"
@@ -81,9 +85,10 @@ return props.runeSet
               cn(getShardIconColor(shard), {
                 'opacity-40': shard.name == 'empty',
               })
-            " />
+            "
+          />
         </label>
- </div>
+      </div>
     </div>
   </div>
 </template>

@@ -54,7 +54,7 @@ function handleClick() {
       ref="target"
       :class="cn('', sheetVariants({ side }), props.class)"
       v-bind="{ ...forwarded, ...$attrs }"
-      class="!z-58 isolate !pt-[5vh] max-h-screen  bg-b1/92 backdrop-blur-md !p-0 focus:ring-0 focus:ring-offset-0 focus:outline-0 outline-0 border-x-b2  "
+      class="!z-58 isolate !pt-[5vh] max-h-screen  bg-b1/92 backdrop-blur-md !p-0 focus:ring-0 focus:ring-offset-0 focus:outline-0 outline-0 border border-b2 -x-b2  "
       @open-auto-focus.prevent
       @interact-outside="event => {
         const target = event.target as HTMLElement;

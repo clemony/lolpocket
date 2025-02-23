@@ -1,57 +1,46 @@
 <script lang="ts" setup>
 const route = useRoute()
 const ss = useSidebarStore()
+const as = useAccountStore()
 
-const ModuleDrawer = defineAsyncComponent(() => import('components/summoner/modules/ModuleDrawer.vue'))
-const SidebarUser = defineAsyncComponent(() => import('components/summoner/sidebar/SidebarUser.vue'))
+definePageMeta({
+  title: 'board',
+  name: 'board',
+})
 
-watch(
-  () => ss.sidebarComponent,
-  (newVal) => {
-    if (newVal == null) {
-      ss.sidebarComponent = SidebarUser
-    }
-  },
-)
+const tabs = ref('menu')
 </script>
 
 <template>
-  <div class=" grid grid-cols-[66px_auto]">
-    <SidebarTrigger>
-      <button
-        class=" aspect-square size-12 mb-8 rounded-full !pointer-events-auto !cursor-pointer grayscale hover:grayscale-0 shadow-sm drop-shadow-sm  transition-all duration-300 "
-        :class="{ 'grayscale-0  !brightness-115 !contrast-85 !opacity-90': ss.isSidebarOpen }"
-      >
-        <SummonerIcon />
-      </button>
+  <NuxtLayout name="summoner-nav" class="pt-0">
+    <div class="tabs tabs-lift tabs-bottom tabs-lg h-[90%] size-full *:!text-3 !pr-0 pt-5.5  pl-3" :class="{ '!rounded-bl-box': tabs != 'menu' }">
+      <input v-model="tabs" type="radio" name="my_tabs_4" class="tab" aria-label="Menu" value="menu" />
 
-      <SidebarNav :model-value="summonerLinks" />
+      <div  class="tab-content bg-b1 overflow-hidden border-b3 p-6 size-full min-h-full">
+        <transition-slide :offset="[-16, 0]" class="size-full">
+          <LazySidebarUser v-if="tabs == 'menu'" />
+        </transition-slide>
+      </div>
 
-      <transition-slide class="size-full pt-6 flex flex-col items-center gap-4 " group>
-        <button
-          v-if="route.name == 'Board'"
-          v-tippy="'Modules'"
-          class="btn  size-14  pointer-events-auto btn-square  rounded-full hover:bg-b2/85 drawer-button "
-          :class="{ 'bg-b2/85': ss.isSidebarOpen && ss.sidebarComponent == ModuleDrawer }"
-          @mouseenter="ss.sidebarComponent = ModuleDrawer" @mouseleave="ss.onSidebarButtonLeave()"
-        >
-          <icon name="ph:squares-four-light" class="size-6.5 dst " />
-        </button>
+      <input v-model="tabs" type="radio" name="my_tabs_4" class="tab" aria-label="Modules" value="modules" @click="navigateTo('/summoner')" />
 
-        <button v-if="route.name == 'Board'" v-tippy="'Put away all modules'" class="btn  size-14  pointer-events-auto   rounded-full hover:bg-b2/85 drawer-button " @click="resetModules()">
-          <icon name="hugeicons:clean" class="size-6.5 shrink-0 dst " />
-        </button>
-      </transition-slide>
-    </SidebarTrigger>
-    <NuxtPage
-      :transition="{
-        name: 'push-up',
-        mode: 'out-in',
-      }"
-    />
-  </div>
+      <LazyModuleDrawer v-model:tabs="tabs" />
 
-  <Sidebar />
+      <input v-model="tabs" type="radio" name="my_tabs_4" class="tab" aria-label="Notes" value="notes" />
+
+      <LazySummonerNotes v-model:tabs="tabs" />
+
+      <input v-model="tabs" type="radio" name="my_tabs_4" class="tab" aria-label="Draggy" value="draggy" />
+
+      <div class="tab-content size-full min-h-full bg b1 rounded-bl-box border-b3 p-6">
+        <transition-slide :offset="[-16, 0]" class="size-full">
+          <div v-if="tabs == 'draggy'" class="size-full">
+            Tab content 3
+          </div>
+        </transition-slide>
+      </div>
+    </div>
+  </NuxtLayout>
 </template>
 
 <style scoped>

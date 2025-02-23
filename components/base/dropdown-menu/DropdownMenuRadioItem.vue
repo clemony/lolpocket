@@ -1,13 +1,16 @@
 <script setup lang="ts">
-import type { DropdownMenuRadioItemEmits, DropdownMenuRadioItemProps } from 'radix-vue'
+import { DotFilledIcon } from '@radix-icons/vue'
+import {
+  DropdownMenuItemIndicator,
+  DropdownMenuRadioItem,
+
+  useForwardPropsEmits,
+} from 'reka-ui'
+import type { DropdownMenuRadioItemEmits, DropdownMenuRadioItemProps } from 'reka-ui'
+import { computed } from 'vue'
 import type { HTMLAttributes } from 'vue'
 
-import { DropdownMenuItemIndicator, DropdownMenuRadioItem, useForwardPropsEmits } from 'radix-vue'
-
-const props = defineProps<DropdownMenuRadioItemProps & {
-  class?: HTMLAttributes['class']
-  tickClass?: HTMLAttributes['class']
-}>()
+const props = defineProps<DropdownMenuRadioItemProps & { class?: HTMLAttributes['class'] }>()
 
 const emits = defineEmits<DropdownMenuRadioItemEmits>()
 
@@ -23,21 +26,16 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <DropdownMenuRadioItem
     v-bind="forwarded"
-    :class="
-      cn(
-        'text-2 focus:bg-b2/60 focus:text-bc relative flex cursor-default items-center rounded-sm py-1.5 pr-2 pl-9 outline-hidden transition-colors select-none data-disabled:pointer-events-none data-disabled:opacity-50 hover:ring-b2 hover:ring-1 data-[state=checked]:bg-b2/30',
-        props.class,
-      )
-    "
+    :class="cn(
+      'relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-2 outline-none transition-colors focus:bg-b2 focus:text-neutral-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+      props.class,
+    )"
   >
-    <slot />
-    <span class="absolute left-2 flex size-4 items-center justify-center hidden">
+    <span class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <DropdownMenuItemIndicator>
-        <icon
-          name="tick-sm"
-          class="size-5 fill-current"
-        />
+        <DotFilledIcon class="h-4 w-4 fill-current" />
       </DropdownMenuItemIndicator>
     </span>
+    <slot />
   </DropdownMenuRadioItem>
 </template>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ContextMenuLabel } from 'radix-vue'
-import type { ContextMenuLabelProps } from 'radix-vue'
+import { ContextMenuLabel } from 'reka-ui'
+import type { ContextMenuLabelProps } from 'reka-ui'
 import { computed } from 'vue'
 import type { HTMLAttributes } from 'vue'
 
@@ -17,8 +17,8 @@ const delegatedProps = computed(() => {
   <ContextMenuLabel
     v-bind="delegatedProps"
     :class="
-      cn('px-2 py-1.5 text-xs font-semibold text-foreground',
-         inset && 'pl-7', props.class,
+      cn('px-2 py-1.5 text-2 font-semibold text-bc',
+         inset && 'pl-8', props.class,
       )"
   >
     <slot />

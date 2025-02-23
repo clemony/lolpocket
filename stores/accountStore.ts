@@ -21,7 +21,7 @@ export const useAccountStore = defineStore(
       puuid: ref(null),
       gameName: ref('Summoner'),
       tagLine: ref('Link Riot Account?'),
-      profileIconId: ref(''),
+      profileIconId: ref(),
       summonerLevel: ref(0),
       region: ref('Runeterra'),
     }
@@ -33,9 +33,9 @@ export const useAccountStore = defineStore(
     const userFolders = ref<Folder[]>([])
     const heroModel = ref(0)
 
-    const userBoardModules = ref<(Module | null)[]>(Array.from({ length: 9 }, () => null))
+    const userBoardModules = ref<(any | null)[]>(Array.from({ length: 9 }, () => null))
 
-    const userModuleCount = computed (() => {
+    const userModuleCount = computed(() => {
       const filter = userBoardModules.value.filter(m => m != null)
       return filter.length
     })

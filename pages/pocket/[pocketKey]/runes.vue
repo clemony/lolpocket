@@ -46,14 +46,27 @@ onMounted (async () => {
 </script>
 
 <template>
-  <div class="relative overflow-hidden">
-    <PocketHeader
-      title="Runes" :pocket="pocket"
-      bg-class="absolute top-0 left-0 bg-transparent [&_.bread]:bg-transparent"
-    />
-    <videoBackground ref="video" :src="runeVideo" class="size-full grayscale bg-center opacity-65 brightness-180 aspect-video absolute z-0 gradient-mask-l-0" />
+  <div class="relative overflow-hidden size-full">
+
+    <videoBackground ref="video" :src="runeVideo" class="  grayscale bg-cover opacity-15 contrast-400 brightness-380  h-full z-0 gradient-mask-t-0" />
 
     <div class="absolute inset-0">
+
+<!--           <div class="flex gap-10 w-full">
+        <button
+          v-tippy="'New Set'"
+          class="grid p-i-c h-38 btn btn-ghost grow !rounded-xl "
+        >
+          <icon name="add" class="size-7 dst" />
+        </button>
+
+        <button
+          v-tippy="'New Set'"
+          class="grid p-i-c h-38 btn grow btn-ghost  !rounded-xl "
+        >
+          <icon name="trash" class="size-7 dst" />
+        </button>
+      </div> -->
       <MenubarSpacer class="w-full !h-[9vh]" />
 
       <div class="flex gap-10  justify-center  l max-h-[95vh]">

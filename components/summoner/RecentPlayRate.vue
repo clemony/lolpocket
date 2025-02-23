@@ -22,7 +22,6 @@ const labels = ['Win', 'Loss']
 
 <template>
   <div
-    ref="matches"
     class="grid h-22 w-full max-w-[600px] grid-cols-[2.5fr_3fr_1fr] items-center gap-3 px-2"
   >
     <div class="relative flex items-center gap-4">
@@ -45,6 +44,7 @@ const labels = ['Win', 'Loss']
     <div class="flex gap-3">
       <div
         v-for="champion in summoner.recentChampions"
+        :key="champion.name"
         class="relative flex size-22 items-center rounded-full shadow-sm"
       >
         <Donut

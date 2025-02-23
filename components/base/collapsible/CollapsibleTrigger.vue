@@ -1,14 +1,7 @@
 <script setup lang="ts">
-import type { CollapsibleTriggerProps } from 'radix-vue'
-import { CollapsibleTrigger } from 'radix-vue'
+import { CollapsibleTrigger, type CollapsibleTriggerProps } from 'reka-ui'
 
-const props = defineProps<
-  CollapsibleTriggerProps & {
-    open?: boolean
-  }
->()
-
-const emit = defineEmits(['update:open'])
+const props = defineProps<CollapsibleTriggerProps>()
 </script>
 
 <template>

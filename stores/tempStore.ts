@@ -7,44 +7,13 @@ export const useTempStore = defineStore(
   () => {
     const itemGridApi = shallowRef<GridApi | null>(null)
 
-    const drawerTrigger = ref(false)
-    const drawerComponent = ref<string | boolean>(false)
-
-    const pocketSheetTrigger = ref(false)
-    const editPocketTrigger = ref(false)
-    const championDrawerTrigger = ref(false)
-    const itemDrawerTrigger = ref(false)
-    const runeDrawerTrigger = ref(false)
-    const champSelectDrawerTrigger = ref(false)
-    const cardDrawerTrigger = ref(false)
-    const moduleDrawerTrigger = ref(false)
-
     const pocketBarComponent = shallowRef(null)
 
     // drawer selections
     const selectedChampion = ref(null)
-    const selectedItem = ref(null)
     const selectedRune = ref(null)
     const selectedPocket = ref(null)
     const drawerChampSelectDropdown = ref(null)
-
-    watch(
-      () => championDrawerTrigger.value,
-      (newVal) => {
-        if (newVal == false) {
-          selectedChampion.value = null
-        }
-      },
-    )
-
-    watch(
-      () => itemDrawerTrigger.value,
-      (newVal) => {
-        if (newVal == false) {
-          selectedItem.value = null
-        }
-      },
-    )
 
     // dialog
 
@@ -76,6 +45,7 @@ export const useTempStore = defineStore(
     const filterItemStats = ref([])
     const filterItemCats = ref([])
     const pocketItemSelect = ref()
+    const selectedItem = ref(null)
 
     // runes
     const selectedRuneSetIndex = ref(0)
@@ -89,16 +59,6 @@ export const useTempStore = defineStore(
       // clickType,
 
       // sidebar
-      drawerTrigger,
-      drawerComponent,
-      pocketSheetTrigger,
-      editPocketTrigger,
-      championDrawerTrigger,
-      itemDrawerTrigger,
-      runeDrawerTrigger,
-      champSelectDrawerTrigger,
-      cardDrawerTrigger,
-      moduleDrawerTrigger,
 
       pocketBarComponent,
 

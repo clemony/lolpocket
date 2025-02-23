@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import { vDraggable } from 'vue-draggable-plus'
 
+const props = defineProps<{
+  tabs: string
+}>()
 function onUpdate() {
   console.log('update')
 }
@@ -9,19 +12,15 @@ function remove() {
   console.log('remove')
 }
 
-const ss = useSidebarStore()
-
 const ts = useTempStore()
 const isDragging = ref(false)
 function onDragStart(e) {
   console.log(e.item)
-  ss.isDragging = true
-  ss.isSidebarOpen = false
+  isDragging.value = true
 }
 
-function onDragEnd(e) {
-  console.log('💠 - onDragEnd - e:', e)
-  ss.isDragging = false
+function onDragEnd() {
+  isDragging.value = false
 }
 
 const as = useAccountStore()
@@ -36,49 +35,62 @@ console.log('💠 - filter - filter:', filter)
 </script>
 
 <template>
-  <div class=" overflow-y-auto  size-full">
-    <div class="pb-4">
-      <h1>Board Modules</h1>
-      <p class="mt-2">
-        Grab your most important info to display on your board.
-      </p>
-    </div>
-    <div
-      v-draggable="[
-        as.userBoardModules,
-        {
-          group: {
-            name: 'modules',
-            pull: 'clone',
-            put: false,
-          },
-          bubbleScroll: false,
-          scroll: false,
-          delay: 0,
-          animation: 150,
-          forceFallback: true,
-          fallbackTolerance: 0,
-          fallbackOnBody: true,
-        },
-      ]"
-      :class="cn('grid  gap-11  w-full   py-4  m-auto') "
-      ghost-class="module-ghost"
-      drag-class="module-drag"
-      @update="onUpdate"
+  <div class="tab-content bg-b1 w-full rounded-bl-box border-b3 pb-6 h-full overflow-hidden h-90% relative  ">
+    <transition-slide :offset="[-16, 0]" class="relative w-full  min-h-full">
+      <div v-if="props.tabs == 'modules'" class="size-full overflow-y-auto ">
+        <div class="flex w-full gap-2 p-3 items-center">
+          <p class="capitalize grow font-medium">
+            Board Modules
+          </p>
+          <button v-tippy="'Reset Modules +'" class="btn btn-sm btn-square" @click="resetModules()">
+            <icon name="hugeicons:clean" class="size-5 shrink-0 dst " />
+          </button>
+        </div>
+        <Separator class="!my-0 shadow-xxs" />
 
-      @start="onDragStart($event)"
-      @remove="remove"
-      @end="onDragEnd($event)"
-    >
-      <div
-        v-for="module in allUserModules" :key="module.name" class="size-full max-w-110 !pointer-events-auto  cursor-move"
-        :class="{ hidden: filter.includes(module.name) }"
-        :data-name="module.name"
-        @click.prevent
-      >
-        <component :is="ghostRegistry[module.name]" :data-name="module.name" />
+        <div class="relative size-full min-h-full">
+          <transition-slide
+            v-draggable="[
+              allUserModules.map(m => m.name),
+              {
+                group: {
+                  name: 'modules',
+                  pull: true,
+                  put: 'modules',
+                },
+                bubbleScroll: false,
+                scroll: false,
+                delay: 0,
+                animation: 150,
+                forceFallback: true,
+                fallbackTolerance: 0,
+                fallbackOnBody: true,
+                ghostClass: 'module-ghost',
+                dragClass: 'module-drag',
+              },
+            ]"
+            group
+
+            ghost-class="module-ghost"
+            drag-class="module-drag"
+            class="top-0 left-0 h-fit grid  gap-11 self-start  items-start justify-center  w-full px-1 pt-6  pb-4  z-0 inset-0 absolute overflow-y-auto"
+            @update="onUpdate"
+
+            @start="onDragStart($event)"
+            @remove="remove"
+            @end="onDragEnd()"
+          >
+            <div
+              v-for="module in allUserModules" :key="module.name" class="size-full max-w-81 max-h-44"
+              :class="{ hidden: filter.includes(module.name) }"
+              :data-name="module.name"
+            >
+              <component :is="ghostRegistry[module.name]" :data-name="module.name" :title="module.title" :queue="module.queue" />
+            </div>
+          </transition-slide>
+        </div>
       </div>
-    </div>
+    </transition-slide>
   </div>
 </template>
 

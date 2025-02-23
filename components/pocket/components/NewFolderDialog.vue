@@ -37,7 +37,7 @@ function handleSubmit() {
 <template>
   <Dialog :open="ts.newFolderOpen">
     <DialogContent
-      class="max-h-74 pb-16 transition-all duration-400" :class="{ 'max-h-140': openIcons }"
+      class="max-h-74 pb-16 transition-all duration-400 [&_.dialog-close]:hidden" :class="{ 'max-h-140': openIcons }"
       @pointer-down-outside="ts.newFolderOpen = false"
     >
       <DialogHeader>

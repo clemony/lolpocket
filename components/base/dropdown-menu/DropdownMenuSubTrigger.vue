@@ -1,8 +1,13 @@
 <script setup lang="ts">
-import type { DropdownMenuSubTriggerProps } from 'radix-vue'
-import type { HTMLAttributes } from 'vue'
-import { DropdownMenuSubTrigger, useForwardProps } from 'radix-vue'
+import { ChevronRightIcon } from '@radix-icons/vue'
+import {
+  DropdownMenuSubTrigger,
+
+  useForwardProps,
+} from 'reka-ui'
+import type { DropdownMenuSubTriggerProps } from 'reka-ui'
 import { computed } from 'vue'
+import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<DropdownMenuSubTriggerProps & { class?: HTMLAttributes['class'] }>()
 
@@ -18,12 +23,12 @@ const forwardedProps = useForwardProps(delegatedProps)
 <template>
   <DropdownMenuSubTrigger
     v-bind="forwardedProps"
-    :class="cn('text-2 focus:bg-b2/60 data-[state=open]:bg-b2/60 flex cursor-default items-center rounded-sm px-2 py-1.5 outline-hidden select-none', props.class)"
+    :class="cn(
+      'flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-2 outline-none focus:bg-b2 data-[state=open]:bg-neutral',
+      props.class,
+    )"
   >
     <slot />
-    <icon
-      name="teenyicons:right-small-outline"
-      class="ml-auto h-4 w-4"
-    />
+    <ChevronRightIcon class="ml-auto h-4 w-4" />
   </DropdownMenuSubTrigger>
 </template>

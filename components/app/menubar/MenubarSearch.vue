@@ -4,7 +4,7 @@
 
 <template>
   <button
-    class="rounded-lg  btn btn-outline  border-b3 hover:ring-neutral/50 flex h-10 bg-b1/80  min-w-48 w-48 cursor-pointer items-center  !px-2 !py-0  mb-1 hover:bg-b1 hover:ring-1 group"
+    class="rounded-lg  btn btn-outline  border-b3 hover:ring-neutral/50 flex h-11 bg-b1/80  min-w-48 w-48 cursor-pointer items-center  !px-2.5 !py-0  hover:bg-b1 hover:ring-1 group inset-shadow-xxs"
     @click="ts.commandOpen = true"
   >
     <icon
@@ -16,12 +16,12 @@
       Search
     </span>
 
-    <Badge
+    <div
       size="sm"
-      class="!text-3 border-b3 text-bc/60 rounded-md border shadow-xs"
+      class="!text-3 btn btn-xs h-7 px-1  border-b3/60  text-bc/50"
     >
       {{ useDeviceKey() }} K
-    </Badge>
+    </div>
   </button>
 </template>
 

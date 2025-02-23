@@ -9,12 +9,10 @@ export const labelVariants = cva('text-2 font-medium leading-none peer-disabled:
     variant: {
       default: 'bg-b2 text-bc hover:bg-b3/80',
       neutral: 'bg-neutral !text-nc hover:bg-neutral/80  **:!text-nc !hover:text-nc rounded-md shadow-sm shadow-neutral/10',
-      primary: 'bg-primary text-primary-content hover:bg-primary/90',
       destructive: 'bg-error text-error-content hover:bg-error/90',
-      outline: 'border border-b3 bg-transparent hover:bg-b2/60 hover:text-bc shadow-sm',
-      secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-      ghost: 'hover:bg-b2/60 hover:text-bccent-foreground',
-      link: 'text-primary underline-offset-4 hover:underline',
+      outline: 'border border-b2  border border-b2 -b3 bg-transparent hover:bg-b2/60 hover:text-bc shadow-sm',
+      ghost: 'hover:bg-b2/60 hover:text-bccent-bc',
+      link: 'text-neutral underline-offset-4 hover:underline',
     },
     size: {
       default: 'h-9 px-4 py-2',

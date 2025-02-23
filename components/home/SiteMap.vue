@@ -11,7 +11,6 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
         <h3>Tools</h3>
         <li
           :class="itemClass"
-          @click="useDrawerToggle('pocket')"
         >
           Create a Pocket
         </li>

@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+    
+    @custom-variant light (&:where([data-theme=daylight], [data-theme=daylight] *), &:where([data-theme=dawn], [data-theme=dawn] *));
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *), &:where([data-theme=midnight], [data-theme=midnight] *));
+
+@layer base {
+:root{
+:is([data-theme='daylight']),
+.data-theme-light {
+  --b1: oklch(100% 0 0);
+  --b2: oklch(95.12% 0 0);
+
+  --b3: oklch(89% 0 0);
+  --bc: oklch(0% 0.02476 255.701624);
+  --neutral: oklch(0% 0.02476 255.701624);
+  --nc: oklch(100% 0 0);
+}
+
+:is([data-theme='dawn']) {
+  --b1: oklch(97.04% 0.0029 84.56);
+  --b2: oklch(94.91% 0.0067 53.44);
+  --b3: oklch(89.96% 0.007 67.74);
+  --bc: oklch(0% 0.02476 255.701624);
+  --neutral: oklch(27% 0.006 286.033);
+  --nc: oklch(97.788% 0.004 56.375);
+}
+
+:is([data-theme='dusk']) {
+  --b1: oklch(30.86% 0.0232 264.15);
+  --b2: oklch(28.04% 0.0198 264.18);
+  --b3: oklch(26.35% 0.0184 262.18);
+  --bc: oklch(84.8707% 0 0);
+  --neutral: oklch(24.73% 0.0205 264.09);
+  --nc: oklch(84.8707% 0 0);
+}
+
+:is([data-theme='midnight']) {
+  --b1: oklch(26% 0 0);
+  --b2: oklch(20% 0 0);
+  --b3: oklch(14% 0 0);
+  --bc: oklch(87.609% 0 0);
+  --neutral: oklch(26% 0 0);
+  --nc: oklch(100% 0 0);
+}
+
+:is([data-theme='daylight']),
+:is([data-theme='dawn']) {
+  .invert-light {
+    @apply invert;
+  }
+}
+
+:is([data-theme='dusk']),
+:is([data-theme='midnight']) {
+  .invert-dark {
+    @apply invert;
+  }
+  }
+}
+}
+@theme inline {
+
+  --color-b1: var(--b1);
+  --color-b2: var(--b2);
+  --color-b3: var(--b3);
+  --color-bc: var(--bc);
+  --color-neutral: var(--neutral);
+  --color-nc: var(--nc);
+
+
+}

@@ -1,28 +1,35 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@plugin "daisyui" {
+  root: ":root";
+  themes: false;
+
+}
+
 @plugin "daisyui/theme" {
-  name: 'bumblebee';
+  name: "lofi";
   default: true;
+    prefersdark: true, false;
+  color-scheme: dark, light;
+
   styled: true;
-  prefersdark: false;
-  color-scheme: light;
-  --color-base-100: var(--b1);
-  --color-base-200: var(--b2);
-  --color-base-300: var(--b3);
-  --color-base-content: var(--bc);
+  --color-base-100: var(--color-b1);
+  --color-base-200: var(--color-b2);
+  --color-base-300: var(--color-b3);
+  --color-base-content: var(--color-bc);
 
-  --color-primary: var(--neutral);
-  --color-primary-content: var(--nc);
+    --color-primary:  var(--color-neutral) !important;
+  --color-primary-content: var(--color-nc);
 
-  --color-secondary: var(--neutral);
-  --color-secondary-content: var(--nc);
+  --color-secondary: var(--color-neutral) !important;
+  --color-secondary-content: var(--color-nc);
 
-  --color-accent: var(--neutral);
-  --color-accent-content: var(--nc);
+  --color-accent: var(--color-neutral) !important;
+  --color-accent-content: var(--color-nc);
 
-  --color-neutral: var(--neutral);
-  --color-neutral-content: var(--nc);
+  --color-neutral: var(--color-neutral) !important;
+  --color-neutral-content: var(--color-nc);
 
   --color-info: var(--color-sorcery);
   --color-info-content: var(--color-sorcery-light);
@@ -36,7 +43,51 @@
   --color-error: var(--color-domination);
   --color-error-content: var(--color-domination-light);
 
+      --depth: 1;
+  --noise: 0.5;
+    --radius-selector: 0.2rem;
+  --radius-field: 0.4rem;
+  --radius-box: 0.7rem;
 
+
+
+  
+  
+
+}
+
+
+
+@layer components {
+  .btn-neutral {
+    @apply hover:!bg-neutral/80  **:text-nc border-neutral/60 !shadow-sm transition-all shadow-black/20 duration-300 !bg-neutral;
+  }
+
+  .btn-ghost {
+    @apply hover:!bg-b2/50 hover:!border-b2 ;
+  }
+
+  .btn:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
+    @apply bg-b2/60 border-b2;
+  }
+
+  .btn {
+    @apply font-normal text-3 rounded-md;
+  }
+
+.collapse-input,
+.collapse-title {
+  @apply !min-h-0 !py-0 h-11 text-nowrap flex-nowrap items-center justify-start;
+}
+
+.badge-neutral {
+  @apply bg-neutral !text-nc;
+}
+}
+
+@layer base {
+:root {
 --bg-noise:   --fx-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.34' numOctaves='4' stitchTiles='stitch'%3E%3C/feTurbulence%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)' opacity='0.2'%3E%3C/rect%3E%3C/svg%3E");
 
+}
 }

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { DropdownMenuItemProps } from 'radix-vue'
-import type { HTMLAttributes } from 'vue'
-import { DropdownMenuItem, useForwardProps } from 'radix-vue'
+import { DropdownMenuItem, useForwardProps } from 'reka-ui'
+import type { DropdownMenuItemProps } from 'reka-ui'
 import { computed } from 'vue'
+import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<DropdownMenuItemProps & { class?: HTMLAttributes['class'], inset?: boolean }>()
 
@@ -18,13 +18,11 @@ const forwardedProps = useForwardProps(delegatedProps)
 <template>
   <DropdownMenuItem
     v-bind="forwardedProps"
-    :class="
-      cn(
-        'text-2 focus:bg-b2/60 focus:text-bc relative flex cursor-default items-center gap-4 rounded-md px-2 py-1.5 font-medium outline-hidden transition-colors select-none data-disabled:pointer-events-none data-disabled:opacity-50',
-        inset && 'pl-8',
-        props.class,
-      )
-    "
+    :class="cn(
+      'relative flex cursor-default select-none items-center rounded-sm gap-2 px-2 py-1.5 text-2 outline-none transition-colors focus:bg-b2 focus:text-neutral-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-50  [&>svg]:size-4 [&>svg]:shrink-0',
+      inset && 'pl-8',
+      props.class,
+    )"
   >
     <slot />
   </DropdownMenuItem>

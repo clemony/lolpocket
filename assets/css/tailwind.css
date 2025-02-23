@@ -4,9 +4,10 @@
 @import './plugins/plugins.css';
 @import './components.css';
 @import './theme.css';
-@import './themes.css';
+@import './colors.css';
 @import '../animation/animations.css';
 @import './fonts.css';
+@import './variants.css';
 
 @layer base {
   :root {
@@ -18,6 +19,8 @@
       color: var(--nc);
       background: var(--color-neutral);
     }
+
+
   }
 
   html,

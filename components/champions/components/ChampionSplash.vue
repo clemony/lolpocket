@@ -22,7 +22,6 @@ const ts = useTempStore()
     }"
   >
     <input
-      v-model="ts.championDrawerTrigger"
       type="checkbox"
       class="hidden"
     />

@@ -21,8 +21,6 @@ const name = computedAsync(() => {
 function handleDrawer() {
   ts.selectedPocket = pocket
   console.log('💠 - handleDrawer - pocket:', pocket)
-
-  useDrawerToggle('editPocket')
 }
 </script>
 

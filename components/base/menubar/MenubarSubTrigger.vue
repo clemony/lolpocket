@@ -1,15 +1,11 @@
 <script setup lang="ts">
-import type { MenubarSubTriggerProps } from 'radix-vue'
-import type { HTMLAttributes } from 'vue'
-import { MenubarSubTrigger, useForwardProps } from 'radix-vue'
+import { ChevronRightIcon } from '@radix-icons/vue'
+import { MenubarSubTrigger, useForwardProps } from 'reka-ui'
+import type { MenubarSubTriggerProps } from 'reka-ui'
 import { computed } from 'vue'
+import type { HTMLAttributes } from 'vue'
 
-const props = defineProps<
-  MenubarSubTriggerProps & {
-    class?: HTMLAttributes['class']
-    inset?: boolean
-  }
->()
+const props = defineProps<MenubarSubTriggerProps & { class?: HTMLAttributes['class'], inset?: boolean }>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
@@ -23,18 +19,13 @@ const forwardedProps = useForwardProps(delegatedProps)
 <template>
   <MenubarSubTrigger
     v-bind="forwardedProps"
-    :class="
-      cn(
-        'data-[state=open]:text-bccent-foreground text-2 focus:bg-b2/60 focus:text-bc data-[state=open]:bg-b2/60 flex cursor-default items-center rounded-sm px-2 py-1.5 outline-hidden select-none',
-        inset && 'pl-8',
-        props.class,
-      )
-    "
+    :class="cn(
+      'flex cursor-default select-none items-center rounded-sm pl-2 pr-2.5 py-1.5 text-2 outline-none focus:bg-b2  gap-3 focus:text-neutral-bc data-[state=open]:bg-b2 data-[state=open]:text-neutral-bc data-disabled:!bg-b2/60 data-disabled:opacity-60 data-disabled:pr-2.75 group',
+      inset && 'pl-8',
+      props.class,
+    )"
   >
     <slot />
-    <icon
-      name="right-small-outline"
-      class="ml-auto h-4 w-4"
-    />
+    <icon name="right-sm" class="ml-auto size-4.5 group-data-disabled:hidden" />
   </MenubarSubTrigger>
 </template>
