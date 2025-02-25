@@ -12,10 +12,7 @@ declare global {
   interface pocket {
     key: string
     name: string
-    roles: {
-      0: Role
-      1: Role
-    }
+    roles: string[]
     champions: {
       children: Champion[]
       default: Champion
@@ -47,7 +44,6 @@ declare global {
     icon: string
     title: string
   }
-
 
   interface SidebarComponent {
     button: HTMLButtonElement | null

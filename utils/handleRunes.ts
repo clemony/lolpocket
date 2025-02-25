@@ -212,9 +212,9 @@ export function getRunePathName(runeId: number, runePaths: any[]): string | null
 }
 
 export function resetSecondaryPath(runeSet: RuneSet) {
-  runeSet.secondary.runes[0] = createDefaultRune()
   runeSet.secondary.runes[1] = createDefaultRune()
   runeSet.secondary.runes[2] = createDefaultRune()
+  runeSet.secondary.runes[3] = createDefaultRune()
 }
 
 export function resetPrimaryPath(runeSet: RuneSet) {

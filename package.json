@@ -24,7 +24,6 @@
     "@morev/vue-transitions": "^3.0.5",
     "@nuxt/eslint": "^1.1.0",
     "@nuxt/icon": "^1.10.3",
-    "@nuxt/image": "^1.9.0",
     "@nuxt/types": "^2.18.1",
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/fontaine": "^0.5.0",
@@ -108,7 +107,7 @@
     "vite-plugin-vue-devtools": "^7.7.2",
     "vue-eslint-parser": "^9.4.3",
     "vue-router": "^4.5.0",
-    "vue-tsc": "^2.2.2"
+    "vue-tsc": "^2.2.4"
   },
   "overrides": {
     "tailwindcss-animate": {

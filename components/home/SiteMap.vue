@@ -14,17 +14,6 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
         >
           Create a Pocket
         </li>
-        <li
-          v-for="link in pocketLinks" :key="link.name"
-          class="flex items-center gap-2 capitalize"
-        >
-          <NuxtLink
-            :to="{ path: link.url }"
-            :class="itemClass"
-          >
-            {{ link.name }}
-          </NuxtLink>
-        </li>
       </ul>
 
       <template v-for="section in externalLinks" :key="section">

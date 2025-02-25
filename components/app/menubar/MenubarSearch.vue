@@ -20,7 +20,7 @@
       size="sm"
       class="!text-3 btn btn-xs h-7 px-1  border-b3/60  text-bc/50"
     >
-      {{ useDeviceKey() }} K
+      {{ getDeviceKey() }} K
     </div>
   </button>
 </template>

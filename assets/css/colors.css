@@ -50,7 +50,7 @@
   --accent: var(--color-inspiration);
 
   --color-support: var(--color-inspiration);
-  --color-utility: var(--color-inspiraration);
+  --color-utility: var(--color-inspiration);
   --color-marksman: var(--color-precision);
   --color-mobility: var(--color-precision);
 
@@ -106,4 +106,83 @@ color: var(--color-grandmaster);
   @utility challenger {
 background-color: var(--color-challenger);
 color: var(--color-challenger);
+}
+
+
+
+[data-tag='Support'] {
+  background: var(--inspiration-light);
+}
+
+[data-tag='Mage'] {
+  background-color: var(--sorcery) !important;
+}
+
+[data-tag='Marksman'] {
+  background: var(--precision-light);
+}
+
+[data-tag='Assassin'] {
+  background: var(--domination-light);
+}
+
+[data-tag='Tank'] {
+  background: var(--resolve-light);
+}
+
+[data-tag='Fighter'] {
+  background: var(--orange-600) / 60;
+}
+
+
+
+  .gradient {
+  background: linear-gradient(
+    137deg,
+    rgba(231, 207, 120, 0.7) 0%,
+    rgba(220, 124, 124, 0.7) 20%,
+    rgba(178, 164, 221, 0.7) 40%,
+    rgba(175, 212, 150, 0.7) 60%,
+    rgba(165, 226, 229, 0.7) 80%
+  );
+  background-size: 550%;
+}
+
+.empty {
+  background: linear-gradient(
+    137deg,
+    rgba(190, 190, 190, 1) 0%,
+    rgba(193, 193, 193, 0.8) 10%,
+    rgba(233, 233, 233, 1) 75%,
+    rgba(252, 252, 252, 0) 90%
+  );
+}
+
+.none,
+.precision,
+.domination,
+.sorcery,
+.resolve,
+.inspiration {
+  transition: all 0.5s ease-in-out;
+}
+
+.precision {
+  background-position: 0%;
+}
+
+.domination {
+  background-position: 20%;
+}
+
+.sorcery {
+  background-position: 42%;
+}
+
+.resolve {
+  background-position: 83%;
+}
+
+.inspiration {
+  background-position: 100%;
 }

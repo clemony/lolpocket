@@ -48,7 +48,7 @@ onMounted (async () => {
 <template>
   <div class="relative overflow-hidden size-full">
 
-    <videoBackground ref="video" :src="runeVideo" class="  grayscale bg-cover opacity-15 contrast-400 brightness-380  h-full z-0 gradient-mask-t-0" />
+    <videoBackground ref="video" :src="runeVideo" class="  grayscale bg-cover opacity-15 contrast-400 brightness-380  h-full z-0 gradient-mask-t-0 w-full" />
 
     <div class="absolute inset-0">
 
@@ -67,9 +67,9 @@ onMounted (async () => {
           <icon name="trash" class="size-7 dst" />
         </button>
       </div> -->
-      <MenubarSpacer class="w-full !h-[9vh]" />
 
-      <div class="flex gap-10  justify-center  l max-h-[95vh]">
+        <RuneSetBar :pocket="pocket" :selected="set" />
+      <div class="flex gap-10  justify-center  max-h-[95vh]">
         <PocketRunePanels :rune-set="set" :pocket="pocket" />
       </div>
     </div>

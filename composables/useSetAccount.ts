@@ -1,7 +1,7 @@
 import { jwtDecode } from 'jwt-decode'
 import { toast } from 'vue-sonner'
 
-export async function useSetAccount(session) {
+export async function setUserAccount(session) {
   if (!session) {
     return
   }

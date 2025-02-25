@@ -1,21 +1,3 @@
-export const pocketLinks = [
-  {
-    name: 'table',
-    url: '/pocket/PocketTables',
-    icon: '',
-  },
-  {
-    name: 'cards',
-    url: '/pocket/PocketCards',
-    icon: '',
-  },
-  {
-    name: 'calculator',
-    url: '/Calculator',
-    icon: '',
-  },
-]
-
 export const externalLinks = [
   {
     name: 'Resources',
@@ -103,35 +85,5 @@ export const infoLinks = [
     name: 'Discord',
     url: 'https://discord.gg/Jzuu7bYTZY',
     type: 'ex',
-  },
-]
-
-export const dataLinks = [
-  {
-    name: 'Database',
-    icon: 'qlementine-icons:drive-16',
-    open: true,
-    links: [
-      {
-        name: 'Champions',
-        link: '/Champions',
-        icon: '',
-      },
-      {
-        name: 'Items',
-        link: '/Items',
-        icon: '',
-      },
-      {
-        name: 'Runes',
-        link: '/Runes',
-        icon: '',
-      },
-      {
-        name: 'Spells',
-        link: '/Spells',
-        icon: '',
-      },
-    ],
   },
 ]

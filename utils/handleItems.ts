@@ -8,6 +8,7 @@ addItemToSet
 itemCategories
 itemTypes
 itemStats
+remove items
 */
 
 export function createItem(): Item {
@@ -72,6 +73,13 @@ export function addItemToSet(pocket, itemSet, item) {
 export function resetItems(set) {
   if (set && Array.isArray(set.items)) {
     set.items.splice(0, set.items.length) // Reset the array
+  }
+}
+
+export function deleteItemSet(pocket, set){
+  const i = pocket.items.sets.findIndex(s => s.key == set.key)
+  if (i){
+    pocket.items.sets.splice(i, 1)
   }
 }
 
@@ -155,3 +163,24 @@ export const itemStats = [
   { id: 'ms', displayName: 'Movespeed', checked: false },
   { id: 'msflat', displayName: 'Base Movespeed', checked: false },
 ]
+
+// remove items
+
+export const removingItems = ref<Record<string, boolean>>({})
+
+export function onRemove<T>(evt: any, array: T[]) {
+  const itemKey = evt.item.dataset.key // Get unique key of removed item
+  const index = evt.oldIndex
+
+  if (index === undefined || index < 0 || index >= array.length)
+    return // Ensure valid index
+
+  // Apply "removing" class
+  removingItems.value[itemKey] = true
+
+  // Wait for animation to finish before actually removing
+  setTimeout(() => {
+    array.splice(index, 1) // Remove item from array
+    delete removingItems.value[itemKey] // Cleanup
+  }, 600) // Match animation duration
+}

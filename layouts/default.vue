@@ -11,7 +11,7 @@ client.auth.onAuthStateChange(async (event, session) => {
   console.log('💠 - client.auth.onAuthStateChange - session:', session)
   console.log('💠 - client.auth.onAuthStateChange - event:', event)
   if (event === 'INITIAL_SESSION') {
-    useSetAccount(session)
+    setUserAccount(session)
   }
   else if (event === 'SIGNED_OUT') {
     as.userAccount = defaultUser
@@ -41,7 +41,6 @@ const ss = useSidebarStore()
     <div
       class="bg-b1 h-screen w-full relative"
     >
-
       <Sonner
         position="top-right"
 
@@ -52,8 +51,6 @@ const ss = useSidebarStore()
         :expand="true"
         :duration="6000"
       />
-
-
 
       <LazyNewFolderDialog />
 

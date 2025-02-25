@@ -30,7 +30,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="size-full pt-4 ">
+  <div class="size-full">
     <SummonerName class="text-9 font-black pl-9 pr-3 font-serif dst" />
 
     <SimpleNav :model-value="summonerLinks" />

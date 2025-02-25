@@ -8,8 +8,7 @@ import { twMerge } from 'tailwind-merge'
 3. format link
 4. get wiki link
 5. make box
-6. remove items
-7. type mixins
+8. ger random
 */
 
 // cn
@@ -50,35 +49,7 @@ export function makeBox(length, target) {
   }
 }
 
-// remove items
-
-export const removingItems = ref<Record<string, boolean>>({})
-
-export function onRemove<T>(evt: any, array: T[]) {
-  const itemKey = evt.item.dataset.key // Get unique key of removed item
-  const index = evt.oldIndex
-
-  if (index === undefined || index < 0 || index >= array.length)
-    return // Ensure valid index
-
-  // Apply "removing" class
-  removingItems.value[itemKey] = true
-
-  // Wait for animation to finish before actually removing
-  setTimeout(() => {
-    array.splice(index, 1) // Remove item from array
-    delete removingItems.value[itemKey] // Cleanup
-  }, 600) // Match animation duration
-}
-
-// type mixins
-
-export function applyMixins(derivedCtor: any, baseCtors: any[]) {
-  baseCtors.forEach((baseCtor) => {
-    Object.getOwnPropertyNames(baseCtor.prototype).forEach((name) => {
-      if (name !== 'constructor') {
-        derivedCtor.prototype[name] = baseCtor.prototype[name]
-      }
-    })
-  })
+export function getRandom(thing: any[]) {
+  const i = Math.floor(Math.random() * thing.length)
+  return thing[i]
 }

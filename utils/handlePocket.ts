@@ -15,16 +15,7 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
   const newPocket: pocket = {
     key: pocketKey,
     name: name || generateShortString(),
-    roles: {
-      0: {
-        name: 'All',
-        icon: 'all-lanes',
-      },
-      1: {
-        name: 'All',
-        icon: 'all-lanes',
-      },
-    },
+    roles: ['all'],
     icon: icon || '/img/champion/centered/1.webp',
     champions: {
       children: [],

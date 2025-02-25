@@ -71,6 +71,7 @@ const props = defineProps<{
 
       <footer class="text-center mt-6 items-center text-bc/60 dst italic flex justify-center gap-3">
         Paws for Progress
+        <span class="not-italic">2028</span>
         <icon name="la:flag-usa" class="size-6 -mt-1" />
       </footer>
     </div>

@@ -5,15 +5,14 @@ const ps = usePocketStore()
 const ds = useDataStore()
 const ts = useTempStore()
 
-
 const keys = useMagicKeys()
 
-if (useDevice() == 'MacOS') {
+if (getDevice() == 'MacOS') {
   whenever(keys.meta_k, () => {
     ts.commandOpen = true
   })
 }
-else if (useDevice() == 'Windows') {
+else if (getDevice() == 'Windows') {
   whenever(keys.ctrl_k, () => {
     ts.commandOpen = true
   })
@@ -85,7 +84,7 @@ function handleClick(item) {}
 
               <span class=" grow group-hover:underline underline-offset-2">Pockets</span>
 
-              <span class="px-2">{{ useDeviceKey() }} P</span>
+              <span class="px-2">{{ getDeviceKey() }} P</span>
             </div>
           </CommandItem>
 
@@ -96,7 +95,7 @@ function handleClick(item) {}
               <span class="grow">
                 Champions
               </span>
-              <span class="px-2">{{ useDeviceKey() }} C</span>
+              <span class="px-2">{{ getDeviceKey() }} C</span>
             </div>
           </CommandItem>
 
@@ -108,7 +107,7 @@ function handleClick(item) {}
                   Items
                 </span>
               </div>
-              <span class="px-3 tracking-wider">{{ useDeviceKey() }} I</span>
+              <span class="px-3 tracking-wider">{{ getDeviceKey() }} I</span>
             </div>
           </CommandItem>
 
@@ -118,7 +117,7 @@ function handleClick(item) {}
               <span class="grow">
                 Runes
               </span>
-              <span class="px-2">{{ useDeviceKey() }} R</span>
+              <span class="px-2">{{ getDeviceKey() }} R</span>
             </div>
           </CommandItem>
 
@@ -128,7 +127,7 @@ function handleClick(item) {}
               <span class="grow">
                 Summoners
               </span>
-              <span class="px-2">{{ useDeviceKey() }} S</span>
+              <span class="px-2">{{ getDeviceKey() }} S</span>
             </div>
           </CommandItem>
         </CommandGroup>

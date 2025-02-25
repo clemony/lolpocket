@@ -6,6 +6,7 @@ const props = defineProps<{
   check?: boolean
   group?: string
   checkThis?: boolean
+  iconClass?: string
 }>()
 
 const as = useAccountStore()
@@ -24,7 +25,7 @@ const as = useAccountStore()
     :class="
       cn(
         'ml-auto size-5.5 shrink-0 transition-all duration-400 group-data-[state=open]:-rotate-90 peer-checked:-rotate-90 group-has-checked:-rotate-90 group-has-[.first-one:checked]/a:-rotate-90 group-has-[.second-one:checked]/b:-rotate-90',
-        props.class,
+        props.iconClass, props.class
       )
     "
   />

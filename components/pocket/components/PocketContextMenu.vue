@@ -3,14 +3,13 @@ const props = defineProps<{
   pocketData?: pocket
 }>()
 
+const emit = defineEmits(['update:grid'])
 const ts = useTempStore()
 const as = useAccountStore()
-const emit = defineEmits(['update:grid'])
-
 const pocket = computedAsync(() => props.pocketData)
 
 // console.log('💠 - pocket:', pocket)
-//const { userFolders } = useUserFolders()
+// const { userFolders } = useUserFolders()
 
 const sort = ref('id')
 
@@ -22,42 +21,42 @@ onMounted (async () => {
 </script>
 
 <template>
-  <ContextMenu >
+  <ContextMenu>
     <ContextMenuTrigger class="">
       <slot />
     </ContextMenuTrigger>
     <ContextMenuPortal>
-    <ContextMenuContent class="context-menu w-74 h-max z-999 pointer-events-auto text-2  **:text-2" @interact-outside="emit('update:grid')">
-      <ContextMenuItem icon="basil:add-outline" icon-class="!size-5.5 opacity-60 -mt-0.5 shrink-0" class=" [&_svg]:stroke-2">
-        New Pocket
-        <ContextMenuShortcut>{{ useDeviceKey() }}P</ContextMenuShortcut>
-      </ContextMenuItem>
-      <ContextMenuSeparator />
+      <ContextMenuContent class="context-menu w-74 h-max z-999 pointer-events-auto text-2  **:text-2" @interact-outside="emit('update:grid')">
+        <ContextMenuItem icon="basil:add-outline" icon-class="!size-5.5 opacity-60 -mt-0.5 shrink-0" class=" [&_svg]:stroke-2">
+          New Pocket
+          <ContextMenuShortcut>{{ getDeviceKey() }}P</ContextMenuShortcut>
+        </ContextMenuItem>
+        <ContextMenuSeparator />
 
-      <ContextMenuSub>
-        <ContextMenuSubTrigger>
-          Sort Table
-        </ContextMenuSubTrigger>
-        <ContextMenuPortal>
-          <ContextMenuSubContent>
-            <ContextMenuRadioGroup v-model="sort">
-              <ContextMenuRadioItem value="id" @select.prevent>
-                By Item ID
-                <ContextMenuShortcut>⌘⇧B</ContextMenuShortcut>
-              </ContextMenuRadioItem>
-              <ContextMenuRadioItem value="az" @select.prevent>
-                Alphabetically
-              </ContextMenuRadioItem>
-              <ContextMenuRadioItem value="price" @select.prevent>
-                Price
-              </ContextMenuRadioItem>
-            </ContextMenuRadioGroup>
-          </ContextMenuSubContent>
-        </ContextMenuPortal>
-      </ContextMenuSub>
+        <ContextMenuSub>
+          <ContextMenuSubTrigger>
+            Sort Table
+          </ContextMenuSubTrigger>
+          <ContextMenuPortal>
+            <ContextMenuSubContent>
+              <ContextMenuRadioGroup v-model="sort">
+                <ContextMenuRadioItem value="id" @select.prevent>
+                  By Item ID
+                  <ContextMenuShortcut>⌘⇧B</ContextMenuShortcut>
+                </ContextMenuRadioItem>
+                <ContextMenuRadioItem value="az" @select.prevent>
+                  Alphabetically
+                </ContextMenuRadioItem>
+                <ContextMenuRadioItem value="price" @select.prevent>
+                  Price
+                </ContextMenuRadioItem>
+              </ContextMenuRadioGroup>
+            </ContextMenuSubContent>
+          </ContextMenuPortal>
+        </ContextMenuSub>
 
-      <template v-if="props.pocketData">
-        <!-- <ContextMenuSub v-if="as.userFolders.length">
+        <template v-if="props.pocketData">
+          <!-- <ContextMenuSub v-if="as.userFolders.length">
           <ContextMenuSubTrigger text-value="Move to Folder">
             Move to Folder
           </ContextMenuSubTrigger>
@@ -77,32 +76,31 @@ onMounted (async () => {
           </ContextMenuPortal>
         </ContextMenuSub> -->
 
-        <ContextMenuSeparator />
-        <ContextMenuItem>
-         <NuxtLink :to="`/pocket/${pocket.key}/`">
-            Edit
-          </NuxtLink>
-        </ContextMenuItem>
-        <ContextMenuItem @click="duplicatePocket(pocket)">
-          Duplicate
+          <ContextMenuSeparator />
+          <ContextMenuItem>
+            <NuxtLink :to="`/pocket/${pocket.key}/`">
+              Edit
+            </NuxtLink>
+          </ContextMenuItem>
+          <ContextMenuItem @click="duplicatePocket(pocket)">
+            Duplicate
 
+            <ContextMenuShortcut>⌘R</ContextMenuShortcut>
+          </ContextMenuItem>
 
-          <ContextMenuShortcut>⌘R</ContextMenuShortcut>
-        </ContextMenuItem>
+          <ContextMenuItem inset disabled>
+            Pin
+          </ContextMenuItem>
+          <ContextMenuItem inset disabled>
+            Archive
+          </ContextMenuItem>
 
-        <ContextMenuItem inset disabled>
-          Pin
-        </ContextMenuItem>
-                <ContextMenuItem inset disabled>
-          Archive
-        </ContextMenuItem>
-
-        <ContextMenuSeparator />
-        <ContextMenuItem @click="deletePocket(pocket.key)">
-          Delete
-        </ContextMenuItem>
-      </template>
-    </ContextMenuContent>
+          <ContextMenuSeparator />
+          <ContextMenuItem @click="deletePocket(pocket.key)">
+            Delete
+          </ContextMenuItem>
+        </template>
+      </ContextMenuContent>
     </ContextMenuPortal>
   </ContextMenu>
 </template>

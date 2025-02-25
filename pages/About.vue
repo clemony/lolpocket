@@ -23,31 +23,30 @@ const faq = [
 </script>
 
 <template>
-  <div class="px-14 pt-30">
+  <div class="px-18 pt-30">
     <!-- prettier-ignore -->
     <div class="grid grid-cols-[auto_450px] gap-[20%]">
       <div class="">
-        <div class="flex gap-2 items-end relative">
-         
-          
-        <h1 class="!text-9 dst tracking-wider relative">
-          faq
-          <p class="absolute -bottom-3 right-3 text-2 font-normal text-nowrap tracking-tight">not very</p>
-        </h1>
-</div>
-        <div class="mt-8 text-4 grid grid-cols-[30px_1fr] gap-4 grid-flow-row items-center [&_span]:text-5">
+        <div>
+          <h1 class="!text-10 leading-12 mt-2 dst tracking-tighter font-bold relative ">
+            Not Very Frequently
+          </h1>
+          <h1 class="!text-10 leading-16 dst tracking-tighter font-bold relative ">
+            Asked Questions.
+          </h1>
+        </div>
+        <div class="mt-8 text-4 grid grid-cols-[30px_1fr] gap-4 grid-flow-row items-end [&_span]:text-5 ">
           <span class="font-semibold">Q:</span>
           <p class="flex gap-4">
             Where going?
           </p>
           <span class="font-semibold">LP:</span>
-          <p><icon name="hugeicons:moon-01" class="size-8" /></p>
+          <icon name="hugeicons:moon-01" class="size-8" />
         </div>
       </div>
-
       <div class="flex flex-col gap-6 items-end">
         <div
-          class="mockup-code bg-neutral text-nc *:ws-nowrap w-2/5 min-w-[400px] rounded-xl leading-loose font-normal"
+          class="mockup-code bg-neutral text-nc *:ws-nowrap w-2/5 min-w-[400px] rounded-xl leading-loose font-normal **:text-3"
         >
           <pre
             data-prefix="$"
@@ -99,7 +98,7 @@ const faq = [
       <a href="https://gitlab.com/lol-math/lolmath/-/tree/main/packages/calc" target="_blank" />
     </div>
 
-    <div class="absolute bottom-0 left-0 w-full px-10 py-8 bg-b2/40 border-t border-b2 flex justify-between">
+    <div class="absolute bottom-0 left-0 w-full px-16 py-8 bg-b2/40 border-t border-b2 flex justify-between">
       <div class="flex items-center gap-5  *:size-6">
         <icon
           v-for="icon in icons"

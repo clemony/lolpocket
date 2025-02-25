@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
 
-
 const props = defineProps<{
   champion: Champion
   pocket?: pocket
@@ -15,17 +14,11 @@ const props = defineProps<{
 function handleClick() {
   props.removable ? removeChamp(props.champion.name, props.pocket) : ''
 }
-
-
-
-
 </script>
-
-
 
 <template>
   <label
-    class="  shadow-sm   relative rounded-lg **:select-none"
+    class="  shadow-sm btn inset-shadow-sm inset-shadow-black/20 shadow-black/20 relative rounded-xl **:select-none p-0"
     :class="
       cn(
         { '!rounded-full': props.rounded },
@@ -47,7 +40,7 @@ function handleClick() {
         )
       "
     >
-      <NuxtImg
+      <img
         :key="props.champion.name"
         :src="`/img/champion/${champion.apiname}.webp`"
         :alt="`${props.champion.name} Image`"

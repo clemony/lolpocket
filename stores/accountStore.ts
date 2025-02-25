@@ -1,4 +1,3 @@
-import DefaultModule from 'components/summoner/modules/ghost/DefaultModule.vue'
 import { defineStore } from 'pinia'
 
 export const useAccountStore = defineStore(
@@ -56,6 +55,7 @@ export const useAccountStore = defineStore(
     // items
     const favoriteItems = ref<Item[]>([])
     const itemSets = ref<ItemSet[]>([])
+    const itemSetTipIsOpen = ref(true)
 
     return {
       // account
@@ -92,6 +92,7 @@ export const useAccountStore = defineStore(
       // items
       favoriteItems,
       itemSets,
+      itemSetTipIsOpen,
     }
   },
   {

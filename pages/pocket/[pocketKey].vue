@@ -8,7 +8,7 @@ const selectedRuneSet = ref(pocket.value?.runes.sets?.[0] ?? null)
 
 const EditPocketSheet = defineAsyncComponent(() => import('components/pocket/sheet/EditPocketSheet.vue'))
 
-const PocketBrowser = defineAsyncComponent(() => import('components/pocket/sheet/PocketBrowser.vue'))
+const PocketBrowser = defineAsyncComponent(() => import('components/pocket/file-tree/PocketBrowser.vue'))
 
 const tabValue = ref('/')
 

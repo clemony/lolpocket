@@ -20,18 +20,11 @@ export default defineNuxtConfig({
     'nuxt-aos',
     'nuxt-svgo',
     'nuxt-tailwindcss4',
-    '@nuxt/image',
   ],
 
   icon: {
     provider: 'iconify',
     serverBundle: false,
-  },
-
-  image: {
-    quality: 80,
-    format: ['webp'],
-    domains: ['ddragon.leagueoflegends.com', 'raw.communitydragon.org'],
   },
 
   vite: {
@@ -101,7 +94,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
 
   imports: {
-    dirs: ['./shared/supabase/*', './shared/supabase', '@vueuse/components'],
+    dirs: ['shared/supabase', '@vueuse/components', 'stores'],
   },
 
   webpack: {
@@ -161,8 +154,6 @@ export default defineNuxtConfig({
     'components': fileURLToPath(new URL('./components', import.meta.url)),
     'plugins': fileURLToPath(new URL('./plugins', import.meta.url)),
     'modules': fileURLToPath(new URL('./modules', import.meta.url)),
-    '#app': fileURLToPath(new URL('./node_modules/nuxt/dist/app/index', import.meta.url)),
-    '#imports': fileURLToPath(new URL('./node_modules/nuxt/dist/app/index', import.meta.url)),
   },
 
   compatibilityDate: '2024-11-01',
