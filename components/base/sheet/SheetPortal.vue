@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { DialogPortal } from 'radix-vue'
+import { DialogPortal } from 'reka-ui'
 </script>
 
 <template>
