@@ -29,7 +29,7 @@ const set = computed (() => {
           :class="
             cn(
               /* b4 */
-              'backdrop-blur-xs bg-b1/30',
+              'backdrop-blur-xs bg-b1/60',
               /* border */
               'border-b-b3 border-l-b3/60 border-r-b3 border-t-b3/60 border',
 

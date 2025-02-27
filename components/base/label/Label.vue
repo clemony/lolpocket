@@ -1,38 +1,28 @@
 <script setup lang="ts">
-import type { PrimitiveProps } from 'radix-vue'
+import { Label } from 'reka-ui'
+import type { LabelProps } from 'reka-ui'
+import { computed } from 'vue'
 import type { HTMLAttributes } from 'vue'
-import type { LabelVariants } from './lindex'
-import { Primitive } from 'radix-vue'
-import { labelVariants } from './lindex'
 
-interface Props extends PrimitiveProps {
-  variant?: LabelVariants['variant']
-  size?: LabelVariants['size']
-  button?: LabelVariants['button']
-  class?: HTMLAttributes['class']
-}
+const props = defineProps<LabelProps & { class?: HTMLAttributes['class'] }>()
 
-const props = withDefaults(defineProps<Props>(), {
-  as: 'label',
+const delegatedProps = computed(() => {
+  const { class: _, ...delegated } = props
+
+  return delegated
 })
 </script>
 
 <template>
-  <Primitive
-    :as="as"
-    :as-child="asChild"
+  <Label
+    v-bind="delegatedProps"
     :class="
       cn(
-        labelVariants({
-          variant,
-          size,
-          button,
-        }),
-        { 'grid place-items-center': props.variant },
+        'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
         props.class,
       )
     "
   >
     <slot />
-  </Primitive>
+  </Label>
 </template>

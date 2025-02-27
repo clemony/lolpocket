@@ -11,7 +11,7 @@ export const labelVariants = cva('text-2 font-medium leading-none peer-disabled:
       neutral: 'bg-neutral !text-nc hover:bg-neutral/80  **:!text-nc !hover:text-nc rounded-md shadow-sm shadow-neutral/10',
       destructive: 'bg-error text-error-content hover:bg-error/90',
       outline: 'border border-b2  border border-b2 -b3 bg-transparent hover:bg-b2/60 hover:text-bc shadow-sm',
-      ghost: 'hover:bg-b2/60 hover:text-bccent-bc',
+      ghost: 'hover:bg-b2/60 hover:text-accent-bc',
       link: 'text-neutral underline-offset-4 hover:underline',
     },
     size: {

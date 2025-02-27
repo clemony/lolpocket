@@ -66,20 +66,20 @@ function onClone(event: DraggableEvent) {
       },
     ]"
     group
-    class="overflow-y-auto absolute inset-0 grid grid-flow-row auto-cols-auto select-none h-fit  grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center gap-4 px-4   py-22"
+    class="overflow-y-auto absolute inset-0 grid grid-flow-row auto-cols-auto select-none h-fit  grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center gap-4 px-4  pb-10 pt-26"
 
     @end="onEnd"
     @clone="onClone"
     @start="onStart"
   >
-     <Suspense>
+    <Suspense>
       <template #default>
-      <ItemLoad v-for="item in list" :key="item.id" :item="item" class="select-none"/>
-</template>
-      <template #fallback>
-        <Skeleton class="size-full rounded-lg"  />
+        <ItemLoad v-for="item in list" :key="item.id" :item="item" class="select-none" />
       </template>
-      </Suspense>
+      <template #fallback>
+        <Skeleton class="size-full rounded-lg" />
+      </template>
+    </Suspense>
   </transition-slide>
 </template>
 

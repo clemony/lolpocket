@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { PopoverClose } from 'radix-vue'
+import { PopoverClose } from 'reka-ui'
 
 const props = defineProps<{
   selectedIcon?: string

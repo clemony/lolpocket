@@ -16,7 +16,7 @@ const size = `${props.size}px`
 
 <template>
   <div
-    :class="cn('group flex aspect-square  items-center justify-center gap-2 self-center rounded-full border border-b2 bg-b2/30 opacity-70 shadow-xs', props.class)"
+    :class="cn('group flex aspect-square  items-center justify-center gap-2 self-center rounded-full border border-b2 bg-b2/40  shadow-xs', props.class)"
     :style="{
       height: size || `${width}px`,
       width: size || `${height}px`,

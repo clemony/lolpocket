@@ -15,6 +15,8 @@
   color-scheme: dark, light;
 
   styled: true;
+
+  @theme inline{
   --color-base-100: var(--color-b1);
   --color-base-200: var(--color-b2);
   --color-base-300: var(--color-b3);
@@ -44,9 +46,10 @@
   --color-error: var(--color-domination);
   --color-error-content: var(--color-domination-light);
 
+  }
       --depth: 1;
   --noise: 0.5;
-    --radius-selector: 0.2rem;
+    --radius-selector: 0.4rem;
   --radius-box: 1rem;
     --radius-field: 0.75rem !important;
 
@@ -73,9 +76,9 @@
   @apply !min-h-0 !py-0 h-11 text-nowrap flex-nowrap items-center justify-start;
 }
 
-.badge-neutral {
-  @apply bg-neutral !text-nc;
-}
+/* .neutral-badge {
+  @apply indicator-item badge rounded-full badge-neutral badge-xs text-1 !py-2.25 absolute -top-1 -right-1 !px-1;
+} */
 
 .field {
   @apply fieldset mt-2 relative w-full h-fit bg-b2 border border-b3 p-4 rounded-box;

@@ -1,8 +1,13 @@
 <script setup lang="ts">
-import type { NavigationMenuRootEmits, NavigationMenuRootProps } from 'radix-vue'
-import type { HTMLAttributes } from 'vue'
-import { NavigationMenuRoot, useForwardPropsEmits } from 'radix-vue'
+import {
+  NavigationMenuRoot,
+
+  useForwardPropsEmits,
+} from 'reka-ui'
+import type { NavigationMenuRootEmits, NavigationMenuRootProps } from 'reka-ui'
 import { computed } from 'vue'
+import type { HTMLAttributes } from 'vue'
+import NavigationMenuViewport from './NavigationMenuViewport.vue'
 
 const props = defineProps<NavigationMenuRootProps & { class?: HTMLAttributes['class'] }>()
 
@@ -23,5 +28,6 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     :class="cn('relative z-10 flex max-w-max flex-1 items-center justify-center', props.class)"
   >
     <slot />
+    <NavigationMenuViewport />
   </NavigationMenuRoot>
 </template>

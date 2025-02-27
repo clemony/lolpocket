@@ -1,54 +1,63 @@
 <script setup lang="ts">
 const props = defineProps<{
-  pathSet?: string
-  runeSet?: RuneSet
-  pocket?: pocket
+  set?: RuneSet
   selectedRune?: string
-  modelValue?: string
+  path?: string
+  type: string
 }>()
+console.log('💠 - type:', props.type)
 
 const ds = useDataStore()
 const ts = useTempStore()
-const pocket = ref(props.pocket)
 const paths = [...ds.paths]
-const selectedPath = ref(props.modelValue)
-const runeSet = ref(props.runeSet)
+const path = ref(props.path ?? '')
+const set = ref(props.set)
 
-const selectedPathData = computed(() => {
-  return paths.find(path => path.name === selectedPath.value)
+const pathData = computed(() => {
+  const foundPath = paths.find(p => p.name === path.value)
+  if (!foundPath || typeof foundPath !== 'object') {
+    console.error('⚠️ Unexpected pathData result:', foundPath)
+    return { slots: [] }
+  }
+  return {
+    ...foundPath,
+    slots: foundPath.slots.slice(1), // Removes slot at index 0
+  }
 })
-const selectedRunes = ref(selectedPathData.value ? Array.from({ length: selectedPathData.value.slots.length }).fill(null) : [])
+
+const selectedRunes = ref(path.value ? Array.from({ length: pathData.value.slots.length }).fill(null) : [])
 
 watch(
-  () => props.modelValue,
+  () => props.path,
   (newVal) => {
-    selectedPath.value = newVal
+    path.value = newVal ?? '' // Default to an empty string
     selectedRunes.value = []
   },
 )
 
 watch(
-  () => props.runeSet,
+  () => props.set,
   (newVal) => {
-    runeSet.value = newVal
+    set.value = newVal
   },
 )
 
 const runeWatcher = []
 function handleSelection(slotIndex, rune) {
   selectedRunes.value[slotIndex] = rune
-  if (props.pathSet == 'p') {
-    runeSet.value.primary.runes[slotIndex] = rune
+  if (props.type == 'primary') {
+    set.value.primary.runes[slotIndex] = rune
   }
-  else if (props.pathSet == 's') {
-    runeSet.value.secondary.runes[slotIndex] = rune
+  else if (props.type == 'secondary') {
+    set.value.secondary.runes[slotIndex] = rune
     handleSecondaryRunes(slotIndex.toString())
   }
-
-  console.log('💠 - handleSecondaryRunes - runeSet.value.secondary.runes:', runeSet.value)
 }
 
 function handleSecondaryRunes(slot) {
+  if (props.type == 'primary') {
+    return
+  }
   const index = runeWatcher.findIndex(slotNum => slotNum == slot)
 
   if (index > -1) {
@@ -60,13 +69,19 @@ function handleSecondaryRunes(slot) {
   }
   // push()
   if (runeWatcher.length > 2) {
-    runeSet.value.secondary.runes[runeWatcher[0]] = null
+    set.value.secondary.runes[runeWatcher[0]] = null
     runeWatcher.splice(0, 1)
   }
 }
 
 onMounted(() => {
-  selectedPath.value = props.modelValue
+  if (props.path) {
+    path.value = props.path
+  }
+  if (props.set) {
+    set.value = props.set
+    console.log('💠 - onMounted - set.value:', set.value)
+  }
 })
 
 function handleSelect(rune) {
@@ -78,76 +93,75 @@ function onHover(rune) {
     ts.hoveredRune = rune
   }, 1000)
 }
+
 const allRunes = computed (() => {
-  const a = Object.values(runeSet.value.primary.runes).concat(Object.values(runeSet.value.secondary.runes))
+  const a = Object.values(set.value.primary.runes).concat(Object.values(set.value.secondary.runes))
   const b = a.filter(a => a != null)
-  return b.map(r => r.key)
+  return b.map(r => r.id)
 })
+/*
+:style="{
+              background: allRunes.includes(rune.id) && path == set.primary.path ? `linear-gradient(110deg, transparent, var(--color-${set.primary.path.toLowerCase()}))` : allRunes.includes(rune.id) && path == set.secondary.path ? `linear-gradient(110deg, transparent, var(--color-${set.secondary.path.toLowerCase()}))` : '' }" */
 </script>
 
 <template>
   <div
-    class="ease justify-start  relative size-full h-fit w-120 max-w-120 rounded-xl  transition-all duration-500 **:select-none"
-    :data-path="selectedPath"
-    :class="selectedPath.toLowerCase()"
+    class="ease -mt-2 justify-center  relative size-full h-fit w-114 max-w-114 rounded-xl  transition-all duration-500 **:select-none"
   >
-    <transition-slide
-      :duration="{ enter: 700, leave: 100 }" :offset="{
-        enter: ['-100%', 0],
-        leave: ['100%', 0],
-      }" group class="flex size-full  flex-col justify-center gap-16  rounded-xl  py-12 "
-    >
-      <div
-        v-for="(slot, i) in selectedPathData.slots"
-        :key="selectedPath + i"
-        class=" cursor-pointer flex h-16 justify-evenly gap-3 transition-all duration-500"
-        :class="{
-          'h-22 w-auto justify-between': slot === selectedPathData.slots[0],
-          'hidden': slot === selectedPathData.slots[0] && props.pathSet == 's',
-        }"
+    <div v-if="pathData && pathData.slots">
+      <transition-slide
+        :duration="{ enter: 700, leave: 100 }" :offset="{
+          enter: ['-100%', 0],
+          leave: ['100%', 0],
+        }" group class="flex size-full  flex-col justify-evenly gap-16  rounded-xl  py-12 "
       >
         <div
-          v-for="rune in slot.runes"
-          :key="rune.id"
-          v-tippy="rune.name"
-          class="size-fit rounded-full"
-          :style="{
-            background: allRunes.includes(rune.key) && props.pathSet == 'p' ? `linear-gradient(110deg, transparent, var(--color-${runeSet.primary.path.toLowerCase()}))` : allRunes.includes(rune.key) && props.pathSet == 's' ? `linear-gradient(110deg, transparent, var(--color-${runeSet.secondary.path.toLowerCase()}))` : '' }"
+          v-for="(slot, i) in pathData.slots" :key="path + i"
+          class=" cursor-pointer flex h-16 justify-evenly gap-3 transition-all duration-500"
         >
-          <label
-            :data-path="selectedPath"
-            class="h-full rounded-full opacity-75 transition-all duration-300 hover:opacity-100 hover:grayscale-0  group/r border-transparent relative cursor-pointer  grid place-items-center  size-22 aspect-square"
-            :class="{
-              'to-b1/20 rounded-full bg-gradient-to-br backdrop-blur-md overflow-hidden from-b1/90 opacity-100 scale-115 grayscale-0': allRunes.includes(rune.key),
-              ' shadow-black/15 [&_img]:rounded-full   grayscale   [&_img]:inset-shadow-sm [&_img]:inset-shadow-black': i != 0 && rune.name != 'empty', '!size-26': i == 0, 'shadow-warm-2': i != 0 && rune.name != 'empty' && allRunes.includes(rune.key),
-            }"
-            @mouseover="onHover(rune)"
-            @click.right="handleSelect(rune)"
+          <div
+            v-for="rune in slot.runes"
+            :key="rune.id"
+
+            v-tippy="rune.name == 'empty' ? 'Select a Path' : rune.name"
+            class="size-fit rounded-full items-center justify-center"
           >
-            <input
-              type="radio"
-              :name="`${pathSet}-${i}`"
-              :data-checked="pathSet === 'p' ? runeSet.primary.runes[i]?.id === rune.id : pathSet === 's' ? runeSet.secondary.runes[i]?.id === rune.id : false"
-              :checked="pathSet === 'p' ? runeSet.primary.runes[i]?.id === rune.id : pathSet === 's' ? runeSet.secondary.runes[i]?.id === rune.id : false"
-              class="absolute hidden peer"
-              @change="handleSelection(i, rune)"
-            />
-            <img
-              :src="`/img/runes/${selectedPath}/${rune.name.replace(/\s/g, '')}.webp`"
-              :alt="rune.name"
-              class="size-16 "
-              :class="{ 'absolute   opacity-0 group-hover/r:opacity-100 duration-300  transition-all   !size-22': i == 0, 'peer-not-checked:drop-shadow-[2px_2px_2px_#00000080] border-b3 size-17 inset-shadow-sm inset-shadow-black': i != 0, 'opacity-100': allRunes.includes(rune.key) }"
-            />
-            <img
-              v-if="i == 0"
-              :src="`/img/runes/${selectedPath}/${rune.name.replace(/\s/g, '')}_grayscale.webp`"
-              :alt="rune.name"
-              class="size-22 absolute opacity-100 drop-shadow-[5px_5px_2px_#00000080] group-hover/r:opacity-0 duration-300 transition-all peer-checked:opacity-0"
-            />
-          </label>
+            <label
+              :data-path="path"
+              class=""
+              :class="{
+                'to-b1/20 rounded-full   bg-gradient-to-br backdrop-blur-md overflow-hidden from-b1/90 shadow-black/15 opacity-100 scale-105 grayscale-0 ring ring-black/3': allRunes.includes(rune.id),
+                ' [&_img]:rounded-full h-full rounded-full opacity-75 transition-all duration-300 hover:opacity-100 hover:grayscale-0  group/r border-transparent relative cursor-pointer size-21.5  grid place-items-center  aspect-square  grayscale   [&_img]:inset-shadow-sm [&_img]:inset-shadow-black': rune.name != 'empty',
+
+                'shadow-warm-2 shadow-warm-2': rune.name != 'empty' && allRunes.includes(rune.id),
+              }"
+              @mouseover="onHover(rune)"
+              @click.right="handleSelect(rune)"
+            >
+              <input
+                type="radio"
+                :name="`${props.type}-${path}-${i}`"
+                :data-checked="path == set.primary.path ? set.primary.runes[i + 1]?.id === rune.id : path == set.secondary.path ? set.secondary.runes[i + 1]?.id === rune.id : false"
+                :checked="path == set.primary.path ? set.primary.runes[i + 1]?.id === rune.id : path == set.secondary.path ? set.secondary.runes[i + 1]?.id === rune.id : false"
+                :disabled="rune.name == 'empty'"
+                class="absolute hidden peer"
+                @change="handleSelection(i + 1, rune)"
+              />
+
+              <Placeholder v-if="rune.name == 'empty'" class="size-17  cursor-not-allowed border border-b3/50 bg-gradient-to-br shadow-inset-sm from-b3/60 to-b3/80" />
+              <img
+                v-else
+                :src="`/img/runes/${path}/${rune.name.replace(/\s/g, '')}.webp`"
+                :alt="rune.name"
+                class="size-16 "
+                :class="{ ' border-black/50 border !size-15.25 opacity-94 inset-shadow-sm inset-shadow-black ': allRunes.includes(rune.id), 'drop-shadow-[2px_2px_2px_#00000080]': !allRunes.includes(rune.id) }"
+              />
+
+            </label>
+          </div>
         </div>
-      </div>
-    </transition-slide>
+      </transition-slide>
+    </div>
   </div>
 </template>
 

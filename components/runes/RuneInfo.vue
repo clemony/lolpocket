@@ -30,8 +30,6 @@ const rune = computed(() => {
       :rune="rune"
       class="h-full"
     >
-      <!-------------------------------⟢ Header ⟣-------------------------------->
-
       <label
         :key="`${rune.name}1`"
         class="frost border-b-b3 sticky top-0 left-0 z-50 flex h-fit! w-full flex-wrap items-center justify-end gap-4 rounded-t-xl border-b px-4 py-1"
@@ -46,8 +44,6 @@ const rune = computed(() => {
           </div>
         </h2>
       </label>
-
-      <!-------------------------------⟢ Data ⟣-------------------------------->
 
       <div
         id="wrap"

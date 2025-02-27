@@ -1,4 +1,5 @@
 import { hexoid } from 'hexoid'
+import { pathDescriptions } from 'shared/data/runes/pathDescriptions'
 
 /* KEY
 1. createDefaultRune
@@ -60,6 +61,7 @@ export function createDefaultShard(): {
 }
 
 export function newRuneSet(key?) {
+  const ds = useDataStore()
   const toID = hexoid()
   const newSet = {
     name: `${generateMediumString()} Set`,
@@ -114,10 +116,11 @@ export function resetRunes(pocket, set, number?) {
   })
 }
 
-export function deleteRuneSet(pocket, index) {
-  const runeSets = pocket.runes[0].runeSets
-  const find = runeSets.findIndex(set => set.index == index)
-  runeSets.splice(index, 1)
+export function deleteRuneSet(pocket, set) {
+  const a = pocket.runes.sets.findIndex(s => s.key == set.key)
+  if (a != -1) {
+    pocket.runes.sets.splice(a, 1)
+  }
 }
 
 export function getShardClass(shard: Shard) {
@@ -262,3 +265,14 @@ export function createDefaultRuneTree() {
     ],
   }
 }
+
+/*
+
+const a = computed(() => {
+  return pathDescriptions.find(path => path.name == selectedPrimary.value)
+})
+
+const b = computed(() => {
+  return pathDescriptions.find(path => path.name == selectedSecondary.value)
+})
+ */

@@ -3,8 +3,7 @@
 </script>
 
 <template>
-  <div class="h-[var(--menubar-height)]">
-  </div>
+  <div></div>
 </template>
 
 <style scoped>

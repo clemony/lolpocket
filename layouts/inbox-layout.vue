@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ResizablePanel } from 'components/base/resizable/rindex'
+import { ResizablePanel } from 'components/base/resizable/index'
 </script>
 
 <template>

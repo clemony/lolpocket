@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { TagsInputItemTextProps } from 'radix-vue'
-import type { HTMLAttributes } from 'vue'
-import { TagsInputItemText, useForwardProps } from 'radix-vue'
+import { TagsInputItemText, useForwardProps } from 'reka-ui'
+import type { TagsInputItemTextProps } from 'reka-ui'
 import { computed } from 'vue'
+import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<TagsInputItemTextProps & { class?: HTMLAttributes['class'] }>()
 
@@ -16,8 +16,5 @@ const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
-  <TagsInputItemText
-    v-bind="forwardedProps"
-    :class="cn('rounded-sm bg-transparent px-1.5 py-1', props.class)"
-  />
+  <TagsInputItemText v-bind="forwardedProps" :class="cn('py-0.5 px-2 text-sm rounded bg-transparent', props.class)" />
 </template>

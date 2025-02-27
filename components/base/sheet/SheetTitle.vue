@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { DialogTitleProps } from 'radix-vue'
-import type { HTMLAttributes } from 'vue'
-import { DialogTitle } from 'radix-vue'
+import { DialogTitle } from 'reka-ui'
+import type { DialogTitleProps } from 'reka-ui'
 import { computed } from 'vue'
+import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<DialogTitleProps & { class?: HTMLAttributes['class'] }>()
 
@@ -15,7 +15,7 @@ const delegatedProps = computed(() => {
 
 <template>
   <DialogTitle
-    :class="cn('text-4 text-bc font-semibold', props.class)"
+    :class="cn('text-lg font-semibold text-foreground', props.class)"
     v-bind="delegatedProps"
   >
     <slot />

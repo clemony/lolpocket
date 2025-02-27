@@ -18,7 +18,7 @@ function update(event, i) {
     <div class="field-legend">
       Summoner Spells
     </div>
-    <div class="flex gap-3 flex-row">
+    <div class="flex gap-3 flex-row justify-center">
       <div class="flex gap-3 flex-row">
         <LazySpellPicker
           :model="0"

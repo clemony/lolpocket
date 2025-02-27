@@ -45,7 +45,6 @@ return pocket.value.runes.sets.find(s => s.key == pocket.value.runes.default)
           class="relative  shadow-outline shadow-black/15 grid aspect-square size-12 place-items-center items-center rounded-full  transition-all duration-500"   :style="{
           background: `linear-gradient(110deg, transparent, var(--color-${set.secondary.path.toLowerCase()}))`}"
           
-          :class="{'!grayscale  !brightness-115 contrast-85': !isOpen}"
         >
    
           <div class="from-b1/90 to-b1/40 grid size-full place-items-center rounded-full bg-gradient-to-br p-1 backdrop-blur-md overflow-hidden ">

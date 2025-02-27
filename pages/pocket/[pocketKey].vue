@@ -35,7 +35,7 @@ onMounted (() => {
 <template>
   <div class=" grid  size-full bg-b2/40 gap-6">
     <div class="size-full  pt-[6.4vh]  overflow-hidden px-14">
-      <div class="breadcrumbs text-2 font-medium tracking-tight pl-1 mb-5">
+      <div class="breadcrumbs text-2 font-medium tracking-tight pl-1 mb-8">
         <ul class="flex items-center **:[&_li]:before:!hidden dst">
           <li>
             <NuxtLink to="/pockets">
@@ -51,13 +51,12 @@ onMounted (() => {
         </ul>
       </div>
 
-      <div class=" size-full relative before:absolute before:w-full  before:top-14 before:bg-b1 before:border-b3 before:h-[82.9vh] before:border before:border-b3 before:rounded-xl drop-shadow-[1px_2px_2px_#00000010] ">
-        <div class="tabs tabs-lift size-full tabs-xl max-h-[83vh] drop-shadow-[1px_2px_2px_#00000010] ">
-          <div class="tab dst pb-8  !overflow-visible  pr-6 after:min-w-80 !border-b-transparent relative items-center justify-start -ml-4" role="tab">
-            <div class="absolute h-full w-80 bottom-1  flex gap-4 ">
+      <div class=" size-full relative before:absolute before:w-full  before:top-14 before:bg-b1 before:border-b3 before:h-[82.4vh] before:border before:border-b3 before:rounded-xl drop-shadow-[1px_2px_2px_#00000010] ">
+        <div class="tabs tabs-lift size-full tabs-xl max-h-[82.5vh] drop-shadow-[1px_2px_2px_#00000010] ">
+          <div class="tab dst !overflow-visible  pr-6 after:min-w-80 !border-b-transparent relative items-center justify-start -ml-4" role="tab">
+            <div class="absolute h-full w-80 bottom-3.5  flex gap-4 ">
               <button
                 class=" aspect-square size-10  rounded-full !pointer-events-auto !cursor-pointer grayscale hover:grayscale-0 shadow-sm !drop-shadow-none  transition-all duration-300 "
-                :class="{ 'grayscale-0  !brightness-115 !contrast-85 !opacity-90': ss.isSidebarOpen }"
               >
                 <PocketIcon :image="pocket.icon" class="size-10 pointer-events-none" />
               </button>

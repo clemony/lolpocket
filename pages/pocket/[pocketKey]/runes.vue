@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
   pocket: pocket
-  selectedRunes: RuneSet
 }>()
 
 definePageMeta({
@@ -9,69 +8,67 @@ definePageMeta({
 })
 
 const pocket = ref(props.pocket)
-console.log('pok', pocket)
 
-const set = ref(props.selectedRunes)
+const ts = useTempStore()
+
+const set = ref(ts.selectedRuneSet ? ts.selectedRuneSet : pocket.value.runes.sets[0])
+console.log('💠 - pocket.value.runes.sets:', pocket.value.runes.sets)
 
 watch(
-  () => props.selectedRunes,
+  () => ts.selectedRuneSet,
   (newVal) => {
     set.value = newVal
   },
 )
 
-const primary = computed(() => {
-  const a = set.value && set.value.primary != undefined
-    ? set.value.primary
-    : ''
-  return a
-})
-
-const secondary = computed(() => {
-  const a = set.value && set.value.secondary
-    ? set.value.secondary
-    : ''
-  return a
-})
-
-const runeVideo = computed (() => {
+/* const runeVideo = computed (() => {
   const a = ref(set.value.primary.path)
   return a.value == 'Sorcery' ? 'https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-collections/global/default/perks/video/sorcery/background_loop.webm' : a.value == 'Inspiration' ? 'https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-collections/global/default/perks/video/inspiration/background_loop.webm' : a.value == 'Resolve' ? 'https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-collections/global/default/perks/video/resolve/background_loop.webm' : a.value == 'Domination' ? 'https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-collections/global/default/perks/video/domination/background_loop.webm' : a.value == 'Precision' ? 'https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-collections/global/default/perks/video/precision/background_loop.webm' : ''
 })
-
 const video = ref(null)
 onMounted (async () => {
   video.value.player.play()
 })
+
+<!--     <videoBackground ref="video" :src="runeVideo" class="  grayscale bg-cover opacity-15 contrast-400 brightness-380  h-full z-0 gradient-mask-t-0 w-full" /> -->
+ */
+// pocket.value.runes.sets.length = 0
+// newRuneSet(pocket.value.key)
+
+onMounted (() => {
+  !ts.selectedRuneSet ? ts.selectedRuneSet = pocket.value.runes.sets[0] : ts.selectedRuneSet
+})
+
+const isBarCollapsed = ref(true)
+const toggleBar = useToggle(isBarCollapsed)
+const infoRef = ref<InstanceType<typeof SplitterPanel>>()
+
+const isDragging = ref(false)
 </script>
 
 <template>
-  <div class="relative overflow-hidden size-full">
+  <div
+    class="size-full justify-center size-full grid  transition-all duration-300 ease-out pb-10 px-8 grid-cols-[94px_1fr_350px]"
+  >
+    <RuneSetBar :pocket="pocket">
+      <RunePanelMenu
+        :set="set"
+        :pocket="pocket"
+        @clicked="toggleBar()"
+      />
+    </RuneSetBar>
 
-    <videoBackground ref="video" :src="runeVideo" class="  grayscale bg-cover opacity-15 contrast-400 brightness-380  h-full z-0 gradient-mask-t-0 w-full" />
-
-    <div class="absolute inset-0">
-
-<!--           <div class="flex gap-10 w-full">
-        <button
-          v-tippy="'New Set'"
-          class="grid p-i-c h-38 btn btn-ghost grow !rounded-xl "
-        >
-          <icon name="add" class="size-7 dst" />
-        </button>
-
-        <button
-          v-tippy="'New Set'"
-          class="grid p-i-c h-38 btn grow btn-ghost  !rounded-xl "
-        >
-          <icon name="trash" class="size-7 dst" />
-        </button>
-      </div> -->
-
-        <RuneSetBar :pocket="pocket" :selected="set" />
-      <div class="flex gap-10  justify-center  max-h-[95vh]">
-        <PocketRunePanels :rune-set="set" :pocket="pocket" />
+    <div class="relative size-full justify-center w-full">
+      <div class="flex gap-10 absolute mx-auto inset-0 top-0 left-0 justify-center  max-h-[95vh]">
+        <PocketRunePanels :key="set.key" :set="set" :pocket="pocket" />
       </div>
+    </div>
+
+    <div ref="infoRef" :default-size="22" class="pt-[7vh] px-14 border-l border-l-b3/80">
+      <RuneData
+        :set="set"
+        :is-collapsed="isBarCollapsed"
+      />
     </div>
   </div>
 </template>

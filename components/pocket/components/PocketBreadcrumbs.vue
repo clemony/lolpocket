@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { DropdownMenuItemIndicator } from 'radix-vue'
+import { DropdownMenuItemIndicator } from 'reka-ui'
 
 const ts = useTempStore()
 const as = useAccountStore()
@@ -39,7 +39,7 @@ onMounted (() => {
             <icon name="select" class="size-5.5 shrink-0 absolute right-3" />
           </button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent class="w-60" align="end"  :align-offset="1">
+        <DropdownMenuContent class="w-60" align="end" :align-offset="1">
           <DropdownMenuRadioGroup v-model="openFolder">
             <DropdownMenuRadioItem v-for="folder in defaultFolders" :key="folder.key" :disabled="!folder.items.length && folder.name != 'all'" :value="folder.name" class="pl-2 pr-4 flex gap-4 text-2 py-2 disabled:opacity-60">
               <icon :name="folder.icon" class="size-4.5" />

@@ -48,7 +48,7 @@ export const useTempStore = defineStore(
     const selectedItem = ref(null)
 
     // runes
-    const selectedRuneSetIndex = ref(0)
+    const selectedRuneSet = ref<RuneSet | null>(null)
     const hoveredRune = ref<Rune | null>(null)
 
     // spells
@@ -102,7 +102,7 @@ export const useTempStore = defineStore(
       pocketItemSelect,
 
       // runes
-      selectedRuneSetIndex,
+      selectedRuneSet,
       hoveredRune,
 
       // spells

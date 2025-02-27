@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = defineProps<{
   pocket: pocket
-  isOpen?: boolean
+  title: string
 }>()
 
 const pocket = ref(props.pocket)
@@ -10,7 +10,7 @@ const pocket = ref(props.pocket)
 <template>
   <div class="field ">
     <div class="field-legend  ">
-      Selected
+      {{ props.title }}
     </div>
 
     <transition-slide group class="grid grid-flow-row auto-cols-auto select-none h-fit pt-1  grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center place-items-center  gap-4 mx-auto w-full">

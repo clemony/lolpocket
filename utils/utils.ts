@@ -1,7 +1,6 @@
 import type { ClassValue } from 'clsx'
 import { clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
-
 /*
 1. cn
 2. clean name

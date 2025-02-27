@@ -1,10 +1,26 @@
 <script setup lang="ts">
 import { formatDataText } from './data/format'
 
+const props = defineProps<{
+  set?: RuneSet
+}>()
+
+const set = computed (() => {
+  return props.set
+})
 const ts = useTempStore()
 const ds = useDataStore()
 const rune = computed (() => {
-  return ts.hoveredRune ? ts.hoveredRune : createDefaultRune()
+  if (ts.hoveredRune && ts.hoveredRune.name != 'empty') {
+    return ts.hoveredRune
+  }
+  else if (set.value.primary.runes[0]) {
+    return set.value.primary.runes[0]
+  }
+  else {
+    const a = ds.paths.find(p => p.key == set.value.primary.path)
+    return a.slots[0].runes[0]
+  }
 })
 
 const pathName = computed (() => {
@@ -13,7 +29,7 @@ const pathName = computed (() => {
 </script>
 
 <template>
-  <div class="relative -mt-2 flex w-110 justify-center flex-col   ">
+  <div class="relative -mt-2 flex w-full justify-center flex-col">
     <div
       class="border-b3 mb-8 grid w-full grid-cols-[0.7fr_2fr]  border-b pb-6"
     >
@@ -24,7 +40,7 @@ const pathName = computed (() => {
           :key="rune.name"
           :src="`/img/runes/${pathName.toLowerCase()}/${rune.name.replace(/\s/g, '')}.webp`"
           :alt="`${rune.name} Image`"
-          class="'ring-b3 inset-shadow-sm pointer-events-none size-20 rounded-full bg-black ring-1 "
+          class="'ring-b3 inset-shadow-sm pointer-events-none size-20 rounded-full bg-black ring-1 shadow-warm-2"
         />
       </div>
 
@@ -36,18 +52,18 @@ const pathName = computed (() => {
           target="_blank"
           alt="link to league wiki"
         >
-          <h1
-            class=" leading-4   grow-underline tracking-tight dst"
+          <h2
+            class=" leading-6   grow-underline tracking-tight dst"
           >
             {{ rune.name }}
-          </h1>
+          </h2>
 
           <icon name="link" class="size-4.5" />
 
         </a>
 
         <div class="flex gap-3 items-center w-full">
-          <img :src="`img/runes/${pathName.toLowerCase()}.webp`" class="h-6 w-auto dst" />
+          <img :src="`/img/runes/${pathName}.webp`" class="h-6 w-auto dst" />
           <span class="text-4 font-medium grow">{{ pathName }}</span>
         </div>
       </div>
