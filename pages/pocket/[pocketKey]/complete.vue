@@ -95,6 +95,9 @@ const runeSetsLength = computed (() => {
 
       <LazySpellField :pocket="pocket" />
     </div>
+
+    <div class="size-full border-b3/70 rounded-xl">
+    </div>
   </div>
 </template>
 

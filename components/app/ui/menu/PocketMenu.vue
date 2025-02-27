@@ -3,7 +3,7 @@ import type { HTMLAttributes } from 'vue'
 
 import { ContextMenu, ContextMenuContent, ContextMenuItem, ContextMenuSeparator, ContextMenuTrigger } from 'components/base/context-menu/context-index'
 
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from 'components/base/dropdown-menu/drindex'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from 'components/base/dropdown-menu/index'
 
 const props = defineProps<{
   pocket: pocket
