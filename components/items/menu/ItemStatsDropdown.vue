@@ -3,10 +3,10 @@
 
 <template>
   <DropdownMenuContent>
-    <Bbtton v-tippy="'Reset all'" class="btn btn-ghost btn-sm" @click="ts.filterItemStats = []">
+    <button v-tippy="'Reset all'" class="btn btn-ghost btn-sm" @click="ts.filterItemStats = []">
       <span class="opacity-60">{{ ts.filterItemStats.length }}</span>
       <icon name="reset" class="!size-4 shrink-0 ml-2 " />
-    </Bbtton>
+    </button>
     <DropdownMenuCheckboxItem v-for="stat in itemStats" :key="stat.id" class="pointer-events-none">
       <label class="flex gap-4 pointer-events-auto -ml-6" @click.stop>
         <input v-model="ts.filterItemStats" type="checkbox" :value="stat.id" class="hidden  peer" />

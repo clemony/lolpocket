@@ -64,7 +64,7 @@ const isDragging = ref(false)
       </div>
     </div>
 
-    <div ref="infoRef" :default-size="22" class="pt-[7vh] px-14 border-l border-l-b3/80">
+    <div ref="infoRef" :default-size="22" class="pt-[7vh] px-14 bg-b1 border-l border-l-b3/80">
       <RuneData
         :set="set"
         :is-collapsed="isBarCollapsed"

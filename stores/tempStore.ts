@@ -1,6 +1,5 @@
 import type { GridApi } from 'ag-grid-community'
 import { defineStore } from 'pinia'
-import type { SplitterPanel } from 'radix-vue'
 
 export const useTempStore = defineStore(
   'tempStore',
