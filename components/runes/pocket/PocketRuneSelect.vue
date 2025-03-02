@@ -99,9 +99,6 @@ const allRunes = computed (() => {
   const b = a.filter(a => a != null)
   return b.map(r => r.id)
 })
-/*
-:style="{
-              background: allRunes.includes(rune.id) && path == set.primary.path ? `linear-gradient(110deg, transparent, var(--color-${set.primary.path.toLowerCase()}))` : allRunes.includes(rune.id) && path == set.secondary.path ? `linear-gradient(110deg, transparent, var(--color-${set.secondary.path.toLowerCase()}))` : '' }" */
 </script>
 
 <template>

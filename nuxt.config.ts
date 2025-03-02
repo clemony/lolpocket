@@ -3,9 +3,6 @@ import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 //  Configuration Vite
 
-import { defineConfig } from 'vite'
-import vueDevTools from 'vite-plugin-vue-devtools'
-
 export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
@@ -13,13 +10,14 @@ export default defineNuxtConfig({
     '@nuxtjs/supabase',
     '@morev/vue-transitions/nuxt',
     'pinia-plugin-persistedstate/nuxt',
-    '@nuxt/devtools',
+    // '@nuxt/devtools',
     '@nuxt/eslint',
     'vue-sonner/nuxt',
     '@nuxt/icon',
     'nuxt-aos',
     'nuxt-svgo',
     'nuxt-tailwindcss4',
+    // '@nuxt/image',
   ],
 
   icon: {
@@ -27,10 +25,18 @@ export default defineNuxtConfig({
     serverBundle: false,
   },
 
+  /*   image: {
+    quality: 80,
+    format: ['webp', 'png'],
+    domains: [
+      'https://universe.communitydragon.org',
+      'https://raw.communitydragon.org',
+    ],
+  }, */
+
   vite: {
     plugins: [
       tailwindcss(),
-      vueDevTools(),
     ],
     vue: {
       customElement: true,
@@ -134,8 +140,8 @@ export default defineNuxtConfig({
 
   devtools: {
     enabled: false,
-    componentInspector: true,
-    viteInspect: true,
+    componentInspector: false,
+    viteInspect: false,
   },
 
   pinia: {
@@ -143,14 +149,13 @@ export default defineNuxtConfig({
   },
 
   alias: {
-    '@': fileURLToPath(new URL('/*', import.meta.url)),
+    '@': fileURLToPath(new URL('./', import.meta.url)),
     'css': fileURLToPath(new URL('./assets/css', import.meta.url)),
     'types': fileURLToPath(new URL('./types', import.meta.url)),
     'stores': fileURLToPath(new URL('./stores', import.meta.url)),
     'composables': fileURLToPath(new URL('./composables', import.meta.url)),
     'shared': fileURLToPath(new URL('./shared', import.meta.url)),
     'supabase': fileURLToPath(new URL('./shared/supabase', import.meta.url)),
-    'img': fileURLToPath(new URL('./public/img', import.meta.url)),
     'components': fileURLToPath(new URL('./components', import.meta.url)),
     'plugins': fileURLToPath(new URL('./plugins', import.meta.url)),
     'modules': fileURLToPath(new URL('./modules', import.meta.url)),

@@ -5,9 +5,10 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="field grid justify-center **:select-none ">
-    <div class="field-legend !overflow-visible">
+  <div class="field grid justify-center **:select-none text-2">
+    <div class="field-legend capitalize !overflow-visible">
       {{ props.title }}
+      <slot  name="title"/>
     </div>
     <slot />
   </div>

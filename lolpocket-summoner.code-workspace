@@ -15,25 +15,6 @@
 			"**/Thumbs.db": true,
 			".storage": true
 		},
-		"workbench.colorCustomizations": {
-			"activityBar.activeBackground": "#67565c",
-			"activityBar.background": "#67565c",
-			"activityBar.foreground": "#e7e7e7",
-			"activityBar.inactiveForeground": "#e7e7e799",
-			"activityBarBadge.background": "#1b3010",
-			"activityBarBadge.foreground": "#e7e7e7",
-			"commandCenter.border": "#e7e7e799",
-			"sash.hoverBorder": "#67565c",
-			"statusBar.background": "#4b3f43",
-			"statusBar.foreground": "#e7e7e7",
-			"statusBarItem.hoverBackground": "#67565c",
-			"statusBarItem.remoteBackground": "#4b3f43",
-			"statusBarItem.remoteForeground": "#e7e7e7",
-			"titleBar.activeBackground": "#4b3f43",
-			"titleBar.activeForeground": "#e7e7e7",
-			"titleBar.inactiveBackground": "#4b3f4399",
-			"titleBar.inactiveForeground": "#e7e7e799"
-		},
-		"peacock.color": "#4B3F43"
+		"typescript.tsdk": "node_modules/typescript/lib"
 	}
 }

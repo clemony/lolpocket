@@ -23,15 +23,13 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       'relative flex w-full touch-none select-none items-center data-[orientation=vertical]:flex-col data-[orientation=vertical]:w-1.5 data-[orientation=vertical]:h-full',
       props.class,
     )"
-    v-bind="forwarded"
-  >
-    <SliderTrack class="relative h-1.5 w-full data-[orientation=vertical]:w-1.5 grow overflow-hidden rounded-full bg-neutral/20">
+    v-bind="forwarded">
+    <SliderTrack class="relative h-1.5 w-full data-[orientation=vertical]:w-1.5 grow overflow-hidden rounded-full bg-primary/20">
       <SliderRange class="absolute h-full data-[orientation=vertical]:w-full bg-neutral" />
     </SliderTrack>
     <SliderThumb
       v-for="(_, key) in modelValue"
       :key="key"
-      class="block h-5 w-5 rounded-full border border-b2 -2 border border-b2 -neutral bg-b1 ring-offset-b1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-b2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
-    />
+      class="block h-5 w-5 rounded-full border-2 border-neutral bg-b1 ring-offset-b1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50" />
   </SliderRoot>
 </template>

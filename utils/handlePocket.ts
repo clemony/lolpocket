@@ -9,7 +9,7 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
   const toID = hexoid()
   const pocketKey = key || toID()
 
-  const itemSet = newItemSet()
+  const itemSet = newItemSet('', 'New Set')
   const runeSet = newRuneSet()
 
   const newPocket: pocket = {
@@ -36,6 +36,24 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
       folder: 'all',
     },
     notes: [''],
+    card: {
+      splash: '',
+      align: '',
+      color: '',
+      filter: true,
+      font: {
+        0: 'Noto Serif',
+        1: 'Geist Sans',
+      },
+    },
+    complete: {
+      items: {
+        0: newItemSet('', 'Set 1'),
+        1: newItemSet('', 'Set 2'),
+        2: newItemSet('', 'Set 3'),
+      },
+      runes: runeSet,
+    },
     dateCreated: createDateObject(),
     dateUpdated: createDateObject(),
   }

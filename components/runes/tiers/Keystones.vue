@@ -44,11 +44,11 @@ watch(
   },
 )
 
-onMounted(async() => {
+onMounted(async () => {
   if (props.path) {
     path.value = props.path
   }
-    if (props.set) {
+  if (props.set) {
     set.value = props.set
   }
 })
@@ -62,9 +62,11 @@ function handleKeystone(rune) {
   console.log('💠 - handleKeystone - set.value.primary.runes:', set.value.primary.runes)
 }
 
-/* :style="{
-          background: set.primary.runes[0] == rune ? `linear-gradient(110deg, transparent, var(--color-${set.primary.path.toLowerCase()}))` : '',
-        }" */
+function onHover(rune) {
+  setTimeout(() => {
+    ts.hoveredRune = rune
+  }, 1000)
+}
 </script>
 
 <template>
@@ -79,7 +81,6 @@ function handleKeystone(rune) {
     >
       <div
         v-for="rune in pathData" :key="rune.id" v-tippy="rune.name" class="size-fit rounded-full"
-    
       >
         <label
           :data-path="path"
@@ -87,6 +88,7 @@ function handleKeystone(rune) {
           :class="{
             'to-b1/20 rounded-full shadow-warm-2  bg-gradient-to-br backdrop-blur-md overflow-hidden from-b1/90 shadow-black/20 opacity-100 scale-110 grayscale-0': setKeystone.id == rune.id,
           }"
+          @mouseover="onHover(rune)"
         >
           <input
             type="radio"

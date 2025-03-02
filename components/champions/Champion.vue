@@ -25,8 +25,7 @@ function handleClick() {
         props.class,
       )
     "
-    @click="handleClick"
-  >
+    @click="handleClick">
     <slot />
 
     <div
@@ -38,14 +37,13 @@ function handleClick() {
           { '!rounded-md': props.roundedMd },
           { 'after:absolute after:top-0 after:left-0 after:pointer-events-none z-0 after:z-10 after:size-full after:rounded-lg after:place-items-center after:grid after:font-extralight after:opacity-0 after:text-7 after:content-[\'×\'] cursor-pointer  hover:after:opacity-100 after:bg-neutral/60 after:text-nc/80 after:transition-all after:duration-300': props.removable },
         )
-      "
-    >
+      ">
       <img
         :key="props.champion.name"
+
         :src="`/img/champion/${champion.apiname}.webp`"
         :alt="`${props.champion.name} Image`"
-        class="size-full scale-115"
-      />
+        class="size-full scale-115" />
     </div>
   </label>
 </template>

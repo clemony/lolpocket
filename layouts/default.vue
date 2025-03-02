@@ -53,7 +53,7 @@ const ss = useSidebarStore()
       />
 
       <LazyNewFolderDialog />
-
+      <LazyNewPocketDialog />
       <div class="size-full max-size-full overflow-hidden">
         <slot />
       </div>

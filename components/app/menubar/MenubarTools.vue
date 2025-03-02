@@ -4,7 +4,7 @@ import { UseClipboard } from '@vueuse/components'
 
 <template>
   <MenubarContent class="!w-74">
-    <MenubarLabel inset>
+    <MenubarLabel class="select-none" inset>
       Info
     </MenubarLabel>
     <MenubarSeparator />
@@ -28,7 +28,7 @@ import { UseClipboard } from '@vueuse/components'
 
     <MenubarSeparator />
 
-    <MenubarLabel inset>
+    <MenubarLabel class="select-none" inset>
       Settings
     </MenubarLabel>
     <MenubarSeparator />

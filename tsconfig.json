@@ -7,11 +7,6 @@
     "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "paths": {
-      "#app": [
-        "./node_modules/nuxt/dist/app/index"
-      ]
-    },
     "resolveJsonModule": true,
     "allowJs": true,
     "strict": false,

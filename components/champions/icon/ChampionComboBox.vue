@@ -10,7 +10,7 @@ const ts = useTempStore()
 const open = ref(false)
 
 function selectRandomChamp() {
-  ts.drawerChampSelectDropdown = getRandom(ds.championNames)
+  ts.championSplashDropdown = getRandom(ds.championNames)
 }
 
 onMounted (() => {
@@ -21,21 +21,20 @@ onMounted (() => {
 <template>
   <Popover v-model:open="open">
     <PopoverTrigger as-child>
-      <Button
-        variant="outline"
+      <button
         role="combobox"
         :aria-expanded="open"
-        class="w-54 justify-between h-11"
+        class="w-54 text-3 border-neutral/20 justify-between h-11 btn btn-outline rounded-lg inset-shadow-sm hover:bg-b2/30"
       >
-        {{ ts.drawerChampSelectDropdown || 'Champion' }}
+        {{ ts.championSplashDropdown || 'Champion' }}
         <icon name="select" class="size-4.5" />
-      </Button>
+      </button>
     </PopoverTrigger>
     <PopoverContent class="w-54 p-0 isolate z-80">
-      <CommandRoot v-model="ts.drawerChampSelectDropdown">
+      <Command v-model="ts.championSplashDropdown">
         <CommandInput placeholder="Search...">
           <span class="flex gap-1">
-            <CloseButton @click="ts.drawerChampSelectDropdown = null" />
+            <CloseButton @click="ts.championSplashDropdown = null" />
             <RandomButton v-tippy="'Random Champ'" @click="selectRandomChamp" />
           </span>
         </CommandInput>
@@ -46,14 +45,14 @@ onMounted (() => {
               v-for="champion in ds.championNames" :key="champion"
               :value="champion"
               as-child
-              @select="ts.drawerChampSelectDropdown = champion"
+              @select="ts.championSplashDropdown = champion"
             >
               <PopoverClose class="w-full">
                 <icon
                   name="tick-sm"
                   :class="cn(
                     'mr-2 h-4 w-4',
-                    ts.drawerChampSelectDropdown === champion ? 'opacity-100' : 'opacity-0',
+                    ts.championSplashDropdown === champion ? 'opacity-100' : 'opacity-0',
                   )"
                 />
                 {{ champion }}
@@ -61,7 +60,7 @@ onMounted (() => {
             </CommandItem>
           </CommandGroup>
         </CommandList>
-      </CommandRoot>
+      </Command>
     </PopoverContent>
   </Popover>
 </template>

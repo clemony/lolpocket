@@ -30,10 +30,10 @@ export function createItem(): Item {
     modes: {},
   }
 }
-export function newItemSet(pocketKey?) {
+export function newItemSet(pocketKey?, setName?) {
   const toID = hexoid()
   const newSet = {
-    name: `${generateMediumString()} Set`,
+    name: setName || `${generateMediumString()} Set`,
     key: toID(),
     items: [createItem()],
   }
@@ -76,9 +76,9 @@ export function resetItems(set) {
   }
 }
 
-export function deleteItemSet(pocket, set){
+export function deleteItemSet(pocket, set) {
   const i = pocket.items.sets.findIndex(s => s.key == set.key)
-  if (i){
+  if (i) {
     pocket.items.sets.splice(i, 1)
   }
 }

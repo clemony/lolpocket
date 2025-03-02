@@ -50,14 +50,13 @@ onMounted (() => {
           </li>
         </ul>
       </div>
-
-      <div class=" size-full relative before:absolute before:w-full  before:top-14 before:bg-b1 before:border-b3 before:h-[82.4vh] before:border before:border-b3 before:rounded-xl drop-shadow-[1px_2px_2px_#00000010] ">
+      <!-- before:absolute before:w-full  before:top-14 before:bg-b1 before:border-b3 before:h-[82.4vh] before:border before:border-b3 before:rounded-xl  -->
+      <div class=" size-full relative drop-shadow-[1px_2px_2px_#00000010] ">
         <div class="tabs tabs-lift size-full tabs-xl max-h-[82.5vh] drop-shadow-[1px_2px_2px_#00000010] ">
           <div class="tab dst !overflow-visible  pr-6 after:min-w-80 !border-b-transparent relative items-center justify-start -ml-4" role="tab">
             <div class="absolute h-full w-80 bottom-3.5  flex gap-4 ">
               <button
-                class=" aspect-square size-10  rounded-full !pointer-events-auto !cursor-pointer grayscale hover:grayscale-0 shadow-sm !drop-shadow-none  transition-all duration-300 "
-              >
+                class=" aspect-square size-10  rounded-full !pointer-events-auto !cursor-pointer grayscale hover:grayscale-0 shadow-sm !drop-shadow-none  transition-all duration-300 ">
                 <PocketIcon :image="pocket.icon" class="size-10 pointer-events-none" />
               </button>
 
@@ -66,7 +65,7 @@ onMounted (() => {
               </div>
             </div>
           </div>
-          <div class="tab-content" />
+          <div class="tab-content  " />
 
           <template v-for="tab in pages" :key="tab.name">
             <input
@@ -74,17 +73,15 @@ onMounted (() => {
               v-model="tabValue" name="pocket-tabs" type="radio" :value="tab.link"
               role="tab"
               :aria-label="tab.name"
-              class="tab tab-title not-checked:!border-b-transparent   w-49 -ml-1  font-semibold capitalize text-3 text-center " @change="navigateTo(tab.link)"
-            />
+              class="tab tab-title not-checked:!border-b-transparent   w-49 -ml-1  font-semibold capitalize text-3 text-center " @change="navigateTo(tab.link)" />
 
-            <div class="tab-content  bg-b1 border-b3 p-0 size-full rounded-tl-xl  overflow-hidden ">
+            <div class="tab-content  bg-b1 border-b3 p-0 size-full rounded-tl-box  overflow-hidden ">
               <LazyNuxtPage
                 :selected-runes="selectedRuneSet"
                 :pocket="pocket"
                 :transition="{
-                }"
-              />
-            </div><!--  -->
+                }" />
+            </div>
           </template>
         </div>
       </div>
@@ -93,4 +90,12 @@ onMounted (() => {
 </template>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>

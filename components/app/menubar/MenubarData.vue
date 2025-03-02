@@ -47,7 +47,7 @@ const db = [
 
 <template>
   <MenubarContent class="!w-74">
-    <MenubarLabel inset>
+    <MenubarLabel class="select-none" inset>
       Game Data
     </MenubarLabel>
     <MenubarSeparator />

@@ -64,30 +64,27 @@ watch(arrowdown, (v) => {
 </script>
 
 <template>
-  <div class="sidebar size-full">
-    <SidebarTrigger>
-      <NeutralButton
-        class="size-12  aspect-square rounded-full" :class="{ 'bg-neutral/80 text-nc': ss.isSidebarOpen }"
-        @mouseenter="ss.sidebarComponent = NewPocket"
-        @mouseleave="ss.onSidebarButtonLeave()"
-      >
-        <icon
-          name="add-sm"
-          class="size-6  stroke-[1.2]  drop-shadow-sm "
-        />
-      </NeutralButton>
+  <div class=" size-full">
+    <NeutralButton
+      class="size-12  aspect-square rounded-full" :class="{ 'bg-neutral/80 text-nc': ss.isSidebarOpen }"
+      @mouseenter="ss.sidebarComponent = NewPocket"
+      @mouseleave="ss.onSidebarButtonLeave()"
+    >
+      <icon
+        name="add-sm"
+        class="size-6  stroke-[1.2]  drop-shadow-sm "
+      />
+    </NeutralButton>
 
-      <SidebarNav :model-value="defaultFolders" />
+    <button class="size-14 pointer-events-auto btn rounded-full" @mouseenter="ss.sidebarComponent = ColumnDisplay" @mouseleave="ss.onSidebarButtonLeave()">
+      <icon
+        name="ph:text-columns-light" class="size-7 dst"
+        :class="{ 'bg-b2/70': ss.isSidebarOpen && ss.sidebarComponent == ColumnDisplay }"
+      />
+    </button>
 
-      <button class="size-14 pointer-events-auto btn rounded-full" @mouseenter="ss.sidebarComponent = ColumnDisplay" @mouseleave="ss.onSidebarButtonLeave()">
-        <icon
-          name="ph:text-columns-light" class="size-7 dst"
-          :class="{ 'bg-b2/70': ss.isSidebarOpen && ss.sidebarComponent == ColumnDisplay }"
-        />
-      </button>
+    <Grow />
 
-      <Grow />
-    </SidebarTrigger>
     <div class="size-full">
       <PageHeader :title="route.meta.title.toString()" class="" />
       <NuxtPage
@@ -97,8 +94,6 @@ watch(arrowdown, (v) => {
         }"
       />
     </div>
-
-    <Sidebar />
   </div>
 </template>
 

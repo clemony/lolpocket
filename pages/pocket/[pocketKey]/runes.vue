@@ -43,12 +43,12 @@ const isBarCollapsed = ref(true)
 const toggleBar = useToggle(isBarCollapsed)
 const infoRef = ref<InstanceType<typeof SplitterPanel>>()
 
-const isDragging = ref(false)
+// TODO: sidebar scaling / rune data collapse
 </script>
 
 <template>
   <div
-    class="size-full justify-center size-full grid  transition-all duration-300 ease-out pb-10 px-8 grid-cols-[94px_1fr_350px]"
+    class="size-full justify-center size-full grid  transition-all duration-300 ease-out  px-8 grid-cols-[94px_1fr_350px]"
   >
     <RuneSetBar :pocket="pocket">
       <RunePanelMenu
@@ -64,7 +64,7 @@ const isDragging = ref(false)
       </div>
     </div>
 
-    <div ref="infoRef" :default-size="22" class="pt-[7vh] px-14 bg-b1 border-l border-l-b3/80">
+    <div ref="infoRef" :default-size="22" class="pt-[7vh] inset-shadow-sm px-14 bg-b1 border-l border-l-b3/80 pb-10">
       <RuneData
         :set="set"
         :is-collapsed="isBarCollapsed"

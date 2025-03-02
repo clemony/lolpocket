@@ -7,12 +7,13 @@ export const useTempStore = defineStore(
     const itemGridApi = shallowRef<GridApi | null>(null)
 
     const pocketBarComponent = shallowRef(null)
-
+    const pocketCardRef = <HTMLElement>(null)
     // drawer selections
     const selectedChampion = ref(null)
     const selectedRune = ref(null)
     const selectedPocket = ref(null)
-    const drawerChampSelectDropdown = ref(null)
+    const championSplashDropdown = ref(null)
+    const isSettingsOpen = ref(true)
 
     // dialog
 
@@ -20,6 +21,7 @@ export const useTempStore = defineStore(
     const commandOpen = ref(false)
     const contextMenuOpen = ref(false)
     const newFolderOpen = ref(false)
+    const newPocketOpen = ref(false)
 
     // champs
     const champSearch = ref('')
@@ -55,7 +57,7 @@ export const useTempStore = defineStore(
 
     return {
       itemGridApi,
-      // clickType,
+      pocketCardRef,
 
       // sidebar
 
@@ -63,13 +65,15 @@ export const useTempStore = defineStore(
 
       // drawer
 
-      drawerChampSelectDropdown,
+      championSplashDropdown,
+      isSettingsOpen,
 
       // dialog
       loginOpen,
       commandOpen,
       contextMenuOpen,
       newFolderOpen,
+      newPocketOpen,
 
       // drawer selections
       selectedItem,

@@ -28,6 +28,7 @@ export default defineAppConfig({
       'up': 'teenyicons:up-outline',
       'down-sm': 'teenyicons:down-small-outline',
       'right-sm': 'teenyicons:right-small-outline',
+      'left-sm': 'teenyicons:left-small-outline',
       'right': 'teenyicons:right-outline',
       'up-sm': 'teenyicons:up-small-outline',
       'select': 'teenyicons:caret-vertical-small-outline',

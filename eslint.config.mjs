@@ -6,7 +6,12 @@ import pluginVue from 'eslint-plugin-vue'
 export default antfu({
   ...pluginVue.configs['flat/essential'],
 
-  ignores: ['.storage/*'],
+  ignores: [
+    '.storage/*',
+    'dist',
+    'node_modules',
+    'schema',
+  ],
   vue: true,
   rules: {
     'no-undef': 'off',
@@ -25,6 +30,17 @@ export default antfu({
     'vue/no-irregular-whitespace': 'off',
     'no-irregular-whitespace': 'off',
 
+ "vue/html-closing-bracket-newline": [
+    "error",
+    {
+      "singleline": "never",
+      "multiline": "never",
+      "selfClosingTag": {
+        "singleline": "never",
+        "multiline": "never"
+      }
+    }
+  ]
   },
   formatters: {
     /**

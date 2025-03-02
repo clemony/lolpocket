@@ -1,8 +1,8 @@
 @import 'tailwindcss';
     
-    @custom-variant light (&:where([data-theme=daylight], [data-theme=daylight] *), &:where([data-theme=dawn], [data-theme=dawn] *));
+    @custom-variant light (&:where([data-theme=daylight], [data-theme=daylight] *));
 
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *), &:where([data-theme=midnight], [data-theme=midnight] *));
+@custom-variant dark ( &:where([data-theme=midnight], [data-theme=midnight] *));
 
 @layer base {
 :root{
@@ -26,6 +26,7 @@
   --nc: oklch(97.788% 0.004 56.375);
 }
 
+
 :is([data-theme='dusk']) {
   --b1: oklch(30.86% 0.0232 264.15);
   --b2: oklch(28.04% 0.0198 264.18);
@@ -44,6 +45,45 @@
   --nc: oklch(100% 0 0);
 }
 
+
+:is([data-theme='spring']) {
+  --b1: oklch(99% 0.001 12.422);
+  --b2: oklch(93% 0.009 12.422);
+  --b3: oklch(88% 0.018 12.422);
+  --bc: oklch(37% 0 0);
+    --color-neutral: oklch(55% 0.046 257.417);
+  --nc: oklch(92% 0.013 255.508);
+}
+
+:is([data-theme='summer']) {
+  --b1: oklch(98.637% 0.020 90.515);
+  --b2: oklch(92.272% 0.029 91.774);
+  --b3: oklch(88.133% 0.045 90.856);
+  --bc: oklch(26% 0.007 34.298);
+    --color-neutral: oklch(44% 0.011 73.639);
+  --nc: oklch(86% 0.005 56.366);
+}
+
+:is([data-theme='autumn']) {
+
+  --b1: oklch(95.814% 0 0);
+  --b2: oklch(89.107% 0 0);
+  --b3: oklch(82.4% 0 0);
+  --bc: oklch(19.162% 0 0);
+    --color-neutral: oklch(54.367% 0.037 51.902);
+  --nc: oklch(90.873% 0.007 51.902);
+}
+
+:is([data-theme='winter']) {
+
+--b1: oklch(95.127% 0.007 260.731);
+  --b2: oklch(93.299% 0.01 261.788);
+  --b3: oklch(89.925% 0.016 262.749);
+  --bc: oklch(32.437% 0.022 264.182);
+    --color-neutral: oklch(45.229% 0.035 264.131);
+  --nc: oklch(89.925% 0.016 262.749);
+}
+
 :is([data-theme='daylight']),
 :is([data-theme='dawn']) {
   .invert-light {
@@ -59,6 +99,53 @@
   }
 }
 }
+
+
+@custom-variant theme-daylight {
+   &:where([data-theme='daylight'] *, [data-theme='daylight']){
+  --b1: oklch(100% 0 0);
+  --b2: oklch(95.12% 0 0);
+
+  --b3: oklch(89% 0 0);
+  --bc: oklch(0% 0.02476 255.701624);
+  --neutral: oklch(0% 0.02476 255.701624);
+  --nc: oklch(100% 0 0);
+}
+}
+
+@custom-variant theme-dawn {
+&:where([data-theme='dawn'] *, [data-theme='dawn']) {
+  --b1: oklch(97.04% 0.0029 84.56);
+  --b2: oklch(94.91% 0.0067 53.44);
+  --b3: oklch(89.96% 0.007 67.74);
+  --bc: oklch(0% 0.02476 255.701624);
+  --neutral: oklch(27% 0.006 286.033);
+  --nc: oklch(97.788% 0.004 56.375);
+}
+}
+
+@custom-variant theme-dusk{
+&:where([data-theme='dusk'] *, [data-theme='dusk']) {
+  --b1: oklch(30.86% 0.0232 264.15);
+  --b2: oklch(28.04% 0.0198 264.18);
+  --b3: oklch(26.35% 0.0184 262.18);
+  --bc: oklch(84.8707% 0 0);
+  --neutral: oklch(24.73% 0.0205 264.09);
+  --nc: oklch(84.8707% 0 0);
+}
+}
+
+@custom-variant theme-midnight {
+&:where([data-theme='midnight'] *, [data-theme='midnight'] ) {
+  --b1: oklch(26% 0 0);
+  --b2: oklch(20% 0 0);
+  --b3: oklch(14% 0 0);
+  --bc: oklch(87.609% 0 0);
+  --neutral: oklch(26% 0 0);
+  --nc: oklch(100% 0 0);
+}
+}
+
 @theme inline {
 
   --color-b1: var(--b1);

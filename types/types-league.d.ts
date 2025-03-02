@@ -35,6 +35,24 @@ declare global {
     }
     icon: string
     notes: string[]
+    card: {
+      splash: string
+      align: string
+      color: string
+      filter: boolean
+      font: {
+        0: string
+        1: string
+      }
+    }
+    complete: {
+      items: {
+        0: ItemSet
+        1: ItemSet
+        2: ItemSet
+      }
+      runes: RuneSet
+    }
   }
 
   interface PocketComponent {
