@@ -46,7 +46,7 @@ export const useTempStore = defineStore(
     const filterItemStats = ref([])
     const filterItemCats = ref([])
     const pocketItemSelect = ref()
-    const selectedItem = ref(null)
+    const selectedItem = ref<Item>(null)
 
     // runes
     const selectedRuneSet = ref<RuneSet | null>(null)

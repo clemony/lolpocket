@@ -12,8 +12,6 @@
 @layer base {
   :root {
     scrollbar-color: oklch(0 0.02476 255.702 / 0.075) rgba(0, 0, 0, 0) !important;
-    --default-font-family: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-      sans-serif 'sans-serif';
     font-size: 12px;
     }
 
@@ -25,8 +23,9 @@
   #app {
     font-family: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: var(--text-3);
-    @apply text-3 inset-0 m-0 h-screen w-screen p-0 overflow-hidden max-h-screen max-w-screen text-bc selection:bg-neutral/80 selection:text-nc ;
-  }
+    @apply text-3 inset-0 m-0 h-screen w-screen p-0  text-bc selection:bg-neutral/80 selection:text-nc ;
+    }
+
 
   input,
   input:where(:not([type='button'], [type='reset'], [type='submit'])),

@@ -3,7 +3,9 @@ const props = defineProps<{
   data: effect
 }>()
 
-const effect = ref(props.data)
+const effect = computed(() => {
+  return props.data ? props.data : null
+})
 </script>
 
 <template>
@@ -14,8 +16,7 @@ const effect = ref(props.data)
     </span>
     <span
       v-if="effect.description"
-      class="whitespace-break-spaces"
-    >
+      class="whitespace-break-spaces">
       {{ formatEffects(effect.description) }}
     </span>
   </p>

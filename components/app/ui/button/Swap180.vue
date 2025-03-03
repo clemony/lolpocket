@@ -3,6 +3,7 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
   isOpen?: boolean
 }>()
+
 </script>
 
 <template>

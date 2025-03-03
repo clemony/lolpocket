@@ -71,7 +71,8 @@ function onClone(event: DraggableEvent) {
       },
     ]"
     group
-    class="overflow-y-auto absolute inset-0 grid grid-flow-row auto-cols-auto select-none h-fit  grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center gap-4 px-4  pb-10 pt-26"
+    class=""
+    :class="cn('overflow-y-auto transitio-all duration-400 absolute inset-0 grid grid-flow-row auto-cols-auto select-none h-fit  grid-cols-[repeat(auto-fill,minmax(54px,1fr))] justify-center gap-4 px-4  pb-10 pt-26', props.class)"
 
     @end="onEnd"
     @clone="onClone"

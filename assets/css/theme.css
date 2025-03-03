@@ -1,10 +1,6 @@
 @import 'tailwindcss';
 
 @theme {
-  --menubar-height: 5vh;
-  --main-height: 95vh;
-  --page-header-height: 8vh;
-
   --b1: oklch(100% 0 0);
   --b2: oklch(95.12% 0 0);
   --b3: oklch(89% 0 0);
@@ -13,6 +9,8 @@
   --nc: oklch(100% 0 0);
 
 
+  --default-font-family: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+  sans-serif 'sans-serif';
 
   --radius-xl: initial;
   --radius-xl: 0.7rem;
