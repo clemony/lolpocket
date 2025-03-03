@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import './theme.css' (reference);
+@import './default-theme.css' (reference);
 @utility color-chip {
   @apply flex aspect-square size-9 items-center justify-center rounded-md shadow-sm;
 }

@@ -69,50 +69,40 @@ const faq = [
 
     <div class="flex w-[500px] flex-col gap-6 pt-24 items-center mx-auto">
       <div
-        class="mockup-code bg-neutral text-nc *:ws-nowrap w-2/5 min-w-[400px] rounded-2xl w-full leading-loose font-normal **:text-3"
-      >
+        class="mockup-code bg-neutral text-nc *:ws-nowrap w-2/5 min-w-[400px] rounded-2xl w-full leading-loose font-normal **:select-none **:text-3">
         <pre
-          data-prefix="$"
-        ><code class="h-20 scale-x-110">const CatTax: cat&#60;image: popUp&#62; = {</code></pre>
+          data-prefix="$"><code class="h-20 scale-x-110">const CatTax: cat&#60;image: popUp&#62; = {</code></pre>
         <pre data-prefix=">" class="flex">
                 <code class="flex leading-none pt-2">&nbsp; 'Clem':&nbsp;{ image:
           <span :class="hoverClass">&nbsp; 1</span>, <span :class="hoverClass">&nbsp;2</span>, <span :class="hoverClass">&nbsp;3&nbsp;</span>}, </code></pre> <pre
           data-prefix=">"
-          class="flex items-center"
-        ><code class="flex leading-none pt-3">&nbsp; 'Nell':&nbsp;{ image: <span
-          :class="hoverClass"
-        >&nbsp;1</span>, <span :class="hoverClass">&nbsp;2</span>, <span :class="hoverClass">&nbsp;3&nbsp;</span>},
+          class="flex items-center"><code class="flex leading-none pt-3">&nbsp; 'Nell':&nbsp;{ image: <span
+            :class="hoverClass">&nbsp;1</span>, <span :class="hoverClass">&nbsp;2</span>, <span :class="hoverClass">&nbsp;3&nbsp;</span>},
     </code></pre>
         <pre
           data-prefix=" "
-          class="flex"
-        ><code class="flex items-center">&nbsp; };<span class="animate-[blink-1_1s_infinite_both] text-4">|</span>
+          class="flex"><code class="flex items-center">&nbsp; };<span class="animate-[blink-1_1s_infinite_both] text-4">|</span>
   </code></pre>
         <pre
           data-prefix=" "
-          class="flex"
-        ><code class="flex items-center">&nbsp;<span class=" text-4"></span>
+          class="flex"><code class="flex items-center">&nbsp;<span class=" text-4"></span>
   </code></pre>
         <pre
           data-prefix=">"
-          class="flex"
-        ><code class="flex items-center">&nbsp;<span class="text-4">!very frequently asked questions</span>
+          class="flex"><code class="flex items-center">&nbsp;<span class="text-4"><span v-tippy="'! (logical NOT) operator'" class="hover:bg-b3 hover:text-bc">!</span>frequently asked questions</span>
   </code></pre>
         <pre
           data-prefix=">"
-          class="flex"
-        ><code class="flex items-center">&nbsp;<span class="text-4"> [Q] Where going? </span>
+          class="flex"><code class="flex items-center">&nbsp;<span class="text-4"> [Q] Where going? </span>
   </code></pre>
         <pre
           data-prefix=">"
-          class="flex"
-        ><code class="flex items-center">&nbsp;<span class="text-4 gap-3 flex"> [LP]<icon name="hugeicons:moon-01" class="size-7 text-nc stroke-1" /></span>
+          class="flex"><code class="flex items-center">&nbsp;<span class="text-4 gap-3 flex"> [LP]<icon name="hugeicons:moon-01" class="size-7 text-nc stroke-1" /></span>
   </code></pre>
       </div>
 
       <div
-        class="items-end self-end flex flex-col pr-3 mt-2 gap-2 py-4 **:dst"
-      >
+        class="items-end self-end flex flex-col pr-3 mt-2 gap-2 py-4 **:dst">
         <p class="">
           thanks for trying the app
         </p>
@@ -121,15 +111,13 @@ const faq = [
           from
           <Icon
             name="teenyicons:arrow-right-outline"
-            class="size-3"
-          />
+            class="size-3" />
           <span class="italic font-mono">clem & nell's</span> human
         </p>
         <p>
           <a
             href="https://github.com/clemony/lolpocket"
-            class="mt-2 inline-flex items-center gap-1 underline transition-all duration-300 underline-offset-2 font-mono italic hover:underline"
-          >
+            class="mt-2 inline-flex items-center gap-1 underline transition-all duration-300 underline-offset-2 font-mono italic hover:underline">
             <Icon name="github" />
             <Icon name="at" />
             clemony
@@ -141,8 +129,7 @@ const faq = [
           <tippy
             v-for="icon in icons" :key="icon.name"
             tag="button"
-            content-tag="div"
-          >
+            content-tag="div">
             <template #default>
               <a :href="icon.link" :target="icon.link ? '_blank' : ''">
                 <icon :name="icon.icon" class="size-6 dst shrink-0" />
@@ -158,8 +145,7 @@ const faq = [
 
           <icon
             class="brightness-[80%] contrast-200 grayscale"
-            name="logos:pinia"
-          />
+            name="logos:pinia" />
         </div>
       </Field>
       <div class="flex items-center flex-col tracking-tight dst px-4 mt-6">

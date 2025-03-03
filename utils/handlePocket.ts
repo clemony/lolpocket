@@ -42,8 +42,8 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
       color: '',
       filter: true,
       font: {
-        0: 'Noto Serif',
-        1: 'Geist Sans',
+        0: 'var(--font-serif)',
+        1: 'var(--font-sans)',
       },
     },
     complete: {

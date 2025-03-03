@@ -1,15 +1,24 @@
 <script lang="ts" setup>
+const props = defineProps<{
+  summoner: userAccount
+}>()
 const emit = defineEmits(['update:modelValue'])
 const ps = usePocketStore()
 const ts = useTempStore()
+
 ps.pinnedFolder = []
 
 const pinned = computed (() => {
   return ps.pockets.filter(p => p.location.folder == 'pinned')
 })
 
-const { userFolders } = useUserFolders()
-
+const summoner = computed (() => {
+  return props.summoner
+})
+/* const { userFolders } = computed (() => {
+  return summoner.value ? useUserFolders() : null
+})
+ */
 function handleAddClick() {
   ts.newPocketOpen = true
   emit('update:modelValue')
@@ -48,8 +57,7 @@ function handleAddClick() {
 
       <MenubarSub>
         <NuxtLink
-          to="/pockets"
-        >
+          to="/pockets">
           <MenubarSubTrigger :disabled="!ps.pockets || ps.pockets.length == null || ps.pockets.length == 0" class="cursor-alias group" @click="emit('update:modelValue', '')">
             <icon name="folders" class="!size-3.5 shrink-0  dst " />
             <span class="group-hover:underline">All</span>
@@ -67,12 +75,12 @@ function handleAddClick() {
           </NuxtLink>
         </MenubarSubContent>
       </MenubarSub>
-
+      <!--
       <MenubarSeparator />
 
-      <MenubarSub v-if="as.userAccount.session && as.userAccount && as.userFolders && as.userFolders.length">
+      <MenubarSub v-if="summoner">
         <MenubarSubTrigger :disabled="!as.userFolders && !as.userFolders.length" class="capitalize" inset>
-          {{ `${as.userAccount.gameName || as.userAccount.name}'s Folders` }}
+          {{ `${summoner.gameName || summoner.name}'s Folders` }}
         </MenubarSubTrigger>
 
         <MenubarSubContent>
@@ -100,15 +108,17 @@ function handleAddClick() {
             New Folder
           </DropdownMenuItem>
         </MenubarSubContent>
-      </MenubarSub>
+      </MenubarSub> -->
       <!--  :disabled="!folder || folder.items.length == null || folder.items.length == 0" -->
 
       <MenubarSeparator />
 
       <NuxtLink
-        to="/pockets/trash"
-      >
-        <MenubarItem inset>
+        to="/pockets/trash">
+        <MenubarItem>
+          <div class="size-4 p-px grid place-items-center">
+            <icon name="archive" class="size-full  " />
+          </div>
           Archive
 
           <MenubarShortcut>
@@ -118,9 +128,9 @@ function handleAddClick() {
       </NuxtLink>
 
       <NuxtLink
-        to="/pockets/archive"
-      >
-        <MenubarItem inset>
+        to="/pockets/archive">
+        <MenubarItem>
+          <icon name="trash" class="size-4  " />
           Trash
 
           <MenubarShortcut>
@@ -134,8 +144,7 @@ function handleAddClick() {
       <button class="flex mt-2 mb-1 gap-3 w-[98%] justify-self-center btn btn-neutral  " @click="handleAddClick()">
         <icon
           name="add-sm"
-          class="size-5.5 shrink-0 stroke-[1.2] text-nc drop-shadow-sm -ml-4"
-        />
+          class="size-5.5 shrink-0 stroke-[1.2] text-nc drop-shadow-sm -ml-4" />
         New Pocket
       </button>
     </MenubarContent>

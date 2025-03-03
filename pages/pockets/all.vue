@@ -15,9 +15,11 @@ import TableKey from 'components/table/components/TableKey.vue'
 import TablePin from 'components/table/components/TablePin.vue'
 import GridNoRows from 'components/table/components/NoPocketsOverlay.vue'
 
+const emit = defineEmits(['update:gridApi'])
+
 definePageMeta({
   path: '/pockets',
-   title: 'All'
+  title: 'All',
 })
 
 defineExpose({
@@ -45,7 +47,6 @@ const pocketData = ref(null)
 const selectData = ref(null)
 const gridApi = shallowRef<GridApi | null>(null)
 
-const emit = defineEmits(['update:gridApi'])
 async function onGridReady(params: GridReadyEvent) {
   await params.api
   gridApi.value = params.api
@@ -108,8 +109,9 @@ const colDefs = ref<(ColDef | ColGroupDef)[]>([
     cellRenderer: TableIcon,
     sortable: false,
     valueGetter: p => p.data.icon,
-    width: 51,
+    width: 71,
     suppressMovable: true,
+
   },
 
   {
@@ -323,12 +325,12 @@ const pocketContextTarget = ref()
 
 <template>
   <div class="size-full">
-  <PocketContextMenu class="size-full" :pocket-data="pocketData" @update:grid="refreshGrid()">
+    <!--     <PocketContextMenu class="size-full" :pocket-data="pocketData" @update:grid="refreshGrid()"> -->
     <AgGridVue
       :grid-options="gridOptions"
       :theme="theme"
       :column-defs="colDefs"
-      class=".pocket-grid size-full  rounded-2xl   px-12 "
+      class=".pocket-grid size-full  rounded-2xl"
       :tooltip-show-delay="400"
       :no-rows-overlay-component="GridNoRows"
       :row-data="rowData"
@@ -336,10 +338,9 @@ const pocketContextTarget = ref()
       :get-row-id="getRowId"
       @grid-ready="onGridReady"
       @cell-mouse-over="onMouseEnter($event)"
-      @cell-context-menu="handleClick($event)"
-    >
+      @cell-context-menu="handleClick($event)">
     </AgGridVue>
-  </PocketContextMenu>
+    <!--     </PocketContextMenu> -->
   </div>
 </template>
 

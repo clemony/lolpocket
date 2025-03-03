@@ -21,14 +21,17 @@ watch(
 )
 
 const isSliderOpen = ref(false)
+onMounted (() => {
+  ts.isSettingsOpen = true
+})
 </script>
 
 <template>
   <Field class=" w-18 !overflow-auto">
-    <CollapsibleRoot v-model="ts.isSettingsOpen" as-child>
+    <CollapsibleRoot v-model:open="ts.isSettingsOpen" as-child>
       <div class="flex flex-col w-full !p-0 items-center ">
-        <CollapsibleTrigger>
-          <Swap180 :is-open="ts.isSettingsOpen" class="-mt-0.5 !size-14 !!aspect-square -rotate-90 !btn btn-xl " />
+        <CollapsibleTrigger class="btn btn-lg btn-square ">
+          <icon name="up-sm" class="size-6 transition-all duration-300" :class="{ 'rotate-180': !ts.isSettingsOpen }" />
         </CollapsibleTrigger>
         <CollapsibleContent class="CollapsibleContent flex flex-col w-full items-center gap-3   transition-all duration-600 *:transition-all !overflow-auto *duration-200">
           <FontSelect v-model:model-value="pocket.card.font[0]" tip="Title Font" :pocket="pocket" :model="0" @update:model-value="e => pocket.card.font[0] = e" />

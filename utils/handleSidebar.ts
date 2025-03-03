@@ -49,10 +49,4 @@ export const settingLinks = [
     link: '/settings/themes',
     icon: 'teenyicons:paintbucket-outline',
   },
-
-    {
-        name: 'Horkeys',
-        link: '/settings/hotkeys',
-        icon: '',
-    },
 ]

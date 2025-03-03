@@ -46,9 +46,9 @@ const infoRef = ref<InstanceType<typeof SplitterPanel>>()
 
 <template>
   <div class="size-full relative">
-    <videoBackground ref="video" :src="runeVideo" class="  grayscale bg-cover opacity-15 contrast-400 brightness-380  h-full z-0 gradient-mask-t-0 w-full" />
+    <!--     <videoBackground ref="video" :src="runeVideo" class="  grayscale bg-cover opacity-15 contrast-400 brightness-380  h-full z-0 gradient-mask-t-0 w-full" /> -->
     <div
-      class="size-full absolute inset-0 justify-center grid  transition-all duration-300 ease-out  px-8 grid-cols-[94px_1fr_350px]">
+      class="size-full absolute inset-0 justify-center grid  transition-all duration-300 ease-out  pl-8 grid-cols-[94px_1fr_350px]">
       <RuneSetBar :pocket="pocket">
         <RunePanelMenu
           :set="set"
@@ -57,12 +57,12 @@ const infoRef = ref<InstanceType<typeof SplitterPanel>>()
       </RuneSetBar>
 
       <div class="relative size-full justify-center w-full">
-        <div class="flex gap-10 absolute mx-auto inset-0 top-0 left-0 justify-center  max-h-[95vh]">
+        <div class="flex gap-10 absolute inset-0 top-0 left-0 justify-center  max-h-[95vh]">
           <PocketRunePanels :key="set.key" :set="set" :pocket="pocket" />
         </div>
       </div>
 
-      <div ref="infoRef" :default-size="22" class="pt-[7vh] inset-shadow-sm px-14 bg-b1 border-l border-l-b3/80 pb-10">
+      <div ref="infoRef" :default-size="22" class="pt-[7vh] px-14 bg-b1/90 gradient-mask-b-0 backdrop-blur-md  pb-10">
         <RuneData
           :set="set"
           :is-collapsed="isBarCollapsed" />

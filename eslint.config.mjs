@@ -7,10 +7,10 @@ export default antfu({
   ...pluginVue.configs['flat/essential'],
 
   ignores: [
-    '.storage/*',
-    'dist',
-    'node_modules',
-    'schema',
+    './storage/*',
+    './dist',
+    './node_modules',
+    './schema',
   ],
   vue: true,
   rules: {

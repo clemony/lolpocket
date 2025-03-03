@@ -6,93 +6,52 @@ definePageMeta({
 })
 
 const route = useRoute()
-const ss = useSidebarStore()
 
-const isButtonHovered = ref()
-const previousIndex = ref(0)
-const totalTranslateY = ref(0)
-const transitionName = ref('pocket-move-down')
+const pageValue = ref('/')
 
-watch(
-  () => route.path, // Watch the value, not the ref itself
-  (newRoute) => {
-    console.log('💠 - newVal:', newRoute)
-    const newIndex = defaultFolders.findIndex(p => p.link === newRoute)
-    if (newIndex === -1)
-      return
-    const oldIndex = previousIndex.value
-    const diff = newIndex - oldIndex
-    totalTranslateY.value += diff * 30
-    transitionName.value = newIndex > previousIndex.value ? 'pocket-move-up' : 'pocket-move-down'
-    previousIndex.value = newIndex
-  },
-)
-
-const translateY = computed(() => {
-  return `translateY(${totalTranslateY.value}%) `
+const icon = computed (() => {
+  const a = defaultFolders.find(r => r.link == route.path)
+  return a.icon
 })
 
-const NewPocket = defineAsyncComponent(() => import('components/pocket/sheet/NewPocket.vue'))
+function getIcon() {
 
-const ColumnDisplay = defineAsyncComponent(() => import('components/table/panels/ColumnDisplay.vue'))
-
-const { arrowup, arrowdown } = useMagicKeys()
-
-watch(arrowup, (v) => {
-  if (v) {
-    const index = defaultFolders.findIndex(p => p.link === route.path)
-    if (index == 0) {
-      navigateTo(defaultFolders[3].link)
-    }
-    else {
-      navigateTo(defaultFolders[index - 1].link)
-    }
-  }
-})
-
-watch(arrowdown, (v) => {
-  if (v) {
-    const index = defaultFolders.findIndex(p => p.link === route.path)
-    if (index == 3) {
-      navigateTo(defaultFolders[0].link)
-    }
-    else {
-      navigateTo(defaultFolders[index + 1].link)
-    }
-  }
+}
+onMounted (() => {
+  pageValue.value = route.path
 })
 </script>
 
 <template>
-  <div class=" size-full">
-    <NeutralButton
-      class="size-12  aspect-square rounded-full" :class="{ 'bg-neutral/80 text-nc': ss.isSidebarOpen }"
-      @mouseenter="ss.sidebarComponent = NewPocket"
-      @mouseleave="ss.onSidebarButtonLeave()"
-    >
-      <icon
-        name="add-sm"
-        class="size-6  stroke-[1.2]  drop-shadow-sm "
-      />
-    </NeutralButton>
+  <div class="flex  size-full bg-b2/40 gap-6">
+    <div class=" pt-[7.4vh] size-full px-14">
+      <div class="pl-4 mb-1 dst">
+        Pocket Folder
+      </div>
+      <div class="tabs relative  tabs-lift size-full tabs-xl max-h-[82.5vh] drop-shadow-[1px_2px_2px_#00000010] ">
+        <div class="tab dst !overflow-visible  pr-6 after:min-w-80 !border-b-transparent items-start justify-start " role="tab">
+          <div class="absolute pt-2   w-80 top-0 flex gap-4  justify-start flex items-center ">
+            <LittleIcon :icon="icon" class="size-6 dst" />
+            <div class="!leading-none truncate !text-8 capitalize  !opacity-100  tracking-tight  font-semibold !text-bc">
+              {{ route.meta.title.toString() }}
+            </div>
+          </div>
+        </div>
+        <div class="tab-content  " />
 
-    <button class="size-14 pointer-events-auto btn rounded-full" @mouseenter="ss.sidebarComponent = ColumnDisplay" @mouseleave="ss.onSidebarButtonLeave()">
-      <icon
-        name="ph:text-columns-light" class="size-7 dst"
-        :class="{ 'bg-b2/70': ss.isSidebarOpen && ss.sidebarComponent == ColumnDisplay }"
-      />
-    </button>
+        <template v-for="page in defaultFolders" :key="page.name">
+          <input
+            :id="page.link"
+            v-model="pageValue" name="pocket-tabs" type="radio" :value="page.link"
+            role="tab"
+            :aria-label="page.name"
+            class="tab tab-title not-checked:!border-b-transparent   w-49 -ml-1  font-semibold capitalize text-3 text-center " @click="navigateTo(page.link)" />
 
-    <Grow />
-
-    <div class="size-full">
-      <PageHeader :title="route.meta.title.toString()" class="" />
-      <NuxtPage
-        :transition="{
-          name: 'push-up',
-          mode: 'out-in',
-        }"
-      />
+          <div class="tab-content  bg-b1 border-b3 p-0 size-full rounded-tl-box  overflow-hidden ">
+            <LazyNuxtPage />
+          </div>
+        </template>
+      </div>
     </div>
   </div>
 </template>

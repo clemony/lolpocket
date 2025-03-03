@@ -88,10 +88,15 @@ function handleSelect(rune) {
   ts.selectedRune == rune
 }
 
+const runeHovered = ref()
 function onHover(rune) {
+  const thisRune = rune
+  runeHovered.value = rune
   setTimeout(() => {
-    ts.hoveredRune = rune
-  }, 1000)
+    if (runeHovered.value != null && runeHovered.value == thisRune) {
+      ts.hoveredRune = runeHovered.value
+    }
+  }, 2000)
 }
 
 const allRunes = computed (() => {
@@ -103,26 +108,22 @@ const allRunes = computed (() => {
 
 <template>
   <div
-    class="ease -mt-2 justify-center  relative size-full h-fit w-114 max-w-114 rounded-xl  transition-all duration-500 **:select-none"
-  >
+    class="ease -mt-2 justify-center  relative size-full h-fit w-114 max-w-114 rounded-xl  transition-all duration-500 **:select-none">
     <div v-if="pathData && pathData.slots">
       <transition-slide
         :duration="{ enter: 700, leave: 100 }" :offset="{
           enter: ['-100%', 0],
           leave: ['100%', 0],
-        }" group class="flex size-full  flex-col justify-evenly gap-16  rounded-xl  py-12 "
-      >
+        }" group class="flex size-full  flex-col justify-evenly gap-16  rounded-xl  py-12 ">
         <div
           v-for="(slot, i) in pathData.slots" :key="path + i"
-          class=" cursor-pointer flex h-16 justify-evenly gap-3 transition-all duration-500"
-        >
+          class=" cursor-pointer flex h-16 justify-evenly gap-3 transition-all duration-500">
           <div
             v-for="rune in slot.runes"
             :key="rune.id"
 
             v-tippy="rune.name == 'empty' ? 'Select a Path' : rune.name"
-            class="size-fit rounded-full items-center justify-center"
-          >
+            class="size-fit rounded-full items-center justify-center">
             <label
               :data-path="path"
               class=""
@@ -133,8 +134,8 @@ const allRunes = computed (() => {
                 'shadow-warm-2 shadow-warm-2': rune.name != 'empty' && allRunes.includes(rune.id),
               }"
               @mouseover="onHover(rune)"
-              @click.right="handleSelect(rune)"
-            >
+              @mouseleave="runeHovered = null"
+              @click.right="handleSelect(rune)">
               <input
                 type="radio"
                 :name="`${props.type}-${path}-${i}`"
@@ -142,8 +143,7 @@ const allRunes = computed (() => {
                 :checked="path == set.primary.path ? set.primary.runes[i + 1]?.id === rune.id : path == set.secondary.path ? set.secondary.runes[i + 1]?.id === rune.id : false"
                 :disabled="rune.name == 'empty'"
                 class="absolute hidden peer"
-                @change="handleSelection(i + 1, rune)"
-              />
+                @change="handleSelection(i + 1, rune)" />
 
               <Placeholder v-if="rune.name == 'empty'" class="size-17  cursor-not-allowed border border-b3/50 bg-gradient-to-br shadow-inset-sm from-b3/60 to-b3/80" />
               <img
@@ -151,8 +151,7 @@ const allRunes = computed (() => {
                 :src="`/img/runes/${path}/${rune.name.replace(/\s/g, '')}.webp`"
                 :alt="rune.name"
                 class="size-16 "
-                :class="{ ' border-black/50 border !size-15.25 opacity-94 inset-shadow-sm inset-shadow-black ': allRunes.includes(rune.id), 'drop-shadow-[2px_2px_2px_#00000080]': !allRunes.includes(rune.id) }"
-              />
+                :class="{ ' border-black/50 border !size-15.25 opacity-94 inset-shadow-sm inset-shadow-black ': allRunes.includes(rune.id), 'drop-shadow-[2px_2px_2px_#00000080]': !allRunes.includes(rune.id) }" />
 
             </label>
           </div>

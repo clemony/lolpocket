@@ -3,11 +3,11 @@
 @import './abbreviations.css';
 @import './plugins/plugins.css';
 @import './components.css';
-@import './theme.css';
+@import './default-theme.css';
 @import './colors.css';
 @import '../animation/animations.css';
 @import './fonts.css';
-@import './variants.css';
+@import './color-themes.css';
 
 @layer base {
   :root {
@@ -16,14 +16,14 @@
     }
 
 
-  
+  /* inset-0 m-0 h-screen w-screen p-0  */
 
   html,
   body,
   #app {
     font-family: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: var(--text-3);
-    @apply text-3 inset-0 m-0 h-screen w-screen p-0  text-bc selection:bg-neutral/80 selection:text-nc ;
+    @apply text-3  text-bc selection:bg-neutral/80 selection:text-nc ;
     }
 
 

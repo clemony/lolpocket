@@ -34,7 +34,7 @@ watchEffect(() => {
 }) */
 
 const pocket = computed (() => {
-  const regex = /^\/pocket\//
+  const regex = /^\/pocket/
   return route.path.match(regex)
 })
 </script>
@@ -43,11 +43,9 @@ const pocket = computed (() => {
   <Menubar
     v-model:model-value="menubarOpen"
     class="bg-b1/80 w-screen min-w-screen  max-w-screen z-20 h-[5vh] min-h-[5vh] max-h-[5vh] fixed  m-0 flex items-center gap-5 border-b shadow-none !border-b-b2/20 !pt-2 pr-7.5 pl-5.5 outline-hidden backdrop-blur-sm [&_>div]:-mt-px [&_>div]:flex [&_>div]:items-center transition-all duration-400"
-    :class="{ 'bg-b2/10': pocket }"
-  >
+    :class="{ 'bg-b2/10': pocket }">
     <button
-      class=" size-11 mr-8 btn btn-ghost"
-    >
+      class=" size-11 mr-8 btn btn-ghost">
       <NuxtLink to="/">
         <h4 class="drop-shadow-text shadow-none select-none !tracking-normal">
           LP
@@ -62,7 +60,7 @@ const pocket = computed (() => {
       <LazyMenubarSummoner />
     </MenubarMenu>
 
-    <LazyMenubarPocket v-model:model-value="menubarOpen" @update:model-value="menubarOpen = ''" />
+    <LazyMenubarPocket v-model:model-value="menubarOpen" :summoner="summoner" @update:model-value="menubarOpen = ''" />
 
     <MenubarMenu>
       <MenubarTrigger>

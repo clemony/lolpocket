@@ -9,7 +9,7 @@ const useHead = useHeader()
 // const history = router.options.history;
 
 onMounted(async () => {
-  document.documentElement.setAttribute('data-theme', 'daylight')
+  document.documentElement.setAttribute('data-theme', as.dataTheme ? as.dataTheme : 'daylight')
   getPatch()
 })
 </script>

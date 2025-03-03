@@ -5,8 +5,8 @@ export const useAccountStore = defineStore(
   () => {
     const ts = useTempStore()
 
-    const themeClass = ref('data-theme-light')
-    const dataTheme = ref('light')
+    const themeClass = ref('daylight')
+    const dataTheme = ref('daylight')
     const accents = ref('light')
 
     const userAccount = {

@@ -42,9 +42,12 @@ const itemSet = ref(props.set.items)
     ]"
     :offset="[0, -16]"
     group
+    ghost-class="item-set-item-ghost"
+    fallbackClass="item-set-item-fallback"
     filter=".no-drag"
     class="flex   h-fit  flex-wrap justify-start gap-3 group"
     :class="{ 'gap-5!': props.limit }"
+
     @end="onEnd"
     @start="onStart"
     @remove="(evt) => onRemove(evt, itemSet)">
@@ -53,10 +56,12 @@ const itemSet = ref(props.set.items)
       :key="item.cloneId"
       :item="item"
       :pocket="pocket"
-      class="shadow-sm size-full shrink-0 !size-20 "
-      :class="{ 'rotate-out-center': removingItems[item?.id ?? `item-${i}`] }" />
+      class="shadow-sm shrink-0 !size-20 "
+      :class="{ 'rotate-out-center': removingItems[item?.id ?? `item-${i}`] }"
+      @click.prevent="ts.selectedItem = item" />
     <Placeholder class="rounded-lg border-b3 !size-20 shadow-sm  bg-b3/90 inset-shadow-xs group-has-[.sortable-ghost]:hidden" />
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>

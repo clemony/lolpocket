@@ -18,6 +18,7 @@ export default defineAppConfig({
       'x': 'teenyicons:x-outline',
       'and': 'mynaui:ampersand',
       'x-solid': 'teenyicons:x-circle-solid',
+      'info': 'teenyicons:info-outline',
 
       // check
       'tick': 'teenyicons:tick-outline',
@@ -39,7 +40,6 @@ export default defineAppConfig({
       'reset': 'mynaui:refresh',
       'gear': 'ph:gear-six',
       'lines': 'teenyicons:align-text-justify-outline',
-      'info': 'teenyicons:info-outline',
       'filter': 'teenyicons:filter-outline',
       'refresh': 'teenyicons:refresh-alt-outline',
       'copy': 'teenyicons:layers-subtract-outline',

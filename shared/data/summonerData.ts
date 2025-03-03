@@ -14,7 +14,7 @@ export const summoner = {
   ranks: {
     soloDuo: {
       name: 'Solo/Duo',
-      rank: 'diamond',
+      rank: 'iron',
       tier: 4,
       games: 200,
       win: 100,
@@ -23,7 +23,7 @@ export const summoner = {
 
     flex: {
       name: 'Flex',
-      rank: 'platinum',
+      rank: 'challenger',
       tier: 4,
       games: 200,
       win: 150,

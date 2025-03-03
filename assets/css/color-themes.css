@@ -1,12 +1,13 @@
 @import 'tailwindcss';
     
-    @custom-variant light (&:where([data-theme=daylight], [data-theme=daylight] *));
+/*     @custom-variant light (&:where([data-theme=daylight], [data-theme=daylight] *));
 
 @custom-variant dark ( &:where([data-theme=midnight], [data-theme=midnight] *));
+ */
 
-@layer base {
+ @layer base {
 :root{
-:is([data-theme='daylight']),
+:where(html[data-theme='daylight'] *),
 .data-theme-light {
   --b1: oklch(100% 0 0);
   --b2: oklch(95.12% 0 0);
@@ -17,7 +18,7 @@
   --nc: oklch(100% 0 0);
 }
 
-:is([data-theme='dawn']) {
+:where(html[data-theme='dawn'] *) {
   --b1: oklch(97.04% 0.0029 84.56);
   --b2: oklch(94.91% 0.0067 53.44);
   --b3: oklch(89.96% 0.007 67.74);
@@ -26,8 +27,7 @@
   --nc: oklch(97.788% 0.004 56.375);
 }
 
-
-:is([data-theme='dusk']) {
+:where(html[data-theme='dusk'] *) {
   --b1: oklch(30.86% 0.0232 264.15);
   --b2: oklch(28.04% 0.0198 264.18);
   --b3: oklch(26.35% 0.0184 262.18);
@@ -36,7 +36,7 @@
   --nc: oklch(84.8707% 0 0);
 }
 
-:is([data-theme='midnight']) {
+:where(html[data-theme='midnight'] *) {
   --b1: oklch(26% 0 0);
   --b2: oklch(20% 0 0);
   --b3: oklch(14% 0 0);
@@ -46,7 +46,7 @@
 }
 
 
-:is([data-theme='spring']) {
+:where(html[data-theme='spring'] *) {
   --b1: oklch(99% 0.001 12.422);
   --b2: oklch(93% 0.009 12.422);
   --b3: oklch(88% 0.018 12.422);
@@ -55,7 +55,7 @@
   --nc: oklch(92% 0.013 255.508);
 }
 
-:is([data-theme='summer']) {
+:where(html[data-theme='summer'] *) {
   --b1: oklch(98.637% 0.020 90.515);
   --b2: oklch(92.272% 0.029 91.774);
   --b3: oklch(88.133% 0.045 90.856);
@@ -64,7 +64,7 @@
   --nc: oklch(86% 0.005 56.366);
 }
 
-:is([data-theme='autumn']) {
+:where(html[data-theme='autumn'] *) {
 
   --b1: oklch(95.814% 0 0);
   --b2: oklch(89.107% 0 0);
@@ -74,7 +74,7 @@
   --nc: oklch(90.873% 0.007 51.902);
 }
 
-:is([data-theme='winter']) {
+:where(html[data-theme='winter'] *) {
 
 --b1: oklch(95.127% 0.007 260.731);
   --b2: oklch(93.299% 0.01 261.788);
@@ -102,7 +102,7 @@
 
 
 @custom-variant theme-daylight {
-   &:where([data-theme='daylight'] *, [data-theme='daylight']){
+   &:where(html[data-theme='daylight'] *, [data-theme='daylight']){
   --b1: oklch(100% 0 0);
   --b2: oklch(95.12% 0 0);
 
@@ -114,7 +114,7 @@
 }
 
 @custom-variant theme-dawn {
-&:where([data-theme='dawn'] *, [data-theme='dawn']) {
+&:where(html[data-theme='dawn'] *, [data-theme='dawn']) {
   --b1: oklch(97.04% 0.0029 84.56);
   --b2: oklch(94.91% 0.0067 53.44);
   --b3: oklch(89.96% 0.007 67.74);
@@ -125,7 +125,7 @@
 }
 
 @custom-variant theme-dusk{
-&:where([data-theme='dusk'] *, [data-theme='dusk']) {
+&:where(html[data-theme='dusk'] *, [data-theme='dusk']) {
   --b1: oklch(30.86% 0.0232 264.15);
   --b2: oklch(28.04% 0.0198 264.18);
   --b3: oklch(26.35% 0.0184 262.18);
@@ -136,7 +136,7 @@
 }
 
 @custom-variant theme-midnight {
-&:where([data-theme='midnight'] *, [data-theme='midnight'] ) {
+&:where(html[data-theme='midnight'] *, [data-theme='midnight'] ) {
   --b1: oklch(26% 0 0);
   --b2: oklch(20% 0 0);
   --b3: oklch(14% 0 0);
@@ -147,13 +147,10 @@
 }
 
 @theme inline {
-
   --color-b1: var(--b1);
   --color-b2: var(--b2);
   --color-b3: var(--b3);
   --color-bc: var(--bc);
   --color-neutral: var(--neutral);
   --color-nc: var(--nc);
-
-
 }

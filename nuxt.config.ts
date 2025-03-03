@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     'nuxt-aos',
     'nuxt-svgo',
-    'nuxt-tailwindcss4',
+   // 'nuxt-tailwindcss4',
     // '@nuxt/image',
   ],
 
@@ -44,7 +44,7 @@ export default defineNuxtConfig({
   },
 
   typescript: {
-    typeCheck: true,
+   // typeCheck: true,
   },
 
   supabase: {
@@ -100,7 +100,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
 
   imports: {
-    dirs: ['shared/supabase', '@vueuse/components', 'stores'],
+   // dirs: ['shared/supabase', '@vueuse/components', 'stores'],
   },
 
   webpack: {
@@ -139,7 +139,7 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: false,
+    enabled: true,
     componentInspector: false,
     viteInspect: false,
   },

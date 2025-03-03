@@ -38,9 +38,9 @@ const ss = useSidebarStore()
 <template>
   <main class="h-screen w-screen ">
     <MainMenubar />
+    <NuxtLoadingIndicator />
     <div
-      class="bg-b1 h-screen w-full relative"
-    >
+      class="bg-b1 h-screen w-full relative">
       <Sonner
         position="top-right"
 
@@ -49,8 +49,7 @@ const ss = useSidebarStore()
           descriptionClass: 'my-toast-description',
         }"
         :expand="true"
-        :duration="6000"
-      />
+        :duration="6000" />
 
       <LazyNewFolderDialog />
       <LazyNewPocketDialog />

@@ -8,7 +8,7 @@ const props = defineProps<{
 <template>
   <div class="rounded-box p-i-c **:select-none h-auto pb-5 pt-4 shadow-smooth shadow-black/10 drop-shadow-md px-6 backdrop-blur-md w-fit  ">
     <div class="w-full justify-start">
-      <span class="text-5 dst font-medium" :style="{ fontFamily: pocket.card.font[1] }"> {{ set.name }}</span>
+      <span class="text-5 dst font-medium" :style="{ fontFamily: pocket.card.font[1] || 'Geist Mono' }"> {{ set.name }}</span>
     </div>
     <div class="flex gap-2 mt-2">
       <template v-if="set && set.items.length">

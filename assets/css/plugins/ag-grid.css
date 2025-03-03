@@ -34,13 +34,13 @@
 }
 
 .ag-cell.ag-column-first {
-  .ag-cell.ag-column-last {
+
   @apply !pl-6;
 }
 
+  .ag-cell.ag-column-last {
   @apply !pr-6;
 }
-
 .icon-class {
   @apply !py-1 !pr-1 !pl-3;
 }

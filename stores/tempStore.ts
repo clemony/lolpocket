@@ -119,7 +119,7 @@ export const useTempStore = defineStore(
     persist: {
       storage: piniaPluginPersistedstate.sessionStorage(),
       key: 'tempStore',
-      pick: ['sessionInfo', 'userOS'],
+      pick: ['sessionInfo'],
     },
   },
 )

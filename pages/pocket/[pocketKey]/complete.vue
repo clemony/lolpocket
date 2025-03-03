@@ -8,13 +8,14 @@ definePageMeta({
 const ts = useTempStore()
 const downloadClicked = refAutoReset(false, 1000)
 
+const pocket = ref(props.pocket)
 const isMenuOpen = ref(true)
 const isSettingsOpen = ref(true)
 </script>
 
 <template>
-  <div class="h-full w-full grid overflow-hidden transition-all  duration-400  relative px-14  py-8 " :class="{ 'justify-center grid-cols-[30px_1fr_80px]': !isMenuOpen, 'grid-cols-[370px_1fr_80px]': isMenuOpen }">
-    <div class="flex flex-nowrap flex-col gap-9 items-center transition-all  *:transition-all *:duration-400 duration-400" :class="{ '*:not-first:opacity-0': !isMenuOpen }">
+  <div class="h-full w-full grid overflow-hidden transition-all  duration-400  relative  py-8 " :class="{ 'justify-center grid-cols-[30px_1fr_80px]': !isMenuOpen, 'grid-cols-[380px_1fr_100px]': isMenuOpen }">
+    <div class="flex flex-nowrap pl-14 flex-col gap-9 items-center transition-all  *:transition-all *:duration-400 duration-400" :class="{ '*:not-first:opacity-0': !isMenuOpen }">
       <div class="flex items-center transition-all duration-400 w-full gap-8" :class="{ 'justify-center': !isMenuOpen }">
         <Swap180 class="-mt-0.5 btn-ghost ">
           <input v-model="isMenuOpen" type="checkbox" class="peer hidden" />
@@ -53,14 +54,14 @@ const isSettingsOpen = ref(true)
         :title="pocket.complete.items[i] && pocket.complete.items[i].name ? pocket.complete.items[i].name : 'Item Set'" class="p-0" :pocket="pocket" :index="useToNumber(i).value" />
     </div>
 
-    <div class=" pl-20 pr-10  overflow-hidden items-start  size-full justify-center flex flex-nowrap">
+    <div class=" pl-14 pr-10  overflow-hidden items-start  size-full justify-center flex flex-nowrap">
       <div class="h-full grow " />
       <div class="max-h-[78vh] h-full aspect-square self-start self-center w-auto">
         <CompleteCard v-model:download="downloadClicked" :pocket="pocket" />
       </div>
       <div class="h-full grow " />
     </div>
-    <div class="justify-self-end ">
+    <div class="justify-center h-full overflow-y-auto">
       <CardSettings :pocket="pocket" @download="downloadClicked = true" />
     </div>
   </div>

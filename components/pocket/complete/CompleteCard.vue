@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { fonts } from 'components/app/ui/input/fonts'
+import { fonts } from 'components/pocket/menu/fonts'
 import * as htmlToImage from 'html-to-image'
 import { toBlob, toJpeg, toPixelData, toPng, toSvg } from 'html-to-image'
 import download from 'downloadjs'
@@ -36,9 +36,6 @@ const pocketCardRef = ref<HTMLElement>(null)
 
 async function downloadPng() {
   await pocketCardRef.value
-  console.log('💠 - cardName - cardName :', cardName)
-  console.log('💠 - downloadPng - downloadPng:', downloadPng)
-  console.log('💠 - downloadPng - pocketCardRef.value:', pocketCardRef.value)
   htmlToImage.toPng(pocketCardRef.value, { quality: 0.95, backgroundColor: '#FFFFFF' })
     .then(dataUrl => download(dataUrl, `${cardName.value}.png`))
 }
@@ -46,8 +43,6 @@ async function downloadPng() {
 watchEffect(() => {
   props.download ? downloadPng() : ''
 })
-
-//
 </script>
 
 <template>
@@ -81,7 +76,7 @@ watchEffect(() => {
 
         <div class="h-auto space-y-12 mt-20">
           <template v-for="(set, i) in pocket.complete.items" :key="i">
-            <template v-if="set && set.items.length && set != null && set.items[0].id != 0">
+            <template v-if="set && set != undefined && set.items.length && set != null && set.items[0] != undefined && set.items[0].id != 0">
               <CompleteItemSets :set="pocket.complete.items[i]" :pocket="pocket" />
             </template>
           </template>

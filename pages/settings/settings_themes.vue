@@ -6,10 +6,10 @@ definePageMeta({
 
 const as = useAccountStore()
 
-function handleChange(newData, newName) {
-  as.dataTheme = newData
-  as.themeClass = newName
-  document.documentElement.setAttribute('data-theme', newData)
+function handleChange(theme) {
+  as.dataTheme = theme
+  as.themeClass = theme
+  document.documentElement.setAttribute('data-theme', theme)
 }
 </script>
 
@@ -17,7 +17,7 @@ function handleChange(newData, newName) {
   <div class="flex gap-12 flex-wrap">
     <label
       v-for="theme in themes"
-      :key="theme.name"
+      :key="theme.name" :class="`theme-${theme.name}`"
       class="cursor-pointer min-w-110 w-110 max-w-110">
       <input
         v-model="as.dataTheme"
@@ -25,7 +25,7 @@ function handleChange(newData, newName) {
         class="peer hidden"
         name="theme-changer"
         :value="theme.name"
-        @change="handleChange(theme.name, theme.id)" />
+        @change="handleChange(theme.name)" />
       <SettingCard
         :key="theme.name"
         :title="theme.name"
