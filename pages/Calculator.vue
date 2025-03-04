@@ -1,21 +1,16 @@
 <script setup lang="ts"></script>
 
 <template>
-<div class="flex items-center justify-center pt-230">
-
-  <!-- name of each tab group should be unique -->
-<div class="tabs tabs-lift">
-  <input type="radio" name="my_tabs_3" class="tab" aria-label="Tab 1" />
-  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
-
-  <input type="radio" name="my_tabs_3" class="tab" aria-label="Tab 2" checked="true" />
-  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 2</div>
-
-  <input type="radio" name="my_tabs_3" class="tab" aria-label="Tab 3" />
-  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
-</div>
-</div>
-
+  <div
+    class="flex pt-[8.5vh] px-28 h-screen w-screen">
+    <div class="w-full">
+      <h1 class="text-9">
+        Calculator
+      </h1>
+    </div>
+    <div class="flex items-center justify-center pt-230">
+    </div>
+  </div>
 </template>
 
 <style scoped>

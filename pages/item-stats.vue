@@ -160,7 +160,7 @@ const gridApi = shallowRef<GridApi | null>(null)
 async function onGridReady(params: GridReadyEvent) {
   await params.api
   gridApi.value = params.api
-  ts.itemGridApi = gridApi.value
+  is.itemGridApi = gridApi.value
 }
 ModuleRegistry.registerModules([AllCommunityModule])
 defineExpose({
@@ -171,7 +171,7 @@ defineExpose({
   <div class="size-full">
     <MenubarSpacer />
     <div class="flex size-full">
-      <TableBar :api="ts.itemGridApi"/>
+      <TableBar :api="is.itemGridApi" />
       <AgGridVue
         :grid-options="gridOptions"
         :theme="theme"
@@ -179,8 +179,7 @@ defineExpose({
         class="size-full border-t border-b2 border-l"
         :tooltip-show-delay="400"
 
-        @grid-ready="onGridReady"
-      >
+        @grid-ready="onGridReady">
       </AgGridVue>
     </div>
   </div>

@@ -18,7 +18,7 @@ definePageMeta({
       <RunePanels />
 
       <div class="ml-12">
-        <RuneData v-if="ts.hoveredRune" />
+        <RuneData v-if="rs.hoveredRune" />
       </div>
     </div>
   </div>

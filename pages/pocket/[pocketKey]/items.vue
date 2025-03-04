@@ -1,10 +1,4 @@
 <script setup lang="ts">
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from 'components/base/resizable'
-
 const props = defineProps<{
   pocket: pocket
 }>()
@@ -15,40 +9,27 @@ definePageMeta({
 
 const ts = useTempStore()
 const pocket = ref(props.pocket)
+
+const isOpen = ref(false)
 </script>
 
 <template>
   <div class="size-full overflow-hidden  ">
     <ResizablePanelGroup
       direction="horizontal"
-      class="size-full"
-    >
+      class="size-full">
       <ResizablePanel :default-size="48" :min-size="20" class="bg-b1   flex justify-center relative">
-        <ResizablePanelGroup
-          direction="vertical"
-          class="size-full"
-        >
-          <ResizablePanel class="bg-b1   flex justify-center relative">
-            <ItemSets :pocket="pocket" />
-          </ResizablePanel>
-
-          <ResizableHandle
-            class="bg-b2"
-          />
-
-          <ResizablePanel collapsible :default-size="6" :min-size="6" :collapsed-size="6" class="relative">
-            ok
-          </ResizablePanel>
-        </ResizablePanelGroup>
+        <ItemSets :pocket="pocket" />
       </ResizablePanel>
       <ResizableHandle
-        class="bg-b2"
-      />
-      <ResizablePanel :min-size="10" class="bg-b1 relative  overflow-hidden">
-        <PocketItemFilter :pocket="pocket" />
+        class="bg-b2" />
+      <ResizablePanel :min-size="10" class=" relative  overflow-hidden flex flex-col  justify-end ">
+        <PocketItemFilter :pocket="pocket">
+          <ItemInfoPane @update:open="(e) => isOpen = e" />
+        </PocketItemFilter>
 
-        <div class="h-full z-0 w-full relative flex justify-center overflow-y-auto  rounded-2xl ">
-          <PocketItemList :pocket="pocket" />
+        <div class="h-full z-0 w-full  pb-24 flex relative  transition-all duration-500 justify-center overflow-y-auto   ">
+          <PocketItemList :pocket="pocket" :class="{ 'pt-144': isOpen }" />
         </div>
       </ResizablePanel>
     </ResizablePanelGroup>

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { themes } from 'assets/css/themes'
-
 definePageMeta({
   name: 'themes',
   path: '/settings/themes',
@@ -8,10 +6,10 @@ definePageMeta({
 
 const as = useAccountStore()
 
-function handleChange(newData, newName) {
-  as.dataTheme = newData
-  as.themeClass = newName
-  document.documentElement.setAttribute('data-theme', newData)
+function handleChange(theme) {
+  as.dataTheme = theme
+  as.themeClass = theme
+  document.documentElement.setAttribute('data-theme', theme)
 }
 </script>
 
@@ -19,35 +17,30 @@ function handleChange(newData, newName) {
   <div class="flex gap-12 flex-wrap">
     <label
       v-for="theme in themes"
-      :key="theme.name"
-      class="cursor-pointer min-w-110 w-110 max-w-110"
-    >
+      :key="theme.name" :class="`theme-${theme.name}`"
+      class="cursor-pointer min-w-110 w-110 max-w-110">
       <input
         v-model="as.dataTheme"
         type="radio"
         class="peer hidden"
         name="theme-changer"
         :value="theme.name"
-        @change="handleChange(theme.name, theme.id)"
-      />
+        @change="handleChange(theme.name)" />
       <SettingCard
         :key="theme.name"
         :title="theme.name"
         :description="theme.description"
-        class="select-none h-62 pb-1"
-      >
+        class="select-none h-62 pb-1">
         <template #header-badge>
 
           <input
             type="checkbox"
-            :checked="theme.name == as.dataTheme" class="checkbox checkbox-neutral rounded-full" :class="{ invisible: theme.name != as.dataTheme }"
-          />
+            :checked="theme.name == as.dataTheme" class="checkbox checkbox-neutral rounded-full" :class="{ invisible: theme.name != as.dataTheme }" />
 
         </template>
         <div
           class="bg-b1 text-bc shadow-warm border-b3 h-20 w-full overflow-hidden rounded-xl border"
-          :data-theme="theme.name"
-        >
+          :data-theme="theme.name">
           <div class="grid h-full w-full grid-cols-[1fr_4fr]">
             <div class="bg-b2 grid size-full place-items-center"></div>
             <div class="flex h-full items-center gap-2 px-5 font-medium">

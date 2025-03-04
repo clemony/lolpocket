@@ -4,7 +4,7 @@ const ds = useDataStore()
 
 definePageMeta({
   name: 'item-data',
-  path: '/items'
+  path: '/items',
 })
 
 const items = computed(() => [...(ds.SRitems || [])])
@@ -31,10 +31,10 @@ const listKey = ref(0)
 function resetItems() {
   sortItemsAZ.value = 0
   sortPrice.value = 0
-  ts.filterItemStats = []
-  ts.filterItemCats = []
-  ts.filterItemTypes = ''
-  ts.itemSearchResult = []
+  is.filterItemStats = []
+  is.filterItemCats = []
+  is.filterItemTypes = ''
+  is.itemSearchResult = []
   listKey.value = listKey.value + 1
 }
 </script>
@@ -43,8 +43,7 @@ function resetItems() {
   <NuxtLayout
     name="split-layout"
     title="Items"
-    class="pr-0"
-  >
+    class="pr-0">
     <template #1>
       <div class="text-4 drop-shadow-text flex h-28 items-center px-2 font-serif tracking-wide">
         {{ captions }}
@@ -59,8 +58,7 @@ function resetItems() {
             icon1="qlementine-icons:sort-alpha-asc-16"
             icon2="qlementine-icons:sort-alpha-desc-16"
             @click.stop
-            @update:model="(v) => (ts.sortItemsAZ = v)"
-          />
+            @update:model="(v) => (is.sortItemsAZ = v)" />
           <ToggleStateButton
             class="join-item rounded-l-none"
             :model="sortPrice"
@@ -68,15 +66,13 @@ function resetItems() {
             icon2="bi:sort-numeric-up"
             :icon-size="7"
             @click.stop
-            @update:model="(v) => (ts.sortPrice = v)"
-          />
+            @update:model="(v) => (ts.sortPrice = v)" />
         </div>
-        <Button
-          variant="outline"
-          @click="resetItems"
-        >
+        <button
+          class="btn-outline btn border-b3"
+          @click="resetItems">
           Reset Filters
-        </Button>
+        </button>
       </div>
       <h2 class="drop-shadow-text mt-7 px-2 tracking-tight">
         Item Stats
@@ -85,25 +81,21 @@ function resetItems() {
       <span class="h-1 w-full" />
       <CheckboxFilterList
         :source="itemCategories"
-        @update:model="(e) => (ts.filterItemCats = e)"
-      />
+        @update:model="(e) => (is.filterItemCats = e)" />
     </template>
 
     <template #2>
       <RadioFilterList
         :types="itemTypes"
         class="pl-2"
-        @update:model="(e) => (ts.filterItemTypes = e)"
-      />
+        @update:model="(e) => (is.filterItemTypes = e)" />
       <div
         id="item-results"
         class=".item-results max-h-inherit h-[calc(100vh-11.2rem)] overflow-auto"
-        as-child
-      >
+        as-child>
         <ItemList
           :list-key="listKey"
-          class="pt-5 pr-6"
-        />
+          class="pt-5 pr-6" />
       </div>
     </template>
   </NuxtLayout>
