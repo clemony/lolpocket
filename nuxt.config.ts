@@ -10,29 +10,18 @@ export default defineNuxtConfig({
     '@nuxtjs/supabase',
     '@morev/vue-transitions/nuxt',
     'pinia-plugin-persistedstate/nuxt',
-    // '@nuxt/devtools',
+    '@nuxt/devtools',
     '@nuxt/eslint',
     'vue-sonner/nuxt',
     '@nuxt/icon',
     'nuxt-aos',
     'nuxt-svgo',
-   // 'nuxt-tailwindcss4',
-    // '@nuxt/image',
   ],
 
   icon: {
     provider: 'iconify',
     serverBundle: false,
   },
-
-  /*   image: {
-    quality: 80,
-    format: ['webp', 'png'],
-    domains: [
-      'https://universe.communitydragon.org',
-      'https://raw.communitydragon.org',
-    ],
-  }, */
 
   vite: {
     plugins: [
@@ -44,7 +33,7 @@ export default defineNuxtConfig({
   },
 
   typescript: {
-   // typeCheck: true,
+    typeCheck: true,
   },
 
   supabase: {
@@ -62,12 +51,6 @@ export default defineNuxtConfig({
       redirectUrl: 'http://localhost:8080/summoner',
     },
   },
-
-  /*   postcss: {
-    plugins: {
-      '@tailwindcss/postcss': {},
-    },
-  }, */
 
   vueTransitions: {
     defaultProps: {
@@ -100,7 +83,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
 
   imports: {
-   // dirs: ['shared/supabase', '@vueuse/components', 'stores'],
+    dirs: ['shared/supabase', '@vueuse/components', 'stores'],
   },
 
   webpack: {
@@ -108,29 +91,6 @@ export default defineNuxtConfig({
       vue: {
         hotReload: true,
       },
-    },
-  },
-
-  /*   routeRules: {
-    '/': { prerender: true },
-    '/pocket': { ssr: false },
-    '/Runes': { ssr: false },
-    '/Docs': { ssr: true },
-    '/About': { ssr: true },
-    '/Calculator': { ssr: false },
-    '/Champions': { ssr: false },
-    '/Items': { ssr: false },
-    '/pocket/**': { ssr: false },
-    '/summoner/**': { ssr: false },
-    '/Favorites': { ssr: false },
-    '/Settings': { ssr: true },
-    '/Spells': { ssr: false },
-    '/admin/**': { ssr: false },
-  }, */
-
-  nitro: {
-    prerender: {
-      // ignore: ['/dynamic'],
     },
   },
 

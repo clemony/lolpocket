@@ -11,13 +11,13 @@ const props = defineProps<{
 const emit = defineEmits(['update:open'])
 const ds = useDataStore()
 const as = useAccountStore()
-const ts = useTempStore()
-const item = ref(ts.selectedItem || getRandom(ds.SRitems))
+const is = useItemStore()
+const item = ref(is.selectedItem || getRandom(ds.SRitems))
 const stats = ref(null)
 const effects = ref(null)
 const recipe = ref(null)
 watch(
-  () => ts.selectedItem,
+  () => is.selectedItem,
   (newVal) => {
     item.value = newVal
     effects.value = item.value.effects ? item.value.effects : null
@@ -66,10 +66,10 @@ watch(
 )
 
 onMounted(() => {
-  item.value = ts.selectedItem != null ? ts.selectedItem : ts.selectedItem = getRandom(ds.SRitems)
+  item.value = is.selectedItem != null ? is.selectedItem : is.selectedItem = getRandom(ds.SRitems)
 })
 
-const target = ref<HTMLDivElement>('target')
+const target = ref()
 
 onClickOutside(target, event => isOpen.value = false)
 </script>

@@ -7,7 +7,7 @@ const props = defineProps<{
   modelValue?: string
 }>()
 const ds = useDataStore()
-const ts = useTempStore()
+const rs = useRuneStore()
 // const pocket = ref(props.pocket)
 
 // const pathSet = ref(props.pathSet == 1 ? 'primary' : 'secondary')
@@ -57,13 +57,13 @@ onMounted(() => {
 })
 
 function handleSelect(rune) {
-  ts.selectedRune == rune
+  rs.selectedRune == rune
 }
 
 function onHover(rune) {
   setTimeout(() => {
-    ts.hoveredRune = rune
-    console.log('💠 - onHover - ts.hoveredRune:', ts.hoveredRune)
+    rs.hoveredRune = rune
+    console.log('💠 - onHover - rs.hoveredRune:', rs.hoveredRune)
   }, 1000)
 }
 </script>
@@ -71,8 +71,7 @@ function onHover(rune) {
 <template>
   <div
     class="ease gradient border-b3 shadow-smooth relative size-full h-fit w-120 max-w-120 rounded-xl bg-clip-border transition-all duration-500"
-    :data-path="selectedPath"
-  >
+    :data-path="selectedPath">
     <div class="from-b1/20 via-b1/90 to-b1 flex size-full flex-col justify-center gap-16 justify-self-center rounded-xl bg-linear-to-b via-25% py-12">
       <div
         v-for="(slot, i) in selectedPathData.slots"
@@ -82,8 +81,7 @@ function onHover(rune) {
           'h-22 w-auto justify-between': slot === selectedPathData.slots[0],
 
           'hidden': slot === selectedPathData.slots[0] && props.pathSet == 2,
-        }"
-      >
+        }">
         <label
           v-for="rune in slot.runes"
           :key="rune.id"
@@ -99,21 +97,18 @@ function onHover(rune) {
           }"
 
           @mouseover="onHover(rune)"
-          @click.right="handleSelect(rune)"
-        >
+          @click.right="handleSelect(rune)">
           <input
             v-model="selectedRunes[i]"
             type="radio"
             :name="`slot-${i}`"
             :value="rune"
             class="absolute hidden"
-            @change="handleSelection(i, rune)"
-          />
+            @change="handleSelection(i, rune)" />
           <img
             :src="`/img/runes/${selectedPath}/${rune.name.replace(/\s/g, '')}.webp`"
             :alt="rune.name"
-            class="size-full"
-          />
+            class="size-full" />
         </label>
       </div>
     </div>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Cross2Icon } from '@radix-icons/vue'
+
 import {
   DialogClose,
   DialogContent,

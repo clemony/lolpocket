@@ -4,7 +4,7 @@ const props = defineProps<{
   column: any
 }>()
 
-const ts = useTempStore()
+const is = useItemStore()
 const ps = usePocketStore()
 
 const api = shallowRef()
@@ -49,13 +49,13 @@ const id = computedAsync (() => {
 
 onMounted (async () => {
   if (props.grid == 'item') {
-    api.value = ts.itemGridApi
+    api.value = is.itemGridApi
   }
   else if (props.grid == 'pocket') {
     api.value = ps.pocketGridApi
   }
   await api.value
-  //console.log('💠 - column:', props.column)
+  // console.log('💠 - column:', props.column)
 })
 </script>
 

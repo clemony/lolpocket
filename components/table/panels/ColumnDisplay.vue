@@ -2,14 +2,14 @@
 const props = defineProps<{
   grid: string
 }>()
-const ts = useTempStore()
+const is = useItemStore()
 const ps = usePocketStore()
 const api = shallowRef()
 
 onMounted (async () => {
-    console.log("💠 - onMounted - props.grid:", props.grid)
+  console.log('💠 - onMounted - props.grid:', props.grid)
   if (props.grid == 'item') {
-    api.value = ts.itemGridApi
+    api.value = is.itemGridApi
   }
   else if (props.grid == 'All') {
     api.value = ps.pocketGridApi
@@ -35,7 +35,7 @@ const columns = computedAsync (() => {
 watch(
   () => columns.value,
   (newVal) => {
-    //console.log('💠 - newVal:', newVal)
+    // console.log('💠 - newVal:', newVal)
   },
 )
 </script>

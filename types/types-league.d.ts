@@ -1,73 +1,5 @@
 declare global {
 
-  interface RiotAccount {
-    puuid: string
-    gameName: string
-    tagLine: string
-    profileIconId: string
-    summonerLevel: number
-    region: string
-  }
-
-  interface pocket {
-    key: string
-    name: string
-    roles: string[]
-    champions: {
-      children: Champion[]
-      default: Champion
-    }
-    items: {
-      sets: ItemSet[]
-      default: string
-    }
-    runes: {
-      sets: RuneSet[]
-      default: string
-    }
-    spells: Spell[]
-    dateCreated: dateObject
-    dateUpdated: dateObject
-    tags: string[]
-    location: {
-      pinned: number
-      folder: string
-    }
-    icon: string
-    notes: string[]
-    card: {
-      splash: string
-      align: string
-      color: string
-      filter: boolean
-      font: {
-        0: string
-        1: string
-      }
-    }
-    complete: {
-      items: {
-        0: ItemSet
-        1: ItemSet
-        2: ItemSet
-      }
-      runes: RuneSet
-    }
-  }
-
-  interface PocketComponent {
-    ref: MaybeRefOrGetter
-    linkRef: MaybeRef
-    buttonRef: MaybeRef
-    icon: string
-    title: string
-  }
-
-  interface SidebarComponent {
-    button: HTMLButtonElement | null
-    component: any // Adjust as needed
-  }
-
   interface Role {
     name: string
     icon: string
@@ -79,65 +11,6 @@ declare global {
     cd: number | string
     recharge?: number | string
     charges?: number | string
-  }
-
-  interface ItemSet {
-    name: string
-    key: string
-    items: Item[]
-  }
-
-  interface DefaultItem {
-    name: string
-    img: string
-    buy: number
-    sell: number
-    stats: string
-    passive: string
-    active: string
-    type: string
-    cat: string
-    wiki: string
-    id: number
-    count: number
-  }
-
-  interface RuneSet {
-    name: string
-    key: string
-    primary: {
-      path: string
-      runes: {
-        0: Rune
-        1: Rune
-        2: Rune
-        3: Rune
-
-      }
-    }
-    secondary: {
-      path: string
-      runes: {
-        1: Rune
-        2: Rune
-        3: Rune
-      }
-    }
-    shards: {
-      0: Shard
-      1: Shard
-      2: Shard
-    }
-  }
-
-  interface Shard {
-    name: string
-    stats: string
-    slotID: number
-    slotName: string
-    type: string
-    icon: string
-    color: string
   }
 
   interface summoner {
@@ -155,7 +28,7 @@ declare global {
       soloDuo: queue
       flex: queue
     }
-    mostPlayed?: [champPlayCount]
+    mostPlayed?: champPlayCount[]
     roles: {
       role: string
     }
@@ -180,5 +53,6 @@ declare global {
     loss: number
     kda: string
   }
+
 }
 export { }

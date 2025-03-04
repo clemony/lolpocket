@@ -6,7 +6,7 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits(['clicked'])
-
+const rs = useRuneStore()
 const pocket = ref(props.pocket)
 const isCollapsed = computed (() => {
   return props.isCollapsed
@@ -14,14 +14,14 @@ const isCollapsed = computed (() => {
 
 const ts = useTempStore()
 function handleDelete() {
-  ts.selectedRuneSet = props.pocket.runes.sets[0]
+  rs.selectedRuneSet = props.pocket.runes.sets[0]
   deleteRuneSet(props.pocket, props.set)
 }
 
 function handleNewSet() {
   const a = newRuneSet(pocket.value.key)
   /*  nextTick(() => {
-    ts.selectedRuneSet = a
+    rs.selectedRuneSet = a
   }) */
 }
 </script>

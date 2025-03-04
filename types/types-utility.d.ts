@@ -46,29 +46,15 @@ declare global {
     heart?: boolean
   }
 
-  interface SidebarItem {
-    name?: string
-    link?: string
-    key?: string
-    buttonRef?: any
-    icon?: string
-    shortcut?: string
-  }
-
   interface Category {
     id: string
     displayName?: string
-    checked: boolean // Add the checked property
+    checked: boolean
     color?: string
     champions?: Array<string>
   }
 
   type categories = Category[]
-
-  type CallbackFunctionVariadicAnyReturn = (...args: any[]) => any
-  type CallbackFunctionVariadic = (...args: any[]) => void
-
-  type navData = navGroup[]
 
   interface Module {
     name?: string
@@ -82,43 +68,11 @@ declare global {
 
   type ModuleList = (Module | null)[]
 
-  interface navGroup {
-    name: string
-    url?: string
-    icon?: string
-    array?: Array<any>
-    isActive?: boolean
-    open?: boolean
-    items?: navItem[]
-    submenu?: navGroup[]
-  }
-
-  interface navItem {
-    name: string
-    url?: string
-    icon?: string
-    isActive?: boolean
-    hash?: string
-    ref?: any
-    isVisible?: boolean
-    type?: string
-    trigger?: boolean
-    data?: Array<any>
-  }
-
-  interface drawer {
-    component?: any
-    id?: string
-    direction?: string
-    title?: string
-    description?: string
-    submitText?: string
-  }
-
   interface dateObject {
     patch: string
     date: string
     time: string
   }
+
 }
-export {}
+export { }

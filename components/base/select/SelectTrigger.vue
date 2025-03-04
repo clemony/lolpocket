@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ChevronDownIcon } from '@radix-icons/vue'
+
 import { SelectIcon, SelectTrigger, useForwardProps } from 'reka-ui'
 import type { SelectTriggerProps } from 'reka-ui'
 import { computed } from 'vue'

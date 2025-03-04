@@ -18,7 +18,7 @@ export function createItem(): Item {
     stats: {},
     effects: {},
     type: '',
-    recipe: [<Item[]>([])],
+    // recipe: [<Item[]>([])],
     id: 0,
     removed: '',
     menu: {},
@@ -28,6 +28,7 @@ export function createItem(): Item {
     itemlimit: '',
     limit: '',
     modes: {},
+    cloneId: '',
   }
 }
 export function newItemSet(pocketKey?, setName?) {

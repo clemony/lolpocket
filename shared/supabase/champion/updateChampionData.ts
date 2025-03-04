@@ -1,4 +1,4 @@
-import { getWikiData } from '../getWikiData'
+import { getWikiData } from 'shared/supabase/getWikiData'
 
 export async function patchChampionDatabase() {
   const supabase = useSupabaseClient()

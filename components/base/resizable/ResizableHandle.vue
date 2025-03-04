@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { DragHandleDots2Icon } from '@radix-icons/vue'
+
 import { SplitterResizeHandle, useForwardPropsEmits } from 'reka-ui'
 import type { SplitterResizeHandleEmits, SplitterResizeHandleProps } from 'reka-ui'
 import { computed } from 'vue'

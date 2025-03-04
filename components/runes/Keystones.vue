@@ -5,7 +5,7 @@ const props = defineProps<{
 }>()
 
 const ds = useDataStore()
-const ts = useTempStore()
+const rs = useRuneStore()
 const paths = [...ds.paths]
 const path = ref(props.path ?? '')
 const set = ref(props.set)
@@ -54,7 +54,7 @@ onMounted(async () => {
 })
 
 function handleSelect(rune) {
-  ts.selectedRune == rune
+  rs.selectedRune == rune
 }
 
 function handleKeystone(rune) {
@@ -68,7 +68,7 @@ function onHover(rune) {
   runeHovered.value = rune
   setTimeout(() => {
     if (runeHovered.value != null && runeHovered.value == thisRune) {
-      ts.hoveredRune = runeHovered.value
+      rs.hoveredRune = runeHovered.value
     }
   }, 2000)
 }

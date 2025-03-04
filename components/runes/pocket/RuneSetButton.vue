@@ -6,7 +6,7 @@ const props = defineProps<{
   pathClass?: HTMLAttributes['class']
   noCheck?: boolean
 }>()
-const ts = useTempStore()
+const rs = useRuneStore()
 
 const pocket = ref(props.pocket)
 
@@ -22,16 +22,16 @@ const showEmptySecondary = computedAsync (() => {
   return set.value.secondary.runes[3].name == 'empty' && set.value.secondary.runes[1].name == 'empty' && set.value.secondary.runes[2].name == 'empty'
 })
 function handleSet() {
-  ts.selectedRuneSet = set.value
-  console.log('💠 - handleSet - ts.selectedRuneSet:', ts.selectedRuneSet)
+  rs.selectedRuneSet = set.value
+  console.log('💠 - handleSet - rs.selectedRuneSet:', rs.selectedRuneSet)
 }
 
 const selectedSet = computedAsync (() => {
-  return ts.selectedRuneSet
+  return rs.selectedRuneSet
 })
 
 onMounted (async () => {
-  await ts.selectedRuneSet
+  await rs.selectedRuneSet
 })
 </script>
 
@@ -40,21 +40,21 @@ onMounted (async () => {
     v-if="set"
     :key="set.key"
     class=" shadow-outline shadow-black/15 "
-    :class="cn('relative !pointer-events-auto size-18 grid aspect-square cursor-pointer   place-items-center overflow-visible items-center rounded-full transition-all duration-500 ring-1 ring-b2 ', props.class, { 'shadow-black': set.key == selectedSet })"
+    :class="cn('relative !pointer-events-auto size-18 grid aspect-square cursor-pointer   place-items-center overflow-visible items-center rounded-full transition-all duration-500 ring-1 ring-b2 ', props.class, { 'shadow-black': set.key == selectedSet.key })"
     @click="handleSet()">
-    <!--    <div v-if="set == ts.selectedRuneSet && !props.noCheck" v-tippy="'Default Set'" class="absolute size-fit rounded-full shadow-warm-2 drop-shadow-sm -bottom-1 z-1 -left-1.5">
-      <input type="checkbox" :checked="set == ts.selectedRuneSet" class="peer checkbox checkbox-neutral checkbox-sm drop-shadow-sm rounded-full pointer-events-none " />
+    <!--    <div v-if="set == rs.selectedRuneSet && !props.noCheck" v-tippy="'Default Set'" class="absolute size-fit rounded-full shadow-warm-2 drop-shadow-sm -bottom-1 z-1 -left-1.5">
+      <input type="checkbox" :checked="set == rs.selectedRuneSet" class="peer checkbox checkbox-neutral checkbox-sm drop-shadow-sm rounded-full pointer-events-none " />
     </div> -->
 
     <input
       id="runeSets"
 
-      v-model="ts.selectedRuneSet"
+      v-model="rs.selectedRuneSet"
       :value="set"
       type="radio"
       class="peer hidden"
 
-      @change="ts.selectedRuneSet = set" />
+      @change="rs.selectedRuneSet = set" />
 
     <div class="from-b1/90 to-b1/40 grid place-items-center rounded-full bg-gradient-to-br aspect-square  backdrop-blur-md overflow-hidden size-full ">
       <div class="p-1.5 size-full grid place-items-center">

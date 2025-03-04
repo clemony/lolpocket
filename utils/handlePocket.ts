@@ -1,9 +1,5 @@
 import { hexoid } from 'hexoid'
 import { toast } from 'vue-sonner'
-/* import Champions from 'pages/pocket/[pocketKey]/champions.vue'
-import Items from 'pages/pocket/[pocketKey]/items.vue'
-import Runes from 'pages/pocket/[pocketKey]/runes.vue'
-import Complete from 'pages/pocket/[pocketKey]/complete.vue' */
 
 export async function addPocket(name: string, tags: Array<string>, icon: string, key?: string) {
   const toID = hexoid()
@@ -166,7 +162,7 @@ const runesButton = ref(null)
 const completeButton = ref(null)
 
 export function getPocketLinks(pocket: pocket) {
-  const pocketPages: SidebarItem[] = [
+  const pocketPages = [
     {
 
       link: `/pocket/${pocket.key}`,

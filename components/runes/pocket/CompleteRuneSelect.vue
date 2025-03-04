@@ -3,7 +3,7 @@ const props = defineProps<{
   pocket: pocket
 }>()
 const emit = defineEmits(['update:model-value'])
-console.log('💠 - index:', props.index)
+// console.log('💠 - index:', props.index)
 
 const pocket = computed (() => {
   return props.pocket

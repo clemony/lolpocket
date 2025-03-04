@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  modelValue: Array<SidebarItem>
+  modelValue: Array<any>
 }>()
 const translateY = ref()
 

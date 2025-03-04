@@ -1,10 +1,9 @@
 <script setup lang="ts">
-const ts = useTempStore()
+const rs = useRuneStore()
 
 definePageMeta({
   name: 'runes-data',
 })
-
 </script>
 
 <template>
@@ -18,7 +17,7 @@ definePageMeta({
       <RunePanels />
 
       <div class="ml-12">
-        <RuneData v-if="ts.hoveredRune" />
+        <RuneData v-if="rs.hoveredRune" />
       </div>
     </div>
   </div>

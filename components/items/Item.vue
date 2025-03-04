@@ -2,7 +2,7 @@
 const props = defineProps<{
   item: Item
 }>()
-const ts = useTempStore()
+const is = useItemStore()
 const thisItem = computed(() => {
   return props.item
 })
@@ -14,7 +14,7 @@ const thisItem = computed(() => {
   bg-b2 has-checked:ring-1 has-checked:ring-offset-b1/95 has-checked:ring-offset-2 has-checked:shadow-pretty has-checked:scale-105 transition-all duration-300 cursor-pointer ">
 
     <input
-      v-model="ts.selectedItem"
+      v-model="is.selectedItem"
       type="radio"
       :value="item"
       class="hidden" />

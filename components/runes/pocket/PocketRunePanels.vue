@@ -6,7 +6,7 @@ const props = defineProps<{
 
 const pocket = ref(props.pocket)
 const set = ref(props.set)
-const ts = useTempStore()
+const rs = useRuneStore()
 const ds = useDataStore()
 const paths = [...ds.paths]
 
@@ -34,7 +34,7 @@ function handleSecondary(e: string) {
 }
 onMounted(async () => {
   await nextTick()
-  Object.assign(set.value, props.set || ts.selectedRuneSet || pocket.value?.runes.sets[0] || {})
+  Object.assign(set.value, props.set || rs.selectedRuneSet || pocket.value?.runes.sets[0] || {})
   primaryPath.value = set.value.primary.path ?? 'Resolve'
   secondaryPath.value = set.value.secondary.path ?? 'Inspiration'
 })
@@ -46,8 +46,7 @@ onMounted(async () => {
       <Field :title="`Primary Path > ${primaryPath}`">
         <RunePanel
           :pocket="pocket" :set="set" :model-value="primaryPath"
-          @update:path="handlePrimary($event)"
-        />
+          @update:path="handlePrimary($event)" />
       </Field>
       <Field title="Keystone">
         <Keystones :path="primaryPath" :set="set" />
@@ -57,16 +56,14 @@ onMounted(async () => {
           :set="set"
           :pocket="pocket"
           :path="primaryPath"
-          type="primary"
-        />
+          type="primary" />
       </Field>
     </div>
 
     <div class="flex flex-col gap-6">
       <Field :title="secondaryPath == 'empty' ? 'Secondary Path' : `Secondary Path > ${secondaryPath}`">
         <RunePanel
-          :pocket="pocket" :set="set" :model-value="secondaryPath" :type="2" @update:path="handleSecondary($event)"
-        />
+          :pocket="pocket" :set="set" :model-value="secondaryPath" :type="2" @update:path="handleSecondary($event)" />
       </Field>
 
       <Field :key="secondaryPath">
@@ -75,8 +72,7 @@ onMounted(async () => {
           :set="set"
           :pocket="pocket"
           :path="secondaryPath"
-          type="secondary"
-        />
+          type="secondary" />
       </Field>
       <field title="Shards">
         <RuneShards :pocket="pocket" :rune-set="set" />

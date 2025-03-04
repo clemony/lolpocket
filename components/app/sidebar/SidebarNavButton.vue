@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  modelValue: SidebarItem[]
-  page: SidebarItem
+  modelValue: any[]
+  page: any
 }>()
 
 const emit = defineEmits(['update:translate'])
@@ -88,8 +88,7 @@ function handleClick() {
         type="radio"
         name="pocket-page"
         :value="page.link"
-        class="hidden peer"
-      />
+        class="hidden peer" />
       <div class="size-fit rounded-full bg-b1 pointer-events-none **:pointer-events-none">
         <div class="!size-10 rounded-full shadow-sm bg-neutral/40    transition-all duration-700  bg-b3 group-hover:!bg-neutral/70    z-1 [&_svg]:!text-nc" :class="{ 'drop-shadow-sm  scale-115': route.path == page.link }">
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Fuse from 'fuse.js'
 
-const ts = useTempStore()
+const is = useItemStore()
 const ds = useDataStore()
 
 const championss = computedAsync(async () => {
@@ -35,7 +35,7 @@ const searchResult = computed(() => {
   return results.map(result => result.item)
 })
 watch(searchResult, (newSearchResults) => {
-  ts.itemSearchResult = newSearchResults
+  is.itemSearchResult = newSearchResults
   // console.log('💠 - Search Results:', newSearchResults)
 })
 </script>
@@ -44,13 +44,11 @@ watch(searchResult, (newSearchResults) => {
   <div class="relative max-w-100">
     <icon
       name="teenyicons:search-outline"
-      class="pointer-events-none absolute top-3.25 left-3.5 z-20 size-5 opacity-70"
-    />
+      class="pointer-events-none absolute top-3.25 left-3.5 z-20 size-5 opacity-70" />
     <Input
       v-model="searchQuery"
       placeholder="Search Champion Database..."
-      class="border-b3 !text-3 placeholder:text-bc/80 !bg-b1 flex h-12 border py-2 pr-3 pl-12"
-    />
+      class="border-b3 !text-3 placeholder:text-bc/80 !bg-b1 flex h-12 border py-2 pr-3 pl-12" />
   </div>
 </template>
 

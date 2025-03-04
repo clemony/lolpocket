@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { formatEffects } from 'shared/supabase/supaIndex'
+
 const props = defineProps<{
   data: effect
 }>()

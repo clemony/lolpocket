@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ChevronUpIcon } from '@radix-icons/vue'
+
 import { SelectScrollUpButton, useForwardProps } from 'reka-ui'
 import type { SelectScrollUpButtonProps } from 'reka-ui'
 import { computed } from 'vue'

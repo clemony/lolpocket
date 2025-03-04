@@ -1,10 +1,4 @@
 <script setup lang="ts">
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from 'components/base/resizable'
-
 const props = defineProps<{
   pocket: pocket
 }>()

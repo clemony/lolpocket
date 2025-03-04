@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ChevronRightIcon } from '@radix-icons/vue'
+
 import { MenubarSubTrigger, useForwardProps } from 'reka-ui'
 import type { MenubarSubTriggerProps } from 'reka-ui'
 import { computed } from 'vue'

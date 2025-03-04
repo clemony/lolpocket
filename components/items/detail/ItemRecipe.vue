@@ -11,7 +11,7 @@ const recipeArray = computed (() => {
   return props.recipeArray
 })
 
-const item = omputed(() => {
+const item = computed(() => {
   return props.item
 })
 

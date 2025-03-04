@@ -30,6 +30,7 @@ export function toDictionary(nestedData: any): Item[] {
         recipe: item.recipe || null,
         buy: item.buy || null,
         removed: item.removed || null,
+        cloneId: null,
       })
     }
     else {

@@ -9,13 +9,13 @@ definePageMeta({
 
 const pocket = ref(props.pocket)
 
-const ts = useTempStore()
+const rs = useRuneStore()
 
-const set = ref(ts.selectedRuneSet ? ts.selectedRuneSet : pocket.value.runes.sets[0])
+const set = ref(rs.selectedRuneSet ? rs.selectedRuneSet : pocket.value.runes.sets[0])
 console.log('💠 - pocket.value.runes.sets:', pocket.value.runes.sets)
 
 watch(
-  () => ts.selectedRuneSet,
+  () => rs.selectedRuneSet,
   (newVal) => {
     set.value = newVal
   },
@@ -34,12 +34,11 @@ onMounted (async () => {
 // newRuneSet(pocket.value.key)
 
 onMounted (() => {
-  !ts.selectedRuneSet ? ts.selectedRuneSet = pocket.value.runes.sets[0] : ts.selectedRuneSet
+  !rs.selectedRuneSet ? rs.selectedRuneSet = pocket.value.runes.sets[0] : rs.selectedRuneSet
 })
 
 const isBarCollapsed = ref(true)
 const toggleBar = useToggle(isBarCollapsed)
-const infoRef = ref<InstanceType<typeof SplitterPanel>>()
 
 // TODO: sidebar scaling / rune data collapse
 </script>
@@ -62,7 +61,7 @@ const infoRef = ref<InstanceType<typeof SplitterPanel>>()
         </div>
       </div>
 
-      <div ref="infoRef" :default-size="22" class="pt-[7vh] px-14 bg-b1/90 gradient-mask-b-0 backdrop-blur-md  pb-10">
+      <div :default-size="22" class="pt-[7vh] px-14 bg-b1/90 gradient-mask-b-0 backdrop-blur-md  pb-10">
         <RuneData
           :set="set"
           :is-collapsed="isBarCollapsed" />

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  modelValue: SidebarItem[]
-  page: SidebarItem
+  modelValue: any[]
+  page: any
 }>()
 
 const emit = defineEmits(['update:translate'])
@@ -94,8 +94,7 @@ function handleClick() {
         type="radio"
         name="pocket-page"
         :value="page.link"
-        class="hidden peer"
-      />
+        class="hidden peer" />
 
       {{ page.name }}
     </label>

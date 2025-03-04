@@ -10,10 +10,10 @@ const set = computed (() => {
 })
 
 const arr = ref()
-const ts = useTempStore()
+const rs = useRuneStore()
 const ds = useDataStore()
 const rune = computed (() => {
-  return ts.hoveredRune && ts.hoveredRune.name != 'empty' ? ts.hoveredRune : set.value.primary.runes[0]
+  return rs.hoveredRune && rs.hoveredRune.name != 'empty' ? rs.hoveredRune : set.value.primary.runes[0]
 })
 
 const pathName = computed (() => {

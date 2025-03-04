@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  set?: ItemSet
-  modelValue?: ItemSet
+  set?: RuneSet
+  modelValue?: RuneSet
 }>()
 
 const set = computed (() => {

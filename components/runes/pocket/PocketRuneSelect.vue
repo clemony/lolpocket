@@ -8,7 +8,7 @@ const props = defineProps<{
 console.log('💠 - type:', props.type)
 
 const ds = useDataStore()
-const ts = useTempStore()
+const rs = useRuneStore()
 const paths = [...ds.paths]
 const path = ref(props.path ?? '')
 const set = ref(props.set)
@@ -85,7 +85,7 @@ onMounted(() => {
 })
 
 function handleSelect(rune) {
-  ts.selectedRune == rune
+  rs.selectedRune == rune
 }
 
 const runeHovered = ref()
@@ -94,7 +94,7 @@ function onHover(rune) {
   runeHovered.value = rune
   setTimeout(() => {
     if (runeHovered.value != null && runeHovered.value == thisRune) {
-      ts.hoveredRune = runeHovered.value
+      rs.hoveredRune = runeHovered.value
     }
   }, 2000)
 }

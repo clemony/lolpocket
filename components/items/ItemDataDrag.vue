@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import { UseDraggable } from '@vueuse/components'
 
-const ts = useTempStore()
+const is = useItemStore()
 const as = useAccountStore()
-const item = ref(ts.selectedItem)
+const item = ref(is.selectedItem)
 
 watch(
-  () => ts.selectedItem,
+  () => is.selectedItem,
   (newVal) => {
     if (newVal) {
       item.value = newVal
@@ -31,8 +31,7 @@ const check = ref(false)
           :key="item.name"
           :src="`/img/item/${item.id}.webp`"
           :alt="`${item.name} Image`"
-          class="border-b3/90 shadow-warm-2 pointer-events-none size-12 rounded-lg border"
-        />
+          class="border-b3/90 shadow-warm-2 pointer-events-none size-12 rounded-lg border" />
 
         <div class="grow">
           <h3 class="flex flex-wrap items-start pt-1 leading-none tracking-tighter drop-shadow-sm ">
@@ -53,8 +52,7 @@ const check = ref(false)
         <ItemInfo :drag-float="true">
           <LittleTip
             content="Add Favorite"
-            class="rating size-fit mr-2 group"
-          >
+            class="rating size-fit mr-2 group">
             <input
               v-model="as.favoriteItems"
               type="checkbox"
@@ -62,8 +60,7 @@ const check = ref(false)
               name="favorite-item"
               :aria-label="`favorite ${item.name}`"
               class="mask mask-heart bg-[#dd5f61] brightness-90 drop-shadpw-sm"
-              :class="{ 'group-hover:opacity-40 transition-all duration-300': !as.favoriteItems.includes(item) }"
-            />
+              :class="{ 'group-hover:opacity-40 transition-all duration-300': !as.favoriteItems.includes(item) }" />
           </LittleTip>
         </ItemInfo>
       </div>

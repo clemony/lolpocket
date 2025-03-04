@@ -2,7 +2,7 @@
 import { vMouseInElement } from '@vueuse/components'
 
 const props = defineProps<{
-  modelValue: Array<SidebarItem>
+  modelValue: Array<any>
 }>()
 const translateY = ref()
 
@@ -36,8 +36,7 @@ watch(
     <div class="absolute pointer-events-none **:pointer-events-none w-1  bg-b3/30 h-4/5 overflow-hidden justify-center">
       <div class="size-full duration-1000 transition-all " :style="{ transform: translateY }">
         <div
-          class="  size-5 bg-neutral shadow-[0px_0px_30px_5px_var(--color-bc)]"
-        >
+          class="  size-5 bg-neutral shadow-[0px_0px_30px_5px_var(--color-bc)]">
         </div>
       </div>
     </div>

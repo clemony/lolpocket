@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CheckIcon } from '@radix-icons/vue'
+
 import {
   RadioGroupIndicator,
   RadioGroupItem,

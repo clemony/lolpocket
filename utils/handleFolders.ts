@@ -46,7 +46,7 @@ export const defaultFolders: Array<Folder> = [
   },
 ]
 
-export const folderLinks: Array<SidebarItem> = [
+export const folderLinks = [
   {
     name: 'Pinned',
     key: 'pinned',

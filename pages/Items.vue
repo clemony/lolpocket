@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const ts = useTempStore()
 const ds = useDataStore()
-
+const is = useItemStore()
 definePageMeta({
   name: 'item-data',
   path: '/items',
@@ -31,10 +31,10 @@ const listKey = ref(0)
 function resetItems() {
   sortItemsAZ.value = 0
   sortPrice.value = 0
-  ts.filterItemStats = []
-  ts.filterItemCats = []
-  ts.filterItemTypes = ''
-  ts.itemSearchResult = []
+  is.filterItemStats = []
+  is.filterItemCats = []
+  is.filterItemTypes = ''
+  is.itemSearchResult = []
   listKey.value = listKey.value + 1
 }
 </script>
@@ -58,7 +58,7 @@ function resetItems() {
             icon1="qlementine-icons:sort-alpha-asc-16"
             icon2="qlementine-icons:sort-alpha-desc-16"
             @click.stop
-            @update:model="(v) => (ts.sortItemsAZ = v)" />
+            @update:model="(v) => (is.sortItemsAZ = v)" />
           <ToggleStateButton
             class="join-item rounded-l-none"
             :model="sortPrice"
@@ -66,7 +66,7 @@ function resetItems() {
             icon2="bi:sort-numeric-up"
             :icon-size="7"
             @click.stop
-            @update:model="(v) => (ts.sortPrice = v)" />
+            @update:model="(v) => (is.sortPrice = v)" />
         </div>
         <button
           class="btn-outline btn border-b3"
@@ -81,14 +81,14 @@ function resetItems() {
       <span class="h-1 w-full" />
       <CheckboxFilterList
         :source="itemCategories"
-        @update:model="(e) => (ts.filterItemCats = e)" />
+        @update:model="(e) => (is.filterItemCats = e)" />
     </template>
 
     <template #2>
       <RadioFilterList
         :types="itemTypes"
         class="pl-2"
-        @update:model="(e) => (ts.filterItemTypes = e)" />
+        @update:model="(e) => (is.filterItemTypes = e)" />
       <div
         id="item-results"
         class=".item-results max-h-inherit h-[calc(100vh-11.2rem)] overflow-auto"

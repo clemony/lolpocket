@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ChevronDownIcon } from '@radix-icons/vue'
+
 import {
   NavigationMenuTrigger,
 

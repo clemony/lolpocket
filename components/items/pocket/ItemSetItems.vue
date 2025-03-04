@@ -58,7 +58,7 @@ const itemSet = ref(props.set.items)
       :pocket="pocket"
       class="shadow-sm shrink-0 !size-20 "
       :class="{ 'rotate-out-center': removingItems[item?.id ?? `item-${i}`] }"
-      @click.prevent="ts.selectedItem = item" />
+      @click.prevent="is.selectedItem = item" />
     <Placeholder class="rounded-lg border-b3 !size-20 shadow-sm  bg-b3/90 inset-shadow-xs group-has-[.sortable-ghost]:hidden" />
   </div>
 </template>

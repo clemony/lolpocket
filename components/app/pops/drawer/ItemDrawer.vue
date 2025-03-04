@@ -1,10 +1,9 @@
 <script setup lang="ts">
-const ts = useTempStore()
-
 const props = defineProps<{
-item?: Item
+  item?: Item
 }>()
-const item = ref(ts.selectedItem)
+const is = useItemStore()
+const item = ref(is.selectedItem)
 watch(
   () => item.value,
   (newVal) => {
@@ -12,32 +11,25 @@ watch(
     console.log('💠 - newVal:', newVal)
   },
 )
-
-
 </script>
 
 <template>
   <div
     key="id"
     :item="item"
-    class="relative h-screen w-130 p-9 justify-self-center backdrop-blur-md min-h-screen bg-b1 shadow-pretty overflow-hidden rounded-r-md inset-shadow-sm"
-  >
+    class="relative h-screen w-130 p-9 justify-self-center backdrop-blur-md min-h-screen bg-b1 shadow-pretty overflow-hidden rounded-r-md inset-shadow-sm">
     <div
-      :key="item"
-      class="drawer"
-    >
+      class="drawer">
       <input
         id="item-drawer"
         type="checkbox"
-        class="drawer-toggle"
-      />
+        class="drawer-toggle" />
 
       <div class="drawer-side z-60">
         <label
           for="item-drawer"
           aria-label="close sidebar"
-          class="drawer-overlay !bg-black/70"
-        ></label>
+          class="drawer-overlay !bg-black/70"></label>
         <ItemInfo />
       </div>
     </div>

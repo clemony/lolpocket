@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Cross2Icon } from '@radix-icons/vue'
 import { TagsInputItemDelete, useForwardProps } from 'reka-ui'
 import type { TagsInputItemDeleteProps } from 'reka-ui'
 import { computed } from 'vue'
@@ -19,7 +18,7 @@ const forwardedProps = useForwardProps(delegatedProps)
 <template>
   <TagsInputItemDelete v-bind="forwardedProps" :class="cn('flex rounded bg-transparent mr-1', props.class)">
     <slot>
-      <Cross2Icon class="w-4 h-4" />
+      <icon name="x-sm" class="w-4 h-4" />
     </slot>
   </TagsInputItemDelete>
 </template>
