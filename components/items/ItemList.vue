@@ -21,7 +21,7 @@ const list = computed(() => {
       :item="item"
       class="size-full"
       @click.right.prevent
-      @click="ts.selectedItem = item"
+      @click="is.selectedItem = item"
     />
   </transition-slide>
 </template>

@@ -49,7 +49,7 @@ const id = computedAsync (() => {
 
 onMounted (async () => {
   if (props.grid == 'item') {
-    api.value = ts.itemGridApi
+    api.value = is.itemGridApi
   }
   else if (props.grid == 'pocket') {
     api.value = ps.pocketGridApi

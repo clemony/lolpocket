@@ -34,7 +34,7 @@ function handleSecondary(e: string) {
 }
 onMounted(async () => {
   await nextTick()
-  Object.assign(set.value, props.set || ts.selectedRuneSet || pocket.value?.runes.sets[0] || {})
+  Object.assign(set.value, props.set || rs.selectedRuneSet || pocket.value?.runes.sets[0] || {})
   primaryPath.value = set.value.primary.path ?? 'Resolve'
   secondaryPath.value = set.value.secondary.path ?? 'Inspiration'
 })

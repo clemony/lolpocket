@@ -44,17 +44,17 @@ watch(
   },
 )
 
-onMounted(async() => {
+onMounted(async () => {
   if (props.path) {
     path.value = props.path
   }
-    if (props.set) {
+  if (props.set) {
     set.value = props.set
   }
 })
 
 function handleSelect(rune) {
-  ts.selectedRune == rune
+  rs.selectedRune == rune
 }
 
 function handleKeystone(rune) {
@@ -62,48 +62,48 @@ function handleKeystone(rune) {
   console.log('💠 - handleKeystone - set.value.primary.runes:', set.value.primary.runes)
 }
 
-/* :style="{
-          background: set.primary.runes[0] == rune ? `linear-gradient(110deg, transparent, var(--color-${set.primary.path.toLowerCase()}))` : '',
-        }" */
+const runeHovered = ref()
+function onHover(rune) {
+  const thisRune = rune
+  runeHovered.value = rune
+  setTimeout(() => {
+    if (runeHovered.value != null && runeHovered.value == thisRune) {
+      rs.hoveredRune = runeHovered.value
+    }
+  }, 2000)
+}
 </script>
 
 <template>
   <div
-    class="ease justify-start  relative size-full h-fit w-114 max-w-114 rounded-xl  transition-all duration-500 **:select-none"
-  >
+    class="ease justify-start  relative size-full h-fit w-114 max-w-114 rounded-xl  transition-all duration-500 **:select-none">
     <transition-slide
       :duration="{ enter: 700, leave: 100 }" :offset="{
         enter: ['-100%', 0],
         leave: ['100%', 0],
-      }" group class="flex size-full   justify-evenly  rounded-xl  py-3 "
-    >
+      }" group class="flex size-full   justify-evenly  rounded-xl  py-3 ">
       <div
-        v-for="rune in pathData" :key="rune.id" v-tippy="rune.name" class="size-fit rounded-full"
-    
-      >
+        v-for="rune in pathData" :key="rune.id" v-tippy="rune.name" class="size-fit rounded-full">
         <label
           :data-path="path"
           class="h-full rounded-full opacity-75 transition-all duration-300 hover:opacity-100 hover:grayscale-0  group/r border-transparent relative cursor-pointer  grid place-items-center  size-22 aspect-square"
           :class="{
             'to-b1/20 rounded-full shadow-warm-2  bg-gradient-to-br backdrop-blur-md overflow-hidden from-b1/90 shadow-black/20 opacity-100 scale-110 grayscale-0': setKeystone.id == rune.id,
           }"
-        >
+          @mouseover="onHover(rune)">
           <input
             type="radio"
             class="absolute hidden peer"
             :checked="rune.id == set.primary.runes[0].id"
-            @change="handleKeystone(rune)"
-          />
+            @change="handleKeystone(rune)" />
           <img
             :src="`/img/runes/${path}/${rune.name.replace(/\s/g, '')}.webp`"
             :alt="rune.name"
-            class="absolute   opacity-0 group-hover/r:opacity-80 duration-300  transition-all group-hover/r:h-19   h-18 w-auto object-contain peer-checked:opacity-100"
-          />
+            class="absolute   opacity-0 group-hover/r:opacity-80 duration-300  transition-all group-hover/r:h-19   h-18 w-auto object-contain peer-checked:opacity-100" />
           <img
             :src="`/img/runes/${path}/${rune.name.replace(/\s/g, '')}_grayscale.webp`"
             :alt="rune.name"
-            class="h-19 w-auto object-contain absolute contrast-150 brightness-90 opacity-100 drop-shadow-[5px_5px_2px_#00000080] group-hover/r:opacity-0 duration-300 transition-all peer-checked:opacity-0"
-          />
+            class="h-19 w-auto object-contain absolute contrast-150 brightness-90 opacity-100 drop-shadow-[5px_5px_2px_#00000080] group-hover/r:opacity-0 duration-300 transition-all peer-checked:opacity-0" />
         </label>
       </div>
     </transition-slide>

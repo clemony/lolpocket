@@ -9,7 +9,7 @@ const api = shallowRef()
 onMounted (async () => {
     console.log("💠 - onMounted - props.grid:", props.grid)
   if (props.grid == 'item') {
-    api.value = ts.itemGridApi
+    api.value = is.itemGridApi
   }
   else if (props.grid == 'All') {
     api.value = ps.pocketGridApi

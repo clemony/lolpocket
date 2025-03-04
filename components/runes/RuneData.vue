@@ -8,19 +8,12 @@ const props = defineProps<{
 const set = computed (() => {
   return props.set
 })
+
+const arr = ref()
 const ts = useTempStore()
 const ds = useDataStore()
 const rune = computed (() => {
-  if (ts.hoveredRune && ts.hoveredRune.name != 'empty') {
-    return ts.hoveredRune
-  }
-  else if (set.value.primary.runes[0]) {
-    return set.value.primary.runes[0]
-  }
-  else {
-    const a = ds.paths.find(p => p.key == set.value.primary.path)
-    return a.slots[0].runes[0]
-  }
+  return rs.hoveredRune && rs.hoveredRune.name != 'empty' ? rs.hoveredRune : set.value.primary.runes[0]
 })
 
 const pathName = computed (() => {
@@ -31,17 +24,15 @@ const pathName = computed (() => {
 <template>
   <div class="relative -mt-2 flex w-full justify-center flex-col">
     <div
-      class="border-b3 mb-8 grid w-full grid-cols-[0.7fr_2fr]  border-b pb-6"
-    >
+      class="border-b3 **:select-none mb-8 grid w-full grid-cols-[0.7fr_2fr]  border-b pb-6">
       <div
-        class="group/link relative col-start-1 h-full items-center justify-center"
-      >
+        class="group/link relative col-start-1 h-full items-center justify-center">
         <img
+          v-if="rune"
           :key="rune.name"
           :src="`/img/runes/${pathName.toLowerCase()}/${rune.name.replace(/\s/g, '')}.webp`"
           :alt="`${rune.name} Image`"
-          class="'ring-b3 inset-shadow-sm pointer-events-none size-20 rounded-full bg-black ring-1 shadow-warm-2"
-        />
+          class="'pointer-events-none size-18 rounded-full  bg-black ring-1 shadow-warm-2 ring-b3 inset-shadow-sm " />
       </div>
 
       <div class="grid h-full grid-cols-1 gap-2 py-2">
@@ -50,11 +41,9 @@ const pathName = computed (() => {
           class=" gap-3 items-center w-full transition-all duration-300 *:dst  flex"
           :href="getWikiLink(rune.name)"
           target="_blank"
-          alt="link to league wiki"
-        >
+          alt="link to league wiki">
           <h2
-            class=" leading-6   grow-underline tracking-tight dst"
-          >
+            class=" leading-6   grow-underline tracking-tight dst">
             {{ rune.name }}
           </h2>
 
@@ -74,8 +63,7 @@ const pathName = computed (() => {
         id="runeStats"
         :key="`${rune.name}3`"
         class="max-w-105  !text-3 text-pretty whitespace-pre-line"
-        v-html="formatDataText(rune.longDesc)"
-      ></div>
+        v-html="formatDataText(rune.longDesc)"></div>
     </div>
   </div>
 </template>

@@ -16,11 +16,11 @@ const item = computed (() => {
   if (props.item) {
     return props.item
   }
-  else if (ts.selectedItem) {
-    return ts.selectedItem
+  else if (is.selectedItem) {
+    return is.selectedItem
   }
   else {
-    return ts.pocketItemSelect
+    return is.pocketItemSelect
   }
 })
 /* watch(

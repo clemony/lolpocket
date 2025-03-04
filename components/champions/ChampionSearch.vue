@@ -35,7 +35,7 @@ const searchResult = computed(() => {
   return results.map(result => result.item)
 })
 watch(searchResult, (newSearchResults) => {
-  ts.itemSearchResult = newSearchResults
+  is.itemSearchResult = newSearchResults
   // console.log('💠 - Search Results:', newSearchResults)
 })
 </script>

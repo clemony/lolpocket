@@ -9,7 +9,6 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const ItemLoad = defineAsyncComponent(() => import('components/items/Item.vue'))
 const list = computed(() => {
   return [...useItemFilter()]
 })
@@ -40,19 +39,20 @@ function onEnd(event: DraggableEvent) {
 }
 
 function onClone(event: DraggableEvent) {
-  console.log('💠 - onClone - event:', event)
+  console.log('💠 - onClone - event:', event.data)
   console.log('clone')
 }
 </script>
 
 <template>
-  <transition-slide
+  <div
     v-draggable="[
       list,
       {
         'group': {
           name: 'items',
           put: false,
+          pull: 'clone',
           revertClone: true,
         },
         'sort': false,
@@ -63,24 +63,22 @@ function onClone(event: DraggableEvent) {
         'force-fallback': true,
         'fallbackTolerance': 0,
         'fallbackOnBody': true,
+
+        'clone': (item) => ({
+          ...item,
+          cloneId: `${item.id}-${Date.now()}`,
+        }),
       },
     ]"
     group
-    class="overflow-y-auto absolute inset-0 grid grid-flow-row auto-cols-auto select-none h-fit  grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center gap-4 px-4  pb-10 pt-26"
+    class=""
+    :class="cn('overflow-y-auto transitio-all duration-400 absolute inset-0 grid grid-flow-row auto-cols-auto select-none h-fit  grid-cols-[repeat(auto-fill,minmax(54px,1fr))] justify-center gap-4 px-4  pb-10 pt-26', props.class)"
 
     @end="onEnd"
     @clone="onClone"
-    @start="onStart"
-  >
-    <Suspense>
-      <template #default>
-        <ItemLoad v-for="item in list" :key="item.id" :item="item" class="select-none" />
-      </template>
-      <template #fallback>
-        <Skeleton class="size-full rounded-lg" />
-      </template>
-    </Suspense>
-  </transition-slide>
+    @start="onStart">
+    <LazyItem v-for="item in list" :key="item.id" :item="item" class="select-none" />
+  </div>
 </template>
 
 <style></style>

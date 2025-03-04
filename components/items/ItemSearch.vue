@@ -50,7 +50,7 @@ const searchResult = computed(() => {
 })
 
 watch(searchResult, (newSearchResults) => {
-  ts.itemSearchResult = newSearchResults
+  is.itemSearchResult = newSearchResults
   // console.log('💠 - Search Results:', newSearchResults)
 })
 </script>

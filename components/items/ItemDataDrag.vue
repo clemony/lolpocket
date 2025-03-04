@@ -3,10 +3,10 @@ import { UseDraggable } from '@vueuse/components'
 
 const ts = useTempStore()
 const as = useAccountStore()
-const item = ref(ts.selectedItem)
+const item = ref(is.selectedItem)
 
 watch(
-  () => ts.selectedItem,
+  () => is.selectedItem,
   (newVal) => {
     if (newVal) {
       item.value = newVal

@@ -2,7 +2,7 @@
 const ts = useTempStore()
 const isPopOpen = ref(false)
 watch(
-  () => ts.pocketItemSelect,
+  () => is.pocketItemSelect,
   (newVal) => {
     if (newVal) {
       isPopOpen.value = true
@@ -16,10 +16,10 @@ watch(
     <PocketBarButton>
       <icon name="filter" class="size-5 stroke-[1.3]" />
     </PocketBarButton>
-    <Popover v-if="ts.pocketItemSelect" :open="isPopOpen">
+    <Popover v-if="is.pocketItemSelect" :open="isPopOpen">
       <PopoverTrigger @click="isPopOpen = true">
         <Button class="p-0 rounded-full shadow-sm border border-neutral">
-          <img :src="`/img/item/${ts.pocketItemSelect.id}.webp`" class="size-11 rounded-full" />
+          <img :src="`/img/item/${is.pocketItemSelect.id}.webp`" class="size-11 rounded-full" />
         </Button>
       </PopoverTrigger>
       <PopoverContent

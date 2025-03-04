@@ -57,13 +57,13 @@ onMounted(() => {
 })
 
 function handleSelect(rune) {
-  ts.selectedRune == rune
+  rs.selectedRune == rune
 }
 
 function onHover(rune) {
   setTimeout(() => {
-    ts.hoveredRune = rune
-    console.log('💠 - onHover - ts.hoveredRune:', ts.hoveredRune)
+    rs.hoveredRune = rune
+    console.log('💠 - onHover - rs.hoveredRune:', rs.hoveredRune)
   }, 1000)
 }
 </script>
