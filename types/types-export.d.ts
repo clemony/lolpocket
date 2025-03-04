@@ -1,12 +1,6 @@
-import type { HTMLAttributes } from 'vue'
-import type { SplitterPanel } from 'reka-ui'
+/* import type { HTMLAttributes } from 'vue'
 
-declare global {
+interface HTMLAttr extends HTMLAttributes { }
 
-  export type { SplitterPanel } from 'reka-ui'
-
-  interface HTMLAttr extends HTMLAttributes { }
-
-  export type { HTMLAttributes } from 'vue'
-
-}
+export type { HTMLAttributes } from 'vue'
+ */

@@ -1,124 +1,73 @@
 import type { JwtPayload } from 'jwt-decode'
 import type { RefOrElement } from 'vue-draggable-plus'
 
-declare global {
-
-  interface AuthRoleJwtPayload extends JwtPayload {
-    app_metadata: {
-      user_role: string
-    }
+interface AuthRoleJwtPayload extends JwtPayload {
+  app_metadata: {
+    user_role: string
   }
+}
 
-  interface userAccount {
-    name: string
-    image: string
-    role: string
-    id: string
-    session: string
-    accessToken: string
-    refreshToken: string
-    puuid: string
-    gameName: string
-    tagLine: string
-    profileIconId: number
-    summonerLevel: number
-    region: string
-  }
+interface userAccount {
+  name: string
+  image: string
+  role: string
+  id: string
+  session: string
+  accessToken: string
+  refreshToken: string
+  puuid: string
+  gameName: string
+  tagLine: string
+  profileIconId: number
+  summonerLevel: number
+  region: string
+}
 
-  interface Folder {
-    name: string
-    key: string
-    type?: string
-    description?: string
-    buttonRef?: any
-    link?: string
-    items?: any[]
-    icon?: string
-    permanent?: boolean
-    locked?: boolean
-  }
+interface Folder {
+  name: string
+  key: string
+  type?: string
+  description?: string
+  buttonRef?: any
+  link?: string
+  items?: any[]
+  icon?: string
+  permanent?: boolean
+  locked?: boolean
+}
 
-  interface Note {
-    title: string
-    content: string
-    icon: string
-    date: string
-    heart?: boolean
-  }
+interface Note {
+  title: string
+  content: string
+  icon: string
+  date: string
+  heart?: boolean
+}
 
-  interface SidebarItem {
-    name?: string
-    link?: string
-    key?: string
-    buttonRef?: any
-    icon?: string
-    shortcut?: string
-  }
-
-  interface Category {
-    id: string
-    displayName?: string
-    checked: boolean // Add the checked property
-    color?: string
-    champions?: Array<string>
-  }
+interface Category {
+  id: string
+  displayName?: string
+  checked: boolean
+  color?: string
+  champions?: Array<string>
+}
 
   type categories = Category[]
 
-  type CallbackFunctionVariadicAnyReturn = (...args: any[]) => any
-  type CallbackFunctionVariadic = (...args: any[]) => void
-
-  type navData = navGroup[]
-
-  interface Module {
-    name?: string
-    component?: DefineComponent
-    ghost?: DefineComponent
-    queue?: string
-    title?: string
-  }
+interface Module {
+  name?: string
+  component?: DefineComponent
+  ghost?: DefineComponent
+  queue?: string
+  title?: string
+}
 
   type ModuleSlot = Module | null
 
   type ModuleList = (Module | null)[]
 
-  interface navGroup {
-    name: string
-    url?: string
-    icon?: string
-    array?: Array<any>
-    isActive?: boolean
-    open?: boolean
-    items?: navItem[]
-    submenu?: navGroup[]
-  }
-
-  interface navItem {
-    name: string
-    url?: string
-    icon?: string
-    isActive?: boolean
-    hash?: string
-    ref?: any
-    isVisible?: boolean
-    type?: string
-    trigger?: boolean
-    data?: Array<any>
-  }
-
-  interface drawer {
-    component?: any
-    id?: string
-    direction?: string
-    title?: string
-    description?: string
-    submitText?: string
-  }
-
-  interface dateObject {
-    patch: string
-    date: string
-    time: string
-  }
+interface dateObject {
+  patch: string
+  date: string
+  time: string
 }
-export {}
