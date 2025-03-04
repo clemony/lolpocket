@@ -3,7 +3,7 @@ import { formatDataText } from 'components/runes/data/format'
 
 const ts = useTempStore()
 
-const rune = ts.selectedRune
+const rune = rs.selectedRune
 </script>
 
 <!-- This will be the content of the popover -->

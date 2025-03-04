@@ -15,8 +15,7 @@ const role = computedAsync(() => {
   <MenubarContent class="!w-74">
     <NuxtLink
       v-for="link in summonerLinks" :key="link.name"
-      :to="link.link" class="group"
-    >
+      :to="link.link" class="group">
       <MenubarItem inset class="capitalize">
         {{ link.name }}
       </MenubarItem>
@@ -28,8 +27,7 @@ const role = computedAsync(() => {
     <NuxtLink
       v-if="role == 'admin' && as.userAccount.session"
       to="/admin/Admin"
-      class=" "
-    >
+      class="">
       <MenubarItem inset>
         Admin Board
       </MenubarItem>

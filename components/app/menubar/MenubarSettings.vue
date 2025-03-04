@@ -18,16 +18,15 @@ function handleClick(mode) {
 
 <template>
   <DropdownMenuItem class="text-2 flex w-full items-center py-2 gap-3 pl-2.5 pr-8 select-none font-normal cursor-pointer relative">
-    <Avatar class="size-8 shrink-0 rounded-lg shadow-sm peer/account">
-      <AvatarImage
+    <div class="size-8 avatar shrink-0 rounded-lg shadow-sm peer/account">
+      <img
         v-if="summoner.gameName && as.userAccount.session"
         :src="`https://ddragon.leagueoflegends.com/cdn/15.2.1/img/profileicon/${summoner.profileIconId}.png`"
-        :alt="summoner.gameName || summoner.name"
-      />
-      <AvatarFallback class="rounded-lg  grid place-items-center text-nc text-2 -mb-1 font-semibold">
+        :alt="summoner.gameName || summoner.name" class="rounded-lg" />
+      <div v-else class="rounded-lg  grid place-items-center text-nc text-2 -mb-1 font-semibold">
         LP
-      </AvatarFallback>
-    </Avatar>
+      </div>
+    </div>
 
     <div class="truncate h-full !text-4 pt-0.75 !font-semibold peer-hover/account:underline hover:underline underline-offset-2 text-start">
       {{ summoner.gameName || summoner.name }}
@@ -49,46 +48,39 @@ function handleClick(mode) {
   <div class="flex py-2 px-3 gap-3.5 items-center !text-4 !font-semibold f-tt">
     <icon
       name="system-uicons:message"
-      class="size-7 shrink-0 stroke-[0.7] drop-shadow-sm group-hover:opacity-100 group-data-[state=open]:opacity-100 "
-    />
+      class="size-7 shrink-0 stroke-[0.7] drop-shadow-sm group-hover:opacity-100 group-data-[state=open]:opacity-100 " />
     Notifications
   </div>
-
 
   <DropdownMenuSeparator />
 
   <div class="flex py-2 px-2 w-full i-c">
     <DropdownMenuItem
       class="btn !w-fit font-medium btn-md btn-ghost
-    "
-    >
+    ">
       <icon
         name="ph:gear-six"
-        class=" !size-5.5"
-      />
+        class=" !size-5.5" />
     </DropdownMenuItem>
 
     <DropdownMenuItem
       v-if="as.userAccount.session"
       class=" w-fit"
-      @click="handleClick('out')"
-    >
+      @click="handleClick('out')">
       <icon
         name="teenyicons:logout-outline"
-        class=" !size-5"
-      />
+        class=" !size-5" />
     </DropdownMenuItem>
 
     <DropdownMenuItem v-else class=" w-fit " @click="handleClick('in')">
       <LoginDialog>
         <icon
           name="teenyicons:signin-outline"
-          class=" !size-5"
-        />
+          class=" !size-5" />
       </LoginDialog>
     </DropdownMenuItem>
-<Grow  />
-      <MenubarThemes />
+    <Grow />
+    <MenubarThemes />
   </div>
 </template>
 

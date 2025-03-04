@@ -10,8 +10,8 @@ const props = withDefaults(
 </script>
 
 <template>
-  <button v-tippy="props.tip" variant="ghost" size="icon" class="btn btn-xs size-6  aspect-square">
-    <icon name="x" class="size-3 shrink-0" />
+  <button v-tippy="props.tip" class="btn rounded-md btn-sm size-6 shadow-sm btn-square">
+    <icon name="x-sm" class="size-5.5 shrink-0" />
   </button>
 </template>
 

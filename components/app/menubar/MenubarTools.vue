@@ -4,38 +4,37 @@ import { UseClipboard } from '@vueuse/components'
 
 <template>
   <MenubarContent class="!w-74">
-    <MenubarLabel inset>
+    <MenubarLabel class="select-none flex gap-2 items-center">
+      <icon name="info" class="size-4" />
       Info
     </MenubarLabel>
     <MenubarSeparator />
     <NuxtLink
-      to="/Docs"
-    >
+      to="/Docs">
       <MenubarItem inset>
         Docs
       </MenubarItem>
     </NuxtLink>
 
     <NuxtLink
-      to="/About"
-    >
-      <MenubarItem inset class="pr-2.5">
+      to="/About">
+      <MenubarItem inset class="pr-2.5 items-center">
         <span class="grow">App Info</span>
 
-        with cats
+        with cats!
       </MenubarItem>
     </NuxtLink>
 
     <MenubarSeparator />
 
-    <MenubarLabel inset>
+    <MenubarLabel class="select-none flex gap-2 items-center">
+      <icon name="gear" class="size-4" />
       Settings
     </MenubarLabel>
     <MenubarSeparator />
     <NuxtLink
       v-for="link in settingLinks" :key="link.name"
-      :to="link.link" class="group/l"
-    >
+      :to="link.link" class="group/l">
       <MenubarItem inset>
         {{ link.name }}
       </MenubarItem>
@@ -51,14 +50,12 @@ import { UseClipboard } from '@vueuse/components'
       <MenubarSubContent>
         <a
           href="https://discord.gg/Jzuu7bYTZY"
-          target="_blank"
-        >
+          target="_blank">
           <MenubarItem>
 
             <icon
               name="streamline:discord"
-              class="size-4.5"
-            />
+              class="size-4.5" />
             Discord
           </MenubarItem>
         </a>
@@ -66,13 +63,11 @@ import { UseClipboard } from '@vueuse/components'
         <a
           href="https://github.com/clemony/lolpocket"
           target="_blank"
-          class=" dst  underline-offset-2 hover:underline "
-        >
+          class=" dst  underline-offset-2 hover:underline ">
           <MenubarItem>
             <icon
               name="ph:github-logo"
-              class="size-4.5 dst"
-            /> github @clemony
+              class="size-4.5 dst" /> github @clemony
           </MenubarItem>
         </a>
 

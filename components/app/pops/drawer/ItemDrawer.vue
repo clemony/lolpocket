@@ -4,7 +4,7 @@ const ts = useTempStore()
 const props = defineProps<{
 item?: Item
 }>()
-const item = ref(ts.selectedItem)
+const item = ref(is.selectedItem)
 watch(
   () => item.value,
   (newVal) => {

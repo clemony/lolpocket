@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { navigationMenuTriggerStyle } from 'components/base/navigation-menu/nin'
-
-import { themes } from 'assets/css/themes'
-
 const as = useAccountStore()
 function handleChange(newData, newName) {
   console.log('💠 - handleChange - newName:', newName)
@@ -17,14 +13,12 @@ function handleChange(newData, newName) {
 <template>
   <div
     class="collapse  w-full  group
-    "
-  >
+    ">
     <input type="checkbox" class="collapse-input !h-8 " />
     <div class="collapse-title btn !text-2 font-medium btn-sm btn-ghost justify-start pl-4 gap-4 pr-2 !h-8 flex ">
       <icon
         name="teenyicons:paintbucket-outline"
-        class="!size-4.5 shrink-0"
-      />
+        class="!size-4.5 shrink-0" />
 
       Themes
 
@@ -34,23 +28,20 @@ function handleChange(newData, newName) {
       <label
         v-for="theme in themes"
         :key="theme.name"
-        class="hover:bg-b2 flex h-10 items-center px-11"
-      >
+        class="hover:bg-b2 flex h-10 items-center px-11">
         <input
           v-model="as.dataTheme"
           type="radio"
           class="peer hidden"
           name="themeChanger"
           :value="theme.name"
-          @change="handleChange(theme.name, theme.id)"
-        />
+          @change="handleChange(theme.name, theme.id)" />
 
         <div
           class="flex items-center capitalize"
           :class="{
             'underline underline-offset-2': as.dataTheme == theme.name,
-          }"
-        >
+          }">
           {{ theme.name }}
         </div>
         <Grow />
@@ -62,14 +53,12 @@ function handleChange(newData, newName) {
             'opacity-60': as.dataTheme != theme.name,
           }"
           class="text-bc border-neutral pointer-events-auto grid size-8 place-items-center rounded-lg border p-1 shadow-sm transition-all duration-300 hover:opacity-100"
-          :style="{ background: theme.color }"
-        >
+          :style="{ background: theme.color }">
           <icon
             v-if="theme.icon"
             :name="theme.icon"
             class=" !size-full stroke-2"
-            :style="{ color: 'var(--bc)' }"
-          />
+            :style="{ color: 'var(--bc)' }" />
         </div>
       </label>
     </div>
