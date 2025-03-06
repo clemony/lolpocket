@@ -4,28 +4,6 @@ import { UseClipboard } from '@vueuse/components'
 
 <template>
   <MenubarContent class="!w-74">
-    <MenubarLabel class="select-none flex gap-2 items-center">
-      <icon name="info" class="size-4" />
-      Info
-    </MenubarLabel>
-    <MenubarSeparator />
-    <NuxtLink
-      to="/Docs">
-      <MenubarItem inset>
-        Docs
-      </MenubarItem>
-    </NuxtLink>
-
-    <NuxtLink
-      to="/About">
-      <MenubarItem inset class="pr-2.5 items-center">
-        <span class="grow">App Info</span>
-
-        with cats!
-      </MenubarItem>
-    </NuxtLink>
-
-    <MenubarSeparator />
 
     <MenubarLabel class="select-none flex gap-2 items-center">
       <icon name="gear" class="size-4" />
@@ -42,6 +20,32 @@ import { UseClipboard } from '@vueuse/components'
 
     <MenubarSeparator />
 
+
+
+
+    <MenubarLabel class="select-none flex gap-2 items-center">
+      <icon name="info" class="size-4" />
+      Info
+    </MenubarLabel>
+    <MenubarSeparator />
+    <NuxtLink
+      to="/Docs">
+      <MenubarItem inset>
+        Docs
+      </MenubarItem>
+    </NuxtLink>
+
+    <NuxtLink
+      to="/About">
+      <MenubarItem inset class="pr-2.5 items-center">
+        <span class="grow">About</span>
+
+        with cats!
+      </MenubarItem>
+    </NuxtLink>
+    
+    
+    <MenubarSeparator />
     <MenubarSub>
       <MenubarSubTrigger inset>
         Contact
@@ -84,6 +88,7 @@ import { UseClipboard } from '@vueuse/components'
         </MenubarItem>
       </MenubarSubContent>
     </MenubarSub>
+
   </MenubarContent>
 </template>
 

@@ -10,13 +10,12 @@ const route = useRoute()
 
 <template>
   <NuxtLayout name="full-nav">
-    <div>
-      <h1 class="text-9 px-9 dst">
+    <div class="w-full flex-col pl-14 ">
+      <h1 class="text-9 dst pl-6">
         Settings
       </h1>
-      <SimpleNav  :model-value="settingLinks"/>
+      <SimpleNav :model-value="settingLinks" />
     </div>
-
   </NuxtLayout>
 </template>
 

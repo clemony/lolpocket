@@ -36,9 +36,9 @@ const ss = useSidebarStore()
 </script>
 
 <template>
-  <main class="h-screen w-screen ">
+  <div class="h-screen w-screen ">
     <MainMenubar />
-    <NuxtLoadingIndicator />
+    <NuxtLoadingIndicator class="bg-gradient-to-r from-nc to-neutral"/>
     <div
       class="bg-b1 h-screen w-full relative">
       <Sonner
@@ -57,7 +57,7 @@ const ss = useSidebarStore()
         <slot />
       </div>
     </div>
-  </main>
+  </div>
 </template>
 
 <style></style>

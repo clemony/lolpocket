@@ -2,17 +2,17 @@
 import { categories } from 'shared/data/champion/championCategories'
 
 const as = useAccountStore()
-
+const cs = useChampStore()
 const ds = useDataStore()
-const ts = useTempStore()
-ts.selectedChampion = ref()
+
+cs.selectedChampion = ref()
 const filteredChampions = computed(() => {
   let filtered = [...ds.champions]
   const includedChampions = new Set()
 
-  if (ts.filterChampionClass && ts.filterChampionClass.length > 0) {
+  if (cs.filterChampionClass && cs.filterChampionClass.length > 0) {
     filtered = filtered.filter((champion) => {
-      return ts.filterChampionClass.some((className) => {
+      return cs.filterChampionClass.some((className) => {
         const category = categories.value.find(cat => cat.id === className)
         if (category?.champions.includes(champion.name)) {
           if (!includedChampions.has(champion.name)) {
@@ -25,28 +25,28 @@ const filteredChampions = computed(() => {
     })
   }
 
-  /*    if (ts.filterChampionTypes && ts.filterChampionTypes !== 'Favorites') {
+  /*    if (cs.filterChampionTypes && cs.filterChampionTypes !== 'Favorites') {
         filtered = filtered.filter(
             (champion) =>
                 champion.external_positions.toLowerCase() ==
-                ts.filterChampionTypes
+                cs.filterChampionTypes
         )
     } */
 
-  if (ts.filterChampionTypes && ts.filterChampionTypes === 'Favorites') {
+  if (cs.filterChampionTypes && cs.filterChampionTypes === 'Favorites') {
     filtered = filtered.filter(champion => as.favoriteChamps.includes(champion))
   }
 
-  if (ts.sortChampsAZ) {
-    if (ts.sortChampsAZ === 'az') {
+  if (cs.sortChampsAZ) {
+    if (cs.sortChampsAZ === 'az') {
       filtered = filtered.sort((a, b) => a.name.localeCompare(b.name))
     }
-    else if (ts.sortChampsAZ === 'za') {
+    else if (cs.sortChampsAZ === 'za') {
       filtered = filtered.sort((a, b) => b.name.localeCompare(a.name))
     }
   }
 
-  if (ts.filterFavoriteChamps === true && as.favoriteChamps.length > 0) {
+  if (cs.filterFavoriteChamps === true && as.favoriteChamps.length > 0) {
     filtered = filtered.filter(champion => as.favoriteChamps.some(favoriteChampion => favoriteChampion.name === champion.name))
   }
 
@@ -59,8 +59,7 @@ console.log('💠 - filteredChampions - filteredChampions:', filteredChampions)
 <template>
   <transition-slide
     group
-    class="max-h-full user-select-none champions-start grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(170px,1fr))] gap-4 overflow-auto px-3 rounded-lg pb-8"
-  >
+    class="max-h-full user-select-none champions-start grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(170px,1fr))] gap-4 overflow-auto px-3 rounded-lg pb-8">
     <ChampionSplash
       v-for="champion in filteredChampions"
       :key="champion.id"
@@ -68,8 +67,7 @@ console.log('💠 - filteredChampions - filteredChampions:', filteredChampions)
       class="champion w-full"
       drag-class="setDrag"
       @click.right.prevent
-      @click="ts.selectedChampion = champion"
-    />
+      @click="cs.selectedChampion = champion" />
   </transition-slide>
 </template>
 

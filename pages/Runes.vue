@@ -4,6 +4,7 @@ const rs = useRuneStore()
 definePageMeta({
   name: 'runes-data',
 })
+const rune = ref( rs.hoveredRune)
 </script>
 
 <template>
@@ -17,7 +18,7 @@ definePageMeta({
       <RunePanels />
 
       <div class="ml-12">
-        <RuneData v-if="rs.hoveredRune" />
+        <RuneData v-if="rs.hoveredRune"  :rune="rune"/>
       </div>
     </div>
   </div>

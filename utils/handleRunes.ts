@@ -266,6 +266,14 @@ export function createDefaultRuneTree() {
   }
 }
 
+export function setSpellbookRune(){
+  const ds = useDataStore()
+  const rs = useRuneStore()
+    const a = ds.paths.find(p => p.name.toLowerCase() == 'inspiration')
+    rs.hoveredRune = a.slots[0].runes.find(r => r.name == 'Unsealed Spellbook')
+}
+
+    
 /*
 
 const a = computed(() => {

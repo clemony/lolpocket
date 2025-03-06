@@ -2,10 +2,10 @@
 import { Chart, Filler, LineElement, PointElement, RadarController, RadialLinearScale, Tooltip } from 'chart.js'
 import { Radar } from 'vue-chartjs'
 
-const ts = useTempStore()
+const cs = useChampStore()
 
 Chart.register(Tooltip, RadarController, RadialLinearScale, LineElement, PointElement, Filler)
-const c = ref(ts.selectedChampion)
+const c = ref(cs.selectedChampion)
 
 const cdata = [c.value.control, c.value.damage, c.value.mobility, c.value.toughness, c.value.utility]
 
@@ -88,8 +88,7 @@ const options = {
   <!-- Pass data and options separately -->
   <Radar
     :data="data"
-    :options="options"
-  />
+    :options="options" />
 </template>
 
 <style scoped></style>

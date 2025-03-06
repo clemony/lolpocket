@@ -35,7 +35,7 @@ watchEffect(() => {
 
 const pocket = computed (() => {
   const regex = /^\/pocket/
-  return route.path.match(regex)
+  return route.path.match(regex) || route.path.match('/calculator')
 })
 </script>
 
@@ -86,8 +86,8 @@ const pocket = computed (() => {
     <button class="btn btn-md invisible" @click="toast('Test toast', { description: 'Hey hi that\'s really cool!' })">
       test toast
     </button>
-
-    <LazyCommand />
+<!--
+    <LazyCommand /> -->
     <MenubarSearch />
 
     <MenubarMenu>

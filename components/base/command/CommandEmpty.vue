@@ -4,7 +4,7 @@ import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 import { computed } from 'vue'
 import type { HTMLAttributes } from 'vue'
-import { useCommand } from '.'
+import { useCommand } from './cindex'
 
 const props = defineProps<PrimitiveProps & { class?: HTMLAttributes['class'] }>()
 
@@ -20,7 +20,7 @@ const isRender = computed(() => !!filterState.search && filterState.filtered.cou
 </script>
 
 <template>
-  <Primitive v-if="isRender" v-bind="delegatedProps" :class="cn('py-6 text-center text-sm', props.class)">
+  <Primitive v-if="isRender" v-bind="delegatedProps" :class="cn('py-6 text-center text-2', props.class)">
     <slot />
   </Primitive>
 </template>

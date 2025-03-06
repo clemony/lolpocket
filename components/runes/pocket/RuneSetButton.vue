@@ -37,10 +37,10 @@ onMounted (async () => {
 
 <template>
   <button
-    v-if="set"
+    v-if="set && set.key"
     :key="set.key"
     class=" shadow-outline shadow-black/15 "
-    :class="cn('relative !pointer-events-auto size-18 grid aspect-square cursor-pointer   place-items-center overflow-visible items-center rounded-full transition-all duration-500 ring-1 ring-b2 ', props.class, { 'shadow-black': set.key == selectedSet.key })"
+    :class="cn('relative !pointer-events-auto size-18 grid aspect-square cursor-pointer   place-items-center overflow-visible items-center rounded-full transition-all duration-500 ring-1 ring-b2 ', props.class, { 'shadow-black': set == selectedSet})"
     @click="handleSet()">
     <!--    <div v-if="set == rs.selectedRuneSet && !props.noCheck" v-tippy="'Default Set'" class="absolute size-fit rounded-full shadow-warm-2 drop-shadow-sm -bottom-1 z-1 -left-1.5">
       <input type="checkbox" :checked="set == rs.selectedRuneSet" class="peer checkbox checkbox-neutral checkbox-sm drop-shadow-sm rounded-full pointer-events-none " />

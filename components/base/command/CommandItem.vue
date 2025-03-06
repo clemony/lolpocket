@@ -5,7 +5,7 @@ import { useCurrentElement } from '@vueuse/core'
 import { ListboxItem, useForwardPropsEmits, useId } from 'reka-ui'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import type { HTMLAttributes } from 'vue'
-import { useCommand, useCommandGroup } from '.'
+import { useCommand, useCommandGroup } from './cindex'
 
 const props = defineProps<ListboxItemProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<ListboxItemEmits>()
@@ -69,7 +69,7 @@ onUnmounted(() => {
     v-bind="forwarded"
     :id="id"
     ref="itemRef"
-    :class="cn('relative flex cursor-default gap-2 select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:size-4 [&_svg]:shrink-0', props.class)"
+    :class="cn('relative flex cursor-default gap-2 select-none items-center rounded-md px-2 py-1.5 text-2 outline-none data-[highlighted]:bg-b2/60  = data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:size-6 [&_svg]:shrink-0 [&_svg]:-mx-1', props.class)"
     @select="() => {
       filterState.search = ''
     }"

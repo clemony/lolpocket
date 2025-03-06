@@ -6,7 +6,7 @@ const is = useItemStore()
   <DropdownMenu>
     <DropdownMenuTrigger class="btn  indicator btn-xl hover:bg-b2/50 bg-b1">
       <icon name="teenyicons:filter-outline" class="size-5" />
-      <div v-if="is.filterItemTypes.length" class=" indicator-item  inline-grid *:[grid-area:1/1]">
+      <div v-if="is.filterItemTypes && is.filterItemTypes.length" class=" indicator-item  inline-grid *:[grid-area:1/1]">
         <div class="status bg-sorcery animate-ping"></div>
         <div class="status bg-sorcery"></div>
       </div>

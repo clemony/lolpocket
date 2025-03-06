@@ -79,8 +79,6 @@ function handleClick(mode) {
           class=" !size-5" />
       </LoginDialog>
     </DropdownMenuItem>
-    <Grow />
-    <MenubarThemes />
   </div>
 </template>
 

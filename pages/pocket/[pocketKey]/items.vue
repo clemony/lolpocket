@@ -7,10 +7,8 @@ definePageMeta({
   name: 'items',
 })
 
-const ts = useTempStore()
+const is = useItemStore()
 const pocket = ref(props.pocket)
-
-const isOpen = ref(false)
 </script>
 
 <template>
@@ -24,12 +22,13 @@ const isOpen = ref(false)
       <ResizableHandle
         class="bg-b2" />
       <ResizablePanel :min-size="10" class=" relative  overflow-hidden flex flex-col  justify-end ">
-        <PocketItemFilter :pocket="pocket">
-          <ItemInfoPane @update:open="(e) => isOpen = e" />
-        </PocketItemFilter>
+        <PocketItemFilter :pocket="pocket" />
 
-        <div class="h-full z-0 w-full  pb-24 flex relative  transition-all duration-500 justify-center overflow-y-auto   ">
-          <PocketItemList :pocket="pocket" :class="{ 'pt-144': isOpen }" />
+        <div class="h-full z-0 w-full  grid  " :class="{ 'grid-cols-[1fr_340px] transition-all duration-500 ': is.itemPaneOpen, 'grid-cols-[1fr_0px] transition-all duration-500 ': !is.itemPaneOpen }">
+          <div class="size-full  relative  transition-all duration-500 justify-center overflow-y-auto  ">
+            <DraggableItemList :pocket="pocket" :class="{ }" />
+          </div>
+          <LazyItemInfoPane />
         </div>
       </ResizablePanel>
     </ResizablePanelGroup>

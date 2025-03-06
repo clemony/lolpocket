@@ -10,32 +10,27 @@ const props = withDefaults(
     defaultSize?: number
   }>(),
   {
-defaultSize: 20
-  }
+    defaultSize: 20,
+  },
 )
 </script>
 
 <template>
-  <ResizablePanelGroup direction="horizontal" class="bg-gradient-to-b from-b1 to-b2/40 h-screen w-screen overflow-hidden mt-[7vh] ">
-    <ResizablePanel :default-size="props.defaultSize" :min-size="20" :max-sie="50" class=" size-full  overflow-hidden">
-      <div class="w-full  overflow-hidden relative  max-h-[93vh] h-[93vh] " >
+  <div direction="horizontal" class="bg-gradient-to-b from-b1 to-b2/40 h-screen w-screen overflow-hidden mt-[8vh] flex">
+    <div class=" h-full w-[400px]  overflow-hidden">
+      <div class="w-full  overflow-hidden relative  max-h-[93vh] h-[93vh] ">
         <div class=" absolute inset-0 max-h-inherit h-inherit top-0 left-0 overflow-y-hidden ">
           <slot />
         </div>
       </div>
-    </ResizablePanel>
-    <ResizableHandle
-      class="bg-b2 w-0.5 !ml-0 "
-    />
-    <ResizablePanel :min-size="50" class="overflow-hidden  max-h-[93vh] h-[93vh] px-12 relative">
+    </div>
+
+    <div class="overflow-hidden  max-h-[93vh] h-[93vh] pl-12 relative w-full">
       <NuxtPage
         :transition="{
-          name: 'push-up',
-          mode: 'out-in',
-        }"
-      />
-    </ResizablePanel>
-  </ResizablePanelGroup>
+        }" />
+    </div>
+  </div>
 </template>
 
 <style scoped>

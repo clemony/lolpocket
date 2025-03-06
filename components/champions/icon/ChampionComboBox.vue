@@ -4,13 +4,14 @@ import { PopoverClose } from 'reka-ui'
 const props = defineProps<{
   selectedIcon?: string
   pocket?: pocket
+  class?: HTMLAttributes['class']
 }>()
 const ds = useDataStore()
-const ts = useTempStore()
+const cs = useChampStore()
 const open = ref(false)
 
 function selectRandomChamp() {
-  ts.championSplashDropdown = getRandom(ds.championNames)
+  cs.championSplashDropdown = getRandom(ds.championNames)
 }
 
 onMounted (() => {
@@ -24,17 +25,17 @@ onMounted (() => {
       <button
         role="combobox"
         :aria-expanded="open"
-        class="w-54 text-3 border-neutral/20 justify-between h-11 btn btn-outline rounded-lg inset-shadow-sm hover:bg-b2/30"
-      >
-        {{ ts.championSplashDropdown || 'Champion' }}
+        class=""
+        :class="cn('w-54 text-3 border-neutral/20 justify-between h-11 btn btn-outline rounded-lg inset-shadow-sm hover:bg-b2/30', props.class)">
+        {{ cs.championSplashDropdown || 'Champion' }}
         <icon name="select" class="size-4.5" />
       </button>
     </PopoverTrigger>
-    <PopoverContent class="w-54 p-0 isolate z-80">
-      <Command v-model="ts.championSplashDropdown">
+    <PopoverContent class="w-[var(--reka-popover-trigger-width)] p-0 isolate z-80">
+      <Command v-model="cs.championSplashDropdown">
         <CommandInput placeholder="Search...">
           <span class="flex gap-1">
-            <CloseButton @click="ts.championSplashDropdown = null" />
+            <CloseButton @click="cs.championSplashDropdown = null" />
             <RandomButton v-tippy="'Random Champ'" @click="selectRandomChamp" />
           </span>
         </CommandInput>
@@ -45,16 +46,14 @@ onMounted (() => {
               v-for="champion in ds.championNames" :key="champion"
               :value="champion"
               as-child
-              @select="ts.championSplashDropdown = champion"
-            >
+              @select="cs.championSplashDropdown = champion">
               <PopoverClose class="w-full">
                 <icon
                   name="tick-sm"
                   :class="cn(
                     'mr-2 h-4 w-4',
-                    ts.championSplashDropdown === champion ? 'opacity-100' : 'opacity-0',
-                  )"
-                />
+                    cs.championSplashDropdown === champion ? 'opacity-100' : 'opacity-0',
+                  )" />
                 {{ champion }}
               </PopoverClose>
             </CommandItem>

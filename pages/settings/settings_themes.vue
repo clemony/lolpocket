@@ -3,56 +3,48 @@ definePageMeta({
   name: 'themes',
   path: '/settings/themes',
 })
-
-const as = useAccountStore()
-
-function handleChange(theme) {
-  as.dataTheme = theme
-  as.themeClass = theme
-  document.documentElement.setAttribute('data-theme', theme)
-}
 </script>
 
 <template>
-  <div class="flex gap-12 flex-wrap">
-    <label
-      v-for="theme in themes"
-      :key="theme.name" :class="`theme-${theme.name}`"
-      class="cursor-pointer min-w-110 w-110 max-w-110">
-      <input
-        v-model="as.dataTheme"
-        type="radio"
-        class="peer hidden"
-        name="theme-changer"
-        :value="theme.name"
-        @change="handleChange(theme.name)" />
-      <SettingCard
-        :key="theme.name"
-        :title="theme.name"
-        :description="theme.description"
-        class="select-none h-62 pb-1">
-        <template #header-badge>
-
-          <input
-            type="checkbox"
-            :checked="theme.name == as.dataTheme" class="checkbox checkbox-neutral rounded-full" :class="{ invisible: theme.name != as.dataTheme }" />
-
+  <div class="pt-[5vh] overflow-y-auto pr-21 pb-24  w-full h-full flex px-2 flex-col gap-34 ">
+    <div class="w-full">
+      <h3 class="px-2 font-normal font-mono tracking-wide opacity-70 pb-11 dst">
+        Time
+      </h3>
+      <div class="flex  gap-12 flex-wrap ">
+        <template
+          v-for="theme in themes[0]"
+          :key="theme.name">
+          <ThemeCard :theme="theme" />
         </template>
-        <div
-          class="bg-b1 text-bc shadow-warm border-b3 h-20 w-full overflow-hidden rounded-xl border"
-          :data-theme="theme.name">
-          <div class="grid h-full w-full grid-cols-[1fr_4fr]">
-            <div class="bg-b2 grid size-full place-items-center"></div>
-            <div class="flex h-full items-center gap-2 px-5 font-medium">
-              <div class="text-4 grow px-1 font-semibold">Aa</div>
-              <div class="color-chip bg-b2 text-bc"></div>
-              <div class="color-chip text-bc bg-b3"></div>
-              <div class="color-chip !bg-neutral !text-nc"></div>
-            </div>
-          </div>
-        </div>
-      </SettingCard>
-    </label>
+      </div>
+    </div>
+
+    <div class="w-full">
+      <h3 class="px-2 font-normal  font-mono  opacity-60   pb-11 dst">
+        Weather
+      </h3>
+      <div class="flex gap-12 flex-wrap ">
+        <template
+          v-for="theme in themes[1]"
+          :key="theme.name">
+          <ThemeCard :theme="theme" />
+        </template>
+      </div>
+    </div>
+
+    <div class="w-full">
+      <h3 class="px-2 font-normal  font-mono  opacity-60  pb-11 dst">
+        Season
+      </h3>
+      <div class="flex gap-12 flex-wrap ">
+        <template
+          v-for="theme in themes[2]"
+          :key="theme.name">
+          <ThemeCard :theme="theme" />
+        </template>
+      </div>
+    </div>
   </div>
 </template>
 

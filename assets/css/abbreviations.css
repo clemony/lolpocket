@@ -1,21 +1,16 @@
 @import 'tailwindcss';
 
+
+
 @layer components {
 
 /* text */
 
-    .f-n {
-@apply font-normal;
-}
-.f-m {
-@apply font-medium;
-}
+
 .f-sb {
 @apply font-semibold;
 }
-.f-bl {
-@apply font-black;
-}
+
 
 .f-ttt {
 @apply tracking-tighter;
@@ -24,9 +19,6 @@
 @apply tracking-tight;
 }
 
-.t-nw {
-  @apply text-nowrap;
-}
 
 /* pos */
 
@@ -34,42 +26,58 @@
     @apply items-center;
 }
 
-.i-s{
-    @apply items-start;
-}
 
-.i-e{
-    @apply items-end;
-}
-
-.j-c{
-    @apply justify-center;
-}
-
-.j-s{
-    @apply justify-start;
-}
-
-.j-e{
-    @apply justify-end;
-}
 
 .p-i-c{
     @apply place-items-center;
 }
 
-/*user */
 
-.point-none{
-    @apply pointer-events-none;
-}
-
-.point-auto{
-    @apply pointer-events-auto;
-}
 
 /*shadow*/
 .dst {
   @apply drop-shadow-text;
+}
+}
+
+:root {
+.tldr-10 {
+  @apply transition-all duration-100;
+}
+
+.tldr-15 {
+  @apply transition-all duration-150;
+}
+
+.tldr-20 {
+  @apply transition-all duration-200;
+}
+
+.tldr-30 {
+  @apply transition-all duration-300;
+}
+
+.tldr-40 {
+  @apply transition-all duration-400;
+}
+
+.tldr-50 {
+  @apply transition-all duration-500;
+}
+
+.tldr-60 {
+  @apply transition-all duration-600;
+}
+
+.tldr-70 {
+  @apply transition-all duration-700;
+}
+
+.tldr-100 {
+  @apply transition-all duration-1000;
+}
+
+.frost {
+  @apply bg-b1/94 backdrop-blur-md;
 }
 }

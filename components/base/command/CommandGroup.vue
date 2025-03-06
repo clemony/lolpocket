@@ -4,7 +4,7 @@ import type { ListboxGroupProps } from 'reka-ui'
 import { ListboxGroup, ListboxGroupLabel, useId } from 'reka-ui'
 import { computed, onMounted, onUnmounted } from 'vue'
 import type { HTMLAttributes } from 'vue'
-import { provideCommandGroupContext, useCommand } from '.'
+import { provideCommandGroupContext, useCommand } from './cindex'
 
 const props = defineProps<ListboxGroupProps & {
   class?: HTMLAttributes['class']
@@ -36,10 +36,10 @@ onUnmounted(() => {
   <ListboxGroup
     v-bind="delegatedProps"
     :id="id"
-    :class="cn('overflow-hidden p-1 text-foreground [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground', props.class)"
+    :class="cn('overflow-hidden p-1 text-bc [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-bc/60', props.class)"
     :hidden="isRender ? undefined : true"
   >
-    <ListboxGroupLabel v-if="heading" class="px-2 py-1.5 text-xs font-medium text-muted-foreground">
+    <ListboxGroupLabel v-if="heading" class="px-2 py-1.5 text-2 font-medium text-bc/60">
       {{ heading }}
     </ListboxGroupLabel>
     <slot />

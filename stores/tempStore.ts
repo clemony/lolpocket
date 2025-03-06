@@ -7,11 +7,10 @@ export const useTempStore = defineStore(
     const itemGridApi = shallowRef<GridApi | null>(null)
 
     const pocketBarComponent = shallowRef(null)
-    // drawer selections
-    const selectedChampion = ref(null)
+    // drawer selections=
     const selectedRune = ref(null)
     const selectedPocket = ref(null)
-    const championSplashDropdown = ref(null)
+
     const isSettingsOpen = ref(true)
 
     // dialog
@@ -22,16 +21,7 @@ export const useTempStore = defineStore(
     const newFolderOpen = ref(false)
     const newPocketOpen = ref(false)
 
-    // champs
-    const champSearch = ref('')
-    const champClassFilters = ref([])
-    const sortChampsAZ = ref()
-    const filterChampionClass = ref([])
-    const filterChampionTypes = ref(null)
-    const filterFavoriteChamps = ref(false)
-
     // items
-    // const items = ref([...ds.items])
     const AZmodel = ref(0)
     const priceModel = ref(0)
     const sortItemsAZ = ref(0)
@@ -63,7 +53,6 @@ export const useTempStore = defineStore(
 
       // drawer
 
-      championSplashDropdown,
       isSettingsOpen,
 
       // dialog
@@ -75,17 +64,11 @@ export const useTempStore = defineStore(
 
       // drawer selections
       selectedItem,
-      selectedChampion,
       selectedRune,
       selectedPocket,
 
       // champions
-      sortChampsAZ,
-      champClassFilters,
-      champSearch,
-      filterChampionClass,
-      filterChampionTypes,
-      filterFavoriteChamps,
+
       // items
       // items,
       AZmodel,

@@ -9,17 +9,14 @@ const useHead = useHeader()
 // const history = router.options.history;
 
 onMounted(async () => {
-  document.documentElement.setAttribute('data-theme', as.dataTheme ? as.dataTheme : 'daylight')
+  document.documentElement.setAttribute('data-theme', as.dataTheme ? as.dataTheme : 'midnight')
   getPatch()
 })
 </script>
 
 <template>
   <NuxtLayout>
-    <!-- <Progress /> -->
     <LazyNuxtPage />
-
-    <!-- <StepLoader /> -->
   </NuxtLayout>
 </template>
 

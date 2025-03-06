@@ -41,8 +41,8 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="flex gap-18 px-12 pt-[7vh]">
-    <div class="flex flex-col gap-6">
+  <div class="flex gap-18 px-12 pt-[7vh] flex-wrap justify-center w-full">
+    <div class="flex flex-col gap-6 w-1/2 min-w-90 flex   w-114 max-w-114 ">
       <Field :title="`Primary Path > ${primaryPath}`">
         <RunePanel
           :pocket="pocket" :set="set" :model-value="primaryPath"
@@ -60,13 +60,13 @@ onMounted(async () => {
       </Field>
     </div>
 
-    <div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-6 w-1/2 min-w-90 flex   w-114 max-w-114">
       <Field :title="secondaryPath == 'empty' ? 'Secondary Path' : `Secondary Path > ${secondaryPath}`">
         <RunePanel
           :pocket="pocket" :set="set" :model-value="secondaryPath" :type="2" @update:path="handleSecondary($event)" />
       </Field>
 
-      <Field :key="secondaryPath">
+      <Field :key="secondaryPath" class=" ">
         <LazyPocketRuneSelect
 
           :set="set"
@@ -74,7 +74,7 @@ onMounted(async () => {
           :path="secondaryPath"
           type="secondary" />
       </Field>
-      <field title="Shards">
+      <Field title="Shards">
         <RuneShards :pocket="pocket" :rune-set="set" />
       </Field>
     </div>

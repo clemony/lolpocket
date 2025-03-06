@@ -86,7 +86,7 @@ watch(items, (newItemSets) => {
         </DropdownMenu>
 
         <div class="pl-5 pr-9 pt-4 pb-3 **:select-none">
-          <ItemSetItems
+          <ItemSet
             :pocket="pocket"
             :set="set" />
         </div>

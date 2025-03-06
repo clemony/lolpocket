@@ -2,11 +2,13 @@
 import type { HTMLAttributes } from 'vue'
 import { vDraggable } from 'vue-draggable-plus'
 import type { DraggableEvent } from 'vue-draggable-plus'
+import { hexoid } from 'hexoid'
 
 const props = defineProps<{
   pocket?: pocket
   dragDisabled?: boolean
   class?: HTMLAttributes['class']
+
 }>()
 
 const list = computed(() => {
@@ -42,10 +44,13 @@ function onClone(event: DraggableEvent) {
   console.log('💠 - onClone - event:', event.data)
   console.log('clone')
 }
+
+const toID = hexoid()
 </script>
 
 <template>
   <div
+    :key="props.pocket ? pocket.key : toID()"
     v-draggable="[
       list,
       {
@@ -72,7 +77,7 @@ function onClone(event: DraggableEvent) {
     ]"
     group
     class=""
-    :class="cn('overflow-y-auto transitio-all duration-400 absolute inset-0 grid grid-flow-row auto-cols-auto select-none h-fit  grid-cols-[repeat(auto-fill,minmax(54px,1fr))] justify-center gap-4 px-4  pb-10 pt-26', props.class)"
+    :class="cn('overflow-y-auto  absolute inset-0 grid grid-flow-row auto-cols-auto select-none   grid-cols-[repeat(auto-fill,minmax(54px,1fr))] justify-center gap-4 px-4  pb-10 pt-26', props.class)"
 
     @end="onEnd"
     @clone="onClone"

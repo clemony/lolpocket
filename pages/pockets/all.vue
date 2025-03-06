@@ -111,6 +111,7 @@ const colDefs = ref<(ColDef | ColGroupDef)[]>([
     valueGetter: p => p.data.icon,
     width: 71,
     suppressMovable: true,
+    headerClass: ['ml-3 pt-1'],
 
   },
 
@@ -121,6 +122,7 @@ const colDefs = ref<(ColDef | ColGroupDef)[]>([
     width: 180,
     cellClass: 'font-medium  ',
     suppressMovable: true,
+    headerClass: [''],
   },
   {
     headerName: 'Role',

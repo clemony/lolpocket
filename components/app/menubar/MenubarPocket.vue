@@ -30,17 +30,17 @@ function handleAddClick() {
     <MenubarTrigger>Pockets</MenubarTrigger>
 
     <MenubarContent class="!w-74">
-      <MenubarLabel class="select-none" inset>
+<!--       <MenubarLabel class="select-none" inset>
         Folders
       </MenubarLabel>
-      <MenubarSeparator />
+      <MenubarSeparator /> -->
 
       <MenubarSub>
         <MenubarSubTrigger :disabled="!pinned || pinned.length == null || pinned.length == 0" class=" cursor-alias group" @click="emit('update:modelValue', '')">
           <icon name="pin" class="size-4  " />
-          <span class="group-hover:underline">Pinned</span>
+          <span class="group-hover:underline -ml-px">Pinned</span>
 
-          <MenubarShortcut v-if="!pinned || pinned.length == null || pinned.length == 0">
+          <MenubarShortcut v-if="!pinned || pinned.length == null || pinned.length == 0" class="-mr-1">
             0
           </MenubarShortcut>
         </MenubarSubTrigger>
@@ -60,7 +60,7 @@ function handleAddClick() {
           to="/pockets">
           <MenubarSubTrigger :disabled="!ps.pockets || ps.pockets.length == null || ps.pockets.length == 0" class="cursor-alias group" @click="emit('update:modelValue', '')">
             <icon name="folders" class="!size-3.5 shrink-0  dst " />
-            <span class="group-hover:underline">All</span>
+            <span class="group-hover:underline ml-px">All</span>
             <MenubarShortcut v-if="!ps.pockets || ps.pockets.length == null || ps.pockets.length == 0">
               0
             </MenubarShortcut>
@@ -141,7 +141,7 @@ function handleAddClick() {
 
       <MenubarSeparator />
 
-      <button class="flex mt-2 mb-1 gap-3 w-[98%] justify-self-center btn btn-neutral  " @click="handleAddClick()">
+      <button class="flex mt-2 mb-1 gap-3 w-[98%] justify-self-center btn btn-neutral  rounded-md" @click="handleAddClick()">
         <icon
           name="add-sm"
           class="size-5.5 shrink-0 stroke-[1.2] text-nc drop-shadow-sm -ml-4" />

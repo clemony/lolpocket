@@ -5,8 +5,6 @@ const props = defineProps<{
   path?: string
   type: string
 }>()
-console.log('💠 - type:', props.type)
-
 const ds = useDataStore()
 const rs = useRuneStore()
 const paths = [...ds.paths]
@@ -80,7 +78,6 @@ onMounted(() => {
   }
   if (props.set) {
     set.value = props.set
-    console.log('💠 - onMounted - set.value:', set.value)
   }
 })
 
@@ -96,7 +93,7 @@ function onHover(rune) {
     if (runeHovered.value != null && runeHovered.value == thisRune) {
       rs.hoveredRune = runeHovered.value
     }
-  }, 2000)
+  }, 1000)
 }
 
 const allRunes = computed (() => {
@@ -108,7 +105,7 @@ const allRunes = computed (() => {
 
 <template>
   <div
-    class="ease -mt-2 justify-center  relative size-full h-fit w-114 max-w-114 rounded-xl  transition-all duration-500 **:select-none">
+    class="ease -mt-2 justify-center  relative size-full h-fit w-full rounded-xl  transition-all duration-500 **:select-none">
     <div v-if="pathData && pathData.slots">
       <transition-slide
         :duration="{ enter: 700, leave: 100 }" :offset="{
@@ -145,7 +142,7 @@ const allRunes = computed (() => {
                 class="absolute hidden peer"
                 @change="handleSelection(i + 1, rune)" />
 
-              <Placeholder v-if="rune.name == 'empty'" class="size-17  cursor-not-allowed border border-b3/50 bg-gradient-to-br shadow-inset-sm from-b3/60 to-b3/80" />
+              <Placeholder v-if="rune.name == 'empty'" class="size-17  cursor-not-allowed border rounded-full border-b3/50 bg-gradient-to-br shadow-inset-sm from-b3/60 to-b3/80" />
               <img
                 v-else
                 :src="`/img/runes/${path}/${rune.name.replace(/\s/g, '')}.webp`"

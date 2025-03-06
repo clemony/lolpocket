@@ -126,5 +126,15 @@ type stat = string | number
   interface ItemClone extends Item {
     cloneId: string
   }
+  interface Stat {
+    id: string
+    displayName?: string
+    checked?: boolean
+    shortName?: string
+    icon?: string
+    class?: string
+    iconClass?: string
+  }
 }
+
 export { }

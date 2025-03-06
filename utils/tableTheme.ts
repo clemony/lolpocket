@@ -9,7 +9,7 @@ export const pocketTheme = themeQuartz.withPart(iconSetQuartzLight).withParams({
   headerBackgroundColor: 'transparent',
   headerTextColor: 'var(--bc)/0.8',
   headerFontWeight: 500,
-  headerVerticalPaddingScale: 0.4,
+  headerVerticalPaddingScale: 0.6,
   rowVerticalPaddingScale: 1.1,
   cellHorizontalPadding: 6,
   // oddRowBackgroundColor: 'var(--b2) / 60%',

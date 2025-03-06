@@ -14,10 +14,12 @@ export const useItemStore = defineStore('ItemStore', () => {
   const filterItemCats = ref([])
   const pocketItemSelect = ref()
   const itemGridApi = shallowRef<GridApi | null>(null)
+  const itemPaneOpen = ref(false)
 
   return {
     selectedItem,
     selectedItemSet,
+    itemPaneOpen,
     AZmodel,
     sortPrice,
     priceModel,

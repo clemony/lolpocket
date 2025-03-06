@@ -10,7 +10,7 @@ const emit = defineEmits(['update:selectedIcon'])
 
 const ds = useDataStore()
 
-const ts = useTempStore()
+const cs = useChampStore()
 
 const images = ref([])
 const selectIcon = ref()
@@ -23,7 +23,7 @@ function handleChange(image) {
 const fuse = ref()
 
 const searchResult = computedAsync (() => {
-  const find = ds.champions.find(c => c.name == ts.championSplashDropdown)
+  const find = ds.champions.find(c => c.name == cs.championSplashDropdown)
 
   if (find) {
     return fuse.value.search(find.apiname,
@@ -49,8 +49,8 @@ onMounted (async () => {
     threshold: 0.3,
   })
 
-  if (ts.championSplashDropdown == null) {
-    ts.championSplashDropdown = getRandom(ds.championNames)
+  if (cs.championSplashDropdown == null) {
+    cs.championSplashDropdown = getRandom(ds.championNames)
   }
 
   selectIcon.value = props.selectedIcon

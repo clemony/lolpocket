@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { set } from '@vueuse/core'
 import { vDraggable } from 'vue-draggable-plus'
 import type { DraggableEvent } from 'vue-draggable-plus'
 
@@ -7,6 +6,7 @@ const props = defineProps<{
   pocket: pocket
   set: ItemSet
   limit?: number
+    class?: HTMLAttributes['class']
 }>()
 const pocket = ref(props.pocket)
 function onStart(event: DraggableEvent) {
@@ -46,7 +46,7 @@ const itemSet = ref(props.set.items)
     fallbackClass="item-set-item-fallback"
     filter=".no-drag"
     class="flex   h-fit  flex-wrap justify-start gap-3 group"
-    :class="{ 'gap-5!': props.limit }"
+    :class="cn({ 'gap-5': props.limit }, props.class)"
 
     @end="onEnd"
     @start="onStart"

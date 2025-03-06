@@ -5,6 +5,7 @@ export default defineAppConfig({
     class: 'text-[var(--color-bc)]',
     aliases: {
       'search': 'teenyicons:search-outline',
+      'search-sm': 'teenyicons:search-small-outline',
 
       // math
       'add': 'teenyicons:add-outline',
@@ -44,6 +45,7 @@ export default defineAppConfig({
       'refresh': 'teenyicons:refresh-alt-outline',
       'copy': 'teenyicons:layers-subtract-outline',
       'shuffle': 'qlementine-icons:shuffle-16',
+      'dot': 'radix-icons:dot-filled',
 
       // folder
       'x-folder': 'teenyicons:folder-x-outline',

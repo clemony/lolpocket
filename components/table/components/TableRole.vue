@@ -10,10 +10,14 @@ const props = defineProps<{
 
 <template>
   <div
-    v-if="props.params.value" v-tippy="props.params.value.name" class="ti-container pointer-events-auto !shadow-black/7">
+    v-if="props.params.value" v-tippy="props.params.value.name" class=" pointer-events-auto shadow-warm">
     <div
-      class="ti-wrapper overflow-hidden grid place-items-center bg-b2/20">
-      <component :is="`i-${props.params.value.icon}`" class="size-7 drop-shadow-sm " />
+      class="overflow-hidden grid place-items-center bg-b2/20 rounded-lg border border-b3/60">
+      <component
+          :is="`i-roles-${props.params.value.replace(' ', '-')}`"
+          class="h-7 w-auto dst shrink-0 peer-checked:text-nc"
+          :class="{'size-7': props.params.value == 'tiny-carrot'}"
+        />
     </div>
   </div>
 </template>

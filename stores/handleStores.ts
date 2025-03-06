@@ -20,7 +20,10 @@ export const is = computedAsync(async () => {
   return await useItemStore()
 }, null)
 
-/* export const rs = computedAsync(async () => {
+export const rs = computedAsync(async () => {
   return await useRuneStore()
 }, null)
- */
+
+export const cs = computedAsync(async () => {
+  return await useChampStore()
+}, null)

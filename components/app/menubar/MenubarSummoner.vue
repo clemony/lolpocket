@@ -16,7 +16,8 @@ const role = computedAsync(() => {
     <NuxtLink
       v-for="link in summonerLinks" :key="link.name"
       :to="link.link" class="group">
-      <MenubarItem inset class="capitalize">
+      <MenubarItem  class="capitalize">
+      <icon :name="link.icon" class="size-3.5 in-group-last:size-3.75 dst" />
         {{ link.name }}
       </MenubarItem>
       <MenubarSeparator class="group-even:hidden" />

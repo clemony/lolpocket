@@ -20,10 +20,12 @@ const thisItem = computed(() => {
       class="hidden" />
 
     <img
+      v-if="item.name != ''"
       :src="`/img/item/${thisItem.id}.webp`"
       :alt="`${thisItem.name} Image`"
       class="aspect-square size-full rounded-lg" />
 
+      <slot  />
   </label>
 </template>
 

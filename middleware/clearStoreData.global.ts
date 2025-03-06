@@ -1,23 +1,21 @@
 export default defineNuxtRouteMiddleware((to, from) => {
+  const cs = useChampStore()
   const ts = useTempStore()
-  ts.champSearch = ''
-  ts.champClassFilters = []
-  ts.sortChampsAZ = ''
-  ts.filterChampionClass = []
-  ts.filterChampionTypes = null
-  ts.filterFavoriteChamps = false
-  ts.sortItemsAZ = 0
-  ts.sortPrice = 0
-  ts.itemSearchResult = ''
+  const is = useItemStore()
+  cs.champSearch = ''
+  cs.champClassFilters = []
+  cs.sortChampsAZ = ''
+  cs.filterChampionClass = []
+  cs.filterChampionTypes = null
+  cs.filterFavoriteChamps = false
+  is.sortItemsAZ = 0
+  is.sortPrice = 0
+  is.itemSearchResult = ''
   ts.catFilters = []
   ts.statFilters = []
   ts.viewFavoriteItems = false
-  ts.selectedItemSet = null
-  ts.filterItemTypes = ''
-  ts.filterItemStats = []
-  ts.filterItemCats = []
-
-
-  const ss = useSidebarStore()
-  ss.sidebarComponent = null
+  is.selectedItemSet = null
+  is.filterItemTypes = ''
+  is.filterItemStats = []
+  is.filterItemCats = []
 })

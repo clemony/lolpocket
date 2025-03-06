@@ -30,8 +30,11 @@
 }
 
 .ag-header-cell-label {
-  @apply flex items-start w-full m-0 pt-2.5 text-left justify-start;
+  @apply flex items-start w-full mx-0  !pt-3 text-left justify-start;
 }
+
+
+
 
 .ag-cell.ag-column-first {
 
@@ -48,6 +51,8 @@
 .ag-header-row.ag-header-row-column-group {
   @apply border-b border-b-b3/70;
 }
+
+
 
 .ag-header-row .ag-header-row-column {
   @apply !hidden opacity-0 !h-1;

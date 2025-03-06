@@ -10,7 +10,7 @@ const emit = defineEmits(['update:selectedIcon'])
 
 const ds = useDataStore()
 
-const ts = useTempStore()
+const cs = useChampStore()
 
 const images = ref([])
 const selectIcon = ref()
@@ -23,7 +23,7 @@ function handleChange(image) {
 const fuse = ref()
 
 const searchResult = computedAsync (() => {
-  const find = ds.champions.find(c => c.name == ts.championSplashDropdown)
+  const find = ds.champions.find(c => c.name == cs.championSplashDropdown)
 
   if (find) {
     return fuse.value.search(find.apiname,
@@ -49,8 +49,8 @@ onMounted (async () => {
     threshold: 0.3,
   })
 
-  if (ts.championSplashDropdown == null) {
-    ts.championSplashDropdown = getRandom(ds.championNames)
+  if (cs.championSplashDropdown == null) {
+    cs.championSplashDropdown = getRandom(ds.championNames)
   }
 
   selectIcon.value = props.selectedIcon
@@ -75,8 +75,7 @@ onMounted (async () => {
     </div>
     <div class="w-full h-[calc(100%-220px)] justify-self-end  rounded-lg relative">
       <div
-        class="absolute top-0 left-0 w-full h-fit justify-end justify-items-end gap-x-2 gap-y-3  overflow-y-scroll px-1 py-4 items-center grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(64px,1fr))]  "
-      >
+        class="absolute top-0 left-0 w-full h-fit justify-end justify-items-end gap-x-2 gap-y-3  overflow-y-scroll px-1 py-4 items-center grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(64px,1fr))]  ">
         <LazyPocketIcon image="/img/champion/centered/1.webp" class="rounded-lg **:rounded-lg size-[64px] has-checked:ring-1 has-checked:ring-offset-2 has-checked:ring-neutral has-checked:ring-offset-b1 hover:ring-1">
           <input v-model="selectIcon" type="radio" value="/img/champion/centered/1.webp" class="hidden" @change="handleChange('/img/champion/centered/1.webp')" />
         </LazyPocketIcon>

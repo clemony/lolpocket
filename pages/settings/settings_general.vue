@@ -48,29 +48,31 @@ const settingsData = {
 </script>
 
 <template>
-  <div class="size-full">
+  <div class="size-full ">
     <div :class="cn('grid w-full grid-cols-3 gap-10 px-2 *:size-full', props.class)">
-      <SettingCard
+      <div
         v-for="item in settingsData.general"
         :key="item.title"
-        :title="item.title"
-        :description="item.description"
-        class="h-28"
-      >
+        class=" shadow-sm pt-7 grid grid-rows-2 pb-8 px-8 rounded-box border-b3/60 border max-h-50">
+        <div class="">
+          <h2 class="dst mb-3">
+            {{ item.title }}
+          </h2>
+          <p>{{ item.description }}</p>
+        </div>
         <label
           class="flex w-full cursor-pointer items-end gap-4"
-          @click="toggleSetting(item.model)"
-        >
+          @click="toggleSetting(item.model)">
           <Switch v-model:checked="item.model" />
           <span class="label-text w-full text-left">
             {{ item.text }}
           </span>
         </label>
-      </SettingCard>
+      </div>
       <div class="border-t-b2 mt-12 flex border-t pt-10 px-2">
-        <Button size="md">
+        <button class="btn">
           Save
-        </Button>
+        </button>
         <Grow />
       </div>
     </div>

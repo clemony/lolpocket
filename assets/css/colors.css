@@ -2,11 +2,11 @@
 
 @theme {
           --color-precision: oklch(85.49% 0.0892 84.09);
-  --color-precision-light: #oklch(90.13% 0.0695 86.13);
+  --color-precision-light: oklch(90.13% 0.0695 86.13);
   --color-domination: oklch(60.61% 0.1206 15.34);
   --color-domination-light: oklch(81.67% 0.044 12.73);
   --color-sorcery: oklch(69.02% 0.0644 332.52);
-  --color-sorcery-light: #oklch(80.99% 0.0273 327.74);
+  --color-sorcery-light: oklch(80.99% 0.0273 327.74);
   --color-resolve: oklch(76.83% 0.0749 131.06);
   --color-resolve-light: oklch(85.55% 0.0188 127.18);
   --color-inspiration: oklch(76.93% 0.0494 204.19);

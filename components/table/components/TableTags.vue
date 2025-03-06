@@ -7,10 +7,10 @@ const props = defineProps<{
 
 <template>
   <div class="flex gap-2 flex-wrap px-2">
-    <Badge v-for="tag in props.params.data.tags" :key="tag" class="h-7">
+    <div v-for="tag in props.params.data.tags" :key="tag" class="h-7 badge">
       # {{ tag
       }}
-    </Badge>
+    </div>
   </div>
 </template>
 

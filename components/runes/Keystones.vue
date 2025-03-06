@@ -70,7 +70,7 @@ function onHover(rune) {
     if (runeHovered.value != null && runeHovered.value == thisRune) {
       rs.hoveredRune = runeHovered.value
     }
-  }, 2000)
+  }, 1000)
 }
 </script>
 

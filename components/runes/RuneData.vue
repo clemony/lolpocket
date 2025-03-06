@@ -1,28 +1,22 @@
 <script setup lang="ts">
 import { formatDataText } from './data/format'
 
-const props = defineProps<{
-  set?: RuneSet
-}>()
-
-const set = computed (() => {
-  return props.set
-})
-
-const arr = ref()
 const rs = useRuneStore()
 const ds = useDataStore()
+
 const rune = computed (() => {
-  return rs.hoveredRune && rs.hoveredRune.name != 'empty' ? rs.hoveredRune : set.value.primary.runes[0]
+return rs.hoveredRune
 })
 
 const pathName = computed (() => {
   return getRunePathName(rune.value.id, ds.paths)
 })
+
+
 </script>
 
 <template>
-  <div class="relative -mt-2 flex w-full justify-center flex-col">
+  <div class="relative bg-b1 flex w-full justify-center flex-col tldr-30">
     <div
       class="border-b3 **:select-none mb-8 grid w-full grid-cols-[0.7fr_2fr]  border-b pb-6">
       <div

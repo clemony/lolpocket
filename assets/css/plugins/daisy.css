@@ -61,6 +61,9 @@
   }
 .tab {
       --radius-field: 0.75rem !important;
+      --tab-bg: var(--color-b1);
+      --tab-border-color: var(--color-b3);
+      	--tab-border-colors: var(--color-b3);
 }
 .btn-neutral {
   @apply !shadow-xs;

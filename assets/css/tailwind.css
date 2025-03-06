@@ -23,7 +23,7 @@
   #app {
     font-family: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: var(--text-3);
-    @apply text-3  text-bc selection:bg-neutral/80 selection:text-nc ;
+    @apply text-3  text-bc selection:bg-neutral/80 selection:text-nc overflow-hidden h-screen w-screen;
     }
 
 
