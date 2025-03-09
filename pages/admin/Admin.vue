@@ -30,58 +30,46 @@ function reGet() {
     <div class="flex gap-2">
       <div class="flex flex-col gap-2">
         All
-        <Button
-          variant="neutral"
-          size="md"
+        <button class="btn btn-neutral"
           @click="patchNewData()"
         >
           Patch Data
-        </Button>
-        <Button
-          variant="neutral"
-          size="md"
+        </button>
+        <button class="btn btn-neutral"
           @click="getRuneData()"
         >
           Patch Rune Data
-        </Button>
-        <Button
-          variant="neutral"
-          size="md"
+        </button>
+        <button class="btn btn-neutral"
           @click="reset"
         >
           Empty Data
-        </Button>
-        <Button
-          variant="neutral"
-          size="md"
+        </button>
+        <button class="btn btn-neutral"
           @click="reGet"
         >
           Fetch Current Data
-        </Button>
+        </button>
       </div>
 
       <div class="flex flex-col gap-2">
         Items
 
-        <Button
-          variant="neutral"
-          size="md"
+        <button class="btn btn-neutral"
           @click="getItemsFromDatabase()"
         >
           Get Items From Database
-        </Button>
+        </button>
       </div>
 
       <div class="flex flex-col gap-2">
         Champions
 
-        <Button
-          variant="neutral"
-          size="md"
+        <button class="btn btn-neutral"
           @click="getChampsFromDatabase()"
         >
           Get Champs from Database
-        </Button>
+        </button>
       </div>
     </div>
   </div>

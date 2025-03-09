@@ -8,15 +8,15 @@ export const usePocketStore = defineStore(
     const trashFolder = ref<pocket[]>([])
     const archiveFolder = ref<pocket[]>([])
     const pinnedFolder = ref<pocket[]>([])
-
     const filterText = ref('')
     const selectedRows = ref([])
     const tableSelectAll = ref()
     const pocketGridApi = shallowRef<GridApi | null>(null)
-
+    const trashGridApi = shallowRef<GridApi | null>(null)
     const pinnedTopRowData = ref([])
     const pocketGrid = shallowRef()
     const columns = ref([])
+    const newPocketOpen = ref(false)
 
     function updateSelectedRows(rows: any) {
       selectedRows.value = rows // Update the selected rows in the store
@@ -26,29 +26,22 @@ export const usePocketStore = defineStore(
       return pockets.value
     })
 
-    const updatePocketType = (key: string, newTags: Array<string>) => {
-      const findPocket = pockets.value.find(pocket => pocket.key === key)
-      if (findPocket) {
-        findPocket.tags = newTags
-      }
-    }
-
     return {
-
       pockets,
       filterText,
       archiveFolder,
       trashFolder,
-      updatePocketType,
       selectedRows,
       tableSelectAll,
       updateSelectedRows,
       pocketGridApi,
+      trashGridApi,
       pocketGrid,
       pinnedTopRowData,
       pinnedFolder,
       allPockets,
       columns,
+      newPocketOpen,
     }
   },
 

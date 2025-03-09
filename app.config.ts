@@ -24,6 +24,7 @@ export default defineAppConfig({
       // check
       'tick': 'teenyicons:tick-outline',
       'tick-sm': 'teenyicons:tick-small-outline',
+      'check-fill': 'bi:check-circle-fill',
 
       // arrow
       'down': 'teenyicons:down-outline',
@@ -38,6 +39,7 @@ export default defineAppConfig({
 
       // menu
       'more': 'teenyicons:more-horizontal-outline',
+      'more-v': 'teenyicons:more-vertical-outline',
       'reset': 'mynaui:refresh',
       'gear': 'ph:gear-six',
       'lines': 'teenyicons:align-text-justify-outline',

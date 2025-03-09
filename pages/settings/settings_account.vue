@@ -21,28 +21,24 @@ const user = useSupabaseUser()
           return user.app_metadata.providers.includes(provider.name.toLowerCase()) ? `${provider.name} Connected` : `${provider.name} Disconnected`
         }).value.toString()
       "
-      class="col-start-2"
-    >
-      <SettingCard
+      class="col-start-2">
+      <div
         :title="provider.name"
         class="pt-3 pb-2 justify-center"
         description=""
-        content-class="py-0 h-0"
-      >
-        <template #header-icon>
+        content-class="py-0 h-0">
+        <div>
           <icon
             :name="provider.icon"
-            class="size-6"
-          />
-        </template>
+            class="size-6" />
+        </div>
 
-        <template #header-badge>
+        <div>
           <Switch
             :checked="user.app_metadata.providers.includes(provider.name.toLowerCase())"
-            class="rotate-180 scale-90"
-          />
-        </template>
-      </SettingCard>
+            class="rotate-180 scale-90" />
+        </div>
+      </div>
     </label>
   </NuxtLayout>
 </template>

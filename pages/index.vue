@@ -1,14 +1,16 @@
 <script setup lang="ts">
 import type { UseScrollReturn } from '@vueuse/core'
 import { vScroll } from '@vueuse/components'
+import {useScroll} from '@vueuse/core'
 
-const emit = defineEmits(['update:open'])
+definePageMeta({
+  header: 'custom'
+})
 
 const as = useAccountStore()
+const emit = defineEmits(['update:open'])
 
-onMounted(() => {
-  emit('update:open', false)
-})
+
 
 const shadow = ref(false)
 
@@ -18,7 +20,6 @@ function onScroll(state: UseScrollReturn) {
 }
 
 const etc = ref(false)
-
 const steps = ref(null)
 
 const { top } = useElementBounding(steps)
@@ -46,6 +47,10 @@ watch(
     }
   },
 )
+
+onMounted(() => {
+  emit('update:open', false)
+})
 </script>
 
 <template>

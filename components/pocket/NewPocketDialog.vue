@@ -2,7 +2,7 @@
 import { hexoid } from 'hexoid'
 
 const emit = defineEmits(['update:name'])
-const ts = useTempStore()
+
 const ps = usePocketStore()
 
 const toID = hexoid()
@@ -41,8 +41,8 @@ defineExpose({
 </script>
 
 <template>
-  <Dialog :open="ts.newPocketOpen">
-    <DialogContent @interact-outside="ts.newPocketOpen = false">
+  <Dialog :open="ps.newPocketOpen">
+    <DialogContent @interact-outside="ps.newPocketOpen = false">
       <DialogHeader>
         <DialogTitle class="text-7 dst">
           New Pocket
@@ -61,8 +61,7 @@ defineExpose({
                 type="text"
                 name="pocket-name"
                 placeholder="Pocket Name"
-                class="size-full text-3"
-              />
+                class="size-full text-3" />
             </div>
 
             <span class="flex gap-2">
@@ -73,16 +72,14 @@ defineExpose({
 
           <TagsInput
             v-model="tags"
-            class="flex-col p-2 mt-6  "
-          >
+            class="flex-col p-2 mt-6  ">
             <div class="*:text-3 flex w-full flex-row flex-wrap justify-start gap-2">
               <template v-if="tags.length">
                 <TransitionGroup name="pop">
                   <TagsInputItem
                     v-for="tag in tags"
                     :key="tag"
-                    :value="tag"
-                  >
+                    :value="tag">
                     <TagsInputItemDelete>
                       <TagsInputItemText />
                     </TagsInputItemDelete>
@@ -105,8 +102,7 @@ defineExpose({
             <TagsInputInput
               placeholder="optional"
               class="text-3 min-h-10 w-full rounded-md border-0 focus:border-0"
-              name="pocket-tags "
-            />
+              name="pocket-tags " />
           </TagsInput>
         </div>
         <div class="relative inset-0 h-full">
@@ -123,8 +119,7 @@ defineExpose({
         <button
           type="submit"
           class="btn btn-neutral btn-lg"
-          @click="submitForm"
-        >
+          @click="submitForm">
           Create
         </button>
       </DialogFooter>

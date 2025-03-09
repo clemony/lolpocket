@@ -13,13 +13,14 @@ export const useTempStore = defineStore(
 
     const isSettingsOpen = ref(true)
 
+    const sidebarExpanded = ref(true)
+
     // dialog
 
     const loginOpen = ref(false)
     const commandOpen = ref(false)
     const contextMenuOpen = ref(false)
     const newFolderOpen = ref(false)
-    const newPocketOpen = ref(false)
 
     // items
     const AZmodel = ref(0)
@@ -31,7 +32,7 @@ export const useTempStore = defineStore(
     const statFilters = ref<string[]>([])
     const viewFavoriteItems = ref(false)
     const selectedItemSet = ref<ItemSet | null>(null)
-    const filterItemTypes = ref()
+    const filterItemTypes = ref('')
     const filterItemStats = ref([])
     const filterItemCats = ref([])
     const pocketItemSelect = ref()
@@ -54,13 +55,13 @@ export const useTempStore = defineStore(
       // drawer
 
       isSettingsOpen,
+      sidebarExpanded,
 
       // dialog
       loginOpen,
       commandOpen,
       contextMenuOpen,
       newFolderOpen,
-      newPocketOpen,
 
       // drawer selections
       selectedItem,

@@ -18,6 +18,13 @@
   @apply border-b-b2/60 rounded-lg;
 }
 
+.trash
+{
+  .ag-row {
+  @apply border-b-b2/60 rounded-lg bg-b2/30;
+}
+}
+
 .cell-class {
   @apply !px-1 items-center justify-center flex h-full cursor-context-menu;
 }

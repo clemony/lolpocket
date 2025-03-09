@@ -1,0 +1,16 @@
+<script lang="ts" setup>
+const is = useItemStore()
+</script>
+
+<template>
+  <p class="font-semibold tracking-tight mb-1.5 mt-4 pl-4">
+    Search by Item Category
+  </p>
+
+  <div group class="flex flex-col  px-1.5" :appear="false">
+    <label v-for="type in itemTypes" :key="type" class="w-full rounded-md hover:bg-b2/60 capitalize py-1.5 pl-8">
+      <input v-model="is.filterItemTypes" type="radio" name="item-types" class="peer hidden" :value="type" @change="console.log(is.filterItemTypes)" />
+      {{ type }}
+    </label>
+  </div>
+</template>

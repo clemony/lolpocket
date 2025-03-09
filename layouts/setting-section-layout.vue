@@ -13,9 +13,9 @@ const props = defineProps<{
     </div>
 
     <div class="border-t-b2 mt-12 flex border-t pt-10 px-2">
-      <Button size="md">
+      <button class="btn">
         Save
-      </Button>
+      </button>
       <Grow />
     </div>
   </div>

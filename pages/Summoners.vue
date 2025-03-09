@@ -3,8 +3,7 @@
 </script>
 
 <template>
-  <div>
-  </div>
+  <PagePlaceholder />
 </template>
 
 <style scoped>

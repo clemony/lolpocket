@@ -1,0 +1,32 @@
+<script lang="ts" setup>
+const props = defineProps<{
+  item: Item
+  index?: number
+  set?: CalculatorSet
+}>()
+
+const is = useItemStore()
+
+const item = ref(createItem())
+
+async function handleItem(e) {
+  nextTick()
+  item.value = e
+}
+</script>
+
+<template>
+  <ItemCommand @update:item="handleItem($event)">
+    <button class="size-20  group/b hover:ring hover:ring-neutral/40 rounded-lg ring-offset-2 hover:ring-offset-b1 data-[state=open]:ring-neutral/40  data-[state=open]:ring  data-[state=open]:ring-offset-b1  ">
+      <LazyItem
+        v-if="item.name ?? ''"
+        :key="item.name"
+        :item="item"
+        class="shadow-sm shrink-0 !size-full pointer-events-none" />
+
+      <div v-else class="!size-full btn no-drag group-data-[state=open]/b:!bg-b3 tldr-20">
+        <icon name="search" class="size-4 text-bc/70 group-hover/b:text-bc group-data-[state=open]/b:text-bc" />
+      </div>
+    </button>
+  </ItemCommand>
+</template>

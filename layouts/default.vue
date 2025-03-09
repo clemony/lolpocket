@@ -33,29 +33,33 @@ client.auth.onAuthStateChange(async (event, session) => {
 })
 
 const ss = useSidebarStore()
+
+const triggerSidebar = refAutoReset(false, 1000)
+
 </script>
 
 <template>
-  <div class="h-screen w-screen ">
-    <MainMenubar />
-    <NuxtLoadingIndicator class="bg-gradient-to-r from-nc to-neutral"/>
-    <div
-      class="bg-b1 h-screen w-full relative">
-      <Sonner
-        position="top-right"
+  <div class="h-screen w-screen flex">
+    <AppSidebar :triggerSidebar="triggerSidebar"/>
+    <div class="grow flex flex-col h-screen min-h-screen w-full" >
+      <NuxtLoadingIndicator class="bg-gradient-to-r from-nc to-neutral" />
 
-        :toast-options="{
-          class: 'my-toast',
-          descriptionClass: 'my-toast-description',
-        }"
-        :expand="true"
-        :duration="6000" />
+      <AppHeader @update:sidebar="triggerSidebar = true"/>
+      <main class="w-full h-screen pt-[8vh] " :class="{'!pt-0': route.path == '/'}">
+        <Sonner
+          position="top-right"
 
-      <LazyNewFolderDialog />
-      <LazyNewPocketDialog />
-      <div class="size-full max-size-full overflow-hidden">
+          :toast-options="{
+            class: 'my-toast',
+            descriptionClass: 'my-toast-description',
+          }"
+          :expand="true"
+          :duration="6000" />
+
+        <LazyNewFolderDialog />
+        <LazyNewPocketDialog />
         <slot />
-      </div>
+      </main>
     </div>
   </div>
 </template>

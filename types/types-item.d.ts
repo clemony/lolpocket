@@ -134,7 +134,12 @@ type stat = string | number
     icon?: string
     class?: string
     iconClass?: string
+    hoverClass?: string
+    bgClass?: string
   }
+
+type CalculatorSet = Item[]
+
 }
 
 export { }

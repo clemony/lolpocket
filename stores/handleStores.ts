@@ -27,3 +27,7 @@ export const rs = computedAsync(async () => {
 export const cs = computedAsync(async () => {
   return await useChampStore()
 }, null)
+
+export const us = computedAsync(async () => {
+  return await useUiStore()
+}, null)

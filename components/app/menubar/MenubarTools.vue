@@ -29,14 +29,14 @@ import { UseClipboard } from '@vueuse/components'
     </MenubarLabel>
     <MenubarSeparator />
     <NuxtLink
-      to="/Docs">
+      to="/docs">
       <MenubarItem inset>
         Docs
       </MenubarItem>
     </NuxtLink>
 
     <NuxtLink
-      to="/About">
+      to="/about">
       <MenubarItem inset class="pr-2.5 items-center">
         <span class="grow">About</span>
 

@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import type { GridApi } from 'ag-grid-community'
 
-export const useItemStore = defineStore('ItemStore', () => {
+export const useItemStore = defineStore('itemStore', () => {
   const selectedItem = ref<Item>(null)
   const selectedItemSet = ref<ItemSet | null>(null)
   const priceModel = ref(0)
@@ -15,6 +15,25 @@ export const useItemStore = defineStore('ItemStore', () => {
   const pocketItemSelect = ref()
   const itemGridApi = shallowRef<GridApi | null>(null)
   const itemPaneOpen = ref(false)
+  const itemSearchQuery = ref()
+
+  const calculatorSet1 = ref<CalculatorSet>([
+    createItem(),
+    createItem(),
+    createItem(),
+    createItem(),
+    createItem(),
+    createItem(),
+  ])
+
+  const calculatorSet2 = ref<CalculatorSet>([
+    createItem(),
+    createItem(),
+    createItem(),
+    createItem(),
+    createItem(),
+    createItem(),
+  ])
 
   return {
     selectedItem,
@@ -30,5 +49,13 @@ export const useItemStore = defineStore('ItemStore', () => {
     filterItemCats,
     pocketItemSelect,
     itemGridApi,
+    itemSearchQuery,
+    calculatorSet1,
+    calculatorSet2,
   }
+}, {
+  persist: {
+    storage: piniaPluginPersistedstate.localStorage(),
+    key: 'itemStore',
+  },
 })

@@ -20,7 +20,7 @@ const group = ref(props.group)
       >
         <Button
           variant="ghost"
-          size="md"
+          size="lg"
           as-child
         >
           <Label class="text-bc/60 font-semibold tracking-tighter">
@@ -36,7 +36,7 @@ const group = ref(props.group)
         <li v-for="link in group.links">
           <Button
             variant="ghost"
-            size="md"
+            size="lg"
             class="relative w-full justify-start gap-4"
             as-child
           >

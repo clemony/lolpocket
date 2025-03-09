@@ -2,10 +2,9 @@
 import Spells from 'shared/data/spells.json'
 
 definePageMeta({
-  name: 'spell-data',
-  path: '/spells'
+  name: 'Summoner Spells',
+  path: '/spells',
 })
-
 
 const selectedSpell = ref(0)
 
@@ -64,19 +63,12 @@ const spellCompute = computed (() => {
 </script>
 
 <template>
-  <div class="pt-[5vh] wrapper size-full items-center justify-center gap-15 px-27">
-    <div class="w-full grid-cols-3 grid h-[9vh] items-center">
-      <div class=" flex items-center gap-3">
-        <h1 class="!text-9 drop-shadow-text px-2 tracking-tight flex flex-wrap capitalize">
-          Summoner Spells
-        </h1>
-      </div>
-    </div>
+  <div class="size-full items-center justify-center gap-15 px-27 pt-[5vh]">
     <div class="w-full  h-[83vh] flex gap-[8%] px-3 py-4.5">
       <div class="flex flex-col gap-14 w-114">
-        <div class="grid grid-cols-3 grid-rows-3 gap-4 py-8 border-b3/80 rounded-xl shadow-smooth  px-9 h-fit  border">
+        <div class="grid grid-cols-3 grid-rows-3 gap-4 py-8 border-b3/80 rounded-box shadow-smooth  px-9 h-fit  ">
           <div v-for="(spell, i) in Spells" :key="spell.name" v-tippy="spell.name" class="size-fit">
-            <label class="btn    py-2 !cursor-pointer btn-ghost px-2.5  size-27 !rounded-lg has-checked:bg-b3/70 has-checked:border-b3 has-checked:shadow-sm hover:bg-b2 hover:border-b3   ">
+            <label class="btn    py-2 !cursor-pointer btn-ghost px-2.5  size-27  has-checked:bg-b3/70 has-checked:border-b3 has-checked:shadow-sm hover:bg-b2 hover:border-b3   ">
 
               <img :src="`/img/spells/${spell.name.toLowerCase()}.webp`" class="size-22 rounded-lg shadow-sm inset-shadow-sm shadow-black/20 border border-b3 peer-checked:border-neutral/90" />
 
@@ -92,8 +84,7 @@ const spellCompute = computed (() => {
           leave-active-class="transition-all duration-500"
           leave-from-class="opacity-100 "
           leave-to-class="opacity-0 -translate-y-2"
-          mode="out-in"
-        >
+          mode="out-in">
           <div :key="selectedSpell" class="pl-4.5 pr-3">
             <p class="font-serif text-4 leading-9 dst">
               {{ spellCompute.text }}
@@ -112,8 +103,7 @@ const spellCompute = computed (() => {
         leave-active-class="transition-all duration-500"
         leave-from-class="opacity-100 "
         leave-to-class="opacity-0 -translate-y-2"
-        mode="out-in"
-      >
+        mode="out-in">
         <div :key="selectedSpell" class="flex flex-col gap-14 w-160 transition-all duration-300">
           <div class="border-b3/80 rounded-xl shadow-smooth pt-7 pb-8 px-9  w-full border flex max-h-min flex-col gap-6 transition-all duration-300">
             <div class="w-full flex gap-6 i-c">
@@ -163,8 +153,7 @@ const spellCompute = computed (() => {
           <div class="bg-black/90 w-full  rounded-xl shadow-pretty ">
             <video-background
               :src="`https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-collections/global/default/video/spells/spells_${spellCompute.video}.webm`"
-              class="w-90 h-auto aspect-video rounded-xl"
-            >
+              class="w-90 h-auto aspect-video rounded-xl">
             </video-background>
           </div>
         </div>

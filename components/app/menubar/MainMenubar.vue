@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { navigationMenuTriggerStyle } from 'components/base/navigation-menu/nin'
 import { toast } from 'vue-sonner'
 
 // TODO: Separators when not logged in
@@ -86,7 +85,7 @@ const pocket = computed (() => {
     <button class="btn btn-md invisible" @click="toast('Test toast', { description: 'Hey hi that\'s really cool!' })">
       test toast
     </button>
-<!--
+    <!--
     <LazyCommand /> -->
     <MenubarSearch />
 

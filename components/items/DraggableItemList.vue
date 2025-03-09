@@ -12,7 +12,7 @@ const props = defineProps<{
 }>()
 
 const list = computed(() => {
-  return [...useItemFilter()]
+  return [...filterItems()]
 })
 
 function onStart(event: DraggableEvent) {

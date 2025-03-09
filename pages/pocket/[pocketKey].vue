@@ -49,8 +49,8 @@ onMounted (() => {
       <!-- before:absolute before:w-full  before:top-14 before:bg-b1 before:border-b3 before:h-[82.4vh] before:border before:border-b3 before:rounded-xl  -->
       <div class=" size-full relative drop-shadow-[1px_2px_2px_#00000010] ">
         <div class="tabs tabs-lift size-full tabs-xl max-h-[82.5vh] drop-shadow-[1px_2px_2px_#00000010] ">
-          <div class="tab dst !overflow-visible @max-[750px]/main:w-54:after:min-w-64  pr-6 @min-[751px]/main:after:min-w-40 !border-b-transparent relative items-center justify-start -ml-4" role="tab">
-            <div class="absolute h-full @min-[751px]/main:w-80 @max-[750px]/main:w-44 bottom-3.5  flex gap-4 ">
+          <div class="tab dst !overflow-visible min-w-90 pr-6  !border-b-transparent relative items-center justify-start -ml-4" role="tab">
+            <div class="absolute h-full w-90  bottom-3.5  flex gap-4 ">
               <LazyPopover>
                 <PopoverTrigger class="group  !cursor-pointer  items-start flex aspect-square size-10  rounded-full !pointer-events-auto shadow-sm !drop-shadow-none  bg-gradient-to-br from-neutral/60 to-neutral grid place-items-center">
                   <PocketIcon :image="pocket.icon" class="size-10 pointer-events-none group-hover:opacity-0 group-data-[state=open]:opacity-0 tldr-30" />
@@ -71,7 +71,7 @@ onMounted (() => {
               v-model="tabValue" name="pocket-tabs" type="radio" :value="tab.link"
               role="tab"
               :aria-label="tab.name"
-              class="tab tab-title not-checked:!border-b-transparent   @min-[921px]/main:w-49 -ml-1  @min-[920px]/main:w-32 font-semibold capitalize text-3 text-center " @change="navigateTo(tab.link)" />
+              class="tab tab-title not-checked:!border-b-transparent  w-49 -ml-1   font-semibold capitalize text-3 text-center " @change="navigateTo(tab.link)" />
 
             <div class="tab-content  bg-b1 border-b3 p-0 size-full rounded-tl-box  overflow-hidden ">
               <LazyNuxtPage

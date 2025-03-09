@@ -64,7 +64,7 @@ const faq = [
 </script>
 
 <template>
-  <div class="px-18 pt-30 w-full justify-center">
+  <div class="px-18  w-full justify-center">
     <!-- prettier-ignore -->
 
     <div class="flex w-[500px] flex-col gap-6 pt-24 items-center mx-auto">

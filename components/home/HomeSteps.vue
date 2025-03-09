@@ -102,7 +102,7 @@ watch(
         <li ref="target1" class="w-full">
           <div class="timeline-middle">
             <icon
-              name="bi:check-circle-fill"
+              name="check-fill"
               class="size-5"
             />
           </div>

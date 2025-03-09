@@ -13,6 +13,7 @@ const props = withDefaults(
     placeholder: 'Search Items...',
   },
 )
+const emit = defineEmits(['update:query'])
 const is = useItemStore()
 const ds = useDataStore()
 
@@ -21,6 +22,12 @@ const items = computedAsync(async () => {
 }, null)
 
 const searchQuery = ref('')
+
+watchEffect(() => {
+  emit('update:query', searchQuery.value)
+  is.itemSearchQuery = searchQuery.value
+})
+
 const fuse = ref<Fuse<any> | null>(null)
 
 // Initialize Fuse once the items are available
@@ -52,7 +59,6 @@ const searchResult = computed(() => {
 
 watch(searchResult, (newSearchResults) => {
   is.itemSearchResult = newSearchResults
-  // console.log('💠 - Search Results:', newSearchResults)
 })
 
 const target = shallowRef()

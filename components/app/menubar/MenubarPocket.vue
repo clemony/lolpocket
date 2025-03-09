@@ -20,7 +20,7 @@ const summoner = computed (() => {
 })
  */
 function handleAddClick() {
-  ts.newPocketOpen = true
+  ps.newPocketOpen = true
   emit('update:modelValue')
 }
 </script>
@@ -30,7 +30,7 @@ function handleAddClick() {
     <MenubarTrigger>Pockets</MenubarTrigger>
 
     <MenubarContent class="!w-74">
-<!--       <MenubarLabel class="select-none" inset>
+      <!--       <MenubarLabel class="select-none" inset>
         Folders
       </MenubarLabel>
       <MenubarSeparator /> -->

@@ -1,5 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePageMeta({
+  name: 'docs',
+  path: '/docs',
+})
+</script>
 
-<template></template>
+<template>
+  <PagePlaceholder />
+</template>
 
 <style scoped></style>

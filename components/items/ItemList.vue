@@ -5,7 +5,7 @@ const props = defineProps<{
 const is = useItemStore()
 
 const list = computed(() => {
-  return useItemFilter()
+  return filterItems()
 })
 </script>
 

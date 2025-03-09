@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     'nuxt-aos',
     'nuxt-svgo',
+    'motion-v/nuxt',
   ],
 
   icon: {
@@ -83,7 +84,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
 
   imports: {
-    dirs: ['shared/supabase', '@vueuse/components', 'stores'],
+    dirs: ['shared/supabase', '@vueuse/components', 'stores', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/links', 'utils/lib', 'utils/pocket', 'utils/style', 'stores'],
   },
 
   webpack: {

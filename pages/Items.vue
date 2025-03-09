@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const ts = useTempStore()
 const ds = useDataStore()
 const is = useItemStore()
 definePageMeta({
@@ -95,7 +94,7 @@ function resetItems() {
         as-child>
         <ItemList
           :list-key="listKey"
-          class="pt-5 pr-6" />
+          class="pt-5 pr-6 " />
       </div>
     </template>
   </NuxtLayout>
