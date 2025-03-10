@@ -1,0 +1,56 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+	<title>trait_icon_12_time</title>
+	<style>
+		.s0 { opacity: .16;fill: currentColor }
+		.s1 { opacity: .23;fill: currentColor }
+		.s2 { opacity: .34;fill: currentColor }
+		.s3 { opacity: .36;fill: currentColor }
+		.s4 { opacity: .43;fill: currentColor }
+		.s5 { opacity: .49;fill: currentColor }
+		.s6 { opacity: .52;fill: currentColor }
+		.s7 { opacity: .55;fill: currentColor }
+		.s8 { opacity: .72;fill: currentColor }
+		.s9 { opacity: .75;fill: currentColor }
+		.s10 { opacity: .82;fill: currentColor }
+		.s11 { opacity: .83;fill: currentColor }
+		.s12 { opacity: 1;fill: currentColor }
+		.s13 { opacity: .18;fill: currentColor }
+		.s14 { opacity: .27;fill: currentColor }
+		.s15 { opacity: .3;fill: currentColor }
+		.s16 { opacity: .56;fill: currentColor }
+		.s17 { opacity: .67;fill: currentColor }
+		.s18 { opacity: .79;fill: currentColor }
+	</style>
+	<g id="Background">
+		<path id="Path 0" class="s0" d="m10 13h1v1h-1zm11 0h1v1h-1zm-12 12h1v1h-1zm13 0h1v1h-1zm-12 1h1v1h-1zm11 0h1v1h-1z"/>
+		<path id="Path 1" class="s1" d="m15 12v-1h2v1zm-11 6h1v1h-1zm23 0h1v1h-1z"/>
+		<path id="Path 2" class="s2" d="m3 11h1v1h-1zm25 0h1v1h-1zm-22 9h1v1h-1zm19 0h1v1h-1z"/>
+		<path id="Path 3" class="s3" d="m8 23h1v1h-1zm4 4h1v1h-1zm7 0h1v1h-1z"/>
+		<path id="Path 4" class="s4" d="m3 12h1v1h-1zm25 0h1v1h-1zm-19 1h1v1h-1zm13 0h1v1h-1zm-20 2h1v1h-1zm27 0h1v1h-1z"/>
+		<path id="Path 5" class="s5" d="m4 19h1v1h-1zm23 0h1v1h-1z"/>
+		<path id="Path 6" class="s6" d="m3 10h1v1h-1zm25 0h1v1h-1z"/>
+		<path id="Path 7" class="s7" d="m29 12h1v1h-1z"/>
+		<path id="Path 8" class="s8" d="m8 8h1v1h-1zm15 0h1v1h-1zm-13 2h1v1h-1zm11 0h1v1h-1zm-19 2h1v1h-1z"/>
+		<path id="Path 9" class="s9" d="m3 10v-3h1v3zm25 0v-3h1v3z"/>
+		<path id="Path 10" class="s10" d="m6 7h1v1h-1z"/>
+		<path id="Path 11" class="s11" d="m25 7h1v1h-1z"/>
+		<path id="Path 12" fill-rule="evenodd" class="s12" d="m4 6h1l2 2h1l1 1h1v2l-1 1v2h1l1-1h1l1-1h6l1 1h1l1 1h1v-2l-1-1v-2h1l1-1h1l2-2h1v6l1 1h1v1l-1 1v1l-2 2v2h-2l-1 1v2l-2 2v1h-1l-1 1h-1l-1 1h-4l-1-1h-1l-1-1h-1v-1l-1-1v-1l-1-1v-1l-1-1h-2v-2l-2-2v-1l-1-1v-1h1l1-1zm12 16l1 1h1l1 1h1l1-1-2-2h-1l-1-1v-5h-2v7z"/>
+		<path id="Path 13" class="s0" d="m9 8h1v1h-1zm13 0h1v1h-1z"/>
+		<path id="Path 14" class="s13" d="m14 11h1v1h-1zm3 0h1v1h-1z"/>
+		<path id="Path 15" class="s14" d="m7 7h1v1h-1zm17 0h1v1h-1z"/>
+		<path id="Path 16" class="s15" d="m17 20h1v1h-1z"/>
+		<path id="Path 17" class="s2" d="m4 17h1v1h-1zm23 0h1v1h-1zm-7 5h1v1h-1z"/>
+		<path id="Path 18" class="s3" d="m23 23h1v1h-1z"/>
+		<path id="Path 19" class="s4" d="m5 6h1v1h-1zm21 0h1v1h-1z"/>
+		<path id="Path 20" class="s6" d="m3 6h1v1h-1zm25 0h1v1h-1zm-21 14h1v1h-1zm17 0h1v1h-1z"/>
+		<path id="Path 21" class="s7" d="m12 12h1v1h-1zm7 0h1v1h-1zm0 9h1v1h-1zm-4 1h1v1h-1zm2 1h1v1h-1z"/>
+		<path id="Path 22" class="s16" d="m10 9h1v1h-1zm11 0h1v1h-1zm-12 2h1v1h-1zm13 0h1v1h-1z"/>
+		<path id="Path 23" class="s17" d="m3 16h1v1h-1zm25 0h1v1h-1z"/>
+		<path id="Path 24" class="s8" d="m17 20v-5l1 5z"/>
+		<path id="Path 25" class="s9" d="m8 22h1v1h-1zm11 2h1v1h-1z"/>
+		<path id="Path 26" class="s18" d="m13 27h1v1h-1zm5 0h1v1h-1z"/>
+		<path id="Path 27" class="s10" d="m2 14h1v1h-1z"/>
+		<path id="Path 28" class="s11" d="m9 14h1v1h-1zm13 0h1v1h-1zm7 0h1v1h-1zm-20 10h1v1h-1zm13 0h1v1h-1zm-11 2h1v1h-1zm9 0h1v1h-1z"/>
+		<path id="Path 29" class="s0" d="m16 22h1v1h-1zm2 1h1v1h-1z"/>
+	</g>
+</svg>

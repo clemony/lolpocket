@@ -168,21 +168,19 @@ defineExpose({
 </script>
 
 <template>
-  <div class="size-full">
-    <MenubarSpacer />
-    <div class="flex size-full">
-      <TableBar :api="is.itemGridApi" />
-      <AgGridVue
-        :grid-options="gridOptions"
-        :theme="theme"
-        :column-defs="colDefs"
-        class="size-full border-t border-b2 border-l"
-        :tooltip-show-delay="400"
+  <NuxtLayout
+    name="header-layout">
+    <TableBar :api="is.itemGridApi" />
+    <AgGridVue
+      :grid-options="gridOptions"
+      :theme="theme"
+      :column-defs="colDefs"
+      class="size-full border-t border-b2 border-l"
+      :tooltip-show-delay="400"
 
-        @grid-ready="onGridReady">
-      </AgGridVue>
-    </div>
-  </div>
+      @grid-ready="onGridReady">
+    </AgGridVue>
+  </NuxtLayout>
 </template>
 
 <style>

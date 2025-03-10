@@ -23,6 +23,7 @@ export const defaultFolders: Array<Folder> = [
     type: 'pocket',
     permanent: true,
     icon: 'teenyicons:folders-outline',
+    iconSolid: 'teenyicons:folders-solid',
   },
   {
     name: 'Trash',
@@ -33,6 +34,7 @@ export const defaultFolders: Array<Folder> = [
     description: 'The ideas that didn\'t pan out exactly as planned.',
     permanent: true,
     icon: 'teenyicons:bin-outline',
+    iconSolid: 'teenyicons:bin-solid',
   },
   {
     name: 'Archive',
@@ -43,36 +45,6 @@ export const defaultFolders: Array<Folder> = [
     type: 'pocket',
     permanent: true,
     icon: 'teenyicons:archive-outline',
-  },
-]
-
-export const folderLinks = [
-  {
-    name: 'Pinned',
-    key: 'pinned',
-    link: '/pockets/pinned',
-    buttonRef: pinnedButton,
-    icon: 'teenyicons:attach-outline',
-  },
-  {
-    name: 'All',
-    key: 'all',
-    link: '/pockets',
-    buttonRef: allButton,
-    icon: 'teenyicons:folders-outline',
-  },
-  {
-    name: 'Trash',
-    link: '/pockets/trash',
-    key: 'trash',
-    buttonRef: trashButton,
-    icon: 'teenyicons:bin-outline',
-  },
-  {
-    name: 'Archive',
-    link: '/pockets/archive',
-    key: 'archive',
-    buttonRef: archiveButton,
-    icon: 'teenyicons:archive-outline',
+    iconSolid: 'teenyicons:archive-solid',
   },
 ]

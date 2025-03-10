@@ -1,5 +1,7 @@
 @import "tailwindcss";
+@import "../default-theme.css" ;
 @plugin "daisyui";
+@import "daisyui" theme(reference);
 
 @plugin "daisyui" {
   root: ":root";
@@ -46,6 +48,8 @@
   --color-error: var(--color-domination);
   --color-error-content: var(--color-domination-light);
 
+  --input-color: var(--color-b3);
+
   }
       --depth: 1;
   --noise: 0.5;
@@ -55,19 +59,24 @@
 
 }
 
+
 @layer components {
-  .tabs {
-     /*  --radius-box: 1.5rem; */
-  }
 .tab {
       --radius-field: 0.75rem !important;
       --tab-bg: var(--color-b1);
       --tab-border-color: var(--color-b3);
       	--tab-border-colors: var(--color-b3);
 }
+
+
+.btn.btn-ghost:hover {
+--btn-bg: --alpha(var(--color-b2) / 20%) !important;
+}
+
 .btn-neutral {
   @apply !shadow-xs;
 }
+
   .btn:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
     @apply bg-b2/60 border-b2;
   }
@@ -75,6 +84,7 @@
   .btn {
     @apply font-normal text-3 ;
   }
+
 
 
 .collapse-input,
@@ -91,6 +101,13 @@
 }
 .field-legend {
   @apply fieldset-legend absolute left-5.5 -top-5 text-3 max-w-64  max-h-12  ;
+}
+
+.input {
+  @apply focus-within:!outline-1 focus-within:!outline-offset-0   focus-within:!outline-b3
+
+  border-image-width:0 !important;
+  --input-color: var(--color-b3) !important;
 }
 
 }

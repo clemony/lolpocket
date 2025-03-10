@@ -9,7 +9,7 @@ const pinned = computed (() => {
 
 <template>
   <NuxtLink v-for="pocket in pinned" :key="pocket.key" :to="`/pocket/${pocket.key}`">
-    <SidebarButton v-if="pocket">
+    <SidebarButton v-if="pocket" v-tippy="!us.sidebarExpanded ? pocket.name : null">
       <PocketIcon :image="pocket.icon" class="size-5" />
       <SidebarText>
         {{ pocket.name }}

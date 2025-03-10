@@ -55,6 +55,7 @@ export default defineAppConfig({
       'folder': 'formkit:folder',
       'folders': 'teenyicons:folders-outline',
       'pin': 'iconoir:pin',
+      'pin-solid': 'iconoir:pin-solid',
       'clip': 'teenyicons:attach-outline',
       'trash': 'formkit:trash',
       'archive': 'teenyicons:archive-outline',

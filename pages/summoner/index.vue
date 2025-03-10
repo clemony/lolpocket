@@ -13,14 +13,10 @@ definePageMeta({
 })
 
 const as = useAccountStore()
-
-
 </script>
 
 <template>
-
-    <ModuleContainer />
-
+  <ModuleContainer />
 </template>
 
 <style scoped></style>

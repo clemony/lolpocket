@@ -3,21 +3,26 @@ export const summonerLinks = [
     name: `board`,
     link: '/summoner',
     icon: 'gala:calendar',
+    iconSolid: 'clarity:calendar-solid',
   },
   {
-    name: 'Build Analysis',
+    name: 'build analysis',
     link: '/summoner/analysis',
     icon: 'octicon:graph-24',
+    iconSolid: 'mdi:graph-box',
   },
   {
-    name: 'Match History',
+    name: 'match history',
     link: '/summoner/match-history',
-    icon: 'iconoir:archery-match',
+    icon: 'garden:history-fill-12',
+    tftIcon: 'i-time-icon',
   },
   {
-    name: 'Favorites',
+    name: 'favorites',
     link: '/summoner/favorites',
     icon: 'teenyicons:heart-outline',
+    iconSolid: 'teenyicons:heart-solid',
+    tftIcon: 'i-altruist-icon',
   },
 ]
 
@@ -73,7 +78,6 @@ export const itemDataLinks = [
   {
     name: 'Items',
     link: '/items',
-    icon: '',
     text: 'Browse a visual grid and read item data.',
   },
   {
@@ -81,6 +85,7 @@ export const itemDataLinks = [
     link: '/item-stats',
     icon: 'teenyicons:table-outline',
     badge: 'table',
+    class: '',
     text: 'An item stat spreadsheet for the data nerds :)',
   },
 ]
@@ -89,24 +94,58 @@ export const gameDataLinks = [
   {
     name: 'Champions',
     link: '/champions',
-    icon: '',
+    icon: 'i-no-champ',
+    class: 'size-7.5 opacity-70 -mt-1.5 -ml-1.75',
   },
 
   {
     name: 'Runes',
     link: '/runes',
-    icon: '',
+    icon: 'i-rune-icon',
+    class: 'size-6 -mt-1 -ml-1',
   },
   {
     name: 'Spells',
     link: '/spells',
-    icon: '',
+    icon: 'i-attach',
+    class: 'size-5 -mt-1 -ml-1 opacity-70',
   },
   {
     name: 'Summoners',
     link: '/summoners',
-    icon: '',
+    icon: 'i-summoner-tft',
+    class: 'size-5.5 opacity-80 -mt-0.5 -ml-1',
     text: 'Look up your friends... or your foes.',
+  },
+]
+
+export const folderLinks = [
+  {
+    name: 'Pinned',
+    key: 'pinned',
+    link: '/pockets/pinned',
+    icon: 'teenyicons:attach-outline',
+  },
+  {
+    name: 'All',
+    key: 'all',
+    link: '/pockets',
+    icon: 'teenyicons:folders-outline',
+    iconSolid: 'teenyicons:folders-solid',
+  },
+  {
+    name: 'Trash',
+    link: '/pockets/trash',
+    key: 'trash',
+    icon: 'teenyicons:bin-outline',
+    iconSolid: 'teenyicons:bin-solid',
+  },
+  {
+    name: 'Archive',
+    link: '/pockets/archive',
+    key: 'archive',
+    icon: 'teenyicons:archive-outline',
+    iconSolid: 'teenyicons:archive-solid',
   },
 ]
 

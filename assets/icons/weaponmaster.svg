@@ -1,0 +1,78 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+	<title>weaponmaster</title>
+	<style>
+		.s0 { opacity: 1;fill: currentColor}
+		.s1 { opacity: .85;fill: currentColor}
+		.s2 { opacity: .43;fill: currentColor}
+		.s3 { opacity: .57;fill: currentColor}
+		.s4 { opacity: .71;fill: currentColor}
+		.s5 { opacity: .14;fill: currentColor}
+		.s6 { opacity: .28;fill: currentColor}
+		.s7 { opacity: .25;fill: currentColor}
+		.s8 { opacity: .75;fill: currentColor}
+		.s9 { opacity: .54;fill: currentColor}
+		.s10 { opacity: .5;fill: currentColor}
+		.s11 { opacity: .36;fill: currentColor}
+		.s12 { opacity: .91;fill: currentColor}
+		.s13 { opacity: .63;fill: currentColor}
+		.s14 { opacity: .95;fill: currentColor}
+		.s15 { opacity: .27;fill: currentColor}
+		.s16 { opacity: .11;fill: currentColor}
+		.s17 { opacity: .09;fill: currentColor}
+		.s18 { opacity: .84;fill: currentColor}
+		.s19 { opacity: .64;fill: currentColor}
+		.s20 { opacity: .21;fill: currentColor}
+		.s21 { opacity: .73;fill: currentColor}
+		.s22 { opacity: .78;fill: currentColor}
+		.s23 { opacity: .18;fill: currentColor}
+		.s24 { opacity: .69;fill: currentColor}
+		.s25 { opacity: .44;fill: currentColor}
+		.s26 { opacity: .93;fill: currentColor}
+		.s27 { opacity: .13;fill: currentColor}
+		.s28 { opacity: .82;fill: currentColor}
+		.s29 { opacity: .38;fill: currentColor}
+	</style>
+	<g id="Background">
+		<path id="Path 0" fill-rule="evenodd" class="s0" d="m21 6l1-1h3l3 3v6l-1 1v1l-1 1h-1l-1 1h-4l-1 1h-1l-1 1v1l-1 1v2l-4 4h-3v-2l3-3v-1l1-1v-1l1-1v-1l1-1v-1h1l1-1h1l1-1h4l2-2-1-1v-1h-1l-1 1v1l-1 1h-2l-1-1v-3l1-1v-1l1-1zm-17 0h4v2l3 3 3-3v-1l1-1h1v4l-1 1v3l-3 3v1h-1l-1-1h-1l-1 1h-4v-1l1-1h1l1-1h1l1-1-3-3-2-1zm16 15l1-1h2l2 2v4l1 1v1h-3l-1-1h-2l-2-2v-2l1-1v-1z"/>
+		<path id="Path 1" class="s1" d="m21 5h1v1h-1zm-7 1h1v1h-1zm-6 2h1v1h-1zm10 0h1v1h-1zm-8 2h1v1h-1zm5 3h1v1h-1zm8 0h1v1h-1zm-7 2h1v1h-1zm-2 2h1v1h-1zm-1 2h1v1h-1zm12 7h1v1h-1z"/>
+		<path id="Path 2" class="s2" d="m5 5h1v1h-1zm9 0h1v1h-1zm6 0h1v1h-1zm-4 4v-2l1 2zm-4 8h1v1h-1zm-8 1h1v1h-1zm9 0h1v1h-1zm5 3h1v1h-1zm-1 3h1v1h-1z"/>
+		<path id="Path 3" class="s3" d="m6 5h1v1h-1zm19 0h1v1h-1zm-21 6v-1l2 1zm0 5h1v1h-1zm16 2h1v1h-1zm-1 2h1v1h-1zm-3 2h1v1h-1zm9 3v-2h1v2z"/>
+		<path id="Path 4" class="s4" d="m13 8h1v1h-1zm5 6h1v1h-1zm-13 5v-1h2v1zm13 3h1v1h-1zm-8 2h1v1h-1zm15 1h1v1h-1zm-17 2h1v1h-1z"/>
+		<path id="Path 5" class="s5" d="m4 5h1v1h-1zm3 0h1v1h-1zm8 0h1v1h-1zm1 4h1v1h-1zm7 1h1v1h-1zm-1 1h1v1h-1zm-2 2h1v1h-1zm-5 2h1v1h-1zm-1 1h1v1h-1zm9 2h1v1h-1zm-5 1h1v1h-1zm-2 4h1v1h-1z"/>
+		<path id="Path 6" class="s6" d="m11 10h1v1h-1zm11 3h1v1h-1zm3 4h1v1h-1zm-18 1h1v1h-1zm14 1v-1h2v1zm-4 1h1v1h-1z"/>
+		<path id="Path 7" class="s7" d="m8 8v-2l1 2zm17 20h1v1h-1z"/>
+		<path id="Path 8" class="s8" d="m3 8h1v1h-1zm25 4v-2h1v2zm-19 16h1v1h-1z"/>
+		<path id="Path 9" class="s9" d="m3 9h1v1h-1zm25 0h1v1h-1zm-20 19h1v1h-1z"/>
+		<path id="Path 10" class="s10" d="m3 17h1v1h-1z"/>
+		<path id="Path 11" class="s11" d="m28 13h1v1h-1zm-25 3h1v1h-1z"/>
+		<path id="Path 12" class="s12" d="m20 20h1v1h-1z"/>
+		<path id="Path 13" class="s13" d="m3 7h1v1h-1zm25 5h1v1h-1z"/>
+		<path id="Path 14" class="s14" d="m11 23h1v1h-1z"/>
+		<path id="Path 15" class="s15" d="m3 6h1v1h-1z"/>
+		<path id="Path 16" class="s16" d="m3 10h1v1h-1zm8 18h1v1h-1z"/>
+		<path id="Path 17" class="s17" d="m28 14h1v1h-1z"/>
+		<path id="Path 18" class="s18" d="m24 12h1v1h-1z"/>
+		<path id="Path 19" class="s19" d="m10 28h1v1h-1z"/>
+		<path id="Path 20" class="s20" d="m28 8h1v1h-1z"/>
+		<path id="Path 21" class="s21" d="m21 27h1v1h-1z"/>
+		<path id="Path 22" class="s22" d="m12 21h1v1h-1z"/>
+		<path id="Path 23" class="s23" d="m24 28h1v1h-1z"/>
+		<path id="Path 24" class="s24" d="m20 27h1v1h-1z"/>
+		<path id="Path 25" class="s25" d="m27 15h1v1h-1z"/>
+		<path id="Path 26" class="s26" d="m8 14h1v1h-1z"/>
+		<path id="Path 27" class="s1" d="m26 6h1v1h-1zm-17 3h1v1h-1zm14 0h1v1h-1zm-14 7h1v1h-1zm3 0h1v1h-1zm-2 1h1v1h-1zm14 0h1v1h-1zm-7 2h1v1h-1zm-1 2h1v1h-1zm-2 4h1v1h-1zm4 0h1v1h-1zm1 1h1v1h-1z"/>
+		<path id="Path 28" class="s2" d="m12 9h1v1h-1zm3 1h1v1h-1zm7 0h1v1h-1zm-16 1h1v1h-1zm1 1h1v1h-1zm8 0h1v1h-1zm3 0h1v1h-1zm-1 2h1v1h-1zm-9 3h1v1h-1zm16 4h1v1h-1zm-15 4h1v1h-1z"/>
+		<path id="Path 29" class="s3" d="m19 6h1v1h-1zm-1 1h1v1h-1zm-4 4h1v1h-1zm0 3h1v1h-1zm-8 1h1v1h-1zm7 0h1v1h-1zm13 1h1v1h-1z"/>
+		<path id="Path 30" class="s4" d="m27 7h1v1h-1zm-6 5h1v1h-1zm-10 6h1v1h-1zm8 0h1v1h-1zm-4 6h1v1h-1zm-2 2h1v1h-1z"/>
+		<path id="Path 31" class="s5" d="m13 7h1v1h-1z"/>
+		<path id="Path 32" class="s6" d="m7 14h1v1h-1zm18 8h1v1h-1zm-17 4h1v1h-1zm4 1h1v1h-1z"/>
+		<path id="Path 33" class="s7" d="m12 20h1v1h-1z"/>
+		<path id="Path 34" class="s10" d="m8 13h1v1h-1z"/>
+		<path id="Path 35" class="s12" d="m27 14h1v1h-1z"/>
+		<path id="Path 36" class="s14" d="m22 27h1v1h-1z"/>
+		<path id="Path 37" class="s15" d="m11 22h1v1h-1z"/>
+		<path id="Path 38" class="s27" d="m10 23h1v1h-1z"/>
+		<path id="Path 39" class="s28" d="m24 11h1v1h-1z"/>
+		<path id="Path 40" class="s29" d="m23 20h1v1h-1z"/>
+	</g>
+</svg>

@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import Fuse from 'fuse.js'
 
+const props = defineProps<{
+  class?: HTMLAttributes['class']
+}>()
 const is = useItemStore()
 const ds = useDataStore()
 
@@ -41,15 +44,17 @@ watch(searchResult, (newSearchResults) => {
 </script>
 
 <template>
-  <div class="relative max-w-100">
+  <label class="input" :class="cn('relative max-w-100 items-center', props.class)">
     <icon
       name="teenyicons:search-outline"
-      class="pointer-events-none absolute top-3.25 left-3.5 z-20 size-5 opacity-70" />
-    <Input
+      class="pointer-events-none  size-4 shrink-0 opacity-70" />
+    <input
       v-model="searchQuery"
-      placeholder="Search Champion Database..."
-      class="border-b3 !text-3 placeholder:text-bc/80 !bg-b1 flex h-12 border py-2 pr-3 pl-12" />
-  </div>
+      placeholder="Search Champions..."
+      class="grow !text-3 pl-2" />
+
+    <slot />
+  </label>
 </template>
 
 <style></style>

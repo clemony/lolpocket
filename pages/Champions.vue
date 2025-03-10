@@ -1,65 +1,31 @@
 <script setup lang="ts">
-import { categories } from 'shared/data/champion/championCategories'
-import { types } from 'shared/data/champion/championRoles'
-
 definePageMeta({
   name: 'champion-data',
   path: '/champions',
+  title: 'Champions',
 })
 
-const cs = useChampStore()
-
-const a = Object.values(types)[3]
-console.log('💠 - a:', a)
-
-const b = computed(() => {
-  const c = []
-  a.forEach((type) => {
-    c.push(type.id)
-  })
-  return c
-})
-console.log('💠 - b - b:', b.value)
-
-watch(
-  () => cs.filterChampionTypes,
-  (newVal) => {
-    console.log('💠 - newVal:', newVal)
-  },
-)
+const filter = ref(false)
+const toggleFilter = useToggle(filter)
 </script>
 
 <template>
-  <NuxtLayout
-    name="split-layout"
-    title="Champions"
-    class="pr-0">
-    <template #1>
+  <NuxtLayout name="header-layout" class=" grid transition-all duration-300 " :class="{ ' grid-cols-[1fr_240px]': filter, ' grid-cols-[1fr_0px]': !filter }">
+    <template #header>
       <div
-        class="text-4 drop-shadow-text h-28 mt-6 items-center px-2 font-serif tracking-wide last-of-type:text-right"
-        v-html="getQuote()"></div>
-      <ChampionSearch />
-
-      <h2 class="drop-shadow-text mt-7 px-2 tracking-tight">
-        Champion Classes
-      </h2>
-
-      <!-- ItemStatsList /> -->
-      <CheckboxFilterList
-        :source="categories"
-        @update:model="(e) => (cs.filterChampionClass = e)" />
+        class="text-4 drop-shadow-text items-center px-2 font-serif tracking-wide text-nowrap flex mt-1 "
+        v-html="getQuote()" />
     </template>
 
-    <template #2>
-      <RadioFilterList
-        bg
-        :types="b"
-        class="ml-0.75"
-        @update:model="(e) => (cs.filterChampionTypes = e)" />
-      <div class="max-h-inherit mt-2 h-[calc(100vh-10.6rem)] overflow-auto">
-        <ChampionList class="gap-4 px-1 pt-3 pr-6" />
-      </div>
+    <template #crumb>
+      <ChampionSearch class="justify-self-end ">
+        <button class="btn btn-ghost btn-sm btn-square rounded-md hover:bg-b2/40" @click.stop="toggleFilter()">
+          <icon name="filter" class="size-4" />
+        </button>
+      </ChampionSearch>
     </template>
+
+    <ChampionList class="gap-3 inset-0 top-0 left-0 absolute overflow-y-auto pt-35 tldr-30 h-full" />
   </NuxtLayout>
 </template>
 

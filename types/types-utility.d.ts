@@ -36,6 +36,7 @@ declare global {
     icon?: string
     permanent?: boolean
     locked?: boolean
+    iconSolid?: string
   }
 
   interface Note {

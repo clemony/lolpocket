@@ -46,7 +46,7 @@ const settingsData = {
 </script>
 
 <template>
-  <div class="size-full px-8">
+  <NuxtLayout name="header-layout" class="px-12">
     <div :class="cn('grid w-full grid-cols-3 gap-10 px-2 *:size-full', props.class)">
       <div
         v-for="item in settingsData.general"
@@ -74,7 +74,7 @@ const settingsData = {
         <Grow />
       </div>
     </div>
-  </div>
+  </NuxtLayout>
 </template>
 
 <style scoped></style>

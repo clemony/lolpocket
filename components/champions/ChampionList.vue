@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { categories } from 'shared/data/champion/championCategories'
+import { types } from 'shared/data/champion/championRoles'
 
 const as = useAccountStore()
 const cs = useChampStore()
@@ -52,14 +53,33 @@ const filteredChampions = computed(() => {
 
   return filtered
 })
+/*
+console.log('💠 - filteredChampions - filteredChampions:', filteredChampions) */
 
-console.log('💠 - filteredChampions - filteredChampions:', filteredChampions)
+const a = Object.values(types)[3]
+console.log('💠 - a:', a)
+
+const b = computed(() => {
+  const c = []
+  a.forEach((type) => {
+    c.push(type.id)
+  })
+  return c
+})
+console.log('💠 - b - b:', b.value)
+
+watch(
+  () => cs.filterChampionTypes,
+  (newVal) => {
+    console.log('💠 - newVal:', newVal)
+  },
+)
 </script>
 
 <template>
-  <transition-slide
+  <TransitionSlide
     group
-    class="max-h-full user-select-none champions-start grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(170px,1fr))] gap-4 overflow-auto px-3 rounded-lg pb-8">
+    class="max-h-full user-select-none grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-4 overflow-auto   px-16  rounded-lg pb-8">
     <ChampionSplash
       v-for="champion in filteredChampions"
       :key="champion.id"
@@ -68,7 +88,28 @@ console.log('💠 - filteredChampions - filteredChampions:', filteredChampions)
       drag-class="setDrag"
       @click.right.prevent
       @click="cs.selectedChampion = champion" />
-  </transition-slide>
+  </TransitionSlide>
+  <div as="div" class="h-full w-full pr-6">
+    <div class=" flex flex-col  gap-6">
+      <h2 class="mt-1">
+        Roles
+      </h2>
+
+      <CheckboxFilterList
+        :source="categories"
+        @update:model="(e) => (cs.filterChampionClass = e)" />
+
+      <h2 class="mt-6">
+        Positions
+      </h2>
+
+      <RadioFilterList
+        bg
+        :types="b"
+        class=""
+        @update:model="(e) => (cs.filterChampionTypes = e)" />
+    </div>
+  </div>
 </template>
 
 <style scoped></style>

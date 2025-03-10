@@ -15,6 +15,9 @@
   --radius-xl: initial;
   --radius-xl: 0.7rem;
 
+--sidebar-expanded-width: 270px;
+--sidebar-collapsed-width: 60px;
+
   --shadow-pretty: 0 3px 10px rgba(0, 0, 0, 0.2);
   --shadow-warm: rgba(0, 0, 0, 0.08) 0px 2px 7px;
   --shadow-standard: 0px 2px 3px -1px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(25, 28, 33, 0.02),

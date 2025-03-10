@@ -17,17 +17,17 @@ function handleReset() {
 </script>
 
 <template>
-  <form class="mb-3 -ml-2 filter">
+  <form class="flex flex-wrap gap-3 gap-y-5">
     <input
-      class="btn btn-square text-5 !mr-2 rounded-md font-normal"
+      class="btn btn-square btn-sm !text-5 rounded-md font-normal"
       type="reset"
       value="×"
-      @click="handleReset"
-    />
+      @click="handleReset" />
     <input
       v-for="type in types"
+      :key="type"
       v-model="selectedTypes"
-      class="btn checked:bg-neutral checked:border-neutral checked:shadow-neutral/20 text-2 relative z-0 mr-0 rounded-md font-medium tracking-normal capitalize checked:shadow-sm"
+      class="btn checked:bg-neutral checked:border-neutral checked:shadow-neutral/20 btn-sm !text-3 mr-0 rounded-md font-medium tracking-normal capitalize checked:shadow-sm"
       :class="{
         '!mr-3': selectedTypes == null || selectedTypes == undefined,
       }"
@@ -35,8 +35,7 @@ function handleReset() {
       :value="type"
       name="item-types"
       :aria-label="type"
-      @change="emit('update:model', selectedTypes)"
-    />
+      @change="emit('update:model', selectedTypes)" />
   </form>
 </template>
 

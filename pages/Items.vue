@@ -40,10 +40,8 @@ function resetItems() {
 
 <template>
   <NuxtLayout
-    name="split-layout"
-    title="Items"
-    class="pr-0">
-    <template #1>
+    name="header-layout">
+    <template #header>
       <div class="text-4 drop-shadow-text flex h-28 items-center px-2 font-serif tracking-wide">
         {{ captions }}
       </div>

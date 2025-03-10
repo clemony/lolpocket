@@ -1,7 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePageMeta({
+  name: 'favorites',
+})
+</script>
 
 <template>
-  <PagePlaceholder class="absolute inset-0 top-0 left-0" />
+  <PagePlaceholder />
 </template>
 
 <style scoped>

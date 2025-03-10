@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-
+const us = useUiStore()
 </script>
 
 <template>
   <NuxtLink
     to="/pockets">
-    <SidebarButton>
+    <SidebarButton v-tippy="!us.sidebarExpanded ? 'All' : null">
       <SidebarIcon name="folders" class="-left-px size-4.5" />
       <SidebarText>
         All
@@ -15,8 +15,8 @@
 
   <NuxtLink
     to="/pockets/trash">
-    <SidebarButton>
-      <SidebarIcon name="trash" class="size-4.75 -left-[2px]" />
+    <SidebarButton v-tippy="!us.sidebarExpanded ? 'Trash' : null">
+      <SidebarIcon name="trash" class="size-4.75 -left-[2px]" :class="{ 'size-5': !us.sidebarExpanded }" />
       <SidebarText>
         Trash
       </SidebarText>
@@ -25,7 +25,7 @@
 
   <NuxtLink
     to="/pockets/archive">
-    <SidebarButton>
+    <SidebarButton v-tippy="!us.sidebarExpanded ? 'Archive' : null">
       <SidebarIcon name="archive" class="3.75" />
       <SidebarText>
         Archive

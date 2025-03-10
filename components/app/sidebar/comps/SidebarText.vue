@@ -3,7 +3,9 @@ const us = useUiStore()
 </script>
 
 <template>
-  <span class="tldr-30 text-nowrap" :class="{ 'opacity-0 w-0 justify-start invisible': !us.sidebarExpanded }">
+
+  <span v-if="us.sidebarExpanded" class="expand-hide flex items-center text-nowrap" >
     <slot />
   </span>
+
 </template>

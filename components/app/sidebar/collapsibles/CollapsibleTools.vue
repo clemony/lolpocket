@@ -1,13 +1,24 @@
 <script lang="ts" setup>
 import { UseClipboard } from '@vueuse/components'
+
+const isOpen = ref(true)
+const us = useUiStore()
+
+watchEffect(() => {
+  if (!us.sidebarExpanded) {
+    isOpen.value = false
+  }
+})
 </script>
 
 <template>
-  <Collapsible>
-    <SidebarCollapsibleTrigger>
-      <SidebarIcon name="info" class="size-4" />
-      Info
-    </SidebarCollapsibleTrigger>
+  <Collapsible v-model:is-open="isOpen" :disabled="!us.sidebarExpanded">
+    <NuxtLink v-tippy="!us.sidebarExpanded ? 'Info' : null" :to="!us.sidebarExpanded ? '/docs' : ''" :class="{ 'btn btn-ghost size-12  hover:bg-b2/60 pl-5.25 [&_svg]:size-4.5': !us.sidebarExpanded }">
+      <SidebarCollapsibleTrigger>
+        <SidebarIcon name="info" class="size-4" />
+        <SidebarText>Info</SidebarText>
+      </SidebarCollapsibleTrigger>
+    </NuxtLink>
     <SidebarCollapsibleContent>
       <NuxtLink
         to="/docs">
@@ -21,7 +32,7 @@ import { UseClipboard } from '@vueuse/components'
         <SidebarButton>
           About
           <SidebarBadge>
-           <i-fat-cat class="size-8 shrink-0 fill-bc"  />
+            <i-fat-cat class="size-8 shrink-0 fill-bc dst -mt-2.5 stroke-[1.2]" />
           </SidebarBadge>
         </SidebarButton>
       </NuxtLink>

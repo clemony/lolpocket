@@ -18,24 +18,23 @@ const summoner = computed (() => {
 const isOpen = ref(true)
 
 watchEffect(() => {
-if (us.sidebarExpanded){
-  isOpen.value =true
-}
+  if (us.sidebarExpanded) {
+    isOpen.value = true
+  }
 })
 </script>
 
 <template>
-
-<!-- v-if="us.sidebarExpanded" -->
-  <Collapsible  v-model:open="isOpen" :disabled="!us.sidebarExpanded">
-    <SidebarCollapsibleTrigger class="tldr-30" :class="{'w-0 opacity-0 invisble': !us.sidebarExpanded }">Pockets</SidebarCollapsibleTrigger>
+  <!-- v-if="us.sidebarExpanded" -->
+  <Collapsible v-model:open="isOpen" :disabled="!us.sidebarExpanded">
+    <SidebarCollapsibleTrigger v-if="us.sidebarExpanded" class="sidebar-expand">
+      Pockets
+    </SidebarCollapsibleTrigger>
 
     <SidebarCollapsibleContent>
-
-
       <Collapsible>
-        <SidebarCollapsibleTrigger :disabled="!pinned || pinned.length == null || pinned.length == 0">
-          <SidebarIcon name="pin" class="size-5 -left-px" />
+        <SidebarCollapsibleTrigger v-if="us.sidebarExpanded" :disabled="!pinned || pinned.length == null || pinned.length == 0" class="group">
+          <SidebarIcon name="pin" class="size-5.25 -mt-px -left-0.5 group-not-disabled:text-bc group-disabled:text-bc/15" />
           <SidebarText>
             Pinned
           </SidebarText>
@@ -52,7 +51,6 @@ if (us.sidebarExpanded){
       <PocketFolderLinks />
     </SidebarCollapsibleContent>
   </Collapsible>
-
 
 <!-- <PinnedPocketLinks v-if="!us.sidebarExpanded"  />
 

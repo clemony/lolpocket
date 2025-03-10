@@ -9,6 +9,7 @@ export const useUiStore = defineStore('UiStore', () => {
   const commandOpen = ref(false)
   const contextMenuOpen = ref(false)
   const newFolderOpen = ref(false)
+  const triggerSidebar = refAutoReset(false, 1000)
 
   return {
     sidebarExpanded,
@@ -18,6 +19,7 @@ export const useUiStore = defineStore('UiStore', () => {
     commandOpen,
     contextMenuOpen,
     newFolderOpen,
+    triggerSidebar,
 
   }
 }, {
