@@ -19,12 +19,10 @@ const pages = computed (() => {
 const isLoading = ref(false)
 useRuntimeHook('page:loading:start', () => {
   isLoading.value = true
-  console.log('💠 - useRuntimeHook - loading:', 'loading')
 })
 
 useRuntimeHook('page:loading:end', () => {
   isLoading.value = false
-  console.log('💠 - useRuntimeHook - loading:', 'loaded')
 })
 
 onMounted (() => {

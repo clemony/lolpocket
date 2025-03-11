@@ -79,7 +79,7 @@ watch(
 <template>
   <TransitionSlide
     group
-    class="max-h-full user-select-none grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-4 overflow-auto   px-16  rounded-lg pb-8">
+    class="max-h-full user-select-none grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-1 overflow-auto pr-10  pl-16  rounded-lg pb-8 pt-34">
     <ChampionSplash
       v-for="champion in filteredChampions"
       :key="champion.id"
@@ -89,7 +89,7 @@ watch(
       @click.right.prevent
       @click="cs.selectedChampion = champion" />
   </TransitionSlide>
-  <div as="div" class="h-full w-full pr-6">
+  <div as="div" class="h-full pt-34 w-full px-6">
     <div class=" flex flex-col  gap-6">
       <h2 class="mt-1">
         Roles

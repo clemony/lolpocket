@@ -11,8 +11,8 @@ import {
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import { computed } from 'vue'
 import type { HTMLAttributes } from 'vue'
-import { sheetVariants } from '.'
-import type { SheetVariants } from '.'
+import { sheetVariants } from './shindex'
+import type { SheetVariants } from './shindex'
 
 interface SheetContentProps extends DialogContentProps {
   class?: HTMLAttributes['class']

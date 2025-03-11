@@ -1,41 +1,45 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'match history',
+  title: 'Match History',
 })
 
 const as = useAccountStore()
 </script>
 
 <template>
-  <div class=" relative">
+  <div class=" relative w-full px-14">
     <PlayerHeader :summoner="as.userAccount">
       <SummonerIcon class="rounded-full size-19" />
     </PlayerHeader>
     <div
-      class="grid h-full w-[86%] grid-cols-[1fr_1.5fr] justify-around gap-3">
-      <ScrollArea as-child>
+      class="grid size-full grid-cols-2 justify-start  gap-3">
+
         <div
-          class="flex w-128 flex-col gap-10 overflow-auto overscroll-auto rounded-none px-3 pb-10">
-          <LayoutSpacer class="!h-5" />
+          class="flex max-w-120 flex-col gap-8 overflow-auto overscroll-auto  pb-10">
+ 
 
-          <Card class="h-51 px-4 py-3">
+          <div class="h-52 flex items-center py-3">
             <RankCard title="Solo/Duo" queue="soloDuo" />
-          </Card>
-          <Card class="h-51 px-4 py-3">
+          </div>
+     <div class="h-52 flex items-center py-3">
             <RankCard title="Flex" queue="flex" />
-          </Card>
-          <!--  <ChampTabs /> -->
-        </div>
-      </ScrollArea>
+          </div>
 
-      <ScrollArea as-child>
+          <Field class="bg-b2/40 border-b2">
+       <ChampTabs />
+       </Field>
+        </div>
+ 
+
+   
         <div
           class="size-full justify-center overflow-auto overscroll-auto px-3">
-          <LayoutSpacer class="!h-15" />
+  
 
           <MatchCard />
         </div>
-      </ScrollArea>
+ 
     </div>
   </div>
 </template>

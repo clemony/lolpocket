@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { navigationMenuTriggerStyle } from 'components/base/navigation-menu/nin'
-
 import news from './news.json'
 </script>
 
@@ -18,8 +16,7 @@ import news from './news.json'
         <div class="aspect-square size-14 overflow-hidden rounded-lg">
           <img
             :src="item.img"
-            class="max-w-44 min-w-14 object-center"
-          />
+            class="max-w-44 min-w-14 object-center" />
         </div>
         <div class="flex flex-col">
           <p class="text-3 truncate font-medium">

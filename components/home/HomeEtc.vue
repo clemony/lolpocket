@@ -1,8 +1,21 @@
 <script setup lang="ts">
+import { useScroll} from 'motion-v';
+import type { RefOrElement } from 'vue-draggable-plus'
+
 const props = defineProps<{
-  direction: string
-  isScrolling: boolean
+element: HTMLElement
 }>()
+const start = ref<HTMLElement | null>(null)
+const title = ref<HTMLElement | null>(null)
+
+/* const el = ref(props.element)
+const { scrollYProgress } = useScroll({
+  container: el,
+  target: title,
+  offset: ["start end", "end end"]
+})
+ */
+
 const data = [
   {
     title: 'Calculate',
@@ -25,36 +38,17 @@ const data = [
     text: 'Personal homepages can be customized with modules -- so you always have the most important data on hand.',
   },
 ]
-const title = ref<HTMLElement | null>(null)
 
-const title1IsVisible = useElementVisibility(title, { threshold: 1.0 })
-
-const el = ref<HTMLElement | null>(null)
-watch(
-  () => title1IsVisible.value,
-  (newVal) => {
-    // console.log('💠 - newVal:', newVal)
-  },
-)
-
-watch(
-  () => props.isScrolling,
-  (newVal) => {
-    // console.log('💠 - newVal:', newVal)
-  },
-)
 </script>
 
 <template>
-  <div class="bg-neutral text-nc @container relative !z-0 flex h-[80vh] w-full flex-col items-center justify-center px-10">
-    <!--       <div
-            class="border-b1 ring-b1 ring-offset-b1 before:bg-b1 after:bg-b1 inset-shadow-b1 -ring-offset-10 pointer-events-none absolute top-3 left-0 !z-20 mx-auto h-[70vh] w-full rounded-xl border border-3 bg-transparent inset-shadow-sm ring-10 before:absolute before:left-0 before:-mt-1 before:h-[70vh] before:w-[3%] after:absolute after:right-0 after:-mt-1 after:h-[70vh] after:w-[3%]"> -->
+  <div ref="start" class="bg-neutral text-nc @container relative !z-0 flex h-[80vh] w-full flex-col items-center justify-center px-10"  >
+
     <div class="border-b1 ring-offset-b1 absolute z-20 m-auto size-[95%] rounded-3xl border inset-shadow-sm ring-1 ring-offset-50" />
 
-    <div class="w-full relative h-32">
-      <h2
-        ref="title"
-        class="!text-12 absolute mb-38 justify-self-start px-42  animate-title"
+   <div class="w-full relative h-32">
+      <h2 as="h2" ref="title"
+        class="!text-12 absolute mb-38 justify-self-start px-42  "
       >
         Additional Tools.
       </h2>

@@ -184,27 +184,25 @@ watch(
                 class="group relative z-0 grid size-full place-items-center bg-center"
               >
                 <div class="join absolute right-2 bottom-2 z-10 overflow-hidden rounded-md opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100">
-                  <Button
-                    size="icon"
-                    class="join-item border-dark-2/0 hover:border-dark/80 rounded-r-none bg-black/0 text-white/60 transition-all duration-300 hover:bg-black/80 hover:text-white/90"
+                  <button
+                    class="join-item border-dark-2/0 hover:border-dark/80 rounded-r-none bg-black/0 text-white/60 transition-all duration-300 hover:bg-black/80 hover:text-white/90  btn btn-square"
                     @click="controlVideo('play')"
                   >
                     <icon
                       name="qlementine-icons:play-16"
                       class="!size-6 shrink-0"
                     />
-                  </Button>
+                  </button>
 
-                  <Button
-                    size="icon"
-                    class="join-item border-dark-2/0 hover:border-dark/80 rounded-l-none bg-black/0 text-white/60 transition-all duration-300 hover:bg-black/80 hover:text-white/90"
+                  <button
+                    class="join-item border-dark-2/0 hover:border-dark/80 rounded-l-none bg-black/0 text-white/60 transition-all duration-300 hover:bg-black/80 hover:text-white/90 btn btn-square"
                     @click="controlVideo('pause')"
                   >
                     <icon
                       name="qlementine-icons:pause-16"
                       class="!size-6 shrink-0"
                     />
-                  </Button>
+                  </button>
                 </div>
               </video-background>
             </div>

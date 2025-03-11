@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const as = useAccountStore()
 const us = useUiStore()
+const route = useRoute()
 
 const summoner = computed(() => {
   return as.userAccount ? as.userAccount : defaultUser
@@ -27,7 +28,7 @@ watch(
 <template>
   <div
     :data-state="sidebarExpanded == true ? 'expanded' : 'collapsed'"
-    class="bg-b2/40 w-full h-full py-3  gap-2.5 border-r shadow-none  pl-3 flex-nowrap  flex  flex-col  border-r-b2  overflow-x-hidden  group">
+    class="bg-b2/40 w-full h-full py-4  gap-2.5 border-r shadow-warm shadow-black/5 z-3   pl-3 flex-nowrap  flex  flex-col  border-r-b3/40  overflow-x-hidden  group relative" :style="{ '--bg-noise': 1 }">
     <SidebarHeader />
     <CommandSearchButton />
 
@@ -64,11 +65,10 @@ watch(
         <SidebarSeparator />
 
         <LazyCollapsibleSettings />
-        <LazyCollapsibleTools />
+        <LazyCollapsibleInfo />
       </div>
     </div>
-    <span v-if="us.sidebarExpanded" v-tippy="'Current Patch'" class="font-mono text-1   expand-hide">{{ ds.currentPatch }}</span>
-    <SidebarAddPocket />
+    <SidebarFooter />
     <SidebarBorderCollapse @update:sidebar="updateSidebar()" />
   </div>
 </template>

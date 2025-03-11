@@ -40,7 +40,7 @@ const toggleSplit = useToggle(split)
 <template>
   <NuxtLayout
     name="header-layout"
-    class=" bg-b2/40 pt-[7vh]  overflow-y-auto">
+    class="  pt-[6vh]  overflow-y-auto">
     <template #header>
       <CalculatorMenu />
     </template>

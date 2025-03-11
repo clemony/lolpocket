@@ -1,9 +1,11 @@
 <script setup lang="ts">
 const us = useUiStore()
+
+const route = useRoute()
 </script>
 
 <template>
-  <div class="h-screen w-screen grid overflow-hidden tldr-30" :class="{ 'grid-cols-[270px_1fr]': us.sidebarExpanded, 'grid-cols-[54px_1fr]': !us.sidebarExpanded }">
+  <div class="h-screen w-screen grid overflow-hidden tldr-30" :class="{ 'grid-cols-[270px_1fr]': us.sidebarExpanded, 'grid-cols-[54px_1fr]': !us.sidebarExpanded && route.path != '/', 'grid-cols-[0px_1fr]': !us.sidebarExpanded && route.path == '/' }">
     <AppSidebar />
 
     <div class="flex flex-col  h-screen min-h-screen w-full tldr-30">

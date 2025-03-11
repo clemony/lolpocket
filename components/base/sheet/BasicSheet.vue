@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { SheetVariants } from 'components/base/sheet/index'
+import type { SheetVariants } from 'components/base/sheet/shindex'
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { DialogClose, DialogContent, DialogPortal, useForwardPropsEmits } from 'reka-ui'
 import { computed } from 'vue'
-import { sheetVariants } from './index'
+import { sheetVariants } from './shindex'
 
 interface SheetContentProps extends DialogContentProps {
   class?: HTMLAttributes['class']

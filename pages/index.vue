@@ -1,17 +1,15 @@
 <script setup lang="ts">
 import type { UseScrollReturn } from '@vueuse/core'
 import { vScroll } from '@vueuse/components'
-import {useScroll} from '@vueuse/core'
+import { useScroll } from '@vueuse/core'
 
-definePageMeta({
-  header: 'custom'
-})
-
-const as = useAccountStore()
 const emit = defineEmits(['update:open'])
 
+definePageMeta({
+  header: 'custom',
+})
 
-
+const us = useUiStore()
 const shadow = ref(false)
 
 function onScroll(state: UseScrollReturn) {
@@ -51,32 +49,36 @@ watch(
 onMounted(() => {
   emit('update:open', false)
 })
+
+onBeforeMount(() => {
+    if(us.sidebarExpanded) {
+      us.triggerSidebar = true
+    }
+})
 </script>
 
 <template>
-  <div
+  <NuxtLayout
     ref="el"
-    v-scroll="onScroll"
-    class="relative size-full overflow-y-scroll !border-none outline-hidden"
-  >
+    name="header-layout"
+    class="relative *:pt-[0vh] size-full overflow-y-scroll !border-none outline-hidden">
     <Hero />
-    <div class="absolute inset-0 top-full z-10 w-full">
+    <div class="absolute inset-0 top-full z-10 w-full"
+    v-scroll="onScroll">
       <div
         ref="steps"
-        class="size-full"
-      >
+        class="size-full relative">
         <HomeSteps
           ref="steps"
-          :shadow="shadow"
-        />
+          :shadow="shadow" />
 
-        <HomeEtc :direction="direction" :is-scrolling="isScrolling" />
+        <HomeEtc :element="el" />
         <UserReviews />
         <SiteMap />
         <HomeFooter />
       </div>
     </div>
-  </div>
+  </NuxtLayout>
 </template>
 
 <style scoped></style>

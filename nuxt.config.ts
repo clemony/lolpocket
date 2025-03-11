@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url'
 
 export default defineNuxtConfig({
   modules: [
+    'motion-v/nuxt',
     '@vueuse/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/supabase',
@@ -16,7 +17,6 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     'nuxt-aos',
     'nuxt-svgo',
-    'motion-v/nuxt',
   ],
 
   icon: {
@@ -100,7 +100,7 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: true,
+    enabled: false,
     componentInspector: false,
     viteInspect: false,
   },

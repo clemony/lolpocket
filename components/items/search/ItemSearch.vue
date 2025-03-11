@@ -75,6 +75,8 @@ const { focused } = useFocus(target, { initialValue: props.setFocus })
       v-model="searchQuery"
       :placeholder="props.placeholder"
       :class="cn('text-3  outline-0 ring-0 border-0 flex h-full grow text-start  hover:outline-0 hover:ring-0 hover:border-0', props.inputClass)" />
+
+      <slot  />
   </div>
 </template>
 

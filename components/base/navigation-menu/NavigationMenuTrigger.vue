@@ -8,7 +8,7 @@ import {
 import type { NavigationMenuTriggerProps } from 'reka-ui'
 import { computed } from 'vue'
 import type { HTMLAttributes } from 'vue'
-import { navigationMenuTriggerStyle } from '.'
+import { navigationMenuTriggerStyle } from './navmenuvariantindex'
 
 const props = defineProps<NavigationMenuTriggerProps & { class?: HTMLAttributes['class'] }>()
 

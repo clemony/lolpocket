@@ -1,15 +1,23 @@
 @import 'tailwindcss';
 
+.pockets-grid .ag-root-wrapper-body {
+  @apply after:inset-shadow-b1 after:rounded-box after:shadow-b1
+    after:shadow-[inset_0px_0px_20px_16px_#00000089] after:inset-shadow-mask
+    after:w-full after:h-[150%] after:absolute after:bottom-0 after:left-0
+    after:pointer-events-none;
+}
+
 .ag-column-hover {
   @apply bg-transparent;
   &.ag-header-cell {
-    @apply bg-neutral text-nc rounded-xl  border-4 border-b1;
+    @apply bg-neutral text-nc border-b1 rounded-xl border-4;
   }
 }
 
 .ag-row-selected {
   @apply bg-b2/60;
 }
+
 .ag-row-hover {
   @apply bg-b2/30 cursor-context-menu;
 }
@@ -18,16 +26,16 @@
   @apply border-b-b2/60 rounded-lg;
 }
 
-.trash
-{
+.trash {
   .ag-row {
-  @apply border-b-b2/60 rounded-lg bg-b2/30;
-}
+    @apply border-b-b2/60 bg-b2/30 rounded-lg;
+  }
 }
 
 .cell-class {
-  @apply !px-1 items-center justify-center flex h-full cursor-context-menu;
+  @apply !px-1 flex h-full cursor-context-menu items-center justify-center;
 }
+
 :is([col-id='buy']).cell-class {
   @apply justify-end;
 }
@@ -37,32 +45,27 @@
 }
 
 .ag-header-cell-label {
-  @apply flex items-start w-full mx-0  !pt-3 text-left justify-start;
+  @apply !pt-3 mx-0 flex w-full items-start justify-start text-left;
 }
 
-
-
-
 .ag-cell.ag-column-first {
-
   @apply !pl-6;
 }
 
-  .ag-cell.ag-column-last {
+.ag-cell.ag-column-last {
   @apply !pr-6;
 }
+
 .icon-class {
   @apply !py-1 !pr-1 !pl-3;
 }
 
 .ag-header-row.ag-header-row-column-group {
-  @apply border-b border-b-b3/70;
+  @apply border-b-b3/70 border-b;
 }
 
-
-
 .ag-header-row .ag-header-row-column {
-  @apply !hidden opacity-0 !h-1;
+  @apply !hidden !h-1 opacity-0;
 }
 
 .ti-rune {
@@ -70,14 +73,14 @@
 }
 
 .ti-container {
-  @apply rounded-lg shadow-sm shadow-black/40;
+  @apply shadow-black/40 rounded-lg shadow-sm;
 }
-
 
 .ti-wrapper {
-  @apply overflow-hidden aspect-square rounded-lg **:rounded-lg bg-b2/40  inset-shadow-sm  size-16;
+  @apply aspect-square **:rounded-lg bg-b2/40 inset-shadow-sm size-16
+    overflow-hidden rounded-lg;
 }
 
-.btn-table-class{
-  @apply btn btn-md  join-item w-11 h-16 bg-b2/50;
+.btn-table-class {
+  @apply btn btn-md join-item bg-b2/50 h-16 w-11;
 }

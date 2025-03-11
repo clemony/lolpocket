@@ -5,6 +5,11 @@ import { AgGridVue } from 'ag-grid-vue3'
 import { CustomTooltip } from 'components/table/components/customTooltip'
 import 'tippy.js/animations/scale.css'
 
+definePageMeta({
+  title: 'Item Stats',
+
+})
+
 const is = useItemStore()
 const theme = ref(pocketTheme)
 const ds = useDataStore()
@@ -169,13 +174,12 @@ defineExpose({
 
 <template>
   <NuxtLayout
-    name="header-layout">
-    <TableBar :api="is.itemGridApi" />
+    name="header-layout" class="px-10">
     <AgGridVue
       :grid-options="gridOptions"
       :theme="theme"
       :column-defs="colDefs"
-      class="size-full border-t border-b2 border-l"
+      class="size-full border-t border-b2"
       :tooltip-show-delay="400"
 
       @grid-ready="onGridReady">

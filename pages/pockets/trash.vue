@@ -328,10 +328,6 @@ const pocketContextTarget = ref()
     <div class="absolute px-7 flex items-center w-full bg-b1 h-8 z-500 top-14 left-0 text-bc text-3">
       <span class="grow dst">Remove from trash to edit or view full pocket.</span>
 
-      <button class="btn  bg-domination border border-neutral/5 text-white text-2 font-medium">
-        <icon name="nimbus:fire" class="size-5 text-white" />
-        <span class="pt-1">Delete All</span>
-      </button>
     </div>
   </div>
 </template>

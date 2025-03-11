@@ -17,8 +17,8 @@ watchEffect(() => {
 <template>
   <Collapsible v-model:is-open="isOpen" :default-open="true">
     <SidebarCollapsibleTrigger v-if="us.sidebarExpanded" class="select-none expand-hide" :disabled="!us.sidebarExpanded">
-      <SidebarIcon name="teenyicons:sd-card-outline" class="size-4.5" />
-      <SidebarText>Game Data</SidebarText>
+      <SidebarIcon name="teenyicons:book-outline" class="size-4.5 -top-px" />
+      <SidebarText>Encyclopedia</SidebarText>
     </SidebarCollapsibleTrigger>
     <SidebarCollapsibleContent>
       <Collapsible v-model:open="itemIsOpen" :disabled="!us.sidebarExpanded" class="data-disabled:**:text-bc/90 ">
@@ -38,7 +38,7 @@ watchEffect(() => {
             :to="link.link"
             class="">
             <SidebarButton>
-              <SidebarText>{{ link.name }}</SidebarText>
+              <SidebarText class="pl-1">{{ link.name }}</SidebarText>
               <SidebarBadge v-if="link.badge && us.sidebarExpanded" class="tracking-normal   uppercase ">
                 {{ link.badge }}
               </SidebarBadge>

@@ -10,7 +10,7 @@ const toggleFilter = useToggle(filter)
 </script>
 
 <template>
-  <NuxtLayout name="header-layout" class=" grid transition-all duration-300 " :class="{ ' grid-cols-[1fr_240px]': filter, ' grid-cols-[1fr_0px]': !filter }">
+  <NuxtLayout name="header-layout" class="pt-0  grid transition-all duration-300 " :class="{ 'grid-cols-[1fr_240px]': filter, ' grid-cols-[1fr_0px]': !filter }">
     <template #header>
       <div
         class="text-4 drop-shadow-text items-center px-2 font-serif tracking-wide text-nowrap flex mt-1 "
@@ -25,7 +25,7 @@ const toggleFilter = useToggle(filter)
       </ChampionSearch>
     </template>
 
-    <ChampionList class="gap-3 inset-0 top-0 left-0 absolute overflow-y-auto pt-35 tldr-30 h-full" />
+    <ChampionList class="gap-3 inset-0 top-0 left-0 absolute overflow-y-auto  tldr-30 h-full" />
   </NuxtLayout>
 </template>
 

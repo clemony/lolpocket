@@ -4,6 +4,7 @@ const props = defineProps<{
 }>()
 
 const us = useUiStore()
+const as = useAccountStore()
 const ps = usePocketStore()
 ps.pinnedFolder = []
 
@@ -38,8 +39,11 @@ watchEffect(() => {
           <SidebarText>
             Pinned
           </SidebarText>
-          <SidebarBadge v-if="!pinned || pinned.length == null || pinned.length == 0">
-            0
+          <SidebarBadge class="font-mono !text-1">
+            <span v-if="!pinned || pinned.length == null || pinned.length == 0">0</span>
+            <span v-else>
+              {{ pinned.length }}
+            </span>
           </SidebarBadge>
         </SidebarCollapsibleTrigger>
 

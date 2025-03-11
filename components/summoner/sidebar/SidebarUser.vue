@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { navigationMenuTriggerStyle } from 'components/base/navigation-menu/nin'
-
 const config = useRuntimeConfig()
 
 const ts = useTempStore()

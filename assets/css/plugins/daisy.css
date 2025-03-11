@@ -1,148 +1,133 @@
 @import "tailwindcss";
+
 @import "../default-theme.css" ;
+
 @plugin "daisyui";
-@import "daisyui" theme(reference);
 
 @plugin "daisyui" {
   root: ":root";
   themes: lofi;
   styled: true;
-
 }
 
 @plugin "daisyui/theme" {
   name: "lofi";
   default: true;
-    prefersdark: true, false;
+  prefersdark: true, false;
   color-scheme: dark, light;
-
+  
   styled: true;
-
-  @theme inline{
-  --color-base-100: var(--color-b1);
-  --color-base-200: var(--color-b2);
-  --color-base-300: var(--color-b3);
-  --color-base-content: var(--color-bc);
-
-    --color-primary:  var(--color-neutral) !important;
-  --color-primary-content: var(--color-nc);
-
-  --color-secondary: var(--color-neutral) !important;
-  --color-secondary-content: var(--color-nc);
-
-  --color-accent: var(--color-neutral) !important;
-  --color-accent-content: var(--color-nc);
-
-  --color-neutral: var(--color-neutral) !important;
-  --color-neutral-content: var(--color-nc);
-
-  --color-info: var(--color-sorcery);
-  --color-info-content: var(--color-sorcery-light);
-
-  --color-success: var(--color-resolve);
-  --color-success-content: var(--color-resolve-light);
-
-  --color-warning: var(--color-precision);
-  --color-warning-content: var(--color-precision-light);
-
-  --color-error: var(--color-domination);
-  --color-error-content: var(--color-domination-light);
-
-  --input-color: var(--color-b3);
-
+  
+  @theme inline {
+    --color-base-100: var(--color-b1);
+    --color-base-200: var(--color-b2);
+    --color-base-300: var(--color-b3);
+    --color-base-content: var(--color-bc);
+    --color-primary: var(--color-neutral) !important;
+    --color-primary-content: var(--color-nc);
+    --color-secondary: var(--color-neutral) !important;
+    --color-secondary-content: var(--color-nc);
+    --color-accent: var(--color-neutral) !important;
+    --color-accent-content: var(--color-nc);
+    --color-neutral: var(--color-neutral) !important;
+    --color-neutral-content: var(--color-nc);
+    --color-info: var(--color-sorcery);
+    --color-info-content: var(--color-sorcery-light);
+    --color-success: var(--color-resolve);
+    --color-success-content: var(--color-resolve-light);
+    --color-warning: var(--color-precision);
+    --color-warning-content: var(--color-precision-light);
+    --color-error: var(--color-domination);
+    --color-error-content: var(--color-domination-light);
+    --input-color: var(--color-b3);
   }
-      --depth: 1;
+  
+  --depth: 1;
   --noise: 0.5;
-    --radius-selector: 0.4rem;
+  --radius-selector: 0.4rem;
   --radius-box: 1rem;
-    --radius-field: 0.6rem !important;
-
+  --radius-field: 0.6rem !important;
 }
-
 
 @layer components {
-.tab {
-      --radius-field: 0.75rem !important;
-      --tab-bg: var(--color-b1);
-      --tab-border-color: var(--color-b3);
-      	--tab-border-colors: var(--color-b3);
-}
-
-
-.btn.btn-ghost:hover {
---btn-bg: --alpha(var(--color-b2) / 20%) !important;
-}
-
-.btn-neutral {
-  @apply !shadow-xs;
-}
-
+  .tab {
+    --radius-field: 0.75rem !important;
+    --tab-bg: var(--color-b1);
+    --tab-border-color: var(--color-b3);
+    --tab-border-colors: var(--color-b3);
+  }
+  
+  .btn.btn-ghost:hover {
+    --btn-bg: --alpha(var(--color-b2) / 20%) !important;
+    @apply border-b3/40;
+  }
+  
+  .btn-neutral {
+    @apply !shadow-xs;
+  }
+  
   .btn:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
     @apply bg-b2/60 border-b2;
   }
-
+  
   .btn {
-    @apply font-normal text-3 ;
+    @apply text-3 font-normal;
   }
-
-
-
-.collapse-input,
-.collapse-title {
-  @apply !min-h-0 !py-0 h-11 text-nowrap flex-nowrap items-center justify-start;
-}
-
-/* .neutral-badge {
-  @apply indicator-item badge rounded-full badge-neutral badge-xs text-1 !py-2.25 absolute -top-1 -right-1 !px-1;
-} */
-
-.field {
-  @apply fieldset mt-2 relative w-full h-fit bg-b2 border border-b3 p-4 rounded-box;
-}
-.field-legend {
-  @apply fieldset-legend absolute left-5.5 -top-5 text-3 max-w-64  max-h-12  ;
-}
-
-.input {
-  @apply focus-within:!outline-1 focus-within:!outline-offset-0   focus-within:!outline-b3
-
-  border-image-width:0 !important;
-  --input-color: var(--color-b3) !important;
-}
-
+  
+  .collapse-input,
+  .collapse-title {
+    @apply !min-h-0 !py-0 text-nowrap h-11 flex-nowrap items-center justify-start;
+  }
+  
+  /* .neutral-badge {
+    @apply indicator-item badge rounded-full badge-neutral badge-xs text-1 !py-2.25 absolute -top-1 -right-1 !px-1;
+  } */
+  
+  .field {
+    @apply fieldset mt-2 relative w-full h-fit bg-b2 border border-b3 p-4 rounded-box;
+  }
+  
+  .field-legend {
+    @apply fieldset-legend absolute left-5.5 -top-5 text-3 max-w-64  max-h-12  ;
+  }
+  
+  .input {
+    @apply focus-within:!outline-1 focus-within:!outline-offset-0   focus-within:!outline-b3;
+    border-image-width: 0 !important;
+    --input-color: var(--color-b3) !important;
+  }
 }
 
 @layer base {
-:root {
---bg-noise:   --fx-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.34' numOctaves='4' stitchTiles='stitch'%3E%3C/feTurbulence%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)' opacity='0.2'%3E%3C/rect%3E%3C/svg%3E");
-
-
-.btn-neutral {
-  @apply !shadow-sm;
-}
-  .btn:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
-    @apply bg-b2/60 border-b2;
-  }
-
-  .btn {
-    @apply font-normal text-3 ;
-  }
-
-
-.collapse-input,
-.collapse-title {
-  @apply !min-h-0 !py-0 h-11 text-nowrap flex-nowrap items-center justify-start;
-}
-
-/* .neutral-badge {
-  @apply indicator-item badge rounded-full badge-neutral badge-xs text-1 !py-2.25 absolute -top-1 -right-1 !px-1;
-} */
-
-.field {
-  @apply fieldset mt-2 relative w-full h-fit bg-b2 border border-b3 p-4 rounded-box;
-}
-.field-legend {
-  @apply fieldset-legend absolute left-5.5 -top-5 text-3 max-w-64  max-h-12  ;
-}
-
-}}
+  :root {
+    --bg-noise: --fx-noise: url("data:image/svg + xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.34' numOctaves='4' stitchTiles='stitch'%3E%3C/feTurbulence%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)' opacity='0.2'%3E%3C/rect%3E%3C/svg%3E");
+    .btn-neutral {
+      @apply !shadow-sm;
+    }
+    
+    .btn:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
+      @apply bg-b2/60 border-b2;
+    }
+    
+    .btn {
+      @apply font-normal text-3 ;
+    }
+    
+    .collapse-input,
+    .collapse-title {
+      @apply !min-h-0 !py-0 h-11 text-nowrap flex-nowrap items-center justify-start;
+    }
+    
+    /* .neutral-badge {
+      @apply indicator-item badge rounded-full badge-neutral badge-xs text-1 !py-2.25 absolute -top-1 -right-1 !px-1;
+    } */
+    
+    .field {
+      @apply fieldset mt-2 relative w-full h-fit bg-b2 border border-b3 p-4 rounded-box;
+    }
+    
+    .field-legend {
+      @apply fieldset-legend absolute left-5.5 -top-5 text-3 max-w-64  max-h-12  ;
+    }
+  }}
+  

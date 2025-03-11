@@ -4,6 +4,7 @@ const is = useItemStore()
 definePageMeta({
   name: 'item-data',
   path: '/items',
+  title: 'Items',
 })
 
 const items = computed(() => [...(ds.SRitems || [])])
@@ -36,17 +37,40 @@ function resetItems() {
   is.itemSearchResult = []
   listKey.value = listKey.value + 1
 }
+
+const filter = ref(false)
+const toggleFilter = useToggle(filter)
 </script>
 
 <template>
-  <NuxtLayout
-    name="header-layout">
-    <template #header>
-      <div class="text-4 drop-shadow-text flex h-28 items-center px-2 font-serif tracking-wide">
-        {{ captions }}
-      </div>
 
-      <ItemSearch />
+    <NuxtLayout name="header-layout" class="pt-0  grid transition-all duration-300 overflow-x-hidden" :class="{ 'grid-cols-[1fr_320px]': filter, ' grid-cols-[1fr_0px]': !filter }">
+    <template #header>
+      <div
+        class="text-4 drop-shadow-text items-center px-2 font-serif tracking-wide text-nowrap flex mt-1 ">
+        {{ captions }}</div>
+    </template>
+
+    <template #crumb>
+        <ItemSearch>        <button class="btn btn-ghost btn-sm btn-square rounded-md hover:bg-b2/40" @click.stop="toggleFilter()">
+          <icon name="filter" class="size-4" />
+        </button>
+        </ItemSearch>
+
+<!--       <ChampionSearch class="justify-self-end ">
+
+      </ChampionSearch> -->
+    </template>
+
+
+<div class="size-full overflow-y-auto  pt-64  px-16">
+        <ItemList
+        id="item-results"
+          :list-key="listKey"
+          class="" />
+
+</div>
+    <div class="size-full  pt-38 pr-10 pl-8  border-l border-l-b2">
       <div class="flex gap-4">
         <div class="join w-fit shadow-xs">
           <ToggleStateButton
@@ -79,22 +103,13 @@ function resetItems() {
       <CheckboxFilterList
         :source="itemCategories"
         @update:model="(e) => (is.filterItemCats = e)" />
-    </template>
 
-    <template #2>
       <RadioFilterList
         :types="itemTypes"
         class="pl-2"
         @update:model="(e) => (is.filterItemTypes = e)" />
-      <div
-        id="item-results"
-        class=".item-results max-h-inherit h-[calc(100vh-11.2rem)] overflow-auto"
-        as-child>
-        <ItemList
-          :list-key="listKey"
-          class="pt-5 pr-6 " />
-      </div>
-    </template>
+</div>
+  
   </NuxtLayout>
 </template>
 

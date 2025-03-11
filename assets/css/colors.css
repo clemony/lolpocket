@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
-          --color-precision: oklch(85.49% 0.0892 84.09);
+  --color-precision: oklch(85.49% 0.0892 84.09);
   --color-precision-light: oklch(90.13% 0.0695 86.13);
   --color-domination: oklch(60.61% 0.1206 15.34);
   --color-domination-light: oklch(81.67% 0.044 12.73);
@@ -24,91 +24,96 @@
   --color-light-1: oklch(100% 0 0);
   --color-light-2: oklch(96.12% 0 0);
   --color-light-3: oklch(86% 0 0);
-
+  
   --color-dark-1: oklch(47.84% 0 0);
   --color-dark-2: oklch(36% 0 0);
   --color-dark-3: oklch(0% 0.02476 255.701624);
-    --color-empty: #bab9b1;
+  --color-empty: #bab9b1;
   --color-empty-light: #cecdc8;
-
-
+  
+  
   --color-error: oklch(59.33% 0.1319 21.78);
-
-    --color-top: #e0746b;
+  
+  --color-top: #e0746b;
   --color-fighter: oklch(78.32% 0.1173 37);
-
-   --color-tiny-carrot: oklch(78.32% 0.1173 37);
-
-     --color-onhit: oklch(70.72% 0.0996 10.55);
-
-       --color-bottom: #ebcb8b;
-
+  
+  --color-tiny-carrot: oklch(78.32% 0.1173 37);
+  
+  --color-onhit: oklch(70.72% 0.0996 10.55);
+  
+  --color-bottom: #ebcb8b;
+  
   --color-mid: #be86b5;
 }
 
 @theme inline {
   --accent: var(--color-inspiration);
-
+  
   --color-support: var(--color-inspiration);
   --color-utility: var(--color-inspiration);
   --color-marksman: var(--color-precision);
   --color-mobility: var(--color-precision);
-
+  
   --color-mage: var(--color-sorcery);
-    --color-middle: var(--color-sorcery);
+  --color-middle: var(--color-sorcery);
   --color-control: var(--color-sorcery);
-
+  
   --color-tank: var(--color-resolve);
   --color-toughness: var(--color-resolve);
   --color-jungle: #a3be8c;
-
+  
   --color-assassin: var(--color-domination);
   --color-damage: var(--color-domination);
-
-
-
 }
 
 @utility iron {
-background-color:  var(--color-iron);
-color:  var(--color-iron);
+  background-color:  var(--color-iron);
+  color:  var(--color-iron);
 }
-  @utility bronze {
-background-color: var(--color-bronze);
-color: var(--color-bronze);
+
+@utility bronze {
+  background-color: var(--color-bronze);
+  color: var(--color-bronze);
 }
-  @utility silver {
-@apply text-[var(--color-silver)];
+
+/* beautify-ignore start*/
+.silver {
+  @apply text-[var(--color-silver)];
 }
-  @utility gold {
-background-color: var(--color-gold);
-color: var(--color-gold);
+
+@utility gold {
+  background-color: var(--color-gold);
+  color: var(--color-gold);
 }
+
 .platinum {
-@apply   text-[var(--color-platinum)];
-}
-  @utility emerald {
-background-color: var(--color-emerald);
-color: var(--color-emerald);
-}
-  @utility diamond {
-background-color: var(--color-diamond);
-color: var(--color-diamond);
-}
-  @utility master {
-background-color: var(--color-master);
-color: var(--color-master);
-}
-  @utility grandmaster {
-background-color: var(--color-grandmaster);
-color: var(--color-grandmaster);
-}
-  @utility challenger {
-background-color: var(--color-challenger);
-color: var(--color-challenger);
+  @apply text-[var(--color-platinum)];
 }
 
+@utility emerald {
+  background-color: var(--color-emerald);
+  color: var(--color-emerald);
+}
 
+@utility diamond {
+  background-color: var(--color-diamond);
+  color: var(--color-diamond);
+}
+
+@utility master {
+  background-color: var(--color-master);
+  color: var(--color-master);
+}
+
+@utility grandmaster {
+  background-color: var(--color-grandmaster);
+  color: var(--color-grandmaster);
+}
+
+@utility challenger {
+  background-color: var(--color-challenger);
+  color: var(--color-challenger);
+}
 
 [data-tag='Support'] {
   background: var(--inspiration-light);
@@ -134,27 +139,25 @@ color: var(--color-challenger);
   background: var(--orange-600) / 60;
 }
 
-
-
-  .gradient {
+.gradient {
   background: linear-gradient(
-    137deg,
-    rgba(231, 207, 120, 0.7) 0%,
-    rgba(220, 124, 124, 0.7) 20%,
-    rgba(178, 164, 221, 0.7) 40%,
-    rgba(175, 212, 150, 0.7) 60%,
-    rgba(165, 226, 229, 0.7) 80%
+  137deg,
+  rgba(231, 207, 120, 0.7) 0%,
+  rgba(220, 124, 124, 0.7) 20%,
+  rgba(178, 164, 221, 0.7) 40%,
+  rgba(175, 212, 150, 0.7) 60%,
+  rgba(165, 226, 229, 0.7) 80%
   );
   background-size: 550%;
 }
 
 .empty {
   background: linear-gradient(
-    137deg,
-    rgba(190, 190, 190, 1) 0%,
-    rgba(193, 193, 193, 0.8) 10%,
-    rgba(233, 233, 233, 1) 75%,
-    rgba(252, 252, 252, 0) 90%
+  137deg,
+  rgba(190, 190, 190, 1) 0%,
+  rgba(193, 193, 193, 0.8) 10%,
+  rgba(233, 233, 233, 1) 75%,
+  rgba(252, 252, 252, 0) 90%
   );
 }
 

@@ -1,9 +1,4 @@
 <script setup lang="ts">
-import { navigationMenuTriggerStyle } from 'components/base/navigation-menu/nin'
-
-const as = useAccountStore()
-const ts = useTempStore()
-
 const items = [
   {
     name: 'Items',
@@ -55,8 +50,7 @@ const db = [
       v-for="item in items"
       :key="item.name"
       :to="item.link"
-      class=""
-    >
+      class="">
       <MenubarItem inset>
         {{ item.name }}
 
@@ -70,13 +64,11 @@ const db = [
 
     <template
       v-for="submenu in db"
-      :key="submenu.name"
-    >
+      :key="submenu.name">
       <MenubarSeparator v-if="submenu.name == 'Summoners'" />
       <NuxtLink
         class=""
-        :to="submenu.link"
-      >
+        :to="submenu.link">
         <MenubarItem inset>
           {{ submenu.name }}
         </MenubarItem>

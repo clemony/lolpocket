@@ -54,11 +54,10 @@ const heroDisplays = [
             class="z-50 bg-center opacity-65 brightness-180 grayscale aspect-video"
           ></video-background>
         </div>
-        <Button
+        <button
           v-show="!as.userAccount.session"
-          variant="outline"
-          size="lg"
-          class="hover:bg-neutral hover:text-nc w-fit self-start overflow-hidden shadow-xs transition-all duration-200"
+
+          class="hover:bg-neutral btn-lg btn btn-outline border-b3 hover:text-nc w-fit self-start overflow-hidden shadow-xs transition-all duration-200"
           as-child
         >
           <label>
@@ -76,7 +75,7 @@ const heroDisplays = [
               class="size-7 object-center opacity-70"
             />
           </label>
-        </Button>
+        </button>
       </div>
 
       <div class="absolute bottom-7 w-full self-end">

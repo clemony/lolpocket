@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 const props = defineProps<{
   class?: HTMLAttributes['class']
-  default?: boolean
 }>()
 
 const us = useUiStore()
@@ -13,20 +12,18 @@ console.log('💠 - route:', route.meta.header)
 const breadcrumbs = computed (() => {
   return route.fullPath.split('/')
 })
-console.log('💠 - breadcrumbs - breadcrumbs:', breadcrumbs)
+
+
 </script>
 
 <template>
-  <Motion :layout="true" class="w-full h-screen tldr-30" :class="{ 'bg-b2/40': route.meta.background == 'b2' }">
-    <div class="flex flex-col relative w-full ">
-      <div
-        class="pl-12 pr-10 z-10 pt-5 pb-4 absolute flex flex-col  h-31 justify-center  w-full bg-b1/80 backdrop-blur-md" :class="{ '!bg-transparent': route.path == '/' || route.meta.background == 'b2' }">
-        <div class="flex w-full items-center gap-2 ">
-          <button class="btn btn-ghost btn-square" @click="us.triggerSidebar = true">
-            <icon name="ph:sidebar-simple" class="size-5.5 dst" />
-          </button>
+  <Motion :layout="true" class="w-full h-screen relative tldr-30 " :class="{ '!bg-b2/40': route.meta.background == 'b2' }">
 
-          <div class="breadcrumbs text-2 flex items-center">
+
+        <div class="flex w-full items-center overflow-hidden  gap-2 absolute z-1 top-0 left-0 w-full bg-b1/80 backdrop-blur-md pl-5 pr-10  pt-5 pb-4 " :class="{ '!bg-transparent !h-18 ': route.path == '/' || route.meta.background == 'b2' }">
+          <SidebarExpandButton  />
+
+          <div class="breadcrumbs text-2 flex items-center **:select-none">
             <ul class="*:capitalize">
               <li>
                 <NuxtLink to="/">
@@ -44,7 +41,7 @@ console.log('💠 - breadcrumbs - breadcrumbs:', breadcrumbs)
               <template v-else>
                 <template v-for="crumb in breadcrumbs" :key="crumb">
                   <li v-if="crumb != ''">
-                    {{ crumb }}
+                    {{ crumb.replace('-', ' ') }}
                   </li>
                 </template>
               </template>
@@ -57,7 +54,13 @@ console.log('💠 - breadcrumbs - breadcrumbs:', breadcrumbs)
           <HeaderMenu />
         </div>
 
-        <div class="capitalize pl-2  mt-2 w-full pb-2 flex gap-8 items-center">
+
+    <Motion :layout="true" class="inset-0 absolute left-0 top-0" :class="cn('tldr-30 overflow-y-auto pt-34', props.class)">
+      <slot />
+    </Motion>
+
+
+        <div v-if="route.path != '/'" class="capitalize absolute top-24 left-17 flex gap-8 items-center">
           <h1 class="text-9 tracking-tighter dst flex gap-4">
             <slot name="header-icon" />
             {{ route.meta.title || route.name }}
@@ -65,11 +68,5 @@ console.log('💠 - breadcrumbs - breadcrumbs:', breadcrumbs)
 
           <slot name="header" />
         </div>
-      </div>
-    </div>
-
-    <Motion :layout="true" class="size-full" :class="cn('relative tldr-30 overflow-y-auto *:pt-[10vh] pointer-events-none [&_div]:*:pointer-events-auto', props.class)">
-      <slot />
-    </Motion>
   </Motion>
 </template>

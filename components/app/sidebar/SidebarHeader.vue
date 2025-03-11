@@ -17,7 +17,7 @@ const us = useUiStore()
         <h4 class="dst select-none !tracking-normal ">
           LP
         </h4>
-        <span class="flex gap-1 pl-2 items-center translate-y-3 opacity-0 pointer-events-none group-hover/up:translate-y-0 group-hover/up:opacity-100 tldr-30 ease-in-out expand-hide">
+        <span class="flex gap-1 pl-3 mt-0.5 items-center translate-y-3 opacity-0 pointer-events-none group-hover/up:translate-y-0 group-hover/up:opacity-100 tldr-30 ease-in-out expand-hide">
           up
           <icon name="arrow-up" class="size-5" />
         </span>
@@ -25,8 +25,7 @@ const us = useUiStore()
 
       <button
         v-if="us.sidebarExpanded"
-        class="justify-self-end  btn gap-2    border-b3 hover:ring-neutral/50 flex h-9 !bg-b1  cursor-pointer items-center  px-3 !py-0  hover:!bg-b1  hover:ring-1 group inset-shadow-xs group  expand-hide"
-        :style="{ '--noise': 0 }" @click.stop="ts.commandOpen = true">
+        class="justify-self-end  btn gap-2    border-b3 hover:ring-neutral/50 flex h-9 !bg-b1  cursor-pointer items-center  px-3 !py-0  hover:!bg-b1  hover:ring-1 group inset-shadow-xs group  expand-hide " @click.stop="ts.commandOpen = true">
         <icon
           name="teenyicons:search-outline"
           class="-mt-px  size-3.5 opacity-80 group-hover:opacity-100" />

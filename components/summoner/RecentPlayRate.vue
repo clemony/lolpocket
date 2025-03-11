@@ -22,7 +22,7 @@ const labels = ['Win', 'Loss']
 
 <template>
   <div
-    class="grid h-22 w-full max-w-[600px] grid-cols-[2.5fr_3fr_1fr] items-center gap-3 px-2"
+    class="grid  max-w-[600px] grid-cols-[2.5fr_3fr_1fr] items-center gap-3 px-2"
   >
     <div class="relative flex items-center gap-4">
       <Donut

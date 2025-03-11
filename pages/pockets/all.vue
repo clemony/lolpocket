@@ -105,7 +105,7 @@ const gridOptions: GridOptions<pocket> = {
 const colDefs = ref<(ColDef | ColGroupDef)[]>([
   {
     field: 'icon',
-    headerName: 'Icon',
+    headerName: '',
     cellRenderer: TableIcon,
     sortable: false,
     valueGetter: p => p.data.icon,
@@ -332,7 +332,7 @@ const pocketContextTarget = ref()
       :grid-options="gridOptions"
       :theme="theme"
       :column-defs="colDefs"
-      class=".pocket-grid size-full  rounded-2xl"
+      class=" size-full  rounded-2xl"
       :tooltip-show-delay="400"
       :no-rows-overlay-component="GridNoRows"
       :row-data="rowData"

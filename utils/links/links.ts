@@ -1,28 +1,31 @@
 export const summonerLinks = [
   {
-    name: `board`,
+    name: `Board`,
     link: '/summoner',
-    icon: 'gala:calendar',
+    icon: 'ph:chalkboard-simple', // gala:calendar
     iconSolid: 'clarity:calendar-solid',
+    iconBold: 'ph:chalkboard-simple-bold',
   },
   {
-    name: 'build analysis',
+    name: 'Build Analysis',
     link: '/summoner/analysis',
-    icon: 'octicon:graph-24',
+    icon: 'ph:atom',
     iconSolid: 'mdi:graph-box',
+    iconBold: 'ph:atom-bold',
   },
   {
-    name: 'match history',
+    name: 'Match History',
     link: '/summoner/match-history',
-    icon: 'garden:history-fill-12',
+    icon: 'ph:clock-counter-clockwise',
     tftIcon: 'i-time-icon',
+    iconBold: 'ph:clock-counter-clockwise-bold',
   },
   {
-    name: 'favorites',
+    name: 'Favorites',
     link: '/summoner/favorites',
-    icon: 'teenyicons:heart-outline',
+    icon: 'ph:heart-straight',
     iconSolid: 'teenyicons:heart-solid',
-    tftIcon: 'i-altruist-icon',
+    iconBold: 'ph:heart-straight-bold',
   },
 ]
 
@@ -119,35 +122,48 @@ export const gameDataLinks = [
   },
 ]
 
-export const folderLinks = [
-  {
-    name: 'Pinned',
-    key: 'pinned',
-    link: '/pockets/pinned',
-    icon: 'teenyicons:attach-outline',
-  },
-  {
-    name: 'All',
-    key: 'all',
-    link: '/pockets',
-    icon: 'teenyicons:folders-outline',
-    iconSolid: 'teenyicons:folders-solid',
-  },
-  {
-    name: 'Trash',
-    link: '/pockets/trash',
-    key: 'trash',
-    icon: 'teenyicons:bin-outline',
-    iconSolid: 'teenyicons:bin-solid',
-  },
-  {
-    name: 'Archive',
-    link: '/pockets/archive',
-    key: 'archive',
-    icon: 'teenyicons:archive-outline',
-    iconSolid: 'teenyicons:archive-solid',
-  },
-]
+export const pinnedLink = {
+  name: 'Pinned',
+  key: 'pinned',
+  link: '/pockets/pinned',
+  icon: 'teenyicons:attach-outline',
+}
+
+export function getFolderLinks() {
+  const ps = usePocketStore()
+  const folderLinks = [
+
+    {
+      name: 'All',
+      key: 'all',
+      link: '/pockets',
+      pockets: ps.pockets,
+      icon: 'ph:folder',
+      iconSolid: 'teenyicons:folders-solid',
+      iconBold: 'ph:folder-bold',
+    },
+    {
+      name: 'Trash',
+      link: '/pockets/trash',
+      pockets: ps.trashFolder,
+      key: 'trash',
+      icon: 'ph:trash',
+      iconSolid: 'teenyicons:bin-solid',
+      iconBold: 'ph:trash-bold',
+    },
+    {
+      name: 'Archive',
+      link: '/pockets/archive',
+      pockets: ps.archiveFolder,
+      key: 'archive',
+      icon: 'ph:archive',
+      iconSolid: 'teenyicons:archive-solid',
+      iconBold: 'ph:archive-bold',
+    },
+  ]
+
+  return folderLinks
+}
 
 export const externalLinks = [
   {
