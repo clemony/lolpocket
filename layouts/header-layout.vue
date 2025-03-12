@@ -50,7 +50,7 @@ const breadcrumbs = computed (() => {
       <HeaderMenu />
     </div>
 
-    <Motion :layout="true" class="inset-0 absolute left-0 top-0" :class="cn('tldr-30 overflow-y-auto pt-34', props.class)">
+    <Motion :layout="true" class="inset-0 absolute left-0 top-0" :class="cn({'tldr-30 overflow-y-auto pt-34': route.path != '/'}, props.class)">
       <slot />
     </Motion>
 

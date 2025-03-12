@@ -21,7 +21,7 @@ const summoner = computed(() => {
     />
     <div
       v-else
-      class="rounded-full avatar grid place-items-center text-nc text-7 font-semibold"
+      class="rounded-full avatar bg-neutral grid place-items-center text-nc text-7 font-semibold"
     >
       LP
     </div>
