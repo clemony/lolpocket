@@ -8,6 +8,8 @@ const as = useAccountStore()
 const summoner = computed(() => {
   return as.userAccount ? as.userAccount : defaultUser
 })
+
+//wtf
 </script>
 
 <template>
