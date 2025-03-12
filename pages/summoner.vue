@@ -1,12 +1,10 @@
 <script lang="ts" setup>
 const route = useRoute()
-const ss = useSidebarStore()
-const as = useAccountStore()
 </script>
 
 <template>
   <NuxtLayout
-    name="header-layout">
+    name="header-layout" :class="{ '!pt-28': route.path == '/summoner/match-history' }">
     <NuxtPage />
   </NuxtLayout>
 </template>

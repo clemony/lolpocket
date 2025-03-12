@@ -17,9 +17,9 @@ const isSettingsOpen = ref(true)
   <div class="h-full w-full grid overflow-hidden transition-all  duration-400  relative  py-8 " :class="{ 'justify-center grid-cols-[30px_1fr_80px]': !isMenuOpen, 'grid-cols-[380px_1fr_100px]': isMenuOpen }">
     <div class="flex flex-nowrap pl-14 flex-col gap-9 items-center transition-all  *:transition-all *:duration-400 duration-400" :class="{ '*:not-first:opacity-0': !isMenuOpen }">
       <div class="flex items-center transition-all duration-400 w-full gap-8" :class="{ 'justify-center': !isMenuOpen }">
-        <Swap180 class="-mt-0.5 btn-ghost ">
+        <CaretSwap class="-mt-0.5 btn-ghost ">
           <input v-model="isMenuOpen" type="checkbox" class="peer hidden" />
-        </Swap180>
+        </CaretSwap>
         <div class="items-center flex grow overflow-hidden  transition-all  duration-400" :class="{ 'w-0 opacity-0 invisible': !isMenuOpen }">
           <CompleteCounters :pocket="pocket" />
         </div>

@@ -94,9 +94,9 @@ function handleSubmit() {
       </DialogClose>
 
       <DialogClose as-child>
-        <NeutralButton class="absolute bottom-5 px-5 right-6" @click="handleSubmit">
+        <button class="absolute btn btn-neutral bottom-5 px-5 right-6" @click="handleSubmit">
           Create
-        </NeutralButton>
+        </button>
       </DialogClose>
     </DialogContent>
   </Dialog>

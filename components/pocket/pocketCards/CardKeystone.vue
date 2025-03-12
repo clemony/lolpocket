@@ -20,7 +20,7 @@ const props = defineProps<{
         :style="props.style"
         class="h-14 w-auto shrink-0 object-center drop-shadow-md"
       />
-      <ShadowedPlaceholder class="size-14 rounded-full" />
+      <Placeholder class="size-14 rounded-full" />
     </div>
   </div>
 </template>

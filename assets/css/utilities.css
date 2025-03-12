@@ -1,8 +1,6 @@
 @import 'tailwindcss';
+
 @import './default-theme.css' (reference);
-@utility color-chip {
-  @apply flex aspect-square size-9 items-center justify-center rounded-md shadow-sm;
-}
 
 @utility mask-left {
   mask-image: linear-gradient(to right, black 50%, transparent);
@@ -20,17 +18,17 @@
   mask-image: linear-gradient(to bottom, black 50%, transparent);
 }
 
-@utility scrollbar-hide {
-  &::-webkit-scrollbar {
+
+
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
-}
-
-@utility body-bg {
-  @apply bg-gradient-to-b from-b1 to-b2/60;
-}
-
-@utility dst {
-  @apply drop-shadow-text;
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 

@@ -1,116 +1,83 @@
 <script setup lang="ts">
-import { summoner } from 'shared/data/summonerData'
-
 const as = useAccountStore()
 const ds = useDataStore()
-const match = {
-  type: ['Ranked', 'Solo/Duo'],
-  playerOutcome: 'win',
-  KDA: '1/3/17',
-  gameTime: '24:06',
-  summoners: [
-    { blueTeam: [] },
-    {
-      redTeam: [],
-    },
-  ],
-}
+
+const match = computed (() => {
+  return matchData.info
+})
+const queue = computed(() => {
+  const foundQueue = queues.find(q => q.queueId == match.value.queueId)
+  if (!foundQueue)
+    return null
+
+  // Get the map replacement
+  /*     const mapReplacement = mapDictionary[0][foundQueue.map] || foundQueue.map; */
+
+  // Get the queue replacement if the map is "Summoner's Rift"
+  const queueReplacement = foundQueue.map === 'Summoner\'s Rift'
+    ? queueDictionary[0][foundQueue.description] || foundQueue.description
+    : foundQueue.description
+
+  return {
+    ...foundQueue,
+    /*        map: mapReplacement, */
+    description: queueReplacement,
+  }
+})
+
+const player = computed(() => {
+  return match.value.participants.find(p => p.puuid == as.userAccount.puuid)
+})
 </script>
 
 <template>
-  <Card class="max-w-[600px] bg-gradient-to-r from-transparent from-80% px-5 py-4">
-    <Collapsible class="group">
-      <div class="flex gap-8">
-        <div class="flex h-full flex-col justify-start gap-1.5">
-          <Badge
-            :class="{
-              'bg-inspiration': match.playerOutcome == 'win',
-              'bg-domination': match.playerOutcome == 'loss',
-            }"
-            class="!text-2 mb-2 items-center gap-2 pl-2 !font-medium !tracking-wide text-white capitalize"
-          >
-            <icon
-              name="uis:graph-bar"
-              class="size-3.5"
-            />
+  <Motion
+    :layout="true" :transition="{
+      type: useSpring(0, {
+        stiffness: 200,
+        damping: 100,
+        mass: 10,
+      }),
 
-            {{ match.playerOutcome }}
-          </Badge>
-          <div>
-            <p>{{ match.type[0] }}</p>
-            <p v-if="match.type[1]">
-              {{ match.type[1] }}
-            </p>
-          </div>
-
-          <p class="">
-            {{ match.gameTime }}
-          </p>
-        </div>
-        <div class="flex flex-col gap-2">
-          <div class="flex gap-6">
-            <div class="size-17 overflow-hidden rounded-lg">
-              <img
-                src="/img/champion/Sona.webp"
-                class="size-17 scale-115"
-              />
-            </div>
-
-            <div class="grid h-full">
-              <p class="text-4 flex gap-0.75 font-bold">
-                <span>1</span>
-                /
-                <span class="text-red-700">3</span>
-                /
-                <span>15</span>
-              </p>
-              <p class="text-3 text-bc/80 pb-1 font-medium">
-                {{ summoner.recentMatches[0].kdaRatio.toFixed(2) }}
-                KDA
-              </p>
+    }">
+    <Collapsible v-if="player && match" class="group w-180 max-w-180 px-4 py-4 w-full" as-child>
+      <Field class="bg-b2/40 border-b3/40 w-full">
+        <CollapsibleTrigger class="flex gap-7 h-34 w-full">
+          <div class="flex h-full **:select-none flex-col justify-start gap-1.5">
+            <WinLossButton v-if=" player.teamId && match" :player="player" :match="match" />
+            <div class="font-medium dst tracking-tight text-left w-20  ">
+              <RankedQueue v-if="match.queueId" as="p" class="text-2 text-left text-nowrap" :match="match" />
+              <RankedMap v-if="match.queueId" as="p" class="text-2" :match="match" />
+              <GameDuration as="p" :match="match" class="tracking-wide" />
             </div>
           </div>
-          <div class="flex gap-1.5 *:rounded-md">
-            <img
-              src="https://ddragon.leagueoflegends.com/cdn/14.24.1/img/item/3870.png"
-              class="size-11"
-            />
+          <div class="flex flex-col gap-2">
+            <div class="flex gap-6">
+              <ChampionImage :champ-name="player.championName" />
+              <KDA :kills="player.kills" :deaths="player.deaths" :assists="player.assists" />
+            </div>
 
-            <img
-              src="https://ddragon.leagueoflegends.com/cdn/14.24.1/img/item/3158.png"
-              class="size-11"
-            />
-            <img
-              src="https://ddragon.leagueoflegends.com/cdn/14.24.1/img/item/6620.png"
-              class="size-11"
-            />
-            <img
-              src="https://ddragon.leagueoflegends.com/cdn/14.24.1/img/item/6617.png"
-              class="size-11"
-            />
-            <img
-              src="https://ddragon.leagueoflegends.com/cdn/14.24.1/img/item/3070.png"
-              class="size-11"
-            />
-            <img
-              src="https://ddragon.leagueoflegends.com/cdn/14.24.1/img/item/2055.png"
-              class="size-11"
-            />
+            <MatchItems v-if="player.item0" :player="player" />
           </div>
-        </div>
-
-        <CollapsibleTrigger
-          as-child
-          class="group bg-base-200/30 grid h-full w-7 place-items-center"
-        >
-          <ExpandIndicator class="[&_svg]:!size-4 [&_svg]:!shrink-0" />
         </CollapsibleTrigger>
-      </div>
-      <CollapsibleContent as-child>
-        <CardContent></CardContent>
-      </CollapsibleContent>
+
+        <Motion
+          :layout="true" :transition="{
+            type: useSpring(0, {
+              stiffness: 200,
+              damping: 100,
+              mass: 10,
+            }),
+
+          }">
+          <CollapsibleContent class="h-64 !tldr-20  CollapsibleContent py-3">
+            <Separator class="!bg-b3/40" />
+            hi
+          </CollapsibleContent>
+        </Motion>
+      </Field>
     </Collapsible>
-  </Card>
+  </Motion>
 </template>
 
 <style scoped></style>

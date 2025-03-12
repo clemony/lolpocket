@@ -73,7 +73,10 @@ const toggleFilter = useToggle(filter)
     <div class="size-full  pt-38 pr-10 pl-8  border-l border-l-b2">
       <div class="flex gap-4">
         <div class="join w-fit shadow-xs">
-          <ToggleStateButton
+         <!-- TODO
+         REDO with vueuse
+         
+         <ToggleStateButton
             v-model:model="sortItemsAZ"
             class="join-item rounded-r-none"
             icon1="qlementine-icons:sort-alpha-asc-16"
@@ -87,7 +90,7 @@ const toggleFilter = useToggle(filter)
             icon2="bi:sort-numeric-up"
             :icon-size="7"
             @click.stop
-            @update:model="(v) => (is.sortPrice = v)" />
+            @update:model="(v) => (is.sortPrice = v)" /> -->
         </div>
         <button
           class="btn-outline btn border-b3"

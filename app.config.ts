@@ -3,8 +3,9 @@ export default defineAppConfig({
   icon: {
     mode: 'svg',
     class: 'text-[var(--color-bc)]',
+    size: '18px',
     aliases: {
-      'search': 'teenyicons:search-outline',
+      'ph:magnifying-glass': 'teenyicons:search-outline',
       'search-sm': 'teenyicons:search-small-outline',
 
       // math
@@ -57,7 +58,7 @@ export default defineAppConfig({
       'pin': 'iconoir:pin',
       'pin-solid': 'iconoir:pin-solid',
       'clip': 'teenyicons:attach-outline',
-      'trash': 'formkit:trash',
+      'trash': 'ph:trash',
       'archive': 'teenyicons:archive-outline',
 
       // external / social

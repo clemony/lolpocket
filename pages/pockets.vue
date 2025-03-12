@@ -16,7 +16,7 @@ onMounted (() => {
 
 <template>
   <NuxtLayout
-    name="header-layout" class="px-4">
+    name="header-layout" class="px-8">
     <!--   delete button -->
     <template #crumb>
       <button v-if="route.path == '/pockets/trash'" class="btn  bg-domination  text-white text-2 font-medium">

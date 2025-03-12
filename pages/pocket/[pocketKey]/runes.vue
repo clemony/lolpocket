@@ -34,7 +34,6 @@ onMounted (() => {
   const { width } = useWindowSize()
   width.value < 1200 ? isDataCollapsed.value = true : isDataCollapsed.value = false
   rs.hoveredRune ?? setSpellbookRune()
-  console.log('💠 - onMounted - smallerThan6xl:', smallerThan6xl)
 })
 </script>
 

@@ -1,42 +1,17 @@
 @import 'tailwindcss';
 
 @layer components {
-  
-  /* text */
-  
-  
-  .f-sb {
-    @apply font-semibold;
-  }
-  
-  .f-ttt {
-    @apply tracking-tighter;
-  }
-  
-  .f-tt {
-    @apply tracking-tight;
-  }
-  
-  
-  /* pos */
-  
-  .i-c {
-    @apply items-center;
-  }
-  
+}
+
+:root {
   .p-i-c {
     @apply place-items-center;
   }
   
-  
-  
-  /*shadow*/
   .dst {
     @apply drop-shadow-text;
   }
-}
-
-:root {
+  
   .tldr-10 {
     @apply transition-all duration-100;
   }
@@ -54,7 +29,7 @@
   }
   
   .tldr-40 {
-    @apply transition-all duration-400;
+    @apply duration-400 transition-all;
   }
   
   .tldr-50 {
@@ -62,7 +37,7 @@
   }
   
   .tldr-60 {
-    @apply transition-all duration-600;
+    @apply duration-600 transition-all;
   }
   
   .tldr-70 {

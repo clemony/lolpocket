@@ -47,7 +47,7 @@ const runes = ref()
             'shadow-inner shadow-black': rune.name != 'empty',
           }"
         />
-        <ShadowedPlaceholder
+        <Placeholder
           v-else
           class="border-dark-1/15 bg-light-2 z-0 size-full rounded-full"
           :style="{
@@ -73,7 +73,7 @@ const runes = ref()
                     v-if="rune.name != 'empty'"
                     :url="rune.img"
                     class="size-full" />
-                <ShadowedPlaceholder v-else class="size-full rounded-full" />
+                <Placeholder v-else class="size-full rounded-full" />
             </div>
         </template>
     </div> -->

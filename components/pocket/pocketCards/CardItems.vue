@@ -39,7 +39,7 @@ const items = computed(() => {
         </div>
       </ItemPop>
     </template>
-    <ShadowedPlaceholder
+    <Placeholder
       v-for="index in makeBox(items.length, 6)" :key="index"
       class="border-dark-1/15 bg-light-2 z-0 size-9 rounded-full"
       :style="{

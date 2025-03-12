@@ -1,13 +1,13 @@
-import TopBuildsModule from 'components/summoner/modules/module/TopBuildsModule.vue'
-import TopBuildsGhost from 'components/summoner/modules/ghost/TopBuildsGhost.vue'
-import RankedGhost from 'components/summoner/modules/ghost/RankedGhost.vue'
-import ChampionMasteryGhost from 'components/summoner/modules/ghost/ChampionMasteryGhost.vue'
-import RankedModule from 'components/summoner/modules/module/RankedModule.vue'
-import ChampionMasteryModule from 'components/summoner/modules/module/ChampionMasteryModule.vue'
-import ChallengeOverviewGhost from 'components/summoner/modules/ghost/ChallengeOverviewGhost.vue'
-import ChallengeOverviewModule from 'components/summoner/modules/module/ChallengeOverviewModule.vue'
-import SingleMasteryModule from 'components/summoner/modules/module/SingleMasteryModule.vue'
-import SingleMasteryGhost from 'components/summoner/modules/ghost/SingleMasteryGhost.vue'
+import TopBuildsModule from 'components/summoner/board-cards/module/TopBuildsModule.vue'
+import TopBuildsGhost from 'components/summoner/board-cards/ghost/TopBuildsGhost.vue'
+import RankedGhost from 'components/summoner/board-cards/ghost/RankedGhost.vue'
+import ChampionMasteryGhost from 'components/summoner/board-cards/ghost/ChampionMasteryGhost.vue'
+import RankedModule from 'components/summoner/board-cards/module/RankedModule.vue'
+import ChampionMasteryModule from 'components/summoner/board-cards/module/ChampionMasteryModule.vue'
+import ChallengeOverviewGhost from 'components/summoner/board-cards/ghost/ChallengeOverviewGhost.vue'
+import ChallengeOverviewModule from 'components/summoner/board-cards/module/ChallengeOverviewModule.vue'
+import SingleMasteryModule from 'components/summoner/board-cards/module/SingleMasteryModule.vue'
+import SingleMasteryGhost from 'components/summoner/board-cards/ghost/SingleMasteryGhost.vue'
 
 export const allUserModules = [
   {

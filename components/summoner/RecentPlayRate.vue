@@ -22,8 +22,7 @@ const labels = ['Win', 'Loss']
 
 <template>
   <div
-    class="grid  max-w-[600px] grid-cols-[2.5fr_3fr_1fr] items-center gap-3 px-2"
-  >
+    class="grid max-w-180 max-h-22 h-22 w-180 **:select-none grid-cols-[2.5fr_3fr_1fr] items-center gap-3 px-2">
     <div class="relative flex items-center gap-4">
       <Donut
         :datasets="datasets"
@@ -31,8 +30,7 @@ const labels = ['Win', 'Loss']
         :labels="labels"
         type="gauge"
         aria="Recent winrate in percentage"
-        class="!size-22"
-      />
+        class="!size-22" />
       <span class="text-bc absolute left-7 font-medium"> {{ recentWinrate }}% </span>
 
       <h5>
@@ -45,8 +43,7 @@ const labels = ['Win', 'Loss']
       <div
         v-for="champion in summoner.recentChampions"
         :key="champion.name"
-        class="relative flex size-22 items-center rounded-full shadow-sm"
-      >
+        class="relative flex size-22 items-center rounded-full drop-shadow-sm">
         <Donut
           :datasets="[
             {
@@ -58,10 +55,9 @@ const labels = ['Win', 'Loss']
           cutout="87%"
           type="gauge"
           aria="Recent winrate in percentage"
-          class="z-10"
-        />
+          class="z-10" />
 
-        <div class="border-neutral/40 absolute left-1.75 size-18.5 overflow-hidden rounded-full border-2 font-medium">
+        <div class=" absolute left-1.75 size-18.5  rounded-full overflow-hidden  ">
           <img
             :src="`/img/champion/${
               computed(() => {
@@ -69,8 +65,7 @@ const labels = ['Win', 'Loss']
               }).value
             }.webp`"
             alt="champion.name"
-            class="size-18.5 scale-105 object-center"
-          />
+            class="size-18.5 scale-112" />
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ function handleAddClick() {
 </script>
 
 <template>
-  <SidebarButton class="rounded-lg py-5 !btn-neutral bg-neutral !drop-shadow-sm shadow-sm" @click="handleAddClick()">
+  <SidebarButton v-tippy="!us.sidebarExpanded ? 'New Pocket' : null" class="rounded-lg py-5 !btn-neutral bg-neutral hover:bg-neutral/80 !drop-shadow-sm shadow-sm" @click="handleAddClick()">
     <icon
       name="add-sm"
       class="size-5.5 shrink-0 stroke-[1.2] text-nc drop-shadow-sm" />

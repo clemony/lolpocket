@@ -7,50 +7,42 @@ const as = useAccountStore()
 
 <template>
   <Tabs default-value="all">
-    <TabsList class="mt-2 mb-2 [&_button]:rounded-md">
-      <TabsTrigger value="all">
+    <TabsList class="mt-3 mb-2 [&_button]:rounded-md shadow-warm-soft btn bg-b2/40 btn-lg">
+      <CustomTabTrigger value="all">
         All Ranked
-      </TabsTrigger>
-      <TabsTrigger value="soloDuo">
+      </CustomTabTrigger>
+      <CustomTabTrigger value="soloDuo">
         Solo/Duo
-      </TabsTrigger>
-      <TabsTrigger value="flex">
+      </CustomTabTrigger>
+      <CustomTabTrigger value="flex">
         Flex
-      </TabsTrigger>
+      </CustomTabTrigger>
     </TabsList>
 
+  
     <TabsContent
       v-for="queue in summoner.champions"
-      :value="queue.queue"
-      as-child
-    >
-      <Card class="grid gap-y-8 px-6 py-8">
-        <div
-          v-for="champion in queue.champions"
-          class="grid w-full grid-cols-[0.5fr_1.25fr_0.75fr_1.25fr] items-center gap-4"
-        >
+      :key="queue.queue" :value="queue.queue"
+      as-child>
+      <Field class="bg-b2/40 border-b2 justify-center grid gap-y-8 px-6 py-8">
+
+        <Motion
+          v-for="champion in queue.champions" :key="champion.champion"
+          class="grid  w-full grid-cols-[0.5fr_1.25fr_0.75fr_1.25fr] items-center gap-4">
           <div
-            class="ring-neutral/15 size-fit rounded-full ring-1 ring-offset-3"
-            :class="{
-              'ring-offset-master': champion.wins / champion.games > 0.54,
-              'ring-offset-challenger/90': 0.54 > champion.wins / champion.games && champion.wins / champion.games > 0.51,
-              'ring-offset-gold': 0.51 > champion.wins / champion.games && champion.wins / champion.games > 0.49,
-              'ring-offset-red-600/80': champion.wins / champion.games < 0.49,
-            }"
-          >
-            <div class="size-17 overflow-hidden rounded-full">
+            class=" size-fit rounded-full shadow-sm drop-shadow-sm  ">
+            <div class="size-17 overflow-hidden items-center rounded-full">
               <img
-                :src="`/img/champions/${
+                :src="`/img/champion/${
                   computed(() => {
                     return ds.champions.find((champ) => champ.name == champion.champion);
                   }).value.apiname
                 }.webp`"
-                class="size-17 scale-114"
-              />
+                class="size-17 scale-114" />
             </div>
           </div>
-          <div class="flex w-18 flex-col">
-            <p class="!font-4 font-medium">
+          <div class="flex w-18 flex-col dst  justify-center font-medium">
+            <p>
               {{ champion.champion }}
             </p>
             <p class="text-nowrap">
@@ -59,28 +51,26 @@ const as = useAccountStore()
           </div>
 
           <div class="flex flex-col justify-center">
-            <p class="flex items-center text-nowrap">
-              <span class="grow">{{ champion.wins }}W</span>
+            <p class="flex items-center dst font-medium text-nowrap">
+              <span class="grow !text-2 opacity-80">{{ champion.wins }}W</span>
               <icon
                 name="ion:caret-up-outline"
-                class="text-resolve"
+                class="text-resolve size-4"
                 :class="{
                   'text-inspiration': as.colorBlindMode,
-                }"
-              />
+                }" />
             </p>
-            <p class="flex items-center text-nowrap">
-              <span class="grow"> {{ champion.games - champion.wins }}L </span>
+            <p class="flex  dst font-medium items-center text-nowrap">
+              <span class="grow !text-2 opacity-80"> {{ champion.games - champion.wins }}L </span>
               <icon
                 name="ion:caret-down-outline"
-                class="text-domination"
-              />
+                class="text-domination  size-4" />
             </p>
           </div>
 
-          <ChampBar :champion="champion" />
-        </div>
-      </Card>
+          <ChampWinrate :champion="champion" />
+        </Motion>
+      </Field>
     </TabsContent>
   </Tabs>
 </template>

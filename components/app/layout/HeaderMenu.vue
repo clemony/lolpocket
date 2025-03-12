@@ -20,8 +20,8 @@ const messages = ref()
 
 <template>
   <DropdownMenu as="div">
-    <DropdownMenuTrigger class=" mb-1 hover:bg-transparent focus:bg-transparent max-w-11 group/acc transition-all duration-150 flex items-center rounded-full">
-      <SummonerIcon class="size-11 hover:ring-2 rounded-full hover:ring-b3 shadow-sm group-data-[state=open]/acc:ring group-data-[state=open]/acc:ring-neutral cursor-pointer" />
+    <DropdownMenuTrigger class=" mb-1 opacity-90 group/acc transition-all duration-300 flex items-center rounded-full hover:opacity-100 data-[state=open]:opacity-100">
+      <SummonerIcon class="size-11 border border-black drop-shadow-sm grayscale contrast-101 brightness-109 inset-shadow-sm inset-shadow-rounded  ring-1 ring-offset-1 ring-offset-neutral rounded-full ring-b3 shadow-sm group-data-[state=open]/acc:ring group-data-[state=open]/acc:ring-neutral cursor-pointer" />
 
       <div v-if="messages" class="inline-grid *:[grid-area:1/1] absolute top-0.5 right-1.75">
         <div class="status !bg-resolve animate-ping"></div>

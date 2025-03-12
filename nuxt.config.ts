@@ -46,6 +46,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
     supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
+    riotDevKey: process.env.RIOT_DEV_KEY,
 
     public: {
       baseUrl: process.env.BASE_URL || 'http://localhost:8080',
@@ -84,7 +85,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
 
   imports: {
-    dirs: ['shared/supabase', '@vueuse/components', 'stores', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/links', 'utils/lib', 'utils/pocket', 'utils/style', 'stores'],
+    dirs: ['shared/supabase', '@vueuse/components', 'stores', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/links', 'utils/lib', 'utils/pocket', 'utils/style', 'stores', 'shared/data', 'shared/data/summoner'],
   },
 
   webpack: {

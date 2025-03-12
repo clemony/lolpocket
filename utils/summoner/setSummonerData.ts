@@ -5,7 +5,7 @@ async function useSummonerData(userId) {
   if (!as.userAccount.session) {
     return
   }
-  const { data } = await client.from('user_data').select('"gameName", "tagLine", "profileIconId", "summonerLevel","region"').eq('user_id', userId).limit(1).single()
+  const { data } = await client.from('user_data').select('"gameName", "tagLine", "profileIconId", "summonerLevel","region", "puuid"').eq('user_id', userId).limit(1).single()
   if (data) {
     return data
   }
@@ -20,6 +20,7 @@ export async function setSummonerData(userId) {
       as.userAccount.tagLine = result.tagLine
       as.userAccount.profileIconId = result.profileIconId
       as.userAccount.summonerLevel = result.summonerLevel
+      as.userAccount.puuid = result.puuid
       as.userAccount.region = result.region
       as.$persist
     }

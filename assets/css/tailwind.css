@@ -1,41 +1,53 @@
 @import 'tailwindcss';
+
 @import './utilities.css';
+
 @import './abbreviations.css';
+
 @import './plugins/plugins.css';
+
 @import './components.css';
+
 @import './default-theme.css';
+
 @import './colors.css';
+
 @import '../animation/animations.css';
+
 @import './fonts.css';
+
 @import './color-themes.css';
 
 @layer base {
   :root {
     scrollbar-color: oklch(0 0.02476 255.702 / 0.075) rgba(0, 0, 0, 0) !important;
     font-size: 12px;
-    }
-
-
+  }
+  
+  
   /* inset-0 m-0 h-screen w-screen p-0  */
-
+  
   html,
   body,
   #app {
     font-family: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: var(--text-3);
     @apply text-3  text-bc selection:bg-neutral/80 selection:text-nc overflow-hidden h-screen w-screen;
-    }
-
-
+  }
+  
   input,
   input:where(:not([type='button'], [type='reset'], [type='submit'])),
-  select,
-  textarea,
-  .reset-input {
-    @apply outline-0 ring-0 ring-offset-0 focus:outline-0 focus:ring-0 border-transparent ;
+    select,
+    textarea,
+    .reset-input {
+    @apply outline-0 ring-0 ring-offset-0 focus:outline-0 focus:ring-0 border-transparent;
   }
-
+  
   html {
     font-size: 12px;
+  }
+  
+  body {
+    @apply bg-b1;
   }
 }

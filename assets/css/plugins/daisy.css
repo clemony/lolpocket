@@ -96,6 +96,18 @@
     border-image-width: 0 !important;
     --input-color: var(--color-b3) !important;
   }
+  
+  .progress {
+    @supports (-webkit-appearance:none) {
+      &::-webkit-progress-value {
+        @apply rounded-xl;
+      }
+    }
+  }
+  
+  .progress&::-webkit-progress-value {
+    border-radius: var(--rounded-xl) !important;
+  }
 }
 
 @layer base {
