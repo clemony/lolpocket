@@ -1,5 +1,4 @@
 import { hexoid } from 'hexoid'
-import { pathDescriptions } from 'shared/data/runes/pathDescriptions'
 
 /* KEY
 1. createDefaultRune

@@ -2,29 +2,54 @@
 import { TabsTrigger, useForwardProps } from 'reka-ui'
 import type { TabsTriggerProps } from 'reka-ui'
 
-const props = defineProps<TabsTriggerProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<TabsTriggerProps & {
+  class?: HTMLAttributes['class']
+  store?: any
+  value: string
+}>()
 
+const store = ref(props.store)
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
 
   return delegated
 })
-
 const forwardedProps = useForwardProps(delegatedProps)
+
+function handleHoverStart(event) {
+  const { target } = event
+  const { width } = target.getBoundingClientRect()
+  store.value.currentValue = {
+    pos: target.offsetLeft,
+    width,
+  }
+}
+
+const tab = ref<HTMLElement | null>(null)
+
+function handleClick(event) {
+  const { target } = event
+  const { width } = target.getBoundingClientRect(tab)
+  store.value.returnValue = {
+    pos: target.offsetLeft,
+    width,
+  }
+}
 </script>
 
 <template>
   <Motion
     as-child
-    @hover-start="(event) => console.log('hover start', event)"
-    @hover-end="(event) => console.log('hover end', event)">
+    @hover-start="handleHoverStart"
+    @click="handleClick($event)">
     <TabsTrigger
+      ref="tab"
       v-bind="forwardedProps"
       :class="cn(
-        'inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-2 font-medium ring-offset-b1 transition-all focus-visible:outline-none tldr-20 focus-visible:ring-2 focus-visible:ring-b2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:!text-2 data-[state=active]:bg-b1 font-medium data-[state=active]:font-medium data-[state=active]:border-b3/80 text-2 data-[state=active]:btn data-[state=active]:drop-shadow-xxs data-[state=active]:border data-[state=active]:text-bc ',
+        'inline-flex  items-center justify-center whitespace-nowrap rounded-md px-5 py-1 !text-2 font-medium transition-all focus-visible:!outline-0 tldr-20  !outline-0 border-transparent border disabled:pointer-events-none disabled:opacity-50  w-fit  h-10 text-bc/60 data-[state=active]:text-bc z-1 cursor-pointer **:select-none',
         props.class,
       )">
-      <span class="truncate">
+      <span class="truncate pointer-events-none">
         <slot />
       </span>
     </TabsTrigger>

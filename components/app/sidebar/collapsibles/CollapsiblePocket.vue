@@ -39,7 +39,7 @@ watchEffect(() => {
           <SidebarText>
             Pinned
           </SidebarText>
-          <SidebarBadge class="font-mono !text-1">
+          <SidebarBadge class="font-mono !text-1 pr-3">
             <span v-if="!pinned || pinned.length == null || pinned.length == 0">0</span>
             <span v-else>
               {{ pinned.length }}

@@ -17,6 +17,16 @@ export const useDataStore = defineStore(
       return champions.value.map(c => c.name)
     })
 
+    const runes = computed (() => {
+      const path = paths.value.flatMap(p => p.slots)
+      const slots = path.flatMap(s => s.runes)
+      const runes = slots.flatMap(({ id, name }) => ({
+        id,
+        name,
+      }))
+      return runes
+    })
+
     const loadData = () => {
       !SRitems ? getItemsFromDatabase() : ''
       !champions ? getChampsFromDatabase() : ''
@@ -29,6 +39,7 @@ export const useDataStore = defineStore(
       loadData,
       currentPatch,
       paths,
+      runes,
       SRitems,
       champions,
       championNames,

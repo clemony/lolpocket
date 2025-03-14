@@ -111,17 +111,17 @@ defineExpose({
             <slot />
           </div>
         </div>
-        <div class="flex gap-2 flex-col items-center size-full py-4">
-          <p class="w-full text-left text-5 px-5 font-semibold tracking-tight">
-            Icon
+        <div class="flex gap-3 flex-col items-center size-full pt-2 pb-4">
+          <p class="w-full text-left flex items-center gap-2 text-5 px-5 font-semibold tracking-tight">
+            Icon <icon name="select" />
           </p>
           <Popover>
-            <PopoverTrigger class="justify-self-center">
+            <PopoverTrigger class="justify-self-center group">
               <LazyPocketIcon
                 :image="selectedIcon"
-                class="**:!rounded-box !rounded-box overflow-hidden inset-shadow-rounded shadow-rounded size-32 inset-shadow-black shadow-black/30  hover:ring-1" />
+                class="**:!rounded-box size-4 tldr-20 group-data-[state=open]:ring-1 cursor-pointer !rounded-box overflow-hidden inset-shadow-rounded ring-offset-3 ring-offset-b1 shadow-rounded size-32 inset-shadow-black shadow-black/30  hover:ring-1" />
             </PopoverTrigger>
-            <IconPopover v-model:selected-icon="selectedIcon" side="right" :side-offset="18" align="start" @update:selected-icon="(e) => selectedIcon = e" />
+            <IconPopover v-model:selected-icon="selectedIcon" side="right" :side-offset="70" align="start" :align-offset="-136" @update:selected-icon="(e) => selectedIcon = e" />
           </Popover>
         </div>
       </div>

@@ -16,7 +16,7 @@ const breadcrumbs = computed (() => {
 
 <template>
   <Motion :layout="true" class="w-full h-screen relative tldr-30 " :class="{ '!bg-b2/40': route.meta.background == 'b2' }">
-    <div class="flex w-full items-center overflow-hidden  gap-2 absolute z-1 top-0 left-0 bg-b1/80 backdrop-blur-md pl-5 pr-10  pt-5 pb-4 " :class="{ '!bg-transparent !h-18 ': route.path == '/' || route.meta.background == 'b2' }">
+    <div class="flex w-full items-center overflow-hidden  gap-2 absolute z-40 top-0 left-0 bg-b1/80 backdrop-blur-md pl-5 pr-10  pt-5 pb-4 " :class="{ '!bg-transparent !h-18 ': route.path == '/' || route.meta.background == 'b2' }">
       <SidebarExpandButton />
 
       <div class="breadcrumbs text-2 flex items-center **:select-none">

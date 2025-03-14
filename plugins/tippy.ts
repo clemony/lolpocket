@@ -19,7 +19,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         duration: [150],
         animation: 'scale',
         interactiveBorder: 2,
-        offset: [2, 6],
+        offset: [2, 10],
         role: 'tooltip',
         aria: {
           content: 'auto',

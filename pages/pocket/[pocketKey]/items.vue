@@ -16,7 +16,7 @@ const pocket = ref(props.pocket)
     <ResizablePanelGroup
       direction="horizontal"
       class="size-full">
-      <ResizablePanel :default-size="48" :min-size="20" class="bg-b1   flex justify-center relative">
+      <ResizablePanel :default-size="42" :min-size="20" class="bg-b1   flex justify-center relative">
         <ItemSets :pocket="pocket" />
       </ResizablePanel>
       <ResizableHandle

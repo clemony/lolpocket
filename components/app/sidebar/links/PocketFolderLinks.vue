@@ -15,7 +15,7 @@ const as = useAccountStore()
         {{ link.name }}
       </SidebarText>
 
-      <SidebarBadge class="font-mono !text-1">
+      <SidebarBadge class="font-mono !text-1 pr-3">
         <span v-if="!link.pockets || link.pockets.length == null || link.pockets.length == 0">0</span>
         <span v-else>
           {{ link.pockets.length }}

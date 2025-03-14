@@ -42,7 +42,6 @@ export function externalTooltip(context) {
 
     // Add Title Lines (e.g., Role)
     titleLines.forEach((title) => {
-      console.log('💠 - titleLines.forEach - title:', title)
       innerHtml += `<span>${title}</span>`
     })
     innerHtml += '</div>'

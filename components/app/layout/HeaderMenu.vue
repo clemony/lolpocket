@@ -36,7 +36,7 @@ const messages = ref()
             v-if="summoner.gameName && as.userAccount.session"
             :src="`https://ddragon.leagueoflegends.com/cdn/15.2.1/img/profileicon/${summoner.profileIconId}.png`"
             :alt="summoner.gameName || summoner.name" class="rounded-lg" />
-          <div v-else class="rounded-lg  grid place-items-center text-nc text-2 -mb-1 font-semibold">
+          <div v-else class="rounded-lg size-full  grid place-items-center text-nc text-1 -mb-1 font-semibold">
             LP
           </div>
         </div>
@@ -51,8 +51,8 @@ const messages = ref()
           <icon name="chain" class="size-5 shrink-0" />
         </button>
 
-        <button v-if="summoner && as.userAccount.session && summoner.gameName" v-tippy="{ content: 'Riot Account Connected', placement: 'top-end' }" class="btn btn-neutral rounded-full  absolute right-3.5  size-7 px-2 ">
-          <icon name="riot" class="size-4 shrink-0 text-nc" />
+        <button v-if="summoner && as.userAccount.session && summoner.gameName" v-tippy="{ content: 'Riot Account Connected', placement: 'top-end' }" class="btn btn-neutral rounded-full  absolute right-3.5  size-6.75 px-2 ">
+          <icon name="riot" class="size-3.5 shrink-0 text-nc" />
         </button>
       </DropdownMenuItem>
 
@@ -60,8 +60,8 @@ const messages = ref()
 
       <div class="flex py-2 px-3.5 gap-3.5 items-center ! !font-medium ">
         <icon
-          name="system-uicons:message"
-          class="size-5.5 shrink-0 stroke-[1.2] drop-shadow-sm group-hover:opacity-100 group-data-[state=open]:opacity-100 " />
+          name="ph:envelope-light"
+          class="size-5.5 shrink-0 - drop-shadow-sm group-hover:opacity-100 group-data-[state=open]:opacity-100 " />
         Notifications
       </div>
 
@@ -73,7 +73,7 @@ const messages = ref()
     ">
           <icon
             name="ph:gear-six"
-            class=" !size-5.5" />
+            class=" !size-5.5 -ml-0.5" />
         </DropdownMenuItem>
 
         <DropdownMenuItem

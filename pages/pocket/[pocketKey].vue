@@ -12,7 +12,7 @@ const selectedRuneSet = ref(pocket.value?.runes.sets?.[0] ?? null)
 
 const tabValue = ref('/')
 
-const pages = computed (() => {
+const pages = computedAsync (() => {
   return getPocketLinks(pocket.value)
 })
 
@@ -25,14 +25,16 @@ useRuntimeHook('page:loading:end', () => {
   isLoading.value = false
 })
 
-onMounted (() => {
+onMounted (async() => {
+  await route.params.pocketKey
+  nextTick()
   tabValue.value = route.path
 })
 </script>
 
 <template>
   <NuxtLayout
-    name="header-layout" class=" grid *:pt-[6.5vh] z-10 size-full gap-6 @container/main    pl-14 pr-4" :class="{ 'pl-4': !us.sidebarExpanded }">
+    name="header-layout" class=" grid  z-10 size-full gap-6 @container/main    px-8" :class="{ 'pl-4': !us.sidebarExpanded }">
     <template #header-icon>
       <LazyPopover>
         <PopoverTrigger class="group  !cursor-pointer  items-start flex aspect-square size-10  rounded-full !pointer-events-auto shadow-sm !drop-shadow-none  bg-gradient-to-br from-neutral/60 to-neutral grid place-items-center">
@@ -44,7 +46,7 @@ onMounted (() => {
     </template>
 
     <div class=" size-full relative drop-shadow-[1px_2px_2px_#00000010] ">
-      <div class="tabs tabs-lift size-full tabs-xl max-h-[89vh] drop-shadow-[1px_2px_2px_#00000010] justify-end group/tab">
+      <div class="tabs tabs-lift size-full tabs-xl max-h-[86vh] drop-shadow-[1px_2px_2px_#00000010] justify-end group/tab">
         <div class="tab dst !border-b-transparent grow justify-start " role="tab">
         </div>
         <div class="tab-content  " />

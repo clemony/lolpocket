@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = defineProps<{
   listKey?: number
-    class?: HTMLAttributes['class']
+  class?: HTMLAttributes['class']
 }>()
 const is = useItemStore()
 
@@ -14,7 +14,7 @@ const list = computed(() => {
   <transition-slide
     :key="props.listKey"
     group
- :class="cn('user-select-none grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(64px,1fr))] gap-5   rounded-lg  ', props.class)">
+    :class="cn('user-select-none grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(60px,1fr))] gap-5   rounded-lg  ', props.class)">
     <Item
       v-for="item in list"
       :key="item.id"

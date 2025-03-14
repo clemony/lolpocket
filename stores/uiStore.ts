@@ -10,6 +10,28 @@ export const useUiStore = defineStore('UiStore', () => {
   const contextMenuOpen = ref(false)
   const newFolderOpen = ref(false)
   const triggerSidebar = refAutoReset(false, 1000)
+  const champTabValue = ref('all')
+  const matchTabValue = ref('score')
+  const champTabs = ref<Tabs>({
+    currentValue: {
+      pos: 0,
+      width: 0,
+    },
+    returnValue: {
+      pos: 0,
+      width: 0,
+    },
+  })
+  const matchTabs = ref<Tabs>({
+    currentValue: {
+      pos: 0,
+      width: 0,
+    },
+    returnValue: {
+      pos: 0,
+      width: 0,
+    },
+  })
 
   return {
     sidebarExpanded,
@@ -20,6 +42,10 @@ export const useUiStore = defineStore('UiStore', () => {
     contextMenuOpen,
     newFolderOpen,
     triggerSidebar,
+    champTabValue,
+    matchTabValue,
+    champTabs,
+    matchTabs,
 
   }
 }, {

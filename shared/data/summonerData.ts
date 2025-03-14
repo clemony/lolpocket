@@ -32,7 +32,7 @@ export const summoner = {
   },
   champions: [
     {
-      queue: 'all',
+      queue: `Season ${new Date().getUTCFullYear()}`,
       champions: [
         {
           champion: 'Yuumi',
@@ -62,7 +62,7 @@ export const summoner = {
       ],
     },
     {
-      queue: 'soloDuo',
+      queue: 'Solo/Duo',
       champions: [
         {
           champion: 'Sona',
@@ -92,7 +92,7 @@ export const summoner = {
       ],
     },
     {
-      queue: 'flex',
+      queue: 'Flex',
       champions: [
         {
           champion: 'Sona',

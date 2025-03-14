@@ -61,9 +61,9 @@ watchEffect(() => {
 <template>
   <div
 
-    class="w-full col-start-2 h-full  px-7  relative overflow-y-auto mt-26   border-b3   h-full  bg-b1 ">
+    class="w-full col-start-2 h-full  px-7 shadow-warm-2  relative overflow-y-auto mt-16   border-b3   h-full  bg-b1 ">
     <div v-if="is.itemPaneOpen" class="overflow-y-auto  pt-4 pb-6 inset-0">
-      <div class="w-full flex gap-6 mb-6 items-center">
+      <div class="w-full flex gap-6 pt-10 mb-6 items-center">
         <img
           :key="item.name"
           :src="`/img/item/${item.id}.webp`"

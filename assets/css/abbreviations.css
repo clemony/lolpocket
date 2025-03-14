@@ -44,6 +44,14 @@
     @apply transition-all duration-700;
   }
   
+  .tldr-80 {
+    @apply duration-800 transition-all;
+  }
+  
+  .tldr-90 {
+    @apply duration-900 transition-all;
+  }
+  
   .tldr-100 {
     @apply transition-all duration-1000;
   }

@@ -12,7 +12,7 @@ const us = useUiStore()
 
 <template>
   <div class="flex gap-4 w-full items-center pr-2 overflow-hidden ">
-    <SidebarButton class="overflow-hidden group/up pr-4 !btn-lg">
+    <SidebarButton class="overflow-hidden  group/up pr-4 !btn-lg">
       <NuxtLink to="/" class="w-full pt-px items-center flex justify-start">
         <h4 class="dst select-none !tracking-normal ">
           LP
@@ -22,19 +22,8 @@ const us = useUiStore()
           <icon name="arrow-up" class="size-5" />
         </span>
       </NuxtLink>
+<LightSidebarSearch  />
 
-      <button
-        v-if="us.sidebarExpanded"
-        class="justify-self-end  btn gap-2    border-b3 hover:ring-neutral/50 flex h-9 !bg-b1  cursor-pointer items-center  px-3 !py-0  hover:!bg-b1  hover:ring-1 group inset-shadow-xs group  expand-hide " @click.stop="ts.commandOpen = true">
-        <icon
-          name="teenyicons:search-outline"
-          class="-mt-px  size-3.5 opacity-80 group-hover:opacity-100" />
-
-        <span
-          class="!text-3   text-bc/50">
-          {{ getDeviceKey() }} K
-        </span>
-      </button>
     </SidebarButton>
 
     <!--

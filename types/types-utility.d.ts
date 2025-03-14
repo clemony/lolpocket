@@ -39,6 +39,17 @@ declare global {
     iconSolid?: string
   }
 
+  interface Tabs {
+    currentValue: {
+      pos: number
+      width: number
+    }
+    returnValue: {
+      pos: number
+      width: number
+    }
+  }
+
   interface Note {
     title: string
     content: string

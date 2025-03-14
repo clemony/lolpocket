@@ -26,7 +26,7 @@ export const themes = [
     {
       name: 'dawn',
       id: 'theme-dawn',
-      icon: 'marketeq:mountain',
+      icon: 'ph:mountains',
       description: 'The dawn has arrived. The day is upon us. —Leona',
       color: 'var(--b1)',
     },

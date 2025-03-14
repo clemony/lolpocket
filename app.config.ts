@@ -5,7 +5,7 @@ export default defineAppConfig({
     class: 'text-[var(--color-bc)]',
     size: '18px',
     aliases: {
-      'ph:magnifying-glass': 'teenyicons:search-outline',
+      'search': 'ph:magnifying-glass',
       'search-sm': 'teenyicons:search-small-outline',
 
       // math

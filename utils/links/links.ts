@@ -80,12 +80,12 @@ export function getPocketLinks(pocket: pocket) {
 export const itemDataLinks = [
   {
     name: 'Items',
-    link: '/items',
+    link: '/items/all',
     text: 'Browse a visual grid and read item data.',
   },
   {
     name: 'Item Stats',
-    link: '/item-stats',
+    link: '/items/stats',
     icon: 'teenyicons:table-outline',
     badge: 'table',
     class: '',

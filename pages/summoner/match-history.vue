@@ -10,12 +10,12 @@ const as = useAccountStore()
 
 <template>
   <div class=" pl-24 relative flex gap-26 relative justify-start size-full overflow-hidden">
-    <div class=" w-160 overflow-y-scroll relative h-full">
+    <div class=" w-161 overflow-y-scroll relative h-full">
       <PlayerHeader :summoner="as.userAccount">
         <SummonerIcon class="rounded-full size-19" />
       </PlayerHeader>
 
-      <div class="flex flex-col pt-36 w-110  overflow-y-scroll no-scrollbar absolute gap-8 inset-0 top-0 left-0  ">
+      <div class="flex flex-col pt-36 w-111  overflow-y-scroll no-scrollbar absolute gap-8 inset-0 top-0 left-0 pr-1 ">
         <div class="h-45 pt-2 flex items-center ">
           <RankCard title="Solo/Duo" queue="soloDuo" />
         </div>
@@ -40,7 +40,7 @@ const as = useAccountStore()
         </div>
 
         <Motion :layout="true" class=" relative pb-12 overflow-y-scroll size-full">
-          <Motion class="flex flex-col  pt-36 absolute inset-0 top-0 left-0 gap-6 overflow-y-scroll py-10" :layout="true">
+          <Motion class="flex flex-col  pt-36 absolute inset-0 top-0 left-0 gap-7 overflow-y-scroll py-10" :layout="true">
             <Motion v-for="i in 8" :key="i" :layout="true">
               <MatchCard />
             </Motion>
