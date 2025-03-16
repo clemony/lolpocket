@@ -61,7 +61,7 @@ const labels = ['Win', 'Loss']
           <img
             :src="`/img/champion/${
               computed(() => {
-                return ds.champions.find((champ) => champ.name == champion.name).apiname;
+                return ds.champions.find((champ) => champ.name == champion.name).id;
               }).value
             }.webp`"
             alt="champion.name"

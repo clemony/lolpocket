@@ -2,6 +2,8 @@
 const props = defineProps<{
   store: any
   class?: HTMLAttributes['class']
+  returnValue: any
+  currentValue: any
 }>()
 const parentEl = useParentElement()
 
@@ -10,15 +12,26 @@ const store = computed (() => {
   return props.store
 })
 
-const indicatorWidth = computed(() => store.value.currentValue.width)
-const returnWidth = computed(() => store.value.returnValue.width)
+const currentValue = computedAsync(() => {
+  return {
+    width: props.currentValue.width,
+    pos: props.currentValue.pos,
+  }
+})
 
-const width = computed(() => {
-  return isOutside.value ? `${returnWidth.value}px` : `${indicatorWidth.value}px`
+const returnValue = computedAsync(() => {
+  return {
+    width: props.returnValue.width,
+    pos: props.returnValue.pos,
+  }
+})
+
+const width = computedAsync(() => {
+  return isOutside.value ? `${returnValue.value.width}px` : `${currentValue.value.width}px`
 })
 
 const transform = computed(() => {
-  return isOutside.value ? `translateX(${store.value.returnValue.pos}px)` : `translateX(${store.value.currentValue.pos}px)`
+  return isOutside.value ? `translateX(${currentValue.value.pos}px)` : `translateX(${returnValue.value.pos}px)`
 })
 
 onMounted(() => {
@@ -33,9 +46,9 @@ onMounted(() => {
 
 <template>
   <Motion
-    class="absolute bottom-1 left-0 border drop-shadow-xxs  btn   px-4 py-1 z-0 rounded-field w-fit  ease-in font-medium border-b3 ring-1 tldr-30 ring-b3/30 shadow-xs bg-b1 drop-shadow-xs text-bc" :class="cn('', { 'tldr-30': isOutside, '': !isOutside, 'opacity-0': store.returnValue.width == 0 }, props.class)"
+    class="absolute bottom-1 left-0 border   btn   px-4 py-1 z-0 rounded-lg w-fit  ease-in font-medium border-b3 ring-1 tldr-30 ring-b3/40  bg-b1  text-bc" :class="cn('', { 'tldr-30': isOutside, '': !isOutside, 'opacity-0': store.returnValue.width == 0 }, props.class)"
     :style="{
       width,
       transform,
-    }" />
+    }"></Motion>
 </template>

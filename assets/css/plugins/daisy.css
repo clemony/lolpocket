@@ -71,7 +71,7 @@
   }
   
   .btn {
-    @apply text-3 font-normal;
+    @apply !text-3 font-normal;
   }
   
   .collapse-input,

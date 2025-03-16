@@ -9,20 +9,17 @@ const props = defineProps<PrimitiveProps & {
 const match = computed (() => {
   return props.match
 })
-const queue = computed(() => {
-  const foundQueue = queues.find(q => q.queueId == match.value.queueId)
-  if (!foundQueue)
-    return null
 
-  // Get the map replacement
-  return foundQueue.map === 'Summoner\'s Rift'
-    ? queueDictionary[0][foundQueue.description] || foundQueue.description
-    : foundQueue.description
+const time = computed (() => {
+  const a = match.value.gameDuration / 60
+  const b = a.toFixed(2)
+  return b.toString().replace('.', ':')
 })
+console.log('💠 - time - time:', time.value)
 </script>
 
 <template>
   <Primitive v-bind="props">
-    {{ (Math.round((match.gameDuration / 60) * 100) / 100).toString().replace('.', ':') }}
+    {{ time }}
   </Primitive>
 </template>

@@ -1,23 +1,29 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  kills: number
-  deaths: number
-  assists: number
+  player: any
   class?: HTMLAttributes['class']
 }>()
 
+const player = computed (() => {
+  return props.player
+})
 const math = computed (() => {
-  return Math.round((props.kills + props.assists) / props.deaths * 100)
+  return Math.round((player.value.kills + player.value.assists) / player.value.deaths * 100)
 })
 </script>
 
 <template>
-  <div class="" :class="cn('grid h-full justify-items-start items-center', props.class)">
-    <p class="text-4 flex font-semibold self-start tracking-wide">
-      <span>{{ props.kills }}</span>/<span class="text-red-700">{{ props.deaths }}</span>/<span>{{ props.assists }}</span>
+  <div class="" :class="cn('flex max-w-32 min-w-32 flex-col py-1 ml-4 items-start ', props.class)">
+    <p class="text-4 grid items-start font-semibold grid   justify-start tracking-wider text-nowrap inline-flex flex-nowrap">
+      {{ player.kills }}/<span class="text-domination">{{ player.deaths }}/</span>/{{ player.assists }}
     </p>
-    <p class="text-3 text-bc/80  self-end  font-medium ">
-      {{ math / 100 }}:1 <span class="font-mono ">KDA</span>
+
+    <p class="text-1 text-bc/80 text-nowrap mt-3 truncate font-medium ">
+      {{ Math.round(player.challenges.killParticipation * 100) }}% <span class="font-mono"> KP</span>
+    </p>
+
+    <p class="text-1 text-bc/80 text-nowrap  truncate font-medium ">
+      {{ math / 100 }}:1 <span class="font-mono contents">KDA</span>
     </p>
   </div>
 </template>

@@ -5,22 +5,27 @@ const ds = useDataStore()
 const as = useAccountStore()
 const us = useUiStore()
 // Default width
-
+/* `Season ${new Date().getUTCFullYear()}` */
 const modelValue = ref<string | number>(`Season ${new Date().getUTCFullYear()}`)
 const list = [`Season ${new Date().getUTCFullYear()}`, 'Solo/Duo', 'Flex']
 </script>
 
 <template>
   <LayoutGroup>
-    <SlidingTabs
-      v-model:model-value="modelValue"
-      :store="us.champTabs"
-      :list="list" :default-value="`Season ${new Date().getUTCFullYear()}`">
+    <Tabs v-model:model-value="modelValue">
+      <TabsList class="mb-1.5 bg-b2/50">
+        <TabsTrigger
+          v-for="tab in list"
+          :key="tab" :value="tab"
+          :list="list">
+          {{ tab }}
+        </TabsTrigger>
+      </TabsList>
       <TabsContent
         v-for="queue in summoner.champions"
         :key="queue.queue" :value="queue.queue"
         as-child>
-        <Field class="bg-b2/40 border-b2  px-6 py-8">
+        <Field class="bg-b2/30 drop-shadow-xs border-b3/40  px-6 py-8">
           <Motion
             :key="queue.queue" :layout="true"
             :initial="{ x: -100, opacity: 0.7 }"
@@ -41,7 +46,7 @@ const list = [`Season ${new Date().getUTCFullYear()}`, 'Solo/Duo', 'Flex']
                     :src="`/img/champion/${
                       computed(() => {
                         return ds.champions.find((champ) => champ.name == champion.champion);
-                      }).value.apiname
+                      }).value.id
                     }.webp`"
                     class="size-17 scale-114" />
                 </div>
@@ -78,7 +83,7 @@ const list = [`Season ${new Date().getUTCFullYear()}`, 'Solo/Duo', 'Flex']
           </Motion>
         </Field>
       </TabsContent>
-    </SlidingTabs>
+    </Tabs>
   </LayoutGroup>
 </template>
 

@@ -8,7 +8,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <Field :class="cn('size-full bg-b2/40 w-110 max-w-110 border-b3/40  ', props.class)" :title="`Ranked ${props.title}`">
+  <Field :class="cn('size-full bg-b2/30 drop-shadow-xs w-110 max-w-110 border-b3/40  ', props.class)" :title="`Ranked ${props.title}`">
     <div class="ranked-grid relative grid grid-cols-[1.1fr_1fr_1fr] place-items-center">
       <div class="grid size-36 place-items-center">
         <!-- placeholder -->

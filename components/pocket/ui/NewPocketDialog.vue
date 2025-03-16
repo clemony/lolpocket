@@ -43,7 +43,7 @@ defineExpose({
 
 <template>
   <Dialog :open="ps.newPocketOpen">
-    <DialogContent class="!rounded-box" @interact-outside="ps.newPocketOpen = false">
+    <DialogContent class="!rounded-xl" @interact-outside="ps.newPocketOpen = false">
       <DialogHeader>
         <DialogTitle class="text-7 dst">
           New Pocket
@@ -111,15 +111,15 @@ defineExpose({
             <slot />
           </div>
         </div>
-        <div class="flex gap-3 flex-col items-center size-full pt-2 pb-4">
-          <p class="w-full text-left flex items-center gap-2 text-5 px-5 font-semibold tracking-tight">
+        <div class="flex gap-7 flex-col items-center size-full pt-5 pb-4">
+          <p class="w-full text-left flex items-center gap-2 text-4 px-5 font-semibold tracking-tight">
             Icon <icon name="select" />
           </p>
           <Popover>
             <PopoverTrigger class="justify-self-center group">
               <LazyPocketIcon
                 :image="selectedIcon"
-                class="**:!rounded-box size-4 tldr-20 group-data-[state=open]:ring-1 cursor-pointer !rounded-box overflow-hidden inset-shadow-rounded ring-offset-3 ring-offset-b1 shadow-rounded size-32 inset-shadow-black shadow-black/30  hover:ring-1" />
+                class="**:!rounded-xl size-4 tldr-20 group-data-[state=open]:ring-1 cursor-pointer !rounded-xl overflow-hidden inset-shadow-rounded ring-offset-3 ring-offset-b1 shadow-rounded size-28 inset-shadow-black shadow-black/30  hover:ring-1" />
             </PopoverTrigger>
             <IconPopover v-model:selected-icon="selectedIcon" side="right" :side-offset="70" align="start" :align-offset="-136" @update:selected-icon="(e) => selectedIcon = e" />
           </Popover>
@@ -128,7 +128,7 @@ defineExpose({
       <DialogFooter>
         <button
           type="submit"
-          class="btn btn-neutral btn-lg"
+          class="btn btn-neutral btn-lg !text-3 !font-medium"
           @click="submitForm">
           Create
         </button>

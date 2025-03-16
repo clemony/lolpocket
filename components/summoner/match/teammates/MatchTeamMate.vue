@@ -9,23 +9,28 @@ const player = computed (() => {
 </script>
 
 <template>
-  <div class="grid grid-cols-[1.3fr_repeat(3,1fr)] w-full items-center gap-3 h-13">
-    <div class="size-full flex gap-3 items-center">
-      <ChampionImage :champ-name="player.championName" :size="12" />
-      <div class="overflow-hidden">
-        <p class="font-semibold  text-nowrap truncate">
-          {{ player.riotIdGameName }}
-        </p>
-        <p class="font-medium text-nowrap truncate opacity-60">
-          #{{ player.riotIdTagline }}
-        </p>
-      </div>
-    </div>
-    <div class="flex items-start self-start gap-1 pt-1.5">
-      <KDA :kills="player.kills" :deaths="player.deaths" :assists="player.assists" class="*:text-1 items-start  **:text-bc *:first:gap-0 *:first:font-medium *:leading-none *:first:tracking-tight gap-2" />
+  <div class="flex w-full h-16 py-2 overflow-hidden ">
+    <ChampionImage :champ-id="player.championId" :size="12" />
+    <PlayerSpells :player="player" class="[&_img]:size-5.5 [&_img]:rounded-[4px] gap-0.75 ml-1 " />
+    <TeammateRunes :player="player" />
+
+    <div class="overflow-hidden p-1 w-36 max-w-36 tracking-tight ">
+      <p class="font-semibold  text-nowrap truncate w-full">
+        {{ player.riotIdGameName }}
+      </p>
+      <p class="font-medium mt-2.25 text-nowrap  truncate opacity-60">
+        #{{ player.riotIdTagline }}
+      </p>
     </div>
 
-    <PlayerRunes :player="player" class="gap-1 *:first:size-7 *:last:h-5" />
-    <MatchItems v-if="player && player.item0" :player="player" class="size-9 *:size-9"  wrapper-class="gap-1"/>
+    <TeammateKDA :player="player" />
+
+    <TeammateScoreboardStats :player="player" />
+
+    <TeammateVisionScore :player="player" />
+
+    <TeammateItems v-if="player && player.item0" :player="player" class="" wrapper-class="" />
+
+    <TeammateGold :player="player" class="max-w-21 w-21 gap-2.25" />
   </div>
 </template>

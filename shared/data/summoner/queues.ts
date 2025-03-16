@@ -7,7 +7,8 @@ export const mapDictionary =[{
 export const queueDictionary = [{
     "5v5 Ranked Solo games": "Ranked Solo",
 "5v5 Ranked Flex games": "Ranked Flex",
-"Normal (Quickplay)": "Quickplay"
+"Normal (Quickplay)": "Quickplay",
+"5v5 Draft Pick games": "Normal Draft",
 
 }]
 

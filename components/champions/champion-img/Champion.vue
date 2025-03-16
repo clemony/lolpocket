@@ -41,7 +41,7 @@ function handleClick() {
       <img
         :key="props.champion.name"
 
-        :src="`/img/champion/${champion.apiname}.webp`"
+        :src="`/img/champion/${champion.id}.webp`"
         :alt="`${props.champion.name} Image`"
         class="size-full scale-115" />
     </div>

@@ -6,7 +6,8 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="overflow-y-auto pr-21 pb-24  w-full h-full flex px-2 flex-col gap-34 ">
+  <div class="size-full overflow-auto ">
+  <div class="items-center px-8 pb-20 min-w-70 mx-auto max-w-250  flex flex-col gap-34 ">
     <div class="w-full">
       <p class="px-2 font-normal font-mono tracking-wide opacity-70 pb-11 dst">
         Time
@@ -45,6 +46,7 @@ definePageMeta({
         </template>
       </div>
     </div>
+  </div>
   </div>
 </template>
 

@@ -3,12 +3,13 @@
 /* .ghostClass {
   @apply border-b2 bg-b2/30 aspect-square size-full cursor-pointer items-center justify-center gap-2 self-center rounded-md border opacity-70 shadow-xs;
 }
- */
+*/
 .sortable-drag {
   @apply border-b2 bg-b2/30 overflow-hidden aspect-square size-16 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
 }
+
 .sortable-ghost {
-    @apply border-b2 bg-b2/30 overflow-hidden aspect-square size-16 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
+  @apply border-b2 bg-b2/30 overflow-hidden aspect-square size-16 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
 }
 
 .sortable-fallback {
@@ -17,34 +18,33 @@
   position: absolute;
 }
 
-.sortable-chosen  {
-    @apply border-b2 bg-b2/30 overflow-hidden aspect-square size-16 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
+.sortable-chosen {
+  @apply border-b2 bg-b2/30 overflow-hidden aspect-square size-16 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
 }
 
-.item-set-item-ghost  {
-    @apply border-b2 bg-b2/30 overflow-hidden aspect-square size-20 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
+.item-set-item-ghost {
+  @apply border-b2 bg-b2/30 overflow-hidden aspect-square size-20 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
 }
 
-.item-set-item-fallback  {
-    @apply border-b2 bg-b2/30 overflow-hidden aspect-square size-20 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
+.item-set-item-fallback {
+  @apply border-b2 bg-b2/30 overflow-hidden aspect-square size-20 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
 }
 
-/* .sortable-ghost {
+.sortable-ghost {
   @apply size-full rounded-lg border-b2 ring ring-neutral/90 ring-offset-1 ring-offset-b2;
-} */
-/*
+}
+
 .module-ghost {
   @apply size-full bg-b2/20 rounded-xl inset-shadow-sm;
+}
 
-  &::before{
-    @apply opacity-0;
-  }
+.module-ghost::before {
+  @apply opacity-0;
 }
 
 .module-drag {
   @apply w-full  !bg-transparent !opacity-97  border-transparent  ;
-.module-bg {
-  @apply bg-b1 border-b2 transition-all duration-300 shadow-smooth;
+  .module-bg {
+    @apply bg-b1 border-b2 transition-all duration-300 shadow-smooth;
+  }
 }
-}
- */

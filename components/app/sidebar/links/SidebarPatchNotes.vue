@@ -18,7 +18,7 @@ const patch = computed (() => {
       </SidebarText>
 
       <SidebarBadge class="right-2">
-        <icon v-if="us.sidebarExpanded" name="link" class="size-4.5  shrink-0 opacity-0 group-hover/p:opacity-100 tldr-20" />
+        <icon v-if="us.sidebarExpanded" name="link" class="size-4.5  shrink-0 opacity-0 group-hover/p:opacity-100 transition-opacity dr-20" />
       </SidebarBadge>
     </SidebarButton>
   </NuxtLink>

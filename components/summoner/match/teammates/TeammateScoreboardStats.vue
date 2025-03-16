@@ -1,0 +1,90 @@
+<script lang="ts" setup>
+const props = defineProps<{
+  player: any
+  class?: HTMLAttributes['class']
+}>()
+
+const player = computed (() => {
+  return props.player
+})
+
+const heal = computed (() => {
+  return player.value.challenges.effectiveHealAndShielding > 0 ? player.value.challenges.effectiveHealAndShielding : null
+})
+</script>
+
+<template>
+  <div class=" p-1 h-full max-w-24 w-24  mx-1 **:leading-none  *:text-1 *:tracking-tight font-medium ">
+    <tippy class="flex gap-2 items-center hover:underline text-nowrap truncate" content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-2">
+      <span class="size-3 relative grid justify-center">
+        <icon name="el:fire" class="text-domination dst absolute size-3.25" />
+      </span>
+      {{ player.totalDamageDealtToChampions.toLocaleString() }}
+
+      <template #content>
+        <p>
+          <span class="grow">Physical</span>
+          {{ player.physicalDamageDealtToChampions.toLocaleString() }}
+        </p>
+
+        <p>
+          <span class="grow">Magic</span>
+          {{ player.magicDamageDealtToChampions.toLocaleString() }}
+        </p>
+
+        <p>
+          <span class="grow">True</span>
+          {{ player.trueDamageDealtToChampions.toLocaleString() }}
+        </p>
+      </template>
+    </tippy>
+
+    <tippy v-if="heal > 0" class="flex gap-2 mt-2.25 items-center hover:underline text-nowrap truncate" content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-2">
+      <span class="size-3 relative grid justify-center">
+        <icon name="oi:plus" class="text-inspiration dst size-2.75" />
+      </span>
+      {{ Math.round(heal).toLocaleString() }}
+
+      <template #content>
+        <p>
+          <span class="grow">Healing</span>
+          {{ player.totalHealsOnTeammates.toLocaleString() }}
+        </p>
+
+        <p>
+          <span class="grow">Shielding</span>
+          {{ player.totalDamageShieldedOnTeammates.toLocaleString() }}
+        </p>
+
+        <p>
+          <span class="grow">Lives Saved</span>
+          {{ player.challenges.saveAllyFromDeath || 0 }}
+        </p>
+      </template>
+    </tippy>
+
+    <tippy v-else class="flex gap-2.25 mt-2 items-center hover:underline  text-nowrap truncate" content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-2">
+      <span class="size-3 relative grid justify-center">
+        <icon name="ph:shield-fill" class="!text-[#C2A76E] dst size-3.25" />
+      </span>
+      {{ Math.round(player.totalDamageTaken).toLocaleString() }}
+
+      <template #content>
+        <p>
+          <span class="grow">Physical</span>
+          {{ player.physicalDamageTaken.toLocaleString() }}
+        </p>
+
+        <p>
+          <span class="grow">Magic</span>
+          {{ player.magicDamageTaken.toLocaleString() }}
+        </p>
+
+        <p>
+          <span class="grow">True</span>
+          {{ player.trueDamageTaken.toLocaleString() }}
+        </p>
+      </template>
+    </tippy>
+  </div>
+</template>

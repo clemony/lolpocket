@@ -15,7 +15,7 @@ function handleChange(theme) {
 <template>
   <label
     :class="`theme-${theme.name}`"
-    class="cursor-pointer min-w-110 w-110 max-w-110 select-none h-62 bg-b1/90 pb-1 shadow-warm rounded-box border-b3/40 border px-8 pb-6 pt-8 grid grid-rows-2">
+    class="cursor-pointer min-w-64  @min-sm/settings:w-110 select-none h-62 bg-b1/90 pb-1 shadow-warm rounded-box border-b3/40 border px-8 pb-6 pt-8 grid grid-rows-2">
     <input
       v-model="as.dataTheme"
       type="radio"

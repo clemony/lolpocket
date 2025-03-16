@@ -28,7 +28,7 @@ watch(
 <template>
   <div
     :data-state="sidebarExpanded == true ? 'expanded' : 'collapsed'"
-    class="bg-b2/40 w-full h-full py-4  gap-2.5 border-r shadow-warm shadow-black/5 z-3   pl-3 flex-nowrap  flex  flex-col  border-r-b3/40  overflow-x-hidden  group relative" :style="{ '--bg-noise': 1 }">
+    class="@container/app:4xl:fixed @container/app:4xl:w-[270px] bg-b2/40 w-full h-full py-4  gap-2.5 border-r shadow-warm shadow-black/5 z-3   pl-3 flex-nowrap  flex  flex-col  border-r-b3/40  overflow-x-hidden  group relative" :style="{ '--bg-noise': 1 }">
     <SidebarHeader />
     <CommandSearchButton />
 

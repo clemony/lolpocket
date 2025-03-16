@@ -56,6 +56,50 @@
     @apply transition-all duration-1000;
   }
   
+  .dr-10 {
+    @apply duration-100;
+  }
+  
+  .dr-15 {
+    @apply duration-150;
+  }
+  
+  .dr-20 {
+    @apply duration-200;
+  }
+  
+  .dr-30 {
+    @apply duration-300;
+  }
+  
+  .dr-40 {
+    @apply duration-400;
+  }
+  
+  .dr-50 {
+    @apply duration-500;
+  }
+  
+  .dr-60 {
+    @apply duration-600;
+  }
+  
+  .dr-70 {
+    @apply duration-700;
+  }
+  
+  .dr-80 {
+    @apply duration-800;
+  }
+  
+  .dr-90 {
+    @apply duration-900;
+  }
+  
+  .dr-100 {
+    @apply duration-1000;
+  }
+  
   .frost {
     @apply bg-b1/94 backdrop-blur-md;
   }

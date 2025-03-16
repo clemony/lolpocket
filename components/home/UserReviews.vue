@@ -7,7 +7,7 @@
     <div class="w-full justify-center justify-self-center grid grid-cols-2 py-30 gap-34 h-full items-center">
       <div class="flex gap-4">
         <div class="size-20 overflow-hidden rounded-full shrink-0 border border-neutral/40 shadow-sm">
-          <img src="/img/champion/Pantheon.webp" class="size-full scale-110 shrink-0" />
+          <!--           <img src="/img/champion/Pantheon.webp" class="size-full scale-110 shrink-0" /> -->
         </div>
         <div>
           <h1 class="!font-black dst font-serif !leading-9">
@@ -35,7 +35,7 @@
 
       <div class="flex gap-4">
         <div class="size-20 overflow-hidden rounded-full shrink-0 border border-neutral/40 shadow-sm">
-          <img src="/img/champion/Camille.webp" class="size-full shrink-0 scale-110" />
+          <!--           <img src="/img/champion/Camille.webp" class="size-full shrink-0 scale-110" /> -->
         </div>
         <div class="">
           <h1 class="font-serif !font-black dst !leading-9">
@@ -62,7 +62,7 @@
 
       <div class="flex gap-4">
         <div class="size-20 overflow-hidden rounded-full shrink-0 border border-neutral/40 shadow-sm">
-          <img src="/img/champion/Swain.webp" class="size-full shrink-0 scale-110" />
+          <!--           <img src="/img/champion/Swain.webp" class="size-full shrink-0 scale-110" /> -->
         </div>
         <div class="">
           <h1 class="font-serif !font-black dst !leading-9">
@@ -90,7 +90,7 @@
 
       <div class="flex gap-4">
         <div class="size-20 overflow-hidden rounded-full shrink-0 border border-neutral/40 shadow-sm">
-          <img src="/img/champion/Ezreal.webp" class="size-full shrink-0 scale-110" />
+          <!--         <img src="/img/champion/Ezreal.webp" class="size-full shrink-0 scale-110" /> -->
         </div>
         <div class="">
           <h1 class="font-serif !font-black dst !leading-9">

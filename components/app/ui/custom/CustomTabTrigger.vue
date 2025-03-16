@@ -16,6 +16,7 @@ const delegatedProps = computed(() => {
 })
 const forwardedProps = useForwardProps(delegatedProps)
 
+const currentValue = ref()
 function handleHoverStart(event) {
   const { target } = event
   const { width } = target.getBoundingClientRect()
@@ -23,14 +24,23 @@ function handleHoverStart(event) {
     pos: target.offsetLeft,
     width,
   }
+  currentValue.value = {
+    pos: target.offsetLeft,
+    width,
+  }
 }
 
 const tab = ref<HTMLElement | null>(null)
 
+const returnValue = ref()
 function handleClick(event) {
   const { target } = event
   const { width } = target.getBoundingClientRect(tab)
   store.value.returnValue = {
+    pos: target.offsetLeft,
+    width,
+  }
+  returnValue.value = {
     pos: target.offsetLeft,
     width,
   }
@@ -50,7 +60,7 @@ function handleClick(event) {
         props.class,
       )">
       <span class="truncate pointer-events-none">
-        <slot />
+        <slot :current-value="currentValue" :return-value="returnValue" />
       </span>
     </TabsTrigger>
   </Motion>

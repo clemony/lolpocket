@@ -16,24 +16,36 @@ const blue = computed (() => {
 const red = computed (() => {
   return match.value.participants.filter(p => p.teamId == 200)
 })
-console.log('💠 - blue - blue:', blue)
 
 const modelValue = ref<string | number>('Scoreboard')
-const list = ['Scoreboard', 'Player', 'Team']
+const list = ['Scoreboard', 'Data', 'Progression', 'Tributes']
+
+watch(
+  () => modelValue.value,
+  (newVal) => {
+    console.log('💠 - newVal:', newVal)
+  },
+)
 </script>
 
 <template>
-  <div class="size-full grid  ">
-    <SlidingTabs
-      v-model:model-value="modelValue"
-      :store="us.matchTabs"
-      :list="list"
-      indicator-class="top-1 max-w-31"
-      class="justify-self-end h-12 pb-0.25 *:h-9.5 pt-0.25 *:rounded-lg"
-      inner-class="flex justify-self-end h-12 size-full *:-mt-2  gap-1 ">
-      <TabsContent value="Scoreboard" class="px-2 mt-1">
-        <LazyMatchScoreboard :match="match" :blue="blue" :red="red" />
-      </TabsContent>
-    </SlidingTabs>
-  </div>
+  <Tabs default-value="Scoreboard" class="pt-14 relative">
+    <TabsList class="absolute top-4.25 right-6">
+      <TabsTrigger v-for="tab in list" :key="tab" :value="tab" class="cursor-pointer">
+        {{ tab }}
+      </TabsTrigger>
+    </TabsList>
+    <TabsContent value="Scoreboard" class="px-2 ">
+      <LazyMatchScoreboard :match="match" :blue="blue" :red="red" />
+    </TabsContent>
+
+    <TabsContent value="Tributes" class="px-2 ">
+      <LazyMatchTributes :match="match" :blue="blue" :red="red" />
+    </TabsContent>
+
+
+    <TabsContent value="Data" class="">
+      <LazyMatchDataTable :match="match" :blue="blue" :red="red" />
+    </TabsContent>
+  </Tabs>
 </template>

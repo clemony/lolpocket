@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const props = withDefaults(
   defineProps<{
-    champName: string
+    champId: number
     size?: number
   }>(),
   {
@@ -10,16 +10,16 @@ const props = withDefaults(
 )
 
 onMounted (async () => {
-  await props.champName
+  await props.champId
   nextTick()
 })
 </script>
 
 <template>
   <div class="shadow-sm rounded-lg size-fit">
-    <div v-tippy="{ content: props.champName, placement: 'top' }" class="overflow-hidden rounded-lg inset-shadow-rounded" :class="`size-${props.size}`">
+    <div v-tippy="{ content: props.champId, placement: 'top' }" class="overflow-hidden rounded-lg inset-shadow-rounded" :class="`size-${props.size}`">
       <img
-        :src="`/img/champion/${props.champName}.webp`"
+        :src="`/img/champion/${props.champId}.webp`"
         class=" scale-116 rounded-lg" :class="`size-${props.size}`" />
     </div>
   </div>

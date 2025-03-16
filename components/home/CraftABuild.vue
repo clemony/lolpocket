@@ -83,7 +83,7 @@ onMounted (async () => {
     <div class="flex gap-4 absolute top-5 h-16">
       <div v-if="champModel && champComplete" v-tippy="champModel.name" class="size-16   hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-400 animate-in slide-in-from-bottom-10 hover:ring-offset-2 hover:ring-offset-b2">
         <div class="overflow-hidden size-16 rounded-lg">
-          <img :src="`/img/champion/${champModel.apiname}.webp`" class="size-full scale-115" />
+          <img :src="`/img/champion/${champModel.id}.webp`" class="size-full scale-115" />
         </div>
       </div>
       <template v-for="(item, i) in itemModel">
@@ -105,13 +105,12 @@ onMounted (async () => {
           <label v-if="champModel ? champion == champModel : selectedChamps.includes(champion)" v-tippy="champion.name" class="size-16 cursor-pointer hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-300 hover:ring-offset-2 hover:ring-offset-b2" :class="{ hidden: champModel != null && champion != champModel }">
             <input v-model="champModel" name="champion" type="radio" class="peer hidden" :value="champion" @change="setTimer('champ')" />
             <div class="overflow-hidden size-16 rounded-lg">
-              <img :src="`/img/champion/${champion.apiname}.webp`" class="size-full scale-115" />
+              <img :src="`/img/champion/${champion.id}.webp`" class="size-full scale-115" />
             </div>
           </label>
 
           <h1
-            v-if="champion == champModel" class="flex gap-3 items-center "
-          >
+            v-if="champion == champModel" class="flex gap-3 items-center ">
             {{ champion.name }}
             <icon name="line-md:confirm-circle" class="size-7" />
           </h1>
@@ -135,8 +134,7 @@ onMounted (async () => {
           </label>
 
           <h1
-            v-if="item == itemModel[itemIndex].item" class="flex gap-3 items-center "
-          >
+            v-if="item == itemModel[itemIndex].item" class="flex gap-3 items-center ">
             {{ item.name }}
             <icon name="line-md:confirm-circle" class="size-7" />
           </h1>

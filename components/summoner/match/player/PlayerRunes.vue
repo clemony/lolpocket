@@ -27,8 +27,9 @@ const paths = computed (() => {
 </script>
 
 <template>
-  <div class="" :class="cn('flex items-center gap-2 mr-6 -mt-1.5 self-center  flex-col', props.class)">
-    <img :src="`/img/runes/${paths.primary}/${keystone}.webp`" class="size-8 drop-shadow-sm" />
-    <img :src="`/img/runes/${paths.secondary}.webp`" class="h-6.5 w-auto drop-shadow-sm" />
+  <div class="" :class="cn('flex flex-col size-full place-items-center  -ml-1 gap-2  max-w-10 min-w-10  **:[&_img]:shrink-0', props.class)">
+    <img :src="`/img/runes/${paths.primary}/${keystone}.webp`" class="h-8 w-auto drop-shadow-sm !shrink-0" />
+
+    <img :src="`/img/runes/${paths.secondary}.webp`" class="h-6   w-auto drop-shadow-sm " :class="{ '!h-5.5': paths.secondary.toLowerCase() == 'inspiration' }" />
   </div>
 </template>

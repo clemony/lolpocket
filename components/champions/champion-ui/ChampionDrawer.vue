@@ -47,7 +47,7 @@ watch(
             <Champion
               :champion="champion"
               class="pointer-events-none size-24 shrink-0"
-              :src="`/img/champion/${champion.apiname}.webp`" />
+              :src="`/img/champion/${champion.id}.webp`" />
 
             <div class="flex flex-col">
               <h1 class="flex flex-wrap items-end gap-2 pt-1 leading-none tracking-tighter drop-shadow-sm">

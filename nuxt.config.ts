@@ -85,7 +85,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
 
   imports: {
-    dirs: ['shared/supabase', '@vueuse/components', 'stores', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/links', 'utils/lib', 'utils/pocket', 'utils/style', 'stores', 'shared/data', 'shared/data/summoner'],
+    dirs: ['shared/supabase', '@vueuse/components', 'stores', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/links', 'utils/lib', 'utils/pocket', 'utils/style', 'stores', 'shared/data', 'shared/data/summoner', 'shared/data/summoner/match'],
   },
 
   webpack: {

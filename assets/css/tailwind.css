@@ -48,6 +48,10 @@
   }
   
   body {
-    @apply bg-b1;
+    @apply bg-b1 @container/app ;
+  }
+  
+  p {
+    @apply leading-none;
   }
 }

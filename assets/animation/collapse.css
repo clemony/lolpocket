@@ -124,30 +124,4 @@
   }
 }
 
-.sidebar-collapse[data-state="collapsed"] {
-  animation: sidebarCollapse 300ms ease-in-out;
-}
 
-.sidebar-collapse[data-state="expanded"] {
-  animation: sidebarCollapse 300ms ease-in-out;
-}
-
-@keyframes sidebarExpand {
-  from {
-    width: var(--sidebar-collapsed-width);
-  }
-  
-  to {
-    width: var(--sidebar-expanded-width);
-  }
-}
-
-@keyframes sidebarCollapse {
-  from {
-    width: var(--sidebar-collapsed-width);
-  }
-  
-  to {
-    width: var(--sidebar-expanded-width);
-  }
-}
