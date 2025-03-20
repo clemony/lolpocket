@@ -3,11 +3,7 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const us = useUiStore()
-
 const route = useRoute()
-console.log('💠 - route:', route)
-console.log('💠 - route:', route.meta.header)
 
 const breadcrumbs = computed (() => {
   return route.fullPath.split('/')
@@ -50,11 +46,11 @@ const breadcrumbs = computed (() => {
       <HeaderMenu />
     </div>
 
-    <div class="inset-0 absolute left-0 top-0" :class="cn({'overflow-y-auto pt-34': route.path != '/'}, props.class)">
+    <div class="inset-0 absolute left-0 top-0" :class="cn({ 'overflow-y-auto pt-34': route.path != '/' }, props.class)">
       <slot />
     </div>
 
-    <div v-if="route.path != '/' && route.meta.header != 'none'" class="capitalize absolute top-24 left-17 flex gap-8 items-center">
+    <div v-if="route.path != '/' && route.meta.header != 'none'" class="capitalize absolute top-24 left-17 flex gap-8 items-center w-[95%] pr-16">
       <h1 class="text-9 tracking-tighter dst flex gap-4">
         <slot name="header-icon" />
         {{ route.meta.title || route.name }}

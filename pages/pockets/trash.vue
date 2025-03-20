@@ -314,7 +314,7 @@ const pocketContextTarget = ref()
       :grid-options="gridOptions"
       :theme="theme"
       :column-defs="colDefs"
-      class="trash-grid size-full  rounded-2xl "
+      class="trash-grid size-full  rounded-2xl  pocket-grid"
       :tooltip-show-delay="400"
       :no-rows-overlay-component="GridNoRows"
       :row-data="rowData"
@@ -332,5 +332,3 @@ const pocketContextTarget = ref()
   </div>
 </template>
 
-<style>
-</style>

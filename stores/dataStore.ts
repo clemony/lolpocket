@@ -7,6 +7,7 @@ export const useDataStore = defineStore(
   'dataStore',
   () => {
     const currentPatch = ref()
+
     const paths = ref<Path[]>([])
     const champions = ref<Champion[]>([])
     const items = ref<Item[] | null>(null)

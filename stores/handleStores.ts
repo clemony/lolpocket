@@ -3,6 +3,9 @@
 export const as = computedAsync(async () => {
   return await useAccountStore()
 }, null)
+export const ans = computedAsync(async () => {
+  return await useAnalysisStore()
+}, null)
 
 export const ds = computedAsync(async () => {
   return await useDataStore()

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const ds = useDataStore()
+const us = useUiStore()
 const patch = computed (() => {
   const a = ds.currentPatch.split('.')
   const b = a[1].match(/\d\d/) ? a[1] : `0${a[1]}`

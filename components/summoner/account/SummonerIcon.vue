@@ -27,6 +27,8 @@ const summoner = computed(() => {
     >
       LP
     </div>
+
+    <slot  />
   </div>
 </template>
 

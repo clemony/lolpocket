@@ -28,14 +28,15 @@ export default defineAppConfig({
       'check-fill': 'bi:check-circle-fill',
 
       // arrow
-      'down': 'teenyicons:down-outline',
-      'up': 'teenyicons:up-outline',
-      'down-sm': 'teenyicons:down-small-outline',
-      'right-sm': 'teenyicons:right-small-outline',
-      'left-sm': 'teenyicons:left-small-outline',
-      'right': 'teenyicons:right-outline',
-      'up-sm': 'teenyicons:up-small-outline',
-      'select': 'teenyicons:caret-vertical-small-outline',
+      'down': 'ph:caret-up',
+      'up': 'ph:caret-up',
+      'down-sm': 'radix-icons:caret-down',
+      'right-sm': 'radix-icons:caret-right',
+      'left-sm': 'radix-icons:caret-left',
+      'right': 'ph:caret-right',
+      'left': 'ph:caret-left',
+      'up-sm': 'radix-icons:caret-up',
+      'select': 'radix-icons:caret-sort',
       'arrow-up': 'teenyicons:arrow-up-small-outline',
 
       // menu
@@ -77,6 +78,7 @@ export default defineAppConfig({
       'star-fill': 'teenyicons:star-solid',
       'heart': 'teenyicons:heart-outline',
       'bow': 'mdi:bow-arrow',
+      'up-face': 'iconoir:emoji-look-up',
     },
   },
 })

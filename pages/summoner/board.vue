@@ -16,9 +16,5 @@ const as = useAccountStore()
 </script>
 
 <template>
-  <div class="size-full relative">
-    <ModuleContainer />
-  </div>
+  <PagePlaceholder />
 </template>
-
-<style scoped></style>

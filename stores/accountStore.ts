@@ -51,7 +51,7 @@ export const useAccountStore = defineStore(
     const routeHistory: any = []
 
     const favoriteChamps = ref<Champion[]>([])
-
+    const userMatchData = ref<PlayerHistoryData[]>([])
     // items
     const favoriteItems = ref<Item[]>([])
     const itemSets = ref<ItemSet[]>([])
@@ -64,6 +64,7 @@ export const useAccountStore = defineStore(
       userBoardModules,
       userModuleCount,
       userNotes,
+      userMatchData,
 
       // settings
       themeClass,

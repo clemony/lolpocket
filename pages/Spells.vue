@@ -90,7 +90,7 @@ const spellCompute = computed (() => {
             </p>
             <p class="italic w-full flex justify-end mt-6 pr-3 font-thin ">
               —<a :href="`https://wiki.leagueoflegends.com/en-us/${summonerSpells[selectedSpell].name}`" target="_blank" class="!font-sans underline-offset-2 hover:underline items-center gap-2 flex flex-nowrap">summary from LolWiki
-                <icon name="link" class="mb-1" /></a>
+                <icon name="link" class="mb-1 size-4" /></a>
             </p>
           </div>
         </Transition>

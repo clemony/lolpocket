@@ -64,14 +64,23 @@
   
   .btn-neutral {
     @apply !shadow-xs;
+    background-color: var(--color-neutral);
+    color: var(--color-nc);
+    
+    &:hover {
+      color: var(--color-nc);
+    }
   }
   
   .btn:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
     @apply bg-b2/60 border-b2;
   }
   
-  .btn {
-    @apply !text-3 font-normal;
+  .btn,
+  .btn-xl,
+  .btn-lg {
+   font-size: var(--text-3);
+   font-weight: var(--font-normal);
   }
   
   .collapse-input,

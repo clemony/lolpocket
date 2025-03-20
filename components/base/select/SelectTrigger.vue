@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import { SelectIcon, SelectTrigger, useForwardProps } from 'reka-ui'
 import type { SelectTriggerProps } from 'reka-ui'
 import { computed } from 'vue'
@@ -20,13 +19,12 @@ const forwardedProps = useForwardProps(delegatedProps)
   <SelectTrigger
     v-bind="forwardedProps"
     :class="cn(
-      'flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-b2  border border-b2 -input bg-transparent px-3 py-2 text-2 shadow-sm ring-offset-b1 data-[placeholder]:text-b2-bc focus:outline-none focus:ring-1 focus:ring-b2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:truncate text-start',
+      'flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-b2  border border-b2 -input bg-transparent px-3 py-1 text-2 shadow-sm ring-offset-b1 data-[placeholder]:text-b2-bc focus:outline-none focus:ring-1 focus:ring-b2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:truncate text-start',
       props.class,
-    )"
-  >
+    )">
     <slot />
-    <SelectIcon :class="{'hidden': props.noArrow }" as-child>
-      <icon name="down-sm" class="size-6 opacity-50 shrink-0" />
+    <SelectIcon :class="{ hidden: props.noArrow }" as-child class="relative">
+      <icon name="select" class="size-5 opacity-50 shrink-0  absolute -top-0.5 right-0" />
     </SelectIcon>
   </SelectTrigger>
 </template>

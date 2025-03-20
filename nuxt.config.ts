@@ -5,12 +5,12 @@ import { fileURLToPath } from 'node:url'
 
 export default defineNuxtConfig({
   modules: [
+    '@pinia/nuxt',
+    'pinia-plugin-persistedstate/nuxt',
     'motion-v/nuxt',
     '@vueuse/nuxt',
-    '@pinia/nuxt',
     '@nuxtjs/supabase',
     '@morev/vue-transitions/nuxt',
-    'pinia-plugin-persistedstate/nuxt',
     '@nuxt/devtools',
     '@nuxt/eslint',
     'vue-sonner/nuxt',
@@ -109,7 +109,6 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ['./stores/**'],
   },
-
   alias: {
     '@': fileURLToPath(new URL('./', import.meta.url)),
     'css': fileURLToPath(new URL('./assets/css', import.meta.url)),

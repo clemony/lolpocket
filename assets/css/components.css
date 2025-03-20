@@ -21,7 +21,16 @@
 
 .router-link-exact-active {
   .sb-link {
-    @apply bg-b2/90 hover:bg-b2;
+    @apply bg-b2/90 hover:bg-b2 hover:text-bc;
   }
 }
 
+
+  .btn-neutral {
+    @apply !shadow-xs;
+    background-color: var(--color-neutral);
+    color: var(--color-nc);
+    &:hover {
+      color: var(--color-nc);
+    }
+  }

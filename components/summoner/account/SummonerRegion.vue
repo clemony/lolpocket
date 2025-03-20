@@ -15,6 +15,3 @@ const summoner = computed(() => {
      <span :class="cn('', props.class)">{{ summoner.region ||  'Runeterra' || '' }}</span>
 </template>
 
-<style scoped>
-
-</style>

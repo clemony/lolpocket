@@ -176,7 +176,7 @@ defineExpose({
 
 <template>
   <NuxtLayout
-    name="header-layout" class="px-10">
+    name="header-layout" class="px-10 pt-46">
     <AgGridVue
       :grid-options="gridOptions"
       :theme="theme"
@@ -189,5 +189,3 @@ defineExpose({
   </NuxtLayout>
 </template>
 
-<style>
-</style>

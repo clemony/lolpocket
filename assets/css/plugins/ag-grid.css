@@ -29,6 +29,18 @@
   @apply border-b-b2/60 rounded-lg;
 }
 
+.ag-cell.ag-column-first .stat-grid {
+  @apply !pl-3;
+}
+
+
+.ag-cell.ag-column-first {
+  @apply !pl-8;
+}
+
+.ag-cell.ag-column-last {
+  @apply !pr-6;
+}
 .trash {
   .ag-row {
     @apply border-b-b2/60 bg-b2/30 rounded-lg;
@@ -49,18 +61,6 @@
 
 .ag-header-cell-label {
   @apply !pt-3 mx-0 flex w-full items-start justify-start text-left;
-}
-
-.ag-cell.ag-column-first .pocket-grid {
-  @apply !pl-6;
-}
-
-.ag-cell.ag-column-first .stat-grid {
-  @apply !pl-3;
-}
-
-.ag-cell.ag-column-last {
-  @apply !pr-6;
 }
 
 .icon-class {

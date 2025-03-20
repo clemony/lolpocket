@@ -4,6 +4,13 @@ const props = defineProps<{
   blue: any
   red: any
 }>()
+
+const gameOutcome = computed (() => {
+return props.match.teams[0].win == true ? 'Blue Team Win' : 'Red Team Win'
+})
+const gameEnd = computed (() => {
+return props.blue[0].gameEndedInSurrender == true ? 'Enemy Surrender' :  null
+})
 const stats = {
 
   damage: [
@@ -15,7 +22,7 @@ const stats = {
     
     {
       id: 'total',
-      data: 'totalDamageDealt',
+      data: 'totalDamageDealtToChampions',
     },
     {
       id: 'physical',
@@ -42,8 +49,8 @@ const stats = {
     i: 1,
   },
     {
-      id: 'ally h + s',
-      data: 'effectiveHealAndShield',
+      id: 'ally heal & shield',
+      data: 'effectiveHealAndShielding',
     },
     {
       id: 'ally heal',
@@ -75,8 +82,8 @@ const stats = {
       spec: 'round'
     },
     {
-      id: 'Time CC',
-      data: 'totalTimeCCDealt',
+      id: 'CC output',
+      data: 'timeCCingOthers',
     },
   ],
   vision:
@@ -115,15 +122,11 @@ const stats = {
       data: 'damageDealtToObjectives',
     },
     {
-      id: 'turrets',
+      id: 'turret takedowns',
       data: 'turretKills',
     },
     {
-      id: 'obectives stolen',
-      data: 'bjectivesStolen',
-    },
-    {
-      id: 'inhibitor',
+      id: 'inhib takedowns',
       data: 'inhibitorTakedowns',
     },
     {
@@ -131,11 +134,15 @@ const stats = {
       data: 'damageDealtToObjectives',
     },
     {
-      id: 'dragons',
+      id: 'steals',
+      data: 'objectivesStolen',
+    },
+    {
+      id: 'dragon kills',
       data: 'dragonKills',
     },
     {
-      id: 'Baron',
+      id: 'Baron kills',
       data: 'teamBaronKills',
     },
   ],
@@ -149,6 +156,14 @@ const stats = {
     {
       id: 'kills',
       data: 'kills',
+    },
+    {
+      id: 'deaths',
+      data: 'deaths',
+    },
+    {
+      id: 'assists',
+      data: 'assists',
     },
     {
       id: 'first blood',
@@ -227,11 +242,12 @@ const statIndex = [0, 1, 2, 3, 4, 5, 6, 7]
   <div class="overflow-x-auto overscroll-none rounded-box  h-180  bg-b1/30">
     <table class="table table-sm table-pin-rows table-pin-cols [&_th]:!bg-b1/94 [&_th]:brightness-97 [&_th]:backdrop-blur-md">
       <thead class="relative">
-        <tr class="!bg-b1/94 brightness-97 backdrop-blur-md">
-          <th class="opacity-10 ">
-            <span class="opacity-10 absolute size-full"></span>
+        <tr class="!bg-b1/95 brightness-99 backdrop-blur-md">
+          <th class="z-1">
+            {{gameOutcome}}<br  />
+            {{gameEnd ?? ''}}
           </th>
-          <td v-for="(player, i) in props.blue.concat(props.red)" :key="player.playerId" class="!max-w-12 w-12 min-w-12 overflow-hidden first-of-type:rounded-l-xl last-of-type:rounded-r-xl" :class="{'bg-inspiration/30': player.teamId == 100, 'bg-domination/30': player.teamId == 200, 'rounded-r-xl  border-r-4 border-r-b2': i == 4, 'rounded-l-xl  border-l-4 border-l-b2': i == 5}">
+          <td v-for="(player, i) in props.blue.concat(props.red)" :key="player.playerId" class="!max-w-12 w-12 min-w-12 overflow-hidden first-of-type:rounded-l-xl last-of-type:rounded-r-xl z-0" :class="{'bg-inspiration/30': player.teamId == 100, 'bg-domination/30': player.teamId == 200, 'rounded-r-xl  border-r-4 border-r-b2': i == 4, 'rounded-l-xl  border-l-4 border-l-b2': i == 5}">
             <div class="rounded-lg size-fit shadow-sm">
             <div class="!size-10 overflow-hidden rounded-lg">
             <img :src="`/img/champion/${player.championId}.webp`" class="size-full scale-118"/>
@@ -245,18 +261,18 @@ const statIndex = [0, 1, 2, 3, 4, 5, 6, 7]
       <template v-for="category in stats" :key="category">
         <tbody v-for="stat in category" :key="stat.id" class="**:!text-1 ">
           <tr class="relative">
-            <td v-if="statIndex.includes(stat.i)" class="bg-b2">
-            </td>
-            <td v-if="statIndex.includes(stat.i)" class="capitalize bg-b2 font-semibold text-nowrap h-7">
+            <td v-if="statIndex.includes(stat.i)" class="capitalize bg-b2 font-semibold text-nowrap h-7 sticky left-0">
               <span class="absolute  bottom-1">
               {{ stat.id }}
               </span>
+            </td>
+            <td v-if="statIndex.includes(stat.i)" class="bg-b2">
             </td>
             <th v-else class="capitalize font-medium tracking-tight">
               {{ stat.id }}
             </th>
             <template v-for="player in props.blue.concat(props.red)" :key="player.id ">
-              <td :class="{ 'bg-b2': statIndex.includes(stat.i), 'text-bc/15': player[stat.data] == 0  }" class=" text-end !text-1 *:!text-1 tracking-tight font-medium">
+              <td :class="{ 'bg-b2': statIndex.includes(stat.i), 'text-bc/15 **:text-bc/15': player[stat.data] == 0, }" class=" text-end !text-1 *:!text-1 tracking-tight font-medium">
                 {{ computed (() => {
                 const  a = player[stat.data] ?? player.challenges[stat.data]
         
@@ -265,9 +281,16 @@ const b  = a && a.toString().length > 6 ? a : 0
 
 
               
-              const c =  b ?  b.toFixed(2) : a
-              return c ? c.toLocaleString() : c
-         
+              let c =  b ?  b.toFixed(2) : a
+              c = stat.data == 'effectiveHealAndShielding' || stat.data == 'bountyGold' || stat.data == 'goldPerMinute' ? Math.round(c) : c
+
+              // units
+
+              c = stat.data == 'damageTakenOnTeamPercentage' && c ? `${c * 100}%` : c
+c = stat.data == 'timeCCingOthers' ? `${c}s` : c
+
+              c =  c ? c.toLocaleString() : c
+         return c
                 })}}
               </td>
             </template>

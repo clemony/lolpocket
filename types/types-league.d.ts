@@ -46,7 +46,7 @@ declare global {
     loss: number
   }
 
-  interface champPlayCount {
+  interface ChampPlayCount {
     name: string
     games: number
     win: number
@@ -54,5 +54,12 @@ declare global {
     kda: string
   }
 
+  interface PlayerHistoryData {
+    patch: string
+    match: string
+    win: boolean
+    champion: number
+    items: number[]
+  }
 }
 export { }

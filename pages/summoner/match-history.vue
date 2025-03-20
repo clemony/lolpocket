@@ -6,15 +6,6 @@ definePageMeta({
 })
 
 const as = useAccountStore()
-
-const matchArray = {
-  NA1_5246472309,
-    NA1_5246418931,
-    NA1_5246189449,
-    NA1_5246170813,
-    NA1_5246149580,
-    matchData
-    }
 </script>
 
 <template>
@@ -43,8 +34,7 @@ const matchArray = {
 
       <div class=" relative pb-12 overflow-scroll size-full justify-start">
         <div class="flex flex-col pl-1  pr-6 pt-36 absolute inset-0 top-0 left-0 gap-7 overflow-scroll py-10 items-start">
-          <MatchCard v-for="(match, i) in matchArray" :key="i" :match="match"/>
-          <MatchCard v-for="i in 8" :key="i" :match="matchData"/>
+          <MatchCard v-for="(match, i) in matchArray" :key="i" :match="match" />
         </div>
       </div>
     </div>
