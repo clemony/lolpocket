@@ -27,7 +27,7 @@ const item = computed(() => {
 </script>
 
 <template>
-  <div v-if="item && item.id && mvi" class="stats min-h-101 hover:grayscale-0 transition dr-50 rounded-box border border-b3/90  bg-b1  stats-vertical  shadow-warm-soft h-full py-4 px-5">
+  <div v-if="item && item.id && mvi" class="stats min-h-101 hover:grayscale-0 transition dr-50 rounded-box border border-b3  bg-b1  stats-vertical  shadow-warm-soft h-full py-4 px-5">
     <div class="stat-title text-2 font-medium">
       Pocket Pick
     </div>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'analysis',
-  background: 'b2',
+  // background: 'b2',
 })
 
 const ds = useDataStore()

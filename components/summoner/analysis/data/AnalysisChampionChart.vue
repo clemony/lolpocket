@@ -29,7 +29,7 @@ const champs = computed (() => {
 </script>
 
 <template>
-  <div class="py-8 pl-4 pr-14 bg-b1 grayscale rounded-box shadow-warm-soft shadow-black/6 border border-b3/70 relative flex flex-col h-full hover:grayscale-0 tldr-50">
+  <div class="py-8 pl-4 pr-14 bg-b1 grayscale rounded-box shadow-warm-soft  border border-b3 relative flex flex-col h-full hover:grayscale-0 tldr-50">
     <div class="grow pl-6 pt-2 flex w-full">
       <div class="">
         <h4 class="dst">

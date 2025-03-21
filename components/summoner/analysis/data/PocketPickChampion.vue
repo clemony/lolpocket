@@ -29,7 +29,7 @@ const winrateDiff = computed (() => {
  -->
 
   <transition-slide>
-    <div v-if="champion" :key="champion.id" class="stats bg-b1  rounded-box border border-b3/90 h-full shadow-warm-soft grid w-full grid-cols-3 group/champ-bar min-h-32">
+    <div v-if="champion" :key="champion.id" class="stats bg-b1  rounded-box border border-b3 h-full shadow-warm-soft grid w-full grid-cols-3 group/champ-bar min-h-32">
       <div class="stat py-5">
         <div class="stat-figure">
           <div class="avatar online inset-shadow-sm">

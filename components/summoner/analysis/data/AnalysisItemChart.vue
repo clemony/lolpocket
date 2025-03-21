@@ -103,7 +103,7 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <div class="px-4 pb-4 pt-8 bg-b1 rounded-box shadow-warm-soft shadow-black/6 border border-b3/70 relative flex flex-col h-full  grayscale hover:grayscale-0 tldr-50">
+  <div class="px-4 pb-4 pt-8 bg-b1 rounded-box shadow-warm-soft  border border-b3 relative flex flex-col h-full  grayscale hover:grayscale-0 tldr-50">
     <div class="grow pt-2 px-8 flex w-full">
       <div class="">
         <h4 class="dst">

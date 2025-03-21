@@ -26,7 +26,7 @@ const timeLeft = computed (() => {
 </script>
 
 <template>
-  <div class="rounded-box border bg-b1 border-b3/90 shadow-warm-soft px-8 pt-4 pb-6 relative flex flex-col items-center gap-4.5 h-62 group/anal-header ">
+  <div class="rounded-box border bg-b1 border-b3 shadow-warm-soft px-8 pt-4 pb-6 relative flex flex-col items-center gap-4.5 h-62 group/anal-header ">
     <Tabs v-model="ans.patchSelect">
       <TabsList>
         <TabsTrigger :value="ds.currentPatch">
