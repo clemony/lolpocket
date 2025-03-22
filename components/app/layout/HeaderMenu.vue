@@ -27,8 +27,8 @@ const messages = ref(false)
 
 <template>
   <div
-    class="rounded-full size-13 bg-neutral/0 relative  -mt-2 group justify-self-end backdrop-blur-md" :class="{'ease-in-out  hover:w-58  hover:bg-neutral/85 transition-[width_colors] dr-40 ': as.userAccount.session}">
-    <SummonerIcon class="size-11 border border-black absolute  top-1 right-1 drop-shadow-sm grayscale  brightness-120 inset-shadow-sm inset-shadow-rounded  ring-1 ease-in-out  rounded-full ring-neutral/40 contrast-90 group-hover:grayscale-0  transition-all dr-40 group-hover:brightness-100 group-hover:contrast-100  shadow-sm cursor-pointer z-1" />
+    class="rounded-full size-13 bg-neutral/0 z-41 fixed  top-2 right-4  group justify-self-end backdrop-blur-md" :class="{'ease-in-out  hover:w-58  hover:bg-neutral/85 transition-[width_colors] dr-40 ': as.userAccount.session}">
+    <SummonerIcon class="size-11 border border-black absolute  top-1 right-1 drop-shadow-sm grayscale  brightness-120 inset-shadow-rounded  ring-1 ease-in-out  rounded-full ring-neutral/40 contrast-90 group-hover:grayscale-0  transition-all dr-40 group-hover:brightness-100 group-hover:contrast-100  shadow-sm cursor-pointer z-1" />
 
 <StatusIndicator v-if="messages"  class="group-hover:opacity-0"/>
 

@@ -5,7 +5,7 @@ import {
   LinearScale,
   PointElement,
   Title,
-  Tooltip,
+  Tooltip, CategoryScale,
 } from 'chart.js'
 
 // Define props for the chart
@@ -14,15 +14,13 @@ const props = defineProps<{
 }>()
 
 // Register necessary Chart.js components
-ChartJS.register(Title, Tooltip,  PointElement, LinearScale)
+ChartJS.register(Title, Tooltip, PointElement, LinearScale, CategoryScale,)
 
 const styles = getComputedStyle(document.documentElement)
 
 const data = computed (() => {
   return props.data
 })
-
-
 
 const customPlugin = {
   id: 'customImages',
@@ -54,18 +52,18 @@ const customPlugin = {
 const options = {
   responsive: true,
   clip: 30,
-  layout:{
-    padding:{
+  layout: {
+    padding: {
       right: 30,
-    }
+    },
   },
   drawActiveElementsOnTop: false,
   maintainAspectRatio: false,
-  elements:{
-    point:{
-        hitRadius: 15,
-       
-    }
+  elements: {
+    point: {
+      hitRadius: 15,
+
+    },
   },
   scales: {
     y: {
@@ -79,15 +77,14 @@ const options = {
       max: 100,
       ticks: {
         display: true,
-        font: {
-          size: 16,
-        },
-          padding: 30,
+        padding: 30,
         callback(value, index, ticks) {
           return `${value}%`
         },
-
-
+ font: {
+                        size: 11,
+                        weight: 500,
+                    }
       },
       border: {
         color: `${styles.getPropertyValue('--color-b2')}`,
@@ -96,48 +93,45 @@ const options = {
     x: {
 
       ticks: {
-        stepSize: 1,  // Force whole number increments
-        callback: (value) => Math.round(value),
+        stepSize: 1, // Force whole number increments
+        callback: value => Math.round(value),
         padding: 14,
 
       },
       grid: {
         display: false,
       },
- 
+
       border: {
         color: `${styles.getPropertyValue('--color-b2')}`,
       },
     },
   },
   plugins: {
-        tooltip: {
-          padding:{
-            left: 12,
-            right: 12,
-            top: 6,
-            bottom: 6
-          },
-caretPadding: 20,
-          intersect: false,
-          usePointStyle: true,
-          boxHeight: 2,
-          boxWidth: 2,
-          boxPadding: 14,
-        enabled: true,
+    tooltip: {
+      padding: {
+        left: 12,
+        right: 12,
+        top: 6,
+        bottom: 6,
+      },
+      caretPadding: 20,
+      intersect: false,
+      usePointStyle: true,
+      boxHeight: 2,
+      boxWidth: 2,
+      boxPadding: 14,
+      enabled: true,
       callbacks: {
 
-           label: (context) => {
+        label: (context) => {
           const dataPoint = context.raw
           return `${dataPoint.label} - ${dataPoint.x} games, ${dataPoint.y.toFixed()}% wr`
-        
         },
         beforeLabel: (context) => {
-      
-        
-      
-        }
-      }
+
+        },
+      },
     },
   },
 }

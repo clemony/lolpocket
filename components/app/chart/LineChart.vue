@@ -7,6 +7,7 @@ import {
   PointElement,
   Title,
   Tooltip,
+   CategoryScale,
 } from 'chart.js'
 
 const props = defineProps<{

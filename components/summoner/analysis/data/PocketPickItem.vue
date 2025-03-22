@@ -3,53 +3,62 @@ const props = defineProps<{
   patchGames: any
 }>()
 const ans = useAnalysisStore()
-const ds = useDataStore()
-const patchGames = computed (() => {
-  return ans.patchGames
-})
-
-const items = computedAsync (() => {
-  return usePatchItems()
-})
-console.log('💠 - items - items:', items)
+const patchGames = computed(() => ans.userMatchData.filter(g => g.patch === ans.patchSelect))
+const { bayesianItems } = usePatchItems(patchGames)
 
 const mvi = computed(() => {
-  if (!patchGames.value.length || !items.value)
+  if (!bayesianItems.value.length)
     return null
-  return items.value.value.slice(0, 1) || null
-})
-
-const item = computed(() => {
-  if (!mvi.value || !mvi.value[0] || !patchGames.value)
-    return null
-  return ds.SRitems.find(i => i.id == mvi.value[0].item) || null
+  return bayesianItems.value[0] // ✅ Get the top item
 })
 </script>
 
 <template>
-  <div v-if="item && item.id && mvi" class="stats min-h-101 hover:grayscale-0 transition dr-50 rounded-box border border-b3  bg-b1  stats-vertical  shadow-warm-soft h-full py-4 px-5">
-    <div class="stat-title text-2 font-medium">
-      Pocket Pick
-    </div>
-    <div class="avatar online shadow-warm-2 rounded-full size-16">
-      <div class="size-16 rounded-full">
-        <img :src="`/img/item/${item.id}.webp`" class="" />
+
+    <Field v-if=" mvi" class="bg-b1 pb-6 px-5 pt-8 w-full flex flex-col items-center gap-5" title="Pocket Pick">
+      <div class="w-full items-center flex-col gap-3 dst flex">
+      <div class="avatar  online shadow-warm-2 rounded-full size-18">
+        <div class="size-18 rounded-full">
+          <img :src="`/img/item/${mvi.item?.id}.webp`" class="" />
+        </div>
       </div>
-    </div>
+      <div class=" text-bc tracking-tight text-5 font-semibold">
+        {{ mvi.item?.name }}
+      </div>
 
-    <div class="stat-title text-bc tracking-tight text-4 font-semibold">
-      {{ item.name }}
-    </div>
+</div>
+      <Separator  />
+      
+      <div class="dst text-2 flex justify-center">
+        <p class="flex flex-col  gap-1 items-end">
+          <span class="mb-px  opacity-60 font-medium">
+            Absolute
+          </span>
+          <span class="text-7 font-bold flex text-bc">
+            {{ mvi.winrate.toFixed(2) }}
+          <icon name="ph:percent-bold" class="size-5" />
+        </span>
+          <span class="mb-px  opacity-60 font-medium">Winrate</span>
+        </p>
+      </div>
 
-    <div class="dst text-2 stat-desc items-center">
-      <p class="flex items-end">
-        <span class="text-7 font-bold text-bc">{{ mvi[0].winrate.toFixed(2) }}</span><icon name="ph:percent-bold" class="size-5" /> <span class="mb-px"> Overall</span>
-      </p>
-      <p class="mt-2">
-        {{ mvi[0].bayesianWinrate.toFixed(2) }}% <tippy>Adjusted</tippy>
-      </p>
-    </div>
+      <Separator  />
 
-    <NoDataOverlay v-if="!props.patchGames.length" />
-  </div>
+     <div class="dst text-2 flex justify-center">
+        <p class="flex flex-col gap-1 items-end">
+          <span class="mb-px  opacity-60 font-medium">Weighted</span>
+          <span class="text-7 font-bold text-bc flex">
+             {{ mvi.bayesianWinrate.toFixed(2) }}
+          <icon name="ph:percent-bold" class="size-5" />
+            </span>
+          <span class="mb-px  opacity-60 font-medium">
+            Winrate
+          </span>
+        </p>
+
+      </div>
+
+      <NoDataOverlay v-if="!props.patchGames.length" />
+    </Field>
+
 </template>

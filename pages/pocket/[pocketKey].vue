@@ -4,7 +4,7 @@ const us = useUiStore()
 const route = useRoute()
 
 definePageMeta({
-  background: 'b2',
+  //background: 'b2',
 })
 
 const pocket = ref(getPocket(route.params.pocketKey))
@@ -37,7 +37,7 @@ onMounted (async() => {
     name="header-layout" class=" grid  z-10 size-full gap-6 @container/main    px-8" :class="{ 'pl-4': !us.sidebarExpanded }">
     <template #header-icon>
       <LazyPopover>
-        <PopoverTrigger class="group  !cursor-pointer  items-start flex aspect-square size-10  rounded-full !pointer-events-auto shadow-sm !drop-shadow-none  bg-gradient-to-br from-neutral/60 to-neutral grid place-items-center">
+        <PopoverTrigger class="group  !cursor-pointer  items-start aspect-square size-10  rounded-full !pointer-events-auto shadow-sm !drop-shadow-none  bg-gradient-to-br from-neutral/60 to-neutral grid place-items-center">
           <PocketIcon :image="pocket.icon" class="size-10 pointer-events-none group-hover:opacity-0 group-data-[state=open]:opacity-0 tldr-30" />
           <icon name="ph:gear-six-fill" class="size-5 text-nc absolute opacity-0  group-hover:opacity-85  transition-all top-2.5 duration-300 group-data-[state=open]:opacity-100" />
         </PopoverTrigger>

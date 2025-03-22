@@ -15,18 +15,17 @@ const modelValue = ref(ans.patchSelect ?? ds.currentPatch)
 
 <template>
   <Select v-model:model-value="modelValue" class="p-0" @update:model-value="(e) => ans.patchSelect = e">
-    <SelectTrigger class="bg-transparent border-none shadow-none focus:ring-0 focus:outline-0 px-2" :class="cn('', props.class)" no-arrow>
-      <icon name="more" class="size-5 shrink-0" />
+    <SelectTrigger class="text-left shadow-none border-b3/80 inset-shadow-xs rounded-lg align-bottom h-12 flex items-center text-4 tracking-tight font-medium" :class="cn('', props.class)">
+      <div class="flex">
+        <span class="w-16"> &nbsp;Patch &nbsp;</span>
+        <SelectValue :placeholder="ds.currentPatch" class="text-left w-20" />
+      </div>
     </SelectTrigger>
     <SelectContent position="popper" class="!w-[var(--reka-select-trigger-width)]">
       <SelectGroup>
         <SelectLabel>Patch</SelectLabel>
-        <SelectItem v-for="patch in sortedPatches" :key="patch" :value="patch" no-tick>
-          <slot :value="patch.toString()" />
-          <span class="flex gap-2 items-center">
-            <span class="size-4.5">
-              <icon v-if="ans.patchSelect == patch" name="tick-sm" class="size-4.5 dst" /></span> {{ patch }}
-          </span>
+        <SelectItem v-for="patch in sortedPatches" :key="patch" :value="patch">
+          {{ patch }}
         </SelectItem>
       </SelectGroup>
     </SelectContent>

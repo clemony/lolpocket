@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-import { ArcElement, Chart, DoughnutController, Tooltip } from 'chart.js'
+import { ArcElement, Chart, DoughnutController, Tooltip,  CategoryScale, } from 'chart.js'
 import { externalTooltip } from 'plugins/chartJS/externalTooltip'
 import { Doughnut } from 'vue-chartjs'
 

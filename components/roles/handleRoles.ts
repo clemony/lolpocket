@@ -7,3 +7,11 @@ export const roles = ['all',
    'tiny carrot',
  'small tomato',
 ]
+
+export const positions = ['all',
+ 'top',
+   'jungle',
+   'middle',
+   'bottom',
+   'support',
+]

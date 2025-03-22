@@ -62,6 +62,20 @@
     @apply border-b3/40;
   }
   
+  .tabs-box {
+    border-radius: var(--radius-lg) !important;
+
+    .tab{
+      @apply rounded-lg;
+    }
+  }
+    
+  .btn.btn-ghost.btn-active {
+    --btn-bg: --alpha(var(--color-b2) / 30%) !important;
+    @apply border-b3/40;
+  }
+  
+
   .btn-neutral {
     @apply !shadow-xs;
     background-color: var(--color-neutral);

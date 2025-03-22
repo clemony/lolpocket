@@ -43,7 +43,6 @@ const breadcrumbs = computed (() => {
       <div class="grow flex items-center justify-end px-6">
         <slot name="crumb" />
       </div>
-      <HeaderMenu />
     </div>
 
     <div class="inset-0 absolute left-0 top-0" :class="cn({ 'overflow-y-auto pt-34': route.path != '/' }, props.class)">

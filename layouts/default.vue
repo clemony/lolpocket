@@ -8,6 +8,7 @@ const route = useRoute()
   <div class="h-screen @max-4xl/container/app:!grid-cols-[0_1fr] w-screen grid overflow-hidden transition-width dr-30 " :class="{ 'grid-cols-[270px_1fr]': us.sidebarExpanded, 'grid-cols-[54px_1fr]': !us.sidebarExpanded && route.path != '/', 'grid-cols-[0px_1fr]': !us.sidebarExpanded && route.path == '/' }">
     <AppSidebar />
 
+      <HeaderMenu />
     <div class="flex flex-col  h-screen min-h-screen w-full ">
       <NuxtLoadingIndicator color="var(--color-neutral)" />
 

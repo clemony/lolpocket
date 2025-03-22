@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-const as = useAccountStore()
+const ans = useAnalysisStore()
 
 const patchStats = computed(() => {
   const patchMap = new Map<string, { games: number, wins: number, losses: number, winrate: number }>()
 
   // Step 1: Group matches by patch
-  as.userMatchData.forEach(({ patch, win }) => {
+  ans.userMatchData.forEach(({ patch, win }) => {
     if (!patchMap.has(patch)) {
       patchMap.set(patch, { games: 0, wins: 0, losses: 0, winrate: 0 })
     }
@@ -53,9 +53,6 @@ const options = {
     tooltip: {
       callbacks: {
         label: (context) => {
-          console.log('💠 - context:', context)
-          console.log('💠 - raw:', context.raw)
-
           const dataPoint = context.raw
           const datasetIndex = context.datasetIndex
           if (datasetIndex === 0) {
@@ -75,27 +72,25 @@ const options = {
 const range = computed (() => {
   const a = [...patchStats.value]
   const b = a.pop()
-  console.log('💠 - range - a:', a)
-
   return `${a.shift().patch} - ${b.patch}`
 })
 </script>
 
 <template>
-  <div class="stats bg-b1 rounded-box border border-b3 shadow-warm-soft h-62  px-5 relative">
+  <div class="stats bg-b1 rounded-box border border-b3 shadow-warm-soft h-62 w-full  px-5 relative">
     <div class="absolute top-6 left-6 text-bc z-0 pointer-events-none">
       <div class="text-1 stat-desc font-medium mb-1">
         {{ range }}
       </div>
       <div class=" text-5  font-semibold dst">
-        Patch History
+        Recent Patch
       </div>
       <div class="text-3 stat-desc ">
-        All Matches
+        Winrate vs. Games
       </div>
     </div>
     <LineChart :data="data" :options="options" />
 
-    <NoDataOverlay v-if="!as.userMatchData.length" />
+    <NoDataOverlay v-if="!ans.userMatchData.length" />
   </div>
 </template>

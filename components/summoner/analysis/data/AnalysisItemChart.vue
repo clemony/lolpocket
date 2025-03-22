@@ -1,39 +1,10 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  patchGames: any
-}>()
-
-const as = useAccountStore()
 const ds = useDataStore()
 const ans = useAnalysisStore()
 
-const getPatchItems = computed(() => {
-  const itemStats = new Map<number, { games: number, wins: number, losses: number, winrate: number }>()
+const patchGames = computed(() => ans.userMatchData.filter(g => g.patch === ans.patchSelect))
+const { bayesianItems } = usePatchItems(patchGames)
 
-  const patchGames = ref(props.patchGames)
-  patchGames.value.forEach(({ items, win }) => {
-    items.forEach((item) => {
-      if (!itemStats.has(item)) {
-        itemStats.set(item, { games: 0, wins: 0, losses: 0, winrate: 0 })
-      }
-
-      const stats = itemStats.get(item)!
-      stats.games++
-      win ? stats.wins++ : stats.losses++
-      stats.winrate = (stats.wins / stats.games) * 100
-    })
-  })
-
-  return [...itemStats.entries()]
-    .sort((a, b) => b[1].games - a[1].games) // Sort by most played
-    .map(([item, stats]) => ({
-      item: ds.items.find(i => i.id === item)?.name || null, // Get item name from ID
-      games: stats.games,
-      wins: stats.wins,
-      losses: stats.losses,
-      winrate: stats.winrate,
-    }))
-})
 const data = ref({
   datasets: [
     {
@@ -77,21 +48,18 @@ watchEffect(async () => {
     pointStyle: [],
   }
   await Promise.all(
-    getPatchItems.value.map(async (item) => {
-      const itemId = ds.items.find(i => i.name === item.item)?.id
-      if (!itemId)
-        return
+    bayesianItems.value.map(async (item) => {
 
-      await preloadItemImage(itemId)
+      await preloadItemImage(item.item.id)
 
       newDataset.data.push({
         x: item.games, // Number of games
         y: item.winrate, // Winrate
-        r: Math.sqrt(item.games) * 1.1, // Bubble size
-        label: item.item, // ✅ Add item name as the label
+        r: Math.sqrt(item.games) * 1, // Bubble size
+        label: item.item.name, // Add item name as the label
       })
 
-      newDataset.pointStyle.push(itemImages.get(itemId) || new Image())
+      newDataset.pointStyle.push(itemImages.get(item.item.id) || new Image())
     }),
   )
 
@@ -103,7 +71,7 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <div class="px-4 pb-4 pt-8 bg-b1 rounded-box shadow-warm-soft  border border-b3 relative flex flex-col h-full  grayscale hover:grayscale-0 tldr-50">
+  <div class="px-4 pb-4 pt-8 bg-b1 rounded-box shadow-warm-soft  border border-b3 relative flex flex-col h-full   tldr-50">
     <div class="grow pt-2 px-8 flex w-full">
       <div class="">
         <h4 class="dst">
@@ -122,7 +90,7 @@ watchEffect(async () => {
     </div>
 
     <transition-slide class="pointer-events-none">
-      <div v-if="!props.patchGames.length" class="absolute top-0 left-0 size-full bg-black/40 rounded-box grid place-items-center">
+      <div v-if="!ans.patchGames.length" class="absolute top-0 left-0 size-full bg-black/40 rounded-box grid place-items-center">
         <div class="badge badge-xl text-2 shadow-lg opacity-90">
           No data this patch.
         </div>
