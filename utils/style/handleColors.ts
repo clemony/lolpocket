@@ -61,6 +61,7 @@ export const themes = [
     { // icon-park-outline:green-new-energy
       // game-icons:new-shoot
       // lucide:sprout
+      //ph:potted-plant
       name: 'spring',
       id: 'theme-spring',
       icon: 'pepicons-pencil:flower',

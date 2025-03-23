@@ -1,17 +1,3 @@
-export const roles = ['all',
- 'top',
-   'jungle',
-   'middle',
-   'bottom',
-   'support',
-   'tiny carrot',
- 'small tomato',
-]
+export const roles = ['all', 'top', 'jungle', 'middle', 'bottom', 'support', 'tiny carrot']
 
-export const positions = ['all',
- 'top',
-   'jungle',
-   'middle',
-   'bottom',
-   'support',
-]
+export const positions = ['all', 'top', 'jungle', 'middle', 'bottom', 'support']

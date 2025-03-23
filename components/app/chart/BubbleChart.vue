@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 import { Bubble } from 'vue-chartjs'
 import {
+  CategoryScale,
   Chart as ChartJS,
   LinearScale,
   PointElement,
   Title,
-  Tooltip, CategoryScale,
+  Tooltip,
 } from 'chart.js'
 
 // Define props for the chart
@@ -14,7 +15,7 @@ const props = defineProps<{
 }>()
 
 // Register necessary Chart.js components
-ChartJS.register(Title, Tooltip, PointElement, LinearScale, CategoryScale,)
+ChartJS.register(Title, Tooltip, PointElement, LinearScale, CategoryScale)
 
 const styles = getComputedStyle(document.documentElement)
 
@@ -81,10 +82,10 @@ const options = {
         callback(value, index, ticks) {
           return `${value}%`
         },
- font: {
-                        size: 11,
-                        weight: 500,
-                    }
+        font: {
+          size: 11,
+          weight: 500,
+        },
       },
       border: {
         color: `${styles.getPropertyValue('--color-b2')}`,

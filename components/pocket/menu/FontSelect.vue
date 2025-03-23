@@ -10,12 +10,13 @@ const props = defineProps<{
 
 <template>
   <Select class="group">
-    <SelectTrigger v-tippy="props.tip" :no-arrow="true" class=" aspect-square size-14 shadow-none btn btn-ghost btn-lg btn-square hover:bg-b3/80 rounded-xl gap-0 data-[state=open]:bg-b3/80">
-      <SelectValue placeholder="Aa" as-child>
-        <div :style="{ fontFamily: props.pocket.card.font[props.model] }" class="text-6  dst font-medium">
-          Aa
+    <SelectTrigger class="shadow-none border-b3 inset-shadow-xxs max-w-54 ml-2">
+      <SelectValue placeholder="Aa" as-child class="p-0">
+        <div :style="{ fontFamily: props.pocket.card.font[props.model] }" class="text-4 items-center align-text-bottom dst font-medium">
+         {{props.model == 0 ? 'Title Font' : 'Accent Font'}}
         </div>
       </SelectValue>
+   
     </SelectTrigger>
     <SelectContent align="end" class="rounded-xl">
       <SelectGroup>

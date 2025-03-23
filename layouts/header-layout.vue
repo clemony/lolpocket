@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 const props = defineProps<{
   class?: HTMLAttributes['class']
+  headerClass?: HTMLAttributes['class']
 }>()
-
+const us = useUiStore()
 const route = useRoute()
 
 const breadcrumbs = computed (() => {
@@ -12,10 +13,10 @@ const breadcrumbs = computed (() => {
 
 <template>
   <div class="w-full h-screen relative tldr-30 " :class="{ '!bg-b2/40': route.meta.background == 'b2' }">
-    <div class="flex w-full items-center overflow-hidden  gap-2 absolute z-40 top-0 left-0 bg-b1/80 backdrop-blur-md pl-5 pr-10  pt-5 pb-4 " :class="{ '!bg-transparent !h-18 ': route.path == '/' || route.meta.background == 'b2' }">
-      <SidebarExpandButton />
+    <div :class="cn('flex w-full items-center overflow-hidden  gap-2 absolute z-40 top-0 left-0 bg-b1/80 backdrop-blur-md px-5  pt-3 pb-4', { '!bg-transparent !h-18 ': route.path == '/' || route.meta.background == 'b2', 'border-b border-b-b2': route.name == 'items' || route.name == 'card' }, props.headerClass)">
+      <SidebarExpandButton :expanded="us.sidebarExpanded" side="left" @click="us.triggerSidebar = true" />
 
-      <div class="breadcrumbs text-2 flex items-center **:select-none">
+      <div class="breadcrumbs !text-2 flex items-center **:select-none">
         <ul class="*:capitalize">
           <li>
             <NuxtLink to="/">
@@ -40,9 +41,11 @@ const breadcrumbs = computed (() => {
         </ul>
       </div>
 
-      <div class="grow flex items-center justify-end px-6">
+      <div class="grow flex items-center justify-end ">
         <slot name="crumb" />
       </div>
+
+      <SidebarExpandButton v-if="us.rightbarAvailable" :expanded="us.rightbarExpanded" side="right" @click="us.triggerRightbar = true" />
     </div>
 
     <div class="inset-0 absolute left-0 top-0" :class="cn({ 'overflow-y-auto pt-34': route.path != '/' }, props.class)">

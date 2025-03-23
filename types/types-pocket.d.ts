@@ -3,10 +3,10 @@ declare global {
   interface pocket {
     key: string
     name: string
-    roles: string[]
+    roles: string[] | null
     champions: {
-      children: Champion[]
-      default: Champion
+      children: Champion[] | null
+      default: Champion | null
     }
     items: {
       sets: ItemSet[]
@@ -16,10 +16,13 @@ declare global {
       sets: RuneSet[]
       default: string
     }
-    spells: Spell[]
+    spells: {
+      sets: SpellSet[] | null
+      default: SpellSet[] | null
+    }
     dateCreated: dateObject
     dateUpdated: dateObject
-    tags: string[]
+    tags: string[] | null
     location: {
       pinned: number
       folder: string

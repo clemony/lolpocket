@@ -6,7 +6,7 @@ const props = defineProps<{
 definePageMeta({
   name: 'champions',
   path: '/pocket/:pocketKey',
-  alias: '/:pocketKey',
+  alias: '/pocket/:pocketKey/champions',
 })
 const ds = useDataStore()
 const pocket = ref(props.pocket)
@@ -15,12 +15,7 @@ const quote = getQuote().replace(/<\/p>/g, ' ').replace(/<p>/g, ' ').replace(/<i
 </script>
 
 <template>
-  <div class="h-full w-full grid grid-cols-[1fr_3fr] pl-10 gap-12 pt-8  overflow-hidden relative">
-    <div class="flex flex-col gap-7">
-      <LazySelectedChampions :pocket="pocket" title="Selected" />
-      <LazyRoleList :pocket="pocket" />
- 
-    </div>
+  <div class="h-full w-full grid  pl-10 gap-12 pt-8  overflow-hidden relative">
 
     <LazyPocketChampionGrid :pocket="pocket" />
   </div>

@@ -5,6 +5,9 @@ const props = defineProps<{
   selectedIcon?: string
   pocket?: pocket
   class?: HTMLAttributes['class']
+  contentClass?: HTMLAttributes['class']
+
+  b2?: boolean
 }>()
 const ds = useDataStore()
 const cs = useChampStore()
@@ -31,7 +34,7 @@ onMounted (() => {
         <icon name="select" class="size-4.5" />
       </button>
     </PopoverTrigger>
-    <PopoverContent class="w-[var(--reka-popover-trigger-width)] p-0 isolate z-80">
+    <PopoverContent class="w-[var(--reka-popover-trigger-width)] p-0 isolate z-80" :class="cn('', { 'bg-b2/50 backdrop-blur-md': props.b2 == true }, props.contentClass)">
       <Command v-model="cs.championSplashDropdown">
         <CommandInput placeholder="Search...">
           <span class="flex gap-1">

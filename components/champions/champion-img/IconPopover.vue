@@ -10,6 +10,8 @@ const props = withDefaults(
     align?: 'start' | 'center' | 'end'
     sideOffset?: number
     side?: 'bottom' | 'top' | 'left' | 'right'
+    class?: HTMLAttributes['class']
+    b2?: boolean
   }>(),
   {
     align: 'start',
@@ -86,8 +88,8 @@ onMounted (async () => {
 </script>
 
 <template>
-  <PopoverContent class="w-80 " :side-offset="props.sideOffset" :align-offset="props.alignOffset" :align="props.align" :side="props.side">
-    <ChampionComboBox class="!w-full" />
+  <PopoverContent :side-offset="props.sideOffset" :align-offset="props.alignOffset" :align="props.align" :side="props.side" :class="cn('w-80 ', props.class)">
+    <ChampionComboBox class="!w-full" :b2="props.b2" />
 
     <div class="mt-3 h-fit grid grid-cols-4 gap-2">
       <template v-for="result in searchResult" :key="result.item">

@@ -34,7 +34,8 @@ const itemSet = ref(props.set.items)
         'delay': 0,
         'animation': 300,
         'force-fallback': true,
-
+'chosenClass': 'item-set-item-chosen',
+    'ghostClass': 'item-set-item-ghost',
         'removeOnSpill': true,
         'fallbackTolerance': 0,
         'fallbackOnBody': true,
@@ -42,7 +43,6 @@ const itemSet = ref(props.set.items)
     ]"
     :offset="[0, -16]"
     group
-    ghost-class="item-set-item-ghost"
     fallbackClass="item-set-item-fallback"
     filter=".no-drag"
     class="flex   h-fit  flex-wrap justify-start gap-3 group"
@@ -56,10 +56,10 @@ const itemSet = ref(props.set.items)
       :key="item.cloneId"
       :item="item"
       :pocket="pocket"
-      class="shadow-sm shrink-0 !size-20 "
+      class="shadow-sm shrink-0 !size-18 "
       :class="{ 'rotate-out-center': removingItems[item?.id ?? `item-${i}`] }"
       @click.prevent="is.selectedItem = item" />
-    <Placeholder class="rounded-lg border-b3 !size-20 shadow-sm  bg-b3/90 inset-shadow-xs group-has-[.sortable-ghost]:hidden" />
+    <Placeholder class="rounded-lg border-b3 !size-18 shadow-sm  bg-b3/70 inset-shadow-xs group-has-[.sortable-ghost]:hidden" />
   </div>
 </template>
 

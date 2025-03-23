@@ -20,12 +20,12 @@ const { bayesianItems } = usePatchItems(patchGames)
       </label>
     </div>
 
-    <template v-for="(entry, i) in bayesianItems" :key="entry.item?.id">
+    <template v-for="entry in bayesianItems" :key="entry.item?.id">
       <div v-if="entry" class="grid  grid-cols-[20px_repeat(2,40px)_1fr_repeat(2,60px)_20px] w-full py-3 border-b border-b-b2 items-center">
-        <div  />
+        <div />
         <div class="text-5 font-medium flex items-center gap-0 rounded-lg text-nc px-2 pb-px tracking-wider badge bg-resolve/90">
-        <!--   {{ i.toString().match(/\d\d+/) ? i : `0${i}` }} -->
-            s<span class="text-3 ">+</span>
+          <!--   {{ i.toString().match(/\d\d+/) ? i : `0${i}` }} -->
+          s<span class="text-3 ">+</span>
         </div>
         <div>
           <img class="size-10 rounded-xl" :src="`/img/item/${entry.item?.id}.webp`" />
@@ -38,13 +38,12 @@ const { bayesianItems } = usePatchItems(patchGames)
             {{ entry.win }}W {{ entry.loss }}L
           </div>
         </div>
-          <div class="text-end text-2">
-            {{ entry.winrate.toFixed(1) }}%
-          </div>
-          <div class="text-end text-2">
-            {{ entry.bayesianWinrate.toFixed(1) }}%
-          </div>
-       
+        <div class="text-end text-2">
+          {{ entry.winrate.toFixed(1) }}%
+        </div>
+        <div class="text-end text-2">
+          {{ entry.bayesianWinrate.toFixed(1) }}%
+        </div>
       </div>
     </template>
   </div>

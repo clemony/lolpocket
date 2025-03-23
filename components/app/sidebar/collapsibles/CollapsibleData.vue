@@ -25,7 +25,7 @@ watchEffect(() => {
         <NuxtLink v-tippy="!us.sidebarExpanded ? 'Items' : null" :to="!us.sidebarExpanded ? '/items' : ''" :class="{ 'btn btn-ghost size-12  hover:bg-b2/60': !us.sidebarExpanded }">
           <SidebarCollapsibleTrigger>
             <span class="relative size-4">
-              <i-weaponmaster class="absolute transition-scale dr-30 pointer-events-none size-5.5 -ml-1 -mt-1 opacity-70 dst" :class="{ '!scale-110 ml-0': !us.sidebarExpanded }" />
+              <i-tft-weaponmaster class="absolute transition-scale dr-30 pointer-events-none size-5.5 -ml-1 -mt-1 opacity-70 dst" :class="{ '!scale-110 ml-0': !us.sidebarExpanded }" />
             </span>
 
             <SidebarText>  Item Data</SidebarText>
@@ -38,7 +38,9 @@ watchEffect(() => {
             :to="link.link"
             class="">
             <SidebarButton>
-              <SidebarText class="pl-1">{{ link.name }}</SidebarText>
+              <SidebarText class="pl-1">
+                {{ link.name }}
+              </SidebarText>
               <SidebarBadge v-if="link.badge && us.sidebarExpanded" class="tracking-normal   uppercase ">
                 {{ link.badge }}
               </SidebarBadge>

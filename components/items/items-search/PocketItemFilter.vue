@@ -29,7 +29,9 @@ const isOpen = ref(false)
 </script>
 
 <template>
-  <div class="w-full top-0 bg-b1/94 flex items-center border-b-b3 border-b absolute z-2 bg-b1/90 backdrop-blur-sm gap-2 px-5 py-2">
+  <div class="flex items-center  gap-2 px-5 py-2">
+
+
     <ItemCommand :side-offset="-38" @update:open="e => isOpen = e" class="w-90">
     
         <div class="flex  items-center py-3 gap-2">
@@ -48,8 +50,7 @@ const isOpen = ref(false)
         </div>
 
     </ItemCommand>
-    <Grow />
-    <ItemInfoPaneTrigger />
+
   </div>
 </template>
 

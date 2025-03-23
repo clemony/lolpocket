@@ -57,19 +57,26 @@ export function getPocketLinks(pocket: pocket) {
     },
     {
       link: `/pocket/${pocket.key}/items`,
-      name: 'items',
+      name: 'Items',
       icon: 'mdi:bow-arrow',
     },
     {
 
       link: `/pocket/${pocket.key}/runes`,
-      name: 'runes',
+      name: 'Runes',
       icon: 'i-rune-icon',
+    },
+
+    {
+
+      link: `/pocket/${pocket.key}/card`,
+      name: 'Card',
+      icon: 'ph:identification-card-light',
     },
     {
 
       link: `/pocket/${pocket.key}/complete`,
-      name: 'complete',
+      name: 'Complete',
       icon: 'stash:infinity-solid',
     },
   ]
@@ -110,13 +117,13 @@ export const gameDataLinks = [
   {
     name: 'Spells',
     link: '/spells',
-    icon: 'i-attach',
+    icon: 'i-tft-attach',
     class: 'size-5 -mt-1 -ml-1 opacity-70',
   },
   {
     name: 'Summoners',
     link: '/summoners',
-    icon: 'i-summoner-tft',
+    icon: 'i-tft-summoner',
     class: 'size-5.5 opacity-80 -mt-0.5 -ml-1',
     text: 'Look up your friends... or your foes.',
   },

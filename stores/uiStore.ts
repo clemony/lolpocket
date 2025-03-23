@@ -3,8 +3,15 @@ import { defineStore } from 'pinia'
 export const useUiStore = defineStore('UiStore', () => {
   const sidebarExpanded = ref(true)
   const triggerSidebar = refAutoReset(false, 1000)
-  const rightBarExpanded = ref(true)
-  const triggerRightBar = refAutoReset(false, 1000)
+  const rightbarExpanded = ref(true)
+  const triggerRightbar = refAutoReset(false, 1000)
+
+  const rightbarAvailable = computed (() => {
+    const match = /pocket/g
+    const route = useRoute()
+    return route.path.match(match)
+  })
+
   // dialog
 
   const loginOpen = ref(false)
@@ -37,8 +44,9 @@ export const useUiStore = defineStore('UiStore', () => {
   return {
     sidebarExpanded,
     triggerSidebar,
-    rightBarExpanded,
-    triggerRightBar,
+    rightbarExpanded,
+    triggerRightbar,
+    rightbarAvailable,
 
     // dialog
     loginOpen,

@@ -12,15 +12,13 @@ const pocket = ref(props.pocket)
     <slot />
     <Field
       title="Sets"
-      class="max-h-204   w-full relative  "
-    >
+      class="max-h-204   w-full relative  ">
       <div class="contents overflow-y-auto !overflow-x-visible">
-        <transition-slide :offset="[0, -16]" group class="h-fit py-3 gap-8 items-start  flex flex-col items-center">
+        <transition-slide :offset="[0, -16]" group class="h-fit py-3 gap-8   flex flex-col items-center">
           <div
             v-for="set in pocket.runes.sets" :key="set.key"
             class="px-4"
-            :class="set.primary"
-          >
+            :class="set.primary">
             <RuneSetButton :pocket="pocket" :set="set" />
           </div>
         </transition-slide>

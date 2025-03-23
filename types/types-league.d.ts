@@ -6,11 +6,11 @@ declare global {
   }
 
   interface Spell {
-    name: string
-    description: string
-    cd: number | string
-    recharge?: number | string
-    charges?: number | string
+    name: string | null
+    description: string | null
+    cd: number | string | null
+    recharge?: number | string | null
+    charges?: number | string | null
   }
 
   interface summoner {

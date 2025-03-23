@@ -7,11 +7,11 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
 
   const itemSet = newItemSet('', 'New Set')
   const runeSet = newRuneSet()
-
+  const spellSet = newSpellSet()
   const newPocket: pocket = {
     key: pocketKey,
     name: name || generateShortString(),
-    roles: ['all'],
+    roles: [null],
     icon: icon || '/img/champion/centered/1.webp',
     champions: {
       children: [],
@@ -25,7 +25,10 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
       sets: [runeSet],
       default: runeSet.key,
     },
-    spells: [],
+    spells: {
+      sets: [spellSet],
+      default: [],
+    },
     tags: tags || [''],
     location: {
       pinned: 0,
@@ -35,7 +38,7 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
     card: {
       splash: '',
       align: '',
-      color: '',
+      color: 'bg-[#FFFFFF]',
       filter: true,
       font: {
         0: 'var(--font-serif)',
@@ -152,6 +155,6 @@ export function createDateObject() {
 // spell
 
 export function createDefaultSpell() {
-  const spell: Spell = { name: '', description: '', cd: 0, recharge: 0, charges: 0 }
+  const spell: Spell = { name: null, description: null, cd: 0, recharge: 0, charges: 0 }
   return spell
 }

@@ -4,20 +4,7 @@ import { fileURLToPath } from 'node:url'
 //  Configuration Vite
 
 export default defineNuxtConfig({
-  modules: [
-    '@pinia/nuxt',
-    'pinia-plugin-persistedstate/nuxt',
-    'motion-v/nuxt',
-    '@vueuse/nuxt',
-    '@nuxtjs/supabase',
-    '@morev/vue-transitions/nuxt',
-    '@nuxt/devtools',
-    '@nuxt/eslint',
-    'vue-sonner/nuxt',
-    '@nuxt/icon',
-    'nuxt-aos',
-    'nuxt-svgo',
-  ],
+  modules: ['@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', 'motion-v/nuxt', '@vueuse/nuxt', '@nuxtjs/supabase', '@morev/vue-transitions/nuxt', '@nuxt/devtools', '@nuxt/eslint', 'vue-sonner/nuxt', '@nuxt/icon', 'nuxt-aos', 'nuxt-svgo', '@nuxt/image'],
 
   icon: {
     provider: 'iconify',
@@ -110,6 +97,7 @@ export default defineNuxtConfig({
     storesDirs: ['./stores/**'],
   },
   alias: {
+    '#app': fileURLToPath(new URL('./', import.meta.url)),
     '@': fileURLToPath(new URL('./', import.meta.url)),
     'css': fileURLToPath(new URL('./assets/css', import.meta.url)),
     'types': fileURLToPath(new URL('./types', import.meta.url)),

@@ -22,12 +22,10 @@
   @apply border-b2 bg-b2/30 overflow-hidden aspect-square size-16 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
 }
 
-.item-set-item-ghost {
-  @apply border-b2 bg-b2/30 overflow-hidden aspect-square size-20 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
-}
-
-.item-set-item-fallback {
-  @apply border-b2 bg-b2/30 overflow-hidden aspect-square size-20 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
+.item-set-item-ghost,
+.item-set-item-fallback,
+.item-set-item-chosen   {
+  @apply border-b2 bg-b2/30 overflow-hidden aspect-square !size-18 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
 }
 
 .sortable-ghost {

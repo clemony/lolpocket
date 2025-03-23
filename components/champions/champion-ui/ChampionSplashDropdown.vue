@@ -9,12 +9,13 @@ const isChamp = computed(() => props.pocket.champions.default && props.pocket.ch
 
 <template>
   <Popover>
-    <PopoverTrigger>
-      <LazyChampion v-if="champion" :key="champion.name" :champion="champion" class="*:size-18  size-18  group cursor-pointer ring-1 ring-transparent" :class="{ 'ring-1  ring-offset-2 ring-offset-b2 ring-neutral': isChamp, 'grayscale opacity-90': !isChamp }">
-      </LazyChampion>
+    <PopoverTrigger class="btn btn-ghost btn-circle btn size-11 hover:bg-b2 hover:border-b3">
+      <div v-if="champion" :key="champion.name" class="size-8   rounded-full  overflow-hidden" :class="{ '': isChamp, 'grayscale opacity-90': !isChamp }">
+      <Image  :image="`/img/champion/${champion.id}.webp`" :alt="champion.name"  class=" !size-8 scale-114"/>
+      </div>
     </PopoverTrigger>
 
-    <LazySplashDropdownContent :champion="champion" :pocket="pocket" />
+    <LazySplashDropdownContent :side-offset="6" :align-offset="-12" :champion="champion" :pocket="pocket" />
   </Popover>
 </template>
 

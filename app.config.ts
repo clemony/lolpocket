@@ -3,7 +3,7 @@ export default defineAppConfig({
   icon: {
     mode: 'svg',
     class: 'text-[var(--color-bc)]',
-    size: '18px',
+    size: '15px',
     aliases: {
       'search': 'ph:magnifying-glass',
       'search-sm': 'teenyicons:search-small-outline',
@@ -74,9 +74,9 @@ export default defineAppConfig({
       // pic
       'infinity': 'solar:infinity-outline',
       'shield': 'teenyicons:shield-tick-outline',
-      'star': 'teenyicons:star-outline',
-      'star-fill': 'teenyicons:star-solid',
-      'heart': 'teenyicons:heart-outline',
+      'star': 'ph:star',
+      'star-fill': 'ph:star-fill',
+      'heart': 'ph:heart-straight',
       'bow': 'mdi:bow-arrow',
       'up-face': 'iconoir:emoji-look-up',
     },

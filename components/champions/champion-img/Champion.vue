@@ -38,10 +38,10 @@ function handleClick() {
           { 'after:absolute after:top-0 after:left-0 after:pointer-events-none z-0 after:z-10 after:size-full after:rounded-lg after:place-items-center after:grid after:font-extralight after:opacity-0 after:text-7 after:content-[\'×\'] cursor-pointer  hover:after:opacity-100 after:bg-neutral/60 after:text-nc/80 after:transition-all after:duration-300': props.removable },
         )
       ">
-      <img
+      <Image
         :key="props.champion.name"
 
-        :src="`/img/champion/${champion.id}.webp`"
+        :image="`/img/champion/${champion.id}.webp`"
         :alt="`${props.champion.name} Image`"
         class="size-full scale-115" />
     </div>

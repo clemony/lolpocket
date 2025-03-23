@@ -20,9 +20,9 @@ const thisItem = computed(() => {
       :value="item"
       class="hidden" />
 
-    <img
+    <Image
       v-if="item.name != ''"
-      :src="`/img/item/${thisItem.id}.webp`"
+      :image="`/img/item/${thisItem.id}.webp`"
       :alt="`${thisItem.name} Image`"
       class="aspect-square size-full rounded-lg" />
 

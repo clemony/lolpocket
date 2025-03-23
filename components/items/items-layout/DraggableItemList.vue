@@ -77,7 +77,7 @@ const toID = hexoid()
     ]"
     group
     class=""
-    :class="cn('overflow-y-auto  absolute inset-0 grid grid-flow-row auto-cols-auto select-none   grid-cols-[repeat(auto-fill,minmax(54px,1fr))] justify-center gap-4 px-4  pb-10 pt-26', props.class)"
+    :class="cn('overflow-y-auto  absolute inset-0 grid grid-flow-row auto-cols-auto select-none   grid-cols-[repeat(auto-fill,minmax(54px,1fr))] justify-center gap-4 px-7  pb-10 pt-30', props.class)"
 
     @end="onEnd"
     @clone="onClone"

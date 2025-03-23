@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-import { ArcElement, Chart, DoughnutController, Tooltip,  CategoryScale, } from 'chart.js'
+import { ArcElement, CategoryScale, Chart, DoughnutController, Tooltip } from 'chart.js'
 import { externalTooltip } from 'plugins/chartJS/externalTooltip'
 import { Doughnut } from 'vue-chartjs'
 
@@ -52,8 +52,7 @@ const chartData = {
     :options="chartData.options"
     :aria-label="props.aria"
     role="img"
-    :class="props.class"
-  />
+    :class="props.class" />
 </template>
 
 <style scoped></style>

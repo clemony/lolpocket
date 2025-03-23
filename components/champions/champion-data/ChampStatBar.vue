@@ -20,7 +20,7 @@ const lvl = ref(props.lvl)
 const champion = ref(props.champion)
 
 onMounted(async () => {
-  await props.stat, props.lvl, (stat.value = props.stat), base.value, perLvl.value, growthVal.value, statVal.value
+  await props.stat
 })
 
 const champStats = Object.entries(champion.value.stats)
@@ -160,8 +160,7 @@ const chartOptions: ChartOptions<'bar'> = {
       <span class="grow font-medium">{{ stat.name }}</span>
       <span
         v-if="stat.name == 'Attack Speed'"
-        class="text-bc/60"
-      >
+        class="text-bc/60">
         {{ asRatio.toFixed(2) }} Ratio
       </span>
     </div>
@@ -175,8 +174,7 @@ const chartOptions: ChartOptions<'bar'> = {
         height="20px"
         width="140px"
         aria-label="stat chart"
-        role="img"
-      />
+        role="img" />
     </div>
 
     <div class="flex h-8 items-end gap-2 overflow-hidden leading-none">
@@ -186,8 +184,7 @@ const chartOptions: ChartOptions<'bar'> = {
       <span class="text-2 !text-bc/60 mb-0.5 grow font-medium tracking-tight"> + {{ perLvl }}/lvl </span>
       <img
         :src="stat.img"
-        class="invert-light mb-1 size-5 justify-self-end opacity-80 drop-shadow-xs"
-      />
+        class="invert-light mb-1 size-5 justify-self-end opacity-80 drop-shadow-xs" />
     </div>
   </div>
 </template>

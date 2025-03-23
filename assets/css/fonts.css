@@ -15,12 +15,13 @@
   --text-6: 1.35rem;
   --text-7: 1.5rem;
   --text-8: 1.675rem;
-  --text-9: 2.25rem;
-  --text-10: 2.9rem;
-  --text-11: 3.75rem;
-  --text-12: 4.5rem;
-  --text-13: 6rem;
-  --text-14: 7rem;
+  --text-8: 1.875rem;
+  --text-10: 2.25rem;
+  --text-11: 2.9rem;
+  --text-12: 3.75rem;
+  --text-13: 4.5rem;
+  --text-14: 6rem;
+  --text-15: 7rem;
 }
 
 @layer components {

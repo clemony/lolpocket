@@ -11,11 +11,11 @@
   }
 }
 
-.expand-hide[data-side="collapsed"] {
+ .expand-hide[data-side="collapsed"] {
   @apply transition-[width_height] duration-300;
 }
 
-.expand-hide[data-side="expanded"] {
+ .expand-hide[data-side="expanded"] {
   @apply animate-in fade-in-100 transition-[width_height] duration-300 ease-in;
 }
 
@@ -33,4 +33,10 @@
     &:hover {
       color: var(--color-nc);
     }
+
+.divider {
+  @apply h-px text-2 font-semibold opacity-50;
+}
+
   }
+

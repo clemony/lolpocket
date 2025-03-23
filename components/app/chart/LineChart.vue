@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import { Line } from 'vue-chartjs'
 import {
+  CategoryScale,
   Chart as ChartJS,
   LinearScale,
   LineElement,
   PointElement,
   Title,
   Tooltip,
-   CategoryScale,
 } from 'chart.js'
 
 const props = defineProps<{
@@ -45,8 +45,8 @@ const options = {
       borderWidth: 1.5,
       tension: props.options.elements.line.tension,
       cubicInterpolationMode: props.options.elements.line.cubicInterpolationMode,
-  }
-},
+    },
+  },
 
   scales: {
     y: {
@@ -83,9 +83,9 @@ const options = {
       displayColors: false,
       intersect: false,
       enabled: true,
-      callbacks: props.options.plugins.tooltip.callbacks
-    }
-  }
+      callbacks: props.options.plugins.tooltip.callbacks,
+    },
+  },
 }
 </script>
 

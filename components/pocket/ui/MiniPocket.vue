@@ -27,8 +27,7 @@ const isThis = computed (() => {
             :disabled="isThis"
             :to="`/pocket/${pocket.key}`"
 
-            class="btn btn-lg btn-ghost group  aspect-square px-2 relative " :class="{ '!rounded-full border-neutral border-2 size-6 mr-2.5': isThis }"
-          >
+            class="btn btn-lg btn-ghost group  aspect-square px-2 relative " :class="{ '!rounded-full border-neutral border-2 size-6 mr-2.5': isThis }">
             <icon v-if="!isThis" name="iconamoon:edit-light" class="size-5 dst absolute " />
             <icon v-else-if="isThis" name="tick-sm" class="size-5 dst absolute stroke-[1.6]" />
           </NuxtLink>
@@ -39,12 +38,6 @@ const isThis = computed (() => {
     <div class="">
       <div class="flex gap-2 h-21 items-center p-1">
         <Champion :champion="pocket.champions.default || pocket.champions.children[0]" class="size-20" />
-
-        <div class="flex flex-col h-full justify-between">
-          <div v-for="spell in pocket.spells" :key="spell.name" class="btn btn-md p-0 aspect-square">
-            <img :src="`/img/spells/${spell.name}.webp`" class="rounded-md overflow-hidden" />
-          </div>
-        </div>
       </div>
 
       <!--    <div v-if="pocket.items.default || pocket.items.sets[0]" class="flex gap-2">

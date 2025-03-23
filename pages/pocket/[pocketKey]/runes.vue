@@ -53,23 +53,6 @@ onMounted (() => {
         </div>
       </div>
 
-      <div class="pt-30 flex flex-col pr-12 bg-b1 pb-10 tldr-30 " :class="{ 'w-120': !isDataCollapsed, '@6xl:w-60 w-14': isDataCollapsed }">
-        <button
-          class="btn btn-ghost btn-square absolute right-8 top-8 self-center  mb-6 !pointer-events-auto w-fit h-fit hover:bg-b2/60"
-          @click="toggleData(); console.log(isDataCollapsed)">
-          <icon name="right-sm" :class="{ 'rotate-180': !isDataCollapsed, 'rotate-0': isDataCollapsed }" class="size-6 shrink-0 tldr-30" />
-          <img
-            v-if="rs.hoveredRune"
-            :src="`/img/runes/${pathName}/${rs.hoveredRune.name.replace(/\s/g, '')}.webp`"
-            :alt="rs.hoveredRune.name"
-            class="h-12 w-auto shrink-0 drop-shadow-sm" />
-        </button>
-        <RuneData
-          v-if="rs.hoveredRune "
-
-          :is-collapsed="isDataCollapsed" :class="{ 'opacity-0 pointer-events-none': isDataCollapsed }">
-        </RuneData>
-      </div>
     </div>
   </div>
 </template>

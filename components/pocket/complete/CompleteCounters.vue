@@ -14,7 +14,7 @@ const rolesLength = computed (() => {
 })
 
 const spellsLength = computed (() => {
-  return pocket.value.spells.length
+  return pocket.value.spells.sets.length
 })
 
 const itemsLength = computed (() => {
