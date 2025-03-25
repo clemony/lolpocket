@@ -14,6 +14,7 @@ export default defineAppConfig({
       'add-sq-outline': 'basil:add-outline',
       'minus-sm': 'teenyicons:minus-small-outline',
       'calc': 'teenyicons:calculator-outline',
+      'minus': 'radix-icons:minus',
 
       // letters
       'x-sm': 'teenyicons:x-small-outline',

@@ -19,11 +19,11 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
     },
     items: {
       sets: [itemSet],
-      default: itemSet.key,
+      default: null,
     },
     runes: {
       sets: [runeSet],
-      default: runeSet.key,
+      default: null,
     },
     spells: {
       sets: [spellSet],

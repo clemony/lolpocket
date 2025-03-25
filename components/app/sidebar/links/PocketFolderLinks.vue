@@ -10,7 +10,11 @@ const as = useAccountStore()
     :key="link.key"
     :to="link.link">
     <SidebarButton v-tippy="!us.sidebarExpanded ? link.name : null">
-      <SidebarIcon :name="link.icon" class=" size-5" />
+      
+      <SidebarIcon v-if="link.name == 'Pockets'">
+        <i-ui-pocket  class="size-5"  />
+        </SidebarIcon>
+      <SidebarIcon v-else :name="link.icon" class=" size-5" />
       <SidebarText>
         {{ link.name }}
       </SidebarText>

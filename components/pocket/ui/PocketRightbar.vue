@@ -14,7 +14,7 @@ const rs = useRuneStore()
 
 <template>
   <div class="inset-0 top-0 left-0  overflow-hidden  flex  flex-col h-full">
-    <div class="items-center w-full pt-18  flex flex-col gap-6 pb-6  px-3">
+    <div class="items-center w-full pt-12  flex flex-col gap-6 pb-12  px-3">
       <LazyPopover>
         <PopoverTrigger class="group/picon z-0 !cursor-pointer  aspect-square size-24  rounded-full !pointer-events-auto shadow-sm !drop-shadow-none  bg-gradient-to-br from-neutral/60 to-neutral grid place-items-center relative">
           <PocketIcon :image="pocket.icon" class="size-24 pointer-events-none group-hover/picon:opacity-50 z-1 group-data-[state=open]/picon:opacity-50 tldr-30" />
@@ -28,8 +28,16 @@ const rs = useRuneStore()
       </h1>
     </div>
 
+
     <div class="  overflow-y-scroll   px-3 flex flex-col gap-3 grow">
-      <RightbarLabel>Craft</RightbarLabel>
+      
+    <div class="w-full flex justify-between items-end h-fit">
+      <RightbarLabel class="pt-0">Create</RightbarLabel>
+      <button v-tippy="'Collapse All'" class="*:text-bc/50  hover:*:text-bc btn btn-ghost btn-sm btn-square  mr-2.25 cursor-pointer -mb-1">
+        <icon name="minus" class="shrink-0 size-5 dst   "/>
+      </button>
+
+    </div>
 
       <PocketChampionsCollapsible :pocket="pocket" />
       <PocketItemsCollapsible :pocket="pocket" />

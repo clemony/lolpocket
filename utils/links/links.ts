@@ -7,14 +7,14 @@ export const summonerLinks = [
     iconBold: 'ph:chalkboard-simple-bold',
   },
   {
-    name: 'Build Analysis',
+    name: 'Analyze',
     link: '/summoner/analysis',
     icon: 'ph:atom',
     iconSolid: 'mdi:graph-box',
     iconBold: 'ph:atom-bold',
   },
   {
-    name: 'Match History',
+    name: 'History',
     link: '/summoner/match-history',
     icon: 'ph:clock-counter-clockwise',
     tftIcon: 'i-time-icon',
@@ -67,12 +67,6 @@ export function getPocketLinks(pocket: pocket) {
       icon: 'i-rune-icon',
     },
 
-    {
-
-      link: `/pocket/${pocket.key}/card`,
-      name: 'Card',
-      icon: 'ph:identification-card-light',
-    },
     {
 
       link: `/pocket/${pocket.key}/complete`,
@@ -141,12 +135,12 @@ export function getFolderLinks() {
   const folderLinks = [
 
     {
-      name: 'All',
+      name: 'Pockets',
       key: 'all',
       link: '/pockets',
       pockets: ps.pockets,
-      icon: 'ph:folder',
-      iconSolid: 'teenyicons:folders-solid',
+      icon: '',
+      iconSolid: 'basil:envelope-open-outline',
       iconBold: 'ph:folder-bold',
     },
     {

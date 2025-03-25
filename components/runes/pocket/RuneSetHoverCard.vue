@@ -19,8 +19,8 @@ const secondaryRunes = computed (() => {
 <template>
   <HoverCardContent side="right" :side-offset="11" align="start" :align-offset="0" class="!bg-b1/85 justify-center select-none **:select-none">
     <div class="grid grid-cols-4 gap-3 p-i-c">
-      <button v class="btn col-span-2 bg-b1 btn-sm rounded-lg  font-medium !text-1" @click.stop="set.key == pocket.runes.default">
-        <icon v-if="set.key == pocket.runes.default" name="star-fill" class="opacity-70 shrink-0 size-4" />
+      <button v class="btn col-span-2 bg-b1 btn-sm rounded-lg  font-medium !text-1" @click.stop="set == pocket.runes.default">
+        <icon v-if="set == pocket.runes.default" name="star-fill" class="opacity-70 shrink-0 size-4" />
         <icon v-else name="star" class="opacity-70 shrink-0 size-4" />
         Default
       </button>
@@ -32,8 +32,7 @@ const secondaryRunes = computed (() => {
       <template v-for="rune in primaryRunes" :key="rune.id">
         <img
           v-if="rune.name != 'empty'" v-tippy="rune.name" :src="`/img/runes/${set.primary.path}/${rune.name.replace(/\s/g, '')}.webp`" class=" "
-          :class="{ 'drop-shadow-sm h-13 w-auto object-contain hover:scale-110  transition-all duration-300': rune == set.primary.runes[0], 'border border-black shadow-sm not-first:inset-shadow-sm rounded-full size-10 inset-shadow-black hover:ring-1 hover:ring hover:ring-neutral transition-all duration-300': rune != set.primary.runes[0] }"
-        />
+          :class="{ 'drop-shadow-sm h-13 w-auto object-contain hover:scale-110  transition-all duration-300': rune == set.primary.runes[0], 'border border-black shadow-sm not-first:inset-shadow-sm rounded-full size-10 inset-shadow-black hover:ring-1 hover:ring hover:ring-neutral transition-all duration-300': rune != set.primary.runes[0] }" />
 
         <Placeholder v-else class="size-10 rounded-full" />
       </template>

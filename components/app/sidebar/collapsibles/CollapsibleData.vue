@@ -16,10 +16,11 @@ watchEffect(() => {
 
 <template>
   <Collapsible v-model:is-open="isOpen" :default-open="true">
-    <SidebarCollapsibleTrigger v-if="us.sidebarExpanded" class="select-none expand-hide" :disabled="!us.sidebarExpanded">
+    <SidebarCollapsibleTrigger v-if="us.sidebarExpanded" class="select-none " :disabled="!us.sidebarExpanded">
       <SidebarIcon name="teenyicons:book-outline" class="size-4.5 -top-px" />
       <SidebarText>Encyclopedia</SidebarText>
     </SidebarCollapsibleTrigger>
+
     <SidebarCollapsibleContent>
       <Collapsible v-model:open="itemIsOpen" :disabled="!us.sidebarExpanded" class="data-disabled:**:text-bc/90 ">
         <NuxtLink v-tippy="!us.sidebarExpanded ? 'Items' : null" :to="!us.sidebarExpanded ? '/items' : ''" :class="{ 'btn btn-ghost size-12  hover:bg-b2/60': !us.sidebarExpanded }">

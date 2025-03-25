@@ -26,10 +26,12 @@ const champs = computed (() => {
     champion: champion != 'none' ? ds.champions.find(c => c.name == champion) : null,
   }))
 })
+
+/* grayscale rounded-box shadow-warm-soft  border border-b3 relative flex flex-col h-full hover:grayscale-0 tldr-50 */
 </script>
 
 <template>
-  <div class="py-8 pl-4 pr-14 bg-b1 grayscale rounded-box shadow-warm-soft  border border-b3 relative flex flex-col h-full hover:grayscale-0 tldr-50">
+  <div class="py-8 pl-4 pr-14 bg-b1  size-full flex flex-col relative">
     <div class="grow pl-6 pt-2 flex w-full">
       <div class="">
         <h4 class="dst">

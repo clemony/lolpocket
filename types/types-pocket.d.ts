@@ -9,16 +9,16 @@ declare global {
       default: Champion | null
     }
     items: {
-      sets: ItemSet[]
-      default: string
+      sets: ItemSet[] | null
+      default: ItemSet | null
     }
     runes: {
-      sets: RuneSet[]
-      default: string
+      sets: RuneSet[] | null
+      default: RuneSet | null
     }
     spells: {
       sets: SpellSet[] | null
-      default: SpellSet[] | null
+      default: SpellSet | null
     }
     dateCreated: dateObject
     dateUpdated: dateObject

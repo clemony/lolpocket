@@ -20,8 +20,9 @@ const spell = computed (() => {
         <i-tft-attach v-if="spell == null" class="size-4.5 opacity-65" />
         <img v-else :src="`/img/spells/${spell.name}.webp`" class="size-full rounded-full" />
       </RightbarIconWrapper>
-      Spells
-
+      <span class="capitalize">
+        {{ `${pocket.spells.default[0].name} / ${pocket.spells.default[1].name}` || 'Spells' }}
+      </span>
       <template #counter>
         <SpellsCounter :pocket="pocket" />
       </template>

@@ -42,7 +42,7 @@ export function newItemSet(pocketKey?, setName?) {
     newSet.items.splice(0, 1)
     pocket.items.sets.push(newSet)
     if (pocket.items.sets.length == 1) {
-      pocket.items.default = newSet.key
+      pocket.items.default = newSet
     }
   }
   return newSet
@@ -80,9 +80,6 @@ export function deleteItemSet(pocket, set) {
     pocket.items.sets.splice(i, 1)
   }
 }
-
-
-
 
 // remove items
 

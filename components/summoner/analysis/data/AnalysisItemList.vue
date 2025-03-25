@@ -7,17 +7,18 @@ const { bayesianItems } = usePatchItems(patchGames)
 
 <template>
   <div class="">
-    <div class=" pt-3 pb-1 px-2 opacity-60 tracking-wide items-center flex text-2 capitalize w-full">
+    <div class=" pt-3 pb-1 px-2 opacity-60 tracking-wide items-center flex  gap-4 text-2 capitalize w-full">
       <span class="grow pl-2">
         {{ ans.patchSelect }} Items
       </span>
 
-      <label class="btn-ghost btn btn-sm">
+<APDtooltip>
         Absolute
-      </label>
-      <label class="btn-ghost btn btn-sm">
+        </APDtooltip>
+<BayesianTooltip>
         Weighted
-      </label>
+        </BayesianTooltip>
+   
     </div>
 
     <template v-for="entry in bayesianItems" :key="entry.item?.id">

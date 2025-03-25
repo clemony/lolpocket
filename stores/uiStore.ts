@@ -7,9 +7,10 @@ export const useUiStore = defineStore('UiStore', () => {
   const triggerRightbar = refAutoReset(false, 1000)
 
   const rightbarAvailable = computed (() => {
-    const match = /pocket/g
+    const pocket = /pocket/g
+    const summoner = /summoner\//
     const route = useRoute()
-    return route.path.match(match)
+    return route.path.match(pocket) || route.path.match(summoner)
   })
 
   // dialog

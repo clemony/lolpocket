@@ -1,10 +1,14 @@
 <script lang="ts" setup>
 
+const props = defineProps<{
+  class?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
-  <tippy :offset="[2, 2]" class="underline underline-offset-2 cursor-help">
-    APD
+  <tippy :class="cn('flex gap-1 transition dr-20 cursor-info', props.class)">
+    <span class="hover:underline underline-offset-2"><slot  /></span>
+    <icon name="ph:info" class="size-3.5"/>
     <template #content>
       <b>APD</b>: Absolute Percentage Diff<br />
       <Separator class="opacity-10 my-0.5" />

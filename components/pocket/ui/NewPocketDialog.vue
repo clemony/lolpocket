@@ -43,7 +43,7 @@ defineExpose({
 
 <template>
   <Dialog :open="ps.newPocketOpen">
-    <DialogContent class="!rounded-xl" @interact-outside="ps.newPocketOpen = false">
+    <MotionDialogContent class="!rounded-xl" @interact-outside="ps.newPocketOpen = false">
       <DialogHeader>
         <DialogTitle class="text-7 dst">
           New Pocket
@@ -133,7 +133,7 @@ defineExpose({
           Create
         </button>
       </DialogFooter>
-    </DialogContent>
+    </MotionDialogContent>
   </Dialog>
 </template>
 

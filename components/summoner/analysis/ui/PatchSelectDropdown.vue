@@ -15,7 +15,7 @@ const modelValue = ref(ans.patchSelect ?? ds.currentPatch)
 
 <template>
   <Select v-model:model-value="modelValue" class="p-0" @update:model-value="(e) => ans.patchSelect = e">
-    <SelectTrigger class="text-left shadow-none border-b3/80 inset-shadow-xs rounded-lg align-bottom h-12 flex items-center text-4 tracking-tight font-medium" :class="cn('', props.class)">
+    <SelectTrigger class="text-left bg-b1/60 shadow-none border-b3/80 inset-shadow-xs rounded-lg align-bottom h-12 flex items-center text-4 tracking-tight font-medium" :class="cn('', props.class)">
       <div class="flex">
         <span class="w-16"> &nbsp;Patch &nbsp;</span>
         <SelectValue :placeholder="ds.currentPatch" class="text-left w-20" />

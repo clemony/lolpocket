@@ -33,7 +33,7 @@ watch(
     <CommandSearchButton />
 
     <div class="h-full relative overflow-y-scroll   overflow-x-hidden" :class="{ 'pt-18': !us.sidebarExpanded }">
-      <div class="inset-0 top-0 left-0  overflow-y-scroll gap-2.5 flex  flex-col pr-3">
+      <div class="inset-0 top-0 left-0 flex-nowrap overflow-x-hidden  overflow-y-scroll gap-2.5 flex  flex-col pr-3">
         <SidebarLabel>
           Summoner
         </SidebarLabel>
@@ -45,6 +45,7 @@ watch(
         </SidebarLabel>
 
         <SidebarSeparator />
+        <BackpackLink  />
 
         <LazyCollapsiblePocket :summoner="summoner" />
 
@@ -59,7 +60,7 @@ watch(
         <LazyCollapsibleData />
 
         <SidebarLabel>
-          Tools
+         Hextech Tools
         </SidebarLabel>
 
         <SidebarSeparator />
@@ -69,7 +70,7 @@ watch(
       </div>
     </div>
     <SidebarFooter />
-    <SidebarBorderCollapse @update:sidebar="updateSidebar()" side="right" :open="us.sidebarExpanded"/>
+    <SidebarBorderCollapse side="right" :open="us.sidebarExpanded" @update:sidebar="updateSidebar()" />
   </div>
 </template>
 

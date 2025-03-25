@@ -12,12 +12,12 @@ const breadcrumbs = computed (() => {
 </script>
 
 <template>
-  <div class="w-full h-screen relative tldr-30 " :class="{ '!bg-b2/40': route.meta.background == 'b2' }">
-    <div :class="cn('flex w-full items-center overflow-hidden  gap-2 absolute z-40 top-0 left-0 bg-b1/80 backdrop-blur-md px-5  pt-3 pb-4', { '!bg-transparent !h-18 ': route.path == '/' || route.meta.background == 'b2', 'border-b border-b-b2': route.name == 'items' || route.name == 'card' }, props.headerClass)">
-      <SidebarExpandButton :expanded="us.sidebarExpanded" side="left" @click="us.triggerSidebar = true" />
+  <div class="w-full h-screen relative tldr-30 bg-b2/5" :class="{ '!bg-b2/40': route.meta.background == 'b2', '!bg-b2/10': route.name == 'card' }">
+    <div :class="cn('flex w-full items-center overflow-hidden  gap-4.5 absolute z-40 top-0 left-0 bg-b1/80 backdrop-blur-md px-2  pt-3 pb-4', { '!bg-transparent !h-18 ': route.path == '/' || route.meta.background == 'b2', 'border-b border-b-b2': route.name == 'items' || route.name == 'card', 'bg-b2/40 border-x border-x-b3/80 z-30': route.name == 'card' }, props.headerClass)">
+      <SidebarExpandButton :expanded="us.sidebarExpanded" @click="us.triggerSidebar = true" />
 
-      <div class="breadcrumbs !text-2 flex items-center **:select-none">
-        <ul class="*:capitalize">
+      <div class="!text-2 flex breadcrumbs items-center **:select-none">
+        <ul class="*:capitalize ">
           <li>
             <NuxtLink to="/">
               Home
@@ -27,6 +27,7 @@ const breadcrumbs = computed (() => {
             <li>
               {{ getPocket(route.params.pocketKey).location.folder }}
             </li>
+
             <li>
               {{ getPocket(route.params.pocketKey).name }}
             </li>
@@ -45,7 +46,7 @@ const breadcrumbs = computed (() => {
         <slot name="crumb" />
       </div>
 
-      <SidebarExpandButton v-if="us.rightbarAvailable" :expanded="us.rightbarExpanded" side="right" @click="us.triggerRightbar = true" />
+      <RightbarExpandButton v-if="us.rightbarAvailable" :expanded="us.rightbarExpanded" @click="us.triggerRightbar = true" />
     </div>
 
     <div class="inset-0 absolute left-0 top-0" :class="cn({ 'overflow-y-auto pt-34': route.path != '/' }, props.class)">

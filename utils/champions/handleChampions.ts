@@ -39,7 +39,7 @@ export const quotes = [
   '<p>"Put it on my tab, the names \'Pantheon\',with a P..."</p><p>-Aurelion Sol</p>',
   '<p>"You even die ugly"</p><p>-Qiyana</p>',
   '<p>"Caught between a rock... and a hard place."</p><p>-Malphite</p>',
-  '<p>"Same hat? Same hat."</p><p>-Auroria (to Lulu)</p>',
+  '<p>"Same hat? Same hat."</p><p>-Aurora (to Lulu)</p>',
   '<p>"Toe beans!"</p><p>-Aurora (to Yuumi)</p>',
   '<p>"I am evil! Stop laughing!"</p><p>-Veigar</p>',
   '<p>"Who\'s ready to risk our lives, defeat our foes, and maybe knock over some cups?"</p><p>-Yuumi</p>',
@@ -69,7 +69,7 @@ export const quotes = [
   '<p>"Solitude always meets my expectations."</p><p>-Ornn</p>',
   '<p>"I do not care at all."</p><p>-Ornn</p>',
   '<p>"I don\'t know what you do and I don\'t care."</p><p>-Ornn</p>',
-  '<p>"I now like you less. I did not think that was possible."</p><<p>-Ornn</p>',
+  '<p>"I now like you less. I did not think that was possible."</p><p>-Ornn</p>',
   '<p>"No."</p><p>-Ornn</p>',
 ]
 

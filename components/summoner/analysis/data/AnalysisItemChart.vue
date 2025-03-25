@@ -49,7 +49,6 @@ watchEffect(async () => {
   }
   await Promise.all(
     bayesianItems.value.map(async (item) => {
-
       await preloadItemImage(item.item.id)
 
       newDataset.data.push({
@@ -68,10 +67,11 @@ watchEffect(async () => {
     datasets: [newDataset],
   }
 })
+/* rounded-box shadow-warm-soft  border border-b3  tldr-50 */
 </script>
 
 <template>
-  <div class="px-4 pb-4 pt-8 bg-b1 rounded-box shadow-warm-soft  border border-b3 relative flex flex-col h-full   tldr-50">
+  <div class="px-4 pb-4 pt-8 bg-b1 relative flex flex-col size-full   ">
     <div class="grow pt-2 px-8 flex w-full">
       <div class="">
         <h4 class="dst">

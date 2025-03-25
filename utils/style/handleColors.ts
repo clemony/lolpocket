@@ -1,3 +1,8 @@
+export function getTailwindVar(twVar: string) {
+  const styles = getComputedStyle(document.documentElement)
+  return styles.getPropertyValue(twVar)
+}
+
 export function makeGradient(from: string, fromOpacity: number, to: string, toOpacity: number, direction: string) {
   let a = `from-${from}`
   a = fromOpacity ? `${a}/${fromOpacity}` : a
@@ -61,7 +66,7 @@ export const themes = [
     { // icon-park-outline:green-new-energy
       // game-icons:new-shoot
       // lucide:sprout
-      //ph:potted-plant
+      // ph:potted-plant
       name: 'spring',
       id: 'theme-spring',
       icon: 'pepicons-pencil:flower',

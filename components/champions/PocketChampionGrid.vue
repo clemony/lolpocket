@@ -9,7 +9,7 @@ const pocket = ref(props.pocket)
 
 <template>
   <div class="h-full w-full relative overflow-y-auto ">
-    <div class="  grid grid-flow-row auto-cols-auto select-none h-fit  grid-cols-[repeat(auto-fill,minmax(68px,1fr))]  pr-10 absolute top-0 left-0   pt-2 pb-6 inset-0  justify-start gap-4  overflow-y-auto">
+    <div class="  grid grid-flow-row auto-cols-auto select-none h-fit  grid-cols-[repeat(auto-fill,minmax(68px,1fr))]  px-18 absolute top-0 left-0   pt-2 pb-6 inset-0  justify-start gap-4  overflow-y-auto">
       <LazyChampion
         v-for="champion in ds.champions"
         :key="champion.apiname"

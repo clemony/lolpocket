@@ -95,7 +95,7 @@ export function newRuneSet(key?) {
     pocket.runes.sets.push(newSet)
 
     if (pocket.runes.sets.length == 1) {
-      pocket.runes.default = newSet.key
+      pocket.runes.default = newSet
     }
   }
   else {
@@ -265,14 +265,13 @@ export function createDefaultRuneTree() {
   }
 }
 
-export function setSpellbookRune(){
+export function setSpellbookRune() {
   const ds = useDataStore()
   const rs = useRuneStore()
-    const a = ds.paths.find(p => p.name.toLowerCase() == 'inspiration')
-    rs.hoveredRune = a.slots[0].runes.find(r => r.name == 'Unsealed Spellbook')
+  const a = ds.paths.find(p => p.name.toLowerCase() == 'inspiration')
+  rs.hoveredRune = a.slots[0].runes.find(r => r.name == 'Unsealed Spellbook')
 }
 
-    
 /*
 
 const a = computed(() => {

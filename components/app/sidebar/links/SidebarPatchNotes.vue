@@ -11,7 +11,7 @@ const patch = computed (() => {
 </script>
 
 <template>
-  <NuxtLink v-tippy="{ content: 'Official Patch Notes <icon name=`link` />', placement: 'top' }" :to="patch" target="_blank" class="group/p" external>
+  <!--  <NuxtLink v-tippy="{ content: 'Official Patch Notes <icon name=`link` />', placement: 'top' }" :to="patch" target="_blank" class="group/p" external>
     <SidebarButton class="font-mono  justify-start rounded-lg  !text-1 font-medium  dst ">
       <SidebarIcon name="ph:note-light" />
       <SidebarText v-if="us.sidebarExpanded" class="pt-0.5">
@@ -22,5 +22,16 @@ const patch = computed (() => {
         <icon v-if="us.sidebarExpanded" name="link" class="size-4.5  shrink-0 opacity-0 group-hover/p:opacity-100 transition-opacity dr-20" />
       </SidebarBadge>
     </SidebarButton>
+  </NuxtLink> -->
+
+  <NuxtLink :to="patch" target="_blank" external>
+    <ContrastDropdownItem class="flex items-center">
+      <SidebarIcon name="ph:note-light" />
+      {{ ds.currentPatch }} Patch Notes
+
+      <DropdownMenuShortcut>
+        <icon name="ph:arrow-square-out" class="size-3.5  shrink-0 " />
+      </DropdownMenuShortcut>
+    </ContrastDropdownItem>
   </NuxtLink>
 </template>

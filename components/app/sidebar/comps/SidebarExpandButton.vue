@@ -1,14 +1,18 @@
 <script lang="ts" setup>
 const props = defineProps<{
   expanded: boolean
-  side: 'left' | 'right'
 }>()
 </script>
 
 <template>
-  <button v-tippy="(!props.expanded && props.side == 'right') || (props.expanded && props.side == 'left') ? 'Collapse Sidebar' : 'Expand Sidebar'" class="btn btn-ghost btn-square *:absolute relative *:size-5.25  *:opacity-90 *:shrink-0">
-    <icon v-if="(!props.expanded && props.side == 'right') || (props.expanded && props.side == 'left')" name="octicon:sidebar-expand-24" />
-
-    <icon v-else name="octicon:sidebar-collapse-24" />
+  <button v-tippy="props.expanded ? 'Collapse Sidebar' : 'Expand Sidebar'" class="btn btn-ghost btn-square flex items-center   relative ">
+    <AnimatePresence>
+      <Motion v-if="props.expanded" :transition="{ opacity: 0, width: 0 }" as-child>
+        <icon name="system-uicons:push-right" class="rotate-180 shrink-0 size-5.5 dst absolute" />
+      </Motion>
+      <Motion v-else as-child :transition="{ opacity: 100, width: 100 }">
+        <icon name="system-uicons:pull-right" class="shrink-0 size-5.5 dst absolute" />
+      </Motion>
+    </AnimatePresence>
   </button>
 </template>
