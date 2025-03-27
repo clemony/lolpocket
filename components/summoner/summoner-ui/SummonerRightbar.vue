@@ -4,19 +4,11 @@ const route = useRoute()
 
 <template>
   <transition-slide group as="div" class="w-full flex  flex-col gap-8 overflow-hidden pt-22 px-3">
-    <div class="size-fit">
-    </div>
-    <AnalysisHeader />
+    <ResearchHeader />
     <Separator class="bg-b2" />
 
-    <div v-if="route.path.match(/\/summoner\/analysis/)" class="flex flex-col">
-      <RightbarLink to="/analysis">
-        Items
-      </RightbarLink>
-
-      <RightbarLink to="/analysis/champions">
-        Champions
-      </RightbarLink>
+    <div v-if="route.path.match(/\/summoner\/research/)" class="flex flex-col">
+      <ResearchNavTabs />
 
       <Separator class="bg-b2" />
       <PatchSelectDropdown />

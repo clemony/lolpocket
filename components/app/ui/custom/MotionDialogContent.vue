@@ -34,7 +34,7 @@ const dialogOpenState = {
     ease: [0.17, 0.67, 0.51, 1],
     opacity: {
       delay: 0.2,
-      duration: 0.3,
+      duration: 0.2,
       ease: 'easeOut',
     },
   },
@@ -66,7 +66,7 @@ const dialogInitialState = {
       v-bind="forwarded"
       :class="
         cn(
-          'fixed left-[35%] top-[20%] z-50 isolate grid w-full max-w-160  translate-y-1/2 gap-4 border bg-b1 px-10 py-8 shadow-lg duration-200  data-[state=closed]:animate-out data-[state=closed]:fade-out-0  data-[state=closed]:zoom-out-95  data-[state=closed]:slide-out-to-bottom-[48%]  sm:rounded-xl',
+          'fixed left-[35%] top-[20%] z-50 isolate grid w-full max-w-160  translate-y-1/2 gap-4 border bg-b1 px-10 py-8 shadow-lg data-[state=closed]:duration-200  data-[state=closed]:animate-out data-[state=closed]:fade-out-0  data-[state=closed]:zoom-out-95  data-[state=closed]:slide-out-to-bottom-[48%]  sm:rounded-xl',
           props.class,
         )">
       <Motion
@@ -75,7 +75,7 @@ const dialogInitialState = {
         <slot />
 
         <DialogClose
-          class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+          class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-b3 focus:ring-offset-2 disabled:pointer-events-none ">
           <icon name="x-sm" class="size-6" />
           <span class="sr-only">Close</span>
         </DialogClose>

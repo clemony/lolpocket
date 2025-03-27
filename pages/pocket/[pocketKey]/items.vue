@@ -13,7 +13,6 @@ const pocket = ref(props.pocket)
 
 <template>
   <div class="size-full overflow-hidden  ">
-
     <ResizablePanelGroup
       direction="horizontal"
       class="size-full">
@@ -23,12 +22,10 @@ const pocket = ref(props.pocket)
       <ResizableHandle
         class="bg-b3/40" with-handle />
       <ResizablePanel :min-size="10" class=" relative  overflow-hidden flex flex-col  justify-end">
-
         <div class="h-full z-0 w-full ">
           <div class="size-full  relative  transition-all duration-500 justify-center overflow-y-auto  ">
             <DraggableItemList :pocket="pocket" :class="{ }" />
           </div>
-          <LazyItemInfoPane />
         </div>
       </ResizablePanel>
     </ResizablePanelGroup>

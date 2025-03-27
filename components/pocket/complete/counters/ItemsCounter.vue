@@ -17,6 +17,6 @@ const itemsLength = computed (() => {
 
 <template>
   <div v-tippy="`${itemsLength ? itemsLength : 'no'} item sets`" class="flex gap-2.5 items-center">
-    <span class="dst font-mono text-1 opacity-60 -mr-2">{{ itemsLength }}</span>
+    <span class="dst font-mono text-1 opacity-60 ">{{ itemsLength }}</span>
   </div>
 </template>

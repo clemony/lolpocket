@@ -7,13 +7,15 @@ const route = useRoute()
 const pocket = computed (() => {
   return props.pocket
 })
+
+const cs = useChampStore()
 </script>
 
 <template>
   <Collapsible>
-    <CollapsibleTrigger class="join w-full group/trig" :disabled="!pocket.champions.children.length">
-      <RightbarLink :to="`/pocket/${pocket.key}`">
-        <RightbarIconWrapper :active="pocket.champions.default && pocket.champions.default.id != null">
+    <CollapsibleTrigger class="w-full group/state" >
+      <RightbarButton>
+        <RightbarIconWrapper v-tippy="{content: '', trigger: 'click', triggerRef: cs.champTrigger,  placement: 'left', arrow: true, }" :active="pocket.champions.default && pocket.champions.default.id != null">
           <i-no-champ
             v-if="pocket.champions.default == null"
             class="h-6 w-auto dst shrink-0 peer-checked:text-nc opacity-64" />
@@ -22,14 +24,14 @@ const pocket = computed (() => {
           </span>
         </RightbarIconWrapper>
         <span class="capitalize">
-          {{ pocket.champions.default.name || 'Champions' }}
+          {{ pocket.champions.default && pocket.champions.default.name ? pocket.champions.default.name : 'Champions' }}
 
         </span>
         <Grow />
 
-        <ChampionsCounter :pocket="pocket" />
-      </RightbarLink>
-      <RightbarSplitToggle route-name="champions" />
+        <ChampionsCounter :pocket="pocket" />&nbsp;
+   <StateCaret  />
+               </RightbarButton>
     </CollapsibleTrigger>
 
     <RightbarChildContent>

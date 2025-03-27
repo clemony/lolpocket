@@ -10,51 +10,77 @@ const pocket = computed (() => {
 const route = useRoute()
 
 const rs = useRuneStore()
+
+const pocketNav = ref()
+
+onMounted (() => {
+  pocketNav.value = route.path
+})
 </script>
 
 <template>
   <div class="inset-0 top-0 left-0  overflow-hidden  flex  flex-col h-full">
-    <div class="items-center w-full pt-12  flex flex-col gap-6 pb-12  px-3">
+    <div class="items-center w-full pt-10  flex flex-col gap-6  px-3">
       <LazyPopover>
-        <PopoverTrigger class="group/picon z-0 !cursor-pointer  aspect-square size-24  rounded-full !pointer-events-auto shadow-sm !drop-shadow-none  bg-gradient-to-br from-neutral/60 to-neutral grid place-items-center relative">
-          <PocketIcon :image="pocket.icon" class="size-24 pointer-events-none group-hover/picon:opacity-50 z-1 group-data-[state=open]/picon:opacity-50 tldr-30" />
+        <PopoverTrigger class="group/picon z-0 !cursor-pointer self-center  !size-28   rounded-full !pointer-events-auto shadow-sm  inset-shadow-sm aspect-square  grid place-items-center relative">
+          <div class="size-full rounded-full overflow-hidden relative ">
+            <Image v-if="pocket.icon != '/img/champion/centered/1.webp'" :image="pocket.icon" alt="pocket icon" class=" pointer-events-none group-hover/picon:brightness-50 z-1 group-data-[state=open]/picon:brightness-50 scale-280  tldr-30 object-cover rounded-xl absolute top-17 left-1  " />
+            <div v-else class="size-full bg-gradient-to-br from-neutral/80 to-neutral grid place-items-center text-nc font-semibold text-6 dst">
+              LP
+            </div>
+          </div>
           <icon name="entypo:images" class="size-8 !text-nc absolute opacity-0  group-hover/picon:opacity-80 z-2 transition-all  duration-300 group-data-[state=open]/picon:opacity-100" />
         </PopoverTrigger>
-        <LazyIconPopover :pocket="pocket" :align-offset="-82" align="end" class="bg-b2/50 backdrop-blur-md" :b2="true" />
+        <LazyIconPopover :pocket="pocket" align="end" class="bg-neutral/85  backdrop-blur-md w-86" :b2="true" />
       </LazyPopover>
 
-      <h1 class="font-serif text-9 font-black">
-        {{ pocket.name }}
-      </h1>
+      <div class="w-full relative mb-8 pr-1 mt-3">
+        <EditablePocketHeader :pocket="pocket" class="font-serif dst !text-7 font-black" />
+      </div>
     </div>
 
+    <Tabs v-model:model-value="pocketNav" class="pl-3 pr-4 w-full mt-1 mb-4" @update:model-value="e => navigateTo(e.toString())">
+      <TabsList class="w-full grid grid-cols-3">
+        <HoverTabsTrigger :value="`/pocket/${pocket.key}`">
+          Champions
+        </HoverTabsTrigger>
+        <HoverTabsTrigger :value="`/pocket/${pocket.key}/items`">
+          Items
+        </HoverTabsTrigger>
 
+        <HoverTabsTrigger :value="`/pocket/${pocket.key}/runes`">
+          Runes
+        </HoverTabsTrigger>
+      </TabsList>
+    </Tabs>
     <div class="  overflow-y-scroll   px-3 flex flex-col gap-3 grow">
-      
-    <div class="w-full flex justify-between items-end h-fit">
-      <RightbarLabel class="pt-0">Create</RightbarLabel>
-      <button v-tippy="'Collapse All'" class="*:text-bc/50  hover:*:text-bc btn btn-ghost btn-sm btn-square  mr-2.25 cursor-pointer -mb-1">
-        <icon name="minus" class="shrink-0 size-5 dst   "/>
-      </button>
+      <div class="w-full flex justify-between items-end h-fit">
+        <RightbarLabel class="pt-0">
+          Create
+        </RightbarLabel>
+        <button v-tippy="'Collapse All'" class="*:text-bc/50  hover:*:text-bc btn btn-ghost btn-sm btn-square  mr-1.75 cursor-pointer -mb-1">
+          <icon name="minus" class="shrink-0 size-5 dst   " />
+        </button>
+      </div>
 
-    </div>
+      <LayoutGroup>
+        <PocketChampionsCollapsible :pocket="pocket" />
+        <PocketItemsCollapsible :pocket="pocket" />
+        <PocketRunesCollapsible :pocket="pocket" />
+        <PocketRolesCollapsible :pocket="pocket" />
+        <PocketSpellsCollapsible :pocket="pocket" />
 
-      <PocketChampionsCollapsible :pocket="pocket" />
-      <PocketItemsCollapsible :pocket="pocket" />
-      <PocketRunesCollapsible :pocket="pocket" />
-      <PocketRolesCollapsible :pocket="pocket" />
-      <PocketSpellsCollapsible :pocket="pocket" />
+        <RightbarLabel>Reflect</RightbarLabel>
+        <PocketSummaryButton :pocket="pocket" @click="pocketNav = null" />
+        <PocketCardButton :pocket="pocket" @click="pocketNav = null" />
 
-      <RightbarLabel>Reflect</RightbarLabel>
-            <PocketSummaryButton :pocket="pocket" />
-      <PocketCardButton :pocket="pocket"  />
-
-      <RightbarLabel v-if="route.name == 'items' || route.name == 'runes'">
-        Inspect
-      </RightbarLabel>
-      <ItemInfoCollapsible v-if="route.name == 'items'" />
-      <RuneInfoCollapsible
-        v-if="rs.hoveredRune && route.name == 'runes'" />
+        <RightbarLabel v-if="route.name == 'items' || route.name == 'runes'">
+          Inspect
+        </RightbarLabel>
+        <ItemInfoCollapsible v-if="route.name == 'items'" />
+        <RuneInfoCollapsible
+          v-if="rs.hoveredRune && route.name == 'runes'" />
+      </LayoutGroup>
     </div>
     <PocketRightbarFooter :pocket="pocket" />
   </div>

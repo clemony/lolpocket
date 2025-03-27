@@ -3,9 +3,9 @@ import { SplitterPanel as ResizablePanel } from 'reka-ui'
 
 definePageMeta({
 
-  name: 'analysis',
-  title: 'analysis',
-  // path: '/summoner/analysis',
+  name: 'research',
+  title: 'research',
+redirect: '/summoner/research/champions',
 })
 
 const ds = useDataStore()

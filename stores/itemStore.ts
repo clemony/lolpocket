@@ -3,6 +3,7 @@ import type { GridApi } from 'ag-grid-community'
 
 export const useItemStore = defineStore('itemStore', () => {
   const selectedItem = ref<Item>(null)
+  const selectedDatabaseItem = ref<Item>(null)
   const selectedItemSet = ref<ItemSet | null>(null)
   const priceModel = ref(0)
   const AZmodel = ref(0)
@@ -37,6 +38,7 @@ export const useItemStore = defineStore('itemStore', () => {
 
   return {
     selectedItem,
+    selectedDatabaseItem,
     selectedItemSet,
     itemPaneOpen,
     AZmodel,

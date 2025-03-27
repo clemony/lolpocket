@@ -15,18 +15,20 @@ const spell = computed (() => {
 
 <template>
   <Collapsible>
-    <RightbarDropdownTrigger>
-      <RightbarIconWrapper :active="spell != null">
-        <i-tft-attach v-if="spell == null" class="size-4.5 opacity-65" />
-        <img v-else :src="`/img/spells/${spell.name}.webp`" class="size-full rounded-full" />
-      </RightbarIconWrapper>
-      <span class="capitalize">
-        {{ `${pocket.spells.default[0].name} / ${pocket.spells.default[1].name}` || 'Spells' }}
-      </span>
-      <template #counter>
-        <SpellsCounter :pocket="pocket" />
-      </template>
-    </RightbarDropdownTrigger>
+    <CollapsibleTrigger class="w-full group/state">
+      <RightbarButton field>
+        <RightbarIconWrapper :active="spell != null">
+          <i-tft-attach v-if="spell == null" class="size-4.5 opacity-65" />
+          <img v-else :src="`/img/spells/${spell.name}.webp`" class="size-full rounded-full" />
+        </RightbarIconWrapper>
+        <span class="capitalize">
+          {{ pocket.spells.default && pocket.spells.default[0] ? pocket.spells.default[0].name : 'Spells' }} {{ pocket.spells.default && pocket.spells.default[1] ? `/ ${pocket.spells.default[1].name}` : '' }}
+        </span>
+        <Grow />
+        <SpellsCounter :pocket="pocket" />&nbsp;
+        <StateCaret />
+      </RightbarButton>
+    </CollapsibleTrigger>
     <FieldCollapsibleContent class="!pb-3">
       <div class="flex flex-col-reverse gap-2">
         <SpellSet v-for="(set, i) in pocket.spells.sets" :key="i" :set="set" :pocket="pocket" :set-index="i" />

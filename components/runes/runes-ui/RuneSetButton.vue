@@ -40,7 +40,7 @@ onMounted (async () => {
     v-if="set && set.key"
     :key="set.key"
     class=" shadow-outline shadow-black/15 "
-    :class="cn('relative !pointer-events-auto size-18 grid aspect-square cursor-pointer   place-items-center overflow-visible items-center rounded-full transition-all duration-500 ring-1 ring-b2 ', props.class, { 'shadow-black': set == selectedSet })"
+    :class="cn('relative !pointer-events-auto size-18 cursor-pointer transition-all duration-500 grid aspect-square   place-items-center overflow-visible  rounded-full  ring-1 ring-b2 ', props.class, { 'shadow-black': set == selectedSet })"
     @click="handleSet()">
     <!--    <div v-if="set == rs.selectedRuneSet && !props.noCheck" v-tippy="'Default Set'" class="absolute size-fit rounded-full shadow-warm-2 drop-shadow-sm -bottom-1 z-1 -left-1.5">
       <input type="checkbox" :checked="set == rs.selectedRuneSet" class="peer checkbox checkbox-neutral checkbox-sm drop-shadow-sm rounded-full pointer-events-none " />
@@ -56,7 +56,7 @@ onMounted (async () => {
 
       @change="rs.selectedRuneSet = set" />
 
-    <div class="from-b1/90 to-b1/40 grid place-items-center rounded-full bg-gradient-to-br aspect-square  backdrop-blur-md overflow-hidden size-full ">
+    <div class="grid place-items-center aspect-square  rounded-full bg-gradient-to-br from-b1/90 to-b1/40  backdrop-blur-md overflow-hidden size-full ">
       <div class="p-1.5 size-full grid place-items-center">
         <i-rune-icon v-if="!set.primary.runes || !set.primary.runes[0].id || set.primary.runes[0].name == 'empty'" class="size-9.5 opacity-40 dst" />
         <img

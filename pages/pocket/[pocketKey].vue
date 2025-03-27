@@ -5,9 +5,7 @@ const us = useUiStore()
 const route = useRoute()
 
 const pocket = ref(getPocket(route.params.pocketKey))
-definePageMeta({
-  // background: 'b2',
-})
+
 const selectedRuneSet = ref(pocket.value?.runes.sets?.[0] ?? null)
 </script>
 

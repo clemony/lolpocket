@@ -6,7 +6,7 @@
   --b3: oklch(89% 0 0);
   --bc: oklch(0% 0.02476 255.701624);
   --neutral: oklch(0% 0.02476 255.701624);
-  --nc: oklch(100% 0 0);
+  --nc: oklch(89% 0 0);
 }
 
 [data-theme='dawn'] {
@@ -64,12 +64,12 @@
 }
 
 [data-theme='autumn'] {
-  --b1:  #7D756D;
-  --b2: #6D6660;
-  --b3: #5F5750;
-  --bc: oklch(100% 0 0);
-  --neutral:#534C48;
-  --nc: oklch(100% 0 0);
+  --b1:  #635A53;
+  --b2: #706A63;
+  --b3:#5B5550;
+  --bc:  #DED9D6;
+  --neutral:##534C48;
+  --nc: oklch(98% 0.016 73.684);
 }
 [data-theme='winter'] {
   --b1: oklch(95.127% 0.007 260.731);

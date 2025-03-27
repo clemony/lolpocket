@@ -9,6 +9,11 @@ const route = useRoute()
 const breadcrumbs = computed (() => {
   return route.fullPath.split('/')
 })
+
+const pocketName = computedAsync (() => {
+  const p = getPocket(route.params.pocketKey)
+  return p.name
+})
 </script>
 
 <template>
@@ -25,11 +30,11 @@ const breadcrumbs = computed (() => {
           </li>
           <template v-if="route.path.match(/pocket\//)">
             <li>
-              {{ getPocket(route.params.pocketKey).location.folder }}
+              Pocket
             </li>
 
             <li>
-              {{ getPocket(route.params.pocketKey).name }}
+              {{ pocketName }}
             </li>
           </template>
           <template v-else>

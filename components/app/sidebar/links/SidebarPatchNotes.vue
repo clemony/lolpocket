@@ -26,7 +26,7 @@ const patch = computed (() => {
 
   <NuxtLink :to="patch" target="_blank" external>
     <ContrastDropdownItem class="flex items-center">
-      <SidebarIcon name="ph:note-light" />
+      <SidebarIcon name="fluent:notepad-24-regular" class="size-5.25"/>
       {{ ds.currentPatch }} Patch Notes
 
       <DropdownMenuShortcut>

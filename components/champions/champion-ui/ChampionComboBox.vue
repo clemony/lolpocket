@@ -18,7 +18,6 @@ function selectRandomChamp() {
 }
 
 onMounted (() => {
-  selectRandomChamp()
 })
 </script>
 

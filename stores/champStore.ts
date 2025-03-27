@@ -7,12 +7,14 @@ export const useChampStore = defineStore('ChampStore', () => {
   const champSearch = ref('')
   const champClassFilters = ref([])
 
+  const champTrigger = ref(null)
   const filterChampionClass = ref([])
   const filterChampionTypes = ref(null)
   const filterFavoriteChamps = ref(false)
 
   return {
     championSplashDropdown,
+    champTrigger,
     selectedChampion,
     sortChampsAZ,
     champClassFilters,

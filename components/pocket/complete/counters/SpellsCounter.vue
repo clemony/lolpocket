@@ -8,7 +8,6 @@ const pocket = ref(props.pocket)
 const spellsLength = computed (() => {
   return 1
 })
-console.log('💠 - spellsLength - pocket.value.spells.sets:', pocket.value.spells.sets)
 </script>
 
 <template>

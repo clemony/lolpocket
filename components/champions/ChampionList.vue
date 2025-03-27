@@ -77,19 +77,20 @@ watch(
 </script>
 
 <template>
-  <TransitionSlide
-    group
-    class="max-h-full user-select-none grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-1 overflow-auto pr-10  pl-16  rounded-lg pb-8 pt-34">
-    <ChampionSplash
+  <div
+    class=" user-select-none grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-1 overflow-auto pr-10  pl-16  rounded-lg pb-8 pt-14">
+    <LazyChampionFullPopover
       v-for="champion in filteredChampions"
       :key="champion.id"
       :champion="champion"
       class="champion w-full"
       drag-class="setDrag"
-      @click.right.prevent
-      @click="cs.selectedChampion = champion" />
-  </TransitionSlide>
-  <div as="div" class="h-full pt-34 w-full px-6">
+      hydrate-on-visible
+      @click.right.prevent>
+    </LazyChampionFullPopover>
+  </div>
+
+  <!-- <div as="div" class="h-full pt-34 w-full px-6">
     <div class=" flex flex-col  gap-6">
       <h2 class="mt-1">
         Roles
@@ -109,7 +110,7 @@ watch(
         class=""
         @update:model="(e) => (cs.filterChampionTypes = e)" />
     </div>
-  </div>
+  </div> -->
 </template>
 
 <style scoped></style>

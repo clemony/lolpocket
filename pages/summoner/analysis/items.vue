@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 definePageMeta({
 
-  alias: '/summoner/analysis',
+  path: '/summoner/research/items',
 })
 const ans = useAnalysisStore()
 </script>
@@ -10,13 +10,13 @@ const ans = useAnalysisStore()
   <!--
   <div class="flex flex-col gap-8 size-full min-w-110 max-w-230 pb-10">
     <div class="min-h-130 h-130">
-      <AnalysisItemChart />
+      <ResearchItemChart />
     </div>
     <div class="grid grid-cols-[100px_1fr] size-full gap-8">
       <PocketPickItem :patch-games="ans.patchGames" />
       <div class="relative size-full grid place-items-center pb-10">
         <div class="absolute inset-0 top-0 left-0 overflow-auto">
-          <AnalysisItemList />
+          <ResearchItemList />
         </div>
       </div>
     </div>
@@ -24,7 +24,7 @@ const ans = useAnalysisStore()
 
   <ResizablePanelGroup direction="vertical" as="div" class="size-full">
     <ResizablePanel class="px-18 pb-6">
-      <AnalysisItemChart />
+      <ResearchItemChart />
     </ResizablePanel>
 
     <ResizableHandle />
@@ -35,7 +35,7 @@ const ans = useAnalysisStore()
         <ResizableHandle />
 
         <ResizablePanel>
-          <AnalysisItemList />
+          <ResearchItemList />
         </ResizablePanel>
       </ResizablePanelGroup>
     </ResizablePanel>

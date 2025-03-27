@@ -46,7 +46,7 @@
   --noise: 0.5;
   --radius-selector: 0.4rem;
   --radius-box: 1rem;
-  --radius-field: 0.6rem !important;
+  --radius-field: 0.55rem !important;
 }
 
 @layer components {
@@ -77,7 +77,7 @@
   
 
   .btn-neutral {
-    @apply !shadow-xs;
+    @apply !shadow-none;
     background-color: var(--color-neutral);
     color: var(--color-nc);
     

@@ -49,7 +49,7 @@
   }
   
   body {
-    @apply bg-b1 @container/app ;
+    @apply bg-b1 @container/app relative ;
   }
   
   p {

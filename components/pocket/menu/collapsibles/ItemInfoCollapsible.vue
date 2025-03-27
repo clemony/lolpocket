@@ -90,17 +90,14 @@ watchEffect(() => {
         </div>
 
         <div class="flex grow items-center gap-3">
-          <slot />
-
-          <a
-            v-tippy="'Official Wiki'"
-            class="hover:border-b-bc/70 border-b-2 border-b-transparent transition dr-20  flex items-center"
-            :href="getWikiLink(item.name)"
-            target="_blank"
-            alt="link to league wiki">
-            <icon name="la:wikipedia-w" class="size-6 dst" />
-          </a>
-
+          <MotionDialog class="px-0">
+            <template #trigger>
+              <button v-tippy="'Pop Out'" class="btn btn-sm btn-ghost btn-square size-7 hover:bg-neutral hover:*:text-nc ">
+                <icon name="radix-icons:open-in-new-window" class="size-5 dst" />
+              </button>
+            </template>
+            <LazyItemInfoPane />
+          </MotionDialog>
           <label
             v-tippy="'Add Favorite'"
             class="rating cursor-pointer !pointer-events-auto rating-xs  group" @click.stop>
@@ -113,6 +110,14 @@ watchEffect(() => {
               class="mask mask-heart "
               :class="{ 'group-hover:opacity-40 dst  transition-all duration-300': !as.favoriteItems.includes(item) }" />
           </label>
+          <a
+            v-tippy="'Official Wiki'"
+            class="btn btn-sm btn-ghost btn-square size-7 hover:bg-neutral hover:*:text-nc "
+            :href="getWikiLink(item.name)"
+            target="_blank"
+            alt="link to league wiki">
+            <icon name="la:wikipedia-w" class="size-6 dst" />
+          </a>
         </div>
       </div>
       <template v-if="stats">

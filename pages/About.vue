@@ -53,7 +53,7 @@ const icons = [
 
 ]
 
-const hoverClass = 'hover:underline hover:bg-b2/35 underline-offset-2 !cursor-pointer'
+const hoverClass = 'r'
 
 const faq = [
   {
@@ -65,42 +65,47 @@ const faq = [
 
 <template>
   <NuxtLayout name="header-layout" class="px-18  w-full justify-center">
-    <!-- prettier-ignore -->
+ 
 
-    <div class="flex w-[500px] flex-col gap-6 pt-24 items-center mx-auto">
-      <div
-        class="mockup-code bg-neutral text-nc *:ws-nowrap w-2/5 min-w-[400px] rounded-2xl w-full leading-loose font-normal **:select-none **:text-3">
-        <pre
-          data-prefix="$"><code class="h-20 scale-x-110">const CatTax: cat&#60;image: popUp&#62; = {</code></pre>
-        <pre data-prefix=">" class="flex">
-                <code class="flex leading-none pt-2">&nbsp; 'Clem':&nbsp;{ image:
-          <span :class="hoverClass">&nbsp; 1</span>, <span :class="hoverClass">&nbsp;2</span>, <span :class="hoverClass">&nbsp;3&nbsp;</span>}, </code></pre> <pre
-          data-prefix=">"
-          class="flex items-center"><code class="flex leading-none pt-3">&nbsp; 'Nell':&nbsp;{ image: <span
-            :class="hoverClass">&nbsp;1</span>, <span :class="hoverClass">&nbsp;2</span>, <span :class="hoverClass">&nbsp;3&nbsp;</span>},
-    </code></pre>
-        <pre
-          data-prefix=" "
-          class="flex"><code class="flex items-center">&nbsp; };<span class="animate-[blink-1_1s_infinite_both] text-4">|</span>
-  </code></pre>
-        <pre
-          data-prefix=" "
-          class="flex"><code class="flex items-center">&nbsp;<span class=" text-4"></span>
-  </code></pre>
-        <pre
-          data-prefix=">"
-          class="flex"><code class="flex items-center">&nbsp;<span class="text-4"><span v-tippy="'! (logical NOT) operator'" class="hover:bg-b3 hover:text-bc">!</span>frequently asked questions</span>
-  </code></pre>
-        <pre
-          data-prefix=">"
-          class="flex"><code class="flex items-center">&nbsp;<span class="text-4"> [Q] Where going? </span>
-  </code></pre>
-        <pre
-          data-prefix=">"
-          class="flex"><code class="flex items-center">&nbsp;<span class="text-4 gap-3 flex"> [LP]<icon name="hugeicons:moon-01" class="size-7 text-nc stroke-1" /></span>
-  </code></pre>
+    <div class="flex w-210  flex-col gap-6 pt-24 items-center mx-auto">
+
+<div class="grid grid-cols-[20px_1fr] w-full gap-x-14 **:font-mono  mockup-code text-nc text-3  ">
+  <div class="col-start-1 grid pl-6 gap-y-1 items-center">
+<div v-for="index in 13" class="grid items-center">{{index}}</div>
+  </div>
+
+  <div class="col-start-2 grid h-fit  gap-y-1 items-center">
+<div>const CatTax: cat&#60;image: popUp&#62; = {</div>
+  <div class="gap-y-1 grid tiems-center pl-6">
+  <div>'Clem': {</div>
+    <div class="flex items-center gap-1 pl-6">image:
+      <span class="w-4" /> [
+          <CatDialog>1,</CatDialog>
+          <CatDialog>2,</CatDialog>
+          <CatDialog>3,</CatDialog>
+          <CatDialog>4</CatDialog> ],
+        </div>
+          <div>},</div>
+      <div class="opacity-0">. </div>
+          <div>'Nell': {</div>
+        <div class="flex items-center gap-1 pl-6">image:
+            <span class="w-4" /> [
+          <CatDialog>1,</CatDialog>
+          <CatDialog>2,</CatDialog>
+          <CatDialog>3,</CatDialog>
+          <CatDialog>4</CatDialog>],
+        </div>
+          <div>};<span class="animate-[blink-1_1s_infinite_both] text-4">|</span>
+</div></div>
+  <div class="opacity-0">. </div>
+      <div> <span v-tippy="'! (logical NOT) operator'" class="hover:bg-b3 hover:text-bc">!</span><span>frequently asked questions</span></div>
+
+ <span class="pl-6">[Q] Where going? </span>
+
+ <span class="text-4 gap-3 flex pl-6"> [LP]<icon name="hugeicons:moon-01" class="size-7 text-nc stroke-0.8 mb-1" /></span>
+ 
       </div>
-
+</div>
       <div
         class="items-end self-end flex flex-col pr-3 mt-2 gap-2 py-4 **:dst">
         <p class="">

@@ -3,29 +3,43 @@ const props = defineProps<{
   pocket: pocket
 }>()
 
-const route = useRoute()
+const pocket = computed (() => {
+  return props.pocket
+})
+const coreItem = computed (() => {
+  return pocket.value.items.default.items
+})
 </script>
 
 <template>
   <Collapsible>
-    <CollapsibleTrigger class="join w-full">
-      <NuxtLink :to="`/pocket/${pocket.key}/items`" class="btn grow gap-4 items-center capitalize btn-ghost btn-lg group/btn justify-start text-3 font-medium join-item" :class="{ 'btn-active [&_span]:border-b1 [&_span]:inset-shadow-black/16 [&_span]:bg-b1/60  border-r-b2': route.name == 'items' }" @click.stop>
-        <span class="size-8.5 border-b3 inset-shadow-sm rounded-full flex items-center justify-center bg-b2 group-hover/btn:bg-b3/60">
+    <CollapsibleTrigger class="w-full group/state">
+      <RightbarButton>
+        <RightbarIconWrapper>
+          <Image v-if="pocket.items.default && pocket.items.default?.items[2]?.id" :image="`/img/item/${coreItem[2]?.id}.webp`" :alt="coreItem[2]?.name" class="rounded-full" />
           <icon
+            v-else
             name="bow"
             class="h-4.5 w-auto dst shrink-0 peer-checked:text-nc" />
-        </span>
+        </RightbarIconWrapper>
+
         Items
         <Grow />
 
-        <ItemsCounter :pocket="pocket" />
-      </NuxtLink>
-      <div class="btn btn-square btn-lg join-item  items-center  btn-ghost btn-lg group/btn cursor-pointer " :class="{ 'btn-active  border-l-none': route.name == 'items' }">
-        <icon name="up-sm" class="group-data-[state=open]/btn:rotate-180 size-4.5" />
-      </div>
+        <ItemsCounter :pocket="pocket" />&nbsp;
+
+        <StateCaret />
+      </RightbarButton>
     </CollapsibleTrigger>
-    <CollapsibleContent class="CollapsibleContent w-full ">
-      h
-    </CollapsibleContent>
+    <Motion as-child :layout="true">
+      <CollapsibleContent class="CollapsibleContent relative">
+        <PocketItemChild v-for="set in pocket.items.sets" :key="set.key" :set="set" :pocket="pocket" />
+        <div class="w-full flex pr-9 pl-10 mt-2 ">
+          <button class="btn btn-sm px-5 w-full btn-neutral justify-end text-2 *:text-nc/80 hover:!bg-neutral/85" @click="newItemSet(pocket.key)">
+            <icon name="add-sm" class="stroke-[1.5] size-6" />Item Set
+          </button>
+        </div>
+      </CollapsibleContent>
+    </Motion>
   </Collapsible>
 </template>

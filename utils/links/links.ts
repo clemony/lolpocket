@@ -2,14 +2,14 @@ export const summonerLinks = [
   {
     name: `Board`,
     link: '/summoner',
-    icon: 'ph:chalkboard-simple', // gala:calendar
+    icon: 'iconoir:shop-window', // gala:calendar vaadin:pin-post'
     iconSolid: 'clarity:calendar-solid',
     iconBold: 'ph:chalkboard-simple-bold',
   },
   {
-    name: 'Analyze',
-    link: '/summoner/analysis',
-    icon: 'ph:atom',
+    name: 'Research',
+    link: '/summoner/research',
+    icon: 'iconoir:round-flask',
     iconSolid: 'mdi:graph-box',
     iconBold: 'ph:atom-bold',
   },
@@ -237,6 +237,7 @@ export const infoLinks = [
   {
     name: 'About',
     url: '/About',
+    icon: 'ph:cat',
     type: 'i',
   },
   {
@@ -246,6 +247,7 @@ export const infoLinks = [
   },
   {
     name: 'contact@lolpocket.win',
+    icon: 'ph:envelope',
     url: '',
     type: 'ex',
   },

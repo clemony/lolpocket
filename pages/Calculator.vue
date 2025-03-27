@@ -2,7 +2,7 @@
 import { useScroll } from '@vueuse/core'
 
 definePageMeta({
-  background: 'b2',
+
 })
 
 const is = useItemStore()

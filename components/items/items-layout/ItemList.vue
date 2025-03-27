@@ -15,13 +15,13 @@ const list = computed(() => {
     :key="props.listKey"
     group
     :class="cn('user-select-none grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(60px,1fr))] gap-5   rounded-lg  ', props.class)">
-    <Item
+    <LazyItem
       v-for="item in list"
       :key="item.id"
       :item="item"
       class=""
-      @click.right.prevent
-      @click="is.selectedItem = item" />
+      hydrate-on-visible
+      @click.right.prevent @click="is.selectedDatabaseItem = item" />
   </transition-slide>
 </template>
 

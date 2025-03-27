@@ -45,14 +45,13 @@ function handleReset() {
 
     <transition-slide tag="form" group class="filter gap-2">
       <input
-        class="btn filter-reset bg-b1 text-6 !font-normal text-bc" type="checkbox"
-        name="roles" aria-label="x" @click="pocket.roles = []" />
+        class="btn filter-reset bg-b1 text-6 !font-normal text-bc peer" type="checkbox"
+        name="roles" aria-label="x" @click="pocket.roles = [null]" />
       <label
         v-for="role in sortedRoles"
         :key="role"
         :for="role"
-        class="flex gap-3  capitalize text-2 btn bg-b1 !rounded-lg has-checked:!bg-neutral has-checked:!btn-neutral has-checked:text-nc"
-        :class="{ 'first-of-type:!-ml-2': !pocket.roles.length }">
+        class="flex gap-3 peer-not-checked:first-of-type:-ml-2  capitalize text-2 btn bg-b1 !rounded-lg has-checked:!bg-neutral has-checked:!btn-neutral has-checked:text-nc">
         <input
           :id="role"
           v-model="pocket.roles"

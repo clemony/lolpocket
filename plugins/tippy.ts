@@ -13,6 +13,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         placement: 'bottom-start',
         allowHTML: true,
         arrow: false,
+        hideOnClick: false,
         followCursor: 'horizontal',
         inertia: true,
         delay: [400, 0],

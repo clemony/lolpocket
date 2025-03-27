@@ -10,7 +10,7 @@ const us = useUiStore()
   <Collapsible v-model:is-open="isOpen" :disabled="!us.sidebarExpanded">
     <NuxtLink v-tippy="!us.sidebarExpanded ? 'Info' : null" :to="!us.sidebarExpanded ? '/docs' : ''" :class="{ 'btn btn-ghost size-12  hover:bg-b2/60 ': !us.sidebarExpanded }">
       <SidebarCollapsibleTrigger>
-        <SidebarIcon name="ph:question-mark" class="size-5" />
+        <SidebarIcon name="ph:question-mark" class="size-5 dst" />
         <SidebarText>Info</SidebarText>
       </SidebarCollapsibleTrigger>
     </NuxtLink>
@@ -18,24 +18,25 @@ const us = useUiStore()
       <NuxtLink
         to="/docs">
         <SidebarButton>
-          Docs
+            <SidebarIcon name="icon-park-outline:notebook" class="size-5 dst" />
+          Guide
         </SidebarButton>
       </NuxtLink>
 
       <NuxtLink
         to="/about">
         <SidebarButton>
+                  <SidebarIcon name="ph:cat" class="size-5 dst" />
           About
-          <SidebarBadge class="pl-1">
-            <icon name="add-sm" class="size-5 mt-px -mr-2" />
-            <icon name="ph:cat" class="size-5" />
+        <SidebarBadge>HAS CATS
    <!--          <i-fat-cat class="size-8 shrink-0 fill-bc dst -mt-2.5 stroke-[1.2]" /> -->
-          </SidebarBadge>
+    </SidebarBadge>
         </SidebarButton>
       </NuxtLink>
 
       <Collapsible>
         <SidebarCollapsibleTrigger>
+            <SidebarIcon name="ph:envelope" class="size-5 dst" />
           Contact
         </SidebarCollapsibleTrigger>
 

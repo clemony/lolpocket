@@ -41,16 +41,17 @@ export default defineAppConfig({
       'arrow-up': 'teenyicons:arrow-up-small-outline',
 
       // menu
-      'more': 'teenyicons:more-horizontal-outline',
-      'more-v': 'teenyicons:more-vertical-outline',
+      'more': 'radix-icons:dots-horizontal',
+      'more-v': 'radix-icons:dots-vertical',
       'reset': 'mynaui:refresh',
       'gear': 'ph:gear-six',
       'lines': 'teenyicons:align-text-justify-outline',
       'filter': 'teenyicons:filter-outline',
-      'refresh': 'teenyicons:refresh-alt-outline',
+      'refresh': 'radix-icons:reload',
       'copy': 'teenyicons:layers-subtract-outline',
       'shuffle': 'qlementine-icons:shuffle-16',
       'dot': 'radix-icons:dot-filled',
+      'edit': 'radix-icons:pencil-2',
 
       // folder
       'x-folder': 'teenyicons:folder-x-outline',

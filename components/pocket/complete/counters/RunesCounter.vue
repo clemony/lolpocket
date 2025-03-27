@@ -41,6 +41,6 @@ const runeSetsLength = computed (() => {
 
 <template>
   <span v-tippy="`${runeSetsLength ? runeSetsLength : 'no'} rune sets`" class="flex gap-2 items-center">
-    <span class="dst font-mono text-1 opacity-60 -mr-2">{{ runeSetsLength }}</span>
+    <span class="dst font-mono text-1 opacity-60 ">{{ runeSetsLength }}</span>
   </span>
 </template>

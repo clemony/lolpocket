@@ -5,39 +5,29 @@ const props = defineProps<{
   champion: Champion
   pocket?: pocket
   class?: HTMLAttributes['class']
-  rounded?: boolean
-  removable?: boolean
-  roundedMd?: boolean
-  noHover?: boolean
 }>()
-
-function handleClick() {
-  props.removable ? removeChamp(props.champion.name, props.pocket) : ''
-}
+/*
+      v-tippy="{content: `${champion.name}`, hideOnClick: true,   delay: [100, 0]}" */
 </script>
 
 <template>
-  <label
-    class="  shadow-sm btn inset-shadow-sm inset-shadow-black/20 shadow-black/20 relative rounded-xl **:select-none p-0"
-    :class="
-      cn(
-        { '!rounded-full': props.rounded },
-        props.class,
-      )
-    "
-    @click="handleClick">
+  <Motion
+    as="label" :layout="true" :class=" cn('shadow-sm btnrelative rounded-lg **:select-none p-0', props.class)"
+    :initial="{
+      scale: 0.8,
+      opacity: 0,
+    }"
+    :animate="{ scale: 1, opacity: 1 }"
+    :exit="{
+      scale: [1.6, 0.8],
+      opacity: 0,
+    }"
+    :transition="{
+      type: 'spring' }">
     <slot />
 
     <div
-      v-tippy="`${champion.name}`"
-      class="size-full overflow-hidden rounded-lg "
-      :class="
-        cn(
-          { '!rounded-full': props.rounded },
-          { '!rounded-md': props.roundedMd },
-          { 'after:absolute after:top-0 after:left-0 after:pointer-events-none z-0 after:z-10 after:size-full after:rounded-lg after:place-items-center after:grid after:font-extralight after:opacity-0 after:text-7 after:content-[\'×\'] cursor-pointer  hover:after:opacity-100 after:bg-neutral/60 after:text-nc/80 after:transition-all after:duration-300': props.removable },
-        )
-      ">
+      class="size-full overflow-hidden rounded-lg ">
       <Image
         :key="props.champion.name"
 
@@ -45,7 +35,7 @@ function handleClick() {
         :alt="`${props.champion.name} Image`"
         class="size-full scale-115" />
     </div>
-  </label>
+  </Motion>
 </template>
 
 <style scoped></style>

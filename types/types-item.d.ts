@@ -84,10 +84,10 @@ type stat = string | number
 
       act?: effect
     }
-    recipe?: [Item[]]
+    recipe?: Item[]
     buy?: number
     removed?: boolean | string
-    cloneId: string
+    cloneId?: string
   }
 
   interface ItemSet {
