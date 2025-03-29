@@ -9,8 +9,9 @@ export const useUiStore = defineStore('UiStore', () => {
   const rightbarAvailable = computed (() => {
     const pocket = /pocket/g
     const summoner = /summoner\//
+    const research = /research\//
     const route = useRoute()
-    return route.path.match(pocket) || route.path.match(summoner)
+    return route.path.match(pocket) || route.path.match(summoner) || route.path.match(research)
   })
 
   // dialog

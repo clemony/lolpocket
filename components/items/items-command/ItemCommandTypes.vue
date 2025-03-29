@@ -8,7 +8,7 @@ const is = useItemStore()
   </p>
 
   <div group class="flex flex-col  px-1.5" :appear="false">
-    <label v-for="type in itemTypes" :key="type" class="w-full rounded-md hover:bg-b2/60 capitalize py-1.5 pl-8">
+    <label v-for="type in itemTypes" :key="type" class="w-full rounded-md hover:bg-accent capitalize py-1.5 pl-8 has-checked:hidden">
       <input v-model="is.filterItemTypes" type="radio" name="item-types" class="peer hidden" :value="type" @change="console.log(is.filterItemTypes)" />
       {{ type }}
     </label>

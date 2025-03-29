@@ -34,30 +34,31 @@ function handleItem(e) {
     <ItemSearchBoxButton v-else :is-open="isOpen">
       <slot />
     </ItemSearchBoxButton>
-    <PopoverContent
+    <CustomPopoverContent
       class=""
-      :class="cn('w-110 rounded-lg max-h-130 overflow-auto p-0', props.class)"
+      :class="cn('w-110 rounded-lg max-h-130 overflow-auto p-0 border-b-6', props.class)"
       align="start" :side-offset="props.sideOffset" @open-auto-focus.prevent>
       <ItemSearch
         placeholder="Type or click a suggestion"
-        input-class=" text-bc"
-        class="w-full rounded-t-lg z-2 sticky top-0 left-0   shadow-none h-13 [&_svg]:size-4 bg-transparent border-b border-b-b3/60   border-x-0  border-t-0" set-focus @update:query="e => e" />
+        input-class=" text-nc"
+        class="w-full rounded-t-lg z-2 sticky top-0 left-0   shadow-none h-13 [&_svg]:size-4 **:!text-nc !bg-accent border-neutral/30 border-4" set-focus @update:query="e => e" />
+      <div class="z-0 size-full ">
+        <LazyItemCommandTags />
 
-      <LazyItemCommandTags />
+        <TransitionExpand>
+          <div v-if="is.filterItemTypes == '' && !is.filterItemStats.length && !is.itemSearchQuery">
+            <LazyItemCommandTypes />
 
-      <TransitionExpand>
-        <div v-if="is.filterItemTypes == '' && !is.filterItemStats.length && !is.itemSearchQuery">
-          <LazyItemCommandTypes />
-
-          <Separator class="bg-b3/60 mt-3 mb-1.5 " />
-          <LazyItemCommandStats />
-        </div>
-      </TransitionExpand>
-      <TransitionExpand tag="div" class="w-full justify-center flex">
-        <div v-if="is.filterItemTypes != '' || is.filterItemStats.length || is.itemSearchQuery" class="!flex flex-wrap justify-start gap-1.5 px-4 py-4 z-0">
-          <LazyFilteredItems class=" !size-15  " @update:item="handleItem($event)" />
-        </div>
-      </TransitionExpand>
-    </PopoverContent>
+            <Separator class="bg-accent mt-3 mb-1.5 " />
+            <LazyItemCommandStats />
+          </div>
+        </TransitionExpand>
+        <TransitionExpand tag="div" class="w-full justify-center flex">
+          <div v-if="is.filterItemTypes != '' || is.filterItemStats.length || is.itemSearchQuery" class="!flex flex-wrap justify-center gap-1.5 px-4 py-4 z-0">
+            <LazyFilteredItems class=" !size-15  z-0" @update:item="handleItem($event)" />
+          </div>
+        </TransitionExpand>
+      </div>
+    </CustomPopoverContent>
   </Popover>
 </template>

@@ -27,7 +27,7 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
     },
     spells: {
       sets: [spellSet],
-      default: [],
+      default: null,
     },
     tags: tags || [''],
     location: {

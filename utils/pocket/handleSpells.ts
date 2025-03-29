@@ -3,15 +3,14 @@ import { hexoid } from 'hexoid'
 export function newSpellSet(key?) {
   const ds = useDataStore()
   const toID = hexoid()
-  const newSet = [createDefaultSpell(), createDefaultSpell()]
+  const newSet = {
+    0: createDefaultSpell(),
+    1: createDefaultSpell(),
+  }
 
   if (key) {
     const pocket = getPocket(key)
     pocket.spells.sets.push(newSet)
-
-    if (pocket.runes.sets.length == 1) {
-      pocket.spells.default = newSet
-    }
   }
   else {
     return newSet

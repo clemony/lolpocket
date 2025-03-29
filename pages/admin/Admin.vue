@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { patchData } from 'modules/data-retrieval/fetchAndPushData'
+
 const ts = useTempStore()
 const ds = useDataStore()
 definePageMeta({
@@ -27,13 +29,19 @@ function reGet() {
 <template>
   <NuxtLayout
     name="header-layout" class="wrapper flex size-full flex-col items-center justify-center gap-15">
-    <LayoutSpacer />
     <div class="">
       your pocket picks
     </div>
     <div class="flex gap-2">
       <div class="flex flex-col gap-2">
         All
+
+        <button
+          class="btn btn-neutral"
+          @click="patchData()">
+          Patch Data TEST
+        </button>
+
         <button
           class="btn btn-neutral"
           @click="patchNewData()">

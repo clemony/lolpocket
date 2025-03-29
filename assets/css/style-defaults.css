@@ -1,0 +1,44 @@
+@import 'tailwindcss';
+@import './default-theme.css';
+@import './fonts.css';
+
+@layer components {
+  h1 {
+    font-size: var(--text-9);
+    font-weight: 600;
+    line-height: none;
+  }
+  
+  h2 {
+    font-size: var(--text-7);
+    font-weight: 600;
+  }
+  
+  h3 {
+    font-size: var(--text-6);
+    font-weight: 600;
+  }
+  
+  h4 {
+    font-size: var(--text-5);
+    font-weight: 600;
+  }
+  
+  h5 {
+    font-size: var(--text-4);
+    font-weight: 500;
+  }
+  
+  h5 {
+    font-size: var(--text-3);
+    font-weight: 500;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply leading-none tracking-tight;
+  }
+}

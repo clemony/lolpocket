@@ -9,7 +9,7 @@ const pocket = computed (() => {
 
 const spell = computed (() => {
   const s = pocket.value.spells.default
-  return s[0] && s[0] != 'Flash' && s[0] != 'Ghost' ? s[0] : s[1] && s[1] != 'Flash' && s[1] != 'Ghost' ? s[1] : s[0] ? s[0] : null
+  return s[0] && s[0].name ? s[0] : null
 })
 </script>
 
@@ -30,7 +30,7 @@ const spell = computed (() => {
       </RightbarButton>
     </CollapsibleTrigger>
     <FieldCollapsibleContent class="!pb-3">
-      <div class="flex flex-col-reverse gap-2">
+      <div class="flex flex-col gap-2">
         <SpellSet v-for="(set, i) in pocket.spells.sets" :key="i" :set="set" :pocket="pocket" :set-index="i" />
       </div>
 

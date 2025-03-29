@@ -1,8 +1,10 @@
 <script lang="ts" setup>
 definePageMeta({
-title: 'research',
+  title: 'research',
   path: '/summoner/research/champions',
 })
+
+const ans = useAnalysisStore()
 </script>
 
 <template>

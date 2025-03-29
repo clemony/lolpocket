@@ -12,19 +12,18 @@ const { bayesianItems } = usePatchItems(patchGames)
         {{ ans.patchSelect }} Items
       </span>
 
-<APDtooltip>
+      <APDtooltip>
         Absolute
-        </APDtooltip>
-<BayesianTooltip>
+      </APDtooltip>
+      <BayesianTooltip>
         Weighted
-        </BayesianTooltip>
-   
+      </BayesianTooltip>
     </div>
 
     <template v-for="entry in bayesianItems" :key="entry.item?.id">
       <div v-if="entry" class="grid  grid-cols-[20px_repeat(2,40px)_1fr_repeat(2,60px)_20px] w-full py-3 border-b border-b-b2 items-center">
         <div />
-        <div class="text-5 font-medium flex items-center gap-0 rounded-lg text-nc px-2 pb-px tracking-wider badge bg-resolve/90">
+        <div class="text-5 font-medium flex items-center gap-0 rounded-lg text-[#FFFFFF] px-2 pb-px tracking-wider badge bg-resolve/90">
           <!--   {{ i.toString().match(/\d\d+/) ? i : `0${i}` }} -->
           s<span class="text-3 ">+</span>
         </div>

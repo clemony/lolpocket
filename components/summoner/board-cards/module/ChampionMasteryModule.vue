@@ -7,13 +7,11 @@ const ds = useDataStore()
     <div class="size-full grid  grid-cols-3 p-i-c self-center ">
       <div v-for="(i, index) in top3Mastery" :key="i.championId" class="flex flex-col items-center justify-end h-full rounded-xl w-full group ">
         <div
-          class=" absolute  h-full w-[180px] z-0 gradient-mask-b-40 "
-          :class="{ '-left-1': index == 0, '': index == 1, '-right-1': index == 2 }"
-        >
+          class=" absolute  h-full w-[180px] z-0 mask-bottom "
+          :class="{ '-left-1': index == 0, '': index == 1, '-right-1': index == 2 }">
           <div
             class="size-full z-0"
-            :class="{ 'gradient-mask-r-50': index == 0, 'gradient-mask-r-50 h-full': index == 1, 'gradient-mask-l-50': index == 2 }"
-          >
+            :class="{ 'mask-right': index == 0, 'mask-right h-full': index == 1, 'mask-left': index == 2 }">
             <div
               class="size-full "
               :style="
@@ -23,8 +21,7 @@ const ds = useDataStore()
                   backgroundPositionY: '30%',
                   backgroundRepeat: 'no-repeat',
                 }"
-              :class="{ 'gradient-mask-l-50 ': index == 1 }"
-            >
+              :class="{ 'mask-left ': index == 1 }">
             </div>
           </div>
         </div>
@@ -41,8 +38,7 @@ const ds = useDataStore()
                 computed (() => {
                   const a = i.championLevel
                   return a < 4 ? 0 : a >= 10 ? 10 : a
-                }).value}.webp`" class="size-17 drop-shadow-sm  grayscale opacity-85 contrast-130"
-            />
+                }).value}.webp`" class="size-17 drop-shadow-sm  grayscale opacity-85 contrast-130" />
             <p class="text-5 font-semibold font-serif f-tt dst">
               {{ ds.champions.find((c) => c.id == i.championId).name }}
             </p>

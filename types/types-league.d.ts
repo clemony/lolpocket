@@ -13,6 +13,11 @@ declare global {
     charges?: number | string | null
   }
 
+  interface SpellSet {
+    0: Spell
+    1: Spell
+  }
+
   interface summoner {
     name: string
     tag: string

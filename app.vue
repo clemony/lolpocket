@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { toast } from 'vue-sonner'
 
-const ts = useTempStore()
 const as = useAccountStore()
-const ds = useDataStore()
 const appConfig = useAppConfig()
 const useHead = useHeader()
 

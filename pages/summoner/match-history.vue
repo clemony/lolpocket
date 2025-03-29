@@ -9,7 +9,7 @@ const as = useAccountStore()
 </script>
 
 <template>
-  <div class=" pl-22 relative @max-7xl/app:!flex-col flex gap-[5%]  relative justify-start size-full overflow-hidden ">
+  <div class=" px-18  @max-7xl/app:!flex-col flex gap-18  relative justify-center size-full overflow-hidden ">
     <div class=" w-110 min-w-110 overflow-y-scroll relative h-full ">
       <PlayerHeader :summoner="as.userAccount">
         <SummonerIcon class="rounded-full size-19" />

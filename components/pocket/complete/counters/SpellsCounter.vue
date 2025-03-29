@@ -3,10 +3,13 @@ const props = defineProps<{
   pocket: pocket
 }>()
 
-const pocket = ref(props.pocket)
-
+const pocket = computed (() => {
+  return props.pocket
+})
 const spellsLength = computed (() => {
-  return 1
+  return pocket.value.spells.sets.filter(subArray =>
+    Object.values(subArray).some(item => item.name !== null),
+  ).length
 })
 </script>
 

@@ -12,7 +12,7 @@ const props = defineProps<{
 
 <template>
   <Motion
-    as="label" :layout="true" :class=" cn('shadow-sm btnrelative rounded-lg **:select-none p-0', props.class)"
+    as-child :layout="true"
     :initial="{
       scale: 0.8,
       opacity: 0,
@@ -23,18 +23,20 @@ const props = defineProps<{
       opacity: 0,
     }"
     :transition="{
-      type: 'spring' }">
-    <slot />
+      type: 'ease-in-out' }">
+    <label :class=" cn('shadow-sm btn relative rounded-lg **:select-none p-0', props.class)">
+      <slot />
 
-    <div
-      class="size-full overflow-hidden rounded-lg ">
-      <Image
-        :key="props.champion.name"
+      <div
+        class="size-full overflow-hidden rounded-lg ">
+        <Image
+          :key="props.champion.name"
 
-        :image="`/img/champion/${champion.id}.webp`"
-        :alt="`${props.champion.name} Image`"
-        class="size-full scale-115" />
-    </div>
+          :image="`/img/champion/${champion.id}.webp`"
+          :alt="`${props.champion.name} Image`"
+          class="size-full scale-115" />
+      </div>
+    </label>
   </Motion>
 </template>
 

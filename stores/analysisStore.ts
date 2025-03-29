@@ -16,15 +16,25 @@ export const useAnalysisStore = defineStore('AnalysisStore', () => {
     const p = getPatchList()
     return p.slice(-2, -1)[0] // Returns the second-to-last item in the array
   })
+  const seasonTotals = ref()
 
+  const calculatorSets = ref<CalculatorSet[]>([])
+  const calculateSet = ref<CalculatorSet>(null)
+  const calculateSet2 = ref<CalculatorSet>(null)
+  const isComparing = ref(false)
   return {
     userMatchData,
     patchGames,
+    seasonTotals,
     currentPatch,
     patchSelect,
     queueSelect,
     positionSelect,
     previousPatch,
+    calculatorSets,
+    calculateSet,
+    calculateSet2,
+    isComparing,
 
   }
 }, {

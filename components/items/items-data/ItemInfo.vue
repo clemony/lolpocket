@@ -187,9 +187,9 @@ function handleTooltip(item) {
             class="stroke-[1.5] last:hidden" />
         </template>
       </template>
-      <LittleTip
+      <div
         v-else
-        :content="recipe[0] + item.buy ? `${item.buy}g` : ''">
+        v-tippy="recipe && item.buy ? `${item.buy}g` : null">
         <button
           class="ring-neutral/80 ring-offset-b1 size-14 overflow-hidden rounded-lg shadow-sm hover:ring-1 hover:ring-offset-2">
           <img
@@ -197,7 +197,7 @@ function handleTooltip(item) {
             :src="`/img/item/${itemId(recipe[0])}.webp`"
             :alt="`${recipe} image`" />
         </button>
-      </LittleTip>
+      </div>
     </div>
   </template>
 

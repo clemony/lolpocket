@@ -3,20 +3,22 @@ const route = useRoute()
 </script>
 
 <template>
-  <transition-slide group as="div" class="w-full flex  flex-col gap-8 overflow-hidden pt-22 px-3">
+  <transition-slide group as="div" class="w-full flex  flex-col gap-6 overflow-hidden pt-22 px-3">
     <ResearchHeader />
-    <Separator class="bg-b2" />
 
-    <div v-if="route.path.match(/\/summoner\/research/)" class="flex flex-col">
+    <div v-if="route.path.match(/research/)" class="flex flex-col">
+    <Separator class="bg-b2" />
       <ResearchNavTabs />
 
-      <Separator class="bg-b2" />
-      <PatchSelectDropdown />
     </div>
     <QueueRadio />
-    <Separator class="bg-b2" />
     <div class="w-full px-2">
       <PositionRadio />
+    <Separator class="bg-b2" />
+
     </div>
+    <div class="px-8 mt-2">
+      <PatchSelectRadio />
+      </div>
   </transition-slide>
 </template>

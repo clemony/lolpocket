@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { PopoverArrow, PopoverClose } from 'reka-ui'
+import { PopoverClose } from 'reka-ui'
 
 const props = defineProps<{
   model?: number
@@ -29,7 +29,7 @@ const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells
           v-if="selectedSpell.name == null"
           :src="getRandom(imgArr)"
           class="size-full !shadow-none opacity-40 group-hover/trig:opacity-80 inset-shadow-xs bg-b2 border-b2">
-        <i-tft-attach class="size-4.5 opacity-40" />
+          <i-tft-attach class="size-4.5 opacity-40" />
         </Placeholder>
 
         <img
@@ -41,17 +41,18 @@ const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells
     </PopoverTrigger>
 
     <PopoverContent
-      class=" rounded-xl size-fit"
+      class=" !rounded-xl size-fit bg-neutral/80 backdrop-blur-md"
       side="bottom"
-      align="start">
-      <PopoverArrow />
-      <div class="gap-3 place-content-evenly grid grid-cols-3 bg-b1 backdrop-blur-md">
+      :side-offset="-4"
+      align="center">
+      <div class="gap-3 place-content-evenly grid grid-cols-3  backdrop-blur-md">
+        <CustomPopoverArrow />
         <PopoverClose
           v-for="ss in summonerSpells"
           :key="ss.name"
           :disabled="selectedSpell == ss"
-          class="disabled:grayscale transition-all duration-400 disabled:inset-shadow-sm disabled:opacity-70 disabled:scale-80 shadow-sm size-16 rounded-lg border border-b3 hover:border-neutral/80">
-          <label>
+          class="disabled:grayscale transition-all duration-400 disabled:inset-shadow-sm disabled:opacity-70 disabled:scale-80 shadow-sm size-16 rounded-lg border border-b3/30 hover:border-neutral hover:ring-2 hover:ring-b3/60 !cursor-pointer ring-offset-1 ring-offset-neutral">
+          <label class=" !cursor-pointer ">
             <input
               id="spells"
               type="radio"

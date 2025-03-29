@@ -18,6 +18,8 @@
   mask-image: linear-gradient(to bottom, black 50%, transparent);
 }
 
+
+
 @utility col-span-all {
   column-span: all;
 }

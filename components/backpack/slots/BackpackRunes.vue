@@ -35,7 +35,7 @@ const hasOneRune = computed (() => {
     </div>
 
     <!-- secondary -->
-    <div v-if="secondary.path && hasOneRune.length" class="shadow-outline shadow-black/15 absolute -right-4 -bottom-5  grid aspect-square size-11 place-items-center  rounded-full  transition-all duration-500 bg-gradient-to-br from-b2 to-b3 ring-1 ring-b2">
+    <div v-if="secondary.path && hasOneRune.length" class="shadow-outline shadow-black/15 absolute -right-5 -bottom-5  grid aspect-square size-11 place-items-center  rounded-full  transition-all duration-500 bg-gradient-to-br from-b2 to-b3 ring-1 ring-b2">
       <div class="from-b1/90 to-b1/40 grid size-full place-items-center rounded-full bg-gradient-to-br p-1 backdrop-blur-md overflow-hidden ">
         <img :src="`/img/runes/${secondary.path}.webp`" class=" shrink-0 h-7 w-auto object-contain transition-all duration-200 dst" />
       </div>

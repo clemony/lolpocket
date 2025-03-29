@@ -21,8 +21,6 @@ onMounted (() => {
 
 <template>
   <NuxtLayout name="header-layout" class=" grid transition-all duration-300 " :class="{ 'grid-cols-[1fr_240px]': filter, ' grid-cols-[1fr_0px]': !filter }">
-    <template #header>
-    </template>
 
     <template #crumb>
       <span class="w-6 h-full" />

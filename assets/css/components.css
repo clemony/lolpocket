@@ -5,6 +5,9 @@
 @layer components {
   
   
+.mask-clip-bottom {
+  mask-image: linear-gradient(to top, black 65%, transparent 66%);
+}
   .color-chip {
     @apply aspect-square size-9 flex items-center justify-center rounded-md
     shadow-sm;
@@ -38,5 +41,16 @@
   @apply h-px text-2 font-semibold opacity-50;
 }
 
+
+
+.popover-arrow-down {
+clip-path: inset(0 0 15% 0);
+
+}
+
+.popover-arrow-up {
+  clip-path: inset(58% 0 0 0);
+
+}
   }
 

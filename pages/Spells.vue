@@ -63,6 +63,9 @@ const spellCompute = computed (() => {
 <template>
   <NuxtLayout
     name="header-layout" class="items-center justify-center gap-15 px-27 ">
+    <div class="w-full pt-28">
+      <h1>Summoner Spells</h1>
+    </div>
     <div class="w-full  flex gap-[8%] px-3 py-24">
       <div class="flex flex-col gap-14 w-114">
         <div class="grid grid-cols-3 grid-rows-3 gap-4 py-8 border-b3/80 rounded-box shadow-smooth  px-9 h-fit  ">

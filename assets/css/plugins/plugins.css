@@ -4,10 +4,6 @@
 @import './drag.css';
 
 @plugin "tailwindcss-animate";
-@plugin "tailwindcss-animated";
-@plugin "tailwind-gradient-mask-image";
-/* @import "./tailwindcss-animate.css"; */
-@import 'aos/dist/aos.css';
 @import './ag-grid.css';
 @import './toast.css';
 @import './zoomable.css';

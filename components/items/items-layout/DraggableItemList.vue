@@ -77,13 +77,13 @@ const toID = hexoid()
     ]"
     group
     class=""
-    :class="cn('overflow-y-auto  absolute inset-0 grid grid-flow-row auto-cols-auto select-none   grid-cols-[repeat(auto-fill,minmax(54px,1fr))] justify-center gap-4 px-7  pb-10 pt-30', props.class)"
+    :class="cn('overflow-y-auto  absolute inset-0 grid grid-flow-row auto-cols-auto select-none h-fit   grid-cols-[repeat(auto-fill,minmax(54px,1fr))] justify-center gap-4 px-7  pb-10 pt-30', props.class)"
 
     @end="onEnd"
     @clone="onClone"
     @start="onStart">
     <LazyItem v-for="item in list" :key="item.id" :item="item" class="select-none" hydrate-on-visible>
-      <input v-model="is.selectedItem" type="radio" class="peer hidden" :value="item" />
+      <input v-model="is.pocketItemSelect" type="radio" class="peer hidden" :value="item" />
     </LazyItem>
   </div>
 </template>

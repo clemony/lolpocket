@@ -6,6 +6,7 @@ export default defineAppConfig({
     size: '15px',
     aliases: {
       'search': 'ph:magnifying-glass',
+      'search-bold': 'ph:magnifying-glass-bold',
       'search-sm': 'teenyicons:search-small-outline',
 
       // math

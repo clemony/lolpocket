@@ -85,6 +85,5 @@ declare global {
     date: string
     time: string
   }
-
 }
 export { }

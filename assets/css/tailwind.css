@@ -9,7 +9,7 @@
 @import './components.css';
 
 @import './default-theme.css';
-
+@import './style-defaults.css';
 @import './colors.css';
 
 @import '../animation/animations.css';

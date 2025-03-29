@@ -25,6 +25,7 @@ const champion = computed (() => {
       backgroundRepeat: 'none',
       backgroundPosition: 'center top 20%',
     }">
+    <slot  />
     <div
       v-if="props.text"
       class="absolute inset-0 rounded-lg hover:ring-offset-2  hover:ring-offset-b1/95 hover:ring-neutral/60 overflow-hidden opacity-0 pointer-events-none group-hover:opacity-100 bg-neutral/50 text-nc transition-all duration-300 p-4 text-10 break-all hyphens-manual tracking-tighter font-bold flex flex-wrap leading-none text-balanced items-end whitespace-break-spaces">

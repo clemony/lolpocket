@@ -4,6 +4,7 @@ export function filterItems() {
   const ds = useDataStore()
 
   const items = ds.SRitems || []
+  console.log('💠 - filterItems - SRitems:', ds.SRitems)
   let filtered = [...items]
 
   // console.log('💠 - filteredItems - filtered:', filtered)

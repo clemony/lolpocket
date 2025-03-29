@@ -1,10 +1,12 @@
 import tailwindcss from '@tailwindcss/vite'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
+import vueDevTools from 'vite-plugin-vue-devtools'
+
 //  Configuration Vite
 
 export default defineNuxtConfig({
-  modules: ['@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', 'motion-v/nuxt', '@vueuse/nuxt', '@nuxtjs/supabase', '@morev/vue-transitions/nuxt', '@nuxt/devtools', '@nuxt/eslint', 'vue-sonner/nuxt', '@nuxt/icon', 'nuxt-aos', 'nuxt-svgo', '@nuxt/image'],
+  modules: ['@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', 'motion-v/nuxt', '@vueuse/nuxt', '@nuxtjs/supabase', '@morev/vue-transitions/nuxt', '@nuxt/eslint', 'vue-sonner/nuxt', '@nuxt/icon', 'nuxt-svgo', '@nuxt/image'],
 
   icon: {
     provider: 'iconify',
@@ -14,6 +16,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [
       tailwindcss(),
+      vueDevTools(),
     ],
     vue: {
       customElement: true,
@@ -38,6 +41,13 @@ export default defineNuxtConfig({
     public: {
       baseUrl: process.env.BASE_URL || 'http://localhost:8080',
       redirectUrl: 'http://localhost:8080/summoner',
+    },
+    proxy: {
+      options: {
+        target: 'https://leagueoflegends.fandom.com',
+        pathRewrite: { '^/api': '' },
+        changeOrigin: true,
+      },
     },
   },
 
@@ -72,7 +82,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
 
   imports: {
-    dirs: ['shared/supabase', '@vueuse/components', 'stores', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/links', 'utils/lib', 'utils/pocket', 'utils/style', 'stores', 'shared/data', 'shared/data/summoner', 'shared/data/summoner/match'],
+    dirs: ['shared/supabase', '@vueuse/components', 'stores', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/links', 'utils/lib', 'utils/pocket', 'utils/style', 'utils/calculator', 'stores', 'shared/data', 'shared/data/summoner', 'shared/data/summoner/match'],
   },
 
   webpack: {
