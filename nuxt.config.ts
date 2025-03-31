@@ -42,12 +42,10 @@ export default defineNuxtConfig({
       baseUrl: process.env.BASE_URL || 'http://localhost:8080',
       redirectUrl: 'http://localhost:8080/summoner',
     },
-    proxy: {
-      options: {
-        target: 'https://leagueoflegends.fandom.com',
-        pathRewrite: { '^/api': '' },
-        changeOrigin: true,
-      },
+  },
+  nitro: {
+    routeRules: {
+      '/api/**': { cors: true, headers: { 'Access-Control-Allow-Origin': '*' } },
     },
   },
 
@@ -82,7 +80,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
 
   imports: {
-    dirs: ['shared/supabase', '@vueuse/components', 'stores', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/links', 'utils/lib', 'utils/pocket', 'utils/style', 'utils/calculator', 'stores', 'shared/data', 'shared/data/summoner', 'shared/data/summoner/match'],
+    dirs: ['shared/supabase', '@vueuse/components', 'stores', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/links', 'utils/lib', 'utils/pocket', 'utils/style', 'utils/calculator', 'stores', 'shared/data', 'shared/data/summoner', 'shared/data/summoner/match', 'utils/data'],
   },
 
   webpack: {

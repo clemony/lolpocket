@@ -61,7 +61,7 @@ watchEffect(() => {
     class="h-screen w-screen grid place-items-center relative overflow-hidden ">
     <div id="pocket-card" ref="pocketCardRef" class="inset-shadow-sm border-b3/70 border h-300 shadow-smooth w-300 relative rounded-box object-contain  aspect-square " :style="{ backgroundColor: pocket.card.color }">
       <div
-        class="size-full overflow-hidden  rounded-2xl transition-all duration-500  mask-left"
+        class="size-full overflow-hidden  rounded-2xl transition-all duration-500  mask-right-100"
         :class="{ '!grayscale-0': pocket.card.filter, 'grayscale': !pocket.card.filter || !pocket.card.splash }">
         <div
           :style="{ backgroundImage: `url(${pocket.card.splash || 'https://universe.communitydragon.org/events/2024/anima-squad-embed-2024/images/bg-index-index.2630f6.jpg'})`,

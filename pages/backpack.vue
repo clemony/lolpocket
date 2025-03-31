@@ -11,5 +11,7 @@ console.log('💠 - ps.pockets:', ps.pockets)
     <div class="flex flex-wrap px-18 gap-8 pt-8 items-center">
       <BackpackCard v-for="pocket in ps.pockets" :key="pocket.key" class="size-110" :pocket="pocket" />
     </div>
+
   </NuxtLayout>
 </template>
+

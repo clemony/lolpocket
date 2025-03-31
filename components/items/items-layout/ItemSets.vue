@@ -36,18 +36,8 @@ watch(items, (newItemSets) => {
 </script>
 
 <template>
-  <div class="absolute top-0 left-0 inset-0 pt-28 px-12">
+  <div class="absolute top-0 left-0 inset-0 pt-24 px-12">
 
-   <div class="[&_svg]:shrink-0 justify-self-end absolute top-30 right-6 *:btn-square *:hover:bg-b2/40 *:rounded-md  *:btn-ghost *:btn-md flex gap-2 ">
-      <button
-        v-tippy="'Add Set'"
-        class="btn  "
-        @click="newItemSet(props.pocket.key)">
-        <icon
-          name="add"
-          class="size-4 stroke-[1.5] dst" />
-      </button>
-   </div>
     <ItemsHeader :pocket="pocket" />
 
     <div

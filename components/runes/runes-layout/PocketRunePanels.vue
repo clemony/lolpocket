@@ -41,7 +41,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="flex gap-18 px-12 pt-[7vh] flex-wrap justify-center w-full">
+  <div class="flex gap-18 px-12 pt-12 flex-wrap justify-center w-full">
     <div class="flex flex-col gap-6 w-1/2 min-w-90 flex   w-114 max-w-114 ">
       <Field :title="`Primary Path > ${primaryPath}`">
         <RunePanel

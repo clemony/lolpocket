@@ -10,9 +10,9 @@ const as = useAccountStore()
   <div class="w-full flex ">
     <Motion as-child>
   <Collapsible v-model:open="as.itemSetTipIsOpen" class="py-8 w-184" arrow>
-    <CollapsibleTrigger class="group/c flex items-center pl-2.25 w-full justify-start text-left max-w-184 gap-6 cursor-pointer">
+    <CollapsibleTrigger class="group/c flex items-center px-2.25 w-full justify-between text-left max-w-184 gap-6 cursor-pointer">
       <h2 class="dst font-semibold">
-          Sets
+          Item Sets
         </h2>
         <icon name="up-sm" class=" dst group-data-[state=open]/c:rotate-180" />
     </CollapsibleTrigger>

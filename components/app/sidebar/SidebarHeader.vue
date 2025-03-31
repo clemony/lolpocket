@@ -11,7 +11,7 @@ const us = useUiStore()
 </script>
 
 <template>
-  <div class="flex gap-4 w-full items-center pr-2 overflow-hidden ">
+  <div class="flex gap-4 w-full h-20 items-center pr-2 overflow-hidden ">
     <SidebarButton class="overflow-hidden  group/up pr-4 !btn-lg">
       <NuxtLink to="/" class="w-full pt-px items-center flex justify-start">
         <h4 class="dst select-none !tracking-normal ">
@@ -22,7 +22,7 @@ const us = useUiStore()
           <icon name="arrow-up" class="size-5" />
         </span>
       </NuxtLink>
-<LightSidebarSearch  />
+<NeutralSidebarSearch  />
 
     </SidebarButton>
 

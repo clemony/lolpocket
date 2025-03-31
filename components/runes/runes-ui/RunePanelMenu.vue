@@ -1,16 +1,12 @@
 <script lang="ts" setup>
 const props = defineProps<{
   pocket: pocket
-  isCollapsed?: boolean
-  set: RuneSet
+  set?: RuneSet
 }>()
 
 const emit = defineEmits(['clicked'])
 const rs = useRuneStore()
 const pocket = ref(props.pocket)
-const isCollapsed = computed (() => {
-  return props.isCollapsed
-})
 
 const ts = useTempStore()
 function handleDelete() {
@@ -27,22 +23,21 @@ function handleNewSet() {
 </script>
 
 <template>
-  <Field class="  **:pointer-events-auto h-28.5 pt-3.25 pb-4 px-4 w-fit">
-    <div class="grid grid-cols-2 gap-2 p-i-c">
+    <div class="flex gap-2 items-center">
       <button
         v-tippy="'New Rune Set'"
-        class="btn btn-md btn-square bg-b1  "
+        class="btn btn-md btn-square"
         @click="handleNewSet()">
         <icon
           name="add-sm"
           class=" size-6 shrink-0 dst" />
       </button>
 
-      <button v-tippy="'Delete Current Set'" class="btn btn-square *:dst bg-b1  btn-md rounded-lg" @click="handleDelete()">
+      <button v-tippy="'Delete Current Set'" class="btn btn-square *:dst  " @click="handleDelete()">
         <icon name="trash" class="opacity-70 shrink-0  size-5" />
       </button>
     </div>
-  </Field>
+
 </template>
 
 <style scoped>

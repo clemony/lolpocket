@@ -6,8 +6,8 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="" :class="cn('tldr-10 inline-grid z-2 *:[grid-area:1/1] absolute top-0.75 right-1 scale-95', props.class)">
-    <div class="status status-lg saturate-130 animate-ping" :class="cn('!bg-challenger ', props.color)"></div>
-    <div class="status status-lg saturate-130 bg-challenger" :class="{'!bg-challenger ': props.color}"></div>
+  <div class="" :class="cn('tldr-10 inline-grid z-2 *:[grid-area:1/1] absolute ', props.class)">
+    <div class="status  animate-ping" :class="cn('!bg-[#B666FF] ', props.color)"></div>
+    <div class="status  bg-[#B666FF]" :class="{'!bg-[#B666FF]': props.color}"></div>
   </div>
 </template>

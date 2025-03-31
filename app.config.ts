@@ -49,10 +49,11 @@ export default defineAppConfig({
       'lines': 'teenyicons:align-text-justify-outline',
       'filter': 'teenyicons:filter-outline',
       'refresh': 'radix-icons:reload',
-      'copy': 'teenyicons:layers-subtract-outline',
+      'copy': 'radix-icons:copy',
       'shuffle': 'qlementine-icons:shuffle-16',
       'dot': 'radix-icons:dot-filled',
       'edit': 'radix-icons:pencil-2',
+      'export': 'radix-icons:share-2',
 
       // folder
       'x-folder': 'teenyicons:folder-x-outline',
@@ -73,6 +74,7 @@ export default defineAppConfig({
       'mail': 'fluent:mail-48-regular',
       'link': 'mingcute:external-link-line',
       'chain': 'ph:link-simple',
+      'share': 'iconoir:send-diagonal',
 
       // pic
       'infinity': 'solar:infinity-outline',
@@ -82,6 +84,8 @@ export default defineAppConfig({
       'heart': 'ph:heart-straight',
       'bow': 'mdi:bow-arrow',
       'up-face': 'iconoir:emoji-look-up',
+      'images': 'entypo:images',
+      'picture': 'radix-icons:image',
     },
   },
 })

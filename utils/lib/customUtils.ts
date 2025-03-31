@@ -44,3 +44,27 @@ export function getRandom(thing: any[]) {
   const i = Math.floor(Math.random() * thing.length)
   return thing[i]
 }
+
+
+export function extractUniqueFileListingsFromArray(arr) {
+    const fileRegex = /\[\[File:.*?\]\]/g;
+    const uniqueFiles = new Set();
+
+    function searchInValues(value) {
+        if (typeof value === 'string') {
+            const matches = value.match(fileRegex);
+            if (matches) {
+                matches.forEach(match => uniqueFiles.add(match));
+            }
+        } else if (Array.isArray(value)) {
+            value.forEach(searchInValues);
+        } else if (typeof value === 'object' && value !== null) {
+            Object.values(value).forEach(searchInValues);
+        }
+    }
+
+    // Loop through the array of objects
+    arr.forEach(obj => searchInValues(obj));
+
+    return Array.from(uniqueFiles);
+}

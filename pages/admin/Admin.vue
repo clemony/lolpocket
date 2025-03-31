@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { patchData } from 'modules/data-retrieval/fetchAndPushData'
 
 const ts = useTempStore()
 const ds = useDataStore()
+console.log("💠 - ds:", ds.SRitems)
+console.log("💠 - ds:", ds.champions)
 definePageMeta({
   name: 'admin',
 })
@@ -24,6 +25,12 @@ function reGet() {
   // getShardData()
   console.log('data fetch complete!')
 }
+
+function getFiles(){
+
+        const uniqueFileListings = extractUniqueFileListingsFromArray(ds.SRitems);
+console.log(uniqueFileListings);
+}
 </script>
 
 <template>
@@ -37,19 +44,12 @@ function reGet() {
         All
 
         <button
-          class="btn btn-neutral"
-          @click="patchData()">
+          class="btn btn-neutral" @click="patchData()">
           Patch Data TEST
         </button>
 
         <button
-          class="btn btn-neutral"
-          @click="patchNewData()">
-          Patch Data
-        </button>
-        <button
-          class="btn btn-neutral"
-          @click="getRuneData()">
+          class="btn btn-neutral">
           Patch Rune Data
         </button>
         <button
@@ -81,6 +81,12 @@ function reGet() {
           class="btn btn-neutral"
           @click="getChampsFromDatabase()">
           Get Champs from Database
+        </button>
+
+        <button
+          class="btn btn-neutral"
+          @click="getFiles()">
+          get files
         </button>
       </div>
     </div>

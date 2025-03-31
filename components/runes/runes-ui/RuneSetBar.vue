@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 const props = defineProps<{
   pocket: pocket
-  isCollapsed?: boolean
 }>()
 
 const pocket = ref(props.pocket)

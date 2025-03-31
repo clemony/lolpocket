@@ -1,7 +1,6 @@
 import type { GridApi } from 'ag-grid-community'
 import { defineStore } from 'pinia'
 // Define types for the JSON data
-import { getChampsFromDatabase, getItemsFromDatabase, getRuneData } from 'shared/supabase/supaIndex'
 
 export const useDataStore = defineStore(
   'dataStore',

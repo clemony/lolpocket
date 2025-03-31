@@ -12,9 +12,9 @@ const set = computed (() => {
 </script>
 
 <template>
-  <div class="flex items-center gap-1">
+  <div class="flex items-center gap-1.5">
     <template v-for="(item, i) in set.items" :key="i">
-      <Item v-if=" i < 6" :item="item" class="size-15 shadow-sm drop-shadow-sm border-0" basic />
+      <img v-if=" i < 6" :alt="item.name" :src="`/img/item/${item.id}.webp`" class="size-15 shadow-sm drop-shadow-sm border-0 rounded-lg" basic />
     </template>
     <template v-if="set.items.length < 6">
       <Placeholder v-for="(box, index) in 6 - set.items.length" :key="index" class="size-15" />

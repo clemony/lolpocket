@@ -3,6 +3,7 @@ const as = useAccountStore()
 const us = useUiStore()
 const route = useRoute()
 
+const ds = useDataStore()
 const summoner = computed(() => {
   return as.userAccount ? as.userAccount : defaultUser
 })
@@ -28,11 +29,11 @@ watch(
 <template>
   <div
     :data-state="sidebarExpanded == true ? 'expanded' : 'collapsed'"
-    class="main-sidebar @container/app:4xl:fixed @container/app:4xl:w-[270px] bg-b2/40 w-full h-full py-4  gap-2.5 border-r shadow-warm shadow-black/5 z-3   pl-3 flex-nowrap  flex  flex-col  border-r-b3/40  overflow-x-hidden  group relative" :style="{ '--bg-noise': 1 }">
+    class="main-sidebar @container/app:4xl:fixed @container/app:4xl:w-[270px] bg-b2/40 w-full h-full pb-4   pl-3  gap-2.5 border-r shadow-warm shadow-black/5 z-3  flex-nowrap  flex  flex-col  border-r-b3/40  overflow-x-hidden  group relative" :style="{ '--bg-noise': 1 }">
     <SidebarHeader />
     <CommandSearchButton />
 
-    <div class="h-full relative overflow-y-scroll   overflow-x-hidden" :class="{ 'pt-18': !us.sidebarExpanded }">
+    <div class="h-full relative overflow-y-scroll overflow-x-hidden" :class="{ 'pt-18': !us.sidebarExpanded }">
       <div class="inset-0 top-0 left-0 flex-nowrap overflow-x-hidden  overflow-y-scroll gap-2.5 flex  flex-col pr-3">
         <SidebarLabel>
           Summoner

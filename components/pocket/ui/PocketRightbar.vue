@@ -16,6 +16,10 @@ const pocketNav = ref()
 onMounted (() => {
   pocketNav.value = route.path
 })
+
+const championsOpen = ref(false)
+const itemsOpen = ref(false)
+const runesOpen = ref(false)
 </script>
 
 <template>
@@ -29,7 +33,7 @@ onMounted (() => {
               LP
             </div>
           </div>
-          <icon name="entypo:images" class="size-8 !text-nc absolute opacity-0  group-hover/picon:opacity-80 z-2 transition-all  duration-300 group-data-[state=open]/picon:opacity-100" />
+          <icon name="images" class="size-8 !text-nc absolute opacity-0  group-hover/picon:opacity-80 z-2 transition-all  duration-300 group-data-[state=open]/picon:opacity-100" />
         </PopoverTrigger>
         <LazyIconPopover :pocket="pocket" align="end" class="bg-neutral/85  backdrop-blur-md w-86" :b2="true" />
       </LazyPopover>
@@ -41,14 +45,14 @@ onMounted (() => {
 
     <Tabs v-model:model-value="pocketNav" class="pl-3 pr-4 w-full mt-1 mb-4" @update:model-value="e => navigateTo(e.toString())">
       <TabsList class="w-full grid grid-cols-3">
-        <HoverTabsTrigger :value="`/pocket/${pocket.key}`">
+        <HoverTabsTrigger :value="`/pocket/${pocket.key}`" @click="championsOpen = true">
           Champions
         </HoverTabsTrigger>
-        <HoverTabsTrigger :value="`/pocket/${pocket.key}/items`">
+        <HoverTabsTrigger :value="`/pocket/${pocket.key}/items`" @click="itemsOpen = true">
           Items
         </HoverTabsTrigger>
 
-        <HoverTabsTrigger :value="`/pocket/${pocket.key}/runes`">
+        <HoverTabsTrigger :value="`/pocket/${pocket.key}/runes`" @click="runesOpen = true">
           Runes
         </HoverTabsTrigger>
       </TabsList>
@@ -64,9 +68,9 @@ onMounted (() => {
       </div>
 
       <LayoutGroup>
-        <PocketChampionsCollapsible :pocket="pocket" />
-        <PocketItemsCollapsible :pocket="pocket" />
-        <PocketRunesCollapsible :pocket="pocket" />
+        <PocketChampionsCollapsible :pocket="pocket" v-model:open="championsOpen"/>
+        <PocketItemsCollapsible :pocket="pocket" v-model:open="itemsOpen"/>
+        <PocketRunesCollapsible :pocket="pocket" v-model:open="runesOpen"/>
         <PocketRolesCollapsible :pocket="pocket" />
         <PocketSpellsCollapsible :pocket="pocket" />
 
@@ -74,12 +78,11 @@ onMounted (() => {
         <PocketSummaryButton :pocket="pocket" @click="pocketNav = null" />
         <PocketCardButton :pocket="pocket" @click="pocketNav = null" />
 
-        <RightbarLabel v-if="route.name == 'items' || route.name == 'runes'">
+  <!--       <RightbarLabel v-if="route.name == 'items' || route.name == 'runes'">
           Inspect
         </RightbarLabel>
-        <ItemInfoCollapsible v-if="route.name == 'items'" />
         <RuneInfoCollapsible
-          v-if="rs.hoveredRune && route.name == 'runes'" />
+          v-if="rs.hoveredRune && route.name == 'runes'" /> -->
       </LayoutGroup>
     </div>
     <PocketRightbarFooter :pocket="pocket" />

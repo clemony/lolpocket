@@ -82,9 +82,19 @@ const toID = hexoid()
     @end="onEnd"
     @clone="onClone"
     @start="onStart">
-    <LazyItem v-for="item in list" :key="item.id" :item="item" class="select-none" hydrate-on-visible>
-      <input v-model="is.pocketItemSelect" type="radio" class="peer hidden" :value="item" />
+    <Popover v-for="item in list" :key="item.id">
+      <PopoverTrigger class="size-full hover:ring-1  !cursor-pointer shadow-sm drop-shadow-sm hover:ring-neutral hover:ring-offset-2 hover:ring-offset-b1 rounded-lg">
+    <LazyItem class="select-none size-full pointer-events-none"  :item="item" >
     </LazyItem>
+
+      </PopoverTrigger>
+
+        <LazyCustomPopoverContent class="!w-110 @container/item-data max-h-170">
+          <CustomPopoverArrow  />
+<LazyItemData :item="item"  />
+        </LazyCustomPopoverContent>
+
+    </Popover>
   </div>
 </template>
 

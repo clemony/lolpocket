@@ -33,7 +33,9 @@ const coreItem = computed (() => {
     </CollapsibleTrigger>
     <Motion as-child :layout="true">
       <CollapsibleContent class="CollapsibleContent relative">
+            <RightbarChildContent class="w-full">
         <PocketItemChild v-for="set in pocket.items.sets" :key="set.key" :set="set" :pocket="pocket" />
+            </RightbarChildContent>
         <div class="w-full flex pr-9 pl-10 mt-2 ">
           <button class="btn btn-sm px-5 w-full btn-neutral justify-end text-2 *:text-nc/80 hover:!bg-neutral/85" @click="newItemSet(pocket.key)">
             <icon name="add-sm" class="stroke-[1.5] size-6" />Item Set

@@ -6,7 +6,7 @@
   
   
 .mask-clip-bottom {
-  mask-image: linear-gradient(to top, black 65%, transparent 66%);
+  mask-image: linear-gradient(to top, black 58%, transparent 59%);
 }
   .color-chip {
     @apply aspect-square size-9 flex items-center justify-center rounded-md

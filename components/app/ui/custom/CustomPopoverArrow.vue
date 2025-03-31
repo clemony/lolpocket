@@ -8,8 +8,9 @@ const props = defineProps<{
 
 <template>
   <PopoverArrow as-child :height="8" :width="8">
-    <div class="relative  size-8">
-      <icon name="fa:caret-down" :class="cn('!size-8  absolute -bottom-1.25 text-neutral/85 stroke-[0.5] stroke-b3 drop-shadow-xs mask-clip-bottom', props.class)" />
+    <div class="relative size-7 relative -mb-6">
+      <icon name="fa:caret-down" :class="cn('!size-7  absolute bottom-3 text-neutral/77 stroke-[0.5] stroke-accent drop-shadow-xs mask-clip-bottom', props.class)" />
     </div>
+
   </PopoverArrow>
 </template>

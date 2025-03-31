@@ -40,12 +40,12 @@ const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells
       </div>
     </PopoverTrigger>
 
-    <PopoverContent
-      class=" !rounded-xl size-fit bg-neutral/80 backdrop-blur-md"
+    <CustomPopoverContent
+      class=" !rounded-xl size-fit "
       side="bottom"
-      :side-offset="-4"
+      :side-offset="5"
       align="center">
-      <div class="gap-3 place-content-evenly grid grid-cols-3  backdrop-blur-md">
+      <div class="gap-3 place-content-evenly grid grid-cols-3  ">
         <CustomPopoverArrow />
         <PopoverClose
           v-for="ss in summonerSpells"
@@ -66,6 +66,6 @@ const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells
           </label>
         </PopoverClose>
       </div>
-    </PopoverContent>
+    </CustomPopoverContent>
   </Popover>
 </template>

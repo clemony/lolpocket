@@ -38,22 +38,18 @@ onMounted (() => {
 </script>
 
 <template>
-  <div class="size-full relative @container">
-    <div
-      class="size-full absolute inset-0 justify-center transition-all duration-300 ease-out  pl-8 flex">
-      <RuneSetBar :pocket="pocket">
-        <RunePanelMenu
-          :set="set"
-          :pocket="pocket" />
-      </RuneSetBar>
+      <div class=" size-full">
+<div class="px-18 pt-24">
+  <h1>Runes</h1>
+</div>
 
-      <div class="relative size-full justify-center w-full tldr-30 ">
+  <div class="size-full relative @container justify-center">
         <div class="flex gap-10 absolute overflow-hidden inset-0 top-0 left-0  w-full justify-center  max-h-[95vh] flex-wrap">
           <PocketRunePanels :key="set.key" :set="set" :pocket="pocket" />
         </div>
       </div>
 
-    </div>
+  
   </div>
 </template>
 
