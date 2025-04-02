@@ -5,6 +5,8 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
   imgClass?: string
 }>()
+
+const emit = defineEmits(['loaded'])
 </script>
 
 <template>
@@ -14,7 +16,8 @@ const props = defineProps<{
     :alt="props.alt"
     class=""
     :class="cn('size-full', props.class)"
-    :custom="true">
+    :custom="true"
+    @load="emit('loaded')">
     <!-- Show the actual image when loaded -->
 
     <AnimatePresence

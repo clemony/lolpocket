@@ -1,26 +1,23 @@
 <script setup lang="ts">
-import { formatEffects } from 'shared/supabase/supaIndex'
-
 const props = defineProps<{
   data: effect
 }>()
 
 const effect = computed(() => {
-return props.data ? props.data : null
+  return props.data ? props.data : null
 })
 
 const desc = computed (() => {
- if (!effect.value && !effect.value.description)
- return
+  if (!effect.value && !effect.value.description)
+    return
 
- let a = effect.value.description.replace('「', '')
-   a = a.replace('」', '')
+  let a = effect.value.description.replace('「', '')
+  a = a.replace('」', '')
 
-a = a.replace(/\[\[:[^|]+\|([^]]+)]]/g, '$1');
-return replaceFileReferencesWithImages(effect.value.description)
+  a = a.replace(/\[\[:[^|]+\|([\s\S]\]+)\]\]/g, '$1')
+  return replaceFileReferencesWithImages(effect.value.description)
 })
-console.log("💠 - desc - desc:", desc)
-
+console.log('💠 - desc - desc:', desc)
 </script>
 
 <template>
@@ -30,10 +27,10 @@ console.log("💠 - desc - desc:", desc)
       <span v-if="effect.name">{{ effect.name }}: &nbsp;</span>
     </span>
 
-    <template  v-if="desc">
-    <span
-    v-html="desc"
-      class="" />
+    <template v-if="desc">
+      <span
+        class=""
+        v-html="desc" />
     </template>
   </p>
 </template>

@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from 'vue'
-import { formatItemStats } from 'shared/supabase/supaIndex'
 
 const props = defineProps<{
   item?: Item

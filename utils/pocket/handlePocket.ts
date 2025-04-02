@@ -12,7 +12,7 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
     key: pocketKey,
     name: name || generateShortString(),
     roles: [],
-    icon: icon || '/img/champion/centered/1.webp',
+    icon: icon || '/img/lp/192.webp',
     champions: {
       children: [],
       default: null,
@@ -63,7 +63,7 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
   ps.pockets.push(newPocket)
   console.log('💠 - addPocket - ps.pockets:', ps.pockets)
 
-  toast.success(`Pocket ${newPocket.name} created.`, {
+  toast(`Pocket ${newPocket.name} created.`, {
     description: 'Head to your new pocket and start editing?',
     duration: 6000,
     action: {
@@ -92,10 +92,6 @@ export function deletePocket(pocket) {
 }
 
 // duplicate
-
-export function deepCopy<T>(obj: T): T {
-  return JSON.parse(JSON.stringify(obj))
-}
 
 export function duplicatePocket(original: pocket): pocket {
   const toID = hexoid()

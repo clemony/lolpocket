@@ -27,24 +27,21 @@ const styleRevert = computed(() => ({
         <img
           v-if="champ"
           id="champion"
-          :src="`/img/champion/centered/${champ}_0.webp`"
+          :src="`/img/champion-centered/${champ}_0.webp`"
           class="absolute top-[55%] left-[0%] z-0 scale-300 object-center"
-          :style="isHovered ? props.layer1 : styleRevert"
-        />
+          :style="isHovered ? props.layer1 : styleRevert" />
 
         <video-background
           v-if="champ"
           src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/videos/reward-item-claimable-glow-idle.webm"
           :loop="true"
           :style="props.layer2"
-          class="vid pointer-events-none absolute top-0 -left-20 z-50 scale-[100%] bg-center object-center"
-        ></video-background>
+          class="vid pointer-events-none absolute top-0 -left-20 z-50 scale-[100%] bg-center object-center"></video-background>
         <img
           v-if="champ"
           src="/img/overlay/dust.webp"
           class="absolute top-[20%] -left-[40%] z-0 scale-[200%] rotate-90! object-center opacity-60"
-          :style="props.layer3"
-        />
+          :style="props.layer3" />
       </div>
     </div>
   </div>

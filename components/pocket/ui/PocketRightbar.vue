@@ -28,7 +28,7 @@ const runesOpen = ref(false)
       <LazyPopover>
         <PopoverTrigger class="group/picon z-0 !cursor-pointer self-center  !size-28   rounded-full !pointer-events-auto shadow-sm  inset-shadow-sm aspect-square  grid place-items-center relative">
           <div class="size-full rounded-full overflow-hidden relative ">
-            <Image v-if="pocket.icon != '/img/champion/centered/1.webp'" :image="pocket.icon" alt="pocket icon" class=" pointer-events-none group-hover/picon:brightness-50 z-1 group-data-[state=open]/picon:brightness-50 scale-280  tldr-30 object-cover rounded-xl absolute top-17 left-1  " />
+            <Image v-if="pocket.icon != '/img/lp/192.webp'" :image="pocket.icon" alt="pocket icon" class=" pointer-events-none group-hover/picon:brightness-50 z-1 group-data-[state=open]/picon:brightness-50 scale-280  tldr-30 object-cover rounded-xl absolute top-17 left-1  " />
             <div v-else class="size-full bg-gradient-to-br from-neutral/80 to-neutral grid place-items-center text-nc font-semibold text-6 dst">
               LP
             </div>
@@ -68,9 +68,9 @@ const runesOpen = ref(false)
       </div>
 
       <LayoutGroup>
-        <PocketChampionsCollapsible :pocket="pocket" v-model:open="championsOpen"/>
-        <PocketItemsCollapsible :pocket="pocket" v-model:open="itemsOpen"/>
-        <PocketRunesCollapsible :pocket="pocket" v-model:open="runesOpen"/>
+        <PocketChampionsCollapsible v-model:open="championsOpen" :pocket="pocket" />
+        <PocketItemsCollapsible v-model:open="itemsOpen" :pocket="pocket" />
+        <PocketRunesCollapsible v-model:open="runesOpen" :pocket="pocket" />
         <PocketRolesCollapsible :pocket="pocket" />
         <PocketSpellsCollapsible :pocket="pocket" />
 
@@ -78,7 +78,7 @@ const runesOpen = ref(false)
         <PocketSummaryButton :pocket="pocket" @click="pocketNav = null" />
         <PocketCardButton :pocket="pocket" @click="pocketNav = null" />
 
-  <!--       <RightbarLabel v-if="route.name == 'items' || route.name == 'runes'">
+        <!--       <RightbarLabel v-if="route.name == 'items' || route.name == 'runes'">
           Inspect
         </RightbarLabel>
         <RuneInfoCollapsible

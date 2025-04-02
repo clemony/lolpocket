@@ -21,51 +21,62 @@
   --color-master: oklch(75.18% 0.1157 325.26);
   --color-grandmaster: oklch(68.06% 0.1352 26.61);
   --color-challenger: oklch(83.25% 0.0787 213.4);
-  --color-light-1: oklch(100% 0 0);
+
+
+
+  --color-light: #FFFFFF;
   --color-light-2: oklch(96.12% 0 0);
   --color-light-3: oklch(86% 0 0);
-  
+  --color-dark: #000000;
   --color-dark-1: oklch(47.84% 0 0);
   --color-dark-2: oklch(36% 0 0);
-  --color-dark-3: oklch(0% 0.02476 255.701624);
   --color-empty: #bab9b1;
   --color-empty-light: #cecdc8;
   
   
+  --color-onhit: oklch(70.72% 0.0996 10.55);
+  --color-mana: #145B96;
+--color-energy: #D0B800;
+
   --color-error: oklch(59.33% 0.1319 21.78);
-  
+
   --color-top: #e0746b;
   --color-fighter: oklch(78.32% 0.1173 37);
+  --color-fighter-light:#FBD9C2;
   
+
+
   --color-tiny-carrot: oklch(78.32% 0.1173 37);
-  
-  --color-onhit: oklch(70.72% 0.0996 10.55);
-  
   --color-bottom: #ebcb8b;
-  
   --color-mid: #be86b5;
 
   --bg-radial-smooth: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.87) 23%, rgba(255, 255, 255, 0.83) 34%, rgba(255, 255, 255, 0.78) 41%, rgba(255, 255, 255, 0.67) 50%, rgba(255, 255, 255, 0.63) 53%, rgba(255, 255, 255, 0.53) 59%, rgba(255, 255, 255, 0.43) 64%, rgba(255, 255, 255, 0.37) 67%, rgba(255, 255, 255, 0.19) 75%, rgba(255, 255, 255, 0.12) 79%, rgba(255, 255, 255, 0.07) 84%, rgba(255, 255, 255, 0) 100%);
 }
 
 @theme inline {
-  --accent: var(--color-inspiration);
-  
-  --color-support: var(--color-inspiration);
-  --color-utility: var(--color-inspiration);
-  --color-marksman: var(--color-precision);
-  --color-mobility: var(--color-precision);
-  
-  --color-mage: var(--color-sorcery);
+
   --color-middle: var(--color-sorcery);
-  --color-control: var(--color-sorcery);
-  
-  --color-tank: var(--color-resolve);
-  --color-toughness: var(--color-resolve);
+
   --color-jungle: #a3be8c;
-  
-  --color-assassin: var(--color-domination);
+
+  --color-utility: var(--color-inspiration);
+  --color-mobility: var(--color-precision);
+  --color-toughness: var(--color-resolve);
+  --color-control: var(--color-sorcery);
   --color-damage: var(--color-domination);
+
+  --color-support: var(--color-inspiration);
+  --color-marksman: var(--color-precision);
+  --color-mage: var(--color-sorcery);
+  --color-tank: var(--color-resolve);
+  --color-assassin: var(--color-domination);
+
+
+  --color-support-light: var(--color-inspiration-light);
+  --color-marksman-light: var(--color-precision-light);
+  --color-mage-light: var(--color-sorcery-light);
+  --color-tank-light: var(--color-resolve-light);
+  --color-assassin-light: var(--color-domination-light);
 }
 
 @utility iron {

@@ -29,7 +29,7 @@ const downloadClicked = refAutoReset(false, 1000)
         </p>
         <div group class="grid grid-flow-row auto-cols-auto select-none h-fit pt-1  grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center place-items-center  gap-4 mx-auto w-full">
           <template v-if="pocket.champions.children.length">
-            <template v-for="champion in pocket.champions.children" :key="champion.apiname">
+            <template v-for="champion in pocket.champions.children" :key="champion.id">
               <ChampionSplashDropdown :champion="champion" :pocket="pocket" />
             </template>
           </template>

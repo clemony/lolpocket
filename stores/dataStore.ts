@@ -13,6 +13,8 @@ export const useDataStore = defineStore(
     const SRitems = ref<Item[] | null>(null)
     const shards = ref()
 
+    const championTemplates = ref({})
+    const championAbilityData = ref({})
     const championNames = computedAsync (() => {
       return champions.value.map(c => c.name)
     })
@@ -38,6 +40,8 @@ export const useDataStore = defineStore(
     return {
       loadData,
       currentPatch,
+      championTemplates,
+      championAbilityData,
       paths,
       runes,
       SRitems,

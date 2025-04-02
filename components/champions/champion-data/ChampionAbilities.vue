@@ -1,102 +1,46 @@
 <script setup lang="ts">
 const props = defineProps<{
+  data: any
   champion: Champion
 }>()
 
-const keysToDisplay = ['COST:', 'COOLDOWN:', 'STATIC COOLDOWN:']
-const modelValue = ref()
-function filteredData(data: Record<string, string>) {
-  return Object.fromEntries(Object.entries(data).filter(([key]) => keysToDisplay.includes(key)))
-}
+const emit = defineEmits(['update:ability'])
+const data = computed (() => props.data)
+console.log('💠 - data:', data)
+const champion = computed (() => props.champion)
+const spells = computed (() => {
+  return data.value[3][champion.value.id].spells
+})
 
-const tabModel = ref(0)
+const selectedAbility = ref(null)
+
+const kbd = computed (() => {
+if (selectedAbility.value == data.value[3][champion.value.id].passive)
+return 'P'
+const find = spells.value.findIndex(s => s == selectedAbility.value)
+const l = ['Q', 'W', 'E', 'R']
+return l[find ]
+})
+onMounted (() => {
+  selectedAbility.value = data.value[3][champion.value.id].passive
+})
 </script>
 
 <template>
-  hi
-  <!-- <Tabs :default-value="0" class="mt-8 w-full">
-        <TabsList
-            class="ml-2px bg-b1 shadow-smooth !border-b3 mb-4 w-full justify-evenly rounded-lg">
-            <TabsTrigger
-                v-for="(ability, key, i) in champion.abilities"
-                :key="key"
-                :value="i"
-                class="rounded-lg p-2"
-                :class="{ 'bg-b1': tabModel == i }"
-                as-child>
-                <label>
-                    <input
-                        type="radio"
-                        :value="key"
-                        v-model="tabModel"
-                        name="tabs"
-                        class="hidden" />
-                    <Tooltip
-                        :content="
-                            ability.key +
-                            ' &nbsp;' +
-                            '-> ' +
-                            '  &nbsp;' +
-                            ability.name
-                        ">
-                        <loadImg
-                            :url="ability.img"
-                            :alt="ability.name"
-                            class="size-16 rounded-lg border shadow-xs" />
-                    </Tooltip>
-                </label>
-            </TabsTrigger>
-        </TabsList>
+  <div class="flex gap-10 w-full">
+    <div class="grid  gap-3 h-104 justify-between">
+      <label v-tippy="data[3][champion.id].passive.name" class="aspect-square size-18 rounded-lg shadow-sm dropd-shadow-sm">
+        <input v-model="selectedAbility" type="radio" class="peer hidden" :value="data[3][champion.id].passive" />
+        <Image
+          :image="`/img/passive/${data[3][champion.id].passive.image.full.replace('.png', '.webp')}`" alt="passive icon" class="size-full rounded-lg " />
 
-        <template v-for="(ability, key, i) in champion.abilities">
-            <TabsContent :value="i" class="mt-3!" v-if="tabModel == i">
-                <Card
-                    class="overflow-hidden px-6 pt-0 pb-3 transition-all duration-1000">
-                    <div
-                        class="max-h-inherit flex items-center overflow-hidden py-5">
-                        <loadImg
-                            :url="ability.img"
-                            :alt="ability.name"
-                            class="border-b3 size-[45px] rounded-lg border shadow-xs" />
-
-                        <div class="text-6 grow px-4 text-start font-thin">
-                            {{ ability.name }}
-                        </div>
-                        <p
-                            class="font-cursive kbd-sm text-3 mr-6 scale-x-125 font-mono capitalize not-italic! no-underline! hover:no-underline!">
-                            {{ ability.key }}
-                        </p>
-                    </div>
-
-                    <div class="flex flex-col gap-3 py-3">
-                        <div
-                            v-for="(value, key) in filteredData(ability.data)"
-                            :key="key"
-                            class="bg-b2/60 flex w-full flex-nowrap rounded-md px-2 py-1">
-                            <div
-                                class="text-medium text-2 capitalize opacity-80">
-                                {{ key }}
-                            </div>
-                            <div
-                                class="text-2 grow text-right text-nowrap opacity-80">
-                                {{ value }}
-                            </div>
-                        </div>
-                    </div>
-
-                    <ScrollArea
-                        class="text-3 overflow-auto p-1 text-balance whitespace-pre-line [scrollbar-color:bg-b3/20]">
-                        {{ ability.context }}
-                    </ScrollArea>
-                </Card>
-            </TabsContent>
-        </template>
-    </Tabs> -->
+      </label>
+      <label v-for="(ability, i) in spells" :key="i" v-tippy="ability.name" class="aspect-square size-18 rounded-lg shadow-sm dropd-shadow-sm">
+        <Image
+          :image="`/img/ability/${ability.image.full.replace('.png', '.webp')}`" alt="passive icon" class="size-full rounded-lg " />
+        <input v-model="selectedAbility" type="radio" class="peer hidden" :value="ability" />
+      </label>
+    </div>
+    <AbilityDescription v-if="selectedAbility && kbd" :ability="selectedAbility" :champion="champion" :kbd="kbd"/>
+  </div>
 </template>
-
-<style scoped>
-  kbd {
-  width: 1.5rem;
-  font-family: var(--mono);
-}
-</style>

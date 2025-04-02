@@ -1,7 +1,6 @@
 import tailwindcss from '@tailwindcss/vite'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
-import vueDevTools from 'vite-plugin-vue-devtools'
 
 //  Configuration Vite
 
@@ -16,7 +15,6 @@ export default defineNuxtConfig({
   vite: {
     plugins: [
       tailwindcss(),
-      vueDevTools(),
     ],
     vue: {
       customElement: true,
@@ -80,7 +78,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
 
   imports: {
-    dirs: ['shared/supabase', '@vueuse/components', 'stores', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/links', 'utils/lib', 'utils/pocket', 'utils/style', 'utils/calculator', 'stores', 'shared/data', 'shared/data/summoner', 'shared/data/summoner/match', 'utils/data'],
+    dirs: ['@vueuse/components', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/links', 'utils/lib', 'utils/pocket', 'utils/style', 'utils/calculator', 'stores', 'shared/data', 'shared/data/summoner', 'shared/data/summoner/match', 'utils/data', 'utils/data/get', 'utils/data/retrieve', 'utils/data/adjust'],
   },
 
   webpack: {
@@ -116,6 +114,7 @@ export default defineNuxtConfig({
     'components': fileURLToPath(new URL('./components', import.meta.url)),
     'plugins': fileURLToPath(new URL('./plugins', import.meta.url)),
     'modules': fileURLToPath(new URL('./modules', import.meta.url)),
+    'data': fileURLToPath(new URL('./data', import.meta.url)),
   },
 
   compatibilityDate: '2024-11-01',

@@ -10,7 +10,7 @@ const toID = hexoid()
 // Form fields
 const name = ref('')
 const tags = ref([])
-const selectedIcon = ref('/img/champion/centered/1.webp')
+const selectedIcon = ref('/img/lp/192.webp')
 
 watch(
   () => tags.value,
@@ -48,8 +48,7 @@ defineExpose({
         type="text"
         name="pocket-name"
         placeholder="optional"
-        class="size-full"
-      />
+        class="size-full" />
     </template>
 
     <template #name-buttons>
@@ -60,16 +59,14 @@ defineExpose({
     <template #tags>
       <TagsInput
         v-model="tags"
-        class="flex-col p-2"
-      >
+        class="flex-col p-2">
         <div class="*:text-3 flex w-full flex-row flex-wrap justify-start gap-2">
           <template v-if="tags.length">
             <TransitionGroup name="pop">
               <TagsInputItem
                 v-for="tag in tags"
                 :key="tag"
-                :value="tag"
-              >
+                :value="tag">
                 <TagsInputItemText />
                 <TagsInputItemDelete />
               </TagsInputItem>
@@ -92,8 +89,7 @@ defineExpose({
         <TagsInputInput
           placeholder="optional"
           class="text-3 min-h-10 w-full rounded-md border-0 focus:border-0"
-          name="pocket-tags "
-        />
+          name="pocket-tags " />
       </TagsInput>
     </template>
 
@@ -102,8 +98,7 @@ defineExpose({
     <button
       type="submit"
       class="absolute bottom-15 right-0 btn btn-neutral btn-lg"
-      @click="submitForm"
-    >
+      @click="submitForm">
       Create
     </button>
   </PocketSheetContent>

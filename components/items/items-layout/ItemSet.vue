@@ -17,6 +17,8 @@ function onAdd(event: DraggableEvent) {
 }
 
 const itemSet = ref(props.set.items)
+
+const showData = ref(false)
 </script>
 
 <template>
@@ -51,14 +53,23 @@ const itemSet = ref(props.set.items)
     @end="onEnd"
     @start="onStart"
     @remove="(evt) => onRemove(evt, itemSet)">
-    <Item
+    <Popover
       v-for="(item, i) in itemSet"
-      :key="item.cloneId"
+      :key="item.cloneId">
+      <PopoverTrigger as-child class=" shrink-0 !size-18 ">
+    <Item
       :item="item"
       :pocket="pocket"
       class="shadow-sm shrink-0 !size-18 "
       :class="{ 'rotate-out-center': removingItems[item?.id ?? `item-${i}`] }"
-      @click.prevent="is.selectedItem = item" />
+      @click.prevent />
+      </PopoverTrigger>
+      <LazyCustomPopoverContent @interact-outside="showData = false" class="p-2 w-44" :class="{'!w-100 max-h-160': showData }" >
+        <CustomPopoverArrow  />
+<LazyItemData v-if="showData" :item="item"  />
+<LazyItemInSetMenu v-else :pocket="pocket" :set="props.set" :item="item" @update:popover="showData = true" />
+      </LazyCustomPopoverContent>
+    </Popover>
     <Placeholder class="rounded-lg border-b3 !size-18 shadow-sm  bg-b3/70 inset-shadow-xs group-has-[.sortable-ghost]:hidden" />
   </div>
 </template>

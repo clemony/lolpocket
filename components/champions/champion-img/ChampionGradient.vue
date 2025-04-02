@@ -9,7 +9,7 @@ const props = defineProps<{
   <div
     :class="cn(' place-self-center size-full absolute z-0 overflow-hidden', props.class)" :style="{
       backgroundImage:
-        `url(/img/champion/centered/${props.champion.apiname}_0.jpg)`,
+        `url(/img/champion-centered/${props.champion.id}_0.webp)`,
       backgroundSize: '250%',
       backgroundPositionX: '64%',
       backgroundPositionY: '11%',

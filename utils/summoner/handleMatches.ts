@@ -62,7 +62,7 @@ export function getPatchChampions(patchGames) {
   return [...championStats.entries()]
     .sort((a, b) => b[1].games - a[1].games) // Sort by most played
     .map(([champion, stats]) => ({
-      champion: ds.champions.find(c => c.id == champion)?.name || null,
+      champion: ds.champions.find(c => c.key == champion)?.name || null,
       games: stats.games,
       wins: stats.wins,
       losses: stats.losses,

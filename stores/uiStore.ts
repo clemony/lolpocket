@@ -6,12 +6,17 @@ export const useUiStore = defineStore('UiStore', () => {
   const rightbarExpanded = ref(true)
   const triggerRightbar = refAutoReset(false, 1000)
 
-  const rightbarAvailable = computed (() => {
-    const pocket = /pocket/g
-    const summoner = /summoner\//
-    const research = /research\//
+  const rightbarAvailable = computed(() => {
+    const match = [
+      /pocket/,
+      /summoner\//,
+      /research\//,
+      /items\//,
+    ]
+
     const route = useRoute()
-    return route.path.match(pocket) || route.path.match(summoner) || route.path.match(research)
+
+    return match.some(regex => regex.test(route.path))
   })
 
   // dialog

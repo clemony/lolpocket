@@ -58,7 +58,7 @@ const classObject = 'font-normal text-4 justify-start gap-3  w-full btn btn-ghos
         </Motion>
       </AnimatePresence>
       <AnimatePresence
-        multiple as="div" :transition="{ duration: 0.3 }" :animate="{ opacity: [0, 1] }" :exit="[1, 0.2, 0]" class="absolute right-0 bottom-6 justify-end **:justify-items-end **:justify-end **:text-right max-w-32">
+        multiple as="div" :transition="{ duration: 0.3 }" :animate="{ opacity: [0, 1] }" :exit="[1, 0.2, 0]" class="absolute right-0 bottom-6 justify-end **:justify-items-end **:font-medium **:text-[#000000] **:tracking-tight **:justify-end **:text-right max-w-32">
         <Motion
           v-if="menuOpen"
           key="open-pocket"

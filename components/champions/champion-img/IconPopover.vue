@@ -60,7 +60,7 @@ const searchResult = computedAsync (() => {
   const find = ds.champions.find(c => c.name == selectedResult.value)
 
   if (find) {
-    return fuse.value.search(find.apiname,
+    return fuse.value.search(find.id,
     )
   }
   else {
@@ -81,10 +81,10 @@ onMounted (async () => {
     selectIcon.value = props.selectedIcon
   }
   else {
-    selectIcon.value = '/img/champion/centered/1.webp'
+    selectIcon.value = '/img/lp/192.webp'
   }
 
-  const imageModules = import.meta.glob('/public/img/champion/centered/*')
+  const imageModules = import.meta.glob('/public/img/champion-centered/*')
   images.value = Object.keys(imageModules).map(path => path.replace('/public', ''))
 
   await images.value

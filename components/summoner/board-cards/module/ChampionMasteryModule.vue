@@ -15,7 +15,7 @@ const ds = useDataStore()
             <div
               class="size-full "
               :style="
-                { backgroundImage: `url(/img/champion/centered/${ds.champions.find((c) => c.id == i.championId).apiname}_0.jpg)`,
+                { backgroundImage: `url(/img/champion-centered/${ds.champions.find((c) => c.key == i.championId).id}_0.webp)`,
                   backgroundSize: '363%',
                   backgroundPositionX: '50%',
                   backgroundPositionY: '30%',
@@ -40,7 +40,7 @@ const ds = useDataStore()
                   return a < 4 ? 0 : a >= 10 ? 10 : a
                 }).value}.webp`" class="size-17 drop-shadow-sm  grayscale opacity-85 contrast-130" />
             <p class="text-5 font-semibold font-serif f-tt dst">
-              {{ ds.champions.find((c) => c.id == i.championId).name }}
+              {{ ds.champions.find((c) => c.key == i.championId).name }}
             </p>
             <p class="font-medium">
               Level {{ i.championLevel }}

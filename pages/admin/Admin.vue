@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import { championFull } from 'data/championFull'
 
 const ts = useTempStore()
 const ds = useDataStore()
-console.log("💠 - ds:", ds.SRitems)
-console.log("💠 - ds:", ds.champions)
+console.log('💠 - ds:', ds.championTemplates)
 definePageMeta({
   name: 'admin',
 })
@@ -26,10 +26,11 @@ function reGet() {
   console.log('data fetch complete!')
 }
 
-function getFiles(){
+console.log('💠 - getWikiChampionAbility - data:', championFull.data)
 
-        const uniqueFileListings = extractUniqueFileListingsFromArray(ds.SRitems);
-console.log(uniqueFileListings);
+async function parseAbilities() {
+  const c = await parseChampionAbilities(ds.championTemplates)
+  console.log('💠 - parseAbilities - c:', c)
 }
 </script>
 
@@ -42,7 +43,6 @@ console.log(uniqueFileListings);
     <div class="flex gap-2">
       <div class="flex flex-col gap-2">
         All
-
         <button
           class="btn btn-neutral" @click="patchData()">
           Patch Data TEST
@@ -79,14 +79,20 @@ console.log(uniqueFileListings);
 
         <button
           class="btn btn-neutral"
-          @click="getChampsFromDatabase()">
+          @click="loadChampionData()">
           Get Champs from Database
         </button>
 
         <button
           class="btn btn-neutral"
-          @click="getFiles()">
-          get files
+          @click="getWikiChampionAbility(championFull.data)">
+          get wiki champion ability
+        </button>
+
+        <button
+          class="btn btn-neutral"
+          @click="''">
+          null
         </button>
       </div>
     </div>

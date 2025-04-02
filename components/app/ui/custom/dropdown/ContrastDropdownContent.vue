@@ -47,7 +47,7 @@ defineOptions({
     
       v-bind="$attrs"
     :align-offset="props.alignOffset"
-    :class="cn('bg-neutral/83 **:text-nc/94 rounded-lg-1 px-1.5 py-1.5', props.class)">
+    :class="cn('bg-neutral/83 **:text-nc rounded-xl min-w-44 px-1.5 py-1.5', props.class)">
         <div>
     <slot />
     </div>

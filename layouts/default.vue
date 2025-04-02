@@ -12,17 +12,11 @@ const route = useRoute()
     <div class="flex flex-col  h-screen min-h-screen w-full ">
       <NuxtLoadingIndicator color="var(--color-neutral)" />
 
-      <Sonner
-        position="top-right"
-
-        :toast-options="{
-          class: 'my-toast',
-          descriptionClass: 'my-toast-description',
-        }"
+      <Toast
+        position="top-center"
         :expand="true"
         :duration="6000" />
 
-      <LazyNewFolderDialog />
       <LazyNewPocketDialog />
 
       <slot />

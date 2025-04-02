@@ -1,68 +1,120 @@
 declare global {
 
   interface Champion {
+    id: string
+    key: number
     name: string
-    adaptivetype: string
-    alttype: string
-    apiname: string
-    be: number
-    changes: string
-    client_positions: string
-    control: number
-    damage: number
-    date: string
-    difficulty: number
-    external_positions: string
-    herotype: string
-    id: number
-    mobility: number
-    nickname: string
-    patch: string
-    rangetype: string
-    resource: string
-    role: string
-    rp: number
-    skills: {
-      1: Skill
-      2: Skill
-      3: Skill
-      4: Skill
-      5: Skill
+    title: string
+    image: Image
+    skins: Skin[]
+    lore: string
+    blurb: string
+    allytips: string
+    enemytips: string
+    tags: string[]
+    partype: string
+    info: {
+      attack: number
+      defense: number
+      magic: number
+      difficulty: number
     }
     stats: {
-      acquisition_radius: number
-      arm_base: number
-      arm_lvl: number
-      as_base: number
-      as_lvl: number
-      as_ratio: number
-      attack_cast_time: number
-      attack_total_time: number
-      dam_base: number
-      dam_lvl: number
-      hp5_base: number
-      hp5_lvl: number
-      hp_base: number
-      hp_lvl: number
-      mp5_base: number
-      mp5_lvl: number
-      mp_base: number
-      mp_lvl: number
-      mr_base: number
-      mr_lvl: number
-      ms: number
-      pathing_radius: number
-      range: number
-      selection_height: number
-      selection_radius: number
+      hp: number
+      hpperlevel: number
+      mp: number
+      mpperlevel: number
+      movespeed: number
+      armor: number
+      armorperlevel: number
+      spellblock: number
+      spellblockperlevel: number
+      attackrange: number
+      hpregen: number
+      hpregenperlevel: number
+      mpregen: number
+      mpregenperlevel: number
+      crit: number
+      critperlevel: number
+      attackdamage: number
+      attackdamageperlevel: number
+      attackspeedperlevel: number
+      attackspeed: number
     }
-    style: number | string
-    title: string
-    toughness: number
-    utility: number
+    spells: Ability[]
+    passive: {
+      name: string
+      description: string
+      image: Image
+    }
+    recommended: any[] | null
   }
 
-  // type Champions = Champion[]
+  interface Skin {
+    id: number
+    num: number
+    name: string
+    chromas: boolean | null
+  }
 
+  interface Ability {
+    id: string
+    name: string
+    description: string
+    tooltip: string | null
+    leveltip: {
+      label: string[] | null
+      effect: string[] | null
+    }
+    maxrank: number | null
+    cooldown: number[] | null
+    cooldownBurn: string | null
+    cost: number[] | null
+    costBurn: string | null
+    datavalues: any | null
+    effect: [number[] | null]
+    effectBurn: [string | null]
+    vars: any[] | null
+    costType: string | null
+    range: number[] | null
+    rangeBurn: string | null
+    image: Image | null
+    resource: string | null
+  }
+
+  interface ChampionAbility {
+    name?: string
+    icon?: string
+    description?: string
+    description2?: string
+    description3?: string
+    info?: string
+    damage?: string
+    targeting?: string
+    affects?: string
+    champion?: string
+    skill?: string
+    leveling3?: string
+    cooldown?: number[]
+    cost?: number[]
+    costType?: string
+    targeting?: string
+    affects?: string
+    notes?: string
+    icon3?: string
+    video?: string
+    flavorSound?: string
+    blurbIcon?: string
+    blurb?: string
+    blurb2?: string
+    blurb3?: string
+  }
+  interface ChampionAbilities {
+    [key: string]: Ability // e.g., { Q: Ability, W: Ability, E: Ability, R: Ability }
+  }
+
+  interface ChampionsData {
+    [championName: string]: ChampionAbilities
+  }
 }
 export { }

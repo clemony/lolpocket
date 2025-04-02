@@ -1,5 +1,5 @@
 import { hexoid } from 'hexoid'
-
+import { toast } from 'vue-sonner'
 /*
 createItem
 newItemSet
@@ -48,33 +48,51 @@ export function newItemSet(pocketKey?, setName?) {
   return newSet
 }
 
-export function removeItemFromSet(pocket, itemSet, itemx) {
-  const thisPocket = getPocket(pocket)
-  const set = thisPocket?.items[0].sets.find(set => set.key === itemSet)
+export function removeItemFromSet(pocket: pocket, itemSet: ItemSet, itemx: Item) {
+  const set = pocket?.items.sets.find(set => set.key === itemSet.key)
 
+  console.log('💠 - removeItemFromSet - set:', set)
   if (set) {
     const index = set.items.findIndex(item => item === itemx)
+    console.log('💠 - removeItemFromSet - index:', index)
     if (set && Array.isArray(set.items)) {
-      set.items.splice(index)
+      set.items.splice(index, 1)
     }
   }
 }
 
-export function addItemToSet(pocket, itemSet, item) {
-  const set = pocket.items.sets.find(set => set.key === itemSet)
+export function addItemToSet(pocket: pocket, itemSet: ItemSet, item: Item) {
+  const set = pocket.items.sets.find(set => set.key === itemSet.key)
 
   if (set && Array.isArray(set.items)) {
     set.items.push(item)
   }
 }
 
-export function resetItems(set) {
+export function duplicateItemSet(pocket: pocket, set: ItemSet) {
+  const newSet = deepCopy(set)
+  pocket.items.sets.push(newSet)
+}
+
+export function resetItems(set: ItemSet) {
   if (set && Array.isArray(set.items)) {
     set.items.splice(0, set.items.length) // Reset the array
   }
 }
 
-export function deleteItemSet(pocket, set) {
+export function copyItemSetToPocket(targetPocket: pocket, set: ItemSet) {
+  const newSet = deepCopy(set)
+
+  if (!set || !newSet || !targetPocket) {
+    toast('Something went wrong!')
+  }
+  else {
+    targetPocket.items.sets.push(newSet)
+    toast(`Set copied to ${targetPocket.name}!`)
+  }
+}
+
+export function deleteItemSet(pocket: pocket, set: ItemSet) {
   const i = pocket.items.sets.findIndex(s => s.key == set.key)
   if (i) {
     pocket.items.sets.splice(i, 1)

@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <DropdownMenuSeparator class="bg-b3 brightness-30" />
+  <DropdownMenuSeparator class="bg-accent brightness-125" />
 </template>

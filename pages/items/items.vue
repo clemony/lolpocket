@@ -13,15 +13,9 @@ const captions = computed(() => {
   let a = items.value.map(a => a.caption ?? '')
   a = a.filter(caption => caption != '')
   const i = Math.floor(Math.random() * a.length)
-  return a[i]
+  const b = a[i].replace(/\\/g, '')
+  return replaceFileReferencesWithImages(b)
 })
-console.log('💠 - captions - captions:', captions.value)
-watch(
-  () => captions.value,
-  (newVal) => {
-    console.log('💠 - newVal:', newVal)
-  },
-)
 
 const sortItemsAZ = ref(0)
 const sortPrice = ref(0)
@@ -43,40 +37,39 @@ const toggleFilter = useToggle(filter)
 </script>
 
 <template>
-  <NuxtLayout name="header-layout" class="pt-0  grid transition-all duration-300 overflow-x-hidden" :class="{ 'grid-cols-[1fr_340px]': filter, ' grid-cols-[1fr_0px]': !filter }">
-    <template #header>
-      <div
-        class="text-4 drop-shadow-text items-center px-2 font-serif tracking-wide text-nowrap flex mt-1 ">
-        {{ captions }}
-      </div>
+  <NuxtLayout name="right-bar-layout">
+    <template #page>
+      <NuxtLayout name="header-layout" class="pt-0  overflow-x-hidden">
+        <template #crumb>
+          <div
+            class="text-1  items-center px-1  text-nowrap flex mt-1 "
+            v-html="captions" />
+        </template>
+
+        <div class="w-full pt-24 px-16 pb-12">
+          <h1>Items</h1>
+        </div>
+        <div class="size-full items-start overflow-y-auto  px-16 no-scrollbar">
+          <ItemList
+            id="item-results"
+            :list-key="listKey"
+            class="" />
+        </div>
+      </NuxtLayout>
     </template>
 
-    <template #crumb>
-      <ItemSearch>
-        <button class="btn btn-ghost btn-sm btn-square rounded-md hover:bg-b2/40" @click.stop="toggleFilter()">
-          <icon name="filter" class="size-4" />
-        </button>
+    <div class="flex flex-col items-center py-12">
+      <ItemSearch class="input shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc">
       </ItemSearch>
 
-      <!--       <ChampionSearch class="justify-self-end ">
-
-      </ChampionSearch> -->
-    </template>
-
-    <div class="size-full overflow-y-auto  pt-54  px-16 no-scrollbar">
-      <ItemList
-        id="item-results"
-        :list-key="listKey"
-        class="" />
-    </div>
-    <div class="size-full  pt-38 pr-10 pl-8  border-l border-l-b2">
-      <div class="flex gap-4">
-        <div class="join w-fit shadow-xs">
-          <button
-            class="btn-outline btn border-b3"
-            @click="resetItems">
-            Reset Filters
-          </button>
+      <div class="size-full  pt-8   border-l border-l-b2">
+        <div class="flex gap-4">
+          <div class="join w-fit shadow-xs">
+            <button
+              class="btn-outline btn border-b3"
+              @click="resetItems">
+              Reset Filters
+            </button>
           <!-- TODO
          REDO with vueuse
 
@@ -95,29 +88,32 @@ const toggleFilter = useToggle(filter)
             :icon-size="7"
             @click.stop
             @update:model="(v) => (is.sortPrice = v)" /> -->
+          </div>
+        </div>
+
+        <div class="px-7">
+          <div class="divider divider-start before:bg-b3/60 font-semibold  my-8">
+            Categories
+          </div>
+          <RadioFilterList
+            :types="itemTypes"
+            class=""
+            @update:model="(e) => (is.filterItemTypes = e)" />
+        </div>
+
+        <div class="px-5 py-8">
+          <ItemStatsChecklist />
+        </div>
+
+        <div class="px-7">
+          <div class="divider divider-start before:bg-b3/60 font-semibold  mb-8">
+            Roles
+          </div>
+          <CheckboxFilterList
+            :source="itemCategories"
+            @update:model="(e) => (is.filterItemCats = e)" />
         </div>
       </div>
-
-      <h2 class="drop-shadow-text mt-8 mb-4  tracking-tight">
-        Categories
-      </h2>
-
-      <RadioFilterList
-        :types="itemTypes"
-        class=""
-        @update:model="(e) => (is.filterItemTypes = e)" />
-      <h2 class="drop-shadow-text mt-8 mb-4  tracking-tight">
-        Stats
-      </h2>
-      <ItemStatsList />
-      <span class="h-1 w-full" />
-
-      <h2 class="drop-shadow-text  mt-8 mb-4  tracking-tight">
-        Roles
-      </h2>
-      <CheckboxFilterList
-        :source="itemCategories"
-        @update:model="(e) => (is.filterItemCats = e)" />
     </div>
   </NuxtLayout>
 </template>

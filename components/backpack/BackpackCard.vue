@@ -8,28 +8,12 @@ const pocket = computed (() => {
   return props.pocket
 })
 
-const bgImg = computed (() => {
-  return pocket.value.icon && pocket.value.icon == '/img/champion/centered/1.webp' ? 'url(/img/bg/inventory_card.jpg)' : pocket.value.icon ? `url(${pocket.value.icon})` : `url(/img/champion/centered/${pocket.value.champions.default.apiname}_0.jpg)`
-})
-
-const bgSize = computed (() => {
-  return bgImg.value == 'url(/img/bg/inventory_card.jpg)' ? '100%' : '250%'
-})
-
-const bgX = computed (() => {
-  return bgImg.value == 'url(/img/bg/inventory_card.jpg)' ? '10%' : '40%'
-})
-const bgY = computed (() => {
-  return bgImg.value == 'url(/img/bg/inventory_card.jpg)' ? '100%' : '21%'
-})
-
 const menuOpen = ref(false)
 
-const toggleMenu = useToggle(menuOpen)
 const transition = {
   type: 'ease-in-out',
   duration: 0.4,
-  delay: 0.1,
+  delay: 0.3,
 }
 
 const bgVariant = {
@@ -57,15 +41,10 @@ opacity:[1,0.5, 0],
   <AnimatePresence
     multiple
     as="div" :class="cn('size-full hover:border-b3 hover:ring-1 hover:ring-b2 hover:shadow-pretty relative border group border-transparent  rounded-xl transition-all shadow-warm duration-300 gap-3 overflow-hidden **:select-none', props.class)">
+
+    <BackpackCardBackground :pocket="pocket"  />
     <AnimatePresence
-      as="div"
-      class=" place-self-center size-full    rounded-xl border border-b2 shadow-sm overflow-hidden after:bg-radial-[at_75%_0] after:size-full after:absolute after:top-0 after:left-0 after:from-[#FFFFFF]/2  after:from-16%  after:via-[#FFFFFF]/88  after:via-48%  after:to-[#FFFFFF]  after:to-80% after:z-0" :style="{
-        backgroundImage: bgImg,
-        backgroundSize: bgSize,
-        backgroundPositionX: bgX,
-        backgroundPositionY: bgY,
-      }"
-      :class="{ 'grayscale opacity-70': bgImg == 'url(/img/bg/inventory_card.jpg)' }">
+      as="div">
       <Motion
         v-if="!menuOpen"
         key="card-wrapper" as-child
@@ -125,7 +104,7 @@ opacity:[1,0.5, 0],
           </AnimatePresence>
         </NuxtLink>
       </Motion>
-    </AnimatePresence><!--
+    </AnimatePresence>
       <Motion
       v-if="menuOpen"
        as="div"
@@ -133,7 +112,7 @@ opacity:[1,0.5, 0],
        :variants="bgVariant"
       animate="open"
       exit="closed">
-      </Motion> -->
+      </Motion>
       <BackpackMenuOverlay :menu-open="menuOpen"  />
     <BackpackMenu
       v-if="menuOpen" :pocket="pocket" :menu-open="menuOpen" />

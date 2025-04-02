@@ -57,7 +57,6 @@ const filteredChampions = computed(() => {
 console.log('💠 - filteredChampions - filteredChampions:', filteredChampions) */
 
 const a = Object.values(types)[3]
-console.log('💠 - a:', a)
 
 const b = computed(() => {
   const c = []
@@ -66,7 +65,6 @@ const b = computed(() => {
   })
   return c
 })
-console.log('💠 - b - b:', b.value)
 
 watch(
   () => cs.filterChampionTypes,
@@ -89,7 +87,6 @@ watch(
       @click.right.prevent>
     </LazyChampionFullPopover>
   </div>
-
   <!-- <div as="div" class="h-full pt-34 w-full px-6">
     <div class=" flex flex-col  gap-6">
       <h2 class="mt-1">

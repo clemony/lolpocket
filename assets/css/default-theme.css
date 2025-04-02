@@ -7,25 +7,24 @@
   --bc: oklch(0% 0.02476 255.701624);
   --neutral: oklch(0% 0.02476 255.701624);
   --nc: oklch(81% 0 0);
-  --accent: oklch(29.68% 0 59.9)
-  
-  --default-font-family: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-    sans-serif 'sans-serif';
-  
+  --accent:
+    oklch(29.68% 0 59.9) --default-font-family: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif 'sans-serif';
+
   --radius-xl: initial;
   --radius-xl: 0.7rem;
   --radius-md-1: 0.52rem;
   --radius-lg-1: 0.6rem;
   --radius-lg-2: 0.62rem;
   --radius-tiny: 4px;
-  
-    --font-sans: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif 'sans-serif';
+
+  --font-sans: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif 'sans-serif';
   --font-serif: 'Noto Serif KR Variable', 'serif';
   --font-mono: 'Red Hat Mono Variable', 'monospace';
   --font-chivo: 'Chivo Mono Variable', 'monospace';
---font-redacted: 'Redacted Script';
---font-flow: 'Flow Circular';
-  
+  --font-redacted: 'Redacted Script';
+  --font-flow: 'Flow Circular';
+
   --text-1: 0.86rem;
   --text-2: 0.9rem;
   --text-3: 0.99rem;
@@ -35,41 +34,52 @@
   --text-7: 1.5rem;
   --text-8: 1.675rem;
   --text-9: 1.875rem;
-  --text-10: 2.25rem;
-  --text-11: 2.9rem;
-  --text-12: 3.75rem;
+  --text-10: 2.25=rem;
+  --text-11: 2.5rem;
+  --text-12: 2.7rem;
   --text-13: 4.5rem;
   --text-14: 6rem;
   --text-15: 7rem;
 
   --shadow-pretty: 0 3px 10px rgba(0, 0, 0, 0.2);
-  
+
   --shadow-warm: rgba(0, 0, 0, 0.08) 0px 2px 7px;
-  
-  --shadow-warm-2: rgba(0, 0, 0, 0.10) 0px 2px 8px;
-  
+
+  --shadow-warm-2: rgba(0, 0, 0, 0.1) 0px 2px 8px;
+
   --shadow-warm-soft: rgba(0, 0, 0, 0.03) 0px 2px 5px;
-  
-  --shadow-standard: 0px 2px 3px -1px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(25, 28, 33, 0.02),
-    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
-  
+
+  --shadow-standard:
+    0px 2px 3px -1px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(25, 28, 33, 0.02), 0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+
   --shadow-smooth: 0px 1px 10px rgba(17, 17, 26, 0.075);
-  
-  --shadow-outline:  rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-  
-  
+
+  --shadow-outline: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+
   --shadow-outline-4: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  
-  --shadow-flat:  rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+  --shadow-flat: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   --shadow-mask: 0px 3px 20px 30px #00000024;
-  
-  --inset-shadow-rounded: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset;
-  
-  --shadow-rounded: rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  
+
+  --inset-shadow-rounded:
+    rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset;
+
+  --shadow-rounded:
+    rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
   --inset-shadow-mask: inset 0px 0px 20px 16px #00000024;
-  
+
   --drop-shadow-text: 1px 0px 0px #00000020;
-  
+
   --dst: var(--drop-shadow-text);
+
+  --animate-border-beam: border-beam calc(var(--duration) * 1s) infinite linear;
+
+  @keyframes border-beam {
+    100% {
+      offset-distance: 100%;
+    }
+  }
 }

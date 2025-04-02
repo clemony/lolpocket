@@ -7,8 +7,10 @@ const pocket = computed (() => {
   return props.pocket
 })
 
-const spell = computed (() => {
+ const spell = computed (() => {
   const s = pocket.value.spells.default
+  if (!s)
+  return null
   return s[0] && s[0].name ? s[0] : null
 })
 </script>
@@ -17,12 +19,12 @@ const spell = computed (() => {
   <Collapsible>
     <CollapsibleTrigger class="w-full group/state">
       <RightbarButton field>
-        <RightbarIconWrapper :active="spell != null">
-          <i-tft-attach v-if="spell == null" class="size-4.5 opacity-65" />
+        <RightbarIconWrapper >
+       <i-tft-attach v-if="!spell" class="size-4.5 opacity-65" />
           <img v-else :src="`/img/spells/${spell.name}.webp`" class="size-full rounded-full" />
         </RightbarIconWrapper>
         <span class="capitalize">
-          {{ pocket.spells.default && pocket.spells.default[0] ? pocket.spells.default[0].name : 'Spells' }} {{ pocket.spells.default && pocket.spells.default[1] ? `/ ${pocket.spells.default[1].name}` : '' }}
+          {{ pocket.spells.default && pocket.spells.default[0] ? pocket.spells.default[0].name : 'Spells' }} {{ pocket.spells.default && pocket.spells.default[1] ? `/ ${pocket.spells.default[1].name}` : null }}
         </span>
         <Grow />
         <SpellsCounter :pocket="pocket" />&nbsp;

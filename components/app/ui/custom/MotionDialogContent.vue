@@ -11,7 +11,10 @@ import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import { computed } from 'vue'
 import type { HTMLAttributes } from 'vue'
 
-const props = defineProps<DialogContentProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<DialogContentProps & { class?: HTMLAttributes['class']
+  noOverlay?: boolean
+  delay?: number
+ }>()
 const emits = defineEmits<DialogContentEmits & { close }>()
 
 const delegatedProps = computed(() => {
@@ -29,7 +32,7 @@ const dialogOpenState = {
   rotateY: 0,
   z: 0,
   transition: {
-    delay: 0.2,
+    delay: props.delay || 0.2,
     duration: 0.3,
     ease: [0.17, 0.67, 0.51, 1],
     opacity: {
@@ -57,7 +60,7 @@ const dialogInitialState = {
 <template>
   <DialogPortal>
     <DialogOverlay
-      class="fixed inset-0 z-50 isolate bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0">
+      class="fixed inset-0 z-50 isolate bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" :class="{'opacity-0 invisible': props.noOverlay}">
       <Motion class="overlay" :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :exit="{ opacity: 0 }" />
     </DialogOverlay>
 
@@ -66,7 +69,7 @@ const dialogInitialState = {
       v-bind="forwarded"
       :class="
         cn(
-          'fixed left-[35%] top-[20%] z-50 isolate grid w-full max-w-160  translate-y-1/2 gap-4 border bg-b1 px-10 py-8 shadow-lg data-[state=closed]:duration-200  data-[state=closed]:animate-out data-[state=closed]:fade-out-0  data-[state=closed]:zoom-out-95  data-[state=closed]:slide-out-to-bottom-[48%]  sm:rounded-xl',
+          'fixed  left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] z-50 isolate  max-w-160  gap-4 border bg-b1 px-10 py-8 shadow-lg data-[state=closed]:duration-200  data-[state=closed]:animate-out data-[state=closed]:fade-out-0  data-[state=closed]:zoom-out-95  data-[state=closed]:slide-out-to-bottom-[48%]  sm:rounded-xl',
           props.class,
         )">
       <Motion
@@ -75,7 +78,7 @@ const dialogInitialState = {
         <slot />
 
         <DialogClose
-          class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-b3 focus:ring-offset-2 disabled:pointer-events-none ">
+          class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring focus:ring-neutral disabled:pointer-events-none ">
           <icon name="x-sm" class="size-6" />
           <span class="sr-only">Close</span>
         </DialogClose>

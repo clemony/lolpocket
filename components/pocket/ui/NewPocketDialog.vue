@@ -10,7 +10,7 @@ const toID = hexoid()
 // Form fields
 const name = ref('')
 const tags = ref([])
-const selectedIcon = ref('/img/champion/centered/1.webp')
+const selectedIcon = ref('/img/lp/192.webp')
 
 watch(
   () => tags.value,

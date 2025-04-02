@@ -83,13 +83,13 @@ const toID = hexoid()
     @clone="onClone"
     @start="onStart">
     <Popover v-for="item in list" :key="item.id">
-      <PopoverTrigger class="size-full hover:ring-1  !cursor-pointer shadow-sm drop-shadow-sm hover:ring-neutral hover:ring-offset-2 hover:ring-offset-b1 rounded-lg">
+      <PopoverTrigger class="size-full hover:ring-1  !cursor-pointer shadow-sm drop-shadow-sm hover:ring-neutral hover:ring-offset-2 hover:ring-offset-b1 data-[state=open]:ring-1 data-[state=open]:ring-offset-2 data-[state=open]:ring-neutral data-[state=open]:ring-offset-b1 rounded-lg">
     <LazyItem class="select-none size-full pointer-events-none"  :item="item" >
     </LazyItem>
 
       </PopoverTrigger>
 
-        <LazyCustomPopoverContent class="!w-110 @container/item-data max-h-170">
+        <LazyCustomPopoverContent class="!w-100 @container/item-data max-h-160">
           <CustomPopoverArrow  />
 <LazyItemData :item="item"  />
         </LazyCustomPopoverContent>

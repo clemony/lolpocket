@@ -26,7 +26,7 @@ const coreItem = computed (() => {
       <span class="grow truncate text-left">
         {{ props.set.name }}
       </span>
-      <RemoveButton tip="Delete Set" @click="deleteItemSet(set, pocket)" @click.stop />
+      <RemoveButton tip="Delete Set" @click="deleteItemSet( pocket, set)" @click.stop />
       <StarButton :model="pocket.items.default" tip="Default Item Set" :value="set" @update:model="e => pocket.items.default = e" @click.stop />
 
       <icon name="up-sm" class="group-data-[state=open]/cli:rotate-180 size-4.5 tldr-30" />
