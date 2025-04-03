@@ -33,7 +33,7 @@ const amount = computed (() => {
 
 <template>
   <th class="overflow-hidden   pr-12 justify-self-end flex">
-    <icon :name="stat.icon" class="size-5.5 shrink-0 dst opacity-80" :class="stat.iconClass ?? ''" />
+    <component :is="`i-stats-${stat.icon}`" filled class="size-4.5  shrink-0 dst opacity-70 text-bc" :class="{ 'size-5': stat.icon == 'mana-regen' || stat.icon == 'hp' || stat.icon == 'gold' }" />
   </th>
   <td class="uppercase !text-1 font-medium dst select-none">
     {{ stat.displayName }}

@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+.item-price-arrow::first-letter {
+  writing-mode: sideways-lr;
+  text-orientation: sideways;
+}

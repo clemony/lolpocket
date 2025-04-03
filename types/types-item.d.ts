@@ -85,7 +85,8 @@ type stat = string | number
       act?: effect
     }
     recipe?: Item[]
-    buy?: number
+    buy?: number | string | null
+    req?: string | null
     removed?: boolean | string
     cloneId?: string
   }

@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-@import './default-theme.css' (reference);
+@import './default-theme.css';
 
 @utility mask-left {
   mask-image: linear-gradient(to right, black 50%, transparent);
@@ -19,11 +19,14 @@
 }
 
 @utility mask-bottom {
-  mask-image: linear-gradient(to bottom, black 50%, transparent);
+  mask-image: linear-gradient(to bottom, #000 50%, transparent);
 }
 
 @utility mask-top-right {
-  mask-image: linear-gradient(-45%, black 50%, transparent);
+  mask-image: linear-gradient(-45%, #000 50%, transparent);
+}
+@utility mask-edges {
+  mask-image: radial-gradient(circle at 75% 85%,transparent 50%, #000 );
 }
 
 

@@ -7,7 +7,7 @@ export function filterSR(itemData: Array<Item>) {
   console.log("💠 - filterSR - items:", items)
 
   const excludedTypes = ['Distributed', 'Minion', 'Turret', 'Special Game mode items']
-
+const excludedIds = [1515, 1507]
   items = items.filter(item => (Array.isArray(item.type) ? !item.type.some(type => excludedTypes.includes(type)) : !excludedTypes.includes(item.type)))
 
   return items

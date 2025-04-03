@@ -3,8 +3,6 @@ import { toast } from 'vue-sonner'
 
 // TODO: Separators when not logged in
 
-const ss = useSidebarStore()
-
 const route = useRoute()
 
 const as = useAccountStore()
@@ -15,15 +13,6 @@ const summoner = computed(() => {
 const messages = ref()
 
 const menubarOpen = ref('')
-
-watch(
-  () => ss.isSidebarOpen,
-  (newVal) => {
-    if (newVal == true) {
-      menubarOpen.value = ''
-    }
-  },
-)
 
 /* const { ControlRight, ControlLeft, MetaRight, MetaLeft, ArrowLeft } = useMagicKeys()
 

@@ -28,9 +28,9 @@ export async function loadChampionData() {
   const ds = useDataStore()
   const json = ref(null)
   try {
-    const module = await import('../../../data/championFull.json')
+    const module = await import('data/champion.json')
     json.value = module.default // Access the actual JSON data
-    ds.champions = Object.values(json.value.data)
+    ds.champions = [...Object.values(json.value.data) as Champion[]]
     console.log('💠 - loadChampionData - ds.champions :', ds.champions)
   }
   catch (error) {

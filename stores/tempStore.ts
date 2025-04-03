@@ -6,7 +6,6 @@ export const useTempStore = defineStore(
   () => {
     const itemGridApi = shallowRef<GridApi | null>(null)
 
-    const pocketBarComponent = shallowRef(null)
     // drawer selections=
     const selectedRune = ref(null)
     const selectedPocket = ref(null)
@@ -49,8 +48,6 @@ export const useTempStore = defineStore(
       itemGridApi,
 
       // sidebar
-
-      pocketBarComponent,
 
       // drawer
 

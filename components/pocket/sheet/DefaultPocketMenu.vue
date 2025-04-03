@@ -4,8 +4,6 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits(['update:component'])
-
-const ss = useSidebarStore()
 </script>
 
 <template>

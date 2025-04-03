@@ -31,7 +31,7 @@ export function usePatchchampions() {
     return [...championStats.entries()]
       .map(([champion, stats]) => ({
         champion, // champion ID
-        name: ds.champions.find(i => i.key === champion)?.name || null, // Get champion name from ID
+        name: ds.champions.find(i => i.key === champion.toString())?.name || null, // Get champion name from ID
         games: stats.games,
         wins: stats.wins,
         losses: stats.losses,

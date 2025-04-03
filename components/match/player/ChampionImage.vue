@@ -8,19 +8,29 @@ const props = withDefaults(
     size: 17,
   },
 )
+const id = ref(null)
+const ds = useDataStore()
+const champ = computed (() => {
+  if (!id.value)
+    return
+  const a = ds.champions.find(c => c.id == id.value)
+  return a
+})
+console.log('💠 - champ - champ:', champ)
 
 onMounted (async () => {
-  await props.champId
+  id.value = await props.champId
   nextTick()
 })
 </script>
 
 <template>
   <div class="shadow-sm rounded-lg size-fit">
-    <div v-tippy="{ content: props.champId, placement: 'top' }" class="overflow-hidden rounded-lg inset-shadow-rounded" :class="`size-${props.size}`">
+    <div v-tippy="{ content: champ.name, placement: 'top' }" class="overflow-hidden rounded-lg inset-shadow-rounded" :class="`size-${props.size}`">
+      <!--
       <img
-        :src="`/img/champion/${props.champId}.webp`"
-        class=" scale-116 rounded-lg" :class="`size-${props.size}`" />
+        :src="`/img/champion/${champ.name}.webp`"
+        class=" scale-116 rounded-lg" :class="`size-${props.size}`" /> -->
     </div>
   </div>
 </template>

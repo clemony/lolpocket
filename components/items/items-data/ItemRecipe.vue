@@ -1,23 +1,21 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  recipeArray: any
   item: Item
-  recipe: any
 
 }>()
 
 const ds = useDataStore()
-const recipeArray = computed (() => {
-  return props.recipeArray
+
+const recipe = computed (() => item.value.recipe ? item.value.recipe : null)
+const recipeArray = asyncComputed(() => {
+  return !!Array.isArray(recipe.value)
 })
+
 
 const item = computed(() => {
   return props.item
 })
 
-const recipe = computed(() => {
-  return props.recipe
-})
 
 function itemId(itemName) {
   const a = ds.SRitems.find(item => item.name == itemName)
@@ -45,33 +43,29 @@ function handleTooltip(item) {
 </script>
 
 <template>
-  <div class="group flex items-center justify-center gap-4">
-    <template v-if="recipeArray">
-      <template
-        v-for="(component, i) in item.recipe"
-        :key="i">
-        <button
-          v-tippy="handleTooltip(component)"
-          class="ring-neutral/80 ring-offset-b1 size-14 overflow-hidden rounded-lg shadow-sm hover:ring-1 hover:ring-offset-2">
-          <img
-            v-if="itemId(component)"
-            :src="`/img/item/${itemId(component)}.webp`"
-            :alt="`${component}image`" />
-        </button>
+        <div v-if="recipe && recipeArray">
+          <div class="divider divider-end before:h-px my-4 before:bg-nc">
+            RECIPE
+          </div>
+          <div class="group flex items-center justify-center gap-4">
+            <template v-if="recipeArray">
+              <template
+                v-for="(component, i) in item.recipe"
+                :key="i">
+                <button
+                  v-tippy="handleTooltip(component)"
+                  class="ring-accent  size-10 overflow-hidden rounded-full shadow-sm hover:ring-2  hover:ring-offset-2 hover:ring-offset-b1/30 tldr-20">
+                  <img
+                    v-if="itemId(component)"
+                    :src="`/img/item/${itemId(component)}.webp`"
+                    :alt="`${component}image`" />
+                </button>
 
-        <icon
-          name="teenyicons:add-outline"
-          class="stroke-[1.5] last:hidden" />
+                <icon
+                  name="add-sm"
+                  class=" last:hidden" />
+              </template>
+            </template>
+          </div>
+        </div>
       </template>
-    </template>
-
-    <button
-      v-tippy="recipe[0] + item.buy ? `${item.buy}g` : ''"
-      class="ring-neutral/80 ring-offset-b1 size-14 overflow-hidden rounded-lg shadow-sm hover:ring-1 hover:ring-offset-2">
-      <img
-        v-if="recipe"
-        :src="`/img/item/${itemId(recipe[0])}.webp`"
-        :alt="`${recipe} image`" />
-    </button>
-  </div>
-</template>

@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import { championFull } from 'data/championFull'
-
 const ts = useTempStore()
 const ds = useDataStore()
-console.log('💠 - ds:', ds.championTemplates)
+console.log('💠 - ds:', ds.champions)
 definePageMeta({
   name: 'admin',
 })
-
+// ds.champions = []
 function reset() {
   ds.paths.length = 0
   ds.champions.length = 0
@@ -24,13 +22,6 @@ function reGet() {
   // getRuneData()
   // getShardData()
   console.log('data fetch complete!')
-}
-
-console.log('💠 - getWikiChampionAbility - data:', championFull.data)
-
-async function parseAbilities() {
-  const c = await parseChampionAbilities(ds.championTemplates)
-  console.log('💠 - parseAbilities - c:', c)
 }
 </script>
 
@@ -81,12 +72,6 @@ async function parseAbilities() {
           class="btn btn-neutral"
           @click="loadChampionData()">
           Get Champs from Database
-        </button>
-
-        <button
-          class="btn btn-neutral"
-          @click="getWikiChampionAbility(championFull.data)">
-          get wiki champion ability
         </button>
 
         <button

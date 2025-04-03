@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { growth } from '@lolmath/calc'
-
 const props = defineProps<{
   champion: Champion
   stat: any
@@ -42,7 +40,7 @@ if (stat.value.name == 'Attack Speed') {
     return a ? (a[1] as number) : null
   })
 }
-const statVal = computed(() => {
+/* const statVal = computed(() => {
   return base.value + growth(lvl.value) * perLvl.value
 })
 
@@ -52,7 +50,7 @@ const statMin = computed(() => {
 
 const statMax = computed(() => {
   return base.value + growth(18) * perLvl.value
-})
+}) */
 
 onMounted(async () => {
   await props.stat
@@ -65,11 +63,11 @@ onMounted(async () => {
     {{ stat.name }}
   </div>
 
-  <progress
+  <!--   <progress
     class="progress progress-neutral"
     :value="statVal"
     :max="statMax"
-  ></progress>
+  ></progress> -->
 
   <div class="flex items-center gap-3">
     <div class="stat-value text-8 drop-shadow-text">
@@ -87,8 +85,7 @@ onMounted(async () => {
 
   <img
     :src="stat.img"
-    class="stat-img drop-shadow-xs: invert-light size-6.5 justify-self-end opacity-80"
-  />
+    class="stat-img drop-shadow-xs: invert-light size-6.5 justify-self-end opacity-80" />
 </template>
 
 <style scoped></style>

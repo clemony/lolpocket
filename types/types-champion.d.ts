@@ -2,7 +2,7 @@ declare global {
 
   interface Champion {
     id: string
-    key: number
+    key: string
     name: string
     title: string
     image: Image
@@ -51,7 +51,7 @@ declare global {
   }
 
   interface Skin {
-    id: number
+    id: string
     num: number
     name: string
     chromas: boolean | null
@@ -66,6 +66,7 @@ declare global {
       label: string[] | null
       effect: string[] | null
     }
+    maxammo?: number | null
     maxrank: number | null
     cooldown: number[] | null
     cooldownBurn: string | null

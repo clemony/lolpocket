@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-const ss = useSidebarStore()
 </script>
 
 <template>

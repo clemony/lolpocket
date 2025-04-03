@@ -1,4 +1,3 @@
-import type { GridApi } from 'ag-grid-community'
 import { defineStore } from 'pinia'
 // Define types for the JSON data
 
@@ -13,8 +12,6 @@ export const useDataStore = defineStore(
     const SRitems = ref<Item[] | null>(null)
     const shards = ref()
 
-    const championTemplates = ref({})
-    const championAbilityData = ref({})
     const championNames = computedAsync (() => {
       return champions.value.map(c => c.name)
     })
@@ -30,9 +27,9 @@ export const useDataStore = defineStore(
     })
 
     const loadData = () => {
-      !SRitems ? getItemsFromDatabase() : ''
-      !champions ? getChampsFromDatabase() : ''
-      !paths ? getRuneData() : ''
+     // !SRitems ? getItemsFromDatabase() : ''
+      /*     !champions ? getChampsFromDatabase() : '' */
+      //!paths ? getRuneData() : ''
       console.log('💠 - useDataStore - SRitems:', SRitems)
       console.log('💠 - champions:', champions)
       console.log('💠 - paths:', paths)
@@ -40,8 +37,6 @@ export const useDataStore = defineStore(
     return {
       loadData,
       currentPatch,
-      championTemplates,
-      championAbilityData,
       paths,
       runes,
       SRitems,

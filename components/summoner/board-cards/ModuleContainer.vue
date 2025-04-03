@@ -7,7 +7,6 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const ss = useSidebarStore()
 const as = useAccountStore()
 function onAdd(event: any) {
   console.log('💠 - onAdd - event:', event)
@@ -65,7 +64,7 @@ function onAdd(event: any) {
         dragClass: 'module-drag',
       },
     ]"
-    :class="cn('pt-6 grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] grid-rows-[repeat(auto-fill,minmax(180px,1fr))] gap-6 px-18 z-0   auto-rows-min absolute top-0 left-0 inset-0  overflow-auto  p-i-c cursor-move', { 'z-30': ss.isDragging }, props.class) "
+    :class="cn('pt-6 grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] grid-rows-[repeat(auto-fill,minmax(180px,1fr))] gap-6 px-18 z-0   auto-rows-min absolute top-0 left-0 inset-0  overflow-auto  p-i-c cursor-move', props.class) "
     ghost-class="module-ghost"
     drag-class="module-drag"
     @add="onAdd">

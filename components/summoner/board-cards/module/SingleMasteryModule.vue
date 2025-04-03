@@ -2,7 +2,7 @@
 const ds = useDataStore()
 
 const champion = computed (() => {
-  return ds.champions.find(c => c.key == championMastery.championId)
+  return ds.champions.find(c => c.key == championMastery.championId.toString())
 })
 </script>
 

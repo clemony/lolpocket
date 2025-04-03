@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { ChartData, ChartOptions } from 'chart.js'
-import type { HTMLAttributes } from 'vue'
-import { growth } from '@lolmath/calc'
+import type { HTMLAttributes } from 'vue'/*
+import { growth } from '@lolmath/calc' */
 import { BarController, BarElement, CategoryScale, Chart, LinearScale } from 'chart.js'
 import ChartjsPluginStacked100 from 'chartjs-plugin-stacked100'
 import { Bar } from 'vue-chartjs'
@@ -43,7 +43,7 @@ const perLvl = computed(() => {
   return a ? (a[1] as number) : null
 })
 
-const asRatio = computed(() => {
+/* const asRatio = computed(() => {
   if (stat.value.name != 'Attack Speed') {
 
   }
@@ -63,18 +63,16 @@ const statVal = computed(() => {
 const statMin = computed(() => {
   return base.value + growth(1) * perLvl.value
 })
-// console.log('💠 - statMin - statMin:', statMin.value);
-
 const statMax = computed(() => {
   return base.value + growth(18) * perLvl.value
 })
-
+ */
 const chart = ref()
 function updateData(chart) {
   chart.update()
 }
 
-watch(
+/* watch(
   () => statVal.value,
   (newVal) => {
     updateData(chart.value.chart)
@@ -86,11 +84,11 @@ const abc = computed(() => {
 })
 // console.log('💠 - abc - abc:', abc.value);
 /* CHART */
-
+/*
 const color1 = computed(() => {
   return 'oklch(76.93% 0.0494 204.19)'
-})
-
+}) */
+/*
 const chartData: ChartData<'bar'> = {
   labels: [''],
   datasets: [
@@ -105,7 +103,7 @@ const chartData: ChartData<'bar'> = {
       data: [statMax.value - statVal.value],
     },
   ],
-}
+} */
 const chartOptions: ChartOptions<'bar'> = {
   indexAxis: 'y',
   responsive: false,
@@ -120,7 +118,7 @@ const chartOptions: ChartOptions<'bar'> = {
       yAxisID: 'y',
     },
   },
-  scales: {
+  /*   scales: {
     x: {
       type: 'linear',
       min: statMin.value,
@@ -140,7 +138,7 @@ const chartOptions: ChartOptions<'bar'> = {
         display: false,
       },
     },
-  },
+  }, */
   plugins: {
     legend: {
       display: false,
@@ -158,14 +156,14 @@ const chartOptions: ChartOptions<'bar'> = {
   <div :class="cn('w-full overflow-hidden', props.class)">
     <div class="text-3 flex items-end leading-none tracking-tight">
       <span class="grow font-medium">{{ stat.name }}</span>
-      <span
+      <!--      <span
         v-if="stat.name == 'Attack Speed'"
         class="text-bc/60">
         {{ asRatio.toFixed(2) }} Ratio
-      </span>
+      </span> -->
     </div>
 
-    <div class="h-5 w-[140px]">
+    <!-- <div class="h-5 w-[140px]">
       <Bar
         ref="chart"
         :data="chartData"
@@ -185,7 +183,7 @@ const chartOptions: ChartOptions<'bar'> = {
       <img
         :src="stat.img"
         class="invert-light mb-1 size-5 justify-self-end opacity-80 drop-shadow-xs" />
-    </div>
+    </div> -->
   </div>
 </template>
 
