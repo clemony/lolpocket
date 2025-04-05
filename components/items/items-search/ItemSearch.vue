@@ -18,7 +18,7 @@ const is = useItemStore()
 const ds = useDataStore()
 
 const items = computedAsync(async () => {
-  return await [...(ds.SRitems || [])] // Assuming ds.SRitems is an array or undefined.
+  return await [...(ds.items || [])] // Assuming ds.items is an array or undefined.
 }, null)
 
 const searchQuery = ref('')

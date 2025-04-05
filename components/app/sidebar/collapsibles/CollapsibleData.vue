@@ -21,43 +21,31 @@ watchEffect(() => {
       <SidebarText>Encyclopedia</SidebarText>
     </SidebarCollapsibleTrigger>
 
-    <SidebarCollapsibleContent>
-      <Collapsible v-model:open="itemIsOpen" :disabled="!us.sidebarExpanded" class="data-disabled:**:text-bc/90 ">
+    <SidebarCollapsibleContent :class="{ ' gap-1': !us.sidebarExpanded }">
+      <Collapsible v-if="us.sidebarExpanded" v-model:open="itemIsOpen" :disabled="!us.sidebarExpanded" class="data-disabled:**:text-bc/90 ">
         <NuxtLink v-tippy="!us.sidebarExpanded ? 'Items' : null" :to="!us.sidebarExpanded ? '/items' : ''" :class="{ 'btn btn-ghost size-12  hover:bg-b2/60': !us.sidebarExpanded }">
           <SidebarCollapsibleTrigger>
             <span class="relative size-4">
-              <i-tft-weaponmaster class="absolute transition-scale dr-30 pointer-events-none size-5.5 -ml-1 -mt-1 opacity-70 dst" :class="{ '!scale-110 ml-0': !us.sidebarExpanded }" />
+              <icon name="hugeicons:potion" class="absolute transition-scale dr-30 pointer-events-none size-6 -ml-1 -mt-1 opacity-70 dst" :class="{ 'ml-0': !us.sidebarExpanded }" />
             </span>
 
             <SidebarText>  Item Data</SidebarText>
           </SidebarCollapsibleTrigger>
         </NuxtLink>
         <SidebarCollapsibleContent>
-          <NuxtLink
-            v-for="link in itemDataLinks"
-            :key="link.name"
-            :to="link.link"
-            class="">
-            <SidebarButton>
-              <SidebarText class="pl-1">
-                {{ link.name }}
-              </SidebarText>
-              <SidebarBadge v-if="link.badge && us.sidebarExpanded" class="tracking-normal   uppercase ">
-                {{ link.badge }}
-              </SidebarBadge>
-            </SidebarButton>
-          </NuxtLink>
+          <ItemDataLinks />
         </SidebarCollapsibleContent>
       </Collapsible>
 
+      <ItemDataLinks v-else />
       <NuxtLink
         v-for="link in gameDataLinks"
         :key="link.name"
         :to="link.link">
         <SidebarButton v-tippy="!us.sidebarExpanded ? link.name : null">
-          <span class="relative size-4">
-            <component :is="link.icon" class=" transition-scale dr-30 absolute dst pointer-events-none" :class="cn(link.class, { '!scale-110': !us.sidebarExpanded })" />
-          </span>
+          <SidebarIcon>
+            <component :is="link.icon" class=" transition-scale dr-30 absolute  pointer-events-none" :class="cn(link.class)" />
+          </SidebarIcon>
           <SidebarText>{{ link.name }}</SidebarText>
         </SidebarButton>
       </NuxtLink>

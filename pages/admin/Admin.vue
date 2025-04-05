@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const ts = useTempStore()
 const ds = useDataStore()
-console.log('💠 - ds:', ds.champions)
+console.log('💠 - ds:', ds.items)
 definePageMeta({
   name: 'admin',
 })
@@ -10,8 +10,8 @@ function reset() {
   ds.paths.length = 0
   ds.champions.length = 0
   ds.items.length = 0
-  ds.SRitems.length = 0
-  ds.SRitems.length = null
+  ds.items.length = 0
+  ds.items.length = null
   console.log('store arrays reset')
 }
 
@@ -22,6 +22,20 @@ function reGet() {
   // getRuneData()
   // getShardData()
   console.log('data fetch complete!')
+}
+
+async function hi() {
+  const a = await import('data/item')
+  const data = a.items.data
+  console.log('💠 - json - data:', data)
+  ds.items = ds.items.map((item) => {
+    // Convert the item ID to a string to match keys in the data object
+    const match = data[item.id]
+
+    // If a match is found, merge the additional properties
+    return match ? { ...item, gold: match.gold, tags: match.tags, from: match.from, into: match.into } : item
+  })
+  console.log('💠 - Object.keys - ds.items:', ds.items)
 }
 </script>
 
@@ -35,8 +49,8 @@ function reGet() {
       <div class="flex flex-col gap-2">
         All
         <button
-          class="btn btn-neutral" @click="patchData()">
-          Patch Data TEST
+          class="btn btn-neutral" @click="patchItemDatabaseData()">
+          Patch Item Data
         </button>
 
         <button
@@ -63,6 +77,11 @@ function reGet() {
           @click="getItemsFromDatabase()">
           Get Items From Database
         </button>
+        <button
+          class="btn btn-neutral"
+          @click="updateItemDatabaseData(ds.items)">
+          Update Item Database
+        </button>
       </div>
 
       <div class="flex flex-col gap-2">
@@ -75,8 +94,7 @@ function reGet() {
         </button>
 
         <button
-          class="btn btn-neutral"
-          @click="''">
+          class="btn btn-neutral" @click="hi()">
           null
         </button>
       </div>

@@ -2,7 +2,7 @@
 const ds = useDataStore()
 
 const champions = [...ds.champions]
-const items = [...ds.SRitems]
+const items = [...ds.items]
 const shuffled = champions.sort(() => 0.5 - Math.random())
 
 // Get sub-array of first n elements after shuffled

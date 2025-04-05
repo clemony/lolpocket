@@ -34,7 +34,7 @@ export function usePatchItems(patchGames) {
     bayesianItems.value = [...itemStats.entries()]
       .filter(([item]) => item !== 0) // ✅ Remove items with ID 0 before processing
       .map(([item, stats]) => ({
-        item: ds.SRitems.find(i => i.id == item),
+        item: ds.items.find(i => i.id == item),
         games: stats.games,
         win: stats.wins,
         loss: stats.losses,

@@ -25,7 +25,7 @@ const bgY = computed (() => {
 
 <template>
   <div
-    class=" place-self-center size-full absolute z-0 top-0 left-0    rounded-xl border border-b2 shadow-sm overflow-hidden after:bg-radial-[at_75%_0] after:size-full after:absolute after:top-0 after:left-0 after:from-[#FFFFFF]/2  after:from-16%  after:via-[#FFFFFF]/88  after:via-48%  after:to-[#FFFFFF]  after:to-80% after:z-0" :style="{
+    class=" place-self-center size-full absolute z-0 top-0 left-0  pointer-events-none   rounded-xl border border-b2 shadow-sm overflow-hidden after:bg-radial-[at_75%_0] after:size-full after:absolute after:top-0 after:left-0 after:from-[#FFFFFF]/2  after:from-16%  after:via-[#FFFFFF]/88  after:via-48%  after:to-[#FFFFFF]  after:to-80% after:z-0" :style="{
       backgroundImage: bgImg,
       backgroundSize: bgSize,
       backgroundPositionX: bgX,

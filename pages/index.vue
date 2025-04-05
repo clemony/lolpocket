@@ -51,9 +51,9 @@ onMounted(() => {
 })
 
 onBeforeMount(() => {
-    if(us.sidebarExpanded) {
-      us.triggerSidebar = true
-    }
+  if (us.sidebarExpanded) {
+    us.triggerSidebar = true
+  }
 })
 </script>
 
@@ -63,8 +63,9 @@ onBeforeMount(() => {
     name="header-layout"
     class="relative *:pt-[0vh] size-full overflow-y-scroll !border-none outline-hidden">
     <Hero />
-    <div class="absolute inset-0 top-full z-10 w-full"
-    v-scroll="onScroll">
+    <div
+      v-scroll="onScroll"
+      class="absolute inset-0 top-full z-10 w-full">
       <div
         ref="steps"
         class="size-full relative">

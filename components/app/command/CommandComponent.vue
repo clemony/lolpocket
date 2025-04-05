@@ -26,7 +26,7 @@ const els = [
   },
   {
     name: 'items',
-    data: ds.SRitems,
+    data: ds.items,
     // comp: ,
   },
   {
@@ -99,7 +99,7 @@ function handleClick(item) {}
             </div>
           </CommandItem>
 
-          <CommandItem value="items" @click="category = ds.SRitems">
+          <CommandItem value="items" @click="category = ds.items">
             <div class="grow group  i-c text-start cursor-pointer flex gap-4  i-c">
               <icon name="bow" class="size-5 dst -mr-px" />
               <div class="grow group text-start cursor-pointer">

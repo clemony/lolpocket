@@ -23,7 +23,7 @@ onMounted (async () => {
 })
 
 function getItemName(item) {
-  const a = ds.SRitems.find(i => i.id == item)
+  const a = ds.items.find(i => i.id == item)
   return item.name || null
 }
 </script>

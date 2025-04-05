@@ -14,13 +14,7 @@
   }
 }
 
- .expand-hide[data-side="collapsed"] {
-  @apply transition-[width_height] duration-300;
-}
 
- .expand-hide[data-side="expanded"] {
-  @apply animate-in fade-in-100 transition-[width_height] duration-300 ease-in;
-}
 
 .router-link-exact-active {
   .sb-link {

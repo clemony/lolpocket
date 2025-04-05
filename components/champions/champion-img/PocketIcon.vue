@@ -19,7 +19,7 @@ const image = computed (() => {
     <div
       class="size-full rounded-full  shrink-0  overflow-hidden "
       :style="{
-        backgroundImage: `url(${image})`,
+        backgroundImage: `url('${image}')`,
         backgroundSize: image == '/img/lp/192.webp' ? '100%' : '450%',
         backgroundPosition: 'center 20%' }">
     </div>

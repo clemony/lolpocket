@@ -1,7 +1,0 @@
-dist
-node_modules
-schema
-**/*.tmpl.*
-sw.js
-./shared/data/summoner/match/*
-./utils/storage

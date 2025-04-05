@@ -32,7 +32,7 @@ const borderB = computed (() => {
           'border-b border-b-b2': borderB,
 
           'bg-b2/40 border-x border-x-b3/80 z-30': route.name == 'card' }, props.headerClass)">
-      <SidebarExpandButton :expanded="us.sidebarExpanded" @click="us.triggerSidebar = true" />
+      <SidebarExpandButton :expanded="us.sidebarExpanded" @click="us.toggleSidebar()" />
 
       <div class="!text-2 flex breadcrumbs items-center **:select-none">
         <ul class="*:capitalize items-center flex">

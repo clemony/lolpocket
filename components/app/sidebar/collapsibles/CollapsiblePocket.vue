@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+import { motion } from 'motion-v'
+import CollapsiblePinned from './CollapsiblePinned.vue'
+import PopoverPinned from './PopoverPinned.vue'
+
 const props = defineProps<{
   summoner: userAccount
 }>()
@@ -6,17 +10,14 @@ const props = defineProps<{
 const us = useUiStore()
 const as = useAccountStore()
 const ps = usePocketStore()
-ps.pinnedFolder = []
-
-const pinned = computed (() => {
-  return ps.pockets.filter(p => p.location.folder == 'pinned')
-})
 
 const summoner = computed (() => {
   return props.summoner
 })
 
 const isOpen = ref(true)
+
+const pinnedComponent = computed (() => us.sidebarExpanded ? CollapsiblePinned : PopoverPinned)
 
 watchEffect(() => {
   if (us.sidebarExpanded) {
@@ -26,45 +27,26 @@ watchEffect(() => {
 </script>
 
 <template>
-  <!-- v-if="us.sidebarExpanded" -->
-  <Collapsible v-model:open="isOpen" :disabled="!us.sidebarExpanded">
-    <AnimatePresence>
-      <Motion
-        v-if="us.sidebarExpanded" as="span"
-        :exit="{ width: 0, height: 0, opacity: 0 }"
-        :transition="{ duration: 0.1, ease: 'easeInOut' }">
-        <SidebarCollapsibleTrigger v-if="us.sidebarExpanded">
-          Pockets
-        </SidebarCollapsibleTrigger>
-      </Motion>
-    </AnimatePresence>
+  <Collapsible v-model:open="isOpen" :disabled="!us.sidebarExpanded" as-child>
+    <SidebarCollapsibleTrigger v-if="us.sidebarExpanded">
+      <SidebarText>
+        Pockets
+      </SidebarText>
+    </SidebarCollapsibleTrigger>
 
-    <SidebarCollapsibleContent>
-      <Collapsible>
-        <AnimatePresence>
-          <Motion
-            v-if="us.sidebarExpanded" as="div"
-            :exit="{ width: 0, height: 0, opacity: 0 }"
-            :transition="{ duration: 0.1, ease: 'easeInOut' }">
-            <SidebarCollapsibleTrigger v-if="us.sidebarExpanded" :disabled="!pinned || pinned.length == null || pinned.length == 0" class="group">
-              <SidebarIcon name="pin" class="size-5.25 -mt-px -left-0.5 group-not-disabled:text-bc group-disabled:text-bc/15" />
-              <SidebarText>
-                Pinned
-              </SidebarText>
-              <SidebarBadge class="font-mono !text-1 pr-3">
-                <span v-if="!pinned || pinned.length == null || pinned.length == 0">0</span>
-                <span v-else>
-                  {{ pinned.length }}
-                </span>
-              </SidebarBadge>
-            </SidebarCollapsibleTrigger>
-
-            <SidebarCollapsibleContent>
-              <PinnedPocketLinks />
-            </SidebarCollapsibleContent>
-          </Motion>
-        </AnimatePresence>
-      </Collapsible>
+    <SidebarCollapsibleContent class="tldr-30" :class="{ 'gap-1': !us.sidebarExpanded }">
+      <component :is="pinnedComponent" v-slot="{ pinned }">
+        <SidebarIcon name="pin" class="size-5.25 -mt-px -left-0.25 group-not-disabled:text-bc group-disabled:text-bc/15" />
+        <SidebarText>
+          Pinned
+        </SidebarText>
+        <SidebarBadge class="font-mono !text-1 pr-3">
+          <span v-if="!pinned || pinned.length == null || pinned.length == 0">0</span>
+          <span v-else>
+            {{ pinned.length }}
+          </span>
+        </SidebarBadge>
+      </component>
 
       <PocketFolderLinks />
     </SidebarCollapsibleContent>

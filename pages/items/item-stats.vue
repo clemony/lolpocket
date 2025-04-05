@@ -15,7 +15,7 @@ definePageMeta({
 const is = useItemStore()
 const theme = ref(pocketTheme)
 const ds = useDataStore()
-const items = ds.SRitems || []
+const items = ds.items || []
 const itemList = [...items]
 
 const cellClass = []

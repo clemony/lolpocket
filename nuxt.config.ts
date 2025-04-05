@@ -19,6 +19,9 @@ export default defineNuxtConfig({
     vue: {
       customElement: true,
     },
+    optimizeDeps: {
+      force: true
+    }
   },
 
   typescript: {
@@ -103,7 +106,7 @@ export default defineNuxtConfig({
     storesDirs: ['./stores/**'],
   },
   alias: {
-    '#app': fileURLToPath(new URL('./', import.meta.url)),
+    '#': fileURLToPath(new URL('./', import.meta.url)),
     '@': fileURLToPath(new URL('./', import.meta.url)),
     'css': fileURLToPath(new URL('./assets/css', import.meta.url)),
     'types': fileURLToPath(new URL('./types', import.meta.url)),

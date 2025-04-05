@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 definePageMeta({
   title: 'All',
-  background: 'b2',
 
 })
 
@@ -25,25 +24,7 @@ onMounted (() => {
       </button>
     </template>
 
-    <!-- fake -->
-    <div class="tabs relative justify-end  tabs-lift w-full h-[86vh] tabs-xl drop-shadow-[1px_2px_2px_#00000010] group/tab">
-      <div class="tab-content" />
-
-      <!-- real  -->
-
-      <template v-for="page in defaultFolders" :key="page.name">
-        <input
-          :id="page.link"
-          v-model="pageValue" name="pocket-tabs" type="radio" :value="page.link"
-          role="tab"
-          :aria-label="page.name"
-          class="tab tab-title not-checked:!border-b-transparent   w-49 -ml-1  font-semibold capitalize text-3 text-center " :class="{ 'group-last/tab:[--tab-corner-position:bottom-left]': route.path == '/pockets/archive', 'tab-active': route.path == page.link, '!bg-transparent !border-none !drop-shadow-none before:!opacity-0 ': route.path != page.link }" @click="navigateTo(page.link)" />
-
-        <div class="tab-content pockets-grid    bg-b1 border-b3 p-0 size-full rounded-tl-box  overflow-hidden " :class="{ 'rounded-tr-none': route.path == `/pockets/archive` }">
-          <LazyNuxtPage />
-        </div>
-      </template>
-    </div>
+    <LazyNuxtPage />
   </NuxtLayout>
 </template>
 

@@ -7,7 +7,7 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
   !ds.champions.length ? getChampsFromDatabase() : ''
   !ds.items ? getItemsFromDatabase() : ''
   !ds.paths.length ? getRuneData() : ''
-  // console.log('💠 - useDataStore - SRitems:', ds.SRitems);
+  // console.log('💠 - useDataStore - SRitems:', ds.items);
   // console.log('💠 - champions:', ds.champions);
   // console.log('💠 - paths:', ds.paths);
 })

@@ -11,6 +11,7 @@ const match = computed (() => {
 const player = computed(() => {
   return match.value.participants.find(p => p.puuid == as.userAccount.puuid)
 })
+console.log('💠 - player - player:', player)
 
 const isOpen = ref(false)
 </script>
@@ -32,7 +33,7 @@ const isOpen = ref(false)
             <div class="flex items-start">
               <!-- champ image -->
 
-              <ChampionImage :champ-id="player.championId" />
+              <ChampionImage v-if="player" :player="player" />
 
               <!--  spells -->
 

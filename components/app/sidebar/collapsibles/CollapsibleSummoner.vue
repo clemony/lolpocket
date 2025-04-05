@@ -15,7 +15,7 @@ watchEffect(() => {
       <SidebarIcon name="system-uicons:home-door" class="size-5.25 stroke-[1.4] " />
       <SidebarText> <SummonerName class="capitalize" /></SidebarText>
     </SidebarCollapsibleTrigger>
-    <SidebarCollapsibleContent class="">
+    <SidebarCollapsibleContent class="tldr-30" :class="{ 'gap-1': !us.sidebarExpanded }">
       <LazyNuxtLink
         v-for="link in summonerLinks" :key="link.name"
         :to="link.link" class="group">

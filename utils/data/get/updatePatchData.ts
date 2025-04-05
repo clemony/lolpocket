@@ -12,7 +12,7 @@ export async function patchData() {
     const userId = user.id
     const patch = useDataStore().currentPatch.toString()
 
-    const cleanItemData = await updateItemDatabaseData('initial')
+    const cleanItemData = await patchItemDatabaseData()
     const cleanChampionData = await updateChampionDatabaseData('initial')
 
     const { data, error } = await supabase.from('league_data').insert([

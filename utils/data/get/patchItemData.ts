@@ -1,0 +1,72 @@
+/* eslint-disable */
+export async function patchItemDatabaseData() {
+
+console.log('click')
+  const ownerId = import.meta.env.VITE_SUPABASE_OWNER_ID
+
+  const supabase = useSupabaseClient()
+  const {
+    data: { user },
+    error: userError,
+  } = await supabase.auth.getUser()
+
+  if (userError) {
+    console.error('Error fetching user:', userError)
+    return
+  }
+  else {
+    console.log('click2')
+    const userId = user.id
+    const patch = useDataStore().currentPatch.toString()
+    console.log('💠 - updateItemDatabaseData - patch:', patch)
+
+  let cleanedItemData = await createDataObjects('https://wiki.leagueoflegends.com/en-us/api.php?', '\{{:Module:ItemData/data}}', 'item')
+
+  cleanedItemData = cleanJsonString(cleanedItemData.toString())
+cleanedItemData = integrateDataDragon(cleanedItemData)
+  if (cleanedItemData) {
+    console.log('Parsed JSON:', JSON.stringify(cleanedItemData, null, 2))
+  }
+  else {
+    console.log('Failed to parse JSON.')
+  }
+  console.log('click3')
+
+    const { data, error } = await supabase
+    .from('league_data')
+    .insert([
+      { 'item_data': cleanedItemData, 'patch': patch, 'user_id': userId }])
+    .select()
+
+
+    if (error) {
+      console.error('Error updating data:', error)
+    }
+    else {
+      console.log('Data updated successfully:', data)
+    }
+  
+  return cleanedItemData
+  }
+}
+
+
+export async function integrateDataDragon(wikiData) {
+  const a = await import('data/item')
+  const ds = useDataStore()
+
+  const data = a.items.data
+  if (!data)
+    return console.log('no item json data, returning!')
+
+  const cleanerData = wikiData.map((item) => {
+
+    // Convert the item ID to a string to match keys in the data object
+    const match = data[item.id]
+
+    return match ? { ...item, gold: match.gold, tags: match.tags, from: match.from, into: match.into } : item
+  })
+
+  return cleanerData
+}
+

@@ -2,9 +2,9 @@
 const is = useItemStore()
 const ds = useDataStore()
 
-const item = ref(is.selectedItem || getRandom(ds.SRitems))
+const item = ref(is.selectedItem || getRandom(ds.items))
 onMounted(() => {
-  item.value = is.selectedItem != null ? is.selectedItem : is.selectedItem = getRandom(ds.SRitems)
+  item.value = is.selectedItem != null ? is.selectedItem : is.selectedItem = getRandom(ds.items)
 })
 
 watch(

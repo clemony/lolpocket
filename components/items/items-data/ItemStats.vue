@@ -15,7 +15,7 @@ const stats = computed(() => {
         {{ stat.key }}
       </p>
       <p class="col-start-2 items-center">
-        {{ stat.value }}
+        {{ stat.value.toString().replace(/\[\[/g, '').replace(/\]\]/g, '') }}
       </p>
     </template>
   </div>

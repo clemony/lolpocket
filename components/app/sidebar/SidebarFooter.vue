@@ -22,11 +22,11 @@ const messages = ref(false)
 </script>
 
 <template>
-  <div class="w-full pr-4 pl-0.5 flex gap-1 items-center" :class="{ 'flex-col justify-center': !us.sidebarExpanded }">
+  <div class="w-full pr-4 pl-0.5 flex gap-1 items-center justify-start" :class="{ 'flex-col justify-center items-start': !us.sidebarExpanded }">
     <SidebarAddPocket />
 
     <DropdownMenu>
-      <DropdownMenuTrigger class="btn btn-ghost 3 btn-xl text-3 font-medium justify-start px-2 grow *:pointer-events-none data-[state=open]:bg-b2 data-[state=open]:border-b3">
+      <DropdownMenuTrigger class="btn btn-ghost  btn-xl text-3 font-medium justify-start px-2 grow *:pointer-events-none data-[state=open]:bg-b2 data-[state=open]:border-b3" :class="{ '!p-0': !us.sidebarExpanded }">
         <div class="size-full flex items-center gap-3 relative">
           <SummonerIcon class="rounded-lg **:rounded-lg size-10 grayscale  tldr-20" />
 

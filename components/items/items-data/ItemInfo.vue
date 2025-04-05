@@ -40,14 +40,14 @@ const recipeArray = asyncComputed(() => {
 })
 
 function itemId(itemName) {
-  const a = ds.SRitems.find(item => item.name == itemName)
+  const a = ds.items.find(item => item.name == itemName)
   if (a) {
     return a.id
   }
 }
 
 function itemBuy(itemName) {
-  const a = ds.SRitems.find(item => item.name == itemName)
+  const a = ds.items.find(item => item.name == itemName)
 
   return a ? a.buy : 0
 }

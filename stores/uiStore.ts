@@ -6,6 +6,8 @@ export const useUiStore = defineStore('UiStore', () => {
   const rightbarExpanded = ref(true)
   const triggerRightbar = refAutoReset(false, 1000)
 
+  const toggleSidebar = useToggle(sidebarExpanded)
+
   const rightbarAvailable = computed(() => {
     const match = [
       /pocket/,
@@ -51,6 +53,7 @@ export const useUiStore = defineStore('UiStore', () => {
   return {
     sidebarExpanded,
     triggerSidebar,
+    toggleSidebar,
     rightbarExpanded,
     triggerRightbar,
     rightbarAvailable,

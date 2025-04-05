@@ -6,7 +6,6 @@ const item = computed (() => {
   return props.item
 })
 
-
 const hasNicknames = computed(() => {
   if (!item.value.nickname)
     return false
@@ -14,14 +13,11 @@ const hasNicknames = computed(() => {
 })
 
 const nicknames = computed (() => Array.isArray(item.value.nickname) ? item.value.nickname : item.value.nickname ? [item.value.nickname] : [])
-console.log('💠 - nicknames:', nicknames)
 </script>
 
 <template>
-
-          <p class="text-1 ml-0.5 italic" v-if="hasNicknames">
-            a.k.a.
-            <span v-for="(name, index) in nicknames" :key="index">{{ name }}</span>
-          </p>
-
+  <p v-if="hasNicknames" class="text-1 ml-0.5 italic">
+    a.k.a.
+    <span v-for="(name, index) in nicknames" :key="index">{{ name }}</span>
+  </p>
 </template>

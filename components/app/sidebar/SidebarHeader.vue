@@ -22,8 +22,7 @@ const us = useUiStore()
           <icon name="arrow-up" class="size-5" />
         </span>
       </NuxtLink>
-<NeutralSidebarSearch  />
-
+      <NeutralSidebarSearch />
     </SidebarButton>
 
     <!--

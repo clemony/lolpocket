@@ -1,16 +1,29 @@
 <script lang="ts" setup>
+import { motion } from 'motion-v'
+
 const props = defineProps<{
   name?: string
   class?: HTMLAttributes['class']
 }>()
 const us = useUiStore()
+/*
+const variants = {
+  expanded: {
+    scale: 1,
+  },
+  collapsed: {
+    scale: 1.2,
+  },
+    :variants="variants"
+    :animate="us.sidebarExpanded ? 'expanded' : 'collapsed'"
+} */
 </script>
 
 <template>
-  <span class="size-5 relative !overflow-visible sidebar-child transition-scale dr-30" :class="{ '!scale-110': !us.sidebarExpanded }">
+  <div
+    class="size-5 relative shrink-0 !overflow-visible grid place-items-center">
+    <icon v-if="props.name" :name="props.name" class="absolute shrink-0   " :class="cn('size-5 dst', props.class)" />
 
-    <icon v-if="props.name" :name="props.name" class="absolute shrink-0   transition-scale dr-30" :class="cn('size-5 dst', props.class, { '!scale-110': !us.sidebarExpanded })" />
-
-    <slot  />
-  </span>
+    <slot />
+  </div>
 </template>

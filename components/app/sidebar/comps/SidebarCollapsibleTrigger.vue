@@ -3,7 +3,7 @@ const us = useUiStore()
 </script>
 
 <template>
-  <CollapsibleTrigger as-child class="flex items-center group/trigger  ">
+  <CollapsibleTrigger as-child class="flex items-center justify-start group/trigger  overflow-hidden">
     <SidebarButton>
       <slot />
       <Grow />

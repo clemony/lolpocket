@@ -185,20 +185,20 @@ export function getShardBg(shard: Shard) {
 export function getShardIcon(shard: Shard) {
   const s
     = shard.name == 'Adaptive Power'
-      ? 'mdi:star-four-points'
+      ? 'adaptive'
       : shard.name == 'Attack Speed'
-        ? 'mdi:axe'
+        ? 'as'
         : shard.name == 'Ability Haste'
-          ? 'ph:hourglass-medium-fill'
+          ? 'ah'
           : shard.name == 'Move Speed'
-            ? 'mdi:run-fast'
+            ? 'ms'
             : shard.name == 'Scaling Health'
-              ? 'mdi:heart-plus'
+              ? 'hp'
               : shard.name == 'Health'
-                ? 'mdi:heart'
+                ? 'health'
                 : shard.name == 'Tenacity and Slow Resist'
-                  ? 'ph:spiral-light'
-                  : 'icomoon-free:diamonds'
+                  ? 'tenacity'
+                  : null
   return s
 }
 

@@ -3,11 +3,12 @@ export function filterItems() {
   const as = useAccountStore()
   const ds = useDataStore()
 
-  const items = ds.SRitems || []
+  const items = ds.items || []
   let filtered = [...items]
+  if (is.itemDBHideNoBuy) {
+    filtered = filtered.filter(item => item.gold.purchasable)
+  }
 
-  // console.log('💠 - filteredItems - filtered:', filtered)
-  // Apply your filtering logic
   if (is.filterItemStats.length) {
     is.filterItemStats.forEach((stat) => {
       filtered = filtered.filter(item => Object.keys(item.stats ? item.stats : '').includes(stat.id))
@@ -21,7 +22,7 @@ export function filterItems() {
   }
 
   if (is.filterItemTypes && is.filterItemTypes !== 'Favorites') {
-    filtered = filtered.filter(item => item.type.includes(is.filterItemTypes))
+    filtered = filtered.filter(item => item.tags.includes(is.filterItemTypes))
   }
 
   if (is.filterItemTypes && is.filterItemTypes === 'Favorites') {

@@ -1,0 +1,34 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+	<title>40px-PoC_World_Adventure_icon</title>
+	<style>
+		.s0 { opacity: .97;fill: #000000 } 
+		.s1 { opacity: .96;fill: #000000 } 
+		.s2 { opacity: .33;fill: #000000 } 
+		.s3 { opacity: .77;fill: #000000 } 
+		.s4 { opacity: .62;fill: #000000 } 
+		.s5 { opacity: .49;fill: #000000 } 
+		.s6 { opacity: .19;fill: #000000 } 
+		.s7 { opacity: .88;fill: #000000 } 
+	</style>
+	<g id="Background">
+		<path id="Path 0" fill-rule="evenodd" class="s0" d="m14 7l1-1h10l1 1h1l1 1h1l1 1h1v2l-1 1v1l-1 1v1l-1 1v1l-1 1v1l-2 2v1l-1 1v1h-1l-1 1h-1l-2 2h-1l-1 1h-1l-1 1h-1l-1 1h-1l-1 1h-2v-1l-1-1v-1l-1-1v-1l-1-1v-3l-1-2v-1l1-1v-3l1-1v-1l1-1v-1l3-3h1l1-1zm0 2l-1 1h-1l-2 2v1l-1 1v1l-1 1v2l1 1v2l-1 1v2l1 1v1h1l1-1v-1l1-1v-1l2-2v-1l1-1v-1l2-2h1l1-1h1l2-2h1l1-1h1l1-1v-1h-1l-1-1h-2l-1 1h-2l-1-1h-2l-1 1zm19 7h1v2l1 2v1l-1 1v3l-1 1v1l-1 1v1l-3 3h-1l-1 1h-1l-1 1h-3l-1 1h-1l-2-1h-2v-1h2l1-1v-1h2v1l1 1h1l1-1h1l1-1h1l4-4v-1l1-1v-1l1-1v-1l-1-1v-2l1-1zm-2-8h1v1h-1zm-14 11v2l2 2h2l2-2v-2l-2-2h-2zm-9 12h1v1h-1z"/>
+		<path id="Path 1" fill-rule="evenodd" class="s1" d="m18 6v-1h4v1zm-4 0h1v1h-1zm11 0h1v1h-1zm-13 1h1v1h-1zm15 0h1v1h-1zm-20 5h1v1h-1zm-1 2h1v1h-1zm27 1h1v1h-1zm-28 3h1v1h-1zm30 2l-1-2h1zm-4 1v-2h1v2zm-26 1v-2l1 2zm27 1h1v1h-1zm-5 7h1v1h-1zm-18 1h1v1h-1zm14 1h1v1h-1zm-5 3v-1l2 1z"/>
+		<path id="Path 2" class="s2" d="m15 5h1v1h-1zm9 0h1v1h-1zm-13 2h1v1h-1zm17 0h1v1h-1zm4 1h1v1h-1zm-1 2h1v1h-1zm-24 1h1v1h-1zm23 1h1v1h-1zm-1 2h1v1h-1zm4 0h1v1h-1zm-28 1h1v1h-1zm29 0h1v1h-1zm-10 8h1v1h-1zm-19 1h1v1h-1zm18 0h1v1h-1zm8 0h1v1h-1zm3 0h1v1h-1zm-4 2h1v1h-1zm-23 2h1v1h-1zm25 0h1v1h-1zm-18 1h1v1h-1zm-2 1h1v1h-1zm14 0h1v1h-1zm-19 1h1v1h-1zm3 0h1v1h-1zm14 0h1v1h-1zm4 1h1v1h-1zm-13 2h1v1h-1zm9 0h1v1h-1z"/>
+		<path id="Path 3" class="s3" d="m17 5h1v1h-1zm5 0h1v1h-1zm10 2h1v1h-1zm-3 1h1v1h-1zm-20 1h1v1h-1zm-4 8h1v1h-1zm29 0h1v1h-1zm-29 5h1v1h-1zm29 0h1v1h-1zm-3 3h1v1h-1zm-2 3h1v1h-1zm-1 1h1v1h-1zm-21 3h1v1h-1zm10 2h1v1h-1zm5 0h1v1h-1z"/>
+		<path id="Path 4" class="s4" d="m23 5h1v1h-1zm-13 3h1v1h-1zm-2 2h1v1h-1zm-3 6h1v1h-1zm27 1h1v1h-1zm0 5h1v1h-1zm-27 1h1v1h-1zm29 0h1v1h-1zm-9 8h1v1h-1zm-8 1h1v1h-1zm5 0h1v1h-1zm-7 1h1v1h-1zm1 1h1v1h-1zm7 0h1v1h-1z"/>
+		<path id="Path 5" class="s5" d="m16 5h1v1h-1zm-3 1h1v1h-1zm13 0h1v1h-1zm5 1h1v1h-1zm-25 6h1v1h-1zm26 3h1v1h-1zm2 0h1v1h-1zm-3 2h1v1h-1zm-6 3h1v1h-1zm6 0h1v1h-1zm-10 4h1v1h-1zm-15 1h1v1h-1zm27 0h1v1h-1zm-15 5h1v1h-1zm3 0h1v1h-1zm-13 1h1v1h-1zm18 1h1v1h-1z"/>
+		<path id="Path 6" class="s6" d="m28 16h1v1h-1zm-1 2h1v1h-1zm-9 9h1v1h-1zm-2 1h1v1h-1zm0 4h1v1h-1z"/>
+		<path id="Path 7" class="s7" d="m30 8h1v1h-1zm1 1h1v1h-1zm1 9h1v1h-1zm-2 9h1v1h-1zm-22 3h1v1h-1zm10 2h1v1h-1zm3 0h1v1h-1z"/>
+		<path id="Path 8" class="s1" d="m16 7h1v1h-1zm7 0h1v1h-1zm-4 1h1v1h-1zm8 1h1v1h-1zm-6 4h1v1h-1zm-2 1h1v1h-1zm-2 1h1v1h-1zm-10 1h1v1h-1zm10 1h1v1h-1zm5 0h1v1h-1zm-8 2h1v1h-1zm-6 1h1v1h-1zm17 0h1v1h-1zm9 1h1v1h-1zm-17 1h1v1h-1zm5 0h1v1h-1zm-15 1h1v1h-1zm15 1h1v1h-1zm-2 1h1v1h-1zm13 0h1v1h-1zm-26 2h1v1h-1zm2 0h1v1h-1zm23 0h1v1h-1zm-5 5h1v1h-1zm-2 1h1v1h-1zm-4 1h1v1h-1z"/>
+		<path id="Path 9" class="s2" d="m15 8h1v1h-1zm9 0h1v1h-1zm-11 1h1v1h-1zm13 0h1v1h-1zm-17 4h1v1h-1zm-1 2h1v1h-1zm10 2h1v1h-1zm3 0h1v1h-1zm-4 1h1v1h-1zm5 0h1v1h-1zm-13 8h1v1h-1z"/>
+		<path id="Path 10" class="s3" d="m25 8h1v1h-1zm-14 2h1v1h-1zm15 0h1v1h-1zm-16 1h1v1h-1zm14 0h1v1h-1zm5 2h1v1h-1zm-21 1h1v1h-1zm20 1h1v1h-1zm-17 9h1v1h-1zm-3 1h1v1h-1zm7 3h1v1h-1zm-7 1h1v1h-1zm22 1h1v1h-1z"/>
+		<path id="Path 11" class="s4" d="m17 7h1v1h-1zm5 0h1v1h-1zm-8 1h1v1h-1zm8 4h1v1h-1zm-15 5h1v1h-1zm20 0h1v1h-1zm-1 2h1v1h-1zm-19 3h1v1h-1zm5 0h1v1h-1zm-2 4h1v1h-1zm9 0h1v1h-1zm-2 1h1v1h-1zm14 2h1v1h-1zm-2 2h1v1h-1z"/>
+		<path id="Path 12" class="s5" d="m18 8h1v1h-1zm3 0h1v1h-1zm-13 13h1v1h-1z"/>
+		<path id="Path 13" class="s6" d="m21 9h-2 1z"/>
+		<path id="Path 14" class="s7" d="m18 7h1v1h-1zm3 0h1v1h-1zm-9 2h1v1h-1zm18 2h1v1h-1zm-21 1h1v1h-1zm6 5h1v1h-1zm-8 1h1v1h-1zm0 3h1v1h-1zm25 0h1v1h-1zm-8 1h1v1h-1zm-18 3h1v1h-1zm7 4h1v1h-1zm-2 1h1v1h-1z"/>
+		<path id="Path 15" class="s2" d="m25 10h1v1h-1zm-9 5h1v1h-1zm-1 1h1v1h-1zm-1 2h1v1h-1zm3 3h1v1h-1zm5 0h1v1h-1zm-4 1h1v1h-1zm3 0h1v1h-1zm-13 2h1v1h-1zm2 1h1v1h-1z"/>
+		<path id="Path 16" class="s4" d="m13 20h1v1h-1z"/>
+		<path id="Path 17" class="s5" d="m20 13h1v1h-1zm-2 1h1v1h-1zm-10 4h1v1h-1z"/>
+		<path id="Path 18" class="s6" d="m23 11h1v1h-1zm-2 1h1v1h-1zm-12 8v-1 2zm3 1h1v1h-1zm-1 2h1v1h-1z"/>
+	</g>
+</svg>

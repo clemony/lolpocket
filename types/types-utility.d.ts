@@ -62,6 +62,7 @@ declare global {
     id: string
     displayName?: string
     checked: boolean
+    icon?: string
     color?: string
     champions?: Array<string>
   }

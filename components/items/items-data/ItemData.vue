@@ -14,7 +14,6 @@ const itemPrice = computed (() => {
 console.log('💠 - item:', item)
 const stats = computed (() => formatItemStats(item.value.stats))
 const effects = computed (() => item.value.effects ? item.value.effects : null)
-
 </script>
 
 <template>
@@ -31,7 +30,7 @@ const effects = computed (() => item.value.effects ? item.value.effects : null)
       <div class="flex flex-col  text-4 w-full">
         {{ item.name || '' }}
 
-        <ItemNickname :item="item"  />
+        <ItemTier :item="item" />
       </div>
     </div>
 
@@ -43,30 +42,22 @@ const effects = computed (() => item.value.effects ? item.value.effects : null)
         </div>
         <Grow />
 
-<ItemDataLinkMenuButtons  :item="item"/>
+        <ItemDataLinkMenuButtons :item="item" />
       </div>
-      <template v-if="stats">
+
+      <div v-if="stats" class="mb-3">
         <div class="divider divider-end  before:h-px my-4 before:bg-nc">
           STATS
         </div>
 
         <ItemStats :stats="stats" />
-
-        <template v-if="effects && effects.pass">
-          <div class="divider divider-end before:h-px my-4 before:bg-nc">
-            PASSIVES
-          </div>
-        </template>
-
-        <template v-if="effects && effects.act && !effects.pass">
-          <div class="divider divider-end before:h-px my-4 before:bg-nc">
-            ACTIVES
-          </div>
-        </template>
-      </template>
+      </div>
 
       <div class="overflow-y-auto relative">
         <div v-if="effects && effects.pass">
+          <div class="divider divider-end before:h-px mb-2 mt-0 before:bg-nc">
+            PASSIVES
+          </div>
           <p v-if="typeof effects.pass === 'string'"></p>
           <ItemEffect
             v-if="effects.pass"
@@ -80,7 +71,7 @@ const effects = computed (() => item.value.effects ? item.value.effects : null)
             :data="effects.pass3" />
         </div>
 
-        <div v-if="effects && effects.act && effects.pass">
+        <div v-if="effects && effects.act">
           <div class="divider divider-end before:h-px my-4 before:bg-nc">
             ACTIVES
           </div>
@@ -91,19 +82,18 @@ const effects = computed (() => item.value.effects ? item.value.effects : null)
             :data="effects.act" />
         </div>
 
-        <ItemRecipe :item="item" />
-
-        <template v-if="item.itemlimit || item.req">
-          <div class="divider divider-end before:h-px my-4 before:bg-nc">
+        <ItemFrom :item="item" />
+        <ItemTo :item="item" />
+        <div v-if="item.itemlimit || item.req">
+          <div class="divider divider-end before:h-px mb-2 mt-6 before:bg-nc">
             LIMITS / REQS
           </div>
 
           <p v-if="item.itemlimit" class="w-full flex flex-wrap text-wrap leading-normal">
             Limited to one {{ item.itemlimit }} item.
           </p>
-<ItemRequirements :item="item"  />
-
-        </template>
+          <ItemRequirements :item="item" />
+        </div>
 
         <div class="items-end self-end">
           <div class="flex items-center px-2">

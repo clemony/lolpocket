@@ -9,7 +9,6 @@ export const useDataStore = defineStore(
     const paths = ref<Path[]>([])
     const champions = ref<Champion[]>([])
     const items = ref<Item[] | null>(null)
-    const SRitems = ref<Item[] | null>(null)
     const shards = ref()
 
     const championNames = computedAsync (() => {
@@ -30,7 +29,7 @@ export const useDataStore = defineStore(
      // !SRitems ? getItemsFromDatabase() : ''
       /*     !champions ? getChampsFromDatabase() : '' */
       //!paths ? getRuneData() : ''
-      console.log('💠 - useDataStore - SRitems:', SRitems)
+      console.log('💠 - useDataStore - SRitems:', items)
       console.log('💠 - champions:', champions)
       console.log('💠 - paths:', paths)
     }
@@ -39,7 +38,6 @@ export const useDataStore = defineStore(
       currentPatch,
       paths,
       runes,
-      SRitems,
       champions,
       championNames,
       items,

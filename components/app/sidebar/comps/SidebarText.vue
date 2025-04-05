@@ -1,9 +1,13 @@
 <script lang="ts" setup>
+import { motion } from 'motion-v'
+
 const us = useUiStore()
 </script>
 
 <template>
-  <span v-if="us.sidebarExpanded" class="flex items-center text-nowrap text-left truncate justify-start">
+  <div
+
+    class="w-fit overflow-hidden  items-center text-nowrap tldr-40  justify-start justify-self-start text-start shrink-0 truncate justify-start " :class="{ ' opacity-0   pointer-events-none': !us.sidebarExpanded }">
     <slot />
-  </span>
+  </div>
 </template>

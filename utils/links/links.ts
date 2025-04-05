@@ -1,17 +1,17 @@
 export const summonerLinks = [
   {
-    name: `Board`,
+    name: `Nexus`,
     link: '/summoner',
-    icon: 'iconoir:shop-window', // gala:calendar vaadin:pin-post'
+    icon: 'mynaui:stop-diamond', // gala:calendar vaadin:pin-post'
     iconSolid: 'clarity:calendar-solid',
-    iconBold: 'ph:chalkboard-simple-bold',
+    iconClass: 'size-5.5',
   },
   {
     name: 'Research',
     link: '/summoner/research',
     icon: 'iconoir:round-flask',
     iconSolid: 'mdi:graph-box',
-    iconBold: 'ph:atom-bold',
+    iconClass: '!size-5 opacity-70',
   },
   {
     name: 'History',
@@ -25,7 +25,7 @@ export const summonerLinks = [
     link: '/summoner/favorites',
     icon: 'ph:heart-straight',
     iconSolid: 'teenyicons:heart-solid',
-    iconBold: 'ph:heart-straight-bold',
+    iconClass: 'size-5.25',
   },
 ]
 
@@ -98,27 +98,27 @@ export const gameDataLinks = [
   {
     name: 'Champions',
     link: '/champions',
-    icon: 'i-no-champ',
-    class: 'size-7.5 opacity-70 -mt-1.5 -ml-1.75',
+    icon: 'i-ui-no-champ',
+    class: 'size-5  dst stroke-[1.5] -ml-0.5',
   },
 
   {
     name: 'Runes',
     link: '/runes',
-    icon: 'i-rune-icon',
-    class: 'size-6 -mt-1 -ml-1',
+    icon: 'i-ui-rune-icon',
+    class: 'size-6 - opacity-90',
   },
   {
     name: 'Spells',
     link: '/spells',
-    icon: 'i-tft-attach',
-    class: 'size-5 -mt-1 -ml-1 opacity-70',
+    icon: 'i-ui-fire',
+    class: 'size-5.5 -mt-1 dst -ml-1 opacity-90',
   },
   {
     name: 'Summoners',
     link: '/summoners',
-    icon: 'i-tft-summoner',
-    class: 'size-5.5 opacity-80 -mt-0.5 -ml-1',
+    icon: 'i-ui-enemy-outline',
+    class: 'size-5.5  dst -ml-0.5',
     text: 'Look up your friends... or your foes.',
   },
 ]

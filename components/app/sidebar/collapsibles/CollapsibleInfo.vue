@@ -1,19 +1,29 @@
 <script lang="ts" setup>
 import { UseClipboard } from '@vueuse/components'
+import SidebarCollapsibleTrigger from '../comps/SidebarCollapsibleTrigger.vue'
+import SidebarButton from '../comps/SidebarButton.vue'
 
 const isOpen = ref(true)
 const us = useUiStore()
 
+function navigate(){
+  if (us.sidebarExpanded )
+  return
+
+navigateTo('/docs')
+}
+
+const component = computed (() => us.sidebarExpanded ? SidebarCollapsibleTrigger : SidebarButton)
 </script>
 
 <template>
   <Collapsible v-model:is-open="isOpen" :disabled="!us.sidebarExpanded">
-    <NuxtLink v-tippy="!us.sidebarExpanded ? 'Info' : null" :to="!us.sidebarExpanded ? '/docs' : ''" :class="{ 'btn btn-ghost size-12  hover:bg-b2/60 ': !us.sidebarExpanded }">
-      <SidebarCollapsibleTrigger>
+ 
+      <component :is="component" v-tippy="!us.sidebarExpanded ? 'Info' : null" @click="navigate()"   class="disabled:text-bc">
         <SidebarIcon name="ph:question-mark" class="size-5 dst" />
         <SidebarText>Info</SidebarText>
-      </SidebarCollapsibleTrigger>
-    </NuxtLink>
+      </component>
+
     <SidebarCollapsibleContent v-if="us.sidebarExpanded">
       <NuxtLink
         to="/docs">
@@ -28,7 +38,7 @@ const us = useUiStore()
         <SidebarButton>
                   <SidebarIcon name="ph:cat" class="size-5 dst" />
           About
-        <SidebarBadge>HAS CATS
+        <SidebarBadge>+ CATS
    <!--          <i-fat-cat class="size-8 shrink-0 fill-bc dst -mt-2.5 stroke-[1.2]" /> -->
     </SidebarBadge>
         </SidebarButton>

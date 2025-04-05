@@ -7,13 +7,15 @@ definePageMeta({
   title: 'Items',
 })
 
-const items = computed(() => [...(ds.SRitems || [])])
+const items = computed(() => [...(ds.items || [])])
 
 const captions = computed(() => {
   let a = items.value.map(a => a.caption ?? '')
   a = a.filter(caption => caption != '')
   const i = Math.floor(Math.random() * a.length)
-  const b = a[i].replace(/\\/g, '')
+  let b = a[i].replace(/\\/g, '')
+  b = b.replace('[[', ' ')
+  b = b.replace(']]', ' ')
   return replaceFileReferencesWithImages(b)
 })
 
@@ -58,19 +60,43 @@ const toggleFilter = useToggle(filter)
       </NuxtLayout>
     </template>
 
-    <div class="flex flex-col items-center py-12">
+    <div class="flex flex-col items-center py-12 size-full relative">
       <ItemSearch class="input shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc">
       </ItemSearch>
 
-      <div class="size-full  pt-8   border-l border-l-b2">
-        <div class="flex gap-4">
-          <div class="join w-fit shadow-xs">
-            <button
-              class="btn-outline btn border-b3"
-              @click="resetItems">
-              Reset Filters
-            </button>
-          <!-- TODO
+      <div class="px-7">
+        <div class="divider divider-start before:bg-b3/60 font-semibold  my-8">
+          Categories
+        </div>
+        <RadioFilterList
+          :types="itemTypes"
+          class=""
+          @update:model="(e) => (is.filterItemTypes = e)" />
+      </div>
+
+      <div class="px-5 py-8 w-full">
+        <ItemStatsChecklist />
+      </div>
+      <div class="mt-4 mb-4 px-8 flex gap-5 font-medium items-center w-full justify-end">
+        Hide Unpurchasable
+        <Switch v-model:model-value="is.itemDBHideNoBuy" class="dst" @update:model-value="e => is.itemDBHideNoBuy = e" />
+      </div>
+      <div class="px-7">
+        <div class="divider divider-start before:bg-b3/60 font-semibold  mb-8">
+          Roles
+        </div>
+        <CheckboxFilterList
+          :source="itemCategories"
+          @update:model="(e) => (is.filterItemCats = e)" />
+      </div>
+
+      <div class=" w-full  absolute bottom-2 left-0 px-6">
+        <button
+          class="btn btn-neutral font-normal"
+          @click="resetItems">
+          Reset Filters
+        </button>
+        <!-- TODO
          REDO with vueuse
 
          <ToggleStateButton
@@ -88,31 +114,6 @@ const toggleFilter = useToggle(filter)
             :icon-size="7"
             @click.stop
             @update:model="(v) => (is.sortPrice = v)" /> -->
-          </div>
-        </div>
-
-        <div class="px-7">
-          <div class="divider divider-start before:bg-b3/60 font-semibold  my-8">
-            Categories
-          </div>
-          <RadioFilterList
-            :types="itemTypes"
-            class=""
-            @update:model="(e) => (is.filterItemTypes = e)" />
-        </div>
-
-        <div class="px-5 py-8">
-          <ItemStatsChecklist />
-        </div>
-
-        <div class="px-7">
-          <div class="divider divider-start before:bg-b3/60 font-semibold  mb-8">
-            Roles
-          </div>
-          <CheckboxFilterList
-            :source="itemCategories"
-            @update:model="(e) => (is.filterItemCats = e)" />
-        </div>
       </div>
     </div>
   </NuxtLayout>

@@ -18,6 +18,8 @@ export const useItemStore = defineStore('itemStore', () => {
   const itemPaneOpen = ref(false)
   const itemSearchQuery = ref()
 
+  const itemDBHideNoBuy = ref(true)
+
   const calculatorSet1 = ref<CalculatorSet>([
     createItem(),
     createItem(),
@@ -54,6 +56,7 @@ export const useItemStore = defineStore('itemStore', () => {
     itemSearchQuery,
     calculatorSet1,
     calculatorSet2,
+    itemDBHideNoBuy,
   }
 }, {
   persist: {
