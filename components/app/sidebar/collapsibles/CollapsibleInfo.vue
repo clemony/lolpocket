@@ -20,7 +20,7 @@ const component = computed (() => us.sidebarExpanded ? SidebarCollapsibleTrigger
   <Collapsible v-model:is-open="isOpen" :disabled="!us.sidebarExpanded">
  
       <component :is="component" v-tippy="!us.sidebarExpanded ? 'Info' : null" @click="navigate()"   class="disabled:text-bc">
-        <SidebarIcon name="ph:question-mark" class="size-5 dst" />
+        <SidebarIcon name="ph:question-mark" class="size-4.5 dst" />
         <SidebarText>Info</SidebarText>
       </component>
 
@@ -28,7 +28,7 @@ const component = computed (() => us.sidebarExpanded ? SidebarCollapsibleTrigger
       <NuxtLink
         to="/docs">
         <SidebarButton>
-            <SidebarIcon name="icon-park-outline:notebook" class="size-5 dst" />
+            <SidebarIcon name="icon-park-outline:notebook" class="size-3.75 dst" />
           Guide
         </SidebarButton>
       </NuxtLink>
@@ -36,7 +36,7 @@ const component = computed (() => us.sidebarExpanded ? SidebarCollapsibleTrigger
       <NuxtLink
         to="/about">
         <SidebarButton>
-                  <SidebarIcon name="ph:cat" class="size-5 dst" />
+                  <SidebarIcon name="ph:cat" class="size-4.25 dst" />
           About
         <SidebarBadge>+ CATS
    <!--          <i-fat-cat class="size-8 shrink-0 fill-bc dst -mt-2.5 stroke-[1.2]" /> -->
@@ -46,7 +46,7 @@ const component = computed (() => us.sidebarExpanded ? SidebarCollapsibleTrigger
 
       <Collapsible>
         <SidebarCollapsibleTrigger>
-            <SidebarIcon name="ph:envelope" class="size-5 dst" />
+            <SidebarIcon name="ph:envelope" class="size-4.5 dst" />
           Contact
         </SidebarCollapsibleTrigger>
 
@@ -58,7 +58,7 @@ const component = computed (() => us.sidebarExpanded ? SidebarCollapsibleTrigger
 
               <icon
                 name="streamline:discord"
-                class="size-4.5" />
+                class="size-4" />
               Discord
             </SidebarButton>
           </a>
@@ -70,12 +70,12 @@ const component = computed (() => us.sidebarExpanded ? SidebarCollapsibleTrigger
             <SidebarButton>
               <icon
                 name="ph:github-logo"
-                class="size-4.5 dst" /> github @clemony
+                class="size-4 dst" /> github @clemony
             </SidebarButton>
           </a>
 
           <SidebarButton>
-            <icon name="mail" class="size-5 dst stroke-[1.2]" />
+            <icon name="mail" class="size-4.5 dst stroke-[1.2]" />
 
             <UseClipboard v-slot="{ copy, copied }" source="contact@lolpocket.win">
               <button v-tippy="{ content: !copied ? 'Copy' : 'Copied!', placement: 'top', offset: [0, 5], hideOnClick: false }" class="flex items-center cursor-pointer w-full gap-3 pr-3 " @click="copy()">

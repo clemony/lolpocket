@@ -17,16 +17,16 @@ watchEffect(() => {
 <template>
   <Collapsible v-model:is-open="isOpen" :default-open="true">
     <SidebarCollapsibleTrigger v-if="us.sidebarExpanded" class="select-none " :disabled="!us.sidebarExpanded">
-      <SidebarIcon name="teenyicons:book-outline" class="size-4.5 -top-px" />
+      <SidebarIcon name="teenyicons:book-outline" class="size-4 -top-px" />
       <SidebarText>Encyclopedia</SidebarText>
     </SidebarCollapsibleTrigger>
 
-    <SidebarCollapsibleContent :class="{ ' gap-1': !us.sidebarExpanded }">
+    <SidebarCollapsibleContent :class="{ ' gap-y-1': !us.sidebarExpanded }">
       <Collapsible v-if="us.sidebarExpanded" v-model:open="itemIsOpen" :disabled="!us.sidebarExpanded" class="data-disabled:**:text-bc/90 ">
         <NuxtLink v-tippy="!us.sidebarExpanded ? 'Items' : null" :to="!us.sidebarExpanded ? '/items' : ''" :class="{ 'btn btn-ghost size-12  hover:bg-b2/60': !us.sidebarExpanded }">
           <SidebarCollapsibleTrigger>
             <span class="relative size-4">
-              <icon name="hugeicons:potion" class="absolute transition-scale dr-30 pointer-events-none size-6 -ml-1 -mt-1 opacity-70 dst" :class="{ 'ml-0': !us.sidebarExpanded }" />
+              <i-ui-hitter name="hugeicons:potion" class="absolute transition-scale dr-30 pointer-events-none size-5.5 -mt-1 opacity-70 dst" :class="{ 'ml-0': !us.sidebarExpanded }" />
             </span>
 
             <SidebarText>  Item Data</SidebarText>

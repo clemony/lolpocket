@@ -1,4 +1,4 @@
-export const stats = [
+export const championStats = [
   {
     name: 'Attack Damage',
     img: '/img/stats/ad.webp',

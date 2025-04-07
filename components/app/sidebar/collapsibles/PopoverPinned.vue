@@ -1,15 +1,19 @@
 <script setup lang="ts">
+
 const ps = usePocketStore()
 
 const pinned = computed (() => {
-  return ps.pockets.filter(p => p.location.folder == 'pinned')
+  return ps.pockets.filter(p => p.location.pinned == true)
 })
 </script>
 
 <template>
   <HoverCard>
-    <HoverCardTrigger as-child>
-      <SidebarButton>
+    <HoverCardTrigger as-child  :disabled="!pinned.length" class="group/pin">
+      <SidebarButton class=" indicator ">
+        <LazyPopupBadge v-if="!us.sidebarExpanded && pinned.length">
+           {{ pinned.length }}
+        </LazyPopupBadge>
         <slot :pinned="pinned" />
       </SidebarButton>
     </HoverCardTrigger>

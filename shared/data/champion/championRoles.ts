@@ -177,7 +177,7 @@ export const types = ref<Category[]>([
       'Ziggs',
       'Zoe',
     ],
-  },,
+  },
   {
     id: 'bottom',
     checked: false,

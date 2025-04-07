@@ -11,7 +11,7 @@ return props.match.teams[0].win == true ? 'Blue Team Win' : 'Red Team Win'
 const gameEnd = computed (() => {
 return props.blue[0].gameEndedInSurrender == true ? 'Enemy Surrender' :  null
 })
-const stats = {
+const endGameStats = {
 
   damage: [
   {
@@ -250,7 +250,7 @@ const statIndex = [0, 1, 2, 3, 4, 5, 6, 7]
           <td v-for="(player, i) in props.blue.concat(props.red)" :key="player.playerId" class="!max-w-12 w-12 min-w-12 overflow-hidden first-of-type:rounded-l-xl last-of-type:rounded-r-xl z-0" :class="{'bg-inspiration/30': player.teamId == 100, 'bg-domination/30': player.teamId == 200, 'rounded-r-xl  border-r-4 border-r-b2': i == 4, 'rounded-l-xl  border-l-4 border-l-b2': i == 5}">
             <div class="rounded-lg size-fit shadow-sm">
             <div class="!size-10 overflow-hidden rounded-lg">
-            <img :src="`/img/champion/${player.championId}.webp`" class="size-full scale-118"/>
+            <img :src="`/img/champion/${player.championName}.webp`" class="size-full scale-118"/>
             </div>
             </div>
           </td>
@@ -258,7 +258,7 @@ const statIndex = [0, 1, 2, 3, 4, 5, 6, 7]
         </tr>
       </thead>
 
-      <template v-for="category in stats" :key="category">
+      <template v-for="category in endGameStats" :key="category">
         <tbody v-for="stat in category" :key="stat.id" class="**:!text-1 ">
           <tr class="relative">
             <td v-if="statIndex.includes(stat.i)" class="capitalize bg-b2 font-semibold text-nowrap h-7 sticky left-0">

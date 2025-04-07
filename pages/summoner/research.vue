@@ -5,7 +5,7 @@ definePageMeta({
 
   name: 'research',
   title: 'research',
-redirect: '/summoner/research/champions',
+  redirect: '/research/champions',
 })
 
 const ds = useDataStore()
@@ -22,7 +22,7 @@ watchEffect(() => {
       <Separator class="bg-b2" />
       <RecentPatchWinrates />
     </div> -->
-  <div class="overflow-hidden size-full justify-center justify-items-center  scrollbar-none  pb-14">
+  <div class="overflow-hidden size-full justify-center justify-items-center  scrollbar-none pt-20  pb-14">
     <NuxtPage />
   </div>
 </template>

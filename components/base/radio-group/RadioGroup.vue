@@ -1,8 +1,7 @@
 <script setup lang="ts">
+import { LayoutGroup } from 'motion-v'
 import { RadioGroupRoot, useForwardPropsEmits } from 'reka-ui'
 import type { RadioGroupRootEmits, RadioGroupRootProps } from 'reka-ui'
-import { computed } from 'vue'
-import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<RadioGroupRootProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<RadioGroupRootEmits>()

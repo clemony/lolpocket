@@ -7,9 +7,9 @@ const props = defineProps<{
 }>()
 
 definePageMeta({
-  alias: '/nexus',
-  path: '/summoner',
+  path: '/summoner/nexus',
   name: 'nexus',
+  alias: '/nexus'
 })
 
 const as = useAccountStore()

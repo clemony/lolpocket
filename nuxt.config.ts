@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 //  Configuration Vite
 
 export default defineNuxtConfig({
-  modules: ['@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', 'motion-v/nuxt', '@vueuse/nuxt', '@nuxtjs/supabase', '@morev/vue-transitions/nuxt', '@nuxt/eslint', 'vue-sonner/nuxt', '@nuxt/icon', 'nuxt-svgo', '@nuxt/image'],
+  modules: ['@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', '@vueuse/nuxt', '@nuxtjs/supabase', '@morev/vue-transitions/nuxt', '@nuxt/eslint', 'vue-sonner/nuxt', '@nuxt/icon', 'nuxt-svgo', '@nuxt/image'],
 
   icon: {
     provider: 'iconify',
@@ -20,8 +20,8 @@ export default defineNuxtConfig({
       customElement: true,
     },
     optimizeDeps: {
-      force: true
-    }
+      force: true,
+    },
   },
 
   typescript: {
@@ -81,7 +81,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
 
   imports: {
-    dirs: ['@vueuse/components', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/links', 'utils/lib', 'utils/pocket', 'utils/style', 'utils/calculator', 'stores', 'shared/data', 'shared/data/summoner', 'shared/data/summoner/match', 'utils/data', 'utils/data/get', 'utils/data/retrieve', 'utils/data/adjust'],
+    dirs: ['@vueuse/components', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/links', 'utils/lib', 'utils/pocket', 'utils/style', 'utils/calculator', 'stores', 'shared/data', 'shared/data/summoner', 'shared/data/summoner/match', 'utils/data', 'utils/data/items', 'utils/data/champions', 'utils/data/shared'],
   },
 
   webpack: {

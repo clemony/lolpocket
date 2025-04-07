@@ -7,10 +7,10 @@ const pocket = computed (() => {
   return props.pocket
 })
 
- const spell = computed (() => {
+const spell = computed (() => {
   const s = pocket.value.spells.default
   if (!s)
-  return null
+    return null
   return s[0] && s[0].name ? s[0] : null
 })
 </script>
@@ -19,8 +19,8 @@ const pocket = computed (() => {
   <Collapsible>
     <CollapsibleTrigger class="w-full group/state">
       <RightbarButton field>
-        <RightbarIconWrapper >
-       <i-tft-attach v-if="!spell" class="size-4.5 opacity-65" />
+        <RightbarIconWrapper>
+          <i-tft-attach v-if="!spell" class="size-4.75 opacity-60" />
           <img v-else :src="`/img/spells/${spell.name}.webp`" class="size-full rounded-full" />
         </RightbarIconWrapper>
         <span class="capitalize">

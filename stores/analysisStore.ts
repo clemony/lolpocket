@@ -13,8 +13,10 @@ export const useAnalysisStore = defineStore('AnalysisStore', () => {
   const queueSelect = ref('all')
   const positionSelect = ref<AcceptableValue>('all')
   const previousPatch = computed(() => {
-    const p = getPatchList()
-    return p.slice(-2, -1)[0] // Returns the second-to-last item in the array
+    // const p =
+
+    return getPatchList()
+    // return p.slice(-2, -1)[0] // Returns the second-to-last item in the array
   })
   const seasonTotals = ref()
 

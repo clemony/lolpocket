@@ -17,11 +17,20 @@ console.log("💠 - modelValue:", modelValue)
 
       {{ ds.currentPatch }}
       </label>
-          <label class="flex gap-3 font-medium py-2 cursor-pointer">
+<!--           <label class="flex gap-3 font-medium py-2 cursor-pointer">
     <CustomRadioItem :value="ans.previousPatch"  :model-value="modelValue"/>
 
       {{ ans.previousPatch }}
-</label>
+</label> -->
+
+    
+          <label v-for="patch in ans.previousPatch" :key="patch" class="flex gap-3 font-medium py-2 cursor-pointer">
+
+
+   <CustomRadioItem :value="patch"  :model-value="modelValue"/>
+
+      {{patch }}
+          </label>
     <label class="flex gap-3 font-medium py-2 cursor-pointer">
    <CustomRadioItem  :value="ans.seasonTotals"  :model-value="modelValue"/>
 

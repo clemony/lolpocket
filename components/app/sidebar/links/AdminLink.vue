@@ -18,7 +18,7 @@ const role = computedAsync(() => {
         to="/admin/Admin"
         class="">
         <SidebarButton>
-          <SidebarIcon name="ph:key" class="size-5" />
+          <SidebarIcon name="ph:key" class="size-4.5" />
           <SidebarText>Admin Board</SidebarText>
         </SidebarButton>
       </NuxtLink>

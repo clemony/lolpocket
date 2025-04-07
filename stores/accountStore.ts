@@ -42,6 +42,7 @@ export const useAccountStore = defineStore(
 
     const reducedMotion = ref(false)
     const colorBlindMode = ref(false)
+    const sidebarCollapsed = ref(false)
 
     const mobileOpen = ref(false)
     const sidebarWidth = ref(18)
@@ -72,6 +73,7 @@ export const useAccountStore = defineStore(
       colorBlindMode,
       reducedMotion,
       pocketPreview,
+      sidebarCollapsed,
 
       // checks
       champCheck,

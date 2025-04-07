@@ -32,35 +32,29 @@ const amount = computed (() => {
 </script>
 
 <template>
-  <th class="overflow-hidden   pr-12 justify-self-end flex">
-    <component :is="`i-stats-${stat.icon}`" filled class="size-4.5  shrink-0 dst opacity-70 text-bc" :class="{ 'size-5': stat.icon == 'mana-regen' || stat.icon == 'hp' || stat.icon == 'gold' }" />
-  </th>
-  <td class="uppercase !text-1 font-medium dst select-none">
+  <div class="col-start-1 ml-5 ability-icon">
+    <component :is="`i-stats-${stat.icon}`" filled class="size-4  shrink-0 dst opacity-70 text-bc" :class="{ 'size-4.5': stat.icon == 'mana-regen' || stat.icon == 'hp' || stat.icon == 'gold' }" />
+  </div>
+  <div class=" col-start-2 !text-1 font-medium dst select-none">
     {{ stat.displayName }}
-  </td>
-  <td class="font-mono dst select-none">
+  </div>
+  <div class="dst select-none col-start-3">
     <span class=" flex items-center gap-2"><!--
   <icon name="bi:caret-up-fill" class="text-resolve stroke-3 opacity-0 size-0" :class="{'opacity-100 size-3.5': compare == 1}" /> -->
       {{ statValue > 0 ? statValue : '' }}
 
       <span v-if="ans.isComparing && compare == 1 && statValue2 != 0" class="text-1 text-resolve">+{{ amount }}</span>
     </span>
-  </td>
+  </div>
 
-  <td v-if="ans.isComparing" class="font-mono dst select-none">
+  <div v-if="ans.isComparing" class="font-mono col-start-4 dst select-none">
     <span class=" flex items-center gap-2">
       {{ statValue2 > 0 ? statValue2 : '' }}
       <!--  <icon name="rivet-icons:arrow-up" class="text-resolve stroke-3 opacity-0 size-0" :class="{'opacity-100 size-3': compare == 2}" /> -->
       <span v-if="ans.isComparing && compare == 2 && statValue != 0" class="text-1 text-resolve">+{{ amount }}</span>
     </span>
-  </td>
+  </div>
 
-  <td class=" justify-items-center items-center">
-    <label>
-      <!-- <label class="swap group swap-rotate" @click.stop> -->
-      <slot />
-    <!--   <icon name="pin" class="group-hover:opacity-100  swap-off size-5 shrink-0 opacity-60 dst" />
-      <icon name="iconoir:pin-solid" class="swap-on dst size-5 shrink-0" /> -->
-    </label>
-  </td>
+
+
 </template>

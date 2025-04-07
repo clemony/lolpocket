@@ -6,15 +6,18 @@ const as = useAccountStore()
 
 <template>
   <NuxtLink
-    v-for="link in getFolderLinks()"
+    v-for="(link, i) in getFolderLinks()"
     :key="link.key"
     :to="link.link">
-    <SidebarButton v-tippy="!us.sidebarExpanded ? link.name : null">
-      
+    <SidebarButton v-tippy="!us.sidebarExpanded ? link.name : null" class="indicator">
+      <LazyPopupBadge v-if="!us.sidebarExpanded && link.pockets && link.pockets.length" :delay="0.95 + i * 2.5 / 10">
+        {{ link.pockets.length }}
+      </LazyPopupBadge>
+
       <SidebarIcon v-if="link.name == 'Pockets'">
-        <i-ui-pocket  class="size-5"  />
-        </SidebarIcon>
-      <SidebarIcon v-else :name="link.icon" class=" size-5" />
+        <i-ui-pocket class="size-4.5" />
+      </SidebarIcon>
+      <SidebarIcon v-else :name="link.icon" class=" size-4.5" />
       <SidebarText>
         {{ link.name }}
       </SidebarText>

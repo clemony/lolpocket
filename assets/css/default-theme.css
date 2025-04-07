@@ -17,6 +17,12 @@
   --radius-lg-1: 0.6rem;
   --radius-lg-2: 0.62rem;
   --radius-tiny: 4px;
+    
+  --radius-selector: 0.4rem;
+  --radius-box: 1rem;
+  --radius-field: 0.55rem !important;
+  --depth: 1;
+  --noise: 0.5;
 
   --font-sans: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif 'sans-serif';
   --font-serif: 'Noto Serif KR Variable', 'serif';

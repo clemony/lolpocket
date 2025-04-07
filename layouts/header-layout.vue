@@ -22,7 +22,9 @@ const borderB = computed (() => {
 </script>
 
 <template>
-  <div class="w-full h-screen relative tldr-30 bg-b2/5" :class="{ '!bg-b2/40': route.meta.background == 'b2', '!bg-b2/10': route.name == 'card' }">
+  <div class="flex h-screen">
+    <slot name="sidebar"  />
+  <div class="w-full h-full relative tldr-30 bg-b2/5" :class="{ '!bg-b2/40': route.meta.background == 'b2', '!bg-b2/10': route.name == 'card' }">
     <div
       :class="cn(
         'flex w-full items-center overflow-hidden  h-18 max-h-18  gap-4.5 absolute z-40 top-0 left-0 bg-b1/80 backdrop-blur-md px-2  pt-3 pb-4',
@@ -61,5 +63,6 @@ const borderB = computed (() => {
     <div class="inset-0 absolute left-0 top-0" :class="cn({ 'overflow-y-auto ': route.path != '/' }, props.class)">
       <slot />
     </div>
+  </div>
   </div>
 </template>

@@ -1,32 +1,42 @@
 export const summonerLinks = [
   {
-    name: `Nexus`,
-    link: '/summoner',
-    icon: 'mynaui:stop-diamond', // gala:calendar vaadin:pin-post'
-    iconSolid: 'clarity:calendar-solid',
-    iconClass: 'size-5.5',
+    name: `Base`,
+    link: '/nexus',
+    icon: 'mynaui:stop-diamond',
+    iconClass: '!size-4.5 -ml-0.5',
   },
   {
     name: 'Research',
     link: '/summoner/research',
     icon: 'iconoir:round-flask',
     iconSolid: 'mdi:graph-box',
-    iconClass: '!size-5 opacity-70',
+    iconClass: '',
+    subLinks: [
+      {
+        name: 'Champions',
+        link: '/research/champions',
+      },
+      {
+        name: 'Items',
+        link: '/research/items',
+      },
+
+    ],
   },
   {
     name: 'History',
     link: '/summoner/match-history',
     icon: 'ph:clock-counter-clockwise',
     tftIcon: 'i-time-icon',
-    iconBold: 'ph:clock-counter-clockwise-bold',
-  },
+    class: 'size-5',
+  }, /*
   {
     name: 'Favorites',
     link: '/summoner/favorites',
     icon: 'ph:heart-straight',
     iconSolid: 'teenyicons:heart-solid',
-    iconClass: 'size-5.25',
-  },
+    iconClass: '',
+  }, */
 ]
 
 export const settingLinks = [
@@ -98,27 +108,27 @@ export const gameDataLinks = [
   {
     name: 'Champions',
     link: '/champions',
-    icon: 'i-ui-no-champ',
-    class: 'size-5  dst stroke-[1.5] -ml-0.5',
+    icon: 'i-ui-champ',
+    class: 'size-4.75 opacity-60  dst stroke-[1.5] -ml-0.25',
   },
 
   {
     name: 'Runes',
     link: '/runes',
     icon: 'i-ui-rune-icon',
-    class: 'size-6 - opacity-90',
+    class: 'size-5.5 -ml-px',
   },
   {
     name: 'Spells',
     link: '/spells',
-    icon: 'i-ui-fire',
-    class: 'size-5.5 -mt-1 dst -ml-1 opacity-90',
+    icon: 'i-tft-attach',
+    class: 'size-4.25 opacity-70 dst  ',
   },
   {
     name: 'Summoners',
     link: '/summoners',
-    icon: 'i-ui-enemy-outline',
-    class: 'size-5.5  dst -ml-0.5',
+    icon: 'i-ui-enemy',
+    class: 'size-4.75  opacity-60 top-0.5 dst ',
     text: 'Look up your friends... or your foes.',
   },
 ]
@@ -149,7 +159,6 @@ export function getFolderLinks() {
       pockets: ps.trashFolder,
       key: 'trash',
       icon: 'ph:trash',
-      iconSolid: 'teenyicons:bin-solid',
       iconBold: 'ph:trash-bold',
     },
     {

@@ -31,7 +31,7 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
     },
     tags: tags || [''],
     location: {
-      pinned: 0,
+      pinned: false,
       folder: 'all',
     },
     notes: [''],
@@ -63,16 +63,19 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
   ps.pockets.push(newPocket)
   console.log('💠 - addPocket - ps.pockets:', ps.pockets)
 
-  toast(`Pocket ${newPocket.name} created.`, {
-    description: 'Head to your new pocket and start editing?',
-    duration: 6000,
+  const newPocketToast = toast.success(`Pocket ${newPocket.name} created.`, {
+    description: 'Head to your new pocket and start crafting?',
+    duration: 7000,
     action: {
-      label: 'Edit Pocket',
+      label: 'Open Pocket',
       onClick: () => navigateTo({ path: `/pocket/${newPocket.key}` }),
+    },
+    cancel: {
+      label: '×',
+      onClick: () => toast.dismiss(newPocketToast),
     },
   })
 }
-
 // delete
 
 export function deletePocket(pocket) {

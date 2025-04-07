@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { stats } from 'shared/data/champion/'
-
 const props = defineProps<{
   champion: Champion
 }>()
@@ -36,8 +34,7 @@ const numericLvl = computed(() => Number(lvl.value))
           type="range"
           :min="1"
           :max="18"
-          class="range range-xs"
-        />
+          class="range range-xs" />
       </div>
       <div class="relative size-18">
         <!--        <Donut
@@ -54,28 +51,26 @@ const numericLvl = computed(() => Number(lvl.value))
 
     <div class="grid grid-cols-2 items-start gap-x-10 gap-y-5 grid-flow-col">
       <template
-        v-for="(stat, i) in stats"
-      >
+        v-for="(stat, i) in championStats">
         <template v-if="i <= 3">
           <ChampStatBar
+            :key="i"
             v-model:lvl="numericLvl"
             :champion="props.champion"
             :stat="stat"
-            class="col-start-1"
-          />
+            class="col-start-1" />
         </template>
       </template>
 
       <template
-        v-for="(stat, i) in stats"
-      >
-        <template v-if="i >= 4" ">
+        v-for="(stat, i) in championStats">
+        <template v-if="i >= 4">
           <ChampStatBar
+            :key="i"
             v-model:lvl="numericLvl"
             :champion="props.champion"
             :stat="stat"
-            class="col-start-2"
-          />
+            class="col-start-2" />
         </template>
       </template>
     </div>

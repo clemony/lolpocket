@@ -51,22 +51,3 @@ cleanedItemData = integrateDataDragon(cleanedItemData)
 }
 
 
-export async function integrateDataDragon(wikiData) {
-  const a = await import('data/item')
-  const ds = useDataStore()
-
-  const data = a.items.data
-  if (!data)
-    return console.log('no item json data, returning!')
-
-  const cleanerData = wikiData.map((item) => {
-
-    // Convert the item ID to a string to match keys in the data object
-    const match = data[item.id]
-
-    return match ? { ...item, gold: match.gold, tags: match.tags, from: match.from, into: match.into } : item
-  })
-
-  return cleanerData
-}
-

@@ -12,7 +12,7 @@ watchEffect(() => {
 <template>
   <Collapsible v-model="isOpen" :default-open="true" class="group">
     <SidebarCollapsibleTrigger v-if="us.sidebarExpanded">
-      <SidebarIcon name="system-uicons:home-door" class="size-5.25 stroke-[1.4] " />
+      <icon name="teenyicons:compass-outline" class="size-4 dst " />
       <SidebarText> <SummonerName class="capitalize" /></SidebarText>
     </SidebarCollapsibleTrigger>
     <SidebarCollapsibleContent class="tldr-30" :class="{ 'gap-1': !us.sidebarExpanded }">
@@ -20,12 +20,11 @@ watchEffect(() => {
         v-for="link in summonerLinks" :key="link.name"
         :to="link.link" class="group">
         <SidebarButton v-tippy="!us.sidebarExpanded ? link.name : null" class="capitalize">
-          <SidebarIcon :name="link.icon" class="size-5 dst " />
+          <SidebarIcon :name="link.icon" class="size-4.5 dst shrink-0" :class="link.iconClass" />
           <SidebarText> {{ link.name }}</SidebarText>
         </SidebarButton>
       </LazyNuxtLink>
 
-      <LazyAdminLink />
     </SidebarCollapsibleContent>
   </Collapsible>
 </template>

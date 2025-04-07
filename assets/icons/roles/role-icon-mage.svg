@@ -1,16 +1,16 @@
 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
 	<title>role-icon-mage</title>
 	<style>
-		.s0 { opacity: .99;fill: #090703 } 
-		.s1 { opacity: .54;fill: #080703 } 
-		.s2 { opacity: .78;fill: #080602 } 
-		.s3 { opacity: .29;fill: #090703 } 
-		.s4 { opacity: .73;fill: #080703 } 
-		.s5 { opacity: .84;fill: #090704 } 
-		.s6 { opacity: .63;fill: #090703 } 
-		.s7 { opacity: .38;fill: #090704 } 
-		.s8 { opacity: .13;fill: #090704 } 
-		.s9 { opacity: .23;fill: #090703 } 
+		.s0 { opacity: .99;fill: currentcolor }
+		.s1 { opacity: .54;fill: currentcolor }
+		.s2 { opacity: .78;fill: currentcolor }
+		.s3 { opacity: .29;fill: currentcolor }
+		.s4 { opacity: .73;fill: currentcolor }
+		.s5 { opacity: .84;fill: currentcolor }
+		.s6 { opacity: .63;fill: currentcolor }
+		.s7 { opacity: .38;fill: currentcolor }
+		.s8 { opacity: .13;fill: currentcolor }
+		.s9 { opacity: .23;fill: currentcolor }
 	</style>
 	<g id="Background">
 		<path id="Path 0" fill-rule="evenodd" class="s0" d="m22 2h1v1h-1zm-2 1h2v1l-1 1v4l1 1h4v1l2 2v1l2 2v1l1 1v1l2 2v6l-1 1v1l-4 4v1l-2 2h-2l-2-2v-1l-4-4v-1l-1-1v-6l2-2v-1l1-1v-1l1-1h-2l-1 1-2-2v-7zm2 20v4l1 1v1l1 1h2l1-1v-1l1-1v-4l-2-2v-1h-2v1zm-19 10l6-1 1 1h4l1 1h1l1 1h1l6 6h2l6-6h1l1-1h1l1-1h4l1-1 6 1v1l1 1v3h-8l-1 1h-3l-1 1h-1l-2 2h-1l-2 2v1l3 1v2h-14v-2l3-1v-1l-2-2h-1l-2-2h-1l-1-1h-3l-1-1h-8v-3l1-1z"/>

@@ -13,7 +13,7 @@ const champion = computed (() => {
 </script>
 
 <template>
-  <h1 v-if="champion" class="!text-9 font-serif grow  opacity-90 dst font-bold pb-3 ">
+  <h1 v-if="champion" class="!text-7 font-serif grow  opacity-90 dst font-bold pb-3 ">
     {{ champion.name }}
   </h1>
   <h1 v-else class="!text-9   font-redacted grow dst font-bold pb-3 ">

@@ -41,12 +41,12 @@
     --color-error-content: var(--color-domination-light);
     --input-color: var(--color-b3);
   }
-  
-  --depth: 1;
-  --noise: 0.5;
+
   --radius-selector: 0.4rem;
   --radius-box: 1rem;
   --radius-field: 0.55rem !important;
+  --depth: 1;
+  --noise: 0.5;
 }
 
 @layer components {

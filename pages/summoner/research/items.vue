@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 definePageMeta({
-
+  title: 'Research',
   path: '/research/items',
 })
 const ans = useAnalysisStore()
@@ -31,6 +31,7 @@ const ans = useAnalysisStore()
     <ResizablePanel>
       <ResizablePanelGroup direction="horizontal">
         <ResizablePanel>
+          <PocketPickItem :patch-games="ans.patchGames" />
         </ResizablePanel>
         <ResizableHandle />
 

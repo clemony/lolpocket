@@ -1,7 +1,5 @@
 /* eslint-disable regexp/optimal-quantifier-concatenation */
 
-import { convertPatchToRiotFormat } from '../handleData'
-
 export const matchArray = [
   NA1_5246472309,
   NA1_5246418931,

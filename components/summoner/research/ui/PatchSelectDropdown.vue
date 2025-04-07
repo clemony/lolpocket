@@ -14,20 +14,19 @@ const modelValue = ref(ans.patchSelect ?? ds.currentPatch)
 </script>
 
 <template>
-  <Select v-model:model-value="modelValue" class="p-0" @update:model-value="(e) => ans.patchSelect = e">
-    <SelectTrigger class="text-left bg-b1/60 shadow-none border-b3/80 inset-shadow-xs rounded-lg align-bottom h-12 flex items-center text-4 tracking-tight font-medium" :class="cn('', props.class)">
-      <div class="flex">
-        <span class="w-16"> &nbsp;Patch &nbsp;</span>
-        <SelectValue :placeholder="ds.currentPatch" class="text-left w-20" />
-      </div>
-    </SelectTrigger>
-    <SelectContent position="popper" class="!w-[var(--reka-select-trigger-width)]">
+  <Select v-model:model-value="modelValue" class="" @update:model-value="(e) => ans.patchSelect = e">
+    <CustomSelectTrigger :class="cn('', props.class)">
+      <!--       <div class="relative">
+        <span class="w-16 pt-0.75 absolute left-7 font-semibold"> &nbsp;Patch &nbsp;</span> -->
+      <SelectValue :placeholder="ds.currentPatch" class=" w-20  mt-0.5 font-semibold " />
+    </CustomSelectTrigger>
+    <CustomSelectContent position="popper" class="!w-[var(--reka-select-trigger-width)]">
       <SelectGroup>
         <SelectLabel>Patch</SelectLabel>
-        <SelectItem v-for="patch in sortedPatches" :key="patch" :value="patch">
+        <CustomSelectItem v-for="patch in sortedPatches" :key="patch" :value="patch">
           {{ patch }}
-        </SelectItem>
+        </CustomSelectItem>
       </SelectGroup>
-    </SelectContent>
+    </CustomSelectContent>
   </Select>
 </template>

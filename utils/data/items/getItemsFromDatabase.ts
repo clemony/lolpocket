@@ -1,4 +1,4 @@
-import { filterSR } from '../adjust/filterSR'
+
 
 export async function getItemsFromDatabase() {
   const supabase = useSupabaseClient()

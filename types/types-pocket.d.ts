@@ -24,7 +24,7 @@ declare global {
     dateUpdated: dateObject
     tags: string[] | null
     location: {
-      pinned: number
+      pinned: boolean
       folder: string
     }
     icon: string

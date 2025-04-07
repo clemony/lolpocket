@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { motion } from 'motion-v'
+
 const checkedStats = ref([])
 
 const is = useItemStore()
@@ -42,67 +44,63 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="  overflow-y-auto ">
-    <table class="table">
+  <div class="w-full">
+
       <!-- head -->
-      <thead class="sticky top-0 left-0 bg-neutral/85 backdrop-blur-md text-nc border-b border-b-b2  z-1">
-        <tr class="">
-          <th class="min-w-10 w-32"></th>
-          <th class="dst">
+      <div class="w-full grid grid-cols-[40px_1fr_30px_30px]  bg-b2   border-y border-y-b3/50  z-1 py-2 *:text-2 items-center btn-depth">
+
+          <div class="dst col-start-2 font-medium">
             STAT
-          </th>
-          <th class="dst">
+          </div>
+          <div class="dst  font-medium justify-center">
             {{ ans.isComparing ? '1' : 'TOTAL' }}
-          </th>
-          <th v-if="ans.isComparing" class="dst">
+          </div>
+          <div v-if="ans.isComparing" class="dst  justify-center font-medium">
             2
-          </th>
-          <th class=" w-28 dst">
-            PIN
-          </th>
-        </tr>
-      </thead>
+          </div>
+   
+      </div>
+
+      <div class="overflow-y-auto w-full">
       <LayoutGroup>
-        <Motion :layout="true" as="tbody" class=" sticky top-10 left-0 bg-b2 border-b border-b-b2  z-1">
+        <motion.label :layout="true" v-for="stat in checkedStats" :key="stat.id" class="sticky top-0 left-0 bg-b1 border-b first:border-t last:!border-b-b3 border-b-b3/55 border-t-b3/60  cursor-pointer *:justify-start  z-1  grid grid-cols-[40px_1fr_30px_30px]  py-3 hover:border-y hover:border-y-b3/80 items-center hover:bg-b1/50  ">
           <!-- row 1 -->
-          <template v-for="stat in checkedStats" :key="stat.id">
-            <Motion :layout="true" as="tr" class="hover:bg-b2/60">
+      
+                <input v-model="checkedStats" type="checkbox" class="peer hidden absolute" :value="stat" />
               <StatRowContents v-if="checkedStats.includes(stat)" :stat="stat" :item-stats="stats" :item-stats2="stats2">
-                <input v-model="checkedStats" type="checkbox" class="peer checkbox checkbox-neutral" :value="stat" />
               </StatRowContents>
-            </Motion>
-          </template>
-        </Motion>
+  
+        </motion.label>
 
-        <Motion :layout="true" as="tbody" class="z-0 ">
+     
           <template v-for="stat in itemStats" :key="stat.id">
-            <Motion :layout="true" as-child>
-              <tr v-if="!checkedStats.includes(stat)" class="hover:bg-b2/60 has-checked:hidden">
+            <motion.label :layout="true"  v-if="!checkedStats.includes(stat)" class="hover:bg-b2/60 first:border-t first:border-t-b3  cursor-pointer  py-3.5 has-checked:hidden w-full grid grid-cols-[40px_1fr_30px_30px] border-b-b3/40 border-b  items-center">
+                  <input v-model="checkedStats" type="checkbox" class="peer hidden absolute " :value="stat" />
                 <StatRowContents :stat="stat" :item-stats="stats" :item-stats2="stats2">
-                  <input v-model="checkedStats" type="checkbox" class="peer checkbox checkbox-neutral " :value="stat" />
                 </StatRowContents>
-              </tr>
-            </Motion>
+            
+            </motion.label>
           </template>
-        </Motion>
+   
       </LayoutGroup>
-      <tfoot class="sticky bottom-0 left-0 bg-neutral text-nc h-12 z-1 ">
-        <tr class="">
-          <td></td>
-          <th class="dst pb-0.5">
+      </div>
+
+     
+    </div>
+      <div class="w-full grid grid-cols-[40px_1fr_30px_30px]  bg-b2   border-y border-y-b3/50  z-1 py-2 *:text-2 items-center">
+<div class="justify-center ml-4">
+  <i-ui-gold  class="text-bc/80 size-6"/>
+</div>
+          <div class="dst col-start-2 font-medium">
+           
             TOTAL GOLD
-          </th>
-          <th class="font-mono text-3 dst ">
-            {{ totalCost }}
-          </th>
-
-          <th v-if="ans.isComparing" class="font-mono text-3 dst ">
-            {{ totalCost2 }}
-          </th>
-
-          <td></td>
-        </tr>
-      </tfoot>
-    </table>
+          </div>
+          <div class="dst  font-medium justify-center">
+            {{  totalCost }}
+          </div>
+          <div v-if="ans.isComparing" class="dst  font-medium justify-center">
+             {{ totalCost2 }}
+          </div>
+     
   </div>
 </template>

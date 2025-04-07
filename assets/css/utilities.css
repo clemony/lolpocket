@@ -29,7 +29,11 @@
   mask-image: radial-gradient(circle at 75% 85%,transparent 50%, #000 );
 }
 
+@utility btn-depth {
 
+  --depth: 1;
+  --noise: 0.5;
+}
 
 @utility col-span-all {
   column-span: all;

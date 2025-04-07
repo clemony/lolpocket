@@ -73,6 +73,6 @@ export const useUiStore = defineStore('UiStore', () => {
   persist: {
     storage: piniaPluginPersistedstate.sessionStorage(),
     key: 'tempStore',
-    pick: ['sessionInfo'],
+    // pick: ['sessionInfo', 'sidebarExpanded'],
   },
 })

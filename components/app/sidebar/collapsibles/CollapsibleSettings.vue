@@ -21,7 +21,7 @@ const component = computed (() => us.sidebarExpanded ? SidebarCollapsibleTrigger
   <Collapsible v-model:is-open="isOpen" :disabled="!us.sidebarExpanded">
 
       <component :is="component"  v-tippy="!us.sidebarExpanded ? 'Settings' : null" @click="navigateTo('/settings')"  class="disabled:text-bc">
-        <SidebarIcon name="gear"  />
+        <SidebarIcon name="gear"  class="!size-4.5"/>
         <SidebarText>Settings</SidebarText>
       </component>
 
