@@ -24,8 +24,8 @@ export const summonerLinks = [
     ],
   },
   {
-    name: 'History',
-    link: '/summoner/match-history',
+    name: 'Match History',
+    link: '/nexus/match_history',
     icon: 'ph:clock-counter-clockwise',
     tftIcon: 'i-time-icon',
     class: 'size-5',

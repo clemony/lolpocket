@@ -11,6 +11,6 @@ const summoner = computed(() => {
 
 
 <template>
-     <span :class="cn('', props.class)">{{ summoner.tagLine || summoner.name || 'Link Riot ID' || '' }}</span>
+     <span :class="cn('', props.class)">#{{ summoner.tagLine || summoner.name || 'Link Riot ID' || '' }}</span>
 </template>
 

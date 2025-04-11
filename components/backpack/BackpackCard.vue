@@ -26,7 +26,7 @@ const pocket = computed (() => {
           <div  class="  pointer-events-none py-3 px-4 size-full   inset-shadow grid relative">
 
               <BackpackRunes :pocket="pocket" />
-     
+     <icon name="radix-icons:open-in-new-window" class="absolute size-7 right-4 top-4" />
             <div class="flex gap-6 self-end w-full">
               <div  class="font-medium self-end pb-4 pl-3 grow flex flex-col gap-2">
    

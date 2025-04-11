@@ -2,6 +2,7 @@
 definePageMeta({
   title: 'research',
   path: '/research/champions',
+  section: 'nexus',
 })
 
 const ans = useAnalysisStore()

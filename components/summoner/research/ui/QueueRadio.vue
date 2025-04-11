@@ -30,7 +30,7 @@ const selectQueues = [
 </script>
 
 <template>
-  <div class=" *:justify-start grid gap-y-2  *:flex  *:text-3 *:items-center *:font-medium *:gap-3">
+  <div class=" *:justify-start grid gap-y-3.5  *:flex  *:text-3 *:items-center *:font-medium *:gap-3">
 
     <label v-for="queue in selectQueues" :key="queue.select" class="btn btn-ghost pl-3 pr-5 opacity-30 hover:opacity-60" :class="{ 'opacity-100': ans.queueSelect == queue.select }">
       <input v-model="ans.queueSelect" name="queue-tabs" type="radio" class="peer hidden" value="all" />

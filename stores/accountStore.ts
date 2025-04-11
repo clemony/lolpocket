@@ -32,10 +32,10 @@ export const useAccountStore = defineStore(
     const userFolders = ref<Folder[]>([])
     const heroModel = ref(0)
 
-    const userBoardModules = ref<(any | null)[]>(Array.from({ length: 9 }, () => null))
+    const nexusTrinkets = ref<(any | null)[]>(Array.from({ length: 9 }, () => null))
 
-    const userModuleCount = computed(() => {
-      const filter = userBoardModules.value.filter(m => m != null)
+    const userTrinketCount = computed(() => {
+      const filter = nexusTrinkets.value.filter(m => m != null)
       return filter.length
     })
     const userNotes = ref<Note[]>([])
@@ -61,8 +61,8 @@ export const useAccountStore = defineStore(
       // account
       userAccount,
       userFolders,
-      userBoardModules,
-      userModuleCount,
+      nexusTrinkets,
+      userTrinketCount,
       userNotes,
 
       // settings

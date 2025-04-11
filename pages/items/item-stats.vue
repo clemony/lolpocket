@@ -9,7 +9,7 @@ definePageMeta({
   title: 'Item Stats',
   path: '/items/stats',
   name: 'item-stats',
-
+section: 'items',
 })
 
 const is = useItemStore()

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'Pinned'
+  title: 'Pinned',
+  section: 'pockets',
 })
 </script>
 

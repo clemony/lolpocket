@@ -1,14 +1,10 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  pocket: pocket
-}>()
-
-const pocket = computed (() => {
-  return props.pocket
-})
-
 
 const route = useRoute()
+
+const pocket = computed (() => {
+  return getPocket(route.params.pocketKey)
+})
 
 const rs = useRuneStore()
 
@@ -24,9 +20,8 @@ const runesOpen = ref(false)
 </script>
 
 <template>
-  <NuxtLayout name="sidebar-layout" no-title >
     <div class="inset-0 top-0 left-0  overflow-hidden  flex  flex-col h-full">
-      <div class="items-center w-full pt-4  flex flex-col gap-6  px-3">
+      <div class="items-center w-full pt-7  flex flex-col gap-6  px-3">
         <LazyPopover>
           <PopoverTrigger class="group/picon z-0 !cursor-pointer self-center  !size-28   rounded-full !pointer-events-auto shadow-sm  inset-shadow-sm aspect-square  grid place-items-center relative">
             <div class="size-full rounded-full overflow-hidden relative ">
@@ -89,5 +84,5 @@ const runesOpen = ref(false)
       </div>
       <PocketSidebarFooter :pocket="pocket" />
     </div>
-  </NuxtLayout>
+
 </template>

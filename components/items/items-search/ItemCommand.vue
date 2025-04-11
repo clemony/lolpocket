@@ -29,11 +29,8 @@ function handleItem(e) {
 </script>
 
 <template>
-  <Popover v-model:open="isOpen">
+  <Popover v-model:open="isOpen" @click.stop.prevent>
     <ItemDisplayTrigger v-if="props.type == 'image'" :item="item" />
-    <ItemSearchBoxButton v-else :is-open="isOpen">
-      <slot />
-    </ItemSearchBoxButton>
     <CustomPopoverContent
       class=""
       :class="cn('w-110 rounded-lg max-h-130 overflow-auto p-0 border-b-6', props.class)"

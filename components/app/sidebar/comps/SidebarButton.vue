@@ -1,16 +1,12 @@
-<script lang="ts" setup>
-import { motion } from 'motion-v'
-
+<script setup lang="ts">
 const props = defineProps<{
-  class?: HTMLAttributes['class']
+to?: string
 }>()
 
-const us = useUiStore()
+const route = useRoute()
 </script>
-
 <template>
-  <button
-    class="sb-link" :class="cn('btn  btn-ghost w-full py-5 px-2.5 !justify-start  hover:text-bc flex-nowrap  font-medium text-3 items-center [&_svg]:shrink-0  ', { 'gap-4': us.sidebarExpanded }, props.class)">
-    <slot />
-  </button>
+<button class="btn w-full   btn-ghost  text-3 font-medium justify-start hover:!bg-b1/30 hover:border-b3/50" :class="{' btn-active': props.to == route.path }">
+    <slot  />
+</button>
 </template>

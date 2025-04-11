@@ -4,7 +4,6 @@ import { motion } from 'motion-v'
 const checkedStats = ref([])
 
 const is = useItemStore()
-const ans = useAnalysisStore()
 const stats = ref()
 const stats2 = ref()
 
@@ -27,18 +26,18 @@ function getTotalCost(set) {
 }
 
 watchEffect(() => {
-  if (ans.calculateSet && !ans.isComparing) {
-    stats.value = mergeItemStats(ans.calculateSet)
-    totalCost.value = getTotalCost(ans.calculateSet)
+  if (is.calculateSet && !is.isComparing) {
+    stats.value = mergeItemStats(is.calculateSet)
+    totalCost.value = getTotalCost(is.calculateSet)
   }
-  else if (ans.isComparing == true) {
-    stats.value = mergeItemStats(ans.calculateSet)
-    totalCost.value = getTotalCost(ans.calculateSet)
+  else if (is.isComparing == true) {
+    stats.value = mergeItemStats(is.calculateSet)
+    totalCost.value = getTotalCost(is.calculateSet)
 
-    stats2.value = mergeItemStats(ans.calculateSet2)
+    stats2.value = mergeItemStats(is.calculateSet2)
     console.log('💠 - watchEffect - stats2.value:', stats2.value)
 
-    totalCost2.value = getTotalCost(ans.calculateSet)
+    totalCost2.value = getTotalCost(is.calculateSet)
   }
 })
 </script>
@@ -53,9 +52,9 @@ watchEffect(() => {
             STAT
           </div>
           <div class="dst  font-medium justify-center">
-            {{ ans.isComparing ? '1' : 'TOTAL' }}
+            {{ is.isComparing ? '1' : 'TOTAL' }}
           </div>
-          <div v-if="ans.isComparing" class="dst  justify-center font-medium">
+          <div v-if="is.isComparing" class="dst  justify-center font-medium">
             2
           </div>
    
@@ -98,7 +97,7 @@ watchEffect(() => {
           <div class="dst  font-medium justify-center">
             {{  totalCost }}
           </div>
-          <div v-if="ans.isComparing" class="dst  font-medium justify-center">
+          <div v-if="is.isComparing" class="dst  font-medium justify-center">
              {{ totalCost2 }}
           </div>
      

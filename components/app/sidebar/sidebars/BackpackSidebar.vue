@@ -7,10 +7,8 @@ const all = ref(true)
 </script>
 
 <template>
-  <NuxtLayout name="sidebar-layout" >
-    <template #title>
-      <SidebarAddPocket class="!size-7 absolute right-4.5 -top-1" />
-    </template>
+<div class="">
+      <SidebarTitle  />
     <div class="px-6 mt-2 border-t border-y-b3/50 pt-3 flex items-center font-semibold text-bc/40 tracking-tight">
       Pockets
     </div>
@@ -66,5 +64,5 @@ const all = ref(true)
         </SidebarBadge>
       </SidebarButton>
     </div>
-  </NuxtLayout>
+  </div>
 </template>

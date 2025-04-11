@@ -20,10 +20,6 @@ export const useAnalysisStore = defineStore('AnalysisStore', () => {
   })
   const seasonTotals = ref()
 
-  const calculatorSets = ref<CalculatorSet[]>([])
-  const calculateSet = ref<CalculatorSet>(null)
-  const calculateSet2 = ref<CalculatorSet>(null)
-  const isComparing = ref(false)
   return {
     userMatchData,
     patchGames,
@@ -33,10 +29,6 @@ export const useAnalysisStore = defineStore('AnalysisStore', () => {
     queueSelect,
     positionSelect,
     previousPatch,
-    calculatorSets,
-    calculateSet,
-    calculateSet2,
-    isComparing,
 
   }
 }, {

@@ -1,4 +1,8 @@
 <script setup lang="ts">
+definePageMeta({
+  section: 'docs',
+})
+
 const icons = [
   {
     name: 'Vue',
@@ -64,48 +68,54 @@ const faq = [
 </script>
 
 <template>
-  <NuxtLayout name="header-layout" class="px-18  w-full justify-center">
- 
-
-    <div class="flex w-210  flex-col gap-6 pt-24 items-center mx-auto">
-
-<div class="grid grid-cols-[20px_1fr] w-full gap-x-14 **:font-mono  mockup-code text-nc text-3  ">
-  <div class="col-start-1 grid pl-6 gap-y-1 items-center">
-<div v-for="index in 13" class="grid items-center">{{index}}</div>
-  </div>
-
-  <div class="col-start-2 grid h-fit  gap-y-1 items-center">
-<div>const CatTax: cat&#60;image: popUp&#62; = {</div>
-  <div class="gap-y-1 grid tiems-center pl-6">
-  <div>'Clem': {</div>
-    <div class="flex items-center gap-1 pl-6">image:
-      <span class="w-4" /> [
-          <CatDialog>1,</CatDialog>
-          <CatDialog>2,</CatDialog>
-          <CatDialog>3,</CatDialog>
-          <CatDialog>4</CatDialog> ],
+  <NuxtLayout name="header-layout" class="px-18  size-full grid place-items-center">
+    <div class="flex w-210  flex-col gap-6 items-center mx-auto">
+      <div class="grid grid-cols-[20px_1fr] w-full gap-x-14 **:font-mono  mockup-code text-nc text-3  ">
+        <div class="col-start-1 grid pl-6 gap-y-1 items-center">
+          <div v-for="index in 13" :key="index" class="grid items-center">
+            {{ index }}
+          </div>
         </div>
-          <div>},</div>
-      <div class="opacity-0">. </div>
-          <div>'Nell': {</div>
-        <div class="flex items-center gap-1 pl-6">image:
-            <span class="w-4" /> [
-          <CatDialog>1,</CatDialog>
-          <CatDialog>2,</CatDialog>
-          <CatDialog>3,</CatDialog>
-          <CatDialog>4</CatDialog>],
+
+        <div class="col-start-2 grid h-fit  gap-y-1 items-center">
+          <div>const CatTax: cat&#60;image: popUp&#62; = {</div>
+          <div class="gap-y-1 grid tiems-center pl-6">
+            <div>'Clem': {</div>
+            <div class="flex items-center gap-1 pl-6">
+              image:
+              <span class="w-4" /> [
+              <CatDialog>1,</CatDialog>
+              <CatDialog>2,</CatDialog>
+              <CatDialog>3,</CatDialog>
+              <CatDialog>4</CatDialog> ],
+            </div>
+            <div>},</div>
+            <div class="opacity-0">
+              .
+            </div>
+            <div>'Nell': {</div>
+            <div class="flex items-center gap-1 pl-6">
+              image:
+              <span class="w-4" /> [
+              <CatDialog>1,</CatDialog>
+              <CatDialog>2,</CatDialog>
+              <CatDialog>3,</CatDialog>
+              <CatDialog>4</CatDialog>],
+            </div>
+            <div>
+              };<span class="animate-[blink-1_1s_infinite_both] text-4">|</span>
+            </div>
+          </div>
+          <div class="opacity-0">
+            .
+          </div>
+          <div> <span v-tippy="'! (logical NOT) operator'" class="hover:bg-b3 hover:text-bc">!</span><span>frequently asked questions</span></div>
+
+          <span class="pl-6">[Q] Where going? </span>
+
+          <span class="text-4 gap-3 flex pl-6"> [LP]<icon name="hugeicons:moon-01" class="size-7 text-nc stroke-0.8 mb-1" /></span>
         </div>
-          <div>};<span class="animate-[blink-1_1s_infinite_both] text-4">|</span>
-</div></div>
-  <div class="opacity-0">. </div>
-      <div> <span v-tippy="'! (logical NOT) operator'" class="hover:bg-b3 hover:text-bc">!</span><span>frequently asked questions</span></div>
-
- <span class="pl-6">[Q] Where going? </span>
-
- <span class="text-4 gap-3 flex pl-6"> [LP]<icon name="hugeicons:moon-01" class="size-7 text-nc stroke-0.8 mb-1" /></span>
- 
       </div>
-</div>
       <div
         class="items-end self-end flex flex-col pr-3 mt-2 gap-2 py-4 **:dst">
         <p class="">

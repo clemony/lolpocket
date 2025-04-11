@@ -3,8 +3,8 @@ const rs = useRuneStore()
 
 definePageMeta({
   name: 'runes-data',
-  title: 'Runes'
-
+  title: 'Runes',
+section: 'magic'
 })
 const rune = ref(rs.hoveredRune)
 </script>

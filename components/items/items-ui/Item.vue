@@ -2,6 +2,8 @@
 const props = defineProps<{
   item: Item
   class?: HTMLAttributes['class']
+  isOpen?: boolean
+  isHovered?: boolean
 }>()
 const emit = defineEmits(['loaded'])
 
@@ -12,7 +14,7 @@ const thisItem = computed(() => {
 
 <template>
   <label
-    class="" :class="cn(' relative rounded-lg   aspect-square', props.class)">
+    class="" :class="cn('rounded-lg   aspect-square', props.class)">
 
     <Image
       v-if="item.name != ''"
@@ -21,6 +23,8 @@ const thisItem = computed(() => {
       class="aspect-square size-full rounded-lg" @loaded="emit('loaded')" />
 
     <slot />
+
+    <PrismaticShine v-if="props.isOpen || props.isHovered" class="absolute scale-107 top-0 left-0 z-1" />
   </label>
 </template>
 

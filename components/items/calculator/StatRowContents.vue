@@ -6,6 +6,8 @@ const props = defineProps<{
   set?: number
 }>()
 
+const is = useItemStore()
+
 const stat = ref(props.stat)
 
 const statValue = computed(() => {
@@ -39,19 +41,19 @@ const amount = computed (() => {
     {{ stat.displayName }}
   </div>
   <div class="dst select-none col-start-3">
-    <span class=" flex items-center gap-2"><!--
+    <span class=" flex items-center gap-2 justify-end"><!--
   <icon name="bi:caret-up-fill" class="text-resolve stroke-3 opacity-0 size-0" :class="{'opacity-100 size-3.5': compare == 1}" /> -->
       {{ statValue > 0 ? statValue : '' }}
 
-      <span v-if="ans.isComparing && compare == 1 && statValue2 != 0" class="text-1 text-resolve">+{{ amount }}</span>
+      <span v-if="is.isComparing && compare == 1 && statValue2 != 0" class="text-1 text-resolve">+{{ amount }}</span>
     </span>
   </div>
 
-  <div v-if="ans.isComparing" class="font-mono col-start-4 dst select-none">
-    <span class=" flex items-center gap-2">
+  <div v-if="is.isComparing" class="font-mono col-start-4 dst select-none">
+    <span class=" flex items-center gap-2 justify-end">
       {{ statValue2 > 0 ? statValue2 : '' }}
       <!--  <icon name="rivet-icons:arrow-up" class="text-resolve stroke-3 opacity-0 size-0" :class="{'opacity-100 size-3': compare == 2}" /> -->
-      <span v-if="ans.isComparing && compare == 2 && statValue != 0" class="text-1 text-resolve">+{{ amount }}</span>
+      <span v-if="is.isComparing && compare == 2 && statValue != 0" class="text-1 text-resolve">+{{ amount }}</span>
     </span>
   </div>
 

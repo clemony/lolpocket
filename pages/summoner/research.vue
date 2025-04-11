@@ -6,6 +6,7 @@ definePageMeta({
   name: 'research',
   title: 'research',
   redirect: '/research/champions',
+  section: 'nexus',
 })
 
 const ds = useDataStore()

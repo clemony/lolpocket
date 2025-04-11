@@ -19,6 +19,7 @@ definePageMeta({
   name: 'champions',
   path: '/pocket/:pocketKey',
   alias: '/pocket/:pocketKey/champions',
+  section: 'pocket',
 })
 const pocket = ref(props.pocket)
 const quote = computedAsync (() => {

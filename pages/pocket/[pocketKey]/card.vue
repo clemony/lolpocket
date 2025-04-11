@@ -4,8 +4,8 @@ const props = defineProps<{
 }>()
 definePageMeta({
   name: 'card',
-  header: 'none',
-  background: 'b2Light',
+  section: 'pocket',
+  
 })
 const ts = useTempStore()
 

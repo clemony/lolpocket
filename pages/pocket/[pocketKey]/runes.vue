@@ -5,6 +5,7 @@ const props = defineProps<{
 
 definePageMeta({
   name: 'runes',
+  section: 'pocket',
 })
 
 const pocket = ref(props.pocket)

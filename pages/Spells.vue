@@ -2,6 +2,7 @@
 definePageMeta({
   name: 'Summoner Spells',
   path: '/spells',
+  section: 'magic'
 })
 
 const selectedSpell = ref(0)

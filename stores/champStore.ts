@@ -11,6 +11,7 @@ export const useChampStore = defineStore('ChampStore', () => {
   const filterChampionClass = ref([])
   const filterChampionTypes = ref(null)
   const filterFavoriteChamps = ref(false)
+  const filterChampPos = ref(null)
 
   return {
     championSplashDropdown,
@@ -22,5 +23,6 @@ export const useChampStore = defineStore('ChampStore', () => {
     filterChampionClass,
     filterChampionTypes,
     filterFavoriteChamps,
+    filterChampPos,
   }
 })

@@ -5,8 +5,6 @@ const props = defineProps<{
 const item = computed (() => {
   return props.item
 })
-console.log('💠 - item - item:', item)
-console.log('💠 - item - item:', item.value.tier)
 
 const tier = computed (() => {
   if (!item.value.tier)

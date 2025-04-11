@@ -5,11 +5,8 @@ definePageMeta({
   name: 'champion-data',
   path: '/champions',
   title: 'Champions',
-  header: 'none',
+  section: 'champions',
 })
-const cs = useChampStore()
-const filter = ref(false)
-const toggleFilter = useToggle(filter)
 
 const target = ref(null)
 const { x, y, isScrolling, arrivedState, directions } = useScroll(target)
@@ -22,7 +19,7 @@ const ds = useDataStore()
 </script>
 
 <template>
-  <NuxtLayout name="header-layout" class=" grid transition-all duration-300 " :class="{ 'grid-cols-[1fr_240px]': filter, ' grid-cols-[1fr_0px]': !filter }">
+  <NuxtLayout name="header-layout" class=" grid transition-all duration-300 ">
     <template #crumb>
       <span class="w-6 h-full" />
       <Motion
@@ -39,11 +36,6 @@ const ds = useDataStore()
         {{ quote }}
       </Motion>
       <Grow />
-      <ChampionSearch class="justify-self-end ">
-        <button class="btn btn-ghost btn-sm btn-square rounded-md hover:bg-b2/40" @click.stop="toggleFilter()">
-          <icon name="filter" class="size-4" />
-        </button>
-      </ChampionSearch>
     </template>
 
     <div ref="target" class="inset-0 top-0 left-0 absolute  overflow-y-auto">

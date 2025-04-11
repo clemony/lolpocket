@@ -14,8 +14,9 @@ function handleChange(theme) {
 
 <template>
   <label
+    v-tippy="{ content: theme.description, offset: [2, -16], delay: [1500, 0] }"
     :class="`theme-${theme.name}`"
-    class="cursor-pointer min-w-64  @min-sm/settings:w-110 select-none h-62 bg-b1/90 pb-1 shadow-warm rounded-box border-b3/40 border px-8 pb-6 pt-8 grid grid-rows-2">
+    class="cursor-pointer  select-none  w-full group/theme  rounded-box px-8 pb-6 flex flex-col">
     <input
       v-model="as.dataTheme"
       type="radio"
@@ -24,18 +25,17 @@ function handleChange(theme) {
       :value="theme.name"
       @change="handleChange(theme.name)" />
 
-    <div class="w-full">
-      <div class="flex justify-between items-center mb-3">
+    <div class="w-full px-1 mb-2">
+      <div class="flex justify-between items-center mb-2">
 
-        <h3 class="capitalize dst">{{ theme.name }}</h3>
+        <h4 class="capitalize dst">{{ theme.name }}</h4>
 
         <input
           type="checkbox"
-          :checked="theme.name == as.dataTheme" class="checkbox checkbox-neutral drop-shadow-sm  rounded-full" :class="{ invisible: theme.name != as.dataTheme }" />
+          :checked="theme.name == as.dataTheme" class="checkbox checkbox-neutral drop-shadow-sm tldr-30 checkbox-sm group-hover/theme:opacity-50 rounded-full" :class="{ 'opacity-0': theme.name != as.dataTheme }" />
 
       </div>
 
-      <p>{{ theme.description }}</p>
     </div>
     <div
       class="bg-b1 text-bc shadow-sm border-b3 h-20 w-full overflow-hidden rounded-xl border"

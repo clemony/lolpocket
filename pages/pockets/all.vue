@@ -20,6 +20,7 @@ const emit = defineEmits(['update:gridApi'])
 definePageMeta({
   path: '/pockets',
   title: 'All',
+  section: 'pockets',
 })
 
 defineExpose({

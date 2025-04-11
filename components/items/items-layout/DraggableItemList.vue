@@ -77,24 +77,12 @@ const toID = hexoid()
     ]"
     group
     class=""
-    :class="cn('overflow-y-auto  absolute inset-0 grid grid-flow-row auto-cols-auto select-none h-fit   grid-cols-[repeat(auto-fill,minmax(54px,1fr))] justify-center gap-4 px-7  pb-10 pt-30', props.class)"
+    :class="cn('overflow-y-auto  absolute inset-0 grid grid-flow-row auto-cols-auto select-none h-fit   grid-cols-[repeat(auto-fill,minmax(54px,1fr))] justify-center gap-4 px-10  pb-10 pt-30', props.class)"
 
     @end="onEnd"
     @clone="onClone"
     @start="onStart">
-    <Popover v-for="item in list" :key="item.id">
-      <PopoverTrigger class="size-full hover:ring-1  !cursor-pointer shadow-sm drop-shadow-sm hover:ring-neutral hover:ring-offset-2 hover:ring-offset-b1 data-[state=open]:ring-1 data-[state=open]:ring-offset-2 data-[state=open]:ring-neutral data-[state=open]:ring-offset-b1 rounded-lg">
-    <LazyItem class="select-none size-full pointer-events-none"  :item="item" >
-    </LazyItem>
-
-      </PopoverTrigger>
-
-        <LazyCustomPopoverContent class="!w-100 @container/item-data max-h-160">
-          <CustomPopoverArrow  />
-<LazyItemData :item="item"  />
-        </LazyCustomPopoverContent>
-
-    </Popover>
+    <PopoverItem v-for="item in list" :key="item.id" :item="item" />
   </div>
 </template>
 

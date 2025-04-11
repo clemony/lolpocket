@@ -39,11 +39,11 @@ const adjust = computed (() => {
 <template>
   <div
     :key="champion.id"
-    class="" :class="cn('shadow-sm  min-h-64  cursor-pointer  rounded-lg  **:select-none inset-shadow-[0px_0px_10px_4px_#00000040] group', props.class)"
+    class="" :class="cn('shadow-sm  min-h-64  cursor-pointer  rounded-lg  **:select-none inset-shadow-[0px_0px_10px_4px_#00000040] group ', props.class)"
     :style="{
       background: `url(/img/champion-centered/${champion.id}_0.webp)`,
       backgroundSize: adjust.size,
-      backgroundRepeat: 'none',
+      backgroundRepeat: 'no-repeat',
       backgroundPosition: adjust.pos,
     }">
     <slot />

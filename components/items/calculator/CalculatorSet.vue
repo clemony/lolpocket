@@ -13,7 +13,7 @@ const props = defineProps<{
 
 const emit = defineEmits(['update:set'])
 
-const ans = useAnalysisStore()
+
 
 const is = useItemStore()
 const set = computed (() => {
@@ -37,10 +37,8 @@ function onAdd(event: DraggableEvent) {
 </script>
 
 <template>
-  <div class=" py-4 pl-4 pr-8 items-center grid grid-cols-[60px_1fr_90px] gap-4 relative w-full place-items-center">
-    <div class="text-8 text-right flex items-center justify-end font-black font-serif size-full pb-4 dst  pr-3 ">
-      {{ props.num + 1 }}
-    </div>
+
+
     <div
       v-draggable="[
         set,
@@ -73,16 +71,6 @@ function onAdd(event: DraggableEvent) {
       @start="onStart">
       <ItemCommand
         v-for="(item, i) in props.set" :key="i" :set="props.set"
-        :i="i" :item="item" type="image" @update:set="e => emit('update:set', e)" />
+        :i="i" :item="item" type="image" @update:set="e => emit('update:set', e)"  />
     </div>
-    <div class="grid grid-cols-2 place-items-center size-full pb-4 pr-2">
-      <RadioGroup v-model:model-value="ans.calculateSet" :disabled="set == ans.calculateSet2">
-        <CustomRadioItem :value="set" />
-      </RadioGroup>
-
-      <RadioGroup v-model:model-value="ans.calculateSet2" :disabled="set == ans.calculateSet">
-        <CustomRadioItem :value="set" />
-      </RadioGroup>
-    </div>
-  </div>
 </template>

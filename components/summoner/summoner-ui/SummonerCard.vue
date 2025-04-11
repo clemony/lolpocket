@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
   summoner: any
+    class?: HTMLAttributes['class']
 }>()
 
 const as = useAccountStore()
@@ -9,42 +10,23 @@ const summoner = ref(props.summoner)
 </script>
 
 <template>
-  <div class="flex shadow-black/4 justify-start flex-col gap-2 rounded-xl bg-b2/40 border-b3/50 border shadow-md  py-9">
-    <div class=" grid place-items-center size-full">
-      <Avatar class="size-30  rounded-full  shadow-md">
-        <AvatarImage
+  <div  :class="cn('flex items-center gap-2 mt-2 pl-5 pr-3', props.class)">
+      <div class="size-13.5  rounded-xl shadow-md drop-shadow-sm">
+        <SummonerIcon
+          class="size-full [&_img]:scale-115 rounded-xl **:rounded-xl  " />
 
-          v-if="summoner.gameName && as.userAccount.session"
-          :src="`https://ddragon.leagueoflegends.com/cdn/15.2.1/img/profileicon/${summoner.profileIconId}.png`"
-          :alt="summoner.gameName"
-          class="size-full [&_img]:scale-115 rounded-full  inset-shadow-sm inset-shadow-black/90"
-        />
-        <AvatarFallback
-          v-else
-          class="rounded-full grid place-items-center text-nc text-7 font-semibold"
-        >
-          LP
-        </AvatarFallback>
-      </Avatar>
-    </div>
+      </div>
 
-    <div class="justify-center items-center flex flex-col px-4  pt-6">
-      <h1 class="tracking-tight font-serif !font-black dst">
-        {{ summoner.gameName != 'Summoner' ? summoner.gameName : summoner.name != 'Summoner' ? summoner.name : 'Summoner' }}
-      </h1>
-      <p>#{{ summoner.tagLine }}</p>
-      <p class="mt-2">
+    <div class="flex-col h-14  justify-between -mt-2.5 flex gap-2 flex-col px-4  ">
+      <div class="flex items-end gap-2">
+      <SummonerName class="tracking-tight font-serif text-shadow-xs !font-black dst text-6 truncate" />
+      <SummonerTag class="pb-0.25 text-4 font-medium tracking-tight truncate" />
+      </div>
+      <p class="flex gap-1  items-end">
         <span class="font-semibold">Lv. </span>
-        <span class=" font-medium">{{ summoner.summonerLevel }}
-        </span>
-      </p>
-      <p class="mt-2 dst">
-        {{ summoner.region }}
+        <SummonerLevel class=" font-medium align-bottom"  />
+      <SummonerRegion class=" dst lowercase ml-3 "  />
       </p>
     </div>
   </div>
 </template>
-
-<style scoped>
-
-</style>

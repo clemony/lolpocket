@@ -9,7 +9,7 @@ const summoner = computed(() => {
 })
 </script>
 
-</script>
+
 
 <template>
      <span :class="cn('', props.class)">{{ summoner.summonerLevel||  '0' || '' }}</span>

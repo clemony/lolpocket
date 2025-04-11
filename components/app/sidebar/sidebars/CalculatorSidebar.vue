@@ -2,10 +2,15 @@
 </script>
 
 <template>
-  <NuxtLayout name="sidebar-layout" class="w-[400px]" motionKey="calculator">
+<div class="">
+      <SidebarTitle>
+        <button v-tippy="'Add Set'" class="btn btn-ghost top-4  absolute right-5 btn-square z-6" @click="createCalculatorSet()">
+          <icon name="ph:rows-plus-bottom-light" class="dst size-6.5"/>
+        </button>
+      </SidebarTitle>
     <Tabs default-value="stats" class="mt-10">
       <div class=" px-4">
-      <TabsList class="mb-6  w-full  grid grid-cols-3">
+      <TabsList class="mb-8  w-full  grid grid-cols-3">
 
         <TabsTrigger value="stats">
           Stat Totals
@@ -21,13 +26,13 @@
       <TabsContent value="stats">
         <LazyCalculatorStatTotals />
       </TabsContent>
-      <TabsContent value="effects">
+      <LazyTabsContent value="effects">
         effects
-      </TabsContent>
-      <TabsContent value="options">
+      </LazyTabsContent>
+      <LazyTabsContent value="options">
         <CalculatorMenu />
         <LazyCalculatorOptions />
-      </TabsContent>
+      </LazyTabsContent>
     </Tabs>
-  </NuxtLayout>
+</div>
 </template>

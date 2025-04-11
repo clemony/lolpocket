@@ -124,4 +124,31 @@
   }
 }
 
+.AccordionContent {
+  overflow: hidden;
+}
+.AccordionContent[data-state="open"] {
+  animation: aslideDown 300ms ease-out;
+}
+.AccordionContent[data-state="closed"] {
+  animation: aslideUp 300ms ease-out;
+}
+
+@keyframes aslideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--reka-accordion-content-height);
+  }
+}
+
+@keyframes aslideUp {
+  from {
+    height: var(--reka-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
 

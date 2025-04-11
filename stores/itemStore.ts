@@ -9,6 +9,7 @@ export const useItemStore = defineStore('itemStore', () => {
   const AZmodel = ref(0)
   const sortItemsAZ = ref(0)
   const sortPrice = ref(0)
+  const listKey = ref(0)
   const itemSearchResult = ref()
   const filterItemTypes = ref(null)
   const filterItemStats = ref([])
@@ -20,23 +21,16 @@ export const useItemStore = defineStore('itemStore', () => {
 
   const itemDBHideNoBuy = ref(true)
 
-  const calculatorSet1 = ref<CalculatorSet>([
-    createItem(),
-    createItem(),
-    createItem(),
-    createItem(),
-    createItem(),
-    createItem(),
-  ])
-
-  const calculatorSet2 = ref<CalculatorSet>([
-    createItem(),
-    createItem(),
-    createItem(),
-    createItem(),
-    createItem(),
-    createItem(),
-  ])
+  const calculatorSets = ref<CalculatorSet[]>([])
+  const calculateSet = ref<CalculatorSet>(null)
+  const calculateSet2 = ref<CalculatorSet>(null)
+  const isComparing = ref(false)
+  const setsToCompare = ref(
+    [
+      calculatorSets[0],
+      calculatorSets[1],
+    ],
+  )
 
   return {
     selectedItem,
@@ -47,6 +41,7 @@ export const useItemStore = defineStore('itemStore', () => {
     sortPrice,
     priceModel,
     sortItemsAZ,
+    listKey,
     itemSearchResult,
     filterItemTypes,
     filterItemStats,
@@ -54,8 +49,11 @@ export const useItemStore = defineStore('itemStore', () => {
     pocketItemSelect,
     itemGridApi,
     itemSearchQuery,
-    calculatorSet1,
-    calculatorSet2,
+    calculatorSets,
+    calculateSet,
+    calculateSet2,
+    isComparing,
+    setsToCompare,
     itemDBHideNoBuy,
   }
 }, {

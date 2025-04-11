@@ -3,10 +3,14 @@ import { defineStore } from 'pinia'
 export const useUiStore = defineStore('UiStore', () => {
   const sidebarExpanded = ref(true)
   const triggerSidebar = refAutoReset(false, 1000)
+  const settingsOpen = ref(false)
   const rightbarExpanded = ref(true)
   const triggerRightbar = refAutoReset(false, 1000)
 
   const toggleSidebar = useToggle(sidebarExpanded)
+  const toggleSettings = useToggle(settingsOpen)
+  const enter = ref('-50%')
+  const leave = ref('50%')
 
   const rightbarAvailable = computed(() => {
     const match = [
@@ -54,6 +58,10 @@ export const useUiStore = defineStore('UiStore', () => {
     sidebarExpanded,
     triggerSidebar,
     toggleSidebar,
+    settingsOpen,
+    toggleSettings,
+    enter,
+    leave,
     rightbarExpanded,
     triggerRightbar,
     rightbarAvailable,
