@@ -19,7 +19,7 @@ const toggleFilter = useToggle(filter)
 
 <template>
   <div class="flex flex-col items-center pb-6 size-full relative">
-      <SidebarTitle  />
+    <SidebarTitle />
     <ItemSearch class="input mt-6 shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc">
     </ItemSearch>
 
@@ -51,7 +51,7 @@ const toggleFilter = useToggle(filter)
 
     <div class=" w-full  absolute bottom-0 left-0 px-3">
       <button
-        class="btn btn-neutral font-normal"
+        class="btn btn-neutral font-normal "
         @click="resetItems">
         Reset Filters
       </button>
