@@ -71,30 +71,21 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <div class="px-4 pb-4 pt-8 bg-b1 relative flex flex-col size-full   ">
-    <div class="grow pt-2 px-8 flex w-full">
-      <div class="">
-        <h4 class="dst">
-          Item Winrates & Usage
-        </h4>
-        <p class="mt-2">
-          <SummonerName class="capitalize " />
-        </p>
-      </div>
-      <div class="font-medium grow justify-end text-end">
-        {{ ans.patchSelect || ds.currentPatch }}
-      </div>
-    </div>
-    <div class="justify-self-end w-full h-full pt-4  -ml-6">
-      <BubbleChart :data="data" />
-    </div>
-
-    <transition-slide class="pointer-events-none">
-      <div v-if="!ans.patchGames.length" class="absolute top-0 left-0 size-full bg-black/40 rounded-box grid place-items-center">
-        <div class="badge badge-xl text-2 shadow-lg opacity-90">
-          No data this patch.
+  <div class="size-full overflow-hidden  pb-9">
+    <div class="bg-b1  border-shadow size-full max-h-170">
+      <div class="px-4 pb-5 pt-4 bg-b1 relative flex flex-col size-full  rounded-box overflow-hidden ">
+        <div class="justify-self-end w-full h-full pt-4  -ml-6">
+          <BubbleChart :data="data" />
         </div>
+
+        <transition-slide class="pointer-events-none">
+          <div v-if="!ans.patchGames.length" class="absolute top-0 left-0 size-full bg-black/40 rounded-box grid place-items-center">
+            <div class="badge badge-xl text-2 shadow-lg opacity-90">
+              No data this patch.
+            </div>
+          </div>
+        </transition-slide>
       </div>
-    </transition-slide>
+    </div>
   </div>
 </template>

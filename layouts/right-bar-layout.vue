@@ -13,19 +13,7 @@ const summoner = computed(() => {
 const rightbarExpanded = ref(true)
 const toggleRightbar = useToggle(rightbarExpanded)
 
-function updateRightbar() {
-  toggleRightbar()
-  us.rightbarExpanded = rightbarExpanded.value
-}
-
-watch(
-  () => us.triggerRightbar,
-  (newVal) => {
-    if (newVal) {
-      updateRightbar()
-    }
-  },
-)
+// delete
 </script>
 
 <template>
@@ -42,7 +30,7 @@ watch(
     </div>
 
 
- <SidebarBorderCollapse @update:sidebar="updateRightbar()" side="left" :open="us.rightbarExpanded"/>
+
   </div>
   </div>
 </template>

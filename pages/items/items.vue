@@ -29,7 +29,7 @@ const captions = computed(() => {
       <NuxtLayout name="header-layout" class="pt-0  overflow-x-hidden">
         <template #crumb>
           <div
-            class="text-1  items-center pl-3 pr-16  text-nowrap flex mt-1 "
+            class="text-1  items-center pl-3 pr-7  text-nowrap flex mt-1 "
             v-html="captions" />
         </template>
 

@@ -3,6 +3,14 @@ export function getTailwindVar(twVar: string) {
   return styles.getPropertyValue(twVar)
 }
 
+export function getTintVariantColor(color, intensity) {
+    return `color-mix(in srgb, ${color}, white ${intensity * 100}%)`
+}
+
+export function getShadeVariantColor(color, intensity) {
+    return `color-mix(in srgb, ${color}, black ${intensity * 100}% )`
+}
+
 export function makeGradient(from: string, fromOpacity: number, to: string, toOpacity: number, direction: string) {
   let a = `from-${from}`
   a = fromOpacity ? `${a}/${fromOpacity}` : a

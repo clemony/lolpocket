@@ -21,7 +21,7 @@ export const championStats = [
   {
     name: 'Armor',
     img: '/img/stats/arm.webp',
-    color: getColorFromVariable('--color-precision-light'),
+    color: getColorFromVariable('--color-precision-w600'),
     stats: [
       { id: 'arm_base', display: 'base armor' },
       { id: 'arm_lvl', display: 'armor / lvl' },

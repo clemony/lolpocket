@@ -70,8 +70,14 @@ const options = {
     y: {
       grace: '20%',
       grid: {
-        color: `${styles.getPropertyValue('--color-b2')}`,
+        color: `${styles.getPropertyValue('--b2')}`,
         drawTicks: false,
+      },
+      title: {
+        display: true,
+        text: 'Winrate',
+        color: 'var(--text-bc)',
+        padding: { top: 24, left: 0, right: 0, bottom: -16 },
       },
       stepSize: 20,
       min: 0,
@@ -88,11 +94,15 @@ const options = {
         },
       },
       border: {
-        color: `${styles.getPropertyValue('--color-b2')}`,
+        color: `${styles.getPropertyValue('--b2')}`,
       },
     },
     x: {
-
+      title: {
+        display: true,
+        text: 'Games Played',
+        color: 'var(--text-bc)',
+      },
       ticks: {
         stepSize: 1, // Force whole number increments
         callback: value => Math.round(value),
@@ -104,14 +114,14 @@ const options = {
       },
 
       border: {
-        color: `${styles.getPropertyValue('--color-b2')}`,
+        color: `${styles.getPropertyValue('--b2')}`,
       },
     },
   },
   plugins: {
     tooltip: {
       padding: {
-        left: 12,
+        left: 2,
         right: 12,
         top: 6,
         bottom: 6,

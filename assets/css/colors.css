@@ -2,15 +2,31 @@
 
 @theme {
   --color-precision: oklch(85.49% 0.0892 84.09);
-  --color-precision-light: oklch(90.13% 0.0695 86.13);
+  --color-precision-w600: oklch(90.13% 0.0695 86.13);
+  --color-precision-w600: color-mix(in srgb, var(--color-precision) 100%, white 60%);
+--color-precision-b100: color-mix(in srgb, var(--color-precision) 100%, black 10%);
+
   --color-domination: oklch(60.61% 0.1206 15.34);
   --color-domination-light: oklch(81.67% 0.044 12.73);
+    --color-domination-w600: color-mix(in srgb, var(--color-domination) 100%, white 60%);
+--color-domination-b100: color-mix(in srgb, var(--color-domination) 100%, black 10%);
+
   --color-sorcery: oklch(69.02% 0.0644 332.52);
+    --color-sorcery-w600: color-mix(in srgb, var(--color-sorcery) 100%, white 60%);
+--color-sorcery-b100: color-mix(in srgb, var(--color-sorcery) 100%, black 10%);
   --color-sorcery-light: oklch(80.99% 0.0273 327.74);
+
   --color-resolve: oklch(76.83% 0.0749 131.06);
   --color-resolve-light: oklch(85.55% 0.0188 127.18);
+    --color-resolve-w600: color-mix(in srgb, var(--color-resolve) 100%, white 60%);
+--color-resolve-b100: color-mix(in srgb, var(--color-resolve) 100%, black 10%);
+
   --color-inspiration: oklch(76.93% 0.0494 204.19);
   --color-inspiration-light: oklch(94.48% 0.0273 204.19);
+    --color-inspiration-w600: color-mix(in srgb, var(--color-inspiration) 100%, white 60%);
+--color-inspiration-b100: color-mix(in srgb, var(--color-inspiration) 100%, black 10%);
+
+
   --color-iron: oklch(44.16% 0.0168 35.72);
   --color-bronze: oklch(57.31% 0.0484 39.76);
   --color-silver: oklch(65.69% 0.022 257.49);
@@ -20,8 +36,10 @@
   --color-diamond: oklch(62.17% 0.1762 284.11);
   --color-master: oklch(75.18% 0.1157 325.26);
   --color-grandmaster: oklch(68.06% 0.1352 26.61);
+  
   --color-challenger: oklch(83.25% 0.0787 213.4);
-
+  --color-challenger-w600: color-mix(in srgb, var(--color-challenger) 100%, white 60%);
+--color-challenger-b100: color-mix(in srgb, var(--color-challenger) 100%, black 10%);
 
 
   --color-light: #FFFFFF;
@@ -77,6 +95,11 @@
   --color-mage-light: var(--color-sorcery-light);
   --color-tank-light: var(--color-resolve-light);
   --color-assassin-light: var(--color-domination-light);
+
+  --color-s-plus: var(--color-challenger);
+    --color-s-plus: var(--color-master);
+      --color-s-minus: var(--color-diamond);
+
 }
 
 @utility iron {

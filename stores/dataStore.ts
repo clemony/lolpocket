@@ -5,6 +5,7 @@ export const useDataStore = defineStore(
   'dataStore',
   () => {
     const currentPatch = ref()
+    const currentPatchNotes = ref<PatchNotesData>(null)
 
     const paths = ref<Path[]>([])
     const champions = ref<Champion[]>([])
@@ -26,9 +27,9 @@ export const useDataStore = defineStore(
     })
 
     const loadData = () => {
-     // !SRitems ? getItemsFromDatabase() : ''
+      // !SRitems ? getItemsFromDatabase() : ''
       /*     !champions ? getChampsFromDatabase() : '' */
-      //!paths ? getRuneData() : ''
+      // !paths ? getRuneData() : ''
       console.log('💠 - useDataStore - SRitems:', items)
       console.log('💠 - champions:', champions)
       console.log('💠 - paths:', paths)
@@ -36,6 +37,7 @@ export const useDataStore = defineStore(
     return {
       loadData,
       currentPatch,
+      currentPatchNotes,
       paths,
       runes,
       champions,

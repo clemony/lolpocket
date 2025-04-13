@@ -128,13 +128,13 @@
   overflow: hidden;
 }
 .AccordionContent[data-state="open"] {
-  animation: aslideDown 300ms ease-out;
+  animation: accordionSlideDown 200ms ease-out;
 }
 .AccordionContent[data-state="closed"] {
-  animation: aslideUp 300ms ease-out;
+  animation: accordionSlideUp 200ms ease-out;
 }
 
-@keyframes aslideDown {
+@keyframes accordionSlideDown {
   from {
     height: 0;
   }
@@ -143,7 +143,7 @@
   }
 }
 
-@keyframes aslideUp {
+@keyframes accordionSlideUp {
   from {
     height: var(--reka-accordion-content-height);
   }

@@ -13,11 +13,11 @@ const route = useRoute()
 </script>
 
 <template>
-  <LayoutGroup>
+ 
     <div
       :data-state="as.sidebarCollapsed == true ? 'expanded' : 'collapsed'"
       :style="{ '--bg-noise': 1 }" class="  w-[290px]" :class="cn('main-sidebar bg-b2/40  h-full pb-5 gap-2.5 border-r  z-4 flex-nowrap  flex  flex-col  border-r-b3/40 tldr-40 ease-out  overflow-x-hidden  group relative', { 'w-[400px]': route.path == '/calculator' }, props.class)">
-      <transition-slide group :offset="{enter: [0, us.enter], leave: [0, us.leave]}" class="size-full">
+      <transition-slide group :offset="{enter: [us.enterX, us.enterY], leave: [us.enterX, us.leaveY]}" class="size-full">
         <LazySettingsSidebar v-if="us.settingsOpen == true" />
         <LazySummonerSidebar v-else-if="route.meta.section == 'nexus'" />
         <LazyBackpackSidebar v-else-if="route.meta.section == 'backpack'" />
@@ -30,5 +30,5 @@ const route = useRoute()
 
       <SidebarBorderCollapse @update:sidebar="us.toggleSidebar()" />
     </div>
-  </LayoutGroup>
+ 
 </template>

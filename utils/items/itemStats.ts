@@ -19,7 +19,7 @@ export const itemStats: Stat[] = [
     icon: 'ad',
     class: '',
     bgClass: 'bg-precision text-white',
-    hoverClass: 'hover:bg-precision-light/60',
+    hoverClass: 'hover:bg-precision-w600/60',
   },
 
   {
@@ -52,7 +52,7 @@ export const itemStats: Stat[] = [
     icon: 'armor',
     class: '',
     bgClass: 'bg-precision text-white',
-    hoverClass: 'hover:bg-precision-light/60',
+    hoverClass: 'hover:bg-precision-w600/60',
   },
 
   {
@@ -63,7 +63,7 @@ export const itemStats: Stat[] = [
     icon: 'armor-pen',
     class: '',
     bgClass: 'bg-precision text-white',
-    hoverClass: 'hover:bg-precision-light/60',
+    hoverClass: 'hover:bg-precision-w600/60',
   },
 
   {
@@ -74,7 +74,7 @@ export const itemStats: Stat[] = [
     icon: 'as',
     class: '',
     bgClass: 'bg-precision text-white',
-    hoverClass: 'hover:bg-precision-light/60',
+    hoverClass: 'hover:bg-precision-w600/60',
   },
 
   {
@@ -96,7 +96,7 @@ export const itemStats: Stat[] = [
     icon: 'gold',
     class: '',
     bgClass: 'bg-precision text-white',
-    hoverClass: 'hover:bg-precision-light/60',
+    hoverClass: 'hover:bg-precision-w600/60',
   },
 
   {

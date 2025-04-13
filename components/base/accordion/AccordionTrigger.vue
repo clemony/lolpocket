@@ -29,7 +29,7 @@ const delegatedProps = computed(() => {
     >
       <slot />
       <slot name="icon">
-        <icon name="down-sm" class="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
+        <icon name="down-sm" class="text-muted-foreground pointer-events-none size-5 shrink-0 translate-y-0.5 transition-transform duration-200" />
       </slot>
     </AccordionTrigger>
   </AccordionHeader>

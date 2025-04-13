@@ -1,7 +1,5 @@
 @import "tailwindcss";
-
 @import "../default-theme.css" ;
-
 @plugin "daisyui";
 
 @plugin "daisyui" {
@@ -15,76 +13,78 @@
   default: true;
   prefersdark: true, false;
   color-scheme: dark, light;
-  
   styled: true;
-  
+
   @theme inline {
-    --color-base-100: var(--color-b1);
-    --color-base-200: var(--color-b2);
-    --color-base-300: var(--color-b3);
-    --color-base-content: var(--color-bc);
-    --color-primary: var(--color-neutral) !important;
-    --color-primary-content: var(--color-nc);
-    --color-secondary: var(--color-neutral) !important;
-    --color-secondary-content: var(--color-nc);
-    --color-accent: var(--color-neutral) !important;
-    --color-accent-content: var(--color-nc);
-    --color-neutral: var(--color-neutral) !important;
-    --color-neutral-content: var(--color-nc);
-    --color-info: var(--color-sorcery);
-    --color-info-content: var(--color-sorcery-light);
-    --color-success: var(--color-resolve);
-    --color-success-content: var(--color-resolve-light);
-    --color-warning: var(--color-precision);
-    --color-warning-content: var(--color-precision-light);
-    --color-error: var(--color-domination);
-    --color-error-content: var(--color-domination-light);
+    --color-base-100: var(--b1);
+    --color-base-200: var(--b2);
+    --color-base-300: var(--b3);
+    --color-base-content: var(--bc);
+    --color-primary: var(--neutral) !important;
+    --color-primary-content: var(--nc);
+    --color-secondary: var(--neutral) !important;
+    --color-secondary-content: var(--nc);
+    --color-accent: var(--neutral) !important;
+    --color-accent-content: var(--nc);
+    --color-neutral: var(--neutral) !important;
+    --color-neutral-content: var(--nc);
+    --color-info: var(--sorcery);
+    --color-info-content: var(--sorcery-light);
+    --color-success: var(--resolve);
+    --color-success-content: var(--resolve-light);
+    --color-warning: var(--precision);
+    --color-warning-content: var(--precision-w600);
+    --color-error: var(--domination);
+    --color-error-content: var(--domination-light);
     --input-color: var(--color-b3);
   }
-
-  --radius-selector: 0.4rem;
+      --radius-selector: 0.4rem;
   --radius-box: 1rem;
   --radius-field: 0.55rem !important;
   --depth: 1;
   --noise: 0.5;
+  --depth: 1;
+  --noise: 0.5;
 }
+
 
 @layer components {
   .tab {
     --radius-field: 0.75rem !important;
-    --tab-bg: var(--color-b1);
-    --tab-border-color: var(--color-b3);
-    --tab-border-colors: var(--color-b3);
+    --tab-bg: var(--b1);
+    --tab-border-color: var(--b3);
+    --tab-border-colors: var(--b3);
   }
   
   .btn.btn-ghost:hover {
-    --btn-bg: --alpha(var(--color-b2) / 20%) !important;
+    --btn-bg: --alpha(var(--b2) / 20%) !important;
     @apply border-b3/40;
   }
   
   .tabs-box {
     border-radius: var(--radius-lg) !important;
 
-    .tab{
+  }
+    .tabs-box .tab{
       @apply rounded-lg;
     }
-  }
-    
+
   .btn.btn-ghost.btn-active {
-    --btn-bg: --alpha(var(--color-b2) / 30%) !important;
-    @apply border-b3/40;
+    --btn-bg: --alpha(var(--b2) / 30%) !important;
+    border-color: --alpha(var(--b3) / 40%) !important;
   }
   
 
-  .btn-neutral {
-    @apply !shadow-none;
-    background-color: var(--color-neutral);
-    color: var(--color-nc);
+  .btn.btn-neutral {
+    @apply !shadow-none text-nc;
+    background-color: var(--neutral);
+    color: var(--nc);
     
-    &:hover {
-      color: var(--color-nc);
-    }
+
   }
+  .btn.btn-neutral:hover {
+      color: var(--nc);
+    }
   
   .btn:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
     @apply bg-b2/60 border-b2;
@@ -102,9 +102,7 @@
     @apply !min-h-0 !py-0 text-nowrap h-11 flex-nowrap items-center justify-start;
   }
   
-  /* .neutral-badge {
-    @apply indicator-item badge rounded-full badge-neutral badge-xs text-1 !py-2.25 absolute -top-1 -right-1 !px-1;
-  } */
+
   
   .field {
     @apply fieldset mt-2 relative w-full h-fit bg-b2 border border-b3 p-4 rounded-box;
@@ -117,7 +115,7 @@
   .input {
     @apply focus-within:!outline-1 focus-within:!outline-offset-0   focus-within:!outline-b3;
     border-image-width: 0 !important;
-    --input-color: var(--color-b3) !important;
+    --input-color: var(--b3) !important;
   }
   
   .progress {
@@ -136,8 +134,9 @@
 @layer base {
   :root {
     --bg-noise: --fx-noise: url("data:image/svg + xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.34' numOctaves='4' stitchTiles='stitch'%3E%3C/feTurbulence%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)' opacity='0.2'%3E%3C/rect%3E%3C/svg%3E");
+    
     .btn-neutral {
-      @apply !shadow-sm;
+      @apply !shadow-sm text-nc;
     }
     
     .btn:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
@@ -153,10 +152,7 @@
       @apply !min-h-0 !py-0 h-11 text-nowrap flex-nowrap items-center justify-start;
     }
     
-    /* .neutral-badge {
-      @apply indicator-item badge rounded-full badge-neutral badge-xs text-1 !py-2.25 absolute -top-1 -right-1 !px-1;
-    } */
-    
+
     .field {
       @apply fieldset mt-2 relative w-full h-fit bg-b2 border border-b3 p-4 rounded-box;
     }

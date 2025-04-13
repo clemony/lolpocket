@@ -7,7 +7,7 @@ const us = useUiStore()
 <template>
   <div
 
-    class="w-fit overflow-hidden  items-center text-nowrap tldr-40  justify-start justify-self-start text-start shrink-0 truncate justify-start " :class="{ ' opacity-0   pointer-events-none': !us.sidebarExpanded }">
+    class="w-fit overflow-hidden  items-center text-nowrap tldr-40  justify-start justify-self-start text-start shrink-0 truncate justify-start " >
     <slot />
   </div>
 </template>

@@ -8,7 +8,9 @@
   --neutral: oklch(0% 0.02476 255.701624);
   --nc: oklch(81% 0 0);
   --accent:
-    oklch(29.68% 0 59.9) --default-font-family: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    oklch(29.68% 0 59.9)
+    
+    --default-font-family: 'Geist Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
     Arial, sans-serif 'sans-serif';
 
   --radius-xl: initial;
@@ -19,7 +21,7 @@
   --radius-tiny: 4px;
     
   --radius-selector: 0.4rem;
-  --radius-box: 1rem;
+  --radius-box: 1rem !important;
   --radius-field: 0.55rem !important;
   --depth: 1;
   --noise: 0.5;
@@ -40,7 +42,7 @@
   --text-7: 1.5rem;
   --text-8: 1.675rem;
   --text-9: 1.875rem;
-  --text-10: 2.25=rem;
+  --text-10: 2.25rem;
   --text-11: 2.5rem;
   --text-12: 2.7rem;
   --text-13: 4.5rem;

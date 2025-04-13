@@ -13,6 +13,7 @@ import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<DialogContentProps & { class?: HTMLAttributes['class']
   noOverlay?: boolean
+  noButton?: boolean
   delay?: number
  }>()
 const emits = defineEmits<DialogContentEmits & { close }>()
@@ -77,7 +78,7 @@ const dialogInitialState = {
         :exit="dialogInitialState" :style="{ transformPerspective: 500 }">
         <slot />
 
-        <DialogClose
+        <DialogClose v-if="props.noButton"
           class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring focus:ring-neutral disabled:pointer-events-none ">
           <icon name="x-sm" class="size-6" />
           <span class="sr-only">Close</span>

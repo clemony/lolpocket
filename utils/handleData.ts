@@ -10,6 +10,7 @@ export function normalizePatchNumber(patch) {
 }
 
 export async function getPatch() {
+  const ds = useDataStore()
   const request = new Request('https://ddragon.leagueoflegends.com/api/versions.json', {
     method: 'GET',
   })
@@ -23,8 +24,14 @@ export async function getPatch() {
 
     const patch = normalizePatchNumber(json[0])
     console.log('💠 - getPatch - patch:', patch)
-    useDataStore().currentPatch = null
-    useDataStore().currentPatch = patch
+
+    if (ds.currentPatch == patch && ds.currentPatchNotes && ds.currentPatchNotes.patch == patch)
+      return
+
+    ds.currentPatch = null
+    ds.currentPatch = patch
+
+
   }
   catch (error: any) {
     console.error(error.message)

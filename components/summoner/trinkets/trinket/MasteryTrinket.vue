@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const props = defineProps<{
-container: any
+  container: any
 }>()
 
 const ds = useDataStore()
@@ -10,8 +10,8 @@ const champion = computed (() => {
 </script>
 
 <template>
-
-<Trinket size="md" solid  :container="props.container"  :style="{
+  <Trinket
+    size="md" solid :container="props.container" :style="{
       backgroundImage:
         `url(/img/champion-centered/${champion.id}_0.webp)`,
       backgroundSize: '290%',
@@ -45,8 +45,7 @@ const champion = computed (() => {
           class="bg-b3/60 progress w-full opacity-90 drop-shadow-[#000]/30 drop-shadow-sm group-hover:ring group-hover:ring-neutral/40 transition-all duration-300" :value="championMastery.championPointsSinceLastLevel" :max="championMastery.championPointsSinceLastLevel + championMastery.championPointsUntilNextLevel"></progress>
       </div>
     </div>
-
-</Trinket>
+  </Trinket>
 </template>
 
 <style scoped>

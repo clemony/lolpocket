@@ -1,6 +1,16 @@
 <script setup lang="ts">
+import { motion } from 'motion-v'
+
 const us = useUiStore()
 const route = useRoute()
+
+watch(
+() => us.commandOpen,
+(newVal) => {
+ console.log("💠 - newVal:", newVal)
+ 
+}
+)
 </script>
 
 <template>
@@ -14,7 +24,7 @@ const route = useRoute()
         </h3>
       </NavBtn>
 
-      <NavBtn v-tippy="'Search'" @click.stop="us.commandOpen = true "  class="mb-4 -mt-2" >
+      <NavBtn v-tippy="`Command ${getDeviceKey()}K`" @click="us.commandOpen = true "  class="mb-4 -mt-2" >
         <icon name="eva:search-outline" class="size-6.5 dst" />
       </NavBtn>
 
@@ -50,8 +60,7 @@ const route = useRoute()
         <icon name="ion:information-sharp" class="size-9" />
       </NavBtn>
 
-      <NavBtn v-tippy="'Settings'" :class="{ 'btn-neutral **:!text-nc **:opacity-100': us.settingsOpen }">
-        <input v-model="us.settingsOpen" type="checkbox" class="peer hidden" />
+      <NavBtn @click=" handleSettingsOpen()"  v-tippy="'Settings'" class="disabled:btn-neutral, disabled:**:!text-nc disabled:hover:opacity-80" :class="{ 'btn-neutral **:!text-nc **:opacity-100 pointer-events-none': us.settingsOpen }">
         <icon name="heroicons:cog-6-tooth-20-solid" class="size-5.5  opacity-70" />
       </NavBtn>
 
@@ -62,8 +71,10 @@ const route = useRoute()
         <SidebarDropdown />
       </div>
     </nav>
-
-      <div class="shadow-warm shadow-black/5">
+    <!-- -translate-x-full  fixed top-0 left-[50px]-->
+<!-- <motion.div class="h-screen w-[291px]">
+</motion.div> -->
+      <div class="shadow-warm shadow-black/5 h-screen">
 <SidebarInterface  />
 </div>
   </menu>

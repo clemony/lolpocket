@@ -67,7 +67,8 @@ function handleClick(item) {}
 </script>
 
 <template>
-  <CommandDialog v-model:open="ts.commandOpen" :overlay-opacity="60" class=" ">
+  h
+ <!--  <CommandDialog v-model:open="ts.commandOpen" :overlay-opacity="60" class=" ">
     <div class="py-1 px-2 size-full **:text-3 inset-shadow-sm border !border-b3 !rounded-xl">
       <CommandInput
         v-model:model-value="input"
@@ -144,7 +145,7 @@ function handleClick(item) {}
         </CommandGroup>
       </CommandList>
     </div>
-  </CommandDialog>
+  </CommandDialog> -->
 </template>
 
 <style scoped></style>

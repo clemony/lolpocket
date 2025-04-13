@@ -11,18 +11,18 @@ definePageMeta({
 })
 
 const as = useAccountStore()
-
 </script>
 
 <template>
-  <div class="size-full pt-23 px-14">
-    <motion.div layout ref="container" class="size-full grid grid-flow-col items-center auto-cols-min auto-rows-max place-items-center gap-3 ">
-        <MasteryTrinket  :container="container" />
-
-      <RankedBadgeTrinket   :container="container" />
-      <ChallengesTrinket  :container="container" />
-      <TotalChallengePointsTrinket  :container="container" />
-      <MiniMasteryTrinket   :container="container" :championNum="1"/>
-    </motion.div>
+  <div class="pt-24 w-full flex flex-col h-full max-h-screen px-14 pb-6">
+    <div class="h-full">
+    <div class="w-100 h-60">
+      <RecentPatchWinrates />
+    </div>
+    </div>
+    <Separator class="bg-b3/60 w-full" />
+    <div class="w-full h-80 self-end ">
+      <News />
+      </div>
   </div>
 </template>

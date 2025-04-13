@@ -2,15 +2,15 @@
 const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
-
-const emit = defineEmits(['update:modelValue'])
+/*
+const emit = defineEmits(['update:modelValue']) */
 
 const us = useUiStore()
 
 function handleAddClick() {
   const ps = usePocketStore()
   ps.newPocketOpen = true
-  emit('update:modelValue')
+/*   emit('update:modelValue') */
 }
 </script>
 

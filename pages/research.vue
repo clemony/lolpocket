@@ -5,7 +5,6 @@ definePageMeta({
 
   name: 'research',
   title: 'research',
-  redirect: '/research/champions',
   section: 'nexus',
 })
 
@@ -18,14 +17,17 @@ watchEffect(() => {
 </script>
 
 <template>
-  <!--  <div class="absolute inset-0  pl-18  grid grid-cols-[300px_1fr] overflow-hidden gap-24">
-    <div class="w-full  pr-18  pt-48">
-      <Separator class="bg-b2" />
-      <RecentPatchWinrates />
-    </div> -->
-  <div class="overflow-hidden size-full justify-center justify-items-center  scrollbar-none pt-20  pb-14">
-    <NuxtPage />
-  </div>
+  <NuxtLayout
+    name="header-layout" header-class="border-b border-b-b3/40">
+    <template #crumb>
+      <div class="absolute right-14 w-32">
+        <PatchSelectDropdown class="h-11 border-b3" />
+      </div>
+    </template>
+    <div class="overflow-hidden size-full justify-center justify-items-center  scrollbar-none pt-20  pb-14">
+      <NuxtPage />
+    </div>
+  </NuxtLayout>
 </template>
 
 <style scoped>

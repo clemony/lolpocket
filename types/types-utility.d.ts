@@ -9,6 +9,16 @@ declare global {
     }
   }
 
+  interface OgResponse {
+    title: string
+    description: string
+    image: string
+    url: string
+  }
+  interface PatchNotesData extends OgResponse {
+    patch: string
+  }
+
   interface userAccount {
     name: string
     image: string

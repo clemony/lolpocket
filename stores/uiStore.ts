@@ -1,29 +1,21 @@
 import { defineStore } from 'pinia'
 
 export const useUiStore = defineStore('UiStore', () => {
+
+/*   sidebar stuff logic in middleware */
   const sidebarExpanded = ref(true)
   const triggerSidebar = refAutoReset(false, 1000)
   const settingsOpen = ref(false)
-  const rightbarExpanded = ref(true)
-  const triggerRightbar = refAutoReset(false, 1000)
-
   const toggleSidebar = useToggle(sidebarExpanded)
   const toggleSettings = useToggle(settingsOpen)
-  const enter = ref('-50%')
-  const leave = ref('50%')
+  const enterY = ref<string | number>('-50%')
+  const previousEnterY = usePrevious(enterY)
+  const enterX = ref<string | number>(0) //for settings
+  const leaveY = ref(<string | number>'50%')
+  const previousLeaveY = usePrevious(enterY)
+ const leaveX = ref<string | number>(0) //for settings
 
-  const rightbarAvailable = computed(() => {
-    const match = [
-      /pocket/,
-      /summoner\//,
-      /research\//,
-      /items\//,
-    ]
 
-    const route = useRoute()
-
-    return match.some(regex => regex.test(route.path))
-  })
 
   // dialog
 
@@ -60,11 +52,12 @@ export const useUiStore = defineStore('UiStore', () => {
     toggleSidebar,
     settingsOpen,
     toggleSettings,
-    enter,
-    leave,
-    rightbarExpanded,
-    triggerRightbar,
-    rightbarAvailable,
+    enterY,
+    previousEnterY,
+    leaveY,
+    previousLeaveY,
+enterX,
+leaveX,
 
     // dialog
     loginOpen,

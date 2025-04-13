@@ -11,60 +11,53 @@ const summoner = computed(() => {
 </script>
 
 <template>
+  <div class="size-full flex flex-col relative overflow-y-scroll overflow-x-hidden">
+    <SidebarTitle />
+    <div class="inset-0 top-0 left-0  flex-nowrap overflow-x-hidden  overflow-y-scroll gap-2.5 flex mt-5  shrink-0 pb-4 flex-col">
+      <SummonerCard :summoner="summoner" class="px-7 mb-6 " />
 
-    <div class="size-full flex flex-col relative overflow-y-scroll overflow-x-hidden">
+      <div v-for="link in summonerLinks" :key="link.name" class="pl-3 pr-5 w-full">
+        <SidebarButton
+          v-if="link.name != 'Research'"
+          :to="link.link" :class="{ 'btn-active': link.link == route.path }" @click="navigateTo(link.link)">
+          {{ link.name }}
+          <span v-if="link.name == 'Base'"></span>
+        </SidebarButton>
 
-      <SidebarTitle  />
-      <div class="inset-0 top-0 left-0  flex-nowrap overflow-x-hidden  overflow-y-scroll gap-2.5 flex mt-5  shrink-0 pb-4 flex-col">
-
-        <SummonerCard :summoner="summoner" class="px-7 mb-6 "/>
-
-     
-        <div v-for="link in summonerLinks" :key="link.name" class="pl-3 pr-5 w-full">
-
+        <template v-else>
           <SidebarButton
-            v-if="link.name != 'Research'"
-            :to="link.link" :class="{ 'btn-active': link.link == route.path }" @click="navigateTo(link.link)">
-            {{ link.name }}
-            <span v-if="link.name == 'Base'"></span>
+            :to="link.link" class="group pointer-events-none text-bc/50">
+            Research
           </SidebarButton>
-
-          <template v-else>
+          <div class="grid gap-1 -mt-1 ml-6 pl-2 before:border-l items-center before:absolute relative  before:h-full  before:w-1  before:left-0  before:scale-y-102   before:border-l-neutral/20">
             <SidebarButton
-              :to="link.link" class="group pointer-events-none text-bc/50">
-              Research
+              to="/research" :class="{ ' btn-active': '/research/champions' == route.path }" @click="navigateTo('/research/champions')">
+              Champions
             </SidebarButton>
-            <div class="grid gap-1 -mt-1 ml-6 pl-2 before:border-l items-center before:absolute relative  before:h-full  before:w-1  before:left-0  before:scale-y-102   before:border-l-neutral/20">
-              <SidebarButton
-                to="/research" :class="{ ' btn-active': '/research/champions' == route.path }" @click="navigateTo('/research/champions')">
-                Champions
-              </SidebarButton>
-              <SidebarButton
-                to="/research/items" :class="{ ' btn-active': '/research/items' == route.path }" @click="navigateTo('/research/items')">
-                Items
-              </SidebarButton>
-            </div>
-          </template>
-        </div>
-
+            <SidebarButton
+              to="/research/items" :class="{ ' btn-active': '/research/items' == route.path }" @click="navigateTo('/research/items')">
+              Items
+            </SidebarButton>
+          </div>
+        </template>
       </div>
+    </div>
 
-      <transition-expand   v-if="route.path != '/nexus' "   group as="div" class="grid">
-                <SidebarSeparator  class="mt-6 mb-6"/>
-      <div  v-if="route.path == '/nexus/match_history' "  class=" px-3 mb-5 self-start">
+    <transition-expand v-if="route.path != '/nexus' " group as="div" class="grid">
+      <SidebarSeparator class="mt-6 mb-6" />
+      <div v-if="route.path == '/research/champions' || route.path == '/research/items' " class=" px-3 mb-5 self-start">
         <PositionRadio class=" mb-0 border-x-0 " />
       </div>
 
-      <div v-if="route.path == '/research/champions' || route.path == '/research/items' " class="w-full px-3 pt-2 self-start">
+      <div v-if="route.path == '/nexus/match_history' " class="w-full px-3 pt-2 self-start">
         <QueueRadio />
       </div>
+    </transition-expand>
 
-      </transition-expand>
-
-<div class="size-full pt-5 relative overflow-hidden max-h-full   border-t border-t-b3/60 ">
+    <!-- <div class="size-full pt-5 relative  max-h-full overflow-hidden   border-t border-t-b3/60 ">
 
 <TrinketPouch  v-if="route.path == '/nexus' "   />
 
-    </div>
-</div>
+    </div> -->
+  </div>
 </template>
