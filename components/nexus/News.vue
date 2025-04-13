@@ -1,16 +1,12 @@
 <script lang="ts" setup>
-const props = defineProps<{
+/* const props = defineProps<{
 
 }>()
-
-
-
-
+ */
 </script>
 
 <template>
   <div class=" flex  py-10  overflow-x-auto">
-
-   <PatchNotesNews  />
+    <PatchNotesNews />
   </div>
 </template>

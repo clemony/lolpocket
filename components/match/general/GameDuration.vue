@@ -15,7 +15,6 @@ const time = computed (() => {
   const b = a.toFixed(2)
   return b.toString().replace('.', ':')
 })
-console.log('💠 - time - time:', time.value)
 </script>
 
 <template>

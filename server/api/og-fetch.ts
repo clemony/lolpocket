@@ -1,4 +1,4 @@
-import { parse } from 'node-html-parser'
+/* import { parse } from 'node-html-parser'
 
 export default defineEventHandler(async (event) => {
 const query = getQuery(event)
@@ -10,15 +10,14 @@ if (!targetUrl?.startsWith('http')) {
 
 console.log('🔎 Requesting OG data for:', targetUrl)
 
-
   try {
-  
+
 const html = await $fetch<string>(targetUrl, {
   headers: {
     'User-Agent': 'Mozilla/5.0',
   },
 })
-    
+
     const root = parse(html)
 
     const getMeta = (prop: string) =>
@@ -37,4 +36,4 @@ const html = await $fetch<string>(targetUrl, {
       message: 'Failed to fetch OG metadata',
     })
   }
-})
+}) */

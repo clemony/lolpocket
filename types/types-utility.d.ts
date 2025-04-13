@@ -18,7 +18,6 @@ declare global {
   interface PatchNotesData extends OgResponse {
     patch: string
   }
-
   interface userAccount {
     name: string
     image: string

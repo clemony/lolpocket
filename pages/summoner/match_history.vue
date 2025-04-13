@@ -9,7 +9,14 @@ definePageMeta({
 
 const as = useAccountStore()
 
-//TODO rename
+/* const { data, error } = await useFetch('/api/riot/matches-by-puuid', {
+  method: 'GET',
+  params: {
+    url: 'https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/YOUR_PUUID/ids?start=0&count=20',
+    puuid: as.userAccount.puuid,
+  },
+})
+console.log('📦 Match IDs:', data.value) */
 </script>
 
 <template>

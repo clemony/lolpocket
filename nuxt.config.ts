@@ -2,8 +2,6 @@ import tailwindcss from '@tailwindcss/vite'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 
-//  Configuration Vite
-
 export default defineNuxtConfig({
   modules: ['@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', '@vueuse/nuxt', '@nuxtjs/supabase', '@morev/vue-transitions/nuxt', '@nuxt/eslint', 'vue-sonner/nuxt', '@nuxt/icon', 'nuxt-svgo', '@nuxt/image'],
 
@@ -37,7 +35,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
     supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
-    riotDevKey: process.env.RIOT_DEV_KEY,
+    riotApiKey: process.env.RIOT_API_KEY,
 
     public: {
       baseUrl: process.env.BASE_URL || 'http://localhost:8080',
