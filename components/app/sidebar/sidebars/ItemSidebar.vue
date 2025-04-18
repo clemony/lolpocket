@@ -2,57 +2,79 @@
 const is = useItemStore()
 const sortItemsAZ = ref(0)
 const sortPrice = ref(0)
+const route = useRoute()
 
 function resetItems() {
-  sortItemsAZ.value = 0
-  sortPrice.value = 0
-  is.filterItemStats = []
-  is.filterItemCats = []
-  is.filterItemTypes = ''
-  is.itemSearchResult = []
+/*   sortItemsAZ.value = 0
+  sortPrice.value = 0 */
+  is.dbItemStats = null
+  is.dbItemRoles = null
+  is.dbItemTiers = null
+  is.dbItemSearchQuery = null
+  is.dbItemSearchResult = null
   is.listKey = is.listKey + 1
+  is.itemGridApi.resetColumnState()
 }
+const model = ref('Grid')
 
-const filter = ref(true)
-const toggleFilter = useToggle(filter)
+function handleSwitch(e) {
+  is.itemDBHideNoBuy = e
+  is.itemGridApi.setGridOption('rowData', [...filterDbItems()])
+}
+onMounted (() => {
+  route.path == '/items/list' ? model.value = 'List' : 'Grid'
+})
 </script>
 
 <template>
   <div class="flex flex-col items-center pb-6 size-full relative">
-    <SidebarTitle />
-    <ItemSearch class="input mt-6 shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc">
-    </ItemSearch>
+    <SidebarTitle>
+      <Tabs v-model:model-value="model" class="absolute right-5.25 top-3.75 **:pointer-events-auto z-5">
+        <IndicatorTabsList class="grid grid-cols-2 ">
+          <IndicatorTabsTrigger value="Grid" @click="navigateTo('/items')">
+            Grid
+          </IndicatorTabsTrigger>
+          <IndicatorTabsTrigger value="List" @click="navigateTo('/items/list')">
+            List
+          </IndicatorTabsTrigger>
+          <TabIndicator />
+        </IndicatorTabsList>
+      </Tabs>
+    </SidebarTitle>
 
-    <div class="px-7">
+    <div class="w-full px-5">
+      <DbItemSearch class="input w-full mt-8 shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc" />
+    </div>
+    <div class="px-5 mt-2 w-full">
       <div class="divider divider-start before:bg-b3/60 font-semibold  my-8">
         Categories
       </div>
-      <RadioFilterList
-        :types="itemTypes"
-        class=""
-        @update:model="(e) => (is.filterItemTypes = e)" />
+      <RadioFilterList />
     </div>
 
-    <div class="px-5 py-12 w-full">
+    <div class="px-5 pt-12 pb-8 w-full">
       <ItemStatsChecklist />
     </div>
-    <div class="mt-4 mb-6 px-8 flex gap-5 font-medium items-center w-full justify-end">
-      Hide Unpurchasable
-      <Switch v-model:model-value="is.itemDBHideNoBuy" class="dst" @update:model-value="e => is.itemDBHideNoBuy = e" />
+    <div class="mt-2 mb-4 px-5 gap-6 flex flex-col   w-full">
+      <div class="gap-5 px-5  flex font-medium items-center w-full justify-end self-end">
+        Hide Unpurchasable
+        <Switch v-model:model-value="is.itemDBHideNoBuy" class="dst" @update:model-value="handleSwitch($event)" />
+      </div>
     </div>
     <div class="px-7">
       <div class="divider divider-start before:bg-b3/60 font-semibold  mb-8">
         Roles
       </div>
-      <CheckboxFilterList
-        :source="itemCategories"
-        @update:model="(e) => (is.filterItemCats = e)" />
+      <ItemPositionFilter />
     </div>
 
-    <div class=" w-full  absolute bottom-0 left-0 px-3">
+    <div class=" absolute bottom-0 w-full px-4 flex gap-2">
+      <div class="w-full">
+        <ItemColumnDisplay v-if="route.path == '/items/stats'" />
+      </div>
       <button
-        class="btn btn-neutral font-normal "
-        @click="resetItems">
+        class="btn w-[49%] btn-neutral bg-neutral/95 hover:opacity-85 font-normal "
+        @click="resetItems()">
         Reset Filters
       </button>
       <!-- TODO

@@ -23,6 +23,7 @@ const emit = defineEmits(['loaded'])
     <AnimatePresence
       multiple
       as="div"
+      mo='popLayout'
       class="size-full">
       <Motion
         v-if="isLoaded"
@@ -30,8 +31,8 @@ const emit = defineEmits(['loaded'])
         :initial="{ opacity: 0 }"
         :animate="{ opacity: 100 }"
         :transition="{
-          duration: 1,
-          x: { type: 'spring', stiffness: 260, damping: 20 },
+          duration: 0.4,
+        type: 'ease'
         }"
         as-child>
         <img
@@ -40,7 +41,7 @@ const emit = defineEmits(['loaded'])
           :src="src" />
       </Motion>
       <!-- Show a placeholder while loading -->
-      <Motion
+ <!--      <Motion
         v-else
 
         :initial="{ opacity: 100 }"
@@ -53,7 +54,7 @@ const emit = defineEmits(['loaded'])
         <Skeleton
           :class="cn('size-full', props.class)"
           alt="placeholder" />
-      </Motion>
+      </Motion> -->
     </AnimatePresence>
   </NuxtImg>
 </template>

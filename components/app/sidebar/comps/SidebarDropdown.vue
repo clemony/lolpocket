@@ -47,7 +47,7 @@ const messages = ref(false)
       <ContrastDropdownSeparator />
 
       <ContrastDropdownItem
-        class="">
+        class=""  @click=" handleSettingsOpen()">
         <icon
           name="ph:gear-six" />
         Settings

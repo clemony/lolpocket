@@ -79,7 +79,7 @@ export const itemStats: Stat[] = [
 
   {
     id: 'crit',
-    displayName: 'Crit Chance',
+    displayName: 'Critical Chance',
     checked: false,
     shortName: 'CRIT',
     icon: 'cs',
@@ -90,7 +90,7 @@ export const itemStats: Stat[] = [
 
   {
     id: 'gp10',
-    displayName: 'Gold / 10',
+    displayName: 'Gold per 10',
     shortName: 'GP/10',
     checked: false,
     icon: 'gold',
@@ -112,7 +112,7 @@ export const itemStats: Stat[] = [
 
   {
     id: 'hp5',
-    displayName: 'Health Regen / 5',
+    displayName: 'Health Regen',
     shortName: 'HP/5',
     checked: false,
     icon: 'hp',
@@ -167,7 +167,7 @@ export const itemStats: Stat[] = [
 
   {
     id: 'mp5',
-    displayName: 'Mana Regen / 5',
+    displayName: 'Mana Regen',
     shortName: 'MP/5',
     checked: false,
 

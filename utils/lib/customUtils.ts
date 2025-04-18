@@ -73,3 +73,22 @@ export function extractUniqueFileListingsFromArray(arr) {
 export function deepCopy<T>(obj: T): T {
   return JSON.parse(JSON.stringify(obj))
 }
+
+function findThings(arr, propKeys?){
+if(propKeys){
+  return  [
+  ...new Set(
+    arr
+      .filter(item => item.menu) // make sure it has a menu
+      .flatMap(item => Object.keys(item.menu))
+  )
+]
+}else{
+const allThings = arr
+  .flatMap(item => item.tags ?? []) // flatten all tags arrays, skip if undefined
+  .filter((tag): tag is string => typeof tag === 'string') // filter out non-strings just in case
+return [...new Set(allThings)]
+
+}
+
+}

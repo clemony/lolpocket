@@ -1,4 +1,4 @@
-export const categories = ref<Category[]>([
+export const championClasses = ref<Category[]>([
   {
     id: 'catcher',
     checked: false,
@@ -111,3 +111,17 @@ export const categories = ref<Category[]>([
     champions: ['Braum', 'Galio', 'K\'Sante', 'Poppy', 'Shen', 'Tahm Kench', 'Taric'],
   },
 ])
+
+export function rewriteChampionTags() {
+  const ds = useDataStore()
+  ds.champions = ds.champions.map((champion) => {
+    const newTags = championClasses.value
+      .filter(category => category.champions.includes(champion.name))
+      .map(category => category.id)
+
+    return {
+      ...champion,
+      tags: newTags,
+    }
+  })
+}

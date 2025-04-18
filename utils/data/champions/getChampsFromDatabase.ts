@@ -31,6 +31,8 @@ export async function loadChampionData() {
     const module = await import('data/champion.json')
     json.value = module.default // Access the actual JSON data
     ds.champions = [...Object.values(json.value.data) as Champion[]]
+    rewriteChampionTags()
+    addChampionPositionProperty()
     console.log('💠 - loadChampionData - ds.champions :', ds.champions)
   }
   catch (error) {

@@ -30,7 +30,6 @@ function handlePin(pocket) {
   <div class="size-full">
     <label class="grid size-full place-items-center">
       <input
-        v-model="ps.pinnedTopRowData"
         type="checkbox"
         :value="pocket"
         class="checkbox checkbox-sm border-neutral/60 rounded-sm border"

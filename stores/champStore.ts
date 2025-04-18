@@ -1,3 +1,4 @@
+import type { GridApi } from 'ag-grid-community'
 import { defineStore } from 'pinia'
 
 export const useChampStore = defineStore('ChampStore', () => {
@@ -13,6 +14,17 @@ export const useChampStore = defineStore('ChampStore', () => {
   const filterFavoriteChamps = ref(false)
   const filterChampPos = ref(null)
 
+  const dbChampionGridState = shallowRef(null)
+  const championGridApi = shallowRef<GridApi | null>(null)
+  const dbChampionTiers = ref(null)
+  const dbChampionRoles = ref(null)
+  const dbChampionSearchQuery = ref(null)
+  const dbChampionSearchResult = ref(null)
+  const dbChampionStatListKey = ref(0)
+  const dbChampionStats = ref([null])
+
+  const championGridLevel = ref(1)
+
   return {
     championSplashDropdown,
     champTrigger,
@@ -24,5 +36,16 @@ export const useChampStore = defineStore('ChampStore', () => {
     filterChampionTypes,
     filterFavoriteChamps,
     filterChampPos,
+
+    dbChampionGridState,
+    championGridApi,
+    dbChampionTiers,
+    dbChampionRoles,
+    dbChampionSearchQuery,
+    dbChampionSearchResult,
+    dbChampionStatListKey,
+    dbChampionStats,
+
+    championGridLevel,
   }
 })

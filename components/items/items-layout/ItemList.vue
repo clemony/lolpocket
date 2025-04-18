@@ -3,10 +3,22 @@ const props = defineProps<{
   listKey?: number
   class?: HTMLAttributes['class']
 }>()
+
 const is = useItemStore()
 
 const list = computed(() => {
-  return filterItems()
+  let filtered = filterDbItems()
+
+  if (is.dbItemStats.length > 1) {
+    filtered = filtered.filter((item) => {
+      const stats = item.stats || {}
+      return is.dbItemStats.some((stat) => {
+        const val = stats[stat]
+        return val !== undefined && val !== null && val !== 0
+      })
+    })
+  }
+  return filtered
 })
 </script>
 

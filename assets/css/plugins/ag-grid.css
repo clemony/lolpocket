@@ -1,22 +1,31 @@
 @import 'tailwindcss';
 
-.pockets-grid .ag-root-wrapper-body {
+/*
+*/ .pockets-grid .ag-root-wrapper-body {
   @apply after:inset-shadow-b1 after:rounded-box after:shadow-b1
     after:shadow-[inset_0px_0px_20px_16px_#00000089] after:inset-shadow-mask
     after:w-full after:h-[150%] after:absolute after:bottom-0 after:left-0
     after:pointer-events-none;
 }
 
-@apply bg-transparent;
-
-.ag-cell.ag-column-first.ag-header-cell {
-  /*  @apply bg-neutral text-nc border-b1 rounded-xl border-4; */
+.stat-grid .ag-header{
+  @apply !border-y font-medium !border-y-b3/60 text-center;
 }
 
-.ag-cell.ag-column-first .stat-grid {
-  @apply bg-b2/30;
-}
 
+/* here good */
+ .ag-sort-indicator-container{
+  @apply absolute size-[16px] right-1 flex items-center;
+ }
+
+   .ag-sort-indicator-container .ag-header-cell-label{
+  @apply relative size-full  flex items-center;
+  padding: 0 !important;
+ }
+
+ .ag-header-cell-label-container{
+  @apply relative size-full !m-0 !p-0;
+ }
 .ag-row-selected {
   @apply bg-b2/60;
 }
@@ -26,7 +35,7 @@
 }
 
 .ag-row {
-  @apply border-b-b2/60 rounded-lg;
+  @apply border-b-b3/30 ;
 }
 
 .ag-cell.ag-column-first .stat-grid {
@@ -35,7 +44,7 @@
 
 
 .ag-cell.ag-column-first {
-  @apply !pl-8;
+  @apply !pl-7;
 }
 
 .ag-cell.ag-column-last {
@@ -47,8 +56,14 @@
   }
 }
 
+/* here good */
 .cell-class {
   @apply !px-1 flex h-full cursor-context-menu items-center justify-center;
+}
+
+:is([col-id='champion'])  .ag-header-cell-text,
+:is([col-id='resource'])  .ag-header-cell-label-container{
+  @apply -mt-6 z-10 absolute;
 }
 
 :is([col-id='buy']).cell-class {
@@ -59,20 +74,32 @@
   @apply justify-start;
 }
 
-.ag-header-cell-label {
-  @apply !pt-3 mx-0 flex w-full items-start justify-start text-left;
-}
-
 .icon-class {
   @apply !py-1 !pr-1 !pl-3;
 }
 
 .ag-header-row.ag-header-row-column-group {
-  @apply border-b-b3/70 border-b;
+  @apply border-b-b3/40 border-b items-center;
 }
 
 .ag-header-row .ag-header-row-column {
   @apply !hidden !h-1 opacity-0;
+}
+
+.stat-grid.champion-grid .ag-header-group-cell .ag-header-cell-comp-wrapper {
+  @apply items-center justify-center text-center justify-items-center flex-nowrap ;
+}
+
+.stat-grid.champion-grid .ag-header-group-cell {
+  @apply font-semibold;
+}
+
+.champion-grid  .ag-header-group-cell-label{
+  @apply w-full relative grow;
+}
+
+.champion-grid  .ag-header-expand-icon{
+  @apply absolute right-1;
 }
 
 .ti-rune {

@@ -54,6 +54,9 @@ watch(searchResult, (newSearchResults) => {
       class="grow !text-3 pl-2" />
 
     <slot />
+<button class="btn btn-ghost btn-square btn-sm absolute  right-2" @click="searchQuery = null">
+      <icon name="x-sm" class="" />
+      </button>
   </label>
 </template>
 

@@ -1,4 +1,4 @@
-/* import 'dotenv/config'
+import 'dotenv/config'
 
 function sleep(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms))
@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'Missing puuid' })
   }
 
-  const matchIdsUrl = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}/ids?start=${start}&count=${count}`
+ const matchIdsUrl = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}/ids?start=${start}&count=${count}`
 
   try {
     const matchIds: string[] = await $fetch(matchIdsUrl, {
@@ -63,4 +63,4 @@ export default defineEventHandler(async (event) => {
     console.error('🛑 Riot API error:', err)
     throw createError({ statusCode: 500, statusMessage: 'Failed to fetch matches' })
   }
-}) */
+})

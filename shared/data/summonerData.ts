@@ -1,16 +1,4 @@
 export const summoner = {
-  name: 'clem',
-  tag: 'cats',
-  region: 'americas',
-  level: 143,
-  icon: '/img/summoner-icons/space-yuumi.jpg',
-  border: 'theme-21-border',
-
-  peakRank: {
-    peak: 'diamond',
-    season: '8',
-  },
-
   ranks: {
     soloDuo: {
       name: 'Solo/Duo',
@@ -148,89 +136,5 @@ export const summoner = {
     { name: 'Sona', games: 4, wins: 3 },
     { name: 'Soraka', games: 3, wins: 2 },
   ],
-  recentMatches: [
-    // Bottom
 
-    {
-      name: 'clem',
-      champion: 'sona',
-      role: 'support',
-      tag: 'cats',
-      rank: 'platinum',
-      kda: '1/3/26',
-      kdaRatio: 9,
-    },
-    {
-      name: 'vortex',
-      champion: 'jinx',
-      role: 'bottom',
-      tag: 'fire',
-      rank: 'gold',
-      kda: '12/4/9',
-      kdaRatio: 5.25, // (12+9)/4
-    },
-    {
-      name: 'spookyblitz',
-      champion: 'blitzcrank',
-      role: 'support',
-      tag: 'phant',
-      rank: 'diamond',
-      kda: '2/0/12',
-      kdaRatio: 14, // (2+12)/1 (deaths treated as 1)
-    },
-    {
-      name: 'jungleboss',
-      champion: 'master yi',
-      role: 'jungle',
-      tag: 'beast',
-      rank: 'silver',
-      kda: '10/6/5',
-      kdaRatio: 2.5, // (10+5)/6
-    },
-    {
-      name: 'leafrunner',
-      champion: 'ivern',
-      role: 'jungle',
-      tag: 'natre',
-      rank: 'gold',
-      kda: '3/3/12',
-      kdaRatio: 5, // (3+12)/3
-    },
-    {
-      name: 'dragonsoul',
-      champion: 'aurelion sol',
-      role: 'mid',
-      tag: 'galxy',
-      rank: 'platinum',
-      kda: '8/4/7',
-      kdaRatio: 3.75, // (8+7)/4
-    },
-    {
-      name: 'shadowburst',
-      champion: 'leblanc',
-      role: 'mid',
-      tag: 'shdow',
-      rank: 'diamond',
-      kda: '12/7/4',
-      kdaRatio: 2.29, // (12+4)/7
-    },
-    {
-      name: 'stonewall',
-      champion: 'malphite',
-      role: 'top',
-      tag: 'earth',
-      rank: 'silver',
-      kda: '6/5/9',
-      kdaRatio: 3, // (6+9)/5
-    },
-    {
-      name: 'bladesurge',
-      champion: 'fiora',
-      role: 'top',
-      tag: 'dulst',
-      rank: 'gold',
-      kda: '10/8/4',
-      kdaRatio: 1.75, // (10+4)/8
-    },
-  ],
 }

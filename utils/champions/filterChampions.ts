@@ -1,18 +1,15 @@
-import { categories } from 'shared/data/champion/championCategories'
-
-
 export const filteredChampions = computed(() => {
-const as = useAccountStore()
-const cs = useChampStore()
-const ds = useDataStore()
-cs.selectedChampion = ref()
+  const as = useAccountStore()
+  const cs = useChampStore()
+  const ds = useDataStore()
+  cs.selectedChampion = ref()
   let filtered = [...ds.champions]
   const includedChampions = new Set()
 
-  if (cs.filterChampionClass && cs.filterChampionClass.length > 0) {
+  /*   if (cs.filterChampionClass && cs.filterChampionClass.length > 0) {
     filtered = filtered.filter((champion) => {
       return cs.filterChampionClass.some((className) => {
-        const category = categories.value.find(cat => cat.id === className)
+        const category = championClasses.find(cat => cat.id === className)
         if (category?.champions.includes(champion.name)) {
           if (!includedChampions.has(champion.name)) {
             includedChampions.add(champion.name)
@@ -22,7 +19,7 @@ cs.selectedChampion = ref()
         return false
       })
     })
-  }
+  } */
 
   /*    if (cs.filterChampionTypes && cs.filterChampionTypes !== 'Favorites') {
         filtered = filtered.filter(

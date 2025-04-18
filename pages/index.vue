@@ -6,7 +6,8 @@ import { useScroll } from '@vueuse/core'
 const emit = defineEmits(['update:open'])
 
 definePageMeta({
-  header: 'custom',
+  name: 'lolpockets',
+  path: '/'
 })
 
 const us = useUiStore()
@@ -58,14 +59,13 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <NuxtLayout
+  <div
     ref="el"
-    name="header-layout"
     class="relative *:pt-[0vh] size-full overflow-y-scroll !border-none outline-hidden">
     <Hero />
     <div
       v-scroll="onScroll"
-      class="absolute inset-0 top-full z-10 w-full">
+      class="absolute inset-0 top-full z-2 w-full">
       <div
         ref="steps"
         class="size-full relative">
@@ -79,7 +79,7 @@ onBeforeMount(() => {
         <HomeFooter />
       </div>
     </div>
-  </NuxtLayout>
+  </div>
 </template>
 
 <style scoped></style>

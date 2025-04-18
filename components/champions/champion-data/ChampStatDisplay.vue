@@ -17,7 +17,7 @@ watch(
 )
 const champStats = Object.entries(champion.value.stats)
 
-const base = computed(() => {
+/* const base = computed(() => {
   if (!stat.value.stats[0].id || stat.value.stats[0].id == undefined) {
     return
   }
@@ -39,7 +39,7 @@ if (stat.value.name == 'Attack Speed') {
     const a = champStats.find(key => key[0] == stat.value.stats.value[2].id)
     return a ? (a[1] as number) : null
   })
-}
+} */
 /* const statVal = computed(() => {
   return base.value + growth(lvl.value) * perLvl.value
 })

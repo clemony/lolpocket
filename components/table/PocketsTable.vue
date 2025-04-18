@@ -54,8 +54,10 @@ function handleRightClick() {
   })
 }
 
-  const pinnedKeys = ps.pinnedTopRowData.map(p => p.key)
 
+const pinned = computed (() => {
+  return ps.pockets.filter(p => p.location.pinned == true)
+})
 
 function refreshGrid() {
   selectData.value = null
@@ -66,7 +68,7 @@ function refreshGrid() {
 
 const gridOptions: GridOptions<pocket> = {
   columnHoverHighlight: false,
-  pinnedTopRowData: ps.pinnedTopRowData,
+  pinnedTopRowData:  pinned.value,
   rowHeight: 70,
   rowSelection: {
     mode: 'multiRow',
@@ -330,7 +332,7 @@ const pocketContextTarget = ref()
       :tooltip-show-delay="400"
       :no-rows-overlay-component="GridNoRows"
       :row-data="rowData"
-      :pinned-top-row-data="ps.pinnedTopRowData"
+      :pinned-top-row-data="pinned"
       :get-row-id="getRowId"
       @grid-ready="onGridReady"
       @cell-mouse-over="onMouseEnter($event)"

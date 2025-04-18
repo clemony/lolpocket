@@ -1,7 +1,6 @@
 import { defineStore } from 'pinia'
 
 export const useUiStore = defineStore('UiStore', () => {
-
 /*   sidebar stuff logic in middleware */
   const sidebarExpanded = ref(true)
   const triggerSidebar = refAutoReset(false, 1000)
@@ -10,12 +9,12 @@ export const useUiStore = defineStore('UiStore', () => {
   const toggleSettings = useToggle(settingsOpen)
   const enterY = ref<string | number>('-50%')
   const previousEnterY = usePrevious(enterY)
-  const enterX = ref<string | number>(0) //for settings
+  const enterX = ref<string | number>(0) // for settings
   const leaveY = ref(<string | number>'50%')
   const previousLeaveY = usePrevious(enterY)
- const leaveX = ref<string | number>(0) //for settings
+  const leaveX = ref<string | number>(0) // for settings
 
-
+  const pinnedOpen = ref(false)
 
   // dialog
 
@@ -56,8 +55,10 @@ export const useUiStore = defineStore('UiStore', () => {
     previousEnterY,
     leaveY,
     previousLeaveY,
-enterX,
-leaveX,
+    enterX,
+    leaveX,
+
+    pinnedOpen,
 
     // dialog
     loginOpen,

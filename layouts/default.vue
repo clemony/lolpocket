@@ -10,7 +10,7 @@ const route = useRoute()
   <LayoutGroup>
     <motion.div :transition="{}" class="h-screen  w-screen flex overflow-hidden flex-nowrap " layout>
       <AppNavbar />
-      <AppCommand  />
+      <AppCommand />
       <div class="flex flex-col  h-screen min-h-screen grow w-full">
         <NuxtLoadingIndicator color="var(--color-neutral)" />
 

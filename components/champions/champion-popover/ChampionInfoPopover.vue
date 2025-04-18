@@ -32,7 +32,7 @@ onMounted(async () => {
   <MotionDialogContent :delay="0" no-overlay class=" backdrop-blur-lg bg-b1/85 !max-w-220 w-220  z-1000 py-13 pl-12 pr-16 flex" @interact-outside="emit('close')">
     <div>
       <div class="relative">
-        <ChampionSplash bg-size="280%" :champion="champion" class="h-104 w-74 shadow-sm drop-shadow-sm relative after:absolute z-0  after:rounded-lg after:top-0 after:left-0 after:z-1 after:size-full after:mask-edges  after:bg-[#00000050] after:backdrop-blur-md  " />
+        <ChampionSplash bg-size="280%" :champion="champion" class="h-104 w-74 shadow-sm drop-shadow-sm relative after:absolute z-0  after:rounded-lg after:top-0 after:left-0 after:z-1 after:size-full after:mask-edges  after:bg-[#00000050] after:backdrop-blur-md overflow-hidden  " />
 
         <DialogHeader class="absolute bottom-4 *:text-right right-5 *:text-light/80 drop-shadow-sm *:dst">
           <DialogTitle class="text-11  font-bold tracking-tight">

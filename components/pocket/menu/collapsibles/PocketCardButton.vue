@@ -9,7 +9,7 @@ const route = useRoute()
 <template>
   <div>
     <NuxtLink :to="`/pocket/${pocket.key}/card`">
-      <SidebarButton :class="{ 'btn-active [&_span]:border-b1 [&_span]:inset-shadow-black/16 [&_span]:bg-b1/60  border-r-b2': route.name == 'card' }">
+      <RightbarButton :class="{ 'btn-active [&_span]:border-b1 [&_span]:inset-shadow-black/16 [&_span]:bg-b1/60  border-r-b2': route.name == 'card' }">
         <slot />
         <RightbarIconWrapper>
           <icon
@@ -17,7 +17,7 @@ const route = useRoute()
             class="h-6 opacity-60 w-auto dst shrink-0 peer-checked:text-nc" />
         </RightbarIconWrapper>
         Card
-      </SidebarButton>
+      </RightbarButton>
     </NuxtLink>
   </div>
 </template>

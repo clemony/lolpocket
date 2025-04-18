@@ -15,11 +15,18 @@ export const useItemStore = defineStore('itemStore', () => {
   const filterItemStats = ref([])
   const filterItemCats = ref([])
   const pocketItemSelect = ref<Item>(null)
-  const itemGridApi = shallowRef<GridApi | null>(null)
   const itemPaneOpen = ref(false)
   const itemSearchQuery = ref()
 
+  const itemGridApi = shallowRef<GridApi | null>(null)
+  const dbItemGridState = shallowRef(null)
   const itemDBHideNoBuy = ref(true)
+  const dbItemTiers = ref(null)
+  const dbItemRoles = ref(null)
+  const dbItemSearchQuery = ref(null)
+  const dbItemSearchResult = ref(null)
+  const dbItemStatListKey = ref(0)
+  const dbItemStats = ref([null])
 
   const calculatorSets = ref<CalculatorSet[]>([])
   const calculateSet = ref<CalculatorSet>(null)
@@ -47,18 +54,27 @@ export const useItemStore = defineStore('itemStore', () => {
     filterItemStats,
     filterItemCats,
     pocketItemSelect,
-    itemGridApi,
     itemSearchQuery,
     calculatorSets,
     calculateSet,
     calculateSet2,
     isComparing,
     setsToCompare,
+
+    itemGridApi,
     itemDBHideNoBuy,
+    dbItemGridState,
+    dbItemTiers,
+    dbItemRoles,
+    dbItemSearchQuery,
+    dbItemSearchResult,
+    dbItemStatListKey,
+    dbItemStats,
   }
 }, {
   persist: {
     storage: piniaPluginPersistedstate.localStorage(),
     key: 'itemStore',
+    pick: ['itemGridApi'],
   },
 })

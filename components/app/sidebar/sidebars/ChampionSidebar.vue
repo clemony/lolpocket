@@ -1,41 +1,78 @@
 <script lang="ts" setup>
-import { categories } from 'shared/data/champion/championCategories'
-
 const cs = useChampStore()
-const filter = ref(false)
-const toggleFilter = useToggle(filter)
+const route = useRoute()
+const model = ref('Grid')
 
+onMounted (() => {
+  route.path == '/champions/list' ? model.value = 'List' : 'Grid'
+})
 
-
-
+/* function handleHide(e) {
+  const columns = cs.championGridApi.getColumnDefs()
+  const updatedCols = columns.map(col => {
+    if (col.headerName === 'Base') {
+      return {
+        ...col,
+        hide: e.value
+      }
+    }
+    return col
+  })
+  cs.championGridApi.setGridOption('columnDefs', updatedCols)
+} */
 </script>
 
 <template>
   <div class="flex flex-col items-center pb-6 size-full relative">
-      <SidebarTitle  />
-    <ChampionSearch class="input mt-6 shadow-sm drop-shadow-sm !bg-neutral/85 !h-12 inset-shadow-sm border-accent text-nc **:text-nc">
+    <SidebarTitle>
+      <Tabs v-model:model-value="model" class="absolute right-5.25 top-3.75 **:pointer-events-auto z-5">
+        <IndicatorTabsList class="grid grid-cols-2 ">
+          <IndicatorTabsTrigger value="Grid" @click="navigateTo('/champions')">
+            Grid
+          </IndicatorTabsTrigger>
+          <IndicatorTabsTrigger value="List" @click="navigateTo('/champions/list')">
+            List
+          </IndicatorTabsTrigger>
+          <TabIndicator />
+        </IndicatorTabsList>
+      </Tabs>
+    </SidebarTitle>
+    <ChampionSearch class="input mt-10 shadow-sm drop-shadow-sm !bg-neutral/85 !h-12 inset-shadow-sm border-accent text-nc **:text-nc">
     </ChampionSearch>
+
+    <div class="divider divider-start before:bg-b3/60 font-semibold  my-8 mx-5">
+      Roles
+    </div>
     <div class="px-7">
-      <div class="divider divider-start before:bg-b3/60 font-semibold  my-8">
-        Roles
-      </div>
+      <CheckboxFilterList
+        @update:model="(e) => (cs.filterChampionClass = e)" />
+    </div>
+
+    <div class="divider divider-start before:bg-b3/60 font-semibold mx-5  my-8">
+      Positions
+    </div>
+    <div class="px-7 ">
       <ChampionPositionFilter />
     </div>
 
-    <!--       <div class="px-5 py-12 w-full">
-        <ItemStatsChecklist />
+    <div class="divider divider-start before:bg-b3/60 font-semibold  my-8 mx-5">
+      Champion Level
+    </div>
+    <div class="px-8.5 w-full flex justify-between items-center">
+      <NumberField id="level" v-model:model-value="cs.championGridLevel" :min="1" :max="18">
+        <NumberPickerContent class="w-32">
+          <NumberFieldDecrement />
+          <NumberFieldInput />
+          <NumberFieldIncrement />
+        </NumberPickerContent>
+      </NumberField>
+
+      <div class="text-2 flex gap-6 font-medium items-center">
+        <p>
+          Collapse All<br />Expanded
+        </p>
+        <Switch class="drop-shadow-xs" :default-value="false" @update:model-value="''" />
       </div>
-      <div class="mt-4 mb-6 px-8 flex gap-5 font-medium items-center w-full justify-end">
-        Hide Unpurchasable
-        <Switch v-model:model-value="is.itemDBHideNoBuy" class="dst" @update:model-value="e => is.itemDBHideNoBuy = e" />
-      </div> -->
-    <div class="px-7 mt-8">
-      <div class="divider divider-start before:bg-b3/60 font-semibold  mb-8">
-        Positions
-      </div>
-      <CheckboxFilterList
-        :source="categories"
-        @update:model="(e) => (cs.filterChampionClass = e)" />
     </div>
 
     <div class=" w-full  absolute bottom-0 left-0 px-3">

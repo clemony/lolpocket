@@ -14,7 +14,7 @@ const image = computed (() => {
 
 <template>
   <label
-    :class="cn('relative grid  shrink-0 place-items-center  size-full shadow-sm  rounded-full', props.class)">
+    :class="cn('relative grid  shrink-0 place-items-center  size-full shadow-sm group/icon  rounded-full', props.class)">
     <slot />
     <div
       class="size-full rounded-full  shrink-0  overflow-hidden "
@@ -22,6 +22,7 @@ const image = computed (() => {
         backgroundImage: `url('${image}')`,
         backgroundSize: image == '/img/lp/192.webp' ? '100%' : '450%',
         backgroundPosition: 'center 20%' }">
+
     </div>
 
   </label>

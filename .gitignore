@@ -19,6 +19,7 @@ logs
 .fleet
 .idea
 .code-workspace
+./server/api/cheerio.ts
 
 # Local env files
 .env

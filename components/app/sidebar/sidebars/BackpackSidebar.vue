@@ -1,15 +1,33 @@
 <script lang="ts" setup>
 const as = useAccountStore()
 const ps = usePocketStore()
-
+const route = useRoute()
 const all = ref(true)
 
+const model = ref('Grid')
+
+onMounted (() => {
+  route.path != '/backpack' ? model.value = 'List' : 'Grid'
+})
 </script>
 
 <template>
 <div class="">
-      <SidebarTitle  />
-    <div class="px-6 mt-2 border-t border-y-b3/50 pt-3 flex items-center font-semibold text-bc/40 tracking-tight">
+      <SidebarTitle>
+        
+      <Tabs v-model:model-value="model" class="absolute right-5.25 top-3.75 **:pointer-events-auto z-5">
+        <IndicatorTabsList class="grid grid-cols-2 ">
+          <IndicatorTabsTrigger value="Grid" @click="navigateTo('/items')">
+            Grid
+          </IndicatorTabsTrigger>
+          <IndicatorTabsTrigger value="List" @click="navigateTo('/items/list')">
+            List
+          </IndicatorTabsTrigger>
+          <TabIndicator />
+        </IndicatorTabsList>
+      </Tabs>
+      </SidebarTitle>
+    <div class="px-6 mt-2   pt-3 flex items-center font-semibold text-bc/40 tracking-tight">
       Pockets
     </div>
     <div class="pl-4 pr-2">

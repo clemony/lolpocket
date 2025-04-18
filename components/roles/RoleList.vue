@@ -16,7 +16,6 @@ const originalOrder = ref([...rolesList.value])
 const sortedRoles = computed(() => {
   const checked = rolesList.value.filter(role => useArrayIncludes(pocket.value.roles, role))
   const unchecked = rolesList.value.filter(role => !useArrayIncludes(pocket.value.roles, role))
-  console.log('💠 - pocket.role:', pocket.value.roles)
   return [...checked, ...unchecked]
 })
 
@@ -45,7 +44,7 @@ function handleReset() {
 
     <transition-slide tag="form" group class="filter gap-2">
       <input
-        class="btn filter-reset bg-b1 text-6 !font-normal text-bc peer" type="checkbox"
+        class="btn filter-reset bg-b1 text-7 !font-normal text-bc peer" type="checkbox"
         name="roles" aria-label="x" @click="pocket.roles = [null]" />
       <label
         v-for="role in sortedRoles"

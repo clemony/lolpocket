@@ -10,6 +10,11 @@ const emit = defineEmits(['loaded'])
 const thisItem = computed(() => {
   return props.item
 })
+const loaded = ref(false)
+function handleLoad(){
+  emit('loaded')
+  loaded.value = true
+}
 </script>
 
 <template>
@@ -20,7 +25,7 @@ const thisItem = computed(() => {
       v-if="item.name != ''"
       :image="`/img/item/${thisItem.id}.webp`"
       :alt="`${thisItem.name} Image`"
-      class="aspect-square size-full rounded-lg" @loaded="emit('loaded')" />
+      class="aspect-square size-full rounded-lg" @loaded="handleLoad()" />
 
     <slot />
 

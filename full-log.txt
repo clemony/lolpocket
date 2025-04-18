@@ -1,0 +1,269 @@
+
+> dev
+> nuxt dev
+
+[ nuxi ] Nuxt 3.16.2 with Nitro 2.11.9
+
+  ➜ Local:    http://localhost:8080/
+  ➜ Network:  use --host to expose
+
+
+[nuxt]  WARN  Two component files resolving to the same name Accordion:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/Accordion.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Button:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/Button.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name NumberField:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/NumberField.vue
+
+ℹ Forced re-optimization of dependencies
+✔ Vite client built in 318ms
+✔ Vite server built in 586ms
+/*! 🌼 daisyUI 5.0.20 */
+
+[nuxt]  WARN  Two component files resolving to the same name Accordion:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/Accordion.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Button:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/Button.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name NumberField:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/NumberField.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Accordion:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/Accordion.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Button:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/Button.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name NumberField:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/NumberField.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Accordion:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/Accordion.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Button:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/Button.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name NumberField:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/NumberField.vue
+
+[nitro] ✔ Nuxt Nitro server built in 1611ms
+ℹ Vite client warmed up in 2ms
+
+[nuxt]  WARN  Two component files resolving to the same name Accordion:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/Accordion.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Button:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/Button.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name NumberField:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/NumberField.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Accordion:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/Accordion.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Button:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/Button.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name NumberField:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/NumberField.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Accordion:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/Accordion.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Button:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/Button.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name NumberField:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/NumberField.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Accordion:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/Accordion.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Button:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/Button.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name NumberField:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/NumberField.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Accordion:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/Accordion.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Button:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/Button.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name NumberField:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/NumberField.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Accordion:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/Accordion.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Button:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/Button.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name NumberField:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/NumberField.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Accordion:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/Accordion.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Button:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/Button.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name NumberField:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/NumberField.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Accordion:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/Accordion.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Button:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/Button.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name NumberField:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/NumberField.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Accordion:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/Accordion.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Button:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/Button.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name NumberField:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/NumberField.vue
+
+ℹ
+[vue-tsc] Found 0 errors. Watching for file changes.
+
+[nuxt]  WARN  Two component files resolving to the same name Accordion:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/accordion/Accordion.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name Button:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/button/Button.vue
+
+
+[nuxt]  WARN  Two component files resolving to the same name NumberField:
+
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/index.ts
+ - /Users/caitlin/dev/nuxt/lolpocket/components/base/number-field/NumberField.vue
+

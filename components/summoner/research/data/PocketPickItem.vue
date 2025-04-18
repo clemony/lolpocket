@@ -23,18 +23,20 @@ const item = computed (() => {
   return ds.items.find(i => i.name == mvi.value.item.name)
 })
 
-const classObject = computedAsync (() => {
-  if (!mvi.value)
+
+
+const itemColor = computedAsync (() => {
+  if (!mvi.value && !itemColor.value)
     return
-  const itemColor = getGradeColor(mvi.value.bayesianWinrate)
-  console.log('💠 - classObject - itemColor:', itemColor)
-  return `border-${itemColor}-b100/60 shadow-${itemColor}-b100/60 inset-shadow-${itemColor}-w600 bg-${itemColor}/70`
+return getGradeColor(mvi.value.bayesianWinrate)
 })
-// console.log('💠 - classObject - classObject:', classObject)
+console.log("💠 - itemColor - itemColor:", itemColor)
+
+
 </script>
 
 <template>
-  <Field v-if="mvi" class="bg-b1 pb-6 px-0 pt-0 w-full flex border-shadow  items-center gap-5" :title="props.title">
+  <Field v-if="mvi" class="bg-b1 pb-6 px-0 pt-0 w-full flex border-shadow  items-center gap-5 inset-shadow-xxs" :title="props.title">
     <div class="w-full pt-8 items-center px-5 gap-5 dst flex  relative">
       <div class="rounded-full size-16 shadow-sm drop-shadow-sm">
         <PopoverItem :item="item" class="size-16 rounded-full overflow-hidden" />
@@ -53,8 +55,13 @@ const classObject = computedAsync (() => {
         </p>
       </div>
 
-      <div class=" badge flex rounded-xl  font-semibold badge-xl  self-start justify-self-end drop-shadow-xs shadow-xs   inset-shadow-sm" :class=" classObject">
-        <span class="text-4  dst font-mono text-[#FFF] tracking-wide">
+      <div
+        class="  flex rounded-xl  font-semibold badge-xl  self-start justify-self-end drop-shadow-xs shadow-xs border border-black/10  inset-shadow-sm "
+        :style="{
+          'backgroundColor': `color-mix(in oklab, var(--color-${itemColor}) 70%, transparent)`,
+          'box-shadow': `0px 1px 0px color-mix(in oklab, var(--color-${itemColor}-b100) 40%, transparent),1px 1px 1px var(--color-${itemColor}-w600) inset`,
+        }">
+        <span class="text-4  dst font-mono text-[#FFF] text-shadow-black/5 text-shadow-xs tracking-wide">
           {{ getGrade(mvi.bayesianWinrate) }}
         </span>
       </div>

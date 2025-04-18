@@ -81,7 +81,8 @@ export const championPosition = ref<Category[]>([
       'Graves',
       'Hecarim',
       'Ivern',
-      'Jarvan IJax',
+      'Jarvan IV',
+      'Jax',
       'Karthus',
       'Kayn',
       'Kha\'Zix',
@@ -149,6 +150,7 @@ export const championPosition = ref<Category[]>([
       'Lux',
       'Malphite',
       'Malzahar',
+      'Mel',
       'Naafiri',
       'Neeko',
       'Orianna',
@@ -238,6 +240,7 @@ export const championPosition = ref<Category[]>([
       'Lux',
       'Malphite',
       'Maokai',
+      'Mel',
       'Milio',
       'Morgana',
       'Nami',
@@ -270,5 +273,24 @@ export const championPosition = ref<Category[]>([
       'Zoe',
       'Zyra',
     ],
-  }
+  },
 ])
+
+export function addChampionPositionProperty() {
+  const ds = useDataStore()
+  ds.champions = ds.champions.map((champion) => {
+    const newTags = championClasses.value
+      .filter(category => category.champions.includes(champion.name))
+      .map(category => category.id)
+
+    const newPositions = championPosition.value
+      .filter(position => position.champions.includes(champion.name))
+      .map(position => position.id)
+
+    return {
+      ...champion,
+      tags: newTags,
+      position: newPositions,
+    }
+  })
+}

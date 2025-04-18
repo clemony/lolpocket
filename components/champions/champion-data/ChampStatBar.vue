@@ -25,14 +25,14 @@ onMounted(async () => {
 
 const champStats = Object.entries(champion.value.stats)
 
-const base = computed(() => {
+/* const base = computed(() => {
   if (!stat.value.stats[0].id || stat.value.stats[0].id == undefined) {
     return
   }
   const a = champStats.find(key => key[0] == stat.value.stats[0].id)
   return a[1] as number
 })
-// console.log('💠 - base - base:', base.value);
+console.log('💠 - base - base:', base.value);
 
 const perLvl = computed(() => {
   if (!stat.value.stats[1].id || stat.value.stats[1].id == undefined) {
@@ -42,7 +42,7 @@ const perLvl = computed(() => {
 
   return a ? (a[1] as number) : null
 })
-
+ */
 /* const asRatio = computed(() => {
   if (stat.value.name != 'Attack Speed') {
 

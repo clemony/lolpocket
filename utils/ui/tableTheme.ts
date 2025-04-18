@@ -23,6 +23,7 @@ export const pocketTheme = themeQuartz.withPart(iconSetQuartzLight).withParams({
   wrapperBorder: false,
   wrapperBorderRadius: '0.7rem',
   columnBorder: false,
+  columnHoverColor: 'color-mix(in oklch, var(--b2) 30%, transparent)',
   checkboxCheckedBackgroundColor: 'var(--neutral)/0.8',
   checkboxCheckedBorderColor: 'var(--neutral)',
   checkboxCheckedShapeColor: 'var(--b1)',
@@ -44,5 +45,8 @@ export const pocketTheme = themeQuartz.withPart(iconSetQuartzLight).withParams({
 provideGlobalGridOptions({
   icons: {
     filter: '<div class="size-full align-text-top leading-tight items-start -mt-1.5 opacity-60 hover:opacity-100">. . .</div>',
+    sortAscending: '<div class="text-4 text-bc -mb-0.5">⌃</div>',
+
+    sortDescending: '<div class="text-6 text-bc -mt-3">⌵</div>',
   },
 })

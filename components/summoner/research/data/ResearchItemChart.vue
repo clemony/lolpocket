@@ -67,12 +67,13 @@ watchEffect(async () => {
     datasets: [newDataset],
   }
 })
-/* rounded-box shadow-warm-soft  border border-b3  tldr-50 */
+
+
 </script>
 
 <template>
   <div class="size-full overflow-hidden  pb-9">
-    <div class="bg-b1  border-shadow size-full max-h-170">
+    <div class="bg-b1  border-shadow size-full max-h-160 inset-shadow-xxs">
       <div class="px-4 pb-5 pt-4 bg-b1 relative flex flex-col size-full  rounded-box overflow-hidden ">
         <div class="justify-self-end w-full h-full pt-4  -ml-6">
           <BubbleChart :data="data" />

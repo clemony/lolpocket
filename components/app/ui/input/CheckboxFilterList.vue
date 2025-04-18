@@ -5,12 +5,10 @@ const props = defineProps<{
 
 const emit = defineEmits(['update:model'])
 
-const ts = useTempStore()
-
 const to = ref([])
-const categories = ref(props.source)
+const championClass = ref(championClasses)
 const originalOrder = ref([
-  ...categories.value.sort((a, b) => {
+  ...championClass.value.sort((a, b) => {
     if (a.displayName < b.displayName) {
       return -1
     }
@@ -20,29 +18,29 @@ const originalOrder = ref([
     return 0
   }),
 ])
-const sortedCategories = computed(() => {
-  const checked = categories.value.filter(cat => cat.checked)
-  const unchecked = categories.value.filter(cat => !cat.checked)
+const sortedClasses = computed(() => {
+  const checked = championClass.value.filter(cat => cat.checked)
+  const unchecked = championClass.value.filter(cat => !cat.checked)
 
   return [...checked, ...unchecked]
 })
 
 function moveToTop(category: Category) {
-  const index = categories.value.findIndex(cat => cat.id === category.id)
+  const index = championClass.value.findIndex(cat => cat.id === category.id)
   if (index !== -1) {
-    categories.value.splice(index, 1) // Remove category
-    categories.value.unshift(category) // Add it to the top
+    championClass.value.splice(index, 1) // Remove category
+    championClass.value.unshift(category) // Add it to the top
   }
   emit('update:model', to.value)
 }
 
-function resetCategories() {
-  categories.value = [...originalOrder.value] // Reset to the original A-Z order
+function resetClasses() {
+  championClass.value = [...originalOrder.value] // Reset to the original A-Z order
 }
 
 function handleReset() {
   to.value.length = 0
-  resetCategories()
+  resetClasses()
   emit('update:model', to.value)
 }
 </script>
@@ -53,20 +51,18 @@ function handleReset() {
       class="btn btn-square btn-sm !text-5 rounded-md font-normal"
       type="reset"
       value="×"
-      @click="handleReset()"
-    />
+      @click="handleReset()" />
     <TransitionGroup name="pop">
       <input
-        v-for="category in sortedCategories"
+        v-for="category in sortedClasses"
         :key="category.id"
         v-model="to"
         class="btn checked:bg-neutral checked:border-neutral checked:shadow-neutral/20 btn-sm !text-3 mr-0 rounded-md font-medium tracking-normal capitalize checked:shadow-sm"
         :value="category.id"
         type="checkbox"
-        name="categories"
+        name="championClass"
         :aria-label="category.displayName || category.id"
-        @change="moveToTop(category)"
-      />
+        @change="moveToTop(category)" />
     </TransitionGroup>
   </form>
 </template>

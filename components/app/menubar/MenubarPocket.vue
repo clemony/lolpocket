@@ -6,7 +6,7 @@ const emit = defineEmits(['update:modelValue'])
 const ps = usePocketStore()
 const ts = useTempStore()
 
-ps.pinnedFolder = []
+
 
 const pinned = computed (() => {
   return ps.pockets.filter(p => p.location.folder == 'pinned')

@@ -4,9 +4,6 @@
 }
 
 :root {
-  .p-i-c {
-    @apply place-items-center;
-  }
   
   .dst {
     @apply drop-shadow-text;

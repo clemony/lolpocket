@@ -3,7 +3,7 @@
 
 definePageMeta({
   title: 'Trash',
-  section: 'pockets',
+  section:  'backpack',
 })
 
 /* 

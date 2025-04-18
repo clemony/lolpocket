@@ -24,7 +24,7 @@ const ans = useAnalysisStore()
   </div> -->
 
   <div class="size-full px-14">
-    <div class="w-full  pt-8 pb-8 mb-8 border-b border-b-b3">
+    <div class="w-full  pt-10 pb-8 mb-8 border-b border-b-b3">
       <h1 class="font-semibold dst text-8 pb-2">
         Item Data
       </h1>
@@ -40,7 +40,7 @@ const ans = useAnalysisStore()
         <PocketPickItem :patch-games="ans.patchGames" :item-num="2" title="☆ Rising Star" />
       </div>
 
-      <div class="w-full  pt-24 pb-8 mb-10 border-b border-b-b3">
+      <div class="w-full  pt-26 pb-10 mb-10 border-b border-b-b3">
         <h1 class="font-semibold dst pb-2  text-8 ">
           Winrates & Playrates
         </h1>

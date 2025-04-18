@@ -7,13 +7,12 @@ export const usePocketStore = defineStore(
     const pockets = ref<pocket[]>([])
     const trashFolder = ref<pocket[]>([])
     const archiveFolder = ref<pocket[]>([])
-    const pinnedFolder = ref<pocket[]>([])
     const filterText = ref('')
     const selectedRows = ref([])
     const tableSelectAll = ref()
     const pocketGridApi = shallowRef<GridApi | null>(null)
-    const trashGridApi = shallowRef<GridApi | null>(null)
-    const pinnedTopRowData = ref([])
+    const trashGridApi = shallowRef<GridApi | null>(null)/*
+    const pinnedTopRowData = ref([]) */
     const pocketGrid = shallowRef()
     const columns = ref([])
     const newPocketOpen = ref(false)
@@ -37,8 +36,7 @@ export const usePocketStore = defineStore(
       pocketGridApi,
       trashGridApi,
       pocketGrid,
-      pinnedTopRowData,
-      pinnedFolder,
+      // pinnedTopRowData,
       allPockets,
       columns,
       newPocketOpen,
