@@ -17,19 +17,19 @@ export function normalizeGamePatchNumber(match) {
 
 export function handleUserMatchData(newMatch, puuid?) {
   const as = useAccountStore()
-  const ans = useAnalysisStore()
+  const ms = useMatchStore()
   newMatch.forEach((match) => {
     const p = puuid || match.info.participants.find(p => p.puuid == as.userAccount.puuid)
     if (!p)
       return
-    const map = ans.userMatchData.map(id => id)
+    const map = ms.userMatchData.map(id => id)
     console.log('💠 - newMatch.forEach - map:', map)
 
     if (map.includes(match.id))
       return
 
-    ans.userMatchData = [
-      ...ans.userMatchData,
+    ms.userMatchData = [
+      ...ms.userMatchData,
       {
         patch: normalizeGamePatchNumber(match),
         match: match.metadata.matchId,

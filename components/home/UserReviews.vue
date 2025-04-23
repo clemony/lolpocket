@@ -109,7 +109,7 @@
           <p class="text-right mt-2 italic justify-self-end flex gap-2 items-center">
             - Ezreal, Some Random Ruins
 
-            <icon v-tippy="'Quote procured through questionable means.'" name="carbon:information" class="size-4.5 stroke-2" />
+            <icon v-tippy="'Quote procured through questionable mems.'" name="carbon:information" class="size-4.5 stroke-2" />
           </p>
         </div>
       </div>

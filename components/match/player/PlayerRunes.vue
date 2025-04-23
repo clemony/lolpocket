@@ -8,17 +8,16 @@ const ds = useDataStore()
 const player = computed (() => {
   return props.player
 })
-
 const keystone = computed (() => {
-  const id = player.value.perks.styles[0].selections[0].perk
+  const id = player.value.perks.keystone
 
   const find = ds.runes.find(r => r.id == id)
   return find.name.replace(/\s/g, '')
 })
 
 const paths = computed (() => {
-  const primary = player.value.perks.styles[0].style
-  const secondary = player.value.perks.styles[1].style
+  const primary = player.value.perks.primary
+  const secondary = player.value.perks.secondary
   return {
     primary: ds.paths.find(p => p.id == primary).name.toLowerCase(),
     secondary: ds.paths.find(p => p.id == secondary).name,

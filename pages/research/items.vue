@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 definePageMeta({
-  title: 'Research',
-  path: '/research/items',
-  section: 'nexus',
+  title: 'analytics',
+  path: '/analytics/items',
+  section: 'analytics',
 })
-const ans = useAnalysisStore()
+const ms = useMatchStore()
 </script>
 
 <template>
@@ -14,7 +14,7 @@ const ans = useAnalysisStore()
       <ResearchItemChart />
     </div>
     <div class="grid grid-cols-[100px_1fr] size-full gap-8">
-      <PocketPickItem :patch-games="ans.patchGames" />
+      <PocketPickItem :patch-games="ms.patchGames" />
       <div class="relative size-full grid place-items-center pb-10">
         <div class="absolute inset-0 top-0 left-0 overflow-auto">
           <ResearchItemList />
@@ -29,15 +29,15 @@ const ans = useAnalysisStore()
         Item Data
       </h1>
       <p class="font-medium text-bc/70">
-        Your best items during patch {{ ans.patchSelect }}
+        Your best items during patch {{ ms.patchSelect }}
       </p>
     </div>
     <div class="size-full overflow-hidden ">
       <div class="grid-cols-4 grid gap-10 overflow-hidden pb-2 place-items-center w-full">
-        <PocketPickItem :patch-games="ans.patchGames" :item-num="0" title="Pocket Pick" />
-        <PocketPickItem :patch-games="ans.patchGames" :item-num="1" title="Pocket Pick" />
-        <PocketPickItem :patch-games="ans.patchGames" :item-num="2" title="Pocket Pick" />
-        <PocketPickItem :patch-games="ans.patchGames" :item-num="2" title="☆ Rising Star" />
+        <PocketPickItem :patch-games="ms.patchGames" :item-num="0" title="Pocket Pick" />
+        <PocketPickItem :patch-games="ms.patchGames" :item-num="1" title="Pocket Pick" />
+        <PocketPickItem :patch-games="ms.patchGames" :item-num="2" title="Pocket Pick" />
+        <PocketPickItem :patch-games="ms.patchGames" :item-num="2" title="☆ Rising Star" />
       </div>
 
       <div class="w-full  pt-26 pb-10 mb-10 border-b border-b-b3">

@@ -4,6 +4,7 @@ const ds = useDataStore()
 console.log('💠 - ds:', ds.items)
 definePageMeta({
   name: 'admin',
+  section: 'nexus',
 })
 // ds.champions = []
 function reset() {
@@ -40,8 +41,8 @@ async function hi() {
 </script>
 
 <template>
-  <NuxtLayout
-    name="header-layout" class="wrapper flex size-full flex-col items-center justify-center gap-15">
+  <div class="wrapper flex size-full flex-col items-center justify-center gap-15">
+    <AppTitlebar />
     <div class="">
       your pocket picks
     </div>
@@ -99,7 +100,7 @@ async function hi() {
         </button>
       </div>
     </div>
-  </NuxtLayout>
+  </div>
 </template>
 
 <style scoped></style>

@@ -1,30 +1,32 @@
 <script setup lang="ts">
+import { motion } from 'motion-v'
+
 const props = defineProps<{
   match: any
 }>()
 const as = useAccountStore()
-const ds = useDataStore()
 const match = computed (() => {
-  return props.match.info
+  return props.match
 })
 
 const player = computed(() => {
-  return match.value.participants.find(p => p.puuid == as.userAccount.puuid)
+  return match.value.info.participants.find(p => p.puuid == as.userAccount.puuid)
 })
 
 const isOpen = ref(false)
 </script>
 
 <template>
-  <Collapsible v-if="player && match" :key="match.matchId" v-model:open="isOpen" class="group w-220 justify-start max-w-220 group/collapse" as-child>
-    <Field class="bg-b2/30 drop-shadow-xs border-b3/40 w-full p-0  @container/match min-w-134 cursor-pointer group/collapse ">
+  <Collapsible v-if="player && match" :key="match.matchId" v-model:open="isOpen" class="group w-220 justify-start max-w-220 group/collapse">
+    <div class="field grid justify-center **:select-none text-2 shadow-warm-soft overflow-visible bg-b2/30 drop-shadow-xs border-b3/40 w-full p-0  @container/match min-w-134 cursor-pointer group/collapse ">
       <CollapsibleTrigger class="flex gap-7 py-6 w-full items-start overflow-hidden  cursor-pointer group/collapse pl-6 pr-4 ">
-        <div class="flex h-full **:select-none flex-col justify-start gap-1.5">
+        <div class="flex w-38 h-full **:select-none flex-col justify-start gap-1.5">
           <WinLossButton v-if=" player.teamId && match" :player="player" :match="match" />
-          <div class="font-medium dst tracking-tight text-left w-20 space-y-1 ">
-            <MatchQueue v-if="match.queueId" as="p" class="text-2 text-left text-nowrap" :match="match" />
-            <MatchMap v-if="match.queueId" as="p" class="text-2" :match="match" />
-            <GameDuration as="p" :match="match" class="tracking-wide" />
+          <div class="font-medium dst tracking-tight text-left w-full space-y-1 ">
+            <MatchQueue v-if="match.queueId" as="p" class="text-2 text-left text-nowrap" :queue-id="match.queueId" />
+            <MatchMap v-if="match.info.mapId" :map-id="match.info.mapId" as="p" class="text-2" />
+            <GameDuration as="p" :duration="match.info.gameDuration" class="tracking-wide" />
+            <GameEndTime v-if="match.info.gameEndTimestamp" as="p" class="text-2 capitalize" :end-time="match.info.gameEndTimestamp" />
           </div>
         </div>
         <div class="flex gap-3 w-full">
@@ -47,7 +49,7 @@ const isOpen = ref(false)
 
               <!--   stats -->
 
-            <!--   <PlayerScoreboardStats :player="player" /> -->
+              <!--   <PlayerScoreboardStats :player="player" /> -->
             </div>
 
             <div class="flex gap-3 min-w-64">
@@ -61,11 +63,11 @@ const isOpen = ref(false)
         </div>
       </CollapsibleTrigger>
 
-      <CollapsibleContent class="!duration-300 CollapsibleContent w-full ">
+      <CollapsibleContent class=" CollapsibleContent w-full ">
         <Separator class="!bg-b3/60" />
         <MatchCollapse :match="match" />
       </CollapsibleContent>
-    </Field>
+    </div>
   </Collapsible>
 </template>
 

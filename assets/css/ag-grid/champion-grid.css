@@ -1,0 +1,34 @@
+@import 'tailwindcss';
+
+.stat-grid.champion-grid .ag-header-group-cell .ag-header-cell-comp-wrapper {
+  @apply items-center justify-center text-center justify-items-center flex-nowrap ;
+}
+
+.stat-grid.champion-grid .ag-header-group-cell {
+  @apply font-semibold;
+}
+
+.champion-grid  .ag-header-group-cell-label{
+  @apply w-full relative grow;
+}
+
+.champion-grid .ag-header-row .ag-header-row-column  {
+    @apply justify-center text-center;
+}
+
+.champion-grid-cell {
+    @apply grid size-full  capitalize px-2
+}
+
+.champion-grid .text-cell {
+  @apply !justify-start !text-start **:capitalize !capitalize;
+}
+
+.champion-grid .hidden-cell {
+    @apply !bg-b2;
+}
+
+.champion-grid .champion-grid-cell.number-cell {
+       @apply !justify-end !text-end;
+}
+

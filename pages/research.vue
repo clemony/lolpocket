@@ -10,24 +10,21 @@ definePageMeta({
 
 const ds = useDataStore()
 const as = useAccountStore()
-const ans = useAnalysisStore()
+const ms = useMatchStore()
 watchEffect(() => {
-  ans.patchGames = ans.userMatchData.filter(g => g.patch == ans.patchSelect)
+  ms.patchGames = ms.userMatchData.filter(g => g.patch == ms.patchSelect)
 })
 </script>
 
 <template>
-  <NuxtLayout
-    name="header-layout" header-class="border-b border-b-b3/40">
-    <template #crumb>
+  <div class="overflow-hidden size-full justify-center justify-items-center  scrollbar-none pt-20  pb-14">
+    <AppTitlebar>
       <div class="absolute right-14 w-32">
         <PatchSelectDropdown class="h-11 border-b3" />
       </div>
-    </template>
-    <div class="overflow-hidden size-full justify-center justify-items-center  scrollbar-none pt-20  pb-14">
-      <NuxtPage />
-    </div>
-  </NuxtLayout>
+    </AppTitlebar>
+    <NuxtPage />
+  </div>
 </template>
 
 <style scoped>

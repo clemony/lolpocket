@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+
+/* header */
+
+ .ag-header-cell-label-container{
+  @apply relative size-full !m-0 !p-0;
+ }
+
+/* header sort */
+
+ .ag-sort-indicator-container{
+  @apply absolute size-[16px] right-1 flex items-center;
+ }
+
+   .ag-sort-indicator-container .ag-header-cell-label{
+  @apply relative size-full  flex items-center;
+  padding: 0 !important;
+ }
+
+ /* column */
+
+.ag-cell.ag-column-first {
+  @apply !pl-7;
+}
+
+.ag-cell.ag-column-last {
+  @apply !pr-6;
+}
+
+.ag-header-row.ag-header-row-column-group {
+  @apply border-b-b3/40 border-b items-center;
+}
+
+.ag-header-row .ag-header-row-column {
+  @apply !hidden !h-1 opacity-0;
+}
+
+ /* row */
+
+.ag-row-selected {
+  @apply bg-b2/60;
+}
+
+.ag-row-hover {
+  @apply bg-b2/30;
+}
+
+.ag-row {
+  @apply border-b-b3/30 ;
+}

@@ -1,7 +1,5 @@
 /* eslint-disable */
 export async function patchItemDatabaseData() {
-
-console.log('click')
   const ownerId = import.meta.env.VITE_SUPABASE_OWNER_ID
 
   const supabase = useSupabaseClient()
@@ -15,7 +13,6 @@ console.log('click')
     return
   }
   else {
-    console.log('click2')
     const userId = user.id
     const patch = useDataStore().currentPatch.toString()
     console.log('💠 - updateItemDatabaseData - patch:', patch)
@@ -30,7 +27,6 @@ cleanedItemData = integrateDataDragon(cleanedItemData)
   else {
     console.log('Failed to parse JSON.')
   }
-  console.log('click3')
 
     const { data, error } = await supabase
     .from('league_data')

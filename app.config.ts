@@ -16,6 +16,8 @@ export default defineAppConfig({
       'minus-sm': 'teenyicons:minus-small-outline',
       'calc': 'teenyicons:calculator-outline',
       'minus': 'radix-icons:minus',
+      'absolute': 'hugeicons:absolute',
+      'weighted': 'tabler:math-integral-x',
 
       // letters
       'x-sm': 'teenyicons:x-small-outline',
@@ -32,12 +34,12 @@ export default defineAppConfig({
       // arrow
       'down': 'ph:caret-up',
       'up': 'ph:caret-up',
-      'down-sm': 'radix-icons:caret-down',
-      'right-sm': 'radix-icons:caret-right',
-      'left-sm': 'radix-icons:caret-left',
+      'down-sm': 'teenyicons:down-small-outline',
+      'right-sm': 'teenyicons:right-small-outline',
+      'left-sm': 'teenyicons:left-small-outline',
       'right': 'ph:caret-right',
       'left': 'ph:caret-left',
-      'up-sm': 'radix-icons:caret-up',
+      'up-sm': 'teenyicons:up-small-outline',
       'select': 'radix-icons:caret-sort',
       'arrow-up': 'teenyicons:arrow-up-small-outline',
 
@@ -45,7 +47,9 @@ export default defineAppConfig({
       'more': 'radix-icons:dots-horizontal',
       'more-v': 'radix-icons:dots-vertical',
       'reset': 'mynaui:refresh',
+      'erase': 'radix-icons:eraser',
       'gear': 'ph:gear-six',
+      'update': 'radix-icons:update',
       'lines': 'teenyicons:align-text-justify-outline',
       'filter': 'teenyicons:filter-outline',
       'refresh': 'radix-icons:reload',

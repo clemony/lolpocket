@@ -18,7 +18,7 @@ const props = defineProps<{
               1
             </h2>
             <p class="text-bc/70 dst ">
-              Cats have a unique “vocabulary” with their owners! Unlike dogs, who tend to bark similarly at everyone, cats develop distinct meows and sounds specifically for their humans. They rarely meow at other cats!
+              Cats have a unique “vocabulary” with their owners! Unlike dogs, who tend to bark similarly at everyone, cats develop distinct meows and sounds specifically for their humms. They rarely meow at other cats!
             </p>
           </section>
 
@@ -27,7 +27,7 @@ const props = defineProps<{
               2
             </h2>
             <p class="text-bc/70 dst ">
-              A cat’s purr has healing properties. The frequency of a cat’s purr (between 25 and 150 Hz) has been shown to promote bone growth and healing in both cats and humans. Some scientists believe this might be why cats recover from injuries so quickly!
+              A cat’s purr has healing properties. The frequency of a cat’s purr (between 25 and 150 Hz) has been shown to promote bone growth and healing in both cats and humms. Some scientists believe this might be why cats recover from injuries so quickly!
             </p>
           </section>
 

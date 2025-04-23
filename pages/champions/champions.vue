@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { useScroll } from '@vueuse/core'
+import { motion } from 'motion-v'
+
 
 definePageMeta({
   name: 'champion-data',
@@ -9,7 +11,7 @@ definePageMeta({
 })
 
 const target = ref(null)
-const { x, y, isScrolling, arrivedState, directions } = useScroll(target)
+const { y } = useScroll(target)
 const quote = ref(null)
 onMounted (() => {
   quote.value = getQuote()
@@ -19,11 +21,11 @@ const ds = useDataStore()
 </script>
 
 <template>
-  <NuxtLayout name="header-layout" class=" grid transition-all duration-300 ">
-    <template #crumb>
+  <div class=" grid transition-all duration-300 ">
+    <AppTitlebar>
       <span class="w-6 h-full" />
-      <Motion
-        v-if="y > 80" as="p" class="w-fit text-nowrap overflow-x-hidden text-left flex justify-start items-center font-light mb-px  italic text-1"
+      <motion.p
+        v-if="y > 80" class="w-fit text-nowrap overflow-x-hidden text-left flex justify-start items-center font-light mb-px  italic text-1"
         :initial="{ opacity: 0, width: 0, translate: '0px 20px' }"
         :animate="{ opacity: 1, width: '100%', translate: '0 0' }"
         :transition="{
@@ -34,9 +36,9 @@ const ds = useDataStore()
           duration: 0.5,
           staggerChildren: 10 }">
         {{ quote }}
-      </Motion>
+      </motion.p>
       <Grow />
-    </template>
+    </AppTitlebar>
 
     <div ref="target" class="inset-0 top-0 left-0 absolute  overflow-y-auto">
       <div class="flex items-center w-full px-16 gap-8 pt-22">
@@ -50,7 +52,7 @@ const ds = useDataStore()
       </div>
       <ChampionList class="gap-3  tldr-30 " />
     </div>
-  </NuxtLayout>
+  </div>
 </template>
 
 <style scoped></style>

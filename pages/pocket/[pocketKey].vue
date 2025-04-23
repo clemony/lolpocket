@@ -19,10 +19,8 @@ const selectedRuneSet = ref(pocket.value?.runes.sets?.[0] ?? null)
 </script>
 
 <template>
-  <NuxtLayout
-    name="header-layout" class=" grid  z-10 size-full gap-6 @container/main    " :class="{ 'pt-0': route.name == 'items', 'pt-17': route.name == 'card' }">
-
-    <template #crumb>
+  <div class=" grid  z-10 size-full gap-6 @container/main    " :class="{ 'pt-0': route.name == 'items', 'pt-17': route.name == 'card' }">
+    <AppTitlebar>
       <ItemCrumbMenu v-if="route.name == 'items'" :pocket="pocket" />
 
       <Motion
@@ -39,7 +37,7 @@ const selectedRuneSet = ref(pocket.value?.runes.sets?.[0] ?? null)
       </Motion>
 
       <RunePanelMenu v-if="route.name == 'runes'" :pocket="pocket" />
-    </template>
+    </AppTitlebar>
 
     <LazyNuxtPage
       :selected-runes="selectedRuneSet"
@@ -47,5 +45,5 @@ const selectedRuneSet = ref(pocket.value?.runes.sets?.[0] ?? null)
       :pocket-name="pocket.name"
       :quote="quote"
       @update:is-show="e => isShow = e" />
-  </NuxtLayout>
+  </div>
 </template>

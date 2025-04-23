@@ -4,6 +4,5 @@
 @import './drag.css';
 
 @plugin "tailwindcss-animate";
-@import './ag-grid.css';
 @import './toast.css';
 @import './zoomable.css';

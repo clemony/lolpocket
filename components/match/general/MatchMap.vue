@@ -2,27 +2,20 @@
 import { Primitive } from 'reka-ui'
 import type { PrimitiveProps } from 'reka-ui'
 
+import {gameMaps} from 'data/maps'
 const props = defineProps<PrimitiveProps & {
   class?: HTMLAttributes['class']
-  match: any
-  short?: boolean
+mapId: number
 }>()
 
-const match = computed (() => {
-  return props.match
-})
-const queue = computed(() => {
-  const foundQueue = queues.find(q => q.queueId == match.value.queueId)
-  if (!foundQueue)
-    return null
-
-  // Get the map replacement
-  return !props.short ? foundQueue.map : mapDictionary[0][foundQueue.map] || foundQueue.map
+const map = computed(() => {
+const m = gameMaps.find(m => m.mapId == props.mapId)
+ return m.mapName
 })
 </script>
 
 <template>
   <Primitive v-bind="props">
-    {{ queue }}
+    {{ map }}
   </Primitive>
 </template>

@@ -22,12 +22,12 @@ const captions = computed(() => {
 </script>
 
 <template>
-  <NuxtLayout name="header-layout" class="pt-0  overflow-x-hidden">
-    <template #crumb>
+  <div class="pt-0  overflow-x-hidden">
+    <AppTitlebar>
       <div
         class="text-1  items-center pl-3 pr-7  text-nowrap flex mt-1 "
         v-html="captions" />
-    </template>
+    </AppTitlebar>
 
     <div class="w-full pt-24 px-16 pb-12">
       <h1>Items</h1>
@@ -38,7 +38,7 @@ const captions = computed(() => {
         :list-key="is.listKey"
         class="" />
     </div>
-  </NuxtLayout>
+  </div>
 </template>
 
 <style scoped></style>

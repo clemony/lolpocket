@@ -5,6 +5,7 @@ const as = useAccountStore()
 const us = useUiStore()
 const route = useRoute()
 
+const ms = useMatchStore()
 const summoner = computed(() => {
   return as.userAccount ? as.userAccount : defaultUser
 })
@@ -14,7 +15,7 @@ const summoner = computed(() => {
   <div class="size-full flex flex-col relative overflow-y-scroll overflow-x-hidden">
     <SidebarTitle />
     <div class="inset-0 top-0 left-0  flex-nowrap overflow-x-hidden  overflow-y-scroll gap-2.5 flex mt-5  shrink-0 pb-4 flex-col">
-      <SummonerCard :summoner="summoner" class="px-7 mb-6 " />
+      <SummonerCard :summoner="summoner" class="px-5 mb-6 " />
 
       <div v-for="link in summonerLinks" :key="link.name" class="pl-3 pr-5 w-full">
         <SidebarButton
@@ -42,7 +43,7 @@ const summoner = computed(() => {
         </template>
       </div>
     </div>
-
+    <UpdateMatchHistoryButton v-if="summoner && summoner.puuid"  :puuid="summoner.puuid" />
     <transition-expand v-if="route.path != '/nexus' " group as="div" class="grid">
       <SidebarSeparator class="mt-6 mb-6" />
       <div v-if="route.path == '/research/champions' || route.path == '/research/items' " class=" px-3 mb-5 self-start">
@@ -50,14 +51,13 @@ const summoner = computed(() => {
       </div>
 
       <div v-if="route.path == '/nexus/match_history' " class="w-full px-3 pt-2 self-start">
-        <QueueRadio />
+        <SelectChampionPlayed />
+        <QueueButtons />
+        <PlayedWithList v-if="summoner && summoner.puuid && summoner.gameName" :puuid="summoner.puuid" :game-name="summoner.gameName" />
       </div>
     </transition-expand>
-
-    <!-- <div class="size-full pt-5 relative  max-h-full overflow-hidden   border-t border-t-b3/60 ">
-
-<TrinketPouch  v-if="route.path == '/nexus' "   />
-
-    </div> -->
+    <Grow />
+    <ClearMatchesButton />
+    <LogMatchesButton />
   </div>
 </template>

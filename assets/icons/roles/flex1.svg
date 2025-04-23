@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 94" width="96" height="94">
+	<title>120px-Flex_icon</title>
+	<style>
+		.s0 { opacity: .98;fill: currentColor }
+		.s1 { opacity: .5;fill: none;stroke: currentColor;stroke-miterlimit:100 }
+	</style>
+	<g id="Background">
+		<path id="Path 0" fill-rule="evenodd" class="s0" d="m2 1h81l-11.5 12-57 0.5-0.5 57-12 12zm91.7 10c0.2 0 0.3 18.2 0.3 81h-81.5l11.4-12 57.6-0.5 0.1-57 5.9-5.7c3.3-3.2 6-5.8 6.2-5.8zm-70.8 11h49.1v49l-48.5-0.5zm14.3 25.1l0.2 9.4h21v-21c-18.1-0.5-20.6-0.3-21 0.8-0.3 0.7-0.4 5.6-0.2 10.8z"/>
+		<path id="Stroke" fill-rule="evenodd" class="s1" d="m2 1h81l-11.5 12-57 0.5-0.5 57-12 12zm91.7 10c0.2 0 0.3 18.2 0.3 81h-81.5l11.4-12 57.6-0.5 0.1-57 5.9-5.7c3.3-3.2 6-5.8 6.2-5.8zm-70.8 11h49.1v49l-48.5-0.5zm14.3 25.1l0.2 9.4h21v-21c-18.1-0.5-20.6-0.3-21 0.8-0.3 0.7-0.4 5.6-0.2 10.8z"/>
+	</g>
+</svg>

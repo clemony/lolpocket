@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-const ans = useAnalysisStore()
+const ms = useMatchStore()
 
-const patchGames = computed(() => ans.userMatchData.filter(g => g.patch === ans.patchSelect))
-const { bayesianItems } = usePatchItems(patchGames)
+const patchGames = computed(() => ms.userMatchData.filter(g => g.patch === ms.patchSelect))
+const { bayesianItems } = useMatchItems()
 </script>
 
 <template>
@@ -12,7 +12,7 @@ const { bayesianItems } = usePatchItems(patchGames)
         <div class="oveflow-y-auto size-full">
           <div class=" pt-3 pb-1 px-2 opacity-60 tracking-wide items-center flex  gap-4 text-2 capitalize w-full">
             <span class="grow pl-2">
-              {{ ans.patchSelect }} Items
+              {{ ms.patchSelect }} Items
             </span>
 
             <APDtooltip>
@@ -27,12 +27,12 @@ const { bayesianItems } = usePatchItems(patchGames)
             <div v-if="entry" class="grid  grid-cols-[20px_repeat(2,40px)_1fr_repeat(2,60px)_20px] w-full py-3 border-b border-b-b2 items-center overflow-y-auto">
               <div />
 
-       <div
-        class="  flex rounded-xl  font-semibold badge-xl w-fit px-2.5  self-center  drop-shadow-xs shadow-xs border border-black/10  inset-shadow-sm "
-        :style="{
-          'backgroundColor': `color-mix(in oklab, var(--color-${getGradeColor(entry.bayesianWinrate)}) 70%, transparent)`,
-          'box-shadow': `0px 1px 0px color-mix(in oklab, var(--color-${getGradeColor(entry.bayesianWinrate)}-b100) 40%, transparent),1px 1px 1px var(--color-${getGradeColor(entry.bayesianWinrate)}-w600) inset`,
-        }">
+              <div
+                class="  flex rounded-xl  font-semibold badge-xl w-fit px-2.5  self-center  drop-shadow-xs shadow-xs border border-black/10  inset-shadow-sm "
+                :style="{
+                  'backgroundColor': `color-mix(in oklab, var(--color-${getGradeColor(entry.bayesianWinrate)}) 70%, transparent)`,
+                  'box-shadow': `0px 1px 0px color-mix(in oklab, var(--color-${getGradeColor(entry.bayesianWinrate)}-b100) 40%, transparent),1px 1px 1px var(--color-${getGradeColor(entry.bayesianWinrate)}-w600) inset`,
+                }">
                 <span class="text-4  dst font-mono text-[#FFF] text-shadow-black/5 text-shadow-xs tracking-wide">
                   {{ getGrade(entry.bayesianWinrate) }}
                 </span>

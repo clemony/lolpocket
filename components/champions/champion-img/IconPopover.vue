@@ -68,9 +68,11 @@ const searchResult = computedAsync (() => {
   }
 })
 
-function handleQueryChange() {
+function handleInput(e) {
   if (selectedResult.value)
     selectedResult.value = null
+
+  champSearch.value = e
 }
 
 onMounted (async () => {
@@ -101,14 +103,9 @@ onMounted (async () => {
 </script>
 
 <template>
-  <PopoverContent :side-offset="props.sideOffset" :align-offset="props.alignOffset" :align="props.align" :side="props.side" :class="cn('w-(--reka-popover-trigger-width) px-2 py-2 flex flex-col max-h-96 overflow-y-scroll  rounded-xl **:text-nc/80', props.class)">
-    <div class="w-full px-2 pt-2 self-center relative">
-      <input v-model="champSearch" class="w-full !selection:b1/60 h-10 inset-shadow-sm rounded-lg px-3 text-nc/80 py-2 border-b3/15 bg-b3/10 focus-within:!outline-b3/15 " placeholder="Search Champions..." @input="handleQueryChange()" />
-
-      <button class="absolute right-4  btn-neutral t!ext-nc/80 top-4 grid place-items-center btn btn-xs btn-square" @click="champSearch = null">
-        <icon name="x-sm" class="stroke-[1.5]" />
-      </button>
-    </div>
+  <CustomPopoverContent :side-offset="props.sideOffset" :align-offset="props.alignOffset" :align="props.align" :side="props.side" :class="cn('w-(--reka-popover-trigger-width) px-2 py-2 flex flex-col max-h-96 overflow-y-scroll  ', props.class)">
+<CustomPopoverArrow  />
+      <ContrastSearchInput v-model:model-value="champSearch" @update:input="handleInput($event)" placeholder="Search Champions..."  />
 
     <div v-if="!searchResult" class="pt-2 overflow-y-scroll w-full flex flex-col">
       <label v-for="result in searchQuery" :key="result.item" class="justify-start btn btn-ghost max-h-90 hover:bg-b3/5 hover:border-b3/10 gap-3 text-3">
@@ -129,5 +126,5 @@ onMounted (async () => {
     <div v-if="!searchResult && !searchQuery" class="w-full  px-2  pt-3 pb-4">
       <p>Search for a champion to select a splash art.</p>
     </div>
-  </PopoverContent>
+  </CustomPopoverContent>
 </template>

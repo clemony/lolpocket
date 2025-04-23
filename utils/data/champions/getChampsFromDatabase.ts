@@ -28,7 +28,7 @@ export async function loadChampionData() {
   const ds = useDataStore()
   const json = ref(null)
   try {
-    const module = await import('data/champion.json')
+    const module = await import('data/championFull.json')
     json.value = module.default // Access the actual JSON data
     ds.champions = [...Object.values(json.value.data) as Champion[]]
     rewriteChampionTags()

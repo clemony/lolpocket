@@ -42,7 +42,7 @@ const us = useUiStore()
     <Underline>docs</Underline>
        </div>
 
-        <div class="group/ul w-full !cursor-pointer" @click=" handleSettingsOpen()">
+        <div class="group/ul w-full !cursor-pointer" @click=" handleSidebarOpen(us.settingsOpen)">
     <Underline>settings</Underline>
        </div>
   </div>

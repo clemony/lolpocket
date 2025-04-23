@@ -22,7 +22,7 @@ const math = computed (() => {
       ({{Math.round(player.challenges.killParticipation * 100)}}% <span class="font-mono"> KP</span>)</span>
     </p>
     <p class="text-1 mt-2.25 text-bc/60 text-nowrap  truncate font-medium ">
-      {{ math / 100 }}:1 <span class="font-mono contents">KDA</span>
+      {{ math / 100 == Infinity ? 'PERFECT' : `${math / 100}:1` }} <span class="font-mono contents">KDA</span>
     </p>
   </div>
 </template>

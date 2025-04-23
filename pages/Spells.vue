@@ -2,7 +2,7 @@
 definePageMeta({
   name: 'Summoner Spells',
   path: '/spells',
-  section: 'magic'
+  section: 'magic',
 })
 
 const selectedSpell = ref(0)
@@ -62,8 +62,8 @@ const spellCompute = computed (() => {
 </script>
 
 <template>
-  <NuxtLayout
-    name="header-layout" class="items-center justify-center gap-15 px-27 ">
+  <div class="items-center justify-center gap-15 px-27 size-full">
+    <AppTitlebar />
     <div class="w-full pt-28">
       <h1>Summoner Spells</h1>
     </div>
@@ -162,7 +162,7 @@ const spellCompute = computed (() => {
         </div>
       </Transition>
     </div>
-  </NuxtLayout>
+  </div>
 </template>
 
 <style scoped></style>

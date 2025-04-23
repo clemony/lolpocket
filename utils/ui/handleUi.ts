@@ -1,7 +1,8 @@
 
-export async function handleSettingsClose(){
+export async function handleSidebarClose(sidebar){
+  console.log("💠 - handleSidebarClose - sidebar:", sidebar)
   const us = useUiStore()
-  us.settingsOpen = false
+  sidebar = false
   nextTick(() =>{
   us.enterY = us.previousEnterY
   us.leaveY = us.previousEnterY
@@ -10,13 +11,14 @@ export async function handleSettingsClose(){
   })
 }
 
-export async function handleSettingsOpen(){
+export async function handleSidebarOpen(sidebar){
+console.log("💠 - handleSidebarOpen - sidebar:", sidebar)
 const us = useUiStore()
     us.enterY = 0
     us.leaveY = 0
     us.enterX = '-50%'
     us.leaveX = '50%'
     nextTick(() => {
-    us.settingsOpen = true
+    sidebar = true
     })
 }

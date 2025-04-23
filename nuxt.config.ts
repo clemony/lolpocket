@@ -1,6 +1,7 @@
 import tailwindcss from '@tailwindcss/vite'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
+import VueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineNuxtConfig({
   modules: ['@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', '@vueuse/nuxt', '@nuxtjs/supabase', '@morev/vue-transitions/nuxt', '@nuxt/eslint', 'vue-sonner/nuxt', '@nuxt/icon', 'nuxt-svgo', '@nuxt/image'],
@@ -10,8 +11,15 @@ export default defineNuxtConfig({
     serverBundle: false,
   },
 
+  experimental: {
+    decorators: true,
+  },
+
   vite: {
     plugins: [
+      VueDevTools({
+        appendTo: /\/entry\.m?js$/,
+      }),
       tailwindcss(),
     ],
     vue: {
@@ -96,8 +104,8 @@ export default defineNuxtConfig({
 
   devtools: {
     enabled: false,
-    componentInspector: false,
-    viteInspect: false,
+    componentInspector: true,
+    viteInspect: true,
   },
 
   pinia: {

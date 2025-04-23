@@ -19,17 +19,18 @@ const messages = ref(false)
   <DropdownMenu>
     <DropdownMenuTrigger class="btn btn-ghost  btn-xl text-3 font-medium justify-start px-2 grow *:pointer-events-none data-[state=open]:bg-b2 data-[state=open]:border-b3 !p-0">
       <div class="size-full flex items-center gap-3 relative">
-        <SummonerIcon class="rounded-lg **:rounded-lg size-10 grayscale  tldr-20" />
+        <ProfileSummonerIcon class=" size-10 grayscale  tldr-20" />
       </div>
     </DropdownMenuTrigger>
 
-    <LazyContrastDropdownContent
+    <LazyDropdownMenuContent
       side="right" align="end" :side-offset="11" class="w-80">
-      <ContrastDropdownItem>
-        <SummonerIcon class="rounded-lg **:rounded-lg size-10 grayscale  tldr-20" />
-        <SummonerName />
-      </ContrastDropdownItem>
-      <ContrastDropdownItem class=" group/b ">
+      <DropdownMenuItem class="items-center w-full justify-between">
+        <span class="pl-6.5 grow">Hi, <SummonerName />!</span>
+        <span>good.</span>
+      </DropdownMenuItem>
+      <DropdownMenuSeparator />
+      <DropdownMenuItem class=" group/b ">
         <span class="relative size-5 grid place-items-center">
           <StatusIndicator v-if="messages" class=" top-3.25 right-4 *:!status-md" />
           <icon
@@ -40,20 +41,20 @@ const messages = ref(false)
             class="!size-5.5 shrink-0  opacity-0 group-hover/b:opacity-100 tldr-30   absolute  " />
         </span>
         Notifications
-      </ContrastDropdownItem>
+      </DropdownMenuItem>
 
-      <ContrastDropdownSeparator />
+      <DropdownMenuSeparator />
       <SidebarPatchNotes />
-      <ContrastDropdownSeparator />
+      <DropdownMenuSeparator />
 
-      <ContrastDropdownItem
-        class=""  @click=" handleSettingsOpen()">
+      <DropdownMenuItem
+        class="" @click=" handleSidebarOpen(us.settingsOpen)">
         <icon
           name="ph:gear-six" />
         Settings
-      </ContrastDropdownItem>
-      <ContrastDropdownSeparator />
-      <ContrastDropdownItem
+      </DropdownMenuItem>
+      <DropdownMenuSeparator />
+      <DropdownMenuItem
         v-if="as.userAccount.session"
         class=""
         @click="handleClick('out')">
@@ -61,16 +62,16 @@ const messages = ref(false)
           name="ph:sign-out" />
 
         Sign out
-      </ContrastDropdownItem>
+      </DropdownMenuItem>
 
-      <ContrastDropdownItem v-else class="" @click="handleClick('in')">
+      <DropdownMenuItem v-else class="" @click="handleClick('in')">
         <LoginDialog>
           <icon
             name="ph:sign-in" />
         </LoginDialog>
 
         Sign in
-      </ContrastDropdownItem>
-    </LazyContrastDropdownContent>
+      </DropdownMenuItem>
+    </LazyDropdownMenuContent>
   </DropdownMenu>
 </template>

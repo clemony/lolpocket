@@ -7,10 +7,8 @@ definePageMeta({
 </script>
 
 <template>
-  <NuxtLayout
-    name="header-layout">
-    <PagePlaceholder />
-  </NuxtLayout>
+  <AppTitlebar />
+  <PagePlaceholder />
 </template>
 
 <style scoped></style>

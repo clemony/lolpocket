@@ -3,7 +3,7 @@ const props = defineProps<{
   patchGames: any
 }>()
 const ds = useDataStore()
-const ans = useAnalysisStore()
+const ms = useMatchStore()
 const championObjects = computed(() => {
   const result = [...getPatchChampions(props.patchGames)]
   // Ensure the array always has 5 elements by padding with null objects
@@ -42,7 +42,7 @@ const champs = computed (() => {
         </p>
       </div>
       <div class="font-medium grow justify-end text-end">
-        {{ ans.patchSelect }}
+        {{ ms.patchSelect }}
       </div>
     </div>
     <div class="justify-self-end w-full pt-8  h-full">

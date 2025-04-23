@@ -4,7 +4,7 @@ export const as = computedAsync(async () => {
   return await useAccountStore()
 }, null)
 export const ans = computedAsync(async () => {
-  return await useAnalysisStore()
+  return await useMatchStore()
 }, null)
 
 export const ds = computedAsync(async () => {
@@ -34,3 +34,4 @@ export const cs = computedAsync(async () => {
 export const us = computedAsync(async () => {
   return await useUiStore()
 }, null)
+

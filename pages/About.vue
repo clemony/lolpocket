@@ -68,7 +68,8 @@ const faq = [
 </script>
 
 <template>
-  <NuxtLayout name="header-layout" class="px-18  size-full grid place-items-center">
+  <div class="px-18  size-full grid place-items-center">
+    <AppTitlebar />
     <div class="flex w-210  flex-col gap-6 items-center mx-auto">
       <div class="grid grid-cols-[20px_1fr] w-full gap-x-14 **:font-mono  mockup-code text-nc text-3  ">
         <div class="col-start-1 grid pl-6 gap-y-1 items-center">
@@ -175,7 +176,7 @@ const faq = [
         </p>
       </div>
     </div>
-  </NuxtLayout>
+  </div>
 </template>
 
 <style scoped></style>

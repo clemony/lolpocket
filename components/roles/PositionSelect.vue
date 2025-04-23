@@ -4,16 +4,16 @@ import { positions } from './handleRoles'
 const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
-const ans = useAnalysisStore()
+const ms = useMatchStore()
 </script>
 
 <template>
-  <Select v-model:model-value="ans.positionSelect" class="p-0" @update:model-value="(e) => ans.positionSelect = e">
+ <!--  <Select v-model:model-value="ms.positionSelect" class="p-0" @update:model-value="(e) => ms.positionSelect = e">
     <SelectTrigger class="text-left shadow-none border-b3/80 bg-b1/60 inset-shadow-xs rounded-lg align-bottom h-12 pl-13 relative flex items-center text-4 tracking-tight font-medium" :class="cn('', props.class)">
       <component
-        :is="`i-roles-${ans.positionSelect.toString().replace(' ', '-')}`"
+        :is="`i-roles-${ms.positionSelect.toString().replace(' ', '-')}`"
         class="h-5 w-auto absolute left-4 dst shrink-0" />
-      <SelectValue :placeholder="ans.positionSelect.toString()" class="text-left w-20 capitalize" />
+      <SelectValue :placeholder="ms.positionSelect.toString()" class="text-left w-20 capitalize" />
     </SelectTrigger>
     <SelectContent position="popper" class="!w-[var(--reka-select-trigger-width)]">
       <SelectGroup>
@@ -28,6 +28,6 @@ const ans = useAnalysisStore()
           </span>
         </SelectItem>
       </SelectGroup>
-    </SelectContent>
-  </Select>
+    </SelectContent> -->
+  <!-- </Select> -->h
 </template>

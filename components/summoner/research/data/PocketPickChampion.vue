@@ -3,7 +3,7 @@ const props = defineProps<{
   patchGames: any
 }>()
 const ds = useDataStore()
-const ans = useAnalysisStore()
+const ms = useMatchStore()
 
 const highestChamp = computed (() => {
   const c = ref(getPatchChampions(props.patchGames))
@@ -61,7 +61,7 @@ const winrateDiff = computed (() => {
           <icon name="ph:percent-bold" class="size-7" />
         </div>
         <div class="stat-desc text-2">
-          21% higher <APDtooltip /> than {{ ans.previousPatch }}
+          21% higher <APDtooltip /> than {{ ms.previousPatch }}
         </div>
       </div>
 
@@ -77,7 +77,7 @@ const winrateDiff = computed (() => {
           <icon name="ph:percent-bold" class="size-7" />
         </div>
         <div class="stat-desc text-2">
-          21% higher <APDtooltip /> than {{ ans.previousPatch }}
+          21% higher <APDtooltip /> than {{ ms.previousPatch }}
         </div>
       </div>
       <NoDataOverlay v-if="!props.patchGames.length" />

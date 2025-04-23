@@ -3,7 +3,6 @@ const props = defineProps<{
   player: any
   match: any
 }>()
-
 const player = computed (() => {
   return props.player
 })
@@ -23,7 +22,7 @@ const playerWin = computed (() => {
 <template>
   <div
     :class="playerWin ? 'bg-inspiration' : 'bg-domination'"
-    class="!text-2 w-full shadow-sm flex-nowrap flex py-1 gap-2 mb-2 items-center pl-2 !font-medium !tracking-wide rounded-md text-white capitalize">
+    class="!text-2 w-full max-w-20 shadow-sm flex-nowrap flex py-1 gap-2 mb-2 items-center pl-2 !font-medium !tracking-wide rounded-md text-white capitalize">
     <icon
       name="uis:graph-bar"
       class="size-3.5 text-white shrink-0" />

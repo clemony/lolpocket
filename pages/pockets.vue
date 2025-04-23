@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 definePageMeta({
   title: 'All',
-section: 'pockets',
+  section: 'pockets',
 })
 
 const route = useRoute()
@@ -14,18 +14,17 @@ onMounted (() => {
 </script>
 
 <template>
-  <NuxtLayout
-    name="header-layout" class="px-8">
+  <div class="px-8 size-full">
     <!--   delete button -->
-    <template #crumb>
+    <AppTitlebar>
       <button v-if="route.path == '/pockets/trash'" class="btn  bg-domination  text-white text-2 font-medium">
         <icon name="nimbus:fire" class="size-5 text-white" />
         <span class="pt-px">Delete All</span>
       </button>
-    </template>
+    </AppTitlebar>
 
     <LazyNuxtPage />
-  </NuxtLayout>
+  </div>
 </template>
 
 <style scoped>

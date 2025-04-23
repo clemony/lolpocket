@@ -6,14 +6,11 @@ export function cleanHtmlEntitiesAndTags(str) {
     return str // Return as-is if not a string
   }
 
-  // Decode HTML entities
   let decodedStr = decode(str)
   console.log('💠 - cleanHtmlEntitiesAndTags - decodedStr:', decodedStr)
 
-  // Remove HTML tags
   decodedStr = decodedStr.replace(/<[^>]*>/g, '')
 
-  // Remove unescaped control characters (e.g., newlines in JSON values)
   // eslint-disable-next-line no-control-regex
   decodedStr = decodedStr.replace(/[\u0000-\u001F\u007F]/g, ' ') // Replace with a space
 
@@ -26,10 +23,8 @@ export function cleanJsonString(jsonStr) {
       throw new TypeError('Input to cleanJsonString must be a string')
     }
 
-    // Decode and clean the JSON string
     const cleanedJsonStr = cleanHtmlEntitiesAndTags(jsonStr)
 
-    // Parse the cleaned JSON
     return JSON.parse(cleanedJsonStr)
   }
   catch (error) {

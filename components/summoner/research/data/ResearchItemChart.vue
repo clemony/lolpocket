@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 const ds = useDataStore()
-const ans = useAnalysisStore()
+const ms = useMatchStore()
 
-const patchGames = computed(() => ans.userMatchData.filter(g => g.patch === ans.patchSelect))
-const { bayesianItems } = usePatchItems(patchGames)
+const patchGames = computed(() => ms.userMatchData.filter(g => g.patch === ms.patchSelect))
+const { bayesianItems } = useMatchItems()
 
 const data = ref({
   datasets: [
@@ -67,8 +67,6 @@ watchEffect(async () => {
     datasets: [newDataset],
   }
 })
-
-
 </script>
 
 <template>
@@ -80,7 +78,7 @@ watchEffect(async () => {
         </div>
 
         <transition-slide class="pointer-events-none">
-          <div v-if="!ans.patchGames.length" class="absolute top-0 left-0 size-full bg-black/40 rounded-box grid place-items-center">
+          <div v-if="!ms.patchGames.length" class="absolute top-0 left-0 size-full bg-black/40 rounded-box grid place-items-center">
             <div class="badge badge-xl text-2 shadow-lg opacity-90">
               No data this patch.
             </div>

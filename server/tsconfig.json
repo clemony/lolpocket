@@ -1,3 +1,31 @@
 {
-  "extends": "../.nuxt/tsconfig.server.json"
+  "extends": "../.nuxt/tsconfig.server.json",
+  "exclude": [
+    ".nuxt",
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "paths": {
+      "#imports": [".nuxt/imports.d.ts"],
+
+      "#app": [
+        "../node_modules/nuxt/dist/app"
+      ]
+
+    },
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "strict": false,
+    "outDir": "/dist",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  }
 }

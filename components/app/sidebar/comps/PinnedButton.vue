@@ -48,8 +48,8 @@ const pinVariants = {
           <icon name="pin-solid" class="size-6 group-hover/pin-btn:opacity-95 opacity-65 dst tldr-20" />
         </motion.span>
         <motion.div v-if="us.pinnedOpen" key="pin-btn" layout class="relative size-full grid place-items-center">
-          <icon name="pin" class="size-6 opacity-100 group-hover/pin-btn:opacity-0 tldr-20 dst absolute" />
-          <icon name="iconoir:pin-slash" class="size-6 opacity-0 group-hover/pin-btn:opacity-100 tldr-20 dst absolute" />
+          <icon name="pin" class="size-4.5 opacity-100 group-hover/pin-btn:opacity-0 tldr-20 dst absolute" />
+          <icon name="iconoir:pin-slash" class="size-4.5 opacity-0 group-hover/pin-btn:opacity-100 tldr-20 dst absolute" />
         </motion.div>
 
         <input v-model="us.pinnedOpen" type="checkbox" class="peer hidden" />

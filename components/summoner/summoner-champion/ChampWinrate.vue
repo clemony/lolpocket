@@ -17,7 +17,7 @@ const a = computed(() => {
       :style="{
         transform: `translateX(${a > 40 ? (a / 2) - 10 : (a / 20) + 40}%)`,
       }">
-      {{ a }}%
+      {{ a.toFixed(1).replace('.0', '') }}%
     </div>
   </div>
 </template>

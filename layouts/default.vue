@@ -8,20 +8,14 @@ const route = useRoute()
 
 <template>
   <LayoutGroup>
-    <motion.div :transition="{}" class="h-screen  w-screen flex overflow-hidden flex-nowrap " layout>
+    <motion.div :transition="{}" class="h-screen  w-screen flex overflow-hidden flex-nowrap " :class="{ '!bg-b2/10': route.name == 'card' }" layout>
       <AppNavbar />
       <AppCommand />
-      <div class="flex flex-col  h-screen min-h-screen grow w-full">
-        <NuxtLoadingIndicator color="var(--color-neutral)" />
-
-        <Toast
-          position="top-center"
-          :expand="true"
-          :duration="Infinity" />
-
-        <LazyNewPocketDialog />
-
-        <slot />
+      <div class="flex relative h-screen min-h-screen grow w-full h-screen">
+        <slot name="titlebar" />
+        <div class="inset-0 absolute left-0 top-0" :class="{ 'overflow-y-auto ': route.path != '/' }">
+          <slot />
+        </div>
       </div>
     </motion.div>
   </LayoutGroup>

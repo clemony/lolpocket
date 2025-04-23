@@ -1,27 +1,27 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
 import { ArcElement, CategoryScale, Chart, DoughnutController, Tooltip } from 'chart.js'
-import { externalTooltip } from 'plugins/chartJS/externalTooltip'
 import { Doughnut } from 'vue-chartjs'
 
 const props = defineProps<{
-  labels: Array<string>
+  labels?: Array<string>
   datasets: any
   colors: Array<string>
-  aria: string
+  aria?: string
   overlap?: boolean
   class?: HTMLAttributes['class']
   type?: string
   cutout?: string
   noTooltip?: boolean
 }>()
+  console.log("💠 - datasets:", props.datasets)
 Chart.defaults.datasets.doughnut.borderRadius = 100
 Chart.defaults.datasets.doughnut.borderJoinStyle = 'round'
 Chart.defaults.datasets.doughnut.hoverBorderWidth = 1
 
 Chart.register(Tooltip, DoughnutController, ArcElement)
 
-const chartData = {
+const chartData = computed(() => ({
   type: 'doughnut',
   labels: props.labels,
   datasets: props.datasets,
@@ -30,7 +30,6 @@ const chartData = {
     plugins: {
       tooltip: {
         enabled: false,
-        external: props.noTooltip ? null : externalTooltip,
       },
     },
     elements: {
@@ -43,7 +42,8 @@ const chartData = {
     },
     cutout: props.cutout ? props.cutout : '80%',
   },
-}
+}))
+console.log("💠 - chartData.options.elements.arc.props.colors,:", props.colors,)
 </script>
 
 <template>
@@ -55,4 +55,3 @@ const chartData = {
     :class="props.class" />
 </template>
 
-<style scoped></style>

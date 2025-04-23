@@ -2,6 +2,7 @@
 import { toast } from 'vue-sonner'
 
 const as = useAccountStore()
+const ms = useMatchStore()
 const appConfig = useAppConfig()
 const useHead = useHeader()
 
@@ -18,6 +19,7 @@ client.auth.onAuthStateChange(async (event, session) => {
   }
   else if (event === 'SIGNED_OUT') {
     as.userAccount = defaultUser
+    ms.setMatches([])
     console.log('😰 - Signed Out')
     if (route.path != '/') {
       router.push('/')
@@ -32,6 +34,15 @@ client.auth.onAuthStateChange(async (event, session) => {
     as.userAccount.accessToken = data.session.access_token
     as.userAccount.refreshToken = data.session.refresh_token
     as.userAccount.session = data.session
+
+    if (session?.user?.id) {
+      const puuid = as.userAccount.puuid
+      if (puuid) {
+        console.log('💠 - client.auth.onAuthStateChange - puuid:', puuid)
+        const { fetchInitialMatches } = useMatchData(puuid)
+        await fetchInitialMatches()
+      }
+    }
   }
 })
 
@@ -43,6 +54,14 @@ onMounted(async () => {
 
 <template>
   <NuxtLayout>
+    <NuxtLoadingIndicator color="var(--color-neutral)" />
+
+    <Toast
+      position="top-center"
+      :expand="true"
+      :duration="Infinity" />
+
+    <LazyNewPocketDialog />
     <LazyNuxtPage />
   </NuxtLayout>
 </template>

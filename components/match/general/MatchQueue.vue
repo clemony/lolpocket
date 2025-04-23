@@ -1,16 +1,14 @@
 <script lang="ts" setup>
 import type { PrimitiveProps } from 'reka-ui'
+import {queues, queueDictionary} from 'data/queues'
 
 const props = defineProps<PrimitiveProps & {
   class?: HTMLAttributes['class']
-  match: any
+  queueId: number
 }>()
 
-const match = computed (() => {
-  return props.match
-})
 const queue = computed(() => {
-  const foundQueue = queues.find(q => q.queueId == match.value.queueId)
+  const foundQueue = queues.find(q => q.queueId == props.queueId)
   if (!foundQueue)
     return null
 

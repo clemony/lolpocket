@@ -1,19 +1,5 @@
 @import 'tailwindcss';
-@import './utilities.css';
-@import './one-off.css';
-@import './abbreviations.css';
-@import './plugins/plugins.css';
-@import './components.css';
-
-@import './default-theme.css';
-@import './style-defaults.css';
-@import './colors.css';
-
-@import '../animation/animations.css';
-
-@import './fonts.css';
-
-@import './color-themes.css';
+@import './index.css';
 
 @layer base {
   :root {

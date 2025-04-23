@@ -5,15 +5,12 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="flex justify-start w-full left-0 absolute bg-gradient-to-b pb-4 from-b1 to-b1/60 backdrop-blur-md  min-h-26 !h-26 w-full absolute -top-0 z-1">
-    <div class="flex items-center gap-5  w-110">
-      <div class="border-neutral/60 grid place-items-center rounded-full border shadow-md">
-        <SummonerIcon class="size-19 rounded-full" />
-      </div>
 
-      <div class="flex flex-col justify-center gap-1.5 drop-shadow-sm">
+    <div class="flex justify-end w-110 min-h-26 !h-26 items-center gap-5 ">
+
+      <div class="flex flex-col justify-center items-end gap-1.5 drop-shadow-sm">
         <div class="flex items-center gap-6">
-          <h1 class="!text-8 font-serif leading-none font-bold">
+          <h1 class="!text-8 font-serif leading-none grow text-end font-bold">
             {{ summoner.gameName || summoner.name || 'Summoner' }}
           </h1>
           <p class="pt-1.25">
@@ -32,8 +29,11 @@ const props = defineProps<{
           <span>#{{ summoner.region }}</span>
         </div>
       </div>
+      <div class=" size-fit grid place-items-center rounded-full drop-shadow-sm  shadow-sm shrink-0">
+        <ProfileSummonerIcon class="size-19 rounded-full" />
+      </div>
     </div>
-  </div>
+
 </template>
 
 <style scoped></style>

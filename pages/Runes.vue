@@ -4,15 +4,14 @@ const rs = useRuneStore()
 definePageMeta({
   name: 'runes-data',
   title: 'Runes',
-section: 'magic'
+  section: 'magic',
 })
 const rune = ref(rs.hoveredRune)
 </script>
 
 <template>
-  <NuxtLayout
-    name="header-layout" class="flex gap-10  px-22 flex-col pt-54">
- 
+  <div class="flex gap-10 size-full  px-22 flex-col pt-54">
+    <AppTitlebar />
     <div class="flex size-full justify-start">
       <RunePanels />
 
@@ -20,7 +19,7 @@ const rune = ref(rs.hoveredRune)
         <RuneData v-if="rs.hoveredRune" :rune="rune" />
       </div>
     </div>
-  </NuxtLayout>
+  </div>
 </template>
 
 <style>

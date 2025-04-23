@@ -10,15 +10,15 @@ const match = computed (() => {
 })
 
 const blue = computed (() => {
-  return match.value.participants.filter(p => p.teamId == 100)
+  return match.value.info.participants.filter(p => p.teamId == 100)
 })
 
 const red = computed (() => {
-  return match.value.participants.filter(p => p.teamId == 200)
+  return match.value.info.participants.filter(p => p.teamId == 200)
 })
 
 const modelValue = ref<string | number>('Scoreboard')
-const list = ['Scoreboard', 'Data', 'Progression', 'Tributes']
+const list = ['Scoreboard', 'Data','Credits']
 
 watch(
   () => modelValue.value,
@@ -39,7 +39,7 @@ watch(
       <LazyMatchScoreboard :match="match" :blue="blue" :red="red" />
     </TabsContent>
 
-    <TabsContent value="Tributes" class="px-2 ">
+    <TabsContent value="Credits" class="px-2 ">
       <LazyMatchTributes :match="match" :blue="blue" :red="red" />
     </TabsContent>
 

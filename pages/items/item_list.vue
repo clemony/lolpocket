@@ -211,8 +211,12 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowS
 </script>
 
 <template>
-  <NuxtLayout
-    name="header-layout" class=" pt-18" >
+  <div class="size-full pt-18" >
+    <AppTitlebar>
+      <div class=" text-7 flex font-semibold items-center dst">
+    
+      </div>
+    </AppTitlebar>
     <AgGridVue
       :initial-state="is.dbItemGridState"
       :grid-options="gridOptions"
@@ -223,5 +227,5 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowS
       @grid-pre-destroyed="onGridPreDestroyed"
       @grid-ready="onGridReady">
     </AgGridVue>
-  </NuxtLayout>
+  </div>
 </template>

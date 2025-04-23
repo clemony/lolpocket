@@ -4,11 +4,10 @@ const props = defineProps<{
   itemNum: number
   title?: string
 }>()
-const ans = useAnalysisStore()
+const ms = useMatchStore()
 const ds = useDataStore()
 
-const patchGames = computed(() => ans.userMatchData.filter(g => g.patch === ans.patchSelect))
-const { bayesianItems } = usePatchItems(patchGames)
+const { bayesianItems } = useMatchItems()
 
 const mvi = computed(() => {
   if (!bayesianItems.value.length)
@@ -23,16 +22,12 @@ const item = computed (() => {
   return ds.items.find(i => i.name == mvi.value.item.name)
 })
 
-
-
 const itemColor = computedAsync (() => {
   if (!mvi.value && !itemColor.value)
     return
-return getGradeColor(mvi.value.bayesianWinrate)
+  return getGradeColor(mvi.value.bayesianWinrate)
 })
-console.log("💠 - itemColor - itemColor:", itemColor)
-
-
+console.log('💠 - itemColor - itemColor:', itemColor)
 </script>
 
 <template>
@@ -72,7 +67,7 @@ console.log("💠 - itemColor - itemColor:", itemColor)
       <div class="items-end grid text-2 font-medium text-bc/60">
         <Grow />
         <p>
-          {{ ans.patchSelect }}
+          {{ ms.patchSelect }}
         </p>
         <p class="-mb-px">
           Winrate

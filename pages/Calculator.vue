@@ -20,10 +20,9 @@ console.log('💠 - is.calculatorSets:', is.calculatorSets)
 </script>
 
 <template>
-  <NuxtLayout
-
-    name="header-layout"
-    class="  pt-8  overflow-y-auto">
+  <div
+    class="size-full  pt-8  overflow-y-auto">
+    <AppTitlebar />
     <ListboxRoot v-model="is.setsToCompare" multiple>
       <ListboxFilter />
 
@@ -63,7 +62,7 @@ console.log('💠 - is.calculatorSets:', is.calculatorSets)
         </ListboxGroup>
       </ListboxContent>
     </ListboxRoot>
-  </NuxtLayout>
+  </div>
 </template>
 
 <style scoped>

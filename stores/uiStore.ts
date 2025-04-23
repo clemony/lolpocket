@@ -5,6 +5,7 @@ export const useUiStore = defineStore('UiStore', () => {
   const sidebarExpanded = ref(true)
   const triggerSidebar = refAutoReset(false, 1000)
   const settingsOpen = ref(false)
+  const sidebarMenuOpen = ref(false)
   const toggleSidebar = useToggle(sidebarExpanded)
   const toggleSettings = useToggle(settingsOpen)
   const enterY = ref<string | number>('-50%')
@@ -50,6 +51,7 @@ export const useUiStore = defineStore('UiStore', () => {
     triggerSidebar,
     toggleSidebar,
     settingsOpen,
+    sidebarMenuOpen,
     toggleSettings,
     enterY,
     previousEnterY,
