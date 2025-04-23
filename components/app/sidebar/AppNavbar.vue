@@ -84,44 +84,47 @@ const arrowVariants = {
         class="flex flex-col h-full gap-3.75 relative z-5 items-center pt-16 pb-3.25 bg-b2/40  w-[50px] "
         :class="{ 'border-r border-b3/60': route.path != '/' }"
         :style="{ '--bg-noise': 1 }">
-
-        <NavBtn v-tippy="`Menu`" class="" @click="handleSidebarOpen(us.sidebarMenuOpen)">
-          <icon name="radix-icons:hamburger-menu" class="size-5.5 dst" />
+        <NavBtn v-tippy="`Menu`" class="" @click="handleSidebarOpen('menu')">
+          <icon name="menu" class="size-5.5 dst" />
         </NavBtn>
 
         <NavBtn v-tippy="'Nexus'" :class="{ 'btn-active': route.meta.section == 'nexus' }" @click="navigateTo('/nexus')">
-          <icon name="ph:polygon-fill" class="size-5.5" />
+          <icon name="nexus" class="size-5.5" />
         </NavBtn>
-        <NavBtn v-tippy="`Menu`" class="" @click="navigateTo('/match')">
-          <icon name="radix-icons:clock" class="size-5.5 dst" />
+        <NavBtn v-tippy="`Match History`" class="" @click="navigateTo('/match')">
+          <icon name="clock" class="size-5.5 dst" />
         </NavBtn>
-        <NavBtn v-tippy="`Analytics`" class=""   :class="{ 'btn-active': route.meta.section == 'analytics' }" @click="navigateTo('/analytics/champions')">
-          <icon name="uis:analytics" class="size-5.5 dst" />
+        <NavBtn v-tippy="`Analytics`" class="" :class="{ 'btn-active': route.meta.section == 'analytics' }" @click="navigateTo('/analytics/champions')">
+          <icon name="chart" class="size-5.5 dst" />
         </NavBtn>
-          <!-- <icon name="famicons:analytics" class="size-5.5 dst" /> -->
-
-
+        <!-- <icon name="famicons:analytics" class="size-5.5 dst" /> -->
 
         <NavBtn v-tippy="'Backpack'" :class="{ 'btn-active': route.path == '/backpack' }" @click="navigateTo('/backpack')">
-          <icon name="radix-icons:backpack" class="size-5 " />
+          <icon name="backpack" class="size-5 " />
         </NavBtn>
 
         <NavBtn
           v-tippy="'Calculator'" :class="{ 'btn-active': route.path == '/calculator' }"
           @click="navigateTo('/calculator')">
-          <icon name="teenyicons:calculator-outline" class="size-5" />
+          <icon name="calc" />
         </NavBtn>
 
         <NavBtn
           v-tippy="'Items'" :class="{ 'btn-active': route.meta.section == 'items' }"
           @click="navigateTo('/items')">
-          <i-ui-hitter class="size-5.75 opacity-70" />
+          <i-ui-hitter class="size-6 opacity-70" />
         </NavBtn>
 
         <NavBtn
           v-tippy="'Champions'" :class="{ 'btn-active': route.path == '/champions' }"
           @click="navigateTo('/champions')">
-          <i-ui-champion class="size-5.75 opacity-70" />
+          <i-lol-teemo class="size-6.75 dst " />
+        </NavBtn>
+
+        <NavBtn
+          v-tippy="'Runes & Spellbook'" :class="{ 'btn-active': route.meta.section == 'magic' }"
+          @click="navigateTo('/runes')">
+          <icon name="teenyicons:book-outline" class="size-5.25" />
         </NavBtn>
 
         <NavBtn
@@ -130,18 +133,17 @@ const arrowVariants = {
           <icon name="ion:information-sharp" class="size-6" />
         </NavBtn>
 
-
         <Grow />
-    <!--     <PinnedButton /> -->
+        <!--     <PinnedButton /> -->
         <div class="grid w-full place-items-center">
           <SidebarAddPocket />
-        <NavBtn v-tippy="`Command ${getDeviceKey()}K`" class="" @click="us.commandOpen = true ">
-          <icon name="eva:search-outline" class=" dst" />
-        </NavBtn>
+          <NavBtn v-tippy="`Command ${getDeviceKey()}K`" class="" @click="us.commandOpen = true ">
+            <icon name="eva:search-outline" class=" dst" />
+          </NavBtn>
 
-        <NavBtn v-tippy="'Settings'" class="disabled:btn-neutral, disabled:**:!text-nc disabled:hover:opacity-80" :class="{ 'btn-neutral **:!text-nc **:opacity-100 pointer-events-none': us.settingsOpen }" @click="handleSidebarOpen(computed(() => us.settingsOpen))">
-          <icon name="heroicons:cog-6-tooth-20-solid" class=" dst opacity-70 size-4.75" />
-        </NavBtn>
+          <NavBtn v-tippy="'Settings'" class="disabled:btn-neutral, disabled:**:!text-nc disabled:hover:opacity-80" :class="{ 'btn-neutral **:!text-nc **:opacity-100 pointer-events-none': us.settingsOpen }" @click="handleSidebarOpen('settings')">
+            <icon name="heroicons:cog-6-tooth-20-solid" class=" dst opacity-70 size-4.75" />
+          </NavBtn>
           <SidebarDropdown />
         </div>
       </motion.nav>

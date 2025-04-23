@@ -10,8 +10,7 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
       <ul :class="listClass">
         <h3>Tools</h3>
         <li
-          :class="itemClass"
-        >
+          :class="itemClass">
           Create a Pocket
         </li>
       </ul>
@@ -19,14 +18,12 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
       <template v-for="section in externalLinks" :key="section">
         <ul
           v-if="section.name"
-          :class="listClass"
-        >
+          :class="listClass">
           <h3>{{ section.name }}</h3>
           <li
             v-for="link in section.submenu"
             :key="link.name"
-            :class="itemClass"
-          >
+            :class="itemClass">
             {{ link.name }}
           </li>
         </ul>
@@ -34,16 +31,14 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
           <ul
             v-for="menu in section.submenu"
             :key="menu.name"
-            :class="listClass"
-          >
+            :class="listClass">
             <h3>{{ `${menu.name} Links` }}</h3>
 
             <li
               v-for="link in menu.items"
               :key="link.name"
               target="_blank"
-              :href="link.url"
-            >
+              :href="link.url">
               <a :class="itemClass">
                 {{ link.name }}
                 <icon name="mingcute:external-link-line" />
@@ -54,27 +49,14 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
       </template>
 
       <ul :class="listClass">
-        <h3>Settings</h3>
-        <li
-          v-for="link in settingLinks"
-          :key="link.name"
-          class="flex items-center gap-2 capitalize"
-        >
-          {{ link.name }}
-        </li>
-      </ul>
-
-      <ul :class="listClass">
         <h3>Info</h3>
         <li
           v-for="link in infoLinks"
           :key="link.name"
-          class="flex items-center gap-2"
-        >
+          class="flex items-center gap-2">
           <NuxtLink
             v-if="link.type == 'i'"
-            :to="{ path: link.url }"
-          >
+            :to="{ path: link.url }">
             {{ link.name }}
           </NuxtLink>
 
@@ -82,8 +64,7 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
             v-else
             :key="link.name"
             target="_blank"
-            :href="link.url"
-          >
+            :href="link.url">
             {{ link.name }}
           </a>
         </li>

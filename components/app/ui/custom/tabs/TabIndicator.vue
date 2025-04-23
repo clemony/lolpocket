@@ -9,6 +9,7 @@ const props = defineProps<
   TabsIndicatorProps & {
     class?: HTMLAttributes['class']
     orientation?: 'horizontal' | 'vertical'
+    contrast?: boolean
   }
 >()
 const forwarded = reactiveOmit(props, 'class')
@@ -44,7 +45,7 @@ const variants = {
       :class="cn(' top-1 absolute transition-all  ', { '!top-0 left-1': props.orientation == 'vertical' }, props.class)">
       <motion.div
         class="h-full w-full rounded-lg bg-b1 text-bc shadow"
-        :class="cn('   ', { 'shadow-sm shadow-black/3 !bg-b1/90 ': props.orientation == 'vertical' })" />
+        :class="cn('   ', { 'shadow-sm shadow-black/3 !bg-b1/90 ': props.orientation == 'vertical', 'bg-neutral/85': props.contrast })" />
     </motion.div>
   </TabsIndicator>
 </template>

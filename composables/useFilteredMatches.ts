@@ -5,10 +5,10 @@ export function useFilteredMatches(
   const { matches: simplifiedMatches, queueSelect, championSelect, playerSelect, patchSelect } = storeToRefs(ms)
   console.log('💠 - simplifiedMatches:', simplifiedMatches)
 
-  // Map full matches by gameCreation (assuming it's unique + matches the simplified data)
+  // Map full matches by gameEndTimestamp (assuming it's unique + matches the simplified data)
   const matchMap = computed(() => {
     return new Map(
-      fullMatches.value.map(match => [match.info.gameCreation, match]),
+      fullMatches.value.map(match => [match.info.gameEndTimestamp, match]),
     )
   })
 
@@ -45,8 +45,9 @@ export function useFilteredMatches(
       return []
 
     return filteredSimplified.value
-      .map(simplified => matchMap.value.get(simplified.gameCreation))
-      .filter(Boolean) as MatchData[]
+      .map(simplified => matchMap.value.get(simplified.gameEndTimestamp))
+      .filter(Boolean)
+      .sort((a, b) => b.info.gameEndTimestamp - a.info.gameEndTimestamp) as MatchData[]
   })
 
   const championsPlayed = computed(() => {

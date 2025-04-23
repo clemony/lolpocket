@@ -58,6 +58,7 @@ export default defineAppConfig({
       'dot': 'radix-icons:dot-filled',
       'edit': 'radix-icons:pencil-2',
       'export': 'radix-icons:share-2',
+      'menu': 'radix-icons:hamburger-menu',
 
       // folder
       'x-folder': 'teenyicons:folder-x-outline',
@@ -90,6 +91,12 @@ export default defineAppConfig({
       'up-face': 'iconoir:emoji-look-up',
       'images': 'entypo:images',
       'picture': 'radix-icons:image',
+      'nexus': 'ph:polygon-fill',
+      'clock': 'radix-icons:clock',
+      'chart': 'uis:analytics',
+      'backpack': 'radix-icons:backpack',
+      'book': 'teenyicons:book-outline',
+      'library': 'material-symbols-light:local-library-outline-rounded',
     },
   },
 })

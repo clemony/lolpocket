@@ -14,7 +14,6 @@ const props = defineProps<{
   cutout?: string
   noTooltip?: boolean
 }>()
-  console.log("💠 - datasets:", props.datasets)
 Chart.defaults.datasets.doughnut.borderRadius = 100
 Chart.defaults.datasets.doughnut.borderJoinStyle = 'round'
 Chart.defaults.datasets.doughnut.hoverBorderWidth = 1
@@ -43,7 +42,6 @@ const chartData = computed(() => ({
     cutout: props.cutout ? props.cutout : '80%',
   },
 }))
-console.log("💠 - chartData.options.elements.arc.props.colors,:", props.colors,)
 </script>
 
 <template>

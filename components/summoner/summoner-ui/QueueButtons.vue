@@ -11,7 +11,7 @@ const ms = useMatchStore()
 </label>
 
     <IndicatorTabsList class=" w-full grid grid-cols-4 h-12">
-      <IndicatorTabsTrigger v-tippy="'All Matches'" :value="0" class="px-4">
+      <IndicatorTabsTrigger  v-tippy="'All Matches'" :value="0" class="px-4">
         <icon name="ph:infinity-bold" class="size-6.5 dst" />
       </IndicatorTabsTrigger>
 

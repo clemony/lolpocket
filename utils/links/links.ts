@@ -1,60 +1,42 @@
 export const summonerLinks = [
   {
-    name: `Base`,
+    name: `Nexus`,
     link: '/nexus',
-    icon: 'mynaui:stop-diamond',
+    icon: 'nexus',
     iconClass: '!size-4.5 -ml-0.5',
   },
   {
-    name: 'Research',
-    link: '/summoner/research',
-    icon: 'iconoir:round-flask',
+    name: 'Analysis',
+    link: '/analytics/champions',
+    icon: 'chart',
     iconSolid: 'mdi:graph-box',
     iconClass: '',
     subLinks: [
       {
         name: 'Champions',
-        link: '/research/champions',
+        link: '/analytics/champions',
       },
       {
         name: 'Items',
-        link: '/research/items',
+        link: '/analytics/items',
       },
 
     ],
   },
   {
     name: 'Match History',
-    link: '/nexus/match_history',
-    icon: 'ph:clock-counter-clockwise',
+    link: '/match',
+    icon: 'clock',
     tftIcon: 'i-time-icon',
     class: 'size-5',
-  }, /*
-  {
+  },
+  /*  {
     name: 'Favorites',
     link: '/summoner/favorites',
     icon: 'ph:heart-straight',
     iconSolid: 'teenyicons:heart-solid',
     iconClass: '',
   }, */
-]
-
-export const settingLinks = [
-  {
-    name: 'Basic',
-    link: '/settings',
-    icon: 'ph:gear-six',
-  },
-  {
-    name: 'Account',
-    link: '/settings/account',
-    icon: 'ri:user-settings-line',
-  },
-  {
-    name: 'Theme',
-    link: '/settings/themes',
-    icon: 'teenyicons:paintbucket-outline',
-  },
 ]
 
 export function getPocketLinks(pocket: pocket) {
@@ -91,12 +73,12 @@ export function getPocketLinks(pocket: pocket) {
 export const itemDataLinks = [
   {
     name: 'Items',
-    link: '/items/all',
+    link: '/items',
     text: 'Browse a visual grid and read item data.',
   },
   {
     name: 'Item Stats',
-    link: '/items/stats',
+    link: '/items/list',
     icon: 'teenyicons:table-outline',
     badge: 'table',
     class: '',
@@ -104,13 +86,21 @@ export const itemDataLinks = [
   },
 ]
 
-export const gameDataLinks = [
+export const champDataLinks = [
   {
     name: 'Champions',
     link: '/champions',
-    icon: 'i-ui-champ',
-    class: 'size-4.75 opacity-60  dst stroke-[1.5] -ml-0.25',
   },
+  {
+    name: 'Champion Stats',
+    link: '/champions/list',
+    icon: 'teenyicons:table-outline',
+    badge: 'table',
+    class: '',
+  },
+]
+
+export const gameDataLinks = [
 
   {
     name: 'Runes',
@@ -124,13 +114,7 @@ export const gameDataLinks = [
     icon: 'i-tft-attach',
     class: 'size-4.25 opacity-70 dst  ',
   },
-  {
-    name: 'Summoners',
-    link: '/summoners',
-    icon: 'i-ui-enemy',
-    class: 'size-4.75  opacity-60 top-0.5 dst ',
-    text: 'Look up your friends... or your foes.',
-  },
+
 ]
 
 export const pinnedLink = {

@@ -20,6 +20,7 @@ export function useMatchData(puuid: string) {
     return {
       puuid: participant.puuid,
       gameCreation: match.info.gameCreation,
+      gameEndTimestamp: match.info.gameEndTimestamp,
       gameVersion: normalizePatchNumber(match.info.gameVersion),
       win: participant.win,
       queueId: match.queueId,

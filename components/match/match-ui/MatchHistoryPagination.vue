@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { PaginationList, PaginationListItem, PaginationRoot } from 'reka-ui'
-import { AnimatePresence, motion } from 'motion-v'
+import { motion } from 'motion-v'
 
 const props = defineProps<{
   matchData: any
@@ -12,7 +12,6 @@ const {
   loading,
   loadMoreMatches,
 } = useMatchData(props.puuid)
-console.log('💠 - matchData:', matchData)
 const { dataReady, filteredMatches } = useFilteredMatches(matchData)
 </script>
 
@@ -22,14 +21,17 @@ const { dataReady, filteredMatches } = useFilteredMatches(matchData)
     :total="filteredMatches.length"
     :items-per-page="20"
     show-edges>
-    <transition-slide
-      group
-      as="div"
-      class="flex flex-col gap-7 w-full">
+    <motion.div
+      v-if="dataReady && filteredMatches.length"
+      class="flex flex-col gap-7 w-full"
+      :initial="{ opacity: 0 }"
+      :animate="{ opacity: 1 }"
+      :transition="{ duration: 0.5, staggerChildren: 0.1 }">
       <template
         v-if="dataReady && filteredMatches.length">
         <LazyMatchCard
-          v-for="(match, i) in filteredMatches.slice((page - 1) * 20, page * 20)"
+          v-for="(match, i) in filteredMatches
+            .slice((page - 1) * 20, page * 20)"
           :key="match.metadata.matchId || i"
           :match="match" />
       </template>
@@ -39,7 +41,7 @@ const { dataReady, filteredMatches } = useFilteredMatches(matchData)
       </template>
 
       <MatchesEmptyCard v-else error="filter" />
-    </transition-slide>
+    </motion.div>
     <PaginationList v-slot="{ items }" as-child>
       <transition-slide group class="flex mt-3 items-center gap-1 justify-center w-220">
         <PaginationFirst v-if="page != 1" />

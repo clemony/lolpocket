@@ -1,11 +1,9 @@
 <script setup lang="ts">
-
 const as = useAccountStore()
 const us = useUiStore()
 const target = ref<HTMLElement>(null)
 
-onClickOutside(target, event => handleSidebarClose(us.sidebarMenuOpen))
-
+onClickOutside(target, event => handleSidebarClose('menu'))
 
 const summoner = computed(() => {
   return as.userAccount ? as.userAccount : defaultUser
@@ -13,37 +11,38 @@ const summoner = computed(() => {
 </script>
 
 <template>
-  <div class="size-full " ref="target">
-      <div class="inset-0 top-0 left-0 flex-nowrap overflow-x-hidden  overflow-y-scroll gap-2.5 flex  flex-col pr-3">
-        <SidebarLabel>
-          Summoner
-        </SidebarLabel>
+  <div ref="target" class="size-full ">
+    <SidebarTitle />
+    <div class="inset-0 top-0 pt-5 left-0 flex-nowrap overflow-x-hidden  overflow-y-scroll gap-2.5 flex  flex-col px-3">
+      <SidebarLabel>
+        Summoner
+      </SidebarLabel>
 
-        <LazyCollapsibleSummoner />
+      <LazyCollapsibleSummoner />
 
-        <SidebarLabel>
-          Craft
-        </SidebarLabel>
+      <SidebarLabel>
+        Craft
+      </SidebarLabel>
 
-        <BackpackLink />
+      <BackpackLink />
 
-        <LazyCollapsiblePocket :summoner="summoner" />
+      <LazyCollapsiblePocket :summoner="summoner" />
 
-        <CalculatorLink />
+      <CalculatorLink />
 
-        <SidebarLabel>
-          Learn
-        </SidebarLabel>
+      <SidebarLabel>
+        Learn
+      </SidebarLabel>
 
-        <LazyCollapsibleData />
+      <LazyCollapsibleData />
 
-        <SidebarLabel>
-          Hextech Tools
-        </SidebarLabel>
+      <SidebarLabel>
+        Hextech Tools
+      </SidebarLabel>
 
-        <LazyCollapsibleSettings />
-        <LazyCollapsibleInfo />
-      </div>
+      <LazyCollapsibleSettings />
+      <LazyCollapsibleInfo />
+    </div>
   </div>
 </template>
 

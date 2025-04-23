@@ -17,8 +17,9 @@ const isOpen = ref(false)
 </script>
 
 <template>
-  <Collapsible v-if="player && match" :key="match.matchId" v-model:open="isOpen" class="group w-220 justify-start max-w-220 group/collapse">
-    <div class="field grid justify-center **:select-none text-2 shadow-warm-soft overflow-visible bg-b2/30 drop-shadow-xs border-b3/40 w-full p-0  @container/match min-w-134 cursor-pointer group/collapse ">
+  <Collapsible v-if="player && match" :key="match.matchId" v-model:open="isOpen" as-child class="group w-220 justify-start max-w-220 group/collapse">
+    <div
+      class="field grid justify-center **:select-none text-2 shadow-warm-soft overflow-visible bg-b2/30 drop-shadow-xs border-b3/40 w-full p-0  @container/match min-w-134 cursor-pointer group/collapse ">
       <CollapsibleTrigger class="flex gap-7 py-6 w-full items-start overflow-hidden  cursor-pointer group/collapse pl-6 pr-4 ">
         <div class="flex w-38 h-full **:select-none flex-col justify-start gap-1.5">
           <WinLossButton v-if=" player.teamId && match" :player="player" :match="match" />

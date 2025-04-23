@@ -139,6 +139,7 @@ declare global {
   interface databaseMatchData {
     puuid: string
     gameCreation: number
+    gameEndTimestamp: number
     gameVersion: string
     win: boolean
     queueId: number

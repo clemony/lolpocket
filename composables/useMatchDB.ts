@@ -11,7 +11,7 @@ export function useMatchDexie() {
   }
 
   const getAllMatchIds = async () => {
-    await matchDB.matchData.orderBy('metadata.matchId').keys()
+    return await matchDB.matchData.orderBy('metadata.matchId').keys()
   }
 
   const clearMatches = async () => {

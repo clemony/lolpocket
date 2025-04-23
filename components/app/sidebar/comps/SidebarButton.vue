@@ -1,12 +1,13 @@
 <script setup lang="ts">
 const props = defineProps<{
-to?: string
+  to?: string
 }>()
 
 const route = useRoute()
 </script>
+
 <template>
-<button class="btn w-full   btn-ghost  text-3 font-medium justify-start hover:!bg-b1/30 hover:border-b3/50" :class="{' btn-active': props.to == route.path }">
-    <slot  />
-</button>
+  <button class="btn w-full gap-3  btn-ghost  text-3 font-medium justify-start hover:!bg-b1/30 hover:border-b3/50" :class="{ ' btn-active': props.to == route.path }">
+    <slot />
+  </button>
 </template>

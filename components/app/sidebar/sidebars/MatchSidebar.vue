@@ -7,6 +7,7 @@ const ign = computed(() => as.userAccount?.gameName ?? '')
 
 const {
   matchData,
+  loading,
   fetchInitialMatches,
 } = useMatchData(puuid.value)
 
@@ -18,9 +19,10 @@ onMounted(async () => {
 <template>
   <div class="size-full relative overflow-y-scroll overflow-x-hidden ">
     <SidebarTitle>
- <UpdateMatchHistoryButton v-if="ign && puuid"  :puuid="puuid" class="absolute right-3" />
+<UpdateMatchHistoryButton :loading="loading" :puuid="puuid" v-if="puuid" class=" absolute right-3" />
+       
 </SidebarTitle>
-    <div class="px-3 grid h-fit gap-10 mt-2.5">
+    <div class="px-3 grid h-fit gap-10 mt-5">
       <div class="input input w-full h-12">
         <icon name="search" />
     <input class="grow h-full" placeholder="Search Summoner..."/>
