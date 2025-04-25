@@ -4,11 +4,11 @@ const ms = useMatchStore()
 
 <template>
   <Tabs v-model:model-value="ms.queueSelect">
-<label class="flex items-center pl-2 pr-3">
+<!-- <label class="flex items-center pl-2 pr-3">
   <div class="grow font-medium">
     Queue
   </div>
-</label>
+</label> -->
 
     <IndicatorTabsList class=" w-full grid grid-cols-4 h-12">
       <IndicatorTabsTrigger  v-tippy="'All Matches'" :value="0" class="px-4">

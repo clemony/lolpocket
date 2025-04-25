@@ -164,5 +164,14 @@ declare global {
       profileIcon: number
     }[]
   }
+
+  interface RankedEntry {
+    tier: string
+    division: string
+    lp: number
+    wins: number
+    losses: number
+    queueType: string
+  }
 }
 export { }

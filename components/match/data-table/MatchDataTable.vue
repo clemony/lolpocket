@@ -241,11 +241,11 @@ const ds = useDataStore()
 </script>
 
 <template>
-  <div class="overflow-x-auto overscroll-none rounded-box  h-180  bg-b1/30">
+  <div class="overflow-x-auto overscroll-none rounded-bo grid    h-180  bg-b1/30">
     <table class="table table-sm table-pin-rows table-pin-cols [&_th]:!bg-b1/94 [&_th]:brightness-97 [&_th]:backdrop-blur-md">
       <thead class="relative">
         <tr class="!bg-b1/95 brightness-99 backdrop-blur-md">
-          <th class="z-1">
+          <th class="z-1 flex-grow">
             {{gameOutcome}}<br  />
             {{gameEnd ?? ''}}
           </th>
@@ -288,7 +288,7 @@ const b  = a && a.toString().length > 6 ? a : 0
 
               // units
 
-              c = stat.data == 'damageTakenOnTeamPercentage' && c ? `${c * 100}%` : c
+              c = stat.data == 'damageTakenOnTeamPercentage' && c ? `${Math.round(c * 100)}%` : c
 c = stat.data == 'timeCCingOthers' ? `${c}s` : c
 
               c =  c ? c.toLocaleString() : c

@@ -3,6 +3,7 @@ const roleStats = useRoles(filteredMatches)
  */
 interface RoleStats {
   role: string
+  displayName: string
   games: number
   wins: number
   winrate: number
@@ -20,15 +21,19 @@ const hexColors = {
 }
 
 export function useMatchRoles(matches: Ref<piniaMatchData[]>): ComputedRef<RoleStats[]> {
-  console.log("💠 - useMatchRoles - matches:", matches)
   return computed(() => {
     const roles = ['TOP', 'JUNGLE', 'MIDDLE', 'BOTTOM', 'UTILITY']
     const roleStatsMap = new Map<string, { games: number, wins: number }>()
 
+    let allGames = 0
+    let allWins = 0
+
     for (const match of matches.value) {
       const role = match.teamPosition.toUpperCase()
-      if (!roles.includes(role))
-        continue
+      if (!roles.includes(role)) continue
+
+      allGames++
+      if (match.win) allWins++
 
       if (!roleStatsMap.has(role)) {
         roleStatsMap.set(role, { games: 0, wins: 0 })
@@ -36,28 +41,37 @@ export function useMatchRoles(matches: Ref<piniaMatchData[]>): ComputedRef<RoleS
 
       const stats = roleStatsMap.get(role)!
       stats.games++
-      if (match.win)
-        stats.wins++
+      if (match.win) stats.wins++
     }
 
-    const totalGames = [...roleStatsMap.values()].reduce((acc, r) => acc + r.games, 0)
-    const totalWins = [...roleStatsMap.values()].reduce((acc, r) => acc + r.wins, 0)
-    const globalWinrate = totalWins / Math.max(1, totalGames)
+    roleStatsMap.set('ALL', { games: allGames, wins: allWins })
+
+    const globalWinrate = allGames === 0 ? 0 : allWins / allGames
     const m = 500
 
-    return [...roleStatsMap.entries()]
-      .map(([role, { games, wins }]) => {
-        const normalizedRole = role.toLowerCase() === 'utility' ? 'support' : role.toLowerCase()
+const formatDisplay = (role: string) => {
+  switch (role) {
+    case 'UTILITY': return 'Support'
+    case 'MIDDLE': return 'Mid'
+    case 'BOTTOM': return 'Bot'
+    case 'ALL': return 'All'
+    default: return role.charAt(0) + role.slice(1).toLowerCase()
+  }
+}
 
-        return {
-          role: normalizedRole,
-          games,
-          wins,
-          winrate: (wins / games) * 100,
-          bayesianWinrate: ((wins + m * globalWinrate) / (games + m)) * 100,
-          color: hexColors[normalizedRole as keyof typeof hexColors] || '#ccc',
-        }
-      })
-      .sort((a, b) => b.games - a.games)
+    return ['ALL', ...roles].map(role => {
+      const { games = 0, wins = 0 } = roleStatsMap.get(role) ?? {}
+      const displayName = formatDisplay(role)
+
+      return {
+        role,
+        displayName,
+        games,
+        wins,
+        winrate: games === 0 ? 0 : (wins / games) * 100,
+        bayesianWinrate: ((wins + m * globalWinrate) / (games + m)) * 100,
+        color: hexColors[displayName.toLowerCase() as keyof typeof hexColors] || '#ccc',
+      }
+    })
   })
 }

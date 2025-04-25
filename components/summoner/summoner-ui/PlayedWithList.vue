@@ -48,7 +48,7 @@ Allies
                   <SummonerIcon class="size-7 shadow-sm drop-shadow-sm " :icon-id="ally.profileIcon" :alt="`${ally.riotIdGameName}'s Icon`" />
                   {{ ally.riotIdGameName }}
 
-                  <i-ui-handshake v-if="ally == topBayesianTeammates[0]" v-tippy="'Great Teamwork'" class="size-4 dst  **:!text-bc/80 " />
+                  <icon name="ion:star" v-if="ally == topBayesianTeammates[0]" v-tippy="'Great Teamwork'" class="size-3.5 dst  **:!text-bc/80 " />
                 </div>
                 <div class="text-1  !text-bc">
                   {{ ally.games }}

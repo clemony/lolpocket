@@ -2,8 +2,7 @@ export function useFilteredMatches(
   fullMatches: Ref<MatchData[]>,
 ) {
   const ms = useMatchStore()
-  const { matches: simplifiedMatches, queueSelect, championSelect, playerSelect, patchSelect } = storeToRefs(ms)
-  console.log('💠 - simplifiedMatches:', simplifiedMatches)
+  const { matches: simplifiedMatches, queueSelect, championSelect, playerSelect, patchSelect, roleSelect } = storeToRefs(ms)
 
   // Map full matches by gameEndTimestamp (assuming it's unique + matches the simplified data)
   const matchMap = computed(() => {
@@ -28,12 +27,45 @@ export function useFilteredMatches(
           || championSelect.value === 'All'
           || match.championName === championSelect.value
 
+                const matchesRole
+        = !roleSelect.value
+          || roleSelect.value === 'ALL'
+          || match.teamPosition === roleSelect.value
+
       const matchesPlayer
       = !playerSelect.value || match.participants.some(p => p.riotIdGameName === playerSelect.value)
 
-      return matchesPatch && matchesQueue && matchesChampion && matchesPlayer
+      return matchesPatch && matchesQueue && matchesChampion && matchesPlayer && matchesRole
     })
   })
+
+  const filteredSimplifiedNoRole = computed(() => {
+  return simplifiedMatches.value.filter((match) => {
+    const ds = useDataStore()
+
+    const matchesPatch =
+      !patchSelect.value ||
+      patchSelect.value === ds.currentPatch ||
+      match.gameVersion === patchSelect.value
+
+    const matchesQueue =
+      !queueSelect.value ||
+      Number(queueSelect.value) === 0 ||
+      match.queueId === Number(queueSelect.value)
+
+    const matchesChampion =
+      !championSelect.value ||
+      championSelect.value === 'All' ||
+      match.championName === championSelect.value
+
+    const matchesPlayer =
+      !playerSelect.value ||
+      match.participants.some(p => p.riotIdGameName === playerSelect.value)
+
+    return matchesPatch && matchesQueue && matchesChampion && matchesPlayer
+  })
+})
+
 
   // ✅ guard to prevent filtering too early
   const dataReady = computed(() => {
@@ -59,6 +91,8 @@ export function useFilteredMatches(
   return {
     filteredMatches,
     dataReady,
+    filteredSimplified,
+    filteredSimplifiedNoRole,
     championsPlayed,
   }
 }

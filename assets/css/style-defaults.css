@@ -3,6 +3,21 @@
 @import './fonts.css';
 
 @layer components {
+
+
+.border-shadow {
+  @apply shadow-[#000]/5 border border-b3/60 rounded-box shadow-warm-2;
+}
+
+.hover-ring {
+  @apply hover:ring hover:ring-neutral hover:ring-offset-2 hover:ring-offset-b2 transition-all duration-200 cursor-pointer;
+}
+
+.hover-ring-sm {
+  @apply hover:ring hover:ring-neutral/60 hover:drop-shadow-sm inset-shadow-sm  cursor-pointer  hover:shadow-black/40;
+}
+
+
   h1 {
     font-size: var(--text-9);
     font-weight: 600;

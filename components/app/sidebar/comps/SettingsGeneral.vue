@@ -54,8 +54,6 @@ const settingsData = {
   </div>
 
   <div class="w-full left-0 justify-end grid border-t-b3/60 border-t  py-5 px-4  bg-b2/20 backdrop-blur-md  absolute bottom-0">
-
-      <LazyAdminLink />
     <button class="btn btn-neutral px-8">
       Save
     </button>

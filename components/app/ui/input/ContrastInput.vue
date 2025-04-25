@@ -3,7 +3,7 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
 inputClass?: HTMLAttributes['class']
   search?: boolean
-  placeholder: string
+  placeholder?: string
 }>()
 
 
@@ -13,10 +13,10 @@ defineOptions({
 </script>
 
 <template>
- <div :class="cn(' text-3 items-center gap-4  flex h-12 border py-2 px-3 input w-full mt-8 shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc', props.class)">
+ <div :class="cn(' text-3 items-center gap-4  flex h-12 border py-3.5 px-3 input w-full  shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc', props.class)">
     <icon v-if="props.search"
       name="search"
-      class="pointer-events-none size-5 opacity-70" />
+      class="pointer-events-none size-5 opacity-80" />
     <input
       v-bind="$attrs"
       :placeholder="props.placeholder"

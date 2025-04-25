@@ -9,7 +9,7 @@ const as = useAccountStore()
 <template>
   <div class="w-full flex ">
     <Motion as-child>
-  <Collapsible v-model:open="as.itemSetTipIsOpen" class="py-8 w-184" arrow>
+  <Collapsible  class="py-8 w-184" arrow>
     <CollapsibleTrigger class="group/c flex items-center px-2.25 w-full justify-between text-left max-w-184 gap-6 cursor-pointer">
       <h2 class="dst font-semibold">
           Item Sets

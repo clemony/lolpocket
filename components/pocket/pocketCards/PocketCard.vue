@@ -119,8 +119,7 @@ const layer3 = computed(() => ({
             </CardContent>
           </Card>
           <div
-            :style="{ backgroundImage: `url(${as.cardBack})` }"
-            class="swap-on flex h-[290px] w-[230px] items-center justify-center bg-transparent! [background-size:230px_290px] bg-center"
+
           >
             <CardBack
               :pocket="pocket"

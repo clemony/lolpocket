@@ -11,7 +11,8 @@ function handleClick(mode) {
     signOut()
   }
 }
-
+const as = useAccountStore()
+const user = computed (() => as.userAccount.role)
 const messages = ref(false)
 </script>
 
@@ -46,14 +47,25 @@ const messages = ref(false)
       <DropdownMenuSeparator />
       <SidebarPatchNotes />
       <DropdownMenuSeparator />
-
-      <DropdownMenuItem
-        class="" @click=" handleSidebarOpen(us.settingsOpen)">
-        <icon
-          name="ph:gear-six" />
-        Settings
+      <DropdownMenuItem>
+        <DropdownMenuSub>
+          <DropdownMenuSubTrigger>
+            Admin
+          </DropdownMenuSubTrigger>
+          <DropdownMenuSubContent>
+            <DropdownMenuItem>
+              <LazyAdminLink />
+            </DropdownMenuItem>
+            <DropdownMenuItem
+              class="" @click=" handleSidebarOpen(us.settingsOpen)">
+              <icon
+                name="ph:gear-six" />
+              <ClearMatchesButton />
+            </DropdownMenuItem>
+          </DropdownMenuSubContent>
+          <DropdownMenuSeparator />
+        </DropdownMenuSub>
       </DropdownMenuItem>
-      <DropdownMenuSeparator />
       <DropdownMenuItem
         v-if="as.userAccount.session"
         class=""

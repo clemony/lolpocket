@@ -16,7 +16,7 @@
   --color-inspiration-light: oklch(94.48% 0.0273 204.19);
 
 
-  --color-iron: oklch(44.16% 0.0168 35.72);
+  --color-iron: oklch(49.16% 0.0168 35.72);
   --color-bronze: oklch(57.31% 0.0484 39.76);
   --color-silver: oklch(65.69% 0.022 257.49);
   --color-gold: oklch(85.49% 0.0892 84.09);
@@ -24,6 +24,7 @@
   --color-emerald: oklch(56.81% 0.0628 168.43);
   --color-diamond: oklch(62.17% 0.1762 284.11);
   --color-master: oklch(75.18% 0.1157 325.26);
+
   --color-grandmaster: oklch(68.06% 0.1352 26.61);
   
   --color-challenger: oklch(83.25% 0.0787 213.4);

@@ -19,15 +19,23 @@ async function updateMatchData() {
   })
   console.log('💠 - updateMatchData - newMatches:', newMatches)
 
+await fetchRankedEntries(props.puuid)
+
+console.log(as.rankedEntries)
   /* console.log(result.map(m => m.metadata?.matchId))
 await matchDB.matchData.bulkPut(result) */
 }
 </script>
 
 <template>
-  <button
-    v-tippy="'Update Matches'" :disabled="props.loading" :class="cn('btn btn-square btn-sm shadow-xs border-b3 drop-shadow-xs', props.class)" @click="updateMatchData()">
-    <icon v-if="!props.loading" name="update" class="dst size-4.5  hover:text-bc tldr-20" />
-    <icon v-else name="svg-spinners:ring-resize" class=" size-4 opacity-60" />
+  <button :disabled="props.loading" :class="cn('btn  btn-sm shadow-xs border-b3 drop-shadow-xs text-1', props.class)" @click="updateMatchData()">
+    <span  class="flex gap-3 items-center" v-if="!props.loading" >
+    <icon name="update" class="dst size-3.5  hover:text-bc tldr-20" />
+    Update
+    </span>
+    <span v-else class="flex gap-3 items-center">
+    <icon name="svg-spinners:ring-resize" class=" size-4 opacity-60" />
+    Checking
+    </span>
   </button>
 </template>

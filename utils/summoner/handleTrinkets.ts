@@ -66,11 +66,11 @@ export const ghostRegistry = allTrinkets.reduce((acc, trinket) => {
   }
 }
 */
-export function resetTrinkets() {
+/* export function resetTrinkets() {
   const as = useAccountStore()
   as.nexusTrinkets = Array.from({ length: 9 }, () => null)
 }
-
+ */
 export const challengeCats = [
   {
     name: 'expertise',

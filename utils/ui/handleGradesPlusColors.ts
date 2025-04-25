@@ -33,3 +33,25 @@ export function getGradeColor(value) {
                 ? 'domination'
                 : 'b2'
 }
+
+export function getAbsoluteColor(value) {
+  return value >= 55
+    ? 'challenger'
+    : value < 55 && value >= 54
+      ? 'grandmaster'
+      : value < 54 && value >= 53
+        ? 'master'
+        : value < 53 && value >= 52
+          ? 'diamond'
+          : value < 52 && value >= 51
+            ? 'emerald'
+            : value < 51 && value >= 50
+              ? 'platinum'
+              : value < 50 && value >= 49
+                ? 'silver'
+                : value < 49 && value >= 48
+                  ? 'bronze'
+                  : value < 48
+                    ? 'iron'
+                    : 'b2'
+}

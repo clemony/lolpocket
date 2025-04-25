@@ -18,25 +18,13 @@ const props = defineProps<{
           <div class="flex items-start">
             <!-- champ image -->
 
-            <Skeleton class="shadow-sm drop-shadow-sm rounded-lg size-16.75 " />
-
-            <!--   kda -->
-
-            <Skeleton class="size-full max-w-44  ml-4  " />
+            <Skeleton class="size-full max-w-64  ml-4  " />
           </div>
 
           <Skeleton class="min-w-64 w-full h-12 max-w-74 !rounded-lg " />
         </div>
       </div>
-      <div class="grid grid-cols-[1fr_1fr]   gap-4  overflow-hidden size-full *:gap-y-px *:grid *:grid-rows-5">
-        <div v-for="i in 2" :key="i" class="h-full">
-          <div v-for="index in 5" :key="index" class="flex gap-2.5 overflow-hidden size-full">
-            <div class="flex gap-2 overflow-hidden size-full items-center">
-              <Skeleton class="rounded-tiny size-5.5 shadow-sm " />
-              <Skeleton class="w-full h-3" />
-            </div>
-          </div>
-        </div>
+      <div class="grid grid-cols-[1fr_1fr]   gap-4  overflow-hidden size-full ">
       </div>
       <div class="h-full  w-8   justify-self-end">
       </div>

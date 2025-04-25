@@ -40,14 +40,14 @@ watchEffect(() => {
       <Collapsible v-model:open="champsIsOpen" class="data-disabled:**:text-bc/90 ">
         <SidebarCollapsibleTrigger>
           <span class="relative size-4">
-            <i-lol-teemo class="absolute pointer-events-none size-5 -ml-1 -mt-1  dst" />
+            <i-lol-no-champ class="absolute pointer-events-none size-5 -ml-1 -mt-1  dst" />
           </span>
 
           <SidebarText>  Champion Data</SidebarText>
         </SidebarCollapsibleTrigger>
 
         <SidebarCollapsibleContent class="-mt-1.5">
-          <ItemDataLinks />
+          <ChampionDataLinks />
         </SidebarCollapsibleContent>
       </Collapsible>
 
@@ -55,7 +55,7 @@ watchEffect(() => {
         <SidebarIcon>
           <i-ui-rune class="-ml-1 absolute size-5.5 pointer-events-none" />
         </SidebarIcon>
-        <SidebarText>Spells</SidebarText>
+        <SidebarText>Runes</SidebarText>
       </SidebarButton>
 
       <SidebarButton :class="{ 'btn-active': route.path == '/spells' }" @click="navigateTo('/spells')">

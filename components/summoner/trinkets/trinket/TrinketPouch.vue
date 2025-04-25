@@ -5,13 +5,13 @@ const isOpen = ref(false)
 
 const as = useAccountStore()
 
-console.log(as.nexusTrinkets)
+/* console.log(as.nexusTrinkets)
 
 const filter = computed (() => {
   const a = as.nexusTrinkets.filter(m => m != null)
   return a.map(m => m.name)
 })
-
+ */
 //TODO rename as trinket pouch
 
 

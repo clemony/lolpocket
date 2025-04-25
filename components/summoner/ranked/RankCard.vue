@@ -1,53 +1,67 @@
 <script setup lang="ts">
 const props = defineProps<{
-  queue: string
+  entry: RankedEntry
   title?: string
   class?: HTMLAttributes['class']
 
 }>()
+
+const entry = computed (() => props.entry)
+
+const color1 = computed(() => {
+  return getComputedStyle(document.documentElement).getPropertyValue(`--color-${entry.value.tier}`)
+})
+const colors = [getColorFromVariable('--color-b3'), color1.value]
+
+const winrate = computed (() => entry.value.wins / (entry.value.wins + entry.value.losses) * 100)
 </script>
 
 <template>
-  <Field :class="cn('size-full bg-b2/30 drop-shadow-xs w-110 max-w-110 border-b3/40  ', props.class)" :title="`Ranked ${props.title}`">
-    <div class="ranked-grid relative grid grid-cols-[1.1fr_1fr_1fr] place-items-center">
-      <div class="grid size-36 place-items-center">
-        <!-- placeholder -->
+  <Field :class="cn('w-110 max-w-110 h-42 max-h-42  bg-b2/30 drop-shadow-xs border-b3/40 py-0 ', props.class)" :title="`Ranked ${props.title}`">
+
+    <div class="overflow-hidden size-full grid grid-cols-[1.1fr_1fr_1fr] place-items-center h-42 content-center">
+      <div class="grid mt-0.5 overflow-hidden place-items-center">
+        <!-- crest -->
         <img
-          :src="`/img/crests/${'iron'}.webp`"
-          class="object-contain drop-shadow-lg" />
+          :src="`/img/crests/${entry.tier.toLowerCase()}.webp`"
+          class="drop-shadow-md object-contain size-28 drop-shadow-black/30 " />
       </div>
 
-      <div class="relative -mt-1">
-        <RankedDonut :winrate="60" rank="iron" />
-        <span class="text-bc absolute top-9 left-8 font-medium drop-shadow-sm">
-          <!-- placeholder winrate -->
-          {{ 60 }}%
-        </span>
+      <div class="relative grid place-items-center size-full">
+
+
+    <div class="relative size-21 overflow-hidden mt-1 grid place-items-center rounded-lg">
+    <DonutSkeleton class="absolute size-21" />
+    <div class="radial-progress dst absolute " :style="{ '--value': winrate, '--size': '5.25rem', color: getColorFromVariable(`--color-${entry.tier.toLowerCase()}`) }" role="progressbar">
+      <span class="text-bc font-medium dst">
+        {{ winrate.toFixed(1).replace('.0', '') }}%
+      </span>
+    </div>
+  </div>
+
+
       </div>
 
-      <div class="-mt-1 flex flex-col justify-center gap-2 font-medium">
+      <div class=" pt-3  overflow-hidden font-medium flex flex-col items-end justify-center pb-3 text-end gap-2.75 ">
         <p class="capitalize">
-          <!-- placeholder tier  -->
-          {{ 'Iron IV' }}
+       
+          {{ entry.tier.toLowerCase() }} {{entry.division}}
         </p>
 
-        <p>{{ 1001 }} Games</p>
+                <p class="capitalize font-semibold text-4">
+       
+          {{ entry.lp }} LP
+        </p>
 
-        <div class="flex items-center gap-2">
-          <p class="flex items-center text-nowrap">
-            {{ 1 }}W
-            <icon
-              name="ion:caret-up-outline"
-              class="text-inspiration  size-4" />
+          <p v-tippy="`${entry.wins + entry.losses} total`" class="hover:border-b-bc border-b-transparent border-b  flex text-1 items-center gap-1 text-end justify-end text-nowrap">
+            
+            <span>{{ entry.wins }}W </span>
+            <span>{{ entry.losses }}L</span>
           </p>
-          <p class="flex items-center text-nowrap">
-            {{ 1000 }}L
-            <icon
-              name="ion:caret-down-outline"
-              class="text-domination  size-4" />
-          </p>
-        </div>
+
+
+   
       </div>
-    </div>
+  </div>
   </Field>
 </template>

@@ -12,7 +12,9 @@ const summoner = computed(() => {
 
 <template>
   <div ref="target" class="size-full ">
-    <SidebarTitle />
+    <SidebarTitle>
+      <LazyLightSidebarSearch />
+    </SidebarTitle>
     <div class="inset-0 top-0 pt-5 left-0 flex-nowrap overflow-x-hidden  overflow-y-scroll gap-2.5 flex  flex-col px-3">
       <SidebarLabel>
         Summoner
@@ -40,7 +42,6 @@ const summoner = computed(() => {
         Hextech Tools
       </SidebarLabel>
 
-      <LazyCollapsibleSettings />
       <LazyCollapsibleInfo />
     </div>
   </div>

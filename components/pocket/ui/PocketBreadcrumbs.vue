@@ -13,7 +13,6 @@ const folderObject = ref()
 const a = .forEach(location.folder => {
  */
 
-const { userFolders } = useUserFolders()
 
 onMounted (() => {
   const a = defaultFolders[0].items.length ? defaultFolders[0] : defaultFolders[1]
@@ -58,7 +57,7 @@ onMounted (() => {
           </DropdownMenuRadioGroup>
 
           <DropdownMenuSeparator />
-          <DropdownMenuRadioGroup v-if="userFolders" v-model="openFolder">
+<!--           <DropdownMenuRadioGroup v-if="userFolders" v-model="openFolder">
             <DropdownMenuRadioItem v-for="folder in userFolders" :key="folder.key" :disabled="!folder.items.length" :value="folder.name" class="pl-2 pr-4 flex gap-4 text-2 py-2 disabled:opacity-60">
               <icon :name="folder.icon" class="size-4.5" />
 
@@ -73,7 +72,7 @@ onMounted (() => {
                 </DropdownMenuItemIndicator>
               </span>
             </DropdownMenuRadioItem>
-          </DropdownMenuRadioGroup>
+          </DropdownMenuRadioGroup> -->
 
           <DropdownMenuSeparator />
 

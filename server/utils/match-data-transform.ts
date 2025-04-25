@@ -1,5 +1,4 @@
 export function transformMatchData(raw: any): MatchData {
-  console.log("💠 - transformMatchData - raw:", raw)
   const participants: MatchParticipant[] = raw.info.participants.map((p: any): MatchParticipant => ({
     riotIdGameName: p.riotIdGameName ?? '',
     puuid: p.puuid,

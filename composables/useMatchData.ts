@@ -57,6 +57,8 @@ export function useMatchData(puuid: string) {
 
       const simplified = matchData.value.map(simplifyMatch).filter(Boolean) as piniaMatchData[]
       ms.setMatches(simplified)
+   /*    await fetchRankedEntries(puuid) */
+
     }
     finally {
       loading.value = false
@@ -71,7 +73,7 @@ export function useMatchData(puuid: string) {
     }
   })
 
-  const loadMoreMatches = async () => {
+  /* const loadMoreMatches = async () => {
     loading.value = true
     const existingIds = await getAllMatchIds()
 
@@ -100,7 +102,7 @@ export function useMatchData(puuid: string) {
     }
 
     loading.value = false
-  }
+  } */
 
   return {
     matchData,
@@ -109,6 +111,6 @@ export function useMatchData(puuid: string) {
     currentPage,
     itemsPerPage,
     fetchInitialMatches,
-    loadMoreMatches,
+    //loadMoreMatches,
   }
 }

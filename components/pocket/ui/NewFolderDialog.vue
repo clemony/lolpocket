@@ -11,7 +11,7 @@ const toID = hexoid()
 const openIcons = ref(false)
 const toggleIcons = useToggle(openIcons)
 
-function handleSubmit() {
+/* function handleSubmit() {
   const a = computed (() => {
     return name.value == '' ? generateMediumString() : name.value
   })
@@ -31,7 +31,7 @@ function handleSubmit() {
   folderIcon.value = 'formkit:folder'
   openIcons.value = false
   ts.newFolderOpen = false
-}
+} */
 </script>
 
 <template>
@@ -93,12 +93,12 @@ function handleSubmit() {
         <span class="sr-only">Close</span>
       </DialogClose>
 
-      <DialogClose as-child>
+     <!--  <DialogClose as-child>
         <button class="absolute btn btn-neutral bottom-5 px-5 right-6" @click="handleSubmit">
           Create
         </button>
       </DialogClose>
-    </DialogContent>
+    </DialogContent> -->
   </Dialog>
 </template>
 

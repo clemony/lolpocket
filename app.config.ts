@@ -91,7 +91,7 @@ export default defineAppConfig({
       'up-face': 'iconoir:emoji-look-up',
       'images': 'entypo:images',
       'picture': 'radix-icons:image',
-      'nexus': 'ph:polygon-fill',
+      'nexus': 'clarity:atom-solid',
       'clock': 'radix-icons:clock',
       'chart': 'uis:analytics',
       'backpack': 'radix-icons:backpack',

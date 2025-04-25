@@ -89,7 +89,7 @@ const arrowVariants = {
         </NavBtn>
 
         <NavBtn v-tippy="'Nexus'" :class="{ 'btn-active': route.meta.section == 'nexus' }" @click="navigateTo('/nexus')">
-          <icon name="nexus" class="size-5.5" />
+          <icon name="nexus" class="size-5.75" />
         </NavBtn>
         <NavBtn v-tippy="`Match History`" class="" @click="navigateTo('/match')">
           <icon name="clock" class="size-5.5 dst" />
@@ -118,7 +118,7 @@ const arrowVariants = {
         <NavBtn
           v-tippy="'Champions'" :class="{ 'btn-active': route.path == '/champions' }"
           @click="navigateTo('/champions')">
-          <i-lol-teemo class="size-6.75 dst " />
+          <i-lol-no-champ class="size-6 dst " />
         </NavBtn>
 
         <NavBtn

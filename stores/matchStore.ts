@@ -18,12 +18,12 @@ export const useMatchStore = defineStore('matchStore', () => {
     matches.value.push(...data)
   }
 
-  const championTabsQueue =  ref<number>(0)
-  const queueSelect =  ref<number>(0)
+  const championTabsQueue = ref<number>(0)
+  const queueSelect = ref<number>(0)
   const patchSelect = ref(ds.currentPatch)
   const championSelect = ref('All')
   const playerSelect = ref(null)
-  const positionSelect = ref<'top' | 'jungle' | 'mid' | 'bot' | 'support' | 'all'>('all')
+  const roleSelect = ref<'TOP' | 'JUNGLE' | 'MIDDLE' | 'BOTTOM' | 'UTILITY' | 'ALL'>('ALL')
 
   const previousPatch = computed(() => {
     // const p =
@@ -45,7 +45,7 @@ export const useMatchStore = defineStore('matchStore', () => {
     queueSelect,
     championSelect,
     playerSelect,
-    positionSelect,
+    roleSelect,
     previousPatch,
 
   }

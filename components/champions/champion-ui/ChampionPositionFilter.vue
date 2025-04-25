@@ -10,17 +10,16 @@ const cs = useChampStore()
 
 <template>
   <transition-slide group class="flex flex-wrap gap-5 relative ">
-    <input
-      class="btn btn-square btn-xl before:size-14 absolute  left-0 !text-5 font-normal "
-      aria-label="All"
-      type="reset"
-      value="×"
-      @click="cs.filterChampPos = null" />
+    <button :disabled="!cs.filterChampPos"
+      class="btn btn-square btn-xl border-b3/80 disabled:!bg-b2/60 disabled:opacity-60  absolute grid place-items-center left-0 "
+      aria-label="All"  @click="cs.filterChampPos = null">
+    <icon name="x-sm" class="size-5.5"/>
+    </button>
 
     <label
       v-for="p in championPosition"
       :key="p.id"
-      :aria-label="p.id" class="size-fit    btn !size-14  btn-xl  mr-0 btn-square  " :class="{ 'bg-neutral border-neutral shadow-neutral/20 shadow-sm order-first  ml-19': p == cs.filterChampPos, 'first-of-type:ml-19': !cs.filterChampPos }">
+      :aria-label="p.id" class="size-fit border-b3/80   btn !size-14  btn-xl  mr-0 btn-square  " :class="{ 'bg-neutral border-neutral shadow-neutral/20 shadow-sm order-first  ml-19': p == cs.filterChampPos, 'first-of-type:ml-19': !cs.filterChampPos }">
 
       <input
         v-model="cs.filterChampPos" class="peer hidden absolute"
