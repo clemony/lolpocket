@@ -12,10 +12,8 @@ onMounted (() => {
 </script>
 
 <template>
-<div class="">
-      <SidebarTitle>
-        
-      <Tabs v-model:model-value="model" class="absolute right-5.25 top-3.75 **:pointer-events-auto z-5">
+  <div class="pl-8 pt-19 relative w-120">
+    <!--       <Tabs v-model:model-value="model" class="absolute right-5.25 top-3.75 **:pointer-events-auto z-5">
         <IndicatorTabsList class="grid grid-cols-2 ">
           <IndicatorTabsTrigger value="Grid" @click="navigateTo('/items')">
             Grid
@@ -25,12 +23,11 @@ onMounted (() => {
           </IndicatorTabsTrigger>
           <TabIndicator />
         </IndicatorTabsList>
-      </Tabs>
-      </SidebarTitle>
-    <div class="px-6 mt-2   pt-3 flex items-center font-semibold text-bc/40 tracking-tight">
+      </Tabs> -->
+    <div class="mt-2   pt-3 flex items-center font-semibold text-bc/70 tracking-tight">
       Pockets
     </div>
-    <div class="pl-4 pr-2">
+    <div class="">
       <LazyCollapsiblePinned />
 
       <LazyCollapsible v-model:open="all" :disabled="!ps.pockets || ps.pockets.length == null || ps.pockets.length == 0" class="group/all">

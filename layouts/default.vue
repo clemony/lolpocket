@@ -8,12 +8,12 @@ const route = useRoute()
 
 <template>
   <LayoutGroup>
-    <motion.div :transition="{}" class="h-screen  w-screen flex overflow-hidden flex-nowrap " :class="{ '!bg-b2/10': route.name == 'card' }" layout>
+    <motion.div :transition="{}" class="h-screen   w-screen flex overflow-hidden flex-nowrap " :class="{ '!bg-b2/10': route.name == 'card' }" layout>
       <AppNavbar />
       <AppCommand />
-      <div class="flex relative h-screen min-h-screen grow w-full h-screen">
-        <slot name="titlebar" />
-        <div class="inset-0 absolute left-0 top-0" :class="{ 'overflow-y-auto ': route.path != '/' }">
+      <div class="flex relative overflow-hidden h-screen min-h-screen grow w-full ">
+   
+        <div class="inset-0 absolute left-0 top-0 z-0" :class="{ 'overflow-y-auto ': route.path != '/' }">
           <slot />
         </div>
       </div>

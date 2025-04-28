@@ -136,7 +136,7 @@ declare global {
     kills: number
   }
 
-  interface databaseMatchData {
+  interface SimplifiedMatchData {
     puuid: string
     gameCreation: number
     gameEndTimestamp: number
@@ -157,13 +157,12 @@ declare global {
       primary: number
       secondary: number
     }
-  }
-  interface piniaMatchData extends databaseMatchData {
     participants: {
       riotIdGameName: string
       profileIcon: number
     }[]
   }
+
 
   interface RankedEntry {
     tier: string

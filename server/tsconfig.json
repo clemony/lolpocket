@@ -1,9 +1,5 @@
 {
   "extends": "../.nuxt/tsconfig.server.json",
-  "exclude": [
-    ".nuxt",
-    "node_modules"
-  ],
   "compilerOptions": {
     "lib": [
       "es2020",
@@ -27,5 +23,9 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true
-  }
+  },
+  "exclude": [
+    ".nuxt",
+    "node_modules"
+  ]
 }

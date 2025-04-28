@@ -1,9 +1,9 @@
 import { storeToRefs } from 'pinia'
 
 export function useMatchItems() {
-  const ms = useMatchStore()
   const ds = useDataStore()
-  const { matches } = storeToRefs(ms)
+  const as = useAccountStore()
+  const { matches } = storeToRefs(as)
 
   const itemStats = new Map<number, {
     games: number

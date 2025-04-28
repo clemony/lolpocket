@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import {
   NavigationMenuLink,
-  type NavigationMenuLinkEmits,
-  type NavigationMenuLinkProps,
+
   useForwardPropsEmits,
 } from 'reka-ui'
+import type { NavigationMenuLinkEmits, NavigationMenuLinkProps } from 'reka-ui'
 
 const props = defineProps<NavigationMenuLinkProps>()
 const emits = defineEmits<NavigationMenuLinkEmits>()

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-const props = defineProps<{
-puuid: string
+const {summoner} = defineProps<{
+summoner: Summoner
 loading: boolean
 
 }>()
@@ -11,7 +11,7 @@ async function getOldMatches(){
   const existingIds = (await getAllMatchIds()).map(String)
 
 const oldMatches = await useGetMatches({
-  puuid: props.puuid,
+  puuid: summoner.puuid,
   existingIds,
   direction: 'old',
 })}
@@ -19,7 +19,7 @@ const oldMatches = await useGetMatches({
 
 <template>
  <button
-            v-if=" props.puuid" class="btn btn-ghost    gap-3 "
+            v-if=" summoner.puuid" class="btn btn-ghost    gap-3 "
             :disabled="loading"
             @click="getOldMatches()">
             <icon v-if="!loading" name="radix-icons:update" class="dst size-4.5  hover:text-bc text-3 font-normal tldr-20" />

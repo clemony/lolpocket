@@ -23,12 +23,11 @@ export async function setUserAccount(session) {
   }
 
   as.userAccount.name = name
-  as.userAccount.image = ref(null)
   as.userAccount.role = decoded.app_metadata.user_role
   as.userAccount.id = session.user.id
   as.userAccount.session = session
   as.userAccount.accessToken = session.access_token
   as.userAccount.refreshToken = session.refresh_token
-
-  const riot = setSummonerData(session.user.id)
+  
+ const riot = setSummonerData(session.user.id) 
 }

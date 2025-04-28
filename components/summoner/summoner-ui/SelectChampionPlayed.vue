@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const ms = useMatchStore()
-const playedChampions = computed(() => {
+/* const playedChampions = computed(() => {
   const counts: Record<string, number> = {}
 
   for (const match of ms.matches) {
@@ -10,13 +10,12 @@ const playedChampions = computed(() => {
   return Object.entries(counts)
     .sort((a, b) => b[1] - a[1]) // sort by descending frequency
     .map(([champion]) => champion)
-})
+}) */
 </script>
 
 <template>
   <Popover>
-    <PopoverTrigger class="w-full h-18 px-1 rounded-box flex gap-6 items-center" >
-      
+    <PopoverTrigger class="w-full h-18 px-1 rounded-box flex gap-6 items-center">
       <transition-fade group class="bg-b2  tldr-50 drop-shadow-sm relative aspect-square size-16 rounded-lg overflow-hidden grid place-items-center" :class="{ 'shadow-sm shadow-black/15 !tldr-0': ms.championSelect && ms.championSelect != 'All' }">
         <LazyChampionIconFromName v-if="ms.championSelect && ms.championSelect != 'All'" :name="ms.championSelect" class="**:size-full scale-128 **:rounded-full" hydrate-on-visible />
         <i-no-champ v-else class="size-9 opacity-50 dst absolute" />
@@ -27,9 +26,9 @@ const playedChampions = computed(() => {
       </div>
 
       <div class="h-full grid grid-cols-2 place-items-center ">
-        <icon name="select" class="size-5.5"/>
+        <icon name="select" class="size-5.5" />
 
-<!--         <button class="btn btn-ghost btn-sm btn-square *:text-bc/30 hover:*:text-bc">
+        <!--         <button class="btn btn-ghost btn-sm btn-square *:text-bc/30 hover:*:text-bc">
         <icon name="x-sm" class="size-5.5"/>
         </button> -->
       </div>
@@ -45,13 +44,13 @@ const playedChampions = computed(() => {
             </label>
           </PopoverClose>
 
-          <PopoverClose v-for="champ in playedChampions" :key="champ" as-child>
+        <!--   <PopoverClose v-for="champ in playedChampions" :key="champ" as-child>
             <label class=" hover:opacity-70 cursor-pointer size-14">
               <input v-model="ms.championSelect" type="radio" class="peer hidden" :value="champ" />
               <LazyChampionIconFromName :name="champ" class="size-14" hydrate-on-visible />
 
             </label>
-          </PopoverClose>
+          </PopoverClose> -->
         </transition-slide>
       </div>
     </LazyCustomPopoverContent>

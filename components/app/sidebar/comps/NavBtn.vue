@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <label class="btn btn-square btn-ghost">
+  <label class="btn text-3 font-semibold  btn-ghost">
     <slot />
   </label>
 </template>

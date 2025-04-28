@@ -5,7 +5,7 @@ export default defineAppConfig({
     class: 'text-[var(--color-bc)]',
     size: '15px',
     aliases: {
-      'search': 'ph:magnifying-glass',
+      'search': 'lucide:search',
       'search-bold': 'ph:magnifying-glass-bold',
       'search-sm': 'teenyicons:search-small-outline',
 
@@ -15,6 +15,7 @@ export default defineAppConfig({
       'add-sq-outline': 'basil:add-outline',
       'minus-sm': 'teenyicons:minus-small-outline',
       'calc': 'teenyicons:calculator-outline',
+      'calc-solid': 'streamline:calculator-1-solid',
       'minus': 'radix-icons:minus',
       'absolute': 'hugeicons:absolute',
       'weighted': 'tabler:math-integral-x',
@@ -47,18 +48,21 @@ export default defineAppConfig({
       'more': 'radix-icons:dots-horizontal',
       'more-v': 'radix-icons:dots-vertical',
       'reset': 'mynaui:refresh',
-      'erase': 'radix-icons:eraser',
       'gear': 'ph:gear-six',
+      'gear-solid': 'heroicons:cog-6-tooth-20-solid',
       'update': 'radix-icons:update',
       'lines': 'teenyicons:align-text-justify-outline',
       'filter': 'teenyicons:filter-outline',
       'refresh': 'radix-icons:reload',
       'copy': 'radix-icons:copy',
       'shuffle': 'qlementine-icons:shuffle-16',
-      'dot': 'radix-icons:dot-filled',
-      'edit': 'radix-icons:pencil-2',
       'export': 'radix-icons:share-2',
       'menu': 'radix-icons:hamburger-menu',
+
+      // editing
+      'backspace': 'iconamoon:backspace-light',
+      'edit': 'radix-icons:pencil-2',
+      'erase': 'radix-icons:eraser',
 
       // folder
       'x-folder': 'teenyicons:folder-x-outline',
@@ -82,6 +86,7 @@ export default defineAppConfig({
       'share': 'iconoir:send-diagonal',
 
       // pic
+      'dot': 'radix-icons:dot-filled',
       'infinity': 'solar:infinity-outline',
       'shield': 'teenyicons:shield-tick-outline',
       'star': 'ph:star',

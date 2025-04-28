@@ -1,87 +1,67 @@
-export function useFilteredMatches(
-  fullMatches: Ref<MatchData[]>,
-) {
-  const ms = useMatchStore()
-  const { matches: simplifiedMatches, queueSelect, championSelect, playerSelect, patchSelect, roleSelect } = storeToRefs(ms)
+import { matchFilters } from 'utils/filters/matchFilters'
 
-  // Map full matches by gameEndTimestamp (assuming it's unique + matches the simplified data)
+export function useFilteredMatches(fullMatches: Ref<MatchData[]>, puuid: string) {
+  const ms = useMatchStore()
+  const ss = useSummonerStore()
+  const summoner = ss.getSummoner(puuid)
+  const simplifiedMatches = ref<SimplifiedMatchData[]>([])
+
+  if (summoner) {
+    simplifiedMatches.value = summoner.simplifiedMatches
+  }
+
+  const { queueSelect, championSelect, playerSelect, patchSelect, roleSelect } = storeToRefs(ms)
+
+  // Map full matches by gameEndTimestamp
   const matchMap = computed(() => {
     return new Map(
       fullMatches.value.map(match => [match.info.gameEndTimestamp, match]),
     )
   })
-
-  // filter using piniaMatchData[]
   const filteredSimplified = computed(() => {
-    return simplifiedMatches.value.filter((match) => {
-      const ds = useDataStore()
-
-      const matchesPatch
-  = !patchSelect.value || patchSelect.value === ds.currentPatch || match.gameVersion === patchSelect.value
-
-      const matchesQueue
-  = !queueSelect.value || Number(queueSelect.value) === 0 || match.queueId === Number(queueSelect.value)
-
-      const matchesChampion
-        = !championSelect.value
-          || championSelect.value === 'All'
-          || match.championName === championSelect.value
-
-                const matchesRole
-        = !roleSelect.value
-          || roleSelect.value === 'ALL'
-          || match.teamPosition === roleSelect.value
-
-      const matchesPlayer
-      = !playerSelect.value || match.participants.some(p => p.riotIdGameName === playerSelect.value)
-
-      return matchesPatch && matchesQueue && matchesChampion && matchesPlayer && matchesRole
-    })
+    return simplifiedMatches.value.filter(match =>
+      matchFilters(match, {
+        patchSelect: patchSelect.value,
+        queueSelect: queueSelect.value,
+        championSelect: championSelect.value,
+        playerSelect: playerSelect.value,
+        roleSelect: roleSelect.value,
+      }),
+    )
   })
 
   const filteredSimplifiedNoRole = computed(() => {
-  return simplifiedMatches.value.filter((match) => {
-    const ds = useDataStore()
-
-    const matchesPatch =
-      !patchSelect.value ||
-      patchSelect.value === ds.currentPatch ||
-      match.gameVersion === patchSelect.value
-
-    const matchesQueue =
-      !queueSelect.value ||
-      Number(queueSelect.value) === 0 ||
-      match.queueId === Number(queueSelect.value)
-
-    const matchesChampion =
-      !championSelect.value ||
-      championSelect.value === 'All' ||
-      match.championName === championSelect.value
-
-    const matchesPlayer =
-      !playerSelect.value ||
-      match.participants.some(p => p.riotIdGameName === playerSelect.value)
-
-    return matchesPatch && matchesQueue && matchesChampion && matchesPlayer
-  })
-})
-
-
-  // ✅ guard to prevent filtering too early
-  const dataReady = computed(() => {
-    return fullMatches.value.length > 0 && simplifiedMatches.value.length > 0
+    return simplifiedMatches.value.filter(match =>
+      matchFilters(match, {
+        patchSelect: patchSelect.value,
+        queueSelect: queueSelect.value,
+        championSelect: championSelect.value,
+        playerSelect: playerSelect.value,
+        roleSelect: roleSelect.value,
+        ignoreRole: true,
+      }),
+    )
   })
 
+  // Check if matches are still loading
+  const loading = computed(() => {
+    return (
+      simplifiedMatches.value.length === 0
+      || fullMatches.value.length === 0
+    )
+  })
+
+  // Only compute filtered matches if data is available
   const filteredMatches = computed(() => {
-    if (!dataReady.value)
+    if (loading.value)
       return []
 
+    // Ensure we only filter when simplifiedMatches and fullMatches are available
     return filteredSimplified.value
       .map(simplified => matchMap.value.get(simplified.gameEndTimestamp))
-      .filter(Boolean)
-      .sort((a, b) => b.info.gameEndTimestamp - a.info.gameEndTimestamp) as MatchData[]
+      .filter(Boolean) // Ensure no undefined matches
+      .sort((a, b) => b.info.gameEndTimestamp - a.info.gameEndTimestamp)
   })
-
   const championsPlayed = computed(() => {
     return Array.from(
       new Set(simplifiedMatches.value.map(m => m.championName)),
@@ -90,7 +70,7 @@ export function useFilteredMatches(
 
   return {
     filteredMatches,
-    dataReady,
+    loading,
     filteredSimplified,
     filteredSimplifiedNoRole,
     championsPlayed,

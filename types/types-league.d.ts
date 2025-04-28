@@ -18,63 +18,34 @@ declare global {
     1: Spell
   }
 
-  interface summoner {
+  interface Summoner {
     name: string
     tag: string
-    region: string
+    puuid: string
+    profileIcon: string
     level: number
-    icon: string
-    border: string
-    peakRank: {
-      peak: string
-      season: string
+    region: string
+    ranked?: {
+      solo?: RankedEntry
+      flex?: RankedEntry
     }
-    ranks: {
-      soloDuo: queue
-      flex: queue
-    }
-    mostPlayed?: champPlayCount[]
-    roles: {
-      role: string
-    }
+    matches?: MatchData[]
+    simplifiedMatches?: SimplifiedMatchData[]
   }
 
-  interface role {
-    percent: number
+  interface RankedEntry {
+    tier: string
+    division: string
+    lp: number
+    wins: number
+    losses: number
+    queueType: string
   }
 
-  interface queue {
-    rank: string
-    tier: number
-    games: number
-    win: number
-    loss: number
+  interface ExtendedSummoner extends Summoner {
+    matches: MatchData[]
+    simplifiedMatches: SimplifiedMatchData[]
   }
 
-  interface ChampPlayCount {
-    name: string
-    games: number
-    win: number
-    loss: number
-    kda: string
-  }
-
-  interface PlayerHistoryData {
-    patch: string
-    match: string
-    win: boolean
-    champion: number
-    items: number[]
-  }
-
-  interface Image {
-    full: string
-    sprite: string
-    group: string
-    x: number
-    y: number
-    w: number
-    h: number
-  }
 }
 export { }

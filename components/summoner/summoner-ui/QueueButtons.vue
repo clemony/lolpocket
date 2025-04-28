@@ -3,12 +3,10 @@ const ms = useMatchStore()
 </script>
 
 <template>
-  <Tabs v-model:model-value="ms.queueSelect">
-<!-- <label class="flex items-center pl-2 pr-3">
-  <div class="grow font-medium">
-    Queue
-  </div>
-</label> -->
+  <Tabs v-model:model-value="ms.queueSelect" class="-mb-1">
+      <FilterLabel v-model="ms.queueSelect" :active="ms.queueSelect != 0" @click="ms.queueSelect = 0">
+        {{    ms.queueSelect == 400 ? 'Normal' : ms.queueSelect == 420 ? 'Ranked Solo' : ms.queueSelect == 430 ? 'Ranked Flex' : 'All Queues' }}
+      </FilterLabel>
 
     <IndicatorTabsList class=" w-full grid grid-cols-4 h-12">
       <IndicatorTabsTrigger  v-tippy="'All Matches'" :value="0" class="px-4">
@@ -21,7 +19,7 @@ const ms = useMatchStore()
         </span>
       </IndicatorTabsTrigger>
 
-      <IndicatorTabsTrigger v-tippy="'Ranked Flex'" :value="440" class="">
+      <IndicatorTabsTrigger v-tippy="'Ranked Flex'" :value="430" class="">
         <i-roles-duo class="size-6 dst" />
       </IndicatorTabsTrigger>
 

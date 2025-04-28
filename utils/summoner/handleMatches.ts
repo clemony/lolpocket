@@ -14,9 +14,12 @@ export function normalizeGamePatchNumber(match) {
   p = p.length < 2 ? `0${p}` : p
   return convertPatchToRiotFormat(p)
 }
-
-export function handleUserMatchData(newMatch, puuid?) {
-  const as = useAccountStore()
+export function handleUserMatchData(newMatch, puuid?) {}
+export function getPatchChampions(newMatch, puuid?) {
+  const hi = []
+  return [...hi]
+}
+/* const as = useAccountStore()
   const ms = useMatchStore()
   newMatch.forEach((match) => {
     const p = puuid || match.info.participants.find(p => p.puuid == as.userAccount.puuid)
@@ -58,7 +61,7 @@ export function getPatchChampions(patchGames) {
   })
 
   return [...championStats.entries()]
-    .sort((a, b) => b[1].games - a[1].games) // Sort by most played
+    .sort((a, b) => b[1].games - a[1].games)
     .map(([champion, stats]) => ({
       champion: ds.champions.find(c => c.key == champion.toString())?.name || null,
       games: stats.games,
@@ -67,3 +70,4 @@ export function getPatchChampions(patchGames) {
       winrate: stats.winrate,
     }))
 }
+ */

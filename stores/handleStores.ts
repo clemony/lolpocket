@@ -3,8 +3,8 @@
 export const as = computedAsync(async () => {
   return await useAccountStore()
 }, null)
-export const ans = computedAsync(async () => {
-  return await useMatchStore()
+export const ss = computedAsync(async () => {
+  return await useSummonerStore()
 }, null)
 
 export const ds = computedAsync(async () => {

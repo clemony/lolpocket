@@ -10,7 +10,7 @@ onMounted (() => {
 
 <template>
   <Dialog v-model:open="us.commandOpen">
-    <MotionDialogContent class="bg-accent/80 backdrop-blur-md inset-shadow-sm w-170 !rounded-3xl !p-0 -mt-54 border-2 inset-shadow-dark-1 focus:!outline-0 !border-dark-1/70 focus:!ring-dark-2 focus:!ring-offset-dark-2" @interact-outside="us.commandOpen = false">
+    <MotionDialogContent class="bg-b1/80 backdrop-blur-md inset-shadow-sm w-170 !rounded-3xl !p-0 -mt-54 border-2 inset-shadow-dark-1 focus:!outline-0 !border-dark-1/70 focus:!ring-dark-2 focus:!ring-offset-dark-2" @interact-outside="us.commandOpen = false">
       <VisuallyHidden>
         <DialogHeader>
           <DialogTitle>

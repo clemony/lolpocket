@@ -43,10 +43,10 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="w-full">
+  <div class="w-full rounded-xl overflow-hidden border-b3/60 border">
 
       <!-- head -->
-      <div class="w-full grid grid-cols-[40px_1fr_30px_30px]  bg-b2   border-y border-y-b3/50  z-1 py-2 *:text-2 items-center btn-depth">
+      <div class="w-full grid grid-cols-[40px_1fr_30px_30px]  bg-b2   z-1 py-2 *:text-2 items-center btn-depth h-13">
 
           <div class="dst col-start-2 font-medium">
             STAT
@@ -84,9 +84,7 @@ watchEffect(() => {
       </LayoutGroup>
       </div>
 
-     
-    </div>
-      <div class="w-full grid grid-cols-[40px_1fr_30px_30px]  bg-b2   border-y border-y-b3/50  z-1 py-2 *:text-2 items-center">
+      <div class="w-full grid grid-cols-[40px_1fr_30px_30px]  bg-b2 h-13  border-y border-y-b3/50  z-1 py-2 *:text-2 items-center">
 <div class="justify-center ml-4">
   <i-ui-gold  class="text-bc/80 size-6"/>
 </div>
@@ -102,4 +100,6 @@ watchEffect(() => {
           </div>
      
   </div>
+     
+    </div>
 </template>

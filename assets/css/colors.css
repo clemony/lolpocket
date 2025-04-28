@@ -63,14 +63,6 @@
 
 @theme inline {
 
-  /* base */
- --b2w2: color-mix(in oklch, var(--b2) 100%, white 20%);
-
- --b2b1: color-mix(in oklch, var(--b2) 100%, black `0%);
-
- --b3b1: color-mix(in oklch, var(--b3) 100%, black 50%);
-
-
 /* paths */
 
   --color-precision-w600: color-mix(in srgb, var(--color-precision) 100%, white 60%);

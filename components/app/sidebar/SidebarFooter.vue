@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 const emit = defineEmits(['update:modelValue'])
 const ts = useTempStore()
+const as = useAccountStore()
 const us = useUiStore()
 function handleClick(mode) {
   emit('update:modelValue', false)
@@ -28,7 +29,7 @@ const messages = ref(false)
     <DropdownMenu>
       <DropdownMenuTrigger class="btn btn-ghost  btn-xl text-3 font-medium justify-start px-2 grow *:pointer-events-none data-[state=open]:bg-b2 data-[state=open]:border-b3" :class="{ '!p-0': !us.sidebarExpanded }">
         <div class="size-full flex items-center gap-3 relative">
-          <ProfileSummonerIcon class="rounded-lg **:rounded-lg size-10 grayscale  tldr-20" />
+          <UserSummonerIcon class="rounded-lg **:rounded-lg size-10 grayscale  tldr-20" />
 
           <SidebarText>
             <SummonerName />

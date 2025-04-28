@@ -43,7 +43,7 @@ const summoner = computed(() => {
         </template>
       </div>
     </div>
-    <UpdateMatchHistoryButton v-if="summoner && summoner.puuid"  :puuid="summoner.puuid" />
+    <!--  <UpdateMatchHistoryButton v-if="summoner && summoner.puuid"  :puuid="summoner.puuid" />
     <transition-expand v-if="route.path != '/nexus' " group as="div" class="grid">
       <SidebarSeparator class="mt-6 mb-6" />
       <div v-if="route.path == '/research/champions' || route.path == '/research/items' " class=" px-3 mb-5 self-start">
@@ -55,7 +55,7 @@ const summoner = computed(() => {
         <QueueButtons />
         <PlayedWithList v-if="summoner && summoner.puuid && summoner.gameName" :puuid="summoner.puuid" :game-name="summoner.gameName" />
       </div>
-    </transition-expand>
+    </transition-expand> -->
     <Grow />
     <ClearMatchesButton />
     <LogMatchesButton />

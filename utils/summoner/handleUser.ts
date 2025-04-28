@@ -1,16 +1,14 @@
-
-export const defaultUser = {
+export const defaultUser: userAccount = {
   name: 'Summoner',
-  image: ref(null),
-  role: ref(null),
-  id: ref(null),
-  session: ref(null),
+  role: '',
+  id: '',
+  session: null,
   accessToken: '',
   refreshToken: '',
-  puuid: ref(null),
+  puuid: '',
   gameName: 'Summoner',
   tagLine: 'Link Riot Account?',
-  profileIconId: '',
+  profileIconId: 0,
   summonerLevel: 0,
   region: 'Runeterra',
 }

@@ -11,9 +11,9 @@ definePageMeta({
 const ds = useDataStore()
 const as = useAccountStore()
 const ms = useMatchStore()
-watchEffect(() => {
+/* watchEffect(() => {
   ms.patchGames = ms.userMatchData.filter(g => g.patch == ms.patchSelect)
-})
+}) */
 </script>
 
 <template>

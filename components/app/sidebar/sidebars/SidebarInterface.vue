@@ -9,6 +9,7 @@ const props = defineProps<{
 const as = useAccountStore()
 const us = useUiStore()
 const route = useRoute()
+const puuid = computedAsync(() => as.userAccount?.puuid ?? '')
 </script>
 
 <template>
@@ -20,7 +21,9 @@ const route = useRoute()
       <LazySettingsSidebar v-if="us.settingsOpen == true" />
       <LazyAppSidebar v-if="route.path == '/'" />
       <LazySummonerSidebar v-else-if="route.meta.section == 'nexus'" />
-      <LazyMatchSidebar v-else-if="route.path == '/match'" />
+     <div v-else-if="route.path == '/match' && puuid" :puuid="puuid">
+      <slot name="match" />
+     </div>
       <LazyAnalyticsSidebar v-else-if="route.meta.section == 'analytics'" />
       <LazyBackpackSidebar v-else-if="route.meta.section == 'backpack'" />
       <LazyCalculatorSidebar v-else-if="route.meta.section == 'calculator'" />

@@ -19,7 +19,7 @@ const red = computed (() => {
   <div class="grid grid-cols-[1fr_1fr] @min-xl/match:*:max-w-36 @min-xl/match:*:w-36 @min-lg/match:*:max-w-24 @min-lg/match:*:w-24  gap-4  overflow-hidden *:gap-y-px *:grid *:grid-rows-5">
     <div class="">
       <div v-for="player in blue" :key="player.participantId" class="flex gap-2 overflow-hidden">
-        <div class="flex gap-2 overflow-hidden">
+        <div class="flex gap-2 overflow-hidden" @click="''">
           <div class="shadow-sm size-fit">
             <div class="rounded-tiny size-5.5 overflow-hidden">
               <ChampionImage :player="player" :size="5.5" class="rounded-tiny size-full" />

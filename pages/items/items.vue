@@ -1,13 +1,14 @@
-<script setup lang="ts">
-const ds = useDataStore()
-const is = useItemStore()
+<script lang="ts" setup>
+
 definePageMeta({
-  name: 'item-data',
-  path: '/items',
+  name: 'item-grid',
   title: 'Items',
+  alias: '/items',
   section: 'items',
 })
 
+const ds = useDataStore()
+const is = useItemStore()
 const items = computed(() => [...(ds.items || [])])
 
 const captions = computed(() => {
@@ -22,15 +23,15 @@ const captions = computed(() => {
 </script>
 
 <template>
-  <div class="pt-0  overflow-x-hidden">
-    <AppTitlebar>
+
+<NuxtLayout name="sidebar-layout" class="">
+    <div class="w-full flex items-center pt-24 px-16 pb-12">
+
+
+      <h1 class="grow">Items</h1>
       <div
         class="text-1  items-center pl-3 pr-7  text-nowrap flex mt-1 "
         v-html="captions" />
-    </AppTitlebar>
-
-    <div class="w-full pt-24 px-16 pb-12">
-      <h1>Items</h1>
     </div>
     <div class="size-full items-start overflow-y-auto  px-16 no-scrollbar">
       <ItemList
@@ -38,7 +39,5 @@ const captions = computed(() => {
         :list-key="is.listKey"
         class="" />
     </div>
-  </div>
+  </NuxtLayout>
 </template>
-
-<style scoped></style>

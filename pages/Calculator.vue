@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ListboxContent, ListboxFilter, ListboxGroup, ListboxGroupLabel, ListboxItem, ListboxItemIndicator, ListboxRoot, ListboxVirtualizer } from 'reka-ui'
+import { SplitterPanel as ResizablePanel } from 'reka-ui'
+
 
 import { animate, AnimatePresence, motion } from 'motion-v'
 
@@ -20,9 +22,17 @@ console.log('💠 - is.calculatorSets:', is.calculatorSets)
 </script>
 
 <template>
-  <div
-    class="size-full  pt-8  overflow-y-auto">
-    <AppTitlebar />
+
+<ResizablePanelGroup class="size-full" direction="horizontal">
+
+<ResizablePanel :default-size="30" class="size-full relative">
+  <CalculatorSidebar />
+</ResizablePanel>
+<ResizableHandle  with-handle/>
+  <ResizablePanel
+    class="flex justify-center h-full  pt-8  overflow-y-auto">
+
+    <div>
     <ListboxRoot v-model="is.setsToCompare" multiple>
       <ListboxFilter />
 
@@ -63,6 +73,8 @@ console.log('💠 - is.calculatorSets:', is.calculatorSets)
       </ListboxContent>
     </ListboxRoot>
   </div>
+  </ResizablePanel>
+</ResizablePanelGroup>
 </template>
 
 <style scoped>

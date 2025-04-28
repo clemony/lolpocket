@@ -8,26 +8,29 @@ const props = defineProps<{
 
 <template>
   <div class="bg-b2/30 drop-shadow-xs border-b3/40 p-0  h-44 w-220 field grid justify-center **:select-none text-2 shadow-warm-soft overflow-visible">
-    <div class="flex gap-7 opacity-60 py-6 w-full items-start overflow-hidden  cursor-pointer group/collapse pl-6 pr-4 ">
-      <div class="flex w-38 h-full **:select-none flex-col justify-start gap-1.5">
-        <Skeleton class="w-20 h-11 mb-2" />
+    <div class="flex gap-7 opacity-60 py-6 size-full items-start overflow-hidden  cursor-pointer group/collapse pl-6 pr-6 ">
+      <div class="flex w-38 h-34 **:select-none flex-col justify-start gap-1.5">
+        <Skeleton class="w-20 h-1/2 mb-2" />
         <Skeleton class="size-full" />
       </div>
-      <div class="flex gap-3 w-full">
-        <div class="flex flex-col gap-3 grow ">
-          <div class="flex items-start">
+      <div class="flex gap-3 w-full gap-8">
+          <div class="flex flex-col gap-5 h-34 justify-between items-start">
             <!-- champ image -->
 
-            <Skeleton class="size-full max-w-64  ml-4  " />
+            <Skeleton class=" h-1/2 w-64  " />
+
+            <div class="flex h-1/2 gap-8 w-full">
+            <Skeleton class="w-1/2 h-full " />
+            <Skeleton class="w-1/2 h-full " />
+            </div>
           </div>
 
-          <Skeleton class="min-w-64 w-full h-12 max-w-74 !rounded-lg " />
+          <Skeleton class=" w-1/2 h-34  !rounded-lg " />
+
+          <Skeleton class=" w-1/2 h-34  !rounded-lg " />
         </div>
       </div>
-      <div class="grid grid-cols-[1fr_1fr]   gap-4  overflow-hidden size-full ">
-      </div>
-      <div class="h-full  w-8   justify-self-end">
-      </div>
-    </div>
+
+  
   </div>
 </template>

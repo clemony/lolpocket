@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { DropdownMenuPortal } from 'reka-ui'
+
 const emit = defineEmits(['update:modelValue'])
 const ts = useTempStore()
 const us = useUiStore()
@@ -12,23 +14,24 @@ function handleClick(mode) {
   }
 }
 const as = useAccountStore()
-const user = computed (() => as.userAccount.role)
+const user = computed (() => as.userAccount.puuid)
 const messages = ref(false)
+
+const { forceReload, loading } = useSummoner(user.value)
 </script>
 
 <template>
   <DropdownMenu>
-    <DropdownMenuTrigger class="btn btn-ghost  btn-xl text-3 font-medium justify-start px-2 grow *:pointer-events-none data-[state=open]:bg-b2 data-[state=open]:border-b3 !p-0">
+    <DropdownMenuTrigger class="btn btn-ghost  btn-xl text-3 font-medium justify-start px-2  *:pointer-events-none data-[state=open]:bg-b2 data-[state=open]:border-b3 !p-0">
       <div class="size-full flex items-center gap-3 relative">
-        <ProfileSummonerIcon class=" size-10 grayscale  tldr-20" />
+        <UserSummonerIcon class=" size-10 grayscale  tldr-20" />
       </div>
     </DropdownMenuTrigger>
 
     <LazyDropdownMenuContent
-      side="right" align="end" :side-offset="11" class="w-80">
+      align="end" class="w-80">
       <DropdownMenuItem class="items-center w-full justify-between">
         <span class="pl-6.5 grow">Hi, <SummonerName />!</span>
-        <span>good.</span>
       </DropdownMenuItem>
       <DropdownMenuSeparator />
       <DropdownMenuItem class=" group/b ">
@@ -47,11 +50,12 @@ const messages = ref(false)
       <DropdownMenuSeparator />
       <SidebarPatchNotes />
       <DropdownMenuSeparator />
-      <DropdownMenuItem>
-        <DropdownMenuSub>
-          <DropdownMenuSubTrigger>
-            Admin
-          </DropdownMenuSubTrigger>
+
+      <DropdownMenuSub>
+        <DropdownMenuSubTrigger>
+          Admin
+        </DropdownMenuSubTrigger>
+        <DropdownMenuPortal>
           <DropdownMenuSubContent>
             <DropdownMenuItem>
               <LazyAdminLink />
@@ -62,10 +66,17 @@ const messages = ref(false)
                 name="ph:gear-six" />
               <ClearMatchesButton />
             </DropdownMenuItem>
+            <DropdownMenuItem
+              class="" @click="forceReload()">
+              <icon
+                name="ph:gear-six" />
+              Force Reload User Summoner
+            </DropdownMenuItem>
           </DropdownMenuSubContent>
-          <DropdownMenuSeparator />
-        </DropdownMenuSub>
-      </DropdownMenuItem>
+        </DropdownMenuPortal>
+        <DropdownMenuSeparator />
+      </DropdownMenuSub>
+
       <DropdownMenuItem
         v-if="as.userAccount.session"
         class=""

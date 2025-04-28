@@ -28,7 +28,7 @@ cleanedItemData = integrateDataDragon(cleanedItemData)
     console.log('Failed to parse JSON.')
   }
 
-    const { data, error } = await supabase
+ /*    const { data, error } = await supabase
     .from('league_data')
     .insert([
       { 'item_data': cleanedItemData, 'patch': patch, 'user_id': userId }])
@@ -40,7 +40,7 @@ cleanedItemData = integrateDataDragon(cleanedItemData)
     }
     else {
       console.log('Data updated successfully:', data)
-    }
+    } */
   
   return cleanedItemData
   }

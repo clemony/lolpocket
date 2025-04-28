@@ -1,3 +1,4 @@
+import type { Session } from '@supabase/supabase-js'
 import type { JwtPayload } from 'jwt-decode'
 import type { RefOrElement } from 'vue-draggable-plus'
 
@@ -20,10 +21,9 @@ declare global {
   }
   interface userAccount {
     name: string
-    image: string
     role: string
     id: string
-    session: string
+    session: Session
     accessToken: string
     refreshToken: string
     puuid: string

@@ -13,7 +13,7 @@ const ds = useDataStore()
     console.error('Error fetching user:', userError)
     return
   }
-  else {
+ /*  else {
     const userId = user.id
     const patch = useDataStore().currentPatch.toString()
     const { data, error } = await supabase
@@ -31,7 +31,7 @@ const ds = useDataStore()
     }
   
   return updatedData
-  }
+  } */
 }
 
 

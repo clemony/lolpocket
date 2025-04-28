@@ -1,7 +1,5 @@
-export function useMatchChampions(queueFilter: Ref<number> = ref(0)) {
-  const ms = useMatchStore()
+export function useMatchChampions(queueFilter: Ref<number> = ref(0), puuid: string, matches: Ref<SimplifiedMatchData[]>) {
   const ds = useDataStore()
-  const { matches } = storeToRefs(ms)
 
   const championStats = new Map<string, {
     games: number
@@ -23,12 +21,13 @@ export function useMatchChampions(queueFilter: Ref<number> = ref(0)) {
     championStats.clear()
 
     const filteredMatches = matches.value.filter(match =>
-      queueFilter.value === 0 || match.queueId === queueFilter.value
+      queueFilter.value === 0 || match.queueId === queueFilter.value,
     )
 
     filteredMatches.forEach((match, index) => {
       const champ = match.championName
-      if (!champ) return
+      if (!champ)
+        return
 
       if (!championStats.has(champ)) {
         championStats.set(champ, {

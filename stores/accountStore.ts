@@ -3,41 +3,85 @@ import { defineStore } from 'pinia'
 export const useAccountStore = defineStore(
   'as',
   () => {
-    const ts = useTempStore()
-
     const themeClass = ref('daylight')
     const dataTheme = ref('daylight')
+    const userNotes = ref<Note[]>([])
+    const reducedMotion = ref(false)
+    const favoriteChamps = ref<Champion[]>([])
+    const favoriteItems = ref<Item[]>([])
 
-    const userAccount = {
-      name: ref('Summoner'),
-      image: ref(null),
-      role: ref(null),
-      id: ref(null),
-      session: ref(null),
+    const userAccount = ref<userAccount>({
+      name: 'Summoner',
+      role: null,
+      id: null,
+      session: null,
       accessToken: '',
       refreshToken: '',
-      puuid: ref(null),
-      gameName: ref('Summoner'),
-      tagLine: ref('Link Riot Account?'),
-      profileIconId: ref(),
-      summonerLevel: ref(0),
-      region: ref('Runeterra'),
+      puuid: '',
+      gameName: 'Summoner',
+      tagLine: 'Link Riot Account?',
+      profileIconId: 0,
+      summonerLevel: 0,
+      region: 'Runeterra',
+    })
+
+    const userSummoner = ref<Summoner>({
+      name: '',
+      tag: '',
+      puuid: '',
+      profileIcon: '',
+      level: 0,
+      region: '',
+      ranked: {
+        solo: undefined,
+        flex: undefined, // optional, safe
+      },
+      matches: [],
+    })
+
+    const { getAllMatches } = useMatchDexie()
+    const { simplifyMatches } = useMatchSimplifier(userAccount.value.puuid)
+
+    const matches = ref<SimplifiedMatchData[]>([])
+    const fullMatches = ref<MatchData[]>([])
+
+    function setFullMatches(data: MatchData[]) {
+      fullMatches.value = data
+      const simplifiedMatches = simplifyMatches(data)
+      setMatches(simplifiedMatches)
     }
 
-    const rankedEntries = ref()
+    // Function to set matches (simplified version)
+    function setMatches(data: SimplifiedMatchData[]) {
+      matches.value = data
+    }
 
-    const userNotes = ref<Note[]>([])
+    // Function to append new matches (useful when loading new matches)
+    function appendMatches(data: SimplifiedMatchData[]) {
+      matches.value.push(...data)
+    }
 
-    const reducedMotion = ref(false)
+    // Function to load matches from IndexedDB (matchDexie)
+    async function loadMatchesFromIndexedDB() {
+      const cachedMatches = await getAllMatches()
+      if (cachedMatches) {
+        setFullMatches(cachedMatches)
+      }
+    }
 
-    const favoriteChamps = ref<Champion[]>([])
-    // items
-    const favoriteItems = ref<Item[]>([])
+    loadMatchesFromIndexedDB()
 
     return {
       // account
       userAccount,
-      rankedEntries,
+      userSummoner,
+
+      matches,
+      fullMatches,
+      setMatches,
+      appendMatches,
+      loadMatchesFromIndexedDB,
+      setFullMatches,
       userNotes,
 
       // settings

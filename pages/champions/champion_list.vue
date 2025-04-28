@@ -255,21 +255,16 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowS
 </script>
 
 <template>
-  <div class="size-full pt-18">
-    <AppTitlebar>
-      <div class=" text-7 flex font-semibold items-center dst">
-        {{ cs.championGridLevel }}
-      </div>
-    </AppTitlebar>
+<NuxtLayout name="sidebar-layout" >
     <AgGridVue
       :initial-state="cs.dbChampionGridState"
       :grid-options="gridOptions"
       :theme="theme"
       :column-defs="colDefs"
-      class="!size-full stat-grid champion-grid"
+      class="!size-full stat-grid champion-grid pt-18"
       :tooltip-show-delay="400"
       @grid-pre-destroyed="onGridPreDestroyed"
       @grid-ready="onGridReady">
     </AgGridVue>
-  </div>
+</NuxtLayout>
 </template>

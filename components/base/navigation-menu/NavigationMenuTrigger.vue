@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import {
   NavigationMenuTrigger,
 
@@ -24,9 +23,8 @@ const forwardedProps = useForwardProps(delegatedProps)
 <template>
   <NavigationMenuTrigger
     v-bind="forwardedProps"
-    :class="cn(navigationMenuTriggerStyle(), 'group', props.class)"
-  >
+    :class="cn(navigationMenuTriggerStyle(), 'group', props.class)">
     <slot />
-    <ChevronDownIcon class="relative top-px ml-1 h-3 w-3 transition duration-300 group-data-[state=open]:rotate-180" aria-hidden="true" />
+    <icon name="up-sm" class="relative top-px ml-1 transition duration-300 shrink-0 group-data-[state=open]:rotate-180" aria-hidden="true" />
   </NavigationMenuTrigger>
 </template>

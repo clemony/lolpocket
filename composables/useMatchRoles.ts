@@ -20,7 +20,7 @@ const hexColors = {
   top: '#e0746b',
 }
 
-export function useMatchRoles(matches: Ref<piniaMatchData[]>): ComputedRef<RoleStats[]> {
+export function useMatchRoles(matches: Ref<SimplifiedMatchData[]>): ComputedRef<RoleStats[]> {
   return computed(() => {
     const roles = ['TOP', 'JUNGLE', 'MIDDLE', 'BOTTOM', 'UTILITY']
     const roleStatsMap = new Map<string, { games: number, wins: number }>()

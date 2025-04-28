@@ -1,26 +1,43 @@
 <script lang="ts" setup>
+import { motion } from 'motion-v'
+
 const props = defineProps<{
   noTitle?: boolean
-    class?: HTMLAttributes['class']
+  class?: HTMLAttributes['class']
 }>()
-const route = useRoute()
 
 const as = useAccountStore()
 const us = useUiStore()
+const route = useRoute()
+const puuid = computedAsync(() => as.userAccount?.puuid ?? '')
 </script>
 
 <template>
-  <div
+  <main class="flex size-full overflow-x-hidden " :class="cn(props.class)">
+    <div
+      class="  justify-self-end shrink-0 h-full pb-5 gap-2.5 border-r  z-4   border-r-b3/40 tldr-40 ease-out  overflow-hidden  group relative'">
+      <div class="w-full h-16" />
+      <transition-slide group :offset="{ enter: [us.enterX, us.enterY], leave: [us.enterX, us.leaveY] }" class="size-full">
+        <LazyAppSidebar v-if="us.sidebarMenuOpen == true" />
+        <LazySettingsSidebar v-if="us.settingsOpen == true" />
+        <LazyAppSidebar v-if="route.path == '/'" />
+        <LazySummonerSidebar v-else-if="route.meta.section == 'nexus'" />
 
-   :style="{ '--bg-noise': 1 }" :class="cn('main-sidebar  w-[330px] bg-b2/40  h-full pt-6.25 pb-5 gap-2.5 border-r shadow-warm shadow-black/5 z-3 flex-nowrap  flex  flex-col  border-r-b3/40 tldr-40 ease-out  overflow-x-hidden  group relative', props.class)">
-    <div v-if="!props.noTitle" class="flex items-start pr-5 w-full relative">
-      <h3 class="px-5.75 grow capitalize">
-        {{ route.meta.title || route.name }}
-      </h3>
-      <slot name="title" />
+        <slot v-else-if="route.path == '/match' && puuid" :puuid="puuid" name="match" />
+
+        <LazyAnalyticsSidebar v-else-if="route.meta.section == 'analytics'" />
+        <LazyBackpackSidebar v-else-if="route.meta.section == 'backpack'" />
+        <LazyCalculatorSidebar v-else-if="route.meta.section == 'calculator'" />
+        <LazyPocketSidebar v-else-if="route.meta.section == 'pocket'" />
+        <LazyItemSidebar v-else-if="route.meta.section == 'items'" />
+        <LazyChampionSidebar v-else-if="route.meta.section == 'champions'" />
+        <LazyDocsSidebar v-else-if="route.meta.section == 'docs'" />
+      </transition-slide>
+
+      <SidebarBorderCollapse @update:sidebar="us.toggleSidebar()" />
     </div>
-    <slot />
-
-    <SidebarBorderCollapse @update:sidebar="us.toggleSidebar()" />
-  </div>
+    <div class="size-full relative ">
+      <slot />
+    </div>
+  </main>
 </template>

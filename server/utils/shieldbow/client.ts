@@ -1,5 +1,5 @@
 // server/api/utils/shieldbow/client.ts
-import { Client } from 'shieldbow'
+/* import { Client } from 'shieldbow'
 import process from 'node:process'
 import dotenv from 'dotenv'
 
@@ -30,4 +30,4 @@ export async function createClient() {
     return client
   }
   process.exit(0)
-}
+} */

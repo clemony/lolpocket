@@ -1,20 +1,28 @@
 <script lang="ts" setup>
-const props = defineProps<{
+const { summoner, class: className } = defineProps<{
+  summoner: Summoner
   class?: HTMLAttributes['class']
 }>()
-const as = useAccountStore()
-
-const summoner = computed(() => {
-  return as.userAccount ? as.userAccount : defaultUser
-})
 
 // wtf
+
+const loaded = ref(false)
 </script>
 
 <template>
-  <SummonerIcon
+  <div        :class="cn({'inset-shadow-sm inset-shadow-black/90 avatar': loaded}, className)">
+  <NuxtImg
+      v-if="summoner.name && summoner.profileIcon"
+      :src="summoner.profileIcon"
+      :alt="summoner.name + summoner.tag"
+       :class="{'inset-shadow-sm inset-shadow-black/90 avatar': loaded}"
+       @load="loaded = true"
+      class="size-full  rounded-full  " />
 
-    v-if="summoner.gameName && as.userAccount.session && summoner.profileIconId"
-    :icon-id="summoner.profileIconId"
-    :alt="summoner.gameName" :class="props.class" />
+    <div
+      v-else
+      class="rounded-full avatar bg-neutral grid place-items-center text-nc text-2 size-full font-semibold">
+      LP
+    </div>
+</div>
 </template>

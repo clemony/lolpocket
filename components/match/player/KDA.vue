@@ -15,7 +15,7 @@ const math = computed (() => {
 <template>
   <div class="" :class="cn('flex max-w-32 min-w-32 flex-col py-1 ml-4 items-start ', props.class)">
     <p class="text-4 grid items-start font-semibold grid   justify-start tracking-wider text-nowrap inline-flex flex-nowrap">
-      {{ player.kills }}/<span class="text-domination">{{ player.deaths }}/</span>/{{ player.assists }}
+      {{ player.kills }}/<span class="text-domination">{{ player.deaths }}/</span>{{ player.assists }}
     </p>
 
     <p class="text-1 text-bc/80 text-nowrap mt-3 truncate font-medium ">

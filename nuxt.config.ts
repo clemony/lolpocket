@@ -4,15 +4,11 @@ import { fileURLToPath } from 'node:url'
 import VueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineNuxtConfig({
-  modules: ['@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', '@vueuse/nuxt', '@nuxtjs/supabase', '@morev/vue-transitions/nuxt', '@nuxt/eslint', 'vue-sonner/nuxt', '@nuxt/icon', 'nuxt-svgo', '@nuxt/image'],
+  modules: ['@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', '@nuxt/image', '@vueuse/nuxt', '@nuxtjs/supabase', '@morev/vue-transitions/nuxt', '@nuxt/eslint', 'vue-sonner/nuxt', '@nuxt/icon', 'nuxt-svgo', ],
 
   icon: {
     provider: 'iconify',
     serverBundle: false,
-  },
-
-  experimental: {
-    decorators: true,
   },
 
   vite: {
@@ -119,6 +115,7 @@ export default defineNuxtConfig({
     'stores': fileURLToPath(new URL('./stores', import.meta.url)),
     'composables': fileURLToPath(new URL('./composables', import.meta.url)),
     'shared': fileURLToPath(new URL('./shared', import.meta.url)),
+    'utils': fileURLToPath(new URL('./utils', import.meta.url)),
     'supabase': fileURLToPath(new URL('./shared/supabase', import.meta.url)),
     'components': fileURLToPath(new URL('./components', import.meta.url)),
     'plugins': fileURLToPath(new URL('./plugins', import.meta.url)),

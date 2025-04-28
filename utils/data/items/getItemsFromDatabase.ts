@@ -11,9 +11,9 @@ export async function getItemsFromDatabase() {
       return null
     }
 
-    const itemData = data[data.length - 1].item_data // Get the last record
+/*     const itemData = data[data.length - 1].item_data */ // Get the last record
 
-    const transformedItems = Object.entries(itemData).map(([name, properties]) => ({
+  /*   const transformedItems = Object.entries(itemData).map(([name, properties]) => ({
       name,
       ...(typeof properties === 'object' && properties !== null ? properties : { value: properties }),
     }))
@@ -22,9 +22,9 @@ export async function getItemsFromDatabase() {
     if (!Array.isArray(filteredItems)) {
       console.error('Filtered items are not an array:', filteredItems)
       return
-    }
+    } */
 
-    ds.items = filteredItems
+   // ds.items = filteredItems
   }
   catch (error) {
     console.error('Unexpected error:', error)

@@ -27,10 +27,11 @@ onMounted (() => {
 </script>
 
 <template>
-  <div class="flex flex-col items-center pb-6 size-full relative">
-    <SidebarTitle>
-      <Tabs v-model:model-value="model" class="absolute right-5.25 top-3.75 **:pointer-events-auto z-5">
-        <IndicatorTabsList class="grid grid-cols-2 ">
+  <div class="flex pl-4 pr-2 w-116 h-full flex-col items-center pb-6 justify-start  relative">
+
+    <div class="w-full px-5 mt-4">
+      <Tabs v-model:model-value="model" class=" w-full  **:pointer-events-auto ">
+        <IndicatorTabsList class="grid grid-cols-2 h-10">
           <IndicatorTabsTrigger value="Grid" @click="navigateTo('/items')">
             Grid
           </IndicatorTabsTrigger>
@@ -40,10 +41,9 @@ onMounted (() => {
           <TabIndicator />
         </IndicatorTabsList>
       </Tabs>
-    </SidebarTitle>
 
-    <div class="w-full px-5">
-      <DbItemSearch class="input w-full mt-8 shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc" />
+
+      <DbItemSearch class="input w-full mt-6 shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc" />
     </div>
     <div class="px-5 mt-2 w-full">
       <div class="divider divider-start before:bg-b3/60 font-semibold  my-8">

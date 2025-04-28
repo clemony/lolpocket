@@ -8,9 +8,9 @@ export default defineEventHandler(async (event) => {
     puuid: query.puuid as string,
     start: Number(query.start ?? 0),
     count: Number(query.count ?? 20),
-    existingIds: query.existingIds ? JSON.parse(query.existingIds as string) : [],
   })
   console.log('💠 - defineEventHandler - matches:', matches)
+  
 
   return matches
 })

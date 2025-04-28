@@ -21,8 +21,8 @@ const ds = useDataStore()
 </script>
 
 <template>
-  <div class=" grid transition-all duration-300 ">
-    <AppTitlebar>
+<NuxtLayout name="sidebar-layout" >
+    <div>
       <span class="w-6 h-full" />
       <motion.p
         v-if="y > 80" class="w-fit text-nowrap overflow-x-hidden text-left flex justify-start items-center font-light mb-px  italic text-1"
@@ -38,7 +38,7 @@ const ds = useDataStore()
         {{ quote }}
       </motion.p>
       <Grow />
-    </AppTitlebar>
+    </div>
 
     <div ref="target" class="inset-0 top-0 left-0 absolute  overflow-y-auto">
       <div class="flex items-center w-full px-16 gap-8 pt-22">
@@ -52,7 +52,7 @@ const ds = useDataStore()
       </div>
       <ChampionList class="gap-3  tldr-30 " />
     </div>
-  </div>
+</NuxtLayout>
 </template>
 
 <style scoped></style>

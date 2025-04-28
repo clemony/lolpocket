@@ -2,6 +2,8 @@
 const props = defineProps<{
   class?: HTMLAttributes['class']
   headerClass?: HTMLAttributes['class']
+  crumbFirst?: string
+  crumbLast?: string
 }>()
 const us = useUiStore()
 const route = useRoute()
@@ -35,7 +37,9 @@ const headerBorder = computed (() => {
         <template v-if="route.path.match(/pocket\//)">
           <li>Pockets</li>
           <li>{{ pocketName }} </li>
+          <li v-if="props.crumbFirst">{{props.crumbFirst}}</li>
           <li>{{ route.meta.name }}</li>
+          <li  v-if="props.crumbLast">{{props.crumbLast}}</li>
         </template>
         <template v-else>
           <template v-for="crumb in breadcrumbs" :key="crumb">

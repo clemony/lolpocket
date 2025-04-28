@@ -17,8 +17,8 @@ const isOpen = ref(false)
 </script>
 
 <template>
-  <div class="size-fit " :class="{ 'min-h-52': !isOpen, 'min-h-267': isOpen }">
-    <Collapsible v-if="player && match" :key="match.matchId" v-model:open="isOpen" as="div" class= "animate-in fade-in group w-220 justify-start max-w-220 group/collapse ">
+  <div class="size-fit " :class="{ 'min-h-53': !isOpen, 'min-h-267': isOpen }">
+    <Collapsible v-if="player && match" :key="match.matchId" v-model:open="isOpen" as="div" class="animate-in fade-in group w-220 justify-start max-w-220 group/collapse ">
       <div
         class="field grid justify-center **:select-none text-2 shadow-warm-soft overflow-visible bg-b2/30 drop-shadow-xs border-b3/40 w-full p-0  @container/match min-w-134 cursor-pointer group/collapse ">
         <CollapsibleTrigger class="flex gap-7 py-6 w-full items-start overflow-hidden  cursor-pointer group/collapse pl-6 pr-4 ">

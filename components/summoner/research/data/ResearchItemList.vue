@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 const ms = useMatchStore()
-
-const patchGames = computed(() => ms.userMatchData.filter(g => g.patch === ms.patchSelect))
+// TODO fix usermatchdata
+const userMatchData = []
+const patchGames = computed(() => userMatchData.filter(g => g.patch === ms.patchSelect))
 const { bayesianItems } = useMatchItems()
 </script>
 

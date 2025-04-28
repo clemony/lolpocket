@@ -1,24 +1,41 @@
 @import 'tailwindcss';
 
-.fade-move,
 .fade-enter-active,
-.fade-leave-active,
-.fade-enter-from {
-  transition: all 2s cubic-bezier(0.55, 0, 0.1, 1);
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  /* opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);*/
+.fade-leave-active {
+  transition: opacity 0.3s ease;
 }
-.fade-enter-active {
-  animation-delay: 0.5s;
-}
-
+.fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-
-  position: absolute;
+}
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
 }
 
-.fade-enter-from {
+.fade-pulse-enter-active,
+.fade-pulse-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-pulse-enter-from,
+.fade-pulse-leave-to {
   opacity: 0;
+}
+.fade-pulse-enter-to,
+.fade-pulse-leave-from {
+  opacity: 1;
+}
+
+/* ✨ PULSE ANIMATION ✨ */
+.loading-pulse {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
 }

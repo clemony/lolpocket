@@ -1,11 +1,14 @@
 <script lang="ts" setup>
 const ms = useMatchStore()
+const userMatchData = []
+
+// TODO usermatchdata
 
 const patchStats = computed(() => {
   const patchMap = new Map<string, { games: number, wins: number, losses: number, winrate: number }>()
 
   // Step 1: Group matches by patch
-  ms.userMatchData.forEach(({ patch, win }) => {
+  userMatchData.forEach(({ patch, win }) => {
     if (!patchMap.has(patch)) {
       patchMap.set(patch, { games: 0, wins: 0, losses: 0, winrate: 0 })
     }
@@ -91,6 +94,6 @@ const range = computed (() => {
     </div>
     <LineChart :data="data" :options="options" />
 
-    <NoDataOverlay v-if="!ms.userMatchData.length" />
+    <NoDataOverlay v-if="!userMatchData.length" />
   </div>
 </template>

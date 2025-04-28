@@ -1,8 +1,0 @@
-// tsconfig.fetch.json
-{
-  "extends": "./tsconfig.json",
-  "exclude": [
-    ".nuxt",
-    "node_modules"
-  ]
-}

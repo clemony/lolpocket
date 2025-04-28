@@ -12,7 +12,8 @@ const summoner = ref(props.summoner)
 <template>
   <div :class="cn('flex items-center gap-4 mt-2', props.class)">
     <div class="size-15.5  rounded-full shadow-sm drop-shadow-sm">
-      <ProfileSummonerIcon
+      <UserSummonerIcon
+
         class="size-full  " />
     </div>
 
@@ -20,7 +21,7 @@ const summoner = ref(props.summoner)
       <div class="flex items-end gap-4 ">
         <SummonerName class="tracking-tight font-serif dst  !font-bold text-7 truncate" />
         <span class="pb-px dst">lv.
-        <SummonerLevel class="align-bottom" /></span>
+          <SummonerLevel class="align-bottom" /></span>
       </div>
       <p class="flex gap-3 tracking-tight  items-center">
         <SummonerTag class=" dst  truncate" />

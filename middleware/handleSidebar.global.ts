@@ -1,7 +1,7 @@
 export default defineNuxtRouteMiddleware((to, from) => {
   const us = useUiStore()
 
-  if (us.settingsOpen) {
+/*   if (us.settingsOpen) {
     us.settingsOpen = false
   }
 
@@ -11,5 +11,5 @@ export default defineNuxtRouteMiddleware((to, from) => {
 
   sidebarIndex.indexOf(from.meta.section.toString()) > sidebarIndex.indexOf(to.meta.section.toString()) ? us.enterY = '-50%' : us.enterY = '50%'
 
-  us.enterY == '-50%' ? us.leaveY = '50%' : us.leaveY = '-50%'
+  us.enterY == '-50%' ? us.leaveY = '50%' : us.leaveY = '-50%' */
 })

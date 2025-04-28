@@ -15,7 +15,7 @@ export async function patchData() {
     const cleanItemData = await patchItemDatabaseData()
     const cleanChampionData = await updateChampionDatabaseData('initial')
 
-    const { data, error } = await supabase.from('league_data').insert([
+/*     const { data, error } = await supabase.from('league_data').insert([
       {
         item_data: cleanItemData,
         champion_data: cleanChampionData,
@@ -29,6 +29,6 @@ export async function patchData() {
     }
     else {
       console.log('Data inserted successfully:', data)
-    }
+    }*/
   }
 }
