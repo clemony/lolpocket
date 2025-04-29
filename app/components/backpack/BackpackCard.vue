@@ -28,7 +28,7 @@ const pocket = computed (() => {
               <BackpackRunes :pocket="pocket" />
 
               <button @click="navigateTo(`/pocket/${pocket.key}`)" v-tippy="'Open Pocket'" class="btn-ghost cursor-pointer hover:bg-b2/60 btn btn-square backdrop-blur-md absolute right-3 top-2 pointer-events-auto">
-     <icon name="radix-icons:open-in-new-window" class=" size-7 " />
+     <icon name="open" class=" size-7 " />
      </button>
 
             <div class="flex gap-6 self-end w-full">

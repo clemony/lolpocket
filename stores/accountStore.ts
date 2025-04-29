@@ -39,49 +39,11 @@ export const useAccountStore = defineStore(
       matches: [],
     })
 
-    const { getAllMatches } = useMatchDexie()
-    const { simplifyMatches } = useMatchSimplifier(userAccount.value.puuid)
-
-    const matches = ref<SimplifiedMatchData[]>([])
-    const fullMatches = ref<MatchData[]>([])
-
-    function setFullMatches(data: MatchData[]) {
-      fullMatches.value = data
-      const simplifiedMatches = simplifyMatches(data)
-      setMatches(simplifiedMatches)
-    }
-
-    // Function to set matches (simplified version)
-    function setMatches(data: SimplifiedMatchData[]) {
-      matches.value = data
-    }
-
-    // Function to append new matches (useful when loading new matches)
-    function appendMatches(data: SimplifiedMatchData[]) {
-      matches.value.push(...data)
-    }
-
-    // Function to load matches from IndexedDB (matchDexie)
-    async function loadMatchesFromIndexedDB() {
-      const cachedMatches = await getAllMatches()
-      if (cachedMatches) {
-        setFullMatches(cachedMatches)
-      }
-    }
-
-    loadMatchesFromIndexedDB()
-
     return {
       // account
       userAccount,
       userSummoner,
 
-      matches,
-      fullMatches,
-      setMatches,
-      appendMatches,
-      loadMatchesFromIndexedDB,
-      setFullMatches,
       userNotes,
 
       // settings

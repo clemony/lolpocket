@@ -6,15 +6,26 @@ const { summoner, class: className } = defineProps<{
 
 // wtf
 
+
+const icon = ref()
+const name = ref()
 const loaded = ref(false)
+
+onMounted (async() => {
+const si = computed (() => summoner.profileIcon)
+const sn = computed (() => summoner.name)
+await {si, sn}
+icon.value = si.value
+name.value = sn.value
+})
 </script>
 
 <template>
   <div        :class="cn({'inset-shadow-sm inset-shadow-black/90 avatar': loaded}, className)">
   <NuxtImg
-      v-if="summoner.name && summoner.profileIcon"
-      :src="summoner.profileIcon"
-      :alt="summoner.name + summoner.tag"
+      v-if="name && icon"
+      :src="icon"
+      :alt="`${name}'s icon`"
        :class="{'inset-shadow-sm inset-shadow-black/90 avatar': loaded}"
        @load="loaded = true"
       class="size-full  rounded-full  " />

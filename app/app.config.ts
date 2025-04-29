@@ -43,6 +43,8 @@ export default defineAppConfig({
       'up-sm': 'teenyicons:up-small-outline',
       'select': 'radix-icons:caret-sort',
       'arrow-up': 'teenyicons:arrow-up-small-outline',
+      'arrow-left': 'mynaui:arrow-left',
+      'arrow-right': 'mynaui:arrow-right',
 
       // menu
       'more': 'radix-icons:dots-horizontal',
@@ -84,6 +86,7 @@ export default defineAppConfig({
       'link': 'mingcute:external-link-line',
       'chain': 'ph:link-simple',
       'share': 'iconoir:send-diagonal',
+      'open': 'radix-icons:open-in-new-window',
 
       // pic
       'dot': 'radix-icons:dot-filled',

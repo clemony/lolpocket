@@ -1,13 +1,14 @@
 <script lang="ts" setup>
+/*
 import SettingsGeneral from 'components/ui/menu/settings/SettingsGeneral.vue'
 import SettingsTheme from 'components/ui/menu/settings/SettingsTheme.vue'
 import SettingsAccount from 'components/ui/menu/settings/SettingsAccount.vue'
-
+ */
 const target = ref<HTMLElement>(null)
 const us = useUiStore()
 onClickOutside(target, event => handleSidebarClose(us.settingsOpen))
 
-const tabs = [
+/* const tabs = [
   {
     value: 'general',
     component: SettingsGeneral,
@@ -20,7 +21,7 @@ const tabs = [
     value: 'theme',
     component: SettingsTheme,
   },
-]
+] */
 const currentTab = ref('general')
 </script>
 
@@ -33,7 +34,7 @@ const currentTab = ref('general')
       </label>
     </SidebarTitle>
 
-    <Tabs default-value="general" class="w-full">
+   <!--  <Tabs default-value="general" class="w-full">
       <div class=" py-4 px-3 sticky top-15 z-5 ">
         <TabsList class="w-full grid grid-cols-3 bg-b3/40">
           <HoverTabsTrigger v-for="tab in tabs" :key="tab.value" :value="tab.value" class="capitalize" @click="currentTab = tab.value">
@@ -48,6 +49,6 @@ const currentTab = ref('general')
           </TabsContent>
         </template>
       </MotionTabContentWrapper>
-    </Tabs>
+    </Tabs> -->
   </div>
 </template>

@@ -17,7 +17,7 @@ const as = useAccountStore()
 const user = computed (() => as.userAccount.puuid)
 const messages = ref(false)
 
-const { forceReload, loading } = useSummoner(user.value)
+console.log('💠 - as:', as.userSummoner)
 </script>
 
 <template>
@@ -51,32 +51,6 @@ const { forceReload, loading } = useSummoner(user.value)
       <SidebarPatchNotes />
       <DropdownMenuSeparator />
 
-      <DropdownMenuSub>
-        <DropdownMenuSubTrigger>
-          Admin
-        </DropdownMenuSubTrigger>
-        <DropdownMenuPortal>
-          <DropdownMenuSubContent>
-            <DropdownMenuItem>
-              <LazyAdminLink />
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              class="" @click=" handleSidebarOpen(us.settingsOpen)">
-              <icon
-                name="ph:gear-six" />
-              <ClearMatchesButton />
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              class="" @click="forceReload()">
-              <icon
-                name="ph:gear-six" />
-              Force Reload User Summoner
-            </DropdownMenuItem>
-          </DropdownMenuSubContent>
-        </DropdownMenuPortal>
-        <DropdownMenuSeparator />
-      </DropdownMenuSub>
-
       <DropdownMenuItem
         v-if="as.userAccount.session"
         class=""
@@ -85,15 +59,6 @@ const { forceReload, loading } = useSummoner(user.value)
           name="ph:sign-out" />
 
         Sign out
-      </DropdownMenuItem>
-
-      <DropdownMenuItem v-else class="" @click="handleClick('in')">
-        <LoginDialog>
-          <icon
-            name="ph:sign-in" />
-        </LoginDialog>
-
-        Sign in
       </DropdownMenuItem>
     </LazyDropdownMenuContent>
   </DropdownMenu>

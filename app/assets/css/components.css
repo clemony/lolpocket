@@ -1,37 +1,93 @@
 @import 'tailwindcss';
-@import './abbreviations.css';
 @import './default-theme.css';
 
-@layer components {
-  
-  
-.mask-clip-bottom {
-  mask-image: linear-gradient(to top, black 58%, transparent 59%);
+@layer utilities {
+.btn {
+    font-weight: 400;
+    font-size:  0.99rem;
+    @apply items-center justify-start font-normal text-3 gap-3;
 }
-  .color-chip {
-    @apply aspect-square size-9 flex items-center justify-center rounded-md
-    shadow-sm;
+  .btn.btn-neutral {
+    @apply !shadow-xs text-nc;
+    background-color: var(--neutral);
+    color: var(--nc) !important;
+    * {
+    color: var(--nc) !important;}
+
   }
-}
+  .btn.btn-neutral:hover {
+      color: var(--nc);
+    }
+  
+
+  .btn.btn-ghost.btn-active {
+    --btn-bg: --alpha(var(--b2) / 30%) !important;
+    border-color: --alpha(var(--b3) / 40%) !important;
+  }
+  
+
+
+  .btn:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
+    @apply bg-b2/60 border-b2;
+  }
+  
+    .collapse-input,
+    .collapse-title {
+      @apply !min-h-0 !py-0 h-11 text-nowrap flex-nowrap items-center justify-start;
+    }
+    
+
+    .field {
+      @apply fieldset mt-2 relative w-full h-fit bg-b2 border border-b3 p-4 rounded-box;
+    }
+    
+    .field-legend {
+      @apply fieldset-legend absolute left-5.5 -top-5 text-3 max-w-64  max-h-12  ;
+    }
+
+      
+  .input {
+    @apply focus-within:!outline-1 focus-within:!outline-offset-0   focus-within:!outline-b3;
+    border-image-width: 0 !important;
+    --input-color: var(--b3) !important;
+  }
+  
+    .tab {
+    --radius-field: 0.75rem !important;
+    --tab-bg: var(--b1);
+    --tab-border-color: var(--b3);
+    --tab-border-colors: var(--b3);
+  }
+  
+  .btn.btn-ghost:hover {
+    --btn-bg: --alpha(var(--b2) / 20%) !important;
+    @apply border-b3/40;
+  }
+  
+  .tabs-box {
+    border-radius: var(--radius-lg) !important;
+
+  }
+    .tabs-box .tab{
+      @apply rounded-lg;
+    }
+
+  .progress {
+    @supports (-webkit-appearance:none) {
+      &::-webkit-progress-value {
+        @apply rounded-xl;
+      }
+    }
+  }
+  
+  .progress&::-webkit-progress-value {
+    border-radius: var(--rounded-xl) !important;
+  }
+
 
 .ring-check {
   @apply  has-checked:ring has-checked:ring-neutral has-checked:ring-offset-2 has-checked:ring-offset-b1  hover:ring hover:ring-neutral hover:ring-offset-2 hover:ring-offset-b1 transition-all duration-150;
 }
-
-.router-link-exact-active {
-  .sb-link {
-    @apply bg-b2/90 hover:bg-b2 hover:text-bc;
-  }
-}
-
-
-  .btn-neutral {
-    @apply !shadow-xs;
-    background-color: var(--color-neutral);
-    color: var(--color-nc);
-    &:hover {
-      color: var(--color-nc);
-    }
 
 .divider {
   @apply h-px text-2 font-semibold opacity-50;

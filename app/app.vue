@@ -19,7 +19,6 @@ client.auth.onAuthStateChange(async (event, session) => {
   }
   else if (event === 'SIGNED_OUT') {
     as.userAccount = defaultUser
-    as.setMatches([])
     console.log('😰 - Signed Out')
     if (route.path != '/') {
       router.push('/')
@@ -41,9 +40,6 @@ onMounted(async () => {
   document.documentElement.setAttribute('data-theme', as.dataTheme ? as.dataTheme : 'midnight')
   getPatch()
 })
-
-
-
 </script>
 
 <template>

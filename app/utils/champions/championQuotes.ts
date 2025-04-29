@@ -62,6 +62,9 @@ export const quotes = [
   '"Your music lacks the cruelty of a masterpiece." -Jhin, to Sona',
   '"Oh, before you ask, yes, your whole ensemble makes you look fat. Very fat." -Jhin, to Tahm Kench',
   '"When you speak, I don\'t hear god, I hear an idiot babbling." -Jhin, to Illaoi',
+  '"Is a leaf\'s only purpose to fall?" -Yasuo',
+  '"A wanderer isn\'t always lost." -Yasuo',
+  '"Cute mask. Your, uh, mom sew that?" -Yasuo, to Shen',
 ]
 
 export function formattedQuote() {

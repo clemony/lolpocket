@@ -10,7 +10,7 @@ const pocket = computed (() => {
 
 <template>
   <Popover class="">
-    <PopoverTrigger v-tippy="'Background Color'" class="btn-square btn btn-ghost "  :data-theme="pocket.card.color">
+    <!--     <PopoverTrigger v-tippy="'Background Color'" class="btn-square btn btn-ghost "  :data-theme="pocket.card.color">
       <div class="size-6 rounded-full   bg-b1 shadow-outline-4 border border-b3 drop-shadow-xs" />
     </PopoverTrigger>
 
@@ -19,6 +19,6 @@ const pocket = computed (() => {
         <input v-model="pocket.card.color" type="radio" class="peer hidden" :value="theme.name" />
         <div class="size-8 rounded-full bg-b1 shadow-outline-4 border border-b3 drop-shadow-xs" />
       </label>
-    </PopoverContent>
+    </PopoverContent> -->
   </Popover>
 </template>

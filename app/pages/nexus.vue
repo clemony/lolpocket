@@ -14,13 +14,12 @@ const as = useAccountStore()
 
 <template>
   <div class="pt-24 w-full flex flex-col h-full max-h-screen px-14 pb-6">
-    <AppTitlebar />
     <div class="h-full">
       <div class="w-100 h-60">
         <RecentPatchWinrates />
       </div>
     </div>
-    <SettingsSidebar  />
+    <SettingsSidebar />
     <Separator class="bg-b3/60 w-full" />
     <div class="w-full h-80 self-end ">
       <News />

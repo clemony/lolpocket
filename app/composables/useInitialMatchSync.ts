@@ -21,10 +21,6 @@ export function useInitialMatchSync(puuid: string) {
 
       matchData.value = matches.sort((a, b) => b.info.gameCreation - a.info.gameCreation)
       const simplified = matchData.value.map(simplifyMatch).filter(Boolean) as SimplifiedMatchData[]
-
-      if (puuid == as.userAccount.puuid) {
-        as.setMatches(simplified)
-      }
     }
     finally {
       loading.value = false

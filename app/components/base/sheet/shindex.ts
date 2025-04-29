@@ -1,7 +1,6 @@
 import type { VariantProps } from 'class-variance-authority'
 import { cva } from 'class-variance-authority'
 
-
 export const sheetVariants = cva(
   'fixed z-50 gap-4 bg-b1 p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500',
   {
@@ -16,7 +15,7 @@ export const sheetVariants = cva(
       },
     },
     defaultVariants: {
-      side: 'left',
+      side: 'right',
     },
   },
 )

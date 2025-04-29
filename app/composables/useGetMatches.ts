@@ -17,7 +17,7 @@ export async function useGetMatches({
 }) {
   const { addMatches } = useMatchDexie()
   const ms = useMatchStore()
-const as = useAccountStore()
+  const as = useAccountStore()
 
   const newMatches = await $fetch<MatchData[]>('/api/riot/matches-by-puuid', {
     method: 'GET',
@@ -25,7 +25,7 @@ const as = useAccountStore()
       puuid,
       start,
       count,
-   direction,
+      direction,
       existingIds: JSON.stringify(existingIds),
       lastMatchTimestamp,
     },
@@ -33,9 +33,8 @@ const as = useAccountStore()
 
   if (newMatches.length > 0 && puuid == as.userAccount.puuid) {
     await addMatches(newMatches)
-const {simplifyMatch} = useMatchSimplifier(puuid)
+    const { simplifyMatch } = useMatchSimplifier(puuid)
     const simplified = newMatches.map(simplifyMatch).filter(Boolean) as SimplifiedMatchData[]
-    as.appendMatches(simplified)
 
     return { newMatches, simplified }
   }

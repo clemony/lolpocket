@@ -10,8 +10,8 @@ import {
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import { computed } from 'vue'
 import type { HTMLAttributes } from 'vue'
-import { sheetVariants } from './shindex'
-import type { SheetVariants } from './shindex'
+import { sheetVariants } from 'components/base/sheet/shindex'
+import type { SheetVariants } from 'components/base/sheet/shindex'
 
 interface SheetContentProps extends DialogContentProps {
   class?: HTMLAttributes['class']
@@ -37,17 +37,11 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
 <template>
   <DialogPortal>
-    <DialogOverlay
-      class="fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" />
     <DialogContent
-      :class="cn(sheetVariants({ side }), props.class)"
+      :class="cn('pt-26', sheetVariants({ side }), props.class)"
       v-bind="{ ...forwarded, ...$attrs }">
-      <slot />
 
-      <DialogClose
-        class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
-        <icon name="x-sm" class="size-6"/>
-      </DialogClose>
+      <slot />
     </DialogContent>
   </DialogPortal>
 </template>

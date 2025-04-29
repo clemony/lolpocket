@@ -1,9 +1,9 @@
-import { storeToRefs } from 'pinia'
-
 export function useMatchItems() {
   const ds = useDataStore()
   const as = useAccountStore()
-  const { matches } = storeToRefs(as)
+  const ss = useSummonerStore()
+
+  const matches = computed (() => ss.getSummoner(as.userAccount.puuid).simplifiedMatches)
 
   const itemStats = new Map<number, {
     games: number

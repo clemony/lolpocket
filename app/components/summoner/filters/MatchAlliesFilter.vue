@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ListboxContent, ListboxGroupLabel, ListboxItem, ListboxRoot } from 'reka-ui'
+import { ListboxContent,  ListboxItem, ListboxRoot } from 'reka-ui'
 
 const { summoner } = defineProps<{
   summoner: Summoner
