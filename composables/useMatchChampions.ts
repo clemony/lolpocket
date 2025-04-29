@@ -1,5 +1,7 @@
 export function useMatchChampions(queueFilter: Ref<number> = ref(0), puuid: string, matches: Ref<SimplifiedMatchData[]>) {
+  console.log('💠 - useMatchChampions - matches:', matches)
   const ds = useDataStore()
+  console.log('💠 - watchEffect - queueFilter.value:', queueFilter.value)
 
   const championStats = new Map<string, {
     games: number
@@ -24,6 +26,7 @@ export function useMatchChampions(queueFilter: Ref<number> = ref(0), puuid: stri
       queueFilter.value === 0 || match.queueId === queueFilter.value,
     )
 
+    console.log('💠 - watchEffect - filteredMatches:', filteredMatches)
     filteredMatches.forEach((match, index) => {
       const champ = match.championName
       if (!champ)

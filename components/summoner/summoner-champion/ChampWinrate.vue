@@ -9,10 +9,10 @@ const a = computed(() => {
 </script>
 
 <template>
-  <div class="relative size-18 grid place-items-center rounded-lg">
-    <DonutSkeleton class="absolute size-18" />
-    <div class="radial-progress absolute " :style="{ '--value': a, '--size': '4.4rem', 'color': getColorFromVariable(`--color-${getAbsoluteColor(a)}`) }" role="progressbar">
-      <span class="text-bc font-medium dst">
+  <div class="relative size-15 grid place-items-center rounded-lg">
+    <DonutSkeleton class="absolute size-15" />
+    <div class="radial-progress absolute " :style="{ '--value': a, '--size': '3.65rem', 'color': getColorFromVariable(`--color-${getAbsoluteColor(a)}`) }" role="progressbar">
+      <span class="text-bc !text-1 font-medium dst">
         {{ a.toFixed(1).replace('.0', '') }}%
       </span>
     </div>

@@ -8,6 +8,11 @@ watch(
     console.log('💠 - newVal:', newVal)
   },
 )
+
+const tabs = ref('nexus')
+onMounted (() => {
+  tabs.value = route.path
+})
 </script>
 
 <template>
@@ -17,32 +22,37 @@ watch(
         LP
       </h3>
     </NavBtn>
-    <span class="h-full w-9" />
-
+<SidebarAddPocket  />
     <SidebarTitle />
+
+<!-- <SummonerInGameToggle  /> -->
     <div class="grow justify-center items-center  flex">
     </div>
 
-    <NavBtn :class="{ 'btn-active': route.meta.section == 'nexus' }" @click="navigateTo('/nexus')">
-      Nexus
-    </NavBtn>
-    <NavBtn :class="{ 'btn-active': route.meta.section == 'match' }" @click="navigateTo('/summoner')">
-      Summoner
-    </NavBtn>
-    <NavBtn class="" :class="{ 'btn-active': route.meta.section == 'analytics' }" @click="navigateTo('/analytics/champions')">
-      Analytics
-    </NavBtn>
+    <Tabs v-model:model-value="tabs" class="flex  py-0 overflow-y-visible" @update:model-value="navigateTo(tabs)">
+      <IndicatorTabsList class="grid-cols-5 bg-transparent shadow-none inset-shadow-none border-none py-0 overflow-y-visible h-10">
+        <IndicatorTabsTrigger value="/nexus" :class="{ 'btn-active': route.meta.section == 'nexus' }">
+          Nexus
+        </IndicatorTabsTrigger>
+        <IndicatorTabsTrigger value="/summoner" :class="{ 'btn-active': route.meta.section == 'match' }">
+          Summoner
+        </IndicatorTabsTrigger>
+        <IndicatorTabsTrigger value="/analytics/champions" class="" :class="{ 'btn-active': route.meta.section == 'analytics' }">
+          Analytics
+        </IndicatorTabsTrigger>
 
-    <NavBtn :class="{ 'btn-active': route.path == '/backpack' }" @click="navigateTo('/backpack')">
-      Backpack
-    </NavBtn>
+        <IndicatorTabsTrigger value="/backpack" :class="{ 'btn-active': route.path == '/backpack' }">
+          Backpack
+        </IndicatorTabsTrigger>
 
-    <NavBtn
-      :class="{ 'btn-active': route.path == '/calculator' }"
-      @click="navigateTo('/calculator')">
-      Calculator
-    </NavBtn>
-
+        <IndicatorTabsTrigger
+          value="/calculator"
+          :class="{ 'btn-active': route.path == '/calculator' }">
+          Calculator
+        </IndicatorTabsTrigger>
+        <TabIndicator class="*:bg-b2/60 px-1" />
+      </IndicatorTabsList>
+    </Tabs>
     <LibraryMenu />
     <!--
     <NavBtn
@@ -51,10 +61,13 @@ watch(
       Docs
     </NavBtn> -->
 
-    <CommandSearch />
-    <!--     <NavBtn v-tippy="'Settings'" class="disabled:btn-neutral, disabled:**:!text-nc disabled:hover:opacity-80" :class="{ 'btn-neutral **:!text-nc **:opacity-100 pointer-events-none': us.settingsOpen }" @click="handleSidebarOpen('settings')">
-      <icon name="gear-solid" class=" dst opacity-70 size-4.75" />
-    </NavBtn> -->
+    <!--     <ContrastCommandSearch /> -->
+    <NavBtn v-tippy="`${getDeviceKey()} K`" class="btn-sm btn-square  ml-3 mr-1 ">
+      <icon name="search-sm" class="-mt-px shrink-0 size-8.25 " />
+    </NavBtn>
+    <NavBtn v-tippy="'Settings'" class=" btn-sm mr-3 btn-square disabled:hover:opacity-80" :class="{ 'btn-active  **:opacity-100 pointer-events-none': us.settingsOpen }" @click="handleSidebarOpen('settings')">
+      <icon name="gear-solid" class=" dst opacity-70 size-5" />
+    </NavBtn>
     <SidebarDropdown />
   </nav>
 </template>

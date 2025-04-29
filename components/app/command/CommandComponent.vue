@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useFuse } from '@vueuse/integrations/useFuse'
-
 const ps = usePocketStore()
 const ds = useDataStore()
 const ts = useTempStore()
@@ -59,8 +57,6 @@ function search() {
     data.value = category.value
     options.keys.value = ['name', 'nickname']
   }
-
-  const { results } = useFuse(input, data.value)
 }
 
 function handleClick(item) {}
@@ -68,7 +64,7 @@ function handleClick(item) {}
 
 <template>
   h
- <!--  <CommandDialog v-model:open="ts.commandOpen" :overlay-opacity="60" class=" ">
+  <!--  <CommandDialog v-model:open="ts.commandOpen" :overlay-opacity="60" class=" ">
     <div class="py-1 px-2 size-full **:text-3 inset-shadow-sm border !border-b3 !rounded-xl">
       <CommandInput
         v-model:model-value="input"

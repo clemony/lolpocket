@@ -15,7 +15,7 @@ function handleAddClick() {
 </script>
 
 <template>
-  <NavBtn v-tippy="'New Pocket'" class="" @click="handleAddClick()">
+  <NavBtn v-tippy="'New Pocket'" class="btn-sm btn-square" @click="handleAddClick()">
 
     <icon
       name="add-sm"

@@ -23,7 +23,7 @@ const { forceReload, loading } = useSummoner()
 </script>
 
 <template>
-  <button :disabled="loading" :class="cn('btn  btn-sm shadow-xs border-b3 drop-shadow-xs text-1', className)" @click="updateMatchData()">
+  <button :disabled="loading" :class="cn('btn rounded-lg border-b2 hover:border-b3/40  btn-xs bg-b2/40 hover:bg-b2 text-1 px-2.5', className)" @click="updateMatchData()">
     <span v-if="!loading" class="flex gap-3 items-center">
       <icon name="update" class="dst size-3.5  hover:text-bc tldr-20" />
       Update

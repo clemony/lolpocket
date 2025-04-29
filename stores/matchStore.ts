@@ -23,8 +23,8 @@ const as = useAccountStore()
   })
   const seasonTotals = ref()
 
-
-
+const analysisPatchSelect = computedAsync (() => ds.currentPatch)
+const analysisQueueSelect = ref(0)
 
   return {
 
@@ -42,6 +42,8 @@ const as = useAccountStore()
     roleSelect,
     previousPatch,
 
+    analysisPatchSelect,
+    analysisQueueSelect,
 
   }
 }, {

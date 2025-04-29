@@ -19,8 +19,8 @@ const selectedRuneSet = ref(pocket.value?.runes.sets?.[0] ?? null)
 </script>
 
 <template>
-  <div class=" grid  z-10 size-full gap-6 @container/main    " :class="{ 'pt-0': route.name == 'items', 'pt-17': route.name == 'card' }">
-    <AppTitlebar>
+  <div class="flex size-full    " >
+<!--     <AppTitlebar>
       <ItemCrumbMenu v-if="route.name == 'items'" :pocket="pocket" />
 
       <Motion
@@ -37,8 +37,9 @@ const selectedRuneSet = ref(pocket.value?.runes.sets?.[0] ?? null)
       </Motion>
 
       <RunePanelMenu v-if="route.name == 'runes'" :pocket="pocket" />
-    </AppTitlebar>
+    </AppTitlebar> -->
 
+    <PocketSidebar  />
     <LazyNuxtPage
       :selected-runes="selectedRuneSet"
       :pocket="pocket"

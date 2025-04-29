@@ -69,8 +69,10 @@
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
   --inset-shadow-mask: inset 0px 0px 20px 16px #00000024;
-
+ --inset-shadow-sides: inset 0 0 2px 2px rgba(0, 0, 0, 0.06);
   --drop-shadow-text: 1px 0px 0px #00000020;
 
   --dst: var(--drop-shadow-text);
+
+
 }

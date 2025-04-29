@@ -7,7 +7,7 @@ definePageMeta({
   name: 'champion-data',
   path: '/champions',
   title: 'Champions',
-  section: 'champions',
+  section: 'library',
 })
 
 const target = ref(null)

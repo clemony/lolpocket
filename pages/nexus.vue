@@ -20,6 +20,7 @@ const as = useAccountStore()
         <RecentPatchWinrates />
       </div>
     </div>
+    <SettingsSidebar  />
     <Separator class="bg-b3/60 w-full" />
     <div class="w-full h-80 self-end ">
       <News />

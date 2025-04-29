@@ -1,6 +1,5 @@
 export function useSummoner(initialPuuid?: string) {
   const as = useAccountStore()
-  const ms = useMatchStore()
   const summonerStore = useSummonerStore() // Get the Pinia store
 
   const currentPuuid = ref(initialPuuid || as.userAccount.puuid)

@@ -1,12 +1,42 @@
+export const navLinks = [
+  {
+    name: `Nexus`,
+    link: '/nexus',
+    section: 'nexus',
+  },
+  {
+    name: `Summoner`,
+    link: '/summoner',
+    section: 'summoner',
+  },
+  {
+    name: 'Analytics',
+    link: '/analytics/champions',
+    section: 'analytics',
+  },
+  {
+    name: 'Backpack',
+    link: '/backpack',
+    section: 'backpack',
+  },
+  {
+    name: 'Analytics',
+    link: '/analytics/champions',
+    section: 'analytics',
+  },
+]
+
+
 export const summonerLinks = [
   {
     name: `Nexus`,
     link: '/nexus',
+    section: 'nexus',
     icon: 'nexus',
     iconClass: '!size-4.5 -ml-0.5',
   },
   {
-    name: 'Analysis',
+    name: 'Analytics',
     link: '/analytics/champions',
     icon: 'chart',
     iconSolid: 'mdi:graph-box',
