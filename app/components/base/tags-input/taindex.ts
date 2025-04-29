@@ -1,0 +1,5 @@
+export { default as TagsInput } from 'components/base/tags-input/TagsInput.vue'
+export { default as TagsInputInput } from 'components/base/tags-input/TagsInputInput.vue'
+export { default as TagsInputItem } from 'components/base/tags-input/TagsInputItem.vue'
+export { default as TagsInputItemDelete } from 'components/base/tags-input/TagsInputItemDelete.vue'
+export { default as TagsInputItemText } from 'components/base/tags-input/TagsInputItemText.vue'

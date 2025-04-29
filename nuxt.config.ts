@@ -83,7 +83,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
 
   imports: {
-    dirs: ['@vueuse/components', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/links', 'utils/lib', 'utils/pocket', 'utils/ui', 'stores', 'shared/data', 'shared/data/summoner', 'shared/data/summoner/match', 'utils/data', 'utils/data/items', 'utils/data/champions', 'utils/data/shared'],
+    dirs: ['@vueuse/components', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/links', 'utils/lib', 'utils/pocket', 'utils/ui', 'stores', 'utils/data', 'utils/data/items', 'utils/data/champions', 'utils/data/shared'],
   },
 
   webpack: {
@@ -109,20 +109,22 @@ export default defineNuxtConfig({
   },
   alias: {
     '#': fileURLToPath(new URL('./', import.meta.url)),
-    '@': fileURLToPath(new URL('./', import.meta.url)),
-    'css': fileURLToPath(new URL('./assets/css', import.meta.url)),
+    '@': fileURLToPath(new URL('./app', import.meta.url)),
+    'css': fileURLToPath(new URL('./app/assets/css', import.meta.url)),
     'types': fileURLToPath(new URL('./types', import.meta.url)),
     'stores': fileURLToPath(new URL('./stores', import.meta.url)),
-    'composables': fileURLToPath(new URL('./composables', import.meta.url)),
+    'composables': fileURLToPath(new URL('./app/composables', import.meta.url)),
     'shared': fileURLToPath(new URL('./shared', import.meta.url)),
-    'utils': fileURLToPath(new URL('./utils', import.meta.url)),
-    'supabase': fileURLToPath(new URL('./shared/supabase', import.meta.url)),
-    'components': fileURLToPath(new URL('./components', import.meta.url)),
-    'plugins': fileURLToPath(new URL('./plugins', import.meta.url)),
+    'utils': fileURLToPath(new URL('./app/utils', import.meta.url)),
+
+    'components': fileURLToPath(new URL('./app/components', import.meta.url)),
+    'plugins': fileURLToPath(new URL('./app/plugins', import.meta.url)),
     'modules': fileURLToPath(new URL('./modules', import.meta.url)),
     'data': fileURLToPath(new URL('./data', import.meta.url)),
   },
-
+  future: {
+    compatibilityVersion: 4,
+  },
   compatibilityDate: '2024-11-01',
   ssr: false,
 })
