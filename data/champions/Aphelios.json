@@ -4,202 +4,202 @@
   "name": "Aphelios",
   "title": "the Weapon of the Faithful",
   "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Aphelios.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Aphelios.png",
   "resource": "MANA",
   "attackType": "RANGED",
   "adaptiveType": "PHYSICAL_DAMAGE",
   "stats": {
     "health": {
       "flat": 600,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 102,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 3.25,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.55,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 348,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 42,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 6.5,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.4,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 26,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4.2,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1.3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 55,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 325,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 800,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 110,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.64,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.1,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
-      "flat": 0.6399999856948853,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.658,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.23000000417232513,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.5,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": 0,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 550,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
       "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
       "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
       "flat": 1.05,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -517,11 +517,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/p",
         "effects": [
           {
-            "description": "Basic attacks with Infernum shoot a fire bolt that upon arrival splits into a cone of 4 lesser bolts behind the target, dealing damage to enemies they pass through. The fire bolt deals 110% AD physical damage to the primary target. Secondary targets hit by any bolt are dealt 82.5 / 110% (based on level) AD physical damage, reduced to 25.3 / 33% (based on level) AD against minions.",
+            "description": "Basic attacks with Infernum shoot a fire bolt that upon arrival splits into a cone of 4 lesser bolts behind the target, dealing damage to enemies they pass through. The fire bolt deals 110% AD physical damage to the primary target. Secondary targets hit by any bolt are dealt 75 / 100% (based on level) of the triggering attack's damage, reduced to 23 / 30% (based on level) against minions.",
             "leveling": []
           },
           {
-            "description": "Critical strikes also apply to damage dealt to secondary targets and instead spray 6 missiles in a 50% wider cone that deals critical damage.",
+            "description": "Critical strikes instead spray 6 missiles in a 50% wider cone. Secondary targets hit count as being critically struck but do not take any additional damage.",
             "leveling": []
           }
         ],
@@ -726,7 +726,7 @@
           "modifiers": [
             {
               "values": [
-                10,
+                10.0,
                 9.882352941176471,
                 9.764705882352942,
                 9.647058823529411,
@@ -743,7 +743,7 @@
                 8.352941176470589,
                 8.235294117647058,
                 8.117647058823529,
-                8
+                8.0
               ],
               "units": [
                 "",
@@ -850,7 +850,7 @@
           "modifiers": [
             {
               "values": [
-                10,
+                10.0,
                 9.882352941176471,
                 9.764705882352942,
                 9.647058823529411,
@@ -867,7 +867,7 @@
                 8.352941176470589,
                 8.235294117647058,
                 8.117647058823529,
-                8
+                8.0
               ],
               "units": [
                 "",
@@ -970,7 +970,7 @@
           "modifiers": [
             {
               "values": [
-                12,
+                12.0,
                 11.882352941176471,
                 11.764705882352942,
                 11.647058823529411,
@@ -987,7 +987,7 @@
                 10.352941176470589,
                 10.235294117647058,
                 10.117647058823529,
-                10
+                10.0
               ],
               "units": [
                 "",
@@ -1086,7 +1086,7 @@
           "modifiers": [
             {
               "values": [
-                9,
+                9.0,
                 8.823529411764707,
                 8.647058823529411,
                 8.470588235294118,
@@ -1103,7 +1103,7 @@
                 6.529411764705882,
                 6.352941176470588,
                 6.1764705882352935,
-                6
+                6.0
               ],
               "units": [
                 "",
@@ -1162,7 +1162,7 @@
             "leveling": []
           },
           {
-            "description": "The sentry grants sight of its surroundings and autonomously attacks the nearest visible enemy in range with a replica of Aphelios' current off-hand weapon, dealing 35 : 125 (based on level) (+ 42% : 60% (based on level) bonus AD) (+ 50% AP) physical damage per hit. The sentry can critically strike and benefits from both Aphelios' attack speed and critical strike chance at 100% effectiveness.",
+            "description": "The sentry grants sight of its surroundings and autonomously attacks the nearest visible enemy in range with a replica of Aphelios' current off-hand weapon, dealing 35 : 125 (based on level) (+ 42% : 60% (based on level) bonus AD) (+ 50% AP) physical damage per hit. The sentry can critically strike for (175% + 40%) damage and benefits from both Aphelios' attack speed and critical strike chance at 100% effectiveness.",
             "leveling": []
           },
           {
@@ -1210,7 +1210,7 @@
           "modifiers": [
             {
               "values": [
-                9,
+                9.0,
                 8.823529411764707,
                 8.647058823529411,
                 8.470588235294118,
@@ -1227,7 +1227,7 @@
                 6.529411764705882,
                 6.352941176470588,
                 6.1764705882352935,
-                6
+                6.0
               ],
               "units": [
                 "",
@@ -1386,7 +1386,7 @@
             "leveling": []
           },
           {
-            "description": "After 0.3 seconds of the illumination, attacks based on Aphelios' current main weapon will launch from the sky against each locked-on target, dealing 100% AD physical damage and applying on-hit effects. These attacks can critically strike for (20% + 40%) AD bonus physical damage. There is no range limit for locked-on targets.\n Calibrum: Applies an empowered mark that deals 50 / 80 / 110 (based on level) bonus physical damage per mark consumed.\n Severum: Heals Aphelios for 250 / 350 / 450 (based on level) if at least one enemy champion is hit.\n Gravitum: Increases the initial slow to 99% and empowers Binding Eclipse to root targets affected by the enhanced slow for 1.35 seconds.\n Infernum: The initial blast deals 50 / 100 / 150 (based on level) (+ 25% bonus AD) bonus physical damage.[ The attack instead deals 110% AD physical damage against locked-on targets, and causes an explosion of bolts in a 400-radius circle that deals 74.25 / 99% (based on level) AD physical damage to targets hit. ][ Performs Infernum's attacks and Infernum's bolts in a 400-radius circle: primary targets are dealt Infernum's primary damage; secondary targets are dealt 90% of Infernum's regular bolt damage; both are modified by Moonlight Vigil's critical damage modifier. ]Enemy champions will take damage from overlapping areas.\n Crescendum: Generates 5 additional spectral Chakrams that return to Aphelios from the first enemy champion hit, for a total of 6, on top of those from other targets hit.",
+            "description": "After 0.3 seconds of the illumination, attacks based on Aphelios' current main weapon will launch from the sky against each locked-on target, dealing 100% AD physical damage and applying on-hit effects. These attacks can critically strike for (120% + 40%) damage. There is no range limit for locked-on targets.\n Calibrum: Applies an empowered mark that deals 50 / 80 / 110 (based on level) bonus physical damage per mark consumed.\n Severum: Heals Aphelios for 250 / 350 / 450 (based on level) if at least one enemy champion is hit.\n Gravitum: Increases the initial slow to 99% and empowers Binding Eclipse to root targets affected by the enhanced slow for 1.35 seconds.\n Infernum: The initial blast deals 50 / 100 / 150 (based on level) (+ 25% bonus AD) bonus physical damage.[ The attack instead deals 110% AD physical damage against locked-on targets, and causes an explosion of bolts in a 400-radius circle that deals 74.25 / 99% (based on level) AD physical damage to targets hit. ][ Performs Infernum's attacks and Infernum's bolts in a 400-radius circle: primary targets are dealt Infernum's primary damage; secondary targets are dealt 90% of Infernum's regular bolt damage; both are modified by Moonlight Vigil's critical damage modifier. ]Enemy champions will take damage from overlapping areas.\n Crescendum: Generates 5 additional spectral Chakrams that return to Aphelios from the first enemy champion hit, for a total of 6, on top of those from other targets hit.",
             "leveling": []
           }
         ],
@@ -1432,7 +1432,7 @@
         "projectile": "SPECIAL",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Attacks do not apply on-attack effects.\nThe attacks always count as  projectiles unless  Severum is being used. The lunar spotlight, however, may always be intercepted regardless of which weapon is in play as the main weapon.\nDue to this fact, non- Severum attacks will hit targets that are farther away from the center of the blast at a slightly longer delay.\n Spell shield will block Moonlight Vigil's initial detonation damage but does not prevent the attacks from locking-on.\nAll attacks from Moonlight Vigil  critically strike independently from each other.\nThis includes  Infernum's bolts, which also critically strike independently from the primary attack's damage.\nChanging weapons while Moonlight Vigil is in flight does not change the effect it has when it hits.\nThis ability will cast from wherever the caster is at the start of the cast time.\nMoonlight Vigil's effect radius is centered around the location of the missile as it collides.\nWith  Severum, the extra flat heal is given only once, not per target. However, all damage done by Moonlight Vigil with it also heals him from Severum's  own passive effect.\nWith  Infernum, 14 fire bolts splash from each target hit (18 for  critical strikes). Bolts do not activate if Moonlight Vigil's initial damage kills the target.\nWith  Crescendum, 1 spectral chakram is generated for every target hit, meaning it is possible to generate up to 10 spectral chakrams with one cast of Moonlight Vigil if it hits 5 enemy champions.\nThe locked-on attacks' can be  dodged and  blocked, but won't be prevented if Aphelios is  blinded.\nPreventing the attack also prevents the additional effect (e.g. marking them with  Gravitum or granting  spectral chakrams).\nMoonlight Vigil has different visual effects changed accordingly to each weapon. This may vary depending on the skin, this showcases the default:\n\n\n\n\n Calibrum\n\n\n\n\n\n\n Severum\n\n\n\n\n\n\n Gravitum\n\n\n\n\n\n\n Infernum\n\n\n\n\n\n\n Crescendum",
+        "notes": "When critically striking, the attacks on locked-on targets when using  Severum and  Crescendum deal slightly more than 120% damage.(bug) It is currently unknown where this damage originates from.\nFor example, at level 6 with no  attack damage bonuses, Aphelios will deal 80.7471 damage (approximated) from those attacks, whereas they are normally expected to deal 76.902. This discrepancy increases with higher attack damage.\nPENDING FOR TEST: It is also unknown whether this is just a Practice Tool bug.\nAttacks do not apply on-attack effects.\nThe attacks always count as  projectiles unless  Severum is being used. The lunar spotlight, however, may always be intercepted regardless of which weapon is in play as the main weapon.\nDue to this fact, non- Severum attacks will hit targets that are farther away from the center of the blast at a slightly longer delay.\n Spell shield will block Moonlight Vigil's initial detonation damage but does not prevent the attacks from locking-on.\nAll attacks from Moonlight Vigil  critically strike independently from each other.\nThis includes  Infernum's bolts, which also critically strike independently from the primary attack's damage.\nChanging weapons while Moonlight Vigil is in flight does not change the effect it has when it hits.\nThis ability will cast from wherever the caster is at the start of the cast time.\nMoonlight Vigil's effect radius is centered around the location of the missile as it collides.\nWith  Severum, the extra flat heal is given only once, not per target. However, all damage done by Moonlight Vigil with it also heals him from Severum's  own passive effect.\nWith  Infernum, 14 fire bolts splash from each target hit (18 for  critical strikes). Bolts do not activate if Moonlight Vigil's initial damage kills the target.\nWith  Crescendum, 1 spectral chakram is generated for every target hit, meaning it is possible to generate up to 10 spectral chakrams with one cast of Moonlight Vigil if it hits 5 enemy champions.\nThe locked-on attacks' can be  dodged and  blocked, but won't be prevented if Aphelios is  blinded.\nPreventing the attack also prevents the additional effect (e.g. marking them with  Gravitum or granting  spectral chakrams).\nMoonlight Vigil has different visual effects changed accordingly to each weapon. This may vary depending on the skin, this showcases the default:\n\n\n\n\n Calibrum\n\n\n\n\n\n\n Severum\n\n\n\n\n\n\n Gravitum\n\n\n\n\n\n\n Infernum\n\n\n\n\n\n\n Crescendum",
         "blurb": "Active:  Aphelios fires a concentrated blast of moonlight that explodes upon hitting an enemy champion, dealing physical damage to enemy champions in the area.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -1451,9 +1451,9 @@
   },
   "releaseDate": "2019-12-11",
   "releasePatch": "9.24",
-  "patchLastChanged": "14.21",
+  "patchLastChanged": "25.05",
   "price": {
-    "blueEssence": 4800,
+    "blueEssence": 2400,
     "rp": 880,
     "saleRp": 0
   },

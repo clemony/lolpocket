@@ -4,202 +4,202 @@
   "name": "Leona",
   "title": "the Radiant Dawn",
   "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Leona.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Leona.png",
   "resource": "MANA",
   "attackType": "MELEE",
   "adaptiveType": "PHYSICAL_DAMAGE",
   "stats": {
     "health": {
       "flat": 646,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 101,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 8.5,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.85,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 302,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 40,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 6,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.8,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 43,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4.8,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.05,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 60,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 335,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 400,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 120,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.625,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.9,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.625,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": -0.0708333328366279,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 125,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
       "flat": 1.05,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
       "flat": 0.95,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -226,7 +226,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leona/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Leona's abilities mark enemies hit for 1.5 seconds, refreshing on subsequent hits. Allied champions' damaging attacks and abilities against a marked target will consume the mark to deal 32 : 151 (based on level) bonus magic damage.",
+            "description": "Innate: Leona's abilities mark enemies hit for 2.5 seconds, refreshing on subsequent hits. Allied champions' damaging attacks and abilities against a marked target will consume the mark to deal 32 : 151 (based on level) bonus magic damage.",
             "leveling": []
           }
         ],
@@ -313,11 +313,11 @@
           "modifiers": [
             {
               "values": [
+                30,
                 35,
                 40,
                 45,
-                50,
-                55
+                50
               ],
               "units": [
                 "",
@@ -649,10 +649,10 @@
           "modifiers": [
             {
               "values": [
-                60,
-                60,
-                60,
-                60,
+                40,
+                45,
+                50,
+                55,
                 60
               ],
               "units": [
@@ -816,9 +816,9 @@
   },
   "releaseDate": "2011-07-13",
   "releasePatch": "1.0.0.121",
-  "patchLastChanged": "14.24",
+  "patchLastChanged": "25.09",
   "price": {
-    "blueEssence": 450,
+    "blueEssence": 225,
     "rp": 260,
     "saleRp": 0
   },

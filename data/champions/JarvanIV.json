@@ -4,202 +4,202 @@
   "name": "Jarvan IV",
   "title": "the Exemplar of Demacia",
   "fullName": "Jarvan Lightshield IV",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/JarvanIV.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/JarvanIV.png",
   "resource": "MANA",
   "attackType": "MELEE",
   "adaptiveType": "PHYSICAL_DAMAGE",
   "stats": {
     "health": {
       "flat": 640,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 104,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 8,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.7,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 300,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 55,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 6.5,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.45,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 36,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 5.2,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.05,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 64,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 340,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 600,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 125,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.658,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.5,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.657999992370605,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": -0.124559998512268,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 175,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
       "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
       "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -274,11 +274,11 @@
                 "modifiers": [
                   {
                     "values": [
-                      80,
-                      120,
-                      160,
-                      200,
-                      240
+                      90,
+                      130,
+                      170,
+                      210,
+                      250
                     ],
                     "units": [
                       "",
@@ -290,11 +290,11 @@
                   },
                   {
                     "values": [
-                      140,
-                      140,
-                      140,
-                      140,
-                      140
+                      145,
+                      145,
+                      145,
+                      145,
+                      145
                     ],
                     "units": [
                       "% bonus AD",
@@ -528,7 +528,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Golden Aegis' detonation triggers in-combat effects by dealing 0  proc  true damage, such as drawing turret aggro,  Sudden Impact and applying  Elixir of Sorcery.",
+        "notes": "Golden Aegis  deals no damage and thus does not trigger  turret aggro, or effects such as  Elixir of Sorcery and  Sudden Impact's activation.\nGolden Aegis will activate combat status despite not dealing any damage.",
         "blurb": "Active:  Jarvan IV  slows nearby enemies for a short time.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -801,9 +801,9 @@
   },
   "releaseDate": "2011-03-01",
   "releasePatch": "1.0.0.112",
-  "patchLastChanged": "14.24",
+  "patchLastChanged": "25.06",
   "price": {
-    "blueEssence": 3150,
+    "blueEssence": 1575,
     "rp": 790,
     "saleRp": 0
   },

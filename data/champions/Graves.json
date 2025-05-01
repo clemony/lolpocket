@@ -4,202 +4,202 @@
   "name": "Graves",
   "title": "the Outlaw",
   "fullName": "Malcolm Graves",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Graves.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Graves.png",
   "resource": "MANA",
   "attackType": "RANGED",
   "adaptiveType": "PHYSICAL_DAMAGE",
   "stats": {
     "health": {
       "flat": 625,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 106,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 8,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.7,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 325,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 40,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 8,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.7,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 33,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4.6,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.05,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 68,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 340,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 800,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 110,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 10,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.475,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.490000009536743,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": -0.294999986886978,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 425,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -233,7 +233,7 @@
             "leveling": []
           },
           {
-            "description": "Critical strikes spray 6 pellets over a 25% wider cone, with each pellet dealing[ (33.75% + 18%) increased damage, ][ increased damage equal to 45% of the critical damage champions usually have, ]resulting in[ 178.312% (+ 23.997%) total damage ][ 249.52% : 356.48% (based on level) (+ 33.58% : 47.97% (based on level)) AD total physical damage ]if all pellets hit a single target.",
+            "description": "Critical strikes spray 6 pellets over a 25% wider cone, with each pellet dealing[ (33.75% + 18%) increased damage, ][ increased damage equal to 45% bonus critical damage, ]resulting in[ 178.312% (+ 23.997%) total damage ][ 249.52% : 356.48% (based on level) (+ 33.58% : 47.97% (based on level)) AD total physical damage ]if all pellets hit a single target.",
             "leveling": []
           },
           {
@@ -851,7 +851,7 @@
   "releasePatch": "1.0.0.127",
   "patchLastChanged": "14.24",
   "price": {
-    "blueEssence": 4800,
+    "blueEssence": 2400,
     "rp": 880,
     "saleRp": 0
   },

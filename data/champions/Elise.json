@@ -4,202 +4,202 @@
   "name": "Elise",
   "title": "the Spider Queen",
   "fullName": "Elise Kythera Zaavan",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Elise.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Elise.png",
   "resource": "MANA",
   "attackType": "RANGED",
   "adaptiveType": "MAGIC_DAMAGE",
   "stats": {
     "health": {
       "flat": 620,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 109,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 5.5,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.6,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 324,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 50,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 6,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.8,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 30,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4.5,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1.3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 55,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 330,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 550,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 120,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.625,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1.75,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.625,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": -0.112499997019767,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 550,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
       "flat": 0.9,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
       "flat": 1.05,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
       "flat": 1.1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
       "flat": 0.95,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
       "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -279,10 +279,10 @@
                   {
                     "values": [
                       40,
-                      75,
-                      110,
-                      145,
-                      180
+                      70,
+                      100,
+                      130,
+                      160
                     ],
                     "units": [
                       "",
@@ -411,11 +411,11 @@
                 "modifiers": [
                   {
                     "values": [
-                      60,
-                      90,
-                      120,
-                      150,
-                      180
+                      50,
+                      80,
+                      110,
+                      140,
+                      170
                     ],
                     "units": [
                       "",
@@ -829,8 +829,8 @@
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nCocoon deals no damage and thus does not trigger  turret aggro, or effects such as  Elixir of Sorcery and  Sudden Impact's activation.\nCocoon can  reveal nearby stealthed units including  wards if they're near the target she hits Cocoon on due to its vision applying in a radius around the target. (bug)",
-        "blurb": "Active:  Elise fires a web in the target direction that deals magic damage and  stuns the first enemy hit.",
+        "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nCocoon deals no damage and thus does not trigger  turret aggro, or effects such as  Elixir of Sorcery and  Sudden Impact's activation.\nCocoon will activate combat status despite not dealing any damage.",
+        "blurb": "Active:  Elise fires a web in the target direction that  stuns the first enemy hit.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
@@ -1010,9 +1010,9 @@
   },
   "releaseDate": "2012-10-26",
   "releasePatch": "1.0.0.150",
-  "patchLastChanged": "25.04",
+  "patchLastChanged": "25.09",
   "price": {
-    "blueEssence": 4800,
+    "blueEssence": 2400,
     "rp": 880,
     "saleRp": 0
   },
@@ -1505,7 +1505,27 @@
             }
           ]
         },
-        null,
+        {
+          "name": "Paragon",
+          "id": 60035,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/60/60035.png",
+          "colors": [
+            "#BCD6EF",
+            "#474AF7"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as an exclusive drop from The Sanctum.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 6,
+              "region": "riot"
+            }
+          ]
+        },
         {
           "name": "Pearl",
           "id": 60022,

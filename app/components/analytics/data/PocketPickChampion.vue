@@ -1,10 +1,11 @@
 <script lang="ts" setup>
-const { summoner, queue, patch } = defineProps<{
-  summoner: any
-  queue: any
-  patch: any
+const { champion } = defineProps<{
+  champion: any
 }>()
-const { bayesianChampions } = useMatchChampions(computed (() => queue), summoner.puuid, computed (() => summoner.simplifiedMatches))
+
+const ms = useMatchStore()
+const as = useAccountStore()
+const ss = useSummonerStore()
 
 const winrateDiff = computed (() => {
   return -1
@@ -12,59 +13,68 @@ const winrateDiff = computed (() => {
 </script>
 
 <template>
-  <transition-slide>
-    <div v-if="bayesianChampions && bayesianChampions[0]" :key="bayesianChampions[0].champion.champion.id" class="stats bg-b1  rounded-box border border-b3 h-full shadow-warm-soft grid w-full grid-cols-3 group/champ-bar min-h-32">
-      <div class="stat py-5">
-        <div class="stat-figure">
-          <div class="avatar online inset-shadow-sm">
-            <div class="w-16 rounded-full inset-shadow-sm">
-              <img :src="`/img/champion/${bayesianChampions[0].champion.champion.id}.webp`" class="scale-116" />
-            </div>
+
+      <!--     <NoDataOverlay v-if="!summoner.simplifiedMatches.length" /> -->
+
+
+  <div class="stats border-shadow-sm w-210 h-34">
+    <div class="stat items-center">
+      <div class="stat-figure">
+        <div class="size-8 leading-none tracking-wide font-mono font-bold relative grid place-items-center">
+    
+        <span class="text-9 object-center absolute object-center -top-0.5 right-1.5">
+          S+
+        </span>
+    
+          </div>
+      </div>
+      <div class="stat-title">
+        Pocket Pick
+      </div>
+      <div class="stat-value text-primary">
+           {{ champion.champion.name }}
+      </div>
+      <div class="stat-desc">
+         games in {{ ms.af.patch }}
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-figure text-secondary">
+
+        <div class="size-8 leading-none tracking-wider  !font-black relative grid place-items-center">
+          <span class=" absolute dst -top-0.5 right-1.5">
+      h
+        </span>
+          </div>
+      </div>
+      <div class="stat-title">
+        Participation
+      </div>
+      <div class="stat-value">
+{{champion.avgKp}}%
+      </div>
+      <div class="stat-desc !tracking-wide">
+               {{champion.avgKills}}&hairsp;&#47;&hairsp;{{champion.avgDeaths}}&hairsp;&#47;&hairsp;{{champion.avgAssists}}
+      </div>
+    </div>
+    <div class="stat">
+      <div class="stat-figure text-secondary">
+        <div class="avatar online shadow-md drop-shadow-sm rounded-full size-16 relative grid place-items-center">
+          <div class="size-20 absolute rounded-full overflow-hidden">
+            <NuxtImg :src="`/img/champion/${champion.champion.id}.webp`" class="size-full scale-109 object-center" />
           </div>
         </div>
-        <div class="stat-title text-3 flex gap-1 items-center pl-0.5">
-          Pocket Pick
-        </div>
-        <div class="stat-value text-6">
-          {{ bayesianChampions[0].champion.champion.name }}
-        </div>
-        <div class="stat-desc text-2 font-medium pl-0.5">
-          Patch {{ patch }}
-        </div>
       </div>
-
-      <div class="stat relative">
-        <div class="stat-figure top-1 right-4 absolute">
-          <icon v-if="summoner.simplifiedMatches" name="ph:arrow-up-right-bold" class="opacity-50 size-5 dst" :class="{ ' -scale-y-100': winrateDiff < 0 }" />
-        </div>
-        <div class="stat-title text-2">
-          Overall
-        </div>
-        <div v-if="bayesianChampions[0].champion.champion" class="stat-value dst flex items-center">
-          25.6
-          <icon name="ph:percent-bold" class="size-7" />
-        </div>
-        <div class="stat-desc text-2">
-          21% higher <APDtooltip /> than  {{ useToNumber(patch).value - 0.01 }}
-        </div>
+      <div class="stat-value">
+        86% wr
       </div>
-
-      <div class="stat relative">
-        <div class="stat-figure absolute right-4 top-1">
-          <icon v-if="summoner.simplifiedMatches" name="ph:arrow-up-right-bold" class="size-5 dst opacity-50" :class="{ ' -scale-y-100': winrateDiff < 0 }" />
-        </div>
-        <div class="stat-title text-2">
-          Adjusted
-        </div>
-        <div v-if="bayesianChampions[0].champion.champion" class="stat-value dst flex items-center">
-          25.6
-          <icon name="ph:percent-bold" class="size-7" />
-        </div>
-        <div class="stat-desc text-2">
-          21% higher <APDtooltip /> than  {{ useToNumber(patch).value - 0.01 }}
-        </div>
+      <div class="stat-title">
+       Winrate
       </div>
-      <NoDataOverlay v-if="!summoner.simplifiedMatches.length" />
+      <div class="stat-desc">
+        {{champion.games}} games played
+      </div>
     </div>
-  </transition-slide>
+  </div>
 </template>

@@ -4,202 +4,202 @@
   "name": "Katarina",
   "title": "the Sinister Blade",
   "fullName": "Katarina Du Couteau",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Katarina.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Katarina.png",
   "resource": "NONE",
   "attackType": "MELEE",
   "adaptiveType": "MAGIC_DAMAGE",
   "stats": {
     "health": {
       "flat": 672,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 108,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 7.5,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.7,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 0,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 0,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 28,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4.7,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.05,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 58,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 3.2,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 335,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 400,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 120,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.658,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.74,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.657999992370605,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": -0.150000005960464,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 125,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
       "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
       "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
       "flat": 1.2,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
       "flat": 10,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
       "flat": 0.95,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
       "flat": 1.05,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -545,7 +545,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Shunpo does not reset Katarina's basic attack timer if it killed the target.(note)\nShunpo can be used on any unit except structures and  wards.\nShunpo can be cast on Daggers that haven't landed yet.\nShunpo prioritizes damaging enemy champions within range at the targetted location.\nAfter the cast time, Katarina will attempt to move towards the closest enemy in  acquisition radius range and basic attack them, prioritizing champions, unless an attack command was already active on another target in range or any attack command was applied during the cast time. Movement commands applied during cast time will override the automatic attack, but they may not override an already active manually applied attack command. If no enemy is in range, pre-cast commands will remain active, and attack commands applied during the cast time will be ignored (note).\nIf a Dagger is picked during the cast time, pre-cast commands will be cancelled, even if no enemy is nearby. And if an enemy is nearby, Katarina may or may not start an automatic attack (note).\nIf the target is very close to a wall and Katarina targets Shunpo behind the target, she can blink over the wall.\nShunpo  will still deal damage but not apply on-hit effects if  dodged. It cannot be  blocked nor can it be missed while Katarina is  blinded.\nShunpo does not require the enemy to be within targeting range to damage them. It only requires them to be within the max range around a unit that Shunpo allows them to blink to.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+        "notes": "Shunpo does not reset Katarina's basic attack timer if it killed the target.(note)\nShunpo can be used on any unit except structures and  wards.\nShunpo can be cast on Daggers that haven't landed yet.\nShunpo prioritizes damaging enemy champions within range at the targetted location.\nAfter the cast time, Katarina will attempt to move towards the closest enemy in  acquisition range and basic attack them, prioritizing champions, unless an attack command was already active on another target in range or any attack command was applied during the cast time. Movement commands applied during cast time will override the automatic attack, but they may not override an already active manually applied attack command. If no enemy is in range, pre-cast commands will remain active, and attack commands applied during the cast time will be ignored (note).\nIf a Dagger is picked during the cast time, pre-cast commands will be cancelled, even if no enemy is nearby. And if an enemy is nearby, Katarina may or may not start an automatic attack (note).\nIf the target is very close to a wall and Katarina targets Shunpo behind the target, she can blink over the wall.\nShunpo  will still deal damage but not apply on-hit effects if  dodged. It cannot be  blocked nor can it be missed while Katarina is  blinded.\nShunpo does not require the enemy to be within targeting range to damage them. It only requires them to be within the max range around a unit that Shunpo allows them to blink to.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
         "blurb": null,
         "missileSpeed": null,
         "rechargeRate": null,
@@ -757,7 +757,7 @@
   "releasePatch": "0.9.25.21",
   "patchLastChanged": "25.S1.3",
   "price": {
-    "blueEssence": 3150,
+    "blueEssence": 1575,
     "rp": 790,
     "saleRp": 0
   },

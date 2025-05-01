@@ -67,7 +67,7 @@ console.log('💠 - itemColor - itemColor:', itemColor)
       <div class="items-end grid text-2 font-medium text-bc/60">
         <Grow />
         <p>
-          {{ ms.patchSelect }}
+          {{ ms.af.patch }}
         </p>
         <p class="-mb-px">
           Winrate

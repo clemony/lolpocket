@@ -3,203 +3,203 @@
   "key": "Jinx",
   "name": "Jinx",
   "title": "the Loose Cannon",
-  "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Jinx.png",
+  "fullName": "Powder",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Jinx.png",
   "resource": "MANA",
   "attackType": "RANGED",
   "adaptiveType": "PHYSICAL_DAMAGE",
   "stats": {
     "health": {
       "flat": 630,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 105,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 3.75,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.5,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 260,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 50,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 6.7,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 26,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4.7,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1.3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 59,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 3.25,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 325,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 550,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 120,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.625,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1.4,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.625,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.270000010728836,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.60000002384185,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": 0,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 525,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
       "flat": 1.05,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
       "flat": 0.9,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -711,9 +711,9 @@
                 "modifiers": [
                   {
                     "values": [
-                      325,
-                      475,
-                      625
+                      300,
+                      450,
+                      600
                     ],
                     "units": [
                       "",
@@ -723,9 +723,9 @@
                   },
                   {
                     "values": [
-                      165,
-                      165,
-                      165
+                      155,
+                      155,
+                      155
                     ],
                     "units": [
                       "% bonus AD",
@@ -752,9 +752,9 @@
                 "modifiers": [
                   {
                     "values": [
-                      32.5,
-                      47.5,
-                      62.5
+                      30,
+                      45,
+                      60
                     ],
                     "units": [
                       "",
@@ -764,9 +764,9 @@
                   },
                   {
                     "values": [
-                      16.5,
-                      16.5,
-                      16.5
+                      15.5,
+                      15.5,
+                      15.5
                     ],
                     "units": [
                       "% bonus AD",
@@ -798,9 +798,9 @@
                 "modifiers": [
                   {
                     "values": [
-                      260,
-                      380,
-                      500
+                      240,
+                      360,
+                      480
                     ],
                     "units": [
                       "",
@@ -810,9 +810,9 @@
                   },
                   {
                     "values": [
-                      132,
-                      132,
-                      132
+                      124,
+                      124,
+                      124
                     ],
                     "units": [
                       "% bonus AD",
@@ -839,9 +839,9 @@
                 "modifiers": [
                   {
                     "values": [
-                      26,
-                      38,
-                      50
+                      24,
+                      36,
+                      48
                     ],
                     "units": [
                       "",
@@ -851,9 +851,9 @@
                   },
                   {
                     "values": [
-                      13.2,
-                      13.2,
-                      13.2
+                      12.4,
+                      12.4,
+                      12.4
                     ],
                     "units": [
                       "% bonus AD",
@@ -939,9 +939,9 @@
   },
   "releaseDate": "2013-10-10",
   "releasePatch": "3.12",
-  "patchLastChanged": "14.24",
+  "patchLastChanged": "25.06",
   "price": {
-    "blueEssence": 3150,
+    "blueEssence": 1575,
     "rp": 790,
     "saleRp": 0
   },

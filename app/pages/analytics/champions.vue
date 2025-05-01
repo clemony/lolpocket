@@ -1,12 +1,8 @@
 <script lang="ts" setup>
-const { summoner, queue, patch } = defineProps<{
-  summoner: any
-  queue: any
-  patch: any
+const { matches } = defineProps<{
+  matches: SimplifiedMatchData[]
 }>()
-console.log('💠 - patch:', patch)
-console.log('💠 - queue:', queue)
-console.log('💠 - summoner:', summoner)
+console.log('💠 - matches:', matches)
 
 definePageMeta({
   name: 'analyze-champions',
@@ -14,20 +10,27 @@ definePageMeta({
   path: '/analytics/champions',
   section: 'analytics',
 })
+
+const { bayesianChampions } = useMatchChampions(matches)
 </script>
 
 <template>
-  <div class="flex flex-col gap-8 size-full min-w-110 max-w-230 pb-10">
-    <div class="min-h-130 h-130">
-      <ResearchChampionChart v-if="summoner && queue && patch" :summoner="summoner" :queue="queue" :patch="patch" />
-    </div>
+  <div class="flex  gap-10 size-full ">
+      <div class="flex flex-col gap-8 size-full">
+    <ChampionBarChart v-if="bayesianChampions.length" :champions="bayesianChampions" />
+
     <div class="grid grid-cols-[100px_1fr] size-full gap-8">
-      <!--       <PocketPickChampion v-if="summoner && queue && patch" e :summoner="summoner" :queue="queue" :patch="patch" /> -->
+      <PocketPickChampion v-if="bayesianChampions.length && bayesianChampions[0]" :champion="bayesianChampions[0]" />
       <div class="relative size-full grid place-items-center pb-10">
         <div class="absolute inset-0 top-0 left-0 overflow-auto">
           <!-- list here -->
         </div>
       </div>
     </div>
-  </div>
+    </div>
+    <div class="size-full grow">
+    <ChampionDataGrid :champions="bayesianChampions"  />
+    </div>
+    </div>
+
 </template>

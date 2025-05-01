@@ -13,7 +13,7 @@ const region = computed(() => {
 <template>
   <div class="flex  w-full h-fit items-center gap-5 ">
     <div class=" size-fit grid place-items-center rounded-full drop-shadow-sm  shadow-sm shrink-0 relative">
-      <ProfileSummonerIcon v-if="summoner" :summoner="summoner" class="size-14 rounded-full" />
+      <ProfileSummonerIcon v-if="summoner" :summoner="summoner" class="size-15 rounded-full" />
     </div>
     <div class="flex flex-col grow justify-center gap-1.5 drop-shadow-sm">
       <div class="flex w-fit items-end gap-4 h-6">

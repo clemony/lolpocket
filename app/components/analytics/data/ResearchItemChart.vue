@@ -4,7 +4,7 @@ const ms = useMatchStore()
 
 // TODO fix usermatchdata
 const userMatchData = []
-const patchGames = computed(() => userMatchData.filter(g => g.patch === ms.patchSelect))
+const patchGames = computed(() => userMatchData.filter(g => g.patch === ms.af.patch))
 const { bayesianItems } = useMatchItems()
 
 const data = ref({

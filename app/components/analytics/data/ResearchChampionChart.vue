@@ -1,20 +1,23 @@
 <script lang="ts" setup>
-const { summoner, queue, patch } = defineProps<{
-  summoner: any
+const { patch, queue } = defineProps<{
+
   queue: any
   patch: any
 }>()
-console.log('💠 - patch:', patch)
-console.log('💠 - queue:', queue)
-console.log('💠 - summoner:', summoner)
 
+const as = useAccountStore()
+const ss = useSummonerStore()
+const summoner = computed (() => ss.getSummoner(as.userSummoner.puuid))
 
-const matches = computedAsync (() => summoner.value.simplifiedMatches)
-console.log('💠 - matches:', matches)
+const { bayesianChampions } = useMatchChampions(summoner.value.simplifiedMatches)
+watch(
+  () => bayesianChampions.value,
+  (newVal) => {
+    console.log('💠 - newVal:', newVal)
+  },
+)
 
-const { bayesianChampions } = useMatchChampions( patch, summoner.puuid, matches)
-
-const championData = computedAsync (() => {
+/* const bayesianChampions = computedAsync (() => {
   if (!bayesianChampions)
     return
 
@@ -26,11 +29,11 @@ const championData = computedAsync (() => {
 
   return c.slice(0, 5)
 })
-
+ */
 const data = computed(() => ({
-  labels: championData.value.map(c => c.champion ?? ''),
+  labels: bayesianChampions.value.map(c => c.champion ?? ''),
   datasets: [{
-    data: championData.value.map(c => c.winrate ?? 0),
+    data: bayesianChampions.value.map(c => c.winrate ?? 0),
   }],
 }))
 </script>

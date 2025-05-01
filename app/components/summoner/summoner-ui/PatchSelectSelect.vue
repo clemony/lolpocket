@@ -3,7 +3,7 @@ const ms = useMatchStore()
 </script>
 
 <template>
-  <Select v-model:model-value="ms.patchSelect">
+  <Select v-model:model-value="ms.mf.patch">
     <SelectTrigger class="btn  btn-sm shadow-xs border-b3 drop-shadow-xs text-1 justify-center btn    w-24 pr-2 group  gap-2">
       <SelectValue />
       <icon name="up-sm" class="shrink-0 size-4.5 group-data-[state=open]:rotate-180" />

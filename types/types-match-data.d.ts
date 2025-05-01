@@ -142,6 +142,10 @@ declare global {
     gameEndTimestamp: number
     gameVersion: string
     win: boolean
+    kills: number
+    deaths: number
+    assists: number
+    killParticipation: number
     queueId: number
     championName: string
     teamPosition: string
@@ -162,7 +166,6 @@ declare global {
       profileIcon: number
     }[]
   }
-
 
   interface RankedEntry {
     tier: string

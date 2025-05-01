@@ -29,9 +29,7 @@ export async function getPatch() {
       return
 
     ds.currentPatch = null
-    ds.currentPatch = patch
-
-
+    ds.currentPatch = Number.parseFloat(patch)
   }
   catch (error: any) {
     console.error(error.message)

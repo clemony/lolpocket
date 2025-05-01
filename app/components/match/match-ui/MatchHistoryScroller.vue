@@ -7,7 +7,9 @@ const { summoner } = defineProps<{
 }>()
 
 const matches = computed(() => summoner.matches)
-const { filteredMatches } = useFilteredMatches(matches, summoner.puuid)
+const ms = useMatchStore()
+
+const { filteredMatches } = useFilteredMatches(matches, summoner.puuid, ms.mf)
 
 const safeFilteredMatches = computed(() => filteredMatches.value ?? [])
 

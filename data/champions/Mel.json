@@ -4,202 +4,202 @@
   "name": "Mel",
   "title": "the Soul's Reflection",
   "fullName": "Mel Medarda",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Mel.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Mel.png",
   "resource": "MANA",
   "attackType": "RANGED",
   "adaptiveType": "MAGIC_DAMAGE",
   "stats": {
     "health": {
-      "flat": 600,
-      "percent": 0,
+      "flat": 630,
+      "percent": 0.0,
       "perLevel": 93,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 6,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.55,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 480,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 28,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 9,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.9,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 21,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 5.2,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1.3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 54,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 3.3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 330,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 625,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 120,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.625,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.5,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.4,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": 0,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 550,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
       "flat": 0.9,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -231,11 +231,11 @@
             "leveling": []
           },
           {
-            "description": "Overwhelm: Store 50 / 60 / 70 / 80 (based on Golden Eclipse's rank) (+ 10% AP) magic damage on the affected enemy with the first stack, reduced[ to 60% ][ to 30 / 36 / 42 / 48 (based on Golden Eclipse's rank) (+ 6% AP) ]against minions. For each stack, store an additional 2 / 3 / 4 / 5 (based on Golden Eclipse's rank) (+ 0.75% AP) magic damage on the target. If the total post-mitigation damage stored would deal fatal damage to the target (including through shields), the next stack will consume them all to deal the damage.",
+            "description": "Overwhelm: Store 50 / 60 / 70 / 80 (based on Golden Eclipse's rank) (+ 10% AP) magic damage on the affected enemy with the first stack, reduced[ to 60% ][ to 30 / 36 / 42 / 48 (based on Golden Eclipse's rank) (+ 6% AP) ]against minions. For each stack, store an additional 2 / 3 / 4 / 5 (based on Golden Eclipse's rank) (+ 0.75% AP) magic damage on the target. If the total post-mitigation damage stored exceeds the target's current health and shields, the next stack will consume them all to deal the damage.",
             "leveling": []
           },
           {
-            "description": "Innate - Searing Brilliance: Mel's ability casts each generate 3 stacks of Searing Brilliance for 5 seconds, refreshing on subsequent casts and stacking up to 9 times. Her next basic attack consumes all stacks of Searing Brilliance to additionally fire an equal number of blazing projectiles at the target. Each projectile deals 5 : 20 (based on level) (+ 1% AP) magic damage.",
+            "description": "Innate - Searing Brilliance: Mel's ability casts each generate 3 stacks of Searing Brilliance for 5 seconds, refreshing on subsequent casts and stacking up to 9 times. Her next basic attack consumes all stacks of Searing Brilliance to additionally fire an equal number of blazing projectiles at the target. Each projectile deals 8 : 25 (based on level) (+ 1% AP) magic damage.",
             "leveling": []
           }
         ],
@@ -250,7 +250,7 @@
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "The first stack also benefits from the per-stack bonus stored damage.\nA threshold indicator for the currently stored damage is placed on a target's health bar, as well as a mark above their head, while any Overwhelm stacks are active. These are visible to Mel and her target(s).\nWhenever  Golden Eclipse's damage would put them below Overwhelm's threshold, the mark will darken and glow more prominently.",
+        "notes": "The first stack also benefits from the per-stack bonus stored damage.\nA threshold indicator for the currently stored damage is placed on a target's health bar, as well as a mark above their head, while any Overwhelm stacks are active. These are visible to Mel and her target(s).\nWhenever  Golden Eclipse's damage would put them below Overwhelm's threshold, the mark will darken and glow more prominently.\nJust before Overwhelm stacks are consumed, targets have 5 additional stacks applied to them.(bug)\nThese stacks are consumed immediately.",
         "blurb": "Innate - Overwhelm:  Mel's damaging basic attacks and abilities apply a stack of Overwhelm to enemies hit for a few seconds, stacking infinitely. Each stack stores magic damage; if the total stored damage would kill the target, the next stack will consume them all to detonate the damage.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -500,7 +500,7 @@
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Spell shield will only block a single explosion.\nFor the given number of Radiant Volley bolts, the spread will result in the same individual areas being affected over the duration invariably.\nEach missile is individually and explicitly assigned an explosion area such that their combined area of effect distributes over a total radius of [explosion radius + maximum spread] = 220 + 60 = 280 units.\nThis means that the distribution area is not random.\nThe order of bolts however, which will determine the order of individual areas to be affected per explosion, is random.\nMel launching the missiles in the same arcing motion for every Radiant Volley cast does not correlate with which missile is being fired at the time.\nNote that the combined area of effect may not always be the maximum possible; this drawback diminishes with a higher number of bolts.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+        "notes": "Spell shield will only block a single explosion.\nFor the given number of Radiant Volley bolts, the spread will result in the same individual areas being affected over the duration invariably.\nEach individual missile is explicitly assigned an explosion location at a small offset from the cast location. This varies by missile, which results in their combined area of effect distributing over a total radius of [explosion radius + maximum spread] = 220 + 60 = 280 units.\nThis means that the distribution area is not random.\nThe order of bolts however, which will determine the order of individual areas to be affected per explosion, is random.\nMel launching the missiles in the same arcing motion for every Radiant Volley cast does not correlate with which missile is being fired at the time.\nNote that the combined area of effect may not always be the maximum possible; this drawback diminishes with a higher number of bolts.\nThis ability will cast from wherever the caster is at the end of the cast time.",
         "blurb": "Active:  Mel concentrates a bombardment of luminous bolts that explode in an area, dealing magic damage.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -618,7 +618,7 @@
         "projectile": "SPECIAL",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Spell effects, as well as interactions with  spell shield and  projectile-interception effects, all vary based on the original missile that was replicated.\nRebuttal's barrier will also instantly destroy missiles that are already within its radius when the ability is cast.\nThe replicated missile will mimic all of the original missile's properties, which includes its range, width, speed, acceleration, angle (if a cone), height, and sight radius.\nThe only exception to this is the copied missile's path, or trajectory, which is based on the targeting paradigm that the original missile used when fired by its source. The replicated missile acquires the original missile source as the target.\nIf the original missile was fired by a unit or auto-targeted effect, the replicated missile will be fired as a homing missile with the target being the original missile source.\nHealing projectiles, such as  Soraka's  Rejuvenation and  Sona's  Aria of Perseverance, will instead target Mel.\nIf the original missile was fired via any other targeting paradigm, the replicated missile will by default fire in the direction of the original missile source at the time of replication. This includes vector-targeted projectiles (currently only  Viktor's  Hextech Ray), for which the origin will always be Mel's center (since she cannot control the cast point).\nThe replicated missile will mimic all of the functions of and copy the behavior of the original missile, unless otherwise stated. This includes every aspect and effect of the missile conforming to the attack or spell from which the missile originated.\nThe scaling of the effects of the copied missile is calculated using the original missile source's attributes (namely their stats). The damage of the missile only benefits from Mel's damage modifiers and magic penetration, and not the original source's.\nThe following missiles are destroyed, but not replicated:\n Draven's  Whirling Death\n Illaoi's  Test of Spirit\n Sylas'  Hijack\n Xayah's  Bladecaller and  Featherstorm",
+        "notes": "Rebuttal's barrier will also instantly destroy missiles that are already within its radius when the ability is cast.\nThe replicated missile will mimic all of the original missile's properties, which includes its range, width, speed, acceleration, angle (if a cone), height, and sight radius.\nSpell effects, as well as interactions with  spell shield and  projectile-interception effects, all vary based on the original missile that was replicated.\nThe only exception to this is the copied missile's path, or trajectory, which is based on the targeting paradigm that the original missile used when fired by its source. The replicated missile acquires the original missile source as the target.\nIf the original missile was fired by a unit or auto-targeted effect, the replicated missile will be fired as a homing missile with the target being the original missile source.\nHealing projectiles, such as  Soraka's  Rejuvenation and  Sona's  Aria of Perseverance, will instead target Mel.\nIf the original missile was fired via any other targeting paradigm, the replicated missile will by default fire in the direction of the original missile source at the time of replication. This includes vector-targeted projectiles (currently only  Viktor's  Hextech Ray), for which the origin will always be Mel's center (since she cannot control the cast point).\nThe replicated missile will mimic all of the functions of and copy the behavior of the original missile, unless otherwise stated. This includes every aspect and effect of the missile conforming to the attack or spell from which the missile originated.\nThe scaling of the effects of the copied missile is calculated using the original missile source's attributes (namely their stats). The damage of the missile only benefits from Mel's damage modifiers and magic penetration, and not the original source's.\nThe following missiles are destroyed, but not replicated:\n Draven's  Whirling Death\n Illaoi's  Test of Spirit\n Sylas'  Hijack\n Xayah's  Bladecaller and  Featherstorm\n Zac's  Stretching Strikes",
         "blurb": "Active:  Mel forms a protective barrier around herself for 0.75 seconds, becoming  invulnerable to non- turret damage and gaining decaying  bonus move speed.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -944,11 +944,11 @@
         "spellshieldable": "special",
         "resource": "MANA",
         "damageType": "MAGIC_DAMAGE",
-        "spellEffects": "spellaoe",
+        "spellEffects": "special",
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Spell shield will only block the  root.\nThe slow debuff lasts for the same duration as its tick rate (0.125 seconds).\nThis ability will cast from wherever the caster is at the end of the cast time.",
+        "notes": "Spell shield will only block the orb ( root portion).\nThe initial impact of Solar Snare deals  area damage, while the lingering damage over time deals  persistent area damage.\nThe slow debuff lasts for the same duration as its tick rate (0.125 seconds).\nThis ability will cast from wherever the caster is at the end of the cast time.",
         "blurb": "Active:  Mel fires an orb that deals magic damage to enemies hit and  roots them for a moment.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -1101,7 +1101,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Golden Eclipse cannot be cast if all affected targets are  untargetable.\nGolden Eclipse does not deal damage to enemies that are  untargetable by the time the cast time completes.\nWhenever Golden Eclipse's damage would put a target below  Overwhelm's threshold, it will use a  different icon.\nGolden Eclipse will display the number of total stacks affecting all enemy champions in the HUD.",
+        "notes": "Golden Eclipse can be cast even if all affected targets are  untargetable.(note)\nGolden Eclipse does not deal damage to enemies that are  untargetable by the time the cast time completes.\nWhenever Golden Eclipse's damage would put a target below  Overwhelm's threshold, it will use a  different icon.\nGolden Eclipse will display the number of total stacks affecting all enemy champions in the HUD.\nGolden Eclipse sets the duration of  Overwhelm stacks to 0.5 seconds if they would run out during the cast time.",
         "blurb": "Passive:  Overwhelm stores more damage.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -1120,9 +1120,9 @@
   },
   "releaseDate": "2025-01-23",
   "releasePatch": "25.S1.2",
-  "patchLastChanged": "25.04",
+  "patchLastChanged": "25.08",
   "price": {
-    "blueEssence": 7800,
+    "blueEssence": 3150,
     "rp": 975,
     "saleRp": 0
   },

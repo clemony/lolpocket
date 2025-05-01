@@ -4,202 +4,202 @@
   "name": "Kai'Sa",
   "title": "Daughter of the Void",
   "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Kaisa.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Kaisa.png",
   "resource": "MANA",
   "attackType": "RANGED",
   "adaptiveType": "MAGIC_DAMAGE",
   "stats": {
     "health": {
       "flat": 640,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 102,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
-      "flat": 3.5,
-      "percent": 0,
+      "flat": 4,
+      "percent": 0.0,
       "perLevel": 0.55,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 345,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 40,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 8.2,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.7,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
-      "flat": 25,
-      "percent": 0,
+      "flat": 27,
+      "percent": 0.0,
       "perLevel": 4.2,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1.3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 59,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.6,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 335,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 800,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 100,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 40.6800003051757,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.644,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1.8,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.643999993801116,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.25,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.55200004577636,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": 0,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 525,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
       "flat": 0.9,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
       "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
       "flat": 1.1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
       "flat": 0.9,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -248,7 +248,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Kai'Sa receives the evolution even if she dies while in cast time.\nKai'Sa can evolve an ability even if she hasn't learned it yet.\nThe bonus missing health damage is evaluated after the initial damage from Caustic Wounds is evaluated, and after  Void Seeker's damage if triggered by it, but before a triggering basic attack's is.\nThis effectively increases the \"flat\" Caustic Wounds damage preceding the expunge proc and (if applicable)  Void Seeker damage and any potential preceding on-hit damage (usually not possible to acquire due to buff slot order) by 15% (+ 6% per 100 AP) divided by (1+the target's MR post penetration/100).\nPlasma stacks that exceed the rupture are reapplied normally.\n Spell shield will block the Plasma application from  Void Seeker only.\nWith  Void Seeker, if the stacks detonate Plasma, any remaining stacks are reapplied afterwards.  Void Seeker also deals Caustic Wounds' damage based on Plasma stacks on the target. This damage is calculated as if each stack was applied successively.\nHitting a target with 0 stack with normal Void Seeker: 8 − 48 (based on level) (+ 1 − 6 (based on level) (+ 27% AP)\nHitting a target with 3 stacks with normal Void Seeker: 8 − 48 (based on level) (+ 7 − 42 (based on level) (+ 45% AP)\nHitting a target with 0 stack with evolved Void Seeker: 12 − 72 (based on level) (+ 3 − 18 (based on level) (+ 45% AP)\nHitting a target with 2 stacks with evolved Void Seeker: 12 − 72 (based on level) (+ 9 − 54 (based on level) (+ 63% AP)",
+        "notes": "adaptive force from items does not count toward evolutions.\nKai'Sa may receives an evolution even if she dies during its  lockout.\nKai'Sa can evolve an ability even if she hasn't learned it yet.\nThe bonus missing health damage is evaluated after the initial damage from Caustic Wounds is evaluated, and after  Void Seeker's damage if triggered by it, but before a triggering basic attack's is.\nThis effectively increases the \"flat\" Caustic Wounds damage preceding the expunge proc and (if applicable)  Void Seeker damage and any potential preceding on-hit damage (usually not possible to acquire due to buff slot order) by 15% (+ 6% per 100 AP) divided by (1+the target's MR post penetration/100).\nPlasma stacks that exceed the rupture are reapplied normally.\n Spell shield will block the Plasma application from  Void Seeker only.\nWith  Void Seeker, if the stacks detonate Plasma, any remaining stacks are reapplied afterwards.  Void Seeker also deals Caustic Wounds' damage based on Plasma stacks on the target. This damage is calculated as if each stack was applied successively.",
         "blurb": "Innate - Living Weapon:  Kai'Sa can permanently evolve each of her basic abilities by obtaining  attack damage,  ability power, and  attack speed, respectively.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -930,9 +930,9 @@
           "modifiers": [
             {
               "values": [
-                130,
-                100,
-                70
+                120,
+                90,
+                60
               ],
               "units": [
                 "",
@@ -971,9 +971,9 @@
   },
   "releaseDate": "2018-03-07",
   "releasePatch": "8.5",
-  "patchLastChanged": "14.23",
+  "patchLastChanged": "25.06",
   "price": {
-    "blueEssence": 1350,
+    "blueEssence": 675,
     "rp": 585,
     "saleRp": 0
   },

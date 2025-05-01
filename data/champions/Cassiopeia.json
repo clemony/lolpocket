@@ -4,202 +4,202 @@
   "name": "Cassiopeia",
   "title": "the Serpent's Embrace",
   "fullName": "Cassiopeia Du Couteau",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Cassiopeia.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Cassiopeia.png",
   "resource": "MANA",
   "attackType": "RANGED",
   "adaptiveType": "MAGIC_DAMAGE",
   "stats": {
     "health": {
       "flat": 630,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 104,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 5.5,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.5,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 400,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 40,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 8,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.8,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 18,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4.7,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1.3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 53,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 328,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 600,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 120,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.647,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1.5,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.647000014781951,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": -0.108000002801418,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 550,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
       "flat": 1.05,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
       "flat": 0.95,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -229,7 +229,7 @@
             "leveling": []
           },
           {
-            "description": "Cassiopeia gains an additional 1 : 18 (based on level) bonus movement speed if her team obtains the Blessing of Noxus, for a total bonus of 5 : 90 (based on level).",
+            "description": "Blessing of Noxus Bonus: The movement speed is increased to 5 : 90 (based on level).",
             "leveling": []
           }
         ],
@@ -671,24 +671,24 @@
                 "modifiers": [
                   {
                     "values": [
-                      52,
-                      56,
-                      60,
-                      64,
-                      68,
-                      72,
-                      76,
-                      80,
-                      84,
-                      88,
-                      92,
-                      96,
-                      100,
-                      104,
-                      108,
-                      112,
-                      116,
-                      120
+                      52.0,
+                      56.0,
+                      60.0,
+                      64.0,
+                      68.0,
+                      72.0,
+                      76.0,
+                      80.0,
+                      84.0,
+                      88.0,
+                      92.0,
+                      96.0,
+                      100.0,
+                      104.0,
+                      108.0,
+                      112.0,
+                      116.0,
+                      120.0
                     ],
                     "units": [
                       "",
@@ -938,7 +938,7 @@
         "projectile": "FALSE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Cassiopeia will turn to face the target direction over the cast time.\nThis ability will cast from wherever the caster is at the end of the cast time.\nPetrifying Gaze's target direction will change if Cassiopeia's facing direction changes during the cast time (i.e. through  knockbacks).\nThe facing direction of champions whose abilities/animations cause them to lock their facing or spin is always the direction they are moving in. For abilities that cause the champion to spin in place (e.g.  Death Lotus,  Judgment) it will factor the direction they were facing on cast.\n Lucian's  The Culling is an exception and his facing direction is actually considered to be the direction he is facing.",
+        "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nCassiopeia will turn to face the target direction over the cast time.\nPetrifying Gaze's target direction will change if Cassiopeia's facing direction changes during the cast time (i.e. through  knockbacks).\nThe visual effect will not follow changes in Cassiopeia's facing direction and may not portray Petrifying Gaze's target direction accurately.(bug)\nThe facing direction of champions whose abilities/animations cause them to lock their facing or spin is always the direction they are moving in. For abilities that cause the champion to spin in place (e.g.  Death Lotus,  Judgment) it will factor the direction they were facing on cast.\n Lucian's  The Culling is an exception and his facing direction is actually considered to be the direction he is facing.",
         "blurb": "Active:  Cassiopeia blasts in a cone, dealing magic damage to enemies hit and  stunning any that are facing her, while  slowing any others with their back turned.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -959,7 +959,7 @@
   "releasePatch": "1.0.0.107",
   "patchLastChanged": "25.S1.3",
   "price": {
-    "blueEssence": 4800,
+    "blueEssence": 2400,
     "rp": 880,
     "saleRp": 0
   },

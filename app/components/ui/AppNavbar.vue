@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const us = useUiStore()
 const as = useAccountStore()
-const ss = useSummonerStore()
 const route = useRoute()
 
 watch(
@@ -63,7 +62,7 @@ onMounted (() => {
       Docs
     </NavBtn>    <SidebarAddPocket /> -->
 
-    <AccountSidebar :account="as.userAccount" :summoner="ss.getSummoner(as.userAccount.puuid)" />
+    <AccountSidebar :account="as.userAccount" :summoner="as.userSummoner" />
   </nav>
 </template>
 

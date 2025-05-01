@@ -34,6 +34,14 @@ declare global {
     region: string
   }
 
+  interface Filters {
+    patch?: number | null
+    queue?: number | null
+    champion?: string | null
+    ally?: string | null
+    role?: string | null
+  }
+
   interface Folder {
     name: string
     key: string

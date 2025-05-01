@@ -5,7 +5,7 @@ const { summoner, class: className } = defineProps<{
 }>()
 const ms = useMatchStore()
 const matches = computed(() => summoner.matches)
-const { filteredSimplifiedNoRole } = useFilteredMatches(matches, summoner.puuid)
+const { filteredSimplifiedNoRole } = useFilteredMatches(matches, summoner.puuid, ms.mf)
 
 // Use the composable with the filtered matches
 const roleStats = useMatchRoles(filteredSimplifiedNoRole)
@@ -14,16 +14,16 @@ const roleStats = useMatchRoles(filteredSimplifiedNoRole)
 <template>
   <div class="w-full ">
     <div class="flex items-center mb-2  -ml-1">
-      <label :class="{ 'pointer-events-none': ms.roleSelect == 'ALL' }" class="btn btn-sm gap-2 font-medium rounded-lg px-2.5 place-self-center text-3  btn-ghost" @click="ms.roleSelect = 'ALL'">
+      <label :class="{ 'pointer-events-none': ms.mf.role == 'ALL' }" class="btn btn-sm gap-2 font-medium rounded-lg px-2.5 place-self-center text-3  btn-ghost" @click="ms.mf.role = 'ALL'">
         <input
-          v-model="ms.roleSelect"
+          v-model="ms.mf.role"
           class="peer hidden"
           aria-label="All"
           name="match-champion-filter"
           value="All" />
-        {{ ms.roleSelect != 'ALL' ? roleStats.find(r => r.role == ms.roleSelect).displayName : 'Position' }}
+        {{ ms.mf.role != 'ALL' ? roleStats.find(r => r.role == ms.mf.role).displayName : 'Position' }}
 
-        <icon v-if="ms.roleSelect != 'ALL'" name="x-sm" class=" shrink-0 -mt-px" />
+        <icon v-if="ms.mf.role != 'ALL'" name="x-sm" class=" shrink-0 -mt-px" />
 
       </label>
     </div>
@@ -33,13 +33,13 @@ const roleStats = useMatchRoles(filteredSimplifiedNoRole)
         <template
           v-for="role in roleStats" :key="role.role">
           <label
-            v-if="ms.roleSelect == 'ALL' || ms.roleSelect == role.role"
+            v-if="ms.mf.role == 'ALL' || ms.mf.role == role.role"
 
             v-tippy="{ content: `${role.displayName} - ${role.games} game${role.games > 1 ? 's' : ''}` }"
-            class="size-14 grid place-items-center " :class="cn({ 'bg-neutral border-neutral shadow-neutral/20 shadow-sm order-2  ': role.role == ms.roleSelect, 'border-b3/80 btn  size-14  mr-0 btn-square': role.games })">
+            class="size-14 grid place-items-center " :class="cn({ 'bg-neutral border-neutral shadow-neutral/20 shadow-sm order-2  ': role.role == ms.mf.role, 'border-b3/80 btn  size-14  mr-0 btn-square': role.games })">
 
             <input
-              v-model="ms.roleSelect" class="peer hidden absolute"
+              v-model="ms.mf.role" class="peer hidden absolute"
               type="radio" :disabled="!role.games"
               :value="role.role"
               name="item-types" />

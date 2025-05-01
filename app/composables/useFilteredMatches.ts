@@ -1,7 +1,10 @@
 import { matchFilters } from 'utils/filters/matchFilters'
 
-export function useFilteredMatches(fullMatches: Ref<MatchData[]>, puuid: string) {
-  const ms = useMatchStore()
+export function useFilteredMatches(
+  fullMatches: Ref<MatchData[]>,
+  puuid: string,
+  filters: Filters
+) {
   const ss = useSummonerStore()
   const summoner = ss.getSummoner(puuid)
   const simplifiedMatches = ref<SimplifiedMatchData[]>([])
@@ -10,34 +13,30 @@ export function useFilteredMatches(fullMatches: Ref<MatchData[]>, puuid: string)
     simplifiedMatches.value = summoner.simplifiedMatches
   }
 
-  const { queueSelect, championSelect, playerSelect, patchSelect, roleSelect } = storeToRefs(ms)
-
-  // Map full matches by gameEndTimestamp
   const matchMap = computed(() => {
     return new Map(
       fullMatches.value.map(match => [match.info.gameEndTimestamp, match]),
     )
   })
+
   const filteredSimplified = computed(() => {
     return simplifiedMatches.value.filter(match =>
       matchFilters(match, {
-        patchSelect: patchSelect.value,
-        queueSelect: queueSelect.value,
-        championSelect: championSelect.value,
-        playerSelect: playerSelect.value,
-        roleSelect: roleSelect.value,
+        patch: filters.patch ?? null,
+        queue: filters.queue ?? null,
+        champion: filters.champion ?? null,
+        ally: filters.ally ?? null,
+        role: filters.role ?? null,
       }),
     )
   })
-
   const filteredSimplifiedNoRole = computed(() => {
     return simplifiedMatches.value.filter(match =>
       matchFilters(match, {
-        patchSelect: patchSelect.value,
-        queueSelect: queueSelect.value,
-        championSelect: championSelect.value,
-        playerSelect: playerSelect.value,
-        roleSelect: roleSelect.value,
+        patch: filters.patch ?? null,
+        queue: filters.queue ?? null,
+        champion: filters.champion ?? null,
+        ally: filters.ally ?? null,
         ignoreRole: true,
       }),
     )

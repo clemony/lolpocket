@@ -2,6 +2,7 @@
 import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
 import type { ColDef, ColGroupDef, GridApi, GridOptions, GridPreDestroyedEvent, GridReadyEvent } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
+import { filterDbChampions } from '~/utils/filters/filterChampions'
 
 definePageMeta({
   title: 'Champion List',

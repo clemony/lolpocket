@@ -24,10 +24,11 @@
   --font-redacted: 'Redacted Script';
   --font-flow: 'Flow Circular';
 
---text-xs: 0.86rem;
---text-sm: 0.9rem;
---text-md: 0.99rem;
---text-lg: 0.99rem;
+
+
+--text-xs: 0.9rem !important;
+--text-sm: 0.99rem;
+--text-md: 1.05rem;
   --text-1: 0.86rem;
   --text-2: 0.9rem;
   --text-3: 0.99rem;

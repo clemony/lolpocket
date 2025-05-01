@@ -4,14 +4,41 @@ import { fileURLToPath } from 'node:url'
 import VueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineNuxtConfig({
-  modules: ['@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', '@nuxt/image', '@vueuse/nuxt', '@nuxtjs/supabase', '@morev/vue-transitions/nuxt', '@nuxt/eslint', 'vue-sonner/nuxt', '@nuxt/icon', 'nuxt-svgo'],
+  modules: [
+    '@pinia/nuxt',
+    'pinia-plugin-persistedstate/nuxt',
+    '@nuxt/image',
+    '@vueuse/nuxt',
+    '@nuxtjs/supabase',
+    '@morev/vue-transitions/nuxt',
+    '@nuxt/eslint',
+    'vue-sonner/nuxt',
+    '@nuxt/icon',
+    'nuxt-svgo',
+    'nuxt-api-party',
+  ],
+
+    apiParty: {
+    endpoints: {
+      items: {
+      url: '/data/items',
+    },
+    }
+  },
 
   icon: {
     provider: 'iconify',
     serverBundle: false,
   },
 
+  image: {
+    domains: ['ddragon.leagueoflegends.com', 'cdn.communitydragon.org'],
+    format: ['webp'],
+  },
+
   vite: {
+    clearScreen: false,
+    logLevel: 'info',
     plugins: [
       VueDevTools({
         appendTo: /\/entry\.m?js$/,
@@ -83,7 +110,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
 
   imports: {
-    dirs: ['@vueuse/components', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/links', 'utils/lib', 'utils/pocket', 'utils/ui', 'stores', 'utils/data', 'utils/data/items', 'utils/data/champions', 'utils/data/shared'],
+    dirs: ['@vueuse/components', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/links', 'utils/lib', 'utils/pocket', 'utils/ui', 'stores', 'utils/format'],
   },
 
   webpack: {

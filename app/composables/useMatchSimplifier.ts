@@ -13,6 +13,11 @@ export function useMatchSimplifier(puuid: string) {
       gameEndTimestamp: match.info.gameEndTimestamp,
       gameVersion: normalizePatchNumber(match.info.gameVersion),
       win: participant.win,
+
+      kills: participant.kills,
+      deaths: participant.deaths,
+      assists: participant.assists,
+      killParticipation: participant.challenges.killParticipation,
       queueId: match.queueId,
       championName: participant.championName,
       teamPosition: participant.teamPosition,

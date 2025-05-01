@@ -4,202 +4,202 @@
   "name": "Cho'Gath",
   "title": "the Terror of the Void",
   "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Chogath.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Chogath.png",
   "resource": "MANA",
   "attackType": "MELEE",
   "adaptiveType": "MAGIC_DAMAGE",
   "stats": {
     "health": {
       "flat": 644,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 94,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 9,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.85,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 270,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 60,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 7.2,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.45,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 38,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 5,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.05,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 69,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4.2,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 345,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 500,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 130,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 50,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 80,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.625,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1.44,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.625,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": -0.0810000002384185,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 125,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
       "flat": 1.1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
       "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -271,10 +271,10 @@
                   {
                     "values": [
                       80,
-                      145,
-                      210,
-                      275,
-                      340
+                      140,
+                      200,
+                      260,
+                      320
                     ],
                     "units": [
                       "",
@@ -385,10 +385,10 @@
                   {
                     "values": [
                       80,
-                      135,
-                      190,
-                      245,
-                      300
+                      130,
+                      180,
+                      230,
+                      280
                     ],
                     "units": [
                       "",
@@ -556,11 +556,11 @@
                   },
                   {
                     "values": [
+                      2.5,
+                      2.75,
                       3,
-                      3,
-                      3,
-                      3,
-                      3
+                      3.25,
+                      3.5
                     ],
                     "units": [
                       "% (+ 0.5% per Feast stack) of target's maximum health",
@@ -609,11 +609,11 @@
                   },
                   {
                     "values": [
+                      7.5,
+                      8.25,
                       9,
-                      9,
-                      9,
-                      9,
-                      9
+                      9.75,
+                      10.5
                     ],
                     "units": [
                       "% (+ 1.5% per Feast stack) of target's maximum health",
@@ -918,7 +918,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "The increased size stacks additively with other size increases.\nThe name of the bonus health buff is \"Feast\".\nThe bonus attack range and increase size cap at respectively 16.25 / 13.93 / 12.19 / 10.83 / 9.75 and 16.67 / 14.29 / 12.5 / 11.11 / 10 stacks, with the last stack being effective as the decimal part of the value (no decimal meaning 100% as effective).\nEach stack of Feast increases the damage by 8 / 12 / 16.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nIf an enemy  champion has health below the amount of true damage Feast deals, they will be marked for execution. This indicator does not consider  shields or  invulnerability.\nConsuming any additional  Voidgrubs from the same spawn group will be tracked as a \"monster eaten\" for Feast's buff, but will neither grant any bonuses nor count towards the 6-stack limit.(bug)\nThis indicator is only visible to Cho'Gath.",
+        "notes": "The increased size stacks additively with other size increases.\nThe name of the bonus health buff is \"Feast\".\nThe bonus attack range and increase size cap at respectively 16.25 / 13.93 / 12.19 / 10.83 / 9.75 and 16.67 / 14.29 / 12.5 / 11.11 / 10 stacks, with the last stack being effective as the decimal part of the value (no decimal meaning 100% as effective).\nEach stack of Feast increases the damage by 8 / 12 / 16.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nIf an enemy  champion has health below the amount of true damage Feast deals, they will be marked for execution. This indicator does not consider  shields or  invulnerability.\nConsuming any additional  Voidgrubs from the same spawn group will be tracked as a \"monster eaten\" for Feast's buff, but will neither grant any bonuses nor count towards the 6-stack limit.(bug)\nWhile not on  cooldown, Feast's ability icon on the HUD can be pinged to announce its damage to  monsters in the ally chat.\nThis indicator is only visible to Cho'Gath.",
         "blurb": "Active:  Cho'Gath devours an enemy, dealing true damage based on Cho'Gath's bonus health. If this attack kills the target, Cho'Gath gains a permanent Feast stack that infinitely stacks.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -937,9 +937,9 @@
   },
   "releaseDate": "2009-06-26",
   "releasePatch": "June 26, 2009 Patch",
-  "patchLastChanged": "14.14",
+  "patchLastChanged": "25.09",
   "price": {
-    "blueEssence": 1350,
+    "blueEssence": 675,
     "rp": 585,
     "saleRp": 0
   },

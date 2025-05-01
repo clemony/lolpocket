@@ -25,18 +25,13 @@ export const useAccountStore = defineStore(
       region: 'Runeterra',
     })
 
-    const userSummoner = ref<Summoner>({
+    const userSummoner = ref<UserSummoner>({
       name: '',
       tag: '',
       puuid: '',
       profileIcon: '',
       level: 0,
       region: '',
-      ranked: {
-        solo: undefined,
-        flex: undefined, // optional, safe
-      },
-      matches: [],
     })
 
     return {

@@ -4,202 +4,202 @@
   "name": "Akshan",
   "title": "the Rogue Sentinel",
   "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Akshan.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Akshan.png",
   "resource": "MANA",
   "attackType": "RANGED",
   "adaptiveType": "PHYSICAL_DAMAGE",
   "stats": {
     "health": {
       "flat": 630,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 107,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 3.75,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.65,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 350,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 40,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 8.2,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.7,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 26,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4.7,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1.3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 52,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 330,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 750,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 100,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.638,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.4,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": -0.1667,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 500,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
       "flat": 0.95,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
       "flat": 1.05,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
       "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
       "flat": 1.05,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -229,38 +229,16 @@
             "leveling": []
           },
           {
-            "description": "The additional shot applies on-hit effects, triggers on-attack effects, and can critically strike for[ (122.5% + 28%) physical damage. ][ 70% total critical damage. ]",
+            "description": "The additional shot applies on-hit effects, triggers on-attack effects, and can critically strike for[ (122.5% + 28%) damage. ][ 70% total critical damage. ]",
             "leveling": []
           },
           {
             "description": "Innate: Akshan's basic attacks on-hit and ability hits apply a stack of Dirty Fighting to enemies for 5 seconds, refreshing on subsequent applications and stacking up to 3 times. The third stack against a target consumes them all to deal them 15 / 40 / 80 / 150 (based on level) (+ 60% AP) bonus magic damage; if the target is a champion, Akshan will also gain a 40 : 280 (based on level) (+ 35% bonus AD) shield for 2 seconds. The shield may be gained only once every few seconds.",
             "leveling": []
-          },
-          {
-            "description": "Dirty Fighting's shield's cooldown starts upon the shield expiring.",
-            "leveling": []
           }
         ],
         "cost": null,
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                16,
-                12,
-                8,
-                4
-              ],
-              "units": [
-                " (based on level)",
-                " (based on level)",
-                " (based on level)",
-                " (based on level)"
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": null,
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": "false",
@@ -292,7 +270,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akshan/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Akshan throws a boomerang in the target direction that briefly grants sight around its trajectory and deals physical damage to enemies hit, revealing them for 1 second and extending its range each time it hits a target. If this hits an enemy champion, Akshan gains bonus movement speed that decays over 1 second.",
+            "description": "Active: Akshan throws a boomerang in the target direction that briefly grants sight around its trajectory and deals physical damage to enemies hit, revealing them for 1 second and extending its range each time it hits a target. If this hits an enemy champion, Akshan gains 20% (+ 5% per 100 AP) bonus movement speed that decays over 1 second.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -327,43 +305,6 @@
                       "% AD",
                       "% AD",
                       "% AD"
-                    ]
-                  }
-                ]
-              },
-              {
-                "attribute": "Bonus Movement Speed",
-                "modifiers": [
-                  {
-                    "values": [
-                      20,
-                      20,
-                      20,
-                      20,
-                      20
-                    ],
-                    "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
-                      "%"
-                    ]
-                  },
-                  {
-                    "values": [
-                      5,
-                      5,
-                      5,
-                      5,
-                      5
-                    ],
-                    "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP"
                     ]
                   }
                 ]
@@ -493,7 +434,7 @@
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Avengerang will fire from wherever Akshan is at the end of the cast time.\n Spell shield will only block a single hit. They do not prevent the initial throw from extending its range.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.",
+        "notes": "Spell shield will only block a single hit. They do not prevent the initial throw from extending its range.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.",
         "blurb": "Active:  Akshan throws a boomerang that deals physical damage to enemies hit, extending the boomerang range and briefly  revealing them. If this hits an enemy  champion, Akshan gains a brief burst of  move speed.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -699,7 +640,7 @@
             "leveling": []
           },
           {
-            "description": "Scoring an enemy champion takedown reduces Heroic Swing's current cooldown to 0.5 seconds. The shots can critically strike for[ (157.5% + 36%) physical damage ][ 90% total critical damage ]and apply life steal at 100% effectiveness.",
+            "description": "Scoring an enemy champion takedown reduces Heroic Swing's current cooldown to 0.5 seconds. The shots can critically strike for[ (157.5% + 36%) damage ][ 90% total critical damage ]and apply life steal at 100% effectiveness.",
             "leveling": []
           }
         ],
@@ -1154,7 +1095,7 @@
   "releasePatch": "11.15",
   "patchLastChanged": "14.22",
   "price": {
-    "blueEssence": 4800,
+    "blueEssence": 2400,
     "rp": 880,
     "saleRp": 0
   },

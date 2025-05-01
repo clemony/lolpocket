@@ -4,202 +4,202 @@
   "name": "Jhin",
   "title": "the Virtuoso",
   "fullName": "Khada Jhin",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Jhin.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Jhin.png",
   "resource": "MANA",
   "attackType": "RANGED",
   "adaptiveType": "PHYSICAL_DAMAGE",
   "stats": {
     "health": {
       "flat": 655,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 107,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 3.75,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.55,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 300,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 50,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 6,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.8,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 24,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4.7,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1.3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 59,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4.4,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 330,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 800,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 120,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
       "flat": 0.86,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.625,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.25,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.60000002384185,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": 0,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 550,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
       "flat": 1.05,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
-      "flat": 0.9,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.93,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
       "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
       "flat": 1.01,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -234,7 +234,7 @@
             "leveling": []
           },
           {
-            "description": "Innate - Every Moment Matters: Jhin gains bonus attack damage equal to 4% : 44% (based on level)[ (+ 0.3% per 1% critical strike chance) (+ 0.25% per 1% bonus attack speed) ][ (+ 30% critical strike chance) (+ 25% bonus attack speed) ]AD.",
+            "description": "Innate - Every Moment Matters: Jhin gains bonus attack damage equal to 4% : 44% (based on level)[ (+ 0.35% per 1% critical strike chance) (+ 0.3% per 1% bonus attack speed) ][ (+ 35% critical strike chance) (+ 30% bonus attack speed) ]AD.",
             "leveling": []
           },
           {
@@ -675,7 +675,7 @@
         "projectile": "YASUO",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Applies  spell damage to the enemy champion and  area damage to all other enemy units.\nThe Caught Out mark only appears if Deadly Flourish can potentially  root the target, and will not if the ability's cooldown is longer than 4 seconds or isn't ranked up.\nThis ability will cast from wherever the caster is at the start of the cast time.\nDeadly Flourish is blocked by  Wind Wall but not  Blade Whirl.\nDeadly Flourish is special cased to be intercepted by the former because it looks like a blockable missile, even though it isn't functionally a missile.\nWhile  disguised as a non-champion,  Neeko cannot be affected by Deadly Flourish.(bug)",
+        "notes": "Applies  spell damage to the enemy champion and  area damage to all other enemy units.\nThe Caught Out mark only appears if Deadly Flourish can potentially  root the target, and will not if the ability's cooldown is longer than 4 seconds or isn't ranked up.\nThis ability will cast from wherever the caster is at the start of the cast time.\nThe ability will not preserve the caster's facing direction when using  Flash and similar effects.\nDeadly Flourish is blocked by  Wind Wall but not  Blade Whirl.\nDeadly Flourish is special cased to be intercepted by the former because it looks like a blockable missile, even though it isn't functionally a missile.\nWhile  disguised as a non-champion,  Neeko cannot be affected by Deadly Flourish.(bug)",
         "blurb": "Passive: Enemy champions that trigger a  Lotus Trap or damaged by Jhin and his allies are marked with  Caught Out for a few seconds.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -969,7 +969,7 @@
             ]
           },
           {
-            "description": "The fourth shot critically strikes for (100% + 40%) bonus physical damage.",
+            "description": "The fourth shot critically strikes for (200% + 40%) damage.",
             "leveling": [
               {
                 "attribute": "Minimum Fourth Shot Damage",
@@ -1093,9 +1093,9 @@
   },
   "releaseDate": "2016-02-01",
   "releasePatch": "6.2",
-  "patchLastChanged": "14.20",
+  "patchLastChanged": "25.06",
   "price": {
-    "blueEssence": 4444,
+    "blueEssence": 1234,
     "rp": 880,
     "saleRp": 0
   },
@@ -2376,7 +2376,7 @@
         "Paul M. Guyet"
       ],
       "splashArtist": [
-        "Augusto Qurino",
+        "Augusto Quirino",
         "Pandart Studio"
       ]
     }

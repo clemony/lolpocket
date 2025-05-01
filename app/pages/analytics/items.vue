@@ -34,7 +34,7 @@ const ms = useMatchStore()
         Item Data
       </h1>
       <p class="font-medium text-bc/70">
-        Your best items during patch {{ ms.patchSelect }}
+        Your best items during patch {{ ms.af.patch }}
       </p>
     </div>
     <div class="size-full overflow-hidden ">

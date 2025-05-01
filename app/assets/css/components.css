@@ -37,14 +37,6 @@
     }
     
 
-    .field {
-      @apply fieldset mt-2 relative w-full h-fit bg-b2 border border-b3 p-4 rounded-box;
-    }
-    
-    .field-legend {
-      @apply fieldset-legend absolute left-5.5 -top-5 text-3 max-w-64  max-h-12  ;
-    }
-
       
   .input {
     @apply focus-within:!outline-1 focus-within:!outline-offset-0   focus-within:!outline-b3;
@@ -106,3 +98,30 @@ clip-path: inset(0 0 15% 0);
 }
   }
 
+@layer components{
+
+    .field {
+      @apply fieldset mt-2 relative w-full h-fit bg-b2 border border-b3 p-4 rounded-box;
+    }
+    
+    .field-legend {
+      @apply fieldset-legend absolute left-5.5 -top-5 text-3 max-w-64  max-h-12  ;
+    }
+.stats{
+  .stat {
+    @apply items-center;
+  }
+  .stat-title{
+    @apply !text-3 font-semibold  drop-shadow-[1px_0px_0px_#00000020];
+  }
+  .stat-desc {
+    @apply !text-2 font-medium  drop-shadow-[1px_0px_0px_#00000020];
+  }
+  .stat-figure{
+    @apply drop-shadow-[1px_0px_0px_#00000020];
+  }
+  .stat-value {
+    @apply  drop-shadow-[1px_0px_0px_#00000020];
+  }
+}
+}

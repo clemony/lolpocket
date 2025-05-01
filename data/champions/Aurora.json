@@ -4,202 +4,202 @@
   "name": "Aurora",
   "title": "the Witch Between Worlds",
   "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Aurora.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Aurora.png",
   "resource": "MANA",
   "attackType": "RANGED",
   "adaptiveType": "MAGIC_DAMAGE",
   "stats": {
     "health": {
       "flat": 607,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 110,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 6,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.55,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 475,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 30,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 8,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.8,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 23,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4.5,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1.3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 53,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 335,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 525,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 100,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.668,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.668,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": -0.099465,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 550,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 10,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -246,7 +246,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "The spirits grant vision of a small area around themselves.\nBasic attacks will not trigger Spirit Abjuration if the attack is  dodged or missed while Aurora is  blinded.\n Block will not prevent a trigger.",
+        "notes": "The spirits grant vision of a small area around themselves.",
         "blurb": "Innate:  Aurora's basic attacks and damaging abilities inflict a stack of Spirit Abjuration, stacking up to 3 times.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -565,7 +565,7 @@
             ]
           },
           {
-            "description": "Realm Hopper: Aurora gains bonus movement speed for the duration.",
+            "description": "Realm Hopper: Aurora becomes ghosted and gains bonus movement speed for the duration.",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -645,7 +645,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Aurora will not gain the stealth if her dash is interrupted.\nShe will however gain the stealth despite the dash being interrupted from colliding with  Between Worlds' border.\nHer dash is interrupted in this case from being overridden by the rift dash.\nAurora is locked out of using all abilities, summoner spells, and item actives during the dash.\nShe cannot buffer these spells to cast after the lockout. This is in place to prevent her from breaking the stealth from certain spell casts.\nThis is the case even for spells that do not break stealth when cast.\nUsing a basic attack breaks the stealth at the end of the attack windup.",
+        "notes": "Aurora will not gain the stealth if her dash is interrupted.\nShe will however gain the stealth despite the dash being interrupted from colliding with  Between Worlds' border.\nHer dash is interrupted in this case from being overridden by the rift dash.\nAurora is locked out of using all abilities, summoner spells, and item actives during the dash.\nShe cannot buffer these spells to cast after the lockout. This is in place to prevent her from breaking the stealth from certain spell casts.\nThis is the case even for spells that do not break stealth when cast.\nUsing a basic attack breaks the stealth at the end of the attack windup.\nAt rank 0, Realm Hopper will grant Aurora 15% bonus movement speed. This is only relevant for using  Between Worlds.",
         "blurb": "Active:  Aurora  hops into  invisibility for a moment and gains Realm Hopper for a few seconds.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -690,11 +690,11 @@
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
-                      80
+                      70,
+                      70,
+                      70,
+                      70,
+                      70
                     ],
                     "units": [
                       "% AP",
@@ -781,7 +781,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aurora/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Aurora leaps in the target direction with displacement immunity over 0.4 seconds. She then gains 15% : 40% (based on Across the Veil's rank) bonus movement speed for 4 seconds and unleashes a shockwave from 425 units in front of her, expanding over 0.75 seconds to deal magic damage to enemies hit and slow them by 30% for 2 seconds.",
+            "description": "Active: Aurora leaps in the target direction with displacement immunity over 0.4 seconds. She then gains Realm Hopper for 3.5 seconds and unleashes a shockwave from 425 units in front of her, expanding over 0.75 seconds to deal magic damage to enemies hit and slow them by 30% for 2 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -815,7 +815,7 @@
             ]
           },
           {
-            "description": "The shockwave leaves behind a circular rift to the Spirit Realm for a duration, forming borders that interact with Aurora and enemies. If Aurora collides with the border, she dashes to the diametrically opposite side of the rift over 0.4 seconds, becoming untargetable and unable to act during the travel. If an enemy collides with the border, they are slowed by 75% for a duration.",
+            "description": "The shockwave leaves behind a circular rift to the Spirit Realm for a duration, forming borders that interact with Aurora and enemies. If Aurora collides with the border, she dashes to the diametrically opposite side of the rift over 0.4 seconds, becoming untargetable and unable to act during the travel. If an enemy collides with the border, they are slowed by 50% for a duration.",
             "leveling": [
               {
                 "attribute": "Rift Duration",
@@ -862,7 +862,7 @@
             "leveling": []
           },
           {
-            "description": "The rift closes immediately if Aurora dies, resurrects, leaves the area, or is not within the area upon creation.",
+            "description": "The rift closes immediately if Aurora dies, enters resurrection, leaves the area, or is not within the area upon creation.",
             "leveling": []
           }
         ],
@@ -908,8 +908,8 @@
         "projectile": "FALSE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Collision with the border is essentially moving within range of it while being targetable, including via normal movement, dash, or displacement.\nAurora and enemies can collide with the border any number of times, as much as the duration permits.\nEnemies can be applied the slow by colliding with the border only once after moving within collision radius of it. The slow may be applied again from collision only until after they have left the collision radius; it cannot be continuously applied while enemies remain within collision radius of the border.\n Untargetable units cannot collide with the border, including Aurora herself.\nThe in-game tooltip incorrectly lists the rift duration as 3 / 3.25 / 3.5 / 3.75 / 4 seconds.(bug)\nThis duration seems to include the time for the shockwave to fully expand. However, the rift and its borders will only form after the fact, so the actual duration of the rift is shorter.\nBetween Worlds'   untargetability from the rift dash does not  destroy in-flight  projectiles.\nBetween Worlds'  first cast is disabled while  grounded or  rooted.\nAurora can still dash from colliding with the border even if she is  immobilized or  grounded.\n Spell shield can block both the shockwave and border collision.\nA pair of portals signifying Aurora's nearest possible entry and its corresponding exit is visible to her at all times.\nThe following table refers for interactions while Aurora is dashing:\nThis lockout applies to both the initial dash and the dashes in the rift.\nThe lockout during the initial cast's dash persists for another 0.5 seconds after the dash ends.\nThe lockout during the rift dash persists for another 0.15 seconds after the dash ends.\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
-        "blurb": "Active:  Aurora becomes  unstoppable and  leaps, unleashing an expanding shockwave that deals magic damage to enemies hit and  slows them briefly, and gaining  Realm Hopper's for a few seconds.",
+        "notes": "Collision with the border is essentially moving within range of it while being targetable, including via normal movement, dash, or displacement.\nAurora and enemies can collide with the border any number of times, as much as the duration permits.\nEnemies can be applied the slow by colliding with the border only once after moving within collision radius of it. The slow may be applied again from collision only until after they have left the collision radius; it cannot be continuously applied while enemies remain within collision radius of the border.\n Untargetable units cannot collide with the border, including Aurora herself.\nThe in-game tooltip incorrectly lists the rift duration as 3 / 3.25 / 3.5 / 3.75 / 4 seconds.(bug)\nThis duration seems to include the time for the shockwave to fully expand. However, the rift and its borders will only form after the fact, so the actual duration of the rift is shorter.\nBetween Worlds'   untargetability from the rift dash does not  destroy in-flight  projectiles.\nBetween Worlds'  first cast is disabled while  grounded or  rooted.\nAurora can still dash from colliding with the border even if she is  immobilized or  grounded.\n Spell shield can block both the shockwave and border collision.\nA pair of portals signifying Aurora's nearest possible entry and its corresponding exit is visible to her at all times.\nThe following table refers for interactions while Aurora is dashing:\nThis lockout applies to both the initial dash and the dashes in the formed rift.\nThe lockout during the initial cast's dash persists for another 0.5 seconds after the dash ends.\nThe lockout during the rift dash persists for another 0.15 seconds after the dash ends.\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+        "blurb": "Active:  Aurora becomes  unstoppable and  leaps, unleashing an expanding shockwave that deals magic damage to enemies hit and  slows them briefly, and gaining  Realm Hopper for a few seconds.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": "25",
@@ -927,9 +927,9 @@
   },
   "releaseDate": "2024-07-17",
   "releasePatch": "14.14",
-  "patchLastChanged": "25.04",
+  "patchLastChanged": "25.09",
   "price": {
-    "blueEssence": 6300,
+    "blueEssence": 3150,
     "rp": 975,
     "saleRp": 0
   },

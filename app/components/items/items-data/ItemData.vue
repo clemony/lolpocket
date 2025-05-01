@@ -4,6 +4,9 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
+const { data, refresh, error, status, clear } = await useItemData('posts/1')
+
+
 const item = computed (() => {
   return props.item
 })

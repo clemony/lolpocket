@@ -4,202 +4,202 @@
   "name": "Kindred",
   "title": "The Eternal Hunters",
   "fullName": "Lamb and Wolf",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Kindred.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Kindred.png",
   "resource": "MANA",
   "attackType": "RANGED",
   "adaptiveType": "PHYSICAL_DAMAGE",
   "stats": {
     "health": {
       "flat": 595,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 104,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 7,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.55,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 300,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 35,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 7,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.4,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 29,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4.7,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1.3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 65,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 3.25,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 325,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 525,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 120,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.625,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 3.5,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.625,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": -0.12456139922142,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 500,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
       "flat": 0.9,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
       "flat": 1.1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -234,6 +234,10 @@
           {
             "description": "Innate - Wolf: Starting at 3:15, Wolf periodically marks a random large monster within the enemy team's jungle for 180 seconds. The hunted camp is highlighted on the mini map to both teams. Once the hunted target is slain or the mark expires, Wolf will wait 45 seconds before selecting a new target. The type of monster that Wolf can mark changes based on Kindred's current Mark of the Kindred stacks:\n0 : Rift Scuttler\n1 : 3: Rift Scuttler, Crimson Raptor, Gromp\n4 : 7: Ancient Krug, Blue Sentinel, Greater Murk Wolf, or Red Brambleback\n8 + : Rift Herald or Baron Nashor, Dragon or Elder Dragon",
             "leveling": []
+          },
+          {
+            "description": "Mark of the Kindred - Lamb can make use of Champion Specific Interaction 1-5 hotkeys.",
+            "leveling": []
           }
         ],
         "cost": null,
@@ -247,7 +251,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Takedowns on  monsters occur if Kindred had damaged them within the last 6 seconds.\nThis only includes if the monster was slain by Kindred or an ally.\nOnly killing the large monster is required to claim Wolf's mark.\nGaining stacks from champions that would change what constitutes a valid target for Wolf will not affect Kindred's ability to claim Wolf's current target.\nWolf cannot mark monsters that have been slain, even if Kindred's team doesn't know that the camp has been slain.\nWolf's cooldown is not displayed in-game. Combined with the above point and the target restrictions, Wolf may go extended periods of time without seeming to do anything.\nWolf's marked target will always have its mark removed from the map 15 seconds after dying for both teams, regardless of whether they have vision of it or not.",
+        "notes": "Kindred's selection of enemy champions will be offered through a HUD menu with up to 5 slots based on the number of enemy champions, in order of their appearance in the pre-game Loading Screen.\nChampion Specific Interaction 1-5 will activate Kindred's slots 1-5 in the HUD menu.\n Takedowns on  monsters occur if Kindred had damaged them within the last 6 seconds.\nThis only includes if the monster was slain by Kindred or an ally.\nOnly killing the large monster is required to claim Wolf's mark.\nGaining stacks from champions that would change what constitutes a valid target for Wolf will not affect Kindred's ability to claim Wolf's current target.\nWolf cannot mark monsters that have been slain, even if Kindred's team doesn't know that the camp has been slain.\nWolf's cooldown is not displayed in-game. Combined with the above point and the target restrictions, Wolf may go extended periods of time without seeming to do anything.\nWolf's marked target will always have its mark removed from the map 15 seconds after dying for both teams, regardless of whether they have vision of it or not.",
         "blurb": "Innate: Both  Lamb and  Wolf mark targets to hunt. Scoring a  takedown against a hunted target collects a permanent stack of Mark of the Kindred. Lamb can select an enemy  champion to hunt, and Wolf automatically selects a large  monster to hunt.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -755,7 +759,7 @@
             ]
           },
           {
-            "description": "The additional damage will critically strike against targets below 25% : 75% (based on critical strike chance) of their maximum health, increasing the missing health portion by (50% + 40%), and cannot critically strike otherwise. The base damage of the pounce can independently critically strike.",
+            "description": "The missing health portion of the additional damage will critically strike for (150% + 40%) damage if the target is below 25% : 75% (based on critical strike chance) of their maximum health and cannot critically strike otherwise. The base damage of the pounce can independently critically strike for (175% + 40%) damage.",
             "leveling": []
           }
         ],
@@ -809,7 +813,7 @@
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "If the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel and not pay its cost but still go on  cooldown.(bug)\nThis ability cannot be cast on a target with Mounting Dread stacks.",
+        "notes": "If the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel and not pay its cost but still go on  cooldown.(bug)\nThis ability cannot target a unit with Mounting Dread stacks.\nMounting Dread will prioritize casting on the closest champion within 100 radius of the cursor, even if other eligible targets are closer.\nAs a consequence of this mechanic, Mounting Dread can still be cast on champions with Mounting Dread stacks.(bug)\nReapplying Mounting Dread through this method will apply the slow, but will not reset the stack count.\nPENDING FOR TEST: Reapplying Mounting Dread against  disguised  Neeko will reset the stack count.(bug)",
         "blurb": "Active:  Lamb fires a shot at the target enemy that briefly  slows them applies a stack of Mounting Dread. Lamb's basic attacks against this target stack Mounting Dread up to a cap.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -899,7 +903,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Lamb's Respite will affect all  champions,  minions, and  monsters, but not  wards,  turrets, or jungle plants.\nLamb's Respite will affect  untargetable units but does not grant them the  heal at the end of the blessing.\nIt will specifically not affect champions that are  resurrecting from  Guardian Angel.\n Health costs will ignore Lamb's Respite's threshold.\nThe cost will not be paid if the caster is below the threshold.\nLamb's Respite has no effect on  zombie state or  clone units.\nThe effects are applied before the cast time.",
+        "notes": "Lamb's Respite will affect all  champions,  minions, and  monsters, but not  wards,  turrets, or jungle plants.\nLamb's Respite will affect  untargetable units but does not grant them the  heal at the end of the blessing.\nIt will specifically not affect champions that are  resurrecting from  Guardian Angel.\n Health costs will ignore Lamb's Respite's threshold.\nThe cost will not be paid if the caster is below the threshold.\nLamb's Respite has no effect on  zombie state or  clone units.\nThe effects are applied before the cast time.\nPENDING FOR TEST: Lamb's Respite will have no effect if cast while Kindred is  untargetable.",
         "blurb": "Active:  Lamb blesses the ground under herself for a few seconds. Any unit inside the area will become  invulnerable upon reaching  low health.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -920,7 +924,7 @@
   "releasePatch": "5.20",
   "patchLastChanged": "25.S1.3",
   "price": {
-    "blueEssence": 4800,
+    "blueEssence": 2400,
     "rp": 880,
     "saleRp": 0
   },

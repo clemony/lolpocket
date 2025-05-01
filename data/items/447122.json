@@ -1,0 +1,405 @@
+{
+  "name": "Black Hole Gauntlet",
+  "id": 447122,
+  "tier": 3,
+  "rank": [
+    "DISTRIBUTED"
+  ],
+  "buildsFrom": [],
+  "buildsInto": [],
+  "specialRecipe": 220007,
+  "noEffects": false,
+  "removed": false,
+  "requiredChampion": "",
+  "requiredAlly": "",
+  "icon": "https://raw.communitydragon.org/15.9/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/447122_blackholegauntlet.png",
+  "simpleDescription": null,
+  "nicknames": [],
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Accretion",
+      "effects": "Basic attacks [[on-hit]] and {{tip|immobilize|immobilizing}} effects against enemy champions generate 1 and 5 stacks of ''Accretion'', respectively, up to 50. For each ''Accretion'' stack, gain {{as|10% '''base''' health regeneration}}, up to {{as|500% '''base''' health regeneration}} at '''maximum''' stacks. Additionally, for every 10 ''Accretion'' stacks, gain 20% increased size, up to 100% at '''maximum''' stacks. Stacks are reset every round and between each phase in a round.",
+      "range": null,
+      "cooldown": null,
+      "stats": {
+        "abilityPower": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "armor": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "armorPenetration": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "attackDamage": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "attackSpeed": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "cooldownReduction": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "criticalStrikeChance": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "goldPer10": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "healAndShieldPower": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "health": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "healthRegen": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "lethality": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "lifesteal": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "magicPenetration": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "magicResistance": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "mana": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "manaRegen": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "movespeed": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "abilityHaste": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "omnivamp": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "tenacity": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        },
+        "criticalStrikeDamage": {
+          "flat": 0.0,
+          "percent": 0.0,
+          "perLevel": 0.0,
+          "percentPerLevel": 0.0,
+          "percentBase": 0.0,
+          "percentBonus": 0.0
+        }
+      }
+    }
+  ],
+  "active": [
+    {
+      "unique": true,
+      "name": "Dark Star",
+      "effects": "Summon a black hole at the target location after a {{fd|0.5}}-second delay that lasts for 2 {{as|(+ {{fd|0.1}} per 100 '''bonus''' health)}} seconds and has a radius of [{{tip|cr|icononly=true}} {{tt|225|Total radius}} / {{tt|75|Impassable horizon radius}} units]{{times}}champion size modifier (+ {{fd|0.1}}% per ''Accretion'' stack). Enemies within are dealt {{as|{{pp|30 to 100}}|magic damage}} {{as|(+ {{fd|6.5}}% of user's '''maximum''' health)}} {{as|magic damage}} every second, {{tip|slow|slowed}} by 35%, and {{tip|kinematics|dragged}} inward until they reach the horizon at the center. Additionally, for each enemy champion inside the black hole, generate 1 stack of ''Accretion'' per second.",
+      "range": null,
+      "cooldown": null
+    }
+  ],
+  "stats": {
+    "abilityPower": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "armor": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "armorPenetration": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "attackDamage": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "attackSpeed": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "cooldownReduction": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "criticalStrikeChance": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "goldPer10": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "healAndShieldPower": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "health": {
+      "flat": 900.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "healthRegen": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "lethality": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "lifesteal": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "magicPenetration": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "magicResistance": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "mana": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "manaRegen": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "movespeed": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "abilityHaste": {
+      "flat": 25.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "omnivamp": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "tenacity": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    },
+    "criticalStrikeDamage": {
+      "flat": 0.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0,
+      "percentBase": 0.0,
+      "percentBonus": 0.0
+    }
+  },
+  "shop": {
+    "prices": {
+      "total": 0,
+      "combined": 0,
+      "sell": 0
+    },
+    "purchasable": true,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "iconOverlay": false
+}

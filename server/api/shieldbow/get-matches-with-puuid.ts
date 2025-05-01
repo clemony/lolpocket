@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
   const count = query.count
 
   const RIOT_KEY = process.env.RIOT_API_KEY
-  const REGION = 'americas' // or 'europe', 'asia', depending on the account
+  const REGION = 'americas' 
   const client = new Client(process.env.RIOT_API_KEY)
   await client.initialize({ region: 'na' })
 

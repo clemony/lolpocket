@@ -4,202 +4,202 @@
   "name": "Ashe",
   "title": "the Frost Archer",
   "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Ashe.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Ashe.png",
   "resource": "MANA",
   "attackType": "RANGED",
   "adaptiveType": "PHYSICAL_DAMAGE",
   "stats": {
     "health": {
       "flat": 610,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 101,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 3.5,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.55,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 280,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 35,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 7,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.65,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 26,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4.6,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1.3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 59,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.95,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 325,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 600,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 120,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 100,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.658,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 3.33,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.657999992370605,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": -0.0807017534971237,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 600,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
       "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
       "flat": 1.05,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -275,7 +275,7 @@
             "leveling": []
           },
           {
-            "description": "Active: For 6 seconds, Ashe gains bonus attack speed and empowers her basic attacks to fire a flurry of five arrows.",
+            "description": "Active: Ashe gains bonus attack speed for 6 seconds and empowers her basic attacks to fire a flurry of five arrows.",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -283,10 +283,10 @@
                   {
                     "values": [
                       25,
-                      35,
-                      45,
-                      55,
-                      65
+                      37.5,
+                      50,
+                      62.5,
+                      75
                     ],
                     "units": [
                       "%",
@@ -308,11 +308,11 @@
                 "modifiers": [
                   {
                     "values": [
-                      22.2,
-                      23.4,
-                      24.6,
-                      25.8,
-                      27
+                      22,
+                      23.5,
+                      25,
+                      26.5,
+                      28
                     ],
                     "units": [
                       "% AD",
@@ -329,11 +329,11 @@
                 "modifiers": [
                   {
                     "values": [
-                      111,
-                      117,
-                      123,
-                      129,
-                      135
+                      110,
+                      117.5,
+                      125,
+                      132.5,
+                      140
                     ],
                     "units": [
                       "% AD",
@@ -382,7 +382,7 @@
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "The first attack from Ranger's Focus has 6 arrows, thus dealing 20% more total damage than expected.\nRanger's Focus first bolt deals  basic damage with the subsequent 4 bolts dealing a non-reactive damage type (e.g.  default damage or  proc damage).  The entire effect is classified as a basic attack on a script-level, but is considered an ability for other effects (i.e  Sap Magic), which is likely due to a mistaken script-level tag.\nAlthough Ranger's Focus has no actual cooldown, 4 stacks of focus are needed before Ranger's Focus can be reactivated. The time before being able to reactivate Ranger's Focus is 6.08 : 1.6 (based on attack speed) seconds.\nEach arrow from a flurry applies  Frost and the bonus damage from  Frost Shot is calculated individually per arrow.\nSimilarly, since a flurry is 5 instances of physical damage,  Black Cleaver allows her to cleave the enemy target 5 times per flurry.\nSources of flat damage reduction against any (physical) damage such as  Amumu's  Tantrum,  Leona's  Eclipse or  Fizz's  Nimble Fighter will apply the reduction to each arrow's damage, resulting in extremely reduced damaged compared to a normal attack.\nEach additional arrow from  Runaan's Hurricane will also split into 5 arrows.\nThe arrows are evenly distributed among secondary enemies but one enemy cannot be hit by more than 5 arrows.\nThe flurry will trigger on-hit effects once to each enemy hit, but no more than 3 targets per attack.\nThe flurry applies against structures. Stacks of Focus will not be granted when attacking structures.",
+        "notes": "The first attack from Ranger's Focus has 6 arrows, thus dealing 20% more total damage than expected.\nRanger's Focus first bolt deals  basic damage with the subsequent 4 bolts dealing a non-reactive damage type (e.g.  default damage or  proc damage). The entire effect is classified as a basic attack on a script-level, but is considered an ability for other effects (i.e  Sap Magic), which is likely due to a mistaken script-level tag.\nAlthough Ranger's Focus has no actual cooldown, 4 stacks of focus are needed before Ranger's Focus can be reactivated. The time before being able to reactivate Ranger's Focus is 6.08 : 1.6 (based on attack speed) seconds.\nEach arrow from a flurry applies  Frost and the bonus damage from  Frost Shot is calculated individually per arrow.\nSimilarly, since a flurry is 5 instances of physical damage,  Black Cleaver allows her to cleave the enemy target 5 times per flurry.\nSources of flat damage reduction against any (physical) damage such as  Amumu's  Tantrum,  Leona's  Eclipse or  Fizz's  Nimble Fighter will apply the reduction to each arrow's damage, resulting in extremely reduced damaged compared to a normal attack.\nEach additional arrow from  Runaan's Hurricane will also split into 5 arrows.\nThe arrows are evenly distributed among secondary enemies but one enemy cannot be hit by more than 5 arrows.\nThe flurry will trigger on-hit effects once to each enemy hit, but no more than 3 targets per attack.\nThe flurry applies against structures. Stacks of Focus will not be granted when attacking structures.",
         "blurb": "Passive:  Ashe's basic attacks generate stacks of Focus, up to a cap. Once the stacks reach the cap, she can cast Ranger's Focus.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -636,9 +636,9 @@
                 "modifiers": [
                   {
                     "values": [
-                      250,
-                      450,
-                      650
+                      200,
+                      400,
+                      600
                     ],
                     "units": [
                       "",
@@ -728,9 +728,9 @@
   },
   "releaseDate": "2009-02-21",
   "releasePatch": "Alpha Week 2",
-  "patchLastChanged": "25.04",
+  "patchLastChanged": "25.09",
   "price": {
-    "blueEssence": 450,
+    "blueEssence": 225,
     "rp": 260,
     "saleRp": 0
   },
@@ -2587,6 +2587,165 @@
         "Yuyu Wong",
         "Kudos Productions"
       ]
+    },
+    {
+      "name": "Spirit Blossom",
+      "id": 22076,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Spirit Blossom",
+      "lootEligible": true,
+      "cost": 1820,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Legendary",
+      "chromas": [
+        {
+          "name": "Catseye",
+          "id": 22079,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/22/22079.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 22081,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/22/22081.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 22082,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/22/22082.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 22077,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/22/22077.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2025.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 22080,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/22/22080.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 22078,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/22/22078.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Myth tells of the Wandering Queen, whose curiosity led her to trade places with the Grovemother. The cost of this choice was high, and she returned to see her loyal Ready Hand and the Grovemother locked in combat. Throwing herself between them, she died in the Ready Hand's arms, her final words an apology. Now she roams the wilds, guiding the lost.",
+      "release": "2025-04-30",
+      "set": [
+        "Spirit Blossom"
+      ],
+      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ashe/skins/skin76/images/ashe_splash_centered_76.skins_ashe_skin76.jpg",
+      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ashe/skins/skin76/images/ashe_splash_uncentered_76.skins_ashe_skin76.jpg",
+      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ashe/skins/skin76/images/ashe_splash_tile_76.skins_ashe_skin76.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ashe/skins/skin76/asheloadscreen_76.skins_ashe_skin76.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ashe/skins/skin76/asheloadscreen_76_le.skins_ashe_skin76.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": true,
+      "newQuotes": false,
+      "voiceActor": [
+        "Melissa Hutchison"
+      ],
+      "splashArtist": []
     }
   ]
 }

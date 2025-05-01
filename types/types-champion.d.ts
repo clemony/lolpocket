@@ -120,5 +120,18 @@ declare global {
     attackspeedperlevel: number
     attackspeed: number
   }
+
+  interface BayesianChampion {
+    games: number
+    wins: number
+    losses: number
+    winrate: number
+    kills: number
+    deaths: number
+    assists: number
+    killParticipation: number
+    matchIndexes: number[]
+    gameVersions: string[]
+  }
 }
 export { }

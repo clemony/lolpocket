@@ -8,7 +8,9 @@
 .border-shadow {
   @apply shadow-[#000]/5 border border-b3/60 rounded-box shadow-warm-2;
 }
-
+.border-shadow-sm {
+  @apply  shadow-md drop-shadow-sm shadow-[#000]/4 border border-b3/60 rounded-box ;
+}
 .hover-ring {
   @apply hover:ring hover:ring-neutral hover:ring-offset-2 hover:ring-offset-b2 transition-all duration-200 cursor-pointer;
 }

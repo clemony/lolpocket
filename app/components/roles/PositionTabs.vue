@@ -7,16 +7,16 @@ const { summoner, class: className } = defineProps<{
 const ms = useMatchStore()
 const ss = useSummonerStore()
 const md = computed(() => ss.getSummoner(summoner.puuid).matches)
-const { filteredSimplifiedNoRole } = useFilteredMatches(md, summoner.puuid)
+const { filteredSimplifiedNoRole } = useFilteredMatches(md, summoner.puuid, ms.mf)
 
 // Use the composable with the filtered matches
 const roleStats = useMatchRoles(filteredSimplifiedNoRole)
 </script>
 
 <template>
-  <Tabs v-model:model-value="ms.roleSelect">
-    <FilterLabel v-model="ms.roleSelect" :active="ms.roleSelect != 'ALL'" @click="ms.roleSelect = 'ALL'">
-      {{ ms.roleSelect != 'ALL' ? roleStats.find(r => r.role == ms.roleSelect).displayName : 'Position' }}
+  <Tabs v-model:model-value="ms.mf.role">
+    <FilterLabel v-model="ms.mf.role" :active="ms.mf.role != 'ALL'" @click="ms.mf.role = 'ALL'">
+      {{ ms.mf.role != 'ALL' ? roleStats.find(r => r.role == ms.mf.role).displayName : 'Position' }}
     </FilterLabel>
 
     <IndicatorTabsList class=" w-full grid grid-cols-6 h-14">

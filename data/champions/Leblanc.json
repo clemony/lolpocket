@@ -4,202 +4,202 @@
   "name": "LeBlanc",
   "title": "the Deceiver",
   "fullName": "Emilia (Evaine) LeBlanc",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Leblanc.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Leblanc.png",
   "resource": "MANA",
   "attackType": "RANGED",
   "adaptiveType": "MAGIC_DAMAGE",
   "stats": {
     "health": {
       "flat": 598,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 111,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 7.5,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.55,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 400,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 25,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 8,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.8,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 22,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4.7,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1.3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 55,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.2,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 340,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 525,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 100,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.658,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.35,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.4,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": -0.133333340287208,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 525,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
       "flat": 0.9,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
       "flat": 1.1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
       "flat": 20,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -230,7 +230,7 @@
             "leveling": []
           },
           {
-            "description": "The clone can basic attack but deals no damage, lasts for 8 seconds, and starts moving 1900 units towards a random place in front of LeBlanc decided the moment it spawns.",
+            "description": "The clone can cast basic attacks with no effect and lasts 8 seconds. Upon spawning, it starts moving up to 1900 units toward a random direction in front of LeBlanc's movement, determined at the moment of its spawning.",
             "leveling": []
           },
           {
@@ -329,7 +329,7 @@
             ]
           },
           {
-            "description": "LeBlanc's next damaging ability against the marked target will consume the mark to deal them the same damage again.",
+            "description": "LeBlanc's next damaging ability against the marked target will consume the mark to deal the same magic damage again.",
             "leveling": [
               {
                 "attribute": "Total Magic Damage",
@@ -371,7 +371,7 @@
             ]
           },
           {
-            "description": "Sigil of Malice's initial mark deals 10 : 146 (based on level) bonus magic damage against minions and refunds 100% of its mana cost and 30% of its remaining cooldown if either the mark or its consumption kills the target.",
+            "description": "Sigil of Malice's orb deals 10 : 146 (based on level) bonus magic damage against minions and refunds 100% of its mana cost and 30% of its remaining cooldown if either the orb or its mark's consumption kills the target.",
             "leveling": []
           }
         ],
@@ -425,8 +425,8 @@
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Sigil of Malice and  Mimic: Sigil of Malice can detonate each other's marks.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
-        "blurb": "Active:  LeBlanc projects an orb at the target enemy that deals magic damage and marks them for a short time.",
+        "notes": "Sigil of Malice and  Mimic: Sigil of Malice can detonate each other's marks.\nThe floating damage text upon the mark's detonation currently displays a real  critical strike icon instead of a success indicator.(bug)\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
+        "blurb": "Active:  LeBlanc projects an orb at the target enemy, dealing magic damage and marking them for a short time.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
@@ -611,7 +611,7 @@
             ]
           },
           {
-            "description": "If the tether is not broken by the end of its duration, the target is dealt magic damage and is rooted for 1.5 seconds, during which they are revealed.",
+            "description": "If the tether is not broken by the end of its duration, it fractures to deal magic damage to the target and root them for 1.5 seconds, during which they are revealed.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -766,10 +766,10 @@
             "leveling": []
           },
           {
-            "description": "Mimic: Sigil of Malice: Deals modified damage and double damage upon triggering the mark.",
+            "description": "Mimic: Sigil of Malice: The orb deals modified damage, while the mark consumption deals double that amount.",
             "leveling": [
               {
-                "attribute": "Magic Damage",
+                "attribute": "Orb Magic Damage",
                 "modifiers": [
                   {
                     "values": [
@@ -798,7 +798,7 @@
                 ]
               },
               {
-                "attribute": "Enhanced Damage",
+                "attribute": "Mark Magic Damage",
                 "modifiers": [
                   {
                     "values": [
@@ -892,10 +892,10 @@
             ]
           },
           {
-            "description": "Mimic: Ethereal Chains: Deals modified damage and double damage after the tether lasts its full duration.",
+            "description": "Mimic: Ethereal Chains: The tether's application deals modified damage, while its fracturing deals double that amount.",
             "leveling": [
               {
-                "attribute": "Magic Damage",
+                "attribute": "Application Magic Damage",
                 "modifiers": [
                   {
                     "values": [
@@ -924,7 +924,7 @@
                 ]
               },
               {
-                "attribute": "Enhanced Damage",
+                "attribute": "Fracture Magic Damage",
                 "modifiers": [
                   {
                     "values": [
@@ -1030,9 +1030,9 @@
   },
   "releaseDate": "2010-11-02",
   "releasePatch": "1.0.0.104",
-  "patchLastChanged": "25.04",
+  "patchLastChanged": "25.07",
   "price": {
-    "blueEssence": 3150,
+    "blueEssence": 1575,
     "rp": 790,
     "saleRp": 0
   },
@@ -1054,10 +1054,10 @@
       "lore": "Mysterious even to other members of the Black Rose cabal, LeBlanc is but one of many names for a pale woman who has manipulated people and events since the earliest days of Noxus. Using her magic to mirror herself, the sorceress can appear to anyone, anywhere, and even be in many places at once. Always plotting just out of sight, LeBlanc’s true motives are as inscrutable as her shifting identity.",
       "release": "2010-11-02",
       "set": [],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/base/images/leblanc_splash_centered_0.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/base/images/leblanc_splash_uncentered_0.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/base/images/leblanc_splash_tile_0.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/base/leblancloadscreen.jpg",
+      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/base/images/leblanc_splash_centered_0.leblanc_rework.jpg",
+      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/base/images/leblanc_splash_uncentered_0.leblanc_rework.jpg",
+      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/base/images/leblanc_splash_tile_0.leblanc_rework.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/base/leblancloadscreen_0.leblanc_rework.jpg",
       "loadScreenVintagePath": null,
       "newEffects": false,
       "newAnimations": false,
@@ -1065,7 +1065,7 @@
       "newVoice": false,
       "newQuotes": false,
       "voiceActor": [
-        "Carrie Keranen"
+        "Naomi McDonald"
       ],
       "splashArtist": []
     },
@@ -1076,7 +1076,7 @@
       "availability": "Available",
       "formatName": "Prestigious",
       "lootEligible": true,
-      "cost": 520,
+      "cost": 750,
       "sale": 0,
       "distribution": null,
       "rarity": "NoRarity",
@@ -1233,10 +1233,10 @@
       "set": [
         "Day Job"
       ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin02/images/leblanc_splash_centered_2.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin02/images/leblanc_splash_uncentered_2.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin02/images/leblanc_splash_tile_2.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin02/leblancloadscreen_2.jpg",
+      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin02/images/leblanc_splash_centered_2.leblanc_rework.jpg",
+      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin02/images/leblanc_splash_uncentered_2.leblanc_rework.jpg",
+      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin02/images/leblanc_splash_tile_2.leblanc_rework.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin02/leblancloadscreen_2.leblanc_rework.jpg",
       "loadScreenVintagePath": null,
       "newEffects": false,
       "newAnimations": false,
@@ -1244,7 +1244,7 @@
       "newVoice": false,
       "newQuotes": false,
       "voiceActor": [
-        "Carrie Keranen"
+        "Naomi McDonald"
       ],
       "splashArtist": []
     },
@@ -1265,10 +1265,10 @@
       "set": [
         "Legacy"
       ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin01/images/leblanc_splash_centered_1.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin01/images/leblanc_splash_uncentered_1.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin01/images/leblanc_splash_tile_1.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin01/leblancloadscreen_1.jpg",
+      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin01/images/leblanc_splash_centered_1.leblanc_rework.jpg",
+      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin01/images/leblanc_splash_uncentered_1.leblanc_rework.jpg",
+      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin01/images/leblanc_splash_tile_1.leblanc_rework.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin01/leblancloadscreen_1.leblanc_rework.jpg",
       "loadScreenVintagePath": null,
       "newEffects": false,
       "newAnimations": false,
@@ -1278,7 +1278,10 @@
       "voiceActor": [
         "Carrie Keranen"
       ],
-      "splashArtist": []
+      "splashArtist": [
+        "Lejia Chan",
+        "Kudos Productions"
+      ]
     },
     {
       "name": "Mistletoe",
@@ -1297,10 +1300,10 @@
       "set": [
         "Snowdown Showdown"
       ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin03/images/leblanc_splash_centered_3.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin03/images/leblanc_splash_uncentered_3.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin03/images/leblanc_splash_tile_3.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin03/leblancloadscreen_3.jpg",
+      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin03/images/leblanc_splash_centered_3.leblanc_rework.jpg",
+      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin03/images/leblanc_splash_uncentered_3.leblanc_rework.jpg",
+      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin03/images/leblanc_splash_tile_3.leblanc_rework.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin03/leblancloadscreen_3.leblanc_rework.jpg",
       "loadScreenVintagePath": null,
       "newEffects": false,
       "newAnimations": false,
@@ -1308,7 +1311,7 @@
       "newVoice": false,
       "newQuotes": false,
       "voiceActor": [
-        "Carrie Keranen"
+        "Naomi McDonald"
       ],
       "splashArtist": []
     },
@@ -1319,7 +1322,7 @@
       "availability": "Legacy",
       "formatName": "Ravenborn",
       "lootEligible": true,
-      "cost": 975,
+      "cost": 1350,
       "sale": 0,
       "distribution": null,
       "rarity": "NoRarity",
@@ -1329,10 +1332,10 @@
       "set": [
         "Trick-or-Treat"
       ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin04/images/leblanc_splash_centered_4.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin04/images/leblanc_splash_uncentered_4.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin04/images/leblanc_splash_tile_4.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin04/leblancloadscreen_4.jpg",
+      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin04/images/leblanc_splash_centered_4.leblanc_rework.jpg",
+      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin04/images/leblanc_splash_uncentered_4.leblanc_rework.jpg",
+      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin04/images/leblanc_splash_tile_4.leblanc_rework.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin04/leblancloadscreen_4.leblanc_rework.jpg",
       "loadScreenVintagePath": null,
       "newEffects": true,
       "newAnimations": true,
@@ -1340,7 +1343,7 @@
       "newVoice": false,
       "newQuotes": false,
       "voiceActor": [
-        "Carrie Keranen"
+        "Naomi McDonald"
       ],
       "splashArtist": [
         "Sperasoft Studio"
@@ -1363,10 +1366,10 @@
       "set": [
         "Elderwood"
       ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin05/images/leblanc_splash_centered_5.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin05/images/leblanc_splash_uncentered_5.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin05/images/leblanc_splash_tile_5.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin05/leblancloadscreen_5.jpg",
+      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin05/images/leblanc_splash_centered_5.leblanc_rework.jpg",
+      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin05/images/leblanc_splash_uncentered_5.leblanc_rework.jpg",
+      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin05/images/leblanc_splash_tile_5.leblanc_rework.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin05/leblancloadscreen_5.leblanc_rework.jpg",
       "loadScreenVintagePath": null,
       "newEffects": true,
       "newAnimations": true,
@@ -1374,7 +1377,7 @@
       "newVoice": false,
       "newQuotes": false,
       "voiceActor": [
-        "Carrie Keranen"
+        "Naomi McDonald"
       ],
       "splashArtist": [
         "Kelly Aleshire"
@@ -1524,10 +1527,10 @@
       "set": [
         "Program"
       ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin12/images/leblanc_splash_centered_12.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin12/images/leblanc_splash_uncentered_12.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin12/images/leblanc_splash_tile_12.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin12/leblancloadscreen_12.jpg",
+      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin12/images/leblanc_splash_centered_12.leblanc_rework.jpg",
+      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin12/images/leblanc_splash_uncentered_12.leblanc_rework.jpg",
+      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin12/images/leblanc_splash_tile_12.leblanc_rework.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin12/leblancloadscreen_12.leblanc_rework.jpg",
       "loadScreenVintagePath": null,
       "newEffects": true,
       "newAnimations": true,
@@ -1535,7 +1538,7 @@
       "newVoice": false,
       "newQuotes": false,
       "voiceActor": [
-        "Carrie Keranen"
+        "Naomi McDonald"
       ],
       "splashArtist": [
         "Choe HeonHwa"
@@ -1580,18 +1583,18 @@
       "set": [
         "World Champions: 2018"
       ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin19/images/leblanc_splash_centered_19.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin19/images/leblanc_splash_uncentered_19.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin19/images/leblanc_splash_tile_19.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin19/leblancloadscreen_19.jpg",
-      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin19/leblancloadscreen_19_le.jpg",
+      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin19/images/leblanc_splash_centered_19.leblanc_rework.jpg",
+      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin19/images/leblanc_splash_uncentered_19.leblanc_rework.jpg",
+      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin19/images/leblanc_splash_tile_19.leblanc_rework.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin19/leblancloadscreen_19.leblanc_rework.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin19/leblancloadscreen_19_le.leblanc_rework.jpg",
       "newEffects": true,
       "newAnimations": true,
       "newRecall": true,
       "newVoice": false,
       "newQuotes": false,
       "voiceActor": [
-        "Carrie Keranen"
+        "Naomi McDonald"
       ],
       "splashArtist": [
         "Pan Chengwei"
@@ -1804,18 +1807,18 @@
       "set": [
         "Coven"
       ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin20/images/leblanc_splash_centered_20.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin20/images/leblanc_splash_uncentered_20.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin20/images/leblanc_splash_tile_20.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin20/leblancloadscreen_20.jpg",
-      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin20/leblancloadscreen_20_le.jpg",
+      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin20/images/leblanc_splash_centered_20.leblanc_rework.jpg",
+      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin20/images/leblanc_splash_uncentered_20.leblanc_rework.jpg",
+      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin20/images/leblanc_splash_tile_20.leblanc_rework.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin20/leblancloadscreen_20.leblanc_rework.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin20/leblancloadscreen_20_le.leblanc_rework.jpg",
       "newEffects": true,
       "newAnimations": true,
       "newRecall": true,
       "newVoice": false,
       "newQuotes": false,
       "voiceActor": [
-        "Carrie Keranen"
+        "Naomi McDonald"
       ],
       "splashArtist": [
         "Sangsoo Jeong"
@@ -1910,18 +1913,18 @@
       "set": [
         "World Championship"
       ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin29/images/leblanc_splash_centered_29.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin29/images/leblanc_splash_uncentered_29.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin29/images/leblanc_splash_tile_29.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin29/leblancloadscreen_29.jpg",
-      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin29/leblancloadscreen_29_le.jpg",
+      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin29/images/leblanc_splash_centered_29.leblanc_rework.jpg",
+      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin29/images/leblanc_splash_uncentered_29.leblanc_rework.jpg",
+      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin29/images/leblanc_splash_tile_29.leblanc_rework.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin29/leblancloadscreen_29.leblanc_rework.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin29/leblancloadscreen_29_le.leblanc_rework.jpg",
       "newEffects": true,
       "newAnimations": true,
       "newRecall": true,
       "newVoice": false,
       "newQuotes": false,
       "voiceActor": [
-        "Carrie Keranen"
+        "Naomi McDonald"
       ],
       "splashArtist": [
         "Francis Tneh",
@@ -1945,18 +1948,18 @@
       "set": [
         "Coven"
       ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin33/images/leblanc_splash_centered_33.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin33/images/leblanc_splash_uncentered_33.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin33/images/leblanc_splash_tile_33.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin33/leblancloadscreen_33.jpg",
-      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin33/leblancloadscreen_33_le.jpg",
+      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin33/images/leblanc_splash_centered_33.leblanc_rework.jpg",
+      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin33/images/leblanc_splash_uncentered_33.leblanc_rework.jpg",
+      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin33/images/leblanc_splash_tile_33.leblanc_rework.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin33/leblancloadscreen_33.leblanc_rework.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin33/leblancloadscreen_33_le.leblanc_rework.jpg",
       "newEffects": true,
       "newAnimations": true,
       "newRecall": true,
       "newVoice": false,
       "newQuotes": false,
       "voiceActor": [
-        "Carrie Keranen"
+        "Naomi McDonald"
       ],
       "splashArtist": [
         "West Studio"
@@ -2169,18 +2172,18 @@
       "set": [
         "Debonair"
       ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin35/images/leblanc_splash_centered_35.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin35/images/leblanc_splash_uncentered_35.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin35/images/leblanc_splash_tile_35.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin35/leblancloadscreen_35.jpg",
-      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin35/leblancloadscreen_35_le.jpg",
+      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin35/images/leblanc_splash_centered_35.leblanc_rework.jpg",
+      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin35/images/leblanc_splash_uncentered_35.leblanc_rework.jpg",
+      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin35/images/leblanc_splash_tile_35.leblanc_rework.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin35/leblancloadscreen_35.leblanc_rework.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin35/leblancloadscreen_35_le.leblanc_rework.jpg",
       "newEffects": true,
       "newAnimations": true,
       "newRecall": true,
       "newVoice": false,
       "newQuotes": false,
       "voiceActor": [
-        "Carrie Keranen"
+        "Naomi McDonald"
       ],
       "splashArtist": [
         "Jennifer Wuestling"
@@ -2372,18 +2375,18 @@
       "set": [
         "Bewitching"
       ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin45/images/leblanc_splash_centered_45.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin45/images/leblanc_splash_uncentered_45.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin45/images/leblanc_splash_tile_45.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin45/leblancloadscreen_45.jpg",
-      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin45/leblancloadscreen_45_le.jpg",
+      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin45/images/leblanc_splash_centered_45.leblanc_rework.jpg",
+      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin45/images/leblanc_splash_uncentered_45.leblanc_rework.jpg",
+      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin45/images/leblanc_splash_tile_45.leblanc_rework.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin45/leblancloadscreen_45.leblanc_rework.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin45/leblancloadscreen_45_le.leblanc_rework.jpg",
       "newEffects": true,
       "newAnimations": true,
       "newRecall": true,
       "newVoice": false,
       "newQuotes": false,
       "voiceActor": [
-        "Carrie Keranen"
+        "Naomi McDonald"
       ],
       "splashArtist": [
         "Exia Xiaotong",
@@ -2450,10 +2453,10 @@
       "set": [
         "Risen Legends"
       ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin55/images/leblanc_splash_centered_55.skins_leblanc_skin55.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin55/images/leblanc_splash_uncentered_55.skins_leblanc_skin55.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin55/images/leblanc_splash_tile_55.skins_leblanc_skin55.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin55/leblancloadscreen_55.skins_leblanc_skin55.jpg",
+      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin55/images/leblanc_splash_centered_55.leblanc_rework.jpg",
+      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin55/images/leblanc_splash_uncentered_55.leblanc_rework.jpg",
+      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin55/images/leblanc_splash_tile_55.leblanc_rework.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin55/leblancloadscreen_55.leblanc_rework.jpg",
       "loadScreenVintagePath": null,
       "newEffects": true,
       "newAnimations": true,
@@ -2461,7 +2464,7 @@
       "newVoice": false,
       "newQuotes": false,
       "voiceActor": [
-        "Carrie Keranen"
+        "Naomi McDonald"
       ],
       "splashArtist": [
         "Bo 'chenbowow' Chen"

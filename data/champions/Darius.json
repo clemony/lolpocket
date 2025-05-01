@@ -4,202 +4,202 @@
   "name": "Darius",
   "title": "the Hand of Noxus",
   "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Darius.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Darius.png",
   "resource": "MANA",
   "attackType": "MELEE",
   "adaptiveType": "PHYSICAL_DAMAGE",
   "stats": {
     "health": {
       "flat": 652,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 114,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 10,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.95,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 263,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 58,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 6.6,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.35,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
-      "flat": 39,
-      "percent": 0,
+      "flat": 37,
+      "percent": 0.0,
       "perLevel": 5.2,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.05,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 64,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 5,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 340,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 400,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 120,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 25.7665996551513,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.625,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.625,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": -0.100000001490116,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 175,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
       "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
       "flat": 1.05,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
       "flat": 0.85,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
       "flat": 1.05,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -230,7 +230,7 @@
             "leveling": []
           },
           {
-            "description": "Hemorrhage: For each stack, the target is dealt[ 13 : 30 (based on level) (+ 30% bonus AD) total physical damage over the duration, ][ 3.25 : 7.5 (based on level) (+ 7.5% bonus AD) physical damage every 1.25 seconds over the duration, ]up to a maximum of[ 65 : 150 (based on level) (+ 150% bonus AD) total physical damage over the duration. ][ 16.25 : 37.5 (based on level) (+ 37.5% bonus AD) physical damage with each tick. ]Hemorrhage deals 300% damage against monsters.",
+            "description": "Hemorrhage: For each stack, the target is dealt[ 13 : 30 (based on level) (+ 30% bonus AD) total physical damage over the duration, ][ 3.25 : 7.5 (based on level) (+ 7.5% bonus AD) physical damage every 1.25 seconds over the duration, ]up to a maximum of[ 65 : 150 (based on level) (+ 150% bonus AD) total physical damage over the duration. ][ 16.25 : 37.5 (based on level) (+ 37.5% bonus AD) physical damage with each tick. ]Hemorrhage deals 200% damage against monsters.",
             "leveling": []
           },
           {
@@ -275,10 +275,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Darius/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Darius hefts his axe for 0.75 seconds, and then swings it around himself, dealing physical damage to nearby enemies, reduced to 35% against enemies hit by the inner radius.",
+            "description": "Active: Darius becomes ghosted for 1 second and hefts his axe for 0.75 seconds, afterward swinging it around himself to deal physical damage to nearby enemies. Enemies within the inner radius take 35% damage.",
             "leveling": [
               {
-                "attribute": "Physical Damage",
+                "attribute": "Physical Damage (Blade)",
                 "modifiers": [
                   {
                     "values": [
@@ -315,7 +315,7 @@
                 ]
               },
               {
-                "attribute": "Reduced Damage",
+                "attribute": "Reduced Damage (Handle)",
                 "modifiers": [
                   {
                     "values": [
@@ -413,7 +413,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "Decimate will cancel if Darius enters  stasis or uses  Dash during the delay.\nAfter the delay, Decimate will be placed on a 1-second cooldown.",
-        "blurb": "Active:  Darius briefly winds up to spin his axe in a circle, dealing physical damage to enemies hit.",
+        "blurb": "Active:  Darius briefly winds up to spin his axe in a circle while  ghosted, dealing physical damage to enemies hit.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
@@ -518,7 +518,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Crippling Strike deals  basic damage but also triggers spell effects by also being tagged as  spell damage.\n Spell shield will not block the damage.\nThe attack's animation can be cancelled by casting  Decimate, but the attack will still land.\nCrippling Strike will trigger  Manaflow Band,  Tear of the Goddess' Mana Charge and spell effects.\nDespite its name, Crippling Strike does not  cripple anymore.",
+        "notes": "Crippling Strike deals  basic damage but also triggers spell effects by also being tagged as  spell damage.\nThis includes the basic attack itself.\n Spell shield will not block the damage.\nThe attack's animation can be cancelled by casting  Decimate, but the attack will still land.\nCrippling Strike will trigger  Manaflow Band,  Tear of the Goddess' Mana Charge and spell effects.\nDespite its name, Crippling Strike does not  cripple anymore.",
         "blurb": "Active:  Darius' next basic attack within a few seconds deals increased physical damage and  slows the target.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -598,11 +598,11 @@
           "modifiers": [
             {
               "values": [
-                24,
-                21.5,
-                19,
-                16.5,
-                14
+                26,
+                23.5,
+                21,
+                18.5,
+                16
               ],
               "units": [
                 "",
@@ -624,7 +624,7 @@
         "projectile": "FALSE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Enemies hit by Apprehend will quickly be dragged to Darius before rebounding over a longer period.\nThe  slow duration starts as soon as the target rebounds off of Darius.\nPENDING FOR TEST:: The rebound location is determined when the target reaches Darius' location.\nThe rebound's forced movement's duration is roughly 0.5 seconds, finishing before the  airborne duration ends.\nPENDING FOR TEST:: There is no  stun applied for the same duration of the  airborne, meaning  brittle cannot extend the disable duration. It will not increase the  slow duration in most situations because of the negative tenacity falling off before the slow is applied.\nAfter the pull, Darius will attempt to basic attack the closest pulled target, prioritizing enemy champions.\nThe armor penetration  stacks multiplicatively with other forms of percentage armor penetration.\nThis ability will cast from wherever the caster is at the end of the cast time.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+        "notes": "Enemies hit by Apprehend will quickly be dragged to Darius before rebounding over a longer period.\nThe  slow duration starts as soon as the target rebounds off of Darius.\nPENDING FOR TEST:: The rebound location is determined when the target reaches Darius' location.\nThe rebound's forced movement's duration is roughly 0.5 seconds, finishing before the  airborne duration ends.\nPENDING FOR TEST:: There is no  stun applied for the same duration of the  airborne, meaning  brittle cannot extend the disable duration. It will not increase the  slow duration in most situations because of the negative tenacity falling off before the slow is applied.\nEnemies hit by Apprehend do not lose their  airborne status when colliding with terrain.\nAfter the pull, Darius will attempt to basic attack the closest pulled target, prioritizing enemy champions.\nThe armor penetration  stacks multiplicatively with other forms of percentage armor penetration.\nThis ability will cast from wherever the caster is at the end of the cast time.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
         "blurb": null,
         "missileSpeed": null,
         "rechargeRate": null,
@@ -811,9 +811,9 @@
   },
   "releaseDate": "2012-05-23",
   "releasePatch": "1.0.0.140",
-  "patchLastChanged": "14.9",
+  "patchLastChanged": "25.07",
   "price": {
-    "blueEssence": 450,
+    "blueEssence": 225,
     "rp": 260,
     "saleRp": 0
   },
@@ -2382,7 +2382,7 @@
       "name": "Prestige Triumphant General",
       "id": 122065,
       "isBase": false,
-      "availability": "Upcoming",
+      "availability": "Rare",
       "formatName": "Prestige Triumphant General",
       "lootEligible": true,
       "cost": "Special",
@@ -2413,7 +2413,7 @@
         }
       ],
       "lore": "Only when the smoke has cooled to ash and the blood on his axe has dried does Darius know that victory is secured. It is time to return home. Pomp and circumstance are hardly what Darius fights for—he finds them tedious—but every face in that crowd is a kinsman. He fights for his nation, and these people? These people are Noxus.",
-      "release": "0000-00-00",
+      "release": "2025-03-05",
       "set": [
         "Grand Reckoning"
       ],

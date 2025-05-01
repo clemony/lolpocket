@@ -4,205 +4,206 @@
   "name": "Gwen",
   "title": "The Hallowed Seamstress",
   "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Gwen.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Gwen.png",
   "resource": "MANA",
   "attackType": "MELEE",
   "adaptiveType": "MAGIC_DAMAGE",
   "stats": {
     "health": {
       "flat": 620,
-      "percent": 0,
-      "perLevel": 115,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 110,
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 9,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.9,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 330,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 40,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 7.5,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.7,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
-      "flat": 39,
-      "percent": 0,
-      "perLevel": 5.2,
-      "percentPerLevel": 0
+      "flat": 36,
+      "percent": 0.0,
+      "perLevel": 4.9,
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.05,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 63,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 3,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 340,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 600,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 100,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.69,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.25,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.69,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.300000012,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.52499998,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": 0,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 150,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
-      "flat": 1.05,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.02,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
+    "JUNGLE",
     "TOP"
   ],
   "roles": [
@@ -222,15 +223,15 @@
   "abilities": {
     "P": [
       {
-        "name": "Thousand Cuts",
+        "name": "A Thousand Cuts",
         "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Gwen's basic attacks on-hit, the center of Snip Snip!, and Needlework deal bonus magic damage equal to 1% (+ 0.6% per 100 AP) of the target's maximum health.",
+            "description": "Innate: Gwen's basic attacks on-hit, the center of Snip Snip!, and Needlework deal bonus magic damage equal to 1% (+ 0.55% per 100 AP) of the target's maximum health.",
             "leveling": []
           },
           {
-            "description": "Thousand Cuts is modified based on the target:\n Heals Gwen for 50% of post-mitigation damage dealt against champions, capped at 10 : 25 (based on level) (+ 6.5% AP) per instance.\nDeals an additional 8 : 30 (based on level) bonus magic damage against minions that are below 40% health.\nDeals a maximum of 10 (+ 15% AP) magic damage against monsters.",
+            "description": "A Thousand Cuts is modified based on the target:\n Heals Gwen for 50% of post-mitigation damage dealt against champions, capped at 10 : 25 (based on level) (+ 6.5% AP) per instance.\nDeals an additional 8 : 30 (based on level) bonus magic damage against minions that are below 40% health.\nDeals a maximum of 5 (+ 10% AP) magic damage against monsters.",
             "leveling": []
           }
         ],
@@ -271,7 +272,7 @@
             "leveling": []
           },
           {
-            "description": "Active: Gwen snips at least twice with her scissors in a cone in the target direction over the cast time, dealing magic damage per snip to all enemies within the area, with the final snip dealing increased damage. The center of each snip converts 50% of the damage to true damage, then applies Thousand Cuts. Snip Snip! deals 75% damage against minions, and executes them on the first damage instance if they are below 20% health.",
+            "description": "Active: Gwen snips at least twice with her scissors in a cone in the target direction over the cast time, dealing magic damage per snip to all enemies within the area, with the final snip dealing increased damage. The center of each snip converts 50% of the damage to true damage, then applies A Thousand Cuts. Snip Snip! deals 75% damage against minions, and executes them on the first damage instance if they are below 20% health.",
             "leveling": [
               {
                 "attribute": "Damage per Snip",
@@ -294,11 +295,11 @@
                   },
                   {
                     "values": [
-                      5,
-                      5,
-                      5,
-                      5,
-                      5
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
                     ],
                     "units": [
                       "% AP",
@@ -331,11 +332,11 @@
                   },
                   {
                     "values": [
-                      5,
-                      5,
-                      5,
-                      5,
-                      5
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
                     ],
                     "units": [
                       "% AP",
@@ -354,11 +355,11 @@
                       1
                     ],
                     "units": [
-                      "% (+ 0.6% per 100 AP) of the target's maximum health",
-                      "% (+ 0.6% per 100 AP) of the target's maximum health",
-                      "% (+ 0.6% per 100 AP) of the target's maximum health",
-                      "% (+ 0.6% per 100 AP) of the target's maximum health",
-                      "% (+ 0.6% per 100 AP) of the target's maximum health"
+                      "% (+ 0.55% per 100 AP) of the target's maximum health",
+                      "% (+ 0.55% per 100 AP) of the target's maximum health",
+                      "% (+ 0.55% per 100 AP) of the target's maximum health",
+                      "% (+ 0.55% per 100 AP) of the target's maximum health",
+                      "% (+ 0.55% per 100 AP) of the target's maximum health"
                     ]
                   }
                 ]
@@ -444,11 +445,11 @@
                       1
                     ],
                     "units": [
-                      "% (+ 0.6% per 100 AP) of the target's maximum health",
-                      "% (+ 0.6% per 100 AP) of the target's maximum health",
-                      "% (+ 0.6% per 100 AP) of the target's maximum health",
-                      "% (+ 0.6% per 100 AP) of the target's maximum health",
-                      "% (+ 0.6% per 100 AP) of the target's maximum health"
+                      "% (+ 0.55% per 100 AP) of the target's maximum health",
+                      "% (+ 0.55% per 100 AP) of the target's maximum health",
+                      "% (+ 0.55% per 100 AP) of the target's maximum health",
+                      "% (+ 0.55% per 100 AP) of the target's maximum health",
+                      "% (+ 0.55% per 100 AP) of the target's maximum health"
                     ]
                   }
                 ]
@@ -479,11 +480,11 @@
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
-                      40
+                      37,
+                      37,
+                      37,
+                      37,
+                      37
                     ],
                     "units": [
                       "% AP",
@@ -516,11 +517,11 @@
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
-                      40
+                      37,
+                      37,
+                      37,
+                      37,
+                      37
                     ],
                     "units": [
                       "% AP",
@@ -539,11 +540,11 @@
                       2
                     ],
                     "units": [
-                      "% (+ 1.2% per 100 AP) of the target's maximum health",
-                      "% (+ 1.2% per 100 AP) of the target's maximum health",
-                      "% (+ 1.2% per 100 AP) of the target's maximum health",
-                      "% (+ 1.2% per 100 AP) of the target's maximum health",
-                      "% (+ 1.2% per 100 AP) of the target's maximum health"
+                      "% (+ 1.1% per 100 AP) of the target's maximum health",
+                      "% (+ 1.1% per 100 AP) of the target's maximum health",
+                      "% (+ 1.1% per 100 AP) of the target's maximum health",
+                      "% (+ 1.1% per 100 AP) of the target's maximum health",
+                      "% (+ 1.1% per 100 AP) of the target's maximum health"
                     ]
                   }
                 ]
@@ -569,11 +570,11 @@
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
-                      60
+                      45,
+                      45,
+                      45,
+                      45,
+                      45
                     ],
                     "units": [
                       "% AP",
@@ -606,11 +607,11 @@
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
-                      60
+                      45,
+                      45,
+                      45,
+                      45,
+                      45
                     ],
                     "units": [
                       "% AP",
@@ -629,11 +630,11 @@
                       6
                     ],
                     "units": [
-                      "% (+ 3.6% per 100 AP) of the target's maximum health",
-                      "% (+ 3.6% per 100 AP) of the target's maximum health",
-                      "% (+ 3.6% per 100 AP) of the target's maximum health",
-                      "% (+ 3.6% per 100 AP) of the target's maximum health",
-                      "% (+ 3.6% per 100 AP) of the target's maximum health"
+                      "% (+ 3.3% per 100 AP) of the target's maximum health",
+                      "% (+ 3.3% per 100 AP) of the target's maximum health",
+                      "% (+ 3.3% per 100 AP) of the target's maximum health",
+                      "% (+ 3.3% per 100 AP) of the target's maximum health",
+                      "% (+ 3.3% per 100 AP) of the target's maximum health"
                     ]
                   }
                 ]
@@ -717,46 +718,8 @@
             "leveling": []
           },
           {
-            "description": "While inside the mist, Gwen gains bonus armor and bonus magic resistance and is untargetable to all enemies (except turrets and monsters) outside of the mist.",
-            "leveling": [
-              {
-                "attribute": "Bonus Resistances",
-                "modifiers": [
-                  {
-                    "values": [
-                      22,
-                      24,
-                      26,
-                      28,
-                      30
-                    ],
-                    "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      ""
-                    ]
-                  },
-                  {
-                    "values": [
-                      7,
-                      7,
-                      7,
-                      7,
-                      7
-                    ],
-                    "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP"
-                    ]
-                  }
-                ]
-              }
-            ]
+            "description": "While inside the mist, Gwen becomes ghosted, gains 22 (+ 7% AP) bonus armor and bonus magic resistance and is untargetable to all enemies (except turrets and monsters) outside of the mist.",
+            "leveling": []
           },
           {
             "description": "Recast: Gwen commands the mist to move to her current location.",
@@ -839,8 +802,45 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Gwen dashes to the target location, then empowers her basic attacks within the next 4 seconds to deal 15 (+ 20% AP) bonus magic damage on-hit and gain bonus attack speed and 75 bonus attack range.",
+            "description": "Active: Gwen dashes to the target location, then empowers her basic attacks within the next 4 seconds to deal bonus magic damage on-hit and gain bonus attack speed and 75 bonus attack range.",
             "leveling": [
+              {
+                "attribute": "Bonus Magic Damage On-Hit",
+                "modifiers": [
+                  {
+                    "values": [
+                      8,
+                      11,
+                      14,
+                      17,
+                      20
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      25,
+                      25,
+                      25,
+                      25,
+                      25
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
               {
                 "attribute": "Bonus Attack Speed",
                 "modifiers": [
@@ -865,30 +865,8 @@
             ]
           },
           {
-            "description": "Gwen's first basic attack within the duration refunds a portion of Skip 'n Slash's cooldown.",
-            "leveling": [
-              {
-                "attribute": "Cooldown Refund",
-                "modifiers": [
-                  {
-                    "values": [
-                      25,
-                      35,
-                      45,
-                      55,
-                      65
-                    ],
-                    "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
-                      "%"
-                    ]
-                  }
-                ]
-              }
-            ]
+            "description": "Gwen's first basic attack within the duration reduces Skip 'n Slash's cooldown by 50%.",
+            "leveling": []
           },
           {
             "description": "Skip 'n Slash resets Gwen's basic attack timer, and can be cast during any of her abilities, and vice versa. Skip 'n Slash will cast at max range if cast beyond that.",
@@ -919,11 +897,11 @@
           "modifiers": [
             {
               "values": [
-                13,
-                12.5,
                 12,
-                11.5,
-                11
+                11,
+                10,
+                9,
+                8
               ],
               "units": [
                 "",
@@ -967,16 +945,16 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Gwen launches a needle in the target direction that deals magic damage to enemies hit and slows them for 1.5 seconds.",
+            "description": "Active: Gwen launches a needle in the target direction that deals magic damage to enemies hit and slows them by 60% them for 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage per Needle",
                 "modifiers": [
                   {
                     "values": [
-                      35,
-                      65,
-                      95
+                      30,
+                      60,
+                      90
                     ],
                     "units": [
                       "",
@@ -986,9 +964,9 @@
                   },
                   {
                     "values": [
-                      10,
-                      10,
-                      10
+                      8,
+                      8,
+                      8
                     ],
                     "units": [
                       "% AP",
@@ -999,13 +977,13 @@
                 ]
               },
               {
-                "attribute": "Damage with Thousand Cuts",
+                "attribute": "Damage with A Thousand Cuts",
                 "modifiers": [
                   {
                     "values": [
-                      35,
-                      65,
-                      95
+                      30,
+                      60,
+                      90
                     ],
                     "units": [
                       "",
@@ -1015,9 +993,9 @@
                   },
                   {
                     "values": [
-                      10,
-                      10,
-                      10
+                      8,
+                      8,
+                      8
                     ],
                     "units": [
                       "% AP",
@@ -1032,26 +1010,9 @@
                       1
                     ],
                     "units": [
-                      "% (+ 0.6% per 100 AP) of the target's maximum health",
-                      "% (+ 0.6% per 100 AP) of the target's maximum health",
-                      "% (+ 0.6% per 100 AP) of the target's maximum health"
-                    ]
-                  }
-                ]
-              },
-              {
-                "attribute": "Slow",
-                "modifiers": [
-                  {
-                    "values": [
-                      40,
-                      50,
-                      60
-                    ],
-                    "units": [
-                      "%",
-                      "%",
-                      "%"
+                      "% (+ 0.55% per 100 AP) of the target's maximum health",
+                      "% (+ 0.55% per 100 AP) of the target's maximum health",
+                      "% (+ 0.55% per 100 AP) of the target's maximum health"
                     ]
                   }
                 ]
@@ -1059,26 +1020,8 @@
             ]
           },
           {
-            "description": "Needlework can be recast twice more within 6 seconds of the activation at no additional cost, with a 1-second static cooldown between casts. Each subsequent cast refreshes the duration and increases the number of needles launched by 2. Needle hits beyond the first slow by a reduced amount against each individual target.",
-            "leveling": [
-              {
-                "attribute": "Reduced Slow",
-                "modifiers": [
-                  {
-                    "values": [
-                      15,
-                      20,
-                      25
-                    ],
-                    "units": [
-                      "%",
-                      "%",
-                      "%"
-                    ]
-                  }
-                ]
-              }
-            ]
+            "description": "Needlework can be recast twice more within 6 seconds of the activation at no additional cost, with a 1-second static cooldown between casts. Each subsequent cast refreshes the duration and increases the number of needles launched by 2. Needle hits beyond the first apply a slow of 25% against each individual target.",
+            "leveling": []
           },
           {
             "description": "Recast: Gwen mimics the first cast's effects, while barraging three needles on the second cast and five on the third cast.",
@@ -1088,9 +1031,9 @@
                 "modifiers": [
                   {
                     "values": [
-                      105,
-                      195,
-                      285
+                      90,
+                      180,
+                      270
                     ],
                     "units": [
                       "",
@@ -1100,9 +1043,9 @@
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30
+                      24,
+                      24,
+                      24
                     ],
                     "units": [
                       "% AP",
@@ -1117,9 +1060,9 @@
                       3
                     ],
                     "units": [
-                      "% (+ 1.8% per 100 AP) of the target's maximum health",
-                      "% (+ 1.8% per 100 AP) of the target's maximum health",
-                      "% (+ 1.8% per 100 AP) of the target's maximum health"
+                      "% (+ 1.65% per 100 AP) of the target's maximum health",
+                      "% (+ 1.65% per 100 AP) of the target's maximum health",
+                      "% (+ 1.65% per 100 AP) of the target's maximum health"
                     ]
                   }
                 ]
@@ -1129,9 +1072,9 @@
                 "modifiers": [
                   {
                     "values": [
-                      175,
-                      325,
-                      475
+                      150,
+                      300,
+                      450
                     ],
                     "units": [
                       "",
@@ -1141,9 +1084,9 @@
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50
+                      40,
+                      40,
+                      40
                     ],
                     "units": [
                       "% AP",
@@ -1170,9 +1113,9 @@
                 "modifiers": [
                   {
                     "values": [
-                      315,
-                      585,
-                      855
+                      270,
+                      540,
+                      810
                     ],
                     "units": [
                       "",
@@ -1182,9 +1125,9 @@
                   },
                   {
                     "values": [
-                      90,
-                      90,
-                      90
+                      72,
+                      72,
+                      72
                     ],
                     "units": [
                       "% AP",
@@ -1199,9 +1142,9 @@
                       9
                     ],
                     "units": [
-                      "% (+ 5.4% per 100 AP) of the target's maximum health",
-                      "% (+ 5.4% per 100 AP) of the target's maximum health",
-                      "% (+ 5.4% per 100 AP) of the target's maximum health"
+                      "% (+ 4.95% per 100 AP) of the target's maximum health",
+                      "% (+ 4.95% per 100 AP) of the target's maximum health",
+                      "% (+ 4.95% per 100 AP) of the target's maximum health"
                     ]
                   }
                 ]
@@ -1251,7 +1194,7 @@
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": ";Details\nGwen can still move during Needlework's cast times.\nDying during the cast time will prevent the remaining needles of the cast from being launched.\nThe first cast's cast time is 0.25 seconds, and the second and third's cast times are each 0.5 seconds. Gwen launches the needles during the cast times.\nFor the second cast, the first needle launches 0.264 seconds after the start of the cast, the second needle launches after 0.132 seconds, and the third needle launches 0.231 seconds after the first.\nFor the third cast, the first needle launches 0.264 seconds after the start of the cast. Each additional needle launches 0.066 seconds seconds after the previous one.\nThe needles of each cast will fire based on Gwen's location at 0.264 seconds into each cast time (in case of the first cast, this is at the end of the cast time).\nThe needles fire from 100 units behind the cast location.\nThe width of all needle missiles decreases with their distance travelled, forming an approximately triangular missile hitbox.\nNeedles of the same cast all travel the same line at a slight delay after one another. The visual origins are offset (by 70 and 110 units to either side from the center missile spawn location), but the actual hitting missiles all follow the central line.\n Spell shield blocks only one needle.\nNeedlework is placed on a 0.1-second cooldown when the cast time completes and when Gwen gains a recast (before gaining a recast via the attack, the recast remains sealed even while not on cooldown).\nThis ability will cast from wherever the caster is at the end of the cast time.",
+        "notes": "Gwen can still move during Needlework's cast times.\nDying during the cast time will prevent the remaining needles of the cast from being launched.\nThe first cast's cast time is 0.25 seconds, and the second and third's cast times are each 0.5 seconds. Gwen launches the needles during the cast times.\nFor the second cast, the first needle launches 0.264 seconds after the start of the cast, the second needle launches after 0.132 seconds, and the third needle launches 0.231 seconds after the first.\nFor the third cast, the first needle launches 0.264 seconds after the start of the cast. Each additional needle launches 0.066 seconds seconds after the previous one.\nThe needles of each cast will fire based on Gwen's location at 0.264 seconds into each cast time (in case of the first cast, this is at the end of the cast time).\nThe needles fire from 100 units behind the cast location.\nThe width of all needle missiles decreases with their distance travelled, forming an approximately triangular missile hitbox.\nNeedles of the same cast all travel the same line at a slight delay after one another. The visual origins are offset (by 70 and 110 units to either side from the center missile spawn location), but the actual hitting missiles all follow the central line.\n Spell shield blocks only one needle.",
         "blurb": "First Cast:  Gwen launches a needle in the target direction that deals magic damage and  slows enemies hit. Needlework can be recast up to two more times.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -1270,9 +1213,9 @@
   },
   "releaseDate": "2021-04-15",
   "releasePatch": "11.8",
-  "patchLastChanged": "14.21",
+  "patchLastChanged": "25.09",
   "price": {
-    "blueEssence": 4800,
+    "blueEssence": 2400,
     "rp": 880,
     "saleRp": 0
   },

@@ -4,202 +4,202 @@
   "name": "Naafiri",
   "title": "the Hound of a Hundred Bites",
   "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Naafiri.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Naafiri.png",
   "resource": "MANA",
   "attackType": "MELEE",
   "adaptiveType": "PHYSICAL_DAMAGE",
   "stats": {
     "health": {
-      "flat": 635,
-      "percent": 0,
-      "perLevel": 120,
-      "percentPerLevel": 0
+      "flat": 610,
+      "percent": 0.0,
+      "perLevel": 105,
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
-      "flat": 9,
-      "percent": 0,
-      "perLevel": 0.9,
-      "percentPerLevel": 0
+      "flat": 7.5,
+      "percent": 0.0,
+      "perLevel": 0.7,
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 400,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 55,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 7.5,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 1,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
-      "flat": 30,
-      "percent": 0,
-      "perLevel": 4.7,
-      "percentPerLevel": 0
+      "flat": 28,
+      "percent": 0.0,
+      "perLevel": 4.2,
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.05,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 55,
-      "percent": 0,
-      "perLevel": 2.1,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 2,
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 340,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 400,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 120,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.663,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.1,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.625,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": -0.125,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 125,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
       "flat": 1.1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
       "flat": 10,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -225,7 +225,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Naafiri/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Periodically, Naafiri summons a Packmate that fights alongside her. She may have up to 2 / 3 (based on level) Packmates at a time. Naafiri summons the maximum number of Packmates when the game starts, upon respawning, and after casting The Call of the Pack.",
+            "description": "Innate: Periodically, Naafiri summons a Packmate that fights alongside her. She may have up to 2 / 3 / 4 / 5 (based on level) Packmates at a time. Naafiri summons the maximum number of Packmates when the game starts and upon respawning.",
             "leveling": []
           },
           {
@@ -264,7 +264,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Packmates do not count as abilities for triggering the cooldown reduction.\nOnly the initial hit of  Darkin Daggers counts for reducing We Are More's cooldown; the damage over time will not trigger the cooldown reduction.\nBoth hits of  Eviscerate will trigger the cooldown reduction.\nDuring  The Call of the Pack, We Are More's cooldown is reduced to 15 / 12.5 / 10 / 7.5 / 5 (based on level) seconds.",
+        "notes": "Packmates do not count as abilities for triggering the cooldown reduction.\nOnly the initial hit of  Darkin Daggers counts for reducing We Are More's cooldown; the damage over time will not trigger the cooldown reduction.\nBoth hits of  Eviscerate will trigger the cooldown reduction.",
         "blurb": "Innate:  Naafiri periodically summons a Packmate that attacks the target of her attacks and abilities.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -286,7 +286,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Naafiri/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Naafiri hurls a dagger in the target direction that deals physical damage to enemies hit and inflicts them with a bleed for 5 seconds, which deals bonus physical damage every 0.5 seconds over the duration and executes minions and non-epic monsters if they would be damaged below 30 : 70 (based on level) health. Darkin Daggers can be recast after 0.5 seconds and within 4 seconds at no additional cost.",
+            "description": "Active: Naafiri hurls a dagger in the target direction that deals physical damage to enemies hit and inflicts them with a bleed that deals bonus physical damage every 0.5 seconds for 5 seconds. The bleed executes minions and non-epic monsters if they would be damaged below 30 : 70 (based on level) health. Darkin Daggers can be recast after 0.5 seconds and within 4 seconds at no additional cost.",
             "leveling": [
               {
                 "attribute": "Initial Physical Damage",
@@ -294,10 +294,10 @@
                   {
                     "values": [
                       35,
+                      40,
                       45,
-                      55,
-                      65,
-                      75
+                      50,
+                      55
                     ],
                     "units": [
                       "",
@@ -330,11 +330,11 @@
                 "modifiers": [
                   {
                     "values": [
-                      3,
+                      3.5,
                       6,
-                      9,
-                      12,
-                      15
+                      8.5,
+                      11,
+                      13.5
                     ],
                     "units": [
                       "",
@@ -367,11 +367,11 @@
                 "modifiers": [
                   {
                     "values": [
-                      30,
+                      35,
                       60,
-                      90,
-                      120,
-                      150
+                      85,
+                      110,
+                      135
                     ],
                     "units": [
                       "",
@@ -404,11 +404,11 @@
                 "modifiers": [
                   {
                     "values": [
-                      65,
-                      105,
-                      145,
-                      185,
-                      225
+                      70,
+                      100,
+                      130,
+                      160,
+                      190
                     ],
                     "units": [
                       "",
@@ -520,11 +520,11 @@
                 "modifiers": [
                   {
                     "values": [
-                      95,
-                      150,
-                      205,
-                      260,
-                      315
+                      100,
+                      145,
+                      190,
+                      235,
+                      280
                     ],
                     "units": [
                       "",
@@ -557,11 +557,11 @@
                 "modifiers": [
                   {
                     "values": [
-                      125,
-                      195,
-                      265,
-                      335,
-                      405
+                      130,
+                      190,
+                      250,
+                      310,
+                      370
                     ],
                     "units": [
                       "",
@@ -630,10 +630,6 @@
           },
           {
             "description": "Recast: Naafiri mimics the first cast's effects.",
-            "leveling": []
-          },
-          {
-            "description": "Darkin Daggers deals 60% damage against minions.",
             "leveling": []
           }
         ],
@@ -705,82 +701,37 @@
     ],
     "W": [
       {
-        "name": "Hounds' Pursuit",
+        "name": "The Call of the Pack",
         "icon": "https://cdn.communitydragon.org/latest/champion/Naafiri/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Naafiri and her Packmates channel for 0.75 seconds to single out the target enemy, revealing them in the duration. Upon completion, they dash to the target, each colliding with the first enemy champion hit. Upon impact, Naafiri deals physical damage and slows the target by 99% for 0.25 seconds, while Packmates deal 10% of that damage to their own targets.",
+            "description": "Active: Naafiri goes on the hunt for the next 5 seconds, becoming untargetable and ghosted for the first 1 second and vanishing all of her active Packmates in the first 0.9 seconds. Her active Packmates will reappear near her after their vanish.",
+            "leveling": []
+          },
+          {
+            "description": "After 1.25 seconds into the hunt, Naafiri summons 2 additional Packmates that last for the remaining duration and can exceed We Are More's summon cap.",
+            "leveling": []
+          },
+          {
+            "description": "While on the hunt, Naafiri gains 20% AD bonus attack damage and grants herself and all Packmates bonus movement speed.",
             "leveling": [
               {
-                "attribute": "Physical Damage",
+                "attribute": "Bonus Movement Speed",
                 "modifiers": [
                   {
                     "values": [
-                      30,
-                      70,
-                      110,
-                      150,
-                      190
+                      20,
+                      22.5,
+                      25,
+                      27.5,
+                      30
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      ""
-                    ]
-                  },
-                  {
-                    "values": [
-                      80,
-                      80,
-                      80,
-                      80,
-                      80
-                    ],
-                    "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD"
-                    ]
-                  }
-                ]
-              },
-              {
-                "attribute": "Packmate Physical Damage",
-                "modifiers": [
-                  {
-                    "values": [
-                      3,
-                      7,
-                      11,
-                      15,
-                      19
-                    ],
-                    "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      ""
-                    ]
-                  },
-                  {
-                    "values": [
-                      8,
-                      8,
-                      8,
-                      8,
-                      8
-                    ],
-                    "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD"
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
                     ]
                   }
                 ]
@@ -788,11 +739,7 @@
             ]
           },
           {
-            "description": "Packmates become untargetable during their windup and dash, and can individually damage targets.",
-            "leveling": []
-          },
-          {
-            "description": "Hounds' Pursuit refunds 50% of its cooldown if the channel is cancelled.",
+            "description": "Casting Hounds' Pursuit extends The Call of the Pack's hunt duration by 1.75 seconds, up to its original duration.",
             "leveling": []
           }
         ],
@@ -800,11 +747,11 @@
           "modifiers": [
             {
               "values": [
-                70,
                 60,
-                50,
-                40,
-                30
+                60,
+                60,
+                60,
+                60
               ],
               "units": [
                 "",
@@ -820,11 +767,11 @@
           "modifiers": [
             {
               "values": [
+                26,
+                24,
                 22,
                 20,
-                18,
-                16,
-                14
+                18
               ],
               "units": [
                 "",
@@ -837,17 +784,17 @@
           ],
           "affectedByCdr": true
         },
-        "targeting": "Unit",
-        "affects": "Self, Enemies",
-        "spellshieldable": "special",
+        "targeting": "Auto",
+        "affects": "Self",
+        "spellshieldable": null,
         "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
-        "spellEffects": "spell",
+        "damageType": null,
+        "spellEffects": null,
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Naafiri will track the target if they change locations, up to a maximum distance.\nShe will dash to the target's previous location if they move too far away during the dash.\n Spell shield will block one instance of damage.\nNaafiri will be ordered to basic attack the target at the end of the dash.\nNaafiri will windup a basic attack while dashing.(note)\nThe target is  revealed for another 1.5 seconds after the channel completes.\nPackmates hitting the same target as Naafiri will count as dealing \"additional\" damage.\nIf the target is affected by  Stridebreaker's Breaking Shockwave or  Randuin's Omen's Humility during Hounds' Pursuit's slow, the items will slow for 99%.(bug)\nThe following table refers for interactions while Naafiri is  channeling:\nIf Naafiri's channel is interrupted, the Packmates'  channels will be canceled as well.\nThe channel is cancelled if the target moves too far away.\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects",
-        "blurb": null,
+        "notes": "Naafiri can move during The Call of the Pack's cast time.\nWhile The Call of the Pack is active, it increases  We Are More's summon cap to 4 / 5 / 6 / 7 (based on level).\nThe order of additional Packmates that despawn is predetermined, most likely their internal spawn IDs. The ability does not consider which Packmates are the closest or healthiest.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+        "blurb": "Active:  Naafiri goes on the hunt for a period, briefly becoming  untargetable,  ghosted and  vanishing her  Packmates, gaining  bonus attack damage and granting herself and her Packmates  bonus move speed. She will also summon extra Packmates that last for the hunt's duration.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
@@ -857,9 +804,9 @@
         "speed": null,
         "width": null,
         "angle": null,
-        "castTime": "none",
+        "castTime": "0.75",
         "effectRadius": null,
-        "targetRange": "700 / 780 / 860 / 940 (based on  The Call of The Pack's rank)"
+        "targetRange": null
       }
     ],
     "E": [
@@ -875,11 +822,11 @@
                 "modifiers": [
                   {
                     "values": [
+                      15,
+                      25,
                       35,
-                      50,
-                      65,
-                      80,
-                      95
+                      45,
+                      55
                     ],
                     "units": [
                       "",
@@ -891,11 +838,11 @@
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
-                      50
+                      40,
+                      40,
+                      40,
+                      40,
+                      40
                     ],
                     "units": [
                       "% bonus AD",
@@ -913,10 +860,10 @@
                   {
                     "values": [
                       60,
-                      90,
-                      120,
-                      150,
-                      180
+                      85,
+                      110,
+                      135,
+                      160
                     ],
                     "units": [
                       "",
@@ -949,11 +896,11 @@
                 "modifiers": [
                   {
                     "values": [
-                      95,
-                      140,
-                      185,
-                      230,
-                      275
+                      75,
+                      110,
+                      145,
+                      180,
+                      215
                     ],
                     "units": [
                       "",
@@ -965,11 +912,11 @@
                   },
                   {
                     "values": [
-                      130,
-                      130,
-                      130,
-                      130,
-                      130
+                      120,
+                      120,
+                      120,
+                      120,
+                      120
                     ],
                     "units": [
                       "% bonus AD",
@@ -984,7 +931,7 @@
             ]
           },
           {
-            "description": "Packmates vanish during the dash and reappear near Naafiri on her arrival. They are also healed to full health.",
+            "description": "Packmates vanish during the dash and reappear near Naafiri on her arrival. They are also healed to full health upon their reappearance.",
             "leveling": []
           }
         ],
@@ -1012,11 +959,11 @@
           "modifiers": [
             {
               "values": [
+                11,
                 10,
-                9.5,
                 9,
-                8.5,
-                8
+                8,
+                7
               ],
               "units": [
                 "",
@@ -1051,103 +998,54 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "230",
-        "targetRange": "350"
+        "targetRange": "250 : 450 / 650"
       }
     ],
     "R": [
       {
-        "name": "The Call of the Pack",
+        "name": "Hounds' Pursuit",
         "icon": "https://cdn.communitydragon.org/latest/champion/Naafiri/ability-icon/r",
         "effects": [
           {
-            "description": "Passive: Hounds' Pursuit gains bonus cast range.",
+            "description": "Active: Naafiri and her Packmates channel for 0.75 seconds to single out the target enemy champion, revealing them in the duration. Upon completion of the channel, they dash to the target; upon arrival Naafiri deals physical damage and slows the target by 99% for 0.25 seconds, whereas each Packmate deals 10% of that damage. Packmates become untargetable during their channel and dash.",
             "leveling": [
               {
-                "attribute": "Bonus Range",
+                "attribute": "Physical Damage",
                 "modifiers": [
                   {
                     "values": [
-                      80,
-                      160,
-                      240
+                      150,
+                      250,
+                      350
                     ],
                     "units": [
                       "",
                       "",
                       ""
                     ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Active: Naafiri prepares her grand hunt, immediately despawning all active Packmates then summoning the maximum number of new ones along with extra Packmates. She grants herself and all Packmates bonus movement speed that decays over 4 seconds and is reduced upon taking non- minion damage. She also grants sight of the surrounding area for 2 seconds, and reveals nearby enemy champions for 4 seconds.",
-            "leveling": [
-              {
-                "attribute": "Extra Packmates Summoned",
-                "modifiers": [
+                  },
                   {
                     "values": [
-                      2,
-                      3,
-                      4
+                      120,
+                      120,
+                      120
                     ],
                     "units": [
-                      "",
-                      "",
-                      ""
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
                     ]
                   }
                 ]
               },
               {
-                "attribute": "Bonus Movement Speed",
+                "attribute": "Physical Damage per Packmate",
                 "modifiers": [
                   {
                     "values": [
-                      70,
-                      85,
-                      100
-                    ],
-                    "units": [
-                      "%",
-                      "%",
-                      "%"
-                    ]
-                  }
-                ]
-              },
-              {
-                "attribute": "Reduced Bonus Movement Speed",
-                "modifiers": [
-                  {
-                    "values": [
-                      35,
-                      42.5,
-                      50
-                    ],
-                    "units": [
-                      "%",
-                      "%",
-                      "%"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Naafiri goes on the hunt for 15 seconds, during which she gains bonus attack damage, increases the maximum health of all her Packmates by 25%, and reduces the total cooldown of We Are More by 50%. Her first basic attack or ability hit against a champion will grant her a shield for 3 seconds.",
-            "leveling": [
-              {
-                "attribute": "Bonus Attack Damage",
-                "modifiers": [
-                  {
-                    "values": [
-                      5,
                       15,
-                      25
+                      25,
+                      35
                     ],
                     "units": [
                       "",
@@ -1157,38 +1055,9 @@
                   },
                   {
                     "values": [
-                      8,
-                      16,
-                      24
-                    ],
-                    "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD"
-                    ]
-                  }
-                ]
-              },
-              {
-                "attribute": "Shield Strength",
-                "modifiers": [
-                  {
-                    "values": [
-                      125,
-                      325,
-                      525
-                    ],
-                    "units": [
-                      "",
-                      "",
-                      ""
-                    ]
-                  },
-                  {
-                    "values": [
-                      50,
-                      50,
-                      50
+                      12,
+                      12,
+                      12
                     ],
                     "units": [
                       "% bonus AD",
@@ -1201,18 +1070,67 @@
             ]
           },
           {
-            "description": "Naafiri's first champion takedown within the duration refreshes most effects of The Call of the Pack, restores all Packmates to full health, and grants Naafiri the same shield again, though not stacking with the first one. When the hunt ends, any extra Packmates are despawned and all other ones are restored to full health.",
+            "description": "If Naafiri scores a champion takedown within 7 seconds of cast, she triggers a pulse that grants sight of the surrounding area for 1 second and reveals enemy champions within for 4 seconds. She can also recast Hounds' Pursuit once from triggering this effect within 12 seconds at no cost.",
             "leveling": []
+          },
+          {
+            "description": "Recast: Naafiri immediately grants herself a shield for 3 seconds before mimicking the first cast's effects.",
+            "leveling": [
+              {
+                "attribute": "Shield",
+                "modifiers": [
+                  {
+                    "values": [
+                      100,
+                      150,
+                      200
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      150,
+                      150,
+                      150
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
-        "cost": null,
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                120,
                 110,
-                100
+                95,
+                80
               ],
               "units": [
                 "",
@@ -1223,38 +1141,38 @@
           ],
           "affectedByCdr": true
         },
-        "targeting": "Auto",
-        "affects": "Self",
-        "spellshieldable": "false",
-        "resource": null,
-        "damageType": null,
-        "spellEffects": null,
+        "targeting": "Unit",
+        "affects": "Self, Enemies",
+        "spellshieldable": "special",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Naafiri can move during The Call of the Pack's cast time.\nWhile The Call of the Pack is active, it increases  We Are More's summon cap to 4 / 6 / 7 (based on level).\nIf  We Are More is on cooldown when The Call of the Pack is cast, its current cooldown is also reduced by 50%.\nThe cooldown reduction will not trigger from The Call of the Pack's refresh.\n Darkin Daggers' bleeding effect does not count as a hit for gaining the shield.\nWhen The Call of the Pack is refreshed, Naafiri will trigger most effects of the ability a second time.\nThe refresh is instant and causes Naafiri to once again summon the extra Packmates, gain the bonus movement speed, and reveal the surrounding area and nearby champions. She will also be able to gain the shield again.\nNaafiri will only spawn as many extra Packmates as she can; the refresh will not allow her to exceed the summon cap.\nThe additional Packmates summoned from The Call of the Pack are not distinct from the Packmates summoned by We Are More in this case.\nNaafiri will not despawn any Packmates nor summon the maximum number of new ones from the refresh. This is exclusive to the ability's cast.\nIf the effect refreshes without Naafiri ever gaining a shield, she will gain the shield automatically upon the refresh.\nIn this case, she will not gain the second shield automatically and will have to hit a champion in the duration to receive it.\nThe first and second shield do not stack with each other. Hitting a champion with the first shield only refreshes its duration.\nIn a similar case, if she has the shield and the refresh occurs, the shield's duration will also be refreshed.\nIf that shield had mitigated some damage, then its strength will also be restored. The second shield can no longer be gained in this case.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe revealed area and revealed enemy champions are determined based on Naafiri's location when the cast time completes and Naafiri does not reveal and additional area or champions where she moves to, nor any champions that enter the revealed area after the point in time.\nThe additional Packmates that despawn are predetermined by an order, most likely their internal unit (spawn) IDs. It does not consider which Packmates are the closest or healthiest.",
-        "blurb": "Passive:  Hounds' Pursuit gains bonus cast range.",
+        "notes": "Hounds' Pursuit's theoretical total physical damage from  Packmates only, assuming Naafiri has the maximum number of them active and Hounds' Pursuit is always ranked at the earliest levels permitted (ranks 1 / 2 / 3 at levels 6 / 11 / 16):\nLevels 6:8: 30 (+ 24% bonus AD) /  60 (+ 48% bonus AD).\nLevels 9:10: 45 (+ 36% bonus AD) /  75 (+ 60% bonus AD).\nLevel 11: 75 (+ 36% bonus AD) /  125 (+ 60% bonus AD).\nLevels 12:14: 100 (+ 48% bonus AD) /  150 (+ 72% bonus AD).\nLevel 15: 125 (+ 60% bonus AD) /  175 (+ 84% bonus AD).\nLevels 16:18: 175 (+ 60% bonus AD) /  245 (+ 84% bonus AD).\nNaafiri will count as gaining assist credit of the enemy champion she targeted with Hounds' Pursuit.\n Spell shield will block Naafiri's collision damage but cannot prevent collision damage from Packmates.\nNaafiri will track the target if they change locations, up to a maximum distance.\nShe will dash to the target's previous location if they move too far away during the dash.\nNaafiri will be ordered to basic attack the target at the end of the dash.\nNaafiri will windup a basic attack while dashing.(note)\nPackmates hitting the same target as Naafiri will count as dealing \"additional\" damage.\nThe target is  revealed for another 1.5 seconds after the channel completes.\nThe following table refers for interactions while Naafiri is  channeling:\nIf Naafiri's channel is interrupted, the Packmates'  channels will be canceled as well.\nThe channel is cancelled if the target dies or moves too far away, but not if they become  untargetable.\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects",
+        "blurb": null,
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
         "tetherRadius": null,
         "onTargetCdStatic": null,
         "innerRadius": null,
-        "speed": null,
+        "speed": "1800",
         "width": null,
         "angle": null,
-        "castTime": "0.75",
-        "effectRadius": "2100 /  2100",
-        "targetRange": null
+        "castTime": "none",
+        "effectRadius": "2100",
+        "targetRange": "900"
       }
     ]
   },
   "releaseDate": "2023-07-19",
   "releasePatch": "13.14",
-  "patchLastChanged": "25.S1.3",
+  "patchLastChanged": "25.09",
   "price": {
-    "blueEssence": 6300,
-    "rp": 975,
+    "blueEssence": 675,
+    "rp": 585,
     "saleRp": 0
   },
   "lore": "Across the sands of Shurima, a chorus of howls rings out. It is the call of the dune hounds, voracious predators who form packs and compete for the right to hunt in these barren lands. Among them, one pack stands above all, for they are driven not only by canine instincts, but by the ancient power of the Darkin.",
@@ -1718,6 +1636,207 @@
       "splashArtist": [
         "Augusto Quirino",
         "West Studio"
+      ]
+    },
+    {
+      "name": "Glizzy",
+      "id": 950020,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Glizzy",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Catseye",
+          "id": 950022,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/950/950022.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 950023,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/950/950023.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 950027,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/950/950027.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 950028,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/950/950028.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 950026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/950/950026.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 950021,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/950/950021.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2025.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 950025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/950/950025.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 950024,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/950/950024.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "The bestest bud between two buns, Naafiri gives new meaning to the breed “wiener dog.”",
+      "release": "2025-04-02",
+      "set": [
+        "Food Fight"
+      ],
+      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/naafiri/skins/skin20/images/naafiri_splash_centered_20.skins_naafiri_skin20.jpg",
+      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/naafiri/skins/skin20/images/naafiri_splash_uncentered_20.skins_naafiri_skin20.jpg",
+      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/naafiri/skins/skin20/images/naafiri_splash_tile_20.skins_naafiri_skin20.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/naafiri/skins/skin20/naafiriloadscreen_20.skins_naafiri_skin20.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [],
+      "splashArtist": [
+        "Horace 'Hozure' Hsu"
       ]
     }
   ]

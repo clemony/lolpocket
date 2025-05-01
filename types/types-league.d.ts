@@ -18,13 +18,16 @@ declare global {
     1: Spell
   }
 
-  interface Summoner {
+  interface UserSummoner {
     name: string
     tag: string
     puuid: string
     profileIcon: string
     level: number
     region: string
+  }
+
+  interface Summoner extends UserSummoner {
     ranked?: {
       solo?: RankedEntry
       flex?: RankedEntry

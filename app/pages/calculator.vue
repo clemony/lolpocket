@@ -26,7 +26,7 @@ console.log('💠 - is.calculatorSets:', is.calculatorSets)
 <ResizablePanelGroup class="size-full" direction="horizontal">
 
 <ResizablePanel :default-size="30" class="size-full relative">
-  <CalculatorSidebar />
+  <CalculatorResults />
 </ResizablePanel>
 <ResizableHandle  with-handle/>
   <ResizablePanel

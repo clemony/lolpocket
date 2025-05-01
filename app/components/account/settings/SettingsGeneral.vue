@@ -29,11 +29,11 @@ const settingsData = {
 </script>
 
 <template>
-  <div :class="cn(' w-full flex-col flex gap-16 *:size-full', props.class)">
+  <div :class="cn(' w-full flex-col pt-8 pb-3 px-3 flex border-t-b3 border-t gap-8 *:size-full', props.class)">
     <div
       v-for="item in settingsData.general"
       :key="item.title"
-      class="  flex flex-col gap-4  px-10  max-h-70">
+      class="  flex flex-col gap-4  max-h-70">
       <div class="dst">
         <h4 class=" mb-2">
           {{ item.title }}
@@ -51,12 +51,6 @@ const settingsData = {
         </span>
       </label>
     </div>
-  </div>
-
-  <div class="w-full left-0 justify-end grid border-t-b3/60 border-t  py-5 px-4  bg-b2/20 backdrop-blur-md  absolute bottom-0">
-    <button class="btn btn-neutral px-8">
-      Save
-    </button>
   </div>
 </template>
 

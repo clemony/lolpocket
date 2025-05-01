@@ -2,7 +2,7 @@
 const ms = useMatchStore()
 // TODO fix usermatchdata
 const userMatchData = []
-const patchGames = computed(() => userMatchData.filter(g => g.patch === ms.patchSelect))
+const patchGames = computed(() => userMatchData.filter(g => g.patch === ms.af.patch))
 const { bayesianItems } = useMatchItems()
 </script>
 
@@ -13,7 +13,7 @@ const { bayesianItems } = useMatchItems()
         <div class="oveflow-y-auto size-full">
           <div class=" pt-3 pb-1 px-2 opacity-60 tracking-wide items-center flex  gap-4 text-2 capitalize w-full">
             <span class="grow pl-2">
-              {{ ms.patchSelect }} Items
+              {{ ms.af.patch }} Items
             </span>
 
             <APDtooltip>

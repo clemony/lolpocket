@@ -2,8 +2,7 @@ export async function useFetchSummonerData(queryPuuid: string) {
   const { name, profileIcon, puuid, tag, level, region, leagueEntry } = await $fetch('/api/shieldbow/get-summoner-data', {
     query: { puuid: queryPuuid },
   })
-  console.log('💠 - useFetchSummonerData - leagueEntry:', leagueEntry)
-
+  const as = useAccountStore()
   const rankedEntries: Record<string, RankedEntry> = {}
 
   // Process each queue and add it to rankedEntries
@@ -51,6 +50,19 @@ export async function useFetchSummonerData(queryPuuid: string) {
       flex: flexQueue,
     },
     matches: [],
+  }
+  if (summoner.puuid == as.userAccount.puuid) {
+  console.log("💠 - useFetchSummonerData - as.userAccount.puuid:", as.userAccount.puuid)
+  console.log("💠 - useFetchSummonerData - summoner.puuid:", summoner.puuid)
+
+      as.userSummoner.tag = tag,
+       as.userSummoner.puuid = puuid,
+      as.userSummoner.profileIcon = profileIcon,
+       console.log("💠 - useFetchSummonerData - as.userSummoner.profileIcon:", as.userSummoner.profileIcon)
+       as.userSummoner.level = level,
+       as.userSummoner.region = region,
+      as.userSummoner.name = name
+
   }
 
   return summoner

@@ -4,202 +4,202 @@
   "name": "Gangplank",
   "title": "the Saltwater Scourge",
   "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/Gangplank.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Gangplank.png",
   "resource": "MANA",
   "attackType": "MELEE",
   "adaptiveType": "PHYSICAL_DAMAGE",
   "stats": {
     "health": {
       "flat": 630,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 114,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 6,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.6,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 280,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 60,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 8,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.7,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 31,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4.7,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.05,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 64,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 4.2,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 345,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 400,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 120,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.658,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 3.2,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.69,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.25,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.51999998092651,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": 0,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 125,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
       "flat": 1.05,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -264,7 +264,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Reapplying Trial by Fire before a previous application has run out will stack the full damage, instead of refreshing the duration.\nThe bonus true damage scaling based on critical strike chance is capped at 100% of the stat.\nIf the attack is  dodged or if Gangplank is  blinded, the effect is not applied nor does Trial by Fire go on cooldown. If the attack is  blocked, the effect is not applied, but Trial by Fire will go on cooldown.\nThe empowered attack will not trigger against non- turret structures nor wards.",
+        "notes": "Reapplying Trial by Fire before a previous application has run out will stack the full damage, instead of refreshing the duration.\nThe bonus true damage scaling based on critical strike chance is capped at 100% of the stat.\nIf the attack is  dodged or if Gangplank is  blinded, the effect is not applied nor does Trial by Fire go on cooldown. If the attack is  blocked, the effect is not applied, but Trial by Fire will go on cooldown.(note)\nThe empowered attack will not trigger against non- turret structures nor wards.",
         "blurb": "Innate: Every few seconds, Gangplank's next basic attack will burn the target, continually dealing bonus true damage and granting him  bonus movement speed.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -286,7 +286,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Gangplank fires a shot at the target enemy that deals physical damage, applies on-hit effects as a ranged attack, and triggers on-attack effects. Parrrley can critically strike for (175% + 40%) total damage.",
+            "description": "Active: Gangplank fires a shot at the target enemy that deals physical damage, applies on-hit effects as a ranged attack, and triggers on-attack effects. Parrrley can critically strike for (175% + 40%) damage.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -716,7 +716,7 @@
         "projectile": "FALSE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "The triggering attack's damage can include  Parrrley's base damage and  Spellblade.\nWhen triggered with critical strike, Spellblade and the bonus damage to champions are added after the calculations, meaning that these effects are not increased by 5%.\nThe total damage can be calculated with this formula:{aDMG * [1.75 ( + 0.40)] * 1.05} + sDMG + cDMGWhere:\naDMG = Triggering attack's damage\nsDMG = Spellblade's damage\ncDMG = Bonus damage to champions\nKegs have special interactions with  Spellblade:\nIf the keg destroying attack was empowered with Spellblade, its damage will be added to the explosions' damage.\nIf the keg was not destroyed, it will consume the effect and the keg will store the damage it would have dealt. If the storing keg is the initial detonation of the chain, it will add its damage to the explosions' damage as if it was triggered with Spellblade.\nIf the storing keg was attacked with a new instance of Spellblade, it will override the previously stored damage (if different).\nDamage can only be stored if Spellblade was consumed by Gangplank.\nThe stored damage is static and will not change if Gangplank's base attack damage or ability power (see below) changes.\nSpecific  Spellblade item interactions:\n Bloodsong: Dealing damage with kegs to champions won't apply Expose Weakness to them.\n Iceborn Gauntlet: The frost field will be created on the location of the keg that is attacked.\n Lich Bane: The magic damage will be added to the explosions' damage, but will be dealt as physical damage.\n Trinity Force: Attacking kegs grants the movespeed from Quicken, but dealing damage with them does not since kegs damage doesn't proc on-hit.\nBarrels triggering a chain reaction will show a lit fuse traveling toward other barrels.\nThe lit fuse is only visual and does not affect the time it takes for barrels to explode.\nPlaced barrels do not grant  vision until they explode, but they are revealed to Gangplank.\nIf Gangplank loses allied vision, for instance due to  nearsight, he will also lose vision on his barrels temporarily.\nBarrels prematurely grant  sight of their explosion radius (including across terrain and into bushes) if  Parrrley or a lit fuse is traveling towards them.\nThis area reveal happens even if  Parrrley is not going to make it explode.\nAn exploding Powder Keg will splash  Parrrley's bonus damage, and will also be modified if the attack  critically strikes.\nAttacks against Powder Kegs will apply on-hit effects (such as  Tiamat's Cleave), but  proc damage against the barrel itself is reduced to 0.\nDamage from on-hit effects will not increase the damage of the explosion.\n Spellblade is a special-cased exception.\n Dead Man's Plate's Crushing Blow will not trigger from Powder Kegs destroyed from Gangplank, even with  Parrrley.\nThe number of Powder Kegs in stock is visible under Gangplank's health bar for all players.\nGangplank stocks Powder Kegs even if the ability hasn't been learned yet.\nThis is due to the recharge rate at level 1 being set the same as level 0.\nWhile at maximum charges, ranking up the ability to rank 3 or 5 grants the remaining charge immediately regardless of the recharge timer.\nIf a barrel is destroyed during the 0.33 seconds-delay between explosions, Gangplank will plunder  gold and  Silver Serpents upon killing enemies as if he had done so using  Parrrley.(bug)\nThis effect persists through  death and will only end upon killing an enemy with  Parrrley.",
+        "notes": "The triggering attack's damage can include  Parrrley's base damage and  Spellblade.\nWhen triggered with critical strike, Spellblade and the bonus damage to champions are added after the calculations, meaning that these effects are not increased by 5%.\nThe total damage can be calculated with this formula:{aDMG * [1.75 ( + 0.40)] * 1.05} + sDMG + cDMGWhere:\naDMG = Triggering attack's damage\nsDMG = Spellblade's damage\ncDMG = Bonus damage to champions\nKegs have special interactions with  Spellblade:\nIf the keg destroying attack was empowered with Spellblade, its damage will be added to the explosions' damage.\nIf the keg was not destroyed, it will consume the effect and the keg will store the damage it would have dealt. If the storing keg is the initial detonation of the chain, it will add its damage to the explosions' damage as if it was triggered with Spellblade.\nIf the storing keg was attacked with a new instance of Spellblade, it will override the previously stored damage (if different).\nDamage can only be stored if Spellblade was consumed by Gangplank.\nThe stored damage is static and will not change if Gangplank's base attack damage or ability power (see below) changes.\nSpecific  Spellblade item interactions:\n Bloodsong: Dealing damage with kegs to champions won't apply Expose Weakness to them.\n Iceborn Gauntlet: The frost field will be created on the location of the keg that is attacked.\n Lich Bane: The magic damage will be added to the explosions' damage, but will be dealt as physical damage.\n Trinity Force: Attacking kegs grants the movespeed from Quicken; dealing damage with the explosion does not since it does not trigger  on-hit effects.\nBarrels triggering a chain reaction will show a lit fuse traveling toward other barrels.\nThe lit fuse is only visual and does not affect the time it takes for barrels to explode.\nPlaced barrels do not grant  vision until they explode, but they are revealed to Gangplank.\nIf Gangplank loses allied vision, for instance due to  nearsight, he will also lose vision on his barrels temporarily.\nBarrels prematurely grant  sight of their explosion radius (including across terrain and into bushes) if  Parrrley or a lit fuse is traveling towards them.\nThis area reveal happens even if  Parrrley is not going to make it explode.\nAn exploding Powder Keg will splash  Parrrley's bonus damage, and will also be modified if the attack  critically strikes.\nAttacks against Powder Kegs will apply on-hit effects (such as  Tiamat's Cleave), but  proc damage against the barrel itself is reduced to 0.\nDamage from on-hit effects will not increase the damage of the explosion.\n Spellblade is a special-cased exception.\n Dead Man's Plate's Crushing Blow will not trigger from Powder Kegs destroyed from Gangplank, even with  Parrrley.\nThe number of Powder Kegs in stock is visible under Gangplank's health bar for all players.\nGangplank stocks Powder Kegs even if the ability hasn't been learned yet.\nThis is due to the recharge rate at level 1 being set the same as level 0.\nWhile at maximum charges, ranking up the ability to rank 3 or 5 grants the remaining charge immediately regardless of the recharge timer.\nIf a barrel is destroyed during the 0.33 seconds-delay between explosions, Gangplank will plunder  gold and  Silver Serpents upon killing enemies as if he had done so using  Parrrley.(bug)\nThis effect persists through  death and will only end upon killing an enemy with  Parrrley.",
         "blurb": "Active:  Gangplank places a Powder Keg at the target location, which can be basic attacked or  shot to damage it. If an enemy destroys a Powder Keg, it is safely dismantled.",
         "missileSpeed": null,
         "rechargeRate": [
@@ -1012,7 +1012,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Cannon Barrage's slow lingers for 0.25 seconds after affected enemies leave the target area.",
+        "notes": "Gangplanks's upgrades for Cannon Barrage will be offered through the store and additionally as a HUD menu.\nChampion Specific Interaction 1-3 will activate Gangplank's slots 1-3 in the HUD menu.\nThe HUD menu will be grayed out when unable to purchase from the shop.\nCannon Barrage's slow lingers for 0.25 seconds after affected enemies leave the target area.",
         "blurb": "Active:  Gangplank orders a cannon bombardment to the target location, each blast deals magic damage and  slows enemies within.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -1031,9 +1031,9 @@
   },
   "releaseDate": "2009-08-19",
   "releasePatch": "0.9.22.15",
-  "patchLastChanged": "25.04",
+  "patchLastChanged": "25.05",
   "price": {
-    "blueEssence": 3150,
+    "blueEssence": 1575,
     "rp": 790,
     "saleRp": 0
   },

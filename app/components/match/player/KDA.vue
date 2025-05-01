@@ -23,7 +23,9 @@ const math = computed (() => {
     </p>
 
     <p class="text-1 text-bc/80 text-nowrap  truncate font-medium ">
-      {{ math / 100 }}:1 <span class="font-mono contents">KDA</span>
+      <span v-if="!player.deaths" class="font-mono tracking-tighter mr-0.5">PERFECT</span>
+      <span v-else>{{ math / 100 }}:1 </span>
+      <span class="font-mono contents">KDA</span>
     </p>
   </div>
 </template>

@@ -4,202 +4,202 @@
   "name": "Master Yi",
   "title": "the Wuju Bladesman",
   "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.4.1/img/champion/MasterYi.png",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/MasterYi.png",
   "resource": "MANA",
   "attackType": "MELEE",
   "adaptiveType": "PHYSICAL_DAMAGE",
   "stats": {
     "health": {
       "flat": 669,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 105,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "healthRegen": {
       "flat": 7.5,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.65,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "mana": {
       "flat": 251,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 42,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "manaRegen": {
       "flat": 7.25,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0.45,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "armor": {
       "flat": 33,
-      "percent": 0,
-      "perLevel": 4.7,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 4.2,
+      "percentPerLevel": 0.0
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.05,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackDamage": {
       "flat": 65,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.8,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "movespeed": {
       "flat": 355,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "acquisitionRadius": {
       "flat": 600,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "selectionRadius": {
       "flat": 125,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackSpeed": {
       "flat": 0.679,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 2.5,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "attackSpeedRatio": {
       "flat": 0.67900002002716,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackDelayOffset": {
       "flat": -0.0562499985098838,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "attackRange": {
       "flat": 175,
-      "percent": 0,
+      "percent": 0.0,
       "perLevel": 0,
-      "percentPerLevel": 0
+      "percentPerLevel": 0.0
     },
     "aramDamageTaken": {
       "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramDamageDealt": {
       "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramHealing": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramTenacity": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAbilityHaste": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramAttackSpeed": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "aramEnergyRegen": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageTaken": {
       "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfDamageDealt": {
       "flat": 0.9,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfHealing": {
       "flat": 0.8,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     },
     "urfShielding": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.0,
+      "percent": 0.0,
+      "perLevel": 0.0,
+      "percentPerLevel": 0.0
     }
   },
   "positions": [
@@ -254,7 +254,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "The second strike separately rolls a  critical strike.\nSince Double Strike resets the counter with the first strike, and the second strike applies on-hit effects, the second strike is able to add a stack for the next Double Strike activation.\nIf Double Strike's target becomes  untargetable shortly after the triggering attack, it will still occur and deal its effects as usual.\nBasic attacks that are  dodged,  blocked, or missed while Master Yi is  blinded will not generate any stacks of Double Strike nor refresh the duration of active stacks.\nDouble Strike's interaction with parry effects at 3 stacks (the damage of the strikes is negated in all cases):\nIf the triggering basic attack is  dodged, Master Yi will not perform the second strike nor consume the stacks.\nIf the triggering basic attack is  blocked, Master Yi will perform the second strike but not consume the stacks.\nIf the triggering basic attack misses while Master Yi is  blinded, he will consume the stacks.\nThe second strike will fail to hit the target at all if the triggering attack misses. On-attack effects do not occur, despite the attack animation playing.(bug)",
-        "blurb": "Innate:  Master Yi's basic attacks generate a stack of Double Strike for a few seconds. At 3 stacks, his next basic attack will consume them to make a second attack that deals reduced physical damage.",
+        "blurb": "Innate:  Master Yi's basic attacks generate a stack of Double Strike for a few seconds. At 3 stacks, his next basic attack will consume them all to strike a second time for reduced physical damage.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
@@ -283,10 +283,10 @@
             "leveling": []
           },
           {
-            "description": "Master Yi then detonates the marks, dealing physical damage and applying on-hit effects, with on-hit damage reduced to 75% effectiveness. Marks after the first on the same target instantly detonate to deal 25% damage and apply on-hit effects, with on-hit damage reduced to 18.75% effectiveness. Alpha Strike deals bonus physical damage to monsters per hit.",
+            "description": "Master Yi then detonates the marks to deal physical damage and apply on-hit effects, with on-hit damage reduced to 75% effectiveness. Marks after the first on the same target instead detonate instantly upon application to deal 25% damage and apply on-hit effects, with on-hit damage reduced to 18.75% effectiveness. Alpha Strike deals bonus physical damage to monsters per hit.",
             "leveling": [
               {
-                "attribute": "Physical Damage",
+                "attribute": "Primary Physical Damage",
                 "modifiers": [
                   {
                     "values": [
@@ -397,7 +397,7 @@
                 ]
               },
               {
-                "attribute": "Monster Bonus Damage",
+                "attribute": "Primary Bonus Monster Damage",
                 "modifiers": [
                   {
                     "values": [
@@ -418,7 +418,7 @@
                 ]
               },
               {
-                "attribute": "Monster Total Damage",
+                "attribute": "Combined Primary Monster Damage",
                 "modifiers": [
                   {
                     "values": [
@@ -492,7 +492,7 @@
                 ]
               },
               {
-                "attribute": "Max Monster Single-Target Damage",
+                "attribute": "Max Single-Target Monster Damage",
                 "modifiers": [
                   {
                     "values": [
@@ -531,11 +531,11 @@
             ]
           },
           {
-            "description": "Alpha Strike's primary and lesser damage can critically strike for bonus physical damage equal to (28.125% + 15%) AD and (7.03125% + 3.75%) AD respectively.",
+            "description": "Alpha Strike's primary and lesser damage can critically strike for[ (175% + 40%) and (43.75% + 10%) damage respectively. ][ 100% + 100% of bonus critical damage damage, reduced to 25% for the lesser damage. ]",
             "leveling": []
           },
           {
-            "description": "Basic attacks on-hit reduce Alpha Strike's current cooldown by 1 second.",
+            "description": "Basic attacks on-hit reduce Alpha Strike's current cooldown by 1 second, affected by ability haste.",
             "leveling": []
           }
         ],
@@ -589,7 +589,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Alpha Strike's primary damage applies after Master Yi reappears.\nAlpha Strike's  cooldown reduction applies on  structures.\nWhen Master Yi bounces from a unit it will grant  vision in a 600 radius around it for up-to 0.627 seconds  after Alpha Strike ends, including across terrain, though not into  brushes.\nIt will always grant vision around the primary target, even if he doesn't bounce off it.\nAlpha Strike's damage is calculated at the moment that each mark is placed. Because of this, it is possible to inflict differing amounts of damage if Master Yi's AD changes between marks.\nMaster Yi will follow all his primary target's movements.\nAlpha Strike can only follow up-to 2000 units; If the target teleports a very long distance, it will not be followed.\nWhile vanished, the initial cast location of Alpha Strike counts as Master Yi's position, which is considered for effects such as  tethers.\nIf the primary target becomes  untargetable and there are no other nearby valid targets, Alpha Strike will end prematurely and will not deal the damage occurring after Master Yi's reappearance.\nThe choice of exit direction occurs through an indicator anchored to the target during the time that Master Yi is vanished. You are unable to choose the exit direction after the third mark.(bug) Selection commands (default: MB1/left click) and movement commands (default: MB2/right click) are both valid.\nMultiple commands can be issued, but only the final command before exiting will determine the direction.\nIf the primary target is a champion, Master Yi will be automatically ordered to basic attack them after Alpha Strike ends.\nMaster Yi will not be able to buffer other abilities.(bug)\nOnly the first instance of damage counts as a hit for effects such as  Conqueror,  Electrocute and  Eclipse's Ever Rising Moon.\nAlpha Strike does not interact with  Press the Attack or  Kraken Slayer's Bring It Down.\n Spell shield will only block a single instance of damage.\nOn-hit damage applied by Alpha Strike will be negated by  dodge and  block, but not while Master Yi is  blinded.\nAlpha Strike's own damage will not be negated.\nIf Master Yi  dies during Alpha Strike and he is only focusing one target, the ability will only deal the reduced damage strikes and not the final tick of damage from reappearing.\nIf he is striking multiple targets the damage will be dealt immediately when dying, and if he dies before the bounce from the last target, Alpha Strike will deal reduced damage only to all units he already bounced from.(bug)\nIf Master Yi enters  resurrection during Alpha Strike and he is only focusing one target, the ability will deal the reduced damage strikes as normal and the final tick of damage after being resurrected.\nIf he is striking multiple targets, Alpha Strike will sometimes deal the reduced damage from repeated bounces and the main damage after being resurrected, and sometimes only the reduced damage, unrelated to the number of targets available.(bug)\nThe following table refers for interactions while Master Yi is performing Alpha Strike:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Wuju Style and  Highlander are usable.  Meditate is disabled.\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+        "notes": "Editor's note: Internally, Alpha Strike's critical damage is calculated as a percentage of the default bonus damage dealt by a critical strike on top of the base damage (175% − 100%). The in-game tooltip for the maximum single-target damage when all hits  critically strike is incorrect when this percentage is different from 100% and thus may calculate a larger or smaller number than what Alpha Strike actually deals.\nFor example, if this percentage is 75% then the tooltip would multiply the non-critical strike number by 100% + Alpha Strike's 75% bonus critical damage modifier = 175% total damage instead of the proper 100% + (Alpha Strike's 75% bonus critical damage modifier × (175-100)% bonus critical damage) = 156.25% total damage.\nAlpha Strike's primary damage applies after Master Yi reappears.\nAlpha Strike's  cooldown reduction applies on  structures.\nWhen Master Yi bounces from a unit it will grant  vision in a 600 radius around it for up-to 0.627 seconds after Alpha Strike ends, including across terrain, though not into  brushes.\nIt will always grant vision around the primary target, even if he doesn't bounce off it.\nAlpha Strike's damage is calculated at the moment that each mark is placed. Because of this, it is possible to inflict differing amounts of damage if Master Yi's AD changes between marks.\nMaster Yi will follow all his primary target's movements.\nAlpha Strike can only follow up-to 2000 units; If the target teleports a very long distance, it will not be followed.\nWhile vanished, the initial cast location of Alpha Strike counts as Master Yi's position, which is considered for effects such as  tethers.\nIf the primary target becomes  untargetable and there are no other nearby valid targets, Alpha Strike will end prematurely and will not deal the damage occurring after Master Yi's reappearance.\nThe choice of exit direction occurs through an indicator anchored to the target during the time that Master Yi is vanished. You are unable to choose the exit direction after the third mark.(bug) Selection commands (default: MB1/left click) and movement commands (default: MB2/right click) are both valid.\nMultiple commands can be issued, but only the final command before exiting will determine the direction.\nIf the primary target is a champion, Master Yi will be automatically ordered to basic attack them after Alpha Strike ends.\nMaster Yi will not be able to buffer other abilities.(bug)\nOnly the first instance of damage counts as a hit for effects such as  Conqueror,  Electrocute and  Eclipse's Ever Rising Moon.\nAlpha Strike does not interact with  Press the Attack or  Kraken Slayer's Bring It Down.\n Spell shield will only block a single instance of damage.\nOn-hit damage applied by Alpha Strike will be negated by  dodge and  block, but not while Master Yi is  blinded.\nAlpha Strike's own damage will not be negated.\nIf Master Yi  dies during Alpha Strike and he is only focusing one target, the ability will only deal the reduced damage strikes and not the final tick of damage from reappearing.\nIf he is striking multiple targets the damage will be dealt immediately when dying, and if he dies before the bounce from the last target, Alpha Strike will deal reduced damage only to all units he already bounced from.(bug)\nIf Master Yi enters  resurrection during Alpha Strike and he is only focusing one target, the ability will deal the reduced damage strikes as normal and the final tick of damage after being resurrected.\nIf he is striking multiple targets, Alpha Strike will sometimes deal the reduced damage from repeated bounces and the main damage after being resurrected, and sometimes only the reduced damage, unrelated to the number of targets available.(bug)\nThe following table refers for interactions while Master Yi is performing Alpha Strike:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Wuju Style and  Highlander are usable.  Meditate is disabled.\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
         "blurb": "Active:  Master Yi briefly  vanishes and marks the target enemy, then rapidly marks up to 3 other nearby enemies. If there are no other eligible targets before then, Master Yi can mark the same enemies again.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -1106,9 +1106,9 @@
   },
   "releaseDate": "2009-02-21",
   "releasePatch": "Alpha Week 2",
-  "patchLastChanged": "25.S1.2",
+  "patchLastChanged": "25.06",
   "price": {
-    "blueEssence": 450,
+    "blueEssence": 225,
     "rp": 260,
     "saleRp": 0
   },
