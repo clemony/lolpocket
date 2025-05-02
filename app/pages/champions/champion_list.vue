@@ -77,12 +77,10 @@ const colDefs: (ColDef<Champion> | ColGroupDef<Champion>)[] = [
       valueGetter: (params) => {
         return Math.round(params.data.stats?.attackdamage + params.data.stats?.attackdamageperlevel * clvl.value * tlvl.value)
       },
-    cellClass: 'number-cell justify-end',
+      cellClass: 'number-cell justify-end',
       headerName: 'AD',
     },
-    { columnGroupShow: 'open',
-    cellClass: 'hidden-cell bg-b2/40 number-cell justify-end',
-    maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.attackdamageperlevel },
+    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.attackdamageperlevel },
   ] },
   { headerName: 'Atk Spd', groupId: 'as', children: [
     {
@@ -90,92 +88,75 @@ const colDefs: (ColDef<Champion> | ColGroupDef<Champion>)[] = [
       valueGetter: (params) => {
         return Math.round((params.data.stats?.attackspeed + params.data.stats?.attackspeedperlevel * clvl.value * tlvl.value) * 100) / 100
       },
-    cellClass: 'number-cell justify-end',
+      cellClass: 'number-cell justify-end',
     },
-    { columnGroupShow: 'open',
-    cellClass: 'hidden-cell bg-b2/40 number-cell justify-end',
-    maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.attackspeedperlevel },
+    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.attackspeedperlevel },
   ] },
-  { headerName: 'Crit',
-    cellClass: 'number-cell justify-end',groupId: 'crit', hide: true, children: [
+  { headerName: 'Crit', cellClass: 'number-cell justify-end', groupId: 'crit', hide: true, children: [
     { hide: true, headerName: 'Base', valueGetter: (params) => {
       return (params.data.stats?.crit + params.data.stats?.critperlevel * clvl.value * tlvl.value) * 100 / 100
     } },
-    { columnGroupShow: 'open',
-    cellClass: 'hidden-cell bg-b2/40 number-cell justify-end',
-    maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.critperlevel, hide: true },
+    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.critperlevel, hide: true },
   ] },
   { headerName: 'Health', groupId: 'hp', children: [
     {
       headerName: 'Base',
-    cellClass: 'number-cell justify-end',
+      cellClass: 'number-cell justify-end',
       valueGetter: (params) => {
         return Math.round((params.data.stats?.hp + params.data.stats?.hpperlevel * clvl.value * tlvl.value) * 100) / 100
       },
     },
-    { columnGroupShow: 'open',
-    cellClass: 'hidden-cell bg-b2/40 number-cell justify-end',
-    maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.hpperlevel },
+    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.hpperlevel },
   ] },
   { headerName: 'HP Regen', groupId: 'hpregen', children: [
     {
       headerName: 'Base',
-    cellClass: 'number-cell justify-end',
+      cellClass: 'number-cell justify-end',
       valueGetter: (params) => {
         return Math.round((params.data.stats?.hpregen + params.data.stats?.hpregenperlevel * clvl.value * tlvl.value) * 100) / 100
       },
     },
-    { columnGroupShow: 'open',
-    cellClass: 'hidden-cell bg-b2/40 number-cell justify-end',
-    maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.hpregenperlevel },
+    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.hpregenperlevel },
   ] },
   { headerName: 'Mana', groupId: 'mp', children: [
     {
       headerName: 'Base',
-    cellClass: 'number-cell justify-end',
+      cellClass: 'number-cell justify-end',
       valueGetter: (params) => {
         return Math.round((params.data.stats?.mp + params.data.stats?.mpperlevel * clvl.value * tlvl.value) * 100) / 100
       },
     },
-    { columnGroupShow: 'open',
-    cellClass: 'hidden-cell bg-b2/40 number-cell justify-end',
-    maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.mpperlevel },
+    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.mpperlevel },
   ] },
   { headerName: 'MP Regen', groupId: 'mpregen', children: [
     {
       headerName: 'Base',
-    cellClass: 'number-cell justify-end',
+      cellClass: 'number-cell justify-end',
       valueGetter: (params) => {
         return Math.round((params.data.stats?.mpregen + params.data.stats?.mpregenperlevel * clvl.value * tlvl.value) * 100) / 100
       },
     },
-    { columnGroupShow: 'open',
-    cellClass: 'hidden-cell bg-b2/40 number-cell justify-end',
-    maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.mpregenperlevel },
+    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.mpregenperlevel },
   ] },
   { headerName: 'Armor', groupId: 'armor', children: [
     {
       headerName: 'Base',
-    cellClass: 'number-cell justify-end',
+      cellClass: 'number-cell justify-end',
       valueGetter: (params) => {
         return Math.round((params.data.stats?.armor + params.data.stats?.armorperlevel * clvl.value * tlvl.value) * 100) / 100
       },
     },
-    { columnGroupShow: 'open',
-    cellClass: 'hidden-cell bg-b2/40 number-cell justify-end',
-    maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.armorperlevel },
+    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.armorperlevel },
   ] },
   { headerName: 'MR', groupId: 'mr', children: [
     {
       headerName: 'Base',
-    cellClass: 'number-cell justify-end',
+      cellClass: 'number-cell justify-end',
       valueGetter: (params) => {
         return Math.round((params.data.stats?.spellblock + params.data.stats?.spellblockperlevel * clvl.value * tlvl.value) * 100) / 100
       },
     },
-    { columnGroupShow: 'open',
-    cellClass: 'hidden-cell bg-b2/40 number-cell justify-end',
-    maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.spellblockperlevel },
+    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.spellblockperlevel },
   ] },
   {
     headerName: 'Range',
@@ -208,14 +189,14 @@ const colDefs: (ColDef<Champion> | ColGroupDef<Champion>)[] = [
         flex: 2,
         minWidth: 80,
         valueGetter: params => params.data.tags?.[0] ?? '',
-        cellClass: 'text-cell capitalize'
+        cellClass: 'text-cell capitalize',
 
       },
       {
         headerName: 'Secondary',
         flex: 2,
         minWidth: 84,
-        cellClass: 'text-cell capitalize' ,
+        cellClass: 'text-cell capitalize',
         valueGetter: params => params.data.tags?.[1] ?? '',
 
       },
@@ -256,7 +237,7 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowS
 </script>
 
 <template>
-<NuxtLayout name="sidebar-layout" >
+  <NuxtLayout name="champions-layout">
     <AgGridVue
       :initial-state="cs.dbChampionGridState"
       :grid-options="gridOptions"
@@ -267,5 +248,5 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowS
       @grid-pre-destroyed="onGridPreDestroyed"
       @grid-ready="onGridReady">
     </AgGridVue>
-</NuxtLayout>
+  </NuxtLayout>
 </template>

@@ -23,8 +23,8 @@ onMounted (() => {
 </script>
 
 <template>
-  <div class="flex pl-4 pr-2 w-116 h-full flex-col items-center pb-6 justify-start  relative">
-   <div class="w-full px-5 mt-4">
+  <div class="flex pl-4 pr-2 w-116 h-full flex-col items-center pt-18 pb-6 justify-start  relative">
+    <div class="w-full px-5 mt-4">
       <Tabs v-model:model-value="model" class=" w-full  **:pointer-events-auto ">
         <IndicatorTabsList class="grid grid-cols-2 h-10">
           <IndicatorTabsTrigger value="Grid" @click="navigateTo('/champions')">
@@ -37,10 +37,9 @@ onMounted (() => {
         </IndicatorTabsList>
       </Tabs>
 
-    <ChampionSearch class="input mt-10 w-full shadow-sm drop-shadow-sm !bg-neutral/85 !h-12 inset-shadow-sm border-accent text-nc **:text-nc">
-    </ChampionSearch>
-
-  </div>
+      <ChampionSearch class="input mt-10 w-full shadow-sm drop-shadow-sm !bg-neutral/85 !h-12 inset-shadow-sm border-accent text-nc **:text-nc">
+      </ChampionSearch>
+    </div>
     <div class="divider divider-start before:bg-b3/60 font-semibold  my-8 mx-5">
       Roles
     </div>
@@ -83,5 +82,5 @@ onMounted (() => {
           Reset Filters
         </button> -->
     </div>
-</div>
+  </div>
 </template>
