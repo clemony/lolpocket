@@ -1,0 +1,4735 @@
+{
+  "1001": {
+    "id": 1001,
+    "name": "Boots",
+    "rank": [
+      "BOOTS"
+    ],
+    "stats": {
+      "movespeed": 25
+    },
+    "cost": 300,
+    "tags": []
+  },
+  "1004": {
+    "id": 1004,
+    "name": "Faerie Charm",
+    "rank": [
+      "BASIC"
+    ],
+    "stats": {
+      "manaRegen": 50
+    },
+    "cost": 200,
+    "tags": [
+      "MAGE",
+      "SUPPORT"
+    ]
+  },
+  "1006": {
+    "id": 1006,
+    "name": "Rejuvenation Bead",
+    "rank": [
+      "BASIC"
+    ],
+    "stats": {
+      "healthRegen": 100
+    },
+    "cost": 300,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "1011": {
+    "id": 1011,
+    "name": "Giant's Belt",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "health": 350
+    },
+    "cost": 900,
+    "tags": [
+      "FIGHTER",
+      "MAGE",
+      "TANK"
+    ]
+  },
+  "1018": {
+    "id": 1018,
+    "name": "Cloak of Agility",
+    "rank": [
+      "BASIC"
+    ],
+    "stats": {
+      "criticalStrikeChance": 15
+    },
+    "cost": 600,
+    "tags": [
+      "MARKSMAN"
+    ]
+  },
+  "1026": {
+    "id": 1026,
+    "name": "Blasting Wand",
+    "rank": [
+      "BASIC"
+    ],
+    "stats": {
+      "abilityPower": 45
+    },
+    "cost": 850,
+    "tags": [
+      "MAGE",
+      "SUPPORT"
+    ]
+  },
+  "1027": {
+    "id": 1027,
+    "name": "Sapphire Crystal",
+    "rank": [
+      "BASIC"
+    ],
+    "stats": {
+      "mana": 300
+    },
+    "cost": 300,
+    "tags": [
+      "MAGE",
+      "TANK"
+    ]
+  },
+  "1028": {
+    "id": 1028,
+    "name": "Ruby Crystal",
+    "rank": [
+      "BASIC"
+    ],
+    "stats": {
+      "health": 150
+    },
+    "cost": 400,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN",
+      "MAGE",
+      "TANK",
+      "SUPPORT"
+    ]
+  },
+  "1029": {
+    "id": 1029,
+    "name": "Cloth Armor",
+    "rank": [
+      "BASIC"
+    ],
+    "stats": {
+      "armor": 15
+    },
+    "cost": 300,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN",
+      "MAGE",
+      "TANK",
+      "SUPPORT"
+    ]
+  },
+  "1031": {
+    "id": 1031,
+    "name": "Chain Vest",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "armor": 40
+    },
+    "cost": 800,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN",
+      "TANK"
+    ]
+  },
+  "1033": {
+    "id": 1033,
+    "name": "Null-Magic Mantle",
+    "rank": [
+      "BASIC"
+    ],
+    "stats": {
+      "magicResistance": 20
+    },
+    "cost": 400,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN",
+      "MAGE",
+      "TANK",
+      "SUPPORT"
+    ]
+  },
+  "1036": {
+    "id": 1036,
+    "name": "Long Sword",
+    "rank": [
+      "BASIC"
+    ],
+    "stats": {
+      "attackDamage": 10
+    },
+    "cost": 350,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN"
+    ]
+  },
+  "1037": {
+    "id": 1037,
+    "name": "Pickaxe",
+    "rank": [
+      "BASIC"
+    ],
+    "stats": {
+      "attackDamage": 25
+    },
+    "cost": 875,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN"
+    ]
+  },
+  "1038": {
+    "id": 1038,
+    "name": "B. F. Sword",
+    "rank": [
+      "BASIC"
+    ],
+    "stats": {
+      "attackDamage": 40
+    },
+    "cost": 1300,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN"
+    ]
+  },
+  "1042": {
+    "id": 1042,
+    "name": "Dagger",
+    "rank": [
+      "BASIC"
+    ],
+    "stats": {
+      "attackSpeed": 10
+    },
+    "cost": 250,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN"
+    ]
+  },
+  "1043": {
+    "id": 1043,
+    "name": "Recurve Bow",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "attackSpeed": 15
+    },
+    "cost": 700,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "1052": {
+    "id": 1052,
+    "name": "Amplifying Tome",
+    "rank": [
+      "BASIC"
+    ],
+    "stats": {
+      "abilityPower": 20
+    },
+    "cost": 400,
+    "tags": [
+      "MAGE",
+      "SUPPORT"
+    ]
+  },
+  "1053": {
+    "id": 1053,
+    "name": "Vampiric Scepter",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "attackDamage": 15,
+      "lifesteal": 7
+    },
+    "cost": 900,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN"
+    ]
+  },
+  "1054": {
+    "id": 1054,
+    "name": "Doran's Shield",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {
+      "health": 110,
+      "healthRegen": 4
+    },
+    "cost": 450,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN",
+      "MAGE",
+      "TANK",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "1055": {
+    "id": 1055,
+    "name": "Doran's Blade",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {
+      "attackDamage": 10,
+      "health": 80,
+      "lifesteal": 3
+    },
+    "cost": 450,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN",
+      "LIFESTEAL_VAMP"
+    ]
+  },
+  "1056": {
+    "id": 1056,
+    "name": "Doran's Ring",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {
+      "abilityPower": 18,
+      "health": 90
+    },
+    "cost": 400,
+    "tags": [
+      "MAGE",
+      "MANA_AND_REG",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "1057": {
+    "id": 1057,
+    "name": "Negatron Cloak",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "magicResistance": 45
+    },
+    "cost": 850,
+    "tags": [
+      "FIGHTER",
+      "TANK",
+      "SUPPORT"
+    ]
+  },
+  "1058": {
+    "id": 1058,
+    "name": "Needlessly Large Rod",
+    "rank": [
+      "BASIC"
+    ],
+    "stats": {
+      "abilityPower": 65
+    },
+    "cost": 1200,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "1082": {
+    "id": 1082,
+    "name": "Dark Seal",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {
+      "abilityPower": 15,
+      "health": 50
+    },
+    "cost": 350,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "1083": {
+    "id": 1083,
+    "name": "Cull",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {
+      "attackDamage": 7
+    },
+    "cost": 450,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN",
+      "LIFESTEAL_VAMP",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "1101": {
+    "id": 1101,
+    "name": "Scorchclaw Pup",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {},
+    "cost": 450,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN",
+      "MAGE",
+      "TANK",
+      "LIFESTEAL_VAMP"
+    ]
+  },
+  "1102": {
+    "id": 1102,
+    "name": "Gustwalker Hatchling",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {},
+    "cost": 450,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN",
+      "MAGE",
+      "TANK",
+      "LIFESTEAL_VAMP"
+    ]
+  },
+  "1103": {
+    "id": 1103,
+    "name": "Mosstomper Seedling",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {},
+    "cost": 450,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN",
+      "MAGE",
+      "TANK",
+      "LIFESTEAL_VAMP"
+    ]
+  },
+  "1500": {
+    "id": 1500,
+    "name": "Ohmwrecker (Turret Item)",
+    "rank": [
+      "TURRET"
+    ],
+    "stats": {
+      "armorPenetration": 30
+    },
+    "cost": 0,
+    "tags": []
+  },
+  "1501": {
+    "id": 1501,
+    "name": "Lane Swap Detector",
+    "rank": [
+      "TURRET"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "1502": {
+    "id": 1502,
+    "name": "Reinforced Armor (Turret Item)",
+    "rank": [
+      "TURRET"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "1503": {
+    "id": 1503,
+    "name": "Warden's Eye",
+    "rank": [
+      "TURRET"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "1506": {
+    "id": 1506,
+    "name": "Base Turret Reinforced Armor (Turret Item)",
+    "rank": [
+      "TURRET"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "1507": {
+    "id": 1507,
+    "name": "Overcharged",
+    "rank": [
+      "TURRET"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "1508": {
+    "id": 1508,
+    "name": "Anti-Tower Socks",
+    "rank": [
+      "MINION"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "1509": {
+    "id": 1509,
+    "name": "Gusto",
+    "rank": [
+      "MINION"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "1510": {
+    "id": 1510,
+    "name": "Phreakish Gusto",
+    "rank": [
+      "MINION"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "1511": {
+    "id": 1511,
+    "name": "Super Mech Armor",
+    "rank": [
+      "MINION"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "1512": {
+    "id": 1512,
+    "name": "Super Mech Power Field",
+    "rank": [
+      "MINION"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "1515": {
+    "id": 1515,
+    "name": "Turret Plating",
+    "rank": [
+      "TURRET"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "2003": {
+    "id": 2003,
+    "name": "Health Potion",
+    "rank": [
+      "POTION"
+    ],
+    "stats": {},
+    "cost": 50,
+    "tags": [
+      "HEALTH_AND_REG"
+    ]
+  },
+  "2010": {
+    "id": 2010,
+    "name": "Total Biscuit of Everlasting Will",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "2019": {
+    "id": 2019,
+    "name": "Steel Sigil",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "armor": 30,
+      "attackDamage": 15
+    },
+    "cost": 1100,
+    "tags": [
+      "FIGHTER"
+    ]
+  },
+  "2020": {
+    "id": 2020,
+    "name": "The Brutalizer",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "attackDamage": 25,
+      "lethality": 5,
+      "abilityHaste": 10
+    },
+    "cost": 1337,
+    "tags": [
+      "ASSASSIN"
+    ]
+  },
+  "2021": {
+    "id": 2021,
+    "name": "Tunneler",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "attackDamage": 15,
+      "health": 250
+    },
+    "cost": 1150,
+    "tags": [
+      "FIGHTER"
+    ]
+  },
+  "2022": {
+    "id": 2022,
+    "name": "Glowing Mote",
+    "rank": [
+      "BASIC"
+    ],
+    "stats": {
+      "abilityHaste": 5
+    },
+    "cost": 250,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN",
+      "MAGE",
+      "TANK",
+      "SUPPORT"
+    ]
+  },
+  "2031": {
+    "id": 2031,
+    "name": "Refillable Potion",
+    "rank": [
+      "POTION"
+    ],
+    "stats": {},
+    "cost": 150,
+    "tags": [
+      "HEALTH_AND_REG"
+    ]
+  },
+  "2049": {
+    "id": 2049,
+    "name": "Guardian's Amulet",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {
+      "abilityPower": 20,
+      "healAndShieldPower": 15,
+      "abilityHaste": 20
+    },
+    "cost": 500,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "2050": {
+    "id": 2050,
+    "name": "Guardian's Shroud",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {
+      "abilityPower": 35,
+      "health": 300,
+      "abilityHaste": 15
+    },
+    "cost": 500,
+    "tags": [
+      "MAGE",
+      "TANK"
+    ]
+  },
+  "2051": {
+    "id": 2051,
+    "name": "Guardian's Horn",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {
+      "health": 150,
+      "healthRegen": 20
+    },
+    "cost": 950,
+    "tags": [
+      "FIGHTER",
+      "TANK",
+      "SUPPORT"
+    ]
+  },
+  "2052": {
+    "id": 2052,
+    "name": "Poro-Snax",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "2055": {
+    "id": 2055,
+    "name": "Control Ward",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 75,
+    "tags": []
+  },
+  "2065": {
+    "id": 2065,
+    "name": "Shurelya's Battlesong",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 50,
+      "manaRegen": 125,
+      "movespeed": 4,
+      "abilityHaste": 15
+    },
+    "cost": 2200,
+    "tags": [
+      "SUPPORT",
+      "MOVEMENT"
+    ]
+  },
+  "2138": {
+    "id": 2138,
+    "name": "Elixir of Iron",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 500,
+    "tags": [
+      "HEALTH_AND_REG",
+      "MOVEMENT"
+    ]
+  },
+  "2139": {
+    "id": 2139,
+    "name": "Elixir of Sorcery",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 500,
+    "tags": [
+      "ABILITY_POWER",
+      "MANA_AND_REG",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "2140": {
+    "id": 2140,
+    "name": "Elixir of Wrath",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 500,
+    "tags": [
+      "ATTACK_DAMAGE",
+      "LIFESTEAL_VAMP"
+    ]
+  },
+  "2141": {
+    "id": 2141,
+    "name": "Cappa Juice",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 300,
+    "tags": []
+  },
+  "2142": {
+    "id": 2142,
+    "name": "Juice of Power",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 500,
+    "tags": [
+      "ATTACK_DAMAGE",
+      "ABILITY_POWER"
+    ]
+  },
+  "2143": {
+    "id": 2143,
+    "name": "Juice of Vitality",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 500,
+    "tags": [
+      "HEALTH_AND_REG"
+    ]
+  },
+  "2144": {
+    "id": 2144,
+    "name": "Juice of Haste",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 500,
+    "tags": []
+  },
+  "2145": {
+    "id": 2145,
+    "name": "Lucky Dice",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "2146": {
+    "id": 2146,
+    "name": "Enhanced Lucky Dice",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "2150": {
+    "id": 2150,
+    "name": "Elixir of Skill",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "2151": {
+    "id": 2151,
+    "name": "Elixir of Avarice",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "2152": {
+    "id": 2152,
+    "name": "Elixir of Force",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "2420": {
+    "id": 2420,
+    "name": "Seeker's Armguard",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "abilityPower": 40,
+      "armor": 25
+    },
+    "cost": 1600,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "2421": {
+    "id": 2421,
+    "name": "Shattered Armguard",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "abilityPower": 40,
+      "armor": 25
+    },
+    "cost": 1600,
+    "tags": []
+  },
+  "2422": {
+    "id": 2422,
+    "name": "Slightly Magical Boots",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "movespeed": 25
+    },
+    "cost": 0,
+    "tags": []
+  },
+  "2501": {
+    "id": 2501,
+    "name": "Overlord's Bloodmail",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 30,
+      "health": 550
+    },
+    "cost": 3300,
+    "tags": [
+      "FIGHTER",
+      "TANK"
+    ]
+  },
+  "2502": {
+    "id": 2502,
+    "name": "Unending Despair",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armor": 25,
+      "health": 400,
+      "magicResistance": 25,
+      "abilityHaste": 10
+    },
+    "cost": 2800,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "2503": {
+    "id": 2503,
+    "name": "Blackfire Torch",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 80,
+      "mana": 600,
+      "abilityHaste": 20
+    },
+    "cost": 2800,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "2504": {
+    "id": 2504,
+    "name": "Kaenic Rookern",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "health": 400,
+      "healthRegen": 100,
+      "magicResistance": 80
+    },
+    "cost": 2900,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "2508": {
+    "id": 2508,
+    "name": "Fated Ashes",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "abilityPower": 30
+    },
+    "cost": 900,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "3002": {
+    "id": 3002,
+    "name": "Trailblazer",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armor": 40,
+      "health": 250,
+      "movespeed": 4
+    },
+    "cost": 2400,
+    "tags": [
+      "SUPPORT",
+      "TANK"
+    ]
+  },
+  "3003": {
+    "id": 3003,
+    "name": "Archangel's Staff",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 70,
+      "mana": 600,
+      "abilityHaste": 25
+    },
+    "cost": 2900,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "3004": {
+    "id": 3004,
+    "name": "Manamune",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 35,
+      "mana": 500,
+      "abilityHaste": 15
+    },
+    "cost": 2900,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "3006": {
+    "id": 3006,
+    "name": "Berserker's Greaves",
+    "rank": [
+      "BOOTS"
+    ],
+    "stats": {
+      "attackSpeed": 25,
+      "movespeed": 45
+    },
+    "cost": 1100,
+    "tags": []
+  },
+  "3009": {
+    "id": 3009,
+    "name": "Boots of Swiftness",
+    "rank": [
+      "BOOTS"
+    ],
+    "stats": {
+      "movespeed": 55
+    },
+    "cost": 1000,
+    "tags": []
+  },
+  "3010": {
+    "id": 3010,
+    "name": "Symbiotic Soles",
+    "rank": [
+      "BOOTS"
+    ],
+    "stats": {
+      "movespeed": 40
+    },
+    "cost": 900,
+    "tags": []
+  },
+  "3013": {
+    "id": 3013,
+    "name": "Synchronized Souls",
+    "rank": [
+      "BOOTS"
+    ],
+    "stats": {
+      "movespeed": 45
+    },
+    "cost": 900,
+    "tags": []
+  },
+  "3020": {
+    "id": 3020,
+    "name": "Sorcerer's Shoes",
+    "rank": [
+      "BOOTS"
+    ],
+    "stats": {
+      "magicPenetration": 12,
+      "movespeed": 45
+    },
+    "cost": 1100,
+    "tags": []
+  },
+  "3024": {
+    "id": 3024,
+    "name": "Glacial Buckler",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "armor": 25,
+      "mana": 300,
+      "abilityHaste": 10
+    },
+    "cost": 900,
+    "tags": [
+      "TANK",
+      "SUPPORT"
+    ]
+  },
+  "3026": {
+    "id": 3026,
+    "name": "Guardian Angel",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armor": 45,
+      "attackDamage": 55
+    },
+    "cost": 3200,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN"
+    ]
+  },
+  "3031": {
+    "id": 3031,
+    "name": "Infinity Edge",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 65,
+      "criticalStrikeChance": 25,
+      "criticalStrikeDamage": 40
+    },
+    "cost": 3450,
+    "tags": [
+      "MARKSMAN"
+    ]
+  },
+  "3032": {
+    "id": 3032,
+    "name": "Yun Tal Wildarrows",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 55,
+      "attackSpeed": 35
+    },
+    "cost": 3000,
+    "tags": [
+      "MARKSMAN",
+      "ARMOR_PEN"
+    ]
+  },
+  "3033": {
+    "id": 3033,
+    "name": "Mortal Reminder",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armorPenetration": 35,
+      "attackDamage": 35,
+      "criticalStrikeChance": 25
+    },
+    "cost": 3300,
+    "tags": [
+      "MARKSMAN"
+    ]
+  },
+  "3035": {
+    "id": 3035,
+    "name": "Last Whisper",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "armorPenetration": 18,
+      "attackDamage": 20
+    },
+    "cost": 1450,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN"
+    ]
+  },
+  "3036": {
+    "id": 3036,
+    "name": "Lord Dominik's Regards",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armorPenetration": 40,
+      "attackDamage": 35,
+      "criticalStrikeChance": 25
+    },
+    "cost": 3100,
+    "tags": [
+      "MARKSMAN"
+    ]
+  },
+  "3040": {
+    "id": 3040,
+    "name": "Seraph's Embrace",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 70,
+      "mana": 1000,
+      "abilityHaste": 25
+    },
+    "cost": 2900,
+    "tags": []
+  },
+  "3041": {
+    "id": 3041,
+    "name": "Mejai's Soulstealer",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 20,
+      "health": 100
+    },
+    "cost": 1500,
+    "tags": [
+      "MAGE",
+      "MOVEMENT"
+    ]
+  },
+  "3042": {
+    "id": 3042,
+    "name": "Muramana",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 35,
+      "mana": 860,
+      "abilityHaste": 15
+    },
+    "cost": 2900,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "3044": {
+    "id": 3044,
+    "name": "Phage",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "attackDamage": 15,
+      "health": 200
+    },
+    "cost": 1100,
+    "tags": [
+      "FIGHTER",
+      "TANK"
+    ]
+  },
+  "3046": {
+    "id": 3046,
+    "name": "Phantom Dancer",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackSpeed": 60,
+      "criticalStrikeChance": 25,
+      "movespeed": 8
+    },
+    "cost": 2650,
+    "tags": [
+      "MARKSMAN",
+      "MOVEMENT"
+    ]
+  },
+  "3047": {
+    "id": 3047,
+    "name": "Plated Steelcaps",
+    "rank": [
+      "BOOTS"
+    ],
+    "stats": {
+      "armor": 25,
+      "movespeed": 45
+    },
+    "cost": 1200,
+    "tags": []
+  },
+  "3050": {
+    "id": 3050,
+    "name": "Zeke's Convergence",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armor": 25,
+      "health": 300,
+      "magicResistance": 25,
+      "abilityHaste": 10
+    },
+    "cost": 2200,
+    "tags": [
+      "TANK",
+      "SUPPORT"
+    ]
+  },
+  "3051": {
+    "id": 3051,
+    "name": "Hearthbound Axe",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "attackDamage": 20,
+      "attackSpeed": 20
+    },
+    "cost": 1200,
+    "tags": [
+      "FIGHTER",
+      "MOVEMENT",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "3053": {
+    "id": 3053,
+    "name": "Sterak's Gage",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "health": 400,
+      "tenacity": 20
+    },
+    "cost": 3200,
+    "tags": [
+      "FIGHTER",
+      "ATTACK_DAMAGE"
+    ]
+  },
+  "3057": {
+    "id": 3057,
+    "name": "Sheen",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "abilityHaste": 10
+    },
+    "cost": 900,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "MAGE",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "3065": {
+    "id": 3065,
+    "name": "Spirit Visage",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "health": 400,
+      "healthRegen": 100,
+      "magicResistance": 50,
+      "abilityHaste": 10
+    },
+    "cost": 2700,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "3066": {
+    "id": 3066,
+    "name": "Winged Moonplate",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "health": 200,
+      "movespeed": 4
+    },
+    "cost": 800,
+    "tags": [
+      "TANK",
+      "MOVEMENT"
+    ]
+  },
+  "3067": {
+    "id": 3067,
+    "name": "Kindlegem",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "health": 200,
+      "abilityHaste": 10
+    },
+    "cost": 800,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN",
+      "MAGE",
+      "TANK",
+      "SUPPORT"
+    ]
+  },
+  "3068": {
+    "id": 3068,
+    "name": "Sunfire Aegis",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armor": 50,
+      "health": 350,
+      "abilityHaste": 10
+    },
+    "cost": 2700,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "3070": {
+    "id": 3070,
+    "name": "Tear of the Goddess",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {
+      "mana": 240
+    },
+    "cost": 400,
+    "tags": [
+      "MARKSMAN",
+      "MAGE"
+    ]
+  },
+  "3071": {
+    "id": 3071,
+    "name": "Black Cleaver",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 40,
+      "health": 400,
+      "abilityHaste": 20
+    },
+    "cost": 3000,
+    "tags": [
+      "FIGHTER",
+      "ONHIT_EFFECTS",
+      "ARMOR_PEN",
+      "MOVEMENT"
+    ]
+  },
+  "3072": {
+    "id": 3072,
+    "name": "Bloodthirster",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 80,
+      "lifesteal": 15
+    },
+    "cost": 3400,
+    "tags": [
+      "MARKSMAN"
+    ]
+  },
+  "3073": {
+    "id": 3073,
+    "name": "Experimental Hexplate",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 40,
+      "attackSpeed": 20,
+      "health": 450
+    },
+    "cost": 3000,
+    "tags": [
+      "FIGHTER",
+      "ABILITY_HASTE",
+      "MOVEMENT"
+    ]
+  },
+  "3074": {
+    "id": 3074,
+    "name": "Ravenous Hydra",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 65,
+      "lifesteal": 12,
+      "abilityHaste": 15
+    },
+    "cost": 3300,
+    "tags": [
+      "FIGHTER"
+    ]
+  },
+  "3075": {
+    "id": 3075,
+    "name": "Thornmail",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armor": 75,
+      "health": 150
+    },
+    "cost": 2450,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "3076": {
+    "id": 3076,
+    "name": "Bramble Vest",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "armor": 30
+    },
+    "cost": 800,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "3077": {
+    "id": 3077,
+    "name": "Tiamat",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "attackDamage": 20
+    },
+    "cost": 1200,
+    "tags": [
+      "FIGHTER",
+      "TANK",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "3078": {
+    "id": 3078,
+    "name": "Trinity Force",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 36,
+      "attackSpeed": 30,
+      "health": 333,
+      "abilityHaste": 15
+    },
+    "cost": 3333,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "MOVEMENT"
+    ]
+  },
+  "3082": {
+    "id": 3082,
+    "name": "Warden's Mail",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "armor": 40
+    },
+    "cost": 1000,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "3083": {
+    "id": 3083,
+    "name": "Warmog's Armor",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "health": 1000,
+      "healthRegen": 100
+    },
+    "cost": 3100,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "3084": {
+    "id": 3084,
+    "name": "Heartsteel",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "health": 900,
+      "healthRegen": 100
+    },
+    "cost": 3000,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "3085": {
+    "id": 3085,
+    "name": "Runaan's Hurricane",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackSpeed": 40,
+      "criticalStrikeChance": 25,
+      "movespeed": 4
+    },
+    "cost": 2650,
+    "tags": [
+      "MARKSMAN",
+      "ONHIT_EFFECTS",
+      "MOVEMENT"
+    ]
+  },
+  "3086": {
+    "id": 3086,
+    "name": "Zeal",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "attackSpeed": 15,
+      "criticalStrikeChance": 15,
+      "movespeed": 4
+    },
+    "cost": 1200,
+    "tags": [
+      "MARKSMAN",
+      "MOVEMENT"
+    ]
+  },
+  "3087": {
+    "id": 3087,
+    "name": "Statikk Shiv",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 45,
+      "attackSpeed": 30,
+      "movespeed": 4
+    },
+    "cost": 2700,
+    "tags": [
+      "MARKSMAN",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "3089": {
+    "id": 3089,
+    "name": "Rabadon's Deathcap",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 130
+    },
+    "cost": 3600,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "3091": {
+    "id": 3091,
+    "name": "Wit's End",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackSpeed": 50,
+      "magicResistance": 45,
+      "tenacity": 20
+    },
+    "cost": 2800,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "3094": {
+    "id": 3094,
+    "name": "Rapid Firecannon",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackSpeed": 35,
+      "criticalStrikeChance": 25,
+      "movespeed": 4
+    },
+    "cost": 2650,
+    "tags": [
+      "MARKSMAN",
+      "MOVEMENT"
+    ]
+  },
+  "3100": {
+    "id": 3100,
+    "name": "Lich Bane",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 115,
+      "movespeed": 4,
+      "abilityHaste": 10
+    },
+    "cost": 3200,
+    "tags": [
+      "MAGE",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "3102": {
+    "id": 3102,
+    "name": "Banshee's Veil",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 105,
+      "magicResistance": 40
+    },
+    "cost": 3000,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "3105": {
+    "id": 3105,
+    "name": "Aegis of the Legion",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "armor": 25,
+      "magicResistance": 25,
+      "abilityHaste": 10
+    },
+    "cost": 1100,
+    "tags": [
+      "TANK",
+      "SUPPORT"
+    ]
+  },
+  "3107": {
+    "id": 3107,
+    "name": "Redemption",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "healAndShieldPower": 10,
+      "health": 200,
+      "manaRegen": 100,
+      "abilityHaste": 15
+    },
+    "cost": 2300,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "3108": {
+    "id": 3108,
+    "name": "Fiendish Codex",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "abilityPower": 25,
+      "abilityHaste": 10
+    },
+    "cost": 850,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "3109": {
+    "id": 3109,
+    "name": "Knight's Vow",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armor": 40,
+      "health": 200,
+      "healthRegen": 100,
+      "abilityHaste": 10
+    },
+    "cost": 2300,
+    "tags": [
+      "TANK",
+      "SUPPORT"
+    ]
+  },
+  "3110": {
+    "id": 3110,
+    "name": "Frozen Heart",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armor": 75,
+      "mana": 400,
+      "abilityHaste": 20
+    },
+    "cost": 2500,
+    "tags": [
+      "TANK",
+      "SUPPORT"
+    ]
+  },
+  "3111": {
+    "id": 3111,
+    "name": "Mercury's Treads",
+    "rank": [
+      "BOOTS"
+    ],
+    "stats": {
+      "magicResistance": 20,
+      "movespeed": 45,
+      "tenacity": 30
+    },
+    "cost": 1250,
+    "tags": []
+  },
+  "3112": {
+    "id": 3112,
+    "name": "Guardian's Orb",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {
+      "abilityPower": 50,
+      "health": 150
+    },
+    "cost": 950,
+    "tags": [
+      "MAGE",
+      "TANK",
+      "SUPPORT",
+      "MANA_AND_REG"
+    ]
+  },
+  "3113": {
+    "id": 3113,
+    "name": "Aether Wisp",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "abilityPower": 30,
+      "movespeed": 4
+    },
+    "cost": 900,
+    "tags": [
+      "MAGE",
+      "MOVEMENT"
+    ]
+  },
+  "3114": {
+    "id": 3114,
+    "name": "Forbidden Idol",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "healAndShieldPower": 8,
+      "manaRegen": 50
+    },
+    "cost": 600,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "3115": {
+    "id": 3115,
+    "name": "Nashor's Tooth",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 80,
+      "attackSpeed": 50,
+      "abilityHaste": 15
+    },
+    "cost": 3000,
+    "tags": [
+      "MARKSMAN",
+      "MAGE",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "3116": {
+    "id": 3116,
+    "name": "Rylai's Crystal Scepter",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 65,
+      "health": 400
+    },
+    "cost": 2600,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "3118": {
+    "id": 3118,
+    "name": "Malignance",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 85,
+      "mana": 600,
+      "abilityHaste": 15
+    },
+    "cost": 2700,
+    "tags": [
+      "MAGE",
+      "ABILITY_HASTE"
+    ]
+  },
+  "3119": {
+    "id": 3119,
+    "name": "Winter's Approach",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "health": 550,
+      "mana": 500,
+      "abilityHaste": 15
+    },
+    "cost": 2400,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "3121": {
+    "id": 3121,
+    "name": "Fimbulwinter",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "health": 550,
+      "mana": 860,
+      "abilityHaste": 15
+    },
+    "cost": 2400,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "3123": {
+    "id": 3123,
+    "name": "Executioner's Calling",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "attackDamage": 15
+    },
+    "cost": 800,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN"
+    ]
+  },
+  "3124": {
+    "id": 3124,
+    "name": "Guinsoo's Rageblade",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 30,
+      "attackDamage": 30,
+      "attackSpeed": 25
+    },
+    "cost": 3000,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "3133": {
+    "id": 3133,
+    "name": "Caulfield's Warhammer",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "attackDamage": 20,
+      "abilityHaste": 10
+    },
+    "cost": 1050,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN"
+    ]
+  },
+  "3134": {
+    "id": 3134,
+    "name": "Serrated Dirk",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "attackDamage": 20,
+      "lethality": 10
+    },
+    "cost": 1000,
+    "tags": [
+      "ASSASSIN",
+      "ARMOR_PEN"
+    ]
+  },
+  "3135": {
+    "id": 3135,
+    "name": "Void Staff",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 95,
+      "magicPenetration": 40
+    },
+    "cost": 3000,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "3137": {
+    "id": 3137,
+    "name": "Cryptbloom",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 60,
+      "magicPenetration": 30,
+      "abilityHaste": 20
+    },
+    "cost": 2850,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "3139": {
+    "id": 3139,
+    "name": "Mercurial Scimitar",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 40,
+      "lifesteal": 10,
+      "magicResistance": 40
+    },
+    "cost": 3200,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "MOVEMENT"
+    ]
+  },
+  "3140": {
+    "id": 3140,
+    "name": "Quicksilver Sash",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "magicResistance": 30
+    },
+    "cost": 1300,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN"
+    ]
+  },
+  "3142": {
+    "id": 3142,
+    "name": "Youmuu's Ghostblade",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 55,
+      "lethality": 18,
+      "movespeed": 4
+    },
+    "cost": 2800,
+    "tags": [
+      "ASSASSIN",
+      "MOVEMENT"
+    ]
+  },
+  "3143": {
+    "id": 3143,
+    "name": "Randuin's Omen",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armor": 75,
+      "health": 350
+    },
+    "cost": 2700,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "3144": {
+    "id": 3144,
+    "name": "Scout's Slingshot",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "attackSpeed": 20
+    },
+    "cost": 600,
+    "tags": [
+      "MARKSMAN",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "3145": {
+    "id": 3145,
+    "name": "Hextech Alternator",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "abilityPower": 45
+    },
+    "cost": 1100,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "3147": {
+    "id": 3147,
+    "name": "Haunting Guise",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "abilityPower": 30,
+      "health": 200
+    },
+    "cost": 1300,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "3152": {
+    "id": 3152,
+    "name": "Hextech Rocketbelt",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 60,
+      "health": 350,
+      "abilityHaste": 15
+    },
+    "cost": 2600,
+    "tags": [
+      "MAGE",
+      "MOVEMENT"
+    ]
+  },
+  "3153": {
+    "id": 3153,
+    "name": "Blade of the Ruined King",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 40,
+      "attackSpeed": 25,
+      "lifesteal": 10
+    },
+    "cost": 3200,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "3155": {
+    "id": 3155,
+    "name": "Hexdrinker",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "attackDamage": 25,
+      "magicResistance": 25
+    },
+    "cost": 1300,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN"
+    ]
+  },
+  "3156": {
+    "id": 3156,
+    "name": "Maw of Malmortius",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 60,
+      "magicResistance": 40,
+      "abilityHaste": 15
+    },
+    "cost": 3100,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN"
+    ]
+  },
+  "3157": {
+    "id": 3157,
+    "name": "Zhonya's Hourglass",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 105,
+      "armor": 50
+    },
+    "cost": 3250,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "3158": {
+    "id": 3158,
+    "name": "Ionian Boots of Lucidity",
+    "rank": [
+      "BOOTS"
+    ],
+    "stats": {
+      "movespeed": 45,
+      "abilityHaste": 10
+    },
+    "cost": 900,
+    "tags": []
+  },
+  "3161": {
+    "id": 3161,
+    "name": "Spear of Shojin",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 45,
+      "health": 450
+    },
+    "cost": 3100,
+    "tags": [
+      "FIGHTER",
+      "ABILITY_HASTE"
+    ]
+  },
+  "3165": {
+    "id": 3165,
+    "name": "Morellonomicon",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 75,
+      "health": 350,
+      "abilityHaste": 15
+    },
+    "cost": 2950,
+    "tags": [
+      "MAGE",
+      "SUPPORT"
+    ]
+  },
+  "3170": {
+    "id": 3170,
+    "name": "Swiftmarch",
+    "rank": [
+      "BOOTS"
+    ],
+    "stats": {
+      "movespeed": 65
+    },
+    "cost": 1500,
+    "tags": []
+  },
+  "3171": {
+    "id": 3171,
+    "name": "Crimson Lucidity",
+    "rank": [
+      "BOOTS"
+    ],
+    "stats": {
+      "movespeed": 50,
+      "abilityHaste": 25
+    },
+    "cost": 1400,
+    "tags": []
+  },
+  "3172": {
+    "id": 3172,
+    "name": "Zephyr",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackSpeed": 50,
+      "movespeed": 10,
+      "abilityHaste": 30,
+      "tenacity": 20
+    },
+    "cost": 2500,
+    "tags": [
+      "MARKSMAN",
+      "FIGHTER"
+    ]
+  },
+  "3173": {
+    "id": 3173,
+    "name": "Chainlaced Crushers",
+    "rank": [
+      "BOOTS"
+    ],
+    "stats": {
+      "magicResistance": 35,
+      "movespeed": 50,
+      "tenacity": 30
+    },
+    "cost": 1750,
+    "tags": []
+  },
+  "3174": {
+    "id": 3174,
+    "name": "Armored Advance",
+    "rank": [
+      "BOOTS"
+    ],
+    "stats": {
+      "armor": 40,
+      "movespeed": 50
+    },
+    "cost": 1700,
+    "tags": []
+  },
+  "3175": {
+    "id": 3175,
+    "name": "Spellslinger's Shoes",
+    "rank": [
+      "BOOTS"
+    ],
+    "stats": {
+      "magicPenetration": 18,
+      "movespeed": 50
+    },
+    "cost": 1600,
+    "tags": []
+  },
+  "3176": {
+    "id": 3176,
+    "name": "Forever Forward",
+    "rank": [
+      "BOOTS"
+    ],
+    "stats": {
+      "movespeed": 55
+    },
+    "cost": 1400,
+    "tags": []
+  },
+  "3177": {
+    "id": 3177,
+    "name": "Guardian's Blade",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {
+      "attackDamage": 30,
+      "health": 150,
+      "abilityHaste": 15
+    },
+    "cost": 950,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN",
+      "TANK"
+    ]
+  },
+  "3179": {
+    "id": 3179,
+    "name": "Umbral Glaive",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 55,
+      "lethality": 15,
+      "abilityHaste": 10
+    },
+    "cost": 2500,
+    "tags": [
+      "ASSASSIN"
+    ]
+  },
+  "3181": {
+    "id": 3181,
+    "name": "Hullbreaker",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 40,
+      "health": 500,
+      "movespeed": 4
+    },
+    "cost": 3000,
+    "tags": [
+      "FIGHTER"
+    ]
+  },
+  "3184": {
+    "id": 3184,
+    "name": "Guardian's Hammer",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {
+      "attackDamage": 25,
+      "health": 150,
+      "lifesteal": 5
+    },
+    "cost": 950,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ASSASSIN"
+    ]
+  },
+  "3190": {
+    "id": 3190,
+    "name": "Locket of the Iron Solari",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armor": 25,
+      "health": 200,
+      "magicResistance": 25,
+      "abilityHaste": 10
+    },
+    "cost": 2200,
+    "tags": [
+      "TANK",
+      "SUPPORT"
+    ]
+  },
+  "3211": {
+    "id": 3211,
+    "name": "Spectre's Cowl",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "health": 200,
+      "healthRegen": 100,
+      "magicResistance": 35
+    },
+    "cost": 1250,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "3222": {
+    "id": 3222,
+    "name": "Mikael's Blessing",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "healAndShieldPower": 12,
+      "health": 250,
+      "manaRegen": 100,
+      "abilityHaste": 15
+    },
+    "cost": 2300,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "3302": {
+    "id": 3302,
+    "name": "Terminus",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 30,
+      "attackSpeed": 35
+    },
+    "cost": 3000,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "ONHIT_EFFECTS",
+      "ARMOR_PEN",
+      "MAGIC_PEN"
+    ]
+  },
+  "3330": {
+    "id": 3330,
+    "name": "Scarecrow Effigy",
+    "rank": [
+      "TRINKET"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "3340": {
+    "id": 3340,
+    "name": "Stealth Ward",
+    "rank": [
+      "TRINKET"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "3348": {
+    "id": 3348,
+    "name": "Arcane Sweeper (Trinket)",
+    "rank": [
+      "TRINKET"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "3363": {
+    "id": 3363,
+    "name": "Farsight Alteration",
+    "rank": [
+      "TRINKET"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "3364": {
+    "id": 3364,
+    "name": "Oracle Lens",
+    "rank": [
+      "TRINKET"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "3400": {
+    "id": 3400,
+    "name": "Your Cut",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "3430": {
+    "id": 3430,
+    "name": "Rite of Ruin",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 50,
+      "criticalStrikeChance": 25,
+      "abilityHaste": 15
+    },
+    "cost": 2500,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "3504": {
+    "id": 3504,
+    "name": "Ardent Censer",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 45,
+      "healAndShieldPower": 10,
+      "manaRegen": 125,
+      "movespeed": 4
+    },
+    "cost": 2200,
+    "tags": [
+      "SUPPORT",
+      "ATTACK_SPEED"
+    ]
+  },
+  "3508": {
+    "id": 3508,
+    "name": "Essence Reaver",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 60,
+      "criticalStrikeChance": 25,
+      "abilityHaste": 15
+    },
+    "cost": 2900,
+    "tags": [
+      "MARKSMAN",
+      "MANA_AND_REG",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "3513": {
+    "id": 3513,
+    "name": "Eye of the Herald",
+    "rank": [
+      "TRINKET"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "3599": {
+    "id": 3599,
+    "name": "Black Spear",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "3742": {
+    "id": 3742,
+    "name": "Dead Man's Plate",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armor": 55,
+      "health": 350,
+      "movespeed": 4
+    },
+    "cost": 2900,
+    "tags": [
+      "FIGHTER",
+      "TANK"
+    ]
+  },
+  "3748": {
+    "id": 3748,
+    "name": "Titanic Hydra",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 40,
+      "health": 600
+    },
+    "cost": 3300,
+    "tags": [
+      "FIGHTER",
+      "TANK",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "3801": {
+    "id": 3801,
+    "name": "Crystalline Bracer",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "health": 200,
+      "healthRegen": 100
+    },
+    "cost": 800,
+    "tags": [
+      "TANK",
+      "SUPPORT"
+    ]
+  },
+  "3802": {
+    "id": 3802,
+    "name": "Lost Chapter",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "abilityPower": 40,
+      "mana": 300,
+      "abilityHaste": 10
+    },
+    "cost": 1200,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "3803": {
+    "id": 3803,
+    "name": "Catalyst of Aeons",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "health": 350,
+      "mana": 375
+    },
+    "cost": 1300,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "3814": {
+    "id": 3814,
+    "name": "Edge of Night",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 50,
+      "health": 250,
+      "lethality": 15
+    },
+    "cost": 3000,
+    "tags": [
+      "ASSASSIN"
+    ]
+  },
+  "3865": {
+    "id": 3865,
+    "name": "World Atlas",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {
+      "goldPer10": 3,
+      "health": 30,
+      "healthRegen": 25,
+      "manaRegen": 25
+    },
+    "cost": 400,
+    "tags": [
+      "SUPPORT",
+      "MAGE"
+    ]
+  },
+  "3866": {
+    "id": 3866,
+    "name": "Runic Compass",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "goldPer10": 5,
+      "health": 100,
+      "healthRegen": 50,
+      "manaRegen": 50
+    },
+    "cost": 400,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "3867": {
+    "id": 3867,
+    "name": "Bounty of Worlds",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "goldPer10": 5,
+      "health": 200,
+      "healthRegen": 75,
+      "manaRegen": 75
+    },
+    "cost": 400,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "3869": {
+    "id": 3869,
+    "name": "Celestial Opposition",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "goldPer10": 5,
+      "health": 200,
+      "healthRegen": 75,
+      "manaRegen": 75
+    },
+    "cost": 400,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "3870": {
+    "id": 3870,
+    "name": "Dream Maker",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "goldPer10": 5,
+      "health": 200,
+      "healthRegen": 75,
+      "manaRegen": 75
+    },
+    "cost": 400,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "3871": {
+    "id": 3871,
+    "name": "Zaz'Zak's Realmspike",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "goldPer10": 5,
+      "health": 200,
+      "healthRegen": 75,
+      "manaRegen": 75
+    },
+    "cost": 400,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "3876": {
+    "id": 3876,
+    "name": "Solstice Sleigh",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "goldPer10": 5,
+      "health": 200,
+      "healthRegen": 75,
+      "manaRegen": 75
+    },
+    "cost": 400,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "3877": {
+    "id": 3877,
+    "name": "Bloodsong",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "goldPer10": 5,
+      "health": 200,
+      "healthRegen": 75,
+      "manaRegen": 75
+    },
+    "cost": 400,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "3901": {
+    "id": 3901,
+    "name": "Fire at Will",
+    "rank": [],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "3902": {
+    "id": 3902,
+    "name": "Death's Daughter",
+    "rank": [],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "3903": {
+    "id": 3903,
+    "name": "Raise Morale",
+    "rank": [],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "3916": {
+    "id": 3916,
+    "name": "Oblivion Orb",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "abilityPower": 25
+    },
+    "cost": 800,
+    "tags": [
+      "MAGE",
+      "SUPPORT"
+    ]
+  },
+  "4005": {
+    "id": 4005,
+    "name": "Imperial Mandate",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 60,
+      "manaRegen": 125,
+      "abilityHaste": 20
+    },
+    "cost": 2250,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "4011": {
+    "id": 4011,
+    "name": "Sword of Blossoming Dawn",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 45,
+      "healAndShieldPower": 12,
+      "health": 200,
+      "abilityHaste": 15
+    },
+    "cost": 2500,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "4015": {
+    "id": 4015,
+    "name": "Perplexity",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 60,
+      "armorPenetration": 22,
+      "magicPenetration": 30,
+      "movespeed": 5
+    },
+    "cost": 2500,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "4016": {
+    "id": 4016,
+    "name": "Wordless Promise",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 50,
+      "healAndShieldPower": 25,
+      "abilityHaste": 25
+    },
+    "cost": 2500,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "4017": {
+    "id": 4017,
+    "name": "Hellfire Hatchet",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 35,
+      "lethality": 12
+    },
+    "cost": 2500,
+    "tags": [
+      "ASSASSIN"
+    ]
+  },
+  "4401": {
+    "id": 4401,
+    "name": "Force of Nature",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "health": 400,
+      "magicResistance": 55,
+      "movespeed": 4
+    },
+    "cost": 2800,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "4628": {
+    "id": 4628,
+    "name": "Horizon Focus",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 75,
+      "abilityHaste": 25
+    },
+    "cost": 2700,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "4629": {
+    "id": 4629,
+    "name": "Cosmic Drive",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 70,
+      "health": 350,
+      "movespeed": 4,
+      "abilityHaste": 25
+    },
+    "cost": 3000,
+    "tags": [
+      "MAGE",
+      "MOVEMENT"
+    ]
+  },
+  "4630": {
+    "id": 4630,
+    "name": "Blighting Jewel",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "abilityPower": 25,
+      "magicPenetration": 13
+    },
+    "cost": 1100,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "4632": {
+    "id": 4632,
+    "name": "Verdant Barrier",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "abilityPower": 40,
+      "magicResistance": 25
+    },
+    "cost": 1600,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "4633": {
+    "id": 4633,
+    "name": "Riftmaker",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 70,
+      "health": 350,
+      "abilityHaste": 15
+    },
+    "cost": 3100,
+    "tags": [
+      "MAGE",
+      "LIFESTEAL_VAMP"
+    ]
+  },
+  "4638": {
+    "id": 4638,
+    "name": "Watchful Wardstone",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "armor": 10,
+      "health": 150,
+      "magicResistance": 15,
+      "abilityHaste": 10
+    },
+    "cost": 1100,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "4642": {
+    "id": 4642,
+    "name": "Bandleglass Mirror",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "abilityPower": 20,
+      "manaRegen": 100,
+      "abilityHaste": 10
+    },
+    "cost": 900,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "4643": {
+    "id": 4643,
+    "name": "Vigilant Wardstone",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armor": 25,
+      "health": 250,
+      "magicResistance": 30,
+      "abilityHaste": 20
+    },
+    "cost": 2300,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "4645": {
+    "id": 4645,
+    "name": "Shadowflame",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 110,
+      "magicPenetration": 15
+    },
+    "cost": 3200,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "4646": {
+    "id": 4646,
+    "name": "Stormsurge",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 90,
+      "magicPenetration": 15,
+      "movespeed": 4
+    },
+    "cost": 2900,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "6333": {
+    "id": 6333,
+    "name": "Death's Dance",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armor": 50,
+      "attackDamage": 60,
+      "abilityHaste": 15
+    },
+    "cost": 3300,
+    "tags": [
+      "FIGHTER"
+    ]
+  },
+  "6609": {
+    "id": 6609,
+    "name": "Chempunk Chainsword",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 45,
+      "health": 450,
+      "abilityHaste": 15
+    },
+    "cost": 3100,
+    "tags": [
+      "FIGHTER",
+      "ASSASSIN"
+    ]
+  },
+  "6610": {
+    "id": 6610,
+    "name": "Sundered Sky",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 40,
+      "health": 400,
+      "abilityHaste": 10
+    },
+    "cost": 3100,
+    "tags": [
+      "FIGHTER"
+    ]
+  },
+  "6616": {
+    "id": 6616,
+    "name": "Staff of Flowing Water",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 35,
+      "healAndShieldPower": 10,
+      "manaRegen": 125,
+      "abilityHaste": 15
+    },
+    "cost": 2250,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "6617": {
+    "id": 6617,
+    "name": "Moonstone Renewer",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 25,
+      "health": 200,
+      "manaRegen": 125,
+      "abilityHaste": 20
+    },
+    "cost": 2200,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "6620": {
+    "id": 6620,
+    "name": "Echoes of Helia",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 35,
+      "health": 200,
+      "manaRegen": 125,
+      "abilityHaste": 20
+    },
+    "cost": 2200,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "6621": {
+    "id": 6621,
+    "name": "Dawncore",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 45,
+      "healAndShieldPower": 16,
+      "manaRegen": 100
+    },
+    "cost": 2500,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "6631": {
+    "id": 6631,
+    "name": "Stridebreaker",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 40,
+      "attackSpeed": 25,
+      "health": 450
+    },
+    "cost": 3300,
+    "tags": [
+      "FIGHTER",
+      "MOVEMENT"
+    ]
+  },
+  "6653": {
+    "id": 6653,
+    "name": "Liandry's Torment",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 70,
+      "health": 300
+    },
+    "cost": 3000,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "6655": {
+    "id": 6655,
+    "name": "Luden's Companion",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 100,
+      "mana": 600,
+      "abilityHaste": 10
+    },
+    "cost": 2850,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "6657": {
+    "id": 6657,
+    "name": "Rod of Ages",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 45,
+      "health": 350,
+      "mana": 400
+    },
+    "cost": 2600,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "6660": {
+    "id": 6660,
+    "name": "Bami's Cinder",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "health": 150,
+      "abilityHaste": 5
+    },
+    "cost": 900,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "6662": {
+    "id": 6662,
+    "name": "Iceborn Gauntlet",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armor": 50,
+      "health": 300,
+      "abilityHaste": 15
+    },
+    "cost": 2900,
+    "tags": [
+      "FIGHTER",
+      "TANK",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "6664": {
+    "id": 6664,
+    "name": "Hollow Radiance",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "health": 400,
+      "healthRegen": 100,
+      "magicResistance": 40,
+      "abilityHaste": 10
+    },
+    "cost": 2800,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "6665": {
+    "id": 6665,
+    "name": "Jak'Sho, The Protean",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armor": 45,
+      "health": 350,
+      "magicResistance": 45
+    },
+    "cost": 3200,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "6670": {
+    "id": 6670,
+    "name": "Noonquiver",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "attackDamage": 15,
+      "criticalStrikeChance": 20
+    },
+    "cost": 1300,
+    "tags": [
+      "MARKSMAN",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "6672": {
+    "id": 6672,
+    "name": "Kraken Slayer",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 45,
+      "attackSpeed": 40,
+      "movespeed": 4
+    },
+    "cost": 3100,
+    "tags": [
+      "MARKSMAN"
+    ]
+  },
+  "6673": {
+    "id": 6673,
+    "name": "Immortal Shieldbow",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 55,
+      "criticalStrikeChance": 25
+    },
+    "cost": 3000,
+    "tags": [
+      "MARKSMAN",
+      "HEALTH_AND_REG"
+    ]
+  },
+  "6675": {
+    "id": 6675,
+    "name": "Navori Flickerblade",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackSpeed": 40,
+      "criticalStrikeChance": 25,
+      "movespeed": 4
+    },
+    "cost": 2650,
+    "tags": [
+      "MARKSMAN"
+    ]
+  },
+  "6676": {
+    "id": 6676,
+    "name": "The Collector",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 50,
+      "criticalStrikeChance": 25,
+      "lethality": 10
+    },
+    "cost": 3000,
+    "tags": [
+      "MARKSMAN",
+      "ASSASSIN"
+    ]
+  },
+  "6690": {
+    "id": 6690,
+    "name": "Rectrix",
+    "rank": [
+      "EPIC"
+    ],
+    "stats": {
+      "attackDamage": 15,
+      "movespeed": 4
+    },
+    "cost": 775,
+    "tags": [
+      "ASSASSIN",
+      "FIGHTER"
+    ]
+  },
+  "6692": {
+    "id": 6692,
+    "name": "Eclipse",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 60,
+      "abilityHaste": 15
+    },
+    "cost": 2900,
+    "tags": [
+      "FIGHTER"
+    ]
+  },
+  "6694": {
+    "id": 6694,
+    "name": "Serylda's Grudge",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "armorPenetration": 35,
+      "attackDamage": 45,
+      "abilityHaste": 15
+    },
+    "cost": 3000,
+    "tags": [
+      "ASSASSIN"
+    ]
+  },
+  "6695": {
+    "id": 6695,
+    "name": "Serpent's Fang",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 55,
+      "lethality": 15
+    },
+    "cost": 2500,
+    "tags": [
+      "ASSASSIN"
+    ]
+  },
+  "6696": {
+    "id": 6696,
+    "name": "Axiom Arc",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 55,
+      "lethality": 18,
+      "abilityHaste": 20
+    },
+    "cost": 3000,
+    "tags": [
+      "ASSASSIN"
+    ]
+  },
+  "6697": {
+    "id": 6697,
+    "name": "Hubris",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 60,
+      "lethality": 18,
+      "abilityHaste": 10
+    },
+    "cost": 3000,
+    "tags": [
+      "ASSASSIN"
+    ]
+  },
+  "6698": {
+    "id": 6698,
+    "name": "Profane Hydra",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 60,
+      "lethality": 18,
+      "abilityHaste": 10
+    },
+    "cost": 3200,
+    "tags": [
+      "ASSASSIN"
+    ]
+  },
+  "6699": {
+    "id": 6699,
+    "name": "Voltaic Cyclosword",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 55,
+      "lethality": 18,
+      "abilityHaste": 10
+    },
+    "cost": 3000,
+    "tags": [
+      "ASSASSIN"
+    ]
+  },
+  "6701": {
+    "id": 6701,
+    "name": "Opportunity",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 55,
+      "lethality": 18
+    },
+    "cost": 2700,
+    "tags": [
+      "ASSASSIN",
+      "MOVEMENT"
+    ]
+  },
+  "8010": {
+    "id": 8010,
+    "name": "Bloodletter's Curse",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 60,
+      "health": 350,
+      "abilityHaste": 15
+    },
+    "cost": 2900,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "8020": {
+    "id": 8020,
+    "name": "Abyssal Mask",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "health": 350,
+      "magicResistance": 45,
+      "abilityHaste": 15
+    },
+    "cost": 2650,
+    "tags": [
+      "TANK",
+      "SUPPORT"
+    ]
+  },
+  "220000": {
+    "id": 220000,
+    "name": "Stat Bonus",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 750,
+    "tags": []
+  },
+  "220001": {
+    "id": 220001,
+    "name": "Legendary Fighter Item",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 2000,
+    "tags": []
+  },
+  "220002": {
+    "id": 220002,
+    "name": "Legendary Marksman Item",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 2000,
+    "tags": []
+  },
+  "220003": {
+    "id": 220003,
+    "name": "Legendary Assassin Item",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 2000,
+    "tags": []
+  },
+  "220004": {
+    "id": 220004,
+    "name": "Legendary Mage Item",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 2000,
+    "tags": []
+  },
+  "220005": {
+    "id": 220005,
+    "name": "Legendary Tank Item",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 2000,
+    "tags": []
+  },
+  "220006": {
+    "id": 220006,
+    "name": "Legendary Support Item",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 2000,
+    "tags": []
+  },
+  "220007": {
+    "id": 220007,
+    "name": "Prismatic Item",
+    "rank": [
+      "CONSUMABLE"
+    ],
+    "stats": {},
+    "cost": 4000,
+    "tags": []
+  },
+  "223005": {
+    "id": 223005,
+    "name": "Ghostcrawlers",
+    "rank": [
+      "BOOTS"
+    ],
+    "stats": {
+      "movespeed": 70
+    },
+    "cost": 500,
+    "tags": []
+  },
+  "223039": {
+    "id": 223039,
+    "name": "Atma's Reckoning",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "criticalStrikeChance": 20,
+      "health": 700
+    },
+    "cost": 2500,
+    "tags": [
+      "FIGHTER"
+    ]
+  },
+  "223095": {
+    "id": 223095,
+    "name": "Stormrazor",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 45,
+      "attackSpeed": 25,
+      "criticalStrikeChance": 25
+    },
+    "cost": 2500,
+    "tags": [
+      "MARKSMAN",
+      "ONHIT_EFFECTS"
+    ]
+  },
+  "223146": {
+    "id": 223146,
+    "name": "Hextech Gunblade",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "abilityPower": 90,
+      "attackDamage": 45,
+      "omnivamp": 15
+    },
+    "cost": 2500,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "223185": {
+    "id": 223185,
+    "name": "Guardian's Dirk",
+    "rank": [
+      "STARTER"
+    ],
+    "stats": {
+      "attackDamage": 25,
+      "lethality": 11,
+      "abilityHaste": 10
+    },
+    "cost": 500,
+    "tags": [
+      "FIGHTER",
+      "ASSASSIN"
+    ]
+  },
+  "224004": {
+    "id": 224004,
+    "name": "Spectral Cutlass",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "attackDamage": 55,
+      "lethality": 21
+    },
+    "cost": 2500,
+    "tags": [
+      "ASSASSIN"
+    ]
+  },
+  "224403": {
+    "id": 224403,
+    "name": "The Golden Spatula",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "abilityPower": 125,
+      "armor": 40,
+      "attackDamage": 90,
+      "attackSpeed": 60,
+      "criticalStrikeChance": 25,
+      "health": 350,
+      "healthRegen": 200,
+      "lifesteal": 15,
+      "magicResistance": 40,
+      "mana": 350,
+      "manaRegen": 200,
+      "movespeed": 10,
+      "abilityHaste": 20
+    },
+    "cost": 0,
+    "tags": []
+  },
+  "226630": {
+    "id": 226630,
+    "name": "Goredrinker",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "attackDamage": 55,
+      "health": 400,
+      "abilityHaste": 20
+    },
+    "cost": 0,
+    "tags": [
+      "FIGHTER"
+    ]
+  },
+  "228001": {
+    "id": 228001,
+    "name": "Anathema's Chains",
+    "rank": [
+      "LEGENDARY"
+    ],
+    "stats": {
+      "health": 650,
+      "abilityHaste": 20
+    },
+    "cost": 2500,
+    "tags": [
+      "TANK",
+      "SUPPORT"
+    ]
+  },
+  "228002": {
+    "id": 228002,
+    "name": "Wooglet's Witchcap",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "abilityPower": 300,
+      "armor": 50,
+      "abilityHaste": 20
+    },
+    "cost": 0,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "443054": {
+    "id": 443054,
+    "name": "Darksteel Talons",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "armor": 55,
+      "attackSpeed": 50,
+      "movespeed": 10
+    },
+    "cost": 0,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "443055": {
+    "id": 443055,
+    "name": "Fulmination",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "attackDamage": 55,
+      "attackSpeed": 45,
+      "movespeed": 15
+    },
+    "cost": 0,
+    "tags": [
+      "MARKSMAN"
+    ]
+  },
+  "443056": {
+    "id": 443056,
+    "name": "Demon King's Crown",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "443058": {
+    "id": 443058,
+    "name": "Shield of Molten Stone",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "armor": 100,
+      "health": 300
+    },
+    "cost": 0,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "443059": {
+    "id": 443059,
+    "name": "Cloak of Starry Night",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "health": 300,
+      "magicResistance": 100
+    },
+    "cost": 0,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "443060": {
+    "id": 443060,
+    "name": "Sword of the Divine",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "criticalStrikeChance": 50
+    },
+    "cost": 0,
+    "tags": [
+      "ASSASSIN"
+    ]
+  },
+  "443061": {
+    "id": 443061,
+    "name": "Force of Entropy",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "criticalStrikeChance": 25,
+      "health": 900,
+      "abilityHaste": 30
+    },
+    "cost": 0,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "443062": {
+    "id": 443062,
+    "name": "Sanguine Gift",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "abilityPower": 80,
+      "healAndShieldPower": 15,
+      "abilityHaste": 20
+    },
+    "cost": 0,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "443063": {
+    "id": 443063,
+    "name": "Eleisa's Miracle",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "armor": 50,
+      "magicResistance": 50,
+      "abilityHaste": 25
+    },
+    "cost": 0,
+    "tags": [
+      "SUPPORT"
+    ]
+  },
+  "443064": {
+    "id": 443064,
+    "name": "Talisman of Ascension",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "443069": {
+    "id": 443069,
+    "name": "Hamstringer",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "attackDamage": 45,
+      "attackSpeed": 40,
+      "criticalStrikeChance": 25
+    },
+    "cost": 0,
+    "tags": [
+      "MARKSMAN"
+    ]
+  },
+  "443079": {
+    "id": 443079,
+    "name": "Turbo Chemtank",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "health": 600
+    },
+    "cost": 0,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "443080": {
+    "id": 443080,
+    "name": "Twin Mask",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "443081": {
+    "id": 443081,
+    "name": "Hexbolt Companion",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "attackSpeed": 75,
+      "health": 500
+    },
+    "cost": 0,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "443090": {
+    "id": 443090,
+    "name": "Reaper's Toll",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "attackSpeed": 50,
+      "movespeed": 10
+    },
+    "cost": 0,
+    "tags": [
+      "MARKSMAN"
+    ]
+  },
+  "443193": {
+    "id": 443193,
+    "name": "Gargoyle Stoneplate",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "armor": 65,
+      "magicResistance": 65,
+      "movespeed": 10,
+      "abilityHaste": 15
+    },
+    "cost": 0,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "444636": {
+    "id": 444636,
+    "name": "Night Harvester",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "abilityPower": 90,
+      "health": 300,
+      "abilityHaste": 25
+    },
+    "cost": 0,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "444637": {
+    "id": 444637,
+    "name": "Demonic Embrace",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "abilityPower": 80,
+      "health": 700
+    },
+    "cost": 0,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "444644": {
+    "id": 444644,
+    "name": "Crown of the Shattered Queen",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "abilityPower": 85,
+      "health": 300,
+      "mana": 600,
+      "abilityHaste": 25
+    },
+    "cost": 0,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "446632": {
+    "id": 446632,
+    "name": "Divine Sunderer",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "attackDamage": 55,
+      "health": 350,
+      "abilityHaste": 20
+    },
+    "cost": 0,
+    "tags": [
+      "FIGHTER"
+    ]
+  },
+  "446656": {
+    "id": 446656,
+    "name": "Everfrost",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "abilityPower": 100,
+      "health": 250,
+      "mana": 600,
+      "abilityHaste": 25
+    },
+    "cost": 0,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "446667": {
+    "id": 446667,
+    "name": "Radiant Virtue",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "armor": 35,
+      "healAndShieldPower": 12,
+      "health": 400,
+      "magicResistance": 35
+    },
+    "cost": 0,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "446671": {
+    "id": 446671,
+    "name": "Galeforce",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "attackDamage": 65,
+      "attackSpeed": 30,
+      "criticalStrikeChance": 25,
+      "movespeed": 12
+    },
+    "cost": 0,
+    "tags": [
+      "MARKSMAN"
+    ]
+  },
+  "446691": {
+    "id": 446691,
+    "name": "Duskblade of Draktharr",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "attackDamage": 50,
+      "lethality": 20,
+      "abilityHaste": 20
+    },
+    "cost": 0,
+    "tags": [
+      "ASSASSIN"
+    ]
+  },
+  "446693": {
+    "id": 446693,
+    "name": "Prowler's Claw",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "attackDamage": 55,
+      "lethality": 22,
+      "abilityHaste": 20
+    },
+    "cost": 0,
+    "tags": [
+      "ASSASSIN"
+    ]
+  },
+  "447100": {
+    "id": 447100,
+    "name": "Mirage Blade",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "attackSpeed": 60,
+      "movespeed": 12
+    },
+    "cost": 0,
+    "tags": []
+  },
+  "447101": {
+    "id": 447101,
+    "name": "Gambler's Blade",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "attackSpeed": 70,
+      "movespeed": 8,
+      "abilityHaste": 40
+    },
+    "cost": 0,
+    "tags": []
+  },
+  "447102": {
+    "id": 447102,
+    "name": "Reality Fracture",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "abilityPower": 80,
+      "attackSpeed": 40,
+      "health": 300
+    },
+    "cost": 0,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "447103": {
+    "id": 447103,
+    "name": "Hemomancer's Helm",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "attackDamage": 60,
+      "abilityHaste": 30,
+      "omnivamp": 15
+    },
+    "cost": 0,
+    "tags": [
+      "FIGHTER"
+    ]
+  },
+  "447104": {
+    "id": 447104,
+    "name": "Innervating Locket",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "abilityPower": 70,
+      "health": 200,
+      "abilityHaste": 20
+    },
+    "cost": 0,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "447105": {
+    "id": 447105,
+    "name": "Empyrean Promise",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "abilityPower": 70,
+      "healAndShieldPower": 18,
+      "manaRegen": 125,
+      "abilityHaste": 30
+    },
+    "cost": 0,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "447106": {
+    "id": 447106,
+    "name": "Dragonheart",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {},
+    "cost": 0,
+    "tags": []
+  },
+  "447107": {
+    "id": 447107,
+    "name": "Decapitator",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "attackSpeed": 50,
+      "movespeed": 12
+    },
+    "cost": 0,
+    "tags": []
+  },
+  "447108": {
+    "id": 447108,
+    "name": "Runecarver",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "abilityPower": 80,
+      "movespeed": 8,
+      "abilityHaste": 20
+    },
+    "cost": 0,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "447109": {
+    "id": 447109,
+    "name": "Cruelty",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "abilityPower": 80,
+      "armor": 30,
+      "magicResistance": 30
+    },
+    "cost": 0,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "447110": {
+    "id": 447110,
+    "name": "Moonflair Spellblade",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "abilityPower": 85,
+      "health": 400,
+      "tenacity": 30
+    },
+    "cost": 0,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "447112": {
+    "id": 447112,
+    "name": "Flesheater",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "health": 500
+    },
+    "cost": 0,
+    "tags": []
+  },
+  "447113": {
+    "id": 447113,
+    "name": "Detonation Orb",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "abilityPower": 90,
+      "magicPenetration": 12,
+      "mana": 600,
+      "abilityHaste": 20
+    },
+    "cost": 0,
+    "tags": [
+      "MAGE"
+    ]
+  },
+  "447114": {
+    "id": 447114,
+    "name": "Reverberation",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "armor": 35,
+      "attackSpeed": 40,
+      "magicResistance": 35
+    },
+    "cost": 0,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "447115": {
+    "id": 447115,
+    "name": "Regicide",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "attackDamage": 60,
+      "lethality": 15,
+      "movespeed": 8
+    },
+    "cost": 0,
+    "tags": [
+      "ASSASSIN"
+    ]
+  },
+  "447116": {
+    "id": 447116,
+    "name": "Kinkou Jitte",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "health": 400,
+      "abilityHaste": 30
+    },
+    "cost": 0,
+    "tags": [
+      "ASSASSIN",
+      "FIGHTER",
+      "MAGE"
+    ]
+  },
+  "447118": {
+    "id": 447118,
+    "name": "Pyromancer's Cloak",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "health": 400,
+      "abilityHaste": 15
+    },
+    "cost": 0,
+    "tags": [
+      "FIGHTER",
+      "MARKSMAN",
+      "MAGE"
+    ]
+  },
+  "447119": {
+    "id": 447119,
+    "name": "Lightning Rod",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "armor": 30,
+      "attackSpeed": 30,
+      "health": 500,
+      "magicResistance": 30,
+      "movespeed": 8
+    },
+    "cost": 0,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "447120": {
+    "id": 447120,
+    "name": "Diamond-Tipped Spear",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "attackSpeed": 30
+    },
+    "cost": 0,
+    "tags": [
+      "MARKSMAN",
+      "MAGE"
+    ]
+  },
+  "447121": {
+    "id": 447121,
+    "name": "Twilight's Edge",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "abilityPower": 100,
+      "attackDamage": 70
+    },
+    "cost": 0,
+    "tags": [
+      "MARKSMAN",
+      "MAGE"
+    ]
+  },
+  "447122": {
+    "id": 447122,
+    "name": "Black Hole Gauntlet",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "health": 900,
+      "abilityHaste": 25
+    },
+    "cost": 0,
+    "tags": [
+      "TANK"
+    ]
+  },
+  "447123": {
+    "id": 447123,
+    "name": "Puppeteer",
+    "rank": [
+      "DISTRIBUTED"
+    ],
+    "stats": {
+      "attackSpeed": 30,
+      "healAndShieldPower": 15,
+      "manaRegen": 150,
+      "abilityHaste": 40
+    },
+    "cost": 0,
+    "tags": [
+      "SUPPORT"
+    ]
+  }
+}

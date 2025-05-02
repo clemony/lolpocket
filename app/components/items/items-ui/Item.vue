@@ -2,8 +2,6 @@
 const props = defineProps<{
   item: Item
   class?: HTMLAttributes['class']
-  isOpen?: boolean
-  isHovered?: boolean
 }>()
 const emit = defineEmits(['loaded'])
 
@@ -29,7 +27,7 @@ function handleLoad(){
 
     <slot />
 
-    <PrismaticShine v-if="props.isOpen || props.isHovered" class="absolute scale-107 top-0 left-0 z-1" />
+    
   </label>
 </template>
 

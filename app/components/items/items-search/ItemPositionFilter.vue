@@ -25,7 +25,7 @@ function handleChange(){
       v-for="role in itemRoles"
       :key="role.id"
       v-tippy="{content: role.id.charAt(0).toUpperCase() + role.id.slice(1)}"
-      :aria-label="role.id" class="size-fit    btn !size-14  btn-xl  mr-0 btn-square  " :class="{ 'bg-neutral border-neutral shadow-neutral/20 shadow-sm order-first  ml-19': role.id == is.dbItemRoles, 'first-of-type:ml-19': !is.dbItemRoles }">
+      :aria-label="role.id" class="size-fit grid place-items-center   btn !size-14  btn-xl  mr-0 btn-square  " :class="{ 'bg-neutral border-neutral shadow-neutral/20 shadow-sm order-first  ml-19': role.id == is.dbItemRoles, 'first-of-type:ml-19': !is.dbItemRoles }">
 
       <input
         v-model="is.dbItemRoles" class="peer hidden absolute"

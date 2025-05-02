@@ -27,7 +27,7 @@ onMounted (() => {
 </script>
 
 <template>
-  <div class="flex pl-4 pr-2 w-116 h-full flex-col items-center pb-6 justify-start  relative">
+  <div class="flex pl-4 pr-2 w-116 h-full flex-col items-center pt-18 justify-start  relative">
 
     <div class="w-full px-5 mt-4">
       <Tabs v-model:model-value="model" class=" w-full  **:pointer-events-auto ">
@@ -68,7 +68,7 @@ onMounted (() => {
       <ItemPositionFilter />
     </div>
 
-    <div class=" absolute bottom-0 w-full px-4 flex gap-2">
+    <div class=" absolute bottom-6 w-full px-4 flex gap-2">
       <div class="w-full">
         <ItemColumnDisplay v-if="route.path == '/items/stats'" />
       </div>

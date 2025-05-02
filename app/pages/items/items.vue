@@ -24,7 +24,9 @@ const captions = computed(() => {
 
 <template>
 
-<NuxtLayout name="sidebar-layout" class="">
+<NuxtLayout name="items-layout" class="">
+
+  <div class="grow" >
     <div class="w-full flex items-center pt-24 px-16 pb-12">
 
 
@@ -38,6 +40,7 @@ const captions = computed(() => {
         id="item-results"
         :list-key="is.listKey"
         class="" />
+    </div>
     </div>
   </NuxtLayout>
 </template>

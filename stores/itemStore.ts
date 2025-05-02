@@ -2,11 +2,7 @@ import { defineStore } from 'pinia'
 import type { GridApi } from 'ag-grid-community'
 
 export const useItemStore = defineStore('itemStore', () => {
-   const itemIndex = ref<Record<string, string>>({}) // { id: name }
 
-  const setIndex = (items: { id: string; name: string }[]) => {
-    itemIndex.value = Object.fromEntries(items.map(i => [i.id, i.name]))
-  }
 
   const selectedItem = ref<Item>(null)
   const selectedDatabaseItem = ref<Item>(null)

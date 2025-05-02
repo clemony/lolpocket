@@ -12,7 +12,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "generate:item-index": "node scripts/generateItemIndex.cjs",
-    "generate:champion-index": "node scripts/generateChampionIndex.cjs"
+    "generate:champion-index": "node scripts/generateChampionIndex.cjs",
+    "generate:items-lite": "node scripts/generate-items-lite.cjs"
   },
   "dependencies": {
     "@antfu/eslint-config": "^4.12.0",

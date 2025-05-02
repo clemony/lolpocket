@@ -212,13 +212,13 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowS
 
 <template>
 
-<NuxtLayout name="sidebar-layout" >
+<NuxtLayout name="items-layout" >
     <AgGridVue
       :initial-state="is.dbItemGridState"
       :grid-options="gridOptions"
       :theme="theme"
       :column-defs="colDefs"
-      class="size-full stat-grid pt-16"
+      class="h-full grow stat-grid pt-16"
       :tooltip-show-delay="400"
       @grid-pre-destroyed="onGridPreDestroyed"
       @grid-ready="onGridReady">

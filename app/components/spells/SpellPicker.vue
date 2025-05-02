@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { summonerSpells } from 'data/spells'
+import { summonerSpells } from '~~/public/api/spells'
 
 import { PopoverClose } from 'reka-ui'
 

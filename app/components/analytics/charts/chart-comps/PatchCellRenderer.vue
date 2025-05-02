@@ -7,7 +7,6 @@ console.log('💠 - params:', params)
 const patch = computed (() => {
   return params.valueFormatted.split(', ')
 })
-console.log('💠 - patch - patch:', patch)
 </script>
 
 <template>

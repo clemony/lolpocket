@@ -2,7 +2,7 @@
 import { Primitive } from 'reka-ui'
 import type { PrimitiveProps } from 'reka-ui'
 
-import {gameMaps} from 'data/maps'
+import {gameMaps} from '~~/public/api/maps'
 const props = defineProps<PrimitiveProps & {
   class?: HTMLAttributes['class']
 mapId: number

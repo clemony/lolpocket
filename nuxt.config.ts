@@ -20,8 +20,11 @@ export default defineNuxtConfig({
 
     apiParty: {
     endpoints: {
+      api:{
+      url: '/api'
+    },
       items: {
-      url: '/data/items',
+      url: '/api/items',
     },
     }
   },

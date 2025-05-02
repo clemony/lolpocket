@@ -1,14 +1,14 @@
-//node scripts/generateChampionIndex.js
+// node scripts/generateChampionIndex.js
 
-const fs = require('fs')
-const path = require('path')
+const fs = require('node:fs')
+const path = require('node:path')
 
-const championsDir = path.resolve(__dirname, '../data/champions')
+const championsDir = path.resolve(__dirname, '../public/api/champions')
 const outputFile = path.resolve(championsDir, 'index.json')
 
 const files = fs.readdirSync(championsDir).filter(file => file.endsWith('.json'))
 
-const index = files.map(file => {
+const index = files.map((file) => {
   const filePath = path.join(championsDir, file)
   const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
   return {

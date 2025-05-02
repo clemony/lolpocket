@@ -1,14 +1,14 @@
-//node scripts/generateItemIndex.js
+// node scripts/generateItemIndex.js
 
-const fs = require('fs')
-const path = require('path')
+const fs = require('node:fs')
+const path = require('node:path')
 
-const itemsDir = path.resolve(__dirname, '../data/items')
-const outputFile = path.resolve(__dirname, '../data/items/index.json')
+const itemsDir = path.resolve(__dirname, '../public/api/items')
+const outputFile = path.resolve(__dirname, '../public/api/items/index.json')
 
 const files = fs.readdirSync(itemsDir).filter(file => file.endsWith('.json'))
 
-const index = files.map(file => {
+const index = files.map((file) => {
   const filePath = path.join(itemsDir, file)
   const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
   return {

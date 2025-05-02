@@ -5,7 +5,7 @@
 .btn {
     font-weight: 400;
     font-size:  0.99rem;
-    @apply items-center justify-start font-normal text-3 gap-3;
+    @apply items-center  font-normal text-3 gap-3;
 }
   .btn.btn-neutral {
     @apply !shadow-xs text-nc;
