@@ -42,6 +42,15 @@ declare global {
     role?: string | null
   }
 
+  interface ItemFilter {
+    purchasable: boolean
+    rank: string | null
+    stats: string[] | null
+    tags: string | null
+    query: string | null
+    result: any[] | null
+  }
+
   interface Folder {
     name: string
     key: string

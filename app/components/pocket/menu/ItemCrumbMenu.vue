@@ -10,17 +10,17 @@ const pocket = computed (() => {
 })
 
 const hasData = computed (() => {
-  return (is.filterItemStats.length
-    || is.filterItemTypes != null
-    || is.filterItemCats.length
+  return (is.pItemFilter.stats.length
+    || is.pItemFilter.rank != null
+    || is.pItemFilter.tags.length
     || is.AZmodel != 0
     || is.priceModel != 0) == true
 })
 
 function clearFilters() {
-  is.filterItemStats.length = 0
-  is.filterItemTypes = null
-  is.filterItemCats.length = 0
+  is.pItemFilter.stats.length = 0
+  is.pItemFilter.rank = null
+  is.pItemFilter.tags = null
   is.AZmodel = 0
   is.priceModel = 0
 }

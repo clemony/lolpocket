@@ -2,7 +2,6 @@
 import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
 import type { ColDef, ColGroupDef, GridApi, GridOptions, GridPreDestroyedEvent, GridReadyEvent } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import { filterDbChampions } from '~/utils/filters/filterChampions'
 
 definePageMeta({
   title: 'Champion List',
@@ -13,7 +12,7 @@ definePageMeta({
 const ds = useDataStore()
 const cs = useChampStore()
 const theme = ref(pocketTheme)
-const championList = ref([...filterDbChampions()])
+const championList = ref([])
 
 const gridApi = shallowRef<GridApi | null>(null)
 
@@ -226,10 +225,10 @@ function onGridPreDestroyed(params: GridPreDestroyedEvent) {
 }
 
 watch(
-  () => filterDbChampions(),
+  () => '',
   (newVal) => {
     if (newVal && gridApi.value)
-      gridApi.value.setGridOption('rowData', [...filterDbChampions()])
+      gridApi.value.setGridOption('rowData', [])
   },
 )
 

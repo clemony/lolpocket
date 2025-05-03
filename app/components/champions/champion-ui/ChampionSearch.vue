@@ -38,7 +38,7 @@ const searchResult = computed(() => {
   return results.map(result => result.item)
 })
 watch(searchResult, (newSearchResults) => {
-  is.itemSearchResult = newSearchResults
+
   // console.log('💠 - Search Results:', newSearchResults)
 })
 </script>
@@ -54,9 +54,9 @@ watch(searchResult, (newSearchResults) => {
       class="grow !text-3 pl-2" />
 
     <slot />
-<button class="btn btn-ghost btn-square btn-sm absolute  right-2" @click="searchQuery = null">
+    <button class="btn btn-ghost btn-square btn-sm absolute  right-2" @click="searchQuery = null">
       <icon name="x-sm" class="" />
-      </button>
+    </button>
   </label>
 </template>
 

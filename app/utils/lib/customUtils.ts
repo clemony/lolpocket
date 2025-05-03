@@ -74,7 +74,7 @@ export function deepCopy<T>(obj: T): T {
   return JSON.parse(JSON.stringify(obj))
 }
 
-function findThings(arr, propKeys?){
+export function getUniqueArray(arr, propKeys?){
 if(propKeys){
   return  [
   ...new Set(

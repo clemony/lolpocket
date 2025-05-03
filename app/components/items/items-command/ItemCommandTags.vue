@@ -11,15 +11,15 @@ const searchInput = ref([])
         {{ query }}
       </button>
     </template>
-    <button v-if="is.filterItemTypes && is.filterItemTypes != ''" :appear="false" class="btn btn-xs rounded-md  bg-b2/97 !font-normal !text-2 mt-4 f gap-2" @click="is.filterItemTypes = ''">
-      {{ is.filterItemTypes }}
+    <button v-if="is.pItemFilter.tags && is.pItemFilter.tags != null" :appear="false" class="btn btn-xs rounded-md  bg-b2/97 !font-normal !text-2 mt-4 f gap-2" @click="is.pItemFilter.tags = null">
+      {{ is.pItemFilter.tags }}
 
       <icon name="x-sm" />
     </button>
 
-    <label v-for=" stat in is.filterItemStats" :key="stat.id" :appear="false" class="btn btn-xs rounded-md !font-normal  bg-b2/97 !text-2 mt-4  gap-2">
-      <input v-model="is.filterItemStats" type="checkbox" class="peer hidden" :value="stat" />
-      {{ stat.shortName }}
+    <label v-for=" stat in is.pItemFilter.stats" :key="stat" :appear="false" class="btn btn-xs rounded-md !font-normal  bg-b2/97 !text-2 mt-4  gap-2">
+      <input v-model="is.pItemFilter.tags" type="checkbox" class="peer hidden" :value="stat" />
+      {{ itemStats.find(s => s.id == stat).shortName }}
 
       <icon name="x-sm" />
     </label>

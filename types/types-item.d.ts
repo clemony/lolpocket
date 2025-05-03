@@ -1,15 +1,23 @@
 declare global {
-type stat = string | number
-
+type StatLite = number
+type StatArray = StatLite[]
   type StatKeys = keyof Item['stats']
 
-  /*   type Items = [Item] */
+  interface ItemLite {
+    name: string
+    id: number
+    rank: string[]
+    stats: StatLite[]
+    purchasable: boolean
+    cost: number
+    tags: string[]
+  }
 
   interface Item {
     id?: number
     name?: string
     nickname?: string | string[] | null
-    tier?: number
+    rank?: string[]
     type?: string
     caption?: string
     champion?: string
@@ -43,40 +51,7 @@ type stat = string | number
       'movement'?: boolean
       'lifesteal vamp'?: boolean
     }
-    stats?: {
-      ad?: number
-      ah?: number
-      ap?: number
-      armor?: number
-      armpen?: number
-      as?: number
-      cdr?: number
-      cdrunique?: number
-      crit?: number
-      gp10?: number
-      hp?: number
-      hp5?: number
-      hp5?: number
-      hsp?: number
-      hspunique?: number
-      lethality?: number
-      lethalityunique?: number
-      lifesteal?: number
-      mana?: number
-      mp5?: number
-      mp5?: number
-      mpen?: number
-      mpenflat?: number
-      mr?: number
-      ms?: number
-      msflat?: number
-      msunique?: number
-      omnivamp?: number
-      pvamp?: number
-      spellvamp?: number
-      spec?: number
-      spec2?: number
-    }
+    stats?: StatArray[]
     effects?: {
       pass?: effect
       pass2?: effect
@@ -97,7 +72,7 @@ type stat = string | number
     tags?: string[]
     req?: string | null
     removed?: boolean | string
-    cloneId?: string
+    icon?: string
   }
 
   interface ItemSet {
@@ -136,7 +111,7 @@ type stat = string | number
   interface ItemClone extends Item {
     cloneId: string
   }
-  interface Stat {
+  interface ItemStat extends StatLite {
     id: string
     displayName?: string
     checked?: boolean

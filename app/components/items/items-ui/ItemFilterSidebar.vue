@@ -7,19 +7,19 @@ const route = useRoute()
 function resetItems() {
 /*   sortItemsAZ.value = 0
   sortPrice.value = 0 */
-  is.dbItemStats = null
-  is.dbItemRoles = null
-  is.dbItemTiers = null
-  is.dbItemSearchQuery = null
-  is.dbItemSearchResult = null
+  is.itemFilter.stats = null
+  is.itemFilter.tags = null
+  is.itemFilter.rank = null
+  is.itemFilter.query = null
+  is.itemFilter.result = null
   is.listKey = is.listKey + 1
   is.itemGridApi.resetColumnState()
 }
 const model = ref('Grid')
 
 function handleSwitch(e) {
-  is.itemDBHideNoBuy = e
-  is.itemGridApi.setGridOption('rowData', [...filterDbItems()])
+  is.hideUnpurchasable = e
+  //is.itemGridApi.refreshCells()
 }
 onMounted (() => {
   route.path == '/items/list' ? model.value = 'List' : 'Grid'
@@ -28,7 +28,6 @@ onMounted (() => {
 
 <template>
   <div class="flex pl-4 pr-2 w-116 h-full flex-col items-center pt-18 justify-start  relative">
-
     <div class="w-full px-5 mt-4">
       <Tabs v-model:model-value="model" class=" w-full  **:pointer-events-auto ">
         <IndicatorTabsList class="grid grid-cols-2 h-10">
@@ -42,14 +41,13 @@ onMounted (() => {
         </IndicatorTabsList>
       </Tabs>
 
-
-      <DbItemSearch class="input w-full mt-6 shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc" />
+      <ItemSearch class="input w-full mt-6 shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc" />
     </div>
     <div class="px-5 mt-2 w-full">
       <div class="divider divider-start before:bg-b3/60 font-semibold  my-8">
         Categories
       </div>
-      <RadioFilterList />
+      <ItemRankFilter />
     </div>
 
     <div class="px-5 pt-12 pb-8 w-full">
@@ -58,14 +56,14 @@ onMounted (() => {
     <div class="mt-2 mb-4 px-5 gap-6 flex flex-col   w-full">
       <div class="gap-5 px-5  flex font-medium items-center w-full justify-end self-end">
         Hide Unpurchasable
-        <Switch v-model:model-value="is.itemDBHideNoBuy" class="dst" @update:model-value="handleSwitch($event)" />
+        <Switch v-model:model-value="is.hideUnpurchasable" class="dst" @update:model-value="handleSwitch($event)" />
       </div>
     </div>
     <div class="px-7">
       <div class="divider divider-start before:bg-b3/60 font-semibold  mb-8">
         Roles
       </div>
-      <ItemPositionFilter />
+      <ItemTagsFilter />
     </div>
 
     <div class=" absolute bottom-6 w-full px-4 flex gap-2">

@@ -12,7 +12,7 @@ export function createItem(): Item {
   return {
     name: '',
     buy: 0,
-    stats: {},
+    // stats: {},
     effects: {},
     type: '',
     // recipe: [<Item[]>([])],
@@ -20,12 +20,11 @@ export function createItem(): Item {
     removed: '',
     menu: {},
     nickname: [],
-    tier: 0,
+    rank: [''],
     caption: '',
     itemlimit: '',
     limit: '',
     modes: {},
-    cloneId: '',
   }
 }
 export function newItemSet(pocketKey?, setName?) {

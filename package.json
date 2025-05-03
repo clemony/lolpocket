@@ -62,7 +62,6 @@
     "micromatch": "^4.0.8",
     "motion-v": "^1.0.1",
     "nuxt": "^3.17.1",
-    "nuxt-api-party": "^2.2.2",
     "nuxt-svgo": "^4.1.0",
     "openapi-typescript": "^7.6.1",
     "pinia": "^3.0.2",

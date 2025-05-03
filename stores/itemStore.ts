@@ -2,8 +2,36 @@ import { defineStore } from 'pinia'
 import type { GridApi } from 'ag-grid-community'
 
 export const useItemStore = defineStore('itemStore', () => {
+  const itemFilter = ref<ItemFilter>({
+    purchasable: true,
+    rank: null,
+    stats: null,
+    tags: null,
+    query: null,
+    result: null,
+  })
 
+  const hideUnpurchasable = ref(true)
 
+  const pItemFilter = ref<ItemFilter>({
+    purchasable: true,
+    rank: null,
+    stats: null,
+    tags: null,
+    query: null,
+    result: null,
+  })
+
+  const cItemFilter = ref<ItemFilter>({
+    purchasable: true,
+    rank: null,
+    stats: null,
+    tags: null,
+    query: null,
+    result: null,
+  })
+
+  const dbItemStatListKey = ref()
   const selectedItem = ref<Item>(null)
   const selectedDatabaseItem = ref<Item>(null)
   const selectedItemSet = ref<ItemSet | null>(null)
@@ -12,23 +40,12 @@ export const useItemStore = defineStore('itemStore', () => {
   const sortItemsAZ = ref(0)
   const sortPrice = ref(0)
   const listKey = ref(0)
-  const itemSearchResult = ref()
-  const filterItemTypes = ref(null)
-  const filterItemStats = ref([])
-  const filterItemCats = ref([])
+
   const pocketItemSelect = ref<Item>(null)
   const itemPaneOpen = ref(false)
-  const itemSearchQuery = ref()
 
   const itemGridApi = shallowRef<GridApi | null>(null)
   const dbItemGridState = shallowRef(null)
-  const itemDBHideNoBuy = ref(true)
-  const dbItemTiers = ref(null)
-  const dbItemRoles = ref(null)
-  const dbItemSearchQuery = ref(null)
-  const dbItemSearchResult = ref(null)
-  const dbItemStatListKey = ref(0)
-  const dbItemStats = ref([null])
 
   const calculatorSets = ref<CalculatorSet[]>([])
   const calculateSet = ref<CalculatorSet>(null)
@@ -42,6 +59,9 @@ export const useItemStore = defineStore('itemStore', () => {
   )
 
   return {
+    itemFilter,
+    pItemFilter,
+    cItemFilter,
     selectedItem,
     selectedDatabaseItem,
     selectedItemSet,
@@ -51,12 +71,8 @@ export const useItemStore = defineStore('itemStore', () => {
     priceModel,
     sortItemsAZ,
     listKey,
-    itemSearchResult,
-    filterItemTypes,
-    filterItemStats,
-    filterItemCats,
+    dbItemStatListKey,
     pocketItemSelect,
-    itemSearchQuery,
     calculatorSets,
     calculateSet,
     calculateSet2,
@@ -64,14 +80,9 @@ export const useItemStore = defineStore('itemStore', () => {
     setsToCompare,
 
     itemGridApi,
-    itemDBHideNoBuy,
+    hideUnpurchasable,
     dbItemGridState,
-    dbItemTiers,
-    dbItemRoles,
-    dbItemSearchQuery,
-    dbItemSearchResult,
-    dbItemStatListKey,
-    dbItemStats,
+
   }
 }, {
   persist: {

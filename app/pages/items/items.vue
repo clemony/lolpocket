@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-
 definePageMeta({
   name: 'item-grid',
   title: 'Items',
@@ -9,38 +8,25 @@ definePageMeta({
 
 const ds = useDataStore()
 const is = useItemStore()
-const items = computed(() => [...(ds.items || [])])
-
-const captions = computed(() => {
-  let a = items.value.map(a => a.caption ?? '')
-  a = a.filter(caption => caption != '')
-  const i = Math.floor(Math.random() * a.length)
-  let b = a[i].replace(/\\/g, '')
-  b = b.replace('[[', ' ')
-  b = b.replace(']]', ' ')
-  return replaceFileReferencesWithImages(b)
-})
 </script>
 
 <template>
-
-<NuxtLayout name="items-layout" class="">
-
-  <div class="grow" >
-    <div class="w-full flex items-center pt-24 px-16 pb-12">
-
-
-      <h1 class="grow">Items</h1>
+  <NuxtLayout v-slot="{ items }" name="items-layout">
+    <div class="absolute inset-0 top-0 left-0 overflow-y-auto  py-24 pr-18 pl-8 ">
+      <div class=" flex items-center pb-12">
+        <h1 class="grow">
+          Items
+        </h1>
+        <!--      <div
+          class="text-1  items-center pl-3 pr-7  text-nowrap flex mt-1 "
+          v-html="captions" /> -->
+      </div>
       <div
-        class="text-1  items-center pl-3 pr-7  text-nowrap flex mt-1 "
-        v-html="captions" />
-    </div>
-    <div class="size-full items-start overflow-y-auto  px-16 no-scrollbar">
-      <ItemList
-        id="item-results"
-        :list-key="is.listKey"
-        class="" />
-    </div>
+        class=" user-select-none grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(56px,1fr))] gap-5  h-auto pt-1  rounded-lg">
+        <template v-for="item in items" :key="item.id">
+          <PopoverItem :id="item.id" :name="item.name" />
+        </template>
+      </div>
     </div>
   </NuxtLayout>
 </template>

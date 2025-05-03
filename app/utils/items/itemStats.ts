@@ -1,4 +1,4 @@
-export const statTotalGold: Stat[] = [
+export const statTotalGold: ItemStat[] = [
   {
     id: 'total',
     displayName: 'Total Gold Cost',
@@ -10,20 +10,9 @@ export const statTotalGold: Stat[] = [
     hoverClass: '',
   },
 ]
-export const itemStats: Stat[] = [
+export const itemStats: ItemStat[] = [
   {
-    id: 'ad',
-    displayName: 'Attack Damage',
-    checked: false,
-    shortName: 'AD',
-    icon: 'ad',
-    class: '',
-    bgClass: 'bg-precision text-white',
-    hoverClass: 'hover:bg-precision-w600/60',
-  },
-
-  {
-    id: 'ah',
+    id: 'abilityHaste',
     displayName: 'Ability Haste',
     checked: false,
     shortName: 'Cooldown_reduction_icon',
@@ -32,9 +21,8 @@ export const itemStats: Stat[] = [
     bgClass: 'bg-inspiration text-white',
     hoverClass: 'hover:bg-inspiration-light/60',
   },
-
   {
-    id: 'ap',
+    id: 'abilityPower',
     displayName: 'Ability Power',
     checked: false,
     shortName: 'AP',
@@ -43,7 +31,6 @@ export const itemStats: Stat[] = [
     bgClass: 'bg-sorcery text-white',
     hoverClass: 'hover:bg-sorcery-light/60',
   },
-
   {
     id: 'armor',
     displayName: 'Armor',
@@ -54,9 +41,8 @@ export const itemStats: Stat[] = [
     bgClass: 'bg-precision text-white',
     hoverClass: 'hover:bg-precision-w600/60',
   },
-
   {
-    id: 'armpen',
+    id: 'armorPenetration',
     displayName: 'Armor Penetration',
     shortName: 'APEN',
     checked: false,
@@ -65,9 +51,18 @@ export const itemStats: Stat[] = [
     bgClass: 'bg-precision text-white',
     hoverClass: 'hover:bg-precision-w600/60',
   },
-
   {
-    id: 'as',
+    id: 'attackDamage',
+    displayName: 'Attack Damage',
+    checked: false,
+    shortName: 'AD',
+    icon: 'ad',
+    class: '',
+    bgClass: 'bg-precision text-white',
+    hoverClass: 'hover:bg-precision-w600/60',
+  },
+  {
+    id: 'attackSpeed',
     displayName: 'Attack Speed',
     checked: false,
     shortName: 'AS',
@@ -76,9 +71,8 @@ export const itemStats: Stat[] = [
     bgClass: 'bg-precision text-white',
     hoverClass: 'hover:bg-precision-w600/60',
   },
-
   {
-    id: 'crit',
+    id: 'criticalStrikeChance',
     displayName: 'Critical Chance',
     checked: false,
     shortName: 'CRIT',
@@ -87,9 +81,8 @@ export const itemStats: Stat[] = [
     bgClass: 'bg-domination text-white',
     hoverClass: 'hover:bg-domination-light/60',
   },
-
   {
-    id: 'gp10',
+    id: 'goldPer10',
     displayName: 'Gold per 10',
     shortName: 'GP/10',
     checked: false,
@@ -98,31 +91,8 @@ export const itemStats: Stat[] = [
     bgClass: 'bg-precision text-white',
     hoverClass: 'hover:bg-precision-w600/60',
   },
-
   {
-    id: 'hp',
-    displayName: 'Health',
-    shortName: 'HP',
-    checked: false,
-    icon: 'health',
-    class: '',
-    bgClass: 'bg-resolve text-white',
-    hoverClass: 'hover:bg-resolve-light/60',
-  },
-
-  {
-    id: 'hp5',
-    displayName: 'Health Regen',
-    shortName: 'HP/5',
-    checked: false,
-    icon: 'hp',
-    class: '',
-    bgClass: 'bg-resolve text-white',
-    hoverClass: 'hover:bg-resolve-light/60',
-  },
-
-  {
-    id: 'hsp',
+    id: 'healAndShieldPower',
     displayName: 'Heal & Shield Power',
     checked: false,
     shortName: 'HSP',
@@ -131,7 +101,26 @@ export const itemStats: Stat[] = [
     bgClass: 'bg-inspiration text-white',
     hoverClass: 'hover:bg-inspiration-light/60',
   },
-
+  {
+    id: 'health',
+    displayName: 'Health',
+    shortName: 'HP',
+    checked: false,
+    icon: 'health',
+    class: '',
+    bgClass: 'bg-resolve text-white',
+    hoverClass: 'hover:bg-resolve-light/60',
+  },
+  {
+    id: 'healthRegen',
+    displayName: 'Health Regen',
+    shortName: 'HP/5',
+    checked: false,
+    icon: 'hp',
+    class: '',
+    bgClass: 'bg-resolve text-white',
+    hoverClass: 'hover:bg-resolve-light/60',
+  },
   {
     id: 'lethality',
     displayName: 'Lethality',
@@ -142,7 +131,6 @@ export const itemStats: Stat[] = [
     bgClass: 'bg-domination text-white',
     hoverClass: 'hover:bg-domination-light/60',
   },
-
   {
     id: 'lifesteal',
     displayName: 'Lifesteal',
@@ -153,7 +141,38 @@ export const itemStats: Stat[] = [
     bgClass: 'bg-domination text-white',
     hoverClass: 'hover:bg-domination-light/60',
   },
+  {
+    id: 'percentMagicPenetration',
+    displayName: 'Magic Penetration',
+    shortName: 'MPEN',
+    checked: false,
+    icon: 'mpen',
+    class: '',
+    bgClass: 'Magic_penetration_icon',
+    hoverClass: 'hover:bg-sorcery-light/60',
+  },
+  {
+    id: 'flatMagicPenetration',
+    displayName: 'Flat Magic Penetration',
+    shortName: 'Flat MPEN',
+    checked: false,
+    icon: 'mpen',
 
+    iconClass: '',
+    class: '',
+    bgClass: 'bg-sorcery text-white',
+    hoverClass: 'hover:bg-sorcery-light/60',
+  },
+  {
+    id: 'magicResistance',
+    displayName: 'Magic Resist',
+    checked: false,
+    shortName: 'MR',
+    icon: 'mr',
+    class: '',
+    bgClass: 'bg-sorcery text-white',
+    hoverClass: 'hover:bg-sorcery-light/60',
+  },
   {
     id: 'mana',
     displayName: 'Mana',
@@ -164,9 +183,8 @@ export const itemStats: Stat[] = [
     bgClass: 'mana',
     hoverClass: 'hover:bg-inspiration-light/60',
   },
-
   {
-    id: 'mp5',
+    id: 'manaRegen',
     displayName: 'Mana Regen',
     shortName: 'MP/5',
     checked: false,
@@ -178,42 +196,7 @@ export const itemStats: Stat[] = [
   },
 
   {
-    id: 'mpen',
-    displayName: 'Magic Penetration',
-    shortName: 'MPEN',
-    checked: false,
-    icon: 'mpen',
-    class: '',
-    bgClass: 'Magic_penetration_icon',
-    hoverClass: 'hover:bg-sorcery-light/60',
-  },
-
-  {
-    id: 'mpenflat',
-    displayName: 'Flat Magic Penetration',
-    shortName: 'Flat MPEN',
-    checked: false,
-    icon: 'mpen',
-
-    iconClass: '',
-    class: '',
-    bgClass: 'bg-sorcery text-white',
-    hoverClass: 'hover:bg-sorcery-light/60',
-  },
-
-  {
-    id: 'mr',
-    displayName: 'Magic Resist',
-    checked: false,
-    shortName: 'MR',
-    icon: 'mr',
-    class: '',
-    bgClass: 'bg-sorcery text-white',
-    hoverClass: 'hover:bg-sorcery-light/60',
-  },
-
-  {
-    id: 'ms',
+    id: 'percentMovespeed',
     displayName: 'Movespeed',
     checked: false,
     shortName: 'MS',
@@ -224,7 +207,7 @@ export const itemStats: Stat[] = [
   },
 
   {
-    id: 'msflat',
+    id: 'flatMovespeed',
     displayName: 'Base Movespeed',
     checked: false,
     shortName: 'Base MS',

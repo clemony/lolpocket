@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const is = useItemStore()
 
-    console.log("💠 - filterDbItems - is.dbItemStats.length:", is.dbItemStats)
+console.log('💠 - filterDbItems - is.itemFilter.stats.length:', is.itemFilter.stats)
 </script>
 
 <template>
@@ -13,9 +13,9 @@ const is = useItemStore()
           :key="stat.id" class="btn  has-checked:bg-b3/60  !pointer-events-auto has-checked:btn-active has-checked:border-b3  btn-sm !text-3 btn-ghost font-medium pl-4  capitalize checked:shadow-sm flex gap-4 justify-start">
 
           {{ stat.displayName }}
-          <Grow  />
+          <Grow />
           <input
-            v-model="is.dbItemStats"
+            v-model="is.itemFilter.stats"
             class=" checkbox-sm checkbox  pointer-events-none  border-0 inset-shadow-none bg-transparent checked:shadow-none checked:bg-transparent opacity-60"
             :style="{ '--noise': 0 }"
             :value="stat.id"

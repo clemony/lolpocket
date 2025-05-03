@@ -7,19 +7,19 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits(['update:item'])
-
-const list = computed(() => {
-  return filterItems()
-})
+const { data } = await useFetch('/api/items-lite.json')
+const is = useItemStore()
+const { filteredItems } = useItemFilter(data.value as ItemLite[], is.cItemFilter)
 </script>
 
 <template>
   <PopoverClose
-    v-for="item in list"
+    v-for="item in filteredItems"
     :key="item.id"
     :class="cn('', props.class)">
     <Item
-      :item="item"
+      :id="item.id"
+      :name="item.name"
       class="size-full"
       basic @click="emit('update:item', item)">
     </Item>

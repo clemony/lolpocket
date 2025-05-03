@@ -19,9 +19,10 @@ async function handleItem(e) {
   <ItemCommand @update:item="handleItem($event)">
     <button class="size-20  group/b hover:ring hover:ring-neutral/40 rounded-lg ring-offset-2 hover:ring-offset-b1 data-[state=open]:ring-neutral/40  data-[state=open]:ring  data-[state=open]:ring-offset-b1  ">
       <LazyItem
-        v-if="item.name ?? ''"
+        v-if="item.name"
+        :id="item.id"
         :key="item.name"
-        :item="item"
+        :name="item.name"
         class="shadow-sm shrink-0 !size-full pointer-events-none" />
 
       <div v-else class="!size-full btn no-drag group-data-[state=open]/b:!bg-b3 tldr-20">

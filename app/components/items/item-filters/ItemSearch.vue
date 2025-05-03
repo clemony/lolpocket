@@ -25,7 +25,7 @@ const searchQuery = ref('')
 
 watchEffect(() => {
   emit('update:query', searchQuery.value)
-  is.itemSearchQuery = searchQuery.value
+  is.itemFilter.query = searchQuery.value
 })
 
 const fuse = ref<Fuse<any> | null>(null)
@@ -58,7 +58,7 @@ const searchResult = computed(() => {
 })
 
 watch(searchResult, (newSearchResults) => {
-  is.itemSearchResult = newSearchResults
+  is.itemFilter.result = newSearchResults
 })
 
 const target = shallowRef()
@@ -76,10 +76,10 @@ const { focused } = useFocus(target, { initialValue: props.setFocus })
       :placeholder="props.placeholder"
       :class="cn('text-3  outline-0 ring-0 border-0 flex h-full grow text-start  hover:outline-0 hover:ring-0 hover:border-0', props.inputClass)" />
 
-      <slot  />
-<button class="btn btn-ghost btn-square btn-sm absolute  right-2" @click="searchQuery = null">
+    <slot />
+    <button class="btn btn-ghost btn-square btn-sm absolute  right-2" @click="searchQuery = null">
       <icon name="x-sm" class="" />
-      </button>
+    </button>
   </div>
 </template>
 

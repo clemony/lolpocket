@@ -10,10 +10,12 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
 
 }>()
+
+const { data } = await useFetch('/api/items-lite.json')
 const is = useItemStore()
-const list = computed(() => {
-  return [...filterItems()]
-})
+const { filteredItems } = useItemFilter(data.value as ItemLite[], is.pItemFilter)
+
+// TODO loading
 
 function onStart(event: DraggableEvent) {
   console.log('start drag')
@@ -52,7 +54,7 @@ const toID = hexoid()
   <div
     :key="props.pocket ? pocket.key : toID()"
     v-draggable="[
-      list,
+      filteredItems,
       {
         'group': {
           name: 'items',
@@ -82,7 +84,7 @@ const toID = hexoid()
     @end="onEnd"
     @clone="onClone"
     @start="onStart">
-    <PopoverItem v-for="item in list" :key="item.id" :item="item" />
+    <PopoverItem v-for="item in filteredItems" :id="item.id" :key="item.id" :name="item.name" />
   </div>
 </template>
 

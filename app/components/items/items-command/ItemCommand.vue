@@ -43,7 +43,7 @@ function handleItem(e) {
         <LazyItemCommandTags />
 
         <TransitionExpand>
-          <div v-if="is.filterItemTypes == '' && !is.filterItemStats.length && !is.itemSearchQuery">
+          <div v-if="is.pItemFilter.rank == '' && !is.pItemFilter.stats.length && !is.pItemFilter.query">
             <LazyItemCommandTypes />
 
             <Separator class="bg-accent mt-3 mb-1.5 " />
@@ -51,8 +51,8 @@ function handleItem(e) {
           </div>
         </TransitionExpand>
         <TransitionExpand tag="div" class="w-full justify-center flex">
-          <div v-if="is.filterItemTypes != '' || is.filterItemStats.length || is.itemSearchQuery" class="!flex flex-wrap justify-center gap-1.5 px-4 py-4 z-0">
-            <LazyFilteredItems class=" !size-15  z-0" @update:item="handleItem($event)" />
+          <div v-if="is.pItemFilter.rank != '' || is.pItemFilter.stats.length || is.pItemFilter.query" class="!flex flex-wrap justify-center gap-1.5 px-4 py-4 z-0">
+            <LazyCalculatorFilteredItems class=" !size-15  z-0" @update:item="handleItem($event)" />
           </div>
         </TransitionExpand>
       </div>

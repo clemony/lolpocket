@@ -6,7 +6,7 @@ const props = defineProps<{
   pocket: pocket
   set: ItemSet
   limit?: number
-    class?: HTMLAttributes['class']
+  class?: HTMLAttributes['class']
 }>()
 const pocket = ref(props.pocket)
 function onStart(event: DraggableEvent) {
@@ -36,8 +36,8 @@ const showData = ref(false)
         'delay': 0,
         'animation': 300,
         'force-fallback': true,
-'chosenClass': 'item-set-item-chosen',
-    'ghostClass': 'item-set-item-ghost',
+        'chosenClass': 'item-set-item-chosen',
+        'ghostClass': 'item-set-item-ghost',
         'removeOnSpill': true,
         'fallbackTolerance': 0,
         'fallbackOnBody': true,
@@ -54,20 +54,24 @@ const showData = ref(false)
     @start="onStart"
     @remove="(evt) => onRemove(evt, itemSet)">
     <Popover
-      v-for="(item, i) in itemSet"
+      v-for="(item, i) in itemSet as ItemClone[]"
       :key="item.cloneId">
       <PopoverTrigger as-child class=" shrink-0 !size-18 ">
-    <Item
-      :item="item"
-      :pocket="pocket"
-      class="shadow-sm shrink-0 !size-18 "
-      :class="{ 'rotate-out-center': removingItems[item?.id ?? `item-${i}`] }"
-      @click.prevent />
+        <Item
+          :id="item.id"
+          :name="item.name"
+          :pocket="pocket"
+          class="shadow-sm shrink-0 !size-18 "
+          :class="{ 'rotate-out-center': removingItems[item?.id ?? `item-${i}`] }"
+          @click.prevent />
       </PopoverTrigger>
-      <LazyCustomPopoverContent @interact-outside="showData = false" class="p-2 w-44" :class="{'!w-100 max-h-160': showData }" >
-        <CustomPopoverArrow  />
-<LazyItemData v-if="showData" :item="item"  />
-<LazyItemInSetMenu v-else :pocket="pocket" :set="props.set" :item="item" @update:popover="showData = true" />
+      <LazyCustomPopoverContent class="p-2 w-44" :class="{ '!w-100 max-h-160': showData }" @interact-outside="showData = false">
+        <CustomPopoverArrow />
+        <LazyItemData
+          v-if="showData"
+          :id="item.id"
+          :name="item.name" />
+        <LazyItemInSetMenu v-else :pocket="pocket" :set="props.set" :item="item" @update:popover="showData = true" />
       </LazyCustomPopoverContent>
     </Popover>
     <Placeholder class="rounded-lg border-b3 !size-18 shadow-sm  bg-b3/70 inset-shadow-xs group-has-[.sortable-ghost]:hidden" />

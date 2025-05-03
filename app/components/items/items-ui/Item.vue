@@ -1,15 +1,13 @@
 <script setup lang="ts">
-const props = defineProps<{
-  item: Item
+const { id, name, class: className } = defineProps<{
+  id: number
+  name: string
   class?: HTMLAttributes['class']
 }>()
 const emit = defineEmits(['loaded'])
 
-const thisItem = computed(() => {
-  return props.item
-})
 const loaded = ref(false)
-function handleLoad(){
+function handleLoad() {
   emit('loaded')
   loaded.value = true
 }
@@ -17,17 +15,16 @@ function handleLoad(){
 
 <template>
   <label
-    class="" :class="cn('rounded-lg   aspect-square', props.class)">
+    class="" :class="cn('rounded-lg   aspect-square', className)">
 
     <Image
-      v-if="item.name != ''"
-      :image="`/img/item/${thisItem.id}.webp`"
-      :alt="`${thisItem.name} Image`"
+      v-if="id"
+      :image="`/img/item/${id}.webp`"
+      :alt="`${name} Image`"
       class="aspect-square size-full rounded-lg" @loaded="handleLoad()" />
 
     <slot />
 
-    
   </label>
 </template>
 

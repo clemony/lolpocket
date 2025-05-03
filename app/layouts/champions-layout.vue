@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { data, refresh, error, status, clear } = await useItemsData('posts/1')
+const { data } = await useFetch('/api/items-lite.json')
 </script>
 
 <template>

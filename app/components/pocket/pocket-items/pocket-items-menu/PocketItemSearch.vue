@@ -29,7 +29,7 @@ const searchQuery = ref('')
 
 watchEffect(() => {
   emit('update:query', searchQuery.value)
-  is.dbItemSearchQuery = searchQuery.value
+  is.pItemFilter.query = searchQuery.value
 })
 
 const fuse = ref<Fuse<any> | null>(null)
@@ -60,20 +60,20 @@ const searchResult = computed(() => {
   const results = fuse.value.search(searchQuery.value)
   return results.map(result => result.item)
 })
-
+// TODO result filter
 watch(searchResult, (newSearchResults) => {
-  is.dbItemSearchResult = newSearchResults
+  is.pItemFilter.result = newSearchResults
   if (route.path == '/items/stats') {
     setTimeout(() => {
-      is.itemGridApi.setGridOption('rowData', filterDbItems())
+      // is.itemGridApi.setGridOption('rowData', filterDbItems())
     }, 300)
   }
 })
 
 function handleReset() {
   searchQuery.value = null
-  is.dbItemSearchQuery = null
-  is.dbItemSearchResult = null
+  is.pItemFilter.query = null
+  is.pItemFilter.result = null
 }
 </script>
 

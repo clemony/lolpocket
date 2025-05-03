@@ -1,20 +1,15 @@
 <script setup lang="ts">
-const props = defineProps<{
-  item?: Item
-  class?: HTMLAttributes['class']
+const { id } = defineProps<{
+  id: number
 }>()
 
-const { data, refresh, error, status, clear } = await useItemsData('posts/1')
-
-
-const item = computed (() => {
-  return props.item
-})
+const { data } = await useFetch(`/api/items/${id}.json`)
+const item = computed (() => data.value as Item)
 
 const itemPrice = computed (() => {
   return typeof item.value?.buy === 'number' ? `${item.value.buy} G` : typeof item.value?.buy === 'string' ? `<span>${item.value.buy.toString().replace('=>', '')}</span>` : null
 })
-console.log('💠 - item:', item)
+console.log('💠 - item:', item.value)
 const stats = computed (() => formatItemStats(item.value.stats))
 const effects = computed (() => item.value.effects ? item.value.effects : null)
 </script>
@@ -33,7 +28,7 @@ const effects = computed (() => item.value.effects ? item.value.effects : null)
       <div class="flex flex-col  text-4 w-full">
         {{ item.name || '' }}
 
-        <ItemTier :item="item" />
+        <ItemTier :ranks="item.rank" />
       </div>
     </div>
 

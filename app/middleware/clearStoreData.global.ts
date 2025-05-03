@@ -10,12 +10,11 @@ export default defineNuxtRouteMiddleware((to, from) => {
   cs.filterFavoriteChamps = false
   is.sortItemsAZ = 0
   is.sortPrice = 0
-  is.itemSearchResult = ''
   ts.catFilters = []
   ts.statFilters = []
   ts.viewFavoriteItems = false
   is.selectedItemSet = null
-  is.filterItemTypes = ''
-  is.filterItemStats = []
-  is.filterItemCats = []
+  is.pItemFilter.rank = ''
+  is.pItemFilter.stats = []
+  is.pItemFilter.tags = ''
 })
