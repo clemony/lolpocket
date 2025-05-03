@@ -1,0 +1,2380 @@
+{
+  "1001": {
+    "id": 1001,
+    "name": "Boots",
+    "actives": [],
+    "passives": []
+  },
+  "1004": {
+    "id": 1004,
+    "name": "Faerie Charm",
+    "actives": [],
+    "passives": []
+  },
+  "1006": {
+    "id": 1006,
+    "name": "Rejuvenation Bead",
+    "actives": [],
+    "passives": []
+  },
+  "1011": {
+    "id": 1011,
+    "name": "Giant's Belt",
+    "actives": [],
+    "passives": []
+  },
+  "1018": {
+    "id": 1018,
+    "name": "Cloak of Agility",
+    "actives": [],
+    "passives": []
+  },
+  "1026": {
+    "id": 1026,
+    "name": "Blasting Wand",
+    "actives": [],
+    "passives": []
+  },
+  "1027": {
+    "id": 1027,
+    "name": "Sapphire Crystal",
+    "actives": [],
+    "passives": []
+  },
+  "1028": {
+    "id": 1028,
+    "name": "Ruby Crystal",
+    "actives": [],
+    "passives": []
+  },
+  "1029": {
+    "id": 1029,
+    "name": "Cloth Armor",
+    "actives": [],
+    "passives": []
+  },
+  "1031": {
+    "id": 1031,
+    "name": "Chain Vest",
+    "actives": [],
+    "passives": []
+  },
+  "1033": {
+    "id": 1033,
+    "name": "Null-Magic Mantle",
+    "actives": [],
+    "passives": []
+  },
+  "1036": {
+    "id": 1036,
+    "name": "Long Sword",
+    "actives": [],
+    "passives": []
+  },
+  "1037": {
+    "id": 1037,
+    "name": "Pickaxe",
+    "actives": [],
+    "passives": []
+  },
+  "1038": {
+    "id": 1038,
+    "name": "B. F. Sword",
+    "actives": [],
+    "passives": []
+  },
+  "1042": {
+    "id": 1042,
+    "name": "Dagger",
+    "actives": [],
+    "passives": []
+  },
+  "1043": {
+    "id": 1043,
+    "name": "Recurve Bow",
+    "actives": [],
+    "passives": [
+      "Basic attacks deal 15 '''bonus''' physical damage [[on-hit]]."
+    ]
+  },
+  "1052": {
+    "id": 1052,
+    "name": "Amplifying Tome",
+    "actives": [],
+    "passives": []
+  },
+  "1053": {
+    "id": 1053,
+    "name": "Vampiric Scepter",
+    "actives": [],
+    "passives": []
+  },
+  "1054": {
+    "id": 1054,
+    "name": "Doran's Shield",
+    "actives": [],
+    "passives": [
+      "After taking damage from a [[champion]], gain '''bonus''' [[health regeneration]] per second equal to 0 – 5.625 (based on '''missing''' health) for 8 seconds. Reduced to「 66% effectiveness 」「 0 – 3.7125 (based on '''missing''' health) 」if owned by [[File:Ranged role.png|20px|link=Ranged]] [[:Ranged|ranged]] champions or when triggered by [[area of effect]], [[damage over time]], or [[damage|proc]].",
+      "Basic attacks deal 5 '''bonus''' physical damage [[on-hit]] against [[minions]]."
+    ]
+  },
+  "1055": {
+    "id": 1055,
+    "name": "Doran's Blade",
+    "actives": [],
+    "passives": []
+  },
+  "1056": {
+    "id": 1056,
+    "name": "Doran's Ring",
+    "actives": [],
+    "passives": [
+      "Restore 1.25 mana every second. If you cannot gain mana, [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|heal]] 0.55 health instead.",
+      "Basic attacks deal 5 '''bonus''' physical damage [[on-hit]] against [[minions]]."
+    ]
+  },
+  "1057": {
+    "id": 1057,
+    "name": "Negatron Cloak",
+    "actives": [],
+    "passives": []
+  },
+  "1058": {
+    "id": 1058,
+    "name": "Needlessly Large Rod",
+    "actives": [],
+    "passives": []
+  },
+  "1082": {
+    "id": 1082,
+    "name": "Dark Seal",
+    "actives": [],
+    "passives": [
+      "Gain 2 stacks for each champion [[kill]] and 1 stack for each [[assist]], up to a '''maximum''' of 10 stacks. For every stack, gain 4 ability power, up to 40 at '''maximum''' stacks. Lose 5 stacks on [[death]]. Stacks are preserved when upgrading to [[File:Mejai's Soulstealer item.png|20xpx|border|link=Mejai's Soulstealer|An icon for the item Mejai's Soulstealer]] [[Mejai's Soulstealer]]."
+    ]
+  },
+  "1083": {
+    "id": 1083,
+    "name": "Cull",
+    "actives": [],
+    "passives": [
+      "Killing a [[minion]] grants an additional [[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]] 1, up to a '''maximum''' of [[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]] 100."
+    ]
+  },
+  "1101": {
+    "id": 1101,
+    "name": "Scorchclaw Pup",
+    "actives": [],
+    "passives": [
+      "Summon a ''Scorchclaw Pup'' companion to assist you in combat against monsters.",
+      "Feed your companion enough treats to evolve it and upgrade your [[File:Smite.png|20xpx|border|link=Smite|An icon representing Smite]] [[Smite]]. Upon the companion reaching its final evolution, this item is consumed, granting you the [[File:Scorchclaw's Slash buff.png|20xpx|border|link=Scorchclaw's Slash|An icon representing Scorchclaw's Slash]] [[Scorchclaw's Slash]] buff."
+    ]
+  },
+  "1102": {
+    "id": 1102,
+    "name": "Gustwalker Hatchling",
+    "actives": [],
+    "passives": [
+      "Summon a ''Gustwalker Hatchling'' companion to assist you in combat against monsters.",
+      "Feed your companion enough treats to evolve it and upgrade your [[File:Smite.png|20xpx|border|link=Smite|An icon representing Smite]] [[Smite]]. Upon the companion reaching its final evolution, this item is consumed, granting you the [[File:Gustwalker's Gait buff.png|20xpx|border|link=Gustwalker's Gait|An icon representing Gustwalker's Gait]] [[Gustwalker's Gait]] buff."
+    ]
+  },
+  "1103": {
+    "id": 1103,
+    "name": "Mosstomper Seedling",
+    "actives": [],
+    "passives": [
+      "Summon a ''Mosstomper Seedling'' companion to assist you in combat against monsters.",
+      "Feed your companion enough treats to evolve it and upgrade your [[File:Smite.png|20xpx|border|link=Smite|An icon representing Smite]] [[Smite]]. Upon the companion reaching its final evolution, this item is consumed, granting you the [[File:Mosstomper's Courage buff.png|20xpx|border|link=Mosstomper's Courage|An icon representing Mosstomper's Courage]] [[Mosstomper's Courage]] buff."
+    ]
+  },
+  "1500": {
+    "id": 1500,
+    "name": "Ohmwrecker (Turret Item)",
+    "actives": [],
+    "passives": [
+      "Turret attacks cannot be dodged.",
+      "Turrets gain a stack for 5 seconds each time they strike a champion. Each stack increases their damage dealt by 50%, up to 150%."
+    ]
+  },
+  "1501": {
+    "id": 1501,
+    "name": "Lane Swap Detector",
+    "actives": [],
+    "passives": [
+      "Activates special rules in this lane if two non-Jungler enemies appear in it: Turret takes less damage, deals massively increased damage, and redirects kill [[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]] gold to the nearest allied champion. Allied minions redirect kill [[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]] gold to the nearest allied champion. Enemy champions gain reduced resources from minions. This item disappears shortly after the start of the game."
+    ]
+  },
+  "1502": {
+    "id": 1502,
+    "name": "Reinforced Armor (Turret Item)",
+    "actives": [],
+    "passives": [
+      "While no enemy [[File:Minion icon.png|20px|link=Minion (League of Legends)]] [[:Minion (League of Legends)|minions]] or [[File:Rift HeraldSquare.png|20xpx|border|link=Rift Herald|An icon representing Rift Herald]] [[Rift Herald|Rift Herald Mercenary]] are within range, gain 80% damage reduction, including against true damage."
+    ]
+  },
+  "1503": {
+    "id": 1503,
+    "name": "Warden's Eye",
+    "actives": [],
+    "passives": [
+      "Can see [[File:Ambush_2.png|20px|link=Stealth#Camouflage]] [[:Stealth#Camouflage|camouflaged]] and [[File:Twilight Shroud old2.png|20px|link=Stealth#Invisibility]] [[:Stealth#Invisibility|invisible]] units within 1100 units."
+    ]
+  },
+  "1506": {
+    "id": 1506,
+    "name": "Base Turret Reinforced Armor (Turret Item)",
+    "actives": [],
+    "passives": [
+      "While no enemy [[File:Minion icon.png|20px|link=Minion (League of Legends)]] [[:Minion (League of Legends)|minions]] or [[File:Rift HeraldSquare.png|20xpx|border|link=Rift Herald|An icon representing Rift Herald]] [[Rift Herald|Rift Herald Mercenary]] are within range, gain 80% damage reduction, including against true damage.",
+      "Base turrets have health regeneration, but cannot regenerate past their current segment. They are segmented at 33%, 66% and 100% health."
+    ]
+  },
+  "1507": {
+    "id": 1507,
+    "name": "Overcharged",
+    "actives": [],
+    "passives": [
+      "At 55 minutes, this turret begins to malfunction, losing armor and magic resist. After 5 minutes, it will start breaking down, losing an increasing percentage of its [[File:Health icon.png|15px|link=Health]] '''maximum''' health every 30 seconds."
+    ]
+  },
+  "1508": {
+    "id": 1508,
+    "name": "Anti-Tower Socks",
+    "actives": [],
+    "passives": [
+      "[[File:Turret icon.png|20px|link=Turret]] [[:Turret|Turret]] basic attacks are modified to deal 14 / 11 / 8% (based on turret type) of this minion's '''maximum''' health as pre-mitigation damage."
+    ]
+  },
+  "1509": {
+    "id": 1509,
+    "name": "Gusto",
+    "actives": [],
+    "passives": [
+      "[[File:Turret icon.png|20px|link=Turret]] [[:Turret|Turret]] basic attacks are modified to deal 45% of this minion's '''maximum''' health as pre-mitigation damage."
+    ]
+  },
+  "1510": {
+    "id": 1510,
+    "name": "Phreakish Gusto",
+    "actives": [],
+    "passives": [
+      "[[File:Turret icon.png|20px|link=Turret]] [[:Turret|Turret]] basic attacks are modified to deal 70% of this minion's '''maximum''' health as pre-mitigation damage."
+    ]
+  },
+  "1511": {
+    "id": 1511,
+    "name": "Super Mech Armor",
+    "actives": [],
+    "passives": [
+      "[[File:Turret icon.png|20px|link=Turret]] [[:Turret|Turret]] basic attacks are modified to deal 7% of this minion's '''maximum''' health as pre-mitigation damage."
+    ]
+  },
+  "1512": {
+    "id": 1512,
+    "name": "Super Mech Power Field",
+    "actives": [],
+    "passives": [
+      "Grants nearby minions (excluding super minions) 35 armor and 35 magic resistance."
+    ]
+  },
+  "1515": {
+    "id": 1515,
+    "name": "Turret Plating",
+    "actives": [],
+    "passives": [
+      "Provides extra defensive measures. Attackers are rewarded for destroying portions of the plating. This item disappears after 14 minutes."
+    ]
+  },
+  "2003": {
+    "id": 2003,
+    "name": "Health Potion",
+    "actives": [],
+    "passives": []
+  },
+  "2010": {
+    "id": 2010,
+    "name": "Total Biscuit of Everlasting Will",
+    "actives": [],
+    "passives": []
+  },
+  "2019": {
+    "id": 2019,
+    "name": "Steel Sigil",
+    "actives": [],
+    "passives": []
+  },
+  "2020": {
+    "id": 2020,
+    "name": "The Brutalizer",
+    "actives": [],
+    "passives": []
+  },
+  "2021": {
+    "id": 2021,
+    "name": "Tunneler",
+    "actives": [],
+    "passives": []
+  },
+  "2022": {
+    "id": 2022,
+    "name": "Glowing Mote",
+    "actives": [],
+    "passives": []
+  },
+  "2031": {
+    "id": 2031,
+    "name": "Refillable Potion",
+    "actives": [],
+    "passives": [
+      "Holds charges that refill upon visiting the [[shop]]."
+    ]
+  },
+  "2049": {
+    "id": 2049,
+    "name": "Guardian's Amulet",
+    "actives": [],
+    "passives": [
+      "Restore 10 mana every 5 seconds. Manaless champions restore 3 health instead."
+    ]
+  },
+  "2050": {
+    "id": 2050,
+    "name": "Guardian's Shroud",
+    "actives": [],
+    "passives": []
+  },
+  "2051": {
+    "id": 2051,
+    "name": "Guardian's Horn",
+    "actives": [],
+    "passives": [
+      "Reduces all sources of incoming champion damage by 15 ''(3.75 against [[damage over time]] abilities)''."
+    ]
+  },
+  "2052": {
+    "id": 2052,
+    "name": "Poro-Snax",
+    "actives": [],
+    "passives": []
+  },
+  "2055": {
+    "id": 2055,
+    "name": "Control Ward",
+    "actives": [],
+    "passives": []
+  },
+  "2065": {
+    "id": 2065,
+    "name": "Shurelya's Battlesong",
+    "actives": [],
+    "passives": []
+  },
+  "2138": {
+    "id": 2138,
+    "name": "Elixir of Iron",
+    "actives": [],
+    "passives": []
+  },
+  "2139": {
+    "id": 2139,
+    "name": "Elixir of Sorcery",
+    "actives": [],
+    "passives": []
+  },
+  "2140": {
+    "id": 2140,
+    "name": "Elixir of Wrath",
+    "actives": [],
+    "passives": []
+  },
+  "2141": {
+    "id": 2141,
+    "name": "Cappa Juice",
+    "actives": [],
+    "passives": []
+  },
+  "2142": {
+    "id": 2142,
+    "name": "Juice of Power",
+    "actives": [],
+    "passives": []
+  },
+  "2143": {
+    "id": 2143,
+    "name": "Juice of Vitality",
+    "actives": [],
+    "passives": []
+  },
+  "2144": {
+    "id": 2144,
+    "name": "Juice of Haste",
+    "actives": [],
+    "passives": []
+  },
+  "2145": {
+    "id": 2145,
+    "name": "Lucky Dice",
+    "actives": [],
+    "passives": []
+  },
+  "2146": {
+    "id": 2146,
+    "name": "Enhanced Lucky Dice",
+    "actives": [],
+    "passives": []
+  },
+  "2150": {
+    "id": 2150,
+    "name": "Elixir of Skill",
+    "actives": [],
+    "passives": []
+  },
+  "2151": {
+    "id": 2151,
+    "name": "Elixir of Avarice",
+    "actives": [],
+    "passives": []
+  },
+  "2152": {
+    "id": 2152,
+    "name": "Elixir of Force",
+    "actives": [],
+    "passives": []
+  },
+  "2420": {
+    "id": 2420,
+    "name": "Seeker's Armguard",
+    "actives": [],
+    "passives": []
+  },
+  "2421": {
+    "id": 2421,
+    "name": "Shattered Armguard",
+    "actives": [],
+    "passives": []
+  },
+  "2422": {
+    "id": 2422,
+    "name": "Slightly Magical Boots",
+    "actives": [],
+    "passives": [
+      "Gain 10 '''bonus''' movement speed."
+    ]
+  },
+  "2501": {
+    "id": 2501,
+    "name": "Overlord's Bloodmail",
+    "actives": [],
+    "passives": [
+      "Gain '''bonus''' attack damage equal to 2.5% '''bonus''' health.",
+      "Increase your '''total''' attack damage by 0% – 12% (based on '''missing''' health)."
+    ]
+  },
+  "2502": {
+    "id": 2502,
+    "name": "Unending Despair",
+    "actives": [],
+    "passives": [
+      "Every 4 seconds after entering combat with champions, sap all enemy champions around you within 650 units to deal magic damage equal to 3% of your '''bonus''' health to them and [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|heal]] yourself equal to 250% of the post-mitigation damage dealt."
+    ]
+  },
+  "2503": {
+    "id": 2503,
+    "name": "Blackfire Torch",
+    "actives": [],
+    "passives": [
+      "Dealing [[ability damage]] burns enemies, causing them to take 10 (+ 1% AP) magic damage every 0.5 seconds over 3 seconds, for a total of 60 (+ 6% AP). Against monsters, the burn deals 10 '''bonus''' magic damage per tick, dealing a total of 20 (+ 1% AP) magic damage per tick for up to 120 (+ 6% AP).",
+      "For each champion, epic monster, and large monster afflicted with ''Baleful Blaze's'' burn, increase your ability power by 4%."
+    ]
+  },
+  "2504": {
+    "id": 2504,
+    "name": "Kaenic Rookern",
+    "actives": [],
+    "passives": [
+      "After not taking magic damage for 15 seconds, gain a [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]] that absorbs magic damage equal to 15% of '''maximum''' health until destroyed."
+    ]
+  },
+  "2508": {
+    "id": 2508,
+    "name": "Fated Ashes",
+    "actives": [],
+    "passives": [
+      "Dealing [[ability damage]] burns enemies, causing them to take 2.5 magic damage every 0.5 seconds over 3 seconds, for a total of 15. Against monsters, the burn deals 7.5 '''bonus''' magic damage per tick, dealing a total of 10 magic damage per tick for up to 60."
+    ]
+  },
+  "3002": {
+    "id": 3002,
+    "name": "Trailblazer",
+    "actives": [],
+    "passives": [
+      "While moving, generate 7 stacks of ''Momentum'' every 0.25 seconds, granting up to 20 '''bonus''' movement speed at 100 stacks after 3.75 seconds of moving. At '''maximum''' stacks, you leave behind a path briefly that grants 15% of your '''total''' movement speed as '''bonus''' movement speed to allied champions within. Basic attacks consume all stacks. If you are [[File:Melee role.png|20px|link=Melee]] [[:Melee|melee]] and at '''maximum''' stacks, your next basic attack [[File:Slow icon.png|20px|link=Slow]] [[:Slow|slows]] the target by 50% for 1 second."
+    ]
+  },
+  "3003": {
+    "id": 3003,
+    "name": "Archangel's Staff",
+    "actives": [],
+    "passives": [
+      "Grants ability power equal to 1% '''bonus''' mana.",
+      "Grants a charge every 8 seconds, up to 5 charges. Affecting an enemy or ally with an [[champion ability|ability]] consumes a charge to grant 5 '''bonus''' mana, increased to 10 if they are a champion, up to a '''maximum''' of 360 '''bonus''' mana.",
+      "Transforms into [[File:Seraph's Embrace item.png|20xpx|border|link=Seraph's Embrace|An icon for the item Seraph's Embrace]] [[Seraph's Embrace]] at 360 '''bonus''' mana."
+    ]
+  },
+  "3004": {
+    "id": 3004,
+    "name": "Manamune",
+    "actives": [],
+    "passives": [
+      "Grants '''bonus''' attack damage equal to 2% '''maximum''' mana.",
+      "Grants a charge every 8 seconds, up to 4 charges. Consumes a charge [[on-hit]] and whenever affecting an enemy or ally with an [[champion ability|ability]] to grant 3 '''bonus''' mana, increased to 6 for champion targets, up to a '''maximum''' of 360 '''bonus''' mana.",
+      "Transforms into [[File:Muramana item.png|20xpx|border|link=Muramana|An icon for the item Muramana]] [[Muramana]] at 360 '''bonus''' mana."
+    ]
+  },
+  "3006": {
+    "id": 3006,
+    "name": "Berserker's Greaves",
+    "actives": [],
+    "passives": []
+  },
+  "3009": {
+    "id": 3009,
+    "name": "Boots of Swiftness",
+    "actives": [],
+    "passives": [
+      "Gain 25% [[slow resist]]."
+    ]
+  },
+  "3010": {
+    "id": 3010,
+    "name": "Symbiotic Soles",
+    "actives": [],
+    "passives": [
+      "Gain 10 '''bonus''' movement speed while [[Combat status|out-of-combat]].",
+      "After moving a total of 150,000 units of distance, capped at 500 units at a time for [[File:Dash.png|20px|link=Dash]] [[:Dash|dashes]] and [[File:Flash.png|20px|link=Blink]] [[:Blink|blinks]], upgrade this item to [[File:Synchronized Souls item.png|20xpx|border|link=Synchronized Souls|An icon for the item Synchronized Souls]] [[Synchronized Souls]]."
+    ]
+  },
+  "3013": {
+    "id": 3013,
+    "name": "Synchronized Souls",
+    "actives": [],
+    "passives": [
+      "Gain [[File:Empowered Recall.png|20xpx|border|link=Recall#Empowered Recall|An icon representing Recall#Empowered Recall]] [[Recall#Empowered Recall|Empowered Recall]].",
+      "Gain 45 '''bonus''' movement speed while out-of-combat."
+    ]
+  },
+  "3020": {
+    "id": 3020,
+    "name": "Sorcerer's Shoes",
+    "actives": [],
+    "passives": []
+  },
+  "3024": {
+    "id": 3024,
+    "name": "Glacial Buckler",
+    "actives": [],
+    "passives": []
+  },
+  "3026": {
+    "id": 3026,
+    "name": "Guardian Angel",
+    "actives": [],
+    "passives": [
+      "Upon taking [[death|lethal damage]], enter [[File:Revival icon.png|20px|link=Death#Ways to prevent death when reaching zero health]] [[:Death#Ways to prevent death when reaching zero health|resurrection]] for 4 seconds, during which you are [[File:Cosmic Radiance.png|20px|link=Invulnerability]] [[:Invulnerability|invulnerable]], [[File:Untargetable icon.png|20px|link=Untargetable]] [[:Untargetable|untargetable]], and unable to act, and afterwards [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|heal]] for 50% of '''base''' health and restore 100% of '''maximum''' mana (300 second cooldown, starts after resurrection ends)."
+    ]
+  },
+  "3031": {
+    "id": 3031,
+    "name": "Infinity Edge",
+    "actives": [],
+    "passives": []
+  },
+  "3032": {
+    "id": 3032,
+    "name": "Yun Tal Wildarrows",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-attack]] grant ([[File:Melee role.png|16px|link=Melee]] 0.4% / [[File:Ranged role.png|16px|link=Ranged]] 0.2%) critical strike chance, stacking up to ([[File:Melee role.png|16px|link=Melee]] 63 / [[File:Ranged role.png|16px|link=Ranged]] 125) times (capped at 25% critical strike chance).",
+      "Using a basic attack against an enemy champion grants you 30% '''bonus''' attack speed for 6 seconds (30 second cooldown, reduced by 1 second on-attack and 2 seconds if the attack [[File:Critical strike icon.png|20px|link=Critical strike]] [[:Critical strike|critically strikes]])."
+    ]
+  },
+  "3033": {
+    "id": 3033,
+    "name": "Mortal Reminder",
+    "actives": [],
+    "passives": [
+      "Dealing physical damage to enemy champions inflicts them with [[File:Grievous Wounds icon.png|20px|link=Grievous Wounds]] [[:Grievous Wounds|Grievous Wounds]] for 3 seconds."
+    ]
+  },
+  "3035": {
+    "id": 3035,
+    "name": "Last Whisper",
+    "actives": [],
+    "passives": []
+  },
+  "3036": {
+    "id": 3036,
+    "name": "Lord Dominik's Regards",
+    "actives": [],
+    "passives": []
+  },
+  "3040": {
+    "id": 3040,
+    "name": "Seraph's Embrace",
+    "actives": [],
+    "passives": [
+      "Grants ability power equal to 2% '''bonus''' mana.",
+      "If you would take damage that would reduce you below 30% of your '''maximum''' health, you first gain a [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]] that absorbs 200 (+ 20% '''current''' mana) damage for 3 seconds."
+    ]
+  },
+  "3041": {
+    "id": 3041,
+    "name": "Mejai's Soulstealer",
+    "actives": [],
+    "passives": [
+      "Gain 4 stacks for each champion [[kill]] and 2 stacks for each [[assist]], up to a '''maximum''' of 25 stacks. For every stack, gain 5 ability power, up to 125 at '''maximum''' stacks. If you have at least 10 stacks, also gain 10% '''bonus''' movement speed. Lose 10 stacks on [[death]]. Stacks are preserved from [[File:Dark Seal item.png|20xpx|border|link=Dark Seal|An icon for the item Dark Seal]] [[Dark Seal]]."
+    ]
+  },
+  "3042": {
+    "id": 3042,
+    "name": "Muramana",
+    "actives": [],
+    "passives": [
+      "Grants '''bonus''' attack damage equal to 2% '''maximum''' mana.",
+      "Basic attacks [[on-hit]] against champions deal 1.2% '''maximum''' mana '''bonus''' physical damage. Dealing [[Ability_effects#Triggering_from_champion_ability_damage|ability damage]] to champions deals ([[File:Melee role.png|16px|link=Melee]] 4% / [[File:Ranged role.png|16px|link=Ranged]] 3%) '''maximum''' mana '''bonus''' physical damage. Can only be triggered on the same target once every 6.5 seconds from the same attack or cast."
+    ]
+  },
+  "3044": {
+    "id": 3044,
+    "name": "Phage",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-hit]] grant ([[File:Melee role.png|16px|link=Melee]] 20 / [[File:Ranged role.png|16px|link=Ranged]] 10) '''bonus''' movement speed for 2 seconds."
+    ]
+  },
+  "3046": {
+    "id": 3046,
+    "name": "Phantom Dancer",
+    "actives": [],
+    "passives": [
+      "Become permanently [[File:Ghost.png|20px|link=Unit collision]] [[:Unit collision|ghosted]]."
+    ]
+  },
+  "3047": {
+    "id": 3047,
+    "name": "Plated Steelcaps",
+    "actives": [],
+    "passives": [
+      "Reduces incoming [[damage]] from all [[basic attack]]s by 10% (''excluding [[turret]] attacks'')."
+    ]
+  },
+  "3050": {
+    "id": 3050,
+    "name": "Zeke's Convergence",
+    "actives": [],
+    "passives": [
+      "Upon casting your ultimate ability, you summon a storm of flame and ice around you for 5 seconds, dealing「 7.5 magic damage every 0.25 seconds 」「 150 '''total''' magic damage over the duration 」to enemies within [[File:Range center.png|20px|link=Range]] 350 units and [[File:Slow icon.png|20px|link=Slow]] [[:Slow|slowing]] them by 30% (45 second cooldown, starts on ultimate cast)."
+    ]
+  },
+  "3051": {
+    "id": 3051,
+    "name": "Hearthbound Axe",
+    "actives": [],
+    "passives": []
+  },
+  "3053": {
+    "id": 3053,
+    "name": "Sterak's Gage",
+    "actives": [],
+    "passives": [
+      "Gain '''bonus''' attack damage equal to 45% '''base''' AD.",
+      "If you would take damage that would reduce you below 30% of your '''maximum''' health, you first gain a [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]] that absorbs damage equal to 60% of '''bonus''' health which decays over 4.5 seconds."
+    ]
+  },
+  "3057": {
+    "id": 3057,
+    "name": "Sheen",
+    "actives": [],
+    "passives": [
+      "After using an [[Champion ability|ability]], your next basic attack within 10 seconds deals 100% '''base''' AD '''bonus''' physical damage [[on-hit]] (1.5 second cooldown, starts after using the empowered attack)."
+    ]
+  },
+  "3065": {
+    "id": 3065,
+    "name": "Spirit Visage",
+    "actives": [],
+    "passives": [
+      "Increases all [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|healing]] and [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shielding]] received as well as [[File:Health regeneration icon.png|15px|link=Health regeneration]] [[Health regeneration|health regeneration]] by 25%."
+    ]
+  },
+  "3066": {
+    "id": 3066,
+    "name": "Winged Moonplate",
+    "actives": [],
+    "passives": []
+  },
+  "3067": {
+    "id": 3067,
+    "name": "Kindlegem",
+    "actives": [],
+    "passives": []
+  },
+  "3068": {
+    "id": 3068,
+    "name": "Sunfire Aegis",
+    "actives": [],
+    "passives": [
+      "Taking or dealing damage activates this passive for 3 seconds. Deal 20 (+ 1% '''bonus''' health) magic damage every second to enemies within [[File:Range center.png|20px|link=Range]] 325 (+ 100% '''bonus''' [[size]]) units, with the damage being increased by 50% against [[File:Minion icon.png|20px|link=Minion (League of Legends)]] [[:Minion (League of Legends)|minions]] and [[File:Monster icon.png|20px|link=Monster]] [[:Monster|monsters]]. This executes minions that would be killed by one more tick of damage."
+    ]
+  },
+  "3070": {
+    "id": 3070,
+    "name": "Tear of the Goddess",
+    "actives": [],
+    "passives": [
+      "Grants a charge every 8 seconds, up to 4 charges. Affecting an enemy or ally with an [[champion ability|ability]] consumes a charge to grant 3 '''bonus''' mana, increased to 6 if they are a champion, up to '''maximum''' of 360 '''bonus''' mana.",
+      "Basic attacks deal 5 '''bonus''' physical damage [[on-hit]] against [[minions]]."
+    ]
+  },
+  "3071": {
+    "id": 3071,
+    "name": "Black Cleaver",
+    "actives": [],
+    "passives": [
+      "Dealing physical damage to an enemy champion applies a stack of ''Carve'' for 6 seconds, stacking up to 5 times. Each stack inflicts 6% armor reduction, up to 30% at 5 stacks.",
+      "Dealing physical damage grants you 20 '''bonus''' movement speed for 2 seconds."
+    ]
+  },
+  "3072": {
+    "id": 3072,
+    "name": "Bloodthirster",
+    "actives": [],
+    "passives": [
+      "Convert the [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|healing]] received from [[File:Life steal icon.png|15px|link=Life steal]] life steal in excess of '''maximum''' health into a [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]] for up to 165 – 315 (based on level), which lasts until destroyed."
+    ]
+  },
+  "3073": {
+    "id": 3073,
+    "name": "Experimental Hexplate",
+    "actives": [],
+    "passives": [
+      "Gain 30 [[Haste#Ultimate haste|ultimate haste]].",
+      "Upon casting your ultimate ability, enter ''Overdrive'' to gain 30% '''bonus''' attack speed and 15% '''bonus''' movement speed for 8 seconds (30 second cooldown, starts on ultimate cast)."
+    ]
+  },
+  "3074": {
+    "id": 3074,
+    "name": "Ravenous Hydra",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-hit]] deal ([[File:Melee role.png|16px|link=Melee]] 40% AD / [[File:Ranged role.png|16px|link=Ranged]] 20% AD) physical damage to other enemies in a [[File:Range center.png|20px|link=Range]] 350 radius centered around the target."
+    ]
+  },
+  "3075": {
+    "id": 3075,
+    "name": "Thornmail",
+    "actives": [],
+    "passives": [
+      "When struck by a basic attack [[on-hit]], deal 20 (+ 10% '''bonus''' armor) magic damage to the attacker and, if they are a champion, inflict them with [[File:Grievous Wounds icon.png|20px|link=Grievous Wounds]] [[:Grievous Wounds|Grievous Wounds]] for 3 seconds."
+    ]
+  },
+  "3076": {
+    "id": 3076,
+    "name": "Bramble Vest",
+    "actives": [],
+    "passives": [
+      "When struck by a basic attack [[on-hit]], deal 10 magic damage to the attacker and, if they are a champion, inflict them with [[File:Grievous Wounds icon.png|20px|link=Grievous Wounds]] [[:Grievous Wounds|Grievous Wounds]] for 3 seconds."
+    ]
+  },
+  "3077": {
+    "id": 3077,
+    "name": "Tiamat",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-hit]] deal ([[File:Melee role.png|16px|link=Melee]] 40% AD / [[File:Ranged role.png|16px|link=Ranged]] 20% AD) physical damage to other enemies in a [[File:Range center.png|20px|link=Range]] 350 radius centered around the target."
+    ]
+  },
+  "3078": {
+    "id": 3078,
+    "name": "Trinity Force",
+    "actives": [],
+    "passives": [
+      "After using an [[Champion ability|ability]], your next basic attack within 10 seconds deals 200% '''base''' AD '''bonus''' physical damage [[on-hit]] (1.5 second cooldown, starts after using the empowered attack).",
+      "Basic attacks [[on-hit]] grant 20 '''bonus''' movement speed for 2 seconds"
+    ]
+  },
+  "3082": {
+    "id": 3082,
+    "name": "Warden's Mail",
+    "actives": [],
+    "passives": [
+      "Every first incoming instance of post-mitigation [[File:Basic Attack.png|20px|link=Damage]] [[:Damage|basic damage]] per [[:Champion ability|cast instance]] is [[Damage modifier|reduced]] by 15, with a '''maximum''' of 20% reduction each."
+    ]
+  },
+  "3083": {
+    "id": 3083,
+    "name": "Warmog's Armor",
+    "actives": [],
+    "passives": [
+      "Grants ''Warmog's Heart'' if you have at least 2000 '''bonus''' health.",
+      "[[File:Health regeneration icon.png|15px|link=Health regeneration]] [[Health regeneration|Regenerate]]「 1.5% '''maximum''' health every 0.5 seconds 」「 15% '''maximum''' health every 5 seconds 」if [[damage]] has not been taken in the last 8 seconds (4 seconds for damage from non-champions).",
+      "Gain '''bonus''' health equal to 12% '''bonus''' health '''from items'''."
+    ]
+  },
+  "3084": {
+    "id": 3084,
+    "name": "Heartsteel",
+    "actives": [],
+    "passives": [
+      "While within 700 units of an enemy champion, generate a stack on them each second, stacking up to 3 times. Your next basic attack against a target with 3 stacks is empowered to consume them all to deal 70 (+ 6% '''maximum''' health) '''bonus''' physical damage [[on-hit]] and grant you permanent '''bonus''' health equal to「 8% of that amount 」「 5.6 (+ 0.48% '''maximum''' health) 」 (30 second cooldown per target).",
+      "Gain 0% – 30% (based on '''maximum''' health) increased size."
+    ]
+  },
+  "3085": {
+    "id": 3085,
+    "name": "Runaan's Hurricane",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-attack]] fire additional bolts at up to 2 enemies in front of you, each dealing 55% AD physical damage. Bolts apply [[File:On-hit icon.png|20px|link=Attack_effects#On_Hitting]] [[:Attack_effects#On_Hitting|on-hit]] effects and are affected by [[File:Critical strike icon.png|20px|link=Critical strike]] [[:Critical strike|critical strike]] modifiers."
+    ]
+  },
+  "3086": {
+    "id": 3086,
+    "name": "Zeal",
+    "actives": [],
+    "passives": []
+  },
+  "3087": {
+    "id": 3087,
+    "name": "Statikk Shiv",
+    "actives": [],
+    "passives": [
+      "Your next 3 basic attacks [[File:On-hit icon.png|20px|link=Attack_effects#On_Hitting]] [[:Attack_effects#On_Hitting|on-hit]] within 8 seconds are empowered to deal 60 '''bonus''' magic damage, increased to 85 against non-champions. This bounces to the closest target within 500 units, repeating from the new target to strike up to 5 targets (25 – 10 (based on level) second cooldown, starts after using the first empowered attack).",
+      "Scoring a [[File:Damage rating.png|20px|link=Takedown]] [[:Takedown|takedown]] against an enemy champion within 3 seconds of damaging them resets ''Electrospark's'' cooldown."
+    ]
+  },
+  "3089": {
+    "id": 3089,
+    "name": "Rabadon's Deathcap",
+    "actives": [],
+    "passives": [
+      "Increase your ability power by 30%."
+    ]
+  },
+  "3091": {
+    "id": 3091,
+    "name": "Wit's End",
+    "actives": [],
+    "passives": [
+      "Basic attacks deal 45 '''bonus''' magic damage [[on-hit]]."
+    ]
+  },
+  "3094": {
+    "id": 3094,
+    "name": "Rapid Firecannon",
+    "actives": [],
+    "passives": [
+      "Moving and basic attacking generates ''Energize'' stacks, up to 100.",
+      "When fully [[File:Kircheis Shard item.png|20px|link=Named_item_effect#Energized]] [[:Named_item_effect#Energized|Energized]], your next basic attack deals 40 '''bonus''' magic damage [[on-hit]]. ''Energized'' attacks gain 35% '''bonus''' range, capped at 150."
+    ]
+  },
+  "3100": {
+    "id": 3100,
+    "name": "Lich Bane",
+    "actives": [],
+    "passives": [
+      "After using an [[Champion ability|ability]], your next basic attack within 10 seconds gains 50% '''bonus''' attack speed and deals 75% '''base''' AD (+ 40% AP) '''bonus''' magic damage [[on-hit]] (1.5 second cooldown, starts after using the empowered attack)."
+    ]
+  },
+  "3102": {
+    "id": 3102,
+    "name": "Banshee's Veil",
+    "actives": [],
+    "passives": [
+      "Grants a [[File:Spell Shield.png|20px|link=Spell shield]] [[:Spell shield|spell shield]] that blocks the next hostile ability (40 second cooldown, timer restarts upon taking damage from champions)."
+    ]
+  },
+  "3105": {
+    "id": 3105,
+    "name": "Aegis of the Legion",
+    "actives": [],
+    "passives": []
+  },
+  "3107": {
+    "id": 3107,
+    "name": "Redemption",
+    "actives": [],
+    "passives": []
+  },
+  "3108": {
+    "id": 3108,
+    "name": "Fiendish Codex",
+    "actives": [],
+    "passives": []
+  },
+  "3109": {
+    "id": 3109,
+    "name": "Knight's Vow",
+    "actives": [],
+    "passives": [
+      "While your ''Worthy'' ally is tethered to you and you are above 30% of your '''maximum''' health, redirect 12% of the pre-mitigation physical and magic damage they take to you as the respective damage type. Additionally, you [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|heal]] for 10% of the post-mitigation damage dealt by your ''Worthy'' ally to champions."
+    ]
+  },
+  "3110": {
+    "id": 3110,
+    "name": "Frozen Heart",
+    "actives": [],
+    "passives": [
+      "[[File:Cripple icon.png|20px|link=Cripple]] [[:Cripple|Cripples]] the [[attack speed]] of enemy champions within 700 units by 20%."
+    ]
+  },
+  "3111": {
+    "id": 3111,
+    "name": "Mercury's Treads",
+    "actives": [],
+    "passives": []
+  },
+  "3112": {
+    "id": 3112,
+    "name": "Guardian's Orb",
+    "actives": [],
+    "passives": [
+      "Gain 10 '''bonus''' mana regeneration. Manaless champions gain 15 '''bonus''' health regeneration instead."
+    ]
+  },
+  "3113": {
+    "id": 3113,
+    "name": "Aether Wisp",
+    "actives": [],
+    "passives": []
+  },
+  "3114": {
+    "id": 3114,
+    "name": "Forbidden Idol",
+    "actives": [],
+    "passives": []
+  },
+  "3115": {
+    "id": 3115,
+    "name": "Nashor's Tooth",
+    "actives": [],
+    "passives": [
+      "Basic attacks deal 15 (+ 15% AP) '''bonus''' magic damage [[on-hit]]."
+    ]
+  },
+  "3116": {
+    "id": 3116,
+    "name": "Rylai's Crystal Scepter",
+    "actives": [],
+    "passives": [
+      "Dealing [[:Ability damage|ability damage]] [[File:Slow icon.png|20px|link=Slow]] [[:Slow|slows]] affected [[unit]]s by 30% for 1 second."
+    ]
+  },
+  "3118": {
+    "id": 3118,
+    "name": "Malignance",
+    "actives": [],
+    "passives": [
+      "Gain 20 [[Haste#Ultimate haste|ultimate haste]].",
+      "Dealing [[ability damage]] to enemy champions with your [[champion ability|ultimate ability]] creates a 251 – 550 (based on ultimate's damage instance) radius scorched zone beneath them for 3 seconds, applying a ''Curse'' to enemies within that deals 「 15 (+ 1.25% AP) magic damage every 0.25 seconds 」「 180 (+ 15% AP) '''total''' magic damage over the duration 」 and reduces their magic resistance by 10 (3 second cooldown per target, starts on zone creation)."
+    ]
+  },
+  "3119": {
+    "id": 3119,
+    "name": "Winter's Approach",
+    "actives": [],
+    "passives": [
+      "Grants '''bonus''' health equal to 15% '''bonus''' mana.",
+      "Grants a charge every 8 seconds, up to 4 charges. Consumes a charge [[on-hit]] and whenever affecting an enemy or ally with an [[champion ability|ability]] to grant 3 '''bonus''' mana, increased to 6 for champion targets, up to a '''maximum''' of 360 '''bonus''' mana.",
+      "Transforms into [[File:Fimbulwinter item.png|20xpx|border|link=Fimbulwinter|An icon for the item Fimbulwinter]] [[Fimbulwinter]] at 360 '''bonus''' mana."
+    ]
+  },
+  "3121": {
+    "id": 3121,
+    "name": "Fimbulwinter",
+    "actives": [],
+    "passives": [
+      "Grants '''bonus''' health equal to 15% '''bonus''' mana.",
+      "[[File:Stun icon.png|20px|link=Crowd_control#Immobilizing]] [[:Crowd_control#Immobilizing|Immobilizing]], or [[File:Slow icon.png|20px|link=Slow]] [[:Slow|slowing]] if you are [[File:Melee role.png|20px|link=Melee]] [[:Melee|melee]], an enemy champion grants a 100 (+ 4.5% '''current''' mana) [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]] for 3 seconds (8 second cooldown). The shield's strength is increased「 by 80% 」「 to 100 (+ 8.1% '''current''' mana) 」if there is more than one enemy champion within [[File:Range center.png|20px|link=Range]] 1200 units."
+    ]
+  },
+  "3123": {
+    "id": 3123,
+    "name": "Executioner's Calling",
+    "actives": [],
+    "passives": [
+      "Dealing physical damage to enemy champions inflicts them with [[File:Grievous Wounds icon.png|20px|link=Grievous Wounds]] [[:Grievous Wounds|Grievous Wounds]] for 3 seconds."
+    ]
+  },
+  "3124": {
+    "id": 3124,
+    "name": "Guinsoo's Rageblade",
+    "actives": [],
+    "passives": [
+      "Basic attacks deal 30 '''bonus''' magic damage on-hit.",
+      "Basic attacks grant 8% '''bonus''' attack speed for 3 seconds, stacking up to 4 times for a total of 32% '''bonus''' attack speed. At maximum stacks, basic attacks [[:Attack_effects#On_Attacking|on-attack]] also grant a ''Phantom'' stack for 6 seconds, up to 2 stacks. At 2 ''Phantom'' stacks, the next basic attack consumes all of those stacks [[:Attack_effects#On_Attacking|on-attack]] to trigger a ''Phantom Hit'' that applies [[File:On-hit icon.png|20px|link=Attack_effects#On_Hitting]] [[:Attack_effects#On_Hitting|on-hit]] effects to the target after a 0.15 second delay."
+    ]
+  },
+  "3133": {
+    "id": 3133,
+    "name": "Caulfield's Warhammer",
+    "actives": [],
+    "passives": []
+  },
+  "3134": {
+    "id": 3134,
+    "name": "Serrated Dirk",
+    "actives": [],
+    "passives": []
+  },
+  "3135": {
+    "id": 3135,
+    "name": "Void Staff",
+    "actives": [],
+    "passives": []
+  },
+  "3137": {
+    "id": 3137,
+    "name": "Cryptbloom",
+    "actives": [],
+    "passives": [
+      "Scoring a [[File:Damage rating.png|20px|link=Takedown]] [[:Takedown|takedown]] against an enemy champion while alive and within 3 seconds of damaging them summons a nova that radiates from the location of their death over 1.75 seconds, [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|healing]] you and allied champions hit for 100 (+ 25% AP)."
+    ]
+  },
+  "3139": {
+    "id": 3139,
+    "name": "Mercurial Scimitar",
+    "actives": [],
+    "passives": []
+  },
+  "3140": {
+    "id": 3140,
+    "name": "Quicksilver Sash",
+    "actives": [],
+    "passives": []
+  },
+  "3142": {
+    "id": 3142,
+    "name": "Youmuu's Ghostblade",
+    "actives": [],
+    "passives": [
+      "Gain ([[File:Melee role.png|16px|link=Melee]] 20 / [[File:Ranged role.png|16px|link=Ranged]] 10) '''bonus''' movement speed while out-of-combat with enemy champions for 3 seconds."
+    ]
+  },
+  "3143": {
+    "id": 3143,
+    "name": "Randuin's Omen",
+    "actives": [],
+    "passives": [
+      "Reduces incoming damage from [[File:Critical strike icon.png|20px|link=Critical strike]] [[:Critical strike|critical strikes]] by 30%."
+    ]
+  },
+  "3144": {
+    "id": 3144,
+    "name": "Scout's Slingshot",
+    "actives": [],
+    "passives": [
+      "Damaging an enemy champion deals 40 '''bonus''' magic damage (40 second cooldown, reduced by 1 second [[:Attack_effects#On_Attacking|on-attack]])."
+    ]
+  },
+  "3145": {
+    "id": 3145,
+    "name": "Hextech Alternator",
+    "actives": [],
+    "passives": [
+      "Damaging an enemy champion deals 65 '''bonus''' magic damage."
+    ]
+  },
+  "3147": {
+    "id": 3147,
+    "name": "Haunting Guise",
+    "actives": [],
+    "passives": [
+      "For each second in combat with enemy champions, deal 2% increased damage, stacking up to 3 times for a total of 6%."
+    ]
+  },
+  "3152": {
+    "id": 3152,
+    "name": "Hextech Rocketbelt",
+    "actives": [],
+    "passives": []
+  },
+  "3153": {
+    "id": 3153,
+    "name": "Blade of the Ruined King",
+    "actives": [],
+    "passives": [
+      "Basic attacks deal '''bonus''' physical damage [[on-hit]] equal to ([[File:Melee role.png|16px|link=Melee]] 8% / [[File:Ranged role.png|16px|link=Ranged]] 5%) of the target's '''current''' health, with a '''maximum''' of 100 against [[File:Minion icon.png|20px|link=Minion (League of Legends)]] [[:Minion (League of Legends)|minions]] and [[File:Monster icon.png|20px|link=Monster]] [[:Monster|monsters]].",
+      "Basic attacks on-hit against enemy champions apply a stack for 6 seconds, stacking up to 3 times. The third stack consumes them all to [[File:Slow icon.png|20px|link=Slow]] [[:Slow|slow]] the target by 30% for 1 second."
+    ]
+  },
+  "3155": {
+    "id": 3155,
+    "name": "Hexdrinker",
+    "actives": [],
+    "passives": [
+      "If you would take magic damage that would reduce you below 30% of your '''maximum''' health, you first gain a [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]] that absorbs ([[File:Melee role.png|16px|link=Melee]] 110 – 280 / [[File:Ranged role.png|16px|link=Ranged]] 82.5 – 210) (based on level) magic damage for 2.5 seconds."
+    ]
+  },
+  "3156": {
+    "id": 3156,
+    "name": "Maw of Malmortius",
+    "actives": [],
+    "passives": [
+      "If you would take magic damage that would reduce you below 30% of your '''maximum''' health, you first gain a [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]] that absorbs ([[File:Melee role.png|16px|link=Melee]] 200 / [[File:Ranged role.png|16px|link=Ranged]] 150) (+ ([[File:Melee role.png|16px|link=Melee]] 150% / [[File:Ranged role.png|16px|link=Ranged]] 112.5%) '''bonus''' AD) magic damage for 3 seconds. Additionally, triggering this effect grants you 10% omnivamp until the end of [[combat status|combat]]."
+    ]
+  },
+  "3157": {
+    "id": 3157,
+    "name": "Zhonya's Hourglass",
+    "actives": [],
+    "passives": []
+  },
+  "3158": {
+    "id": 3158,
+    "name": "Ionian Boots of Lucidity",
+    "actives": [],
+    "passives": [
+      "Gain 10 [[Haste#Summoner spell haste|summoner spell haste]]."
+    ]
+  },
+  "3161": {
+    "id": 3161,
+    "name": "Spear of Shojin",
+    "actives": [],
+    "passives": [
+      "Gain 25 [[Haste#Basic ability haste|basic ability haste]].",
+      "Dealing [[ability damage]] with a non-innate [[champion ability|ability]] grants a stack for 6 seconds, stacking up to 4 times and up to once per [[:Champion ability|cast instance]] per second and every second for [[damage over time]] abilities. For each stack, your non-[[File:Basic Attack.png|20px|link=Damage]] [[:Damage|basic damage]] dealt by non-[[item|items]] gain 3% increased damage, for a total increase of 12% at '''maximum''' stacks."
+    ]
+  },
+  "3165": {
+    "id": 3165,
+    "name": "Morellonomicon",
+    "actives": [],
+    "passives": [
+      "Dealing magic damage to enemy champions inflicts them with [[File:Grievous Wounds icon.png|20px|link=Grievous Wounds]] [[:Grievous Wounds|Grievous Wounds]] for 3 seconds."
+    ]
+  },
+  "3170": {
+    "id": 3170,
+    "name": "Swiftmarch",
+    "actives": [],
+    "passives": [
+      "Gain 25% [[slow resist]].",
+      "Gain [[File:Adaptive Force icon.png|20px|link=Adaptive force]] [[:Adaptive force|adaptive force]] equal to 5% of your '''total''' movement speed."
+    ]
+  },
+  "3171": {
+    "id": 3171,
+    "name": "Crimson Lucidity",
+    "actives": [],
+    "passives": [
+      "Gain 10 [[Haste#Summoner spell haste|summoner spell haste]].",
+      "[[File:Heal power icon.png|20px|link=Healing]] [[:Healing|Healing]], [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shielding]] or buffing an ally, damaging abilities against champions, and using [[summoner spell]]s grants you ([[File:Melee role.png|16px|link=Melee]] 10% / [[File:Ranged role.png|16px|link=Ranged]] 8%) '''bonus''' movement speed for 4 seconds. This can be triggered from the same [[:Champion ability|cast instance]] only once every 4 seconds."
+    ]
+  },
+  "3172": {
+    "id": 3172,
+    "name": "Zephyr",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-hit]] grant a stack of ''Like The Wind'' for 6 seconds, refreshing on subsequent attacks. For each stack, gain 5% '''bonus''' movement speed, stacking up to 5 times for a total of 25%."
+    ]
+  },
+  "3173": {
+    "id": 3173,
+    "name": "Chainlaced Crushers",
+    "actives": [],
+    "passives": [
+      "Taking magic damage from champions grants you a [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]] that absorbs 10 – 120 (based on level) (+ 4% '''maximum''' health) magic damage for 4 seconds."
+    ]
+  },
+  "3174": {
+    "id": 3174,
+    "name": "Armored Advance",
+    "actives": [],
+    "passives": [
+      "Reduces incoming [[damage]] from all [[basic attack]]s by 10% (''excluding [[turret]] attacks'').",
+      "Taking physical damage from champions grants you a [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]] that absorbs 10 – 120 (based on level) (+ 4% '''maximum''' health) physical damage for 4 seconds."
+    ]
+  },
+  "3175": {
+    "id": 3175,
+    "name": "Spellslinger's Shoes",
+    "actives": [],
+    "passives": []
+  },
+  "3176": {
+    "id": 3176,
+    "name": "Forever Forward",
+    "actives": [],
+    "passives": [
+      "Gain [[File:Empowered Recall.png|20xpx|border|link=Recall#Empowered Recall|An icon representing Recall#Empowered Recall]] [[Recall#Empowered Recall|Empowered Recall]].",
+      "Gain 45 (+ 8% '''total''' movement speed) '''bonus''' movement speed while out-of-combat."
+    ]
+  },
+  "3177": {
+    "id": 3177,
+    "name": "Guardian's Blade",
+    "actives": [],
+    "passives": []
+  },
+  "3179": {
+    "id": 3179,
+    "name": "Umbral Glaive",
+    "actives": [],
+    "passives": [
+      "When near an enemy [[Stealth#Stealthed_traps_and_wards|stealthed]] [[File:Ward_icon.png|20px|link=Ward]] [[:Ward|ward]] or [[File:Noxious Trap.png|20px|link=Stealth#Stealthed_traps_and_wards]] [[:Stealth#Stealthed_traps_and_wards|trap]], gain ''Blackout'' for 8 seconds.",
+      "You [[File:Disabled Ward icon.png|20px|link=Ward]] [[:Ward|disable]] surrounding stealthed wards, as well as [[File:Exposed icon.png|20px|link=Sight]] [[:Sight|expose]] and [[File:True Sight icon.png|20px|link=Sight#True_sight]] [[:Sight#True_sight|reveal]] nearby stealthed wards and traps while ''Blackout'' is active.",
+      "Your [[basic attack]]s deal ([[File:Melee role.png|16px|link=Melee]] 2 / [[File:Ranged role.png|16px|link=Ranged]] 1) '''bonus''' true damage to wards."
+    ]
+  },
+  "3181": {
+    "id": 3181,
+    "name": "Hullbreaker",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-hit]] against any enemy grant a stack for 10 seconds, stacking up to 5 times. At '''maximum''' stacks, or 4 stacks, your next basic attack against a champion, epic monster, or structure consumes all stacks to deal ([[File:Melee role.png|16px|link=Melee]] 120% / [[File:Ranged role.png|16px|link=Ranged]] 84%) '''base''' AD (+ ([[File:Melee role.png|16px|link=Melee]] 5% / [[File:Ranged role.png|16px|link=Ranged]] 3.5%) '''maximum''' health) '''bonus''' physical damage, increased to ([[File:Melee role.png|16px|link=Melee]] 300% / [[File:Ranged role.png|16px|link=Ranged]] 210%) '''base''' AD (+ ([[File:Melee role.png|16px|link=Melee]] 10% / [[File:Ranged role.png|16px|link=Ranged]] 7%) '''maximum''' health) against structures.",
+      "Allied [[File:Blue Siege MinionSquare.png|20xpx|border|link=Siege minion|An icon representing Siege minion]] [[Siege minion|siege minions]] and [[File:Blue Super MinionSquare.png|20xpx|border|link=Super minion|An icon representing Super minion]] [[Super minion|super minions]] within [[File:Range model.png|20px|link=Range]] 1050 units gain ([[File:Melee role.png|16px|link=Melee]] 70 – 130 / [[File:Ranged role.png|16px|link=Ranged]] 35 – 65) (based on level) '''bonus''' armor and '''bonus''' magic resistance, as well as 10% increased size."
+    ]
+  },
+  "3184": {
+    "id": 3184,
+    "name": "Guardian's Hammer",
+    "actives": [],
+    "passives": []
+  },
+  "3190": {
+    "id": 3190,
+    "name": "Locket of the Iron Solari",
+    "actives": [],
+    "passives": []
+  },
+  "3211": {
+    "id": 3211,
+    "name": "Spectre's Cowl",
+    "actives": [],
+    "passives": []
+  },
+  "3222": {
+    "id": 3222,
+    "name": "Mikael's Blessing",
+    "actives": [],
+    "passives": []
+  },
+  "3302": {
+    "id": 3302,
+    "name": "Terminus",
+    "actives": [],
+    "passives": [
+      "Basic attacks deal 30 '''bonus''' magic damage [[on-hit]].",
+      "Basic attacks [[File:On-hit icon.png|20px|link=Attack_effects#On_Hitting]] [[:Attack_effects#On_Hitting|on-hit]] against champions alternate between ''Light'' and ''Dark'' hits, each one granting a bonus for 5 seconds that stacks up to 3 times. ''Light'' hits grant 6 / 7 / 8 (based on level) '''bonus''' armor and '''bonus''' magic resistance while ''Dark'' hits grant 10% armor penetration and magic penetration, for a total of 18 – 24 (based on level) '''bonus''' resistances and 30% resistances penetration at maximum stacks of each."
+    ]
+  },
+  "3330": {
+    "id": 3330,
+    "name": "Scarecrow Effigy",
+    "actives": [],
+    "passives": []
+  },
+  "3340": {
+    "id": 3340,
+    "name": "Stealth Ward",
+    "actives": [],
+    "passives": []
+  },
+  "3348": {
+    "id": 3348,
+    "name": "Arcane Sweeper (Trinket)",
+    "actives": [],
+    "passives": []
+  },
+  "3363": {
+    "id": 3363,
+    "name": "Farsight Alteration",
+    "actives": [],
+    "passives": []
+  },
+  "3364": {
+    "id": 3364,
+    "name": "Oracle Lens",
+    "actives": [],
+    "passives": []
+  },
+  "3400": {
+    "id": 3400,
+    "name": "Your Cut",
+    "actives": [],
+    "passives": []
+  },
+  "3430": {
+    "id": 3430,
+    "name": "Rite of Ruin",
+    "actives": [],
+    "passives": [
+      "Casting an [[Champion ability|ability]] grants [[File:Critical strike chance icon.png|15px|link=Critical strike]] 2.5% critical strike chance for 6 seconds, stacking up to 8 times for a maximum of [[File:Critical strike chance icon.png|15px|link=Critical strike]] 20%.",
+      "Casting an ability has a 0% – 100% (based on critical strike chance) chance to grant you or your ally a [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]] for 3 seconds that absorbs 70 – 210 (based on level) (+ 25% '''bonus''' AD) (+ 15% AP) damage."
+    ]
+  },
+  "3504": {
+    "id": 3504,
+    "name": "Ardent Censer",
+    "actives": [],
+    "passives": [
+      "[[File:Heal power icon.png|20px|link=Healing]] [[:Healing|Healing]] or [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shielding]] allied champions (''excluding yourself'') enhances you and them for 6 seconds, granting 25% '''bonus''' attack speed and 20 '''bonus''' magic damage [[on-hit]] on basic attacks."
+    ]
+  },
+  "3508": {
+    "id": 3508,
+    "name": "Essence Reaver",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-hit]] restore 15 (+ 10% '''bonus''' AD) mana."
+    ]
+  },
+  "3513": {
+    "id": 3513,
+    "name": "Eye of the Herald",
+    "actives": [],
+    "passives": []
+  },
+  "3599": {
+    "id": 3599,
+    "name": "Black Spear",
+    "actives": [],
+    "passives": []
+  },
+  "3742": {
+    "id": 3742,
+    "name": "Dead Man's Plate",
+    "actives": [],
+    "passives": [
+      "While moving, generates 7 stacks of ''Momentum'' every 0.25 seconds, granting up to 20 '''bonus''' movement speed at 100 stacks after 3.75 seconds of moving. Basic attacks consume all stacks to deal 0 – 40 (based on Momentum) (+ 0% – 100% (based on Momentum) '''base''' AD) '''bonus''' physical damage [[on-hit]].",
+      "Gain 15% [[File:Slow immune icon.png|20px|link=Slow resist]] [[:Slow resist|slow resist]]."
+    ]
+  },
+  "3748": {
+    "id": 3748,
+    "name": "Titanic Hydra",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-hit]] deal ([[File:Melee role.png|16px|link=Melee]] 1% / [[File:Ranged role.png|16px|link=Ranged]] 0.5%) '''maximum''' health '''bonus''' physical damage to the target and ([[File:Melee role.png|16px|link=Melee]] 3% / [[File:Ranged role.png|16px|link=Ranged]] 1.5%) '''maximum''' health physical damage to other enemies in a cone in the direction of the primary target."
+    ]
+  },
+  "3801": {
+    "id": 3801,
+    "name": "Crystalline Bracer",
+    "actives": [],
+    "passives": []
+  },
+  "3802": {
+    "id": 3802,
+    "name": "Lost Chapter",
+    "actives": [],
+    "passives": [
+      "Upon leveling up, restores 20% of '''maximum''' mana over 3 seconds."
+    ]
+  },
+  "3803": {
+    "id": 3803,
+    "name": "Catalyst of Aeons",
+    "actives": [],
+    "passives": [
+      "Restore mana equal to 10% of pre-mitigation damage taken from champions, and [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|heal]] for an amount equal to 25% of mana spent, up to 20 per cast. Toggled abilities can only heal for up to 20 per second."
+    ]
+  },
+  "3814": {
+    "id": 3814,
+    "name": "Edge of Night",
+    "actives": [],
+    "passives": [
+      "Grants a [[File:Spell Shield.png|20px|link=Spell shield]] [[:Spell shield|spell shield]] that blocks the next hostile ability (40 second cooldown, timer restarts upon taking damage from champions)."
+    ]
+  },
+  "3865": {
+    "id": 3865,
+    "name": "World Atlas",
+    "actives": [],
+    "passives": [
+      "Earn [[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]] 400 through ''Shared Riches'' to automatically upgrade to [[File:Runic Compass item.png|20xpx|border|link=Runic Compass|An icon for the item Runic Compass]] [[Runic Compass]], gaining the ''Ward'' active with 3 wards in stock.",
+      "Grants a '''Shared Riches''' charge every 20 seconds, up to 3 charges. When an allied champion is within [[File:Range model.png|20px|link=Range]] 1050 units of you, consume a charge in the following ways:\n• Kill a minion by any means, granting you [[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]] 15 and the nearest allied champion kill [[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]] gold. Damaging a minion '''below''' ([[File:Melee role.png|16px|link=Melee]] 50% / [[File:Ranged role.png|16px|link=Ranged]] 30%) of its '''maximum''' health [[File:Death from Below.png|20px|link=Kill#Execute]] [[:Kill#Execute|executes]] it.\n• Damage an enemy champion or structure with a basic attack or ability, granting you [[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]] ([[File:Melee role.png|16px|link=Melee]] 22 / [[File:Ranged role.png|16px|link=Ranged]] 20). A charge may be consumed this way only once per attack or ability.",
+      "Receives diminishing gold from excessive minion kills.",
+      "Receives [[File:Lane Swap Detector item.png|20xpx|border|link=Lane Swap Detector|An icon for the item Lane Swap Detector]] [[Lane Swap Detector]] penalties if detected within the top or middle [[lane]]s early in the game."
+    ]
+  },
+  "3866": {
+    "id": 3866,
+    "name": "Runic Compass",
+    "actives": [],
+    "passives": [
+      "Earn [[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]] 800 through ''Shared Riches'' to automatically upgrade to [[File:Bounty of Worlds item.png|20xpx|border|link=Bounty of Worlds|An icon for the item Bounty of Worlds]] [[Bounty of Worlds]], increasing the ''Ward'' active to instead have 4 wards in stock.",
+      "Grants a '''Shared Riches''' charge every 20 seconds, up to 3 charges. When an allied champion is within [[File:Range model.png|20px|link=Range]] 1050 units of you, consume a charge in the following ways:\n• Kill a minion by any means, granting you [[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]] 20 and the nearest allied champion kill [[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]] gold. Damaging a minion '''below''' ([[File:Melee role.png|16px|link=Melee]] 50% / [[File:Ranged role.png|16px|link=Ranged]] 30%) of its '''maximum''' health [[File:Death from Below.png|20px|link=Kill#Execute]] [[:Kill#Execute|executes]] it.\n• Damage an enemy champion or structure with a basic attack or ability, granting you [[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]] ([[File:Melee role.png|16px|link=Melee]] 24 / [[File:Ranged role.png|16px|link=Ranged]] 22). A charge may be consumed this way only once per attack or ability.",
+      "Receives diminishing gold from excessive minion kills."
+    ]
+  },
+  "3867": {
+    "id": 3867,
+    "name": "Bounty of Worlds",
+    "actives": [],
+    "passives": [
+      "You have completed the support quest and can now upgrade this item, '''Bounty of Worlds''', for free into ''[[File:Bloodsong item.png|20xpx|border|link=Bloodsong|An icon for the item Bloodsong]] [[Bloodsong]]'', ''[[File:Celestial Opposition item.png|20xpx|border|link=Celestial Opposition|An icon for the item Celestial Opposition]] [[Celestial Opposition]]'', ''[[File:Dream Maker item.png|20xpx|border|link=Dream Maker|An icon for the item Dream Maker]] [[Dream Maker]]'', ''[[File:Solstice Sleigh item.png|20xpx|border|link=Solstice Sleigh|An icon for the item Solstice Sleigh]] [[Solstice Sleigh]]'', or ''[[File:Zaz'Zak's Realmspike item.png|20xpx|border|link=Zaz'Zak's Realmspike|An icon for the item Zaz'Zak's Realmspike]] [[Zaz'Zak's Realmspike]]'' by selecting one of them from a custom menu in the HUD or the shop. ''The upgrade can be done outside the shop using the menu.''",
+      "Receives diminishing gold from excessive minion kills."
+    ]
+  },
+  "3869": {
+    "id": 3869,
+    "name": "Celestial Opposition",
+    "actives": [],
+    "passives": [
+      "Become ''Blessed'' to reduce incoming champion damage by ([[File:Melee role.png|16px|link=Melee]] 35% / [[File:Ranged role.png|16px|link=Ranged]] 25%), lingering for 2 seconds after taking damage from a champion. After the linger ends, you lose ''Blessed'' to unleash a shockwave around you that [[File:Slow icon.png|20px|link=Slow]] [[:Slow|slows]] enemies within 500 units by 50% for 1.5 seconds (18 second cooldown, timer restarts upon taking damage from champions).",
+      "Receives diminishing gold from excessive minion kills."
+    ]
+  },
+  "3870": {
+    "id": 3870,
+    "name": "Dream Maker",
+    "actives": [],
+    "passives": [
+      "Every 8 seconds, you gain a ''Blue Dream Bubble'' and a ''Purple Dream Bubble''. Granting a [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|heal]] or [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]] to an allied champion ''(excluding yourself)'' causes you to blow both of your ''Dream Bubbles'' to them, empowering them for 3 seconds. The ''Blue Bubble'' reduces the next instance of non-[[File:Minion icon.png|20px|link=Minion (League of Legends)]] [[:Minion (League of Legends)|minion]] damage they take by 75 – 255 (based on your level) and the ''Purple Bubble'' grants them 50 – 170 (based on your level) '''bonus''' magic damage [[on-hit]] on their next basic attack.",
+      "Receives diminishing gold from excessive minion kills."
+    ]
+  },
+  "3871": {
+    "id": 3871,
+    "name": "Zaz'Zak's Realmspike",
+    "actives": [],
+    "passives": [
+      "Dealing [[ability damage]] to an enemy champion creates an explosion at their location after a 0.5-second delay, dealing 10 (+ 15% AP) (+ 3% of each target's '''maximum''' health) magic damage to enemies within the area, capped at 300 against [[File:Monster icon.png|20px|link=Monster]] [[:Monster|monsters]].",
+      "Receives diminishing gold from excessive minion kills."
+    ]
+  },
+  "3876": {
+    "id": 3876,
+    "name": "Solstice Sleigh",
+    "actives": [],
+    "passives": [
+      "[[File:Slow icon.png|20px|link=Slow]] [[:Slow|Slowing]] or [[File:Stun icon.png|20px|link=Crowd_control#Immobilizing]] [[:Crowd_control#Immobilizing|immobilizing]] an enemy champion causes you and the most wounded allied champion within 1500 units to gain 20% '''bonus''' movement speed decaying over 2.5 seconds and 50 – 230 (based on your level) '''bonus''' health for 2.5 seconds.",
+      "Receives diminishing gold from excessive minion kills."
+    ]
+  },
+  "3877": {
+    "id": 3877,
+    "name": "Bloodsong",
+    "actives": [],
+    "passives": [
+      "After using an ability, your next basic attack within 10 seconds deals 100% '''base''' AD '''bonus''' physical damage [[on-hit]]. If the target is a champion, inflict them with ''Expose Weakness'' for 4 seconds, causing them to take ([[File:Melee role.png|16px|link=Melee]] 8% / [[File:Ranged role.png|16px|link=Ranged]] 5%) increased damage from all sources (1.5 second cooldown, starts after using the empowered attack).",
+      "Receives diminishing gold from excessive minion kills."
+    ]
+  },
+  "3901": {
+    "id": 3901,
+    "name": "Fire at Will",
+    "actives": [],
+    "passives": [
+      "[[File:Gangplank Cannon Barrage.png|20xpx|border|link=Gangplank#Cannon Barrage|An icon for Gangplank's ability Cannon Barrage]] [[Gangplank#Cannon Barrage|Cannon Barrage]] fires 2 additional clusters of 3 waves over the duration at an increased rate of fire (1 cluster per 1.33 seconds), for a total of 18 waves over the 8 seconds."
+    ]
+  },
+  "3902": {
+    "id": 3902,
+    "name": "Death's Daughter",
+    "actives": [],
+    "passives": [
+      "A massive cannonball lands after [[File:Gangplank Cannon Barrage.png|20xpx|border|link=Gangplank#Cannon Barrage|An icon for Gangplank's ability Cannon Barrage]] [[Gangplank#Cannon Barrage|Cannon Barrage's]] first cluster of waves, dealing [[File:Hybrid penetration icon.png|15px|link=True damage]] 120 / 210 / 300 (+ 30% AP) true damage to enemies struck and [[File:Slow icon.png|20px|link=Slow]] [[:Slow|slowing]] them by 75% for 1.5 seconds."
+    ]
+  },
+  "3903": {
+    "id": 3903,
+    "name": "Raise Morale",
+    "actives": [],
+    "passives": [
+      "[[File:Gangplank OriginalSquare.png|20xpx|border|link=Gangplank|An icon representing Gangplank]] [[Gangplank]] and his allies within [[File:Gangplank Cannon Barrage.png|20xpx|border|link=Gangplank#Cannon Barrage|An icon for Gangplank's ability Cannon Barrage]] [[Gangplank#Cannon Barrage|Cannon Barrage]] gain 40% '''bonus''' movement speed, which persists for 2 seconds after leaving the area."
+    ]
+  },
+  "3916": {
+    "id": 3916,
+    "name": "Oblivion Orb",
+    "actives": [],
+    "passives": [
+      "Dealing magic damage to enemy champions inflicts them with [[File:Grievous Wounds icon.png|20px|link=Grievous Wounds]] [[:Grievous Wounds|Grievous Wounds]] for 3 seconds."
+    ]
+  },
+  "4005": {
+    "id": 4005,
+    "name": "Imperial Mandate",
+    "actives": [],
+    "passives": [
+      "Abilities that [[File:Slow icon.png|20px|link=Slow]] [[:Slow|slow]] or [[File:Stun icon.png|20px|link=Crowd_control#Immobilizing]] [[:Crowd_control#Immobilizing|immobilize]] enemy champions mark them for 5 seconds. Allied champions that damage marked enemies consume the mark to deal 10% of the target's '''current''' health '''bonus''' magic damage (9 second cooldown per target, starts upon mark application)."
+    ]
+  },
+  "4011": {
+    "id": 4011,
+    "name": "Sword of Blossoming Dawn",
+    "actives": [],
+    "passives": [
+      "Gain 1.2% '''bonus''' attack speed per 1% [[File:Heal and shield power icon.png|15px|link=Heal and shield power]] [[Heal and shield power|heal and shield power]].",
+      "Basic attacks [[on-hit]] cause the most wounded and nearest allied champion to be [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|healed]] for 15 – 45 (based on level) (+ 10% '''bonus''' AD) (+ 7% AP)."
+    ]
+  },
+  "4015": {
+    "id": 4015,
+    "name": "Perplexity",
+    "actives": [],
+    "passives": [
+      "Deal 0% – 15% (based on '''maximum''' health difference) increased damage against enemy champions with greater '''maximum''' health than you."
+    ]
+  },
+  "4016": {
+    "id": 4016,
+    "name": "Wordless Promise",
+    "actives": [],
+    "passives": [
+      "While your ''Promised'' ally is tethered to you, gain ability power equal to 20% of ''Promised'' ally's AP, and grant your ''Promised'' ally ability haste equal to 20% of your ability haste. ''Increases and decreases to each teammate's stats recalculate this effect.''"
+    ]
+  },
+  "4017": {
+    "id": 4017,
+    "name": "Hellfire Hatchet",
+    "actives": [],
+    "passives": [
+      "Your next ability hit applies a Burn that deals 「 5% – 10% (+ 0.2% – 0.4% per 1 Lethality) (based on '''maximum''' health difference) of the target's '''current''' health physical damage seconds over 4 seconds. 」「 0.625% – 1.25% (+ 0.025% – 0.05% per 1 Lethality) (based on '''maximum''' health difference) of the target's '''current''' health physical damage every 0.5 over 4 seconds. 」"
+    ]
+  },
+  "4401": {
+    "id": 4401,
+    "name": "Force of Nature",
+    "actives": [],
+    "passives": [
+      "Taking magic damage from champions grants a stack of ''Steadfast'' for 7 seconds, stacking up to 8 times with the duration refreshing on subsequent magic damage from them and whenever dealing damage to them. Becoming [[File:Stun icon.png|20px|link=Crowd_control#Immobilizing]] [[:Crowd_control#Immobilizing|immobilized]] by an enemy champion grants 2 stacks and also refreshes the duration. Each incoming basic attack, ability per [[:Champion ability|cast instance]], or item effect can only grant 1 stack of ''Steadfast'' from their damage every 1 second. At '''maximum''' stacks, gain 70 '''bonus''' magic resistance and 6% '''bonus''' movement speed."
+    ]
+  },
+  "4628": {
+    "id": 4628,
+    "name": "Horizon Focus",
+    "actives": [],
+    "passives": [
+      "Dealing [[Ability_effects#Triggering_from_champion_ability_damage|ability damage]] to a champion at [[File:Range center.png|20px|link=Range]] 600 or more units away from the cast position [[File:Reveal icon.png|20px|link=Sight#Standard sight]] [[:Sight#Standard sight|reveals]] them and increases your damage dealt to them by 10% for 6 seconds.",
+      "Upon triggering ''Hypershot'', grant [[File:Sight icon.png|20px|link=Sight]] [[:Sight|sight]] of the area [[File:Range center.png|20px|link=Range]] 1400 units around the target for 2 seconds and apply ''Hypershot's'' effects to enemy champions within the area for 3 seconds."
+    ]
+  },
+  "4629": {
+    "id": 4629,
+    "name": "Cosmic Drive",
+    "actives": [],
+    "passives": [
+      "Dealing magic or true damage to an enemy champion grants you 20 '''bonus''' movement speed for 4 seconds."
+    ]
+  },
+  "4630": {
+    "id": 4630,
+    "name": "Blighting Jewel",
+    "actives": [],
+    "passives": []
+  },
+  "4632": {
+    "id": 4632,
+    "name": "Verdant Barrier",
+    "actives": [],
+    "passives": [
+      "Grants a [[File:Spell Shield.png|20px|link=Spell shield]] [[:Spell shield|spell shield]] that blocks the next hostile ability (60 second cooldown, timer restarts upon taking damage from champions)."
+    ]
+  },
+  "4633": {
+    "id": 4633,
+    "name": "Riftmaker",
+    "actives": [],
+    "passives": [
+      "For each second [[combat status|in combat]] with champions, deal 2% increased damage, stacking up to 4 times for a total of 8% increased damage. At maximum stacks, gain ([[File:Melee role.png|16px|link=Melee]] 10% / [[File:Ranged role.png|16px|link=Ranged]] 6%) omnivamp.",
+      "Gain ability power equal to 2% '''bonus''' health."
+    ]
+  },
+  "4638": {
+    "id": 4638,
+    "name": "Watchful Wardstone",
+    "actives": [],
+    "passives": [
+      "Purchasing a [[File:Control Ward item.png|20xpx|border|link=Control Ward|An icon for the item Control Ward]] [[Control Ward]] [[ammunition|stocks]] it as a charge, up to maximum of 3."
+    ]
+  },
+  "4642": {
+    "id": 4642,
+    "name": "Bandleglass Mirror",
+    "actives": [],
+    "passives": []
+  },
+  "4643": {
+    "id": 4643,
+    "name": "Vigilant Wardstone",
+    "actives": [],
+    "passives": [
+      "Purchasing a [[File:Control Ward item.png|20xpx|border|link=Control Ward|An icon for the item Control Ward]] [[Control Ward]] [[ammunition|stocks]] it as a charge, up to maximum of 3.",
+      "Increase your [[File:Stealth Ward icon.png|20px|link=Ward#Stealth Ward]] [[:Ward#Stealth Ward|Stealth Ward]], [[File:Totem Ward icon.png|20px|link=Ward#Totem Ward]] [[:Ward#Totem Ward|Totem Ward]], and [[File:Control Ward icon.png|20px|link=Ward#Control Ward]] [[:Ward#Control Ward|Control Ward]] caps by 1."
+    ]
+  },
+  "4645": {
+    "id": 4645,
+    "name": "Shadowflame",
+    "actives": [],
+    "passives": [
+      "Magic and true damage [[File:Critical strike icon.png|20px|link=Critical strike]] [[:Critical strike|critically strike]] against enemies below 40% '''maximum''' health for 120% damage."
+    ]
+  },
+  "4646": {
+    "id": 4646,
+    "name": "Stormsurge",
+    "actives": [],
+    "passives": [
+      "Dealing damage to an enemy champion equal to 25% of their '''maximum''' health within 2.5 seconds inflicts them with ''Squall'' and grants you 25% '''bonus''' movement speed for 1.5 seconds (30 second cooldown, starts on ''Squall's'' application).",
+      "After 2 seconds of having applied ''Squall'', strike the target with lightning, dealing 125 (+ 10% AP) magic damage to them. If the target dies before being struck, they emit an electric field instantly that shocks all enemy champions near them, dealing them the same damage and granting you [[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]] 30."
+    ]
+  },
+  "6333": {
+    "id": 6333,
+    "name": "Death's Dance",
+    "actives": [],
+    "passives": [
+      "Reduces ([[File:Melee role.png|16px|link=Melee]] 30% / [[File:Ranged role.png|16px|link=Ranged]] 10%) of all post-mitigation physical and magic damage received and instead stores the damage to successively take it as true damage over 3 seconds, dealing a third of the stored damage each second.",
+      "If an enemy champion dies within 3 seconds of you damaging them, removes ''Ignore Pain's'' remaining stored damage and [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|heals]] you for 75% '''bonus''' AD over 2 seconds."
+    ]
+  },
+  "6609": {
+    "id": 6609,
+    "name": "Chempunk Chainsword",
+    "actives": [],
+    "passives": [
+      "Dealing physical damage to enemy champions inflicts them with [[File:Grievous Wounds icon.png|20px|link=Grievous Wounds]] [[:Grievous Wounds|Grievous Wounds]] for 3 seconds."
+    ]
+  },
+  "6610": {
+    "id": 6610,
+    "name": "Sundered Sky",
+    "actives": [],
+    "passives": [
+      "Your next basic attack against a champion is empowered to [[File:Critical strike icon.png|20px|link=Critical strike]] [[:Critical strike|critically strike]] for 175% damage and [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|heal]] you for ([[File:Melee role.png|16px|link=Melee]] 100% / [[File:Ranged role.png|16px|link=Ranged]] 50%) '''base''' AD (+ 6% of your '''missing''' health) (8 second cooldown per target). Excess healing beyond '''maximum''' health is converted to '''bonus''' health for 8 seconds."
+    ]
+  },
+  "6616": {
+    "id": 6616,
+    "name": "Staff of Flowing Water",
+    "actives": [],
+    "passives": [
+      "[[File:Heal power icon.png|20px|link=Healing]] [[:Healing|Healing]] or [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shielding]] allied champions (''excluding yourself'') grants you and them 45 ability power for 6 seconds."
+    ]
+  },
+  "6617": {
+    "id": 6617,
+    "name": "Moonstone Renewer",
+    "actives": [],
+    "passives": [
+      "[[File:Heal power icon.png|20px|link=Healing]] [[:Healing|Healing]] or [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shielding]] an allied champion chains the effect to the other nearest allied champion within [[File:Range center.png|20px|link=Range]] 800 units of them (''excluding yourself''), granting them 30% of the heal or 35% of the shield's initial strength. If no other allied champions are in the radius, grant the same target an additional 30% of the heal or 35% of the shield."
+    ]
+  },
+  "6620": {
+    "id": 6620,
+    "name": "Echoes of Helia",
+    "actives": [],
+    "passives": [
+      "Damaging an enemy champion with a basic attack or [[ability damage]] grants a ''Soul Shard'', up to 2. [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|Healing]] or [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shielding]] an allied champion (''excluding yourself'') consumes all ''Soul Shards'' to heal them for 65 per shard and deal 50 magic damage per shard to the nearest enemy champion within 1100 units of the ally."
+    ]
+  },
+  "6621": {
+    "id": 6621,
+    "name": "Dawncore",
+    "actives": [],
+    "passives": [
+      "Gain 2% heal and shield power and 10 ability power for every additional 100% '''base''' mana regeneration."
+    ]
+  },
+  "6631": {
+    "id": 6631,
+    "name": "Stridebreaker",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-hit]] deal ([[File:Melee role.png|16px|link=Melee]] 40% AD / [[File:Ranged role.png|16px|link=Ranged]] 20% AD) physical damage to other enemies in a [[File:Range center.png|20px|link=Range]] 350 radius centered around the target."
+    ]
+  },
+  "6653": {
+    "id": 6653,
+    "name": "Liandry's Torment",
+    "actives": [],
+    "passives": [
+      "Dealing [[ability damage]] burns enemies, causing them to take「 1% of the target's '''maximum''' health magic damage every 0.5 seconds over 3 seconds, capped at 20 per tick against monsters. 」「 6% of the target's '''maximum''' health '''total''' magic damage over 3 seconds, capped at 120 against monsters. 」",
+      "For each second in combat with enemy champions, deal 2% increased damage, stacking up to 3 times for a total of 6%."
+    ]
+  },
+  "6655": {
+    "id": 6655,
+    "name": "Luden's Companion",
+    "actives": [],
+    "passives": [
+      "Gain 6 ''Shot Charge'' stacks to fire. Dealing [[ability damage]] to an enemy consumes all ''Shot Charges'' to deal 75 (+ 5% AP) '''bonus''' magic damage to them and, for each charge consumed beyond the first, an additional enemy within [[File:Range center.png|20px|link=Range]] 600 units of them, firing an orb at each secondary target that impacts after 0.528 seconds to deal the damage. If the number of additional targets fired at is less than the number of charges consumed,「 deal an additional 15 – 75 (based on remaining ''Shot Charges'') (+ 1% – 5% AP) magic damage to the primary target, for a total of 90 – 150 (+ 6% – 10% AP). 」「 deal an additional 20% damage to the primary target for each remaining charge. 」"
+    ]
+  },
+  "6657": {
+    "id": 6657,
+    "name": "Rod of Ages",
+    "actives": [],
+    "passives": [
+      "This item gains 10 '''bonus''' health, 20 '''bonus''' mana, and 3 ability power every minute, up to 10 times, for a maximum of 100 '''bonus''' health, 200 '''bonus''' mana, and 30 ability power. Upon reaching maximum stacks, gain a level that preserves your current experience (cap remains at level 18).",
+      "Restore mana equal to 10% of pre-mitigation damage taken from champions, and [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|heal]] for an amount equal to 25% of mana spent, up to 20 per cast. Toggled abilities can only heal for up to 20 per second."
+    ]
+  },
+  "6660": {
+    "id": 6660,
+    "name": "Bami's Cinder",
+    "actives": [],
+    "passives": [
+      "Taking or dealing damage activates this passive for 3 seconds. Deal 15 magic damage every second to enemies within [[File:Range center.png|20px|link=Range]] 325 (+ 100% '''bonus''' [[size]]) units, with the damage being increased by 50% against [[File:Minion icon.png|20px|link=Minion (League of Legends)]] [[:Minion (League of Legends)|minions]] and [[File:Monster icon.png|20px|link=Monster]] [[:Monster|monsters]]. This executes minions that would be killed by one more tick of damage."
+    ]
+  },
+  "6662": {
+    "id": 6662,
+    "name": "Iceborn Gauntlet",
+    "actives": [],
+    "passives": [
+      "After using an [[champion ability|ability]], your next basic attack within 10 seconds deals 150% '''base''' AD '''bonus''' physical damage [[on-hit]] and creates a 300 radius frost field for 2 seconds. Enemies within the field are slowed by ([[File:Melee role.png|16px|link=Melee]] 25% / [[File:Ranged role.png|16px|link=Ranged]] 12.5%) (1.5 second cooldown, starts after using the empowered attack)."
+    ]
+  },
+  "6664": {
+    "id": 6664,
+    "name": "Hollow Radiance",
+    "actives": [],
+    "passives": [
+      "Taking or dealing damage activates this passive for 3 seconds. Deal 15 (+ 1% '''bonus''' health) magic damage every second to enemies within [[File:Range center.png|20px|link=Range]] 325 (+ 100% '''bonus''' size) units, with the damage being increased by 25% against [[File:Minion icon.png|20px|link=Minion (League of Legends)]] [[:Minion (League of Legends)|minions]] and [[File:Monster icon.png|20px|link=Monster]] [[:Monster|monsters]]. This executes minions that would be killed by one more tick of damage.",
+      "Killing a non-champion unit causes an eruption around their death location that deals「 \n*2 (+ \n*2% '''bonus''' health) magic damage 」「 200% of ''Immolate's'' damage 」to enemies within 350 units. Scoring a [[File:Damage rating.png|20px|link=Takedown]] [[:Takedown|takedown]] against an enemy champion within 3 seconds of damaging them causes a larger eruption that deals「 \n*4 (+ \n*4% '''bonus''' health) magic damage 」「 400% of ''Immolate's'' damage 」to enemies within 500 units."
+    ]
+  },
+  "6665": {
+    "id": 6665,
+    "name": "Jak'Sho, The Protean",
+    "actives": [],
+    "passives": [
+      "Gain a stack for each second [[Combat status|in combat]] with enemy champions, stacking up to 5 times. At '''maximum''' stacks, increase your '''bonus''' armor and '''bonus''' magic resistance by 30% until the end of combat."
+    ]
+  },
+  "6670": {
+    "id": 6670,
+    "name": "Noonquiver",
+    "actives": [],
+    "passives": []
+  },
+  "6672": {
+    "id": 6672,
+    "name": "Kraken Slayer",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-hit]] grant a stack for 3 seconds, up to 2 stacks. At 2 stacks, the next basic attack consumes all stacks to deal ([[File:Melee role.png|16px|link=Melee]] 150 – 200 / [[File:Ranged role.png|16px|link=Ranged]] 120 – 160) (based on level) '''bonus''' physical damage on-hit, increased by 0% – 50% (based on target's '''missing''' health), for up to ([[File:Melee role.png|16px|link=Melee]] 225 – 300 / [[File:Ranged role.png|16px|link=Ranged]] 180 – 240) (based on level) '''bonus''' physical damage."
+    ]
+  },
+  "6673": {
+    "id": 6673,
+    "name": "Immortal Shieldbow",
+    "actives": [],
+    "passives": [
+      "If you would take damage that would reduce you below 30% of your '''maximum''' health, you first gain a [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]] that absorbs ([[File:Melee role.png|16px|link=Melee]] 400 – 700 / [[File:Ranged role.png|16px|link=Ranged]] 320 – 560) (based on level) damage for 3 seconds."
+    ]
+  },
+  "6675": {
+    "id": 6675,
+    "name": "Navori Flickerblade",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-attack]] reduce the '''remaining''' cooldowns of your basic abilities by 15%."
+    ]
+  },
+  "6676": {
+    "id": 6676,
+    "name": "The Collector",
+    "actives": [],
+    "passives": [
+      "If you deal post-mitigation damage that would leave a champion below 5% of their '''maximum''' health, [[File:Death from Below.png|20px|link=Kill#Execute]] [[:Kill#Execute|execute]] them.",
+      "Killing a champion grants you an additional [[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]] 25."
+    ]
+  },
+  "6690": {
+    "id": 6690,
+    "name": "Rectrix",
+    "actives": [],
+    "passives": []
+  },
+  "6692": {
+    "id": 6692,
+    "name": "Eclipse",
+    "actives": [],
+    "passives": [
+      "Damaging [[basic attack]]s, [[champion ability|abilities]], [[Named item effect|item effects]], and [[summoner spell]]s, as well as the application of [[File:Stun icon.png|20px|link=Crowd control]] [[:Crowd control|crowd control]] and [[damage over time]] effects, generate [[stack]]s against enemy champions, up to one per attack or cast per champion. Applying 2 stacks to a champion within a 2 second period deals '''bonus''' physical damage to them equal to ([[File:Melee role.png|16px|link=Melee]] 6% / [[File:Ranged role.png|16px|link=Ranged]] 4%) of target's '''maximum''' health and grants you a [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]] for ([[File:Melee role.png|16px|link=Melee]] 160 / [[File:Ranged role.png|16px|link=Ranged]] 80) (+ ([[File:Melee role.png|16px|link=Melee]] 40% / [[File:Ranged role.png|16px|link=Ranged]] 20%) '''bonus''' AD) for 2 seconds."
+    ]
+  },
+  "6694": {
+    "id": 6694,
+    "name": "Serylda's Grudge",
+    "actives": [],
+    "passives": [
+      "Dealing [[ability damage]] to an enemy that is at or below 50% of their '''maximum''' health [[File:Slow icon.png|20px|link=Slow]] [[:Slow|slows]] them by 30% for 1 second."
+    ]
+  },
+  "6695": {
+    "id": 6695,
+    "name": "Serpent's Fang",
+    "actives": [],
+    "passives": [
+      "Dealing damage to an enemy champion inflicts them with venom for 3 seconds, reducing any [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shields]] they gain within the duration by ([[File:Melee role.png|16px|link=Melee]] 50% / [[File:Ranged role.png|16px|link=Ranged]] 35%), and if the target was not already afflicted by the venom, reducing all of their active shields by the same amount."
+    ]
+  },
+  "6696": {
+    "id": 6696,
+    "name": "Axiom Arc",
+    "actives": [],
+    "passives": [
+      "Scoring a [[File:Damage rating.png|20px|link=Takedown]] [[:Takedown|takedown]] against an enemy champion within 3 seconds of damaging them refunds 15% (+ 0.15% per 1 Lethality) of your ultimate ability's '''total''' cooldown."
+    ]
+  },
+  "6697": {
+    "id": 6697,
+    "name": "Hubris",
+    "actives": [],
+    "passives": [
+      "Scoring a [[File:Damage rating.png|20px|link=Takedown]] [[:Takedown|takedown]] against an enemy champion within 3 seconds of damaging them generates a permanent stack and grants you 15 (+ 2 per stack) '''bonus''' attack damage for 90 seconds."
+    ]
+  },
+  "6698": {
+    "id": 6698,
+    "name": "Profane Hydra",
+    "actives": [],
+    "passives": [
+      "Damaging basic attacks deal ([[File:Melee role.png|16px|link=Melee]] 40% AD / [[File:Ranged role.png|16px|link=Ranged]] 20% AD) physical damage to other enemies in a [[File:Range center.png|20px|link=Range]] 350 radius centered around the target."
+    ]
+  },
+  "6699": {
+    "id": 6699,
+    "name": "Voltaic Cyclosword",
+    "actives": [],
+    "passives": [
+      "Moving and basic attacking generates ''Energize'' stacks, up to 100.",
+      "[[File:Kircheis Shard item.png|20px|link=Named_item_effect#Energized]] [[:Named_item_effect#Energized|Energized]] stack generation is increased by 75% for distance travelled from [[File:Dash.png|20px|link=Dash]] [[:Dash|dashes]], [[File:Bear Stance.png|20px|link=Dash#Lunge]] [[:Dash#Lunge|lunges]] and [[File:Flash.png|20px|link=Blink]] [[:Blink|blinks]], as well as while moving in [[File:Guerrilla Warfare.png|20px|link=Stealth]] [[:Stealth|stealth]].",
+      "When fully [[File:Kircheis Shard item.png|20px|link=Named_item_effect#Energized]] [[:Named_item_effect#Energized|Energized]], your next basic attack deals 100 '''bonus''' physical damage [[on-hit]] and [[File:Slow icon.png|20px|link=Slow]] [[:Slow|slows]] the target by ([[File:Melee role.png|16px|link=Melee]] 99% / [[File:Ranged role.png|16px|link=Ranged]] 20%) for 0.75 seconds."
+    ]
+  },
+  "6701": {
+    "id": 6701,
+    "name": "Opportunity",
+    "actives": [],
+    "passives": [
+      "After being [[Combat status|out-of-combat]] with enemy champions for 8 seconds, gain ([[File:Melee role.png|16px|link=Melee]] 11 / [[File:Ranged role.png|16px|link=Ranged]] 5) lethality. This bonus remains for 3 seconds after dealing damage to an enemy champion.",
+      "Scoring a [[File:Damage rating.png|20px|link=Takedown]] [[:Takedown|takedown]] against an enemy champion within 3 seconds of damaging them grants you 200 '''bonus''' movement speed that decays over 1.5 seconds."
+    ]
+  },
+  "8010": {
+    "id": 8010,
+    "name": "Bloodletter's Curse",
+    "actives": [],
+    "passives": [
+      "Dealing magic damage to an enemy champion with a [[champion ability]] applies a stack to them for 6 seconds, stacking up to 6 times and up to once per basic attack or ability per [[:Champion ability|cast instance]] every 0.3 seconds. Each stack inflicts 5% magic resistance reduction, up to 30% at 6 stacks."
+    ]
+  },
+  "8020": {
+    "id": 8020,
+    "name": "Abyssal Mask",
+    "actives": [],
+    "passives": [
+      "Enemy champions within 700 units of you become cursed, causing them to receive 12% increased magic damage from all sources."
+    ]
+  },
+  "220000": {
+    "id": 220000,
+    "name": "Stat Bonus",
+    "actives": [],
+    "passives": []
+  },
+  "220001": {
+    "id": 220001,
+    "name": "Legendary Fighter Item",
+    "actives": [],
+    "passives": []
+  },
+  "220002": {
+    "id": 220002,
+    "name": "Legendary Marksman Item",
+    "actives": [],
+    "passives": []
+  },
+  "220003": {
+    "id": 220003,
+    "name": "Legendary Assassin Item",
+    "actives": [],
+    "passives": []
+  },
+  "220004": {
+    "id": 220004,
+    "name": "Legendary Mage Item",
+    "actives": [],
+    "passives": []
+  },
+  "220005": {
+    "id": 220005,
+    "name": "Legendary Tank Item",
+    "actives": [],
+    "passives": []
+  },
+  "220006": {
+    "id": 220006,
+    "name": "Legendary Support Item",
+    "actives": [],
+    "passives": []
+  },
+  "220007": {
+    "id": 220007,
+    "name": "Prismatic Item",
+    "actives": [],
+    "passives": []
+  },
+  "223005": {
+    "id": 223005,
+    "name": "Ghostcrawlers",
+    "actives": [],
+    "passives": []
+  },
+  "223039": {
+    "id": 223039,
+    "name": "Atma's Reckoning",
+    "actives": [],
+    "passives": [
+      "Gain 1% critical strike chance for every 100 '''bonus''' health, up to a '''maximum''' of 30% critical strike chance at 3000 '''bonus''' health."
+    ]
+  },
+  "223095": {
+    "id": 223095,
+    "name": "Stormrazor",
+    "actives": [],
+    "passives": [
+      "Moving and basic attacking generates ''Energize'' stacks, up to 100.",
+      "When fully [[File:Kircheis Shard item.png|20px|link=Named_item_effect#Energized]] [[:Named_item_effect#Energized|Energized]], your next basic attack deals 100 '''bonus''' magic damage [[on-hit]] and grants you 45% '''bonus''' movement speed for 1.5 seconds."
+    ]
+  },
+  "223146": {
+    "id": 223146,
+    "name": "Hextech Gunblade",
+    "actives": [],
+    "passives": []
+  },
+  "223185": {
+    "id": 223185,
+    "name": "Guardian's Dirk",
+    "actives": [],
+    "passives": [
+      "Increases the effects of [[File:Power Flowers unit icon.png|20px|link=]] ''[[Arena#Power Flowers|Power Flowers]]'' by 20%. Additionally, dealing damage to a ''Power Flower'' grants you 100 '''bonus''' movement speed for 3 seconds."
+    ]
+  },
+  "224004": {
+    "id": 224004,
+    "name": "Spectral Cutlass",
+    "actives": [],
+    "passives": []
+  },
+  "224403": {
+    "id": 224403,
+    "name": "The Golden Spatula",
+    "actives": [],
+    "passives": [
+      "You are permanently [[File:On Fire! buff.png|20px|link=]] '''On Fire!''', causing you to Burn nearby enemies every second for magic damage and reduce your cooldowns twice as fast as well as gain '''bonus''' movement speed while facing nearby enemy champions, '''bonus''' attack speed, and '''bonus''' mana regeneration. While '''On Fire!''', however, you also take increased damage and reduce the effectiveness of incoming heals and shields."
+    ]
+  },
+  "226630": {
+    "id": 226630,
+    "name": "Goredrinker",
+    "actives": [],
+    "passives": []
+  },
+  "228001": {
+    "id": 228001,
+    "name": "Anathema's Chains",
+    "actives": [],
+    "passives": [
+      "Take 30% reduced damage from your ''Nemesis'' and reduce their [[File:Tenacity icon.png|20px|link=Tenacity]] [[:Tenacity|tenacity]] by 20% while they are within [[File:Range center.png|20px|link=Range]] 700 units of you."
+    ]
+  },
+  "228002": {
+    "id": 228002,
+    "name": "Wooglet's Witchcap",
+    "actives": [],
+    "passives": [
+      "Increase your ability power by 50%."
+    ]
+  },
+  "443054": {
+    "id": 443054,
+    "name": "Darksteel Talons",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-hit]] deal ([[File:Melee role.png|16px|link=Melee]] 20 – 40 / [[File:Ranged role.png|16px|link=Ranged]] 10 – 20) (based on level) (+ ([[File:Melee role.png|16px|link=Melee]] 25% / [[File:Ranged role.png|16px|link=Ranged]] 20%) '''bonus''' armor) '''bonus''' true damage."
+    ]
+  },
+  "443055": {
+    "id": 443055,
+    "name": "Fulmination",
+    "actives": [],
+    "passives": [
+      "Moving and basic attacking generates ''Energize'' stacks, up to 100.",
+      "Your [[File:Kircheis Shard item.png|20px|link=Named_item_effect#Energized]] [[:Named_item_effect#Energized|Energized]] attacks against targets not hit by your previous ''Energized'' attack do not consume any ''Energize'' stacks on-hit.",
+      "When fully [[File:Kircheis Shard item.png|20px|link=Named_item_effect#Energized]] [[:Named_item_effect#Energized|Energized]], your next basic attack deals '''bonus''' magic damage [[on-hit]] equal to 10% of the target's '''current''' health."
+    ]
+  },
+  "443056": {
+    "id": 443056,
+    "name": "Demon King's Crown",
+    "actives": [],
+    "passives": [
+      "Increase your '''total''' attack damage, ability power, attack speed, '''maximum''' health, armor, magic resistance, and ability haste by 26%, further increased by 1% for each round you win and reduced by 3% for each round you lose."
+    ]
+  },
+  "443058": {
+    "id": 443058,
+    "name": "Shield of Molten Stone",
+    "actives": [],
+    "passives": [
+      "Increase your '''total''' armor by 20%. Additionally, basic attacks that hit you have a chance of being [[File:Spirit's Refuge.png|20px|link=Attack_effects#Parrying]] [[:Attack_effects#Parrying|blocked]] equal to 5% per 200 '''total''' armor, up to a maximum of 50% chance."
+    ]
+  },
+  "443059": {
+    "id": 443059,
+    "name": "Cloak of Starry Night",
+    "actives": [],
+    "passives": [
+      "Increase your '''total''' magic resistance by 20%. Additionally, reduce all incoming damage received from non-basic attack sources by 5% per 200 '''total''' magic resistance, up to a maximum of 50% damage reduction."
+    ]
+  },
+  "443060": {
+    "id": 443060,
+    "name": "Sword of the Divine",
+    "actives": [],
+    "passives": [
+      "[[File:Critical strike icon.png|20px|link=Critical strike]] [[:Critical strike|Critical strikes]] gain random '''bonus''' critical strike damage that scales up to 50% of critical strike chance."
+    ]
+  },
+  "443061": {
+    "id": 443061,
+    "name": "Force of Entropy",
+    "actives": [],
+    "passives": [
+      "[[File:Stun icon.png|20px|link=Crowd_control#Immobilizing]] [[:Crowd_control#Immobilizing|Immobilizing]] effects against [[File:Champion icon.png|20px|link=Champion]] [[:Champion|champions]] have a 0% – 100% (based on critical strike chance) chance to increase in duration by 0.25 seconds (+ 33% of immobilizing effect's duration)."
+    ]
+  },
+  "443062": {
+    "id": 443062,
+    "name": "Sanguine Gift",
+    "actives": [],
+    "passives": [
+      "Store 15% of post-mitigation damage dealt. Whenever the stored amount exceeds a value of 333, consume it to [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|heal]] yourself and the nearest allied champion for that same amount. Stored damage is reset every round and between each phase in a round."
+    ]
+  },
+  "443063": {
+    "id": 443063,
+    "name": "Eleisa's Miracle",
+    "actives": [],
+    "passives": [
+      "Gain [[File:Heal and shield power icon.png|15px|link=Heal and shield power]] 2.5% heal and shield power per 100 '''current''' health you are missing, up to 60% at 2400 '''current''' health missing."
+    ]
+  },
+  "443064": {
+    "id": 443064,
+    "name": "Talisman of Ascension",
+    "actives": [],
+    "passives": []
+  },
+  "443069": {
+    "id": 443069,
+    "name": "Hamstringer",
+    "actives": [],
+    "passives": [
+      "[[File:Critical strike icon.png|20px|link=Critical strike]] [[:Critical strike|Critical strikes]] inflict a bleed on the target for 2 seconds, dealing '''bonus''' physical damage equal to「 5 – 20 (based on level) plus 6.25% of the pre-mitigation [[File:Critical strike icon.png|20px|link=Critical strike]] [[:Critical strike|critical strike]] instance every 0.5 seconds, 」「 20 – 80 (based on level) plus 25% of the [[File:Critical strike icon.png|20px|link=Critical strike]] [[:Critical strike|critical strike]] instance over the duration, 」as well as applies a 7% [[File:Slow icon.png|20px|link=Slow]] [[:Slow|slow]] for the same duration. The bleed's damage is affected by [[File:Critical strike icon.png|20px|link=Critical strike]] [[:Critical strike|critical strike]] modifiers and stacks infinitely; the slow stacks up to 35%."
+    ]
+  },
+  "443079": {
+    "id": 443079,
+    "name": "Turbo Chemtank",
+    "actives": [],
+    "passives": []
+  },
+  "443080": {
+    "id": 443080,
+    "name": "Twin Mask",
+    "actives": [],
+    "passives": [
+      "Gain 15% of your teammate's attack damage, ability power, '''total''' attack speed, '''maximum''' health, armor, magic resistance, and ability haste, increased to 30% if they also have '''Twin Mask''' and are alive."
+    ]
+  },
+  "443081": {
+    "id": 443081,
+    "name": "Hexbolt Companion",
+    "actives": [],
+    "passives": [
+      "While your ally is within 1200 units, your basic attacks [[on-hit]] generate a stack of ''Covering Fire''. At 1 stack, your next basic attack consumes them all to cause your ally to fire a bolt at the target, dealing 20 – 60 (based on level) physical damage and applying your ally's on-hit effects at 100% effectiveness."
+    ]
+  },
+  "443090": {
+    "id": 443090,
+    "name": "Reaper's Toll",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-hit]] apply a ''Reap'' stack to the target, stacking infinitely and lasting for the remainder of the combat phase, and deal '''bonus''' true damage equal to ([[File:Melee role.png|16px|link=Melee]] 0.7% / [[File:Ranged role.png|16px|link=Ranged]] 0.5%) (+ 0.1% per target's ''Reap'' stack) of the target's '''maximum''' health. Additionally, the target is inflicted a [[Health#Health threshold|health threshold]] equal to 100% of their '''maximum''' health minus the '''total''' amount of '''bonus''' damage dealt against them, lasting until the end of the round and capped at a threshold of 50% of their '''maximum''' health.",
+      "Increases the attack speed gained from all sources by 25%."
+    ]
+  },
+  "443193": {
+    "id": 443193,
+    "name": "Gargoyle Stoneplate",
+    "actives": [],
+    "passives": []
+  },
+  "444636": {
+    "id": 444636,
+    "name": "Night Harvester",
+    "actives": [],
+    "passives": [
+      "Damaging an enemy champion with a basic attack or [[ability damage]] deals 125 (+ 15% AP) '''bonus''' magic damage and grants you 40% '''bonus''' movement speed for 1.5 seconds, with the duration extending on subsequent triggers (10 second cooldown per champion)."
+    ]
+  },
+  "444637": {
+    "id": 444637,
+    "name": "Demonic Embrace",
+    "actives": [],
+    "passives": [
+      "Increase your ability power by 1.5% and gain 1.5% '''bonus''' movement speed for every 100 '''current''' health you are missing, up to an increase of 45% ability power and 45% '''bonus''' movement speed at 3000 '''current''' health missing."
+    ]
+  },
+  "444644": {
+    "id": 444644,
+    "name": "Crown of the Shattered Queen",
+    "actives": [],
+    "passives": [
+      "Become ''Safeguarded'' to reduce incoming champion damage by 40%, lingering for 3 seconds after taking damage from a champion (30 second cooldown, timer restarts upon taking damage from champions)."
+    ]
+  },
+  "446632": {
+    "id": 446632,
+    "name": "Divine Sunderer",
+    "actives": [],
+    "passives": [
+      "After using an [[champion ability|ability]], your next basic attack within 10 seconds deals 180% '''base''' AD (+ ([[File:Melee role.png|16px|link=Melee]] 4% / [[File:Ranged role.png|16px|link=Ranged]] 2%) of target's '''maximum''' health) as '''bonus''' physical damage [[on-hit]], for a '''minimum''' of 180% '''base''' AD. If the target is a champion, [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|heal]] for「 99% '''base''' AD (+ ([[File:Melee role.png|16px|link=Melee]] 2.2% / [[File:Ranged role.png|16px|link=Ranged]] 1.1%) of target's '''maximum''' health) 」「 55% of the damage value 」(1.5 second cooldown, starts after using the empowered attack)."
+    ]
+  },
+  "446656": {
+    "id": 446656,
+    "name": "Everfrost",
+    "actives": [],
+    "passives": []
+  },
+  "446667": {
+    "id": 446667,
+    "name": "Radiant Virtue",
+    "actives": [],
+    "passives": [
+      "Upon casting your [[champion ability|ultimate]], you ''Transcend'' for 9 seconds. While ''Transcended'', increase your '''maximum''' health by 12.5% and cause you and all allies within [[File:Range center.png|20px|link=Range]] 1200 units to [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|heal]] for 2.5% of your '''maximum''' health upon you ''Transcending'' and every 3 seconds thereafter, for a total healing of 10% of your '''maximum''' health."
+    ]
+  },
+  "446671": {
+    "id": 446671,
+    "name": "Galeforce",
+    "actives": [],
+    "passives": []
+  },
+  "446691": {
+    "id": 446691,
+    "name": "Duskblade of Draktharr",
+    "actives": [],
+    "passives": [
+      "Your abilities deal ([[File:Melee role.png|16px|link=Melee]] 0% – 22.5% / [[File:Ranged role.png|16px|link=Ranged]] 0% – 12.5%) (based on target's '''missing''' health) increased damage against enemy champions. Scoring a [[File:Damage rating.png|20px|link=Takedown]] [[:Takedown|takedown]] against an enemy champion within 3 seconds of damaging them renders you [[File:Untargetable icon.png|20px|link=Untargetable]] [[:Untargetable|untargetable]] and [[File:Cosmic Radiance.png|20px|link=Invulnerability]] [[:Invulnerability|invulnerable]] to non-structures for 1.5 seconds, which ends prematurely if you perform an action that [[File:Breaking stealth icon.png|20px|link=Stealth#Breaking_stealth]] [[:Stealth#Breaking_stealth|breaks stealth]]."
+    ]
+  },
+  "446693": {
+    "id": 446693,
+    "name": "Prowler's Claw",
+    "actives": [],
+    "passives": [
+      "[[File:Dash.png|20px|link=Dash]] [[:Dash|Dash]] to 150 units beyond the target enemy champion's location, and upon completing the dash, deal 12% (+ 5% per 100 '''bonus''' AD) of target's '''maximum''' health '''bonus''' physical damage to the target. You then deal 20% increased damage to the target for the next 3 seconds."
+    ]
+  },
+  "447100": {
+    "id": 447100,
+    "name": "Mirage Blade",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-hit]] reduce the remaining cooldowns of your abilities and spells with [[File:Dash.png|20px|link=Dash]] [[:Dash|dashes]] and/or [[File:Flash.png|20px|link=Blink]] [[:Blink|blinks]] by 12%, modified to 4% for your ultimate ability."
+    ]
+  },
+  "447101": {
+    "id": 447101,
+    "name": "Gambler's Blade",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-hit]] and ability hits have a 12% chance to store between [[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]] 30 and 240 (2.5-second cooldown per attack/ability). If you win the round, gain [[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]] gold equal to the stored amount, otherwise lose 25% of it."
+    ]
+  },
+  "447102": {
+    "id": 447102,
+    "name": "Reality Fracture",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-attack]] and damaging abilities against enemies summon 8 allied [[File:VoidmiteSquare.png|20xpx|border|link=Voidmite|An icon representing Voidmite]] [[Voidmite|Voidmites]] that are [[File:Untargetable icon.png|20px|link=Untargetable]] [[:Untargetable|untargetable]] and attack the target (15 second cooldown). [[File:VoidmiteSquare.png|20xpx|border|link=Voidmite|An icon representing Voidmite]] [[Voidmite|Voidmites]] deal 6 (+ 4% of your AD) (+ 8% of your AP) magic damage with each of their basic attacks and last for up to 3 seconds. Additionally, summon 6 [[File:VoidmiteSquare.png|20xpx|border|link=Voidmite|An icon representing Voidmite]] [[Voidmite|Voidmites]] upon your death."
+    ]
+  },
+  "447103": {
+    "id": 447103,
+    "name": "Hemomancer's Helm",
+    "actives": [],
+    "passives": [
+      "If your [[File:Life steal icon.png|15px|link=Life steal]] [[Life steal|life steal]] and [[File:Omnivamp icon.png|15px|link=Omnivamp]] [[Omnivamp|omnivamp]] sum to at least 30%, gain 500 '''bonus''' health and [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|heal]] yourself equal to 10% of the damage that enemy champions in a [[File:Range center.png|20px|link=Range]] 525 units radius around you take from all sources."
+    ]
+  },
+  "447104": {
+    "id": 447104,
+    "name": "Innervating Locket",
+    "actives": [],
+    "passives": [
+      "Gain a charge each time you or champions within 800 units cast an [[champion ability|ability]], up to 30. At maximum charges, gain 100 – 250 (based on level) ability power and 15% – 25% (based on level) '''bonus''' movement speed for the rest of the round, as well as a 400 – 750 (based on level) [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]] that lasts until destroyed. Charges are reset every round and between each phase in a round."
+    ]
+  },
+  "447105": {
+    "id": 447105,
+    "name": "Empyrean Promise",
+    "actives": [],
+    "passives": []
+  },
+  "447106": {
+    "id": 447106,
+    "name": "Dragonheart",
+    "actives": [],
+    "passives": [
+      "Every 2 rounds, gain a random [[File:Dragon Soul buff.png|20xpx|border|link=Dragon Soul|An icon representing Dragon Soul]] [[Dragon Soul]]. Additionally, increase your '''total''' attack damage, ability power, attack speed, '''maximum''' health, armor, magic resistance, and ability haste by 4% for each [[File:Dragon Soul buff.png|20xpx|border|link=Dragon Soul|An icon representing Dragon Soul]] [[Dragon Soul]] you possess, up to 30% at maximum souls.\n\nOnce you have obtained all 6 [[File:Dragon Soul buff.png|20xpx|border|link=Dragon Soul|An icon representing Dragon Soul]] [[Dragon Soul|Dragon Souls]], you also gain the [[File:Aspect of the Dragon buff.png|20xpx|border|link=Aspect of the Dragon|An icon representing Aspect of the Dragon]] [[Aspect of the Dragon]] buff permanently at the next round interval. This buff counts as a soul for this effect, for a total stat increase of 35%."
+    ]
+  },
+  "447107": {
+    "id": 447107,
+    "name": "Decapitator",
+    "actives": [],
+    "passives": [
+      "[[Basic attack]]s and [[Champion ability|basic ability]] casts generate 1 and 2 stacks of ''Anticipation'' for the rest of the round, respectively, stacking up to 40 times. For each stack, increase your ultimate ability's damage by 3% and gain 2 [[Haste#Ultimate haste|ultimate haste]], up to 120% increased ultimate damage and 80 ultimate haste. Stacks are reset every round and between each phase in a round."
+    ]
+  },
+  "447108": {
+    "id": 447108,
+    "name": "Runecarver",
+    "actives": [],
+    "passives": [
+      "Moving and basic attacking generates ''Energize'' stacks, up to 100.",
+      "Dealing damage with an ability generates 30 ''Energize'' stacks and triggers the effects of [[File:Kircheis Shard item.png|20px|link=Named_item_effect#Energized]] [[:Named_item_effect#Energized|Energized]] attacks if they are ready (2.5-second cooldown per [[:Champion ability|cast instance]]).",
+      "When fully [[File:Kircheis Shard item.png|20px|link=Named_item_effect#Energized]] [[:Named_item_effect#Energized|Energized]], your next basic attack generates a ''Rune'' stack and fires a missile at the target for each ''Rune'' stack you have, dealing 20 – 45 (based on level) (+ 11% '''bonus''' AD) (+ 8% AP) (+ 0.3 per 100 '''bonus''' health) magic damage with each missile. Stacks are reset every round and between each phase in a round."
+    ]
+  },
+  "447109": {
+    "id": 447109,
+    "name": "Cruelty",
+    "actives": [],
+    "passives": [
+      "[[File:Stun icon.png|20px|link=Crowd_control#Immobilizing]] [[:Crowd_control#Immobilizing|Immobilizing]] or [[File:Grounded icon.png|20px|link=Ground]] [[:Ground|grounding]] an enemy champion summons a comet above them that lands at their current location after 1 second, dealing 50 – 150 (based on level) (+ 40% AP) (+ 4% of your '''maximum''' health) magic damage to enemies within the area (6 second cooldown per target per [[:Champion ability|cast instance]])."
+    ]
+  },
+  "447110": {
+    "id": 447110,
+    "name": "Moonflair Spellblade",
+    "actives": [],
+    "passives": [
+      "Casting an ability [[File:Bladework.png|20px|link=Basic attack#Resets]] [[:Basic attack#Resets|resets]] your basic attack timer and empowers your next two basic attacks with 90% '''bonus''' attack speed. Additionally, each basic attack [[on-attack]] reduces the cooldowns of all your abilities by 0.5 seconds."
+    ]
+  },
+  "447112": {
+    "id": 447112,
+    "name": "Flesheater",
+    "actives": [],
+    "passives": [
+      "Dealing damage reduces the target's armor and magic resistance by 3 for 5 seconds, stacking up to 10 times for a total resistances reduction of 30. Stacks can be applied to each enemy only once every second.",
+      "If you or the allied champion on your team score a [[File:Damage rating.png|20px|link=Takedown]] [[:Takedown|takedown]] against an enemy champion, you are both [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|healed]] for 18% of the taken down target's '''maximum''' health."
+    ]
+  },
+  "447113": {
+    "id": 447113,
+    "name": "Detonation Orb",
+    "actives": [],
+    "passives": [
+      "Dealing ability damage against enemy champions marks them for 3 seconds, storing 20% of the post-mitigation damage dealt against them, increased to 25% if they are [[File:Stun icon.png|20px|link=Crowd_control#Immobilizing]] [[:Crowd_control#Immobilizing|immobilized]]. Each instance of ability damage dealt to a marked target refreshes their mark. Once the mark expires, it detonates to deal true damage equal to the amount stored against the target. If a mark would deal lethal damage to the target, it is detonated immediately."
+    ]
+  },
+  "447114": {
+    "id": 447114,
+    "name": "Reverberation",
+    "actives": [],
+    "passives": [
+      "After 2 seconds from the start of the combat phase in each round, gain 5 '''bonus''' health per 1% '''bonus''' attack speed.",
+      "Basic attacks [[on-hit]] deal 10 (+ 2% of your '''bonus''' health) '''bonus''' magic damage.",
+      "[[File:Stun icon.png|20px|link=Crowd_control#Immobilizing]] [[:Crowd_control#Immobilizing|Immobilizing]] an enemy champion generates 25 stacks of ''Reverberation'' for 10 seconds, stacking up to 100 times and refreshing on-hit as well as on subsequent immobilizations. At '''maximum''' stacks and upon [[File:Stun icon.png|20px|link=Crowd_control#Immobilizing]] [[:Crowd_control#Immobilizing|immobilizing]] an enemy, your on-hit effects are applied to them 3 times."
+    ]
+  },
+  "447115": {
+    "id": 447115,
+    "name": "Regicide",
+    "actives": [],
+    "passives": [
+      "At the start of the combat phase in each round, declare the enemy champion with the lowest '''total maximum''' health as the ''Regent''. Scoring a [[File:Damage rating.png|20px|link=Takedown]] [[:Takedown|takedown]] against the ''Regent'' for the first time in the combat phase grants you 10 '''bonus''' attack damage permanently and sets the '''current''' cooldown of your ultimate ability to 0.5 seconds."
+    ]
+  },
+  "447116": {
+    "id": 447116,
+    "name": "Kinkou Jitte",
+    "actives": [],
+    "passives": [
+      "You can now identify the ''Weakpoints'' of nearby enemy champions, marked as an arc around them and pointing towards a specific direction. ''Weakpoints'' on targets take 4 seconds to become exposed and linger for 11.25 seconds afterwards. Dealing damage in the direction of an exposed ''Weakpoint'' will consume it to deal '''bonus''' true damage equal to 3% (+ 3% per 100 AD) (+ 2% per 100 AP) of the target's '''maximum''' health and grant you 30% – 75% (based on level) '''bonus''' movement speed for 1.5 seconds. Once a target's ''Weakpoint'' is consumed or expires, you identify a new ''Weakpoint'' on them."
+    ]
+  },
+  "447118": {
+    "id": 447118,
+    "name": "Pyromancer's Cloak",
+    "actives": [],
+    "passives": [
+      "Basic attacks and ability hits against enemies inflicts them with a Burn that deals「 200 – 450 (based on level) magic damage over 3 seconds. 」「 16.67 – 37.5 (based on level) magic damage every 0.25 seconds over 3 seconds. 」",
+      "Inflicting an enemy champion with a Burn effect releases a fireball from the target, landing to a location near you after 0.5 seconds. Upon landing, a blaze is created at the impact area with a radius of 175 units, lasting for 5 seconds (3 second cooldown per target). While you are within the blaze, gain 20% '''bonus total''' movement speed, lingering for 0.75 seconds after exiting, and [[File:Heal power icon.png|15px|link=Healing]] heal for 60 – 150 (based on level) upon entering and each second of the blaze's lifetime thereafter. While enemies are within the blaze, they are dealt 100 magic damage every second.\n\nFor each unique Burn effect source that you have, increase the blaze's size by 40 units (up to 6 times), and its strength by 4% '''bonus total''' movement speed and 30 healing per second for the buff and 60 magic damage per tick for the enemy effect (all up to 10 times)."
+    ]
+  },
+  "447119": {
+    "id": 447119,
+    "name": "Lightning Rod",
+    "actives": [],
+    "passives": [
+      "Automatically summon a storm cloud above you, which strikes a lightning bolt at your current location after 1.5 seconds to deal 135 – 230 (based on level) (+ 30% '''bonus''' AD) (+ 50% AP) (+ 10% of target's '''maximum''' health) magic damage to enemies within the area and [[File:Slow icon.png|20px|link=Slow]] [[:Slow|slow]] them by 30% for 2 seconds. If you are within the lightning strike, gain a [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]] equal to 14% of your '''maximum''' health (+ 75% AP) for 2 seconds.",
+      "Automatic effects have their cooldown reduced by 1 second and now benefit from your ability haste. ''Call Lightning's'' cooldown cannot be reduced below 5 seconds by this effect."
+    ]
+  },
+  "447120": {
+    "id": 447120,
+    "name": "Diamond-Tipped Spear",
+    "actives": [],
+    "passives": [
+      "Gain [[File:Range icon.png|15px|link=Range]] 75 '''bonus''' attack range.",
+      "Basic attacks deal 0% – 30% (based on distance) increased damage and abilities deal 0% – 40% (based on distance) increased damage. The distance is calculated from your [[File:Range center.png|20px|link=Range]] current position to the target's position when the triggering attack or ability hits them."
+    ]
+  },
+  "447121": {
+    "id": 447121,
+    "name": "Twilight's Edge",
+    "actives": [],
+    "passives": [
+      "If you have at least 130 '''bonus''' attack damage and 180 ability power, enter either the ''Material World'' or the ''Spirit World'', determined randomly, at the start of the combat phase in each round:\n\n• '''Material World''': Increase your attack damage by 20% and gain 50% – 150% (based on level) '''bonus''' attack speed.\n• '''Spirit World''': Increase your ability power by 20% and gain 30 – 120 (based on level) ability haste."
+    ]
+  },
+  "447122": {
+    "id": 447122,
+    "name": "Black Hole Gauntlet",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-hit]] and [[File:Stun icon.png|20px|link=Crowd_control#Immobilizing]] [[:Crowd_control#Immobilizing|immobilizing]] effects against enemy champions generate 1 and 5 stacks of ''Accretion'', respectively, up to 50. For each ''Accretion'' stack, gain 10% '''base''' health regeneration, up to 500% '''base''' health regeneration at '''maximum''' stacks. Additionally, for every 10 ''Accretion'' stacks, gain 20% increased size, up to 100% at '''maximum''' stacks. Stacks are reset every round and between each phase in a round."
+    ]
+  },
+  "447123": {
+    "id": 447123,
+    "name": "Puppeteer",
+    "actives": [],
+    "passives": [
+      "Basic attacks [[on-hit]] against enemy champions apply a ''Puppeteer'' stack for 15 seconds, stacking up to 4 times. The fourth stack against a target consumes them all to render the target [[File:Berserk icon.png|20px|link=Berserk]] [[:Berserk|berserk]] for 2 seconds, causing them to gain 50% (+ 150% of your heal and shield power) '''bonus''' attack speed and 40% '''bonus''' movement speed (25 second cooldown). If only one champion is alive on the enemy team, instead [[File:Flee icon.png|20px|link=Flee]] [[:Flee|fear]] the target for the same duration.",
+      "Granting yourself or an ally a [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|heal]], [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]], or [[champion ability|ability-sourced]] buff reduces the cooldown of ''Pull Their Strings'' by 5 seconds, once per cast."
+    ]
+  }
+}

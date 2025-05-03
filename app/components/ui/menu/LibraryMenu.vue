@@ -12,7 +12,7 @@ const open = ref(false)
       </NavBtn>
     </PopoverTrigger>
 
-    <PopoverContent align="end" class="min-w-64 **:!text-3 p-2">
+    <PopoverContent align="end" class="min-w-64 **:!text-3 p-2" >
       <ul class="menu p-0 w-full ">
         <li>
           <label class="flex gap-2 items-center text-bc pointer-events-none">
@@ -21,14 +21,14 @@ const open = ref(false)
           <ul>
             <li>
               <a class="hover:!bg-b2/60" :class="{ '': route.meta.section == 'items' }" @click="navigateTo('/items')">
-                <i-lol-hitter class="size-4.5 opacity-70 -ml-px" />
+                <i-lol-hitter class="size-4.75 opacity-70 -ml-px" />
                 Items
               </a>
             </li>
 
             <li>
               <a class="hover:!bg-b2/60" :class="{ '': route.path == 'items/list' }" @click="navigateTo('/items/list')">
-                <icon name="simple-line-icons:list" class="!size-4 mx-px" />
+                <icon name="simple-line-icons:list" class="!size-4 mx-px dst" />
                 Item Stat List
               </a>
             </li>
@@ -42,14 +42,14 @@ const open = ref(false)
           <ul>
             <li>
               <a class="hover:!bg-b2/60" :class="{ '': route.path == 'champions' }" @click="navigateTo('/champions')">
-                <i-lol-champ class="!size-4.5 opacity-60" />
+                <i-lol-champ class="!size-4.5 opacity-65" />
                 Champions
               </a>
             </li>
 
             <li>
               <a class="hover:!bg-b2/60" :class="{ '': route.path == 'champions/list' }" @click="navigateTo('/champions/list')">
-                <icon name="simple-line-icons:list" class="!size-4 mx-px" />
+                <icon name="simple-line-icons:list" class="!size-4 mx-px dst" />
                 Champion Stat List
               </a>
             </li>
@@ -69,14 +69,16 @@ const open = ref(false)
             </li>
             <li>
               <a class="hover:!bg-b2/60" :class="{ '': route.path == '/spells' }" @click="navigateTo('/spells')">
-                <icon name="book" class="!size-4 mx-px" />
+                <icon name="book" class="!size-4 mx-px dst" />
                 Spellbook
               </a>
             </li>
           </ul>
         </li>
-        <li>
+        <li class="mt-1">
           <PatchNotesLink />
+           
+  
         </li>
       </ul>
     </PopoverContent>

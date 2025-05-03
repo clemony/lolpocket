@@ -27,7 +27,7 @@ onMounted (() => {
 </script>
 
 <template>
-  <div class="flex pl-4 pr-2 w-116 h-full flex-col items-center pt-18 justify-start  relative">
+  <transition-expand group class="flex pl-4 pr-2 w-116 h-full flex-col items-center pt-19 justify-start  relative">
     <div class="w-full px-5 mt-4">
       <Tabs v-model:model-value="model" class=" w-full  **:pointer-events-auto ">
         <IndicatorTabsList class="grid grid-cols-2 h-10">
@@ -41,12 +41,9 @@ onMounted (() => {
         </IndicatorTabsList>
       </Tabs>
 
-      <ItemSearch class="input w-full mt-6 shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc" />
+      <ItemSearch class="input w-full mt-9 shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc" />
     </div>
-    <div class="px-5 mt-2 w-full">
-      <div class="divider divider-start before:bg-b3/60 font-semibold  my-8">
-        Categories
-      </div>
+    <div class="px-5 mt-10 w-full">
       <ItemRankFilter />
     </div>
 
@@ -94,5 +91,5 @@ onMounted (() => {
             @click.stop
             @update:model="(v) => (is.sortPrice = v)" /> -->
     </div>
-  </div>
+  </transition-expand>
 </template>

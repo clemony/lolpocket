@@ -46,7 +46,7 @@ const classObject = 'btn !font-medium tracking-tight !gap-5 btn-ghost px-2 btn-l
       </a>
     </SheetClose>
     <SheetClose as-child >
-<PatchNotesLink updated/>
+<PatchNotesDaysAgoLink />
     </SheetClose>
 
 

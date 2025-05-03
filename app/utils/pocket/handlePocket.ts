@@ -10,7 +10,7 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
   const spellSet = newSpellSet()
   const newPocket: pocket = {
     key: pocketKey,
-    name: name || generateShortString(),
+    name: name || generateShortString().toString(),
     roles: [],
     icon: icon || '/img/lp/192.webp',
     champions: {

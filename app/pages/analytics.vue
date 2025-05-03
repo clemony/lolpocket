@@ -23,11 +23,13 @@ onMounted (async () => {
 </script>
 
 <template>
-  <div class="overflow-hidden size-full flex  scrollbar-none pt-20  pb-14">
+  <div class="flex size-full oveflow-hidden">
+    <menu class="overflow-hidden shadow-warm-2 shadow-black/7">
     <AnalyticsFilterPanel />
-    <div class="h-full grow pt-14 pr-14 pl-6">
+ </menu>
+    <main class="overflow-y-auto grow relative pl-10 border-l border-l-b3/40">
       <NuxtPage v-if="summoner" :matches="summoner.simplifiedMatches" />
-    </div>
+    </main>
   </div>
 </template>
 

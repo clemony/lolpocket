@@ -16,10 +16,6 @@ const theme = ref(pocketTheme)
 const gridOptions: GridOptions<ItemLite> = {
   columnHoverHighlight: true,
 
-  autoSizeStrategy: {
-    type: 'fitGridWidth',
-    defaultMinWidth: 50,
-  },
   rowSelection: {
     mode: 'multiRow',
     checkboxes: false,
@@ -31,7 +27,7 @@ const gridOptions: GridOptions<ItemLite> = {
     flex: 1,
     autoHeaderHeight: true,
     wrapHeaderText: true,
-    minWidth: 50,
+    minWidth: 63,
     cellClass: 'text-end grid justify-end size-full',
     sortingOrder: ['desc', 'asc', null],
     initialHide: false,

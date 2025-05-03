@@ -1,28 +1,20 @@
 <script lang="ts" setup>
+import { ListboxContent,  ListboxItem, ListboxRoot } from 'reka-ui'
 const is = useItemStore()
 
-console.log('💠 - filterDbItems - is.itemFilter.stats.length:', is.itemFilter.stats)
 </script>
 
 <template>
-  <Field title="stats" class="p-0 max-h-90 pointer-events-none">
-    <div class=" !overflow-hidden flex flex-col size-full pointer-events-none max-h-90 rounded-field ">
-      <div class="relative pointer-events-none max-h-inherit size-full overflow-y-auto py-3 px-1">
-        <label
+  <Field title="stats" class="p-0 max-h-90 overflow-hidden h-120 max-h-90">
+    <ListboxRoot v-model:model-value="is.itemFilter.stats" class="w-full overflow-y-scroll overscroll-auto px-1.5  h-120 max-h-90 " :multiple="true" @entry-focus.prevent>
+            <ListboxContent class="w-full py-4 ">
+       <ListboxItem
           v-for="stat in itemStats.filter(s => s.id != 'msflat' && s.id != 'mpenflat')"
-          :key="stat.id" class="btn  has-checked:bg-b3/60  !pointer-events-auto has-checked:btn-active has-checked:border-b3  btn-sm !text-3 btn-ghost font-medium pl-4  capitalize checked:shadow-sm flex gap-4 justify-start">
+          :key="stat.id" :value="stat.id" class=" grid grid-cols-[4fr_repeat(2,1fr)] gap-3 rounded-lg cursor-pointer  focus:outline-0 hover:border-b3 px-5 hover:bg-b3/30  py-1.5  grid shrink-0 w-full items-center  **:font-medium *:text-bc  dst" :class="{ 'bg-b3/40 border-b3 shadow-xs inset-shadow-sides bg-noise inset-shadow-b3/10': is.itemFilter.stats && is.itemFilter.stats.includes(stat.id) }">
 
           {{ stat.displayName }}
-          <Grow />
-          <input
-            v-model="is.itemFilter.stats"
-            class=" checkbox-sm checkbox  pointer-events-none  border-0 inset-shadow-none bg-transparent checked:shadow-none checked:bg-transparent opacity-60"
-            :style="{ '--noise': 0 }"
-            :value="stat.id"
-            type="checkbox"
-            name="stats" />
-        </label>
-      </div>
-    </div>
+       </ListboxItem>
+            </ListboxContent>
+    </ListboxRoot>
   </Field>
 </template>

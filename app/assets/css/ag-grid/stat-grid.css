@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+.stat-grid {
+  @apply border-l border-l-b3
+}
+
 .stat-grid .ag-header{
   @apply !border-y font-medium !border-y-b3/60 text-center;
 }

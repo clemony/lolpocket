@@ -69,8 +69,7 @@ const showData = ref(false)
         <CustomPopoverArrow />
         <LazyItemData
           v-if="showData"
-          :id="item.id"
-          :name="item.name" />
+          :item-lite="item" />
         <LazyItemInSetMenu v-else :pocket="pocket" :set="props.set" :item="item" @update:popover="showData = true" />
       </LazyCustomPopoverContent>
     </Popover>

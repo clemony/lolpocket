@@ -12,7 +12,7 @@ const index = files.map((file) => {
   const filePath = path.join(itemsDir, file)
   const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
   return {
-    id: path.basename(file, '.json'),
+    id: Number.parseInt(path.basename(file, '.json')),
     name: data.name,
   }
 })

@@ -4,7 +4,7 @@ const props = defineProps<{
   sideOffset?: number
   i?: number
   set?: CalculatorSet
-  item?: Item
+  item?: ItemLite
   type?: string
 }>()
 

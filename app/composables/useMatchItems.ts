@@ -14,6 +14,9 @@ export function useMatchItems() {
     gameVersions: string[]
   }>()
 
+  const { data: itemData } = useFetch('/api/items/index.json')
+  const items = Object.values(itemData.value) as ItemIndex[]
+
   const bayesianItems = ref<any[]>([])
 
   watchEffect(() => {
@@ -71,7 +74,7 @@ export function useMatchItems() {
         const bayesianWinrate = ((1 - confidence) * globalWinrate + confidence * (stats.wins / stats.games)) * 100
 
         return {
-          item: ds.items.find(i => i.id == itemId),
+          item: items.find(i => i.id == itemId),
           games: stats.games,
           win: stats.wins,
           loss: stats.losses,

@@ -15,6 +15,11 @@ const { bayesianChampions } = useMatchChampions(matches)
 </script>
 
 <template>
+  <div class="size-full pt-16">
+
+<div class="w-full flex items-center h-28">
+      <h1 class="dst">Champion Analysis</h1>
+  </div>
   <div class="flex  gap-10 size-full ">
       <div class="flex flex-col gap-8 size-full">
     <ChampionBarChart v-if="bayesianChampions.length" :champions="bayesianChampions" />
@@ -32,5 +37,5 @@ const { bayesianChampions } = useMatchChampions(matches)
     <ChampionDataGrid :champions="bayesianChampions"  />
     </div>
     </div>
-
+</div>
 </template>

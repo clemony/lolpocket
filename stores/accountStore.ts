@@ -8,7 +8,7 @@ export const useAccountStore = defineStore(
     const userNotes = ref<Note[]>([])
     const reducedMotion = ref(false)
     const favoriteChamps = ref<Champion[]>([])
-    const favoriteItems = ref<Item[]>([])
+    const favoriteItems = ref<number[]>([])
 
     const userAccount = ref<userAccount>({
       name: 'Summoner',

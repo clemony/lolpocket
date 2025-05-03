@@ -11,9 +11,10 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "generate:item-index": "node scripts/generateItemIndex.cjs",
-    "generate:champion-index": "node scripts/generateChampionIndex.cjs",
-    "generate:items-lite": "node scripts/generate-items-lite.cjs"
+    "generate:item-index": "node scripts/generate-item-index.cjs",
+    "generate:champion-index": "node scripts/generate-champion-index.cjs",
+    "generate:items-lite": "node scripts/generate-items-lite.cjs",
+    "generate:item-effects": "node scripts/generate-item-effects.cjs"
   },
   "dependencies": {
     "@antfu/eslint-config": "^4.12.0",

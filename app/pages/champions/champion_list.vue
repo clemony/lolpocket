@@ -242,7 +242,7 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowS
       :grid-options="gridOptions"
       :theme="theme"
       :column-defs="colDefs"
-      class="!size-full stat-grid champion-grid pt-18"
+      class="!size-full stat-grid champion-grid pt-18  "
       :tooltip-show-delay="400"
       @grid-pre-destroyed="onGridPreDestroyed"
       @grid-ready="onGridReady">

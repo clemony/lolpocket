@@ -48,7 +48,7 @@ const pocketName = ref(pocket.value.name)
       </AnimatePresence>
 
       <AnimatePresence mode="popLayout">
-        <Motion v-if="isEditing"  :layout="true" :animate="{ opacity: [0, 1] }" :exit="{ opacity: [1, 0] }" class="cursor-pointer" as="button" @click="pocketName = generateShortString()">
+        <Motion v-if="isEditing"  :layout="true" :animate="{ opacity: [0, 1] }" :exit="{ opacity: [1, 0] }" class="cursor-pointer" as="button" @click="pocketName = generateShortString().toString()">
           Randomize
         </Motion>
 

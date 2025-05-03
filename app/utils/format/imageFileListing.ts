@@ -6,7 +6,6 @@
   '[[File:Shield.png|25px|link=Shield]]': '/img/icons/shield.png',
 */
 const fileImageMap = {
-
   '[[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]]': '/img/icons/40px-Gold_colored_icon.webp',
   '[[File:Turret icon.png|20px|link=Turret]]': '/img/icons/20px-Turret_icon.png',
   '[[File:Melee role.png|16px|link=Melee]]': '/img/icons/40px-Melee_role.webp',
@@ -62,7 +61,7 @@ const fileImageMap = {
   '[[File:Untargetable icon.png|20px|link=Untargetable]]': '/img/icons/40px-Untargetable_icon.webp',
   '[[File:Ghost.png|20px|link=Unit collision]]': '/img/spells/Ghost.webp',
   '[[File:Smite.png|20xpx|border|link=Smite|An icon representing Smite]]': 'img/spells/Smite.webp',
-  '[[File:Scorchclaws Slash buff.png|20xpx|border|link=Scorchclaws Slash|An icon representing Scorchclaws Slash]]': '/img/icons/Scorchclaw\'s_Slash_buff.webp',
+  '[[File:Scorchclaw\'s Slash buff.png|20xpx|border|link=Scorchclaw\'s Slash|An icon representing Scorchclaw\'s Slash]]': '/img/icons/Scorchclaw\'s_Slash_buff.webp',
   '[[File:Slow immune icon.png|20px|link=Slow resist]]': '/img/icons/30px-Slow_immune_icon.webp',
   '[[File:Triple Tonic rune.png|20xpx|link=Triple Tonic|An icon representing Triple Tonic]]': '/img/icons/Triple_Tonic_rune.png',
   '[[File:Stun icon.png|20px|link=Crowd_control#Immobilizing]]': '/img/icons/40px-Stun_icon.webp',
@@ -96,11 +95,13 @@ const fileImageMap = {
   '[[File:Bear Stance.png|20px|link=Dash#Lunge]]': '/img/icons/Udyr_Iron_Mantle.webp',
   '[[File:Guerrilla Warfare.png|20px|link=Stealth]]': '/img/icons/40px-Teemo_Guerrilla_Warfare.webp',
   '[[File:Farsight Ward icon.png|20px|link=Ward#Farsight Ward]]': '/img/icons/40px-Farsight_Ward_icon.webp',
-  '[[File:Mosstompers Courage buff.png|20xpx|border|link=Mosstompers Courage|An icon representing Mosstompers Courage]]': '/img/icons/Mosstomper\'s_Courage_buff.png',
-  '[[File:Gustwalkers Gait buff.png|20xpx|border|link=Gustwalkers Gait|An icon representing Gustwalkers Gait]]': '/img/icons/Gustwalker\'s_Gait_buff.png',
+  '[[File:Mosstomper\'s Courage buff.png|20xpx|border|link=Mosstomper\'s Courage|An icon representing Mosstomper\'s Courage]]': '/img/icons/Mosstomper\'s_Courage_buff.png',
+  '[[File:Gustwalker\'s Gait buff.png|20xpx|border|link=Gustwalker\'s Gait|An icon representing Gustwalker\'s Gait]]': '/img/icons/Gustwalker\'s_Gait_buff.png',
   '[[File:Magical Footwear rune.png|20xpx|link=Magical Footwear|An icon representing Magical Footwear]]': '/img/item/2422.webp',
   '[[File:Boots item.png|20xpx|border|link=Boots|An icon for the item Boots]]': '/img/item/1001.webp',
   '[[File:Biscuit Delivery rune.png|20xpx|link=Biscuit Delivery|An icon representing Biscuit Delivery]]': '/img/icons/Biscuit_Delivery_rune.png',
+  '[[File:Mejai\'s Soulstealer item.png|20xpx|border|link=Mejai\'s Soulstealer|An icon for the item Mejai\'s Soulstealer]]': '/img/item/3041.webp',
+
 }
 
 export function replaceFileReferencesWithImages(text) {
@@ -109,3 +110,14 @@ export function replaceFileReferencesWithImages(text) {
     return imageUrl ? `<span class="inline-flex items-center align-baseline size-fit"><img src="${imageUrl}" alt="icon"  class="shrink-0 h-4 w-auto"></span>` : match
   })
 }
+
+const more = {
+
+'[[File:Heal and shield power icon.png 15px|link=Heal and shield power': '/img/icons/40px-Heal_power_icon.webp',
+}
+
+export function replaceMoreFileReferencesWithImages(text) {
+let t = text.replace("[[File:Heal and shield power icon.png 15px|link=Heal and shield power", `<span class="inline-flex items-center align-baseline size-fit"><img src="/img/icons/40px-Heal_power_icon.webp" alt="icon"  class="shrink-0 h-4 w-auto"></span>`)
+  t = t.replace('[[Heal and shield power|heal and shield power]]', ' heal and shield power' )
+  return t
+  }

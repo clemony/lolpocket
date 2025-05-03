@@ -7,32 +7,26 @@ onMounted (() => {
 </script>
 
 <template>
-  <div class="w-100 px-6 py-4">
+  <div class="w-90 px-6 pb-4 pt-16 bg-b2/40 h-full">
     <div class="w-full">
-      <h2>Analytics</h2>
-      <Tabs v-model:model-value="tabs" class="mt-4">
-        <IndicatorTabsList class="grid-cols-2">
-          <IndicatorTabsTrigger value="/analytics/items">
+      <Tabs v-model:model-value="tabs" class="mt-4 w-full" orientation="vertical">
+        <IndicatorTabsList class="!w-full grid *:h-16 justify-start *:font-semibold *:tracking-tight *:w-full  *:text-4 *:not-last:dst gap-2 *:justify-start"  orientation="vertical">
+          <IndicatorTabsTrigger value="/analytics/items" >
             Items
           </IndicatorTabsTrigger>
-          <IndicatorTabsTrigger value="/analytics/champions">
+          <IndicatorTabsTrigger value="/analytics/champions" >
+            <i-lol-champ class="size-5"  />
             Champions
           </IndicatorTabsTrigger>
-          <TabIndicator />
+          <IndicatorTabsTrigger value="/analytics/allies" >
+            Allies
+          </IndicatorTabsTrigger>
+          <TabIndicator   orientation="vertical" class="" />
         </IndicatorTabsList>
       </Tabs>
     </div>
     <PatchNumberField />
 
-    <Popover>
-      <PopoverTrigger class="btn w-55">
-        hi ajflsjflsjf hih ih hi
-      </PopoverTrigger>
-      <ScrollPopperContent class="w-55">
-        <p v-for="index in 40" :key="index">
-          hi
-        </p>
-      </ScrollPopperContent>
-    </Popover>
+  
   </div>
 </template>

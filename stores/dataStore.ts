@@ -7,9 +7,11 @@ export const useDataStore = defineStore(
     const currentPatch = ref()
     const currentPatchNotes = ref<PatchNotesData>(null)
 
+    const patchNotesLink = computed (() => {
+      return `https://www.leagueoflegends.com/en-us/news/game-updates/patch-${currentPatch.value.toString().replace('.', '-')}-notes/`
+    })
     const paths = ref<Path[]>([])
     const champions = ref<Champion[]>([])
-    const items = ref<Item[] | null>(null)
     const shards = ref()
 
     const championNames = computedAsync (() => {
@@ -26,23 +28,15 @@ export const useDataStore = defineStore(
       return runes
     })
 
-    const loadData = () => {
-      // !SRitems ? getItemsFromDatabase() : ''
-      /*     !champions ? getChampsFromDatabase() : '' */
-      // !paths ? getRuneData() : ''
-      console.log('💠 - useDataStore - SRitems:', items)
-      console.log('💠 - champions:', champions)
-      console.log('💠 - paths:', paths)
-    }
     return {
-      loadData,
       currentPatch,
+      patchNotesLink,
       currentPatchNotes,
       paths,
       runes,
       champions,
       championNames,
-      items,
+
       shards,
     }
   },

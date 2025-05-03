@@ -84,7 +84,7 @@ const toID = hexoid()
     @end="onEnd"
     @clone="onClone"
     @start="onStart">
-    <PopoverItem v-for="item in filteredItems" :id="item.id" :key="item.id" :name="item.name" />
+    <PopoverItem v-for="item in filteredItems" :key="item.id" :item="item" />
   </div>
 </template>
 

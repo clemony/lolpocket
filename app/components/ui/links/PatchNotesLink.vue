@@ -4,30 +4,23 @@ const props = defineProps<{
   updated?: boolean
 }>()
 const ds = useDataStore()
-const patch = computed (() => {
-  return `https://www.leagueoflegends.com/en-us/news/game-updates/patch-${ds.currentPatch.toString().replace('.', '-')}-notes/`
-})
+
+
 </script>
 
 <template>
-  <NuxtLink :to="patch" target="_blank" external>
-    <div v-if="props.updated" :class="cn('btn !font-medium tracking-tight !gap-5 btn-ghost px-2 btn-lg w-full', props.class)">
-      <SidebarIcon>
-        <i-logo-league-filled class="size-4.75 absolute left-px text-bc/80 " />
-      </SidebarIcon>
-      Patch {{ ds.currentPatch }} - 2 days ago
+<NuxtLink :to="ds.patchNotesLink" target="_blank" external class="flex  items-center grow text-bc hover:!bg-b2/40 gap-2.5 w-full">
 
-      <icon name="link" class="size-3.75 dst  shrink-0 " />
-    </div>
-
-    <div v-else :class="cn('flex items-center text-bc hover:bg-b2/60 gap-2.5 w-full', props.class)">
-      <div class="grow flex items-end">
+      <span class="size-5 relative grid place-items-center ">
+      <i-logo-league-filled  class="size-4.5 top-1 text-bc/70 dst"/>
+      </span>
+      <div class="grow flex items-end w-full">
         <span class="text-[11px] pt-0.25">{{ ds.currentPatch }}&nbsp;</span>
 
         <span class="pt-0.5  align-baseline"> Patch Notes</span>
       </div>
-
+<Grow  />
       <icon name="radix-icons:external-link" class="size-3.75 dst shrink-0 " />
-    </div>
+ 
   </NuxtLink>
 </template>

@@ -1,54 +1,32 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  item: Item
+const {from} = defineProps<{
+  from: number[]
 
 }>()
 
-const ds = useDataStore()
 
-const item = computed (() => props.item)
 
-const from = computed (() => item.value.from ? item.value.from : null)
-const fromArray = asyncComputed(() => {
-  return !!Array.isArray(from.value)
-})
-function itemBuy(id) {
-  const a = ds.items.find(item => item.id == id)
+const { data } = await useFetch('/api/items-lite.json')
 
-  return {
-    name: a.name,
-    price: a.buy,
-  }
-}
 
-function handleTooltip(id) {
-  const a = itemBuy(id)
-  if (itemBuy) {
-    return `${a.name} ‑ ${a.price}g`
-  }
-
-  else if (!a) {
-    return a.name
-  }
-}
 </script>
 
 <template>
-  <div v-if="from && fromArray">
-    <div class="divider divider-end before:h-px my-4 before:bg-nc">
+  <div v-if="from">
+    <div class="divider divider-end before:h-px py-2 before:bg-nc/30">
       RECIPE
     </div>
-    <div class="group flex items-center justify-center gap-4">
-      <template v-if="fromArray">
+    <div class="group flex items-center justify-center py-1 gap-4">
+    
         <template
-          v-for="(component, i) in item.from"
+          v-for="(component, i) in from"
           :key="i">
           <button
-            v-tippy="handleTooltip(component)"
+            v-tippy="`${data[component].name} ‑ ${data[component].cost}g`"
             class="ring-accent  size-10 overflow-hidden rounded-lg shadow-sm hover:ring-2  hover:ring-offset-2 hover:ring-offset-b1/30 tldr-20">
-            <img
+            <Image
               v-if="component"
-              :src="`/img/item/${component}.webp`"
+              :image="`/img/item/${component}.webp`"
               :alt="`${component}image`" />
           </button>
 
@@ -56,7 +34,7 @@ function handleTooltip(id) {
             name="add-sm"
             class=" last:hidden" />
         </template>
-      </template>
+    
     </div>
   </div>
 </template>

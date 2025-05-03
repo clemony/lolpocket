@@ -205,7 +205,6 @@ export const itemStats: ItemStat[] = [
     bgClass: 'bg-b2/60',
     hoverClass: 'hover:bg-b2/60',
   },
-
   {
     id: 'flatMovespeed',
     displayName: 'Base Movespeed',
@@ -214,6 +213,26 @@ export const itemStats: ItemStat[] = [
     icon: 'ms',
     class: '',
     bgClass: 'bg-b2/60',
+    hoverClass: 'hover:bg-b2/60',
+  },
+  {
+    id: 'criticalStrikeDamage',
+    displayName: 'Critical Damage',
+    checked: false,
+    shortName: 'Crit Dmg',
+    icon: 'crit-dmg',
+    class: '',
+    bgClass: 'bg-precision/60',
+    hoverClass: 'hover:bg-b2/60',
+  },
+  {
+    id: 'tenacity',
+    displayName: 'Tenacity',
+    checked: false,
+    shortName: 'Tenacity',
+    icon: 'crit-dmg',
+    class: '',
+    bgClass: 'bg-precision/60',
     hoverClass: 'hover:bg-b2/60',
   },
 

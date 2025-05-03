@@ -8,23 +8,15 @@ addItemToSet
 remove items
 */
 
-export function createItem(): Item {
+export function createItem(): ItemLite {
   return {
     name: '',
-    buy: 0,
-    // stats: {},
-    effects: {},
-    type: '',
-    // recipe: [<Item[]>([])],
     id: 0,
-    removed: '',
-    menu: {},
-    nickname: [],
-    rank: [''],
-    caption: '',
-    itemlimit: '',
-    limit: '',
-    modes: {},
+    rank: [],
+    stats: <any>([]),
+    purchasable: false,
+    cost: 0,
+    tags: [],
   }
 }
 export function newItemSet(pocketKey?, setName?) {
@@ -47,7 +39,7 @@ export function newItemSet(pocketKey?, setName?) {
   return newSet
 }
 
-export function removeItemFromSet(pocket: pocket, itemSet: ItemSet, itemx: Item) {
+export function removeItemFromSet(pocket: pocket, itemSet: ItemSet, itemx: ItemLite) {
   const set = pocket?.items.sets.find(set => set.key === itemSet.key)
 
   console.log('💠 - removeItemFromSet - set:', set)
@@ -60,7 +52,7 @@ export function removeItemFromSet(pocket: pocket, itemSet: ItemSet, itemx: Item)
   }
 }
 
-export function addItemToSet(pocket: pocket, itemSet: ItemSet, item: Item) {
+export function addItemToSet(pocket: pocket, itemSet: ItemSet, item: ItemLite) {
   const set = pocket.items.sets.find(set => set.key === itemSet.key)
 
   if (set && Array.isArray(set.items)) {

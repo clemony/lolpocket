@@ -2,8 +2,6 @@
 const { params } = defineProps<{
   params: any
 }>()
-console.log('💠 - params:', params)
-
 const patch = computed (() => {
   return params.valueFormatted.split(', ')
 })

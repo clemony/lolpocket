@@ -1,21 +1,21 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  stats: any
-}>()
+const { stats } = defineProps<{ stats: Record<string, number> }>()
 
-const stats = computed(() => {
-  return props.stats ? props.stats : null
-})
+const statEntries = computed(() =>
+  Object.entries(stats).map(([key, value]) => ({ key, value }))
+)
 </script>
 
 <template>
-  <div class="stat-grid grid grid-cols-[1.5fr_2fr] gap-2 *:flex">
-    <template v-for="stat in stats" :key="stat.key">
+  
+          <Separator class="bg-nc/10   my-3"  />
+  <div class="stat-grid grid grid-cols-[1.5fr_20px_1fr] gap-2 *:flex ">
+    <template v-for="stat in statEntries" :key="stat.key">
       <p class="col-start-1 items-end pt-[2px] font-medium tracking-tight">
-        {{ stat.key }}
+        {{ itemStats.find(k => k.id == stat.key).displayName }}
       </p>
-      <p class="col-start-2 items-center">
-        {{ stat.value.toString().replace(/\[\[/g, '').replace(/\]\]/g, '') }}
+      <p class="col-start-2 items-center justify-end">
+        {{ stat.value }}
       </p>
     </template>
   </div>

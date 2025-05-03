@@ -1,16 +1,21 @@
 declare global {
 type StatLite = number
 type StatArray = StatLite[]
-  type StatKeys = keyof Item['stats']
+  type StatKeys = keyof ItemLite['stats']
 
   interface ItemLite {
     name: string
     id: number
     rank: string[]
-    stats: StatLite[]
+    stats: Record<string, number>
     purchasable: boolean
     cost: number
     tags: string[]
+  }
+
+  interface ItemIndex {
+    id: number
+    name: string
   }
 
   interface Item {
@@ -18,67 +23,39 @@ type StatArray = StatLite[]
     name?: string
     nickname?: string | string[] | null
     rank?: string[]
-    type?: string
-    caption?: string
-    champion?: string
-    itemlimit?: string
-    limit?: string
+    active?: Effect
+    passives?: Effect[]
     modes?: {
       'classic sr 5v5'?: boolean
       'aram'?: boolean
       'nb'?: boolean
       'arena'?: boolean
     }
-    menu?: {
-      'fighter'?: boolean
-      'marksman'?: boolean
-      'assassin'?: boolean
-      'mage'?: boolean
-      'tank'?: boolean
-      'support'?: boolean
-      'attack damage'?: boolean
-      'critical strike'?: boolean
-      'attack speed'?: boolean
-      'onhit effects'?: boolean
-      'armor pen'?: boolean
-      'ability power'?: boolean
-      'mana and reg'?: boolean
-      'magic pen'?: boolean
-      'health and reg'?: boolean
-      'armor'?: boolean
-      'magic res'?: boolean
-      'ability haste'?: boolean
-      'movement'?: boolean
-      'lifesteal vamp'?: boolean
-    }
     stats?: StatArray[]
-    effects?: {
-      pass?: effect
-      pass2?: effect
-      pass3?: effect
-
-      act?: effect
-    }
-    recipe?: Item[]
-    into?: string[]
-    from?: string[]
-    buy?: number | string | null
-    gold?: {
-      base?: number
+    noEffects?: boolean
+    buildsInto?: number[]
+    buildsFrom?: number[]
+    shop?: {
+      prices: {
+        total?: number
+        combined?: number
+        sell?: number
+      }
       purchasable: boolean
-      total?: number
-      sell?: number
+      tags: string[]
     }
-    tags?: string[]
-    req?: string | null
+    simpleDescription?: string
+    specialRecipe?: string | number
     removed?: boolean | string
     icon?: string
+    requiredChampion?: string
+    requiedAlly?: string
   }
 
   interface ItemSet {
     name: string
     key: string
-    items: Item[]
+    items: ItemLite[]
   }
 
   interface DefaultItem {
@@ -96,11 +73,11 @@ type StatArray = StatLite[]
     count: number
   }
 
-  interface effect {
+  interface Effect {
     name?: string
     unique?: boolean
-    description?: string
-    cd?: number | string
+    effects?: string
+    cooldown?: number | string
     recharge?: string
     charges?: string | number
     range?: string
@@ -108,7 +85,7 @@ type StatArray = StatLite[]
 
   type effectAmount = number
 
-  interface ItemClone extends Item {
+  interface ItemClone extends ItemLite {
     cloneId: string
   }
   interface ItemStat extends StatLite {
@@ -123,7 +100,7 @@ type StatArray = StatLite[]
     bgClass?: string
   }
 
-type CalculatorSet = Item[]
+type CalculatorSet = ItemLite[]
 
 }
 

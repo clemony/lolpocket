@@ -24,7 +24,7 @@ const els = [
   },
   {
     name: 'items',
-    data: ds.items,
+    //data: ds.items,
     // comp: ,
   },
   {

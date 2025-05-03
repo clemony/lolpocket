@@ -19,6 +19,11 @@ function handleReset() {
 </script>
 
 <template>
+
+      <div class="divider divider-start before:bg-b3/60 font-semibold  mb-8">
+        Categories
+      </div>
+
   <transition-slide group class="flex w-full flex-wrap gap-4 relative ">
     <input
       class="btn btn-sm   before:size-14 absolute  left-0 !text-5 font-normal "

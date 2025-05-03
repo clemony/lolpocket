@@ -13,27 +13,11 @@ export function generateKey() {
   return toID()
 }
 
-export function generateMediumString(): string {
-  const championNames = useDataStore().champions.flatMap(champion => cleanName(champion.name))
-
-  const itemNames = useDataStore().items.flatMap(item => cleanName(item.name))
-
-  const moreWords = ['Towers', 'Minions', 'Minion Block', 'Lucker Dog', 'Dongers']
-
-  const leagueWords = championNames.concat(itemNames).concat(moreWords)
-
-  function getRandomElement(array: string[]): string {
-    return array[Math.floor(Math.random() * array.length)]
-  }
-  const leagueWord = getRandomElement(leagueWords)
-  const generatedWords = [words()]
-
-  const allWords = [leagueWord, ...generatedWords]
-
-  const shuffledWords = allWords.sort(() => Math.random() - 0.5)
-
-  return shuffledWords.join(' ')
+function getRandomElement(array: string[]): string {
+  return array[Math.floor(Math.random() * array.length)]
 }
+
+const moreWords = ['Towers', 'Minions', 'Minion Block', 'Lucker Dog', 'Dongers', 'Poggers', 'Chatbanned']
 
 function cleanName(name: string): string[] {
   const cleanedName = name
@@ -53,20 +37,27 @@ function words() {
   return key
 }
 
-export function generateShortString(): string {
+function word() {
+  let key = ''
+  while (key.length < 4 || key.length > 16) {
+    key = generate({ exactly: 1, join: ' ' })
+  }
+  key = key.charAt(0).toUpperCase() + key.slice(1)
+  return key
+}
+
+export async function generateMediumString(): Promise<string> {
   const championNames = useDataStore().champions.flatMap(champion => cleanName(champion.name))
 
-  const itemNames = useDataStore().items.flatMap(item => cleanName(item.name))
+  const { data: itemData } = await useFetch('/api/items/index.json')
+  const items = Object.values(itemData.value) as ItemIndex[]
 
-  const moreWords = ['Towers', 'Minions', 'Minion Block', 'Lucker Dog', 'Dongers']
+  const itemNames = items.flatMap(item => item.name)
 
   const leagueWords = championNames.concat(itemNames).concat(moreWords)
 
-  function getRandomElement(array: string[]): string {
-    return array[Math.floor(Math.random() * array.length)]
-  }
   const leagueWord = getRandomElement(leagueWords)
-  const generatedWords = [word()]
+  const generatedWords = [words()]
 
   const allWords = [leagueWord, ...generatedWords]
 
@@ -75,11 +66,22 @@ export function generateShortString(): string {
   return shuffledWords.join(' ')
 }
 
-function word() {
-  let key = ''
-  while (key.length < 4 || key.length > 16) {
-    key = generate({ exactly: 1, join: ' ' })
-  }
-  key = key.charAt(0).toUpperCase() + key.slice(1)
-  return key
+export async function generateShortString(): Promise<string> {
+  const championNames = useDataStore().champions.flatMap(champion => cleanName(champion.name))
+
+  const { data: itemData } = await useFetch('/api/items/index.json')
+  const items = Object.values(itemData.value) as ItemIndex[]
+
+  const itemNames = items.flatMap(item => item.name)
+
+  const leagueWords = championNames.concat(itemNames).concat(moreWords)
+
+  const leagueWord = getRandomElement(leagueWords)
+  const generatedWords = [word()]
+
+  const allWords = [leagueWord, ...generatedWords]
+
+  const shuffledWords = allWords.sort(() => Math.random() - 0.5)
+
+  return shuffledWords.join(' ')
 }

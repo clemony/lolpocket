@@ -1,39 +1,34 @@
 <script setup lang="ts">
-const props = defineProps<{
-  data: effect
+const {data, description, type} = defineProps<{
+  data: Effect
+  description: string
+  type: string
 }>()
 
-const effect = computed(() => {
-  return props.data ? props.data : null
-})
 
-const desc = computedAsync (() => {
-  if (!effect.value && !effect.value.description)
+const effect = computedAsync (() => {
+  if (!description)
     return null
-const a = replaceFileReferencesWithImages(effect.value.description)
-return formatDataTags(a)
-})
-
-const why = computed (() => {
-  if (!desc.value)
-  return null
+let a = replaceFileReferencesWithImages(description)
+a = formatDataTags(a)
+ return replaceMoreFileReferencesWithImages(a)
 })
 
 
 </script>
 
 <template>
-  <p class="w-full flex flex-wrap text-wrap leading-normal items-center [&_img]:size-4 gap-x-1 [&_img]:align-bottom [&_img]:self-end">
-    <span class="text-4 font-semibold tracking-tight">
-      <span v-if="effect.unique">Unique -&nbsp;</span>
-      <span v-if="effect.name">{{ effect.name }}: &nbsp;</span>
-    </span>
+  <p class="w-full  flex flex-wrap text-wrap leading-normal items-center [&_img]:size-4 gap-x-1 [&_img]:align-bottom [&_img]:self-end">
+    <div class="py-1">
+      <span v-if="data.unique" class="text-4  italic   tracking-tight">Unique {{type}} -&nbsp;</span>
+      <span v-if="data.name" class="text-4 italic tracking-tight">{{ data.name }}: &nbsp;</span>
+</div>
 
-    <template v-if="desc">
-      <span
+  
+      <span v-if="effect"
         class=""
-        v-html="desc" />
-    </template>
+        v-html="effect" />
+
   </p>
 </template>
 

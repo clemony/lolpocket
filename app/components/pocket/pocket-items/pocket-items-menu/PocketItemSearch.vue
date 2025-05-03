@@ -21,9 +21,8 @@ const route = useRoute()
 const is = useItemStore()
 const ds = useDataStore()
 
-const items = computedAsync(async () => {
-  return await [...(ds.items || [])] // Assuming ds.items is an array or undefined.
-}, null)
+const { data: itemData } = await useFetch('/api/items/index.json')
+const items = Object.values(itemData.value) as ItemIndex[]
 
 const searchQuery = ref('')
 
@@ -36,7 +35,7 @@ const fuse = ref<Fuse<any> | null>(null)
 
 // Initialize Fuse once the items are available
 watch(
-  () => items.value,
+  () => items,
   (newItems) => {
     if (newItems && newItems.length > 0) {
       fuse.value = new Fuse(newItems, {
@@ -51,7 +50,7 @@ watch(
 
 const searchResult = computed(() => {
   if (!searchQuery.value) {
-    return items.value || []
+    return items || []
   }
 
   if (!fuse.value)

@@ -84,6 +84,7 @@ export default defineAppConfig({
       'id-card': 'icon-park-twotone:id-card-v',
       'mail': 'radix-icons:envelope-closed',
       'link': 'mingcute:external-link-line',
+      'link-lg': 'radix-icons:external-link',
       'chain': 'ph:link-simple',
       'share': 'iconoir:send-diagonal',
       'open': 'radix-icons:open-in-new-window',
