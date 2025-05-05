@@ -5,210 +5,137 @@
   "title": "the Lady of Clockwork",
   "fullName": "Orianna Reveck",
   "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Orianna.png",
-  "resource": "MANA",
-  "attackType": "RANGED",
-  "adaptiveType": "MAGIC_DAMAGE",
+  "resource": "Mana",
+  "attackType": "Ranged",
   "stats": {
     "health": {
       "flat": 585,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 110,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "healthRegen": {
       "flat": 7,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0.55,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "mana": {
       "flat": 418,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 25,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "manaRegen": {
       "flat": 8,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0.8,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "armor": {
       "flat": 20,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 4.2,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "magicResistance": {
       "flat": 26,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 1.3,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "attackDamage": {
       "flat": 44,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 2.6,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "movespeed": {
       "flat": 325,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "acquisitionRadius": {
       "flat": 525,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "selectionRadius": {
       "flat": 120,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackSpeed": {
       "flat": 0.658,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 3.5,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "attackSpeedRatio": {
       "flat": 0.657999992370605,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackDelayOffset": {
       "flat": -0.124561406672,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackRange": {
       "flat": 525,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0,
-      "percentPerLevel": 0.0
-    },
-    "aramDamageTaken": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramDamageDealt": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramHealing": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramShielding": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramTenacity": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramAbilityHaste": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramAttackSpeed": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramEnergyRegen": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfDamageTaken": {
-      "flat": 1.1,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfDamageDealt": {
-      "flat": 0.9,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfHealing": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfShielding": {
-      "flat": 0.8,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     }
   },
   "positions": [
-    "MIDDLE"
+    "Middle"
   ],
   "roles": [
-    "BURST",
-    "MAGE",
-    "SUPPORT"
+    "Burst",
+    "Mage",
+    "Support"
   ],
   "attributeRatings": {
     "damage": 2,
@@ -831,1035 +758,5 @@
         "targetRange": null
       }
     ]
-  },
-  "releaseDate": "2011-06-01",
-  "releasePatch": "1.0.0.119",
-  "patchLastChanged": "25.09",
-  "price": {
-    "blueEssence": 2400,
-    "rp": 880,
-    "saleRp": 0
-  },
-  "lore": "Once a curious girl of flesh and blood, Orianna is now a technological marvel comprised entirely of clockwork. She became gravely ill after an accident in the lower districts of Zaun, and her failing body had to be replaced with exquisite artifice, piece by piece. Accompanied by an extraordinary brass sphere she built for companionship and protection, Orianna is now free to explore the wonders of Piltover, and beyond.",
-  "faction": "piltover",
-  "skins": [
-    {
-      "name": "Original",
-      "id": 61000,
-      "isBase": true,
-      "availability": "Available",
-      "formatName": "Original",
-      "lootEligible": true,
-      "cost": 880,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": "Once a curious girl of flesh and blood, Orianna is now a technological marvel comprised entirely of clockwork. She became gravely ill after an accident in the lower districts of Zaun, and her failing body had to be replaced with exquisite artifice, piece by piece. Accompanied by an extraordinary brass sphere she built for companionship and protection, Orianna is now free to explore the wonders of Piltover, and beyond.",
-      "release": "2011-06-01",
-      "set": [],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/base/images/orianna_splash_centered_0.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/base/images/orianna_splash_uncentered_0.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/base/images/orianna_splash_tile_0.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/base/oriannaloadscreen.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": false,
-      "newAnimations": false,
-      "newRecall": false,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Heath Pennington"
-      ],
-      "splashArtist": [
-        "Alex 'alexplank' Flores"
-      ]
-    },
-    {
-      "name": "Gothic",
-      "id": 61001,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Gothic",
-      "lootEligible": true,
-      "cost": 520,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": "Her father gave her the light of life—and yet, Orianna always preferred the dark.",
-      "release": "2011-06-01",
-      "set": [
-        "Goth"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin01/images/orianna_splash_centered_1.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin01/images/orianna_splash_uncentered_1.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin01/images/orianna_splash_tile_1.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin01/oriannaloadscreen_1.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": false,
-      "newAnimations": false,
-      "newRecall": false,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Heath Pennington"
-      ],
-      "splashArtist": []
-    },
-    {
-      "name": "Sewn Chaos",
-      "id": 61002,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Sewn Chaos",
-      "lootEligible": true,
-      "cost": 520,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": "Even the bravest children shy away from Orianna—a raggedy, whispering doll as old as the house itself. Some toys just aren't meant to be played with.",
-      "release": "2011-06-01",
-      "set": [
-        "Toy Box"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin02/images/orianna_splash_centered_2.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin02/images/orianna_splash_uncentered_2.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin02/images/orianna_splash_tile_2.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin02/oriannaloadscreen_2.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": false,
-      "newAnimations": false,
-      "newRecall": false,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Heath Pennington"
-      ],
-      "splashArtist": [
-        "Katie 'TeaTime' De Sousa"
-      ]
-    },
-    {
-      "name": "Bladecraft",
-      "id": 61003,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Bladecraft",
-      "lootEligible": true,
-      "cost": 975,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": null,
-      "release": "2012-02-29",
-      "set": [
-        "Legacy"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin03/images/orianna_splash_centered_3.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin03/images/orianna_splash_uncentered_3.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin03/images/orianna_splash_tile_3.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin03/oriannaloadscreen_3.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": false,
-      "newRecall": false,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Heath Pennington"
-      ],
-      "splashArtist": []
-    },
-    {
-      "name": "TPA",
-      "id": 61004,
-      "isBase": false,
-      "availability": "Legacy",
-      "formatName": "TPA",
-      "lootEligible": true,
-      "cost": 750,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": "Honoring Toyz's winning performance as Orianna during the 2012 World Championship.",
-      "release": "2013-05-23",
-      "set": [
-        "World Champions: 2012"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin04/images/orianna_splash_centered_4.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin04/images/orianna_splash_uncentered_4.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin04/images/orianna_splash_tile_4.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin04/oriannaloadscreen_4.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": false,
-      "newAnimations": false,
-      "newRecall": false,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Heath Pennington"
-      ],
-      "splashArtist": [
-        "Bo Lu"
-      ]
-    },
-    {
-      "name": "Winter Wonder",
-      "id": 61005,
-      "isBase": false,
-      "availability": "Legacy",
-      "formatName": "Winter Wonder",
-      "lootEligible": true,
-      "cost": 975,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": "A strange clockwork girl imbued with the magic of the Winterlands, Orianna once lived within a snowglobe created by a kindly old inventor. At the end of his life he freed her, and now she searches for greater purpose, serving in the court of the Poro King.",
-      "release": "2014-12-15",
-      "set": [
-        "Winter Wonder"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin05/images/orianna_splash_centered_5.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin05/images/orianna_splash_uncentered_5.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin05/images/orianna_splash_tile_5.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin05/oriannaloadscreen_5.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Heath Pennington"
-      ],
-      "splashArtist": [
-        "Jason Chan"
-      ]
-    },
-    {
-      "name": "Heartseeker",
-      "id": 61006,
-      "isBase": false,
-      "availability": "Legacy",
-      "formatName": "Heartseeker",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [],
-      "lore": "A mechanical girl built to find and comfort broken hearts, Orianna still does not understand why people run from her when she's only trying to help them. Still, she goes about her duties diligently, performing beautiful clockwork dances for any who would give her a chance.",
-      "release": "2016-02-11",
-      "set": [
-        "Heartbreakers"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin06/images/orianna_splash_centered_6.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin06/images/orianna_splash_uncentered_6.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin06/images/orianna_splash_tile_6.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin06/oriannaloadscreen_6.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Heath Pennington"
-      ],
-      "splashArtist": [
-        "Alex 'alexplank' Flores"
-      ]
-    },
-    {
-      "name": "Dark Star",
-      "id": 61007,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Dark Star",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Antimatter",
-          "id": 61012,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61012.png",
-          "colors": [
-            "#000000",
-            "#A50031"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a Loot exclusive in the 2020 Galaxies event.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        }
-      ],
-      "lore": "Born out of the remnants of a magnificently advanced system, Orianna serves the Dark Star with meticulous precision. She dances across galaxies in an endlessly horrifying performance, the only witness is the silent trail of destruction left in her wake.",
-      "release": "2017-05-03",
-      "set": [
-        "Dark Star"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin07/images/orianna_splash_centered_7.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin07/images/orianna_splash_uncentered_7.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin07/images/orianna_splash_tile_7.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin07/oriannaloadscreen_7.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Heath Pennington"
-      ],
-      "splashArtist": [
-        "Jem Flores"
-      ]
-    },
-    {
-      "name": "Victorious",
-      "id": 61008,
-      "isBase": false,
-      "availability": "Limited",
-      "formatName": "Victorious",
-      "lootEligible": false,
-      "cost": "Special",
-      "sale": 0,
-      "distribution": "Reward for finishing the ranked season in Gold or higher.",
-      "rarity": "NoRarity",
-      "chromas": [
-        {
-          "name": "Amber",
-          "id": 61009,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61009.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 2,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Peridot",
-          "id": 61010,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61010.png",
-          "colors": [
-            "#B6E084",
-            "#B6E084"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 2,
-              "region": "riot"
-            }
-          ]
-        }
-      ],
-      "lore": "Victorious Orianna was awarded to players who reached Gold or higher in Ranked Queues for Season 8. Her body has been reforged by Piltover's finest artificers, and enhanced with experimental hextech.",
-      "release": "2018-11-21",
-      "set": [
-        "Victorious"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin08/images/orianna_splash_centered_8.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin08/images/orianna_splash_uncentered_8.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin08/images/orianna_splash_tile_8.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin08/oriannaloadscreen_8.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Heath Pennington"
-      ],
-      "splashArtist": [
-        "Jessica 'OwleyCat' Oyhenart"
-      ]
-    },
-    {
-      "name": "Pool Party",
-      "id": 61011,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Pool Party",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Amethyst",
-          "id": 61015,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61015.png",
-          "colors": [
-            "#9C68D7",
-            "#9C68D7"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Catseye",
-          "id": 61014,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61014.png",
-          "colors": [
-            "#FFEE59",
-            "#FFEE59"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Obsidian",
-          "id": 61019,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61019.png",
-          "colors": [
-            "#27211C",
-            "#27211C"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Pearl",
-          "id": 61018,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61018.png",
-          "colors": [
-            "#ECF9F8",
-            "#ECF9F8"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Peridot",
-          "id": 61016,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61016.png",
-          "colors": [
-            "#B6E084",
-            "#B6E084"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Rose Quartz",
-          "id": 61017,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61017.png",
-          "colors": [
-            "#E58BA5",
-            "#E58BA5"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "TENCENT"
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 61013,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61013.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive in 2020.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        }
-      ],
-      "lore": "With her latest outfit, Orianna is finally able to submerge completely in aquatic biomes. This brings her great joy, as a day at the beach previously required subsequent weeks of scrubbing salt, sand, and sometimes an angry crab out of her gears.",
-      "release": "2020-07-02",
-      "set": [
-        "Pool Party"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin11/images/orianna_splash_centered_11.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin11/images/orianna_splash_uncentered_11.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin11/images/orianna_splash_tile_11.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin11/oriannaloadscreen_11.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Heath Pennington"
-      ],
-      "splashArtist": [
-        "Sean 'Raiko' Tay",
-        "West Studio"
-      ]
-    },
-    {
-      "name": "Orbeeanna",
-      "id": 61020,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Orbeeanna",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Emerald",
-          "id": 61024,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61024.png",
-          "colors": [
-            "#2DA130",
-            "#2DA130"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Obsidian",
-          "id": 61026,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61026.png",
-          "colors": [
-            "#27211C",
-            "#27211C"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Pearl",
-          "id": 61028,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61028.png",
-          "colors": [
-            "#ECF9F8",
-            "#ECF9F8"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Rose Quartz",
-          "id": 61023,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61023.png",
-          "colors": [
-            "#E58BA5",
-            "#E58BA5"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "TENCENT"
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 61021,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61021.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive in 2022.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Sapphire",
-          "id": 61022,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61022.png",
-          "colors": [
-            "#2756CE",
-            "#2756CE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Tanzanite",
-          "id": 61025,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61025.png",
-          "colors": [
-            "#54209B",
-            "#54209B"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Turquoise",
-          "id": 61027,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61027.png",
-          "colors": [
-            "#73BFBE",
-            "#73BFBE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        }
-      ],
-      "lore": "Careful not to get honey caught in those gears!",
-      "release": "2022-03-03",
-      "set": [
-        "Bees!"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin20/images/orianna_splash_centered_20.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin20/images/orianna_splash_uncentered_20.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin20/images/orianna_splash_tile_20.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin20/oriannaloadscreen_20.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Heath Pennington"
-      ],
-      "splashArtist": [
-        "Mingchen Shen",
-        "West Studio"
-      ]
-    },
-    {
-      "name": "Star Guardian",
-      "id": 61029,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Star Guardian",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Amethyst",
-          "id": 61035,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61035.png",
-          "colors": [
-            "#9C68D7",
-            "#9C68D7"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Catseye",
-          "id": 61032,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61032.png",
-          "colors": [
-            "#FFEE59",
-            "#FFEE59"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Emerald",
-          "id": 61031,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61031.png",
-          "colors": [
-            "#2DA130",
-            "#2DA130"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Obsidian",
-          "id": 61034,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61034.png",
-          "colors": [
-            "#27211C",
-            "#27211C"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Pearl",
-          "id": 61037,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61037.png",
-          "colors": [
-            "#C1F2D7",
-            "#C1F2D7"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Rose Quartz",
-          "id": 61036,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61036.png",
-          "colors": [
-            "#E58BA5",
-            "#E58BA5"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "TENCENT"
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 61030,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61030.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive in 2023.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "TENCENT"
-            },
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Sapphire",
-          "id": 61033,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61033.png",
-          "colors": [
-            "#2756CE",
-            "#2756CE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        }
-      ],
-      "lore": "When this robot girl wished upon the First Star, it granted her deepest desire: to become human. With that gift came all the responsibilities of a Star Guardian. Orianna analyzed the risks. Her chances of falling are… 1.3%. Of successfully blending in with high schoolers? The odds aren't looking great.",
-      "release": "2023-06-28",
-      "set": [
-        "Star Guardian Season 4"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin29/images/orianna_splash_centered_29.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin29/images/orianna_splash_uncentered_29.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin29/images/orianna_splash_tile_29.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin29/oriannaloadscreen_29.jpg",
-      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin29/oriannaloadscreen_29_le.jpg",
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Heath Pennington"
-      ],
-      "splashArtist": [
-        "Félix Donadio",
-        "West Studio"
-      ]
-    },
-    {
-      "name": "T1",
-      "id": 61038,
-      "isBase": false,
-      "availability": "Legacy",
-      "formatName": "T1",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Elite",
-          "id": 61039,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/61/61039.png",
-          "colors": [
-            "#AE1F1F",
-            "#DF4F1A"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive during T1 World Championship showcase.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 2,
-              "region": "riot"
-            }
-          ]
-        }
-      ],
-      "lore": "Honoring Faker's winning performance as Orianna during the 2023 World Championship.",
-      "release": "2024-08-14",
-      "set": [
-        "World Champions: 2023"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin38/images/orianna_splash_centered_38.skins_orianna_skin38.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin38/images/orianna_splash_uncentered_38.skins_orianna_skin38.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin38/images/orianna_splash_tile_38.skins_orianna_skin38.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin38/oriannaloadscreen_38.skins_orianna_skin38.jpg",
-      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/skin38/oriannaloadscreen_38_le.skins_orianna_skin38.jpg",
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Heath Pennington"
-      ],
-      "splashArtist": [
-        "Alsie Lau",
-        "Kelvin Law",
-        "Mo Yan"
-      ]
-    }
-  ]
+  }
 }

@@ -5,211 +5,138 @@
   "title": "the Mechanized Menace",
   "fullName": "",
   "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Rumble.png",
-  "resource": "HEAT",
-  "attackType": "MELEE",
-  "adaptiveType": "MAGIC_DAMAGE",
+  "resource": "Heat",
+  "attackType": "Melee",
   "stats": {
     "health": {
       "flat": 655,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 105,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "healthRegen": {
       "flat": 7,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0.6,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "mana": {
       "flat": 150,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "manaRegen": {
       "flat": 0,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "armor": {
       "flat": 36,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 4.7,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "magicResistance": {
       "flat": 28,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 1.55,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "attackDamage": {
       "flat": 64,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 3.2,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "movespeed": {
       "flat": 345,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "acquisitionRadius": {
       "flat": 600,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "selectionRadius": {
       "flat": 140,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "gameplayRadius": {
       "flat": 80,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackSpeed": {
       "flat": 0.644,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 1.85,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "attackSpeedRatio": {
       "flat": 0.643999993801116,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackDelayOffset": {
       "flat": -0.1,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackRange": {
       "flat": 125,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0,
-      "percentPerLevel": 0.0
-    },
-    "aramDamageTaken": {
-      "flat": 1,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramDamageDealt": {
-      "flat": 1,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramHealing": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramShielding": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramTenacity": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramAbilityHaste": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramAttackSpeed": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramEnergyRegen": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfDamageTaken": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfDamageDealt": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfHealing": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfShielding": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     }
   },
   "positions": [
-    "MIDDLE",
-    "TOP"
+    "Middle",
+    "Top"
   ],
   "roles": [
-    "BATTLEMAGE",
-    "FIGHTER",
-    "MAGE"
+    "Battlemage",
+    "Fighter",
+    "Mage"
   ],
   "attributeRatings": {
     "damage": 3,
@@ -1511,816 +1438,5 @@
         "targetRange": "1700"
       }
     ]
-  },
-  "releaseDate": "2011-04-26",
-  "releasePatch": "1.0.0.116",
-  "patchLastChanged": "25.S1.2",
-  "price": {
-    "blueEssence": 2400,
-    "rp": 880,
-    "saleRp": 0
-  },
-  "lore": "Rumble is a young inventor with a temper. Using nothing more than his own two hands and a heap of scrap, the feisty yordle constructed a colossal mech suit outfitted with an arsenal of electrified harpoons and incendiary rockets. Though others may scoff and sneer at his junkyard creations, Rumble doesn't mind—after all, he's the one with the flamespitter.",
-  "faction": "bandle-city",
-  "skins": [
-    {
-      "name": "Original",
-      "id": 68000,
-      "isBase": true,
-      "availability": "Available",
-      "formatName": "Original",
-      "lootEligible": true,
-      "cost": 880,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": "Rumble is a young inventor with a temper. Using nothing more than his own two hands and a heap of scrap, the feisty yordle constructed a colossal mech suit outfitted with an arsenal of electrified harpoons and incendiary rockets. Though others may scoff and sneer at his junkyard creations, Rumble doesn't mind—after all, he's the one with the flamespitter.",
-      "release": "2011-04-26",
-      "set": [],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/base/images/rumble_splash_centered_0.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/base/images/rumble_splash_uncentered_0.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/base/images/rumble_splash_tile_0.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/base/rumbleloadscreen.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": false,
-      "newAnimations": false,
-      "newRecall": false,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Ari Rubin"
-      ],
-      "splashArtist": [
-        "Esben Lash Rasmussen",
-        "Sixmorevodka Studio"
-      ]
-    },
-    {
-      "name": "Bilgerat",
-      "id": 68002,
-      "isBase": false,
-      "availability": "Legacy",
-      "formatName": "Bilgerat",
-      "lootEligible": true,
-      "cost": 520,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": "When the burdens of invention weigh too heavy on a young yordle's shoulders, there's no better choice than to take to the seas! Nothing like plunderin' and maraudin' to lend Rumble a new lease on life as he terrorizes the coasts.",
-      "release": "2011-04-26",
-      "set": [
-        "Bilgewater: Burning Tides"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin02/images/rumble_splash_centered_2.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin02/images/rumble_splash_uncentered_2.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin02/images/rumble_splash_tile_2.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin02/rumbleloadscreen_2.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": false,
-      "newAnimations": false,
-      "newRecall": false,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Ari Rubin"
-      ],
-      "splashArtist": [
-        "Feihong Chen"
-      ]
-    },
-    {
-      "name": "Rumble in the Jungle",
-      "id": 68001,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Rumble in the Jungle",
-      "lootEligible": true,
-      "cost": 975,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": null,
-      "release": "2011-04-26",
-      "set": [
-        "Legacy"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin01/images/rumble_splash_centered_1.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin01/images/rumble_splash_uncentered_1.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin01/images/rumble_splash_tile_1.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin01/rumbleloadscreen_1.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": false,
-      "newAnimations": false,
-      "newRecall": false,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Ari Rubin"
-      ],
-      "splashArtist": [
-        "Feihong Chen"
-      ]
-    },
-    {
-      "name": "Super Galaxy",
-      "id": 68003,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Super Galaxy",
-      "lootEligible": true,
-      "cost": 1820,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Legendary",
-      "chromas": [],
-      "lore": "Founder of the Super Galaxy Defense Force, Rumble always dreamed of saving the world… with his “explosive face-melters” and “courageous giga-guards”. To this day, his allies still have no idea what those terms mean, but they don't question it—because a yordle operating a volcanic flame-spitting mech can be a very volatile thing.",
-      "release": "2014-04-02",
-      "set": [
-        "Super Galaxy"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin03/images/rumble_splash_centered_3.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin03/images/rumble_splash_uncentered_3.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin03/images/rumble_splash_tile_3.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin03/rumbleloadscreen_3.jpg",
-      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin03/rumbleloadscreen_3_le.jpg",
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": true,
-      "newQuotes": false,
-      "voiceActor": [
-        "Ari Rubin"
-      ],
-      "splashArtist": [
-        "Andrew 'Silver' Silver"
-      ]
-    },
-    {
-      "name": "Badlands Baron",
-      "id": 68004,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Badlands Baron",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Catseye",
-          "id": 68011,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68011.png",
-          "colors": [
-            "#FFEE59",
-            "#FFEE59"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "VN"
-            },
-            {
-              "rarity": 0,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Emerald",
-          "id": 68012,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68012.png",
-          "colors": [
-            "#2DA130",
-            "#2DA130"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "VN"
-            },
-            {
-              "rarity": 0,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Meteorite",
-          "id": 68006,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68006.png",
-          "colors": [
-            "#5F432B",
-            "#5F432B"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "VN"
-            },
-            {
-              "rarity": 0,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Obsidian",
-          "id": 68010,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68010.png",
-          "colors": [
-            "#27211C",
-            "#27211C"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "VN"
-            },
-            {
-              "rarity": 0,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Pearl",
-          "id": 68008,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68008.png",
-          "colors": [
-            "#ECF9F8",
-            "#ECF9F8"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "VN"
-            },
-            {
-              "rarity": 0,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Rose Quartz",
-          "id": 68009,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68009.png",
-          "colors": [
-            "#E58BA5",
-            "#E58BA5"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "VN"
-            },
-            {
-              "rarity": 0,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 68005,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68005.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "VN"
-            },
-            {
-              "rarity": 0,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Turquoise",
-          "id": 68007,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68007.png",
-          "colors": [
-            "#73BFBE",
-            "#73BFBE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "VN"
-            },
-            {
-              "rarity": 0,
-              "region": "riot"
-            }
-          ]
-        }
-      ],
-      "lore": "Nothing turns a traveler's blood cold like seeing Rumble in the distance, his iron death buggy chugging thick clouds of irradiated smoke. That means someone's got his attention, and those with Rumble's attention have a nasty habit of becoming very, very dead.",
-      "release": "2018-04-11",
-      "set": [
-        "Road Warrior"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin04/images/rumble_splash_centered_4.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin04/images/rumble_splash_uncentered_4.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin04/images/rumble_splash_tile_4.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin04/rumbleloadscreen_4.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Ari Rubin"
-      ],
-      "splashArtist": [
-        "Alex 'alexplank' Flores"
-      ]
-    },
-    {
-      "name": "Space Groove",
-      "id": 68013,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Space Groove",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Amethyst",
-          "id": 68020,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68020.png",
-          "colors": [
-            "#9C68D7",
-            "#9C68D7"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Aquamarine",
-          "id": 68019,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68019.png",
-          "colors": [
-            "#6ABBEE",
-            "#6ABBEE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Catseye",
-          "id": 68016,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68016.png",
-          "colors": [
-            "#FFEE59",
-            "#FFEE59"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Disco",
-          "id": 68022,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68022.png",
-          "colors": [
-            "#9DFFEF",
-            "#AA55FF"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a Loot exclusive in the 2021 Space Groove event.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Emerald",
-          "id": 68018,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68018.png",
-          "colors": [
-            "#2DA130",
-            "#2DA130"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Obsidian",
-          "id": 68021,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68021.png",
-          "colors": [
-            "#27211C",
-            "#27211C"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Rose Quartz",
-          "id": 68015,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68015.png",
-          "colors": [
-            "#E58BA5",
-            "#E58BA5"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "TENCENT"
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 68014,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68014.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive in 2021.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Turquoise",
-          "id": 68017,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68017.png",
-          "colors": [
-            "#73BFBE",
-            "#73BFBE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        }
-      ],
-      "lore": "The Retro-Futuristic Planet is tired of listening to the boring music brought by Lissandra's evil influence. Fashioning a Groove suit of his own design, Rumble now stomps across his adoptive homeworld, unleashing powerful rockets and a groovy bass track on anyone who'd keep the people from dancing.",
-      "release": "2021-04-01",
-      "set": [
-        "Space Groove"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin13/images/rumble_splash_centered_13.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin13/images/rumble_splash_uncentered_13.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin13/images/rumble_splash_tile_13.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin13/rumbleloadscreen_13.jpg",
-      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin13/rumbleloadscreen_13_le.jpg",
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Ari Rubin"
-      ],
-      "splashArtist": [
-        "Marie Magny",
-        "West Studio"
-      ]
-    },
-    {
-      "name": "Cafe Cuties",
-      "id": 68023,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Cafe Cuties",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Catseye",
-          "id": 68025,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68025.png",
-          "colors": [
-            "#FFEE59",
-            "#FFEE59"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Emerald",
-          "id": 68026,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68026.png",
-          "colors": [
-            "#2DA130",
-            "#2DA130"
-          ],
-          "descriptions": [
-            {
-              "description": "Obtained through Influencer audience giveaways.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Obsidian",
-          "id": 68030,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68030.png",
-          "colors": [
-            "#27211C",
-            "#27211C"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Pearl",
-          "id": 68031,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68031.png",
-          "colors": [
-            "#ECF9F8",
-            "#ECF9F8"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Rose Quartz",
-          "id": 68028,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68028.png",
-          "colors": [
-            "#E58BA5",
-            "#E58BA5"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "TENCENT"
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 68024,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68024.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive in 2023.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Sapphire",
-          "id": 68027,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68027.png",
-          "colors": [
-            "#2756CE",
-            "#2756CE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Tanzanite",
-          "id": 68029,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/68/68029.png",
-          "colors": [
-            "#54209B",
-            "#54209B"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        }
-      ],
-      "lore": "As the cafe's handy barista, Rumble always provides piping hot deliciousness! His trusty coffee making suit is unconventional, but effective for any cafe's needs. Just make sure to check the temperature before taking a sip of his drinks—his inventions are known for occasionally going haywire!",
-      "release": "2023-10-25",
-      "set": [
-        "Cafe Cuties"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin23/images/rumble_splash_centered_23.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin23/images/rumble_splash_uncentered_23.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin23/images/rumble_splash_tile_23.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/skin23/rumbleloadscreen_23.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Ari Rubin"
-      ],
-      "splashArtist": [
-        "Yuyu Wong",
-        "Kudos Productions"
-      ]
-    }
-  ]
+  }
 }

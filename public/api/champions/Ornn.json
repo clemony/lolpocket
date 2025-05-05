@@ -5,210 +5,137 @@
   "title": "The Fire Below the Mountain",
   "fullName": "",
   "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Ornn.png",
-  "resource": "MANA",
-  "attackType": "MELEE",
-  "adaptiveType": "PHYSICAL_DAMAGE",
+  "resource": "Mana",
+  "attackType": "Melee",
   "stats": {
     "health": {
       "flat": 660,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 109,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "healthRegen": {
       "flat": 9,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0.9,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "mana": {
       "flat": 341,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 65,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "manaRegen": {
       "flat": 8,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0.6,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "armor": {
       "flat": 33,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 5.2,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 2.05,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "attackDamage": {
       "flat": 69,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 3.5,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "movespeed": {
       "flat": 335,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "acquisitionRadius": {
       "flat": 600,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "selectionRadius": {
       "flat": 125,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "pathingRadius": {
       "flat": 25.7665996551513,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "gameplayRadius": {
       "flat": 80,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackSpeed": {
       "flat": 0.625,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 2,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "attackSpeedRatio": {
       "flat": 0.625,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackCastTime": {
       "flat": 0.349999994039535,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackTotalTime": {
       "flat": 1.60000002384185,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackDelayOffset": {
       "flat": 0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackRange": {
       "flat": 175,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0,
-      "percentPerLevel": 0.0
-    },
-    "aramDamageTaken": {
-      "flat": 1.05,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramDamageDealt": {
-      "flat": 0.9,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramHealing": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramShielding": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramTenacity": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramAbilityHaste": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramAttackSpeed": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramEnergyRegen": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfDamageTaken": {
-      "flat": 0.95,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfDamageDealt": {
-      "flat": 1.05,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfHealing": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfShielding": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     }
   },
   "positions": [
-    "TOP"
+    "Top"
   ],
   "roles": [
-    "FIGHTER",
-    "TANK",
-    "VANGUARD"
+    "Fighter",
+    "Tank",
+    "Vanguard"
   ],
   "attributeRatings": {
     "damage": 1,
@@ -902,693 +829,5 @@
         "targetRange": "300"
       }
     ]
-  },
-  "releaseDate": "2017-08-23",
-  "releasePatch": "7.17",
-  "patchLastChanged": "25.S1.2",
-  "price": {
-    "blueEssence": 2400,
-    "rp": 880,
-    "saleRp": 0
-  },
-  "lore": "Ornn is the Freljordian spirit of forging and craftsmanship. He works in the solitude of a massive smithy, hammered out from the lava caverns beneath the volcano Hearth-Home. There he stokes bubbling cauldrons of molten rock to purify ores and fashion items of unsurpassed quality. When other deities—especially Volibear—walk the earth and meddle in mortal affairs, Ornn arises to put these impetuous beings back in their place, either with his trusty hammer or the fiery power of the mountains themselves.",
-  "faction": "freljord",
-  "skins": [
-    {
-      "name": "Original",
-      "id": 516000,
-      "isBase": true,
-      "availability": "Available",
-      "formatName": "Original",
-      "lootEligible": true,
-      "cost": 975,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": "Ornn is the Freljordian spirit of forging and craftsmanship. He works in the solitude of a massive smithy, hammered out from the lava caverns beneath the volcano Hearth-Home. There he stokes bubbling cauldrons of molten rock to purify ores and fashion items of unsurpassed quality. When other deities—especially Volibear—walk the earth and meddle in mortal affairs, Ornn arises to put these impetuous beings back in their place, either with his trusty hammer or the fiery power of the mountains themselves.",
-      "release": "2017-08-22",
-      "set": [],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/base/images/ornn_splash_centered_0.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/base/images/ornn_splash_uncentered_0.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/base/images/ornn_splash_tile_0.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/base/ornnloadscreen.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": false,
-      "newAnimations": false,
-      "newRecall": false,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Matthew Waterson"
-      ],
-      "splashArtist": [
-        "Joshua 'HUGEnFAST' Brian Smith"
-      ]
-    },
-    {
-      "name": "Thunder Lord",
-      "id": 516001,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Thunder Lord",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [],
-      "lore": "In an age before man, King Ornn ruled the craggy southlands, and he was as rocky and lifeless as they were. It is said that he weathered an endless siege from his brother, the great King Voli, and that the blood they spilled sprouted grass and trees and animals, even as they became like beasts themselves.",
-      "release": "2017-08-22",
-      "set": [
-        "Thunder Lord"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/skin01/images/ornn_splash_centered_1.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/skin01/images/ornn_splash_uncentered_1.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/skin01/images/ornn_splash_tile_1.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/skin01/ornnloadscreen_1.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Matthew Waterson"
-      ],
-      "splashArtist": [
-        "Mike Azevedo"
-      ]
-    },
-    {
-      "name": "Elderwood",
-      "id": 516002,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Elderwood",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Citrine",
-          "id": 516004,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516004.png",
-          "colors": [
-            "#DF9117",
-            "#DF9117"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Emberwood",
-          "id": 516010,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516010.png",
-          "colors": [
-            "#27211C",
-            "#971458"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a Loot exclusive in the 2020 Battle Queens event.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Emerald",
-          "id": 516006,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516006.png",
-          "colors": [
-            "#2DA130",
-            "#2DA130"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Obsidian",
-          "id": 516008,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516008.png",
-          "colors": [
-            "#27211C",
-            "#27211C"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Pearl",
-          "id": 516007,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516007.png",
-          "colors": [
-            "#ECF9F8",
-            "#ECF9F8"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Rose Quartz",
-          "id": 516009,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516009.png",
-          "colors": [
-            "#E58BA5",
-            "#E58BA5"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "TENCENT"
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 516005,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516005.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive in 2020.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Sapphire",
-          "id": 516003,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516003.png",
-          "colors": [
-            "#2756CE",
-            "#2756CE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        }
-      ],
-      "lore": "A truly ancient shaper of the Elderwood, and keeper of divine knowledge. Beings who tended the trees and directed the rivers are rare in this time of fell magic and endless twilight, yet Ornn continues on, stubbornly clinging to what remains of the old way.",
-      "release": "2020-12-10",
-      "set": [
-        "Elderwood"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/skin02/images/ornn_splash_centered_2.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/skin02/images/ornn_splash_uncentered_2.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/skin02/images/ornn_splash_tile_2.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/skin02/ornnloadscreen_2.jpg",
-      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/skin02/ornnloadscreen_2_le.jpg",
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Matthew Waterson"
-      ],
-      "splashArtist": [
-        "Malex Zhang",
-        "Kudos Productions"
-      ]
-    },
-    {
-      "name": "Space Groove",
-      "id": 516011,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Space Groove",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Catseye",
-          "id": 516013,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516013.png",
-          "colors": [
-            "#FFEE59",
-            "#FFEE59"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Emerald",
-          "id": 516017,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516017.png",
-          "colors": [
-            "#2DA130",
-            "#2DA130"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Obsidian",
-          "id": 516018,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516018.png",
-          "colors": [
-            "#27211C",
-            "#27211C"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Pearl",
-          "id": 516016,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516016.png",
-          "colors": [
-            "#ECF9F8",
-            "#ECF9F8"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Rainbow",
-          "id": 516019,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516019.png",
-          "colors": [
-            "#C1F2FF",
-            "#C1F2FF"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Rose Quartz",
-          "id": 516014,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516014.png",
-          "colors": [
-            "#E58BA5",
-            "#E58BA5"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "TENCENT"
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 516012,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516012.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive in 2022.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Sapphire",
-          "id": 516015,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516015.png",
-          "colors": [
-            "#2756CE",
-            "#2756CE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        }
-      ],
-      "lore": "The drop before the bass, the creator of the primordial instruments, a literal God of Groove, Ornn has been instrumental in spreading The Groove through the Galaxy. But he's not a fan of the celebrity status it's earned him, hermiting himself away on a planet of whirling pools of goo to focus on his work. If Ornn is coming to party, it better be legendary.",
-      "release": "2022-11-17",
-      "set": [
-        "Space Groove"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/skin11/images/ornn_splash_centered_11.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/skin11/images/ornn_splash_uncentered_11.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/skin11/images/ornn_splash_tile_11.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/skin11/ornnloadscreen_11.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Matthew Waterson"
-      ],
-      "splashArtist": [
-        "Jeremy 'Jermu' Anninos"
-      ]
-    },
-    {
-      "name": "Choo-Choo",
-      "id": 516020,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Choo-Choo",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Amethyst",
-          "id": 516027,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516027.png",
-          "colors": [
-            "#9C68D7",
-            "#9C68D7"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Aquamarine",
-          "id": 516028,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516028.png",
-          "colors": [
-            "#6ABBEE",
-            "#6ABBEE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Catseye",
-          "id": 516023,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516023.png",
-          "colors": [
-            "#FFEE59",
-            "#FFEE59"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Citrine",
-          "id": 516025,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516025.png",
-          "colors": [
-            "#DF9117",
-            "#DF9117"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Peridot",
-          "id": 516024,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516024.png",
-          "colors": [
-            "#2DA130",
-            "#2DA130"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Pearl",
-          "id": 516026,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516026.png",
-          "colors": [
-            "#ECF9F8",
-            "#ECF9F8"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Rose Quartz",
-          "id": 516022,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516022.png",
-          "colors": [
-            "#E58BA5",
-            "#E58BA5"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "TENCENT"
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 516021,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/516/516021.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive in 2024.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        }
-      ],
-      "lore": "With a toot of his whistle, Ornn calls forth a mighty iron beast, roaring with his forge's fury. As his hammer pounds out a rhythm like pistons on the track, a soot-soaked grin unfurls beneath his smoldering beard. One imagines he must feel the thrill of creation, the joy of a perfect machine made manifest!",
-      "release": "2024-04-03",
-      "set": [
-        "Toy Box"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/skin20/images/ornn_splash_centered_20.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/skin20/images/ornn_splash_uncentered_20.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/skin20/images/ornn_splash_tile_20.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/skin20/ornnloadscreen_20.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Matthew Waterson"
-      ],
-      "splashArtist": [
-        "Pandart Studio"
-      ]
-    }
-  ]
+  }
 }

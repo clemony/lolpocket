@@ -5,210 +5,137 @@
   "title": "the Iron Maiden",
   "fullName": "Rell Canwell",
   "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Rell.png",
-  "resource": "MANA",
-  "attackType": "MELEE",
-  "adaptiveType": "MAGIC_DAMAGE",
+  "resource": "Mana",
+  "attackType": "Melee",
   "stats": {
     "health": {
       "flat": 620,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 104,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "healthRegen": {
       "flat": 7.5,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0.85,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "mana": {
       "flat": 320,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 40,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "manaRegen": {
       "flat": 7,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0.7,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "armor": {
       "flat": 30,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 4,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "magicResistance": {
       "flat": 28,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 1.8,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "attackDamage": {
       "flat": 55,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 3,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "movespeed": {
       "flat": 315,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "acquisitionRadius": {
       "flat": 400,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "selectionRadius": {
       "flat": 120,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackSpeed": {
       "flat": 0.625,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 2,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "attackSpeedRatio": {
       "flat": 0.625,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackCastTime": {
       "flat": 0.42,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackTotalTime": {
       "flat": 2,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackDelayOffset": {
       "flat": 0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackRange": {
       "flat": 175,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0,
-      "percentPerLevel": 0.0
-    },
-    "aramDamageTaken": {
-      "flat": 1,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramDamageDealt": {
-      "flat": 0.95,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramHealing": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramShielding": {
-      "flat": 0.9,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramTenacity": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramAbilityHaste": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramAttackSpeed": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramEnergyRegen": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfDamageTaken": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfDamageDealt": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfHealing": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfShielding": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     }
   },
   "positions": [
-    "SUPPORT"
+    "Support"
   ],
   "roles": [
-    "SUPPORT",
-    "TANK",
-    "VANGUARD"
+    "Support",
+    "Tank",
+    "Vanguard"
   ],
   "attributeRatings": {
     "damage": 1,
@@ -922,736 +849,5 @@
         "targetRange": null
       }
     ]
-  },
-  "releaseDate": "2020-12-10",
-  "releasePatch": "10.25",
-  "patchLastChanged": "25.S1.3",
-  "price": {
-    "blueEssence": 2400,
-    "rp": 880,
-    "saleRp": 0
-  },
-  "lore": "The product of brutal experimentation at the hands of the Black Rose, Rell is a defiant, living weapon determined to topple Noxus. Her childhood was one of misery and horror, enduring unspeakable procedures to perfect and weaponize her magical control over metal... until she staged a violent escape, killing many of her captors in the process. Now branded as a criminal, Rell attacks Noxian soldiers on sight as she searches for survivors of her old “academy,” defending the meek while delivering violent death to her former overseers.",
-  "faction": "noxus",
-  "skins": [
-    {
-      "name": "Original",
-      "id": 526000,
-      "isBase": true,
-      "availability": "Available",
-      "formatName": "Original",
-      "lootEligible": true,
-      "cost": 975,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": "The product of brutal experimentation at the hands of the Black Rose, Rell is a defiant, living weapon determined to topple Noxus. Her childhood was one of misery and horror, enduring unspeakable procedures to perfect and weaponize her magical control over metal... until she staged a violent escape, killing many of her captors in the process. Now branded as a criminal, Rell attacks Noxian soldiers on sight as she searches for survivors of her old 'academy,' defending the meek while delivering violent death to her former overseers.",
-      "release": "2020-12-10",
-      "set": [],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/base/images/rell_splash_centered_0.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/base/images/rell_splash_uncentered_0.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/base/images/rell_splash_tile_0.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/base/rellloadscreen.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": false,
-      "newAnimations": false,
-      "newRecall": false,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Laya DeLeon Hayes"
-      ],
-      "splashArtist": [
-        "Jeremy 'Jermu' Anninos"
-      ]
-    },
-    {
-      "name": "Battle Queen",
-      "id": 526001,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Battle Queen",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Aquamarine",
-          "id": 526004,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526004.png",
-          "colors": [
-            "#6ABBEE",
-            "#6ABBEE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Catseye",
-          "id": 526006,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526006.png",
-          "colors": [
-            "#FFEE59",
-            "#FFEE59"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Coronation",
-          "id": 526008,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526008.png",
-          "colors": [
-            "#FF80B1",
-            "#9DFFEF"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a Loot exclusive in the 2020 Battle Queens event.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Obsidian",
-          "id": 526009,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526009.png",
-          "colors": [
-            "#27211C",
-            "#27211C"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 526002,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526002.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive in 2020.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Sapphire",
-          "id": 526003,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526003.png",
-          "colors": [
-            "#2756CE",
-            "#2756CE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Tanzanite",
-          "id": 526007,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526007.png",
-          "colors": [
-            "#54209B",
-            "#54209B"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Turquoise",
-          "id": 526005,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526005.png",
-          "colors": [
-            "#73BFBE",
-            "#73BFBE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        }
-      ],
-      "lore": "A young woman from the magic-starved Queendom of Calamity, volunteered for the coronation by a shadowy cabal of aristocrats after a series of magical experiments. Having now won the crown and the power of her crest, Rell has discovered her powers were stolen from the people of her country, and she has vowed revenge on her puppeteers.",
-      "release": "2020-12-10",
-      "set": [
-        "Battle Queens"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin01/images/rell_splash_centered_1.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin01/images/rell_splash_uncentered_1.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin01/images/rell_splash_tile_1.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin01/rellloadscreen_1.jpg",
-      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin01/rellloadscreen_1_le.jpg",
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Laya DeLeon Hayes"
-      ],
-      "splashArtist": [
-        "Bo 'chenbowow' Chen"
-      ]
-    },
-    {
-      "name": "Star Guardian",
-      "id": 526010,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Star Guardian",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Brilliant",
-          "id": 526019,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526019.png",
-          "colors": [
-            "#FDA4DA",
-            "#9DE5FF"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a Loot exclusive in the 2022 Star Guardian event.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Catseye",
-          "id": 526012,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526012.png",
-          "colors": [
-            "#FFEE59",
-            "#FFEE59"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Emerald",
-          "id": 526014,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526014.png",
-          "colors": [
-            "#2DA130",
-            "#2DA130"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Obsidian",
-          "id": 526018,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526018.png",
-          "colors": [
-            "#27211C",
-            "#27211C"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Pearl",
-          "id": 526017,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526017.png",
-          "colors": [
-            "#ECF9F8",
-            "#ECF9F8"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Rose Quartz",
-          "id": 526015,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526015.png",
-          "colors": [
-            "#E58BA5",
-            "#E58BA5"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "TENCENT"
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 526011,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526011.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive in 2022.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Sapphire",
-          "id": 526013,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526013.png",
-          "colors": [
-            "#2756CE",
-            "#2756CE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Turquoise",
-          "id": 526016,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526016.png",
-          "colors": [
-            "#73BFBE",
-            "#73BFBE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        }
-      ],
-      "lore": "Hailing from a sister city along with Quinn, Rell is a delinquent loner who does what she wants, when she wants, and avoids making friends by pushing everyone away. In battle she rides atop her mighty steed Sebastien, her simmering rage transforming her into a starlit knight who defends the meek from harm.",
-      "release": "2022-07-28",
-      "set": [
-        "Star Guardian Season 4"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin10/images/rell_splash_centered_10.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin10/images/rell_splash_uncentered_10.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin10/images/rell_splash_tile_10.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin10/rellloadscreen_10.jpg",
-      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin10/rellloadscreen_10_le.jpg",
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Laya DeLeon Hayes"
-      ],
-      "splashArtist": [
-        "Park Jun Seong",
-        "West Studio"
-      ]
-    },
-    {
-      "name": "High Noon",
-      "id": 526020,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "High Noon",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Citrine",
-          "id": 526028,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526028.png",
-          "colors": [
-            "#DF9117",
-            "#DF9117"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Emerald",
-          "id": 526022,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526022.png",
-          "colors": [
-            "#2DA130",
-            "#2DA130"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Noonday",
-          "id": 526029,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526029.png",
-          "colors": [
-            "#A8BFF1",
-            "#CD5867"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a Loot exclusive in the 2024 High Noon event.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Pearl",
-          "id": 526027,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526027.png",
-          "colors": [
-            "#ECF9F8",
-            "#ECF9F8"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Rose Quartz",
-          "id": 526025,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526025.png",
-          "colors": [
-            "#E58BA5",
-            "#E58BA5"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "TENCENT"
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 526021,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526021.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive in 2024.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Sapphire",
-          "id": 526026,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526026.png",
-          "colors": [
-            "#2756CE",
-            "#2756CE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "TENCENT"
-            }
-          ]
-        },
-        {
-          "name": "Tanzanite",
-          "id": 526023,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526023.png",
-          "colors": [
-            "#54209B",
-            "#54209B"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Turquoise",
-          "id": 526024,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/526/526024.png",
-          "colors": [
-            "#73BFBE",
-            "#73BFBE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        }
-      ],
-      "lore": "Rell ran as her home rotted away at the Fifth Harbinger's hands, but the young Powder Witch ain't running now. She squares her shoulders and swings into the saddle of a horse made of magic, steam, and fire. From its back, she looks down at the haunted gunslinger. “Come on, old man. We got a second chance, I ain't gonna waste it.”",
-      "release": "2024-03-20",
-      "set": [
-        "High Noon"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin20/images/rell_splash_centered_20.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin20/images/rell_splash_uncentered_20.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin20/images/rell_splash_tile_20.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin20/rellloadscreen_20.jpg",
-      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin20/rellloadscreen_20_le.jpg",
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Laya DeLeon Hayes"
-      ],
-      "splashArtist": [
-        "Huyy Nguyen",
-        "West Studio"
-      ]
-    },
-    {
-      "name": "Grand Reckoning",
-      "id": 526030,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Grand Reckoning",
-      "lootEligible": true,
-      "cost": 975,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": "In training, Rell was told that the arena is unforgiving. On the sand, you couldn't rely on anyone but yourself, and maybe your mount… if you could stay in the saddle. But if you let it, that brutal world inside the arena would cut you, bleed you, strike you down. Reckonings were built on blood and iron, forged in the fire of conflict—but so was she.",
-      "release": "2025-03-05",
-      "set": [
-        "Grand Reckoning"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin30/images/rell_splash_centered_30.skins_rell_skin30.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin30/images/rell_splash_uncentered_30.skins_rell_skin30.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin30/images/rell_splash_tile_30.skins_rell_skin30.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin30/rellloadscreen_30.skins_rell_skin30.jpg",
-      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/skin30/rellloadscreen_30_le.skins_rell_skin30.jpg",
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Laya DeLeon Hayes"
-      ],
-      "splashArtist": [
-        "Terence 'Terrylefruit' Cantal"
-      ]
-    }
-  ]
+  }
 }

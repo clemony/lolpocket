@@ -5,209 +5,136 @@
   "title": "the Tidal Trickster",
   "fullName": "",
   "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Fizz.png",
-  "resource": "MANA",
-  "attackType": "MELEE",
-  "adaptiveType": "MAGIC_DAMAGE",
+  "resource": "Mana",
+  "attackType": "Melee",
   "stats": {
     "health": {
       "flat": 640,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 106,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "healthRegen": {
       "flat": 8,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0.7,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "mana": {
       "flat": 317,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 52,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "manaRegen": {
       "flat": 6,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0.8,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "armor": {
       "flat": 22,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 4.6,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 2.05,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "attackDamage": {
       "flat": 58,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 3,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "movespeed": {
       "flat": 335,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "acquisitionRadius": {
       "flat": 400,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "selectionRadius": {
       "flat": 108.333297729492,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "pathingRadius": {
       "flat": 30,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "gameplayRadius": {
       "flat": 55,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackSpeed": {
       "flat": 0.658,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 3.1,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "attackSpeedRatio": {
       "flat": 0.657999992370605,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackCastTime": {
       "flat": 0.3,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackTotalTime": {
       "flat": 1.6,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackDelayOffset": {
       "flat": -0.0970000028610229,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackRange": {
       "flat": 175,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0,
-      "percentPerLevel": 0.0
-    },
-    "aramDamageTaken": {
-      "flat": 0.95,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramDamageDealt": {
-      "flat": 1.05,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramHealing": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramShielding": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramTenacity": {
-      "flat": 1.1,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramAbilityHaste": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramAttackSpeed": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramEnergyRegen": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfDamageTaken": {
-      "flat": 1.1,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfDamageDealt": {
-      "flat": 0.9,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfHealing": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfShielding": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     }
   },
   "positions": [
-    "MIDDLE"
+    "Middle"
   ],
   "roles": [
-    "ASSASSIN",
-    "FIGHTER"
+    "Assassin",
+    "Fighter"
   ],
   "attributeRatings": {
     "damage": 3,
@@ -994,1125 +921,5 @@
         "targetRange": "1300"
       }
     ]
-  },
-  "releaseDate": "2011-11-15",
-  "releasePatch": "1.0.0.129",
-  "patchLastChanged": "14.22",
-  "price": {
-    "blueEssence": 675,
-    "rp": 585,
-    "saleRp": 0
-  },
-  "lore": "Fizz is an amphibious yordle, who dwells among the reefs surrounding Bilgewater. He often retrieves and returns the tithes cast into the sea by superstitious captains, but even the saltiest of sailors know better than to cross him—for many are the tales of those who have underestimated this slippery character. Often mistaken for some manner of capricious ocean spirit, he seems able to command the beasts of the deep, and delights in confounding his allies and enemies alike.",
-  "faction": "unaffiliated",
-  "skins": [
-    {
-      "name": "Original",
-      "id": 105000,
-      "isBase": true,
-      "availability": "Available",
-      "formatName": "Original",
-      "lootEligible": true,
-      "cost": 880,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [
-        {
-          "name": "Blue",
-          "id": 105006,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105006.png",
-          "colors": [
-            "#78688A",
-            "#23325D"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 0,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Orange",
-          "id": 105005,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105005.png",
-          "colors": [
-            "#F9E330",
-            "#E6B427"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 0,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Red",
-          "id": 105007,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105007.png",
-          "colors": [
-            "#D97AAF",
-            "#97192C"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 0,
-              "region": "riot"
-            }
-          ]
-        }
-      ],
-      "lore": "Fizz is an amphibious yordle, who dwells among the reefs surrounding Bilgewater. He often retrieves and returns the tithes cast into the sea by superstitious captains, but even the saltiest of sailors know better than to cross him—for many are the tales of those who have underestimated this slippery character. Often mistaken for some manner of capricious ocean spirit, he seems able to command the beasts of the deep, and delights in confounding his allies and enemies alike.",
-      "release": "2011-11-15",
-      "set": [],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/base/images/fizz_splash_centered_0.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/base/images/fizz_splash_uncentered_0.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/base/images/fizz_splash_tile_0.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/base/fizzloadscreen.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": false,
-      "newAnimations": false,
-      "newRecall": false,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Philece Sampler"
-      ],
-      "splashArtist": [
-        "Kienan 'Knockwurst' Lafferty"
-      ]
-    },
-    {
-      "name": "Atlantean",
-      "id": 105001,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Atlantean",
-      "lootEligible": true,
-      "cost": 520,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": "“When I was very young, my grandfather told me stories of Atlantis—of their high temples and great undersea army, and their great General Fizz. Grandfather remembered it as it was, you see, and not the silent mausoleum it has become.”",
-      "release": "2011-11-15",
-      "set": [
-        "Forgotten Depths"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin01/images/fizz_splash_centered_1.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin01/images/fizz_splash_uncentered_1.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin01/images/fizz_splash_tile_1.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin01/fizzloadscreen_1.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": false,
-      "newRecall": false,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Philece Sampler"
-      ],
-      "splashArtist": []
-    },
-    {
-      "name": "Tundra",
-      "id": 105002,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Tundra",
-      "lootEligible": true,
-      "cost": 750,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": null,
-      "release": "2011-11-15",
-      "set": [
-        "Legacy"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin02/images/fizz_splash_centered_2.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin02/images/fizz_splash_uncentered_2.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin02/images/fizz_splash_tile_2.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin02/fizzloadscreen_2.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": false,
-      "newRecall": false,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Philece Sampler"
-      ],
-      "splashArtist": []
-    },
-    {
-      "name": "Fisherman",
-      "id": 105003,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Fisherman",
-      "lootEligible": true,
-      "cost": 975,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": "Call me Fishmael.",
-      "release": "2012-04-01",
-      "set": [
-        "Day Job"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin03/images/fizz_splash_centered_3.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin03/images/fizz_splash_uncentered_3.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin03/images/fizz_splash_tile_3.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin03/fizzloadscreen_3.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": false,
-      "newRecall": false,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Philece Sampler"
-      ],
-      "splashArtist": [
-        "Alex Konstad",
-        "Jon Neimeister",
-        "David Kegg",
-        "Dirty Iron"
-      ]
-    },
-    {
-      "name": "Void",
-      "id": 105004,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Void",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [],
-      "lore": "There's no disputing that Fizz is a deadly creature of the endless Void. But even in the Void, Fizz is widely considered to be extremely irritating for his love of bringing life into existence just to annoy the Watchers.",
-      "release": "2014-04-06",
-      "set": [
-        "Curse of the Void"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin04/images/fizz_splash_centered_4.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin04/images/fizz_splash_uncentered_4.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin04/images/fizz_splash_tile_4.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin04/fizzloadscreen_4.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Philece Sampler"
-      ],
-      "splashArtist": []
-    },
-    {
-      "name": "Cottontail",
-      "id": 105008,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Cottontail",
-      "lootEligible": true,
-      "cost": 975,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": "Rising from the fluffiest depths to crush all root vegetable cohorts, Fizz commands the greatest threat carrots have ever known—a killer rabbit with the foulest and cruelest of tempers.",
-      "release": "2015-08-09",
-      "set": [
-        "Cottontail"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin08/images/fizz_splash_centered_8.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin08/images/fizz_splash_uncentered_8.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin08/images/fizz_splash_tile_8.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin08/fizzloadscreen_8.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Philece Sampler"
-      ],
-      "splashArtist": [
-        "Sixmorevodka Studio"
-      ]
-    },
-    {
-      "name": "Super Galaxy",
-      "id": 105009,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Super Galaxy",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [],
-      "lore": "Nobody is quite sure how Fizz graduated the Super Galaxy academy, but one thing's for certain: no other pilot (or space fish) can summon a mecha-gigalodon from seemingly out of nowhere. Not that anyone should in the first place…",
-      "release": "2016-05-25",
-      "set": [
-        "Super Galaxy"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin09/images/fizz_splash_centered_9.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin09/images/fizz_splash_uncentered_9.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin09/images/fizz_splash_tile_9.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin09/fizzloadscreen_9.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Philece Sampler"
-      ],
-      "splashArtist": [
-        "Jojo So"
-      ]
-    },
-    {
-      "name": "Omega Squad",
-      "id": 105010,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Omega Squad",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Obsidian",
-          "id": 105012,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105012.png",
-          "colors": [
-            "#27211C",
-            "#27211C"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 0,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Pearl",
-          "id": 105011,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105011.png",
-          "colors": [
-            "#ECF9F8",
-            "#ECF9F8"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 0,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Tanzanite",
-          "id": 105013,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105013.png",
-          "colors": [
-            "#54209B",
-            "#54209B"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 0,
-              "region": "riot"
-            }
-          ]
-        }
-      ],
-      "lore": "Omega Squad's saboteur, Fizz is skilled in underwater combat. It is unclear what kind of action he saw before joining up, however, as he only ever refers to the sea as “a big bucket of chum.”",
-      "release": "2017-07-26",
-      "set": [
-        "Omega Squad"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin10/images/fizz_splash_centered_10.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin10/images/fizz_splash_uncentered_10.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin10/images/fizz_splash_tile_10.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin10/fizzloadscreen_10.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Philece Sampler"
-      ],
-      "splashArtist": [
-        "Alex 'alexplank' Flores"
-      ]
-    },
-    {
-      "name": "Fuzz",
-      "id": 105014,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Fuzz",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [],
-      "lore": "Well, that's horrifying.",
-      "release": "2019-03-27",
-      "set": [
-        "Cats Versus Dogs"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin14/images/fizz_splash_centered_14.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin14/images/fizz_splash_uncentered_14.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin14/images/fizz_splash_tile_14.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin14/fizzloadscreen_14.jpg",
-      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin14/fizzloadscreen_14_le.jpg",
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Philece Sampler"
-      ],
-      "splashArtist": [
-        "Horace 'Hozure' Hsu"
-      ]
-    },
-    {
-      "name": "Prestige Fuzz",
-      "id": 105015,
-      "isBase": false,
-      "availability": "Rare",
-      "formatName": "Prestige Fuzz",
-      "lootEligible": true,
-      "cost": "Special",
-      "sale": 0,
-      "distribution": "150 Mythic Essence",
-      "rarity": "Mythic",
-      "chromas": [],
-      "lore": "There's something deeply unnerving about a bipedal Cocker Spaniel mix running around society unchecked, stabbing pedestrians with a tennis ball grabber, and summoning other, bigger dogs out of the ground. And yet, here we all are. Together.",
-      "release": "2019-03-27",
-      "set": [
-        "Cats Versus Dogs"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin15/images/fizz_splash_centered_15.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin15/images/fizz_splash_uncentered_15.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin15/images/fizz_splash_tile_15.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin15/fizzloadscreen_15.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Philece Sampler"
-      ],
-      "splashArtist": [
-        "Rudy Siswanto"
-      ]
-    },
-    {
-      "name": "Little Devil",
-      "id": 105016,
-      "isBase": false,
-      "availability": "Legacy",
-      "formatName": "Little Devil",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Citrine",
-          "id": 105023,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105023.png",
-          "colors": [
-            "#DF9117",
-            "#DF9117"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Emerald",
-          "id": 105022,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105022.png",
-          "colors": [
-            "#2DA130",
-            "#2DA130"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Obsidian",
-          "id": 105020,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105020.png",
-          "colors": [
-            "#27211C",
-            "#27211C"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Pearl",
-          "id": 105019,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105019.png",
-          "colors": [
-            "#ECF9F8",
-            "#ECF9F8"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Rose Quartz",
-          "id": 105018,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105018.png",
-          "colors": [
-            "#E58BA5",
-            "#E58BA5"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "TENCENT"
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 105021,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105021.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive in 2020.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Sapphire",
-          "id": 105024,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105024.png",
-          "colors": [
-            "#2756CE",
-            "#2756CE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Tanzanite",
-          "id": 105017,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105017.png",
-          "colors": [
-            "#54209B",
-            "#54209B"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        }
-      ],
-      "lore": "Sea's a dwelling place for demons.",
-      "release": "2020-10-22",
-      "set": [
-        "Demonic"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin16/images/fizz_splash_centered_16.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin16/images/fizz_splash_uncentered_16.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin16/images/fizz_splash_tile_16.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin16/fizzloadscreen_16.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Philece Sampler"
-      ],
-      "splashArtist": [
-        "Lucas Parolin",
-        "West Studio"
-      ]
-    },
-    {
-      "name": "Prestige Fuzz (2022)",
-      "id": 105025,
-      "isBase": false,
-      "availability": "Limited",
-      "formatName": "Prestige Fuzz Fizz (2022)",
-      "lootEligible": false,
-      "cost": "Special",
-      "sale": 0,
-      "distribution": "Given to players who owned the original skin prior to patch 12.5",
-      "rarity": "Mythic",
-      "chromas": [],
-      "lore": "There's something deeply unnerving about a bipedal Cocker Spaniel mix running around society unchecked, stabbing pedestrians with a tennis ball grabber, and summoning other, bigger dogs out of the ground. And yet, here we all are. Together.",
-      "release": "2022-04-01",
-      "set": [
-        "Cats Versus Dogs"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin15/images/fizz_splash_centered_15.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin15/images/fizz_splash_uncentered_15.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin15/images/fizz_splash_tile_15.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin25/fizzloadscreen_25.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Philece Sampler"
-      ],
-      "splashArtist": [
-        "Rudy Siswanto"
-      ]
-    },
-    {
-      "name": "Astronaut",
-      "id": 105026,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Astronaut",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Amethyst",
-          "id": 105034,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105034.png",
-          "colors": [
-            "#9C68D7",
-            "#9C68D7"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Aquamarine",
-          "id": 105029,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105029.png",
-          "colors": [
-            "#6ABBEE",
-            "#6ABBEE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Catseye",
-          "id": 105028,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105028.png",
-          "colors": [
-            "#FFEE59",
-            "#FFEE59"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Emerald",
-          "id": 105030,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105030.png",
-          "colors": [
-            "#2DA130",
-            "#2DA130"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Obsidian",
-          "id": 105031,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105031.png",
-          "colors": [
-            "#27211C",
-            "#27211C"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Rose Quartz",
-          "id": 105032,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105032.png",
-          "colors": [
-            "#E58BA5",
-            "#E58BA5"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "TENCENT"
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 105027,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105027.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive in 2023.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Turquoise",
-          "id": 105033,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105033.png",
-          "colors": [
-            "#73BFBE",
-            "#73BFBE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        }
-      ],
-      "lore": "Fizz defied all expectations when he successfully tamed an invader meep and resisted its corruption through their link. His unique connection promoted him to captain, a status he uses to pull mischievous pranks on his team. But when he's not tormenting his favorite lieutenant, he's unleashing his tricks on corrupted evildoers to keep planet M33P safe.",
-      "release": "2023-02-24",
-      "set": [
-        "Astronauts"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin26/images/fizz_splash_centered_26.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin26/images/fizz_splash_uncentered_26.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin26/images/fizz_splash_tile_26.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin26/fizzloadscreen_26.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Philece Sampler"
-      ],
-      "splashArtist": [
-        "Augusto Quirino",
-        "West Studio"
-      ]
-    },
-    {
-      "name": "Rain Shepherd",
-      "id": 105035,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Rain Shepherd",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Amethyst",
-          "id": 105040,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105040.png",
-          "colors": [
-            "#9C68D7",
-            "#9C68D7"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Aquamarine",
-          "id": 105038,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105038.png",
-          "colors": [
-            "#6ABBEE",
-            "#6ABBEE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Citrine",
-          "id": 105037,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105037.png",
-          "colors": [
-            "#DF9117",
-            "#DF9117"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Emerald",
-          "id": 105039,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105039.png",
-          "colors": [
-            "#2DA130",
-            "#2DA130"
-          ],
-          "descriptions": [
-            {
-              "description": "Obtained through Influencer audience giveaways.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Meteorite",
-          "id": 105042,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105042.png",
-          "colors": [
-            "#5F432B",
-            "#5F432B"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Rose Quartz",
-          "id": 105041,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105041.png",
-          "colors": [
-            "#E58BA5",
-            "#E58BA5"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "TENCENT"
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 105036,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105036.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive in 2024.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Turquoise",
-          "id": 105043,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/105/105043.png",
-          "colors": [
-            "#73BFBE",
-            "#73BFBE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        }
-      ],
-      "lore": "The fiendish Fizz was so jealous of the magical singing voices frogs possess that he taught himself how to sing and summon the rains. Though earsplitting at first, before long his songs were drawing tears from his listeners. With his magical vocals, Fizz is now keen to rain on everyone's parades.",
-      "release": "2024-06-26",
-      "set": [
-        "Rain Shepherd"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin35/images/fizz_splash_centered_35.skins_fizz_skin35.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin35/images/fizz_splash_uncentered_35.skins_fizz_skin35.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin35/images/fizz_splash_tile_35.skins_fizz_skin35.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/skin35/fizzloadscreen_35.skins_fizz_skin35.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Philece Sampler"
-      ],
-      "splashArtist": [
-        "Rudy Siswanto"
-      ]
-    }
-  ]
+  }
 }

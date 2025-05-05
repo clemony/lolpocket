@@ -5,210 +5,137 @@
   "title": "the Cantankerous Cavalier",
   "fullName": "Kled and Skaarl",
   "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Kled.png",
-  "resource": "COURAGE",
-  "attackType": "MELEE",
-  "adaptiveType": "PHYSICAL_DAMAGE",
+  "resource": "Courage",
+  "attackType": "Melee",
   "stats": {
     "health": {
       "flat": 410,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 84,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "healthRegen": {
       "flat": 6,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0.75,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "mana": {
       "flat": 100,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "manaRegen": {
       "flat": 0,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "armor": {
       "flat": 35,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 5.2,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "magicResistance": {
       "flat": 28,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 2.05,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "attackDamage": {
       "flat": 65,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 3.5,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "movespeed": {
       "flat": 285,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "acquisitionRadius": {
       "flat": 800,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "selectionRadius": {
       "flat": 100,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "pathingRadius": {
       "flat": 35,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "gameplayRadius": {
       "flat": 65,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "criticalStrikeDamage": {
       "flat": 175,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackSpeed": {
       "flat": 0.625,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 3.5,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     },
     "attackSpeedRatio": {
       "flat": 0.625,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackCastTime": {
       "flat": 0.280000001192092,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackTotalTime": {
       "flat": 1.60000002384185,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackDelayOffset": {
       "flat": 0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
     },
     "attackRange": {
       "flat": 250,
-      "percent": 0.0,
+      "percent": 0,
       "perLevel": 0,
-      "percentPerLevel": 0.0
-    },
-    "aramDamageTaken": {
-      "flat": 1,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramDamageDealt": {
-      "flat": 1.05,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramHealing": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramShielding": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramTenacity": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramAbilityHaste": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramAttackSpeed": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "aramEnergyRegen": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfDamageTaken": {
-      "flat": 0.9,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfDamageDealt": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfHealing": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
-    },
-    "urfShielding": {
-      "flat": 1.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0
+      "percentPerLevel": 0
     }
   },
   "positions": [
-    "TOP"
+    "Top"
   ],
   "roles": [
-    "FIGHTER",
-    "SKIRMISHER",
-    "TANK"
+    "Fighter",
+    "Skirmisher",
+    "Tank"
   ],
   "attributeRatings": {
     "damage": 3,
@@ -751,23 +678,23 @@
         "blurb": "Active:  Kled sprays a cone of pellets in the target direction that deal physical damage to enemies hit, during which he also  recoils backward. Each pellet that hits an enemy  champion or epic  monster restores  Courage.",
         "missileSpeed": null,
         "rechargeRate": [
-          20.0,
+          20,
           19.25,
           18.5,
           17.75,
-          17.0,
+          17,
           16.25,
           15.5,
           14.75,
-          14.0,
+          14,
           13.25,
           12.5,
           11.75,
-          11.0,
+          11,
           10.25,
           9.5,
           8.75,
-          8.0,
+          8,
           7.25
         ],
         "collisionRadius": null,
@@ -862,23 +789,23 @@
                 "modifiers": [
                   {
                     "values": [
-                      62.0,
+                      62,
                       63.75,
                       65.5,
                       67.25,
-                      69.0,
+                      69,
                       70.75,
                       72.5,
                       74.25,
-                      76.0,
+                      76,
                       77.75,
                       79.5,
                       81.25,
-                      83.0,
+                      83,
                       84.75,
                       86.5,
                       88.25,
-                      90.0,
+                      90,
                       91.75
                     ],
                     "units": [
@@ -1321,7 +1248,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "During the charge the duo gain (950 − (starting movement speed)) ÷ 12 × (time ÷ 0.25) bonus movement speed\nThe bonus movement speed is not affected by movement speed caps.\nThe charge will not give any movement speed to the duo if they have more than [ 1440 raw movement speed ][ 950 after movement speed soft caps ].\nThe trail will not give Kled and his allies any movement speed out-of-champion-combat if they have more than [ 840 raw movement speed ][ 650 after movement speed soft caps ].\nMovement speed is granted by facing the direction of the draft and lasts for 0.528 seconds seconds upon exiting the trail or facing another direction.\nKled's charge path will be similar to the path he would take if ordered to move to the target location instead.\nKled will re-path if his current path is blocked by a newly created terrain (either player created or by the  Mountainous Rift).\nThe charge will continue towards the target location even if Kled's location changes drastically.\nKled will mark his path with an indicator visible to him and his allies.\nKled's pathing indicator will not account for changes in Kled's pathing.\nKled's pathing indicator will sometimes display a path different from his real path.(bug)\n Axiom Arcanist will only increase the first instance of the shield gained.(bug)\nWhile charging, Kled will check for enemy  champions within 500 range in a 180° arc in his facing direction. If any are found, he will look for  visible enemy champions in 800 range in the same arc. If any are found, after 0.5 to 0.11 seconds, he will he will begin  dashing to the closest visible enemy champion.\nIf the charge ends before, or during the dash,(bug) the dash will not:\nGenerate a shield;\nGrant  immunity to crowd control;\nTrail a directional draft, applying Mr. Kled's Wild Ride;\nDisable summoner spells and items.\n Zeke's Convergence's Frostfire Tempest will trigger at the end of the charge or at the end of the dash, whichever comes last.\nFrostfire Tempest will trigger at the end of the dash even if the charge ends before or during the dash, unlike other charge-related interactions.\nKled and  Skaarl will track the target if they change locations.\nThey will dash to the target's previous location if the target is too far away or moves beyond 2500 units of the dash's beginning location.\nIf the dash does not complete within 9 seconds, Kled and  Skaarl will continue to track their target and be able to cast spells, but will not able to collide with enemy champions.\nThe damage dealt is based on time spent traveling before the beginning of the dash.\nChaaaaaaaarge!!!'s  knockback distance and speed may be impeded by terrain.\nThe  debuff is removed early when the forced movement stops.\nThe following table refers for interactions while Kled is charging:\n Ghost is also disabled, contrary to the table below.\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed, but cannot input movement commands.\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash  Mark  Dash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nN/A\n\nThe following table refers for interactions while Kled is dashing:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll summoner spells are disabled\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nN/A\n\nEvery summoner spell is disabled, but summoner spells that aren't disabled while Kled is charging will not visually appear disabled.(bug)\nNo summoner spells or items are disabled if the charge ends before or during the dash.(bug)\nBuffering Interactions\n\nNothing can be buffered during the charge.\nMovement and attack commands, as well as  Bear Trap on a Rope and  Jousting can be buffered during the dash.",
+        "notes": "During the charge the duo gain (950 − (starting movement speed)) ÷ 12 × (time ÷ 0.25) bonus movement speed\nThe bonus movement speed is not affected by movement speed caps.\nThe charge will not give any movement speed to the duo if they have more than [ 1440 raw movement speed ][ 950 after movement speed soft caps ].\nThe trail will not give Kled and his allies any movement speed out-of-champion-combat if they have more than [ 840 raw movement speed ][ 650 after movement speed soft caps ].\nMovement speed is granted by facing the direction of the draft and lasts for 0.528 seconds seconds upon exiting the trail or facing another direction.\nKled's charge path will be similar to the path he would take if ordered to move to the target location instead.\nKled will re-path if his current path is blocked by a newly created terrain (either player created or by the  Mountainous Rift).\nThe charge will continue towards the target location even if Kled's location changes drastically.\nKled will mark his path with an indicator visible to him and his allies.\nKled's pathing indicator will not account for changes in Kled's pathing.\nKled's pathing indicator will sometimes display a path different from his real path.(bug)\n Axiom Arcanist will only increase the first instance of shield gained.(bug)\nWhile charging, Kled will check for enemy  champions within 500 range in a 180° arc in his facing direction. If any are found, he will look for  visible enemy champions in 800 range in the same arc. If any are found, after 0.5 to 0.11 seconds, he will begin  dashing to the closest visible enemy champion.\nIf the charge ends before, or during the dash,(bug) the dash will not:\nGenerate a shield;\nGrant  immunity to crowd control;\nTrail a directional draft, applying Mr. Kled's Wild Ride;\nDisable summoner spells and items.\n Zeke's Convergence's Frostfire Tempest will trigger at the end of the charge or at the end of the dash, whichever comes last.\nFrostfire Tempest will trigger at the end of the dash even if the charge ends before or during the dash, unlike other charge-related interactions.\nKled and  Skaarl will track the target if they change locations.\nThey will dash to the target's previous location if the target is too far away or moves beyond 2500 units of the dash's beginning location.\nIf the dash does not complete within 9 seconds, Kled and  Skaarl will continue to track their target and be able to cast spells, but will not able to collide with enemy champions.\nThe damage dealt is based on time spent traveling before the beginning of the dash.\nChaaaaaaaarge!!!'s  knockback distance and speed may be impeded by terrain.\nThe  debuff is removed early when the forced movement stops.\nThe following table refers for interactions while Kled is charging:\n Ghost is also disabled, contrary to the table below.\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed, but cannot input movement commands.\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash  Mark  Dash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nN/A\n\nThe following table refers for interactions while Kled is dashing:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll summoner spells are disabled\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nN/A\n\nEvery summoner spell is disabled, but summoner spells that aren't disabled while Kled is charging will not visually appear disabled.(bug)\nNo summoner spells or items are disabled if the charge ends before or during the dash.(bug)\nBuffering Interactions\n\nNothing can be buffered during the charge.\nMovement and attack commands, as well as  Bear Trap on a Rope and  Jousting can be buffered during the dash.",
         "blurb": "Active: Kled &  Skaarl become  ghosted and  unstoppably charge to a location, building up  bonus movement speed and  shield and leaving a draft in their wake that grants Mr. Kled's Wild Ride to allies that follow the draft.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -1372,654 +1299,5 @@
         "targetRange": null
       }
     ]
-  },
-  "releaseDate": "2016-08-10",
-  "releasePatch": "6.16",
-  "patchLastChanged": "14.9",
-  "price": {
-    "blueEssence": 2400,
-    "rp": 880,
-    "saleRp": 0
-  },
-  "lore": "A warrior as fearless as he is ornery, the yordle Kled embodies the furious bravado of Noxus. He is an icon beloved by the empire's soldiers, distrusted by its officers, and loathed by the nobility. Many claim Kled has fought in every campaign the legions have waged, has “acquired” every military title, and has never once backed down from a fight. Though the truth of the matter is often questionable, one part of his legend is undeniable: Charging into battle on his un-trusty steed, Skaarl, Kled fights to protect what's his… and to take whatever he can get.",
-  "faction": "noxus",
-  "skins": [
-    {
-      "name": "Original",
-      "id": 240000,
-      "isBase": true,
-      "availability": "Available",
-      "formatName": "Original",
-      "lootEligible": true,
-      "cost": 975,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": "A warrior as fearless as he is ornery, the yordle Kled embodies the furious bravado of Noxus. He is an icon beloved by the empire’s soldiers, distrusted by its officers, and loathed by the nobility. Many claim Kled has fought in every campaign the legions have waged, has 'acquired' every military title, and has never once backed down from a fight. Though the truth of the matter is often questionable, one part of his legend is undeniable: Charging into battle on his un-trusty steed, Skaarl, Kled fights to protect what’s his… and to take whatever he can get.",
-      "release": "2016-08-09",
-      "set": [],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/base/images/kled_splash_centered_0.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/base/images/kled_splash_uncentered_0.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/base/images/kled_splash_tile_0.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/base/kledloadscreen.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": false,
-      "newAnimations": false,
-      "newRecall": false,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Spike Spencer"
-      ],
-      "splashArtist": [
-        "Evan 'Somnicidal' Monteiro"
-      ]
-    },
-    {
-      "name": "Sir",
-      "id": 240001,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Sir",
-      "lootEligible": true,
-      "cost": 975,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "NoRarity",
-      "chromas": [],
-      "lore": "Sir Prince Chevalier Archduke Lord Double-Earl Kled (or Sir Kled, for short) is a half-mad knight from the aptly named Kingdom of Kled, which contains exactly two subjects: Kled, and his cowardly avian mount, Skarl. Together, the pair ravage the countryside to 'reclaim' Kled's 'land', which apparently is… all land, everywhere.",
-      "release": "2016-08-09",
-      "set": [
-        "Medieval"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/skin01/images/kled_splash_centered_1.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/skin01/images/kled_splash_uncentered_1.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/skin01/images/kled_splash_tile_1.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/skin01/kledloadscreen_1.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": false,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Spike Spencer"
-      ],
-      "splashArtist": [
-        "Pan Chengwei"
-      ]
-    },
-    {
-      "name": "Count Kledula",
-      "id": 240002,
-      "isBase": false,
-      "availability": "Legacy",
-      "formatName": "Count Kledula",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Emerald",
-          "id": 240005,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240005.png",
-          "colors": [
-            "#2DA130",
-            "#2DA130"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Golden",
-          "id": 240008,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240008.png",
-          "colors": [
-            "#FFEE59",
-            "#FFEE59"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a Loot exclusive during 2018.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 2,
-              "region": "TENCENT"
-            },
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Obsidian",
-          "id": 240006,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240006.png",
-          "colors": [
-            "#27211C",
-            "#27211C"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Pearl",
-          "id": 240007,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240007.png",
-          "colors": [
-            "#ECF9F8",
-            "#ECF9F8"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Rose Quartz",
-          "id": 240004,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240004.png",
-          "colors": [
-            "#E58BA5",
-            "#E58BA5"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "TENCENT"
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 240003,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240003.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive during 2018.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 2,
-              "region": "riot"
-            }
-          ]
-        }
-      ],
-      "lore": "This blood is MY blood. This candy is MY candy. Who sent you here?! You're not real ghosts! I'm Count Baron Double-Marquis Lord Duke Kledula… AND I'LL TEACH YOU NOT TO TRICK-OR-TREAT ON MY LAND!",
-      "release": "2018-10-24",
-      "set": [
-        "Trick-or-Treat"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/skin02/images/kled_splash_centered_2.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/skin02/images/kled_splash_uncentered_2.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/skin02/images/kled_splash_tile_2.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/skin02/kledloadscreen_2.jpg",
-      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/skin02/kledloadscreen_2_le.jpg",
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Spike Spencer"
-      ],
-      "splashArtist": [
-        "Rudy Siswanto"
-      ]
-    },
-    {
-      "name": "Marauder",
-      "id": 240009,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Marauder",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Citrine",
-          "id": 240011,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240011.png",
-          "colors": [
-            "#DF9117",
-            "#DF9117"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Emerald",
-          "id": 240017,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240017.png",
-          "colors": [
-            "#2DA130",
-            "#2DA130"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Obsidian",
-          "id": 240010,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240010.png",
-          "colors": [
-            "#27211C",
-            "#27211C"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Pearl",
-          "id": 240015,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240015.png",
-          "colors": [
-            "#ECF9F8",
-            "#ECF9F8"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 240016,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240016.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive in 2021.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Sapphire",
-          "id": 240013,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240013.png",
-          "colors": [
-            "#2756CE",
-            "#2756CE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Tanzanite",
-          "id": 240014,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240014.png",
-          "colors": [
-            "#54209B",
-            "#54209B"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Turquoise",
-          "id": 240012,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240012.png",
-          "colors": [
-            "#73BFBE",
-            "#73BFBE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        }
-      ],
-      "lore": "Throughout history, the Marauders have balanced on the knife's edge between brutality and cunning. General Kled, one half of the pair that currently leads the regime, is truly the incarnation of their historic brutality… and little more. If it weren't for Xin Zhao, Kled would bet everything on a final, bloody, battle.",
-      "release": "2021-01-07",
-      "set": [
-        "Marauder"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/skin09/images/kled_splash_centered_9.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/skin09/images/kled_splash_uncentered_9.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/skin09/images/kled_splash_tile_9.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/skin09/kledloadscreen_9.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Spike Spencer"
-      ],
-      "splashArtist": [
-        "Rudy Siswanto"
-      ]
-    },
-    {
-      "name": "Kibble-Head",
-      "id": 240018,
-      "isBase": false,
-      "availability": "Available",
-      "formatName": "Kibble-Head",
-      "lootEligible": true,
-      "cost": 1350,
-      "sale": 0,
-      "distribution": null,
-      "rarity": "Epic",
-      "chromas": [
-        {
-          "name": "Amethyst",
-          "id": 240024,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240024.png",
-          "colors": [
-            "#9C68D7",
-            "#9C68D7"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Catseye",
-          "id": 240020,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240020.png",
-          "colors": [
-            "#FFEE59",
-            "#FFEE59"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Emerald",
-          "id": 240022,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240022.png",
-          "colors": [
-            "#2DA130",
-            "#2DA130"
-          ],
-          "descriptions": [
-            {
-              "description": "Obtained through Influencer audience giveaways.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Obsidian",
-          "id": 240023,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240023.png",
-          "colors": [
-            "#27211C",
-            "#27211C"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Pearl",
-          "id": 240026,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240026.png",
-          "colors": [
-            "#ECF9F8",
-            "#ECF9F8"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        },
-        {
-          "name": "Rose Quartz",
-          "id": 240025,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240025.png",
-          "colors": [
-            "#E58BA5",
-            "#E58BA5"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "TENCENT"
-            }
-          ]
-        },
-        {
-          "name": "Ruby",
-          "id": 240019,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240019.png",
-          "colors": [
-            "#D33528",
-            "#D33528"
-          ],
-          "descriptions": [
-            {
-              "description": "This chroma was released as a bundle exclusive in 2023.",
-              "region": "riot"
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": 1,
-              "region": "riot"
-            }
-          ]
-        },
-        {
-          "name": "Sapphire",
-          "id": 240021,
-          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/240/240021.png",
-          "colors": [
-            "#2756CE",
-            "#2756CE"
-          ],
-          "descriptions": [
-            {
-              "description": null,
-              "region": null
-            }
-          ],
-          "rarities": [
-            {
-              "rarity": null,
-              "region": null
-            }
-          ]
-        }
-      ],
-      "lore": "He's just a lil' guy wearing a bowl of Poro-Pup Chow as a hat, riding the bestest beagle into battle. The get-up won Kled and Skaarl a blue ribbon at Beagle's Bridge, so if ain't broke, don't fix it. Here's hoping that the more \"refined\" judges at this year's Summoner Sweetie's Pet Show agree.",
-      "release": "2023-04-06",
-      "set": [
-        "Cats Versus Dogs"
-      ],
-      "splashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/skin18/images/kled_splash_centered_18.jpg",
-      "uncenteredSplashPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/skin18/images/kled_splash_uncentered_18.jpg",
-      "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/skin18/images/kled_splash_tile_18.jpg",
-      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/skin18/kledloadscreen_18.jpg",
-      "loadScreenVintagePath": null,
-      "newEffects": true,
-      "newAnimations": true,
-      "newRecall": true,
-      "newVoice": false,
-      "newQuotes": false,
-      "voiceActor": [
-        "Spike Spencer"
-      ],
-      "splashArtist": [
-        "Horace 'Hozure' Hsu"
-      ]
-    }
-  ]
+  }
 }

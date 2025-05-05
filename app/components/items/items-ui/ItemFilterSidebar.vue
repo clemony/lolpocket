@@ -15,26 +15,26 @@ function resetItems() {
   is.listKey = is.listKey + 1
   is.itemGridApi.resetColumnState()
 }
-const model = ref('Grid')
+const tabs = ref('/library/items')
 
 function handleSwitch(e) {
   is.hideUnpurchasable = e
-  //is.itemGridApi.refreshCells()
+  // is.itemGridApi.refreshCells()
 }
 onMounted (() => {
-  route.path == '/items/list' ? model.value = 'List' : 'Grid'
+  tabs.value = route.path
 })
 </script>
 
 <template>
   <transition-expand group class="flex pl-4 pr-2 w-116 h-full flex-col items-center pt-19 justify-start  relative">
     <div class="w-full px-5 mt-4">
-      <Tabs v-model:model-value="model" class=" w-full  **:pointer-events-auto ">
+      <Tabs v-model:model-value="tabs" class=" w-full  **:pointer-events-auto " @update:model-value="navigateTo(tabs)">
         <IndicatorTabsList class="grid grid-cols-2 h-10">
-          <IndicatorTabsTrigger value="Grid" @click="navigateTo('/items')">
+          <IndicatorTabsTrigger value="/library/items">
             Grid
           </IndicatorTabsTrigger>
-          <IndicatorTabsTrigger value="List" @click="navigateTo('/items/list')">
+          <IndicatorTabsTrigger value="/library/item_list">
             List
           </IndicatorTabsTrigger>
           <TabIndicator />

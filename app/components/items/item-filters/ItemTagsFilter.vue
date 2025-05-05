@@ -26,7 +26,7 @@ function handleChange() {
       v-for="tag in itemTags"
       :key="tag.id"
       v-tippy="{ content: tag.displayName }"
-      :aria-label="tag.id" class="size-fit grid place-items-center   btn !size-14  btn-xl  mr-0 btn-square  " :class="{ '!bg-neutral !border-neutral !shadow-neutral/20 !shadow-sm order-first  ml-19': is.itemFilter.tags && is.itemFilter.tags.includes(tag.id), 'first-of-type:ml-19': !is.itemFilter.tags }">
+      :aria-label="tag.id" class="size-fit grid place-items-center   btn !size-14  btn-xl  mr-0 btn-square  " :class="{ '!bg-neutral !border-neutral !shadow-neutral/20 !shadow-sm order-first  ml-20.5': is.itemFilter.tags && is.itemFilter.tags.includes(tag.id), 'first-of-type:ml-20.5': !is.itemFilter.tags }">
 
       <input
         v-model="is.itemFilter.tags" class="peer hidden absolute"

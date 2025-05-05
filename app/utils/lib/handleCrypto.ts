@@ -1,7 +1,6 @@
 import { hexoid } from 'hexoid'
 import { generate } from 'random-words'
 
-const toID = hexoid()
 export function getKey() {
   const newKey = new Date().toLocaleString().replace(/,\s/g, '').replace(/\s+/g, '').replace(/\//g, '').replace(/:/g, '').trim().toString()
 
@@ -49,7 +48,7 @@ function word() {
 export async function generateMediumString(): Promise<string> {
   const championNames = useDataStore().champions.flatMap(champion => cleanName(champion.name))
 
-  const { data: itemData } = await useFetch('/api/items/index.json')
+const { data: itemData } = await useFetch('/api/lists/item-index.json')
   const items = Object.values(itemData.value) as ItemIndex[]
 
   const itemNames = items.flatMap(item => item.name)
@@ -69,7 +68,7 @@ export async function generateMediumString(): Promise<string> {
 export async function generateShortString(): Promise<string> {
   const championNames = useDataStore().champions.flatMap(champion => cleanName(champion.name))
 
-  const { data: itemData } = await useFetch('/api/items/index.json')
+const { data: itemData } = await useFetch('/api/lists/item-index.json')
   const items = Object.values(itemData.value) as ItemIndex[]
 
   const itemNames = items.flatMap(item => item.name)

@@ -15,10 +15,10 @@ const pocket = computed (() => {
 
 <template>
     <label
-      class="swap swap-flip **:select-none w-100 h-90">
+      class="swap swap-flip **:select-none w-100 h-80">
 <input type="checkbox"  v-model="menuOpen" />
 
-      <div class=" w-100 h-90 swap-off hover:border-b3 hover:ring-1 hover:ring-b2 hover:shadow-pretty relative border group border-transparent  rounded-xl  shadow-warm gap-3 overflow-hidden ">
+      <div class=" w-100 h-80 swap-off hover:border-b3 hover:ring-1 hover:ring-b2 hover:shadow-pretty relative border group border-transparent  rounded-xl  shadow-warm gap-3 overflow-hidden ">
     <BackpackCardBackground :pocket="pocket" />
 
         <div

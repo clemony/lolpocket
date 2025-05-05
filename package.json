@@ -14,7 +14,10 @@
     "generate:item-index": "node scripts/generate-item-index.cjs",
     "generate:champion-index": "node scripts/generate-champion-index.cjs",
     "generate:items-lite": "node scripts/generate-items-lite.cjs",
-    "generate:item-effects": "node scripts/generate-item-effects.cjs"
+    "generate:item-effects": "node scripts/generate-item-effects.cjs",
+    "generate:champions": "node scripts/generate-champions.cjs",
+    "generate:champion-skins": "node scripts/generate-champion-skins.cjs",
+    "generate:champions-lite": "node scripts/generate-champions-lite.mjs"
   },
   "dependencies": {
     "@antfu/eslint-config": "^4.12.0",
@@ -64,7 +67,6 @@
     "motion-v": "^1.0.1",
     "nuxt": "^3.17.1",
     "nuxt-svgo": "^4.1.0",
-    "openapi-typescript": "^7.6.1",
     "pinia": "^3.0.2",
     "pinia-plugin-persistedstate": "^4.2.0",
     "qs": "^6.14.0",

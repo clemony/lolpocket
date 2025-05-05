@@ -4,7 +4,7 @@ const fs = require('node:fs')
 const path = require('node:path')
 
 const itemsDir = path.resolve(__dirname, '../public/api/items')
-const outputFile = path.resolve(__dirname, '../public/api/items/index.json')
+const outputFile = path.resolve(__dirname, '../public/api/lists/item-index.json')
 
 const files = fs.readdirSync(itemsDir).filter(file => file.endsWith('.json'))
 

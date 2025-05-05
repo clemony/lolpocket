@@ -3,7 +3,7 @@ const ds = useDataStore()
 
 const champions = [...ds.champions]
 
-const { data: itemData } = await useFetch('/api/items/index.json')
+const { data: itemData } = await useFetch('/api/lists/item-index.json')
 const items = Object.values(itemData.value) as ItemIndex[]
 const shuffled = champions.sort(() => 0.5 - Math.random())
 

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const us = useUiStore()
 const as = useAccountStore()
-const route = useRoute()
 
 watch(
   () => us.commandOpen,
@@ -10,10 +9,14 @@ watch(
   },
 )
 
-const tabs = ref('nexus')
-onMounted (() => {
-  tabs.value = route.path
-})
+const tabs = ref('/nexus')
+
+
+function handleMenu() {
+  if (tabs.value.charAt(0) != '/')
+    return
+  navigateTo(tabs.value)
+}
 </script>
 
 <template>
@@ -23,44 +26,55 @@ onMounted (() => {
         LP
       </h3>
     </NavBtn>
-    <CommandSearch />
-    <!--     <SidebarTitle /> -->
-
+    <CommandSearch /><!--
+    <SidebarAddPocket /> -->
     <!-- <SummonerInGameToggle  /> -->
-    <div class="grow justify-center items-center  flex">
-    </div>
-
-    <Tabs v-model:model-value="tabs" class="flex items-center self-center  py-0 overflow-y-visible" @update:model-value="navigateTo(tabs)">
-      <IndicatorTabsList class="grid-cols-5 bg-transparent shadow-none inset-shadow-none border-none py-0 overflow-y-visible h-10">
-        <IndicatorTabsTrigger value="/nexus" :class="{ 'btn-active': route.meta.section == 'nexus' }">
+    <Grow />
+    <!-- -->
+    <IndicatorMenubar v-model:model-value="tabs" @update:model-value="handleMenu()">
+      <IndicatorTabsList class="grid-cols-6 bg-transparent shadow-none inset-shadow-none border-none py-0 overflow-y-visible h-10">
+        <IndicatorTabsTrigger value="/nexus">
           Nexus
         </IndicatorTabsTrigger>
-        <IndicatorTabsTrigger value="/summoner" :class="{ 'btn-active': route.meta.section == 'match' }">
+        <IndicatorTabsTrigger value="/summoner">
           Summoner
         </IndicatorTabsTrigger>
-        <IndicatorTabsTrigger value="/analytics/champions" class="" :class="{ 'btn-active': route.meta.section == 'analytics' }">
-          Analytics
-        </IndicatorTabsTrigger>
 
-        <IndicatorTabsTrigger value="/backpack" :class="{ 'btn-active': route.path == '/backpack' }">
+        <IndicatorMenu
+          value="data">
+          <IndicatorMenuTrigger >
+                   Data
+          </IndicatorMenuTrigger>
+          <NestedMenu :routes="dataRoutes"  :align-offset="-15" class="!ml-8">
+          <li>
+        <PredictionsLink  />
+        </li>
+          </NestedMenu>
+        </IndicatorMenu>
+
+        <IndicatorTabsTrigger value="/backpack">
           Backpack
         </IndicatorTabsTrigger>
 
         <IndicatorTabsTrigger
-          value="/calculator"
-          :class="{ 'btn-active': route.path == '/calculator' }">
+          value="/calculator">
           Calculator
         </IndicatorTabsTrigger>
+
+        <IndicatorMenu
+          value="library">
+          <IndicatorMenuTrigger>
+            Library
+          </IndicatorMenuTrigger>
+          <NestedMenu :routes="libraryLinks"  :align-offset="-8">
+             <li class="mt-1">
+        <PatchNotesLink />
+      </li>
+          </NestedMenu>
+        </IndicatorMenu>
         <TabIndicator class="*:bg-b2/60 px-1" />
       </IndicatorTabsList>
-      <LibraryMenu />
-    </Tabs>
-    <!--
-    <NavBtn
-      :class="{ 'btn-active': route.meta.section == 'about' }"
-      @click="navigateTo('/docs')">
-      Docs
-    </NavBtn>    <SidebarAddPocket /> -->
+    </IndicatorMenubar>
 
     <AccountSidebar :account="as.userAccount" :summoner="as.userSummoner" />
   </nav>

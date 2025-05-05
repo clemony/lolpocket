@@ -19,9 +19,8 @@ const emit = defineEmits(['update:query'])
 const route = useRoute()
 
 const is = useItemStore()
-const ds = useDataStore()
 
-const { data: itemData } = await useFetch('/api/items/index.json')
+const { data: itemData } = await useFetch('/api/lists/item-index.json')
 const items = Object.values(itemData.value) as ItemIndex[]
 
 const searchQuery = ref('')
