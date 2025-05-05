@@ -4,129 +4,76 @@
   "name": "Karma",
   "title": "the Enlightened One",
   "fullName": "Darha",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Karma.png",
   "resource": "Mana",
   "attackType": "Ranged",
   "stats": {
     "health": {
       "flat": 630,
-      "percent": 0,
-      "perLevel": 109,
-      "percentPerLevel": 0
+      "perLevel": 109
     },
     "healthRegen": {
       "flat": 5.5,
-      "percent": 0,
-      "perLevel": 0.55,
-      "percentPerLevel": 0
+      "perLevel": 0.55
     },
     "mana": {
       "flat": 374,
-      "percent": 0,
-      "perLevel": 40,
-      "percentPerLevel": 0
+      "perLevel": 40
     },
     "manaRegen": {
       "flat": 13,
-      "percent": 0,
-      "perLevel": 0.8,
-      "percentPerLevel": 0
+      "perLevel": 0.8
     },
     "armor": {
       "flat": 28,
-      "percent": 0,
-      "perLevel": 5,
-      "percentPerLevel": 0
+      "perLevel": 5
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
-      "perLevel": 1.3,
-      "percentPerLevel": 0
+      "perLevel": 1.3
     },
     "attackDamage": {
       "flat": 51,
-      "percent": 0,
-      "perLevel": 3.3,
-      "percentPerLevel": 0
+      "perLevel": 3.3
     },
     "movespeed": {
-      "flat": 335,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 335
     },
     "acquisitionRadius": {
-      "flat": 525,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 525
     },
     "selectionRadius": {
-      "flat": 120,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 120
     },
     "pathingRadius": {
-      "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 35
     },
     "gameplayRadius": {
-      "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 65
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.625,
-      "percent": 0,
-      "perLevel": 2.3,
-      "percentPerLevel": 0
+      "perLevel": 2.3
     },
     "attackSpeedRatio": {
-      "flat": 0.625,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.625
     },
     "attackCastTime": {
-      "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.3
     },
     "attackTotalTime": {
-      "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.6
     },
     "attackDelayOffset": {
-      "flat": -0.138541668653488,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": -0.138541668653488
     },
     "attackRange": {
-      "flat": 525,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 525
     }
   },
   "positions": [
@@ -160,8 +107,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -227,26 +177,7 @@
             ]
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                40,
-                50,
-                60,
-                70,
-                80
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -257,13 +188,7 @@
                 6,
                 5
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -478,8 +403,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -600,35 +528,14 @@
             ]
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                50,
-                55,
-                60,
-                65,
-                70
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
               "values": [
                 12
               ],
-              "units": [
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -725,8 +632,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Unit",
         "affects": "Enemies / Self",
         "spellshieldable": "Special",
@@ -792,26 +702,7 @@
             ]
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                50,
-                55,
-                60,
-                65,
-                70
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -822,13 +713,7 @@
                 8.5,
                 8
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -941,8 +826,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Unit",
         "affects": "Allies",
         "spellshieldable": null,
@@ -982,7 +870,7 @@
             "leveling": []
           }
         ],
-        "cost": null,
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -992,12 +880,7 @@
                 36,
                 34
               ],
-              "units": [
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -1027,5 +910,6 @@
         "targetRange": null
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/karma/skins/base/images/karma_splash_centered_0.jpg"
 }

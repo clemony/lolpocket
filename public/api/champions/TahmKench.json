@@ -3,130 +3,73 @@
   "key": "TahmKench",
   "name": "Tahm Kench",
   "title": "The River King",
-  "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/TahmKench.png",
   "resource": "Mana",
   "attackType": "Melee",
   "stats": {
     "health": {
       "flat": 640,
-      "percent": 0,
-      "perLevel": 103,
-      "percentPerLevel": 0
+      "perLevel": 103
     },
     "healthRegen": {
       "flat": 6.5,
-      "percent": 0,
-      "perLevel": 0.55,
-      "percentPerLevel": 0
+      "perLevel": 0.55
     },
     "mana": {
       "flat": 325,
-      "percent": 0,
-      "perLevel": 50,
-      "percentPerLevel": 0
+      "perLevel": 50
     },
     "manaRegen": {
       "flat": 8,
-      "percent": 0,
-      "perLevel": 1,
-      "percentPerLevel": 0
+      "perLevel": 1
     },
     "armor": {
       "flat": 39,
-      "percent": 0,
-      "perLevel": 4.7,
-      "percentPerLevel": 0
+      "perLevel": 4.7
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
-      "perLevel": 2.05,
-      "percentPerLevel": 0
+      "perLevel": 2.05
     },
     "attackDamage": {
       "flat": 56,
-      "percent": 0,
-      "perLevel": 3.2,
-      "percentPerLevel": 0
+      "perLevel": 3.2
     },
     "movespeed": {
-      "flat": 335,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 335
     },
     "acquisitionRadius": {
-      "flat": 600,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 600
     },
     "selectionRadius": {
-      "flat": 125,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 125
     },
     "pathingRadius": {
-      "flat": 50,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 50
     },
     "gameplayRadius": {
-      "flat": 80,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 80
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.658,
-      "percent": 0,
-      "perLevel": 2.5,
-      "percentPerLevel": 0
+      "perLevel": 2.5
     },
     "attackSpeedRatio": {
-      "flat": 0.657999992370605,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.657999992370605
     },
     "attackCastTime": {
-      "flat": 0.379999995231628,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.379999995231628
     },
     "attackTotalTime": {
-      "flat": 1.51900005340576,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
-    },
-    "attackDelayOffset": {
-      "flat": 0,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.51900005340576
     },
     "attackRange": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     }
   },
   "positions": [
@@ -162,8 +105,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -356,26 +302,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                50,
-                46,
-                42,
-                38,
-                34
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -386,13 +313,7 @@
                 5.5,
                 5
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -499,26 +420,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                60,
-                75,
-                90,
-                105,
-                120
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -529,13 +431,7 @@
                 18,
                 17
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -626,7 +522,7 @@
             "leveling": []
           }
         ],
-        "cost": null,
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -637,13 +533,7 @@
                 3,
                 3
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -729,22 +619,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                100,
-                100
-              ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -753,11 +628,7 @@
                 100,
                 80
               ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -829,8 +700,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Direction",
         "affects": "Enemies / Allies",
         "spellshieldable": "false",
@@ -856,5 +730,6 @@
         "targetRange": null
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tahmkench/skins/base/images/tahmkench_splash_centered_0.jpg"
 }

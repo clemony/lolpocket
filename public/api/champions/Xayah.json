@@ -3,130 +3,73 @@
   "key": "Xayah",
   "name": "Xayah",
   "title": "the Rebel",
-  "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Xayah.png",
   "resource": "Mana",
   "attackType": "Ranged",
   "stats": {
     "health": {
       "flat": 630,
-      "percent": 0,
-      "perLevel": 107,
-      "percentPerLevel": 0
+      "perLevel": 107
     },
     "healthRegen": {
       "flat": 3.25,
-      "percent": 0,
-      "perLevel": 0.75,
-      "percentPerLevel": 0
+      "perLevel": 0.75
     },
     "mana": {
       "flat": 340,
-      "percent": 0,
-      "perLevel": 40,
-      "percentPerLevel": 0
+      "perLevel": 40
     },
     "manaRegen": {
       "flat": 8.25,
-      "percent": 0,
-      "perLevel": 0.8,
-      "percentPerLevel": 0
+      "perLevel": 0.8
     },
     "armor": {
       "flat": 25,
-      "percent": 0,
-      "perLevel": 4.2,
-      "percentPerLevel": 0
+      "perLevel": 4.2
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
-      "perLevel": 1.3,
-      "percentPerLevel": 0
+      "perLevel": 1.3
     },
     "attackDamage": {
       "flat": 60,
-      "percent": 0,
-      "perLevel": 3.5,
-      "percentPerLevel": 0
+      "perLevel": 3.5
     },
     "movespeed": {
-      "flat": 330,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 330
     },
     "acquisitionRadius": {
-      "flat": 800,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 800
     },
     "selectionRadius": {
-      "flat": 120,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 120
     },
     "pathingRadius": {
-      "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 35
     },
     "gameplayRadius": {
-      "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 65
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.658,
-      "percent": 0,
-      "perLevel": 3.9,
-      "percentPerLevel": 0
+      "perLevel": 3.9
     },
     "attackSpeedRatio": {
-      "flat": 0.658,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.658
     },
     "attackCastTime": {
-      "flat": 0.282999992370605,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.282999992370605
     },
     "attackTotalTime": {
-      "flat": 1.60000002384185,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
-    },
-    "attackDelayOffset": {
-      "flat": 0,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.60000002384185
     },
     "attackRange": {
-      "flat": 525,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 525
     }
   },
   "positions": [
@@ -163,8 +106,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -354,26 +300,7 @@
             ]
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                50,
-                50,
-                50,
-                50,
-                50
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -384,13 +311,7 @@
                 8.5,
                 8
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -460,26 +381,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                60,
-                55,
-                50,
-                45,
-                40
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -490,13 +392,7 @@
                 17,
                 16
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -623,26 +519,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                30,
-                30,
-                30,
-                30,
-                30
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -653,13 +530,7 @@
                 9,
                 8
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -733,22 +604,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                100,
-                100
-              ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -757,11 +613,7 @@
                 120,
                 100
               ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -791,5 +643,6 @@
         "targetRange": null
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/xayah/skins/base/images/xayah_splash_centered_0.jpg"
 }

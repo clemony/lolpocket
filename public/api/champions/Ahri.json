@@ -3,130 +3,76 @@
   "key": "Ahri",
   "name": "Ahri",
   "title": "the Nine-Tailed Fox",
-  "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Ahri.png",
   "resource": "Mana",
   "attackType": "Ranged",
   "stats": {
     "health": {
       "flat": 590,
-      "percent": 0,
-      "perLevel": 104,
-      "percentPerLevel": 0
+      "perLevel": 104
     },
     "healthRegen": {
       "flat": 2.5,
-      "percent": 0,
-      "perLevel": 0.6,
-      "percentPerLevel": 0
+      "perLevel": 0.6
     },
     "mana": {
       "flat": 418,
-      "percent": 0,
-      "perLevel": 25,
-      "percentPerLevel": 0
+      "perLevel": 25
     },
     "manaRegen": {
       "flat": 8,
-      "percent": 0,
-      "perLevel": 0.8,
-      "percentPerLevel": 0
+      "perLevel": 0.8
     },
     "armor": {
       "flat": 21,
-      "percent": 0,
-      "perLevel": 4.2,
-      "percentPerLevel": 0
+      "perLevel": 4.2
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
-      "perLevel": 1.3,
-      "percentPerLevel": 0
+      "perLevel": 1.3
     },
     "attackDamage": {
       "flat": 53,
-      "percent": 0,
-      "perLevel": 3,
-      "percentPerLevel": 0
+      "perLevel": 3
     },
     "movespeed": {
-      "flat": 330,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 330
     },
     "acquisitionRadius": {
-      "flat": 525,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 525
     },
     "selectionRadius": {
-      "flat": 100,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 100
     },
     "pathingRadius": {
-      "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 35
     },
     "gameplayRadius": {
-      "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 65
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.668,
-      "percent": 0,
-      "perLevel": 2.2,
-      "percentPerLevel": 0
+      "perLevel": 2.2
     },
     "attackSpeedRatio": {
-      "flat": 0.625,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.625
     },
     "attackCastTime": {
-      "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.3
     },
     "attackTotalTime": {
-      "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.6
     },
     "attackDelayOffset": {
-      "flat": -0.1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": -0.1
     },
     "attackRange": {
-      "flat": 550,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 550
     }
   },
   "positions": [
@@ -161,8 +107,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -277,26 +226,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                55,
-                65,
-                75,
-                85,
-                95
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -307,13 +237,7 @@
                 7,
                 7
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -552,26 +476,7 @@
             ]
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                30,
-                30,
-                30,
-                30,
-                30
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -582,13 +487,7 @@
                 7,
                 6
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -687,26 +586,7 @@
             ]
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                60,
-                60,
-                60,
-                60,
-                60
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -717,13 +597,7 @@
                 12,
                 12
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -801,22 +675,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                100,
-                100
-              ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -825,11 +684,7 @@
                 115,
                 100
               ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -859,5 +714,6 @@
         "targetRange": "500"
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ahri/skins/base/images/ahri_splash_centered_0.jpg"
 }

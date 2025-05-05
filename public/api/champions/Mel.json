@@ -4,129 +4,73 @@
   "name": "Mel",
   "title": "the Soul's Reflection",
   "fullName": "Mel Medarda",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Mel.png",
   "resource": "Mana",
   "attackType": "Ranged",
   "stats": {
     "health": {
       "flat": 630,
-      "percent": 0,
-      "perLevel": 93,
-      "percentPerLevel": 0
+      "perLevel": 93
     },
     "healthRegen": {
       "flat": 6,
-      "percent": 0,
-      "perLevel": 0.55,
-      "percentPerLevel": 0
+      "perLevel": 0.55
     },
     "mana": {
       "flat": 480,
-      "percent": 0,
-      "perLevel": 28,
-      "percentPerLevel": 0
+      "perLevel": 28
     },
     "manaRegen": {
       "flat": 9,
-      "percent": 0,
-      "perLevel": 0.9,
-      "percentPerLevel": 0
+      "perLevel": 0.9
     },
     "armor": {
       "flat": 21,
-      "percent": 0,
-      "perLevel": 5.2,
-      "percentPerLevel": 0
+      "perLevel": 5.2
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
-      "perLevel": 1.3,
-      "percentPerLevel": 0
+      "perLevel": 1.3
     },
     "attackDamage": {
       "flat": 54,
-      "percent": 0,
-      "perLevel": 3.3,
-      "percentPerLevel": 0
+      "perLevel": 3.3
     },
     "movespeed": {
-      "flat": 330,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 330
     },
     "acquisitionRadius": {
-      "flat": 625,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 625
     },
     "selectionRadius": {
-      "flat": 120,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 120
     },
     "pathingRadius": {
-      "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 35
     },
     "gameplayRadius": {
-      "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 65
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.625,
-      "percent": 0,
-      "perLevel": 2.5,
-      "percentPerLevel": 0
+      "perLevel": 2.5
     },
     "attackSpeedRatio": {
-      "flat": 0.4,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.4
     },
     "attackCastTime": {
-      "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.3
     },
     "attackTotalTime": {
-      "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
-    },
-    "attackDelayOffset": {
-      "flat": 0,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.6
     },
     "attackRange": {
-      "flat": 550,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 550
     }
   },
   "positions": [
@@ -166,8 +110,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": "false",
@@ -377,26 +324,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                70,
-                80,
-                90,
-                100,
-                110
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -407,13 +335,7 @@
                 7,
                 6
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -495,26 +417,7 @@
             ]
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                80,
-                60,
-                40,
-                20,
-                0
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -525,13 +428,7 @@
                 26,
                 23
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -825,26 +722,7 @@
             ]
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                50,
-                55,
-                60,
-                65,
-                70
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -855,13 +733,7 @@
                 10.5,
                 10
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -986,22 +858,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                100,
-                100
-              ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -1010,11 +867,7 @@
                 100,
                 80
               ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -1044,5 +897,6 @@
         "targetRange": "Global"
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mel/skins/base/images/mel_splash_centered_0.mel.jpg"
 }

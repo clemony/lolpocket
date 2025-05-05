@@ -3,130 +3,76 @@
   "key": "Tristana",
   "name": "Tristana",
   "title": "the Yordle Gunner",
-  "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Tristana.png",
   "resource": "Mana",
   "attackType": "Ranged",
   "stats": {
     "health": {
       "flat": 640,
-      "percent": 0,
-      "perLevel": 102,
-      "percentPerLevel": 0
+      "perLevel": 102
     },
     "healthRegen": {
       "flat": 4,
-      "percent": 0,
-      "perLevel": 0.5,
-      "percentPerLevel": 0
+      "perLevel": 0.5
     },
     "mana": {
       "flat": 300,
-      "percent": 0,
-      "perLevel": 32,
-      "percentPerLevel": 0
+      "perLevel": 32
     },
     "manaRegen": {
       "flat": 7.2,
-      "percent": 0,
-      "perLevel": 0.45,
-      "percentPerLevel": 0
+      "perLevel": 0.45
     },
     "armor": {
       "flat": 30,
-      "percent": 0,
-      "perLevel": 4,
-      "percentPerLevel": 0
+      "perLevel": 4
     },
     "magicResistance": {
       "flat": 28,
-      "percent": 0,
-      "perLevel": 1.3,
-      "percentPerLevel": 0
+      "perLevel": 1.3
     },
     "attackDamage": {
       "flat": 60,
-      "percent": 0,
-      "perLevel": 2.5,
-      "percentPerLevel": 0
+      "perLevel": 2.5
     },
     "movespeed": {
-      "flat": 325,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 325
     },
     "acquisitionRadius": {
-      "flat": 800,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 800
     },
     "selectionRadius": {
-      "flat": 100,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 100
     },
     "pathingRadius": {
-      "flat": 30,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 30
     },
     "gameplayRadius": {
-      "flat": 55,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 55
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.656,
-      "percent": 0,
-      "perLevel": 1.5,
-      "percentPerLevel": 0
+      "perLevel": 1.5
     },
     "attackSpeedRatio": {
-      "flat": 0.694,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.694
     },
     "attackCastTime": {
-      "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.3
     },
     "attackTotalTime": {
-      "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.6
     },
     "attackDelayOffset": {
-      "flat": -0.151993364095687,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": -0.151993364095687
     },
     "attackRange": {
-      "flat": 550,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 550
     }
   },
   "positions": [
@@ -157,8 +103,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -216,26 +165,7 @@
             ]
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                30,
-                35,
-                40,
-                45,
-                50
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -246,13 +176,7 @@
                 17,
                 16
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -354,26 +278,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                30,
-                35,
-                40,
-                45,
-                50
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -384,13 +289,7 @@
                 16,
                 14
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -694,26 +593,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                50,
-                55,
-                60,
-                65,
-                70
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -724,13 +604,7 @@
                 14.5,
                 14
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -846,22 +720,7 @@
             ]
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                100,
-                100
-              ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -870,11 +729,7 @@
                 100,
                 100
               ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -904,5 +759,6 @@
         "targetRange": "550 : 700 (based on level)"
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/base/images/tristana_splash_centered_0.jpg"
 }

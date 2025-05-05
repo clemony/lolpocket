@@ -3,130 +3,73 @@
   "key": "Maokai",
   "name": "Maokai",
   "title": "the Twisted Treant",
-  "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Maokai.png",
   "resource": "Mana",
   "attackType": "Melee",
   "stats": {
     "health": {
       "flat": 665,
-      "percent": 0,
-      "perLevel": 109,
-      "percentPerLevel": 0
+      "perLevel": 109
     },
     "healthRegen": {
       "flat": 5,
-      "percent": 0,
-      "perLevel": 0.75,
-      "percentPerLevel": 0
+      "perLevel": 0.75
     },
     "mana": {
       "flat": 375,
-      "percent": 0,
-      "perLevel": 43,
-      "percentPerLevel": 0
+      "perLevel": 43
     },
     "manaRegen": {
       "flat": 6,
-      "percent": 0,
-      "perLevel": 0.6,
-      "percentPerLevel": 0
+      "perLevel": 0.6
     },
     "armor": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 5.2,
-      "percentPerLevel": 0
+      "perLevel": 5.2
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
-      "perLevel": 2.05,
-      "percentPerLevel": 0
+      "perLevel": 2.05
     },
     "attackDamage": {
       "flat": 64,
-      "percent": 0,
-      "perLevel": 3.3,
-      "percentPerLevel": 0
+      "perLevel": 3.3
     },
     "movespeed": {
-      "flat": 335,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 335
     },
     "acquisitionRadius": {
-      "flat": 600,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 600
     },
     "selectionRadius": {
-      "flat": 125,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 125
     },
     "pathingRadius": {
-      "flat": 50,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 50
     },
     "gameplayRadius": {
-      "flat": 80,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 80
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.8,
-      "percent": 0,
-      "perLevel": 2.125,
-      "percentPerLevel": 0
+      "perLevel": 2.125
     },
     "attackSpeedRatio": {
-      "flat": 0.694999992847442,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.694999992847442
     },
     "attackCastTime": {
-      "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.3
     },
     "attackTotalTime": {
-      "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
-    },
-    "attackDelayOffset": {
-      "flat": 0,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.6
     },
     "attackRange": {
-      "flat": 125,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 125
     }
   },
   "positions": [
@@ -166,7 +109,7 @@
             "leveling": []
           }
         ],
-        "cost": null,
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -190,26 +133,7 @@
                 20.588235294117645,
                 20
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": false
@@ -381,26 +305,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                40,
-                40,
-                40,
-                40,
-                40
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -411,13 +316,7 @@
                 5.5,
                 5
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -516,26 +415,7 @@
             ]
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                60,
-                60,
-                60,
-                60,
-                60
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -546,13 +426,7 @@
                 11,
                 10
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -765,26 +639,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                60,
-                65,
-                70,
-                75,
-                80
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -795,13 +650,7 @@
                 15,
                 14
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -893,22 +742,7 @@
             ]
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                100,
-                100
-              ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -917,11 +751,7 @@
                 110,
                 90
               ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -951,5 +781,6 @@
         "targetRange": "3000"
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/maokai/skins/base/images/maokai_splash_centered_0.jpg"
 }

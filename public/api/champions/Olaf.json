@@ -3,130 +3,76 @@
   "key": "Olaf",
   "name": "Olaf",
   "title": "the Berserker",
-  "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Olaf.png",
   "resource": "Mana",
   "attackType": "Melee",
   "stats": {
     "health": {
       "flat": 645,
-      "percent": 0,
-      "perLevel": 119,
-      "percentPerLevel": 0
+      "perLevel": 119
     },
     "healthRegen": {
       "flat": 6.5,
-      "percent": 0,
-      "perLevel": 0.6,
-      "percentPerLevel": 0
+      "perLevel": 0.6
     },
     "mana": {
       "flat": 316,
-      "percent": 0,
-      "perLevel": 50,
-      "percentPerLevel": 0
+      "perLevel": 50
     },
     "manaRegen": {
       "flat": 7.5,
-      "percent": 0,
-      "perLevel": 0.6,
-      "percentPerLevel": 0
+      "perLevel": 0.6
     },
     "armor": {
       "flat": 35,
-      "percent": 0,
-      "perLevel": 4.2,
-      "percentPerLevel": 0
+      "perLevel": 4.2
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
-      "perLevel": 2.05,
-      "percentPerLevel": 0
+      "perLevel": 2.05
     },
     "attackDamage": {
       "flat": 68,
-      "percent": 0,
-      "perLevel": 4.7,
-      "percentPerLevel": 0
+      "perLevel": 4.7
     },
     "movespeed": {
-      "flat": 350,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 350
     },
     "acquisitionRadius": {
-      "flat": 400,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 400
     },
     "selectionRadius": {
-      "flat": 111.111099243164,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 111.111099243164
     },
     "pathingRadius": {
-      "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 35
     },
     "gameplayRadius": {
-      "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 65
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.694,
-      "percent": 0,
-      "perLevel": 2.7,
-      "percentPerLevel": 0
+      "perLevel": 2.7
     },
     "attackSpeedRatio": {
-      "flat": 0.694000005722045,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.694000005722045
     },
     "attackCastTime": {
-      "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.3
     },
     "attackTotalTime": {
-      "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.6
     },
     "attackDelayOffset": {
-      "flat": -0.0656249970197677,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": -0.0656249970197677
     },
     "attackRange": {
-      "flat": 125,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 125
     }
   },
   "positions": [
@@ -157,8 +103,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -324,26 +273,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                50,
-                55,
-                60,
-                65,
-                70
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -354,13 +284,7 @@
                 9,
                 9
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -468,26 +392,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                50,
-                50,
-                50,
-                50,
-                50
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -498,13 +403,7 @@
                 13,
                 12
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -590,42 +489,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                21,
-                34.5,
-                48,
-                61.5,
-                75
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "values": [
-                15,
-                15,
-                15,
-                15,
-                15
-              ],
-              "units": [
-                "% AD",
-                "% AD",
-                "% AD",
-                "% AD",
-                "% AD"
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -636,13 +500,7 @@
                 8,
                 7
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -755,22 +613,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                100,
-                100
-              ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -779,11 +622,7 @@
                 90,
                 80
               ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -813,5 +652,6 @@
         "targetRange": null
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/olaf/skins/base/images/olaf_splash_centered_0.jpg"
 }

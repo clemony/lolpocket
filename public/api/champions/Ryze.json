@@ -3,130 +3,76 @@
   "key": "Ryze",
   "name": "Ryze",
   "title": "the Rune Mage",
-  "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Ryze.png",
   "resource": "Mana",
   "attackType": "Ranged",
   "stats": {
     "health": {
       "flat": 645,
-      "percent": 0,
-      "perLevel": 124,
-      "percentPerLevel": 0
+      "perLevel": 124
     },
     "healthRegen": {
       "flat": 8,
-      "percent": 0,
-      "perLevel": 0.8,
-      "percentPerLevel": 0
+      "perLevel": 0.8
     },
     "mana": {
       "flat": 300,
-      "percent": 0,
-      "perLevel": 70,
-      "percentPerLevel": 0
+      "perLevel": 70
     },
     "manaRegen": {
       "flat": 8,
-      "percent": 0,
-      "perLevel": 1,
-      "percentPerLevel": 0
+      "perLevel": 1
     },
     "armor": {
       "flat": 22,
-      "percent": 0,
-      "perLevel": 4.2,
-      "percentPerLevel": 0
+      "perLevel": 4.2
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
-      "perLevel": 1.3,
-      "percentPerLevel": 0
+      "perLevel": 1.3
     },
     "attackDamage": {
       "flat": 58,
-      "percent": 0,
-      "perLevel": 3,
-      "percentPerLevel": 0
+      "perLevel": 3
     },
     "movespeed": {
-      "flat": 340,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 340
     },
     "acquisitionRadius": {
-      "flat": 575,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 575
     },
     "selectionRadius": {
-      "flat": 120,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 120
     },
     "pathingRadius": {
-      "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 35
     },
     "gameplayRadius": {
-      "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 65
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.658,
-      "percent": 0,
-      "perLevel": 2.11,
-      "percentPerLevel": 0
+      "perLevel": 2.11
     },
     "attackSpeedRatio": {
-      "flat": 0.625,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.625
     },
     "attackCastTime": {
-      "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.3
     },
     "attackTotalTime": {
-      "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.6
     },
     "attackDelayOffset": {
-      "flat": -0.100000001490116,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": -0.100000001490116
     },
     "attackRange": {
-      "flat": 550,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 550
     }
   },
   "positions": [
@@ -157,8 +103,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -282,26 +231,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                40,
-                38,
-                36,
-                34,
-                32
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -312,13 +242,7 @@
                 5,
                 5
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -416,26 +340,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                40,
-                55,
-                70,
-                85,
-                100
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -446,13 +351,7 @@
                 9.5,
                 9
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -550,26 +449,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                35,
-                45,
-                55,
-                65,
-                75
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -580,13 +460,7 @@
                 2.75,
                 2.5
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -656,22 +530,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                100,
-                100
-              ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -680,11 +539,7 @@
                 160,
                 140
               ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -714,5 +569,6 @@
         "targetRange": "3000 / 1000"
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/base/images/ryze_splash_centered_0.jpg"
 }

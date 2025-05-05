@@ -2,34 +2,36 @@ import fs from 'fs'
 
 const champions = JSON.parse(fs.readFileSync('./public/api/champions.json', 'utf-8'))
 
-const championsLite = Object.values(champions).map((champ) => {
+const championsLite = Object.values(champions).map((champ)=> {
   const {
     id,
     key,
     name,
-    title,
-    fullName,
-    icon,
     resource,
     attackType,
     stats,
     positions,
     roles,
     attributeRatings,
-  } = champ
+  } = champ  as ChampionLite
 
   return {
     id,
     key,
     name,
-    title,
-    fullName,
-    icon,
-    resource: capitalize(resource),
+    resource: capitalize(resource.replace('_', ' ')),
     attackType: capitalize(attackType),
-    stats: Object.fromEntries(
-      Object.entries(stats).filter(([key]) => !key.startsWith('aram') && !key.startsWith('urf'))
-    ),
+stats: Object.fromEntries(
+  Object.entries(stats)
+    .filter(([key]) => !key.startsWith('aram') && !key.startsWith('urf'))
+    .map(([key, val]) => [
+      key,
+      Object.fromEntries(
+        Object.entries(val).filter(([, v]) => v !== 0)
+      )
+    ])
+    .filter(([, val]) => Object.keys(val).length > 0) // remove stat blocks that are now empty
+),
     positions: normalizeArray(positions),
     roles: normalizeArray(roles),
     attributeRatings,

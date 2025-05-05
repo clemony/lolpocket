@@ -4,129 +4,76 @@
   "name": "Jarvan IV",
   "title": "the Exemplar of Demacia",
   "fullName": "Jarvan Lightshield IV",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/JarvanIV.png",
   "resource": "Mana",
   "attackType": "Melee",
   "stats": {
     "health": {
       "flat": 640,
-      "percent": 0,
-      "perLevel": 104,
-      "percentPerLevel": 0
+      "perLevel": 104
     },
     "healthRegen": {
       "flat": 8,
-      "percent": 0,
-      "perLevel": 0.7,
-      "percentPerLevel": 0
+      "perLevel": 0.7
     },
     "mana": {
       "flat": 300,
-      "percent": 0,
-      "perLevel": 55,
-      "percentPerLevel": 0
+      "perLevel": 55
     },
     "manaRegen": {
       "flat": 6.5,
-      "percent": 0,
-      "perLevel": 0.45,
-      "percentPerLevel": 0
+      "perLevel": 0.45
     },
     "armor": {
       "flat": 36,
-      "percent": 0,
-      "perLevel": 5.2,
-      "percentPerLevel": 0
+      "perLevel": 5.2
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
-      "perLevel": 2.05,
-      "percentPerLevel": 0
+      "perLevel": 2.05
     },
     "attackDamage": {
       "flat": 64,
-      "percent": 0,
-      "perLevel": 3,
-      "percentPerLevel": 0
+      "perLevel": 3
     },
     "movespeed": {
-      "flat": 340,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 340
     },
     "acquisitionRadius": {
-      "flat": 600,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 600
     },
     "selectionRadius": {
-      "flat": 125,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 125
     },
     "pathingRadius": {
-      "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 35
     },
     "gameplayRadius": {
-      "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 65
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.658,
-      "percent": 0,
-      "perLevel": 2.5,
-      "percentPerLevel": 0
+      "perLevel": 2.5
     },
     "attackSpeedRatio": {
-      "flat": 0.657999992370605,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.657999992370605
     },
     "attackCastTime": {
-      "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.3
     },
     "attackTotalTime": {
-      "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.6
     },
     "attackDelayOffset": {
-      "flat": -0.124559998512268,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": -0.124559998512268
     },
     "attackRange": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     }
   },
   "positions": [
@@ -161,8 +108,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -265,26 +215,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                45,
-                50,
-                55,
-                60,
-                65
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -295,13 +226,7 @@
                 7,
                 6
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -405,26 +330,7 @@
             ]
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                30,
-                30,
-                30,
-                30,
-                30
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -435,13 +341,7 @@
                 9,
                 9
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -553,26 +453,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                55,
-                55,
-                55,
-                55,
-                55
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -583,13 +464,7 @@
                 10.5,
                 10
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -667,22 +542,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                100,
-                100
-              ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -691,11 +551,7 @@
                 105,
                 90
               ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -725,5 +581,6 @@
         "targetRange": "650"
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/jarvaniv/skins/base/images/jarvaniv_splash_centered_0.jpg"
 }

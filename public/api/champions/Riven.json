@@ -4,129 +4,68 @@
   "name": "Riven",
   "title": "the Exile",
   "fullName": "Konte Riven",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Riven.png",
   "resource": "None",
   "attackType": "Melee",
   "stats": {
     "health": {
       "flat": 630,
-      "percent": 0,
-      "perLevel": 100,
-      "percentPerLevel": 0
+      "perLevel": 100
     },
     "healthRegen": {
       "flat": 8.5,
-      "percent": 0,
-      "perLevel": 0.5,
-      "percentPerLevel": 0
-    },
-    "mana": {
-      "flat": 0,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
-    },
-    "manaRegen": {
-      "flat": 0,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "perLevel": 0.5
     },
     "armor": {
       "flat": 33,
-      "percent": 0,
-      "perLevel": 4.4,
-      "percentPerLevel": 0
+      "perLevel": 4.4
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
-      "perLevel": 2.05,
-      "percentPerLevel": 0
+      "perLevel": 2.05
     },
     "attackDamage": {
       "flat": 64,
-      "percent": 0,
-      "perLevel": 3,
-      "percentPerLevel": 0
+      "perLevel": 3
     },
     "movespeed": {
-      "flat": 340,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 340
     },
     "acquisitionRadius": {
-      "flat": 600,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 600
     },
     "selectionRadius": {
-      "flat": 130,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 130
     },
     "pathingRadius": {
-      "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 35
     },
     "gameplayRadius": {
-      "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 65
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.625,
-      "percent": 0,
-      "perLevel": 3.5,
-      "percentPerLevel": 0
+      "perLevel": 3.5
     },
     "attackSpeedRatio": {
-      "flat": 0.625,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.625
     },
     "attackCastTime": {
-      "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.3
     },
     "attackTotalTime": {
-      "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.6
     },
     "attackDelayOffset": {
-      "flat": -0.133333340287208,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": -0.133333340287208
     },
     "attackRange": {
-      "flat": 125,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 125
     }
   },
   "positions": [
@@ -161,8 +100,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": null,
@@ -289,7 +231,7 @@
             "leveling": []
           }
         ],
-        "cost": null,
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -300,13 +242,7 @@
                 13,
                 13
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -384,7 +320,7 @@
             ]
           }
         ],
-        "cost": null,
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -395,13 +331,7 @@
                 8,
                 7
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -483,7 +413,7 @@
             "leveling": []
           }
         ],
-        "cost": null,
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -494,13 +424,7 @@
                 7,
                 6
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -540,7 +464,7 @@
             "leveling": []
           }
         ],
-        "cost": null,
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -549,11 +473,7 @@
                 90,
                 60
               ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -650,8 +570,11 @@
             ]
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -677,5 +600,6 @@
         "targetRange": "1100"
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/riven/skins/base/images/riven_splash_centered_0.jpg"
 }

@@ -3,130 +3,76 @@
   "key": "Akshan",
   "name": "Akshan",
   "title": "the Rogue Sentinel",
-  "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Akshan.png",
   "resource": "Mana",
   "attackType": "Ranged",
   "stats": {
     "health": {
       "flat": 630,
-      "percent": 0,
-      "perLevel": 107,
-      "percentPerLevel": 0
+      "perLevel": 107
     },
     "healthRegen": {
       "flat": 3.75,
-      "percent": 0,
-      "perLevel": 0.65,
-      "percentPerLevel": 0
+      "perLevel": 0.65
     },
     "mana": {
       "flat": 350,
-      "percent": 0,
-      "perLevel": 40,
-      "percentPerLevel": 0
+      "perLevel": 40
     },
     "manaRegen": {
       "flat": 8.2,
-      "percent": 0,
-      "perLevel": 0.7,
-      "percentPerLevel": 0
+      "perLevel": 0.7
     },
     "armor": {
       "flat": 26,
-      "percent": 0,
-      "perLevel": 4.7,
-      "percentPerLevel": 0
+      "perLevel": 4.7
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
-      "perLevel": 1.3,
-      "percentPerLevel": 0
+      "perLevel": 1.3
     },
     "attackDamage": {
       "flat": 52,
-      "percent": 0,
-      "perLevel": 3,
-      "percentPerLevel": 0
+      "perLevel": 3
     },
     "movespeed": {
-      "flat": 330,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 330
     },
     "acquisitionRadius": {
-      "flat": 750,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 750
     },
     "selectionRadius": {
-      "flat": 100,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 100
     },
     "pathingRadius": {
-      "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 35
     },
     "gameplayRadius": {
-      "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 65
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.638,
-      "percent": 0,
-      "perLevel": 4,
-      "percentPerLevel": 0
+      "perLevel": 4
     },
     "attackSpeedRatio": {
-      "flat": 0.4,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.4
     },
     "attackCastTime": {
-      "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.3
     },
     "attackTotalTime": {
-      "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.6
     },
     "attackDelayOffset": {
-      "flat": -0.1667,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": -0.1667
     },
     "attackRange": {
-      "flat": 500,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 500
     }
   },
   "positions": [
@@ -164,8 +110,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": "false",
@@ -311,26 +260,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                60,
-                65,
-                70,
-                75,
-                80
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -341,13 +271,7 @@
                 5.75,
                 5
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -425,26 +349,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                40,
-                30,
-                20,
-                10,
-                0
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -455,13 +360,7 @@
                 6,
                 2
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -571,26 +470,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                70,
-                70,
-                70,
-                70,
-                70
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -601,13 +481,7 @@
                 13.5,
                 12
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -959,22 +833,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                100,
-                100
-              ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -983,11 +842,7 @@
                 85,
                 70
               ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -1017,5 +872,6 @@
         "targetRange": "2500"
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/akshan/skins/base/images/akshan_splash_centered_0.jpg"
 }

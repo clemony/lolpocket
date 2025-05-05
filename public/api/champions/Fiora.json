@@ -4,129 +4,73 @@
   "name": "Fiora",
   "title": "the Grand Duelist",
   "fullName": "Fiora Laurent",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Fiora.png",
   "resource": "Mana",
   "attackType": "Melee",
   "stats": {
     "health": {
       "flat": 620,
-      "percent": 0,
-      "perLevel": 99,
-      "percentPerLevel": 0
+      "perLevel": 99
     },
     "healthRegen": {
       "flat": 8.5,
-      "percent": 0,
-      "perLevel": 0.55,
-      "percentPerLevel": 0
+      "perLevel": 0.55
     },
     "mana": {
       "flat": 300,
-      "percent": 0,
-      "perLevel": 60,
-      "percentPerLevel": 0
+      "perLevel": 60
     },
     "manaRegen": {
       "flat": 8,
-      "percent": 0,
-      "perLevel": 0.7,
-      "percentPerLevel": 0
+      "perLevel": 0.7
     },
     "armor": {
       "flat": 33,
-      "percent": 0,
-      "perLevel": 4.7,
-      "percentPerLevel": 0
+      "perLevel": 4.7
     },
     "magicResistance": {
       "flat": 32,
-      "percent": 0,
-      "perLevel": 2.05,
-      "percentPerLevel": 0
+      "perLevel": 2.05
     },
     "attackDamage": {
       "flat": 66,
-      "percent": 0,
-      "perLevel": 3.3,
-      "percentPerLevel": 0
+      "perLevel": 3.3
     },
     "movespeed": {
-      "flat": 345,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 345
     },
     "acquisitionRadius": {
-      "flat": 600,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 600
     },
     "selectionRadius": {
-      "flat": 100,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 100
     },
     "pathingRadius": {
-      "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 35
     },
     "gameplayRadius": {
-      "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 65
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.69,
-      "percent": 0,
-      "perLevel": 3.2,
-      "percentPerLevel": 0
+      "perLevel": 3.2
     },
     "attackSpeedRatio": {
-      "flat": 0.689999997615814,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.689999997615814
     },
     "attackCastTime": {
-      "flat": 0.200000002980232,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.200000002980232
     },
     "attackTotalTime": {
-      "flat": 1.45000004768371,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
-    },
-    "attackDelayOffset": {
-      "flat": 0,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.45000004768371
     },
     "attackRange": {
-      "flat": 150,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 150
     }
   },
   "positions": [
@@ -161,8 +105,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -244,26 +191,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                20,
-                20,
-                20,
-                20,
-                20
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -274,13 +202,7 @@
                 7.75,
                 6
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -366,26 +288,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                50,
-                50,
-                50,
-                50,
-                50
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -396,13 +299,7 @@
                 18,
                 16
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -494,26 +391,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                40,
-                40,
-                40,
-                40,
-                40
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -524,13 +402,7 @@
                 8,
                 7
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -663,22 +535,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                100,
-                100
-              ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -687,11 +544,7 @@
                 90,
                 70
               ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -721,5 +574,6 @@
         "targetRange": "500"
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fiora/skins/base/images/fiora_splash_centered_0.jpg"
 }

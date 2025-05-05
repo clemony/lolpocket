@@ -3,130 +3,76 @@
   "key": "Taliyah",
   "name": "Taliyah",
   "title": "the Stoneweaver",
-  "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Taliyah.png",
   "resource": "Mana",
   "attackType": "Ranged",
   "stats": {
     "health": {
       "flat": 550,
-      "percent": 0,
-      "perLevel": 104,
-      "percentPerLevel": 0
+      "perLevel": 104
     },
     "healthRegen": {
       "flat": 6.5,
-      "percent": 0,
-      "perLevel": 0.65,
-      "percentPerLevel": 0
+      "perLevel": 0.65
     },
     "mana": {
       "flat": 470,
-      "percent": 0,
-      "perLevel": 30,
-      "percentPerLevel": 0
+      "perLevel": 30
     },
     "manaRegen": {
       "flat": 8,
-      "percent": 0,
-      "perLevel": 0.8,
-      "percentPerLevel": 0
+      "perLevel": 0.8
     },
     "armor": {
       "flat": 18,
-      "percent": 0,
-      "perLevel": 4.7,
-      "percentPerLevel": 0
+      "perLevel": 4.7
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
-      "perLevel": 1.3,
-      "percentPerLevel": 0
+      "perLevel": 1.3
     },
     "attackDamage": {
       "flat": 58,
-      "percent": 0,
-      "perLevel": 3.3,
-      "percentPerLevel": 0
+      "perLevel": 3.3
     },
     "movespeed": {
-      "flat": 330,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 330
     },
     "acquisitionRadius": {
-      "flat": 550,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 550
     },
     "selectionRadius": {
-      "flat": 120,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 120
     },
     "pathingRadius": {
-      "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 35
     },
     "gameplayRadius": {
-      "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 65
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.658,
-      "percent": 0,
-      "perLevel": 1.36,
-      "percentPerLevel": 0
+      "perLevel": 1.36
     },
     "attackSpeedRatio": {
-      "flat": 0.625,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.625
     },
     "attackCastTime": {
-      "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.3
     },
     "attackTotalTime": {
-      "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.6
     },
     "attackDelayOffset": {
-      "flat": -0.138541668653488,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": -0.138541668653488
     },
     "attackRange": {
-      "flat": 525,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 525
     }
   },
   "positions": [
@@ -162,7 +108,7 @@
             "leveling": []
           }
         ],
-        "cost": null,
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -171,11 +117,7 @@
                 2,
                 2
               ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": false
@@ -402,26 +344,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                65,
-                70,
-                75,
-                80,
-                85
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -432,13 +355,7 @@
                 4,
                 3
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -478,26 +395,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                40,
-                30,
-                20,
-                10,
-                0
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -508,13 +406,7 @@
                 9.5,
                 8
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -680,26 +572,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                90,
-                95,
-                100,
-                105,
-                110
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -710,13 +583,7 @@
                 14,
                 14
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -768,22 +635,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                100,
-                100
-              ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -792,11 +644,7 @@
                 150,
                 120
               ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -826,5 +674,6 @@
         "targetRange": "2500 / 3500 / 4500 / 5500 / 6500"
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/taliyah/skins/base/images/taliyah_splash_centered_0.jpg"
 }

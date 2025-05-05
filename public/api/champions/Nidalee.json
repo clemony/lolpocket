@@ -3,130 +3,76 @@
   "key": "Nidalee",
   "name": "Nidalee",
   "title": "the Bestial Huntress",
-  "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Nidalee.png",
   "resource": "Mana",
   "attackType": "Ranged",
   "stats": {
     "health": {
       "flat": 610,
-      "percent": 0,
-      "perLevel": 109,
-      "percentPerLevel": 0
+      "perLevel": 109
     },
     "healthRegen": {
       "flat": 6,
-      "percent": 0,
-      "perLevel": 0.6,
-      "percentPerLevel": 0
+      "perLevel": 0.6
     },
     "mana": {
       "flat": 295,
-      "percent": 0,
-      "perLevel": 45,
-      "percentPerLevel": 0
+      "perLevel": 45
     },
     "manaRegen": {
       "flat": 6,
-      "percent": 0,
-      "perLevel": 0.8,
-      "percentPerLevel": 0
+      "perLevel": 0.8
     },
     "armor": {
       "flat": 32,
-      "percent": 0,
-      "perLevel": 5,
-      "percentPerLevel": 0
+      "perLevel": 5
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
-      "perLevel": 1.45,
-      "percentPerLevel": 0
+      "perLevel": 1.45
     },
     "attackDamage": {
       "flat": 58,
-      "percent": 0,
-      "perLevel": 3.5,
-      "percentPerLevel": 0
+      "perLevel": 3.5
     },
     "movespeed": {
-      "flat": 335,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 335
     },
     "acquisitionRadius": {
-      "flat": 800,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 800
     },
     "selectionRadius": {
-      "flat": 110,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 110
     },
     "pathingRadius": {
-      "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 35
     },
     "gameplayRadius": {
-      "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 65
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.638,
-      "percent": 0,
-      "perLevel": 3.22,
-      "percentPerLevel": 0
+      "perLevel": 3.22
     },
     "attackSpeedRatio": {
-      "flat": 0.638000011444091,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.638000011444091
     },
     "attackCastTime": {
-      "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.3
     },
     "attackTotalTime": {
-      "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.6
     },
     "attackDelayOffset": {
-      "flat": -0.150000005960464,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": -0.150000005960464
     },
     "attackRange": {
-      "flat": 525,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 525
     }
   },
   "positions": [
@@ -165,8 +111,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Passive",
         "affects": "Enemies, Self",
         "spellshieldable": null,
@@ -261,35 +210,14 @@
             ]
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                50,
-                55,
-                60,
-                65,
-                70
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
               "values": [
                 6
               ],
-              "units": [
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -539,16 +467,14 @@
             "leveling": []
           }
         ],
-        "cost": null,
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
               "values": [
                 6
               ],
-              "units": [
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -655,26 +581,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                30,
-                35,
-                40,
-                45,
-                50
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -685,13 +592,7 @@
                 10,
                 9
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -797,16 +698,14 @@
             "leveling": []
           }
         ],
-        "cost": null,
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
               "values": [
                 6
               ],
-              "units": [
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -926,35 +825,14 @@
             ]
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                50,
-                55,
-                60,
-                65,
-                70
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
               "values": [
                 12
               ],
-              "units": [
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -1028,16 +906,14 @@
             ]
           }
         ],
-        "cost": null,
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
               "values": [
                 6
               ],
-              "units": [
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -1089,16 +965,14 @@
             "leveling": []
           }
         ],
-        "cost": null,
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
               "values": [
                 3
               ],
-              "units": [
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -1128,5 +1002,6 @@
         "targetRange": null
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nidalee/skins/base/images/nidalee_splash_centered_0.jpg"
 }

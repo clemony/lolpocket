@@ -3,130 +3,76 @@
   "key": "KSante",
   "name": "K'Sante",
   "title": "the Pride of Nazumah",
-  "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/KSante.png",
   "resource": "Mana",
   "attackType": "Melee",
   "stats": {
     "health": {
       "flat": 625,
-      "percent": 0,
-      "perLevel": 120,
-      "percentPerLevel": 0
+      "perLevel": 120
     },
     "healthRegen": {
       "flat": 9.5,
-      "percent": 0,
-      "perLevel": 1,
-      "percentPerLevel": 0
+      "perLevel": 1
     },
     "mana": {
       "flat": 320,
-      "percent": 0,
-      "perLevel": 60,
-      "percentPerLevel": 0
+      "perLevel": 60
     },
     "manaRegen": {
       "flat": 7,
-      "percent": 0,
-      "perLevel": 1,
-      "percentPerLevel": 0
+      "perLevel": 1
     },
     "armor": {
       "flat": 36,
-      "percent": 0,
-      "perLevel": 5.2,
-      "percentPerLevel": 0
+      "perLevel": 5.2
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
-      "perLevel": 2.1,
-      "percentPerLevel": 0
+      "perLevel": 2.1
     },
     "attackDamage": {
       "flat": 64,
-      "percent": 0,
-      "perLevel": 3.5,
-      "percentPerLevel": 0
+      "perLevel": 3.5
     },
     "movespeed": {
-      "flat": 330,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 330
     },
     "acquisitionRadius": {
-      "flat": 400,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 400
     },
     "selectionRadius": {
-      "flat": 140,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 140
     },
     "pathingRadius": {
-      "flat": 50,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 50
     },
     "gameplayRadius": {
-      "flat": 80,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 80
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.688,
-      "percent": 0,
-      "perLevel": 2.5,
-      "percentPerLevel": 0
+      "perLevel": 2.5
     },
     "attackSpeedRatio": {
-      "flat": 0.625,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.625
     },
     "attackCastTime": {
-      "flat": 0.3,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.3
     },
     "attackTotalTime": {
-      "flat": 1.6,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.6
     },
     "attackDelayOffset": {
-      "flat": -0.1046875,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": -0.1046875
     },
     "attackRange": {
-      "flat": 150,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 150
     }
   },
   "positions": [
@@ -162,8 +108,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -269,26 +218,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                20,
-                20,
-                20,
-                20,
-                20
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -532,26 +462,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                40,
-                45,
-                50,
-                55,
-                60
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -562,13 +473,7 @@
                 11,
                 10
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -658,26 +563,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                45,
-                50,
-                55,
-                60,
-                65
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -688,13 +574,7 @@
                 8.5,
                 8
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -845,22 +725,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                100,
-                100
-              ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -869,11 +734,7 @@
                 100,
                 80
               ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -903,5 +764,6 @@
         "targetRange": "300"
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ksante/skins/base/images/ksante_splash_centered_0.jpg"
 }

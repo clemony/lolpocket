@@ -1,5 +1,5 @@
-const fs = require('node:fs')
-const path = require('node:path')
+ import fs from  'node:fs'
+import path from 'node:path'
 
 const championsPath = path.resolve('./public/api/champions.json')
 const outputPath = path.resolve('./public/api/lists/champion-skins.json')

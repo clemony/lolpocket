@@ -4,129 +4,76 @@
   "name": "Bard",
   "title": "the Wandering Caretaker",
   "fullName": "Bard",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Bard.png",
   "resource": "Mana",
   "attackType": "Ranged",
   "stats": {
     "health": {
       "flat": 630,
-      "percent": 0,
-      "perLevel": 103,
-      "percentPerLevel": 0
+      "perLevel": 103
     },
     "healthRegen": {
       "flat": 5.5,
-      "percent": 0,
-      "perLevel": 0.55,
-      "percentPerLevel": 0
+      "perLevel": 0.55
     },
     "mana": {
       "flat": 350,
-      "percent": 0,
-      "perLevel": 50,
-      "percentPerLevel": 0
+      "perLevel": 50
     },
     "manaRegen": {
       "flat": 6,
-      "percent": 0,
-      "perLevel": 0.45,
-      "percentPerLevel": 0
+      "perLevel": 0.45
     },
     "armor": {
       "flat": 34,
-      "percent": 0,
-      "perLevel": 5,
-      "percentPerLevel": 0
+      "perLevel": 5
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
-      "perLevel": 1.3,
-      "percentPerLevel": 0
+      "perLevel": 1.3
     },
     "attackDamage": {
       "flat": 52,
-      "percent": 0,
-      "perLevel": 3,
-      "percentPerLevel": 0
+      "perLevel": 3
     },
     "movespeed": {
-      "flat": 330,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 330
     },
     "acquisitionRadius": {
-      "flat": 600,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 600
     },
     "selectionRadius": {
-      "flat": 130,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 130
     },
     "pathingRadius": {
-      "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 35
     },
     "gameplayRadius": {
-      "flat": 80,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 80
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.658,
-      "percent": 0,
-      "perLevel": 2,
-      "percentPerLevel": 0
+      "perLevel": 2
     },
     "attackSpeedRatio": {
-      "flat": 0.658,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.658
     },
     "attackCastTime": {
-      "flat": 0.300000011920928,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.300000011920928
     },
     "attackTotalTime": {
-      "flat": 1.60000002384185,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.60000002384185
     },
     "attackDelayOffset": {
-      "flat": -0.100000001490116,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": -0.100000001490116
     },
     "attackRange": {
-      "flat": 500,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 500
     }
   },
   "positions": [
@@ -165,7 +112,7 @@
             "leveling": []
           }
         ],
-        "cost": null,
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -279,26 +226,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                60,
-                60,
-                60,
-                60,
-                60
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -309,13 +237,7 @@
                 8,
                 7
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -475,27 +397,11 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                70,
-                70,
-                70,
-                70,
-                70
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
         },
-        "cooldown": null,
         "targeting": "Location / Unit",
         "affects": "Allies",
         "spellshieldable": null,
@@ -545,26 +451,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                30,
-                30,
-                30,
-                30,
-                30
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -575,13 +462,7 @@
                 17.5,
                 16
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -625,22 +506,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                100,
-                100
-              ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -649,11 +515,7 @@
                 95,
                 80
               ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -683,5 +545,6 @@
         "targetRange": "3400"
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/bard/skins/base/images/bard_splash_centered_0.jpg"
 }

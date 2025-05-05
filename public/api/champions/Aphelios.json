@@ -3,130 +3,73 @@
   "key": "Aphelios",
   "name": "Aphelios",
   "title": "the Weapon of the Faithful",
-  "fullName": "",
-  "icon": "http://ddragon.leagueoflegends.com/cdn/15.9.1/img/champion/Aphelios.png",
   "resource": "Mana",
   "attackType": "Ranged",
   "stats": {
     "health": {
       "flat": 600,
-      "percent": 0,
-      "perLevel": 102,
-      "percentPerLevel": 0
+      "perLevel": 102
     },
     "healthRegen": {
       "flat": 3.25,
-      "percent": 0,
-      "perLevel": 0.55,
-      "percentPerLevel": 0
+      "perLevel": 0.55
     },
     "mana": {
       "flat": 348,
-      "percent": 0,
-      "perLevel": 42,
-      "percentPerLevel": 0
+      "perLevel": 42
     },
     "manaRegen": {
       "flat": 6.5,
-      "percent": 0,
-      "perLevel": 0.4,
-      "percentPerLevel": 0
+      "perLevel": 0.4
     },
     "armor": {
       "flat": 26,
-      "percent": 0,
-      "perLevel": 4.2,
-      "percentPerLevel": 0
+      "perLevel": 4.2
     },
     "magicResistance": {
       "flat": 30,
-      "percent": 0,
-      "perLevel": 1.3,
-      "percentPerLevel": 0
+      "perLevel": 1.3
     },
     "attackDamage": {
       "flat": 55,
-      "percent": 0,
-      "perLevel": 2.3,
-      "percentPerLevel": 0
+      "perLevel": 2.3
     },
     "movespeed": {
-      "flat": 325,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 325
     },
     "acquisitionRadius": {
-      "flat": 800,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 800
     },
     "selectionRadius": {
-      "flat": 110,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 110
     },
     "pathingRadius": {
-      "flat": 35,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 35
     },
     "gameplayRadius": {
-      "flat": 65,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 65
     },
     "criticalStrikeDamage": {
-      "flat": 175,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 175
     },
     "criticalStrikeDamageModifier": {
-      "flat": 1,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1
     },
     "attackSpeed": {
       "flat": 0.64,
-      "percent": 0,
-      "perLevel": 2.1,
-      "percentPerLevel": 0
+      "perLevel": 2.1
     },
     "attackSpeedRatio": {
-      "flat": 0.658,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.658
     },
     "attackCastTime": {
-      "flat": 0.23000000417232513,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 0.23000000417232513
     },
     "attackTotalTime": {
-      "flat": 1.5,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
-    },
-    "attackDelayOffset": {
-      "flat": 0,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 1.5
     },
     "attackRange": {
-      "flat": 550,
-      "percent": 0,
-      "perLevel": 0,
-      "percentPerLevel": 0
+      "flat": 550
     }
   },
   "positions": [
@@ -237,8 +180,11 @@
             ]
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -276,29 +222,11 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                1,
-                1,
-                1,
-                1,
-                1,
-                1
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
         },
-        "cooldown": null,
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": null,
@@ -336,29 +264,11 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                1,
-                1,
-                1,
-                1,
-                1,
-                1
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
         },
-        "cooldown": null,
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -392,29 +302,11 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                1,
-                1,
-                1,
-                1,
-                1,
-                1
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
         },
-        "cooldown": null,
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -452,29 +344,11 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                1,
-                1,
-                1,
-                1,
-                1,
-                1
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
         },
-        "cooldown": null,
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -516,29 +390,11 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                1,
-                1,
-                1,
-                1,
-                1,
-                1
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
         },
-        "cooldown": null,
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": null,
@@ -578,8 +434,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "N/A",
         "affects": null,
         "spellshieldable": null,
@@ -613,42 +472,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                10,
-                10,
-                10,
-                10
-              ],
-              "units": [
-                " Moonlight",
-                " Moonlight",
-                " Moonlight",
-                " Moonlight",
-                " Moonlight"
-              ]
-            },
-            {
-              "values": [
-                60,
-                60,
-                60,
-                60,
-                60
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -672,26 +496,7 @@
                 8.117647058823529,
                 8
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -737,42 +542,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                10,
-                10,
-                10,
-                10
-              ],
-              "units": [
-                " Moonlight",
-                " Moonlight",
-                " Moonlight",
-                " Moonlight",
-                " Moonlight"
-              ]
-            },
-            {
-              "values": [
-                60,
-                60,
-                60,
-                60,
-                60
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -796,26 +566,7 @@
                 8.117647058823529,
                 8
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -857,42 +608,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                10,
-                10,
-                10,
-                10
-              ],
-              "units": [
-                " Moonlight",
-                " Moonlight",
-                " Moonlight",
-                " Moonlight",
-                " Moonlight"
-              ]
-            },
-            {
-              "values": [
-                60,
-                60,
-                60,
-                60,
-                60
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -916,26 +632,7 @@
                 10.117647058823529,
                 10
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -973,42 +670,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                10,
-                10,
-                10,
-                10
-              ],
-              "units": [
-                " Moonlight",
-                " Moonlight",
-                " Moonlight",
-                " Moonlight",
-                " Moonlight"
-              ]
-            },
-            {
-              "values": [
-                60,
-                60,
-                60,
-                60,
-                60
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -1032,26 +694,7 @@
                 6.1764705882352935,
                 6
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -1097,42 +740,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                10,
-                10,
-                10,
-                10
-              ],
-              "units": [
-                " Moonlight",
-                " Moonlight",
-                " Moonlight",
-                " Moonlight",
-                " Moonlight"
-              ]
-            },
-            {
-              "values": [
-                60,
-                60,
-                60,
-                60,
-                60
-              ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -1156,26 +764,7 @@
                 6.1764705882352935,
                 6
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": true
@@ -1215,7 +804,7 @@
             "leveling": []
           }
         ],
-        "cost": null,
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -1226,13 +815,7 @@
                 0.8,
                 0.8
               ],
-              "units": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
+              "units": []
             }
           ],
           "affectedByCdr": false
@@ -1276,8 +859,11 @@
             "leveling": []
           }
         ],
-        "cost": null,
-        "cooldown": null,
+        "cost": [],
+        "cooldown": {
+          "modifiers": [],
+          "affectedByCdr": false
+        },
         "targeting": "Auto",
         "affects": null,
         "spellshieldable": null,
@@ -1317,22 +903,7 @@
             "leveling": []
           }
         ],
-        "cost": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                100,
-                100
-              ],
-              "units": [
-                "",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
+        "cost": [],
         "cooldown": {
           "modifiers": [
             {
@@ -1375,5 +946,6 @@
         "targetRange": "1300"
       }
     ]
-  }
+  },
+  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aphelios/skins/base/images/aphelios_splash_centered_0.jpg"
 }

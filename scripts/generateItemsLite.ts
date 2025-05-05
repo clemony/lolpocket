@@ -1,7 +1,6 @@
-// node scripts/generate-items-lite.js
-
-const fs = require('node:fs')
-const path = require('node:path')
+ import fs from  'node:fs'
+import path from 'node:path'
+import { normalize } from './utils/normalizeStrings'
 
 const inputPath = path.resolve(__dirname, '../public/api/items.json')
 const outputPath = path.resolve(__dirname, '../public/api/items-lite.json')
@@ -13,20 +12,16 @@ const simplified = {}
 const uniqueTags = new Set()
 const uniqueRanks = new Set()
 
-function capitalize(str) {
-  return str.toLowerCase().replace(/^\w/, c => c.toUpperCase())
-}
-
-for (const id in fullData) {
+for (const id in fullData as ItemLite[] ){
   const item = fullData[id]
 
   // Filter out item ID 2146
   if (item.id === 2146)
     continue
 
-  const flatStats = {}
+const flatStats: Record<string, number> = {}
 
-  for (const statName in item.stats || {}) {
+  for (const statName in item.stats || {} as StatLite[]) {
     const stat = item.stats[statName]
     const value = stat.flat || stat.percent || stat.perLevel || stat.percentPerLevel || stat.percentBase || stat.percentBonus || 0
 
@@ -56,8 +51,8 @@ for (const id in fullData) {
     }
   }
 
-  const normalizedTags = (item.shop?.tags ?? []).map(capitalize)
-  const normalizedRanks = (item.rank ?? []).map(capitalize)
+  const normalizedTags = (item.shop?.tags ?? []).map(normalize)
+  const normalizedRanks = (item.rank ?? []).map(normalize)
 
   normalizedTags.forEach(tag => uniqueTags.add(tag))
   normalizedRanks.forEach(rank => uniqueRanks.add(rank))

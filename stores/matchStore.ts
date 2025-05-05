@@ -11,7 +11,7 @@ export const useMatchStore = defineStore('matchStore', () => {
   const championTabsQueue = ref<number>(0)
 
   // analysis filters
-  const af = ref<Filters>({
+  const af = ref<MatchFilter>({
     patch: ds.currentPatch,
     queue: 0,
     champion: null,
@@ -20,7 +20,7 @@ export const useMatchStore = defineStore('matchStore', () => {
   })
 
   // match filters
-  const mf = ref<Filters>({
+  const mf = ref<MatchFilter>({
     patch: null,
     queue: 0,
     champion: null,

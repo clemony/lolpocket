@@ -1,7 +1,6 @@
-// node scripts/generateChampionIndex.js
 
-const fs = require('node:fs')
-const path = require('node:path')
+ import fs from  'node:fs'
+import path from 'node:path'
 
 const championsDir = path.resolve(__dirname, '../public/api/champions')
 const outputFile = path.resolve(__dirname, '../public/api/lists/champion-index.json')

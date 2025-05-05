@@ -1,124 +1,95 @@
 declare global {
 
-  interface Champion {
+  interface ChampionLite {
     id: string
     key: string
     name: string
+    resource: string
+    attackType: string
+    stats: Record<string, ChampionStat>
+    positions: string[]
+    roles: string[]
+    attributeRatings: Record<string, number>
+  }
+
+  interface Champion extends ChampionLite {
+    fullName: string
     title: string
-    image: Image
-    skins: Skin[]
-    lore: string
-    blurb: string
-    allytips: string
-    enemytips: string
-    tags: string[]
-    partype: string
-    info: {
-      attack: number
-      defense: number
-      magic: number
-      difficulty: number
-    }
-    stats?: ChampionStats
-    children?: ChampionStats
-    spells: Ability[]
-    passive: {
-      name: string
-      description: string
-      image: Image
-    }
-    recommended: any[] | null
+    abilities: Record<'P' | 'Q' | 'W' | 'E' | 'R', Ability[]>
+    splash?: string
+  }
+
+  interface FullChampion extends Champion {
+    skins?: any
   }
 
   interface Skin {
-    id: string
-    num: number
     name: string
-    chromas: boolean | null
+    splashPath: string
   }
 
   interface Ability {
-    id: string
     name: string
-    description: string
-    tooltip: string | null
-    leveltip: {
-      label: string[] | null
-      effect: string[] | null
-    }
-    maxammo?: number | null
-    maxrank: number | null
-    cooldown: number[] | null
-    cooldownBurn: string | null
-    cost: number[] | null
-    costBurn: string | null
-    datavalues: any | null
-    effect: [number[] | null]
-    effectBurn: [string | null]
-    vars: any[] | null
-    costType: string | null
-    range: number[] | null
-    rangeBurn: string | null
-    image: Image | null
+    icon: string
+    effects: AbilityEffect[]
+    cost: Modifier[]
+    cooldown: Cooldown
+    targeting: string | null
+    affects: string | null
+    spellshieldable: string | null
     resource: string | null
+    damageType: string | null
+    spellEffects: string | null
+    projectile: string | null
+    onHitEffects: string | null
+    occurrence: string | null
+    notes: string | null
+    blurb: string | null
+    missileSpeed: string | null
+    rechargeRate: string | null
+    collisionRadius: string | null
+    tetherRadius: string | null
+    onTargetCdStatic: string | null
+    innerRadius: string | null
+    speed: string | null
+    width: string | null
+    angle: string | null
+    castTime: string | null
+    effectRadius: string | null
+    targetRange: string | null
   }
 
-  interface ChampionAbility {
-    name?: string
-    icon?: string
-    description?: string
-    description2?: string
-    description3?: string
-    info?: string
-    damage?: string
-    targeting?: string
-    affects?: string
-    champion?: string
-    skill?: string
-    leveling3?: string
-    cooldown?: number[]
-    cost?: number[]
-    costType?: string
-    targeting?: string
-    affects?: string
-    notes?: string
-    icon3?: string
-    video?: string
-    flavorSound?: string
-    blurbIcon?: string
-    blurb?: string
-    blurb2?: string
-    blurb3?: string
+  interface Cooldown {
+    modifiers: Modifier[]
+    affectedByCdr: boolean
   }
+
+  interface Modifier {
+    values: number[]
+    units: string[]
+  }
+
+  interface Attribute {
+    attribute: string
+    modifiers: Modifier[]
+  }
+
+  interface AbilityEffect {
+    description: string
+    leveling: Attribute[]
+  }
+
+  interface ChampionStat {
+    flat: number
+    perlevel: number
+  }
+
   interface ChampionAbilities {
     [key: string]: Ability // e.g., { Q: Ability, W: Ability, E: Ability, R: Ability }
   }
 
   interface ChampionsData {
     [championName: string]: ChampionAbilities
-  }
-
-  interface ChampionStats {
-    hp: number
-    hpperlevel: number
-    mp: number
-    mpperlevel: number
-    movespeed: number
-    armor: number
-    armorperlevel: number
-    spellblock: number
-    spellblockperlevel: number
-    attackrange: number
-    hpregen: number
-    hpregenperlevel: number
-    mpregen: number
-    mpregenperlevel: number
-    crit: number
-    critperlevel: number
-    attackdamage: number
-    attackdamageperlevel: number
-    attackspeedperlevel: number
-    attackspeed: number
   }
 
   interface BayesianChampion {

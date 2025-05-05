@@ -6,11 +6,11 @@ const props = defineProps<{
 }>()
 console.log('💠 - kbd:', props.kbd)
 
-const ability = computed (() => props.ability)
+/* const ability = computed (() => props.ability)
 console.log('💠 - ability:', ability.value.description)
 const champion = computed (() => props.champion)
 console.log('💠 - champion:', champion)
-const resource = computed (() => champion.value.partype)
+const resource = computed (() => champion.value.partype) */
 </script>
 
 <template>
@@ -22,7 +22,7 @@ const resource = computed (() => champion.value.partype)
       </h1>
     </div>
 
-    <div class="w-full flex flex-wrap items-center justify-between h-auto gap-x-6 gap-y-3 mt-6 **:font-medium pr-1">
+   <!--  <div class="w-full flex flex-wrap items-center justify-between h-auto gap-x-6 gap-y-3 mt-6 **:font-medium pr-1">
       <p v-if="ability.cooldownBurn" v-tippy="'Cooldown'" class="flex gap-2 items-center">
         <i-stats-ah name="ph:hourglass" class="size-3.5  dst text-bc -mt-px" />
         <span class="align-bottom tracking-wide">{{ ability.cooldownBurn }}</span>
@@ -45,7 +45,7 @@ const resource = computed (() => champion.value.partype)
         <i-stats-range class="size-4 text-bc dst" />
         {{ ability.rangeBurn }}
       </p>
-
+ -->
       <!--     <p v-if="ability.maxrank" v-tippy="'Max Rank'" class="flex gap-2 items-center">
         <span class="size-3 relative justify-start">
           <icon name="teenyicons:double-caret-up-small-solid" class="size-6.5 -left-1.5 -top-1.5 absolute text-bc dst" />
@@ -55,8 +55,8 @@ const resource = computed (() => champion.value.partype)
     </div>
     <Separator class="mb-6 mt-3 bg-neutral" />
 
-    <div class="text-4">
+   <!--  <div class="text-4">
       <p v-html="ability.description" />
     </div>
-  </div>
+  </div>-->
 </template>

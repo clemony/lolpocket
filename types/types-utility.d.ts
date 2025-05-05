@@ -34,12 +34,20 @@ declare global {
     region: string
   }
 
-  interface Filters {
+  interface MatchFilter {
     patch?: number | null
     queue?: number | null
     champion?: string | null
     ally?: string | null
     role?: string | null
+  }
+
+  interface ChampionFilter {
+    stats: string[] | null
+    positions?: string | null
+    roles?: string | null
+    query: string | null
+    result: any[] | null
   }
 
   interface ItemFilter {

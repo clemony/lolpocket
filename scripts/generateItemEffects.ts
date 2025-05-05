@@ -1,10 +1,10 @@
 // node scripts/generate-item-effects.cjs
-const { parse } = require('node-html-parser')
+import { parse } from 'node-html-parser'
 
 
-const fs = require('node:fs')
-const path = require('node:path')
-const fetch = require('node-fetch')
+ import fs from  'node:fs'
+import path from 'node:path'
+import { expandWikitext, cleanWikitextHtml } from './utils/cleanWikiText'
 
 const inputPath = path.resolve(__dirname, '../public/api/items.json')
 const outputPath = path.resolve(__dirname, '../public/api/lists/item-effects.json')
@@ -12,43 +12,6 @@ const outputPath = path.resolve(__dirname, '../public/api/lists/item-effects.jso
 const raw = fs.readFileSync(inputPath, 'utf-8')
 const fullData = JSON.parse(raw)
 
-function cleanWikitextHtml(input) {
-  const root = parse(input)
-
-  root.querySelectorAll('*').forEach(el => {
-    const isTooltip = el.tagName === 'span' && el.classList.contains('pp-tooltip')
-    if (isTooltip) {
-      [...el.attributes].forEach(attr => {
-        if (!attr.name.startsWith('data-')) el.removeAttribute(attr.name)
-      })
-    } else {
-      el.replaceWith(el.text)
-    }
-  })
-
-  return root.toString()
-}
-
-
-async function expandWikitext(text) {
-  const url = 'https://wiki.leagueoflegends.com/en-us/api.php'
-  const params = new URLSearchParams({
-    action: 'expandtemplates',
-    format: 'json',
-    text,
-  })
-
-  try {
-    const res = await fetch(`${url}?${params.toString()}`, {
-      headers: { 'User-Agent': 'lolpocket/1.0' },
-    })
-    const json = await res.json()
-    return json.expandtemplates?.['*'] ?? ''
-  } catch (err) {
-    console.error('❌ Error expanding wikitext:', err)
-    return ''
-  }
-}
 
 async function buildDetails() {
   const details = {}
