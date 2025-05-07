@@ -1,57 +1,36 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from 'vue'
-
-const props = withDefaults(
-  defineProps<{
-
-    champion: Champion
-    pocket?: pocket
+const { url, text, bgSize = '250%', class: className, name, top = "-25%", objectPosition = "center",
+}
+  = defineProps<{
+    url: string
     class?: HTMLAttributes['class']
+    name?: string
     text?: boolean
     bgSize?: string
-  }>(),
-  {
-    bgSize: '360%',
-  },
-)
-const cs = useChampStore()
+    top?: string
+    objectPosition?: string
+  }>()
 
-const champion = computed (() => {
-  return props.champion
-})
-
-const adjust = computed (() => {
-  if (champion.value.name != 'Sona') {
-    return {
-      size: props.bgSize,
-      pos: 'center top 20%',
-    }
-  }
-  const a = props.bgSize.replace('%', '')
-  const b = useToNumber(a)
-  return {
-    size: `${(b.value * 1.30).toString()}%`,
-    pos: '55% 14%',
-  }
-})
 </script>
 
 <template>
   <div
-    :key="champion.id"
-    class="" :class="cn('shadow-sm  min-h-64  cursor-pointer  rounded-lg  **:select-none inset-shadow-[0px_0px_10px_4px_#00000040] group ', props.class)"
+    class="" :class="cn('grid place-items-center  overflow-hidden  relative cursor-pointer  rounded-lg  size-full **:select-none inset-shadow-[0px_0px_10px_4px_#00000040] group relative', className)">
+    <div class="size-full rounded-lg overflow-hidden">
+    <NuxtImg :src="url"
+    class="absolute  object-cover rounded-lg object-center"
     :style="{
-      background: `url(/img/champion-centered/${champion.id}_0.webp)`,
-      backgroundSize: adjust.size,
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: adjust.pos,
-    }">
+      width: bgSize,
+      height: bgSize,
+      top: top,
+      objectPosition: objectPosition
+    }" />
     <slot />
     <div
-      v-if="props.text"
-      class="absolute inset-0 rounded-lg hover:ring-offset-2  hover:ring-offset-b1/95 hover:ring-neutral/60 overflow-hidden opacity-0 pointer-events-none group-hover:opacity-100 bg-neutral/50 text-nc transition-all duration-300 p-4 text-12 break-all hyphens-manual tracking-tighter font-bold flex flex-wrap leading-none text-balanced items-end whitespace-break-spaces">
+      v-if="text"
+      class="absolute inset-0 rounded-lg hover:ring-offset-2  text-left hover:ring-offset-b1/95 hover:ring-neutral/60 overflow-hidden opacity-0 pointer-events-none group-hover:opacity-100 bg-neutral/50 text-nc transition-all duration-300 p-4 text-12 break-all hyphens-manual tracking-tighter font-bold flex flex-wrap leading-none text-balanced items-end whitespace-break-spaces">
       {{
-        champion.name
+        name
           .replace('Ambessa', 'Am-\nbessa')
           .replace('Blitzcrank', 'Blitz-\ncrank')
           .replace('Cassiopeia', 'Cass-\niopeia')
@@ -74,6 +53,7 @@ const adjust = computed (() => {
           .replace('Tahm Kench', 'Tahm\nkench')
           .replace('Tryndamere', 'Tryn-\ndamere')
       }}
+    </div>
     </div>
   </div>
 </template>

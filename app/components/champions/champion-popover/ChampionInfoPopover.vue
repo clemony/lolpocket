@@ -1,40 +1,27 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  champion: Champion
+const { championKey } = defineProps<{
+  championKey: string
 }>()
-const emit = defineEmits(['close'])
-const ds = useDataStore()
-const champion = computed(() => props.champion)
 
-const json = ref(null)
-const data = computedAsync (() => {
-  if (!json.value)
-    return null
-  const a = Object.values(json.value)
-  return Object.values(a[3])[0] as Champion
-})
-console.log('💠 - data - data:', data)
-onMounted(async () => {
-  if (!champion.value?.id)
-    return
+const { data } = await useFetch(`/api/champions/${championKey}.json`)
 
-  try {
-    const module = await import(`~/data/champion/${champion.value.id}.json`)
-    json.value = module.default // Access the actual JSON data
-  }
-  catch (error) {
-    console.error('Error loading champion JSON:', error)
-  }
-})
+const champion = computed (() => data.value as Champion)
+const selectedAbility = ref()
 </script>
 
 <template>
-  <MotionDialogContent :delay="0" no-overlay class=" backdrop-blur-lg bg-b1/85 !max-w-220 w-220  z-1000 py-13 pl-12 pr-16 flex" @interact-outside="emit('close')">
-    <div>
-      <div class="relative">
-        <ChampionSplash bg-size="280%" :champion="champion" class="h-104 w-74 shadow-sm drop-shadow-sm relative after:absolute z-0  after:rounded-lg after:top-0 after:left-0 after:z-1 after:size-full after:mask-edges  after:bg-[#00000050] after:backdrop-blur-md overflow-hidden  " />
+    <Dialog >
+      <DialogTrigger class="size-full shadow-sm ">
 
-        <DialogHeader class="absolute bottom-4 *:text-right right-5 *:text-light/80 drop-shadow-sm *:dst">
+          <ChampionSplash  bg-size="250%"  :url="champion.splash" :name="champion.name" text class="min-h-64"/>
+      </DialogTrigger>
+  <LazyMotionDialogContent :delay="0"  class=" h-1/2 backdrop-blur-lg bg-b1/85 !max-w-1/2  flex z-1000 py-9 pl-8 pr-12 flex gap-8">
+
+      <div class="relative flex flex-col gap-6 h-full h-140 w-100">
+        <ChampionSplash bg-size="200%" object-position="50% 0rem" :url="champion.splash" :name="champion.name" class=" h-140 w-100 size-full shadow-sm drop-shadow-sm relative after:absolute z-0  after:rounded-lg after:top-0 after:left-0 after:z-1 after:size-full after:mask-edges  after:bg-[#00000050] overflow-hidden  ">
+
+        <DialogHeader class="absolute bottom-4 *:text-right right-5 *:text-light/80 drop-shadow-sm *:dst *:text-shadow-sm w-full">
+        <Grow  />
           <DialogTitle class="text-11  font-bold tracking-tight">
             {{ champion.name }}
           </DialogTitle>
@@ -42,10 +29,15 @@ onMounted(async () => {
             {{ champion.title }}
           </DialogDescription>
         </DialogHeader>
+        </ChampionSplash>
+
+      <LazyChampionAbilities v-if="champion && champion.abilities" :abilities="champion.abilities" v-model:model-value="selectedAbility" @update:ability="e => selectedAbility = e"/>
       </div>
-    </div>
     <div class="w-full">
-      <ChampionAbilities v-if="champion && data" :champion="data" />
+
+
+  <AbilityData v-if="selectedAbility" :ability="champion.abilities[selectedAbility][0]" :index="selectedAbility[0]"  />
     </div>
-  </MotionDialogContent>
+  </LazyMotionDialogContent>
+    </Dialog>
 </template>

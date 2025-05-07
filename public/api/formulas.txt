@@ -3,5 +3,9 @@ g: growth stat
 n: champion level
 n-1: total level ups
 
-TotalAttackSpeed=baseAs+[bonusAs+g×(n−1)×(0.7025+0.0175×(n−1))]×AsRatio
-TotalAttackSpeed=baseAs+[g×(n−1)×(0.7025+0.0175×(n−1))]×AsRatiohttps://wiki.leagueoflegends.com/en-us/List_of_champions/Attack_speed
+TotalAttackSpeed=
+baseAs+
+[bonusAs+g×(n−1)×(0.7025+0.0175×(n−1))]
+×AsRatio
+
+https://wiki.leagueoflegends.com/en-us/List_of_champions/Attack_speed

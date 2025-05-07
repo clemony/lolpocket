@@ -1,10 +1,6 @@
-interface FilterOptions  extends Filters {
-  ignoreRole?: boolean
-}
-
 export function matchFilters(
   match: SimplifiedMatchData,
-  options: FilterOptions,
+  options: MatchFilter,
 ) {
   const {
     patch,
@@ -17,7 +13,7 @@ export function matchFilters(
 
   const ds = useDataStore()
 
-     const matchesPatch
+  const matchesPatch
     = !patch
       || patch === ds.currentPatch
       || Number.parseFloat(match.gameVersion) === patch

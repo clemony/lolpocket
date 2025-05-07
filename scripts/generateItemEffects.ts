@@ -1,6 +1,3 @@
-// node scripts/generate-item-effects.cjs
-import { parse } from 'node-html-parser'
-
 
  import fs from  'node:fs'
 import path from 'node:path'

@@ -77,10 +77,6 @@
   }
 
 
-.ring-check {
-  @apply  has-checked:ring has-checked:ring-neutral has-checked:ring-offset-2 has-checked:ring-offset-b1  hover:ring hover:ring-neutral hover:ring-offset-2 hover:ring-offset-b1 transition-all duration-150;
-}
-
 .divider {
   @apply h-px text-2 font-semibold opacity-50;
 }

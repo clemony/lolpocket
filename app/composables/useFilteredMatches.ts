@@ -3,7 +3,7 @@ import { matchFilters } from 'utils/filters/matchFilters'
 export function useFilteredMatches(
   fullMatches: Ref<MatchData[]>,
   puuid: string,
-  filters: Filters
+  filters: MatchFilter,
 ) {
   const ss = useSummonerStore()
   const summoner = ss.getSummoner(puuid)

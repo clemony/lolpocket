@@ -1,7 +1,6 @@
 export const championStats = [
   { id: 'attackdamage', display: 'attack damage' },
   { id: 'attackdamageperlevel', display: 'ad / lvl' },
-
   { id: 'attackspeed', display: 'attack speed' },
   { id: 'attackspeedperlevel', display: 'as / lvl' },
   { id: 'as_ratio', display: 'as ratio' },

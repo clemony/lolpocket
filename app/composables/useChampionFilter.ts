@@ -10,8 +10,8 @@ export function useChampionFilter(rawChampions: Record<string, ChampionLite> | C
   watchEffect(() => {
     filteredChampions.value = champions.value.filter((champion) => {
 
-      const matchesRoles = filters.roles ? champion.roles.includes(filters.roles) : true
-      const matchesPositions = filters.positions ? champion.positions?.includes(filters.positions) : true
+      const matchesRoles = filters.role ? champion.roles.includes(filters.role) : true
+      const matchesPositions = filters.position ? champion.positions?.includes(filters.position) : true
       const matchesQuery = filters.query ? champion.name.toLowerCase().includes(filters.query.toLowerCase()) : true
 
       return  matchesRoles && matchesPositions && matchesQuery

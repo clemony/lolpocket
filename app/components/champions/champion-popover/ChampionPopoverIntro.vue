@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  champion: Champion
+const { url, name } = defineProps<{
+  url: string
+  name: string
 }>()
 
 const emit = defineEmits(['done'])
@@ -61,7 +62,7 @@ const animate = {
         :exit="{ opacity: 0, scale: 0.95 }"
         :transition="{ duration: 0.3, ease: 'easeInOut' }">
         <ChampionSplash
-          :champion="props.champion" class="size-full object-cover champ-splash " />
+          :url="url" :name="name" class="size-full object-cover champ-splash " />
       </Motion>
     </Motion>
   </LazyPopoverContent>

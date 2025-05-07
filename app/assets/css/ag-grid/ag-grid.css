@@ -6,6 +6,10 @@
   @apply relative size-full !m-0 !p-0;
  }
 
+ .ag-header {
+  @apply  border-b border-b-b3/60;
+ }
+
 /* header sort */
 
  .ag-sort-indicator-container{

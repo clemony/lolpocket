@@ -1,6 +1,6 @@
 import { normalizeAbility } from './utils/normalizeAbility'
-import {normalizeArray, normalize} from './utils/normalizeStrings'
- import fs from  'node:fs'
+import { normalize, normalizeArray } from './utils/normalizeStrings'
+import fs from 'node:fs'
 import path from 'node:path'
 
 // Load your full champions data
@@ -9,7 +9,6 @@ const champions = JSON.parse(fs.readFileSync('./public/api/champions.json', 'utf
 // Create output directory
 const outputDir = './public/api/champions'
 fs.mkdirSync(outputDir, { recursive: true })
-
 
 for (const champ of Object.values(champions) as FullChampion[]) {
   const {
@@ -38,46 +37,46 @@ for (const champ of Object.values(champions) as FullChampion[]) {
       .map(([key, val]) => [
         key,
         Object.fromEntries(
-          Object.entries(val).filter(([, v]) => v !== 0 && v != null)
-        )
+          Object.entries(val).filter(([, v]) => v !== 0 && v != null),
+        ),
       ])
-      .filter(([, val]) => Object.keys(val).length > 0)
+      .filter(([, val]) => Object.keys(val).length > 0),
   )
 
-const cleanedAbilities = champ.abilities && typeof champ.abilities === 'object'
-  ? Object.fromEntries(
-      Object.entries(champ.abilities).map(([slot, entries]) => [
-        slot,
-        entries.map(normalizeAbility)
-      ])
-    )
-  : {}
+  const cleanedAbilities = champ.abilities && typeof champ.abilities === 'object'
+    ? Object.fromEntries(
+        Object.entries(champ.abilities).map(([slot, entries]) => [
+          slot,
+          entries.map(normalizeAbility),
+        ]),
+      )
+    : {}
 
   console.log(champ.name, typeof abilities, Array.isArray(abilities), abilities)
 
-const champDataRaw = {
-  id,
-  key,
-  name,
-  title,
-  fullName,
-  resource: normalize(resource.replace('_', ' ')),
-  attackType: normalize(attackType),
-  stats: filteredStats,
-  positions: normalizeArray(positions),
-  roles: normalizeArray(roles),
-  attributeRatings,
-  abilities: cleanedAbilities,
-  splash,
-}
+  const champDataRaw = {
+    id,
+    key,
+    name,
+    title,
+    fullName,
+    resource: normalize(resource.replace('_', ' ')),
+    attackType: normalize(attackType),
+    stats: filteredStats,
+    positions: normalizeArray(positions),
+    roles: normalizeArray(roles),
+    attributeRatings,
+    abilities: cleanedAbilities,
+    splash,
+  }
 
-const champData = Object.fromEntries(
-  Object.entries(champDataRaw).filter(([, value]) =>
-    value != null &&
-    value !== '' &&
-    !(Array.isArray(value) && value.length === 0)
+  const champData = Object.fromEntries(
+    Object.entries(champDataRaw).filter(([, value]) =>
+      value != null
+      && value !== ''
+      && !(Array.isArray(value) && value.length === 0),
+    ),
   )
-)
   const outputPath = path.join(outputDir, `${key}.json`)
   fs.writeFileSync(outputPath, JSON.stringify(champData, null, 2))
   console.log(`✅ Wrote ${key}.json`)

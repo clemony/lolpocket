@@ -1,19 +1,17 @@
-
 <script lang="ts" setup>
 const { data } = await useFetch('/api/champions-lite.json')
-const is = useItemStore()
+const cs = useChampStore()
 
-const { filteredItems } = useItemFilter(Object.values(data.value) as ItemLite[], is.itemFilter)
+const { filteredChampions } = useChampionFilter(Object.values(data.value) as ChampionLite[], cs.championFilter)
 
 </script>
 
 <template>
-  <div class="flex size-full oveflow-hidden">
-    <menu class="overflow-hidden">
-    <ChampionFilterSidebar />
-    </menu>
-    <main class="overflow-y-auto grow relative  border-l border-l-b3/80">
-    <slot :items="filteredItems" />
+  <div class="flex flex-col h-full w-screen max-w-screen relative overflow-hidden px-8 ">
+    <ChampionFilters />
+
+    <main class="overflow-y-auto grow relative h-full relative ">
+      <slot :champions="filteredChampions" />
     </main>
   </div>
 </template>

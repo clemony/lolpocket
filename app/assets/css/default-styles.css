@@ -18,6 +18,13 @@
 .hover-ring-sm {
   @apply hover:ring hover:ring-neutral/60 hover:drop-shadow-sm inset-shadow-sm  cursor-pointer  hover:shadow-black/40;
 }
+
+
+.ring-check {
+  @apply  has-checked:ring has-checked:ring-neutral/50 has-checked:ring-offset-2 has-checked:ring-offset-b2/90  hover:ring hover:ring-neutral/50 hover:ring-offset-2 hover:ring-offset-b2/90 transition-all duration-150 drop-shadow-sm  shadow-sm has-checked:grayscale-0;
+}
+
+
   h1 {
     font-size: var(--text-9);
     font-weight: 600;

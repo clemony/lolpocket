@@ -7,7 +7,7 @@ const route = useRoute()
 const pocket = computed (() => {
   return props.pocket
 })
-
+  const champTrigger = ref(null)
 const cs = useChampStore()
 </script>
 
@@ -15,7 +15,7 @@ const cs = useChampStore()
   <Collapsible>
     <CollapsibleTrigger class="w-full group/state" >
       <RightbarButton>
-        <RightbarIconWrapper v-tippy="{content: '', trigger: 'click', triggerRef: cs.champTrigger,  placement: 'left', arrow: true, }" :active="pocket.champions.default && pocket.champions.default.id != null">
+        <RightbarIconWrapper v-tippy="{content: '', trigger: 'click', triggerRef: champTrigger,  placement: 'left', arrow: true, }" :active="pocket.champions.default && pocket.champions.default.id != null">
           <i-no-champ
             v-if="pocket.champions.default == null"
             class="h-6 w-auto dst shrink-0 peer-checked:text-nc opacity-64" />

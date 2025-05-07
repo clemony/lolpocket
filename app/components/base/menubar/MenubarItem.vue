@@ -25,11 +25,10 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <MenubarItem
     v-bind="forwarded"
     :class="cn(
-      'relative flex flex-nowrap gap-3 cursor-default select-none items-center rounded-sm p-2 pr-1.5 py-1.5 text-2 outline-none focus:bg-b2 focus:text-neutral-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+      'relative flex flex-nowrap gap-3 cursor-default select-none items-center rounded-lg px-3 pr-1.5 py-1.5 text-2 outline-none focus:bg-b2 focus:text-neutral-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
       inset && 'pl-8',
       props.class,
-    )"
-  >
+    )">
     <slot />
   </MenubarItem>
 </template>

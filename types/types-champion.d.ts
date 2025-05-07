@@ -10,6 +10,7 @@ declare global {
     positions: string[]
     roles: string[]
     attributeRatings: Record<string, number>
+    splash?: string
   }
 
   interface Champion extends ChampionLite {
@@ -81,7 +82,7 @@ declare global {
 
   interface ChampionStat {
     flat: number
-    perlevel: number
+    perLevel: number
   }
 
   interface ChampionAbilities {

@@ -40,12 +40,12 @@ declare global {
     champion?: string | null
     ally?: string | null
     role?: string | null
+    ignoreRole?: boolean
   }
 
   interface ChampionFilter {
-    stats: string[] | null
-    positions?: string | null
-    roles?: string | null
+    position?: string | null
+    role?: string | null
     query: string | null
     result: any[] | null
   }

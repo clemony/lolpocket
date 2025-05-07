@@ -9,20 +9,14 @@ definePageMeta({
   name: 'champion-list',
   section: 'library',
 })
-const ds = useDataStore()
+
 const cs = useChampStore()
 const theme = ref(pocketTheme)
-const championList = ref([])
 
 const gridApi = shallowRef<GridApi | null>(null)
 
-const gridOptions: GridOptions<Champion> = {
-  rowData: ds.champions,
+const gridOptions: GridOptions<ChampionLite> = {
   columnHoverHighlight: true,
-
-  autoSizeStrategy: {
-    type: 'fitCellContents',
-  },
   rowSelection: {
     mode: 'multiRow',
     checkboxes: false,
@@ -36,171 +30,190 @@ const gridOptions: GridOptions<Champion> = {
   },
   defaultColDef: {
     flex: 1,
-    minWidth: 50,
-    // autoHeaderHeight: true,
-    // wrapHeaderText: true,
-    headerClass: ['champion-grid-header', 'text-center'],
-    cellClass: ['champion-grid-cell'],
+    minWidth: 66,
+    autoHeaderHeight: true,
+    wrapHeaderText: true,
+    headerClass: ['champion-grid-header', 'h-full', 'items-end'],
+    cellClass: ['champion-grid-cell', '!text-right', '!justify-end', '!px-4'],
     sortingOrder: ['desc', 'asc', null],
     initialHide: false,
-    /*     headerComponentParams: {
-      innerHeaderComponent: CustomInnerHeader,
-    }, */
-
-    // resizable: false,
   },
 }
 
-const clvl = computed (() => cs.championGridLevel - 1)
-const tlvl = computed (() => (0.7025 + 0.0175 * clvl.value))
-
 watch(
-  () => tlvl.value,
+  () => cs.championGridLevel,
   (newVal) => {
     if (newVal)
       gridApi.value.refreshCells()
   },
 )
-const colDefs: (ColDef<Champion> | ColGroupDef<Champion>)[] = [
-  {
-    headerName: '　 Champion',
-    cellClass: 'font-medium',
-    children: [
-      { field: 'id', headerName: '', cellRenderer: params => `<img src="/img/champion/${params.value}.webp" class="size-12 aspect-square rounded-full drop-shadow-sm shadow-sm" />`, cellClass: '!py-1 !pr-1 !ml-0', sortable: false, width: 61, maxWidth: 61, minWidth: 61, pinned: 'left' },
 
-      { field: 'name', colId: 'champion', headerName: '', cellDataType: 'text', minWidth: 80, flex: 1.5, maxWidth: 100, sortable: false, pinned: 'left', cellClass: 'font-medium  ', headerClass: '' },
-    ],
+watch(
+  () => cs.championGridType,
+  (newVal) => {
+    if (newVal)
+      gridApi.value.refreshCells()
   },
-  { headerName: 'Atk Dmg', groupId: 'ad', children: [
-    {
-      valueGetter: (params) => {
-        return Math.round(params.data.stats?.attackdamage + params.data.stats?.attackdamageperlevel * clvl.value * tlvl.value)
-      },
-      cellClass: 'number-cell justify-end',
-      headerName: 'AD',
+)
+
+const { resolveStat } = useChampionStatGrowth()
+
+const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
+  {
+    headerName: '　 ',
+    cellClass: '!py-1 !pr-1 !ml-0',
+    field: 'key',
+    cellRenderer: params => `<div class="size-12 aspect-square rounded-full drop-shadow-sm shadow-sm" ><div class="size-full overflow-hidden rounded-full" ><img src="/img/champion/${params.value}.webp" class="size-full scale-116" /></div></div>`,
+    sortable: false,
+    width: 64,
+    maxWidth: 64,
+    minWidth: 64,
+    pinned: 'left',
+  },
+
+  {
+    field: 'name',
+    colId: 'champion',
+    headerName: 'Champion',
+    cellDataType: 'text',
+    minWidth: 80,
+    flex: 1.5,
+    maxWidth: 100,
+    sortable: false,
+    pinned: 'left',
+    cellClass: 'font-medium  text-left',
+    headerClass: '',
+  },
+
+  {
+    headerName: 'Health',
+    valueGetter: params =>
+      resolveStat(params.data.stats?.health),
+  },
+  {
+    headerName: 'Health Regen',
+    valueGetter: params =>
+      resolveStat(params.data.stats?.healthRegen, { roundTo: 2 }),
+  },
+  {
+    headerName: 'Mana',
+    valueGetter: params =>
+      resolveStat(params.data.stats?.mana),
+  },
+  {
+    headerName: 'Mana Regen',
+    valueGetter: params =>
+      resolveStat(params.data.stats?.manaRegen, { roundTo: 2 }),
+  },
+  {
+    headerName: 'Armor',
+    valueGetter: params =>
+      resolveStat(params.data.stats?.armor),
+  },
+  {
+    headerName: 'Magic Resist',
+    valueGetter: params =>
+      resolveStat(params.data.stats?.magicResistance),
+  },
+  {
+    headerName: 'Attack Damage',
+    valueGetter: params =>
+      resolveStat(params.data.stats?.attackDamage),
+  },
+  {
+    headerName: 'Attack Speed',
+    valueGetter: (params) => {
+      const { attackSpeed, attackSpeedRatio } = params.data.stats
+      return resolveStat(attackSpeed, {
+        roundTo: 3,
+        type: 'attackSpeed',
+        ratio: attackSpeedRatio.flat,
+      })
     },
-    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.attackdamageperlevel },
-  ] },
-  { headerName: 'Atk Spd', groupId: 'as', children: [
-    {
-      headerName: 'Base',
-      valueGetter: (params) => {
-        return Math.round((params.data.stats?.attackspeed + params.data.stats?.attackspeedperlevel * clvl.value * tlvl.value) * 100) / 100
-      },
-      cellClass: 'number-cell justify-end',
-    },
-    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.attackspeedperlevel },
-  ] },
-  { headerName: 'Crit', cellClass: 'number-cell justify-end', groupId: 'crit', hide: true, children: [
-    { hide: true, headerName: 'Base', valueGetter: (params) => {
-      return (params.data.stats?.crit + params.data.stats?.critperlevel * clvl.value * tlvl.value) * 100 / 100
+  },
+  /*    { headerName: 'Crit',
+cellClass: 'number-cell justify-end',
+groupId: 'crit',
+hide: true,
+children: [
+    { hide: true,
+headerName: 'Base',
+valueGetter: (params) => {
+      return (params.data.stats?.crit + params.data.stats?.critperLevel)) * 100 / 100
     } },
-    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.critperlevel, hide: true },
-  ] },
-  { headerName: 'Health', groupId: 'hp', children: [
-    {
-      headerName: 'Base',
-      cellClass: 'number-cell justify-end',
-      valueGetter: (params) => {
-        return Math.round((params.data.stats?.hp + params.data.stats?.hpperlevel * clvl.value * tlvl.value) * 100) / 100
-      },
-    },
-    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.hpperlevel },
-  ] },
-  { headerName: 'HP Regen', groupId: 'hpregen', children: [
-    {
-      headerName: 'Base',
-      cellClass: 'number-cell justify-end',
-      valueGetter: (params) => {
-        return Math.round((params.data.stats?.hpregen + params.data.stats?.hpregenperlevel * clvl.value * tlvl.value) * 100) / 100
-      },
-    },
-    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.hpregenperlevel },
-  ] },
-  { headerName: 'Mana', groupId: 'mp', children: [
-    {
-      headerName: 'Base',
-      cellClass: 'number-cell justify-end',
-      valueGetter: (params) => {
-        return Math.round((params.data.stats?.mp + params.data.stats?.mpperlevel * clvl.value * tlvl.value) * 100) / 100
-      },
-    },
-    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.mpperlevel },
-  ] },
-  { headerName: 'MP Regen', groupId: 'mpregen', children: [
-    {
-      headerName: 'Base',
-      cellClass: 'number-cell justify-end',
-      valueGetter: (params) => {
-        return Math.round((params.data.stats?.mpregen + params.data.stats?.mpregenperlevel * clvl.value * tlvl.value) * 100) / 100
-      },
-    },
-    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.mpregenperlevel },
-  ] },
-  { headerName: 'Armor', groupId: 'armor', children: [
-    {
-      headerName: 'Base',
-      cellClass: 'number-cell justify-end',
-      valueGetter: (params) => {
-        return Math.round((params.data.stats?.armor + params.data.stats?.armorperlevel * clvl.value * tlvl.value) * 100) / 100
-      },
-    },
-    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.armorperlevel },
-  ] },
-  { headerName: 'MR', groupId: 'mr', children: [
-    {
-      headerName: 'Base',
-      cellClass: 'number-cell justify-end',
-      valueGetter: (params) => {
-        return Math.round((params.data.stats?.spellblock + params.data.stats?.spellblockperlevel * clvl.value * tlvl.value) * 100) / 100
-      },
-    },
-    { columnGroupShow: 'open', cellClass: 'hidden-cell bg-b2/40 number-cell justify-end', maxWidth: 60, headerName: '🡱', headerClass: 'bg-b2/40', valueGetter: params => params.data.stats?.spellblockperlevel },
-  ] },
+    { columnGroupShow: 'open',
+cellClass: 'hidden-cell bg-b2/40 number-cell justify-end',
+maxWidth: 60,
+headerName: '🡱',
+headerClass: 'bg-b2/40',
+valueGetter: params => params.data.stats?.critperLevel,
+hide: true },
+  ] }, */
+
   {
     headerName: 'Range',
-    maxWidth: 70,
     flex: 1,
-    children: [
-      {
-        valueGetter: params => params.data.stats?.attackrange,
-        headerName: 'Base',
-      },
-    ],
+    valueGetter: params => params.data.stats?.attackRange.flat,
   },
-  { headerName: 'Movespeed', children: [
-    {
-      valueGetter: params => params.data.stats?.movespeed,
-      headerName: 'Base',
-    },
-  ] },
+  {
+    headerName: 'Move Speed',
+    valueGetter: params => params.data.stats?.movespeed.flat,
+  },
   {
     headerName: 'Resource',
-    children: [
-      { field: 'partype', colId: 'resource', headerName: '', flex: 1, cellDataType: 'text', minWidth: 70, cellClass: 'text-cell' },
-    ],
+    field: 'resource',
+    colId: 'resource',
+    flex: 1.5,
+    minWidth: 90,
+  },
+
+  {
+    headerName: 'Position',
+    flex: 1.5,
+    minWidth: 90,
+    valueGetter: params => params.data.positions?.[0] ?? '',
+
   },
   {
-    headerName: 'Roles',
-    children: [
-      {
-        headerName: 'Primary',
-        flex: 2,
-        minWidth: 80,
-        valueGetter: params => params.data.tags?.[0] ?? '',
-        cellClass: 'text-cell capitalize',
+    headerName: 'Role',
+    flex: 1.5,
+    minWidth: 90,
+    valueGetter: params => params.data.roles?.[0] ?? '',
 
-      },
-      {
-        headerName: 'Secondary',
-        flex: 2,
-        minWidth: 84,
-        cellClass: 'text-cell capitalize',
-        valueGetter: params => params.data.tags?.[1] ?? '',
-
-      },
-    ],
   },
+  {
+    headerName: 'Ability Reliance',
+    valueGetter: params => params.data.attributeRatings.abilityReliance,
+  },
+
+  {
+    headerName: 'Control',
+    valueGetter: params => params.data.attributeRatings.control,
+  },
+  {
+    headerName: 'Damage',
+    valueGetter: params => params.data.attributeRatings.damage,
+  },
+
+  {
+    headerName: 'Difficulty',
+    valueGetter: params => params.data.attributeRatings.difficulty,
+  },
+
+  {
+    headerName: 'Mobility',
+    valueGetter: params => params.data.attributeRatings.mobility,
+  },
+
+  {
+    headerName: 'Tough- ness',
+    valueGetter: params => params.data.attributeRatings.toughness,
+  },
+  {
+    headerName: 'Utility',
+    valueGetter: params => params.data.attributeRatings.utility,
+  },
+
 ]
 const listener = event => cs.dbChampionStatListKey++
 
@@ -236,14 +249,17 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowS
 </script>
 
 <template>
-  <NuxtLayout name="champions-layout">
+  <NuxtLayout v-slot="{ champions }" name="champions-layout" class="">
     <AgGridVue
+      v-if="champions"
+
+      class="!size-full stat-grid champion-grid mt-38 border-t border-t-b3/40 "
+      :tooltip-show-delay="400"
       :initial-state="cs.dbChampionGridState"
       :grid-options="gridOptions"
       :theme="theme"
       :column-defs="colDefs"
-      class="!size-full stat-grid champion-grid pt-18  "
-      :tooltip-show-delay="400"
+      :row-data="champions as ChampionLite[]"
       @grid-pre-destroyed="onGridPreDestroyed"
       @grid-ready="onGridReady">
     </AgGridVue>
