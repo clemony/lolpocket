@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Tahm Kench's basic attacks on-hit and Tongue Lash are empowered to deal 6 : 48 (based on level) (+ 1.5% AP per 100 bonus health) (+ 4% of his bonus health) bonus magic damage and apply a stack of An Acquired Taste against enemy champions for 5 seconds, refreshing on subsequent hits and stacking up to 3 times. Stacks expire by one every 0.67 seconds when the duration ends.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Tahm Kench's basic attacks on-hit and Tongue Lash are empowered to deal 6 - 48 (based on level) (+ 1.5% AP per 100 bonus health) (+ 4% of his bonus health) bonus magic damage and apply a stack of An Acquired Taste against enemy champions for 5 seconds, refreshing on subsequent hits and stacking up to 3 times. Stacks expire by one every 0.67 seconds when the duration ends.</p></div>",
             "leveling": []
           },
           {
@@ -114,7 +114,7 @@
         "affects": "Self",
         "spellshieldable": null,
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -141,7 +141,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Tahm Kench lashes his tongue in the target direction that deals magic damage to the first enemy hit and slows them by 50% for 2 seconds. If this hits an enemy champion, Tahm Kench also heals himself.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tahm Kench lashes his tongue in the target direction that deals magic damage to the first enemy hit and slows them by 50% for 2 seconds. If this hits an enemy champion, Tahm Kench also heals himself.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -155,10 +155,6 @@
                       255
                     ],
                     "units": [
-                      " ",
-                      " ",
-                      " ",
-                      " ",
                       " "
                     ]
                   },
@@ -184,71 +180,30 @@
                       48
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      1.5,
-                      1.5,
-                      1.5,
-                      1.5,
                       1.5
                     ],
                     "units": [
-                      "% AP per 100 bonus health",
-                      "% AP per 100 bonus health",
-                      "% AP per 100 bonus health",
-                      "% AP per 100 bonus health",
                       "% AP per 100 bonus health"
                     ]
                   },
                   {
                     "values": [
-                      4,
-                      4,
-                      4,
-                      4,
                       4
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   }
@@ -266,10 +221,6 @@
                       30
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -282,10 +233,6 @@
                       7
                     ],
                     "units": [
-                      "% of missing health",
-                      "% of missing health",
-                      "% of missing health",
-                      "% of missing health",
                       "% of missing health"
                     ]
                   }
@@ -294,7 +241,7 @@
             ]
           },
           {
-            "description": "An Acquired Taste Bonus: The target is stunned for 1.5 seconds. Devour can be cast during Tongue Lash at no cost to pull the target to Tahm Kench before swallowing them.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">An Acquired Taste Bonus:</p><p> The target is stunned for 1.5 seconds. Devour can be cast during Tongue Lash at no cost to pull the target to Tahm Kench before swallowing them.</p></div>",
             "leveling": []
           },
           {
@@ -302,7 +249,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              46,
+              42,
+              38,
+              34
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -313,7 +273,9 @@
                 5.5,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -321,8 +283,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -349,7 +311,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Tahm Kench channels for 1.35 seconds as he dives into the waters, then blinks to the target location after a 0.15-second delay and remains unable to act for 0.65 seconds after the channel completes. Abyssal Dive grants sight of the area during the channel.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tahm Kench channels for 1.35 seconds as he dives into the waters, then blinks to the target location after a 0.15-second delay and remains unable to act for 0.65 seconds after the channel completes. Abyssal Dive grants sight of the area during the channel.</p></div>",
             "leveling": []
           },
           {
@@ -367,26 +329,14 @@
                       240
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      150,
-                      150,
-                      150,
-                      150,
                       150
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -404,10 +354,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -420,7 +366,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              75,
+              90,
+              105,
+              120
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -431,7 +390,9 @@
                 18,
                 17
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -439,8 +400,8 @@
         "targeting": "Location",
         "affects": "Self, Allies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -467,7 +428,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/e",
         "effects": [
           {
-            "description": "Passive: Tahm Kench stores a portion of the post-mitigation damage he takes as grey health on his health bar, increased while there are at least 2 nearby visible enemy champions either dead or alive. He can store up to 300% of his maximum health.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Tahm Kench stores a portion of the post-mitigation damage he takes as grey health on his health bar, increased while there are at least 2 nearby visible enemy champions either dead or alive. He can store up to 300% of his maximum health.</p></div>",
             "leveling": [
               {
                 "attribute": "Damage Stored into Grey Health",
@@ -481,10 +442,6 @@
                       47
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -502,10 +459,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -514,11 +467,11 @@
             ]
           },
           {
-            "description": "While Thick Skin is not on cooldown, and after 4 seconds without taking damage, Tahm Kench rapidly consumes his grey health to restore 45% : 100% (based on level) of the amount, healing for 10% of his maximum health every 0.264 seconds.",
+            "description": "While Thick Skin is not on cooldown, and after 4 seconds without taking damage, Tahm Kench rapidly consumes his grey health to restore 45% - 100% (based on level) of the amount, healing for 10% of his maximum health every 0.264 seconds.",
             "leveling": []
           },
           {
-            "description": "Active: Tahm Kench converts his current grey health into a shield that lasts for 2.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tahm Kench converts his current grey health into a shield that lasts for 2.5 seconds.</p></div>",
             "leveling": []
           }
         ],
@@ -527,13 +480,11 @@
           "modifiers": [
             {
               "values": [
-                3,
-                3,
-                3,
-                3,
                 3
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -569,7 +520,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Tahm Kench abducts the target champion, pulling them to him over the cast time and then swallowing them to carry them in his belly for up to 3 seconds. While inside, the target is attached to Tahm Kench and is rendered untargetable and displacement immune. Devour can be cast on enemies only with 3 stacks of An Acquired Taste.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tahm Kench abducts the target champion, pulling them to him over the cast time and then swallowing them to carry them in his belly for up to 3 seconds. While inside, the target is attached to Tahm Kench and is rendered untargetable and displacement immune. Devour can be cast on enemies only with 3 stacks of An Acquired Taste.</p></div>",
             "leveling": []
           },
           {
@@ -585,20 +536,14 @@
                       950
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -611,7 +556,7 @@
             "leveling": []
           },
           {
-            "description": "An Acquired Taste Bonus: The target is suppressed during Devour's cast time and while attached. Tahm Kench will also be grounded and slowed by 40% under those same conditions.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">An Acquired Taste Bonus:</p><p> The target is suppressed during Devour's cast time and while attached. Tahm Kench will also be grounded and slowed by 40% under those same conditions.</p></div>",
             "leveling": []
           },
           {
@@ -619,7 +564,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -628,7 +582,9 @@
                 100,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -636,7 +592,7 @@
         "targeting": "Unit",
         "affects": "Self, Enemies / Allies",
         "spellshieldable": "True",
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -662,7 +618,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Tahm Kench detaches the swallowed champion from himself and spits them out in the target direction. If they are an enemy, he deals magic damage to them at the end of the displacement.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tahm Kench detaches the swallowed champion from himself and spits them out in the target direction. If they are an enemy, he deals magic damage to them at the end of the displacement.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -674,20 +630,14 @@
                       400
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% (+ 7% per 100 AP) of the target's maximum health",
-                      "% (+ 7% per 100 AP) of the target's maximum health",
                       "% (+ 7% per 100 AP) of the target's maximum health"
                     ]
                   }
@@ -709,7 +659,7 @@
         "affects": "Enemies / Allies",
         "spellshieldable": "false",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -731,5 +681,6 @@
       }
     ]
   },
+  "lore": "Known by many names throughout history, the demon Tahm Kench travels the waterways of Runeterra, feeding his insatiable appetite with the misery of others. Though he may appear singularly charming and proud, he swaggers through the physical realm like a vagabond in search of unsuspecting prey. His lashing tongue can stun even a heavily armored warrior from a dozen paces, and to fall into his rumbling belly is to tumble into an abyss from which there is little hope of return.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tahmkench/skins/base/images/tahmkench_splash_centered_0.jpg"
 }

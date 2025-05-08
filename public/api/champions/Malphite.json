@@ -101,11 +101,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/p",
         "effects": [
           {
-            "description": "Innate - Shard of the Monolith: Malphite gains increased percentage size equal to 8% of his total armor, capped at 35% increased size at 437.5 armor.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Shard of the Monolith:</p><p> Malphite gains increased percentage size equal to 8% of his total armor, capped at 35% increased size at 437.5 armor.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate: Malphite grants himself a shield equal to 10% of his maximum health. The shield lasts until it is broken, and refreshes after a few seconds of not taking damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Malphite grants himself a shield equal to 10% of his maximum health. The shield lasts until it is broken, and refreshes after a few seconds of not taking damage.</p></div>",
             "leveling": []
           }
         ],
@@ -119,8 +119,6 @@
                 6
               ],
               "units": [
-                " (based on level)",
-                " (based on level)",
                 " (based on level)"
               ]
             }
@@ -158,7 +156,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Malphite sends a shard to the target enemy that deals magic damage and slows them for 3 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Malphite sends a shard to the target enemy that deals magic damage and slows them for 3 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -172,26 +170,14 @@
                       270
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -209,10 +195,6 @@
                       40
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -225,18 +207,29 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70,
+              75,
+              80,
+              85,
+              90
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                8,
-                8,
-                8,
-                8,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -244,8 +237,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "single",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -272,7 +265,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Malphite gains bonus armor, tripled while Granite Shield is active.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Malphite gains bonus armor, tripled while Granite Shield is active.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Armor",
@@ -286,10 +279,6 @@
                       30
                     ],
                     "units": [
-                      "% armor",
-                      "% armor",
-                      "% armor",
-                      "% armor",
                       "% armor"
                     ]
                   }
@@ -307,10 +296,6 @@
                       90
                     ],
                     "units": [
-                      "% armor",
-                      "% armor",
-                      "% armor",
-                      "% armor",
                       "% armor"
                     ]
                   }
@@ -319,7 +304,7 @@
             ]
           },
           {
-            "description": "Active: Malphite empowers his next basic attack within 6 seconds to have an uncancelable windup, gain 50 bonus range, and deal bonus physical damage on-hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Malphite empowers his next basic attack within 6 seconds to have an uncancelable windup, gain 50 bonus range, and deal bonus physical damage on-hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -333,42 +318,22 @@
                       70
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      20,
-                      20,
-                      20,
-                      20,
                       20
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% armor",
-                      "% armor",
-                      "% armor",
-                      "% armor",
                       "% armor"
                     ]
                   }
@@ -391,42 +356,22 @@
                       55
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% armor",
-                      "% armor",
-                      "% armor",
-                      "% armor",
                       "% armor"
                     ]
                   }
@@ -439,7 +384,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              30,
+              35,
+              40,
+              45,
+              50
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -450,7 +408,9 @@
                 8.5,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -458,8 +418,8 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": "False",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -486,7 +446,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Malphite slams the ground beneath him, dealing magic damage to nearby enemies and crippling them for 3 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Malphite slams the ground beneath him, dealing magic damage to nearby enemies and crippling them for 3 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -500,42 +460,22 @@
                       230
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% armor",
-                      "% armor",
-                      "% armor",
-                      "% armor",
                       "% armor"
                     ]
                   }
@@ -553,10 +493,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -565,18 +501,25 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                7,
-                7,
-                7,
-                7,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -584,8 +527,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "aoe",
         "projectile": null,
         "onHitEffects": null,
@@ -612,7 +555,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Malphite dashes with displacement immunity to the target location. Upon arrival, he deals magic damage to nearby enemies and knocks them up for 1.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Malphite dashes with displacement immunity to the target location. Upon arrival, he deals magic damage to nearby enemies and knocks them up for 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -624,20 +567,14 @@
                       400
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      90,
-                      90,
                       90
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -650,7 +587,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -659,7 +605,9 @@
                 105,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -667,8 +615,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "aoe",
         "projectile": null,
         "onHitEffects": null,
@@ -690,5 +638,6 @@
       }
     ]
   },
+  "lore": "A massive creature of living stone, Malphite struggles to impose blessed order on a chaotic world. Birthed as a servitor-shard to an otherworldly obelisk known as the Monolith, he used his tremendous elemental strength to maintain and protect his progenitor, but ultimately failed. The only survivor of the destruction that followed, Malphite now endures Runeterra's soft folk and their fluid temperaments, while struggling to find a new role worthy of the last of his kind.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/malphite/skins/base/images/malphite_splash_centered_0.jpg"
 }

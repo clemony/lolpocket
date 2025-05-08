@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Jarvan IV's basic attacks are empowered to deal bonus physical damage equal to 8% of the target's current health, with a minimum threshold of 20 and capped at 400 against non- champion targets.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Jarvan IV's basic attacks are empowered to deal bonus physical damage equal to 8% of the target's current health, with a minimum threshold of 20 and capped at 400 against non- champion targets.</p></div>",
             "leveling": []
           },
           {
@@ -117,7 +117,7 @@
         "affects": "Enemies",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -144,7 +144,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Jarvan IV extends his lance in the target direction, dealing physical damage to enemies hit and inflicting them with armor reduction for 3 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jarvan IV extends his lance in the target direction, dealing physical damage to enemies hit and inflicting them with armor reduction for 3 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -158,26 +158,14 @@
                       250
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      145,
-                      145,
-                      145,
-                      145,
                       145
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -195,10 +183,6 @@
                       26
                     ],
                     "units": [
-                      "% of target's armor",
-                      "% of target's armor",
-                      "% of target's armor",
-                      "% of target's armor",
                       "% of target's armor"
                     ]
                   }
@@ -215,7 +199,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              45,
+              50,
+              55,
+              60,
+              65
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -226,7 +223,9 @@
                 7,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -234,8 +233,8 @@
         "targeting": "Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Aoe",
         "projectile": null,
         "onHitEffects": null,
@@ -262,7 +261,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Jarvan IV slows all nearby enemies for 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jarvan IV slows all nearby enemies for 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -276,10 +275,6 @@
                       35
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -302,26 +297,14 @@
                       140
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -330,18 +313,25 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              30
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                9,
-                9,
-                9,
-                9,
                 9
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -349,7 +339,7 @@
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": "Shield",
         "projectile": null,
@@ -377,7 +367,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/e",
         "effects": [
           {
-            "description": "Passive: Jarvan IV gains bonus attack speed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Jarvan IV gains bonus attack speed.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -391,10 +381,6 @@
                       30
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -403,7 +389,7 @@
             ]
           },
           {
-            "description": "Active: Jarvan IV throws a Demacian flag to the target location, dealing magic damage to enemies within the area.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jarvan IV throws a Demacian flag to the target location, dealing magic damage to enemies within the area.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -417,26 +403,14 @@
                       240
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -453,7 +427,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              55
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -464,7 +447,9 @@
                 10.5,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -472,8 +457,8 @@
         "targeting": "Location",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Aoe",
         "projectile": null,
         "onHitEffects": null,
@@ -500,7 +485,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Jarvan IV leaps with displacement immunity to the target enemy champion's location over 0.35 seconds, dealing physical damage to all nearby enemies upon arrival.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jarvan IV leaps with displacement immunity to the target enemy champion's location over 0.35 seconds, dealing physical damage to all nearby enemies upon arrival.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -512,20 +497,14 @@
                       450
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      180,
-                      180,
                       180
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -538,11 +517,20 @@
             "leveling": []
           },
           {
-            "description": "Recast: Jarvan IV destroys the terrain created by Cataclysm.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Jarvan IV destroys the terrain created by Cataclysm.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -551,7 +539,9 @@
                 105,
                 90
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -559,8 +549,8 @@
         "targeting": "Unit",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Aoe",
         "projectile": null,
         "onHitEffects": null,
@@ -582,5 +572,6 @@
       }
     ]
   },
+  "lore": "Prince Jarvan, scion of the Lightshield dynasty, is heir apparent to the throne of Demacia. Raised to be a paragon of his nation's greatest virtues, he is forced to balance the heavy expectations placed upon him with his own desire to fight on the front lines. Jarvan inspires his troops with his fearsome courage and selfless determination, raising his family's colors high and revealing his true strength as a future leader of his people.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/jarvaniv/skins/base/images/jarvaniv_splash_centered_0.jpg"
 }

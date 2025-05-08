@@ -102,15 +102,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Brand/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Brand's abilities apply a stack of Ablaze to enemies hit for 4 seconds, stacking up to 3 times and refreshing the duration of all stacks with each application. Subsequent abilities used against a target with Ablaze are empowered. Killing an enemy afflicted with Ablaze or any enemy with an ability restores 20 : 40 (based on level) mana.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Brand's abilities apply a stack of Ablaze to enemies hit for 4 seconds, stacking up to 3 times and refreshing the duration of all stacks with each application. Subsequent abilities used against a target with Ablaze are empowered. Killing an enemy afflicted with Ablaze or any enemy with an ability restores 20 - 40 (based on level) mana.</p></div>",
             "leveling": []
           },
           {
-            "description": "Ablaze: While afflicted with Ablaze, the target is dealt magic damage equal to[ 2% of their maximum health over 4 seconds. ][ 0.167% of their maximum health every 0.25 seconds over 4 seconds. ]Each stack of Ablaze deals damage to the target individually and applies their damage ticks dependent on the time they were applied, even if the duration of all the stacks are refreshed. Ablaze deals 240% damage per tick to monsters; this damage is capped at[ 10 / 20 / 30 (based on Ablaze stacks) per tick against non-epic monsters and 20 / 40 / 60 (based on Ablaze stacks) per tick against epic monsters. ][ a total of 160 / 320 / 480 (based on Ablaze stacks) against non-epic monsters and 320 / 640 / 960 (based on Ablaze stacks) against epic monsters. ]",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Ablaze:</p><p> While afflicted with Ablaze, the target is dealt magic damage equal to[ 2% of their maximum health over 4 seconds. ][ 0.167% of their maximum health every 0.25 seconds over 4 seconds. ]Each stack of Ablaze deals damage to the target individually and applies their damage ticks dependent on the time they were applied, even if the duration of all the stacks are refreshed. Ablaze deals 240% damage per tick to monsters; this damage is capped at[ 10 / 20 / 30 (based on Ablaze stacks) per tick against non-epic monsters and 20 / 40 / 60 (based on Ablaze stacks) per tick against epic monsters. ][ a total of 160 / 320 / 480 (based on Ablaze stacks) against non-epic monsters and 320 / 640 / 960 (based on Ablaze stacks) against epic monsters. ]</p></div>",
             "leveling": []
           },
           {
-            "description": "Upon applying 3 stacks of Ablaze to a large monster or enemy champion, the fire becomes unstable, causing it form a fiery ring around the target that grants sight within its radius and, after 2 seconds, consumes their stacks to explode. All enemies within the detonation are applied a stack of Ablaze and dealt magic damage equal to 8% : 12% (based on level) of their maximum health (+ 2% per 100 AP), capped at 270 / 355 / 440 / 525 (based on level) against monsters.",
+            "description": "Upon applying 3 stacks of Ablaze to a large monster or enemy champion, the fire becomes unstable, causing it form a fiery ring around the target that grants sight within its radius and, after 2 seconds, consumes their stacks to explode. All enemies within the detonation are applied a stack of Ablaze and dealt magic damage equal to 8% - 12% (based on level) of their maximum health (+ 2% per 100 AP), capped at 270 / 355 / 440 / 525 (based on level) against monsters.",
             "leveling": []
           },
           {
@@ -131,7 +131,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Special",
         "projectile": null,
         "onHitEffects": null,
@@ -158,7 +158,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Brand/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Brand launches a fireball in the target direction that deals magic damage to the first enemy hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Brand launches a fireball in the target direction that deals magic damage to the first enemy hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -172,26 +172,14 @@
                       190
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      65,
-                      65,
-                      65,
-                      65,
                       65
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -200,11 +188,20 @@
             ]
           },
           {
-            "description": "Ablaze Bonus: The target is stunned for 1.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Ablaze Bonus:</p><p> The target is stunned for 1.5 seconds.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -215,7 +212,9 @@
                 6.5,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -223,8 +222,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -251,7 +250,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Brand/ability-icon/w",
         "effects": [
           {
-            "description": "Active: After a 0.627 seconds delay, Brand erupts a pillar of flame at the target location that deals magic damage to enemies hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> After a 0.627 seconds delay, Brand erupts a pillar of flame at the target location that deals magic damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -265,26 +264,14 @@
                       255
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -293,7 +280,7 @@
             ]
           },
           {
-            "description": "Ablaze Bonus: The target takes 25% increased damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Ablaze Bonus:</p><p> The target takes 25% increased damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Increased Damage",
@@ -307,26 +294,14 @@
                       318.75
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      75,
-                      75,
-                      75,
-                      75,
                       75
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -335,7 +310,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              70,
+              80,
+              90,
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -346,7 +334,9 @@
                 8.5,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -354,8 +344,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -382,7 +372,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Brand/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Brand sets the target enemy aflame, which creates a blast that deals magic damage to them and causes the flame to spread from the target to nearby enemies, dealing them the same damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Brand sets the target enemy aflame, which creates a blast that deals magic damage to them and causes the flame to spread from the target to nearby enemies, dealing them the same damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -396,26 +386,14 @@
                       155
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -424,11 +402,24 @@
             ]
           },
           {
-            "description": "Ablaze Bonus: Conflagration's spread range is doubled.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Ablaze Bonus:</p><p> Conflagration's spread range is doubled.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70,
+              75,
+              80,
+              85,
+              90
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -439,7 +430,9 @@
                 10,
                 9
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -447,8 +440,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "aoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -475,7 +468,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Brand/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Brand launches a fireball at the target enemy that bounces between nearby enemies and Brand up to four times, dealing magic damage to enemies each time.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Brand launches a fireball at the target enemy that bounces between nearby enemies and Brand up to four times, dealing magic damage to enemies each time.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -487,20 +480,14 @@
                       250
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -516,20 +503,14 @@
                       750
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      75,
-                      75,
                       75
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -542,7 +523,7 @@
             "leveling": []
           },
           {
-            "description": "Ablaze Bonus: The target is slowed for 0.25 seconds. This can affect the same enemy more than once.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Ablaze Bonus:</p><p> The target is slowed for 0.25 seconds. This can affect the same enemy more than once.</p></div>",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -554,8 +535,6 @@
                       60
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -568,7 +547,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -577,7 +565,9 @@
                 100,
                 90
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -585,8 +575,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -608,5 +598,6 @@
       }
     ]
   },
+  "lore": "Once a tribesman of the icy Freljord named Kegan Rodhe, the creature known as Brand is a lesson in the temptation of greater power. Seeking one of the legendary World Runes, Kegan betrayed his companions and seized it for himself—and, in an instant, the man was no more. His soul burned away, his body a vessel of living flame, Brand now roams Valoran in search of other Runes, swearing revenge for wrongs he could never possibly have suffered in a dozen mortal lifetimes.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/brand/skins/base/images/brand_splash_centered_0.jpg"
 }

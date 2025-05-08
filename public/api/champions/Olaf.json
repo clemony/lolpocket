@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Olaf gains bonus attack speed and life steal based on his missing health, up to 50% : 100% (based on level) bonus attack speed and 8% : 25% (based on level) life steal at 70% missing health.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Olaf gains bonus attack speed and life steal based on his missing health, up to 50% - 100% (based on level) bonus attack speed and 8% - 25% (based on level) life steal at 70% missing health.</p></div>",
             "leveling": []
           }
         ],
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Olaf throws an axe to the target location that deals physical damage to enemies it passes through and slows them for 1.5 : 2.5 (based on distance traveled) seconds. Enemy champions hit are also inflicted with 20% armor reduction for 4 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Olaf throws an axe to the target location that deals physical damage to enemies it passes through and slows them for 1.5 - 2.5 (based on distance traveled) seconds. Enemy champions hit are also inflicted with 20% armor reduction for 4 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -153,26 +153,14 @@
                       260
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -190,10 +178,6 @@
                       45
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -216,10 +200,6 @@
                       70
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -237,26 +217,14 @@
                       330
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -273,18 +241,29 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                9,
-                9,
-                9,
-                9,
                 9
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -292,8 +271,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Aoe",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -320,7 +299,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Olaf gains bonus attack speed for 5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Olaf gains bonus attack speed for 5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -334,10 +313,6 @@
                       80
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -360,26 +335,14 @@
                       130
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      17.5,
-                      17.5,
-                      17.5,
-                      17.5,
                       17.5
                     ],
                     "units": [
-                      "% missing health",
-                      "% missing health",
-                      "% missing health",
-                      "% missing health",
                       "% missing health"
                     ]
                   }
@@ -392,7 +355,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -403,7 +375,9 @@
                 13,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -411,7 +385,7 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -439,7 +413,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Olaf strikes thunder onto the target enemy, dealing true damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Olaf strikes thunder onto the target enemy, dealing true damage.</p></div>",
             "leveling": [
               {
                 "attribute": "True Damage",
@@ -453,26 +427,14 @@
                       250
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -489,7 +451,28 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              21,
+              34.5,
+              48,
+              61.5,
+              75
+            ],
+            "units": [
+              ""
+            ]
+          },
+          {
+            "values": [
+              15
+            ],
+            "units": [
+              "% AD"
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -500,7 +483,9 @@
                 8,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -508,8 +493,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "HEALTH",
-        "damageType": "TRUE_DAMAGE",
+        "resource": "Health",
+        "damageType": "True damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -536,7 +521,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/r",
         "effects": [
           {
-            "description": "Passive: Olaf gains bonus armor and bonus magic resistance.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Olaf gains bonus armor and bonus magic resistance.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Resistances",
@@ -548,8 +533,6 @@
                       20
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -558,7 +541,7 @@
             ]
           },
           {
-            "description": "Active: Olaf becomes enraged for 3 seconds, cleansing himself of all crowd control and becoming immune to them, as well as gaining bonus attack damage and 10% increased size. For the first second of Ragnarok, he also gains bonus movement speed while facing visible enemy champions within 2000 units.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Olaf becomes enraged for 3 seconds, cleansing himself of all crowd control and becoming immune to them, as well as gaining bonus attack damage and 10% increased size. For the first second of Ragnarok, he also gains bonus movement speed while facing visible enemy champions within 2000 units.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Damage",
@@ -570,20 +553,14 @@
                       30
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -599,8 +576,6 @@
                       70
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -613,7 +588,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -622,7 +606,9 @@
                 90,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -630,7 +616,7 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -653,5 +639,6 @@
       }
     ]
   },
+  "lore": "An unstoppable force of destruction, the axe-wielding Olaf wants nothing but to die in glorious combat. Hailing from the brutal Freljordian peninsula of Lokfar, he once received a prophecy foretelling his peaceful passing—a coward's fate, and a great insult among his people. Seeking death, and fueled by rage, he rampaged across the land, slaughtering scores of great warriors and legendary beasts in search of any opponent who could stop him. Now a brutal enforcer for the Winter's Claw, he seeks his end in the great wars to come.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/olaf/skins/base/images/olaf_splash_centered_0.jpg"
 }

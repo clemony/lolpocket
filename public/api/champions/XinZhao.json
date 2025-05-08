@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Xin Zhao's basic attacks on-hit and Wind Becomes Lightning strikes generate a stack of Determination, stacking up to 3 times. The third stack consumes them all to deal 15 / 30 / 45 / 60% (based on level) AD bonus physical damage on-attack and heal Xin Zhao for 3 / 3.5 / 4% (based on level) of his maximum health (+ 65% AP) on-hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Xin Zhao's basic attacks on-hit and Wind Becomes Lightning strikes generate a stack of Determination, stacking up to 3 times. The third stack consumes them all to deal 15 / 30 / 45 / 60% (based on level) AD bonus physical damage on-attack and heal Xin Zhao for 3 / 3.5 / 4% (based on level) of his maximum health (+ 65% AP) on-hit.</p></div>",
             "leveling": []
           }
         ],
@@ -110,7 +110,7 @@
         "affects": "Self",
         "spellshieldable": "special",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "proc",
         "projectile": null,
         "onHitEffects": null,
@@ -137,7 +137,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Xin Zhao empowers his next three basic attacks on-attack within 5 seconds to each have an uncancellable windup, deal bonus physical damage and reduce his other abilities' current cooldowns by 1 second. Each attack refreshes the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Xin Zhao empowers his next three basic attacks on-attack within 5 seconds to each have an uncancellable windup, deal bonus physical damage and reduce his other abilities' current cooldowns by 1 second. Each attack refreshes the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -151,26 +151,14 @@
                       80
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -188,26 +176,14 @@
                       240
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      120,
-                      120,
-                      120,
-                      120,
                       120
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -228,7 +204,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              30
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -239,7 +224,9 @@
                 5.5,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -247,8 +234,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -275,7 +262,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Xin Zhao slashes in an arc and, after the cast time, thrusts his spear in a line in the target direction. Each strike deals physical damage to enemies hit, modified to 50% : 100% (based on level) against minions.\nThe thrust deals increased damage, further by 0% : 33.3% (based on critical strike chance), and slows enemies hit by 50% for 1.5 seconds. Enemy champions and monsters hit are also marked Challenged for 3 seconds, during which they are revealed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Xin Zhao slashes in an arc and, after the cast time, thrusts his spear in a line in the target direction. Each strike deals physical damage to enemies hit, modified to 50% - 100% (based on level) against minions.</p></div>\nThe thrust deals increased damage, further by 0% - 33.3% (based on critical strike chance), and slows enemies hit by 50% for 1.5 seconds. Enemy champions and monsters hit are also marked Challenged for 3 seconds, during which they are revealed.",
             "leveling": [
               {
                 "attribute": "Slash Physical Damage",
@@ -289,26 +276,14 @@
                       70
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -326,42 +301,22 @@
                       190
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      90,
-                      90,
-                      90,
-                      90,
                       90
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      65,
-                      65,
-                      65,
-                      65,
                       65
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -379,42 +334,22 @@
                       260
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      120,
-                      120,
-                      120,
-                      120,
                       120
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      65,
-                      65,
-                      65,
-                      65,
                       65
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -431,7 +366,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              55,
+              50,
+              45,
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -442,7 +390,9 @@
                 9,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -450,8 +400,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Area of effect",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -478,7 +428,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Xin Zhao dashes to the target enemy's location, dealing magic damage to enemies near them and slowing them by 30% for 0.5 seconds. Audacious Charge's range is increased against Challenged targets.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Xin Zhao dashes to the target enemy's location, dealing magic damage to enemies near them and slowing them by 30% for 0.5 seconds. Audacious Charge's range is increased against Challenged targets.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -492,26 +442,14 @@
                       150
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -534,10 +472,6 @@
                       60
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -550,18 +484,25 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                11,
-                11,
-                11,
-                11,
                 11
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -569,8 +510,8 @@
         "targeting": "Unit / Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Area of effect",
         "projectile": null,
         "onHitEffects": null,
@@ -597,11 +538,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/r",
         "effects": [
           {
-            "description": "Passive - Challenge: The last enemy champion hit by Xin Zhao's basic attacks or Audacious Charge is marked Challenged for 3 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive - Challenge:</p><p> The last enemy champion hit by Xin Zhao's basic attacks or Audacious Charge is marked Challenged for 3 seconds.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Xin Zhao sweeps his spear around him, dealing physical damage to nearby enemies, capped at 600 against monsters, and knocking back all non-Challenged targets hit up-to 700 units over 0.75 seconds, as well as stunning them for the same duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Xin Zhao sweeps his spear around him, dealing physical damage to nearby enemies, capped at 600 against monsters, and knocking back all non-Challenged targets hit up-to 700 units over 0.75 seconds, as well as stunning them for the same duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -613,44 +554,30 @@
                       275
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      110,
-                      110,
                       110
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% of target's current health",
-                      "% of target's current health",
                       "% of target's current health"
                     ]
                   }
@@ -663,7 +590,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -672,7 +608,9 @@
                 110,
                 100
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -680,8 +618,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -703,5 +641,6 @@
       }
     ]
   },
+  "lore": "Xin Zhao is a resolute warrior loyal to the ruling Lightshield dynasty. Once condemned to the fighting pits of Noxus, he survived countless gladiatorial bouts, but after being freed by Demacian forces, he swore his life and allegiance to these brave liberators. Armed with his favored three-talon spear, Xin Zhao now fights for his adopted kingdom, audaciously challenging any foe, no matter the odds.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/xinzhao/skins/base/images/xinzhao_splash_centered_0.jpg"
 }

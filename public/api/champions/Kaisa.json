@@ -95,15 +95,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/p",
         "effects": [
           {
-            "description": "Innate - Living Weapon: Kai'Sa can evolve each of her basic abilities by gaining a set amount of permanent stats from items and stat growth, granting them additional effects. Evolving an ability causes her to enter a 2-second cast time. The upgrade is lost if the stat requirement is no longer met.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Living Weapon:</p><p> Kai'Sa can evolve each of her basic abilities by gaining a set amount of permanent stats from items and stat growth, granting them additional effects. Evolving an ability causes her to enter a 2-second cast time. The upgrade is lost if the stat requirement is no longer met.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate - Plasma: Kai'Sa's basic attacks on-hit and Void Seeker apply stacks of Plasma to enemies for 4 seconds, refreshing on subsequent applications and stacking up to 5 times. Basic attacks each apply 1 stack and Void Seeker applies 2 stacks, increased to 3 if it is evolved. Her and nearby allies' immobilizing effects and polymorphs against enemy champions will also apply a stack of Plasma.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Plasma:</p><p> Kai'Sa's basic attacks on-hit and Void Seeker apply stacks of Plasma to enemies for 4 seconds, refreshing on subsequent applications and stacking up to 5 times. Basic attacks each apply 1 stack and Void Seeker applies 2 stacks, increased to 3 if it is evolved. Her and nearby allies' immobilizing effects and polymorphs against enemy champions will also apply a stack of Plasma.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate - Caustic Wounds: Plasma stacks applied by Kai'Sa's basic attacks or Void Seeker deal 4 : 24 (based on level) (+ 1 : 6 (based on level) per Plasma stack before application) (+ 12% : 24% (based on Plasma stacks before application) AP) bonus magic damage. The fifth stack against a target consumes them all to deal additional bonus magic damage equal to 15% (+ 6% per 100 AP) of the target's missing health, capped at 400 against monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Caustic Wounds:</p><p> Plasma stacks applied by Kai'Sa's basic attacks or Void Seeker deal 4 - 24 (based on level) (+ 1 - 6 (based on level) per Plasma stack before application) (+ 12% - 24% (based on Plasma stacks before application) AP) bonus magic damage. The fifth stack against a target consumes them all to deal additional bonus magic damage equal to 15% (+ 6% per 100 AP) of the target's missing health, capped at 400 against monsters.</p></div>",
             "leveling": []
           }
         ],
@@ -116,7 +116,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "special",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -143,7 +143,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Kai'Sa releases a swarm of 6 missiles that evenly distributes among nearby visible enemies, each one hitting their target after 0.4 seconds to deal physical damage. Minions below 35% health take double damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kai'Sa releases a swarm of 6 missiles that evenly distributes among nearby visible enemies, each one hitting their target after 0.4 seconds to deal physical damage. Minions below 35% health take double damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Missile",
@@ -157,42 +157,22 @@
                       100
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      55,
-                      55,
-                      55,
-                      55,
                       55
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      20,
-                      20,
-                      20,
-                      20,
                       20
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -215,42 +195,22 @@
                       25
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      13.75,
-                      13.75,
-                      13.75,
-                      13.75,
                       13.75
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      5,
-                      5,
-                      5,
-                      5,
                       5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -268,42 +228,22 @@
                       225
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      123.75,
-                      123.75,
-                      123.75,
-                      123.75,
                       123.75
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      45,
-                      45,
-                      45,
-                      45,
                       45
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -312,7 +252,7 @@
             ]
           },
           {
-            "description": "Evolution: Requires[ 100 : 56 (based on level) attack damage from items ][ 100 attack damage from items and stat growth ]to upgrade : Icathian Rain instead fires 12 missiles.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Evolution:</p><p> Requires[ 100 - 56 (based on level) attack damage from items ][ 100 attack damage from items and stat growth ]to upgrade : Icathian Rain instead fires 12 missiles.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Evolved Single-Target Damage",
@@ -326,42 +266,22 @@
                       375
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      206.25,
-                      206.25,
-                      206.25,
-                      206.25,
                       206.25
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      75,
-                      75,
-                      75,
-                      75,
                       75
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -374,7 +294,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              55
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -385,7 +314,9 @@
                 7,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -393,8 +324,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -421,7 +352,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Kai'Sa fires a void bolt in the target direction that briefly grants sight around its trajectory as it travels, deals magic damage to the first enemy hit, applies 2 Plasma, and reveals them for 4 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kai'Sa fires a void bolt in the target direction that briefly grants sight around its trajectory as it travels, deals magic damage to the first enemy hit, applies 2 Plasma, and reveals them for 4 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -435,42 +366,22 @@
                       130
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      130,
-                      130,
-                      130,
-                      130,
                       130
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      45,
-                      45,
-                      45,
-                      45,
                       45
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -479,11 +390,24 @@
             ]
           },
           {
-            "description": "Evolution: Requires 100 ability power from items to upgrade : Void Seeker applies 3 Plasma instead and refunds 75% of its cooldown if it hits an enemy champion.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Evolution:</p><p> Requires 100 ability power from items to upgrade : Void Seeker applies 3 Plasma instead and refunds 75% of its cooldown if it hits an enemy champion.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              55,
+              60,
+              65,
+              70,
+              75
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -494,7 +418,9 @@
                 16,
                 14
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -502,8 +428,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Single",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -530,7 +456,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Kai'Sa charges up over the cast time, during which she is still able to move, becoming ghosted and gaining bonus movement speed for the duration, with the effectiveness increased by 0% : 100% (based on bonus attack speed).",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kai'Sa charges up over the cast time, during which she is still able to move, becoming ghosted and gaining bonus movement speed for the duration, with the effectiveness increased by 0% - 100% (based on bonus attack speed).</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Movement Speed",
@@ -544,10 +470,6 @@
                       75
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -565,10 +487,6 @@
                       150
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -591,10 +509,6 @@
                       80
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -607,11 +521,20 @@
             "leveling": []
           },
           {
-            "description": "Evolution: Requires[ 100% : 70% (based on level) attack speed from items ][ 100% attack speed from items and stat growth ]to upgrade : Supercharge grants invisibility at the start of the cast time for 0.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Evolution:</p><p> Requires[ 100% - 70% (based on level) attack speed from items ][ 100% attack speed from items and stat growth ]to upgrade : Supercharge grants invisibility at the start of the cast time for 0.5 seconds.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              30
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -622,7 +545,9 @@
                 11.5,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -630,7 +555,7 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -658,7 +583,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Kai'Sa grants herself a shield for 2 seconds and dashes to a target location near a visible enemy champion that was affected by Plasma within the last 4 seconds. The shield's duration is refreshed when the dash ends.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kai'Sa grants herself a shield for 2 seconds and dashes to a target location near a visible enemy champion that was affected by Plasma within the last 4 seconds. The shield's duration is refreshed when the dash ends.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -670,8 +595,6 @@
                       110
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -682,20 +605,14 @@
                       180
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      120,
-                      120,
                       120
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -708,7 +625,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -717,7 +643,9 @@
                 90,
                 60
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -725,7 +653,7 @@
         "targeting": "Location",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -748,5 +676,6 @@
       }
     ]
   },
+  "lore": "Claimed by the Void when she was only a child, Kai'Sa managed to survive through sheer tenacity and strength of will. Her experiences have made her a deadly hunter and, to some, the harbinger of a future they would rather not live to see. Having entered into an uneasy symbiosis with a living Void carapace, the time will soon come when she must decide whether to forgive those mortals who would call her a monster, and defeat the coming darkness together… or simply to forget, as the Void consumes the world that left her behind.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kaisa/skins/base/images/kaisa_splash_centered_0.jpg"
 }

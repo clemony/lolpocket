@@ -101,7 +101,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Smolder generates a stack of Dragon Practice each time he hits an enemy champion with an ability, or whenever Super Scorcher Breath kills a minion or monster. His basic abilities deal bonus magic damage based on stacks.\n Super Scorcher Breath: Deals bonus magic damage equal to 30% : 52.5% (+ 0% : 12%) (based on critical strike chance) of Dragon Practice stacks.\n Achooo!: Explosions deal bonus magic damage equal to 55% of Dragon Practice stacks.\n Flap, Flap, Flap: Attacks each deal bonus magic damage equal to 10% of Dragon Practice stacks.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Smolder generates a stack of Dragon Practice each time he hits an enemy champion with an ability, or whenever Super Scorcher Breath kills a minion or monster. His basic abilities deal bonus magic damage based on stacks.</p></div>\n\n\n<div><p class=\"font-semibold  tracking-tight text-4\"> Super Scorcher Breath:</p><p> Deals bonus magic damage equal to 30% - 52.5% (+ 0% - 12%) (based on critical strike chance) of Dragon Practice stacks.</p></div>\n\n\n<div><p class=\"font-semibold  tracking-tight text-4\"> Achooo!:</p><p> Explosions deal bonus magic damage equal to 55% of Dragon Practice stacks.</p></div>\n\n\n<div><p class=\"font-semibold  tracking-tight text-4\"> Flap, Flap, Flap:</p><p> Attacks each deal bonus magic damage equal to 10% of Dragon Practice stacks.</p></div>",
             "leveling": []
           }
         ],
@@ -114,7 +114,7 @@
         "affects": "Self/Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "proc",
         "projectile": null,
         "onHitEffects": null,
@@ -141,7 +141,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Smolder spits a fireball at the target enemy that deals physical damage, increased by 0% : 75% (+ 0% : 40%) (based on critical strike chance); applies on-hit effects; applies life steal at 50% effectiveness; and triggers on-attack effects. If Super Scorcher Breath kills at least one target, Smolder restores 15 mana.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Smolder spits a fireball at the target enemy that deals physical damage, increased by 0% - 75% (+ 0% - 40%) (based on critical strike chance); applies on-hit effects; applies life steal at 50% effectiveness; and triggers on-attack effects. If Super Scorcher Breath kills at least one target, Smolder restores 15 mana.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -155,26 +155,14 @@
                       125
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      130,
-                      130,
-                      130,
-                      130,
                       130
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -192,26 +180,14 @@
                       218.75
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      227.5,
-                      227.5,
-                      227.5,
-                      227.5,
                       227.5
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -229,26 +205,14 @@
                       268.75
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      279.5,
-                      279.5,
-                      279.5,
-                      279.5,
                       279.5
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -257,15 +221,15 @@
             ]
           },
           {
-            "description": "Super Scorcher Breath becomes empowered with new effects based on the number of Dragon Practice stacks:",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Super Scorcher Breath becomes empowered with new effects based on the number of Dragon Practice stacks:</p><p></p></div>",
             "leveling": []
           },
           {
-            "description": "Tier 1 - 25 stacks: The fireball explodes upon collision to deal the same physical damage to nearby enemies and apply on-hit effects and benefit from life steal at 50% effectiveness.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Tier 1 - 25 stacks:</p><p> The fireball explodes upon collision to deal the same physical damage to nearby enemies and apply on-hit effects and benefit from life steal at 50% effectiveness.</p></div>",
             "leveling": []
           },
           {
-            "description": "Tier 2 - 125 stacks: The fireball sends forth 2 (+ 0.8 per 100 Dragon Practice stacks) bolts of fire in an arc upon collision that explode at maximum range, dealing 50% of the same damage to enemies hit and applying on-hit effects, with on-hit damage reduced to 75% effectiveness, and life steal at 50% effectiveness.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Tier 2 - 125 stacks:</p><p> The fireball sends forth 2 (+ 0.8 per 100 Dragon Practice stacks) bolts of fire in an arc upon collision that explode at maximum range, dealing 50% of the same damage to enemies hit and applying on-hit effects, with on-hit damage reduced to 75% effectiveness, and life steal at 50% effectiveness.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -279,26 +243,14 @@
                       62.5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      65,
-                      65,
-                      65,
-                      65,
                       65
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -316,26 +268,14 @@
                       109.375
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      113.75,
-                      113.75,
-                      113.75,
-                      113.75,
                       113.75
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -353,26 +293,14 @@
                       134.375
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      139.75,
-                      139.75,
-                      139.75,
-                      139.75,
                       139.75
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -381,11 +309,20 @@
             ]
           },
           {
-            "description": "Tier 3 - 225 stacks: Enemies hit are set on fire for 3 seconds, causing them to take bonus true damage equal to[ 2.5% per 100 bonus AD (+ 0.4% per 100 Dragon Practice stacks) of their maximum health over the duration, capped at 300 against monsters. ][ 0.83% per 100 bonus AD (+ 0.13% per 100 Dragon Practice stacks) of their maximum health each second, capped at 100 per tick against monsters. ]Subsequent applications of the burn stack, though not refreshing the duration of the previous burn. Enemy champions afflicted with the burn are also executed once Smolder deals damage to them that would leave them below 6.5% of their maximum health.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Tier 3 - 225 stacks:</p><p> Enemies hit are set on fire for 3 seconds, causing them to take bonus true damage equal to[ 2.5% per 100 bonus AD (+ 0.4% per 100 Dragon Practice stacks) of their maximum health over the duration, capped at 300 against monsters. ][ 0.83% per 100 bonus AD (+ 0.13% per 100 Dragon Practice stacks) of their maximum health each second, capped at 100 per tick against monsters. ]Subsequent applications of the burn stack, though not refreshing the duration of the previous burn. Enemy champions afflicted with the burn are also executed once Smolder deals damage to them that would leave them below 6.5% of their maximum health.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              25
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -396,7 +333,9 @@
                 4,
                 3.5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -404,8 +343,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "MIXED_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Mixed damage",
         "spellEffects": "special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -432,7 +371,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Smolder sneezes a fiery glob in the target direction that deals physical damage to enemies hit and slows them by 35% for 1.5 seconds, slowing down in missile speed after travelling 1200 units. Hitting an enemy champion creates an explosion that deals physical damage to nearby enemies, with subsequent explosions against the same target dealing 75% damage of the previous explosion's damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Smolder sneezes a fiery glob in the target direction that deals physical damage to enemies hit and slows them by 35% for 1.5 seconds, slowing down in missile speed after travelling 1200 units. Hitting an enemy champion creates an explosion that deals physical damage to nearby enemies, with subsequent explosions against the same target dealing 75% damage of the previous explosion's damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Glob Physical Damage",
@@ -446,26 +385,14 @@
                       100
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -483,42 +410,22 @@
                       110
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      65,
-                      65,
-                      65,
-                      65,
                       65
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -536,42 +443,22 @@
                       210
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      125,
-                      125,
-                      125,
-                      125,
                       125
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -580,7 +467,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -591,7 +491,9 @@
                 11,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -599,8 +501,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -627,7 +529,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Smolder takes flight for 1.25 seconds, becoming ghosted and gaining 75% bonus movement speed, unobstructed vision, and the ability to ignore terrain collision. While in flight, he automatically fires up to 5 (+ 1 per 100 Dragon Practice stacks) bolts at the nearest and most wounded visible enemy, dealing physical damage with each hit and prioritizing enemy champions.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Smolder takes flight for 1.25 seconds, becoming ghosted and gaining 75% bonus movement speed, unobstructed vision, and the ability to ignore terrain collision. While in flight, he automatically fires up to 5 (+ 1 per 100 Dragon Practice stacks) bolts at the nearest and most wounded visible enemy, dealing physical damage with each hit and prioritizing enemy champions.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage per Hit",
@@ -641,26 +543,14 @@
                       30
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -678,26 +568,14 @@
                       150
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      150,
-                      150,
-                      150,
-                      150,
                       150
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -710,7 +588,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              65
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -721,7 +608,9 @@
                 18,
                 16
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -729,8 +618,8 @@
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -757,7 +646,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Smolder shouts for his mother to attack from above, causing her to exhale a wave of fire from behind him and towards the target direction, granting sight of its surroundings as it travels. The wave heals Smolder and deals physical damage to enemies hit, with those in the center taking 50% increased damage and becoming slowed by 40% for 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Smolder shouts for his mother to attack from above, causing her to exhale a wave of fire from behind him and towards the target direction, granting sight of its surroundings as it travels. The wave heals Smolder and deals physical damage to enemies hit, with those in the center taking 50% increased damage and becoming slowed by 40% for 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Self Heal",
@@ -769,32 +658,22 @@
                       170
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      75,
-                      75,
                       75
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -810,32 +689,22 @@
                       400
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      110,
-                      110,
                       110
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -851,32 +720,22 @@
                       600
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      165,
-                      165,
                       165
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      150,
-                      150,
                       150
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -889,7 +748,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -898,7 +766,9 @@
                 110,
                 100
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -906,8 +776,8 @@
         "targeting": "Direction",
         "affects": "Enemies, Self",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -929,5 +799,6 @@
       }
     ]
   },
+  "lore": "Hidden amongst the craggy cliffs of the Noxian frontier, under the watchful eyes of his mother, a young dragon is learning what it means to be heir to the Camavoran imperial dragon lineage. Playful and eager to grow up, Smolder looks for any excuse to practice his burgeoning abilities. Though he's still a fledgling, his skills are nothing to sneeze at, easily setting fire to anything that burns.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/smolder/skins/base/images/smolder_splash_centered_0.jpg"
 }

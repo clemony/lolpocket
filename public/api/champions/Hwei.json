@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Hwei's damaging abilities mark enemies hit for 4 seconds. Subsequent damaging abilities against marked targets consume the mark to create an explosion beneath them, dealing 35 : 230 (based on level) (+ 30% AP) bonus magic damage to enemies in the area after a 0.85-second delay.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Hwei's damaging abilities mark enemies hit for 4 seconds. Subsequent damaging abilities against marked targets consume the mark to create an explosion beneath them, dealing 35 - 230 (based on level) (+ 30% AP) bonus magic damage to enemies in the area after a 0.85-second delay.</p></div>",
             "leveling": []
           }
         ],
@@ -110,7 +110,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "aoe",
         "projectile": null,
         "onHitEffects": null,
@@ -137,11 +137,24 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Hwei enters a disastrous mood, gaining access to its abilities as well as Wash Brush. He will exit the mood upon casting any of them.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Hwei enters a disastrous mood, gaining access to its abilities as well as Wash Brush. He will exit the mood upon casting any of them.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              80,
+              90,
+              100,
+              110,
+              120
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -152,7 +165,9 @@
                 7,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -160,7 +175,7 @@
         "targeting": "Auto",
         "affects": null,
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -186,7 +201,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/q",
         "effects": [
           {
-            "description": "Active - QQ: Hwei slings a fireball in the target direction that explodes upon colliding with the first enemy or reaching maximum range, dealing magic damage to all nearby enemies. The damage based on the target's health ratio is capped at 250 against monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active - QQ:</p><p> Hwei slings a fireball in the target direction that explodes upon colliding with the first enemy or reaching maximum range, dealing magic damage to all nearby enemies. The damage based on the target's health ratio is capped at 250 against monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -200,26 +215,14 @@
                       170
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -232,10 +235,6 @@
                       7
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -253,7 +252,7 @@
         "affects": "Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -278,7 +277,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/q",
         "effects": [
           {
-            "description": "Active - QW: Hwei calls upon a lightning bolt to strike at the target location after 1 second, dealing magic damage to enemies within the area.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active - QW:</p><p> Hwei calls upon a lightning bolt to strike at the target location after 1 second, dealing magic damage to enemies within the area.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -292,26 +291,14 @@
                       160
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -334,10 +321,6 @@
                       350
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -355,10 +338,6 @@
                       560
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -371,10 +350,6 @@
                       87.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -396,7 +371,7 @@
         "affects": "Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -421,7 +396,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/q",
         "effects": [
           {
-            "description": "Active - QE: Hwei marks a blazing path in the target direction. After 0.6 seconds, the path erupts into volcanic explosions every 0.2 seconds from the point of cast. Each explosion creates a shockwave that deals magic damage to nearby enemies.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active - QE:</p><p> Hwei marks a blazing path in the target direction. After 0.6 seconds, the path erupts into volcanic explosions every 0.2 seconds from the point of cast. Each explosion creates a shockwave that deals magic damage to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -435,26 +410,14 @@
                       100
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -477,26 +440,14 @@
                       25
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      5,
-                      5,
-                      5,
-                      5,
                       5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -514,26 +465,14 @@
                       250
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -551,26 +490,14 @@
                       350
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -592,7 +519,7 @@
         "affects": "Enemies",
         "spellshieldable": "special",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -619,11 +546,24 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Hwei enters a serene mood, gaining access to its abilities as well as Wash Brush. He will exit the mood upon casting any of them.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Hwei enters a serene mood, gaining access to its abilities as well as Wash Brush. He will exit the mood upon casting any of them.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              90,
+              95,
+              100,
+              105,
+              110
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -634,7 +574,9 @@
                 16.5,
                 16
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -642,7 +584,7 @@
         "targeting": "Auto",
         "affects": null,
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -668,7 +610,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/w",
         "effects": [
           {
-            "description": "Active - WQ: Hwei forms a current of water in the target direction, creating a path for a duration that grants him and allied champions bonus movement speed and ghosting for 0.5 seconds, with the bonus refreshing every 0.125 seconds while they remain in the area.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active - WQ:</p><p> Hwei forms a current of water in the target direction, creating a path for a duration that grants him and allied champions bonus movement speed and ghosting for 0.5 seconds, with the bonus refreshing every 0.125 seconds while they remain in the area.</p></div>",
             "leveling": [
               {
                 "attribute": "Path Duration",
@@ -682,10 +624,6 @@
                       6
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -703,26 +641,14 @@
                       30
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   },
                   {
                     "values": [
-                      2,
-                      2,
-                      2,
-                      2,
                       2
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -765,7 +691,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/w",
         "effects": [
           {
-            "description": "Active - WW: Hwei summons a pool of water at the target location, creating a protective zone for 3 seconds that grants him and allied champions a shield at the start of the cast time and for 0.5 seconds while within the area. The shield refreshes and increases in strength by an amount every 0.264 seconds over the duration while they remain in the area.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active - WW:</p><p> Hwei summons a pool of water at the target location, creating a protective zone for 3 seconds that grants him and allied champions a shield at the start of the cast time and for 0.5 seconds while within the area. The shield refreshes and increases in strength by an amount every 0.264 seconds over the duration while they remain in the area.</p></div>",
             "leveling": [
               {
                 "attribute": "Initial Shield Strength",
@@ -779,26 +705,14 @@
                       100
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -816,26 +730,14 @@
                       16.67
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      5,
-                      5,
-                      5,
-                      5,
                       5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -853,26 +755,14 @@
                       200
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -895,26 +785,14 @@
                       75
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      22.5,
-                      22.5,
-                      22.5,
-                      22.5,
                       22.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -932,26 +810,14 @@
                       12.5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      3.75,
-                      3.75,
-                      3.75,
-                      3.75,
                       3.75
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -969,26 +835,14 @@
                       150
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      45,
-                      45,
-                      45,
-                      45,
                       45
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1031,7 +885,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/w",
         "effects": [
           {
-            "description": "Active - WE: Hwei surrounds himself in swirling flares that empower his next 3 basic attacks or ability hits within 9 seconds to each deal bonus magic damage and restore mana.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active - WE:</p><p> Hwei surrounds himself in swirling flares that empower his next 3 basic attacks or ability hits within 9 seconds to each deal bonus magic damage and restore mana.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -1045,26 +899,14 @@
                       60
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1082,26 +924,14 @@
                       180
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      45,
-                      45,
-                      45,
-                      45,
                       45
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1119,10 +949,6 @@
                       65
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -1140,10 +966,6 @@
                       195
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -1166,26 +988,14 @@
                       30
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      7.5,
-                      7.5,
-                      7.5,
-                      7.5,
                       7.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1203,7 +1013,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "false",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "proc",
         "projectile": null,
         "onHitEffects": null,
@@ -1230,11 +1040,24 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Hwei enters a tumultuous mood, gaining access to its abilities as well as Wash Brush. He will exit the mood upon casting any of them.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Hwei enters a tumultuous mood, gaining access to its abilities as well as Wash Brush. He will exit the mood upon casting any of them.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -1245,7 +1068,9 @@
                 11.5,
                 11
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -1253,7 +1078,7 @@
         "targeting": "Auto",
         "affects": null,
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -1279,7 +1104,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/e",
         "effects": [
           {
-            "description": "Active - EQ: Hwei launches a terrifying grin in the target direction that deals magic damage to the first enemy hit, knocks them down, and fears them for a duration, as well as slows them by 60% for the same duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active - EQ:</p><p> Hwei launches a terrifying grin in the target direction that deals magic damage to the first enemy hit, knocks them down, and fears them for a duration, as well as slows them by 60% for the same duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -1293,26 +1118,14 @@
                       230
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1330,10 +1143,6 @@
                       1.5
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -1351,7 +1160,7 @@
         "affects": "Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -1376,7 +1185,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/e",
         "effects": [
           {
-            "description": "Active - EW: Hwei tosses an eyeball to the target location. Upon arrival, it expands over 0.2 seconds into a dark gaze lasting 3 seconds, granting sight in a larger area. After 0.7 seconds of being placed, the eye locks onto the nearest visible enemy champion or otherwise remains there until an enemy champion is in range. Once locked on, the eye launches itself at the target after 0.3 seconds and collides with the first enemy hit to deal magic damage, reveal them for 2.5 seconds, and root them for a duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active - EW:</p><p> Hwei tosses an eyeball to the target location. Upon arrival, it expands over 0.2 seconds into a dark gaze lasting 3 seconds, granting sight in a larger area. After 0.7 seconds of being placed, the eye locks onto the nearest visible enemy champion or otherwise remains there until an enemy champion is in range. Once locked on, the eye launches itself at the target after 0.3 seconds and collides with the first enemy hit to deal magic damage, reveal them for 2.5 seconds, and root them for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -1390,26 +1199,14 @@
                       230
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1427,10 +1224,6 @@
                       2
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -1448,7 +1241,7 @@
         "affects": "Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -1473,7 +1266,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/e",
         "effects": [
           {
-            "description": "Active - EE: Hwei conjures a jaw at the target location that snaps after 0.6 seconds, dealing magic damage to enemies in the area and slowing them by an amount that decays over 1.25 seconds. Enemies that are not standing at the center when the jaw snaps are pulled there.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active - EE:</p><p> Hwei conjures a jaw at the target location that snaps after 0.6 seconds, dealing magic damage to enemies in the area and slowing them by an amount that decays over 1.25 seconds. Enemies that are not standing at the center when the jaw snaps are pulled there.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -1487,26 +1280,14 @@
                       230
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1524,10 +1305,6 @@
                       70
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -1545,7 +1322,7 @@
         "affects": "Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -1572,7 +1349,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Hwei launches a globule of pure despair in the target direction that collides with the first enemy champion hit, afflicting them with an aura that grows over 3 seconds, reveals the target, and grants sight within its radius. Enemies within are both dealt magic damage and applied a stack of Despair every 0.25 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Hwei launches a globule of pure despair in the target direction that collides with the first enemy champion hit, afflicting them with an aura that grows over 3 seconds, reveals the target, and grants sight within its radius. Enemies within are both dealt magic damage and applied a stack of Despair every 0.25 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",
@@ -1584,20 +1361,14 @@
                       7.5
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      1.25,
-                      1.25,
                       1.25
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1613,20 +1384,14 @@
                       90
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1635,7 +1400,7 @@
             ]
           },
           {
-            "description": "Despair: For each stack, the target is slowed by 10% for 0.25 seconds, stacking up to 12 times.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Despair:</p><p> For each stack, the target is slowed by 10% for 0.25 seconds, stacking up to 12 times.</p></div>",
             "leveling": []
           },
           {
@@ -1651,20 +1416,14 @@
                       450
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1680,20 +1439,14 @@
                       540
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      95,
-                      95,
                       95
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1706,7 +1459,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -1715,7 +1477,9 @@
                 115,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -1723,8 +1487,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -1749,7 +1513,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/r",
         "effects": [
           {
-            "description": "Active - QR, WR, ER: Hwei exits his current mood without incurring its ability cost or cooldown.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active - QR, WR, ER:</p><p> Hwei exits his current mood without incurring its ability cost or cooldown.</p></div>",
             "leveling": []
           },
           {
@@ -1788,5 +1552,6 @@
       }
     ]
   },
+  "lore": "Hwei is a brooding painter who creates brilliant art in order to confront Ionia's criminals and comfort their victims. Beneath his melancholy roils a torn, emotional mind—haunted by both the vibrant visions of his imagination and the gruesome memories of his temple's massacre. Hwei seeks to understand this light and dark, which drives him inevitably toward the artist who unraveled him. With paintbrush and palette, Hwei shapes endless possibilities as he draws ever closer to earning closure or embracing despair.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin0/images/hwei_splash_centered_0.jpg"
 }

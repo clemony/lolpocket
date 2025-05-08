@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akali/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: When Akali damages an enemy champion with an ability, she creates a ring around them for 4 seconds, refreshing on subsequent damaging abilities against champions. For 2 seconds, she gains 30 / 40 / 50 / 60% (based on level) bonus movement speed while moving away from the center of the ring. Only one ring may be active at a time.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> When Akali damages an enemy champion with an ability, she creates a ring around them for 4 seconds, refreshing on subsequent damaging abilities against champions. For 2 seconds, she gains 30 / 40 / 50 / 60% (based on level) bonus movement speed while moving away from the center of the ring. Only one ring may be active at a time.</p></div>",
             "leveling": []
           },
           {
@@ -105,7 +105,7 @@
             "leveling": []
           },
           {
-            "description": "Swinging Kama: Akali's next basic attack is empowered to have its range doubled and deal 35 : 182 (based on level) (+ 60% bonus AD) (+ 55% AP) bonus magic damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Swinging Kama:</p><p> Akali's next basic attack is empowered to have its range doubled and deal 35 - 182 (based on level) (+ 60% bonus AD) (+ 55% AP) bonus magic damage.</p></div>",
             "leveling": []
           }
         ],
@@ -118,7 +118,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "false",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -145,7 +145,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akali/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Akali unleashes kunai in a cone in the target direction, dealing magic damage to enemies hit. Targets beyond a certain range are also slowed by 50% for 0.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Akali unleashes kunai in a cone in the target direction, dealing magic damage to enemies hit. Targets beyond a certain range are also slowed by 50% for 0.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -159,42 +159,22 @@
                       145
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      65,
-                      65,
-                      65,
-                      65,
                       65
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -203,18 +183,29 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              110,
+              100,
+              90,
+              80,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                1.5,
-                1.5,
-                1.5,
-                1.5,
                 1.5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -222,8 +213,8 @@
         "targeting": "Direction",
         "affects": "Enemies, Self",
         "spellshieldable": "True",
-        "resource": "ENERGY",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Energy",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -250,7 +241,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akali/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Akali restores 100 energy over 0.4 seconds and gains bonus movement speed that decays over 2 seconds. She also detonates a smoke bomb a fixed distance away in the target direction, creating a circular shroud that expands over the next 5 seconds into a ring. The shroud does not permeate terrain, and will expand toward nearby enemy champions. While the shroud is active, Akali's maximum energy is increased by 100.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Akali restores 100 energy over 0.4 seconds and gains bonus movement speed that decays over 2 seconds. She also detonates a smoke bomb a fixed distance away in the target direction, creating a circular shroud that expands over the next 5 seconds into a ring. The shroud does not permeate terrain, and will expand toward nearby enemy champions. While the shroud is active, Akali's maximum energy is increased by 100.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -264,10 +255,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -285,10 +272,6 @@
                       7
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -301,7 +284,7 @@
             "leveling": []
           },
           {
-            "description": "Declaring a basic attack or casting an ability will break the invisibility and prevent Akali from entering it for 1 : 0.625 (based on minutes) seconds, refreshing on subsequent attacks and casts.",
+            "description": "Declaring a basic attack or casting an ability will break the invisibility and prevent Akali from entering it for 1 - 0.625 (based on minutes) seconds, refreshing on subsequent attacks and casts.",
             "leveling": []
           },
           {
@@ -320,7 +303,9 @@
                 17,
                 16
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -356,7 +341,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akali/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Akali flips backward and, after the cast time, throws a shuriken in the target direction that deals magic damage to the first enemy hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Akali flips backward and, after the cast time, throws a shuriken in the target direction that deals magic damage to the first enemy hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -370,42 +355,22 @@
                       105
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      33,
-                      33,
-                      33,
-                      33,
                       33
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -418,7 +383,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Akali dashes towards the marked target or smoke section. Against enemies she deals magic damage upon arrival.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Akali dashes towards the marked target or smoke section. Against enemies she deals magic damage upon arrival.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -432,42 +397,22 @@
                       245
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      77,
-                      77,
-                      77,
-                      77,
                       77
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -485,42 +430,22 @@
                       350
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      110,
-                      110,
-                      110,
-                      110,
                       110
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -533,7 +458,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              30
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -544,7 +478,9 @@
                 11.5,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -552,8 +488,8 @@
         "targeting": "Direction / Auto",
         "affects": "Enemies, Self",
         "spellshieldable": "True",
-        "resource": "ENERGY",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Energy",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -580,7 +516,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akali/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Akali dashes 750 units in the direction of the target enemy champion, dealing magic damage to enemies she passes through. If this hits an enemy, she flips over them to continue the dash up to the normal range but for at least another 150 units.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Akali dashes 750 units in the direction of the target enemy champion, dealing magic damage to enemies she passes through. If this hits an enemy, she flips over them to continue the dash up to the normal range but for at least another 150 units.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -592,32 +528,22 @@
                       330
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -630,7 +556,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Akali dashes 800 units in the target direction, dealing magic damage to enemies she passes through, increased by 0% : 200% (based on target's missing health).",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Akali dashes 800 units in the target direction, dealing magic damage to enemies she passes through, increased by 0% - 200% (based on target's missing health).</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -642,20 +568,14 @@
                       210
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -671,20 +591,14 @@
                       630
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      90,
-                      90,
                       90
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -702,7 +616,9 @@
                 90,
                 60
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -711,7 +627,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -733,5 +649,6 @@
       }
     ]
   },
+  "lore": "Abandoning the Kinkou Order and her title of the Fist of Shadow, Akali now strikes alone, ready to be the deadly weapon her people need. Though she holds onto all she learned from her master Shen, she has pledged to defend Ionia from its enemies, one kill at a time. Akali may strike in silence, but her message will be heard loud and clear: fear the assassin with no master.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/akali/skins/base/images/akali_splash_centered_0.jpg"
 }

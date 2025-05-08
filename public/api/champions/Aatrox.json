@@ -88,7 +88,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aatrox/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Periodically, Aatrox empowers his next basic attack to gain 50 bonus range and deal bonus magic damage equal to 4% : 12% (based on level) of the target's maximum health, capped at 100 against monsters. Aatrox heals for 80% of the post-mitigation bonus damage dealt, reduced to 25% against minions.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Periodically, Aatrox empowers his next basic attack to gain 50 bonus range and deal bonus magic damage equal to 4% - 12% (based on level) of the target's maximum health, capped at 100 against monsters. Aatrox heals for 80% of the post-mitigation bonus damage dealt, reduced to 25% against minions.</p></div>",
             "leveling": []
           },
           {
@@ -120,7 +120,9 @@
                 10.705882352941176,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -129,7 +131,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "proc",
         "projectile": null,
         "onHitEffects": null,
@@ -160,11 +162,11 @@
             "leveling": []
           },
           {
-            "description": "Active: Aatrox performs a strike with his greatsword for each of the three casts, dealing physical damage to enemies hit within an area. Enemies hit within a Sweetspot of the area take 60% bonus damage and also knocked up for 0.25 seconds. Each subsequent cast increases The Darkin Blade's damage by 25%.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Aatrox performs a strike with his greatsword for each of the three casts, dealing physical damage to enemies hit within an area. Enemies hit within a Sweetspot of the area take 60% bonus damage and also knocked up for 0.25 seconds. Each subsequent cast increases The Darkin Blade's damage by 25%.</p></div>",
             "leveling": []
           },
           {
-            "description": "First Cast: Aatrox's first strike affects a 625 × 180-unit rectangular area in the target direction, with him centered on the back line and the Sweetspot at the farthest edge.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">First Cast:</p><p> Aatrox's first strike affects a 625 × 180-unit rectangular area in the target direction, with him centered on the back line and the Sweetspot at the farthest edge.</p></div>",
             "leveling": [
               {
                 "attribute": "First Cast Damage",
@@ -178,10 +180,6 @@
                       70
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -194,10 +192,6 @@
                       90
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -215,10 +209,6 @@
                       112
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -231,10 +221,6 @@
                       144
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -243,7 +229,7 @@
             ]
           },
           {
-            "description": "Second Cast: Aatrox's second strike affects a trapezoidal area in the target direction, with the Sweetspot at the farthest edge. The hitbox begins 100-units behind Aatrox and extends 475-units in front of him, measuring between 300 and 500-units wide from behind to in front.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Second Cast:</p><p> Aatrox's second strike affects a trapezoidal area in the target direction, with the Sweetspot at the farthest edge. The hitbox begins 100-units behind Aatrox and extends 475-units in front of him, measuring between 300 and 500-units wide from behind to in front.</p></div>",
             "leveling": [
               {
                 "attribute": "Second Cast Damage",
@@ -257,10 +243,6 @@
                       87.5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -273,10 +255,6 @@
                       112.5
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -294,10 +272,6 @@
                       140
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -310,10 +284,6 @@
                       180
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -322,7 +292,7 @@
             ]
           },
           {
-            "description": "Third Cast: Aatrox's third strike affects a 300-radius circular area centered on a target location that is 200 units in front of him, with a 180-radius Sweetspot within.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Third Cast:</p><p> Aatrox's third strike affects a 300-radius circular area centered on a target location that is 200 units in front of him, with a 180-radius Sweetspot within.</p></div>",
             "leveling": [
               {
                 "attribute": "Third Cast Damage",
@@ -336,10 +306,6 @@
                       105
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -352,10 +318,6 @@
                       135
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -373,10 +335,6 @@
                       168
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -389,10 +347,6 @@
                       216
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -412,7 +366,9 @@
                 8,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -421,7 +377,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -448,7 +404,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aatrox/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Aatrox sends a chain in the target direction that deals magic damage to the first enemy hit, doubled against minions, and slowing them for 1.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Aatrox sends a chain in the target direction that deals magic damage to the first enemy hit, doubled against minions, and slowing them for 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -462,26 +418,14 @@
                       70
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -499,26 +443,14 @@
                       140
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -536,10 +468,6 @@
                       35
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -566,26 +494,14 @@
                       140
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -605,7 +521,9 @@
                 14,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -614,7 +532,7 @@
         "affects": "Enemies",
         "spellshieldable": "Special",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -641,11 +559,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aatrox/ability-icon/e",
         "effects": [
           {
-            "description": "Passive: Aatrox heals for 16% (+ 0.9% per 100 bonus health) of non- persistent post-mitigation damage he deals against enemy champions.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Aatrox heals for 16% (+ 0.9% per 100 bonus health) of non- persistent post-mitigation damage he deals against enemy champions.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Aatrox dashes in the target direction.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Aatrox dashes in the target direction.</p></div>",
             "leveling": []
           },
           {
@@ -664,7 +582,9 @@
                 6,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -700,7 +620,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aatrox/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Aatrox unleashes his true form for 10 seconds, fearing nearby enemy minions and monsters for 3 seconds, during which they are gradually slowed by up to 99% over the duration. He also gains ghosting and bonus movement speed that decays by 10% of the current bonus every 0.25 seconds, lasting until World Ender has ended.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Aatrox unleashes his true form for 10 seconds, fearing nearby enemy minions and monsters for 3 seconds, during which they are gradually slowed by up to 99% over the duration. He also gains ghosting and bonus movement speed that decays by 10% of the current bonus every 0.25 seconds, lasting until World Ender has ended.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -712,8 +632,6 @@
                       100
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -738,8 +656,6 @@
                       40
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -755,8 +671,6 @@
                       100
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -774,7 +688,9 @@
                 100,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -805,5 +721,6 @@
       }
     ]
   },
+  "lore": "Once honored defenders of Shurima against the Void, Aatrox and his brethren would eventually become an even greater threat to Runeterra, and were defeated only by cunning mortal sorcery. But after centuries of imprisonment, Aatrox was the first to find freedom once more, corrupting and transforming those foolish enough to try and wield the magical weapon that contained his essence. Now, with stolen flesh, he walks Runeterra in a brutal approximation of his previous form, seeking an apocalyptic and long overdue vengeance.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aatrox/skins/base/images/aatrox_splash_centered_0.jpg"
 }

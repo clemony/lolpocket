@@ -95,7 +95,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Whenever Jinx scores a takedown against an enemy champion, epic monster, turret, or inhibitor within 3 seconds of damaging them, she gains 175% bonus movement speed decaying over 6 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Whenever Jinx scores a takedown against an enemy champion, epic monster, turret, or inhibitor within 3 seconds of damaging them, she gains 175% bonus movement speed decaying over 6 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -103,7 +103,7 @@
             "leveling": []
           },
           {
-            "description": "Get Excited!: For each stack, Jinx gains 25% total attack speed, up to a maximum of 125%.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Get Excited!:</p><p> For each stack, Jinx gains 25% total attack speed, up to a maximum of 125%.</p></div>",
             "leveling": []
           }
         ],
@@ -143,11 +143,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/q",
         "effects": [
           {
-            "description": "Toggle: Jinx switches between Pow-Pow, her minigun, and Fishbones, her rocket launcher.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Toggle:</p><p> Jinx switches between Pow-Pow, her minigun, and Fishbones, her rocket launcher.</p></div>",
             "leveling": []
           },
           {
-            "description": "Pow-Pow: Basic attacks with Pow-Pow generate a stack of Rev'd up for 2.5 seconds, refreshing on subsequent attacks with Pow-Pow and stacking up to 3 times. Each stack of Rev'd up grants bonus attack speed, with all stacks beyond the first one being 50% effective. Stacks expire by one when the duration ends.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Pow-Pow:</p><p> Basic attacks with Pow-Pow generate a stack of Rev'd up for 2.5 seconds, refreshing on subsequent attacks with Pow-Pow and stacking up to 3 times. Each stack of Rev'd up grants bonus attack speed, with all stacks beyond the first one being 50% effective. Stacks expire by one when the duration ends.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -161,10 +161,6 @@
                       65
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -182,10 +178,6 @@
                       32.5
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -203,10 +195,6 @@
                       130
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -215,7 +203,7 @@
             ]
           },
           {
-            "description": "Fishbones: Basic attacks with Fishbones cost mana on-attack to deal 110% AD modified physical damage to the target and nearby enemies. The damage is affected by critical strike modifiers. While Fishbones is equipped, Jinx gains bonus range but loses 10% of her bonus attack speed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Fishbones:</p><p> Basic attacks with Fishbones cost mana on-attack to deal 110% AD modified physical damage to the target and nearby enemies. The damage is affected by critical strike modifiers. While Fishbones is equipped, Jinx gains bonus range but loses 10% of her bonus attack speed.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Range",
@@ -229,10 +217,6 @@
                       200
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -245,18 +229,25 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              20
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                0.9,
-                0.9,
-                0.9,
-                0.9,
                 0.9
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -264,8 +255,8 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": "False",
-        "resource": "OTHER",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Other",
+        "damageType": "Physical damage",
         "spellEffects": "special",
         "projectile": null,
         "onHitEffects": null,
@@ -292,7 +283,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Jinx fires a shock blast in the target direction that deals physical damage to the first enemy it hits and reveals and slows them for 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jinx fires a shock blast in the target direction that deals physical damage to the first enemy it hits and reveals and slows them for 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -306,26 +297,14 @@
                       210
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      140,
-                      140,
-                      140,
-                      140,
                       140
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -343,10 +322,6 @@
                       80
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -355,7 +330,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40,
+              45,
+              50,
+              55,
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -366,7 +354,9 @@
                 5,
                 4
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -374,8 +364,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Single target",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -402,7 +392,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Jinx tosses out 3 Chompers centered at the target location, landing after 0.4 seconds, arming after 0.75 seconds, and exploding after 5 seconds to deal magic damage to nearby enemies.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jinx tosses out 3 Chompers centered at the target location, landing after 0.4 seconds, arming after 0.75 seconds, and exploding after 5 seconds to deal magic damage to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -416,26 +406,14 @@
                       270
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -452,7 +430,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              90
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -463,7 +450,9 @@
                 13.5,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -471,8 +460,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -499,11 +488,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Jinx fires a massive rocket in the target direction, briefly granting sight of its surroundings and exploding upon colliding with an enemy champion. The explosion deals physical damage to nearby enemies and grants sight of the area for 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jinx fires a massive rocket in the target direction, briefly granting sight of its surroundings and exploding upon colliding with an enemy champion. The explosion deals physical damage to nearby enemies and grants sight of the area for 2 seconds.</p></div>",
             "leveling": []
           },
           {
-            "description": "Super Mega Death Rocket! deals 10% : 100% (based on distance traveled) damage. This does not affect the bonus damage based on the target's missing health.",
+            "description": "Super Mega Death Rocket! deals 10% - 100% (based on distance traveled) damage. This does not affect the bonus damage based on the target's missing health.",
             "leveling": [
               {
                 "attribute": "Maximum Physical Damage",
@@ -515,20 +504,14 @@
                       600
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      155,
-                      155,
                       155
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
@@ -539,8 +522,6 @@
                       35
                     ],
                     "units": [
-                      "% of target's missing health",
-                      "% of target's missing health",
                       "% of target's missing health"
                     ]
                   }
@@ -556,20 +537,14 @@
                       60
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      15.5,
-                      15.5,
                       15.5
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
@@ -580,8 +555,6 @@
                       35
                     ],
                     "units": [
-                      "% of target's missing health",
-                      "% of target's missing health",
                       "% of target's missing health"
                     ]
                   }
@@ -602,20 +575,14 @@
                       480
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      124,
-                      124,
                       124
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
@@ -626,8 +593,6 @@
                       28
                     ],
                     "units": [
-                      "% of target's missing health",
-                      "% of target's missing health",
                       "% of target's missing health"
                     ]
                   }
@@ -643,20 +608,14 @@
                       48
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      12.4,
-                      12.4,
                       12.4
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
@@ -667,8 +626,6 @@
                       28
                     ],
                     "units": [
-                      "% of target's missing health",
-                      "% of target's missing health",
                       "% of target's missing health"
                     ]
                   }
@@ -677,7 +634,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -686,7 +652,9 @@
                 65,
                 45
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -694,8 +662,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Area of effect",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -717,5 +685,6 @@
       }
     ]
   },
+  "lore": "An unhinged and impulsive criminal from the undercity, Jinx is haunted by the consequences of her past—but that doesn't stop her from bringing her own chaotic brand of pandemonium to Piltover and Zaun. She uses her arsenal of DIY weapons to devastating effect, unleashing torrents of colorful explosions and gunfire, inspiring the disenfranchised to rebellion and resistance with the mayhem she leaves in her wake.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/jinx/skins/base/images/jinx_splash_centered_0.jpg"
 }

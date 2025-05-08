@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nocturne/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Periodically, Nocturne empowers his next basic attack to slash in a circle, dealing 120% AD physical damage to the target and nearby enemies and healing himself for 13 : 30 (based on level) (+ 30% AP) per enemy hit. Against minions, Umbra Blade's damage to secondary targets and healing are reduced by 50% and it applies on-hit effects to all targets(note) at 100% effectiveness.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Periodically, Nocturne empowers his next basic attack to slash in a circle, dealing 120% AD physical damage to the target and nearby enemies and healing himself for 13 - 30 (based on level) (+ 30% AP) per enemy hit. Against minions, Umbra Blade's damage to secondary targets and healing are reduced by 50% and it applies on-hit effects to all targets(note) at 100% effectiveness.</p></div>",
             "leveling": []
           },
           {
@@ -115,11 +115,11 @@
           "modifiers": [
             {
               "values": [
-                13,
-                13,
                 13
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -128,7 +128,7 @@
         "affects": "Enemies",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "special",
         "projectile": null,
         "onHitEffects": null,
@@ -155,7 +155,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nocturne/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Nocturne casts out a shadow blade in the target direction that leaves a Dusk Trail in its wake, dealing physical damage to enemies hit. Enemy champions and large monsters hit will leave a Dusk Trail behind while moving. Dusk Trails last 5 seconds and will slowly disappear afterwards.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Nocturne casts out a shadow blade in the target direction that leaves a Dusk Trail in its wake, dealing physical damage to enemies hit. Enemy champions and large monsters hit will leave a Dusk Trail behind while moving. Dusk Trails last 5 seconds and will slowly disappear afterwards.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical damage",
@@ -169,26 +169,14 @@
                       245
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      85,
-                      85,
-                      85,
-                      85,
                       85
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -211,10 +199,6 @@
                       60
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -232,10 +216,6 @@
                       35
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -244,18 +224,29 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              65,
+              70,
+              75,
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                8,
-                8,
-                8,
-                8,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -263,8 +254,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Area of effect",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -291,7 +282,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nocturne/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Nocturne gains bonus attack speed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Nocturne gains bonus attack speed.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -305,10 +296,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -326,10 +313,6 @@
                       100
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -338,11 +321,20 @@
             ]
           },
           {
-            "description": "Active: Nocturne gains a spell shield for 1.5 seconds. Upon successfully blocking a hostile effect, Shroud of Darkness' bonus attack speed is doubled for 5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Nocturne gains a spell shield for 1.5 seconds. Upon successfully blocking a hostile effect, Shroud of Darkness' bonus attack speed is doubled for 5 seconds.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -353,7 +345,9 @@
                 14,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -361,7 +355,7 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -389,11 +383,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nocturne/ability-icon/e",
         "effects": [
           {
-            "description": "Passive: Nocturne gains 90% bonus movement speed while facing nearby feared targets.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Nocturne gains 90% bonus movement speed while facing nearby feared targets.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Nocturne torments the target, forming a tether between himself and the target for 2 seconds, during which the target takes magic damage every 0.5 seconds over the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Nocturne torments the target, forming a tether between himself and the target for 2 seconds, during which the target takes magic damage every 0.5 seconds over the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Magic Damage",
@@ -407,26 +401,14 @@
                       260
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -444,26 +426,14 @@
                       65
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -486,10 +456,6 @@
                       2.25
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -498,7 +464,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              65,
+              70,
+              75,
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -509,7 +488,9 @@
                 12,
                 11
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -517,8 +498,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "DoT",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -545,11 +526,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nocturne/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Nocturne terrorizes all enemy champions, nearsighting them for 6 seconds. He can recast Paranoia for the same duration after 0.25 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Nocturne terrorizes all enemy champions, nearsighting them for 6 seconds. He can recast Paranoia for the same duration after 0.25 seconds.</p></div>",
             "leveling": []
           },
           {
-            "description": "Recast: Nocturne dashes with displacement immunity to the target enemy champion, dealing physical damage upon arrival.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Nocturne dashes with displacement immunity to the target enemy champion, dealing physical damage upon arrival.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -561,20 +542,14 @@
                       400
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      120,
-                      120,
                       120
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -587,7 +562,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -596,7 +580,9 @@
                 115,
                 90
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -604,8 +590,8 @@
         "targeting": "Auto / Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -627,5 +613,6 @@
       }
     ]
   },
+  "lore": "A demonic amalgamation drawn from the nightmares that haunt every sentient mind, the thing known as Nocturne has become a primordial force of pure evil. It is liquidly chaotic in aspect, a faceless shadow with cold eyes and armed with wicked-looking blades. After freeing itself from the spirit realm, Nocturne descended upon the waking world, to feed upon the kind of terror that can only thrive in true darkness.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nocturne/skins/base/images/nocturne_splash_centered_0.jpg"
 }

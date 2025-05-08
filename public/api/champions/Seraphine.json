@@ -101,15 +101,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/p",
         "effects": [
           {
-            "description": "Innate - Echo: Seraphine's basic ability casts each generate a stack of Echo, stacking up to 2 times. At 2 stacks, Seraphine's next basic ability casts an additional time for 1 mana after a 0.033 seconds delay, consuming all Echo stacks after the cast time of the second cast.Seraphine gains maximum stacks of Echo when the game starts and upon respawning.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Echo:</p><p> Seraphine's basic ability casts each generate a stack of Echo, stacking up to 2 times. At 2 stacks, Seraphine's next basic ability casts an additional time for 1 mana after a 0.033 seconds delay, consuming all Echo stacks after the cast time of the second cast.Seraphine gains maximum stacks of Echo when the game starts and upon respawning.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate - Harmony: Seraphine's ability casts grant a Note to herself and nearby allied champions that lasts 6 seconds, refreshes on subsequent Notes and stacks up to 4 times on each unit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Harmony:</p><p> Seraphine's ability casts grant a Note to herself and nearby allied champions that lasts 6 seconds, refreshes on subsequent Notes and stacks up to 4 times on each unit.</p></div>",
             "leveling": []
           },
           {
-            "description": "While any amount of Notes are active, Seraphine's next basic attack is empowered to have an uncancellable windup, gain 25 bonus attack range per Note, and fire all Notes at the target, with each one dealing 4 : 25 (based on level) (+ 4% AP) magic damage, reduced by 75% for Notes from allies.",
+            "description": "While any amount of Notes are active, Seraphine's next basic attack is empowered to have an uncancellable windup, gain 25 bonus attack range per Note, and fire all Notes at the target, with each one dealing 4 - 25 (based on level) (+ 4% AP) magic damage, reduced by 75% for Notes from allies.",
             "leveling": []
           }
         ],
@@ -122,7 +122,7 @@
         "affects": "Self, Allies, Enemies",
         "spellshieldable": "false",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "proc",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -149,7 +149,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Seraphine hurls a soundwave to the target location that quickly expands in a radius upon arrival, dealing magic damage to enemies within the area.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Seraphine hurls a soundwave to the target location that quickly expands in a radius upon arrival, dealing magic damage to enemies within the area.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -163,26 +163,14 @@
                       160
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -191,7 +179,7 @@
             ]
           },
           {
-            "description": "Against champions, the damage is increased by 0% : 75% (based on target's missing health).",
+            "description": "Against champions, the damage is increased by 0% - 75% (based on target's missing health).",
             "leveling": [
               {
                 "attribute": "Maximum Champion Damage",
@@ -205,26 +193,14 @@
                       280
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      87.5,
-                      87.5,
-                      87.5,
-                      87.5,
                       87.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -237,7 +213,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              70,
+              80,
+              90,
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -248,7 +237,9 @@
                 6.5,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -256,8 +247,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -284,7 +275,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Seraphine grants a shield to herself and nearby allied champions for 2.5 seconds. For the same duration, she also gains 20% (+ 2% per 100 AP) decaying bonus movement speed and grants allies 8% (+ 0.8% per 100 AP) bonus movement speed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Seraphine grants a shield to herself and nearby allied champions for 2.5 seconds. For the same duration, she also gains 20% (+ 2% per 100 AP) decaying bonus movement speed and grants allies 8% (+ 0.8% per 100 AP) bonus movement speed.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -298,26 +289,14 @@
                       140
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      20,
-                      20,
-                      20,
-                      20,
                       20
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -340,10 +319,6 @@
                       5
                     ],
                     "units": [
-                      "% of target's missing health",
-                      "% of target's missing health",
-                      "% of target's missing health",
-                      "% of target's missing health",
                       "% of target's missing health"
                     ]
                   }
@@ -356,18 +331,29 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70,
+              75,
+              80,
+              85,
+              90
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                22,
-                22,
-                22,
-                22,
                 22
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -375,7 +361,7 @@
         "targeting": "Auto",
         "affects": "Self, Allies",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": "Shield",
         "projectile": "SPECIAL",
@@ -403,7 +389,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Seraphine fires a heavy soundwave in the target direction that deals magic damage to enemies hit, reduced to 70% against minions, and slows them by 99% for a few seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Seraphine fires a heavy soundwave in the target direction that deals magic damage to enemies hit, reduced to 70% against minions, and slows them by 99% for a few seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -417,26 +403,14 @@
                       190
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -454,26 +428,14 @@
                       133
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      35,
-                      35,
-                      35,
-                      35,
                       35
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -491,10 +453,6 @@
                       1.5
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -511,7 +469,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -522,7 +489,9 @@
                 9.5,
                 9
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -530,8 +499,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -558,7 +527,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Seraphine projects a captivating force in the target direction that deals magic damage to enemies hit, charms them, during which they are revealed, and slows them by 40% for a duration, increasing by 15% every 0.25 seconds over the duration up to 99%.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Seraphine projects a captivating force in the target direction that deals magic damage to enemies hit, charms them, during which they are revealed, and slows them by 40% for a duration, increasing by 15% every 0.25 seconds over the duration up to 99%.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -570,20 +539,14 @@
                       250
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -599,8 +562,6 @@
                       1.75
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -613,7 +574,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -622,7 +592,9 @@
                 140,
                 120
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -630,8 +602,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -653,5 +625,6 @@
       }
     ]
   },
+  "lore": "Born in Piltover to Zaunite parents, Seraphine can hear the souls of others—the world sings to her, and she sings back. Though these sounds overwhelmed her in her youth, she now draws on them for inspiration, turning the chaos into a symphony. She performs for the sister cities to remind their citizens that they're not alone, that they're stronger together, and that, in her eyes, their potential is limitless.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/base/images/seraphine_splash_centered_0.jpg"
 }

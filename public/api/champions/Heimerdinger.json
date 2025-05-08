@@ -102,7 +102,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Heimerdinger gains 20% bonus movement speed while near an allied turret or a H-28G Evolution Turret or H-28Q Apex Turret deployed by him.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Heimerdinger gains 20% bonus movement speed while near an allied turret or a H-28G Evolution Turret or H-28Q Apex Turret deployed by him.</p></div>",
             "leveling": []
           }
         ],
@@ -142,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Heimerdinger deploys a H-28G Evolution Turret at the target location, which lasts until destroyed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Heimerdinger deploys a H-28G Evolution Turret at the target location, which lasts until destroyed.</p></div>",
             "leveling": []
           },
           {
@@ -158,14 +158,25 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              20
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
                 1
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -173,8 +184,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "False",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -201,7 +212,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/q",
         "effects": [
           {
-            "description": "UPGRADE!!! - Active: Heimerdinger deploys a H-28Q Apex Turret at the target location, which lasts for 8 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">UPGRADE!!! - Active:</p><p> Heimerdinger deploys a H-28Q Apex Turret at the target location, which lasts for 8 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -220,7 +231,9 @@
               "values": [
                 1
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -229,7 +242,7 @@
         "affects": "Enemies",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -256,7 +269,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Heimerdinger launches a wave of 5 rockets that converge upon the target location and fan beyond it up to a maximum range, with each one dealing magic damage to the first enemy it hits. Every rocket hitting an enemy champion grants 20% beam charge to all turrets within 1000 range, up to a maximum of 100% beam charge when hitting 5 rockets on an enemy champion.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Heimerdinger launches a wave of 5 rockets that converge upon the target location and fan beyond it up to a maximum range, with each one dealing magic damage to the first enemy it hits. Every rocket hitting an enemy champion grants 20% beam charge to all turrets within 1000 range, up to a maximum of 100% beam charge when hitting 5 rockets on an enemy champion.</p></div>",
             "leveling": [
               {
                 "attribute": "Initial Rocket Magic Damage",
@@ -270,10 +283,6 @@
                       140
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -304,10 +313,6 @@
                       30
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -333,10 +338,6 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -362,10 +363,6 @@
                       260
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -391,10 +388,6 @@
                       90
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -420,10 +413,6 @@
                       360
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -449,10 +438,6 @@
                       500
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -469,7 +454,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              60,
+              70,
+              80,
+              90
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -480,7 +478,9 @@
                 8,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -488,8 +488,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -514,7 +514,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/w",
         "effects": [
           {
-            "description": "UPGRADE!!! - Active: Heimerdinger unleashes 4 waves of 5 rockets in quick succession that converge upon the target location. Each rocket deals magic damage to the first enemy hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">UPGRADE!!! - Active:</p><p> Heimerdinger unleashes 4 waves of 5 rockets in quick succession that converge upon the target location. Each rocket deals magic damage to the first enemy hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Initial Rocket Damage",
@@ -526,8 +526,6 @@
                       225
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -556,8 +554,6 @@
                       58
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -581,8 +577,6 @@
                       29
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -606,8 +600,6 @@
                       892
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -631,8 +623,6 @@
                       225
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -648,8 +638,6 @@
                       4500
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -681,7 +669,9 @@
                 8,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -690,7 +680,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -717,7 +707,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Heimerdinger hurls a grenade at the target location that detonates upon impact, dealing magic damage to nearby enemies and slowing them by 35% for 2 seconds. If the grenade hits an enemy champion, all turrets within 1000 range of the impact gain 100% beam charge.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Heimerdinger hurls a grenade at the target location that detonates upon impact, dealing magic damage to nearby enemies and slowing them by 35% for 2 seconds. If the grenade hits an enemy champion, all turrets within 1000 range of the impact gain 100% beam charge.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -731,10 +721,6 @@
                       220
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -755,14 +741,25 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              85
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
                 11
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -770,8 +767,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Area of effect",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -796,7 +793,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/e",
         "effects": [
           {
-            "description": "UPGRADE!!! - Active: Heimerdinger hurls a massive grenade at the target location that bounces a fixed distance 3 times in the cast direction. The grenade explodes upon landing each time to deal magic damage to nearby enemies and slow them by 35% for 2 seconds. Enemies hit at the center of the grenade's impact are additionally stunned for 1.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">UPGRADE!!! - Active:</p><p> Heimerdinger hurls a massive grenade at the target location that bounces a fixed distance 3 times in the cast direction. The grenade explodes upon landing each time to deal magic damage to nearby enemies and slow them by 35% for 2 seconds. Enemies hit at the center of the grenade's impact are additionally stunned for 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -808,8 +805,6 @@
                       300
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -845,7 +840,9 @@
               "values": [
                 11
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -854,7 +851,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Area of effect",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -881,11 +878,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Heimerdinger empowers his next basic ability for an additional effect, consuming the empowerment upon cast and placing UPGRADE!!! on full cooldown. These empowered abilities have the same cooldowns as their basic forms, deal modified damage, and do not have a mana cost. UPGRADE!!! can be recast after 3 seconds while the empowerment is available.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Heimerdinger empowers his next basic ability for an additional effect, consuming the empowerment upon cast and placing UPGRADE!!! on full cooldown. These empowered abilities have the same cooldowns as their basic forms, deal modified damage, and do not have a mana cost. UPGRADE!!! can be recast after 3 seconds while the empowerment is available.</p></div>",
             "leveling": []
           },
           {
-            "description": "Recast: Heimerdinger ends UPGRADE!!! and puts it on a 3-second cooldown.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Heimerdinger ends UPGRADE!!! and puts it on a 3-second cooldown.</p></div>",
             "leveling": []
           },
           {
@@ -893,7 +890,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -904,7 +910,9 @@
                 77.5,
                 70
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -912,7 +920,7 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -935,5 +943,6 @@
       }
     ]
   },
+  "lore": "The eccentric Professor Cecil B. Heimerdinger is one of the most innovative and esteemed inventors the world has ever known. As the longest serving member of the Council of Piltover, he saw the best and the worst of the city's unending desire for progress. Nonetheless, this brilliant scientist and teacher will always remain dedicated to using his unconventional devices to improve the lives of others.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/heimerdinger/skins/base/images/heimerdinger_splash_centered_0.jpg"
 }

@@ -94,7 +94,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jhin/ability-icon/p",
         "effects": [
           {
-            "description": "Innate - Death In 4 Acts: Jhin's basic attacks consume ammunition within 4 rounds. He will reload over 2.5 seconds immediately after expending all rounds or withholding leftover rounds after 10 seconds of being out of combat and not being affected by crowd control. The latter reload can be interrupted by declaring an attack or casting an ability.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Death In 4 Acts:</p><p> Jhin's basic attacks consume ammunition within 4 rounds. He will reload over 2.5 seconds immediately after expending all rounds or withholding leftover rounds after 10 seconds of being out of combat and not being affected by crowd control. The latter reload can be interrupted by declaring an attack or casting an ability.</p></div>",
             "leveling": []
           },
           {
@@ -102,7 +102,7 @@
             "leveling": []
           },
           {
-            "description": "Innate - Every Moment Matters: Jhin gains bonus attack damage equal to 4% : 44% (based on level)[ (+ 0.35% per 1% critical strike chance) (+ 0.3% per 1% bonus attack speed) ][ (+ 35% critical strike chance) (+ 30% bonus attack speed) ]AD.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Every Moment Matters:</p><p> Jhin gains bonus attack damage equal to 4% - 44% (based on level)[ (+ 0.35% per 1% critical strike chance) (+ 0.3% per 1% bonus attack speed) ][ (+ 35% critical strike chance) (+ 30% bonus attack speed) ]AD.</p></div>",
             "leveling": []
           },
           {
@@ -119,7 +119,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": null,
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -146,7 +146,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jhin/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Jhin throws a grenade at the target enemy that deals physical damage and can bounce to up to three additional nearby enemies, prioritizing the closest enemy that has not been hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jhin throws a grenade at the target enemy that deals physical damage and can bounce to up to three additional nearby enemies, prioritizing the closest enemy that has not been hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -160,10 +160,6 @@
                       144
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -176,26 +172,14 @@
                       74
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -218,10 +202,6 @@
                       50.4
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -234,26 +214,14 @@
                       25.9
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      21,
-                      21,
-                      21,
-                      21,
                       21
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -271,10 +239,6 @@
                       295.2
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -287,26 +251,14 @@
                       151.7
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      123,
-                      123,
-                      123,
-                      123,
                       123
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -315,7 +267,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40,
+              45,
+              50,
+              55,
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -326,7 +291,9 @@
                 5.5,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -334,8 +301,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -362,11 +329,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jhin/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Enemy champions that trigger a Lotus Trap to bloom or are damaged by Jhin or allied champions are marked for 4 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Enemy champions that trigger a Lotus Trap to bloom or are damaged by Jhin or allied champions are marked for 4 seconds.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Jhin fires a shot in the target direction that deals physical damage to all enemies in a line until colliding with an enemy champion, reduced by 25% against minions.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jhin fires a shot in the target direction that deals physical damage to all enemies in a line until colliding with an enemy champion, reduced by 25% against minions.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -380,26 +347,14 @@
                       200
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -417,26 +372,14 @@
                       150
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      37.5,
-                      37.5,
-                      37.5,
-                      37.5,
                       37.5
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -459,10 +402,6 @@
                       2.25
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -471,18 +410,29 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                12,
-                12,
-                12,
-                12,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -490,8 +440,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Special",
         "projectile": "YASUO",
         "onHitEffects": null,
@@ -518,11 +468,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jhin/ability-icon/e",
         "effects": [
           {
-            "description": "Passive - Beauty in Death: Whenever Jhin kills an enemy champion, he summons a Blooming Lotus Trap on their corpse.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive - Beauty in Death:</p><p> Whenever Jhin kills an enemy champion, he summons a Blooming Lotus Trap on their corpse.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Jhin places a Lotus Trap at the target location which, upon landing, becomes stealthed after arming over 1 second, lasting for up to 180 seconds and granting sight within its radius. The Lotus Trap blooms upon enemy contact, with enemies in the area at the time of its trigger becoming revealed for 4 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jhin places a Lotus Trap at the target location which, upon landing, becomes stealthed after arming over 1 second, lasting for up to 180 seconds and granting sight within its radius. The Lotus Trap blooms upon enemy contact, with enemies in the area at the time of its trigger becoming revealed for 4 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -544,42 +494,22 @@
                       260
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      120,
-                      120,
-                      120,
-                      120,
                       120
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -597,42 +527,22 @@
                       169
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      78,
-                      78,
-                      78,
-                      78,
                       78
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      65,
-                      65,
-                      65,
-                      65,
                       65
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -645,18 +555,25 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              30
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                2,
-                2,
-                2,
-                2,
                 2
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -664,8 +581,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -698,11 +615,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jhin/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Jhin channels for up to 10 seconds, transforming his weapon into a cannon and gaining the ability to recast Curtain Call 4 times within the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jhin channels for up to 10 seconds, transforming his weapon into a cannon and gaining the ability to recast Curtain Call 4 times within the duration.</p></div>",
             "leveling": []
           },
           {
-            "description": "Recast: After 0.2 seconds into the cast time, Jhin fires a round in the target direction that grants sight around its trajectory for 0.5 seconds and deals physical damage to enemies hit, increased by 0% : 300% (based on target's missing health). The bullet stops upon hitting an enemy champion, slowing them by 80% for 0.5 seconds and revealing them for 2 seconds. Each cast has a static cooldown of 1 second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> After 0.2 seconds into the cast time, Jhin fires a round in the target direction that grants sight around its trajectory for 0.5 seconds and deals physical damage to enemies hit, increased by 0% - 300% (based on target's missing health). The bullet stops upon hitting an enemy champion, slowing them by 80% for 0.5 seconds and revealing them for 2 seconds. Each cast has a static cooldown of 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage per Bullet",
@@ -714,20 +631,14 @@
                       192
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -743,20 +654,14 @@
                       768
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -777,20 +682,14 @@
                       384
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -806,20 +705,14 @@
                       1536
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      200,
-                      200,
                       200
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -828,7 +721,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -837,7 +739,9 @@
                 105,
                 90
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -845,8 +749,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -868,5 +772,6 @@
       }
     ]
   },
+  "lore": "Jhin is a meticulous criminal psychopath who believes murder is art. Once an Ionian prisoner, but freed by shadowy elements within Ionia's ruling council, the serial killer now works as their cabal's assassin. Using his gun as his paintbrush, Jhin creates works of artistic brutality, horrifying victims and onlookers. He gains a cruel pleasure from putting on his gruesome theater, making him the ideal choice to send the most powerful of messages: terror.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/jhin/skins/base/images/jhin_splash_centered_0.jpg"
 }

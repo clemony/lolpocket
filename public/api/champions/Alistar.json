@@ -96,7 +96,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Alistar/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Alistar generates a stack of Triumph for each enemy champion he stuns or displaces with his abilities, and each time a nearby enemy minion or non-epic monster dies. He generates 7 stacks if a nearby enemy champion or epic monster dies.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Alistar generates a stack of Triumph for each enemy champion he stuns or displaces with his abilities, and each time a nearby enemy minion or non-epic monster dies. He generates 7 stacks if a nearby enemy champion or epic monster dies.</p></div>",
             "leveling": []
           },
           {
@@ -113,11 +113,11 @@
           "modifiers": [
             {
               "values": [
-                3,
-                3,
                 3
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -153,7 +153,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Alistar/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Alistar smashes the ground beneath him, dealing magic damage to nearby enemies and stunning and knocking them up simultaneously for 1 second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Alistar smashes the ground beneath him, dealing magic damage to nearby enemies and stunning and knocking them up simultaneously for 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -167,26 +167,14 @@
                       220
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -195,7 +183,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -206,7 +207,9 @@
                 11,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -214,8 +217,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -242,7 +245,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Alistar/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Alistar dashes to the target enemy's location. If they are within 400 units upon arrival, he deals them magic damage and knocks them back 700 units over 0.5 seconds while also stunning them for 0.75 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Alistar dashes to the target enemy's location. If they are within 400 units upon arrival, he deals them magic damage and knocks them back 700 units over 0.5 seconds while also stunning them for 0.75 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -256,26 +259,14 @@
                       275
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -284,7 +275,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -295,7 +299,9 @@
                 11,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -303,8 +309,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -331,7 +337,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Alistar/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Alistar tramples the ground around him every 0.5 seconds over 5 seconds, becoming ghosted and dealing magic damage to nearby enemies. Each time this damages at least one enemy champion, he generates a stack of Trample that lasts for the remaining duration, stacking up to 5 times.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Alistar tramples the ground around him every 0.5 seconds over 5 seconds, becoming ghosted and dealing magic damage to nearby enemies. Each time this damages at least one enemy champion, he generates a stack of Trample that lasts for the remaining duration, stacking up to 5 times.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",
@@ -345,26 +351,14 @@
                       20
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      7,
-                      7,
-                      7,
-                      7,
                       7
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -382,26 +376,14 @@
                       200
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -410,11 +392,24 @@
             ]
           },
           {
-            "description": "At 5 stacks, Alistar's next basic attack on-hit against a champion within 6 seconds ends Trample's effects to deal 20 : 275 (based on level) bonus magic damage and stun the target for 1 second.",
+            "description": "At 5 stacks, Alistar's next basic attack on-hit against a champion within 6 seconds ends Trample's effects to deal 20 - 275 (based on level) bonus magic damage and stun the target for 1 second.",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -425,7 +420,9 @@
                 10.5,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -433,8 +430,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Special",
         "projectile": null,
         "onHitEffects": null,
@@ -461,7 +458,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Alistar/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Alistar cleanses himself of all crowd control. For the next 7 seconds, he reduces incoming damage taken.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Alistar cleanses himself of all crowd control. For the next 7 seconds, he reduces incoming damage taken.</p></div>",
             "leveling": [
               {
                 "attribute": "Damage Reduction",
@@ -473,8 +470,6 @@
                       75
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -483,7 +478,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -492,7 +496,9 @@
                 100,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -500,7 +506,7 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -523,5 +529,6 @@
       }
     ]
   },
+  "lore": "Always a mighty warrior with a fearsome reputation, Alistar seeks revenge for the death of his clan at the hands of the Noxian empire. Though he was enslaved and forced into the life of a gladiator, his unbreakable will was what kept him from truly becoming a beast. Now, free of the chains of his former masters, he fights in the name of the downtrodden and the disadvantaged, his rage as much a weapon as his horns, hooves and fists.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/alistar/skins/base/images/alistar_splash_centered_0.jpg"
 }

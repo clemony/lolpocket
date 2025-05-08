@@ -24,6 +24,7 @@ for (const champ of Object.values(champions) as FullChampion[]) {
     roles,
     attributeRatings,
     abilities,
+    lore,
     skins,
   } = champ
 
@@ -52,7 +53,6 @@ for (const champ of Object.values(champions) as FullChampion[]) {
       )
     : {}
 
-  console.log(champ.name, typeof abilities, Array.isArray(abilities), abilities)
 
   const champDataRaw = {
     id,
@@ -60,13 +60,14 @@ for (const champ of Object.values(champions) as FullChampion[]) {
     name,
     title,
     fullName,
-    resource: normalize(resource.replace('_', ' ')),
+    resource: normalize(resource),
     attackType: normalize(attackType),
     stats: filteredStats,
     positions: normalizeArray(positions),
     roles: normalizeArray(roles),
     attributeRatings,
     abilities: cleanedAbilities,
+    lore,
     splash,
   }
 

@@ -102,7 +102,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Whenever Twisted Fate kills an enemy, he generates 1 : 6 (based on probability). He also has a chance equal to his critical strike chance to generate an additional 1 : 6 (based on probability).",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Whenever Twisted Fate kills an enemy, he generates 1 - 6 (based on probability). He also has a chance equal to his critical strike chance to generate an additional 1 - 6 (based on probability).</p></div>",
             "leveling": []
           },
           {
@@ -146,7 +146,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Twisted Fate throws a fan of three cards in a cone in the target direction that each deal magic damage to enemies hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Twisted Fate throws a fan of three cards in a cone in the target direction that each deal magic damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -160,42 +160,22 @@
                       240
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      85,
-                      85,
-                      85,
-                      85,
                       85
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -208,7 +188,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              70,
+              80,
+              90,
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -219,7 +212,9 @@
                 5.25,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -227,8 +222,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Area of effect",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -255,15 +250,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Twisted Fate cycles through three cards for 6 seconds, hovering each for 0.5 seconds at a time. Pick a Card can be recast within the duration, which selects the current card hovered.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Twisted Fate cycles through three cards for 6 seconds, hovering each for 0.5 seconds at a time. Pick a Card can be recast within the duration, which selects the current card hovered.</p></div>",
             "leveling": []
           },
           {
-            "description": "Recast: Twisted Fate empowers his next basic attack within 6 seconds to have a 0.25-second cast time, deal modified magic damage, and apply an additional effect based on the card selected. This damage cannot critically strike but is increased based on critical strike chance.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Twisted Fate empowers his next basic attack within 6 seconds to have a 0.25-second cast time, deal modified magic damage, and apply an additional effect based on the card selected. This damage cannot critically strike but is increased based on critical strike chance.</p></div>",
             "leveling": []
           },
           {
-            "description": "Blue Card Bonus: Deals magic damage, increased by 0% : 57.5% (based on critical strike chance), and restores mana.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Blue Card Bonus:</p><p> Deals magic damage, increased by 0% - 57.5% (based on critical strike chance), and restores mana.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -277,42 +272,22 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -330,10 +305,6 @@
                       150
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -342,7 +313,7 @@
             ]
           },
           {
-            "description": "Red Card Bonus: Deals magic damage to the target and surrounding enemies, increased by 0% : 35% (based on critical strike chance). All targets hit are slowed for 2.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Red Card Bonus:</p><p> Deals magic damage to the target and surrounding enemies, increased by 0% - 35% (based on critical strike chance). All targets hit are slowed for 2.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -356,42 +327,22 @@
                       90
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -409,10 +360,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -421,7 +368,7 @@
             ]
           },
           {
-            "description": "Gold Card Bonus: Deals magic damage, increased by 0% : 25% (based on critical strike chance), and stuns the target for a duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Gold Card Bonus:</p><p> Deals magic damage, increased by 0% - 25% (based on critical strike chance), and stuns the target for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -435,42 +382,22 @@
                       45
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -488,10 +415,6 @@
                       2
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -500,18 +423,29 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                6,
-                6,
-                6,
-                6,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -519,8 +453,8 @@
         "targeting": "Auto",
         "affects": "Enemies, Self",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -547,7 +481,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/e",
         "effects": [
           {
-            "description": "Passive: Twisted Fate gains bonus attack speed. His basic attacks on-hit generate a stack of Stacked Deck, stacking up to 3 times. At 3 stacks, his next basic attack is empowered to consume them all to deal bonus magic damage, reduced to 50% against structures.Twisted Fate gains maximum stacks of Stacked Deck upon respawning.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Twisted Fate gains bonus attack speed. His basic attacks on-hit generate a stack of Stacked Deck, stacking up to 3 times. At 3 stacks, his next basic attack is empowered to consume them all to deal bonus magic damage, reduced to 50% against structures.Twisted Fate gains maximum stacks of Stacked Deck upon respawning.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -561,10 +495,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -582,42 +512,22 @@
                       165
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      20,
-                      20,
-                      20,
-                      20,
                       20
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -635,7 +545,7 @@
         "affects": "Enemies, Self",
         "spellshieldable": "false",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "proc",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -662,7 +572,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Twisted Fate marks all targetable enemy champions, revealing them for a duration. Destiny can be recast after 0.5 seconds within the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Twisted Fate marks all targetable enemy champions, revealing them for a duration. Destiny can be recast after 0.5 seconds within the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Effect Duration",
@@ -674,8 +584,6 @@
                       10
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -684,11 +592,20 @@
             ]
           },
           {
-            "description": "Recast - Gate: Twisted Fate channels for 1.5 seconds before blinking to the target location, destroying all projectiles targeting him in the process.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast - Gate:</p><p> Twisted Fate channels for 1.5 seconds before blinking to the target location, destroying all projectiles targeting him in the process.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -697,7 +614,9 @@
                 150,
                 120
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -705,7 +624,7 @@
         "targeting": "Auto / Location",
         "affects": "Enemies, Allies, Self",
         "spellshieldable": "True",
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -728,5 +647,6 @@
       }
     ]
   },
+  "lore": "Twisted Fate is an infamous cardsharp and swindler who has gambled and charmed his way across much of the known world, earning the enmity and admiration of the rich and foolish alike. He rarely takes things seriously, greeting each day with a mocking smile and an insouciant swagger. In every possible way, Twisted Fate always has an ace up his sleeve.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/twistedfate/skins/base/images/twistedfate_splash_centered_0.jpg"
 }

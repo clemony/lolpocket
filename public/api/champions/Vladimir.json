@@ -95,7 +95,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Vladimir gains (3.3% bonus health) as ability power and (160% AP) as bonus health. These two bonuses do not stack with each other.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Vladimir gains (3.3% bonus health) as ability power and (160% AP) as bonus health. These two bonuses do not stack with each other.</p></div>",
             "leveling": []
           }
         ],
@@ -135,7 +135,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Vladimir drains blood from the target enemy, dealing magic damage and healing himself. He then generates 1 point of Crimson Rush over the cooldown.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Vladimir drains blood from the target enemy, dealing magic damage and healing himself. He then generates 1 point of Crimson Rush over the cooldown.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -149,26 +149,14 @@
                       160
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -186,26 +174,14 @@
                       40
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      35,
-                      35,
-                      35,
-                      35,
                       35
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -218,7 +194,7 @@
             "leveling": []
           },
           {
-            "description": "Casting Transfusion during the surge consumes all Crimson Rush to deal 85% increased damage and heal Vladimir for an additional 30 : 200 (based on level) (+ 5% (+ 4% per 100 AP) of his missing health). The bonus healing is reduced to[ 35% ][ 10.5 : 70 (based on level) (+ 1.75% (+ 1.4% per 100 AP) of his missing health) ]against minions.",
+            "description": "Casting Transfusion during the surge consumes all Crimson Rush to deal 85% increased damage and heal Vladimir for an additional 30 - 200 (based on level) (+ 5% (+ 4% per 100 AP) of his missing health). The bonus healing is reduced to[ 35% ][ 10.5 - 70 (based on level) (+ 1.75% (+ 1.4% per 100 AP) of his missing health) ]against minions.",
             "leveling": [
               {
                 "attribute": "Increased Damage",
@@ -232,26 +208,14 @@
                       296
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      111,
-                      111,
-                      111,
-                      111,
                       111
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -271,7 +235,9 @@
                 5.7,
                 4.6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -280,7 +246,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Single target",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -307,7 +273,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Vladimir sinks into a pool of blood, becoming untargetable and ghosted for 2 seconds. He also gains 37.5% bonus movement speed that decays exponentially over 1 second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Vladimir sinks into a pool of blood, becoming untargetable and ghosted for 2 seconds. He also gains 37.5% bonus movement speed that decays exponentially over 1 second.</p></div>",
             "leveling": []
           },
           {
@@ -325,26 +291,14 @@
                       75
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      3.75,
-                      3.75,
-                      3.75,
-                      3.75,
                       3.75
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   }
@@ -362,26 +316,14 @@
                       300
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   }
@@ -394,7 +336,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              15
+            ],
+            "units": [
+              "%"
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -405,7 +356,9 @@
                 19,
                 16
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -413,8 +366,8 @@
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": null,
-        "resource": "CURRENT_HEALTH",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Current health",
+        "damageType": "Magic damage",
         "spellEffects": "aoedot",
         "projectile": null,
         "onHitEffects": null,
@@ -441,11 +394,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Vladimir charges for up to 1.5 seconds, during which he increases Tides of Blood's damage over the first second of the channel, and becomes slowed by 20% afterwards for the remaining duration. Tides of Blood can be recast within the duration, and does so automatically afterwards or if it is interrupted.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Vladimir charges for up to 1.5 seconds, during which he increases Tides of Blood's damage over the first second of the channel, and becomes slowed by 20% afterwards for the remaining duration. Tides of Blood can be recast within the duration, and does so automatically afterwards or if it is interrupted.</p></div>",
             "leveling": []
           },
           {
-            "description": "Recast: Vladimir unleashes a nova of 15 blood bolts around himself that each deal magic damage to the first enemy hit, increased based on charge time up to the first second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Vladimir unleashes a nova of 15 blood bolts around himself that each deal magic damage to the first enemy hit, increased based on charge time up to the first second.</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -459,42 +412,22 @@
                       90
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      1.5,
-                      1.5,
-                      1.5,
-                      1.5,
                       1.5
                     ],
                     "units": [
-                      "% maximum health",
-                      "% maximum health",
-                      "% maximum health",
-                      "% maximum health",
                       "% maximum health"
                     ]
                   },
                   {
                     "values": [
-                      35,
-                      35,
-                      35,
-                      35,
                       35
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -512,42 +445,22 @@
                       180
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      6,
-                      6,
-                      6,
-                      6,
                       6
                     ],
                     "units": [
-                      "% maximum health",
-                      "% maximum health",
-                      "% maximum health",
-                      "% maximum health",
                       "% maximum health"
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -570,10 +483,6 @@
                       60
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -590,7 +499,19 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              2,
+              4,
+              6,
+              8
+            ],
+            "units": [
+              "% (based on charge time)"
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -601,7 +522,9 @@
                 7,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -609,8 +532,8 @@
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
-        "resource": "MAXIMUM_HEALTH",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Maximum health",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -637,7 +560,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Vladimir spreads a virulent plague at the target location that infects enemies hit for 4 seconds, increasing the damage they take from all sources by 10%.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Vladimir spreads a virulent plague at the target location that infects enemies hit for 4 seconds, increasing the damage they take from all sources by 10%.</p></div>",
             "leveling": []
           },
           {
@@ -653,20 +576,14 @@
                       350
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -682,20 +599,14 @@
                       350
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -711,20 +622,14 @@
                       140
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      28,
-                      28,
                       28
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -740,20 +645,14 @@
                       910
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      182,
-                      182,
                       182
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -767,11 +666,11 @@
           "modifiers": [
             {
               "values": [
-                120,
-                120,
                 120
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -780,7 +679,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "special",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Area of effect",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -802,5 +701,6 @@
       }
     ]
   },
+  "lore": "A fiend with a thirst for mortal blood, Vladimir has influenced the affairs of Noxus since the empire's earliest days. In addition to unnaturally extending his life, his mastery of hemomancy allows him to control the minds and bodies of others as easily as his own. In the flamboyant salons of the Noxian aristocracy, this has enabled him to build a fanatical cult of personality around himself—while in the lowest back alleys, it allows him to bleed his enemies dry.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/vladimir/skins/base/images/vladimir_splash_centered_0.jpg"
 }

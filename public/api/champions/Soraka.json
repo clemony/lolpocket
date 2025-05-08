@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Soraka gains 90% bonus movement speed while facing nearby allied champions that are below 40% of their maximum health.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Soraka gains 90% bonus movement speed while facing nearby allied champions that are below 40% of their maximum health.</p></div>",
             "leveling": []
           }
         ],
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Soraka calls down a star upon the target location that grants sight of the area before landing after 0.25 : 1 (based on target range) seconds, dealing magic damage to enemies hit and slowing them by 30% for 1.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Soraka calls down a star upon the target location that grants sight of the area before landing after 0.25 - 1 (based on target range) seconds, dealing magic damage to enemies hit and slowing them by 30% for 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -153,26 +153,14 @@
                       225
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      35,
-                      35,
-                      35,
-                      35,
                       35
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -185,7 +173,7 @@
             "leveling": []
           },
           {
-            "description": "Rejuvenation: The target heals every 0.5 seconds and gains bonus movement speed that decays over the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Rejuvenation:</p><p> The target heals every 0.5 seconds and gains bonus movement speed that decays over the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Heal",
@@ -199,26 +187,14 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -236,26 +212,14 @@
                       24
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      6,
-                      6,
-                      6,
-                      6,
                       6
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -273,10 +237,6 @@
                       30
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -285,7 +245,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              45,
+              50,
+              55,
+              60,
+              65
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -296,7 +269,9 @@
                 5,
                 4
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -304,8 +279,8 @@
         "targeting": "Location",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -332,7 +307,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Soraka heals the target allied champion.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Soraka heals the target allied champion.</p></div>",
             "leveling": [
               {
                 "attribute": "Heal",
@@ -346,26 +321,14 @@
                       170
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -388,10 +351,6 @@
                       100
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -409,10 +368,6 @@
                       0
                     ],
                     "units": [
-                      "% of maximum health",
-                      "% of maximum health",
-                      "% of maximum health",
-                      "% of maximum health",
                       "% of maximum health"
                     ]
                   }
@@ -425,7 +380,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              10
+            ],
+            "units": [
+              "%"
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -436,7 +400,9 @@
                 3,
                 2
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -444,7 +410,7 @@
         "targeting": "Unit",
         "affects": "Allies / Self",
         "spellshieldable": null,
-        "resource": "OTHER",
+        "resource": "Other",
         "damageType": null,
         "spellEffects": "Heal",
         "projectile": "FALSE",
@@ -472,7 +438,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Soraka creates a celestial zone at the target location that deals magic damage to enemy champions within at the time of cast. The zone then persists for 1.5 seconds and silences enemies within.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Soraka creates a celestial zone at the target location that deals magic damage to enemy champions within at the time of cast. The zone then persists for 1.5 seconds and silences enemies within.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -486,26 +452,14 @@
                       170
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -528,26 +482,14 @@
                       340
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -565,10 +507,6 @@
                       2
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -577,7 +515,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70,
+              75,
+              80,
+              85,
+              90
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -588,7 +539,9 @@
                 17,
                 16
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -596,8 +549,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -624,7 +577,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Soraka calls upon the stars, healing herself and all allied champions, increased by 50% on targets below 40% of their maximum health.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Soraka calls upon the stars, healing herself and all allied champions, increased by 50% on targets below 40% of their maximum health.</p></div>",
             "leveling": [
               {
                 "attribute": "Heal",
@@ -636,20 +589,14 @@
                       350
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -665,20 +612,14 @@
                       525
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      75,
-                      75,
                       75
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -687,7 +628,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -696,7 +646,9 @@
                 135,
                 120
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -704,7 +656,7 @@
         "targeting": "Auto",
         "affects": "Allies",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": "Heal",
         "projectile": null,
@@ -727,5 +679,6 @@
       }
     ]
   },
+  "lore": "A wanderer from the celestial dimensions beyond Mount Targon, Soraka gave up her immortality to protect the mortal races from their own more violent instincts. She endeavors to spread the virtues of compassion and mercy to everyone she meets—even healing those who would wish harm upon her. And, for all Soraka has seen of this world's struggles, she still believes the people of Runeterra have yet to reach their full potential.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/soraka/skins/base/images/soraka_splash_centered_0.jpg"
 }

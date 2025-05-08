@@ -33,7 +33,7 @@ const variants = {
 </script>
 
 <template>
-  <TabsIndicator v-bind="{ ...forwarded, ...$attrs }" as-child :class="{ 'h-[100%]': props.orientation != 'vertical', 'w-[102%]': props.orientation == 'vertical' }">
+  <TabsIndicator v-bind="{ ...forwarded, ...$attrs }" as-child :class="{ 'h-[100%]': props.orientation != 'vertical', 'w-[100%]': props.orientation == 'vertical' }">
     <motion.div
       :variants="variants"
       :animate="props.orientation == 'vertical' ? 'vertical' : 'horizontal'"
@@ -44,7 +44,7 @@ const variants = {
       }"
       :class="cn(' -top-0 absolute transition-all rounded-lg ', { '!top-0 left-1': props.orientation == 'vertical' }, props.class)">
       <motion.div
-        class="h-full w-full rounded-lg bg-b1 text-bc shadow  scale-x-104"
+        class="h-full w-full rounded-lg bg-b1 text-bc shadow"
         :class="cn('   ', { 'shadow-sm shadow-black/3 !bg-b1/90 ': props.orientation == 'vertical', 'bg-neutral/80 border-accent border drop-shadow-sm ': props.contrast })" />
     </motion.div>
   </TabsIndicator>

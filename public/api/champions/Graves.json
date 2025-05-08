@@ -99,15 +99,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Graves/ability-icon/p",
         "effects": [
           {
-            "description": "Innate - Double Barrel: Graves' basic attacks fire his shotgun to consume ammunition within 2 shells. He will reload over a few seconds immediately after expending all shells or withholding leftover shells for a while. The reload time is reduced by Graves' level and bonus attack speed, and can be interrupted by declaring an attack or casting an ability.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Double Barrel:</p><p> Graves' basic attacks fire his shotgun to consume ammunition within 2 shells. He will reload over a few seconds immediately after expending all shells or withholding leftover shells for a while. The reload time is reduced by Graves' level and bonus attack speed, and can be interrupted by declaring an attack or casting an ability.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate - 12-Gauge: Graves' basic attack sprays 4 pellets in a cone, each colliding with the first enemy unit in their path, dealing 70% : 100.01% (based on level) AD physical damage plus[ 23.31% : 33.3% (based on level) AD additional physical damage ][ about one-third of the damage ]for each subsequent pellet hitting the same target, up to 139.93% : 199.92% (based on level) AD total physical damage against a single target. Pellets deal 25% reduced damage against structures.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - 12-Gauge:</p><p> Graves' basic attack sprays 4 pellets in a cone, each colliding with the first enemy unit in their path, dealing 70% - 100.01% (based on level) AD physical damage plus[ 23.31% - 33.3% (based on level) AD additional physical damage ][ about one-third of the damage ]for each subsequent pellet hitting the same target, up to 139.93% - 199.92% (based on level) AD total physical damage against a single target. Pellets deal 25% reduced damage against structures.</p></div>",
             "leveling": []
           },
           {
-            "description": "Critical strikes spray 6 pellets over a 25% wider cone, with each pellet dealing[ (33.75% + 18%) increased damage, ][ increased damage equal to 45% bonus critical damage, ]resulting in[ 178.312% (+ 23.997%) total damage ][ 249.52% : 356.48% (based on level) (+ 33.58% : 47.97% (based on level)) AD total physical damage ]if all pellets hit a single target.",
+            "description": "Critical strikes spray 6 pellets over a 25% wider cone, with each pellet dealing[ (33.75% + 18%) increased damage, ][ increased damage equal to 45% bonus critical damage, ]resulting in[ 178.312% (+ 23.997%) total damage ][ 249.52% - 356.48% (based on level) (+ 33.58% - 47.97% (based on level)) AD total physical damage ]if all pellets hit a single target.",
             "leveling": []
           },
           {
@@ -115,7 +115,7 @@
             "leveling": []
           },
           {
-            "description": "Innate - Buckshot: Non-champion units hit by more than one pellet are knocked back, though not through terrain.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Buckshot:</p><p> Non-champion units hit by more than one pellet are knocked back, though not through terrain.</p></div>",
             "leveling": []
           }
         ],
@@ -128,7 +128,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -155,7 +155,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Graves/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Graves fires a round in the target direction that deals physical damage to enemies it passes through and leaves behind a powder trail.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Graves fires a round in the target direction that deals physical damage to enemies it passes through and leaves behind a powder trail.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -169,26 +169,14 @@
                       125
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -211,10 +199,6 @@
                       225
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -227,10 +211,6 @@
                       140
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -248,10 +228,6 @@
                       350
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -264,10 +240,6 @@
                       220
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -276,7 +248,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -287,7 +268,9 @@
                 7.75,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -295,8 +278,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -323,7 +306,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Graves/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Graves fires a smoke canister at the target location that upon impact deals magic damage to enemies within the area and slows them by 50% for 0.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Graves fires a smoke canister at the target location that upon impact deals magic damage to enemies within the area and slows them by 50% for 0.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -337,26 +320,14 @@
                       260
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -369,7 +340,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70,
+              75,
+              80,
+              85,
+              90
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -380,7 +364,9 @@
                 20,
                 18
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -388,8 +374,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -416,7 +402,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Graves/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Graves dashes to the target location, reloading one shell while generating a stack of True Grit for 4 seconds, stacking up to 8 times. Dashing towards an enemy champion generates 2 stacks of True Grit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Graves dashes to the target location, reloading one shell while generating a stack of True Grit for 4 seconds, stacking up to 8 times. Dashing towards an enemy champion generates 2 stacks of True Grit.</p></div>",
             "leveling": []
           },
           {
@@ -424,7 +410,7 @@
             "leveling": []
           },
           {
-            "description": "True Grit: For each stack, Graves gains bonus armor. Subsequent casts of Quickdraw and attacks versus non- minions will refresh the duration of True Grit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">True Grit:</p><p> For each stack, Graves gains bonus armor. Subsequent casts of Quickdraw and attacks versus non- minions will refresh the duration of True Grit.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Armor",
@@ -438,10 +424,6 @@
                       16
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -459,10 +441,6 @@
                       128
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -475,7 +453,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -486,7 +473,9 @@
                 13,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -494,7 +483,7 @@
         "targeting": "Location",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -522,7 +511,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Graves/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Graves fires an explosive shell in the target direction that deals physical damage to enemies hit and causes him to recoil 400 units in the opposite direction.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Graves fires an explosive shell in the target direction that deals physical damage to enemies hit and causes him to recoil 400 units in the opposite direction.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -534,20 +523,14 @@
                       575
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      150,
-                      150,
                       150
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -568,20 +551,14 @@
                       440
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      120,
-                      120,
                       120
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -590,7 +567,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -599,7 +585,9 @@
                 80,
                 60
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -607,8 +595,8 @@
         "targeting": "Direction",
         "affects": "Enemies / Self",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -630,5 +618,6 @@
       }
     ]
   },
+  "lore": "Malcolm Graves is a renowned mercenary, gambler, and thief—a wanted man in every city and empire he has visited. Even though he has an explosive temper, he possesses a strict sense of criminal honor, often enforced at the business end of his double-barreled shotgun Destiny. In recent years, he has reconciled a troubled partnership with Twisted Fate, and together they have prospered once more in the turmoil of Bilgewater's criminal underbelly.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/graves/skins/base/images/graves_splash_centered_0.jpg"
 }

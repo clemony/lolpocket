@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Periodically, Ziggs empowers his next basic attack to deal 20 : 160 (based on level) (+ 50% AP) bonus magic damage,[ increased by 75% against structures. ][ increased to 35 : 280 (based on level) (+ 87.5% AP) against structures. ]",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Periodically, Ziggs empowers his next basic attack to deal 20 - 160 (based on level) (+ 50% AP) bonus magic damage,[ increased by 75% against structures. ][ increased to 35 - 280 (based on level) (+ 87.5% AP) against structures. ]</p></div>",
             "leveling": []
           },
           {
@@ -112,11 +112,11 @@
           "modifiers": [
             {
               "values": [
-                12,
-                12,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -125,7 +125,7 @@
         "affects": "Enemies",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -152,7 +152,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Ziggs throws a bomb to the target location that bounces forward up to two times, with the distance traveled each time being based on how far it was originally thrown.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ziggs throws a bomb to the target location that bounces forward up to two times, with the distance traveled each time being based on how far it was originally thrown.</p></div>",
             "leveling": []
           },
           {
@@ -170,26 +170,14 @@
                       285
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      65,
-                      65,
-                      65,
-                      65,
                       65
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -202,7 +190,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -213,7 +214,9 @@
                 4.5,
                 4
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -221,8 +224,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -249,11 +252,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Ziggs hurls a charge to the target location, remaining there for 4 seconds and granting sight of the area. Satchel Charge can be recast within the duration, and does so automatically afterwards. If recast while in flight, the charge will explode immediately upon landing.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ziggs hurls a charge to the target location, remaining there for 4 seconds and granting sight of the area. Satchel Charge can be recast within the duration, and does so automatically afterwards. If recast while in flight, the charge will explode immediately upon landing.</p></div>",
             "leveling": []
           },
           {
-            "description": "Recast: Ziggs detonates the charge, causing it to explode to deal magic damage to nearby enemies and knock them back up to 500 units away from the center of the explosion, though not through terrain. If this hits Ziggs, he will dash up to 825 units away from the center.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Ziggs detonates the charge, causing it to explode to deal magic damage to nearby enemies and knock them back up to 500 units away from the center of the explosion, though not through terrain. If this hits Ziggs, he will dash up to 825 units away from the center.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -267,26 +270,14 @@
                       210
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -295,7 +286,7 @@
             ]
           },
           {
-            "description": "Turret Explosion: The explosion also executes enemy turrets within that are below a maximum health threshold.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Turret Explosion:</p><p> The explosion also executes enemy turrets within that are below a maximum health threshold.</p></div>",
             "leveling": [
               {
                 "attribute": "Demolition Threshold",
@@ -309,10 +300,6 @@
                       35
                     ],
                     "units": [
-                      "% of turret's maximum health",
-                      "% of turret's maximum health",
-                      "% of turret's maximum health",
-                      "% of turret's maximum health",
                       "% of turret's maximum health"
                     ]
                   }
@@ -325,7 +312,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -336,7 +332,9 @@
                 14,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -344,8 +342,8 @@
         "targeting": "Location / Auto",
         "affects": "Enemies / Self",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -372,7 +370,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Ziggs scatters a cluster of 11 proximity mines over the target location that grant sight of the area for 2 seconds, arming after 0.5 seconds and lasting for up to 10 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ziggs scatters a cluster of 11 proximity mines over the target location that grant sight of the area for 2 seconds, arming after 0.5 seconds and lasting for up to 10 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -390,26 +388,14 @@
                       190
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -427,26 +413,14 @@
                       76
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      12,
-                      12,
-                      12,
-                      12,
                       12
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -464,26 +438,14 @@
                       950
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      150,
-                      150,
-                      150,
-                      150,
                       150
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -501,10 +463,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -513,18 +471,29 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70,
+              80,
+              90,
+              100,
+              110
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                16,
-                16,
-                16,
-                16,
                 16
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -532,8 +501,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -560,7 +529,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Ziggs catapults the Mega Inferno Bomb to the target location, granting sight within a 600 radius around its destination for 4 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ziggs catapults the Mega Inferno Bomb to the target location, granting sight within a 600 radius around its destination for 4 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -576,20 +545,14 @@
                       400
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      73.33,
-                      73.33,
                       73.33
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -605,20 +568,14 @@
                       600
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      110,
-                      110,
                       110
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -627,7 +584,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -636,7 +602,9 @@
                 95,
                 70
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -644,8 +612,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "aoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -667,5 +635,6 @@
       }
     ]
   },
+  "lore": "With a love of big bombs and short fuses, the yordle Ziggs is an explosive force of nature. As an inventor's assistant in Piltover, he was bored by his predictable life and befriended a mad, blue-haired bomber named Jinx. After a wild night on the town, Ziggs took her advice and moved to Zaun, where he now explores his fascinations more freely, terrorizing the chem-barons and regular citizens alike in his never ending quest to blow stuff up.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ziggs/skins/base/images/ziggs_splash_centered_0.jpg"
 }

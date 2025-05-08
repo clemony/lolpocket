@@ -91,15 +91,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Mordekaiser/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Mordekaiser's basic attacks are empowered to deal 40% AP bonus magic damage on-hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Mordekaiser's basic attacks are empowered to deal 40% AP bonus magic damage on-hit.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate: Morderkaiser generates a stack for each enemy champion or large monster hit by his damaging basic attacks or basic abilities, lasting for 4 seconds, refreshing on subsequent hits, and stacking up to 3 times. At 3 stacks, he gains Darkness Rise.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Morderkaiser generates a stack for each enemy champion or large monster hit by his damaging basic attacks or basic abilities, lasting for 4 seconds, refreshing on subsequent hits, and stacking up to 3 times. At 3 stacks, he gains Darkness Rise.</p></div>",
             "leveling": []
           },
           {
-            "description": "Darkness Rise: Mordekaiser gains 3 / 6 / 9% (based on level) bonus movement speed and deals[ 5 (+ 30% AP) (+ 1% : 5% (based on level) of target's maximum health) magic damage every second ][ 0.625 (+ 3.75% AP) (+ 0.13% : 0.63% (based on level) of target's maximum health) magic damage every 0.125 seconds ]to nearby enemies. Against monsters, the damage is capped at[ 40 : 200 (based on level) per second. ][ 5 : 25 (based on level) per 0.125 seconds. ]",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Darkness Rise:</p><p> Mordekaiser gains 3 / 6 / 9% (based on level) bonus movement speed and deals[ 5 (+ 30% AP) (+ 1% - 5% (based on level) of target's maximum health) magic damage every second ][ 0.625 (+ 3.75% AP) (+ 0.13% - 0.63% (based on level) of target's maximum health) magic damage every 0.125 seconds ]to nearby enemies. Against monsters, the damage is capped at[ 40 - 200 (based on level) per second. ][ 5 - 25 (based on level) per 0.125 seconds. ]</p></div>",
             "leveling": []
           }
         ],
@@ -112,7 +112,7 @@
         "affects": "Self / Enemies",
         "spellshieldable": null,
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "aoedot",
         "projectile": null,
         "onHitEffects": null,
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Mordekaiser/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Mordekaiser turns to face the target direction before striking his mace down in a line, dealing magic damage to enemies within, increased if only one enemy is hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Mordekaiser turns to face the target direction before striking his mace down in a line, dealing magic damage to enemies within, increased if only one enemy is hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -166,23 +166,6 @@
                       45
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -195,26 +178,14 @@
                       200
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -232,10 +203,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -255,7 +222,9 @@
                 5,
                 4
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -264,7 +233,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "special",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -291,15 +260,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Mordekaiser/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Mordekaiser stores 45% of the post-mitigation damage he deals and 7.5% of the pre-mitigation damage he takes,[ reduced by 75% for non-champion sources, ][ reduced to 11.25% of damage dealt and 3.75% of damage taken for non-champion sources, ]as Potential Shield on his secondary resource bar, up to 30% of his maximum health. The Potential Shield decays by 8 : 25 (based on level) every second after not dealing or taking damage for 1 second. While Indestructible is not on cooldown, the Potential Shield will not decay below a minimum of 5% of his maximum health, and it will be set to that amount when it comes off cooldown if it was previously below it.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Mordekaiser stores 45% of the post-mitigation damage he deals and 7.5% of the pre-mitigation damage he takes,[ reduced by 75% for non-champion sources, ][ reduced to 11.25% of damage dealt and 3.75% of damage taken for non-champion sources, ]as Potential Shield on his secondary resource bar, up to 30% of his maximum health. The Potential Shield decays by 8 - 25 (based on level) every second after not dealing or taking damage for 1 second. While Indestructible is not on cooldown, the Potential Shield will not decay below a minimum of 5% of his maximum health, and it will be set to that amount when it comes off cooldown if it was previously below it.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Mordekaiser consumes his Potential Shield to grant himself a shield for the same amount for 4 seconds. The shield decays exponentially over the duration. Indestructible can be recast after 0.5 seconds while the shield is active.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Mordekaiser consumes his Potential Shield to grant himself a shield for the same amount for 4 seconds. The shield decays exponentially over the duration. Indestructible can be recast after 0.5 seconds while the shield is active.</p></div>",
             "leveling": []
           },
           {
-            "description": "Recast: Mordekaiser consumes the remaining shield, healing for a portion of the amount.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Mordekaiser consumes the remaining shield, healing for a portion of the amount.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield to Healing",
@@ -313,10 +282,6 @@
                       45
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -336,7 +301,9 @@
                 9,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -372,7 +339,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Mordekaiser/ability-icon/e",
         "effects": [
           {
-            "description": "Passive: Mordekaiser gains magic penetration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Mordekaiser gains magic penetration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Penetration",
@@ -386,10 +353,6 @@
                       15
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -398,7 +361,7 @@
             ]
           },
           {
-            "description": "Active: Mordekaiser summons a claw in the target direction that grants sight of the area. After 0.5 seconds, it deals magic damage to enemies within and pulls them 250 units.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Mordekaiser summons a claw in the target direction that grants sight of the area. After 0.5 seconds, it deals magic damage to enemies within and pulls them 250 units.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -412,26 +375,14 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -451,7 +402,9 @@
                 12,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -460,7 +413,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "aoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -487,7 +440,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Mordekaiser/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Mordekaiser aims his mace towards the target enemy champion, slowing them by 75% and revealing them over the cast time, and then banishing them with him to the Death Realm for 7 seconds. Mordekaiser also consumes the target's soul for 7 seconds, healing himself for 10% of their maximum health and reducing their current attack damage, ability power, total attack speed, maximum health, armor, magic resist, and size by 10%, in addition to gaining them for himself. If the target dies while inside the Death Realm, Mordekaiser keeps their partial stats until they respawn.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Mordekaiser aims his mace towards the target enemy champion, slowing them by 75% and revealing them over the cast time, and then banishing them with him to the Death Realm for 7 seconds. Mordekaiser also consumes the target's soul for 7 seconds, healing himself for 10% of their maximum health and reducing their current attack damage, ability power, total attack speed, maximum health, armor, magic resist, and size by 10%, in addition to gaining them for himself. If the target dies while inside the Death Realm, Mordekaiser keeps their partial stats until they respawn.</p></div>",
             "leveling": []
           },
           {
@@ -508,7 +461,9 @@
                 120,
                 100
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -539,5 +494,6 @@
       }
     ]
   },
+  "lore": "Twice slain and thrice born, Mordekaiser is a brutal warlord from a foregone epoch who uses his necromantic sorcery to bind souls into an eternity of servitude. Few now remain who remember his earlier conquests, or know the true extent of his powers—but there are some ancient souls that do, and they fear the day when he may return to claim dominion over both the living and the dead.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/base/images/mordekaiser_splash_centered_0.jpg"
 }

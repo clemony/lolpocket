@@ -96,11 +96,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiddlesticks/ability-icon/p",
         "effects": [
           {
-            "description": "Innate - Scarecrow Effigy: Fiddlesticks begins the game with an exclusive Scarecrow Effigy, which permanently occupies the trinket slot. Fiddlesticks can pretend to be an Effigy by standing still and not acting nor being acted upon for 2 seconds, during which it adjusts its body into a scarecrow and extends its arm out to expose its lantern.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Scarecrow Effigy:</p><p> Fiddlesticks begins the game with an exclusive Scarecrow Effigy, which permanently occupies the trinket slot. Fiddlesticks can pretend to be an Effigy by standing still and not acting nor being acted upon for 2 seconds, during which it adjusts its body into a scarecrow and extends its arm out to expose its lantern.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate - A Harmless Scarecrow: From level 6 onward, placing an Effigy also summons a Sweeper Drone at the location for 6 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - A Harmless Scarecrow:</p><p> From level 6 onward, placing an Effigy also summons a Sweeper Drone at the location for 6 seconds.</p></div>",
             "leveling": []
           }
         ],
@@ -140,7 +140,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiddlesticks/ability-icon/q",
         "effects": [
           {
-            "description": "Passive: While Fiddlesticks has been out of combat for at least 2.5 seconds and is not visible to the enemy team, or is pretending to be an Effigy, its next damaging ability will additionally fear targets hit for a duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> While Fiddlesticks has been out of combat for at least 2.5 seconds and is not visible to the enemy team, or is pretending to be an Effigy, its next damaging ability will additionally fear targets hit for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Fear Duration",
@@ -154,10 +154,6 @@
                       2.25
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -166,7 +162,7 @@
             ]
           },
           {
-            "description": "Active: Fiddlesticks launches a crow at the target enemy that deals magic damage and fears them for a duration. Terrify has a minimum damage threshold and is capped at 400 against monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Fiddlesticks launches a crow at the target enemy that deals magic damage and fears them for a duration. Terrify has a minimum damage threshold and is capped at 400 against monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -180,26 +176,14 @@
                       9
                     ],
                     "units": [
-                      "%  of target's current health",
-                      "%  of target's current health",
-                      "%  of target's current health",
-                      "%  of target's current health",
                       "%  of target's current health"
                     ]
                   },
                   {
                     "values": [
-                      2,
-                      2,
-                      2,
-                      2,
                       2
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -217,10 +201,6 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -238,10 +218,6 @@
                       2.25
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -264,26 +240,14 @@
                       18
                     ],
                     "units": [
-                      "%  of target's current health",
-                      "%  of target's current health",
-                      "%  of target's current health",
-                      "%  of target's current health",
                       "%  of target's current health"
                     ]
                   },
                   {
                     "values": [
-                      4,
-                      4,
-                      4,
-                      4,
                       4
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -301,10 +265,6 @@
                       240
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -317,7 +277,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              65
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -328,7 +297,9 @@
                 13.5,
                 13
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -336,8 +307,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -364,7 +335,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiddlesticks/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Fiddlesticks forms a tether between itself and each nearby enemy over the cast time, then channels for up to 2 seconds to harvest their souls, revealing them in the process.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Fiddlesticks forms a tether between itself and each nearby enemy over the cast time, then channels for up to 2 seconds to harvest their souls, revealing them in the process.</p></div>",
             "leveling": []
           },
           {
@@ -382,26 +353,14 @@
                       180
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      35,
-                      35,
-                      35,
-                      35,
                       35
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -419,26 +378,14 @@
                       45
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      8.75,
-                      8.75,
-                      8.75,
-                      8.75,
                       8.75
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -456,26 +403,14 @@
                       45
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      8.75,
-                      8.75,
-                      8.75,
-                      8.75,
                       8.75
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -488,10 +423,6 @@
                       22
                     ],
                     "units": [
-                      "% of target's missing health",
-                      "% of target's missing health",
-                      "% of target's missing health",
-                      "% of target's missing health",
                       "% of target's missing health"
                     ]
                   }
@@ -509,26 +440,14 @@
                       360
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -541,10 +460,6 @@
                       22
                     ],
                     "units": [
-                      "% of target's missing health",
-                      "% of target's missing health",
-                      "% of target's missing health",
-                      "% of target's missing health",
                       "% of target's missing health"
                     ]
                   }
@@ -567,10 +482,6 @@
                       55
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -588,10 +499,6 @@
                       198
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -604,10 +511,6 @@
                       38.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -620,10 +523,6 @@
                       12.1
                     ],
                     "units": [
-                      "% of target's missing health",
-                      "% of target's missing health",
-                      "% of target's missing health",
-                      "% of target's missing health",
                       "% of target's missing health"
                     ]
                   }
@@ -641,26 +540,14 @@
                       218.7
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      42.525,
-                      42.525,
-                      42.525,
-                      42.525,
                       42.525
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -673,10 +560,6 @@
                       13.365
                     ],
                     "units": [
-                      "% of target's missing health",
-                      "% of target's missing health",
-                      "% of target's missing health",
-                      "% of target's missing health",
                       "% of target's missing health"
                     ]
                   }
@@ -694,26 +577,14 @@
                       27
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      5.25,
-                      5.25,
-                      5.25,
-                      5.25,
                       5.25
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -726,10 +597,6 @@
                       1.65
                     ],
                     "units": [
-                      "% of target's missing health",
-                      "% of target's missing health",
-                      "% of target's missing health",
-                      "% of target's missing health",
                       "% of target's missing health"
                     ]
                   }
@@ -746,7 +613,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              65,
+              70,
+              75,
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -757,7 +637,9 @@
                 8.5,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -765,8 +647,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "aoedot",
         "projectile": null,
         "onHitEffects": null,
@@ -793,7 +675,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiddlesticks/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Fiddlesticks slashes the target location with its scythe, dealing magic damage to enemies within the area and slowing them for 1.25 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Fiddlesticks slashes the target location with its scythe, dealing magic damage to enemies within the area and slowing them for 1.25 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -807,26 +689,14 @@
                       210
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -844,10 +714,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -860,7 +726,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40,
+              45,
+              50,
+              55,
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -871,7 +750,9 @@
                 7,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -879,8 +760,8 @@
         "targeting": "Location",
         "affects": null,
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "AoE",
         "projectile": null,
         "onHitEffects": null,
@@ -907,7 +788,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiddlesticks/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Fiddlesticks channels for 1.5 seconds, then blinks to the target location upon completion with a murder of crows flying wildly around it for 5 seconds, dealing magic damage every 0.25 seconds to nearby enemies.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Fiddlesticks channels for 1.5 seconds, then blinks to the target location upon completion with a murder of crows flying wildly around it for 5 seconds, dealing magic damage every 0.25 seconds to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",
@@ -919,20 +800,14 @@
                       87.5
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      12.5,
-                      12.5,
                       12.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -948,20 +823,14 @@
                       1750
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      250,
-                      250,
                       250
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -974,7 +843,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -983,7 +861,9 @@
                 110,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -991,8 +871,8 @@
         "targeting": "Location",
         "affects": null,
         "spellshieldable": null,
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "aoe",
         "projectile": null,
         "onHitEffects": null,
@@ -1014,5 +894,6 @@
       }
     ]
   },
+  "lore": "Something has awoken in Runeterra. Something ancient. Something terrible. The ageless horror known as Fiddlesticks stalks the edges of mortal society, drawn to areas thick with paranoia where it feeds upon terrorized victims. Wielding a jagged scythe, the haggard, makeshift creature reaps fear itself, shattering the minds of those unlucky enough to survive in its wake. Beware the sounding of the crow, or the whispering of the shape that appears <i>almost</i> human… Fiddlesticks has returned.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fiddlesticks/skins/base/images/fiddlesticks_splash_centered_0.jpg"
 }

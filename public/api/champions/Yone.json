@@ -95,11 +95,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yone/ability-icon/p",
         "effects": [
           {
-            "description": "Innate - Intent: Yone's total critical strike chance is doubled from all other sources. Additionally,[ every 1% critical strike chance in excess of 100% is converted into 0.5 bonus attack damage. ][ every 50% critical strike chance in excess of 100% is converted into 25 bonus attack damage. ]",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Intent:</p><p> Yone's total critical strike chance is doubled from all other sources. Additionally,[ every 1% critical strike chance in excess of 100% is converted into 0.5 bonus attack damage. ][ every 50% critical strike chance in excess of 100% is converted into 25 bonus attack damage. ]</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate - Steel and Spirit: Yone's basic attacks alternate between his Steel Sword and Azakana Sword on-attack. Yone begins attacking with Steel Sword, and basic attacks with Azakana Sword deal 50% AD physical damage and 50% AD magic damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Steel and Spirit:</p><p> Yone's basic attacks alternate between his Steel Sword and Azakana Sword on-attack. Yone begins attacking with Steel Sword, and basic attacks with Azakana Sword deal 50% AD physical damage and 50% AD magic damage.</p></div>",
             "leveling": []
           }
         ],
@@ -112,7 +112,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": null,
         "resource": null,
-        "damageType": "MIXED_DAMAGE",
+        "damageType": "Mixed damage",
         "spellEffects": "basic",
         "projectile": null,
         "onHitEffects": null,
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yone/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Yone thrusts his Steel Sword in a line in the target direction that deals physical damage to enemies hit, applies on-hit effects to the first enemy hit, and triggers on-attack effects once. Mortal Steel's damage based on its AD ratio can critically strike for (175% + 40%) damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Yone thrusts his Steel Sword in a line in the target direction that deals physical damage to enemies hit, applies on-hit effects to the first enemy hit, and triggers on-attack effects once. Mortal Steel's damage based on its AD ratio can critically strike for (175% + 40%) damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -153,26 +153,14 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      105,
-                      105,
-                      105,
-                      105,
                       105
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -185,7 +173,7 @@
             "leveling": []
           },
           {
-            "description": "Gathering Storm Bonus: Yone dashes a fixed distance in the target direction and unleashes a whirlwind in the same direction, both dealing the same damage to enemies hit in their path and knocking them up for 0.75 seconds, but being unable to affect the same target twice.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Gathering Storm Bonus:</p><p> Yone dashes a fixed distance in the target direction and unleashes a whirlwind in the same direction, both dealing the same damage to enemies hit in their path and knocking them up for 0.75 seconds, but being unable to affect the same target twice.</p></div>",
             "leveling": []
           },
           {
@@ -198,17 +186,9 @@
           "modifiers": [
             {
               "values": [
-                4,
-                4,
-                4,
-                4,
                 4
               ],
               "units": [
-                " x (1 - (0.01 per 1.67% bonus attack speed)). This is capped at 67% reduction at 111.1% bonus attack speed.",
-                " x (1 - (0.01 per 1.67% bonus attack speed)). This is capped at 67% reduction at 111.1% bonus attack speed.",
-                " x (1 - (0.01 per 1.67% bonus attack speed)). This is capped at 67% reduction at 111.1% bonus attack speed.",
-                " x (1 - (0.01 per 1.67% bonus attack speed)). This is capped at 67% reduction at 111.1% bonus attack speed.",
                 " x (1 - (0.01 per 1.67% bonus attack speed)). This is capped at 67% reduction at 111.1% bonus attack speed."
               ]
             }
@@ -219,7 +199,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "special",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -246,7 +226,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yone/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Yone cleaves his Azakana Sword in a cone in the target direction, dealing equal parts physical and magic damage to enemies hit. The total mixed damage has a minimum threshold of 40 : 410 (based on level) against minions and a maximum threshold of 150 : 320 (based on level) against monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Yone cleaves his Azakana Sword in a cone in the target direction, dealing equal parts physical and magic damage to enemies hit. The total mixed damage has a minimum threshold of 40 - 410 (based on level) against minions and a maximum threshold of 150 - 320 (based on level) against monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Mixed Damage",
@@ -260,10 +240,6 @@
                       50
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -276,10 +252,6 @@
                       12
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -297,10 +269,6 @@
                       25
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -313,10 +281,6 @@
                       6
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -334,10 +298,6 @@
                       25
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -350,10 +310,6 @@
                       6
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -362,7 +318,7 @@
             ]
           },
           {
-            "description": "If this hits an enemy, Yone grants himself a shield for 40 : 90 (based on level) (+ 65% bonus AD) for 1.5 seconds, increased by 100% if it hits a champion and by 50% for each subsequent champion hit.",
+            "description": "If this hits an enemy, Yone grants himself a shield for 40 - 90 (based on level) (+ 65% bonus AD) for 1.5 seconds, increased by 100% if it hits a champion and by 50% for each subsequent champion hit.",
             "leveling": []
           }
         ],
@@ -371,17 +327,9 @@
           "modifiers": [
             {
               "values": [
-                14,
-                14,
-                14,
-                14,
                 14
               ],
               "units": [
-                " x (1 - (0.01 per 1.51% bonus attack speed)). This is capped at 62.5% reduction at 94.6% bonus attack speed.",
-                " x (1 - (0.01 per 1.51% bonus attack speed)). This is capped at 62.5% reduction at 94.6% bonus attack speed.",
-                " x (1 - (0.01 per 1.51% bonus attack speed)). This is capped at 62.5% reduction at 94.6% bonus attack speed.",
-                " x (1 - (0.01 per 1.51% bonus attack speed)). This is capped at 62.5% reduction at 94.6% bonus attack speed.",
                 " x (1 - (0.01 per 1.51% bonus attack speed)). This is capped at 62.5% reduction at 94.6% bonus attack speed."
               ]
             }
@@ -392,7 +340,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "MIXED_DAMAGE",
+        "damageType": "Mixed damage",
         "spellEffects": "aoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -419,11 +367,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yone/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Yone dashes a fixed distance in the target direction, including through terrain, discarding his body and entering Spirit Form for 5 seconds. Yone's body is untargetable and is sent the same distance behind the cast location, though not through terrain, and is reclaimed when Soul Unbound ends.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Yone dashes a fixed distance in the target direction, including through terrain, discarding his body and entering Spirit Form for 5 seconds. Yone's body is untargetable and is sent the same distance behind the cast location, though not through terrain, and is reclaimed when Soul Unbound ends.</p></div>",
             "leveling": []
           },
           {
-            "description": "Spirit Form: Yone becomes ghosted and gains 10% : 30% (based on seconds active) bonus movement speed. His damaging basic attacks and abilities against enemy champions apply a mark that stores a portion of the post-mitigation damage dealt to the target by his attacks and abilities.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Spirit Form:</p><p> Yone becomes ghosted and gains 10% - 30% (based on seconds active) bonus movement speed. His damaging basic attacks and abilities against enemy champions apply a mark that stores a portion of the post-mitigation damage dealt to the target by his attacks and abilities.</p></div>",
             "leveling": [
               {
                 "attribute": "Damage Stored",
@@ -437,10 +385,6 @@
                       35
                     ],
                     "units": [
-                      "% of damage dealt",
-                      "% of damage dealt",
-                      "% of damage dealt",
-                      "% of damage dealt",
                       "% of damage dealt"
                     ]
                   }
@@ -453,7 +397,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Yone dashes back to his body with displacement immunity, ending Spirit Form and consuming the marks on each champion to deal true damage equal to the total amount of damage stored against each of them.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Yone dashes back to his body with displacement immunity, ending Spirit Form and consuming the marks on each champion to deal true damage equal to the total amount of damage stored against each of them.</p></div>",
             "leveling": []
           },
           {
@@ -472,7 +416,9 @@
                 13,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -481,7 +427,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "false",
         "resource": null,
-        "damageType": "TRUE_DAMAGE",
+        "damageType": "True damage",
         "spellEffects": "aoe",
         "projectile": null,
         "onHitEffects": null,
@@ -508,7 +454,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yone/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Yone prepares a strike over the cast time, then marks all enemies within an area in the target direction, knocking them down and stunning them for 1 second. He blinks 200 units beyond the center of the last enemy champion struck, or else to maximum range instead.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Yone prepares a strike over the cast time, then marks all enemies within an area in the target direction, knocking them down and stunning them for 1 second. He blinks 200 units beyond the center of the last enemy champion struck, or else to maximum range instead.</p></div>",
             "leveling": []
           },
           {
@@ -524,20 +470,14 @@
                       600
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -553,20 +493,14 @@
                       300
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -582,20 +516,14 @@
                       300
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -617,7 +545,9 @@
                 100,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -626,7 +556,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "special",
         "resource": null,
-        "damageType": "MIXED_DAMAGE",
+        "damageType": "Mixed damage",
         "spellEffects": "aoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -648,5 +578,6 @@
       }
     ]
   },
+  "lore": "In life, he was Yone—half-brother of Yasuo, and renowned student of his village's sword school. But upon his death at the hands of his brother, he found himself hunted by a malevolent entity of the spirit realm, and was forced to slay it with its own sword. Now, cursed to wear its demonic mask upon his face, Yone tirelessly hunts all such creatures in order to understand what he has become.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/yone/skins/base/images/yone_splash_centered_0.jpg"
 }

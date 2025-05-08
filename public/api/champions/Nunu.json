@@ -100,11 +100,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: When Nunu and Willump deal damage against an enemy champion, large monster or structure, they and a nearby allied champion gain Call of the Freljord for 4 seconds, prioritizing the ally with highest attack speed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> When Nunu and Willump deal damage against an enemy champion, large monster or structure, they and a nearby allied champion gain Call of the Freljord for 4 seconds, prioritizing the ally with highest attack speed.</p></div>",
             "leveling": []
           },
           {
-            "description": "Call of the Freljord: Gain 20% bonus attack speed and 10% bonus movement speed. Willump's basic attacks additionally deal 30% AD physical damage to secondary targets in a cone in front of him.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Call of the Freljord:</p><p> Gain 20% bonus attack speed and 10% bonus movement speed. Willump's basic attacks additionally deal 30% AD physical damage to secondary targets in a cone in front of him.</p></div>",
             "leveling": []
           },
           {
@@ -121,7 +121,7 @@
         "affects": "Self, Allies",
         "spellshieldable": null,
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "periodic",
         "projectile": null,
         "onHitEffects": null,
@@ -148,7 +148,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Willump takes a bite out of the target enemy, dealing damage and healing himself. The heal is increased by 50% while he is below 50% maximum health.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Willump takes a bite out of the target enemy, dealing damage and healing himself. The heal is increased by 50% while he is below 50% maximum health.</p></div>",
             "leveling": []
           },
           {
@@ -166,10 +166,6 @@
                       1200
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -187,42 +183,22 @@
                       185
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      90,
-                      90,
-                      90,
-                      90,
                       90
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      10,
-                      10,
-                      10,
-                      10,
                       10
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   }
@@ -240,42 +216,22 @@
                       277.5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      135,
-                      135,
-                      135,
-                      135,
                       135
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   }
@@ -298,42 +254,22 @@
                       220
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      65,
-                      65,
-                      65,
-                      65,
                       65
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      5,
-                      5,
-                      5,
-                      5,
                       5
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   }
@@ -351,42 +287,22 @@
                       111
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      54,
-                      54,
-                      54,
-                      54,
                       54
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      6,
-                      6,
-                      6,
-                      6,
                       6
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   }
@@ -404,42 +320,22 @@
                       222
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      81,
-                      81,
-                      81,
-                      81,
                       81
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      9,
-                      9,
-                      9,
-                      9,
                       9
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   }
@@ -448,7 +344,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -459,7 +364,9 @@
                 9,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -467,8 +374,8 @@
         "targeting": "Unit",
         "affects": "Enemies, Self",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MIXED_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Mixed damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -495,7 +402,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Willump cleanses himself from all slows and channels for up to 10 seconds, becoming ghosted and slow-immune and creating a rolling snowball. Willump automatically navigates his movement in the direction of the cursor and can steer the snowball with a slow turn rate that increases over time, resetting upon changing direction. The duo have their movement speed reduced by 50% for the first 1 second, but after a delay they start gaining 14 movement speed every 0.25 seconds, up to a cap.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Willump cleanses himself from all slows and channels for up to 10 seconds, becoming ghosted and slow-immune and creating a rolling snowball. Willump automatically navigates his movement in the direction of the cursor and can steer the snowball with a slow turn rate that increases over time, resetting upon changing direction. The duo have their movement speed reduced by 50% for the first 1 second, but after a delay they start gaining 14 movement speed every 0.25 seconds, up to a cap.</p></div>",
             "leveling": []
           },
           {
@@ -503,7 +410,7 @@
             "leveling": []
           },
           {
-            "description": "The snowball explodes upon hitting an enemy champion, large pet, medium / large monster or terrain, dealing magic damage to nearby enemies, increased by 0% : 400% (based on charge time), knocking them up for 0.5 : 0.75 (based on charge time) seconds and subsequently stunning them for 0 : 0.5 (based on charge time) seconds.",
+            "description": "The snowball explodes upon hitting an enemy champion, large pet, medium / large monster or terrain, dealing magic damage to nearby enemies, increased by 0% - 400% (based on charge time), knocking them up for 0.5 - 0.75 (based on charge time) seconds and subsequently stunning them for 0 - 0.5 (based on charge time) seconds.",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -517,26 +424,14 @@
                       72
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -554,26 +449,14 @@
                       360
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      150,
-                      150,
-                      150,
-                      150,
                       150
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -596,26 +479,14 @@
                       23.976
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      9.99,
-                      9.99,
-                      9.99,
-                      9.99,
                       9.99
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -633,26 +504,14 @@
                       119.88
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      49.95,
-                      49.95,
-                      49.95,
-                      49.95,
                       49.95
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -661,22 +520,33 @@
             ]
           },
           {
-            "description": "Recast: Willump releases the snowball, sending it rolling forward up to a maximum distance during which it will not grow any larger and will explode upon hitting an enemy.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Willump releases the snowball, sending it rolling forward up to a maximum distance during which it will not grow any larger and will explode upon hitting an enemy.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                14,
-                14,
-                14,
-                14,
                 14
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -684,8 +554,8 @@
         "targeting": "Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -712,7 +582,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Nunu throws a volley of 3 snowballs in the target direction over 0.4 seconds that each shatter upon hitting an enemy, dealing magic damage to enemies in a cone.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Nunu throws a volley of 3 snowballs in the target direction over 0.4 seconds that each shatter upon hitting an enemy, dealing magic damage to enemies in a cone.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Hit",
@@ -726,26 +596,14 @@
                       48
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -763,26 +621,14 @@
                       144
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      45,
-                      45,
-                      45,
-                      45,
                       45
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -805,10 +651,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -817,7 +659,7 @@
             ]
           },
           {
-            "description": "Recast: Nunu hurls another volley of snowballs, mimicking the first cast's effects. An enemy may only be slowed once for being hit by snowballs.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Nunu hurls another volley of snowballs, mimicking the first cast's effects. An enemy may only be slowed once for being hit by snowballs.</p></div>",
             "leveling": [
               {
                 "attribute": "Maximum Total Magic Damage",
@@ -831,26 +673,14 @@
                       432
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      135,
-                      135,
-                      135,
-                      135,
                       135
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -859,7 +689,7 @@
             ]
           },
           {
-            "description": "After 3 seconds from the first cast, Snowbound enemies near Willump take magic damage and are rooted for 0.5 : 1.5 (based on level) seconds.",
+            "description": "After 3 seconds from the first cast, Snowbound enemies near Willump take magic damage and are rooted for 0.5 - 1.5 (based on level) seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -873,26 +703,14 @@
                       60
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -901,7 +719,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -912,7 +743,9 @@
                 11,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -920,8 +753,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "aoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -948,7 +781,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Nunu and Willump channel a blizzard for up to 3 seconds, granting themselves a shield and slowing nearby enemies by 0% : 95% (based on channel time).",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Nunu and Willump channel a blizzard for up to 3 seconds, granting themselves a shield and slowing nearby enemies by 0% - 95% (based on channel time).</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -960,20 +793,14 @@
                       85
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      150,
-                      150,
                       150
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -984,8 +811,6 @@
                       50
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   }
@@ -998,7 +823,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Nunu and Willump cause the blizzard to explode, dealing magic damage to nearby enemies, modified to 0% : 100% (based on channel time). Affected enemies will remain slowed for 0 : 3 (based on channel time) seconds and any of the duo's remaining shield will decay over 3 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Nunu and Willump cause the blizzard to explode, dealing magic damage to nearby enemies, modified to 0% - 100% (based on channel time). Affected enemies will remain slowed for 0 - 3 (based on channel time) seconds and any of the duo's remaining shield will decay over 3 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -1010,20 +835,14 @@
                       1275
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      300,
-                      300,
                       300
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1032,7 +851,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -1041,7 +869,9 @@
                 100,
                 90
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -1049,8 +879,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -1072,5 +902,6 @@
       }
     ]
   },
+  "lore": "Once upon a time, there was a boy who wanted to prove he was a hero by slaying a fearsome monster—only to discover that the beast, a lonely and magical yeti, merely needed a friend. Bound together by ancient power and a shared love of snowballs, Nunu and Willump now ramble wildly across the Freljord, breathing life into imagined adventures. They hope that somewhere out there, they will find Nunu's mother. If they can save her, maybe they will be heroes after all…",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nunu/skins/base/images/nunu_splash_centered_0.jpg"
 }

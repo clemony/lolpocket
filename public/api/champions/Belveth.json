@@ -89,15 +89,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Belveth/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Bel'Veth attacks 36% faster than the median champion and her attack speed cap is modified to 9999.0, but all sources of damage (including on-hit damage) dealt by her basic attacks are reduced to 75%. Her attack speed does not increase through growth (per level).",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Bel'Veth attacks 36% faster than the median champion and her attack speed cap is modified to 9999.0, but all sources of damage (including on-hit damage) dealt by her basic attacks are reduced to 75%. Her attack speed does not increase through growth (per level).</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate: Bel'Veth's ability casts each generate 2 stacks of Death in Lavender, lasting for 5 seconds, refreshing on basic attacks and subsequent casts, and stacking up to 6 times. While Bel'Veth has stacks, she becomes ghosted and gains 20% : 40% (based on level) bonus attack speed. Her basic attacks each consume 1 stack.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Bel'Veth's ability casts each generate 2 stacks of Death in Lavender, lasting for 5 seconds, refreshing on basic attacks and subsequent casts, and stacking up to 6 times. While Bel'Veth has stacks, she becomes ghosted and gains 20% - 40% (based on level) bonus attack speed. Her basic attacks each consume 1 stack.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate: Whenever Bel'Veth scores a takedown against a champion, monster, or large minion within 3 seconds of damaging them, she generates a permanent stack of Lavender. Large minions and monsters generate 1 stack, champions and epic monsters generate 2 stacks.\nLavender: For each stack, Bel'Veth gains 0.28% : 1% (based on level) bonus attack speed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Whenever Bel'Veth scores a takedown against a champion, monster, or large minion within 3 seconds of damaging them, she generates a permanent stack of Lavender. Large minions and monsters generate 1 stack, champions and epic monsters generate 2 stacks.</p></div>\n\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Lavender:</p><p> For each stack, Bel'Veth gains 0.28% - 1% (based on level) bonus attack speed.</p></div>",
             "leveling": []
           }
         ],
@@ -137,7 +137,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Belveth/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Bel'Veth dashes in the designated direction, though not through terrain, dealing physical damage to enemies she passes through. Against the first target, Void Surge can critically strike for (175% + 40%) damage and applies on-hit effects, with on-hit damage reduced to 75% effectiveness, and life steal at 100% effectiveness.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Bel'Veth dashes in the designated direction, though not through terrain, dealing physical damage to enemies she passes through. Against the first target, Void Surge can critically strike for (175% + 40%) damage and applies on-hit effects, with on-hit damage reduced to 75% effectiveness, and life steal at 100% effectiveness.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -151,26 +151,14 @@
                       30
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -193,10 +181,6 @@
                       85
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -214,26 +198,14 @@
                       115
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -251,10 +223,6 @@
                       100
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -276,13 +244,11 @@
           "modifiers": [
             {
               "values": [
-                1,
-                1,
-                1,
-                1,
                 1
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -291,7 +257,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "Special",
         "projectile": null,
         "onHitEffects": null,
@@ -318,7 +284,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Belveth/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Bel'Veth slams her tail down in the target direction that deals magic damage to enemies hit, knocks them up for 0.75 seconds, and slows them by 50% for a duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Bel'Veth slams her tail down in the target direction that deals magic damage to enemies hit, knocks them up for 0.75 seconds, and slows them by 50% for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -332,42 +298,22 @@
                       230
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      125,
-                      125,
-                      125,
-                      125,
                       125
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -385,10 +331,6 @@
                       2.25
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -412,7 +354,9 @@
                 9,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -421,7 +365,7 @@
         "affects": "Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -448,7 +392,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Belveth/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Bel'Veth enters a defensive stance for 1.5 seconds, during which she is unable to move, but gains damage reduction and 20% (+ 100% life steal) life steal.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Bel'Veth enters a defensive stance for 1.5 seconds, during which she is unable to move, but gains damage reduction and 20% (+ 100% life steal) life steal.</p></div>",
             "leveling": [
               {
                 "attribute": "Damage Reduction",
@@ -462,10 +406,6 @@
                       55
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -474,7 +414,7 @@
             ]
           },
           {
-            "description": "While active, she rapidly slashes at the nearest enemy with the lowest current health percentage for up to 6 (+ 1 per 33.3% bonus attack speed) times over the duration. Each slash deals physical damage, increased by 0% : 300% (based on target's missing health), triggers on-attack effects, and applies on-hit effects and spell effects, with on-hit and spell effect damage reduced to 8% : 32% (based on target's missing health) effectiveness.",
+            "description": "While active, she rapidly slashes at the nearest enemy with the lowest current health percentage for up to 6 (+ 1 per 33.3% bonus attack speed) times over the duration. Each slash deals physical damage, increased by 0% - 300% (based on target's missing health), triggers on-attack effects, and applies on-hit effects and spell effects, with on-hit and spell effect damage reduced to 8% - 32% (based on target's missing health) effectiveness.",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage per hit",
@@ -488,26 +428,14 @@
                       10
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      8,
-                      8,
-                      8,
-                      8,
                       8
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -525,26 +453,14 @@
                       40
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      32,
-                      32,
-                      32,
-                      32,
                       32
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -567,26 +483,14 @@
                       15
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      12,
-                      12,
-                      12,
-                      12,
                       12
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -604,26 +508,14 @@
                       60
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      48,
-                      48,
-                      48,
-                      48,
                       48
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -636,7 +528,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Bel'Veth ends Royal Maelstrom.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Bel'Veth ends Royal Maelstrom.</p></div>",
             "leveling": []
           }
         ],
@@ -651,7 +543,9 @@
                 17,
                 16
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -660,7 +554,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "false",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "special",
         "projectile": null,
         "onHitEffects": null,
@@ -687,7 +581,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Belveth/ability-icon/r",
         "effects": [
           {
-            "description": "Passive: Bel'Veth's basic attacks on-hit apply a mark to the target for 5 seconds, refreshing on subsequent hits. Every second attack on-hit against the marked target deals bonus true damage and generates a stack of Endless Banquet that increases this damage by the same value. This effect stacks infinitely, but is capped at 5 stacks against epic monsters. The mark and stacks expire upon attacking a new target.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Bel'Veth's basic attacks on-hit apply a mark to the target for 5 seconds, refreshing on subsequent hits. Every second attack on-hit against the marked target deals bonus true damage and generates a stack of Endless Banquet that increases this damage by the same value. This effect stacks infinitely, but is capped at 5 stacks against epic monsters. The mark and stacks expire upon attacking a new target.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus True Damage",
@@ -699,20 +593,14 @@
                       10
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      12,
-                      12,
                       12
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -728,20 +616,14 @@
                       50
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -750,11 +632,11 @@
             ]
           },
           {
-            "description": "Passive: When Bel'Veth scores a takedown against an enemy champion or epic monster while alive, a Void Coral is spawned from their corpse for 15 seconds. Baron Nashor, the pit Rift Herald, and Voidgrubs (once per spawn group) spawn an Enhanced Void Coral.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> When Bel'Veth scores a takedown against an enemy champion or epic monster while alive, a Void Coral is spawned from their corpse for 15 seconds. Baron Nashor, the pit Rift Herald, and Voidgrubs (once per spawn group) spawn an Enhanced Void Coral.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Bel'Veth dashes to the target Void Coral to consume it over the cast time, slowing nearby enemies by 25% : 96% (based on seconds elapsed) for the duration. She then creates an explosion at the location to deal true damage to enemies within, capped at 1500 versus monsters, and assumes her True Form for 60 seconds.\nBel'Veth consumes all existing Void Corals at once, generating a stack of Lavender for each one consumed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Bel'Veth dashes to the target Void Coral to consume it over the cast time, slowing nearby enemies by 25% - 96% (based on seconds elapsed) for the duration. She then creates an explosion at the location to deal true damage to enemies within, capped at 1500 versus monsters, and assumes her True Form for 60 seconds.</p></div>\nBel'Veth consumes all existing Void Corals at once, generating a stack of Lavender for each one consumed.",
             "leveling": [
               {
                 "attribute": "True Damage",
@@ -766,32 +648,22 @@
                       250
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% of target's missing health",
-                      "% of target's missing health",
                       "% of target's missing health"
                     ]
                   }
@@ -800,7 +672,7 @@
             ]
           },
           {
-            "description": "True Form: Bel'Veth evolves into a monster, gaining bonus health, bonus movement speed out-of-combat, 75 bonus attack range, as well as increased total attack speed. Void Surge can dash through terrain. Consuming a Void Coral refreshes the duration of True Form and heals Bel'Veth.\nEnhanced Void Coral Bonus: True Form is empowered to last 180 seconds and causes Void Remora to spawn from allied and enemy minions that die nearby.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">True Form:</p><p> Bel'Veth evolves into a monster, gaining bonus health, bonus movement speed out-of-combat, 75 bonus attack range, as well as increased total attack speed. Void Surge can dash through terrain. Consuming a Void Coral refreshes the duration of True Form and heals Bel'Veth.</p></div>\n\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Enhanced Void Coral Bonus:</p><p> True Form is empowered to last 180 seconds and causes Void Remora to spawn from allied and enemy minions that die nearby.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Health",
@@ -812,32 +684,22 @@
                       200
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      120,
-                      120,
                       120
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      90,
-                      90,
                       90
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -853,8 +715,6 @@
                       80
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -870,8 +730,6 @@
                       20
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -887,32 +745,22 @@
                       200
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      120,
-                      120,
                       120
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      90,
-                      90,
                       90
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -930,11 +778,11 @@
           "modifiers": [
             {
               "values": [
-                1,
-                1,
                 1
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -943,7 +791,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "TRUE_DAMAGE",
+        "damageType": "True damage",
         "spellEffects": "special",
         "projectile": null,
         "onHitEffects": null,
@@ -965,5 +813,6 @@
       }
     ]
   },
+  "lore": "A nightmarish empress created from the raw material of an entire devoured city, Bel'Veth is the end of Runeterra itself... and the beginning of a monstrous reality of her own design. Driven by epochs of repurposed history, knowledge, and memories from the world above, she voraciously feeds an ever-expanding need for new experiences and emotions, consuming all that crosses her path. Yet her wants could never be sated by only one world as she turns her hungry eyes toward the Void's old masters...",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/belveth/skins/base/images/belveth_splash_centered_0.jpg"
 }

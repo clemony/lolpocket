@@ -99,11 +99,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renata/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Renata's basic attacks are empowered to apply a mark that lasts 6 seconds, refreshes on subsequent hits and expires when attacking a new enemy. If the enemy was unmarked, the attack also deals bonus magic damage equal to 1% : 2% (based on level) (+ 2% per 100 AP) of the target's maximum health.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Renata's basic attacks are empowered to apply a mark that lasts 6 seconds, refreshes on subsequent hits and expires when attacking a new enemy. If the enemy was unmarked, the attack also deals bonus magic damage equal to 1% - 2% (based on level) (+ 2% per 100 AP) of the target's maximum health.</p></div>",
             "leveling": []
           },
           {
-            "description": "Allied champions' damaging attacks and abilities against a marked target will consume the mark to deal additional bonus magic damage equal to 1% : 2% (based on level) (+ 2% per 100 AP) of the target's maximum health.",
+            "description": "Allied champions' damaging attacks and abilities against a marked target will consume the mark to deal additional bonus magic damage equal to 1% - 2% (based on level) (+ 2% per 100 AP) of the target's maximum health.",
             "leveling": []
           },
           {
@@ -120,7 +120,7 @@
         "affects": "Allies, Enemies",
         "spellshieldable": "special",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "proc",
         "projectile": null,
         "onHitEffects": null,
@@ -147,7 +147,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renata/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Renata fires a hook in the target direction that deals magic damage to the first enemy hit and roots them for 1 second, during which they are revealed.If the root was applied, Renata forms a tether between her and the target for the same duration, causing Renata to become unable to declare attacks and have her movement speed reduced by 30%.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Renata fires a hook in the target direction that deals magic damage to the first enemy hit and roots them for 1 second, during which they are revealed.If the root was applied, Renata forms a tether between her and the target for the same duration, causing Renata to become unable to declare attacks and have her movement speed reduced by 30%.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -161,26 +161,14 @@
                       260
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -193,22 +181,29 @@
             "leveling": []
           },
           {
-            "description": "Recast: Renata breaks the tether to knock the target in the target direction, though not through terrain, dealing the same damage to enemies they pass through. If the thrown target is a champion, all secondary targets hit are stunned for 0.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Renata breaks the tether to knock the target in the target direction, though not through terrain, dealing the same damage to enemies they pass through. If the thrown target is a champion, all secondary targets hit are stunned for 0.5 seconds.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                16,
-                16,
-                16,
-                16,
                 16
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -216,8 +211,8 @@
         "targeting": "Direction",
         "affects": "Self, Ememies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -244,7 +239,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renata/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Renata infuses herself or the target allied champion with a chemtech formula for 5 seconds, granting the target bonus attack speed and bonus movement speed while they are facing nearby visible enemy champions or minions, with both of the bonuses increasing in effectiveness by 0% : 100% (based on seconds elapsed). Bailout's duration resets whenever the target scores a takedown against an enemy champion within 6 seconds of damaging them.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Renata infuses herself or the target allied champion with a chemtech formula for 5 seconds, granting the target bonus attack speed and bonus movement speed while they are facing nearby visible enemy champions or minions, with both of the bonuses increasing in effectiveness by 0% - 100% (based on seconds elapsed). Bailout's duration resets whenever the target scores a takedown against an enemy champion within 6 seconds of damaging them.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -258,26 +253,14 @@
                       30
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   },
                   {
                     "values": [
-                      1,
-                      1,
-                      1,
-                      1,
                       1
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -295,26 +278,14 @@
                       60
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   },
                   {
                     "values": [
-                      2,
-                      2,
-                      2,
-                      2,
                       2
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -332,26 +303,14 @@
                       20
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   },
                   {
                     "values": [
-                      1,
-                      1,
-                      1,
-                      1,
                       1
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -369,26 +328,14 @@
                       40
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   },
                   {
                     "values": [
-                      2,
-                      2,
-                      2,
-                      2,
                       2
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -401,7 +348,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -412,7 +368,9 @@
                 25,
                 24
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -420,7 +378,7 @@
         "targeting": "Unit",
         "affects": null,
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -448,7 +406,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renata/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Renata sends out chemtech rockets from either side of her that instantly strike targets around her. After 0.429 seconds they converge and travel to the target location as a single missile, striking targets along its path and exploding upon reaching the target location.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Renata sends out chemtech rockets from either side of her that instantly strike targets around her. After 0.429 seconds they converge and travel to the target location as a single missile, striking targets along its path and exploding upon reaching the target location.</p></div>",
             "leveling": []
           },
           {
@@ -466,26 +424,14 @@
                       185
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      55,
-                      55,
-                      55,
-                      55,
                       55
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -503,26 +449,14 @@
                       110
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -535,7 +469,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70,
+              80,
+              90,
+              100,
+              110
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -546,7 +493,9 @@
                 11,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -554,8 +503,8 @@
         "targeting": "Location",
         "affects": "Allies, Ememies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -582,7 +531,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renata/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Renata launches a cloud of potent chemicals that travels in the target direction, granting sight of its surroundings. Enemy champions and minions hit become berserk for a duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Renata launches a cloud of potent chemicals that travels in the target direction, granting sight of its surroundings. Enemy champions and minions hit become berserk for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Berserk Duration",
@@ -594,8 +543,6 @@
                       2.25
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -604,11 +551,20 @@
             ]
           },
           {
-            "description": "Berserked units gain 100% bonus attack speed and 25% increased size. Within their targeting radius, they prioritize attacking the closest unit by the following categories in descending order:\nTheir allied champions\nAllied non-champions\nAllied wards\nEnemy units (including monsters)",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Berserked units gain 100% bonus attack speed and 25% increased size. Within their targeting radius, they prioritize attacking the closest unit by the following categories in descending order:</p><p></p></div>\nTheir allied champions\nAllied non-champions\nAllied wards\nEnemy units (including monsters)",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -617,7 +573,9 @@
                 130,
                 110
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -625,7 +583,7 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": "TRUE",
@@ -648,5 +606,6 @@
       }
     ]
   },
+  "lore": "Renata Glasc rose from the ashes of her childhood home with nothing but her name and her parents' alchemical research. In the decades since, she has become Zaun's wealthiest chem-baron, a business magnate who built her power by tying everyone's interests to her own. Work with her, and be rewarded beyond measure. Work against her, and live to regret it. But everyone comes to her side, eventually.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/renata/skins/base/images/renata_splash_centered_0.jpg"
 }

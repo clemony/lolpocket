@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Miss Fortune's basic attacks are empowered to apply a mark that expires upon attacking a new enemy. If the enemy was unmarked, this also deals 50% : 100% (based on level) AD bonus physical damage, halved to 25% : 50% (based on level) AD against minions.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Miss Fortune's basic attacks are empowered to apply a mark that expires upon attacking a new enemy. If the enemy was unmarked, this also deals 50% - 100% (based on level) AD bonus physical damage, halved to 25% - 50% (based on level) AD against minions.</p></div>",
             "leveling": []
           }
         ],
@@ -112,7 +112,7 @@
         "affects": "Enemies",
         "spellshieldable": null,
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Miss Fortune fires a shot at the target enemy that deals physical damage, triggers on-attack effects, and bounces to hit another enemy behind them, applying on-hit effects to both enemies hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Miss Fortune fires a shot at the target enemy that deals physical damage, triggers on-attack effects, and bounces to hit another enemy behind them, applying on-hit effects to both enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -153,42 +153,22 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      35,
-                      35,
-                      35,
-                      35,
                       35
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -205,7 +185,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -216,7 +205,9 @@
                 4,
                 3
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -224,8 +215,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -252,7 +243,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Miss Fortune gains bonus movement speed after 4 seconds without taking non- persistent damage. This bonus is increased after another 3 seconds, and is granted instantly whenever Strut is cast or upon respawning.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Miss Fortune gains bonus movement speed after 4 seconds without taking non- persistent damage. This bonus is increased after another 3 seconds, and is granted instantly whenever Strut is cast or upon respawning.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -266,10 +257,6 @@
                       50
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -287,10 +274,6 @@
                       100
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -299,7 +282,7 @@
             ]
           },
           {
-            "description": "Active: Miss Fortune gains bonus attack speed for 4 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Miss Fortune gains bonus attack speed for 4 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -313,10 +296,6 @@
                       100
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -329,18 +308,25 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              45
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                12,
-                12,
-                12,
-                12,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -348,7 +334,7 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -376,7 +362,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Miss Fortune casts a storm of bullets at the target location for 2 seconds, granting sight of the area, dealing magic damage every 0.25 seconds to enemies within, and slowing them by 40% (+ 6% per 100 AP).",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Miss Fortune casts a storm of bullets at the target location for 2 seconds, granting sight of the area, dealing magic damage every 0.25 seconds to enemies within, and slowing them by 40% (+ 6% per 100 AP).</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",
@@ -390,26 +376,14 @@
                       23.75
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -427,26 +401,14 @@
                       190
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      120,
-                      120,
-                      120,
-                      120,
                       120
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -459,7 +421,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -470,7 +441,9 @@
                 15,
                 14
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -478,8 +451,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "False",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "aoedot",
         "projectile": null,
         "onHitEffects": null,
@@ -506,7 +479,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Miss Fortune channels for up to 3 seconds, firing a number of waves of bullets in the target direction. Each wave is in a spread of 6 projectiles that deals 75% AD (+ 25% AP) physical damage to enemies hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Miss Fortune channels for up to 3 seconds, firing a number of waves of bullets in the target direction. Each wave is in a spread of 6 projectiles that deals 75% AD (+ 25% AP) physical damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Waves",
@@ -518,8 +491,6 @@
                       18
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -535,8 +506,6 @@
                       1350
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
@@ -547,8 +516,6 @@
                       450
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -564,8 +531,6 @@
                       0.1583
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -578,7 +543,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -587,7 +561,9 @@
                 110,
                 100
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -595,8 +571,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "False",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "aoedot",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -618,5 +594,6 @@
       }
     ]
   },
+  "lore": "A Bilgewater captain famed for her looks but feared for her ruthlessness, Sarah Fortune paints a stark figure among the hardened criminals of the port city. As a child, she witnessed the reaver king Gangplank murder her family—an act she brutally avenged years later, blowing up his flagship while he was still aboard. Those who underestimate her will face a beguiling and unpredictable opponent… and, likely, a bullet or two in their guts.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/missfortune/skins/base/images/missfortune_splash_centered_0.jpg"
 }

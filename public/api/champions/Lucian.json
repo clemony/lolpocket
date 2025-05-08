@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lucian/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: After casting an ability, Lucian's next basic attack within 3.5 seconds fires an additional shot on-attack after 0.25 seconds, which deals 50 / 55 / 60% (based on level) AD physical damage, increased to 100% AD against minions. He will shoot the same target, else another target in range.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> After casting an ability, Lucian's next basic attack within 3.5 seconds fires an additional shot on-attack after 0.25 seconds, which deals 50 / 55 / 60% (based on level) AD physical damage, increased to 100% AD against minions. He will shoot the same target, else another target in range.</p></div>",
             "leveling": []
           },
           {
@@ -106,7 +106,7 @@
             "leveling": []
           },
           {
-            "description": "Innate - Vigilance: Whenever Lucian is healed or shielded by an ally, or an enemy champion within 1000 units is immobilized, his next two shots within 6 seconds are empowered to deal 15 (+ 20% AD) bonus magic damage on-hit. He can store up to 4 empowered shots at a time.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Vigilance:</p><p> Whenever Lucian is healed or shielded by an ally, or an enemy champion within 1000 units is immobilized, his next two shots within 6 seconds are empowered to deal 15 (+ 20% AD) bonus magic damage on-hit. He can store up to 4 empowered shots at a time.</p></div>",
             "leveling": []
           }
         ],
@@ -119,7 +119,7 @@
         "affects": "Enemies",
         "spellshieldable": null,
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "attack",
         "projectile": null,
         "onHitEffects": null,
@@ -146,7 +146,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lucian/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Lucian fires a laser in a line in the direction of the target enemy that deals physical damage to enemies hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Lucian fires a laser in a line in the direction of the target enemy that deals physical damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -160,10 +160,6 @@
                       205
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -176,10 +172,6 @@
                       120
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -188,7 +180,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              48,
+              56,
+              64,
+              72,
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -199,7 +204,9 @@
                 6,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -207,8 +214,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "AoE",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -235,7 +242,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lucian/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Lucian fires a missile in the target direction that explodes in a cross pattern upon hitting an enemy or reaching maximum range, dealing magic damage to enemies hit and granting sight of the area for 1 second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Lucian fires a missile in the target direction that explodes in a cross pattern upon hitting an enemy or reaching maximum range, dealing magic damage to enemies hit and granting sight of the area for 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -249,26 +256,14 @@
                       215
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      90,
-                      90,
-                      90,
-                      90,
                       90
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -295,10 +290,6 @@
                       80
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -307,7 +298,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -318,7 +318,9 @@
                 11,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -326,8 +328,8 @@
         "targeting": "Direction",
         "affects": "Enemies / Self, Allies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -354,11 +356,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lucian/ability-icon/e",
         "effects": [
           {
-            "description": "Passive: Relentless Pursuit's current cooldown is reduced by 1 second for each Lightslinger shot hit, doubled to 2 seconds against enemy champions.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Relentless Pursuit's current cooldown is reduced by 1 second for each Lightslinger shot hit, doubled to 2 seconds against enemy champions.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Lucian dashes in the target direction.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Lucian dashes in the target direction.</p></div>",
             "leveling": []
           },
           {
@@ -366,7 +368,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40,
+              30,
+              20,
+              10,
+              0
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -377,7 +392,9 @@
                 14.5,
                 14
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -385,7 +402,7 @@
         "targeting": "Location",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -413,7 +430,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lucian/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Lucian channels for up to 3 seconds, rapidly firing up to 22 (+ 1 per 4% critical strike chance) shots in the target direction. Each shot deals physical damage to the first enemy hit, doubled against minions. The Culling can be recast after 0.75 seconds during the channel, and does so automatically when the channel ends.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Lucian channels for up to 3 seconds, rapidly firing up to 22 (+ 1 per 4% critical strike chance) shots in the target direction. Each shot deals physical damage to the first enemy hit, doubled against minions. The Culling can be recast after 0.75 seconds during the channel, and does so automatically when the channel ends.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Shot",
@@ -425,32 +442,22 @@
                       45
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -466,32 +473,22 @@
                       225
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      125,
-                      125,
                       125
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      75,
-                      75,
                       75
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -507,8 +504,6 @@
                       990
                     ],
                     "units": [
-                      "  ",
-                      "  ",
                       "  "
                     ]
                   },
@@ -519,56 +514,38 @@
                       45
                     ],
                     "units": [
-                      "   per 4% critical strike chance",
-                      "   per 4% critical strike chance",
                       "   per 4% critical strike chance"
                     ]
                   },
                   {
                     "values": [
-                      550,
-                      550,
                       550
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      330,
-                      330,
                       330
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -584,32 +561,22 @@
                       90
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -625,32 +592,22 @@
                       450
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      250,
-                      250,
                       250
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      150,
-                      150,
                       150
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -666,8 +623,6 @@
                       1980
                     ],
                     "units": [
-                      "  ",
-                      "  ",
                       "  "
                     ]
                   },
@@ -678,56 +633,38 @@
                       90
                     ],
                     "units": [
-                      "   per 4% critical strike chance",
-                      "   per 4% critical strike chance",
                       "   per 4% critical strike chance"
                     ]
                   },
                   {
                     "values": [
-                      1100,
-                      1100,
                       1100
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      660,
-                      660,
                       660
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -740,11 +677,20 @@
             "leveling": []
           },
           {
-            "description": "Recast: Lucian ends The Culling.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Lucian ends The Culling.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -753,7 +699,9 @@
                 100,
                 90
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -761,8 +709,8 @@
         "targeting": "Direction / Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "aoedot",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -784,5 +732,6 @@
       }
     ]
   },
+  "lore": "Lucian, a Sentinel of Light, is a grim hunter of wraiths and specters, pursuing them relentlessly and annihilating them with his twin relic pistols. After the specter Thresh slew his wife, Lucian embarked on the path of vengeance—but even with her return to life, his rage is undiminished. Merciless and single-minded, Lucian will stop at nothing to protect the living from the long-dead horrors of the Black Mist.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/lucian/skins/base/images/lucian_splash_centered_0.jpg"
 }

@@ -91,15 +91,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sett/ability-icon/p",
         "effects": [
           {
-            "description": "Innate - Heart of the Half-Beast: Sett regenerates[ an additional 0.075 / 0.25 / 0.5 / 1 (based on level) health every 0.5 seconds per 5% of his missing health. ][ up-to an additional 1.425 / 4.75 / 9.5 / 19 (based on level) health per 0.5 seconds, with the maximum reached at the threshold of 95% missing health. ]",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Heart of the Half-Beast:</p><p> Sett regenerates[ an additional 0.075 / 0.25 / 0.5 / 1 (based on level) health every 0.5 seconds per 5% of his missing health. ][ up-to an additional 1.425 / 4.75 / 9.5 / 19 (based on level) health per 0.5 seconds, with the maximum reached at the threshold of 95% missing health. ]</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate - Heavy Hands: Sett's basic attacks alternate between his Left Punch and a Right Punch on-attack. Sett begins attacking with his Left Punch, and will reset back to it after 2 seconds of not performing a Right Punch.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Heavy Hands:</p><p> Sett's basic attacks alternate between his Left Punch and a Right Punch on-attack. Sett begins attacking with his Left Punch, and will reset back to it after 2 seconds of not performing a Right Punch.</p></div>",
             "leveling": []
           },
           {
-            "description": "Sett's Right Punch is empowered to gain 50 bonus range (unless Knuckle Down is active), attack at 8 times the Left Punch's attack speed, and deal 5 : 90 (based on level) (+ 55% bonus AD) bonus physical damage.",
+            "description": "Sett's Right Punch is empowered to gain 50 bonus range (unless Knuckle Down is active), attack at 8 times the Left Punch's attack speed, and deal 5 - 90 (based on level) (+ 55% bonus AD) bonus physical damage.",
             "leveling": []
           }
         ],
@@ -112,7 +112,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": null,
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sett/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Sett empowers his next two basic attacks within 5 seconds to gain 50 bonus range and deal bonus physical damage, capped at 400 total damage of each attack against monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Sett empowers his next two basic attacks within 5 seconds to gain 50 bonus range and deal bonus physical damage, capped at 400 total damage of each attack against monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -153,26 +153,14 @@
                       50
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      1,
-                      1,
-                      1,
-                      1,
                       1
                     ],
                     "units": [
-                      "% (+ 1 / 1.5 / 2 / 2.5 / 3% per 100 AD) of target's maximum health",
-                      "% (+ 1 / 1.5 / 2 / 2.5 / 3% per 100 AD) of target's maximum health",
-                      "% (+ 1 / 1.5 / 2 / 2.5 / 3% per 100 AD) of target's maximum health",
-                      "% (+ 1 / 1.5 / 2 / 2.5 / 3% per 100 AD) of target's maximum health",
                       "% (+ 1 / 1.5 / 2 / 2.5 / 3% per 100 AD) of target's maximum health"
                     ]
                   }
@@ -190,26 +178,14 @@
                       100
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      2,
-                      2,
-                      2,
-                      2,
                       2
                     ],
                     "units": [
-                      "% (+ 2 / 3 / 4 / 5 / 6% per 100 AD) of target's maximum health",
-                      "% (+ 2 / 3 / 4 / 5 / 6% per 100 AD) of target's maximum health",
-                      "% (+ 2 / 3 / 4 / 5 / 6% per 100 AD) of target's maximum health",
-                      "% (+ 2 / 3 / 4 / 5 / 6% per 100 AD) of target's maximum health",
                       "% (+ 2 / 3 / 4 / 5 / 6% per 100 AD) of target's maximum health"
                     ]
                   }
@@ -237,7 +213,9 @@
                 6,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -246,7 +224,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -273,11 +251,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sett/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Sett stores 100% of post-mitigation damage taken as Grit on his resource bar, up to a cap of 50% of his maximum health. Each instance of stored Grit decays in value by 30% every second after 4 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Sett stores 100% of post-mitigation damage taken as Grit on his resource bar, up to a cap of 50% of his maximum health. Each instance of stored Grit decays in value by 30% every second after 4 seconds.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Sett charges up a strike over the cast time. Additionally, he immediately consumes all of his stored Grit to grant himself a shield at the start of the cast time that is equal to the expended Grit for 3 seconds, decaying in strength over the duration after 0.75 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Sett charges up a strike over the cast time. Additionally, he immediately consumes all of his stored Grit to grant himself a shield at the start of the cast time that is equal to the expended Grit for 3 seconds, decaying in strength over the duration after 0.75 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -295,26 +273,14 @@
                       160
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% (+ 25% per 100 bonus AD) of expended Grit",
-                      "% (+ 25% per 100 bonus AD) of expended Grit",
-                      "% (+ 25% per 100 bonus AD) of expended Grit",
-                      "% (+ 25% per 100 bonus AD) of expended Grit",
                       "% (+ 25% per 100 bonus AD) of expended Grit"
                     ]
                   }
@@ -323,7 +289,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              "%"
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -334,7 +309,9 @@
                 13.5,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -342,8 +319,8 @@
         "targeting": "Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
-        "resource": "GRIT",
-        "damageType": "MIXED_DAMAGE",
+        "resource": "Grit",
+        "damageType": "Mixed damage",
         "spellEffects": "aoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -370,7 +347,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sett/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Sett pulls in enemies at his front and back along the target direction, dealing physical damage and slowing them by 70% for 0.5 seconds. Facebreaker deals 100 bonus physical damage to monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Sett pulls in enemies at his front and back along the target direction, dealing physical damage and slowing them by 70% for 0.5 seconds. Facebreaker deals 100 bonus physical damage to monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -384,26 +361,14 @@
                       130
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -421,26 +386,14 @@
                       230
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -468,7 +421,9 @@
                 11.5,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -477,7 +432,7 @@
         "affects": "Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "aoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -504,7 +459,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sett/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Sett suppresses and reveals the target enemy champion while dashing with displacement immunity to their location and attaching them to himself upon arrival. He leaps another 600 units in the same direction to slam the target into the ground, creating a massive shockwave and quickly sliding forward 250 units beyond the impact.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Sett suppresses and reveals the target enemy champion while dashing with displacement immunity to their location and attaching them to himself upon arrival. He leaps another 600 units in the same direction to slam the target into the ground, creating a massive shockwave and quickly sliding forward 250 units beyond the impact.</p></div>",
             "leveling": []
           },
           {
@@ -520,20 +475,14 @@
                       400
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      120,
-                      120,
                       120
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
@@ -544,8 +493,6 @@
                       60
                     ],
                     "units": [
-                      "% of primary target's bonus health",
-                      "% of primary target's bonus health",
                       "% of primary target's bonus health"
                     ]
                   }
@@ -561,20 +508,14 @@
                       100
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
@@ -585,8 +526,6 @@
                       15
                     ],
                     "units": [
-                      "% of primary target's bonus health",
-                      "% of primary target's bonus health",
                       "% of primary target's bonus health"
                     ]
                   }
@@ -608,7 +547,9 @@
                 100,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -617,7 +558,7 @@
         "affects": "Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "aoe",
         "projectile": null,
         "onHitEffects": null,
@@ -639,5 +580,6 @@
       }
     ]
   },
+  "lore": "A leader of Ionia's growing criminal underworld, Sett rose to prominence in the wake of the war with Noxus. Though he began as a humble challenger in the fighting pits of Navori, he quickly gained notoriety for his savage strength, and his ability to take seemingly endless amounts of punishment. Now, having climbed through the ranks of local combatants, Sett has muscled to the top, reigning over the pits he once fought in.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sett/skins/base/images/sett_splash_centered_0.jpg"
 }

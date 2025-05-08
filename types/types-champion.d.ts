@@ -22,7 +22,18 @@ declare global {
 
   interface FullChampion extends Champion {
     skins?: any
+    lore?: string
   }
+
+
+interface StatEntry {
+  flat?: number
+  perLevel?: number
+}
+
+interface ChampionLiteStat extends ChampionLite{
+    attackSpeedRatio?: StatEntry
+}
 
   interface Skin {
     name: string

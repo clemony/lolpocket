@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nasus/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Nasus gains 12 / 18 / 24% (based on level) life steal.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Nasus gains 12 / 18 / 24% (based on level) life steal.</p></div>",
             "leveling": []
           }
         ],
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nasus/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Nasus empowers his next basic attack within 10 seconds to have an uncancellable windup, gain 50 bonus range, and deal bonus physical damage. Siphoning Strike's base damage is affected by critical strike modifiers.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Nasus empowers his next basic attack within 10 seconds to have an uncancellable windup, gain 50 bonus range, and deal bonus physical damage. Siphoning Strike's base damage is affected by critical strike modifiers.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -153,26 +153,14 @@
                       115
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% of Siphoning Strike stacks",
-                      "% of Siphoning Strike stacks",
-                      "% of Siphoning Strike stacks",
-                      "% of Siphoning Strike stacks",
                       "% of Siphoning Strike stacks"
                     ]
                   }
@@ -189,7 +177,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              20
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -200,7 +197,9 @@
                 4.5,
                 3.5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -208,8 +207,8 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": "false",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -236,7 +235,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nasus/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Nasus ages the target enemy champion for 5 seconds, slowing them by 35% and crippling them by[ 75% of that amount, ][ 26.25%, ]both increasing every second over the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Nasus ages the target enemy champion for 5 seconds, slowing them by 35% and crippling them by[ 75% of that amount, ][ 26.25%, ]both increasing every second over the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Maximum Slow",
@@ -250,10 +249,6 @@
                       95
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -271,10 +266,6 @@
                       15
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -292,10 +283,6 @@
                       71.25
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -313,10 +300,6 @@
                       11.25
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -325,7 +308,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -336,7 +328,9 @@
                 12,
                 11
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -344,7 +338,7 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -372,7 +366,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nasus/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Nasus unleashes a spirit fire at the target location, granting sight of the area for 2.5 seconds and, after a 0.264 seconds delay, dealing magic damage to enemies within.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Nasus unleashes a spirit fire at the target location, granting sight of the area for 2.5 seconds and, after a 0.264 seconds delay, dealing magic damage to enemies within.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -386,26 +380,14 @@
                       170
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -428,26 +410,14 @@
                       34
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      12,
-                      12,
-                      12,
-                      12,
                       12
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -465,26 +435,14 @@
                       340
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      120,
-                      120,
-                      120,
-                      120,
                       120
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -502,10 +460,6 @@
                       50
                     ],
                     "units": [
-                      "% of target's armor",
-                      "% of target's armor",
-                      "% of target's armor",
-                      "% of target's armor",
                       "% of target's armor"
                     ]
                   }
@@ -514,18 +468,29 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              70,
+              80,
+              90,
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                12,
-                12,
-                12,
-                12,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -533,8 +498,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "False",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "AoEDoT",
         "projectile": null,
         "onHitEffects": null,
@@ -561,7 +526,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nasus/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Nasus empowers himself for 15 seconds, gaining bonus health, bonus armor, bonus magic resistance, increased size, and 50 bonus attack range for the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Nasus empowers himself for 15 seconds, gaining bonus health, bonus armor, bonus magic resistance, increased size, and 50 bonus attack range for the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Health",
@@ -573,8 +538,6 @@
                       600
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -590,8 +553,6 @@
                       70
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -607,8 +568,6 @@
                       40
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -629,20 +588,14 @@
                       2.5
                     ],
                     "units": [
-                      "%  of target's maximum health",
-                      "%  of target's maximum health",
                       "%  of target's maximum health"
                     ]
                   },
                   {
                     "values": [
-                      0.5,
-                      0.5,
                       0.5
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -658,20 +611,14 @@
                       75
                     ],
                     "units": [
-                      "%  of target's maximum health",
-                      "%  of target's maximum health",
                       "%  of target's maximum health"
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -680,7 +627,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -689,7 +645,9 @@
                 100,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -697,8 +655,8 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "aoedot",
         "projectile": null,
         "onHitEffects": null,
@@ -720,5 +678,6 @@
       }
     ]
   },
+  "lore": "Nasus is an imposing, jackal-headed Ascended being from ancient Shurima, a heroic figure regarded as a demigod by the people of the desert. Fiercely intelligent, he was a guardian of knowledge and peerless strategist whose wisdom guided the ancient empire of Shurima to greatness for many centuries. After the fall of the empire, he went into self-imposed exile, becoming little more than a legend. Now that the ancient city of Shurima has risen once more, he has returned, determined to ensure it never falls again.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nasus/skins/base/images/nasus_splash_centered_0.jpg"
 }

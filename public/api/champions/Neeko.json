@@ -98,15 +98,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Neeko has a collection of disguises to take on the appearance of allied champions. She can choose a new champion to switch her disguise or select herself to deactivate her disguise, placing Inherent Glamour on a 0.5-second cooldown. Taking damage from a champion or turret puts Inherent Glamour on a 2-second cooldown.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Neeko has a collection of disguises to take on the appearance of allied champions. She can choose a new champion to switch her disguise or select herself to deactivate her disguise, placing Inherent Glamour on a 0.5-second cooldown. Taking damage from a champion or turret puts Inherent Glamour on a 2-second cooldown.</p></div>",
             "leveling": []
           },
           {
-            "description": "Standing by the nearest visible allied or neutral non-champion non-structure unit while not disguised will gather its Sho'Ma over 2 seconds, adding its disguise to the collection. Activating this disguise places Inherent Glamour on a 1-second cooldown. Neeko can collect only one Sho'Ma, but can discard or consume it. She can store Sho'Ma from the following units, so long as they are targetable:\n\nNon-epic monsters\n Minions\n Traps\n Wards\n Pets\nJungle plants",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Standing by the nearest visible allied or neutral non-champion non-structure unit while not disguised will gather its Sho'Ma over 2 seconds, adding its disguise to the collection. Activating this disguise places Inherent Glamour on a 1-second cooldown. Neeko can collect only one Sho'Ma, but can discard or consume it. She can store Sho'Ma from the following units, so long as they are targetable:</p><p></p></div>\n\nNon-epic monsters\n Minions\n Traps\n Wards\n Pets\nJungle plants",
             "leveling": []
           },
           {
-            "description": "While disguised, Neeko can use basic attacks while keeping her form. Her disguise breaks if she:\n\nuses a damaging ability, summoner spell, or item active\nis immobilized\ntakes damage lethal to the disguised form\nis in the enemy spawn platform\nbegins a channel other than Recall and Empowered Recall\ndeals damage to a structure with a non-champion disguise form\n dies",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">While disguised, Neeko can use basic attacks while keeping her form. Her disguise breaks if she:</p><p></p></div>\n\nuses a damaging ability, summoner spell, or item active\nis immobilized\ntakes damage lethal to the disguised form\nis in the enemy spawn platform\nbegins a channel other than Recall and Empowered Recall\ndeals damage to a structure with a non-champion disguise form\n dies",
             "leveling": []
           },
           {
@@ -154,7 +154,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Neeko tosses a seed that blooms at the target location, dealing magic damage to nearby enemies.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Neeko tosses a seed that blooms at the target location, dealing magic damage to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -168,26 +168,14 @@
                       260
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -210,26 +198,14 @@
                       135
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -247,26 +223,14 @@
                       530
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -289,10 +253,6 @@
                       95
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -305,7 +265,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              60,
+              70,
+              80,
+              90
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -316,7 +289,9 @@
                 7.5,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -324,8 +299,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -352,7 +327,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Neeko's basic attacks on-hit generate a stack of Shapesplitter, which refreshes on subsequent attacks and stacks up to 2 times. At 2 stacks, her next basic attack on-attack consumes them all to become non-projectile, deal bonus magic damage and grant her bonus movement speed for 1 second. This attack deals 75 bonus magic damage against monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Neeko's basic attacks on-hit generate a stack of Shapesplitter, which refreshes on subsequent attacks and stacks up to 2 times. At 2 stacks, her next basic attack on-attack consumes them all to become non-projectile, deal bonus magic damage and grant her bonus movement speed for 1 second. This attack deals 75 bonus magic damage against monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -366,26 +341,14 @@
                       180
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -403,10 +366,6 @@
                       40
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -415,7 +374,7 @@
             ]
           },
           {
-            "description": "Active: Neeko creates a clone of her current form, after which they both instantly become invisible for 0.5 seconds and gain bonus movement speed for 3 seconds. Shapesplitter can be recast at any time while the clone is active.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Neeko creates a clone of her current form, after which they both instantly become invisible for 0.5 seconds and gain bonus movement speed for 3 seconds. Shapesplitter can be recast at any time while the clone is active.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -429,10 +388,6 @@
                       40
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -445,7 +400,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Neeko sends her clone to the target location if it is not playing an emote or Recall animation.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Neeko sends her clone to the target location if it is not playing an emote or Recall animation.</p></div>",
             "leveling": []
           }
         ],
@@ -460,7 +415,9 @@
                 13,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -469,7 +426,7 @@
         "affects": "Self",
         "spellshieldable": null,
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Proc",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -496,7 +453,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Neeko slings a magical spiral in the target direction that deals magic damage to enemies hit and roots them for a duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Neeko slings a magical spiral in the target direction that deals magic damage to enemies hit and roots them for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -510,26 +467,14 @@
                       210
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      65,
-                      65,
-                      65,
-                      65,
                       65
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -547,10 +492,6 @@
                       1.5
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -573,10 +514,6 @@
                       3
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -585,7 +522,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              65,
+              70,
+              75,
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -596,7 +546,9 @@
                 10.5,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -604,8 +556,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "AoE",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -632,7 +584,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Neeko winds up spiritual essence over 1.25 seconds and highlights an area around herself, which is visible to enemies unless she is disguised. If Neeko is in a disguise, it will break after 0.5 seconds into the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Neeko winds up spiritual essence over 1.25 seconds and highlights an area around herself, which is visible to enemies unless she is disguised. If Neeko is in a disguise, it will break after 0.5 seconds into the duration.</p></div>",
             "leveling": []
           },
           {
@@ -652,20 +604,14 @@
                       550
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      120,
-                      120,
                       120
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -674,7 +620,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -683,7 +638,9 @@
                 105,
                 90
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -691,8 +648,8 @@
         "targeting": "Auto",
         "affects": "Enemies, Self",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -714,5 +671,6 @@
       }
     ]
   },
+  "lore": "Hailing from a long lost tribe of vastaya, Neeko can blend into any crowd by borrowing the appearances of others, even absorbing something of their emotional state to tell friend from foe in an instant. No one is ever sure where—or who—Neeko might be, but those who intend to do her harm will soon witness her true colors revealed, and feel the full power of her primordial spirit magic unleashed upon them.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/neeko/skins/base/images/neeko_splash_centered_0.jpg"
 }

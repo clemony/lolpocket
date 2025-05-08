@@ -100,15 +100,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Bard/ability-icon/p",
         "effects": [
           {
-            "description": "Innate - Ancient Chimes: Bard's presence causes sacred Chimes to appear at random locations on the map, lingering for up to 10 minutes. Collecting a Chime restores 12% maximum mana and grants Bard 20 + (1 per minute after 5 minutes) experience, as well as 24% bonus movement speed out of combat for 20 seconds, which stacks up to 10 times. Each Chime collected beyond the first instead grants an additional 14% bonus movement speed, up to a total of 150% bonus movement speed. Bard empowers his Meeps each time he collects 5 Chimes.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Ancient Chimes:</p><p> Bard's presence causes sacred Chimes to appear at random locations on the map, lingering for up to 10 minutes. Collecting a Chime restores 12% maximum mana and grants Bard 20 + (1 per minute after 5 minutes) experience, as well as 24% bonus movement speed out of combat for 20 seconds, which stacks up to 10 times. Each Chime collected beyond the first instead grants an additional 14% bonus movement speed, up to a total of 150% bonus movement speed. Bard empowers his Meeps each time he collects 5 Chimes.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate - Meeps: Bard's presence attracts Meeps, which are small spirits that come to his side. While he has Meeps, his basic attacks are empowered to each consume a Meep on-attack to deal 35 (+ 10 per 5 Chimes collected) (+ 40% AP) bonus magic damage.\nAt 5 Chimes, Meeps slow damaged enemies by 25% : 75% (based on number of Chimes) for 1 second.\nAt 15 Chimes, Meeps deal the damage to enemies within 150 units of the primary target as well as those in a cone behind them.\nAt 35 Chimes, the cone's radius increases.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Meeps:</p><p> Bard's presence attracts Meeps, which are small spirits that come to his side. While he has Meeps, his basic attacks are empowered to each consume a Meep on-attack to deal 35 (+ 10 per 5 Chimes collected) (+ 40% AP) bonus magic damage.</p></div>\nAt 5 Chimes, Meeps slow damaged enemies by 25% - 75% (based on number of Chimes) for 1 second.\nAt 15 Chimes, Meeps deal the damage to enemies within 150 units of the primary target as well as those in a cone behind them.\nAt 35 Chimes, the cone's radius increases.",
             "leveling": []
           },
           {
-            "description": "Bard can have up to 1 : 9 (based on number of Chimes) Meeps at a time.",
+            "description": "Bard can have up to 1 - 9 (based on number of Chimes) Meeps at a time.",
             "leveling": []
           }
         ],
@@ -121,7 +121,6 @@
                 8
               ],
               "units": [
-                " : 4 (based on number of Chimes)",
                 " : 4 (based on number of Chimes)"
               ]
             }
@@ -132,7 +131,7 @@
         "affects": "Enemies",
         "spellshieldable": "Special",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "mixed",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -159,7 +158,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Bard/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Bard fires an energy bolt in the target direction that deals magic damage to the first enemy hit and slows them by 60% for a duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Bard fires an energy bolt in the target direction that deals magic damage to the first enemy hit and slows them by 60% for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -173,26 +172,14 @@
                       240
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -210,10 +197,6 @@
                       1.8
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -226,7 +209,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -237,7 +229,9 @@
                 8,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -245,8 +239,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "aoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -273,7 +267,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Bard/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Bard conjures a shrine at the target location that gathers power over 5 seconds and grants sight of its surroundings for 1.8 seconds. Shrines last until they are consumed by champions moving over them. Up to 3 shrines may be active at a time.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Bard conjures a shrine at the target location that gathers power over 5 seconds and grants sight of its surroundings for 1.8 seconds. Shrines last until they are consumed by champions moving over them. Up to 3 shrines may be active at a time.</p></div>",
             "leveling": []
           },
           {
@@ -291,26 +285,14 @@
                       125
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -328,26 +310,14 @@
                       200
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -365,26 +335,14 @@
                       30
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   },
                   {
                     "values": [
-                      5,
-                      5,
-                      5,
-                      5,
                       5
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -397,7 +355,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [],
           "affectedByCdr": false
@@ -405,7 +372,7 @@
         "targeting": "Location / Unit",
         "affects": "Allies",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": "Heal",
         "projectile": null,
@@ -439,7 +406,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Bard/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Bard opens a one-way magical corridor through a piece of terrain in the target direction for 10 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Bard opens a one-way magical corridor through a piece of terrain in the target direction for 10 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -451,7 +418,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              30
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -462,7 +438,9 @@
                 17.5,
                 16
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -470,7 +448,7 @@
         "targeting": "Direction",
         "affects": "Self, Allies, Enemies",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": "FALSE",
@@ -498,7 +476,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Bard/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Bard sends magical energy arcing to the target location, granting sight of the area during travel. Upon impact, it puts all units within into stasis for 2.5 seconds, as well as stunning all enemy champions, minions, and turrets struck for the same duration. Enemies hit are revealed for the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Bard sends magical energy arcing to the target location, granting sight of the area during travel. Upon impact, it puts all units within into stasis for 2.5 seconds, as well as stunning all enemy champions, minions, and turrets struck for the same duration. Enemies hit are revealed for the duration.</p></div>",
             "leveling": []
           },
           {
@@ -506,7 +484,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -515,7 +502,9 @@
                 95,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -523,7 +512,7 @@
         "targeting": "Location",
         "affects": null,
         "spellshieldable": "True",
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": "FALSE",
@@ -546,5 +535,6 @@
       }
     ]
   },
+  "lore": "A traveler from beyond the stars, Bard is an agent of serendipity who fights to maintain a balance where life can endure the indifference of chaos. Many Runeterrans sing songs that ponder his extraordinary nature, yet they all agree that the cosmic vagabond is drawn to artifacts of great magical power. Surrounded by a jubilant choir of helpful spirit meeps, it is impossible to mistake his actions as malevolent, as Bard always serves the greater good... in his own odd way.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/bard/skins/base/images/bard_splash_centered_0.jpg"
 }

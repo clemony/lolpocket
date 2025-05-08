@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vayne/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Vayne gains 30 bonus movement speed while facing a nearby visible enemy champion, increased to 90 while under the effects of Final Hour.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Vayne gains 30 bonus movement speed while facing a nearby visible enemy champion, increased to 90 while under the effects of Final Hour.</p></div>",
             "leveling": []
           }
         ],
@@ -140,7 +140,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vayne/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Vayne dashes a fixed distance in the target direction, though not through terrain, and empowers her next basic attack within 3 seconds to have an uncancelable windup and deal bonus physical damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Vayne dashes a fixed distance in the target direction, though not through terrain, and empowers her next basic attack within 3 seconds to have an uncancelable windup and deal bonus physical damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -154,26 +154,14 @@
                       115
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -186,7 +174,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              30
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -197,7 +194,9 @@
                 3,
                 2
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -205,8 +204,8 @@
         "targeting": "Direction",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -233,7 +232,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vayne/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Vayne's basic attacks on-hit and Condemn apply a stack of Silver Bolts for 3.5 seconds, refreshing on subsequent applications, expiring upon attacking a new enemy, and stacking up to 3 times.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Vayne's basic attacks on-hit and Condemn apply a stack of Silver Bolts for 3.5 seconds, refreshing on subsequent applications, expiring upon attacking a new enemy, and stacking up to 3 times.</p></div>",
             "leveling": []
           },
           {
@@ -251,10 +250,6 @@
                       10
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -272,10 +267,6 @@
                       110
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -293,7 +284,7 @@
         "affects": "Enemies",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "TRUE_DAMAGE",
+        "damageType": "True damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -320,7 +311,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vayne/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Vayne fires a heavy bolt at the target enemy that deals physical damage and knocks them back 475 units, though not through terrain.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Vayne fires a heavy bolt at the target enemy that deals physical damage and knocks them back 475 units, though not through terrain.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -334,26 +325,14 @@
                       190
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -376,26 +355,14 @@
                       285
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      75,
-                      75,
-                      75,
-                      75,
                       75
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -413,26 +380,14 @@
                       475
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      125,
-                      125,
-                      125,
-                      125,
                       125
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -441,7 +396,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              90
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -452,7 +416,9 @@
                 14,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -460,8 +426,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -488,7 +454,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vayne/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Vayne equips her crossbow, gaining bonus attack damage for a duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Vayne equips her crossbow, gaining bonus attack damage for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Effect Duration",
@@ -500,8 +466,6 @@
                       12
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -517,8 +481,6 @@
                       65
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -539,8 +501,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -553,7 +513,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -562,7 +531,9 @@
                 85,
                 70
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -570,7 +541,7 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -593,5 +564,6 @@
       }
     ]
   },
+  "lore": "Shauna Vayne is a deadly, remorseless Demacian monster hunter, who has dedicated her life to finding and destroying the demon that murdered her family. Armed with a wrist-mounted crossbow and a heart full of vengeance, she is only truly happy when slaying practitioners or creations of the dark arts, striking from the shadows with a flurry of silver bolts.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/vayne/skins/base/images/vayne_splash_centered_0.jpg"
 }

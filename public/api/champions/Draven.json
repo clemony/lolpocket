@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Draven/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: When Draven catches a Spinning Axe, kills a non-champion, or destroys a turret, he gains a stack of Adoration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> When Draven catches a Spinning Axe, kills a non-champion, or destroys a turret, he gains a stack of Adoration.</p></div>",
             "leveling": []
           },
           {
@@ -145,7 +145,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Draven/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Draven starts spinning his axe, empowering his next basic attack within 5.8 seconds to deal bonus physical damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Draven starts spinning his axe, empowering his next basic attack within 5.8 seconds to deal bonus physical damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -159,10 +159,6 @@
                       60
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -175,10 +171,6 @@
                       115
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -195,7 +187,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              45
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -206,7 +207,9 @@
                 9,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -214,8 +217,8 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "basic",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -242,7 +245,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Draven/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Draven enters an adrenaline rush, gaining bonus attack speed for 3 seconds as well as decaying bonus movement speed and ghosting for 1.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Draven enters an adrenaline rush, gaining bonus attack speed for 3 seconds as well as decaying bonus movement speed and ghosting for 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -256,10 +259,6 @@
                       40
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -277,10 +276,6 @@
                       70
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -293,18 +288,29 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40,
+              35,
+              30,
+              25,
+              20
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                12,
-                12,
-                12,
-                12,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -312,7 +318,7 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -340,7 +346,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Draven/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Draven throws a fan of axes in a line in the target direction, dealing physical damage to enemies hit, knocking them aside, though not through terrain, and slowing them for 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Draven throws a fan of axes in a line in the target direction, dealing physical damage to enemies hit, knocking them aside, though not through terrain, and slowing them for 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -354,26 +360,14 @@
                       215
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -391,10 +385,6 @@
                       40
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -403,7 +393,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -414,7 +413,9 @@
                 15,
                 14
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -422,8 +423,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "aoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -450,7 +451,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Draven/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Draven hurls two massive axes in the target direction that briefly grant sight of their surroundings and deal physical damage to enemies hit. Enemy champions that are damaged to or while below a health threshold equal to the number of Adoration stacks are executed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Draven hurls two massive axes in the target direction that briefly grant sight of their surroundings and deal physical damage to enemies hit. Enemy champions that are damaged to or while below a health threshold equal to the number of Adoration stacks are executed.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -462,8 +463,6 @@
                       375
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -474,8 +473,6 @@
                       150
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -491,8 +488,6 @@
                       750
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -503,8 +498,6 @@
                       300
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -517,11 +510,11 @@
             "leveling": []
           },
           {
-            "description": "Recast: Draven forces the axes to reverse direction, slowly coming to a stop before homing back to him, dealing the same damage to enemies hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Draven forces the axes to reverse direction, slowly coming to a stop before homing back to him, dealing the same damage to enemies hit.</p></div>",
             "leveling": []
           },
           {
-            "description": "Whirling Death deals 100% : 40% (based on enemies hit) damage, resetting upon reversing direction.",
+            "description": "Whirling Death deals 100% - 40% (based on enemies hit) damage, resetting upon reversing direction.",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -533,8 +526,6 @@
                       150
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -545,8 +536,6 @@
                       60
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -562,8 +551,6 @@
                       300
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -574,8 +561,6 @@
                       120
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -588,7 +573,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -597,7 +591,9 @@
                 90,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -605,8 +601,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -628,5 +624,6 @@
       }
     ]
   },
+  "lore": "In Noxus, warriors known as Reckoners face one another in arenas where blood is spilled and strength tested—but none has ever been as celebrated as Draven. A former soldier, he found that the crowds uniquely appreciated his flair for the dramatic, and his unparalleled skill with his spinning axes. Addicted to the spectacle of his own brash perfection, Draven has sworn to defeat whomever he must to ensure that his name is chanted throughout the empire forever more.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/draven/skins/base/images/draven_splash_centered_0.jpg"
 }

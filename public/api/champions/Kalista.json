@@ -98,15 +98,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kalista/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Whenever Kalista inputs a movement command during her basic attack windup or the cast time of Pierce, she will dash a short distance in the direction of the inputted location.Kalista cannot dash while immobilized or grounded, and she will be knocked down by any immobilizing or polymorphing crowd control during the dash.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Whenever Kalista inputs a movement command during her basic attack windup or the cast time of Pierce, she will dash a short distance in the direction of the inputted location.Kalista cannot dash while immobilized or grounded, and she will be knocked down by any immobilizing or polymorphing crowd control during the dash.</p></div>",
             "leveling": []
           },
           {
-            "description": "Martial Poise's dash range and speed details:\nDash range of basic attacks is modified by the tier of Kalista's Boots and the specific angle of the dash.\nAt a 0° angle towards the target, the minimum dash range is 140 / 153 / 166 / 175 (based on Boots Tier) units.\nAt a 90° angle, the maximum dash range is 240 / 263 / 280 / 300 (based on Boots Tier) units.\nDash range of Pierce is 300 units when dashing anywhere in the direction of the point of cast.\nIf the dash is inputted to a location that is away from Pierce's point of cast, the dash range is reduced based on the cast angle, with a minimum distance of 150 units if the inputted location is directly opposite to the point of cast.\nDash speed is increased based on the tier of Kalista's Boots, and is affected by her bonus attack speed as well as multiplicative movement speed modifiers she is under the effect of (including slows).",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Martial Poise's dash range and speed details:</p><p></p></div>\nDash range of basic attacks is modified by the tier of Kalista's Boots and the specific angle of the dash.\nAt a 0° angle towards the target, the minimum dash range is 140 / 153 / 166 / 175 (based on Boots Tier) units.\nAt a 90° angle, the maximum dash range is 240 / 263 / 280 / 300 (based on Boots Tier) units.\nDash range of Pierce is 300 units when dashing anywhere in the direction of the point of cast.\nIf the dash is inputted to a location that is away from Pierce's point of cast, the dash range is reduced based on the cast angle, with a minimum distance of 150 units if the inputted location is directly opposite to the point of cast.\nDash speed is increased based on the tier of Kalista's Boots, and is affected by her bonus attack speed as well as multiplicative movement speed modifiers she is under the effect of (including slows).",
             "leveling": []
           },
           {
-            "description": "Innate - Oathsworn Bond: Kalista begins the game with an exclusive Black Spear that she can activate on an allied champion to force them to swear an oath with her. Once the oath has been sworn, the ally becomes her Oathsworn, causing Kalista to form a tether between her and them. While she and the ally bound as the Oathsworn are within tether range of each other, they can both interact with Soul-Mark and Fate's Call.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Oathsworn Bond:</p><p> Kalista begins the game with an exclusive Black Spear that she can activate on an allied champion to force them to swear an oath with her. Once the oath has been sworn, the ally becomes her Oathsworn, causing Kalista to form a tether between her and them. While she and the ally bound as the Oathsworn are within tether range of each other, they can both interact with Soul-Mark and Fate's Call.</p></div>",
             "leveling": []
           },
           {
@@ -150,7 +150,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kalista/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Kalista launches a spear in the target direction that deals physical damage to the first enemy hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kalista launches a spear in the target direction that deals physical damage to the first enemy hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -164,26 +164,14 @@
                       270
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      105,
-                      105,
-                      105,
-                      105,
                       105
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -196,18 +184,29 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              65,
+              70,
+              75,
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                8,
-                8,
-                8,
-                8,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -215,8 +214,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Single target",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -243,7 +242,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kalista/ability-icon/w",
         "effects": [
           {
-            "description": "Passive - Soul-Marked: While Kalista and her Oathsworn are tethered, their basic attacks and Pierce apply a Soul-Mark to the target hit for 4 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive - Soul-Marked:</p><p> While Kalista and her Oathsworn are tethered, their basic attacks and Pierce apply a Soul-Mark to the target hit for 4 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -261,10 +260,6 @@
                       18
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -282,10 +277,6 @@
                       200
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -294,7 +285,7 @@
             ]
           },
           {
-            "description": "Active: Kalista summons a Sentinel that patrols back and forth on a path along the target location, granting sight of its surroundings as it travels.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kalista summons a Sentinel that patrols back and forth on a path along the target location, granting sight of its surroundings as it travels.</p></div>",
             "leveling": []
           },
           {
@@ -311,13 +302,11 @@
           "modifiers": [
             {
               "values": [
-                30,
-                30,
-                30,
-                30,
                 30
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -326,7 +315,7 @@
         "affects": "Enemies",
         "spellshieldable": null,
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "proc",
         "projectile": null,
         "onHitEffects": null,
@@ -359,11 +348,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kalista/ability-icon/e",
         "effects": [
           {
-            "description": "Passive: Kalista's basic attacks on-hit and Pierce apply a stack of Rend to enemies for 4 seconds, refreshing on subsequent hits and stacking up to 254 times.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Kalista's basic attacks on-hit and Pierce apply a stack of Rend to enemies for 4 seconds, refreshing on subsequent hits and stacking up to 254 times.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Kalista rips all lodged spears from nearby enemies, consuming all of their stacks to deal them physical damage and slow them for 2 seconds. Each additional spear on the target deals reduced damage. Rend deals 50% damage against epic monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kalista rips all lodged spears from nearby enemies, consuming all of their stacks to deal them physical damage and slow them for 2 seconds. Each additional spear on the target deals reduced damage. Rend deals 50% damage against epic monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -377,42 +366,22 @@
                       45
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      20,
-                      20,
-                      20,
-                      20,
                       20
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -430,10 +399,6 @@
                       35
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -446,26 +411,14 @@
                       40
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      20,
-                      20,
-                      20,
-                      20,
                       20
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -483,26 +436,14 @@
                       42
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   },
                   {
                     "values": [
-                      5,
-                      5,
-                      5,
-                      5,
                       5
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -525,10 +466,6 @@
                       30
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -541,7 +478,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              30
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -552,7 +498,9 @@
                 8.5,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -560,8 +508,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Area of effect",
         "projectile": null,
         "onHitEffects": null,
@@ -588,7 +536,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kalista/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Kalista invokes her tether to retrieve and hold her Oathsworn for 4 seconds. Kalista cleanses the Oathsworn from all crowd control and renders them invulnerable and untargetable for the duration, and pulls them to her over 1 second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kalista invokes her tether to retrieve and hold her Oathsworn for 4 seconds. Kalista cleanses the Oathsworn from all crowd control and renders them invulnerable and untargetable for the duration, and pulls them to her over 1 second.</p></div>",
             "leveling": []
           },
           {
@@ -608,8 +556,6 @@
                       2
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -622,7 +568,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -631,7 +586,9 @@
                 140,
                 120
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -639,7 +596,7 @@
         "targeting": "Auto",
         "affects": "Oathsworn Ally / Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -662,5 +619,6 @@
       }
     ]
   },
+  "lore": "A specter of wrath and retribution, Kalista is the undying spirit of vengeance, an armored nightmare summoned from the Shadow Isles to hunt deceivers and traitors. The betrayed may cry out in blood to be avenged, but Kalista only answers those willing to pay with their very souls. Those who become the focus of Kalista's wrath should make their final peace, for any pact sealed with this grim hunter can only end with the cold, piercing fire of her soul-spears.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kalista/skins/base/images/kalista_splash_centered_0.jpg"
 }

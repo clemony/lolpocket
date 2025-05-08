@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kennen/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Kennen's abilities apply a stack of Mark of the Storm to enemies hit for 6 seconds, refreshing on subsequent applications and stacking up to 3 times.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Kennen's abilities apply a stack of Mark of the Storm to enemies hit for 6 seconds, refreshing on subsequent applications and stacking up to 3 times.</p></div>",
             "leveling": []
           },
           {
@@ -145,7 +145,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kennen/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Kennen throws a shuriken in the target direction that deals magic damage to the first enemy hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kennen throws a shuriken in the target direction that deals magic damage to the first enemy hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -159,26 +159,14 @@
                       275
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      75,
-                      75,
-                      75,
-                      75,
                       75
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -187,7 +175,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              55,
+              50,
+              45,
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -198,7 +199,9 @@
                 4.75,
                 4
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -206,8 +209,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "ENERGY",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Energy",
+        "damageType": "Magic damage",
         "spellEffects": "Single target",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -234,7 +237,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kennen/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Kennen's basic attacks on-attack generate a stack of Electrical Surge, stacking up to 4 times. At 4 stacks, his next basic attack on-attack is empowered to consume all stacks on-hit to deal bonus magic damage and apply a stack of Mark of the Storm.Kennen gains maximum stacks of Electrical Surge upon respawning.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Kennen's basic attacks on-attack generate a stack of Electrical Surge, stacking up to 4 times. At 4 stacks, his next basic attack on-attack is empowered to consume all stacks on-hit to deal bonus magic damage and apply a stack of Mark of the Storm.Kennen gains maximum stacks of Electrical Surge upon respawning.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -248,10 +251,6 @@
                       75
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -264,26 +263,14 @@
                       120
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      35,
-                      35,
-                      35,
-                      35,
                       35
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -292,7 +279,7 @@
             ]
           },
           {
-            "description": "Active: Kennen sends out a surge of electricity that deals magic damage to all nearby enemies afflicted by Mark of the Storm or within Slicing Maelstrom.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kennen sends out a surge of electricity that deals magic damage to all nearby enemies afflicted by Mark of the Storm or within Slicing Maelstrom.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -306,26 +293,14 @@
                       170
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -338,7 +313,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -349,7 +333,9 @@
                 7.75,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -357,8 +343,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "ENERGY",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Energy",
+        "damageType": "Magic damage",
         "spellEffects": "special",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -385,7 +371,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kennen/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Kennen turns into lightning for 2 seconds, becoming unable to declare basic attacks but gaining ghosting and 100% bonus movement speed. He deals magic damage to enemies he passes through, reduced to 65% against non-champions, and restores 40 energy upon damaging at least one enemy.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kennen turns into lightning for 2 seconds, becoming unable to declare basic attacks but gaining ghosting and 100% bonus movement speed. He deals magic damage to enemies he passes through, reduced to 65% against non-champions, and restores 40 energy upon damaging at least one enemy.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -399,26 +385,14 @@
                       240
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -436,26 +410,14 @@
                       156
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      52,
-                      52,
-                      52,
-                      52,
                       52
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -468,7 +430,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Kennen ends Lightning Rush to gain bonus attack speed and be allowed to exceed the attack speed cap by the amount gained for 4 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Kennen ends Lightning Rush to gain bonus attack speed and be allowed to exceed the attack speed cap by the amount gained for 4 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -482,10 +444,6 @@
                       80
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -498,7 +456,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -509,7 +476,9 @@
                 7,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -517,8 +486,8 @@
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
-        "resource": "ENERGY",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Energy",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -545,7 +514,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kennen/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Kennen summons a storm around himself for 3 seconds, gaining bonus armor and bonus magic resistance for the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kennen summons a storm around himself for 3 seconds, gaining bonus armor and bonus magic resistance for the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Resistances",
@@ -557,8 +526,6 @@
                       60
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -579,20 +546,14 @@
                       110
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      22.5,
-                      22.5,
                       22.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -613,20 +574,14 @@
                       825
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      168.75,
-                      168.75,
                       168.75
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -644,7 +599,9 @@
                 100,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -653,7 +610,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "aoedot",
         "projectile": null,
         "onHitEffects": null,
@@ -675,5 +632,6 @@
       }
     ]
   },
+  "lore": "More than just the lightning-quick enforcer of Ionian balance, Kennen is the only yordle member of the Kinkou. Despite his small, furry stature, he is eager to take on any threat with a whirling storm of shuriken and boundless enthusiasm. Alongside his master Shen, Kennen patrols the spirit realm, employing devastating electrical energy to strike down his enemies.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kennen/skins/base/images/kennen_splash_centered_0.jpg"
 }

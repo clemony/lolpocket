@@ -56,7 +56,7 @@ watch(
   },
 )
 
-const { resolveStat } = useChampionStatGrowth()
+const { resolveStat } = useChampionStatGrowth(computed (() => cs.championGridLevel))
 
 const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
   {

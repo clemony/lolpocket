@@ -98,11 +98,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Caitlyn's basic attacks generate a stack of Count on-attack, doubled if she is within brush. At 5 stacks, or 4 while in brush, her next basic attack consumes all stacks on-attack to become a Headshot.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Caitlyn's basic attacks generate a stack of Count on-attack, doubled if she is within brush. At 5 stacks, or 4 while in brush, her next basic attack consumes all stacks on-attack to become a Headshot.</p></div>",
             "leveling": []
           },
           {
-            "description": "Headshot: Caitlyn's basic attack is empowered to have an uncancellable windup and deal 60 / 90 / 120% (based on level) (+ (148.75% + 34%) critical strike chance) AD bonus physical damage, increased to 110 / 115 / 120% (based on level) (+ (148.75% + 34%) critical strike chance) AD against non-champions.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Headshot:</p><p> Caitlyn's basic attack is empowered to have an uncancellable windup and deal 60 / 90 / 120% (based on level) (+ (148.75% + 34%) critical strike chance) AD bonus physical damage, increased to 110 / 115 / 120% (based on level) (+ (148.75% + 34%) critical strike chance) AD against non-champions.</p></div>",
             "leveling": []
           },
           {
@@ -119,7 +119,7 @@
         "affects": "Self",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "Basic",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -146,7 +146,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Caitlyn fires a piercing shot in the target direction that deals physical damage to the first enemy it passes through, after which it expands in width but deals only 60% damage to enemies it hits thereafter.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Caitlyn fires a piercing shot in the target direction that deals physical damage to the first enemy it passes through, after which it expands in width but deals only 60% damage to enemies it hits thereafter.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -160,10 +160,6 @@
                       210
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -176,10 +172,6 @@
                       205
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -197,10 +189,6 @@
                       126
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -213,10 +201,6 @@
                       123
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -229,7 +213,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              55,
+              60,
+              65,
+              70,
+              75
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -240,7 +237,9 @@
                 7,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -248,8 +247,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Area of effect",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -276,7 +275,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Caitlyn sets a visible trap at the target location that is untargetable and arms after 1 second, lasting for a duration. The trap grants sight of the area for 1 second after being placed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Caitlyn sets a visible trap at the target location that is untargetable and arms after 1 second, lasting for a duration. The trap grants sight of the area for 1 second after being placed.</p></div>",
             "leveling": [
               {
                 "attribute": "Trap Duration",
@@ -290,10 +289,6 @@
                       50
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -316,10 +311,6 @@
                       5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -342,26 +333,14 @@
                       215
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -370,18 +349,25 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              20
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                0.5,
-                0.5,
-                0.5,
-                0.5,
                 0.5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -389,7 +375,7 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -423,7 +409,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Caitlyn fires a net in the target direction and recoils 390 units in the opposite direction. The net deals magic damage to the first enemy hit and slows them by 50% for 1 second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Caitlyn fires a net in the target direction and recoils 390 units in the opposite direction. The net deals magic damage to the first enemy hit and slows them by 50% for 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -437,26 +423,14 @@
                       280
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -469,7 +443,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              75
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -480,7 +463,9 @@
                 10,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -488,8 +473,8 @@
         "targeting": "Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Single target",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -516,7 +501,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Caitlyn locks onto the target enemy champion and channels for 1 second, revealing them as well as revealing herself.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Caitlyn locks onto the target enemy champion and channels for 1 second, revealing them as well as revealing herself.</p></div>",
             "leveling": []
           },
           {
@@ -524,7 +509,7 @@
             "leveling": []
           },
           {
-            "description": "Once Caitlyn completes the channel, she fires a homing bullet toward the target that deals physical damage to the first enemy champion it hits, increased by 0% : 50% (based on critical strike chance).",
+            "description": "Once Caitlyn completes the channel, she fires a homing bullet toward the target that deals physical damage to the first enemy champion it hits, increased by 0% - 50% (based on critical strike chance).",
             "leveling": [
               {
                 "attribute": "Physical damage",
@@ -536,20 +521,14 @@
                       650
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -558,16 +537,25 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                90,
-                90,
                 90
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -575,8 +563,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -598,5 +586,6 @@
       }
     ]
   },
+  "lore": "Renowned as its finest peacekeeper, Caitlyn Kiramman is also Piltover's best shot at ridding the city of its elusive criminal elements. She is often paired with Vi, acting as a cool counterpoint to her partner's more impetuous nature. Even though she carries a one-of-a-kind hextech rifle, Caitlyn's most powerful weapon is her superior intellect, allowing her to lay elaborate traps for any lawbreakers foolish enough to operate in the City of Progress.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/base/images/caitlyn_splash_centered_0.jpg"
 }

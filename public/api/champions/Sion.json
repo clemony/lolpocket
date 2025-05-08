@@ -99,11 +99,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Upon taking fatal damage, Sion enters stasis for 1.5 seconds to reanimate into a frenzy, restoring 100% of his maximum health but losing 2.3 : 24.4 (based on level) health every 0.264 seconds, increasing by[ 70% of the base value ][ 1.61 : 17.08 (based on level) ]per subsequent tick. Sion's health regeneration and any healing (except life steal) he receives during this time is 0% effective.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Upon taking fatal damage, Sion enters stasis for 1.5 seconds to reanimate into a frenzy, restoring 100% of his maximum health but losing 2.3 - 24.4 (based on level) health every 0.264 seconds, increasing by[ 70% of the base value ][ 1.61 - 17.08 (based on level) ]per subsequent tick. Sion's health regeneration and any healing (except life steal) he receives during this time is 0% effective.</p></div>",
             "leveling": []
           },
           {
-            "description": "Sion can only move and use his basic attacks and item actives, and empowers himself with the following effects:\n 1.75 attack speed minimum and maximum\n 100% life steal\nDeals bonus physical damage on-hit equal to 10% of the target's maximum health, capped at 75 against non-champions\n Ghosting\nOne cast of Death Surge, which replaces all of his abilities",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Sion can only move and use his basic attacks and item actives, and empowers himself with the following effects:</p><p></p></div>\n 1.75 attack speed minimum and maximum\n 100% life steal\nDeals bonus physical damage on-hit equal to 10% of the target's maximum health, capped at 75 against non-champions\n Ghosting\nOne cast of Death Surge, which replaces all of his abilities",
             "leveling": []
           },
           {
@@ -120,7 +120,7 @@
         "affects": "Self",
         "spellshieldable": null,
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "proc",
         "projectile": null,
         "onHitEffects": null,
@@ -145,7 +145,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/p",
         "effects": [
           {
-            "description": "Active: Sion gains 67%(bug) bonus movement speed that decays over 2.376 seconds.\nOnce at least one ability has been learned, Death Surge can be cast using any ability key, even for the abilities that haven't been learned yet.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Sion gains 67%(bug) bonus movement speed that decays over 2.376 seconds.</p></div>\nOnce at least one ability has been learned, Death Surge can be cast using any ability key, even for the abilities that haven't been learned yet.",
             "leveling": []
           }
         ],
@@ -154,11 +154,11 @@
           "modifiers": [
             {
               "values": [
-                100,
-                100,
                 100
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -194,7 +194,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Sion prepares a strike in the target direction, charging for up to 2 seconds to increase Decimating Smash's range over an area, knock up duration, stun duration, and damage every 0.25 seconds, which has up to a maximum bonus for the base damage and up to a 200% bonus for the scaling damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Sion prepares a strike in the target direction, charging for up to 2 seconds to increase Decimating Smash's range over an area, knock up duration, stun duration, and damage every 0.25 seconds, which has up to a maximum bonus for the base damage and up to a 200% bonus for the scaling damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Maximum Base Damage Increase",
@@ -208,10 +208,6 @@
                       191.67
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -229,10 +225,6 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -245,10 +237,6 @@
                       80
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -266,10 +254,6 @@
                       350
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -282,10 +266,6 @@
                       240
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -298,7 +278,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Sion flails his axe in the direction he targeted at the time of cast, dealing physical damage to enemies hit and slowing them by 50% for 0.25 seconds. Decimating Smash deals 150% damage against monsters and 60% damage against minions.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Sion flails his axe in the direction he targeted at the time of cast, dealing physical damage to enemies hit and slowing them by 50% for 0.25 seconds. Decimating Smash deals 150% damage against monsters and 60% damage against minions.</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Monster Damage",
@@ -312,10 +292,6 @@
                       180
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -328,10 +304,6 @@
                       120
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -349,10 +321,6 @@
                       525
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -365,10 +333,6 @@
                       360
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -386,10 +350,6 @@
                       72
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -402,10 +362,6 @@
                       48
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -423,10 +379,6 @@
                       210
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -439,10 +391,6 @@
                       144
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -451,11 +399,20 @@
             ]
           },
           {
-            "description": "If Decimating Smash was charged for at least 1 second, Sion instead slams his axe down, dealing physical damage to enemies hit, knocking them up for 0.5 : 1 (based on channel time) seconds, and stunning them for 1.25 : 2.25 (based on channel time) seconds.",
+            "description": "If Decimating Smash was charged for at least 1 second, Sion instead slams his axe down, dealing physical damage to enemies hit, knocking them up for 0.5 - 1 (based on channel time) seconds, and stunning them for 1.25 - 2.25 (based on channel time) seconds.",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              45
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -466,7 +423,9 @@
                 7,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -474,8 +433,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Area of effect",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -502,11 +461,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Sion gains 4 bonus health whenever he kills an enemy, increased to 15 for large enemies and takedowns against enemy champions.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Sion gains 4 bonus health whenever he kills an enemy, increased to 15 for large enemies and takedowns against enemy champions.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Sion grants himself a shield that lasts for up to 6 seconds. Soul Furnace can be recast after 3 seconds while the shield holds, and does so automatically at the end of the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Sion grants himself a shield that lasts for up to 6 seconds. Soul Furnace can be recast after 3 seconds while the shield holds, and does so automatically at the end of the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -520,26 +479,14 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -552,10 +499,6 @@
                       16
                     ],
                     "units": [
-                      "% maximum health",
-                      "% maximum health",
-                      "% maximum health",
-                      "% maximum health",
                       "% maximum health"
                     ]
                   }
@@ -564,7 +507,7 @@
             ]
           },
           {
-            "description": "Recast: Sion consumes the shield to deal magic damage to nearby enemies, capped at 400 against minions and monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Sion consumes the shield to deal magic damage to nearby enemies, capped at 400 against minions and monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -578,42 +521,22 @@
                       140
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      14,
-                      14,
-                      14,
-                      14,
                       14
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -626,7 +549,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              65,
+              70,
+              75,
+              80,
+              85
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -637,7 +573,9 @@
                 12,
                 11
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -645,8 +583,8 @@
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -673,7 +611,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Sion bellows a shockwave in the target direction that deals magic damage to the first enemy hit, slows them for 2.5 seconds and inflicts them with 20% armor reduction for 4 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Sion bellows a shockwave in the target direction that deals magic damage to the first enemy hit, slows them for 2.5 seconds and inflicts them with 20% armor reduction for 4 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -687,26 +625,14 @@
                       205
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      55,
-                      55,
-                      55,
-                      55,
                       55
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -724,10 +650,6 @@
                       60
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -740,7 +662,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              35,
+              40,
+              45,
+              50,
+              55
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -751,7 +686,9 @@
                 9,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -759,8 +696,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Area of effect",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -787,7 +724,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Sion becomes immune to crowd control and ghosted and, after a brief delay, charges forward in the direction of the cursor for up to 8 seconds, during which he is able to steer at a slow turn rate while automatically navigating his movement. Unstoppable Onslaught can be recast after 0.4 seconds during the channel.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Sion becomes immune to crowd control and ghosted and, after a brief delay, charges forward in the direction of the cursor for up to 8 seconds, during which he is able to steer at a slow turn rate while automatically navigating his movement. Unstoppable Onslaught can be recast after 0.4 seconds during the channel.</p></div>",
             "leveling": []
           },
           {
@@ -799,7 +736,7 @@
             "leveling": []
           },
           {
-            "description": "Enemies hit by Sion's charge are dealt physical damage. The base damage increases by 0% : 166.67% (based on channel time) and the scaling increases by 0% : 100% (based on channel time).",
+            "description": "Enemies hit by Sion's charge are dealt physical damage. The base damage increases by 0% - 166.67% (based on channel time) and the scaling increases by 0% - 100% (based on channel time).",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -811,20 +748,14 @@
                       450
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -840,20 +771,14 @@
                       1200
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -862,7 +787,7 @@
             ]
           },
           {
-            "description": "Enemies, including turrets, hit by the slam are dealt the same damage and are slowed for 3 seconds. Enemies in a smaller radius are also pulled towards Sion over 0.5 seconds and become stunned after a brief delay for 0.25 : 1.75 (based on channel time) seconds.",
+            "description": "Enemies, including turrets, hit by the slam are dealt the same damage and are slowed for 3 seconds. Enemies in a smaller radius are also pulled towards Sion over 0.5 seconds and become stunned after a brief delay for 0.25 - 1.75 (based on channel time) seconds.",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -874,8 +799,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -884,7 +807,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -893,7 +825,9 @@
                 100,
                 60
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -901,8 +835,8 @@
         "targeting": "Direction / Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Area of effect",
         "projectile": null,
         "onHitEffects": null,
@@ -924,5 +858,6 @@
       }
     ]
   },
+  "lore": "A war hero from a bygone era, Sion was revered in Noxus for choking the life out of a Demacian king with his bare hands—but, denied oblivion, he was resurrected to serve his empire even in death. His indiscriminate slaughter claimed all who stood in his way, regardless of allegiance, proving he no longer retained his former humanity. Even so, with crude armor bolted onto rotten flesh, Sion continues to charge into battle with reckless abandon, struggling to remember his true self between the swings of his mighty axe.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/base/images/sion_splash_centered_0.jpg"
 }

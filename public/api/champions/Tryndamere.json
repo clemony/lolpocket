@@ -94,11 +94,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Tryndamere generates 5 Fury on his basic attacks, and 10 Fury on critical strikes and each time he kills an enemy. After 8 seconds without dealing or taking damage, Tryndamere loses 5 Fury per second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Tryndamere generates 5 Fury on his basic attacks, and 10 Fury on critical strikes and each time he kills an enemy. After 8 seconds without dealing or taking damage, Tryndamere loses 5 Fury per second.</p></div>",
             "leveling": []
           },
           {
-            "description": "Tryndamere gains 0% : 50% (based on Fury) critical strike chance.",
+            "description": "Tryndamere gains 0% - 50% (based on Fury) critical strike chance.",
             "leveling": []
           }
         ],
@@ -138,7 +138,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/q",
         "effects": [
           {
-            "description": "Passive: Tryndamere gains bonus attack damage, plus an additional amount based on his missing health.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Tryndamere gains bonus attack damage, plus an additional amount based on his missing health.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Damage",
@@ -152,10 +152,6 @@
                       25
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -173,10 +169,6 @@
                       0.55
                     ],
                     "units": [
-                      " per 1% missing health",
-                      " per 1% missing health",
-                      " per 1% missing health",
-                      " per 1% missing health",
                       " per 1% missing health"
                     ]
                   }
@@ -194,10 +186,6 @@
                       80
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -206,7 +194,7 @@
             ]
           },
           {
-            "description": "Active: Tryndamere consumes all of his Fury to heal himself, increased for every point of Fury consumed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tryndamere consumes all of his Fury to heal himself, increased for every point of Fury consumed.</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Heal",
@@ -220,26 +208,14 @@
                       70
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -257,26 +233,14 @@
                       2.3
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      1.2,
-                      1.2,
-                      1.2,
-                      1.2,
                       1.2
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -294,26 +258,14 @@
                       300
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      150,
-                      150,
-                      150,
-                      150,
                       150
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -322,18 +274,25 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              "%"
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                12,
-                12,
-                12,
-                12,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -341,7 +300,7 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "FURY",
+        "resource": "Fury",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -369,7 +328,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Tryndamere reduces the bonus attack damage of nearby enemy champions for 4 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tryndamere reduces the bonus attack damage of nearby enemy champions for 4 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Attack Damage Reduction",
@@ -383,10 +342,6 @@
                       80
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -409,10 +364,6 @@
                       60
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -430,13 +381,11 @@
           "modifiers": [
             {
               "values": [
-                14,
-                14,
-                14,
-                14,
                 14
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -472,7 +421,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Tryndamere dashes to the target location, dealing physical damage to enemies hit and generating 2 Fury per enemy hit, increased to 5 Fury against champions.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tryndamere dashes to the target location, dealing physical damage to enemies hit and generating 2 Fury per enemy hit, increased to 5 Fury against champions.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -486,42 +435,22 @@
                       195
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      130,
-                      130,
-                      130,
-                      130,
                       130
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -549,7 +478,9 @@
                 9,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -558,7 +489,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "aoe",
         "projectile": null,
         "onHitEffects": null,
@@ -585,7 +516,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Tryndamere becomes enraged, instantly gaining Fury and a minimum health threshold for 5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tryndamere becomes enraged, instantly gaining Fury and a minimum health threshold for 5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Fury Gained",
@@ -597,8 +528,6 @@
                       100
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -614,8 +543,6 @@
                       70
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -637,7 +564,9 @@
                 100,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -668,5 +597,6 @@
       }
     ]
   },
+  "lore": "Fueled by unbridled fury and rage, Tryndamere once carved his way through the Freljord, openly challenging the greatest warriors of the north to prepare himself for even darker days ahead. The wrathful barbarian has long sought revenge for the annihilation of his clan, though more recently he has found companionship with Ashe, the Avarosan warmother, and a home with her people. His almost inhuman strength and fortitude is legendary, and has delivered him and his new allies countless victories against the greatest of odds.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tryndamere/skins/base/images/tryndamere_splash_centered_0.jpg"
 }

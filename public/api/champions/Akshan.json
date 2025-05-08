@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akshan/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Whenever Akshan uses a basic attack, he fires an additional shot after a delay that deals 50% AD physical damage, increased to 100% AD against minions. Issuing an attack order on a different target before the additional shot has been launched causes Akshan to fire it at the new target. If the second shot is cancelled instead, he gains 20 : 75 (based on level) × (1 + 100% bonus attack speed) bonus movement speed decaying over 1 second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Whenever Akshan uses a basic attack, he fires an additional shot after a delay that deals 50% AD physical damage, increased to 100% AD against minions. Issuing an attack order on a different target before the additional shot has been launched causes Akshan to fire it at the new target. If the second shot is cancelled instead, he gains 20 - 75 (based on level) × (1 + 100% bonus attack speed) bonus movement speed decaying over 1 second.</p></div>",
             "leveling": []
           },
           {
@@ -106,7 +106,7 @@
             "leveling": []
           },
           {
-            "description": "Innate: Akshan's basic attacks on-hit and ability hits apply a stack of Dirty Fighting to enemies for 5 seconds, refreshing on subsequent applications and stacking up to 3 times. The third stack against a target consumes them all to deal them 15 / 40 / 80 / 150 (based on level) (+ 60% AP) bonus magic damage; if the target is a champion, Akshan will also gain a 40 : 280 (based on level) (+ 35% bonus AD) shield for 2 seconds. The shield may be gained only once every few seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Akshan's basic attacks on-hit and ability hits apply a stack of Dirty Fighting to enemies for 5 seconds, refreshing on subsequent applications and stacking up to 3 times. The third stack against a target consumes them all to deal them 15 / 40 / 80 / 150 (based on level) (+ 60% AP) bonus magic damage; if the target is a champion, Akshan will also gain a 40 - 280 (based on level) (+ 35% bonus AD) shield for 2 seconds. The shield may be gained only once every few seconds.</p></div>",
             "leveling": []
           }
         ],
@@ -119,7 +119,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "false",
         "resource": null,
-        "damageType": "MIXED_DAMAGE",
+        "damageType": "Mixed damage",
         "spellEffects": "special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -146,7 +146,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akshan/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Akshan throws a boomerang in the target direction that briefly grants sight around its trajectory and deals physical damage to enemies hit, revealing them for 1 second and extending its range each time it hits a target. If this hits an enemy champion, Akshan gains 20% (+ 5% per 100 AP) bonus movement speed that decays over 1 second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Akshan throws a boomerang in the target direction that briefly grants sight around its trajectory and deals physical damage to enemies hit, revealing them for 1 second and extending its range each time it hits a target. If this hits an enemy champion, Akshan gains 20% (+ 5% per 100 AP) bonus movement speed that decays over 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -160,26 +160,14 @@
                       85
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -202,26 +190,14 @@
                       170
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      160,
-                      160,
-                      160,
-                      160,
                       160
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -244,10 +220,6 @@
                       80
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -260,7 +232,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              65,
+              70,
+              75,
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -271,7 +256,9 @@
                 5.75,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -279,8 +266,8 @@
         "targeting": "Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -307,7 +294,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akshan/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Akshan marks enemy champions that kill allied champions as Scoundrels for 60 seconds. If Akshan scores a takedown against a Scoundrel while alive and within 3 seconds of damaging them, he receives an additional 100 and resurrects all dead allied champions that they have slain after 1 second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Akshan marks enemy champions that kill allied champions as Scoundrels for 60 seconds. If Akshan scores a takedown against a Scoundrel while alive and within 3 seconds of damaging them, he receives an additional 100 and resurrects all dead allied champions that they have slain after 1 second.</p></div>",
             "leveling": []
           },
           {
@@ -315,7 +302,7 @@
             "leveling": []
           },
           {
-            "description": "Active: Akshan enters camouflage, which lasts indefinitely while he is near terrain or inside brush, and for 2 seconds otherwise. During this time. he can see trails leading toward Scoundrels, and while facing them if they are within 5000 units, he gains bonus mana regeneration equal to 12% of his missing mana as well as bonus movement speed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Akshan enters camouflage, which lasts indefinitely while he is near terrain or inside brush, and for 2 seconds otherwise. During this time. he can see trails leading toward Scoundrels, and while facing them if they are within 5000 units, he gains bonus mana regeneration equal to 12% of his missing mana as well as bonus movement speed.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -329,10 +316,6 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -345,11 +328,24 @@
             "leveling": []
           },
           {
-            "description": "Recast: Akshan ends Going Rogue.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Akshan ends Going Rogue.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40,
+              30,
+              20,
+              10,
+              0
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -360,7 +356,9 @@
                 6,
                 2
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -368,7 +366,7 @@
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -396,15 +394,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akshan/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Akshan can activate Heroic Swing three times before the ability goes on cooldown, and can use the third cast only after 0.5 seconds of the second cast. Akshan may input an attack or movement command to use the second and third casts.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Akshan can activate Heroic Swing three times before the ability goes on cooldown, and can use the third cast only after 0.5 seconds of the second cast. Akshan may input an attack or movement command to use the second and third casts.</p></div>",
             "leveling": []
           },
           {
-            "description": "First Cast: Akshan fires a hook in the target direction that embeds in the first terrain hit, and enters preparation for up to 2.125 seconds. Heroic Swing's second cast can be used while the hook is attached. If the hook fails to attach or Akshan is moved or becomes immobilized, grounded, or polymorphed within the duration, the preparation will end prematurely, cancelling Heroic Swing in the process.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">First Cast:</p><p> Akshan fires a hook in the target direction that embeds in the first terrain hit, and enters preparation for up to 2.125 seconds. Heroic Swing's second cast can be used while the hook is attached. If the hook fails to attach or Akshan is moved or becomes immobilized, grounded, or polymorphed within the duration, the preparation will end prematurely, cancelling Heroic Swing in the process.</p></div>",
             "leveling": []
           },
           {
-            "description": "Second Cast: Akshan swings around the terrain in either a clockwise or counterclockwise direction based on the position of the cursor relative to his facing direction, stopping upon colliding with an enemy champion or terrain. While swinging, he fires at the nearest visible enemy every 0.231 seconds to deal them physical damage and apply on-hit effects for each shot, with on-hit damage reduced to 25% effectiveness.Akshan will be knocked down by any immobilizing or polymorphing crowd control during the dash.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Second Cast:</p><p> Akshan swings around the terrain in either a clockwise or counterclockwise direction based on the position of the cursor relative to his facing direction, stopping upon colliding with an enemy champion or terrain. While swinging, he fires at the nearest visible enemy every 0.231 seconds to deal them physical damage and apply on-hit effects for each shot, with on-hit damage reduced to 25% effectiveness.Akshan will be knocked down by any immobilizing or polymorphing crowd control during the dash.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage per Shot",
@@ -418,42 +416,22 @@
                       75
                     ],
                     "units": [
-                      "  ×",
-                      "  ×",
-                      "  ×",
-                      "  ×",
                       "  ×"
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      1,
-                      1,
-                      1,
-                      1,
                       1
                     ],
                     "units": [
-                      " + 0.3 per 100% bonus attack speed",
-                      " + 0.3 per 100% bonus attack speed",
-                      " + 0.3 per 100% bonus attack speed",
-                      " + 0.3 per 100% bonus attack speed",
                       " + 0.3 per 100% bonus attack speed"
                     ]
                   }
@@ -462,7 +440,7 @@
             ]
           },
           {
-            "description": "Third Cast: Akshan ends the swing by jumping to the target location and fires one last shot at a nearby visible enemy.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Third Cast:</p><p> Akshan ends the swing by jumping to the target location and fires one last shot at a nearby visible enemy.</p></div>",
             "leveling": []
           },
           {
@@ -470,7 +448,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -481,7 +468,9 @@
                 13.5,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -489,8 +478,8 @@
         "targeting": "Auto / Location",
         "affects": "Self, Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "basic",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -517,7 +506,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akshan/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Akshan locks onto the target enemy champion and begins channeling for 2.5 seconds, revealing them as well as revealing himself. He gradually stores bullets into his weapon over the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Akshan locks onto the target enemy champion and begins channeling for 2.5 seconds, revealing them as well as revealing himself. He gradually stores bullets into his weapon over the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Maximum Bullets Stored",
@@ -529,8 +518,6 @@
                       7
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -546,8 +533,6 @@
                       0.4167
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -560,68 +545,48 @@
             "leveling": []
           },
           {
-            "description": "Recast: Akshan fires all stored bullets at the target, each briefly granting sight around their trajectory and dealing physical damage to the first enemy hit, increased by 50% of critical chance and critical damage bonuses as well as by 0% : 200% (based on target's missing health). The shots can hit structures.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Akshan fires all stored bullets at the target, each briefly granting sight around their trajectory and dealing physical damage to the first enemy hit, increased by 50% of critical chance and critical damage bonuses as well as by 0% - 200% (based on target's missing health). The shots can hit structures.</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage per Bullet",
                 "modifiers": [
                   {
                     "values": [
-                      0,
-                      0,
                       0
                     ],
                     "units": [
-                      "[25 / 30 / 35 / 40 / 45 ] × [1",
-                      "[25 / 30 / 35 / 40 / 45 ] × [1",
                       "[25 / 30 / 35 / 40 / 45 ] × [1"
                     ]
                   },
                   {
                     "values": [
-                      0,
-                      0,
                       0
                     ],
                     "units": [
-                      "0 : 0.5 ",
-                      "0 : 0.5 ",
                       "0 : 0.5 "
                     ]
                   },
                   {
                     "values": [
-                      0.2,
-                      0.2,
                       0.2
                     ],
                     "units": [
-                      "]",
-                      "]",
                       "]"
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      0,
-                      0,
                       0
                     ],
                     "units": [
-                      "based on critical strike chance",
-                      "based on critical strike chance",
                       "based on critical strike chance"
                     ]
                   }
@@ -632,61 +597,41 @@
                 "modifiers": [
                   {
                     "values": [
-                      0,
-                      0,
                       0
                     ],
                     "units": [
-                      "[75 / 90 / 105 / 120 / 135 ] × [1",
-                      "[75 / 90 / 105 / 120 / 135 ] × [1",
                       "[75 / 90 / 105 / 120 / 135 ] × [1"
                     ]
                   },
                   {
                     "values": [
-                      0,
-                      0,
                       0
                     ],
                     "units": [
-                      "0 : 0.5 ",
-                      "0 : 0.5 ",
                       "0 : 0.5 "
                     ]
                   },
                   {
                     "values": [
-                      0.2,
-                      0.2,
                       0.2
                     ],
                     "units": [
-                      "]",
-                      "]",
                       "]"
                     ]
                   },
                   {
                     "values": [
-                      45,
-                      45,
                       45
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      0,
-                      0,
                       0
                     ],
                     "units": [
-                      "based on critical strike chance",
-                      "based on critical strike chance",
                       "based on critical strike chance"
                     ]
                   }
@@ -697,37 +642,25 @@
                 "modifiers": [
                   {
                     "values": [
-                      0,
-                      0,
                       0
                     ],
                     "units": [
-                      "[125 / 210 / 315 ] × [1",
-                      "[125 / 210 / 315 ] × [1",
                       "[125 / 210 / 315 ] × [1"
                     ]
                   },
                   {
                     "values": [
-                      0,
-                      0,
                       0
                     ],
                     "units": [
-                      "0 : 0.5 ",
-                      "0 : 0.5 ",
                       "0 : 0.5 "
                     ]
                   },
                   {
                     "values": [
-                      0.2,
-                      0.2,
                       0.2
                     ],
                     "units": [
-                      "]",
-                      "]",
                       "]"
                     ]
                   },
@@ -738,20 +671,14 @@
                       105
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      0,
-                      0,
                       0
                     ],
                     "units": [
-                      "based on critical strike chance",
-                      "based on critical strike chance",
                       "based on critical strike chance"
                     ]
                   }
@@ -762,37 +689,25 @@
                 "modifiers": [
                   {
                     "values": [
-                      0,
-                      0,
                       0
                     ],
                     "units": [
-                      "[375 / 630 / 945 ] × [1",
-                      "[375 / 630 / 945 ] × [1",
                       "[375 / 630 / 945 ] × [1"
                     ]
                   },
                   {
                     "values": [
-                      0,
-                      0,
                       0
                     ],
                     "units": [
-                      "0 : 0.5 ",
-                      "0 : 0.5 ",
                       "0 : 0.5 "
                     ]
                   },
                   {
                     "values": [
-                      0.2,
-                      0.2,
                       0.2
                     ],
                     "units": [
-                      "]",
-                      "]",
                       "]"
                     ]
                   },
@@ -803,20 +718,14 @@
                       315
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      0,
-                      0,
                       0
                     ],
                     "units": [
-                      "based on critical strike chance",
-                      "based on critical strike chance",
                       "based on critical strike chance"
                     ]
                   }
@@ -833,7 +742,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -842,7 +760,9 @@
                 85,
                 70
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -850,8 +770,8 @@
         "targeting": "Unit",
         "affects": "Self, Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -873,5 +793,6 @@
       }
     ]
   },
+  "lore": "Raising an eyebrow in the face of danger, Akshan fights evil with dashing charisma, righteous vengeance, and a conspicuous lack of shirts. He is highly skilled in the art of stealth combat, able to evade the eyes of his enemies and reappear when they least expect him. With a keen sense of justice and a legendary death-reversing weapon, he rights the wrongs of Runeterra's many scoundrels while living by his own moral code: “Don't be an ass.”",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/akshan/skins/base/images/akshan_splash_centered_0.jpg"
 }

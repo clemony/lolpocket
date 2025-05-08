@@ -92,7 +92,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Kled rides his semi-trusty mount, Skaarl. While Mounted, all damage dealt to the duo is suffered by Skaarl, who has 400 : 1550 (based on level) base health; additional sources of health are applied to Skaarl's maximum health. Effects based on percentage health consider Kled and Skaarl's combined maximum health.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Kled rides his semi-trusty mount, Skaarl. While Mounted, all damage dealt to the duo is suffered by Skaarl, who has 400 - 1550 (based on level) base health; additional sources of health are applied to Skaarl's maximum health. Effects based on percentage health consider Kled and Skaarl's combined maximum health.</p></div>",
             "leveling": []
           },
           {
@@ -138,15 +138,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Kled is only vulnerable to death while Dismounted. Kled has 410 : 1838 (based on level) base health, which is not improved by sources of bonus health, as well as reduced base movement speed and increased base attack range. Effects based on percentage health consider Kled and Skaarl's combined maximum health, meaning that a Dismounted Kled is never considered to be at full health.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Kled is only vulnerable to death while Dismounted. Kled has 410 - 1838 (based on level) base health, which is not improved by sources of bonus health, as well as reduced base movement speed and increased base attack range. Effects based on percentage health consider Kled and Skaarl's combined maximum health, meaning that a Dismounted Kled is never considered to be at full health.</p></div>",
             "leveling": []
           },
           {
-            "description": "Kled gains 100 : 185 (based on level) bonus movement speed while moving towards and after attacking visible enemy champions within 1000 units, but his basic attacks against them are reduced to 80% AD physical damage. Additionally, he gains the ability to restore Skaarl's Courage to mount again.",
+            "description": "Kled gains 100 - 185 (based on level) bonus movement speed while moving towards and after attacking visible enemy champions within 1000 units, but his basic attacks against them are reduced to 80% AD physical damage. Additionally, he gains the ability to restore Skaarl's Courage to mount again.",
             "leveling": []
           },
           {
-            "description": "Innate - Courage: Kled gains 15 Courage after completing a basic attack against a champion, 20 Courage whenever he scores a takedown against an enemy champion within 3 seconds of damaging them, 4 Courage for minion kills, and 5 Courage when basic attacking a structure or epic monster. At 100 Courage, Skaarl returns with 45 / 55 / 65 / 75% (based on level) of Skaarl's maximum health and Kled becomes Mounted after 0.7 seconds. Mounting up resets the cooldowns of Bear Trap on a Rope and Jousting.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Courage:</p><p> Kled gains 15 Courage after completing a basic attack against a champion, 20 Courage whenever he scores a takedown against an enemy champion within 3 seconds of damaging them, 4 Courage for minion kills, and 5 Courage when basic attacking a structure or epic monster. At 100 Courage, Skaarl returns with 45 / 55 / 65 / 75% (based on level) of Skaarl's maximum health and Kled becomes Mounted after 0.7 seconds. Mounting up resets the cooldowns of Bear Trap on a Rope and Jousting.</p></div>",
             "leveling": []
           },
           {
@@ -163,11 +163,11 @@
           "modifiers": [
             {
               "values": [
-                30,
-                30,
                 30
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -203,7 +203,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Kled throws a bear trap in the target direction that deals physical damage to enemies hit, increased by 50% against minions and small monsters. The bear trap collides against the first enemy champion, large pet or large monster hit, forming a tether between Kled and the target for 1.75 seconds, during which they are revealed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kled throws a bear trap in the target direction that deals physical damage to enemies hit, increased by 50% against minions and small monsters. The bear trap collides against the first enemy champion, large pet or large monster hit, forming a tether between Kled and the target for 1.75 seconds, during which they are revealed.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -217,26 +217,14 @@
                       130
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      65,
-                      65,
-                      65,
-                      65,
                       65
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -254,26 +242,14 @@
                       195
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      90,
-                      90,
-                      90,
-                      90,
                       90
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -296,26 +272,14 @@
                       260
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      130,
-                      130,
-                      130,
-                      130,
                       130
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -333,26 +297,14 @@
                       390
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      195,
-                      195,
-                      195,
-                      195,
                       195
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -370,10 +322,6 @@
                       60
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -397,7 +345,9 @@
                 8,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -406,7 +356,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -431,7 +381,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Kled sprays a cone of five pellets in the target direction while recoiling 300 units in the opposite direction, dealing physical damage to enemies hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kled sprays a cone of five pellets in the target direction while recoiling 300 units in the opposite direction, dealing physical damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -445,26 +395,14 @@
                       95
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -491,26 +429,14 @@
                       19
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      16,
-                      16,
-                      16,
-                      16,
                       16
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -528,26 +454,14 @@
                       171
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      144,
-                      144,
-                      144,
-                      144,
                       144
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -556,18 +470,25 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              1
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                3,
-                3,
-                3,
-                3,
                 3
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -575,8 +496,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "CHARGE",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Charge",
+        "damageType": "Physical damage",
         "spellEffects": "Area of effect",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -622,11 +543,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Kled periodically gains Violent Tendencies, which starts expiring upon his next basic attack.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Kled periodically gains Violent Tendencies, which starts expiring upon his next basic attack.</p></div>",
             "leveling": []
           },
           {
-            "description": "Violent Tendencies: Kled gains 150% bonus attack speed on his next 4 basic attacks within 4 seconds. The fourth attack deals bonus physical damage, capped against monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Violent Tendencies:</p><p> Kled gains 150% bonus attack speed on his next 4 basic attacks within 4 seconds. The fourth attack deals bonus physical damage, capped against monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -640,10 +561,6 @@
                       60
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -656,10 +573,6 @@
                       6.5
                     ],
                     "units": [
-                      "% (+ 5% per 100 bonus AD) of target's maximum health",
-                      "% (+ 5% per 100 bonus AD) of target's maximum health",
-                      "% (+ 5% per 100 bonus AD) of target's maximum health",
-                      "% (+ 5% per 100 bonus AD) of target's maximum health",
                       "% (+ 5% per 100 bonus AD) of target's maximum health"
                     ]
                   }
@@ -677,10 +590,6 @@
                       260
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -716,23 +625,6 @@
                       91.75
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -745,10 +637,6 @@
                       60
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -768,7 +656,9 @@
                 6.5,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -777,7 +667,7 @@
         "affects": "Enemies",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "Special",
         "projectile": null,
         "onHitEffects": null,
@@ -804,7 +694,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Skaarl dashes in the target direction, though not through terrain, dealing physical damage to enemies he passes through and pulling minions and small monsters hit towards them.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Skaarl dashes in the target direction, though not through terrain, dealing physical damage to enemies he passes through and pulling minions and small monsters hit towards them.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -818,26 +708,14 @@
                       135
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      65,
-                      65,
-                      65,
-                      65,
                       65
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -850,7 +728,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Skaarl consumes the mark to dash through the marked target, applying the same effects as the first cast though being able to dash through terrain.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Skaarl consumes the mark to dash through the marked target, applying the same effects as the first cast though being able to dash through terrain.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Physical Damage",
@@ -864,26 +742,14 @@
                       270
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      130,
-                      130,
-                      130,
-                      130,
                       130
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -911,7 +777,9 @@
                 10,
                 9
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -920,7 +788,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "aoe",
         "projectile": null,
         "onHitEffects": null,
@@ -985,11 +853,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Kled & Skaarl charge toward the target location, automatically navigating terrain along the way, during which they're ghosted, immune to crowd control and revealed to enemy champions in a 1250 radius. If the charge does not complete within 15 seconds, it will end prematurely. The charge is interrupted instantly if Kled dismounts during it.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kled & Skaarl charge toward the target location, automatically navigating terrain along the way, during which they're ghosted, immune to crowd control and revealed to enemy champions in a 1250 radius. If the charge does not complete within 15 seconds, it will end prematurely. The charge is interrupted instantly if Kled dismounts during it.</p></div>",
             "leveling": []
           },
           {
-            "description": "While charging, the duo gain bonus movement speed and a shield for every 0.25 seconds of traveling, up to 950 total movement speed over 3 seconds and 10% : 100% (based on time traveling) of the maximum shield amount over 2.25 seconds respectively. The shield lasts for 2 seconds upon finishing the charge. The duo trails a directional draft in their wake, lasting 9 seconds. Allied units other than lane minions and Voidmites following the draft gain Mr. Kled's Wild Ride.",
+            "description": "While charging, the duo gain bonus movement speed and a shield for every 0.25 seconds of traveling, up to 950 total movement speed over 3 seconds and 10% - 100% (based on time traveling) of the maximum shield amount over 2.25 seconds respectively. The shield lasts for 2 seconds upon finishing the charge. The duo trails a directional draft in their wake, lasting 9 seconds. Allied units other than lane minions and Voidmites following the draft gain Mr. Kled's Wild Ride.",
             "leveling": [
               {
                 "attribute": "Minimum Shield",
@@ -1001,20 +869,14 @@
                       40
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -1030,20 +892,14 @@
                       400
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      300,
-                      300,
                       300
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -1052,11 +908,11 @@
             ]
           },
           {
-            "description": "Mr. Kled's Wild Ride: While in champion combat, gain 40% bonus movement speed. After not being in champion combat for 3 seconds, if Kled is charging, gain bonus movement speed up to Kled's current movement speed; otherwise gain up to 650 total movement speed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Mr. Kled's Wild Ride:</p><p> While in champion combat, gain 40% bonus movement speed. After not being in champion combat for 3 seconds, if Kled is charging, gain bonus movement speed up to Kled's current movement speed; otherwise gain up to 650 total movement speed.</p></div>",
             "leveling": []
           },
           {
-            "description": "Kled & Skaarl will dash toward the first visible enemy champion in range of the charge, revealing the target during the dash and colliding with the first visible enemy champion in their path to deal physical damage, increased by 0% : 200% (based on charge time), knocking them back 100 units and ending the charge.",
+            "description": "Kled & Skaarl will dash toward the first visible enemy champion in range of the charge, revealing the target during the dash and colliding with the first visible enemy champion in their path to deal physical damage, increased by 0% - 200% (based on charge time), knocking them back 100 units and ending the charge.",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -1068,20 +924,14 @@
                       6
                     ],
                     "units": [
-                      "%  of target's maximum health",
-                      "%  of target's maximum health",
                       "%  of target's maximum health"
                     ]
                   },
                   {
                     "values": [
-                      4,
-                      4,
                       4
                     ],
                     "units": [
-                      "% per 100 bonus AD",
-                      "% per 100 bonus AD",
                       "% per 100 bonus AD"
                     ]
                   }
@@ -1097,20 +947,14 @@
                       18
                     ],
                     "units": [
-                      "%  of target's maximum health",
-                      "%  of target's maximum health",
                       "%  of target's maximum health"
                     ]
                   },
                   {
                     "values": [
-                      12,
-                      12,
                       12
                     ],
                     "units": [
-                      "% per 100 bonus AD",
-                      "% per 100 bonus AD",
                       "% per 100 bonus AD"
                     ]
                   }
@@ -1128,7 +972,9 @@
                 125,
                 110
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -1137,7 +983,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -1197,5 +1043,6 @@
       }
     ]
   },
+  "lore": "A warrior as fearless as he is ornery, the yordle Kled embodies the furious bravado of Noxus. He is an icon beloved by the empire's soldiers, distrusted by its officers, and loathed by the nobility. Many claim Kled has fought in every campaign the legions have waged, has “acquired” every military title, and has never once backed down from a fight. Though the truth of the matter is often questionable, one part of his legend is undeniable: Charging into battle on his un-trusty steed, Skaarl, Kled fights to protect what's his… and to take whatever he can get.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/base/images/kled_splash_centered_0.jpg"
 }

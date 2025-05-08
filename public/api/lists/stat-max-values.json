@@ -1,0 +1,21 @@
+{
+  "health": 2753,
+  "healthRegen": 27,
+  "armor": 135.4,
+  "magicResistance": 75.35,
+  "attackDamage": 150,
+  "movespeed": 355,
+  "acquisitionRadius": 900,
+  "selectionRadius": 150,
+  "pathingRadius": 50,
+  "gameplayRadius": 80,
+  "criticalStrikeDamage": 175,
+  "criticalStrikeDamageModifier": 1,
+  "attackSpeedRatio": 0.85,
+  "attackCastTime": 0.5,
+  "attackTotalTime": 2.36599993705749,
+  "attackRange": 650,
+  "mana": 1879,
+  "manaRegen": 50,
+  "attackDelayOffset": 0.0599999986588954
+}

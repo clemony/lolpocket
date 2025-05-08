@@ -99,11 +99,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nilah/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Whenever Nilah kills a minion, she and the nearest allied champion gain an additional 50% of the experience they would have lost from sharing.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Whenever Nilah kills a minion, she and the nearest allied champion gain an additional 50% of the experience they would have lost from sharing.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate: Whenever a nearby allied champion uses an ability to heal or shield either Nilah or themselves, both they and Nilah receive a bonus amount equal to 7.5% of the healing or 15% of the shielding after a 0.5-second delay. Bonus shielding lasts as long as the shield that triggered the effect, up to a maximum duration of 4 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Whenever a nearby allied champion uses an ability to heal or shield either Nilah or themselves, both they and Nilah receive a bonus amount equal to 7.5% of the healing or 15% of the shielding after a 0.5-second delay. Bonus shielding lasts as long as the shield that triggered the effect, up to a maximum duration of 4 seconds.</p></div>",
             "leveling": []
           }
         ],
@@ -143,11 +143,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nilah/ability-icon/q",
         "effects": [
           {
-            "description": "Passive: Nilah gains 0% : 33% (based on critical strike chance) armor penetration. Her basic attacks and Formless Blade heal her for 0% : 20% (based on critical strike chance) of the post-mitigation damage dealt to champions, converting each heal instance beyond maximum health into a shield that lasts 6 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Nilah gains 0% - 33% (based on critical strike chance) armor penetration. Her basic attacks and Formless Blade heal her for 0% - 20% (based on critical strike chance) of the post-mitigation damage dealt to champions, converting each heal instance beyond maximum health into a shield that lasts 6 seconds.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Nilah cracks her whip-blade in a line in the target direction that deals physical damage to enemies hit, increased by 0% : 100% (based on critical strike chance). Formless Blade can hit structures and applies life steal at 100% effectiveness to one target.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Nilah cracks her whip-blade in a line in the target direction that deals physical damage to enemies hit, increased by 0% - 100% (based on critical strike chance). Formless Blade can hit structures and applies life steal at 100% effectiveness to one target.</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -161,10 +161,6 @@
                       25
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -177,10 +173,6 @@
                       110
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -198,10 +190,6 @@
                       50
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -214,10 +202,6 @@
                       220
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -230,22 +214,29 @@
             "leveling": []
           },
           {
-            "description": "If Formless Blade hits an enemy, Nilah empowers herself for 4 seconds: gaining 125 bonus attack range and 10% : 60% (based on level) bonus attack speed, and causing her basic attacks to strike in a cone that deals 100% AD physical damage to enemies hit. Against secondary non-champion targets, this is reduced to 33% AD for minions and 10% AD for monsters, and additionally executes minions left below 20 health. On-hit effects are applied only to the primary target.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">If Formless Blade hits an enemy, Nilah empowers herself for 4 seconds:</p><p> gaining 125 bonus attack range and 10% - 60% (based on level) bonus attack speed, and causing her basic attacks to strike in a cone that deals 100% AD physical damage to enemies hit. Against secondary non-champion targets, this is reduced to 33% AD for minions and 10% AD for monsters, and additionally executes minions left below 20 health. On-hit effects are applied only to the primary target.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              30
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                4,
-                4,
-                4,
-                4,
                 4
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -253,8 +244,8 @@
         "targeting": "Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Special",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -281,7 +272,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nilah/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Nilah envelops herself in mist for 2.25 seconds, during which she becomes ghosted, gains bonus movement speed, reduces all incoming magic damage taken by 25%, and dodges all non- turret basic attacks.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Nilah envelops herself in mist for 2.25 seconds, during which she becomes ghosted, gains bonus movement speed, reduces all incoming magic damage taken by 25%, and dodges all non- turret basic attacks.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -295,10 +286,6 @@
                       25
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -311,7 +298,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              45,
+              30,
+              15,
+              0
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -322,7 +322,9 @@
                 23,
                 22
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -330,7 +332,7 @@
         "targeting": "Auto",
         "affects": "Self, Allies",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -358,7 +360,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nilah/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Nilah dashes a fixed distance in the direction of the target unit, dealing physical damage to enemies she passes through.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Nilah dashes a fixed distance in the direction of the target unit, dealing physical damage to enemies she passes through.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -372,26 +374,14 @@
                       100
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      20,
-                      20,
-                      20,
-                      20,
                       20
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -408,18 +398,25 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              30
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                0.5,
-                0.5,
-                0.5,
-                0.5,
                 0.5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -427,8 +424,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -461,7 +458,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nilah/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Nilah whirls her whip-blade over 1 second, dealing physical damage to nearby enemies every 0.25 seconds. She then unleashes a burst that deals physical damage and pulls them 250 units towards her. Each hit also slows targets by 10% for 3 seconds, refreshing on subsequent hits.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Nilah whirls her whip-blade over 1 second, dealing physical damage to nearby enemies every 0.25 seconds. She then unleashes a burst that deals physical damage and pulls them 250 units towards her. Each hit also slows targets by 10% for 3 seconds, refreshing on subsequent hits.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage per Tick",
@@ -473,20 +470,14 @@
                       35
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      10,
-                      10,
                       10
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -502,20 +493,14 @@
                       140
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -531,20 +516,14 @@
                       325
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -560,20 +539,14 @@
                       465
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      140,
-                      140,
                       140
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -582,7 +555,7 @@
             ]
           },
           {
-            "description": "Nilah heals herself and nearby allied champions for 20% : 50% (based on critical strike chance) of the post-mitigation damage dealt to champions, reduced to 10% against non-champions, converting each heal instance beyond maximum health into a shield that last 6 seconds.",
+            "description": "Nilah heals herself and nearby allied champions for 20% - 50% (based on critical strike chance) of the post-mitigation damage dealt to champions, reduced to 10% against non-champions, converting each heal instance beyond maximum health into a shield that last 6 seconds.",
             "leveling": []
           },
           {
@@ -590,7 +563,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -599,7 +581,9 @@
                 95,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -607,8 +591,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -630,5 +614,6 @@
       }
     ]
   },
+  "lore": "Nilah is an ascetic warrior from a distant land, seeking the world's deadliest, most titanic opponents so that she might challenge and destroy them. Having won her power through an encounter with the long-imprisoned demon of joy, she has no emotions other than unceasing jubilation—a small price to pay for the vast strength she now possesses. Channeling the demon's liquid form into a blade of unparalleled might, she stands defiant against ancient threats long forgotten.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nilah/skins/base/images/nilah_splash_centered_0.jpg"
 }

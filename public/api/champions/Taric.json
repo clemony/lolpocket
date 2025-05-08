@@ -101,7 +101,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taric/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: After casting an ability, Taric empowers his next two basic attacks within 5 seconds to each gain 100% total attack speed, deal 25 : 93 (based on level) (+ 15% bonus armor) bonus magic damage, and reduce the remaining cooldowns of his basic abilities by 1 : 2 (based on ability haste)\nseconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> After casting an ability, Taric empowers his next two basic attacks within 5 seconds to each gain 100% total attack speed, deal 25 - 93 (based on level) (+ 15% bonus armor) bonus magic damage, and reduce the remaining cooldowns of his basic abilities by 1 - 2 (based on ability haste)</p></div>\nseconds.",
             "leveling": []
           }
         ],
@@ -114,7 +114,7 @@
         "affects": "Self",
         "spellshieldable": null,
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "proc",
         "projectile": null,
         "onHitEffects": null,
@@ -141,7 +141,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taric/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Taric heals himself and nearby allied champions for 25 (+ 15% AP) (+ 1% of his maximum health) per charge of Starlight's Touch that he periodically stocks, up to a maximum amount. Bravado's empowered attacks each grant one charge.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Taric heals himself and nearby allied champions for 25 (+ 15% AP) (+ 1% of his maximum health) per charge of Starlight's Touch that he periodically stocks, up to a maximum amount. Bravado's empowered attacks each grant one charge.</p></div>",
             "leveling": [
               {
                 "attribute": "Maximum Charges",
@@ -155,10 +155,6 @@
                       5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -171,18 +167,25 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                3,
-                3,
-                3,
-                3,
                 3
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -190,7 +193,7 @@
         "targeting": "Auto",
         "affects": "Allies",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": "Heal",
         "projectile": null,
@@ -224,7 +227,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taric/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Taric gains bonus armor and forms a tether between him and the ally bound by Bastion. While the tether persists, the ally also gains the bonus armor and Taric's abilities are mimicked to them, though the effects do not stack.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Taric gains bonus armor and forms a tether between him and the ally bound by Bastion. While the tether persists, the ally also gains the bonus armor and Taric's abilities are mimicked to them, though the effects do not stack.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Armor",
@@ -238,10 +241,6 @@
                       10
                     ],
                     "units": [
-                      "% of Taric's armor",
-                      "% of Taric's armor",
-                      "% of Taric's armor",
-                      "% of Taric's armor",
                       "% of Taric's armor"
                     ]
                   }
@@ -250,7 +249,7 @@
             ]
           },
           {
-            "description": "Active: Taric grants himself and the target allied champion a shield for 2.5 seconds, binding them with Bastion.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Taric grants himself and the target allied champion a shield for 2.5 seconds, binding them with Bastion.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -264,10 +263,6 @@
                       11
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -280,18 +275,25 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                15,
-                15,
-                15,
-                15,
                 15
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -299,7 +301,7 @@
         "targeting": "Unit",
         "affects": "Self, Allies",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": "Shield",
         "projectile": null,
@@ -327,7 +329,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taric/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Taric winds up over 1 second, granting ghosting to nearby units, then projects a beam of starlight in the target direction that deals magic damage to enemies hit and stuns them for 1.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Taric winds up over 1 second, granting ghosting to nearby units, then projects a beam of starlight in the target direction that deals magic damage to enemies hit and stuns them for 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -341,42 +343,22 @@
                       250
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% bonus armor",
-                      "% bonus armor",
-                      "% bonus armor",
-                      "% bonus armor",
                       "% bonus armor"
                     ]
                   }
@@ -389,7 +371,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -400,7 +391,9 @@
                 13,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -408,8 +401,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Area of effect",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -436,11 +429,20 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taric/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Taric calls down a star from above that descends to him over 2.5 seconds. Afterwards, he and nearby allied champions become invulnerable for 2.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Taric calls down a star from above that descends to him over 2.5 seconds. Afterwards, he and nearby allied champions become invulnerable for 2.5 seconds.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -449,7 +451,9 @@
                 150,
                 120
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -457,7 +461,7 @@
         "targeting": "Auto",
         "affects": "Allies",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -480,5 +484,6 @@
       }
     ]
   },
+  "lore": "Taric is the Aspect of the Protector, wielding incredible power as Runeterra's guardian of life, love, and beauty. Shamed by a dereliction of duty and exiled from his homeland Demacia, Taric ascended Mount Targon to find redemption, only to discover a higher calling among the stars. Imbued with the might of ancient Targon, the Shield of Valoran now stands ever vigilant against the insidious corruption of the Void.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/taric/skins/base/images/taric_splash_centered_0.jpg"
 }

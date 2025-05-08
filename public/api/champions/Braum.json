@@ -99,15 +99,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Braum/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Braum's basic attacks and Winter's Bite each apply a stack of Concussive Blows to their target for 4 seconds, refreshing on subsequent applications and stacking up to 4 times. Once the first stack has been applied, any allied champion's basic attack applies an additional stack to the target on-hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Braum's basic attacks and Winter's Bite each apply a stack of Concussive Blows to their target for 4 seconds, refreshing on subsequent applications and stacking up to 4 times. Once the first stack has been applied, any allied champion's basic attack applies an additional stack to the target on-hit.</p></div>",
             "leveling": []
           },
           {
-            "description": "The fourth stack against a target consumes them all to deal 26 : 196 (based on level) magic damage and stun them for 1.25 : 1.75 (based on level) seconds.",
+            "description": "The fourth stack against a target consumes them all to deal 26 - 196 (based on level) magic damage and stun them for 1.25 - 1.75 (based on level) seconds.",
             "leveling": []
           },
           {
-            "description": "This effect cannot apply to the same target more than once every few seconds. During this immunity period, affected targets take[ bonus magic damage equal to 20% of the trigger damage ][ 5.2 : 39.2 (based on level) bonus magic damage ]from Braum's basic attacks.",
+            "description": "This effect cannot apply to the same target more than once every few seconds. During this immunity period, affected targets take[ bonus magic damage equal to 20% of the trigger damage ][ 5.2 - 39.2 (based on level) bonus magic damage ]from Braum's basic attacks.",
             "leveling": []
           }
         ],
@@ -120,7 +120,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -147,7 +147,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Braum/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Braum propels ice from his shield in the target direction, dealing magic damage to the first enemy hit and slowing them by 70% decaying over 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Braum propels ice from his shield in the target direction, dealing magic damage to the first enemy hit and slowing them by 70% decaying over 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -161,26 +161,14 @@
                       275
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      2.5,
-                      2.5,
-                      2.5,
-                      2.5,
                       2.5
                     ],
                     "units": [
-                      "% of Braum's maximum health",
-                      "% of Braum's maximum health",
-                      "% of Braum's maximum health",
-                      "% of Braum's maximum health",
                       "% of Braum's maximum health"
                     ]
                   }
@@ -189,7 +177,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              45,
+              50,
+              55,
+              60,
+              65
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -200,7 +201,9 @@
                 6.5,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -208,8 +211,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Single target",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -236,7 +239,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Braum/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Braum dashes to put himself between the target ally and the closest visible enemy champion within 1500 units, and upon arrival grants himself and the ally bonus armor and bonus magic resistance for 3 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Braum dashes to put himself between the target ally and the closest visible enemy champion within 1500 units, and upon arrival grants himself and the ally bonus armor and bonus magic resistance for 3 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Ally Bonus Armor",
@@ -250,26 +253,14 @@
                       40
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      12,
-                      12,
-                      12,
-                      12,
                       12
                     ],
                     "units": [
-                      "% bonus armor",
-                      "% bonus armor",
-                      "% bonus armor",
-                      "% bonus armor",
                       "% bonus armor"
                     ]
                   }
@@ -287,26 +278,14 @@
                       40
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      12,
-                      12,
-                      12,
-                      12,
                       12
                     ],
                     "units": [
-                      "% bonus magic resistance",
-                      "% bonus magic resistance",
-                      "% bonus magic resistance",
-                      "% bonus magic resistance",
                       "% bonus magic resistance"
                     ]
                   }
@@ -329,26 +308,14 @@
                       40
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      36,
-                      36,
-                      36,
-                      36,
                       36
                     ],
                     "units": [
-                      "% bonus armor",
-                      "% bonus armor",
-                      "% bonus armor",
-                      "% bonus armor",
                       "% bonus armor"
                     ]
                   }
@@ -366,26 +333,14 @@
                       40
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      36,
-                      36,
-                      36,
-                      36,
                       36
                     ],
                     "units": [
-                      "% bonus magic resistance",
-                      "% bonus magic resistance",
-                      "% bonus magic resistance",
-                      "% bonus magic resistance",
                       "% bonus magic resistance"
                     ]
                   }
@@ -398,7 +353,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -409,7 +373,9 @@
                 9,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -417,7 +383,7 @@
         "targeting": "Unit",
         "affects": "Self, Allies",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -445,7 +411,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Braum/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Braum sets his shield in the target direction for a duration, creating a barrier in front of him that intercepts all incoming hostile projectiles and reduces the damage Braum takes through it. The first instance of damage dealt by a champion from this direction is reduced by 100%. Unbreakable does not affect turrets.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Braum sets his shield in the target direction for a duration, creating a barrier in front of him that intercepts all incoming hostile projectiles and reduces the damage Braum takes through it. The first instance of damage dealt by a champion from this direction is reduced by 100%. Unbreakable does not affect turrets.</p></div>",
             "leveling": [
               {
                 "attribute": "Damage reduction",
@@ -459,10 +425,6 @@
                       55
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -480,10 +442,6 @@
                       4
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -496,7 +454,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              30,
+              35,
+              40,
+              45,
+              50
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -507,7 +478,9 @@
                 10,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -515,7 +488,7 @@
         "targeting": "Direction",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -543,7 +516,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Braum/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Braum leaps into the air and slams his shield into the ground, creating a fissure from the impact that travels forth in the target direction, dealing magic damage to enemies within its path as well as those around Braum.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Braum leaps into the air and slams his shield into the ground, creating a fissure from the impact that travels forth in the target direction, dealing magic damage to enemies within its path as well as those around Braum.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -555,20 +528,14 @@
                       450
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -589,8 +556,6 @@
                       2
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -611,8 +576,6 @@
                       60
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -621,7 +584,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -630,7 +602,9 @@
                 100,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -638,8 +612,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -661,5 +635,6 @@
       }
     ]
   },
+  "lore": "Blessed with massive biceps and an even bigger heart, Braum is a beloved hero of the Freljord. Every mead hall north of Frostheld toasts his legendary strength, said to have felled a forest of oaks in a single night, and punched an entire mountain into rubble. Bearing an enchanted vault door as his shield, Braum roams the frozen north sporting a mustachioed smile as big as his muscles—a true friend to all those in need.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/braum/skins/base/images/braum_splash_centered_0.jpg"
 }

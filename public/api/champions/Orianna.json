@@ -100,11 +100,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/p",
         "effects": [
           {
-            "description": "Innate - The Ball: Orianna is accompanied by The Ball, which she commands with her abilities. The Ball incurs a 0.01-second global cooldown on all of her abilities when she casts any ability. Additionally, The Ball attaches to Orianna if she is near it, and snaps back to her if she moves too far away from it, which incurs a 0.75-second cooldown on Command: Shockwave.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - The Ball:</p><p> Orianna is accompanied by The Ball, which she commands with her abilities. The Ball incurs a 0.01-second global cooldown on all of her abilities when she casts any ability. Additionally, The Ball attaches to Orianna if she is near it, and snaps back to her if she moves too far away from it, which incurs a 0.75-second cooldown on Command: Shockwave.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate: Orianna's basic attacks generate a stack of Clockwork Winding for 4 seconds, refreshing on subsequent attacks and stacking up to 2 times. All stacks are lost when attacking a new enemy.\nClockwork Winding: Orianna's basic attacks are empowered to deal 10 : 50 (based on level) (+ 15% AP) bonus magic damage on-hit, increased by[ 20% ][ 2 : 10 (based on level) (+ 3% AP) ]per stack, up to 14 : 70 (based on level) (+ 21% AP) total bonus magic damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Orianna's basic attacks generate a stack of Clockwork Winding for 4 seconds, refreshing on subsequent attacks and stacking up to 2 times. All stacks are lost when attacking a new enemy.</p></div>\n\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Clockwork Winding:</p><p> Orianna's basic attacks are empowered to deal 10 - 50 (based on level) (+ 15% AP) bonus magic damage on-hit, increased by[ 20% ][ 2 - 10 (based on level) (+ 3% AP) ]per stack, up to 14 - 70 (based on level) (+ 21% AP) total bonus magic damage.</p></div>",
             "leveling": []
           },
           {
@@ -121,7 +121,7 @@
         "affects": "Enemies, Self",
         "spellshieldable": null,
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -148,7 +148,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Orianna commands The Ball to fly to the target location and remain there, dealing magic damage to enemies it passes through and nearby enemies upon arrival, reduced to 70% against those hit beyond the first.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Orianna commands The Ball to fly to the target location and remain there, dealing magic damage to enemies it passes through and nearby enemies upon arrival, reduced to 70% against those hit beyond the first.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -162,26 +162,14 @@
                       180
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      55,
-                      55,
-                      55,
-                      55,
                       55
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -199,26 +187,14 @@
                       126
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      38.5,
-                      38.5,
-                      38.5,
-                      38.5,
                       38.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -227,7 +203,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              35
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -238,7 +223,9 @@
                 3.75,
                 3
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -246,8 +233,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Spellaoe",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -274,7 +261,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Orianna commands The Ball to emit an electric pulse that deals magic damage to nearby enemies.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Orianna commands The Ball to emit an electric pulse that deals magic damage to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -288,26 +275,14 @@
                       270
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -330,10 +305,6 @@
                       40
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -342,18 +313,29 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              65,
+              70,
+              75,
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                7,
-                7,
-                7,
-                7,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -361,8 +343,8 @@
         "targeting": "Auto",
         "affects": "Enemies, Allies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Area of effect",
         "projectile": null,
         "onHitEffects": null,
@@ -389,7 +371,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/e",
         "effects": [
           {
-            "description": "Passive: The Ball grants bonus armor and bonus magic resistance to the unit it is attached to.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> The Ball grants bonus armor and bonus magic resistance to the unit it is attached to.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Resistances",
@@ -403,10 +385,6 @@
                       30
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -415,7 +393,7 @@
             ]
           },
           {
-            "description": "Active: Orianna commands The Ball to fly to herself or the target allied champion and attach itself to the target, dealing magic damage to enemies it passes through and granting the target a shield for 2.5 seconds upon arrival.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Orianna commands The Ball to fly to herself or the target allied champion and attach itself to the target, dealing magic damage to enemies it passes through and granting the target a shield for 2.5 seconds upon arrival.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -429,26 +407,14 @@
                       180
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -466,26 +432,14 @@
                       195
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      45,
-                      45,
-                      45,
-                      45,
                       45
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -494,18 +448,25 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                9,
-                9,
-                9,
-                9,
                 9
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -513,8 +474,8 @@
         "targeting": "Unit",
         "affects": "Enemies, Allies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "aoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -541,7 +502,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Orianna commands The Ball to unleash a shockwave that deals magic damage to nearby enemies, stuns them for 0.75 seconds, and pulls them over 325 units, though not through terrain.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Orianna commands The Ball to unleash a shockwave that deals magic damage to nearby enemies, stuns them for 0.75 seconds, and pulls them over 325 units, though not through terrain.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -553,20 +514,14 @@
                       550
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      95,
-                      95,
                       95
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -575,7 +530,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -584,7 +548,9 @@
                 95,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -592,8 +558,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Area of effect",
         "projectile": null,
         "onHitEffects": null,
@@ -615,5 +581,6 @@
       }
     ]
   },
+  "lore": "Once a curious girl of flesh and blood, Orianna is now a technological marvel comprised entirely of clockwork. She became gravely ill after an accident in the lower districts of Zaun, and her failing body had to be replaced with exquisite artifice, piece by piece. Accompanied by an extraordinary brass sphere she built for companionship and protection, Orianna is now free to explore the wonders of Piltover, and beyond.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/base/images/orianna_splash_centered_0.jpg"
 }

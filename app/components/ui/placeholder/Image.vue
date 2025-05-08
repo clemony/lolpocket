@@ -31,7 +31,7 @@ const emit = defineEmits(['loaded'])
         :initial="{ opacity: 0 }"
         :animate="{ opacity: 100 }"
         :transition="{
-          duration: 0.4,
+          duration: 0.6,
         type: 'ease'
         }"
         as-child>
@@ -41,7 +41,7 @@ const emit = defineEmits(['loaded'])
           :src="src" />
       </Motion>
       <!-- Show a placeholder while loading -->
- <!--      <Motion
+    <Motion
         v-else
 
         :initial="{ opacity: 100 }"
@@ -54,7 +54,7 @@ const emit = defineEmits(['loaded'])
         <Skeleton
           :class="cn('size-full', props.class)"
           alt="placeholder" />
-      </Motion> -->
+      </Motion>
     </AnimatePresence>
   </NuxtImg>
 </template>

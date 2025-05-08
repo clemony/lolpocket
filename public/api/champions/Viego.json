@@ -92,11 +92,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Whenever Viego scores an enemy champion takedown while alive and within 3 seconds of damaging them, a Mist Wraith spawns from that champion's corpse for 8 seconds. Viego can basic attack a Mist Wraith to consume it: causing him to blink to its location after winding up for 1 second, during which he is untargetable (except to turrets) and unable to act. He then gains Possession and heals himself for 2% (+ 2.5% per 100 bonus AD) (+ 2% per 100 AP) (+ 5% per 100% bonus attack speed) of the target's maximum health.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Whenever Viego scores an enemy champion takedown while alive and within 3 seconds of damaging them, a Mist Wraith spawns from that champion's corpse for 8 seconds. Viego can basic attack a Mist Wraith to consume it: causing him to blink to its location after winding up for 1 second, during which he is untargetable (except to turrets) and unable to act. He then gains Possession and heals himself for 2% (+ 2.5% per 100 bonus AD) (+ 2% per 100 AP) (+ 5% per 100% bonus attack speed) of the target's maximum health.</p></div>",
             "leveling": []
           },
           {
-            "description": "Possession: For 10 seconds, Viego assumes the enemy champion's form and gains their basic attacks, basic abilities, items, and base stats (based on Viego's level). He also gains a free cast of Heartbreaker, which is initially placed on a 1.5-second cooldown, and 10% bonus movement speed while facing enemy champions within 2500 units.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Possession:</p><p> For 10 seconds, Viego assumes the enemy champion's form and gains their basic attacks, basic abilities, items, and base stats (based on Viego's level). He also gains a free cast of Heartbreaker, which is initially placed on a 1.5-second cooldown, and 10% bonus movement speed while facing enemy champions within 2500 units.</p></div>",
             "leveling": []
           },
           {
@@ -144,7 +144,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/q",
         "effects": [
           {
-            "description": "Passive: Viego's basic attacks are empowered to deal bonus physical damage on-hit. This damage is affected by critical strike modifiers, has a minimum threshold and is capped at 80 against monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Viego's basic attacks are empowered to deal bonus physical damage on-hit. This damage is affected by critical strike modifiers, has a minimum threshold and is capped at 80 against monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -158,10 +158,6 @@
                       6
                     ],
                     "units": [
-                      "% of target's current health",
-                      "% of target's current health",
-                      "% of target's current health",
-                      "% of target's current health",
                       "% of target's current health"
                     ]
                   }
@@ -179,10 +175,6 @@
                       30
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -199,7 +191,7 @@
             "leveling": []
           },
           {
-            "description": "Active: Viego stabs in a line in the target direction that deals physical damage to enemies hit, plus 15 bonus physical damage against monsters. The stab's damage is increased by 0% : 100% (based on critical strike chance).",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Viego stabs in a line in the target direction that deals physical damage to enemies hit, plus 15 bonus physical damage against monsters. The stab's damage is increased by 0% - 100% (based on critical strike chance).</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -213,26 +205,14 @@
                       75
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -250,26 +230,14 @@
                       150
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      140,
-                      140,
-                      140,
-                      140,
                       140
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -287,26 +255,14 @@
                       90
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -324,26 +280,14 @@
                       180
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      140,
-                      140,
-                      140,
-                      140,
                       140
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -367,7 +311,9 @@
                 3.5,
                 3
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -376,7 +322,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "special",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -403,7 +349,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Viego charges while being slowed by 10% for up to 3 seconds to increase Spectral Maw's missile range and stun duration over the first second of the channel.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Viego charges while being slowed by 10% for up to 3 seconds to increase Spectral Maw's missile range and stun duration over the first second of the channel.</p></div>",
             "leveling": []
           },
           {
@@ -411,7 +357,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Viego hurls a blast of mist in the target direction and dashes a fixed distance in the same direction, though not through terrain. The mist deals magic damage to the first enemy hit and stuns them for 0.25 : 1.25 (based on channel time) seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Viego hurls a blast of mist in the target direction and dashes a fixed distance in the same direction, though not through terrain. The mist deals magic damage to the first enemy hit and stuns them for 0.25 - 1.25 (based on channel time) seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -425,26 +371,14 @@
                       300
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -462,13 +396,11 @@
           "modifiers": [
             {
               "values": [
-                8,
-                8,
-                8,
-                8,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -477,7 +409,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -504,7 +436,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Viego sends a spectre in the target direction that creates a trail of mist in its wake which lasts 8 seconds. If it hits terrain, the mist will spread further around either side.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Viego sends a spectre in the target direction that creates a trail of mist in its wake which lasts 8 seconds. If it hits terrain, the mist will spread further around either side.</p></div>",
             "leveling": []
           },
           {
@@ -522,10 +454,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -543,26 +471,14 @@
                       35
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   },
                   {
                     "values": [
-                      4,
-                      4,
-                      4,
-                      4,
                       4
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -590,7 +506,9 @@
                 8,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -626,7 +544,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Viego gains displacement immunity over the cast time, then blinks to the target location. Upon arrival, he strikes the most wounded enemy champion nearby, dealing physical damage, slowing them by 99% for 0.25 seconds, and applying on-hit effects. Other nearby enemies are knocked back up to 400-units away based on proximity, though not through terrain.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Viego gains displacement immunity over the cast time, then blinks to the target location. Upon arrival, he strikes the most wounded enemy champion nearby, dealing physical damage, slowing them by 99% for 0.25 seconds, and applying on-hit effects. Other nearby enemies are knocked back up to 400-units away based on proximity, though not through terrain.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -638,20 +556,14 @@
                       20
                     ],
                     "units": [
-                      "%  of target's missing health",
-                      "%  of target's missing health",
                       "%  of target's missing health"
                     ]
                   },
                   {
                     "values": [
-                      5,
-                      5,
                       5
                     ],
                     "units": [
-                      "% per 100 bonus AD",
-                      "% per 100 bonus AD",
                       "% per 100 bonus AD"
                     ]
                   }
@@ -660,7 +572,7 @@
             ]
           },
           {
-            "description": "All targets hit are dealt 120% : 240% (based on critical strike chance) AD physical damage.",
+            "description": "All targets hit are dealt 120% - 240% (based on critical strike chance) AD physical damage.",
             "leveling": []
           },
           {
@@ -677,7 +589,9 @@
                 100,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -686,7 +600,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "special",
         "projectile": null,
         "onHitEffects": null,
@@ -708,5 +622,6 @@
       }
     ]
   },
+  "lore": "Once ruler of a long-lost kingdom, Viego perished over a thousand years ago when his attempt to bring his wife back from the dead triggered the magical catastrophe known as the Ruination. Transformed into a powerful, unliving specter tortured by an obsessive longing for his centuries-dead queen, Viego now stands as the Ruined King, controlling the deadly Harrowings as he scours Runeterra for anything that might one day restore her, and destroying all in his path as the Black Mist pours endlessly from his cruel, broken heart.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/viego/skins/base/images/viego_splash_centered_0.jpg"
 }

@@ -1,7 +1,7 @@
-export function useChampionStatGrowth() {
+export function useChampionStatGrowth(level: Ref<number>) {
   const cs = useChampStore()
 
-  const totalLevelUps = computed(() => cs.championGridLevel - 1)
+  const totalLevelUps = computed(() => level.value - 1)
 
   function getStat(base?: number, growth?: number) {
     if (base == null)

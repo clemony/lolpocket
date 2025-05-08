@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Skarner's basic attacks on-hit, Shattered Earth, Upheaval, and Impale apply a stack of Quaking to enemies hit for 4 seconds, refreshing on subsequent applications and stacking up to 3 times. Enemies afflicted with 3 stacks take magic damage equal to [ 5% : 9% (based on level) of their maximum health over the duration, capped at 100 : 300 (based on level) against monsters. ][ 0.63% : 1.13% (based on level) of their maximum health every 0.5 seconds over the duration, capped at 12.5 : 37.5 (based on level) per tick against monsters. ]",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Skarner's basic attacks on-hit, Shattered Earth, Upheaval, and Impale apply a stack of Quaking to enemies hit for 4 seconds, refreshing on subsequent applications and stacking up to 3 times. Enemies afflicted with 3 stacks take magic damage equal to [ 5% - 9% (based on level) of their maximum health over the duration, capped at 100 - 300 (based on level) against monsters. ][ 0.63% - 1.13% (based on level) of their maximum health every 0.5 seconds over the duration, capped at 12.5 - 37.5 (based on level) per tick against monsters. ]</p></div>",
             "leveling": []
           }
         ],
@@ -111,7 +111,7 @@
         "affects": "Enemies",
         "spellshieldable": "special",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "proc",
         "projectile": null,
         "onHitEffects": null,
@@ -138,7 +138,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Skarner rips a boulder from the ground, empowering up to three of his next basic attacks within 5 seconds of each other. These attacks gain 25 bonus range, bonus attack speed, and deal bonus physical damage to the target and surrounding enemies, including structures.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Skarner rips a boulder from the ground, empowering up to three of his next basic attacks within 5 seconds of each other. These attacks gain 25 bonus range, bonus attack speed, and deal bonus physical damage to the target and surrounding enemies, including structures.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage per Hit",
@@ -152,42 +152,22 @@
                       50
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      3,
-                      3,
-                      3,
-                      3,
                       3
                     ],
                     "units": [
-                      "% of his bonus health",
-                      "% of his bonus health",
-                      "% of his bonus health",
-                      "% of his bonus health",
                       "% of his bonus health"
                     ]
                   }
@@ -205,42 +185,22 @@
                       150
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      240,
-                      240,
-                      240,
-                      240,
                       240
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      9,
-                      9,
-                      9,
-                      9,
                       9
                     ],
                     "units": [
-                      "% of his bonus health",
-                      "% of his bonus health",
-                      "% of his bonus health",
-                      "% of his bonus health",
                       "% of his bonus health"
                     ]
                   }
@@ -258,10 +218,6 @@
                       40
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -284,10 +240,6 @@
                       350
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -304,7 +256,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              45
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -315,7 +276,9 @@
                 8.5,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -323,8 +286,8 @@
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "false",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "proc",
         "projectile": null,
         "onHitEffects": null,
@@ -349,7 +312,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Skarner ends Shattered Earth by throwing his boulder in the target direction. It explodes upon colliding with the first enemy hit, applying the same damage and slow to the target and surrounding enemies as the final attack would.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Skarner ends Shattered Earth by throwing his boulder in the target direction. It explodes upon colliding with the first enemy hit, applying the same damage and slow to the target and surrounding enemies as the final attack would.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -363,58 +326,30 @@
                       50
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      3,
-                      3,
-                      3,
-                      3,
                       3
                     ],
                     "units": [
-                      "% of his bonus health",
-                      "% of his bonus health",
-                      "% of his bonus health",
-                      "% of his bonus health",
                       "% of his bonus health"
                     ]
                   },
                   {
                     "values": [
-                      8,
-                      8,
-                      8,
-                      8,
                       8
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -432,42 +367,22 @@
                       400
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      3,
-                      3,
-                      3,
-                      3,
                       3
                     ],
                     "units": [
-                      "% of his bonus health",
-                      "% of his bonus health",
-                      "% of his bonus health",
-                      "% of his bonus health",
                       "% of his bonus health"
                     ]
                   }
@@ -476,7 +391,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              0
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [],
           "affectedByCdr": false
@@ -485,7 +409,7 @@
         "affects": "Enemies",
         "spellshieldable": "special",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -512,7 +436,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Skarner slams his claws into the ground, shielding himself equal to 8% of his maximum health for 2.5 seconds and releasing a shockwave that quickly expands in a radius around him to deal magic damage to enemies hit and slow them by 20% for 1 second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Skarner slams his claws into the ground, shielding himself equal to 8% of his maximum health for 2.5 seconds and releasing a shockwave that quickly expands in a radius around him to deal magic damage to enemies hit and slow them by 20% for 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -526,26 +450,14 @@
                       130
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -558,7 +470,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              65,
+              70,
+              75,
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -569,7 +494,9 @@
                 7,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -577,8 +504,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "OTHER_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Other damage",
         "spellEffects": "spellaoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -605,7 +532,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Skarner charges forward in the direction of the cursor for up to 2.75 seconds, during which he gains slow immunity, becomes ghosted, ignores terrain collision, and has unobstructed vision of the surrounding 650 units. He automatically navigates his movement along the way and is able to steer himself with a slow turn rate that increases over time, resetting upon changing direction. Ixtal's Impact can be recast after 1 second, and does so automatically after the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Skarner charges forward in the direction of the cursor for up to 2.75 seconds, during which he gains slow immunity, becomes ghosted, ignores terrain collision, and has unobstructed vision of the surrounding 650 units. He automatically navigates his movement along the way and is able to steer himself with a slow turn rate that increases over time, resetting upon changing direction. Ixtal's Impact can be recast after 1 second, and does so automatically after the duration.</p></div>",
             "leveling": []
           },
           {
@@ -627,26 +554,14 @@
                       150
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      6,
-                      6,
-                      6,
-                      6,
                       6
                     ],
                     "units": [
-                      "% of his maximum health",
-                      "% of his maximum health",
-                      "% of his maximum health",
-                      "% of his maximum health",
                       "% of his maximum health"
                     ]
                   }
@@ -655,7 +570,7 @@
             ]
           },
           {
-            "description": "Recast: Skarner ends Ixtal's Impact. If a target has been grabbed, he detaches them from himself.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Skarner ends Ixtal's Impact. If a target has been grabbed, he detaches them from himself.</p></div>",
             "leveling": []
           },
           {
@@ -663,7 +578,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -674,7 +602,9 @@
                 19,
                 18
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -682,8 +612,8 @@
         "targeting": "Direction",
         "affects": null,
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -710,7 +640,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Skarner winds up his stingers over the cast time, then lashes them forward in an isosceles trapezoid in the target direction, dealing magic damage to enemies hit and impaling up to 3 of the closest enemy champions within the area to suppress them for 1.5 seconds. While suppressed, the targets are revealed and attached to Skarner. If he successfully impales at least one enemy champion, Skarner gains 40% bonus movement speed for the same duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Skarner winds up his stingers over the cast time, then lashes them forward in an isosceles trapezoid in the target direction, dealing magic damage to enemies hit and impaling up to 3 of the closest enemy champions within the area to suppress them for 1.5 seconds. While suppressed, the targets are revealed and attached to Skarner. If he successfully impales at least one enemy champion, Skarner gains 40% bonus movement speed for the same duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -722,20 +652,14 @@
                       350
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -748,7 +672,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -757,7 +690,9 @@
                 105,
                 90
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -765,8 +700,8 @@
         "targeting": "Direction",
         "affects": null,
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -788,5 +723,6 @@
       }
     ]
   },
+  "lore": "The ancient, colossal brackern Skarner is revered in Ixtal as one of the founding members of its ruling caste, the Yun Tal. Devoted to keeping his nation safe from the rest of the world, Skarner dwells in a chamber beneath Ixaocan where he can hear the vibrations of the earth and detect potential threats. As more members of the Yun Tal begin questioning Ixtal's self-isolation, Skarner grows increasingly paranoid and will do anything to keep Ixtal and its people safe—no matter the cost.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/skarner/skins/base/images/skarner_splash_centered_0.jpg"
 }

@@ -100,11 +100,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Singed/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Whenever Singed moves near a champion, he gains a stack of Noxious Slipstream for 2 seconds, refreshing on subsequent passes and stacking up to 25 times.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Whenever Singed moves near a champion, he gains a stack of Noxious Slipstream for 2 seconds, refreshing on subsequent passes and stacking up to 25 times.</p></div>",
             "leveling": []
           },
           {
-            "description": "Noxious Slipstream: For each stack, Singed gains 25% bonus movement speed, up to a maximum of 625%.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Noxious Slipstream:</p><p> For each stack, Singed gains 25% bonus movement speed, up to a maximum of 625%.</p></div>",
             "leveling": []
           },
           {
@@ -148,11 +148,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Singed/ability-icon/q",
         "effects": [
           {
-            "description": "Toggle: Singed continually creates a toxic cloud in his wake that lingers for 3.25 seconds. The cloud inflicts poison to enemies within, and resets the duration every 0.5 seconds while they remain.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Toggle:</p><p> Singed continually creates a toxic cloud in his wake that lingers for 3.25 seconds. The cloud inflicts poison to enemies within, and resets the duration every 0.5 seconds while they remain.</p></div>",
             "leveling": []
           },
           {
-            "description": "poison: The target takes magic damage every 0.25 seconds over 2 seconds. Subsequent inflictions refresh the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">poison:</p><p> The target takes magic damage every 0.25 seconds over 2 seconds. Subsequent inflictions refresh the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",
@@ -166,26 +166,14 @@
                       15
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      10.625,
-                      10.625,
-                      10.625,
-                      10.625,
                       10.625
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -203,26 +191,14 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      85,
-                      85,
-                      85,
-                      85,
                       85
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -235,18 +211,25 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              13
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                1,
-                1,
-                1,
-                1,
                 1
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -254,8 +237,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": null,
-        "resource": "MANA_PER_SECOND",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana per_second",
+        "damageType": "Magic damage",
         "spellEffects": "AoEDoT",
         "projectile": null,
         "onHitEffects": null,
@@ -282,7 +265,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Singed/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Singed spills a potent adhesive that lands at the target location after 0.375 seconds, creating a field for 3 seconds that grounds enemies within and slows them.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Singed spills a potent adhesive that lands at the target location after 0.375 seconds, creating a field for 3 seconds that grounds enemies within and slows them.</p></div>",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -296,10 +279,6 @@
                       70
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -308,7 +287,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              70,
+              80,
+              90,
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -319,7 +311,9 @@
                 14,
                 13
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -327,7 +321,7 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "false",
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": "TRUE",
@@ -355,7 +349,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Singed/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Singed flings the target enemy 550 units over himself over 0.693 seconds, dealing magic damage. The damage based on the target's health ratio is capped at 300 against minions and monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Singed flings the target enemy 550 units over himself over 0.693 seconds, dealing magic damage. The damage based on the target's health ratio is capped at 300 against minions and monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -369,10 +363,6 @@
                       90
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -385,26 +375,14 @@
                       8
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   },
                   {
                     "values": [
-                      55,
-                      55,
-                      55,
-                      55,
                       55
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -427,10 +405,6 @@
                       2
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -439,7 +413,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              70,
+              80,
+              90,
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -450,7 +437,9 @@
                 8.5,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -458,8 +447,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Spell",
         "projectile": null,
         "onHitEffects": null,
@@ -486,7 +475,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Singed/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Singed empowers himself for 25 seconds with ability power, bonus armor, bonus magic resistance, bonus movement speed, bonus health regeneration, and bonus mana regeneration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Singed empowers himself for 25 seconds with ability power, bonus armor, bonus magic resistance, bonus movement speed, bonus health regeneration, and bonus mana regeneration.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Stats",
@@ -498,8 +487,6 @@
                       95
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -515,8 +502,6 @@
                       9.5
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -532,8 +517,6 @@
                       475
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -546,16 +529,25 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                100,
-                100,
                 100
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -563,7 +555,7 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -586,5 +578,6 @@
       }
     ]
   },
+  "lore": "Singed is a brilliant alchemist of dubious morality, whose experiments would turn the stomach of even the most cutthroat criminal. Selling his skills to the highest bidder, he cares little for how his noxious concoctions are used, with the ensuing chaos an experiment in itself. His most infamous work is “shimmer”, which enabled the chembarons to turn Zaun into their personal playground—but fueled by madness, Singed is always working on something new, with each endeavor more depraved than the last...",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/singed/skins/base/images/singed_splash_centered_0.jpg"
 }

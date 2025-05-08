@@ -92,7 +92,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Riven's ability casts generate a stack of Charge for 6 seconds, refreshing on subsequent casts and stacking up to 3 times. Riven's basic attacks are empowered to each consume a stack to deal bonus physical damage equal to 30% : 60% (based on level) AD, reduced to[ 50% ][ 15% : 30% (based on level) AD ]against structures.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Riven's ability casts generate a stack of Charge for 6 seconds, refreshing on subsequent casts and stacking up to 3 times. Riven's basic attacks are empowered to each consume a stack to deal bonus physical damage equal to 30% - 60% (based on level) AD, reduced to[ 50% ][ 15% - 30% (based on level) AD ]against structures.</p></div>",
             "leveling": []
           },
           {
@@ -109,7 +109,7 @@
         "affects": "Enemies",
         "spellshieldable": null,
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -136,7 +136,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Riven can activate Broken Wings three times before the ability goes on cooldown, with a 0.3125-second static cooldown between casts. If Riven does not recast the ability within 4 seconds of the previous cast, it goes on cooldown.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Riven can activate Broken Wings three times before the ability goes on cooldown, with a 0.3125-second static cooldown between casts. If Riven does not recast the ability within 4 seconds of the previous cast, it goes on cooldown.</p></div>",
             "leveling": []
           },
           {
@@ -154,10 +154,6 @@
                       165
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -170,10 +166,6 @@
                       85
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -191,10 +183,6 @@
                       495
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -207,10 +195,6 @@
                       255
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -219,15 +203,15 @@
             ]
           },
           {
-            "description": "First Cast: Riven dashes 225 units in the direction she is currently facing, or up to 225 units towards the target enemy, striking enemies in the target area 100 units away. This cast cannot cross terrain.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">First Cast:</p><p> Riven dashes 225 units in the direction she is currently facing, or up to 225 units towards the target enemy, striking enemies in the target area 100 units away. This cast cannot cross terrain.</p></div>",
             "leveling": []
           },
           {
-            "description": "Second Cast: Riven mimics the first cast's effects.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Second Cast:</p><p> Riven mimics the first cast's effects.</p></div>",
             "leveling": []
           },
           {
-            "description": "Third Cast: Riven mimics the first cast's effects in a larger area while also knocking back enemies hit 75 units over 0.5 seconds. This cast can cross terrain.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Third Cast:</p><p> Riven mimics the first cast's effects in a larger area while also knocking back enemies hit 75 units over 0.5 seconds. This cast can cross terrain.</p></div>",
             "leveling": []
           }
         ],
@@ -236,13 +220,11 @@
           "modifiers": [
             {
               "values": [
-                13,
-                13,
-                13,
-                13,
                 13
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -251,7 +233,7 @@
         "affects": "Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -278,7 +260,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Riven emits a flash of runic energy before the cast time, dealing physical damage to nearby enemies and stunning them for 0.75 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Riven emits a flash of runic energy before the cast time, dealing physical damage to nearby enemies and stunning them for 0.75 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -292,26 +274,14 @@
                       185
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -331,7 +301,9 @@
                 8,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -340,7 +312,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -367,7 +339,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Riven dashes in the target direction, though not through terrain, while granting herself a shield for 1.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Riven dashes in the target direction, though not through terrain, while granting herself a shield for 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -381,26 +353,14 @@
                       170
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      110,
-                      110,
-                      110,
-                      110,
                       110
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -424,7 +384,9 @@
                 7,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -460,7 +422,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Riven empowers her blade for 15 seconds, gaining 25% AD bonus attack damage, 75 bonus attack range, and increased range on Broken Wings and Ki Burst. After 0.5 seconds, she can cast Wind Slash within the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Riven empowers her blade for 15 seconds, gaining 25% AD bonus attack damage, 75 bonus attack range, and increased range on Broken Wings and Ki Burst. After 0.5 seconds, she can cast Wind Slash within the duration.</p></div>",
             "leveling": []
           }
         ],
@@ -473,7 +435,9 @@
                 90,
                 60
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -507,7 +471,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Riven unleashes a wave of energy in a cone in the target direction that deals physical damage to enemies hit, increased by 0% : 200% (based on target's missing health).",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Riven unleashes a wave of energy in a cone in the target direction that deals physical damage to enemies hit, increased by 0% - 200% (based on target's missing health).</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -519,20 +483,14 @@
                       200
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -548,20 +506,14 @@
                       600
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      180,
-                      180,
                       180
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -579,7 +531,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "aoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -601,5 +553,6 @@
       }
     ]
   },
+  "lore": "Once a swordmaster in the warhosts of Noxus, Riven is an expatriate in a land she previously tried to conquer. She rose through the ranks on the strength of her conviction and brutal efficiency, and was rewarded with a legendary runic blade and a warband of her own. However, on the Ionian front, Riven's faith in her homeland was tested and ultimately broken. Having severed all ties to the empire, she now seeks to find her place in a shattered world, even as rumors abound that Noxus itself has been reforged...",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/riven/skins/base/images/riven_splash_centered_0.jpg"
 }

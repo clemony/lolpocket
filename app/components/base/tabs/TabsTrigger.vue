@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { TabsTrigger, useForwardProps } from 'reka-ui'
-import type { TabsTriggerProps } from 'reka-ui'
 import { computed } from 'vue'
 import type { HTMLAttributes } from 'vue'
+import type { TabsTriggerPropsWithNullableValue } from '~~/types/types-extend'
 
-const props = defineProps<TabsTriggerProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<TabsTriggerPropsWithNullableValue & { class?: HTMLAttributes['class'] }>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

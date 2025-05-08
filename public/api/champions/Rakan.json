@@ -95,7 +95,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Periodically, Rakan grants himself a shield for 30 : 225 (based on level) (+ 95% AP) that lasts until broken. After being out of combat for 5 seconds, any leftover shield will be restored to maximum value.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Periodically, Rakan grants himself a shield for 30 - 225 (based on level) (+ 95% AP) that lasts until broken. After being out of combat for 5 seconds, any leftover shield will be restored to maximum value.</p></div>",
             "leveling": []
           },
           {
@@ -103,7 +103,7 @@
             "leveling": []
           },
           {
-            "description": "Innate - Lover's Leap: If either Rakan or Xayah is channeling Recall, the other may move nearby and channel their own to join alongside them. Both reach base at the time of which the initiator's Recall completes.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Lover's Leap:</p><p> If either Rakan or Xayah is channeling Recall, the other may move nearby and channel their own to join alongside them. Both reach base at the time of which the initiator's Recall completes.</p></div>",
             "leveling": []
           }
         ],
@@ -131,7 +131,9 @@
                 16,
                 14.5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -167,7 +169,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Rakan slings an enchanted feather in the target direction that deals magic damage to the first enemy hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Rakan slings an enchanted feather in the target direction that deals magic damage to the first enemy hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -181,26 +183,14 @@
                       250
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -209,11 +199,20 @@
             ]
           },
           {
-            "description": "If the target was an enemy champion or epic monster, a radius is marked around Rakan. After 3 seconds or if an allied champion enters the radius, Rakan heals himself and nearby allied champions for 40 : 210 (based on level) (+ 55% AP).",
+            "description": "If the target was an enemy champion or epic monster, a radius is marked around Rakan. After 3 seconds or if an allied champion enters the radius, Rakan heals himself and nearby allied champions for 40 - 210 (based on level) (+ 55% AP).",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              45
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -224,7 +223,9 @@
                 8,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -232,8 +233,8 @@
         "targeting": "Direction",
         "affects": "Enemies / Allies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -260,7 +261,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Rakan dashes to the target location. After a 0.35-second delay upon arrival, he deals magic damage to nearby enemies and knocks them up for 1 second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Rakan dashes to the target location. After a 0.35-second delay upon arrival, he deals magic damage to nearby enemies and knocks them up for 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -274,26 +275,14 @@
                       270
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -310,7 +299,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              60,
+              70,
+              80,
+              90
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -321,7 +323,9 @@
                 11,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -329,8 +333,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -357,7 +361,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Rakan grants a shield to the target allied champion for 3 seconds and then dashes to and around them. Battle Dance can be recast within 5 seconds at no additional cost.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Rakan grants a shield to the target allied champion for 3 seconds and then dashes to and around them. Battle Dance can be recast within 5 seconds at no additional cost.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -371,26 +375,14 @@
                       150
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -399,7 +391,7 @@
             ]
           },
           {
-            "description": "Recast: Rakan mimics the first cast's effects.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Rakan mimics the first cast's effects.</p></div>",
             "leveling": []
           },
           {
@@ -411,7 +403,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40,
+              45,
+              50,
+              55,
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -422,7 +427,9 @@
                 14,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -430,7 +437,7 @@
         "targeting": "Unit",
         "affects": "Allies",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": "Shield",
         "projectile": null,
@@ -458,7 +465,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Rakan breaks into a captivating sprint for 4 seconds, gaining ghosting and 75% bonus movement speed for the duration. During this time, he deals magic damage to enemies he collides with and charms and slows them by 75% for a duration. This cannot affect the same enemy more than once.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Rakan breaks into a captivating sprint for 4 seconds, gaining ghosting and 75% bonus movement speed for the duration. During this time, he deals magic damage to enemies he collides with and charms and slows them by 75% for a duration. This cannot affect the same enemy more than once.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -470,20 +477,14 @@
                       300
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -499,8 +500,6 @@
                       1.5
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -517,7 +516,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -526,7 +534,9 @@
                 110,
                 90
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -534,8 +544,8 @@
         "targeting": "Auto",
         "affects": "Self / Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -557,5 +567,6 @@
       }
     ]
   },
+  "lore": "As mercurial as he is charming, Rakan is an infamous vastayan troublemaker and the greatest battle-dancer in Lhotlan tribal history. To the humans of the Ionian highlands, his name has long been synonymous with wild festivals, uncontrollable parties, and anarchic music. Few would suspect this energetic, traveling showman is also partner to the rebel Xayah, and is dedicated to her cause.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rakan/skins/base/images/rakan_splash_centered_0.jpg"
 }

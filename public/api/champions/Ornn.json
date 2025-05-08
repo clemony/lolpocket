@@ -96,15 +96,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ornn/ability-icon/p",
         "effects": [
           {
-            "description": "Innate - Living Forge: Ornn can purchase non-consumable items from anywhere on the field by forging them himself, and is also presented a Forge Menu to quickly forge his recommended items. Once Ornn selects an item to forge, he channels for 4 seconds, building the item and paying its gold cost upon completion. The channel is interrupted if Ornn takes damage from enemy champions or turrets. Living Forge is disabled for 4 seconds after starting the channel.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Living Forge:</p><p> Ornn can purchase non-consumable items from anywhere on the field by forging them himself, and is also presented a Forge Menu to quickly forge his recommended items. Once Ornn selects an item to forge, he channels for 4 seconds, building the item and paying its gold cost upon completion. The channel is interrupted if Ornn takes damage from enemy champions or turrets. Living Forge is disabled for 4 seconds after starting the channel.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate - Master Craftsman: Ornn uses his craftsmanship in forgery to upgrade most Legendary items that he and his teammates own into Masterwork items, increasing the gold value of all upgradeable stats by exactly 1000, shared equally among them. When Ornn reaches level 13, the first eligible Legendary item in his inventory is upgraded automatically. For each level after 13 and before 18 (levels 14:17, total of 4, once per ally per game), Ornn can upgrade the first eligible Legendary item in an allied champion's inventory into its Masterwork variant. He can do so by selecting the ally while within 600 range, and forges the item by performing Living Forge's channel.Additionally, Ornn increases his bonus armor, bonus magic resistance and bonus health by 10% from all sources, further increased by 4% each time he upgrades a Legendary item into a Masterwork item, for a total increase of 30% to each stat after the maximum of 5 upgrades.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Master Craftsman:</p><p> Ornn uses his craftsmanship in forgery to upgrade most Legendary items that he and his teammates own into Masterwork items, increasing the gold value of all upgradeable stats by exactly 1000, shared equally among them. When Ornn reaches level 13, the first eligible Legendary item in his inventory is upgraded automatically. For each level after 13 and before 18 (levels 14 - 17, total of 4, once per ally per game), Ornn can upgrade the first eligible Legendary item in an allied champion's inventory into its Masterwork variant. He can do so by selecting the ally while within 600 range, and forges the item by performing Living Forge's channel.Additionally, Ornn increases his bonus armor, bonus magic resistance and bonus health by 10% from all sources, further increased by 4% each time he upgrades a Legendary item into a Masterwork item, for a total increase of 30% to each stat after the maximum of 5 upgrades.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate - Temper: Ornn's basic attacks against Brittle enemies knock them back a short distance. Ornn's and allies' immobilizing effects against Brittle enemies will consume the debuff to deal bonus magic damage equal to 10% : 18% (based on Ornn's level) of the target's maximum health, capped at 250 against monsters, and cause the crowd control to last 30% longer (if applicable).",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Temper:</p><p> Ornn's basic attacks against Brittle enemies knock them back a short distance. Ornn's and allies' immobilizing effects against Brittle enemies will consume the debuff to deal bonus magic damage equal to 10% - 18% (based on Ornn's level) of the target's maximum health, capped at 250 against monsters, and cause the crowd control to last 30% longer (if applicable).</p></div>",
             "leveling": []
           },
           {
@@ -125,7 +125,7 @@
         "affects": "Allies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -152,7 +152,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ornn/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Ornn sends a fissure in the target direction that deals physical damage to enemies hit and slows them by 40% for 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ornn sends a fissure in the target direction that deals physical damage to enemies hit and slows them by 40% for 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -166,26 +166,14 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      110,
-                      110,
-                      110,
-                      110,
                       110
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -202,7 +190,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              45
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -213,7 +210,9 @@
                 7.5,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -221,8 +220,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -249,7 +248,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ornn/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Ornn marches forward in the target direction over 0.75 seconds, gaining displacement immunity and becoming unable to act for the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ornn marches forward in the target direction over 0.75 seconds, gaining displacement immunity and becoming unable to act for the duration.</p></div>",
             "leveling": []
           },
           {
@@ -267,10 +266,6 @@
                       16
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -288,10 +283,6 @@
                       3.2
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -314,10 +305,6 @@
                       280
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -335,10 +322,6 @@
                       56
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -356,10 +339,6 @@
                       255
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -377,10 +356,6 @@
                       51
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -389,7 +364,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              45,
+              50,
+              55,
+              60,
+              65
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -400,7 +388,9 @@
                 10.5,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -408,8 +398,8 @@
         "targeting": "Direction",
         "affects": "Self / Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "aoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -436,7 +426,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ornn/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Ornn charges in the target direction, dealing physical damage to enemies he passes through and stopping upon colliding with terrain.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ornn charges in the target direction, dealing physical damage to enemies he passes through and stopping upon colliding with terrain.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -450,42 +440,22 @@
                       260
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% bonus armor",
-                      "% bonus armor",
-                      "% bonus armor",
-                      "% bonus armor",
                       "% bonus armor"
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% bonus magic resistance",
-                      "% bonus magic resistance",
-                      "% bonus magic resistance",
-                      "% bonus magic resistance",
                       "% bonus magic resistance"
                     ]
                   }
@@ -502,7 +472,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              35,
+              40,
+              45,
+              50,
+              55
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -513,7 +496,9 @@
                 12.5,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -521,8 +506,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Area of effect",
         "projectile": null,
         "onHitEffects": null,
@@ -549,7 +534,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ornn/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Ornn sounds his horn, summoning a lava elemental at maximum range from the target direction that stampedes towards his casting position at increasing speed. The elemental deals magic damage to enemies it passes through and slows them for 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ornn sounds his horn, summoning a lava elemental at maximum range from the target direction that stampedes towards his casting position at increasing speed. The elemental deals magic damage to enemies it passes through and slows them for 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -561,20 +546,14 @@
                       225
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      20,
-                      20,
                       20
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -590,8 +569,6 @@
                       60
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -604,7 +581,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Ornn dashes in the target direction, though not through terrain. If he collides with the elemental, he sends it stampeding in the same direction. The elemental deals the same damage to enemies it passes through and knocks them up and stuns them for 1 second, reduced to 0.5 seconds after the first enemy champion hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Ornn dashes in the target direction, though not through terrain. If he collides with the elemental, he sends it stampeding in the same direction. The elemental deals the same damage to enemies it passes through and knocks them up and stuns them for 1 second, reduced to 0.5 seconds after the first enemy champion hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Magic Damage",
@@ -616,20 +593,14 @@
                       450
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -642,7 +613,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -651,7 +631,9 @@
                 120,
                 100
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -659,8 +641,8 @@
         "targeting": "Direction",
         "affects": "Enemies / Elemental",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -682,5 +664,6 @@
       }
     ]
   },
+  "lore": "Ornn is the Freljordian spirit of forging and craftsmanship. He works in the solitude of a massive smithy, hammered out from the lava caverns beneath the volcano Hearth-Home. There he stokes bubbling cauldrons of molten rock to purify ores and fashion items of unsurpassed quality. When other deities—especially Volibear—walk the earth and meddle in mortal affairs, Ornn arises to put these impetuous beings back in their place, either with his trusty hammer or the fiery power of the mountains themselves.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/base/images/ornn_splash_centered_0.jpg"
 }

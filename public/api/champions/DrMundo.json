@@ -92,11 +92,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/DrMundo/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Dr. Mundo regenerates an additional[ 0.4% : 2.3% (based on level) of his maximum health every 5 seconds. ][ 0.04% : 0.23% (based on level) of his maximum health every 0.5 seconds. ]",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Dr. Mundo regenerates an additional[ 0.4% - 2.3% (based on level) of his maximum health every 5 seconds. ][ 0.04% - 0.23% (based on level) of his maximum health every 0.5 seconds. ]</p></div>",
             "leveling": []
           },
           {
-            "description": "Passive: Periodically, Dr. Mundo gains immunity to the immobilizing effects of the next hostile spell to affect him. Upon resisting one, Dr. Mundo pays a health cost equal to 4% of his current health and propels a canister that lands 525 units in the general direction of its source, remaining on the ground for 7 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Periodically, Dr. Mundo gains immunity to the immobilizing effects of the next hostile spell to affect him. Upon resisting one, Dr. Mundo pays a health cost equal to 4% of his current health and propels a canister that lands 525 units in the general direction of its source, remaining on the ground for 7 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -132,7 +132,9 @@
                 17.647058823529413,
                 15
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -168,7 +170,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/DrMundo/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Dr. Mundo throws an infected bonesaw in the target direction that deals magic damage to the first enemy hit and slows them by 40% for 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Dr. Mundo throws an infected bonesaw in the target direction that deals magic damage to the first enemy hit and slows them by 40% for 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -182,10 +184,6 @@
                       30
                     ],
                     "units": [
-                      "% of target's current health",
-                      "% of target's current health",
-                      "% of target's current health",
-                      "% of target's current health",
                       "% of target's current health"
                     ]
                   }
@@ -208,10 +206,6 @@
                       280
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -229,10 +223,6 @@
                       650
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -245,18 +235,29 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              60,
+              70,
+              80,
+              90
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                4,
-                4,
-                4,
-                4,
                 4
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -264,8 +265,8 @@
         "targeting": "Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "true",
-        "resource": "HEALTH",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Health",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -292,7 +293,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/DrMundo/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Dr. Mundo charges up a defibrillator for up to 3 seconds, dealing magic damage every 0.25 seconds to nearby enemies and storing 80% : 95% (based on level) of post-mitigation damage he takes as grey health on his health bar, reduced to 25% after the first 0.75 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Dr. Mundo charges up a defibrillator for up to 3 seconds, dealing magic damage every 0.25 seconds to nearby enemies and storing 80% - 95% (based on level) of post-mitigation damage he takes as grey health on his health bar, reduced to 25% after the first 0.75 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",
@@ -306,10 +307,6 @@
                       20
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -327,10 +324,6 @@
                       320
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -343,7 +336,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Dr. Mundo detonates the defibrillator, dealing magic damage to nearby enemies and healing for 50% of grey health, increased to 100% if at least one enemy champion or large monster is hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Dr. Mundo detonates the defibrillator, dealing magic damage to nearby enemies and healing for 50% of grey health, increased to 100% if at least one enemy champion or large monster is hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -357,26 +350,14 @@
                       80
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      7,
-                      7,
-                      7,
-                      7,
                       7
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   }
@@ -385,7 +366,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              8
+            ],
+            "units": [
+              "%"
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -396,7 +386,9 @@
                 15.5,
                 15
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -404,8 +396,8 @@
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "special",
-        "resource": "CURRENT_HEALTH",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Current health",
+        "damageType": "Magic damage",
         "spellEffects": "special",
         "projectile": null,
         "onHitEffects": null,
@@ -432,7 +424,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/DrMundo/ability-icon/e",
         "effects": [
           {
-            "description": "Passive: Dr. Mundo gains bonus attack damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Dr. Mundo gains bonus attack damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Damage",
@@ -446,10 +438,6 @@
                       2.8
                     ],
                     "units": [
-                      "% maximum health",
-                      "% maximum health",
-                      "% maximum health",
-                      "% maximum health",
                       "% maximum health"
                     ]
                   }
@@ -458,7 +446,7 @@
             ]
           },
           {
-            "description": "Active: Dr. Mundo empowers his next basic attack within 4 seconds to have an uncancellable windup, gain 50 bonus range, and deal bonus physical damage, increased by 0% : 40% (based on Dr. Mundo's missing health). If the target dies or is a small monster, they are sent flying away in a line, though not through terrain, causing all enemies they pass through to take 100% AD physical damage plus Blunt Force Trauma's minimum bonus damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Dr. Mundo empowers his next basic attack within 4 seconds to have an uncancellable windup, gain 50 bonus range, and deal bonus physical damage, increased by 0% - 40% (based on Dr. Mundo's missing health). If the target dies or is a small monster, they are sent flying away in a line, though not through terrain, causing all enemies they pass through to take 100% AD physical damage plus Blunt Force Trauma's minimum bonus damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Bonus Physical Damage",
@@ -472,26 +460,14 @@
                       45
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      7,
-                      7,
-                      7,
-                      7,
                       7
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   }
@@ -509,26 +485,14 @@
                       63
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      9.8,
-                      9.8,
-                      9.8,
-                      9.8,
                       9.8
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   }
@@ -545,7 +509,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              10,
+              25,
+              40,
+              55,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -556,7 +533,9 @@
                 6.75,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -564,8 +543,8 @@
         "targeting": "Auto",
         "affects": null,
         "spellshieldable": "false",
-        "resource": "HEALTH",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Health",
+        "damageType": "Physical damage",
         "spellEffects": "special",
         "projectile": null,
         "onHitEffects": null,
@@ -592,7 +571,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/DrMundo/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Dr. Mundo injects himself with chemicals to become enhanced for 10 seconds, gaining increased base health, bonus movement speed, and bonus health regeneration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Dr. Mundo injects himself with chemicals to become enhanced for 10 seconds, gaining increased base health, bonus movement speed, and bonus health regeneration.</p></div>",
             "leveling": [
               {
                 "attribute": "Increased Base Health",
@@ -604,8 +583,6 @@
                       25
                     ],
                     "units": [
-                      "% missing health",
-                      "% missing health",
                       "% missing health"
                     ]
                   }
@@ -621,8 +598,6 @@
                       35
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -638,8 +613,6 @@
                       30
                     ],
                     "units": [
-                      "% maximum health",
-                      "% maximum health",
                       "% maximum health"
                     ]
                   }
@@ -655,8 +628,6 @@
                       3
                     ],
                     "units": [
-                      "% maximum health",
-                      "% maximum health",
                       "% maximum health"
                     ]
                   }
@@ -672,8 +643,6 @@
                       60
                     ],
                     "units": [
-                      "% maximum health",
-                      "% maximum health",
                       "% maximum health"
                     ]
                   }
@@ -691,11 +660,11 @@
           "modifiers": [
             {
               "values": [
-                120,
-                120,
                 120
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -726,5 +695,6 @@
       }
     ]
   },
+  "lore": "Utterly mad, tragically homicidal, and horrifyingly purple, Dr. Mundo is what keeps many of Zaun's citizens indoors on particularly dark nights. Now a self-proclaimed physician, he was once a patient of Zaun's most infamous asylum. After \"curing\" the entire staff, Dr. Mundo established his practice in the empty wards that once treated him and began mimicking the highly unethical procedures he had so often experienced himself. With a full cabinet of medicines and zero medical knowledge, he now makes himself more monstrous with each injection and terrifies the hapless \"patients\" who wander near his office.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/drmundo/skins/base/images/drmundo_splash_centered_0.jpg"
 }

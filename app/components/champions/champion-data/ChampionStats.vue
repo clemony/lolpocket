@@ -1,80 +1,80 @@
 <script setup lang="ts">
-const props = defineProps<{
-  champion: Champion
+const { stats } = defineProps<{
+  stats: Record<string, ChampionStat>
 }>()
 
-const statModel = ref(true)
+const { data } = await useFetch('/api/lists/stat-max-values.json')
+const maxStats = computed(() => data.value as Record<string, number>)
 
-const colors = [getColorFromVariable('--color-b3'), 'black']
-const labels = ['Level']
-/* const datasets = [
-    {
-        data: [18 - lvl.value, lvl.value],
-    },
-] */
+const ignoredStatKeys = [
+  'acquisitionRadius',
+  'selectionRadius',
+  'pathingRadius',
+  'gameplayRadius',
+  'criticalStrikeDamage',
+  'criticalStrikeDamageModifier',
+  'attackCastTime',
+  'attackTotalTime',
+  'attackDelayOffset',
+  'attackSpeedRatio',
+]
 
-const lvl = ref(1)
-const numericLvl = computed(() => Number(lvl.value))
+ const level = ref(1)
+const { resolveStat } = useChampionStatGrowth(computed (() => level.value))
+
+const filteredResolvedStats = computed(() => {
+  return Object.entries(stats)
+    .filter(([key]) => !ignoredStatKeys.includes(key))
+    .reduce((acc, [key, stat]) => {
+      const isAttackSpeed = key === 'attackSpeed'
+      const ratio = stats.attackSpeedRatio?.flat
+
+      const resolved = resolveStat(stat, {
+        type: isAttackSpeed ? 'attackSpeed' : undefined,
+        ratio: isAttackSpeed ? ratio : undefined,
+        roundTo: 2,
+      })
+
+      if (resolved != null)
+        acc[key] = resolved
+
+      return acc
+    }, {} as Record<string, number>)
+})
+
 </script>
 
 <template>
-  <div class="collapse !w-full !rounded-none !p-0">
-    <input v-model="statModel" type="checkbox" />
-    <div class="collapse-title !w-full !p-0">
-      <Separator class="mt-5" label="STATS" />
+  <Field class="**:select-text grid gap-y-4 brightness-90 m-0">
+
+    <Select v-model:model-value="level" class="w-fit mb-4">
+    <ContrastSelectTrigger class="!h-7 w-fit flex gap-1 text-nc items-center">
+      lvl
+      <SelectValue class="!text-nc" :placeholder="level.toString()"/>
+    </ContrastSelectTrigger>
+    <ContrastSelectContent class="!z-9999  backdrop-blur-md">
+      <SelectGroup>
+        <ContrastSelectItem v-for="i in 18" :value="i">
+          {{ i}}
+        </ContrastSelectItem>
+      </SelectGroup>
+    </ContrastSelectContent>
+  </Select>
+
+  <div v-for="(value, key) in filteredResolvedStats" :key="key" class="col-start-1 grid h-fit ">
+    <div class="justify-between grid grid-cols-[46px_1fr_46px] items-center mb-1.5">
+      <span class="font-semibold text-2 tracking-tight">
+      {{ (championStats.find(s => s.id === key)?.short || key) }}
+      </span>
+<progress class="progress w-full "  :value="value"   :max="maxStats[key] ?? 100" ></progress>
+      <span  class="font-semibold text-2 justify-self-end text-end ">
+      {{ value }}
+      </span>
     </div>
 
-    <div class="flex h-18 w-full gap-4">
-      <div class="flex h-full w-3/4 flex-col justify-between pt-2 pb-4">
-        <h3 class="drop-shadow-text leading-none tracking-tight">
-          Level
-        </h3>
-        <input
-          v-model="lvl"
-          type="range"
-          :min="1"
-          :max="18"
-          class="range range-xs" />
-      </div>
-      <div class="relative size-18">
-        <!--        <Donut
-                        :datasets="datasets"
-                        :labels="labels"
-                        aria="level"
-                        :colors="colors"
-                        gauge /> -->
-        <h1 class="absolute top-4 left-6.5 size-full">
-          {{ lvl }}
-        </h1>
-      </div>
-    </div>
+</div>
+    </Field>
 
-    <div class="grid grid-cols-2 items-start gap-x-10 gap-y-5 grid-flow-col">
-      <template
-        v-for="(stat, i) in championStats">
-        <template v-if="i <= 3">
-          <ChampStatBar
-            :key="i"
-            v-model:lvl="numericLvl"
-            :champion="props.champion"
-            :stat="stat"
-            class="col-start-1" />
-        </template>
-      </template>
-
-      <template
-        v-for="(stat, i) in championStats">
-        <template v-if="i >= 4">
-          <ChampStatBar
-            :key="i"
-            v-model:lvl="numericLvl"
-            :champion="props.champion"
-            :stat="stat"
-            class="col-start-2" />
-        </template>
-      </template>
-    </div>
-  </div>
 </template>
 
 <style scoped></style>

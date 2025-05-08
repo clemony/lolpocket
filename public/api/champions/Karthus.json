@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karthus/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Upon taking fatal damage, Karthus enters a zombie state for 7 seconds, during which he can cast his abilities at no cost. If Defile has been learned, it will remain toggled on for Death Defied's entire duration. Requiem becomes disabled after Death Defied has lasted 4 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Upon taking fatal damage, Karthus enters a zombie state for 7 seconds, during which he can cast his abilities at no cost. If Defile has been learned, it will remain toggled on for Death Defied's entire duration. Requiem becomes disabled after Death Defied has lasted 4 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -142,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karthus/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Karthus conjures a blast at the target location that detonates after 0.528 seconds to 0.759 seconds, granting sight of the area and dealing magic damage to all enemies within, doubled when only one target is struck.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Karthus conjures a blast at the target location that detonates after 0.528 seconds to 0.759 seconds, granting sight of the area and dealing magic damage to all enemies within, doubled when only one target is struck.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -156,26 +156,14 @@
                       116
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      35,
-                      35,
-                      35,
-                      35,
                       35
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -193,26 +181,14 @@
                       232
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -225,18 +201,29 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              20,
+              25,
+              30,
+              35,
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                1,
-                1,
-                1,
-                1,
                 1
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -244,8 +231,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Special",
         "projectile": null,
         "onHitEffects": null,
@@ -272,7 +259,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karthus/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Karthus erects a wall of pain at the target location perpendicular to his facing that lasts 5 seconds, granting sight around its pillars and center.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Karthus erects a wall of pain at the target location perpendicular to his facing that lasts 5 seconds, granting sight around its pillars and center.</p></div>",
             "leveling": [
               {
                 "attribute": "Wall Length",
@@ -286,10 +273,6 @@
                       1200
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -312,10 +295,6 @@
                       80
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -333,10 +312,6 @@
                       40
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -345,18 +320,25 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                15,
-                15,
-                15,
-                15,
                 15
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -364,7 +346,7 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "False",
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -392,7 +374,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karthus/ability-icon/e",
         "effects": [
           {
-            "description": "Passive: Karthus restores mana whenever he kills an enemy.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Karthus restores mana whenever he kills an enemy.</p></div>",
             "leveling": [
               {
                 "attribute": "Mana Restored",
@@ -406,10 +388,6 @@
                       50
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -418,7 +396,7 @@
             ]
           },
           {
-            "description": "Toggle: Karthus surrounds himself in a necrotic aura that deals magic damage every 0.25 seconds to all nearby enemies. Toggling Defile off triggers a final tick of damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Toggle:</p><p> Karthus surrounds himself in a necrotic aura that deals magic damage every 0.25 seconds to all nearby enemies. Toggling Defile off triggers a final tick of damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",
@@ -432,26 +410,14 @@
                       27.5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      5,
-                      5,
-                      5,
-                      5,
                       5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -469,26 +435,14 @@
                       110
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      20,
-                      20,
-                      20,
-                      20,
                       20
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -501,18 +455,29 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              30,
+              42,
+              54,
+              66,
+              78
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                0.5,
-                0.5,
-                0.5,
-                0.5,
                 0.5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -520,8 +485,8 @@
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "False",
-        "resource": "MANA_PER_SECOND",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana per_second",
+        "damageType": "Magic damage",
         "spellEffects": "aoedot",
         "projectile": null,
         "onHitEffects": null,
@@ -548,7 +513,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karthus/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Karthus channels for 3 seconds, then deals magic damage to all targetable enemy champions upon completion.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Karthus channels for 3 seconds, then deals magic damage to all targetable enemy champions upon completion.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -560,20 +525,14 @@
                       500
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -582,7 +541,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -591,7 +559,9 @@
                 180,
                 160
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -599,8 +569,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Aoe",
         "projectile": null,
         "onHitEffects": null,
@@ -622,5 +592,6 @@
       }
     ]
   },
+  "lore": "The harbinger of oblivion, Karthus is an undying spirit whose haunting songs are a prelude to the horror of his nightmarish appearance. The living fear the eternity of undeath, but Karthus sees only beauty and purity in its embrace, a perfect union of life and death. When Karthus emerges from the Shadow Isles, it is to bring the joy of death to mortals, an apostle of the unliving.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/karthus/skins/base/images/karthus_splash_centered_0.jpg"
 }

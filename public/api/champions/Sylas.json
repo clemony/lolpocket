@@ -101,11 +101,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Whenever Sylas casts an ability, he generates a stack of Unshackled for 4 seconds, refreshing on subsequent casts and stacking up to 3 times.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Whenever Sylas casts an ability, he generates a stack of Unshackled for 4 seconds, refreshing on subsequent casts and stacking up to 3 times.</p></div>",
             "leveling": []
           },
           {
-            "description": "Unshackled: Sylas' next basic attack gains 125% bonus attack speed and is empowered to consume a stack to whirl his chains around him, which has an uncancellable windup and deals 130% AD (+ 30% AP) magic damage to the primary target and 40% AD (+ 20% AP) magic damage to nearby enemies.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Unshackled:</p><p> Sylas' next basic attack gains 125% bonus attack speed and is empowered to consume a stack to whirl his chains around him, which has an uncancellable windup and deals 130% AD (+ 30% AP) magic damage to the primary target and 40% AD (+ 20% AP) magic damage to nearby enemies.</p></div>",
             "leveling": []
           },
           {
@@ -126,7 +126,7 @@
         "affects": "Self",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "special",
         "projectile": null,
         "onHitEffects": null,
@@ -153,7 +153,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Sylas lashes out two chains that converge to the target location and extend beyond it up to a maximum range, dealing magic damage to enemies hit and slowing them for 1.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Sylas lashes out two chains that converge to the target location and extend beyond it up to a maximum range, dealing magic damage to enemies hit and slowing them for 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -167,26 +167,14 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -204,10 +192,6 @@
                       35
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -230,26 +214,14 @@
                       280
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -267,26 +239,14 @@
                       400
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      120,
-                      120,
-                      120,
-                      120,
                       120
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -304,26 +264,14 @@
                       112
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      32,
-                      32,
-                      32,
-                      32,
                       32
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -341,26 +289,14 @@
                       232
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      72,
-                      72,
-                      72,
-                      72,
                       72
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -373,7 +309,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              55
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -384,7 +329,9 @@
                 7,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -392,8 +339,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -420,7 +367,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Sylas dashes to the front of the target enemy's location then strikes them to deal magic damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Sylas dashes to the front of the target enemy's location then strikes them to deal magic damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -434,26 +381,14 @@
                       215
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -462,7 +397,7 @@
             ]
           },
           {
-            "description": "If this damages a champion, Sylas is also healed, increased by 0% : 100% (based on his missing health).",
+            "description": "If this damages a champion, Sylas is also healed, increased by 0% - 100% (based on his missing health).",
             "leveling": [
               {
                 "attribute": "Minimum Heal",
@@ -476,42 +411,22 @@
                       100
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      20,
-                      20,
-                      20,
-                      20,
                       20
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      5,
-                      5,
-                      5,
-                      5,
                       5
                     ],
                     "units": [
-                      "% of his bonus health",
-                      "% of his bonus health",
-                      "% of his bonus health",
-                      "% of his bonus health",
                       "% of his bonus health"
                     ]
                   }
@@ -529,42 +444,22 @@
                       200
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      10,
-                      10,
-                      10,
-                      10,
                       10
                     ],
                     "units": [
-                      "% of his bonus health",
-                      "% of his bonus health",
-                      "% of his bonus health",
-                      "% of his bonus health",
                       "% of his bonus health"
                     ]
                   }
@@ -573,7 +468,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              60,
+              70,
+              80,
+              90
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -584,7 +492,9 @@
                 7.5,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -592,8 +502,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Single target",
         "projectile": null,
         "onHitEffects": null,
@@ -620,7 +530,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Sylas dashes to the target location. Within 3.5 seconds, he can cast Abduct after a 0.2-second delay from casting Abscond.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Sylas dashes to the target location. Within 3.5 seconds, he can cast Abduct after a 0.2-second delay from casting Abscond.</p></div>",
             "leveling": []
           },
           {
@@ -628,7 +538,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              65
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -639,7 +558,9 @@
                 10,
                 9
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -647,7 +568,7 @@
         "targeting": "Location",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -673,7 +594,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Sylas whips out his chains in the target direction that deal magic damage to the first enemy hit and reveal and stun them for 0.5 seconds. Upon hitting the target, Sylas dashes to their location and knocks them up for 0.5 seconds upon arrival.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Sylas whips out his chains in the target direction that deal magic damage to the first enemy hit and reveal and stun them for 0.5 seconds. Upon hitting the target, Sylas dashes to their location and knocks them up for 0.5 seconds upon arrival.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -687,26 +608,14 @@
                       280
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -728,7 +637,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Single target",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -755,11 +664,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Sylas launches his chains at the target enemy champion, gaining a copy of their ultimate ability and revealing them for 0.825 seconds at the start of the cast time. Sylas cannot select the same champion again for a set duration, and can hold the hijacked ultimate for up to 90 seconds, during which he can recast Hijack.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Sylas launches his chains at the target enemy champion, gaining a copy of their ultimate ability and revealing them for 0.825 seconds at the start of the cast time. Sylas cannot select the same champion again for a set duration, and can hold the hijacked ultimate for up to 90 seconds, during which he can recast Hijack.</p></div>",
             "leveling": []
           },
           {
-            "description": "Recast: Sylas casts his hijacked ultimate ability at no cost, scaling based on Hijack's rank and his own statistics.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Sylas casts his hijacked ultimate ability at no cost, scaling based on Hijack's rank and his own statistics.</p></div>",
             "leveling": []
           },
           {
@@ -767,7 +676,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              75
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -776,7 +694,9 @@
                 55,
                 30
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -784,7 +704,7 @@
         "targeting": "Unit",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": "TRUE",
@@ -807,5 +727,6 @@
       }
     ]
   },
+  "lore": "Raised in one of Demacia's lesser quarters, Sylas of Dregbourne has come to symbolize the darker side of the Great City. As a boy, his ability to root out hidden sorcery caught the attention of the notorious mageseekers, who eventually imprisoned him for turning those same powers against them. Having now broken free, Sylas lives as a hardened revolutionary, using the magic of those around him to destroy the kingdom he once served… and his band of outcast mage followers seems to grow by the day.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sylas/skins/base/images/sylas_splash_centered_0.jpg"
 }

@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Maokai/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Periodically, Maokai empowers his next basic attack to have an uncancellable windup and heal him for 4% : 12.8% (based on level) maximum health after a 0.25-second delay.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Periodically, Maokai empowers his next basic attack to have an uncancellable windup and heal him for 4% - 12.8% (based on level) maximum health after a 0.25-second delay.</p></div>",
             "leveling": []
           },
           {
@@ -133,7 +133,9 @@
                 20.588235294117645,
                 20
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -169,7 +171,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Maokai/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Maokai sends a shockwave in the target direction that deals magic damage to enemies hit and slows them by 99% for 0.25 seconds. Bramble Smash deals bonus magic damage to monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Maokai sends a shockwave in the target direction that deals magic damage to enemies hit and slows them by 99% for 0.25 seconds. Bramble Smash deals bonus magic damage to monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -183,10 +185,6 @@
                       245
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -199,26 +197,14 @@
                       4
                     ],
                     "units": [
-                      "% of the target's maximum health",
-                      "% of the target's maximum health",
-                      "% of the target's maximum health",
-                      "% of the target's maximum health",
                       "% of the target's maximum health"
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -236,10 +222,6 @@
                       160
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -257,10 +239,6 @@
                       405
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -273,26 +251,14 @@
                       4
                     ],
                     "units": [
-                      "% of the target's maximum health",
-                      "% of the target's maximum health",
-                      "% of the target's maximum health",
-                      "% of the target's maximum health",
                       "% of the target's maximum health"
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -305,7 +271,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -316,7 +291,9 @@
                 5.5,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -324,8 +301,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Area of effect",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -352,7 +329,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Maokai/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Maokai dashes to the target enemy while being untargetable. Upon arrival, he deals magic damage and roots them for a duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Maokai dashes to the target enemy while being untargetable. Upon arrival, he deals magic damage and roots them for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -366,26 +343,14 @@
                       160
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -403,10 +368,6 @@
                       1.4
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -415,7 +376,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -426,7 +396,9 @@
                 11,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -434,8 +406,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -462,7 +434,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Maokai/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Maokai flings a Sapling to the target location, granting sight of the area.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Maokai flings a Sapling to the target location, granting sight of the area.</p></div>",
             "leveling": []
           },
           {
@@ -480,42 +452,22 @@
                       150
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      5,
-                      5,
-                      5,
-                      5,
                       5
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -538,42 +490,22 @@
                       300
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      10,
-                      10,
-                      10,
-                      10,
                       10
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -591,42 +523,22 @@
                       100
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      3.33,
-                      3.33,
-                      3.33,
-                      3.33,
                       3.33
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   },
                   {
                     "values": [
-                      16.67,
-                      16.67,
-                      16.67,
-                      16.67,
                       16.67
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -639,7 +551,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              65,
+              70,
+              75,
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -650,7 +575,9 @@
                 15,
                 14
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -658,8 +585,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -686,7 +613,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Maokai/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Maokai summons a colossal wall of five thorny brambles that slowly advances in the target direction, accelerating over time, each stopping when they collide with an enemy champion. Hitting at least one enemy champion grants Maokai bonus movement speed decaying over 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Maokai summons a colossal wall of five thorny brambles that slowly advances in the target direction, accelerating over time, each stopping when they collide with an enemy champion. Hitting at least one enemy champion grants Maokai bonus movement speed decaying over 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -698,8 +625,6 @@
                       60
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -708,7 +633,7 @@
             ]
           },
           {
-            "description": "Each bramble deals magic damage to enemies hit and roots them for 0.75 : 2.25 (based on distance traveled) seconds.",
+            "description": "Each bramble deals magic damage to enemies hit and roots them for 0.75 - 2.25 (based on distance traveled) seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -720,20 +645,14 @@
                       300
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      75,
-                      75,
                       75
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -742,7 +661,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -751,7 +679,9 @@
                 110,
                 90
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -759,8 +689,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Area of effect",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -782,5 +712,6 @@
       }
     ]
   },
+  "lore": "Maokai is a rageful, towering treant who fights the unnatural horrors of the Shadow Isles. He was twisted into a force of vengeance after a magical cataclysm destroyed his home, surviving undeath only through the Waters of Life infused within his heartwood. Once a peaceful nature spirit, Maokai now furiously battles to banish the scourge of unlife from the Shadow Isles and restore his home to its former beauty.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/maokai/skins/base/images/maokai_splash_centered_0.jpg"
 }

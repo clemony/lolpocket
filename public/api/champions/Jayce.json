@@ -101,7 +101,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Whenever Jayce switches between either Hammer Stance or Cannon Stance, he gains ghosting and 40 bonus movement speed for 0.75 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Whenever Jayce switches between either Hammer Stance or Cannon Stance, he gains ghosting and 40 bonus movement speed for 0.75 seconds.</p></div>",
             "leveling": []
           }
         ],
@@ -141,7 +141,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Jayce leaps to the target enemy's location over 0.5 seconds. Upon arrival, he smashes his hammer to the ground to deal physical damage to all enemies within an area and slow them for 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jayce leaps to the target enemy's location over 0.5 seconds. Upon arrival, he smashes his hammer to the ground to deal physical damage to all enemies within an area and slow them for 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -156,29 +156,14 @@
                       285
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      135,
-                      135,
-                      135,
-                      135,
-                      135,
                       135
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -197,11 +182,6 @@
                       60
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -214,7 +194,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -226,7 +215,9 @@
                 8,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -234,8 +225,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -260,7 +251,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Jayce fires an electric bolt in the target direction that detonates upon hitting an enemy or reaching maximum range, dealing physical damage to nearby enemies and granting sight of the area for 1.25 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jayce fires an electric bolt in the target direction that detonates upon hitting an enemy or reaching maximum range, dealing physical damage to nearby enemies and granting sight of the area for 1.25 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -275,29 +266,14 @@
                       310
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      140,
-                      140,
-                      140,
-                      140,
-                      140,
                       140
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -306,7 +282,7 @@
             ]
           },
           {
-            "description": "If the bolt passes through Acceleration Gate, it becomes supercharged: increasing its damage by 40% as well as its speed, range and explosion radius.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">If the bolt passes through Acceleration Gate, it becomes supercharged:</p><p> increasing its damage by 40% as well as its speed, range and explosion radius.</p></div>",
             "leveling": [
               {
                 "attribute": "Increased Damage",
@@ -321,29 +297,14 @@
                       434
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      196,
-                      196,
-                      196,
-                      196,
-                      196,
                       196
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -352,19 +313,30 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              55,
+              60,
+              65,
+              70,
+              75,
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                8,
-                8,
-                8,
-                8,
-                8,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -372,8 +344,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "aoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -400,7 +372,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Jayce's basic attacks restore mana on-hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Jayce's basic attacks restore mana on-hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Mana Restored",
@@ -415,11 +387,6 @@
                       25
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -428,7 +395,7 @@
             ]
           },
           {
-            "description": "Active: Jayce surrounds himself with an electric field for 4 seconds that deals magic damage every second to nearby enemies.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jayce surrounds himself with an electric field for 4 seconds that deals magic damage every second to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",
@@ -443,29 +410,14 @@
                       110
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
-                      25,
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -484,29 +436,14 @@
                       440
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -515,19 +452,25 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                10,
-                10,
-                10,
-                10,
-                10,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -535,8 +478,8 @@
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": null,
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "aoedot",
         "projectile": null,
         "onHitEffects": null,
@@ -561,7 +504,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Jayce empowers his next 3 basic attacks within 4 seconds to deal modified physical damage and gain 360% bonus attack speed.Hyper Charge's total damage is affected by critical strike modifiers.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jayce empowers his next 3 basic attacks within 4 seconds to deal modified physical damage and gain 360% bonus attack speed.Hyper Charge's total damage is affected by critical strike modifiers.</p></div>",
             "leveling": [
               {
                 "attribute": "Damage Modifier",
@@ -576,11 +519,6 @@
                       110
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -593,7 +531,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -605,7 +552,9 @@
                 6.6,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -613,8 +562,8 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -641,7 +590,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Jayce roots the target enemy over the cast time, then swings his hammer at them to deal magic damage, capped against monsters, and knock them back 600 units.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jayce roots the target enemy over the cast time, then swings his hammer at them to deal magic damage, capped against monsters, and knock them back 600 units.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -656,29 +605,14 @@
                       22
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -697,11 +631,6 @@
                       700
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -714,7 +643,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              55
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -726,7 +664,9 @@
                 12,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -734,8 +674,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "single",
         "projectile": null,
         "onHitEffects": null,
@@ -760,7 +700,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Jayce deploys an energy gate centered at the target location, lasting for 4 seconds and granting sight of its surroundings. Jayce and all allied champions can move through it to gain bonus movement speed that decays over 3 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jayce deploys an energy gate centered at the target location, lasting for 4 seconds and granting sight of its surroundings. Jayce and all allied champions can move through it to gain bonus movement speed that decays over 3 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -775,11 +715,6 @@
                       60
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -792,19 +727,25 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                16,
-                16,
-                16,
-                16,
-                16,
                 16
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -812,7 +753,7 @@
         "targeting": "Location",
         "affects": "Allies",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -840,7 +781,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Jayce transforms into Cannon Stance, receiving access to its abilities, becoming ranged with 500 attack range, and empowering his next basic attack to reduce the target's armor and magic resistance by 10 / 15 / 20 / 25% (based on level) for 5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jayce transforms into Cannon Stance, receiving access to its abilities, becoming ranged with 500 attack range, and empowering his next basic attack to reduce the target's armor and magic resistance by 10 / 15 / 20 / 25% (based on level) for 5 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -853,14 +794,11 @@
           "modifiers": [
             {
               "values": [
-                6,
-                6,
-                6,
-                6,
-                6,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -894,7 +832,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Jayce transforms into Hammer Stance, receiving access to its abilities, becoming melee with 125 attack range, gaining 5 / 15 / 25 / 35 (based on level) (+ 7.5% bonus AD) bonus armor and bonus magic resistance, and empowering his next basic attack to deal 25 / 60 / 95 / 130 (based on level) (+ 30% bonus AD) bonus magic damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jayce transforms into Hammer Stance, receiving access to its abilities, becoming melee with 125 attack range, gaining 5 / 15 / 25 / 35 (based on level) (+ 7.5% bonus AD) bonus armor and bonus magic resistance, and empowering his next basic attack to deal 25 / 60 / 95 / 130 (based on level) (+ 30% bonus AD) bonus magic damage.</p></div>",
             "leveling": []
           },
           {
@@ -907,14 +845,11 @@
           "modifiers": [
             {
               "values": [
-                6,
-                6,
-                6,
-                6,
-                6,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -945,5 +880,6 @@
       }
     ]
   },
+  "lore": "Jayce Talis is a brilliant inventor who, along with his friend Viktor, made the first great discoveries in the field of hextech. Celebrated across Piltover, he tries to live up to his reputation as \"the Man of Progress,\" but often struggles with the expectations placed upon him. Because of this, Jayce has begun to see the ways in which his invention has furthered the division between Piltover and Zaun—and armed with his hextech hammer, he stands ready to defend tomorrow.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/jayce/skins/base/images/jayce_splash_centered_0.jpg"
 }

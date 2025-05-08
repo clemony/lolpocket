@@ -97,11 +97,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiora/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Fiora identifies the Vitals of nearby visible enemy champions, marked as an arc around them in North-, East-, South- or Westward direction. Vitals take 1.75 seconds to become targetable and linger for 13.25 seconds afterwards while Fiora remains near the target, otherwise the Vital will disappear. After a Vital ends, Fiora identifies a new one on her target.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Fiora identifies the Vitals of nearby visible enemy champions, marked as an arc around them in North-, East-, South- or Westward direction. Vitals take 1.75 seconds to become targetable and linger for 13.25 seconds afterwards while Fiora remains near the target, otherwise the Vital will disappear. After a Vital ends, Fiora identifies a new one on her target.</p></div>",
             "leveling": []
           },
           {
-            "description": "Dealing damage in the direction of a Vital will trigger it to deal bonus true damage equal to 3% (+ 4% per 100 bonus AD) of target's maximum health, heal Fiora for 35 : 100 (based on level), and grant her 20 / 30 / 40 / 50% (based on Grand Challenge's Rank) bonus movement speed that decays over 1.85 seconds.",
+            "description": "Dealing damage in the direction of a Vital will trigger it to deal bonus true damage equal to 3% (+ 4% per 100 bonus AD) of target's maximum health, heal Fiora for 35 - 100 (based on level), and grant her 20 / 30 / 40 / 50% (based on Grand Challenge's Rank) bonus movement speed that decays over 1.85 seconds.",
             "leveling": []
           }
         ],
@@ -114,7 +114,7 @@
         "affects": "Enemies",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "TRUE_DAMAGE",
+        "damageType": "True damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -141,7 +141,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiora/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Fiora dashes in the target direction, then stabs a nearby enemy. Lunge can hit structures and wards. Stabbing a target reduces Lunge's cooldown by 50%.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Fiora dashes in the target direction, then stabs a nearby enemy. Lunge can hit structures and wards. Stabbing a target reduces Lunge's cooldown by 50%.</p></div>",
             "leveling": []
           },
           {
@@ -159,10 +159,6 @@
                       110
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -175,10 +171,6 @@
                       110
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -191,7 +183,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              20
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -202,7 +203,9 @@
                 7.75,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -210,8 +213,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Special",
         "projectile": null,
         "onHitEffects": null,
@@ -238,7 +241,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiora/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Fiora enters a defensive stance for 0.75 seconds, becoming unable to act, preventing all incoming non- turret damage, and gaining debuff immunity and crowd control immunity.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Fiora enters a defensive stance for 0.75 seconds, becoming unable to act, preventing all incoming non- turret damage, and gaining debuff immunity and crowd control immunity.</p></div>",
             "leveling": []
           },
           {
@@ -256,26 +259,14 @@
                       270
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -288,7 +279,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -299,7 +299,9 @@
                 18,
                 16
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -307,8 +309,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -335,7 +337,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiora/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Fiora empowers her next two basic attacks on-attack within 4 seconds to gain 25 bonus range and bonus attack speed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Fiora empowers her next two basic attacks on-attack within 4 seconds to gain 25 bonus range and bonus attack speed.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -349,10 +351,6 @@
                       90
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -375,10 +373,6 @@
                       200
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -391,7 +385,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -402,7 +405,9 @@
                 8,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -410,8 +415,8 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -438,7 +443,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiora/ability-icon/r",
         "effects": [
           {
-            "description": "Passive: Duelist's Dance's bonus movement speed is increased.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Duelist's Dance's bonus movement speed is increased.</p></div>",
             "leveling": [
               {
                 "attribute": "Additional Bonus Movement Speed",
@@ -450,8 +455,6 @@
                       30
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -460,7 +463,7 @@
             ]
           },
           {
-            "description": "Active: Fiora challenges the target enemy champion for 8 seconds, highlighting all four of their Vitals after a 0.5-second delay. While in effect, Duelist's Dance does not identify new Vitals on Fiora's target.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Fiora challenges the target enemy champion for 8 seconds, highlighting all four of their Vitals after a 0.5-second delay. While in effect, Duelist's Dance does not identify new Vitals on Fiora's target.</p></div>",
             "leveling": []
           },
           {
@@ -468,7 +471,7 @@
             "leveling": []
           },
           {
-            "description": "If Fiora triggers at least one Vital before the target dies, or triggers all four, she creates a Victory Zone at their location for 2 : 5 (based on Vitals hit) seconds, which heals Fiora and all allies within the area every second.",
+            "description": "If Fiora triggers at least one Vital before the target dies, or triggers all four, she creates a Victory Zone at their location for 2 - 5 (based on Vitals hit) seconds, which heals Fiora and all allies within the area every second.",
             "leveling": [
               {
                 "attribute": "Heal per Tick",
@@ -480,20 +483,14 @@
                       125
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -509,20 +506,14 @@
                       625
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      300,
-                      300,
                       300
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -535,7 +526,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -544,7 +544,9 @@
                 90,
                 70
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -552,8 +554,8 @@
         "targeting": "Unit",
         "affects": "Self, Enemies",
         "spellshieldable": "false",
-        "resource": "MANA",
-        "damageType": "TRUE_DAMAGE",
+        "resource": "Mana",
+        "damageType": "True damage",
         "spellEffects": "Heal",
         "projectile": null,
         "onHitEffects": null,
@@ -575,5 +577,6 @@
       }
     ]
   },
+  "lore": "The most feared duelist in all Valoran, Fiora is as renowned for her brusque manner and cunning mind as she is for the speed of her bluesteel rapier. Born to House Laurent in the kingdom of Demacia, Fiora took control of the family from her father in the wake of a scandal that nearly destroyed them. House Laurent's reputation was sundered, but Fiora bends her every effort to restore her family's honor and return them to their rightful place among the great and good of Demacia.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fiora/skins/base/images/fiora_splash_centered_0.jpg"
 }

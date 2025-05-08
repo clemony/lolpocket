@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ryze/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Ryze increases his maximum mana by (10% per 100 AP).",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Ryze increases his maximum mana by (10% per 100 AP).</p></div>",
             "leveling": []
           }
         ],
@@ -139,11 +139,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ryze/ability-icon/q",
         "effects": [
           {
-            "description": "Passive: Ryze's other basic ability casts reset Overload's cooldown and charge a Rune stack for 4 seconds, refreshing on subsequent casts and stacking up to 2 times.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Ryze's other basic ability casts reset Overload's cooldown and charge a Rune stack for 4 seconds, refreshing on subsequent casts and stacking up to 2 times.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Ryze unleashes a runic blast in the target direction that deals magic damage to the first enemy hit and consumes all Rune stacks.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ryze unleashes a runic blast in the target direction that deals magic damage to the first enemy hit and consumes all Rune stacks.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -157,42 +157,22 @@
                       155
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      55,
-                      55,
-                      55,
-                      55,
                       55
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      2,
-                      2,
-                      2,
-                      2,
                       2
                     ],
                     "units": [
-                      "% bonus mana",
-                      "% bonus mana",
-                      "% bonus mana",
-                      "% bonus mana",
                       "% bonus mana"
                     ]
                   }
@@ -215,10 +195,6 @@
                       44
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -227,22 +203,33 @@
             ]
           },
           {
-            "description": "Flux Bonus: Overload deals 10 / 40 / 70 / 100% (based on Realm Warp's Rank) increased damage and spreads to surrounding Fluxed enemies.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Flux Bonus:</p><p> Overload deals 10 / 40 / 70 / 100% (based on Realm Warp's Rank) increased damage and spreads to surrounding Fluxed enemies.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40,
+              38,
+              36,
+              34,
+              32
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                5,
-                5,
-                5,
-                5,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -250,8 +237,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -278,7 +265,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ryze/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Ryze seizes the target enemy, dealing magic damage and slowing them by 50% for 1.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ryze seizes the target enemy, dealing magic damage and slowing them by 50% for 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -292,42 +279,22 @@
                       200
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      4,
-                      4,
-                      4,
-                      4,
                       4
                     ],
                     "units": [
-                      "% bonus mana",
-                      "% bonus mana",
-                      "% bonus mana",
-                      "% bonus mana",
                       "% bonus mana"
                     ]
                   }
@@ -336,11 +303,24 @@
             ]
           },
           {
-            "description": "Flux Bonus: The target is rooted instead of slowed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Flux Bonus:</p><p> The target is rooted instead of slowed.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40,
+              55,
+              70,
+              85,
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -351,7 +331,9 @@
                 9.5,
                 9
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -359,8 +341,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Single target",
         "projectile": null,
         "onHitEffects": null,
@@ -387,7 +369,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ryze/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Ryze projects an orb upon the target enemy that deals magic damage.\nThe target and surrounding enemies are also marked with Flux for 4 seconds. Ryze's basic abilities against Flux targets consume the mark to become empowered with an additional effect.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ryze projects an orb upon the target enemy that deals magic damage.</p></div>\nThe target and surrounding enemies are also marked with Flux for 4 seconds. Ryze's basic abilities against Flux targets consume the mark to become empowered with an additional effect.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -401,42 +383,22 @@
                       180
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      2,
-                      2,
-                      2,
-                      2,
                       2
                     ],
                     "units": [
-                      "% bonus mana",
-                      "% bonus mana",
-                      "% bonus mana",
-                      "% bonus mana",
                       "% bonus mana"
                     ]
                   }
@@ -445,11 +407,24 @@
             ]
           },
           {
-            "description": "Flux Bonus: Spell Flux spreads farther.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Flux Bonus:</p><p> Spell Flux spreads farther.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              35,
+              45,
+              55,
+              65,
+              75
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -460,7 +435,9 @@
                 2.75,
                 2.5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -468,8 +445,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -496,7 +473,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ryze/ability-icon/r",
         "effects": [
           {
-            "description": "Passive: Overload's Flux empowered damage is increased.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Overload's Flux empowered damage is increased.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Overload Damage",
@@ -508,8 +485,6 @@
                       100
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -518,7 +493,7 @@
             ]
           },
           {
-            "description": "Active: Ryze channels for 2 seconds to open a portal beneath him, marking the target location as its destination and granting sight of the area. Ryze is able to act while channeling, but the portal will cancel if he is interrupted.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ryze channels for 2 seconds to open a portal beneath him, marking the target location as its destination and granting sight of the area. Ryze is able to act while channeling, but the portal will cancel if he is interrupted.</p></div>",
             "leveling": []
           },
           {
@@ -530,7 +505,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -539,7 +523,9 @@
                 160,
                 140
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -547,7 +533,7 @@
         "targeting": "Location",
         "affects": "Allies",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -570,5 +556,6 @@
       }
     ]
   },
+  "lore": "Widely considered one of the most adept sorcerers on Runeterra, Ryze is an ancient, hard-bitten archmage with an impossibly heavy burden to bear. Armed with immense arcane power and a boundless constitution, he tirelessly hunts for World Runes—fragments of the raw magic that once shaped the world from nothingness. He must retrieve these artifacts before they fall into the wrong hands, for Ryze understands the horrors they could unleash on Runeterra.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/base/images/ryze_splash_centered_0.jpg"
 }

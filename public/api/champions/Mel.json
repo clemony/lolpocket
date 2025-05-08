@@ -98,15 +98,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Mel/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Mel's damaging basic attacks and abilities apply a stack of Overwhelm to enemies for 5 seconds, refreshing on subsequent applications and stacking infinitely.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Mel's damaging basic attacks and abilities apply a stack of Overwhelm to enemies for 5 seconds, refreshing on subsequent applications and stacking infinitely.</p></div>",
             "leveling": []
           },
           {
-            "description": "Overwhelm: Store 50 / 60 / 70 / 80 (based on Golden Eclipse's rank) (+ 10% AP) magic damage on the affected enemy with the first stack, reduced[ to 60% ][ to 30 / 36 / 42 / 48 (based on Golden Eclipse's rank) (+ 6% AP) ]against minions. For each stack, store an additional 2 / 3 / 4 / 5 (based on Golden Eclipse's rank) (+ 0.75% AP) magic damage on the target. If the total post-mitigation damage stored exceeds the target's current health and shields, the next stack will consume them all to deal the damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Overwhelm:</p><p> Store 50 / 60 / 70 / 80 (based on Golden Eclipse's rank) (+ 10% AP) magic damage on the affected enemy with the first stack, reduced[ to 60% ][ to 30 / 36 / 42 / 48 (based on Golden Eclipse's rank) (+ 6% AP) ]against minions. For each stack, store an additional 2 / 3 / 4 / 5 (based on Golden Eclipse's rank) (+ 0.75% AP) magic damage on the target. If the total post-mitigation damage stored exceeds the target's current health and shields, the next stack will consume them all to deal the damage.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate - Searing Brilliance: Mel's ability casts each generate 3 stacks of Searing Brilliance for 5 seconds, refreshing on subsequent casts and stacking up to 9 times. Her next basic attack consumes all stacks of Searing Brilliance to additionally fire an equal number of blazing projectiles at the target. Each projectile deals 8 : 25 (based on level) (+ 1% AP) magic damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Searing Brilliance:</p><p> Mel's ability casts each generate 3 stacks of Searing Brilliance for 5 seconds, refreshing on subsequent casts and stacking up to 9 times. Her next basic attack consumes all stacks of Searing Brilliance to additionally fire an equal number of blazing projectiles at the target. Each projectile deals 8 - 25 (based on level) (+ 1% AP) magic damage.</p></div>",
             "leveling": []
           }
         ],
@@ -119,7 +119,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "false",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "proc",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -146,7 +146,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Mel/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Mel launches a barrage of luminous bolts at the target location over 0.7 seconds which distribute evenly in the area. Each bolt explodes upon landing to deal magic damage to nearby enemies, reduced to 25% against minions.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Mel launches a barrage of luminous bolts at the target location over 0.7 seconds which distribute evenly in the area. Each bolt explodes upon landing to deal magic damage to nearby enemies, reduced to 25% against minions.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Explosion",
@@ -160,26 +160,14 @@
                       23
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      8.5,
-                      8.5,
-                      8.5,
-                      8.5,
                       8.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -197,26 +185,14 @@
                       6.25
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      2.125,
-                      2.125,
-                      2.125,
-                      2.125,
                       2.125
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -234,10 +210,6 @@
                       10
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -255,10 +227,6 @@
                       230
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -271,10 +239,6 @@
                       85
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -292,10 +256,6 @@
                       57.5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -308,10 +268,6 @@
                       21.25
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -324,7 +280,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70,
+              80,
+              90,
+              100,
+              110
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -335,7 +304,9 @@
                 7,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -343,8 +314,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -371,7 +342,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Mel/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Mel forms a protective barrier around herself for 0.75 seconds, becoming invulnerable to non- turret damage and gaining 30% decaying bonus movement speed. All hostile non-turret projectiles that collide with the barrier will be destroyed instantly before Mel fires the same projectiles as her own, either toward or in the direction of the original sources, or toward herself.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Mel forms a protective barrier around herself for 0.75 seconds, becoming invulnerable to non- turret damage and gaining 30% decaying bonus movement speed. All hostile non-turret projectiles that collide with the barrier will be destroyed instantly before Mel fires the same projectiles as her own, either toward or in the direction of the original sources, or toward herself.</p></div>",
             "leveling": []
           },
           {
@@ -389,26 +360,14 @@
                       60
                     ],
                     "units": [
-                      "%  of the original damage",
-                      "%  of the original damage",
-                      "%  of the original damage",
-                      "%  of the original damage",
                       "%  of the original damage"
                     ]
                   },
                   {
                     "values": [
-                      5,
-                      5,
-                      5,
-                      5,
                       5
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -417,7 +376,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              80,
+              60,
+              40,
+              20,
+              0
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -428,7 +400,9 @@
                 26,
                 23
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -436,8 +410,8 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "special",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -464,7 +438,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Mel/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Mel fires an orb in the target direction that grants sight of its surroundings for 0.25 seconds as it travels. Enemies hit by the orb are dealt magic damage and rooted for a duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Mel fires an orb in the target direction that grants sight of its surroundings for 0.25 seconds as it travels. Enemies hit by the orb are dealt magic damage and rooted for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Orb Magic Damage",
@@ -478,26 +452,14 @@
                       240
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -515,10 +477,6 @@
                       2.25
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -541,26 +499,14 @@
                       10
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      1,
-                      1,
-                      1,
-                      1,
                       1
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -578,26 +524,14 @@
                       80
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      8,
-                      8,
-                      8,
-                      8,
                       8
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -620,26 +554,14 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -657,26 +579,14 @@
                       5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      0.5,
-                      0.5,
-                      0.5,
-                      0.5,
                       0.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -694,26 +604,14 @@
                       40
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      4,
-                      4,
-                      4,
-                      4,
                       4
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -722,7 +620,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -733,7 +644,9 @@
                 10.5,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -741,8 +654,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -769,7 +682,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Mel/ability-icon/r",
         "effects": [
           {
-            "description": "Passive: Overwhelm stacks store more damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Overwhelm stacks store more damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Increased Stored Damage",
@@ -781,8 +694,6 @@
                       30
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -798,8 +709,6 @@
                       3
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -808,7 +717,7 @@
             ]
           },
           {
-            "description": "Active: Mel unleashes a radiant blast on all enemies affected by Overwhelm, dealing magic damage to each. Enemies are also revealed for 1 second from the start of the cast time.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Mel unleashes a radiant blast on all enemies affected by Overwhelm, dealing magic damage to each. Enemies are also revealed for 1 second from the start of the cast time.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -820,20 +729,14 @@
                       200
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -844,8 +747,6 @@
                       10
                     ],
                     "units": [
-                      " (+ 3.5% AP) per Overwhelm stack on the target",
-                      " (+ 3.5% AP) per Overwhelm stack on the target",
                       " (+ 3.5% AP) per Overwhelm stack on the target"
                     ]
                   }
@@ -858,7 +759,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -867,7 +777,9 @@
                 100,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -875,8 +787,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -898,5 +810,6 @@
       }
     ]
   },
+  "lore": "Mel Medarda is the presumed heir of the Medarda family, once one of the most powerful in Noxus. In appearance she is a graceful aristocrat, but beneath the surface lies a skilled politician who makes it her business to know everything about everyone she meets. After an encounter with the mysterious Black Rose, Mel discovered the depths of her mother's deception and, for once, faced a situation potentially beyond her control. With newly awakened magical abilities, she sailed home in search of answers—and though many still seek to temper the light within her, Mel's soul remains forever defiant.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mel/skins/base/images/mel_splash_centered_0.mel.jpg"
 }

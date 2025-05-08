@@ -96,11 +96,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yuumi/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Periodically, Yuumi's next basic attack, which has an uncancelable windup and gains 50 bonus range, ability hit against enemy champions, or Final Chapter hit on ally champions while attached, will heal her for 20 : 110 (based on level) (+ 25% AP). If she is attached to an ally or does so within 4 seconds, they are healed for the same amount.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Periodically, Yuumi's next basic attack, which has an uncancelable windup and gains 50 bonus range, ability hit against enemy champions, or Final Chapter hit on ally champions while attached, will heal her for 20 - 110 (based on level) (+ 25% AP). If she is attached to an ally or does so within 4 seconds, they are healed for the same amount.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate: While attached to an ally, Yuumi grants them 2 permanent Friendship stacks whenever they kill enemy champions or minions. The ally with the highest Friendship stacks becomes Yuumi's Best Friend, which empowers her abilities with additional effects while she is attached to them.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> While attached to an ally, Yuumi grants them 2 permanent Friendship stacks whenever they kill enemy champions or minions. The ally with the highest Friendship stacks becomes Yuumi's Best Friend, which empowers her abilities with additional effects while she is attached to them.</p></div>",
             "leveling": []
           }
         ],
@@ -128,7 +128,9 @@
                 8.705882352941176,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -164,7 +166,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yuumi/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Yuumi fires an errant missile in the target direction that deals magic damage to the first enemy hit. If the target is a champion, they are also revealed and slowed by 20% for 1 second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Yuumi fires an errant missile in the target direction that deals magic damage to the first enemy hit. If the target is a champion, they are also revealed and slowed by 20% for 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -179,29 +181,14 @@
                       235
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      20,
-                      20,
-                      20,
-                      20,
-                      20,
                       20
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -210,7 +197,7 @@
             ]
           },
           {
-            "description": "Attached Bonus: Yuumi channels for up to 1.35 seconds to steer the missile at a slower speed. After being in flight for the same duration, the missile accelerates in its current direction to deal increased damage and apply a stronger slow against champions that decays to 20% over 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Attached Bonus:</p><p> Yuumi channels for up to 1.35 seconds to steer the missile at a slower speed. After being in flight for the same duration, the missile accelerates in its current direction to deal increased damage and apply a stronger slow against champions that decays to 20% over 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Increased Damage",
@@ -225,29 +212,14 @@
                       380
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -266,11 +238,6 @@
                       65
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -279,7 +246,7 @@
             ]
           },
           {
-            "description": "Best Friend Bonus: Prowling Projectile always applies its enhanced slow against champions and hitting a champion grants her Best Friend bonus magic damage on-hit for 5 seconds, increased by 0% : 75% (based on Anchor's critical strike chance).",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Best Friend Bonus:</p><p> Prowling Projectile always applies its enhanced slow against champions and hitting a champion grants her Best Friend bonus magic damage on-hit for 5 seconds, increased by 0% - 75% (based on Anchor's critical strike chance).</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage On-Hit",
@@ -294,29 +261,14 @@
                       20
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      5,
-                      5,
-                      5,
-                      5,
-                      5,
                       5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -325,19 +277,30 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70,
+              75
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                6.5,
-                6.5,
-                6.5,
-                6.5,
-                6.5,
                 6.5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -345,8 +308,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -373,15 +336,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yuumi/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: While Yuumi is attached, she is untargetable (except by turrets and inbound projectiles) and casts her abilities from the Anchor's position, empowering them with additional effects.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> While Yuumi is attached, she is untargetable (except by turrets and inbound projectiles) and casts her abilities from the Anchor's position, empowering them with additional effects.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Yuumi channels for 0.25 seconds, then upon completion dashes to the target allied champion and attaches to them upon arrival, designating them as her Anchor. You and Me! can be recast after 0.5 seconds of the attachment.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Yuumi channels for 0.25 seconds, then upon completion dashes to the target allied champion and attaches to them upon arrival, designating them as her Anchor. You and Me! can be recast after 0.5 seconds of the attachment.</p></div>",
             "leveling": []
           },
           {
-            "description": "Recast - Change of Plan: Yuumi detaches from her Anchor and dashes to the target allied champion to attach to them, refreshing the recast. She will detach automatically if her Anchor dies or under certain circumstances. If recast without a valid target, Yuumi will detach and dash 250-units in the target direction, placing You and Me! on a 0.25-second cooldown if it is not already on cooldown.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast - Change of Plan:</p><p> Yuumi detaches from her Anchor and dashes to the target allied champion to attach to them, refreshing the recast. She will detach automatically if her Anchor dies or under certain circumstances. If recast without a valid target, Yuumi will detach and dash 250-units in the target direction, placing You and Me! on a 0.25-second cooldown if it is not already on cooldown.</p></div>",
             "leveling": []
           },
           {
@@ -403,8 +366,6 @@
                 0
               ],
               "units": [
-                " (based on level)",
-                " (based on level)",
                 " (based on level)"
               ]
             }
@@ -442,7 +403,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yuumi/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Yuumi grants herself a shield and gains bonus attack speed for 3 seconds. She also gains 20% bonus movement speed while the shield holds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Yuumi grants herself a shield and gains bonus attack speed for 3 seconds. She also gains 20% bonus movement speed while the shield holds.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield",
@@ -456,26 +417,14 @@
                       165
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -493,26 +442,14 @@
                       35
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   },
                   {
                     "values": [
-                      8,
-                      8,
-                      8,
-                      8,
                       8
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -521,7 +458,7 @@
             ]
           },
           {
-            "description": "Attached Bonus: Zoomies affects the Anchor instead of Yuumi and additionally restores mana to the Anchor, increased by 0% : 100% (based on Anchor's missing mana).",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Attached Bonus:</p><p> Zoomies affects the Anchor instead of Yuumi and additionally restores mana to the Anchor, increased by 0% - 100% (based on Anchor's missing mana).</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Mana Restored",
@@ -535,10 +472,6 @@
                       36
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -556,10 +489,6 @@
                       72
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -568,18 +497,29 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              80,
+              90,
+              100,
+              110,
+              120
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                10,
-                10,
-                10,
-                10,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -587,7 +527,7 @@
         "targeting": "Auto",
         "affects": "Self / Allies",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -615,7 +555,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yuumi/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Yuumi and Book channel for up to 3.5 seconds, during which they are ghosted, to launch 5 magical waves in the target direction.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Yuumi and Book channel for up to 3.5 seconds, during which they are ghosted, to launch 5 magical waves in the target direction.</p></div>",
             "leveling": []
           },
           {
@@ -631,20 +571,14 @@
                       65
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -660,20 +594,14 @@
                       325
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      75,
-                      75,
                       75
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -694,20 +622,14 @@
                       175
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -723,20 +645,14 @@
                       43.75
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      6.25,
-                      6.25,
                       6.25
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -752,20 +668,14 @@
                       350
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -774,11 +684,11 @@
             ]
           },
           {
-            "description": "Attached Bonus: Yuumi can steer the direction of the waves if initially cast while attached. Detaching causes her to lose this bonus for the duration. Additionally, Feline Friendship can trigger from also hitting allied champions.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Attached Bonus:</p><p> Yuumi can steer the direction of the waves if initially cast while attached. Detaching causes her to lose this bonus for the duration. Additionally, Feline Friendship can trigger from also hitting allied champions.</p></div>",
             "leveling": []
           },
           {
-            "description": "Best Friend Bonus: Final Chapter's heal to the Best Friend is increased by 30%.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Best Friend Bonus:</p><p> Final Chapter's heal to the Best Friend is increased by 30%.</p></div>",
             "leveling": [
               {
                 "attribute": "Best Friend Heal per Hit",
@@ -790,20 +700,14 @@
                       84.5
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      19.5,
-                      19.5,
                       19.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -819,20 +723,14 @@
                       422.5
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      97.5,
-                      97.5,
                       97.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -841,7 +739,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -850,7 +757,9 @@
                 110,
                 100
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -858,8 +767,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -881,5 +790,6 @@
       }
     ]
   },
+  "lore": "A magical cat from Bandle City, Yuumi was once the familiar of a yordle enchantress, Norra. When her master mysteriously disappeared, Yuumi became the Keeper of Norra's sentient Book of Thresholds, traveling through portals in its pages to search for her. Yearning for affection, Yuumi seeks friendly companions to partner with on her journey, protecting them with luminous shields and fierce resolve. While Book strives to keep her on task, Yuumi is often drawn to worldly comforts, such as naps and fish. In the end, however, she always returns to her quest to find her friend.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/yuumi/skins/base/images/yuumi_splash_centered_0.jpg"
 }

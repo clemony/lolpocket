@@ -100,11 +100,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aurora/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Aurora's damaging basic attacks and abilities apply a stack of Spirit Abjuration to enemies for 4 seconds, refreshing on subsequent applications and stacking up to 3 times. The third stack against a target consumes them all to deal bonus magic damage equal to 2.5% (+ 2% per 100 AP) of the target's maximum health, capped at 100 : 180 (based on level) against monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Aurora's damaging basic attacks and abilities apply a stack of Spirit Abjuration to enemies for 4 seconds, refreshing on subsequent applications and stacking up to 3 times. The third stack against a target consumes them all to deal bonus magic damage equal to 2.5% (+ 2% per 100 AP) of the target's maximum health, capped at 100 - 180 (based on level) against monsters.</p></div>",
             "leveling": []
           },
           {
-            "description": "Upon consuming the stacks from a champion, Aurora additionally exorcises them, freeing a Spirit from the target that follows her for the same duration. For each active Spirit, Aurora is healed for 3 : 20 (based on level) (+ 2% AP) every second. Subsequent exorcisms free further Spirits and refresh all active Spirits. Aurora may have up to 4 Spirits at a time, for a maximum heal per tick of 12 : 80 (based on level) (+ 8% AP).",
+            "description": "Upon consuming the stacks from a champion, Aurora additionally exorcises them, freeing a Spirit from the target that follows her for the same duration. For each active Spirit, Aurora is healed for 3 - 20 (based on level) (+ 2% AP) every second. Subsequent exorcisms free further Spirits and refresh all active Spirits. Aurora may have up to 4 Spirits at a time, for a maximum heal per tick of 12 - 80 (based on level) (+ 8% AP).",
             "leveling": []
           }
         ],
@@ -117,7 +117,7 @@
         "affects": "Enemies, Self",
         "spellshieldable": "false",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "proc",
         "projectile": null,
         "onHitEffects": null,
@@ -144,7 +144,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aurora/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Aurora fires a bolt of energy in the target direction that deals magic damage to enemies hit and marks them with a curse for 3.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Aurora fires a bolt of energy in the target direction that deals magic damage to enemies hit and marks them with a curse for 3.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -158,26 +158,14 @@
                       145
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -190,7 +178,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Aurora expunges the curse from all marked targets, drawing the spiritual energy back to her as bolts that each deal magic damage to all enemies they pass through, reduced to 40% against minions and 50% against monsters and increased by 0% : 50% (based on target's missing health). Subsequent bolts against an enemy deal 20% damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Aurora expunges the curse from all marked targets, drawing the spiritual energy back to her as bolts that each deal magic damage to all enemies they pass through, reduced to 40% against minions and 50% against monsters and increased by 0% - 50% (based on target's missing health). Subsequent bolts against an enemy deal 20% damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -204,26 +192,14 @@
                       145
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -241,26 +217,14 @@
                       217.5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -278,26 +242,14 @@
                       29
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      8,
-                      8,
-                      8,
-                      8,
                       8
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -315,26 +267,14 @@
                       43.5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      12,
-                      12,
-                      12,
-                      12,
                       12
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -343,7 +283,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -354,7 +303,9 @@
                 7.5,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -362,8 +313,8 @@
         "targeting": "Direction / Auto",
         "affects": "Enemies, Self",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -390,7 +341,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aurora/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Aurora hops in the target direction inside a portal to the Spirit Realm. Upon completing the dash, she becomes invisible for a duration and gains Realm Hopper for 4 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Aurora hops in the target direction inside a portal to the Spirit Realm. Upon completing the dash, she becomes invisible for a duration and gains Realm Hopper for 4 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Invisibility Duration",
@@ -404,10 +355,6 @@
                       1.6
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -416,7 +363,7 @@
             ]
           },
           {
-            "description": "Realm Hopper: Aurora becomes ghosted and gains bonus movement speed for the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Realm Hopper:</p><p> Aurora becomes ghosted and gains bonus movement speed for the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -430,10 +377,6 @@
                       40
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -446,7 +389,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -457,7 +409,9 @@
                 19,
                 18
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -465,7 +419,7 @@
         "targeting": "direction",
         "affects": "self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -493,7 +447,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aurora/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Aurora blasts energy in a line in the target direction and recoils 250 units in the opposite direction. The blast deals magic damage to enemies hit and slows them by 80% for 1 second decaying after the first 0.15 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Aurora blasts energy in a line in the target direction and recoils 250 units in the opposite direction. The blast deals magic damage to enemies hit and slows them by 80% for 1 second decaying after the first 0.15 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -507,26 +461,14 @@
                       230
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -535,7 +477,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -546,7 +497,9 @@
                 12,
                 11
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -554,8 +507,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -582,7 +535,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aurora/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Aurora leaps in the target direction with displacement immunity over 0.4 seconds. She then gains Realm Hopper for 3.5 seconds and unleashes a shockwave from 425 units in front of her, expanding over 0.75 seconds to deal magic damage to enemies hit and slow them by 30% for 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Aurora leaps in the target direction with displacement immunity over 0.4 seconds. She then gains Realm Hopper for 3.5 seconds and unleashes a shockwave from 425 units in front of her, expanding over 0.75 seconds to deal magic damage to enemies hit and slow them by 30% for 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -594,20 +547,14 @@
                       375
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -628,8 +575,6 @@
                       3.25
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -645,8 +590,6 @@
                       2
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -659,7 +602,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Aurora closes the rift prematurely.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Aurora closes the rift prematurely.</p></div>",
             "leveling": []
           },
           {
@@ -667,7 +610,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -676,7 +628,9 @@
                 120,
                 100
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -684,8 +638,8 @@
         "targeting": "Direction",
         "affects": "Enemies, self",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -707,5 +661,6 @@
       }
     ]
   },
+  "lore": "From the moment she was born, Aurora navigated life with a unique ability to move between the spirit and material realms. Determined to learn more about the spirit realm's inhabitants, she left her home to further her research and happened upon a wayward demigod who'd become twisted and lost to time. Witnessing his desperation, Aurora resolved to find a way to help her feral friend regain his forgotten identity—a journey that would take her to the farthest reaches of the Freljord.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aurora/skins/base/images/aurora_splash_centered_0.aurora.jpg"
 }

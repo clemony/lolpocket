@@ -101,11 +101,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Teemo gains invisibility after 1.5 seconds without moving, taking damage, performing actions that break stealth, channeling, or being in stasis. Teemo will maintain stealth so long as he remains idle and is not displaced. While in brush, Teemo gains the stealth even while moving and can move without breaking stealth.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Teemo gains invisibility after 1.5 seconds without moving, taking damage, performing actions that break stealth, channeling, or being in stasis. Teemo will maintain stealth so long as he remains idle and is not displaced. While in brush, Teemo gains the stealth even while moving and can move without breaking stealth.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate - Element of Surprise: When Teemo breaks the stealth, he gains 20 / 40 / 60 / 80% (based on level) bonus attack speed for 5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Element of Surprise:</p><p> When Teemo breaks the stealth, he gains 20 / 40 / 60 / 80% (based on level) bonus attack speed for 5 seconds.</p></div>",
             "leveling": []
           }
         ],
@@ -145,7 +145,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Teemo shoots a dart at the target enemy that deals magic damage and blinds them for a duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Teemo shoots a dart at the target enemy that deals magic damage and blinds them for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -159,26 +159,14 @@
                       260
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -196,10 +184,6 @@
                       3
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -222,10 +206,6 @@
                       6
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -234,18 +214,29 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70,
+              75,
+              80,
+              85,
+              90
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                7,
-                7,
-                7,
-                7,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -253,8 +244,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Single target",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -281,7 +272,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Teemo gains bonus movement speed after 5 seconds without taking damage from enemy champions or turrets.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Teemo gains bonus movement speed after 5 seconds without taking damage from enemy champions or turrets.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -295,10 +286,6 @@
                       28
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -307,7 +294,7 @@
             ]
           },
           {
-            "description": "Active: Teemo doubles the bonus movement speed for 3 seconds, preventing it from being removed for the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Teemo doubles the bonus movement speed for 3 seconds, preventing it from being removed for the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Enhanced Bonus Movement Speed",
@@ -321,10 +308,6 @@
                       56
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -337,18 +320,25 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                14,
-                14,
-                14,
-                14,
                 14
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -356,7 +346,7 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -384,7 +374,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/e",
         "effects": [
           {
-            "description": "Passive: Teemo's basic attacks are empowered to deal bonus magic damage on-hit and inflict poison.\n poison: The target takes magic damage every second over 4 seconds. Subsequent inflictions refresh the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Teemo's basic attacks are empowered to deal bonus magic damage on-hit and inflict poison.</p></div>\n\n\n<div><p class=\"font-semibold  tracking-tight text-4\"> poison:</p><p> The target takes magic damage every second over 4 seconds. Subsequent inflictions refresh the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage On-Hit",
@@ -398,26 +388,14 @@
                       65
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -435,26 +413,14 @@
                       30
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      10,
-                      10,
-                      10,
-                      10,
                       10
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -472,26 +438,14 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -514,26 +468,14 @@
                       94.25
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      43.5,
-                      43.5,
-                      43.5,
-                      43.5,
                       43.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -551,26 +493,14 @@
                       43.5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      14.5,
-                      14.5,
-                      14.5,
-                      14.5,
                       14.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -588,26 +518,14 @@
                       174
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      58,
-                      58,
-                      58,
-                      58,
                       58
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -625,7 +543,7 @@
         "affects": "Self",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "proc",
         "projectile": null,
         "onHitEffects": null,
@@ -652,7 +570,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Teemo tosses a poisonous mushroom to the target location that becomes stealthed after arming over 1 second, lasting for up to 5 minutes and granting sight of its surroundings. If the mushroom lands on an already-placed one, it will bounce forward again for its cast distance, up to a cap, which can happen repeatedly.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Teemo tosses a poisonous mushroom to the target location that becomes stealthed after arming over 1 second, lasting for up to 5 minutes and granting sight of its surroundings. If the mushroom lands on an already-placed one, it will bounce forward again for its cast distance, up to a cap, which can happen repeatedly.</p></div>",
             "leveling": [
               {
                 "attribute": "Bounce Distance Cap",
@@ -664,8 +582,6 @@
                       550
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -686,8 +602,6 @@
                       5
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -708,8 +622,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -718,7 +630,7 @@
             ]
           },
           {
-            "description": "poison: The target takes magic damage every second over 4 seconds. Subsequent inflictions refresh the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">poison:</p><p> The target takes magic damage every second over 4 seconds. Subsequent inflictions refresh the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",
@@ -730,20 +642,14 @@
                       112.5
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      12.5,
-                      12.5,
                       12.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -759,20 +665,14 @@
                       450
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -785,16 +685,27 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              75,
+              55,
+              35
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                0.25,
-                0.25,
                 0.25
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -802,8 +713,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "aoedot",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -829,5 +740,6 @@
       }
     ]
   },
+  "lore": "Undeterred by even the most dangerous and threatening of obstacles, Teemo scouts the world with boundless enthusiasm and a cheerful spirit. A yordle with an unwavering sense of morality, he takes pride in following the Bandle Scout's Code, sometimes with such eagerness that he is unaware of the broader consequences of his actions. Though some say the existence of the Scouts is questionable, one thing is for certain: Teemo's conviction is nothing to be trifled with.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/teemo/skins/base/images/teemo_splash_centered_0.asu_teemo.jpg"
 }

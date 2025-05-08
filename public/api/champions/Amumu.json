@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Amumu/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Amumu's basic attacks and Curse of the Sad Mummy are empowered to mark enemies with Curse for 3 seconds, refreshing on subsequent applications and Despair's per-tick damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Amumu's basic attacks and Curse of the Sad Mummy are empowered to mark enemies with Curse for 3 seconds, refreshing on subsequent applications and Despair's per-tick damage.</p></div>",
             "leveling": []
           },
           {
@@ -117,7 +117,7 @@
         "affects": "Enemies",
         "spellshieldable": "special",
         "resource": null,
-        "damageType": "TRUE_DAMAGE",
+        "damageType": "True damage",
         "spellEffects": "default",
         "projectile": null,
         "onHitEffects": null,
@@ -144,7 +144,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Amumu/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Amumu throws a bandage in the target direction that deals magic damage to the first enemy hit, stunning them for 1 second and pulling him to them, during which they are revealed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Amumu throws a bandage in the target direction that deals magic damage to the first enemy hit, stunning them for 1 second and pulling him to them, during which they are revealed.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -158,26 +158,14 @@
                       170
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      85,
-                      85,
-                      85,
-                      85,
                       85
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -194,18 +182,29 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              45,
+              50,
+              55,
+              60,
+              65
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                3,
-                3,
-                3,
-                3,
                 3
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -213,8 +212,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -247,24 +246,16 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Amumu/ability-icon/w",
         "effects": [
           {
-            "description": "Toggle: Amumu cries a continuous pool of tears, dealing magic damage every 0.5 seconds to nearby enemies.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Toggle:</p><p> Amumu cries a continuous pool of tears, dealing magic damage every 0.5 seconds to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",
                 "modifiers": [
                   {
                     "values": [
-                      5,
-                      5,
-                      5,
-                      5,
                       5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -277,10 +268,6 @@
                       1
                     ],
                     "units": [
-                      "% (+ 0.25% per 100 AP) of target's maximum health",
-                      "% (+ 0.25% per 100 AP) of target's maximum health",
-                      "% (+ 0.25% per 100 AP) of target's maximum health",
-                      "% (+ 0.25% per 100 AP) of target's maximum health",
                       "% (+ 0.25% per 100 AP) of target's maximum health"
                     ]
                   }
@@ -289,18 +276,25 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              8
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                1,
-                1,
-                1,
-                1,
                 1
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -308,8 +302,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "False",
-        "resource": "MANA_PER_SECOND",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana per_second",
+        "damageType": "Magic damage",
         "spellEffects": "aoedot",
         "projectile": null,
         "onHitEffects": null,
@@ -336,7 +330,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Amumu/ability-icon/e",
         "effects": [
           {
-            "description": "Passive: Amumu reduces every instance of pre-mitigation physical damage taken, capped at 50% of the damage instance.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Amumu reduces every instance of pre-mitigation physical damage taken, capped at 50% of the damage instance.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage Reduction",
@@ -350,42 +344,22 @@
                       13
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      3,
-                      3,
-                      3,
-                      3,
                       3
                     ],
                     "units": [
-                      "% bonus armor",
-                      "% bonus armor",
-                      "% bonus armor",
-                      "% bonus armor",
                       "% bonus armor"
                     ]
                   },
                   {
                     "values": [
-                      3,
-                      3,
-                      3,
-                      3,
                       3
                     ],
                     "units": [
-                      "% bonus magic resistance",
-                      "% bonus magic resistance",
-                      "% bonus magic resistance",
-                      "% bonus magic resistance",
                       "% bonus magic resistance"
                     ]
                   }
@@ -394,7 +368,7 @@
             ]
           },
           {
-            "description": "Active: Amumu releases his anger, dealing magic damage to nearby enemies.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Amumu releases his anger, dealing magic damage to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -408,26 +382,14 @@
                       185
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -440,7 +402,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              35
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -451,7 +422,9 @@
                 6,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -459,8 +432,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -487,7 +460,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Amumu/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Amumu entangles nearby enemies in bandages, dealing magic damage as well as knocking down and stunning them for 1.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Amumu entangles nearby enemies in bandages, dealing magic damage as well as knocking down and stunning them for 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -499,20 +472,14 @@
                       400
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -521,7 +488,18 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100,
+              150,
+              200
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -530,7 +508,9 @@
                 125,
                 100
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -538,8 +518,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -561,5 +541,6 @@
       }
     ]
   },
+  "lore": "Legend claims that Amumu is a lonely and melancholy soul from ancient Shurima, roaming the world in search of a friend. Doomed by an ancient curse to remain alone forever, his touch is death, his affection ruin. Those who claim to have seen him describe a living cadaver, small in stature and wrapped in creeping bandages. Amumu has inspired myths, songs, and folklore told and retold for generations—such that it is impossible to separate truth from fiction.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/amumu/skins/base/images/amumu_splash_centered_0.jpg"
 }

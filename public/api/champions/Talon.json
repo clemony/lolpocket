@@ -95,11 +95,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Talon/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Talon's abilities apply a stack of Wound to enemy champions and large monsters hit for 6 seconds, refreshing on basic attacks and subsequent applications and stacking up to 3 times.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Talon's abilities apply a stack of Wound to enemy champions and large monsters hit for 6 seconds, refreshing on basic attacks and subsequent applications and stacking up to 3 times.</p></div>",
             "leveling": []
           },
           {
-            "description": "Talon's next basic attack against an enemy with 3 Wound stacks is empowered to consume them all to cause the target to bleed, dealing[ 80 : 280 (based on level) (+ 210% bonus AD) total physical damage over 2 seconds, ][ 5 : 17.5 (based on level) (+ 13.125% bonus AD) physical damage every 0.125 seconds over 2 seconds, ]increased to 110% damage against monsters. The target cannot gain Wound stacks during this time.",
+            "description": "Talon's next basic attack against an enemy with 3 Wound stacks is empowered to consume them all to cause the target to bleed, dealing[ 80 - 280 (based on level) (+ 210% bonus AD) total physical damage over 2 seconds, ][ 5 - 17.5 (based on level) (+ 13.125% bonus AD) physical damage every 0.125 seconds over 2 seconds, ]increased to 110% damage against monsters. The target cannot gain Wound stacks during this time.",
             "leveling": []
           }
         ],
@@ -112,7 +112,7 @@
         "affects": "Enemies",
         "spellshieldable": "Special",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "default",
         "projectile": null,
         "onHitEffects": null,
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Talon/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Talon dashes toward the target enemy, stabbing the target upon arrival to deal physical damage. If cast within close range, Talon dashes to the target over the cast time instead and Noxian Diplomacy critically strikes for (150% + 40%) damage, as well as grants him 75 bonus attack range on his next basic attack within 1 second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Talon dashes toward the target enemy, stabbing the target upon arrival to deal physical damage. If cast within close range, Talon dashes to the target over the cast time instead and Noxian Diplomacy critically strikes for (150% + 40%) damage, as well as grants him 75 bonus attack range on his next basic attack within 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -153,26 +153,14 @@
                       145
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -190,26 +178,14 @@
                       217.5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      150,
-                      150,
-                      150,
-                      150,
                       150
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -218,7 +194,7 @@
             ]
           },
           {
-            "description": "If Noxian Diplomacy kills the target, Talon heals for 9 : 55 (based on level) and the ability's cooldown is reduced by 50%.",
+            "description": "If Noxian Diplomacy kills the target, Talon heals for 9 - 55 (based on level) and the ability's cooldown is reduced by 50%.",
             "leveling": []
           },
           {
@@ -226,7 +202,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -237,7 +222,9 @@
                 6.5,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -245,8 +232,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -273,7 +260,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Talon/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Talon throws a fan of daggers in a cone in the target direction that deals physical damage to enemies hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Talon throws a fan of daggers in a cone in the target direction that deals physical damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -287,26 +274,14 @@
                       90
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -329,26 +304,14 @@
                       180
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      90,
-                      90,
-                      90,
-                      90,
                       90
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -366,26 +329,14 @@
                       270
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      130,
-                      130,
-                      130,
-                      130,
                       130
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -403,10 +354,6 @@
                       60
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -419,7 +366,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -430,7 +390,9 @@
                 7.5,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -438,8 +400,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -466,7 +428,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Talon/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Talon dashes up to 800 units over the target area of terrain, during which he gains unobstructed vision.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Talon dashes up to 800 units over the target area of terrain, during which he gains unobstructed vision.</p></div>",
             "leveling": []
           },
           {
@@ -483,13 +445,11 @@
           "modifiers": [
             {
               "values": [
-                2,
-                2,
-                2,
-                2,
                 2
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -525,7 +485,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Talon/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Talon disperses a ring of blades around him that deals physical damage to enemies hit and lingers at maximum range for up to 2.5 seconds, during which he gains invisibility and bonus movement speed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Talon disperses a ring of blades around him that deals physical damage to enemies hit and lingers at maximum range for up to 2.5 seconds, during which he gains invisibility and bonus movement speed.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -537,20 +497,14 @@
                       180
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -566,8 +520,6 @@
                       70
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -580,7 +532,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Talon breaks stealth and converges the blades to him, dealing the same physical damage to enemies hit. Breaking stealth with a basic attack or Noxian Diplomacy will converge the blades to the target instead.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Talon breaks stealth and converges the blades to him, dealing the same physical damage to enemies hit. Breaking stealth with a basic attack or Noxian Diplomacy will converge the blades to the target instead.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Physical Damage",
@@ -592,20 +544,14 @@
                       360
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      200,
-                      200,
                       200
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -614,7 +560,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -623,7 +578,9 @@
                 80,
                 60
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -631,8 +588,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -654,5 +611,6 @@
       }
     ]
   },
+  "lore": "Talon is the knife in the darkness, a merciless killer able to strike without warning and escape before any alarm is raised. He carved out a dangerous reputation on the brutal streets of Noxus, where he was forced to fight, kill, and steal to survive. Adopted by the notorious Du Couteau family, he now plies his deadly trade at the empire's command, assassinating enemy leaders, captains, and heroes… as well as any Noxian foolish enough to earn the scorn of their masters.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/talon/skins/base/images/talon_splash_centered_0.jpg"
 }

@@ -19,6 +19,7 @@ export const championRoles = [
 ]
 
 export const championPositions = [
+  null,
   "Bottom",
   "Jungle",
   "Middle",

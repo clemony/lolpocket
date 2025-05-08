@@ -96,7 +96,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Zed's basic attacks against targets below 50% maximum health are empowered to deal 6 / 8 / 10% (based on level) of the target's maximum health as bonus magic damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Zed's basic attacks against targets below 50% maximum health are empowered to deal 6 / 8 / 10% (based on level) of the target's maximum health as bonus magic damage.</p></div>",
             "leveling": []
           },
           {
@@ -117,7 +117,7 @@
         "affects": "Enemies",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "proc",
         "projectile": null,
         "onHitEffects": null,
@@ -144,7 +144,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Zed throws a shuriken in the target direction that deals physical damage to enemies hit, reduced to 60% against targets beyond the first.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zed throws a shuriken in the target direction that deals physical damage to enemies hit, reduced to 60% against targets beyond the first.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -158,26 +158,14 @@
                       240
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -195,26 +183,14 @@
                       144
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -223,18 +199,29 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              75,
+              70,
+              65,
+              60,
+              55
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                6,
-                6,
-                6,
-                6,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -242,8 +229,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
-        "resource": "ENERGY",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Energy",
+        "damageType": "Physical damage",
         "spellEffects": "Area of effect",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -270,7 +257,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Zed restores energy whenever he and his Shadows or multiple Shadows hit an ability on the same target. This may only occur once per cast ability.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Zed restores energy whenever he and his Shadows or multiple Shadows hit an ability on the same target. This may only occur once per cast ability.</p></div>",
             "leveling": [
               {
                 "attribute": "Energy Restored",
@@ -284,10 +271,6 @@
                       50
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -296,11 +279,11 @@
             ]
           },
           {
-            "description": "Active: Zed creates a Shadow that dashes to the target location and remains there for 5.25 seconds, being able to mimic Razor Shuriken and Shadow Slash regardless of range. Living Shadow can be recast while within range of the Shadow.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zed creates a Shadow that dashes to the target location and remains there for 5.25 seconds, being able to mimic Razor Shuriken and Shadow Slash regardless of range. Living Shadow can be recast while within range of the Shadow.</p></div>",
             "leveling": []
           },
           {
-            "description": "Recast: Zed and the Shadow blink to swap places. If Living Shadow was recast while the Shadow is dashing, the recast will instead occur once it has been placed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Zed and the Shadow blink to swap places. If Living Shadow was recast while the Shadow is dashing, the recast will instead occur once it has been placed.</p></div>",
             "leveling": []
           },
           {
@@ -308,7 +291,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40,
+              35,
+              30,
+              25,
+              20
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -319,7 +315,9 @@
                 17,
                 16
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -327,7 +325,7 @@
         "targeting": "Location / Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "ENERGY",
+        "resource": "Energy",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -355,7 +353,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Zed slashes to deal physical damage to nearby enemies.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zed slashes to deal physical damage to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -369,26 +367,14 @@
                       170
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      80,
-                      80,
-                      80,
-                      80,
                       80
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -411,10 +397,6 @@
                       40
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -432,10 +414,6 @@
                       60
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -448,7 +426,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -459,7 +446,9 @@
                 3.5,
                 3
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -467,8 +456,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "special",
-        "resource": "ENERGY",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Energy",
+        "damageType": "Physical damage",
         "spellEffects": "aoe",
         "projectile": null,
         "onHitEffects": null,
@@ -495,7 +484,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Zed becomes untargetable and, after a 0.6-second delay, he dashes to 125 units beyond the target enemy champion from his position at the end of the delay over 0.35 seconds. Afterwards, he becomes targetable again, renders the target Marked for Death for 3 seconds, and gains ghosting for the same duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zed becomes untargetable and, after a 0.6-second delay, he dashes to 125 units beyond the target enemy champion from his position at the end of the delay over 0.35 seconds. Afterwards, he becomes targetable again, renders the target Marked for Death for 3 seconds, and gains ghosting for the same duration.</p></div>",
             "leveling": []
           },
           {
@@ -503,20 +492,16 @@
             "leveling": []
           },
           {
-            "description": "Marked for Death: Zed stores a portion of all pre-mitigation physical damage and magic damage he and his Shadows deal to the target, detonating at the end of the duration to deal physical damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Marked for Death:</p><p> Zed stores a portion of all pre-mitigation physical damage and magic damage he and his Shadows deal to the target, detonating at the end of the duration to deal physical damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
                 "modifiers": [
                   {
                     "values": [
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
@@ -527,8 +512,6 @@
                       55
                     ],
                     "units": [
-                      "% of damage stored",
-                      "% of damage stored",
                       "% of damage stored"
                     ]
                   }
@@ -537,7 +520,7 @@
             ]
           },
           {
-            "description": "Recast: Zed and the Shadow blink to swap places.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Zed and the Shadow blink to swap places.</p></div>",
             "leveling": []
           },
           {
@@ -554,7 +537,9 @@
                 110,
                 100
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -563,7 +548,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "Special",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "Single target",
         "projectile": null,
         "onHitEffects": null,
@@ -585,5 +570,6 @@
       }
     ]
   },
+  "lore": "Utterly ruthless and without mercy, Zed is the leader of the Order of Shadow, an organization he created with the intent of militarizing Ionia's magical and martial traditions to drive out Noxian invaders. During the war, desperation led him to unlock the secret shadow form—a malevolent spirit magic as dangerous and corrupting as it is powerful. Zed has mastered all of these forbidden techniques to destroy anything he sees as a threat to his nation, or his new order.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zed/skins/base/images/zed_splash_centered_0.jpg"
 }

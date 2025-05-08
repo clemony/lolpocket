@@ -96,7 +96,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/p",
         "effects": [
           {
-            "description": "Innate - Weakened Soul: Senna's basic attacks on-hit and ability hits against enemy champions apply a stack of Mist for 4 seconds, modified to 0.75 seconds if Senna starts winding up a basic attack on them, and limited to once per target per cast. Subsequent hits will collect Mist and deal bonus physical damage equal to 1% : 10% (based on level) of target's current health, rendering the target immune to further Mist infliction for a few seconds. This damage applies life steal at 100% effectiveness.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Weakened Soul:</p><p> Senna's basic attacks on-hit and ability hits against enemy champions apply a stack of Mist for 4 seconds, modified to 0.75 seconds if Senna starts winding up a basic attack on them, and limited to once per target per cast. Subsequent hits will collect Mist and deal bonus physical damage equal to 1% - 10% (based on level) of target's current health, rendering the target immune to further Mist infliction for a few seconds. This damage applies life steal at 100% effectiveness.</p></div>",
             "leveling": []
           },
           {
@@ -104,11 +104,11 @@
             "leveling": []
           },
           {
-            "description": "Mist: For each stack of Mist, Senna gains 0.75 bonus attack damage. For every 20 stacks, she also gains 20 bonus attack range and 8% critical strike chance. Additionally, every 1% critical strike chance in excess of 100% is converted into 0.35% life steal.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Mist:</p><p> For each stack of Mist, Senna gains 0.75 bonus attack damage. For every 20 stacks, she also gains 20 bonus attack range and 8% critical strike chance. Additionally, every 1% critical strike chance in excess of 100% is converted into 0.35% life steal.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate - Relic Cannon: Senna's basic attacks on-hit deal 20% AD bonus physical damage and grant her 10 / 15 / 20% (based on level) of the target's movement speed as bonus movement speed for 0.5 seconds. This damage applies life steal at 100% effectiveness.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Relic Cannon:</p><p> Senna's basic attacks on-hit deal 20% AD bonus physical damage and grant her 10 / 15 / 20% (based on level) of the target's movement speed as bonus movement speed for 0.5 seconds. This damage applies life steal at 100% effectiveness.</p></div>",
             "leveling": []
           }
         ],
@@ -148,7 +148,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Senna fires a spectral laser in the direction of the target unit, healing herself and allied champions hit, and dealing physical damage to enemies hit in a thinner line. Enemies hit are slowed by 15% (+ 15% per 100 bonus AD) (+ 10% per 100 AP) for a duration. The damage dealt to enemy champions applies life steal at 100% effectiveness.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Senna fires a spectral laser in the direction of the target unit, healing herself and allied champions hit, and dealing physical damage to enemies hit in a thinner line. Enemies hit are slowed by 15% (+ 15% per 100 bonus AD) (+ 10% per 100 AP) for a duration. The damage dealt to enemy champions applies life steal at 100% effectiveness.</p></div>",
             "leveling": [
               {
                 "attribute": "Healing",
@@ -162,42 +162,22 @@
                       100
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -215,26 +195,14 @@
                       150
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -252,10 +220,6 @@
                       2
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -272,18 +236,29 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70,
+              80,
+              90,
+              100,
+              110
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                15,
-                15,
-                15,
-                15,
                 15
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -291,8 +266,8 @@
         "targeting": "Unit",
         "affects": "Allies, Enemies, Turrets, Wards",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "AoE",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -319,7 +294,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Senna throws a globule of Black Mist in the target direction that deals physical damage to the first enemy hit and attaches to them for 1 second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Senna throws a globule of Black Mist in the target direction that deals physical damage to the first enemy hit and attaches to them for 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -333,26 +308,14 @@
                       250
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -375,10 +338,6 @@
                       2.25
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -387,18 +346,29 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                11,
-                11,
-                11,
-                11,
                 11
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -406,8 +376,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -434,7 +404,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Senna surrounds herself with an aura of mist and gains camouflage for a duration. If Senna breaks the camouflage, she regains it after 1.75 seconds without performing actions that break stealth.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Senna surrounds herself with an aura of mist and gains camouflage for a duration. If Senna breaks the camouflage, she regains it after 1.75 seconds without performing actions that break stealth.</p></div>",
             "leveling": [
               {
                 "attribute": "Effect Duration",
@@ -448,10 +418,6 @@
                       8
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -464,7 +430,7 @@
             "leveling": []
           },
           {
-            "description": "Wraith Form: Gain camouflage. Enemies will have obscured vision of camouflaged Wraiths moving outside of the mist. Wraith Form can be regained if lost by breaking the camouflage after 1.75 seconds without performing actions that break stealth. Wraith Form ends immediately upon Senna's death.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Wraith Form:</p><p> Gain camouflage. Enemies will have obscured vision of camouflaged Wraiths moving outside of the mist. Wraith Form can be regained if lost by breaking the camouflage after 1.75 seconds without performing actions that break stealth. Wraith Form ends immediately upon Senna's death.</p></div>",
             "leveling": []
           },
           {
@@ -472,7 +438,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -483,7 +458,9 @@
                 21.5,
                 20
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -491,7 +468,7 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -519,7 +496,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Senna fires two waves of spectral light in the target direction, granting sight of the area briefly along the path. The center wave deals physical damage to enemy champions hit and reveals them for 3 seconds, as well as hits all Mist Wraiths.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Senna fires two waves of spectral light in the target direction, granting sight of the area briefly along the path. The center wave deals physical damage to enemy champions hit and reveals them for 3 seconds, as well as hits all Mist Wraiths.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -531,32 +508,22 @@
                       550
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      115,
-                      115,
                       115
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -577,32 +544,22 @@
                       200
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      1.5,
-                      1.5,
                       1.5
                     ],
                     "units": [
-                      " per Mist collected",
-                      " per Mist collected",
                       " per Mist collected"
                     ]
                   }
@@ -611,7 +568,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -620,7 +586,9 @@
                 120,
                 100
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -628,8 +596,8 @@
         "targeting": "Direction",
         "affects": "Allies / Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "aoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -651,5 +619,6 @@
       }
     ]
   },
+  "lore": "Cursed from childhood to be haunted by the supernatural Black Mist, Senna joined a sacred order known as the Sentinels of Light, and fiercely fought back—only to be killed, her soul imprisoned in a lantern by the cruel specter Thresh. But refusing to lose hope, within the lantern Senna learned to use the Mist, and reemerged to new life, forever changed. Now wielding darkness along with light, Senna seeks to end the Black Mist by turning it against itself—with every blast of her relic weapon, redeeming the souls lost within.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/base/images/senna_splash_centered_0.jpg"
 }

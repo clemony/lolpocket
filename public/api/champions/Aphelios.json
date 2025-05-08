@@ -94,7 +94,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Aphelios has access to an arsenal of 5 Moonstone Weapons, created by his sister Alune. He equips two weapons at any one time, one as his main weapon and one as his off-hand. Each weapon has a unique basic attack and effect.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Aphelios has access to an arsenal of 5 Moonstone Weapons, created by his sister Alune. He equips two weapons at any one time, one as his main weapon and one as his off-hand. Each weapon has a unique basic attack and effect.</p></div>",
             "leveling": []
           },
           {
@@ -102,11 +102,11 @@
             "leveling": []
           },
           {
-            "description": "Innate - Moonlight: Weapons granted to Aphelios have 50 Moonlight for ammunition, which is consumed upon basic attacking on-attack and upon casting his primary abilities. Any of his abilities that automatically cause him to attack during their effect will not consume additional Moonlight. Once his main weapon's Moonlight is exhausted, it is moved to the end of the reserve queue; Alune then assembles his next available weapon from the reserve over 1 second, placing its primary ability on a 1.5-second cooldown from the start of the assembly. Aphelios cannot cast Phase during the assembly.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Moonlight:</p><p> Weapons granted to Aphelios have 50 Moonlight for ammunition, which is consumed upon basic attacking on-attack and upon casting his primary abilities. Any of his abilities that automatically cause him to attack during their effect will not consume additional Moonlight. Once his main weapon's Moonlight is exhausted, it is moved to the end of the reserve queue; Alune then assembles his next available weapon from the reserve over 1 second, placing its primary ability on a 1.5-second cooldown from the start of the assembly. Aphelios cannot cast Phase during the assembly.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate - Weapon Master: Aphelios cannot improve his abilities via skill points. He starts the game with Phase and automatically gains access to his primary abilities at level 2 and his ultimate ability, Moonlight Vigil, at level 6. Moonlight Vigil improves automatically at levels 11 and 16. Aphelios may spend his skill points to gain bonus attack damage, bonus attack speed or lethality instead.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Weapon Master:</p><p> Aphelios cannot improve his abilities via skill points. He starts the game with Phase and automatically gains access to his primary abilities at level 2 and his ultimate ability, Moonlight Vigil, at level 6. Moonlight Vigil improves automatically at levels 11 and 16. Aphelios may spend his skill points to gain bonus attack damage, bonus attack speed or lethality instead.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Damage",
@@ -121,11 +121,6 @@
                       30
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -144,11 +139,6 @@
                       54
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -167,11 +157,6 @@
                       33
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -222,7 +207,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              1
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [],
           "affectedByCdr": false
@@ -230,8 +224,8 @@
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": null,
-        "resource": "OTHER",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Other",
+        "damageType": "Physical damage",
         "spellEffects": "attack",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -256,15 +250,24 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/p",
         "effects": [
           {
-            "description": "Basic attacks with Severum are non-projectile and have an uncancellable windup. Severum's attacks heal Aphelios for 2% : 7.1% (based on level) of the post-mitigation damage dealt, increased to 5% : 17.75% (based on level) for attacks from abilities.",
+            "description": "Basic attacks with Severum are non-projectile and have an uncancellable windup. Severum's attacks heal Aphelios for 2% - 7.1% (based on level) of the post-mitigation damage dealt, increased to 5% - 17.75% (based on level) for attacks from abilities.",
             "leveling": []
           },
           {
-            "description": "Healing from Severum in excess of Aphelios' maximum health is converted into a shield for an amount of up to 10 : 140 (based on level) (+ 6% maximum health), lingering for up to 30 seconds.",
+            "description": "Healing from Severum in excess of Aphelios' maximum health is converted into a shield for an amount of up to 10 - 140 (based on level) (+ 6% maximum health), lingering for up to 30 seconds.",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              1
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [],
           "affectedByCdr": false
@@ -272,8 +275,8 @@
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "OTHER",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Other",
+        "damageType": "Physical damage",
         "spellEffects": "attack",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -302,7 +305,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              1
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [],
           "affectedByCdr": false
@@ -310,8 +322,8 @@
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "False",
-        "resource": "OTHER",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Other",
+        "damageType": "Physical damage",
         "spellEffects": "attack",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -344,7 +356,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              1
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [],
           "affectedByCdr": false
@@ -352,8 +373,8 @@
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "False",
-        "resource": "OTHER",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Other",
+        "damageType": "Physical damage",
         "spellEffects": "default",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -386,11 +407,20 @@
             "leveling": []
           },
           {
-            "description": "Basic attacks with Crescendum are empowered to deal 0% : 138.5% (based on number of Chakrams) AD bonus physical damage and have a 10.67% wind up percentage, decreased to 6.67% when critically striking. The bonus damage from Chakrams is affected by critical strike modifiers.",
+            "description": "Basic attacks with Crescendum are empowered to deal 0% - 138.5% (based on number of Chakrams) AD bonus physical damage and have a 10.67% wind up percentage, decreased to 6.67% when critically striking. The bonus damage from Chakrams is affected by critical strike modifiers.",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              1
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [],
           "affectedByCdr": false
@@ -398,8 +428,8 @@
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": null,
-        "resource": "OTHER",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Other",
+        "damageType": "Physical damage",
         "spellEffects": "attack",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -468,11 +498,28 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Aphelios fires a bolt of energy in the target direction that deals 60 : 160 (based on level) (+ 42% : 60% (based on level) bonus AD) (+ 100% AP) physical damage to the first enemy hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Aphelios fires a bolt of energy in the target direction that deals 60 - 160 (based on level) (+ 42% - 60% (based on level) bonus AD) (+ 100% AP) physical damage to the first enemy hit.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              10
+            ],
+            "units": [
+              " Moonlight"
+            ]
+          },
+          {
+            "values": [
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -496,7 +543,9 @@
                 8.117647058823529,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -504,8 +553,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -530,11 +579,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Aphelios enters an onslaught for 1.75 seconds, gaining 20% (+ 10% per 100 AP) bonus movement speed and automatically performing up to 6 (+ 2 per 100% bonus attack speed) attacks over the duration against the nearest visible enemy, prioritizing enemy champions.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Aphelios enters an onslaught for 1.75 seconds, gaining 20% (+ 10% per 100 AP) bonus movement speed and automatically performing up to 6 (+ 2 per 100% bonus attack speed) attacks over the duration against the nearest visible enemy, prioritizing enemy champions.</p></div>",
             "leveling": []
           },
           {
-            "description": "Attacks alternate between Severum and his current off-hand weapon, each dealing 10 : 40 (based on level) (+ 22% : 40% (based on level) bonus AD) physical damage, affected by critical strike modifiers, and applying on-hit effects, with on-hit damage reduced to 25% effectiveness.",
+            "description": "Attacks alternate between Severum and his current off-hand weapon, each dealing 10 - 40 (based on level) (+ 22% - 40% (based on level) bonus AD) physical damage, affected by critical strike modifiers, and applying on-hit effects, with on-hit damage reduced to 25% effectiveness.",
             "leveling": []
           },
           {
@@ -542,7 +591,24 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              10
+            ],
+            "units": [
+              " Moonlight"
+            ]
+          },
+          {
+            "values": [
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -566,7 +632,9 @@
                 8.117647058823529,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -574,8 +642,8 @@
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": null,
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "attack",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -600,7 +668,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/q",
         "effects": [
           {
-            "description": "Gravitum - Active: Aphelios expunges all enemies with Gravitum's slow debuff, dealing 50 : 140 (based on level) (+ 32% : 50% (based on level) bonus AD) (+ 70% AP) magic damage and rooting them for 1 second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Gravitum - Active:</p><p> Aphelios expunges all enemies with Gravitum's slow debuff, dealing 50 - 140 (based on level) (+ 32% - 50% (based on level) bonus AD) (+ 70% AP) magic damage and rooting them for 1 second.</p></div>",
             "leveling": []
           },
           {
@@ -608,7 +676,24 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              10
+            ],
+            "units": [
+              " Moonlight"
+            ]
+          },
+          {
+            "values": [
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -632,7 +717,9 @@
                 10.117647058823529,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -640,8 +727,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -666,11 +753,28 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Aphelios unleashes a wave of energy in a cone in the target direction, dealing 25 : 65 (based on level) (+ 56% : 80% (based on level) bonus AD) (+ 70% AP) physical damage to all enemies hit and locking onto each of them. After 0.25 seconds, Aphelios then fires a volley of attacks at each locked-on target from his current off-hand weapon, dealing 100% AD physical damage and applying on-hit effects. The damage is affected by critical strike modifiers. There is no range limit for locked-on targets.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Aphelios unleashes a wave of energy in a cone in the target direction, dealing 25 - 65 (based on level) (+ 56% - 80% (based on level) bonus AD) (+ 70% AP) physical damage to all enemies hit and locking onto each of them. After 0.25 seconds, Aphelios then fires a volley of attacks at each locked-on target from his current off-hand weapon, dealing 100% AD physical damage and applying on-hit effects. The damage is affected by critical strike modifiers. There is no range limit for locked-on targets.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              10
+            ],
+            "units": [
+              " Moonlight"
+            ]
+          },
+          {
+            "values": [
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -694,7 +798,9 @@
                 6.1764705882352935,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -702,8 +808,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -728,11 +834,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Aphelios deploys a lunar sentry at the target location that arms after 0.35 seconds, lasting for up to 20 seconds, during which it is inactive and untargetable. The sentry activates if an enemy is within range of it, reducing its duration to 4 seconds and becoming targetable. Sentries have 6 health and take 3 damage per ranged basic attack and 4 damage per hit by abilities. Turret attacks destroy sentries instantly.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Aphelios deploys a lunar sentry at the target location that arms after 0.35 seconds, lasting for up to 20 seconds, during which it is inactive and untargetable. The sentry activates if an enemy is within range of it, reducing its duration to 4 seconds and becoming targetable. Sentries have 6 health and take 3 damage per ranged basic attack and 4 damage per hit by abilities. Turret attacks destroy sentries instantly.</p></div>",
             "leveling": []
           },
           {
-            "description": "The sentry grants sight of its surroundings and autonomously attacks the nearest visible enemy in range with a replica of Aphelios' current off-hand weapon, dealing 35 : 125 (based on level) (+ 42% : 60% (based on level) bonus AD) (+ 50% AP) physical damage per hit. The sentry can critically strike for (175% + 40%) damage and benefits from both Aphelios' attack speed and critical strike chance at 100% effectiveness.",
+            "description": "The sentry grants sight of its surroundings and autonomously attacks the nearest visible enemy in range with a replica of Aphelios' current off-hand weapon, dealing 35 - 125 (based on level) (+ 42% - 60% (based on level) bonus AD) (+ 50% AP) physical damage per hit. The sentry can critically strike for (175% + 40%) damage and benefits from both Aphelios' attack speed and critical strike chance at 100% effectiveness.",
             "leveling": []
           },
           {
@@ -740,7 +846,24 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              10
+            ],
+            "units": [
+              " Moonlight"
+            ]
+          },
+          {
+            "values": [
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -764,7 +887,9 @@
                 6.1764705882352935,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -772,8 +897,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": null,
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spell",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -800,7 +925,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Aphelios switches between his main weapon and off-hand weapon over 0.25 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Aphelios switches between his main weapon and off-hand weapon over 0.25 seconds.</p></div>",
             "leveling": []
           }
         ],
@@ -809,13 +934,11 @@
           "modifiers": [
             {
               "values": [
-                0.8,
-                0.8,
-                0.8,
-                0.8,
                 0.8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -855,7 +978,7 @@
             "leveling": []
           },
           {
-            "description": "Active: Aphelios receives a text prompt of the weapon Alune will create next.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Aphelios receives a text prompt of the weapon Alune will create next.</p></div>",
             "leveling": []
           }
         ],
@@ -895,15 +1018,24 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Aphelios casts forth a lunar spotlight in the target direction that briefly grants sight of the area along its path and stops upon illuminating an enemy champion. Alune smites the area centered on the illuminated target, dealing 125 / 175 / 225 (based on level) (+ 20% bonus AD) (+ 100% AP) physical damage to enemy champions struck and locking-on to each target hit, as well as granting sight of the area for 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Aphelios casts forth a lunar spotlight in the target direction that briefly grants sight of the area along its path and stops upon illuminating an enemy champion. Alune smites the area centered on the illuminated target, dealing 125 / 175 / 225 (based on level) (+ 20% bonus AD) (+ 100% AP) physical damage to enemy champions struck and locking-on to each target hit, as well as granting sight of the area for 2 seconds.</p></div>",
             "leveling": []
           },
           {
-            "description": "After 0.3 seconds of the illumination, attacks based on Aphelios' current main weapon will launch from the sky against each locked-on target, dealing 100% AD physical damage and applying on-hit effects. These attacks can critically strike for (120% + 40%) damage. There is no range limit for locked-on targets.\n Calibrum: Applies an empowered mark that deals 50 / 80 / 110 (based on level) bonus physical damage per mark consumed.\n Severum: Heals Aphelios for 250 / 350 / 450 (based on level) if at least one enemy champion is hit.\n Gravitum: Increases the initial slow to 99% and empowers Binding Eclipse to root targets affected by the enhanced slow for 1.35 seconds.\n Infernum: The initial blast deals 50 / 100 / 150 (based on level) (+ 25% bonus AD) bonus physical damage.[ The attack instead deals 110% AD physical damage against locked-on targets, and causes an explosion of bolts in a 400-radius circle that deals 74.25 / 99% (based on level) AD physical damage to targets hit. ][ Performs Infernum's attacks and Infernum's bolts in a 400-radius circle: primary targets are dealt Infernum's primary damage; secondary targets are dealt 90% of Infernum's regular bolt damage; both are modified by Moonlight Vigil's critical damage modifier. ]Enemy champions will take damage from overlapping areas.\n Crescendum: Generates 5 additional spectral Chakrams that return to Aphelios from the first enemy champion hit, for a total of 6, on top of those from other targets hit.",
+            "description": "After 0.3 seconds of the illumination, attacks based on Aphelios' current main weapon will launch from the sky against each locked-on target, dealing 100% AD physical damage and applying on-hit effects. These attacks can critically strike for (120% + 40%) damage. There is no range limit for locked-on targets.\n\n\n<div><p class=\"font-semibold  tracking-tight text-4\"> Calibrum:</p><p> Applies an empowered mark that deals 50 / 80 / 110 (based on level) bonus physical damage per mark consumed.</p></div>\n\n\n<div><p class=\"font-semibold  tracking-tight text-4\"> Severum:</p><p> Heals Aphelios for 250 / 350 / 450 (based on level) if at least one enemy champion is hit.</p></div>\n\n\n<div><p class=\"font-semibold  tracking-tight text-4\"> Gravitum:</p><p> Increases the initial slow to 99% and empowers Binding Eclipse to root targets affected by the enhanced slow for 1.35 seconds.</p></div>\n\n\n<div><p class=\"font-semibold  tracking-tight text-4\"> Infernum:</p><p> The initial blast deals 50 / 100 / 150 (based on level) (+ 25% bonus AD) bonus physical damage.[ The attack instead deals 110% AD physical damage against locked-on targets, and causes an explosion of bolts in a 400-radius circle that deals 74.25 / 99% (based on level) AD physical damage to targets hit. ][ Performs Infernum's attacks and Infernum's bolts in a 400-radius circle: primary targets are dealt Infernum's primary damage; secondary targets are dealt 90% of Infernum's regular bolt damage; both are modified by Moonlight Vigil's critical damage modifier. ]Enemy champions will take damage from overlapping areas.</p></div>\n\n\n<div><p class=\"font-semibold  tracking-tight text-4\"> Crescendum:</p><p> Generates 5 additional spectral Chakrams that return to Aphelios from the first enemy champion hit, for a total of 6, on top of those from other targets hit.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -913,8 +1045,6 @@
                 100
               ],
               "units": [
-                " (based on level)",
-                " (based on level)",
                 " (based on level)"
               ]
             }
@@ -924,8 +1054,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "aoe",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -947,5 +1077,6 @@
       }
     ]
   },
+  "lore": "Emerging from moonlight's shadow with weapons drawn, Aphelios kills the enemies of his faith in brooding silence—speaking only through the certainty of his aim, and the firing of each gun. Though fueled by a poison that renders him mute, he is guided by his sister Alune. From her distant temple sanctuary, she pushes an arsenal of moonstone weapons into his hands. For as long as the moon shines overhead, Aphelios will never be alone.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aphelios/skins/base/images/aphelios_splash_centered_0.jpg"
 }

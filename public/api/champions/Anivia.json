@@ -99,11 +99,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Periodically, upon taking fatal damage, Anivia enters resurrection for 6 seconds and restores all of her health.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Periodically, upon taking fatal damage, Anivia enters resurrection for 6 seconds and restores all of her health.</p></div>",
             "leveling": []
           },
           {
-            "description": "While under resurrection, Anivia is unable to act and gains -40 : 20 (based on level) bonus armor and bonus magic resistance.",
+            "description": "While under resurrection, Anivia is unable to act and gains -40 - 20 (based on level) bonus armor and bonus magic resistance.",
             "leveling": []
           },
           {
@@ -116,11 +116,11 @@
           "modifiers": [
             {
               "values": [
-                240,
-                240,
                 240
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -156,7 +156,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Anivia launches a chunk of ice in the target direction that deals magic damage to enemies hit and slows them by 20% : 40% (based on Glacial Storm's Rank) for 3 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Anivia launches a chunk of ice in the target direction that deals magic damage to enemies hit and slows them by 20% - 40% (based on Glacial Storm's Rank) for 3 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -170,26 +170,14 @@
                       130
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -202,7 +190,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Anivia shatters the ice, dealing magic damage to nearby enemies and stunning them for a duration, as well as refreshing the slow.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Anivia shatters the ice, dealing magic damage to nearby enemies and stunning them for a duration, as well as refreshing the slow.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -216,26 +204,14 @@
                       200
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      45,
-                      45,
-                      45,
-                      45,
                       45
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -253,26 +229,14 @@
                       330
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -290,10 +254,6 @@
                       1.5
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -302,7 +262,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              80,
+              85,
+              90,
+              95,
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -313,7 +286,9 @@
                 9,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -321,8 +296,8 @@
         "targeting": "Direction / Auto",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -349,7 +324,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Anivia summons a wall of ice at the target location perpendicular to her facing, knocking all units away from it, though not through terrain. The wall lingers as impassable terrain for 5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Anivia summons a wall of ice at the target location perpendicular to her facing, knocking all units away from it, though not through terrain. The wall lingers as impassable terrain for 5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Width",
@@ -363,10 +338,6 @@
                       1000
                     ],
                     "units": [
-                      " units",
-                      " units",
-                      " units",
-                      " units",
                       " units"
                     ]
                   }
@@ -384,10 +355,6 @@
                       8
                     ],
                     "units": [
-                      " chunks of ice",
-                      " chunks of ice",
-                      " chunks of ice",
-                      " chunks of ice",
                       " chunks of ice"
                     ]
                   }
@@ -405,10 +372,6 @@
                       800
                     ],
                     "units": [
-                      " units",
-                      " units",
-                      " units",
-                      " units",
                       " units"
                     ]
                   }
@@ -426,10 +389,6 @@
                       114.29
                     ],
                     "units": [
-                      " units",
-                      " units",
-                      " units",
-                      " units",
                       " units"
                     ]
                   }
@@ -438,18 +397,25 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                17,
-                17,
-                17,
-                17,
                 17
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -457,7 +423,7 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "false",
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": "False",
         "projectile": null,
@@ -485,11 +451,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/e",
         "effects": [
           {
-            "description": "Passive: Enemies hit by Flash Frost or a fully formed Glacial Storm become Chilled for 3 seconds, refreshing on subsequent hits.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Enemies hit by Flash Frost or a fully formed Glacial Storm become Chilled for 3 seconds, refreshing on subsequent hits.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Anivia blasts a freezing wind at the target enemy that deals magic damage, doubled if they were Chilled.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Anivia blasts a freezing wind at the target enemy that deals magic damage, doubled if they were Chilled.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -503,26 +469,14 @@
                       150
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      55,
-                      55,
-                      55,
-                      55,
                       55
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -540,26 +494,14 @@
                       300
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      110,
-                      110,
-                      110,
-                      110,
                       110
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -568,18 +510,25 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                4,
-                4,
-                4,
-                4,
                 4
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -587,8 +536,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -615,7 +564,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Anivia calls forth a driving rain of ice and hail at the target location, dealing magic damage every 0.5 seconds to enemies within and slowing them for 1 second, refreshing every 0.5 seconds while they remain inside.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Anivia calls forth a driving rain of ice and hail at the target location, dealing magic damage every 0.5 seconds to enemies within and slowing them for 1 second, refreshing every 0.5 seconds while they remain inside.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",
@@ -627,20 +576,14 @@
                       30
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      6.25,
-                      6.25,
                       6.25
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -656,8 +599,6 @@
                       40
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -678,20 +619,14 @@
                       90
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      18.75,
-                      18.75,
                       18.75
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -707,8 +642,6 @@
                       60
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -721,11 +654,20 @@
             "leveling": []
           },
           {
-            "description": "Recast: Anivia ends Glacial Storm, dealing one last tick of damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Anivia ends Glacial Storm, dealing one last tick of damage.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -734,7 +676,9 @@
                 3,
                 2
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -742,8 +686,8 @@
         "targeting": "Location / Auto",
         "affects": "Enemies",
         "spellshieldable": "False",
-        "resource": "OTHER",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Other",
+        "damageType": "Magic damage",
         "spellEffects": "aoedot",
         "projectile": null,
         "onHitEffects": null,
@@ -765,5 +709,6 @@
       }
     ]
   },
+  "lore": "Anivia is a benevolent winged spirit who endures endless cycles of life, death, and rebirth to protect the Freljord. A demigod born of unforgiving ice and bitter winds, she wields those elemental powers to thwart any who dare disturb her homeland. Anivia guides and protects the tribes of the harsh north, who revere her as a symbol of hope, and a portent of great change. She fights with every ounce of her being, knowing that through her sacrifice, her memory will endure, and she will be reborn into a new tomorrow.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/anivia/skins/base/images/anivia_splash_centered_0.jpg"
 }

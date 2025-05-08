@@ -95,11 +95,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Periodically, Gangplank empowers his next basic attack to set the target on fire, dealing them[ 50 : 250 (based on level) (+ 100% bonus AD) (+ 2 per 1% critical strike chance) bonus true damage over 2.5 seconds. ][ 5 : 25 (based on level) (+ 10% bonus AD) (+ 0.2 per 1% critical strike chance) bonus true damage every 0.25 seconds over 2.5 seconds. ] Turrets are dealt 50% damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Periodically, Gangplank empowers his next basic attack to set the target on fire, dealing them[ 50 - 250 (based on level) (+ 100% bonus AD) (+ 2 per 1% critical strike chance) bonus true damage over 2.5 seconds. ][ 5 - 25 (based on level) (+ 10% bonus AD) (+ 0.2 per 1% critical strike chance) bonus true damage every 0.25 seconds over 2.5 seconds. ] Turrets are dealt 50% damage.</p></div>",
             "leveling": []
           },
           {
-            "description": "If Gangplank successfully hits a target with Trial by Fire, he gains 15% : 30% (based on level) bonus movement speed for 2 seconds. Every time a Powder Keg explodes, the cooldown for Trial by Fire resets and Gangplank gains its bonus movement speed.",
+            "description": "If Gangplank successfully hits a target with Trial by Fire, he gains 15% - 30% (based on level) bonus movement speed for 2 seconds. Every time a Powder Keg explodes, the cooldown for Trial by Fire resets and Gangplank gains its bonus movement speed.",
             "leveling": []
           },
           {
@@ -112,11 +112,11 @@
           "modifiers": [
             {
               "values": [
-                15,
-                15,
                 15
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -125,7 +125,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "TRUE_DAMAGE",
+        "damageType": "True damage",
         "spellEffects": "default",
         "projectile": null,
         "onHitEffects": null,
@@ -152,7 +152,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Gangplank fires a shot at the target enemy that deals physical damage, applies on-hit effects as a ranged attack, and triggers on-attack effects. Parrrley can critically strike for (175% + 40%) damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Gangplank fires a shot at the target enemy that deals physical damage, applies on-hit effects as a ranged attack, and triggers on-attack effects. Parrrley can critically strike for (175% + 40%) damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -166,26 +166,14 @@
                       130
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -208,10 +196,6 @@
                       7
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -229,10 +213,6 @@
                       8
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -245,18 +225,29 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              55,
+              50,
+              45,
+              40,
+              35
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                4.5,
-                4.5,
-                4.5,
-                4.5,
                 4.5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -264,8 +255,8 @@
         "targeting": "Unit",
         "affects": "Enemies, Self",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -292,7 +283,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Gangplank consumes a large quantity of citrus fruit, cleansing himself from all crowd control and healing himself.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Gangplank consumes a large quantity of citrus fruit, cleansing himself from all crowd control and healing himself.</p></div>",
             "leveling": [
               {
                 "attribute": "Heal",
@@ -306,42 +297,22 @@
                       145
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      90,
-                      90,
-                      90,
-                      90,
                       90
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      13,
-                      13,
-                      13,
-                      13,
                       13
                     ],
                     "units": [
-                      "% missing health",
-                      "% missing health",
-                      "% missing health",
-                      "% missing health",
                       "% missing health"
                     ]
                   }
@@ -350,7 +321,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              70,
+              80,
+              90,
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -361,7 +345,9 @@
                 16,
                 14
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -369,7 +355,7 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": "Heal",
         "projectile": null,
@@ -397,7 +383,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Gangplank consumes a charge to place a powder keg at the target location that lasts for 25 seconds and will connect to other kegs with overlapping connection radius through a trail of black powder. The keg starts with 3 health and loses 1 every 2 / 1 / 0.5 (based on level) seconds until it is left with 1 health.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Gangplank consumes a charge to place a powder keg at the target location that lasts for 25 seconds and will connect to other kegs with overlapping connection radius through a trail of black powder. The keg starts with 3 health and loses 1 every 2 / 1 / 0.5 (based on level) seconds until it is left with 1 health.</p></div>",
             "leveling": []
           },
           {
@@ -415,10 +401,6 @@
                       5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -445,10 +427,6 @@
                       80
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -466,10 +444,6 @@
                       195
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -482,18 +456,25 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              1
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                0.5,
-                0.5,
-                0.5,
-                0.5,
                 0.5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -501,8 +482,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "CHARGE",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Charge",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -535,7 +516,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Gangplank shoots a flare into the air, signaling his ship off-shore to fire upon the target location for 8 seconds, calling down 12 waves of cannonballs in clusters of 3 every 2 seconds, and granting sight of the area for the duration. Each wave deals magic damage to all enemies within the area and slows them by 30% for 0.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Gangplank shoots a flare into the air, signaling his ship off-shore to fire upon the target location for 8 seconds, calling down 12 waves of cannonballs in clusters of 3 every 2 seconds, and granting sight of the area for the duration. Each wave deals magic damage to all enemies within the area and slows them by 30% for 0.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Wave",
@@ -547,20 +528,14 @@
                       100
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      10,
-                      10,
                       10
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -576,20 +551,14 @@
                       300
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -605,20 +574,14 @@
                       1200
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      120,
-                      120,
                       120
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -627,11 +590,11 @@
             ]
           },
           {
-            "description": "Gangplank can purchase upgrades for his ship in the store at the cost of 500 Silver Serpents each, which improve Cannon Barrage:",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Gangplank can purchase upgrades for his ship in the store at the cost of 500 Silver Serpents each, which improve Cannon Barrage:</p><p></p></div>",
             "leveling": []
           },
           {
-            "description": "Death's Daughter: A large cannonball lands in the center of the barrage after the first cluster of waves occur, dealing a cluster's worth of true damage to enemies within the impact and slowing them by 75% for 1 second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Death's Daughter:</p><p> A large cannonball lands in the center of the barrage after the first cluster of waves occur, dealing a cluster's worth of true damage to enemies within the impact and slowing them by 75% for 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "True Damage with Death's Daughter",
@@ -643,20 +606,14 @@
                       300
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -672,20 +629,14 @@
                       1500
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      150,
-                      150,
                       150
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -694,7 +645,7 @@
             ]
           },
           {
-            "description": "Fire at Will: Cannon Barrage fires[ 6 additional waves ][ 2 additional clusters ] over its duration; 18 waves of cannonballs are called down in clusters of 3 every 1.33 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Fire at Will:</p><p> Cannon Barrage fires[ 6 additional waves ][ 2 additional clusters ] over its duration; 18 waves of cannonballs are called down in clusters of 3 every 1.33 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Magic Damage with Fire at Will",
@@ -706,20 +657,14 @@
                       1800
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      180,
-                      180,
                       180
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -735,20 +680,14 @@
                       2100
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      210,
-                      210,
                       210
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -757,11 +696,20 @@
             ]
           },
           {
-            "description": "Raise Morale: Cannon Barrage grants Gangplank and all allies within the area 40% bonus movement speed, lingering for 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Raise Morale:</p><p> Cannon Barrage grants Gangplank and all allies within the area 40% bonus movement speed, lingering for 2 seconds.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -770,7 +718,9 @@
                 150,
                 130
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -778,8 +728,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "area",
         "projectile": null,
         "onHitEffects": null,
@@ -801,5 +751,6 @@
       }
     ]
   },
+  "lore": "As unpredictable as he is brutal, the dethroned reaver king Gangplank is feared far and wide. Once, he ruled the port city of Bilgewater, and while his reign is over, there are those who believe this has only made him more dangerous. Gangplank would see Bilgewater bathed in blood once more before letting someone else take it—and now with pistol, cutlass, and barrels of gunpowder, he is determined to reclaim what he has lost.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gangplank/skins/base/images/gangplank_splash_centered_0.jpg"
 }

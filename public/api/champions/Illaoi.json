@@ -96,11 +96,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Illaoi/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Periodically, Illaoi spawns a Tentacle on the nearest terrain perpendicular to her location, if no other Tentacles are already nearby it. Tentacles fully spawn after a 2 second delay and are untargetable in the meantime.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Periodically, Illaoi spawns a Tentacle on the nearest terrain perpendicular to her location, if no other Tentacles are already nearby it. Tentacles fully spawn after a 2 second delay and are untargetable in the meantime.</p></div>",
             "leveling": []
           },
           {
-            "description": "Tentacles are commanded to attack by Illaoi's abilities, dealing 9 : 162 (based on level) (+ 100% AD) (+ 40% AP) physical damage to all enemies struck, increased by 0% : 30% (based on Tentacle Smash's rank).Enemies struck by multiple slams within 0.5 seconds of another, take 50% damage for the second and 25% damage for all other additional slams.",
+            "description": "Tentacles are commanded to attack by Illaoi's abilities, dealing 9 - 162 (based on level) (+ 100% AD) (+ 40% AP) physical damage to all enemies struck, increased by 0% - 30% (based on Tentacle Smash's rank).Enemies struck by multiple slams within 0.5 seconds of another, take 50% damage for the second and 25% damage for all other additional slams.",
             "leveling": []
           },
           {
@@ -136,7 +136,9 @@
                 8,
                 7.25
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -145,7 +147,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "Area of effect",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -172,7 +174,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Illaoi/ability-icon/q",
         "effects": [
           {
-            "description": "Passive: Tentacle damage is increased.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Tentacle damage is increased.</p></div>",
             "leveling": [
               {
                 "attribute": "Damage Increase",
@@ -186,10 +188,6 @@
                       30
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -198,11 +196,24 @@
             ]
           },
           {
-            "description": "Active: Illaoi slams down a Tentacle in the target direction.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Illaoi slams down a Tentacle in the target direction.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40,
+              45,
+              50,
+              55,
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -213,7 +224,9 @@
                 7,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -221,8 +234,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Area of effect",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -249,7 +262,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Illaoi/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Illaoi's next basic attack within 6 seconds gains 225 bonus range and causes her to leap to the target's location if they're beyond her normal basic attack range.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Illaoi's next basic attack within 6 seconds gains 225 bonus range and causes her to leap to the target's location if they're beyond her normal basic attack range.</p></div>",
             "leveling": []
           },
           {
@@ -267,26 +280,14 @@
                       5
                     ],
                     "units": [
-                      "%  of target's maximum health",
-                      "%  of target's maximum health",
-                      "%  of target's maximum health",
-                      "%  of target's maximum health",
                       "%  of target's maximum health"
                     ]
                   },
                   {
                     "values": [
-                      4,
-                      4,
-                      4,
-                      4,
                       4
                     ],
                     "units": [
-                      "% per 100 AD",
-                      "% per 100 AD",
-                      "% per 100 AD",
-                      "% per 100 AD",
                       "% per 100 AD"
                     ]
                   }
@@ -304,10 +305,6 @@
                       60
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -324,18 +321,25 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              30
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                4,
-                4,
-                4,
-                4,
                 4
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -343,8 +347,8 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": "false",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -371,7 +375,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Illaoi/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Illaoi launches a tendril in the target direction that stops at the first enemy hit, pulling their Spirit out in front of Illaoi over 0.75 seconds if they're a champion. The target is tethered to the Spirit for 7 seconds, revealing them in addition to granting sight of the area around them while the tether remains.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Illaoi launches a tendril in the target direction that stops at the first enemy hit, pulling their Spirit out in front of Illaoi over 0.75 seconds if they're a champion. The target is tethered to the Spirit for 7 seconds, revealing them in addition to granting sight of the area around them while the tether remains.</p></div>",
             "leveling": []
           },
           {
@@ -389,26 +393,14 @@
                       45
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   },
                   {
                     "values": [
-                      8,
-                      8,
-                      8,
-                      8,
                       8
                     ],
                     "units": [
-                      "% per 100 AD",
-                      "% per 100 AD",
-                      "% per 100 AD",
-                      "% per 100 AD",
                       "% per 100 AD"
                     ]
                   }
@@ -429,7 +421,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              35,
+              40,
+              45,
+              50,
+              55
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -440,7 +445,9 @@
                 13,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -448,8 +455,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "MIXED_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Mixed damage",
         "spellEffects": null,
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -476,7 +483,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Illaoi/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Illaoi gains displacement immunity and leaps into the air for the cast time. She then slams her idol into the ground, dealing physical damage to nearby enemies. For each enemy champion hit, a Tentacle is summoned for 8 seconds (up to a maximum of 6 summons).",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Illaoi gains displacement immunity and leaps into the air for the cast time. She then slams her idol into the ground, dealing physical damage to nearby enemies. For each enemy champion hit, a Tentacle is summoned for 8 seconds (up to a maximum of 6 summons).</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -488,20 +495,14 @@
                       350
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -514,7 +515,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -523,7 +533,9 @@
                 95,
                 70
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -531,8 +543,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -554,5 +566,6 @@
       }
     ]
   },
+  "lore": "Illaoi's powerful physique is dwarfed only by her indomitable faith. As the prophet of the Great Kraken, she uses a huge, golden idol to rip her foes' spirits from their bodies and shatter their perception of reality. All who challenge the “Truth Bearer of Nagakabouros” soon discover Illaoi never battles alone—the god of the Serpent Isles fights by her side.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/illaoi/skins/base/images/illaoi_splash_centered_0.jpg"
 }

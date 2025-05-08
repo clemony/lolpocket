@@ -103,7 +103,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pantheon/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Pantheon generates a stack of Mortal Will whenever he lands a basic attack on-hit or casts an ability, stacking up to 5 times. At 5 stacks, Pantheon's next basic ability consumes the stacks to become empowered with an additional effect.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Pantheon generates a stack of Mortal Will whenever he lands a basic attack on-hit or casts an ability, stacking up to 5 times. At 5 stacks, Pantheon's next basic ability consumes the stacks to become empowered with an additional effect.</p></div>",
             "leveling": []
           },
           {
@@ -147,11 +147,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pantheon/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Pantheon charges while being slowed by 10% for up to 4 seconds to increase Comet Spear's range after 0.35 seconds of channeling. Comet Spear can be recast within the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Pantheon charges while being slowed by 10% for up to 4 seconds to increase Comet Spear's range after 0.35 seconds of channeling. Comet Spear can be recast within the duration.</p></div>",
             "leveling": []
           },
           {
-            "description": "Recast: Pantheon hurls his spear in the target direction that deals physical damage to enemies hit, increased against enemies below 20% of their maximum health but reduced by 50% against enemies beyond the first.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Pantheon hurls his spear in the target direction that deals physical damage to enemies hit, increased against enemies below 20% of their maximum health but reduced by 50% against enemies beyond the first.</p></div>",
             "leveling": [
               {
                 "attribute": "Hurl Physical Damage",
@@ -165,42 +165,22 @@
                       190
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      115,
-                      115,
-                      115,
-                      115,
                       115
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -218,42 +198,22 @@
                       455
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      230,
-                      230,
-                      230,
-                      230,
                       230
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -271,42 +231,22 @@
                       95
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      57.5,
-                      57.5,
-                      57.5,
-                      57.5,
                       57.5
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -324,42 +264,22 @@
                       227.5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      115,
-                      115,
-                      115,
-                      115,
                       115
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -382,26 +302,14 @@
                       190
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      115,
-                      115,
-                      115,
-                      115,
                       115
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -419,26 +327,14 @@
                       455
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      230,
-                      230,
-                      230,
-                      230,
                       230
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -455,7 +351,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              25
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -466,7 +371,9 @@
                 8.75,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -474,8 +381,8 @@
         "targeting": "Auto / Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -502,7 +409,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pantheon/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Pantheon leaps to the front of the target enemy's location. If the target is within 800 units upon arrival, he deals physical damage and stuns them for 1 second. Against minions and monsters, Shield Vault has a minimum damage of 60 and is capped at 200.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Pantheon leaps to the front of the target enemy's location. If the target is within 800 units upon arrival, he deals physical damage and stuns them for 1 second. Against minions and monsters, Shield Vault has a minimum damage of 60 and is capped at 200.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -516,42 +423,22 @@
                       8
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   },
                   {
                     "values": [
-                      1.5,
-                      1.5,
-                      1.5,
-                      1.5,
                       1.5
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   },
                   {
                     "values": [
-                      0.4,
-                      0.4,
-                      0.4,
-                      0.4,
                       0.4
                     ],
                     "units": [
-                      "% per 100 Pantheon's bonus health",
-                      "% per 100 Pantheon's bonus health",
-                      "% per 100 Pantheon's bonus health",
-                      "% per 100 Pantheon's bonus health",
                       "% per 100 Pantheon's bonus health"
                     ]
                   }
@@ -560,7 +447,7 @@
             ]
           },
           {
-            "description": "Mortal Will: Pantheon empowers his next basic attack within 4 seconds to have a cast time and strike the target 3 times over a brief period, dealing 40% : 55% (based on level) AD physical damage per hit, up to 120% : 165% (based on level) AD. Each hit is affected by critical strike modifiers and applies on-hit effects.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Mortal Will:</p><p> Pantheon empowers his next basic attack within 4 seconds to have a cast time and strike the target 3 times over a brief period, dealing 40% - 55% (based on level) AD physical damage per hit, up to 120% - 165% (based on level) AD. Each hit is affected by critical strike modifiers and applies on-hit effects.</p></div>",
             "leveling": []
           },
           {
@@ -568,7 +455,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              55
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -579,7 +475,9 @@
                 10,
                 9
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -587,8 +485,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "special",
         "projectile": null,
         "onHitEffects": null,
@@ -615,7 +513,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pantheon/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Pantheon braces his shield in the target direction and channels for 1.5 seconds, during which he becomes invulnerable to non- turret damage dealt by enemies from the target direction. He also continually performs strikes in a cone in front of him, dealing 8.3% AD physical damage every 0.125 seconds to enemies hit, reduced by 50% against minions and up to 100% AD total physical damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Pantheon braces his shield in the target direction and channels for 1.5 seconds, during which he becomes invulnerable to non- turret damage dealt by enemies from the target direction. He also continually performs strikes in a cone in front of him, dealing 8.3% AD physical damage every 0.125 seconds to enemies hit, reduced by 50% against minions and up to 100% AD total physical damage.</p></div>",
             "leveling": []
           },
           {
@@ -623,7 +521,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Pantheon slams with his shield in a cone in front of him, dealing physical damage to enemies hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Pantheon slams with his shield in a cone in front of him, dealing physical damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -637,26 +535,14 @@
                       255
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      150,
-                      150,
-                      150,
-                      150,
                       150
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -665,11 +551,20 @@
             ]
           },
           {
-            "description": "Mortal Will: After recasting, Pantheon gains 5 : 30 (based on level) (+ 2.5% bonus health) bonus armor and bonus magic resistance for 4 seconds as well as 60% bonus movement speed for 1.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Mortal Will:</p><p> After recasting, Pantheon gains 5 - 30 (based on level) (+ 2.5% bonus health) bonus armor and bonus magic resistance for 4 seconds as well as 60% bonus movement speed for 1.5 seconds.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -680,7 +575,9 @@
                 19,
                 18
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -688,8 +585,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "aoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -716,7 +613,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pantheon/ability-icon/r",
         "effects": [
           {
-            "description": "Passive: Pantheon gains armor penetration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Pantheon gains armor penetration.</p></div>",
             "leveling": [
               {
                 "attribute": "Armor Penetration",
@@ -728,8 +625,6 @@
                       30
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -738,11 +633,11 @@
             ]
           },
           {
-            "description": "Active: Pantheon channels for 2 seconds, then leaps high into the air, vanishing and becoming immune to crowd control until he reappears. While in the air, Pantheon channels again for 2.25 seconds and grants sight around the target location 0.5 seconds into the channel.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Pantheon channels for 2 seconds, then leaps high into the air, vanishing and becoming immune to crowd control until he reappears. While in the air, Pantheon channels again for 2.25 seconds and grants sight around the target location 0.5 seconds into the channel.</p></div>",
             "leveling": []
           },
           {
-            "description": "After 0.8 seconds into the channel, Pantheon prepares for landing by hurling his spear to the target location over 0.2 seconds that deals 40 : 190 (based on Comet Spear's rank) (+ 115% bonus AD) (+ 50% AP) physical damage to enemies near its landing point and slows them by 50% for 2 seconds.",
+            "description": "After 0.8 seconds into the channel, Pantheon prepares for landing by hurling his spear to the target location over 0.2 seconds that deals 40 - 190 (based on Comet Spear's rank) (+ 115% bonus AD) (+ 50% AP) physical damage to enemies near its landing point and slows them by 50% for 2 seconds.",
             "leveling": []
           },
           {
@@ -758,20 +653,14 @@
                       700
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -787,20 +676,14 @@
                       350
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -813,7 +696,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -822,7 +714,9 @@
                 165,
                 150
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -830,8 +724,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MIXED_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Mixed damage",
         "spellEffects": "spellaoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -853,5 +747,6 @@
       }
     ]
   },
+  "lore": "Once an unwilling host to the Aspect of War, Atreus survived when the celestial power within him was slain, refusing to succumb to a blow that tore stars from the heavens. In time, he learned to embrace the power of his own mortality, and the stubborn resilience that goes along with it. Atreus now opposes the divine as Pantheon reborn, his unbreakable will fueling the fallen Aspect's weapons on the field of battle.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pantheon/skins/base/images/pantheon_splash_centered_0.jpg"
 }

@@ -96,23 +96,23 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayle/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Kayle ascends through four forms that each grant additional bonuses. She ascends upon spending a skill point at levels 1, 6, 11, and 16.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Kayle ascends through four forms that each grant additional bonuses. She ascends upon spending a skill point at levels 1, 6, 11, and 16.</p></div>",
             "leveling": []
           },
           {
-            "description": "Level 1 - Zealous: Kayle's basic attacks on-attack generate a stack of Zeal for 5 seconds, refreshing on subsequent hits and stacking up to 5 times. For each stack, she gains 6% (+ 1% per 100 AP) bonus attack speed, up to a maximum of 30% (+ 5% per 100 AP). At max stacks, she becomes Exalted, gaining 10% bonus movement speed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Level 1 - Zealous:</p><p> Kayle's basic attacks on-attack generate a stack of Zeal for 5 seconds, refreshing on subsequent hits and stacking up to 5 times. For each stack, she gains 6% (+ 1% per 100 AP) bonus attack speed, up to a maximum of 30% (+ 5% per 100 AP). At max stacks, she becomes Exalted, gaining 10% bonus movement speed.</p></div>",
             "leveling": []
           },
           {
-            "description": "Level 6 - Arisen: Kayle becomes ranged and gains 350 bonus attack range for a total of 525.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Level 6 - Arisen:</p><p> Kayle becomes ranged and gains 350 bonus attack range for a total of 525.</p></div>",
             "leveling": []
           },
           {
-            "description": "Level 11 - Aflame: Kayle gains 10% bonus size. While Kayle is Exalted, her basic attacks on-attack also launch a wave of fire forward that deals 20 : 41 (based on level) (+ 10% bonus AD) (+ 25% AP) magic damage to all enemies it passes through. The wave is affected by critical strike modifiers.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Level 11 - Aflame:</p><p> Kayle gains 10% bonus size. While Kayle is Exalted, her basic attacks on-attack also launch a wave of fire forward that deals 20 - 41 (based on level) (+ 10% bonus AD) (+ 25% AP) magic damage to all enemies it passes through. The wave is affected by critical strike modifiers.</p></div>",
             "leveling": []
           },
           {
-            "description": "Level 16 - Transcendent: Kayle gains an additional 100 bonus attack range for a total of 625, and permanently gains the full effects of Zealous.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Level 16 - Transcendent:</p><p> Kayle gains an additional 100 bonus attack range for a total of 625, and permanently gains the full effects of Zealous.</p></div>",
             "leveling": []
           }
         ],
@@ -125,7 +125,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": null,
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "AoE",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -152,7 +152,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayle/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Kayle conjures a portal in front of her that faces the target direction, from which a celestial sword launches forward.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kayle conjures a portal in front of her that faces the target direction, from which a celestial sword launches forward.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -166,42 +166,22 @@
                       220
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -219,10 +199,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -235,7 +211,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70,
+              75,
+              80,
+              85,
+              90
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -246,7 +235,9 @@
                 9,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -254,8 +245,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -282,7 +273,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayle/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Kayle and the target allied champion are healed and gain bonus movement speed for 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kayle and the target allied champion are healed and gain bonus movement speed for 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Heal",
@@ -296,26 +287,14 @@
                       155
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -333,26 +312,14 @@
                       40
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   },
                   {
                     "values": [
-                      8,
-                      8,
-                      8,
-                      8,
                       8
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -365,18 +332,29 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70,
+              75,
+              80,
+              85,
+              90
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                15,
-                15,
-                15,
-                15,
                 15
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -384,7 +362,7 @@
         "targeting": "Unit / Auto",
         "affects": "Self, Allies",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -412,7 +390,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayle/ability-icon/e",
         "effects": [
           {
-            "description": "Passive: Kayle deals bonus magic damage on-hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Kayle deals bonus magic damage on-hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Passive Damage",
@@ -426,42 +404,22 @@
                       35
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      10,
-                      10,
-                      10,
-                      10,
                       10
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      20,
-                      20,
-                      20,
-                      20,
                       20
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -470,7 +428,7 @@
             ]
           },
           {
-            "description": "Active: Kayle kindles her blade, empowering her next basic attack within 6 seconds to have an uncancellable windup and deal additional bonus magic damage on-hit that is capped at 400 against monsters. If Kayle is not yet Arisen, this attack becomes ranged with 525 range.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kayle kindles her blade, empowering her next basic attack within 6 seconds to have an uncancellable windup and deal additional bonus magic damage on-hit that is capped at 400 against monsters. If Kayle is not yet Arisen, this attack becomes ranged with 525 range.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -484,26 +442,14 @@
                       10
                     ],
                     "units": [
-                      "%  of target's missing health",
-                      "%  of target's missing health",
-                      "%  of target's missing health",
-                      "%  of target's missing health",
                       "%  of target's missing health"
                     ]
                   },
                   {
                     "values": [
-                      1.5,
-                      1.5,
-                      1.5,
-                      1.5,
                       1.5
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -512,7 +458,7 @@
             ]
           },
           {
-            "description": "Aflame Bonus: The attack explodes upon the target, dealing its damage to surrounding enemies and applying on-hit effects. This is affected by critical strike modifiers.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Aflame Bonus:</p><p> The attack explodes upon the target, dealing its damage to surrounding enemies and applying on-hit effects. This is affected by critical strike modifiers.</p></div>",
             "leveling": []
           },
           {
@@ -531,7 +477,9 @@
                 6.5,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -540,7 +488,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "true",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Special",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -567,7 +515,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayle/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Kayle grants herself or a target allied champion invulnerability for 2.5 seconds and conjures swords of fire.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kayle grants herself or a target allied champion invulnerability for 2.5 seconds and conjures swords of fire.</p></div>",
             "leveling": []
           },
           {
@@ -583,32 +531,22 @@
                       400
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -617,7 +555,18 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100,
+              50,
+              0
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -626,7 +575,9 @@
                 120,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -634,8 +585,8 @@
         "targeting": "Unit",
         "affects": "Allies, Self",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -657,5 +608,6 @@
       }
     ]
   },
+  "lore": "Born to a Targonian Aspect at the height of the Rune Wars, Kayle honored her mother's legacy by fighting for justice on wings of divine flame. She and her twin sister Morgana were the protectors of Demacia for many years—until Kayle became disillusioned with the repeated failings of mortals, and abandoned this realm altogether. Still, legends are told of her punishing the unjust with her fiery swords, and many hope that she will one day return…",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kayle/skins/base/images/kayle_splash_centered_0.jpg"
 }

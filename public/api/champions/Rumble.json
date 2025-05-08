@@ -95,15 +95,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rumble/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Rumble's basic ability casts generate Heat, which decays by 10 Heat per second after not using any basic ability within 4 seconds or The Equalizer within 2 seconds. Rumble's mech enters the Danger Zone when at or above 50 Heat, and becomes Overheated while at 150 Heat.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Rumble's basic ability casts generate Heat, which decays by 10 Heat per second after not using any basic ability within 4 seconds or The Equalizer within 2 seconds. Rumble's mech enters the Danger Zone when at or above 50 Heat, and becomes Overheated while at 150 Heat.</p></div>",
             "leveling": []
           },
           {
-            "description": "Danger Zone: Rumble's mech enters the Danger Zone, empowering his basic abilities.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Danger Zone:</p><p> Rumble's mech enters the Danger Zone, empowering his basic abilities.</p></div>",
             "leveling": []
           },
           {
-            "description": "Overheated: Rumble's mech becomes Overheated, disabling his abilities as his Heat decays back down to 0 over 4 seconds. During this time, he gains 50% : 130% (based on level) bonus attack speed and empowers his basic attacks to deal 5 : 40 (based on level) (+ 25% AP) (+ 5% of the target's maximum health) bonus magic damage on-hit. The damage based on the target's health ratio is capped at 65 : 150 (based on level) against monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Overheated:</p><p> Rumble's mech becomes Overheated, disabling his abilities as his Heat decays back down to 0 over 4 seconds. During this time, he gains 50% - 130% (based on level) bonus attack speed and empowers his basic attacks to deal 5 - 40 (based on level) (+ 25% AP) (+ 5% of the target's maximum health) bonus magic damage on-hit. The damage based on the target's health ratio is capped at 65 - 150 (based on level) against monsters.</p></div>",
             "leveling": []
           }
         ],
@@ -116,7 +116,7 @@
         "affects": "Self",
         "spellshieldable": null,
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -143,7 +143,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rumble/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Rumble generates 20 Heat to activate his flamethrower for 3 seconds, dealing magic damage every 0.25 seconds to enemies hit in a frontal cone, reduced to 70% against minions.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Rumble generates 20 Heat to activate his flamethrower for 3 seconds, dealing magic damage every 0.25 seconds to enemies hit in a frontal cone, reduced to 70% against minions.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Magic Damage",
@@ -157,26 +157,14 @@
                       180
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      110,
-                      110,
-                      110,
-                      110,
                       110
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -189,10 +177,6 @@
                       10
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -210,26 +194,14 @@
                       15
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      9.17,
-                      9.17,
-                      9.17,
-                      9.17,
                       9.17
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -242,10 +214,6 @@
                       0.833
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -263,26 +231,14 @@
                       126
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      77,
-                      77,
-                      77,
-                      77,
                       77
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -295,10 +251,6 @@
                       7
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -316,26 +268,14 @@
                       10.5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      6.417,
-                      6.417,
-                      6.417,
-                      6.417,
                       6.417
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -348,10 +288,6 @@
                       0.583
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -360,7 +296,7 @@
             ]
           },
           {
-            "description": "Danger Zone Bonus: Flamespitter's damage is increased by 50%.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Danger Zone Bonus:</p><p> Flamespitter's damage is increased by 50%.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Enhanced Damage",
@@ -374,26 +310,14 @@
                       270
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      165,
-                      165,
-                      165,
-                      165,
                       165
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -406,10 +330,6 @@
                       15
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -427,26 +347,14 @@
                       22.5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      13.75,
-                      13.75,
-                      13.75,
-                      13.75,
                       13.75
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -459,10 +367,6 @@
                       1.25
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -480,26 +384,14 @@
                       189
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      115.5,
-                      115.5,
-                      115.5,
-                      115.5,
                       115.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -512,10 +404,6 @@
                       10.5
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -533,26 +421,14 @@
                       15.75
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      9.625,
-                      9.625,
-                      9.625,
-                      9.625,
                       9.625
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -565,10 +441,6 @@
                       0.875
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   }
@@ -577,7 +449,7 @@
             ]
           },
           {
-            "description": "Flamespitter's damage based on the target's health ratio against monsters is capped at 65 : 300 (based on level).",
+            "description": "Flamespitter's damage based on the target's health ratio against monsters is capped at 65 - 300 (based on level).",
             "leveling": []
           }
         ],
@@ -592,7 +464,9 @@
                 7,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -601,7 +475,7 @@
         "affects": "Enemies",
         "spellshieldable": "false",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "AoeDoT",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -628,7 +502,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rumble/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Rumble generates 20 Heat to grant himself a shield for 1.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Rumble generates 20 Heat to grant himself a shield for 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -642,42 +516,22 @@
                       145
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      4,
-                      4,
-                      4,
-                      4,
                       4
                     ],
                     "units": [
-                      "% of maximum health",
-                      "% of maximum health",
-                      "% of maximum health",
-                      "% of maximum health",
                       "% of maximum health"
                     ]
                   }
@@ -700,10 +554,6 @@
                       30
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -712,7 +562,7 @@
             ]
           },
           {
-            "description": "Danger Zone Bonus: Scrap Shield's shield strength and bonus movement speed are increased in effectiveness by 50%.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Danger Zone Bonus:</p><p> Scrap Shield's shield strength and bonus movement speed are increased in effectiveness by 50%.</p></div>",
             "leveling": [
               {
                 "attribute": "Enhanced Shield Strength",
@@ -726,42 +576,22 @@
                       217.5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      45,
-                      45,
-                      45,
-                      45,
                       45
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      6,
-                      6,
-                      6,
-                      6,
                       6
                     ],
                     "units": [
-                      "% of maximum health",
-                      "% of maximum health",
-                      "% of maximum health",
-                      "% of maximum health",
                       "% of maximum health"
                     ]
                   }
@@ -779,10 +609,6 @@
                       45
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -796,13 +622,11 @@
           "modifiers": [
             {
               "values": [
-                6,
-                6,
-                6,
-                6,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -838,7 +662,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rumble/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Rumble generates 20 Heat to shoot a harpoon in the target direction that deals magic damage to the first enemy hit, inflicting them with magic resistance reduction for 4 seconds and slowing them for 2 seconds. These effects stack additively with multiple harpoons, refreshing their duration and stacking up to 2 times.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Rumble generates 20 Heat to shoot a harpoon in the target direction that deals magic damage to the first enemy hit, inflicting them with magic resistance reduction for 4 seconds and slowing them for 2 seconds. These effects stack additively with multiple harpoons, refreshing their duration and stacking up to 2 times.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -852,26 +676,14 @@
                       155
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -889,26 +701,14 @@
                       310
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -926,10 +726,6 @@
                       18
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -947,10 +743,6 @@
                       36
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -968,10 +760,6 @@
                       35
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -989,10 +777,6 @@
                       70
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -1005,7 +789,7 @@
             "leveling": []
           },
           {
-            "description": "Danger Zone Bonus: Electro Harpoon's effects are increased by 50%.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Danger Zone Bonus:</p><p> Electro Harpoon's effects are increased by 50%.</p></div>",
             "leveling": [
               {
                 "attribute": "Enhanced Damage",
@@ -1019,26 +803,14 @@
                       232.5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      75,
-                      75,
-                      75,
-                      75,
                       75
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1056,26 +828,14 @@
                       465
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      150,
-                      150,
-                      150,
-                      150,
                       150
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1093,10 +853,6 @@
                       27
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -1114,10 +870,6 @@
                       54
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -1135,10 +887,6 @@
                       52.5
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -1156,10 +904,6 @@
                       105
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -1177,13 +921,11 @@
           "modifiers": [
             {
               "values": [
-                0.5,
-                0.5,
-                0.5,
-                0.5,
                 0.5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -1192,7 +934,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -1225,7 +967,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rumble/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Rumble deploys a barrage of rockets along the target path that land in a line over 0.75 seconds, creating a field of fire for 4.5 seconds after the last rocket lands.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Rumble deploys a barrage of rockets along the target path that land in a line over 0.75 seconds, creating a field of fire for 4.5 seconds after the last rocket lands.</p></div>",
             "leveling": []
           },
           {
@@ -1241,20 +983,14 @@
                       140
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      17.5,
-                      17.5,
                       17.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1270,20 +1006,14 @@
                       280
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      35,
-                      35,
                       35
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1299,20 +1029,14 @@
                       1400
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      175,
-                      175,
                       175
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1330,7 +1054,9 @@
                 105,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -1339,7 +1065,7 @@
         "affects": "Enemies",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "aoedot",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -1361,5 +1087,6 @@
       }
     ]
   },
+  "lore": "Rumble is a young inventor with a temper. Using nothing more than his own two hands and a heap of scrap, the feisty yordle constructed a colossal mech suit outfitted with an arsenal of electrified harpoons and incendiary rockets. Though others may scoff and sneer at his junkyard creations, Rumble doesn't mind—after all, he's the one with the flamespitter.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/base/images/rumble_splash_centered_0.jpg"
 }

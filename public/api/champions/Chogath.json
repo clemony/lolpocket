@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Chogath/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Whenever Cho'Gath kills an enemy, it heals for 18 : 52 (based on level) and restores 4.72 : 9.48 (based on level) mana.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Whenever Cho'Gath kills an enemy, it heals for 18 - 52 (based on level) and restores 4.72 - 9.48 (based on level) mana.</p></div>",
             "leveling": []
           }
         ],
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Chogath/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Cho'Gath ruptures the target location after a 0.627 seconds delay, granting sight of the area before dealing magic damage to enemies within and knocking them up for 1 second, and afterwards slowing them by 60% for 1.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Cho'Gath ruptures the target location after a 0.627 seconds delay, granting sight of the area before dealing magic damage to enemies within and knocking them up for 1 second, and afterwards slowing them by 60% for 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic damage",
@@ -153,26 +153,14 @@
                       320
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -181,18 +169,25 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                6,
-                6,
-                6,
-                6,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -200,8 +195,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -228,7 +223,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Chogath/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Cho'Gath roars in a cone in the target direction, dealing magic damage to enemies hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Cho'Gath roars in a cone in the target direction, dealing magic damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic damage",
@@ -242,26 +237,14 @@
                       280
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      70,
-                      70,
-                      70,
-                      70,
                       70
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -284,10 +267,6 @@
                       2
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -296,7 +275,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70,
+              75,
+              80,
+              85,
+              90
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -307,7 +299,9 @@
                 9.5,
                 9
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -315,8 +309,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -343,7 +337,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Chogath/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Cho'Gath empowers its next 3 basic attacks within 6 seconds to gain 50 bonus range and launch a blast of spikes on-attack in the target's direction. Enemies struck are dealt magic damage and slowed by an amount that decays over 1.5 seconds. The damage based on the target's health ratio is capped at 200 against monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Cho'Gath empowers its next 3 basic attacks within 6 seconds to gain 50 bonus range and launch a blast of spikes on-attack in the target's direction. Enemies struck are dealt magic damage and slowed by an amount that decays over 1.5 seconds. The damage based on the target's health ratio is capped at 200 against monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -357,26 +351,14 @@
                       100
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      30,
-                      30,
-                      30,
-                      30,
                       30
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -389,10 +371,6 @@
                       3.5
                     ],
                     "units": [
-                      "% (+ 0.5% per Feast stack) of target's maximum health",
-                      "% (+ 0.5% per Feast stack) of target's maximum health",
-                      "% (+ 0.5% per Feast stack) of target's maximum health",
-                      "% (+ 0.5% per Feast stack) of target's maximum health",
                       "% (+ 0.5% per Feast stack) of target's maximum health"
                     ]
                   }
@@ -410,26 +388,14 @@
                       300
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      90,
-                      90,
-                      90,
-                      90,
                       90
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
@@ -442,10 +408,6 @@
                       10.5
                     ],
                     "units": [
-                      "% (+ 1.5% per Feast stack) of target's maximum health",
-                      "% (+ 1.5% per Feast stack) of target's maximum health",
-                      "% (+ 1.5% per Feast stack) of target's maximum health",
-                      "% (+ 1.5% per Feast stack) of target's maximum health",
                       "% (+ 1.5% per Feast stack) of target's maximum health"
                     ]
                   }
@@ -463,10 +425,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -483,7 +441,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              30
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -494,7 +461,9 @@
                 5,
                 4
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -502,8 +471,8 @@
         "targeting": "Auto",
         "affects": "Self / Enemies",
         "spellshieldable": "False",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "aoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -530,7 +499,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Chogath/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Cho'Gath attempts to eat the target enemy, dealing them true damage. Against non- champions, the base damage is modified.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Cho'Gath attempts to eat the target enemy, dealing them true damage. Against non- champions, the base damage is modified.</p></div>",
             "leveling": [
               {
                 "attribute": "Champion True Damage",
@@ -542,32 +511,22 @@
                       650
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      10,
-                      10,
                       10
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   }
@@ -578,37 +537,25 @@
                 "modifiers": [
                   {
                     "values": [
-                      1200,
-                      1200,
                       1200
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      10,
-                      10,
                       10
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   }
@@ -633,8 +580,6 @@
                       160
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -650,8 +595,6 @@
                       7.7
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -667,8 +610,6 @@
                       10
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -677,7 +618,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -686,7 +636,9 @@
                 70,
                 60
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -694,8 +646,8 @@
         "targeting": "Unit",
         "affects": "Enemies / Self",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "TRUE_DAMAGE",
+        "resource": "Mana",
+        "damageType": "True damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -717,5 +669,6 @@
       }
     ]
   },
+  "lore": "From the moment Cho'Gath first emerged into the harsh light of Runeterra's sun, the beast was driven by the most pure and insatiable hunger. A perfect expression of the Void's desire to consume all life, Cho'Gath's complex biology quickly converts matter into new bodily growth—increasing its muscle mass and density, or hardening its outer carapace like organic diamond. When growing larger does not suit the Void-spawn's needs, it vomits out the excess material as razor-sharp spines, leaving prey skewered and ready to feast upon later.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/chogath/skins/base/images/chogath_splash_centered_0.jpg"
 }

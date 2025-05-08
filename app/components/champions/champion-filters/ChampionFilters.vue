@@ -28,17 +28,15 @@ onMounted (() => {
 </script>
 
 <template>
-  <menu class="overflow-hidden inset-x-0 px-8 py-5 flex flex-col gap-5 h-38 z-1 top-16  bg-b1 absolute ">
+  <menu class="overflow-hidden inset-x-0 px-8 pt-6 flex flex-col gap-5 h-42 z-1 top-16  bg-b1 absolute ">
     <div class="flex  items-center gap-4 ">
       <div class="flex items-center grow gap-2.5">
-        <button class="btn btn-ghost btn-square -ml-1">
-          <icon name="iconoir:filter-list" class="size-7 text-bc/70" />
-        </button>
+
         <h1 class="!text-9 tracking-tight mr-6">
           Champions
         </h1>
         <p
-          class="text-4 drop-shadow-text items-center px-2 font-serif tracking-wide text-nowrap flex ">
+          class="text-4 dst items-center px-2 font-serif tracking-wide text-nowrap flex ">
           {{ quote }}
         </p>
       </div>
@@ -53,10 +51,8 @@ onMounted (() => {
       </NumberPickerContent>
     </NumberField> -->
 
-      <!--     <ChampionSearch class="input   shadow-sm drop-shadow-sm !bg-neutral/85 !h-12 inset-shadow-sm border-accent text-nc **:text-nc">
-    </ChampionSearch>
- -->
-      <ChampionPositionFilter />
+   
+
       <Tabs v-model:model-value="tabs" class="w-90 shrink-0  **:pointer-events-auto ">
         <IndicatorTabsList class="grid grid-cols-2 h-10">
           <IndicatorTabsTrigger value="/library/champions" @click="navigateTo('/library/champions')">
@@ -69,9 +65,11 @@ onMounted (() => {
         </IndicatorTabsList>
       </Tabs>
     </div>
-    <div class="flex gap-4 items-center justify-between w-full">
+    <div class="flex gap-8 items-center  w-full">
+      <ChampionPositionFilter />
       <ChampionRoleFilter />
-
+  <ChampionSearch class="input rounded-lg-2  !-mt-2 !w-84  shadow-sm drop-shadow-sm !bg-neutral/85 !h-11 inset-shadow-sm border-accent text-nc **:text-nc">
+    </ChampionSearch>
     <!--    <button
           class="btn btn-neutral font-normal"
           @click="resetItems">

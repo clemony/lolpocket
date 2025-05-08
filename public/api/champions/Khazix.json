@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Kha'Zix gains Unseen Threat whenever the enemy loses sight of him or he activates Void Assault. Unseen Threat: Kha'Zix empowers his next basic attack against an enemy champion to deal 17 : 136 (based on level) (+ 50% bonus AD) bonus magic damage and slow them by 25% for 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Kha'Zix gains Unseen Threat whenever the enemy loses sight of him or he activates Void Assault. Unseen Threat: Kha'Zix empowers his next basic attack against an enemy champion to deal 17 - 136 (based on level) (+ 50% bonus AD) bonus magic damage and slow them by 25% for 2 seconds.</p></div>",
             "leveling": []
           }
         ],
@@ -110,7 +110,7 @@
         "affects": "Enemies",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -137,11 +137,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/q",
         "effects": [
           {
-            "description": "Passive: Kha'Zix considers any enemy unit to be Isolated if they are not nearby to one of their allies. Taste Their Fear, Evolved Reaper Claws, and Evolved Spike Racks have special interactions against Isolated targets.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Kha'Zix considers any enemy unit to be Isolated if they are not nearby to one of their allies. Taste Their Fear, Evolved Reaper Claws, and Evolved Spike Racks have special interactions against Isolated targets.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Kha'Zix slashes the target enemy, dealing physical damage, increased by 110% against Isolated targets.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kha'Zix slashes the target enemy, dealing physical damage, increased by 110% against Isolated targets.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -155,26 +155,14 @@
                       180
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      110,
-                      110,
-                      110,
-                      110,
                       110
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -192,26 +180,14 @@
                       378
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      231,
-                      231,
-                      231,
-                      231,
                       231
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -220,18 +196,25 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              20
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                4,
-                4,
-                4,
-                4,
                 4
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -239,8 +222,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Single target",
         "projectile": null,
         "onHitEffects": null,
@@ -265,7 +248,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/q",
         "effects": [
           {
-            "description": "Passive: Kha'Zix gains 50 bonus range on his basic attacks and Taste Their Fear. Evolved Bonus: If the target is Isolated, the cooldown is reduced by 45%.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Kha'Zix gains 50 bonus range on his basic attacks and Taste Their Fear. Evolved Bonus: If the target is Isolated, the cooldown is reduced by 45%.</p></div>",
             "leveling": []
           }
         ],
@@ -278,7 +261,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "Single target",
         "projectile": null,
         "onHitEffects": null,
@@ -305,7 +288,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Kha'Zix fires a bolt of spikes in the target direction that explodes upon hitting an enemy, dealing physical damage to nearby enemies.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kha'Zix fires a bolt of spikes in the target direction that explodes upon hitting an enemy, dealing physical damage to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -319,26 +302,14 @@
                       205
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -361,26 +332,14 @@
                       135
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -389,18 +348,29 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              55,
+              60,
+              65,
+              70,
+              75
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                9,
-                9,
-                9,
-                9,
                 9
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -408,8 +378,8 @@
         "targeting": "Direction",
         "affects": "Enemies, Self",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -434,7 +404,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/w",
         "effects": [
           {
-            "description": "Evolved Bonus: Void Spike now fires three clusters in a cone, slows by 40% and reveals enemy champions hit for 2 seconds. Multiple explosions do not deal extra damage to the same target nor provide Kha'Zix with additional healing.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Evolved Bonus:</p><p> Void Spike now fires three clusters in a cone, slows by 40% and reveals enemy champions hit for 2 seconds. Multiple explosions do not deal extra damage to the same target nor provide Kha'Zix with additional healing.</p></div>",
             "leveling": []
           },
           {
@@ -451,7 +421,7 @@
         "affects": "Enemies, Self",
         "spellshieldable": "special",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "aoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -478,7 +448,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Kha'Zix leaps to the target location, dealing physical damage to nearby enemies upon arrival.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kha'Zix leaps to the target location, dealing physical damage to nearby enemies upon arrival.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -492,26 +462,14 @@
                       205
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -524,7 +482,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -535,7 +502,9 @@
                 14,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -543,8 +512,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -569,7 +538,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/e",
         "effects": [
           {
-            "description": "Evolved Bonus: Leap gains 200 bonus cast range, and the cooldown resets upon scoring a champion takedown.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Evolved Bonus:</p><p> Leap gains 200 bonus cast range, and the cooldown resets upon scoring a champion takedown.</p></div>",
             "leveling": []
           }
         ],
@@ -582,7 +551,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "aoe",
         "projectile": null,
         "onHitEffects": null,
@@ -609,11 +578,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/r",
         "effects": [
           {
-            "description": "Passive: Each rank in Void Assault allows Kha'Zix to evolve one of his abilities, granting it additional effects. Evolving an ability causes him to enter a 2-second cast time. Kha'Zix cannot evolve while he is unable to cast abilities.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Each rank in Void Assault allows Kha'Zix to evolve one of his abilities, granting it additional effects. Evolving an ability causes him to enter a 2-second cast time. Kha'Zix cannot evolve while he is unable to cast abilities.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Kha'Zix becomes invisible for 1.25 seconds, during which he gains 40% bonus movement speed.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kha'Zix becomes invisible for 1.25 seconds, during which he gains 40% bonus movement speed.</p></div>",
             "leveling": []
           },
           {
@@ -621,11 +590,20 @@
             "leveling": []
           },
           {
-            "description": "Recast: Kha'Zix mimics the first cast's effects.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Kha'Zix mimics the first cast's effects.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -634,7 +612,9 @@
                 85,
                 70
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -642,7 +622,7 @@
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -668,7 +648,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/r",
         "effects": [
           {
-            "description": "Evolved Bonus: The invisibility now lasts 2 seconds, and Void Assault can be recast twice.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Evolved Bonus:</p><p> The invisibility now lasts 2 seconds, and Void Assault can be recast twice.</p></div>",
             "leveling": []
           }
         ],
@@ -703,5 +683,6 @@
       }
     ]
   },
+  "lore": "The Void grows, and the Void adapts—in none of its myriad spawn are these truths more apparent than Kha'Zix. Evolution drives the core of this mutating horror, born to survive and to slay the strong. Where it struggles to do so, it grows new, more effective ways to counter and kill its prey. Initially a mindless beast, Kha'Zix's intelligence has developed as much as its form. Now, the creature plans out its hunts, and even utilizes the visceral terror it engenders in its victims.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/khazix/skins/base/images/khazix_splash_centered_0.jpg"
 }

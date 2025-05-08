@@ -91,11 +91,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Scoring a champion takedown within 3 seconds of damaging them will reduce the current cooldowns of Katarina's abilities by 15 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Scoring a champion takedown within 3 seconds of damaging them will reduce the current cooldowns of Katarina's abilities by 15 seconds.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate - Sinister Steel: Whenever Katarina retrieves a Dagger, she slashes around herself to deal 68 : 240 (based on level) (+ 60% bonus AD) (+ 70 / 80 / 90 / 100% (based on level) AP) magic damage to nearby enemies, apply on-hit effects to enemy champions hit, and reduce Shunpo's current cooldown by 78 / 84 / 90 / 96% (based on level) of its total cooldown.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Sinister Steel:</p><p> Whenever Katarina retrieves a Dagger, she slashes around herself to deal 68 - 240 (based on level) (+ 60% bonus AD) (+ 70 / 80 / 90 / 100% (based on level) AP) magic damage to nearby enemies, apply on-hit effects to enemy champions hit, and reduce Shunpo's current cooldown by 78 / 84 / 90 / 96% (based on level) of its total cooldown.</p></div>",
             "leveling": []
           },
           {
@@ -112,7 +112,7 @@
         "affects": "Enemies, Self",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Area of effect",
         "projectile": null,
         "onHitEffects": null,
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Katarina throws a Dagger at the target enemy that deals magic damage and can bounce to up to two additional nearby enemies.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Katarina throws a Dagger at the target enemy that deals magic damage and can bounce to up to two additional nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -153,26 +153,14 @@
                       220
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -200,7 +188,9 @@
                 8,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -209,7 +199,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -236,7 +226,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Katarina tosses a Dagger into the air above her current location and gains bonus movement speed that decays until it lands after 1.25 seconds, becoming ghosted for the same duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Katarina tosses a Dagger into the air above her current location and gains bonus movement speed that decays until it lands after 1.25 seconds, becoming ghosted for the same duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement speed",
@@ -250,10 +240,6 @@
                       90
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -273,7 +259,9 @@
                 12,
                 11
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -309,7 +297,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Katarina blinks to the target location around the target unit or Dagger, dealing magic damage to the nearest enemy in range and applying on-hit effects.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Katarina blinks to the target location around the target unit or Dagger, dealing magic damage to the nearest enemy in range and applying on-hit effects.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -323,42 +311,22 @@
                       60
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      40,
-                      40,
-                      40,
-                      40,
                       40
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -382,7 +350,9 @@
                 9,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -391,7 +361,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Single target",
         "projectile": null,
         "onHitEffects": null,
@@ -418,32 +388,24 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Katarina channels for up to 2.5 seconds, rapidly throwing a dagger every 0.166 seconds to up to 3 of the closest nearby enemy champions, revealing herself in the process.Each dagger deals physical damage and magic damage, applies on-hit effects, with on-hit damage reduced in effectiveness, triggers on-attack effects, and inflicts Grievous Wounds on the target for 3 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Katarina channels for up to 2.5 seconds, rapidly throwing a dagger every 0.166 seconds to up to 3 of the closest nearby enemy champions, revealing herself in the process.Each dagger deals physical damage and magic damage, applies on-hit effects, with on-hit damage reduced in effectiveness, triggers on-attack effects, and inflicts Grievous Wounds on the target for 3 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Dagger",
                 "modifiers": [
                   {
                     "values": [
-                      16,
-                      16,
                       16
                     ],
                     "units": [
-                      "%  bonus AD",
-                      "%  bonus AD",
                       "%  bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% per 100% bonus attack speed",
-                      "% per 100% bonus attack speed",
                       "% per 100% bonus attack speed"
                     ]
                   }
@@ -454,25 +416,17 @@
                 "modifiers": [
                   {
                     "values": [
-                      240,
-                      240,
                       240
                     ],
                     "units": [
-                      "%  bonus AD",
-                      "%  bonus AD",
                       "%  bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      750,
-                      750,
                       750
                     ],
                     "units": [
-                      "% per 100% bonus attack speed",
-                      "% per 100% bonus attack speed",
                       "% per 100% bonus attack speed"
                     ]
                   }
@@ -488,20 +442,14 @@
                       50
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      19,
-                      19,
                       19
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -517,20 +465,14 @@
                       750
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      285,
-                      285,
                       285
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -546,8 +488,6 @@
                       35
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -569,7 +509,9 @@
                 60,
                 45
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -578,7 +520,7 @@
         "affects": "Enemies",
         "spellshieldable": "Special",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "aoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -600,5 +542,6 @@
       }
     ]
   },
+  "lore": "Decisive in judgment and lethal in combat, Katarina is a Noxian assassin of the highest caliber. Eldest daughter to the legendary General Du Couteau, she made her talents known with swift kills against unsuspecting enemies. Her fiery ambition has driven her to pursue heavily-guarded targets, even at the risk of endangering her allies—but no matter the mission, Katarina will not hesitate to execute her duty amid a whirlwind of serrated daggers.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/katarina/skins/base/images/katarina_splash_centered_0.jpg"
 }

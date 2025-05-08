@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: When Varus kills an enemy, he gains 10 / 15 / 20% (based on level) bonus attack speed as well as bonus attack damage and ability power equal to 10% bonus attack speed for 5 / 7 / 9 / 11 (based on level) seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> When Varus kills an enemy, he gains 10 / 15 / 20% (based on level) bonus attack speed as well as bonus attack damage and ability power equal to 10% bonus attack speed for 5 / 7 / 9 / 11 (based on level) seconds.</p></div>",
             "leveling": []
           },
           {
@@ -147,7 +147,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Varus charges while being slowed by 20% for up to 4 seconds to increase Piercing Arrow's range over the first 1.5 seconds and its effects over the first 1.25 seconds of the channel.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Varus charges while being slowed by 20% for up to 4 seconds to increase Piercing Arrow's range over the first 1.5 seconds and its effects over the first 1.25 seconds of the channel.</p></div>",
             "leveling": []
           },
           {
@@ -155,7 +155,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Varus fires a piercing arrow in the target direction that deals physical damage to enemies hit. The damage of the arrow as well as any detonated Blight stacks are both increased by 0% : 50% (based on channel time), and the arrow's damage is reduced by 0% : 67% (based on number of enemies hit).",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Varus fires a piercing arrow in the target direction that deals physical damage to enemies hit. The damage of the arrow as well as any detonated Blight stacks are both increased by 0% - 50% (based on channel time), and the arrow's damage is reduced by 0% - 67% (based on number of enemies hit).</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -169,10 +169,6 @@
                       246.67
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -185,10 +181,6 @@
                       113.33
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -206,10 +198,6 @@
                       370
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -222,10 +210,6 @@
                       170
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -243,10 +227,6 @@
                       81.4
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -259,10 +239,6 @@
                       37.4
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -280,10 +256,6 @@
                       122.1
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -296,10 +268,6 @@
                       56.1
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -308,7 +276,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -319,7 +300,9 @@
                 13,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -327,8 +310,8 @@
         "targeting": "Auto / Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Area of effect",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -355,7 +338,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Varus' basic attacks are empowered to deal bonus magic damage and apply a stack of Blight on-hit for 6 seconds, refreshing on subsequent applications and stacking up to 3 times. Varus' abilities detonate all Blight stacks on enemies hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Varus' basic attacks are empowered to deal bonus magic damage and apply a stack of Blight on-hit for 6 seconds, refreshing on subsequent applications and stacking up to 3 times. Varus' abilities detonate all Blight stacks on enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -369,26 +352,14 @@
                       30
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      35,
-                      35,
-                      35,
-                      35,
                       35
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -397,7 +368,7 @@
             ]
           },
           {
-            "description": "Blight: For each stack consumed, the target is dealt bonus magic damage. If the stacks were consumed with Piercing Arrow, this damage is increased by 0% : 50% (based on Piercing Arrow's charge time). This damage is capped at 120 per stack against monsters, for a total cap of 360 at maximum stacks.Additionally, each stack consumed against a champion or epic monster reduces the remaining cooldowns of Varus' basic abilities by 13% of each of their total cooldowns, up to a 39% cooldown reduction per target. If the stacks were consumed with Piercing Arrow, the cooldown reduction is increased by 0% : 50% (based on Piercing Arrow's charge time), up to a 39% : 58.5% cooldown reduction per target from consuming maximum stacks against them.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Blight:</p><p> For each stack consumed, the target is dealt bonus magic damage. If the stacks were consumed with Piercing Arrow, this damage is increased by 0% - 50% (based on Piercing Arrow's charge time). This damage is capped at 120 per stack against monsters, for a total cap of 360 at maximum stacks.Additionally, each stack consumed against a champion or epic monster reduces the remaining cooldowns of Varus' basic abilities by 13% of each of their total cooldowns, up to a 39% cooldown reduction per target. If the stacks were consumed with Piercing Arrow, the cooldown reduction is increased by 0% - 50% (based on Piercing Arrow's charge time), up to a 39% - 58.5% cooldown reduction per target from consuming maximum stacks against them.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage per Stack",
@@ -411,26 +382,14 @@
                       5
                     ],
                     "units": [
-                      "%  of the target's maximum health",
-                      "%  of the target's maximum health",
-                      "%  of the target's maximum health",
-                      "%  of the target's maximum health",
                       "%  of the target's maximum health"
                     ]
                   },
                   {
                     "values": [
-                      1.5,
-                      1.5,
-                      1.5,
-                      1.5,
                       1.5
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -448,26 +407,14 @@
                       15
                     ],
                     "units": [
-                      "%  of the target's maximum health",
-                      "%  of the target's maximum health",
-                      "%  of the target's maximum health",
-                      "%  of the target's maximum health",
                       "%  of the target's maximum health"
                     ]
                   },
                   {
                     "values": [
-                      4.5,
-                      4.5,
-                      4.5,
-                      4.5,
                       4.5
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -485,26 +432,14 @@
                       7.5
                     ],
                     "units": [
-                      "%  of the target's maximum health",
-                      "%  of the target's maximum health",
-                      "%  of the target's maximum health",
-                      "%  of the target's maximum health",
                       "%  of the target's maximum health"
                     ]
                   },
                   {
                     "values": [
-                      2.25,
-                      2.25,
-                      2.25,
-                      2.25,
                       2.25
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -522,26 +457,14 @@
                       22.5
                     ],
                     "units": [
-                      "%  of the target's maximum health",
-                      "%  of the target's maximum health",
-                      "%  of the target's maximum health",
-                      "%  of the target's maximum health",
                       "%  of the target's maximum health"
                     ]
                   },
                   {
                     "values": [
-                      6.75,
-                      6.75,
-                      6.75,
-                      6.75,
                       6.75
                     ],
                     "units": [
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
-                      "% per 100 AP",
                       "% per 100 AP"
                     ]
                   }
@@ -550,7 +473,7 @@
             ]
           },
           {
-            "description": "Active: Varus' next Piercing Arrow within 5.5 seconds is empowered to deal additional bonus magic damage, increased by 0% : 50% (based on Piercing Arrow's charge time). This damage is capped at 360 against monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Varus' next Piercing Arrow within 5.5 seconds is empowered to deal additional bonus magic damage, increased by 0% - 50% (based on Piercing Arrow's charge time). This damage is capped at 360 against monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Active Minimum Magic Damage",
@@ -564,10 +487,6 @@
                       14
                     ],
                     "units": [
-                      "% of target's missing health",
-                      "% of target's missing health",
-                      "% of target's missing health",
-                      "% of target's missing health",
                       "% of target's missing health"
                     ]
                   }
@@ -585,10 +504,6 @@
                       21
                     ],
                     "units": [
-                      "% of target's missing health",
-                      "% of target's missing health",
-                      "% of target's missing health",
-                      "% of target's missing health",
                       "% of target's missing health"
                     ]
                   }
@@ -601,7 +516,7 @@
             "leveling": []
           },
           {
-            "description": "Recast: Varus ends Blighted Quiver and places it on a 1-second cooldown.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Varus ends Blighted Quiver and places it on a 1-second cooldown.</p></div>",
             "leveling": []
           }
         ],
@@ -610,13 +525,11 @@
           "modifiers": [
             {
               "values": [
-                40,
-                40,
-                40,
-                40,
                 40
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -625,7 +538,7 @@
         "affects": "Enemies",
         "spellshieldable": "Special",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -652,7 +565,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Varus fires a hail of arrows at the target location that land after 0.5 seconds, dealing physical damage to enemies hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Varus fires a hail of arrows at the target location that land after 0.5 seconds, dealing physical damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -666,26 +579,14 @@
                       220
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -708,10 +609,6 @@
                       50
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -724,7 +621,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              90
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -735,7 +641,9 @@
                 12,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -743,8 +651,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -771,7 +679,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Varus unleashes a tendril of corruption in the target direction that infects the first enemy champion hit, dealing magic damage and rooting them for 2 seconds, during which they are revealed. Over the first 1.5 seconds of the root, they are also inflicted with maximum stacks of Blight.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Varus unleashes a tendril of corruption in the target direction that infects the first enemy champion hit, dealing magic damage and rooting them for 2 seconds, during which they are revealed. Over the first 1.5 seconds of the root, they are also inflicted with maximum stacks of Blight.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -783,20 +691,14 @@
                       350
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -813,7 +715,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -822,7 +733,9 @@
                 80,
                 60
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -830,8 +743,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -853,5 +766,6 @@
       }
     ]
   },
+  "lore": "One of the ancient darkin, Varus was a deadly killer who loved to torment his foes, driving them almost to insanity before delivering the killing arrow. He was imprisoned at the end of the Great Darkin War, but escaped centuries later in the remade flesh of two Ionian hunters—they had unwittingly released him, cursed to bear the bow containing his bound essence. Varus now seeks out those who trapped him, in order to enact his brutal vengeance, but the mortal souls within still resist him every step of the way.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/varus/skins/base/images/varus_splash_centered_0.jpg"
 }

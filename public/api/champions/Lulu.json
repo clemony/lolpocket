@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Lulu is assisted by Pix, an untargetable faerie, who follows her around and fires a barrage of 3 bolts towards her target whenever she uses a basic attack on-attack. Each bolt deals 5 : 39 (based on level) (+ 5% AP) magic damage to the first enemy it collides with, for a total of 15 : 117 (based on level) (+ 15% AP) on hitting a single target with all three bolts.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Lulu is assisted by Pix, an untargetable faerie, who follows her around and fires a barrage of 3 bolts towards her target whenever she uses a basic attack on-attack. Each bolt deals 5 - 39 (based on level) (+ 5% AP) magic damage to the first enemy it collides with, for a total of 15 - 117 (based on level) (+ 15% AP) on hitting a single target with all three bolts.</p></div>",
             "leveling": []
           },
           {
@@ -120,7 +120,7 @@
         "affects": "Self",
         "spellshieldable": null,
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "default",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -147,7 +147,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Lulu and Pix each fire a magic bolt towards the target point, each one dealing magic damage to enemies hit, reduced to 70% against minions, and slowing them by 80% decaying over 2 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Lulu and Pix each fire a magic bolt towards the target point, each one dealing magic damage to enemies hit, reduced to 70% against minions, and slowing them by 80% decaying over 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -161,26 +161,14 @@
                       200
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -198,26 +186,14 @@
                       140
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      35,
-                      35,
-                      35,
-                      35,
                       35
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -240,26 +216,14 @@
                       100
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      25,
-                      25,
-                      25,
-                      25,
                       25
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -277,26 +241,14 @@
                       300
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      75,
-                      75,
-                      75,
-                      75,
                       75
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -314,26 +266,14 @@
                       70
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      17.5,
-                      17.5,
-                      17.5,
-                      17.5,
                       17.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -351,26 +291,14 @@
                       210
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      52.5,
-                      52.5,
-                      52.5,
-                      52.5,
                       52.5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -379,18 +307,29 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                7,
-                7,
-                7,
-                7,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -398,8 +337,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Area of effect",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -426,11 +365,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Lulu can cast Whimsy on herself or a champion.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Lulu can cast Whimsy on herself or a champion.</p></div>",
             "leveling": []
           },
           {
-            "description": "Enemy Cast: Lulu launches a spell onto the target enemy champion that polymorphs them into a harmless critter for a duration, during which their base movement speed is reduced by 60, and disarms them for the same duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Enemy Cast:</p><p> Lulu launches a spell onto the target enemy champion that polymorphs them into a harmless critter for a duration, during which their base movement speed is reduced by 60, and disarms them for the same duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Disable Duration",
@@ -444,10 +383,6 @@
                       2
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -456,7 +391,7 @@
             ]
           },
           {
-            "description": "Self / Ally Cast: Lulu instantly casts erratic magic upon the target allied champion or herself, granting the target bonus attack speed and 25% (+ 5% per 100 AP) bonus movement speed for a duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Self / Ally Cast:</p><p> Lulu instantly casts erratic magic upon the target allied champion or herself, granting the target bonus attack speed and 25% (+ 5% per 100 AP) bonus movement speed for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -470,10 +405,6 @@
                       30
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -491,10 +422,6 @@
                       4
                     ],
                     "units": [
-                      " seconds",
-                      " seconds",
-                      " seconds",
-                      " seconds",
                       " seconds"
                     ]
                   }
@@ -503,18 +430,25 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              65
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                18,
-                18,
-                18,
-                18,
                 18
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -522,7 +456,7 @@
         "targeting": "Unit",
         "affects": "Enemies / Allies / Self",
         "spellshieldable": "True",
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": "TRUE",
@@ -550,11 +484,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Lulu can cast Help, Pix! on herself or an ally or enemy.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Lulu can cast Help, Pix! on herself or an ally or enemy.</p></div>",
             "leveling": []
           },
           {
-            "description": "Enemy Cast: Lulu sends Pix to the far side of the target enemy for 4 seconds, dealing magic damage and revealing them for the same duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Enemy Cast:</p><p> Lulu sends Pix to the far side of the target enemy for 4 seconds, dealing magic damage and revealing them for the same duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -568,26 +502,14 @@
                       240
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      50,
-                      50,
-                      50,
-                      50,
                       50
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -596,7 +518,7 @@
             ]
           },
           {
-            "description": "Self / Ally Cast: Lulu sends Pix to the target ally for 6.25 seconds. If the target is a champion, they are granted a shield for 2.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Self / Ally Cast:</p><p> Lulu sends Pix to the target ally for 6.25 seconds. If the target is a champion, they are granted a shield for 2.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -610,26 +532,14 @@
                       240
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      55,
-                      55,
-                      55,
-                      55,
                       55
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -638,18 +548,29 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60,
+              65,
+              70,
+              75,
+              80
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                8,
-                8,
-                8,
-                8,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -657,8 +578,8 @@
         "targeting": "Unit",
         "affects": "Enemies / Allies / Self",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "spell",
         "projectile": "FALSE",
         "onHitEffects": null,
@@ -685,7 +606,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Lulu enlarges herself or the target allied champion, knocking up nearby enemies for 1 second. For the next 7 seconds, the target gains bonus health and 40% increased size and slows nearby enemies, which lingers for 0.25 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Lulu enlarges herself or the target allied champion, knocking up nearby enemies for 1 second. For the next 7 seconds, the target gains bonus health and 40% increased size and slows nearby enemies, which lingers for 0.25 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Health",
@@ -697,20 +618,14 @@
                       575
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      55,
-                      55,
                       55
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -726,8 +641,6 @@
                       60
                     ],
                     "units": [
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -736,7 +649,16 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -745,7 +667,9 @@
                 90,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -753,7 +677,7 @@
         "targeting": "Unit",
         "affects": "Allies / Self, Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -776,5 +700,6 @@
       }
     ]
   },
+  "lore": "The yordle mage Lulu is known for conjuring dreamlike illusions and fanciful creatures as she roams Runeterra with her fairy companion Pix. Lulu shapes reality on a whim, warping the fabric of the world, and what she views as the constraints of this mundane, physical realm. While others might consider her magic at best unnatural, and at worst dangerous, she believes everyone could use a touch of enchantment.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/lulu/skins/base/images/lulu_splash_centered_0.jpg"
 }

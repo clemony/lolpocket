@@ -99,11 +99,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Darius/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Darius' damaging basic attacks and abilities apply a stack of Hemorrhage to enemies for 5 seconds, refreshing on subsequent applications and stacking up to 5 times.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Darius' damaging basic attacks and abilities apply a stack of Hemorrhage to enemies for 5 seconds, refreshing on subsequent applications and stacking up to 5 times.</p></div>",
             "leveling": []
           },
           {
-            "description": "Hemorrhage: For each stack, the target is dealt[ 13 : 30 (based on level) (+ 30% bonus AD) total physical damage over the duration, ][ 3.25 : 7.5 (based on level) (+ 7.5% bonus AD) physical damage every 1.25 seconds over the duration, ]up to a maximum of[ 65 : 150 (based on level) (+ 150% bonus AD) total physical damage over the duration. ][ 16.25 : 37.5 (based on level) (+ 37.5% bonus AD) physical damage with each tick. ]Hemorrhage deals 200% damage against monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Hemorrhage:</p><p> For each stack, the target is dealt[ 13 - 30 (based on level) (+ 30% bonus AD) total physical damage over the duration, ][ 3.25 - 7.5 (based on level) (+ 7.5% bonus AD) physical damage every 1.25 seconds over the duration, ]up to a maximum of[ 65 - 150 (based on level) (+ 150% bonus AD) total physical damage over the duration. ][ 16.25 - 37.5 (based on level) (+ 37.5% bonus AD) physical damage with each tick. ]Hemorrhage deals 200% damage against monsters.</p></div>",
             "leveling": []
           },
           {
@@ -111,7 +111,7 @@
             "leveling": []
           },
           {
-            "description": "Noxian Might: Darius gains 30 : 230 (based on level) bonus attack damage and instantly applies 5 Hemorrhage stacks through his usual means.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Noxian Might:</p><p> Darius gains 30 - 230 (based on level) bonus attack damage and instantly applies 5 Hemorrhage stacks through his usual means.</p></div>",
             "leveling": []
           }
         ],
@@ -124,7 +124,7 @@
         "affects": "Enemies",
         "spellshieldable": "special",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "default",
         "projectile": null,
         "onHitEffects": null,
@@ -151,7 +151,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Darius/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Darius becomes ghosted for 1 second and hefts his axe for 0.75 seconds, afterward swinging it around himself to deal physical damage to nearby enemies. Enemies within the inner radius take 35% damage.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Darius becomes ghosted for 1 second and hefts his axe for 0.75 seconds, afterward swinging it around himself to deal physical damage to nearby enemies. Enemies within the inner radius take 35% damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage (Blade)",
@@ -165,10 +165,6 @@
                       170
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -181,10 +177,6 @@
                       140
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -202,10 +194,6 @@
                       59.5
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -218,10 +206,6 @@
                       49
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -230,7 +214,7 @@
             ]
           },
           {
-            "description": "Against champions and large monsters hit, Darius heals for 15% : 45% (based on number of targets hit by the outer radius) of his missing health. Enemies hit by the inner radius do not refresh the duration of or gain a new stack of Hemorrhage.",
+            "description": "Against champions and large monsters hit, Darius heals for 15% - 45% (based on number of targets hit by the outer radius) of his missing health. Enemies hit by the inner radius do not refresh the duration of or gain a new stack of Hemorrhage.",
             "leveling": []
           },
           {
@@ -238,7 +222,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              25,
+              30,
+              35,
+              40,
+              45
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -249,7 +246,9 @@
                 6,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -257,8 +256,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -285,7 +284,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Darius/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Darius empowers his next basic attack within 4 seconds to have an uncancellable windup, gain 25 bonus range, deal bonus physical damage and slow the target by 90% for 1 second. This damage is affected by critical strike modifiers.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Darius empowers his next basic attack within 4 seconds to have an uncancellable windup, gain 25 bonus range, deal bonus physical damage and slow the target by 90% for 1 second. This damage is affected by critical strike modifiers.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -299,10 +298,6 @@
                       60
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -319,18 +314,25 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                5,
-                5,
-                5,
-                5,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -338,8 +340,8 @@
         "targeting": "Auto",
         "affects": "Enemies, Structures",
         "spellshieldable": "special",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "Special",
         "projectile": null,
         "onHitEffects": null,
@@ -366,7 +368,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Darius/ability-icon/e",
         "effects": [
           {
-            "description": "Passive: Darius gains armor penetration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Darius gains armor penetration.</p></div>",
             "leveling": [
               {
                 "attribute": "Armor Penetration",
@@ -380,10 +382,6 @@
                       40
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -392,7 +390,7 @@
             ]
           },
           {
-            "description": "Active: Darius sweeps his axe in a cone in the target direction, granting sight of the area for 1 second while pulling enemies hit towards him. Upon arrival, they rebound 150 units off of him, remaining airborne and becoming slowed by 40% for 1 second.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Darius sweeps his axe in a cone in the target direction, granting sight of the area for 1 second while pulling enemies hit towards him. Upon arrival, they rebound 150 units off of him, remaining airborne and becoming slowed by 40% for 1 second.</p></div>",
             "leveling": []
           },
           {
@@ -400,7 +398,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              70,
+              60,
+              50,
+              40,
+              30
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -411,7 +422,9 @@
                 18.5,
                 16
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -419,7 +432,7 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": "FALSE",
@@ -447,7 +460,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Darius/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Darius attempts to execute the target enemy champion, leaping towards them to deal true damage, increased by 0% : 100% (based on target's Hemorrhage stacks), and granting sight of the area around them for 2.5 seconds from the start of the cast time.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Darius attempts to execute the target enemy champion, leaping towards them to deal true damage, increased by 0% - 100% (based on target's Hemorrhage stacks), and granting sight of the area around them for 2.5 seconds from the start of the cast time.</p></div>",
             "leveling": [
               {
                 "attribute": "True Damage",
@@ -459,20 +472,14 @@
                       375
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      75,
-                      75,
                       75
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -488,20 +495,14 @@
                       75
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -517,20 +518,14 @@
                       750
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      150,
-                      150,
                       150
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -551,7 +546,18 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100,
+              100,
+              0
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -560,7 +566,9 @@
                 100,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -568,8 +576,8 @@
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "TRUE_DAMAGE",
+        "resource": "Mana",
+        "damageType": "True damage",
         "spellEffects": "spell",
         "projectile": null,
         "onHitEffects": null,
@@ -591,5 +599,6 @@
       }
     ]
   },
+  "lore": "There is no greater symbol of Noxian might than Darius, the nation's most feared and battle-hardened commander. Rising from humble origins to become the Hand of Noxus, he cleaves through the empire's enemies—many of them Noxians themselves. Knowing that he never doubts his cause is just, and never hesitates once his axe is raised, those who stand against the leader of the Trifarian Legion can expect no mercy.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/darius/skins/base/images/darius_splash_centered_0.jpg"
 }

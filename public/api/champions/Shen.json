@@ -94,7 +94,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: After completing an ability's effects, Shen grants himself a shield for 47 : 120 (based on level) (+ 13% bonus health) for 2.5 seconds. If Shen affects at least one other champion with an ability, Ki Barrier's cooldown is reduced by 4 : 8 (based on level) seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> After completing an ability's effects, Shen grants himself a shield for 47 - 120 (based on level) (+ 13% bonus health) for 2.5 seconds. If Shen affects at least one other champion with an ability, Ki Barrier's cooldown is reduced by 4 - 8 (based on level) seconds.</p></div>",
             "leveling": []
           },
           {
@@ -107,11 +107,11 @@
           "modifiers": [
             {
               "values": [
-                11,
-                11,
                 11
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -147,7 +147,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Shen recalls his Spirit Blade to his location. Enemy champions hit are slowed for the next 2 seconds while moving away from Shen.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Shen recalls his Spirit Blade to his location. Enemy champions hit are slowed for the next 2 seconds while moving away from Shen.</p></div>",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -161,10 +161,6 @@
                       45
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -200,23 +196,6 @@
                       40
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -229,10 +208,6 @@
                       4
                     ],
                     "units": [
-                      "% (+ 1.5% per 100 AP) of target's maximum health",
-                      "% (+ 1.5% per 100 AP) of target's maximum health",
-                      "% (+ 1.5% per 100 AP) of target's maximum health",
-                      "% (+ 1.5% per 100 AP) of target's maximum health",
                       "% (+ 1.5% per 100 AP) of target's maximum health"
                     ]
                   }
@@ -263,23 +238,6 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -292,10 +250,6 @@
                       12
                     ],
                     "units": [
-                      "% (+ 4.5% per 100 AP) of target's maximum health",
-                      "% (+ 4.5% per 100 AP) of target's maximum health",
-                      "% (+ 4.5% per 100 AP) of target's maximum health",
-                      "% (+ 4.5% per 100 AP) of target's maximum health",
                       "% (+ 4.5% per 100 AP) of target's maximum health"
                     ]
                   }
@@ -331,23 +285,6 @@
                       40
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -360,10 +297,6 @@
                       7
                     ],
                     "units": [
-                      "% (+ 2% per 100 AP) of target's maximum health",
-                      "% (+ 2% per 100 AP) of target's maximum health",
-                      "% (+ 2% per 100 AP) of target's maximum health",
-                      "% (+ 2% per 100 AP) of target's maximum health",
                       "% (+ 2% per 100 AP) of target's maximum health"
                     ]
                   }
@@ -394,23 +327,6 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -423,10 +339,6 @@
                       21
                     ],
                     "units": [
-                      "% (+ 6% per 100 AP) of target's maximum health",
-                      "% (+ 6% per 100 AP) of target's maximum health",
-                      "% (+ 6% per 100 AP) of target's maximum health",
-                      "% (+ 6% per 100 AP) of target's maximum health",
                       "% (+ 6% per 100 AP) of target's maximum health"
                     ]
                   }
@@ -449,10 +361,6 @@
                       200
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -461,7 +369,20 @@
             ]
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              140,
+              130,
+              120,
+              110,
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -472,7 +393,9 @@
                 5.75,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -480,8 +403,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "ENERGY",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Energy",
+        "damageType": "Magic damage",
         "spellEffects": "Proc",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -508,11 +431,20 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Shen primes his Spirit Blade, creating an area around it. After 2 seconds, or when Shen or an allied champion enters the area, the Spirit Blade generates a protective zone for 1.75 seconds, blocking all non- turret basic attacks that hit Shen or allied champions in the area.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Shen primes his Spirit Blade, creating an area around it. After 2 seconds, or when Shen or an allied champion enters the area, the Spirit Blade generates a protective zone for 1.75 seconds, blocking all non- turret basic attacks that hit Shen or allied champions in the area.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -523,7 +455,9 @@
                 11.5,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -531,7 +465,7 @@
         "targeting": "Auto",
         "affects": "Allies",
         "spellshieldable": null,
-        "resource": "ENERGY",
+        "resource": "Energy",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -559,11 +493,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/e",
         "effects": [
           {
-            "description": "Passive: Dealing damage with Twilight Assault or Shadow Dash restores 30 / 40 / 50 (based on level) energy.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Dealing damage with Twilight Assault or Shadow Dash restores 30 / 40 / 50 (based on level) energy.</p></div>",
             "leveling": []
           },
           {
-            "description": "Active: Shen dashes to the target location, dealing physical damage to enemy champions and monsters he passes through and taunting them for 1.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Shen dashes to the target location, dealing physical damage to enemy champions and monsters he passes through and taunting them for 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -577,26 +511,14 @@
                       160
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
-                      "% bonus health",
                       "% bonus health"
                     ]
                   }
@@ -609,7 +531,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              150
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -620,7 +551,9 @@
                 12,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -628,8 +561,8 @@
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "ENERGY",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Energy",
+        "damageType": "Physical damage",
         "spellEffects": "Area of effect",
         "projectile": null,
         "onHitEffects": null,
@@ -656,7 +589,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Shen focuses his will, channeling for 3 seconds and granting the target allied champion a shield for 5 seconds at the time of cast, increased by 0% : 60% (based on target's missing health).",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Shen focuses his will, channeling for 3 seconds and granting the target allied champion a shield for 5 seconds at the time of cast, increased by 0% - 60% (based on target's missing health).</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Shield Strength",
@@ -668,32 +601,22 @@
                       320
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      135,
-                      135,
                       135
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      15,
-                      15,
                       15
                     ],
                     "units": [
-                      "% of his bonus health",
-                      "% of his bonus health",
                       "% of his bonus health"
                     ]
                   }
@@ -709,32 +632,22 @@
                       512
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      216,
-                      216,
                       216
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   },
                   {
                     "values": [
-                      24,
-                      24,
                       24
                     ],
                     "units": [
-                      "% of his bonus health",
-                      "% of his bonus health",
                       "% of his bonus health"
                     ]
                   }
@@ -756,7 +669,9 @@
                 180,
                 160
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -787,5 +702,6 @@
       }
     ]
   },
+  "lore": "Among the secretive, Ionian warriors known as the Kinkou, Shen serves as their leader, the Eye of Twilight. He longs to remain free from the confusion of emotion, prejudice, and ego, and walks the unseen path of dispassionate judgment between the spirit realm and the physical world. Tasked with enforcing the equilibrium between them, Shen wields blades of steel and arcane energy against any who would threaten it.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/base/images/shen_splash_centered_0.jpg"
 }

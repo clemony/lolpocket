@@ -94,7 +94,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Renekton's basic attacks generate 5 Fury. After 12 seconds of being out of combat, he loses 1 Fury every 0.25 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Renekton's basic attacks generate 5 Fury. After 12 seconds of being out of combat, he loses 1 Fury every 0.25 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -142,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Renekton cleaves around himself, dealing physical damage to nearby enemies and healing himself for each enemy hit, up to a cap.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Renekton cleaves around himself, dealing physical damage to nearby enemies and healing himself for each enemy hit, up to a cap.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -156,26 +156,14 @@
                       180
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -193,26 +181,14 @@
                       270
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      140,
-                      140,
-                      140,
-                      140,
                       140
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -230,10 +206,6 @@
                       150
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -251,10 +223,6 @@
                       600
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -272,26 +240,14 @@
                       6
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      2,
-                      2,
-                      2,
-                      2,
                       2
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -309,26 +265,14 @@
                       18
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      6,
-                      6,
-                      6,
-                      6,
                       6
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -351,26 +295,14 @@
                       44
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      17,
-                      17,
-                      17,
-                      17,
                       17
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -388,26 +320,14 @@
                       132
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      51,
-                      51,
-                      51,
-                      51,
                       51
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -420,7 +340,7 @@
             "leveling": []
           },
           {
-            "description": "Reign of Anger Bonus: Cull the Meek has increased damage, tripled total healing, and a quadrupled healing cap.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Reign of Anger Bonus:</p><p> Cull the Meek has increased damage, tripled total healing, and a quadrupled healing cap.</p></div>",
             "leveling": []
           },
           {
@@ -433,13 +353,11 @@
           "modifiers": [
             {
               "values": [
-                7,
-                7,
-                7,
-                7,
                 7
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -448,7 +366,7 @@
         "affects": "Enemies / Self",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -475,7 +393,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Renekton empowers his next basic attack within 7 seconds to have a 0.2-second cast time, gain 50 bonus range and strike the target twice, dealing modified physical damage and stunning them for 0.75 seconds. Each strike applies on-hit effects and generates Fury. Hitting an enemy champion generates 10 bonus Fury.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Renekton empowers his next basic attack within 7 seconds to have a 0.2-second cast time, gain 50 bonus range and strike the target twice, dealing modified physical damage and stunning them for 0.75 seconds. Each strike applies on-hit effects and generates Fury. Hitting an enemy champion generates 10 bonus Fury.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Physical Damage",
@@ -489,26 +407,14 @@
                       130
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      150,
-                      150,
-                      150,
-                      150,
                       150
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -526,26 +432,14 @@
                       65
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      75,
-                      75,
-                      75,
-                      75,
                       75
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -558,7 +452,7 @@
             "leveling": []
           },
           {
-            "description": "Reign of Anger Bonus: Renekton instead strikes 3 times, completely destroying damage-mitigating shields on the target upon the first strike if they are not a monster, as well as increasing the stun duration to 1.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Reign of Anger Bonus:</p><p> Renekton instead strikes 3 times, completely destroying damage-mitigating shields on the target upon the first strike if they are not a monster, as well as increasing the stun duration to 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Physical Damage",
@@ -572,26 +466,14 @@
                       195
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      225,
-                      225,
-                      225,
-                      225,
                       225
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -615,7 +497,9 @@
                 10,
                 8
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -624,7 +508,7 @@
         "affects": "Enemies / Self",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "Special",
         "projectile": null,
         "onHitEffects": null,
@@ -651,7 +535,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Renekton dashes a fixed distance in the target direction, dealing physical damage to enemies he passes through.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Renekton dashes a fixed distance in the target direction, dealing physical damage to enemies he passes through.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -665,26 +549,14 @@
                       160
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      90,
-                      90,
-                      90,
-                      90,
                       90
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -708,7 +580,9 @@
                 11.5,
                 10
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -717,7 +591,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -742,7 +616,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Renekton dashes a fixed distance in the target direction, dealing the same physical damage to enemies he passes through.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Renekton dashes a fixed distance in the target direction, dealing the same physical damage to enemies he passes through.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Physical Damage",
@@ -756,26 +630,14 @@
                       320
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      180,
-                      180,
-                      180,
-                      180,
                       180
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -788,7 +650,7 @@
             "leveling": []
           },
           {
-            "description": "Reign of Anger Bonus: Dice deals bonus physical damage and inflicts armor reduction to enemies hit for 4 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Reign of Anger Bonus:</p><p> Dice deals bonus physical damage and inflicts armor reduction to enemies hit for 4 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -802,26 +664,14 @@
                       90
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      45,
-                      45,
-                      45,
-                      45,
                       45
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -839,26 +689,14 @@
                       250
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      135,
-                      135,
-                      135,
-                      135,
                       135
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -876,26 +714,14 @@
                       410
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      225,
-                      225,
-                      225,
-                      225,
                       225
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -913,10 +739,6 @@
                       35
                     ],
                     "units": [
-                      "% of target's armor",
-                      "% of target's armor",
-                      "% of target's armor",
-                      "% of target's armor",
                       "% of target's armor"
                     ]
                   }
@@ -934,7 +756,7 @@
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "spellaoe",
         "projectile": null,
         "onHitEffects": null,
@@ -961,7 +783,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Renekton empowers himself for 15 seconds, gaining bonus health, 20% increased size, 25 bonus attack range, and 20 Fury, as well as increasing Cull the Meek's effect radius.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Renekton empowers himself for 15 seconds, gaining bonus health, 20% increased size, 25 bonus attack range, and 20 Fury, as well as increasing Cull the Meek's effect radius.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Health",
@@ -973,8 +795,6 @@
                       700
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   }
@@ -995,32 +815,22 @@
                       120
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      5,
-                      5,
                       5
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      5,
-                      5,
                       5
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1036,32 +846,22 @@
                       3600
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      150,
-                      150,
                       150
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   },
                   {
                     "values": [
-                      150,
-                      150,
                       150
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -1079,7 +879,9 @@
                 100,
                 80
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -1088,7 +890,7 @@
         "affects": "Enemies / Self",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "aoedot",
         "projectile": null,
         "onHitEffects": null,
@@ -1110,5 +912,6 @@
       }
     ]
   },
+  "lore": "Renekton is a terrifying, rage-fueled Ascended being from the scorched deserts of Shurima. Once, he was his empire's most esteemed warrior, leading the nation's armies to countless victories. However, after the empire's fall, Renekton was entombed beneath the sands, and slowly, as the world turned and changed, he succumbed to insanity. Now free once more, he is utterly consumed with finding and killing his brother, Nasus, who he blames, in his madness, for the centuries he spent in darkness.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/renekton/skins/base/images/renekton_splash_centered_0.jpg"
 }

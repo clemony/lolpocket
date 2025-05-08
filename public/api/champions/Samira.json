@@ -98,15 +98,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Samira's damaging basic attacks and abilities against at least one enemy champion different from the previous damaging hit made against champions generate a stack of Style for 6 seconds, refreshing on subsequent hits and stacking up to 6 times.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Samira's damaging basic attacks and abilities against at least one enemy champion different from the previous damaging hit made against champions generate a stack of Style for 6 seconds, refreshing on subsequent hits and stacking up to 6 times.</p></div>",
             "leveling": []
           },
           {
-            "description": "Style: For each stack, Samira gains 2 / 2.5 / 3 / 3.5% (based on level) bonus movement speed, up to a maximum of 12 / 15 / 18 / 21% (based on level). At maximum stacks, Samira can cast Inferno Trigger.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Style:</p><p> For each stack, Samira gains 2 / 2.5 / 3 / 3.5% (based on level) bonus movement speed, up to a maximum of 12 / 15 / 18 / 21% (based on level). At maximum stacks, Samira can cast Inferno Trigger.</p></div>",
             "leveling": []
           },
           {
-            "description": "Innate: Samira's basic attacks against targets within 200 units of her use her blade, becoming non-projectile. Blade attacks post-hit, Blade Whirl, Wild Rush, and the slash and explosives of Flair deal 2 : 19 (based on level) (+ 3.5% : 10.5% (based on level) AD) bonus magic damage, increased by 0% : 100% (based on target's missing health).",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Samira's basic attacks against targets within 200 units of her use her blade, becoming non-projectile. Blade attacks post-hit, Blade Whirl, Wild Rush, and the slash and explosives of Flair deal 2 - 19 (based on level) (+ 3.5% - 10.5% (based on level) AD) bonus magic damage, increased by 0% - 100% (based on target's missing health).</p></div>",
             "leveling": []
           },
           {
@@ -127,7 +127,7 @@
         "affects": "Self, Enemies",
         "spellshieldable": "special",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "special",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -154,7 +154,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Samira fires a shot in the target direction that deals physical damage to the first enemy hit.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Samira fires a shot in the target direction that deals physical damage to the first enemy hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -168,10 +168,6 @@
                       20
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
@@ -184,10 +180,6 @@
                       125
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -208,7 +200,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              30
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -219,7 +220,9 @@
                 3,
                 2
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -227,8 +230,8 @@
         "targeting": "Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "special",
         "projectile": "SPECIAL",
         "onHitEffects": null,
@@ -255,7 +258,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/w",
         "effects": [
           {
-            "description": "Active: Samira spins her blade over 0.75 seconds, destroying all hostile non- turret projectiles within the area for the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Samira spins her blade over 0.75 seconds, destroying all hostile non- turret projectiles within the area for the duration.</p></div>",
             "leveling": []
           },
           {
@@ -273,26 +276,14 @@
                       80
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      60,
-                      60,
-                      60,
-                      60,
                       60
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -310,26 +301,14 @@
                       160
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      120,
-                      120,
-                      120,
-                      120,
                       120
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -342,7 +321,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              60
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -353,7 +341,9 @@
                 24,
                 22
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -361,8 +351,8 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "PHYSICAL_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Physical damage",
         "spellEffects": "aoe",
         "projectile": null,
         "onHitEffects": null,
@@ -389,7 +379,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Samira dashes a fixed distance in the direction of the target enemy or enemy structure, dealing magic damage to enemies she passes through. She also gains bonus attack speed for 5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Samira dashes a fixed distance in the direction of the target enemy or enemy structure, dealing magic damage to enemies she passes through. She also gains bonus attack speed for 5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -403,26 +393,14 @@
                       90
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      20,
-                      20,
-                      20,
-                      20,
                       20
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -440,10 +418,6 @@
                       40
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -460,7 +434,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -471,7 +454,9 @@
                 14,
                 12
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -479,8 +464,8 @@
         "targeting": "Unit",
         "affects": "Self, Enemies",
         "spellshieldable": "true",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "aoe",
         "projectile": null,
         "onHitEffects": null,
@@ -507,7 +492,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Samira unleashes a torrent of shots for 2.277 seconds, reducing her movement speed by 30% and rapidly shooting at nearby enemies over 2.013 seconds at sporadic times in 0.2-second intervals each (10 times per enemy), dealing physical damage with each shot, reduced by 75% against minions. This damage is affected by critical strike modifiers and applies life steal at 50% effectiveness.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Samira unleashes a torrent of shots for 2.277 seconds, reducing her movement speed by 30% and rapidly shooting at nearby enemies over 2.013 seconds at sporadic times in 0.2-second intervals each (10 times per enemy), dealing physical damage with each shot, reduced by 75% against minions. This damage is affected by critical strike modifiers and applies life steal at 50% effectiveness.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Shot",
@@ -519,20 +504,14 @@
                       25
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      45,
-                      45,
                       45
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -548,20 +527,14 @@
                       250
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      450,
-                      450,
                       450
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -577,20 +550,14 @@
                       6.25
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      11.25,
-                      11.25,
                       11.25
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -606,20 +573,14 @@
                       62.5
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      112.5,
-                      112.5,
                       112.5
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   }
@@ -636,16 +597,25 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              6
+            ],
+            "units": [
+              " Style"
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
               "values": [
-                5,
-                5,
                 5
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": false
@@ -654,7 +624,7 @@
         "affects": "Enemies",
         "spellshieldable": "special",
         "resource": null,
-        "damageType": "PHYSICAL_DAMAGE",
+        "damageType": "Physical damage",
         "spellEffects": "aoedot",
         "projectile": "TRUE",
         "onHitEffects": null,
@@ -676,5 +646,6 @@
       }
     ]
   },
+  "lore": "Samira stares death in the eye with unyielding confidence, seeking thrill wherever she goes. After her Shuriman home was destroyed as a child, Samira found her true calling in Noxus, where she built a reputation as a stylish daredevil taking on dangerous missions of the highest caliber. Wielding black-powder pistols and a custom-engineered blade, Samira thrives in life-or-death circumstances, eliminating any who stand in her way with flash and flair.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/samira/skins/base/images/samira_splash_centered_0.jpg"
 }

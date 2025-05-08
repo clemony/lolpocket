@@ -101,7 +101,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Warwick/ability-icon/p",
         "effects": [
           {
-            "description": "Innate: Warwick deals 12 : 46 (based on level) (+ 15% bonus AD) (+ 10% AP) bonus magic damage on-hit.\nWhile below 50% maximum health, Warwick also heals for 100% of the post-mitigation damage dealt by Eternal Hunger, increased to 250% while below 25% maximum health.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Warwick deals 12 - 46 (based on level) (+ 15% bonus AD) (+ 10% AP) bonus magic damage on-hit.</p></div>\nWhile below 50% maximum health, Warwick also heals for 100% of the post-mitigation damage dealt by Eternal Hunger, increased to 250% while below 25% maximum health.",
             "leveling": []
           }
         ],
@@ -114,7 +114,7 @@
         "affects": "Self",
         "spellshieldable": "False",
         "resource": null,
-        "damageType": "MAGIC_DAMAGE",
+        "damageType": "Magic damage",
         "spellEffects": "Proc",
         "projectile": null,
         "onHitEffects": null,
@@ -141,7 +141,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Warwick/ability-icon/q",
         "effects": [
           {
-            "description": "Active: Warwick lunges at the target enemy over 0.264 seconds and bites them, dealing magic damage, healing himself for a percentage of the post-mitigation damage dealt, applying on-hit effects and life steal at 100% effectiveness, and triggering on-attack effects. The damage based on the target's health ratio is capped against monsters.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Warwick lunges at the target enemy over 0.264 seconds and bites them, dealing magic damage, healing himself for a percentage of the post-mitigation damage dealt, applying on-hit effects and life steal at 100% effectiveness, and triggering on-attack effects. The damage based on the target's health ratio is capped against monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -155,42 +155,22 @@
                       10
                     ],
                     "units": [
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
-                      "% of target's maximum health",
                       "% of target's maximum health"
                     ]
                   },
                   {
                     "values": [
-                      120,
-                      120,
-                      120,
-                      120,
                       120
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -208,42 +188,22 @@
                       210
                     ],
                     "units": [
-                      "",
-                      "",
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      120,
-                      120,
-                      120,
-                      120,
                       120
                     ],
                     "units": [
-                      "% AD",
-                      "% AD",
-                      "% AD",
-                      "% AD",
                       "% AD"
                     ]
                   },
                   {
                     "values": [
-                      100,
-                      100,
-                      100,
-                      100,
                       100
                     ],
                     "units": [
-                      "% AP",
-                      "% AP",
-                      "% AP",
-                      "% AP",
                       "% AP"
                     ]
                   }
@@ -261,10 +221,6 @@
                       75
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -277,11 +233,24 @@
             "leveling": []
           },
           {
-            "description": "Hold: Warwick performs the bite, and then begins to charge for 0.5 seconds, extended if the target is under effects of a dash or displacement. During the charge, he leaps behind the target.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Hold:</p><p> Warwick performs the bite, and then begins to charge for 0.5 seconds, extended if the target is under effects of a dash or displacement. During the charge, he leaps behind the target.</p></div>",
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              80,
+              85,
+              90,
+              95,
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -292,7 +261,9 @@
                 6.5,
                 6
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -300,8 +271,8 @@
         "targeting": "Unit",
         "affects": "Enemies, Self",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Special",
         "projectile": null,
         "onHitEffects": null,
@@ -328,7 +299,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Warwick/ability-icon/w",
         "effects": [
           {
-            "description": "Passive: Warwick gains bonus attack speed for 1.25 seconds upon damaging a target to or while they are below 50% of their maximum health with a basic attack or ability damage, refreshing with subsequent damaging basic attacks or ability damage to enemies below the threshold. If Warwick does not have the bonus attack speed already, he also gains it upon initiating an attack windup against an enemy below the threshold.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Warwick gains bonus attack speed for 1.25 seconds upon damaging a target to or while they are below 50% of their maximum health with a basic attack or ability damage, refreshing with subsequent damaging basic attacks or ability damage to enemies below the threshold. If Warwick does not have the bonus attack speed already, he also gains it upon initiating an attack windup against an enemy below the threshold.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -342,10 +313,6 @@
                       110
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -354,7 +321,7 @@
             ]
           },
           {
-            "description": "Passive: Warwick senses all enemy champions on the map who are damaged below 50% of their maximum health by him or an allied source, marking them with Blood Hunt until they regenerate or heal above this threshold again. He sees trails leading toward them and gains bonus movement speed while following a trail. This bonus is lost for 0.5 seconds upon entering champion combat, but will build up again over 3.5 seconds.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Warwick senses all enemy champions on the map who are damaged below 50% of their maximum health by him or an allied source, marking them with Blood Hunt until they regenerate or heal above this threshold again. He sees trails leading toward them and gains bonus movement speed while following a trail. This bonus is lost for 0.5 seconds upon entering champion combat, but will build up again over 3.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -368,10 +335,6 @@
                       65
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -394,10 +357,6 @@
                       220
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -415,10 +374,6 @@
                       130
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -427,7 +382,7 @@
             ]
           },
           {
-            "description": "Active: Warwick senses the nearest enemy champion in the area at the start of the cast time, marking them with Blood Hunt for 8 seconds, gaining both passive bonuses against them regardless of their current health.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Warwick senses the nearest enemy champion in the area at the start of the cast time, marking them with Blood Hunt for 8 seconds, gaining both passive bonuses against them regardless of their current health.</p></div>",
             "leveling": []
           },
           {
@@ -435,7 +390,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              55
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -446,7 +410,9 @@
                 50,
                 40
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -454,7 +420,7 @@
         "targeting": "Auto",
         "affects": "Self / Enemies",
         "spellshieldable": "False",
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -482,7 +448,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Warwick/ability-icon/e",
         "effects": [
           {
-            "description": "Active: Warwick gains damage reduction for up to 2.5 seconds. Primal Howl can be recast after 1 second, and does so automatically after the duration.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Warwick gains damage reduction for up to 2.5 seconds. Primal Howl can be recast after 1 second, and does so automatically after the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Damage Reduction",
@@ -496,10 +462,6 @@
                       55
                     ],
                     "units": [
-                      "%",
-                      "%",
-                      "%",
-                      "%",
                       "%"
                     ]
                   }
@@ -508,7 +470,7 @@
             ]
           },
           {
-            "description": "Recast: Warwick howls, ending Primal Howl's effects and fearing nearby enemies for 1 second, slowing them by 90%.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Warwick howls, ending Primal Howl's effects and fearing nearby enemies for 1 second, slowing them by 90%.</p></div>",
             "leveling": []
           },
           {
@@ -516,7 +478,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              40
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -527,7 +498,9 @@
                 12,
                 11
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -535,7 +508,7 @@
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
+        "resource": "Mana",
         "damageType": null,
         "spellEffects": null,
         "projectile": null,
@@ -563,7 +536,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Warwick/ability-icon/r",
         "effects": [
           {
-            "description": "Active: Warwick leaps in the target direction with crowd control immunity, stopping upon hitting an enemy champion. He then knocks them down and channels for up to 1.5 seconds to suppress, reveal, and deal magic damage every 0.25 seconds, revealing himself in the process.",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Warwick leaps in the target direction with crowd control immunity, stopping upon hitting an enemy champion. He then knocks them down and channels for up to 1.5 seconds to suppress, reveal, and deal magic damage every 0.25 seconds, revealing himself in the process.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Magic Damage",
@@ -575,20 +548,14 @@
                       525
                     ],
                     "units": [
-                      "",
-                      "",
                       ""
                     ]
                   },
                   {
                     "values": [
-                      167,
-                      167,
                       167
                     ],
                     "units": [
-                      "% bonus AD",
-                      "% bonus AD",
                       "% bonus AD"
                     ]
                   }
@@ -609,7 +576,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
+        "cost": [
+          {
+            "values": [
+              100
+            ],
+            "units": [
+              ""
+            ]
+          }
+        ],
         "cooldown": {
           "modifiers": [
             {
@@ -618,7 +594,9 @@
                 90,
                 70
               ],
-              "units": []
+              "units": [
+                ""
+              ]
             }
           ],
           "affectedByCdr": true
@@ -626,8 +604,8 @@
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
-        "resource": "MANA",
-        "damageType": "MAGIC_DAMAGE",
+        "resource": "Mana",
+        "damageType": "Magic damage",
         "spellEffects": "Special",
         "projectile": null,
         "onHitEffects": null,
@@ -649,5 +627,6 @@
       }
     ]
   },
+  "lore": "Warwick is a monster who hunts the gray alleys of Zaun. Transformed by agonizing experiments, his body is fused with an intricate system of chambers and pumps, machinery filling his veins with alchemical rage. He bursts from the shadows to prey upon those criminals who terrorize the city's depths. Warwick is drawn to blood, driven mad by its scent… and none who spill it can escape him.",
   "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/base/images/warwick_splash_centered_0.jpg"
 }
