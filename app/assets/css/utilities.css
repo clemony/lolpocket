@@ -14,6 +14,16 @@
   mask-image: linear-gradient(to left, black 1%, transparent);
 }
 
+
+@utility mask-left-sm {
+  mask-image: linear-gradient(to right, black 90%, transparent);
+}
+
+@utility mask-right-sm {
+  mask-image: linear-gradient(to left, black 90%, transparent);
+}
+
+
 @utility mask-top {
   mask-image: linear-gradient(to top, black 50%, transparent);
 }

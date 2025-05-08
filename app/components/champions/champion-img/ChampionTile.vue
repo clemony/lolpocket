@@ -12,32 +12,6 @@ const { url, text, bgSize = '250%', class: className, name, top = '-25%', object
   }>()
 
 const loaded = ref(false)
-
-const nameHyphenMap: Record<string, string> = {
-  'Ambessa': 'Am-\nbessa',
-  'Blitzcrank': 'Blitz-\ncrank',
-  'Cassiopeia': 'Cass-\niopeia',
-  'Dr. Mundo': 'Dr.\nMundo',
-  'Fiddlesticks': 'Fiddle-\nsticks',
-  'Gangplank': 'Gang-\nplank',
-  'Heimerdinger': 'Heimer-\ndinger',
-  'Jarvan IV': 'Jarvan\nIV',
-  'Kassadin': 'Kass-\nadin',
-  'Lissandra': 'Liss-\nandra',
-  'Mordekaiser': 'Morde-\nkaiser',
-  'Malzahar': 'Mal-\nzahar',
-  'Miss Fortune': 'Miss\nFortune',
-  'Master Yi': 'Master\nYi',
-  'Nocturne': 'Noc-\nturne',
-  'Pantheon': 'Pan-\ntheon',
-  'Renata Glasc': 'Renata\nGlasc',
-  'Renekton': 'Ren-\nekton',
-  'Seraphine': 'Sera-\nphine',
-  'Tahm Kench': 'Tahm\nkench',
-  'Tryndamere': 'Tryn-\ndamere',
-}
-
-const formatName = (n: string) => nameHyphenMap[n] ?? n
 </script>
 
 <template>
@@ -45,7 +19,7 @@ const formatName = (n: string) => nameHyphenMap[n] ?? n
     class="" :class="cn('grid place-items-center  overflow-hidden  relative cursor-pointer  rounded-lg  size-full **:select-none  group relative', { 'inset-shadow-[0px_0px_10px_4px_#00000040]': loaded }, className)">
     <div class="size-full rounded-lg overflow-hidden">
       <Image
-        :image="url"
+        :image="url.replace('centered', 'tile')"
         alt="champion image"
         class="absolute  object-cover rounded-lg object-center"
         :style="{

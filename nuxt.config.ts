@@ -32,6 +32,7 @@ export default defineNuxtConfig({
 
   image: {
     domains: ['ddragon.leagueoflegends.com', 'cdn.communitydragon.org'],
+     provider: 'ipx',
     format: ['webp'],
   },
 

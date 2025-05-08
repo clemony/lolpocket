@@ -68,7 +68,8 @@ onMounted (() => {
     <div class="flex gap-8 items-center  w-full">
       <ChampionPositionFilter />
       <ChampionRoleFilter />
-  <ChampionSearch class="input rounded-lg-2  !-mt-2 !w-84  shadow-sm drop-shadow-sm !bg-neutral/85 !h-11 inset-shadow-sm border-accent text-nc **:text-nc">
+      <Grow  />
+  <ChampionSearch class="input rounded-lg-2 border-b4/80  !-mt-2 !w-89  !h-11 ">
     </ChampionSearch>
     <!--    <button
           class="btn btn-neutral font-normal"

@@ -10,6 +10,7 @@ declare global {
     positions: string[]
     roles: string[]
     attributeRatings: Record<string, number>
+    lore?: string
     splash?: string
   }
 
@@ -22,7 +23,6 @@ declare global {
 
   interface FullChampion extends Champion {
     skins?: any
-    lore?: string
   }
 
 

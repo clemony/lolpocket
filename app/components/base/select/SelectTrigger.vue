@@ -19,7 +19,7 @@ const forwardedProps = useForwardProps(delegatedProps)
   <SelectTrigger
     v-bind="forwardedProps"
     :class="cn(
-      'flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-b2  border border-b2 -input bg-transparent px-3 py-1 text-2 shadow-sm ring-offset-b1 data-[placeholder]:text-b2-bc focus:outline-none focus:ring-1 focus:ring-b2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:truncate text-start',
+      'flex h-11   w-full items-center justify-between whitespace-nowrap rounded-lg  border border-b4/80 bg-transparent pl-4 pr-3 py-1 text-2  ring-offset-b1 data-[placeholder]:text-b2-bc focus:outline-none focus:ring-1 focus:ring-b2 disabled:cursor-not-allowed  cursor-pointer disabled:opacity-50 [&>span]:truncate text-start  hover:inset-shadow-sm tldr-20 ',
       props.class,
     )">
     <slot />

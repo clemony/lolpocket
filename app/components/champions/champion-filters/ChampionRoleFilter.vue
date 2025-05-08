@@ -7,31 +7,30 @@ function reset() {
 </script>
 
 <template>
-  <ScrollArea as="div" class="grow">
-    <TransitionSlide :offset="['100%', 0]" group class="grow flex flex-nowrap overflow-x-auto min-w-200 gap-3 mt-3  pb-4 pt-2">
-      <button
-        class="btn btn-square btn-sm !text-5 rounded-md font-normal"
-        :class="{ hidden: !cs.championFilter.role }">
-        <icon name="x-sm" class="stroke-[1.3]" @click="reset()" />
-      </button>
-      <label
-        v-for="(role, i) in championRoles"
-        :key="role + i"
-        class="btn has-checked:!bg-neutral has-checked:!text-nc has-checked:!border-neutral !rounded-lg-2 !bg-b2/20 shadow-sm shadow-black/7 border-b2
-        hover:bg-b3 has-checked:!shadow-neutral/20 btn-sm !text-3 mr-0 rounded-md font-medium tracking-normal capitalize checked:!shadow-sm"
-        :class="{ hidden: cs.championFilter.role && role != cs.championFilter.role }">
-        <input
-          v-model="cs.championFilter.role"
-          class="hidden peer"
-          :value="role"
-          type="radio"
-          name="championClass" />
-        {{ role }}
-      </label>
-    </TransitionSlide>
+  <transition-slide group>
+    <button v-if="cs.championFilter.role" class="btn mt-1 btn-neutral pr-2.5 !bg-neutral/90 rounded-xl hover:opacity-90" @click="reset()">
+      {{ cs.championFilter.role }}
+      <icon name="x-sm" />
+    </button>
 
-    <ScrollBar />
-  </ScrollArea>
+    <div v-else>
+      <Select v-model:model-value="cs.championFilter.role">
+        <ContrastSelectTrigger class="mt-1 max-w-40 w-40 hover:ring hover:ring-b4/80">
+          <SelectValue placeholder="Role" class="placeholder:!text-bc/40" />
+        </ContrastSelectTrigger>
+        <ContrastSelectContent class="w-(--reka-select-trigger-width)">
+          <SelectGroup>
+            <SelectLabel>Fruits</SelectLabel>
+            <ContrastSelectItem
+              v-for="(role, i) in championRoles"
+              :key="role + i" :value="role">
+              {{ role }}
+            </ContrastSelectItem>
+          </SelectGroup>
+        </ContrastSelectContent>
+      </Select>
+    </div>
+  </transition-slide>
 </template>
 
 <style scoped></style>

@@ -10,15 +10,15 @@ const format = computed (() => effect.description.replace(/not-first/g, 'not-fir
 
 <template>
   <div class="grid h-fit">
-<div class="grid grid-cols-[2fr_1fr] gap-10 h-fit">
-      <div v-html="format" class="*:not-first:mt-3 *:not-first:ml-4 leading-5 **:leading-4.5">
+<div class="grid grid-cols-[2fr_1fr]  h-fit">
+      <div v-html="format" class="*:not-first:mt-3 group/d *:not-first:ml-8 *:not-first:before:content-['▪︎'] *:not-first:before:absolute *:not-first:before:-left-3 *:not-first:before:text-5 *:not-first:before:-top-px *:not-first:relative leading-5 **:leading-4.5 border-b border-b-b3 flex flex-col justify-center  pr-6  pt-1 pb-8 ">
 </div>
 
 <template v-if="effect.leveling[0] && effect.leveling[0].attribute">
-      <div v-for="attribute in effect.leveling"  :key="attribute.attribute"  class="grid item-start  h-fit w-full col-start-2">
-<p class="mb-1 font-medium tracking-tight">{{attribute.attribute}}:</p>
+      <div v-for="attribute in effect.leveling"  :key="attribute.attribute"  class="flex flex-col h-full item-start justify-center pt-1 pb-8 pl-3  w-full col-start-2 border-b border-b-b3">
+<p class="mb-1 font-semibold tracking-tight">{{attribute.attribute}}:</p>
   
-<ValueFormatter v-if="attribute.modifiers[0].values.length" class="flex gap-px w-full" :array="attribute.modifiers[0].values" />
+<ValueFormatter v-if="attribute.modifiers[0].values.length" class="flex gap-px w-full dst" :array="attribute.modifiers[0].values" />
     <!-- <p v-if="attribute.modifiers[0].values.length" class="flex gap-px w-full">
         <span class="flex gap-px" v-for="(mods, i) in attribute.modifiers[0].values" :key="i">
           {{mods}}<span  v-if="i != attribute.modifiers[0].values.length - 1" >/</span>
