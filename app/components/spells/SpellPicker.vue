@@ -6,7 +6,7 @@ import { PopoverClose } from 'reka-ui'
 const props = defineProps<{
   model?: number
   alignOffset?: number
-  pocket?: pocket
+  pocket?: Pocket
   spell?: Spell
   class?: HTMLAttributes['class']
   selectedSpell?: Spell

@@ -34,7 +34,7 @@ const ps = usePocketStore()
 const ds = useDataStore()
 const theme = ref(pocketTheme)
 
-const rowData = ref<pocket[] | null>([...ps.pockets])
+const rowData = ref<Pocket[] | null>([...ps.pockets])
 
 const pocketData = ref(null)
 const selectData = ref(null)
@@ -61,7 +61,7 @@ function refreshGrid() {
   })
 }
 
-const gridOptions: GridOptions<pocket> = {
+const gridOptions: GridOptions<Pocket> = {
   columnHoverHighlight: false,
   rowHeight: 70,
   rowSelection: {

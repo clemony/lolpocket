@@ -155,30 +155,33 @@
   color: var(--color-challenger);
 }
 
-[data-tag='Support'] {
-  background: var(--inspiration-light);
+[data-role='support']{
+  &.role-bg{
+  @apply bg-inspiration;
+  }
 }
 
-[data-tag='Mage'] {
-  background-color: var(--sorcery) !important;
+[data-role='middle'] {
+  &.role-bg{
+  @apply bg-sorcery;
+}
 }
 
-[data-tag='Marksman'] {
-  background: var(--precision-light);
+[data-role='bottom'] {
+  &.role-bg{
+  @apply bg-precision;
 }
-
-[data-tag='Assassin'] {
-  background: var(--domination-light);
 }
-
-[data-tag='Tank'] {
-  background: var(--resolve-light);
+[data-role='top'] {
+  &.role-bg{
+  @apply bg-domination;
 }
-
-[data-tag='Fighter'] {
-  background: var(--orange-600) / 60;
 }
-
+[data-role='jungle'] {
+  &.role-bg{
+  @apply bg-resolve
+}
+}
 .gradient {
   background: linear-gradient(
   137deg,

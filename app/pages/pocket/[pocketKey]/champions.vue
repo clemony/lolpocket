@@ -1,19 +1,6 @@
 <script setup lang="ts">
+import { AnimatePresence, LayoutGroup, motion } from 'motion-v'
 
-import { useScroll } from '@vueuse/core'
-
-const emit = defineEmits(['update:isShow'])
-const target = ref(null)
-const {  y } = useScroll(target)
-const isShow = ref(false)
-
-watchEffect(() => {
-y.value > 80 ? emit('update:isShow', true) : emit('update:isShow', false)
-})
-const props = defineProps<{
-  pocket: pocket
-  quote: string | null
-}>()
 
 definePageMeta({
   name: 'champions',
@@ -21,29 +8,38 @@ definePageMeta({
   alias: '/pocket/:pocketKey/champions',
   section: 'pocket',
 })
-const pocket = ref(props.pocket)
-const quote = computedAsync (() => {
-return props.quote
-})
+
+const {pocket, puuid, champions}= defineProps<{
+  pocket: Pocket
+  puuid: string
+  champions: ChampionLite[]
+}>()
+
+
+/* const {loading, ready, forceReload} = useSummonerMastery(puuid) */
 
 </script>
 
 <template>
-  <div class="size-full  overflow-hidden relative">
-    <div ref="target" class=" overflow-y-auto absolute inset-0 top-0 left-0">
-    <div class="w-full px-17 pt-24 ">
-      <h1>
-        Champions
-      </h1>
-      <p class="text-4 font-serif mt-4 font-semibold w-full">
-        {{ quote }}
-      </p>
-    </div>
-    <div class="h-full w-full grid   gap-12 mt-8">
-      <LazyPocketChampionGrid :pocket="pocket" />
-    </div>
-  </div>
-  </div>
+  <LayoutGroup>
+      <motion.div  :layout="true"  class="  grid grid-flow-row auto-cols-auto  h-fit grid-cols-[repeat(auto-fill,minmax(70px,1fr))]  px-18 w-full  pt-2 pb-3 inset-0   gap-3 ">
+        <template
+          v-for="champion in champions"
+          :champ-key="champion.key">
+          <Champion
+          :class="{'grayscale': pocket.champions.children.map(c => c.key).includes(champion.key)}"
+   :champ-key="champion.key"  :name="champion.key"  class="hover-ring ">
+            <slot />
+
+            <input
+              v-model="pocket.champions.children" type="checkbox" :value="champion" class="hidden" />
+          </Champion>
+        </template>
+      </motion.div>
+
+  </LayoutGroup>
+
+
 </template>
 
 <style scoped></style>

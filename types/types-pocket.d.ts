@@ -1,12 +1,12 @@
 declare global {
 
-  interface pocket {
+  interface Pocket {
     key: string
     name: string
     roles: string[] | null
     champions: {
-      children: Champion[] | null
-      default: Champion | null
+      children: ChampioIndexn[] | null
+      default: ChampionIndex | null
     }
     items: {
       sets: ItemSet[] | null
@@ -27,25 +27,25 @@ declare global {
       pinned: boolean
       folder: string
     }
-    icon: string
-    notes: string[]
+    icon: string | null
+    notes?: string[] | null
     card: {
-      splash: string
-      align: string
-      color: string
-      filter: boolean
+      splash: string | null
+      align: string | null
+      color: string | null
+      filter: boolean | null
       font: {
-        0: string
-        1: string
+        0: string | null
+        1: string | null
       }
     }
     complete: {
       items: {
-        0: ItemSet
-        1: ItemSet
-        2: ItemSet
+        0: ItemSet | null
+        1: ItemSet | null
+        2: ItemSet | null
       }
-      runes: RuneSet
+      runes: RuneSet | null
     }
   }
 

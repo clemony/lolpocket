@@ -2,7 +2,7 @@
 import { roles } from './handleRoles'
 
 const props = defineProps<{
-  pocket: pocket
+  pocket: Pocket
 }>()
 
 const pocket = ref(props.pocket)

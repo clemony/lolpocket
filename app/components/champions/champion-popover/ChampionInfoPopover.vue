@@ -20,8 +20,8 @@ watch(
 
 <template>
   <Dialog>
-    <DialogTrigger class="size-full shadow-sm ">
-      <ChampionTile bg-size="250%" :url="champion.splash" :name="champion.name" text class="min-h-64" />
+    <DialogTrigger class="size-full">
+      <ChampionTile bg-size="140%" :url="champion.splash" :name="champion.name" text class="min-h-64" object-position="50% -2rem" />
     </DialogTrigger>
     <LazyMotionDialogContent :delay="0" class=" h-200 backdrop-blur-lg bg-b1/94  min-w-300 w-300 flex z-1000 py-9 px-8 flex gap-8">
       <div class="relative flex flex-col gap-6 h-full h-140 w-100">
@@ -55,8 +55,8 @@ watch(
       <div class="w-full">
         <AbilityData v-if="selected" :ability="champion.abilities[selected][0]" :index="selected[0]" />
 
-        <ChampionBio v-else-if="selected == null && tab == 'bio'" :lore="champion.lore" />
-        <ChampionBasicData v-else-if="selected == null && tab == 'stats'" :stats="champion.stats" />
+        <ChampionBio v-else-if="selected == null && tab == 'bio'" :champion="champion" />
+        <ChampionBasicData v-else-if="selected == null && tab == 'stats'" :champion="champion" />
       </div>
     </LazyMotionDialogContent>
   </Dialog>

@@ -17,3 +17,8 @@
   background-color: var(--color-b1);
   color: var(--color-bc);
 }
+
+.tippy-box[data-theme~='field'] {
+      @apply fieldset mt-1 !shadow-warm-soft !drop-shadow-sm drop-shadow-black/5 relative w-full h-fit bg-b2 border border-b3 p-4 rounded-box;
+    }
+

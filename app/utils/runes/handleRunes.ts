@@ -1,107 +1,13 @@
 import { hexoid } from 'hexoid'
 
 /* KEY
-1. createDefaultRune
-2. createDefaultShard
-3. newRuneSet
+
 4. resetRunes
 5. deleteRuneSet
 6. getShardClass
 7. getShardIcon
 8. getRunePathName
 */
-
-export function createDefaultRune(): {
-  id: number
-  key: string
-  icon: string
-  name: string
-  shortDesc: string
-  longDesc: string
-  tier?: number
-  type?: string
-  img?: string
-  stats?: string
-  path?: string
-} {
-  return {
-    name: 'empty',
-    id: 0,
-    key: '',
-    icon: '',
-    shortDesc: '',
-    longDesc: '',
-    tier: 0,
-    type: '',
-    img: '/img/runes/blankRune.webp',
-    stats: '',
-    path: 'empty',
-  }
-}
-
-export function createDefaultShard(): {
-  name: string
-  slotID: number
-  slotName: string
-  type: string
-  icon: string
-  stats: string
-  color: string
-} {
-  return {
-    name: 'empty',
-    stats: 'h',
-    slotID: 0,
-    slotName: 'empty',
-    type: 'h',
-    icon: 'oui:shard',
-    color: 'empty',
-  }
-}
-
-export function newRuneSet(key?) {
-  const ds = useDataStore()
-  const toID = hexoid()
-  const newSet = {
-    name: `${generateMediumString()} Set`,
-    key: toID(),
-    primary: {
-      path: 'Resolve',
-      runes: {
-        0: createDefaultRune(),
-        1: createDefaultRune(),
-        2: createDefaultRune(),
-        3: createDefaultRune(),
-      },
-    },
-
-    secondary: {
-      path: 'Inspiration',
-      runes: {
-        1: createDefaultRune(),
-        2: createDefaultRune(),
-        3: createDefaultRune(),
-      },
-    },
-    shards: {
-      0: createDefaultShard() as Shard,
-      1: createDefaultShard() as Shard,
-      2: createDefaultShard() as Shard,
-    },
-  }
-
-  if (key) {
-    const pocket = getPocket(key)
-    pocket.runes.sets.push(newSet)
-
-    if (pocket.runes.sets.length == 1) {
-      pocket.runes.default = newSet
-    }
-  }
-  else {
-    return newSet
-  }
-}
 
 export function resetRunes(pocket, set, number?) {
   const runes1 = [set.value.p1, set.value.p2, set.value.p3]

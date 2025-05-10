@@ -1,4 +1,3 @@
-import { hexoid } from 'hexoid'
 import { toast } from 'vue-sonner'
 /*
 createItem
@@ -8,38 +7,7 @@ addItemToSet
 remove items
 */
 
-export function createItem(): ItemLite {
-  return {
-    name: '',
-    id: 0,
-    rank: [],
-    stats: <any>([]),
-    purchasable: false,
-    cost: 0,
-    tags: [],
-  }
-}
-export function newItemSet(pocketKey?, setName?) {
-  const toID = hexoid()
-  const newSet = {
-    name: setName || `${generateMediumString()} Set`,
-    key: toID(),
-    items: [createItem()],
-  }
-
-  if (pocketKey) {
-    const pocket = getPocket(pocketKey)
-
-    newSet.items.splice(0, 1)
-    pocket.items.sets.push(newSet)
-    if (pocket.items.sets.length == 1) {
-      pocket.items.default = newSet
-    }
-  }
-  return newSet
-}
-
-export function removeItemFromSet(pocket: pocket, itemSet: ItemSet, itemx: ItemLite) {
+export function removeItemFromSet(pocket: Pocket, itemSet: ItemSet, itemx: ItemLite) {
   const set = pocket?.items.sets.find(set => set.key === itemSet.key)
 
   console.log('💠 - removeItemFromSet - set:', set)
@@ -52,7 +20,7 @@ export function removeItemFromSet(pocket: pocket, itemSet: ItemSet, itemx: ItemL
   }
 }
 
-export function addItemToSet(pocket: pocket, itemSet: ItemSet, item: ItemLite) {
+export function addItemToSet(pocket: Pocket, itemSet: ItemSet, item: ItemLite) {
   const set = pocket.items.sets.find(set => set.key === itemSet.key)
 
   if (set && Array.isArray(set.items)) {
@@ -60,7 +28,7 @@ export function addItemToSet(pocket: pocket, itemSet: ItemSet, item: ItemLite) {
   }
 }
 
-export function duplicateItemSet(pocket: pocket, set: ItemSet) {
+export function duplicateItemSet(pocket: Pocket, set: ItemSet) {
   const newSet = deepCopy(set)
   pocket.items.sets.push(newSet)
 }
@@ -71,7 +39,7 @@ export function resetItems(set: ItemSet) {
   }
 }
 
-export function copyItemSetToPocket(targetPocket: pocket, set: ItemSet) {
+export function copyItemSetToPocket(targetPocket: Pocket, set: ItemSet) {
   const newSet = deepCopy(set)
 
   if (!set || !newSet || !targetPocket) {
@@ -83,7 +51,7 @@ export function copyItemSetToPocket(targetPocket: pocket, set: ItemSet) {
   }
 }
 
-export function deleteItemSet(pocket: pocket, set: ItemSet) {
+export function deleteItemSet(pocket: Pocket, set: ItemSet) {
   const i = pocket.items.sets.findIndex(s => s.key == set.key)
   if (i) {
     pocket.items.sets.splice(i, 1)

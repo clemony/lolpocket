@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
   set: ItemSet
-  pocket: pocket
+  pocket: Pocket
 }>()
 
 const pocket = computed (() => {
@@ -18,11 +18,11 @@ const coreItem = computed (() => {
 
   <Collapsible>
     <CollapsibleTrigger class="flex gap-3 items-center cursor-pointer flex-nowrap group/cli pl-3  w-full ">
-      <RightbarIconWrapper class="!size-8 shrink-0">
+      <span class="!size-8 shrink-0">
         <Image v-if="coreItem" :image="`/img/item/${coreItem.id}.webp`" :alt="coreItem.name" class="rounded-full shrink-0 aspect-square" />
 
         <Placeholder v-else class="rounded-full size-full" />
-      </RightbarIconWrapper>
+      </span>
       <span class="grow truncate text-left">
         {{ props.set.name }}
       </span>
@@ -31,17 +31,17 @@ const coreItem = computed (() => {
 
       <icon name="up-sm" class="group-data-[state=open]/cli:rotate-180 size-4.5 tldr-30" />
     </CollapsibleTrigger>
-    <RightbarChildContent class="w-full">
+    <ul class="w-full">
       <ul class="w-full">
         <li v-for="item in props.set.items" :key="item.id" class="flex gap-3 py-2 items-center w-full pl-2">
-          <RightbarIconWrapper class="shrink-0 aspect-square">
+          <span class="shrink-0 aspect-square">
             <Image :image="`/img/item/${item.id}.webp`" :alt="item.name" class="rounded-full aspect-square shrink-0 !size-8.5" />
-          </RightbarIconWrapper>
+          </span>
           <span class="grow truncate">
             {{ item.name }}
           </span>
         </li>
       </ul>
-    </RightbarChildContent>
+    </ul>
   </Collapsible>
 </template>

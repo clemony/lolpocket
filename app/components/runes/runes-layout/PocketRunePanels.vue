@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
   set: RuneSet
-  pocket?: pocket
+  pocket?: Pocket
 }>()
 
 const pocket = ref(props.pocket)

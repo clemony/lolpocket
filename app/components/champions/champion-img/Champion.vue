@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from 'vue'
-import { motion } from 'motion-v'
 
-const props = defineProps<{
-  champion: Champion
-  pocket?: pocket
+const {name, champKey, class: className} = defineProps<{
+  name: string
+  champKey?: string
   class?: HTMLAttributes['class']
 }>()
 /*
@@ -15,28 +13,20 @@ const isHovered = useElementHover(trigger)
 </script>
 
 <template>
-  <motion.label
-    ref="trigger"
-    :layout="true"
-    :animate="{ scale: [0.8, 1], opacity: [0, 1] }"
-    :exit="{
-      scale: [1.6, 0.8],
-      opacity: 0,
-    }"
-    :class=" cn('shadow-sm btn relative rounded-lg **:select-none p-0', props.class)">
-    <div class="rounded-lg overflow-hidden size-full">
+  <label
+    :class=" cn('shadow-sm overflow-hidden drop-shadow-sm relative rounded-lg **:select-none p-0',className)">
       <slot />
 
-      <Image
-        :key="props.champion.name"
-
-        :image="`/img/champion/${champion.id}.webp`"
-        :alt="`${props.champion.name} Image`"
+      <Img
+        :key="name"
+:quality="100"
+        :img="`/img/champion/${champKey}.webp`"
+        :alt="`${name} Image`"
         class="size-full scale-115" />
 
-      <PrismaticShine v-if=" isHovered" :key="champion.id" class="absolute scale-107 top-0 left-0 z-1" />
-    </div>
-  </motion.label>
+      <PrismaticShine v-if=" isHovered"  class="absolute scale-107 top-0 left-0 z-1" />
+  
+  </label>
 </template>
 
 <style scoped></style>

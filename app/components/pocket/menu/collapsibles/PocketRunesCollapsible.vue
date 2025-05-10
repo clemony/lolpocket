@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  pocket: pocket
+  pocket: Pocket
 }>()
 const ds = useDataStore()
 
@@ -16,8 +16,8 @@ const defaultSet = computed (() => {
 <template>
   <Collapsible>
     <CollapsibleTrigger class="group/state w-full">
-      <RightbarButton>
-        <RightbarIconWrapper :active="pocket.runes.default && defaultSet.primary && defaultSet.primary.runes[0] && defaultSet.primary.runes[0].name != 'empty' ">
+      <NavBtn>
+        <span :active="pocket.runes.default && defaultSet.primary && defaultSet.primary.runes[0] && defaultSet.primary.runes[0].name != 'empty' ">
           <Image
             v-if="pocket.runes.default && defaultSet.primary && defaultSet.primary.runes[0]"
             :image="`/img/runes/${defaultSet.primary.path}/${defaultSet.primary.runes[0].name.replace(/\s/g, '')}.webp`"
@@ -25,7 +25,7 @@ const defaultSet = computed (() => {
           <i-rune-icon
             v-else
             class="h-5.5 w-auto dst shrink-0 peer-checked:text-nc" />
-        </RightbarIconWrapper>
+        </span>
         <div class="capitalize truncate max-w-41">
           {{ pocket.runes.default && defaultSet.primary && defaultSet.primary.runes[0] ? pocket.runes.default.primary.runes[0].name : 'Runes' }}{{ pocket.runes.default && pocket.runes.default.secondary.path ? ` / ${pocket.runes.default.secondary.path}` : '' }}
         </div>
@@ -34,11 +34,11 @@ const defaultSet = computed (() => {
         <RunesCounter :pocket="pocket" />&nbsp;
 
         <StateCaret />
-      </RightbarButton>
+      </NavBtn>
     </CollapsibleTrigger>
     <CollapsibleContent class="CollapsibleContent w-full mb-3">
-      <RightbarChildContent>
-        <RightbarLi v-for="set in pocket.runes.sets" :key="set.key" class=" justify-start gap-3">
+      <ul>
+        <li v-for="set in pocket.runes.sets" :key="set.key" class=" justify-start gap-3">
           <div class="!size-8 rounded-full shrink-0 aspect-square -ml-0.75">
             <Image
               v-if="set && set.primary && set.primary.path && set.primary.runes[0] && set.primary.runes[0].name != 'empty'"
@@ -50,8 +50,8 @@ const defaultSet = computed (() => {
 
           <RemoveButton tip="Delete Set" @click="deleteRuneSet(set, pocket)" />
           <StarButton :model="pocket.runes.default" tip="Default Rune Set" :value="set" @update:model="e => pocket.runes.default = e" />
-        </RightbarLi>
-      </RightbarChildContent>
+        </li>
+      </ul>
       <div class="w-full flex pr-9 pl-10 mt-2 ">
         <button class="btn btn-sm px-5 w-full btn-neutral justify-end text-2 *:text-nc/80 hover:!bg-neutral/85" @click="newRuneSet(pocket.key)">
           <icon name="add-sm" class="stroke-[1.5] size-6" />Rune Set

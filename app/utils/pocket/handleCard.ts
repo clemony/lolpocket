@@ -3,7 +3,7 @@ import { toBlob, toJpeg, toPixelData, toPng, toSvg } from 'html-to-image'
 import download from "downloadjs";
 
 const props = defineProps<{
-  pocket: pocket
+  pocket: Pocket
 }>()
 definePageMeta({
   name: 'complete',

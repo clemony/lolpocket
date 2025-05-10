@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
   champion: Champion
-  pocket: pocket
+  pocket: Pocket
   alignOffset?: number
   sideOffset?: number
 }>()

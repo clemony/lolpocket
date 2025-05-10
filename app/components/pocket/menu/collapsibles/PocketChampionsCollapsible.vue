@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  pocket: pocket
+  pocket: Pocket
 }>()
 
 const route = useRoute()
@@ -14,34 +14,34 @@ const cs = useChampStore()
 <template>
   <Collapsible>
     <CollapsibleTrigger class="w-full group/state" >
-      <RightbarButton>
-        <RightbarIconWrapper v-tippy="{content: '', trigger: 'click', triggerRef: champTrigger,  placement: 'left', arrow: true, }" :active="pocket.champions.default && pocket.champions.default.id != null">
+      <NavBtn>
+        <span v-tippy="{content: '', trigger: 'click', triggerRef: champTrigger,  placement: 'left', arrow: true, }" :active="pocket.champions.default && pocket.champions.default.id != null">
           <i-no-champ
             v-if="pocket.champions.default == null"
             class="h-6 w-auto dst shrink-0 peer-checked:text-nc opacity-64" />
           <span v-else class="size-full overflow-hidden rounded-full">
             <img :src="`/img/champion/${pocket.champions.default.id}.webp`" class="rounded-full scale-116 size-full aspect-square shadow-sm shrink-0" />
           </span>
-        </RightbarIconWrapper>
+        </span>
         <span class="capitalize">
-          {{ pocket.champions.default && pocket.champions.default.name ? pocket.champions.default.name : 'Champions' }}
+          {{ pocket.champions.default && pocket.champions.default.key ? pocket.champions.default.key: 'Champions' }}
 
         </span>
         <Grow />
 
         <ChampionsCounter :pocket="pocket" />&nbsp;
    <StateCaret  />
-               </RightbarButton>
+               </NavBtn>
     </CollapsibleTrigger>
 
-    <RightbarChildContent>
-      <RightbarLi v-for="champion in pocket.champions.children" :key="champion.name">
+    <ul>
+      <li v-for="champion in pocket.champions.children" :champ-key="champion.key">
         <img :src="`/img/champion/${champion.id}.webp`" class="rounded-full  size-8 aspect-square shadow-sm shrink-0" />
-        <span class="grow">{{ champion.name }}</span>
+        <span class="grow">{{ champion.key }}</span>
 
         <RemoveButton tip="Remove Champion" @click="removeChamp(champion, pocket)" />
         <StarButton :model="pocket.champions.default" tip="Default Champion" :value="champion" @update:model="e => pocket.champions.default = e" />
-      </RightbarLi>
-    </RightbarChildContent>
+      </li>
+    </ul>
   </Collapsible>
 </template>

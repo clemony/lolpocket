@@ -3,7 +3,7 @@ import { fonts } from './fonts'
 
 const props = defineProps<{
   model: number
-  pocket: pocket
+  pocket: Pocket
   tip?: string
 }>()
 </script>

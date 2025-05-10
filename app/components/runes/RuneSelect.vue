@@ -2,7 +2,7 @@
 const props = defineProps<{
   pathSet?: number
   runeSet?: number
-  pocket?: pocket
+  pocket?: Pocket
   selectedRune?: string
   modelValue?: string
 }>()

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  pocket: pocket
+  pocket: Pocket
 }>()
 
 const pocket = computed (() => {
@@ -14,6 +14,6 @@ const champion = computed (() => {
 
 <template>
   <h1 v-if="champion" class="!text-7 font-serif grow  opacity-90 dst font-bold pb-3 ">
-    {{ champion.name }}
+    {{ champion.key }}
   </h1>
 </template>

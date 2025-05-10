@@ -10,6 +10,7 @@ const props = defineProps<{
   alt: string
   class?: HTMLAttributes['class']
   imgClass?: string
+  quality?: number
 }>()
 
 const emit = defineEmits(['loaded'])

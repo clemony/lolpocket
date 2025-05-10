@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { motion } from 'motion-v'
 
-const us = useUiStore()
 
 const route = useRoute()
+
+
 </script>
 
 <template>

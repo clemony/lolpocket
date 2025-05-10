@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import Fuse from 'fuse.js'
 
+const cs = useChampStore()
+
 const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
-const is = useItemStore()
-const ds = useDataStore()
 
-const championss = computedAsync(async () => {
-  return await [...(ds.champions || [])]
+const { data } = await useFetch('/api/lists/champion-index.json')
+const champions = computedAsync(async () => {
+  return await Object.values(data.value) as ChampionIndex[]
 }, null)
 
 const searchQuery = ref('')
@@ -16,7 +17,7 @@ const searchQuery = ref('')
 const fuse = ref<Fuse<any> | null>(null)
 
 watch(
-  () => championss.value,
+  () => champions.value,
   (newChampions) => {
     if (newChampions && newChampions.length > 0) {
       fuse.value = new Fuse(newChampions, {
@@ -30,7 +31,7 @@ watch(
 )
 const searchResult = computed(() => {
   if (!searchQuery.value) {
-    return championss.value || []
+    return champions.value || []
   }
   if (!fuse.value)
     return []
@@ -39,25 +40,21 @@ const searchResult = computed(() => {
 })
 watch(searchResult, (newSearchResults) => {
 
-  // console.log('💠 - Search Results:', newSearchResults)
+  console.log('💠 - Search Results:', newSearchResults)
 })
+
+const emit = defineEmits(['update:input'])
+
 </script>
 
 <template>
-  <label class="input" :class="cn('relative max-w-100 items-center', props.class)">
-    <icon
-      name="teenyicons:search-outline"
-      class="pointer-events-none  size-4 shrink-0 opacity-70" />
-    <input
-      v-model="searchQuery"
-      placeholder="Search Champions..."
-      class="grow !text-3 pl-2" />
 
-    <slot />
-    <button class="btn btn-ghost btn-square btn-sm absolute  right-2" @click="searchQuery = null">
-      <icon name="x-sm" class="" />
-    </button>
-  </label>
+    <Input
+      v-model="searchQuery"
+      @update:model-value="emit('update:input', searchQuery)"
+      placeholder="Search Champions..."
+     :class="cn('size-full border-0 shadow-none py-0 m-0 size-full pl-8', props.class)"/>
+
 </template>
 
 <style></style>

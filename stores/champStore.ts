@@ -2,11 +2,21 @@ import type { GridApi } from 'ag-grid-community'
 import { defineStore } from 'pinia'
 
 export const useChampStore = defineStore('ChampStore', () => {
+  const summonerMastery = ref<ChampionMasteryEntry>({})
+  console.log('💠 - useChampStore - summonerMastery:', summonerMastery)
+  const lastFetchedAt = ref<number | null>(null)
   const selectedChampion = ref(null)
   const championSplashDropdown = ref(null)
   const sortChampsAZ = ref()
 
   const championFilter = ref<ChampionFilter>({
+    position: null,
+    role: null,
+    query: null,
+    result: null,
+  })
+
+  const pChampionFilter = ref<ChampionFilter>({
     position: null,
     role: null,
     query: null,
@@ -20,15 +30,16 @@ export const useChampStore = defineStore('ChampStore', () => {
   const championGridType = ref<'calculated' | 'base' | 'growth'>('calculated')
 
   return {
+    summonerMastery,
+    lastFetchedAt,
     championSplashDropdown,
-    selectedChampion,
-    sortChampsAZ,
+
+    pChampionFilter,
+    championFilter,
 
     dbChampionGridState,
     championGridApi,
-    championFilter,
     dbChampionStatListKey,
-
     championGridLevel,
     championGridType,
   }

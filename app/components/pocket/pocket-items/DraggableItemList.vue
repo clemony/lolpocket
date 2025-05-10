@@ -5,7 +5,7 @@ import type { DraggableEvent } from 'vue-draggable-plus'
 import { hexoid } from 'hexoid'
 
 const props = defineProps<{
-  pocket?: pocket
+  pocket?: Pocket
   dragDisabled?: boolean
   class?: HTMLAttributes['class']
 

@@ -26,6 +26,7 @@ export default defineAppConfig({
       'and': 'mynaui:ampersand',
       'x-solid': 'teenyicons:x-circle-solid',
       'info': 'teenyicons:info-outline',
+      'slash': 'radix-icons:slash',
 
       // check
       'tick': 'teenyicons:tick-outline',

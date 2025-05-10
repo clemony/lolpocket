@@ -66,7 +66,7 @@ export const summonerLinks = [
   }, */
 ]
 
-export function getPocketLinks(pocket: pocket) {
+export function getPocketLinks(pocket: Pocket) {
   const pocketPages = [
     {
 

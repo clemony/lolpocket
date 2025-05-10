@@ -1,86 +1,152 @@
 import { hexoid } from 'hexoid'
 import { generate } from 'random-words'
 
-export function getKey() {
-  const newKey = new Date().toLocaleString().replace(/,\s/g, '').replace(/\s+/g, '').replace(/\//g, '').replace(/:/g, '').trim().toString()
+const moreWords = [
+  'Towers',
+  'Minions',
+  'Minion Block',
+  'Lucker Dog',
+  'Dongers',
+  'Poggers',
+  'Chatbanned',
+  'Inting',
+  'Clapped',
+  'One Trick',
+  'Cracked',
+  'Diff',
+  'Turbo Fed',
+  'Skill Issue',
+  'Boosted',
+  'Jungle Gap',
+  'Tilted',
+  'Giga Chad',
+  'KDA Farmer',
+  'Smurf',
+  'League Addict',
+  'Auto Filled',
+  'Lag Spike',
+  'GGEZ',
+  'FF15',
+  'Nooblord',
+  'Big Brain',
+  'Omega Tilt',
+  'Perma Ban',
+  'Hardstuck',
+  'Report Mid',
+  'Solo Bolo',
+  '420 CS',
+  'Roam Gap',
+  'Mid Gap',
+  'Supp Gap',
+  'Bot Gap',
+  'Top Gap',
+  'Team Gap',
+  'Vision Score',
+  'Outplayed',
+  'C9 Engage',
+  'Gamer Juice',
+  'Inting Sion',
+  'Solo Q',
+  'Clown Fiesta',
+  'ARAM Main',
+  'Split Pusher',
+  'Kite Back',
+  'Drag Soul',
+  'Baron Steal',
+  'Thresh Hook',
+  'Outscaled',
+  'Rage Quit',
+  'Blue Side Diff',
+  'Bot Gap',
+  'Macro Diff',
+  'CSing',
+  'Power Spike',
+  'ADC Diff',
+  'Support Gap',
+  'Coinflip Match',
+  'Dive Fiesta',
+  'Reset Meta',
+  'Ward Hop',
+  'All Chat',
+  'Gold Funnel',
+  'Roaming Support',
+  'Hypercarry',
+  'Zoning Ult',
+  'Flash Engage',
+  'Scaling Comp',
+  'Bush Cheese',
+  'Ban Phase',
+  'Draft Diff',
+  'Team Comp',
+  'Peel Me',
+  'One Combo',
+  'Drag Timer',
+  'Pink Ward',
+  'Tower Dive',
+  'Reset City'
+]
 
-  return newKey
+// Generate a compact date-based key
+export function getKey(): string {
+  return new Date()
+    .toLocaleString()
+    .replace(/,\s/g, '')
+    .replace(/\s+/g, '')
+    .replace(/\//g, '')
+    .replace(/:/g, '')
+    .trim()
 }
 
-export function generateKey() {
-  const toID = hexoid()
-  return toID()
+// Generate a unique ID using hexoid
+export function generateKey(): string {
+  return hexoid()()
 }
 
-function getRandomElement(array: string[]): string {
+// Capitalize first letter
+function capitalize(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1)
+}
+
+// Pick a random element from an array
+function getRandomElement<T>(array: T[]): T {
   return array[Math.floor(Math.random() * array.length)]
 }
 
-const moreWords = ['Towers', 'Minions', 'Minion Block', 'Lucker Dog', 'Dongers', 'Poggers', 'Chatbanned']
-
+// Strip unwanted words/characters and split into clean words
 function cleanName(name: string): string[] {
-  const cleanedName = name
+  return name
     .replace(/\b(the|of)\b/gi, '')
     .replace(/\./g, '')
     .trim()
-
-  return cleanedName.split(/\s+/).filter(Boolean)
+    .split(/\s+/)
+    .filter(Boolean)
 }
 
-function words() {
-  let key = ''
-  while (key.length < 4 || key.length > 16) {
-    key = generate({ min: 1, max: 3, join: ' ' })
+// Generate random words between given limits
+function generateWords(min: number, max: number): string {
+  let result = ''
+  while (result.length < 4 || result.length > 16) {
+    result = generate({ min, max, join: ' ' })
   }
-  key = key.charAt(0).toUpperCase() + key.slice(1)
-  return key
+  return capitalize(result)
 }
 
-function word() {
-  let key = ''
-  while (key.length < 4 || key.length > 16) {
-    key = generate({ exactly: 1, join: ' ' })
-  }
-  key = key.charAt(0).toUpperCase() + key.slice(1)
-  return key
-}
+// Shared word generation logic
+async function generateName(length: 'short' | 'medium'): Promise<string> {
+  const store = useDataStore()
+  const championWords = store.champions.flatMap(champ => cleanName(champ.name))
 
-export async function generateMediumString(): Promise<string> {
-  const championNames = useDataStore().champions.flatMap(champion => cleanName(champion.name))
+  const itemData = await $fetch('/api/lists/item-index.json')
+  const itemWords = (Object.values(itemData) as ItemIndex[]).flatMap(item => item.name)
 
-const { data: itemData } = await useFetch('/api/lists/item-index.json')
-  const items = Object.values(itemData.value) as ItemIndex[]
-
-  const itemNames = items.flatMap(item => item.name)
-
-  const leagueWords = championNames.concat(itemNames).concat(moreWords)
-
+  const leagueWords = [...championWords, ...itemWords, ...moreWords]
   const leagueWord = getRandomElement(leagueWords)
-  const generatedWords = [words()]
 
-  const allWords = [leagueWord, ...generatedWords]
+  const generated = generateWords(length === 'short' ? 1 : 1, length === 'short' ? 1 : 3)
+  const shuffled = [leagueWord, generated].sort(() => Math.random() - 0.5)
 
-  const shuffledWords = allWords.sort(() => Math.random() - 0.5)
-
-  return shuffledWords.join(' ')
+  return shuffled.join(' ')
 }
 
-export async function generateShortString(): Promise<string> {
-  const championNames = useDataStore().champions.flatMap(champion => cleanName(champion.name))
-
-const { data: itemData } = await useFetch('/api/lists/item-index.json')
-  const items = Object.values(itemData.value) as ItemIndex[]
-
-  const itemNames = items.flatMap(item => item.name)
-
-  const leagueWords = championNames.concat(itemNames).concat(moreWords)
-
-  const leagueWord = getRandomElement(leagueWords)
-  const generatedWords = [word()]
-
-  const allWords = [leagueWord, ...generatedWords]
-
-  const shuffledWords = allWords.sort(() => Math.random() - 0.5)
-
-  return shuffledWords.join(' ')
-}
+export const generateMediumString = () => generateName('medium')
+export const generateShortString = () => generateName('short')

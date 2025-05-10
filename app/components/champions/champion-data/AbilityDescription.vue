@@ -9,9 +9,9 @@ const format = computed (() => effect.description.replace(/not-first/g, 'not-fir
 </script>
 
 <template>
-  <div class="grid h-fit">
-<div class="grid grid-cols-[2fr_1fr]  h-fit">
-      <div v-html="format" class="*:not-first:mt-3 group/d *:not-first:ml-8 *:not-first:before:content-['▪︎'] *:not-first:before:absolute *:not-first:before:-left-3 *:not-first:before:text-5 *:not-first:before:-top-px *:not-first:relative leading-5 **:leading-4.5 border-b border-b-b3 flex flex-col justify-center  pr-6  pt-1 pb-8 ">
+  <div class="grid h-fit w-full">
+<div class="grid grid-cols-[2fr_1fr] w-full h-fit">
+      <div v-html="format" class="*:not-first:mt-3 group/d *:not-first:ml-8 *:not-first:before:content-['▪︎'] *:not-first:before:absolute *:not-first:before:-left-3 *:not-first:before:text-5 **:w-full *:not-first:before:-top-px *:not-first:relative leading-5 **:leading-4.5 border-b border-b-b3 flex flex-col justify-center  pr-6  pt-1 pb-8 ">
 </div>
 
 <template v-if="effect.leveling[0] && effect.leveling[0].attribute">

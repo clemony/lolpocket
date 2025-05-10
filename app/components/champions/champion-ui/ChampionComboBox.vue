@@ -3,7 +3,7 @@ import { PopoverClose } from 'reka-ui'
 
 const props = defineProps<{
   selectedIcon?: string
-  pocket?: pocket
+  pocket?: Pocket
   class?: HTMLAttributes['class']
   contentClass?: HTMLAttributes['class']
 

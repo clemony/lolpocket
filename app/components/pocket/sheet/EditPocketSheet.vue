@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 // Form fields
 const props = defineProps<{
-  pocket: pocket
+  pocket: Pocket
 }>()
 const ts = useTempStore()
 const pocket = ref(props.pocket)

@@ -1,22 +1,28 @@
 declare global {
 
-  interface ChampionLite {
-    id: string
+    type ChampionId = number
+  type ChampionName = string
+
+  interface ChampionIndex {
+    id: ChampionId
     key: string
-    name: string
+    name: ChampionName
+  }
+
+  interface ChampionLite extends ChampionIndex {
     resource: string
     attackType: string
     stats: Record<string, ChampionStat>
     positions: string[]
     roles: string[]
     attributeRatings: Record<string, number>
-    lore?: string
     splash?: string
   }
 
   interface Champion extends ChampionLite {
     fullName: string
     title: string
+    lore?: string
     abilities: Record<'P' | 'Q' | 'W' | 'E' | 'R', Ability[]>
     splash?: string
   }
@@ -25,19 +31,24 @@ declare global {
     skins?: any
   }
 
+  interface StatEntry {
+    flat?: number
+    perLevel?: number
+  }
 
-interface StatEntry {
-  flat?: number
-  perLevel?: number
-}
-
-interface ChampionLiteStat extends ChampionLite{
+  interface ChampionLiteStat extends ChampionLite {
     attackSpeedRatio?: StatEntry
-}
+  }
 
   interface Skin {
     name: string
     splashPath: string
+  }
+
+  interface SkinEntry {
+    id: ChampionId
+    name: ChampionName
+    skins: SkinEntry[]
   }
 
   interface Ability {
@@ -96,14 +107,6 @@ interface ChampionLiteStat extends ChampionLite{
     perLevel: number
   }
 
-  interface ChampionAbilities {
-    [key: string]: Ability // e.g., { Q: Ability, W: Ability, E: Ability, R: Ability }
-  }
-
-  interface ChampionsData {
-    [championName: string]: ChampionAbilities
-  }
-
   interface BayesianChampion {
     games: number
     wins: number
@@ -116,5 +119,13 @@ interface ChampionLiteStat extends ChampionLite{
     matchIndexes: number[]
     gameVersions: string[]
   }
+
+  interface ChampionMasteryIndex {
+    key: string
+    level: number
+    points: number
+  }
+type ChampionMasteryEntry = Record<ChampionId, ChampionMasteryIndex>
+
 }
 export { }

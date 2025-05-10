@@ -25,18 +25,23 @@ const quote = ref(null)
 onMounted (() => {
   quote.value = getQuote()
 })
+
+const query = ref(null)
 </script>
 
 <template>
-  <menu class="overflow-hidden inset-x-0 px-8 pt-6 flex flex-col gap-5 h-42 z-1 top-16  bg-b1 absolute ">
-    <div class="flex  items-center gap-4 ">
-      <div class="flex items-center grow gap-2.5">
+  <menu class="overflow-hidden inset-x-0 px-8 pt-11 flex flex-col gap-5 h-32 z-1 top-16  bg-b1 absolute ">
+    <div class="flex  items-center gap-10 ">
+      <div class="flex relative items-center grow gap-2.5 pl-15">
 
+      <ExpandSearch v-model:query="cs.championFilter.query" @update:reset="cs.championFilter.query = null" class="absolute **:[&_svg]:!opacity-96  left-0 btn-neutral max-w-60 ">
+        <ChampionSearch v-model:input="cs.championFilter.query" @update:input="e => cs.championFilter.query = e" class=""/>
+      </ExpandSearch>
         <h1 class="!text-9 tracking-tight mr-6">
           Champions
         </h1>
         <p
-          class="text-4 dst items-center px-2 font-serif tracking-wide text-nowrap flex ">
+          class="text-3 dst items-center pt-1 px-2 font-serif tracking-wide text-nowrap flex ">
           {{ quote }}
         </p>
       </div>
@@ -50,33 +55,24 @@ onMounted (() => {
         <NumberFieldIncrement />
       </NumberPickerContent>
     </NumberField> -->
-
-   
-
-      <Tabs v-model:model-value="tabs" class="w-90 shrink-0  **:pointer-events-auto ">
-        <IndicatorTabsList class="grid grid-cols-2 h-10">
-          <IndicatorTabsTrigger value="/library/champions" @click="navigateTo('/library/champions')">
+      <Grow />
+      <ChampionRoleFilter />
+      <ChampionPositionFilter />
+      <Tabs v-model:model-value="tabs" class="w-80 shrink-0  **:pointer-events-auto ">
+        <IndicatorTabsList class="grid grid-cols-2 h-10 border !border-b3/70 bg-b2">
+          <IndicatorTabsTrigger value="/library/champions" :class="{ '!text-nc': tabs == '/library/champions' }" @click="navigateTo('/library/champions')">
             Grid
           </IndicatorTabsTrigger>
-          <IndicatorTabsTrigger value="/library/champion_list" @click="navigateTo('/library/champion_list')">
+          <IndicatorTabsTrigger value="/library/champion_list" :class="{ '!text-nc': tabs == '/library/champion_list' }" @click="navigateTo('/library/champion_list')">
             List
           </IndicatorTabsTrigger>
-          <TabIndicator />
+          <TabIndicator contrast />
         </IndicatorTabsList>
       </Tabs>
     </div>
-    <div class="flex gap-8 items-center  w-full">
-      <ChampionPositionFilter />
-      <ChampionRoleFilter />
-      <Grow  />
-  <ChampionSearch class="input rounded-lg-2 border-b4/80  !-mt-2 !w-89  !h-11 ">
-    </ChampionSearch>
-    <!--    <button
-          class="btn btn-neutral font-normal"
-          @click="resetItems">
-          Reset Filters
-        </button> -->
-    </div><!--
-      <ChampionGridTypeToggle /> -->
+    <div class="flex gap-12 items-center  w-full">
+
+    </div>
+    <!-- <ChampionGridTypeToggle /> -->
   </menu>
 </template>

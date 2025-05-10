@@ -3,7 +3,7 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
   sideOffset?: number
   type?: string
-  pocket: pocket
+  pocket: Pocket
   hasData?: boolean
 }>()
 

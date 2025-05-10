@@ -2,7 +2,7 @@
 import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<{
-  pocket: pocket
+  pocket: Pocket
   class?: HTMLAttributes['class']
   placeholderClass?: HTMLAttributes['class']
 }>()

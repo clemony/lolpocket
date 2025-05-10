@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
   set: object
-  pocket: pocket
+  pocket: Pocket
   setIndex: number
 }>()
 

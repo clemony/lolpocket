@@ -16,10 +16,13 @@ console.log('💠 - ability:', ability)
     </div>
 
     <transition-slide group class="w-full flex flex-wrap items-center justify-between gap-x-6 gap-y-3 mt-6 **:font-medium pr-1">
-      <p v-if="ability.cooldown.modifiers.length" v-tippy="'Cooldown'" class="flex gap-0 items-center">
+      <p v-if="ability.cooldown.modifiers.length" v-tippy="'Cooldown'" class="flex items-center">
         <i-stats-ah name="ph:hourglass" class="size-3.5 dst text-bc mr-2" />
-        <span v-for="(cd, i) in ability.cooldown.modifiers[0].values" :key="i" class="align-bottom  flex gap-px ">{{ cd }}<span v-if="i != ability.cooldown.modifiers[0].values.length - 1" class="tracking-wider">/</span>
+        
+        <span class="flex overflow-x-scroll gap-0 items-center max-w-60 justify-start truncate ">
+        <span v-for="(cd, i) in ability.cooldown.modifiers[0].values" :key="i" class="align-bottom  space-x-px">{{ Math.round(cd * 100) / 100 }}<span v-if="i != ability.cooldown.modifiers[0].values.length - 1" class="tracking-wider">/</span>
         </span>
+      </span>
       </p>
 
       <div v-if="ability.cost.length" v-tippy="`${ability.resource.replace('per_second', '/ second')} Cost`" class="flex gap-2 items-center">

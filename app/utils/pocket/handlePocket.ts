@@ -1,21 +1,25 @@
 import { hexoid } from 'hexoid'
 import { toast } from 'vue-sonner'
 
-export async function addPocket(name: string, tags: Array<string>, icon: string, key?: string) {
+export async function addPocket(name: string, tags: string[], icon: string, key?: string) {
   const toID = hexoid()
   const pocketKey = key || toID()
 
-  const itemSet = newItemSet('', 'New Set')
+  const ps = usePocketStore()
+
+  const defaultChampion = createDefaultChampion()
+  const itemSet = newItemSet('', 'Set 1')
   const runeSet = newRuneSet()
   const spellSet = newSpellSet()
-  const newPocket: pocket = {
+
+  const newPocket: Pocket = {
     key: pocketKey,
     name: name || generateShortString().toString(),
-    roles: [],
+    roles: ['all'],
     icon: icon || '/img/lp/192.webp',
     champions: {
-      children: [],
-      default: null,
+      children: [defaultChampion],
+      default: defaultChampion,
     },
     items: {
       sets: [itemSet],
@@ -29,7 +33,7 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
       sets: [spellSet],
       default: null,
     },
-    tags: tags || [''],
+    tags: tags?.length ? tags : [''],
     location: {
       pinned: false,
       folder: 'all',
@@ -47,7 +51,7 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
     },
     complete: {
       items: {
-        0: newItemSet('', 'Set 1'),
+        0: itemSet,
         1: newItemSet('', 'Set 2'),
         2: newItemSet('', 'Set 3'),
       },
@@ -56,13 +60,14 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
     dateCreated: createDateObject(),
     dateUpdated: createDateObject(),
   }
+
+  // Clean up any placeholder item in the first set
+  newPocket.items.sets[0].items = []
   console.log('💠 - addPocket - newPocket:', newPocket)
 
-  newPocket.items.sets[0].items.splice(0, 1)
-  const ps = usePocketStore()
   ps.pockets.push(newPocket)
-  console.log('💠 - addPocket - ps.pockets:', ps.pockets)
 
+  console.log('💠 - addPocket - ps.pocket:', ps.pockets)
   const newPocketToast = toast.success(`Pocket ${newPocket.name} created.`, {
     description: 'Head to your new pocket and start crafting?',
     duration: 7000,
@@ -75,85 +80,4 @@ export async function addPocket(name: string, tags: Array<string>, icon: string,
       onClick: () => toast.dismiss(newPocketToast),
     },
   })
-}
-// delete
-
-export function deletePocket(pocket) {
-  const ps = usePocketStore()
-  const route = useRoute()
-  const inPocket = route.path == `/pocket/${pocket.key}`
-  const index = ps.pockets.findIndex(p => p === pocket)
-  console.log('💠 - deletePocket - inPocket:', inPocket)
-
-  ps.trashFolder.push(pocket)
-  pocket.location.folder = 'trash'
-  ps.pockets.splice(index, 1)
-
-  if (inPocket) {
-    navigateTo('/pockets')
-  }
-}
-
-// duplicate
-
-export function duplicatePocket(original: pocket): pocket {
-  const toID = hexoid()
-
-  const newPocket = deepCopy(original)
-
-  newPocket.key = toID()
-  newPocket.name = `${original.name} (copy)`
-  newPocket.dateCreated = createDateObject()
-  newPocket.dateUpdated = createDateObject()
-
-  usePocketStore().pockets.push(newPocket)
-  return newPocket
-}
-
-// edit
-
-export function editPocket(pocket: pocket) {
-  const ts = useTempStore()
-  ts.selectedPocket = pocket
-}
-
-// get
-
-export function getPocket(key) {
-  const ps = usePocketStore()
-  return ps.pockets.find((pocket: pocket) => pocket.key === key)
-}
-
-// date
-
-export function createDateObject() {
-  const now = new Date()
-  const patch = useDataStore().currentPatch
-  const formattedDate = now.toLocaleDateString('en-US', {
-    year: '2-digit',
-    month: '2-digit',
-    day: '2-digit',
-  })
-
-  let formattedTime = now.toLocaleTimeString([], {
-    hour: '2-digit',
-    minute: '2-digit',
-  })
-
-  if (formattedTime.startsWith('0')) {
-    formattedTime = formattedTime.slice(1)
-  }
-
-  return {
-    date: formattedDate,
-    time: formattedTime,
-    patch,
-  }
-}
-
-// spell
-
-export function createDefaultSpell() {
-  const spell: Spell = { name: null, description: null, cd: 0, recharge: 0, charges: 0 }
-  return spell
 }

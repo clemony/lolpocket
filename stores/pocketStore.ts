@@ -4,9 +4,9 @@ import { defineStore } from 'pinia'
 export const usePocketStore = defineStore(
   'pocketStore',
   () => {
-    const pockets = ref<pocket[]>([])
-    const trashFolder = ref<pocket[]>([])
-    const archiveFolder = ref<pocket[]>([])
+    const pockets = ref<Pocket[]>([])
+    const trashFolder = ref<Pocket[]>([])
+    const archiveFolder = ref<Pocket[]>([])
     const filterText = ref('')
     const selectedRows = ref([])
     const tableSelectAll = ref()

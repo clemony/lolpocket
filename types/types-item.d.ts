@@ -55,22 +55,7 @@ type StatArray = StatLite[]
   interface ItemSet {
     name: string
     key: string
-    items: ItemLite[]
-  }
-
-  interface DefaultItem {
-    name: string
-    img: string
-    buy: number
-    sell: number
-    stats: string
-    passive: string
-    active: string
-    type: string
-    cat: string
-    wiki: string
-    id: number
-    count: number
+    items: ItemIndex[]
   }
 
   interface Effect {
@@ -100,7 +85,7 @@ type StatArray = StatLite[]
     bgClass?: string
   }
 
-type CalculatorSet = ItemLite[]
+type CalculatorSet = ItemIndex[]
 
 }
 

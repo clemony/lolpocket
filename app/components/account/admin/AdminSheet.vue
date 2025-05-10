@@ -1,16 +1,23 @@
 <script lang="ts" setup>
 const { summoner, class: className } = defineProps<{
   summoner: Summoner
-    class?: HTMLAttributes['class']
+  class?: HTMLAttributes['class']
 }>()
 const as = useAccountStore()
 const { forceReload, loading } = useSummoner(as.userAccount.puuid)
+
+const keys = useMagicKeys()
+
+const isOpen = ref(false)
+whenever(keys.shift_a, () => {
+  isOpen.value = true
+  console.log('Shift+Space have been pressed')
+})
 </script>
 
 <template>
-  <Sheet>
+  <Sheet v-model:open="isOpen">
     <SheetTrigger :class="cn('', className)" class="btn-xs btn-ghost btn-square grid place-items-center shrink-0">
-      <icon name="ph:key" class=" dst pointer-events-none text-bc/70 size-4.5" />
     </SheetTrigger>
     <LazyNestedSheetContent class="h-screen max-h-screen overflow-hidden ">
       <SheetHeader>

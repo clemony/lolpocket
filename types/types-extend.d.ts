@@ -1,13 +1,11 @@
-import type { TabsRootProps as OriginalTabsRootProps, TabsTriggerProps, PrimitiveProps } from 'reka-ui';
+import type { TabsRootProps as OriginalTabsRootProps, PrimitiveProps, TabsTriggerProps } from 'reka-ui'
 
 export interface TabsRootPropsWithNullableModel<T extends StringOrNumber = StringOrNumber>
   extends Omit<OriginalTabsRootProps<T>, 'modelValue'> {
-  modelValue?: T | null;
+  modelValue?: T | null
 }
 
-
-
 export interface TabsTriggerPropsWithNullableValue {
-  value: StringOrNumber | null;
-  disabled?: boolean;
+  value: StringOrNumber | null
+  disabled?: boolean
 }

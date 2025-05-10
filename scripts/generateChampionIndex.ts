@@ -2,8 +2,8 @@
  import fs from  'node:fs'
 import path from 'node:path'
 
-const championsDir = path.resolve(__dirname, '../public/api/champions')
-const outputFile = path.resolve(__dirname, '../public/api/lists/champion-index.json')
+const championsDir = path.resolve('./public/api/champions')
+const outputFile = path.resolve('./public/api/lists/champion-index.json')
 
 const files = fs.readdirSync(championsDir).filter(file => file.endsWith('.json'))
 
@@ -12,7 +12,8 @@ const index = files.map((file) => {
   const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
   return {
     id: data.id ?? path.basename(file, '.json'),
-    name: data.name,
+    key: data.key,
+    name: data.name
   }
 })
 

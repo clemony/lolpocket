@@ -4,11 +4,11 @@ const { summoner, account } = defineProps<{
   account: userAccount
 }>()
 
-const classObject = 'btn justify-start !font-medium tracking-tight !gap-5 btn-ghost px-2 btn-lg w-full '
+const classObject = 'btn justify-start !font-medium tracking-tight !gap-5 btn-ghost px-4 btn-lg w-full '
 </script>
 
 <template>
-  <Field class="grid px-5 h-fit py-3 *:w-full w-full **:text-2 relative">
+  <Field class="grid px-2 h-fit py-3 *:w-full w-full **:text-2 relative">
     <SheetClose :class="classObject" @click="navigateTo('/about')">
       <SidebarIcon>
         <icon name="solar:cat-outline" class="size-5.75 -left-0.5 top-0 absolute" />
@@ -35,6 +35,6 @@ const classObject = 'btn justify-start !font-medium tracking-tight !gap-5 btn-gh
       <PatchNotesDaysAgoLink />
     </SheetClose>
 
-    <LazyAdminSheet v-if="account && account.role == 'admin'" :account="account" :summoner="summoner" class="absolute -right-46 bottom-4" />
+    <LazyAdminSheet v-if="account && account.role == 'admin'" :account="account" :summoner="summoner" class="absolute -right-46 bottom-4  pointer-events-none" />
   </Field>
 </template>

@@ -21,7 +21,6 @@ watch(
 
 function clearForm() {
   name.value = ''
-  console.log('💠 - clearForm - name.value:', name.value)
   selectedIcon.value = ''
   tags.value = ['']
 }
@@ -39,6 +38,12 @@ defineExpose({
   clearForm,
   name,
 })
+
+async function randomizeName(){
+  const n = await generateShortString()
+  name.value = n
+  emit('update:name', name.value)
+}
 </script>
 
 <template>
@@ -68,7 +73,7 @@ defineExpose({
 
               <span class="flex gap-2">
                 <CloseButton />
-                <RandomButton v-tippy="'No brain? Meet Button.'" @click.stop="emit('update:name', generateShortString())" />
+                <RandomButton v-tippy="'No brain? Meet Button.'" @click.stop="randomizeName()" />
               </span>
             </div>
 

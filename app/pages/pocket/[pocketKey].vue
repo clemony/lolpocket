@@ -13,38 +13,34 @@ definePageMeta({
   props: true,
   section: 'pocket',
 })
+
+const {puuid} = defineProps<{
+puuid?: string
+}>()
 const pocket = ref(getPocket(route.params.pocketKey))
 
 const selectedRuneSet = ref(pocket.value?.runes.sets?.[0] ?? null)
+
+
+
+const { data } = await useFetch('/api/champions-lite.json')
+const cs = useChampStore()
+
+const { filteredChampions } = useChampionFilter(Object.values(data.value) as ChampionLite[], cs.pChampionFilter)
+
 </script>
 
 <template>
-  <div class="flex size-full    " >
-<!--     <AppTitlebar>
-      <ItemCrumbMenu v-if="route.name == 'items'" :pocket="pocket" />
-
-      <Motion
-        v-if="isShow && route.name == 'champions'" as="p" class="w-fit text-nowrap overflow-x-hidden text-left flex justify-start items-center font-light mb-px  italic text-1"
-        :initial="{ opacity: 0, translate: '(0 -5%)' }"
-        :animate="{ opacity: 1, translate: '(0 0)' }"
-        :transition="{
-          type: 'spring',
-          stiffness: 260,
-          damping: 20,
-          delay: 0.3,
-          duration: 0.5 }">
-        {{ quote }}
-      </Motion>
-
-      <RunePanelMenu v-if="route.name == 'runes'" :pocket="pocket" />
-    </AppTitlebar> -->
-
+  <div class="flex relative size-full overflow-hidden" >
     <PocketSidebar  />
+
+<div class="size-full relative overflow-y-auto">
+    <PocketTabs :pocket="pocket"
+      :quote="quote"/>
     <LazyNuxtPage
-      :selected-runes="selectedRuneSet"
       :pocket="pocket"
-      :pocket-name="pocket.name"
-      :quote="quote"
-      @update:is-show="e => isShow = e" />
+      :puuid="puuid"
+      :champions="filteredChampions"/>
+  </div>
   </div>
 </template>

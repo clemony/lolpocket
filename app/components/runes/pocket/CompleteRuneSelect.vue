@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  pocket: pocket
+  pocket: Pocket
 }>()
 const emit = defineEmits(['update:model-value'])
 // console.log('💠 - index:', props.index)

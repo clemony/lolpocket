@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
   set?: ItemSet
-  pocket?: pocket
+  pocket?: Pocket
 }>()
 </script>
 

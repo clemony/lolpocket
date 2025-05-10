@@ -15,9 +15,8 @@ function handleAddClick() {
 </script>
 
 <template>
-  <button v-tippy="'New Pocket'" class="btn-sm cursor-pointer btn-square btn-ghost  btn" @click="handleAddClick()">
-    <icon
-      name="mynaui:plus"
-      class=" shrink-0 size-6  dst" />
-  </button>
+  <NavBtn v-tippy="'New Pocket'" class="btn-lg -mb-2 mt-2 justify-start rounded-box !font-medium cursor-pointer btn-ghost relative btn" @click="handleAddClick()">
+    <icon name="add-sm" class="size-5.5 opacity-70 stroke-[1.6]" />
+    Create New Pocket
+  </NavBtn>
 </template>

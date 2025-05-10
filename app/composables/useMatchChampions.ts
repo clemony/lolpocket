@@ -71,7 +71,7 @@ export function useMatchChampions(matches: SimplifiedMatchData[]) {
         const avgAssists = stats.assists / stats.games
 
         return {
-          champion: ds.champions.find(c => c.id === championName || c.name === championName),
+          champion: ds.champions.find(c => c.key === championName || c.name === championName),
           games: stats.games,
           wins: stats.wins,
           losses: stats.losses,

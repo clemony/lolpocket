@@ -3,7 +3,7 @@ import { vDraggable } from 'vue-draggable-plus'
 import type { DraggableEvent } from 'vue-draggable-plus'
 
 const props = defineProps<{
-  pocket: pocket
+  pocket: Pocket
   set: ItemSet
   limit?: number
   class?: HTMLAttributes['class']

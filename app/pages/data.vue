@@ -23,7 +23,7 @@ onMounted (async () => {
 </script>
 
 <template>
-  <div class="flex size-full oveflow-hidden">
+  <div class=" size-full oveflow-hidden">
     <menu class="overflow-hidden shadow-warm-2 shadow-black/7 border-r border-r-b3/40">
     <DataFilterPanel />
  </menu>

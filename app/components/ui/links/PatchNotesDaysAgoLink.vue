@@ -8,12 +8,22 @@ const ds = useDataStore()
 </script>
 
 <template>
-  <NuxtLink :to="ds.patchNotesLink" target="_blank" external class="w-full hover:bg-transparent justify-start flex" :class="cn('btn !font-medium tracking-tight !gap-5 btn-ghost px-2 btn-lg w-full', props.class)">
+  <NuxtLink :to="ds.patchNotesLink" target="_blank" external class="w-full hover:bg-transparent justify-start flex" :class="cn('btn !font-medium tracking-tight !gap-5 btn-ghost  group/p px-4 btn-lg w-full', props.class)">
     <SidebarIcon>
-      <i-logo-league-filled class="size-4.75 absolute left-px text-bc/80 " />
+      <i-logo-league-filled class="size-4.75 absolute  text-bc/80 " />
     </SidebarIcon>
-    Patch {{ ds.currentPatch }} - 2 days ago
+    <span class="">
+      {{ ds.currentPatch }}
+    </span>
+    <div class="relative justify-end items-center  grid grow *:flex-nowrap *:justify-end *:text-nowrap *:w-full *:not-last:pr-8 *:font-semibold *:text-end *:flex *:items-center  *:transition-all *:duration-400">
+      <span class="group-hover/p:opacity-0 absolute">
+        2 days ago
+      </span>
 
-    <icon name="link" class="size-3.75 dst  shrink-0 " />
+      <span class="group-hover/p:opacity-100 underline underline-offset-2 absolute opacity-0 translate-y-4 group-hover/p:translate-y-0">
+        Read Patch Notes
+      </span>
+      <icon name="iconamoon:link-external" class="size-3.75 dst stroke-2 shrink-0 pointer-events-none opacity-50 group-hover/p:opacity-100 " />
+    </div>
   </NuxtLink>
 </template>

@@ -3,7 +3,7 @@ import Fuse from 'fuse.js'
 
 const props = defineProps<{
   selectedIcon: string
-  pocket?: pocket
+  pocket?: Pocket
 }>()
 
 const emit = defineEmits(['update:selectedIcon'])

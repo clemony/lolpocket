@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  pocketData?: pocket
+  pocketData?: Pocket
 }>()
 
 const emit = defineEmits(['update:grid'])

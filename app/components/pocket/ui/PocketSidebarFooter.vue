@@ -2,7 +2,7 @@
 import { PopoverTrigger } from 'reka-ui'
 
 const props = defineProps<{
-  pocket: pocket
+  pocket: Pocket
 }>()
 
 const pocket = computed (() => props.pocket)

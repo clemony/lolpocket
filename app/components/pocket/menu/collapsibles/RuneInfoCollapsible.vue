@@ -16,7 +16,7 @@ const pathName = computed (() => {
 <template>
   <Collapsible v-if="rune">
     <CollapsibleTrigger class="w-full group/btn">
-      <RightbarButton>
+      <NavBtn>
         <img
           v-if="rune"
           :key="rune.name"
@@ -27,7 +27,7 @@ const pathName = computed (() => {
         <Grow />
 
         <icon name="up-sm" class="group-data-[state=open]/btn:rotate-180 size-4.5 tldr-20 " />
-      </RightbarButton>
+      </NavBtn>
     </CollapsibleTrigger>
     <CollapsibleContent class="px-3">
       <div class="flex flex-col  pl-4 gap-2 pt-2 pb-3 w-full pr-8">

@@ -7,7 +7,7 @@ import 'vue-zoomable/dist/style.css'
 import download from 'downloadjs'
 
 const props = defineProps<{
-  pocket: pocket
+  pocket: Pocket
   download: boolean
 }>()
 const pocket = ref(props.pocket)

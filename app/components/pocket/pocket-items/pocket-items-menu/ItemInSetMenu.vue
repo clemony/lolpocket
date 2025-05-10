@@ -2,7 +2,7 @@
 const props = defineProps<{
   item: ItemLite
   set?: ItemSet
-  pocket?: pocket
+  pocket?: Pocket
 }>()
 
 const emit = defineEmits(['update:popover'])

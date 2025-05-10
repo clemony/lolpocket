@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  pocket: pocket
+  pocket: Pocket
 }>()
 
 const pocket = computed (() => {
@@ -13,9 +13,9 @@ const coreItem = computed (() => {
 
 <template>
   <div class="px-3">
-    <RightbarButton class="" @click="newItemSet(pocket.key)">
+    <NavBtn class="" @click="newItemSet(pocket.key)">
       <icon name="add-sm" />
       Add Item Set
-    </RightbarButton>
+    </NavBtn>
   </div>
 </template>

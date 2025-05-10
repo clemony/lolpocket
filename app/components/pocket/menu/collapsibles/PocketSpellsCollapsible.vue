@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  pocket: pocket
+  pocket: Pocket
 }>()
 
 const pocket = computed (() => {
@@ -18,18 +18,18 @@ const spell = computed (() => {
 <template>
   <Collapsible>
     <CollapsibleTrigger class="w-full group/state">
-      <RightbarButton field>
-        <RightbarIconWrapper>
+      <NavBtn field>
+        <span>
           <i-tft-attach v-if="!spell" class="size-4.75 opacity-60" />
           <img v-else :src="`/img/spells/${spell.name}.webp`" class="size-full rounded-full" />
-        </RightbarIconWrapper>
+        </span>
         <span class="capitalize">
           {{ pocket.spells.default && pocket.spells.default[0] ? pocket.spells.default[0].name : 'Spells' }} {{ pocket.spells.default && pocket.spells.default[1] ? `/ ${pocket.spells.default[1].name}` : null }}
         </span>
         <Grow />
         <SpellsCounter :pocket="pocket" />&nbsp;
         <StateCaret />
-      </RightbarButton>
+      </NavBtn>
     </CollapsibleTrigger>
     <FieldCollapsibleContent class="!pb-3">
       <div class="flex flex-col gap-2">
@@ -37,9 +37,9 @@ const spell = computed (() => {
       </div>
 
       <Separator class="bg-b3/60 mt-4" />
-      <RightbarButton @click="newSpellSet(pocket.key)">
+      <NavBtn @click="newSpellSet(pocket.key)">
         <icon name="add-sm" />New Spell Set
-      </RightbarButton>
+      </NavBtn>
     </FieldCollapsibleContent>
   </Collapsible>
 </template>

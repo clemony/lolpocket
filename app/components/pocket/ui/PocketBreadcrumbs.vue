@@ -12,7 +12,7 @@ const userFolders = computed (() => {
 const folderObject = ref()
 const a = .forEach(location.folder => {
  */
-
+//TODO DELETE
 
 onMounted (() => {
   const a = defaultFolders[0].items.length ? defaultFolders[0] : defaultFolders[1]

@@ -52,7 +52,7 @@ onMounted(async () => {
       :duration="Infinity" />
 
     <LazyNewPocketDialog />
-    <LazyNuxtPage />
+    <LazyNuxtPage :puuid="as.userAccount.puuid" />
   </NuxtLayout>
 </template>
 
