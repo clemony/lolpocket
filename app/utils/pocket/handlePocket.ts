@@ -7,7 +7,7 @@ export async function addPocket(name: string, tags: string[], icon: string, key?
 
   const ps = usePocketStore()
 
-  const defaultChampion = createDefaultChampion()
+
   const itemSet = newItemSet('', 'Set 1')
   const runeSet = newRuneSet()
   const spellSet = newSpellSet()
@@ -17,10 +17,7 @@ export async function addPocket(name: string, tags: string[], icon: string, key?
     name: name || generateShortString().toString(),
     roles: ['all'],
     icon: icon || '/img/lp/192.webp',
-    champions: {
-      children: [defaultChampion],
-      default: defaultChampion,
-    },
+    champions:  [],
     items: {
       sets: [itemSet],
       default: null,

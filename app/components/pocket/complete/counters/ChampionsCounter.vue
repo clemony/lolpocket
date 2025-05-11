@@ -1,17 +1,20 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  pocket: Pocket
+  pocket?: Pocket
+    class?: HTMLAttributes['class']
 }>()
 
 const pocket = ref(props.pocket)
 
 const championsLength = computed (() => {
-  return pocket.value.champions.children.length
+  if (!pocket.value.champions.length)
+  return 0
+  return pocket.value.champions.length
 })
 </script>
 
 <template>
-  <span v-tippy="`${championsLength ? championsLength : 'no'} pocket pick${pocket.champions.children.length == 1 ? '' : 's'}`" class="flex gap-1.5 items-center">
-    <span class="dst font-mono text-1 opacity-60">{{ championsLength }}</span>
+  <span v-tippy="`${championsLength ? championsLength : 'no'} pocket pick${pocket.champions.length == 1 ? '' : 's'}`" :class="cn('flex gap-1.5 items-center', props.class)">
+    <span class="dst font-mono text-1 ">{{ championsLength }}</span>
   </span>
 </template>

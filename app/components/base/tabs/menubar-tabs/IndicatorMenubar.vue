@@ -3,7 +3,6 @@ import type { MenubarRootEmits, MenubarRootProps, TabsRootEmits, TabsRootProps }
 import { MenubarRoot, TabsRoot, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<TabsRootProps & MenubarRootProps>()
-console.log("💠 - props:", props)
 
 const emits = defineEmits<TabsRootEmits & MenubarRootEmits>()
 
@@ -16,31 +15,30 @@ const route = useRoute()
 
 watchEffect(() => {
   if (!menu.value)
-  return
-if (tabs.value.charAt(0) == '/'){
-previousTab.value = tabs.value
-}
-tabs.value = menu.value
+    return
+  if (tabs.value.charAt(0) == '/') {
+    previousTab.value = tabs.value
+  }
+  tabs.value = menu.value
 })
 
 watch(
-() => menu.value,
-(newVal) => {
- if (!newVal)
- tabs.value = previousTab.value
-}
+  () => menu.value,
+  (newVal) => {
+    if (!newVal)
+      tabs.value = previousTab.value
+  },
 )
 
 onMounted (() => {
-route.meta.section.toString().charAt(0) != '/' ? tabs.value = route.path : tabs.value = route.meta.section.toString()
+  route.meta.section.toString().charAt(0) != '/' ? tabs.value = route.path : tabs.value = route.meta.section.toString()
 })
-
 </script>
 
 <template>
   <TabsRoot
-    v-bind="forwarded" v-model:model-value="tabs" >
-    <MenubarRoot as-child v-model:model-value="menu" @update:model-value="console.log(menu)">
+    v-bind="forwarded" v-model:model-value="tabs">
+    <MenubarRoot v-model:model-value="menu" as-child @update:model-value="console.log(menu)">
       <slot />
     </MenubarRoot>
   </TabsRoot>

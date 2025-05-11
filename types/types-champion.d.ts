@@ -19,6 +19,7 @@ declare global {
     splash?: string
   }
 
+  type ChampionRecord = Record<ChampionKey, ChampionLite>
   interface Champion extends ChampionLite {
     fullName: string
     title: string
@@ -45,11 +46,13 @@ declare global {
     splashPath: string
   }
 
-  interface SkinEntry {
+type  SkinEntry = {
     id: ChampionId
     name: ChampionName
-    skins: SkinEntry[]
+    skins: Skin[]
   }
+
+  type SkinRecord = Record<ChampionId, SkinEntry>
 
   interface Ability {
     name: string

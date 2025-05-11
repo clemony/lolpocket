@@ -83,7 +83,7 @@ const moreWords = [
   'Drag Timer',
   'Pink Ward',
   'Tower Dive',
-  'Reset City'
+  'Reset City',
 ]
 
 // Generate a compact date-based key

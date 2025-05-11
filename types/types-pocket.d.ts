@@ -4,10 +4,7 @@ declare global {
     key: string
     name: string
     roles: string[] | null
-    champions: {
-      children: ChampioIndexn[] | null
-      default: ChampionIndex | null
-    }
+    champions:  ChampionKey[] | null
     items: {
       sets: ItemSet[] | null
       default: ItemSet | null

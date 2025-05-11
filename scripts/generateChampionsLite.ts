@@ -2,13 +2,13 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { normalize, normalizeArray } from './utils/normalizeStrings'
 
-const champions = JSON.parse(fs.readFileSync('./public/api/champions.json', 'utf-8'))
+const champions = JSON.parse(fs.readFileSync('./public/api/champions.json', 'utf-8')) as Record<string, FullChampion>
 
 const uniqueRoles = new Set()
 const uniquePositions = new Set()
-const championsLite = Object.values(champions).map((champ) => {
-  if (!champ)
-    return null
+const championsLite: ChampionRecord = Object.values(champions).reduce((acc, champ) => {
+  if (!champ) return acc
+
   const {
     id,
     key,
@@ -22,14 +22,16 @@ const championsLite = Object.values(champions).map((champ) => {
     skins,
   } = champ as Partial<FullChampion>
 
+  if (id == null) return acc
+
   const normalizedPositions = normalizeArray(positions)
   const normalizedRoles = normalizeArray(roles)
   normalizedPositions.forEach(tag => uniquePositions.add(tag))
   normalizedRoles.forEach(rank => uniqueRoles.add(rank))
-  // Get splash from base skin
-  const splash = skins?.find(skin => skin.isBase)?.splashPath ?? null
 
-  return {
+  const splash = skins?.find(skin => skin.isBase)?.tilePath ?? null
+
+  acc[key] = {
     id,
     key,
     name,
@@ -51,7 +53,9 @@ const championsLite = Object.values(champions).map((champ) => {
     attributeRatings,
     splash,
   }
-}).filter(Boolean) // remove any nulls
+
+  return acc
+}, {} as ChampionRecord)
 
 fs.writeFileSync(
   './public/api/champions-lite.json',

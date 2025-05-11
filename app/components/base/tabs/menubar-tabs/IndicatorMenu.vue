@@ -3,7 +3,6 @@ import { MenubarMenu, TabsTrigger } from 'reka-ui'
 import type { MenubarMenuProps, MenubarTriggerProps, TabsTriggerProps } from 'reka-ui'
 
 const props = defineProps<MenubarTriggerProps & MenubarMenuProps & TabsTriggerProps & { class?: HTMLAttributes['class'] }>()
-console.log("💠 - props:", props)
 
 const forwarded = reactiveOmit(props, 'class')
 </script>

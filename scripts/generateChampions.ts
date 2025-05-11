@@ -29,7 +29,7 @@ for (const champ of Object.values(champions) as FullChampion[]) {
   } = champ
 
   // Get splash from base skin
-  const splash = skins?.find(skin => skin.isBase)?.splashPath ?? null
+  const splash = skins?.find(skin => skin.isBase)?.tilePath ?? null
 
   // Cleaned stats
   const filteredStats = Object.fromEntries(

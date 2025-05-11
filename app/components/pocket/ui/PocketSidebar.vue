@@ -1,12 +1,15 @@
 <script lang="ts" setup>
 const route = useRoute()
 
-const pocket = computedAsync (() => {
-const a = getPocket(route.params.pocketKey)
-console.log("💠 - pocket - a:", a)
-return a
-})
+const { championData } = defineProps<{
+championData: ChampionRecord
+}>()
 
+const pocket = computedAsync (() => {
+  const a = getPocket(route.params.pocketKey)
+  console.log('💠 - pocket - a:', a)
+  return a
+})
 
 const rs = useRuneStore()
 
@@ -17,48 +20,40 @@ onMounted (() => {
 })
 
 const runesOpen = ref(false)
-
 </script>
 
 <template>
-<div class="h-full mt-18 flex flex-col gap-6 pl-7 w-100">
+  <div class="h-full mt-16 py-6 flex flex-col gap-6 pl-7 w-100">
+    <PocketHeader :pocket="pocket" @update:model-value="e => pocket.name = e" />
+    <PocketTabs
+      :pocket="pocket" />
+    <SidebarSelectedChampions :pocket="pocket" :champion-data="championData"/>
 
-<!--     <PocketHeader :pocket="pocket"  />
- -->
+    <FieldTransition expand>
+      <PocketItemsSidebarMenu :pocket="pocket" />
+    </FieldTransition>
 
-
-
-
-   <SidebarSelectedChampions :pocket="pocket" />
-
-          <FieldTransition expand>
-          <PocketItemsSidebarMenu :pocket="pocket" />
-          </FieldTransition>
-
-<!--           <FieldTransition expand>
+    <!--           <FieldTransition expand>
           <PocketRunesCollapsible v-model:open="runesOpen" :pocket="pocket" />
 </FieldTransition>
  -->
-<!-- <FieldTransition expand>
+    <!-- <FieldTransition expand>
         <PocketRolesCollapsible :pocket="pocket" />
           </FieldTransition> -->
 
-<!--         <FieldTransition expand>
+    <!--         <FieldTransition expand>
         <PocketSpellsCollapsible :pocket="pocket" />
           </FieldTransition> -->
 
+    <!--         <PocketSummaryButton :pocket="pocket" @click="pocketNav = null" /> -->
 
-<!--         <PocketSummaryButton :pocket="pocket" @click="pocketNav = null" /> -->
-
-<!--         <Field>
+    <!--         <Field>
         <PocketCardButton :pocket="pocket" @click="pocketNav = null" />
-        
+
           </Field> -->
 
-
-          <Field>
-  <!--   <PocketSidebarFooter :pocket="pocket" /> -->
-
-</Field>
-</div>
+    <Field>
+      <!--   <PocketSidebarFooter :pocket="pocket" /> -->
+    </Field>
+  </div>
 </template>

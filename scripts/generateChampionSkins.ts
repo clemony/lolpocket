@@ -14,10 +14,10 @@ for (const key in champions) {
   const { id, name, skins } = champ
 
 const filteredSkins = (skins || [])
-  .filter((skin) => !!skin.splashPath) // ✅ only include skins with a splashPath
+  .filter((skin) => !!skin.tilePath) // ✅ only include skins with a splashPath
   .map((skin) => ({
     name: skin.name,
-    splashPath: skin.splashPath,
+    splashPath: skin.tilePath,
   }))
 
   result[id] = {

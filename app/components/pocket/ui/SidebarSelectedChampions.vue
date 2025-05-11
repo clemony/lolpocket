@@ -1,29 +1,26 @@
 <script lang="ts" setup>
+import { computed } from 'vue'
 import { motion } from 'motion-v'
 
-const { pocket } = defineProps<{
+const { pocket, championData } = defineProps<{
   pocket: Pocket
+championData: ChampionRecord
 }>()
 
-
-const filteredChildChampions = computed (() => {
-if (!pocket.champions || !pocket.champions.children || !pocket.champions.children.length || pocket.champions.children[0].id == 0 )
-return null
-
-return pocket.champions.children.filter(c => c.id != pocket.champions.default.id).slice(1,6)
-})
-console.log("💠 - filteredChildChampions:", filteredChildChampions)
 
 </script>
 
 <template>
-  <motion.div class="grid w-full field-box aspect-square  p-2 gap-1 ">
-    <template v-if="filteredChildChampions" >
-      <Champion v-if="pocket.champions?.default" :champ-key="pocket.champions?.default?.key" :name="pocket.champions?.default?.key" >
-      </Champion>
-    <Champion v-for="champion in filteredChildChampions" :champ-key="champion?.key"  :name="champion?.key" />
-    </template>
+  <motion.div class="grid w-full place-items-center bg-!b2 grid-cols-2 field-box border-b3/60 h-32 p-3 gap-2">
 
-   <i-lol-champ v-else  />
+        <template v-if="pocket?.champions && pocket?.champions?.length">
+      <ChampionSplash
+        v-for="champion in pocket?.champions"
+        :key="championData[champion].key"
+        :url="championData[champion].splash"
+        :name="championData[champion].key"  class="aspect-auto border-b3 border"/>
+        </template>
+
+    <i-lol-champ v-else class="size-8" />
   </motion.div>
 </template>

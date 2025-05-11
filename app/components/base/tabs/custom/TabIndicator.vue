@@ -45,7 +45,7 @@ const variants = {
       :class="cn(' top-1 absolute transition-all rounded-lg ', { '!top-0 left-1': props.orientation == 'vertical' }, props.class)">
       <motion.div
         class="h-full w-full rounded-lg bg-b1 text-bc shadow"
-        :class="cn('   ', { 'shadow-sm shadow-black/3 !bg-b1/90 ': props.orientation == 'vertical', 'bg-neutral/82 border-accent border drop-shadow-sm inset-shadow-sm inset-shadow-b3/20 rounded-xl rounded-lg-2': props.contrast })" />
+        :class="cn('   ', { 'shadow-sm shadow-black/3 bg-b1/90 ': props.orientation == 'vertical', 'bg-neutral/82 border-accent border drop-shadow-sm inset-shadow-sm inset-shadow-b3/20 rounded-xl rounded-lg-2': props.contrast })" />
     </motion.div>
   </TabsIndicator>
 </template>

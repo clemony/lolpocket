@@ -4,10 +4,10 @@ const props = defineProps<{
   champion: Champion
 }>()
 
-const isChamp = computed(() => props.pocket.champions.default && props.pocket.champions.default.id ? props.pocket.champions.default.id === props.champion.id : '')
+/* const isChamp = computed(() => props.pocket.champions.default && props.pocket.champions.default.id ? props.pocket.champions.default.id === props.champion.id : '') */
 </script>
 
-<template>
+<template><!--
   <Popover>
     <PopoverTrigger class="btn btn-ghost btn-circle btn size-11 hover:bg-b2 hover:border-b3">
       <div v-if="champion" :key="champion.name" class="size-8   rounded-full  overflow-hidden" :class="{ '': isChamp, 'grayscale opacity-90': !isChamp }">
@@ -16,7 +16,8 @@ const isChamp = computed(() => props.pocket.champions.default && props.pocket.ch
     </PopoverTrigger>
 
     <LazySplashDropdownContent :side-offset="6" :align-offset="-12" :champion="champion" :pocket="pocket" />
-  </Popover>
+  </Popover> -->
+  h
 </template>
 
 <style scoped></style>

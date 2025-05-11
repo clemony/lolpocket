@@ -35,9 +35,9 @@ onMounted (async () => {
 <template>
   <PopoverContent align="start" :align-offset="props.alignOffset" :side-offset="props.sideOffset" class="grid grid-cols-4 gap-2 w-fit">
     <PopoverClose as-child>
-      <LazyPocketIcon v-for="(splash, i) in splashResults" :key="props.champion.id + i" :alt="`${props.champion.id}-splash-${i}`" :image="splash" class="size-18 rounded-xl **:rounded-xl" :class="{ 'ring-1 ring-offset-2 ring-offset-b1 ring-neutral': splash == pocket.card.splash }">
+<!--       <LazyPocketIcon v-for="(splash, i) in splashResults" :key="props.champion.id + i" :alt="`${props.champion.id}-splash-${i}`" :image="splash" class="size-18 rounded-xl **:rounded-xl" :class="{ 'ring-1 ring-offset-2 ring-offset-b1 ring-neutral': splash == pocket.card.splash }">
         <input v-model="pocket.card.splash" type="radio" class="peer hidden" :value="splash" @change="pocket.champions.default = champion" />
-      </LazyPocketIcon>
+      </LazyPocketIcon> -->
     </PopoverClose>
   </PopoverContent>
 </template>

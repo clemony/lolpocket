@@ -25,7 +25,7 @@ watch(
     </DialogTrigger>
     <LazyMotionDialogContent :delay="0" class=" h-200 backdrop-blur-lg bg-b1/94  min-w-300 w-300 flex z-1000 py-9 px-8 flex gap-8">
       <div class="relative flex flex-col gap-6 h-full h-140 w-100">
-        <ChampionSplash bg-size="150%" object-position="50% 4rem" :url="champion.splash" :name="champion.name" class=" h-140 w-100 size-full shadow-sm drop-shadow-sm relative after:absolute z-0  after:rounded-lg after:top-0 after:left-0 after:z-1 after:size-full after:mask-edges  after:bg-[#00000050] overflow-hidden  ">
+        <ChampionSplash :url="champion.splash" :name="champion.name" class="size-full  relative  ">
           <DialogHeader class="absolute bottom-4 *:text-right right-5 *:text-light/80 drop-shadow-sm *:dst *:text-shadow-sm w-full">
             <Grow />
             <DialogTitle class="text-11  font-bold tracking-tight">

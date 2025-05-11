@@ -8,7 +8,7 @@ const pocket = computed (() => {
 })
 
 const bgImg = computed (() => {
-  return pocket.value.icon && pocket.value.icon == '/img/lp/192.webp' ? 'url(/img/bg/inventory_card.jpg)' : pocket.value.icon ? `url(${pocket.value.icon})` : `url(/img/champion-centered/${pocket.value.champions.default.id}_0.webp)`
+  return pocket.value.icon && pocket.value.icon == '/img/lp/192.webp' ? 'url(/img/bg/inventory_card.jpg)' : pocket.value.icon ? `url(${pocket.value.icon})` : `url(/img/champion-centered/${pocket.value.champions[0]}_0.webp)`
 })
 
 const bgSize = computed (() => {

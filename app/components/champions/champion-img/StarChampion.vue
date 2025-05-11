@@ -21,9 +21,9 @@ const pocket = computed (() => props.pocket)
 
     <span class="grow font-semibold tracking-tight text-start">{{ props.champion.name }}</span>
 
-    <div class="flex items-center  tldr-30">
+<!--     <div class="flex items-center  tldr-30">
       <RemoveButton tip="Remove Champion" class="opacity-0 group-hover/state:opacity-100 " @click="removeChamp(props.champion, pocket)" />
       <StarButton v-model="pocket.champions.default" :value="champion" :checked="champion == pocket.champions.default" class="opacity-0 group-hover/state:opacity-100 " :class="{ 'opacity-60': champion == pocket.champions.default }" />
-    </div>
+    </div>-->
   </NavBtn>
 </template>

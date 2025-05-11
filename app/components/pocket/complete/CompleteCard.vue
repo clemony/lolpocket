@@ -24,30 +24,30 @@ const fontClass2 = computed (() => {
   return ''
   a.cardClass ? a.cardClass : ''
 })
-
+/*
 const cardName = computed (() => {
   const c = pocket.value.champions.default && pocket.value.champions.default.name ? `${pocket.value.champions.default.name}-` : ''
   const r = pocket.value.roles[0] && pocket.value.roles[0] != 'all' ? `${pocket.value.roles[0]}-` : ''
   const n = pocket.value.name ? `${pocket.value.name}-` : ''
   return `${(c + r + n).toLowerCase().replace(' ', '-')}pocket`
 })
-
+ */
 const pocketCardRef = ref<HTMLElement>(null)
 
-async function downloadPng() {
+/* async function downloadPng() {
   await pocketCardRef.value
   htmlToImage.toPng(pocketCardRef.value, { quality: 0.95, backgroundColor: '#FFFFFF' })
     .then(dataUrl => download(dataUrl, `${cardName.value}.png`))
-}
+} */
 
 const zoom = ref(1)
 const pan = ref({ x: 0, y: 0 })
 
 const downloadClicked = refAutoReset(false, 1000)
 
-watchEffect(() => {
+/* watchEffect(() => {
   props.download ? downloadPng() : ''
-})
+}) */
 </script>
 
 <template>
@@ -73,12 +73,12 @@ watchEffect(() => {
       <div class="absolute grid grid-cols-[1.5fr_1fr] h-full top-0 inset-0 left-0 pt-28 px-16">
         <div class="flex flex-col **:select-none">
           <div class="">
-            <h3
+<!--             <h3
               class="text-9 dst tracking-tight pl-3"
               :style="{ fontFamily: pocket.card.font[1] }"
               :class="fontClass2">
               {{ pocket.champions.default && pocket.champions.default.name ? `${pocket.champions.default.name}\'s` : '' }} Pocket
-            </h3>
+            </h3> -->
             <h1
               class="text-12 tracking-tight drop-shadow-sm"
               :style="{ fontFamily: pocket.card.font[0] }"

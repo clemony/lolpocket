@@ -6,7 +6,7 @@ const props = defineProps<{
 const pocket = ref(props.pocket)
 
 const championsLength = computed (() => {
-  return pocket.value.champions.children.length
+  return pocket.value.champions.length
 })
 
 const rolesLength = computed (() => {
@@ -62,7 +62,7 @@ const runeSetsLength = computed (() => {
 <template>
   <div class="flex gap-7 w-full items-center justify-evenly -ml-1.5 **:select-none">
     <slot />
-    <div v-tippy="`${championsLength ? championsLength : 'no'} pocket pick${pocket.champions.children.length == 1 ? '' : 's'}`" class="flex gap-1.5 items-center">
+    <div v-tippy="`${championsLength ? championsLength : 'no'} pocket pick${pocket.champions.length == 1 ? '' : 's'}`" class="flex gap-1.5 items-center">
       <i-no-champ class=" size-8.5 dst opacity-80" />
       <span class="dst font-medium">{{ championsLength }}</span>
     </div>

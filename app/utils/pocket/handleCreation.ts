@@ -125,8 +125,8 @@ export function createDefaultSpell(): Spell {
 
 export function createDefaultChampion(): ChampionIndex {
   return {
-    id: 0,
-    key: '',
-    name: '',
+    id: null,
+    key: null,
+    name: null,
   }
 }

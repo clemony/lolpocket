@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
   pocket: Pocket
+    class?: HTMLAttributes['class']
 }>()
 
 const pocket = ref(props.pocket)
@@ -40,7 +41,7 @@ const runeSetsLength = computed (() => {
 </script>
 
 <template>
-  <span v-tippy="`${runeSetsLength ? runeSetsLength : 'no'} rune sets`" class="flex gap-2 items-center">
-    <span class="dst font-mono text-1 opacity-60 ">{{ runeSetsLength }}</span>
+  <span v-tippy="`${runeSetsLength ? runeSetsLength : 'no'} rune sets`"  :class="cn('flex gap-1.5 items-center', props.class)">
+    <span class="dst font-mono text-1 ">{{ runeSetsLength }}</span>
   </span>
 </template>

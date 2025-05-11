@@ -1,8 +1,8 @@
 <script setup lang="ts">
 
-const {name, champKey, class: className} = defineProps<{
+const {name, url, class: className} = defineProps<{
   name: string
-  champKey?: string
+  url: string
   class?: HTMLAttributes['class']
 }>()
 /*
@@ -10,22 +10,29 @@ const {name, champKey, class: className} = defineProps<{
 
 const trigger = ref(null)
 const isHovered = useElementHover(trigger)
+
+const lower = ['Seraphine', 'Sett', 'Illaoi', 'Irelia', 'Yuumi', 'Senna', 'Taric',  'Mordekaiser', 'Darius', 'Ryze']
+const mid = [ 'Fiora', 'Fizz', 'Lilia', 'Nami', 'DrMundo']
+const left = ['Ivern','Riven','Ryze','Hwei','','',]
+const out = ['Yuumi', 'KogMaw', 'Mordekaiser', 'TahmKench', 'Zac', 'Kindred', 'Yorick', 'Zed', 'Alistar', 'Xayah', 'Malzahar', 'Anivia', 'Aatrox', 'Evelynn', 'Fiddlesticks', 'Ivern', 'Yone']
+
+const y = computed (() => lower.includes(name) ? `10%` : mid.includes(name) ? '20%' : '40%')
+
+const x= computed (() => left.includes(name) ? '70%' : '50%')
+
+const bgSize = computed (() => out.includes(name) ? '160%' :  '180%')
 </script>
 
 <template>
-  <label
-    :class=" cn('shadow-sm overflow-hidden drop-shadow-sm relative rounded-lg **:select-none p-0',className)">
+  <label ref="trigger"
+    :class=" cn('size-full grid aspect-square overflow-hidden rounded-lg shadow-sm drop-shadow-sm',className)">
       <slot />
+        <ChampionSplash
+           :url="url"
+        class="size-full relative z-0" :bg-size="bgSize" :bg-position="`${x} ${y}`" >
 
-      <Img
-        :key="name"
-:quality="100"
-        :img="`/img/champion/${champKey}.webp`"
-        :alt="`${name} Image`"
-        class="size-full scale-115" />
-
-      <PrismaticShine v-if=" isHovered"  class="absolute scale-107 top-0 left-0 z-1" />
-  
+      <PrismaticShine v-if=" isHovered"  class="absolute size-full  scale-107 top-0 left-0 z-1" />
+  </ChampionSplash>
   </label>
 </template>
 
