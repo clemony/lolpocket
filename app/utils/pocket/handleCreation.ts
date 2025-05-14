@@ -1,5 +1,3 @@
-import { hexoid } from 'hexoid'
-
 // date
 
 export function createDateObject() {
@@ -11,101 +9,72 @@ export function createDateObject() {
     month: '2-digit',
     day: '2-digit',
   })
-
   const time = now
     .toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     .replace(/^0/, '') // remove leading zero if present
-
   return { date, time, patch }
 }
 
 // item
 
-export function createItem(): ItemIndex {
-  return { name: '', id: 0 }
-}
-
-export function newItemSet(pocketKey?: string, setName?: string) {
-  const toID = hexoid()
+export async function newItemSet(pocketKey?: string) {
   const newSet = {
-    name: setName || `${generateMediumString()} Set`,
-    key: toID(),
+    name: await generateMediumString(),
     items: [],
   }
 
   if (pocketKey) {
     const pocket = getPocket(pocketKey)
     if (pocket) {
-      pocket.items.sets.push(newSet)
-      if (pocket.items.sets.length === 1) {
-        pocket.items.default = newSet
-      }
+      pocket.items.push(newSet)
     }
   }
 
   return newSet
-}
-// rune
-
-export function createDefaultRune(): RuneIndex {
-  return {
-    name: 'empty',
-    id: 0,
-    key: '',
-  }
 }
 
 // shard
 
 export function createDefaultShard(): ShardIndex {
   return {
-    slotID: 0,
-    slotName: 'empty',
+    slot: 0,
+    name: null,
   }
 }
 
 // runeset
 
 export function newRuneSet(pocketKey?: string) {
-  const toID = hexoid()
-
   const newSet: RuneSet = {
-    name: `${generateMediumString()} Set`,
-    key: toID(),
-    primary: {
-      path: 'Resolve',
+      keystone: null,
+    0: {
+      path: null,
       runes: {
-        0: createDefaultRune(),
-        1: createDefaultRune(),
-        2: createDefaultRune(),
-        3: createDefaultRune(),
+        1:  null,
+        2:  null,
+        3:  null
       },
     },
-    secondary: {
-      path: 'Inspiration',
-      runes: {
-        1: createDefaultRune(),
-        2: createDefaultRune(),
-        3: createDefaultRune(),
+    1: {
+      path: null,
+      runes:  {
+        1:  null,
+        2:  null,
+        3:  null
       },
     },
-    shards: {
-      0: createDefaultShard(),
-      1: createDefaultShard(),
-      2: createDefaultShard(),
-    },
+    shards:  {
+        1:  null,
+        2:  null,
+        3:  null
+      },
   }
-
   if (pocketKey) {
     const pocket = getPocket(pocketKey)
     if (pocket) {
-      pocket.runes.sets.push(newSet)
-      if (pocket.runes.sets.length === 1) {
-        pocket.runes.default = newSet
-      }
+      pocket.runes.push(newSet)
     }
   }
-
   return newSet
 }
 
@@ -122,11 +91,3 @@ export function createDefaultSpell(): Spell {
 }
 
 // champion
-
-export function createDefaultChampion(): ChampionIndex {
-  return {
-    id: null,
-    key: null,
-    name: null,
-  }
-}

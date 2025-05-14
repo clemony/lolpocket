@@ -1,16 +1,11 @@
 export function createCalculatorSet() {
   const is = useItemStore()
 
-  is.calculatorSets.push([
-    createItem(),
-    createItem(),
-    createItem(),
-    createItem(),
-    createItem(),
-    createItem(),
+/*   is.calculatorSets.push([
+0,0,0,0,0,0
   ])
+ */
 }
-
 function sortType(array) {
   array.sort((a, b) => a.value - b.value)
 

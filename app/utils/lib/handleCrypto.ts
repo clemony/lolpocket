@@ -148,5 +148,9 @@ async function generateName(length: 'short' | 'medium'): Promise<string> {
   return shuffled.join(' ')
 }
 
-export const generateMediumString = () => generateName('medium')
-export const generateShortString = () => generateName('short')
+export function generateMediumString(): Promise<string> {
+  return generateName('medium')
+}
+export function generateShortString(): Promise<string> {
+  return generateName('short')
+}

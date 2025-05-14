@@ -5,7 +5,6 @@ import type { DraggableEvent } from 'vue-draggable-plus'
 const props = defineProps<{
   pocket: Pocket
   set: ItemSet
-  limit?: number
   class?: HTMLAttributes['class']
 }>()
 const pocket = ref(props.pocket)
@@ -17,8 +16,6 @@ function onAdd(event: DraggableEvent) {
 }
 
 const itemSet = ref(props.set.items)
-
-const showData = ref(false)
 </script>
 
 <template>
@@ -48,32 +45,29 @@ const showData = ref(false)
     fallbackClass="item-set-item-fallback"
     filter=".no-drag"
     class="flex   h-fit  flex-wrap justify-start gap-3 group"
-    :class="cn({ 'gap-5': props.limit }, props.class)"
 
     @end="onEnd"
     @start="onStart"
     @remove="(evt) => onRemove(evt, itemSet)">
     <Popover
-      v-for="(item, i) in itemSet as ItemClone[]"
-      :key="item.cloneId">
-      <PopoverTrigger as-child class=" shrink-0 !size-18 ">
+      v-for="(item, i) in itemSet"
+      :key="item">
+      <PopoverTrigger as-child class=" shrink-0 !size-19 ">
         <Item
-          :id="item.id"
-          :name="item.name"
+          :id="item"
           :pocket="pocket"
-          class="shadow-sm shrink-0 !size-18 "
-          :class="{ 'rotate-out-center': removingItems[item?.id ?? `item-${i}`] }"
+          class="shadow-sm shrink-0 !size-19  *:rounded-lg"
+          :class="{ 'rotate-out-center': removingItems[item ?? `item-${i}`] }"
           @click.prevent />
       </PopoverTrigger>
-      <LazyCustomPopoverContent class="p-2 w-44" :class="{ '!w-100 max-h-160': showData }" @interact-outside="showData = false">
+      <LazyCustomPopoverContent class="p-2 w-44">
         <CustomPopoverArrow />
         <LazyItemData
-          v-if="showData"
-          :item-lite="item" />
-        <LazyItemInSetMenu v-else :pocket="pocket" :set="props.set" :item="item" @update:popover="showData = true" />
+          :id="item" />
+        <!-- <LazyItemInSetMenu v-else :pocket="pocket" :set="props.set" :item="item" @update:popover="showData = true" /> -->
       </LazyCustomPopoverContent>
     </Popover>
-    <Placeholder class="rounded-lg border-b3 !size-18 shadow-sm  bg-b3/70 inset-shadow-xs group-has-[.sortable-ghost]:hidden" />
+    <Placeholder class="rounded-lg border-0 !size-18 shadow-sm shadow-black/7  bg-b3/70  group-has-[.sortable-ghost]:hidden" />
   </div>
 </template>
 

@@ -1,11 +1,14 @@
 declare global {
+  type ItemId = number
+
+  type ItemRecord = Record<ItemId, ItemLite>
 type StatLite = number
 type StatArray = StatLite[]
   type StatKeys = keyof ItemLite['stats']
 
   interface ItemLite {
     name: string
-    id: number
+    id: ItemId
     rank: string[]
     stats: Record<string, number>
     purchasable: boolean
@@ -14,12 +17,12 @@ type StatArray = StatLite[]
   }
 
   interface ItemIndex {
-    id: number
+    id: ItemId
     name: string
   }
 
   interface Item {
-    id?: number
+    id?: ItemId
     name?: string
     nickname?: string | string[] | null
     rank?: string[]
@@ -52,11 +55,12 @@ type StatArray = StatLite[]
     requiedAlly?: string
   }
 
-  interface ItemSet {
-    name: string
-    key: string
-    items: ItemIndex[]
-  }
+interface ItemSet {
+  name: string
+  items: ItemId[]
+}
+
+
 
   interface Effect {
     name?: string
@@ -70,7 +74,8 @@ type StatArray = StatLite[]
 
   type effectAmount = number
 
-  interface ItemClone extends ItemLite {
+  interface ItemClone extends ItemId{
+    id: ItemId
     cloneId: string
   }
   interface ItemStat extends StatLite {

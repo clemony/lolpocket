@@ -7,6 +7,7 @@ export const useAccountStore = defineStore(
     const dataTheme = ref('daylight')
     const userNotes = ref<Note[]>([])
     const reducedMotion = ref(false)
+    const userNoShowDeletePocketConfirm = ref(false)
     const favoriteChamps = ref<Champion[]>([])
     const favoriteItems = ref<number[]>([])
 
@@ -38,7 +39,7 @@ export const useAccountStore = defineStore(
       // account
       userAccount,
       userSummoner,
-
+userNoShowDeletePocketConfirm,
       userNotes,
 
       // settings

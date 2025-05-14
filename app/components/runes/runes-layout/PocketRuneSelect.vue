@@ -1,161 +1,102 @@
 <script setup lang="ts">
-const props = defineProps<{
-  set?: RuneSet
-  selectedRune?: string
-  path?: string
-  type: string
+import { AnimatePresence, motion } from 'motion-v'
+
+const { pathRunes, path, runes } = defineProps<{
+  pathRunes: PathRunes
+  runes: Array<Rune[]> | null
+  path: string
 }>()
-const ds = useDataStore()
+
 const rs = useRuneStore()
-const paths = [...ds.paths]
-const path = ref(props.path ?? '')
-const set = ref(props.set)
-
-const pathData = computed(() => {
-  const foundPath = paths.find(p => p.name === path.value)
-  if (!foundPath || typeof foundPath !== 'object') {
-    console.error('⚠️ Unexpected pathData result:', foundPath)
-    return { slots: [] }
-  }
-  return {
-    ...foundPath,
-    slots: foundPath.slots.slice(1), // Removes slot at index 0
-  }
+const currentRunes = ref<PathRunes>({
+  1: null,
+  2: null,
+  3: null,
 })
-
-const selectedRunes = ref(path.value ? Array.from({ length: pathData.value.slots.length }).fill(null) : [])
+const currentSet = computed (() => [
+  currentRunes.value[1],
+  currentRunes.value[2],
+  currentRunes.value[3]
+ ])
 
 watch(
-  () => props.path,
+  () => pathRunes,
   (newVal) => {
-    path.value = newVal ?? '' // Default to an empty string
-    selectedRunes.value = []
+    if (newVal)
+    console.log("💠 - newVal:", newVal)
+      currentRunes.value = pathRunes
   },
 )
 
-watch(
-  () => props.set,
-  (newVal) => {
-    set.value = newVal
-  },
-)
 
-const runeWatcher = []
-function handleSelection(slotIndex, rune) {
-  selectedRunes.value[slotIndex] = rune
-  if (props.type == 'primary') {
-    set.value.primary.runes[slotIndex] = rune
-  }
-  else if (props.type == 'secondary') {
-    set.value.secondary.runes[slotIndex] = rune
-    handleSecondaryRunes(slotIndex.toString())
-  }
+const emit = defineEmits<{
+  (e: 'update:runes', currentSet: PathRunes): void
+}>()
+
+
+function handleChange() {
+  console.log('💠 - currentRunes:', currentRunes)
+  emit('update:runes', currentRunes.value )
 }
 
-function handleSecondaryRunes(slot) {
-  if (props.type == 'primary') {
-    return
-  }
-  const index = runeWatcher.findIndex(slotNum => slotNum == slot)
-
-  if (index > -1) {
-    runeWatcher.splice(index, 1)
-    runeWatcher.push(slot)
-  }
-  else {
-    runeWatcher.push(slot)
-  }
-  // push()
-  if (runeWatcher.length > 2) {
-    set.value.secondary.runes[runeWatcher[0]] = null
-    runeWatcher.splice(0, 1)
-  }
-}
-
-onMounted(() => {
-  if (props.path) {
-    path.value = props.path
-  }
-  if (props.set) {
-    set.value = props.set
-  }
-})
-
-function handleSelect(rune) {
-  rs.selectedRune == rune
-}
-
-const runeHovered = ref()
-function onHover(rune) {
-  const thisRune = rune
-  runeHovered.value = rune
-  setTimeout(() => {
-    if (runeHovered.value != null && runeHovered.value == thisRune) {
-      rs.hoveredRune = runeHovered.value
-    }
-  }, 1000)
-}
-
-const allRunes = computed (() => {
-  const a = Object.values(set.value.primary.runes).concat(Object.values(set.value.secondary.runes))
-  const b = a.filter(a => a != null)
-  return b.map(r => r.id)
+onMounted (() => {
+currentRunes.value = pathRunes
 })
 </script>
 
 <template>
-  <div
-    class="ease -mt-2 justify-center  relative size-full h-fit w-full rounded-xl  transition-all duration-500 **:select-none">
-    <div v-if="pathData && pathData.slots">
-      <transition-slide
-        :duration="{ enter: 700, leave: 100 }" :offset="{
-          enter: ['-100%', 0],
-          leave: ['100%', 0],
-        }" group class="flex size-full  flex-col justify-evenly gap-16  rounded-xl  py-12 ">
-        <div
-          v-for="(slot, i) in pathData.slots" :key="path + i"
-          class=" cursor-pointer flex h-16 justify-evenly gap-3 transition-all duration-500">
-          <div
-            v-for="rune in slot.runes"
-            :key="rune.id"
+  <Field class="ease !px-0 !m-0 items-center justify-center gap-y-16 flex flex-col relative  w-full rounded-xl transition-all duration-500 **:select-none pb-16 pt-12">
+    <template v-if="runes && runes.length">
+      <div
+        v-for="(slot, i) in runes"    :key="i"
+        class="cursor-pointer flex h-16 justify-evenly w-full gap-3 ">
 
-            v-tippy="rune.name == 'empty' ? 'Select a Path' : rune.name"
-            class="size-fit rounded-full items-center justify-center">
-            <label
-              :data-path="path"
-              class=""
+        <AnimatePresence
+          v-for="rune in slot"
+          :key="rune.id">
+        <motion.div
+          v-tippy="rune.name === 'empty' ? 'Select a Path' : rune.name"
+
+          :initial="{ opacity: 0, scale: 0.8 }"
+          :animate="{ opacity: 1, scale: 1 }"
+                    :exit="{ opacity: 0, scale: 0.8 }"
+          :transition="{ type: 'spring' }"
+          class="size-fit rounded-full items-center justify-center"
+          :class="`col-start-${rune.runeIndex + 1}`">
+          <label
+            :class="{
+              'to-b1/40  rounded-full opacity-100 scale-105 grayscale-0 ': currentSet.includes(rune.key),
+              'h-full rounded-full opacity-75 transition-all duration-300 hover:opacity-100 hover:grayscale-0 group/r border-transparent relative cursor-pointer size-21.5 grid place-items-center aspect-square grayscale': rune.name !== 'empty',
+            }">
+
+            <input
+              :value="rune.key"
+              v-model="currentRunes[i + 1]"
+              type="radio"
+              class="peer hidden"
+              @change="handleChange()" />
+
+
+            <Placeholder
+              v-if="rune.name === 'empty'"
+              class="size-17 cursor-not-allowed border rounded-full border-b3/50 bg-gradient-to-br shadow-inset-sm from-b3/60 to-b3/80" />
+            <img
+              v-else
+              :src="`/img/runes/${path}/${rune.key}.webp`"
+              :alt="rune.name"
+              class="size-16 inset-shadow-sides inset-shadow-black/60 rounded-full tldr-30 drop-shadow-[2px_2px_2px_#00000080]"
               :class="{
-                'to-b1/20 rounded-full   bg-gradient-to-br backdrop-blur-md overflow-hidden from-b1/90 shadow-black/15 opacity-100 scale-105 grayscale-0 ring ring-black/3': allRunes.includes(rune.id),
-                ' [&_img]:rounded-full h-full rounded-full opacity-75 transition-all duration-300 hover:opacity-100 hover:grayscale-0  group/r border-transparent relative cursor-pointer size-21.5  grid place-items-center  aspect-square  grayscale   [&_img]:inset-shadow-sm [&_img]:inset-shadow-black': rune.name != 'empty',
+                '     opacity-94 ': currentSet.includes(rune.key),
+                '': !currentSet.includes(rune.key),
+              }" />
+          </label>
+        </motion.div>
+      </AnimatePresence>
+      </div>
+    </template>
 
-                'shadow-warm-2 shadow-warm-2': rune.name != 'empty' && allRunes.includes(rune.id),
-              }"
-              @mouseover="onHover(rune)"
-              @mouseleave="runeHovered = null"
-              @click.right="handleSelect(rune)">
-              <input
-                type="radio"
-                :name="`${props.type}-${path}-${i}`"
-                :data-checked="path == set.primary.path ? set.primary.runes[i + 1]?.id === rune.id : path == set.secondary.path ? set.secondary.runes[i + 1]?.id === rune.id : false"
-                :checked="path == set.primary.path ? set.primary.runes[i + 1]?.id === rune.id : path == set.secondary.path ? set.secondary.runes[i + 1]?.id === rune.id : false"
-                :disabled="rune.name == 'empty'"
-                class="absolute hidden peer"
-                @change="handleSelection(i + 1, rune)" />
-
-              <Placeholder v-if="rune.name == 'empty'" class="size-17  cursor-not-allowed border rounded-full border-b3/50 bg-gradient-to-br shadow-inset-sm from-b3/60 to-b3/80" />
-              <img
-                v-else
-                :src="`/img/runes/${path}/${rune.name.replace(/\s/g, '')}.webp`"
-                :alt="rune.name"
-                class="size-16 "
-                :class="{ ' border-black/50 border !size-15.25 opacity-94 inset-shadow-sm inset-shadow-black ': allRunes.includes(rune.id), 'drop-shadow-[2px_2px_2px_#00000080]': !allRunes.includes(rune.id) }" />
-
-            </label>
-          </div>
-        </div>
-      </transition-slide>
+    <div v-else class="size-full grid grid-cols-3 gap-y-14">
+      <Placeholder v-for="i in 9" :key="i" class="size-18 rounded-full place-self-center" />
     </div>
-  </div>
+  </Field>
 </template>
-
-<style scoped></style>

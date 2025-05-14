@@ -2,7 +2,7 @@
 const props = defineProps<{
   class?: HTMLAttributes['class']
   alignOffset?: number
-  align:  "start" | "center" | "end"
+  align?:  "start" | "center" | "end"
 }>()
 
 
@@ -52,7 +52,7 @@ defineOptions({
       v-bind="$attrs"
       :align="props.align"
     :align-offset="props.alignOffset"
-    :class="cn('bg-neutral/83 **:text-nc rounded-xl min-w-44 px-1.5 py-1.5', props.class)">
+    :class="cn('bg-neutral/83 **:text-nc border-b3/50 border rounded-xl min-w-44 px-1.5 py-1.5', props.class)">
         <div>
     <slot />
     </div>

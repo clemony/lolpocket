@@ -1,67 +1,57 @@
 declare global {
 
+  type RuneKey = string
+type PathRunes = {
+        1: RuneId | null
+        2: RuneId | null
+        3: RuneId | null
+      }
+
   interface RuneSet {
-    name: string
-    key: string
-    primary: {
-      path: string
-      runes: {
-        0: RuneIndex
-        1: RuneIndex
-        2: RuneIndex
-        3: RuneIndex
-      }
-    }
-    secondary: {
-      path: string
-      runes: {
-        1: RuneIndex
-        2: RuneIndex
-        3: RuneIndex
-      }
-    }
-    shards: {
-      0: ShardIndex
+    keystone: RuneId
+0: PathSet
+1: PathSet
+    shards:{
       1: ShardIndex
       2: ShardIndex
-    }
+      3: ShardIndex
+  }
   }
 
+interface PathSet {
+  path: string | null
+      runes: PathRunes
+}
+
   interface ShardIndex {
-    slotID: number
-    slotName: string
+    slot: number
+    name: string
   }
 
   interface Shard extends ShardIndex {
-    name: string
+    slotName: string
     stats: string
     type: string
     icon: string
     color: string
   }
 
-  interface Slot {
-    runes: Rune[]
-  }
 
-  interface RuneIndex {
+
+  interface Rune {
     id: number
     key: string
     name: string
-  }
-
-  interface Rune extends RuneIndex {
-    icon: string
-    shortDesc: string
-    longDesc: string
+    description: string
+    details: string
+    runeIndex: number
   }
 
   interface Path {
     id: number
     key: string
-    icon: string
     name: string
-    slots: Slot[]
+    slots: [Rune[]]
   }
 
 }

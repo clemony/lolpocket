@@ -25,10 +25,10 @@ const set = computed (() => {
             class="shadow-sm inset-shadow-black/40 shadow-black/20 inset-shadow-sm btn btn-square size-16 rounded-lg !border-0">
             <div
               class="size-full overflow-hidden rounded-lg">
-              <div v-if="item.id == 0" class="size-full bg-b3  aspect-square" />
+              <div v-if="item == 0" class="size-full bg-b3  aspect-square" />
 
               <img
-                :src="`/img/item/${item.id}.webp`"
+                :src="`/img/item/${item}.webp`"
                 class="size-full bg-b3  aspect-square inset-shadow-rounded shadow-rounded inset-shadow-black shadow-black" />
             </div>
           </div>

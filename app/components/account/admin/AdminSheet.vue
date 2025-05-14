@@ -11,7 +11,6 @@ const keys = useMagicKeys()
 const isOpen = ref(false)
 whenever(keys.shift_a, () => {
   isOpen.value = true
-  console.log('Shift+Space have been pressed')
 })
 </script>
 

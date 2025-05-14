@@ -20,7 +20,7 @@ export const useDataStore = defineStore(
 
     const runes = computed (() => {
       const path = paths.value.flatMap(p => p.slots)
-      const slots = path.flatMap(s => s.runes)
+      const slots = path.flatMap(s => s[0])
       const runes = slots.flatMap(({ id, name }) => ({
         id,
         name,

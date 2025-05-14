@@ -29,13 +29,7 @@ watch(
 
 const tabListClass = 'bg-b1/45  shadow-smooth h-18 w-120 justify-evenly gap-5  overflow-hidden rounded-xl border border-b1/20 py-3  z-20 absolute flex items-center '
 
-const a = computed(() => {
-  return pathDescriptions.find(path => path.name == selectedPrimary.value)
-})
 
-const b = computed(() => {
-  return pathDescriptions.find(path => path.name == selectedSecondary.value)
-})
 </script>
 
 <template>
@@ -51,17 +45,7 @@ const b = computed(() => {
         leave-from-class="opacity-100 "
         leave-to-class="opacity-0 -translate-y-2"
         mode="out-in">
-        <div :key="selectedPrimary">
-          <div class="flex items-center gap-8 leading-none">
-            <h1 class="tracking-tight transition-all duration-300">
-              {{ selectedPrimary }}
-            </h1>
-            <span class="pt-0.5 lowercase">{{ a.tag }}</span>
-          </div>
-          <p class="text-4 mt-2.5 font-serif">
-            {{ a.description }}.
-          </p>
-        </div>
+        <RunesBlurb :current-path="selectedPrimary"  layoutId="path1" />
       </Transition>
       <div class="shadow-smooth relative h-18 w-120 rounded-xl">
         <div
@@ -106,17 +90,7 @@ const b = computed(() => {
         leave-from-class="opacity-100 "
         leave-to-class="opacity-0 -translate-y-2"
         mode="out-in">
-        <div :key="selectedSecondary">
-          <div class="flex items-center gap-8 leading-none">
-            <h1 class="tracking-tight transition-all duration-300">
-              {{ selectedSecondary }}
-            </h1>
-            <span class="pt-0.5 lowercase">{{ b.tag }}</span>
-          </div>
-          <p class="text-4 mt-2.5 font-serif">
-            {{ b.description }}.
-          </p>
-        </div>
+       <RunesBlurb :current-path="selectedSecondary"  layoutId="path2" />
       </Transition>
       <div class="shadow-smooth relative h-18 w-120 rounded-xl">
         <div

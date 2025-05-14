@@ -8,12 +8,7 @@ const pocket = computed (() => {
 })
 
 const spells = computed (() => {
-  const s = pocket.value.spells
-  return s.default && Object.values(s.default).filter(s => s.name != null)
-    ? s.default
-    : s.sets[0] && Object.values(s.sets[0]).filter(s => s.name != null)
-      ? s.sets[0]
-      : null
+  return pocket.value.spells[0]
 })
 </script>
 

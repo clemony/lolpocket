@@ -1,7 +1,6 @@
 <script setup lang="ts">
-const { id, name, class: className } = defineProps<{
+const { id, class: className } = defineProps<{
   id: number
-  name: string
   class?: HTMLAttributes['class']
 }>()
 const emit = defineEmits(['loaded'])
@@ -15,13 +14,13 @@ function handleLoad() {
 
 <template>
   <label
-    class="" :class="cn('rounded-lg   aspect-square', className)">
+    class="" :class="cn('rounded-lg  shadow-sm  drop-shadow-sm  aspect-square', className)">
 
-    <Image
+    <Img
       v-if="id"
-      :image="`/img/item/${id}.webp`"
-      :alt="`${name} Image`"
-      class="aspect-square size-full rounded-lg" @loaded="handleLoad()" />
+      :img="`/img/item/${id}.webp`"
+      alt="Item Image"
+      class="aspect-square opacity-96 size-full rounded-lg" @loaded="handleLoad()" />
 
     <slot />
 

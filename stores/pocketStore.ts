@@ -5,16 +5,43 @@ export const usePocketStore = defineStore(
   'pocketStore',
   () => {
     const pockets = ref<Pocket[]>([])
+    // In your usePocketStore
+
+    function updateRunes({
+      pocketKey,
+      runeSetIndex,
+      pathSetIndex, // 0 = primary, 1 = secondary
+      pathSet,
+    }: {
+      pocketKey: string
+      runeSetIndex: number
+      pathSetIndex: number
+      pathSet: PathSet
+    }) {
+      const pocket = pockets.value.find(p => p.key === pocketKey)
+      if (!pocket || !pocket.runes)
+        return
+
+      // Ensure the RuneSet exists at the index
+      const runeSet = pocket.runes[runeSetIndex]
+      if (!runeSet)
+        return
+
+      // Replace the specific PathSet (0 = primary, 1 = secondary)
+      runeSet[pathSetIndex] = JSON.parse(JSON.stringify(pathSet))
+
+      // Optional: Update timestamp
+      // pocket.dateUpdated = new Date()
+    }
+
     const trashFolder = ref<Pocket[]>([])
     const archiveFolder = ref<Pocket[]>([])
-    const filterText = ref('')
     const selectedRows = ref([])
     const tableSelectAll = ref()
     const pocketGridApi = shallowRef<GridApi | null>(null)
-    const trashGridApi = shallowRef<GridApi | null>(null)/*
-    const pinnedTopRowData = ref([]) */
+    const trashGridApi = shallowRef<GridApi | null>(null)
+
     const pocketGrid = shallowRef()
-    const columns = ref([])
     const newPocketOpen = ref(false)
 
     function updateSelectedRows(rows: any) {
@@ -27,7 +54,8 @@ export const usePocketStore = defineStore(
 
     return {
       pockets,
-      filterText,
+
+      updateRunes,
       archiveFolder,
       trashFolder,
       selectedRows,
@@ -36,9 +64,7 @@ export const usePocketStore = defineStore(
       pocketGridApi,
       trashGridApi,
       pocketGrid,
-      // pinnedTopRowData,
       allPockets,
-      columns,
       newPocketOpen,
     }
   },

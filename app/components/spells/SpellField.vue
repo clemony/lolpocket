@@ -6,7 +6,7 @@ const props = defineProps<{
 const emit = defineEmits(['update:selected'])
 
 const pocket = ref(props.pocket)
-
+/*
 function update(event, i) {
   console.log(event)
   pocket.value.spells.sets[i] = event
@@ -19,12 +19,12 @@ function handleClick() {
   console.log('💠 - update - pocket.value.spells.sets:', pocket.value.spells.sets)
 
   console.log('💠 - update - pocket.value.spells.sets:', pocket.value.spells)
-}
+} */
 </script>
 
 <template>
   <div class="flex gap-3  **:select-none">
-    <LazySpellPicker
+    <!-- <LazySpellPicker
       :model="0"
       :pocket="pocket"
       class="size-12 *:size-fit rounded-full *:!rounded-full"
@@ -38,7 +38,7 @@ function handleClick() {
 
     <button class="btn " @click="handleClick()">
       hihi
-    </button>
+    </button> -->
   </div>
 </template>
 

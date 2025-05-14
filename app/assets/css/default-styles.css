@@ -67,11 +67,5 @@
 }
 
 
-  .bg-noise {
-      @apply bg-[url("/assets/img/nnnoise.svg")];
-  }
 
 
-.field-box {
-  @apply shadow-warm-soft overflow-visible border bg-b2/30 drop-shadow-xs border-b3/40 justify-center rounded-box **:select-none text-2 overflow-visible  grid relative;
-}

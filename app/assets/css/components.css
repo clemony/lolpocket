@@ -20,12 +20,17 @@
     }
   
 
+  .bg-noise {
+      @apply bg-[url("/assets/img/nnnoise.svg")];
+  }
   .btn.btn-ghost.btn-active {
     --btn-bg: --alpha(var(--b2) / 30%) !important;
     border-color: --alpha(var(--b3) / 40%) !important;
   }
   
-
+.field-box {
+  @apply shadow-warm-soft overflow-visible border bg-b2/30 drop-shadow-xs border-b3/40 rounded-box **:select-none text-2   relative;
+}
 
   .btn:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
     @apply bg-b2/60 border-b2;
@@ -45,7 +50,7 @@
   }
   
     .tab {
-    --radius-field: 0.75rem !important;
+    --radius-field: 1rem !important;
     --tab-bg: var(--b1);
     --tab-border-color: var(--b3);
     --tab-border-colors: var(--b3);

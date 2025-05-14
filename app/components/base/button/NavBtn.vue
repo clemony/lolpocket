@@ -1,8 +1,11 @@
 <script setup lang="ts">
+const props = defineProps<{
+  class?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
-  <label class="btn text-3 font-semibold  btn-ghost">
+  <label class="btn   btn-lg  font-medium cursor-pointer btn-ghost relative " :class="cn('', props.class)">
     <slot />
   </label>
 </template>

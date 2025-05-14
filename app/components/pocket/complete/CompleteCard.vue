@@ -89,7 +89,7 @@ const downloadClicked = refAutoReset(false, 1000)
 
           <div class="h-auto space-y-12 mt-20">
             <template v-for="(set, i) in pocket.complete.items" :key="i">
-              <template v-if="set && set != undefined && set.items.length && set != null && set.items[0] != undefined && set.items[0].id != 0">
+              <template v-if="set && set != undefined && set.items.length && set != null && set.items[0] != undefined && set.items[0] != 0">
                 <CompleteItemSets :set="pocket.complete.items[i]" :pocket="pocket" />
               </template>
             </template>

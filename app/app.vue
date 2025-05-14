@@ -47,7 +47,7 @@ onMounted(async () => {
     <NuxtLoadingIndicator color="var(--color-neutral)" />
 
     <Toast
-      position="top-center"
+      position="top-right"
       :expand="true"
       :duration="Infinity" />
 

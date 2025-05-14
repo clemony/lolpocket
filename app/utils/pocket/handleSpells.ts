@@ -10,7 +10,7 @@ export function newSpellSet(key?) {
 
   if (key) {
     const pocket = getPocket(key)
-    pocket.spells.sets.push(newSet)
+    pocket.spells.push(newSet)
   }
   else {
     return newSet

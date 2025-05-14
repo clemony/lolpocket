@@ -1,89 +1,64 @@
 <script setup lang="ts">
-const props = defineProps<{
-  pocket?: Pocket
-  selected?: number
-  runeSet: RuneSet
-
-  selectedShard?: number
+const { pocket } = defineProps<{
+  pocket: Pocket
 }>()
-const set = computed (() => {
-  return props.runeSet
-})
+
+const rs = useRuneStore()
+const set = computed(() => pocket.runes[rs.selectedRuneSet])
 </script>
 
 <template>
-  <div
-    :key="set.key"
+  <Field
+    title="Shards"
     class="flex justify-center  rounded-xl w-full py-10">
     <div class="grid  grid-cols-3 place-items-center gap-x-16 gap-y-7">
-      <div
+      
+        <label
         v-for="shard in shards"
-        :key="shard.name + shard.slotID"
+        :key="shard.name + shard.slot"
         v-tippy="shard.stats"
         :alt="shard.stats"
-        :data-tag="shard.color" :class="getShardBg(shard)"
-        class="group">
-        <label
+        class="group"
           :class="
             cn(
               /* b4 */
-              'backdrop-blur-xs bg-b1/60',
-              /* border */
-              'border-b-b3 border-l-b3/60 border-r-b3 border-t-b3/60 border',
+              'backdrop-blur-xs ',
 
-              /* shadow */
-              'shadow-warm-2',
 
               /* struct  */
-              'grid size-14 shrink-0 place-items-center cursor-pointer  rounded-full transition-all duration-300 has-checked:scale-105 group',
-              shard.name,
-              getShardClass(shard)
-                .toString()
-                .replace(/border.*/, ''),
-              {
-                'bg-b2/20': shard.name == 'empty',
-              },
-            )
-          "
-          :style="{
-            backgroundImage: 'url(/img/ui/green-dust-and-scratches.png),linear-gradient(135deg,var(--b1) / 0.4) 50%, oklch(var(--b2)) 100%',
-          }">
+              'grid size-14 shrink-0 place-items-center cursor-pointer  rounded-full transition-all ring ring-b2 inset-shadow-xs duration-300 hover:bg-b3/40 group has-checked:shadow-outline    has-checked:bg-linear-to-br from-70% has-checked:from-b1 has-checked:to-b2/10 shadow-black/6  has-checked:hover:bg-b1/30 hover:inset-shadow-xs hover:inset-shadow-b3/70',
+     ) ">
           <input
-            v-if="shard.slotID == 1"
+            v-if="shard.slot == 1"
             v-model="set.shards[0]"
             type="radio"
             :name="shard.slotName"
-            :value="shard"
             class="peer hidden"
             @change="console.log(set)" />
 
           <input
-            v-if="shard.slotID == 2"
+            v-if="shard.slot == 2"
             v-model="set.shards[1]"
             type="radio"
             :name="shard.slotName"
             :value="shard"
             class="peer hidden" />
           <input
-            v-if="shard.slotID == 3"
+            v-if="shard.slot == 3"
             v-model="set.shards[2]"
             type="radio"
-            :name="shard.name + shard.slotID"
+            :name="shard.name + shard.slot"
             :value="shard"
             class="peer hidden" />
 
           <component
-            :is="`i-stats-${getShardIcon(shard)}`" :id="`shard-${shard.name}`"
-            class="size-6  opacity-90 brightness-95 drop-shadow-md grayscale peer-checked:opacity-100 peer-checked:grayscale-0 group-hover:grayscale-0"
-            :class="
-              cn(getShardIconColor(shard), {
-                'opacity-40': shard.name == 'empty',
-              })
-            " />
+            :is="`i-stats-${shard.icon}`" :alt="`shard-${shard.name}`"
+            class="size-6 brightness-0 opacity-40 group-hover:opacity-100 group-hover:brightness-100 peer-checked:brightness-100  drop-shadow-md grayscale peer-checked:opacity-100 peer-checked:grayscale-0 group-hover:grayscale-0"
+            :class="cn(shard.iconClass, `${shard.color}`)" />
         </label>
-      </div>
+  
     </div>
-  </div>
+  </Field>
 </template>
 
 <style scoped></style>

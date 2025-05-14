@@ -10,6 +10,8 @@ const props = defineProps<
     class?: HTMLAttributes['class']
     orientation?: 'horizontal' | 'vertical'
     contrast?: boolean
+    round?: boolean
+    roundDisabled?: boolean
   }
 >()
 const forwarded = reactiveOmit(props, 'class')
@@ -44,8 +46,8 @@ const variants = {
       }"
       :class="cn(' top-1 absolute transition-all rounded-lg ', { '!top-0 left-1': props.orientation == 'vertical' }, props.class)">
       <motion.div
-        class="h-full w-full rounded-lg bg-b1 text-bc shadow"
-        :class="cn('   ', { 'shadow-sm shadow-black/3 bg-b1/90 ': props.orientation == 'vertical', 'bg-neutral/82 border-accent border drop-shadow-sm inset-shadow-sm inset-shadow-b3/20 rounded-xl rounded-lg-2': props.contrast })" />
+        class="h-full w-full rounded-lg  text-bc shadow"
+        :class="cn('  ', { 'bg-b1 ': !props.round, 'shadow-sm shadow-black/3 bg-b1/90 ': props.orientation == 'vertical', 'bg-neutral/82 border-accent border drop-shadow-sm inset-shadow-sm inset-shadow-b3/20 rounded-xl rounded-lg-2': props.contrast, '!rounded-full  !to-b2/20 rounded-full  shadow-outline ring ring-b3/20 !bg-gradient-to-br backdrop-blur-sm  !from-b1 from-70% !shadow-black/8 mt-0.5 !aspect-square': props.round, '!rounded-full  !to-b2/90  ring ring-b3/20 !bg-gradient-to-br   !from-b2 inset-shadow-xs !aspect-square scale-90 opacity-96 ': props.roundDisabled })" />
     </motion.div>
   </TabsIndicator>
 </template>

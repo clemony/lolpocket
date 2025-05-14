@@ -10,7 +10,7 @@ const pocket = ref(props.pocket)
 
 const ts = useTempStore()
 function handleDelete() {
-  rs.selectedRuneSet = props.pocket.runes.sets[0]
+  pocket.value.runes[rs.selectedRuneSet] = props.pocket.runes[0]
   deleteRuneSet(props.pocket, props.set)
 }
 
@@ -23,21 +23,20 @@ function handleNewSet() {
 </script>
 
 <template>
-    <div class="flex gap-2 items-center">
-      <button
-        v-tippy="'New Rune Set'"
-        class="btn btn-md btn-square"
-        @click="handleNewSet()">
-        <icon
-          name="add-sm"
-          class=" size-6 shrink-0 dst" />
-      </button>
+  <div class="flex gap-2 items-center">
+    <button
+      v-tippy="'New Rune Set'"
+      class="btn btn-md btn-square"
+      @click="handleNewSet()">
+      <icon
+        name="add-sm"
+        class=" size-6 shrink-0 dst" />
+    </button>
 
-      <button v-tippy="'Delete Current Set'" class="btn btn-square *:dst  " @click="handleDelete()">
-        <icon name="trash" class="opacity-70 shrink-0  size-5" />
-      </button>
-    </div>
-
+    <button v-tippy="'Delete Current Set'" class="btn btn-square *:dst  " @click="handleDelete()">
+      <icon name="trash" class="opacity-70 shrink-0  size-5" />
+    </button>
+  </div>
 </template>
 
 <style scoped>

@@ -19,10 +19,6 @@ function handleSpells(e, i) {
   console.log('💠 - set - set:', set)
   set.value[i] = e
 }
-
-function handleDefault() {
-  pocket.value.spells.default = pocket.value.spells.sets[props.setIndex]
-}
 </script>
 
 <template>
@@ -33,7 +29,7 @@ function handleDefault() {
       <icon name="x-sm" class="size-6 dst shrink-0 group-hover/btn:text-bc/100 text-bc/50" />
     </button>
     <label v-tippy="'Default Set'" class="rating rating-xs opacity-0 group-hover/cli:opacity-100 transition-opacity dr-30 mb-0.5 has-checked:opacity-100">
-      <input :key="props.setIndex" v-model="pocket.spells.default" type="radio" name="default-champ" class="mask mask-star-2 bg-neutral" aria-label="make champion default" :value="set" @change="handleDefault()" />
+      <input :key="props.setIndex" v-model="pocket.spells" type="radio" name="default-champ" class="mask mask-star-2 bg-neutral" aria-label="make champion default" :value="set" />
     </label>
   </div>
 </template>

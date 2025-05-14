@@ -8,7 +8,7 @@ const props = defineProps<{
 
   <DropdownMenuSubTrigger
     :class="cn(
-      'flex cursor-default select-none items-center rounded-sm px-2 py-1.5 !text-2 outline-none focus:bg-accent data-[state=open]:bg-accent text-nc',
+      ' focus:bg-accent cursor-pointer gap-3 data-[state=open]:bg-accent text-nc',
       props.class,
     )"
   >

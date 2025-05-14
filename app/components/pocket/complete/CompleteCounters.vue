@@ -14,25 +14,25 @@ const rolesLength = computed (() => {
 })
 
 const spellsLength = computed (() => {
-  return pocket.value.spells.sets.length
+  return pocket.value.spells.length
 })
 
 const itemsLength = computed (() => {
-  if (pocket.value.items.sets.length == 1 && !pocket.value.items.sets[0].items.length) {
+  if (pocket.value.items.length == 1 && !pocket.value.items[0].items.length) {
     return 0
   }
   else {
-    return pocket.value.items.sets.length
+    return pocket.value.items.length
   }
 })
-const runeSetsLength = computed (() => {
-  if (pocket.value.runes.sets.length == 1) {
-    const set = ref(pocket.value.runes.sets[0])
+/* const runeSetsLength = computed (() => {
+  if (pocket.value.runes.length == 1) {
+    const set = ref(pocket.value.runes[0])
     const primaryRunes = computed (() => {
-      const a = Object.values(set.value.primary.runes)
+      const a = Object.values(set.value[0].runes)
       const b = () => {
         if (a) {
-          const b1 = a.filter(r => r.name != 'empty')
+          const b1 = a.filter(r => r != 'empty')
           return b1
         }
       }
@@ -54,9 +54,9 @@ const runeSetsLength = computed (() => {
     return setLength > 0 ? 1 : 0
   }
   else {
-    return pocket.value.runes.sets.length
+    return pocket.value.runes.length
   }
-})
+}) */
 </script>
 
 <template>
@@ -76,11 +76,11 @@ const runeSetsLength = computed (() => {
       <icon name="game-icons:fire-spell-cast" class="size-6 dst opacity-70" />
       <span class="dst font-medium">{{ spellsLength }}</span>
     </div>
-
+    <!--
     <div v-tippy="`${runeSetsLength ? runeSetsLength : 'no'} rune sets`" class="flex gap-2 items-center">
       <i-rune-icon class="size-7 dst" />
       <span class="dst  font-medium">{{ runeSetsLength }}</span>
-    </div>
+    </div> -->
 
     <div v-tippy="`${itemsLength ? itemsLength : 'no'} item sets`" class="flex gap-2.5 items-center">
       <icon name="bow" class="size-6 dst" />

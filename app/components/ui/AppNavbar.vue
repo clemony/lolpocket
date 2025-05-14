@@ -31,7 +31,7 @@ function handleMenu() {
     <Grow />
     <!-- -->
     <IndicatorMenubar v-model:model-value="tabs" @update:model-value="handleMenu()">
-      <IndicatorTabsList class="grid-cols-6 bg-transparent shadow-none inset-shadow-none border-none py-0 overflow-y-visible h-10">
+      <IndicatorTabsList class="grid-cols-6 **:text-3  bg-transparent shadow-none inset-shadow-none border-none py-0 overflow-y-visible h-10">
         <IndicatorTabsTrigger value="/nexus">
           Nexus
         </IndicatorTabsTrigger>

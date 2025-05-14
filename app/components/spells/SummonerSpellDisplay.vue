@@ -18,10 +18,9 @@ const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells
 
 <template>
   <div class=" gap-2 flex h-auto items-center l  py-2 px-2  bg-b2 border-b3 shadow-sm">
-
-      <Popover>
-    <PopoverTrigger class="">
-      <img
+    <Popover>
+      <PopoverTrigger class="">
+        <!--       <img
         v-if="!pocket.spells[0] || !pocket.spells[0].name || pocket.spells[0].name == 'empty' || pocket.spells[0].name == undefined"
         :src="getRandom(imgArr)"
         class=" rounded-full overflow-hidden grayscale opacity-30 color-mix-screen  transition-all duration-500"
@@ -30,21 +29,20 @@ const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells
       <img
         v-else-if="pocket.spells[0]"
         :src="`/img/spells/${pocket.spells[0].name}.webp`"
-
+ -->
         class=" rounded-full overflow-hidden grayscale-0 transition-all duration-500"
-      />
-    </PopoverTrigger>
-    <SpellPicker
-      :model="0"
-      :pocket="pocket"
-      :is-menu-open="isOpen"
-      @update:model="update($event, 0)"
-    />
-      </Popover>
+        />
+      </PopoverTrigger>
+      <SpellPicker
+        :model="0"
+        :pocket="pocket"
+        :is-menu-open="isOpen"
+        @update:model="update($event, 0)" />
+    </Popover>
 
-        <Popover>
-    <PopoverTrigger class="">
-      <img
+    <Popover>
+      <PopoverTrigger class="">
+        <!--  <img
         v-if="!pocket.spells[1] || !pocket.spells[1].name || pocket.spells[1].name == 'empty' || pocket.spells[1].name == undefined"
         :src="getRandom(imgArr)"
         class=" rounded-full overflow-hidden grayscale opacity-30 color-mix-screen  transition-all duration-500"
@@ -55,15 +53,14 @@ const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells
         :src="`/img/spells/${pocket.spells[1].name}.webp`"
 
         class=" rounded-full overflow-hidden grayscale-0 transition-all duration-500"
-      />
-    </PopoverTrigger>
-    <SpellPicker
-      :model="1"
-      :pocket="pocket"
-      :is-menu-open="isOpen"
-      @update:model="update($event, 1)"
-    />
-        </Popover>
+      /> -->
+      </PopoverTrigger>
+      <SpellPicker
+        :model="1"
+        :pocket="pocket"
+        :is-menu-open="isOpen"
+        @update:model="update($event, 1)" />
+    </Popover>
   </div>
 </template>
 

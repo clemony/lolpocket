@@ -13,7 +13,6 @@
     
   --radius-selector: 0.4rem;
   --radius-box: 1rem !important;
-  --radius-field: 0.55rem !important;
   --depth: 1;
   --noise: 0.5;
 
@@ -56,7 +55,7 @@
 
   --shadow-smooth: 0px 1px 10px rgba(17, 17, 26, 0.075);
 
-  --shadow-outline: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  --shadow-outline: rgba(0, 0, 0, 0.15) 0px 3px 3px 1px;
 
   --shadow-outline-4: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 

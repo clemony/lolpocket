@@ -28,6 +28,7 @@ onMounted (() => {
       Pockets
     </div>
     <div class="">
+      <SidebarAddPocket class="w-full btn bg-b2/40 border-b3/40 my-3 btn-md" />
       <LazyCollapsiblePinned />
 
       <LazyCollapsible v-model:open="all" :disabled="!ps.pockets || ps.pockets.length == null || ps.pockets.length == 0" class="group/all">

@@ -6,6 +6,10 @@ import {
 const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
+
+defineOptions({
+inheritAttrs: false
+})
 </script>
 
 
@@ -13,7 +17,8 @@ const props = defineProps<{
 <template>
     <DropdownMenuPortal>
 <DropdownMenuSubContent
-    :class="cn(' rounded-lg ml-1  border-accent  bg-neutral/80 backdrop-blur-md p-1 text-nc ', props.class)"
+v-bind="$attrs"
+    :class="cn(' rounded-lg ml-1  border-b3/50 border  bg-neutral/80 backdrop-blur-md p-1 text-nc ', props.class)"
   >
     <slot />
   </DropdownMenuSubContent>

@@ -5,18 +5,9 @@ declare global {
     name: string
     roles: string[] | null
     champions:  ChampionKey[] | null
-    items: {
-      sets: ItemSet[] | null
-      default: ItemSet | null
-    }
-    runes: {
-      sets: RuneSet[] | null
-      default: RuneSet | null
-    }
-    spells: {
-      sets: SpellSet[] | null
-      default: SpellSet | null
-    }
+    items:  ItemSet[] | null
+    runes:  RuneSet[] | null
+    spells:  SpellSet[] | null
     dateCreated: dateObject
     dateUpdated: dateObject
     tags: string[] | null
@@ -37,11 +28,7 @@ declare global {
       }
     }
     complete: {
-      items: {
-        0: ItemSet | null
-        1: ItemSet | null
-        2: ItemSet | null
-      }
+      items: ItemSet[] | null
       runes: RuneSet | null
     }
   }

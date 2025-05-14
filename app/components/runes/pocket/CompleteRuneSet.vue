@@ -7,14 +7,14 @@ const props = defineProps<{
 const set = computed (() => {
   return props.set ? props.set : props.modelValue
 })
-
+/*
 const showEmptySecondary = computedAsync (() => {
   return set.value.secondary.runes[3].name == 'empty' && set.value.secondary.runes[1].name == 'empty' && set.value.secondary.runes[2].name == 'empty'
-})
+}) */
 </script>
 
 <template>
-  <button
+  <!--  <button
     v-if="set"
     :key="set.key" class="grid grid-cols-2 gap-2  place-items-center ">
     <div class="relative !pointer-events-auto size-17 shadow-outline shadow-black/15 grid aspect-square cursor-pointer   place-items-center overflow-visible items-center rounded-full transition-all duration-500 ring-1 ring-b2 ">
@@ -38,7 +38,8 @@ const showEmptySecondary = computedAsync (() => {
           class=" shrink-0 h-7 w-auto object-contain transition-all duration-200 dst" />
       </div>
     </div>
-  </button>
+  </button> -->
+  h
 </template>
 
 <style scoped>

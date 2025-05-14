@@ -84,6 +84,7 @@ export default defineNuxtConfig({
       duration: 400,
       easing: 'cubic-bezier(.25, .8, .5, 1)',
       mode: 'out-in',
+      appear: false,
     },
     componentDefaultProps: {
       TransitionSlide: {

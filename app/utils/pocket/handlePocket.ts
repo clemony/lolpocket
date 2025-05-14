@@ -8,28 +8,19 @@ export async function addPocket(name: string, tags: string[], icon: string, key?
   const ps = usePocketStore()
 
 
-  const itemSet = newItemSet('', 'Set 1')
+  const itemSet = newItemSet()
   const runeSet = newRuneSet()
   const spellSet = newSpellSet()
 
   const newPocket: Pocket = {
     key: pocketKey,
-    name: name || generateShortString().toString(),
+    name: name || await generateShortString(),
     roles: ['all'],
     icon: icon || '/img/lp/192.webp',
     champions:  [],
-    items: {
-      sets: [itemSet],
-      default: null,
-    },
-    runes: {
-      sets: [runeSet],
-      default: null,
-    },
-    spells: {
-      sets: [spellSet],
-      default: null,
-    },
+    items:  [await itemSet as ItemSet],
+    runes:  [runeSet],
+    spells: [spellSet],
     tags: tags?.length ? tags : [''],
     location: {
       pinned: false,
@@ -47,26 +38,20 @@ export async function addPocket(name: string, tags: string[], icon: string, key?
       },
     },
     complete: {
-      items: {
-        0: itemSet,
-        1: newItemSet('', 'Set 2'),
-        2: newItemSet('', 'Set 3'),
-      },
+      items: [],
       runes: runeSet,
     },
     dateCreated: createDateObject(),
     dateUpdated: createDateObject(),
   }
 
-  // Clean up any placeholder item in the first set
-  newPocket.items.sets[0].items = []
   console.log('💠 - addPocket - newPocket:', newPocket)
 
   ps.pockets.push(newPocket)
 
   console.log('💠 - addPocket - ps.pocket:', ps.pockets)
   const newPocketToast = toast.success(`Pocket ${newPocket.name} created.`, {
-    description: 'Head to your new pocket and start crafting?',
+    description: 'Head to your new pocket and start planning?',
     duration: 7000,
     action: {
       label: 'Open Pocket',

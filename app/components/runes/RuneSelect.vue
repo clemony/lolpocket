@@ -83,7 +83,7 @@ function onHover(rune) {
           'hidden': slot === selectedPathData.slots[0] && props.pathSet == 2,
         }">
         <label
-          v-for="rune in slot.runes"
+          v-for="rune in slot"
           :key="rune.id"
           v-tippy="rune.name"
           :data-path="selectedPath"

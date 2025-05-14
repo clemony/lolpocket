@@ -1,19 +1,19 @@
 <script setup lang="ts">
-const { itemLite } = defineProps<{
-  itemLite: ItemLite
+const { id } = defineProps<{
+  id: ItemId
 }>()
-  console.log("💠 - itemLite:", itemLite)
 
-const { data } = await useFetch(`/api/items/${itemLite.id}.json`)
+
+const { data } = await useFetch(`/api/items/${id}.json`)
 const { data: description } = await useFetch(`/api/lists/item-effects.json`)
 const item = computed (() => data.value as Item)
 console.log("💠 - description:", description)
 
 /* const itemPrice = computed (() => {
-  if (!itemLite.cost)
+  if (!item.cost)
   return
 
-  return typeof itemLite.cost === 'number' ? `${ itemLite.cost} G` : typeof  itemLite.cost === 'string' ? `<span>${ itemLite.cost.toString().replace('=>', '')}</span>` : null
+  return typeof item.cost === 'number' ? `${ item.cost} G` : typeof  item.cost === 'string' ? `<span>${ item.cost.toString().replace('=>', '')}</span>` : null
 }) */
 console.log('💠 - item:', item.value)
 const stats = computed (() => formatItemStats(item.value.stats))
@@ -41,10 +41,10 @@ const stats = computed (() => formatItemStats(item.value.stats))
 <div class="flex gap-1 ">
         <ItemTier :ranks="item.rank" />
         <Grow />
-        <div v-if=" itemLite.cost" class="flex items-end gap-0.5 *:!text-nc text-2">
-          <icon v-if="typeof  itemLite.cost != 'number'" name="lets-icons:up" class="shrink-0 !text-nc size-4.25 " />
+        <div v-if=" item.shop.prices.total" class="flex items-end gap-0.5 *:!text-nc text-2">
+          <icon v-if="typeof   item.shop.prices.total != 'number'" name="lets-icons:up" class="shrink-0 !text-nc size-4.25 " />
      <!--      <span v-html="itemPrice"></span> -->
-           {{`${ itemLite.cost} G` }}
+           {{`${  item.shop.prices.total} G` }}
         </div>
         </div>
       </div>
@@ -55,8 +55,8 @@ const stats = computed (() => formatItemStats(item.value.stats))
 <div class="">
   {{item.simpleDescription}}
 </div>
-      <div v-if="itemLite.stats && Object.entries(itemLite.stats).length" class="pb-1">
-        <ItemStats :stats="itemLite.stats" />
+      <div v-if="item.stats && Object.entries(item.stats).length" class="pb-1">
+ <!--        <ItemStats :stats="item.stats" /> -->
       </div>
 
   

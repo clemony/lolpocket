@@ -19,10 +19,10 @@ const props = defineProps<{
               class="size-20 rounded-xl *:rounded-xl">
               <div
                 class="size-full overflow-hidden rounded-lg">
-                <div v-if="item.id == 0" class="size-full bg-b3  aspect-square" />
+                <div v-if="item == 0" class="size-full bg-b3  aspect-square" />
 
                 <img
-                  :src="`/img/item/${item.id}.webp`"
+                  :src="`/img/item/${item}.webp`"
                   class="size-full bg-b3  aspect-square inset-shadow-rounded shadow-rounded inset-shadow-black shadow-black " />
               </div>
             </div>

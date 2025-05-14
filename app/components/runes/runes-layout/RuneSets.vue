@@ -8,13 +8,13 @@ const emit = defineEmits(['update:selected'])
 
 const pocket = ref(props.pocket)
 
-const selectedSet = ref<RuneSet>(props.pocket.runes.sets[0])
+/* const selectedSet = ref<RuneSet>(props.pocket.runes.sets[0])
 
 const secondary = computed(() => {
   const a = Object.values(selectedSet.value.secondary.runes).filter(r => r != null || undefined)
   return a.filter(r => r.name != 'empty')
 })
-
+ */
 const primaryColor = computedAsync (() => {
 
 })
@@ -22,7 +22,7 @@ const primaryColor = computedAsync (() => {
 
 <template>
   <div class="flex flex-col gap-4 h-full">
-    <DropdownMenu>
+    <!--  <DropdownMenu>
       <DropdownMenuTrigger
         class="rounded-lg   gap-4 cursor-pointer  p-3 hover:border-b3 hover:shadow-warm-2 hover:shadow-black/6 hover:shadow-inset-sm transition-all duration-300  border-transparent items-center    h-fit  justify-start  data-[state=open]:border-b3 group grid grid-cols-3">
         <div
@@ -102,7 +102,7 @@ const primaryColor = computedAsync (() => {
           Add Rune Set
         </DropdownMenuItem>
       </DropdownMenuContent>
-    </DropdownMenu>
+    </DropdownMenu> -->
   </div>
 </template>
 

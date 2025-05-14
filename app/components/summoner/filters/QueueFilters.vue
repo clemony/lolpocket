@@ -4,7 +4,7 @@ const ms = useMatchStore()
 
 <template>
   <Tabs v-model:model-value="ms.mf.queue" class="   w-full">
-    <Field class="p-0 gap-0">
+    <Field class="!p-0  gap-0">
       <IndicatorTabsList class="bg-transparent h-10   w-full grid grid-cols-[repeat(4,1fr)_0.5fr] ">
         <IndicatorTabsTrigger :value="0">
           All

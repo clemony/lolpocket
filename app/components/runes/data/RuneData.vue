@@ -5,14 +5,12 @@ const rs = useRuneStore()
 const ds = useDataStore()
 
 const rune = computed (() => {
-return rs.hoveredRune
+  return rs.hoveredRune
 })
 
 const pathName = computed (() => {
   return getRunePathName(rune.value.id, ds.paths)
 })
-
-
 </script>
 
 <template>
@@ -53,11 +51,11 @@ const pathName = computed (() => {
     </div>
 
     <div :key="`${rune.name}2`" class="relative">
-      <div
+      <!--       <div
         id="runeStats"
         :key="`${rune.name}3`"
         class="max-w-105  !text-3 text-pretty whitespace-pre-line"
-        v-html="formatDataText(rune.longDesc)"></div>
+        v-html="formatDataText(rune.longDesc)"></div> -->
     </div>
   </div>
 </template>

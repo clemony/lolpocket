@@ -21,13 +21,13 @@ const { summoner, account } = defineProps<{
         <LazySummonerCard :summoner="summoner" :account="account" class="  py-2 mb-2 px-2" />
         <CommandTrigger />
 
-        <Field class=" px-2">
+        <Field class="">
           <SidebarAddPocket />
         </Field>
 
         <LazyAccountPinnedPockets :account="account" />
 
-        <Field class=" px-2 py-3">
+        <Field >
           <NavBtn class=" justify-start  btn-lg !font-medium" @click="navigateTo('')">
             <icon name="flowbite:clock-arrow-outline" class=" " />
             Match History

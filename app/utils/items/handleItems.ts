@@ -7,8 +7,8 @@ addItemToSet
 remove items
 */
 
-export function removeItemFromSet(pocket: Pocket, itemSet: ItemSet, itemx: ItemLite) {
-  const set = pocket?.items.sets.find(set => set.key === itemSet.key)
+export function removeItemFromSet(pocket: Pocket, itemSet: ItemSet, itemx: ItemId) {
+  const set = pocket?.items.find(set => set === itemSet)
 
   console.log('💠 - removeItemFromSet - set:', set)
   if (set) {
@@ -20,17 +20,17 @@ export function removeItemFromSet(pocket: Pocket, itemSet: ItemSet, itemx: ItemL
   }
 }
 
-export function addItemToSet(pocket: Pocket, itemSet: ItemSet, item: ItemLite) {
-  const set = pocket.items.sets.find(set => set.key === itemSet.key)
+export function addItemToSet(pocket: Pocket, itemSet: ItemSet, item: ItemId) {
+ const set = pocket.items.find(set => set === itemSet)
 
   if (set && Array.isArray(set.items)) {
     set.items.push(item)
-  }
+  } 
 }
 
 export function duplicateItemSet(pocket: Pocket, set: ItemSet) {
   const newSet = deepCopy(set)
-  pocket.items.sets.push(newSet)
+  pocket.items.push(newSet)
 }
 
 export function resetItems(set: ItemSet) {
@@ -46,15 +46,15 @@ export function copyItemSetToPocket(targetPocket: Pocket, set: ItemSet) {
     toast('Something went wrong!')
   }
   else {
-    targetPocket.items.sets.push(newSet)
+    targetPocket.items.push(newSet)
     toast(`Set copied to ${targetPocket.name}!`)
   }
 }
 
 export function deleteItemSet(pocket: Pocket, set: ItemSet) {
-  const i = pocket.items.sets.findIndex(s => s.key == set.key)
+  const i = pocket.items.findIndex(s => s == set)
   if (i) {
-    pocket.items.sets.splice(i, 1)
+    pocket.items.splice(i, 1)
   }
 }
 
