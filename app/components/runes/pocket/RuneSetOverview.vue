@@ -38,7 +38,7 @@ const pocket = ref(props.pocket)
       class="hover:bg-b2"
       alt="Clear Items"
       title="Clear Items"
-      @click="resetRunes(pocket, set)">
+      @click="resetRunes(set)">
       <icon
         name="teenyicons:clockwise-outline"
         class="size-[0.8rem] pb-[2px]" />

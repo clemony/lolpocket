@@ -226,7 +226,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yone/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Yone cleaves his Azakana Sword in a cone in the target direction, dealing equal parts physical and magic damage to enemies hit. The total mixed damage has a minimum threshold of 40 - 410 (based on level) against minions and a maximum threshold of 150 - 320 (based on level) against monsters.</p></div>",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Yone cleaves with his Azakana Sword in a cone in the target direction, dealing equal parts physical and magic damage to enemies hit. The total mixed damage has a minimum threshold of 40 - 410 (based on level) against minions and a maximum threshold of 150 - 320 (based on level) against monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Mixed Damage",
@@ -345,7 +345,7 @@
         "projectile": "FALSE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Despite Spirit Cleave generally hitting targets'  edge range, it cannot hit targets whose center is behind him.\nThis behaviour is common with missiles, however some cone spells such as this one also do it.\nSpirit Cleave will not benefit from the bonus attack speed gained by  Hail of Blades.(bug)\n Spell shield does not prevent Yone from receiving and/or increasing the  shield.\nThe shield's amount will also increase for each  clone hit.\nThis ability will cast from wherever the caster is at the end of the cast time.\nYone will always cast Spirit Cleave in his facing direction, and he will turn to face the target direction at the start of the cast time.\nThe mixed damage is applied in two instances, and the physical damage will be dealt first within the same game tick.\nIf the physical damage finishes off the unit, the magic damage will not be dealt against it.(bug)",
+        "notes": "Despite Spirit Cleave generally hitting targets'  edge range, it cannot hit targets whose center is behind him.\nThis behaviour is common with missiles, however some cone spells such as this one also do it.\nSpirit Cleave will not benefit from the bonus attack speed gained by  Hail of Blades.(bug)\n Spell shield does not prevent Yone from receiving and/or increasing the  shield.\nThe shield's amount will also increase for each  clone hit.\nThis ability will cast from wherever the caster is at the end of the cast time.\nSpirit Cleave will not preserve the caster's initial facing direction when using  Flash and similar effects.\nIt will cast in the caster's new facing direction at the end of the cast time.\nWhile casting Spirit Cleave, Yone's facing direction cannot be shifted by displacements (eg.  Vault,  Last Breath).\nThe mixed damage is applied in two instances, and the physical damage will be dealt first within the same game tick.\nIf the physical damage finishes off the unit, the magic damage will not be dealt against it.(bug)",
         "blurb": "Active:  Yone cleaves his Azakana Sword in a cone in the target direction, dealing equal parts physical and magic damage to enemies hit based on their maximum health.",
         "missileSpeed": null,
         "rechargeRate": null,

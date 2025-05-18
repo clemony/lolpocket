@@ -3,6 +3,7 @@
   "key": "Mordekaiser",
   "name": "Mordekaiser",
   "title": "the Iron Revenant",
+  "fullName": "Sahn-Uzal",
   "resource": "Shield",
   "attackType": "Melee",
   "stats": {
@@ -139,7 +140,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Mordekaiser/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Mordekaiser turns to face the target direction before striking his mace down in a line, dealing magic damage to enemies within, increased if only one enemy is hit.</p></div>",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Mordekaiser strikes his mace down in a line in the target direction, dealing magic damage to enemies within, increased if only one enemy is hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -238,7 +239,7 @@
         "projectile": "FALSE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Applies  spell damage if it hits one target and  area damage to multiple targets.\nObliterate's damage against isolated enemies at:\nRank 1: 104 : 162.5 (based on level) (+ 91% AP)\nRank 2: 148.5 : 209.25 (based on level) (+ 94.5% AP)\nRank 3: 196 : 259 (based on level) (+ 98% AP)\nRank 4: 246.5 : 311.75 (based on level) (+ 101.5% AP)\nRank 5: 300 : 367.5 (based on level) (+ 105% AP)\nThis ability will cast from wherever the caster is at the end of the cast time.\nObliterate will not preserve the caster's initial facing direction when using  Flash and similar effects.\nIt will cast in the caster's new facing direction at the end of the cast time.",
+        "notes": "For the majority of the animation time, Obliterate will preserve the caster's initial facing direction when using  Flash and similar effects.\nIt will not do so toward the end of the cast.(bug)\nApplies  spell damage if it hits one target and  area damage to multiple targets.\nObliterate's damage against isolated enemies at:\nRank 1: 104 : 162.5 (based on level) (+ 91% AP)\nRank 2: 148.5 : 209.25 (based on level) (+ 94.5% AP)\nRank 3: 196 : 259 (based on level) (+ 98% AP)\nRank 4: 246.5 : 311.75 (based on level) (+ 101.5% AP)\nRank 5: 300 : 367.5 (based on level) (+ 105% AP)\nThis ability will cast from wherever the caster is at the end of the cast time.",
         "blurb": "Active:  Mordekaiser smashes the area in the target direction, dealing magic damage to enemies within,  increased if it hits only one enemy.",
         "missileSpeed": null,
         "rechargeRate": null,

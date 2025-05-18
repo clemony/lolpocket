@@ -22,12 +22,6 @@
   @apply border-b2 bg-b2/30 overflow-hidden aspect-square size-16 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
 }
 
-.item-set-item-ghost,
-.item-set-item-fallback,
-.item-set-item-chosen   {
-  @apply border-b2 bg-b2/30 overflow-hidden aspect-square !size-18 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
-}
-
 .sortable-ghost {
   @apply size-full rounded-lg border-b2 ring ring-neutral/90 ring-offset-1 ring-offset-b2;
 }
@@ -45,4 +39,39 @@
   .module-bg {
     @apply bg-b1 border-b2 transition-all duration-300 shadow-smooth;
   }
+}
+
+/* pocket item set */
+
+
+.item-set-drag,
+.item-set-ghost,
+.item-set-fallback,
+.item-set-chosen   {
+  @apply border-b2 bg-b2/30  w-full h-fit cursor-pointer items-center gap-2  border opacity-70 shadow-xs rounded-box;
+}
+
+/* item set item */
+
+.item-set-item-ghost,
+.item-set-item-fallback,
+.item-set-item-chosen   {
+  @apply border-b2 bg-b2/30 overflow-hidden aspect-square !size-18 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
+}
+
+/* spell set */
+
+.spell-set-ghost,
+.spell-set-drag,
+.spell-set-chosen {
+  @apply h-20 w-98 !bg-b2/40 rounded-box border-b3/60;
+}
+
+/* role */
+
+
+.role-ghost,
+.role-drag,
+.role-chosen {
+  @apply h-8 max-h-8 min-w-26 max-w-32 bg-neutral;
 }

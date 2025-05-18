@@ -116,7 +116,7 @@
           "key": "UnsealedSpellbook",
           "name": "Unsealed Spellbook",
           "description": "Swap Summoner Spells while out of combat. Swapping to unique Summoner Spells will increase the rate at which you can make future swaps.",
-          "details": "Swap one of your equipped Summoner Spells to a new, single use Summoner Spell. Each unique Summoner Spell you swap to permanently decreases your swap cooldown by 25s (initial swap cooldown is at 5 mins). \n\nYour first swap becomes available at 6 mins. \n\nSummoner Spells can only be swapped while out of combat. \nAfter using a swapped Summoner Spell you must swap 3 more times before the first can be selected again.\nSmite damage increases after two Summoner Spell swaps. "
+          "details": "Swap one of your equipped Summoner Spells to a new, single use Summoner Spell. Each unique Summoner Spell you swap to permanently decreases your swap cooldown by 25s (initial swap cooldown is at 4 mins). \n\nYour first swap becomes available at 6 mins. \n\nSummoner Spells can only be swapped while out of combat. \nAfter using a swapped Summoner Spell you must swap 3 more times before the first can be selected again.\nSmite damage increases after two Summoner Spell swaps. "
         },
         {
           "id": 8369,
@@ -397,7 +397,7 @@
           "key": "Unflinching",
           "name": "Unflinching",
           "description": "Gain Armor and Magic Resist when receiving crowd control.",
-          "details": "Gain 10 - 10 (level scaling) Armor and Magic Resist when crowd controlled and for 2 seconds after."
+          "details": "Gain 10 Armor and Magic Resist when crowd controlled and for 2 seconds after."
         }
       ]
     ]

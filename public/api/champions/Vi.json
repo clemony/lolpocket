@@ -171,22 +171,22 @@
             "leveling": []
           },
           {
-            "description": "Vault Breaker can be recast within the duration. If the charge completes without reactivation, Vault Breaker is cancelled and put on full cooldown. If the charge is interrupted, it will be put on a 3-second cooldown.",
+            "description": "Vault Breaker can be recast within the duration. If the charge completes without reactivation, Vault Breaker is cancelled, 50% of the mana cost is refunded, and it is placed on full cooldown. If the charge is interrupted, 50% of the mana cost is refunded and it is placed on a 3-second cooldown.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Vi dashes in the target direction to deal physical damage to enemies within her path, increased by 0% - 100% (based on channel time), and pull all non-champions hit towards her.</p></div>",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Vi dashes in the target direction to deal physical damage to enemies within her path, increased by 0% - 150% (based on channel time), and pull all non-champions hit towards her.</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
                 "modifiers": [
                   {
                     "values": [
-                      45,
-                      70,
-                      95,
-                      120,
-                      145
+                      40,
+                      60,
+                      80,
+                      100,
+                      120
                     ],
                     "units": [
                       ""
@@ -194,7 +194,7 @@
                   },
                   {
                     "values": [
-                      80
+                      60
                     ],
                     "units": [
                       "% bonus AD"
@@ -207,11 +207,11 @@
                 "modifiers": [
                   {
                     "values": [
-                      90,
-                      140,
-                      190,
-                      240,
-                      290
+                      100,
+                      150,
+                      200,
+                      250,
+                      300
                     ],
                     "units": [
                       ""
@@ -219,7 +219,7 @@
                   },
                   {
                     "values": [
-                      160
+                      150
                     ],
                     "units": [
                       "% bonus AD"
@@ -388,7 +388,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vi/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Vi empowers her next basic attack within 6 seconds to have an uncancellable windup, gain 50 bonus range and trigger a blast in the target's direction that deals modified physical damage to enemies hit in a cone.Relentless Force can critically strike for (100% + 40%) AD bonus physical damage against the primary target. Secondary targets take the same damage but do not count as being critically struck.</p></div>",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Vi empowers her next basic attack within 6 seconds to have an uncancellable windup, gain 50 bonus range and trigger a blast in the target's direction that deals modified physical damage to enemies hit in a cone.Relentless Force can critically strike for (90% + 48%) AD bonus physical damage against the primary target. Secondary targets take the same damage but do not count as being critically struck.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -506,8 +506,8 @@
                   {
                     "values": [
                       150,
-                      275,
-                      400
+                      250,
+                      350
                     ],
                     "units": [
                       ""
@@ -533,9 +533,7 @@
         "cost": [
           {
             "values": [
-              100,
-              125,
-              150
+              100
             ],
             "units": [
               ""

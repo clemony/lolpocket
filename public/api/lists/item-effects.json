@@ -468,7 +468,7 @@
     "actives": [],
     "passives": [
       "Gain '''bonus''' attack damage equal to 2.5% '''bonus''' health.",
-      "Increase your '''total''' attack damage by 0% – 12% (based on '''missing''' health)."
+      "Gain '''bonus''' attack damage equal to 0% – 12% (based on '''missing''' health) of your '''total''' attack damage from other sources."
     ]
   },
   "2502": {
@@ -595,7 +595,7 @@
     "name": "Yun Tal Wildarrows",
     "actives": [],
     "passives": [
-      "Basic attacks [[on-attack]] grant ([[File:Melee role.png|16px|link=Melee]] 0.4% / [[File:Ranged role.png|16px|link=Ranged]] 0.2%) critical strike chance, stacking up to ([[File:Melee role.png|16px|link=Melee]] 63 / [[File:Ranged role.png|16px|link=Ranged]] 125) times (capped at 25% critical strike chance).",
+      "Basic attacks [[on-attack]] grant ([[File:Melee role.png|16px|link=Melee]] 0.4% / [[File:Ranged role.png|16px|link=Ranged]] 0.2%) critical strike chance permanently, stacking up to ([[File:Melee role.png|16px|link=Melee]] 63 / [[File:Ranged role.png|16px|link=Ranged]] 125) times (capped at 25% critical strike chance).",
       "Using a basic attack against an enemy champion grants you 30% '''bonus''' attack speed for 6 seconds (30 second cooldown, reduced by 1 second on-attack and 2 seconds if the attack [[File:Critical strike icon.png|20px|link=Critical strike]] [[:Critical strike|critically strikes]])."
     ]
   },
@@ -625,7 +625,7 @@
     "actives": [],
     "passives": [
       "Grants ability power equal to 2% '''bonus''' mana.",
-      "If you would take damage that would reduce you below 30% of your '''maximum''' health, you first gain a [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]] that absorbs 200 (+ 20% '''current''' mana) damage for 3 seconds."
+      "If you would take damage that would reduce you below 30% of your '''maximum''' health, you first gain a [[File:Hybrid resistances icon.png|20px|link=Shield]] [[:Shield|shield]] for 3 seconds that absorbs damage equal to 18% '''maximum''' mana for 3 seconds."
     ]
   },
   "3041": {
@@ -1039,7 +1039,7 @@
     "name": "Cryptbloom",
     "actives": [],
     "passives": [
-      "Scoring a [[File:Damage rating.png|20px|link=Takedown]] [[:Takedown|takedown]] against an enemy champion while alive and within 3 seconds of damaging them summons a nova that radiates from the location of their death over 1.75 seconds, [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|healing]] you and allied champions hit for 100 (+ 25% AP)."
+      "Scoring a [[File:Damage rating.png|20px|link=Takedown]] [[:Takedown|takedown]] against an enemy champion while alive and within 3 seconds of damaging them summons a nova that radiates from the location of their death over 1.75 seconds, [[File:Heal power icon.png|20px|link=Healing]] [[:Healing|healing]] you and allied champions hit for 100 (+ 20% AP)."
     ]
   },
   "3139": {
@@ -1553,7 +1553,7 @@
     "name": "Horizon Focus",
     "actives": [],
     "passives": [
-      "Dealing [[Ability_effects#Triggering_from_champion_ability_damage|ability damage]] to a champion at [[File:Range center.png|20px|link=Range]] 600 or more units away from the cast position [[File:Reveal icon.png|20px|link=Sight#Standard sight]] [[:Sight#Standard sight|reveals]] them and increases your damage dealt to them by 10% for 6 seconds.",
+      "Dealing [[Ability_effects#Triggering_from_champion_ability_damage|ability damage]] to a champion at [[File:Range center.png|20px|link=Range]] 600 or more units away from the cast position [[File:Reveal icon.png|20px|link=Sight#Standard sight]] [[:Sight#Standard sight|reveals]] them for 6 seconds.",
       "Upon triggering ''Hypershot'', grant [[File:Sight icon.png|20px|link=Sight]] [[:Sight|sight]] of the area [[File:Range center.png|20px|link=Range]] 1400 units around the target for 2 seconds and apply ''Hypershot's'' effects to enemy champions within the area for 3 seconds."
     ]
   },
@@ -1624,8 +1624,8 @@
     "name": "Stormsurge",
     "actives": [],
     "passives": [
-      "Dealing damage to an enemy champion equal to 25% of their '''maximum''' health within 2.5 seconds inflicts them with ''Squall'' and grants you 25% '''bonus''' movement speed for 1.5 seconds (30 second cooldown, starts on ''Squall's'' application).",
-      "After 2 seconds of having applied ''Squall'', strike the target with lightning, dealing 125 (+ 10% AP) magic damage to them. If the target dies before being struck, they emit an electric field instantly that shocks all enemy champions near them, dealing them the same damage and granting you [[File:Gold colored icon.png|20xpx|link=Gold|An icon representing Gold]] 30."
+      "Dealing damage to an enemy champion equal to 25% of their '''maximum''' health within 2.5 seconds inflicts them with ''Squall'' (30 second cooldown, starts on ''Squall's'' application).",
+      "After 2 seconds of having applied ''Squall'', strike the target with lightning, dealing 125 (+ 10% AP) magic damage to them. If the target dies before being struck, they emit an electric field instantly that shocks all enemy champions near them, dealing them the same damage."
     ]
   },
   "6333": {
@@ -1869,7 +1869,7 @@
     "name": "Bloodletter's Curse",
     "actives": [],
     "passives": [
-      "Dealing magic damage to an enemy champion with a [[champion ability]] applies a stack to them for 6 seconds, stacking up to 6 times and up to once per basic attack or ability per [[:Champion ability|cast instance]] every 0.3 seconds. Each stack inflicts 5% magic resistance reduction, up to 30% at 6 stacks."
+      "Dealing magic damage to an enemy champion with a [[champion ability]] applies a stack of ''Vile Decay'' to them for 6 seconds, stacking up to 4 times and up to once per basic attack or ability per [[:Champion ability|cast instance]] every 0.3 seconds. Each stack inflicts 7.5% magic resistance reduction, up to 30% at 4 stacks."
     ]
   },
   "8020": {
@@ -2296,7 +2296,7 @@
     "name": "Detonation Orb",
     "actives": [],
     "passives": [
-      "Dealing ability damage against enemy champions marks them for 3 seconds, storing 20% of the post-mitigation damage dealt against them, increased to 25% if they are [[File:Stun icon.png|20px|link=Crowd_control#Immobilizing]] [[:Crowd_control#Immobilizing|immobilized]]. Each instance of ability damage dealt to a marked target refreshes their mark. Once the mark expires, it detonates to deal true damage equal to the amount stored against the target. If a mark would deal lethal damage to the target, it is detonated immediately."
+      "Dealing ability damage against enemy champions marks them for 3 seconds, storing 20% of the post-mitigation damage you deal to them, increased to 25% if they are [[File:Stun icon.png|20px|link=Crowd_control#Immobilizing]] [[:Crowd_control#Immobilizing|immobilized]]. Each instance of your ability damage dealt to a marked target refreshes their mark. Once the mark expires, it detonates to deal true damage equal to the amount stored against the target. If a mark would deal lethal damage to the target, it is detonated immediately."
     ]
   },
   "447114": {
@@ -2331,7 +2331,7 @@
     "actives": [],
     "passives": [
       "Basic attacks and ability hits against enemies inflicts them with a Burn that deals「 200 – 450 (based on level) magic damage over 3 seconds. 」「 16.67 – 37.5 (based on level) magic damage every 0.25 seconds over 3 seconds. 」",
-      "Inflicting an enemy champion with a Burn effect releases a fireball from the target, landing to a location near you after 0.5 seconds. Upon landing, a blaze is created at the impact area with a radius of 175 units, lasting for 5 seconds (3 second cooldown per target). While you are within the blaze, gain 20% '''bonus total''' movement speed, lingering for 0.75 seconds after exiting, and [[File:Heal power icon.png|15px|link=Healing]] heal for 60 – 150 (based on level) upon entering and each second of the blaze's lifetime thereafter. While enemies are within the blaze, they are dealt 100 magic damage every second.\n\nFor each unique Burn effect source that you have, increase the blaze's size by 40 units (up to 6 times), and its strength by 4% '''bonus total''' movement speed and 30 healing per second for the buff and 60 magic damage per tick for the enemy effect (all up to 10 times)."
+      "Inflicting an enemy champion with a Burn effect releases a fireball from the target, landing to a location near you after 0.5 seconds. Upon landing, a blaze is created at the impact area with a radius of 175 units, lasting for 5 seconds (3 second cooldown per target). While you are within the blaze, gain 20% '''bonus total''' movement speed, lingering for 0.75 seconds after exiting, and [[File:Heal power icon.png|15px|link=Healing]] heal for 60 – 150 (based on level) upon entering and each second of the blaze's lifetime thereafter. While enemies are within the blaze, they are dealt 100 magic damage every second.\n\nFor each unique Burn effect source that you have, up to 10, increase the blaze's size by 40 units, and its strength by 4% '''bonus total''' movement speed and 30 healing per second for the buff and 60 magic damage per tick for the enemy effect."
     ]
   },
   "447119": {

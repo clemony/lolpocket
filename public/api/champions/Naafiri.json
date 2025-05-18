@@ -458,7 +458,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Naafiri/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Naafiri goes on the hunt for the next 5 seconds, becoming untargetable and ghosted for the first 1 second and vanishing all of her active Packmates in the first 0.9 seconds. Her active Packmates will reappear near her after their vanish.</p></div>",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Naafiri goes on the hunt for the next 5 seconds, becoming untargetable for the first 1 second and vanishing all of her active Packmates in the first 0.9 seconds. Her active Packmates will reappear near her after their vanish.</p></div>",
             "leveling": []
           },
           {
@@ -489,6 +489,10 @@
           },
           {
             "description": "Casting Hounds' Pursuit extends The Call of the Pack's hunt duration by 1.75 seconds, up to its original duration.",
+            "leveling": []
+          },
+          {
+            "description": "Naafiri can move during The Call of the Pack's cast time.",
             "leveling": []
           }
         ],
@@ -528,8 +532,8 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Naafiri can move during The Call of the Pack's cast time.\nWhile The Call of the Pack is active, it increases  We Are More's summon cap to 4 / 5 / 6 / 7 (based on level).\nThe order of additional Packmates that despawn is predetermined, most likely their internal spawn IDs. The ability does not consider which Packmates are the closest or healthiest.\nThis ability will cast from wherever the caster is at the end of the cast time.",
-        "blurb": "Active:  Naafiri goes on the hunt for a period, briefly becoming  untargetable,  ghosted and  vanishing her  Packmates, gaining  bonus attack damage and granting herself and her Packmates  bonus move speed. She will also summon extra Packmates that last for the hunt's duration.",
+        "notes": "While The Call of the Pack is active, it increases  We Are More's summon cap to 4 / 5 / 6 / 7 (based on level).\nThe order of additional Packmates that despawn is predetermined, most likely their internal spawn IDs. The ability does not consider which Packmates are the closest or healthiest.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+        "blurb": "Active:  Naafiri goes on the hunt for a period, briefly becoming  untargetable and  vanishing her  Packmates, gaining  bonus attack damage and granting herself and her Packmates  bonus move speed. She will also summon extra Packmates that last for the hunt's duration.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,

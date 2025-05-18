@@ -8,6 +8,7 @@ const props = withDefaults(
     placeholder?: string
     inputClass?: HTMLAttributes['class']
     setFocus?: boolean
+    dark?: boolean
   }>(),
   {
     placeholder: 'Search Items...',
@@ -76,7 +77,7 @@ function handleReset() {
 </script>
 
 <template>
-  <div :class="cn('border-b3 text-3 items-center gap-4 !bg-b1 flex h-12 border py-2 px-3', props.class)">
+  <div :class="cn('border-b3 text-3 items-center gap-4 bg-b1 flex h-12 border py-2 px-3', props.class)">
     <icon
       name="search"
       class="pointer-events-none size-5 opacity-70" />
@@ -86,7 +87,7 @@ function handleReset() {
       :class="cn('text-3  outline-0 ring-0 border-0 flex h-full grow text-start  hover:outline-0 hover:ring-0 hover:border-0', props.inputClass)" />
 
     <slot />
-    <button class="btn btn-ghost btn-square btn-sm absolute  right-2" @click="handleReset">
+    <button class="btn btn-ghost btn-square btn-sm " @click="handleReset" :class="{' hover:!bg-accent hover:!border-b3/20': props.dark}">
       <icon name="x-sm" class="" />
     </button>
   </div>

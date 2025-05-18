@@ -10,11 +10,8 @@ const { pocket } = defineProps<{
 
 const route = useRoute()
 
-const pocketNav = ref()
+const pocketNav = computed (() => route.path)
 
-onMounted (() => {
-  pocketNav.value = route.path
-})
 // TODO when complete initial link click goes to summary. change champions link always to champions and outline will be on empty
 
 const plinks = [
@@ -46,7 +43,7 @@ const plinks = [
     <IndicatorTabsList orientation="vertical" class="w-full gap-1  justify-start grid grid-cols-1  p-2 field-box ">
       <IndicatorTabsTrigger
         v-for="link in plinks" :key="link.name"
-        orientation="vertical" class="!px-4 !flex h-9.5 group justify-between [&_button]:!w-full max-w-full" :value="link.value">
+        orientation="vertical" class="!px-4 !flex h-9.5 group justify-between [&_button]:!w-full max-w-full text-3" :value="link.value">
         <span class="grow text-start">
           {{ link.name }}
         </span>

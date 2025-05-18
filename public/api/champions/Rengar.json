@@ -178,47 +178,8 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Ferocity Bonus:</p><p> Savagery's damage is modified. Rengar gains 50% - 101% (based on level) bonus attack speed for 5 seconds.</p></div>",
-            "leveling": [
-              {
-                "attribute": "Empowered Bonus Damage",
-                "modifiers": [
-                  {
-                    "values": [
-                      30,
-                      42.05882352941177,
-                      54.11764705882353,
-                      66.17647058823529,
-                      78.23529411764706,
-                      90.29411764705883,
-                      102.35294117647058,
-                      114.41176470588235,
-                      126.47058823529412,
-                      138.52941176470588,
-                      150.58823529411765,
-                      162.64705882352942,
-                      174.70588235294116,
-                      186.76470588235293,
-                      198.8235294117647,
-                      210.88235294117646,
-                      222.94117647058823,
-                      235
-                    ],
-                    "units": [
-                      ""
-                    ]
-                  },
-                  {
-                    "values": [
-                      30
-                    ],
-                    "units": [
-                      "% AD"
-                    ]
-                  }
-                ]
-              }
-            ]
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Ferocity Bonus:</p><p> Savagery's damage is modified to deal 30 - 235 (based on level) (+ 30% AD) bonus physical damage. Rengar gains 50% - 101% (based on level) bonus attack speed for 5 seconds.</p></div>",
+            "leveling": []
           },
           {
             "description": "Savagery resets Rengar's basic attack timer.",
@@ -252,7 +213,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Savagery deals  basic damage, but also triggers spell effects by also being tagged as  spell damage.\nThe  critical strike modifier scales up to 75% of the  critical damage champions usually have, based on Rengar's  critical strike chance.\nSavagery's empowered attack is not consumed against jungle plants.\nThe enhanced attack applies other  on-hit effects as well as  life steal as normal (the bonus damage cannot).\nAgainst structures, the damage is calculated differently with  Infinity Edge. If the Basic attack damage against structures is:\nPhysical and without  Infinity Edge: Basic attack  + Savagery bonus * 0.6.\nPhysical and with  Infinity Edge, the  40% AD ratio is not calculated in Savagery's bonus damage: Basic attack + (Savagery bonus -  0.4 * AD) * 0.6.\nMagical and without  Infinity Edge, the damage is increased by 75%: (Basic attack + Savagery bonus * 0.6) * 1.75.\nMagical and with  Infinity Edge, the damage is increased by 75% +  40%: (Basic attack + (Savagery bonus -  0.4 * AD) * 0.6) * (1.75 +  0.4).",
+        "notes": "Savagery deals  basic damage, but also triggers spell effects by also being tagged as  spell damage.\nThe  critical strike modifier scales up to 75% of the  critical damage champions usually have, based on Rengar's  critical strike chance.\nSavagery's empowered attack is not consumed against jungle plants.\nThe enhanced attack applies other  on-hit effects as well as  life steal as normal (the bonus damage cannot).\nAgainst structures, the damage is calculated differently when the user has sources of  bonus critical damage. If the Basic attack damage against structures is:\nPhysical and  Infinity Edge is not equipped: Basic attack + Savagery bonus * 0.6.\nPhysical and  Infinity Edge is equipped: Basic attack + (Savagery bonus -  0.4 * AD) * 0.6. Infinity Edge's bonus is subtracted from the calculations.\nMagic and  Infinity Edge is not equipped: (Basic attack + Savagery bonus * 0.6) * 1.75. The damage is increased by the total critical damage modifier.\nMagic and  Infinity Edge is equipped: (Basic attack + (Savagery bonus -  0.4 * AD) * 0.6) * (1.75 +  0.4). Infinity Edge's bonus is subtracted from the calculations and the damage is increased by the total critical damage modifier.",
         "blurb": "Active:  Rengar gains  bonus attack speed for his next two basic attacks. His next basic attack deals bonus physical damage and will  critically strike, dealing increased damage based on his  critical strike chance.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -308,47 +269,8 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Ferocity Bonus:</p><p> Battle Roar's damage is modified. Rengar cleanses himself from all crowd control.</p></div>",
-            "leveling": [
-              {
-                "attribute": "Empowered Damage",
-                "modifiers": [
-                  {
-                    "values": [
-                      50,
-                      60,
-                      70,
-                      80,
-                      90,
-                      100,
-                      110,
-                      120,
-                      130,
-                      140,
-                      150,
-                      160,
-                      170,
-                      180,
-                      190,
-                      200,
-                      210,
-                      220
-                    ],
-                    "units": [
-                      ""
-                    ]
-                  },
-                  {
-                    "values": [
-                      80
-                    ],
-                    "units": [
-                      "% AP"
-                    ]
-                  }
-                ]
-              }
-            ]
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Ferocity Bonus:</p><p> Battle Roar's damage is modified to deal 50 - 220 (based on level) (+ 80% AP) magic damage. Rengar cleanses himself from all crowd control.</p></div>",
+            "leveling": []
           }
         ],
         "cost": [],
@@ -447,47 +369,8 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Ferocity Bonus:</p><p> Bola Strike's damage is modified. The target is rooted instead of slowed.</p></div>",
-            "leveling": [
-              {
-                "attribute": "Empowered Damage",
-                "modifiers": [
-                  {
-                    "values": [
-                      50,
-                      65,
-                      80,
-                      95,
-                      110,
-                      125,
-                      140,
-                      155,
-                      170,
-                      185,
-                      200,
-                      215,
-                      230,
-                      245,
-                      260,
-                      275,
-                      290,
-                      305
-                    ],
-                    "units": [
-                      ""
-                    ]
-                  },
-                  {
-                    "values": [
-                      80
-                    ],
-                    "units": [
-                      "% bonus AD"
-                    ]
-                  }
-                ]
-              }
-            ]
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Ferocity Bonus:</p><p> Bola Strike's damage is modified to deal 50 - 305 (based on level) (+ 80% bonus AD) physical damage. The target is rooted instead of slowed.</p></div>",
+            "leveling": []
           }
         ],
         "cost": [],

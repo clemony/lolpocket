@@ -103,7 +103,7 @@
             "leveling": []
           },
           {
-            "description": "The fourth stack against a target consumes them all to deal 26 - 196 (based on level) magic damage and stun them for 1.25 - 1.75 (based on level) seconds.",
+            "description": "The fourth stack against a target consumes them all to deal 26 - 196 (based on his level) magic damage and stun them for 1.25 - 1.75 (based on his level) seconds.",
             "leveling": []
           },
           {

@@ -32,7 +32,7 @@ export default defineNuxtConfig({
 
   image: {
     domains: ['ddragon.leagueoflegends.com', 'cdn.communitydragon.org'],
-     provider: 'ipx',
+    provider: 'ipx',
     format: ['webp'],
   },
 
@@ -145,6 +145,7 @@ export default defineNuxtConfig({
     'shared': fileURLToPath(new URL('./shared', import.meta.url)),
     'utils': fileURLToPath(new URL('./app/utils', import.meta.url)),
 
+    'api': fileURLToPath(new URL('./public/api', import.meta.url)),
     'components': fileURLToPath(new URL('./app/components', import.meta.url)),
     'plugins': fileURLToPath(new URL('./app/plugins', import.meta.url)),
     'modules': fileURLToPath(new URL('./modules', import.meta.url)),

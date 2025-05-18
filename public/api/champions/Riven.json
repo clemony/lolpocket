@@ -114,7 +114,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Runic Blade's duration also refreshes when Riven consumes a stack.\nThe empowered attack will not trigger against wards.\nThe number of empowered attacks available is represented by a counter under her health bar, only visible to the player,",
+        "notes": "Runic Blade's duration also refreshes when Riven consumes a stack.\nThe empowered attack will not trigger against wards.\nThe number of empowered attacks available is represented by a counter under her health bar, only visible to the player.",
         "blurb": "Innate:  Riven's ability casts generate stacks of Charge, which stacks up to a cap. Riven's basic attacks consume a stack to deal bonus physical damage.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -260,7 +260,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Riven emits a flash of runic energy before the cast time, dealing physical damage to nearby enemies and stunning them for 0.75 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Riven emits a flash of runic energy from the start of the cast time, dealing physical damage to nearby enemies and stunning them for 0.75 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -317,7 +317,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Ki Burst's effect happens at the beginning of the cast time.\nRiven is briefly unable to basic attack after the cast time.\n Broken Wings may be cast while basic attacking briefly after casting Ki Burst.(bug)",
+        "notes": "Riven is briefly unable to basic attack after the cast time.\n Broken Wings may be cast while basic attacking briefly after casting Ki Burst.(bug)",
         "blurb": "Active: Riven emits a flash of runic energy, dealing physical damage and briefly  stunning nearby enemies.",
         "missileSpeed": null,
         "rechargeRate": null,

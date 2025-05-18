@@ -255,6 +255,10 @@
                 ]
               }
             ]
+          },
+          {
+            "description": "Lillia can move during Blooming Blows' cast time.",
+            "leveling": []
           }
         ],
         "cost": [
@@ -293,7 +297,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Lillia can move during Blooming Blows' cast time.\nThis ability will cast from wherever the caster is at the end of the cast time.\n Spell shield will not prevent Lillia from gaining a Prance stack.\nFor the purpose of aim-assist, Lillia's  attack range is reduced[ to 275 ][ by 50 ]during Blooming Blows's cast time.",
+        "notes": "Spell shield will not prevent Lillia from gaining a Prance stack.\nFor the purpose of aim-assist, Lillia's  attack range is reduced[ to 275 ][ by 50 ]during Blooming Blows's cast time.",
         "blurb": "Passive: Whenever  Lillia's abilities hit at least one enemy, she generates a stack of Prance, up to a cap.",
         "missileSpeed": null,
         "rechargeRate": null,

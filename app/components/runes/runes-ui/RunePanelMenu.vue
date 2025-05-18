@@ -4,37 +4,38 @@ const props = defineProps<{
   set?: RuneSet
 }>()
 
-const emit = defineEmits(['clicked'])
 const rs = useRuneStore()
 const pocket = ref(props.pocket)
 
-const ts = useTempStore()
 function handleDelete() {
-  pocket.value.runes[rs.selectedRuneSet] = props.pocket.runes[0]
+ rs.selectedRuneSet = 0
   deleteRuneSet(props.pocket, props.set)
 }
 
 function handleNewSet() {
   const a = newRuneSet(pocket.value.key)
-  /*  nextTick(() => {
-    rs.selectedRuneSet = a
-  }) */
+ nextTick(() => {
+  const b = pocket.value.runes.findIndex(s => s == a)
+    rs.selectedRuneSet = b
+  })
 }
+
+//TODO MOVE
 </script>
 
 <template>
   <div class="flex gap-2 items-center">
-    <button
+<!--     <button
       v-tippy="'New Rune Set'"
       class="btn btn-md btn-square"
       @click="handleNewSet()">
       <icon
         name="add-sm"
         class=" size-6 shrink-0 dst" />
-    </button>
+    </button> -->
 
-    <button v-tippy="'Delete Current Set'" class="btn btn-square *:dst  " @click="handleDelete()">
-      <icon name="trash" class="opacity-70 shrink-0  size-5" />
+    <button v-tippy="'Delete Current Set'" class="btn rounded-lg btn-sm btn-ghost hover:bg-b3/5 hover:border b3/4 *:dst  " @click="handleDelete()">
+      <icon name="trash" class="opacity-70 shrink-0  size-5 text-nc" />
     </button>
   </div>
 </template>

@@ -25,7 +25,7 @@
     },
     "armor": {
       "flat": 35,
-      "perLevel": 5
+      "perLevel": 4.4
     },
     "magicResistance": {
       "flat": 32,

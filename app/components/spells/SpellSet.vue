@@ -3,33 +3,27 @@ const props = defineProps<{
   set: object
   pocket: Pocket
   setIndex: number
+  class?: HTMLAttributes['class']
 }>()
 
 const pocket = computed (() => {
   return props.pocket
 })
-// pocket.value.spells.sets.length = 0
 
 const set = computed (() => {
   return props.set
 })
 function handleSpells(e, i) {
-  console.log('💠 - handleSpells - i:', i)
-  console.log('💠 - handleSpells - e:', e)
-  console.log('💠 - set - set:', set)
-  set.value[i] = e
+  set.value[i] = e.name
 }
 </script>
 
 <template>
-  <div class="flex pl-14 pr-8 items-center gap-3 group/cli  justify-end">
-    <LazySpellPicker v-for="(spell, i) in props.set" :key="i" :selected-spell="spell" class="**:rounded-full rounded-full size-12 shadow-sm border-b3 border drop-shadow-xs" @update:spell="handleSpells($event, i)" />
-
-    <button v-tippy="'Remove Set'" class="btn group/btn btn-ghost btn-xs btn-square  opacity-0 group-hover/cli:opacity-100 transition-opacity dr-30" @click="removeSpellSet(pocket, props.set)">
-      <icon name="x-sm" class="size-6 dst shrink-0 group-hover/btn:text-bc/100 text-bc/50" />
+  <div class="flex  items-center gap-4  w-full ">
+    <LazySpellPicker v-for="(spell, i) in props.set" :key="i" :selected-spell="spell" :class="cn('rounded-lg size-16  border-b3/60 border ', props.class)" @update:spell="handleSpells($event, i)" />
+    <Grow />
+    <button v-tippy="'Remove Set'" class="btn trash-button group/btn btn-ghost btn-xs btn-square  " @click="removeSpellSet(pocket, props.set)">
+      <icon name="trash" class="size-5 dst shrink-0 group-hover/btn:text-bc/100 text-bc/50" />
     </button>
-    <label v-tippy="'Default Set'" class="rating rating-xs opacity-0 group-hover/cli:opacity-100 transition-opacity dr-30 mb-0.5 has-checked:opacity-100">
-      <input :key="props.setIndex" v-model="pocket.spells" type="radio" name="default-champ" class="mask mask-star-2 bg-neutral" aria-label="make champion default" :value="set" />
-    </label>
   </div>
 </template>

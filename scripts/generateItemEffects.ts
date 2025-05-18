@@ -3,8 +3,8 @@
 import path from 'node:path'
 import { expandWikitext, cleanWikitextHtml } from './utils/cleanWikiText'
 
-const inputPath = path.resolve(__dirname, '../public/api/items.json')
-const outputPath = path.resolve(__dirname, '../public/api/lists/item-effects.json')
+const inputPath = path.resolve( './public/api/items.json')
+const outputPath = path.resolve( './public/api/lists/item-effects.json')
 
 const raw = fs.readFileSync(inputPath, 'utf-8')
 const fullData = JSON.parse(raw)

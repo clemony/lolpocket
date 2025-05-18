@@ -632,7 +632,7 @@
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Each cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nSpirit Rush uses quick cast by default.\nThere's a slight delay before a champion gains vision of the fog of war once inside it. Because of this, if Ahri dashes into it, it is possible that Spirit Rush will not target any enemy in range.\nThe bolts do not fire if Ahri dies while  dashing, unless she was saved by  resurrection.\nThe bolts will fire if the dash is  interrupted by other means.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.\n Axiom Arc and  Axiom Arcanist do not refund the cooldown of Spirit Rush while Ahri is able to recast it.(bug)",
+        "notes": "Each cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nSpirit Rush uses quick cast by default.\nThere's a slight delay before a champion gains vision of the fog of war once inside it. Because of this, if Ahri dashes into it, it is possible that Spirit Rush will not target any enemy in range.\nThe bolts do not fire if Ahri dies while  dashing, unless she was saved by  resurrection.\nThe bolts will fire if the dash is  interrupted by other means.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.",
         "blurb": "Active:  Ahri  dashes forward and fires essence bolts to nearby enemies, dealing magic damage.",
         "missileSpeed": null,
         "rechargeRate": null,

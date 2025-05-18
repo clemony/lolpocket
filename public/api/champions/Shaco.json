@@ -712,7 +712,7 @@
             ]
           },
           {
-            "description": "The boxes possess Jack in the Box's effects, except they have a doubled, but shared health, and deal modified magic damage with each attack, increased when attacking a single unit.",
+            "description": "The boxes possess Jack in the Box's effects, except they have a doubled, but shared health, and deal modified magic damage with each attack, increased when attacking a single unit. They are also invulnerable for 0.5 seconds after deployment.",
             "leveling": [
               {
                 "attribute": "Modified Magic Damage",
@@ -801,7 +801,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "The root and fear are applied at the same time. The target cannot be forced to move by the fear during the root.\nThe target is however allowed to move despite being rooted for the first 0.15 seconds of the root. They can be forced to move by the fear during this time.\nShaco and the Hallucination will face each other the moment of their appearance.\nThe explosion and the boxes apply  area damage, while the clone deals  pet damage.\nHallucinate will cast from wherever Shaco is at the end of the cast time.\nWhen Shaco dies, the clone will automatically target the closet visible enemy champion within 1500 units.\nThe clone will always spawn in the opposite direction of the cursor.\nIf Deceive and Hallucinate are used in quick succession, the clone will spawn in the direction of the cursor instead.",
+        "notes": "The root and fear are applied at the same time. The target cannot be forced to move by the fear during the root.\nThe target is however allowed to move despite being rooted for the first 0.15 seconds of the root. They can be forced to move by the fear during this time.\nShaco and the Hallucination will face each other the moment of their appearance.\nThe explosion and the boxes apply  area damage, while the clone deals  pet damage.\nHallucinate will cast from wherever Shaco is at the end of the cast time.\nWhen Shaco dies, the clone will automatically target the closest visible enemy champion within 1500 units.\nThe clone will always spawn in the opposite direction of the cursor.\nIf Deceive and Hallucinate are used in quick succession, the clone will spawn in the direction of the cursor instead.",
         "blurb": "Active:  Shaco briefly  vanishes and  blinks in the target direction, creating a  clone of himself for some time.",
         "missileSpeed": null,
         "rechargeRate": null,

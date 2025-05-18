@@ -124,7 +124,7 @@
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "The first stack also benefits from the per-stack bonus stored damage.\nA threshold indicator for the currently stored damage is placed on a target's health bar, as well as a mark above their head, while any Overwhelm stacks are active. These are visible to Mel and her target(s).\nWhenever  Golden Eclipse's damage would put them below Overwhelm's threshold, the mark will darken and glow more prominently.\nJust before Overwhelm stacks are consumed, targets have 5 additional stacks applied to them.(bug)\nThese stacks are consumed immediately.",
+        "notes": "The first stack also benefits from the per-stack bonus stored damage.\nA threshold indicator for the currently stored damage is placed on a target's health bar, as well as a mark above their head, while any Overwhelm stacks are active. These are visible to Mel and her target(s).\nWhenever  Golden Eclipse's damage would put them below Overwhelm's threshold, the mark will darken and glow more prominently.\nJust before Overwhelm stacks are consumed, targets have 5 additional stacks applied to them.(bug)\nThese stacks are consumed immediately.\nOverwhelm stacks will not be consumed against  Tryndamere's  Undying Rage.",
         "blurb": "Innate - Overwhelm:  Mel's damaging basic attacks and abilities apply a stack of Overwhelm to enemies hit for a few seconds, stacking infinitely. Each stack stores magic damage; if the total stored damage would kill the target, the next stack will consume them all to detonate the damage.",
         "missileSpeed": null,
         "rechargeRate": null,

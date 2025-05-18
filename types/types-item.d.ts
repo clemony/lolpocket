@@ -14,6 +14,7 @@ type StatArray = StatLite[]
     purchasable: boolean
     cost: number
     tags: string[]
+    maps: number[]
   }
 
   interface ItemIndex {
@@ -22,22 +23,22 @@ type StatArray = StatLite[]
   }
 
   interface Item {
-    id?: ItemId
-    name?: string
-    nickname?: string | string[] | null
-    rank?: string[]
-    active?: Effect
-    passives?: Effect[]
-    modes?: {
-      'classic sr 5v5'?: boolean
-      'aram'?: boolean
-      'nb'?: boolean
-      'arena'?: boolean
-    }
-    stats?: StatArray[]
-    noEffects?: boolean
-    buildsInto?: number[]
+    name: string
+    id: ItemId
+    rank: string[]
     buildsFrom?: number[]
+    buildsInto?: number[]
+    specialRecipe?: string | number
+    noEffects?: boolean
+    removed?: boolean | string
+    requiredChampion?: string
+    requiedAlly?: string
+    icon?: string
+    simpleDescription?: string
+    nicknames?: string[] | null
+    passives?: Effect[]
+    active?: Effect
+    stats: Record<string, number>
     shop?: {
       prices: {
         total?: number
@@ -47,20 +48,13 @@ type StatArray = StatLite[]
       purchasable: boolean
       tags: string[]
     }
-    simpleDescription?: string
-    specialRecipe?: string | number
-    removed?: boolean | string
-    icon?: string
-    requiredChampion?: string
-    requiedAlly?: string
+    maps: number[]
   }
 
-interface ItemSet {
-  name: string
-  items: ItemId[]
-}
-
-
+  interface ItemSet {
+    name: string
+    items: ItemId[]
+  }
 
   interface Effect {
     name?: string
@@ -74,20 +68,15 @@ interface ItemSet {
 
   type effectAmount = number
 
-  interface ItemClone extends ItemId{
+  interface ItemClone extends ItemId {
     id: ItemId
     cloneId: string
   }
   interface ItemStat extends StatLite {
     id: string
     displayName?: string
-    checked?: boolean
     shortName?: string
     icon?: string
-    class?: string
-    iconClass?: string
-    hoverClass?: string
-    bgClass?: string
   }
 
 type CalculatorSet = ItemIndex[]

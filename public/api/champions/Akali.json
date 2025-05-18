@@ -290,6 +290,10 @@
           {
             "description": "The marked section of Twilight Shroud will linger for the mark's duration, even after the shroud ends.",
             "leveling": []
+          },
+          {
+            "description": "Akali can move during Twilight Shroud's cast time.",
+            "leveling": []
           }
         ],
         "cost": [],
@@ -319,7 +323,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Akali will also not gain the  invisibility if she is  Recalling.\nIt is possible for Akali to detonate the smoke bomb on the far side of terrain from her current location.\nThe effects are applied before the cast time, and Akali can move during the cast time.\nUsing a basic attack breaks the stealth at the start of the attack windup.",
+        "notes": "Akali will also not gain the  invisibility if she is  Recalling.\nIt is possible for Akali to detonate the smoke bomb on the far side of terrain from her current location.\nTwilight Shroud's effects begin at the start of the cast time.\nUsing a basic attack breaks the stealth at the start of the attack windup.",
         "blurb": "Active:  Akali restores  energy and gains a brief burst of  move speed. She also drops a smoke shroud that makes her  invisible, attacking or using abilities will briefly reveal her.",
         "missileSpeed": null,
         "rechargeRate": null,

@@ -52,15 +52,15 @@ const stats = computed (() => formatItemStats(item.value.stats))
 
     <div class="  pt-3    relative overflow-y-auto    flex flex-col ">
 
-<div class="">
+<div class="my-2">
   {{item.simpleDescription}}
 </div>
       <div v-if="item.stats && Object.entries(item.stats).length" class="pb-1">
- <!--        <ItemStats :stats="item.stats" /> -->
+    <ItemStats :stats="item.stats" />
       </div>
 
   
-          <Separator v-if="item.passives.length || item.active.name" class="bg-nc/10   my-3"  />
+          <Separator v-if="item.passives.length || item.active.name" class="bg-nc/10  mt-3 mb-2"  />
 
         <div v-if="item.passives.length  && item.noEffects != true">
           <ItemEffect

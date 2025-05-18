@@ -3,7 +3,7 @@
   "id": 224004,
   "tier": 3,
   "rank": [
-    "LEGENDARY"
+    "Legendary"
   ],
   "buildsFrom": [],
   "buildsInto": [],
@@ -12,7 +12,7 @@
   "removed": false,
   "requiredChampion": "",
   "requiredAlly": "",
-  "icon": "https://raw.communitydragon.org/15.9/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4004_assassin_t3_spectralcutlass.png",
+  "icon": "https://raw.communitydragon.org/15.10/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4004_assassin_t3_spectralcutlass.png",
   "simpleDescription": null,
   "nicknames": [],
   "passives": [],
@@ -22,186 +22,12 @@
       "name": "Soul Anchor",
       "effects": "Mark your current location. After 5 seconds, you automatically {{tip|blink}} to the marked location. ''Soul Anchor'' may be recast within its duration to manually blink to the marked location (15 second cooldown, starts after the blink).",
       "range": null,
-      "cooldown": 15.0
+      "cooldown": 15
     }
   ],
   "stats": {
-    "abilityPower": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "armor": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "armorPenetration": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "attackDamage": {
-      "flat": 55.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "attackSpeed": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "cooldownReduction": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "criticalStrikeChance": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "goldPer10": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "healAndShieldPower": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "health": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "healthRegen": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "lethality": {
-      "flat": 21,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "lifesteal": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "magicPenetration": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "magicResistance": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "mana": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "manaRegen": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "movespeed": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "abilityHaste": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "omnivamp": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "tenacity": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    },
-    "criticalStrikeDamage": {
-      "flat": 0.0,
-      "percent": 0.0,
-      "perLevel": 0.0,
-      "percentPerLevel": 0.0,
-      "percentBase": 0.0,
-      "percentBonus": 0.0
-    }
+    "attackDamage": 55,
+    "lethality": 21
   },
   "shop": {
     "prices": {
@@ -214,5 +40,8 @@
       "ASSASSIN"
     ]
   },
-  "iconOverlay": false
+  "iconOverlay": false,
+  "maps": [
+    30
+  ]
 }

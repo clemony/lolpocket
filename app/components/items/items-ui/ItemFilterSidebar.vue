@@ -17,10 +17,6 @@ function resetItems() {
 }
 const tabs = ref('/library/items')
 
-function handleSwitch(e) {
-  is.hideUnpurchasable = e
-  // is.itemGridApi.refreshCells()
-}
 onMounted (() => {
   tabs.value = route.path
 })
@@ -50,15 +46,19 @@ onMounted (() => {
     <div class="px-5 pt-12 pb-8 w-full">
       <ItemStatsChecklist />
     </div>
-    <div class="mt-2 mb-4 px-5 gap-6 flex flex-col   w-full">
-      <div class="gap-5 px-5  flex font-medium items-center w-full justify-end self-end">
-        Hide Unpurchasable
-        <Switch v-model:model-value="is.hideUnpurchasable" class="dst" @update:model-value="handleSwitch($event)" />
+    <div class="mt-2 mb-4 px-5 gap-6 flex items-center  w-full">
+
+      <ItemMapFilter  v-model:model-value="is.itemFilter.map">
+
+      </ItemMapFilter>
+      <div class="gap-5 px-5  flex font-medium items-center w-full justify-end ">
+        {{is.itemFilter.purchasable ? 'Purchasable' : 'All'}}
+        <Switch v-model:model-value="is.itemFilter.purchasable" class="dst"  />
       </div>
     </div>
     <div class="px-7">
       <div class="divider divider-start before:bg-b3/60 font-semibold  mb-8">
-        Roles
+        Tags
       </div>
       <ItemTagsFilter />
     </div>

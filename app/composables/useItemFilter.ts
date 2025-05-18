@@ -13,9 +13,10 @@ export function useItemFilter(rawItems: Record<string, ItemLite> | ItemLite[], f
        const matchesStats = filters.stats && filters.stats[0] ? filters.stats.some(stat => item.stats[stat])  : true
       const matchesRank = filters.rank ? item.rank.includes(filters.rank) : true
       const matchesTags = filters.tags ? item.tags?.includes(filters.tags) : true
+      const matchesMaps = filters.map  ? item.maps.includes(filters.map)  : true
       const matchesQuery = filters.query ? item.name.toLowerCase().includes(filters.query.toLowerCase()) : true
 
-      return matchesStats && matchesPurchasable && matchesRank && matchesTags && matchesQuery
+      return matchesStats && matchesMaps && matchesPurchasable && matchesRank && matchesTags && matchesQuery
     })
   })
 

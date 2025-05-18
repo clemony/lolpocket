@@ -7,17 +7,17 @@ export const useItemStore = defineStore('itemStore', () => {
     rank: null,
     stats: null,
     tags: null,
+    map: 11,
     query: null,
     result: null,
   })
-
-  const hideUnpurchasable = ref(true)
 
   const pItemFilter = ref<ItemFilter>({
     purchasable: true,
     rank: null,
     stats: null,
     tags: null,
+    map: 11,
     query: null,
     result: null,
   })
@@ -27,6 +27,7 @@ export const useItemStore = defineStore('itemStore', () => {
     rank: null,
     stats: null,
     tags: null,
+    map: 11,
     query: null,
     result: null,
   })
@@ -80,7 +81,6 @@ export const useItemStore = defineStore('itemStore', () => {
     setsToCompare,
 
     itemGridApi,
-    hideUnpurchasable,
     dbItemGridState,
 
   }

@@ -16,6 +16,7 @@ for (const tree of raw) {
     // Add runeIndex to each rune
     const updatedSlot = slot.map((rune, runeIndex) => ({
       ...rune,
+      path: tree.key,
       runeIndex,
     }))
 

@@ -45,50 +45,49 @@ export function getRandom(thing: any[]) {
   return thing[i]
 }
 
-
 export function extractUniqueFileListingsFromArray(arr) {
-    const fileRegex = /\[\[File:.*?\]\]/g;
-    const uniqueFiles = new Set();
+  const fileRegex = /\[\[File:.*?\]\]/g
+  const uniqueFiles = new Set()
 
-    function searchInValues(value) {
-        if (typeof value === 'string') {
-            const matches = value.match(fileRegex);
-            if (matches) {
-                matches.forEach(match => uniqueFiles.add(match));
-            }
-        } else if (Array.isArray(value)) {
-            value.forEach(searchInValues);
-        } else if (typeof value === 'object' && value !== null) {
-            Object.values(value).forEach(searchInValues);
-        }
+  function searchInValues(value) {
+    if (typeof value === 'string') {
+      const matches = value.match(fileRegex)
+      if (matches) {
+        matches.forEach(match => uniqueFiles.add(match))
+      }
     }
+    else if (Array.isArray(value)) {
+      value.forEach(searchInValues)
+    }
+    else if (typeof value === 'object' && value !== null) {
+      Object.values(value).forEach(searchInValues)
+    }
+  }
 
-    // Loop through the array of objects
-    arr.forEach(obj => searchInValues(obj));
+  // Loop through the array of objects
+  arr.forEach(obj => searchInValues(obj))
 
-    return Array.from(uniqueFiles);
+  return Array.from(uniqueFiles)
 }
-
 
 export function deepCopy<T>(obj: T): T {
   return JSON.parse(JSON.stringify(obj))
 }
 
-export function getUniqueArray(arr, propKeys?){
-if(propKeys){
-  return  [
-  ...new Set(
-    arr
-      .filter(item => item.menu) // make sure it has a menu
-      .flatMap(item => Object.keys(item.menu))
-  )
-]
-}else{
-const allThings = arr
-  .flatMap(item => item.tags ?? []) // flatten all tags arrays, skip if undefined
-  .filter((tag): tag is string => typeof tag === 'string') // filter out non-strings just in case
-return [...new Set(allThings)]
-
-}
-
+export function getUniqueArray(arr, propKeys?) {
+  if (propKeys) {
+    return [
+      ...new Set(
+        arr
+          .filter(item => item.menu) // make sure it has a menu
+          .flatMap(item => Object.keys(item.menu)),
+      ),
+    ]
+  }
+  else {
+    const allThings = arr
+      .flatMap(item => item.tags ?? []) // flatten all tags arrays, skip if undefined
+      .filter((tag): tag is string => typeof tag === 'string') // filter out non-strings just in case
+    return [...new Set(allThings)]
+  }
 }

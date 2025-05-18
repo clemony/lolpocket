@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Udyr/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Awakened Spirit:</p><p> Udyr has no ultimate ability and instead has 4 basic abilities that each incur a 1.5-second global cooldown when cast. Each ability grants a Stance that empowers his next two basic attacks, and switching Stances will replace the empowered attacks from the previous Stance.</p></div>",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Awakened Spirit:</p><p> Udyr has no ultimate ability and instead has 4 basic abilities that each incur a 1.5-second global cooldown when cast. Each ability grants a Stance that empowers his basic attacks, and switching Stances will replace the empowered attacks of the previous Stance.</p></div>",
             "leveling": []
           },
           {
@@ -632,7 +632,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "The empowered attacks apply spell effects to the target.\nThe empowered attacks will not trigger nor be consumed if they hit a structure or ward or are parried.",
+        "notes": "The empowered attacks apply spell effects to the target.\nThe empowered attacks will not trigger nor be consumed if they hit a structure or ward or are parried.\nThe increased life steal is a buff that expires after two valid attacks have been completed, as opposed to an on-attack modifier for your next two attacks. This means that while the buff is active,  Ravenous Hydra will heal at the increased life steal value.",
         "blurb": "Mantle Stance:  Udyr gains a  shield and his next two basic attacks gain  life steal and  heal him.",
         "missileSpeed": null,
         "rechargeRate": null,

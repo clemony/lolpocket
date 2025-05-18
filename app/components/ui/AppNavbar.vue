@@ -16,6 +16,8 @@ function handleMenu() {
     return
   navigateTo(tabs.value)
 }
+
+
 </script>
 
 <template>

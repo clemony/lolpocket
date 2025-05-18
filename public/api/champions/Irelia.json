@@ -338,7 +338,7 @@
             ]
           },
           {
-            "description": "Defiant Dance's recast can be used while affected by cast-inhibiting crowd control. If Ionian Fervor would expire during the charge, it will instead refresh every 0.25 seconds for the remaining charge and be retained for 0.5 seconds after the recast is initiated.",
+            "description": "Defiant Dance's recast can be used while affected by cast-inhibiting crowd control. Ionian Fervor's duration is paused during the charge; if Ionian Fervor has less than 1 second remaining when the charge starts, it is set to 1 second when the charge ends.",
             "leveling": []
           }
         ],
@@ -532,7 +532,7 @@
             ]
           },
           {
-            "description": "After expanding, the blades drop on the ground, pushing all enemy units away from them and forming a spade-shaped perimeter around the enemy champion hit for 2.5 seconds that grants sight of its surroundings. Enemies that pass through the blades for the first time are dealt the same magic damage and are slowed by 90% for 1.5 seconds.",
+            "description": "After expanding, the blades drop on the ground, knocking all enemy units away from them, though not rendering them airborne, and forming a spade-shaped perimeter around the enemy champion hit for 2.5 seconds that grants sight of its surroundings. Enemies that pass through the blades for the first time are dealt the same magic damage and are slowed by 90% for 1.5 seconds.",
             "leveling": []
           },
           {
@@ -574,7 +574,7 @@
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Enemies that cross the perimeter are not marked for  Bladesurge.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe blades will still expand if the champion hit by the blades is protected by a  spell shield.\nThe  sight is granted in a 1350 unit radius at the location of the enemy champion at the time of being hit and can be blocked by terrain.",
+        "notes": "Enemies that cross the perimeter are not marked Unsteady.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe blades will still expand if the champion hit by the blades is protected by a  spell shield.\nThe  sight is granted in a 1350 unit radius at the location of the enemy champion at the time of being hit and can be blocked by terrain.",
         "blurb": "Active:  Irelia launches a barrage of blades in the target direction that expand outward upon hitting an enemy champion, dealing magic damage to enemies hit.",
         "missileSpeed": null,
         "rechargeRate": null,

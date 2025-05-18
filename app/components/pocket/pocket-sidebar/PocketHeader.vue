@@ -11,7 +11,7 @@ const emit = defineEmits(['update:model-value'])
     <div class="items-center flex gap-2 ">
       <LazyPopover>
         <PopoverTrigger class="group/picon z-0 shrink-0 !cursor-pointer self-center  !size-14 border border-b3  rounded-full !pointer-events-auto  aspect-square  grid place-items-center relative  overflow-hidden  shadow-sm drop-shadow-sm">
-          <ChampionSplash v-if="pocket.icon != '/img/lp/192.webp'" :url="pocket.icon" alt="pocket icon" bg-size="160%" class=" pointer-events-none group-hover/picon:brightness-50 z-1 group-data-[state=open]/picon:brightness-50   tldr-30  size-full " />
+          <ChampionSplash v-if="pocket && pocket?.icon != '/img/lp/192.webp'" :url="pocket?.icon" alt="pocket icon" bg-size="160%" class=" pointer-events-none group-hover/picon:brightness-50 z-1 group-data-[state=open]/picon:brightness-50   tldr-30  size-full " />
           <div v-else class="size-full bg-gradient-to-br from-neutral/80 to-neutral grid place-items-center text-nc font-semibold text-6 dst">
             LP
           </div>
@@ -25,7 +25,7 @@ const emit = defineEmits(['update:model-value'])
         <a class="hover:underline flex ml-2.75 -mb-px cursor-pointer tldr-20 underline-offset-2 items-center gap-1 text-1 font-medium tracking-tight ` " @click="navigateTo('/backpack')">
           <!--             <icon name="left-sm" class="size-3.5 stroke-[1.4] mb-0.5" /> -->
           Backpack</a>
-        <EditablePocketHeader icons :name="pocket?.name" class="text-nowrap  truncate **:truncate dst !text-6 font-semibold tracking-tight **:min-w-80" @update:model-value="e => pocket.name = e" />
+        <EditablePocketHeader icons :pocket="pocket" class="text-nowrap  truncate **:truncate dst !text-6 font-semibold tracking-tight **:min-w-80" />
       </div>
     </div>
   </div>

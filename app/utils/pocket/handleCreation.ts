@@ -46,28 +46,28 @@ export function createDefaultShard(): ShardIndex {
 
 export function newRuneSet(pocketKey?: string) {
   const newSet: RuneSet = {
-      keystone: null,
+    keystone: null,
     0: {
-      path: null,
+      path: 'Precision',
       runes: {
-        1:  null,
-        2:  null,
-        3:  null
+        1: null,
+        2: null,
+        3: null,
       },
     },
     1: {
-      path: null,
-      runes:  {
-        1:  null,
-        2:  null,
-        3:  null
+      path: 'Inspiration',
+      runes: {
+        1: null,
+        2: null,
+        3: null,
       },
     },
-    shards:  {
-        1:  null,
-        2:  null,
-        3:  null
-      },
+    shards: {
+      1: null,
+      2: null,
+      3: null,
+    },
   }
   if (pocketKey) {
     const pocket = getPocket(pocketKey)

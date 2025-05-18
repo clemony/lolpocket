@@ -427,7 +427,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karma/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Karma deals magic damage to the target enemy champion or monster and forms a tether between her and them for 2 seconds, during which they are revealed.</p></div>",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Karma deals magic damage to the target enemy champion, monster or pet and forms a tether between her and them for 2 seconds, during which they are revealed.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -541,7 +541,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "Spell shield will block the tether's application and damage but not the aftereffects of one already applied.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
-        "blurb": "Active:  Karma deals magic damage and  tethers to the target enemy  champion or  monster.",
+        "blurb": "Active:  Karma deals magic damage and  tethers to the target enemy  champion,  monster or  pet.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,

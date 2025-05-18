@@ -2187,7 +2187,7 @@
         "flat": 1
       },
       "attackSpeed": {
-        "flat": 0.625,
+        "flat": 0.658,
         "perLevel": 1.44
       },
       "attackSpeedRatio": {
@@ -5865,7 +5865,7 @@
     "stats": {
       "health": {
         "flat": 655,
-        "perLevel": 109
+        "perLevel": 103
       },
       "healthRegen": {
         "flat": 8,
@@ -7002,7 +7002,7 @@
       },
       "armor": {
         "flat": 26,
-        "perLevel": 4.9
+        "perLevel": 4.6
       },
       "magicResistance": {
         "flat": 30,
@@ -14782,7 +14782,7 @@
       },
       "armor": {
         "flat": 35,
-        "perLevel": 5
+        "perLevel": 4.4
       },
       "magicResistance": {
         "flat": 32,

@@ -21,6 +21,7 @@ const filteredIds = computed (() => {
 </script>
 
 <template>
+  <div class="overflow-y-auto size-full z-0 absolute inset-0">
   <div
     :key="props.pocket ? pocket.key : toID()"
     v-draggable="[
@@ -47,9 +48,10 @@ const filteredIds = computed (() => {
         }),*/
       },
     ]"
-    class="overflow-y-auto  absolute inset-0 grid grid-flow-row auto-cols-auto select-none h-fit   grid-cols-[repeat(auto-fill,minmax(54px,1fr))] justify-center gap-4 px-10  pb-10 pt-30">
+    class=" grid grid-flow-row auto-cols-auto select-none h-fit   grid-cols-[repeat(auto-fill,minmax(54px,1fr))] justify-center gap-4 px-10  pb-10 pt-30">
     <LazyPopoverItem v-for="item in filteredIds" :key="item" :item="item" hydrate-on-visible />
   </div>
+</div>
 </template>
 
 <style></style>

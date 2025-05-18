@@ -1,27 +1,27 @@
 declare global {
 
   type RuneKey = string
-type PathRunes = {
-        1: RuneId | null
-        2: RuneId | null
-        3: RuneId | null
-      }
+  interface PathRunes {
+    1: RuneId | null
+    2: RuneId | null
+    3: RuneId | null
+  }
 
   interface RuneSet {
     keystone: RuneId
-0: PathSet
-1: PathSet
-    shards:{
+    0: PathSet
+    1: PathSet
+    shards: {
       1: ShardIndex
       2: ShardIndex
       3: ShardIndex
-  }
+    }
   }
 
-interface PathSet {
-  path: string | null
-      runes: PathRunes
-}
+  interface PathSet {
+    path: string | null
+    runes: PathRunes
+  }
 
   interface ShardIndex {
     slot: number
@@ -36,14 +36,13 @@ interface PathSet {
     color: string
   }
 
-
-
   interface Rune {
     id: number
     key: string
     name: string
     description: string
     details: string
+    path: string
     runeIndex: number
   }
 

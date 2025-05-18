@@ -10,8 +10,8 @@ const { data } = await useFetch('/api/items-lite.json')
 
 <template>
   <div v-if="to">
-    <div class="divider divider-end before:h-px my-4 before:bg-nc/30">
-      COMPONENT OF
+    <div class="divider divider-start after:h-px my-4 after:bg-nc/30">
+      BUILDS INTO
     </div>
     <div class="group flex items-center flex-wrap justify-center gap-4">
 

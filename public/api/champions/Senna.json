@@ -3,6 +3,7 @@
   "key": "Senna",
   "name": "Senna",
   "title": "the Redeemer",
+  "fullName": "Senna Abaru",
   "resource": "Mana",
   "attackType": "Ranged",
   "stats": {
@@ -100,11 +101,11 @@
             "leveling": []
           },
           {
-            "description": "Enemies that die near Senna may spawn a Mist Wraith from their corpse. A Mist Wraith lasts 8 seconds and Senna can basic attack or hit it with Piercing Darkness or Dawning Shadow to kill them instantly, granting her 8 and collecting their Mist.\nEnemy champions and large monsters will spawn a Mist Wraith.\nEpic monsters will spawn 2 Mist Wraiths.\n Minions and lesser monsters that Senna kills have a 8.4% chance to spawn a Mist Wraith.\nLarge minions that Senna does not kill will spawn a Mist Wraith, while lesser minions and lesser monsters that Senna does not kill have a 28% chance to spawn.\nLesser minions executed by an allied champion's Quest item have a 8.4% chance to spawn a Mist Wraith.",
+            "description": "Enemies that die near Senna may spawn a Mist Wraith from their corpse. A Mist Wraith lasts 8 seconds and Senna can basic attack or hit it with Piercing Darkness or Dawning Shadow to kill them instantly, granting her 8 and collecting their Mist.\nEnemy champions and large monsters will spawn a Mist Wraith.\nEpic monsters will spawn 2 Mist Wraiths.\n Minions and lesser monsters that Senna kills have a 14% chance to spawn a Mist Wraith.\nLarge minions that Senna does not kill will always spawn a Mist Wraith, while lesser minions and lesser monsters that Senna does not kill have a 28% chance to spawn one.\nLesser minions executed by an allied champion's Support Quest item have a 8.4% chance to spawn a Mist Wraith.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Mist:</p><p> For each stack of Mist, Senna gains 0.75 bonus attack damage. For every 20 stacks, she also gains 20 bonus attack range and 8% critical strike chance. Additionally, every 1% critical strike chance in excess of 100% is converted into 0.35% life steal.</p></div>",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Mist:</p><p> For each stack of Mist, Senna gains 0.75 bonus attack damage. For every 20 stacks, she also gains 20 bonus attack range and 10% critical strike chance. Additionally, every 1% critical strike chance in excess of 100% is converted into 0.35% life steal.</p></div>",
             "leveling": []
           },
           {
@@ -175,7 +176,7 @@
                   },
                   {
                     "values": [
-                      60
+                      50
                     ],
                     "units": [
                       "% AP"
@@ -272,7 +273,7 @@
         "projectile": "FALSE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Piercing Darkness also applies most on-attack effects to one enemy champion struck, and ocassionally to two.(note)\n Hail of Blades will spend a stack on hitting a champion with Piercing Darkness but only if  Hail of Blades was activated first by an auto-attack.\nPiercing Darkness' cast time is always 80% of the caster's attack windup time.\nBecause Senna's windup percent scales down with levels but her windup time also only scales with 60% attack speed, the precise numbers get complicated quickly.\nAt base attack speed and level 1, Senna's attack windup is 0.5 seconds.\nReducing Senna's attack speed via  attack speed reductions also increases Piercing Darkness' cast time by 60% of the fraction.\nPiercing Darkness' cast time reduction per level via her own windup-per-level-reduction mirrors  Lucian's  Piercing Light's cast time values.\nSenna can generally target anything that is not either explicitly  untargetable or herself.\nValid targets include anything that can be targeted by a basic attack from someone.\nPiercing Darkness will attempt to lead the target if it is moving but does not adjust further during cast time (enemies can dodge the laser if they change their position by a sufficient amount during the cast time).\nIt leads by (up-to?) 80 units.\nOn-hit effects are applied in order of struck units' spawn IDs. This matters for effects that are consumed on-hit (e.g.  Spellblade), which are applied to the target with the lowest Spawn ID.\n\"Spawn ID\" is an unofficial abbreviation to describe the spawn order for all units at the beginning of games, below are some examples.\nIf Senna targets an enemy champion but hits at least one more enemy champion simultaneously,  Press the Attack's first stack will be applied to that target. If no champion was targeted, it will default to the champion with the lowest Spawn ID out of the ones struck by the ability. Whether the effect stacks up on a champion or not when multiple enemy champions are stuck also depends on Spawn ID.\nIf Piercing Darkness struck an enemy champion and turret simultaneously, with  Rapid Firecannon fully charged, the passive effect will most likely proc on the turret since towers are often spawned before champions.\nFor on-attack effects, they are also applied in order of struck units' spawn IDs. However, there are some specific on-attack effects that will apply to both the target of Piercing Darkness and the target with the lowest Spawn ID if the two unit is not identical. (note) Confirmed cases:\nEnergized effects are stacked 2 stacks\nSpectral Waltz are granted 2 stacks\nPENDING FOR TEST:\n Spell shield will not prevent on-hit effects from being applied.\nPENDING FOR TEST:: Piercing Darkness interaction with  dodging,  blocking, and  blinding effects.",
+        "notes": "The ability's cast time respects the attack speed floor and cap.\nPiercing Darkness also applies most on-attack effects to one enemy champion struck, and ocassionally to two.(note)\n Hail of Blades will spend a stack on hitting a champion with Piercing Darkness but only if  Hail of Blades was activated first by an auto-attack.\nSenna can generally target anything that is not either explicitly  untargetable or herself.\nValid targets include anything that can be targeted by a basic attack from someone.\nPiercing Darkness will attempt to lead the target if it is moving but does not adjust further during cast time (enemies can dodge the laser if they change their position by a sufficient amount during the cast time).\nIt leads by (up-to?) 80 units.\nOn-hit effects are applied in order of struck units' spawn IDs. This matters for effects that are consumed on-hit (e.g.  Spellblade), which are applied to the target with the lowest Spawn ID.\n\"Spawn ID\" is an unofficial abbreviation to describe the spawn order for all units at the beginning of games, below are some examples.\nIf Senna targets an enemy champion but hits at least one more enemy champion simultaneously,  Press the Attack's first stack will be applied to that target. If no champion was targeted, it will default to the champion with the lowest Spawn ID out of the ones struck by the ability. Whether the effect stacks up on a champion or not when multiple enemy champions are stuck also depends on Spawn ID.\nIf Piercing Darkness struck an enemy champion and turret simultaneously, with  Rapid Firecannon fully charged, the passive effect will most likely proc on the turret since towers are often spawned before champions.\nFor on-attack effects, they are also applied in order of struck units' spawn IDs. However, there are some specific on-attack effects that will apply to both the target of Piercing Darkness and the target with the lowest Spawn ID if the two unit is not identical. (note) Confirmed cases:\nEnergized effects are stacked 2 stacks\nSpectral Waltz are granted 2 stacks\nPENDING FOR TEST:\n Spell shield will not prevent on-hit effects from being applied.\nPENDING FOR TEST:: Piercing Darkness interaction with  dodging,  blocking, and  blinding effects.",
         "blurb": "Active:  Senna fires a spectral laser toward the target unit,  healing herself and allied  champions hit while dealing physical damage and  slowing enemies hit for a short time.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -283,7 +284,7 @@
         "speed": null,
         "width": "100 / 280",
         "angle": null,
-        "castTime": "0.4-0.25",
+        "castTime": "80% of Senna's windup time (0.4 at base attack speed)",
         "effectRadius": null,
         "targetRange": "600 - 1100"
       }

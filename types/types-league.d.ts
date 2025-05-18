@@ -13,10 +13,7 @@ declare global {
     charges?: number | string | null
   }
 
-  interface SpellSet {
-    0: Spell
-    1: Spell
-  }
+type SpellSet = [string, string]
 
   interface UserSummoner {
     name: string

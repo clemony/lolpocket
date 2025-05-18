@@ -27,7 +27,6 @@ const { filteredChampions } = useChampionFilter(Object.values(championData.value
 <template>
   <div class="flex relative size-full overflow-hidden">
     <PocketSidebar :champion-data="champ" :item-data="item" />
-
     <div class="size-full relative overflow-y-auto">
       <LazyNuxtPage
         :pocket="pocket"

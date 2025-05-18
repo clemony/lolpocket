@@ -701,6 +701,10 @@
                 ]
               }
             ]
+          },
+          {
+            "description": "Swain can move during Demonflare's cast time.",
+            "leveling": []
           }
         ],
         "cost": [],

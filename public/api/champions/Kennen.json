@@ -588,6 +588,10 @@
                 ]
               }
             ]
+          },
+          {
+            "description": "Kennen can move during Slicing Maelstrom's cast time.",
+            "leveling": []
           }
         ],
         "cost": [],
@@ -615,7 +619,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Kennen can move during Slicing Maelstrom's cast time.",
+        "notes": null,
         "blurb": "Active:  Kennen summons a storm that strikes at nearby enemy champions, dealing magic damage. Enemies take increased damage from each subsequent strike.",
         "missileSpeed": null,
         "rechargeRate": null,

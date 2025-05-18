@@ -524,7 +524,7 @@
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Applies  area damage for the explosions and deals  persistent area damage for the lava.\nThe shockwaves can only hit each enemy once.\nEnemies will take damage over time for each lava fissure they are standing in.\n Spell shields block the explosions and they do not block the persistent lava damage.\nThis ability will cast from wherever the caster is at the start of the cast time.",
+        "notes": "Applies  area damage for the explosions and deals  persistent area damage for the lava.\nThe shockwaves can only hit each enemy once.\nEnemies will take damage over time for each lava fissure they are standing in.\n Spell shield will block an explosion but not the persistent lava damage.\nThis ability will cast from wherever the caster is at the start of the cast time.",
         "blurb": "Active - QE:  Hwei marks a blazing path in a direction that erupts after a delay into explosions. Each explosion deals magic damage and leaves behind a volcanic fissure that continually deals magic damage and  slows enemies within.",
         "missileSpeed": null,
         "rechargeRate": null,

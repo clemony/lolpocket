@@ -16,27 +16,27 @@ const emit = defineEmits(['update:spell'])
 
 const pocket = ref(props.pocket)
 
+const summonerSpellIconArray = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells/barrier.webp', '/img/spells/ghost.webp', '/img/spells/exhaust.webp', '/img/spells/smite.webp', '/img/spells/flash.webp', '/img/spells/teleport.webp']
+
 const selectedSpell = computed (() => {
   return props.selectedSpell
 })
-
-const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells/barrier.webp', '/img/spells/ghost.webp', '/img/spells/exhaust.webp', '/img/spells/smite.webp', '/img/spells/flash.webp', '/img/spells/teleport.webp']
 </script>
 
 <template>
   <Popover>
-    <PopoverTrigger class="" :class="cn('p-0 group/trig  btn shadow-sm inset-shadow-sm hover:ring  hover:ring-neutral/40 ', props.class)">
-      <div class="overflow-hidden size-full">
+    <PopoverTrigger :class="cn('p-0 group/trig w-full  btn  hover:ring  hover:ring-neutral/40 ', props.class)" @click.stop.prevent>
+      <div class="overflow-hidden size-full rounded-lg" :class="{ ' shadow-sm drop-shadow-sm': selectedSpell != null }">
         <Placeholder
-          v-if="selectedSpell.name == null"
-          :src="getRandom(imgArr)"
+          v-if="selectedSpell == null"
+          :src="getRandom(summonerSpellIconArray)"
           class="size-full !shadow-none opacity-40 group-hover/trig:opacity-80 inset-shadow-xs bg-b2 border-b2">
           <i-tft-attach class="size-4.5 opacity-40" />
         </Placeholder>
 
         <img
           v-else
-          :src="`/img/spells/${selectedSpell.name}.webp`"
+          :src="`/img/spells/${selectedSpell}.webp`"
 
           class="overflow-hidden" />
       </div>
@@ -58,7 +58,7 @@ const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells
             <input
               id="spells"
               type="radio"
-              :value="ss"
+              :value="ss.name"
               class="hidden"
               :disabled="selectedSpell == ss"
               @change="emit('update:spell', ss)" />

@@ -30,7 +30,7 @@ const set = computed(() => pocket.runes[rs.selectedRuneSet])
      ) ">
           <input
             v-if="shard.slot == 1"
-            v-model="set.shards[0]"
+            v-model="set.shards[1]"
             type="radio"
             :name="shard.slotName"
             class="peer hidden"
@@ -38,14 +38,14 @@ const set = computed(() => pocket.runes[rs.selectedRuneSet])
 
           <input
             v-if="shard.slot == 2"
-            v-model="set.shards[1]"
+            v-model="set.shards[2]"
             type="radio"
             :name="shard.slotName"
             :value="shard"
             class="peer hidden" />
           <input
             v-if="shard.slot == 3"
-            v-model="set.shards[2]"
+            v-model="set.shards[3]"
             type="radio"
             :name="shard.name + shard.slot"
             :value="shard"

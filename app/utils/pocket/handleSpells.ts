@@ -1,12 +1,5 @@
-import { hexoid } from 'hexoid'
-
 export function newSpellSet(key?) {
-  const ds = useDataStore()
-  const toID = hexoid()
-  const newSet = {
-    0: createDefaultSpell(),
-    1: createDefaultSpell(),
-  }
+  const newSet: SpellSet = [null, null]
 
   if (key) {
     const pocket = getPocket(key)
@@ -23,3 +16,5 @@ export function removeSpellSet(pocket, set) {
     return
   pocket.spells.sets.splice(a, 1)
 }
+
+export const summonerSpellIconArray = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells/barrier.webp', '/img/spells/ghost.webp', '/img/spells/exhaust.webp', '/img/spells/smite.webp', '/img/spells/flash.webp', '/img/spells/teleport.webp']

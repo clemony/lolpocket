@@ -55,6 +55,7 @@ declare global {
     rank: string | null
     stats: string[] | null
     tags: string | null
+    map: number | null
     query: string | null
     result: any[] | null
   }

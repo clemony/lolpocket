@@ -7,8 +7,8 @@ import {
   EditableRoot,
 } from 'reka-ui'
 
-const { name = '', class: className, wrapperClass, buttonClass } = defineProps<{
-  name?: string
+const {pocket,  class: className, wrapperClass, buttonClass } = defineProps<{
+  pocket?: Pocket
   class?: HTMLAttributes['class']
   wrapperClass?: HTMLAttributes['class']
   buttonClass?: HTMLAttributes['class']
@@ -16,14 +16,17 @@ const { name = '', class: className, wrapperClass, buttonClass } = defineProps<{
 
 const emit = defineEmits(['submit', 'update:model-value'])
 
-const modelValue = ref('')
+const modelValue = ref(null)
+
 
 function update(e) {
   modelValue.value = e
   emit('update:model-value', modelValue.value)
 }
 onMounted (() => {
-  modelValue.value = name ?? ''
+  if (pocket)
+  modelValue.value = pocket.name ?? 'Pocket'
+
 })
 
 const editableRef = ref()
@@ -34,14 +37,13 @@ function activateEdit(e: MouseEvent, editFn: () => void) {
   editFn()
 }
 
-const route = useRoute()
-const pocket = computed (() => getPocket(route.params.pocketKey))
 </script>
 
 <template>
   <!-- -->
   <EditableRoot
     ref="editableRef"
+    v-if="pocket && modelValue"
     v-slot="{ isEditing, edit }"
     v-model:model-value="pocket.name"
     activation-mode="none"
@@ -61,7 +63,7 @@ const pocket = computed (() => getPocket(route.params.pocketKey))
         <div class="w-full min-w-0">
           <EditablePreview
             :class="cn('w-full truncate min-w-0', className)">
-            {{ name }}
+            {{ pocket.name || 'Pocket' }}
           </EditablePreview>
           <EditableInput
             :class="cn('w-full truncate min-w-0', className)"

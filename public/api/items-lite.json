@@ -10,7 +10,13 @@
     },
     "purchasable": true,
     "cost": 300,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ]
   },
   "1004": {
     "id": 1004,
@@ -26,6 +32,12 @@
     "tags": [
       "Mage",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1006": {
@@ -41,6 +53,12 @@
     "cost": 300,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1011": {
@@ -58,6 +76,12 @@
       "Fighter",
       "Mage",
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1018": {
@@ -73,6 +97,12 @@
     "cost": 600,
     "tags": [
       "Marksman"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1026": {
@@ -89,6 +119,12 @@
     "tags": [
       "Mage",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1027": {
@@ -105,6 +141,12 @@
     "tags": [
       "Mage",
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1028": {
@@ -125,6 +167,12 @@
       "Mage",
       "Tank",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1029": {
@@ -145,6 +193,12 @@
       "Mage",
       "Tank",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1031": {
@@ -163,6 +217,12 @@
       "Marksman",
       "Assassin",
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1033": {
@@ -183,6 +243,12 @@
       "Mage",
       "Tank",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1036": {
@@ -200,6 +266,12 @@
       "Fighter",
       "Marksman",
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1037": {
@@ -217,6 +289,12 @@
       "Fighter",
       "Marksman",
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1038": {
@@ -234,6 +312,12 @@
       "Fighter",
       "Marksman",
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1042": {
@@ -251,6 +335,12 @@
       "Fighter",
       "Marksman",
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1043": {
@@ -267,7 +357,13 @@
     "tags": [
       "Fighter",
       "Marksman",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1052": {
@@ -284,6 +380,12 @@
     "tags": [
       "Mage",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1053": {
@@ -302,6 +404,12 @@
       "Fighter",
       "Marksman",
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1054": {
@@ -322,7 +430,12 @@
       "Assassin",
       "Mage",
       "Tank",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21
     ]
   },
   "1055": {
@@ -342,7 +455,12 @@
       "Fighter",
       "Marksman",
       "Assassin",
-      "Lifesteal_vamp"
+      "Lifesteal vamp"
+    ],
+    "maps": [
+      11,
+      12,
+      21
     ]
   },
   "1056": {
@@ -359,8 +477,13 @@
     "cost": 400,
     "tags": [
       "Mage",
-      "Mana_and_reg",
-      "Onhit_effects"
+      "Mana and_reg",
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21
     ]
   },
   "1057": {
@@ -378,6 +501,12 @@
       "Fighter",
       "Tank",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1058": {
@@ -393,6 +522,12 @@
     "cost": 1200,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "1082": {
@@ -409,6 +544,9 @@
     "cost": 350,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11
     ]
   },
   "1083": {
@@ -426,8 +564,11 @@
       "Fighter",
       "Marksman",
       "Assassin",
-      "Lifesteal_vamp",
-      "Onhit_effects"
+      "Lifesteal vamp",
+      "Onhit effects"
+    ],
+    "maps": [
+      11
     ]
   },
   "1101": {
@@ -445,7 +586,11 @@
       "Assassin",
       "Mage",
       "Tank",
-      "Lifesteal_vamp"
+      "Lifesteal vamp"
+    ],
+    "maps": [
+      11,
+      21
     ]
   },
   "1102": {
@@ -463,7 +608,11 @@
       "Assassin",
       "Mage",
       "Tank",
-      "Lifesteal_vamp"
+      "Lifesteal vamp"
+    ],
+    "maps": [
+      11,
+      21
     ]
   },
   "1103": {
@@ -481,7 +630,11 @@
       "Assassin",
       "Mage",
       "Tank",
-      "Lifesteal_vamp"
+      "Lifesteal vamp"
+    ],
+    "maps": [
+      11,
+      21
     ]
   },
   "1500": {
@@ -495,7 +648,14 @@
     },
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "1501": {
     "id": 1501,
@@ -506,7 +666,14 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "1502": {
     "id": 1502,
@@ -517,7 +684,14 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "1503": {
     "id": 1503,
@@ -528,7 +702,14 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "1506": {
     "id": 1506,
@@ -539,7 +720,14 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "1507": {
     "id": 1507,
@@ -550,7 +738,14 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "1508": {
     "id": 1508,
@@ -561,7 +756,14 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "1509": {
     "id": 1509,
@@ -572,7 +774,14 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "1510": {
     "id": 1510,
@@ -583,7 +792,14 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "1511": {
     "id": 1511,
@@ -594,7 +810,14 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "1512": {
     "id": 1512,
@@ -605,7 +828,14 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "1515": {
     "id": 1515,
@@ -616,7 +846,14 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "2003": {
     "id": 2003,
@@ -628,7 +865,12 @@
     "purchasable": true,
     "cost": 50,
     "tags": [
-      "Health_and_reg"
+      "Health and_reg"
+    ],
+    "maps": [
+      11,
+      12,
+      21
     ]
   },
   "2010": {
@@ -640,7 +882,14 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "2019": {
     "id": 2019,
@@ -656,6 +905,12 @@
     "cost": 1100,
     "tags": [
       "Fighter"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "2020": {
@@ -673,6 +928,12 @@
     "cost": 1337,
     "tags": [
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "2021": {
@@ -689,6 +950,12 @@
     "cost": 1150,
     "tags": [
       "Fighter"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "2022": {
@@ -709,6 +976,12 @@
       "Mage",
       "Tank",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "2031": {
@@ -721,7 +994,12 @@
     "purchasable": true,
     "cost": 150,
     "tags": [
-      "Health_and_reg"
+      "Health and_reg"
+    ],
+    "maps": [
+      11,
+      12,
+      21
     ]
   },
   "2049": {
@@ -739,6 +1017,9 @@
     "cost": 500,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      30
     ]
   },
   "2050": {
@@ -757,6 +1038,9 @@
     "tags": [
       "Mage",
       "Tank"
+    ],
+    "maps": [
+      30
     ]
   },
   "2051": {
@@ -775,6 +1059,10 @@
       "Fighter",
       "Tank",
       "Support"
+    ],
+    "maps": [
+      12,
+      35
     ]
   },
   "2052": {
@@ -786,7 +1074,14 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "2055": {
     "id": 2055,
@@ -797,7 +1092,10 @@
     "stats": {},
     "purchasable": true,
     "cost": 75,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11
+    ]
   },
   "2065": {
     "id": 2065,
@@ -816,6 +1114,12 @@
     "tags": [
       "Support",
       "Movement"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "2138": {
@@ -828,8 +1132,13 @@
     "purchasable": true,
     "cost": 500,
     "tags": [
-      "Health_and_reg",
+      "Health and_reg",
       "Movement"
+    ],
+    "maps": [
+      11,
+      12,
+      21
     ]
   },
   "2139": {
@@ -842,9 +1151,14 @@
     "purchasable": true,
     "cost": 500,
     "tags": [
-      "Ability_power",
-      "Mana_and_reg",
-      "Onhit_effects"
+      "Ability power",
+      "Mana and_reg",
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21
     ]
   },
   "2140": {
@@ -857,8 +1171,13 @@
     "purchasable": true,
     "cost": 500,
     "tags": [
-      "Attack_damage",
-      "Lifesteal_vamp"
+      "Attack damage",
+      "Lifesteal vamp"
+    ],
+    "maps": [
+      11,
+      12,
+      21
     ]
   },
   "2141": {
@@ -870,7 +1189,12 @@
     "stats": {},
     "purchasable": true,
     "cost": 300,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      35
+    ]
   },
   "2142": {
     "id": 2142,
@@ -882,8 +1206,11 @@
     "purchasable": true,
     "cost": 500,
     "tags": [
-      "Attack_damage",
-      "Ability_power"
+      "Attack damage",
+      "Ability power"
+    ],
+    "maps": [
+      30
     ]
   },
   "2143": {
@@ -896,7 +1223,10 @@
     "purchasable": true,
     "cost": 500,
     "tags": [
-      "Health_and_reg"
+      "Health and_reg"
+    ],
+    "maps": [
+      30
     ]
   },
   "2144": {
@@ -908,7 +1238,10 @@
     "stats": {},
     "purchasable": true,
     "cost": 500,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "2145": {
     "id": 2145,
@@ -919,7 +1252,10 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "2150": {
     "id": 2150,
@@ -930,7 +1266,13 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ]
   },
   "2151": {
     "id": 2151,
@@ -941,7 +1283,13 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ]
   },
   "2152": {
     "id": 2152,
@@ -952,7 +1300,13 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ]
   },
   "2420": {
     "id": 2420,
@@ -968,6 +1322,12 @@
     "cost": 1600,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "2421": {
@@ -982,7 +1342,13 @@
     },
     "purchasable": true,
     "cost": 1600,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ]
   },
   "2422": {
     "id": 2422,
@@ -995,7 +1361,13 @@
     },
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ]
   },
   "2501": {
     "id": 2501,
@@ -1012,6 +1384,12 @@
     "tags": [
       "Fighter",
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "2502": {
@@ -1030,6 +1408,12 @@
     "cost": 2800,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "2503": {
@@ -1047,6 +1431,12 @@
     "cost": 2800,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "2504": {
@@ -1064,6 +1454,12 @@
     "cost": 2900,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "2508": {
@@ -1079,6 +1475,12 @@
     "cost": 900,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3002": {
@@ -1097,6 +1499,12 @@
     "tags": [
       "Support",
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3003": {
@@ -1114,6 +1522,12 @@
     "cost": 2900,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3004": {
@@ -1133,7 +1547,13 @@
       "Fighter",
       "Marksman",
       "Assassin",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3006": {
@@ -1148,7 +1568,13 @@
     },
     "purchasable": true,
     "cost": 1100,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ]
   },
   "3009": {
     "id": 3009,
@@ -1161,7 +1587,13 @@
     },
     "purchasable": true,
     "cost": 1000,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ]
   },
   "3010": {
     "id": 3010,
@@ -1174,7 +1606,11 @@
     },
     "purchasable": true,
     "cost": 900,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      21
+    ]
   },
   "3013": {
     "id": 3013,
@@ -1187,7 +1623,11 @@
     },
     "purchasable": false,
     "cost": 900,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      21
+    ]
   },
   "3020": {
     "id": 3020,
@@ -1201,7 +1641,13 @@
     },
     "purchasable": true,
     "cost": 1100,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ]
   },
   "3024": {
     "id": 3024,
@@ -1219,6 +1665,12 @@
     "tags": [
       "Tank",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3026": {
@@ -1237,6 +1689,9 @@
       "Fighter",
       "Marksman",
       "Assassin"
+    ],
+    "maps": [
+      11
     ]
   },
   "3031": {
@@ -1254,6 +1709,12 @@
     "cost": 3450,
     "tags": [
       "Marksman"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3032": {
@@ -1270,7 +1731,13 @@
     "cost": 3000,
     "tags": [
       "Marksman",
-      "Armor_pen"
+      "Armor pen"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3033": {
@@ -1288,6 +1755,12 @@
     "cost": 3300,
     "tags": [
       "Marksman"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3035": {
@@ -1306,6 +1779,12 @@
       "Fighter",
       "Marksman",
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3036": {
@@ -1323,6 +1802,12 @@
     "cost": 3100,
     "tags": [
       "Marksman"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3040": {
@@ -1338,7 +1823,13 @@
     },
     "purchasable": false,
     "cost": 2900,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ]
   },
   "3041": {
     "id": 3041,
@@ -1355,6 +1846,9 @@
     "tags": [
       "Mage",
       "Movement"
+    ],
+    "maps": [
+      11
     ]
   },
   "3042": {
@@ -1374,7 +1868,13 @@
       "Fighter",
       "Marksman",
       "Assassin",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3044": {
@@ -1392,6 +1892,12 @@
     "tags": [
       "Fighter",
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3046": {
@@ -1410,6 +1916,12 @@
     "tags": [
       "Marksman",
       "Movement"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3047": {
@@ -1424,7 +1936,13 @@
     },
     "purchasable": true,
     "cost": 1200,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ]
   },
   "3050": {
     "id": 3050,
@@ -1443,6 +1961,12 @@
     "tags": [
       "Tank",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3051": {
@@ -1460,7 +1984,13 @@
     "tags": [
       "Fighter",
       "Movement",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3053": {
@@ -1477,7 +2007,13 @@
     "cost": 3200,
     "tags": [
       "Fighter",
-      "Attack_damage"
+      "Attack damage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3057": {
@@ -1495,7 +2031,13 @@
       "Fighter",
       "Marksman",
       "Mage",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3065": {
@@ -1514,6 +2056,12 @@
     "cost": 2700,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3066": {
@@ -1531,6 +2079,12 @@
     "tags": [
       "Tank",
       "Movement"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3067": {
@@ -1552,6 +2106,12 @@
       "Mage",
       "Tank",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3068": {
@@ -1569,6 +2129,12 @@
     "cost": 2700,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3070": {
@@ -1585,6 +2151,12 @@
     "tags": [
       "Marksman",
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3071": {
@@ -1602,9 +2174,15 @@
     "cost": 3000,
     "tags": [
       "Fighter",
-      "Onhit_effects",
-      "Armor_pen",
+      "Onhit effects",
+      "Armor pen",
       "Movement"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3072": {
@@ -1621,6 +2199,12 @@
     "cost": 3400,
     "tags": [
       "Marksman"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3073": {
@@ -1638,8 +2222,14 @@
     "cost": 3000,
     "tags": [
       "Fighter",
-      "Ability_haste",
+      "Ability haste",
       "Movement"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3074": {
@@ -1657,6 +2247,12 @@
     "cost": 3300,
     "tags": [
       "Fighter"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3075": {
@@ -1673,6 +2269,12 @@
     "cost": 2450,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3076": {
@@ -1688,6 +2290,12 @@
     "cost": 800,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3077": {
@@ -1704,7 +2312,13 @@
     "tags": [
       "Fighter",
       "Tank",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3078": {
@@ -1725,6 +2339,12 @@
       "Fighter",
       "Marksman",
       "Movement"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3082": {
@@ -1740,6 +2360,12 @@
     "cost": 1000,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3083": {
@@ -1756,6 +2382,12 @@
     "cost": 3100,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3084": {
@@ -1772,6 +2404,12 @@
     "cost": 3000,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3085": {
@@ -1789,8 +2427,14 @@
     "cost": 2650,
     "tags": [
       "Marksman",
-      "Onhit_effects",
+      "Onhit effects",
       "Movement"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3086": {
@@ -1809,6 +2453,12 @@
     "tags": [
       "Marksman",
       "Movement"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3087": {
@@ -1826,7 +2476,13 @@
     "cost": 2700,
     "tags": [
       "Marksman",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3089": {
@@ -1839,9 +2495,15 @@
       "abilityPower": 130
     },
     "purchasable": true,
-    "cost": 3600,
+    "cost": 3500,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3091": {
@@ -1860,7 +2522,13 @@
     "tags": [
       "Fighter",
       "Marksman",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3094": {
@@ -1879,6 +2547,12 @@
     "tags": [
       "Marksman",
       "Movement"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3100": {
@@ -1888,15 +2562,21 @@
       "Legendary"
     ],
     "stats": {
-      "abilityPower": 115,
+      "abilityPower": 100,
       "percentMovespeed": 4,
       "abilityHaste": 10
     },
     "purchasable": true,
-    "cost": 3200,
+    "cost": 2900,
     "tags": [
       "Mage",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3102": {
@@ -1913,6 +2593,12 @@
     "cost": 3000,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3105": {
@@ -1931,6 +2617,12 @@
     "tags": [
       "Tank",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3107": {
@@ -1949,6 +2641,12 @@
     "cost": 2300,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3108": {
@@ -1965,6 +2663,12 @@
     "cost": 850,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3109": {
@@ -1984,6 +2688,12 @@
     "tags": [
       "Tank",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3110": {
@@ -2002,6 +2712,12 @@
     "tags": [
       "Tank",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3111": {
@@ -2017,7 +2733,13 @@
     },
     "purchasable": true,
     "cost": 1250,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ]
   },
   "3112": {
     "id": 3112,
@@ -2035,7 +2757,11 @@
       "Mage",
       "Tank",
       "Support",
-      "Mana_and_reg"
+      "Mana and_reg"
+    ],
+    "maps": [
+      12,
+      35
     ]
   },
   "3113": {
@@ -2053,6 +2779,12 @@
     "tags": [
       "Mage",
       "Movement"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3114": {
@@ -2069,6 +2801,12 @@
     "cost": 600,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3115": {
@@ -2083,11 +2821,17 @@
       "abilityHaste": 15
     },
     "purchasable": true,
-    "cost": 3000,
+    "cost": 2900,
     "tags": [
       "Marksman",
       "Mage",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3116": {
@@ -2104,6 +2848,12 @@
     "cost": 2600,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3118": {
@@ -2113,7 +2863,7 @@
       "Legendary"
     ],
     "stats": {
-      "abilityPower": 85,
+      "abilityPower": 90,
       "mana": 600,
       "abilityHaste": 15
     },
@@ -2121,7 +2871,13 @@
     "cost": 2700,
     "tags": [
       "Mage",
-      "Ability_haste"
+      "Ability haste"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3119": {
@@ -2139,6 +2895,12 @@
     "cost": 2400,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3121": {
@@ -2156,6 +2918,12 @@
     "cost": 2400,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3123": {
@@ -2173,6 +2941,12 @@
       "Fighter",
       "Marksman",
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3124": {
@@ -2191,7 +2965,13 @@
     "tags": [
       "Fighter",
       "Marksman",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3133": {
@@ -2210,6 +2990,12 @@
       "Fighter",
       "Marksman",
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3134": {
@@ -2226,7 +3012,13 @@
     "cost": 1000,
     "tags": [
       "Assassin",
-      "Armor_pen"
+      "Armor pen"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3135": {
@@ -2243,6 +3035,12 @@
     "cost": 3000,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3137": {
@@ -2252,14 +3050,20 @@
       "Legendary"
     ],
     "stats": {
-      "abilityPower": 60,
+      "abilityPower": 75,
       "percentMagicPenetration": 30,
       "abilityHaste": 20
     },
     "purchasable": true,
-    "cost": 2850,
+    "cost": 3000,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3139": {
@@ -2279,6 +3083,12 @@
       "Fighter",
       "Marksman",
       "Movement"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3140": {
@@ -2296,6 +3106,12 @@
       "Fighter",
       "Marksman",
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3142": {
@@ -2314,6 +3130,12 @@
     "tags": [
       "Assassin",
       "Movement"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3143": {
@@ -2330,6 +3152,12 @@
     "cost": 2700,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3144": {
@@ -2345,7 +3173,13 @@
     "cost": 600,
     "tags": [
       "Marksman",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3145": {
@@ -2361,6 +3195,12 @@
     "cost": 1100,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3147": {
@@ -2377,6 +3217,12 @@
     "cost": 1300,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3152": {
@@ -2386,15 +3232,21 @@
       "Legendary"
     ],
     "stats": {
-      "abilityPower": 60,
-      "health": 350,
-      "abilityHaste": 15
+      "abilityPower": 70,
+      "health": 300,
+      "abilityHaste": 20
     },
     "purchasable": true,
-    "cost": 2600,
+    "cost": 2650,
     "tags": [
       "Mage",
       "Movement"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3153": {
@@ -2413,7 +3265,13 @@
     "tags": [
       "Fighter",
       "Marksman",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3155": {
@@ -2432,6 +3290,12 @@
       "Fighter",
       "Marksman",
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3156": {
@@ -2451,6 +3315,12 @@
       "Fighter",
       "Marksman",
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3157": {
@@ -2467,6 +3337,12 @@
     "cost": 3250,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3158": {
@@ -2481,7 +3357,13 @@
     },
     "purchasable": true,
     "cost": 900,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ]
   },
   "3161": {
     "id": 3161,
@@ -2497,7 +3379,13 @@
     "cost": 3100,
     "tags": [
       "Fighter",
-      "Ability_haste"
+      "Ability haste"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3165": {
@@ -2512,10 +3400,16 @@
       "abilityHaste": 15
     },
     "purchasable": true,
-    "cost": 2950,
+    "cost": 2850,
     "tags": [
       "Mage",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3170": {
@@ -2529,7 +3423,10 @@
     },
     "purchasable": true,
     "cost": 1500,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11
+    ]
   },
   "3171": {
     "id": 3171,
@@ -2543,7 +3440,10 @@
     },
     "purchasable": true,
     "cost": 1400,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11
+    ]
   },
   "3172": {
     "id": 3172,
@@ -2562,6 +3462,11 @@
     "tags": [
       "Marksman",
       "Fighter"
+    ],
+    "maps": [
+      11,
+      21,
+      35
     ]
   },
   "3173": {
@@ -2577,7 +3482,10 @@
     },
     "purchasable": true,
     "cost": 1750,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11
+    ]
   },
   "3174": {
     "id": 3174,
@@ -2591,7 +3499,10 @@
     },
     "purchasable": true,
     "cost": 1700,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11
+    ]
   },
   "3175": {
     "id": 3175,
@@ -2605,7 +3516,10 @@
     },
     "purchasable": true,
     "cost": 1600,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11
+    ]
   },
   "3176": {
     "id": 3176,
@@ -2618,7 +3532,10 @@
     },
     "purchasable": true,
     "cost": 1400,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11
+    ]
   },
   "3177": {
     "id": 3177,
@@ -2638,6 +3555,10 @@
       "Marksman",
       "Assassin",
       "Tank"
+    ],
+    "maps": [
+      12,
+      35
     ]
   },
   "3179": {
@@ -2655,6 +3576,12 @@
     "cost": 2500,
     "tags": [
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3181": {
@@ -2672,6 +3599,11 @@
     "cost": 3000,
     "tags": [
       "Fighter"
+    ],
+    "maps": [
+      11,
+      12,
+      21
     ]
   },
   "3184": {
@@ -2691,6 +3623,10 @@
       "Fighter",
       "Marksman",
       "Assassin"
+    ],
+    "maps": [
+      12,
+      35
     ]
   },
   "3190": {
@@ -2710,6 +3646,12 @@
     "tags": [
       "Tank",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3211": {
@@ -2727,6 +3669,12 @@
     "cost": 1250,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3222": {
@@ -2745,6 +3693,12 @@
     "cost": 2300,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3302": {
@@ -2762,9 +3716,15 @@
     "tags": [
       "Fighter",
       "Marksman",
-      "Onhit_effects",
-      "Armor_pen",
-      "Magic_pen"
+      "Onhit effects",
+      "Armor pen",
+      "Magic pen"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3330": {
@@ -2776,7 +3736,14 @@
     "stats": {},
     "purchasable": true,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "3340": {
     "id": 3340,
@@ -2787,7 +3754,11 @@
     "stats": {},
     "purchasable": true,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      21
+    ]
   },
   "3348": {
     "id": 3348,
@@ -2798,7 +3769,10 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "3363": {
     "id": 3363,
@@ -2809,7 +3783,12 @@
     "stats": {},
     "purchasable": true,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21
+    ]
   },
   "3364": {
     "id": 3364,
@@ -2820,7 +3799,11 @@
     "stats": {},
     "purchasable": true,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      21
+    ]
   },
   "3400": {
     "id": 3400,
@@ -2831,7 +3814,14 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "3430": {
     "id": 3430,
@@ -2848,6 +3838,9 @@
     "cost": 2500,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "3504": {
@@ -2866,7 +3859,13 @@
     "cost": 2200,
     "tags": [
       "Support",
-      "Attack_speed"
+      "Attack speed"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3508": {
@@ -2884,8 +3883,14 @@
     "cost": 2900,
     "tags": [
       "Marksman",
-      "Mana_and_reg",
-      "Onhit_effects"
+      "Mana and_reg",
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3513": {
@@ -2897,7 +3902,8 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": []
   },
   "3599": {
     "id": 3599,
@@ -2908,7 +3914,14 @@
     "stats": {},
     "purchasable": true,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "3742": {
     "id": 3742,
@@ -2926,6 +3939,12 @@
     "tags": [
       "Fighter",
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3748": {
@@ -2943,7 +3962,13 @@
     "tags": [
       "Fighter",
       "Tank",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3801": {
@@ -2961,6 +3986,12 @@
     "tags": [
       "Tank",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3802": {
@@ -2978,6 +4009,12 @@
     "cost": 1200,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3803": {
@@ -2994,6 +4031,12 @@
     "cost": 1300,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3814": {
@@ -3011,6 +4054,12 @@
     "cost": 3000,
     "tags": [
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "3865": {
@@ -3030,6 +4079,9 @@
     "tags": [
       "Support",
       "Mage"
+    ],
+    "maps": [
+      11
     ]
   },
   "3866": {
@@ -3048,6 +4100,9 @@
     "cost": 400,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11
     ]
   },
   "3867": {
@@ -3066,6 +4121,9 @@
     "cost": 400,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11
     ]
   },
   "3869": {
@@ -3084,6 +4142,9 @@
     "cost": 400,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11
     ]
   },
   "3870": {
@@ -3102,6 +4163,9 @@
     "cost": 400,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11
     ]
   },
   "3871": {
@@ -3120,6 +4184,9 @@
     "cost": 400,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11
     ]
   },
   "3876": {
@@ -3138,6 +4205,9 @@
     "cost": 400,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11
     ]
   },
   "3877": {
@@ -3156,6 +4226,9 @@
     "cost": 400,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11
     ]
   },
   "3901": {
@@ -3165,7 +4238,14 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "3902": {
     "id": 3902,
@@ -3174,7 +4254,14 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "3903": {
     "id": 3903,
@@ -3183,7 +4270,14 @@
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
   },
   "3916": {
     "id": 3916,
@@ -3199,6 +4293,12 @@
     "tags": [
       "Mage",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "4005": {
@@ -3216,6 +4316,12 @@
     "cost": 2250,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "4011": {
@@ -3234,6 +4340,9 @@
     "cost": 2500,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      30
     ]
   },
   "4015": {
@@ -3252,6 +4361,9 @@
     "cost": 2500,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "4016": {
@@ -3269,6 +4381,9 @@
     "cost": 2500,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      30
     ]
   },
   "4017": {
@@ -3285,6 +4400,9 @@
     "cost": 2500,
     "tags": [
       "Assassin"
+    ],
+    "maps": [
+      30
     ]
   },
   "4401": {
@@ -3302,6 +4420,12 @@
     "cost": 2800,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "4628": {
@@ -3311,13 +4435,19 @@
       "Legendary"
     ],
     "stats": {
-      "abilityPower": 75,
+      "abilityPower": 110,
       "abilityHaste": 25
     },
     "purchasable": true,
-    "cost": 2700,
+    "cost": 2900,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "4629": {
@@ -3337,6 +4467,12 @@
     "tags": [
       "Mage",
       "Movement"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "4630": {
@@ -3353,6 +4489,12 @@
     "cost": 1100,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "4632": {
@@ -3369,6 +4511,12 @@
     "cost": 1600,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "4633": {
@@ -3386,7 +4534,13 @@
     "cost": 3100,
     "tags": [
       "Mage",
-      "Lifesteal_vamp"
+      "Lifesteal vamp"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "4638": {
@@ -3405,6 +4559,9 @@
     "cost": 1100,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11
     ]
   },
   "4642": {
@@ -3422,6 +4579,12 @@
     "cost": 900,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "4643": {
@@ -3440,6 +4603,9 @@
     "cost": 2300,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11
     ]
   },
   "4645": {
@@ -3456,6 +4622,12 @@
     "cost": 3200,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "4646": {
@@ -3467,12 +4639,18 @@
     "stats": {
       "abilityPower": 90,
       "flatMagicPenetration": 15,
-      "percentMovespeed": 4
+      "percentMovespeed": 6
     },
     "purchasable": true,
-    "cost": 2900,
+    "cost": 2800,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6333": {
@@ -3490,6 +4668,12 @@
     "cost": 3300,
     "tags": [
       "Fighter"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6609": {
@@ -3508,6 +4692,12 @@
     "tags": [
       "Fighter",
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6610": {
@@ -3525,6 +4715,12 @@
     "cost": 3100,
     "tags": [
       "Fighter"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6616": {
@@ -3543,6 +4739,12 @@
     "cost": 2250,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6617": {
@@ -3561,6 +4763,12 @@
     "cost": 2200,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6620": {
@@ -3579,6 +4787,12 @@
     "cost": 2200,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6621": {
@@ -3596,6 +4810,12 @@
     "cost": 2500,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6631": {
@@ -3614,6 +4834,12 @@
     "tags": [
       "Fighter",
       "Movement"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6653": {
@@ -3623,13 +4849,19 @@
       "Legendary"
     ],
     "stats": {
-      "abilityPower": 70,
+      "abilityPower": 60,
       "health": 300
     },
     "purchasable": true,
     "cost": 3000,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6655": {
@@ -3644,9 +4876,15 @@
       "abilityHaste": 10
     },
     "purchasable": true,
-    "cost": 2850,
+    "cost": 2750,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6657": {
@@ -3664,6 +4902,12 @@
     "cost": 2600,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6660": {
@@ -3680,6 +4924,12 @@
     "cost": 900,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6662": {
@@ -3698,7 +4948,13 @@
     "tags": [
       "Fighter",
       "Tank",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6664": {
@@ -3717,6 +4973,12 @@
     "cost": 2800,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6665": {
@@ -3734,6 +4996,12 @@
     "cost": 3200,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6670": {
@@ -3750,7 +5018,13 @@
     "cost": 1300,
     "tags": [
       "Marksman",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6672": {
@@ -3768,6 +5042,12 @@
     "cost": 3100,
     "tags": [
       "Marksman"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6673": {
@@ -3784,7 +5064,13 @@
     "cost": 3000,
     "tags": [
       "Marksman",
-      "Health_and_reg"
+      "Health and_reg"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6675": {
@@ -3802,6 +5088,12 @@
     "cost": 2650,
     "tags": [
       "Marksman"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6676": {
@@ -3820,6 +5112,12 @@
     "tags": [
       "Marksman",
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6690": {
@@ -3837,6 +5135,12 @@
     "tags": [
       "Assassin",
       "Fighter"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6692": {
@@ -3853,6 +5157,12 @@
     "cost": 2900,
     "tags": [
       "Fighter"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6694": {
@@ -3870,6 +5180,12 @@
     "cost": 3000,
     "tags": [
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6695": {
@@ -3886,6 +5202,12 @@
     "cost": 2500,
     "tags": [
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6696": {
@@ -3903,6 +5225,12 @@
     "cost": 3000,
     "tags": [
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6697": {
@@ -3920,6 +5248,10 @@
     "cost": 3000,
     "tags": [
       "Assassin"
+    ],
+    "maps": [
+      11,
+      21
     ]
   },
   "6698": {
@@ -3937,6 +5269,12 @@
     "cost": 3200,
     "tags": [
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6699": {
@@ -3954,6 +5292,12 @@
     "cost": 3000,
     "tags": [
       "Assassin"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "6701": {
@@ -3971,6 +5315,12 @@
     "tags": [
       "Assassin",
       "Movement"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "8010": {
@@ -3980,14 +5330,19 @@
       "Legendary"
     ],
     "stats": {
-      "abilityPower": 60,
-      "health": 350,
+      "abilityPower": 65,
+      "health": 400,
       "abilityHaste": 15
     },
     "purchasable": true,
     "cost": 2900,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      11,
+      12,
+      21
     ]
   },
   "8020": {
@@ -4006,6 +5361,12 @@
     "tags": [
       "Tank",
       "Support"
+    ],
+    "maps": [
+      11,
+      12,
+      21,
+      35
     ]
   },
   "220000": {
@@ -4017,7 +5378,10 @@
     "stats": {},
     "purchasable": true,
     "cost": 750,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "220001": {
     "id": 220001,
@@ -4028,7 +5392,10 @@
     "stats": {},
     "purchasable": true,
     "cost": 2000,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "220002": {
     "id": 220002,
@@ -4039,7 +5406,10 @@
     "stats": {},
     "purchasable": true,
     "cost": 2000,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "220003": {
     "id": 220003,
@@ -4050,7 +5420,10 @@
     "stats": {},
     "purchasable": true,
     "cost": 2000,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "220004": {
     "id": 220004,
@@ -4061,7 +5434,10 @@
     "stats": {},
     "purchasable": true,
     "cost": 2000,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "220005": {
     "id": 220005,
@@ -4072,7 +5448,10 @@
     "stats": {},
     "purchasable": true,
     "cost": 2000,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "220006": {
     "id": 220006,
@@ -4083,7 +5462,10 @@
     "stats": {},
     "purchasable": true,
     "cost": 2000,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "220007": {
     "id": 220007,
@@ -4094,7 +5476,10 @@
     "stats": {},
     "purchasable": true,
     "cost": 4000,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "223005": {
     "id": 223005,
@@ -4107,7 +5492,10 @@
     },
     "purchasable": true,
     "cost": 500,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "223039": {
     "id": 223039,
@@ -4123,6 +5511,9 @@
     "cost": 2500,
     "tags": [
       "Fighter"
+    ],
+    "maps": [
+      30
     ]
   },
   "223095": {
@@ -4140,7 +5531,10 @@
     "cost": 2500,
     "tags": [
       "Marksman",
-      "Onhit_effects"
+      "Onhit effects"
+    ],
+    "maps": [
+      30
     ]
   },
   "223146": {
@@ -4158,6 +5552,9 @@
     "cost": 2500,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "223185": {
@@ -4176,6 +5573,9 @@
     "tags": [
       "Fighter",
       "Assassin"
+    ],
+    "maps": [
+      30
     ]
   },
   "224004": {
@@ -4192,6 +5592,9 @@
     "cost": 2500,
     "tags": [
       "Assassin"
+    ],
+    "maps": [
+      30
     ]
   },
   "224403": {
@@ -4217,7 +5620,10 @@
     },
     "purchasable": true,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "226630": {
     "id": 226630,
@@ -4234,6 +5640,9 @@
     "cost": 0,
     "tags": [
       "Fighter"
+    ],
+    "maps": [
+      30
     ]
   },
   "228001": {
@@ -4251,6 +5660,9 @@
     "tags": [
       "Tank",
       "Support"
+    ],
+    "maps": [
+      30
     ]
   },
   "228002": {
@@ -4268,6 +5680,9 @@
     "cost": 0,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "443054": {
@@ -4285,6 +5700,9 @@
     "cost": 0,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      30
     ]
   },
   "443055": {
@@ -4302,6 +5720,9 @@
     "cost": 0,
     "tags": [
       "Marksman"
+    ],
+    "maps": [
+      30
     ]
   },
   "443056": {
@@ -4313,7 +5734,10 @@
     "stats": {},
     "purchasable": true,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "443058": {
     "id": 443058,
@@ -4329,6 +5753,9 @@
     "cost": 0,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      30
     ]
   },
   "443059": {
@@ -4345,6 +5772,9 @@
     "cost": 0,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      30
     ]
   },
   "443060": {
@@ -4360,6 +5790,9 @@
     "cost": 0,
     "tags": [
       "Assassin"
+    ],
+    "maps": [
+      30
     ]
   },
   "443061": {
@@ -4377,6 +5810,9 @@
     "cost": 0,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      30
     ]
   },
   "443062": {
@@ -4394,6 +5830,9 @@
     "cost": 0,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "443063": {
@@ -4411,6 +5850,9 @@
     "cost": 0,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      30
     ]
   },
   "443064": {
@@ -4422,7 +5864,10 @@
     "stats": {},
     "purchasable": true,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "443069": {
     "id": 443069,
@@ -4439,6 +5884,9 @@
     "cost": 0,
     "tags": [
       "Marksman"
+    ],
+    "maps": [
+      30
     ]
   },
   "443079": {
@@ -4454,6 +5902,9 @@
     "cost": 0,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      30
     ]
   },
   "443080": {
@@ -4465,7 +5916,10 @@
     "stats": {},
     "purchasable": true,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "443081": {
     "id": 443081,
@@ -4481,6 +5935,9 @@
     "cost": 0,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      30
     ]
   },
   "443090": {
@@ -4497,6 +5954,9 @@
     "cost": 0,
     "tags": [
       "Marksman"
+    ],
+    "maps": [
+      30
     ]
   },
   "443193": {
@@ -4515,6 +5975,9 @@
     "cost": 0,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      30
     ]
   },
   "444636": {
@@ -4532,6 +5995,9 @@
     "cost": 0,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "444637": {
@@ -4548,6 +6014,9 @@
     "cost": 0,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "444644": {
@@ -4566,6 +6035,9 @@
     "cost": 0,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "446632": {
@@ -4583,6 +6055,9 @@
     "cost": 0,
     "tags": [
       "Fighter"
+    ],
+    "maps": [
+      30
     ]
   },
   "446656": {
@@ -4601,6 +6076,9 @@
     "cost": 0,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "446667": {
@@ -4619,6 +6097,9 @@
     "cost": 0,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      30
     ]
   },
   "446671": {
@@ -4637,6 +6118,9 @@
     "cost": 0,
     "tags": [
       "Marksman"
+    ],
+    "maps": [
+      30
     ]
   },
   "446691": {
@@ -4654,6 +6138,9 @@
     "cost": 0,
     "tags": [
       "Assassin"
+    ],
+    "maps": [
+      30
     ]
   },
   "446693": {
@@ -4671,7 +6158,8 @@
     "cost": 0,
     "tags": [
       "Assassin"
-    ]
+    ],
+    "maps": []
   },
   "447100": {
     "id": 447100,
@@ -4685,7 +6173,10 @@
     },
     "purchasable": true,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "447101": {
     "id": 447101,
@@ -4700,7 +6191,10 @@
     },
     "purchasable": true,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "447102": {
     "id": 447102,
@@ -4717,6 +6211,9 @@
     "cost": 0,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "447103": {
@@ -4734,6 +6231,9 @@
     "cost": 0,
     "tags": [
       "Fighter"
+    ],
+    "maps": [
+      30
     ]
   },
   "447104": {
@@ -4751,6 +6251,9 @@
     "cost": 0,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "447105": {
@@ -4769,6 +6272,9 @@
     "cost": 0,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "447106": {
@@ -4780,7 +6286,10 @@
     "stats": {},
     "purchasable": true,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "447107": {
     "id": 447107,
@@ -4794,7 +6303,10 @@
     },
     "purchasable": true,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "447108": {
     "id": 447108,
@@ -4811,6 +6323,9 @@
     "cost": 0,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "447109": {
@@ -4828,6 +6343,9 @@
     "cost": 0,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "447110": {
@@ -4845,6 +6363,9 @@
     "cost": 0,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "447112": {
@@ -4858,7 +6379,10 @@
     },
     "purchasable": true,
     "cost": 0,
-    "tags": []
+    "tags": [],
+    "maps": [
+      30
+    ]
   },
   "447113": {
     "id": 447113,
@@ -4876,6 +6400,9 @@
     "cost": 0,
     "tags": [
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "447114": {
@@ -4893,6 +6420,9 @@
     "cost": 0,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      30
     ]
   },
   "447115": {
@@ -4910,6 +6440,9 @@
     "cost": 0,
     "tags": [
       "Assassin"
+    ],
+    "maps": [
+      30
     ]
   },
   "447116": {
@@ -4928,6 +6461,9 @@
       "Assassin",
       "Fighter",
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "447118": {
@@ -4946,6 +6482,9 @@
       "Fighter",
       "Marksman",
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "447119": {
@@ -4965,6 +6504,9 @@
     "cost": 0,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      30
     ]
   },
   "447120": {
@@ -4981,6 +6523,9 @@
     "tags": [
       "Marksman",
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "447121": {
@@ -4998,6 +6543,9 @@
     "tags": [
       "Marksman",
       "Mage"
+    ],
+    "maps": [
+      30
     ]
   },
   "447122": {
@@ -5014,6 +6562,9 @@
     "cost": 0,
     "tags": [
       "Tank"
+    ],
+    "maps": [
+      30
     ]
   },
   "447123": {
@@ -5032,6 +6583,9 @@
     "cost": 0,
     "tags": [
       "Support"
+    ],
+    "maps": [
+      30
     ]
   }
 }

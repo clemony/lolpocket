@@ -16,37 +16,37 @@ export const itemTags = [
   {
     id: 'Fighter',
     displayName: 'Fighter',
-    icon: 'roles-role-icon-fighter',
+    icon: 'roles-fighter',
     color: '--color-fighter',
   },
   {
     id: 'Marksman',
     displayName: 'Marksman',
-    icon: 'roles-role-icon-marksman',
+    icon: 'roles-marksman',
     color: '--color-precision',
   },
   {
     id: 'Assassin',
     displayName: 'assassin',
-    icon: 'roles-role-icon-assassin',
+    icon: 'roles-assassin',
     color: '--color-domination',
   },
   {
     id: 'Mage',
     displayName: 'Mage',
-    icon: 'roles-role-icon-mage',
+    icon: 'roles-mage',
     color: '--color-sorcery',
   },
   {
     id: 'Tank',
     displayName: 'Tank',
-    icon: 'roles-role-icon-tank',
+    icon: 'roles-tank',
     color: '--color-resolve',
   },
   {
     id: 'Support',
     displayName: 'Support',
-    icon: 'roles-role-icon-support',
+    icon: 'roles-support',
     color: '--color-inspiration',
   },
   {

@@ -103,7 +103,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Blessing of Noxus Bonus:</p><p> The movement speed is increased to 5 - 90 (based on level).</p></div>",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Blessing of Noxus Bonus:</p><p> Serpentine Grace's bonus movement speed is increased by 1 - 18 (based on level), for a total of 5 - 90 (based on level).</p></div>",
             "leveling": []
           }
         ],

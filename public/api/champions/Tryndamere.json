@@ -580,7 +580,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "No additional notes.",
+        "notes": "Undying Rage will prevent  Mel's  Overwhelm's stacks from being consumed.",
         "blurb": "Active:  Tryndamere becomes enraged, gaining  Fury and a  minimum health threshold for a few seconds.",
         "missileSpeed": null,
         "rechargeRate": null,

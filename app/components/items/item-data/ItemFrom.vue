@@ -13,7 +13,7 @@ const { data } = await useFetch('/api/items-lite.json')
 
 <template>
   <div v-if="from">
-    <div class="divider divider-end before:h-px py-2 before:bg-nc/30">
+    <div class="divider divider-start after:h-px  after:bg-nc/30">
       RECIPE
     </div>
     <div class="group flex items-center justify-center py-1 gap-4">

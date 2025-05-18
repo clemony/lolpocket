@@ -26,7 +26,7 @@ const activePocket = computed (() => pocket)
         v-for="champion in champions"
         :key="champion.id">
         <Champion
-          :class="{ 'inset-shadow-sm inset-shadow-black not-[.checkbox]:**:contrast-110 not-[.checkbox]:**:opacity-65 not-[.checkbox]:**:grayscale border scale-90 border-neutral/60 relative': pocket.champions.includes(champion.key) }"
+          :class="{ ' not-[.checkbox]:**:contrast-110 not-[.checkbox]:**:opacity-65 not-[.checkbox]:**:grayscale border scale-90 border-neutral/60 relative': pocket.champions.includes(champion.key) }"
           :url="champion.splash" :name="champion.key" class="hover-ring ">
           <slot />
 

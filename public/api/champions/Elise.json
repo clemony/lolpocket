@@ -347,11 +347,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Elise/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Elise summons a venom-gorged spider for 3 seconds, which is untargetable and crawls to the target location, navigating its path upon encountering terrain.</p></div>",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Elise summons an untargetable venom-gorged spider that lasts for 3 seconds. The spider searches for nearby targets and otherwise crawls to the target location before doing so, navigating its path upon encountering terrain.</p></div>",
             "leveling": []
           },
           {
-            "description": "The spider explodes upon contact with an enemy or at the end of its lifespan, dealing magic damage to nearby enemies.",
+            "description": "The spider gains bonus movement speed based on its proximity to the detected target. When the spider comes into contact with an enemy, or upon expiring otherwise, it instantly explodes to deal magic damage to nearby enemies.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -381,7 +381,7 @@
             ]
           },
           {
-            "description": "If the spider does not hit an enemy before reaching the target location, it chases down a nearby enemy, prioritizing champions and gaining bonus movement speed based on its proximity to the target.",
+            "description": "The spider prioritizes the nearest enemy if it detects one before reaching the target location, and champions always if it detects one after doing so.",
             "leveling": []
           }
         ],
@@ -422,7 +422,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "If Volatile Spiderling dashes to a target due to  Venomous Bite, it will not expire before finishing its jump.\nIt can still collide with enemies while dashing, but since this proximity check is repeated only every so often, it might phase through an enemy on its way without detecting the collision if dashing quickly enough.\nThe spiderling checks for nearby targets every 0.264 seconds, both for potential enemies to chase down and to explode 'on-contact'. Because of this, it may walk closer to an enemy than its \"collision radius\" before exploding.",
-        "blurb": "Active:  Elise sends a Volatile Spiderling to the target location that explodes when it hits an enemy or times out.",
+        "blurb": "Active:  Elise sends a Volatile Spiderling to the target location that chases down nearby enemies and explodes upon coming into contact with one or when it expires.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": "150",

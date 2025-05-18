@@ -24,7 +24,7 @@
     },
     "armor": {
       "flat": 26,
-      "perLevel": 4.9
+      "perLevel": 4.6
     },
     "magicResistance": {
       "flat": 30,
@@ -663,8 +663,8 @@
           "modifiers": [
             {
               "values": [
+                120,
                 100,
-                90,
                 80
               ],
               "units": [

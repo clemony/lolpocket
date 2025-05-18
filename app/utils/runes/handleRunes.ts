@@ -9,22 +9,21 @@ import { hexoid } from 'hexoid'
 8. getRunePathName
 */
 
-export function resetRunes(pocket, set) {
-  const i = pocket.runes.findIndex(s => s == set)
-  if (i) {
-    pocket.runes[i] = []
-  }
+export function resetRunes(set) {
+  set.keystone = null
+  set[0].runes = { 1: null, 2: null, 3: null }
+  set[1].runes = { 1: null, 2: null, 3: null }
 }
 
 export function deleteRuneSet(pocket, set) {
-  const a = pocket.runes.sets.findIndex(s => s.key == set.key)
+  console.log('💠 - deleteRuneSet - pocket:', pocket)
+  console.log('💠 - deleteRuneSet - set:', set)
+  const a = pocket.runes.findIndex(s => s == set)
+  console.log('💠 - deleteRuneSet - a:', a)
   if (a != -1) {
-    pocket.runes.sets.splice(a, 1)
+    pocket.runes.splice(a, 1)
   }
 }
-
-
-
 
 export function getRunePathName(runeId: number, runePaths: any[]): string | null {
   for (const path of runePaths) {

@@ -791,6 +791,10 @@
                 ]
               }
             ]
+          },
+          {
+            "description": "Gwen can move during Needlework's cast times.",
+            "leveling": []
           }
         ],
         "cost": [
@@ -827,7 +831,7 @@
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Gwen can still move during Needlework's cast times.\nDying during the cast time will prevent the remaining needles of the cast from being launched.\nThe first cast's cast time is 0.25 seconds, and the second and third's cast times are each 0.5 seconds. Gwen launches the needles during the cast times.\nFor the second cast, the first needle launches 0.264 seconds after the start of the cast, the second needle launches after 0.132 seconds, and the third needle launches 0.231 seconds after the first.\nFor the third cast, the first needle launches 0.264 seconds after the start of the cast. Each additional needle launches 0.066 seconds seconds after the previous one.\nThe needles of each cast will fire based on Gwen's location at 0.264 seconds into each cast time (in case of the first cast, this is at the end of the cast time).\nThe needles fire from 100 units behind the cast location.\nThe width of all needle missiles decreases with their distance travelled, forming an approximately triangular missile hitbox.\nNeedles of the same cast all travel the same line at a slight delay after one another. The visual origins are offset (by 70 and 110 units to either side from the center missile spawn location), but the actual hitting missiles all follow the central line.\n Spell shield blocks only one needle.",
+        "notes": "Dying during the cast time will prevent the remaining needles of the cast from being launched.\nThe first cast's cast time is 0.25 seconds, and the second and third's cast times are each 0.5 seconds. Gwen launches the needles during the cast times.\nFor the second cast, the first needle launches 0.264 seconds after the start of the cast, the second needle launches after 0.132 seconds, and the third needle launches 0.231 seconds after the first.\nFor the third cast, the first needle launches 0.264 seconds after the start of the cast. Each additional needle launches 0.066 seconds seconds after the previous one.\nThe needles of each cast will fire based on Gwen's location at 0.264 seconds into each cast time (in case of the first cast, this is at the end of the cast time).\nThe needles fire from 100 units behind the cast location.\nThe width of all needle missiles decreases with their distance travelled, forming an approximately triangular missile hitbox.\nNeedles of the same cast all travel the same line at a slight delay after one another. The visual origins are offset (by 70 and 110 units to either side from the center missile spawn location), but the actual hitting missiles all follow the central line.\n Spell shield blocks only one needle.",
         "blurb": "First Cast:  Gwen launches a needle in the target direction that deals magic damage and  slows enemies hit. Needlework can be recast up to two more times.",
         "missileSpeed": null,
         "rechargeRate": null,

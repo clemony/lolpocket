@@ -55,8 +55,9 @@ watch(items, (newItemSets) => {
           'fallbackTolerance': 0,
           'fallbackOnBody': true,
           'prevent-on-filter': true,
-          'ghostClass': 'set-ghost',
-          'dragClass': 'set-drag',
+          'ghostClass': 'item-set-ghost',
+          'chosenClass': 'item-set-chosen',
+          'dragClass': 'item-set-drag',
           'handle': '.handle',
         },
       ]"

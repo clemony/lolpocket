@@ -400,7 +400,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Azir grants himself a shield for 1.5 seconds and dashes to the target Sand Soldier, dealing magic damage to enemies within his path.</p></div>",
+            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Azir grants himself a shield for 1.5 seconds and dashes to the Sand Soldier closest to the cursor, dealing magic damage to enemies within his path.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",

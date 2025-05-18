@@ -124,7 +124,7 @@
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Applies  basic damage for the second shot and  proc damage for the bonus damage.\nThe second shot:\nIs treated as a basic attack.\nCritically strikes independently from the first shot.\nCan be cancelled by inputting a different command right after using the first shot.\nCounts as a separate hit for effects such as  Electrocute,  Muramana's Shock, and  Eclipse's Ever Rising Moon.\nStarts the attack windup's cooldown after it is used, rather than when the first shot is.\nThe attack speed scaling on the movement speed buff includes the bonus attack speed gained from Akshan's innate attack speed growth.\nAt level 18, at minimum it grants 126 decaying movement speed.\nChanging targets for the second shot will also acquire the new target.\nThe second shot, if the first shot's target was killed, will prioritize  visible enemy champions, then  minions on  low health.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.",
+        "notes": "Applies  basic damage for the second shot and  proc damage for the bonus damage.\nThe second shot:\nIs treated as a basic attack.\nCritically strikes independently from the first shot.\nCan be cancelled by inputting a different command right after using the first shot.\nCounts as a separate hit for effects such as  Electrocute,  Muramana's Shock, and  Eclipse's Ever Rising Moon.\nStarts the attack windup's cooldown after it is used, rather than when the first shot is.\nThe attack speed scaling on the movement speed buff includes the bonus attack speed gained from Akshan's innate attack speed growth.\nAt level 18, at minimum it grants 126 decaying movement speed.\nChanging targets for the second shot will also acquire the new target.\nThe second shot, if the first shot's target was killed, will prioritize  visible enemy champions, then  minions on  low health.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.\nIf the first shot's target is killed, issuing an attack order to a different target can extend the second shot's range to  650.(bug)",
         "blurb": "Innate:  Akshan's basic attack causes him to fire a second attack that deals reduced physical damage. If Akshan cancels the second attack, he gains a brief burst of  move speed.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -328,7 +328,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Akshan ends Going Rogue.</p></div>",
+            "description": "Akshan can move during Going Rogue's cast time.",
             "leveling": []
           }
         ],
@@ -372,7 +372,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Akshan can move during Going Rogue's cast time.\nThe mark displays the duration and slay count.\nEnemy champions that kill Akshan will not be marked as Scoundrels nor increase their slay count.\n Clones do not count for triggering Going Rogue's passive.\nGoing Rogue's buff refreshes to last indefinitely upon moving near terrain or into brush, and will refresh to 2 seconds after leaving near terrain or brush.\nAllied champions within a  zombie state are resurrected only after the state ends.\nAkshan can still trigger Going Rogue's passive while he is within a  zombie state.\nUsing a basic attack breaks the stealth at the start of the attack windup.",
+        "notes": "The mark displays the duration and slay count.\nEnemy champions that kill Akshan will not be marked as Scoundrels nor increase their slay count.\n Clones do not count for triggering Going Rogue's passive.\nGoing Rogue's buff refreshes to last indefinitely upon moving near terrain or into brush, and will refresh to 2 seconds after leaving near terrain or brush.\nAllied champions within a  zombie state are resurrected only after the state ends.\nAkshan can still trigger Going Rogue's passive while he is within a  zombie state.\nUsing a basic attack breaks the stealth at the start of the attack windup.",
         "blurb": "Passive: Enemy  champions that kill allied champions are marked as a Scoundrel for a long time. When  Akshan scores a  takedown on a Scoundrel, he gains  bonus gold, all allies killed by the Scoundrel are resurrected, and Scoundrel status is removed from all other enemies.",
         "missileSpeed": null,
         "rechargeRate": null,
