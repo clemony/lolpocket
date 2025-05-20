@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Miss Fortune's basic attacks are empowered to apply a mark that expires upon attacking a new enemy. If the enemy was unmarked, this also deals 50% - 100% (based on level) AD bonus physical damage, halved to 25% - 50% (based on level) AD against minions.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Miss Fortune's basic attacks are empowered to apply a mark that expires upon attacking a new enemy. If the enemy was unmarked, this also deals 50% - 100% (based on level) AD bonus physical damage, halved to 25% - 50% (based on level) AD against minions.</p></div>",
             "leveling": []
           }
         ],
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Miss Fortune fires a shot at the target enemy that deals physical damage, triggers on-attack effects, and bounces to hit another enemy behind them, applying on-hit effects to both enemies hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Miss Fortune fires a shot at the target enemy that deals physical damage, triggers on-attack effects, and bounces to hit another enemy behind them, applying on-hit effects to both enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -243,7 +243,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Miss Fortune gains bonus movement speed after 4 seconds without taking non- persistent damage. This bonus is increased after another 3 seconds, and is granted instantly whenever Strut is cast or upon respawning.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Miss Fortune gains bonus movement speed after 4 seconds without taking non- persistent damage. This bonus is increased after another 3 seconds, and is granted instantly whenever Strut is cast or upon respawning.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -282,7 +282,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Miss Fortune gains bonus attack speed for 4 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Miss Fortune gains bonus attack speed for 4 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -362,7 +362,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Miss Fortune casts a storm of bullets at the target location for 2 seconds, granting sight of the area, dealing magic damage every 0.25 seconds to enemies within, and slowing them by 40% (+ 6% per 100 AP).</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Miss Fortune casts a storm of bullets at the target location for 2 seconds, granting sight of the area, dealing magic damage every 0.25 seconds to enemies within, and slowing them by 40% (+ 6% per 100 AP).</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",
@@ -479,7 +479,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Miss Fortune channels for up to 3 seconds, firing a number of waves of bullets in the target direction. Each wave is in a spread of 6 projectiles that deals 75% AD (+ 25% AP) physical damage to enemies hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Miss Fortune channels for up to 3 seconds, firing a number of waves of bullets in the target direction. Each wave is in a spread of 6 projectiles that deals 75% AD (+ 25% AP) physical damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Waves",

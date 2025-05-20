@@ -95,7 +95,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Whenever Jinx scores a takedown against an enemy champion, epic monster, turret, or inhibitor within 3 seconds of damaging them, she gains 175% bonus movement speed decaying over 6 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Whenever Jinx scores a takedown against an enemy champion, epic monster, turret, or inhibitor within 3 seconds of damaging them, she gains 175% bonus movement speed decaying over 6 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -103,7 +103,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Get Excited!:</p><p> For each stack, Jinx gains 25% total attack speed, up to a maximum of 125%.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Get Excited!:</p><p> For each stack, Jinx gains 25% total attack speed, up to a maximum of 125%.</p></div>",
             "leveling": []
           }
         ],
@@ -143,11 +143,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Toggle:</p><p> Jinx switches between Pow-Pow, her minigun, and Fishbones, her rocket launcher.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Toggle:</p><p> Jinx switches between Pow-Pow, her minigun, and Fishbones, her rocket launcher.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Pow-Pow:</p><p> Basic attacks with Pow-Pow generate a stack of Rev'd up for 2.5 seconds, refreshing on subsequent attacks with Pow-Pow and stacking up to 3 times. Each stack of Rev'd up grants bonus attack speed, with all stacks beyond the first one being 50% effective. Stacks expire by one when the duration ends.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Pow-Pow:</p><p> Basic attacks with Pow-Pow generate a stack of Rev'd up for 2.5 seconds, refreshing on subsequent attacks with Pow-Pow and stacking up to 3 times. Each stack of Rev'd up grants bonus attack speed, with all stacks beyond the first one being 50% effective. Stacks expire by one when the duration ends.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -203,7 +203,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Fishbones:</p><p> Basic attacks with Fishbones cost mana on-attack to deal 110% AD modified physical damage to the target and nearby enemies. The damage is affected by critical strike modifiers. While Fishbones is equipped, Jinx gains bonus range but loses 10% of her bonus attack speed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Fishbones:</p><p> Basic attacks with Fishbones cost mana on-attack to deal 110% AD modified physical damage to the target and nearby enemies. The damage is affected by critical strike modifiers. While Fishbones is equipped, Jinx gains bonus range but loses 10% of her bonus attack speed.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Range",
@@ -283,7 +283,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jinx fires a shock blast in the target direction that deals physical damage to the first enemy it hits and reveals and slows them for 2 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jinx fires a shock blast in the target direction that deals physical damage to the first enemy it hits and reveals and slows them for 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -392,7 +392,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jinx tosses out 3 Chompers centered at the target location, landing after 0.4 seconds, arming after 0.75 seconds, and exploding after 5 seconds to deal magic damage to nearby enemies.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jinx tosses out 3 Chompers centered at the target location, landing after 0.4 seconds, arming after 0.75 seconds, and exploding after 5 seconds to deal magic damage to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -488,7 +488,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jinx fires a massive rocket in the target direction, briefly granting sight of its surroundings and exploding upon colliding with an enemy champion. The explosion deals physical damage to nearby enemies and grants sight of the area for 2 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jinx fires a massive rocket in the target direction, briefly granting sight of its surroundings and exploding upon colliding with an enemy champion. The explosion deals physical damage to nearby enemies and grants sight of the area for 2 seconds.</p></div>",
             "leveling": []
           },
           {

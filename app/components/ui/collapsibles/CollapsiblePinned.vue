@@ -9,7 +9,7 @@ const pinned = computed (() => {
 <template>
   <Collapsible :disabled="!pinned || pinned.length == null || pinned.length == 0" class="group/pin">
     <SidebarCollapsibleTrigger as-child>
-      <SidebarIcon name="pin" class="size-5 -mt-px -left-0.25 group-not-disabled/pin:text-bc group-disabled/pin:text-bc/35" />
+      <IconWrapper name="pin" class="size-5 -mt-px -left-0.25 group-not-disabled/pin:text-bc group-disabled/pin:text-bc/35" />
 
       
         Pinned

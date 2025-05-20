@@ -90,19 +90,19 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zac/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - The Secret Weapon:</p><p> Zac gains increased percentage size equal to 1.5% of his bonus health, capped at 35% increased size at 2333.33 bonus health. Zac's size also reduces based on his missing health, down to 70% total size while at 0% health.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate - The Secret Weapon:</p><p> Zac gains increased percentage size equal to 1.5% of his bonus health, capped at 35% increased size at 2333.33 bonus health. Zac's size also reduces based on his missing health, down to 70% total size while at 0% health.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Goo:</p><p> Whenever Zac damages at least one enemy with an ability, he sheds a number of chunks of himself to a nearby location, landing towards nearby visible enemy champions and lasting for 6 seconds.</p></div>\n\n\n<div><p class=\"font-semibold  tracking-tight text-4\"> Stretching Strikes:</p><p> 1 chunk for each strike hit (excluding the collision) on different targets, up to 2</p></div>\n\n\n<div><p class=\"font-semibold  tracking-tight text-4\"> Unstable Matter:</p><p> 1 chunk if it hits at least one target</p></div>\n\n\n<div><p class=\"font-semibold  tracking-tight text-4\"> Elastic Slingshot:</p><p> 1 chunk for each enemy champion hit</p></div>\n\n\n<div><p class=\"font-semibold  tracking-tight text-4\"> Let's Bounce!:</p><p> 1 chunk for each bounce that hits an enemy champion, up to 4</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate - Goo:</p><p> Whenever Zac damages at least one enemy with an ability, he sheds a number of chunks of himself to a nearby location, landing towards nearby visible enemy champions and lasting for 6 seconds.</p></div>\n\n\n<div><p class=\"ability-header\"> Stretching Strikes:</p><p> 1 chunk for each strike hit (excluding the collision) on different targets, up to 2</p></div>\n\n\n<div><p class=\"ability-header\"> Unstable Matter:</p><p> 1 chunk if it hits at least one target</p></div>\n\n\n<div><p class=\"ability-header\"> Elastic Slingshot:</p><p> 1 chunk for each enemy champion hit</p></div>\n\n\n<div><p class=\"ability-header\"> Let's Bounce!:</p><p> 1 chunk for each bounce that hits an enemy champion, up to 4</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Both Zac and enemy champions can interact with a chunk by being within 50 units of it:</p><p> an enemy will destroy it, while Zac will consume it to heal for 4% - 8% (based on level) of his maximum health.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Both Zac and enemy champions can interact with a chunk by being within 50 units of it:</p><p> an enemy will destroy it, while Zac will consume it to heal for 4% - 8% (based on level) of his maximum health.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Cell Division:</p><p> Periodically, upon taking fatal damage, Zac enters resurrection for 8 / 7 / 6 / 5 / 4 (based on level) seconds, instantly restoring 50% of his maximum health and becoming untargetable and unable to act for the duration. Zac then splits into four uncontrollable bloblets away from his location, though stopping at terrain. After 1.5 seconds of the bloblets being untargetable, they start moving toward Zac's location over the remaining duration. Any damage the bloblets receive, excluding damage dealt in excess of each bloblet's total maximum health, is also redirected to Zac as true damage. While in resurrection, Zac cannot take damage from sources other than the redirected damage from his bloblets.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate - Cell Division:</p><p> Periodically, upon taking fatal damage, Zac enters resurrection for 8 / 7 / 6 / 5 / 4 (based on level) seconds, instantly restoring 50% of his maximum health and becoming untargetable and unable to act for the duration. Zac then splits into four uncontrollable bloblets away from his location, though stopping at terrain. After 1.5 seconds of the bloblets being untargetable, they start moving toward Zac's location over the remaining duration. Any damage the bloblets receive, excluding damage dealt in excess of each bloblet's total maximum health, is also redirected to Zac as true damage. While in resurrection, Zac cannot take damage from sources other than the redirected damage from his bloblets.</p></div>",
             "leveling": []
           },
           {
@@ -155,7 +155,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zac/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zac stretches his left arm in the target direction that catches the first enemy hit, dealing magic damage, slowing them by 40% for 0.5 seconds, and forming a tether between Zac and the target for 2 seconds, during which they are revealed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zac stretches his left arm in the target direction that catches the first enemy hit, dealing magic damage, slowing them by 40% for 0.5 seconds, and forming a tether between Zac and the target for 2 seconds, during which they are revealed.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -300,7 +300,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zac/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zac explodes to deal magic damage to nearby enemies, capped against minions and monsters.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zac explodes to deal magic damage to nearby enemies, capped against minions and monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -413,7 +413,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zac/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zac charges for up to 4.5 seconds to increase Elastic Slingshot's range over a cone in the target direction.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zac charges for up to 4.5 seconds to increase Elastic Slingshot's range over a cone in the target direction.</p></div>",
             "leveling": [
               {
                 "attribute": "Maximum Range Channel Duration",
@@ -439,7 +439,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Zac leaps to the target location. Upon landing, he deals magic damage to nearby enemies and knocks them up and stuns them for 0.5 seconds, increased to 1 second if Elastic Slingshot was charged for more than 1 second.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Zac leaps to the target location. Upon landing, he deals magic damage to nearby enemies and knocks them up and stuns them for 0.5 seconds, increased to 1 second if Elastic Slingshot was charged for more than 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -531,7 +531,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zac/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zac bounces after the cast time, then bounces 3 additional times each second over 3 seconds, during which he also gains 20% - 50% (based on duration) bonus movement speed but becomes unable to declare basic attacks and cast Stretching Strikes and Elastic Slingshot.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zac bounces after the cast time, then bounces 3 additional times each second over 3 seconds, during which he also gains 20% - 50% (based on duration) bonus movement speed but becomes unable to declare basic attacks and cast Stretching Strikes and Elastic Slingshot.</p></div>",
             "leveling": []
           },
           {

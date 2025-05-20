@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-const { summoner, class: className } = defineProps<{
-  summoner: Summoner
+const {  class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 const as = useAccountStore()
-const { forceReload, loading } = useSummoner(as.userAccount.puuid)
+const { forceReload, loading } = useSummoner(as.userAccount.riot.puuid)
 
 const keys = useMagicKeys()
 
@@ -31,12 +30,12 @@ whenever(keys.shift_a, () => {
         <ClearMatchesButton />
         <LogMatchesButton />
 
-        <NavBtn
+        <Btn
           class="" @click="forceReload()">
           <icon
             name="refresh" />
           Force Reload User Summoner
-        </NavBtn>
+        </Btn>
       </div>
     </LazyNestedSheetContent>
   </Sheet>

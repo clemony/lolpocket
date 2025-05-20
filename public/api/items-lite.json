@@ -641,7 +641,7 @@
     "id": 1500,
     "name": "Ohmwrecker (Turret Item)",
     "rank": [
-      "Turret"
+      "Special"
     ],
     "stats": {
       "armorPenetration": 30
@@ -661,7 +661,7 @@
     "id": 1501,
     "name": "Lane Swap Detector",
     "rank": [
-      "Turret"
+      "Special"
     ],
     "stats": {},
     "purchasable": false,
@@ -679,7 +679,7 @@
     "id": 1502,
     "name": "Reinforced Armor (Turret Item)",
     "rank": [
-      "Turret"
+      "Special"
     ],
     "stats": {},
     "purchasable": false,
@@ -697,7 +697,7 @@
     "id": 1503,
     "name": "Warden's Eye",
     "rank": [
-      "Turret"
+      "Special"
     ],
     "stats": {},
     "purchasable": false,
@@ -715,7 +715,7 @@
     "id": 1506,
     "name": "Base Turret Reinforced Armor (Turret Item)",
     "rank": [
-      "Turret"
+      "Special"
     ],
     "stats": {},
     "purchasable": false,
@@ -733,7 +733,7 @@
     "id": 1507,
     "name": "Overcharged",
     "rank": [
-      "Turret"
+      "Special"
     ],
     "stats": {},
     "purchasable": false,
@@ -751,7 +751,7 @@
     "id": 1508,
     "name": "Anti-Tower Socks",
     "rank": [
-      "Minion"
+      "Special"
     ],
     "stats": {},
     "purchasable": false,
@@ -769,7 +769,7 @@
     "id": 1509,
     "name": "Gusto",
     "rank": [
-      "Minion"
+      "Special"
     ],
     "stats": {},
     "purchasable": false,
@@ -787,7 +787,7 @@
     "id": 1510,
     "name": "Phreakish Gusto",
     "rank": [
-      "Minion"
+      "Special"
     ],
     "stats": {},
     "purchasable": false,
@@ -805,7 +805,7 @@
     "id": 1511,
     "name": "Super Mech Armor",
     "rank": [
-      "Minion"
+      "Special"
     ],
     "stats": {},
     "purchasable": false,
@@ -823,7 +823,7 @@
     "id": 1512,
     "name": "Super Mech Power Field",
     "rank": [
-      "Minion"
+      "Special"
     ],
     "stats": {},
     "purchasable": false,
@@ -841,7 +841,7 @@
     "id": 1515,
     "name": "Turret Plating",
     "rank": [
-      "Turret"
+      "Special"
     ],
     "stats": {},
     "purchasable": false,
@@ -859,7 +859,7 @@
     "id": 2003,
     "name": "Health Potion",
     "rank": [
-      "Potion"
+      "Consumable"
     ],
     "stats": {},
     "purchasable": true,
@@ -877,7 +877,7 @@
     "id": 2010,
     "name": "Total Biscuit of Everlasting Will",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {},
     "purchasable": false,
@@ -988,7 +988,7 @@
     "id": 2031,
     "name": "Refillable Potion",
     "rank": [
-      "Potion"
+      "Consumable"
     ],
     "stats": {},
     "purchasable": true,
@@ -1069,7 +1069,7 @@
     "id": 2052,
     "name": "Poro-Snax",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {},
     "purchasable": false,
@@ -1187,7 +1187,7 @@
       "Consumable"
     ],
     "stats": {},
-    "purchasable": true,
+    "purchasable": false,
     "cost": 300,
     "tags": [],
     "maps": [
@@ -1247,7 +1247,7 @@
     "id": 2145,
     "name": "Lucky Dice",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {},
     "purchasable": false,
@@ -1354,7 +1354,7 @@
     "id": 2422,
     "name": "Slightly Magical Boots",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "flatMovespeed": 25
@@ -3731,7 +3731,7 @@
     "id": 3330,
     "name": "Scarecrow Effigy",
     "rank": [
-      "Trinket"
+      "Consumable"
     ],
     "stats": {},
     "purchasable": true,
@@ -3749,7 +3749,7 @@
     "id": 3340,
     "name": "Stealth Ward",
     "rank": [
-      "Trinket"
+      "Consumable"
     ],
     "stats": {},
     "purchasable": true,
@@ -3764,7 +3764,7 @@
     "id": 3348,
     "name": "Arcane Sweeper (Trinket)",
     "rank": [
-      "Trinket"
+      "Consumable"
     ],
     "stats": {},
     "purchasable": false,
@@ -3778,7 +3778,7 @@
     "id": 3363,
     "name": "Farsight Alteration",
     "rank": [
-      "Trinket"
+      "Consumable"
     ],
     "stats": {},
     "purchasable": true,
@@ -3794,7 +3794,7 @@
     "id": 3364,
     "name": "Oracle Lens",
     "rank": [
-      "Trinket"
+      "Consumable"
     ],
     "stats": {},
     "purchasable": true,
@@ -3809,7 +3809,7 @@
     "id": 3400,
     "name": "Your Cut",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {},
     "purchasable": false,
@@ -3897,7 +3897,7 @@
     "id": 3513,
     "name": "Eye of the Herald",
     "rank": [
-      "Trinket"
+      "Consumable"
     ],
     "stats": {},
     "purchasable": false,
@@ -5601,7 +5601,7 @@
     "id": 224403,
     "name": "The Golden Spatula",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "abilityPower": 125,
@@ -5629,7 +5629,7 @@
     "id": 226630,
     "name": "Goredrinker",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "attackDamage": 55,
@@ -5669,7 +5669,7 @@
     "id": 228002,
     "name": "Wooglet's Witchcap",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "abilityPower": 300,
@@ -5689,7 +5689,7 @@
     "id": 443054,
     "name": "Darksteel Talons",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "armor": 55,
@@ -5709,7 +5709,7 @@
     "id": 443055,
     "name": "Fulmination",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "attackDamage": 55,
@@ -5729,7 +5729,7 @@
     "id": 443056,
     "name": "Demon King's Crown",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {},
     "purchasable": true,
@@ -5743,7 +5743,7 @@
     "id": 443058,
     "name": "Shield of Molten Stone",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "armor": 100,
@@ -5762,7 +5762,7 @@
     "id": 443059,
     "name": "Cloak of Starry Night",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "health": 300,
@@ -5781,7 +5781,7 @@
     "id": 443060,
     "name": "Sword of the Divine",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "criticalStrikeChance": 50
@@ -5799,7 +5799,7 @@
     "id": 443061,
     "name": "Force of Entropy",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "criticalStrikeChance": 25,
@@ -5819,7 +5819,7 @@
     "id": 443062,
     "name": "Sanguine Gift",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "abilityPower": 80,
@@ -5839,7 +5839,7 @@
     "id": 443063,
     "name": "Eleisa's Miracle",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "armor": 50,
@@ -5859,7 +5859,7 @@
     "id": 443064,
     "name": "Talisman of Ascension",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {},
     "purchasable": true,
@@ -5873,7 +5873,7 @@
     "id": 443069,
     "name": "Hamstringer",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "attackDamage": 45,
@@ -5893,7 +5893,7 @@
     "id": 443079,
     "name": "Turbo Chemtank",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "health": 600
@@ -5911,7 +5911,7 @@
     "id": 443080,
     "name": "Twin Mask",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {},
     "purchasable": true,
@@ -5925,7 +5925,7 @@
     "id": 443081,
     "name": "Hexbolt Companion",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "attackSpeed": 75,
@@ -5944,7 +5944,7 @@
     "id": 443090,
     "name": "Reaper's Toll",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "attackSpeed": 50,
@@ -5963,7 +5963,7 @@
     "id": 443193,
     "name": "Gargoyle Stoneplate",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "armor": 65,
@@ -5984,7 +5984,7 @@
     "id": 444636,
     "name": "Night Harvester",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "abilityPower": 90,
@@ -6004,7 +6004,7 @@
     "id": 444637,
     "name": "Demonic Embrace",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "abilityPower": 80,
@@ -6023,7 +6023,7 @@
     "id": 444644,
     "name": "Crown of the Shattered Queen",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "abilityPower": 85,
@@ -6044,7 +6044,7 @@
     "id": 446632,
     "name": "Divine Sunderer",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "attackDamage": 55,
@@ -6064,7 +6064,7 @@
     "id": 446656,
     "name": "Everfrost",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "abilityPower": 100,
@@ -6085,7 +6085,7 @@
     "id": 446667,
     "name": "Radiant Virtue",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "armor": 35,
@@ -6106,7 +6106,7 @@
     "id": 446671,
     "name": "Galeforce",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "attackDamage": 65,
@@ -6127,7 +6127,7 @@
     "id": 446691,
     "name": "Duskblade of Draktharr",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "attackDamage": 50,
@@ -6147,7 +6147,7 @@
     "id": 446693,
     "name": "Prowler's Claw",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "attackDamage": 55,
@@ -6165,7 +6165,7 @@
     "id": 447100,
     "name": "Mirage Blade",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "attackSpeed": 60,
@@ -6182,7 +6182,7 @@
     "id": 447101,
     "name": "Gambler's Blade",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "attackSpeed": 70,
@@ -6200,7 +6200,7 @@
     "id": 447102,
     "name": "Reality Fracture",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "abilityPower": 80,
@@ -6220,7 +6220,7 @@
     "id": 447103,
     "name": "Hemomancer's Helm",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "attackDamage": 60,
@@ -6240,7 +6240,7 @@
     "id": 447104,
     "name": "Innervating Locket",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "abilityPower": 70,
@@ -6260,7 +6260,7 @@
     "id": 447105,
     "name": "Empyrean Promise",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "abilityPower": 70,
@@ -6281,7 +6281,7 @@
     "id": 447106,
     "name": "Dragonheart",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {},
     "purchasable": true,
@@ -6295,7 +6295,7 @@
     "id": 447107,
     "name": "Decapitator",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "attackSpeed": 50,
@@ -6312,7 +6312,7 @@
     "id": 447108,
     "name": "Runecarver",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "abilityPower": 80,
@@ -6332,7 +6332,7 @@
     "id": 447109,
     "name": "Cruelty",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "abilityPower": 80,
@@ -6352,7 +6352,7 @@
     "id": 447110,
     "name": "Moonflair Spellblade",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "abilityPower": 85,
@@ -6372,7 +6372,7 @@
     "id": 447112,
     "name": "Flesheater",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "health": 500
@@ -6388,7 +6388,7 @@
     "id": 447113,
     "name": "Detonation Orb",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "abilityPower": 90,
@@ -6409,7 +6409,7 @@
     "id": 447114,
     "name": "Reverberation",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "armor": 35,
@@ -6429,7 +6429,7 @@
     "id": 447115,
     "name": "Regicide",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "attackDamage": 60,
@@ -6449,7 +6449,7 @@
     "id": 447116,
     "name": "Kinkou Jitte",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "health": 400,
@@ -6470,7 +6470,7 @@
     "id": 447118,
     "name": "Pyromancer's Cloak",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "health": 400,
@@ -6491,7 +6491,7 @@
     "id": 447119,
     "name": "Lightning Rod",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "armor": 30,
@@ -6513,7 +6513,7 @@
     "id": 447120,
     "name": "Diamond-Tipped Spear",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "attackSpeed": 30
@@ -6532,7 +6532,7 @@
     "id": 447121,
     "name": "Twilight's Edge",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "abilityPower": 100,
@@ -6552,7 +6552,7 @@
     "id": 447122,
     "name": "Black Hole Gauntlet",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "health": 900,
@@ -6571,7 +6571,7 @@
     "id": 447123,
     "name": "Puppeteer",
     "rank": [
-      "Distributed"
+      "Special"
     ],
     "stats": {
       "attackSpeed": 30,

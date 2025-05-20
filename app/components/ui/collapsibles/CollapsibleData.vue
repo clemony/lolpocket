@@ -18,7 +18,7 @@ watchEffect(() => {
 <template>
   <Collapsible v-model:is-open="isOpen" :default-open="true">
     <SidebarCollapsibleTrigger class="select-none ">
-      <SidebarIcon name="book" class="size-4.5 dst  -top-px" />
+      <IconWrapper name="book" class="size-4.5 dst  -top-px" />
       Library
     </SidebarCollapsibleTrigger>
 
@@ -51,19 +51,19 @@ watchEffect(() => {
         </SidebarCollapsibleContent>
       </Collapsible>
 
-      <SidebarButton :class="{ 'btn-active': route.path == '/runes' }" @click="navigateTo('/runes')">
-        <SidebarIcon>
+      <Btn :class="{ 'btn-active': route.path == '/runes' }" @click="navigateTo('/runes')">
+        <IconWrapper>
           <i-ui-rune class="-ml-1 absolute size-5.5 pointer-events-none" />
-        </SidebarIcon>
+        </IconWrapper>
         Runes
-      </SidebarButton>
+      </Btn>
 
-      <SidebarButton :class="{ 'btn-active': route.path == '/spells' }" @click="navigateTo('/spells')">
-        <SidebarIcon>
+      <Btn :class="{ 'btn-active': route.path == '/spells' }" @click="navigateTo('/spells')">
+        <IconWrapper>
           <icon name="radix-icons:magic-wand" class="-ml-1 absolute  pointer-events-none" />
-        </SidebarIcon>
+        </IconWrapper>
         Spells
-      </SidebarButton>
+      </Btn>
     </SidebarCollapsibleContent>
   </Collapsible>
 </template>

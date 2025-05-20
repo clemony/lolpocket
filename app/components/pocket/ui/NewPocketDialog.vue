@@ -67,7 +67,7 @@ async function randomizeName(){
           <Popover>
             <PopoverTrigger class="justify-self-center group">
               <LazyPocketIcon
-                :image="selectedIcon"
+              :url="selectedIcon"
                 class="**:!rounded-xl size-4 tldr-20 group-data-[state=open]:ring-1 cursor-pointer !rounded-xl overflow-hidden inset-shadow-rounded ring-offset-3 ring-offset-b1 shadow-rounded size-28 inset-shadow-black shadow-black/30  hover:ring-1" />
             </PopoverTrigger>
             <IconPopover v-model:selected-icon="selectedIcon" side="right" :side-offset="70" align="start" :align-offset="-136" @update:selected-icon="(e) => selectedIcon = e" />

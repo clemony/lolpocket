@@ -1,30 +1,32 @@
 <script lang="ts" setup>
-const { summoner, class: className } = defineProps<{
-  summoner: Summoner
+const { account, class: className, url, summonerName } = defineProps<{
   account?: userAccount
+  summonerName?: string
+  url?: string
   class?: HTMLAttributes['class']
 }>()
 
 // wtf
-
-const icon = ref()
-const name = ref()
+const icon = computedAsync (() => account.riot.profileIcon)
+const name =  computedAsync (() => account.riot.name || summonerName)
 const loaded = ref(false)
 
-onMounted (async () => {
-  const si = computed (() => summoner.profileIcon)
-  const sn = computed (() => summoner.name)
-  await { si, sn }
-  icon.value = si.value
-  name.value = sn.value
-})
 </script>
 
 <template>
   <div :class="cn({ 'inset-shadow-sm inset-shadow-black/90 avatar': loaded }, className)">
     <NuxtImg
       v-if="name && icon"
-      :src="icon"
+      :src="`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/${icon}.jpg`"
+      :alt="`${name}'s icon`"
+      :class="{ 'inset-shadow-sm inset-shadow-black/90 avatar': loaded }"
+      class="size-full  rounded-full  "
+      @load="loaded = true" />
+
+
+    <NuxtImg
+      v-if="summonerName && url"
+      :src="url"
       :alt="`${name}'s icon`"
       :class="{ 'inset-shadow-sm inset-shadow-black/90 avatar': loaded }"
       class="size-full  rounded-full  "

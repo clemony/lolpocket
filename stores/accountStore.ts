@@ -16,30 +16,42 @@ export const useAccountStore = defineStore(
       role: null,
       id: null,
       session: null,
-      accessToken: '',
-      refreshToken: '',
-      puuid: '',
-      gameName: 'Summoner',
-      tagLine: 'Link Riot Account?',
-      profileIconId: 0,
-      summonerLevel: 0,
-      region: 'Runeterra',
+      accessToken:  null,
+      refreshToken:  null,
+      riot: {
+        name: 'Summoner',
+        tag:  null,
+        puuid: null,
+        profileIcon:  null,
+        level:  null,
+        region: 'Runeterra',
+      }
     })
 
-    const userSummoner = ref<UserSummoner>({
-      name: '',
-      tag: '',
-      puuid: '',
-      profileIcon: '',
-      level: 0,
-      region: '',
-    })
+    function resetUserAccount() {
+      userAccount.value = {
+        name: 'Summoner',
+        role: null,
+        id: null,
+        session: null,
+        accessToken:  null,
+        refreshToken:  null,
+        riot: {
+          name: 'Summoner',
+          tag:  null,
+          puuid: null,
+          profileIcon:  null,
+          level:  null,
+          region: 'Runeterra',
+        }
+    }
+  }
 
     return {
       // account
       userAccount,
-      userSummoner,
-userNoShowDeletePocketConfirm,
+      resetUserAccount,
+      userNoShowDeletePocketConfirm,
       userNotes,
 
       // settings

@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-const { summoner, account } = defineProps<{
-  summoner: Summoner
+const {  account } = defineProps<{
   account: userAccount
 }>()
 
@@ -10,31 +9,31 @@ const classObject = 'btn justify-start !font-medium tracking-tight !gap-5 btn-gh
 <template>
   <Field class="grid px-2 h-fit py-3 *:w-full w-full **:text-2 relative">
     <SheetClose :class="classObject" @click="navigateTo('/about')">
-      <SidebarIcon>
+      <IconWrapper>
         <icon name="solar:cat-outline" class="size-5.75 -left-0.5 top-0 absolute" />
-      </SidebarIcon>
+      </IconWrapper>
       About & Cats
     </SheetClose>
 
     <LazySettingsSheet>
       <SheetClose :class="classObject">
-        <SidebarIcon>
+        <IconWrapper>
           <icon name="gear-solid" class="size-4.75 opacity-60 dst" />
-        </SidebarIcon>
+        </IconWrapper>
         Settings
       </SheetClose>
     </LazySettingsSheet>
 
-    <SheetClose v-if="summoner" :class="classObject" @click="signOut()">
-      <SidebarIcon>
+    <SheetClose v-if="account.session" :class="classObject" @click="useSignOut()">
+      <IconWrapper>
         <icon name="mdi:sign-out" class="size-4.75 dst absolute left-0.25" />
-      </SidebarIcon>
+      </IconWrapper>
       Sign Out
     </SheetClose>
     <SheetClose as-child>
       <PatchNotesDaysAgoLink />
     </SheetClose>
 
-    <LazyAdminSheet v-if="account && account.role == 'admin'" :account="account" :summoner="summoner" class="absolute -right-46 bottom-4  pointer-events-none" />
+    <LazyAdminSheet v-if="account && account.role == 'admin'" :account="account" class="absolute -right-46 bottom-4  pointer-events-none" />
   </Field>
 </template>

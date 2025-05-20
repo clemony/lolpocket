@@ -6,7 +6,7 @@ const props = defineProps<{
 
 <template>
   <ShineButton class=" hover:border-neutral/40 border-neutral/15 inset-shadow-sm inset-shadow-black">
-    <PocketIcon v-tippy="'Edit Pocket'" :image="pocket.icon" class=" size-16 rounded-full" @click="editPocket(pocket)" />
+    <PocketIcon v-tippy="'Edit Pocket'"  :url="pocket.icon" class=" size-16 rounded-full" @click="editPocket(pocket)" />
   </ShineButton>
 </template>
 

@@ -2,22 +2,25 @@ declare global {
 
     type ChampionId = number
   type ChampionName = string
+type ChampionKey = string
 
-  interface ChampionIndex {
-    id: ChampionId
-    key: string
-    name: ChampionName
-  }
-
-  interface ChampionLite extends ChampionIndex {
-    resource: string
-    attackType: string
-    stats: Record<string, ChampionStat>
-    positions: string[]
-    roles: string[]
-    attributeRatings: Record<string, number>
-    splash?: string
-  }
+interface ChampionIndex {
+  id: string
+  key: string
+  name: string
+}
+interface ChampionLite {
+  id: ChampionId
+  key: ChampionKey
+  name: ChampionName
+  resource: string
+  attackType: string
+  stats: Record<string, ChampionStat>
+  positions: string[]
+  roles: string[]
+  attributeRatings: Record<string, number>
+  splash?: string
+}
 
   type ChampionRecord = Record<ChampionKey, ChampionLite>
   interface Champion extends ChampionLite {
@@ -46,7 +49,7 @@ declare global {
     splashPath: string
   }
 
-type  SkinEntry = {
+  interface SkinEntry {
     id: ChampionId
     name: ChampionName
     skins: Skin[]

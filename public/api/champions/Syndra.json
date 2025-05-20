@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Syndra/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Syndra collects Splinters of Wrath that enhance each of her abilities based on the number of them collected, stacking up to 120 times. She gains Splinters of Wrath from the following:</p></div>\nDealing two instances of ability damage to an enemy champion within 4 seconds grants 1 / 2 / 3 (based on level) Splinters. This cannot occur on the same target more than once every 8 seconds.\nRanking up an ability with any skill points beyond level 1 grants 5 Splinters, up to 85.\nKilling a large minion grants 1 Splinter.",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Syndra collects Splinters of Wrath that enhance each of her abilities based on the number of them collected, stacking up to 120 times. She gains Splinters of Wrath from the following:</p></div>\nDealing two instances of ability damage to an enemy champion within 4 seconds grants 1 / 2 / 3 (based on level) Splinters. This cannot occur on the same target more than once every 8 seconds.\nRanking up an ability with any skill points beyond level 1 grants 5 Splinters, up to 85.\nKilling a large minion grants 1 Splinter.",
             "leveling": []
           },
           {
@@ -150,7 +150,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Syndra/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Syndra conjures a Dark Sphere at the target location that appears after a 0.6-second delay, dealing magic damage to nearby enemies. The Dark Sphere then remains on the ground for 6 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Syndra conjures a Dark Sphere at the target location that appears after a 0.6-second delay, dealing magic damage to nearby enemies. The Dark Sphere then remains on the ground for 6 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -180,7 +180,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Transcendent Bonus:</p><p> Collecting 40 Splinters of Wrath causes Syndra to periodically stock a Dark Sphere charge, up to a maximum of 2.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Transcendent Bonus:</p><p> Collecting 40 Splinters of Wrath causes Syndra to periodically stock a Dark Sphere charge, up to a maximum of 2.</p></div>",
             "leveling": []
           },
           {
@@ -252,7 +252,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Syndra/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Syndra grabs the nearest Dark Sphere, enemy minion or non-epic monster within 500 units from the target location, and holds the target for 5 seconds. If a Dark Sphere is grabbed, its duration is refreshed; if a minion or monster is grabbed, it is put in stasis. She prioritizes grabbing the nearest unit, then Dark Spheres.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Syndra grabs the nearest Dark Sphere, enemy minion or non-epic monster within 500 units from the target location, and holds the target for 5 seconds. If a Dark Sphere is grabbed, its duration is refreshed; if a minion or monster is grabbed, it is put in stasis. She prioritizes grabbing the nearest unit, then Dark Spheres.</p></div>",
             "leveling": []
           },
           {
@@ -260,7 +260,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Syndra throws the grabbed target towards the target location, granting sight of their surroundings as they fall and dealing magic damage to them and nearby enemies. All targets hit are slowed by 25% for 1.5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Syndra throws the grabbed target towards the target location, granting sight of their surroundings as they fall and dealing magic damage to them and nearby enemies. All targets hit are slowed by 25% for 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -290,7 +290,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Transcendent Bonus:</p><p> Collecting 60 Splinters of Wrath enhances Force of Will to deal 12% (+ 2% per 100 AP) bonus true damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Transcendent Bonus:</p><p> Collecting 60 Splinters of Wrath enhances Force of Will to deal 12% (+ 2% per 100 AP) bonus true damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Damage",
@@ -415,7 +415,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Syndra/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Syndra propels a wave of force in a cone in the target direction that deals magic damage to enemies hit and knocks them back for 400 units and up to 800 units away from Syndra based on proximity, though not through terrain.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Syndra propels a wave of force in a cone in the target direction that deals magic damage to enemies hit and knocks them back for 400 units and up to 800 units away from Syndra based on proximity, though not through terrain.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -449,7 +449,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Transcendent Bonus:</p><p> Collecting 80 Splinters of Wrath enhances Scatter the Weak to have an increased scatter angle and slow enemies hit by 70% for 1.25 seconds starting after the knock back ends or if the target was hit by a pushed Dark Sphere, after the stun has ended.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Transcendent Bonus:</p><p> Collecting 80 Splinters of Wrath enhances Scatter the Weak to have an increased scatter angle and slow enemies hit by 70% for 1.25 seconds starting after the knock back ends or if the target was hit by a pushed Dark Sphere, after the stun has ended.</p></div>",
             "leveling": []
           }
         ],
@@ -507,7 +507,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Syndra/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Dark Sphere gains ability haste.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Dark Sphere gains ability haste.</p></div>",
             "leveling": [
               {
                 "attribute": "Ability Haste",
@@ -527,7 +527,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Syndra enters a 0.264 seconds cast time, creating 3 Dark Spheres and grabbing up to 4 nearby Dark Spheres that were last spawned. Afterwards, the collected Dark Spheres are barraged at the target enemy champion, each dealing magic damage upon hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Syndra enters a 0.264 seconds cast time, creating 3 Dark Spheres and grabbing up to 4 nearby Dark Spheres that were last spawned. Afterwards, the collected Dark Spheres are barraged at the target enemy champion, each dealing magic damage upon hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Sphere",
@@ -605,7 +605,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Transcendent Bonus:</p><p> Collecting 100 Splinters of Wrath enhances Unleashed Power to execute the target if it would damage them to below 15% of their maximum health.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Transcendent Bonus:</p><p> Collecting 100 Splinters of Wrath enhances Unleashed Power to execute the target if it would damage them to below 15% of their maximum health.</p></div>",
             "leveling": []
           }
         ],

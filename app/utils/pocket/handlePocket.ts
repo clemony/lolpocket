@@ -7,7 +7,6 @@ export async function addPocket(name: string, tags: string[], icon: string, key?
 
   const ps = usePocketStore()
 
-
   const itemSet = newItemSet()
   const runeSet = newRuneSet()
   const spellSet = newSpellSet()
@@ -17,9 +16,9 @@ export async function addPocket(name: string, tags: string[], icon: string, key?
     name: name || await generateShortString(),
     roles: ['all'],
     icon: icon || '/img/lp/192.webp',
-    champions:  [],
-    items:  [await itemSet as ItemSet],
-    runes:  [runeSet],
+    champions: [],
+    items: [await itemSet as ItemSet],
+    runes: [runeSet],
     spells: [spellSet],
     tags: tags?.length ? tags : [''],
     location: {
@@ -28,10 +27,10 @@ export async function addPocket(name: string, tags: string[], icon: string, key?
     },
     notes: [''],
     card: {
-      splash: '',
+      splash: null,
       align: '',
-      color: 'bg-[#FFFFFF]',
-      filter: true,
+      color: '#FFFFFF',
+      filter: 'grayscale',
       font: {
         0: 'var(--font-serif)',
         1: 'var(--font-sans)',

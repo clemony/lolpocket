@@ -7,32 +7,9 @@ export const usePocketStore = defineStore(
     const pockets = ref<Pocket[]>([])
     // In your usePocketStore
 
-    function updateRunes({
-      pocketKey,
-      runeSetIndex,
-      pathSetIndex, // 0 = primary, 1 = secondary
-      pathSet,
-    }: {
-      pocketKey: string
-      runeSetIndex: number
-      pathSetIndex: number
-      pathSet: PathSet
-    }) {
-      const pocket = pockets.value.find(p => p.key === pocketKey)
-      if (!pocket || !pocket.runes)
-        return
-
-      // Ensure the RuneSet exists at the index
-      const runeSet = pocket.runes[runeSetIndex]
-      if (!runeSet)
-        return
-
-      // Replace the specific PathSet (0 = primary, 1 = secondary)
-      runeSet[pathSetIndex] = JSON.parse(JSON.stringify(pathSet))
-
-      // Optional: Update timestamp
-      // pocket.dateUpdated = new Date()
-    }
+    const downloadCard = refAutoReset(false, 1000)
+    const pocketCardRef = ref<HTMLElement>(null)
+    console.log('💠 - pocketCardRef:', pocketCardRef)
 
     const trashFolder = ref<Pocket[]>([])
     const archiveFolder = ref<Pocket[]>([])
@@ -54,8 +31,9 @@ export const usePocketStore = defineStore(
 
     return {
       pockets,
+      downloadCard,
+      pocketCardRef,
 
-      updateRunes,
       archiveFolder,
       trashFolder,
       selectedRows,

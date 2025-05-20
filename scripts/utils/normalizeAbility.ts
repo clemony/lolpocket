@@ -34,7 +34,7 @@ function cleanAbilityEffects(effects: any[]): any[] {
           .replace(/(%) ?: ?(\d)/g, '$1 - $2')
           // fix sona
           .replace('ability she cast:', 'ability she cast.')
-          .replace(/(.*?:)(.*)/g, '\n\n<div><p class="font-semibold  tracking-tight text-4">$1</p><p>$2</p></div>') // Wrap headers
+          .replace(/(.*?:)(.*)/g, '\n\n<div><p class="ability-header">$1</p><p>$2</p></div>') // Wrap headers
       : effect.description,
     leveling: Array.isArray(effect.leveling)
       ? effect.leveling.map(level => ({

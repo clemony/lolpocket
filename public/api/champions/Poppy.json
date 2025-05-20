@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Poppy/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Periodically, Poppy's next basic attack is empowered to throw her buckler, gaining 350 bonus range and dealing 20 - 180 (based on level) bonus magic damage. After it hits, the buckler then falls to a location near the target over 1 second, landing and remaining there for up to 4 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, Poppy's next basic attack is empowered to throw her buckler, gaining 350 bonus range and dealing 20 - 180 (based on level) bonus magic damage. After it hits, the buckler then falls to a location near the target over 1 second, landing and remaining there for up to 4 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -152,7 +152,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Poppy/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Poppy smashes the area in the target direction, dealing physical damage to enemies hit. Against monsters, the damage based on their health ratio is capped.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Poppy smashes the area in the target direction, dealing physical damage to enemies hit. Against monsters, the damage based on their health ratio is capped.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -374,11 +374,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Poppy/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Poppy increases her total armor and total magic resistance by 12%, doubled to 24% while she is below 40% maximum health.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Poppy increases her total armor and total magic resistance by 12%, doubled to 24% while she is below 40% maximum health.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Poppy gains 40% bonus movement speed and creates an aura around herself for 2 seconds, causing all enemies who attempt to dash into or within it to be dealt magic damage and knocked up for 0.5 seconds. If a target was successfully interrupted, they become grounded and slowed by 25% for 2 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Poppy gains 40% bonus movement speed and creates an aura around herself for 2 seconds, causing all enemies who attempt to dash into or within it to be dealt magic damage and knocked up for 0.5 seconds. If a target was successfully interrupted, they become grounded and slowed by 25% for 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -470,7 +470,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Poppy/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Poppy dashes to the target enemy's location. If they are in range upon arrival, she deals physical damage and carries them along with her for up to 400 units.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Poppy dashes to the target enemy's location. If they are in range upon arrival, she deals physical damage and carries them along with her for up to 400 units.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -605,11 +605,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Poppy/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Poppy charges while being slowed by 15% for up to 4 seconds to increase Keeper's Verdict's range and knock back distance over 0.5 seconds after the first 0.5 seconds of the channel. Keeper's Verdict can be recast within the duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Poppy charges while being slowed by 15% for up to 4 seconds to increase Keeper's Verdict's range and knock back distance over 0.5 seconds after the first 0.5 seconds of the channel. Keeper's Verdict can be recast within the duration.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Poppy releases the charge to launch her hammer upwards, dealing physical damage to enemies nearby and in an area in front of her and knocking them up for 1 second.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Poppy releases the charge to launch her hammer upwards, dealing physical damage to enemies nearby and in an area in front of her and knocking them up for 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",

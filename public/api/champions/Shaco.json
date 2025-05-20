@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Shaco's basic attacks are empowered to deal 20 - 35 (based on level) (+ 30% bonus AD) bonus physical damage when hitting an enemy from behind. Backstab is affected by critical strike modifiers.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Shaco's basic attacks are empowered to deal 20 - 35 (based on level) (+ 30% bonus AD) bonus physical damage when hitting an enemy from behind. Backstab is affected by critical strike modifiers.</p></div>",
             "leveling": []
           },
           {
@@ -142,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Shaco becomes invisible for a duration, and after a 0.125-second delay, he blinks to the target location.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Shaco becomes invisible for a duration, and after a 0.125-second delay, he blinks to the target location.</p></div>",
             "leveling": [
               {
                 "attribute": "Invisibility Duration",
@@ -198,7 +198,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Backstab Bonus:</p><p> The attack will critically strike for (155% + 40%) damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Backstab Bonus:</p><p> The attack will critically strike for (155% + 40%) damage.</p></div>",
             "leveling": []
           },
           {
@@ -264,7 +264,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Shaco summons a box at the target location that becomes stealthed after arming over 2 seconds, lasting for up to 40 (+ 10% AP) seconds. The box is invulnerable and untargetable to enemies while stealthed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Shaco summons a box at the target location that becomes stealthed after arming over 2 seconds, lasting for up to 40 (+ 10% AP) seconds. The box is invulnerable and untargetable to enemies while stealthed.</p></div>",
             "leveling": []
           },
           {
@@ -508,7 +508,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Shaco's basic attacks slow enemies for 2 seconds while Two-Shiv Poison is not on cooldown.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Shaco's basic attacks slow enemies for 2 seconds while Two-Shiv Poison is not on cooldown.</p></div>",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -530,7 +530,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Shaco throws a dagger at the target enemy that deals magic damage, increased by 50% if they are below 30% of their maximum health, and slows them for 3 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Shaco throws a dagger at the target enemy that deals magic damage, increased by 50% if they are below 30% of their maximum health, and slows them for 3 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -618,7 +618,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Backstab Bonus:</p><p> The dagger deals an additional 15 - 50 (based on level) (+ 10% AP) bonus magic damage, increased to 22.5 - 75 (based on level) (+ 15% AP) if the target is below 30% of their maximum health.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Backstab Bonus:</p><p> The dagger deals an additional 15 - 50 (based on level) (+ 10% AP) bonus magic damage, increased to 22.5 - 75 (based on level) (+ 15% AP) if the target is below 30% of their maximum health.</p></div>",
             "leveling": []
           }
         ],
@@ -676,11 +676,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Shaco vanishes for 0.5 seconds and blinks in the target direction while creating a clone of himself that is summoned in the opposite direction, remaining within control range of him as a controllable clone for up to 18 seconds. Hallucinate can be recast at any time while the clone is alive, and can be used while affected by cast-inhibiting crowd control.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Shaco vanishes for 0.5 seconds and blinks in the target direction while creating a clone of himself that is summoned in the opposite direction, remaining within control range of him as a controllable clone for up to 18 seconds. Hallucinate can be recast at any time while the clone is alive, and can be used while affected by cast-inhibiting crowd control.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Shaco commands the clone to move to the target location.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Shaco commands the clone to move to the target location.</p></div>",
             "leveling": []
           },
           {

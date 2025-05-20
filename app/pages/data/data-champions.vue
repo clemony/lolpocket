@@ -6,16 +6,16 @@ console.log('💠 - matches:', matches)
 
 definePageMeta({
   name: 'champion-data',
-  title: 'Data Workshop',
+  title: 'Data',
   path: '/data/champions',
   section: 'data',
 })
 
-const { bayesianChampions } = useMatchChampions(matches)
+const { bayesianChampions } = await useMatchChampions(matches)
 </script>
 
 <template>
-  <div class="size-full pt-16 overflow-hidden">
+  <div class="size-full pt-16 ">
 
 
   <div class="grid grid-cols-[0.9fr_1fr]  gap-6 size-full justify-center ">
@@ -26,7 +26,7 @@ const { bayesianChampions } = useMatchChampions(matches)
 
 
     </div>
-    <div class="grid grow  ">
+    <div class="grid h-190  ">
     <ChampionDataGrid :champions="bayesianChampions"  />
     </div>
     </div>

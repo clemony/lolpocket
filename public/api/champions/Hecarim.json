@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hecarim/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Hecarim gains bonus attack damage equal to 12% - 24% (based on level) of his bonus movement speed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Hecarim gains bonus attack damage equal to 12% - 24% (based on level) of his bonus movement speed.</p></div>",
             "leveling": []
           }
         ],
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hecarim/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Hecarim cleaves his glaive around himself, dealing physical damage to nearby enemies, reduced to 60% against minions.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Hecarim cleaves his glaive around himself, dealing physical damage to nearby enemies, reduced to 60% against minions.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -256,7 +256,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hecarim/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Hecarim surrounds himself with the Spirit of Dread for 4 seconds, dealing magic damage every second to nearby enemies.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Hecarim surrounds himself with the Spirit of Dread for 4 seconds, dealing magic damage every second to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",
@@ -408,7 +408,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hecarim/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Hecarim becomes ghosted and gains 25% - 65% (based on time active) bonus total movement speed for 4 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Hecarim becomes ghosted and gains 25% - 65% (based on time active) bonus total movement speed for 4 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -533,7 +533,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hecarim/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Hecarim dashes with displacement immunity to the target location and summons 5 spectral riders in an arrow formation that charge alongside him in the target direction, dealing magic damage to all enemies in their path and revealing them for 2.5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Hecarim dashes with displacement immunity to the target location and summons 5 spectral riders in an arrow formation that charge alongside him in the target direction, dealing magic damage to all enemies in their path and revealing them for 2.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic damage",

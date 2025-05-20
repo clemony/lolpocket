@@ -19,10 +19,10 @@ watchEffect(() => {
       <LazyNuxtLink
         v-for="link in summonerLinks" :key="link.name"
         :to="link.link" class="group">
-        <SidebarButton class="capitalize">
-          <SidebarIcon :name="link.icon" class="size-4.5 dst shrink-0" :class="link.iconClass" />
+        <Btn class="capitalize">
+          <IconWrapper :name="link.icon" class="size-4.5 dst shrink-0" :class="link.iconClass" />
            {{ link.name }}
-        </SidebarButton>
+        </Btn>
       </LazyNuxtLink>
     </SidebarCollapsibleContent>
   </Collapsible>

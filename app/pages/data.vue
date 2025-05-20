@@ -16,7 +16,7 @@ console.log('💠 - summoner:', summoner)
 onMounted (async () => {
   const q = computedAsync (() => ms.analysisQueueSelect)
   const p = computedAsync (() => ms.analysisPatchSelect)
-  const s = computedAsync (() => ss.getSummoner(as.userSummoner.puuid))
+  const s = computedAsync (() => ss.getSummoner(as.userAccount.riot.puuid))
   await { q, p, s }
   summoner.value = s.value
 })

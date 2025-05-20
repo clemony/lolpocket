@@ -11,6 +11,6 @@ const summoner = computed(() => {
 
 
 <template>
-     <span :class="cn('', props.class)">{{ summoner.region ||  'Runeterra' || '' }}</span>
+     <span :class="cn('', props.class)">{{ summoner.riot.region ||  'Runeterra' || '' }}</span>
 </template>
 

@@ -96,7 +96,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ekko/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Resonance:</p><p> Ekko's basic attacks on-hit and damaging abilities apply a stack of Resonance to enemies hit for 4 seconds, refreshing on subsequent hits and stacking up to 3 times. The third stack consumes them all to deal 30 - 140 (based on level) (+ 90% AP) bonus magic damage. Z-Drive Resonance deals 300% damage against monsters.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate - Resonance:</p><p> Ekko's basic attacks on-hit and damaging abilities apply a stack of Resonance to enemies hit for 4 seconds, refreshing on subsequent hits and stacking up to 3 times. The third stack consumes them all to deal 30 - 140 (based on level) (+ 90% AP) bonus magic damage. Z-Drive Resonance deals 300% damage against monsters.</p></div>",
             "leveling": []
           },
           {
@@ -104,7 +104,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Stolen Time:</p><p> Triggering Resonance against a champion grants Ekko 50 / 60 / 70 / 80% (based on level) bonus movement speed for 2 / 2.5 / 3 (based on level) seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate - Stolen Time:</p><p> Triggering Resonance against a champion grants Ekko 50 / 60 / 70 / 80% (based on level) bonus movement speed for 2 / 2.5 / 3 (based on level) seconds.</p></div>",
             "leveling": []
           }
         ],
@@ -144,7 +144,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ekko/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ekko throws a temporal grenade in the target direction that deals magic damage to enemies hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ekko throws a temporal grenade in the target direction that deals magic damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -317,11 +317,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ekko/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Ekko's basic attacks deal bonus magic damage equal to 3% (+ 3% per 100 AP) of the target's missing health against enemies below 30% of their maximum health. The damage has a minimum threshold of 15 and is capped at 150 against minions and monsters.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Ekko's basic attacks deal bonus magic damage equal to 3% (+ 3% per 100 AP) of the target's missing health against enemies below 30% of their maximum health. The damage has a minimum threshold of 15 and is capped at 150 against minions and monsters.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ekko creates an afterimage of himself that, after 2 seconds, bats a device to the target location and grants sight of the area for 2.5 seconds. After travelling over 1.25 seconds, the device expands into a chronosphere that is visible for 1.5 seconds and which slows enemies within by 40%.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ekko creates an afterimage of himself that, after 2 seconds, bats a device to the target location and grants sight of the area for 2.5 seconds. After travelling over 1.25 seconds, the device expands into a chronosphere that is visible for 1.5 seconds and which slows enemies within by 40%.</p></div>",
             "leveling": []
           },
           {
@@ -421,7 +421,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ekko/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ekko dashes in the target direction, then empowers his next basic attack within 3 seconds to have a 0.25-second cast time, gain 300 bonus range, cause him to blink within 125 range of the target, and deal bonus magic damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ekko dashes in the target direction, then empowers his next basic attack within 3 seconds to have a 0.25-second cast time, gain 300 bonus range, cause him to blink within 125 range of the target, and deal bonus magic damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -517,11 +517,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ekko/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Upon learning Chronobreak or if its current cooldown is lower than 4 seconds, Ekko reveals a time-delayed afterimage of himself that constantly tracks where he was 4 seconds ago.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Upon learning Chronobreak or if its current cooldown is lower than 4 seconds, Ekko reveals a time-delayed afterimage of himself that constantly tracks where he was 4 seconds ago.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ekko enters stasis at the start of the cast time, and afterwards heals himself and dashes to his afterimage's location at the time of cast over 0.5 seconds. Upon arrival, the stasis ends and he creates an explosion that deals magic damage to nearby enemies.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ekko enters stasis at the start of the cast time, and afterwards heals himself and dashes to his afterimage's location at the time of cast over 0.5 seconds. Upon arrival, the stasis ends and he creates an explosion that deals magic damage to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

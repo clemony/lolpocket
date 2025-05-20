@@ -29,9 +29,9 @@ const selectedSpell = computed (() => {
       <div class="overflow-hidden size-full rounded-lg" :class="{ ' shadow-sm drop-shadow-sm': selectedSpell != null }">
         <Placeholder
           v-if="selectedSpell == null"
-          :src="getRandom(summonerSpellIconArray)"
-          class="size-full !shadow-none opacity-40 group-hover/trig:opacity-80 inset-shadow-xs bg-b2 border-b2">
-          <i-tft-attach class="size-4.5 opacity-40" />
+          alt="no summoner spell chosen"
+          class="size-full !shadow-none grayscale group-hover/trig:opacity-30 inset-shadow-xs bg-b2 border-b2">
+          <i-tft-attach class="size-5 opacity-40" />
         </Placeholder>
 
         <img

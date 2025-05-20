@@ -32,7 +32,7 @@ const pinVariants = {
           v-tippy="{ content: pocket.name, placement: 'right', offset: [0, 20] }"
           class="opacity-0 group-hover/pin:opacity-100 first:mt-[4px]  group/icon cursor-pointer h-[33px] w-full grid  transition-opacity dr-40  place-items-center flex relative" :class="{ 'opacity-100': us.pinnedOpen }"
           @click="navigateTo(`/pocket/${pocket.key}`)">
-          <PocketIcon :image="pocket.icon" class="group-hover/icon:ring group-hover/icon:ring-neutral/70 drop-shadow-sm shadow-sm size-9 pointer-events-none tldr-30" />
+          <PocketIcon  :url="pocket.icon" class="group-hover/icon:ring group-hover/icon:ring-neutral/70 drop-shadow-sm shadow-sm size-9 pointer-events-none tldr-30" />
         </button>
       </div>
       <motion.label

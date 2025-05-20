@@ -100,11 +100,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - The Ball:</p><p> Orianna is accompanied by The Ball, which she commands with her abilities. The Ball incurs a 0.01-second global cooldown on all of her abilities when she casts any ability. Additionally, The Ball attaches to Orianna if she is near it, and snaps back to her if she moves too far away from it, which incurs a 0.75-second cooldown on Command: Shockwave.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate - The Ball:</p><p> Orianna is accompanied by The Ball, which she commands with her abilities. The Ball incurs a 0.01-second global cooldown on all of her abilities when she casts any ability. Additionally, The Ball attaches to Orianna if she is near it, and snaps back to her if she moves too far away from it, which incurs a 0.75-second cooldown on Command: Shockwave.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Orianna's basic attacks generate a stack of Clockwork Winding for 4 seconds, refreshing on subsequent attacks and stacking up to 2 times. All stacks are lost when attacking a new enemy.</p></div>\n\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Clockwork Winding:</p><p> Orianna's basic attacks are empowered to deal 10 - 50 (based on level) (+ 15% AP) bonus magic damage on-hit, increased by[ 20% ][ 2 - 10 (based on level) (+ 3% AP) ]per stack, up to 14 - 70 (based on level) (+ 21% AP) total bonus magic damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Orianna's basic attacks generate a stack of Clockwork Winding for 4 seconds, refreshing on subsequent attacks and stacking up to 2 times. All stacks are lost when attacking a new enemy.</p></div>\n\n\n<div><p class=\"ability-header\">Clockwork Winding:</p><p> Orianna's basic attacks are empowered to deal 10 - 50 (based on level) (+ 15% AP) bonus magic damage on-hit, increased by[ 20% ][ 2 - 10 (based on level) (+ 3% AP) ]per stack, up to 14 - 70 (based on level) (+ 21% AP) total bonus magic damage.</p></div>",
             "leveling": []
           },
           {
@@ -148,7 +148,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Orianna commands The Ball to fly to the target location and remain there, dealing magic damage to enemies it passes through and nearby enemies upon arrival, reduced to 70% against those hit beyond the first.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Orianna commands The Ball to fly to the target location and remain there, dealing magic damage to enemies it passes through and nearby enemies upon arrival, reduced to 70% against those hit beyond the first.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -261,7 +261,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Orianna commands The Ball to emit an electric pulse that deals magic damage to nearby enemies.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Orianna commands The Ball to emit an electric pulse that deals magic damage to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -371,7 +371,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> The Ball grants bonus armor and bonus magic resistance to the unit it is attached to.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> The Ball grants bonus armor and bonus magic resistance to the unit it is attached to.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Resistances",
@@ -393,7 +393,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Orianna commands The Ball to fly to herself or the target allied champion and attach itself to the target, dealing magic damage to enemies it passes through and granting the target a shield for 2.5 seconds upon arrival.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Orianna commands The Ball to fly to herself or the target allied champion and attach itself to the target, dealing magic damage to enemies it passes through and granting the target a shield for 2.5 seconds upon arrival.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -502,7 +502,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Orianna commands The Ball to unleash a shockwave that deals magic damage to nearby enemies, stuns them for 0.75 seconds, and pulls them over 325 units, though not through terrain.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Orianna commands The Ball to unleash a shockwave that deals magic damage to nearby enemies, stuns them for 0.75 seconds, and pulls them over 325 units, though not through terrain.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

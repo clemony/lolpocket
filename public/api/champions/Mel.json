@@ -98,15 +98,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Mel/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Mel's damaging basic attacks and abilities apply a stack of Overwhelm to enemies for 5 seconds, refreshing on subsequent applications and stacking infinitely.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Mel's damaging basic attacks and abilities apply a stack of Overwhelm to enemies for 5 seconds, refreshing on subsequent applications and stacking infinitely.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Overwhelm:</p><p> Store 50 / 60 / 70 / 80 (based on Golden Eclipse's rank) (+ 10% AP) magic damage on the affected enemy with the first stack, reduced[ to 60% ][ to 30 / 36 / 42 / 48 (based on Golden Eclipse's rank) (+ 6% AP) ]against minions. For each stack, store an additional 2 / 3 / 4 / 5 (based on Golden Eclipse's rank) (+ 0.75% AP) magic damage on the target. If the total post-mitigation damage stored exceeds the target's current health and shields, the next stack will consume them all to deal the damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Overwhelm:</p><p> Store 50 / 60 / 70 / 80 (based on Golden Eclipse's rank) (+ 10% AP) magic damage on the affected enemy with the first stack, reduced[ to 60% ][ to 30 / 36 / 42 / 48 (based on Golden Eclipse's rank) (+ 6% AP) ]against minions. For each stack, store an additional 2 / 3 / 4 / 5 (based on Golden Eclipse's rank) (+ 0.75% AP) magic damage on the target. If the total post-mitigation damage stored exceeds the target's current health and shields, the next stack will consume them all to deal the damage.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Searing Brilliance:</p><p> Mel's ability casts each generate 3 stacks of Searing Brilliance for 5 seconds, refreshing on subsequent casts and stacking up to 9 times. Her next basic attack consumes all stacks of Searing Brilliance to additionally fire an equal number of blazing projectiles at the target. Each projectile deals 8 - 25 (based on level) (+ 1% AP) magic damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate - Searing Brilliance:</p><p> Mel's ability casts each generate 3 stacks of Searing Brilliance for 5 seconds, refreshing on subsequent casts and stacking up to 9 times. Her next basic attack consumes all stacks of Searing Brilliance to additionally fire an equal number of blazing projectiles at the target. Each projectile deals 8 - 25 (based on level) (+ 1% AP) magic damage.</p></div>",
             "leveling": []
           }
         ],
@@ -146,7 +146,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Mel/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Mel launches a barrage of luminous bolts at the target location over 0.7 seconds which distribute evenly in the area. Each bolt explodes upon landing to deal magic damage to nearby enemies, reduced to 25% against minions.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Mel launches a barrage of luminous bolts at the target location over 0.7 seconds which distribute evenly in the area. Each bolt explodes upon landing to deal magic damage to nearby enemies, reduced to 25% against minions.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Explosion",
@@ -342,7 +342,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Mel/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Mel forms a protective barrier around herself for 0.75 seconds, becoming invulnerable to non- turret damage and gaining 30% decaying bonus movement speed. All hostile non-turret projectiles that collide with the barrier will be destroyed instantly before Mel fires the same projectiles as her own, either toward or in the direction of the original sources, or toward herself.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Mel forms a protective barrier around herself for 0.75 seconds, becoming invulnerable to non- turret damage and gaining 30% decaying bonus movement speed. All hostile non-turret projectiles that collide with the barrier will be destroyed instantly before Mel fires the same projectiles as her own, either toward or in the direction of the original sources, or toward herself.</p></div>",
             "leveling": []
           },
           {
@@ -438,7 +438,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Mel/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Mel fires an orb in the target direction that grants sight of its surroundings for 0.25 seconds as it travels. Enemies hit by the orb are dealt magic damage and rooted for a duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Mel fires an orb in the target direction that grants sight of its surroundings for 0.25 seconds as it travels. Enemies hit by the orb are dealt magic damage and rooted for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Orb Magic Damage",
@@ -682,7 +682,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Mel/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Overwhelm stacks store more damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Overwhelm stacks store more damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Increased Stored Damage",
@@ -717,7 +717,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Mel unleashes a radiant blast on all enemies affected by Overwhelm, dealing magic damage to each. Enemies are also revealed for 1 second from the start of the cast time.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Mel unleashes a radiant blast on all enemies affected by Overwhelm, dealing magic damage to each. Enemies are also revealed for 1 second from the start of the cast time.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

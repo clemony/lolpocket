@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Milio/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Milio's ability hits on himself and allied champions grant an enchantment for 4 seconds, which causes the next basic attack or ability hit against enemies to deal 7 / 11 / 15% (based on level) of enchanted target's AD bonus magic damage and apply a burn that deals[ 10 - 50 (based on level) (+ 20% of Milio's AP) magic damage over 1.5 seconds. ][ 1.67 - 8.33 (based on level) (+ 3.33% of Milio's AP) magic damage every 0.25 seconds over 1.5 seconds. ]</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Milio's ability hits on himself and allied champions grant an enchantment for 4 seconds, which causes the next basic attack or ability hit against enemies to deal 7 / 11 / 15% (based on level) of enchanted target's AD bonus magic damage and apply a burn that deals[ 10 - 50 (based on level) (+ 20% of Milio's AP) magic damage over 1.5 seconds. ][ 1.67 - 8.33 (based on level) (+ 3.33% of Milio's AP) magic damage every 0.25 seconds over 1.5 seconds. ]</p></div>",
             "leveling": []
           }
         ],
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Milio/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> After a 0.25-second delay, Milio kicks a fireball in the target direction that grants sight of its path and knocks back and stuns the first enemy it hits over 1 second.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> After a 0.25-second delay, Milio kicks a fireball in the target direction that grants sight of its path and knocks back and stuns the first enemy it hits over 1 second.</p></div>",
             "leveling": []
           },
           {
@@ -264,7 +264,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Milio/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Milio summons a fuemigo at the target location or upon the target allied champion for 6 seconds that follows the nearest allied champion and grants sight of its surroundings. Allied champions near the fuemigo gain bonus attack range equal to a percentage of their base attack range and heal every 0.264 seconds over the duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Milio summons a fuemigo at the target location or upon the target allied champion for 6 seconds that follows the nearest allied champion and grants sight of its surroundings. Allied champions near the fuemigo gain bonus attack range equal to a percentage of their base attack range and heal every 0.264 seconds over the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Base Attack Range Scaling",
@@ -340,7 +340,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Milio commands the fuemigo to follow the target allied champion to within 150-units, placing the recast on a 0.5-second static cooldown.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Milio commands the fuemigo to follow the target allied champion to within 150-units, placing the recast on a 0.5-second static cooldown.</p></div>",
             "leveling": []
           },
           {
@@ -410,7 +410,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Milio/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Milio envelops himself or the target allied champion in protective flames, granting the target a shield and bonus movement speed for 2.5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Milio envelops himself or the target allied champion in protective flames, granting the target a shield and bonus movement speed for 2.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -529,7 +529,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Milio/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Milio explodes in soothing flames, healing and cleansing himself and nearby allied champions of non- airborne crowd control, and granting them 65% tenacity for 3 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Milio explodes in soothing flames, healing and cleansing himself and nearby allied champions of non- airborne crowd control, and granting them 65% tenacity for 3 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Heal",

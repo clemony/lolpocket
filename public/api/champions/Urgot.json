@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Urgot/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Urgot's six legs each conceal a shotgun that covers an arc, together forming a full circle of cover around him. Each shotgun can fire once before incurring a unique cooldown.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Urgot's six legs each conceal a shotgun that covers an arc, together forming a full circle of cover around him. Each shotgun can fire once before incurring a unique cooldown.</p></div>",
             "leveling": []
           },
           {
@@ -143,7 +143,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Urgot/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Urgot launches a canister at the target location. Upon landing, it explodes after 0.3 seconds to deal physical damage to enemies hit and slow them for 1.25 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Urgot launches a canister at the target location. Upon landing, it explodes after 0.3 seconds to deal physical damage to enemies hit and slow them for 1.25 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -248,11 +248,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Urgot/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Urgot's other abilities mark enemy champions hit for 5 seconds. Only one enemy can be marked at a time. Additionally, at maximum rank, Purge lasts indefinitely and becomes a toggled ability.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Urgot's other abilities mark enemy champions hit for 5 seconds. Only one enemy can be marked at a time. Additionally, at maximum rank, Purge lasts indefinitely and becomes a toggled ability.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Urgot equips his machine gun for 4 seconds, granting ghosting to minions and non-epic monsters around him and autonomously firing at the nearest enemy at a fixed 3.0 attack speed, prioritizing marked enemy champions and refreshing the mark with every attack. While firing, Urgot is able to move and gains 40% slow resist, but his base movement speed is reduced by 125.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Urgot equips his machine gun for 4 seconds, granting ghosting to minions and non-epic monsters around him and autonomously firing at the nearest enemy at a fixed 3.0 attack speed, prioritizing marked enemy champions and refreshing the mark with every attack. While firing, Urgot is able to move and gains 40% slow resist, but his base movement speed is reduced by 125.</p></div>",
             "leveling": []
           },
           {
@@ -290,7 +290,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Urgot ends Purge.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Urgot ends Purge.</p></div>",
             "leveling": []
           }
         ],
@@ -356,7 +356,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Urgot/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Urgot grants himself a shield for 4 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Urgot grants himself a shield for 4 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -494,7 +494,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Urgot/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Urgot fires a chem-drill in the target direction that impales the first enemy champion hit, dealing physical damage and leashing the target for 4 seconds, during which they are revealed and slowed by 0% - 75% (based on target's missing health).</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Urgot fires a chem-drill in the target direction that impales the first enemy champion hit, dealing physical damage and leashing the target for 4 seconds, during which they are revealed and slowed by 0% - 75% (based on target's missing health).</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -526,7 +526,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast - Mercy:</p><p> Urgot launches chains at the leashed target, then channels for 1.5 seconds once they latch on. During this time, he reels them toward him, suppressing them, revealing them, rendering them untargetable, and preventing them from taking damage from other sources. If the target is near Urgot when the chains connect, they are pushed up to 1000 units away based on their proximity to him. This channel cannot be interrupted by crowd control.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast - Mercy:</p><p> Urgot launches chains at the leashed target, then channels for 1.5 seconds once they latch on. During this time, he reels them toward him, suppressing them, revealing them, rendering them untargetable, and preventing them from taking damage from other sources. If the target is near Urgot when the chains connect, they are pushed up to 1000 units away based on their proximity to him. This channel cannot be interrupted by crowd control.</p></div>",
             "leveling": []
           },
           {

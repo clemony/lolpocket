@@ -148,6 +148,7 @@ declare global {
     killParticipation: number
     queueId: number
     championName: string
+    championId: number
     teamPosition: string
     item0: number
     item1: number

@@ -4,13 +4,21 @@ import { AnimatePresence, motion } from 'motion-v'
 import ChampionsCounter from 'components/pocket/ui/counters/ChampionsCounter.vue'
 import ItemsCounter from 'components/pocket/ui/counters/ItemsCounter.vue'
 
+import RunesCounter from 'components/pocket/ui/counters/RunesCounter.vue'
+
+
 const { pocket } = defineProps<{
   pocket: Pocket
 }>()
 
 const route = useRoute()
 
-const pocketNav = computed (() => route.path)
+const pocketNav = ref(route.path)
+
+watchEffect(() => {
+if (pocketNav.value != route.path)
+pocketNav.value = route.path
+})
 
 // TODO when complete initial link click goes to summary. change champions link always to champions and outline will be on empty
 
@@ -28,12 +36,11 @@ const plinks = [
   {
     name: 'Runes',
     value: `/pocket/${route.params.pocketKey}/runes`,
-    component: ChampionsCounter,
+    component: RunesCounter,
   },
   {
     name: 'Outline',
-    value: `/pocket/${route.params.pocketKey}/outline`,
-    component: ChampionsCounter,
+    value: `/pocket/${route.params.pocketKey}/card`,
   },
 ]
 </script>

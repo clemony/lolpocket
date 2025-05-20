@@ -10,17 +10,17 @@ const pinned = computed (() => {
 <template>
   <HoverCard>
     <HoverCardTrigger as-child  :disabled="!pinned.length" class="group/pin">
-      <SidebarButton class=" indicator ">
+      <Btn class=" indicator ">
         <LazyPopupBadge v-if="!us.sidebarExpanded && pinned.length">
            {{ pinned.length }}
         </LazyPopupBadge>
         <slot :pinned="pinned" />
-      </SidebarButton>
+      </Btn>
     </HoverCardTrigger>
     <LazyContrastHoverCardContent side="right" align="center" :side-offset="10">
       <ContrastHoverCardArrow />
       <button v-for="pocket in pinned" :key="pocket.key" class="btn btn-ghost hover:bg-accent text-nc hover:text-nc w-full btn-sm gap-3" @click="navigateTo(`/pocket/${pocket.key}`)">
-        <PocketIcon class="size-8" :image="pocket.icon" />
+        <PocketIcon class="size-8" :url="pocket.icon" />
         {{ pocket.name }}
       </button>
     </LazyContrastHoverCardContent>

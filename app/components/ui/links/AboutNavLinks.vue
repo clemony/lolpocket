@@ -8,9 +8,9 @@ const classObject = 'hover:underline underline-offset-2 dst w-full h-9 flex gap-
   <Field  class="grid px-5 h-fit py-3 *:w-full **:text-2 relative">
     <SheetClose as-child>
       <a :class="classObject" @click="navigateTo('/about')">
-        <SidebarIcon>
+        <IconWrapper>
         <icon name="solar:cat-outline" class="size-5.75 -left-0.5 top-0 absolute" />
-        </SidebarIcon>
+        </IconWrapper>
         About & Cats
       </a>
     </SheetClose>
@@ -20,11 +20,11 @@ const classObject = 'hover:underline underline-offset-2 dst w-full h-9 flex gap-
         external
         href="https://discord.gg/Jzuu7bYTZY"
         target="_blank" :class="classObject">
-        <SidebarIcon>
+        <IconWrapper>
         <icon
           name="radix-icons:discord-logo"
           class="dst" />
-          </SidebarIcon>
+          </IconWrapper>
         Discord
       </NuxtLink>
     </SheetClose>
@@ -35,11 +35,11 @@ const classObject = 'hover:underline underline-offset-2 dst w-full h-9 flex gap-
         href="https://github.com/clemony/lolpocket"
         target="_blank"
         :class="classObject">
-        <SidebarIcon>
+        <IconWrapper>
         <icon
           name="radix-icons:github-logo"
           class=" dst " />
-          </SidebarIcon>Github @clemony
+          </IconWrapper>Github @clemony
       </NuxtLink>
     </SheetClose>
 

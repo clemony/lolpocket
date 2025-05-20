@@ -4,11 +4,11 @@
   @apply pt-36 border-t border-t-b3/60 ;
 }
 
-.stat-grid.champion-grid .ag-header-group-cell .ag-header-cell-comp-wrapper {
+.champion-grid .ag-header-group-cell .ag-header-cell-comp-wrapper {
   @apply text-start items-end justify-start;
 }
 
-.stat-grid.champion-grid .ag-header-group-cell {
+.champion-grid .ag-header-group-cell {
   @apply font-semibold ;
 }
 
@@ -29,4 +29,7 @@
     @apply !bg-b2;
 }
 
+.champion-grid  .ag-header-expand-icon{
+  @apply absolute right-1;
+}
 

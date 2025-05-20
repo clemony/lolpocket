@@ -97,11 +97,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zeri/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Zeri generates 1 charge for every 40 units she travels by any means and 10 charge every time she casts Burst Fire, up to a maximum of 100 charge. Her basic attacks consume charge to deal modified damage.Zeri gains maximum charge when the game starts and upon respawning.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Zeri generates 1 charge for every 40 units she travels by any means and 10 charge every time she casts Burst Fire, up to a maximum of 100 charge. Her basic attacks consume charge to deal modified damage.Zeri gains maximum charge when the game starts and upon respawning.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Basic Attack:</p><p> Zeri zaps the target, applying spell effects as spell damage, and triggering on-cast effects. This cannot critically strike nor trigger on-hit and on-attack effects.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Basic Attack:</p><p> Zeri zaps the target, applying spell effects as spell damage, and triggering on-cast effects. This cannot critically strike nor trigger on-hit and on-attack effects.</p></div>",
             "leveling": []
           },
           {
@@ -149,7 +149,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zeri/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zeri fires a burst of 7 rounds in the target direction that each deal physical damage to the first enemy hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zeri fires a burst of 7 rounds in the target direction that each deal physical damage to the first enemy hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Physical Damage",
@@ -212,7 +212,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Burst Fire's projectile is treated as a basic attack:</p><p> it hits any enemy unit a typical basic attack can; deals basic damage; can critically strike for (175% + 40%) damage; applies on-hit effects to the first enemy hit; and triggers on-attack effects once. Burst Fire's cooldown and cast time are reduced with attack speed, with the maximum of 1.5 attacks per second. 70% of attack speed in excess of the cap is converted into bonus attack damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Burst Fire's projectile is treated as a basic attack:</p><p> it hits any enemy unit a typical basic attack can; deals basic damage; can critically strike for (175% + 40%) damage; applies on-hit effects to the first enemy hit; and triggers on-attack effects once. Burst Fire's cooldown and cast time are reduced with attack speed, with the maximum of 1.5 attacks per second. 70% of attack speed in excess of the cap is converted into bonus attack damage.</p></div>",
             "leveling": []
           }
         ],
@@ -270,7 +270,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zeri/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zeri fires an electric pulse in the target direction that deals physical damage to the first enemy hit and slows them for 2 seconds.If the pulse hits terrain, it transforms into a laser in a line that grants sight of the area for 1.75 seconds and fires after 0.85 seconds, applying the same effects to enemies hit and critically striking for (175% + 40%) damage against champions and monsters.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zeri fires an electric pulse in the target direction that deals physical damage to the first enemy hit and slows them for 2 seconds.If the pulse hits terrain, it transforms into a laser in a line that grants sight of the area for 1.75 seconds and fires after 0.85 seconds, applying the same effects to enemies hit and critically striking for (175% + 40%) damage against champions and monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -387,7 +387,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zeri/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zeri dashes in the target direction. She will dash farther across terrain if Spark Surge was cast within 50 units of any, gaining unobstructed vision of the surrounding 800 units and revealing herself while there are enemy champions within 1500 units of her.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zeri dashes in the target direction. She will dash farther across terrain if Spark Surge was cast within 50 units of any, gaining unobstructed vision of the surrounding 800 units and revealing herself while there are enemy champions within 1500 units of her.</p></div>",
             "leveling": []
           },
           {
@@ -516,7 +516,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zeri/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zeri discharges an electric nova that deals magic damage to nearby enemies. If this hits at least one enemy champion, she enters Overcharged for 5 seconds. Hitting an enemy champion with an ability or charged basic attack will extend the duration by 1.5 seconds, up to its original duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zeri discharges an electric nova that deals magic damage to nearby enemies. If this hits at least one enemy champion, she enters Overcharged for 5 seconds. Hitting an enemy champion with an ability or charged basic attack will extend the duration by 1.5 seconds, up to its original duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -552,7 +552,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Overcharged:</p><p> Zeri gains 10% bonus movement speed and 30% bonus attack speed that is allowed to exceed the attack speed cap by the amount gained. Burst Fire is empowered to have a 20% shorter cast time and instead fire 3 rounds that travel with increased speed and chain to the nearest visible enemy within 650 units of the target, up to 4 subsequent targets, to deal 30% AD physical damage. This damage is affected by critical strike modifiers.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Overcharged:</p><p> Zeri gains 10% bonus movement speed and 30% bonus attack speed that is allowed to exceed the attack speed cap by the amount gained. Burst Fire is empowered to have a 20% shorter cast time and instead fire 3 rounds that travel with increased speed and chain to the nearest visible enemy within 650 units of the target, up to 4 subsequent targets, to deal 30% AD physical damage. This damage is affected by critical strike modifiers.</p></div>",
             "leveling": []
           },
           {
@@ -560,7 +560,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Hypercharged:</p><p> For each stack, Zeri gains 0.5% bonus movement speed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Hypercharged:</p><p> For each stack, Zeri gains 0.5% bonus movement speed.</p></div>",
             "leveling": []
           }
         ],

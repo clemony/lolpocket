@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Ivern cannot attack nor damage non-epic monsters. Instead, targeting a jungle camp initiates a 2.5 second channel that will plant a grove upon the camp. Placing a grove costs 94.5 - 0.14 (based on level) health and 90 - 0.37 (based on level) mana. The channel cannot be cancelled in the first 0.15 seconds and in the last 0.5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Ivern cannot attack nor damage non-epic monsters. Instead, targeting a jungle camp initiates a 2.5 second channel that will plant a grove upon the camp. Placing a grove costs 94.5 - 0.14 (based on level) health and 90 - 0.37 (based on level) mana. The channel cannot be cancelled in the first 0.15 seconds and in the last 0.5 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -152,7 +152,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ivern throws a vine in the target direction, dealing magic damage to the first enemy hit and rooting them for a duration, during which they are also revealed. Rootcaller can be recast while the target is rooted.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ivern throws a vine in the target direction, dealing magic damage to the first enemy hit and rooting them for a duration, during which they are also revealed. Rootcaller can be recast while the target is rooted.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -203,7 +203,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Ivern dashes to the rooted target.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Ivern dashes to the rooted target.</p></div>",
             "leveling": []
           },
           {
@@ -269,7 +269,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> While Ivern is in brush, his basic attacks are empowered to deal bonus magic damage on-hit. This bonus persists for 3 seconds after leaving brush.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> While Ivern is in brush, his basic attacks are empowered to deal bonus magic damage on-hit. This bonus persists for 3 seconds after leaving brush.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -299,7 +299,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ivern grows a patch of brush at the target location for 45 seconds, granting sight of the area within and around it for 8 seconds. Brushes despawn instantly after allied vision of them is lost. Spawning brush near terrain or other brush increases its radius.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ivern grows a patch of brush at the target location for 45 seconds, granting sight of the area within and around it for 8 seconds. Brushes despawn instantly after allied vision of them is lost. Spawning brush near terrain or other brush increases its radius.</p></div>",
             "leveling": []
           },
           {
@@ -397,7 +397,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ivern places a seed on the target allied champion, Daisy, or himself, granting the target a shield for 2 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ivern places a seed on the target allied champion, Daisy, or himself, granting the target a shield for 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -536,7 +536,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ivern summons his sentinel friend Daisy to his side, who lands 350 units away from him in the target direction and remains on the field for up to 45 seconds as a controllable pet.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ivern summons his sentinel friend Daisy to his side, who lands 350 units away from him in the target direction and remains on the field for up to 45 seconds as a controllable pet.</p></div>",
             "leveling": []
           },
           {
@@ -544,7 +544,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast - Daisy, wait!:</p><p> Ivern commands Daisy to move to the target location. If cast on Ivern, Daisy will follow him.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast - Daisy, wait!:</p><p> Ivern commands Daisy to move to the target location. If cast on Ivern, Daisy will follow him.</p></div>",
             "leveling": []
           },
           {

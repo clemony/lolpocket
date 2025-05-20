@@ -10,11 +10,10 @@ const emit = defineEmits(['update:model-value'])
   <div class="flex flex-col w-full">
     <div class="items-center flex gap-2 ">
       <LazyPopover>
-        <PopoverTrigger class="group/picon z-0 shrink-0 !cursor-pointer self-center  !size-14 border border-b3  rounded-full !pointer-events-auto  aspect-square  grid place-items-center relative  overflow-hidden  shadow-sm drop-shadow-sm">
-          <ChampionSplash v-if="pocket && pocket?.icon != '/img/lp/192.webp'" :url="pocket?.icon" alt="pocket icon" bg-size="160%" class=" pointer-events-none group-hover/picon:brightness-50 z-1 group-data-[state=open]/picon:brightness-50   tldr-30  size-full " />
-          <div v-else class="size-full bg-gradient-to-br from-neutral/80 to-neutral grid place-items-center text-nc font-semibold text-6 dst">
-            LP
-          </div>
+        <PopoverTrigger class="group/picon z-0 shrink-0 !cursor-pointer self-center  !size-14 border border-b3  rounded-full !pointer-events-auto  aspect-square  grid place-items-center relative  overflow-hidden  ">
+
+          <PocketIcon v-if="pocket && pocket?.icon" :url="pocket?.icon" alt="pocket icon" bg-size="160%" class=" group-hover/picon:brightness-50 z-1 group-data-[state=open]/picon:brightness-50   tldr-30  " />
+         
 
           <icon name="images" class="size-6 !text-nc absolute opacity-0  group-hover/picon:opacity-80 z-2 transition-all  duration-300 group-data-[state=open]/picon:opacity-100" />
         </PopoverTrigger>

@@ -47,12 +47,12 @@ function handleClick(i) {
 <template>
   <Collapsible v-model:open="isOpen" as="div" class="field-box relative">
     <CollapsibleTrigger class="w-full group/state group" @click.stop.prevent>
-      <NavBtn field class="w-full h-22 pl-4 pr-2 py-3 [&_.trash-button]:hidden">
+      <Btn field class="w-full h-22 pl-4 pr-2 py-3 [&_.trash-button]:hidden">
         <LazySpellSet :set="pocket.spells[0]" :pocket="pocket" :set-index="0" hydrate-on-visible class="cursor-pointer" />
 
         <Grow />
         <PlusMinusExpand />
-      </NavBtn>
+      </Btn>
     </CollapsibleTrigger>
     <LazyCollapsibleContent class="CollapsibleContent ">
       <VueDraggable
@@ -71,9 +71,9 @@ function handleClick(i) {
       </VueDraggable>
 
       <Separator class="bg-b3/40 mt-4" />
-      <NavBtn class="rounded-t-none w-full !text-2 !font-medium justify-end opacity-70 hover:opacity-100 !gap-2" @click="newSpellSet(pocket.key)">
+      <Btn class="rounded-t-none w-full !text-2 !font-medium justify-end opacity-70 hover:opacity-100 !gap-2" @click="newSpellSet(pocket.key)">
         <icon name="add-sm" />New Spell Set
-      </NavBtn>
+      </Btn>
     </LazyCollapsibleContent>
   </Collapsible>
 </template>

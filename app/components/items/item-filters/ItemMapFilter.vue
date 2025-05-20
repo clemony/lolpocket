@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { gameMaps } from '~~/public/api/maps'
+import { gameMaps } from 'api/maps'
 
 const { modelValue: mapp } = defineProps<{
-modelValue: number
+modelValue?: number
 }>()
 
 
@@ -12,21 +12,22 @@ modelValue: number
 <template>
 
 <Select v-bind="$attrs">
-    <SelectTrigger class="w-26 border-transparent hover:border-b3 data-[state=open]:border-b3 shadow-none hover:inset-shadow-none ring-none">
-
+    <SelectTrigger class="w-50  items-center flex gap-3   ">
+<slot>
       <span class="size-5 relative grid place-items-center">
-          <component :is="`i-maps-${mapp}`" class="absolute dst opacity-80 shrink-0" :class="{'size-5': mapp == 12, 'size-6': mapp == 30, 'size-4.5': mapp == 11}"  />
+          <component :is="`i-maps-${mapp}`" class="absolute dst opacity-80 shrink-0" :class="{'size-5': mapp == 12 ||  mapp == 11, 'size-6': mapp == 30}"  />
         </span>
+        {{ gameMaps.find(m => m.mapId == mapp).nameId }}</slot>
     </SelectTrigger>
-    <LazySelectContent class="w-fit">
+    <LazySelectContent class="w-(--reka-select-trigger-width)">
       <SelectGroup>
         <SelectLabel>Maps</SelectLabel>
         <SelectItem v-for="map in [11, 12, 30]" :value="map">
           <div  class="flex gap-3 items-center">
             <span class="size-5 relative grid place-items-center">
-          <component :is="`i-maps${map}`" class="absolute opacity-80 dst shrink-0" :class="{'size-5': map == 12, 'size-6': map == 30, 'size-4.5': map == 11}"  />
+          <component :is="`i-maps${map}`" class="absolute opacity-80 dst shrink-0" :class="{'size-5': map == 12 ||  map == 11, 'size-6': map == 30}"  />
         </span>
-         {{ gameMaps.find(m => m.mapId == map).mapName }}
+         {{ gameMaps.find(m => m.mapId == map).nameId }}
         </div>
         </SelectItem>
       </SelectGroup>

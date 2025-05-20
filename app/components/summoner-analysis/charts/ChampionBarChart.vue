@@ -9,18 +9,13 @@ const { champions } = defineProps<{
 
 const styles = getComputedStyle(document.documentElement)
 ChartJS.defaults.color = styles.getPropertyValue('--color-neutral')
-ChartJS.defaults.font.family = styles.getPropertyValue('--font-sans')
 ChartJS.defaults.font.weight = 400
-ChartJS.defaults.font.size = 16
 ChartJS.defaults.scale.grid.color = getColorFromVariable('--color-b3')
 
 ChartJS.register(Title, Tooltip, BarElement, CategoryScale, LinearScale)
 
-const as = useAccountStore()
-const ss = useSummonerStore()
-
 const data = computed(() => ({
-  labels: champions.map(c => c.champion.id ?? ''),
+  labels: champions.map(c => c.champion ?? ''),
   datasets: [{
     data: champions.map(c => c.winrate ?? 0),
   }],
@@ -64,7 +59,7 @@ const options = {
       ticks: {
         display: true,
         font: {
-          size: 16,
+          size: 11,
         },
 
         stepSize: 20,
@@ -127,7 +122,7 @@ const options = {
           const index = context[0].dataIndex
           const champion = champions[index]
           const games = champion.games ?? 0
-          const name = champion.champion.name ?? ''
+          const name = champion.champion ?? ''
           return [`${name} - ${games} played`]
         },
       },
@@ -161,7 +156,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative rounded-box border-shadow-sm shadow-md  pt-4 grid place-items-center h-150 min-h-150 w-210 rounded-box">
+  <div class="relative  border-shadow-sm  pt-4 grid place-items-center h-150 min-h-150 w-210 ">
     <Bar id="championAnalysis" ref="chartRef" :options="options" :data="data" />
 
     <!-- Overlay images using absolute positioning -->
@@ -174,9 +169,8 @@ onMounted(() => {
         height: '32px',
       }">
       <div class="size-[32px] rounded-lg overflow-hidden">
-        <img
-          :src="`/img/champion/${pos.label}.webp`"
-          alt=""
+        <ChampionIcon :id="champions[idx].championId"
+          :alt="pos.label"
           class="size-full scale-115" />
       </div>
     </div>

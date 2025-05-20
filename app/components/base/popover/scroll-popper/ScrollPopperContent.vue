@@ -3,7 +3,7 @@ import { PopoverContent, PopoverPortal, useForwardPropsEmits } from 'reka-ui'
 
 import type { PopoverContentEmits, PopoverContentProps } from 'reka-ui'
 import { computed } from 'vue'
-import type { HTMLAttributes } from 'vue'
+import { useScroll as useScrolly } from '@vueuse/core'
 
 defineOptions({
   inheritAttrs: false,
@@ -31,7 +31,7 @@ const delegatedProps = computed(() => {
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
 const el = ref()
-const { x, y, isScrolling, arrivedState, directions } = useScroll(el)
+const { x, y, isScrolling, arrivedState, directions } = useScrolly(el)
 watch(
   () => arrivedState.top,
   (newVal) => {

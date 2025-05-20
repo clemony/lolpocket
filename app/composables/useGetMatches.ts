@@ -31,7 +31,7 @@ export async function useGetMatches({
     },
   })
 
-  if (newMatches.length > 0 && puuid == as.userAccount.puuid) {
+  if (newMatches.length > 0 && puuid == as.userAccount.riot.puuid) {
     await addMatches(newMatches)
     const { simplifyMatch } = useMatchSimplifier(puuid)
     const simplified = newMatches.map(simplifyMatch).filter(Boolean) as SimplifiedMatchData[]

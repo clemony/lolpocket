@@ -9,15 +9,15 @@ const as = useAccountStore()
     v-for="(link, i) in getFolderLinks()"
     :key="link.key"
     :to="link.link">
-    <SidebarButton v-tippy="!us.sidebarExpanded ? link.name : null" class="indicator">
+    <Btn v-tippy="!us.sidebarExpanded ? link.name : null" class="indicator">
       <LazyPopupBadge v-if="!us.sidebarExpanded && link.pockets && link.pockets.length" :delay="0.95 + i * 2.5 / 10">
         {{ link.pockets.length }}
       </LazyPopupBadge>
 
-      <SidebarIcon v-if="link.name == 'Pockets'">
+      <IconWrapper v-if="link.name == 'Pockets'">
         <i-ui-pocket class="size-4.5" />
-      </SidebarIcon>
-      <SidebarIcon v-else :name="link.icon" class=" size-4.5" />
+      </IconWrapper>
+      <IconWrapper v-else :name="link.icon" class=" size-4.5" />
       
         {{ link.name }}
       
@@ -28,6 +28,6 @@ const as = useAccountStore()
           {{ link.pockets.length }}
         </span>
       </SidebarBadge>
-    </SidebarButton>
+    </Btn>
   </NuxtLink>
 </template>

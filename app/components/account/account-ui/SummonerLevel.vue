@@ -12,7 +12,7 @@ const summoner = computed(() => {
 
 
 <template>
-     <span :class="cn('', props.class)">{{ summoner.summonerLevel||  '0' || '' }}</span>
+     <span :class="cn('', props.class)">{{ summoner.riot.level||  '0' || '' }}</span>
 </template>
 
 <style scoped>

@@ -100,11 +100,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> When Nunu and Willump deal damage against an enemy champion, large monster or structure, they and a nearby allied champion gain Call of the Freljord for 4 seconds, prioritizing the ally with highest attack speed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> When Nunu and Willump deal damage against an enemy champion, large monster or structure, they and a nearby allied champion gain Call of the Freljord for 4 seconds, prioritizing the ally with highest attack speed.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Call of the Freljord:</p><p> Gain 20% bonus attack speed and 10% bonus movement speed. Willump's basic attacks additionally deal 30% AD physical damage to secondary targets in a cone in front of him.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Call of the Freljord:</p><p> Gain 20% bonus attack speed and 10% bonus movement speed. Willump's basic attacks additionally deal 30% AD physical damage to secondary targets in a cone in front of him.</p></div>",
             "leveling": []
           },
           {
@@ -148,7 +148,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Willump takes a bite out of the target enemy, dealing damage and healing himself. The heal is increased by 50% while he is below 50% maximum health.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Willump takes a bite out of the target enemy, dealing damage and healing himself. The heal is increased by 50% while he is below 50% maximum health.</p></div>",
             "leveling": []
           },
           {
@@ -402,7 +402,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Willump cleanses himself from all slows and channels for up to 10 seconds, becoming ghosted and slow-immune and creating a rolling snowball. Willump automatically navigates his movement in the direction of the cursor and can steer the snowball with a slow turn rate that increases over time, resetting upon changing direction. The duo have their movement speed reduced by 50% for the first 1 second, but after a delay they start gaining 14 movement speed every 0.25 seconds, up to a cap.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Willump cleanses himself from all slows and channels for up to 10 seconds, becoming ghosted and slow-immune and creating a rolling snowball. Willump automatically navigates his movement in the direction of the cursor and can steer the snowball with a slow turn rate that increases over time, resetting upon changing direction. The duo have their movement speed reduced by 50% for the first 1 second, but after a delay they start gaining 14 movement speed every 0.25 seconds, up to a cap.</p></div>",
             "leveling": []
           },
           {
@@ -520,7 +520,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Willump releases the snowball, sending it rolling forward up to a maximum distance during which it will not grow any larger and will explode upon hitting an enemy.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Willump releases the snowball, sending it rolling forward up to a maximum distance during which it will not grow any larger and will explode upon hitting an enemy.</p></div>",
             "leveling": []
           }
         ],
@@ -582,7 +582,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Nunu throws a volley of 3 snowballs in the target direction over 0.4 seconds that each shatter upon hitting an enemy, dealing magic damage to enemies in a cone.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nunu throws a volley of 3 snowballs in the target direction over 0.4 seconds that each shatter upon hitting an enemy, dealing magic damage to enemies in a cone.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Hit",
@@ -659,7 +659,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Nunu hurls another volley of snowballs, mimicking the first cast's effects. An enemy may only be slowed once for being hit by snowballs.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Nunu hurls another volley of snowballs, mimicking the first cast's effects. An enemy may only be slowed once for being hit by snowballs.</p></div>",
             "leveling": [
               {
                 "attribute": "Maximum Total Magic Damage",
@@ -781,7 +781,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Nunu and Willump channel a blizzard for up to 3 seconds, granting themselves a shield and slowing nearby enemies by 0% - 95% (based on channel time).</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nunu and Willump channel a blizzard for up to 3 seconds, granting themselves a shield and slowing nearby enemies by 0% - 95% (based on channel time).</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -823,7 +823,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Nunu and Willump cause the blizzard to explode, dealing magic damage to nearby enemies, modified to 0% - 100% (based on channel time). Affected enemies will remain slowed for 0 - 3 (based on channel time) seconds and any of the duo's remaining shield will decay over 3 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Nunu and Willump cause the blizzard to explode, dealing magic damage to nearby enemies, modified to 0% - 100% (based on channel time). Affected enemies will remain slowed for 0 - 3 (based on channel time) seconds and any of the duo's remaining shield will decay over 3 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

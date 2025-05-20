@@ -15,15 +15,15 @@ const router = useRouter()
 
 
 onMounted(() => {
-  if (user.value?.puuid) {
-    router.replace(`/summoner/${user.value.puuid}`)
+  if (user.value?.riot.puuid) {
+    router.replace(`/summoner/${user.value.riot.puuid}`)
   }
 })
 
 </script>
 
 <template>
-  <div v-if="!user?.puuid">
+  <div v-if="!user?.riot.puuid">
     <!-- build search later -->
   </div>
 

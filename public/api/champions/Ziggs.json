@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Periodically, Ziggs empowers his next basic attack to deal 20 - 160 (based on level) (+ 50% AP) bonus magic damage,[ increased by 75% against structures. ][ increased to 35 - 280 (based on level) (+ 87.5% AP) against structures. ]</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, Ziggs empowers his next basic attack to deal 20 - 160 (based on level) (+ 50% AP) bonus magic damage,[ increased by 75% against structures. ][ increased to 35 - 280 (based on level) (+ 87.5% AP) against structures. ]</p></div>",
             "leveling": []
           },
           {
@@ -153,7 +153,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ziggs throws a bomb to the target location that bounces forward up to two times, with the distance traveled each time being based on how far it was originally thrown.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ziggs throws a bomb to the target location that bounces forward up to two times, with the distance traveled each time being based on how far it was originally thrown.</p></div>",
             "leveling": []
           },
           {
@@ -253,11 +253,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ziggs hurls a charge to the target location, remaining there for 4 seconds and granting sight of the area. Satchel Charge can be recast within the duration, and does so automatically afterwards. If recast while in flight, the charge will explode immediately upon landing.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ziggs hurls a charge to the target location, remaining there for 4 seconds and granting sight of the area. Satchel Charge can be recast within the duration, and does so automatically afterwards. If recast while in flight, the charge will explode immediately upon landing.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Ziggs detonates the charge, causing it to explode to deal magic damage to nearby enemies and knock them back up to 500 units away from the center of the explosion, though not through terrain. If this hits Ziggs, he will dash up to 825 units away from the center.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Ziggs detonates the charge, causing it to explode to deal magic damage to nearby enemies and knock them back up to 500 units away from the center of the explosion, though not through terrain. If this hits Ziggs, he will dash up to 825 units away from the center.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -287,7 +287,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Turret Explosion:</p><p> The explosion also executes enemy turrets within that are below a maximum health threshold.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Turret Explosion:</p><p> The explosion also executes enemy turrets within that are below a maximum health threshold.</p></div>",
             "leveling": [
               {
                 "attribute": "Demolition Threshold",
@@ -371,7 +371,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ziggs scatters a cluster of 11 proximity mines over the target location that grant sight of the area for 2 seconds, arming after 0.5 seconds and lasting for up to 10 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ziggs scatters a cluster of 11 proximity mines over the target location that grant sight of the area for 2 seconds, arming after 0.5 seconds and lasting for up to 10 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -530,7 +530,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ziggs catapults the Mega Inferno Bomb to the target location, granting sight within a 600 radius around its destination for 4 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ziggs catapults the Mega Inferno Bomb to the target location, granting sight within a 600 radius around its destination for 4 seconds.</p></div>",
             "leveling": []
           },
           {

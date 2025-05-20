@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renata/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Renata's basic attacks are empowered to apply a mark that lasts 6 seconds, refreshes on subsequent hits and expires when attacking a new enemy. If the enemy was unmarked, the attack also deals bonus magic damage equal to 1% - 2% (based on level) (+ 2% per 100 AP) of the target's maximum health.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Renata's basic attacks are empowered to apply a mark that lasts 6 seconds, refreshes on subsequent hits and expires when attacking a new enemy. If the enemy was unmarked, the attack also deals bonus magic damage equal to 1% - 2% (based on level) (+ 2% per 100 AP) of the target's maximum health.</p></div>",
             "leveling": []
           },
           {
@@ -147,7 +147,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renata/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Renata fires a hook in the target direction that deals magic damage to the first enemy hit and roots them for 1 second, during which they are revealed.If the root was applied, Renata forms a tether between her and the target for the same duration, causing Renata to become unable to declare attacks and have her movement speed reduced by 30%.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Renata fires a hook in the target direction that deals magic damage to the first enemy hit and roots them for 1 second, during which they are revealed.If the root was applied, Renata forms a tether between her and the target for the same duration, causing Renata to become unable to declare attacks and have her movement speed reduced by 30%.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -181,7 +181,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Renata breaks the tether to knock the target in the target direction, though not through terrain, dealing the same damage to enemies they pass through. If the thrown target is a champion, all secondary targets hit are stunned for 0.5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Renata breaks the tether to knock the target in the target direction, though not through terrain, dealing the same damage to enemies they pass through. If the thrown target is a champion, all secondary targets hit are stunned for 0.5 seconds.</p></div>",
             "leveling": []
           }
         ],
@@ -239,7 +239,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renata/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Renata infuses herself or the target allied champion with a chemtech formula for 5 seconds, granting the target bonus attack speed and bonus movement speed while they are facing nearby visible enemy champions or minions, with both of the bonuses increasing in effectiveness by 0% - 100% (based on seconds elapsed). Bailout's duration resets whenever the target scores a takedown against an enemy champion within 6 seconds of damaging them.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Renata infuses herself or the target allied champion with a chemtech formula for 5 seconds, granting the target bonus attack speed and bonus movement speed while they are facing nearby visible enemy champions or minions, with both of the bonuses increasing in effectiveness by 0% - 100% (based on seconds elapsed). Bailout's duration resets whenever the target scores a takedown against an enemy champion within 6 seconds of damaging them.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -406,7 +406,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renata/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Renata sends out chemtech rockets from either side of her that instantly strike targets around her. After 0.429 seconds they converge and travel to the target location as a single missile, striking targets along its path and exploding upon reaching the target location.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Renata sends out chemtech rockets from either side of her that instantly strike targets around her. After 0.429 seconds they converge and travel to the target location as a single missile, striking targets along its path and exploding upon reaching the target location.</p></div>",
             "leveling": []
           },
           {
@@ -531,7 +531,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renata/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Renata launches a cloud of potent chemicals that travels in the target direction, granting sight of its surroundings. Enemy champions and minions hit become berserk for a duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Renata launches a cloud of potent chemicals that travels in the target direction, granting sight of its surroundings. Enemy champions and minions hit become berserk for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Berserk Duration",
@@ -551,7 +551,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Berserked units gain 100% bonus attack speed and 25% increased size. Within their targeting radius, they prioritize attacking the closest unit by the following categories in descending order:</p><p></p></div>\nTheir allied champions\nAllied non-champions\nAllied wards\nEnemy units (including monsters)",
+            "description": "\n\n<div><p class=\"ability-header\">Berserked units gain 100% bonus attack speed and 25% increased size. Within their targeting radius, they prioritize attacking the closest unit by the following categories in descending order:</p><p></p></div>\nTheir allied champions\nAllied non-champions\nAllied wards\nEnemy units (including monsters)",
             "leveling": []
           }
         ],

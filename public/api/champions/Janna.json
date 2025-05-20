@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Janna/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Janna grants 6% bonus movement speed to nearby allied champions that are facing in the direction of her location.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Janna grants 6% bonus movement speed to nearby allied champions that are facing in the direction of her location.</p></div>",
             "leveling": []
           },
           {
@@ -144,7 +144,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Janna/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Janna summons a whirlwind at her current location that charges up over 3 seconds, increasing its range, speed, damage, and knock up duration every second over the duration. Howling Gale's direction is determined by this cast.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Janna summons a whirlwind at her current location that charges up over 3 seconds, increasing its range, speed, damage, and knock up duration every second over the duration. Howling Gale's direction is determined by this cast.</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -228,7 +228,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Janna launches the whirlwind in the direction she targeted over 1.25 seconds, dealing magic damage to enemies hit and knocking them up for 0.5 - 1.25 (based on seconds charged) seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Janna launches the whirlwind in the direction she targeted over 1.25 seconds, dealing magic damage to enemies hit and knocking them up for 0.5 - 1.25 (based on seconds charged) seconds.</p></div>",
             "leveling": []
           }
         ],
@@ -290,7 +290,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Janna/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Janna is ghosted and gains bonus movement speed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Janna is ghosted and gains bonus movement speed.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -320,7 +320,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Janna sends an air elemental at the target enemy that deals magic damage and slows them for 2 seconds, capped at 99%.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Janna sends an air elemental at the target enemy that deals magic damage and slows them for 2 seconds, capped at 99%.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -445,11 +445,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Janna/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Whenever Janna's abilities slow or knock up at least one enemy champion, 20% of Eye of the Storm's cooldown is refunded. This may occur once per spell cast.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Whenever Janna's abilities slow or knock up at least one enemy champion, 20% of Eye of the Storm's cooldown is refunded. This may occur once per spell cast.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Janna grants the target allied champion or turret, or herself, a shield for 4 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Janna grants the target allied champion or turret, or herself, a shield for 4 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -571,7 +571,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Janna/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Janna unleashes a blast that knocks back all nearby enemies to up to 875 units over 0.5 seconds based on their proximity, though not through terrain.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Janna unleashes a blast that knocks back all nearby enemies to up to 875 units over 0.5 seconds based on their proximity, though not through terrain.</p></div>",
             "leveling": []
           },
           {

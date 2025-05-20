@@ -26,8 +26,13 @@ for (const id in fullData) {
 
   // Add to unique sets
   tags.forEach(t => uniqueTags.add(t))
+
+
   rank.forEach(r => uniqueRanks.add(r))
 
+  if (item.id === 2141 && item.shop) {
+    item.shop.purchasable = false
+  }
   // Add to lite output
   simplified[id] = {
     id: item.id,

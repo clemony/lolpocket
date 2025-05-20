@@ -19,7 +19,7 @@ const pinned = computed (() => {
         @click="navigateTo(`/pocket/${pocket.key}`)">
         <SheetClose
           class="btn !font-medium tracking-tight !gap-5 btn-ghost px-2 btn-lg w-full *:last:opacity-0 hover:*:opacity-100">
-          <PocketIcon :image="pocket.icon" class="size-9 " />
+          <PocketIcon :url="pocket.icon" class="size-9 " />
           <span class="grow text-start">
             {{ pocket.name }}
           </span>

@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Galio/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Periodically, Galio's next basic attack is empowered to have an uncancellable windup, gain 40% bonus attack speed and deal 15 - 115 (based on level) (+ 100% AD) (+ 45% AP) (+ 60% bonus magic resistance) modified magic damage to the target and all enemies near them.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, Galio's next basic attack is empowered to have an uncancellable windup, gain 40% bonus attack speed and deal 15 - 115 (based on level) (+ 100% AD) (+ 45% AP) (+ 60% bonus magic resistance) modified magic damage to the target and all enemies near them.</p></div>",
             "leveling": []
           },
           {
@@ -154,7 +154,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Galio/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Galio creates two windblasts 250 units to either side of him that arc out before converging to the target location, dealing magic damage to all enemies they pass through.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Galio creates two windblasts 250 units to either side of him that arc out before converging to the target location, dealing magic damage to all enemies they pass through.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -254,7 +254,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Galio/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Galio gains Anti-Magic Bulwark, and restores it after 12 / 10 / 8 (based on level) seconds without taking damage.Anti-Magic Bulwark: Gain a shield that absorbs magic damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Galio gains Anti-Magic Bulwark, and restores it after 12 / 10 / 8 (based on level) seconds without taking damage.Anti-Magic Bulwark: Gain a shield that absorbs magic damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Shield Strength",
@@ -276,7 +276,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Galio charges for up to 2 seconds, slowing himself by 15%, and gaining magic damage reduction and half of that amount as physical damage reduction; charging increases Shield of Durand's radius, damage and taunt duration over the first 1.25 seconds of the channel.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Galio charges for up to 2 seconds, slowing himself by 15%, and gaining magic damage reduction and half of that amount as physical damage reduction; charging increases Shield of Durand's radius, damage and taunt duration over the first 1.25 seconds of the channel.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage Reduction",
@@ -367,7 +367,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Galio refreshes the damage reduction for 2 seconds and deals magic damage to nearby enemy champions, increased by 0% - 200% (based on channel time), as well as taunts them for 0.5 - 1.5 (based on channel time) seconds and, after a brief delay, sets their movement speed to a static 60 for the same duration but slightly longer.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Galio refreshes the damage reduction for 2 seconds and deals magic damage to nearby enemy champions, increased by 0% - 200% (based on channel time), as well as taunts them for 0.5 - 1.5 (based on channel time) seconds and, after a brief delay, sets their movement speed to a static 60 for the same duration but slightly longer.</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -480,7 +480,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Galio/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Galio steps backwards in the opposite direction over the cast time, then dashes to the target location until he hits an enemy champion or terrain.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Galio steps backwards in the opposite direction over the cast time, then dashes to the target location until he hits an enemy champion or terrain.</p></div>",
             "leveling": []
           },
           {
@@ -601,7 +601,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Galio/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Galio prepares to make an entrance, channeling for 2.75 seconds and designating the target allied champion's location at the time of cast as his landing spot. Additionally, he resets Shield of Durand's passive shield for himself and grants it to all allied champions within the area for 5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Galio prepares to make an entrance, channeling for 2.75 seconds and designating the target allied champion's location at the time of cast as his landing spot. Additionally, he resets Shield of Durand's passive shield for himself and grants it to all allied champions within the area for 5 seconds.</p></div>",
             "leveling": []
           },
           {

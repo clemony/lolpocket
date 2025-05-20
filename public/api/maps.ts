@@ -32,11 +32,13 @@ export const gameMaps = [
   {
     "mapId": 11,
     "mapName": "Summoner's Rift",
+    "nameId": "SR",
     "notes": "Current Version"
   },
   {
     "mapId": 12,
     "mapName": "Howling Abyss",
+    "nameId": "ARAM",
     "notes": "ARAM map"
   },
   {
@@ -77,6 +79,7 @@ export const gameMaps = [
   {
     "mapId": 30,
     "mapName": "Rings of Wrath",
+    "nameId": "Arena",
     "notes": "Arena map"
   }
 ]

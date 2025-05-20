@@ -7,7 +7,6 @@ export const statTotalGold = [
     icon: '',
     class: '',
     bgClass: '',
-    hoverClass: '',
   },
 ]
 export const itemStats = [
@@ -15,12 +14,11 @@ export const itemStats = [
     id: 'abilityHaste',
     displayName: 'Ability Haste',
     checked: false,
-    shortName: 'Cooldown_reduction_icon',
+    shortName: 'AH',
     icon: 'ah',
     class: '',
     color: '**:text-platinum',
-    bgClass: 'bg-inspiration text-white',
-    hoverClass: 'hover:bg-inspiration-light/60',
+    bgClass: 'bg-platinum text-white',
   },
   {
     id: 'abilityPower',
@@ -31,7 +29,6 @@ export const itemStats = [
     class: '',
  color: '**:text-diamond',
     bgClass: 'bg-sorcery text-white',
-    hoverClass: 'hover:bg-sorcery-light/60',
   },
   {
     id: 'armor',
@@ -41,8 +38,7 @@ export const itemStats = [
     icon: 'armor',
     class: '',
  color: '**:text-precision',
-    bgClass: 'bg-precision text-white',
-    hoverClass: 'hover:bg-precision-w600/60',
+    bgClass: 'bg-precision  **:!text-bc  !text-bc',
   },
   {
     id: 'armorPenetration',
@@ -52,8 +48,7 @@ export const itemStats = [
     icon: 'armor-pen',
     class: '',
  color: '**:text-fighter',
-    bgClass: 'bg-precision text-white',
-    hoverClass: 'hover:bg-precision-w600/60',
+    bgClass: 'bg-fighter text-white',
   },
   {
     id: 'attackDamage',
@@ -63,8 +58,7 @@ export const itemStats = [
     icon: 'ad',
     class: '',
  color: '**:text-fighter',
-    bgClass: 'bg-precision text-white',
-    hoverClass: 'hover:bg-precision-w600/60',
+    bgClass: 'bg-fighter text-white',
   },
   {
     id: 'attackSpeed',
@@ -74,8 +68,7 @@ export const itemStats = [
     icon: 'as',
     class: '',
  color: '**:text-precision',
-    bgClass: 'bg-precision text-white',
-    hoverClass: 'hover:bg-precision-w600/60',
+    bgClass: 'bg-precision **:!text-bc  !text-bc',
   },
   {
     id: 'criticalStrikeChance',
@@ -86,7 +79,6 @@ export const itemStats = [
     class: '',
  color: '**:text-domination',
     bgClass: 'bg-domination text-white',
-    hoverClass: 'hover:bg-domination-light/60',
   },
   {
     id: 'goldPer10',
@@ -96,8 +88,7 @@ export const itemStats = [
     icon: 'gold',
     class: '',
  color: '**:text-precision',
-    bgClass: 'bg-precision text-white',
-    hoverClass: 'hover:bg-precision-w600/60',
+    bgClass: 'bg-precision **:!text-bc  !text-bc',
   },
   {
     id: 'healAndShieldPower',
@@ -107,8 +98,7 @@ export const itemStats = [
     icon: 'hsp',
     class: '',
  color: '**:text-platinum',
-    bgClass: 'bg-inspiration text-white',
-    hoverClass: 'hover:bg-inspiration-light/60',
+    bgClass: 'bg-platinum text-white',
   },
   {
     id: 'health',
@@ -118,8 +108,7 @@ export const itemStats = [
     icon: 'health',
     class: '',
  color: '**:text-emerald',
-    bgClass: 'bg-resolve text-white',
-    hoverClass: 'hover:bg-resolve-light/60',
+    bgClass: 'bg-emerald text-white',
   },
   {
     id: 'healthRegen',
@@ -129,8 +118,7 @@ export const itemStats = [
     icon: 'hp',
     class: '',
  color: '**:text-emerald',
-    bgClass: 'bg-resolve text-white',
-    hoverClass: 'hover:bg-resolve-light/60',
+    bgClass: 'bg-emerald text-white',
   },
   {
     id: 'lethality',
@@ -141,7 +129,6 @@ export const itemStats = [
     class: '',
  color: '**:text-domination',
     bgClass: 'bg-domination text-white',
-    hoverClass: 'hover:bg-domination-light/60',
   },
   {
     id: 'lifesteal',
@@ -152,7 +139,6 @@ export const itemStats = [
     class: '',
  color: '**:text-domination',
     bgClass: 'bg-domination text-white',
-    hoverClass: 'hover:bg-domination-light/60',
   },
   {
     id: 'percentMagicPenetration',
@@ -163,7 +149,6 @@ export const itemStats = [
     class: '',
  color: '**:text-diamond',
     bgClass: 'Magic_penetration_icon',
-    hoverClass: 'hover:bg-sorcery-light/60',
   },
   {
     id: 'flatMagicPenetration',
@@ -176,7 +161,6 @@ export const itemStats = [
     class: '',
  color: '**:text-diamond',
     bgClass: 'bg-sorcery text-white',
-    hoverClass: 'hover:bg-sorcery-light/60',
   },
   {
     id: 'magicResistance',
@@ -187,7 +171,6 @@ export const itemStats = [
     class: '',
  color: '**:text-diamond',
     bgClass: 'bg-sorcery text-white',
-    hoverClass: 'hover:bg-sorcery-light/60',
   },
   {
     id: 'mana',
@@ -197,8 +180,7 @@ export const itemStats = [
     icon: 'mana',
     class: '',
  color: '**:text-platinum',
-    bgClass: 'mana',
-    hoverClass: 'hover:bg-inspiration-light/60',
+    bgClass: 'bg-platinum  text-white',
   },
   {
     id: 'manaRegen',
@@ -209,8 +191,7 @@ export const itemStats = [
     icon: 'mana-regen',
     class: '',
  color: '**:text-platinum',
-    bgClass: 'bg-inspiration text-white',
-    hoverClass: 'hover:bg-inspiration-light/60',
+    bgClass: 'bg-platinum text-white',
   },
 
   {
@@ -221,8 +202,7 @@ export const itemStats = [
     icon: 'ms',
     class: '',
  color: '**:text-platinum',
-    bgClass: 'bg-b2/60',
-    hoverClass: 'hover:bg-b2/60',
+    bgClass: 'bg-b2/60 **:!text-bc  !text-bc',
   },
   {
     id: 'flatMovespeed',
@@ -232,8 +212,7 @@ export const itemStats = [
     icon: 'ms',
     class: '',
  color: '**:text-platinum',
-    bgClass: 'bg-b2/60',
-    hoverClass: 'hover:bg-b2/60',
+    bgClass: 'bg-b2/60  **:!text-bc  !text-bc',
   },
   {
     id: 'criticalStrikeDamage',
@@ -244,7 +223,6 @@ export const itemStats = [
     class: '',
  color: '**:text-domination',
     bgClass: 'bg-precision/60',
-    hoverClass: 'hover:bg-b2/60',
   },
   {
     id: 'tenacity',
@@ -254,8 +232,7 @@ export const itemStats = [
     icon: 'crit-dmg',
     class: '',
  color: '**:text-platinum',
-    bgClass: 'bg-precision/60',
-    hoverClass: 'hover:bg-b2/60',
+    bgClass: 'bg-platinum/60',
   },
 
 ]

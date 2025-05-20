@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiora/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Fiora identifies the Vitals of nearby visible enemy champions, marked as an arc around them in North-, East-, South- or Westward direction. Vitals take 1.75 seconds to become targetable and linger for 13.25 seconds afterwards while Fiora remains near the target, otherwise the Vital will disappear. After a Vital ends, Fiora identifies a new one on her target.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Fiora identifies the Vitals of nearby visible enemy champions, marked as an arc around them in North-, East-, South- or Westward direction. Vitals take 1.75 seconds to become targetable and linger for 13.25 seconds afterwards while Fiora remains near the target, otherwise the Vital will disappear. After a Vital ends, Fiora identifies a new one on her target.</p></div>",
             "leveling": []
           },
           {
@@ -141,7 +141,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiora/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Fiora dashes in the target direction, then stabs a nearby enemy. Lunge can hit structures and wards. Stabbing a target reduces Lunge's cooldown by 50%.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Fiora dashes in the target direction, then stabs a nearby enemy. Lunge can hit structures and wards. Stabbing a target reduces Lunge's cooldown by 50%.</p></div>",
             "leveling": []
           },
           {
@@ -241,7 +241,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiora/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Fiora enters a defensive stance for 0.75 seconds, becoming unable to act, preventing all incoming non- turret damage, and gaining debuff immunity and crowd control immunity.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Fiora enters a defensive stance for 0.75 seconds, becoming unable to act, preventing all incoming non- turret damage, and gaining debuff immunity and crowd control immunity.</p></div>",
             "leveling": []
           },
           {
@@ -337,7 +337,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiora/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Fiora empowers her next two basic attacks on-attack within 4 seconds to gain 25 bonus range and bonus attack speed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Fiora empowers her next two basic attacks on-attack within 4 seconds to gain 25 bonus range and bonus attack speed.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -443,7 +443,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiora/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Duelist's Dance's bonus movement speed is increased.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Duelist's Dance's bonus movement speed is increased.</p></div>",
             "leveling": [
               {
                 "attribute": "Additional Bonus Movement Speed",
@@ -463,7 +463,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Fiora challenges the target enemy champion for 8 seconds, highlighting all four of their Vitals after a 0.5-second delay. While in effect, Duelist's Dance does not identify new Vitals on Fiora's target.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Fiora challenges the target enemy champion for 8 seconds, highlighting all four of their Vitals after a 0.5-second delay. While in effect, Duelist's Dance does not identify new Vitals on Fiora's target.</p></div>",
             "leveling": []
           },
           {

@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KogMaw/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Upon taking fatal damage, Kog'Maw enters a zombie state for 4 seconds, becoming ghosted and gaining 10% bonus movement speed that increases up to 50% over the duration. At the end of the duration, he explodes to deal 140 - 650 (based on level) true damage to nearby enemies.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Upon taking fatal damage, Kog'Maw enters a zombie state for 4 seconds, becoming ghosted and gaining 10% bonus movement speed that increases up to 50% over the duration. At the end of the duration, he explodes to deal 140 - 650 (based on level) true damage to nearby enemies.</p></div>",
             "leveling": []
           },
           {
@@ -142,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KogMaw/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Kog'Maw gains bonus attack speed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Kog'Maw gains bonus attack speed.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -164,7 +164,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kog'Maw ejects a wad of spittle in the target direction that deals magic damage to the first enemy hit and reduces their armor and magic resistance for 4 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kog'Maw ejects a wad of spittle in the target direction that deals magic damage to the first enemy hit and reduces their armor and magic resistance for 4 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -265,7 +265,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KogMaw/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kog'Maw empowers his basic attacks for the next 8 seconds to gain bonus attack range and deal bonus magic damage on-hit, capped at 100 against minions and monsters.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kog'Maw empowers his basic attacks for the next 8 seconds to gain bonus attack range and deal bonus magic damage on-hit, capped at 100 against minions and monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Range",
@@ -366,7 +366,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KogMaw/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kog'Maw spews a gob of ooze in the target direction that deals magic damage to enemies hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kog'Maw spews a gob of ooze in the target direction that deals magic damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -476,7 +476,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KogMaw/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kog'Maw spits a globule of acid into the air that drops to the target location after 0.6 seconds, granting sight of the area before dealing magic damage to enemies hit and revealing them for 2 seconds. Living Artillery's damage is increased by 0% - 50% (based on target's missing health), or instead by 100% if the target is below 40% maximum health.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kog'Maw spits a globule of acid into the air that drops to the target location after 0.6 seconds, granting sight of the area before dealing magic damage to enemies hit and revealing them for 2 seconds. Living Artillery's damage is increased by 0% - 50% (based on target's missing health), or instead by 100% if the target is below 40% maximum health.</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -547,7 +547,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Living Artillery:</p><p> For each stack, Living Artillery's mana cost is increased by 40.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Living Artillery:</p><p> For each stack, Living Artillery's mana cost is increased by 40.</p></div>",
             "leveling": []
           }
         ],

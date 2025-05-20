@@ -101,15 +101,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jax/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Jax's basic attacks generate a stack of Relentless Assault on-attack for 2.5 seconds, refreshing on subsequent attacks and stacking up to 8 times. Stacks expire by one every 0.25 seconds when the duration ends.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Jax's basic attacks generate a stack of Relentless Assault on-attack for 2.5 seconds, refreshing on subsequent attacks and stacking up to 8 times. Stacks expire by one every 0.25 seconds when the duration ends.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Relentless Assault:</p><p> For each stack, Jax gains 3.5% - 11% (based on level) bonus attack speed, up to a maximum of 28% - 88% (based on level).</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Relentless Assault:</p><p> For each stack, Jax gains 3.5% - 11% (based on level) bonus attack speed, up to a maximum of 28% - 88% (based on level).</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Grandmaster at Angling:</p><p> While out-of-combat with champions and idle in the river for 10 seconds, Jax will occasionally catch a fish, granting him 1 and 1 ability power for 5 seconds. He catches a fish at an average rate of one every 15 seconds. He also has a 5% chance to catch a rare fish that grants 10 and 10 ability power for 5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Grandmaster at Angling:</p><p> While out-of-combat with champions and idle in the river for 10 seconds, Jax will occasionally catch a fish, granting him 1 and 1 ability power for 5 seconds. He catches a fish at an average rate of one every 15 seconds. He also has a 5% chance to catch a rare fish that grants 10 and 10 ability power for 5 seconds.</p></div>",
             "leveling": []
           }
         ],
@@ -149,7 +149,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jax/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jax dashes to the target unit's location.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jax dashes to the target unit's location.</p></div>",
             "leveling": []
           },
           {
@@ -245,7 +245,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jax/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jax empowers his next basic attack or Leap Strike against an enemy within 10 seconds to deal bonus magic damage, reduced to 50% against structures. If Empower is used on a basic attack, it will gain 50 bonus range and have an uncancellable windup.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jax empowers his next basic attack or Leap Strike against an enemy within 10 seconds to deal bonus magic damage, reduced to 50% against structures. If Empower is used on a basic attack, it will gain 50 bonus range and have an uncancellable windup.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -337,11 +337,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jax/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jax enters Evasion for 2 seconds: a defensive stance that causes him to dodge all incoming non- turret basic attacks and take 25% reduced damage from all area of effect abilities from champions. Counter Strike can be recast after 1 second, and does so automatically after the duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jax enters Evasion for 2 seconds: a defensive stance that causes him to dodge all incoming non- turret basic attacks and take 25% reduced damage from all area of effect abilities from champions. Counter Strike can be recast after 1 second, and does so automatically after the duration.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Jax deals magic damage to nearby enemies, with the total damage increased by 20% for each attack dodged, up to a 100% increase, and stuns them for 1 second.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Jax deals magic damage to nearby enemies, with the total damage increased by 20% for each attack dodged, up to a 100% increase, and stuns them for 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -474,7 +474,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jax/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Jax's basic attacks generate a stack of Grandmaster-At-Arms on-hit for 2.5 seconds, refreshing on subsequent hits and stacking up to 2 times. At 2 stacks, his next basic attack on-hit is empowered to consume them all to deal bonus magic damage, reduced to 50% against structures. While Grandmaster-At-Arms is active, the empowered attack triggers at 1 stack instead.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Jax's basic attacks generate a stack of Grandmaster-At-Arms on-hit for 2.5 seconds, refreshing on subsequent hits and stacking up to 2 times. At 2 stacks, his next basic attack on-hit is empowered to consume them all to deal bonus magic damage, reduced to 50% against structures. While Grandmaster-At-Arms is active, the empowered attack triggers at 1 stack instead.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -502,7 +502,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jax swings his lantern around, dealing magic damage to nearby enemies. If this hits a champion, he gains bonus armor, increased for each champion hit beyond the first, and bonus magic resistance equal to 60% of that amount as well as 10% increased size for 8 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jax swings his lantern around, dealing magic damage to nearby enemies. If this hits a champion, he gains bonus armor, increased for each champion hit beyond the first, and bonus magic resistance equal to 60% of that amount as well as 10% increased size for 8 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

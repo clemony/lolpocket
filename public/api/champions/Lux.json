@@ -102,7 +102,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lux/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Lux's abilities apply a mark to enemies hit for 6 seconds, refreshing on subsequent hits. Lux's basic attacks and Final Spark consume the mark to deal 30 - 200 (based on level) (+ 30% AP) bonus magic damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Lux's abilities apply a mark to enemies hit for 6 seconds, refreshing on subsequent hits. Lux's basic attacks and Final Spark consume the mark to deal 30 - 200 (based on level) (+ 30% AP) bonus magic damage.</p></div>",
             "leveling": []
           }
         ],
@@ -142,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lux/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Lux shoots a sphere of light in the target direction that deals magic damage to the first two enemies hit and roots them for 2 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Lux shoots a sphere of light in the target direction that deals magic damage to the first two enemies hit and roots them for 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -230,7 +230,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lux/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Lux throws her wand in the target direction that homes back to her after reaching maximum range. Allied champions hit by the wand gain a shield for 2.5 seconds, which can stack up to 2 times, stacking with the previous shield and refreshing its duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Lux throws her wand in the target direction that homes back to her after reaching maximum range. Allied champions hit by the wand gain a shield for 2.5 seconds, which can stack up to 2 times, stacking with the previous shield and refreshing its duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -351,7 +351,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lux/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Lux sends a lucent singularity to the target location, remaining there for 5 seconds to grant sight of the area and slow nearby enemies.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Lux sends a lucent singularity to the target location, remaining there for 5 seconds to grant sight of the area and slow nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -377,7 +377,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Lux detonates the singularity, dealing magic damage to enemies within. If Lucent Singularity was recast while in flight, it will detonate upon arrival.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Lux detonates the singularity, dealing magic damage to enemies within. If Lucent Singularity was recast while in flight, it will detonate upon arrival.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -473,7 +473,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lux/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Lux fires a massive laser in a line in the target direction that deals magic damage to enemies hit and reveals them for 1.5 seconds, as well as granting sight of the surrounding area.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Lux fires a massive laser in a line in the target direction that deals magic damage to enemies hit and reveals them for 1.5 seconds, as well as granting sight of the surrounding area.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

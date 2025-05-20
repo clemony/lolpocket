@@ -96,7 +96,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Zed's basic attacks against targets below 50% maximum health are empowered to deal 6 / 8 / 10% (based on level) of the target's maximum health as bonus magic damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Zed's basic attacks against targets below 50% maximum health are empowered to deal 6 / 8 / 10% (based on level) of the target's maximum health as bonus magic damage.</p></div>",
             "leveling": []
           },
           {
@@ -144,7 +144,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zed throws a shuriken in the target direction that deals physical damage to enemies hit, reduced to 60% against targets beyond the first.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zed throws a shuriken in the target direction that deals physical damage to enemies hit, reduced to 60% against targets beyond the first.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -257,7 +257,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Zed restores energy whenever he and his Shadows or multiple Shadows hit an ability on the same target. This may only occur once per cast ability.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Zed restores energy whenever he and his Shadows or multiple Shadows hit an ability on the same target. This may only occur once per cast ability.</p></div>",
             "leveling": [
               {
                 "attribute": "Energy Restored",
@@ -279,11 +279,11 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zed creates a Shadow that dashes to the target location and remains there for 5.25 seconds, being able to mimic Razor Shuriken and Shadow Slash regardless of range. Living Shadow can be recast while within range of the Shadow.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zed creates a Shadow that dashes to the target location and remains there for 5.25 seconds, being able to mimic Razor Shuriken and Shadow Slash regardless of range. Living Shadow can be recast while within range of the Shadow.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Zed and the Shadow blink to swap places. If Living Shadow was recast while the Shadow is dashing, the recast will instead occur once it has been placed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Zed and the Shadow blink to swap places. If Living Shadow was recast while the Shadow is dashing, the recast will instead occur once it has been placed.</p></div>",
             "leveling": []
           },
           {
@@ -353,7 +353,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zed slashes to deal physical damage to nearby enemies.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zed slashes to deal physical damage to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -484,7 +484,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zed becomes untargetable and, after a 0.6-second delay, he dashes to 125 units beyond the target enemy champion from his position at the end of the delay over 0.35 seconds. Afterwards, he becomes targetable again, renders the target Marked for Death for 3 seconds, and gains ghosting for the same duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zed becomes untargetable and, after a 0.6-second delay, he dashes to 125 units beyond the target enemy champion from his position at the end of the delay over 0.35 seconds. Afterwards, he becomes targetable again, renders the target Marked for Death for 3 seconds, and gains ghosting for the same duration.</p></div>",
             "leveling": []
           },
           {
@@ -492,7 +492,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Marked for Death:</p><p> Zed stores a portion of all pre-mitigation physical damage and magic damage he and his Shadows deal to the target, detonating at the end of the duration to deal physical damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Marked for Death:</p><p> Zed stores a portion of all pre-mitigation physical damage and magic damage he and his Shadows deal to the target, detonating at the end of the duration to deal physical damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -520,7 +520,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Zed and the Shadow blink to swap places.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Zed and the Shadow blink to swap places.</p></div>",
             "leveling": []
           },
           {

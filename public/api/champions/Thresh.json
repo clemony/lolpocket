@@ -99,11 +99,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Thresh/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Thresh's armor does not increase through growth (per level).</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Thresh's armor does not increase through growth (per level).</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Enemy champions, large minions and large monsters that die near Thresh drop a Soul for 8 seconds. Epic monsters drop 2 Souls while lesser minions and monsters have a 33.3% chance to drop a Soul.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Enemy champions, large minions and large monsters that die near Thresh drop a Soul for 8 seconds. Epic monsters drop 2 Souls while lesser minions and monsters have a 33.3% chance to drop a Soul.</p></div>",
             "leveling": []
           },
           {
@@ -111,7 +111,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Soul:</p><p> For each stack, Thresh gains 1 ability power and 1 bonus armor.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Soul:</p><p> For each stack, Thresh gains 1 ability power and 1 bonus armor.</p></div>",
             "leveling": []
           }
         ],
@@ -151,7 +151,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Thresh/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Thresh throws out his scythe in the target direction, becoming unable to move or attack while it is in flight.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Thresh throws out his scythe in the target direction, becoming unable to move or attack while it is in flight.</p></div>",
             "leveling": []
           },
           {
@@ -189,7 +189,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast - Deathly Leap:</p><p> Thresh stops tugging his hook and dashes to the Shackled enemy, becoming able to attack again upon arrival. He can cast Dark Passage and Flay during the dash.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast - Deathly Leap:</p><p> Thresh stops tugging his hook and dashes to the Shackled enemy, becoming able to attack again upon arrival. He can cast Dark Passage and Flay during the dash.</p></div>",
             "leveling": []
           }
         ],
@@ -251,7 +251,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Thresh/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Thresh throws his lantern to the target location over 0.5 seconds, lasting for 6 seconds while he remains nearby and granting sight of its surroundings. If Thresh moves too far away from the lantern, it returns back to him immediately.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Thresh throws his lantern to the target location over 0.5 seconds, lasting for 6 seconds while he remains nearby and granting sight of its surroundings. If Thresh moves too far away from the lantern, it returns back to him immediately.</p></div>",
             "leveling": []
           },
           {
@@ -351,7 +351,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Thresh/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Thresh's basic attacks are empowered to deal bonus magic damage, with the AD ratio increasing over 10 seconds without basic attacking enemies.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Thresh's basic attacks are empowered to deal bonus magic damage, with the AD ratio increasing over 10 seconds without basic attacking enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Bonus Magic Damage",
@@ -402,7 +402,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Thresh sweeps his chain across the ground in a broad line and a radius around him, starting behind him and towards the target direction. Enemies hit are dealt magic damage and knocked 200 units in the target direction, and then are slowed for 1 second.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Thresh sweeps his chain across the ground in a broad line and a radius around him, starting behind him and towards the target direction. Enemies hit are dealt magic damage and knocked 200 units in the target direction, and then are slowed for 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -511,7 +511,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Thresh/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Thresh erects a pentagon of spectral walls around him that each last for 5 seconds. A wall will break upon enemy champion contact, dealing magic damage and slowing them by 99% for 2 seconds. After the first wall breaks, the rest will deal no damage and slow for only 1 second.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Thresh erects a pentagon of spectral walls around him that each last for 5 seconds. A wall will break upon enemy champion contact, dealing magic damage and slowing them by 99% for 2 seconds. After the first wall breaks, the rest will deal no damage and slow for only 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

@@ -2,12 +2,8 @@
   "Basic",
   "Boots",
   "Consumable",
-  "Distributed",
   "Epic",
   "Legendary",
-  "Minion",
-  "Potion",
-  "Starter",
-  "Trinket",
-  "Turret"
+  "Special",
+  "Starter"
 ]

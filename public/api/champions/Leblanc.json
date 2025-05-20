@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leblanc/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Periodically, when LeBlanc is damaged to 40% maximum health, she creates a clone of herself, after which they both instantly become invisible for 1 second.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, when LeBlanc is damaged to 40% maximum health, she creates a clone of herself, after which they both instantly become invisible for 1 second.</p></div>",
             "leveling": []
           },
           {
@@ -157,7 +157,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leblanc/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> LeBlanc projects an orb at the target enemy that deals magic damage and marks them for 3.5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> LeBlanc projects an orb at the target enemy that deals magic damage and marks them for 3.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -275,7 +275,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leblanc/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> LeBlanc dashes to the target location, dealing magic damage to all nearby enemies upon arrival and leaving a return pad at the cast location for 4 seconds. Distortion can be recast after 0.2 seconds of the dash ending for the pad's duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> LeBlanc dashes to the target location, dealing magic damage to all nearby enemies upon arrival and leaving a return pad at the cast location for 4 seconds. Distortion can be recast after 0.2 seconds of the dash ending for the pad's duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -305,7 +305,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> LeBlanc blinks to Distortion's return pad, regardless of range.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> LeBlanc blinks to Distortion's return pad, regardless of range.</p></div>",
             "leveling": []
           },
           {
@@ -375,7 +375,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leblanc/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> LeBlanc flings an illusory chain in the target direction that deals magic damage to the first enemy it hits and forms a tether between LeBlanc and the target for 1.5 seconds, during which they are revealed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> LeBlanc flings an illusory chain in the target direction that deals magic damage to the first enemy it hits and forms a tether between LeBlanc and the target for 1.5 seconds, during which they are revealed.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -518,11 +518,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leblanc/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> LeBlanc casts a mimicked version of her most recently used basic ability, applying the same effects and dealing modified magic damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> LeBlanc casts a mimicked version of her most recently used basic ability, applying the same effects and dealing modified magic damage.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Mimic:</p><p> Sigil of Malice: The orb deals modified damage, while the mark consumption deals double that amount.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Mimic:</p><p> Sigil of Malice: The orb deals modified damage, while the mark consumption deals double that amount.</p></div>",
             "leveling": [
               {
                 "attribute": "Orb Magic Damage",
@@ -596,7 +596,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Mimic:</p><p> Distortion: Deals modified damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Mimic:</p><p> Distortion: Deals modified damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -624,7 +624,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Mimic:</p><p> Ethereal Chains: The tether's application deals modified damage, while its fracturing deals double that amount.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Mimic:</p><p> Ethereal Chains: The tether's application deals modified damage, while its fracturing deals double that amount.</p></div>",
             "leveling": [
               {
                 "attribute": "Application Magic Damage",

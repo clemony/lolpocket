@@ -16,19 +16,14 @@ const { data } = await useFetch('/api/items-lite.json')
     <div class="divider divider-start after:h-px  after:bg-nc/30">
       RECIPE
     </div>
-    <div class="group flex items-center justify-center py-1 gap-4">
+    <div class="group flex items-center justify-center py-2 gap-4">
     
         <template
           v-for="(component, i) in from"
           :key="i">
-          <button
+          <LazyPopoverItem :item="component"
             v-tippy="`${data[component].name} ‑ ${data[component].cost}g`"
-            class="ring-accent  size-10 overflow-hidden rounded-lg shadow-sm hover:ring-2  hover:ring-offset-2 hover:ring-offset-b1/30 tldr-20">
-            <Image
-              v-if="component"
-              :image="`/img/item/${component}.webp`"
-              :alt="`${component}image`" />
-          </button>
+            class="ring-accent  size-10 overflow-hidden rounded-lg shadow-sm hover:ring-2  hover:ring-offset-2 hover:ring-offset-b1/30 tldr-20"/>
 
           <icon
             name="add-sm"

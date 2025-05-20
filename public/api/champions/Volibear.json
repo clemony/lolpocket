@@ -97,15 +97,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Volibear/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Whenever Volibear damages at least one enemy with a basic attack or ability, he generates a stack of The Relentless Storm for 6 seconds, refreshing on subsequent damage and stacking up to 5 times. At 5 stacks, Volibear gains Lightning Claws.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Whenever Volibear damages at least one enemy with a basic attack or ability, he generates a stack of The Relentless Storm for 6 seconds, refreshing on subsequent damage and stacking up to 5 times. At 5 stacks, Volibear gains Lightning Claws.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">The Relentless Storm:</p><p> For each stack, Volibear gains 5% (+ 4% per 100 AP) bonus attack speed, up to 25% (+ 20% per 100 AP).</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">The Relentless Storm:</p><p> For each stack, Volibear gains 5% (+ 4% per 100 AP) bonus attack speed, up to 25% (+ 20% per 100 AP).</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Lightning Claws:</p><p> Volibear's claws ignite with lightning, empowering his basic attacks on-hit to deal 11 - 60 (based on level) (+ 50% AP) bonus magic damage to the target and the nearest visible enemy within 450 units of the target, chaining up to 4 subsequent targets.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Lightning Claws:</p><p> Volibear's claws ignite with lightning, empowering his basic attacks on-hit to deal 11 - 60 (based on level) (+ 50% AP) bonus magic damage to the target and the nearest visible enemy within 450 units of the target, chaining up to 4 subsequent targets.</p></div>",
             "leveling": []
           }
         ],
@@ -145,7 +145,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Volibear/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Volibear drops on all fours, becoming ghosted and gaining bonus movement speed for 4 seconds, doubled while facing a visible enemy champion within 2000 units.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Volibear drops on all fours, becoming ghosted and gaining bonus movement speed for 4 seconds, doubled while facing a visible enemy champion within 2000 units.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -280,7 +280,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Volibear/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Volibear slashes the target enemy with his claws to deal physical damage, apply on-hit effects, trigger on-attack effects, and mark the target Wounded for 8 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Volibear slashes the target enemy with his claws to deal physical damage, apply on-hit effects, trigger on-attack effects, and mark the target Wounded for 8 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -318,7 +318,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Wounded Bonus:</p><p> If the target is already Wounded, Volibear takes a bite out of them instead, dealing 50% (+ 15% per 100 bonus AD) increased damage and healing himself. The heal is halved against minions.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Wounded Bonus:</p><p> If the target is already Wounded, Volibear takes a bite out of them instead, dealing 50% (+ 15% per 100 bonus AD) increased damage and healing himself. The heal is halved against minions.</p></div>",
             "leveling": [
               {
                 "attribute": "Heal",
@@ -443,7 +443,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Volibear/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Volibear summons a lightning bolt to strike at the target location after a 2-second delay, granting sight of the area for 1 second after the first second of the delay. If Volibear is within the strike, he gains a shield equal to 14% of his maximum health (+ 75% AP) for 3 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Volibear summons a lightning bolt to strike at the target location after a 2-second delay, granting sight of the area for 1 second after the first second of the delay. If Volibear is within the strike, he gains a shield equal to 14% of his maximum health (+ 75% AP) for 3 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -543,11 +543,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Volibear/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Volibear gains Stormbringer for 12 seconds and leaps to the target location with displacement immunity, granting sight of the area in a 500 radius during the travel.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Volibear gains Stormbringer for 12 seconds and leaps to the target location with displacement immunity, granting sight of the area in a 500 radius during the travel.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Stormbringer:</p><p> Volibear gains ghosting, bonus health, 50 bonus attack range, 25 increased range on Frenzied Maul, and 35% increased size.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Stormbringer:</p><p> Volibear gains ghosting, bonus health, 50 bonus attack range, 25 increased range on Frenzied Maul, and 35% increased size.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Health",

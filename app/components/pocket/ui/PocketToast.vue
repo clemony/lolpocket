@@ -15,7 +15,7 @@ onMounted(() => {
 <template>
   <div class="flex gap-3">
     <PocketIcon
-      :pocket="pocket"
+      :pocket="pocket" :url="pocket.icon"
       class="rounded-md **:rounded-md"
     />
     <div class="flex flex-col gap-3">

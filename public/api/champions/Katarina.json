@@ -91,11 +91,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Scoring a champion takedown within 3 seconds of damaging them will reduce the current cooldowns of Katarina's abilities by 15 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Scoring a champion takedown within 3 seconds of damaging them will reduce the current cooldowns of Katarina's abilities by 15 seconds.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Sinister Steel:</p><p> Whenever Katarina retrieves a Dagger, she slashes around herself to deal 68 - 240 (based on level) (+ 60% bonus AD) (+ 70 / 80 / 90 / 100% (based on level) AP) magic damage to nearby enemies, apply on-hit effects to enemy champions hit, and reduce Shunpo's current cooldown by 78 / 84 / 90 / 96% (based on level) of its total cooldown.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate - Sinister Steel:</p><p> Whenever Katarina retrieves a Dagger, she slashes around herself to deal 68 - 240 (based on level) (+ 60% bonus AD) (+ 70 / 80 / 90 / 100% (based on level) AP) magic damage to nearby enemies, apply on-hit effects to enemy champions hit, and reduce Shunpo's current cooldown by 78 / 84 / 90 / 96% (based on level) of its total cooldown.</p></div>",
             "leveling": []
           },
           {
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Katarina throws a Dagger at the target enemy that deals magic damage and can bounce to up to two additional nearby enemies.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Katarina throws a Dagger at the target enemy that deals magic damage and can bounce to up to two additional nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -226,7 +226,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Katarina tosses a Dagger into the air above her current location and gains bonus movement speed that decays until it lands after 1.25 seconds, becoming ghosted for the same duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Katarina tosses a Dagger into the air above her current location and gains bonus movement speed that decays until it lands after 1.25 seconds, becoming ghosted for the same duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement speed",
@@ -297,7 +297,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Katarina blinks to the target location around the target unit or Dagger, dealing magic damage to the nearest enemy in range and applying on-hit effects.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Katarina blinks to the target location around the target unit or Dagger, dealing magic damage to the nearest enemy in range and applying on-hit effects.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -388,7 +388,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Katarina channels for up to 2.5 seconds, rapidly throwing a dagger every 0.166 seconds to up to 3 of the closest nearby enemy champions, revealing herself in the process.Each dagger deals physical damage and magic damage, applies on-hit effects, with on-hit damage reduced in effectiveness, triggers on-attack effects, and inflicts Grievous Wounds on the target for 3 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Katarina channels for up to 2.5 seconds, rapidly throwing a dagger every 0.166 seconds to up to 3 of the closest nearby enemy champions, revealing herself in the process.Each dagger deals physical damage and magic damage, applies on-hit effects, with on-hit damage reduced in effectiveness, triggers on-attack effects, and inflicts Grievous Wounds on the target for 3 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Dagger",

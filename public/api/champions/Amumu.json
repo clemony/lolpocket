@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Amumu/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Amumu's basic attacks and Curse of the Sad Mummy are empowered to mark enemies with Curse for 3 seconds, refreshing on subsequent applications and Despair's per-tick damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Amumu's basic attacks and Curse of the Sad Mummy are empowered to mark enemies with Curse for 3 seconds, refreshing on subsequent applications and Despair's per-tick damage.</p></div>",
             "leveling": []
           },
           {
@@ -144,7 +144,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Amumu/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Amumu throws a bandage in the target direction that deals magic damage to the first enemy hit, stunning them for 1 second and pulling him to them, during which they are revealed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Amumu throws a bandage in the target direction that deals magic damage to the first enemy hit, stunning them for 1 second and pulling him to them, during which they are revealed.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -246,7 +246,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Amumu/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Toggle:</p><p> Amumu cries a continuous pool of tears, dealing magic damage every 0.5 seconds to nearby enemies.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Toggle:</p><p> Amumu cries a continuous pool of tears, dealing magic damage every 0.5 seconds to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",
@@ -330,7 +330,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Amumu/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Amumu reduces every instance of pre-mitigation physical damage taken, capped at 50% of the damage instance.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Amumu reduces every instance of pre-mitigation physical damage taken, capped at 50% of the damage instance.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage Reduction",
@@ -368,7 +368,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Amumu releases his anger, dealing magic damage to nearby enemies.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Amumu releases his anger, dealing magic damage to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -460,7 +460,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Amumu/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Amumu entangles nearby enemies in bandages, dealing magic damage as well as knocking down and stunning them for 1.5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Amumu entangles nearby enemies in bandages, dealing magic damage as well as knocking down and stunning them for 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

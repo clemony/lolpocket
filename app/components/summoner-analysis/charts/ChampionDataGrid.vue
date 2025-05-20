@@ -3,13 +3,14 @@ import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoS
 import type { ColDef, ColGroupDef, GridApi, GridOptions, GridPreDestroyedEvent, GridReadyEvent } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
 import PatchCellRenderer from './chart-comps/PatchCellRenderer.vue'
-
+import ChampionGridIcon from './chart-comps/ChampionGridIcon.vue'
 const { champions } = defineProps<{
   champions: any[]
 }>()
 
 defineExpose({
   PatchCellRenderer,
+  ChampionGridIcon
 })
 
 const cs = useChampStore()
@@ -23,9 +24,6 @@ const gridOptions: GridOptions<any[]> = {
   rowData: championList.value,
   columnHoverHighlight: false,
 
-  autoSizeStrategy: {
-    type: 'fitCellContents',
-  },
   rowSelection: {
     mode: 'multiRow',
     checkboxes: false,
@@ -57,8 +55,8 @@ const gridOptions: GridOptions<any[]> = {
 const colDefs: ColDef<any>[] = [
   {
     headerName: '',
-    field: 'champion.id',
-    cellRenderer: params => `<div class="size-12  rounded-full  drop-shadow-sm shadow-sm"><div class="overflow-hidden size-12 rounded-full"><img src="/img/champion/${params.value}.webp" class="size-full aspect-square rounded-full scale-115" /></div></div>`,
+    field: '',
+    cellRenderer: ChampionGridIcon,
     cellClass: '!py-1 !pr-1 !ml-0',
     sortable: false,
     width: 61,
@@ -68,7 +66,7 @@ const colDefs: ColDef<any>[] = [
   },
 
   {
-    field: 'champion.name',
+    field: 'champion',
     headerName: 'Champion',
     cellDataType: 'text',
     maxWidth: 90,
@@ -154,8 +152,8 @@ const colDefs: ColDef<any>[] = [
     field: 'gameVersions',
     headerName: 'Patch',
     cellDataType: 'text',
-    minWidth: 160,
-    maxWidth: 160,
+    minWidth: 180,
+    maxWidth: 180,
     cellClass: 'font-medium',
     cellRenderer: PatchCellRenderer,
   },
@@ -182,10 +180,10 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowS
 <template>
   <AgGridVue
     :initial-state="cs.dbChampionGridState"
+    class="!size-full stat-grid champion-grid bg-b1 !shadow-black/3 !drop-shadow-black/3 border-shadow-sm     min-w-full "
     :grid-options="gridOptions"
     :theme="theme"
     :column-defs="colDefs"
-    class="!size-full stat-grid champion-grid border-shadow-sm min-w-full"
     :tooltip-show-delay="400"
     @grid-ready="onGridReady">
   </AgGridVue>

@@ -24,7 +24,7 @@
       "combined": 0,
       "sell": 120
     },
-    "purchasable": true,
+    "purchasable": false,
     "tags": []
   },
   "iconOverlay": false,

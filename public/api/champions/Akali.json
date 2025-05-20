@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akali/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> When Akali damages an enemy champion with an ability, she creates a ring around them for 4 seconds, refreshing on subsequent damaging abilities against champions. For 2 seconds, she gains 30 / 40 / 50 / 60% (based on level) bonus movement speed while moving away from the center of the ring. Only one ring may be active at a time.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> When Akali damages an enemy champion with an ability, she creates a ring around them for 4 seconds, refreshing on subsequent damaging abilities against champions. For 2 seconds, she gains 30 / 40 / 50 / 60% (based on level) bonus movement speed while moving away from the center of the ring. Only one ring may be active at a time.</p></div>",
             "leveling": []
           },
           {
@@ -105,7 +105,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Swinging Kama:</p><p> Akali's next basic attack is empowered to have its range doubled and deal 35 - 182 (based on level) (+ 60% bonus AD) (+ 55% AP) bonus magic damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Swinging Kama:</p><p> Akali's next basic attack is empowered to have its range doubled and deal 35 - 182 (based on level) (+ 60% bonus AD) (+ 55% AP) bonus magic damage.</p></div>",
             "leveling": []
           }
         ],
@@ -145,7 +145,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akali/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Akali unleashes kunai in a cone in the target direction, dealing magic damage to enemies hit. Targets beyond a certain range are also slowed by 50% for 0.5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Akali unleashes kunai in a cone in the target direction, dealing magic damage to enemies hit. Targets beyond a certain range are also slowed by 50% for 0.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -241,7 +241,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akali/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Akali restores 100 energy over 0.4 seconds and gains bonus movement speed that decays over 2 seconds. She also detonates a smoke bomb a fixed distance away in the target direction, creating a circular shroud that expands over the next 5 seconds into a ring. The shroud does not permeate terrain, and will expand toward nearby enemy champions. While the shroud is active, Akali's maximum energy is increased by 100.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Akali restores 100 energy over 0.4 seconds and gains bonus movement speed that decays over 2 seconds. She also detonates a smoke bomb a fixed distance away in the target direction, creating a circular shroud that expands over the next 5 seconds into a ring. The shroud does not permeate terrain, and will expand toward nearby enemy champions. While the shroud is active, Akali's maximum energy is increased by 100.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -345,7 +345,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akali/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Akali flips backward and, after the cast time, throws a shuriken in the target direction that deals magic damage to the first enemy hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Akali flips backward and, after the cast time, throws a shuriken in the target direction that deals magic damage to the first enemy hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -387,7 +387,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Akali dashes towards the marked target or smoke section. Against enemies she deals magic damage upon arrival.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Akali dashes towards the marked target or smoke section. Against enemies she deals magic damage upon arrival.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -520,7 +520,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akali/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Akali dashes 750 units in the direction of the target enemy champion, dealing magic damage to enemies she passes through. If this hits an enemy, she flips over them to continue the dash up to the normal range but for at least another 150 units.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Akali dashes 750 units in the direction of the target enemy champion, dealing magic damage to enemies she passes through. If this hits an enemy, she flips over them to continue the dash up to the normal range but for at least another 150 units.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -560,7 +560,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Akali dashes 800 units in the target direction, dealing magic damage to enemies she passes through, increased by 0% - 200% (based on target's missing health).</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Akali dashes 800 units in the target direction, dealing magic damage to enemies she passes through, increased by 0% - 200% (based on target's missing health).</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",

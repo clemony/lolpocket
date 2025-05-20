@@ -7,12 +7,13 @@ const props = defineProps<{
 const pocket = ref(props.pocket)
 
 const itemsLength = computed (() => {
-  if (pocket.value.items.length == 1 && !pocket.value.items[0].items.length) {
-    return 0
-  }
-  else {
-    return pocket.value.items.length
-  }
+
+  const count = ref(0)
+  pocket.value.items.forEach((set) => {
+    if (set.items.length)
+    count.value ++
+  })
+  return count
 })
 </script>
 

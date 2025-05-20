@@ -98,11 +98,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ezreal/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Ezreal generates a stack of Rising Spell Force for each enemy hit by his abilities, lasting for 6 seconds, refreshing on subsequent hits, and stacking up to 5 times.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Ezreal generates a stack of Rising Spell Force for each enemy hit by his abilities, lasting for 6 seconds, refreshing on subsequent hits, and stacking up to 5 times.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Rising Spell Force:</p><p> For each stack, Ezreal gains 10% bonus attack speed, up to a maximum of 50%.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Rising Spell Force:</p><p> For each stack, Ezreal gains 10% bonus attack speed, up to a maximum of 50%.</p></div>",
             "leveling": []
           }
         ],
@@ -142,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ezreal/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ezreal fires a bolt of energy in the target direction that deals physical damage to the first enemy hit, applying on-hit effects and triggering on-attack effects.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ezreal fires a bolt of energy in the target direction that deals physical damage to the first enemy hit, applying on-hit effects and triggering on-attack effects.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -246,7 +246,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ezreal/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ezreal fires an orb in the target direction that marks the first enemy champion, epic monster, or structure hit for 4 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ezreal fires an orb in the target direction that marks the first enemy champion, epic monster, or structure hit for 4 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -350,7 +350,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ezreal/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ezreal blinks from his current location to up to 475 units towards the target location, then fires a homing bolt towards the nearest enemy that deals magic damage and reveals them for 1 second.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ezreal blinks from his current location to up to 475 units towards the target location, then fires a homing bolt towards the nearest enemy that deals magic damage and reveals them for 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -454,7 +454,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ezreal/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Ezreal fires an arc of energy in the target direction that briefly grants sight of its surroundings and deals magic damage to enemies hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ezreal fires an arc of energy in the target direction that briefly grants sight of its surroundings and deals magic damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

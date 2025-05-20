@@ -4,10 +4,10 @@ declare global {
     key: string
     name: string
     roles: string[] | null
-    champions:  ChampionKey[] | null
-    items:  ItemSet[] | null
-    runes:  RuneSet[] | null
-    spells:  SpellSet[] | null
+    champions: ChampionKey[] | null
+    items: ItemSet[] | null
+    runes: RuneSet[] | null
+    spells: SpellSet[] | null
     dateCreated: dateObject
     dateUpdated: dateObject
     tags: string[] | null
@@ -21,7 +21,7 @@ declare global {
       splash: string | null
       align: string | null
       color: string | null
-      filter: boolean | null
+      filter: 'color' | 'grayscale' | null
       font: {
         0: string | null
         1: string | null

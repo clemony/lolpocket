@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
 
 const props = defineProps<{
   match: any
@@ -10,7 +9,7 @@ const match = computed (() => {
 })
 
 const player = computed(() => {
-  return match.value.info.participants.find(p => p.puuid == as.userAccount.puuid)
+  return match.value.info.participants.find(p => p.puuid == as.userAccount.riot.puuid)
 })
 
 const isOpen = ref(false)

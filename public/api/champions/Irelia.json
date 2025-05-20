@@ -98,15 +98,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Irelia/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Irelia generates a stack of Ionian Fervor for each enemy champion hit by her abilities, or if she hits at least one non-champion, lasting for 6 seconds, refreshing on basic attacks and ability hits against enemy champions, large monsters, and structures, and stacking up to 4 times.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Irelia generates a stack of Ionian Fervor for each enemy champion hit by her abilities, or if she hits at least one non-champion, lasting for 6 seconds, refreshing on basic attacks and ability hits against enemy champions, large monsters, and structures, and stacking up to 4 times.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Ionian Fervor:</p><p> For each stack, Irelia gains 7.5% - 25% (based on level) bonus attack speed, up to a maximum of 30% - 100% (based on level). At maximum stacks, Irelia's basic attacks are empowered to deal 10 - 61 (based on level) (+ 20% bonus AD) bonus magic damage on-hit, reduced to[ 50% ][ 5 - 30.5 (based on level) (+ 10% bonus AD) ]against structures.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Ionian Fervor:</p><p> For each stack, Irelia gains 7.5% - 25% (based on level) bonus attack speed, up to a maximum of 30% - 100% (based on level). At maximum stacks, Irelia's basic attacks are empowered to deal 10 - 61 (based on level) (+ 20% bonus AD) bonus magic damage on-hit, reduced to[ 50% ][ 5 - 30.5 (based on level) (+ 10% bonus AD) ]against structures.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Unsteady:</p><p> Enemy champions and large monsters hit by Flawless Duet and Vanguard's Edge's initial barrage are marked as Unsteady for 5 seconds. The mark can be consumed by Bladesurge.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate - Unsteady:</p><p> Enemy champions and large monsters hit by Flawless Duet and Vanguard's Edge's initial barrage are marked as Unsteady for 5 seconds. The mark can be consumed by Bladesurge.</p></div>",
             "leveling": []
           }
         ],
@@ -146,7 +146,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Irelia/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Irelia dashes 100 units through the target enemy's location, and upon collision or dash completion, she deals physical damage, applies on-hit effects, and heals herself. Bladesurge deals 50 - 237 (based on level) bonus physical damage to minions.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Irelia dashes 100 units through the target enemy's location, and upon collision or dash completion, she deals physical damage, applies on-hit effects, and heals herself. Bladesurge deals 50 - 237 (based on level) bonus physical damage to minions.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -259,7 +259,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Irelia/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Irelia charges for up to 1.5 seconds, during which she increases Defiant Dance's damage over the first 0.75 seconds of the channel and reduces incoming physical damage by 40% - 70% (based on level) (+ 7% per 100 AP) and incoming magic damage by 20% - 35% (based on level) (+ 3.5% per 100 AP).</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Irelia charges for up to 1.5 seconds, during which she increases Defiant Dance's damage over the first 0.75 seconds of the channel and reduces incoming physical damage by 40% - 70% (based on level) (+ 7% per 100 AP) and incoming magic damage by 20% - 35% (based on level) (+ 3.5% per 100 AP).</p></div>",
             "leveling": []
           },
           {
@@ -267,7 +267,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Irelia swipes her blades in the target direction, dealing physical damage to enemies around her and within a line, increased by 0% - 200% (based on channel time). She also retains the damage reduction for 0.5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Irelia swipes her blades in the target direction, dealing physical damage to enemies around her and within a line, increased by 0% - 200% (based on channel time). She also retains the damage reduction for 0.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -404,11 +404,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Irelia/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Irelia sends a blade to the target location for 3.5 seconds. Flawless Duet can be recast after 0.15 seconds while the blade is active, and does so automatically at the end of its duration, though not if she is unable to cast abilities.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Irelia sends a blade to the target location for 3.5 seconds. Flawless Duet can be recast after 0.15 seconds while the blade is active, and does so automatically at the end of its duration, though not if she is unable to cast abilities.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Irelia sends a second blade to the target location, or to her current position if Flawless Duet was recast automatically.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Irelia sends a second blade to the target location, or to her current position if Flawless Duet was recast automatically.</p></div>",
             "leveling": []
           },
           {
@@ -504,7 +504,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Irelia/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Irelia launches a barrage of blades in the target direction, expanding outward upon hitting an enemy champion, dealing magic damage to all enemies hit and revealing them for 1 second.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Irelia launches a barrage of blades in the target direction, expanding outward upon hitting an enemy champion, dealing magic damage to all enemies hit and revealing them for 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

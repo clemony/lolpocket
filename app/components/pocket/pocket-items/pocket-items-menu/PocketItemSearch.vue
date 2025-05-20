@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from 'vue'
+import { motion } from 'motion-v'
+
 import Fuse from 'fuse.js'
 
 const props = withDefaults(
@@ -74,23 +75,64 @@ function handleReset() {
   is.pItemFilter.query = null
   is.pItemFilter.result = null
 }
+
+
+const variants = {
+  collapsed: {
+    borderRadius: '100%',
+    gap: 0,
+    padding: 0
+  },
+  expanded: {
+    width: '220px',
+    borderRadius: '1.2rem',
+    padding: '10px',
+    gap: '10px'
+  },
+}
+
+const inputVariants = {
+  collapsed: {
+    width: 0,
+    opacity: 0,
+  },
+  expanded: {
+    width: '200px',
+    opacity: 100,
+  },
+}
+
+watchEffect(() => {
+if (searchQuery.value == '' || searchQuery.value == undefined)
+searchQuery.value = null
+})
 </script>
 
 <template>
-  <div :class="cn('border-b3 text-3 items-center gap-4 bg-b1 flex h-12 border py-2 px-3', props.class)">
-    <icon
-      name="search"
-      class="pointer-events-none size-5 opacity-70" />
-    <input
-      v-model="searchQuery"
-      :placeholder="props.placeholder"
-      :class="cn('text-3  outline-0 ring-0 border-0 flex h-full grow text-start  hover:outline-0 hover:ring-0 hover:border-0', props.inputClass)" />
 
-    <slot />
-    <button class="btn btn-ghost btn-square btn-sm " @click="handleReset" :class="{' hover:!bg-accent hover:!border-b3/20': props.dark}">
-      <icon name="x-sm" class="" />
+<motion.div
+    :class="cn('border bg-neutral/84 text-nc btn-neutral  btn-circle relative flex btn   rounded-full items-center', props.class)"
+    :variants="variants"
+    initial="collapsed"
+    :transition="{
+      duration: 0.3,
+      type: 'easeOut' }"
+    while-hover="expanded"
+    :animate="searchQuery != null  ? 'expanded' : 'collapsed'">
+    <motion.div :variants="inputVariants">
+      <slot>
+      <Input v-model="searchQuery" type="text" class="size-full pl-5 border-0 shadow-none py-0 m-0" :placeholder="props.placeholder" />
+      </slot>
+    </motion.div>
+    <button  @click="handleReset"  :disabled="searchQuery == null" class="btn btn-ghost btn-circle btn-xs  hover:bg-b3/40 absolute  z-2 left-1.5 top-1.5 pointer-events-auto">
+      <icon name="x-sm" v-if="searchQuery" class="size-5.5 shrink-0 text-bc/70 absolute dst"/>
+      <icon v-else   name="search" class="size-4.75 shrink-0 text-bc/70 absolute   dst" />
     </button>
-  </div>
+
+
+    
+  </motion.div>
+
 </template>
 
 <style></style>

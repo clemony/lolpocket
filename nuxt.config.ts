@@ -15,15 +15,8 @@ export default defineNuxtConfig({
     'vue-sonner/nuxt',
     '@nuxt/icon',
     'nuxt-svgo',
+    'motion-v/nuxt',
   ],
-  /*
-  apiParty: {
-    endpoints: {
-      api: {
-        url: '/api',
-      },
-    },
-  }, */
 
   icon: {
     provider: 'iconify',

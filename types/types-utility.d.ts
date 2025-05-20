@@ -9,6 +9,16 @@ declare global {
       user_role: string
     }
   }
+ type AccountRole = 'admin' | 'summoner'
+  interface userAccount {
+    name: string
+    role: AccountRole
+    id: string
+    session: Session
+    accessToken: string
+    refreshToken: string
+    riot: UserSummoner | null
+  }
 
   interface OgResponse {
     title: string
@@ -19,21 +29,6 @@ declare global {
   interface PatchNotesData extends OgResponse {
     patch: string
   }
-  interface userAccount {
-    name: string
-    role: string
-    id: string
-    session: Session
-    accessToken: string
-    refreshToken: string
-    puuid: string
-    gameName: string
-    tagLine: string
-    profileIconId: number
-    summonerLevel: number
-    region: string
-  }
-
   interface MatchFilter {
     patch?: number | null
     queue?: number | null

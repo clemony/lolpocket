@@ -11,7 +11,7 @@ async function updateMatchData() {
 const result = await $fetch<MatchData[]>('/api/riot/matches-by-puuid', {
   method: 'GET',
   params: {
-    puuid: as.userAccount.puuid,
+    puuid: as.userAccount.riot.puuid,
     existingIds: JSON.stringify(existingIds),
   },
 })

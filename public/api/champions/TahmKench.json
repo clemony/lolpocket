@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Tahm Kench's basic attacks on-hit and Tongue Lash are empowered to deal 6 - 48 (based on level) (+ 1.5% AP per 100 bonus health) (+ 4% of his bonus health) bonus magic damage and apply a stack of An Acquired Taste against enemy champions for 5 seconds, refreshing on subsequent hits and stacking up to 3 times. Stacks expire by one every 0.67 seconds when the duration ends.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Tahm Kench's basic attacks on-hit and Tongue Lash are empowered to deal 6 - 48 (based on level) (+ 1.5% AP per 100 bonus health) (+ 4% of his bonus health) bonus magic damage and apply a stack of An Acquired Taste against enemy champions for 5 seconds, refreshing on subsequent hits and stacking up to 3 times. Stacks expire by one every 0.67 seconds when the duration ends.</p></div>",
             "leveling": []
           },
           {
@@ -141,7 +141,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tahm Kench lashes his tongue in the target direction that deals magic damage to the first enemy hit and slows them by 50% for 2 seconds. If this hits an enemy champion, Tahm Kench also heals himself.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tahm Kench lashes his tongue in the target direction that deals magic damage to the first enemy hit and slows them by 50% for 2 seconds. If this hits an enemy champion, Tahm Kench also heals himself.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -241,7 +241,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">An Acquired Taste Bonus:</p><p> The target is stunned for 1.5 seconds. Devour can be cast during Tongue Lash at no cost to pull the target to Tahm Kench before swallowing them.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">An Acquired Taste Bonus:</p><p> The target is stunned for 1.5 seconds. Devour can be cast during Tongue Lash at no cost to pull the target to Tahm Kench before swallowing them.</p></div>",
             "leveling": []
           },
           {
@@ -311,7 +311,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tahm Kench channels for 1.35 seconds as he dives into the waters, then blinks to the target location after a 0.15-second delay and remains unable to act for 0.65 seconds after the channel completes. Abyssal Dive grants sight of the area during the channel.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tahm Kench channels for 1.35 seconds as he dives into the waters, then blinks to the target location after a 0.15-second delay and remains unable to act for 0.65 seconds after the channel completes. Abyssal Dive grants sight of the area during the channel.</p></div>",
             "leveling": []
           },
           {
@@ -428,7 +428,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Tahm Kench stores a portion of the post-mitigation damage he takes as grey health on his health bar, increased while there are at least 2 nearby visible enemy champions either dead or alive. He can store up to 300% of his maximum health.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Tahm Kench stores a portion of the post-mitigation damage he takes as grey health on his health bar, increased while there are at least 2 nearby visible enemy champions either dead or alive. He can store up to 300% of his maximum health.</p></div>",
             "leveling": [
               {
                 "attribute": "Damage Stored into Grey Health",
@@ -471,7 +471,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tahm Kench converts his current grey health into a shield that lasts for 2.5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tahm Kench converts his current grey health into a shield that lasts for 2.5 seconds.</p></div>",
             "leveling": []
           }
         ],
@@ -520,7 +520,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tahm Kench abducts the target champion, pulling them to him over the cast time and then swallowing them to carry them in his belly for up to 3 seconds. While inside, the target is attached to Tahm Kench and is rendered untargetable and displacement immune. Devour can be cast on enemies only with 3 stacks of An Acquired Taste.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tahm Kench abducts the target champion, pulling them to him over the cast time and then swallowing them to carry them in his belly for up to 3 seconds. While inside, the target is attached to Tahm Kench and is rendered untargetable and displacement immune. Devour can be cast on enemies only with 3 stacks of An Acquired Taste.</p></div>",
             "leveling": []
           },
           {
@@ -556,7 +556,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">An Acquired Taste Bonus:</p><p> The target is suppressed during Devour's cast time and while attached. Tahm Kench will also be grounded and slowed by 40% under those same conditions.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">An Acquired Taste Bonus:</p><p> The target is suppressed during Devour's cast time and while attached. Tahm Kench will also be grounded and slowed by 40% under those same conditions.</p></div>",
             "leveling": []
           },
           {
@@ -618,7 +618,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tahm Kench detaches the swallowed champion from himself and spits them out in the target direction. If they are an enemy, he deals magic damage to them at the end of the displacement.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tahm Kench detaches the swallowed champion from himself and spits them out in the target direction. If they are an enemy, he deals magic damage to them at the end of the displacement.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

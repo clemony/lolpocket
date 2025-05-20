@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Jarvan IV's basic attacks are empowered to deal bonus physical damage equal to 8% of the target's current health, with a minimum threshold of 20 and capped at 400 against non- champion targets.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Jarvan IV's basic attacks are empowered to deal bonus physical damage equal to 8% of the target's current health, with a minimum threshold of 20 and capped at 400 against non- champion targets.</p></div>",
             "leveling": []
           },
           {
@@ -144,7 +144,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jarvan IV extends his lance in the target direction, dealing physical damage to enemies hit and inflicting them with armor reduction for 3 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jarvan IV extends his lance in the target direction, dealing physical damage to enemies hit and inflicting them with armor reduction for 3 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -261,7 +261,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jarvan IV slows all nearby enemies for 2 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jarvan IV slows all nearby enemies for 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -367,7 +367,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Jarvan IV gains bonus attack speed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Jarvan IV gains bonus attack speed.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -389,7 +389,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jarvan IV throws a Demacian flag to the target location, dealing magic damage to enemies within the area.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jarvan IV throws a Demacian flag to the target location, dealing magic damage to enemies within the area.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -485,7 +485,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Jarvan IV leaps with displacement immunity to the target enemy champion's location over 0.35 seconds, dealing physical damage to all nearby enemies upon arrival.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jarvan IV leaps with displacement immunity to the target enemy champion's location over 0.35 seconds, dealing physical damage to all nearby enemies upon arrival.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -517,7 +517,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Jarvan IV destroys the terrain created by Cataclysm.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Jarvan IV destroys the terrain created by Cataclysm.</p></div>",
             "leveling": []
           }
         ],

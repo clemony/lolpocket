@@ -1,4 +1,4 @@
- import fs from  'node:fs'
+import fs from 'node:fs'
 import path from 'node:path'
 
 const championsPath = path.resolve('./public/api/champions.json')
@@ -7,24 +7,21 @@ const outputPath = path.resolve('./public/api/lists/champion-skins.json')
 const championsRaw = fs.readFileSync(championsPath, 'utf-8')
 const champions = JSON.parse(championsRaw)
 
-const result = {}
+const result: Record<string, { name: string; splashPath: string }[]> = {}
 
 for (const key in champions) {
   const champ = champions[key]
-  const { id, name, skins } = champ
+  const {  skins } = champ
 
-const filteredSkins = (skins || [])
-  .filter((skin) => !!skin.tilePath) // ✅ only include skins with a splashPath
-  .map((skin) => ({
-    name: skin.name,
-    splashPath: skin.tilePath,
-  }))
+  const filteredSkins = (skins || [])
+    .filter((skin) => !!skin.tilePath)
+    .map((skin) => ({
+      name: skin.name,
+      tilePath: skin.tilePath.replace('https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters', ''),
+      splashPath: skin.splashPath.replace('https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters', ''),
+    }))
 
-  result[id] = {
-    id,
-    name,
-    skins: filteredSkins,
-  }
+  result[key] = filteredSkins
 }
 
 fs.writeFileSync(outputPath, JSON.stringify(result, null, 2))

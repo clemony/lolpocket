@@ -20,6 +20,7 @@ export function useMatchSimplifier(puuid: string) {
       killParticipation: participant.challenges.killParticipation,
       queueId: match.queueId,
       championName: participant.championName,
+      championId: participant.championId,
       teamPosition: participant.teamPosition,
       item0: participant.item0,
       item1: participant.item1,

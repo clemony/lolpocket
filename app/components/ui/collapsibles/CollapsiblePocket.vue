@@ -37,7 +37,7 @@ watchEffect(() => {
     <SidebarCollapsibleContent class="tldr-30 !overflow-visible" :class="{ 'gap-1': !us.sidebarExpanded }">
       <component :is="pinnedComponent" v-slot="{ pinned }">
 
-        <SidebarIcon name="pin" class="size-5 -mt-px -left-0.25 group-not-disabled/pin:text-bc group-disabled/pin:text-bc/35" />
+        <IconWrapper name="pin" class="size-5 -mt-px -left-0.25 group-not-disabled/pin:text-bc group-disabled/pin:text-bc/35" />
    
         
           Pinned

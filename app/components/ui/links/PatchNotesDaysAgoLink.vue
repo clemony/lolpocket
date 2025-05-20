@@ -9,9 +9,9 @@ const ds = useDataStore()
 
 <template>
   <NuxtLink :to="ds.patchNotesLink" target="_blank" external class="w-full hover:bg-transparent justify-start flex" :class="cn('btn !font-medium tracking-tight !gap-5 btn-ghost  group/p px-4 btn-lg w-full', props.class)">
-    <SidebarIcon>
+    <IconWrapper>
       <i-logo-league-filled class="size-4.75 absolute  text-bc/80 " />
-    </SidebarIcon>
+    </IconWrapper>
     <span class="">
       {{ ds.currentPatch }}
     </span>

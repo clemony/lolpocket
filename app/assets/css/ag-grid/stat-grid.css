@@ -9,10 +9,3 @@
 }
 
 
- .stat-grid .ag-cell.ag-column-first {
-  @apply !pl-3;
-}
-
-.champion-grid  .ag-header-expand-icon{
-  @apply absolute right-1;
-}

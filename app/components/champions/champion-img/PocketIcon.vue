@@ -1,28 +1,16 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from 'vue'
-
-const props = defineProps<{
-  image?: string
+const { class: className, url } = defineProps<{
+  url: string
   class?: HTMLAttributes['class']
-  imgClass?: HTMLAttributes['class']
 }>()
-
-const image = computed (() => {
-  return props.image
-})
 </script>
 
 <template>
-  <label
-    :class="cn('relative grid  shrink-0 place-items-center  size-full shadow-sm group/icon  rounded-full', props.class)">
-    <slot />
-    <div
-      class="size-full rounded-full  shrink-0  overflow-hidden "
-      :style="{
-        backgroundImage: `url('${image}')`,
-        backgroundSize: image == '/img/lp/192.webp' ? '100%' : '450%',
-        backgroundPosition: 'center 20%' }">
+  <label :class="cn('shadow-sm drop-shadow-sm size-full overflow-hidden', className)">
 
+    <ChampionSplash v-if="url != '/img/lp/192.webp'" :url="url" alt="pocket icon" class=" pointer-events-none  size-full " />
+    <div v-else class="size-full bg-gradient-to-br from-neutral/80 to-neutral grid place-items-center text-nc font-semibold text-4 dst">
+      LP
     </div>
 
   </label>

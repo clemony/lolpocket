@@ -10,7 +10,9 @@ export function useItemFilter(rawItems: Record<string, ItemLite> | ItemLite[], f
   watchEffect(() => {
     filteredItems.value = items.value.filter((item) => {
       const matchesPurchasable = filters.purchasable ? item.purchasable != false  : true
-       const matchesStats = filters.stats && filters.stats[0] ? filters.stats.some(stat => item.stats[stat])  : true
+      const matchesStats = filters.stats
+  ? filters.stats.every((statKey) => item.stats[statKey])
+  : true
       const matchesRank = filters.rank ? item.rank.includes(filters.rank) : true
       const matchesTags = filters.tags ? item.tags?.includes(filters.tags) : true
       const matchesMaps = filters.map  ? item.maps.includes(filters.map)  : true

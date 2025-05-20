@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Olaf gains bonus attack speed and life steal based on his missing health, up to 50% - 100% (based on level) bonus attack speed and 8% - 25% (based on level) life steal at 70% missing health.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Olaf gains bonus attack speed and life steal based on his missing health, up to 50% - 100% (based on level) bonus attack speed and 8% - 25% (based on level) life steal at 70% missing health.</p></div>",
             "leveling": []
           }
         ],
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Olaf throws an axe to the target location that deals physical damage to enemies it passes through and slows them for 1.5 - 2.5 (based on distance traveled) seconds. Enemy champions hit are also inflicted with 20% armor reduction for 4 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Olaf throws an axe to the target location that deals physical damage to enemies it passes through and slows them for 1.5 - 2.5 (based on distance traveled) seconds. Enemy champions hit are also inflicted with 20% armor reduction for 4 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -299,7 +299,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Olaf gains bonus attack speed for 5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Olaf gains bonus attack speed for 5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -413,7 +413,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Olaf strikes thunder onto the target enemy, dealing true damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Olaf strikes thunder onto the target enemy, dealing true damage.</p></div>",
             "leveling": [
               {
                 "attribute": "True Damage",
@@ -521,7 +521,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Olaf gains bonus armor and bonus magic resistance.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Olaf gains bonus armor and bonus magic resistance.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Resistances",
@@ -541,7 +541,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Olaf becomes enraged for 3 seconds, cleansing himself of all crowd control and becoming immune to them, as well as gaining bonus attack damage and 10% increased size. For the first second of Ragnarok, he also gains bonus movement speed while facing visible enemy champions within 2000 units.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Olaf becomes enraged for 3 seconds, cleansing himself of all crowd control and becoming immune to them, as well as gaining bonus attack damage and 10% increased size. For the first second of Ragnarok, he also gains bonus movement speed while facing visible enemy champions within 2000 units.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Damage",

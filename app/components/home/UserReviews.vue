@@ -4,13 +4,13 @@
 
 <template>
   <div class="w-full bg-b1 px-60 py-30 h-280">
-    <div class="w-full justify-center justify-self-center grid grid-cols-2 py-30 gap-34 h-full items-center">
+    <div class="**:[&_p]:leading-7 w-full justify-center justify-self-center grid grid-cols-2 py-30 gap-34 h-full items-center">
       <div class="flex gap-4">
         <div class="size-20 overflow-hidden rounded-full shrink-0 border border-neutral/40 shadow-sm">
-                  <img src="/img/champion/Pantheon.webp" class="size-full scale-110 shrink-0" />
+                  <ChampionIcon :id="80" alt="Pantheon" class="size-full scale-110 shrink-0" />
         </div>
         <div>
-          <h1 class="!font-black dst font-serif !leading-9">
+          <h1 class=" dst  font-black font-serif leading-9">
             I sought power on Targon's peak...
           </h1>
 
@@ -35,7 +35,7 @@
 
       <div class="flex gap-4">
         <div class="size-20 overflow-hidden rounded-full shrink-0 border border-neutral/40 shadow-sm">
-               <img src="/img/champion/Camille.webp" class="size-full shrink-0 scale-110" />
+          <ChampionIcon :id="164" alt="Camille" class="size-full scale-110 shrink-0" />
         </div>
         <div class="">
           <h1 class="font-serif !font-black dst !leading-9">
@@ -62,7 +62,7 @@
 
       <div class="flex gap-4">
         <div class="size-20 overflow-hidden rounded-full shrink-0 border border-neutral/40 shadow-sm">
-              <img src="/img/champion/Swain.webp" class="size-full shrink-0 scale-110" />
+          <ChampionIcon :id="50" alt="Swain" class="size-full scale-110 shrink-0" />
         </div>
         <div class="">
           <h1 class="font-serif !font-black dst !leading-9">
@@ -90,7 +90,7 @@
 
       <div class="flex gap-4">
         <div class="size-20 overflow-hidden rounded-full shrink-0 border border-neutral/40 shadow-sm">
-            <img src="/img/champion/Ezreal.webp" class="size-full shrink-0 scale-110" />
+          <ChampionIcon :id="81" alt="Ezreal" class="size-full scale-110 shrink-0" />
         </div>
         <div class="">
           <h1 class="font-serif !font-black dst !leading-9">

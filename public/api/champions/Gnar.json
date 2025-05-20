@@ -95,7 +95,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Rage Gene:</p><p> Mini Gnar generates 4 / 7 / 11 (based on level) Rage over 2 seconds upon dealing or receiving damage, up to 100. Against non-champions, basic attacks and Boomerang Throw instantly generate[ 0.5 / 0.875 / 1.375 (based on level) Rage. ][ 12.5% of the amount. ] Against champions, Boomerang Throw instantly generates[ 1 / 1.75 / 2.75 (based on level) Rage, ][ 25% of the amount, ]and basic attacks instantly generate[ 2 / 3.5 / 5.5 (based on level). ][ 50% of the amount. ] Boomerang Throw can only generate Rage once per cast, and grants Rage based on the first enemy hit. Gnar's Rage decays after being out of combat for 13 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate - Rage Gene:</p><p> Mini Gnar generates 4 / 7 / 11 (based on level) Rage over 2 seconds upon dealing or receiving damage, up to 100. Against non-champions, basic attacks and Boomerang Throw instantly generate[ 0.5 / 0.875 / 1.375 (based on level) Rage. ][ 12.5% of the amount. ] Against champions, Boomerang Throw instantly generates[ 1 / 1.75 / 2.75 (based on level) Rage, ][ 25% of the amount, ]and basic attacks instantly generate[ 2 / 3.5 / 5.5 (based on level). ][ 50% of the amount. ] Boomerang Throw can only generate Rage once per cast, and grants Rage based on the first enemy hit. Gnar's Rage decays after being out of combat for 13 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -147,7 +147,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Gnar throws a boomerang in a line in the target direction that deals physical damage to enemies in its path and slows them for 2 seconds. After reaching its maximum range or hitting an enemy, the boomerang flies back toward Gnar based on his current movement, dealing 50% damage to subsequent targets.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gnar throws a boomerang in a line in the target direction that deals physical damage to enemies in its path and slows them for 2 seconds. After reaching its maximum range or hitting an enemy, the boomerang flies back toward Gnar based on his current movement, dealing 50% damage to subsequent targets.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -274,7 +274,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Gnar throws a boulder in the target direction that stops upon hitting an enemy, dealing physical damage to nearby enemies upon impact and slowing them for 2 seconds. The boulder then remains on the ground for 6 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gnar throws a boulder in the target direction that stops upon hitting an enemy, dealing physical damage to nearby enemies upon impact and slowing them for 2 seconds. The boulder then remains on the ground for 6 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -374,7 +374,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Gnar's basic attacks on-hit and ability hits apply a stack of Hyper to enemies for 3.5 seconds, refreshing on subsequent applications and stacking up to 3 times.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Gnar's basic attacks on-hit and ability hits apply a stack of Hyper to enemies for 3.5 seconds, refreshing on subsequent applications and stacking up to 3 times.</p></div>",
             "leveling": []
           },
           {
@@ -458,7 +458,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Gnar slams his arm down in the target direction, dealing physical damage to all enemies struck within the area and stunning them for 1.25 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gnar slams his arm down in the target direction, dealing physical damage to all enemies struck within the area and stunning them for 1.25 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -533,7 +533,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Gnar leaps to the target location, then gains bonus attack speed for 6 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gnar leaps to the target location, then gains bonus attack speed for 6 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -644,7 +644,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Gnar leaps to the target location and deals physical damage to nearby enemies upon impact. After a 0.25-second delay, Gnar sends out a shockwave, dealing the same damage to additional enemies in a larger radius.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gnar leaps to the target location and deals physical damage to nearby enemies upon impact. After a 0.25-second delay, Gnar sends out a shockwave, dealing the same damage to additional enemies in a larger radius.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -735,7 +735,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Mini Gnar - Passive:</p><p> Hyper's bonus movement speed is increased.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Mini Gnar - Passive:</p><p> Hyper's bonus movement speed is increased.</p></div>",
             "leveling": [
               {
                 "attribute": "Hyper Bonus Movement Speed",
@@ -755,7 +755,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Mega Gnar - Active:</p><p> Gnar thrusts in the target direction, knocking away nearby enemies up to 590 units in that direction, though not through terrain, and afterwards dealing them physical damage, as well as slowing them by 45% after a 0.4-second delay for a duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Mega Gnar - Active:</p><p> Gnar thrusts in the target direction, knocking away nearby enemies up to 590 units in that direction, though not through terrain, and afterwards dealing them physical damage, as well as slowing them by 45% after a 0.4-second delay for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",

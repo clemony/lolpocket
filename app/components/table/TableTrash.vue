@@ -24,7 +24,7 @@ function handleDelete(){
       <div v-for="pocket in ps.trashFolder" :key="pocket.key" v-tippy="'Put Back'" class="w-full group">
         <div class="w-full flex gap-5 btn-ghost btn rounded-lg btn-lg justify-start  h-17">
           <div class="flex gap-6">
-            <PocketIcon :image="pocket.icon" class="size-13 **:rounded-lg rounded-lg" />
+            <PocketIcon :url="pocket.icon" class="size-13 **:rounded-lg rounded-lg" />
           </div>
           <div class="grid items-between text-start">
             <h5 class="tracking-tight pt-1">

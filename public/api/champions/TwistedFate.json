@@ -102,7 +102,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Whenever Twisted Fate kills an enemy, he generates 1 - 6 (based on probability). He also has a chance equal to his critical strike chance to generate an additional 1 - 6 (based on probability).</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Whenever Twisted Fate kills an enemy, he generates 1 - 6 (based on probability). He also has a chance equal to his critical strike chance to generate an additional 1 - 6 (based on probability).</p></div>",
             "leveling": []
           },
           {
@@ -146,7 +146,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Twisted Fate throws a fan of three cards in a cone in the target direction that each deal magic damage to enemies hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Twisted Fate throws a fan of three cards in a cone in the target direction that each deal magic damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -250,15 +250,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Twisted Fate cycles through three cards for 6 seconds, hovering each for 0.5 seconds at a time. Pick a Card can be recast within the duration, which selects the current card hovered.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Twisted Fate cycles through three cards for 6 seconds, hovering each for 0.5 seconds at a time. Pick a Card can be recast within the duration, which selects the current card hovered.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Twisted Fate empowers his next basic attack within 6 seconds to have a 0.25-second cast time, deal modified magic damage, and apply an additional effect based on the card selected. This damage cannot critically strike but is increased based on critical strike chance.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Twisted Fate empowers his next basic attack within 6 seconds to have a 0.25-second cast time, deal modified magic damage, and apply an additional effect based on the card selected. This damage cannot critically strike but is increased based on critical strike chance.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Blue Card Bonus:</p><p> Deals magic damage, increased by 0% - 57.5% (based on critical strike chance), and restores mana.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Blue Card Bonus:</p><p> Deals magic damage, increased by 0% - 57.5% (based on critical strike chance), and restores mana.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -313,7 +313,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Red Card Bonus:</p><p> Deals magic damage to the target and surrounding enemies, increased by 0% - 35% (based on critical strike chance). All targets hit are slowed for 2.5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Red Card Bonus:</p><p> Deals magic damage to the target and surrounding enemies, increased by 0% - 35% (based on critical strike chance). All targets hit are slowed for 2.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -368,7 +368,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Gold Card Bonus:</p><p> Deals magic damage, increased by 0% - 25% (based on critical strike chance), and stuns the target for a duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Gold Card Bonus:</p><p> Deals magic damage, increased by 0% - 25% (based on critical strike chance), and stuns the target for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -481,7 +481,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Twisted Fate gains bonus attack speed. His basic attacks on-hit generate a stack of Stacked Deck, stacking up to 3 times. At 3 stacks, his next basic attack is empowered to consume them all to deal bonus magic damage, reduced to 50% against structures.Twisted Fate gains maximum stacks of Stacked Deck upon respawning.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Twisted Fate gains bonus attack speed. His basic attacks on-hit generate a stack of Stacked Deck, stacking up to 3 times. At 3 stacks, his next basic attack is empowered to consume them all to deal bonus magic damage, reduced to 50% against structures.Twisted Fate gains maximum stacks of Stacked Deck upon respawning.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -572,7 +572,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Twisted Fate marks all targetable enemy champions, revealing them for a duration. Destiny can be recast after 0.5 seconds within the duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Twisted Fate marks all targetable enemy champions, revealing them for a duration. Destiny can be recast after 0.5 seconds within the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Effect Duration",
@@ -592,7 +592,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast - Gate:</p><p> Twisted Fate channels for 1.5 seconds before blinking to the target location, destroying all projectiles targeting him in the process.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast - Gate:</p><p> Twisted Fate channels for 1.5 seconds before blinking to the target location, destroying all projectiles targeting him in the process.</p></div>",
             "leveling": []
           }
         ],

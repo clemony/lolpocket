@@ -2,6 +2,7 @@
 import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
 import type { ColDef, ColGroupDef, GridApi, GridOptions, GridPreDestroyedEvent, GridReadyEvent } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
+import ChampionGridIcon from 'components/summoner-analysis/charts/chart-comps/ChampionGridIcon.vue'
 
 definePageMeta({
   title: 'Champion List',
@@ -9,6 +10,11 @@ definePageMeta({
   name: 'champion-list',
   section: 'library',
 })
+
+defineExpose({
+  ChampionGridIcon
+})
+
 
 const cs = useChampStore()
 const theme = ref(pocketTheme)
@@ -62,8 +68,7 @@ const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
   {
     headerName: '　 ',
     cellClass: '!py-1 !pr-1 !ml-0',
-    field: 'key',
-    cellRenderer: params => `<div class="size-12 aspect-square rounded-full drop-shadow-sm shadow-sm" ><div class="size-full overflow-hidden rounded-full" ><img src="/img/champion/${params.value}.webp" class="size-full scale-116" /></div></div>`,
+    cellRenderer: ChampionGridIcon,
     sortable: false,
     width: 64,
     maxWidth: 64,

@@ -3,7 +3,7 @@
 import path from 'node:path'
 
 const championsDir = path.resolve('./public/api/champions')
-const outputFile = path.resolve('./public/api/lists/champion-index.json')
+const outputFile = path.resolve('./public/api/index/champion-index.json')
 
 const files = fs.readdirSync(championsDir).filter(file => file.endsWith('.json'))
 

@@ -6,8 +6,8 @@ const {summoner, class: className} = defineProps<{
 }>()
 
 
+  const { getAllMatchIds, refreshMatches } = useMatchDexie()
 async function updateMatchData() {
-  const { getAllMatchIds, addMatches } = useMatchDexie()
   const existingIds = (await getAllMatchIds()).map(String)
 
   const newMatches = await useGetMatches({
@@ -16,9 +16,9 @@ async function updateMatchData() {
     direction: 'new',
   })
   console.log('💠 - updateMatchData - newMatches:', newMatches)
-  // await fetchRankedEntries(props.puuid)
 }
 
+  refreshMatches()
 const { forceReload, loading } = useSummoner()
 </script>
 

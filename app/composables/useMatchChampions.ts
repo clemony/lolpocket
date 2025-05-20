@@ -1,7 +1,10 @@
-export function useMatchChampions(matches: SimplifiedMatchData[]) {
-  const ds = useDataStore()
+export async function useMatchChampions(matches: SimplifiedMatchData[]) {
 
+
+const championIndex =  await $fetch <ChampionIndex[]>('/api/index/champion-index.json')
   const championStats = new Map<string, {
+    name: string
+    id: number
     games: number
     wins: number
     losses: number
@@ -31,6 +34,8 @@ export function useMatchChampions(matches: SimplifiedMatchData[]) {
 
       if (!championStats.has(champ)) {
         championStats.set(champ, {
+          name: champ,
+          id: match.championId,
           games: 0,
           wins: 0,
           losses: 0,
@@ -69,9 +74,13 @@ export function useMatchChampions(matches: SimplifiedMatchData[]) {
         const avgKills = stats.kills / stats.games
         const avgDeaths = stats.deaths / stats.games
         const avgAssists = stats.assists / stats.games
+        const champion = computed (() => {
+          return championIndex.find(c => c.key == championName)
+        })
 
         return {
-          champion: ds.champions.find(c => c.key === championName || c.name === championName),
+          champion: stats.name,
+          championId: champion.value.id,
           games: stats.games,
           wins: stats.wins,
           losses: stats.losses,

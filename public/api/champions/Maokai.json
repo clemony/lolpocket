@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Maokai/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Periodically, Maokai empowers his next basic attack to have an uncancellable windup and heal him for 4% - 12.8% (based on level) maximum health after a 0.25-second delay.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, Maokai empowers his next basic attack to have an uncancellable windup and heal him for 4% - 12.8% (based on level) maximum health after a 0.25-second delay.</p></div>",
             "leveling": []
           },
           {
@@ -171,7 +171,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Maokai/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Maokai sends a shockwave in the target direction that deals magic damage to enemies hit and slows them by 99% for 0.25 seconds. Bramble Smash deals bonus magic damage to monsters.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Maokai sends a shockwave in the target direction that deals magic damage to enemies hit and slows them by 99% for 0.25 seconds. Bramble Smash deals bonus magic damage to monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -329,7 +329,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Maokai/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Maokai dashes to the target enemy while being untargetable. Upon arrival, he deals magic damage and roots them for a duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Maokai dashes to the target enemy while being untargetable. Upon arrival, he deals magic damage and roots them for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -434,7 +434,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Maokai/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Maokai flings a Sapling to the target location, granting sight of the area.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Maokai flings a Sapling to the target location, granting sight of the area.</p></div>",
             "leveling": []
           },
           {
@@ -613,7 +613,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Maokai/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Maokai summons a colossal wall of five thorny brambles that slowly advances in the target direction, accelerating over time, each stopping when they collide with an enemy champion. Hitting at least one enemy champion grants Maokai bonus movement speed decaying over 2 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Maokai summons a colossal wall of five thorny brambles that slowly advances in the target direction, accelerating over time, each stopping when they collide with an enemy champion. Hitting at least one enemy champion grants Maokai bonus movement speed decaying over 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",

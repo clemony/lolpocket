@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zyra/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Periodically, Zyra spawns one or two Seeds nearby that last for 30 seconds, granting sight over the surrounding area for 1 second.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, Zyra spawns one or two Seeds nearby that last for 30 seconds, granting sight over the surrounding area for 1 second.</p></div>",
             "leveling": []
           },
           {
@@ -173,7 +173,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zyra/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zyra sprouts thorny spines at the target location that appear after a 0.625-seconds delay, dealing magic damage to enemies hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zyra sprouts thorny spines at the target location that appear after a 0.625-seconds delay, dealing magic damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -265,7 +265,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zyra/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zyra plants a Seed at the target location that remains for 60 seconds and grants sight over the surrounding area, though decreasing in radius after 1 second. After 1.5 seconds, enemy champions can destroy the Seed by stepping on it, which reveals them for 2 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zyra plants a Seed at the target location that remains for 60 seconds and grants sight over the surrounding area, though decreasing in radius after 1 second. After 1.5 seconds, enemy champions can destroy the Seed by stepping on it, which reveals them for 2 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -324,7 +324,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zyra/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zyra shoots a surge of vines in the target direction that deals magic damage to enemies hit and roots them for a duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zyra shoots a surge of vines in the target direction that deals magic damage to enemies hit and roots them for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -433,7 +433,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zyra/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Zyra summons a monstrous thicket at the target location that deals magic damage to enemies hit as it expands.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zyra summons a monstrous thicket at the target location that deals magic damage to enemies hit as it expands.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

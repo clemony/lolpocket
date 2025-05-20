@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Blitzcrank/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Periodically, when damaged to 30% maximum health, Blitzcrank generates a shield equal to 35% of maximum mana, lasting for up to 10 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, when damaged to 30% maximum health, Blitzcrank generates a shield equal to 35% of maximum mana, lasting for up to 10 seconds.</p></div>",
             "leveling": []
           }
         ],
@@ -148,7 +148,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Blitzcrank/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Blitzcrank fires their right hand in the target direction that catches the first enemy hit, dealing them magic damage, stunning them for 0.65 seconds, and pulling them towards Blitzcrank, during which they are revealed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Blitzcrank fires their right hand in the target direction that catches the first enemy hit, dealing them magic damage, stunning them for 0.65 seconds, and pulling them towards Blitzcrank, during which they are revealed.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -240,7 +240,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Blitzcrank/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Blitzcrank shifts into overdrive, gaining bonus attack speed for 5 seconds and bonus movement speed that decays to 10% over the first 2.9 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Blitzcrank shifts into overdrive, gaining bonus attack speed for 5 seconds and bonus movement speed that decays to 10% over the first 2.9 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -337,7 +337,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Blitzcrank/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Blitzcrank empowers their next basic attack within 5 seconds to have an uncancellable windup, deal 100% AD (+ 25% AP) bonus physical damage and knock up the target for 1 second. This damage is affected by critical strike modifiers.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Blitzcrank empowers their next basic attack within 5 seconds to have an uncancellable windup, deal 100% AD (+ 25% AP) bonus physical damage and knock up the target for 1 second. This damage is affected by critical strike modifiers.</p></div>",
             "leveling": []
           },
           {
@@ -403,7 +403,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Blitzcrank/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> While Static Field is not on cooldown, Blitzcrank's basic attacks apply a stack to the target on-hit. After every 1 second, one stack is consumed to deal them magic damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> While Static Field is not on cooldown, Blitzcrank's basic attacks apply a stack to the target on-hit. After every 1 second, one stack is consumed to deal them magic damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -441,7 +441,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Blitzcrank detonates a static field that destroys the damage-mitigating shields of all nearby enemies, excluding the shields of monsters, and then deals them magic damage and silences them for 0.5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Blitzcrank detonates a static field that destroys the damage-mitigating shields of all nearby enemies, excluding the shields of monsters, and then deals them magic damage and silences them for 0.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

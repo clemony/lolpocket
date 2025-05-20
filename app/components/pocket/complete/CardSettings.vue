@@ -19,8 +19,8 @@ watch(
 </script>
 
 <template>
-  <div class="absolute before:z-0 before:absolute before:size-full before:bg-b1/60 before:top-0 before:left-0 z-1  bg-b2/40 backdrop-blur-md flex items-center py-1 top-0 left-0 w-full rounded-none  shadow-none border-b border-b-b3/80 border-x-2 border-x-b3/30  h-14 px-5.25 gap-2">
-    <LazyChampionSplashDropdown :champion=" pocket.champions[0] ?? getRandom(ds.champions)" :pocket="pocket" />
+  <div class="absolute before:z-0 before:absolute before:size-full before:bg-b1/60 before:top-0 before:left-0 z-1  bg-b2/40 backdrop-blur-md flex items-center py-1 top-16 left-0 w-full rounded-none  shadow-none border-b border-b-b3/80 border-x-2 border-x-b3/30  h-14 px-5.25 gap-2">
+    <LazyChampionSplashDropdown :disabled="!pocket.champions[0]" :champion=" pocket.champions[0]" :pocket="pocket" />
 
     <label v-tippy="'Background Color'" class="mx-2 aspect-square border border-neutral/60 drop-shadow-xs  relative rounded-full grid-place-items-center size-6.5 overflow-hidden hover:border-neutral hover:ring hover:ring-neutral tldr-30 cursor-pointer">
       <input v-model="pocket.card.color" type="color" class="size-16 -top-2 -left-2 cursor-pointer absolute" @change="console.log(pocket.card.color)" />

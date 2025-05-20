@@ -48,17 +48,17 @@ onMounted (() => {
 
         <SidebarCollapsibleContent class="pb-6">
           <NuxtLink v-for="pocket in ps.pockets" :key="pocket.key" :to="`/pocket/${pocket.key}`">
-            <SidebarButton v-if="pocket">
-              <PocketIcon :image="pocket.icon" class="size-5" />
+            <Btn v-if="pocket">
+              <PocketIcon :url="pocket.icon" class="size-5" />
               
                 {{ pocket.name }}
               
-            </SidebarButton>
+            </Btn>
           </NuxtLink>
         </SidebarCollapsibleContent>
       </LazyCollapsible>
 
-      <SidebarButton @click="navigateTo('/pockets/archive')">
+      <Btn @click="navigateTo('/pockets/archive')">
         <icon name="archive" class="size-4 ml-0.25" />
         Archive
         <SidebarBadge class="font-mono !text-1 pr-4">
@@ -67,9 +67,9 @@ onMounted (() => {
             {{ ps.archiveFolder.length }}
           </span>
         </SidebarBadge>
-      </SidebarButton>
+      </Btn>
 
-      <SidebarButton @click="navigateTo('/pockets/trash')">
+      <Btn @click="navigateTo('/pockets/trash')">
         <icon name="trash" />
         Trash
         <SidebarBadge class="font-mono !text-1 pr-4">
@@ -78,7 +78,7 @@ onMounted (() => {
             {{ ps.trashFolder.length }}
           </span>
         </SidebarBadge>
-      </SidebarButton>
+      </Btn>
     </div>
   </div>
 </template>

@@ -92,7 +92,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Garen/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Garen regenerates an additional[ 1.5% - 10.1% (based on level) of his maximum health every 5 seconds. ][ 0.15% - 1.01% (based on level) of his maximum health every 0.5 seconds. ]</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Garen regenerates an additional[ 1.5% - 10.1% (based on level) of his maximum health every 5 seconds. ][ 0.15% - 1.01% (based on level) of his maximum health every 0.5 seconds. ]</p></div>",
             "leveling": []
           },
           {
@@ -136,7 +136,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Garen/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Garen cleanses himself of all slows and gains 35% bonus movement speed for a duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Garen cleanses himself of all slows and gains 35% bonus movement speed for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Movement Speed Duration",
@@ -237,15 +237,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Garen/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Whenever Garen kills an enemy, he generates a stack of Courage, stacking up to 150 times.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Whenever Garen kills an enemy, he generates a stack of Courage, stacking up to 150 times.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Courage:</p><p> For each stack, Garen gains 0.2 bonus armor and 0.2 bonus magic resistance, up to a maximum of 30 bonus resistances each. After reaching maximum stacks, Garen gains 10% bonus armor and 10% bonus magic resistance.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Courage:</p><p> For each stack, Garen gains 0.2 bonus armor and 0.2 bonus magic resistance, up to a maximum of 30 bonus resistances each. After reaching maximum stacks, Garen gains 10% bonus armor and 10% bonus magic resistance.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Garen reduces incoming damage by 30% for 4 seconds. For the first 0.75 seconds, Garen additionally grants himself a shield and 60% tenacity.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Garen reduces incoming damage by 30% for 4 seconds. For the first 0.75 seconds, Garen additionally grants himself a shield and 60% tenacity.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -324,7 +324,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Garen/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Garen rapidly spins his sword around himself 7 (+ 1 per 25% bonus attack speed) times over 3 seconds, becoming unable to declare basic attacks but gaining ghosting and dealing physical damage to nearby enemies periodically. Judgment can be recast after 1 second while active, and does so automatically after it ends.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Garen rapidly spins his sword around himself 7 (+ 1 per 25% bonus attack speed) times over 3 seconds, becoming unable to declare basic attacks but gaining ghosting and dealing physical damage to nearby enemies periodically. Judgment can be recast after 1 second while active, and does so automatically after it ends.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Spin",
@@ -446,7 +446,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Garen ends Judgment prematurely, reducing its cooldown by its remaining duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Garen ends Judgment prematurely, reducing its cooldown by its remaining duration.</p></div>",
             "leveling": []
           },
           {
@@ -499,7 +499,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Garen/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Garen calls upon the might of Demacia onto the target enemy champion, dealing them true damage as well as revealing them for 1 second at the start of the cast time.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Garen calls upon the might of Demacia onto the target enemy champion, dealing them true damage as well as revealing them for 1 second at the start of the cast time.</p></div>",
             "leveling": [
               {
                 "attribute": "True Damage",

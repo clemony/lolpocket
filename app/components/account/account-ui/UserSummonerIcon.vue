@@ -4,7 +4,7 @@ const props = defineProps<{
 }>()
 
 const as = useAccountStore()
-const summoner = computed (() => as.userSummoner)
+const summoner = computed (() => as.userAccount.riot)
 console.log('💠 - summoner:', summoner.value.profileIcon)
 </script>
 

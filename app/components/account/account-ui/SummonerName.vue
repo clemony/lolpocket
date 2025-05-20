@@ -5,7 +5,7 @@ const { class: className, fallbackText = 'Summoner' } = defineProps<{
 }>()
 const as = useAccountStore()
 const summoner = computed(() => {
-  return as.userSummoner ? as.userSummoner : as.userAccount ? as.userAccount : defaultUser
+  return  as.userAccount ? as.userAccount : defaultUser
 })
 </script>
 

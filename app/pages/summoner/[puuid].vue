@@ -3,7 +3,7 @@ import { LayoutGroup } from 'motion-v'
 
 const route = useRoute()
 const puuid = computed (() => route.params.puuid.toString())
-const { summoner, loading, ready } = useSummoner(puuid.value)
+const { summoner, fetchSummoner, loading, ready } = useSummoner(puuid.value)
 console.log('💠 - summoner:', summoner)
 
 definePageMeta({
@@ -11,6 +11,10 @@ definePageMeta({
   title: 'Summoner Profile',
   section: 'summoner',
   path: '/summoner/:puuid',
+})
+
+onMounted (() => {
+  fetchSummoner()
 })
 </script>
 

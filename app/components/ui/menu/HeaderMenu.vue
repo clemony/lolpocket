@@ -11,7 +11,7 @@ function handleClick(mode) {
     ts.loginOpen = true
   }
   else if (mode == 'out') {
-    signOut()
+    useSignOut()
   }
 }
 

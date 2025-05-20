@@ -2,8 +2,8 @@ export function useSummoner(initialPuuid?: string) {
   const as = useAccountStore()
   const summonerStore = useSummonerStore() // Get the Pinia store
 
-  const currentPuuid = ref(initialPuuid || as.userAccount.puuid)
-  const usingOwnAccount = computed(() => !currentPuuid.value || currentPuuid.value === as.userAccount.puuid)
+  const currentPuuid = ref(initialPuuid || as.userAccount.riot.puuid)
+  const usingOwnAccount = computed(() => !currentPuuid.value || currentPuuid.value === as.userAccount.riot.puuid)
 
   const summoner = ref<Summoner | null>(null)
   const loading = ref(false)
@@ -60,8 +60,8 @@ export function useSummoner(initialPuuid?: string) {
     matchData.value = matchesResult
 
     const normalizedSummoner = normalizeSummonerForStore(summonerResult)
-    if (puuid === as.userAccount.puuid) {
-      as.userSummoner = normalizedSummoner
+    if (puuid === as.userAccount.riot.puuid) {
+      as.userAccount.riot = normalizedSummoner
     }
 
     summoner.value = normalizedSummoner

@@ -32,7 +32,7 @@ const winrateDiff = computed (() => {
         Pocket Pick
       </div>
       <div class="stat-value text-primary">
-           {{ champion.champion.name }}
+           {{ champion.champion }}
       </div>
       <div class="stat-desc">
          games in {{ ms.af.patch }}
@@ -61,7 +61,7 @@ const winrateDiff = computed (() => {
       <div class="stat-figure text-secondary">
         <div class="avatar online shadow-md drop-shadow-sm rounded-full size-16 relative grid place-items-center">
           <div class="size-20 absolute rounded-full overflow-hidden">
-            <NuxtImg :src="`/img/champion/${champion.champion.id}.webp`" class="size-full scale-109 object-center" />
+            <ChampionIcon :id="champion.championId" :alt="champion.champion" class="size-full scale-109 object-center" />
           </div>
         </div>
       </div>

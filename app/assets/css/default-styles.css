@@ -24,6 +24,10 @@
   @apply  has-checked:ring has-checked:ring-neutral/50 has-checked:ring-offset-2 has-checked:ring-offset-b2/90  hover:ring hover:ring-neutral/50 hover:ring-offset-2 hover:ring-offset-b2/90 transition-all duration-150 drop-shadow-sm  shadow-sm has-checked:grayscale-0;
 }
 
+.ability-header {
+  @apply font-semibold  tracking-tight text-4 italic text-bc/50;
+}
+
 
   h1 {
     font-size: var(--text-9);
@@ -61,7 +65,7 @@
   h3,
   h4,
   h5 {
-    @apply leading-none tracking-tight;
+    @apply leading-none ;
   }
 
 }

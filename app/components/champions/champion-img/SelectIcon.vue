@@ -69,7 +69,7 @@ onMounted (async () => {
       </div>
       <div class=" justify-end items-center  relative flex">
         <div class="rounded-lg shadow-md border-neutral/50 inset-shadow-sm inset-shadow-black absolute">
-          <PocketIcon :image="selectIcon" class="size-28 rounded-lg **:rounded-lg" />
+          <PocketIcon :url="selectIcon" class="size-28 rounded-lg **:rounded-lg" />
         </div>
       </div>
     </div>

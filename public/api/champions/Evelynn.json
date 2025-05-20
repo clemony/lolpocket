@@ -95,11 +95,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Evelynn/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Evelynn shrouds herself in Demon Shade after not performing actions that break stealth for 4 seconds. Attacking or casting abilities ends Demon Shade immediately and places it on a 4-second static cooldown, reduced to 1.25 seconds from casting Last Caress. Taking damage from champions or turrets interrupts Demon Shade and places it on a 1.5-second static cooldown.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Evelynn shrouds herself in Demon Shade after not performing actions that break stealth for 4 seconds. Attacking or casting abilities ends Demon Shade immediately and places it on a 4-second static cooldown, reduced to 1.25 seconds from casting Last Caress. Taking damage from champions or turrets interrupts Demon Shade and places it on a 1.5-second static cooldown.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Demon Shade:</p><p> While below 250 - 590 (based on level) (+ 250% AP) health, Evelynn heals herself for 15 - 150 (based on level) every second. From level 6 onward, Demon Shade also grants camouflage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Demon Shade:</p><p> While below 250 - 590 (based on level) (+ 250% AP) health, Evelynn heals herself for 15 - 150 (based on level) every second. From level 6 onward, Demon Shade also grants camouflage.</p></div>",
             "leveling": []
           }
         ],
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Evelynn/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Evelynn launches a dart in the target direction, dealing magic damage to the first enemy hit and marking them for 4 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Evelynn launches a dart in the target direction, dealing magic damage to the first enemy hit and marking them for 4 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -228,7 +228,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Evelynn unleashes a line of deadly spikes in the direction of the nearest visible enemy that deals magic damage to all enemies struck.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Evelynn unleashes a line of deadly spikes in the direction of the nearest visible enemy that deals magic damage to all enemies struck.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -370,7 +370,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Evelynn/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Evelynn curses the target enemy champion or medium or large monster for 5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Evelynn curses the target enemy champion or medium or large monster for 5 seconds.</p></div>",
             "leveling": []
           },
           {
@@ -531,7 +531,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Evelynn/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Evelynn whips the target enemy with her lashers, dealing magic damage and applying on-hit effects.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Evelynn whips the target enemy with her lashers, dealing magic damage and applying on-hit effects.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -643,7 +643,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Evelynn/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Evelynn dashes toward the target enemy with her lashers, dealing increased damage to them upon completion as well as to all enemies within her path.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Evelynn dashes toward the target enemy with her lashers, dealing increased damage to them upon completion as well as to all enemies within her path.</p></div>",
             "leveling": [
               {
                 "attribute": "Empowered Magic Damage",
@@ -713,7 +713,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Evelynn/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Evelynn reveals her true form, becoming untargetable at the start of the cast time and then unleashing her lashers in a cone in the target direction, dealing magic damage to enemies struck within. After 0.5 seconds, she blinks 700 units in the opposite direction and becomes targetable again.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Evelynn reveals her true form, becoming untargetable at the start of the cast time and then unleashing her lashers in a cone in the target direction, dealing magic damage to enemies struck within. After 0.5 seconds, she blinks 700 units in the opposite direction and becomes targetable again.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

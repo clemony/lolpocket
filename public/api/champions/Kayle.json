@@ -96,23 +96,23 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayle/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Kayle ascends through four forms that each grant additional bonuses. She ascends upon spending a skill point at levels 1, 6, 11, and 16.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Kayle ascends through four forms that each grant additional bonuses. She ascends upon spending a skill point at levels 1, 6, 11, and 16.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Level 1 - Zealous:</p><p> Kayle's basic attacks on-attack generate a stack of Zeal for 5 seconds, refreshing on subsequent hits and stacking up to 5 times. For each stack, she gains 6% (+ 1% per 100 AP) bonus attack speed, up to a maximum of 30% (+ 5% per 100 AP). At max stacks, she becomes Exalted, gaining 10% bonus movement speed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Level 1 - Zealous:</p><p> Kayle's basic attacks on-attack generate a stack of Zeal for 5 seconds, refreshing on subsequent hits and stacking up to 5 times. For each stack, she gains 6% (+ 1% per 100 AP) bonus attack speed, up to a maximum of 30% (+ 5% per 100 AP). At max stacks, she becomes Exalted, gaining 10% bonus movement speed.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Level 6 - Arisen:</p><p> Kayle becomes ranged and gains 350 bonus attack range for a total of 525.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Level 6 - Arisen:</p><p> Kayle becomes ranged and gains 350 bonus attack range for a total of 525.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Level 11 - Aflame:</p><p> Kayle gains 10% bonus size. While Kayle is Exalted, her basic attacks on-attack also launch a wave of fire forward that deals 20 - 41 (based on level) (+ 10% bonus AD) (+ 25% AP) magic damage to all enemies it passes through. The wave is affected by critical strike modifiers.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Level 11 - Aflame:</p><p> Kayle gains 10% bonus size. While Kayle is Exalted, her basic attacks on-attack also launch a wave of fire forward that deals 20 - 41 (based on level) (+ 10% bonus AD) (+ 25% AP) magic damage to all enemies it passes through. The wave is affected by critical strike modifiers.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Level 16 - Transcendent:</p><p> Kayle gains an additional 100 bonus attack range for a total of 625, and permanently gains the full effects of Zealous.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Level 16 - Transcendent:</p><p> Kayle gains an additional 100 bonus attack range for a total of 625, and permanently gains the full effects of Zealous.</p></div>",
             "leveling": []
           }
         ],
@@ -152,7 +152,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayle/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kayle conjures a portal in front of her that faces the target direction, from which a celestial sword launches forward.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kayle conjures a portal in front of her that faces the target direction, from which a celestial sword launches forward.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -273,7 +273,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayle/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kayle and the target allied champion are healed and gain bonus movement speed for 2 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kayle and the target allied champion are healed and gain bonus movement speed for 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Heal",
@@ -390,7 +390,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayle/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Kayle deals bonus magic damage on-hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Kayle deals bonus magic damage on-hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Passive Damage",
@@ -428,7 +428,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kayle kindles her blade, empowering her next basic attack within 6 seconds to have an uncancellable windup and deal additional bonus magic damage on-hit that is capped at 400 against monsters. If Kayle is not yet Arisen, this attack becomes ranged with 525 range.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kayle kindles her blade, empowering her next basic attack within 6 seconds to have an uncancellable windup and deal additional bonus magic damage on-hit that is capped at 400 against monsters. If Kayle is not yet Arisen, this attack becomes ranged with 525 range.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -458,7 +458,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Aflame Bonus:</p><p> The attack explodes upon the target, dealing its damage to surrounding enemies and applying on-hit effects. This is affected by critical strike modifiers.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Aflame Bonus:</p><p> The attack explodes upon the target, dealing its damage to surrounding enemies and applying on-hit effects. This is affected by critical strike modifiers.</p></div>",
             "leveling": []
           },
           {
@@ -515,7 +515,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayle/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kayle grants herself or a target allied champion invulnerability for 2.5 seconds and conjures swords of fire.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kayle grants herself or a target allied champion invulnerability for 2.5 seconds and conjures swords of fire.</p></div>",
             "leveling": []
           },
           {

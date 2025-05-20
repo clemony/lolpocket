@@ -102,11 +102,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Brand/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Brand's abilities apply a stack of Ablaze to enemies hit for 4 seconds, stacking up to 3 times and refreshing the duration of all stacks with each application. Subsequent abilities used against a target with Ablaze are empowered. Killing an enemy afflicted with Ablaze or any enemy with an ability restores 20 - 40 (based on level) mana.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Brand's abilities apply a stack of Ablaze to enemies hit for 4 seconds, stacking up to 3 times and refreshing the duration of all stacks with each application. Subsequent abilities used against a target with Ablaze are empowered. Killing an enemy afflicted with Ablaze or any enemy with an ability restores 20 - 40 (based on level) mana.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Ablaze:</p><p> While afflicted with Ablaze, the target is dealt magic damage equal to[ 2% of their maximum health over 4 seconds. ][ 0.167% of their maximum health every 0.25 seconds over 4 seconds. ]Each stack of Ablaze deals damage to the target individually and applies their damage ticks dependent on the time they were applied, even if the duration of all the stacks are refreshed. Ablaze deals 240% damage per tick to monsters; this damage is capped at[ 10 / 20 / 30 (based on Ablaze stacks) per tick against non-epic monsters and 20 / 40 / 60 (based on Ablaze stacks) per tick against epic monsters. ][ a total of 160 / 320 / 480 (based on Ablaze stacks) against non-epic monsters and 320 / 640 / 960 (based on Ablaze stacks) against epic monsters. ]</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Ablaze:</p><p> While afflicted with Ablaze, the target is dealt magic damage equal to[ 2% of their maximum health over 4 seconds. ][ 0.167% of their maximum health every 0.25 seconds over 4 seconds. ]Each stack of Ablaze deals damage to the target individually and applies their damage ticks dependent on the time they were applied, even if the duration of all the stacks are refreshed. Ablaze deals 240% damage per tick to monsters; this damage is capped at[ 10 / 20 / 30 (based on Ablaze stacks) per tick against non-epic monsters and 20 / 40 / 60 (based on Ablaze stacks) per tick against epic monsters. ][ a total of 160 / 320 / 480 (based on Ablaze stacks) against non-epic monsters and 320 / 640 / 960 (based on Ablaze stacks) against epic monsters. ]</p></div>",
             "leveling": []
           },
           {
@@ -158,7 +158,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Brand/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Brand launches a fireball in the target direction that deals magic damage to the first enemy hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Brand launches a fireball in the target direction that deals magic damage to the first enemy hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -188,7 +188,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Ablaze Bonus:</p><p> The target is stunned for 1.5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Ablaze Bonus:</p><p> The target is stunned for 1.5 seconds.</p></div>",
             "leveling": []
           }
         ],
@@ -250,7 +250,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Brand/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> After a 0.627 seconds delay, Brand erupts a pillar of flame at the target location that deals magic damage to enemies hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> After a 0.627 seconds delay, Brand erupts a pillar of flame at the target location that deals magic damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -280,7 +280,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Ablaze Bonus:</p><p> The target takes 25% increased damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Ablaze Bonus:</p><p> The target takes 25% increased damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Increased Damage",
@@ -372,7 +372,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Brand/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Brand sets the target enemy aflame, which creates a blast that deals magic damage to them and causes the flame to spread from the target to nearby enemies, dealing them the same damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Brand sets the target enemy aflame, which creates a blast that deals magic damage to them and causes the flame to spread from the target to nearby enemies, dealing them the same damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -402,7 +402,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Ablaze Bonus:</p><p> Conflagration's spread range is doubled.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Ablaze Bonus:</p><p> Conflagration's spread range is doubled.</p></div>",
             "leveling": []
           }
         ],
@@ -468,7 +468,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Brand/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Brand launches a fireball at the target enemy that bounces between nearby enemies and Brand up to four times, dealing magic damage to enemies each time.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Brand launches a fireball at the target enemy that bounces between nearby enemies and Brand up to four times, dealing magic damage to enemies each time.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -523,7 +523,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Ablaze Bonus:</p><p> The target is slowed for 0.25 seconds. This can affect the same enemy more than once.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Ablaze Bonus:</p><p> The target is slowed for 0.25 seconds. This can affect the same enemy more than once.</p></div>",
             "leveling": [
               {
                 "attribute": "Slow",

@@ -1,24 +1,20 @@
-export const defaultUser: userAccount = {
+export const defaultUser: userAccount ={
   name: 'Summoner',
-  role: '',
-  id: '',
+  role: null,
+  id: null,
   session: null,
-  accessToken: '',
-  refreshToken: '',
-  puuid: '',
-  gameName: 'Summoner',
-  tagLine: 'Link Riot Account?',
-  profileIconId: 0,
-  summonerLevel: 0,
-  region: 'Runeterra',
+  accessToken:  null,
+  refreshToken:  null,
+  riot: {
+    name: 'Summoner',
+    tag:  null,
+    puuid: null,
+    profileIcon:  null,
+    level:  null,
+    region: 'Runeterra',
+  }
 }
-
 // logout
-
-export async function signOut() {
-  const client = useSupabaseClient()
-  await client.auth.signOut()
-}
 
 export function createNote() {
   const as = useAccountStore()

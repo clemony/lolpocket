@@ -9,7 +9,7 @@ const props = defineProps<{
 const as = useAccountStore()
 const us = useUiStore()
 const route = useRoute()
-const puuid = computedAsync(() => as.userAccount?.puuid ?? '')
+const puuid = computedAsync(() => as.userAccount?.riot.puuid ?? '')
 </script>
 
 <template>

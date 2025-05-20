@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Tristana/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Tristana's basic attacks, Explosive Charge and Buster Shot gain 0 - 150 (based on level) bonus range, for a total of 550 - 700 (based on level).</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Tristana's basic attacks, Explosive Charge and Buster Shot gain 0 - 150 (based on level) bonus range, for a total of 550 - 700 (based on level).</p></div>",
             "leveling": []
           }
         ],
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Tristana/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tristana empowers her cannon, gaining bonus attack speed for 7 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tristana empowers her cannon, gaining bonus attack speed for 7 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -223,7 +223,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Tristana/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tristana jumps to the target location. Upon landing, she deals magic damage to nearby enemies and slows them by 40% for 2 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tristana jumps to the target location. Upon landing, she deals magic damage to nearby enemies and slows them by 40% for 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -331,7 +331,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Tristana/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Tristana's basic attacks are empowered to trigger an explosion when they kill the target, dealing magic damage to nearby enemies.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Tristana's basic attacks are empowered to trigger an explosion when they kill the target, dealing magic damage to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -361,7 +361,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tristana tosses an explosive charge at the target enemy that attaches to them for 4 seconds. The charge then detonates, dealing physical damage to nearby enemies. Explosive Charge can target and damage turrets, and explodes in a larger radius on a turret.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tristana tosses an explosive charge at the target enemy that attaches to them for 4 seconds. The charge then detonates, dealing physical damage to nearby enemies. Explosive Charge can target and damage turrets, and explodes in a larger radius on a turret.</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -585,7 +585,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Tristana/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tristana fires a massive cannonball at the target enemy that deals magic damage. They and surrounding enemies are also knocked back and stunned for a duration, during which all targets are revealed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tristana fires a massive cannonball at the target enemy that deals magic damage. They and surrounding enemies are also knocked back and stunned for a duration, during which all targets are revealed.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

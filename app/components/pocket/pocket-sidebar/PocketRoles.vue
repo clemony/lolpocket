@@ -22,7 +22,7 @@ function handleRoles() {
 <template>
   <Collapsible v-if="pocket" class="w-full field-box">
     <CollapsibleTrigger class="w-full group/state group">
-      <NavBtn
+      <Btn
         v-if="pocket.roles && pocket.roles?.[0]" class="w-full items-center gap-3 font-medium pr-2">
         <component
           :is="`i-roles-${pocket.roles?.[0].toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
@@ -31,7 +31,7 @@ function handleRoles() {
 
         <Grow />
         <PlusMinusExpand />
-      </NavBtn>
+      </Btn>
     </CollapsibleTrigger>
 
     <CollapsibleContent class="CollapsibleContent  w-full px-3  pt-3 pb-6">

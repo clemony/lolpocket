@@ -98,15 +98,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Neeko has a collection of disguises to take on the appearance of allied champions. She can choose a new champion to switch her disguise or select herself to deactivate her disguise, placing Inherent Glamour on a 0.5-second cooldown. Taking damage from a champion or turret puts Inherent Glamour on a 2-second cooldown.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Neeko has a collection of disguises to take on the appearance of allied champions. She can choose a new champion to switch her disguise or select herself to deactivate her disguise, placing Inherent Glamour on a 0.5-second cooldown. Taking damage from a champion or turret puts Inherent Glamour on a 2-second cooldown.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Standing by the nearest visible allied or neutral non-champion non-structure unit while not disguised will gather its Sho'Ma over 2 seconds, adding its disguise to the collection. Activating this disguise places Inherent Glamour on a 1-second cooldown. Neeko can collect only one Sho'Ma, but can discard or consume it. She can store Sho'Ma from the following units, so long as they are targetable:</p><p></p></div>\n\nNon-epic monsters\n Minions\n Traps\n Wards\n Pets\nJungle plants",
+            "description": "\n\n<div><p class=\"ability-header\">Standing by the nearest visible allied or neutral non-champion non-structure unit while not disguised will gather its Sho'Ma over 2 seconds, adding its disguise to the collection. Activating this disguise places Inherent Glamour on a 1-second cooldown. Neeko can collect only one Sho'Ma, but can discard or consume it. She can store Sho'Ma from the following units, so long as they are targetable:</p><p></p></div>\n\nNon-epic monsters\n Minions\n Traps\n Wards\n Pets\nJungle plants",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">While disguised, Neeko can use basic attacks while keeping her form. Her disguise breaks if she:</p><p></p></div>\n\nuses a damaging ability, summoner spell, or item active\nis immobilized\ntakes damage lethal to the disguised form\nis in the enemy spawn platform\nbegins a channel other than Recall and Empowered Recall\ndeals damage to a structure with a non-champion disguise form\n dies",
+            "description": "\n\n<div><p class=\"ability-header\">While disguised, Neeko can use basic attacks while keeping her form. Her disguise breaks if she:</p><p></p></div>\n\nuses a damaging ability, summoner spell, or item active\nis immobilized\ntakes damage lethal to the disguised form\nis in the enemy spawn platform\nbegins a channel other than Recall and Empowered Recall\ndeals damage to a structure with a non-champion disguise form\n dies",
             "leveling": []
           },
           {
@@ -150,7 +150,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Neeko tosses a seed that blooms at the target location, dealing magic damage to nearby enemies.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Neeko tosses a seed that blooms at the target location, dealing magic damage to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -323,7 +323,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Neeko's basic attacks on-hit generate a stack of Shapesplitter, which refreshes on subsequent attacks and stacks up to 2 times. At 2 stacks, her next basic attack on-attack consumes them all to become non-projectile, deal bonus magic damage and grant her bonus movement speed for 1 second. This attack deals 75 bonus magic damage against monsters.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Neeko's basic attacks on-hit generate a stack of Shapesplitter, which refreshes on subsequent attacks and stacks up to 2 times. At 2 stacks, her next basic attack on-attack consumes them all to become non-projectile, deal bonus magic damage and grant her bonus movement speed for 1 second. This attack deals 75 bonus magic damage against monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -370,7 +370,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Neeko creates a clone of her current form, after which they both instantly become invisible for 0.5 seconds and gain bonus movement speed for 3 seconds. Shapesplitter can be recast at any time while the clone is active.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Neeko creates a clone of her current form, after which they both instantly become invisible for 0.5 seconds and gain bonus movement speed for 3 seconds. Shapesplitter can be recast at any time while the clone is active.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -396,7 +396,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Neeko sends her clone to the target location if it is not playing an emote or Recall animation.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Neeko sends her clone to the target location if it is not playing an emote or Recall animation.</p></div>",
             "leveling": []
           }
         ],
@@ -449,7 +449,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Neeko slings a magical spiral in the target direction that deals magic damage to enemies hit and roots them for a duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Neeko slings a magical spiral in the target direction that deals magic damage to enemies hit and roots them for a duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -580,7 +580,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Neeko winds up spiritual essence over 1.25 seconds and highlights an area around herself, which is visible to enemies unless she is disguised. If Neeko is in a disguise, it will break after 0.5 seconds into the duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Neeko winds up spiritual essence over 1.25 seconds and highlights an area around herself, which is visible to enemies unless she is disguised. If Neeko is in a disguise, it will break after 0.5 seconds into the duration.</p></div>",
             "leveling": []
           },
           {

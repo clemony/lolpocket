@@ -98,11 +98,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Caitlyn's basic attacks generate a stack of Count on-attack, doubled if she is within brush. At 5 stacks, or 4 while in brush, her next basic attack consumes all stacks on-attack to become a Headshot.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Caitlyn's basic attacks generate a stack of Count on-attack, doubled if she is within brush. At 5 stacks, or 4 while in brush, her next basic attack consumes all stacks on-attack to become a Headshot.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Headshot:</p><p> Caitlyn's basic attack is empowered to have an uncancellable windup and deal 60 / 90 / 120% (based on level) (+ (148.75% + 34%) critical strike chance) AD bonus physical damage, increased to 110 / 115 / 120% (based on level) (+ (148.75% + 34%) critical strike chance) AD against non-champions.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Headshot:</p><p> Caitlyn's basic attack is empowered to have an uncancellable windup and deal 60 / 90 / 120% (based on level) (+ (148.75% + 34%) critical strike chance) AD bonus physical damage, increased to 110 / 115 / 120% (based on level) (+ (148.75% + 34%) critical strike chance) AD against non-champions.</p></div>",
             "leveling": []
           },
           {
@@ -146,7 +146,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Caitlyn fires a piercing shot in the target direction that deals physical damage to the first enemy it passes through, after which it expands in width but deals only 60% damage to enemies it hits thereafter.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Caitlyn fires a piercing shot in the target direction that deals physical damage to the first enemy it passes through, after which it expands in width but deals only 60% damage to enemies it hits thereafter.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -275,7 +275,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Caitlyn sets a visible trap at the target location that is untargetable and arms after 1 second, lasting for a duration. The trap grants sight of the area for 1 second after being placed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Caitlyn sets a visible trap at the target location that is untargetable and arms after 1 second, lasting for a duration. The trap grants sight of the area for 1 second after being placed.</p></div>",
             "leveling": [
               {
                 "attribute": "Trap Duration",
@@ -409,7 +409,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Caitlyn fires a net in the target direction and recoils 390 units in the opposite direction. The net deals magic damage to the first enemy hit and slows them by 50% for 1 second.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Caitlyn fires a net in the target direction and recoils 390 units in the opposite direction. The net deals magic damage to the first enemy hit and slows them by 50% for 1 second.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -501,7 +501,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Caitlyn locks onto the target enemy champion and channels for 1 second, revealing them as well as revealing herself.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Caitlyn locks onto the target enemy champion and channels for 1 second, revealing them as well as revealing herself.</p></div>",
             "leveling": []
           },
           {

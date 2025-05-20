@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Velkoz/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Vel'Koz's abilities apply a stack of Deconstruction to enemies hit for 7 seconds, refreshing on basic attacks and subsequent applications and stacking up to 3 times.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Vel'Koz's abilities apply a stack of Deconstruction to enemies hit for 7 seconds, refreshing on basic attacks and subsequent applications and stacking up to 3 times.</p></div>",
             "leveling": []
           },
           {
@@ -144,7 +144,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Velkoz/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Vel'Koz fires a plasma bolt in the target direction that deals magic damage to the first enemy hit and slows them by 70% decaying over a duration.</p></div>\nPlasma Fission can be recast after 0.25 seconds while the bolt is in flight, and does so automatically upon hitting an enemy or reaching maximum range.",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Vel'Koz fires a plasma bolt in the target direction that deals magic damage to the first enemy hit and slows them by 70% decaying over a duration.</p></div>\nPlasma Fission can be recast after 0.25 seconds while the bolt is in flight, and does so automatically upon hitting an enemy or reaching maximum range.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -191,7 +191,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Vel'Koz splits the bolt in two over 0.25 seconds, each part firing perpendicularly in opposite directions and applying the same effects to enemies hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Vel'Koz splits the bolt in two over 0.25 seconds, each part firing perpendicularly in opposite directions and applying the same effects to enemies hit.</p></div>",
             "leveling": []
           },
           {
@@ -292,7 +292,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Velkoz/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Vel'Koz cracks a rift in the target direction that opens after a 0.25-second delay, cascading through the area over 0.65 seconds to deal magic damage to enemies within.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Vel'Koz cracks a rift in the target direction that opens after a 0.25-second delay, cascading through the area over 0.65 seconds to deal magic damage to enemies within.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -445,7 +445,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Velkoz/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Vel'Koz hurls a disruptive anomaly that lands to the target location after 0.25 - 0.55 (based on cast distance) seconds, dealing magic damage to enemies hit and knocking them up and stunning them for 0.75 seconds, as well as granting sight of the area briefly.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Vel'Koz hurls a disruptive anomaly that lands to the target location after 0.25 - 0.55 (based on cast distance) seconds, dealing magic damage to enemies hit and knocking them up and stunning them for 0.75 seconds, as well as granting sight of the area briefly.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -541,11 +541,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Velkoz/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive - Researched:</p><p> Applying 3 Deconstruction stacks to an enemy champion marks them as Researched for 7 seconds, refreshing on basic attacks and ability hits against them.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive - Researched:</p><p> Applying 3 Deconstruction stacks to an enemy champion marks them as Researched for 7 seconds, refreshing on basic attacks and ability hits against them.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> After a 0.2-second delay, Vel'Koz channels for up to 2.6 seconds to project an energy beam, during which he can steer the beam in the target direction. Life Form Disintegration Ray can be recast after 1 second during the channel, and does so automatically after the duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> After a 0.2-second delay, Vel'Koz channels for up to 2.6 seconds to project an energy beam, during which he can steer the beam in the target direction. Life Form Disintegration Ray can be recast after 1 second during the channel, and does so automatically after the duration.</p></div>",
             "leveling": []
           },
           {
@@ -600,7 +600,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Vel'Koz ends Life Form Disintegration Ray.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Vel'Koz ends Life Form Disintegration Ray.</p></div>",
             "leveling": []
           }
         ],

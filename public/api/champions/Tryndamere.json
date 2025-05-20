@@ -94,7 +94,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Tryndamere generates 5 Fury on his basic attacks, and 10 Fury on critical strikes and each time he kills an enemy. After 8 seconds without dealing or taking damage, Tryndamere loses 5 Fury per second.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Tryndamere generates 5 Fury on his basic attacks, and 10 Fury on critical strikes and each time he kills an enemy. After 8 seconds without dealing or taking damage, Tryndamere loses 5 Fury per second.</p></div>",
             "leveling": []
           },
           {
@@ -138,7 +138,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Tryndamere gains bonus attack damage, plus an additional amount based on his missing health.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Tryndamere gains bonus attack damage, plus an additional amount based on his missing health.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Damage",
@@ -194,7 +194,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tryndamere consumes all of his Fury to heal himself, increased for every point of Fury consumed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tryndamere consumes all of his Fury to heal himself, increased for every point of Fury consumed.</p></div>",
             "leveling": [
               {
                 "attribute": "Minimum Heal",
@@ -328,7 +328,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tryndamere reduces the bonus attack damage of nearby enemy champions for 4 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tryndamere reduces the bonus attack damage of nearby enemy champions for 4 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Attack Damage Reduction",
@@ -421,7 +421,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tryndamere dashes to the target location, dealing physical damage to enemies hit and generating 2 Fury per enemy hit, increased to 5 Fury against champions.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tryndamere dashes to the target location, dealing physical damage to enemies hit and generating 2 Fury per enemy hit, increased to 5 Fury against champions.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -516,7 +516,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Tryndamere becomes enraged, instantly gaining Fury and a minimum health threshold for 5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tryndamere becomes enraged, instantly gaining Fury and a minimum health threshold for 5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Fury Gained",

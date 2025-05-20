@@ -8,7 +8,8 @@ export function formatDataTags(text) {
  a = a.replace('|', ' ')
  a = a.replace('[[combat status ', '')
  a = a.replace(/'''/g, '')
- a = a.replace(/\[\[champion ability/g, '')
+ a = a.replace(/\[\[champion ability/gi, '')
+ 
  a = a.replace(/\'\'/g, '')
  a = a.replace('[[Haste#Ultimate haste ultimate haste', 'ultimate haste')
 return a.replace(']]', '')

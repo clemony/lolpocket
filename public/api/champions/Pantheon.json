@@ -103,7 +103,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pantheon/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Pantheon generates a stack of Mortal Will whenever he lands a basic attack on-hit or casts an ability, stacking up to 5 times. At 5 stacks, Pantheon's next basic ability consumes the stacks to become empowered with an additional effect.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Pantheon generates a stack of Mortal Will whenever he lands a basic attack on-hit or casts an ability, stacking up to 5 times. At 5 stacks, Pantheon's next basic ability consumes the stacks to become empowered with an additional effect.</p></div>",
             "leveling": []
           },
           {
@@ -147,11 +147,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pantheon/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Pantheon charges while being slowed by 10% for up to 4 seconds to increase Comet Spear's range after 0.35 seconds of channeling. Comet Spear can be recast within the duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Pantheon charges while being slowed by 10% for up to 4 seconds to increase Comet Spear's range after 0.35 seconds of channeling. Comet Spear can be recast within the duration.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Pantheon hurls his spear in the target direction that deals physical damage to enemies hit, increased against enemies below 20% of their maximum health but reduced by 50% against enemies beyond the first.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Pantheon hurls his spear in the target direction that deals physical damage to enemies hit, increased against enemies below 20% of their maximum health but reduced by 50% against enemies beyond the first.</p></div>",
             "leveling": [
               {
                 "attribute": "Hurl Physical Damage",
@@ -409,7 +409,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pantheon/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Pantheon leaps to the front of the target enemy's location. If the target is within 800 units upon arrival, he deals physical damage and stuns them for 1 second. Against minions and monsters, Shield Vault has a minimum damage of 60 and is capped at 200.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Pantheon leaps to the front of the target enemy's location. If the target is within 800 units upon arrival, he deals physical damage and stuns them for 1 second. Against minions and monsters, Shield Vault has a minimum damage of 60 and is capped at 200.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -447,7 +447,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Mortal Will:</p><p> Pantheon empowers his next basic attack within 4 seconds to have a cast time and strike the target 3 times over a brief period, dealing 40% - 55% (based on level) AD physical damage per hit, up to 120% - 165% (based on level) AD. Each hit is affected by critical strike modifiers and applies on-hit effects.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Mortal Will:</p><p> Pantheon empowers his next basic attack within 4 seconds to have a cast time and strike the target 3 times over a brief period, dealing 40% - 55% (based on level) AD physical damage per hit, up to 120% - 165% (based on level) AD. Each hit is affected by critical strike modifiers and applies on-hit effects.</p></div>",
             "leveling": []
           },
           {
@@ -513,7 +513,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pantheon/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Pantheon braces his shield in the target direction and channels for 1.5 seconds, during which he becomes invulnerable to non- turret damage dealt by enemies from the target direction. He also continually performs strikes in a cone in front of him, dealing 8.3% AD physical damage every 0.125 seconds to enemies hit, reduced by 50% against minions and up to 100% AD total physical damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Pantheon braces his shield in the target direction and channels for 1.5 seconds, during which he becomes invulnerable to non- turret damage dealt by enemies from the target direction. He also continually performs strikes in a cone in front of him, dealing 8.3% AD physical damage every 0.125 seconds to enemies hit, reduced by 50% against minions and up to 100% AD total physical damage.</p></div>",
             "leveling": []
           },
           {
@@ -521,7 +521,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Pantheon slams with his shield in a cone in front of him, dealing physical damage to enemies hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Pantheon slams with his shield in a cone in front of him, dealing physical damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -551,7 +551,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Mortal Will:</p><p> After recasting, Pantheon gains 5 - 30 (based on level) (+ 2.5% bonus health) bonus armor and bonus magic resistance for 4 seconds as well as 60% bonus movement speed for 1.5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Mortal Will:</p><p> After recasting, Pantheon gains 5 - 30 (based on level) (+ 2.5% bonus health) bonus armor and bonus magic resistance for 4 seconds as well as 60% bonus movement speed for 1.5 seconds.</p></div>",
             "leveling": []
           }
         ],
@@ -613,7 +613,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pantheon/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Pantheon gains armor penetration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Pantheon gains armor penetration.</p></div>",
             "leveling": [
               {
                 "attribute": "Armor Penetration",
@@ -633,7 +633,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Pantheon channels for 2 seconds, then leaps high into the air, vanishing and becoming immune to crowd control until he reappears. While in the air, Pantheon channels again for 2.25 seconds and grants sight around the target location 0.5 seconds into the channel.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Pantheon channels for 2 seconds, then leaps high into the air, vanishing and becoming immune to crowd control until he reappears. While in the air, Pantheon channels again for 2.25 seconds and grants sight around the target location 0.5 seconds into the channel.</p></div>",
             "leveling": []
           },
           {

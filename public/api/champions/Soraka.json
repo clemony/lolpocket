@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Soraka gains 90% bonus movement speed while facing nearby allied champions that are below 40% of their maximum health.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Soraka gains 90% bonus movement speed while facing nearby allied champions that are below 40% of their maximum health.</p></div>",
             "leveling": []
           }
         ],
@@ -139,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Soraka calls down a star upon the target location that grants sight of the area before landing after 0.25 - 1 (based on target range) seconds, dealing magic damage to enemies hit and slowing them by 30% for 1.5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Soraka calls down a star upon the target location that grants sight of the area before landing after 0.25 - 1 (based on target range) seconds, dealing magic damage to enemies hit and slowing them by 30% for 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -173,7 +173,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Rejuvenation:</p><p> The target heals every 0.5 seconds and gains bonus movement speed that decays over the duration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Rejuvenation:</p><p> The target heals every 0.5 seconds and gains bonus movement speed that decays over the duration.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Heal",
@@ -307,7 +307,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Soraka heals the target allied champion.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Soraka heals the target allied champion.</p></div>",
             "leveling": [
               {
                 "attribute": "Heal",
@@ -438,7 +438,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Soraka creates a celestial zone at the target location that deals magic damage to enemy champions within at the time of cast. The zone then persists for 1.5 seconds and silences enemies within.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Soraka creates a celestial zone at the target location that deals magic damage to enemy champions within at the time of cast. The zone then persists for 1.5 seconds and silences enemies within.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -577,7 +577,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Soraka calls upon the stars, healing herself and all allied champions, increased by 50% on targets below 40% of their maximum health.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Soraka calls upon the stars, healing herself and all allied champions, increased by 50% on targets below 40% of their maximum health.</p></div>",
             "leveling": [
               {
                 "attribute": "Heal",

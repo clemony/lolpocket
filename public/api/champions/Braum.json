@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Braum/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Braum's basic attacks and Winter's Bite each apply a stack of Concussive Blows to their target for 4 seconds, refreshing on subsequent applications and stacking up to 4 times. Once the first stack has been applied, any allied champion's basic attack applies an additional stack to the target on-hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Braum's basic attacks and Winter's Bite each apply a stack of Concussive Blows to their target for 4 seconds, refreshing on subsequent applications and stacking up to 4 times. Once the first stack has been applied, any allied champion's basic attack applies an additional stack to the target on-hit.</p></div>",
             "leveling": []
           },
           {
@@ -147,7 +147,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Braum/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Braum propels ice from his shield in the target direction, dealing magic damage to the first enemy hit and slowing them by 70% decaying over 2 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Braum propels ice from his shield in the target direction, dealing magic damage to the first enemy hit and slowing them by 70% decaying over 2 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -239,7 +239,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Braum/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Braum dashes to put himself between the target ally and the closest visible enemy champion within 1500 units, and upon arrival grants himself and the ally bonus armor and bonus magic resistance for 3 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Braum dashes to put himself between the target ally and the closest visible enemy champion within 1500 units, and upon arrival grants himself and the ally bonus armor and bonus magic resistance for 3 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Ally Bonus Armor",
@@ -411,7 +411,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Braum/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Braum sets his shield in the target direction for a duration, creating a barrier in front of him that intercepts all incoming hostile projectiles and reduces the damage Braum takes through it. The first instance of damage dealt by a champion from this direction is reduced by 100%. Unbreakable does not affect turrets.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Braum sets his shield in the target direction for a duration, creating a barrier in front of him that intercepts all incoming hostile projectiles and reduces the damage Braum takes through it. The first instance of damage dealt by a champion from this direction is reduced by 100%. Unbreakable does not affect turrets.</p></div>",
             "leveling": [
               {
                 "attribute": "Damage reduction",
@@ -516,7 +516,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Braum/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Braum leaps into the air and slams his shield into the ground, creating a fissure from the impact that travels forth in the target direction, dealing magic damage to enemies within its path as well as those around Braum.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Braum leaps into the air and slams his shield into the ground, creating a fissure from the impact that travels forth in the target direction, dealing magic damage to enemies within its path as well as those around Braum.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

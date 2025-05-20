@@ -22,7 +22,7 @@ export function useSummonerMastery(queryPuuid?: string) {
 
       cs.summonerMastery = mastery
       cs.lastFetchedAt = now
-      as.userAccount.puuid = puuid // Optional: update puuid if needed
+      as.userAccount.riot.puuid = puuid // Optional: update puuid if needed
 
       ready.value = true
     } catch (e) {

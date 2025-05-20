@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Naafiri/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Periodically, Naafiri summons a Packmate that fights alongside her. She may have up to 2 / 3 / 4 / 5 (based on level) Packmates at a time. Naafiri summons the maximum number of Packmates when the game starts and upon respawning.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, Naafiri summons a Packmate that fights alongside her. She may have up to 2 / 3 / 4 / 5 (based on level) Packmates at a time. Naafiri summons the maximum number of Packmates when the game starts and upon respawning.</p></div>",
             "leveling": []
           },
           {
@@ -157,7 +157,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Naafiri/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Naafiri hurls a dagger in the target direction that deals physical damage to enemies hit and inflicts them with a bleed that deals bonus physical damage every 0.5 seconds for 5 seconds. The bleed executes minions and non-epic monsters if they would be damaged below 30 - 70 (based on level) health. Darkin Daggers can be recast after 0.5 seconds and within 4 seconds at no additional cost.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Naafiri hurls a dagger in the target direction that deals physical damage to enemies hit and inflicts them with a bleed that deals bonus physical damage every 0.5 seconds for 5 seconds. The bleed executes minions and non-epic monsters if they would be damaged below 30 - 70 (based on level) health. Darkin Daggers can be recast after 0.5 seconds and within 4 seconds at no additional cost.</p></div>",
             "leveling": [
               {
                 "attribute": "Initial Physical Damage",
@@ -392,7 +392,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Naafiri mimics the first cast's effects.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Naafiri mimics the first cast's effects.</p></div>",
             "leveling": []
           }
         ],
@@ -458,7 +458,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Naafiri/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Naafiri goes on the hunt for the next 5 seconds, becoming untargetable for the first 1 second and vanishing all of her active Packmates in the first 0.9 seconds. Her active Packmates will reappear near her after their vanish.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Naafiri goes on the hunt for the next 5 seconds, becoming untargetable for the first 1 second and vanishing all of her active Packmates in the first 0.9 seconds. Her active Packmates will reappear near her after their vanish.</p></div>",
             "leveling": []
           },
           {
@@ -554,7 +554,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Naafiri/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Naafiri dashes in the target direction and deals physical damage to enemies she passes through. Upon arrival, she explodes in a flurry of blades to deal physical damage to nearby enemies.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Naafiri dashes in the target direction and deals physical damage to enemies she passes through. Upon arrival, she explodes in a flurry of blades to deal physical damage to nearby enemies.</p></div>",
             "leveling": [
               {
                 "attribute": "Dash Physical Damage",
@@ -696,7 +696,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Naafiri/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Naafiri and her Packmates channel for 0.75 seconds to single out the target enemy champion, revealing them in the duration. Upon completion of the channel, they dash to the target; upon arrival Naafiri deals physical damage and slows the target by 99% for 0.25 seconds, whereas each Packmate deals 10% of that damage. Packmates become untargetable during their channel and dash.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Naafiri and her Packmates channel for 0.75 seconds to single out the target enemy champion, revealing them in the duration. Upon completion of the channel, they dash to the target; upon arrival Naafiri deals physical damage and slows the target by 99% for 0.25 seconds, whereas each Packmate deals 10% of that damage. Packmates become untargetable during their channel and dash.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -751,7 +751,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Naafiri immediately grants herself a shield for 3 seconds before mimicking the first cast's effects.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Naafiri immediately grants herself a shield for 3 seconds before mimicking the first cast's effects.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield",

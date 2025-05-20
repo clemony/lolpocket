@@ -100,11 +100,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Annie/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Pyromania:</p><p> Annie generates a stack of Pyromania whenever she hits an enemy with Disintegrate or casts her other abilities, stacking up to 4 times, at which she gains Energized.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate - Pyromania:</p><p> Annie generates a stack of Pyromania whenever she hits an enemy with Disintegrate or casts her other abilities, stacking up to 4 times, at which she gains Energized.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Energized:</p><p> Annie empowers her next cast of Disintegrate, Incinerate, or Summon: Tibbers to consume all Pyromania stacks to stun enemies hit for 1.25 / 1.5 / 1.75 (based on level) seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Energized:</p><p> Annie empowers her next cast of Disintegrate, Incinerate, or Summon: Tibbers to consume all Pyromania stacks to stun enemies hit for 1.25 / 1.5 / 1.75 (based on level) seconds.</p></div>",
             "leveling": []
           },
           {
@@ -148,7 +148,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Annie/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Annie hurls a fireball at the target enemy that deals magic damage.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Annie hurls a fireball at the target enemy that deals magic damage.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -240,7 +240,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Annie/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Annie releases fire in a cone in the target direction, dealing magic damage to enemies hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Annie releases fire in a cone in the target direction, dealing magic damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -328,7 +328,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Annie/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Annie grants herself or the target allied champion and Tibbers a shield for 3 seconds and 20% - 50% (based on level) bonus movement speed that decays over 1.5 seconds.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Annie grants herself or the target allied champion and Tibbers a shield for 3 seconds and 20% - 50% (based on level) bonus movement speed that decays over 1.5 seconds.</p></div>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -450,7 +450,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Annie/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Annie gains magic penetration.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Annie gains magic penetration.</p></div>",
             "leveling": [
               {
                 "attribute": "Magic Penetration",
@@ -470,7 +470,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Annie summons Tibbers to the target location in a burst of flame, dealing magic damage to enemies near him. Summon: Tibbers can be recast at any time while Tibbers is alive.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Annie summons Tibbers to the target location in a burst of flame, dealing magic damage to enemies near him. Summon: Tibbers can be recast at any time while Tibbers is alive.</p></div>",
             "leveling": [
               {
                 "attribute": "Initial Magic Damage",
@@ -502,11 +502,11 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Annie directs Tibbers to the target location.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Annie directs Tibbers to the target location.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Summon:</p><p> Tibber's recast can be used while affected by cast-inhibiting crowd control. See Pets for more details about Tibbers.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Summon:</p><p> Tibber's recast can be used while affected by cast-inhibiting crowd control. See Pets for more details about Tibbers.</p></div>",
             "leveling": []
           }
         ],

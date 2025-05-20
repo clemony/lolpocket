@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import Fuse from 'fuse.js'
 
-const cs = useChampStore()
 
 const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const { data } = await useFetch('/api/lists/champion-index.json')
+const { data } = await useFetch('/api/index/champion-index.json')
 const champions = computedAsync(async () => {
   return await Object.values(data.value) as ChampionIndex[]
 }, null)

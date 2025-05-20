@@ -10,7 +10,7 @@ const props = defineProps<{
   <div :class="cn('size-12  aspect-square rounded-full  shadow-md', props.class) ">
     <NuxtImg
       v-if="props.iconId"
-      :src="`https://ddragon.leagueoflegends.com/cdn/15.2.1/img/profileicon/${props.iconId}.png`"
+      :src="`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/${props.iconId}.jpg`"
       :alt="props.alt"
       class="size-full [&_img]:scale-115 rounded-full  inset-shadow-sm inset-shadow-black/90 avatar" />
     <div

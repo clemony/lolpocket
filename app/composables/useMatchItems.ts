@@ -3,7 +3,7 @@ export function useMatchItems() {
   const as = useAccountStore()
   const ss = useSummonerStore()
 
-  const matches = computed (() => ss.getSummoner(as.userAccount.puuid).simplifiedMatches)
+  const matches = computed (() => ss.getSummoner(as.userAccount.riot.puuid).simplifiedMatches)
 
   const itemStats = new Map<number, {
     games: number

@@ -92,7 +92,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Kled rides his semi-trusty mount, Skaarl. While Mounted, all damage dealt to the duo is suffered by Skaarl, who has 400 - 1550 (based on level) base health; additional sources of health are applied to Skaarl's maximum health. Effects based on percentage health consider Kled and Skaarl's combined maximum health.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Kled rides his semi-trusty mount, Skaarl. While Mounted, all damage dealt to the duo is suffered by Skaarl, who has 400 - 1550 (based on level) base health; additional sources of health are applied to Skaarl's maximum health. Effects based on percentage health consider Kled and Skaarl's combined maximum health.</p></div>",
             "leveling": []
           },
           {
@@ -138,7 +138,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate:</p><p> Kled is only vulnerable to death while Dismounted. Kled has 410 - 1838 (based on level) base health, which is not improved by sources of bonus health, as well as reduced base movement speed and increased base attack range. Effects based on percentage health consider Kled and Skaarl's combined maximum health, meaning that a Dismounted Kled is never considered to be at full health.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Kled is only vulnerable to death while Dismounted. Kled has 410 - 1838 (based on level) base health, which is not improved by sources of bonus health, as well as reduced base movement speed and increased base attack range. Effects based on percentage health consider Kled and Skaarl's combined maximum health, meaning that a Dismounted Kled is never considered to be at full health.</p></div>",
             "leveling": []
           },
           {
@@ -146,7 +146,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Innate - Courage:</p><p> Kled gains 15 Courage after completing a basic attack against a champion, 20 Courage whenever he scores a takedown against an enemy champion within 3 seconds of damaging them, 4 Courage for minion kills, and 5 Courage when basic attacking a structure or epic monster. At 100 Courage, Skaarl returns with 45 / 55 / 65 / 75% (based on level) of Skaarl's maximum health and Kled becomes Mounted after 0.7 seconds. Mounting up resets the cooldowns of Bear Trap on a Rope and Jousting.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Innate - Courage:</p><p> Kled gains 15 Courage after completing a basic attack against a champion, 20 Courage whenever he scores a takedown against an enemy champion within 3 seconds of damaging them, 4 Courage for minion kills, and 5 Courage when basic attacking a structure or epic monster. At 100 Courage, Skaarl returns with 45 / 55 / 65 / 75% (based on level) of Skaarl's maximum health and Kled becomes Mounted after 0.7 seconds. Mounting up resets the cooldowns of Bear Trap on a Rope and Jousting.</p></div>",
             "leveling": []
           },
           {
@@ -203,7 +203,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kled throws a bear trap in the target direction that deals physical damage to enemies hit, increased by 50% against minions, small pets and small monsters. The bear trap collides against the first enemy champion, large pet or large monster hit, forming a tether between Kled and the target for 1.75 seconds, during which they are revealed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kled throws a bear trap in the target direction that deals physical damage to enemies hit, increased by 50% against minions, small pets and small monsters. The bear trap collides against the first enemy champion, large pet or large monster hit, forming a tether between Kled and the target for 1.75 seconds, during which they are revealed.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -381,7 +381,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kled sprays a cone of five pellets in the target direction while recoiling 300 units in the opposite direction, dealing physical damage to enemies hit.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kled sprays a cone of five pellets in the target direction while recoiling 300 units in the opposite direction, dealing physical damage to enemies hit.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -543,11 +543,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Passive:</p><p> Kled periodically gains Violent Tendencies, which starts expiring upon his next basic attack.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Kled periodically gains Violent Tendencies, which starts expiring upon his next basic attack.</p></div>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Violent Tendencies:</p><p> Kled gains 150% bonus attack speed on his next 4 basic attacks within 4 seconds. The fourth attack deals bonus physical damage, capped against monsters.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Violent Tendencies:</p><p> Kled gains 150% bonus attack speed on his next 4 basic attacks within 4 seconds. The fourth attack deals bonus physical damage, capped against monsters.</p></div>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -694,7 +694,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Skaarl dashes in the target direction, though not through terrain, dealing physical damage to enemies he passes through and pulling minions, pets and small monsters hit towards them.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Skaarl dashes in the target direction, though not through terrain, dealing physical damage to enemies he passes through and pulling minions, pets and small monsters hit towards them.</p></div>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -728,7 +728,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Recast:</p><p> Skaarl consumes the mark to dash through the marked target, applying the same effects as the first cast though being able to dash through terrain.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Skaarl consumes the mark to dash through the marked target, applying the same effects as the first cast though being able to dash through terrain.</p></div>",
             "leveling": [
               {
                 "attribute": "Total Physical Damage",
@@ -853,7 +853,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Active:</p><p> Kled & Skaarl charge toward the target location, automatically navigating terrain along the way, during which they're ghosted, immune to crowd control and revealed to enemy champions in a 1250 radius. If the charge does not complete within 15 seconds, it will end prematurely. The charge is interrupted instantly if Kled dismounts during it.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kled & Skaarl charge toward the target location, automatically navigating terrain along the way, during which they're ghosted, immune to crowd control and revealed to enemy champions in a 1250 radius. If the charge does not complete within 15 seconds, it will end prematurely. The charge is interrupted instantly if Kled dismounts during it.</p></div>",
             "leveling": []
           },
           {
@@ -908,7 +908,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"font-semibold  tracking-tight text-4\">Mr. Kled's Wild Ride:</p><p> While in champion combat, gain 40% bonus movement speed. After not being in champion combat for 3 seconds, if Kled is charging, gain bonus movement speed up to Kled's current movement speed; otherwise gain up to 650 total movement speed.</p></div>",
+            "description": "\n\n<div><p class=\"ability-header\">Mr. Kled's Wild Ride:</p><p> While in champion combat, gain 40% bonus movement speed. After not being in champion combat for 3 seconds, if Kled is charging, gain bonus movement speed up to Kled's current movement speed; otherwise gain up to 650 total movement speed.</p></div>",
             "leveling": []
           },
           {
