@@ -18,11 +18,11 @@
   "passives": [],
   "active": [
     {
-      "unique": true,
       "name": "Lightning Bolt",
-      "effects": "Shocks the target enemy champion with a bolt of lightning, dealing {{as|{{pp|175 to 253}}|magic damage}} {{as|(+ 30% '''bonus''' AD)}} {{as|(+ 30% AP)}} {{as|magic damage}} and {{tip|slow|slowing}} them by 40% for 2 seconds.",
-      "range": 0,
-      "cooldown": null
+      "unique": true,
+      "effects": "Shocks the target enemy champion with a bolt of lightning, dealing + magic damage (+ 30% <b>bonus</b> AD) (+ 30% AP) magic damage and <img src=\"/img/icons/slow.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />slowing them by 40% for 2 seconds.",
+      "cooldown": null,
+      "range": 0
     }
   ],
   "stats": {

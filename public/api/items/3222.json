@@ -24,11 +24,11 @@
   "passives": [],
   "active": [
     {
-      "unique": true,
       "name": "Purify",
-      "effects": "Remove all {{tip|crowd control}} debuffs (except {{tip|Airborne}}, {{tip|Blind}}, {{tip|Disarm}}, {{tip|Nearsight}}, and {{tip|Suppression}}) from yourself or the target allied champion and {{tip|heal}} the target for {{pp|100 to 250|type=target's level}}.",
-      "range": 0,
-      "cooldown": null
+      "unique": true,
+      "effects": "Remove all <img src=\"/img/icons/crowd%20control.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />crowd control debuffs (except <img src=\"/img/icons/airborne.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Airborne, <img src=\"/img/icons/blind.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Blind, <img src=\"/img/icons/disarm.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Disarm, <img src=\"/img/icons/nearsight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Nearsight, and <img src=\"/img/icons/suppression.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Suppression) from yourself or the target allied champion and <img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />heal the target for +type=target's level target's level.",
+      "cooldown": null,
+      "range": 0
     }
   ],
   "stats": {

@@ -1,10 +1,9 @@
 <script lang="ts" setup>
 const ds = useDataStore()
 
-const champions = [...ds.champions]
+const champions = await $fetch<ChampionIndex[]>('/api/index/champion-index.json')
 
-const { data: itemData } = await useFetch('/api/lists/item-index.json')
-const items = Object.values(itemData.value) as ItemIndex[]
+const items = await $fetch<ItemIndex[]>('/api/index/item-index.json')
 const shuffled = champions.sort(() => 0.5 - Math.random())
 
 // Get sub-array of first n elements after shuffled

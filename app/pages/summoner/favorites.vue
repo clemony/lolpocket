@@ -2,6 +2,7 @@
 definePageMeta({
   name: 'favorites',
   section: 'nexus',
+  icon: 'heart'
 })
 </script>
 

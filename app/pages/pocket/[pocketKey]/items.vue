@@ -6,8 +6,9 @@ const props = defineProps<{
 }>()
 
 definePageMeta({
-  name: 'items',
+  name: 'pocket items',
   section: 'pocket',
+  search: false
 })
 
 const is = useItemStore()

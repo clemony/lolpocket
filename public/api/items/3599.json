@@ -18,11 +18,11 @@
   "passives": [],
   "active": [
     {
-      "unique": true,
       "name": "Oathsworn Bond",
-      "effects": "Consumes this item to initiate a {{fd|3.5}}-second [[Channel#Casting Times|cast time]] and a 3-second {{tip|channel}} afterwards from the user and the target allied champion, both becoming bound allies. The target is unable to act for 6 seconds after the channel's duration. Afterwards, the target becomes an ''Oathsworn''.",
-      "range": null,
-      "cooldown": null
+      "unique": true,
+      "effects": "Consumes this item to initiate a 3.5s-second cast time and a 3-second <img src=\"/img/icons/channel.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />channel afterwards from the user and the target allied champion, both becoming bound allies. The target is unable to act for 6 seconds after the channel's duration. Afterwards, the target becomes an <i>Oathsworn</i>.",
+      "cooldown": null,
+      "range": null
     }
   ],
   "stats": {},

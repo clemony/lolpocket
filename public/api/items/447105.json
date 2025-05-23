@@ -18,11 +18,11 @@
   "passives": [],
   "active": [
     {
-      "unique": true,
       "name": "Vigilance",
-      "effects": "{{tip|Dash}} to the current location of your ally and upon completion grant both yourself and the ally a {{tip|shield}} that absorbs {{pp|100 to 250}} {{as|(+ 100% of your AP)}} {{as|(+ 10% of your '''bonus''' health)}} damage for 5 seconds. '''Can be used even while the ally is dead.'''",
-      "range": null,
-      "cooldown": null
+      "unique": true,
+      "effects": "<img src=\"/img/icons/dash.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Dash to the current location of your ally and upon completion grant both yourself and the ally a <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shield that absorbs + (+ 100% of your AP) (+ 10% of your <b>bonus</b> health) damage for 5 seconds. <b>Can be used even while the ally is dead.</b>",
+      "cooldown": null,
+      "range": null
     }
   ],
   "stats": {

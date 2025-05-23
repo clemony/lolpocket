@@ -2,7 +2,9 @@
 const ps = usePocketStore()
 
 definePageMeta({
+  name: 'backpack',
   section: 'backpack',
+  icon: 'backpack'
 })
 </script>
 

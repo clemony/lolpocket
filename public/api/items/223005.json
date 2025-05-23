@@ -18,11 +18,11 @@
   "passives": [],
   "active": [
     {
-      "unique": true,
       "name": "Wall Walk",
-      "effects": "Become ghostly for 6 seconds, ignoring terrain collision until you basic attack or cast an ability. While inside terrain, gain {{as|300 '''bonus''' movement speed}}.",
-      "range": null,
-      "cooldown": null
+      "unique": true,
+      "effects": "Become ghostly for 6 seconds, ignoring terrain collision until you basic attack or cast an ability. While inside terrain, gain 300 <b>bonus</b> movement speed.",
+      "cooldown": null,
+      "range": null
     }
   ],
   "stats": {

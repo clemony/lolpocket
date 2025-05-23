@@ -22,11 +22,11 @@
   "passives": [],
   "active": [
     {
-      "unique": true,
       "name": "Trinket",
-      "effects": "Places a visible {{tip|Farsight Ward}} at the target location that grants {{tip|sight}} of the surrounding area, including over [[terrain]] and through [[brush]] and lasting indefinitely. Also grants sight of the area in a 800 radius for 2 seconds. Upon detecting an enemy champion, the ward will increase its sight radius to 800 units and destroy itself after 3 seconds.",
-      "range": 4000,
-      "cooldown": null
+      "unique": true,
+      "effects": "Places a visible <img src=\"/img/icons/farsight%20ward.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Farsight Ward at the target location that grants <img src=\"/img/icons/sight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />sight of the surrounding area, including over terrain and through brush and lasting indefinitely. Also grants sight of the area in a 800 radius for 2 seconds. Upon detecting an enemy champion, the ward will increase its sight radius to 800 units and destroy itself after 3 seconds.",
+      "cooldown": null,
+      "range": 4000
     }
   ],
   "stats": {},

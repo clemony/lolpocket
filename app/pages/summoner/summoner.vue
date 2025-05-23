@@ -1,8 +1,9 @@
 <script setup lang="ts">
 definePageMeta({
   title: 'Summoner',
-  section: 'summoner',
+  section: 'search',
   path: '/summoner',
+  icon: 'search'
 })
 
 

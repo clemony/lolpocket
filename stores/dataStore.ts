@@ -1,53 +1,56 @@
 import { defineStore } from 'pinia'
-// Define types for the JSON data
+import { useFetch } from '@vueuse/core'
 
 export const useDataStore = defineStore(
   'dataStore',
   () => {
     const currentPatch = ref()
+    console.log("💠 - currentPatch:", currentPatch)
+    const patchList = ref<string[]>([])
+    console.log("💠 - patchList:", patchList)
+    const lastFetched = ref<number>(0) // timestamp
+    console.log("💠 - lastFetched:", lastFetched)
+
     const currentPatchNotes = ref<PatchNotesData>(null)
-
-    const patchNotesLink = computed (() => {
-      return `https://www.leagueoflegends.com/en-us/news/game-updates/patch-${currentPatch.value.toString().replace('.', '-')}-notes/`
-    })
-    const paths = ref<Path[]>([])
-    const champions = ref<Champion[]>([])
-    const shards = ref()
-
-    const championNames = computedAsync (() => {
-      return champions.value.map(c => c.name)
+    const patchNotesLink = computed(() => {
+      return currentPatch.value
+        ? `https://www.leagueoflegends.com/en-us/news/game-updates/patch-${currentPatch.value.toString().replace('.', '-')}-notes/`
+        : ''
     })
 
-    const runes = computed (() => {
-      const path = paths.value.flatMap(p => p.slots)
-      const slots = path.flatMap(s => s[0])
-      const runes = slots.flatMap(({ id, name }) => ({
-        id,
-        name,
-      }))
-      return runes
-    })
+    const loadPatchData = async () => {
+      const now = Date.now()
+      const oneDay = 1000 * 60 * 60 * 24
+
+      if (!patchList.value.length || now - lastFetched.value > oneDay) {
+        try {
+          const { data, error } = await useFetch('/api/index/patch-index.json').json<string[]>()
+          if (!error.value && data.value) {
+            patchList.value = data.value
+            currentPatch.value = data.value[data.value.length - 1]
+            lastFetched.value = now
+          } else {
+            console.error('Failed to fetch patch data:', error.value)
+          }
+        } catch (err) {
+          console.error('Patch fetch error:', err)
+        }
+      }
+    }
 
     return {
       currentPatch,
-      patchNotesLink,
+      patchList,
       currentPatchNotes,
-      paths,
-      runes,
-      champions,
-      championNames,
-
-      shards,
+      patchNotesLink,
+      lastFetched,
+      loadPatchData,
     }
   },
   {
     persist: {
       storage: piniaPluginPersistedstate.localStorage(),
       key: 'dataStore',
-      afterHydrate: (ctx) => {
-        const as = useDataStore()
-        // ts.drawerState = false
-      },
     },
   },
 )

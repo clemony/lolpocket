@@ -47,3 +47,38 @@ export function getPocket(key) {
   const ps = usePocketStore()
   return ps.pockets.find((pocket: Pocket) => pocket.key === key)
 }
+
+// CHAMPS
+
+export function removeChamp(champ, pocket) {
+  console.log('💠 - removeChamp - pocket:', pocket)
+  const find = pocket.champions.children.findIndex(c => c == champ)
+  console.log('💠 - removeChamp - find:', find)
+
+  if (find != -1) {
+    pocket.champions.children.splice(find, 1)
+  }
+}
+
+// RUNES
+
+export function resetRunes(set) {
+  set.keystone = null
+  set[0].runes = { 1: null, 2: null, 3: null }
+  set[1].runes = { 1: null, 2: null, 3: null }
+}
+
+export function deleteRuneSet(pocket, set) {
+  const a = pocket.runes.findIndex(s => s == set)
+  console.log('💠 - deleteRuneSet - a:', a)
+  if (a != -1) {
+    pocket.runes.splice(a, 1)
+  }
+}
+
+export function removeSpellSet(pocket, set) {
+  const a = pocket.spells.sets.findIndex(s => s == set)
+  if (!a)
+    return
+  pocket.spells.sets.splice(a, 1)
+}

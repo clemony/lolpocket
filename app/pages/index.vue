@@ -6,8 +6,12 @@ import { useScroll } from '@vueuse/core'
 const emit = defineEmits(['update:open'])
 
 definePageMeta({
-  name: 'lolpockets',
-  path: '/'
+  name: 'home',
+  path: '/',
+  title: 'lolpocket',
+  searchKeys: ['home', 'landing', 'testimonials'],
+  icon: 'teenyicons:home-alt-outline',
+  section: 'home'
 })
 
 const us = useUiStore()

@@ -5,7 +5,6 @@ const useHead = useHeader()
 
 onMounted(async () => {
   document.documentElement.setAttribute('data-theme', as.dataTheme ? as.dataTheme : 'midnight')
-  getPatch()
   useAuth()
 })
 </script>

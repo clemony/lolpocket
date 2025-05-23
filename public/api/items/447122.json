@@ -17,199 +17,20 @@
   "nicknames": [],
   "passives": [
     {
-      "unique": true,
-      "mythic": false,
       "name": "Accretion",
-      "effects": "Basic attacks [[on-hit]] and {{tip|immobilize|immobilizing}} effects against enemy champions generate 1 and 5 stacks of ''Accretion'', respectively, up to 50. For each ''Accretion'' stack, gain {{as|10% '''base''' health regeneration}}, up to {{as|500% '''base''' health regeneration}} at '''maximum''' stacks. Additionally, for every 10 ''Accretion'' stacks, gain 20% increased size, up to 100% at '''maximum''' stacks. Stacks are reset every round and between each phase in a round.",
-      "range": null,
+      "unique": true,
+      "effects": "Basic attacks on-hit and <img src=\"/img/icons/immobilize.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />immobilizing effects against enemy champions generate 1 and 5 stacks of <i>Accretion</i>, respectively, up to 50. For each <i>Accretion</i> stack, gain 10% <b>base</b> health regeneration, up to 500% <b>base</b> health regeneration at <b>maximum</b> stacks. Additionally, for every 10 <i>Accretion</i> stacks, gain 20% increased size, up to 100% at <b>maximum</b> stacks. Stacks are reset every round and between each phase in a round.",
       "cooldown": null,
-      "stats": {
-        "abilityPower": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "armor": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "armorPenetration": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "attackDamage": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "attackSpeed": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "cooldownReduction": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "criticalStrikeChance": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "goldPer10": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "healAndShieldPower": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "health": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "healthRegen": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "lethality": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "lifesteal": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "magicPenetration": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "magicResistance": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "mana": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "manaRegen": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "movespeed": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "abilityHaste": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "omnivamp": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "tenacity": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "criticalStrikeDamage": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        }
-      }
+      "range": null
     }
   ],
   "active": [
     {
-      "unique": true,
       "name": "Dark Star",
-      "effects": "Summon a black hole at the target location after a {{fd|0.5}}-second delay that lasts for 2 {{as|(+ {{fd|0.1}} per 100 '''bonus''' health)}} seconds and has a radius of [{{tip|cr|icononly=true}} {{tt|225|Total radius}} / {{tt|75|Impassable horizon radius}} units]{{times}}champion size modifier (+ {{fd|0.1}}% per ''Accretion'' stack). Enemies within are dealt {{as|{{pp|30 to 100}}|magic damage}} {{as|(+ {{fd|6.5}}% of user's '''maximum''' health)}} {{as|magic damage}} every second, {{tip|slow|slowed}} by 35%, and {{tip|kinematics|dragged}} inward until they reach the horizon at the center. Additionally, for each enemy champion inside the black hole, generate 1 stack of ''Accretion'' per second.",
-      "range": null,
-      "cooldown": null
+      "unique": true,
+      "effects": "Summon a black hole at the target location after a 0.5s-second delay that lasts for 2 (+ 0.1s per 100 <b>bonus</b> health) seconds and has a radius of [<img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly=true 225 / 75 units]{{|times}}champion size modifier (+ 0.1s% per <i>Accretion</i> stack). Enemies within are dealt + magic damage (+ 6.5s% of user's <b>maximum</b> health) magic damage every second, <img src=\"/img/icons/slow.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />slowed by 35%, and <img src=\"/img/icons/kinematics.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />dragged inward until they reach the horizon at the center. Additionally, for each enemy champion inside the black hole, generate 1 stack of <i>Accretion</i> per second.",
+      "cooldown": null,
+      "range": null
     }
   ],
   "stats": {

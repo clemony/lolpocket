@@ -14,7 +14,6 @@ export const defaultUser: userAccount ={
     region: 'Runeterra',
   }
 }
-// logout
 
 export function createNote() {
   const as = useAccountStore()

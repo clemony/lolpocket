@@ -20,11 +20,11 @@
   "passives": [],
   "active": [
     {
-      "unique": true,
       "name": "Supercharged",
-      "effects": "Removes all {{tip|crowd control}} debuffs (except {{tip|Airborne}}) from your champion and grants you {{tip|Cc-immune|total crowd control immunity}} for the next 3 seconds.",
-      "range": null,
-      "cooldown": null
+      "unique": true,
+      "effects": "Removes all <img src=\"/img/icons/crowd%20control.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />crowd control debuffs (except <img src=\"/img/icons/airborne.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Airborne) from your champion and grants you <img src=\"/img/icons/cc-immune.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />total crowd control immunity for the next 3 seconds.",
+      "cooldown": null,
+      "range": null
     }
   ],
   "stats": {

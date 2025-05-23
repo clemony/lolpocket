@@ -12,7 +12,7 @@ const classObject = 'font-normal text-4 justify-start gap-3  w-full btn btn-ghos
 <template>
 
     <div
-      class=" flex flex-col  z-3 bg-light  size-full relative py-4.5 px-6 *:text-start">
+      class=" flex flex-col  z-3 bg-white  size-full relative py-4.5 px-6 *:text-start">
 
 
         <div

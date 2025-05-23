@@ -7,6 +7,7 @@ definePageMeta({
   path: '/nexus',
   name: 'nexus',
   section: 'nexus',
+  icon: 'nexus'
 })
 
 const as = useAccountStore()

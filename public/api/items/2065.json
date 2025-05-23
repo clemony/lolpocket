@@ -24,11 +24,11 @@
   "passives": [],
   "active": [
     {
-      "unique": true,
       "name": "Inspiring Speech",
-      "effects": "Grants you and all allies within 1000 units {{as|30% '''bonus''' movement speed}} for 4 seconds.",
-      "range": null,
-      "cooldown": null
+      "unique": true,
+      "effects": "Grants you and all allies within 1000 units 30% <b>bonus</b> movement speed for 4 seconds.",
+      "cooldown": null,
+      "range": null
     }
   ],
   "stats": {

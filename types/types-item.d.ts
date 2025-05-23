@@ -1,6 +1,7 @@
 declare global {
   type ItemId = number
-
+  type ItemName = string
+  type ItemIndex = Record<ItemId, ItemName>
   type ItemRecord = Record<ItemId, ItemLite>
 type StatLite = number
 type StatArray = StatLite[]
@@ -15,11 +16,6 @@ type StatArray = StatLite[]
     cost: number
     tags: string[]
     maps: number[]
-  }
-
-  interface ItemIndex {
-    id: ItemId
-    name: string
   }
 
   interface Item {

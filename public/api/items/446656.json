@@ -22,11 +22,11 @@
   "passives": [],
   "active": [
     {
-      "unique": true,
       "name": "Glaciate",
-      "effects": "Unleash a fan of icy shards in a cone in the target direction, dealing {{as|250|magic damage}} {{as|(+ 85% AP)}} {{as|magic damage}} to enemies struck within and {{tip|slow|slowing}} them by 70% for {{fd|1.5}} seconds. Enemies hit in the center of the cone are {{tip|root|rooted}} for the same duration instead.",
-      "range": null,
-      "cooldown": null
+      "unique": true,
+      "effects": "Unleash a fan of icy shards in a cone in the target direction, dealing 250% attack speed (+ 85% AP) magic damage to enemies struck within and <img src=\"/img/icons/slow.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />slowing them by 70% for 1.5s seconds. Enemies hit in the center of the cone are <img src=\"/img/icons/root.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />rooted for the same duration instead.",
+      "cooldown": null,
+      "range": null
     }
   ],
   "stats": {

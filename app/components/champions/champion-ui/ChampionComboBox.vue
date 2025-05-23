@@ -13,9 +13,7 @@ const ds = useDataStore()
 const cs = useChampStore()
 const open = ref(false)
 
-function selectRandomChamp() {
-  cs.championSplashDropdown = getRandom(ds.championNames)
-}
+//TRASH
 
 onMounted (() => {
 })
@@ -38,14 +36,14 @@ onMounted (() => {
         <CommandInput placeholder="Search...">
           <span class="flex gap-1">
             <CloseButton @click="cs.championSplashDropdown = null" />
-            <RandomButton v-tippy="'Random Champ'" @click="selectRandomChamp" />
+            <RandomButton v-tippy="'Random Champ'"  />
           </span>
         </CommandInput>
         <CommandEmpty>No champions found.</CommandEmpty>
         <CommandList>
           <CommandGroup>
             <CommandItem
-              v-for="champion in ds.championNames" :key="champion"
+              v-for="champion in ''" :key="champion"
               :value="champion"
               as-child
               @select="cs.championSplashDropdown = champion">

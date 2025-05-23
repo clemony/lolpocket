@@ -2,6 +2,8 @@ import { hexoid } from 'hexoid'
 import { generate } from 'random-words'
 
 const moreWords = [
+  '200 IQ',
+  '200 Years',
   'Towers',
   'Minions',
   'Minion Block',
@@ -20,6 +22,9 @@ const moreWords = [
   'Jungle Gap',
   'Tilted',
   'Giga Chad',
+  'GOATED',
+  'GOAT',
+  'Gooner',
   'KDA Farmer',
   'Smurf',
   'League Addict',

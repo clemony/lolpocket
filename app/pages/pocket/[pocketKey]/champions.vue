@@ -8,10 +8,11 @@ const { pocket, puuid, champions } = defineProps<{
 }>()
 
 definePageMeta({
-  name: 'champions',
+  name: 'pocket champions',
   path: '/pocket/:pocketKey',
   alias: '/pocket/:pocketKey/champions',
   section: 'pocket',
+  search: false
 })
 
 /* const {loading, ready, forceReload} = useSummonerMastery(puuid) */

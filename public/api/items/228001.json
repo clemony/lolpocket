@@ -17,199 +17,20 @@
   "nicknames": [],
   "passives": [
     {
-      "unique": true,
-      "mythic": false,
       "name": "Vendetta",
-      "effects": "Take 30% reduced damage from your ''Nemesis'' and reduce their {{tip|tenacity}} by 20% while they are within {{tip|cr|icononly=true}} 700 units of you.",
-      "range": null,
+      "unique": true,
+      "effects": "Take 30% reduced damage from your <i>Nemesis</i> and reduce their <img src=\"/img/icons/tenacity.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />tenacity by 20% while they are within <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly=true 700 units of you.",
       "cooldown": null,
-      "stats": {
-        "abilityPower": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "armor": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "armorPenetration": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "attackDamage": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "attackSpeed": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "cooldownReduction": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "criticalStrikeChance": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "goldPer10": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "healAndShieldPower": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "health": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "healthRegen": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "lethality": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "lifesteal": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "magicPenetration": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "magicResistance": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "mana": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "manaRegen": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "movespeed": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "abilityHaste": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "omnivamp": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "tenacity": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "criticalStrikeDamage": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        }
-      }
+      "range": null
     }
   ],
   "active": [
     {
-      "unique": true,
       "name": "Vow",
-      "effects": "Curse the target enemy champion, designating them as your ''Nemesis''. Choosing a new ''Nemesis'' removes the curse from the old one. Cannot be cast for 15 seconds while in combat with enemy champions.",
-      "range": 0,
-      "cooldown": null
+      "unique": true,
+      "effects": "Curse the target enemy champion, designating them as your <i>Nemesis</i>. Choosing a new <i>Nemesis</i> removes the curse from the old one. Cannot be cast for 15 seconds while in combat with enemy champions.",
+      "cooldown": null,
+      "range": 0
     }
   ],
   "stats": {

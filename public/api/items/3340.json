@@ -22,11 +22,11 @@
   "passives": [],
   "active": [
     {
-      "unique": true,
       "name": "Trinket",
-      "effects": "Consume a charge to place an invisible {{tip|Totem Ward}} at the target location, which grants {{tip|sight}} of the surrounding area for {{pp|90 to 120|type=average champion level}} seconds.",
-      "range": 600,
-      "cooldown": null
+      "unique": true,
+      "effects": "Consume a charge to place an invisible <img src=\"/img/icons/totem%20ward.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Totem Ward at the target location, which grants <img src=\"/img/icons/sight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />sight of the surrounding area for +type=average champion level average champion level seconds.",
+      "cooldown": null,
+      "range": 600
     }
   ],
   "stats": {},

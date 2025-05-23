@@ -1,70 +1,110 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'node:fs'
+import path from 'node:path'
 import { formatStats, normalizeItemData } from './utils/formatItems'
+import { handleWikiText } from './utils/wiki'
 
 const inputPath = path.resolve('./public/api/items.json')
+const outputIndex = path.resolve('./public/api/index/item-index.json')
 const outputLitePath = path.resolve('./public/api/items-lite.json')
 const itemOutputDir = path.resolve('./public/api/items/')
+const fullData = JSON.parse(fs.readFileSync(inputPath, 'utf-8'))
 
-const raw = fs.readFileSync(inputPath, 'utf-8')
-const fullData = JSON.parse(raw)
-
+const index = {}
 const simplified = {}
 const uniqueTags = new Set()
 const uniqueRanks = new Set()
 
-// Ensure the output directory exists
 fs.mkdirSync(itemOutputDir, { recursive: true })
 
-for (const id in fullData) {
-  const item = fullData[id]
+async function buildItems() {
+  for (const id in fullData) {
+    const item = fullData[id]
+    if (item.id === 2146)
+      continue
 
-  if (item.id === 2146) continue
+    const stats = formatStats(item.stats)
+    const { rank, tags, maps } = normalizeItemData(item)
 
-  const stats = formatStats(item.stats)
-  const { rank, tags, maps } = normalizeItemData(item)
+    // Collect unique metadata
+    tags.forEach(t => uniqueTags.add(t))
+    rank.forEach(r => uniqueRanks.add(r))
 
-  // Add to unique sets
-  tags.forEach(t => uniqueTags.add(t))
+    index[id] = item.name
 
+    // Enrich the "lite" output
+    simplified[id] = {
+      id: item.id,
+      name: item.name,
+      rank,
+      stats,
+      purchasable: item.shop?.purchasable,
+      cost: item.shop?.prices?.total ?? 0,
+      tags,
+      maps,
+    }
 
-  rank.forEach(r => uniqueRanks.add(r))
+    // Handle shop override
+    if (item.id === 2141 && item.shop) {
+      item.shop.purchasable = false
+    }
 
-  if (item.id === 2141 && item.shop) {
-    item.shop.purchasable = false
+    const active = item.active || []
+    const expandedActive = await Promise.all(
+      active.map(async (a) => {
+        const effects = await handleWikiText(a.effects)
+        return {
+          name: a.name,
+          unique: a.unique,
+          effects,
+          cooldown: a.cooldown,
+          recharge: a.recharge,
+          charges: a.charges,
+          range: a.range,
+        }
+      }),
+    )
+
+    const passives = item.passives || []
+    const expandedPassives = await Promise.all(
+      passives.map(async (p) => {
+        const effects = await handleWikiText(p.effects)
+        return {
+          name: p.name,
+          unique: p.unique,
+          effects,
+          cooldown: p.cooldown,
+          recharge: p.recharge,
+          charges: p.charges,
+          range: p.range,
+        }
+      }),
+    )
+
+    const fullItem = {
+      ...item,
+      rank,
+      stats,
+      active: expandedActive,
+      passives: expandedPassives,
+      maps,
+    }
+
+    fs.writeFileSync(
+      path.resolve(itemOutputDir, `${item.id}.json`),
+      JSON.stringify(fullItem, null, 2),
+    )
+
+    console.log(`✅ Processed ${item.name}`)
   }
-  // Add to lite output
-  simplified[id] = {
-    id: item.id,
-    name: item.name,
-    rank,
-    stats,
-    purchasable: item.shop?.purchasable,
-    cost: item.shop?.prices?.total ?? 0,
-    tags,
-    maps,
-  }
 
-  // Add to full item file
-  const fullItem = {
-    ...item,
-    rank,
-    stats,
-    maps,
-  }
-
-  fs.writeFileSync(
-    path.resolve(itemOutputDir, `${item.id}.json`),
-    JSON.stringify(fullItem, null, 2)
-  )
+  // Write outputs
+  fs.writeFileSync(outputIndex, JSON.stringify(index, null, 2))
+  fs.writeFileSync(outputLitePath, JSON.stringify(simplified, null, 2))
+  fs.writeFileSync('./public/api/lists/unique-tags.json', JSON.stringify([...uniqueTags].sort(), null, 2))
+  fs.writeFileSync('./public/api/lists/unique-ranks.json', JSON.stringify([...uniqueRanks].sort(), null, 2))
 }
 
-// Write combined lite output
-fs.writeFileSync(outputLitePath, JSON.stringify(simplified, null, 2))
-
-// Write unique tag/rank lists
-fs.writeFileSync('./public/api/lists/unique-tags.json', JSON.stringify([...uniqueTags].sort(), null, 2))
-fs.writeFileSync('./public/api/lists/unique-ranks.json', JSON.stringify([...uniqueRanks].sort(), null, 2))
+buildItems()
 
 console.log('✅ items-lite.json written')
 console.log('📁 individual item files written to ./public/api/items/')

@@ -1187,7 +1187,7 @@
       "Consumable"
     ],
     "stats": {},
-    "purchasable": false,
+    "purchasable": true,
     "cost": 300,
     "tags": [],
     "maps": [

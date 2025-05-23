@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const us = useUiStore()
 const as = useAccountStore()
-console.log("💠 - as:", as.userAccount)
+console.log('💠 - as:', as.userAccount)
 
 watch(
   () => us.commandOpen,
@@ -17,8 +17,6 @@ function handleMenu() {
     return
   navigateTo(tabs.value)
 }
-
-
 </script>
 
 <template>
@@ -34,7 +32,7 @@ function handleMenu() {
     <Grow />
     <!-- -->
     <IndicatorMenubar v-model:model-value="tabs" @update:model-value="handleMenu()">
-      <IndicatorTabsList class=" **:text-3  bg-transparent shadow-none inset-shadow-none border-none py-0 overflow-y-visible h-10" :class="{'grid-cols-6': as.userAccount.session, 'grid-cols-5': !as.userAccount.session}">
+      <IndicatorTabsList class=" **:text-3  bg-transparent shadow-none inset-shadow-none border-none py-0 overflow-y-visible h-10" :class="{ 'grid-cols-6': as.userAccount.session, 'grid-cols-5': !as.userAccount.session }">
         <IndicatorTabsTrigger value="/nexus">
           Nexus
         </IndicatorTabsTrigger>
@@ -61,7 +59,8 @@ function handleMenu() {
           </NestedMenu>
         </IndicatorMenu>
 
-        <IndicatorMenu v-if="as.userAccount.session"
+        <IndicatorMenu
+          v-if="as.userAccount.session"
           value="data">
           <IndicatorMenuTrigger>
             <SummonerName class="capitalize" />
@@ -75,7 +74,7 @@ function handleMenu() {
       </IndicatorTabsList>
     </IndicatorMenubar>
 
-    <AccountSidebar :account="as.userAccount"  />
+    <AccountSidebar :account="as.userAccount" />
   </nav>
 </template>
 

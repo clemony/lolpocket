@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { SelectIcon, SelectTrigger, useForwardProps } from 'reka-ui'
 import type { SelectTriggerProps } from 'reka-ui'
-import { computed } from 'vue'
+import { SelectIcon, SelectTrigger, useForwardProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
+import { computed } from 'vue'
 
 const props = defineProps<SelectTriggerProps & { class?: HTMLAttributes['class'], noArrow?: boolean }>()
 
@@ -11,7 +11,7 @@ const delegatedProps = computed(() => {
 
   return delegated
 })
-
+//TRASH
 const forwardedProps = useForwardProps(delegatedProps)
 </script>
 

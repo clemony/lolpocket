@@ -20,8 +20,7 @@ onMounted (() => {
 </script>
 
 <template>
-  <div class="h-full   relative min-w-105  max-w-105">
-    <div class=" mt-16 py-6 inset-0 absolute top-0 left-0 flex flex-col gap-6 pl-7 ">
+  <aside class="h-full gap-6 pl-7 pt-22 pb-16 flex flex-col   relative min-w-105  max-w-105">
       <PocketHeader :pocket="pocket" @update:model-value="e => pocket.name = e" />
       <PocketTabs
         :pocket="pocket" />
@@ -39,6 +38,6 @@ onMounted (() => {
  -->
       </div>
       <PocketSidebarMenu :pocket="pocket" />
-    </div>
-  </div>
+    
+  </aside>
 </template>

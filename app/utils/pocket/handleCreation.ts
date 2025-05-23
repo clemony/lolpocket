@@ -90,4 +90,14 @@ export function createDefaultSpell(): Spell {
   }
 }
 
-// champion
+export function newSpellSet(key?) {
+  const newSet: SpellSet = [null, null]
+
+  if (key) {
+    const pocket = getPocket(key)
+    pocket.spells.push(newSet)
+  }
+  else {
+    return newSet
+  }
+}

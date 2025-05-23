@@ -53,7 +53,7 @@ const pocket = computed (() => {
         </div>
 
 </div>
-<div  class="swap-on bg-light  hover:border-b3 hover:ring-1 hover:ring-b2 hover:shadow-pretty relative border group border-transparent  rounded-xl  shadow-warm gap-3 overflow-hidden ">
+<div  class="swap-on bg-white  hover:border-b3 hover:ring-1 hover:ring-b2 hover:shadow-pretty relative border group border-transparent  rounded-xl  shadow-warm gap-3 overflow-hidden ">
       <BackpackMenu :pocket="pocket" :menu-open="menuOpen" />
   </div>
     </label>

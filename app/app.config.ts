@@ -66,17 +66,17 @@ export default defineAppConfig({
       'backspace': 'iconamoon:backspace-light',
       'edit': 'radix-icons:pencil-2',
       'erase': 'radix-icons:eraser',
+      'pin': 'iconoir:pin',
+      'pin-solid': 'iconoir:pin-solid',
+      'clip': 'teenyicons:attach-outline',
+      'trash': 'streamline:recycle-bin-2',
+      'archive': 'teenyicons:archive-outline',
 
       // folder
       'x-folder': 'teenyicons:folder-x-outline',
       'add-folder': 'teenyicons:folder-plus-outline',
       'folder': 'formkit:folder',
       'folders': 'teenyicons:folders-outline',
-      'pin': 'iconoir:pin',
-      'pin-solid': 'iconoir:pin-solid',
-      'clip': 'teenyicons:attach-outline',
-      'trash': 'ph:trash',
-      'archive': 'teenyicons:archive-outline',
 
       // external / social
       'at': 'teenyicons:at-outline',
@@ -90,14 +90,17 @@ export default defineAppConfig({
       'share': 'iconoir:send-diagonal',
       'open': 'radix-icons:open-in-new-window',
 
-      // pic
+      // simple
       'dot': 'radix-icons:dot-filled',
       'infinity': 'solar:infinity-outline',
       'shield': 'teenyicons:shield-tick-outline',
       'star': 'ph:star',
       'star-fill': 'ph:star-fill',
       'heart': 'ph:heart-straight',
+
+      // pic
       'bow': 'mdi:bow-arrow',
+      'pocket': 'iconamoon:briefcase-light',
       'up-face': 'iconoir:emoji-look-up',
       'images': 'entypo:images',
       'picture': 'radix-icons:image',
@@ -107,7 +110,6 @@ export default defineAppConfig({
       'backpack': 'radix-icons:backpack',
       'book': 'teenyicons:book-outline',
       'history': 'radix-icons:counter-clockwise-clock',
-      'library': 'material-symbols-light:local-library-outline-rounded',
     },
   },
 })

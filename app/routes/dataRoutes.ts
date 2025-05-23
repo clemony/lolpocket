@@ -1,20 +1,20 @@
 export const dataRoutes = [
   {
-    name: 'Data Lab',
+    name: 'analysis',
     icon: 'iconoir:flask',
     iconClass: 'size-4.5',
     items: [
       {
         name: 'Champion Analysis',
-        route: '/data/champions',
+        route: '/analysis/champions',
       },
       {
         name: 'Item Analysis',
-        route: '/data/items',
+        route: '/analysis/items',
       },
       {
         name: 'Research Allies',
-        route: '/data/allies',
+        route: '/analysis/allies',
       },
     ],
   },

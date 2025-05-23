@@ -7,10 +7,6 @@ const ds = useDataStore()
 const rune = computed (() => {
   return rs.hoveredRune
 })
-
-const pathName = computed (() => {
-  return getRunePathName(rune.value.id, ds.paths)
-})
 </script>
 
 <template>
@@ -19,12 +15,12 @@ const pathName = computed (() => {
       class="border-b3 **:select-none mb-8 grid w-full grid-cols-[0.7fr_2fr]  border-b pb-6">
       <div
         class="group/link relative col-start-1 h-full items-center justify-center">
-        <img
+        <!-- <img
           v-if="rune"
           :key="rune.name"
           :src="`/img/runes/${pathName.toLowerCase()}/${rune.name.replace(/\s/g, '')}.webp`"
           :alt="`${rune.name} Image`"
-          class="'pointer-events-none size-18 rounded-full  bg-black ring-1 shadow-warm-2 ring-b3 inset-shadow-sm " />
+          class="'pointer-events-none size-18 rounded-full  bg-black ring-1 shadow-warm-2 ring-b3 inset-shadow-sm " /> -->
       </div>
 
       <div class="grid h-full grid-cols-1 gap-2 py-2">
@@ -43,10 +39,10 @@ const pathName = computed (() => {
 
         </a>
 
-        <div class="flex gap-3 items-center w-full">
+        <!-- <div class="flex gap-3 items-center w-full">
           <img :src="`/img/runes/${pathName}.webp`" class="h-6 w-auto dst" />
           <span class="text-4 font-medium grow">{{ pathName }}</span>
-        </div>
+        </div> -->
       </div>
     </div>
 

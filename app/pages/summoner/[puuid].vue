@@ -11,6 +11,7 @@ definePageMeta({
   title: 'Summoner Profile',
   section: 'summoner',
   path: '/summoner/:puuid',
+  search: false
 })
 
 onMounted (() => {

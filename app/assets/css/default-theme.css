@@ -23,7 +23,7 @@
   --font-serif: "Noto Serif KR Variable", Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
   --font-mono: ui-monospace, Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 
-
+--background-image-noise: url("/assets/img/nnnoise.svg");
 
 --text-xs: 0.9rem !important;
 --text-sm: 0.99rem;

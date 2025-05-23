@@ -20,11 +20,11 @@
   "passives": [],
   "active": [
     {
-      "unique": true,
       "name": "Cloudburst II",
-      "effects": "{{tip|Dash}} to the target location and fire three homing missiles at the {{tt|most wounded|Lowest health percent}} enemy within {{tip|cr|icononly=true}} 750 units of you at the end of the dash, prioritizing enemy champions. Each missile deals {{as|{{pp|150/3 to 350/3|1;8 to 18 by 1}} {{as|(+ {{fd|26.6{{recurring|6}}}}% '''bonus''' AD)}} physical damage|physical damage}}, for a total of {{as|{{pp|150 to 350|1;8 to 18 by 1}} {{as|(+ 80% '''bonus''' AD)}}|physical damage}}, increased by {{pp|type= target's '''missing''' health|color=health|key=%|0 to 50|key1=%|0 to 75 for 11|formula=5% per 7.5% of enemies' '''missing''' health}}.",
-      "range": 0,
-      "cooldown": null
+      "unique": true,
+      "effects": "<img src=\"/img/icons/dash.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Dash to the target location and fire three homing missiles at the {{tt|most wounded|Lowest health percent}} enemy within <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly=true 750 units of you at the end of the dash, prioritizing enemy champions. Each missile deals +1;8 to 18 by 1 (+ {{fd|26.6 6}}% <b>bonus</b> AD) physical damage physical damage, for a total of +1;8 to 18 by 1 (+ 80% <b>bonus</b> AD) physical damage, increased by +color=health%  target's missing health.",
+      "cooldown": null,
+      "range": 0
     }
   ],
   "stats": {

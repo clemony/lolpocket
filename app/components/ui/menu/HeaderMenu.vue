@@ -25,7 +25,7 @@ const messages = ref(false)
 </script>
 
 <template>
-  <div
+  <menu
     class="rounded-t-3xl rounded-b-box  w-13 h-13 bg-neutral/0 z-41 fixed  top-2 right-3  group justify-self-end backdrop-blur-md" :class="{ 'ease-in-out  hover:h-54  hover:bg-neutral/85 transition-[height_colors] dr-40 ': as.userAccount.session }">
     <UserSummonerIcon class="size-11 border border-black absolute  top-1 right-1 drop-shadow-sm grayscale  brightness-120 inset-shadow-rounded  ring-1 ease-in-out  rounded-full ring-neutral/40 contrast-90 group-hover:grayscale-0  transition-all dr-40 group-hover:brightness-100 group-hover:contrast-100  shadow-sm cursor-pointer z-1" />
 
@@ -62,5 +62,5 @@ const messages = ref(false)
           class="size-5.75 shrink-0 drop-shadow-sm tldr-20  group-hover/b:text-nc/90 text-nc/80" />
       </button>
     </div>
-  </div>
+  </menu>
 </template>

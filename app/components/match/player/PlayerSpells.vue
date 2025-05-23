@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { summonerSpells } from '~~/public/api/spells'
+import { summonerSpells } from '~~/public/api/data/spells'
 
 const props = defineProps<{
   player: any

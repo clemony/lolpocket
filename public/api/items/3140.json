@@ -25,11 +25,11 @@
   "passives": [],
   "active": [
     {
-      "unique": true,
       "name": "Quicksilver",
-      "effects": "Removes all {{tip|crowd control}} debuffs (except {{tip|Airborne}}) from your champion.",
-      "range": null,
-      "cooldown": null
+      "unique": true,
+      "effects": "Removes all <img src=\"/img/icons/crowd%20control.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />crowd control debuffs (except <img src=\"/img/icons/airborne.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Airborne) from your champion.",
+      "cooldown": null,
+      "range": null
     }
   ],
   "stats": {

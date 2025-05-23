@@ -18,11 +18,11 @@
   "passives": [],
   "active": [
     {
-      "unique": false,
       "name": null,
-      "effects": "Summons a mist over the target location for 5 seconds, granting {{tip|sight}} of the area in a 375 radius and {{tip|true sight|revealing}} enemy {{tip|stealthed trap|traps}} within for 3 seconds.",
-      "range": 800,
-      "cooldown": null
+      "unique": false,
+      "effects": "Summons a mist over the target location for 5 seconds, granting <img src=\"/img/icons/sight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />sight of the area in a 375 radius and <img src=\"/img/icons/true%20sight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />revealing enemy <img src=\"/img/icons/stealthed%20trap.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />traps within for 3 seconds.",
+      "cooldown": null,
+      "range": 800
     }
   ],
   "stats": {},

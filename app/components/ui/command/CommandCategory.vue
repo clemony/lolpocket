@@ -3,7 +3,7 @@ import { motion } from 'motion-v'
 
 const { results, name } = defineProps<{
   name: string
-  results: any
+  results?: any
 }>()
 
 const variants = {
@@ -25,7 +25,7 @@ const contentVariants = {
   },
   visible: {
     opacity: 1,
-    maxHeight: '250px',
+    maxHeight: '100%',
     transform: 'translateY(0)',
   },
 
@@ -38,50 +38,45 @@ const contentVariants = {
 </script>
 
 <template>
-  <Collapsible v-if="results.length" :default-open="true" as-child>
-    <motion.div
-          :variants="variants"
-          initial="hidden"
-          :animate="results.length ? 'visible' : 'hidden'"
-          exit="hidden">
-    <AnimatePresence as="div" multiple>
-      <CollapsibleTrigger as-child>
-        <motion.button
-          class="px-4 z-1 g h-10 flex gap-3 items-center font-medium w-full group"
-          :variants="variants"
-          initial="hidden"
-          animate="visible"
-          exit="hidden">
-          <span class="flex  items-center group-hover:text-bc group-hover:**:text-bc **:text-bc/60 text-bc/70  gap-3">
-            <slot name="icon" />
-            {{ name }}
-          </span>
-          <Grow />
-          <Badge class="tracking-normal mr-1 group-hover:opacity-100">
-            {{ results.length }}
-          </Badge>
-          <PlusMinusExpand class="!text-bc " />
-        </motion.button>
-      </CollapsibleTrigger>
+  <Collapsible :default-open="true" :disabled="results.length <= 0">
+    <CollapsibleTrigger as-child>
+      <motion.button
+        :variants="variants"
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+        class="z-1 g h-10 flex gap-3 relative backdrop-brightness-40   sticky px-6 top-0 left-0 backdrop-blur-md  items-center  bg-black-21/69  font-medium w-full group cursor-pointer">
+        <div class="backdrop-blur-md mix-blend-screen  backdrop-brightness-[103.5%] size-full absolute top-0 left-0 z-0" />
+        <span class="flex z-1 tldr-20 capitalize items-center group-hover:text-white/80 group-hover:**:text-white/60 text-white/40  gap-3">
+          <slot name="icon" />
+          {{ name }}
+        </span>
+        <Grow />
+        <Badge class="mr-1 z-1 group-hover:opacity-100">
+          {{ results.length ?? 'no results' }}
+        </Badge>
+        <PlusMinusExpand v-if="results.length" class="!text-bc " />
+      </motion.button>
+    </CollapsibleTrigger>
 
-        <Motion as-child
-          :variants="contentVariants"
-          initial="hidden"
-          animate="visible"
-          exit="exit" class="overflow-hidden">
-      <CollapsibleContent class="CollapsibleContent">
-          <motion.ul
-            class="flex relative  flex-col   ml-5 pl-2 pr-4 border-l border-l-b4  overflow-auto max-h-70 "
-            :transition="{
-              staggerChildren: 0.5,
-              type: 'spring',
-              bounce: 0.2,
-            }">
-            <slot />
-          </motion.ul>
+    <Motion
+      v-if="results.length"
+      as-child
+      :variants="contentVariants"
+      initial="hidden"
+      animate="visible"
+      exit="exit" class="overflow-hidden">
+      <CollapsibleContent class=" CollapsibleContent mb-1 mx-7 before:w-px before:absolute before:bg-black-30/64 before:left-0 before:top-2.5" :class="{ 'before:h-[calc(100%-36px)]': results.length > 3, 'before:h-[calc(100%-4px)]': results.length <= 3 }">
+        <motion.ul
+          class="flex relative flex-col   ml-2 pl-2 pr-7 "
+          :transition="{
+            staggerChildren: 0.5,
+            type: 'spring',
+            bounce: 0.2,
+          }">
+          <slot />
+        </motion.ul>
       </CollapsibleContent>
-        </Motion>
-    </AnimatePresence>
-  </motion.div>
+    </Motion>
   </Collapsible>
 </template>

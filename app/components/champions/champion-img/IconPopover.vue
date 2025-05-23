@@ -27,25 +27,19 @@ const pocket = computed(() => {
   return props.pocketKey ? getPocket(props.pocketKey) : props.pocket
 })
 
-const { data: championSkins } = await useFetch<SkinRecord>('/api/lists/champion-skins.json')
+const championSkins  = await $fetch<SkinRecord>('/api/lists/champion-skins.json')
 
-const champs = computed(() => Object.values(championSkins.value || {}))
+const champs = computed(() => Object.values(championSkins || {}))
 const names = computed(() => champs.value.map(c => c.name))
+console.log("💠 - champs:", champs)
 const selectIcon = ref()
 const champSearch = ref(null)
 const selectedResult = ref(null)
 const splashIcons = ref<string[]>([])
 
-function handleChange(image: string) {
-  if (props.pocket) {
-    pocket.value.icon = image
-  }
-  else {
-    emit('update:selectedIcon', image)
-  }
-}
+const champFuse = computed(() => new Fuse(champs.value, {
 
-const champFuse = computed(() => new Fuse(names.value, {
+  keys: ['name'],
   findAllMatches: true,
   threshold: 0.3,
 }))
@@ -67,7 +61,7 @@ const searchResult = computed(() => {
 
   const splashes = entry.skins.map(s => s.splashPath)
 
-  return new Fuse(splashes, { threshold: 0.3 }).search(champName).map(r => ({ item: r.item }))
+  return new Fuse(splashes, { threshold: 0.3 }).search(champName).map(r => ({ splash: r.item, id: entry.id }))
 })
 
 watch(searchResult, (results) => {
@@ -93,10 +87,10 @@ onMounted(() => {
     <ContrastSearchInput v-model:model-value="champSearch" placeholder="Search Splash Icons..." @update:input="handleInput($event)" />
 
     <div v-if="!searchResult" class="pt-2 overflow-y-scroll w-full flex flex-col">
-      <label v-for="result in searchQuery" :key="result.item" class="justify-start btn btn-ghost max-h-90 hover:opacity-80 hover:!bg-b3/1   hover:!border-accent/20 hover:text-nc gap-3 text-3">
+      <label v-for="result in searchQuery" :key="result.item.id" class="justify-start btn btn-ghost max-h-90 hover:opacity-80 hover:!bg-b3/1   hover:!border-accent/20 hover:text-nc gap-3 text-3">
         <input v-model="selectedResult" type="radio" class="peer hidden" :value="result.item" />
-        <LazyChampionIconFromName :name="result.item" class="size-8" hydrate-on-visible />
-        {{ result.item }}
+        <LazyChampionIcon :id="result.item.id" :alt="result.item.name" class="size-8" hydrate-on-visible />
+        {{ result.item.name }}
       </label>
     </div>
 

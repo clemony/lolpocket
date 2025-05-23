@@ -20,11 +20,11 @@
   "passives": [],
   "active": [
     {
-      "unique": true,
       "name": "Thirsting Slash",
-      "effects": "Deal {{as|175% '''base''' AD}} {{as|physical damage}} to enemies in a {{tip|cr|icononly = true}} 450 radius centered around you. {{tip|Heal}} for {{as|20% AD}} {{as|(+ 8% of your '''missing''' health)}} for each enemy champion hit.",
-      "range": null,
-      "cooldown": null
+      "unique": true,
+      "effects": "Deal 175% <b>base</b> AD physical damage to enemies in a <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly = true 450 radius centered around you. <img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Heal for 20% AD (+ 8% of your <b>missing</b> health) for each enemy champion hit.",
+      "cooldown": null,
+      "range": null
     }
   ],
   "stats": {

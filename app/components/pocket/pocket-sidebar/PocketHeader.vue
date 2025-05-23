@@ -7,8 +7,8 @@ const emit = defineEmits(['update:model-value'])
 </script>
 
 <template>
-  <div class="flex flex-col w-full">
-    <div class="items-center flex gap-2 ">
+
+    <header class="items-center flex gap-2  w-full">
       <LazyPopover>
         <PopoverTrigger class="group/picon z-0 shrink-0 !cursor-pointer self-center  !size-14 border border-b3  rounded-full !pointer-events-auto  aspect-square  grid place-items-center relative  overflow-hidden  ">
 
@@ -26,6 +26,6 @@ const emit = defineEmits(['update:model-value'])
           Backpack</a>
         <EditablePocketHeader icons :pocket="pocket" class="text-nowrap  truncate **:truncate dst !text-6 font-semibold tracking-tight **:min-w-80" />
       </div>
-    </div>
-  </div>
+    </header>
+
 </template>

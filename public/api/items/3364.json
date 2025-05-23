@@ -24,11 +24,11 @@
   "passives": [],
   "active": [
     {
-      "unique": false,
       "name": null,
-      "effects": "Consume one charge to summon a {{tip|Sweeper Drone}} that escorts you for the next 6 seconds, detecting nearby enemies that are not {{tip|sight|visible}}.",
-      "range": 0,
-      "cooldown": null
+      "unique": false,
+      "effects": "Consume one charge to summon a <img src=\"/img/icons/sweeper%20drone.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Sweeper Drone that escorts you for the next 6 seconds, detecting nearby enemies that are not <img src=\"/img/icons/sight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />visible.",
+      "cooldown": null,
+      "range": 0
     }
   ],
   "stats": {},

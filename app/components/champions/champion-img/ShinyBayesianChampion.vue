@@ -20,7 +20,7 @@ const champion = computed (() => props.champion)
       name="match-champion-filter" />
 
     <div class="overflow-hidden rounded-full inset-shadow-sm">
-      <LazyChampionIconFromName :name="champion.name" class=" size-14" hydrate-on-visible />
+      <LazyChampionIcon :id="champion.id" :alt="champion.name" class=" size-14" hydrate-on-visible />
     </div>
   </LazyLabel>
 </template>

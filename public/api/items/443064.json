@@ -22,11 +22,11 @@
   "passives": [],
   "active": [
     {
-      "unique": true,
       "name": "Imbricate",
-      "effects": "Reroll the stats on this item, up to twice per round and up to thrice with the [[File:Apex Inventor augment.png|20px|link=]] [[Arena/Augments|Apex Inventor]] augment. Each time you do so, the stats become higher in value.",
-      "range": null,
-      "cooldown": null
+      "unique": true,
+      "effects": "Reroll the stats on this item, up to twice per round and up to thrice with the 20px|link= Apex Inventor augment. Each time you do so, the stats become higher in value.",
+      "cooldown": null,
+      "range": null
     }
   ],
   "stats": {},

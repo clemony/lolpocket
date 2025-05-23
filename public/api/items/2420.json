@@ -29,11 +29,11 @@
   "passives": [],
   "active": [
     {
-      "unique": true,
       "name": "Time Stop",
-      "effects": "Put yourself in {{tip|stasis (buff)|stasis}} for {{fd|2.5}} seconds, rendering you {{tip|untargetable}} and {{tip|invulnerable}} for the duration but also unable to move, declare [[basic attack]]s, cast [[champion ability|abilities]], use [[summoner spell]]s, or [[active ability items|activate items]].",
-      "range": null,
-      "cooldown": null
+      "unique": true,
+      "effects": "Put yourself in <img src=\"/img/icons/stasis%20(buff).png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />stasis for 2.5s seconds, rendering you <img src=\"/img/icons/untargetable.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />untargetable and <img src=\"/img/icons/invulnerable.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items.",
+      "cooldown": null,
+      "range": null
     }
   ],
   "stats": {

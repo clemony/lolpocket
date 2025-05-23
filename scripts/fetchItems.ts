@@ -1,12 +1,12 @@
-import { writeFileSync } from 'fs'
+import { writeFileSync } from 'node:fs'
 import { $fetch } from 'ofetch'
 
-const run = async () => {
+async function run() {
   try {
-    const urlMA =
-      'https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/items.json'
-    const urlDD =
-      'https://ddragon.leagueoflegends.com/cdn/15.10.1/data/en_US/item.json'
+    const urlMA
+      = 'https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/items.json'
+    const urlDD
+      = 'https://ddragon.leagueoflegends.com/cdn/15.10.1/data/en_US/item.json'
 
     const [maItems, ddData] = await Promise.all([
       $fetch(urlMA),
@@ -29,10 +29,11 @@ const run = async () => {
 
     writeFileSync(
       './public/api/items.json',
-      JSON.stringify(merged, null, 2)
+      JSON.stringify(merged, null, 2),
     )
     console.log(`✅ Merged ${Object.keys(merged).length} items to ./public/api/items.json`)
-  } catch (error) {
+  }
+  catch (error) {
     console.error('❌ Fetch or merge failed:', error)
   }
 }

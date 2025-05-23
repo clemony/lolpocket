@@ -4,13 +4,14 @@ import type { ColDef, ColGroupDef, GridApi, GridOptions, GridPreDestroyedEvent, 
 import { AgGridVue } from 'ag-grid-vue3'
 import PatchCellRenderer from './chart-comps/PatchCellRenderer.vue'
 import ChampionGridIcon from './chart-comps/ChampionGridIcon.vue'
+
 const { champions } = defineProps<{
   champions: any[]
 }>()
 
 defineExpose({
   PatchCellRenderer,
-  ChampionGridIcon
+  ChampionGridIcon,
 })
 
 const cs = useChampStore()

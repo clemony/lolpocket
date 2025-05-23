@@ -25,199 +25,20 @@
   "nicknames": [],
   "passives": [
     {
-      "unique": true,
-      "mythic": false,
       "name": "Cleave",
-      "effects": "Basic attacks [[on-hit]] deal {{as|{{rd|40% AD|20% AD}}|ad}} {{as|physical damage}} to other enemies in a {{tip|cr|icononly = true}} 350 radius centered around the target.",
-      "range": null,
+      "unique": true,
+      "effects": "Basic attacks on-hit deal {{rd|40% AD|20% AD}} ad physical damage to other enemies in a <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly = true 350 radius centered around the target.",
       "cooldown": null,
-      "stats": {
-        "abilityPower": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "armor": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "armorPenetration": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "attackDamage": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "attackSpeed": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "cooldownReduction": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "criticalStrikeChance": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "goldPer10": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "healAndShieldPower": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "health": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "healthRegen": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "lethality": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "lifesteal": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "magicPenetration": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "magicResistance": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "mana": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "manaRegen": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "movespeed": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "abilityHaste": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "omnivamp": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "tenacity": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "criticalStrikeDamage": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        }
-      }
+      "range": null
     }
   ],
   "active": [
     {
-      "unique": true,
       "name": "Crescent",
-      "effects": "Deal {{as|75% AD}} {{as|physical damage}} to enemies within a {{tip|cr|icononly = true}} 450 radius in front of you.",
-      "range": null,
-      "cooldown": null
+      "unique": true,
+      "effects": "Deal 75% AD physical damage to enemies within a <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly = true 450 radius in front of you.",
+      "cooldown": null,
+      "range": null
     }
   ],
   "stats": {

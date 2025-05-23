@@ -17,199 +17,20 @@
   "nicknames": [],
   "passives": [
     {
-      "unique": true,
-      "mythic": false,
       "name": "Promise",
-      "effects": "While your ''Promised'' ally is {{tt|tethered|1250 units, center to edge}} to you, gain {{as|ability power}} equal to {{as|20% of ''Promised'' ally's AP}}, and grant your ''Promised'' ally {{as|ability haste}} equal to {{as|20% of your ability haste}}. ''Increases and decreases to each teammate's stats recalculate this effect.''",
-      "range": null,
+      "unique": true,
+      "effects": "While your <i>Promised</i> ally is {{tt|tethered|1250 units, center to edge}} to you, gain ability power equal to 20% of <i>Promised</i> ally's AP, and grant your <i>Promised</i> ally ability haste equal to 20% of your ability haste. <i>Increases and decreases to each teammate's stats recalculate this effect.</i>",
       "cooldown": null,
-      "stats": {
-        "abilityPower": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "armor": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "armorPenetration": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "attackDamage": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "attackSpeed": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "cooldownReduction": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "criticalStrikeChance": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "goldPer10": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "healAndShieldPower": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "health": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "healthRegen": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "lethality": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "lifesteal": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "magicPenetration": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "magicResistance": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "mana": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "manaRegen": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "movespeed": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "abilityHaste": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "omnivamp": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "tenacity": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        },
-        "criticalStrikeDamage": {
-          "flat": 0,
-          "percent": 0,
-          "perLevel": 0,
-          "percentPerLevel": 0,
-          "percentBase": 0,
-          "percentBonus": 0
-        }
-      }
+      "range": null
     }
   ],
   "active": [
     {
-      "unique": true,
       "name": "Promise",
-      "effects": "Make a ''Promise'' to the target allied champion, forming a {{tip|tether}} between you and them.",
-      "range": null,
-      "cooldown": null
+      "unique": true,
+      "effects": "Make a <i>Promise</i> to the target allied champion, forming a <img src=\"/img/icons/tether.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />tether between you and them.",
+      "cooldown": null,
+      "range": null
     }
   ],
   "stats": {

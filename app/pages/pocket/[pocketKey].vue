@@ -12,6 +12,7 @@ const route = useRoute()
 definePageMeta({
   props: true,
   section: 'pocket',
+  search: false
 })
 
 const pocket = ref(getPocket(route.params.pocketKey))
@@ -25,13 +26,13 @@ const { filteredChampions } = useChampionFilter(Object.values(championData.value
 </script>
 
 <template>
-  <div class="flex relative size-full overflow-hidden">
+  <main class="flex relative size-full overflow-hidden">
     <PocketSidebar :champion-data="champ" :item-data="item" />
-    <div class="size-full relative overflow-y-auto">
+    <article class="size-full relative overflow-y-auto">
       <LazyNuxtPage
         :pocket="pocket"
         :puuid="puuid"
         :champions="filteredChampions" />
-    </div>
-  </div>
+    </article>
+  </main>
 </template>

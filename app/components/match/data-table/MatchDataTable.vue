@@ -252,7 +252,7 @@ const ds = useDataStore()
           <td v-for="(player, i) in props.blue.concat(props.red)" :key="player.playerId" class="!max-w-12 w-12 min-w-12 overflow-hidden first-of-type:rounded-l-xl last-of-type:rounded-r-xl z-0" :class="{'bg-inspiration/30': player.teamId == 100, 'bg-domination/30': player.teamId == 200, 'rounded-r-xl  border-r-4 border-r-b2': i == 4, 'rounded-l-xl  border-l-4 border-l-b2': i == 5}">
             <div class="rounded-lg size-fit shadow-sm">
             <div class="!size-10 overflow-hidden rounded-lg">
-            <img :src="`/img/champion/${ds.champions.find(c => c.key == player.championId).name}.webp`" class="size-full scale-118"/>
+              <ChampionIcon :id="player.championId" :alt="player.championName"  class="size-full scale-118"/>
             </div>
             </div>
           </td>

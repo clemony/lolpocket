@@ -27,9 +27,7 @@ export const useMatchStore = defineStore('matchStore', () => {
     ally: null,
     role: 'ALL',
   })
-  const previousPatch = computed(() => {
-    return getPatchList().sort((a, b) => (b - a))
-  })
+
   const seasonTotals = ref()
 
   const analysisPatchSelect = computedAsync (() => ds.currentPatch)
@@ -44,7 +42,6 @@ export const useMatchStore = defineStore('matchStore', () => {
     currentPatch,
     patchGames,
     seasonTotals,
-    previousPatch,
 
     analysisPatchSelect,
     analysisQueueSelect,

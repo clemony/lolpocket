@@ -22,11 +22,11 @@
   "passives": [],
   "active": [
     {
-      "unique": true,
       "name": "Devotion",
-      "effects": "Grants you and allied champions within {{tip|cr|icononly=true}} 850 units a {{tip|shield}} for {{pp|200 to 360|type=target's level}} that decays over {{fd|2.5}} seconds.",
-      "range": null,
-      "cooldown": null
+      "unique": true,
+      "effects": "Grants you and allied champions within <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly=true 850 units a <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shield for +type=target's level target's level that decays over 2.5s seconds.",
+      "cooldown": null,
+      "range": null
     }
   ],
   "stats": {

@@ -104,7 +104,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
 
   imports: {
-    dirs: ['@vueuse/components', 'utils/items', 'utils/champions', 'utils/runes', 'utils/summoner', 'utils/filters', 'utils/lib', 'utils/pocket', 'utils/ui', 'stores', 'utils/format', 'routes'],
+    dirs: ['@vueuse/components', 'utils/items', 'data', 'data/items', 'data/champions',  'utils/summoner', 'utils/filters', 'utils/lib', 'utils/pocket', 'utils/ui', 'stores', 'utils/format', 'routes'],
   },
 
   webpack: {
@@ -142,7 +142,7 @@ export default defineNuxtConfig({
     'components': fileURLToPath(new URL('./app/components', import.meta.url)),
     'plugins': fileURLToPath(new URL('./app/plugins', import.meta.url)),
     'modules': fileURLToPath(new URL('./modules', import.meta.url)),
-    'data': fileURLToPath(new URL('./data', import.meta.url)),
+    'data': fileURLToPath(new URL('./app/data', import.meta.url)),
   },
   future: {
     compatibilityVersion: 4,

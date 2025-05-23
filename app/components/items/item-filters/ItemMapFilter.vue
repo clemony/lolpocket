@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { gameMaps } from 'api/maps'
+import { gameMaps } from 'api/data/maps'
 
 const { modelValue: mapp } = defineProps<{
 modelValue?: number

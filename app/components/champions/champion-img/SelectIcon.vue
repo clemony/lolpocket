@@ -23,7 +23,7 @@ function handleChange(image) {
 const fuse = ref()
 
 const searchResult = computedAsync (() => {
-  const find = ds.champions.find(c => c.name == cs.championSplashDropdown)
+  const find ={id:''} // ds.champions.find(c => c.name == cs.championSplashDropdown)
 
   if (find) {
     return fuse.value.search(find.id,
@@ -49,9 +49,8 @@ onMounted (async () => {
     threshold: 0.3,
   })
 
-  if (cs.championSplashDropdown == null) {
-    cs.championSplashDropdown = getRandom(ds.championNames)
-  }
+//TODO DELETE TRASH
+//TRASH
 
   selectIcon.value = props.selectedIcon
 })
