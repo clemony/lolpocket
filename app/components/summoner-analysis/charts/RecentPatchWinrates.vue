@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 const ms = useMatchStore()
+const ds = useDataStore()
 const userMatchData = []
 
 // TODO usermatchdata
 
 const patchStats = computed(() => {
-  const patchMap = new Map<string, { games: number, wins: number, losses: number, winrate: number }>()
+  const patchMap = new Map<number, { games: number, wins: number, losses: number, winrate: number }>()
 
   // Step 1: Group matches by patch
   userMatchData.forEach(({ patch, win }) => {
@@ -19,7 +20,7 @@ const patchStats = computed(() => {
     stats.winrate = (stats.wins / stats.games) * 100
   })
 
-  const allPatches = getPatchList()
+  const allPatches = ds.patchList
 
   // Step 3: Ensure every patch exists in `patchMap`
   const filledPatches = allPatches.map(patch => ({

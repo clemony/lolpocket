@@ -22,7 +22,7 @@
     {
       "name": "Unmake",
       "unique": true,
-      "effects": "Enemy champions within {{tt|700 units|center to edge}} of you become cursed, causing them to receive 12% increased magic damage magic damage from all sources.",
+      "effects": "Enemy champions within 700 units of you become cursed, causing them to receive 12% increased magic damage magic damage from all sources.",
       "cooldown": null,
       "range": null
     }

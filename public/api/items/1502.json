@@ -19,7 +19,7 @@
     {
       "name": null,
       "unique": true,
-      "effects": "While no enemy <img src=\"/img/icons/minions.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />minions or {{ui|Rift Herald|Rift Herald Mercenary}} are within range, gain 80% damage reduction, including against true damage.",
+      "effects": "While no enemy <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions or {{ui|Rift Herald|Rift Herald Mercenary}} are within range, gain 80% damage reduction, including against true damage.",
       "cooldown": null,
       "range": null
     }

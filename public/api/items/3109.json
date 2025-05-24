@@ -25,7 +25,7 @@
     {
       "name": "Sacrifice",
       "unique": true,
-      "effects": "While your <i>Worthy</i> ally is {{tt|tethered to you|1250 units, center to edge}} and you are above 30% of your <b>maximum</b> health, redirect 12% of the {{tt|pre-mitigation|Damage calculated before the Worthy ally's modifiers}} physical physical damage and magic magic damage damage they take to you as the respective damage type. Additionally, you <img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />heal for 10% of the {{tt|post-mitigation damage|Damage calculated after modifiers}} dealt by your <i>Worthy</i> ally to champions.",
+      "effects": "While your <i>Worthy</i> ally is tethered to you and you are above 30% of your <b>maximum</b> health, redirect 12% of the pre-mitigation physical physical damage and magic magic damage damage they take to you as the respective damage type. Additionally, you <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal for 10% of the post-mitigation damage dealt by your <i>Worthy</i> ally to champions.",
       "cooldown": null,
       "range": null
     }
@@ -34,7 +34,7 @@
     {
       "name": "Pledge",
       "unique": true,
-      "effects": "Designate the target allied champion as being <i>Worthy</i>, forming a <img src=\"/img/icons/tether.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />tether between you and them. Champions can only be designated as <i>Worthy</i> by one <b>Knight's Vow</b> at a time. You cannot be designated as <i>Worthy</i> by an ally's <b>Knight's Vow</b>.",
+      "effects": "Designate the target allied champion as being <i>Worthy</i>, forming a <img src=\"/img/icons/tether.webp\" class=\"tip-icon\" />tether between you and them. Champions can only be designated as <i>Worthy</i> by one <b>Knight's Vow</b> at a time. You cannot be designated as <i>Worthy</i> by an ally's <b>Knight's Vow</b>.",
       "cooldown": null,
       "range": 0
     }

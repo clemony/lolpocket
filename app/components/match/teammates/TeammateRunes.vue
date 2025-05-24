@@ -3,33 +3,27 @@ const props = defineProps<{
   player: any
   class?: HTMLAttributes['class']
 }>()
-const ds = useDataStore()
 
 const player = computed (() => {
   return props.player
 })
 
+const runes = await $fetch<RuneIndex[]>('/api/index/rune-index.json')
+
 const keystone = computed (() => {
   const id = player.value.perks.keystone
-
-  const find = ds.runes.find(r => r.id == id)
-  return find.name.replace(/\s/g, '')
+  return runes.find(r => r.id == id)
 })
 
-const paths = computed (() => {
-  const primary = player.value.perks.primary
-  const secondary = player.value.perks.secondary
-  return {
-    primary: ds.paths.find(p => p.id == primary).name.toLowerCase(),
-    secondary: ds.paths.find(p => p.id == secondary).name,
-  }
+const secondary = computed (() => {
+  return runes.find(p => p.id == player.value.perks.secondary).path
 })
 </script>
 
 <template>
   <div class="" :class="cn('grid h-14 w-8 items-start justify-center mx-1 -mt-0.5  **:[&_img]:shrink-0', props.class)">
-    <img :src="`/img/runes/${paths.primary}/${keystone}.webp`" class="!h-6.25  w-auto drop-shadow-sm !shrink-0" />
+    <img :src="`/img/runes/${keystone.path}/${keystone.key}.webp`" class="!h-6.25  w-auto drop-shadow-sm !shrink-0" />
 
-    <img :src="`/img/runes/${paths.secondary}.webp`" class=" h-4.5 -mt-1  w-auto mx-auto drop-shadow-sm " :class="{ '!h-4': paths.secondary.toLowerCase() == 'inspiration' }" />
+    <img :src="`/img/runes/${secondary}.webp`" class=" h-4.5 -mt-1  w-auto mx-auto drop-shadow-sm " :class="{ '!h-4': secondary.toLowerCase() == 'inspiration' }" />
   </div>
 </template>

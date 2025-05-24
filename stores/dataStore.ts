@@ -1,12 +1,12 @@
-import { defineStore } from 'pinia'
 import { useFetch } from '@vueuse/core'
+import { defineStore } from 'pinia'
 
 export const useDataStore = defineStore(
   'dataStore',
   () => {
     const currentPatch = ref()
     console.log("💠 - currentPatch:", currentPatch)
-    const patchList = ref<string[]>([])
+    const patchList = ref<number[]>([])
     console.log("💠 - patchList:", patchList)
     const lastFetched = ref<number>(0) // timestamp
     console.log("💠 - lastFetched:", lastFetched)
@@ -24,7 +24,7 @@ export const useDataStore = defineStore(
 
       if (!patchList.value.length || now - lastFetched.value > oneDay) {
         try {
-          const { data, error } = await useFetch('/api/index/patch-index.json').json<string[]>()
+          const { data, error } = await useFetch('/api/index/patch-index.json').json<number[]>()
           if (!error.value && data.value) {
             patchList.value = data.value
             currentPatch.value = data.value[data.value.length - 1]

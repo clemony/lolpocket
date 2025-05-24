@@ -1,10 +1,13 @@
 declare global {
   type ItemId = number
   type ItemName = string
-  type ItemIndex = Record<ItemId, ItemName>
+ interface ItemIndex  {
+  name: ItemName
+   id: ItemId
+  }
   type ItemRecord = Record<ItemId, ItemLite>
-type StatLite = number
-type StatArray = StatLite[]
+  type StatLite = number
+  type StatArray = StatLite[]
   type StatKeys = keyof ItemLite['stats']
 
   interface ItemLite {

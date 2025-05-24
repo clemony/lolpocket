@@ -6,10 +6,7 @@ const props = defineProps<{
 const emit = defineEmits(['update:patch'])
 const ms = useMatchStore()
 const ds = useDataStore()
-const sortedPatches = computed(() => {
-  return getPatchList()
-    .sort((a, b) => b.localeCompare(a))
-})
+
 const modelValue = ref(ms.af.patch ?? ds.currentPatch)
 </script>
 
@@ -21,7 +18,7 @@ const modelValue = ref(ms.af.patch ?? ds.currentPatch)
     <SelectContent position="popper" class="!w-[var(--reka-select-trigger-width)]">
       <SelectGroup>
         <SelectLabel>Patch</SelectLabel>
-        <SelectItem v-for="patch in sortedPatches" :key="patch" :value="patch" no-tick>
+        <SelectItem v-for="patch in ds.patchList" :key="patch" :value="patch" no-tick>
           <slot :value="patch.toString()" />
           <span class="flex gap-2 items-center">
             <span class="size-4.5">

@@ -28,14 +28,14 @@
     {
       "name": "Shipwrecker",
       "unique": true,
-      "effects": "While moving, generates 7 stacks of <i>Momentum</i> every 0.25s seconds, granting up to 20 <b>bonus</b> movement speed at 100 stacks after 3.75s seconds of moving. Basic attacks consume all stacks to deal +0 to 100 Momentum physical damage (+ +0 to 100% Momentum <b>base</b> AD) <b>bonus</b> physical damage on-hit.",
+      "effects": "While moving, generates 7 stacks of <i>Momentum</i> every 0.25s seconds, granting up to 20 <b>bonus</b> movement speed at 100 stacks after 3.75s seconds of moving. Basic attacks consume all stacks to deal +0 to 100 Momentum physical damage (+0 to 100% Momentum <b>base</b> AD) <b>bonus</b> physical damage on-hit.",
       "cooldown": null,
       "range": null
     },
     {
       "name": "Unsinkable",
       "unique": true,
-      "effects": "Gain 15% <img src=\"/img/icons/slow%20resist.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />slow resist.",
+      "effects": "Gain 15% <img src=\"/img/icons/slow-resist.webp\" class=\"tip-icon\" />slow resist.",
       "cooldown": null,
       "range": null
     }

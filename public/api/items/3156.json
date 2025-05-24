@@ -22,7 +22,7 @@
     {
       "name": "Lifeline",
       "unique": true,
-      "effects": "If you would take magic damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shield that absorbs 200% attack speed (+ {{rd|150%|112.5s%}} <b>bonus</b> AD) magic damage for 3 seconds. Additionally, triggering this effect grants you 10% omnivamp until the end of combat.",
+      "effects": "If you would take magic damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs 200% attack speed (+ <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />150%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />112.5s%)</span> <b>bonus</b> AD) magic damage for 3 seconds. Additionally, triggering this effect grants you 10% omnivamp until the end of combat.",
       "cooldown": "90",
       "range": null
     }

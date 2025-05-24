@@ -25,7 +25,7 @@
     {
       "name": "Coordinated Fire",
       "unique": true,
-      "effects": "Abilities that <img src=\"/img/icons/slow.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />slow or <img src=\"/img/icons/immobilize.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />immobilize enemy champions mark them for 5 seconds. Allied champions that damage marked enemies consume the mark to deal 10% of the target's <b>current</b> health <b>bonus</b> magic damage (9 second cooldown per target, starts upon mark application).",
+      "effects": "Abilities that <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slow or <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />immobilize enemy champions mark them for 5 seconds. Allied champions that damage marked enemies consume the mark to deal 10% of the target's <b>current</b> health <b>bonus</b> magic damage (9 second cooldown per target, starts upon mark application).",
       "cooldown": null,
       "range": null
     }

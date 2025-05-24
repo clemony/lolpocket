@@ -27,14 +27,14 @@
     {
       "name": "Skipper",
       "unique": true,
-      "effects": "Basic attacks on-hit against any enemy grant a stack for 10 seconds, stacking up to 5 times. At <b>maximum</b> stacks, or 4 stacks, your next basic attack against a champion, epic monster, or structure consumes all stacks to deal {{rd|120%|84%}} <b>base</b> AD ad (+ {{rd|5%|3.5%}} <b>maximum</b> health) <b>bonus</b> physical damage, increased to {{rd|300%|210%}} <b>base</b> AD ad (+ {{rd|10%|7%}} <b>maximum</b> health) against structures.",
+      "effects": "Basic attacks on-hit against any enemy grant a stack for 10 seconds, stacking up to 5 times. At <b>maximum</b> stacks, or 4 stacks, your next basic attack against a champion, epic monster, or structure consumes all stacks to deal <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />120%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />84%)</span> <b>base</b> AD (+ <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />5%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />3.5%)</span> <b>maximum</b> health) <b>bonus</b> physical damage, increased to <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />300%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />210%)</span> <b>base</b> AD (+ <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />10%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />7%)</span> <b>maximum</b> health) against structures.",
       "cooldown": null,
       "range": null
     },
     {
       "name": "Boarding Party",
       "unique": true,
-      "effects": "Allied {{ui|Blue Siege Minion|link=Siege minion|siege minions}} and {{ui|Blue Super Minion|link=Super minion|super minions}} within <img src=\"/img/icons/er.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly=true 1050 units gain {{rd|70 to 130 for 11|70*0.5 to 130*0.5 for 11|levels=1;9 to 18|pp=true}} <b>bonus</b> armor and <b>bonus</b> magic resistance, as well as 10% increased size.",
+      "effects": "Allied {{ui|Blue Siege Minion|link=Siege minion|siege minions}} and {{ui|Blue Super Minion|link=Super minion|super minions}} within <img src=\"/img/icons/er.webp\" class=\"tip-icon\" />icononly=true 1050 units gain <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />70 – 130 for 11&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />70*0.5 – 130*0.5 for 11)</span> <b>bonus</b> armor and <b>bonus</b> magic resistance, as well as 10% increased size.",
       "cooldown": null,
       "range": null
     }

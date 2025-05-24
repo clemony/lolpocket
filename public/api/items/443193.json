@@ -20,7 +20,7 @@
     {
       "name": "Unbreakable",
       "unique": true,
-      "effects": "Gain a <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shield for 300 (+ 100% <b>bonus</b> health) that decays over 5 seconds, and 25% increased size for the same duration.",
+      "effects": "Gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for 300 (+ 100% <b>bonus</b> health) that decays over 5 seconds, and 25% increased size for the same duration.",
       "cooldown": null,
       "range": null
     }

@@ -29,7 +29,7 @@
     {
       "name": "Grievous Wounds",
       "unique": true,
-      "effects": "Dealing magic damage to enemy champions inflicts them with <img src=\"/img/icons/grievous%20wounds.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Grievous Wounds for 3 seconds.",
+      "effects": "Dealing magic damage to enemy champions inflicts them with <img src=\"/img/icons/grievous-wounds.webp\" class=\"tip-icon\" />Grievous Wounds for 3 seconds.",
       "cooldown": null,
       "range": null
     }

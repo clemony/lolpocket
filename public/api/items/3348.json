@@ -20,7 +20,7 @@
     {
       "name": null,
       "unique": false,
-      "effects": "Summons a mist over the target location for 5 seconds, granting <img src=\"/img/icons/sight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />sight of the area in a 375 radius and <img src=\"/img/icons/true%20sight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />revealing enemy <img src=\"/img/icons/stealthed%20trap.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />traps within for 3 seconds.",
+      "effects": "Summons a mist over the target location for 5 seconds, granting <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the area in a 375 radius and <img src=\"/img/icons/true-sight.webp\" class=\"tip-icon\" />revealing enemy <img src=\"/img/icons/stealthed-trap.webp\" class=\"tip-icon\" />traps within for 3 seconds.",
       "cooldown": null,
       "range": 800
     }

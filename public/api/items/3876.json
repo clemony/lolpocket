@@ -21,7 +21,7 @@
     {
       "name": "Going Sledding",
       "unique": true,
-      "effects": "<img src=\"/img/icons/slow.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Slowing or <img src=\"/img/icons/immobilize.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />immobilizing an enemy champion causes you and the most wounded allied champion within 1500 units to gain 20% <b>bonus</b> movement speed decaying over 2.5s seconds and +1;7 to 18 your level hp <b>bonus</b> health for 2.5s seconds.",
+      "effects": "<img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />Slowing or <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />immobilizing an enemy champion causes you and the most wounded allied champion within 1500 units to gain 20% <b>bonus</b> movement speed decaying over 2.5s seconds and +1;7 to 18 your level hp <b>bonus</b> health for 2.5s seconds.",
       "cooldown": "30",
       "range": null
     },
@@ -37,7 +37,7 @@
     {
       "name": "Ward",
       "unique": true,
-      "effects": "Consumes a charge to place a <img src=\"/img/icons/stealth%20ward.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Stealth Ward at the target location, which grants <img src=\"/img/icons/sight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />sight of the surrounding area. Charges refill upon visiting the shop.",
+      "effects": "Consumes a charge to place a <img src=\"/img/icons/stealth-ward.webp\" class=\"tip-icon\" />Stealth Ward at the target location, which grants <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the surrounding area. Charges refill upon visiting the shop.",
       "cooldown": null,
       "range": 600
     }

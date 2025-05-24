@@ -26,7 +26,7 @@
     {
       "name": "Quicksilver",
       "unique": true,
-      "effects": "Removes all <img src=\"/img/icons/crowd%20control.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />crowd control debuffs (except <img src=\"/img/icons/airborne.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Airborne) from your champion and grants 50% <b>bonus total</b> movement speed and <img src=\"/img/icons/ghosted.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />ghosting for 1.5s seconds.",
+      "effects": "Removes all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon\" />Airborne) from your champion and grants 50% <b>bonus total</b> movement speed and <img src=\"/img/icons/ghosted.webp\" class=\"tip-icon\" />ghosting for 1.5s seconds.",
       "cooldown": null,
       "range": null
     }

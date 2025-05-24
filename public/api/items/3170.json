@@ -28,7 +28,7 @@
     {
       "name": "Noxian Fervor",
       "unique": true,
-      "effects": "Gain <img src=\"/img/icons/adaptive%20force.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />adaptive force equal to 5% of your <b>total</b> movement speed.",
+      "effects": "Gain <img src=\"/img/icons/adaptive-force.webp\" class=\"tip-icon\" />adaptive force equal to 5% of your <b>total</b> movement speed.",
       "cooldown": null,
       "range": null
     }

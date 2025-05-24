@@ -19,7 +19,7 @@
     {
       "name": "Nightstalker",
       "unique": true,
-      "effects": "Your abilities deal {{rd|+0 to 70% target's missing health|+0 to 70% target's missing health}} hp (based on target's <b>missing</b> health) increased damage against enemy champions. Scoring a <img src=\"/img/icons/takedown.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />takedown against an enemy champion within 3 seconds of damaging them renders you <img src=\"/img/icons/untargetable.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />untargetable and <img src=\"/img/icons/invulnerable.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />invulnerable to non-structures for 1.5s seconds, which ends prematurely if you perform an action that <img src=\"/img/icons/break%20stealth.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />breaks stealth.",
+      "effects": "Your abilities deal <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />+0 – 70% target's missing health&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />+0 – 70% target's missing health)</span> hp (based on target's <b>missing</b> health) increased damage against enemy champions. Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon\" />takedown against an enemy champion within 3 seconds of damaging them renders you <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon\" />untargetable and <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon\" />invulnerable to non-structures for 1.5s seconds, which ends prematurely if you perform an action that <img src=\"/img/icons/break-stealth.webp\" class=\"tip-icon\" />breaks stealth.",
       "cooldown": null,
       "range": null
     }

@@ -21,7 +21,7 @@
     {
       "name": "Restoration",
       "unique": true,
-      "effects": "Restore 1.25s mana every second. If you cannot gain mana, <img src=\"/img/icons/healing.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />heal 0.55s health instead.",
+      "effects": "Restore 1.25s mana every second. If you cannot gain mana, <img src=\"/img/icons/healing.webp\" class=\"tip-icon\" />heal 0.55s health instead.",
       "cooldown": null,
       "range": null
     },

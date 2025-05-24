@@ -21,7 +21,7 @@
     {
       "name": "Noxian Persistence",
       "unique": true,
-      "effects": "Taking magic damage from champions grants you a <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shield that absorbs +color=md (+ 4% <b>maximum</b> health) magic damage for 4 seconds.",
+      "effects": "Taking magic damage from champions grants you a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs (+ 4% <b>maximum</b> health) magic damage for 4 seconds.",
       "cooldown": "15",
       "range": null
     }

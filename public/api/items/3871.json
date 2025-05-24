@@ -21,7 +21,7 @@
     {
       "name": "Void Explosion",
       "unique": true,
-      "effects": "Dealing ability damage to an enemy champion creates an explosion at their location after a 0.5s-second delay, dealing 10% attack speed (+ 15% AP) (+ 3% of each target's <b>maximum</b> health) magic damage to enemies within the area, capped at 300 against <img src=\"/img/icons/monsters.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />monsters.",
+      "effects": "Dealing ability damage to an enemy champion creates an explosion at their location after a 0.5s-second delay, dealing 10% attack speed (+ 15% AP) (+ 3% of each target's <b>maximum</b> health) magic damage to enemies within the area, capped at 300 against <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters.",
       "cooldown": "10",
       "range": null
     },
@@ -37,7 +37,7 @@
     {
       "name": "Ward",
       "unique": true,
-      "effects": "Consumes a charge to place a <img src=\"/img/icons/stealth%20ward.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Stealth Ward at the target location, which grants <img src=\"/img/icons/sight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />sight of the surrounding area. Charges refill upon visiting the shop.",
+      "effects": "Consumes a charge to place a <img src=\"/img/icons/stealth-ward.webp\" class=\"tip-icon\" />Stealth Ward at the target location, which grants <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the surrounding area. Charges refill upon visiting the shop.",
       "cooldown": null,
       "range": 600
     }

@@ -33,7 +33,7 @@
     {
       "name": null,
       "unique": true,
-      "effects": "Consumes a charge of <i>Arcane Cache</i> to place a visible <img src=\"/img/icons/control%20ward.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Control Ward at the target location (600 range).",
+      "effects": "Consumes a charge of <i>Arcane Cache</i> to place a visible <img src=\"/img/icons/control-ward.webp\" class=\"tip-icon\" />Control Ward at the target location (600 range).",
       "cooldown": null,
       "range": null
     }

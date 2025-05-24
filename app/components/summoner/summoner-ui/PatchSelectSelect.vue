@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const ms = useMatchStore()
+const ds = useDataStore()
 </script>
 
 <template>
@@ -11,7 +12,7 @@ const ms = useMatchStore()
     <SelectContent align="center" position="popper" class="rounded-lg  max-h-60">
       <SelectGroup>
         <SelectLabel>Patch</SelectLabel>
-        <SelectItem v-for="patch in ms.previousPatch" :key="patch" :value="useToNumber(patch).value" class="font-medium text-2">
+        <SelectItem v-for="patch in ds.patchList" :key="patch" :value="useToNumber(patch).value" class="font-medium text-2">
           {{ patch }}
         </SelectItem>
       </SelectGroup>

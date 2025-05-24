@@ -23,7 +23,7 @@
     {
       "name": "Intervention",
       "unique": true,
-      "effects": "Call upon a 550-radius beam of light to strike upon the target location after 2.5s seconds, granting <img src=\"/img/icons/sight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />sight of the area for the duration. Allies within the area are <img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />healed for +type=target's level target's level, while enemy champions within take 10% of target's <b>maximum</b> health as true damage. <b>Can be used while dead.</b>",
+      "effects": "Call upon a 550-radius beam of light to strike upon the target location after 2.5s seconds, granting <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the area for the duration. Allies within the area are <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healed for +type=target's level target's level, while enemy champions within take 10% of target's <b>maximum</b> health as true damage. <b>Can be used while dead.</b>",
       "cooldown": null,
       "range": 5500
     }

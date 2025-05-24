@@ -25,7 +25,7 @@
     {
       "name": "Cleave",
       "unique": true,
-      "effects": "Basic attacks on-hit deal {{rd|40% AD|20% AD}} ad physical damage to other enemies in a <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly = true 350 radius centered around the target.",
+      "effects": "Basic attacks on-hit deal <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />40% AD&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />20% AD)</span> physical damage to other enemies in a <img src=\"/img/icons/cr.webp\" class=\"tip-icon\" />icononly = true 350 radius centered around the target.",
       "cooldown": null,
       "range": null
     }
@@ -34,7 +34,7 @@
     {
       "name": "Ravenous Crescent",
       "unique": true,
-      "effects": "Deal 80% AD physical damage to enemies within a <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly = true 450 radius in front of you.",
+      "effects": "Deal 80% AD physical damage to enemies within a <img src=\"/img/icons/cr.webp\" class=\"tip-icon\" />icononly = true 450 radius in front of you.",
       "cooldown": null,
       "range": null
     }

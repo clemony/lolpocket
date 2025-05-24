@@ -1,12 +1,12 @@
-import { ofetch } from 'ofetch'
 import { writeFile } from 'node:fs/promises'
+import { ofetch } from 'ofetch'
 
 const MIN_PATCH_MAJOR = 15
 
-function normalizePatch(patch: string): string {
+function normalizePatch(patch: string): number {
   const [major, minor] = patch.split('.').map(Number)
   const formattedMinor = minor.toString().padStart(2, '0')
-  return `25.${formattedMinor}` // assuming current year is 2025
+  return Number.parseFloat(`25.${formattedMinor}`) // assuming current year is 2025
 }
 
 async function main() {

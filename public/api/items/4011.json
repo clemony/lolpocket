@@ -19,14 +19,14 @@
     {
       "name": "Effervescence",
       "unique": true,
-      "effects": "Gain 1.2s% <b>bonus</b> attack speed per 1% {{stil|heal and shield power}}.",
+      "effects": "Gain 1.2s% <b>bonus</b> attack speed per 1% <img src=\"/img/icons/heal-and shield power.webp\" class=\"tip-icon\"  />heal and shield power.",
       "cooldown": null,
       "range": null
     },
     {
       "name": "Peppermint",
       "unique": true,
-      "effects": "Basic attacks on-hit cause the most wounded and nearest allied champion to be <img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />healed for + (+ 10% <b>bonus</b> AD) (+ 7% AP).",
+      "effects": "Basic attacks on-hit cause the most wounded and nearest allied champion to be <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healed for + (+ 10% <b>bonus</b> AD) (+ 7% AP).",
       "cooldown": null,
       "range": null
     }

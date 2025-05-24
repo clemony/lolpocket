@@ -25,7 +25,7 @@
     {
       "name": "Frostfire Tempest",
       "unique": true,
-      "effects": "Upon casting your ultimate ability, you summon a storm of flame and ice around you for 5 seconds, dealing 7.5 magic damage every 0.25s seconds (150 <b>total</b> magic damage over the duration)to enemies within <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly=true 350 units and <img src=\"/img/icons/slow.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />slowing them by 30% (45 second cooldown, starts on ultimate cast).",
+      "effects": "Upon casting your ultimate ability, you summon a storm of flame and ice around you for 5 seconds, dealing 7.5 magic damage every 0.25s seconds (150 <b>total</b> magic damage over the duration)to enemies within <img src=\"/img/icons/cr.webp\" class=\"tip-icon\" />icononly=true 350 units and <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slowing them by 30% (45 second cooldown, starts on ultimate cast).",
       "cooldown": null,
       "range": null
     }

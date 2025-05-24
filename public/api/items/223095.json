@@ -28,7 +28,7 @@
     {
       "name": "Bolt",
       "unique": true,
-      "effects": "When fully <img src=\"/img/icons/energized.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Energized, your next basic attack deals 100 <b>bonus</b> magic damage on-hit and grants you 45% <b>bonus</b> movement speed for 1.5s seconds.",
+      "effects": "When fully <img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized, your next basic attack deals 100 <b>bonus</b> magic damage on-hit and grants you 45% <b>bonus</b> movement speed for 1.5s seconds.",
       "cooldown": null,
       "range": null
     }

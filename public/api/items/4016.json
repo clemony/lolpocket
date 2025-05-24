@@ -19,7 +19,7 @@
     {
       "name": "Promise",
       "unique": true,
-      "effects": "While your <i>Promised</i> ally is {{tt|tethered|1250 units, center to edge}} to you, gain ability power equal to 20% of <i>Promised</i> ally's AP, and grant your <i>Promised</i> ally ability haste equal to 20% of your ability haste. <i>Increases and decreases to each teammate's stats recalculate this effect.</i>",
+      "effects": "While your <i>Promised</i> ally is tethered to you, gain ability power equal to 20% of <i>Promised</i> ally's AP, and grant your <i>Promised</i> ally ability haste equal to 20% of your ability haste. <i>Increases and decreases to each teammate's stats recalculate this effect.</i>",
       "cooldown": null,
       "range": null
     }
@@ -28,7 +28,7 @@
     {
       "name": "Promise",
       "unique": true,
-      "effects": "Make a <i>Promise</i> to the target allied champion, forming a <img src=\"/img/icons/tether.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />tether between you and them.",
+      "effects": "Make a <i>Promise</i> to the target allied champion, forming a <img src=\"/img/icons/tether.webp\" class=\"tip-icon\" />tether between you and them.",
       "cooldown": null,
       "range": null
     }

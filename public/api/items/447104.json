@@ -19,7 +19,7 @@
     {
       "name": "Fill the Soul",
       "unique": true,
-      "effects": "Gain a charge each time you or champions within 800 units cast an ability, up to 30. At maximum charges, gain + ability power and +key=%% <b>bonus</b> movement speed for the rest of the round, as well as a + <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shield that lasts until destroyed. Charges are reset every round and between each phase in a round.",
+      "effects": "Gain a charge each time you or champions within 800 units cast an ability, up to 30. At maximum charges, gain + ability power and +key=%% <b>bonus</b> movement speed for the rest of the round, as well as a + <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that lasts until destroyed. Charges are reset every round and between each phase in a round.",
       "cooldown": null,
       "range": null
     }

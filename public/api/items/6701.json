@@ -30,7 +30,7 @@
     {
       "name": "Extraction",
       "unique": true,
-      "effects": "Scoring a <img src=\"/img/icons/takedown.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />takedown against an enemy champion within 3 seconds of damaging them grants you 200 <b>bonus</b> movement speed that decays over 1.5s seconds.",
+      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon\" />takedown against an enemy champion within 3 seconds of damaging them grants you 200 <b>bonus</b> movement speed that decays over 1.5s seconds.",
       "cooldown": null,
       "range": null
     }

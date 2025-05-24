@@ -32,7 +32,7 @@
     {
       "name": "Juxtaposition",
       "unique": true,
-      "effects": "Basic attacks <img src=\"/img/icons/on-hit.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />on-hit against champions alternate between <i>Light</i> and <i>Dark</i> hits, each one granting a bonus for 5 seconds that stacks up to 3 times. <i>Light</i> hits grant +1;11;14 level <b>bonus</b> armor and <b>bonus</b> magic resistance while <i>Dark</i> hits grant 10% armor penetration and magic penetration, for a total of + <b>bonus</b> resistances and 30% resistances penetration at maximum stacks of each.",
+      "effects": "Basic attacks <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon\" />on-hit against champions alternate between <i>Light</i> and <i>Dark</i> hits, each one granting a bonus for 5 seconds that stacks up to 3 times. <i>Light</i> hits grant +1;11;14 level <b>bonus</b> armor and <b>bonus</b> magic resistance while <i>Dark</i> hits grant 10% armor penetration and magic penetration, for a total of + <b>bonus</b> resistances and 30% resistances penetration at maximum stacks of each.",
       "cooldown": null,
       "range": null
     }

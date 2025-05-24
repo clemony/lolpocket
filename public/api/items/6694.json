@@ -22,7 +22,7 @@
     {
       "name": "Bitter Cold",
       "unique": true,
-      "effects": "Dealing ability damage to an enemy that is at or below 50% of their <b>maximum</b> health <img src=\"/img/icons/slow.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />slows them by 30% for 1 second.",
+      "effects": "Dealing ability damage to an enemy that is at or below 50% of their <b>maximum</b> health <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slows them by 30% for 1 second.",
       "cooldown": null,
       "range": null
     }

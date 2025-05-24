@@ -25,7 +25,7 @@
     {
       "name": "Rimefrost",
       "unique": true,
-      "effects": "Dealing <img src=\"/img/icons/ability%20damage.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />ability damage <img src=\"/img/icons/slow.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />slows affected units by 30% for 1 second.",
+      "effects": "Dealing ability damage <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slows affected units by 30% for 1 second.",
       "cooldown": null,
       "range": null
     }

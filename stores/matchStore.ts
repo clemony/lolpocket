@@ -3,7 +3,6 @@ import { defineStore } from 'pinia'
 export const useMatchStore = defineStore('matchStore', () => {
   const ds = useDataStore()
 
-  const currentPatch = ref(ds.currentPatch)
   const patchGames = ref()
 
   const summonerSearch = ref(null)
@@ -38,8 +37,6 @@ export const useMatchStore = defineStore('matchStore', () => {
     af,
     summonerSearch,
     championTabsQueue,
-
-    currentPatch,
     patchGames,
     seasonTotals,
 

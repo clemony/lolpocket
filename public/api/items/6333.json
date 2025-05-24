@@ -26,14 +26,14 @@
     {
       "name": "Ignore Pain",
       "unique": true,
-      "effects": "Reduces {{rd|30%|10%}} of all {{tt|post-mitigation|Damage calculated after modifiers}} physical physical damage and magic magic damage damage received and instead stores the damage to successively take it as true damage over 3 seconds, dealing a third of the stored damage each second.",
+      "effects": "Reduces <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />30%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />10%)</span> of all post-mitigation physical physical damage and magic magic damage damage received and instead stores the damage to successively take it as true damage over 3 seconds, dealing a third of the stored damage each second.",
       "cooldown": null,
       "range": null
     },
     {
       "name": "Defy",
       "unique": true,
-      "effects": "If an enemy champion dies within 3 seconds of you damaging them, removes <i>Ignore Pain's</i> remaining stored damage and <img src=\"/img/icons/heals.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />heals you for 75% <b>bonus</b> AD over 2 seconds.",
+      "effects": "If an enemy champion dies within 3 seconds of you damaging them, removes <i>Ignore Pain's</i> remaining stored damage and <img src=\"/img/icons/heals.webp\" class=\"tip-icon\" />heals you for 75% <b>bonus</b> AD over 2 seconds.",
       "cooldown": null,
       "range": null
     }

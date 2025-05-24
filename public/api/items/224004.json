@@ -20,7 +20,7 @@
     {
       "name": "Soul Anchor",
       "unique": true,
-      "effects": "Mark your current location. After 5 seconds, you automatically <img src=\"/img/icons/blink.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />blink to the marked location. <i>Soul Anchor</i> may be recast within its duration to manually blink to the marked location (15 second cooldown, starts after the blink).",
+      "effects": "Mark your current location. After 5 seconds, you automatically <img src=\"/img/icons/blink.webp\" class=\"tip-icon\" />blink to the marked location. <i>Soul Anchor</i> may be recast within its duration to manually blink to the marked location (15 second cooldown, starts after the blink).",
       "cooldown": 15,
       "range": null
     }

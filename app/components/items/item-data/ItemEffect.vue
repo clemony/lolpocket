@@ -15,7 +15,7 @@ const { data, type } = defineProps<{
 
     <span
       v-if="data.effects"
-      class=""
+      class="inline align-middle"
       v-html="data.effects" />
   </div>
 </template>

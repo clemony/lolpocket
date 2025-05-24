@@ -26,7 +26,7 @@
     {
       "name": "Ichorshield",
       "unique": true,
-      "effects": "Convert the <img src=\"/img/icons/healing.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />healing received from {{sti|life steal}} in excess of <b>maximum</b> health into a <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shield for up to +1;9 to 18, which lasts until destroyed.",
+      "effects": "Convert the <img src=\"/img/icons/healing.webp\" class=\"tip-icon\" />healing received from {{sti|life steal}} in excess of <b>maximum</b> health into a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for up to +1;9 to 18, which lasts until destroyed.",
       "cooldown": null,
       "range": null
     }

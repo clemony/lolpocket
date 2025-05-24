@@ -30,7 +30,7 @@
     {
       "name": "Focused Will",
       "unique": true,
-      "effects": "Dealing ability damage with a non-innate ability grants a stack for 6 seconds, stacking up to 4 times and up to once per <img src=\"/img/icons/cast%20instance.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />cast instance per second and every second for damage over time abilities. For each stack, your non-<img src=\"/img/icons/basic%20damage.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />basic damage dealt by non-items gain 3% increased damage, for a total increase of 12% at <b>maximum</b> stacks.",
+      "effects": "Dealing ability damage with a non-innate ability grants a stack for 6 seconds, stacking up to 4 times and up to once per cast instance per second and every second for damage over time abilities. For each stack, your non-<img src=\"/img/icons/basic-damage.webp\" class=\"tip-icon\" />basic damage dealt by non-items gain 3% increased damage, for a total increase of 12% at <b>maximum</b> stacks.",
       "cooldown": null,
       "range": null
     }

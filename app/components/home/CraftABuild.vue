@@ -10,10 +10,6 @@ const shuffled = champions.sort(() => 0.5 - Math.random())
 const selectedChamps = shuffled.slice(0, 6)
 
 const currentItems = ref()
-function getRandomItems() {
-  const shuffled = items.sort(() => 0.5 - Math.random())
-  return currentItems.value = shuffled.slice(0, 6)
-}
 
 const champModel = ref(null)
 const champComplete = ref(false)
@@ -68,14 +64,14 @@ function setTimer(timer, i?, item?) {
     else if (timer == 'item') {
       itemModel[i].item.value = item
       itemModel[i].visible.value = false
-      getRandomItems()
+      getRandom(items)
       itemIndex[i + 1].visible.value = true
     }
   }, 2000)
 }
 
 onMounted (async () => {
-  currentItems.value = getRandomItems()
+  currentItems.value = getRandom(items)
 })
 </script>
 

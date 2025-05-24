@@ -32,7 +32,7 @@
     {
       "name": "Symbiosis",
       "unique": true,
-      "effects": "After moving a total of 150,000 units of distance, capped at 500 units at a time for <img src=\"/img/icons/dash.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />dashes and <img src=\"/img/icons/blink.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />blinks, upgrade this item to {{ii|Synchronized Souls}}.",
+      "effects": "After moving a total of 150,000 units of distance, capped at 500 units at a time for <img src=\"/img/icons/dash.webp\" class=\"tip-icon\" />dashes and <img src=\"/img/icons/blink.webp\" class=\"tip-icon\" />blinks, upgrade this item to {{ii|Synchronized Souls}}.",
       "cooldown": null,
       "range": null
     }

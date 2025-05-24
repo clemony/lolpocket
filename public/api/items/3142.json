@@ -32,7 +32,7 @@
     {
       "name": "Wraith Step",
       "unique": true,
-      "effects": "Gain {{rd|20%|15%}} <b>bonus</b> movement speed and <img src=\"/img/icons/ghosted.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />ghosting for 6 seconds.",
+      "effects": "Gain <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />20%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />15%)</span> <b>bonus</b> movement speed and <img src=\"/img/icons/ghosted.webp\" class=\"tip-icon\" />ghosting for 6 seconds.",
       "cooldown": null,
       "range": null
     }

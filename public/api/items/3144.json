@@ -27,7 +27,7 @@
     {
       "name": "Bullseye",
       "unique": true,
-      "effects": "Damaging an enemy champion deals 40 <b>bonus</b> magic damage (40 second cooldown, reduced by 1 second <img src=\"/img/icons/on-attack.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />on-attack).",
+      "effects": "Damaging an enemy champion deals 40 <b>bonus</b> magic damage (40 second cooldown, reduced by 1 second ).",
       "cooldown": null,
       "range": null
     }

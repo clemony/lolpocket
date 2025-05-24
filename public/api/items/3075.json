@@ -25,7 +25,7 @@
     {
       "name": "Thorns",
       "unique": true,
-      "effects": "When struck by a basic attack on-hit, deal 20 (+ 10% <b>bonus</b> armor) magic damage magic damage to the attacker and, if they are a champion, inflict them with <img src=\"/img/icons/grievous%20wounds.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Grievous Wounds for 3 seconds.",
+      "effects": "When struck by a basic attack on-hit, deal 20 (+ 10% <b>bonus</b> armor) magic damage magic damage to the attacker and, if they are a champion, inflict them with <img src=\"/img/icons/grievous-wounds.webp\" class=\"tip-icon\" />Grievous Wounds for 3 seconds.",
       "cooldown": null,
       "range": null
     }

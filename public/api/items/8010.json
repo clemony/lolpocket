@@ -22,7 +22,7 @@
     {
       "name": "Vile Decay",
       "unique": true,
-      "effects": "Dealing magic damage to an enemy champion with a champion ability applies a stack of <i>Vile Decay</i> to them for 6 seconds, stacking up to 4 times and up to once per basic attack or ability per <img src=\"/img/icons/cast%20instance.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />cast instance every 0.3s seconds. Each stack inflicts 7.5s% magic resistance reduction, up to 30% mr at 4 stacks.",
+      "effects": "Dealing magic damage to an enemy champion with a champion ability applies a stack of <i>Vile Decay</i> to them for 6 seconds, stacking up to 4 times and up to once per basic attack or ability per cast instance every 0.3s seconds. Each stack inflicts 7.5s% magic resistance reduction, up to 30% mr at 4 stacks.",
       "cooldown": null,
       "range": null
     }

@@ -26,14 +26,14 @@
     {
       "name": "Hypershot",
       "unique": true,
-      "effects": "Dealing ability damage to a champion at <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly = true 600 or more units away from the cast position <img src=\"/img/icons/standard%20sight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />reveals them for 6 seconds.",
+      "effects": "Dealing ability damage to a champion at <img src=\"/img/icons/cr.webp\" class=\"tip-icon\" />icononly = true 600 or more units away from the cast position <img src=\"/img/icons/standard-sight.webp\" class=\"tip-icon\" />reveals them for 6 seconds.",
       "cooldown": null,
       "range": null
     },
     {
       "name": "Focus",
       "unique": true,
-      "effects": "Upon triggering <i>Hypershot</i>, grant <img src=\"/img/icons/sight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />sight of the {{tt|area|Grants sight through terrain and brush}} <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly=true 1400 units around the target for 2 seconds and apply <i>Hypershot's</i> effects to enemy champions within the area for 3 seconds.",
+      "effects": "Upon triggering <i>Hypershot</i>, grant <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the area <img src=\"/img/icons/cr.webp\" class=\"tip-icon\" />icononly=true 1400 units around the target for 2 seconds and apply <i>Hypershot's</i> effects to enemy champions within the area for 3 seconds.",
       "cooldown": "30",
       "range": null
     }

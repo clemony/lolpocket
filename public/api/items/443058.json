@@ -19,7 +19,7 @@
     {
       "name": "Immovable as the Earth",
       "unique": true,
-      "effects": "Increase your <b>total</b> armor by 20% armor. Additionally, basic attacks that hit you have a chance of being <img src=\"/img/icons/block.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />blocked equal to 5% per 200 <b>total</b> armor, up to a maximum of 50% chance.",
+      "effects": "Increase your <b>total</b> armor by 20% armor. Additionally, basic attacks that hit you have a chance of being <img src=\"/img/icons/block.webp\" class=\"tip-icon\" />blocked equal to 5% per 200 <b>total</b> armor, up to a maximum of 50% chance.",
       "cooldown": null,
       "range": null
     }

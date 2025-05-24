@@ -25,7 +25,7 @@
     {
       "name": "Spectral Waltz",
       "unique": true,
-      "effects": "Become permanently <img src=\"/img/icons/ghosted.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />ghosted.",
+      "effects": "Become permanently <img src=\"/img/icons/ghosted.webp\" class=\"tip-icon\" />ghosted.",
       "cooldown": null,
       "range": null
     }

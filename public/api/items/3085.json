@@ -22,7 +22,7 @@
     {
       "name": "Wind's Fury",
       "unique": true,
-      "effects": "Basic attacks on-attack fire additional bolts at up to 2 enemies {{tt|in front of you|180 {{|degree}}}}, each dealing 55% AD physical damage. Bolts apply <img src=\"/img/icons/on-hit.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />on-hit effects and are affected by <img src=\"/img/icons/critical%20strike.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />critical strike modifiers.",
+      "effects": "Basic attacks on-attack fire additional bolts at up to 2 enemies in front of you}}, each dealing 55% AD physical damage. Bolts apply <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon\" />on-hit effects and are affected by <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critical strike modifiers.",
       "cooldown": null,
       "range": null
     }

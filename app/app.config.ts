@@ -79,7 +79,8 @@ export default defineAppConfig({
       'folders': 'teenyicons:folders-outline',
 
       // external / social
-      'at': 'teenyicons:at-outline',
+      'at': 'lucide:at-sign',
+      'hash': 'lucide:hash',
       'riot': 'simple-icons:riotgames',
       'github': 'ph:github-logo',
       'id-card': 'icon-park-twotone:id-card-v',

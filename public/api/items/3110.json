@@ -24,7 +24,7 @@
     {
       "name": "Winter's Caress",
       "unique": true,
-      "effects": "<img src=\"/img/icons/cripple.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Cripples the attack speed of enemy champions within {{tt|700 units|center to edge}} by 20%.",
+      "effects": "<img src=\"/img/icons/cripple.webp\" class=\"tip-icon\" />Cripples the attack speed of enemy champions within 700 units by 20%.",
       "cooldown": null,
       "range": null
     }

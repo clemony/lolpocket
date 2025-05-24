@@ -1,6 +1,14 @@
 declare global {
 
   type RuneKey = string
+
+  interface RuneIndex {
+    name: string
+    id: number
+    key: string
+    path: string
+  }
+  
   interface PathRunes {
     1: RuneId | null
     2: RuneId | null

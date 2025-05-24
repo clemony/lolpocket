@@ -27,7 +27,7 @@
     {
       "name": "Supersonic",
       "unique": true,
-      "effects": "<img src=\"/img/icons/dash.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Dash 125 to 275 units in the target direction, though not through terrain, unleashing an arc of 7 rockets in the same direction that deal 100 (+ 10% AP) magic damage magic damage to enemies hit.",
+      "effects": "<img src=\"/img/icons/dash.webp\" class=\"tip-icon\" />Dash 125 to 275 units in the target direction, though not through terrain, unleashing an arc of 7 rockets in the same direction that deal 100 (+ 10% AP) magic damage magic damage to enemies hit.",
       "cooldown": null,
       "range": null
     }

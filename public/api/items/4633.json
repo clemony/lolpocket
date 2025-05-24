@@ -24,7 +24,7 @@
     {
       "name": "Void Corruption",
       "unique": true,
-      "effects": "For each second in combat with champions, deal 2% increased damage, stacking up to 4 times for a total of 8% increased damage. At maximum stacks, gain {{rd|10%|6%}} omnivamp.",
+      "effects": "For each second in combat with champions, deal 2% increased damage, stacking up to 4 times for a total of 8% increased damage. At maximum stacks, gain <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />10%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />6%)</span> omnivamp.",
       "cooldown": null,
       "range": null
     },

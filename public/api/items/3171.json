@@ -28,7 +28,7 @@
     {
       "name": "Noxian Haste",
       "unique": true,
-      "effects": "<img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Healing, <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shielding or buffing an ally, damaging abilities against champions, and using summoner spells grants you {{rd|10%|8%}} <b>bonus</b> movement speed for 4 seconds. This can be triggered from the same <img src=\"/img/icons/cast%20instance.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />cast instance only once every 4 seconds.",
+      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Healing, <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding or buffing an ally, damaging abilities against champions, and using summoner spells grants you <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />10%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />8%)</span> <b>bonus</b> movement speed for 4 seconds. This can be triggered from the same cast instance only once every 4 seconds.",
       "cooldown": null,
       "range": null
     }

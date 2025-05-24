@@ -22,7 +22,7 @@
     {
       "name": "Cinderbloom",
       "unique": true,
-      "effects": "Magic magic damage and true true damage damage <img src=\"/img/icons/critical%20strike.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />critically strike against enemies below 40% <b>maximum</b> health for 120% damage.",
+      "effects": "Magic magic damage and true true damage damage <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critically strike against enemies below 40% <b>maximum</b> health for 120% damage.",
       "cooldown": null,
       "range": null
     }

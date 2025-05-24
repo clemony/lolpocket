@@ -21,7 +21,7 @@
     {
       "name": "Spellblade",
       "unique": true,
-      "effects": "After using an ability, your next basic attack within 10 seconds deals 100% <b>base</b> AD <b>bonus</b> physical damage on-hit. If the target is a champion, inflict them with <i>Expose Weakness</i> for 4 seconds, causing them to take {{rd|8%|5%}} increased damage from all sources (1.5s second cooldown, starts after using the empowered attack).",
+      "effects": "After using an ability, your next basic attack within 10 seconds deals 100% <b>base</b> AD <b>bonus</b> physical damage on-hit. If the target is a champion, inflict them with <i>Expose Weakness</i> for 4 seconds, causing them to take <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />8%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />5%)</span> increased damage from all sources (1.5s second cooldown, starts after using the empowered attack).",
       "cooldown": null,
       "range": null
     },
@@ -37,7 +37,7 @@
     {
       "name": "Ward",
       "unique": true,
-      "effects": "Consumes a charge to place a <img src=\"/img/icons/stealth%20ward.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Stealth Ward at the target location, which grants <img src=\"/img/icons/sight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />sight of the surrounding area. Charges refill upon visiting the shop.",
+      "effects": "Consumes a charge to place a <img src=\"/img/icons/stealth-ward.webp\" class=\"tip-icon\" />Stealth Ward at the target location, which grants <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the surrounding area. Charges refill upon visiting the shop.",
       "cooldown": null,
       "range": 600
     }

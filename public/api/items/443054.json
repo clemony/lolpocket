@@ -19,7 +19,7 @@
     {
       "name": "Gash",
       "unique": true,
-      "effects": "Basic attacks on-hit deal {{rd|20 to 40|10 to 20|pp=true}} true damage (+ {{rd|25%|20%}} <b>bonus</b> armor) armor <b>bonus</b> true damage.",
+      "effects": "Basic attacks on-hit deal <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />20 – 40&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />10 – 20)</span> true damage (+ <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />25%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />20%)</span> <b>bonus</b> armor) armor <b>bonus</b> true damage.",
       "cooldown": null,
       "range": null
     }

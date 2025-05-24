@@ -16,7 +16,7 @@ export function matchFilters(
   const matchesPatch
     = !patch
       || patch === ds.currentPatch
-      || Number.parseFloat(match.gameVersion) === patch
+      || match.gameVersion === patch
 
   const matchesQueue
     = !queue

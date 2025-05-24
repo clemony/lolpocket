@@ -26,7 +26,7 @@
     {
       "name": "Rock Solid",
       "unique": true,
-      "effects": "Every first incoming instance of {{tt|post-mitigation|Damage calculated after modifiers}} <img src=\"/img/icons/basic%20damage.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />basic damage per <img src=\"/img/icons/cast%20instance.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />cast instance is reduced by 15, with a <b>maximum</b> of 20% reduction each.",
+      "effects": "Every first incoming instance of post-mitigation <img src=\"/img/icons/basic-damage.webp\" class=\"tip-icon\" />basic damage per cast instance is reduced by 15, with a <b>maximum</b> of 20% reduction each.",
       "cooldown": null,
       "range": null
     }

@@ -26,7 +26,7 @@
     {
       "name": "Cleave",
       "unique": true,
-      "effects": "Basic attacks on-hit deal {{rd|40% AD|20% AD}} ad physical damage to other enemies in a <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly = true 350 radius centered around the target.",
+      "effects": "Basic attacks on-hit deal <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />40% AD&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />20% AD)</span> physical damage to other enemies in a <img src=\"/img/icons/cr.webp\" class=\"tip-icon\" />icononly = true 350 radius centered around the target.",
       "cooldown": null,
       "range": null
     }
@@ -35,7 +35,7 @@
     {
       "name": "Breaking Shockwave",
       "unique": true,
-      "effects": "Deal 80% AD physical damage to enemies in a <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly = true 450 radius centered around you and <img src=\"/img/icons/slow.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />slow them by 35% for 3 seconds. For each champion hit, gain 35% <b>bonus</b> movement speed decaying over 3 seconds. Can move while casting.",
+      "effects": "Deal 80% AD physical damage to enemies in a <img src=\"/img/icons/cr.webp\" class=\"tip-icon\" />icononly = true 450 radius centered around you and <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slow them by 35% for 3 seconds. For each champion hit, gain 35% <b>bonus</b> movement speed decaying over 3 seconds. Can move while casting.",
       "cooldown": null,
       "range": null
     }

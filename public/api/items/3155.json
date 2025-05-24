@@ -25,7 +25,7 @@
     {
       "name": "Lifeline",
       "unique": true,
-      "effects": "If you would take magic damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shield that absorbs {{rd|110 to 280|82.5 to 210|pp=true}} magic damage for 2.5s seconds.",
+      "effects": "If you would take magic damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />110 – 280&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />82.5 – 210)</span> magic damage for 2.5s seconds.",
       "cooldown": "90",
       "range": null
     }

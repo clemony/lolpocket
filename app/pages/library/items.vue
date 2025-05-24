@@ -21,7 +21,7 @@ definePageMeta({
       <div
         class=" user-select-none grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(56px,1fr))] gap-5  h-auto pt-1  rounded-lg">
         <template v-for="item in items" :key="item.id">
-          <PopoverItem :item="item.id" />
+          <LazyPopoverItem :item="item.id" />
         </template>
       </div>
     </div>

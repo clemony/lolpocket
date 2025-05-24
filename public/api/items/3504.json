@@ -22,7 +22,7 @@
     {
       "name": "Sanctify",
       "unique": true,
-      "effects": "<img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Healing or <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shielding allied champions (<i>excluding yourself</i>) enhances you and them for 6 seconds, granting 25% <b>bonus</b> attack speed attack speed and 20 <b>bonus</b> magic damage on-hit on basic attacks.",
+      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Healing or <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding allied champions (<i>excluding yourself</i>) enhances you and them for 6 seconds, granting 25% <b>bonus</b> attack speed attack speed and 20 <b>bonus</b> magic damage on-hit on basic attacks.",
       "cooldown": null,
       "range": null
     }

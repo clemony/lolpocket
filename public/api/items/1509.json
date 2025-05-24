@@ -19,7 +19,7 @@
     {
       "name": null,
       "unique": true,
-      "effects": "<img src=\"/img/icons/turret.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Turret basic attacks are modified to deal 45% of this minion's <b>maximum</b> health as {{tt|pre-mitigation damage|Damage calculated before modifiers}}.",
+      "effects": "<img src=\"/img/icons/turret.webp\" class=\"tip-icon\" />Turret basic attacks are modified to deal 45% of this minion's <b>maximum</b> health as pre-mitigation damage.",
       "cooldown": null,
       "range": null
     }

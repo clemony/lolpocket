@@ -27,7 +27,7 @@
     {
       "name": "Quicksilver",
       "unique": true,
-      "effects": "Removes all <img src=\"/img/icons/crowd%20control.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />crowd control debuffs (except <img src=\"/img/icons/airborne.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Airborne) from your champion.",
+      "effects": "Removes all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon\" />Airborne) from your champion.",
       "cooldown": null,
       "range": null
     }

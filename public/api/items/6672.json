@@ -23,7 +23,7 @@
     {
       "name": "Bring It Down",
       "unique": true,
-      "effects": "Basic attacks on-hit grant a stack for 3 seconds, up to 2 stacks. At 2 stacks, the next basic attack consumes all stacks to deal {{rd|150 to 200 for 11|150*0.8 to 200*0.8 for 11|levels=1;9 to 18|pp=true}} <b>bonus</b> physical damage physical damage on-hit, increased by +0 to 100% target's missing health, for up to {{rd|150*1.5 to 200*1.5 for 11|150*0.8*1.5 to 200*0.8*1.5 for 11|levels=1;9 to 18|pp=true}} <b>bonus</b> physical damage physical damage.",
+      "effects": "Basic attacks on-hit grant a stack for 3 seconds, up to 2 stacks. At 2 stacks, the next basic attack consumes all stacks to deal <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />150 – 200 for 11&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />150*0.8 – 200*0.8 for 11)</span> <b>bonus</b> physical damage physical damage on-hit, increased by +0 to 100% target's missing health, for up to <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />150*1.5 – 200*1.5 for 11&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />150*0.8*1.5 – 200*0.8*1.5 for 11)</span> <b>bonus</b> physical damage physical damage.",
       "cooldown": null,
       "range": null
     }

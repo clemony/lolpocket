@@ -5,7 +5,7 @@ const { summoner } = defineProps<{
   summoner: Summoner
 }>()
 
-  console.log("💠 - summoner:", summoner)
+console.log('💠 - summoner:', summoner)
 const region = computed(() => {
   return regionDictionary[summoner.region.toLowerCase()] ?? summoner.region
 })
@@ -32,10 +32,10 @@ const region = computed(() => {
 
       <div class="flex items-center lowercase gap-4 pl-0.5 font-normal">
         <span class=" flex items-center">
-          <icon name="lucide:hash" class="size-3.75" />
+          <icon name="hash" class="size-3.75" />
           {{ summoner.tag }}</span>
         <span class="lowercase flex items-center grow">
-          <icon name="lucide:at-sign" class="size-3.25 dst" />
+          <icon name="at" class="size-3.25 dst" />
           {{ region }}</span>
       </div>
     </div>

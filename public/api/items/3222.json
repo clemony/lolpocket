@@ -26,7 +26,7 @@
     {
       "name": "Purify",
       "unique": true,
-      "effects": "Remove all <img src=\"/img/icons/crowd%20control.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />crowd control debuffs (except <img src=\"/img/icons/airborne.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Airborne, <img src=\"/img/icons/blind.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Blind, <img src=\"/img/icons/disarm.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Disarm, <img src=\"/img/icons/nearsight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Nearsight, and <img src=\"/img/icons/suppression.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Suppression) from yourself or the target allied champion and <img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />heal the target for +type=target's level target's level.",
+      "effects": "Remove all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon\" />Airborne, <img src=\"/img/icons/blind.webp\" class=\"tip-icon\" />Blind, <img src=\"/img/icons/disarm.webp\" class=\"tip-icon\" />Disarm, <img src=\"/img/icons/nearsight.webp\" class=\"tip-icon\" />Nearsight, and <img src=\"/img/icons/suppression.webp\" class=\"tip-icon\" />Suppression) from yourself or the target allied champion and <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal the target for +type=target's level target's level.",
       "cooldown": null,
       "range": 0
     }

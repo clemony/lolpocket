@@ -26,7 +26,7 @@
     {
       "name": null,
       "unique": false,
-      "effects": "Consume one charge to summon a <img src=\"/img/icons/sweeper%20drone.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Sweeper Drone that escorts you for the next 6 seconds, detecting nearby enemies that are not <img src=\"/img/icons/sight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />visible.",
+      "effects": "Consume one charge to summon a <img src=\"/img/icons/sweeper-drone.webp\" class=\"tip-icon\" />Sweeper Drone that escorts you for the next 6 seconds, detecting nearby enemies that are not <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />visible.",
       "cooldown": null,
       "range": 0
     }

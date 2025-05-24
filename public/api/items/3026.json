@@ -24,7 +24,7 @@
     {
       "name": "Rebirth",
       "unique": true,
-      "effects": "Upon taking lethal damage, enter <img src=\"/img/icons/resurrection.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />resurrection for 4 seconds, during which you are <img src=\"/img/icons/invulnerable.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />invulnerable, <img src=\"/img/icons/untargetable.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />untargetable, and unable to act, and afterwards <img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />heal for 50% of <b>base</b> health and restore 100% of <b>maximum</b> mana (300 second cooldown, starts after resurrection ends).",
+      "effects": "Upon taking lethal damage, enter <img src=\"/img/icons/resurrection.webp\" class=\"tip-icon\" />resurrection for 4 seconds, during which you are <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon\" />invulnerable, <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon\" />untargetable, and unable to act, and afterwards <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal for 50% of <b>base</b> health and restore 100% of <b>maximum</b> mana (300 second cooldown, starts after resurrection ends).",
       "cooldown": null,
       "range": null
     }

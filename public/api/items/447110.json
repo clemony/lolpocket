@@ -19,7 +19,7 @@
     {
       "name": "Relentless",
       "unique": true,
-      "effects": "Casting an ability <img src=\"/img/icons/basic%20attack%20reset.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />resets your basic attack timer and empowers your next two basic attacks with 90% <b>bonus</b> attack speed. Additionally, each basic attack on-attack reduces the cooldowns of all your abilities by 0.5s seconds.",
+      "effects": "Casting an ability <img src=\"/img/icons/basic-attack reset.webp\" class=\"tip-icon\" />resets your basic attack timer and empowers your next two basic attacks with 90% <b>bonus</b> attack speed. Additionally, each basic attack on-attack reduces the cooldowns of all your abilities by 0.5s seconds.",
       "cooldown": null,
       "range": null
     }

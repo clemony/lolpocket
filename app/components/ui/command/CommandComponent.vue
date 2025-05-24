@@ -4,7 +4,7 @@ const ds = useDataStore()
 const ts = useTempStore()
 
 const keys = useMagicKeys()
-
+// TRASH
 if (getDevice() == 'MacOS') {
   whenever(keys.meta_k, () => {
     ts.commandOpen = true
@@ -24,23 +24,9 @@ const els = [
   },
   {
     name: 'items',
-    //data: ds.items,
+    // data: ds.items,
     // comp: ,
   },
-  {
-    name: 'champions',
-    data: ds.champions,
-    // comp: ,
-  },
-  {
-    name: 'runes',
-    data: ds.paths,
-    // comp: ,
-  }, // ,{
-  // name: 'summoners',
-  // data: ,
-  // comp: ,
-  // },
 ]
 
 const list = ref()

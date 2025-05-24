@@ -19,7 +19,7 @@
     {
       "name": "Patronage",
       "unique": true,
-      "effects": "Store 15% of {{tt|post-mitigation damage|Damage calculated after modifiers}} dealt. Whenever the stored amount exceeds a value of 333, consume it to <img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />heal yourself and the nearest allied champion for that same amount. Stored damage is reset every round and between each phase in a round.",
+      "effects": "Store 15% of post-mitigation damage dealt. Whenever the stored amount exceeds a value of 333, consume it to <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal yourself and the nearest allied champion for that same amount. Stored damage is reset every round and between each phase in a round.",
       "cooldown": null,
       "range": null
     }

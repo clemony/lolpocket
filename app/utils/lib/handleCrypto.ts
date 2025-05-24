@@ -27,7 +27,6 @@ const moreWords = [
   'Gooner',
   'KDA Farmer',
   'Smurf',
-  'League Addict',
   'Auto Filled',
   'Lag Spike',
   'GGEZ',
@@ -48,7 +47,6 @@ const moreWords = [
   'Team Gap',
   'Vision Score',
   'Outplayed',
-  'C9 Engage',
   'Gamer Juice',
   'Inting Sion',
   'Solo Q',
@@ -65,6 +63,7 @@ const moreWords = [
   'Bot Gap',
   'Macro Diff',
   'CSing',
+  'Proxy',
   'Power Spike',
   'ADC Diff',
   'Support Gap',
@@ -138,11 +137,11 @@ function generateWords(min: number, max: number): string {
 
 // Shared word generation logic
 async function generateName(length: 'short' | 'medium'): Promise<string> {
-  const store = useDataStore()
-  const championWords = store.champions.flatMap(champ => cleanName(champ.name))
+  const champData = await $fetch<ChampionIndex[]>('/api/index/item-index.json')
+  const championWords = champData.flatMap(item => item.name)
 
-  const itemData = await $fetch('/api/lists/item-index.json')
-  const itemWords = (Object.values(itemData) as ItemIndex[]).flatMap(item => item.name)
+  const itemData = await $fetch<ItemIndex[]>('/api/index/item-index.json')
+  const itemWords = itemData.flatMap(item => item.name)
 
   const leagueWords = [...championWords, ...itemWords, ...moreWords]
   const leagueWord = getRandomElement(leagueWords)

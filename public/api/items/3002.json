@@ -22,7 +22,7 @@
     {
       "name": "Lead the Way",
       "unique": true,
-      "effects": "While moving, generate 7 stacks of <i>Momentum</i> every 0.25s seconds, granting up to 20 <b>bonus</b> movement speed at 100 stacks after 3.75s seconds of moving. At <b>maximum</b> stacks, you leave behind a path briefly that grants 15% of your <b>total</b> movement speed as <b>bonus</b> movement speed to allied champions within. Basic attacks consume all stacks. If you are <img src=\"/img/icons/melee.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />melee and at <b>maximum</b> stacks, your next basic attack <img src=\"/img/icons/slow.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />slows the target by 50% for 1 second.",
+      "effects": "While moving, generate 7 stacks of <i>Momentum</i> every 0.25s seconds, granting up to 20 <b>bonus</b> movement speed at 100 stacks after 3.75s seconds of moving. At <b>maximum</b> stacks, you leave behind a path briefly that grants 15% of your <b>total</b> movement speed as <b>bonus</b> movement speed to allied champions within. Basic attacks consume all stacks. If you are <img src=\"/img/icons/melee.webp\" class=\"tip-icon\" />melee and at <b>maximum</b> stacks, your next basic attack <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slows the target by 50% for 1 second.",
       "cooldown": null,
       "range": null
     }

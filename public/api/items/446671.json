@@ -22,7 +22,7 @@
     {
       "name": "Cloudburst II",
       "unique": true,
-      "effects": "<img src=\"/img/icons/dash.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Dash to the target location and fire three homing missiles at the {{tt|most wounded|Lowest health percent}} enemy within <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly=true 750 units of you at the end of the dash, prioritizing enemy champions. Each missile deals +1;8 to 18 by 1 (+ {{fd|26.6 6}}% <b>bonus</b> AD) physical damage physical damage, for a total of +1;8 to 18 by 1 (+ 80% <b>bonus</b> AD) physical damage, increased by +color=health%  target's missing health.",
+      "effects": "<img src=\"/img/icons/dash.webp\" class=\"tip-icon\" />Dash to the target location and fire three homing missiles at the most wounded enemy within <img src=\"/img/icons/cr.webp\" class=\"tip-icon\" />icononly=true 750 units of you at the end of the dash, prioritizing enemy champions. Each missile deals +1;8 to 18 by 1 (+ {{fd|26.6 6}}% <b>bonus</b> AD) physical damage physical damage, for a total of +1;8 to 18 by 1 (+ 80% <b>bonus</b> AD) physical damage, increased by +color=health%  target's missing health.",
       "cooldown": null,
       "range": 0
     }

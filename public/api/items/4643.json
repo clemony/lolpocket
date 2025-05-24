@@ -32,7 +32,7 @@
     {
       "name": "Behold",
       "unique": true,
-      "effects": "Increase your <img src=\"/img/icons/stealth%20ward.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Stealth Ward, <img src=\"/img/icons/totem%20ward.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Totem Ward, and <img src=\"/img/icons/control%20ward.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Control Ward caps by 1.",
+      "effects": "Increase your <img src=\"/img/icons/stealth-ward.webp\" class=\"tip-icon\" />Stealth Ward, <img src=\"/img/icons/totem-ward.webp\" class=\"tip-icon\" />Totem Ward, and <img src=\"/img/icons/control-ward.webp\" class=\"tip-icon\" />Control Ward caps by 1.",
       "cooldown": null,
       "range": null
     }
@@ -41,7 +41,7 @@
     {
       "name": null,
       "unique": true,
-      "effects": "Consumes a charge of <i>Arcane Cache</i> to place a visible <img src=\"/img/icons/control%20ward.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Control Ward at the target location (600 range).",
+      "effects": "Consumes a charge of <i>Arcane Cache</i> to place a visible <img src=\"/img/icons/control-ward.webp\" class=\"tip-icon\" />Control Ward at the target location (600 range).",
       "cooldown": null,
       "range": null
     }

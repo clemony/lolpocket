@@ -19,7 +19,7 @@
     {
       "name": "Covering Fire",
       "unique": true,
-      "effects": "While your ally is within {{tt|1200 units|center-to-edge}}, your basic attacks on-hit generate a stack of <i>Covering Fire</i>. At 1 stack, your next basic attack consumes them all to cause your ally to fire a bolt at the target, dealing + physical damage and applying your ally's on-hit effects at 100% effectiveness.",
+      "effects": "While your ally is within 1200 units, your basic attacks on-hit generate a stack of <i>Covering Fire</i>. At 1 stack, your next basic attack consumes them all to cause your ally to fire a bolt at the target, dealing + physical damage and applying your ally's on-hit effects at 100% effectiveness.",
       "cooldown": null,
       "range": null
     }

@@ -23,7 +23,7 @@
     {
       "name": "Ever Rising Moon",
       "unique": true,
-      "effects": "Damaging basic attacks, abilities, item effects, and summoner spells, as well as the application of <img src=\"/img/icons/crowd%20control.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />crowd control and damage over time effects, generate stacks against enemy champions, up to one per attack or cast per champion. Applying 2 stacks to a champion within a 2 second period deals <b>bonus</b> physical damage to them equal to {{rd|6%|4%}} of target's <b>maximum</b> health and grants you a <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shield for 160 (+ {{rd|40%|20%}} <b>bonus</b> AD) for 2 seconds.",
+      "effects": "Damaging basic attacks, abilities, item effects, and summoner spells, as well as the application of crowd control and damage over time effects, generate stacks against enemy champions, up to one per attack or cast per champion. Applying 2 stacks to a champion within a 2 second period deals <b>bonus</b> physical damage to them equal to <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />6%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />4%)</span> of target's <b>maximum</b> health and grants you a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for 160 (+ <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />40%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />20%)</span> <b>bonus</b> AD) for 2 seconds.",
       "cooldown": "6",
       "range": null
     }

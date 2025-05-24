@@ -19,7 +19,7 @@
     {
       "name": "Watch Them Fall",
       "unique": true,
-      "effects": "<img src=\"/img/icons/immobilize.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Immobilizing or <img src=\"/img/icons/ground.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />grounding an enemy champion summons a comet above them that lands at their current location after 1 second, dealing + magic damage (+ 40% AP) (+ 4% of your <b>maximum</b> health) magic damage to enemies within the area (6 second cooldown per target per <img src=\"/img/icons/cast%20instance.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />cast instance).",
+      "effects": "<img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />Immobilizing or <img src=\"/img/icons/ground.webp\" class=\"tip-icon\" />grounding an enemy champion summons a comet above them that lands at their current location after 1 second, dealing + magic damage (+ 40% AP) (+ 4% of your <b>maximum</b> health) magic damage to enemies within the area (6 second cooldown per target per cast instance).",
       "cooldown": null,
       "range": null
     }

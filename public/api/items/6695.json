@@ -22,7 +22,7 @@
     {
       "name": "Shield Reaver",
       "unique": true,
-      "effects": "Dealing damage to an enemy champion inflicts them with venom for 3 seconds, reducing any <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shields they gain within the duration by {{rd|50%|35%}}, and if the target was not already afflicted by the venom, reducing all of their active shields by the same amount.",
+      "effects": "Dealing damage to an enemy champion inflicts them with venom for 3 seconds, reducing any <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shields they gain within the duration by <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />50%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />35%)</span>, and if the target was not already afflicted by the venom, reducing all of their active shields by the same amount.",
       "cooldown": null,
       "range": null
     }

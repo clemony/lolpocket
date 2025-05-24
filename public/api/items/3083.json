@@ -30,7 +30,7 @@
     {
       "name": "Warmog's Heart",
       "unique": true,
-      "effects": "{{stil|Health regeneration|Regenerate}}1.5s% <b>maximum</b> health every 0.5s seconds (15% <b>maximum</b> health every 5 seconds)if damage has not been taken in the last 8 seconds (4 seconds for damage from non-champions).",
+      "effects": "<img src=\"/img/icons/health-regeneration|regenerate.webp\" class=\"tip-icon\"  />Health regeneration|Regenerate1.5s% <b>maximum</b> health every 0.5s seconds (15% <b>maximum</b> health every 5 seconds)if damage has not been taken in the last 8 seconds (4 seconds for damage from non-champions).",
       "cooldown": null,
       "range": null
     },

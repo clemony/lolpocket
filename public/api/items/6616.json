@@ -24,7 +24,7 @@
     {
       "name": "Rapids",
       "unique": true,
-      "effects": "<img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Healing or <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shielding allied champions (<i>excluding yourself</i>) grants you and them 45 ability power for 6 seconds.",
+      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Healing or <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding allied champions (<i>excluding yourself</i>) grants you and them 45 ability power for 6 seconds.",
       "cooldown": null,
       "range": null
     }

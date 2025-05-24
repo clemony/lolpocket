@@ -26,14 +26,14 @@
     {
       "name": "Practice Makes Lethal",
       "unique": true,
-      "effects": "Basic attacks on-attack grant {{rd|0.4s%|0.2s%}} critical strike chance permanently, stacking up to 63 times (capped at 25% critical strike chance).",
+      "effects": "Basic attacks on-attack grant <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />0.4s%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />0.2s%)</span> critical strike chance permanently, stacking up to 63 times (capped at 25% critical strike chance).",
       "cooldown": null,
       "range": null
     },
     {
       "name": "Flurry",
       "unique": true,
-      "effects": "Using a basic attack against an enemy champion grants you 30% <b>bonus</b> attack speed for 6 seconds (30 second cooldown, reduced by 1 second on-attack and 2 seconds if the attack <img src=\"/img/icons/critical%20strike.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />critically strikes).",
+      "effects": "Using a basic attack against an enemy champion grants you 30% <b>bonus</b> attack speed for 6 seconds (30 second cooldown, reduced by 1 second on-attack and 2 seconds if the attack <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critically strikes).",
       "cooldown": null,
       "range": null
     }

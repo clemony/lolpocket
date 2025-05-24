@@ -26,7 +26,7 @@
     {
       "name": "Shock",
       "unique": true,
-      "effects": "Basic attacks on-hit against champions deal 1.2s% <b>maximum</b> mana <b>bonus</b> physical damage. Dealing ability damage to champions deals {{rd|4%|3%}} <b>maximum</b> mana <b>bonus</b> physical damage physical damage. Can only be triggered on the same target once every 6.5s seconds from the same attack or cast.",
+      "effects": "Basic attacks on-hit against champions deal 1.2s% <b>maximum</b> mana <b>bonus</b> physical damage. Dealing ability damage to champions deals <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />4%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />3%)</span> <b>maximum</b> mana <b>bonus</b> physical damage physical damage. Can only be triggered on the same target once every 6.5s seconds from the same attack or cast.",
       "cooldown": null,
       "range": null
     }

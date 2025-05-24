@@ -140,7 +140,7 @@ declare global {
     puuid: string
     gameCreation: number
     gameEndTimestamp: number
-    gameVersion: string
+    gameVersion: number
     win: boolean
     kills: number
     deaths: number

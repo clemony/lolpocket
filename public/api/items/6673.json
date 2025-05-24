@@ -22,7 +22,7 @@
     {
       "name": "Lifeline",
       "unique": true,
-      "effects": "If you would take damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shield that absorbs {{rd|400 to 700 for 11|400*0.8 to 700*0.8 for 11|levels=1;9 to 18|pp=true}} damage for 3 seconds.",
+      "effects": "If you would take damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />400 – 700 for 11&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />400*0.8 – 700*0.8 for 11)</span> damage for 3 seconds.",
       "cooldown": "90",
       "range": null
     }

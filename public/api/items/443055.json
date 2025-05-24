@@ -26,14 +26,14 @@
     {
       "name": "Polarity",
       "unique": true,
-      "effects": "Your <img src=\"/img/icons/energized.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Energized attacks against targets not hit by your previous <i>Energized</i> attack do not consume any <i>Energize</i> stacks on-hit.",
+      "effects": "Your <img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized attacks against targets not hit by your previous <i>Energized</i> attack do not consume any <i>Energize</i> stacks on-hit.",
       "cooldown": null,
       "range": null
     },
     {
       "name": "Dynamo",
       "unique": true,
-      "effects": "When fully <img src=\"/img/icons/energized.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Energized, your next basic attack deals <b>bonus</b> magic damage on-hit equal to 10% of the target's <b>current</b> health.",
+      "effects": "When fully <img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized, your next basic attack deals <b>bonus</b> magic damage on-hit equal to 10% of the target's <b>current</b> health.",
       "cooldown": null,
       "range": null
     }

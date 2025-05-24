@@ -24,7 +24,7 @@
     {
       "name": "Starlit Grace",
       "unique": true,
-      "effects": "<img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Healing or <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shielding an allied champion chains the effect to the other nearest allied champion within <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly = true 800 units of them (<i>excluding yourself</i>), granting them 30% of the heal or 35% of the shield's initial strength. If no other allied champions are in the radius, grant the same target an additional 30% of the heal or 35% of the shield.",
+      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Healing or <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding an allied champion chains the effect to the other nearest allied champion within <img src=\"/img/icons/cr.webp\" class=\"tip-icon\" />icononly = true 800 units of them (<i>excluding yourself</i>), granting them 30% of the heal or 35% of the shield's initial strength. If no other allied champions are in the radius, grant the same target an additional 30% of the heal or 35% of the shield.",
       "cooldown": null,
       "range": null
     }

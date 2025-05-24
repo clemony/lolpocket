@@ -26,7 +26,7 @@
     {
       "name": "Everlasting",
       "unique": true,
-      "effects": "<img src=\"/img/icons/immobilize.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Immobilizing, or <img src=\"/img/icons/slow.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />slowing if you are <img src=\"/img/icons/melee.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />melee, an enemy champion grants a 100 (+ 4.5s% <b>current</b> mana) <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shield for 3 seconds (8 second cooldown). The shield's strength is increased by 80% (to 100 (+ 8.1% <b>current</b> mana))if there is more than one enemy champion within <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly=true 1200 units.",
+      "effects": "<img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />Immobilizing, or <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slowing if you are <img src=\"/img/icons/melee.webp\" class=\"tip-icon\" />melee, an enemy champion grants a 100 (+ 4.5s% <b>current</b> mana) <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for 3 seconds (8 second cooldown). The shield's strength is increased by 80% (to 100 (+ 8.1% <b>current</b> mana))if there is more than one enemy champion within <img src=\"/img/icons/cr.webp\" class=\"tip-icon\" />icononly=true 1200 units.",
       "cooldown": null,
       "range": null
     }

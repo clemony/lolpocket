@@ -22,7 +22,7 @@
     {
       "name": "Magebane",
       "unique": true,
-      "effects": "After not taking magic damage for 15 seconds, gain a <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shield that absorbs magic damage equal to 15% of <b>maximum</b> health until destroyed.",
+      "effects": "After not taking magic damage for 15 seconds, gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs magic damage equal to 15% of <b>maximum</b> health until destroyed.",
       "cooldown": null,
       "range": null
     }

@@ -26,7 +26,7 @@
     {
       "name": "Cannibalize",
       "unique": true,
-      "effects": "If you or the allied champion on your team score a <img src=\"/img/icons/takedown.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />takedown against an enemy champion, you are both <img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />healed for 18% of the taken down target's <b>maximum</b> health.",
+      "effects": "If you or the allied champion on your team score a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon\" />takedown against an enemy champion, you are both <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healed for 18% of the taken down target's <b>maximum</b> health.",
       "cooldown": null,
       "range": null
     }

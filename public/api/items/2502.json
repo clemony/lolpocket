@@ -22,7 +22,7 @@
     {
       "name": "Anguish",
       "unique": true,
-      "effects": "Every 4 seconds after entering combat with champions, sap all enemy champions around you within 650 units to deal magic damage equal to 3% of your <b>bonus</b> health to them and <img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />heal yourself equal to 250% of the {{tt|post-mitigation|Damage calculated after modifiers}} damage dealt.",
+      "effects": "Every 4 seconds after entering combat with champions, sap all enemy champions around you within 650 units to deal magic damage equal to 3% of your <b>bonus</b> health to them and <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal yourself equal to 250% of the post-mitigation damage dealt.",
       "cooldown": null,
       "range": null
     }

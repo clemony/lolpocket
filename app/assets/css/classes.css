@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+@import './default-theme';
+
+@layer components {
+
+  .tip-icon {
+    @apply inline mb-0.75 mr-2 ml-0.5;
+  }
+
+  .tip-span {
+    @apply inline-flex align-middle space-x-px;
+  }
+
+  .span-tip-icon {
+@apply mb-0.75;
+  }
+
+.item-price-arrow::first-letter {
+  writing-mode: sideways-lr;
+  text-orientation: sideways;
+}
+
+
+  .color-chip {
+    @apply aspect-square size-9 flex items-center justify-center rounded-md
+    shadow-sm;
+  }
+
+}

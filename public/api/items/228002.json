@@ -28,7 +28,7 @@
     {
       "name": "Stasis",
       "unique": true,
-      "effects": "Put yourself in <img src=\"/img/icons/stasis%20(buff).png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />stasis for 2.5s seconds, rendering you <img src=\"/img/icons/untargetable.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />untargetable and <img src=\"/img/icons/invulnerable.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items.",
+      "effects": "Put yourself in <img src=\"/img/icons/stasis-(buff).webp\" class=\"tip-icon\" />stasis for 2.5s seconds, rendering you <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon\" />untargetable and <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon\" />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items.",
       "cooldown": null,
       "range": null
     }

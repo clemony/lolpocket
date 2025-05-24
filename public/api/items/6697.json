@@ -22,7 +22,7 @@
     {
       "name": "Eminence",
       "unique": true,
-      "effects": "Scoring a <img src=\"/img/icons/takedown.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />takedown against an enemy champion within 3 seconds of damaging them generates a permanent stack and grants you 15% attack speed (+ 2 per stack) <b>bonus</b> attack damage for 90 seconds.",
+      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon\" />takedown against an enemy champion within 3 seconds of damaging them generates a permanent stack and grants you 15% attack speed (+ 2 per stack) <b>bonus</b> attack damage for 90 seconds.",
       "cooldown": null,
       "range": null
     }

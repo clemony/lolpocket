@@ -26,7 +26,7 @@
     {
       "name": "Death",
       "unique": true,
-      "effects": "If you deal {{tt|post-mitigation|Damage calculated after modifiers}} damage that would leave a champion below 5% of their <b>maximum</b> health, <img src=\"/img/icons/execute.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />execute them.",
+      "effects": "If you deal post-mitigation damage that would leave a champion below 5% of their <b>maximum</b> health, <img src=\"/img/icons/execute.webp\" class=\"tip-icon\" />execute them.",
       "cooldown": null,
       "range": null
     },

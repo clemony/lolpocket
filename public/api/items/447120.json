@@ -26,7 +26,7 @@
     {
       "name": "Sweet Spot",
       "unique": true,
-      "effects": "Basic attacks deal +0 to 1000% distance increased damage and abilities deal +0 to 1000% distance increased damage. The distance is calculated from your <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly=true current position to the target's position when the triggering attack or ability hits them.",
+      "effects": "Basic attacks deal +0 to 1000% distance increased damage and abilities deal +0 to 1000% distance increased damage. The distance is calculated from your <img src=\"/img/icons/cr.webp\" class=\"tip-icon\" />icononly=true current position to the target's position when the triggering attack or ability hits them.",
       "cooldown": null,
       "range": null
     }

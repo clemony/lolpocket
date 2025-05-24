@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { formatStats, normalizeItemData } from './utils/formatItems'
-import { handleWikiText } from './utils/wiki'
+import { handleWikiText } from './utils/formatWikitext'
 
 const inputPath = path.resolve('./public/api/items.json')
 const outputIndex = path.resolve('./public/api/index/item-index.json')
@@ -29,7 +29,10 @@ async function buildItems() {
     tags.forEach(t => uniqueTags.add(t))
     rank.forEach(r => uniqueRanks.add(r))
 
-    index[id] = item.name
+    index[id] = {
+      name: item.name,
+      id: item.id,
+    }
 
     // Enrich the "lite" output
     simplified[id] = {

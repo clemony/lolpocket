@@ -26,7 +26,7 @@
     {
       "name": "Lifeline",
       "unique": true,
-      "effects": "If you would take damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shield for 3 seconds that absorbs damage equal to 18% <b>maximum</b> mana for 3 seconds.",
+      "effects": "If you would take damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for 3 seconds that absorbs damage equal to 18% <b>maximum</b> mana for 3 seconds.",
       "cooldown": "90",
       "range": null
     }

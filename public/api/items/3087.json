@@ -23,14 +23,14 @@
     {
       "name": "Electrospark",
       "unique": true,
-      "effects": "Your next 3 basic attacks <img src=\"/img/icons/on-hit.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />on-hit within 8 seconds are empowered to deal 60 <b>bonus</b> magic damage, increased to 85% attack speed against non-champions. This bounces to the closest target within 500 units, repeating from the new target to strike up to 5 targets (+1;8 to 12 second cooldown, starts after using the first empowered attack).",
+      "effects": "Your next 3 basic attacks <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon\" />on-hit within 8 seconds are empowered to deal 60 <b>bonus</b> magic damage, increased to 85% attack speed against non-champions. This bounces to the closest target within 500 units, repeating from the new target to strike up to 5 targets (+1;8 to 12 second cooldown, starts after using the first empowered attack).",
       "cooldown": null,
       "range": null
     },
     {
       "name": "Electroshock",
       "unique": true,
-      "effects": "Scoring a <img src=\"/img/icons/takedown.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />takedown against an enemy champion within 3 seconds of damaging them resets <i>Electrospark's</i> cooldown.",
+      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon\" />takedown against an enemy champion within 3 seconds of damaging them resets <i>Electrospark's</i> cooldown.",
       "cooldown": null,
       "range": null
     }

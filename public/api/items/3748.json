@@ -26,7 +26,7 @@
     {
       "name": "Cleave",
       "unique": true,
-      "effects": "Basic attacks on-hit deal {{rd|1%|0.5s%}} <b>maximum</b> health hp <b>bonus</b> physical damage to the target and {{rd|3%|1.5s%}} <b>maximum</b> health hp physical damage to other enemies in a cone in the direction of the primary target.",
+      "effects": "Basic attacks on-hit deal <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />1%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />0.5s%)</span> <b>maximum</b> health hp <b>bonus</b> physical damage to the target and <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />3%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />1.5s%)</span> <b>maximum</b> health hp physical damage to other enemies in a cone in the direction of the primary target.",
       "cooldown": null,
       "range": null
     }
@@ -35,7 +35,7 @@
     {
       "name": "Titanic Crescent",
       "unique": true,
-      "effects": "Your next basic attack within 10 seconds empowers <i>Cleave</i> to deal {{rd|4%|2%}} <b>maximum</b> health hp <b>bonus</b> physical damage to the primary target and {{rd|9%|4.5s%}} <b>maximum</b> health hp physical damage to secondary targets (10 second cooldown, starts after using the empowered attack).",
+      "effects": "Your next basic attack within 10 seconds empowers <i>Cleave</i> to deal <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />4%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />2%)</span> <b>maximum</b> health hp <b>bonus</b> physical damage to the primary target and <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />9%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />4.5s%)</span> <b>maximum</b> health hp physical damage to secondary targets (10 second cooldown, starts after using the empowered attack).",
       "cooldown": 10,
       "range": null
     }

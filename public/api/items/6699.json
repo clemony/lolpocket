@@ -30,14 +30,14 @@
     {
       "name": "Galvanize",
       "unique": true,
-      "effects": "<img src=\"/img/icons/energized.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Energized stack generation is increased by 75% for distance travelled from <img src=\"/img/icons/dash.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />dashes, <img src=\"/img/icons/lunge.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />lunges and <img src=\"/img/icons/blink.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />blinks, as well as while moving in <img src=\"/img/icons/stealth.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />stealth.",
+      "effects": "<img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized stack generation is increased by 75% for distance travelled from <img src=\"/img/icons/dash.webp\" class=\"tip-icon\" />dashes, <img src=\"/img/icons/lunge.webp\" class=\"tip-icon\" />lunges and <img src=\"/img/icons/blink.webp\" class=\"tip-icon\" />blinks, as well as while moving in <img src=\"/img/icons/stealth.webp\" class=\"tip-icon\" />stealth.",
       "cooldown": null,
       "range": null
     },
     {
       "name": "Firmament",
       "unique": true,
-      "effects": "When fully <img src=\"/img/icons/energized.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Energized, your next basic attack deals 100 <b>bonus</b> physical damage on-hit and <img src=\"/img/icons/slow.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />slows the target by {{rd|99%|20%}} for 0.75s seconds.",
+      "effects": "When fully <img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized, your next basic attack deals 100 <b>bonus</b> physical damage on-hit and <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slows the target by <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />99%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />20%)</span> for 0.75s seconds.",
       "cooldown": null,
       "range": null
     }

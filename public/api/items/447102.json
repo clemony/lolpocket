@@ -19,7 +19,7 @@
     {
       "name": "ZZ'Rot",
       "unique": true,
-      "effects": "Basic attacks on-attack and damaging abilities against enemies summon 8 allied {{ui|Voidmite|Voidmites}} that are <img src=\"/img/icons/untargetable.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />untargetable and attack the target (15 second cooldown). {{ui|Voidmite|Voidmites}} deal 6% attack speed (+ 4% of your AD) (+ 8% of your AP) magic damage with each of their basic attacks and last for up to 3 seconds. Additionally, summon 6 {{ui|Voidmite|Voidmites}} upon your death.",
+      "effects": "Basic attacks on-attack and damaging abilities against enemies summon 8 allied {{ui|Voidmite|Voidmites}} that are <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon\" />untargetable and attack the target (15 second cooldown). {{ui|Voidmite|Voidmites}} deal 6% attack speed (+ 4% of your AD) (+ 8% of your AP) magic damage with each of their basic attacks and last for up to 3 seconds. Additionally, summon 6 {{ui|Voidmite|Voidmites}} upon your death.",
       "cooldown": null,
       "range": null
     }

@@ -16,9 +16,7 @@ async function main() {
   try {
     // --- Items ---
     run('fetch:items', 'tsx scripts/fetchItems.ts')
-    run('generate:item-index', 'tsx scripts/generateItemIndex.ts')
     run('generate:items', 'tsx scripts/generateItems.ts')
-    run('generate:item-effects', 'tsx scripts/generateItemEffects.ts')
 
     // --- Champions ---
     run('fetch:champions', 'tsx scripts/fetchChampions.ts')
@@ -31,6 +29,7 @@ async function main() {
     // --- Runes ---
     run('fetch:runes', 'tsx scripts/fetchRunes.ts')
     run('generate:runes', 'tsx scripts/generateRunes.ts')
+    run('generate:rune-index', 'tsx scripts/generateRuneIndex.ts')
 
     // --- Spells ---
     // run('fetch:summoner-spells', 'tsx scripts/fetchSpells.ts')

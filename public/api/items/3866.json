@@ -26,7 +26,7 @@
     {
       "name": "Shared Riches",
       "unique": true,
-      "effects": "Grants a <b>Shared Riches</b> charge every 20 seconds, up to 3 charges. When an allied champion is within <img src=\"/img/icons/er.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly=true 1050 units of you, consume a charge in the following ways:<br>• Kill a minion by any means, granting you 20 and the nearest allied champion kill {{g|gold}}. Damaging a minion <b>below</b> {{rd|50%|30%}} of its <b>maximum</b> health <img src=\"/img/icons/execute.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />executes it.<br>• Damage an enemy champion or structure with a basic attack or ability, granting you 24. A charge may be consumed this way only once per attack or ability.",
+      "effects": "Grants a <b>Shared Riches</b> charge every 20 seconds, up to 3 charges. When an allied champion is within <img src=\"/img/icons/er.webp\" class=\"tip-icon\" />icononly=true 1050 units of you, consume a charge in the following ways:<br>• Kill a minion by any means, granting you 20 and the nearest allied champion kill {{g|gold}}. Damaging a minion <b>below</b> <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />50%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />30%)</span> of its <b>maximum</b> health <img src=\"/img/icons/execute.webp\" class=\"tip-icon\" />executes it.<br>• Damage an enemy champion or structure with a basic attack or ability, granting you 24. A charge may be consumed this way only once per attack or ability.",
       "cooldown": null,
       "range": null
     },
@@ -42,7 +42,7 @@
     {
       "name": "Ward",
       "unique": true,
-      "effects": "Consumes a charge to place a <img src=\"/img/icons/stealth%20ward.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Stealth Ward at the target location, which grants <img src=\"/img/icons/sight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />sight of the surrounding area. <b>Warding</b> charges refill upon visiting the shop.",
+      "effects": "Consumes a charge to place a <img src=\"/img/icons/stealth-ward.webp\" class=\"tip-icon\" />Stealth Ward at the target location, which grants <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the surrounding area. <b>Warding</b> charges refill upon visiting the shop.",
       "cooldown": null,
       "range": 600
     }

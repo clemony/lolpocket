@@ -23,7 +23,7 @@
     {
       "name": "Lightshield Strike",
       "unique": true,
-      "effects": "Your next basic attack against a champion is empowered to <img src=\"/img/icons/critical%20strike.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />critically strike for {{tt|175% damage|Affected by critical damage modifiers}} and <img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />heal you for {{rd|100%|50%}} <b>base</b> AD (+ 6% of your <b>missing</b> health) (8 second cooldown per target). Excess healing beyond <b>maximum</b> health is converted to <b>bonus</b> health for 8 seconds.",
+      "effects": "Your next basic attack against a champion is empowered to <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critically strike for 175% damage and <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal you for <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />100%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />50%)</span> <b>base</b> AD (+ 6% of your <b>missing</b> health) (8 second cooldown per target). Excess healing beyond <b>maximum</b> health is converted to <b>bonus</b> health for 8 seconds.",
       "cooldown": null,
       "range": null
     }

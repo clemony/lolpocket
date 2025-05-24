@@ -24,7 +24,7 @@
     {
       "name": "Boundless Vitality",
       "unique": true,
-      "effects": "Increases all <img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />healing and <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shielding received as well as {{stil|health regeneration}} by 25%.",
+      "effects": "Increases all <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healing and <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding received as well as <img src=\"/img/icons/health-regeneration.webp\" class=\"tip-icon\"  />health regeneration by 25%.",
       "cooldown": null,
       "range": null
     }

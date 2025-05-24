@@ -26,7 +26,7 @@
     {
       "name": "Salvage the Wreckage",
       "unique": true,
-      "effects": "Casting an ability has a +key1=%% critical strike chance chance to grant you or your ally a <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shield for 3 seconds that absorbs + (+ 25% <b>bonus</b> AD) (+ 15% AP) damage.",
+      "effects": "Casting an ability has a +key1=%% critical strike chance chance to grant you or your ally a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for 3 seconds that absorbs + (+ 25% <b>bonus</b> AD) (+ 15% AP) damage.",
       "cooldown": null,
       "range": null
     }

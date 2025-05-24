@@ -35,7 +35,7 @@ watchEffect(() => {
       </div>
 
       <div class="flex flex-col  text-4 w-full">
-        <div class=" flex items-center  gap-1">
+        <div class=" flex items-center justify-between  gap-1">
           <a
             v-tippy="'Official Wiki'"
             :href="getWikiLink(item.name)"
@@ -46,6 +46,12 @@ watchEffect(() => {
             <icon name="link-lg" class="size-4 dst" />
             <Grow />
           </a>
+
+          <p
+            v-if="id"
+            class="flex flex-nowrap text-nowrap grow items-center  text-2">
+            <icon name="mage:hash" class="size-3.75 " />{{ id }}
+          </p>
         </div>
         <div class="flex gap-1 ">
           <ItemTier :ranks="item.rank" />
@@ -91,17 +97,6 @@ watchEffect(() => {
           </p>
           <ItemRequirements :item="item" />
         </div> -->
-
-      <div class="items-end self-end">
-        <div class="flex items-center px-2">
-          <!--       <p
-                    v-if="id"
-                    class="flex grow items-end gap-3 pt-2 leading-none">
-                    <span class="">Item ID:</span>
-                    <span class="">{{ id }}</span>
-                </p> -->
-        </div>
-      </div>
     </div>
   </div>
 </template>

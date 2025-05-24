@@ -19,7 +19,7 @@
     {
       "name": "Guiding Light",
       "unique": true,
-      "effects": "Upon casting your ultimate, you <i>Transcend</i> for 9 seconds. While <i>Transcended</i>, increase your <b>maximum</b> health by 12.5s% and cause you and all allies within <img src=\"/img/icons/cr.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />icononly=true 1200 units to <img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />heal for 2.5s% of your <b>maximum</b> health upon you <i>Transcending</i> and every 3 seconds thereafter, for a total healing of 10% of your <b>maximum</b> health.",
+      "effects": "Upon casting your ultimate, you <i>Transcend</i> for 9 seconds. While <i>Transcended</i>, increase your <b>maximum</b> health by 12.5s% and cause you and all allies within <img src=\"/img/icons/cr.webp\" class=\"tip-icon\" />icononly=true 1200 units to <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal for 2.5s% of your <b>maximum</b> health upon you <i>Transcending</i> and every 3 seconds thereafter, for a total healing of 10% of your <b>maximum</b> health.",
       "cooldown": "30",
       "range": null
     }

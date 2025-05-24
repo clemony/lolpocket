@@ -11,10 +11,10 @@ export function useMatchItems() {
     losses: number
     winrate: number
     matchIndexes: number[]
-    gameVersions: string[]
+    gameVersions: number[]
   }>()
 
-const { data: itemData } =  useFetch('/api/lists/item-index.json')
+  const { data: itemData } = useFetch('/api/lists/item-index.json')
   const items = Object.values(itemData.value) as ItemIndex[]
 
   const bayesianItems = ref<any[]>([])

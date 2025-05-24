@@ -1,7 +1,5 @@
 export async function useMatchChampions(matches: SimplifiedMatchData[]) {
-
-
-const championIndex =  await $fetch <ChampionIndex[]>('/api/index/champion-index.json')
+  const championIndex = await $fetch <ChampionIndex[]>('/api/index/champion-index.json')
   const championStats = new Map<string, {
     name: string
     id: number
@@ -14,7 +12,7 @@ const championIndex =  await $fetch <ChampionIndex[]>('/api/index/champion-index
     assists: number
     killParticipation: number
     matchIndexes: number[]
-    gameVersions: string[]
+    gameVersions: number[]
   }>()
 
   const bayesianChampions = ref<any[]>([])

@@ -27,7 +27,7 @@
     {
       "name": "Annul",
       "unique": true,
-      "effects": "Grants a <img src=\"/img/icons/spell%20shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />spell shield that blocks the next hostile ability (60 second cooldown, timer restarts upon taking damage from champions).",
+      "effects": "Grants a <img src=\"/img/icons/spell-shield.webp\" class=\"tip-icon\" />spell shield that blocks the next hostile ability (60 second cooldown, timer restarts upon taking damage from champions).",
       "cooldown": null,
       "range": null
     }

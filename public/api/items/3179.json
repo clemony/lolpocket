@@ -22,14 +22,14 @@
     {
       "name": "Blackout",
       "unique": true,
-      "effects": "When near an enemy stealthed <img src=\"/img/icons/ward.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />ward or <img src=\"/img/icons/stealthed%20trap.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />trap, gain <i>Blackout</i> for 8 seconds.",
+      "effects": "When near an enemy stealthed <img src=\"/img/icons/ward.webp\" class=\"tip-icon\" />ward or <img src=\"/img/icons/stealthed-trap.webp\" class=\"tip-icon\" />trap, gain <i>Blackout</i> for 8 seconds.",
       "cooldown": "90",
       "range": 400
     },
     {
       "name": "Blackout",
       "unique": false,
-      "effects": "You <img src=\"/img/icons/disabled%20ward.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />disable surrounding stealthed wards, as well as <img src=\"/img/icons/expose.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />expose and <img src=\"/img/icons/true%20sight.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />reveal nearby stealthed wards and traps while <i>Blackout</i> is active.",
+      "effects": "You <img src=\"/img/icons/disabled-ward.webp\" class=\"tip-icon\" />disable surrounding stealthed wards, as well as <img src=\"/img/icons/expose.webp\" class=\"tip-icon\" />expose and <img src=\"/img/icons/true-sight.webp\" class=\"tip-icon\" />reveal nearby stealthed wards and traps while <i>Blackout</i> is active.",
       "cooldown": null,
       "range": null
     },

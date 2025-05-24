@@ -24,7 +24,7 @@
     {
       "name": "Soul Siphon",
       "unique": true,
-      "effects": "Damaging an enemy champion with a basic attack or ability damage grants a <i>Soul Shard</i>, up to 2. <img src=\"/img/icons/heal.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />Healing or <img src=\"/img/icons/shield.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />shielding an allied champion (<i>excluding yourself</i>) consumes all <i>Soul Shards</i> to heal them for 65 per shard and deal 50 magic damage per shard to the nearest enemy champion within 1100 units of the ally.",
+      "effects": "Damaging an enemy champion with a basic attack or ability damage grants a <i>Soul Shard</i>, up to 2. <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Healing or <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding an allied champion (<i>excluding yourself</i>) consumes all <i>Soul Shards</i> to heal them for 65 per shard and deal 50 magic damage per shard to the nearest enemy champion within 1100 units of the ally.",
       "cooldown": null,
       "range": null
     }

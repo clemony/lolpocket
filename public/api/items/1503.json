@@ -19,7 +19,7 @@
     {
       "name": "True Sight",
       "unique": true,
-      "effects": "Can see <img src=\"/img/icons/camouflage.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />camouflaged and <img src=\"/img/icons/invisible.png\" loading=\"lazy\" class=\"tip-icon\" decoding=\"async\" />invisible units within 1100 units.",
+      "effects": "Can see <img src=\"/img/icons/camouflage.webp\" class=\"tip-icon\" />camouflaged and <img src=\"/img/icons/invisible.webp\" class=\"tip-icon\" />invisible units within 1100 units.",
       "cooldown": null,
       "range": null
     }
