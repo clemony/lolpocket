@@ -6,13 +6,33 @@
     "Epic"
   ],
   "buildsFrom": [
-    1052,
-    1029,
-    1052
+    {
+      "id": 1052,
+      "name": "Amplifying Tome",
+      "gold": 400
+    },
+    {
+      "id": 1029,
+      "name": "Cloth Armor",
+      "gold": 300
+    },
+    {
+      "id": 1052,
+      "name": "Amplifying Tome",
+      "gold": 400
+    }
   ],
   "buildsInto": [
-    3157,
-    4003
+    {
+      "id": 3157,
+      "name": "Zhonya's Hourglass",
+      "gold": 3250
+    },
+    {
+      "id": 4003,
+      "name": "Lifeline",
+      "gold": 2500
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -31,7 +51,7 @@
     {
       "name": "Time Stop",
       "unique": true,
-      "effects": "Put yourself in <img src=\"/img/icons/stasis-(buff).webp\" class=\"tip-icon\" />stasis for 2.5s seconds, rendering you <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon\" />untargetable and <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon\" />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items.",
+      "effects": "Put yourself in <img src=\"/img/icons/stasis.webp\" class=\"tip-icon\" />stasis for 2.5 seconds, rendering you <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon\" />untargetable and <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon\" />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items.",
       "cooldown": null,
       "range": null
     }
@@ -43,7 +63,7 @@
   "shop": {
     "prices": {
       "total": 1600,
-      "combined": 0,
+      "combined": 500,
       "sell": 640
     },
     "purchasable": true,

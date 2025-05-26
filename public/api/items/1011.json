@@ -6,22 +6,78 @@
     "Epic"
   ],
   "buildsFrom": [
-    1028
+    {
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
+    }
   ],
   "buildsInto": [
-    3119,
-    8001,
-    3748,
-    3083,
-    2502,
-    3084,
-    3116,
-    3143,
-    323119,
-    6665,
-    4637,
-    6609,
-    6667
+    {
+      "id": 3119,
+      "name": "Winter's Approach",
+      "gold": 2400
+    },
+    {
+      "id": 8001,
+      "name": "Anathema's Chains",
+      "gold": 2500
+    },
+    {
+      "id": 3748,
+      "name": "Titanic Hydra",
+      "gold": 3300
+    },
+    {
+      "id": 3083,
+      "name": "Warmog's Armor",
+      "gold": 3100
+    },
+    {
+      "id": 2502,
+      "name": "Unending Despair",
+      "gold": 2800
+    },
+    {
+      "id": 3084,
+      "name": "Heartsteel",
+      "gold": 3000
+    },
+    {
+      "id": 3116,
+      "name": "Rylai's Crystal Scepter",
+      "gold": 2600
+    },
+    {
+      "id": 3143,
+      "name": "Randuin's Omen",
+      "gold": 2700
+    },
+    {
+      "id": 323119,
+      "name": "Winter's Approach",
+      "gold": 2400
+    },
+    {
+      "id": 6665,
+      "name": "Jak'Sho, The Protean",
+      "gold": 3200
+    },
+    {
+      "id": 4637,
+      "name": "Demonic Embrace",
+      "gold": 3000
+    },
+    {
+      "id": 6609,
+      "name": "Chempunk Chainsword",
+      "gold": 3100
+    },
+    {
+      "id": 6667,
+      "name": "Radiant Virtue",
+      "gold": 2600
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -39,7 +95,7 @@
   "shop": {
     "prices": {
       "total": 900,
-      "combined": 0,
+      "combined": 500,
       "sell": 360
     },
     "purchasable": true,

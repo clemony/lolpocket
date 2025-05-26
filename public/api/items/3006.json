@@ -6,12 +6,28 @@
     "Boots"
   ],
   "buildsFrom": [
-    1001,
-    1042,
-    1042
+    {
+      "id": 1001,
+      "name": "Boots",
+      "gold": 300
+    },
+    {
+      "id": 1042,
+      "name": "Dagger",
+      "gold": 250
+    },
+    {
+      "id": 1042,
+      "name": "Dagger",
+      "gold": 250
+    }
   ],
   "buildsInto": [
-    3172
+    {
+      "id": 3172,
+      "name": "Gunmetal Greaves",
+      "gold": 1600
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -33,7 +49,7 @@
   "shop": {
     "prices": {
       "total": 1100,
-      "combined": 0,
+      "combined": 300,
       "sell": 440
     },
     "purchasable": true,

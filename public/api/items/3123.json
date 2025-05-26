@@ -6,11 +6,23 @@
     "Epic"
   ],
   "buildsFrom": [
-    1036
+    {
+      "id": 1036,
+      "name": "Long Sword",
+      "gold": 350
+    }
   ],
   "buildsInto": [
-    3033,
-    6609
+    {
+      "id": 3033,
+      "name": "Mortal Reminder",
+      "gold": 3300
+    },
+    {
+      "id": 6609,
+      "name": "Chempunk Chainsword",
+      "gold": 3100
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -38,7 +50,7 @@
   "shop": {
     "prices": {
       "total": 800,
-      "combined": 0,
+      "combined": 450,
       "sell": 320
     },
     "purchasable": true,

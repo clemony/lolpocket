@@ -6,15 +6,43 @@
     "Epic"
   ],
   "buildsFrom": [
-    1052,
-    1052
+    {
+      "id": 1052,
+      "name": "Amplifying Tome",
+      "gold": 400
+    },
+    {
+      "id": 1052,
+      "name": "Amplifying Tome",
+      "gold": 400
+    }
   ],
   "buildsInto": [
-    4646,
-    4645,
-    3152,
-    4636,
-    6655
+    {
+      "id": 4646,
+      "name": "Stormsurge",
+      "gold": 2800
+    },
+    {
+      "id": 4645,
+      "name": "Shadowflame",
+      "gold": 3200
+    },
+    {
+      "id": 3152,
+      "name": "Hextech Rocketbelt",
+      "gold": 2650
+    },
+    {
+      "id": 4636,
+      "name": "Night Harvester",
+      "gold": 2765
+    },
+    {
+      "id": 6655,
+      "name": "Luden's Companion",
+      "gold": 2750
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -43,7 +71,7 @@
   "shop": {
     "prices": {
       "total": 1100,
-      "combined": 0,
+      "combined": 300,
       "sell": 440
     },
     "purchasable": true,

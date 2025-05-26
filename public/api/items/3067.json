@@ -6,37 +6,153 @@
     "Epic"
   ],
   "buildsFrom": [
-    1028,
-    2022
+    {
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
+    },
+    {
+      "id": 2022,
+      "name": "Glowing Mote",
+      "gold": 250
+    }
   ],
   "buildsInto": [
-    323107,
-    323222,
-    3119,
-    8001,
-    3071,
-    323190,
-    3190,
-    6630,
-    6620,
-    3050,
-    323109,
-    3065,
-    3107,
-    3109,
-    326617,
-    3165,
-    3222,
-    323119,
-    326620,
-    328020,
-    4403,
-    4629,
-    4644,
-    6617,
-    6632,
-    6656,
-    8020
+    {
+      "id": 323107,
+      "name": "Redemption",
+      "gold": 2800
+    },
+    {
+      "id": 323222,
+      "name": "Mikael's Blessing",
+      "gold": 2800
+    },
+    {
+      "id": 3119,
+      "name": "Winter's Approach",
+      "gold": 2400
+    },
+    {
+      "id": 8001,
+      "name": "Anathema's Chains",
+      "gold": 2500
+    },
+    {
+      "id": 3071,
+      "name": "Black Cleaver",
+      "gold": 3000
+    },
+    {
+      "id": 323190,
+      "name": "Locket of the Iron Solari",
+      "gold": 2600
+    },
+    {
+      "id": 3190,
+      "name": "Locket of the Iron Solari",
+      "gold": 2200
+    },
+    {
+      "id": 6630,
+      "name": "Goredrinker",
+      "gold": 3200
+    },
+    {
+      "id": 6620,
+      "name": "Echoes of Helia",
+      "gold": 2200
+    },
+    {
+      "id": 3050,
+      "name": "Zeke's Convergence",
+      "gold": 2200
+    },
+    {
+      "id": 323109,
+      "name": "Knight's Vow",
+      "gold": 2900
+    },
+    {
+      "id": 3065,
+      "name": "Spirit Visage",
+      "gold": 2700
+    },
+    {
+      "id": 3107,
+      "name": "Redemption",
+      "gold": 2300
+    },
+    {
+      "id": 3109,
+      "name": "Knight's Vow",
+      "gold": 2300
+    },
+    {
+      "id": 326617,
+      "name": "Moonstone Renewer",
+      "gold": 2900
+    },
+    {
+      "id": 3165,
+      "name": "Morellonomicon",
+      "gold": 2850
+    },
+    {
+      "id": 3222,
+      "name": "Mikael's Blessing",
+      "gold": 2300
+    },
+    {
+      "id": 323119,
+      "name": "Winter's Approach",
+      "gold": 2400
+    },
+    {
+      "id": 326620,
+      "name": "Echoes of Helia",
+      "gold": 2600
+    },
+    {
+      "id": 328020,
+      "name": "Abyssal Mask",
+      "gold": 2850
+    },
+    {
+      "id": 4403,
+      "name": "The Golden Spatula",
+      "gold": 7187
+    },
+    {
+      "id": 4629,
+      "name": "Cosmic Drive",
+      "gold": 3000
+    },
+    {
+      "id": 4644,
+      "name": "Crown of the Shattered Queen",
+      "gold": 2865
+    },
+    {
+      "id": 6617,
+      "name": "Moonstone Renewer",
+      "gold": 2200
+    },
+    {
+      "id": 6632,
+      "name": "Divine Sunderer",
+      "gold": 3450
+    },
+    {
+      "id": 6656,
+      "name": "Everfrost",
+      "gold": 2865
+    },
+    {
+      "id": 8020,
+      "name": "Abyssal Mask",
+      "gold": 2650
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -55,7 +171,7 @@
   "shop": {
     "prices": {
       "total": 800,
-      "combined": 0,
+      "combined": 150,
       "sell": 320
     },
     "purchasable": true,

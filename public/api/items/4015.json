@@ -19,7 +19,7 @@
     {
       "name": "Giant Slayer",
       "unique": true,
-      "effects": "Deal +color=health% maximum health difference increased damage against enemy champions with greater <b>maximum</b> health than you.",
+      "effects": "Deal 0% – 15% (based on maximum health difference) increased damage against enemy champions with greater <b>maximum</b> health than you.",
       "cooldown": null,
       "range": null
     }
@@ -34,7 +34,7 @@
   "shop": {
     "prices": {
       "total": 2500,
-      "combined": 0,
+      "combined": 2500,
       "sell": 1000
     },
     "purchasable": true,

@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3067,
-    3113,
-    3108
+    {
+      "id": 3067,
+      "name": "Kindlegem",
+      "gold": 800
+    },
+    {
+      "id": 3113,
+      "name": "Aether Wisp",
+      "gold": 900
+    },
+    {
+      "id": 3108,
+      "name": "Fiendish Codex",
+      "gold": 850
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -25,7 +37,7 @@
     {
       "name": "Spelldance",
       "unique": true,
-      "effects": "Dealing magic magic damage or true true damage damage to an enemy champion grants you 20 <b>bonus</b> movement speed ms for 4 seconds.",
+      "effects": "Dealing magic damage or true damage damage to an enemy champion grants you 20 <b>bonus</b> movement speed ms for 4 seconds.",
       "cooldown": null,
       "range": null
     }
@@ -40,7 +52,7 @@
   "shop": {
     "prices": {
       "total": 3000,
-      "combined": 0,
+      "combined": 450,
       "sell": 1200
     },
     "purchasable": true,

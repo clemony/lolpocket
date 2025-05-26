@@ -21,7 +21,7 @@
     {
       "name": "Reap",
       "unique": true,
-      "effects": "Killing a minion grants an additional 1, up to a <b>maximum</b> of 100.",
+      "effects": "Killing a minion grants an additional <img src=\"/img/icons/gold-coin.webp\" class=\"inline-icon\" />1, up to a <b>maximum</b> of <img src=\"/img/icons/gold-coin.webp\" class=\"inline-icon\" />100.",
       "cooldown": null,
       "range": null
     }
@@ -33,7 +33,7 @@
   "shop": {
     "prices": {
       "total": 450,
-      "combined": 0,
+      "combined": 450,
       "sell": 180
     },
     "purchasable": true,

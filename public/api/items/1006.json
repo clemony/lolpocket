@@ -7,10 +7,26 @@
   ],
   "buildsFrom": [],
   "buildsInto": [
-    3211,
-    323109,
-    3109,
-    3801
+    {
+      "id": 3211,
+      "name": "Spectre's Cowl",
+      "gold": 1250
+    },
+    {
+      "id": 323109,
+      "name": "Knight's Vow",
+      "gold": 2900
+    },
+    {
+      "id": 3109,
+      "name": "Knight's Vow",
+      "gold": 2300
+    },
+    {
+      "id": 3801,
+      "name": "Crystalline Bracer",
+      "gold": 800
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -28,7 +44,7 @@
   "shop": {
     "prices": {
       "total": 300,
-      "combined": 0,
+      "combined": 300,
       "sell": 120
     },
     "purchasable": true,

@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    1043,
-    1026,
-    3108
+    {
+      "id": 1043,
+      "name": "Recurve Bow",
+      "gold": 700
+    },
+    {
+      "id": 1026,
+      "name": "Blasting Wand",
+      "gold": 850
+    },
+    {
+      "id": 3108,
+      "name": "Fiendish Codex",
+      "gold": 850
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -25,7 +37,7 @@
     {
       "name": "Icathian Bite",
       "unique": true,
-      "effects": "Basic attacks deal 15 (+ 15% AP) <b>bonus</b> magic damage magic damage on-hit.",
+      "effects": "Basic attacks deal 15 (+15% AP) <b>bonus</b> magic damage on-hit.",
       "cooldown": null,
       "range": null
     }
@@ -39,7 +51,7 @@
   "shop": {
     "prices": {
       "total": 2900,
-      "combined": 0,
+      "combined": 500,
       "sell": 1160
     },
     "purchasable": true,

@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    2021,
-    3066,
-    1037
+    {
+      "id": 2021,
+      "name": "Tunneler",
+      "gold": 1150
+    },
+    {
+      "id": 3066,
+      "name": "Winged Moonplate",
+      "gold": 800
+    },
+    {
+      "id": 1037,
+      "name": "Pickaxe",
+      "gold": 875
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -27,14 +39,14 @@
     {
       "name": "Skipper",
       "unique": true,
-      "effects": "Basic attacks on-hit against any enemy grant a stack for 10 seconds, stacking up to 5 times. At <b>maximum</b> stacks, or 4 stacks, your next basic attack against a champion, epic monster, or structure consumes all stacks to deal <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />120%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />84%)</span> <b>base</b> AD (+ <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />5%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />3.5%)</span> <b>maximum</b> health) <b>bonus</b> physical damage, increased to <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />300%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />210%)</span> <b>base</b> AD (+ <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />10%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />7%)</span> <b>maximum</b> health) against structures.",
+      "effects": "Basic attacks on-hit against any enemy grant a stack for 10 seconds, stacking up to 5 times. At <b>maximum</b> stacks, or 4 stacks, your next basic attack against a champion, epic monster, or structure consumes all stacks to deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />120% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />84%) <b>base</b> AD  (+(<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />5% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />3.5%) <b>maximum</b> health) <b>bonus</b> physical damage, increased to (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />300% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />210%) <b>base</b> AD  (+(<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />10% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />7%) <b>maximum</b> health) against structures.",
       "cooldown": null,
       "range": null
     },
     {
       "name": "Boarding Party",
       "unique": true,
-      "effects": "Allied {{ui|Blue Siege Minion|link=Siege minion|siege minions}} and {{ui|Blue Super Minion|link=Super minion|super minions}} within <img src=\"/img/icons/er.webp\" class=\"tip-icon\" />icononly=true 1050 units gain <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />70 – 130 for 11&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />70*0.5 – 130*0.5 for 11)</span> <b>bonus</b> armor and <b>bonus</b> magic resistance, as well as 10% increased size.",
+      "effects": "Allied <img src=\"/img/icons/siege-minions.webp\" class=\"tip-icon\" />siege minions and <img src=\"/img/icons/super-minions.webp\" class=\"tip-icon\" />super minions within 1050 units gain (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />70 – 130 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />35 – 65) <b>bonus</b> armor and <b>bonus</b> magic resistance, as well as 10% increased size.",
       "cooldown": null,
       "range": null
     }
@@ -48,7 +60,7 @@
   "shop": {
     "prices": {
       "total": 3000,
-      "combined": 0,
+      "combined": 175,
       "sell": 1200
     },
     "purchasable": true,

@@ -6,7 +6,11 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3867
+    {
+      "id": 3867,
+      "name": "Bounty of Worlds",
+      "gold": 400
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -21,7 +25,7 @@
     {
       "name": "Going Sledding",
       "unique": true,
-      "effects": "<img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />Slowing or <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />immobilizing an enemy champion causes you and the most wounded allied champion within 1500 units to gain 20% <b>bonus</b> movement speed decaying over 2.5s seconds and +1;7 to 18 your level hp <b>bonus</b> health for 2.5s seconds.",
+      "effects": "<img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />Slowing or <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />immobilizing an enemy champion causes you and the most wounded allied champion within 1500 units to gain 20% <b>bonus</b> movement speed decaying over 2.5 seconds and 50 – 230 (based on your level) hp <b>bonus</b> health for 2.5 seconds.",
       "cooldown": "30",
       "range": null
     },

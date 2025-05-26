@@ -6,13 +6,33 @@
     "Epic"
   ],
   "buildsFrom": [
-    1036,
-    1018
+    {
+      "id": 1036,
+      "name": "Long Sword",
+      "gold": 350
+    },
+    {
+      "id": 1018,
+      "name": "Cloak of Agility",
+      "gold": 600
+    }
   ],
   "buildsInto": [
-    6673,
-    3095,
-    3036
+    {
+      "id": 6673,
+      "name": "Immortal Shieldbow",
+      "gold": 3000
+    },
+    {
+      "id": 3095,
+      "name": "Stormrazor",
+      "gold": 3100
+    },
+    {
+      "id": 3036,
+      "name": "Lord Dominik's Regards",
+      "gold": 3100
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -31,7 +51,7 @@
   "shop": {
     "prices": {
       "total": 1300,
-      "combined": 0,
+      "combined": 350,
       "sell": 520
     },
     "purchasable": true,

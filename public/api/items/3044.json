@@ -6,15 +6,43 @@
     "Epic"
   ],
   "buildsFrom": [
-    1028,
-    1036
+    {
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
+    },
+    {
+      "id": 1036,
+      "name": "Long Sword",
+      "gold": 350
+    }
   ],
   "buildsInto": [
-    6631,
-    3071,
-    6630,
-    3073,
-    3078
+    {
+      "id": 6631,
+      "name": "Stridebreaker",
+      "gold": 3300
+    },
+    {
+      "id": 3071,
+      "name": "Black Cleaver",
+      "gold": 3000
+    },
+    {
+      "id": 6630,
+      "name": "Goredrinker",
+      "gold": 3200
+    },
+    {
+      "id": 3073,
+      "name": "Experimental Hexplate",
+      "gold": 3000
+    },
+    {
+      "id": 3078,
+      "name": "Trinity Force",
+      "gold": 3333
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -30,7 +58,7 @@
     {
       "name": "Rage",
       "unique": true,
-      "effects": "Basic attacks on-hit grant 20 <b>bonus</b> movement speed for 2 seconds.",
+      "effects": "Basic attacks on-hit grant (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />20 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />10) <b>bonus</b> movement speed for 2 seconds.",
       "cooldown": null,
       "range": null
     }
@@ -43,7 +71,7 @@
   "shop": {
     "prices": {
       "total": 1100,
-      "combined": 0,
+      "combined": 350,
       "sell": 440
     },
     "purchasable": true,

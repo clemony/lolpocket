@@ -101,28 +101,13 @@ export default defineNuxtConfig({
 
   },
 
-  css: ['~/assets/css/tailwind.css'],
-
   imports: {
-    dirs: ['@vueuse/components', 'utils/items', 'data', 'data/items', 'data/champions',  'utils/summoner', 'utils/filters', 'utils/lib', 'utils/pocket', 'utils/ui', 'stores', 'utils/format', 'routes'],
-  },
-
-  webpack: {
-    loaders: {
-      vue: {
-        hotReload: true,
-      },
-    },
-  },
-
-  devServer: {
-    port: 8080,
-  },
-
-  devtools: {
-    enabled: false,
-    componentInspector: true,
-    viteInspect: true,
+    dirs: [
+      '@vueuse/components',
+      'data',
+      'stores',
+      'routes',
+    ],
   },
 
   pinia: {
@@ -143,6 +128,29 @@ export default defineNuxtConfig({
     'plugins': fileURLToPath(new URL('./app/plugins', import.meta.url)),
     'modules': fileURLToPath(new URL('./modules', import.meta.url)),
     'data': fileURLToPath(new URL('./app/data', import.meta.url)),
+  },
+  css: ['~/assets/css/tailwind.css'],
+  app: {
+    head: {
+      meta: [
+        { name: 'lolpocket', content: 'width=device-width, initial-scale=1' },
+      ],
+    },
+  },
+  devServer: {
+    port: 8080,
+  },
+  devtools: {
+    enabled: false,
+    componentInspector: true,
+    viteInspect: true,
+  },
+  webpack: {
+    loaders: {
+      vue: {
+        hotReload: true,
+      },
+    },
   },
   future: {
     compatibilityVersion: 4,

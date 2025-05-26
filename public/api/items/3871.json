@@ -6,7 +6,11 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3867
+    {
+      "id": 3867,
+      "name": "Bounty of Worlds",
+      "gold": 400
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -21,7 +25,7 @@
     {
       "name": "Void Explosion",
       "unique": true,
-      "effects": "Dealing ability damage to an enemy champion creates an explosion at their location after a 0.5s-second delay, dealing 10% attack speed (+ 15% AP) (+ 3% of each target's <b>maximum</b> health) magic damage to enemies within the area, capped at 300 against <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters.",
+      "effects": "Dealing ability damage to an enemy champion creates an explosion at their location after a 0.5-second delay, dealing 10 magic damage (+15% AP) (+3% of each target's <b>maximum</b> health) magic damage to enemies within the area, capped at 300 against <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters.",
       "cooldown": "10",
       "range": null
     },

@@ -1,100 +1,11 @@
 <script lang="ts" setup>
 import { AnimatePresence, motion } from 'motion-v'
-import Fuse from 'fuse.js'
 
 const us = useUiStore()
-const ps = usePocketStore()
-const router = useRouter()
-console.log('💠 - router:', router.getRoutes())
-
-const championIndex = await $fetch<ChampionIndex[]>('/api/index/champion-index.json')
-const champions = computed(() => {
-  return Object.values(championIndex)
-}, null)
-
-const itemIndex = await $fetch<ItemIndex[]>('/api/index/item-index.json')
-const items = computed(() => {
-  return Object.values(itemIndex)
-}, null)
 
 const searchQuery = ref('')
 
-const pageFuse = ref<Fuse<any> | null>(
-  new Fuse(router.getRoutes(), {
-    keys: ['name', 'meta.title', 'meta.section', 'meta.searchKeys'],
-    includeMatches: true,
-    threshold: 0.3,
-  }),
-)
-
-const pocketFuse = ref<Fuse<any> | null>(
-  new Fuse(ps.pockets, {
-    keys: ['name', 'champions', 'tags'],
-    includeMatches: true,
-    threshold: 0.3,
-  }),
-)
-
-const championFuse = ref<Fuse<any> | null>(
-  new Fuse(champions.value, {
-    keys: ['name'],
-    threshold: 0.3,
-  }),
-)
-
-const itemFuse = ref<Fuse<any> | null>(
-  new Fuse(items.value, {
-    keys: ['name'],
-    threshold: 0.3,
-  }),
-)
-
-const pageResult = computed(() => {
-  if (!pageFuse.value)
-    return []
-  const results = pageFuse.value.search(searchQuery.value)
-  const res = results.map(result => result.item)
-  return res.filter(p => p.meta.search != false)
-})
-
-const groupedPages = computed(() => {
-  const grouped: Record<string, PageRecord[]> = {}
-
-  for (const route of pageResult.value) {
-    const section = route.meta?.section || 'Uncategorized'
-    if (!grouped[section])
-      grouped[section] = []
-    grouped[section].push(route)
-  }
-
-  return Object.entries(grouped).map(([section, routes]) => ({
-    section,
-    routes,
-  }))
-})
-
-const pocketResult = computed(() => {
-  if (!pocketFuse.value)
-    return []
-  const results = pocketFuse.value.search(searchQuery.value)
-  return results.map(result => result.item)
-})
-
-const championResult = computed(() => {
-  if (!championFuse.value)
-    return []
-  const results = championFuse.value.search(searchQuery.value)
-  return results.map(result => result.item)
-})
-
-const itemResult = computed(() => {
-  if (!itemFuse.value)
-    return []
-  const results = itemFuse.value.search(searchQuery.value)
-  return results.map(result => result.item)
-})
-
-const resultsLength = computed (() => itemResult.value.length + championResult.value.length + pocketResult.value.length)
+const { pageResult, groupedPages, pocketResult, championResult, itemResult, resultsLength } = await useSearch(searchQuery)
 
 const searchVariants = {
   hidden: {

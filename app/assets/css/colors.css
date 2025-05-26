@@ -62,20 +62,19 @@
   --color-top: #e0746b;
   --color-fighter: oklch(78.32% 0.1173 37);
 
-  --color-ap: oklch(65.02% 0.0644 332.52);
 
-  --color-apen: oklch(0.60 0.1303 32.32);
+
+--color-apen: oklch(0.60 0.1303 32.32);
   --color-ad: oklch(0.6903 0.121 65.62);
   --color-armor: oklch(0.7 0.0922 75.66);
 --color-g: oklch(0.795 0.1468 90.49);
-
-
-  --color-hp: oklch(0.67 0.0922 132.84);
 --color-as: oklch(0.8049 0.1129 84.09);
---color-hsp: oklch(0.6701 0.0692 186.92);
---color-ah: oklch(0.7156 0.095 197.97);
+  --color-hp: oklch(0.67 0.0922 132.84);
+--color-hsp: oklch(0.7329 0.0743 192.64);
+--color-ah:oklch(0.7329 0.1007 192.64);
 --color-mana: oklch(0.6173 0.096 231.0549);
 --color-mr: oklch(0.6687 0.1068 226.01);
+  --color-ap: oklch(0.6424 0.0997 280.8);
 
 
 

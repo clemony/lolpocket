@@ -6,21 +6,73 @@
     "Epic"
   ],
   "buildsFrom": [
-    1004
+    {
+      "id": 1004,
+      "name": "Faerie Charm",
+      "gold": 200
+    }
   ],
   "buildsInto": [
-    323107,
-    223011,
-    323222,
-    3504,
-    3011,
-    3107,
-    3222,
-    323504,
-    326616,
-    326621,
-    6616,
-    6621
+    {
+      "id": 323107,
+      "name": "Redemption",
+      "gold": 2800
+    },
+    {
+      "id": 223011,
+      "name": "Chemtech Putrifier",
+      "gold": 1900
+    },
+    {
+      "id": 323222,
+      "name": "Mikael's Blessing",
+      "gold": 2800
+    },
+    {
+      "id": 3504,
+      "name": "Ardent Censer",
+      "gold": 2200
+    },
+    {
+      "id": 3011,
+      "name": "Chemtech Putrifier",
+      "gold": 1900
+    },
+    {
+      "id": 3107,
+      "name": "Redemption",
+      "gold": 2300
+    },
+    {
+      "id": 3222,
+      "name": "Mikael's Blessing",
+      "gold": 2300
+    },
+    {
+      "id": 323504,
+      "name": "Ardent Censer",
+      "gold": 2600
+    },
+    {
+      "id": 326616,
+      "name": "Staff of Flowing Water",
+      "gold": 2600
+    },
+    {
+      "id": 326621,
+      "name": "Dawncore",
+      "gold": 2900
+    },
+    {
+      "id": 6616,
+      "name": "Staff of Flowing Water",
+      "gold": 2250
+    },
+    {
+      "id": 6621,
+      "name": "Dawncore",
+      "gold": 2500
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -39,7 +91,7 @@
   "shop": {
     "prices": {
       "total": 600,
-      "combined": 0,
+      "combined": 400,
       "sell": 240
     },
     "purchasable": true,

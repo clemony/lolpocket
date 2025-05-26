@@ -28,7 +28,7 @@
     {
       "name": "Dark Star",
       "unique": true,
-      "effects": "Summon a black hole at the target location after a 0.5s-second delay that lasts for 2 (+ 0.1s per 100 <b>bonus</b> health) seconds and has a radius of [<img src=\"/img/icons/cr.webp\" class=\"tip-icon\" />icononly=true 225 / 75 units]{{|times}}champion size modifier (+ 0.1s% per <i>Accretion</i> stack). Enemies within are dealt + magic damage (+ 6.5s% of user's <b>maximum</b> health) magic damage every second, <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slowed by 35%, and <img src=\"/img/icons/kinematics.webp\" class=\"tip-icon\" />dragged inward until they reach the horizon at the center. Additionally, for each enemy champion inside the black hole, generate 1 stack of <i>Accretion</i> per second.",
+      "effects": "Summon a black hole at the target location after a 0.5-second delay that lasts for 2 (+0.1 per 100 <b>bonus</b> health) seconds and has a radius of [ 225 / 75 units]{{times|times}} champion size modifier (+0.1% per <i>Accretion</i> stack). Enemies within are dealt 30 – 100 (based on level) magic damage (+6.5% of user's <b>maximum</b> health) magic damage every second, <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slowed by 35%, and <img src=\"/img/icons/kinematics.webp\" class=\"tip-icon\" />dragged inward until they reach the horizon at the center. Additionally, for each enemy champion inside the black hole, generate 1 stack of <i>Accretion</i> per second.",
       "cooldown": null,
       "range": null
     }
@@ -40,7 +40,7 @@
   "shop": {
     "prices": {
       "total": 0,
-      "combined": 0,
+      "combined": 1000,
       "sell": 0
     },
     "purchasable": true,

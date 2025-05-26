@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3086,
-    3144
+    {
+      "id": 3086,
+      "name": "Zeal",
+      "gold": 1200
+    },
+    {
+      "id": 3144,
+      "name": "Scout's Slingshot",
+      "gold": 600
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -48,7 +56,7 @@
   "shop": {
     "prices": {
       "total": 2650,
-      "combined": 0,
+      "combined": 850,
       "sell": 1060
     },
     "purchasable": true,

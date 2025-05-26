@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3147,
-    2508
+    {
+      "id": 3147,
+      "name": "Haunting Guise",
+      "gold": 1300
+    },
+    {
+      "id": 2508,
+      "name": "Fated Ashes",
+      "gold": 900
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -25,7 +33,7 @@
     {
       "name": "Torment",
       "unique": true,
-      "effects": "Dealing ability damage burns enemies, causing them to take 1% of the target's <b>maximum</b> health magic damage every 0.5s seconds over 3 seconds, capped at 20 per tick against monsters. (6% of the target's <b>maximum</b> health <b>total</b> magic damage over 3 seconds, capped at 120 against monsters.)",
+      "effects": "Dealing ability damage burns enemies, causing them to take 1% of the target's <b>maximum</b> health magic damage every 0.5 seconds over 3 seconds, capped at 20 per tick against monsters. (6% of the target's <b>maximum</b> health <b>total</b> magic damage over 3 seconds, capped at 120 against monsters.)",
       "cooldown": null,
       "range": null
     },
@@ -45,7 +53,7 @@
   "shop": {
     "prices": {
       "total": 3000,
-      "combined": 0,
+      "combined": 800,
       "sell": 1200
     },
     "purchasable": true,

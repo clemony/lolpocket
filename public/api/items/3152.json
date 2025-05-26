@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3145,
-    3108,
-    1028
+    {
+      "id": 3145,
+      "name": "Hextech Alternator",
+      "gold": 1100
+    },
+    {
+      "id": 3108,
+      "name": "Fiendish Codex",
+      "gold": 850
+    },
+    {
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -27,7 +39,7 @@
     {
       "name": "Supersonic",
       "unique": true,
-      "effects": "<img src=\"/img/icons/dash.webp\" class=\"tip-icon\" />Dash 125 to 275 units in the target direction, though not through terrain, unleashing an arc of 7 rockets in the same direction that deal 100 (+ 10% AP) magic damage magic damage to enemies hit.",
+      "effects": "<img src=\"/img/icons/dash.webp\" class=\"tip-icon\" />Dash 125 to 275 units in the target direction, though not through terrain, unleashing an arc of 7 rockets in the same direction that deal 100 (+10% AP) magic damage to enemies hit.",
       "cooldown": null,
       "range": null
     }
@@ -40,7 +52,7 @@
   "shop": {
     "prices": {
       "total": 2650,
-      "combined": 0,
+      "combined": 300,
       "sell": 1060
     },
     "purchasable": true,

@@ -21,7 +21,7 @@
     {
       "name": "Enduring Focus",
       "unique": true,
-      "effects": "After taking damage from a champion, gain <b>bonus</b> health regeneration per second equal to +round=3 missing health for 8 seconds. Reduced to 66% effectiveness (+round=4 missing health)if owned by <img src=\"/img/icons/ranged.webp\" class=\"tip-icon\" />ranged champions or when triggered by area of effect, damage over time, or proc.",
+      "effects": "After taking damage from a champion, gain <b>bonus</b> health regeneration per second equal to 0 – 75 (based on missing health) for 8 seconds. Reduced to 66% effectiveness (0 – 75 (based on missing health)) if owned by <img src=\"/img/icons/ranged.webp\" class=\"tip-icon\" />ranged champions or when triggered by area of effect, damage over time, or proc.",
       "cooldown": null,
       "range": null
     },
@@ -41,7 +41,7 @@
   "shop": {
     "prices": {
       "total": 450,
-      "combined": 0,
+      "combined": 450,
       "sell": 180
     },
     "purchasable": true,

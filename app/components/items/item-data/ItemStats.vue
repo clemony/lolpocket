@@ -1,33 +1,29 @@
 <script lang="ts" setup>
-const { stats, base } = defineProps<{
+const { stats } = defineProps<{
   stats: Record<string, number>
-  base?: boolean
- }>()
+}>()
 
 const statEntries = computed(() =>
-  Object.entries(stats).map(([key, value]) => ({ key, value }))
+  Object.entries(stats).map(([key, value]) => ({ key, value })),
 )
-
-
 </script>
 
 <template>
   <div class="">
-          <Separator class="  mt-3 mb-5"  :class="{'!bg-b3/40': base, 'bg-nc/10 ': !base}"/>
-  <div class="mb-1 stat-grid grid grid-cols-[_1fr_50px_0.5f] gap-x-8 gap-y-1.5 *:flex *:text-3">
-    <template v-for="stat in statEntries" :key="stat.key">
-  
-      <p class="items-end gap-2  font-medium tracking-tight col-start-1 ">
-        {{ itemStats.find(k => k.id == stat.key).displayName }}
-      </p>
-      <p class="items-center justify-end col-start-2">
-        {{ stat.value }}
-      </p>
-   <p class="badge py-0.25 !text-white col-start-3 justify-self-end font-semibold border-none" :class="itemStats.find(k => k.id == stat.key).bgClass">
-    <component :is="`i-stats-${itemStats.find(k => k.id == stat.key).icon}`"  class="size-3.5 self-center "  />
-    {{ itemStats.find(k => k.id == stat.key).shortName }}
-   </p>
-    </template>
+    <Separator class="bg-nc/15  mt-2" />
+    <div class="w-full mt-4 items-center stat-grid grid grid-cols-[auto_1fr_auto] gap-x-3 gap-y-1 *:flex *:text-3">
+      <template v-for="stat in statEntries" :key="stat.key">
+        <p class="font-medium  flex flex-nowrap ">
+          {{ stat.value }}
+        </p>
+        <p class="  tracking-tight ">
+          {{ itemStats.find(k => k.id == stat.key).displayName }}
+        </p>
+        <p class="badge justify-self-end  gap-0.5 !py-px px-1.5  !text-white  font-semibold border-none dst !drop-shadow-black/20 !text-0" :class="itemStats.find(k => k.id == stat.key).bgClass">
+          <component :is="`i-stats-${itemStats.find(k => k.id == stat.key).icon}`" class="!size-3.5 self-center" />
+          {{ itemStats.find(k => k.id == stat.key).shortName }}
+        </p>
+      </template>
+    </div>
   </div>
-</div>
 </template>

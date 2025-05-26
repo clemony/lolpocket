@@ -5,7 +5,7 @@ declare global {
 type ChampionKey = string
 
 interface ChampionIndex {
-  id: string
+  id: number
   key: string
   name: string
 }

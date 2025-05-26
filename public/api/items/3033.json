@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3123,
-    3035,
-    1018
+    {
+      "id": 3123,
+      "name": "Executioner's Calling",
+      "gold": 800
+    },
+    {
+      "id": 3035,
+      "name": "Last Whisper",
+      "gold": 1450
+    },
+    {
+      "id": 1018,
+      "name": "Cloak of Agility",
+      "gold": 600
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -40,7 +52,7 @@
   "shop": {
     "prices": {
       "total": 3300,
-      "combined": 0,
+      "combined": 450,
       "sell": 1320
     },
     "purchasable": true,

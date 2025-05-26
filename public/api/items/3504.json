@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3113,
-    3114
+    {
+      "id": 3113,
+      "name": "Aether Wisp",
+      "gold": 900
+    },
+    {
+      "id": 3114,
+      "name": "Forbidden Idol",
+      "gold": 600
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -22,7 +30,7 @@
     {
       "name": "Sanctify",
       "unique": true,
-      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Healing or <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding allied champions (<i>excluding yourself</i>) enhances you and them for 6 seconds, granting 25% <b>bonus</b> attack speed attack speed and 20 <b>bonus</b> magic damage on-hit on basic attacks.",
+      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Healing or <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding allied champions (<i>excluding yourself</i>) enhances you and them for 6 seconds, granting 25% <b>bonus</b> attack speed and 20 <b>bonus</b> magic damage on-hit on basic attacks.",
       "cooldown": null,
       "range": null
     }
@@ -37,7 +45,7 @@
   "shop": {
     "prices": {
       "total": 2200,
-      "combined": 0,
+      "combined": 700,
       "sell": 880
     },
     "purchasable": true,

@@ -17,7 +17,7 @@
     {
       "name": "Fire at Will",
       "unique": true,
-      "effects": "{{ai|Cannon Barrage|Gangplank}} fires 2 additional clusters of 3 waves over the duration at an increased rate of fire (1 cluster per 1.33s seconds), for a total of 18 waves over the 8 seconds.",
+      "effects": "{{ai|Cannon Barrage|Gangplank|Gangplank}} fires 2 additional clusters of 3 waves over the duration at an increased rate of fire (1 cluster per 1.33 seconds), for a total of 18 waves over the 8 seconds.",
       "cooldown": null,
       "range": null
     }

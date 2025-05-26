@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3057,
-    1028,
-    1031
+    {
+      "id": 3057,
+      "name": "Sheen",
+      "gold": 900
+    },
+    {
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
+    },
+    {
+      "id": 1031,
+      "name": "Chain Vest",
+      "gold": 800
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -23,7 +35,7 @@
     {
       "name": "Spellblade",
       "unique": true,
-      "effects": "After using an ability, your next basic attack within 10 seconds deals 150% <b>base</b> AD <b>bonus</b> physical damage on-hit and creates a 300 radius frost field for 2 seconds. Enemies within the field are slowed by <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />25%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />12.5%)</span> (1.5s second cooldown, starts after using the empowered attack).",
+      "effects": "After using an ability, your next basic attack within 10 seconds deals 150% <b>base</b> AD <b>bonus</b> physical damage on-hit and creates a 300 radius frost field for 2 seconds. Enemies within the field are slowed by (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />25% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />12.5%) (1.5 second cooldown, starts after using the empowered attack).",
       "cooldown": null,
       "range": null
     }
@@ -37,7 +49,7 @@
   "shop": {
     "prices": {
       "total": 2900,
-      "combined": 0,
+      "combined": 800,
       "sell": 1160
     },
     "purchasable": true,

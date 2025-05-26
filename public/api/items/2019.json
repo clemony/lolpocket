@@ -6,14 +6,38 @@
     "Epic"
   ],
   "buildsFrom": [
-    1029,
-    1036,
-    1029
+    {
+      "id": 1029,
+      "name": "Cloth Armor",
+      "gold": 300
+    },
+    {
+      "id": 1036,
+      "name": "Long Sword",
+      "gold": 350
+    },
+    {
+      "id": 1029,
+      "name": "Cloth Armor",
+      "gold": 300
+    }
   ],
   "buildsInto": [
-    3026,
-    6333,
-    6700
+    {
+      "id": 3026,
+      "name": "Guardian Angel",
+      "gold": 3200
+    },
+    {
+      "id": 6333,
+      "name": "Death's Dance",
+      "gold": 3300
+    },
+    {
+      "id": 6700,
+      "name": "Shield of the Rakkor",
+      "gold": 2675
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -32,7 +56,7 @@
   "shop": {
     "prices": {
       "total": 1100,
-      "combined": 0,
+      "combined": 150,
       "sell": 440
     },
     "purchasable": true,

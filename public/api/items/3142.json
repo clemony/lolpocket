@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3134,
-    6690,
-    1036
+    {
+      "id": 3134,
+      "name": "Serrated Dirk",
+      "gold": 1000
+    },
+    {
+      "id": 6690,
+      "name": "Rectrix",
+      "gold": 775
+    },
+    {
+      "id": 1036,
+      "name": "Long Sword",
+      "gold": 350
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -23,7 +35,7 @@
     {
       "name": "Haunt",
       "unique": true,
-      "effects": "Gain 20 <b>bonus</b> movement speed while out-of-combat with enemy champions for 3 seconds.",
+      "effects": "Gain (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />20 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />10) <b>bonus</b> movement speed while out-of-combat with enemy champions for 3 seconds.",
       "cooldown": null,
       "range": null
     }
@@ -32,7 +44,7 @@
     {
       "name": "Wraith Step",
       "unique": true,
-      "effects": "Gain <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />20%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />15%)</span> <b>bonus</b> movement speed and <img src=\"/img/icons/ghosted.webp\" class=\"tip-icon\" />ghosting for 6 seconds.",
+      "effects": "Gain (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />20% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />15%) <b>bonus</b> movement speed and <img src=\"/img/icons/ghosted.webp\" class=\"tip-icon\" />ghosting for (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />6 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />4) seconds.",
       "cooldown": null,
       "range": null
     }
@@ -45,7 +57,7 @@
   "shop": {
     "prices": {
       "total": 2800,
-      "combined": 0,
+      "combined": 675,
       "sell": 1120
     },
     "purchasable": true,

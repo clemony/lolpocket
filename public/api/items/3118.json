@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3802,
-    1026
+    {
+      "id": 3802,
+      "name": "Lost Chapter",
+      "gold": 1200
+    },
+    {
+      "id": 1026,
+      "name": "Blasting Wand",
+      "gold": 850
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -29,7 +37,7 @@
     {
       "name": "Hatefog",
       "unique": true,
-      "effects": "Dealing ability damage to enemy champions with your ultimate ability creates a +251;251.8;253.1;255.5;259.8;267.3;280.7;304.2;345.9;419.7;550 ultimate's damage instance radius scorched zone beneath them for 3 seconds, applying a <i>Curse</i> to enemies within that deals 15% attack speed (+ 1.25% AP) magic damage every 0.25s seconds (180% attack speed (+ 15% AP) <b>total</b> magic damage over the duration) and reduces their magic resistance by 10 (3 second cooldown per target, starts on zone creation).",
+      "effects": "Dealing ability damage to enemy champions with your ultimate ability creates a 251 – 550 (based on ultimate's damage instance) radius scorched zone beneath them for 3 seconds, applying a <i>Curse</i> to enemies within that deals 15 magic damage (+1.25% AP) magic damage every 0.25 seconds (180 magic damage (+15% AP) <b>total</b> magic damage over the duration) and reduces their magic resistance by 10 (3 second cooldown per target, starts on zone creation).",
       "cooldown": null,
       "range": null
     }
@@ -43,7 +51,7 @@
   "shop": {
     "prices": {
       "total": 2700,
-      "combined": 0,
+      "combined": 650,
       "sell": 1080
     },
     "purchasable": true,

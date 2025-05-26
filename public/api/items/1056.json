@@ -21,7 +21,7 @@
     {
       "name": "Restoration",
       "unique": true,
-      "effects": "Restore 1.25s mana every second. If you cannot gain mana, <img src=\"/img/icons/healing.webp\" class=\"tip-icon\" />heal 0.55s health instead.",
+      "effects": "Restore 1.25 mana every second. If you cannot gain mana, <img src=\"/img/icons/healing.webp\" class=\"tip-icon\" />heal 0.55 health instead.",
       "cooldown": null,
       "range": null
     },
@@ -41,7 +41,7 @@
   "shop": {
     "prices": {
       "total": 400,
-      "combined": 0,
+      "combined": 400,
       "sell": 160
     },
     "purchasable": true,

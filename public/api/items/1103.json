@@ -28,7 +28,7 @@
     {
       "name": "Mosstomper's Courage",
       "unique": true,
-      "effects": "Feed your companion enough treats to evolve it and upgrade your {{si|Smite}}. Upon the companion reaching its final evolution, this item is consumed, granting you the {{bi|Mosstomper's Courage}} buff.",
+      "effects": "Feed your companion enough treats to evolve it and upgrade your <img src=\"/img/icons/smite.webp\" class=\"tip-icon\" />Smite. Upon the companion reaching its final evolution, this item is consumed, granting you the {{bi|Mosstomper's Courage|Mosstomper's Courage}} buff.",
       "cooldown": null,
       "range": null
     }
@@ -38,7 +38,7 @@
   "shop": {
     "prices": {
       "total": 450,
-      "combined": 0,
+      "combined": 450,
       "sell": 180
     },
     "purchasable": true,

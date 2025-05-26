@@ -6,7 +6,11 @@
     "Boots"
   ],
   "buildsFrom": [
-    3020
+    {
+      "id": 3020,
+      "name": "Sorcerer's Shoes",
+      "gold": 1100
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -26,7 +30,7 @@
   "shop": {
     "prices": {
       "total": 1600,
-      "combined": 0,
+      "combined": 500,
       "sell": 640
     },
     "purchasable": true,

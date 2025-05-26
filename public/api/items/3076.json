@@ -6,12 +6,28 @@
     "Epic"
   ],
   "buildsFrom": [
-    1029,
-    1029
+    {
+      "id": 1029,
+      "name": "Cloth Armor",
+      "gold": 300
+    },
+    {
+      "id": 1029,
+      "name": "Cloth Armor",
+      "gold": 300
+    }
   ],
   "buildsInto": [
-    323075,
-    3075
+    {
+      "id": 323075,
+      "name": "Thornmail",
+      "gold": 2650
+    },
+    {
+      "id": 3075,
+      "name": "Thornmail",
+      "gold": 2450
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -39,7 +55,7 @@
   "shop": {
     "prices": {
       "total": 800,
-      "combined": 0,
+      "combined": 200,
       "sell": 320
     },
     "purchasable": true,

@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    1042,
-    3086,
-    1042
+    {
+      "id": 1042,
+      "name": "Dagger",
+      "gold": 250
+    },
+    {
+      "id": 3086,
+      "name": "Zeal",
+      "gold": 1200
+    },
+    {
+      "id": 1042,
+      "name": "Dagger",
+      "gold": 250
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -39,7 +51,7 @@
   "shop": {
     "prices": {
       "total": 2650,
-      "combined": 0,
+      "combined": 950,
       "sell": 1060
     },
     "purchasable": true,

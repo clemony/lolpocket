@@ -6,7 +6,11 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3006
+    {
+      "id": 3006,
+      "name": "Berserker's Greaves",
+      "gold": 1100
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -36,7 +40,7 @@
   "shop": {
     "prices": {
       "total": 2500,
-      "combined": 0,
+      "combined": 500,
       "sell": 1000
     },
     "purchasable": true,

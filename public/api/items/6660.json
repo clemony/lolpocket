@@ -6,12 +6,28 @@
     "Epic"
   ],
   "buildsFrom": [
-    1028,
-    2022
+    {
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
+    },
+    {
+      "id": 2022,
+      "name": "Glowing Mote",
+      "gold": 250
+    }
   ],
   "buildsInto": [
-    3068,
-    6664
+    {
+      "id": 3068,
+      "name": "Sunfire Aegis",
+      "gold": 2700
+    },
+    {
+      "id": 6664,
+      "name": "Hollow Radiance",
+      "gold": 2800
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -27,7 +43,7 @@
     {
       "name": "Immolate",
       "unique": true,
-      "effects": "Taking or dealing damage activates this passive for 3 seconds. Deal 15 magic damage every second to enemies within <img src=\"/img/icons/cr.webp\" class=\"tip-icon\" />icononly = true 325 (+ 100% <b>bonus</b> size) units, with the damage being increased by 50% against <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions and <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters. This executes minions that would be killed by one more tick of damage.",
+      "effects": "Taking or dealing damage activates this passive for 3 seconds. Deal 15 magic damage every second to enemies within 325 (+100% <b>bonus</b> size) units, with the damage being increased by 50% against <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions and <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters. This executes minions that would be killed by one more tick of damage.",
       "cooldown": null,
       "range": null
     }
@@ -40,7 +56,7 @@
   "shop": {
     "prices": {
       "total": 900,
-      "combined": 0,
+      "combined": 250,
       "sell": 360
     },
     "purchasable": true,

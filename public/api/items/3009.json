@@ -6,10 +6,18 @@
     "Boots"
   ],
   "buildsFrom": [
-    1001
+    {
+      "id": 1001,
+      "name": "Boots",
+      "gold": 300
+    }
   ],
   "buildsInto": [
-    3170
+    {
+      "id": 3170,
+      "name": "Swiftmarch",
+      "gold": 1500
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -37,7 +45,7 @@
   "shop": {
     "prices": {
       "total": 1000,
-      "combined": 0,
+      "combined": 700,
       "sell": 400
     },
     "purchasable": true,

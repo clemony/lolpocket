@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    1058,
-    4632
+    {
+      "id": 1058,
+      "name": "Needlessly Large Rod",
+      "gold": 1200
+    },
+    {
+      "id": 4632,
+      "name": "Verdant Barrier",
+      "gold": 1600
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -38,7 +46,7 @@
   "shop": {
     "prices": {
       "total": 3000,
-      "combined": 0,
+      "combined": 200,
       "sell": 1200
     },
     "purchasable": true,

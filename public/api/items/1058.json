@@ -7,13 +7,41 @@
   ],
   "buildsFrom": [],
   "buildsInto": [
-    3146,
-    3128,
-    3102,
-    3157,
-    4645,
-    3089,
-    4403
+    {
+      "id": 3146,
+      "name": "Hextech Gunblade",
+      "gold": 3250
+    },
+    {
+      "id": 3128,
+      "name": "Deathfire Grasp",
+      "gold": 2900
+    },
+    {
+      "id": 3102,
+      "name": "Banshee's Veil",
+      "gold": 3000
+    },
+    {
+      "id": 3157,
+      "name": "Zhonya's Hourglass",
+      "gold": 3250
+    },
+    {
+      "id": 4645,
+      "name": "Shadowflame",
+      "gold": 3200
+    },
+    {
+      "id": 3089,
+      "name": "Rabadon's Deathcap",
+      "gold": 3500
+    },
+    {
+      "id": 4403,
+      "name": "The Golden Spatula",
+      "gold": 7187
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -33,7 +61,7 @@
   "shop": {
     "prices": {
       "total": 1200,
-      "combined": 0,
+      "combined": 1200,
       "sell": 480
     },
     "purchasable": true,

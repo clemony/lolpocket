@@ -6,7 +6,11 @@
     "Boots"
   ],
   "buildsFrom": [
-    3158
+    {
+      "id": 3158,
+      "name": "Ionian Boots of Lucidity",
+      "gold": 900
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -28,7 +32,7 @@
     {
       "name": "Noxian Haste",
       "unique": true,
-      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Healing, <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding or buffing an ally, damaging abilities against champions, and using summoner spells grants you <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />10%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />8%)</span> <b>bonus</b> movement speed for 4 seconds. This can be triggered from the same cast instance only once every 4 seconds.",
+      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Healing, <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding or buffing an ally, damaging abilities against champions, and using summoner spells grants you (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />10% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />8%) <b>bonus</b> movement speed for 4 seconds. This can be triggered from the same cast instance only once every 4 seconds.",
       "cooldown": null,
       "range": null
     }
@@ -41,7 +45,7 @@
   "shop": {
     "prices": {
       "total": 1400,
-      "combined": 0,
+      "combined": 500,
       "sell": 560
     },
     "purchasable": true,

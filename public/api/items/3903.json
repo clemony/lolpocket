@@ -17,7 +17,7 @@
     {
       "name": "Raise Morale",
       "unique": true,
-      "effects": "{{ci|Gangplank}} and his allies within {{ai|Cannon Barrage|Gangplank}} gain 40% <b>bonus</b> movement speed, which persists for 2 seconds after leaving the area.",
+      "effects": "{{ci|Gangplank|Gangplank}} and his allies within {{ai|Cannon Barrage|Gangplank|Gangplank}} gain 40% <b>bonus</b> movement speed, which persists for 2 seconds after leaving the area.",
       "cooldown": null,
       "range": null
     }

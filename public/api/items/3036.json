@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3035,
-    6670
+    {
+      "id": 3035,
+      "name": "Last Whisper",
+      "gold": 1450
+    },
+    {
+      "id": 6670,
+      "name": "Noonquiver",
+      "gold": 1300
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -32,7 +40,7 @@
   "shop": {
     "prices": {
       "total": 3100,
-      "combined": 0,
+      "combined": 350,
       "sell": 1240
     },
     "purchasable": true,

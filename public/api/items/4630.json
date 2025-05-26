@@ -6,11 +6,23 @@
     "Epic"
   ],
   "buildsFrom": [
-    1052
+    {
+      "id": 1052,
+      "name": "Amplifying Tome",
+      "gold": 400
+    }
   ],
   "buildsInto": [
-    3137,
-    3135
+    {
+      "id": 3137,
+      "name": "Cryptbloom",
+      "gold": 3000
+    },
+    {
+      "id": 3135,
+      "name": "Void Staff",
+      "gold": 3000
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -31,7 +43,7 @@
   "shop": {
     "prices": {
       "total": 1100,
-      "combined": 0,
+      "combined": 700,
       "sell": 440
     },
     "purchasable": true,

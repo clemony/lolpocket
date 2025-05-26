@@ -6,12 +6,28 @@
     "Epic"
   ],
   "buildsFrom": [
-    1036,
-    1033,
-    1036
+    {
+      "id": 1036,
+      "name": "Long Sword",
+      "gold": 350
+    },
+    {
+      "id": 1033,
+      "name": "Null-Magic Mantle",
+      "gold": 400
+    },
+    {
+      "id": 1036,
+      "name": "Long Sword",
+      "gold": 350
+    }
   ],
   "buildsInto": [
-    3156
+    {
+      "id": 3156,
+      "name": "Maw of Malmortius",
+      "gold": 3100
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -25,7 +41,7 @@
     {
       "name": "Lifeline",
       "unique": true,
-      "effects": "If you would take magic damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />110 – 280&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />82.5 – 210)</span> magic damage for 2.5s seconds.",
+      "effects": "If you would take magic damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />110 – 280 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />82.5 – 210) magic damage for 2.5 seconds.",
       "cooldown": "90",
       "range": null
     }
@@ -38,7 +54,7 @@
   "shop": {
     "prices": {
       "total": 1300,
-      "combined": 0,
+      "combined": 200,
       "sell": 520
     },
     "purchasable": true,

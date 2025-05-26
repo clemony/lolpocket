@@ -1,27 +1,26 @@
 <script lang="ts" setup>
-const { to, base } = defineProps<{
-  to: number[]
-  base?: boolean
+const { to } = defineProps<{
+  to: ItemComponent[]
 }>()
 console.log('💠 - to:', to)
 
-const { data } = await useFetch('/api/items-lite.json')
+const filtered = computed (() => to.filter(to => to.id < 9999))
 </script>
 
 <template>
-  <div v-if="to">
-    <div class="divider divider-start after:h-px my-4 " :class="{ 'after:!bg-b3/90': base, 'after:bg-nc/30 ': !base }">
+  <div v-if="to && filtered" class=" mt-1.5">
+    <div class="divider divider-start after:h-px my-4 after:bg-nc/15 !text-0">
       BUILDS INTO
     </div>
-    <div class="group flex items-center py-2 flex-wrap justify-center gap-4">
-      <button
-        v-for="(component, i) in to"
+    <div class="group flex items-center py-2 flex-wrap justify-center gap-4" :class="{ 'justify-start': filtered.length > 7 }">
+      <div
+        v-for="(item, i) in filtered"
         :key="i"
-        v-tippy="data[component]?.name ? `${data[component]?.name} ‑ ` : `${data[component]?.cost}` ? `${data[component]?.cost}g` : ''">
+        v-tippy="`${item.name} ‑ ${item.gold}g`" class="flex gap-3 items-center">
         <LazyPopoverItem
-          v-if="data[component]" :item="component"
+          :item="item.id"
           class="ring-accent  size-10 overflow-hidden rounded-lg shadow-sm hover:ring-2  hover:ring-offset-2 hover:ring-offset-b1/30 tldr-20" />
-      </button>
+      </div>
     </div>
   </div>
 </template>

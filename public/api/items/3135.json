@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    4630,
-    1026
+    {
+      "id": 4630,
+      "name": "Blighting Jewel",
+      "gold": 1100
+    },
+    {
+      "id": 1026,
+      "name": "Blasting Wand",
+      "gold": 850
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -27,7 +35,7 @@
   "shop": {
     "prices": {
       "total": 3000,
-      "combined": 0,
+      "combined": 1050,
       "sell": 1200
     },
     "purchasable": true,

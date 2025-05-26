@@ -6,7 +6,11 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3867
+    {
+      "id": 3867,
+      "name": "Bounty of Worlds",
+      "gold": 400
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -21,7 +25,7 @@
     {
       "name": "Dream Maker",
       "unique": true,
-      "effects": "Every 8 seconds, you gain a <i>Blue Dream Bubble</i> and a <i>Purple Dream Bubble</i>. Granting a <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal or <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield to an allied champion <i>(excluding yourself)</i> causes you to blow both of your <i>Dream Bubbles</i> to them, empowering them for 3 seconds. The <i>Blue Bubble</i> reduces the next instance of non-<img src=\"/img/icons/minion.webp\" class=\"tip-icon\" />minion damage they take by +1;7 to 18 your level and the <i>Purple Bubble</i> grants them +1;7 to 18 your level <b>bonus</b> magic damage on-hit on their next basic attack.",
+      "effects": "Every 8 seconds, you gain a <i>Blue Dream Bubble</i> and a <i>Purple Dream Bubble</i>. Granting a <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal or <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield to an allied champion <i>(excluding yourself)</i> causes you to blow both of your <i>Dream Bubbles</i> to them, empowering them for 3 seconds. The <i>Blue Bubble</i> reduces the next instance of non-<img src=\"/img/icons/minion.webp\" class=\"tip-icon\" />minion damage they take by 75 – 255 (based on your level) and the <i>Purple Bubble</i> grants them 50 – 170 (based on your level) <b>bonus</b> magic damage on-hit on their next basic attack.",
       "cooldown": null,
       "range": null
     },

@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3067,
-    3114
+    {
+      "id": 3067,
+      "name": "Kindlegem",
+      "gold": 800
+    },
+    {
+      "id": 3114,
+      "name": "Forbidden Idol",
+      "gold": 600
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -26,7 +34,7 @@
     {
       "name": "Purify",
       "unique": true,
-      "effects": "Remove all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon\" />Airborne, <img src=\"/img/icons/blind.webp\" class=\"tip-icon\" />Blind, <img src=\"/img/icons/disarm.webp\" class=\"tip-icon\" />Disarm, <img src=\"/img/icons/nearsight.webp\" class=\"tip-icon\" />Nearsight, and <img src=\"/img/icons/suppression.webp\" class=\"tip-icon\" />Suppression) from yourself or the target allied champion and <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal the target for +type=target's level target's level.",
+      "effects": "Remove all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon\" />Airborne, <img src=\"/img/icons/blind.webp\" class=\"tip-icon\" />Blind, <img src=\"/img/icons/disarm.webp\" class=\"tip-icon\" />Disarm, <img src=\"/img/icons/nearsight.webp\" class=\"tip-icon\" />Nearsight, and <img src=\"/img/icons/suppression.webp\" class=\"tip-icon\" />Suppression) from yourself or the target allied champion and <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal the target for 100 – 250 (based on target's level).",
       "cooldown": null,
       "range": 0
     }
@@ -40,7 +48,7 @@
   "shop": {
     "prices": {
       "total": 2300,
-      "combined": 0,
+      "combined": 900,
       "sell": 920
     },
     "purchasable": true,

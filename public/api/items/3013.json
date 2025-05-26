@@ -6,10 +6,18 @@
     "Boots"
   ],
   "buildsFrom": [
-    3010
+    {
+      "id": 3010,
+      "name": "Symbiotic Soles",
+      "gold": 900
+    }
   ],
   "buildsInto": [
-    3176
+    {
+      "id": 3176,
+      "name": "Forever Forward",
+      "gold": 1400
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -25,7 +33,7 @@
     {
       "name": "Voidborn",
       "unique": true,
-      "effects": "Gain {{si|Empowered Recall}}.",
+      "effects": "Gain <img src=\"/img/icons/empowered-recall.webp\" class=\"tip-icon\" />Empowered Recall.",
       "cooldown": null,
       "range": null
     },

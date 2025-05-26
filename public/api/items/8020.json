@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3067,
-    1057
+    {
+      "id": 3067,
+      "name": "Kindlegem",
+      "gold": 800
+    },
+    {
+      "id": 1057,
+      "name": "Negatron Cloak",
+      "gold": 850
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -22,7 +30,7 @@
     {
       "name": "Unmake",
       "unique": true,
-      "effects": "Enemy champions within 700 units of you become cursed, causing them to receive 12% increased magic damage magic damage from all sources.",
+      "effects": "Enemy champions within 700 units of you become cursed, causing them to receive 12% increased magic damage from all sources.",
       "cooldown": null,
       "range": null
     }
@@ -36,7 +44,7 @@
   "shop": {
     "prices": {
       "total": 2650,
-      "combined": 0,
+      "combined": 1000,
       "sell": 1060
     },
     "purchasable": true,

@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    1011,
-    1031,
-    1057
+    {
+      "id": 1011,
+      "name": "Giant's Belt",
+      "gold": 900
+    },
+    {
+      "id": 1031,
+      "name": "Chain Vest",
+      "gold": 800
+    },
+    {
+      "id": 1057,
+      "name": "Negatron Cloak",
+      "gold": 850
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -37,7 +49,7 @@
   "shop": {
     "prices": {
       "total": 3200,
-      "combined": 0,
+      "combined": 650,
       "sell": 1280
     },
     "purchasable": true,

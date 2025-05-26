@@ -6,11 +6,23 @@
     "Epic"
   ],
   "buildsFrom": [
-    1033
+    {
+      "id": 1033,
+      "name": "Null-Magic Mantle",
+      "gold": 400
+    }
   ],
   "buildsInto": [
-    6035,
-    3139
+    {
+      "id": 6035,
+      "name": "Silvermere Dawn",
+      "gold": 3000
+    },
+    {
+      "id": 3139,
+      "name": "Mercurial Scimitar",
+      "gold": 3200
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -38,7 +50,7 @@
   "shop": {
     "prices": {
       "total": 1300,
-      "combined": 0,
+      "combined": 900,
       "sell": 520
     },
     "purchasable": true,

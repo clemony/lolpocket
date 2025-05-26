@@ -6,14 +6,38 @@
     "Epic"
   ],
   "buildsFrom": [
-    1028,
-    1028,
-    1027
+    {
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
+    },
+    {
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
+    },
+    {
+      "id": 1027,
+      "name": "Sapphire Crystal",
+      "gold": 300
+    }
   ],
   "buildsInto": [
-    326657,
-    4402,
-    6657
+    {
+      "id": 326657,
+      "name": "Rod of Ages",
+      "gold": 2600
+    },
+    {
+      "id": 4402,
+      "name": "Innervating Locket",
+      "gold": 2950
+    },
+    {
+      "id": 6657,
+      "name": "Rod of Ages",
+      "gold": 2600
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -40,7 +64,7 @@
   "shop": {
     "prices": {
       "total": 1300,
-      "combined": 0,
+      "combined": 200,
       "sell": 520
     },
     "purchasable": true,

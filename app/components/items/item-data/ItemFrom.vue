@@ -1,36 +1,38 @@
 <script lang="ts" setup>
-const {from, base} = defineProps<{
-  from: number[]
-  base?: boolean
-
+const { from, gold } = defineProps<{
+  from: ItemComponent[]
+  gold: number
 }>()
-
-
-
-const { data } = await useFetch('/api/items-lite.json')
-
-
 </script>
 
 <template>
-  <div v-if="from">
-    <div class="divider divider-start after:h-px  "   :class="{'after:!bg-b3/90': base, 'after:bg-nc/30 ': !base}">
+  <div v-if="from" class=" mt-1">
+    <div class="divider divider-start after:h-px after:bg-nc/15 !text-0">
       RECIPE
     </div>
-    <div class="group flex items-center justify-center py-2 gap-4">
-    
-        <div
-          v-for="(component, i) in from"
-            v-tippy="`${data[component].name} ‑ ${data[component].cost}g`"
-          :key="i">
-          <LazyPopoverItem :item="component"
-            class="ring-accent  size-10 overflow-hidden rounded-lg shadow-sm hover:ring-2  hover:ring-offset-2 hover:ring-offset-b1/30 tldr-20"/>
+    <div class="group flex items-center justify-center py-2 gap-3">
+      <div
+        v-for="(item, i) in from"
+        :key="i"
+        v-tippy="`${item.name} ‑ ${item.gold}g`" class="flex gap-3 items-center">
+        <LazyPopoverItem
+          :item="item.id"
+          class="ring-accent  size-10 overflow-hidden rounded-lg shadow-sm hover:ring-2  hover:ring-offset-2 hover:ring-offset-b1/30 tldr-20" />
 
-          <icon
-            name="add-sm"
-            class=" last:hidden" />
-        </div>
-    
+        <icon
+          v-if="i != from.length - 1"
+          name="dashicons:plus"
+          class=" opacity-80 size-3.5" />
+      </div>
+
+      <div v-if="gold" class="flex items-center  !text-nc">
+        <icon
+          name="dashicons:plus"
+          class=" opacity-80 size-3.5" />
+
+        <Img img="/img/icons/gold-coin.webp" alt="coin" class="size-4.25 ml-3 opacity-80 mr-1" />
+        {{ gold }}
+      </div>
     </div>
   </div>
 </template>

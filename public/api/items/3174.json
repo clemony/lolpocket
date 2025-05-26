@@ -6,7 +6,11 @@
     "Boots"
   ],
   "buildsFrom": [
-    3047
+    {
+      "id": 3047,
+      "name": "Plated Steelcaps",
+      "gold": 1200
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -28,7 +32,7 @@
     {
       "name": "Noxian Endurance",
       "unique": true,
-      "effects": "Taking physical damage from champions grants you a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs (+ 4% <b>maximum</b> health) physical damage for 4 seconds.",
+      "effects": "Taking physical damage from champions grants you a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs 10 – 120 (based on level) (+4% <b>maximum</b> health) physical damage for 4 seconds.",
       "cooldown": "15",
       "range": null
     }
@@ -41,7 +45,7 @@
   "shop": {
     "prices": {
       "total": 1700,
-      "combined": 0,
+      "combined": 500,
       "sell": 680
     },
     "purchasable": true,

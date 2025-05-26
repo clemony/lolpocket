@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3066,
-    1028,
-    1031
+    {
+      "id": 3066,
+      "name": "Winged Moonplate",
+      "gold": 800
+    },
+    {
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
+    },
+    {
+      "id": 1031,
+      "name": "Chain Vest",
+      "gold": 800
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -28,7 +40,7 @@
     {
       "name": "Shipwrecker",
       "unique": true,
-      "effects": "While moving, generates 7 stacks of <i>Momentum</i> every 0.25s seconds, granting up to 20 <b>bonus</b> movement speed at 100 stacks after 3.75s seconds of moving. Basic attacks consume all stacks to deal +0 to 100 Momentum physical damage (+0 to 100% Momentum <b>base</b> AD) <b>bonus</b> physical damage on-hit.",
+      "effects": "While moving, generates 7 stacks of <i>Momentum</i> every 0.25 seconds, granting up to 20 <b>bonus</b> movement speed at 100 stacks after 3.75 seconds of moving. Basic attacks consume all stacks to deal 0 – 40 (based on Momentum) physical damage (+0% – 100% (based on Momentum) <b>base</b> AD) <b>bonus</b> physical damage on-hit.",
       "cooldown": null,
       "range": null
     },
@@ -49,7 +61,7 @@
   "shop": {
     "prices": {
       "total": 2900,
-      "combined": 0,
+      "combined": 900,
       "sell": 1160
     },
     "purchasable": true,

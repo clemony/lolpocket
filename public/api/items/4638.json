@@ -7,7 +7,11 @@
   ],
   "buildsFrom": [],
   "buildsInto": [
-    4643
+    {
+      "id": 4643,
+      "name": "Vigilant Wardstone",
+      "gold": 2300
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -24,7 +28,7 @@
     {
       "name": "Arcane Cache",
       "unique": true,
-      "effects": "Purchasing a {{ii|Control Ward}} stocks it as a charge, up to maximum of 3.",
+      "effects": "Purchasing a <img src=\"/img/icons/control-ward.webp\" class=\"tip-icon\" />Control Ward stocks it as a charge, up to maximum of 3.",
       "cooldown": null,
       "range": null
     }
@@ -47,7 +51,7 @@
   "shop": {
     "prices": {
       "total": 1100,
-      "combined": 0,
+      "combined": 1100,
       "sell": 440
     },
     "purchasable": true,

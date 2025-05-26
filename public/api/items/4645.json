@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3145,
-    1058
+    {
+      "id": 3145,
+      "name": "Hextech Alternator",
+      "gold": 1100
+    },
+    {
+      "id": 1058,
+      "name": "Needlessly Large Rod",
+      "gold": 1200
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -22,7 +30,7 @@
     {
       "name": "Cinderbloom",
       "unique": true,
-      "effects": "Magic magic damage and true true damage damage <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critically strike against enemies below 40% <b>maximum</b> health for 120% damage.",
+      "effects": "Magic magic damage and true damage damage <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critically strike against enemies below 40% <b>maximum</b> health for 120% damage.",
       "cooldown": null,
       "range": null
     }
@@ -35,7 +43,7 @@
   "shop": {
     "prices": {
       "total": 3200,
-      "combined": 0,
+      "combined": 900,
       "sell": 1280
     },
     "purchasable": true,

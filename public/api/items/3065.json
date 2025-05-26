@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3211,
-    3067
+    {
+      "id": 3211,
+      "name": "Spectre's Cowl",
+      "gold": 1250
+    },
+    {
+      "id": 3067,
+      "name": "Kindlegem",
+      "gold": 800
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -24,7 +32,7 @@
     {
       "name": "Boundless Vitality",
       "unique": true,
-      "effects": "Increases all <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healing and <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding received as well as <img src=\"/img/icons/health-regeneration.webp\" class=\"tip-icon\"  />health regeneration by 25%.",
+      "effects": "Increases all <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healing and <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding received as well as <img src=\"/img/icons/health-regeneration.webp\" class=\"tip-icon\" />health regeneration by 25%.",
       "cooldown": null,
       "range": null
     }
@@ -39,7 +47,7 @@
   "shop": {
     "prices": {
       "total": 2700,
-      "combined": 0,
+      "combined": 650,
       "sell": 1080
     },
     "purchasable": true,

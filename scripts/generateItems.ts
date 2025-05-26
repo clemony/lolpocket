@@ -22,6 +22,8 @@ async function buildItems() {
     if (item.id === 2146)
       continue
 
+    const sharedVars = new Map<string, string>()
+
     const stats = formatStats(item.stats)
     const { rank, tags, maps } = normalizeItemData(item)
 
@@ -54,7 +56,7 @@ async function buildItems() {
     const active = item.active || []
     const expandedActive = await Promise.all(
       active.map(async (a) => {
-        const effects = await handleWikiText(a.effects)
+        const effects = await handleWikiText(a.effects, sharedVars)
         return {
           name: a.name,
           unique: a.unique,
@@ -70,7 +72,7 @@ async function buildItems() {
     const passives = item.passives || []
     const expandedPassives = await Promise.all(
       passives.map(async (p) => {
-        const effects = await handleWikiText(p.effects)
+        const effects = await handleWikiText(p.effects, sharedVars)
         return {
           name: p.name,
           unique: p.unique,

@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3082,
-    3024
+    {
+      "id": 3082,
+      "name": "Warden's Mail",
+      "gold": 1000
+    },
+    {
+      "id": 3024,
+      "name": "Glacial Buckler",
+      "gold": 900
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -38,7 +46,7 @@
   "shop": {
     "prices": {
       "total": 2500,
-      "combined": 0,
+      "combined": 600,
       "sell": 1000
     },
     "purchasable": true,

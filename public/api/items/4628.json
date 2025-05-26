@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3108,
-    3108,
-    1026
+    {
+      "id": 3108,
+      "name": "Fiendish Codex",
+      "gold": 850
+    },
+    {
+      "id": 3108,
+      "name": "Fiendish Codex",
+      "gold": 850
+    },
+    {
+      "id": 1026,
+      "name": "Blasting Wand",
+      "gold": 850
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -26,14 +38,14 @@
     {
       "name": "Hypershot",
       "unique": true,
-      "effects": "Dealing ability damage to a champion at <img src=\"/img/icons/cr.webp\" class=\"tip-icon\" />icononly = true 600 or more units away from the cast position <img src=\"/img/icons/standard-sight.webp\" class=\"tip-icon\" />reveals them for 6 seconds.",
+      "effects": "Dealing ability damage to a champion at 600 or more units away from the cast position <img src=\"/img/icons/standard-sight.webp\" class=\"tip-icon\" />reveals them for 6 seconds.",
       "cooldown": null,
       "range": null
     },
     {
       "name": "Focus",
       "unique": true,
-      "effects": "Upon triggering <i>Hypershot</i>, grant <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the area <img src=\"/img/icons/cr.webp\" class=\"tip-icon\" />icononly=true 1400 units around the target for 2 seconds and apply <i>Hypershot's</i> effects to enemy champions within the area for 3 seconds.",
+      "effects": "Upon triggering <i>Hypershot</i>, grant <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the area 1400 units around the target for 2 seconds and apply <i>Hypershot's</i> effects to enemy champions within the area for 3 seconds.",
       "cooldown": "30",
       "range": null
     }
@@ -46,7 +58,7 @@
   "shop": {
     "prices": {
       "total": 2900,
-      "combined": 0,
+      "combined": 350,
       "sell": 1160
     },
     "purchasable": true,

@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    1026,
-    1011,
-    1052
+    {
+      "id": 1026,
+      "name": "Blasting Wand",
+      "gold": 850
+    },
+    {
+      "id": 1011,
+      "name": "Giant's Belt",
+      "gold": 900
+    },
+    {
+      "id": 1052,
+      "name": "Amplifying Tome",
+      "gold": 400
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -38,7 +50,7 @@
   "shop": {
     "prices": {
       "total": 2600,
-      "combined": 0,
+      "combined": 450,
       "sell": 1040
     },
     "purchasable": true,

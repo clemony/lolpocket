@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3044,
-    3067,
-    1037
+    {
+      "id": 3044,
+      "name": "Phage",
+      "gold": 1100
+    },
+    {
+      "id": 3067,
+      "name": "Kindlegem",
+      "gold": 800
+    },
+    {
+      "id": 1037,
+      "name": "Pickaxe",
+      "gold": 875
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -46,7 +58,7 @@
   "shop": {
     "prices": {
       "total": 3000,
-      "combined": 0,
+      "combined": 225,
       "sell": 1200
     },
     "purchasable": true,

@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3140,
-    1037,
-    1053
+    {
+      "id": 3140,
+      "name": "Quicksilver Sash",
+      "gold": 1300
+    },
+    {
+      "id": 1037,
+      "name": "Pickaxe",
+      "gold": 875
+    },
+    {
+      "id": 1053,
+      "name": "Vampiric Scepter",
+      "gold": 900
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -26,7 +38,7 @@
     {
       "name": "Quicksilver",
       "unique": true,
-      "effects": "Removes all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon\" />Airborne) from your champion and grants 50% <b>bonus total</b> movement speed and <img src=\"/img/icons/ghosted.webp\" class=\"tip-icon\" />ghosting for 1.5s seconds.",
+      "effects": "Removes all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon\" />Airborne) from your champion and grants 50% <b>bonus total</b> movement speed and <img src=\"/img/icons/ghosted.webp\" class=\"tip-icon\" />ghosting for 1.5 seconds.",
       "cooldown": null,
       "range": null
     }
@@ -39,7 +51,7 @@
   "shop": {
     "prices": {
       "total": 3200,
-      "combined": 0,
+      "combined": 125,
       "sell": 1280
     },
     "purchasable": true,

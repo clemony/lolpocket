@@ -6,11 +6,23 @@
     "Epic"
   ],
   "buildsFrom": [
-    1052
+    {
+      "id": 1052,
+      "name": "Amplifying Tome",
+      "gold": 400
+    }
   ],
   "buildsInto": [
-    6653,
-    2503
+    {
+      "id": 6653,
+      "name": "Liandry's Torment",
+      "gold": 3000
+    },
+    {
+      "id": 2503,
+      "name": "Blackfire Torch",
+      "gold": 2800
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -24,7 +36,7 @@
     {
       "name": "Inflame",
       "unique": true,
-      "effects": "Dealing ability damage burns enemies, causing them to take 2.5 magic damage every 0.5s seconds over 3 seconds, for a total of 15% attack speed. Against monsters, the burn deals 7.5s <b>bonus</b> magic damage per tick, dealing a total of 10 magic damage per tick for up to 60% attack speed.",
+      "effects": "Dealing ability damage burns enemies, causing them to take 2.5 magic damage every 0.5 seconds over 3 seconds, for a total of 15 magic damage. Against monsters, the burn deals 7.5 <b>bonus</b> magic damage per tick, dealing a total of 10 magic damage per tick for up to 60 magic damage.",
       "cooldown": null,
       "range": null
     }
@@ -36,7 +48,7 @@
   "shop": {
     "prices": {
       "total": 900,
-      "combined": 0,
+      "combined": 500,
       "sell": 360
     },
     "purchasable": true,

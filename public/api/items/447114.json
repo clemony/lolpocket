@@ -26,7 +26,7 @@
     {
       "name": "Resonate",
       "unique": true,
-      "effects": "Basic attacks on-hit deal 10% attack speed (+ 2% of your <b>bonus</b> health) <b>bonus</b> magic damage.",
+      "effects": "Basic attacks on-hit deal 10 magic damage (+2% of your <b>bonus</b> health) <b>bonus</b> magic damage.",
       "cooldown": null,
       "range": null
     },
@@ -47,7 +47,7 @@
   "shop": {
     "prices": {
       "total": 0,
-      "combined": 0,
+      "combined": 1000,
       "sell": 0
     },
     "purchasable": true,

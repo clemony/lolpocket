@@ -6,11 +6,23 @@
     "Boots"
   ],
   "buildsFrom": [
-    1001,
-    1033
+    {
+      "id": 1001,
+      "name": "Boots",
+      "gold": 300
+    },
+    {
+      "id": 1033,
+      "name": "Null-Magic Mantle",
+      "gold": 400
+    }
   ],
   "buildsInto": [
-    3173
+    {
+      "id": 3173,
+      "name": "Chainlaced Crushers",
+      "gold": 1750
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -33,7 +45,7 @@
   "shop": {
     "prices": {
       "total": 1250,
-      "combined": 0,
+      "combined": 550,
       "sell": 500
     },
     "purchasable": true,

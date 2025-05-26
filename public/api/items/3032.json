@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    1038,
-    3144,
-    1036
+    {
+      "id": 1038,
+      "name": "B. F. Sword",
+      "gold": 1300
+    },
+    {
+      "id": 3144,
+      "name": "Scout's Slingshot",
+      "gold": 600
+    },
+    {
+      "id": 1036,
+      "name": "Long Sword",
+      "gold": 350
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -26,7 +38,7 @@
     {
       "name": "Practice Makes Lethal",
       "unique": true,
-      "effects": "Basic attacks on-attack grant <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />0.4s%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />0.2s%)</span> critical strike chance permanently, stacking up to 63 times (capped at 25% critical strike chance).",
+      "effects": "Basic attacks on-attack grant (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />0.4% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />0.2%) critical strike chance permanently, stacking up to (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />63 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />125) times (capped at 25% critical strike chance).",
       "cooldown": null,
       "range": null
     },
@@ -46,7 +58,7 @@
   "shop": {
     "prices": {
       "total": 3000,
-      "combined": 0,
+      "combined": 750,
       "sell": 1200
     },
     "purchasable": true,

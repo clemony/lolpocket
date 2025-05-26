@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    1038,
-    1037,
-    1018
+    {
+      "id": 1038,
+      "name": "B. F. Sword",
+      "gold": 1300
+    },
+    {
+      "id": 1037,
+      "name": "Pickaxe",
+      "gold": 875
+    },
+    {
+      "id": 1018,
+      "name": "Cloak of Agility",
+      "gold": 600
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -31,7 +43,7 @@
   "shop": {
     "prices": {
       "total": 3450,
-      "combined": 0,
+      "combined": 675,
       "sell": 1380
     },
     "purchasable": true,

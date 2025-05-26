@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3144,
-    6690,
-    1037
+    {
+      "id": 3144,
+      "name": "Scout's Slingshot",
+      "gold": 600
+    },
+    {
+      "id": 6690,
+      "name": "Rectrix",
+      "gold": 775
+    },
+    {
+      "id": 1037,
+      "name": "Pickaxe",
+      "gold": 875
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -23,7 +35,7 @@
     {
       "name": "Electrospark",
       "unique": true,
-      "effects": "Your next 3 basic attacks <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon\" />on-hit within 8 seconds are empowered to deal 60 <b>bonus</b> magic damage, increased to 85% attack speed against non-champions. This bounces to the closest target within 500 units, repeating from the new target to strike up to 5 targets (+1;8 to 12 second cooldown, starts after using the first empowered attack).",
+      "effects": "Your next 3 basic attacks <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon\" />on-hit within 8 seconds are empowered to deal 60 <b>bonus</b> magic damage, increased to 85 magic damage against non-champions. This bounces to the closest target within 500 units, repeating from the new target to strike up to 5 targets (25 – 10 (based on level) second cooldown, starts after using the first empowered attack).",
       "cooldown": null,
       "range": null
     },
@@ -44,7 +56,7 @@
   "shop": {
     "prices": {
       "total": 2700,
-      "combined": 0,
+      "combined": 450,
       "sell": 1080
     },
     "purchasable": true,

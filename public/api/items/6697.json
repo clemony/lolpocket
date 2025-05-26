@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3134,
-    3133
+    {
+      "id": 3134,
+      "name": "Serrated Dirk",
+      "gold": 1000
+    },
+    {
+      "id": 3133,
+      "name": "Caulfield's Warhammer",
+      "gold": 1050
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -22,7 +30,7 @@
     {
       "name": "Eminence",
       "unique": true,
-      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon\" />takedown against an enemy champion within 3 seconds of damaging them generates a permanent stack and grants you 15% attack speed (+ 2 per stack) <b>bonus</b> attack damage for 90 seconds.",
+      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon\" />takedown against an enemy champion within 3 seconds of damaging them generates a permanent stack and grants you 15 ad (+2 per stack) <b>bonus</b> attack damage for 90 seconds.",
       "cooldown": null,
       "range": null
     }
@@ -36,7 +44,7 @@
   "shop": {
     "prices": {
       "total": 3000,
-      "combined": 0,
+      "combined": 950,
       "sell": 1200
     },
     "purchasable": true,

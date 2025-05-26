@@ -19,7 +19,7 @@
     {
       "name": "Enduring Vitality",
       "unique": true,
-      "effects": "Gain {{sti|hsp|2.5s% heal and shield power}} per 100 <b>current</b> health you are missing, up to 60% at 2400 <b>current</b> health missing.",
+      "effects": "Gain <img src=\"/img/icons/hsp.webp\" class=\"tip-icon\" />hsp per 100 <b>current</b> health you are missing, up to 60% at 2400 <b>current</b> health missing.",
       "cooldown": null,
       "range": null
     }
@@ -33,7 +33,7 @@
   "shop": {
     "prices": {
       "total": 0,
-      "combined": 0,
+      "combined": 1000,
       "sell": 0
     },
     "purchasable": true,

@@ -6,19 +6,63 @@
     "Epic"
   ],
   "buildsFrom": [
-    1004,
-    1052,
-    2022
+    {
+      "id": 1004,
+      "name": "Faerie Charm",
+      "gold": 200
+    },
+    {
+      "id": 1052,
+      "name": "Amplifying Tome",
+      "gold": 400
+    },
+    {
+      "id": 2022,
+      "name": "Glowing Mote",
+      "gold": 250
+    }
   ],
   "buildsInto": [
-    322065,
-    2065,
-    6620,
-    324005,
-    326617,
-    326620,
-    4005,
-    6617
+    {
+      "id": 322065,
+      "name": "Shurelya's Battlesong",
+      "gold": 2600
+    },
+    {
+      "id": 2065,
+      "name": "Shurelya's Battlesong",
+      "gold": 2200
+    },
+    {
+      "id": 6620,
+      "name": "Echoes of Helia",
+      "gold": 2200
+    },
+    {
+      "id": 324005,
+      "name": "Imperial Mandate",
+      "gold": 2750
+    },
+    {
+      "id": 326617,
+      "name": "Moonstone Renewer",
+      "gold": 2900
+    },
+    {
+      "id": 326620,
+      "name": "Echoes of Helia",
+      "gold": 2600
+    },
+    {
+      "id": 4005,
+      "name": "Imperial Mandate",
+      "gold": 2250
+    },
+    {
+      "id": 6617,
+      "name": "Moonstone Renewer",
+      "gold": 2200
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -40,7 +84,7 @@
   "shop": {
     "prices": {
       "total": 900,
-      "combined": 0,
+      "combined": 50,
       "sell": 360
     },
     "purchasable": true,

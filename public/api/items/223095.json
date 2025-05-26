@@ -28,7 +28,7 @@
     {
       "name": "Bolt",
       "unique": true,
-      "effects": "When fully <img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized, your next basic attack deals 100 <b>bonus</b> magic damage on-hit and grants you 45% <b>bonus</b> movement speed for 1.5s seconds.",
+      "effects": "When fully <img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized, your next basic attack deals 100 <b>bonus</b> magic damage on-hit and grants you 45% <b>bonus</b> movement speed for 1.5 seconds.",
       "cooldown": null,
       "range": null
     }
@@ -42,7 +42,7 @@
   "shop": {
     "prices": {
       "total": 2500,
-      "combined": 0,
+      "combined": 2500,
       "sell": 1000
     },
     "purchasable": true,

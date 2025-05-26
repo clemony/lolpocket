@@ -6,29 +6,113 @@
     "Epic"
   ],
   "buildsFrom": [
-    1036,
-    2022,
-    1036
+    {
+      "id": 1036,
+      "name": "Long Sword",
+      "gold": 350
+    },
+    {
+      "id": 2022,
+      "name": "Glowing Mote",
+      "gold": 250
+    },
+    {
+      "id": 1036,
+      "name": "Long Sword",
+      "gold": 350
+    }
   ],
   "buildsInto": [
-    3156,
-    126697,
-    3004,
-    6693,
-    6692,
-    323004,
-    6691,
-    3074,
-    6694,
-    6697,
-    4402,
-    3508,
-    3179,
-    6333,
-    6609,
-    6610,
-    6632,
-    6696
+    {
+      "id": 3156,
+      "name": "Maw of Malmortius",
+      "gold": 3100
+    },
+    {
+      "id": 126697,
+      "name": "Hubris",
+      "gold": 2950
+    },
+    {
+      "id": 3004,
+      "name": "Manamune",
+      "gold": 2900
+    },
+    {
+      "id": 6693,
+      "name": "Prowler's Claw",
+      "gold": 2850
+    },
+    {
+      "id": 6692,
+      "name": "Eclipse",
+      "gold": 2900
+    },
+    {
+      "id": 323004,
+      "name": "Manamune",
+      "gold": 2900
+    },
+    {
+      "id": 6691,
+      "name": "Duskblade of Draktharr",
+      "gold": 2950
+    },
+    {
+      "id": 3074,
+      "name": "Ravenous Hydra",
+      "gold": 3300
+    },
+    {
+      "id": 6694,
+      "name": "Serylda's Grudge",
+      "gold": 3000
+    },
+    {
+      "id": 6697,
+      "name": "Hubris",
+      "gold": 3000
+    },
+    {
+      "id": 4402,
+      "name": "Innervating Locket",
+      "gold": 2950
+    },
+    {
+      "id": 3508,
+      "name": "Essence Reaver",
+      "gold": 2900
+    },
+    {
+      "id": 3179,
+      "name": "Umbral Glaive",
+      "gold": 2500
+    },
+    {
+      "id": 6333,
+      "name": "Death's Dance",
+      "gold": 3300
+    },
+    {
+      "id": 6609,
+      "name": "Chempunk Chainsword",
+      "gold": 3100
+    },
+    {
+      "id": 6610,
+      "name": "Sundered Sky",
+      "gold": 3100
+    },
+    {
+      "id": 6632,
+      "name": "Divine Sunderer",
+      "gold": 3450
+    },
+    {
+      "id": 6696,
+      "name": "Axiom Arc",
+      "gold": 3000
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -47,7 +131,7 @@
   "shop": {
     "prices": {
       "total": 1050,
-      "combined": 0,
+      "combined": 100,
       "sell": 420
     },
     "purchasable": true,

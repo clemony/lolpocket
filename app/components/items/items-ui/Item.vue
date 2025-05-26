@@ -18,7 +18,7 @@ function handleLoad() {
 
     <Img
       v-if="id"
-      :img="`https://ddragon.leagueoflegends.com/cdn/15.10.1/img/item/${id}.png`"
+      :img="`/img/item/${id}.webp`"
       alt="Item Image"
       class="aspect-square opacity-96 size-full rounded-lg" @loaded="handleLoad()" />
 

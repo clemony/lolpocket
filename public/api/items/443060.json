@@ -21,7 +21,7 @@
     {
       "name": "Excoriate",
       "unique": true,
-      "effects": "<img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />Critical strikes gain random <b>bonus</b> critical strike damage critical damage that scales up to 50% of critical strike chance.",
+      "effects": "<img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />Critical strikes gain random <b>bonus</b> critical strike damage that scales up to 50% of critical strike chance.",
       "cooldown": null,
       "range": null
     }
@@ -33,7 +33,7 @@
   "shop": {
     "prices": {
       "total": 0,
-      "combined": 0,
+      "combined": 1000,
       "sell": 0
     },
     "purchasable": true,

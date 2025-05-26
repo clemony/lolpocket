@@ -52,17 +52,16 @@ export async function useFetchSummonerData(queryPuuid: string) {
     matches: [],
   }
   if (summoner.puuid == as.userAccount.riot.puuid) {
-  console.log("💠 - useFetchSummonerData - as.userAccount.puuid:", as.userAccount.riot.puuid)
-  console.log("💠 - useFetchSummonerData - summoner.puuid:", summoner.puuid)
+    console.log('💠 - useFetchSummonerData - as.userAccount.puuid:', as.userAccount.riot.puuid)
+    console.log('💠 - useFetchSummonerData - summoner.puuid:', summoner.puuid)
 
-      as.userAccount.riot.tag = tag,
-       as.userAccount.riot.puuid = puuid,
-      as.userAccount.riot.profileIcon = profileIcon,
-       console.log("💠 - useFetchSummonerData - as.userAccount.riot.profileIcon:", as.userAccount.riot.profileIcon)
-       as.userAccount.riot.level = level,
-       as.userAccount.riot.region = region,
-      as.userAccount.riot.name = name
-
+    as.userAccount.riot.tag = tag
+    as.userAccount.riot.puuid = puuid
+    as.userAccount.riot.profileIcon = profileIcon
+    console.log('💠 - useFetchSummonerData - as.userAccount.riot.profileIcon:', as.userAccount.riot.profileIcon)
+    as.userAccount.riot.level = level
+    as.userAccount.riot.region = region
+    as.userAccount.riot.name = name
   }
 
   return summoner

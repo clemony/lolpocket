@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const as = useAccountStore()
 const appConfig = useAppConfig()
-const useHead = useHeader()
 
 onMounted(async () => {
   document.documentElement.setAttribute('data-theme', as.dataTheme ? as.dataTheme : 'midnight')

@@ -6,13 +6,33 @@
     "Epic"
   ],
   "buildsFrom": [
-    2022
+    {
+      "id": 2022,
+      "name": "Glowing Mote",
+      "gold": 250
+    }
   ],
   "buildsInto": [
-    3100,
-    6662,
-    3078,
-    6632
+    {
+      "id": 3100,
+      "name": "Lich Bane",
+      "gold": 2900
+    },
+    {
+      "id": 6662,
+      "name": "Iceborn Gauntlet",
+      "gold": 2900
+    },
+    {
+      "id": 3078,
+      "name": "Trinity Force",
+      "gold": 3333
+    },
+    {
+      "id": 6632,
+      "name": "Divine Sunderer",
+      "gold": 3450
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -28,7 +48,7 @@
     {
       "name": "Spellblade",
       "unique": true,
-      "effects": "After using an ability, your next basic attack within 10 seconds deals 100% <b>base</b> AD <b>bonus</b> physical damage on-hit (1.5s second cooldown, starts after using the empowered attack).",
+      "effects": "After using an ability, your next basic attack within 10 seconds deals 100% <b>base</b> AD <b>bonus</b> physical damage on-hit (1.5 second cooldown, starts after using the empowered attack).",
       "cooldown": null,
       "range": null
     }
@@ -40,7 +60,7 @@
   "shop": {
     "prices": {
       "total": 900,
-      "combined": 0,
+      "combined": 650,
       "sell": 360
     },
     "purchasable": true,

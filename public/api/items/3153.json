@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    1053,
-    1043,
-    1037
+    {
+      "id": 1053,
+      "name": "Vampiric Scepter",
+      "gold": 900
+    },
+    {
+      "id": 1043,
+      "name": "Recurve Bow",
+      "gold": 700
+    },
+    {
+      "id": 1037,
+      "name": "Pickaxe",
+      "gold": 875
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -28,7 +40,7 @@
     {
       "name": "Mist's Edge",
       "unique": true,
-      "effects": "Basic attacks deal <b>bonus</b> physical damage on-hit equal to <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />8%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />5%)</span> of the target's <b>current</b> health, with a <b>maximum</b> of 100 against <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions and <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters.",
+      "effects": "Basic attacks deal <b>bonus</b> physical damage on-hit equal to (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />8% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />5%) of the target's <b>current</b> health, with a <b>maximum</b> of 100 against <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions and <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters.",
       "cooldown": null,
       "range": null
     },
@@ -49,7 +61,7 @@
   "shop": {
     "prices": {
       "total": 3200,
-      "combined": 0,
+      "combined": 725,
       "sell": 1280
     },
     "purchasable": true,

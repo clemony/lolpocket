@@ -6,22 +6,78 @@
     "Epic"
   ],
   "buildsFrom": [
-    1036,
-    1036
+    {
+      "id": 1036,
+      "name": "Long Sword",
+      "gold": 350
+    },
+    {
+      "id": 1036,
+      "name": "Long Sword",
+      "gold": 350
+    }
   ],
   "buildsInto": [
-    3142,
-    126697,
-    6693,
-    6691,
-    3814,
-    4004,
-    6676,
-    6697,
-    3131,
-    3179,
-    6695,
-    6701
+    {
+      "id": 3142,
+      "name": "Youmuu's Ghostblade",
+      "gold": 2800
+    },
+    {
+      "id": 126697,
+      "name": "Hubris",
+      "gold": 2950
+    },
+    {
+      "id": 6693,
+      "name": "Prowler's Claw",
+      "gold": 2850
+    },
+    {
+      "id": 6691,
+      "name": "Duskblade of Draktharr",
+      "gold": 2950
+    },
+    {
+      "id": 3814,
+      "name": "Edge of Night",
+      "gold": 3000
+    },
+    {
+      "id": 4004,
+      "name": "Spectral Cutlass",
+      "gold": 3900
+    },
+    {
+      "id": 6676,
+      "name": "The Collector",
+      "gold": 3000
+    },
+    {
+      "id": 6697,
+      "name": "Hubris",
+      "gold": 3000
+    },
+    {
+      "id": 3131,
+      "name": "Sword of the Divine",
+      "gold": 2300
+    },
+    {
+      "id": 3179,
+      "name": "Umbral Glaive",
+      "gold": 2500
+    },
+    {
+      "id": 6695,
+      "name": "Serpent's Fang",
+      "gold": 2500
+    },
+    {
+      "id": 6701,
+      "name": "Opportunity",
+      "gold": 2700
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -40,7 +96,7 @@
   "shop": {
     "prices": {
       "total": 1000,
-      "combined": 0,
+      "combined": 300,
       "sell": 400
     },
     "purchasable": true,

@@ -25,7 +25,7 @@
     {
       "name": "Undaunted",
       "unique": true,
-      "effects": "Reduces all sources of incoming champion damage by 15 <i>(3.75s against damage over time abilities)</i>.",
+      "effects": "Reduces all sources of incoming champion damage by 15 <i>(3.75 against damage over time abilities)</i>.",
       "cooldown": null,
       "range": null
     }
@@ -38,7 +38,7 @@
   "shop": {
     "prices": {
       "total": 950,
-      "combined": 0,
+      "combined": 950,
       "sell": 380
     },
     "purchasable": true,

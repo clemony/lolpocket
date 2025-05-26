@@ -6,13 +6,33 @@
     "Epic"
   ],
   "buildsFrom": [
-    1036,
-    1036
+    {
+      "id": 1036,
+      "name": "Long Sword",
+      "gold": 350
+    },
+    {
+      "id": 1036,
+      "name": "Long Sword",
+      "gold": 350
+    }
   ],
   "buildsInto": [
-    6694,
-    3033,
-    3036
+    {
+      "id": 6694,
+      "name": "Serylda's Grudge",
+      "gold": 3000
+    },
+    {
+      "id": 3033,
+      "name": "Mortal Reminder",
+      "gold": 3300
+    },
+    {
+      "id": 3036,
+      "name": "Lord Dominik's Regards",
+      "gold": 3100
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -33,7 +53,7 @@
   "shop": {
     "prices": {
       "total": 1450,
-      "combined": 0,
+      "combined": 750,
       "sell": 580
     },
     "purchasable": true,

@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    2021,
-    2021
+    {
+      "id": 2021,
+      "name": "Tunneler",
+      "gold": 1150
+    },
+    {
+      "id": 2021,
+      "name": "Tunneler",
+      "gold": 1150
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -22,14 +30,14 @@
     {
       "name": "Tyranny",
       "unique": true,
-      "effects": "Gain <b>bonus</b> attack damage equal to 2.5s% <b>bonus</b> health.",
+      "effects": "Gain <b>bonus</b> attack damage equal to 2.5% <b>bonus</b> health.",
       "cooldown": null,
       "range": null
     },
     {
       "name": "Retribution",
       "unique": true,
-      "effects": "Gain <b>bonus</b> attack damage equal to +0 to 70% missing health of your <b>total</b> attack damage from other sources.",
+      "effects": "Gain <b>bonus</b> attack damage equal to 0% – 70% (based on missing health) of your <b>total</b> attack damage from other sources.",
       "cooldown": null,
       "range": null
     }
@@ -42,7 +50,7 @@
   "shop": {
     "prices": {
       "total": 3300,
-      "combined": 0,
+      "combined": 1000,
       "sell": 1320
     },
     "purchasable": true,

@@ -21,9 +21,39 @@ async function run() {
       const maItem = maItems[key]
       const ddItem = ddItems[key]
 
+      const expandIds = (ids?: number[]) => {
+        if (!ids)
+          return undefined
+        return ids
+          .map((id) => {
+            const item = ddItems[id.toString()]
+            if (!item)
+              return null
+            return {
+              id,
+              name: item.name,
+              gold: item.gold?.total ?? null,
+            }
+          })
+          .filter(Boolean) // removes nulls
+      }
+
       merged[key] = {
         ...maItem,
         ...(ddItem?.maps ? { maps: ddItem.maps } : {}),
+        ...(ddItem?.gold?.base != null
+          ? {
+              shop: {
+                ...maItem.shop,
+                prices: {
+                  ...maItem.shop?.prices,
+                  combined: ddItem.gold.base,
+                },
+              },
+            }
+          : {}),
+        buildsFrom: expandIds(maItem.buildsFrom),
+        buildsInto: expandIds(maItem.buildsInto),
       }
     }
 

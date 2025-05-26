@@ -7,15 +7,16 @@ const { data, type } = defineProps<{
 
 <template>
   <div
-    class="w-full  flex flex-wrap text-wrap leading-normal items-center [&_img]:size-4 gap-x-1 [&_img]:align-bottom [&_img]:self-end">
-    <div class="py-1  *:!text-precision/90">
-      <span v-if="data.unique" class=" italic   tracking-tight">Unique {{ type }} -&nbsp;</span>
-      <span v-if="data.name" class="italic tracking-tight">{{ data.name }}: &nbsp;</span>
-    </div>
+    class="w-full    text-wrap leading-normal  gap-x-1 align-middle mt-2">
+    <span v-if="data.unique" class=" italic  !text-precision/90 tracking-tight">Unique {{ type }}</span>
+    <span v-if="data.name" class="italic !text-precision/90 tracking-tight"> -&nbsp;{{ data.name }}</span>
+    <span v-if="data.unique || data.name" class=" !text-precision/90">
+      :&nbsp;
+    </span>
 
     <span
       v-if="data.effects"
-      class="inline align-middle"
+      class=""
       v-html="data.effects" />
   </div>
 </template>

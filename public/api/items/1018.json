@@ -7,13 +7,41 @@
   ],
   "buildsFrom": [],
   "buildsInto": [
-    6670,
-    3086,
-    3095,
-    6676,
-    3031,
-    3033,
-    3508
+    {
+      "id": 6670,
+      "name": "Noonquiver",
+      "gold": 1300
+    },
+    {
+      "id": 3086,
+      "name": "Zeal",
+      "gold": 1200
+    },
+    {
+      "id": 3095,
+      "name": "Stormrazor",
+      "gold": 3100
+    },
+    {
+      "id": 6676,
+      "name": "The Collector",
+      "gold": 3000
+    },
+    {
+      "id": 3031,
+      "name": "Infinity Edge",
+      "gold": 3450
+    },
+    {
+      "id": 3033,
+      "name": "Mortal Reminder",
+      "gold": 3300
+    },
+    {
+      "id": 3508,
+      "name": "Essence Reaver",
+      "gold": 2900
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -31,7 +59,7 @@
   "shop": {
     "prices": {
       "total": 600,
-      "combined": 0,
+      "combined": 600,
       "sell": 240
     },
     "purchasable": true,

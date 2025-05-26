@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3123,
-    1011,
-    3133
+    {
+      "id": 3123,
+      "name": "Executioner's Calling",
+      "gold": 800
+    },
+    {
+      "id": 1011,
+      "name": "Giant's Belt",
+      "gold": 900
+    },
+    {
+      "id": 3133,
+      "name": "Caulfield's Warhammer",
+      "gold": 1050
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -39,7 +51,7 @@
   "shop": {
     "prices": {
       "total": 3100,
-      "combined": 0,
+      "combined": 350,
       "sell": 1240
     },
     "purchasable": true,

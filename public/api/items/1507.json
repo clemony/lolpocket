@@ -19,7 +19,7 @@
     {
       "name": null,
       "unique": true,
-      "effects": "At 55 minutes, this turret begins to malfunction, losing armor and magic resist. After 5 minutes, it will start breaking down, losing an increasing percentage of its {{sti|health|<b>maximum</b> health}} every 30 seconds.",
+      "effects": "At 55 minutes, this turret begins to malfunction, losing armor and magic resist. After 5 minutes, it will start breaking down, losing an increasing percentage of its <img src=\"/img/icons/health.webp\" class=\"tip-icon\" />health every 30 seconds.",
       "cooldown": null,
       "range": null
     }

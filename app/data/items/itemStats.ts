@@ -82,7 +82,7 @@ export const itemStats = [
   },
   {
     id: 'goldPer10',
-    displayName: 'Gold per 10',
+    displayName: 'Gold per 10s',
     shortName: 'GP/10',
     checked: false,
     icon: 'gold',
@@ -112,7 +112,7 @@ export const itemStats = [
   },
   {
     id: 'healthRegen',
-    displayName: 'Health Regen',
+    displayName: 'Health Regeneration / 5s',
     shortName: 'HP/5',
     checked: false,
     icon: 'hp',
@@ -153,7 +153,7 @@ export const itemStats = [
   {
     id: 'flatMagicPenetration',
     displayName: 'Flat Magic Penetration',
-    shortName: 'Flat MPEN',
+    shortName: 'MPEN',
     checked: false,
     icon: 'mpen',
 
@@ -184,7 +184,7 @@ export const itemStats = [
   },
   {
     id: 'manaRegen',
-    displayName: 'Mana Regen',
+    displayName: 'Mana Regeneration / 5s',
     shortName: 'MP/5',
     checked: false,
 

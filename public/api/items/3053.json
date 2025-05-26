@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    1037,
-    2021,
-    1028
+    {
+      "id": 1037,
+      "name": "Pickaxe",
+      "gold": 875
+    },
+    {
+      "id": 2021,
+      "name": "Tunneler",
+      "gold": 1150
+    },
+    {
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -35,7 +47,7 @@
     {
       "name": "Lifeline",
       "unique": true,
-      "effects": "If you would take damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs damage equal to 60% of <b>bonus</b> health which decays over 4.5s seconds.",
+      "effects": "If you would take damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs damage equal to 60% of <b>bonus</b> health which decays over 4.5 seconds.",
       "cooldown": "90",
       "range": null
     }
@@ -48,7 +60,7 @@
   "shop": {
     "prices": {
       "total": 3200,
-      "combined": 0,
+      "combined": 775,
       "sell": 1280
     },
     "purchasable": true,

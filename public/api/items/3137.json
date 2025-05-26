@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    4630,
-    3108,
-    3108
+    {
+      "id": 4630,
+      "name": "Blighting Jewel",
+      "gold": 1100
+    },
+    {
+      "id": 3108,
+      "name": "Fiendish Codex",
+      "gold": 850
+    },
+    {
+      "id": 3108,
+      "name": "Fiendish Codex",
+      "gold": 850
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -23,7 +35,7 @@
     {
       "name": "Life From Death",
       "unique": true,
-      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon\" />takedown against an enemy champion while alive and within 3 seconds of damaging them summons a nova that radiates from the location of their death over 1.75s seconds, <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healing you and allied champions hit for 100 (+ 20% AP).",
+      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon\" />takedown against an enemy champion while alive and within 3 seconds of damaging them summons a nova that radiates from the location of their death over 1.75 seconds, <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healing you and allied champions hit for 100 (+20% AP).",
       "cooldown": "60",
       "range": null
     }
@@ -37,7 +49,7 @@
   "shop": {
     "prices": {
       "total": 3000,
-      "combined": 0,
+      "combined": 200,
       "sell": 1200
     },
     "purchasable": true,

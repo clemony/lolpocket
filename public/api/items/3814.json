@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3134,
-    2021
+    {
+      "id": 3134,
+      "name": "Serrated Dirk",
+      "gold": 1000
+    },
+    {
+      "id": 2021,
+      "name": "Tunneler",
+      "gold": 1150
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -40,7 +48,7 @@
   "shop": {
     "prices": {
       "total": 3000,
-      "combined": 0,
+      "combined": 850,
       "sell": 1200
     },
     "purchasable": true,

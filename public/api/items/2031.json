@@ -7,7 +7,11 @@
   ],
   "buildsFrom": [],
   "buildsInto": [
-    2033
+    {
+      "id": 2033,
+      "name": "Corrupting Potion",
+      "gold": 500
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -33,7 +37,7 @@
   "shop": {
     "prices": {
       "total": 150,
-      "combined": 0,
+      "combined": 150,
       "sell": 60
     },
     "purchasable": true,

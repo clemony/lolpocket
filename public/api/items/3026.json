@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    2019,
-    1038
+    {
+      "id": 2019,
+      "name": "Steel Sigil",
+      "gold": 1100
+    },
+    {
+      "id": 1038,
+      "name": "B. F. Sword",
+      "gold": 1300
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -37,7 +45,7 @@
   "shop": {
     "prices": {
       "total": 3200,
-      "combined": 0,
+      "combined": 800,
       "sell": 1280
     },
     "purchasable": true,

@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    1026,
-    3114,
-    3114
+    {
+      "id": 1026,
+      "name": "Blasting Wand",
+      "gold": 850
+    },
+    {
+      "id": 3114,
+      "name": "Forbidden Idol",
+      "gold": 600
+    },
+    {
+      "id": 3114,
+      "name": "Forbidden Idol",
+      "gold": 600
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -37,7 +49,7 @@
   "shop": {
     "prices": {
       "total": 2500,
-      "combined": 0,
+      "combined": 450,
       "sell": 1000
     },
     "purchasable": true,

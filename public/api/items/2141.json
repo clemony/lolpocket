@@ -21,7 +21,7 @@
   "shop": {
     "prices": {
       "total": 300,
-      "combined": 0,
+      "combined": 300,
       "sell": 120
     },
     "purchasable": false,

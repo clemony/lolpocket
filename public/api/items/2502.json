@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3105,
-    1011
+    {
+      "id": 3105,
+      "name": "Aegis of the Legion",
+      "gold": 1100
+    },
+    {
+      "id": 1011,
+      "name": "Giant's Belt",
+      "gold": 900
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -37,7 +45,7 @@
   "shop": {
     "prices": {
       "total": 2800,
-      "combined": 0,
+      "combined": 800,
       "sell": 1120
     },
     "purchasable": true,

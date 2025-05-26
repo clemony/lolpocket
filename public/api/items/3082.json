@@ -6,13 +6,33 @@
     "Epic"
   ],
   "buildsFrom": [
-    1029,
-    1029
+    {
+      "id": 1029,
+      "name": "Cloth Armor",
+      "gold": 300
+    },
+    {
+      "id": 1029,
+      "name": "Cloth Armor",
+      "gold": 300
+    }
   ],
   "buildsInto": [
-    3110,
-    323110,
-    3143
+    {
+      "id": 3110,
+      "name": "Frozen Heart",
+      "gold": 2500
+    },
+    {
+      "id": 323110,
+      "name": "Frozen Heart",
+      "gold": 2700
+    },
+    {
+      "id": 3143,
+      "name": "Randuin's Omen",
+      "gold": 2700
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -38,7 +58,7 @@
   "shop": {
     "prices": {
       "total": 1000,
-      "combined": 0,
+      "combined": 400,
       "sell": 400
     },
     "purchasable": true,

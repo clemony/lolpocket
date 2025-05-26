@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3802,
-    2508
+    {
+      "id": 3802,
+      "name": "Lost Chapter",
+      "gold": 1200
+    },
+    {
+      "id": 2508,
+      "name": "Fated Ashes",
+      "gold": 900
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -24,7 +32,7 @@
     {
       "name": "Baleful Blaze",
       "unique": true,
-      "effects": "Dealing ability damage burns enemies, causing them to take 10 (+ 1% AP) magic damage magic damage every 0.5s seconds over 3 seconds, for a total of 60% attack speed (+ 6% AP). Against monsters, the burn deals 10 <b>bonus</b> magic damage per tick, dealing a total of 20 (+ 1% AP) magic damage magic damage per tick for up to 120% attack speed (+ 6% AP).",
+      "effects": "Dealing ability damage burns enemies, causing them to take 10 (+1% AP) magic damage every 0.5 seconds over 3 seconds, for a total of 60 magic damage (+6% AP). Against monsters, the burn deals 10 <b>bonus</b> magic damage per tick, dealing a total of 20 (+1% AP) magic damage per tick for up to 120 magic damage (+6% AP).",
       "cooldown": null,
       "range": null
     },
@@ -45,7 +53,7 @@
   "shop": {
     "prices": {
       "total": 2800,
-      "combined": 0,
+      "combined": 700,
       "sell": 1120
     },
     "purchasable": true,

@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    1052,
-    1043,
-    1037
+    {
+      "id": 1052,
+      "name": "Amplifying Tome",
+      "gold": 400
+    },
+    {
+      "id": 1043,
+      "name": "Recurve Bow",
+      "gold": 700
+    },
+    {
+      "id": 1037,
+      "name": "Pickaxe",
+      "gold": 875
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -30,7 +42,7 @@
     {
       "name": "Seething Strike",
       "unique": true,
-      "effects": "Basic attacks grant 8% <b>bonus</b> attack speed for 3 seconds, stacking up to 4 times for a total of 32% <b>bonus</b> attack speed. At maximum stacks, basic attacks  also grant a <i>Phantom</i> stack for 6 seconds, up to 2 stacks. At 2 <i>Phantom</i> stacks, the next basic attack consumes all of those stacks  to trigger a <i>Phantom Hit</i> that applies <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon\" />on-hit effects to the target after a 0.15s second delay.",
+      "effects": "Basic attacks grant 8% <b>bonus</b> attack speed for 3 seconds, stacking up to 4 times for a total of 32% <b>bonus</b> attack speed. At maximum stacks, basic attacks also grant a <i>Phantom</i> stack for 6 seconds, up to 2 stacks. At 2 <i>Phantom</i> stacks, the next basic attack consumes all of those stacks to trigger a <i>Phantom Hit</i> that applies <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon\" />on-hit effects to the target after a 0.15 second delay.",
       "cooldown": null,
       "range": null
     }
@@ -44,7 +56,7 @@
   "shop": {
     "prices": {
       "total": 3000,
-      "combined": 0,
+      "combined": 1025,
       "sell": 1200
     },
     "purchasable": true,

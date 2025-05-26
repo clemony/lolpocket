@@ -19,7 +19,7 @@
     {
       "name": "Atrophy",
       "unique": true,
-      "effects": "<img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />Immobilizing effects against <img src=\"/img/icons/champions.webp\" class=\"tip-icon\" />champions have a +key1=%% critical strike chance chance to increase in duration by 0.25s seconds (+ 33% of immobilizing effect's duration).",
+      "effects": "<img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />Immobilizing effects against <img src=\"/img/icons/champions.webp\" class=\"tip-icon\" />champions have a 0% – 100% (based on critical strike chance) chance to increase in duration by 0.25 seconds (+33% of immobilizing effect's duration).",
       "cooldown": null,
       "range": null
     }
@@ -33,7 +33,7 @@
   "shop": {
     "prices": {
       "total": 0,
-      "combined": 0,
+      "combined": 1000,
       "sell": 0
     },
     "purchasable": true,

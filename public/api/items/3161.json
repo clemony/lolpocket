@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    1037,
-    2021,
-    1028
+    {
+      "id": 1037,
+      "name": "Pickaxe",
+      "gold": 875
+    },
+    {
+      "id": 2021,
+      "name": "Tunneler",
+      "gold": 1150
+    },
+    {
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -43,7 +55,7 @@
   "shop": {
     "prices": {
       "total": 3100,
-      "combined": 0,
+      "combined": 675,
       "sell": 1240
     },
     "purchasable": true,

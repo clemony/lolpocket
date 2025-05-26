@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    1058,
-    1058
+    {
+      "id": 1058,
+      "name": "Needlessly Large Rod",
+      "gold": 1200
+    },
+    {
+      "id": 1058,
+      "name": "Needlessly Large Rod",
+      "gold": 1200
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -39,7 +47,7 @@
   "shop": {
     "prices": {
       "total": 3500,
-      "combined": 0,
+      "combined": 1100,
       "sell": 1400
     },
     "purchasable": true,

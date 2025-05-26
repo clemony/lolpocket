@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    1038,
-    1037,
-    1053
+    {
+      "id": 1038,
+      "name": "B. F. Sword",
+      "gold": 1300
+    },
+    {
+      "id": 1037,
+      "name": "Pickaxe",
+      "gold": 875
+    },
+    {
+      "id": 1053,
+      "name": "Vampiric Scepter",
+      "gold": 900
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -26,7 +38,7 @@
     {
       "name": "Ichorshield",
       "unique": true,
-      "effects": "Convert the <img src=\"/img/icons/healing.webp\" class=\"tip-icon\" />healing received from {{sti|life steal}} in excess of <b>maximum</b> health into a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for up to +1;9 to 18, which lasts until destroyed.",
+      "effects": "Convert the <img src=\"/img/icons/healing.webp\" class=\"tip-icon\" />healing received from <img src=\"/img/icons/life-steal.webp\" class=\"tip-icon\" />life steal in excess of <b>maximum</b> health into a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for up to 165 – 315 (based on level), which lasts until destroyed.",
       "cooldown": null,
       "range": null
     }
@@ -39,7 +51,7 @@
   "shop": {
     "prices": {
       "total": 3400,
-      "combined": 0,
+      "combined": 325,
       "sell": 1360
     },
     "purchasable": true,

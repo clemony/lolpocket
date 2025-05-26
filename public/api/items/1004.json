@@ -7,9 +7,21 @@
   ],
   "buildsFrom": [],
   "buildsInto": [
-    3114,
-    4642,
-    3012
+    {
+      "id": 3114,
+      "name": "Forbidden Idol",
+      "gold": 600
+    },
+    {
+      "id": 4642,
+      "name": "Bandleglass Mirror",
+      "gold": 900
+    },
+    {
+      "id": 3012,
+      "name": "Chalice of Blessing",
+      "gold": 900
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -27,7 +39,7 @@
   "shop": {
     "prices": {
       "total": 200,
-      "combined": 0,
+      "combined": 200,
       "sell": 80
     },
     "purchasable": true,

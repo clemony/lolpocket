@@ -6,15 +6,43 @@
     "Epic"
   ],
   "buildsFrom": [
-    1042
+    {
+      "id": 1042,
+      "name": "Dagger",
+      "gold": 250
+    }
   ],
   "buildsInto": [
-    3115,
-    3302,
-    3091,
-    3124,
-    3153,
-    6672
+    {
+      "id": 3115,
+      "name": "Nashor's Tooth",
+      "gold": 2900
+    },
+    {
+      "id": 3302,
+      "name": "Terminus",
+      "gold": 3000
+    },
+    {
+      "id": 3091,
+      "name": "Wit's End",
+      "gold": 2800
+    },
+    {
+      "id": 3124,
+      "name": "Guinsoo's Rageblade",
+      "gold": 3000
+    },
+    {
+      "id": 3153,
+      "name": "Blade of The Ruined King",
+      "gold": 3200
+    },
+    {
+      "id": 6672,
+      "name": "Kraken Slayer",
+      "gold": 3100
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -40,7 +68,7 @@
   "shop": {
     "prices": {
       "total": 700,
-      "combined": 0,
+      "combined": 450,
       "sell": 280
     },
     "purchasable": true,

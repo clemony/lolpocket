@@ -6,12 +6,28 @@
     "Epic"
   ],
   "buildsFrom": [
-    1028,
-    1006
+    {
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
+    },
+    {
+      "id": 1006,
+      "name": "Rejuvenation Bead",
+      "gold": 300
+    }
   ],
   "buildsInto": [
-    3083,
-    3084
+    {
+      "id": 3083,
+      "name": "Warmog's Armor",
+      "gold": 3100
+    },
+    {
+      "id": 3084,
+      "name": "Heartsteel",
+      "gold": 3000
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -30,7 +46,7 @@
   "shop": {
     "prices": {
       "total": 800,
-      "combined": 0,
+      "combined": 100,
       "sell": 320
     },
     "purchasable": true,

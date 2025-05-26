@@ -6,13 +6,33 @@
     "Epic"
   ],
   "buildsFrom": [
-    2022,
-    1037
+    {
+      "id": 2022,
+      "name": "Glowing Mote",
+      "gold": 250
+    },
+    {
+      "id": 1037,
+      "name": "Pickaxe",
+      "gold": 875
+    }
   ],
   "buildsInto": [
-    6698,
-    6696,
-    6699
+    {
+      "id": 6698,
+      "name": "Profane Hydra",
+      "gold": 3200
+    },
+    {
+      "id": 6696,
+      "name": "Axiom Arc",
+      "gold": 3000
+    },
+    {
+      "id": 6699,
+      "name": "Voltaic Cyclosword",
+      "gold": 3000
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -32,7 +52,7 @@
   "shop": {
     "prices": {
       "total": 1337,
-      "combined": 0,
+      "combined": 212,
       "sell": 534
     },
     "purchasable": true,

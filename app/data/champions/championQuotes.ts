@@ -69,7 +69,6 @@ export const quotes = [
 
 export function formattedQuote() {
   let quote = getQuote() // .replace(/( -)/, '\n$1')
-  quote = replaceFileReferencesWithImages(quote)
   quote = quote.replace('[[', ' ')
   return quote.replace(']]', ' ')
 }

@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3916,
-    1026,
-    3067
+    {
+      "id": 3916,
+      "name": "Oblivion Orb",
+      "gold": 800
+    },
+    {
+      "id": 1026,
+      "name": "Blasting Wand",
+      "gold": 850
+    },
+    {
+      "id": 3067,
+      "name": "Kindlegem",
+      "gold": 800
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -43,7 +55,7 @@
   "shop": {
     "prices": {
       "total": 2850,
-      "combined": 0,
+      "combined": 400,
       "sell": 1140
     },
     "purchasable": true,

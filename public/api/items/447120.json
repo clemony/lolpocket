@@ -19,14 +19,14 @@
     {
       "name": "Reach Weapon",
       "unique": true,
-      "effects": "Gain {{sti|range|75 <b>bonus</b> attack range}}.",
+      "effects": "Gain <img src=\"/img/icons/range.webp\" class=\"tip-icon\" />range.",
       "cooldown": null,
       "range": null
     },
     {
       "name": "Sweet Spot",
       "unique": true,
-      "effects": "Basic attacks deal +0 to 1000% distance increased damage and abilities deal +0 to 1000% distance increased damage. The distance is calculated from your <img src=\"/img/icons/cr.webp\" class=\"tip-icon\" />icononly=true current position to the target's position when the triggering attack or ability hits them.",
+      "effects": "Basic attacks deal 0% – 30% (based on distance) increased damage and abilities deal 0% – 40% (based on distance) increased damage. The distance is calculated from your current position to the target's position when the triggering attack or ability hits them.",
       "cooldown": null,
       "range": null
     }
@@ -38,7 +38,7 @@
   "shop": {
     "prices": {
       "total": 0,
-      "combined": 0,
+      "combined": 1000,
       "sell": 0
     },
     "purchasable": true,

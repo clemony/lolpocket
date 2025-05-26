@@ -6,14 +6,38 @@
     "Epic"
   ],
   "buildsFrom": [
-    1042,
-    1042
+    {
+      "id": 1042,
+      "name": "Dagger",
+      "gold": 250
+    },
+    {
+      "id": 1042,
+      "name": "Dagger",
+      "gold": 250
+    }
   ],
   "buildsInto": [
-    3032,
-    3087,
-    3085,
-    3094
+    {
+      "id": 3032,
+      "name": "Yun Tal Wildarrows",
+      "gold": 3000
+    },
+    {
+      "id": 3087,
+      "name": "Statikk Shiv",
+      "gold": 2700
+    },
+    {
+      "id": 3085,
+      "name": "Runaan's Hurricane",
+      "gold": 2650
+    },
+    {
+      "id": 3094,
+      "name": "Rapid Firecannon",
+      "gold": 2650
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -39,7 +63,7 @@
   "shop": {
     "prices": {
       "total": 600,
-      "combined": 0,
+      "combined": 100,
       "sell": 240
     },
     "purchasable": true,

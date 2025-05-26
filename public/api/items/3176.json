@@ -6,7 +6,11 @@
     "Boots"
   ],
   "buildsFrom": [
-    3013
+    {
+      "id": 3013,
+      "name": "Synchronized Souls",
+      "gold": 900
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -21,14 +25,14 @@
     {
       "name": "Voidborn",
       "unique": true,
-      "effects": "Gain {{si|Empowered Recall}}.",
+      "effects": "Gain <img src=\"/img/icons/empowered-recall.webp\" class=\"tip-icon\" />Empowered Recall.",
       "cooldown": null,
       "range": null
     },
     {
       "name": "Noxian Synchrony",
       "unique": true,
-      "effects": "Gain 45 (+ 8% <b>total</b> movement speed) <b>bonus</b> movement speed while out-of-combat.",
+      "effects": "Gain 45 (+8% <b>total</b> movement speed) <b>bonus</b> movement speed while out-of-combat.",
       "cooldown": null,
       "range": null
     }
@@ -40,7 +44,7 @@
   "shop": {
     "prices": {
       "total": 1400,
-      "combined": 0,
+      "combined": 500,
       "sell": 560
     },
     "purchasable": true,

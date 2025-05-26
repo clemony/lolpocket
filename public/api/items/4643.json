@@ -6,7 +6,11 @@
     "Legendary"
   ],
   "buildsFrom": [
-    4638
+    {
+      "id": 4638,
+      "name": "Watchful Wardstone",
+      "gold": 1100
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -25,7 +29,7 @@
     {
       "name": "Arcane Cache",
       "unique": true,
-      "effects": "Purchasing a {{ii|Control Ward}} stocks it as a charge, up to maximum of 3.",
+      "effects": "Purchasing a <img src=\"/img/icons/control-ward.webp\" class=\"tip-icon\" />Control Ward stocks it as a charge, up to maximum of 3.",
       "cooldown": null,
       "range": null
     },
@@ -55,7 +59,7 @@
   "shop": {
     "prices": {
       "total": 2300,
-      "combined": 0,
+      "combined": 1200,
       "sell": 920
     },
     "purchasable": true,

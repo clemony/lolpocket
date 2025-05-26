@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3067,
-    3114
+    {
+      "id": 3067,
+      "name": "Kindlegem",
+      "gold": 800
+    },
+    {
+      "id": 3114,
+      "name": "Forbidden Idol",
+      "gold": 600
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -23,7 +31,7 @@
     {
       "name": "Intervention",
       "unique": true,
-      "effects": "Call upon a 550-radius beam of light to strike upon the target location after 2.5s seconds, granting <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the area for the duration. Allies within the area are <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healed for +type=target's level target's level, while enemy champions within take 10% of target's <b>maximum</b> health as true damage. <b>Can be used while dead.</b>",
+      "effects": "Call upon a 550-radius beam of light to strike upon the target location after 2.5 seconds, granting <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the area for the duration. Allies within the area are <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healed for 200 – 400 (based on target's level), while enemy champions within take 10% of target's <b>maximum</b> health as true damage. <b>Can be used while dead.</b>",
       "cooldown": null,
       "range": 5500
     }
@@ -37,7 +45,7 @@
   "shop": {
     "prices": {
       "total": 2300,
-      "combined": 0,
+      "combined": 900,
       "sell": 920
     },
     "purchasable": true,

@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    2021,
-    3044,
-    1042
+    {
+      "id": 2021,
+      "name": "Tunneler",
+      "gold": 1150
+    },
+    {
+      "id": 3044,
+      "name": "Phage",
+      "gold": 1100
+    },
+    {
+      "id": 1042,
+      "name": "Dagger",
+      "gold": 250
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -44,7 +56,7 @@
   "shop": {
     "prices": {
       "total": 3000,
-      "combined": 0,
+      "combined": 500,
       "sell": 1200
     },
     "purchasable": true,

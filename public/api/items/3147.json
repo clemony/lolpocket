@@ -6,13 +6,33 @@
     "Epic"
   ],
   "buildsFrom": [
-    1052,
-    1028
+    {
+      "id": 1052,
+      "name": "Amplifying Tome",
+      "gold": 400
+    },
+    {
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
+    }
   ],
   "buildsInto": [
-    6653,
-    4633,
-    8010
+    {
+      "id": 6653,
+      "name": "Liandry's Torment",
+      "gold": 3000
+    },
+    {
+      "id": 4633,
+      "name": "Riftmaker",
+      "gold": 3100
+    },
+    {
+      "id": 8010,
+      "name": "Bloodletter's Curse",
+      "gold": 2900
+    }
   ],
   "specialRecipe": 0,
   "noEffects": false,
@@ -41,7 +61,7 @@
   "shop": {
     "prices": {
       "total": 1300,
-      "combined": 0,
+      "combined": 500,
       "sell": 520
     },
     "purchasable": true,

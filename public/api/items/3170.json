@@ -6,7 +6,11 @@
     "Boots"
   ],
   "buildsFrom": [
-    3009
+    {
+      "id": 3009,
+      "name": "Boots of Swiftness",
+      "gold": 1000
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -40,7 +44,7 @@
   "shop": {
     "prices": {
       "total": 1500,
-      "combined": 0,
+      "combined": 500,
       "sell": 600
     },
     "purchasable": true,

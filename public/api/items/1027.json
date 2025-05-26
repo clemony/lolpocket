@@ -7,9 +7,21 @@
   ],
   "buildsFrom": [],
   "buildsInto": [
-    3803,
-    3024,
-    3802
+    {
+      "id": 3803,
+      "name": "Catalyst of Aeons",
+      "gold": 1300
+    },
+    {
+      "id": 3024,
+      "name": "Glacial Buckler",
+      "gold": 900
+    },
+    {
+      "id": 3802,
+      "name": "Lost Chapter",
+      "gold": 1200
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -29,7 +41,7 @@
   "shop": {
     "prices": {
       "total": 300,
-      "combined": 0,
+      "combined": 300,
       "sell": 120
     },
     "purchasable": true,

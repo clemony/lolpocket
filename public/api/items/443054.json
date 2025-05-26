@@ -19,7 +19,7 @@
     {
       "name": "Gash",
       "unique": true,
-      "effects": "Basic attacks on-hit deal <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />20 – 40&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />10 – 20)</span> true damage (+ <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />25%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />20%)</span> <b>bonus</b> armor) armor <b>bonus</b> true damage.",
+      "effects": "Basic attacks on-hit deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />20 – 40 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />10 – 20) true damage (+(<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />25% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20%) <b>bonus</b> armor) <b>bonus</b> true damage.",
       "cooldown": null,
       "range": null
     }
@@ -33,7 +33,7 @@
   "shop": {
     "prices": {
       "total": 0,
-      "combined": 0,
+      "combined": 1000,
       "sell": 0
     },
     "purchasable": true,

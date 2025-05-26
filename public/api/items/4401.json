@@ -6,9 +6,21 @@
     "Legendary"
   ],
   "buildsFrom": [
-    1057,
-    1028,
-    3066
+    {
+      "id": 1057,
+      "name": "Negatron Cloak",
+      "gold": 850
+    },
+    {
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
+    },
+    {
+      "id": 3066,
+      "name": "Winged Moonplate",
+      "gold": 800
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -39,7 +51,7 @@
   "shop": {
     "prices": {
       "total": 2800,
-      "combined": 0,
+      "combined": 750,
       "sell": 1120
     },
     "purchasable": true,

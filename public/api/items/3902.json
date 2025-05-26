@@ -17,7 +17,7 @@
     {
       "name": "Death's Daughter",
       "unique": true,
-      "effects": "A massive cannonball lands after {{ais|Cannon Barrage|Gangplank}} first cluster of waves, dealing {{sti|true damage|{{ap|120 to 300 3}} true damage}} (+ 30% AP) true damage to enemies struck and <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slowing them by 75% for 1.5s seconds.",
+      "effects": "A massive cannonball lands after {{ais|Cannon Barrage|Gangplank|Gangplank}} first cluster of waves, dealing <img src=\"/img/icons/true-damage.webp\" class=\"tip-icon\" />true damage (+30% AP) true damage to enemies struck and <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slowing them by 75% for 1.5 seconds.",
       "cooldown": null,
       "range": null
     }

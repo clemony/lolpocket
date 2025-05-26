@@ -6,7 +6,11 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3867
+    {
+      "id": 3867,
+      "name": "Bounty of Worlds",
+      "gold": 400
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -21,7 +25,7 @@
     {
       "name": "Spellblade",
       "unique": true,
-      "effects": "After using an ability, your next basic attack within 10 seconds deals 100% <b>base</b> AD <b>bonus</b> physical damage on-hit. If the target is a champion, inflict them with <i>Expose Weakness</i> for 4 seconds, causing them to take <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />8%&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />5%)</span> increased damage from all sources (1.5s second cooldown, starts after using the empowered attack).",
+      "effects": "After using an ability, your next basic attack within 10 seconds deals 100% <b>base</b> AD <b>bonus</b> physical damage on-hit. If the target is a champion, inflict them with <i>Expose Weakness</i> for 4 seconds, causing them to take (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />8% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />5%) increased damage from all sources (1.5 second cooldown, starts after using the empowered attack).",
       "cooldown": null,
       "range": null
     },

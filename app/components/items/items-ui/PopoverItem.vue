@@ -23,7 +23,7 @@ inheritAttrs: false
 
       <LazyPrismaticShine v-if="isOpen || isHovered" class="absolute scale-107 top-0 left-0 z-1"  hydrate-on-visible/>
     </PopoverTrigger>
-    <LazyCustomPopoverContent :side-offset="8" class="!w-110 @container/item-data max-h-160" hydrate-on-visible>
+    <LazyCustomPopoverContent :side-offset="8" class="!w-110 @container/item-data max-h-160 bg-blend-overlay" hydrate-on-visible>
       <CustomPopoverArrow hydrate-on-visible />
       <LazyItemData :id="item"  hydrate-on-visible/>
     </LazyCustomPopoverContent>

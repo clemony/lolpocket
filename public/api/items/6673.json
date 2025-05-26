@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    1037,
-    6670
+    {
+      "id": 1037,
+      "name": "Pickaxe",
+      "gold": 875
+    },
+    {
+      "id": 6670,
+      "name": "Noonquiver",
+      "gold": 1300
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -22,7 +30,7 @@
     {
       "name": "Lifeline",
       "unique": true,
-      "effects": "If you would take damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs <span class=\"tip-span\">(<img src=\"/img/icons/melee.webp\" class=\"span-tip-icon \" />400 – 700 for 11&nbsp/&nbsp<img src=\"/img/icons/ranged.webp\" class=\"span-tip-icon\" />400*0.8 – 700*0.8 for 11)</span> damage for 3 seconds.",
+      "effects": "If you would take damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />400 – 700 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />320 – 560) damage for 3 seconds.",
       "cooldown": "90",
       "range": null
     }
@@ -35,7 +43,7 @@
   "shop": {
     "prices": {
       "total": 3000,
-      "combined": 0,
+      "combined": 825,
       "sell": 1200
     },
     "purchasable": true,

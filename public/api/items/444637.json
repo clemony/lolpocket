@@ -21,7 +21,7 @@
     {
       "name": "Sinister Pact",
       "unique": true,
-      "effects": "Increase your ability power by 1.5s% ap and gain 1.5s% <b>bonus</b> movement speed for every 100 <b>current</b> health you are missing, up to an increase of 45% ability power and 45% <b>bonus</b> movement speed at 3000 <b>current</b> health missing.",
+      "effects": "Increase your ability power by 1.5% ap and gain 1.5% <b>bonus</b> movement speed for every 100 <b>current</b> health you are missing, up to an increase of 45% ability power and 45% <b>bonus</b> movement speed at 3000 <b>current</b> health missing.",
       "cooldown": null,
       "range": null
     }
@@ -34,7 +34,7 @@
   "shop": {
     "prices": {
       "total": 0,
-      "combined": 0,
+      "combined": 1000,
       "sell": 0
     },
     "purchasable": true,

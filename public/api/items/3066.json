@@ -6,14 +6,38 @@
     "Epic"
   ],
   "buildsFrom": [
-    1028
+    {
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
+    }
   ],
   "buildsInto": [
-    4401,
-    3181,
-    3002,
-    323002,
-    3742
+    {
+      "id": 4401,
+      "name": "Force of Nature",
+      "gold": 2800
+    },
+    {
+      "id": 3181,
+      "name": "Hullbreaker",
+      "gold": 3000
+    },
+    {
+      "id": 3002,
+      "name": "Trailblazer",
+      "gold": 2400
+    },
+    {
+      "id": 323002,
+      "name": "Trailblazer",
+      "gold": 2600
+    },
+    {
+      "id": 3742,
+      "name": "Dead Man's Plate",
+      "gold": 2900
+    }
   ],
   "specialRecipe": 0,
   "noEffects": true,
@@ -37,7 +61,7 @@
   "shop": {
     "prices": {
       "total": 800,
-      "combined": 0,
+      "combined": 400,
       "sell": 320
     },
     "purchasable": true,

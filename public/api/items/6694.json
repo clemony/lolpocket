@@ -6,8 +6,16 @@
     "Legendary"
   ],
   "buildsFrom": [
-    3133,
-    3035
+    {
+      "id": 3133,
+      "name": "Caulfield's Warhammer",
+      "gold": 1050
+    },
+    {
+      "id": 3035,
+      "name": "Last Whisper",
+      "gold": 1450
+    }
   ],
   "buildsInto": [],
   "specialRecipe": 0,
@@ -36,7 +44,7 @@
   "shop": {
     "prices": {
       "total": 3000,
-      "combined": 0,
+      "combined": 500,
       "sell": 1200
     },
     "purchasable": true,

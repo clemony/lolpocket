@@ -1,9 +1,9 @@
 declare global {
   type ItemId = number
   type ItemName = string
- interface ItemIndex  {
-  name: ItemName
-   id: ItemId
+  interface ItemIndex {
+    name: ItemName
+    id: ItemId
   }
   type ItemRecord = Record<ItemId, ItemLite>
   type StatLite = number
@@ -11,8 +11,8 @@ declare global {
   type StatKeys = keyof ItemLite['stats']
 
   interface ItemLite {
-    name: string
     id: ItemId
+    name: ItemName
     rank: string[]
     stats: Record<string, number>
     purchasable: boolean
@@ -21,12 +21,18 @@ declare global {
     maps: number[]
   }
 
-  interface Item {
-    name: string
+  interface ItemComponent {
     id: ItemId
+    name: ItemName
+    gold: number
+  }
+
+  interface Item {
+    id: ItemId
+    name: ItemName
     rank: string[]
-    buildsFrom?: number[]
-    buildsInto?: number[]
+    buildsFrom?: ItemComponent[]
+    buildsInto?: ItemComponent[]
     specialRecipe?: string | number
     noEffects?: boolean
     removed?: boolean | string

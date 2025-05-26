@@ -7,11 +7,31 @@
   ],
   "buildsFrom": [],
   "buildsInto": [
-    3869,
-    3870,
-    3871,
-    3876,
-    3877
+    {
+      "id": 3869,
+      "name": "Celestial Opposition",
+      "gold": 400
+    },
+    {
+      "id": 3870,
+      "name": "Dream Maker",
+      "gold": 400
+    },
+    {
+      "id": 3871,
+      "name": "Zaz'Zak's Realmspike",
+      "gold": 400
+    },
+    {
+      "id": 3876,
+      "name": "Solstice Sleigh",
+      "gold": 400
+    },
+    {
+      "id": 3877,
+      "name": "Bloodsong",
+      "gold": 400
+    }
   ],
   "specialRecipe": 3866,
   "noEffects": false,
@@ -25,7 +45,7 @@
     {
       "name": "Upgrade",
       "unique": true,
-      "effects": "You have completed the support quest and can now upgrade this item, <b>Bounty of Worlds</b>, for free into <i>{{ii|Bloodsong}}</i>, <i>{{ii|Celestial Opposition}}</i>, <i>{{ii|Dream Maker}}</i>, <i>{{ii|Solstice Sleigh}}</i>, or <i>{{ii|Zaz'Zak's Realmspike}}</i> by selecting one of them from a custom menu in the HUD or the shop. <i>The upgrade can be done outside the shop using the menu.</i>",
+      "effects": "You have completed the support quest and can now upgrade this item, <b>Bounty of Worlds</b>, for free into <i><img src=\"/img/icons/bloodsong.webp\" class=\"tip-icon\" />Bloodsong</i>, <i><img src=\"/img/icons/celestial-opposition.webp\" class=\"tip-icon\" />Celestial Opposition</i>, <i><img src=\"/img/icons/dream-maker.webp\" class=\"tip-icon\" />Dream Maker</i>, <i><img src=\"/img/icons/solstice-sleigh.webp\" class=\"tip-icon\" />Solstice Sleigh</i>, or <i><img src=\"/img/icons/zazzaks-realmspike.webp\" class=\"tip-icon\" />Zaz'Zak's Realmspike</i> by selecting one of them from a custom menu in the HUD or the shop. <i>The upgrade can be done outside the shop using the menu.</i>",
       "cooldown": null,
       "range": null
     },
@@ -55,7 +75,7 @@
   "shop": {
     "prices": {
       "total": 400,
-      "combined": 0,
+      "combined": 400,
       "sell": 160
     },
     "purchasable": false,

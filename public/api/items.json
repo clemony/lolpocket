@@ -8,15 +8,51 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      3117,
-      3158,
-      3047,
-      3111,
-      3006,
-      3005,
-      3009,
-      3010,
-      3020
+      {
+        "id": 3117,
+        "name": "Mobility Boots",
+        "gold": 1000
+      },
+      {
+        "id": 3158,
+        "name": "Ionian Boots of Lucidity",
+        "gold": 900
+      },
+      {
+        "id": 3047,
+        "name": "Plated Steelcaps",
+        "gold": 1200
+      },
+      {
+        "id": 3111,
+        "name": "Mercury's Treads",
+        "gold": 1250
+      },
+      {
+        "id": 3006,
+        "name": "Berserker's Greaves",
+        "gold": 1100
+      },
+      {
+        "id": 3005,
+        "name": "Ghostcrawlers",
+        "gold": 1000
+      },
+      {
+        "id": 3009,
+        "name": "Boots of Swiftness",
+        "gold": 1000
+      },
+      {
+        "id": 3010,
+        "name": "Symbiotic Soles",
+        "gold": 900
+      },
+      {
+        "id": 3020,
+        "name": "Sorcerer's Shoes",
+        "gold": 1100
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -209,7 +245,7 @@
     "shop": {
       "prices": {
         "total": 300,
-        "combined": 0,
+        "combined": 300,
         "sell": 120
       },
       "purchasable": true,
@@ -235,9 +271,21 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      3114,
-      4642,
-      3012
+      {
+        "id": 3114,
+        "name": "Forbidden Idol",
+        "gold": 600
+      },
+      {
+        "id": 4642,
+        "name": "Bandleglass Mirror",
+        "gold": 900
+      },
+      {
+        "id": 3012,
+        "name": "Chalice of Blessing",
+        "gold": 900
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -430,7 +478,7 @@
     "shop": {
       "prices": {
         "total": 200,
-        "combined": 0,
+        "combined": 200,
         "sell": 80
       },
       "purchasable": true,
@@ -459,10 +507,26 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      3211,
-      323109,
-      3109,
-      3801
+      {
+        "id": 3211,
+        "name": "Spectre's Cowl",
+        "gold": 1250
+      },
+      {
+        "id": 323109,
+        "name": "Knight's Vow",
+        "gold": 2900
+      },
+      {
+        "id": 3109,
+        "name": "Knight's Vow",
+        "gold": 2300
+      },
+      {
+        "id": 3801,
+        "name": "Crystalline Bracer",
+        "gold": 800
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -655,7 +719,7 @@
     "shop": {
       "prices": {
         "total": 300,
-        "combined": 0,
+        "combined": 300,
         "sell": 120
       },
       "purchasable": true,
@@ -682,22 +746,78 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1028
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      }
     ],
     "buildsInto": [
-      3119,
-      8001,
-      3748,
-      3083,
-      2502,
-      3084,
-      3116,
-      3143,
-      323119,
-      6665,
-      4637,
-      6609,
-      6667
+      {
+        "id": 3119,
+        "name": "Winter's Approach",
+        "gold": 2400
+      },
+      {
+        "id": 8001,
+        "name": "Anathema's Chains",
+        "gold": 2500
+      },
+      {
+        "id": 3748,
+        "name": "Titanic Hydra",
+        "gold": 3300
+      },
+      {
+        "id": 3083,
+        "name": "Warmog's Armor",
+        "gold": 3100
+      },
+      {
+        "id": 2502,
+        "name": "Unending Despair",
+        "gold": 2800
+      },
+      {
+        "id": 3084,
+        "name": "Heartsteel",
+        "gold": 3000
+      },
+      {
+        "id": 3116,
+        "name": "Rylai's Crystal Scepter",
+        "gold": 2600
+      },
+      {
+        "id": 3143,
+        "name": "Randuin's Omen",
+        "gold": 2700
+      },
+      {
+        "id": 323119,
+        "name": "Winter's Approach",
+        "gold": 2400
+      },
+      {
+        "id": 6665,
+        "name": "Jak'Sho, The Protean",
+        "gold": 3200
+      },
+      {
+        "id": 4637,
+        "name": "Demonic Embrace",
+        "gold": 3000
+      },
+      {
+        "id": 6609,
+        "name": "Chempunk Chainsword",
+        "gold": 3100
+      },
+      {
+        "id": 6667,
+        "name": "Radiant Virtue",
+        "gold": 2600
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -890,7 +1010,7 @@
     "shop": {
       "prices": {
         "total": 900,
-        "combined": 0,
+        "combined": 500,
         "sell": 360
       },
       "purchasable": true,
@@ -920,13 +1040,41 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      6670,
-      3086,
-      3095,
-      6676,
-      3031,
-      3033,
-      3508
+      {
+        "id": 6670,
+        "name": "Noonquiver",
+        "gold": 1300
+      },
+      {
+        "id": 3086,
+        "name": "Zeal",
+        "gold": 1200
+      },
+      {
+        "id": 3095,
+        "name": "Stormrazor",
+        "gold": 3100
+      },
+      {
+        "id": 6676,
+        "name": "The Collector",
+        "gold": 3000
+      },
+      {
+        "id": 3031,
+        "name": "Infinity Edge",
+        "gold": 3450
+      },
+      {
+        "id": 3033,
+        "name": "Mortal Reminder",
+        "gold": 3300
+      },
+      {
+        "id": 3508,
+        "name": "Essence Reaver",
+        "gold": 2900
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -1119,7 +1267,7 @@
     "shop": {
       "prices": {
         "total": 600,
-        "combined": 0,
+        "combined": 600,
         "sell": 240
       },
       "purchasable": true,
@@ -1147,18 +1295,66 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      3115,
-      326657,
-      3100,
-      3118,
-      4628,
-      3116,
-      3135,
-      3165,
-      326621,
-      4637,
-      6621,
-      6657
+      {
+        "id": 3115,
+        "name": "Nashor's Tooth",
+        "gold": 2900
+      },
+      {
+        "id": 326657,
+        "name": "Rod of Ages",
+        "gold": 2600
+      },
+      {
+        "id": 3100,
+        "name": "Lich Bane",
+        "gold": 2900
+      },
+      {
+        "id": 3118,
+        "name": "Malignance",
+        "gold": 2700
+      },
+      {
+        "id": 4628,
+        "name": "Horizon Focus",
+        "gold": 2900
+      },
+      {
+        "id": 3116,
+        "name": "Rylai's Crystal Scepter",
+        "gold": 2600
+      },
+      {
+        "id": 3135,
+        "name": "Void Staff",
+        "gold": 3000
+      },
+      {
+        "id": 3165,
+        "name": "Morellonomicon",
+        "gold": 2850
+      },
+      {
+        "id": 326621,
+        "name": "Dawncore",
+        "gold": 2900
+      },
+      {
+        "id": 4637,
+        "name": "Demonic Embrace",
+        "gold": 3000
+      },
+      {
+        "id": 6621,
+        "name": "Dawncore",
+        "gold": 2500
+      },
+      {
+        "id": 6657,
+        "name": "Rod of Ages",
+        "gold": 2600
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -1351,7 +1547,7 @@
     "shop": {
       "prices": {
         "total": 850,
-        "combined": 0,
+        "combined": 850,
         "sell": 340
       },
       "purchasable": true,
@@ -1380,9 +1576,21 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      3803,
-      3024,
-      3802
+      {
+        "id": 3803,
+        "name": "Catalyst of Aeons",
+        "gold": 1300
+      },
+      {
+        "id": 3024,
+        "name": "Glacial Buckler",
+        "gold": 900
+      },
+      {
+        "id": 3802,
+        "name": "Lost Chapter",
+        "gold": 1200
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -1577,7 +1785,7 @@
     "shop": {
       "prices": {
         "total": 300,
-        "combined": 0,
+        "combined": 300,
         "sell": 120
       },
       "purchasable": true,
@@ -1606,33 +1814,141 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      323075,
-      323107,
-      1011,
-      323222,
-      6035,
-      323050,
-      2021,
-      3211,
-      4401,
-      3023,
-      3161,
-      6662,
-      6660,
-      3803,
-      3012,
-      3044,
-      3053,
-      3066,
-      3067,
-      3075,
-      326617,
-      3147,
-      3152,
-      3742,
-      3801,
-      4635,
-      6610
+      {
+        "id": 323075,
+        "name": "Thornmail",
+        "gold": 2650
+      },
+      {
+        "id": 323107,
+        "name": "Redemption",
+        "gold": 2800
+      },
+      {
+        "id": 1011,
+        "name": "Giant's Belt",
+        "gold": 900
+      },
+      {
+        "id": 323222,
+        "name": "Mikael's Blessing",
+        "gold": 2800
+      },
+      {
+        "id": 6035,
+        "name": "Silvermere Dawn",
+        "gold": 3000
+      },
+      {
+        "id": 323050,
+        "name": "Zeke's Convergence",
+        "gold": 2300
+      },
+      {
+        "id": 2021,
+        "name": "Tunneler",
+        "gold": 1150
+      },
+      {
+        "id": 3211,
+        "name": "Spectre's Cowl",
+        "gold": 1250
+      },
+      {
+        "id": 4401,
+        "name": "Force of Nature",
+        "gold": 2800
+      },
+      {
+        "id": 3023,
+        "name": "Lifewell Pendant",
+        "gold": 1050
+      },
+      {
+        "id": 3161,
+        "name": "Spear of Shojin",
+        "gold": 3100
+      },
+      {
+        "id": 6662,
+        "name": "Iceborn Gauntlet",
+        "gold": 2900
+      },
+      {
+        "id": 6660,
+        "name": "Bami's Cinder",
+        "gold": 900
+      },
+      {
+        "id": 3803,
+        "name": "Catalyst of Aeons",
+        "gold": 1300
+      },
+      {
+        "id": 3012,
+        "name": "Chalice of Blessing",
+        "gold": 900
+      },
+      {
+        "id": 3044,
+        "name": "Phage",
+        "gold": 1100
+      },
+      {
+        "id": 3053,
+        "name": "Sterak's Gage",
+        "gold": 3200
+      },
+      {
+        "id": 3066,
+        "name": "Winged Moonplate",
+        "gold": 800
+      },
+      {
+        "id": 3067,
+        "name": "Kindlegem",
+        "gold": 800
+      },
+      {
+        "id": 3075,
+        "name": "Thornmail",
+        "gold": 2450
+      },
+      {
+        "id": 326617,
+        "name": "Moonstone Renewer",
+        "gold": 2900
+      },
+      {
+        "id": 3147,
+        "name": "Haunting Guise",
+        "gold": 1300
+      },
+      {
+        "id": 3152,
+        "name": "Hextech Rocketbelt",
+        "gold": 2650
+      },
+      {
+        "id": 3742,
+        "name": "Dead Man's Plate",
+        "gold": 2900
+      },
+      {
+        "id": 3801,
+        "name": "Crystalline Bracer",
+        "gold": 800
+      },
+      {
+        "id": 4635,
+        "name": "Leeching Leer",
+        "gold": 1265
+      },
+      {
+        "id": 6610,
+        "name": "Sundered Sky",
+        "gold": 3100
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -1827,7 +2143,7 @@
     "shop": {
       "prices": {
         "total": 400,
-        "combined": 0,
+        "combined": 400,
         "sell": 160
       },
       "purchasable": true,
@@ -1860,20 +2176,76 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      1031,
-      3047,
-      2019,
-      323190,
-      2421,
-      3023,
-      3082,
-      3190,
-      2420,
-      3024,
-      3193,
-      3050,
-      3076,
-      3105
+      {
+        "id": 1031,
+        "name": "Chain Vest",
+        "gold": 800
+      },
+      {
+        "id": 3047,
+        "name": "Plated Steelcaps",
+        "gold": 1200
+      },
+      {
+        "id": 2019,
+        "name": "Steel Sigil",
+        "gold": 1100
+      },
+      {
+        "id": 323190,
+        "name": "Locket of the Iron Solari",
+        "gold": 2600
+      },
+      {
+        "id": 2421,
+        "name": "Shattered Armguard",
+        "gold": 1600
+      },
+      {
+        "id": 3023,
+        "name": "Lifewell Pendant",
+        "gold": 1050
+      },
+      {
+        "id": 3082,
+        "name": "Warden's Mail",
+        "gold": 1000
+      },
+      {
+        "id": 3190,
+        "name": "Locket of the Iron Solari",
+        "gold": 2200
+      },
+      {
+        "id": 2420,
+        "name": "Seeker's Armguard",
+        "gold": 1600
+      },
+      {
+        "id": 3024,
+        "name": "Glacial Buckler",
+        "gold": 900
+      },
+      {
+        "id": 3193,
+        "name": "Gargoyle Stoneplate",
+        "gold": 3150
+      },
+      {
+        "id": 3050,
+        "name": "Zeke's Convergence",
+        "gold": 2200
+      },
+      {
+        "id": 3076,
+        "name": "Bramble Vest",
+        "gold": 800
+      },
+      {
+        "id": 3105,
+        "name": "Aegis of the Legion",
+        "gold": 1100
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -2066,7 +2438,7 @@
     "shop": {
       "prices": {
         "total": 300,
-        "combined": 0,
+        "combined": 300,
         "sell": 120
       },
       "purchasable": true,
@@ -2098,19 +2470,63 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1029
+      {
+        "id": 1029,
+        "name": "Cloth Armor",
+        "gold": 300
+      }
     ],
     "buildsInto": [
-      323075,
-      6662,
-      3068,
-      3002,
-      323109,
-      3075,
-      3109,
-      323002,
-      3742,
-      6665
+      {
+        "id": 323075,
+        "name": "Thornmail",
+        "gold": 2650
+      },
+      {
+        "id": 6662,
+        "name": "Iceborn Gauntlet",
+        "gold": 2900
+      },
+      {
+        "id": 3068,
+        "name": "Sunfire Aegis",
+        "gold": 2700
+      },
+      {
+        "id": 3002,
+        "name": "Trailblazer",
+        "gold": 2400
+      },
+      {
+        "id": 323109,
+        "name": "Knight's Vow",
+        "gold": 2900
+      },
+      {
+        "id": 3075,
+        "name": "Thornmail",
+        "gold": 2450
+      },
+      {
+        "id": 3109,
+        "name": "Knight's Vow",
+        "gold": 2300
+      },
+      {
+        "id": 323002,
+        "name": "Trailblazer",
+        "gold": 2600
+      },
+      {
+        "id": 3742,
+        "name": "Dead Man's Plate",
+        "gold": 2900
+      },
+      {
+        "id": 6665,
+        "name": "Jak'Sho, The Protean",
+        "gold": 3200
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -2303,7 +2719,7 @@
     "shop": {
       "prices": {
         "total": 800,
-        "combined": 0,
+        "combined": 500,
         "sell": 320
       },
       "purchasable": true,
@@ -2334,18 +2750,66 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      1057,
-      3211,
-      3001,
-      3111,
-      323190,
-      4632,
-      3190,
-      3155,
-      3193,
-      3050,
-      3105,
-      3140
+      {
+        "id": 1057,
+        "name": "Negatron Cloak",
+        "gold": 850
+      },
+      {
+        "id": 3211,
+        "name": "Spectre's Cowl",
+        "gold": 1250
+      },
+      {
+        "id": 3001,
+        "name": "Evenshroud",
+        "gold": 2300
+      },
+      {
+        "id": 3111,
+        "name": "Mercury's Treads",
+        "gold": 1250
+      },
+      {
+        "id": 323190,
+        "name": "Locket of the Iron Solari",
+        "gold": 2600
+      },
+      {
+        "id": 4632,
+        "name": "Verdant Barrier",
+        "gold": 1600
+      },
+      {
+        "id": 3190,
+        "name": "Locket of the Iron Solari",
+        "gold": 2200
+      },
+      {
+        "id": 3155,
+        "name": "Hexdrinker",
+        "gold": 1300
+      },
+      {
+        "id": 3193,
+        "name": "Gargoyle Stoneplate",
+        "gold": 3150
+      },
+      {
+        "id": 3050,
+        "name": "Zeke's Convergence",
+        "gold": 2200
+      },
+      {
+        "id": 3105,
+        "name": "Aegis of the Legion",
+        "gold": 1100
+      },
+      {
+        "id": 3140,
+        "name": "Quicksilver Sash",
+        "gold": 1300
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -2538,7 +3002,7 @@
     "shop": {
       "prices": {
         "total": 400,
-        "combined": 0,
+        "combined": 400,
         "sell": 160
       },
       "purchasable": true,
@@ -2571,29 +3035,121 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      3032,
-      2015,
-      6670,
-      1053,
-      3133,
-      3004,
-      2019,
-      2021,
-      6692,
-      3123,
-      3051,
-      323004,
-      3155,
-      3035,
-      3077,
-      3044,
-      4003,
-      3134,
-      3142,
-      6671,
-      6690,
-      6699,
-      6701
+      {
+        "id": 3032,
+        "name": "Yun Tal Wildarrows",
+        "gold": 3000
+      },
+      {
+        "id": 2015,
+        "name": "Kircheis Shard",
+        "gold": 700
+      },
+      {
+        "id": 6670,
+        "name": "Noonquiver",
+        "gold": 1300
+      },
+      {
+        "id": 1053,
+        "name": "Vampiric Scepter",
+        "gold": 900
+      },
+      {
+        "id": 3133,
+        "name": "Caulfield's Warhammer",
+        "gold": 1050
+      },
+      {
+        "id": 3004,
+        "name": "Manamune",
+        "gold": 2900
+      },
+      {
+        "id": 2019,
+        "name": "Steel Sigil",
+        "gold": 1100
+      },
+      {
+        "id": 2021,
+        "name": "Tunneler",
+        "gold": 1150
+      },
+      {
+        "id": 6692,
+        "name": "Eclipse",
+        "gold": 2900
+      },
+      {
+        "id": 3123,
+        "name": "Executioner's Calling",
+        "gold": 800
+      },
+      {
+        "id": 3051,
+        "name": "Hearthbound Axe",
+        "gold": 1200
+      },
+      {
+        "id": 323004,
+        "name": "Manamune",
+        "gold": 2900
+      },
+      {
+        "id": 3155,
+        "name": "Hexdrinker",
+        "gold": 1300
+      },
+      {
+        "id": 3035,
+        "name": "Last Whisper",
+        "gold": 1450
+      },
+      {
+        "id": 3077,
+        "name": "Tiamat",
+        "gold": 1200
+      },
+      {
+        "id": 3044,
+        "name": "Phage",
+        "gold": 1100
+      },
+      {
+        "id": 4003,
+        "name": "Lifeline",
+        "gold": 2500
+      },
+      {
+        "id": 3134,
+        "name": "Serrated Dirk",
+        "gold": 1000
+      },
+      {
+        "id": 3142,
+        "name": "Youmuu's Ghostblade",
+        "gold": 2800
+      },
+      {
+        "id": 6671,
+        "name": "Galeforce",
+        "gold": 3500
+      },
+      {
+        "id": 6690,
+        "name": "Rectrix",
+        "gold": 775
+      },
+      {
+        "id": 6699,
+        "name": "Voltaic Cyclosword",
+        "gold": 3000
+      },
+      {
+        "id": 6701,
+        "name": "Opportunity",
+        "gold": 2700
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -2786,7 +3342,7 @@
     "shop": {
       "prices": {
         "total": 350,
-        "combined": 0,
+        "combined": 350,
         "sell": 140
       },
       "purchasable": true,
@@ -2816,27 +3372,111 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      6035,
-      3139,
-      2020,
-      6692,
-      3071,
-      3072,
-      6673,
-      3161,
-      3181,
-      3039,
-      6676,
-      3031,
-      3053,
-      3508,
-      3087,
-      3124,
-      3153,
-      6695,
-      6029,
-      6333,
-      6701
+      {
+        "id": 6035,
+        "name": "Silvermere Dawn",
+        "gold": 3000
+      },
+      {
+        "id": 3139,
+        "name": "Mercurial Scimitar",
+        "gold": 3200
+      },
+      {
+        "id": 2020,
+        "name": "The Brutalizer",
+        "gold": 1337
+      },
+      {
+        "id": 6692,
+        "name": "Eclipse",
+        "gold": 2900
+      },
+      {
+        "id": 3071,
+        "name": "Black Cleaver",
+        "gold": 3000
+      },
+      {
+        "id": 3072,
+        "name": "Bloodthirster",
+        "gold": 3400
+      },
+      {
+        "id": 6673,
+        "name": "Immortal Shieldbow",
+        "gold": 3000
+      },
+      {
+        "id": 3161,
+        "name": "Spear of Shojin",
+        "gold": 3100
+      },
+      {
+        "id": 3181,
+        "name": "Hullbreaker",
+        "gold": 3000
+      },
+      {
+        "id": 3039,
+        "name": "Atma's Reckoning",
+        "gold": 2900
+      },
+      {
+        "id": 6676,
+        "name": "The Collector",
+        "gold": 3000
+      },
+      {
+        "id": 3031,
+        "name": "Infinity Edge",
+        "gold": 3450
+      },
+      {
+        "id": 3053,
+        "name": "Sterak's Gage",
+        "gold": 3200
+      },
+      {
+        "id": 3508,
+        "name": "Essence Reaver",
+        "gold": 2900
+      },
+      {
+        "id": 3087,
+        "name": "Statikk Shiv",
+        "gold": 2700
+      },
+      {
+        "id": 3124,
+        "name": "Guinsoo's Rageblade",
+        "gold": 3000
+      },
+      {
+        "id": 3153,
+        "name": "Blade of The Ruined King",
+        "gold": 3200
+      },
+      {
+        "id": 6695,
+        "name": "Serpent's Fang",
+        "gold": 2500
+      },
+      {
+        "id": 6029,
+        "name": "Ironspike Whip",
+        "gold": 1100
+      },
+      {
+        "id": 6333,
+        "name": "Death's Dance",
+        "gold": 3300
+      },
+      {
+        "id": 6701,
+        "name": "Opportunity",
+        "gold": 2700
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -3029,7 +3669,7 @@
     "shop": {
       "prices": {
         "total": 875,
-        "combined": 0,
+        "combined": 875,
         "sell": 350
       },
       "purchasable": true,
@@ -3059,13 +3699,41 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      3032,
-      3146,
-      3072,
-      3026,
-      3031,
-      4403,
-      6671
+      {
+        "id": 3032,
+        "name": "Yun Tal Wildarrows",
+        "gold": 3000
+      },
+      {
+        "id": 3146,
+        "name": "Hextech Gunblade",
+        "gold": 3250
+      },
+      {
+        "id": 3072,
+        "name": "Bloodthirster",
+        "gold": 3400
+      },
+      {
+        "id": 3026,
+        "name": "Guardian Angel",
+        "gold": 3200
+      },
+      {
+        "id": 3031,
+        "name": "Infinity Edge",
+        "gold": 3450
+      },
+      {
+        "id": 4403,
+        "name": "The Golden Spatula",
+        "gold": 7187
+      },
+      {
+        "id": 6671,
+        "name": "Galeforce",
+        "gold": 3500
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -3260,7 +3928,7 @@
     "shop": {
       "prices": {
         "total": 1300,
-        "combined": 0,
+        "combined": 1300,
         "sell": 520
       },
       "purchasable": true,
@@ -3290,17 +3958,61 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      6631,
-      3046,
-      1043,
-      3051,
-      6675,
-      6677,
-      3144,
-      3086,
-      3006,
-      3073,
-      3131
+      {
+        "id": 6631,
+        "name": "Stridebreaker",
+        "gold": 3300
+      },
+      {
+        "id": 3046,
+        "name": "Phantom Dancer",
+        "gold": 2650
+      },
+      {
+        "id": 1043,
+        "name": "Recurve Bow",
+        "gold": 700
+      },
+      {
+        "id": 3051,
+        "name": "Hearthbound Axe",
+        "gold": 1200
+      },
+      {
+        "id": 6675,
+        "name": "Navori Flickerblade",
+        "gold": 2650
+      },
+      {
+        "id": 6677,
+        "name": "Rageknife",
+        "gold": 1100
+      },
+      {
+        "id": 3144,
+        "name": "Scout's Slingshot",
+        "gold": 600
+      },
+      {
+        "id": 3086,
+        "name": "Zeal",
+        "gold": 1200
+      },
+      {
+        "id": 3006,
+        "name": "Berserker's Greaves",
+        "gold": 1100
+      },
+      {
+        "id": 3073,
+        "name": "Experimental Hexplate",
+        "gold": 3000
+      },
+      {
+        "id": 3131,
+        "name": "Sword of the Divine",
+        "gold": 2300
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -3493,7 +4205,7 @@
     "shop": {
       "prices": {
         "total": 250,
-        "combined": 0,
+        "combined": 250,
         "sell": 100
       },
       "purchasable": true,
@@ -3522,15 +4234,43 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1042
+      {
+        "id": 1042,
+        "name": "Dagger",
+        "gold": 250
+      }
     ],
     "buildsInto": [
-      3115,
-      3302,
-      3091,
-      3124,
-      3153,
-      6672
+      {
+        "id": 3115,
+        "name": "Nashor's Tooth",
+        "gold": 2900
+      },
+      {
+        "id": 3302,
+        "name": "Terminus",
+        "gold": 3000
+      },
+      {
+        "id": 3091,
+        "name": "Wit's End",
+        "gold": 2800
+      },
+      {
+        "id": 3124,
+        "name": "Guinsoo's Rageblade",
+        "gold": 3000
+      },
+      {
+        "id": 3153,
+        "name": "Blade of The Ruined King",
+        "gold": 3200
+      },
+      {
+        "id": 6672,
+        "name": "Kraken Slayer",
+        "gold": 3100
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -3910,7 +4650,7 @@
     "shop": {
       "prices": {
         "total": 700,
-        "combined": 0,
+        "combined": 450,
         "sell": 280
       },
       "purchasable": true,
@@ -3940,27 +4680,111 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      4642,
-      4632,
-      3145,
-      2421,
-      3108,
-      2508,
-      2420,
-      4630,
-      3113,
-      3116,
-      3124,
-      324005,
-      3147,
-      323504,
-      326616,
-      3802,
-      3916,
-      4635,
-      4637,
-      4644,
-      6656
+      {
+        "id": 4642,
+        "name": "Bandleglass Mirror",
+        "gold": 900
+      },
+      {
+        "id": 4632,
+        "name": "Verdant Barrier",
+        "gold": 1600
+      },
+      {
+        "id": 3145,
+        "name": "Hextech Alternator",
+        "gold": 1100
+      },
+      {
+        "id": 2421,
+        "name": "Shattered Armguard",
+        "gold": 1600
+      },
+      {
+        "id": 3108,
+        "name": "Fiendish Codex",
+        "gold": 850
+      },
+      {
+        "id": 2508,
+        "name": "Fated Ashes",
+        "gold": 900
+      },
+      {
+        "id": 2420,
+        "name": "Seeker's Armguard",
+        "gold": 1600
+      },
+      {
+        "id": 4630,
+        "name": "Blighting Jewel",
+        "gold": 1100
+      },
+      {
+        "id": 3113,
+        "name": "Aether Wisp",
+        "gold": 900
+      },
+      {
+        "id": 3116,
+        "name": "Rylai's Crystal Scepter",
+        "gold": 2600
+      },
+      {
+        "id": 3124,
+        "name": "Guinsoo's Rageblade",
+        "gold": 3000
+      },
+      {
+        "id": 324005,
+        "name": "Imperial Mandate",
+        "gold": 2750
+      },
+      {
+        "id": 3147,
+        "name": "Haunting Guise",
+        "gold": 1300
+      },
+      {
+        "id": 323504,
+        "name": "Ardent Censer",
+        "gold": 2600
+      },
+      {
+        "id": 326616,
+        "name": "Staff of Flowing Water",
+        "gold": 2600
+      },
+      {
+        "id": 3802,
+        "name": "Lost Chapter",
+        "gold": 1200
+      },
+      {
+        "id": 3916,
+        "name": "Oblivion Orb",
+        "gold": 800
+      },
+      {
+        "id": 4635,
+        "name": "Leeching Leer",
+        "gold": 1265
+      },
+      {
+        "id": 4637,
+        "name": "Demonic Embrace",
+        "gold": 3000
+      },
+      {
+        "id": 4644,
+        "name": "Crown of the Shattered Queen",
+        "gold": 2865
+      },
+      {
+        "id": 6656,
+        "name": "Everfrost",
+        "gold": 2865
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -4156,7 +4980,7 @@
     "shop": {
       "prices": {
         "total": 400,
-        "combined": 0,
+        "combined": 400,
         "sell": 160
       },
       "purchasable": true,
@@ -4184,14 +5008,38 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1036
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      }
     ],
     "buildsInto": [
-      3139,
-      3072,
-      3074,
-      3153,
-      4403
+      {
+        "id": 3139,
+        "name": "Mercurial Scimitar",
+        "gold": 3200
+      },
+      {
+        "id": 3072,
+        "name": "Bloodthirster",
+        "gold": 3400
+      },
+      {
+        "id": 3074,
+        "name": "Ravenous Hydra",
+        "gold": 3300
+      },
+      {
+        "id": 3153,
+        "name": "Blade of The Ruined King",
+        "gold": 3200
+      },
+      {
+        "id": 4403,
+        "name": "The Golden Spatula",
+        "gold": 7187
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -4384,7 +5232,7 @@
     "shop": {
       "prices": {
         "total": 900,
-        "combined": 0,
+        "combined": 550,
         "sell": 360
       },
       "purchasable": true,
@@ -4980,7 +5828,7 @@
     "shop": {
       "prices": {
         "total": 450,
-        "combined": 0,
+        "combined": 450,
         "sell": 180
       },
       "purchasable": true,
@@ -5206,7 +6054,7 @@
     "shop": {
       "prices": {
         "total": 450,
-        "combined": 0,
+        "combined": 450,
         "sell": 180
       },
       "purchasable": true,
@@ -5803,7 +6651,7 @@
     "shop": {
       "prices": {
         "total": 400,
-        "combined": 0,
+        "combined": 400,
         "sell": 160
       },
       "purchasable": true,
@@ -5832,15 +6680,43 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1033
+      {
+        "id": 1033,
+        "name": "Null-Magic Mantle",
+        "gold": 400
+      }
     ],
     "buildsInto": [
-      4401,
-      2504,
-      3091,
-      328020,
-      6665,
-      8020
+      {
+        "id": 4401,
+        "name": "Force of Nature",
+        "gold": 2800
+      },
+      {
+        "id": 2504,
+        "name": "Kaenic Rookern",
+        "gold": 2900
+      },
+      {
+        "id": 3091,
+        "name": "Wit's End",
+        "gold": 2800
+      },
+      {
+        "id": 328020,
+        "name": "Abyssal Mask",
+        "gold": 2850
+      },
+      {
+        "id": 6665,
+        "name": "Jak'Sho, The Protean",
+        "gold": 3200
+      },
+      {
+        "id": 8020,
+        "name": "Abyssal Mask",
+        "gold": 2650
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -6033,7 +6909,7 @@
     "shop": {
       "prices": {
         "total": 850,
-        "combined": 0,
+        "combined": 450,
         "sell": 340
       },
       "purchasable": true,
@@ -6063,13 +6939,41 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      3146,
-      3128,
-      3102,
-      3157,
-      4645,
-      3089,
-      4403
+      {
+        "id": 3146,
+        "name": "Hextech Gunblade",
+        "gold": 3250
+      },
+      {
+        "id": 3128,
+        "name": "Deathfire Grasp",
+        "gold": 2900
+      },
+      {
+        "id": 3102,
+        "name": "Banshee's Veil",
+        "gold": 3000
+      },
+      {
+        "id": 3157,
+        "name": "Zhonya's Hourglass",
+        "gold": 3250
+      },
+      {
+        "id": 4645,
+        "name": "Shadowflame",
+        "gold": 3200
+      },
+      {
+        "id": 3089,
+        "name": "Rabadon's Deathcap",
+        "gold": 3500
+      },
+      {
+        "id": 4403,
+        "name": "The Golden Spatula",
+        "gold": 7187
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -6264,7 +7168,7 @@
     "shop": {
       "prices": {
         "total": 1200,
-        "combined": 0,
+        "combined": 1200,
         "sell": 480
       },
       "purchasable": true,
@@ -6292,7 +7196,11 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      3041
+      {
+        "id": 3041,
+        "name": "Mejai's Soulstealer",
+        "gold": 1500
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -6674,7 +7582,7 @@
     "shop": {
       "prices": {
         "total": 350,
-        "combined": 0,
+        "combined": 350,
         "sell": 140
       },
       "purchasable": true,
@@ -7082,7 +7990,7 @@
     "shop": {
       "prices": {
         "total": 450,
-        "combined": 0,
+        "combined": 450,
         "sell": 180
       },
       "purchasable": true,
@@ -7680,7 +8588,7 @@
     "shop": {
       "prices": {
         "total": 450,
-        "combined": 0,
+        "combined": 450,
         "sell": 180
       },
       "purchasable": true,
@@ -8279,7 +9187,7 @@
     "shop": {
       "prices": {
         "total": 450,
-        "combined": 0,
+        "combined": 450,
         "sell": 180
       },
       "purchasable": true,
@@ -8878,7 +9786,7 @@
     "shop": {
       "prices": {
         "total": 450,
-        "combined": 0,
+        "combined": 450,
         "sell": 180
       },
       "purchasable": true,
@@ -14324,7 +15232,7 @@
     "shop": {
       "prices": {
         "total": 50,
-        "combined": 0,
+        "combined": 50,
         "sell": 20
       },
       "purchasable": true,
@@ -14545,7 +15453,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 50,
         "sell": 0
       },
       "purchasable": false,
@@ -14570,14 +15478,38 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1029,
-      1036,
-      1029
+      {
+        "id": 1029,
+        "name": "Cloth Armor",
+        "gold": 300
+      },
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      },
+      {
+        "id": 1029,
+        "name": "Cloth Armor",
+        "gold": 300
+      }
     ],
     "buildsInto": [
-      3026,
-      6333,
-      6700
+      {
+        "id": 3026,
+        "name": "Guardian Angel",
+        "gold": 3200
+      },
+      {
+        "id": 6333,
+        "name": "Death's Dance",
+        "gold": 3300
+      },
+      {
+        "id": 6700,
+        "name": "Shield of the Rakkor",
+        "gold": 2675
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -14770,7 +15702,7 @@
     "shop": {
       "prices": {
         "total": 1100,
-        "combined": 0,
+        "combined": 150,
         "sell": 440
       },
       "purchasable": true,
@@ -14797,13 +15729,33 @@
       "EPIC"
     ],
     "buildsFrom": [
-      2022,
-      1037
+      {
+        "id": 2022,
+        "name": "Glowing Mote",
+        "gold": 250
+      },
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      }
     ],
     "buildsInto": [
-      6698,
-      6696,
-      6699
+      {
+        "id": 6698,
+        "name": "Profane Hydra",
+        "gold": 3200
+      },
+      {
+        "id": 6696,
+        "name": "Axiom Arc",
+        "gold": 3000
+      },
+      {
+        "id": 6699,
+        "name": "Voltaic Cyclosword",
+        "gold": 3000
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -14996,7 +15948,7 @@
     "shop": {
       "prices": {
         "total": 1337,
-        "combined": 0,
+        "combined": 212,
         "sell": 534
       },
       "purchasable": true,
@@ -15023,18 +15975,58 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1036,
-      1028
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      },
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      }
     ],
     "buildsInto": [
-      3748,
-      3161,
-      3814,
-      3181,
-      2501,
-      3053,
-      3073,
-      6610
+      {
+        "id": 3748,
+        "name": "Titanic Hydra",
+        "gold": 3300
+      },
+      {
+        "id": 3161,
+        "name": "Spear of Shojin",
+        "gold": 3100
+      },
+      {
+        "id": 3814,
+        "name": "Edge of Night",
+        "gold": 3000
+      },
+      {
+        "id": 3181,
+        "name": "Hullbreaker",
+        "gold": 3000
+      },
+      {
+        "id": 2501,
+        "name": "Overlord's Bloodmail",
+        "gold": 3300
+      },
+      {
+        "id": 3053,
+        "name": "Sterak's Gage",
+        "gold": 3200
+      },
+      {
+        "id": 3073,
+        "name": "Experimental Hexplate",
+        "gold": 3000
+      },
+      {
+        "id": 6610,
+        "name": "Sundered Sky",
+        "gold": 3100
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -15227,7 +16219,7 @@
     "shop": {
       "prices": {
         "total": 1150,
-        "combined": 0,
+        "combined": 400,
         "sell": 460
       },
       "purchasable": true,
@@ -15255,16 +16247,56 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      3158,
-      3133,
-      2020,
-      4642,
-      3108,
-      6660,
-      3024,
-      3057,
-      3067,
-      3802
+      {
+        "id": 3158,
+        "name": "Ionian Boots of Lucidity",
+        "gold": 900
+      },
+      {
+        "id": 3133,
+        "name": "Caulfield's Warhammer",
+        "gold": 1050
+      },
+      {
+        "id": 2020,
+        "name": "The Brutalizer",
+        "gold": 1337
+      },
+      {
+        "id": 4642,
+        "name": "Bandleglass Mirror",
+        "gold": 900
+      },
+      {
+        "id": 3108,
+        "name": "Fiendish Codex",
+        "gold": 850
+      },
+      {
+        "id": 6660,
+        "name": "Bami's Cinder",
+        "gold": 900
+      },
+      {
+        "id": 3024,
+        "name": "Glacial Buckler",
+        "gold": 900
+      },
+      {
+        "id": 3057,
+        "name": "Sheen",
+        "gold": 900
+      },
+      {
+        "id": 3067,
+        "name": "Kindlegem",
+        "gold": 800
+      },
+      {
+        "id": 3802,
+        "name": "Lost Chapter",
+        "gold": 1200
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -15457,7 +16489,7 @@
     "shop": {
       "prices": {
         "total": 250,
-        "combined": 0,
+        "combined": 250,
         "sell": 100
       },
       "purchasable": true,
@@ -15490,7 +16522,11 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      2033
+      {
+        "id": 2033,
+        "name": "Corrupting Potion",
+        "gold": 500
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -15872,7 +16908,7 @@
     "shop": {
       "prices": {
         "total": 150,
-        "combined": 0,
+        "combined": 150,
         "sell": 60
       },
       "purchasable": true,
@@ -16278,7 +17314,7 @@
     "shop": {
       "prices": {
         "total": 500,
-        "combined": 0,
+        "combined": 500,
         "sell": 200
       },
       "purchasable": true,
@@ -16497,7 +17533,7 @@
     "shop": {
       "prices": {
         "total": 500,
-        "combined": 0,
+        "combined": 500,
         "sell": 200
       },
       "purchasable": true,
@@ -16910,7 +17946,7 @@
     "shop": {
       "prices": {
         "total": 950,
-        "combined": 0,
+        "combined": 950,
         "sell": 380
       },
       "purchasable": true,
@@ -17353,7 +18389,7 @@
     "shop": {
       "prices": {
         "total": 75,
-        "combined": 0,
+        "combined": 75,
         "sell": 30
       },
       "purchasable": true,
@@ -17378,8 +18414,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3113,
-      4642
+      {
+        "id": 3113,
+        "name": "Aether Wisp",
+        "gold": 900
+      },
+      {
+        "id": 4642,
+        "name": "Bandleglass Mirror",
+        "gold": 900
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -17584,7 +18628,7 @@
     "shop": {
       "prices": {
         "total": 2200,
-        "combined": 0,
+        "combined": 400,
         "sell": 880
       },
       "purchasable": true,
@@ -17807,7 +18851,7 @@
     "shop": {
       "prices": {
         "total": 500,
-        "combined": 0,
+        "combined": 500,
         "sell": 200
       },
       "purchasable": true,
@@ -18031,7 +19075,7 @@
     "shop": {
       "prices": {
         "total": 500,
-        "combined": 0,
+        "combined": 500,
         "sell": 200
       },
       "purchasable": true,
@@ -18256,7 +19300,7 @@
     "shop": {
       "prices": {
         "total": 500,
-        "combined": 0,
+        "combined": 500,
         "sell": 200
       },
       "purchasable": true,
@@ -18476,7 +19520,7 @@
     "shop": {
       "prices": {
         "total": 300,
-        "combined": 0,
+        "combined": 300,
         "sell": 120
       },
       "purchasable": true,
@@ -18693,7 +19737,7 @@
     "shop": {
       "prices": {
         "total": 500,
-        "combined": 0,
+        "combined": 500,
         "sell": 200
       },
       "purchasable": true,
@@ -18913,7 +19957,7 @@
     "shop": {
       "prices": {
         "total": 500,
-        "combined": 0,
+        "combined": 500,
         "sell": 200
       },
       "purchasable": true,
@@ -19132,7 +20176,7 @@
     "shop": {
       "prices": {
         "total": 500,
-        "combined": 0,
+        "combined": 500,
         "sell": 200
       },
       "purchasable": true,
@@ -20000,7 +21044,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 50,
         "sell": 0
       },
       "purchasable": false,
@@ -20217,7 +21261,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 50,
         "sell": 0
       },
       "purchasable": false,
@@ -20242,13 +21286,33 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1052,
-      1029,
-      1052
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      },
+      {
+        "id": 1029,
+        "name": "Cloth Armor",
+        "gold": 300
+      },
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      }
     ],
     "buildsInto": [
-      3157,
-      4003
+      {
+        "id": 3157,
+        "name": "Zhonya's Hourglass",
+        "gold": 3250
+      },
+      {
+        "id": 4003,
+        "name": "Lifeline",
+        "gold": 2500
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -20453,7 +21517,7 @@
     "shop": {
       "prices": {
         "total": 1600,
-        "combined": 0,
+        "combined": 500,
         "sell": 640
       },
       "purchasable": true,
@@ -20480,12 +21544,28 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1052,
-      1029,
-      1052
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      },
+      {
+        "id": 1029,
+        "name": "Cloth Armor",
+        "gold": 300
+      },
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      }
     ],
     "buildsInto": [
-      3157
+      {
+        "id": 3157,
+        "name": "Zhonya's Hourglass",
+        "gold": 3250
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -20678,7 +21758,7 @@
     "shop": {
       "prices": {
         "total": 1600,
-        "combined": 0,
+        "combined": 500,
         "sell": 640
       },
       "purchasable": true,
@@ -20704,13 +21784,41 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      3006,
-      3047,
-      3020,
-      3158,
-      3111,
-      3117,
-      3009
+      {
+        "id": 3006,
+        "name": "Berserker's Greaves",
+        "gold": 1100
+      },
+      {
+        "id": 3047,
+        "name": "Plated Steelcaps",
+        "gold": 1200
+      },
+      {
+        "id": 3020,
+        "name": "Sorcerer's Shoes",
+        "gold": 1100
+      },
+      {
+        "id": 3158,
+        "name": "Ionian Boots of Lucidity",
+        "gold": 900
+      },
+      {
+        "id": 3111,
+        "name": "Mercury's Treads",
+        "gold": 1250
+      },
+      {
+        "id": 3117,
+        "name": "Mobility Boots",
+        "gold": 1000
+      },
+      {
+        "id": 3009,
+        "name": "Boots of Swiftness",
+        "gold": 1000
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -21090,7 +22198,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 300,
         "sell": 0
       },
       "purchasable": false,
@@ -21115,8 +22223,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      2021,
-      2021
+      {
+        "id": 2021,
+        "name": "Tunneler",
+        "gold": 1150
+      },
+      {
+        "id": 2021,
+        "name": "Tunneler",
+        "gold": 1150
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -21683,7 +22799,7 @@
     "shop": {
       "prices": {
         "total": 3300,
-        "combined": 0,
+        "combined": 1000,
         "sell": 1320
       },
       "purchasable": true,
@@ -21711,8 +22827,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3105,
-      1011
+      {
+        "id": 3105,
+        "name": "Aegis of the Legion",
+        "gold": 1100
+      },
+      {
+        "id": 1011,
+        "name": "Giant's Belt",
+        "gold": 900
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -22093,7 +23217,7 @@
     "shop": {
       "prices": {
         "total": 2800,
-        "combined": 0,
+        "combined": 800,
         "sell": 1120
       },
       "purchasable": true,
@@ -22120,8 +23244,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3802,
-      2508
+      {
+        "id": 3802,
+        "name": "Lost Chapter",
+        "gold": 1200
+      },
+      {
+        "id": 2508,
+        "name": "Fated Ashes",
+        "gold": 900
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -22690,7 +23822,7 @@
     "shop": {
       "prices": {
         "total": 2800,
-        "combined": 0,
+        "combined": 700,
         "sell": 1120
       },
       "purchasable": true,
@@ -22717,8 +23849,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3211,
-      1057
+      {
+        "id": 3211,
+        "name": "Spectre's Cowl",
+        "gold": 1250
+      },
+      {
+        "id": 1057,
+        "name": "Negatron Cloak",
+        "gold": 850
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -23099,7 +24239,7 @@
     "shop": {
       "prices": {
         "total": 2900,
-        "combined": 0,
+        "combined": 800,
         "sell": 1160
       },
       "purchasable": true,
@@ -23126,11 +24266,23 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1052
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      }
     ],
     "buildsInto": [
-      6653,
-      2503
+      {
+        "id": 6653,
+        "name": "Liandry's Torment",
+        "gold": 3000
+      },
+      {
+        "id": 2503,
+        "name": "Blackfire Torch",
+        "gold": 2800
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -23510,7 +24662,7 @@
     "shop": {
       "prices": {
         "total": 900,
-        "combined": 0,
+        "combined": 500,
         "sell": 360
       },
       "purchasable": true,
@@ -23537,8 +24689,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3066,
-      1031
+      {
+        "id": 3066,
+        "name": "Winged Moonplate",
+        "gold": 800
+      },
+      {
+        "id": 1031,
+        "name": "Chain Vest",
+        "gold": 800
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -23919,7 +25079,7 @@
     "shop": {
       "prices": {
         "total": 2400,
-        "combined": 0,
+        "combined": 800,
         "sell": 960
       },
       "purchasable": true,
@@ -23947,9 +25107,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3070,
-      3802,
-      3108
+      {
+        "id": 3070,
+        "name": "Tear of the Goddess",
+        "gold": 400
+      },
+      {
+        "id": 3802,
+        "name": "Lost Chapter",
+        "gold": 1200
+      },
+      {
+        "id": 3108,
+        "name": "Fiendish Codex",
+        "gold": 850
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -24704,7 +25876,7 @@
     "shop": {
       "prices": {
         "total": 2900,
-        "combined": 0,
+        "combined": 450,
         "sell": 1160
       },
       "purchasable": true,
@@ -24731,9 +25903,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3070,
-      3133,
-      1036
+      {
+        "id": 3070,
+        "name": "Tear of the Goddess",
+        "gold": 400
+      },
+      {
+        "id": 3133,
+        "name": "Caulfield's Warhammer",
+        "gold": 1050
+      },
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -25486,7 +26670,7 @@
     "shop": {
       "prices": {
         "total": 2900,
-        "combined": 0,
+        "combined": 1100,
         "sell": 1160
       },
       "purchasable": true,
@@ -25516,12 +26700,28 @@
       "BOOTS"
     ],
     "buildsFrom": [
-      1001,
-      1042,
-      1042
+      {
+        "id": 1001,
+        "name": "Boots",
+        "gold": 300
+      },
+      {
+        "id": 1042,
+        "name": "Dagger",
+        "gold": 250
+      },
+      {
+        "id": 1042,
+        "name": "Dagger",
+        "gold": 250
+      }
     ],
     "buildsInto": [
-      3172
+      {
+        "id": 3172,
+        "name": "Gunmetal Greaves",
+        "gold": 1600
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -25717,7 +26917,7 @@
     "shop": {
       "prices": {
         "total": 1100,
-        "combined": 0,
+        "combined": 300,
         "sell": 440
       },
       "purchasable": true,
@@ -25742,10 +26942,18 @@
       "BOOTS"
     ],
     "buildsFrom": [
-      1001
+      {
+        "id": 1001,
+        "name": "Boots",
+        "gold": 300
+      }
     ],
     "buildsInto": [
-      3170
+      {
+        "id": 3170,
+        "name": "Swiftmarch",
+        "gold": 1500
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -26127,7 +27335,7 @@
     "shop": {
       "prices": {
         "total": 1000,
-        "combined": 0,
+        "combined": 700,
         "sell": 400
       },
       "purchasable": true,
@@ -26152,10 +27360,18 @@
       "BOOTS"
     ],
     "buildsFrom": [
-      1001
+      {
+        "id": 1001,
+        "name": "Boots",
+        "gold": 300
+      }
     ],
     "buildsInto": [
-      3013
+      {
+        "id": 3013,
+        "name": "Synchronized Souls",
+        "gold": 900
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -26723,7 +27939,7 @@
     "shop": {
       "prices": {
         "total": 900,
-        "combined": 0,
+        "combined": 600,
         "sell": 360
       },
       "purchasable": true,
@@ -26748,10 +27964,18 @@
       "BOOTS"
     ],
     "buildsFrom": [
-      3010
+      {
+        "id": 3010,
+        "name": "Symbiotic Soles",
+        "gold": 900
+      }
     ],
     "buildsInto": [
-      3176
+      {
+        "id": 3176,
+        "name": "Forever Forward",
+        "gold": 1400
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -27344,10 +28568,18 @@
       "BOOTS"
     ],
     "buildsFrom": [
-      1001
+      {
+        "id": 1001,
+        "name": "Boots",
+        "gold": 300
+      }
     ],
     "buildsInto": [
-      3175
+      {
+        "id": 3175,
+        "name": "Spellslinger's Shoes",
+        "gold": 1600
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -27543,7 +28775,7 @@
     "shop": {
       "prices": {
         "total": 1100,
-        "combined": 0,
+        "combined": 800,
         "sell": 440
       },
       "purchasable": true,
@@ -27568,13 +28800,33 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1029,
-      1027,
-      2022
+      {
+        "id": 1029,
+        "name": "Cloth Armor",
+        "gold": 300
+      },
+      {
+        "id": 1027,
+        "name": "Sapphire Crystal",
+        "gold": 300
+      },
+      {
+        "id": 2022,
+        "name": "Glowing Mote",
+        "gold": 250
+      }
     ],
     "buildsInto": [
-      3110,
-      323110
+      {
+        "id": 3110,
+        "name": "Frozen Heart",
+        "gold": 2500
+      },
+      {
+        "id": 323110,
+        "name": "Frozen Heart",
+        "gold": 2700
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -27767,7 +29019,7 @@
     "shop": {
       "prices": {
         "total": 900,
-        "combined": 0,
+        "combined": 50,
         "sell": 360
       },
       "purchasable": true,
@@ -27795,8 +29047,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      2019,
-      1038
+      {
+        "id": 2019,
+        "name": "Steel Sigil",
+        "gold": 1100
+      },
+      {
+        "id": 1038,
+        "name": "B. F. Sword",
+        "gold": 1300
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -28179,7 +29439,7 @@
     "shop": {
       "prices": {
         "total": 3200,
-        "combined": 0,
+        "combined": 800,
         "sell": 1280
       },
       "purchasable": true,
@@ -28208,9 +29468,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1038,
-      1037,
-      1018
+      {
+        "id": 1038,
+        "name": "B. F. Sword",
+        "gold": 1300
+      },
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      },
+      {
+        "id": 1018,
+        "name": "Cloak of Agility",
+        "gold": 600
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -28406,7 +29678,7 @@
     "shop": {
       "prices": {
         "total": 3450,
-        "combined": 0,
+        "combined": 675,
         "sell": 1380
       },
       "purchasable": true,
@@ -28433,9 +29705,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1038,
-      3144,
-      1036
+      {
+        "id": 1038,
+        "name": "B. F. Sword",
+        "gold": 1300
+      },
+      {
+        "id": 3144,
+        "name": "Scout's Slingshot",
+        "gold": 600
+      },
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -29005,7 +30289,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 750,
         "sell": 1200
       },
       "purchasable": true,
@@ -29033,9 +30317,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3123,
-      3035,
-      1018
+      {
+        "id": 3123,
+        "name": "Executioner's Calling",
+        "gold": 800
+      },
+      {
+        "id": 3035,
+        "name": "Last Whisper",
+        "gold": 1450
+      },
+      {
+        "id": 1018,
+        "name": "Cloak of Agility",
+        "gold": 600
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -29419,7 +30715,7 @@
     "shop": {
       "prices": {
         "total": 3300,
-        "combined": 0,
+        "combined": 450,
         "sell": 1320
       },
       "purchasable": true,
@@ -29446,13 +30742,33 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1036,
-      1036
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      },
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      }
     ],
     "buildsInto": [
-      6694,
-      3033,
-      3036
+      {
+        "id": 6694,
+        "name": "Serylda's Grudge",
+        "gold": 3000
+      },
+      {
+        "id": 3033,
+        "name": "Mortal Reminder",
+        "gold": 3300
+      },
+      {
+        "id": 3036,
+        "name": "Lord Dominik's Regards",
+        "gold": 3100
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -29647,7 +30963,7 @@
     "shop": {
       "prices": {
         "total": 1450,
-        "combined": 0,
+        "combined": 750,
         "sell": 580
       },
       "purchasable": true,
@@ -29676,8 +30992,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3035,
-      6670
+      {
+        "id": 3035,
+        "name": "Last Whisper",
+        "gold": 1450
+      },
+      {
+        "id": 6670,
+        "name": "Noonquiver",
+        "gold": 1300
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -29875,7 +31199,7 @@
     "shop": {
       "prices": {
         "total": 3100,
-        "combined": 0,
+        "combined": 350,
         "sell": 1240
       },
       "purchasable": true,
@@ -30467,7 +31791,7 @@
     "shop": {
       "prices": {
         "total": 2900,
-        "combined": 0,
+        "combined": 2900,
         "sell": 1160
       },
       "purchasable": false,
@@ -30492,7 +31816,11 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1082
+      {
+        "id": 1082,
+        "name": "Dark Seal",
+        "gold": 350
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -30875,7 +32203,7 @@
     "shop": {
       "prices": {
         "total": 1500,
-        "combined": 0,
+        "combined": 1150,
         "sell": 600
       },
       "purchasable": true,
@@ -31468,7 +32796,7 @@
     "shop": {
       "prices": {
         "total": 2900,
-        "combined": 0,
+        "combined": 2900,
         "sell": 1160
       },
       "purchasable": false,
@@ -31498,15 +32826,43 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1028,
-      1036
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      },
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      }
     ],
     "buildsInto": [
-      6631,
-      3071,
-      6630,
-      3073,
-      3078
+      {
+        "id": 6631,
+        "name": "Stridebreaker",
+        "gold": 3300
+      },
+      {
+        "id": 3071,
+        "name": "Black Cleaver",
+        "gold": 3000
+      },
+      {
+        "id": 6630,
+        "name": "Goredrinker",
+        "gold": 3200
+      },
+      {
+        "id": 3073,
+        "name": "Experimental Hexplate",
+        "gold": 3000
+      },
+      {
+        "id": 3078,
+        "name": "Trinity Force",
+        "gold": 3333
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -31888,7 +33244,7 @@
     "shop": {
       "prices": {
         "total": 1100,
-        "combined": 0,
+        "combined": 350,
         "sell": 440
       },
       "purchasable": true,
@@ -31916,9 +33272,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1042,
-      3086,
-      1042
+      {
+        "id": 1042,
+        "name": "Dagger",
+        "gold": 250
+      },
+      {
+        "id": 3086,
+        "name": "Zeal",
+        "gold": 1200
+      },
+      {
+        "id": 1042,
+        "name": "Dagger",
+        "gold": 250
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -32301,7 +33669,7 @@
     "shop": {
       "prices": {
         "total": 2650,
-        "combined": 0,
+        "combined": 950,
         "sell": 1060
       },
       "purchasable": true,
@@ -32329,11 +33697,23 @@
       "BOOTS"
     ],
     "buildsFrom": [
-      1001,
-      1029
+      {
+        "id": 1001,
+        "name": "Boots",
+        "gold": 300
+      },
+      {
+        "id": 1029,
+        "name": "Cloth Armor",
+        "gold": 300
+      }
     ],
     "buildsInto": [
-      3174
+      {
+        "id": 3174,
+        "name": "Armored Advance",
+        "gold": 1700
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -32716,7 +34096,7 @@
     "shop": {
       "prices": {
         "total": 1200,
-        "combined": 0,
+        "combined": 600,
         "sell": 480
       },
       "purchasable": true,
@@ -32741,9 +34121,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3067,
-      1029,
-      1033
+      {
+        "id": 3067,
+        "name": "Kindlegem",
+        "gold": 800
+      },
+      {
+        "id": 1029,
+        "name": "Cloth Armor",
+        "gold": 300
+      },
+      {
+        "id": 1033,
+        "name": "Null-Magic Mantle",
+        "gold": 400
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -33126,7 +34518,7 @@
     "shop": {
       "prices": {
         "total": 2200,
-        "combined": 0,
+        "combined": 700,
         "sell": 880
       },
       "purchasable": true,
@@ -33154,14 +34546,38 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1036,
-      1042,
-      1036
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      },
+      {
+        "id": 1042,
+        "name": "Dagger",
+        "gold": 250
+      },
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      }
     ],
     "buildsInto": [
-      3302,
-      3078,
-      6672
+      {
+        "id": 3302,
+        "name": "Terminus",
+        "gold": 3000
+      },
+      {
+        "id": 3078,
+        "name": "Trinity Force",
+        "gold": 3333
+      },
+      {
+        "id": 6672,
+        "name": "Kraken Slayer",
+        "gold": 3100
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -33356,7 +34772,7 @@
     "shop": {
       "prices": {
         "total": 1200,
-        "combined": 0,
+        "combined": 250,
         "sell": 480
       },
       "purchasable": true,
@@ -33385,9 +34801,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1037,
-      2021,
-      1028
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      },
+      {
+        "id": 2021,
+        "name": "Tunneler",
+        "gold": 1150
+      },
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -33959,7 +35387,7 @@
     "shop": {
       "prices": {
         "total": 3200,
-        "combined": 0,
+        "combined": 775,
         "sell": 1280
       },
       "purchasable": true,
@@ -33987,13 +35415,33 @@
       "EPIC"
     ],
     "buildsFrom": [
-      2022
+      {
+        "id": 2022,
+        "name": "Glowing Mote",
+        "gold": 250
+      }
     ],
     "buildsInto": [
-      3100,
-      6662,
-      3078,
-      6632
+      {
+        "id": 3100,
+        "name": "Lich Bane",
+        "gold": 2900
+      },
+      {
+        "id": 6662,
+        "name": "Iceborn Gauntlet",
+        "gold": 2900
+      },
+      {
+        "id": 3078,
+        "name": "Trinity Force",
+        "gold": 3333
+      },
+      {
+        "id": 6632,
+        "name": "Divine Sunderer",
+        "gold": 3450
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -34375,7 +35823,7 @@
     "shop": {
       "prices": {
         "total": 900,
-        "combined": 0,
+        "combined": 650,
         "sell": 360
       },
       "purchasable": true,
@@ -34405,8 +35853,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3211,
-      3067
+      {
+        "id": 3211,
+        "name": "Spectre's Cowl",
+        "gold": 1250
+      },
+      {
+        "id": 3067,
+        "name": "Kindlegem",
+        "gold": 800
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -34789,7 +36245,7 @@
     "shop": {
       "prices": {
         "total": 2700,
-        "combined": 0,
+        "combined": 650,
         "sell": 1080
       },
       "purchasable": true,
@@ -34816,14 +36272,38 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1028
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      }
     ],
     "buildsInto": [
-      4401,
-      3181,
-      3002,
-      323002,
-      3742
+      {
+        "id": 4401,
+        "name": "Force of Nature",
+        "gold": 2800
+      },
+      {
+        "id": 3181,
+        "name": "Hullbreaker",
+        "gold": 3000
+      },
+      {
+        "id": 3002,
+        "name": "Trailblazer",
+        "gold": 2400
+      },
+      {
+        "id": 323002,
+        "name": "Trailblazer",
+        "gold": 2600
+      },
+      {
+        "id": 3742,
+        "name": "Dead Man's Plate",
+        "gold": 2900
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -35021,7 +36501,7 @@
     "shop": {
       "prices": {
         "total": 800,
-        "combined": 0,
+        "combined": 400,
         "sell": 320
       },
       "purchasable": true,
@@ -35049,37 +36529,153 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1028,
-      2022
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      },
+      {
+        "id": 2022,
+        "name": "Glowing Mote",
+        "gold": 250
+      }
     ],
     "buildsInto": [
-      323107,
-      323222,
-      3119,
-      8001,
-      3071,
-      323190,
-      3190,
-      6630,
-      6620,
-      3050,
-      323109,
-      3065,
-      3107,
-      3109,
-      326617,
-      3165,
-      3222,
-      323119,
-      326620,
-      328020,
-      4403,
-      4629,
-      4644,
-      6617,
-      6632,
-      6656,
-      8020
+      {
+        "id": 323107,
+        "name": "Redemption",
+        "gold": 2800
+      },
+      {
+        "id": 323222,
+        "name": "Mikael's Blessing",
+        "gold": 2800
+      },
+      {
+        "id": 3119,
+        "name": "Winter's Approach",
+        "gold": 2400
+      },
+      {
+        "id": 8001,
+        "name": "Anathema's Chains",
+        "gold": 2500
+      },
+      {
+        "id": 3071,
+        "name": "Black Cleaver",
+        "gold": 3000
+      },
+      {
+        "id": 323190,
+        "name": "Locket of the Iron Solari",
+        "gold": 2600
+      },
+      {
+        "id": 3190,
+        "name": "Locket of the Iron Solari",
+        "gold": 2200
+      },
+      {
+        "id": 6630,
+        "name": "Goredrinker",
+        "gold": 3200
+      },
+      {
+        "id": 6620,
+        "name": "Echoes of Helia",
+        "gold": 2200
+      },
+      {
+        "id": 3050,
+        "name": "Zeke's Convergence",
+        "gold": 2200
+      },
+      {
+        "id": 323109,
+        "name": "Knight's Vow",
+        "gold": 2900
+      },
+      {
+        "id": 3065,
+        "name": "Spirit Visage",
+        "gold": 2700
+      },
+      {
+        "id": 3107,
+        "name": "Redemption",
+        "gold": 2300
+      },
+      {
+        "id": 3109,
+        "name": "Knight's Vow",
+        "gold": 2300
+      },
+      {
+        "id": 326617,
+        "name": "Moonstone Renewer",
+        "gold": 2900
+      },
+      {
+        "id": 3165,
+        "name": "Morellonomicon",
+        "gold": 2850
+      },
+      {
+        "id": 3222,
+        "name": "Mikael's Blessing",
+        "gold": 2300
+      },
+      {
+        "id": 323119,
+        "name": "Winter's Approach",
+        "gold": 2400
+      },
+      {
+        "id": 326620,
+        "name": "Echoes of Helia",
+        "gold": 2600
+      },
+      {
+        "id": 328020,
+        "name": "Abyssal Mask",
+        "gold": 2850
+      },
+      {
+        "id": 4403,
+        "name": "The Golden Spatula",
+        "gold": 7187
+      },
+      {
+        "id": 4629,
+        "name": "Cosmic Drive",
+        "gold": 3000
+      },
+      {
+        "id": 4644,
+        "name": "Crown of the Shattered Queen",
+        "gold": 2865
+      },
+      {
+        "id": 6617,
+        "name": "Moonstone Renewer",
+        "gold": 2200
+      },
+      {
+        "id": 6632,
+        "name": "Divine Sunderer",
+        "gold": 3450
+      },
+      {
+        "id": 6656,
+        "name": "Everfrost",
+        "gold": 2865
+      },
+      {
+        "id": 8020,
+        "name": "Abyssal Mask",
+        "gold": 2650
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -35272,7 +36868,7 @@
     "shop": {
       "prices": {
         "total": 800,
-        "combined": 0,
+        "combined": 150,
         "sell": 320
       },
       "purchasable": true,
@@ -35304,8 +36900,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      6660,
-      1031
+      {
+        "id": 6660,
+        "name": "Bami's Cinder",
+        "gold": 900
+      },
+      {
+        "id": 1031,
+        "name": "Chain Vest",
+        "gold": 800
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -35689,7 +37293,7 @@
     "shop": {
       "prices": {
         "total": 2700,
-        "combined": 0,
+        "combined": 1000,
         "sell": 1080
       },
       "purchasable": true,
@@ -35717,9 +37321,21 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      3003,
-      3004,
-      3119
+      {
+        "id": 3003,
+        "name": "Archangel's Staff",
+        "gold": 2900
+      },
+      {
+        "id": 3004,
+        "name": "Manamune",
+        "gold": 2900
+      },
+      {
+        "id": 3119,
+        "name": "Winter's Approach",
+        "gold": 2400
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -36285,7 +37901,7 @@
     "shop": {
       "prices": {
         "total": 400,
-        "combined": 0,
+        "combined": 400,
         "sell": 160
       },
       "purchasable": true,
@@ -36313,9 +37929,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3044,
-      3067,
-      1037
+      {
+        "id": 3044,
+        "name": "Phage",
+        "gold": 1100
+      },
+      {
+        "id": 3067,
+        "name": "Kindlegem",
+        "gold": 800
+      },
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -36884,7 +38512,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 225,
         "sell": 1200
       },
       "purchasable": true,
@@ -36914,9 +38542,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1038,
-      1037,
-      1053
+      {
+        "id": 1038,
+        "name": "B. F. Sword",
+        "gold": 1300
+      },
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      },
+      {
+        "id": 1053,
+        "name": "Vampiric Scepter",
+        "gold": 900
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -37300,7 +38940,7 @@
     "shop": {
       "prices": {
         "total": 3400,
-        "combined": 0,
+        "combined": 325,
         "sell": 1360
       },
       "purchasable": true,
@@ -37327,9 +38967,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      2021,
-      3044,
-      1042
+      {
+        "id": 2021,
+        "name": "Tunneler",
+        "gold": 1150
+      },
+      {
+        "id": 3044,
+        "name": "Phage",
+        "gold": 1100
+      },
+      {
+        "id": 1042,
+        "name": "Dagger",
+        "gold": 250
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -37896,7 +39548,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 500,
         "sell": 1200
       },
       "purchasable": true,
@@ -37925,9 +39577,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3077,
-      1053,
-      3133
+      {
+        "id": 3077,
+        "name": "Tiamat",
+        "gold": 1200
+      },
+      {
+        "id": 1053,
+        "name": "Vampiric Scepter",
+        "gold": 900
+      },
+      {
+        "id": 3133,
+        "name": "Caulfield's Warhammer",
+        "gold": 1050
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -38318,7 +39982,7 @@
     "shop": {
       "prices": {
         "total": 3300,
-        "combined": 0,
+        "combined": 150,
         "sell": 1320
       },
       "purchasable": true,
@@ -38345,9 +40009,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3076,
-      1031,
-      1028
+      {
+        "id": 3076,
+        "name": "Bramble Vest",
+        "gold": 800
+      },
+      {
+        "id": 1031,
+        "name": "Chain Vest",
+        "gold": 800
+      },
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -38730,7 +40406,7 @@
     "shop": {
       "prices": {
         "total": 2450,
-        "combined": 0,
+        "combined": 450,
         "sell": 980
       },
       "purchasable": true,
@@ -38757,12 +40433,28 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1029,
-      1029
+      {
+        "id": 1029,
+        "name": "Cloth Armor",
+        "gold": 300
+      },
+      {
+        "id": 1029,
+        "name": "Cloth Armor",
+        "gold": 300
+      }
     ],
     "buildsInto": [
-      323075,
-      3075
+      {
+        "id": 323075,
+        "name": "Thornmail",
+        "gold": 2650
+      },
+      {
+        "id": 3075,
+        "name": "Thornmail",
+        "gold": 2450
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -39144,7 +40836,7 @@
     "shop": {
       "prices": {
         "total": 800,
-        "combined": 0,
+        "combined": 200,
         "sell": 320
       },
       "purchasable": true,
@@ -39171,14 +40863,38 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1036,
-      1036
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      },
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      }
     ],
     "buildsInto": [
-      3074,
-      3748,
-      6698,
-      6631
+      {
+        "id": 3074,
+        "name": "Ravenous Hydra",
+        "gold": 3300
+      },
+      {
+        "id": 3748,
+        "name": "Titanic Hydra",
+        "gold": 3300
+      },
+      {
+        "id": 6698,
+        "name": "Profane Hydra",
+        "gold": 3200
+      },
+      {
+        "id": 6631,
+        "name": "Stridebreaker",
+        "gold": 3300
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -39566,7 +41282,7 @@
     "shop": {
       "prices": {
         "total": 1200,
-        "combined": 0,
+        "combined": 500,
         "sell": 480
       },
       "purchasable": true,
@@ -39595,9 +41311,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3057,
-      3044,
-      3051
+      {
+        "id": 3057,
+        "name": "Sheen",
+        "gold": 900
+      },
+      {
+        "id": 3044,
+        "name": "Phage",
+        "gold": 1100
+      },
+      {
+        "id": 3051,
+        "name": "Hearthbound Axe",
+        "gold": 1200
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -40168,7 +41896,7 @@
     "shop": {
       "prices": {
         "total": 3333,
-        "combined": 0,
+        "combined": 133,
         "sell": 1333
       },
       "purchasable": true,
@@ -40197,13 +41925,33 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1029,
-      1029
+      {
+        "id": 1029,
+        "name": "Cloth Armor",
+        "gold": 300
+      },
+      {
+        "id": 1029,
+        "name": "Cloth Armor",
+        "gold": 300
+      }
     ],
     "buildsInto": [
-      3110,
-      323110,
-      3143
+      {
+        "id": 3110,
+        "name": "Frozen Heart",
+        "gold": 2500
+      },
+      {
+        "id": 323110,
+        "name": "Frozen Heart",
+        "gold": 2700
+      },
+      {
+        "id": 3143,
+        "name": "Randuin's Omen",
+        "gold": 2700
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -40583,7 +42331,7 @@
     "shop": {
       "prices": {
         "total": 1000,
-        "combined": 0,
+        "combined": 400,
         "sell": 400
       },
       "purchasable": true,
@@ -40610,9 +42358,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1011,
-      1011,
-      3801
+      {
+        "id": 1011,
+        "name": "Giant's Belt",
+        "gold": 900
+      },
+      {
+        "id": 1011,
+        "name": "Giant's Belt",
+        "gold": 900
+      },
+      {
+        "id": 3801,
+        "name": "Crystalline Bracer",
+        "gold": 800
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -41365,7 +43125,7 @@
     "shop": {
       "prices": {
         "total": 3100,
-        "combined": 0,
+        "combined": 500,
         "sell": 1240
       },
       "purchasable": true,
@@ -41392,9 +43152,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1011,
-      3801,
-      1011
+      {
+        "id": 1011,
+        "name": "Giant's Belt",
+        "gold": 900
+      },
+      {
+        "id": 3801,
+        "name": "Crystalline Bracer",
+        "gold": 800
+      },
+      {
+        "id": 1011,
+        "name": "Giant's Belt",
+        "gold": 900
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -41961,7 +43733,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 400,
         "sell": 1200
       },
       "purchasable": true,
@@ -41988,8 +43760,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3086,
-      3144
+      {
+        "id": 3086,
+        "name": "Zeal",
+        "gold": 1200
+      },
+      {
+        "id": 3144,
+        "name": "Scout's Slingshot",
+        "gold": 600
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -42370,7 +44150,7 @@
     "shop": {
       "prices": {
         "total": 2650,
-        "combined": 0,
+        "combined": 850,
         "sell": 1060
       },
       "purchasable": true,
@@ -42399,16 +44179,48 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1018,
-      1042
+      {
+        "id": 1018,
+        "name": "Cloak of Agility",
+        "gold": 600
+      },
+      {
+        "id": 1042,
+        "name": "Dagger",
+        "gold": 250
+      }
     ],
     "buildsInto": [
-      3046,
-      6675,
-      3085,
-      3094,
-      4403,
-      6671
+      {
+        "id": 3046,
+        "name": "Phantom Dancer",
+        "gold": 2650
+      },
+      {
+        "id": 6675,
+        "name": "Navori Flickerblade",
+        "gold": 2650
+      },
+      {
+        "id": 3085,
+        "name": "Runaan's Hurricane",
+        "gold": 2650
+      },
+      {
+        "id": 3094,
+        "name": "Rapid Firecannon",
+        "gold": 2650
+      },
+      {
+        "id": 4403,
+        "name": "The Golden Spatula",
+        "gold": 7187
+      },
+      {
+        "id": 6671,
+        "name": "Galeforce",
+        "gold": 3500
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -42601,7 +44413,7 @@
     "shop": {
       "prices": {
         "total": 1200,
-        "combined": 0,
+        "combined": 350,
         "sell": 480
       },
       "purchasable": true,
@@ -42629,9 +44441,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3144,
-      6690,
-      1037
+      {
+        "id": 3144,
+        "name": "Scout's Slingshot",
+        "gold": 600
+      },
+      {
+        "id": 6690,
+        "name": "Rectrix",
+        "gold": 775
+      },
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -43198,7 +45022,7 @@
     "shop": {
       "prices": {
         "total": 2700,
-        "combined": 0,
+        "combined": 450,
         "sell": 1080
       },
       "purchasable": true,
@@ -43226,8 +45050,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1058,
-      1058
+      {
+        "id": 1058,
+        "name": "Needlessly Large Rod",
+        "gold": 1200
+      },
+      {
+        "id": 1058,
+        "name": "Needlessly Large Rod",
+        "gold": 1200
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -43613,7 +45445,7 @@
     "shop": {
       "prices": {
         "total": 3500,
-        "combined": 0,
+        "combined": 1100,
         "sell": 1400
       },
       "purchasable": true,
@@ -43640,9 +45472,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1043,
-      1057,
-      1043
+      {
+        "id": 1043,
+        "name": "Recurve Bow",
+        "gold": 700
+      },
+      {
+        "id": 1057,
+        "name": "Negatron Cloak",
+        "gold": 850
+      },
+      {
+        "id": 1043,
+        "name": "Recurve Bow",
+        "gold": 700
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -44023,7 +45867,7 @@
     "shop": {
       "prices": {
         "total": 2800,
-        "combined": 0,
+        "combined": 550,
         "sell": 1120
       },
       "purchasable": true,
@@ -44052,8 +45896,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3086,
-      3144
+      {
+        "id": 3086,
+        "name": "Zeal",
+        "gold": 1200
+      },
+      {
+        "id": 3144,
+        "name": "Scout's Slingshot",
+        "gold": 600
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -44625,7 +46477,7 @@
     "shop": {
       "prices": {
         "total": 2650,
-        "combined": 0,
+        "combined": 850,
         "sell": 1060
       },
       "purchasable": true,
@@ -44653,9 +46505,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3057,
-      3113,
-      1026
+      {
+        "id": 3057,
+        "name": "Sheen",
+        "gold": 900
+      },
+      {
+        "id": 3113,
+        "name": "Aether Wisp",
+        "gold": 900
+      },
+      {
+        "id": 1026,
+        "name": "Blasting Wand",
+        "gold": 850
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -45036,7 +46900,7 @@
     "shop": {
       "prices": {
         "total": 2900,
-        "combined": 0,
+        "combined": 250,
         "sell": 1160
       },
       "purchasable": true,
@@ -45064,8 +46928,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1058,
-      4632
+      {
+        "id": 1058,
+        "name": "Needlessly Large Rod",
+        "gold": 1200
+      },
+      {
+        "id": 4632,
+        "name": "Verdant Barrier",
+        "gold": 1600
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -45449,7 +47321,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 200,
         "sell": 1200
       },
       "purchasable": true,
@@ -45476,16 +47348,48 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1033,
-      1029
+      {
+        "id": 1033,
+        "name": "Null-Magic Mantle",
+        "gold": 400
+      },
+      {
+        "id": 1029,
+        "name": "Cloth Armor",
+        "gold": 300
+      }
     ],
     "buildsInto": [
-      323050,
-      3039,
-      2502,
-      3193,
-      4403,
-      6667
+      {
+        "id": 323050,
+        "name": "Zeke's Convergence",
+        "gold": 2300
+      },
+      {
+        "id": 3039,
+        "name": "Atma's Reckoning",
+        "gold": 2900
+      },
+      {
+        "id": 2502,
+        "name": "Unending Despair",
+        "gold": 2800
+      },
+      {
+        "id": 3193,
+        "name": "Gargoyle Stoneplate",
+        "gold": 3150
+      },
+      {
+        "id": 4403,
+        "name": "The Golden Spatula",
+        "gold": 7187
+      },
+      {
+        "id": 6667,
+        "name": "Radiant Virtue",
+        "gold": 2600
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -45678,7 +47582,7 @@
     "shop": {
       "prices": {
         "total": 1100,
-        "combined": 0,
+        "combined": 400,
         "sell": 440
       },
       "purchasable": true,
@@ -45706,8 +47610,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3067,
-      3114
+      {
+        "id": 3067,
+        "name": "Kindlegem",
+        "gold": 800
+      },
+      {
+        "id": 3114,
+        "name": "Forbidden Idol",
+        "gold": 600
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -45909,7 +47821,7 @@
     "shop": {
       "prices": {
         "total": 2300,
-        "combined": 0,
+        "combined": 900,
         "sell": 920
       },
       "purchasable": true,
@@ -45936,25 +47848,93 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1052,
-      2022
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      },
+      {
+        "id": 2022,
+        "name": "Glowing Mote",
+        "gold": 250
+      }
     ],
     "buildsInto": [
-      323003,
-      3128,
-      3115,
-      3003,
-      4628,
-      3137,
-      324005,
-      3152,
-      326616,
-      4636,
-      4005,
-      4629,
-      4633,
-      6616,
-      8010
+      {
+        "id": 323003,
+        "name": "Archangel's Staff",
+        "gold": 2900
+      },
+      {
+        "id": 3128,
+        "name": "Deathfire Grasp",
+        "gold": 2900
+      },
+      {
+        "id": 3115,
+        "name": "Nashor's Tooth",
+        "gold": 2900
+      },
+      {
+        "id": 3003,
+        "name": "Archangel's Staff",
+        "gold": 2900
+      },
+      {
+        "id": 4628,
+        "name": "Horizon Focus",
+        "gold": 2900
+      },
+      {
+        "id": 3137,
+        "name": "Cryptbloom",
+        "gold": 3000
+      },
+      {
+        "id": 324005,
+        "name": "Imperial Mandate",
+        "gold": 2750
+      },
+      {
+        "id": 3152,
+        "name": "Hextech Rocketbelt",
+        "gold": 2650
+      },
+      {
+        "id": 326616,
+        "name": "Staff of Flowing Water",
+        "gold": 2600
+      },
+      {
+        "id": 4636,
+        "name": "Night Harvester",
+        "gold": 2765
+      },
+      {
+        "id": 4005,
+        "name": "Imperial Mandate",
+        "gold": 2250
+      },
+      {
+        "id": 4629,
+        "name": "Cosmic Drive",
+        "gold": 3000
+      },
+      {
+        "id": 4633,
+        "name": "Riftmaker",
+        "gold": 3100
+      },
+      {
+        "id": 6616,
+        "name": "Staff of Flowing Water",
+        "gold": 2250
+      },
+      {
+        "id": 8010,
+        "name": "Bloodletter's Curse",
+        "gold": 2900
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -46149,7 +48129,7 @@
     "shop": {
       "prices": {
         "total": 850,
-        "combined": 0,
+        "combined": 200,
         "sell": 340
       },
       "purchasable": true,
@@ -46176,9 +48156,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3067,
-      1031,
-      1006
+      {
+        "id": 3067,
+        "name": "Kindlegem",
+        "gold": 800
+      },
+      {
+        "id": 1031,
+        "name": "Chain Vest",
+        "gold": 800
+      },
+      {
+        "id": 1006,
+        "name": "Rejuvenation Bead",
+        "gold": 300
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -46569,7 +48561,7 @@
     "shop": {
       "prices": {
         "total": 2300,
-        "combined": 0,
+        "combined": 400,
         "sell": 920
       },
       "purchasable": true,
@@ -46597,8 +48589,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3082,
-      3024
+      {
+        "id": 3082,
+        "name": "Warden's Mail",
+        "gold": 1000
+      },
+      {
+        "id": 3024,
+        "name": "Glacial Buckler",
+        "gold": 900
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -46981,7 +48981,7 @@
     "shop": {
       "prices": {
         "total": 2500,
-        "combined": 0,
+        "combined": 600,
         "sell": 1000
       },
       "purchasable": true,
@@ -47009,11 +49009,23 @@
       "BOOTS"
     ],
     "buildsFrom": [
-      1001,
-      1033
+      {
+        "id": 1001,
+        "name": "Boots",
+        "gold": 300
+      },
+      {
+        "id": 1033,
+        "name": "Null-Magic Mantle",
+        "gold": 400
+      }
     ],
     "buildsInto": [
-      3173
+      {
+        "id": 3173,
+        "name": "Chainlaced Crushers",
+        "gold": 1750
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -47209,7 +49221,7 @@
     "shop": {
       "prices": {
         "total": 1250,
-        "combined": 0,
+        "combined": 550,
         "sell": 500
       },
       "purchasable": true,
@@ -47613,7 +49625,7 @@
     "shop": {
       "prices": {
         "total": 950,
-        "combined": 0,
+        "combined": 950,
         "sell": 380
       },
       "purchasable": true,
@@ -47643,16 +49655,48 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1052
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      }
     ],
     "buildsInto": [
-      322065,
-      4646,
-      3504,
-      2065,
-      3100,
-      323504,
-      4629
+      {
+        "id": 322065,
+        "name": "Shurelya's Battlesong",
+        "gold": 2600
+      },
+      {
+        "id": 4646,
+        "name": "Stormsurge",
+        "gold": 2800
+      },
+      {
+        "id": 3504,
+        "name": "Ardent Censer",
+        "gold": 2200
+      },
+      {
+        "id": 2065,
+        "name": "Shurelya's Battlesong",
+        "gold": 2200
+      },
+      {
+        "id": 3100,
+        "name": "Lich Bane",
+        "gold": 2900
+      },
+      {
+        "id": 323504,
+        "name": "Ardent Censer",
+        "gold": 2600
+      },
+      {
+        "id": 4629,
+        "name": "Cosmic Drive",
+        "gold": 3000
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -47847,7 +49891,7 @@
     "shop": {
       "prices": {
         "total": 900,
-        "combined": 0,
+        "combined": 500,
         "sell": 360
       },
       "purchasable": true,
@@ -47875,21 +49919,73 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1004
+      {
+        "id": 1004,
+        "name": "Faerie Charm",
+        "gold": 200
+      }
     ],
     "buildsInto": [
-      323107,
-      223011,
-      323222,
-      3504,
-      3011,
-      3107,
-      3222,
-      323504,
-      326616,
-      326621,
-      6616,
-      6621
+      {
+        "id": 323107,
+        "name": "Redemption",
+        "gold": 2800
+      },
+      {
+        "id": 223011,
+        "name": "Chemtech Putrifier",
+        "gold": 1900
+      },
+      {
+        "id": 323222,
+        "name": "Mikael's Blessing",
+        "gold": 2800
+      },
+      {
+        "id": 3504,
+        "name": "Ardent Censer",
+        "gold": 2200
+      },
+      {
+        "id": 3011,
+        "name": "Chemtech Putrifier",
+        "gold": 1900
+      },
+      {
+        "id": 3107,
+        "name": "Redemption",
+        "gold": 2300
+      },
+      {
+        "id": 3222,
+        "name": "Mikael's Blessing",
+        "gold": 2300
+      },
+      {
+        "id": 323504,
+        "name": "Ardent Censer",
+        "gold": 2600
+      },
+      {
+        "id": 326616,
+        "name": "Staff of Flowing Water",
+        "gold": 2600
+      },
+      {
+        "id": 326621,
+        "name": "Dawncore",
+        "gold": 2900
+      },
+      {
+        "id": 6616,
+        "name": "Staff of Flowing Water",
+        "gold": 2250
+      },
+      {
+        "id": 6621,
+        "name": "Dawncore",
+        "gold": 2500
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -48082,7 +50178,7 @@
     "shop": {
       "prices": {
         "total": 600,
-        "combined": 0,
+        "combined": 400,
         "sell": 240
       },
       "purchasable": true,
@@ -48109,9 +50205,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1043,
-      1026,
-      3108
+      {
+        "id": 1043,
+        "name": "Recurve Bow",
+        "gold": 700
+      },
+      {
+        "id": 1026,
+        "name": "Blasting Wand",
+        "gold": 850
+      },
+      {
+        "id": 3108,
+        "name": "Fiendish Codex",
+        "gold": 850
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -48494,7 +50602,7 @@
     "shop": {
       "prices": {
         "total": 2900,
-        "combined": 0,
+        "combined": 500,
         "sell": 1160
       },
       "purchasable": true,
@@ -48523,9 +50631,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1026,
-      1011,
-      1052
+      {
+        "id": 1026,
+        "name": "Blasting Wand",
+        "gold": 850
+      },
+      {
+        "id": 1011,
+        "name": "Giant's Belt",
+        "gold": 900
+      },
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -48908,7 +51028,7 @@
     "shop": {
       "prices": {
         "total": 2600,
-        "combined": 0,
+        "combined": 450,
         "sell": 1040
       },
       "purchasable": true,
@@ -48935,8 +51055,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3802,
-      1026
+      {
+        "id": 3802,
+        "name": "Lost Chapter",
+        "gold": 1200
+      },
+      {
+        "id": 1026,
+        "name": "Blasting Wand",
+        "gold": 850
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -49503,7 +51631,7 @@
     "shop": {
       "prices": {
         "total": 2700,
-        "combined": 0,
+        "combined": 650,
         "sell": 1080
       },
       "purchasable": true,
@@ -49531,9 +51659,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3070,
-      1011,
-      3067
+      {
+        "id": 3070,
+        "name": "Tear of the Goddess",
+        "gold": 400
+      },
+      {
+        "id": 1011,
+        "name": "Giant's Belt",
+        "gold": 900
+      },
+      {
+        "id": 3067,
+        "name": "Kindlegem",
+        "gold": 800
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -50286,7 +52426,7 @@
     "shop": {
       "prices": {
         "total": 2400,
-        "combined": 0,
+        "combined": 300,
         "sell": 960
       },
       "purchasable": true,
@@ -50878,7 +53018,7 @@
     "shop": {
       "prices": {
         "total": 2400,
-        "combined": 0,
+        "combined": 2400,
         "sell": 960
       },
       "purchasable": false,
@@ -50905,11 +53045,23 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1036
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      }
     ],
     "buildsInto": [
-      3033,
-      6609
+      {
+        "id": 3033,
+        "name": "Mortal Reminder",
+        "gold": 3300
+      },
+      {
+        "id": 6609,
+        "name": "Chempunk Chainsword",
+        "gold": 3100
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -51291,7 +53443,7 @@
     "shop": {
       "prices": {
         "total": 800,
-        "combined": 0,
+        "combined": 450,
         "sell": 320
       },
       "purchasable": true,
@@ -51320,9 +53472,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1052,
-      1043,
-      1037
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      },
+      {
+        "id": 1043,
+        "name": "Recurve Bow",
+        "gold": 700
+      },
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -51889,7 +54053,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 1025,
         "sell": 1200
       },
       "purchasable": true,
@@ -51918,29 +54082,113 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1036,
-      2022,
-      1036
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      },
+      {
+        "id": 2022,
+        "name": "Glowing Mote",
+        "gold": 250
+      },
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      }
     ],
     "buildsInto": [
-      3156,
-      126697,
-      3004,
-      6693,
-      6692,
-      323004,
-      6691,
-      3074,
-      6694,
-      6697,
-      4402,
-      3508,
-      3179,
-      6333,
-      6609,
-      6610,
-      6632,
-      6696
+      {
+        "id": 3156,
+        "name": "Maw of Malmortius",
+        "gold": 3100
+      },
+      {
+        "id": 126697,
+        "name": "Hubris",
+        "gold": 2950
+      },
+      {
+        "id": 3004,
+        "name": "Manamune",
+        "gold": 2900
+      },
+      {
+        "id": 6693,
+        "name": "Prowler's Claw",
+        "gold": 2850
+      },
+      {
+        "id": 6692,
+        "name": "Eclipse",
+        "gold": 2900
+      },
+      {
+        "id": 323004,
+        "name": "Manamune",
+        "gold": 2900
+      },
+      {
+        "id": 6691,
+        "name": "Duskblade of Draktharr",
+        "gold": 2950
+      },
+      {
+        "id": 3074,
+        "name": "Ravenous Hydra",
+        "gold": 3300
+      },
+      {
+        "id": 6694,
+        "name": "Serylda's Grudge",
+        "gold": 3000
+      },
+      {
+        "id": 6697,
+        "name": "Hubris",
+        "gold": 3000
+      },
+      {
+        "id": 4402,
+        "name": "Innervating Locket",
+        "gold": 2950
+      },
+      {
+        "id": 3508,
+        "name": "Essence Reaver",
+        "gold": 2900
+      },
+      {
+        "id": 3179,
+        "name": "Umbral Glaive",
+        "gold": 2500
+      },
+      {
+        "id": 6333,
+        "name": "Death's Dance",
+        "gold": 3300
+      },
+      {
+        "id": 6609,
+        "name": "Chempunk Chainsword",
+        "gold": 3100
+      },
+      {
+        "id": 6610,
+        "name": "Sundered Sky",
+        "gold": 3100
+      },
+      {
+        "id": 6632,
+        "name": "Divine Sunderer",
+        "gold": 3450
+      },
+      {
+        "id": 6696,
+        "name": "Axiom Arc",
+        "gold": 3000
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -52133,7 +54381,7 @@
     "shop": {
       "prices": {
         "total": 1050,
-        "combined": 0,
+        "combined": 100,
         "sell": 420
       },
       "purchasable": true,
@@ -52162,22 +54410,78 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1036,
-      1036
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      },
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      }
     ],
     "buildsInto": [
-      3142,
-      126697,
-      6693,
-      6691,
-      3814,
-      4004,
-      6676,
-      6697,
-      3131,
-      3179,
-      6695,
-      6701
+      {
+        "id": 3142,
+        "name": "Youmuu's Ghostblade",
+        "gold": 2800
+      },
+      {
+        "id": 126697,
+        "name": "Hubris",
+        "gold": 2950
+      },
+      {
+        "id": 6693,
+        "name": "Prowler's Claw",
+        "gold": 2850
+      },
+      {
+        "id": 6691,
+        "name": "Duskblade of Draktharr",
+        "gold": 2950
+      },
+      {
+        "id": 3814,
+        "name": "Edge of Night",
+        "gold": 3000
+      },
+      {
+        "id": 4004,
+        "name": "Spectral Cutlass",
+        "gold": 3900
+      },
+      {
+        "id": 6676,
+        "name": "The Collector",
+        "gold": 3000
+      },
+      {
+        "id": 6697,
+        "name": "Hubris",
+        "gold": 3000
+      },
+      {
+        "id": 3131,
+        "name": "Sword of the Divine",
+        "gold": 2300
+      },
+      {
+        "id": 3179,
+        "name": "Umbral Glaive",
+        "gold": 2500
+      },
+      {
+        "id": 6695,
+        "name": "Serpent's Fang",
+        "gold": 2500
+      },
+      {
+        "id": 6701,
+        "name": "Opportunity",
+        "gold": 2700
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -52370,7 +54674,7 @@
     "shop": {
       "prices": {
         "total": 1000,
-        "combined": 0,
+        "combined": 300,
         "sell": 400
       },
       "purchasable": true,
@@ -52398,8 +54702,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      4630,
-      1026
+      {
+        "id": 4630,
+        "name": "Blighting Jewel",
+        "gold": 1100
+      },
+      {
+        "id": 1026,
+        "name": "Blasting Wand",
+        "gold": 850
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -52593,7 +54905,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 1050,
         "sell": 1200
       },
       "purchasable": true,
@@ -52620,9 +54932,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      4630,
-      3108,
-      3108
+      {
+        "id": 4630,
+        "name": "Blighting Jewel",
+        "gold": 1100
+      },
+      {
+        "id": 3108,
+        "name": "Fiendish Codex",
+        "gold": 850
+      },
+      {
+        "id": 3108,
+        "name": "Fiendish Codex",
+        "gold": 850
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -53003,7 +55327,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 200,
         "sell": 1200
       },
       "purchasable": true,
@@ -53030,9 +55354,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3140,
-      1037,
-      1053
+      {
+        "id": 3140,
+        "name": "Quicksilver Sash",
+        "gold": 1300
+      },
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      },
+      {
+        "id": 1053,
+        "name": "Vampiric Scepter",
+        "gold": 900
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -53236,7 +55572,7 @@
     "shop": {
       "prices": {
         "total": 3200,
-        "combined": 0,
+        "combined": 125,
         "sell": 1280
       },
       "purchasable": true,
@@ -53265,11 +55601,23 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1033
+      {
+        "id": 1033,
+        "name": "Null-Magic Mantle",
+        "gold": 400
+      }
     ],
     "buildsInto": [
-      6035,
-      3139
+      {
+        "id": 6035,
+        "name": "Silvermere Dawn",
+        "gold": 3000
+      },
+      {
+        "id": 3139,
+        "name": "Mercurial Scimitar",
+        "gold": 3200
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -53472,7 +55820,7 @@
     "shop": {
       "prices": {
         "total": 1300,
-        "combined": 0,
+        "combined": 900,
         "sell": 520
       },
       "purchasable": true,
@@ -53501,9 +55849,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3134,
-      6690,
-      1036
+      {
+        "id": 3134,
+        "name": "Serrated Dirk",
+        "gold": 1000
+      },
+      {
+        "id": 6690,
+        "name": "Rectrix",
+        "gold": 775
+      },
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -53892,7 +56252,7 @@
     "shop": {
       "prices": {
         "total": 2800,
-        "combined": 0,
+        "combined": 675,
         "sell": 1120
       },
       "purchasable": true,
@@ -53920,8 +56280,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3082,
-      1011
+      {
+        "id": 3082,
+        "name": "Warden's Mail",
+        "gold": 1000
+      },
+      {
+        "id": 1011,
+        "name": "Giant's Belt",
+        "gold": 900
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -54310,7 +56678,7 @@
     "shop": {
       "prices": {
         "total": 2700,
-        "combined": 0,
+        "combined": 800,
         "sell": 1080
       },
       "purchasable": true,
@@ -54337,14 +56705,38 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1042,
-      1042
+      {
+        "id": 1042,
+        "name": "Dagger",
+        "gold": 250
+      },
+      {
+        "id": 1042,
+        "name": "Dagger",
+        "gold": 250
+      }
     ],
     "buildsInto": [
-      3032,
-      3087,
-      3085,
-      3094
+      {
+        "id": 3032,
+        "name": "Yun Tal Wildarrows",
+        "gold": 3000
+      },
+      {
+        "id": 3087,
+        "name": "Statikk Shiv",
+        "gold": 2700
+      },
+      {
+        "id": 3085,
+        "name": "Runaan's Hurricane",
+        "gold": 2650
+      },
+      {
+        "id": 3094,
+        "name": "Rapid Firecannon",
+        "gold": 2650
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -54724,7 +57116,7 @@
     "shop": {
       "prices": {
         "total": 600,
-        "combined": 0,
+        "combined": 100,
         "sell": 240
       },
       "purchasable": true,
@@ -54752,15 +57144,43 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1052,
-      1052
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      },
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      }
     ],
     "buildsInto": [
-      4646,
-      4645,
-      3152,
-      4636,
-      6655
+      {
+        "id": 4646,
+        "name": "Stormsurge",
+        "gold": 2800
+      },
+      {
+        "id": 4645,
+        "name": "Shadowflame",
+        "gold": 3200
+      },
+      {
+        "id": 3152,
+        "name": "Hextech Rocketbelt",
+        "gold": 2650
+      },
+      {
+        "id": 4636,
+        "name": "Night Harvester",
+        "gold": 2765
+      },
+      {
+        "id": 6655,
+        "name": "Luden's Companion",
+        "gold": 2750
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -55143,7 +57563,7 @@
     "shop": {
       "prices": {
         "total": 1100,
-        "combined": 0,
+        "combined": 300,
         "sell": 440
       },
       "purchasable": true,
@@ -55170,13 +57590,33 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1052,
-      1028
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      },
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      }
     ],
     "buildsInto": [
-      6653,
-      4633,
-      8010
+      {
+        "id": 6653,
+        "name": "Liandry's Torment",
+        "gold": 3000
+      },
+      {
+        "id": 4633,
+        "name": "Riftmaker",
+        "gold": 3100
+      },
+      {
+        "id": 8010,
+        "name": "Bloodletter's Curse",
+        "gold": 2900
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -55558,7 +57998,7 @@
     "shop": {
       "prices": {
         "total": 1300,
-        "combined": 0,
+        "combined": 500,
         "sell": 520
       },
       "purchasable": true,
@@ -55585,9 +58025,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3145,
-      3108,
-      1028
+      {
+        "id": 3145,
+        "name": "Hextech Alternator",
+        "gold": 1100
+      },
+      {
+        "id": 3108,
+        "name": "Fiendish Codex",
+        "gold": 850
+      },
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -55792,7 +58244,7 @@
     "shop": {
       "prices": {
         "total": 2650,
-        "combined": 0,
+        "combined": 300,
         "sell": 1060
       },
       "purchasable": true,
@@ -55820,9 +58272,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1053,
-      1043,
-      1037
+      {
+        "id": 1053,
+        "name": "Vampiric Scepter",
+        "gold": 900
+      },
+      {
+        "id": 1043,
+        "name": "Recurve Bow",
+        "gold": 700
+      },
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -56394,7 +58858,7 @@
     "shop": {
       "prices": {
         "total": 3200,
-        "combined": 0,
+        "combined": 725,
         "sell": 1280
       },
       "purchasable": true,
@@ -56423,12 +58887,28 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1036,
-      1033,
-      1036
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      },
+      {
+        "id": 1033,
+        "name": "Null-Magic Mantle",
+        "gold": 400
+      },
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      }
     ],
     "buildsInto": [
-      3156
+      {
+        "id": 3156,
+        "name": "Maw of Malmortius",
+        "gold": 3100
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -56808,7 +59288,7 @@
     "shop": {
       "prices": {
         "total": 1300,
-        "combined": 0,
+        "combined": 200,
         "sell": 520
       },
       "purchasable": true,
@@ -56837,8 +59317,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3155,
-      3133
+      {
+        "id": 3155,
+        "name": "Hexdrinker",
+        "gold": 1300
+      },
+      {
+        "id": 3133,
+        "name": "Caulfield's Warhammer",
+        "gold": 1050
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -57219,7 +59707,7 @@
     "shop": {
       "prices": {
         "total": 3100,
-        "combined": 0,
+        "combined": 750,
         "sell": 1240
       },
       "purchasable": true,
@@ -57248,8 +59736,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1058,
-      2420
+      {
+        "id": 1058,
+        "name": "Needlessly Large Rod",
+        "gold": 1200
+      },
+      {
+        "id": 2420,
+        "name": "Seeker's Armguard",
+        "gold": 1600
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -57455,7 +59951,7 @@
     "shop": {
       "prices": {
         "total": 3250,
-        "combined": 0,
+        "combined": 450,
         "sell": 1300
       },
       "purchasable": true,
@@ -57482,11 +59978,23 @@
       "BOOTS"
     ],
     "buildsFrom": [
-      1001,
-      2022
+      {
+        "id": 1001,
+        "name": "Boots",
+        "gold": 300
+      },
+      {
+        "id": 2022,
+        "name": "Glowing Mote",
+        "gold": 250
+      }
     ],
     "buildsInto": [
-      3171
+      {
+        "id": 3171,
+        "name": "Crimson Lucidity",
+        "gold": 1400
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -57866,7 +60374,7 @@
     "shop": {
       "prices": {
         "total": 900,
-        "combined": 0,
+        "combined": 350,
         "sell": 360
       },
       "purchasable": true,
@@ -57891,9 +60399,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1037,
-      2021,
-      1028
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      },
+      {
+        "id": 2021,
+        "name": "Tunneler",
+        "gold": 1150
+      },
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -58460,7 +60980,7 @@
     "shop": {
       "prices": {
         "total": 3100,
-        "combined": 0,
+        "combined": 675,
         "sell": 1240
       },
       "purchasable": true,
@@ -58488,9 +61008,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3916,
-      1026,
-      3067
+      {
+        "id": 3916,
+        "name": "Oblivion Orb",
+        "gold": 800
+      },
+      {
+        "id": 1026,
+        "name": "Blasting Wand",
+        "gold": 850
+      },
+      {
+        "id": 3067,
+        "name": "Kindlegem",
+        "gold": 800
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -58877,7 +61409,7 @@
     "shop": {
       "prices": {
         "total": 2850,
-        "combined": 0,
+        "combined": 400,
         "sell": 1140
       },
       "purchasable": true,
@@ -58905,7 +61437,11 @@
       "BOOTS"
     ],
     "buildsFrom": [
-      3009
+      {
+        "id": 3009,
+        "name": "Boots of Swiftness",
+        "gold": 1000
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -59472,7 +62008,7 @@
     "shop": {
       "prices": {
         "total": 1500,
-        "combined": 0,
+        "combined": 500,
         "sell": 600
       },
       "purchasable": true,
@@ -59497,7 +62033,11 @@
       "BOOTS"
     ],
     "buildsFrom": [
-      3158
+      {
+        "id": 3158,
+        "name": "Ionian Boots of Lucidity",
+        "gold": 900
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -60064,7 +62604,7 @@
     "shop": {
       "prices": {
         "total": 1400,
-        "combined": 0,
+        "combined": 500,
         "sell": 560
       },
       "purchasable": true,
@@ -60089,7 +62629,11 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3006
+      {
+        "id": 3006,
+        "name": "Berserker's Greaves",
+        "gold": 1100
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -60470,7 +63014,7 @@
     "shop": {
       "prices": {
         "total": 2500,
-        "combined": 0,
+        "combined": 500,
         "sell": 1000
       },
       "purchasable": true,
@@ -60498,7 +63042,11 @@
       "BOOTS"
     ],
     "buildsFrom": [
-      3111
+      {
+        "id": 3111,
+        "name": "Mercury's Treads",
+        "gold": 1250
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -60879,7 +63427,7 @@
     "shop": {
       "prices": {
         "total": 1750,
-        "combined": 0,
+        "combined": 500,
         "sell": 700
       },
       "purchasable": true,
@@ -60904,7 +63452,11 @@
       "BOOTS"
     ],
     "buildsFrom": [
-      3047
+      {
+        "id": 3047,
+        "name": "Plated Steelcaps",
+        "gold": 1200
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -61471,7 +64023,7 @@
     "shop": {
       "prices": {
         "total": 1700,
-        "combined": 0,
+        "combined": 500,
         "sell": 680
       },
       "purchasable": true,
@@ -61496,7 +64048,11 @@
       "BOOTS"
     ],
     "buildsFrom": [
-      3020
+      {
+        "id": 3020,
+        "name": "Sorcerer's Shoes",
+        "gold": 1100
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -61690,7 +64246,7 @@
     "shop": {
       "prices": {
         "total": 1600,
-        "combined": 0,
+        "combined": 500,
         "sell": 640
       },
       "purchasable": true,
@@ -61715,7 +64271,11 @@
       "BOOTS"
     ],
     "buildsFrom": [
-      3013
+      {
+        "id": 3013,
+        "name": "Synchronized Souls",
+        "gold": 900
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -62282,7 +64842,7 @@
     "shop": {
       "prices": {
         "total": 1400,
-        "combined": 0,
+        "combined": 500,
         "sell": 560
       },
       "purchasable": true,
@@ -62499,7 +65059,7 @@
     "shop": {
       "prices": {
         "total": 950,
-        "combined": 0,
+        "combined": 950,
         "sell": 380
       },
       "purchasable": true,
@@ -62529,8 +65089,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3134,
-      3133
+      {
+        "id": 3134,
+        "name": "Serrated Dirk",
+        "gold": 1000
+      },
+      {
+        "id": 3133,
+        "name": "Caulfield's Warhammer",
+        "gold": 1050
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -63283,7 +65851,7 @@
     "shop": {
       "prices": {
         "total": 2500,
-        "combined": 0,
+        "combined": 450,
         "sell": 1000
       },
       "purchasable": true,
@@ -63310,9 +65878,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      2021,
-      3066,
-      1037
+      {
+        "id": 2021,
+        "name": "Tunneler",
+        "gold": 1150
+      },
+      {
+        "id": 3066,
+        "name": "Winged Moonplate",
+        "gold": 800
+      },
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -63883,7 +66463,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 175,
         "sell": 1200
       },
       "purchasable": true,
@@ -64102,7 +66682,7 @@
     "shop": {
       "prices": {
         "total": 950,
-        "combined": 0,
+        "combined": 950,
         "sell": 380
       },
       "purchasable": true,
@@ -64131,9 +66711,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3067,
-      1029,
-      1033
+      {
+        "id": 3067,
+        "name": "Kindlegem",
+        "gold": 800
+      },
+      {
+        "id": 1029,
+        "name": "Cloth Armor",
+        "gold": 300
+      },
+      {
+        "id": 1033,
+        "name": "Null-Magic Mantle",
+        "gold": 400
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -64335,7 +66927,7 @@
     "shop": {
       "prices": {
         "total": 2200,
-        "combined": 0,
+        "combined": 700,
         "sell": 880
       },
       "purchasable": true,
@@ -64363,14 +66955,38 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1028,
-      1033,
-      1006
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      },
+      {
+        "id": 1033,
+        "name": "Null-Magic Mantle",
+        "gold": 400
+      },
+      {
+        "id": 1006,
+        "name": "Rejuvenation Bead",
+        "gold": 300
+      }
     ],
     "buildsInto": [
-      2504,
-      3065,
-      6664
+      {
+        "id": 2504,
+        "name": "Kaenic Rookern",
+        "gold": 2900
+      },
+      {
+        "id": 3065,
+        "name": "Spirit Visage",
+        "gold": 2700
+      },
+      {
+        "id": 6664,
+        "name": "Hollow Radiance",
+        "gold": 2800
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -64566,7 +67182,7 @@
     "shop": {
       "prices": {
         "total": 1250,
-        "combined": 0,
+        "combined": 150,
         "sell": 500
       },
       "purchasable": true,
@@ -64593,8 +67209,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3067,
-      3114
+      {
+        "id": 3067,
+        "name": "Kindlegem",
+        "gold": 800
+      },
+      {
+        "id": 3114,
+        "name": "Forbidden Idol",
+        "gold": 600
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -64799,7 +67423,7 @@
     "shop": {
       "prices": {
         "total": 2300,
-        "combined": 0,
+        "combined": 900,
         "sell": 920
       },
       "purchasable": true,
@@ -64826,8 +67450,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3051,
-      1043
+      {
+        "id": 3051,
+        "name": "Hearthbound Axe",
+        "gold": 1200
+      },
+      {
+        "id": 1043,
+        "name": "Recurve Bow",
+        "gold": 700
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -65397,7 +68029,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 1100,
         "sell": 1200
       },
       "purchasable": true,
@@ -67349,7 +69981,7 @@
     "shop": {
       "prices": {
         "total": 2500,
-        "combined": 0,
+        "combined": 2500,
         "sell": 1000
       },
       "purchasable": true,
@@ -67376,8 +70008,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3113,
-      3114
+      {
+        "id": 3113,
+        "name": "Aether Wisp",
+        "gold": 900
+      },
+      {
+        "id": 3114,
+        "name": "Forbidden Idol",
+        "gold": 600
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -67758,7 +70398,7 @@
     "shop": {
       "prices": {
         "total": 2200,
-        "combined": 0,
+        "combined": 700,
         "sell": 880
       },
       "purchasable": true,
@@ -67786,9 +70426,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1037,
-      3133,
-      1018
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      },
+      {
+        "id": 3133,
+        "name": "Caulfield's Warhammer",
+        "gold": 1050
+      },
+      {
+        "id": 1018,
+        "name": "Cloak of Agility",
+        "gold": 600
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -68172,7 +70824,7 @@
     "shop": {
       "prices": {
         "total": 2900,
-        "combined": 0,
+        "combined": 375,
         "sell": 1160
       },
       "purchasable": true,
@@ -68643,9 +71295,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3066,
-      1028,
-      1031
+      {
+        "id": 3066,
+        "name": "Winged Moonplate",
+        "gold": 800
+      },
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      },
+      {
+        "id": 1031,
+        "name": "Chain Vest",
+        "gold": 800
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -69217,7 +71881,7 @@
     "shop": {
       "prices": {
         "total": 2900,
-        "combined": 0,
+        "combined": 900,
         "sell": 1160
       },
       "purchasable": true,
@@ -69245,9 +71909,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3077,
-      2021,
-      1011
+      {
+        "id": 3077,
+        "name": "Tiamat",
+        "gold": 1200
+      },
+      {
+        "id": 2021,
+        "name": "Tunneler",
+        "gold": 1150
+      },
+      {
+        "id": 1011,
+        "name": "Giant's Belt",
+        "gold": 900
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -69639,7 +72315,7 @@
     "shop": {
       "prices": {
         "total": 3300,
-        "combined": 0,
+        "combined": 50,
         "sell": 1320
       },
       "purchasable": true,
@@ -69668,12 +72344,28 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1028,
-      1006
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      },
+      {
+        "id": 1006,
+        "name": "Rejuvenation Bead",
+        "gold": 300
+      }
     ],
     "buildsInto": [
-      3083,
-      3084
+      {
+        "id": 3083,
+        "name": "Warmog's Armor",
+        "gold": 3100
+      },
+      {
+        "id": 3084,
+        "name": "Heartsteel",
+        "gold": 3000
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -69866,7 +72558,7 @@
     "shop": {
       "prices": {
         "total": 800,
-        "combined": 0,
+        "combined": 100,
         "sell": 320
       },
       "purchasable": true,
@@ -69894,18 +72586,58 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1052,
-      1027,
-      2022
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      },
+      {
+        "id": 1027,
+        "name": "Sapphire Crystal",
+        "gold": 300
+      },
+      {
+        "id": 2022,
+        "name": "Glowing Mote",
+        "gold": 250
+      }
     ],
     "buildsInto": [
-      323003,
-      3003,
-      3118,
-      2503,
-      4644,
-      6655,
-      6656
+      {
+        "id": 323003,
+        "name": "Archangel's Staff",
+        "gold": 2900
+      },
+      {
+        "id": 3003,
+        "name": "Archangel's Staff",
+        "gold": 2900
+      },
+      {
+        "id": 3118,
+        "name": "Malignance",
+        "gold": 2700
+      },
+      {
+        "id": 2503,
+        "name": "Blackfire Torch",
+        "gold": 2800
+      },
+      {
+        "id": 4644,
+        "name": "Crown of the Shattered Queen",
+        "gold": 2865
+      },
+      {
+        "id": 6655,
+        "name": "Luden's Companion",
+        "gold": 2750
+      },
+      {
+        "id": 6656,
+        "name": "Everfrost",
+        "gold": 2865
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -70287,7 +73019,7 @@
     "shop": {
       "prices": {
         "total": 1200,
-        "combined": 0,
+        "combined": 250,
         "sell": 480
       },
       "purchasable": true,
@@ -70314,14 +73046,38 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1028,
-      1028,
-      1027
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      },
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      },
+      {
+        "id": 1027,
+        "name": "Sapphire Crystal",
+        "gold": 300
+      }
     ],
     "buildsInto": [
-      326657,
-      4402,
-      6657
+      {
+        "id": 326657,
+        "name": "Rod of Ages",
+        "gold": 2600
+      },
+      {
+        "id": 4402,
+        "name": "Innervating Locket",
+        "gold": 2950
+      },
+      {
+        "id": 6657,
+        "name": "Rod of Ages",
+        "gold": 2600
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -70701,7 +73457,7 @@
     "shop": {
       "prices": {
         "total": 1300,
-        "combined": 0,
+        "combined": 200,
         "sell": 520
       },
       "purchasable": true,
@@ -70728,8 +73484,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3134,
-      2021
+      {
+        "id": 3134,
+        "name": "Serrated Dirk",
+        "gold": 1000
+      },
+      {
+        "id": 2021,
+        "name": "Tunneler",
+        "gold": 1150
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -71114,7 +73878,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 850,
         "sell": 1200
       },
       "purchasable": true,
@@ -72078,7 +74842,7 @@
     "shop": {
       "prices": {
         "total": 400,
-        "combined": 0,
+        "combined": 400,
         "sell": 160
       },
       "purchasable": true,
@@ -72865,7 +75629,7 @@
     "shop": {
       "prices": {
         "total": 400,
-        "combined": 0,
+        "combined": 400,
         "sell": 160
       },
       "purchasable": false,
@@ -72893,11 +75657,31 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      3869,
-      3870,
-      3871,
-      3876,
-      3877
+      {
+        "id": 3869,
+        "name": "Celestial Opposition",
+        "gold": 400
+      },
+      {
+        "id": 3870,
+        "name": "Dream Maker",
+        "gold": 400
+      },
+      {
+        "id": 3871,
+        "name": "Zaz'Zak's Realmspike",
+        "gold": 400
+      },
+      {
+        "id": 3876,
+        "name": "Solstice Sleigh",
+        "gold": 400
+      },
+      {
+        "id": 3877,
+        "name": "Bloodsong",
+        "gold": 400
+      }
     ],
     "specialRecipe": 3866,
     "noEffects": false,
@@ -73471,7 +76255,7 @@
     "shop": {
       "prices": {
         "total": 400,
-        "combined": 0,
+        "combined": 400,
         "sell": 160
       },
       "purchasable": false,
@@ -73498,7 +76282,11 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3867
+      {
+        "id": 3867,
+        "name": "Bounty of Worlds",
+        "gold": 400
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -74100,7 +76888,11 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3867
+      {
+        "id": 3867,
+        "name": "Bounty of Worlds",
+        "gold": 400
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -74702,7 +77494,11 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3867
+      {
+        "id": 3867,
+        "name": "Bounty of Worlds",
+        "gold": 400
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -75304,7 +78100,11 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3867
+      {
+        "id": 3867,
+        "name": "Bounty of Worlds",
+        "gold": 400
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -75906,7 +78706,11 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3867
+      {
+        "id": 3867,
+        "name": "Bounty of Worlds",
+        "gold": 400
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -77714,12 +80518,28 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1052
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      }
     ],
     "buildsInto": [
-      223011,
-      3011,
-      3165
+      {
+        "id": 223011,
+        "name": "Chemtech Putrifier",
+        "gold": 1900
+      },
+      {
+        "id": 3011,
+        "name": "Chemtech Putrifier",
+        "gold": 1900
+      },
+      {
+        "id": 3165,
+        "name": "Morellonomicon",
+        "gold": 2850
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -78101,7 +80921,7 @@
     "shop": {
       "prices": {
         "total": 800,
-        "combined": 0,
+        "combined": 400,
         "sell": 320
       },
       "purchasable": true,
@@ -78129,8 +80949,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3108,
-      4642
+      {
+        "id": 3108,
+        "name": "Fiendish Codex",
+        "gold": 850
+      },
+      {
+        "id": 4642,
+        "name": "Bandleglass Mirror",
+        "gold": 900
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -78514,7 +81342,7 @@
     "shop": {
       "prices": {
         "total": 2250,
-        "combined": 0,
+        "combined": 500,
         "sell": 900
       },
       "purchasable": true,
@@ -79106,7 +81934,7 @@
     "shop": {
       "prices": {
         "total": 2500,
-        "combined": 0,
+        "combined": 2500,
         "sell": 1000
       },
       "purchasable": true,
@@ -79512,7 +82340,7 @@
     "shop": {
       "prices": {
         "total": 2500,
-        "combined": 0,
+        "combined": 2500,
         "sell": 1000
       },
       "purchasable": true,
@@ -79926,7 +82754,7 @@
     "shop": {
       "prices": {
         "total": 2500,
-        "combined": 0,
+        "combined": 2500,
         "sell": 1000
       },
       "purchasable": true,
@@ -80332,7 +83160,7 @@
     "shop": {
       "prices": {
         "total": 2500,
-        "combined": 0,
+        "combined": 2500,
         "sell": 1000
       },
       "purchasable": true,
@@ -80359,9 +83187,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1057,
-      1028,
-      3066
+      {
+        "id": 1057,
+        "name": "Negatron Cloak",
+        "gold": 850
+      },
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      },
+      {
+        "id": 3066,
+        "name": "Winged Moonplate",
+        "gold": 800
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -80744,7 +83584,7 @@
     "shop": {
       "prices": {
         "total": 2800,
-        "combined": 0,
+        "combined": 750,
         "sell": 1120
       },
       "purchasable": true,
@@ -80771,9 +83611,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3108,
-      3108,
-      1026
+      {
+        "id": 3108,
+        "name": "Fiendish Codex",
+        "gold": 850
+      },
+      {
+        "id": 3108,
+        "name": "Fiendish Codex",
+        "gold": 850
+      },
+      {
+        "id": 1026,
+        "name": "Blasting Wand",
+        "gold": 850
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -81343,7 +84195,7 @@
     "shop": {
       "prices": {
         "total": 2900,
-        "combined": 0,
+        "combined": 350,
         "sell": 1160
       },
       "purchasable": true,
@@ -81370,9 +84222,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3067,
-      3113,
-      3108
+      {
+        "id": 3067,
+        "name": "Kindlegem",
+        "gold": 800
+      },
+      {
+        "id": 3113,
+        "name": "Aether Wisp",
+        "gold": 900
+      },
+      {
+        "id": 3108,
+        "name": "Fiendish Codex",
+        "gold": 850
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -81755,7 +84619,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 450,
         "sell": 1200
       },
       "purchasable": true,
@@ -81783,11 +84647,23 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1052
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      }
     ],
     "buildsInto": [
-      3137,
-      3135
+      {
+        "id": 3137,
+        "name": "Cryptbloom",
+        "gold": 3000
+      },
+      {
+        "id": 3135,
+        "name": "Void Staff",
+        "gold": 3000
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -81982,7 +84858,7 @@
     "shop": {
       "prices": {
         "total": 1100,
-        "combined": 0,
+        "combined": 700,
         "sell": 440
       },
       "purchasable": true,
@@ -82009,12 +84885,28 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1052,
-      1033,
-      1052
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      },
+      {
+        "id": 1033,
+        "name": "Null-Magic Mantle",
+        "gold": 400
+      },
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      }
     ],
     "buildsInto": [
-      3102
+      {
+        "id": 3102,
+        "name": "Banshee's Veil",
+        "gold": 3000
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -82396,7 +85288,7 @@
     "shop": {
       "prices": {
         "total": 1600,
-        "combined": 0,
+        "combined": 400,
         "sell": 640
       },
       "purchasable": true,
@@ -82423,8 +85315,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3147,
-      3108
+      {
+        "id": 3147,
+        "name": "Haunting Guise",
+        "gold": 1300
+      },
+      {
+        "id": 3108,
+        "name": "Fiendish Codex",
+        "gold": 850
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -82993,7 +85893,7 @@
     "shop": {
       "prices": {
         "total": 3100,
-        "combined": 0,
+        "combined": 950,
         "sell": 1240
       },
       "purchasable": true,
@@ -83022,7 +85922,11 @@
     ],
     "buildsFrom": [],
     "buildsInto": [
-      4643
+      {
+        "id": 4643,
+        "name": "Vigilant Wardstone",
+        "gold": 2300
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -83413,7 +86317,7 @@
     "shop": {
       "prices": {
         "total": 1100,
-        "combined": 0,
+        "combined": 1100,
         "sell": 440
       },
       "purchasable": true,
@@ -83440,19 +86344,63 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1004,
-      1052,
-      2022
+      {
+        "id": 1004,
+        "name": "Faerie Charm",
+        "gold": 200
+      },
+      {
+        "id": 1052,
+        "name": "Amplifying Tome",
+        "gold": 400
+      },
+      {
+        "id": 2022,
+        "name": "Glowing Mote",
+        "gold": 250
+      }
     ],
     "buildsInto": [
-      322065,
-      2065,
-      6620,
-      324005,
-      326617,
-      326620,
-      4005,
-      6617
+      {
+        "id": 322065,
+        "name": "Shurelya's Battlesong",
+        "gold": 2600
+      },
+      {
+        "id": 2065,
+        "name": "Shurelya's Battlesong",
+        "gold": 2200
+      },
+      {
+        "id": 6620,
+        "name": "Echoes of Helia",
+        "gold": 2200
+      },
+      {
+        "id": 324005,
+        "name": "Imperial Mandate",
+        "gold": 2750
+      },
+      {
+        "id": 326617,
+        "name": "Moonstone Renewer",
+        "gold": 2900
+      },
+      {
+        "id": 326620,
+        "name": "Echoes of Helia",
+        "gold": 2600
+      },
+      {
+        "id": 4005,
+        "name": "Imperial Mandate",
+        "gold": 2250
+      },
+      {
+        "id": 6617,
+        "name": "Moonstone Renewer",
+        "gold": 2200
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -83647,7 +86595,7 @@
     "shop": {
       "prices": {
         "total": 900,
-        "combined": 0,
+        "combined": 50,
         "sell": 360
       },
       "purchasable": true,
@@ -83674,7 +86622,11 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      4638
+      {
+        "id": 4638,
+        "name": "Watchful Wardstone",
+        "gold": 1100
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -84253,7 +87205,7 @@
     "shop": {
       "prices": {
         "total": 2300,
-        "combined": 0,
+        "combined": 1200,
         "sell": 920
       },
       "purchasable": true,
@@ -84280,8 +87232,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3145,
-      1058
+      {
+        "id": 3145,
+        "name": "Hextech Alternator",
+        "gold": 1100
+      },
+      {
+        "id": 1058,
+        "name": "Needlessly Large Rod",
+        "gold": 1200
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -84662,7 +87622,7 @@
     "shop": {
       "prices": {
         "total": 3200,
-        "combined": 0,
+        "combined": 900,
         "sell": 1280
       },
       "purchasable": true,
@@ -84689,8 +87649,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3145,
-      3113
+      {
+        "id": 3145,
+        "name": "Hextech Alternator",
+        "gold": 1100
+      },
+      {
+        "id": 3113,
+        "name": "Aether Wisp",
+        "gold": 900
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -85257,7 +88225,7 @@
     "shop": {
       "prices": {
         "total": 2800,
-        "combined": 0,
+        "combined": 800,
         "sell": 1120
       },
       "purchasable": true,
@@ -85284,9 +88252,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      2019,
-      1037,
-      3133
+      {
+        "id": 2019,
+        "name": "Steel Sigil",
+        "gold": 1100
+      },
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      },
+      {
+        "id": 3133,
+        "name": "Caulfield's Warhammer",
+        "gold": 1050
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -85856,7 +88836,7 @@
     "shop": {
       "prices": {
         "total": 3300,
-        "combined": 0,
+        "combined": 275,
         "sell": 1320
       },
       "purchasable": true,
@@ -85883,9 +88863,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3123,
-      1011,
-      3133
+      {
+        "id": 3123,
+        "name": "Executioner's Calling",
+        "gold": 800
+      },
+      {
+        "id": 1011,
+        "name": "Giant's Belt",
+        "gold": 900
+      },
+      {
+        "id": 3133,
+        "name": "Caulfield's Warhammer",
+        "gold": 1050
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -86268,7 +89260,7 @@
     "shop": {
       "prices": {
         "total": 3100,
-        "combined": 0,
+        "combined": 350,
         "sell": 1240
       },
       "purchasable": true,
@@ -86296,9 +89288,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      2021,
-      3133,
-      1028
+      {
+        "id": 2021,
+        "name": "Tunneler",
+        "gold": 1150
+      },
+      {
+        "id": 3133,
+        "name": "Caulfield's Warhammer",
+        "gold": 1050
+      },
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -86679,7 +89683,7 @@
     "shop": {
       "prices": {
         "total": 3100,
-        "combined": 0,
+        "combined": 500,
         "sell": 1240
       },
       "purchasable": true,
@@ -86706,8 +89710,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3108,
-      3114
+      {
+        "id": 3108,
+        "name": "Fiendish Codex",
+        "gold": 850
+      },
+      {
+        "id": 3114,
+        "name": "Forbidden Idol",
+        "gold": 600
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -87090,7 +90102,7 @@
     "shop": {
       "prices": {
         "total": 2250,
-        "combined": 0,
+        "combined": 800,
         "sell": 900
       },
       "purchasable": true,
@@ -87117,8 +90129,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3067,
-      4642
+      {
+        "id": 3067,
+        "name": "Kindlegem",
+        "gold": 800
+      },
+      {
+        "id": 4642,
+        "name": "Bandleglass Mirror",
+        "gold": 900
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -87501,7 +90521,7 @@
     "shop": {
       "prices": {
         "total": 2200,
-        "combined": 0,
+        "combined": 500,
         "sell": 880
       },
       "purchasable": true,
@@ -87528,8 +90548,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3067,
-      4642
+      {
+        "id": 3067,
+        "name": "Kindlegem",
+        "gold": 800
+      },
+      {
+        "id": 4642,
+        "name": "Bandleglass Mirror",
+        "gold": 900
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -87912,7 +90940,7 @@
     "shop": {
       "prices": {
         "total": 2200,
-        "combined": 0,
+        "combined": 500,
         "sell": 880
       },
       "purchasable": true,
@@ -87939,9 +90967,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1026,
-      3114,
-      3114
+      {
+        "id": 1026,
+        "name": "Blasting Wand",
+        "gold": 850
+      },
+      {
+        "id": 3114,
+        "name": "Forbidden Idol",
+        "gold": 600
+      },
+      {
+        "id": 3114,
+        "name": "Forbidden Idol",
+        "gold": 600
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -88322,7 +91362,7 @@
     "shop": {
       "prices": {
         "total": 2500,
-        "combined": 0,
+        "combined": 450,
         "sell": 1000
       },
       "purchasable": true,
@@ -88349,9 +91389,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3077,
-      3044,
-      1042
+      {
+        "id": 3077,
+        "name": "Tiamat",
+        "gold": 1200
+      },
+      {
+        "id": 3044,
+        "name": "Phage",
+        "gold": 1100
+      },
+      {
+        "id": 1042,
+        "name": "Dagger",
+        "gold": 250
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -88743,7 +91795,7 @@
     "shop": {
       "prices": {
         "total": 3300,
-        "combined": 0,
+        "combined": 750,
         "sell": 1320
       },
       "purchasable": true,
@@ -88771,8 +91823,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3147,
-      2508
+      {
+        "id": 3147,
+        "name": "Haunting Guise",
+        "gold": 1300
+      },
+      {
+        "id": 2508,
+        "name": "Fated Ashes",
+        "gold": 900
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -89342,7 +92402,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 800,
         "sell": 1200
       },
       "purchasable": true,
@@ -89369,8 +92429,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3802,
-      3145
+      {
+        "id": 3802,
+        "name": "Lost Chapter",
+        "gold": 1200
+      },
+      {
+        "id": 3145,
+        "name": "Hextech Alternator",
+        "gold": 1100
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -89754,7 +92822,7 @@
     "shop": {
       "prices": {
         "total": 2750,
-        "combined": 0,
+        "combined": 450,
         "sell": 1100
       },
       "purchasable": true,
@@ -89781,8 +92849,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1026,
-      3803
+      {
+        "id": 1026,
+        "name": "Blasting Wand",
+        "gold": 850
+      },
+      {
+        "id": 3803,
+        "name": "Catalyst of Aeons",
+        "gold": 1300
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -90349,7 +93425,7 @@
     "shop": {
       "prices": {
         "total": 2600,
-        "combined": 0,
+        "combined": 450,
         "sell": 1040
       },
       "purchasable": true,
@@ -90376,12 +93452,28 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1028,
-      2022
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      },
+      {
+        "id": 2022,
+        "name": "Glowing Mote",
+        "gold": 250
+      }
     ],
     "buildsInto": [
-      3068,
-      6664
+      {
+        "id": 3068,
+        "name": "Sunfire Aegis",
+        "gold": 2700
+      },
+      {
+        "id": 6664,
+        "name": "Hollow Radiance",
+        "gold": 2800
+      }
     ],
     "specialRecipe": 0,
     "noEffects": false,
@@ -90763,7 +93855,7 @@
     "shop": {
       "prices": {
         "total": 900,
-        "combined": 0,
+        "combined": 250,
         "sell": 360
       },
       "purchasable": true,
@@ -90790,9 +93882,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3057,
-      1028,
-      1031
+      {
+        "id": 3057,
+        "name": "Sheen",
+        "gold": 900
+      },
+      {
+        "id": 1028,
+        "name": "Ruby Crystal",
+        "gold": 400
+      },
+      {
+        "id": 1031,
+        "name": "Chain Vest",
+        "gold": 800
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -91173,7 +94277,7 @@
     "shop": {
       "prices": {
         "total": 2900,
-        "combined": 0,
+        "combined": 800,
         "sell": 1160
       },
       "purchasable": true,
@@ -91202,8 +94306,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      6660,
-      3211
+      {
+        "id": 6660,
+        "name": "Bami's Cinder",
+        "gold": 900
+      },
+      {
+        "id": 3211,
+        "name": "Spectre's Cowl",
+        "gold": 1250
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -91770,7 +94882,7 @@
     "shop": {
       "prices": {
         "total": 2800,
-        "combined": 0,
+        "combined": 650,
         "sell": 1120
       },
       "purchasable": true,
@@ -91797,9 +94909,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1011,
-      1031,
-      1057
+      {
+        "id": 1011,
+        "name": "Giant's Belt",
+        "gold": 900
+      },
+      {
+        "id": 1031,
+        "name": "Chain Vest",
+        "gold": 800
+      },
+      {
+        "id": 1057,
+        "name": "Negatron Cloak",
+        "gold": 850
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -92180,7 +95304,7 @@
     "shop": {
       "prices": {
         "total": 3200,
-        "combined": 0,
+        "combined": 650,
         "sell": 1280
       },
       "purchasable": true,
@@ -92207,13 +95331,33 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1036,
-      1018
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      },
+      {
+        "id": 1018,
+        "name": "Cloak of Agility",
+        "gold": 600
+      }
     ],
     "buildsInto": [
-      6673,
-      3095,
-      3036
+      {
+        "id": 6673,
+        "name": "Immortal Shieldbow",
+        "gold": 3000
+      },
+      {
+        "id": 3095,
+        "name": "Stormrazor",
+        "gold": 3100
+      },
+      {
+        "id": 3036,
+        "name": "Lord Dominik's Regards",
+        "gold": 3100
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -92406,7 +95550,7 @@
     "shop": {
       "prices": {
         "total": 1300,
-        "combined": 0,
+        "combined": 350,
         "sell": 520
       },
       "purchasable": true,
@@ -92434,9 +95578,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      6690,
-      3051,
-      1043
+      {
+        "id": 6690,
+        "name": "Rectrix",
+        "gold": 775
+      },
+      {
+        "id": 3051,
+        "name": "Hearthbound Axe",
+        "gold": 1200
+      },
+      {
+        "id": 1043,
+        "name": "Recurve Bow",
+        "gold": 700
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -92817,7 +95973,7 @@
     "shop": {
       "prices": {
         "total": 3100,
-        "combined": 0,
+        "combined": 425,
         "sell": 1240
       },
       "purchasable": true,
@@ -92844,8 +96000,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1037,
-      6670
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      },
+      {
+        "id": 6670,
+        "name": "Noonquiver",
+        "gold": 1300
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -93226,7 +96390,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 825,
         "sell": 1200
       },
       "purchasable": true,
@@ -93254,9 +96418,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1042,
-      3086,
-      1042
+      {
+        "id": 1042,
+        "name": "Dagger",
+        "gold": 250
+      },
+      {
+        "id": 3086,
+        "name": "Zeal",
+        "gold": 1200
+      },
+      {
+        "id": 1042,
+        "name": "Dagger",
+        "gold": 250
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -93637,7 +96813,7 @@
     "shop": {
       "prices": {
         "total": 2650,
-        "combined": 0,
+        "combined": 950,
         "sell": 1060
       },
       "purchasable": true,
@@ -93664,9 +96840,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1037,
-      3134,
-      1018
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      },
+      {
+        "id": 3134,
+        "name": "Serrated Dirk",
+        "gold": 1000
+      },
+      {
+        "id": 1018,
+        "name": "Cloak of Agility",
+        "gold": 600
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -94236,7 +97424,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 525,
         "sell": 1200
       },
       "purchasable": true,
@@ -94264,13 +97452,33 @@
       "EPIC"
     ],
     "buildsFrom": [
-      1036
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      }
     ],
     "buildsInto": [
-      3087,
-      3142,
-      6672,
-      6700
+      {
+        "id": 3087,
+        "name": "Statikk Shiv",
+        "gold": 2700
+      },
+      {
+        "id": 3142,
+        "name": "Youmuu's Ghostblade",
+        "gold": 2800
+      },
+      {
+        "id": 6672,
+        "name": "Kraken Slayer",
+        "gold": 3100
+      },
+      {
+        "id": 6700,
+        "name": "Shield of the Rakkor",
+        "gold": 2675
+      }
     ],
     "specialRecipe": 0,
     "noEffects": true,
@@ -94463,7 +97671,7 @@
     "shop": {
       "prices": {
         "total": 775,
-        "combined": 0,
+        "combined": 425,
         "sell": 310
       },
       "purchasable": true,
@@ -94491,9 +97699,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3133,
-      1037,
-      1036
+      {
+        "id": 3133,
+        "name": "Caulfield's Warhammer",
+        "gold": 1050
+      },
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      },
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -94874,7 +98094,7 @@
     "shop": {
       "prices": {
         "total": 2900,
-        "combined": 0,
+        "combined": 625,
         "sell": 1160
       },
       "purchasable": true,
@@ -94901,8 +98121,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3133,
-      3035
+      {
+        "id": 3133,
+        "name": "Caulfield's Warhammer",
+        "gold": 1050
+      },
+      {
+        "id": 3035,
+        "name": "Last Whisper",
+        "gold": 1450
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -95283,7 +98511,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 500,
         "sell": 1200
       },
       "purchasable": true,
@@ -95310,8 +98538,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3134,
-      1037
+      {
+        "id": 3134,
+        "name": "Serrated Dirk",
+        "gold": 1000
+      },
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -95692,7 +98928,7 @@
     "shop": {
       "prices": {
         "total": 2500,
-        "combined": 0,
+        "combined": 625,
         "sell": 1000
       },
       "purchasable": true,
@@ -95719,8 +98955,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      2020,
-      3133
+      {
+        "id": 2020,
+        "name": "The Brutalizer",
+        "gold": 1337
+      },
+      {
+        "id": 3133,
+        "name": "Caulfield's Warhammer",
+        "gold": 1050
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -96101,7 +99345,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 613,
         "sell": 1200
       },
       "purchasable": true,
@@ -96128,8 +99372,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3134,
-      3133
+      {
+        "id": 3134,
+        "name": "Serrated Dirk",
+        "gold": 1000
+      },
+      {
+        "id": 3133,
+        "name": "Caulfield's Warhammer",
+        "gold": 1050
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -96510,7 +99762,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 950,
         "sell": 1200
       },
       "purchasable": true,
@@ -96537,8 +99789,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3077,
-      2020
+      {
+        "id": 3077,
+        "name": "Tiamat",
+        "gold": 1200
+      },
+      {
+        "id": 2020,
+        "name": "The Brutalizer",
+        "gold": 1337
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -96927,7 +100187,7 @@
     "shop": {
       "prices": {
         "total": 3200,
-        "combined": 0,
+        "combined": 663,
         "sell": 1280
       },
       "purchasable": true,
@@ -96954,9 +100214,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      2020,
-      1036,
-      1036
+      {
+        "id": 2020,
+        "name": "The Brutalizer",
+        "gold": 1337
+      },
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      },
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -97709,7 +100981,7 @@
     "shop": {
       "prices": {
         "total": 3000,
-        "combined": 0,
+        "combined": 963,
         "sell": 1200
       },
       "purchasable": true,
@@ -97736,9 +101008,21 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      1037,
-      3134,
-      1036
+      {
+        "id": 1037,
+        "name": "Pickaxe",
+        "gold": 875
+      },
+      {
+        "id": 3134,
+        "name": "Serrated Dirk",
+        "gold": 1000
+      },
+      {
+        "id": 1036,
+        "name": "Long Sword",
+        "gold": 350
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -98305,7 +101589,7 @@
     "shop": {
       "prices": {
         "total": 2700,
-        "combined": 0,
+        "combined": 475,
         "sell": 1080
       },
       "purchasable": true,
@@ -98333,8 +101617,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3147,
-      3108
+      {
+        "id": 3147,
+        "name": "Haunting Guise",
+        "gold": 1300
+      },
+      {
+        "id": 3108,
+        "name": "Fiendish Codex",
+        "gold": 850
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -98715,7 +102007,7 @@
     "shop": {
       "prices": {
         "total": 2900,
-        "combined": 0,
+        "combined": 750,
         "sell": 1160
       },
       "purchasable": true,
@@ -98742,8 +102034,16 @@
       "LEGENDARY"
     ],
     "buildsFrom": [
-      3067,
-      1057
+      {
+        "id": 3067,
+        "name": "Kindlegem",
+        "gold": 800
+      },
+      {
+        "id": 1057,
+        "name": "Negatron Cloak",
+        "gold": 850
+      }
     ],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -99124,7 +102424,7 @@
     "shop": {
       "prices": {
         "total": 2650,
-        "combined": 0,
+        "combined": 1000,
         "sell": 1060
       },
       "purchasable": true,
@@ -99344,7 +102644,7 @@
     "shop": {
       "prices": {
         "total": 750,
-        "combined": 0,
+        "combined": 750,
         "sell": 300
       },
       "purchasable": true,
@@ -99561,7 +102861,7 @@
     "shop": {
       "prices": {
         "total": 2000,
-        "combined": 0,
+        "combined": 2000,
         "sell": 800
       },
       "purchasable": true,
@@ -99778,7 +103078,7 @@
     "shop": {
       "prices": {
         "total": 2000,
-        "combined": 0,
+        "combined": 2000,
         "sell": 800
       },
       "purchasable": true,
@@ -99995,7 +103295,7 @@
     "shop": {
       "prices": {
         "total": 2000,
-        "combined": 0,
+        "combined": 2000,
         "sell": 800
       },
       "purchasable": true,
@@ -100212,7 +103512,7 @@
     "shop": {
       "prices": {
         "total": 2000,
-        "combined": 0,
+        "combined": 2000,
         "sell": 800
       },
       "purchasable": true,
@@ -100429,7 +103729,7 @@
     "shop": {
       "prices": {
         "total": 2000,
-        "combined": 0,
+        "combined": 2000,
         "sell": 800
       },
       "purchasable": true,
@@ -100646,7 +103946,7 @@
     "shop": {
       "prices": {
         "total": 2000,
-        "combined": 0,
+        "combined": 2000,
         "sell": 800
       },
       "purchasable": true,
@@ -100863,7 +104163,7 @@
     "shop": {
       "prices": {
         "total": 4000,
-        "combined": 0,
+        "combined": 4000,
         "sell": 1600
       },
       "purchasable": true,
@@ -101088,7 +104388,7 @@
     "shop": {
       "prices": {
         "total": 500,
-        "combined": 0,
+        "combined": 500,
         "sell": 200
       },
       "purchasable": true,
@@ -101494,7 +104794,7 @@
     "shop": {
       "prices": {
         "total": 2500,
-        "combined": 0,
+        "combined": 2500,
         "sell": 1000
       },
       "purchasable": true,
@@ -102088,7 +105388,7 @@
     "shop": {
       "prices": {
         "total": 2500,
-        "combined": 0,
+        "combined": 2500,
         "sell": 1000
       },
       "purchasable": true,
@@ -102316,7 +105616,7 @@
     "shop": {
       "prices": {
         "total": 2500,
-        "combined": 0,
+        "combined": 2500,
         "sell": 1000
       },
       "purchasable": true,
@@ -102722,7 +106022,7 @@
     "shop": {
       "prices": {
         "total": 500,
-        "combined": 0,
+        "combined": 500,
         "sell": 200
       },
       "purchasable": true,
@@ -102950,7 +106250,7 @@
     "shop": {
       "prices": {
         "total": 2500,
-        "combined": 0,
+        "combined": 2500,
         "sell": 1000
       },
       "purchasable": true,
@@ -103358,7 +106658,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 2500,
         "sell": 0
       },
       "purchasable": true,
@@ -103585,7 +106885,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -103999,7 +107299,7 @@
     "shop": {
       "prices": {
         "total": 2500,
-        "combined": 0,
+        "combined": 2500,
         "sell": 1000
       },
       "purchasable": true,
@@ -104414,7 +107714,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 6000,
         "sell": 0
       },
       "purchasable": true,
@@ -104820,7 +108120,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -105598,7 +108898,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -106004,7 +109304,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -106408,7 +109708,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -106814,7 +110114,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -107222,7 +110522,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -107628,7 +110928,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -108034,7 +111334,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -108440,7 +111740,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -108671,7 +111971,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -109075,7 +112375,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -109304,7 +112604,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -109710,7 +113010,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -110114,7 +113414,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -110706,7 +114006,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -110933,7 +114233,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -111342,7 +114642,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -111750,7 +115050,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -112156,7 +115456,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -112564,7 +115864,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -112795,7 +116095,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -113201,7 +116501,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -113430,7 +116730,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -113836,7 +117136,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -114242,7 +117542,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -114648,7 +117948,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -115052,7 +118352,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -115456,7 +118756,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -115862,7 +119162,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -116268,7 +119568,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -116495,7 +119795,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -116901,7 +120201,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -117305,7 +120605,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -118081,7 +121381,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -118487,7 +121787,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -118893,7 +122193,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -119485,7 +122785,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -119889,7 +123189,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -120667,7 +123967,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -121073,7 +124373,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -121479,7 +124779,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -122073,7 +125373,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -122667,7 +125967,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -123259,7 +126559,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -123666,7 +126966,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -124081,7 +127381,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
@@ -124673,7 +127973,7 @@
     "shop": {
       "prices": {
         "total": 0,
-        "combined": 0,
+        "combined": 1000,
         "sell": 0
       },
       "purchasable": true,
