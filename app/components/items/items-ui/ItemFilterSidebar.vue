@@ -6,14 +6,13 @@ const route = useRoute()
 
 function resetItems() {
 /*   sortItemsAZ.value = 0
-  sortPrice.value = 0 */
-  is.itemFilter.stats = null
-  is.itemFilter.tags = null
-  is.itemFilter.rank = null
-  is.itemFilter.query = null
-  is.itemFilter.result = null
-  is.listKey = is.listKey + 1
-  is.itemGridApi.resetColumnState()
+  // sortPrice.value = 0 */
+
+  Object.assign(is.itemFilter, is.defaultItemFilter)
+  console.log('💠 - resetItems - is.defaultItemFilter:', is.defaultItemFilter)
+  console.log('💠 - resetItems - itemFilter:', is.itemFilter)
+  // is.listKey = is.listKey + 1
+  // is.itemGridApi.resetColumnState()
 }
 const tabs = ref('/library/items')
 
@@ -47,13 +46,11 @@ onMounted (() => {
       <ItemStatsChecklist />
     </div>
     <div class="mt-2 mb-4 px-5 gap-6 flex items-center  w-full">
-
-      <ItemMapFilter  v-model:model-value="is.itemFilter.map">
-
+      <ItemMapFilter v-model:model-value="is.itemFilter.map">
       </ItemMapFilter>
       <div class="gap-5 px-5  flex font-medium items-center w-full justify-end ">
-        {{is.itemFilter.purchasable ? 'Purchasable' : 'All'}}
-        <Switch v-model:model-value="is.itemFilter.purchasable" class="dst"  />
+        {{ is.itemFilter.purchasable ? 'Purchasable' : 'All' }}
+        <Switch v-model:model-value="is.itemFilter.purchasable" class="dst" />
       </div>
     </div>
     <div class="px-7">

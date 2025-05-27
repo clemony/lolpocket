@@ -1,5 +1,5 @@
-import { defineStore } from 'pinia'
 import type { GridApi } from 'ag-grid-community'
+import { defineStore } from 'pinia'
 
 export const useItemStore = defineStore('itemStore', () => {
   const itemFilter = ref<ItemFilter>({
@@ -23,6 +23,16 @@ export const useItemStore = defineStore('itemStore', () => {
   })
 
   const cItemFilter = ref<ItemFilter>({
+    purchasable: true,
+    rank: null,
+    stats: null,
+    tags: null,
+    map: 11,
+    query: null,
+    result: null,
+  })
+
+  const defaultItemFilter = ref<ItemFilter>({
     purchasable: true,
     rank: null,
     stats: null,
@@ -63,6 +73,7 @@ export const useItemStore = defineStore('itemStore', () => {
     itemFilter,
     pItemFilter,
     cItemFilter,
+    defaultItemFilter,
     selectedItem,
     selectedDatabaseItem,
     selectedItemSet,

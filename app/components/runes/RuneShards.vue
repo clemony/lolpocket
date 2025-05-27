@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { shards } from 'public/api/data/shards'
+import { shards } from '~~/data/shards'
 
 const { pocket } = defineProps<{
   pocket: Pocket

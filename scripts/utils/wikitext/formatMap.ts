@@ -57,6 +57,8 @@ export const formatMap: FormatMap = {
     return `${iconHTML}${labelHTML}`
   },
   icon: (result) => {
+    if (!result)
+      return '[Missing icon]'
     const iconSrc = `/img/icons/${normalizeName(result)}.webp`
     return `<img src="${iconSrc}" class="tip-icon" />${result}`
   },
@@ -114,5 +116,4 @@ export const formatMap: FormatMap = {
       .join(' ')
     return `${value}${dedupedSuffix ? ` ${dedupedSuffix}` : ''}`
   },
-
 }

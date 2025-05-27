@@ -9,7 +9,7 @@ const filtered = computed (() => to.filter(to => to.id < 9999))
 
 <template>
   <div v-if="to && filtered" class=" mt-1.5">
-    <div class="divider divider-start after:h-px my-4 after:bg-nc/15 !text-0">
+    <div class="divider divider-start after:h-px my-4 after:bg-nc/10 !text-0">
       BUILDS INTO
     </div>
     <div class="group flex items-center py-2 flex-wrap justify-center gap-4" :class="{ 'justify-start': filtered.length > 7 }">

@@ -1,36 +1,50 @@
+import { escapeHtml } from '../escapeHtml'
 import { formatMap } from './formatMap'
 import { resolveTemplates } from './resolveTemplates'
-import { evalAp, evaluateExpressions, evaluateMathExpression, tryEval } from './tryEval'
+import {
+  evalAp,
+  evalRange,
+  evaluateExpressions,
+  evaluateMathExpression,
+  tryEval,
+} from './tryEval'
+
+export interface TemplateResult {
+  html: string
+  isLevelScaling: boolean
+}
 
 export function evaluateTemplates(
   template: string,
   params: string[],
   depth: number,
   vars: Map<string, string>,
-): string | TemplateResult {
+): TemplateResult {
   const fullyResolvedParams = params.map((p) => {
     const result = resolveTemplates(p, depth + 1, vars)
-    return typeof result === 'string' ? result : result.html
+    return result.html
   })
 
   const evaluatedParams = fullyResolvedParams.map(p => evaluateExpressions(p))
+
+  const wrap = (html: string, isLevelScaling = false): TemplateResult => ({ html, isLevelScaling })
 
   switch (template) {
     case '#vardefineecho': {
       const [key = '', value = ''] = evaluatedParams
       if (key)
         vars.set(key, value)
-      return value
+      return wrap(value)
     }
 
     case '#var': {
       const [key = ''] = evaluatedParams
-      return vars.get(key) ?? ''
+      return wrap(vars.get(key) ?? '')
     }
 
     case '#expr': {
       const [expression = ''] = evaluatedParams
-      return evaluateMathExpression(expression)
+      return wrap(evaluateMathExpression(expression))
     }
 
     case 'pp': {
@@ -38,8 +52,8 @@ export function evaluateTemplates(
         evaluatedParams
           .filter(p => p.includes('='))
           .map((p) => {
-            const [k, v] = p.split('=')
-            return [k.trim(), v?.replace(/'''/g, '').trim()]
+            const [k, ...v] = p.split('=')
+            return [k.trim(), v.join('=').replace(/'''/g, '').trim()]
           }),
       )
 
@@ -51,42 +65,38 @@ export function evaluateTemplates(
       const key1 = named.key1 || ''
       const color = named.color || ''
 
-      return formatMap.pp?.({
+      const html = formatMap.pp?.({
         type: 'pp',
         input: { values, type, levels, key, key1, color },
         depth,
-      })
+      }) ?? ''
+
+      return wrap(typeof html === 'string' ? html : html?.html ?? '', true)
     }
 
     case 'ap': {
       const [expr] = evaluatedParams
       if (!expr)
-        return ''
+        return wrap('')
 
-      // Handle expressions like 25*0.5
       if (!expr.includes('x')) {
         const result = tryEval(expr)
-        return result ?? expr
+        return wrap(result ?? expr)
       }
 
-      // Handle formulas like 2*x
-      if (expr.includes('x')) {
-        try {
-          return evalAp (expr)
-        }
-        catch {
-          return expr
-        }
+      try {
+        return wrap(evalAp(expr), true)
       }
-
-      // Handle static values like 10|20|30
-      return evaluatedParams.join(' / ')
+      catch {
+        return wrap(expr)
+      }
     }
 
     case 'ft': {
       const [text = '', tooltip = ''] = evaluatedParams
+      const flatText = text.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()
       const flatTooltip = tooltip.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()
-      return `${text} (${flatTooltip})`
+      return wrap(flatText)
     }
 
     case 'as': {
@@ -96,25 +106,20 @@ export function evaluateTemplates(
 
       const pieces = body.map((param) => {
         const resolved = resolveTemplates(param, depth + 1, vars)
-        if (typeof resolved === 'object') {
-          const suffix = resolved.isLevelScaling ? ' (based on level)' : ''
-          return `${resolved.html}${suffix}`
-        }
-        return resolved
+        const suffix = resolved.isLevelScaling ? ' (based on level)' : ''
+        return `${resolved.html}${suffix}`
       })
 
-      return formatMap.as?.({
-        type: 'as',
-        input: pieces,
-        depth,
-      })
+      const html = formatMap.as?.({ type: 'as', input: pieces, depth }) ?? ''
+
+      return wrap(typeof html === 'string' ? html : html?.html ?? '', true)
     }
 
     case 'rd': {
       const [meleeRaw = '', rangedRaw = '', , , , , , , , , , maybePp = ''] = evaluatedParams
       const isPp = maybePp.toLowerCase() === 'pp=true'
 
-      return formatMap.rd?.({
+      const html = formatMap.rd?.({
         type: 'rd',
         input: {
           melee: evaluateExpressions(meleeRaw),
@@ -123,19 +128,21 @@ export function evaluateTemplates(
         },
         depth,
       })
+      return wrap(typeof html === 'string' ? html : html?.html ?? '')
     }
 
     case 'tip': {
-      return formatMap.tip?.({
+      const html = formatMap.tip?.({
         type: 'tip',
         input: evaluatedParams,
         depth,
       })
+      return wrap(typeof html === 'string' ? html : html?.html ?? '')
     }
 
     case 'tt':
     case 'texttip': {
-      return evaluatedParams[0]?.trim() ?? ''
+      return wrap(evaluatedParams[0]?.trim() ?? '')
     }
 
     case 'stil':
@@ -143,26 +150,40 @@ export function evaluateTemplates(
     case 'sti':
     case 'ii': {
       const iconName = evaluatedParams[0] ?? ''
-      return formatMap.icon?.(iconName)
+      const icon = formatMap.icon?.(iconName)
+      return wrap(typeof icon === 'string' ? icon : icon?.html ?? '')
     }
 
     case 'ui': {
       const iconName = evaluatedParams[evaluatedParams.length - 1] ?? ''
-      return formatMap.icon?.(iconName)
+      const icon = formatMap.icon?.(iconName)
+      return wrap(typeof icon === 'string' ? icon : icon?.html ?? '')
     }
 
     case 'g': {
       const [value = ''] = evaluatedParams
-      return formatMap.g?.(value)
+      const g = formatMap.g?.(value)
+      return wrap(typeof g === 'string' ? g : g?.html ?? '')
     }
 
     case 'fd': {
       const deduped = [...new Set(evaluatedParams.map(p => p.trim()))]
-      return deduped.join(' ')
+      return wrap(deduped.join(' '))
+    }
+
+    case 'rutngt': {
+      const raw = evaluatedParams[0]
+      const value = Number.parseFloat(raw)
+      if (Number.isNaN(value))
+        return wrap(raw)
+
+      const ticks = Math.ceil(value / 0.033)
+      const rounded = (ticks * 0.033).toFixed(3)
+      return wrap(`${rounded} seconds`)
     }
 
     default: {
-      return `{{${template}|${params.join('|')}}}`
+      return wrap(`{{${escapeHtml(template)}|${params.map(escapeHtml).join('|')}}}`)
     }
   }
 }

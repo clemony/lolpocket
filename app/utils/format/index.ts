@@ -1,2 +1,2 @@
-export * from './normalizePatchNumber'
-export * from './url'
+export * from './normalizePatch'
+export * from './normalizeSummonerForStore'

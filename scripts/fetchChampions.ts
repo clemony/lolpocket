@@ -1,8 +1,8 @@
-// npx tsx scripts/fetchChampions.ts 
-import { writeFileSync } from 'fs'
-import { $fetch } from 'ofetch' 
+// npx tsx scripts/fetchChampions.ts
+import { writeFileSync } from 'node:fs'
+import { $fetch } from 'ofetch'
 
-const run = async () => {
+async function run() {
   try {
     const url = 'https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json'
     const response = await $fetch(url)
@@ -10,12 +10,13 @@ const run = async () => {
     if (response) {
       console.log('Fetched', response.length, 'champions')
       writeFileSync(
-        './public/api/champions.json',
+        './data/champions.json',
         JSON.stringify(response, null, 2),
       )
-      console.log('File written to ./public/api/champions.json')
+      console.log('File written to ./data/raw/champions-raw.json')
     }
-  } catch (error) {
+  }
+  catch (error) {
     console.error('Fetch failed:', error)
   }
 }

@@ -1,17 +1,17 @@
+import fs from 'node:fs'
 
- import fs from  'node:fs'
-const championsLite = JSON.parse(fs.readFileSync('./public/api/champions-lite.json', 'utf-8'))
-
-
+const championsLite = JSON.parse(fs.readFileSync('./data/champions-lite.json', 'utf-8'))
 
 const level = 18
 const highestStats = {}
 
 function getStatAtLevel(base, growth, level = 18) {
-  if (base == null) return null
+  if (base == null)
+    return null
   const totalLevelUps = level - 1
 
-  if (totalLevelUps === 0 || growth == null) return base
+  if (totalLevelUps === 0 || growth == null)
+    return base
 
   const levelGrowth = 0.0175 * totalLevelUps + 0.7025
   const totalGrowth = growth * totalLevelUps * levelGrowth
@@ -19,10 +19,12 @@ function getStatAtLevel(base, growth, level = 18) {
 }
 
 function getAttackSpeedAtLevel(base, growth, ratio, level = 18) {
-  if (base == null || ratio == null) return null
+  if (base == null || ratio == null)
+    return null
   const totalLevelUps = level - 1
 
-  if (totalLevelUps === 0 || growth == null) return base
+  if (totalLevelUps === 0 || growth == null)
+    return base
 
   const levelGrowth = 0.0175 * totalLevelUps + 0.7025
   const bonusAS = growth * totalLevelUps * levelGrowth
@@ -30,7 +32,8 @@ function getAttackSpeedAtLevel(base, growth, ratio, level = 18) {
 }
 
 championsLite.forEach((champ: ChampionLiteStat) => {
-  if (!champ?.stats) return
+  if (!champ?.stats)
+    return
 
   const stats = champ.stats
   const attackSpeedRatio = champ.attackSpeedRatio?.flat // not from stats!
@@ -40,7 +43,8 @@ championsLite.forEach((champ: ChampionLiteStat) => {
 
     if (statName === 'attackSpeed') {
       resolved = getAttackSpeedAtLevel(flat, perLevel, attackSpeedRatio, level)
-    } else {
+    }
+    else {
       resolved = getStatAtLevel(flat, perLevel, level)
     }
 
@@ -52,9 +56,8 @@ championsLite.forEach((champ: ChampionLiteStat) => {
   })
 })
 
-
 fs.writeFileSync(
-  './public/api/lists/stat-max-values.json',
-  JSON.stringify(highestStats, null, 2)
+  './data/dev/stat-max-values.json',
+  JSON.stringify(highestStats, null, 2),
 )
 console.log('✅ stat-max-values.json written!')

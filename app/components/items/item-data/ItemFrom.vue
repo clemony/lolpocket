@@ -7,7 +7,7 @@ const { from, gold } = defineProps<{
 
 <template>
   <div v-if="from" class=" mt-1">
-    <div class="divider divider-start after:h-px after:bg-nc/15 !text-0">
+    <div class="divider divider-start after:h-px after:bg-nc/10 !text-0">
       RECIPE
     </div>
     <div class="group flex items-center justify-center py-2 gap-3">

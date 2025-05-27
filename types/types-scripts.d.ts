@@ -1,31 +1,31 @@
 declare global {
 
-type TemplateResult = string | {
-  html: string
-  type?: string
-  isPp?: boolean
-  isLevelScaling?: boolean
-}
+  interface TemplateResult {
+    html: string
+    type?: string
+    isPp?: boolean
+    isLevelScaling?: boolean
+  }
 
-interface ParseState {
-  i: number
-  str: string
-}
+  interface ParseState {
+    i: number
+    str: string
+  }
 
-interface PpInput {
-  values: string // from raw param[0], possibly cleaned
-  type: string
-  levels?: string
-  key?: string
-  key1?: string
-  color?: string
-}
+  interface PpInput {
+    values: string // from raw param[0], possibly cleaned
+    type: string
+    levels?: string
+    key?: string
+    key1?: string
+    color?: string
+  }
 
-interface RdInput {
-  melee: string
-  ranged: string
-  isPp: boolean
-}
+  interface RdInput {
+    melee: string
+    ranged: string
+    isPp: boolean
+  }
   type TipInput = string[]
 type AsInput = any
 

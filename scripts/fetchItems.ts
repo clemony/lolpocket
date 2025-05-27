@@ -58,10 +58,10 @@ async function run() {
     }
 
     writeFileSync(
-      './public/api/items.json',
+      './data/raw/items-raw.json',
       JSON.stringify(merged, null, 2),
     )
-    console.log(`✅ Merged ${Object.keys(merged).length} items to ./public/api/items.json`)
+    console.log(`✅ Merged ${Object.keys(merged).length} items to ./data/items.json`)
   }
   catch (error) {
     console.error('❌ Fetch or merge failed:', error)

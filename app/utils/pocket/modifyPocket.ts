@@ -20,6 +20,10 @@ export function deletePocket(pocket) {
 
 // duplicate
 
+export function deepCopy<T>(obj: T): T {
+  return JSON.parse(JSON.stringify(obj))
+}
+
 export function duplicatePocket(original: Pocket): Pocket {
   const toID = hexoid()
 

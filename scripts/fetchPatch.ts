@@ -22,8 +22,8 @@ async function main() {
 
     const normalized = filtered.map(patch => normalizePatch(patch))
 
-    await writeFile('./public/api/index/patch-index[raw].json', JSON.stringify(filtered, null, 2))
-    await writeFile('./public/api/index/patch-index.json', JSON.stringify(normalized, null, 2))
+    await writeFile('./data/raw/patch-index[raw].json', JSON.stringify(filtered, null, 2))
+    await writeFile('./data/index/patch-index.json', JSON.stringify(normalized, null, 2))
 
     console.log('✅ Patches written to rawPatches.json and normalizedPatches.json')
   }

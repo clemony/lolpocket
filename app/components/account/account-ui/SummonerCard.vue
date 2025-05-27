@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { regionDictionary } from 'api/data/regionDictionary'
+import { regionDictionary } from '~~/data/records/regionDictionary'
 
 const { account } = defineProps<{
   account: userAccount
@@ -22,22 +22,21 @@ const region = computed(() => {
         </h1>
         <div class=" flex items-center h-full relative">
           <span class="absolute flex items-center -bottom-0.75 font-medium">
-          <icon name="lucide:hash" class="size-3.75" />
-          {{ account.riot.tag }}
-        </span>
+            <icon name="lucide:hash" class="size-3.75" />
+            {{ account.riot.tag }}
+          </span>
         </div>
       </div>
 
       <div class="flex items-center lowercase gap-4 font-normal">
-      <span class="">
-        lv. {{ account.riot.level }}
-      </span>
+        <span class="">
+          lv. {{ account.riot.level }}
+        </span>
         <span class="lowercase flex items-center">
           <icon name="lucide:at-sign" class="size-3.25 dst" />
           {{ region }}</span>
       </div>
     </div>
-    
   </div>
 </template>
 

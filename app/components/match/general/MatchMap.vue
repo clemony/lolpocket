@@ -1,16 +1,17 @@
 <script lang="ts" setup>
-import { Primitive } from 'reka-ui'
 import type { PrimitiveProps } from 'reka-ui'
+import { Primitive } from 'reka-ui'
 
-import {gameMaps} from 'api/data/maps'
+import { gameMaps } from '~~/data/records/maps'
+
 const props = defineProps<PrimitiveProps & {
   class?: HTMLAttributes['class']
-mapId: number
+  mapId: number
 }>()
 
 const map = computed(() => {
-const m = gameMaps.find(m => m.mapId == props.mapId)
- return m.mapName
+  const m = gameMaps.find(m => m.mapId == props.mapId)
+  return m.mapName
 })
 </script>
 

@@ -2,11 +2,12 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { formatStats, normalizeItemData } from './utils/formatItems'
 import { handleWikiText } from './utils/formatWikitext'
+import { ludensPreProcess } from './utils/wikitext/processing'
 
-const inputPath = path.resolve('./public/api/items.json')
-const outputIndex = path.resolve('./public/api/index/item-index.json')
-const outputLitePath = path.resolve('./public/api/items-lite.json')
-const itemOutputDir = path.resolve('./public/api/items/')
+const inputPath = path.resolve('./data/raw/items-raw.json')
+const outputIndex = path.resolve('./data/index/item-index.json')
+const outputLitePath = path.resolve('./data/items-lite.json')
+const itemOutputDir = path.resolve('./data/items/')
 const fullData = JSON.parse(fs.readFileSync(inputPath, 'utf-8'))
 
 const index = {}
@@ -70,9 +71,15 @@ async function buildItems() {
     )
 
     const passives = item.passives || []
+
     const expandedPassives = await Promise.all(
       passives.map(async (p) => {
-        const effects = await handleWikiText(p.effects, sharedVars)
+        let pText = p.effects
+        if (item.id === 6655 && p.effects?.includes('Shot Charges')) {
+          pText = ludensPreProcess(p.effects)
+          console.log('💠 - passives.map - pText:', pText)
+        }
+        const effects = await handleWikiText(pText, sharedVars)
         return {
           name: p.name,
           unique: p.unique,
@@ -105,12 +112,12 @@ async function buildItems() {
   // Write outputs
   fs.writeFileSync(outputIndex, JSON.stringify(index, null, 2))
   fs.writeFileSync(outputLitePath, JSON.stringify(simplified, null, 2))
-  fs.writeFileSync('./public/api/lists/unique-tags.json', JSON.stringify([...uniqueTags].sort(), null, 2))
-  fs.writeFileSync('./public/api/lists/unique-ranks.json', JSON.stringify([...uniqueRanks].sort(), null, 2))
+  fs.writeFileSync('./data/dev/unique-tags.json', JSON.stringify([...uniqueTags].sort(), null, 2))
+  fs.writeFileSync('./data/dev/unique-ranks.json', JSON.stringify([...uniqueRanks].sort(), null, 2))
 }
 
 buildItems()
 
 console.log('✅ items-lite.json written')
-console.log('📁 individual item files written to ./public/api/items/')
+console.log('📁 individual item files written to ./data/items/')
 console.log('🔖 unique-tags.json and unique-ranks.json written')

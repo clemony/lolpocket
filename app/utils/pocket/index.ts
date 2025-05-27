@@ -1,5 +1,6 @@
 export * from './handleCard'
 export * from './handleCreation'
+export * from './handleItemCalculator'
 export * from './handleItems'
 export * from './handlePocket'
 export * from './modifyPocket'

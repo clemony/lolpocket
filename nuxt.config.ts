@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     'nuxt-svgo',
     'motion-v/nuxt',
+    '@nuxtjs/tailwindcss',
   ],
 
   icon: {

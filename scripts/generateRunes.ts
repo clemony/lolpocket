@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 
-const raw = JSON.parse(fs.readFileSync('./public/api/runes-raw.json', 'utf-8'))
+const raw = JSON.parse(fs.readFileSync('./data/runes-raw.json', 'utf-8'))
 
 const output = {}
 
@@ -27,5 +27,5 @@ for (const tree of raw) {
   output[tree.key] = formatted
 }
 
-fs.writeFileSync('./public/api/runes.json', JSON.stringify(output, null, 2))
+fs.writeFileSync('./data/runes.json', JSON.stringify(output, null, 2))
 console.log('✅ runes.json updated with runeIndex')

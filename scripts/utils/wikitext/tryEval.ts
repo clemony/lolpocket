@@ -25,6 +25,15 @@ export function evaluateMathExpression(expression: string): string {
   return tryEval(expression) ?? expression
 }
 
+export function evalRange(expr: string): string {
+  const [start, end] = expr.split(/\s+to\s+/)
+  const startVal = tryEval(start.trim())
+  const endVal = tryEval(end.trim())
+  if (startVal && endVal)
+    return `${startVal} – ${endVal}`
+  return expr
+}
+
 export function evalAp(expr: string) {
   const parsed = Parser.parse(expr)
   return [1, 2, 3, 4, 5].map((x) => {

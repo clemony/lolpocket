@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { regionDictionary } from 'api/data/regionDictionary'
+import { regionDictionary } from '~~/data/records/regionDictionary'
 
 const { summoner } = defineProps<{
   summoner: Summoner

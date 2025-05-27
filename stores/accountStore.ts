@@ -11,21 +11,37 @@ export const useAccountStore = defineStore(
     const favoriteChamps = ref<Champion[]>([])
     const favoriteItems = ref<number[]>([])
 
+    const defaultUser: userAccount = {
+      name: 'Summoner',
+      role: null,
+      id: null,
+      session: null,
+      accessToken: null,
+      refreshToken: null,
+      riot: {
+        name: 'Summoner',
+        tag: null,
+        puuid: null,
+        profileIcon: null,
+        level: null,
+        region: 'Runeterra',
+      },
+    }
     const userAccount = ref<userAccount>({
       name: 'Summoner',
       role: null,
       id: null,
       session: null,
-      accessToken:  null,
-      refreshToken:  null,
+      accessToken: null,
+      refreshToken: null,
       riot: {
         name: 'Summoner',
-        tag:  null,
+        tag: null,
         puuid: null,
-        profileIcon:  null,
-        level:  null,
+        profileIcon: null,
+        level: null,
         region: 'Runeterra',
-      }
+      },
     })
 
     function resetUserAccount() {
@@ -34,23 +50,24 @@ export const useAccountStore = defineStore(
         role: null,
         id: null,
         session: null,
-        accessToken:  null,
-        refreshToken:  null,
+        accessToken: null,
+        refreshToken: null,
         riot: {
           name: 'Summoner',
-          tag:  null,
+          tag: null,
           puuid: null,
-          profileIcon:  null,
-          level:  null,
+          profileIcon: null,
+          level: null,
           region: 'Runeterra',
-        }
+        },
+      }
     }
-  }
 
     return {
       // account
       userAccount,
       resetUserAccount,
+      defaultUser,
       userNoShowDeletePocketConfirm,
       userNotes,
 

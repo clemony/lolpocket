@@ -1,7 +1,7 @@
-import { Client } from 'shieldbow'
-import process from 'node:process'
 import dotenv from 'dotenv'
 import fs from 'node:fs'
+import process from 'node:process'
+import { Client } from 'shieldbow'
 
 dotenv.config()
 
@@ -35,7 +35,7 @@ const transformedRunes = runeData.map((tree: any) => ({
 }))
 
 fs.writeFileSync(
-  './public/api/runes-raw.json',
+  './data/raw/runes-raw.json',
   JSON.stringify(transformedRunes, null, 2),
 )
 

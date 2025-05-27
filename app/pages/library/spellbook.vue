@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { summonerSpells } from '~~/public/api/data/spells'
+import { summonerSpells } from '~~/data/data/spells'
 
 definePageMeta({
   name: 'Spellbook',

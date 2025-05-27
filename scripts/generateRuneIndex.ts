@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 
 // Load the raw rune data
-const paths: Path[] = JSON.parse(fs.readFileSync('./public/api/runes.json', 'utf-8'))
+const paths: Path[] = JSON.parse(fs.readFileSync('./data/raw/runes-raw.json', 'utf-8'))
 
 // Extract id, name, and path
 const index: { id: number, key: string, name: string, path: string }[] = []
@@ -25,5 +25,5 @@ for (const pathKey in paths) {
 }
 
 // Write to rune-index.json
-fs.writeFileSync('./public/api/index/rune-index.json', JSON.stringify(index, null, 2))
+fs.writeFileSync('./data/index/rune-index.json', JSON.stringify(index, null, 2))
 console.log('✅ rune-index.json written with id and name only')

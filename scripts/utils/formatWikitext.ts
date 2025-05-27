@@ -1,15 +1,14 @@
-import { postProcess } from './wikitext/postProcess'
+import { postProcess, preProcess } from './wikitext/processing'
 import { resolveTemplates } from './wikitext/resolveTemplates'
 
 export function normalize(result: string | TemplateResult): string {
   return typeof result === 'string' ? result : result.html
 }
+
 export async function handleWikiText(wikitext: string, vars = new Map<string, string>()): Promise<string> {
-  let text = wikitext.replace(/([a-z0-9])\{\{/gi, '$1 {{')
-  text = wikitext.replace(/\}\}([a-z0-9])/gi, '}} $1')
-  const resolved = normalize(resolveTemplates(text, 0, vars))
-  text = postProcess(resolved)
-  return text.trim()
+  const text = preProcess(wikitext)
+  const resolved = resolveTemplates(text, 0, vars)
+  return postProcess(normalize(resolved))
 }
 
 // HOLLOW RADIANCE, ludens

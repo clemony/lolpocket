@@ -74,20 +74,20 @@ watchEffect(() => {
       </div>
 
       <div v-if="item.active[0] && item.noEffects != true">
-        <LazyItemEffect
+        <ItemEffect
           :data="item.active[0]" type="Active" />
       </div>
 
       <LazyItemFrom v-if="item.buildsFrom.length" :from="item.buildsFrom" :gold=" item.shop?.prices?.combined" />
       <LazyItemTo v-if="item.buildsInto.length" :to="item.buildsInto" />
 
-      <Separator v-if="item.passives.length || item.active.name" class=" mt-3 mb-2 bg-nc/10" />
+      <!-- <Separator v-if="item.passives.length || item.active.name" class=" mt-3 mb-2 bg-nc/10" />
 
       <p
         v-if="id"
         class="flex flex-nowrap text-nowrap grow items-center  text-2">
         <icon name="mage:hash" class="size-3.75 " />{{ id }}
-      </p>
+      </p> -->
     </div>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { VueDraggable } from 'vue-draggable-plus'
-import { summonerSpells } from '~~/public/api/data/spells'
+import { summonerSpells } from '~~/data/data/spells'
 
 const props = defineProps<{
   pocket: Pocket

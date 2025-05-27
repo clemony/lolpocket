@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { PrimitiveProps } from 'reka-ui'
-import { queueDictionary, queues } from '~~/public/api/data/queues'
+import { queueDictionary, queues } from '~~/data/records/queues'
 
 const props = defineProps<PrimitiveProps & {
   class?: HTMLAttributes['class']

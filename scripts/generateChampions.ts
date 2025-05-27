@@ -1,13 +1,13 @@
-import { normalizeAbility } from './utils/normalizeAbility'
-import { normalize, normalizeArray } from './utils/normalizeStrings'
 import fs from 'node:fs'
 import path from 'node:path'
+import { normalizeAbility } from './utils/normalizeAbility'
+import { normalize, normalizeArray } from './utils/normalizeStrings'
 
 // Load your full champions data
-const champions = JSON.parse(fs.readFileSync('./public/api/champions.json', 'utf-8'))
+const champions = JSON.parse(fs.readFileSync('./data/raw/champions-raw.json', 'utf-8'))
 
 // Create output directory
-const outputDir = './public/api/champions'
+const outputDir = './data/champions'
 fs.mkdirSync(outputDir, { recursive: true })
 
 for (const champ of Object.values(champions) as FullChampion[]) {
@@ -52,7 +52,6 @@ for (const champ of Object.values(champions) as FullChampion[]) {
         ]),
       )
     : {}
-
 
   const champDataRaw = {
     id,

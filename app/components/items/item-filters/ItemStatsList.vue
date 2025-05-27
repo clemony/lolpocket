@@ -1,6 +1,4 @@
 <script setup lang="ts">
-
-
 const emit = defineEmits(['update:model'])
 
 const ts = useTempStore()
@@ -18,13 +16,6 @@ const originalOrder = ref([
     return 0
   }),
 ])
-const sortedCategories = computed(() => {
-  const checked = categories.value.filter(cat => cat.checked)
-  const unchecked = categories.value.filter(cat => !cat.checked)
-
-  return [...checked, ...unchecked]
-})
-
 function moveToTop(stat) {
   const index = categories.value.findIndex(cat => cat.id === stat.id)
   if (index !== -1) {
@@ -51,12 +42,11 @@ function handleReset() {
       class="btn btn-square btn-sm !text-5 rounded-md font-normal"
       type="reset"
       value="×"
-      @click="handleReset()"
-    />
-
+      @click="handleReset()" />
+    <!--
     <TransitionGroup name="pop">
       <input
-        v-for="stat in sortedCategories"
+        v-for="stat in ''"
         :key="stat.id"
         v-model="to"
         class="btn checked:bg-neutral checked:border-neutral checked:shadow-neutral/20 btn-sm !text-3 mr-0 rounded-md font-medium tracking-normal capitalize checked:shadow-sm"
@@ -66,7 +56,7 @@ function handleReset() {
         :aria-label="(stat.shortName as string) || stat.displayName"
         @change="moveToTop(stat)"
       />
-    </TransitionGroup>
+    </TransitionGroup> -->
   </form>
 </template>
 
