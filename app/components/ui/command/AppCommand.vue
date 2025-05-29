@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { AnimatePresence, motion } from 'motion-v'
+import { motion } from 'motion-v'
 
 const us = useUiStore()
 

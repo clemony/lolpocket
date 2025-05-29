@@ -18,7 +18,7 @@ const filtered = computed (() => to.filter(to => to.id < 9999))
         :key="i"
         v-tippy="`${item.name} ‑ ${item.gold}g`" class="flex gap-3 items-center">
         <LazyPopoverItem
-          :item="item.id"
+          :id="item.id"
           class="ring-accent  size-10 overflow-hidden rounded-lg shadow-sm hover:ring-2  hover:ring-offset-2 hover:ring-offset-b1/30 tldr-20" />
       </div>
     </div>

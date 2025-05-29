@@ -3,9 +3,10 @@ const { championKey } = defineProps<{
   championKey: string
 }>()
 
-const { data } = await useFetch(`/api/champions/${championKey}.json`)
 
-const champion = computed (() => data.value as Champion)
+const championRef = ref<string | null>(championKey)
+const { data: champion, pending } = useChampionDetails(championRef.value!)
+
 const selected = ref('P')
 const tab = ref()
 
@@ -19,10 +20,6 @@ watch(
 </script>
 
 <template>
-  <Dialog>
-    <DialogTrigger class="size-full">
-      <ChampionTile bg-size="140%" :url="champion.splash" :name="champion.name" text class="min-h-64" object-position="50% -2rem" />
-    </DialogTrigger>
     <LazyMotionDialogContent :delay="0" class=" h-200 backdrop-blur-lg bg-b1/94  min-w-300 w-300 flex z-1000 py-9 px-8 flex gap-8">
       <div class="relative flex flex-col gap-6 h-full h-140 w-100">
         <ChampionSplash :url="champion.splash" :name="champion.name" class="size-full  relative  ">
@@ -59,5 +56,5 @@ watch(
         <ChampionBasicData v-else-if="selected == null && tab == 'stats'" :champion="champion" />
       </div>
     </LazyMotionDialogContent>
-  </Dialog>
+
 </template>

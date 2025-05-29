@@ -32,7 +32,7 @@ export async function useSearch(query = ref(''), options: UseSearchOptions = {})
   }, { immediate: true })
 
   watch(items, (newVal) => {
-    itemFuse.value = new Fuse(newVal, { keys: ['name'], threshold: 0.3 })
+    itemFuse.value = new Fuse(newVal, { keys: ['name', 'nickname'], threshold: 0.3 })
   }, { immediate: true })
 
   const pageFuse = options.includePages !== false

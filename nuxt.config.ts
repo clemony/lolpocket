@@ -105,7 +105,7 @@ export default defineNuxtConfig({
   imports: {
     dirs: [
       '@vueuse/components',
-      'data',
+      'content',
       'stores',
       'routes',
     ],
@@ -128,7 +128,7 @@ export default defineNuxtConfig({
     'components': fileURLToPath(new URL('./app/components', import.meta.url)),
     'plugins': fileURLToPath(new URL('./app/plugins', import.meta.url)),
     'modules': fileURLToPath(new URL('./modules', import.meta.url)),
-    'data': fileURLToPath(new URL('./app/data', import.meta.url)),
+    'content': fileURLToPath(new URL('./app/content', import.meta.url)),
   },
   css: ['~/assets/css/tailwind.css'],
   app: {

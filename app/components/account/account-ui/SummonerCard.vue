@@ -1,13 +1,8 @@
 <script setup lang="ts">
-import { regionDictionary } from '~~/data/records/regionDictionary'
-
 const { account } = defineProps<{
   account: userAccount
 }>()
 
-const region = computed(() => {
-  return regionDictionary[account.riot.region.toLowerCase()] ?? account.riot.region
-})
 </script>
 
 <template>
@@ -34,7 +29,7 @@ const region = computed(() => {
         </span>
         <span class="lowercase flex items-center">
           <icon name="lucide:at-sign" class="size-3.25 dst" />
-          {{ region }}</span>
+          <SummonerRegion :account="account" /></span>
       </div>
     </div>
   </div>

@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import { AnimatePresence, motion } from 'motion-v'
 
-import { gameMaps } from '~~/data/records/maps'
-
 const { visible } = defineProps<{
   visible: boolean
 }>()

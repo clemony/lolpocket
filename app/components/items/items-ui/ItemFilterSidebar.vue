@@ -8,6 +8,7 @@ function resetItems() {
 /*   sortItemsAZ.value = 0
   // sortPrice.value = 0 */
 
+  //TODO disable no filter avail
   Object.assign(is.itemFilter, is.defaultItemFilter)
   console.log('💠 - resetItems - is.defaultItemFilter:', is.defaultItemFilter)
   console.log('💠 - resetItems - itemFilter:', is.itemFilter)
@@ -29,7 +30,7 @@ onMounted (() => {
           <IndicatorTabsTrigger value="/library/items">
             Grid
           </IndicatorTabsTrigger>
-          <IndicatorTabsTrigger value="/library/item_list">
+          <IndicatorTabsTrigger value="/library/item_stats">
             List
           </IndicatorTabsTrigger>
           <TabIndicator />
@@ -48,9 +49,15 @@ onMounted (() => {
     <div class="mt-2 mb-4 px-5 gap-6 flex items-center  w-full">
       <ItemMapFilter v-model:model-value="is.itemFilter.map">
       </ItemMapFilter>
-      <div class="gap-5 px-5  flex font-medium items-center w-full justify-end ">
-        {{ is.itemFilter.purchasable ? 'Purchasable' : 'All' }}
-        <Switch v-model:model-value="is.itemFilter.purchasable" class="dst" />
+      <div class="gap-5 px-5 text-2  tracking-tight  flex items-center w-full justify-end ">
+        <MotionFade v-if="is.itemFilter.purchasable" layout-id="text">
+          Purchasable
+        </MotionFade>
+        <MotionFade v-else layout-id="text">
+          All
+        </MotionFade>
+        <Switch v-model:model-value="is.itemFilter.purchasable" class="dst">
+        </Switch>
       </div>
     </div>
     <div class="px-7">

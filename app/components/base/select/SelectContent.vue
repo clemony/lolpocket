@@ -1,14 +1,15 @@
 <script setup lang="ts">
+import { reactiveOmit } from '@vueuse/core'
 import {
   SelectContent,
-
+  type SelectContentEmits,
+  type SelectContentProps,
   SelectPortal,
   SelectViewport,
   useForwardPropsEmits,
 } from 'reka-ui'
-import type { SelectContentEmits, SelectContentProps } from 'reka-ui'
-import { computed } from 'vue'
-import type { HTMLAttributes } from 'vue'
+import SelectScrollDownButton from './SelectScrollDownButton.vue'
+import SelectScrollUpButton from './SelectScrollUpButton.vue'
 
 defineOptions({
   inheritAttrs: false,
@@ -22,11 +23,7 @@ const props = withDefaults(
 )
 const emits = defineEmits<SelectContentEmits>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>

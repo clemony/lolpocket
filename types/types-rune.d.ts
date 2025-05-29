@@ -42,6 +42,7 @@ declare global {
     type: string
     icon: string
     color: string
+    iconClass: string
   }
 
   interface Rune {

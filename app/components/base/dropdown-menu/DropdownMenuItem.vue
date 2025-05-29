@@ -1,23 +1,17 @@
 <script setup lang="ts">
-import { DropdownMenuItem, useForwardProps } from 'reka-ui'
 import type { DropdownMenuItemProps } from 'reka-ui'
-import { computed } from 'vue'
-import type { HTMLAttributes } from 'vue'
+import { DropdownMenuItem, useForwardProps } from 'reka-ui'
 
 const props = defineProps<DropdownMenuItemProps & { class?: HTMLAttributes['class'], inset?: boolean }>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+const delegatedProps = reactiveOmit(props, 'class')
 
-  return delegated
-})
-
-const forwardedProps = useForwardProps(delegatedProps)
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
   <DropdownMenuItem
-    v-bind="forwardedProps"
+    v-bind="forwarded"
     :class="cn(
       'relative w-full flex cursor-default select-none items-center rounded-lg gap-3 px-2 py-1.5 text-3 outline-none transition-colors focus:bg-b2 focus:text-neutral-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-50  [&>svg]:size-5 [&>svg]:shrink-0',
       inset && 'pl-8',

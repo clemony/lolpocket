@@ -2,8 +2,8 @@
 import type { ListboxRootEmits, ListboxRootProps } from 'reka-ui'
 
 import { ListboxRoot, useFilter, useForwardPropsEmits } from 'reka-ui'
-import { computed, reactive, ref, watch } from 'vue'
 import type { HTMLAttributes } from 'vue'
+import { computed, reactive, ref, watch } from 'vue'
 import { provideCommandContext } from './cindex'
 
 const props = withDefaults(defineProps<ListboxRootProps & { class?: HTMLAttributes['class'] }>(), {
@@ -12,11 +12,7 @@ const props = withDefaults(defineProps<ListboxRootProps & { class?: HTMLAttribut
 
 const emits = defineEmits<ListboxRootEmits>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 

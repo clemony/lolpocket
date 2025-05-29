@@ -34,8 +34,8 @@ const query = ref(null)
     <div class="flex  items-center gap-10 ">
       <div class="flex relative items-center grow gap-2.5 pl-15">
 
-      <ExpandSearch v-model:query="cs.championFilter.query" @update:reset="cs.championFilter.query = null" class="absolute **:[&_svg]:!opacity-96  left-0 btn-neutral max-w-60 ">
-        <ChampionSearch v-model:input="cs.championFilter.query" @update:input="e => cs.championFilter.query = e" class=""/>
+      <ExpandSearch @update:reset="cs.championFilter.query = null" class="absolute **:[&_svg]:!opacity-96  left-0 btn-neutral max-w-60 ">
+     <input type="text" class="size-full" v-model="cs.championFilter.query" />
       </ExpandSearch>
         <h1 class="!text-9 tracking-tight mr-6">
           Champions

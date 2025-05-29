@@ -1,23 +1,17 @@
 <script setup lang="ts">
-import { DropdownMenuLabel, useForwardProps } from 'reka-ui'
 import type { DropdownMenuLabelProps } from 'reka-ui'
-import { computed } from 'vue'
-import type { HTMLAttributes } from 'vue'
+import { DropdownMenuLabel, useForwardProps } from 'reka-ui'
 
 const props = defineProps<DropdownMenuLabelProps & { class?: HTMLAttributes['class'], inset?: boolean }>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+const delegatedProps = reactiveOmit(props, 'class')
 
-  return delegated
-})
-
-const forwardedProps = useForwardProps(delegatedProps)
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
   <DropdownMenuLabel
-    v-bind="forwardedProps"
+    v-bind="forwarded"
     :class="cn('px-2 py-1.5 text-2 text-bc/50 font-semibold', inset && 'pl-8', props.class)"
   >
     <slot />

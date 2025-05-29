@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-const { pocket, itemData } = defineProps<{
-  itemData: ItemRecord
+const { pocket } = defineProps<{
   pocket: Pocket
 }>()
 </script>

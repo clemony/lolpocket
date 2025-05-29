@@ -5,11 +5,9 @@ export const useDataStore = defineStore(
   'dataStore',
   () => {
     const currentPatch = ref()
-    console.log("💠 - currentPatch:", currentPatch)
+    console.log('💠 - currentPatch:', currentPatch)
     const patchList = ref<number[]>([])
-    console.log("💠 - patchList:", patchList)
     const lastFetched = ref<number>(0) // timestamp
-    console.log("💠 - lastFetched:", lastFetched)
 
     const currentPatchNotes = ref<PatchNotesData>(null)
     const patchNotesLink = computed(() => {
@@ -29,10 +27,12 @@ export const useDataStore = defineStore(
             patchList.value = data.value
             currentPatch.value = data.value[data.value.length - 1]
             lastFetched.value = now
-          } else {
+          }
+          else {
             console.error('Failed to fetch patch data:', error.value)
           }
-        } catch (err) {
+        }
+        catch (err) {
           console.error('Patch fetch error:', err)
         }
       }

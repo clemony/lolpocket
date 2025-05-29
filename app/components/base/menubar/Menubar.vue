@@ -1,21 +1,15 @@
 <script setup lang="ts">
+import type { MenubarRootEmits, MenubarRootProps } from 'reka-ui'
 import {
   MenubarRoot,
 
   useForwardPropsEmits,
 } from 'reka-ui'
-import type { MenubarRootEmits, MenubarRootProps } from 'reka-ui'
-import { computed } from 'vue'
-import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<MenubarRootProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<MenubarRootEmits>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>

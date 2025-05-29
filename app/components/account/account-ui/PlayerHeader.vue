@@ -1,14 +1,7 @@
 <script setup lang="ts">
-import { regionDictionary } from '~~/data/records/regionDictionary'
-
 const { summoner } = defineProps<{
   summoner: Summoner
 }>()
-
-console.log('💠 - summoner:', summoner)
-const region = computed(() => {
-  return regionDictionary[summoner.region.toLowerCase()] ?? summoner.region
-})
 </script>
 
 <template>
@@ -36,7 +29,7 @@ const region = computed(() => {
           {{ summoner.tag }}</span>
         <span class="lowercase flex items-center grow">
           <icon name="at" class="size-3.25 dst" />
-          {{ region }}</span>
+          <SummonerRegion :region-id="summoner.region" /></span>
       </div>
     </div>
     <div class="grid h-full items-center justify-items-end justify-self-end">

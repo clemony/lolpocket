@@ -1,21 +1,17 @@
 <script lang="ts" setup>
-import { MenubarTrigger, useForwardProps } from 'reka-ui'
 import type { MenubarTriggerProps } from 'reka-ui'
+import { MenubarTrigger, useForwardProps } from 'reka-ui'
 
 const props = defineProps<MenubarTriggerProps & { class?: HTMLAttributes['class'] }>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+const delegatedProps = reactiveOmit(props, 'class')
 
-  return delegated
-})
-
-const forwardedProps = useForwardProps(delegatedProps)
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
   <MenubarTrigger
-    v-bind="forwardedProps"
+    v-bind="forwarded"
     :class="
       cn(
         'flex gap-1.5 group/menu text-3 ',

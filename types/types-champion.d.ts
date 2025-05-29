@@ -47,6 +47,7 @@ interface ChampionLite {
   interface Skin {
     name: string
     splashPath: string
+    tilePath: string
   }
 
   interface SkinEntry {

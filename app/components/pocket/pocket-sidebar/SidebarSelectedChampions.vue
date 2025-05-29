@@ -1,10 +1,11 @@
 <script lang="ts" setup>
 import { AnimatePresence, motion } from 'motion-v'
 
-const { pocket, championData } = defineProps<{
+const { pocket } = defineProps<{
   pocket: Pocket
-  championData: ChampionRecord
 }>()
+
+const { champIdByKey } = await useIndexLookup()
 
 const variants = {
   visible: {
@@ -30,7 +31,7 @@ const variants = {
       <template v-if="pocket?.champions && pocket?.champions?.length">
         <motion.div
           v-for="champion in pocket?.champions"
-          :key="championData[champion].key"
+          :key="champion"
           animate="visible"
           initial="hidden"
           exit="hidden"
@@ -42,9 +43,9 @@ const variants = {
           :variants="variants"
           layout
           class="max-w-full min-w-[31%] flex grow">
-          <ChampionSplash
-            :url="championData[champion].splash"
-            :name="championData[champion].key" class="aspect-auto h-24  rounded-xl border-b3 border  hover:ring hover:ring-neutral/40 " />
+          <ChampionIcon
+            :id="champIdByKey(champion) as number"
+            :alt="champion" class="aspect-auto h-24  rounded-xl border-b3 border  hover:ring hover:ring-neutral/40 " />
         </motion.div>
       </template>
     </AnimatePresence>

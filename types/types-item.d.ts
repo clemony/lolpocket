@@ -3,7 +3,7 @@ declare global {
   type ItemName = string
   interface ItemIndex {
     name: ItemName
-    id: ItemId
+    id: number
   }
   type ItemRecord = Record<ItemId, ItemLite>
   type StatLite = number
@@ -11,7 +11,7 @@ declare global {
   type StatKeys = keyof ItemLite['stats']
 
   interface ItemLite {
-    id: ItemId
+    id: number
     name: ItemName
     rank: string[]
     stats: Record<string, number>
@@ -22,13 +22,13 @@ declare global {
   }
 
   interface ItemComponent {
-    id: ItemId
+    id: number
     name: ItemName
     gold: number
   }
 
   interface Item {
-    id: ItemId
+    id: number
     name: ItemName
     rank: string[]
     buildsFrom?: ItemComponent[]
@@ -74,7 +74,7 @@ declare global {
   type effectAmount = number
 
   interface ItemClone extends ItemId {
-    id: ItemId
+    id: number
     cloneId: string
   }
   interface ItemStat extends StatLite {

@@ -1,16 +1,12 @@
 <script setup lang="ts">
 import { LayoutGroup } from 'motion-v'
-import { RadioGroupRoot, useForwardPropsEmits } from 'reka-ui'
 import type { RadioGroupRootEmits, RadioGroupRootProps } from 'reka-ui'
+import { RadioGroupRoot, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<RadioGroupRootProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<RadioGroupRootEmits>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>

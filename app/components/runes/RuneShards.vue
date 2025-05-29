@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { shards } from '~~/data/shards'
-
 const { pocket } = defineProps<{
   pocket: Pocket
 }>()
 
 const rs = useRuneStore()
 const set = computed(() => pocket.runes[rs.selectedRuneSet])
+
+const { shards } = await useIndexLookup()
 </script>
 
 <template>

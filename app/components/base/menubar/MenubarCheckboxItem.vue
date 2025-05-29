@@ -1,23 +1,17 @@
 <script setup lang="ts">
 
+import type { MenubarCheckboxItemEmits, MenubarCheckboxItemProps } from 'reka-ui'
 import {
   MenubarCheckboxItem,
 
   MenubarItemIndicator,
   useForwardPropsEmits,
 } from 'reka-ui'
-import type { MenubarCheckboxItemEmits, MenubarCheckboxItemProps } from 'reka-ui'
-import { computed } from 'vue'
-import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<MenubarCheckboxItemProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<MenubarCheckboxItemEmits>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>

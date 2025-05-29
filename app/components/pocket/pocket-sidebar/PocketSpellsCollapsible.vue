@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { VueDraggable } from 'vue-draggable-plus'
-import { summonerSpells } from '~~/data/data/spells'
 
 const props = defineProps<{
   pocket: Pocket
@@ -24,17 +23,19 @@ function onEnd(e) {
   dragging.value = false
 }
 
-const img = computed (() => {
-  return dragging.value
-    ? {
-        0: `/img/spells/${(dragData.value?.[0] ?? getRandom(summonerSpells.map(s => s.name))).toLowerCase()}.webp`,
-        1: `/img/spells/${(dragData.value?.[1] ?? getRandom(summonerSpells.map(s => s.name))).toLowerCase()}.webp`,
-      }
-    : {
-        0: `/img/spells/${pocket.value?.spells?.[0]?.[0] ?? getRandom(summonerSpells.map(s => s.name))}.webp`,
-        1: `/img/spells/${pocket.value?.spells?.[0]?.[1] ?? getRandom(summonerSpells.map(s => s.name))}.webp`,
-      }
-})
+// const { spells } = await useIndexLookup()
+
+// const img = computed (() => {
+//   return dragging.value
+//     ? {
+//         0: `/img/spells/${(dragData.value?.[0] ?? getRandom(summonerSpells.map(s => s.name))).toLowerCase()}.webp`,
+//         1: `/img/spells/${(dragData.value?.[1] ?? getRandom(summonerSpells.map(s => s.name))).toLowerCase()}.webp`,
+//       }
+//     : {
+//         0: `/img/spells/${pocket.value?.spells?.[0]?.[0] ?? getRandom(summonerSpells.map(s => s.name))}.webp`,
+//         1: `/img/spells/${pocket.value?.spells?.[0]?.[1] ?? getRandom(summonerSpells.map(s => s.name))}.webp`,
+//       }
+// })
 const isOpen = ref(false)
 const toggleOpen = useToggle(isOpen)
 function handleClick(i) {

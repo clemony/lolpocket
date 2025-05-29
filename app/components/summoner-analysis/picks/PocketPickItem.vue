@@ -22,7 +22,7 @@ console.log('💠 - itemColor - itemColor:', itemColor)
   <Field v-if="bayesianItems[itemNum]" class="bg-b1 pb-6 px-0 pt-0 w-full flex border-shadow  items-center gap-5 inset-shadow-xxs" :title="title">
     <div class="w-full pt-8 items-center px-5 gap-5 dst flex  relative">
       <div class="rounded-full size-16 shadow-sm drop-shadow-sm">
-        <PopoverItem :item="bayesianItems[itemNum]" class="size-16 rounded-full overflow-hidden" />
+        <PopoverItem :id="bayesianItems[itemNum]" class="size-16 rounded-full overflow-hidden" />
       </div>
 
       <div class=" text-bc grow">

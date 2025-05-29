@@ -44,7 +44,7 @@ const loaded = ref(false)
     class="" :class="cn('grid place-items-center overflow-hidden  relative cursor-pointer  rounded-lg  size-full **:select-none  group relative', { 'shadow-sm drop-shadow-sm border-b3 border': loaded }, className)">
     <div class="size-full rounded-lg ">
       <Img
-        :img="url.replace('centered', 'tile')"
+        :img="url"
         alt="champion image"
         class="absolute  object-cover rounded-lg object-center"
         loaded-class="  "

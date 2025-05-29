@@ -4,16 +4,9 @@ const { id, base } = defineProps<{
   base?: boolean
 }>()
 
-const item = ref(null)
-async function fetchItem(id) {
-  const data = await $fetch<Item>(`/api/items/${id}.json`)
-  item.value = data
-}
+const itemId = ref<number | null>(id)
+const { data: item, pending } = useItemDetails(itemId.value!)
 
-watchEffect(() => {
-  if (id)
-    fetchItem(id)
-})
 /* const itemPrice = computed (() => {
   if (!item.cost)
   return
@@ -23,8 +16,8 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div v-if="item" class="px-3 py-2 bg-blend-darken max-h-151 overflow-hidden flex flex-col **:select-text" :class="{ '**:text-bc': base, '**:text-nc': !base }">
-    <div class="flex gap-4 ">
+  <div v-if="item" class="px-3 py-2 bg-blend-darken max-h-[404px] overflow-hidden flex flex-col **:select-text" :class="{ '**:text-bc': base, '**:text-nc': !base }">
+    <div class="flex gap-4 pb-3 ">
       <div class="!size-14 rounded-lg aspect-square shrink-0 shadow-sm drop-shadow-sm ">
         <Img
           v-if="item"
@@ -56,16 +49,16 @@ watchEffect(() => {
           </div>
         </div>
       </div>
-    </div>
-    <div class="  pt-2    relative overflow-y-auto    flex flex-col ">
       <div v-if="item.requiredChampion" class="my-2 -mt-2">
         <i>Unique to <b>{{ item.requiredChampion }}.</b></i>
       </div>
+    </div>
+    <div class="  py-2    relative overflow-y-auto    flex flex-col ">
       <div v-if="item.stats && Object.entries(item.stats).length" class="pb-1">
         <ItemStats :stats="item.stats" :base="base" />
       </div>
 
-      <Separator v-if="item.passives.length || item.active.name" class=" mt-3 mb-2 bg-nc/10" />
+      <Separator v-if="item.passives.length || item.active.name" class=" mt-2 mb-2 bg-nc/10" />
 
       <div v-if="item.passives.length && item.noEffects != true">
         <ItemEffect

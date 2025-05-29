@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import type { VariantProps } from 'class-variance-authority'
-import { toggleVariants } from './toggleVariants'
-import { ToggleGroupItem, useForwardProps } from 'reka-ui'
 import type { ToggleGroupItemProps } from 'reka-ui'
-import { computed, inject } from 'vue'
+import { ToggleGroupItem, useForwardProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
+import { computed, inject } from 'vue'
+import { toggleVariants } from './toggleVariants'
 
 type ToggleGroupVariants = VariantProps<typeof toggleVariants>
 
@@ -21,12 +21,12 @@ const delegatedProps = computed(() => {
   return delegated
 })
 
-const forwardedProps = useForwardProps(delegatedProps)
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
   <ToggleGroupItem
-    v-bind="forwardedProps" :class="cn(toggleVariants({
+    v-bind="forwarded" :class="cn(toggleVariants({
       variant: context?.variant || variant,
       size: context?.size || size,
     }), props.class)">

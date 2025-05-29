@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from 'vue'
-import Fuse from 'fuse.js'
-
 const props = withDefaults(
   defineProps<{
     class?: HTMLAttributes['class']
@@ -15,53 +12,10 @@ const props = withDefaults(
 )
 const emit = defineEmits(['update:query'])
 const is = useItemStore()
-const ds = useDataStore()
 
-const { data: itemData } = await useFetch('/api/lists/item-index.json')
-const items = Object.values(itemData.value) as ItemIndex[]
 
 const searchQuery = ref('')
 
-watchEffect(() => {
-  emit('update:query', searchQuery.value)
-  is.itemFilter.query = searchQuery.value
-})
-
-const fuse = ref<Fuse<any> | null>(null)
-
-// Initialize Fuse once the items are available
-watch(
-  () => items,
-  (newItems) => {
-    if (newItems && newItems.length > 0) {
-      fuse.value = new Fuse(newItems, {
-        keys: ['name', 'nickname'],
-        includeScore: true,
-        threshold: 0.3,
-      })
-    }
-  },
-  { immediate: true },
-)
-
-const searchResult = computed(() => {
-  if (!searchQuery.value) {
-    return items || []
-  }
-
-  if (!fuse.value)
-    return []
-
-  const results = fuse.value.search(searchQuery.value)
-  return results.map(result => result.item)
-})
-
-watch(searchResult, (newSearchResults) => {
-  is.itemFilter.result = newSearchResults
-})
-
-const target = shallowRef()
-const { focused } = useFocus(target, { initialValue: props.setFocus })
 </script>
 
 <template>

@@ -1,23 +1,17 @@
 <script setup lang="ts">
 
+import type { MenubarRadioItemEmits, MenubarRadioItemProps } from 'reka-ui'
 import {
   MenubarItemIndicator,
   MenubarRadioItem,
 
   useForwardPropsEmits,
 } from 'reka-ui'
-import type { MenubarRadioItemEmits, MenubarRadioItemProps } from 'reka-ui'
-import { computed } from 'vue'
-import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<MenubarRadioItemProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<MenubarRadioItemEmits>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>

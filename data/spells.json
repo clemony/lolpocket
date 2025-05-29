@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "name": "Cleanse",
+    "description": "Removes all  disables (excluding  Airborne,  Nearsight, and  Suppression) and An icon representing summoner spell summoner spell debuffs (excluding An icon representing Mark Mark) affecting your champion, and grants you 75%  tenacity for 3 seconds.",
+    "cd": "240",
+    "text": "\"Cleanse remove active crowd control effects, allowing the champion to continue pursuit or escape, but cannot be used under suppression or while in stasis.\""
+  },
+  {
+    "id": 3,
+    "name": "Exhaust",
+    "description": "Weakens the target enemy champion for 3 seconds,  slowing them by 40% and reducing their damage dealt by 35%.",
+    "cd": "240",
+    "text": "\"Exhaust is an extremely powerful tool for disabling champions who can deal a high amount of damage. When your team is chasing an enemy and they are getting away, using Exhaust on them will help your team gain the upper hand. \""
+  },
+  {
+    "id": 4,
+    "name": "Flash",
+    "description": "Blinks your champion a short distance toward the target location.",
+    "cd": "300",
+    "text": "\"Flash can easily be used to escape from or catch up with a foe. It can be used to dodge or land abilities. It can also be used to move over walls, either for a quick escape or in response to an opponent's dash.\""
+  },
+  {
+    "id": 6,
+    "name": "Ghost",
+    "description": "Your champion ignores unit collision and gains 24% − 48% (based on level)  bonus movement speed for 10 seconds.",
+    "cd": "240",
+    "text": "\"Ghost can be used either offensively or defensively. The increase in movement speed and ignoring unit collision makes it easier to both chase down enemy champions, and escape bad situations.\""
+  },
+  {
+    "id": 7,
+    "name": "Heal",
+    "description": "Heals your champion and the allied champion nearest to the cursor for 80 − 318 (based on level), while also granting both of you  30% bonus total movement speed for 1 second.",
+    "cd": "240",
+    "text": "\"Heal can be used to save a life when low on health and under attack.  It is commonly used to get an early first blood by healing oneself for more than one's opponent expects.\""
+  },
+  {
+    "id": 11,
+    "name": "Smite",
+    "description": "Deals  600 true damage to the target medium / large monster or enemy minion. Against pets, deals 40 true damage instead. Transforms into An icon representing Unleashed Smite Unleashed Smite once a jungle pet is fed 20 treats.",
+    "cd": "15 ",
+    "recharge": "90",
+    "charges": "2",
+    "text": "\"Smite is generally used for jungling. Beyond dramatically speeding up clear time, its high damage provides a strategic last-hit advantage at high-priority buffs like Dragon and  Baron Nashor.\""
+  },
+  {
+    "id": 12,
+    "name": "Teleport",
+    "description": "After channeling for 4 seconds, removes any homestart or homeguard buff and blinks your champion to target allied turret. Upgrades to An icon representing Unleashed Teleport Unleashed Teleport at 10",
+    "cd": "360",
+    "text": "\"During the early game, Teleport is mainly used to quickly return to lane after a  Recall, or in the event of an early death.Teleport can be used to react if an enemy champion tries to destroy an unguarded turret.\""
+  },
+  {
+    "id": 14,
+    "name": "Ignite",
+    "description": "Sets the target enemy champion on fire for 5 seconds,  revealing them and dealing 70 − 410 (based on level)  true damage over the duration, with the first tick of damage occurring briefly after the cast and subsequent ticks occurring every 1.056 seconds after the previous. The target is also inflicted with  Grievous Wounds for the same duration.",
+    "cd": "180",
+    "text": "\"Ignite provides players an offensive utility and damage spell that scales with level. A well-placed healing reduction debuff from Ignite can severely limit the effectiveness of enemy champions or their healing items.\""
+  },
+  {
+    "id": 21,
+    "name": "Barrier",
+    "description": "Grants your champion a  shield that absorbs 100 − 460 (based on level) damage for 2.5 seconds.",
+    "cd": "240",
+    "text": "\"Barrier is great for absorbing the burst of enemy champions or turret enhanced shots. Whether used on a squishy mid-laner or a tanky top-laner, a well-timed Barrier will help escape from tough situations.\""
+  }
+]

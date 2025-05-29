@@ -3,11 +3,11 @@ import { ContextMenuTrigger, type ContextMenuTriggerProps, useForwardProps } fro
 
 const props = defineProps<ContextMenuTriggerProps>()
 
-const forwardedProps = useForwardProps(props)
+const forwarded = useForwardProps(props)
 </script>
 
 <template>
-  <ContextMenuTrigger v-bind="forwardedProps">
+  <ContextMenuTrigger v-bind="forwarded">
     <slot />
   </ContextMenuTrigger>
 </template>

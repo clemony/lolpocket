@@ -17,22 +17,15 @@ definePageMeta({
 
 const pocket = ref(getPocket(route.params.pocketKey))
 
-const { data: champ } = await useFetch<ChampionRecord>('/api/champions-lite.json')
-const { data: item } = await useFetch<ItemRecord>('/api/items-lite.json')
-
-const cs = useChampStore()
-const championData = computed (() => Object.values(champ.value) as ChampionLite[])
-const { filteredChampions } = useChampionFilter(Object.values(championData.value), cs.pChampionFilter)
 </script>
 
 <template>
   <main class="flex relative size-full overflow-hidden">
-    <PocketSidebar :champion-data="champ" :item-data="item" />
+    <PocketSidebar />
     <article class="size-full relative overflow-y-auto">
       <LazyNuxtPage
         :pocket="pocket"
-        :puuid="puuid"
-        :champions="filteredChampions" />
+        :puuid="puuid" />
     </article>
   </main>
 </template>

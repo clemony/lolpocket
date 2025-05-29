@@ -2,21 +2,16 @@
 import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
-import { gameMaps } from '~~/data/records/maps'
-
-const props = defineProps<PrimitiveProps & {
+const { id, class: className } = defineProps<PrimitiveProps & {
   class?: HTMLAttributes['class']
-  mapId: number
+  id: number
 }>()
 
-const map = computed(() => {
-  const m = gameMaps.find(m => m.mapId == props.mapId)
-  return m.mapName
-})
+const { mapNameById } = await useIndexLookup()
 </script>
 
 <template>
-  <Primitive v-bind="props">
-    {{ map }}
+  <Primitive v-bind="$props" :class="cn('', className)">
+    {{ mapNameById(id) }}
   </Primitive>
 </template>

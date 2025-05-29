@@ -20,6 +20,7 @@ function load() {
 
 <template>
   <NuxtImg
+    :key="img"
     loading="lazy"
     :src="img"
     placeholder-class="loading"

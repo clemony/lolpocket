@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 const championsPath = path.resolve('./data/raw/champions=raw.json')
-const outputPath = path.resolve('./data/records/champion-skins.json')
+const outputPath = path.resolve('./data/index/skindex.json')
 
 const championsRaw = fs.readFileSync(championsPath, 'utf-8')
 const champions = JSON.parse(championsRaw)

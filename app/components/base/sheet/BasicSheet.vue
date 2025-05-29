@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { SheetVariants } from '~/components/base/sheet/sheetIndex'
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
-import type { HTMLAttributes } from 'vue'
 import { DialogClose, DialogContent, DialogPortal, useForwardPropsEmits } from 'reka-ui'
-import { computed } from 'vue'
+import type { HTMLAttributes } from 'vue'
+import type { SheetVariants } from '~/components/base/sheet/sheetIndex'
+
 import { sheetVariants } from './sheetIndex'
 
 interface SheetContentProps extends DialogContentProps {
@@ -27,11 +27,7 @@ const emits = defineEmits<
   }
 >()
 
-const delegatedProps = computed(() => {
-  const { class: _, side, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'side', 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 

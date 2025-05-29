@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { summonerSpells } from '~~/data/data/spells'
-
 import { PopoverClose } from 'reka-ui'
 
 const props = defineProps<{
@@ -16,7 +14,7 @@ const emit = defineEmits(['update:spell'])
 
 const pocket = ref(props.pocket)
 
-const summonerSpellIconArray = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells/barrier.webp', '/img/spells/ghost.webp', '/img/spells/exhaust.webp', '/img/spells/smite.webp', '/img/spells/flash.webp', '/img/spells/teleport.webp']
+const { spells } = await useIndexLookup()
 
 const selectedSpell = computed (() => {
   return props.selectedSpell
@@ -50,7 +48,7 @@ const selectedSpell = computed (() => {
       <div class="gap-3 place-content-evenly grid grid-cols-3  ">
         <CustomPopoverArrow />
         <PopoverClose
-          v-for="ss in summonerSpells"
+          v-for="ss in spells"
           :key="ss.name"
           :disabled="selectedSpell == ss"
           class="disabled:grayscale transition-all duration-400 disabled:inset-shadow-sm disabled:opacity-70 disabled:scale-80 shadow-sm size-16 rounded-lg border border-b3/30 hover:border-neutral hover:ring-2 hover:ring-b3/60 !cursor-pointer ring-offset-1 ring-offset-neutral">
@@ -63,7 +61,7 @@ const selectedSpell = computed (() => {
               :disabled="selectedSpell == ss"
               @change="emit('update:spell', ss)" />
             <img
-              :src="`/img/spells/${ss.name.toLowerCase()}.webp`"
+              :src="`/img/spells/${ss.name}.webp`"
               class="size-full rounded-lg" />
           </label>
         </PopoverClose>

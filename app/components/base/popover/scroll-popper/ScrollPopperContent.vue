@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { PopoverContent, PopoverPortal, useForwardPropsEmits } from 'reka-ui'
 
-import type { PopoverContentEmits, PopoverContentProps } from 'reka-ui'
-import { computed } from 'vue'
 import { useScroll as useScrolly } from '@vueuse/core'
+import type { PopoverContentEmits, PopoverContentProps } from 'reka-ui'
+
 
 defineOptions({
   inheritAttrs: false,
@@ -22,11 +22,7 @@ const props = withDefaults(
 )
 const emits = defineEmits<PopoverContentEmits>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 

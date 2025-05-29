@@ -1,22 +1,16 @@
 <script setup lang="ts">
-import { TagsInputItemDelete, useForwardProps } from 'reka-ui'
 import type { TagsInputItemDeleteProps } from 'reka-ui'
-import { computed } from 'vue'
-import type { HTMLAttributes } from 'vue'
+import { TagsInputItemDelete, useForwardProps } from 'reka-ui'
 
 const props = defineProps<TagsInputItemDeleteProps & { class?: HTMLAttributes['class'] }>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+const delegatedProps = reactiveOmit(props, 'class')
 
-  return delegated
-})
-
-const forwardedProps = useForwardProps(delegatedProps)
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
-  <TagsInputItemDelete v-bind="forwardedProps" :class="cn('flex rounded bg-transparent mr-1', props.class)">
+  <TagsInputItemDelete v-bind="forwarded" :class="cn('flex rounded bg-transparent mr-1', props.class)">
     <slot>
       <icon name="x-sm" class="w-4 h-4" />
     </slot>

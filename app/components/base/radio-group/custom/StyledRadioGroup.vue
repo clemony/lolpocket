@@ -6,11 +6,7 @@ const props = defineProps<RadioGroupRootProps & {
   contrast?: boolean}>()
 const emits = defineEmits<RadioGroupRootEmits>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 

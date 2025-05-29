@@ -2,7 +2,5 @@
 @import '@morev/vue-transitions/styles';
 @import './tippy.css';
 @import './drag.css';
-
-@plugin "tailwindcss-animate";
 @import './toast.css';
 @import './zoomable.css';

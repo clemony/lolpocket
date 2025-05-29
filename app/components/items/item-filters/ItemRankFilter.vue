@@ -19,10 +19,9 @@ function handleReset() {
 </script>
 
 <template>
-
-      <div class="divider divider-start before:bg-b3/60 font-semibold  mb-8">
-        Categories
-      </div>
+  <div class="divider divider-start before:bg-b3/60 font-semibold  mb-8">
+    Categories
+  </div>
 
   <transition-slide group class="flex w-full flex-wrap gap-4 relative ">
     <input
@@ -35,7 +34,7 @@ function handleReset() {
     <label
       v-for="rank in itemRanks"
       :key="rank"
-      class="font-medium text-3  btn btn-sm  capitalize group/filter  mr-0  " :class="{ '!bg-neutral !border-neutral text-nc !shadow-neutral/20 shadow-sm order-first  ml-12': is.itemFilter.rank && is.itemFilter.rank.includes(rank), 'first-of-type:ml-12': !is.itemFilter.rank || is.itemFilter.rank == null }">
+      class="!font-semibold   btn btn-sm  uppercase !text-0 group/filter  mr-0  " :class="{ '!bg-neutral !border-neutral text-nc !shadow-neutral/20 shadow-sm order-first  ml-12': is.itemFilter.rank && is.itemFilter.rank.includes(rank), 'first-of-type:ml-12': !is.itemFilter.rank || is.itemFilter.rank == null }">
 
       <input
         v-model="is.itemFilter.rank" class="peer hidden absolute"

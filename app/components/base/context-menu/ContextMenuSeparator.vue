@@ -1,10 +1,9 @@
 <script setup lang="ts">
+import type { ContextMenuSeparatorProps } from 'reka-ui'
 import {
   ContextMenuSeparator,
-
 } from 'reka-ui'
-import type { ContextMenuSeparatorProps } from 'reka-ui'
-import { computed } from 'vue'
+
 import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<ContextMenuSeparatorProps & { class?: HTMLAttributes['class'] }>()

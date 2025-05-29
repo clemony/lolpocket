@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { TabsTrigger, useForwardProps } from 'reka-ui'
 import type { TabsTriggerProps } from 'reka-ui'
+import { TabsTrigger, useForwardProps } from 'reka-ui'
 
 const props = defineProps<TabsTriggerProps & {
   class?: HTMLAttributes['class']
@@ -14,7 +14,7 @@ const delegatedProps = computed(() => {
 
   return delegated
 })
-const forwardedProps = useForwardProps(delegatedProps)
+const forwarded = useForwardProps(delegatedProps)
 
 const currentValue = ref()
 function handleHoverStart(event) {
@@ -54,7 +54,7 @@ function handleClick(event) {
     @click="handleClick($event)">
     <TabsTrigger
       ref="tab"
-      v-bind="forwardedProps"
+      v-bind="forwarded"
       :class="cn(
         'inline-flex  items-center justify-center whitespace-nowrap rounded-md px-5 py-1 !text-2 font-medium transition-all focus-visible:!outline-0 tldr-20  !outline-0 border-transparent border disabled:pointer-events-none disabled:opacity-50  w-fit  h-10 text-bc/60 data-[state=active]:text-bc z-1 cursor-pointer **:select-none',
         props.class,

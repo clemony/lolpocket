@@ -4,19 +4,15 @@ import { computed, type HTMLAttributes } from 'vue'
 
 const props = defineProps<AccordionItemProps & { class?: HTMLAttributes['class'] }>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+const delegatedProps = reactiveOmit(props, 'class')
 
-  return delegated
-})
-
-const forwardedProps = useForwardProps(delegatedProps)
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
   <AccordionItem
     data-slot="accordion-item"
-    v-bind="forwardedProps"
+    v-bind="forwarded"
     :class="cn('border-b border-b-b3 last:border-b-0', props.class)"
   >
     <slot />

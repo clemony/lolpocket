@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 const props = defineProps<{
   match: any
 }>()
@@ -25,7 +24,7 @@ const isOpen = ref(false)
             <WinLossButton v-if=" player.teamId && match" :player="player" :match="match" />
             <div class="font-medium dst tracking-tight text-left w-full space-y-1 ">
               <MatchQueue v-if="match.queueId" as="p" class="text-2 text-left text-nowrap" :queue-id="match.queueId" />
-              <MatchMap v-if="match.info.mapId" :map-id="match.info.mapId" as="p" class="text-2" />
+              <MatchMap v-if="match.info.mapId" :id="match.info.mapId" as="p" class="text-2" />
               <GameDuration as="p" :duration="match.info.gameDuration" class="tracking-wide" />
               <GameEndTime v-if="match.info.gameEndTimestamp" as="p" class="text-2 capitalize" :end-time="match.info.gameEndTimestamp" />
             </div>

@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-const { championData, itemData } = defineProps<{
-  championData: ChampionRecord
-  itemData: ItemRecord
-}>()
-
 const route = useRoute()
 
 const pocket = computedAsync (() => {
@@ -27,9 +22,9 @@ onMounted (() => {
 
       <div class="size-full *:shrink-0 overflow-y-auto   flex flex-col gap-6 ">
         <PocketRoles :pocket="pocket" />
-        <SidebarSelectedChampions :pocket="pocket" :champion-data="championData" />
+        <SidebarSelectedChampions :pocket="pocket"  />
 
-        <PocketItemsSidebarMenu :pocket="pocket" :item-data="itemData" />
+        <PocketItemsSidebarMenu :pocket="pocket"  />
         <PocketSidebarRunes :pocket="pocket" />
 
         <PocketSpellsCollapsible v-if="pocket" :pocket="pocket" />

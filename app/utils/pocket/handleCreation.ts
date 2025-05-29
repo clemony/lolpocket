@@ -83,6 +83,7 @@ export function newRuneSet(pocketKey?: string) {
 export function createDefaultSpell(): Spell {
   return {
     name: null,
+    id: 0,
     description: null,
     cd: 0,
     recharge: 0,

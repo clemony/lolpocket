@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { Toggle, useForwardPropsEmits } from 'reka-ui'
 import type { ToggleEmits, ToggleProps } from 'reka-ui'
-import { computed } from 'vue'
+import { Toggle, useForwardPropsEmits } from 'reka-ui'
+
 import type { HTMLAttributes } from 'vue'
-import { toggleVariants } from './toggleVariants'
 import type { ToggleVariants } from './toggleVariants'
+import { toggleVariants } from './toggleVariants'
 
 const props = withDefaults(defineProps<ToggleProps & {
   class?: HTMLAttributes['class']

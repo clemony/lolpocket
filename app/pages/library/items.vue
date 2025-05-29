@@ -1,13 +1,4 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
-
-const { data } = await useFetch<ItemLite[]>('/api/items-lite.json')
-const is = useItemStore()
-
-const itemData = computed (() => data.value)
-const { filteredItems } = useItemFilter(itemData.value, is.itemFilter)
-console.log('💠 - filteredItems:', filteredItems)
-
 definePageMeta({
   name: 'items',
   title: 'Items',
@@ -15,12 +6,9 @@ definePageMeta({
   icon: 'bow',
 })
 
-const items = ref(itemData.value)
+const is = useItemStore()
+const { itemIds, filteredIds, pending } = useItemFilter(is.itemFilter)
 
-watchEffect(() => {
-if ( filteredItems.value)
-items.value =  filteredItems.value
-})
 </script>
 
 <template>
@@ -30,19 +18,26 @@ items.value =  filteredItems.value
         <h1 class="grow">
           Items
         </h1>
-        <!--      <div
-          class="text-1  items-center pl-3 pr-7  text-nowrap flex mt-1 "
-          v-html="captions" /> -->
       </div>
-      <div
-        class=" user-select-none  gap-5  grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(56px,1fr))] grid-rows-[repeat(auto-fill,minmax(56px,1fr))] pt-1 size-full rounded-lg"
-  >
+
+      <transition-slide
+        as="div"
+        group
+        class="flex flex-wrap justify-stretch content-start size-full">
         <div
-          v-for="item in items"
-          :key="item.id" >
-          <PopoverItem :item="item.id" />
+          v-for="id in itemIds"
+          :key="id"
+          :data-state="filteredIds.includes(id) ? 'visible' : 'hidden'"
+
+          class="group   data-[state=hidden]:scale-0 data-[state=hidden]:size-0
+data-[state=visible]::scale-100 data-[state=visible]:size-28 grid place-items-center">
+          <LazyPopoverItem
+            v-show="filteredIds.includes(id)" :id="id" class=" group-data-[state=visible]:animate-in ease-[cubic-bezier(.81,.47,.61,1.3)]  group-data-[state=visible]:fade-in  group-data-[state=visible]:zoom-in-50  group-data-[state=hidden]:animate-out   group-data-[state=hidden]:fade-out  relative group-data-[state=hidden]:scale-0 h-auto aspect-square  rounded-lg size-22 **:size-22'"/>
         </div>
-      </div>
+      </transition-slide>
     </div>
   </NuxtLayout>
+  <!--      <div
+          class="text-1  items-center pl-3 pr-7  text-nowrap flex mt-1 "
+          v-html="captions" /> -->
 </template>

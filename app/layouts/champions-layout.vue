@@ -1,8 +1,4 @@
 <script lang="ts" setup>
-const { data } = await useFetch('/api/champions-lite.json')
-const cs = useChampStore()
-
-const { filteredChampions } = useChampionFilter(Object.values(data.value) as ChampionLite[], cs.championFilter)
 
 </script>
 
@@ -11,7 +7,7 @@ const { filteredChampions } = useChampionFilter(Object.values(data.value) as Cha
     <ChampionFilters />
 
     <main class="overflow-y-auto grow relative h-full relative ">
-      <slot :champions="filteredChampions" />
+      <slot />
     </main>
   </div>
 </template>

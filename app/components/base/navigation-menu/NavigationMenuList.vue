@@ -1,23 +1,17 @@
 <script setup lang="ts">
-import { NavigationMenuList, useForwardProps } from 'reka-ui'
 import type { NavigationMenuListProps } from 'reka-ui'
-import { computed } from 'vue'
-import type { HTMLAttributes } from 'vue'
+import { NavigationMenuList, useForwardProps } from 'reka-ui'
 
 const props = defineProps<NavigationMenuListProps & { class?: HTMLAttributes['class'] }>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+const delegatedProps = reactiveOmit(props, 'class')
 
-  return delegated
-})
-
-const forwardedProps = useForwardProps(delegatedProps)
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
   <NavigationMenuList
-    v-bind="forwardedProps"
+    v-bind="forwarded"
     :class="
       cn(
         'group flex flex-1 list-none items-center justify-center gap-x-1',

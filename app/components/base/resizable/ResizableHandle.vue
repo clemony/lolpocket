@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { SplitterResizeHandle, useForwardPropsEmits } from 'reka-ui'
 import type { SplitterResizeHandleEmits, SplitterResizeHandleProps } from 'reka-ui'
-import { computed } from 'vue'
+import { SplitterResizeHandle, useForwardPropsEmits } from 'reka-ui'
+
 import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<SplitterResizeHandleProps & { class?: HTMLAttributes['class'], withHandle?: boolean, customHandle?: boolean }>()

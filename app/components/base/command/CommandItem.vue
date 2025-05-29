@@ -3,18 +3,14 @@ import type { ListboxItemEmits, ListboxItemProps } from 'reka-ui'
 
 import { useCurrentElement } from '@vueuse/core'
 import { ListboxItem, useForwardPropsEmits, useId } from 'reka-ui'
-import { computed, onMounted, onUnmounted, ref } from 'vue'
 import type { HTMLAttributes } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useCommand, useCommandGroup } from './cindex'
 
 const props = defineProps<ListboxItemProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<ListboxItemEmits>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 

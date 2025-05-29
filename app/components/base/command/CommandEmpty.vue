@@ -2,7 +2,7 @@
 import type { PrimitiveProps } from 'reka-ui'
 
 import { Primitive } from 'reka-ui'
-import { computed } from 'vue'
+
 import type { HTMLAttributes } from 'vue'
 import { useCommand } from './cindex'
 
